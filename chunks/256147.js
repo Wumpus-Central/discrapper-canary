@@ -1,5 +1,5 @@
-n.d(e, { M: () => a });
+n.d(e, { M: () => r });
 var i = n(250683);
-function a(t) {
+function r(t) {
     return i.fromByteArray(t);
 }

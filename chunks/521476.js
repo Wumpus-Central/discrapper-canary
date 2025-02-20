@@ -1,42 +1,42 @@
-n.d(t, { h: () => h }), n(47120);
-var i = n(200651);
+n.d(t, { h: () => p }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(100527),
-    r = n(906732),
-    s = n(545594),
-    o = n(295474),
+var i = n(481060),
+    l = n(100527),
+    o = n(906732),
+    a = n(545594),
+    s = n(295474),
     c = n(981631),
-    d = n(388032),
-    u = n(682309);
-function h(e) {
+    u = n(388032),
+    d = n(71213);
+function p(e) {
     var t, n;
-    let { guild: h } = e,
-        { analyticsLocations: p } = (0, r.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [m, f] = (0, o.ww)({
-            guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
-            analyticsLocations: p,
+    let { guild: p } = e,
+        { analyticsLocations: h } = (0, o.ZP)(l.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [f, m] = (0, s.ww)({
+            guildId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : c.lds,
+            analyticsLocations: h,
             openWithoutBackstack: !0
         }),
-        g = f ? d.intl.string(d.t['9ph2v7']) : d.intl.string(d.t.ldh9Cg),
-        _ = f ? d.intl.string(d.t['/PGQf3']) : d.intl.string(d.t.WikgZ2);
-    return (0, i.jsx)('div', {
-        children: (0, i.jsx)(s.i, {
-            bannerIcon: (0, i.jsx)(l.ics, {
+        g = m ? u.NW.string(u.t['9ph2v7']) : u.NW.string(u.t.ldh9Cg),
+        b = m ? u.NW.string(u.t['/PGQf3']) : u.NW.string(u.t.WikgZ2);
+    return (0, r.jsx)('div', {
+        children: (0, r.jsx)(a.i, {
+            bannerIcon: (0, r.jsx)(i.ics, {
                 size: 'lg',
                 color: 'currentColor',
-                className: u.bannerIcon
+                className: d.bannerIcon
             }),
-            bannerHeader: d.intl.format(d.t.kcYdTk, { guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
+            bannerHeader: u.NW.format(u.t.kcYdTk, { guildName: null !== (n = null == p ? void 0 : p.name) && void 0 !== n ? n : '' }),
             bannerSubtext: g,
-            containerStyles: u.bannerContainer,
-            headerStyles: u.bannerHeader,
-            children: (0, i.jsx)(l.zxk, {
+            containerStyles: d.bannerContainer,
+            headerStyles: d.bannerHeader,
+            children: (0, r.jsx)(i.zxk, {
                 onClick: () => {
-                    m();
+                    f();
                 },
-                size: l.zxk.Sizes.SMALL,
-                children: _
+                size: i.zxk.Sizes.SMALL,
+                children: b
             })
         })
     });

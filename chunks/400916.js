@@ -1,57 +1,57 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var l = n(512722),
-    a = n.n(l),
-    r = n(399606),
-    s = n(481060),
-    o = n(671533),
+var i = n(512722),
+    a = n.n(i),
+    o = n(399606),
+    l = n(481060),
+    s = n(671533),
     c = n(240864),
     d = n(613810),
     u = n(596211),
-    m = n(388032),
-    _ = n(894862);
-function h(e) {
-    var t, n, l, h;
-    let { guildId: p, productId: g } = e,
-        f = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(g)),
-        x = (null !== (h = null == f ? void 0 : null === (t = f.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== h ? h : 0) > 1,
-        C = null == f ? void 0 : null === (l = f.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
-    return x
-        ? (0, i.jsxs)(s.zxk, {
+    p = n(388032),
+    m = n(776128);
+function f(e) {
+    var t, n, i, f;
+    let { guildId: h, productId: g } = e,
+        _ = (0, o.e7)([c.Z], () => c.Z.getGuildProduct(g)),
+        b = (null !== (f = null == _ ? void 0 : null === (t = _.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== f ? f : 0) > 1,
+        v = null == _ ? void 0 : null === (i = _.attachments) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.id;
+    return b
+        ? (0, r.jsxs)(l.zxk, {
               onClick: function () {
                   d.Z.open({
-                      guildId: p,
+                      guildId: h,
                       productId: g
                   });
               },
-              innerClassName: _.textWithIcon,
+              innerClassName: m.textWithIcon,
               children: [
-                  (0, i.jsx)('div', { children: m.intl.string(m.t.UyuiUF) }),
-                  (0, i.jsx)(s.LZC, {
+                  (0, r.jsx)('div', { children: p.NW.string(p.t.UyuiUF) }),
+                  (0, r.jsx)(l.LZC, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, i.jsx)(o.Z, {
+                  (0, r.jsx)(s.Z, {
                       width: 16,
                       height: 16,
-                      direction: o.Z.Directions.RIGHT
+                      direction: s.Z.Directions.RIGHT
                   })
               ]
           })
-        : (a()(null != C, 'No attachment'),
-          (0, i.jsxs)(u.Z, {
-              guildId: p,
+        : (a()(null != v, 'No attachment'),
+          (0, r.jsxs)(u.Z, {
+              guildId: h,
               productId: g,
-              attachmentId: C,
-              innerClassName: _.textWithIcon,
+              attachmentId: v,
+              innerClassName: m.textWithIcon,
               children: [
-                  (0, i.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),
-                  (0, i.jsx)(s.LZC, {
+                  (0, r.jsx)('div', { children: p.NW.string(p.t.t9bE9f) }),
+                  (0, r.jsx)(l.LZC, {
                       size: 8,
                       horizontal: !0
                   }),
-                  (0, i.jsx)(s._8t, {
+                  (0, r.jsx)(l._8t, {
                       size: 'xs',
                       color: 'currentColor'
                   })

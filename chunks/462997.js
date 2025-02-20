@@ -1,25 +1,25 @@
-n.d(t, { q: () => a });
-var i = n(481060),
-    r = n(228168);
-let a = {
-    [r.y0.BITE_SIZE]: {
-        avatarSize: i.EFr.SIZE_80,
+n.d(t, { q: () => o });
+var r = n(481060),
+    i = n(228168);
+let o = {
+    [i.y0.BITE_SIZE]: {
+        avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
         bannerWidth: 300,
         bannerHeight: 105,
         themePadding: 4
     },
-    [r.y0.FULL_SIZE]: {
-        avatarSize: i.EFr.SIZE_120,
+    [i.y0.FULL_SIZE]: {
+        avatarSize: r.EFr.SIZE_120,
         avatarOffsetX: 16,
         avatarOffsetY: 5,
         bannerWidth: 600,
         bannerHeight: 210,
         themePadding: 0
     },
-    [r.y0.PANEL]: {
-        avatarSize: i.EFr.SIZE_80,
+    [i.y0.PANEL]: {
+        avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 8,
         bannerWidth: 340,

@@ -1,14 +1,14 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(654904),
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
-    u = n(780132);
+    u = n(341322);
 let m = [
     {
         name: 'gif',
@@ -16,31 +16,31 @@ let m = [
     }
 ];
 function g(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: g, changeAvatarButtonText: h, guildId: x, className: _, disabled: p = !1, isTryItOutFlow: E = !1, forcedDivider: C, withHighlight: f = !1 } = e,
-        T = f ? l.gtL : l.zxk;
-    return (0, i.jsx)(o.Z, {
-        className: _,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: i, sectionTitle: g, changeAvatarButtonText: p, guildId: h, className: f, disabled: b = !1, isTryItOutFlow: N = !1, forcedDivider: x, withHighlight: _ = !1 } = e,
+        E = _ ? a.gtL : a.zxk;
+    return (0, r.jsx)(o.Z, {
+        className: f,
         title: g,
         errors: n,
-        disabled: p,
-        forcedDivider: C,
-        children: (0, i.jsxs)('div', {
+        disabled: b,
+        forcedDivider: x,
+        children: (0, r.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(T, {
-                    className: r()({ [u.buttonHighlighted]: f }),
-                    size: l.zxk.Sizes.SMALL,
-                    onClick: () => (0, a.$r)(c.pC.AVATAR, x, E, E ? m : void 0),
-                    children: null != h ? h : d.intl.string(d.t['4OynCA'])
+                (0, r.jsx)(E, {
+                    className: s()({ [u.buttonHighlighted]: _ }),
+                    size: a.zxk.Sizes.SMALL,
+                    onClick: () => (0, l.$r)(c.pC.AVATAR, h, N, N ? m : void 0),
+                    children: null != p ? p : d.NW.string(d.t['4OynCA'])
                 }),
                 t &&
-                    (0, i.jsx)(l.zxk, {
+                    (0, r.jsx)(a.zxk, {
                         className: u.removeButton,
-                        color: l.zxk.Colors.PRIMARY,
-                        look: l.zxk.Looks.LINK,
-                        size: l.zxk.Sizes.SMALL,
-                        onClick: () => s(null),
-                        children: null != x ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
+                        color: a.zxk.Colors.PRIMARY,
+                        look: a.zxk.Looks.LINK,
+                        size: a.zxk.Sizes.SMALL,
+                        onClick: () => i(null),
+                        children: null != h ? d.NW.string(d.t.TDjKDg) : d.NW.string(d.t.twB3f3)
                     })
             ]
         })

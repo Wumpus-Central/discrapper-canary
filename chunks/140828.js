@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
-var i = n(379649),
-    r = n(866960),
-    a = n(981631);
-function s(e, t, n) {
+var r = n(379649),
+    i = n(866960),
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
@@ -26,10 +26,10 @@ class l {
             connectionTypeBuckets: {}
         };
         return (
-            Object.values(a.IWh).forEach((t) => {
+            Object.values(o.IWh).forEach((t) => {
                 e.connectionTypeBuckets[t] = 0;
             }),
-            Object.values(a.IyS).forEach((t) => {
+            Object.values(o.IyS).forEach((t) => {
                 e.effectiveConnectionSpeedBuckets[t] = 0;
             }),
             e
@@ -38,28 +38,28 @@ class l {
     getStats() {
         let { _networkStats: e } = this;
         return {
-            duration_connection_type_wifi: o(e.connectionTypeBuckets[a.IWh.WIFI]),
-            duration_connection_type_cellular: o(e.connectionTypeBuckets[a.IWh.CELLULAR]),
-            duration_connection_type_ethernet: o(e.connectionTypeBuckets[a.IWh.ETHERNET]),
-            duration_connection_type_bluetooth: o(e.connectionTypeBuckets[a.IWh.BLUETOOTH]),
-            duration_connection_type_other: o(e.connectionTypeBuckets[a.IWh.OTHER]),
-            duration_connection_type_unknown: o(e.connectionTypeBuckets[a.IWh.UNKNOWN]),
-            duration_connection_type_none: o(e.connectionTypeBuckets[a.IWh.NONE]),
-            duration_effective_connection_speed_2g: o(e.effectiveConnectionSpeedBuckets[a.IyS.TWO_G]),
-            duration_effective_connection_speed_3g: o(e.effectiveConnectionSpeedBuckets[a.IyS.THREE_G]),
-            duration_effective_connection_speed_4g: o(e.effectiveConnectionSpeedBuckets[a.IyS.FOUR_G]),
-            duration_effective_connection_speed_5g: o(e.effectiveConnectionSpeedBuckets[a.IyS.FIVE_G]),
-            duration_effective_connection_speed_unknown: o(e.effectiveConnectionSpeedBuckets[a.IyS.UNKNOWN])
+            duration_connection_type_wifi: s(e.connectionTypeBuckets[o.IWh.WIFI]),
+            duration_connection_type_cellular: s(e.connectionTypeBuckets[o.IWh.CELLULAR]),
+            duration_connection_type_ethernet: s(e.connectionTypeBuckets[o.IWh.ETHERNET]),
+            duration_connection_type_bluetooth: s(e.connectionTypeBuckets[o.IWh.BLUETOOTH]),
+            duration_connection_type_other: s(e.connectionTypeBuckets[o.IWh.OTHER]),
+            duration_connection_type_unknown: s(e.connectionTypeBuckets[o.IWh.UNKNOWN]),
+            duration_connection_type_none: s(e.connectionTypeBuckets[o.IWh.NONE]),
+            duration_effective_connection_speed_2g: s(e.effectiveConnectionSpeedBuckets[o.IyS.TWO_G]),
+            duration_effective_connection_speed_3g: s(e.effectiveConnectionSpeedBuckets[o.IyS.THREE_G]),
+            duration_effective_connection_speed_4g: s(e.effectiveConnectionSpeedBuckets[o.IyS.FOUR_G]),
+            duration_effective_connection_speed_5g: s(e.effectiveConnectionSpeedBuckets[o.IyS.FIVE_G]),
+            duration_effective_connection_speed_unknown: s(e.effectiveConnectionSpeedBuckets[o.IyS.UNKNOWN])
         };
     }
     incrementNetworkStats(e) {
         let t = (e - this._lastSampleTimestamp) / 1000,
-            n = r.Z.getEffectiveConnectionSpeed();
-        n === a.IyS.SLOW_TWO_G && (n = a.IyS.TWO_G);
-        let i = r.Z.getType();
-        i === a.IWh.WIMAX && (i = a.IWh.WIFI), (this._networkStats.effectiveConnectionSpeedBuckets[n] += t), (this._networkStats.connectionTypeBuckets[i] += t), (this._lastSampleTimestamp = e);
+            n = i.Z.getEffectiveConnectionSpeed();
+        n === o.IyS.SLOW_TWO_G && (n = o.IyS.TWO_G);
+        let r = i.Z.getType();
+        r === o.IWh.WIMAX && (r = o.IWh.WIFI), (this._networkStats.effectiveConnectionSpeedBuckets[n] += t), (this._networkStats.connectionTypeBuckets[r] += t), (this._lastSampleTimestamp = e);
     }
     constructor() {
-        s(this, '_networkStats', void 0), s(this, '_lastSampleTimestamp', void 0), (this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, i.zO)());
+        a(this, '_networkStats', void 0), a(this, '_lastSampleTimestamp', void 0), (this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, r.zO)());
     }
 }

@@ -1,66 +1,66 @@
-n.d(t, { Z: () => f });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+var a = n(120356),
+    i = n.n(a),
+    l = n(481060),
     s = n(228392),
     o = n(404616),
     c = n(710352),
     d = n(921944),
     u = n(388032),
-    m = n(72895),
-    h = n(821253),
-    g = n(432667),
-    x = n(504764);
-function f(e) {
+    m = n(904575),
+    h = n(808399),
+    g = n(971102),
+    f = n(504764);
+function p(e) {
     let { onDismiss: t } = e;
-    return (0, i.jsxs)(a.P3F, {
+    return (0, r.jsxs)(l.P3F, {
         onClick: () => {
             open(c.V8), (0, s.GX)({ readGuideCta: !0 });
         },
-        className: l()(g.container, h.container, m.mainCard),
+        className: i()(g.container, h.container, m.mainCard),
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: h.author,
                         children: [
-                            (0, i.jsx)(a.gw7, {
+                            (0, r.jsx)(l.gw7, {
                                 size: 'custom',
                                 width: 28,
                                 height: 28,
                                 color: 'currentColor',
                                 className: h.discordIcon
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
-                                children: u.intl.string(u.t.uvGmCw)
+                                children: u.NW.string(u.t.uvGmCw)
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, r.jsxs)('div', {
                                 className: h.notice,
                                 children: [
-                                    (0, i.jsx)(a.d3s, {
+                                    (0, r.jsx)(l.d3s, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: h.infoIcon
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: u.intl.string(u.t.t2GkVV)
+                                        children: u.NW.string(u.t.t2GkVV)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)(a.P3F, {
+                    (0, r.jsx)(l.P3F, {
                         onClick: (e) => {
                             e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 });
                         },
-                        children: (0, i.jsx)(a.Dio, {
+                        children: (0, r.jsx)(l.Dio, {
                             size: 'xs',
                             color: 'currentColor',
                             className: h.closeIcon
@@ -68,28 +68,28 @@ function f(e) {
                     })
                 ]
             }),
-            (0, i.jsx)('hr', { className: h.separator }),
-            (0, i.jsxs)('div', {
+            (0, r.jsx)('hr', { className: h.separator }),
+            (0, r.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(a.X6q, {
-                                className: l()(g.__invalid_channelName, h.title),
+                            (0, r.jsx)(l.X6q, {
+                                className: i()(g.__invalid_channelName, h.title),
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: u.intl.string(u.t.JtSpDw)
+                                children: u.NW.string(u.t.JtSpDw)
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: u.intl.string(u.t.Ajhp09)
+                                children: u.NW.string(u.t.Ajhp09)
                             })
                         ]
                     }),
-                    (0, i.jsx)('img', {
-                        src: x,
-                        alt: u.intl.string(u.t.gAlJzc),
+                    (0, r.jsx)('img', {
+                        src: f,
+                        alt: u.NW.string(u.t.gAlJzc),
                         width: o.TJ,
                         height: o.TJ
                     })

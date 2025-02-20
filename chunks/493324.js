@@ -1,5 +1,5 @@
-n.d(t, { $: () => l });
-let i = (0, n(818083).B)({
+n.d(t, { $: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-02_hide_member_list_activities',
     label: 'Hide member list activities',
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    return i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).hideActivities;
+function i(e) {
+    return r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).hideActivities;
 }

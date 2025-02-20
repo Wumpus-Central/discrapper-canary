@@ -1,12 +1,12 @@
-var i = n(703825)(),
-    r = n(192853)('Object.prototype.toString'),
+var r = n(703825)(),
+    i = n(192853)('Object.prototype.toString'),
+    o = function (e) {
+        return (!r || !e || 'object' != typeof e || !(Symbol.toStringTag in e)) && '[object Arguments]' === i(e);
+    },
     a = function (e) {
-        return (!i || !e || 'object' != typeof e || !(Symbol.toStringTag in e)) && '[object Arguments]' === r(e);
+        return !!o(e) || (null !== e && 'object' == typeof e && 'number' == typeof e.length && e.length >= 0 && '[object Array]' !== i(e) && '[object Function]' === i(e.callee));
     },
-    s = function (e) {
-        return !!a(e) || (null !== e && 'object' == typeof e && 'number' == typeof e.length && e.length >= 0 && '[object Array]' !== r(e) && '[object Function]' === r(e.callee));
-    },
-    o = (function () {
-        return a(arguments);
+    s = (function () {
+        return o(arguments);
     })();
-(a.isLegacyArguments = s), (e.exports = o ? a : s);
+(o.isLegacyArguments = a), (e.exports = s ? o : a);

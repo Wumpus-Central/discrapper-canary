@@ -1,40 +1,40 @@
 n.d(t, { _: () => l });
-var i = n(200651),
-    r = n(192379),
-    a = n(561779),
-    s = n(180636);
-let o = (e) => ''.concat(e.toFixed(0), '%'),
-    l = r.forwardRef(function (e, t) {
-        let { value: n, minValue: l = 0, maxValue: u = 100, onChange: c, renderValue: d = o, 'aria-label': f } = e,
-            _ = r.useRef(null);
+var r = n(200651),
+    i = n(192379),
+    o = n(561779),
+    a = n(504841);
+let s = (e) => ''.concat(e.toFixed(0), '%'),
+    l = i.forwardRef(function (e, t) {
+        let { value: n, minValue: l = 0, maxValue: c = 100, onChange: u, renderValue: d = s, 'aria-label': f } = e,
+            p = i.useRef(null);
         return (
-            r.useImperativeHandle(
+            i.useImperativeHandle(
                 t,
                 () => ({
                     focus: () => {
                         var e;
-                        return null === (e = _.current) || void 0 === e ? void 0 : e.focus();
+                        return null === (e = p.current) || void 0 === e ? void 0 : e.focus();
                     },
                     blur: () => {
                         var e;
-                        return null === (e = _.current) || void 0 === e ? void 0 : e.blur();
+                        return null === (e = p.current) || void 0 === e ? void 0 : e.blur();
                     },
                     activate: () => !1
                 }),
                 []
             ),
-            (0, i.jsx)('div', {
-                className: s.sliderContainer,
-                children: (0, i.jsx)(a.i, {
-                    ref: _,
+            (0, r.jsx)('div', {
+                className: a.sliderContainer,
+                children: (0, r.jsx)(o.i, {
+                    ref: p,
                     mini: !0,
                     handleSize: 16,
-                    className: s.slider,
+                    className: a.slider,
                     initialValue: n,
                     minValue: l,
-                    maxValue: u,
-                    onValueChange: c,
-                    asValueChanges: c,
+                    maxValue: c,
+                    onValueChange: u,
+                    asValueChanges: u,
                     onValueRender: d,
                     orientation: 'horizontal',
                     'aria-label': f

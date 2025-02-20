@@ -1,34 +1,34 @@
-n.d(t, { Z: () => c });
-var i = n(192379),
-    r = n(723184),
-    a = n(317019),
-    s = n(716708),
-    o =
+n.d(t, { Z: () => u });
+var r = n(192379),
+    i = n(723184),
+    o = n(317019),
+    a = n(716708),
+    s =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
     l = 13,
-    u = function (e) {
+    c = function (e) {
         var t = e.color,
             n = e.style,
-            a = e.onClick,
-            u = void 0 === a ? function () {} : a,
-            c = e.onHover,
+            o = e.onClick,
+            c = void 0 === o ? function () {} : o,
+            u = e.onHover,
             d = e.title,
             f = void 0 === d ? t : d,
-            _ = e.children,
-            p = e.focus,
+            p = e.children,
+            _ = e.focus,
             h = e.focusStyle,
             m = void 0 === h ? {} : h,
             g = 'transparent' === t,
-            E = (0, r.default)({
+            E = (0, i.default)({
                 default: {
-                    swatch: o(
+                    swatch: s(
                         {
                             background: t,
                             height: '100%',
@@ -38,41 +38,41 @@ var i = n(192379),
                             outline: 'none'
                         },
                         n,
-                        p ? m : {}
+                        _ ? m : {}
                     )
                 }
             }),
             v = function (e) {
-                return u(t, e);
-            },
-            y = function (e) {
-                return e.keyCode === l && u(t, e);
-            },
-            I = function (e) {
                 return c(t, e);
             },
-            T = {};
+            b = function (e) {
+                return e.keyCode === l && c(t, e);
+            },
+            y = function (e) {
+                return u(t, e);
+            },
+            O = {};
         return (
-            c && (T.onMouseOver = I),
-            i.createElement(
+            u && (O.onMouseOver = y),
+            r.createElement(
                 'div',
-                o(
+                s(
                     {
                         style: E.swatch,
                         onClick: v,
                         title: f,
                         tabIndex: 0,
-                        onKeyDown: y
+                        onKeyDown: b
                     },
-                    T
+                    O
                 ),
-                _,
+                p,
                 g &&
-                    i.createElement(s.Z, {
+                    r.createElement(a.Z, {
                         borderRadius: E.swatch.borderRadius,
                         boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                     })
             )
         );
     };
-let c = (0, a.I)(u);
+let u = (0, o.I)(c);

@@ -1,12 +1,12 @@
 n.d(t, {
-    li: () => i,
-    nT: () => s,
-    p8: () => r,
-    qO: () => a,
-    zx: () => l
+    li: () => r,
+    nT: () => a,
+    p8: () => o,
+    qO: () => l,
+    zx: () => i
 });
-let i = 264,
-    l = 432,
-    a = 375,
-    r = 12633 == n.j ? 76 : null,
-    s = 'resizable-sidebar-width-2';
+let r = 264,
+    i = 432,
+    l = 375,
+    o = 12633 == n.j ? 76 : null,
+    a = 'resizable-sidebar-width-2';

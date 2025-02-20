@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(710344),
-    r = n(764260);
-function l(e) {
-    (0, r.sI)([...e.map((e) => e.id)]);
-}
+n.d(t, { Z: () => a }), n(47120);
+var r = n(710344),
+    i = n(764260);
 function s(e) {
-    return (0, i.Z)(e, l);
+    (0, i.sI)([...e.map((e) => e.id)]);
+}
+function a(e) {
+    return (0, r.Z)(e, s);
 }

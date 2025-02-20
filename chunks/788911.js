@@ -1,22 +1,22 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(940159);
-let o = (e) => {
-    let { message: t, className: n, noResultsImageURL: r, forceLightTheme: o, suggestions: l } = e,
-        u = null != r ? { backgroundImage: 'url('.concat(r, ')') } : {};
-    return (0, i.jsx)('div', {
-        className: a()({ [s.forceLightTheme]: o }, n),
-        children: (0, i.jsxs)('div', {
-            className: s.wrapper,
+var i = n(120356),
+    o = n.n(i),
+    a = n(984981);
+let s = (e) => {
+    let { message: t, className: n, noResultsImageURL: i, forceLightTheme: s, suggestions: l } = e,
+        c = null != i ? { backgroundImage: 'url('.concat(i, ')') } : {};
+    return (0, r.jsx)('div', {
+        className: o()({ [a.forceLightTheme]: s }, n),
+        children: (0, r.jsxs)('div', {
+            className: a.wrapper,
             children: [
-                (0, i.jsx)('div', {
-                    className: s.sadImage,
-                    style: u
+                (0, r.jsx)('div', {
+                    className: a.sadImage,
+                    style: c
                 }),
-                (0, i.jsx)('div', { children: t }),
+                (0, r.jsx)('div', { children: t }),
                 l
             ]
         })

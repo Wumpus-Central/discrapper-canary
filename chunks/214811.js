@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(723184),
-    a = n(329022),
-    s = n(730320);
-let o = function (e) {
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(723184),
+    o = n(329022),
+    a = n(730320);
+let s = function (e) {
     var t = e.onClick,
         n = e.onSwatchHover,
-        o = e.group,
+        s = e.group,
         l = e.active,
-        u = (0, r.default)({
+        c = (0, i.default)({
             default: {
                 group: {
                     paddingBottom: '10px',
@@ -18,16 +18,16 @@ let o = function (e) {
                 }
             }
         });
-    return i.createElement(
+    return r.createElement(
         'div',
-        { style: u.group },
-        (0, a.Z)(o, function (e, r) {
-            return i.createElement(s.Z, {
+        { style: c.group },
+        (0, o.Z)(s, function (e, i) {
+            return r.createElement(a.Z, {
                 key: e,
                 color: e,
                 active: e.toLowerCase() === l,
-                first: 0 === r,
-                last: r === o.length - 1,
+                first: 0 === i,
+                last: i === s.length - 1,
                 onClick: t,
                 onSwatchHover: n
             });

@@ -1,65 +1,65 @@
 n.d(t, { Z: () => v });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(362721),
-    d = n(12498),
-    u = n(111028),
-    h = n(454585),
-    p = n(626135),
-    m = n(981631),
+    u = n(12498),
+    d = n(111028),
+    p = n(454585),
+    h = n(626135),
+    f = n(981631),
     g = n(388032),
-    f = n(10793),
-    _ = n(663362);
+    m = n(975966),
+    b = n(368365);
 function v(e) {
-    let { channel: t, connected: n, hovered: r, subtitle: v, onClick: C } = e,
-        x = (0, o.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        I = null != x && x.length > 0,
-        Z = (0, c.ZP)(t, !0),
-        b = null != v && v.length > 0;
-    l.useEffect(() => {
-        I &&
-            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+    let { channel: t, connected: n, hovered: l, subtitle: v, onClick: y } = e,
+        _ = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        O = null != _ && _.length > 0,
+        j = (0, c.ZP)(t, !0),
+        C = null != v && v.length > 0;
+    i.useEffect(() => {
+        O &&
+            h.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
-    }, [t.id, I, t.guild_id]);
-    let S = (0, s.bWb)().enabled ? 12 : 14;
+    }, [t.id, O, t.guild_id]);
+    let x = (0, s.bWb)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let N = a()(f.statusDiv, n && Z ? f.hoverable : null);
-    return I
-        ? (0, i.jsx)(s.P3F, {
-              className: N,
-              onClick: Z ? C : void 0,
-              children: (0, i.jsx)(s.Text, {
+    let P = o()(m.statusDiv, n && j ? m.hoverable : null);
+    return O
+        ? (0, r.jsx)(s.P3F, {
+              className: P,
+              onClick: j ? y : void 0,
+              children: (0, r.jsx)(s.Text, {
                   variant: 'text-xs/medium',
-                  className: a()(f.statusText, _.markup),
-                  children: (0, i.jsx)(u.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
+                  className: o()(m.statusText, b.markup),
+                  children: (0, r.jsx)(d.Z, { children: p.Z.parseVoiceChannelStatus(_, !0, { channelId: t.id }) })
               })
           })
-        : n && Z && (!b || r)
-          ? (0, i.jsxs)(s.P3F, {
-                className: N,
-                onClick: C,
+        : n && j && (!C || l)
+          ? (0, r.jsxs)(s.P3F, {
+                className: P,
+                onClick: y,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
-                        className: f.statusText,
-                        children: g.intl.string(g.t.Mgpxi4)
+                        className: m.statusText,
+                        children: g.NW.string(g.t.Mgpxi4)
                     }),
-                    (0, i.jsx)(s.vdY, {
+                    (0, r.jsx)(s.vdY, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: f.pencilIcon,
-                        width: S,
-                        height: S
+                        className: m.pencilIcon,
+                        width: x,
+                        height: x
                     })
                 ]
             })
-          : b
-            ? (0, i.jsx)(u.Z, { children: v })
+          : C
+            ? (0, r.jsx)(d.Z, { children: v })
             : null;
 }

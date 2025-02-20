@@ -1,8 +1,8 @@
-var i,
-    r = n(444675);
-function a(e, t, n) {
+var r,
+    i = n(444675);
+function o(e, t, n) {
     return (
-        (t = s(t)) in e
+        (t = a(t)) in e
             ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
@@ -13,27 +13,27 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
-    var t = o(e, 'string');
+function a(e) {
+    var t = s(e, 'string');
     return 'symbol' == typeof t ? t : String(t);
 }
-function o(e, t) {
+function s(e, t) {
     if ('object' != typeof e || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
-        var i = n.call(e, t || 'default');
-        if ('object' != typeof i) return i;
+        var r = n.call(e, t || 'default');
+        if ('object' != typeof r) return r;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
     return ('string' === t ? String : Number)(e);
 }
 var l = n(133495),
-    u = Symbol('lastResolve'),
-    c = Symbol('lastReject'),
+    c = Symbol('lastResolve'),
+    u = Symbol('lastReject'),
     d = Symbol('error'),
     f = Symbol('ended'),
-    _ = Symbol('lastPromise'),
-    p = Symbol('handlePromise'),
+    p = Symbol('lastPromise'),
+    _ = Symbol('handlePromise'),
     h = Symbol('stream');
 function m(e, t) {
     return {
@@ -42,30 +42,30 @@ function m(e, t) {
     };
 }
 function g(e) {
-    var t = e[u];
+    var t = e[c];
     if (null !== t) {
         var n = e[h].read();
-        null !== n && ((e[_] = null), (e[u] = null), (e[c] = null), t(m(n, !1)));
+        null !== n && ((e[p] = null), (e[c] = null), (e[u] = null), t(m(n, !1)));
     }
 }
 function E(e) {
-    r.nextTick(g, e);
+    i.nextTick(g, e);
 }
 function v(e, t) {
-    return function (n, i) {
+    return function (n, r) {
         e.then(function () {
             if (t[f]) {
                 n(m(void 0, !0));
                 return;
             }
-            t[p](n, i);
-        }, i);
+            t[_](n, r);
+        }, r);
     };
 }
-var y = Object.getPrototypeOf(function () {}),
-    I = Object.setPrototypeOf(
-        (a(
-            (i = {
+var b = Object.getPrototypeOf(function () {}),
+    y = Object.setPrototypeOf(
+        (o(
+            (r = {
                 get stream() {
                     return this[h];
                 },
@@ -77,18 +77,18 @@ var y = Object.getPrototypeOf(function () {}),
                     if (this[f]) return Promise.resolve(m(void 0, !0));
                     if (this[h].destroyed)
                         return new Promise(function (e, n) {
-                            r.nextTick(function () {
+                            i.nextTick(function () {
                                 t[d] ? n(t[d]) : e(m(void 0, !0));
                             });
                         });
-                    var i = this[_];
-                    if (i) e = new Promise(v(i, this));
+                    var r = this[p];
+                    if (r) e = new Promise(v(r, this));
                     else {
-                        var a = this[h].read();
-                        if (null !== a) return Promise.resolve(m(a, !1));
-                        e = new Promise(this[p]);
+                        var o = this[h].read();
+                        if (null !== o) return Promise.resolve(m(o, !1));
+                        e = new Promise(this[_]);
                     }
-                    return (this[_] = e), e;
+                    return (this[p] = e), e;
                 }
             }),
             Symbol.asyncIterator,
@@ -96,7 +96,7 @@ var y = Object.getPrototypeOf(function () {}),
                 return this;
             }
         ),
-        a(i, 'return', function () {
+        o(r, 'return', function () {
             var e = this;
             return new Promise(function (t, n) {
                 e[h].destroy(null, function (e) {
@@ -108,55 +108,55 @@ var y = Object.getPrototypeOf(function () {}),
                 });
             });
         }),
-        i),
-        y
+        r),
+        b
     ),
-    T = function (e) {
+    O = function (e) {
         var t,
             n = Object.create(
-                I,
-                (a((t = {}), h, {
+                y,
+                (o((t = {}), h, {
                     value: e,
                     writable: !0
                 }),
-                a(t, u, {
+                o(t, c, {
                     value: null,
                     writable: !0
                 }),
-                a(t, c, {
+                o(t, u, {
                     value: null,
                     writable: !0
                 }),
-                a(t, d, {
+                o(t, d, {
                     value: null,
                     writable: !0
                 }),
-                a(t, f, {
+                o(t, f, {
                     value: e._readableState.endEmitted,
                     writable: !0
                 }),
-                a(t, p, {
+                o(t, _, {
                     value: function (e, t) {
-                        var i = n[h].read();
-                        i ? ((n[_] = null), (n[u] = null), (n[c] = null), e(m(i, !1))) : ((n[u] = e), (n[c] = t));
+                        var r = n[h].read();
+                        r ? ((n[p] = null), (n[c] = null), (n[u] = null), e(m(r, !1))) : ((n[c] = e), (n[u] = t));
                     },
                     writable: !0
                 }),
                 t)
             );
         return (
-            (n[_] = null),
+            (n[p] = null),
             l(e, function (e) {
                 if (e && 'ERR_STREAM_PREMATURE_CLOSE' !== e.code) {
-                    var t = n[c];
-                    null !== t && ((n[_] = null), (n[u] = null), (n[c] = null), t(e)), (n[d] = e);
+                    var t = n[u];
+                    null !== t && ((n[p] = null), (n[c] = null), (n[u] = null), t(e)), (n[d] = e);
                     return;
                 }
-                var i = n[u];
-                null !== i && ((n[_] = null), (n[u] = null), (n[c] = null), i(m(void 0, !0))), (n[f] = !0);
+                var r = n[c];
+                null !== r && ((n[p] = null), (n[c] = null), (n[u] = null), r(m(void 0, !0))), (n[f] = !0);
             }),
             e.on('readable', E.bind(null, n)),
             n
         );
     };
-e.exports = T;
+e.exports = O;

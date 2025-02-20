@@ -1,17 +1,17 @@
 n.d(t, {
-    Br: () => a,
-    CA: () => s,
-    Ko: () => o,
+    Br: () => o,
+    CA: () => a,
+    Ko: () => s,
     We: () => l,
-    rq: () => u,
-    vv: () => r
+    rq: () => c,
+    vv: () => i
 });
-var i = n(119617);
-let r = n(177351),
-    a = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
-    s = [
+var r = n(119617);
+let i = n(177351),
+    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+    a = [
         n(294521),
-        r,
+        i,
         n(817812),
         n(602002),
         n(673910),
@@ -22,7 +22,7 @@ let r = n(177351),
             colorize: !1
         }
     ],
-    o = 28,
+    s = 28,
     l = {
         velocity: {
             type: 'static-random',
@@ -48,4 +48,4 @@ let r = n(177351),
             maxValue: 28
         }
     },
-    u = new i.qA();
+    c = new r.qA();

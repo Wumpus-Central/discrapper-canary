@@ -1,5 +1,5 @@
-t.d(n, { F: () => i });
-let i = (0, t(818083).B)({
+n.d(t, { F: () => i });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-09_gaming_stats_prompt_guild',
     label: 'Gaming stats prompt',

@@ -1,5 +1,5 @@
-n.d(t, { j: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { j: () => i });
+let r = (0, n(818083).B)({
     id: '2025-01_quest_bar_copy_simplification',
     kind: 'user',
     label: 'Quest Bar Copy Simplification',
@@ -12,7 +12,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e;
-    return i.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
+    return r.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
 }

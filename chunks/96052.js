@@ -1,12 +1,12 @@
-n.d(t, { U: () => s });
-var i = n(570140),
-    r = n(709054),
-    a = n(981631);
-function s(e, t, n) {
-    i.Z.dispatch({
+n.d(t, { U: () => a });
+var r = n(570140),
+    i = n(709054),
+    o = n(981631);
+function a(e, t, n) {
+    r.Z.dispatch({
         type: 'MESSAGE_CREATE',
         channelId: e,
-        message: o({
+        message: s({
             channelId: e,
             requesterUser: t,
             requestToSpeakTimestamp: n
@@ -16,12 +16,12 @@ function s(e, t, n) {
         isPushNotification: !1
     });
 }
-function o(e) {
-    let { channelId: t, requesterUser: n, requestToSpeakTimestamp: i } = e;
+function s(e) {
+    let { channelId: t, requesterUser: n, requestToSpeakTimestamp: r } = e;
     return {
-        id: r.default.fromTimestamp(Date.parse(i)),
-        type: a.uaV.STAGE_RAISE_HAND,
-        flags: a.iLy.EPHEMERAL,
+        id: i.default.fromTimestamp(Date.parse(r)),
+        type: o.uaV.STAGE_RAISE_HAND,
+        flags: o.iLy.EPHEMERAL,
         content: '',
         channel_id: t,
         author: n,
@@ -32,8 +32,8 @@ function o(e) {
         mention_channels: [],
         mention_roles: [],
         mention_everyone: !1,
-        timestamp: i,
-        state: a.yb.SENT,
+        timestamp: r,
+        state: o.yb.SENT,
         tts: !1
     };
 }

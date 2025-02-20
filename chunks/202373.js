@@ -1,7 +1,7 @@
-n.d(t, { U: () => r });
-var i = n(964742);
-function r(e) {
+n.d(t, { U: () => i });
+var r = n(964742);
+function i(e) {
     return function () {
-        if (e.getMonitor().isDragging()) return { type: i.js };
+        if (e.getMonitor().isDragging()) return { type: r.js };
     };
 }

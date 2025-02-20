@@ -1,13 +1,13 @@
 n.d(t, {
-    IH: () => a,
-    qC: () => s
+    IH: () => o,
+    qC: () => a
 }),
     n(653041);
-let i = 10,
-    r = [];
-function a(e) {
-    for (r.push(e); r.length > i; ) r.shift();
+let r = 10,
+    i = [];
+function o(e) {
+    for (i.push(e); i.length > r; ) i.shift();
 }
-function s() {
-    return r.join(' -> ');
+function a() {
+    return i.join(' -> ');
 }

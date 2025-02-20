@@ -1,6 +1,6 @@
-var i = n(957578).Buffer,
-    r =
-        i.isEncoding ||
+var r = n(957578).Buffer,
+    i =
+        r.isEncoding ||
         function (e) {
             switch ((e = '' + e) && e.toLowerCase()) {
                 case 'hex':
@@ -19,7 +19,7 @@ var i = n(957578).Buffer,
                     return !1;
             }
         };
-function a(e) {
+function o(e) {
     var t;
     if (!e) return 'utf8';
     for (;;)
@@ -44,16 +44,16 @@ function a(e) {
                 (e = ('' + e).toLowerCase()), (t = !0);
         }
 }
-function s(e) {
-    var t = a(e);
-    if ('string' != typeof t && (i.isEncoding === r || !r(e))) throw Error('Unknown encoding: ' + e);
+function a(e) {
+    var t = o(e);
+    if ('string' != typeof t && (r.isEncoding === i || !i(e))) throw Error('Unknown encoding: ' + e);
     return t || e;
 }
-function o(e) {
+function s(e) {
     var t;
-    switch (((this.encoding = s(e)), this.encoding)) {
+    switch (((this.encoding = a(e)), this.encoding)) {
         case 'utf16le':
-            (this.text = p), (this.end = h), (t = 4);
+            (this.text = _), (this.end = h), (t = 4);
             break;
         case 'utf8':
             (this.fillLast = d), (t = 4);
@@ -65,18 +65,18 @@ function o(e) {
             (this.write = E), (this.end = v);
             return;
     }
-    (this.lastNeed = 0), (this.lastTotal = 0), (this.lastChar = i.allocUnsafe(t));
+    (this.lastNeed = 0), (this.lastTotal = 0), (this.lastChar = r.allocUnsafe(t));
 }
 function l(e) {
     return e <= 127 ? 0 : e >> 5 == 6 ? 2 : e >> 4 == 14 ? 3 : e >> 3 == 30 ? 4 : e >> 6 == 2 ? -1 : -2;
 }
-function u(e, t, n) {
-    var i = t.length - 1;
-    if (i < n) return 0;
-    var r = l(t[i]);
-    return r >= 0 ? (r > 0 && (e.lastNeed = r - 1), r) : --i < n || -2 === r ? 0 : (r = l(t[i])) >= 0 ? (r > 0 && (e.lastNeed = r - 2), r) : --i < n || -2 === r ? 0 : (r = l(t[i])) >= 0 ? (r > 0 && (2 === r ? (r = 0) : (e.lastNeed = r - 3)), r) : 0;
-}
 function c(e, t, n) {
+    var r = t.length - 1;
+    if (r < n) return 0;
+    var i = l(t[r]);
+    return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = l(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = l(t[r])) >= 0 ? (i > 0 && (2 === i ? (i = 0) : (e.lastNeed = i - 3)), i) : 0;
+}
+function u(e, t, n) {
     if ((192 & t[0]) != 128) return (e.lastNeed = 0), '\uFFFD';
     if (e.lastNeed > 1 && t.length > 1) {
         if ((192 & t[1]) != 128) return (e.lastNeed = 1), '\uFFFD';
@@ -85,26 +85,26 @@ function c(e, t, n) {
 }
 function d(e) {
     var t = this.lastTotal - this.lastNeed,
-        n = c(this, e, t);
+        n = u(this, e, t);
     return void 0 !== n ? n : this.lastNeed <= e.length ? (e.copy(this.lastChar, t, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal)) : void (e.copy(this.lastChar, t, 0, e.length), (this.lastNeed -= e.length));
 }
 function f(e, t) {
-    var n = u(this, e, t);
+    var n = c(this, e, t);
     if (!this.lastNeed) return e.toString('utf8', t);
     this.lastTotal = n;
-    var i = e.length - (n - this.lastNeed);
-    return e.copy(this.lastChar, 0, i), e.toString('utf8', t, i);
+    var r = e.length - (n - this.lastNeed);
+    return e.copy(this.lastChar, 0, r), e.toString('utf8', t, r);
 }
-function _(e) {
+function p(e) {
     var t = e && e.length ? this.write(e) : '';
     return this.lastNeed ? t + '\uFFFD' : t;
 }
-function p(e, t) {
+function _(e, t) {
     if ((e.length - t) % 2 == 0) {
         var n = e.toString('utf16le', t);
         if (n) {
-            var i = n.charCodeAt(n.length - 1);
-            if (i >= 55296 && i <= 56319) return (this.lastNeed = 2), (this.lastTotal = 4), (this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1]), n.slice(0, -1);
+            var r = n.charCodeAt(n.length - 1);
+            if (r >= 55296 && r <= 56319) return (this.lastNeed = 2), (this.lastTotal = 4), (this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1]), n.slice(0, -1);
         }
         return n;
     }
@@ -132,8 +132,8 @@ function E(e) {
 function v(e) {
     return e && e.length ? this.write(e) : '';
 }
-(t.StringDecoder = o),
-    (o.prototype.write = function (e) {
+(t.StringDecoder = s),
+    (s.prototype.write = function (e) {
         var t, n;
         if (0 === e.length) return '';
         if (this.lastNeed) {
@@ -142,9 +142,9 @@ function v(e) {
         } else n = 0;
         return n < e.length ? (t ? t + this.text(e, n) : this.text(e, n)) : t || '';
     }),
-    (o.prototype.end = _),
-    (o.prototype.text = f),
-    (o.prototype.fillLast = function (e) {
+    (s.prototype.end = p),
+    (s.prototype.text = f),
+    (s.prototype.fillLast = function (e) {
         if (this.lastNeed <= e.length) return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
         e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), (this.lastNeed -= e.length);
     });

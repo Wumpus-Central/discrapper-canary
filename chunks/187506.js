@@ -1,10 +1,10 @@
-n.d(t, { M: () => r }), n(47120);
-var i = n(876215),
-    l = n(911969);
-let a = new Set([i.s.TOP_ARTIST, i.s.TOP_GAME, i.s.PLAYED_GAME, i.s.WATCHED_MEDIA, i.s.LISTENED_SESSION, i.s.LAUNCHED_ACTIVITY]);
-function r(e) {
+n.d(t, { M: () => o }), n(47120);
+var r = n(876215),
+    i = n(911969);
+let a = new Set([r.s.TOP_ARTIST, r.s.TOP_GAME, r.s.PLAYED_GAME, r.s.WATCHED_MEDIA, r.s.LISTENED_SESSION, r.s.LAUNCHED_ACTIVITY]);
+function o(e) {
     var t;
-    let n = (null !== (t = e.components) && void 0 !== t ? t : []).filter((e) => e.type === l.re.CONTENT_INVENTORY_ENTRY);
+    let n = (null !== (t = e.components) && void 0 !== t ? t : []).filter((e) => e.type === i.re.CONTENT_INVENTORY_ENTRY);
     return (
         0 === n.length ||
         n.some((e) => {

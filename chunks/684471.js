@@ -1,47 +1,47 @@
 n.d(e, { Z: () => h });
-var s = n(200651);
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    r = n(442837),
-    o = n(594174),
-    a = n(51144),
-    c = n(473092),
+var s = n(481060),
+    o = n(442837),
+    i = n(594174),
+    c = n(51144),
+    a = n(473092),
     l = n(955708),
-    d = n(850165),
-    u = n(388032),
-    E = n(26445),
-    _ = n(282668);
+    u = n(850165),
+    d = n(388032),
+    N = n(878418),
+    E = n(282668);
 function h(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
-        N = (0, r.e7)([o.default], () => {
-            let t = o.default.getUser(e);
-            return a.ZP.getName(t);
+        _ = (0, o.e7)([i.default], () => {
+            let t = i.default.getUser(e);
+            return c.ZP.getName(t);
         });
-    return (0, s.jsx)(d.Z, {
-        header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: N }),
-        heroImageSrc: _,
-        heroImageAlt: u.intl.string(u.t['3QhxXF']),
-        children: (0, s.jsxs)('div', {
-            className: E.buttonContainer,
+    return (0, r.jsx)(u.Z, {
+        header: d.NW.string(d.t.sSMgCw),
+        description: d.NW.formatToPlainString(d.t.q2QrTU, { username: _ }),
+        heroImageSrc: E,
+        heroImageAlt: d.NW.string(d.t['3QhxXF']),
+        children: (0, r.jsxs)('div', {
+            className: N.buttonContainer,
             children: [
-                (0, s.jsx)(i.zxk, {
-                    color: i.zxk.Colors.BRAND,
-                    size: i.zxk.Sizes.LARGE,
-                    className: E.button,
+                (0, r.jsx)(s.zxk, {
+                    color: s.zxk.Colors.BRAND,
+                    size: s.zxk.Sizes.LARGE,
+                    className: N.button,
                     onClick: () => {
-                        h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
+                        h(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
-                    children: u.intl.string(u.t['+o4Q7e'])
+                    children: d.NW.string(d.t['+o4Q7e'])
                 }),
-                (0, s.jsx)(i.zxk, {
-                    color: i.zxk.Colors.PRIMARY,
-                    size: i.zxk.Sizes.LARGE,
-                    className: E.button,
+                (0, r.jsx)(s.zxk, {
+                    color: s.zxk.Colors.PRIMARY,
+                    size: s.zxk.Sizes.LARGE,
+                    className: N.button,
                     onClick: () => {
-                        h(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
+                        h(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS);
                     },
-                    children: u.intl.string(u.t.xLkGzM)
+                    children: d.NW.string(d.t.xLkGzM)
                 })
             ]
         })

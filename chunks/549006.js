@@ -1,9 +1,9 @@
 n.d(t, {
     ZP: () => l,
-    kw: () => s,
-    sW: () => o
+    kw: () => a,
+    sW: () => s
 });
-let { Layer: i, LayerContainer: r, LayerProvider: a } = (0, n(302901).Xv)('Chat'),
-    s = r,
-    o = a,
-    l = i;
+let { Layer: r, LayerContainer: i, LayerProvider: o } = (0, n(302901).Xv)('Chat'),
+    a = i,
+    s = o,
+    l = r;

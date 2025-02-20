@@ -1,8 +1,8 @@
-n.d(t, { s: () => o });
-var i,
-    r = n(778882),
-    a = n(401010);
-function s(e, t, n) {
+n.d(t, { s: () => s });
+var r,
+    i = n(778882),
+    o = n(401010);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,8 +15,8 @@ function s(e, t, n) {
         e
     );
 }
-var o =
-    (s((i = {}), r.FILE, {
+var s =
+    (a((r = {}), i.FILE, {
         exposeProperties: {
             files: function (e) {
                 return Array.prototype.slice.call(e.files);
@@ -27,28 +27,28 @@ var o =
         },
         matchesTypes: ['Files']
     }),
-    s(i, r.HTML, {
+    a(r, i.HTML, {
         exposeProperties: {
             html: function (e, t) {
-                return (0, a.R)(e, t, '');
+                return (0, o.R)(e, t, '');
             }
         },
         matchesTypes: ['Html', 'text/html']
     }),
-    s(i, r.URL, {
+    a(r, i.URL, {
         exposeProperties: {
             urls: function (e, t) {
-                return (0, a.R)(e, t, '').split('\n');
+                return (0, o.R)(e, t, '').split('\n');
             }
         },
         matchesTypes: ['Url', 'text/uri-list']
     }),
-    s(i, r.TEXT, {
+    a(r, i.TEXT, {
         exposeProperties: {
             text: function (e, t) {
-                return (0, a.R)(e, t, '');
+                return (0, o.R)(e, t, '');
             }
         },
         matchesTypes: ['Text', 'text/plain']
     }),
-    i);
+    r);

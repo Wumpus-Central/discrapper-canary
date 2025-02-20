@@ -1,7 +1,7 @@
-var i = n(559969);
-function r(e) {
+var r = n(559969);
+function i(e) {
     var t = this.__data__,
-        n = i(t, e);
+        n = r(t, e);
     return n < 0 ? void 0 : t[n][1];
 }
-e.exports = r;
+e.exports = i;

@@ -1,12 +1,12 @@
-n.d(t, { O: () => a });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { O: () => o });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-08_halloween_nitro_gifting_campaign',
     label: 'Halloween nitro gifting campaign',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

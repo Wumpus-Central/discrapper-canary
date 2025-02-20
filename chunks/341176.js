@@ -1,10 +1,10 @@
 n.d(t, {
-    D: () => f,
-    Z: () => _
+    D: () => _,
+    Z: () => f
 });
 var r = n(200651),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     l = n(524444),
     o = n(52824),
     s = n(956664),
@@ -56,47 +56,47 @@ function g(e, t) {
         e
     );
 }
-let f = {
+let _ = {
     DEFAULT: null,
     CONTAIN: m.contain,
     SCALE_DOWN: m.scaleDown
 };
-function _(e) {
-    let { media: t, fit: n = f.DEFAULT, obscured: i = !1, onContextMenu: _ } = e,
+function f(e) {
+    let { media: t, fit: n = _.DEFAULT, obscured: a = !1, onContextMenu: f } = e,
         { width: v, height: b, url: x, proxyUrl: C, alt: j, type: y, maxWidth: O, maxHeight: I } = t,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        a = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return i;
+            return a;
         })(t, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { width: P, height: S } = (0, s.zp)(null != v ? v : 0, null != b ? b : 0),
         E = (0, o.q)({
             proxyURL: C,
             url: x
         }),
-        A = null != v && 0 !== v && null != b && 0 !== b;
-    if ('VIDEO' === y && A && null != C) {
-        var T;
+        T = null != v && 0 !== v && null != b && 0 !== b;
+    if ('VIDEO' === y && T && null != C) {
+        var A;
         let e = (function (e) {
             let t = d.Z.toURLSafe(e);
             return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
         })(C);
         if (null == e) return null;
-        let n = null !== (T = t.renderLinkComponent) && void 0 !== T ? T : l.iT;
+        let n = null !== (A = t.renderLinkComponent) && void 0 !== A ? A : l.iT;
         return (0, r.jsx)(
             p.Z,
             g(h({}, N), {
@@ -113,36 +113,36 @@ function _(e) {
                 onVolumeChange: c.jA,
                 onMute: c.Zj,
                 renderLinkComponent: n,
-                autoPlay: !i,
+                autoPlay: !a,
                 alt: j,
-                onContextMenu: _
+                onContextMenu: f
             })
         );
     }
     return 'IMAGE' === y
-        ? A
+        ? T
             ? (0, r.jsx)(
                   u.ZP,
                   g(h({}, N), {
-                      imageClassName: a()(m.slide, n),
+                      imageClassName: i()(m.slide, n),
                       src: E,
                       width: v,
                       height: b,
                       shouldLink: !1,
                       maxWidth: P,
                       maxHeight: S,
-                      animated: !i && t.animated,
-                      autoPlay: !i,
+                      animated: !a && t.animated,
+                      autoPlay: !a,
                       alt: j,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
-                      onContextMenu: _
+                      onContextMenu: f
                   })
               )
             : (0, r.jsx)('img', {
                   src: E,
                   alt: j,
-                  className: a()(m.slide, n),
-                  onContextMenu: _
+                  className: i()(m.slide, n),
+                  onContextMenu: f
               })
         : null;
 }

@@ -1,28 +1,28 @@
 n.d(t, {
     Z: () => l,
-    m: () => o
+    m: () => s
 }),
     n(47120);
-var i = n(192379),
-    r = n(846519),
-    a = n(70956);
-let s = (e) => String(e).padStart(2, '0'),
-    o = (e) => {
-        let t = Math.floor(e) % a.Z.Seconds.MINUTE,
-            n = Math.floor(e / a.Z.Seconds.MINUTE) % a.Z.Seconds.MINUTE,
-            i = Math.floor(e / a.Z.Seconds.HOUR);
-        return 0 === i ? ''.concat(s(n), ':').concat(s(t)) : ''.concat(s(i), ':').concat(s(n), ':').concat(s(t));
+var r = n(192379),
+    i = n(846519),
+    o = n(70956);
+let a = (e) => String(e).padStart(2, '0'),
+    s = (e) => {
+        let t = Math.floor(e) % o.Z.Seconds.MINUTE,
+            n = Math.floor(e / o.Z.Seconds.MINUTE) % o.Z.Seconds.MINUTE,
+            r = Math.floor(e / o.Z.Seconds.HOUR);
+        return 0 === r ? ''.concat(a(n), ':').concat(a(t)) : ''.concat(a(r), ':').concat(a(n), ':').concat(a(t));
     };
 function l(e) {
     let { start: t, end: n } = e,
-        [s] = (0, i.useState)(new r.Xp()),
-        [o, l] = (0, i.useState)(Date.now());
-    (0, i.useEffect)(() => (s.start(a.Z.Millis.HALF_SECOND, () => l(Date.now())), () => s.stop()), [s]);
-    let u = (n - t) / a.Z.Millis.SECOND,
-        c = Math.max(Math.min((o - t) / a.Z.Millis.SECOND, u), 0);
+        [a] = (0, r.useState)(new i.Xp()),
+        [s, l] = (0, r.useState)(Date.now());
+    (0, r.useEffect)(() => (a.start(o.Z.Millis.HALF_SECOND, () => l(Date.now())), () => a.stop()), [a]);
+    let c = (n - t) / o.Z.Millis.SECOND,
+        u = Math.max(Math.min((s - t) / o.Z.Millis.SECOND, c), 0);
     return {
-        elapsed: c,
-        duration: u,
-        percentage: Math.max(Math.min(c / u, 1), 0)
+        elapsed: u,
+        duration: c,
+        percentage: Math.max(Math.min(u / c, 1), 0)
     };
 }

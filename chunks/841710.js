@@ -1,38 +1,38 @@
 n.d(t, {
-    Y: () => c,
-    Z: () => d
+    Y: () => u,
+    Z: () => c
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    s = n(129861),
-    o = n(492395);
-function d(e) {
-    let { user: t, status: n, isFocused: l, guildId: r } = e;
-    return (0, i.jsxs)('div', {
-        className: o.memberItem,
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(129861),
+    s = n(407594);
+function c(e) {
+    let { user: t, status: n, isFocused: i, guildId: l } = e;
+    return (0, r.jsxs)('div', {
+        className: s.memberItem,
         children: [
-            (0, i.jsx)(a.qEK, {
-                src: t.getAvatarURL(r, 24),
-                className: o.avatar,
+            (0, r.jsx)(o.qEK, {
+                src: t.getAvatarURL(l, 24),
+                className: s.avatar,
                 'aria-label': t.username,
-                size: a.EFr.SIZE_24,
+                size: o.EFr.SIZE_24,
                 status: n,
-                statusColor: l ? 'currentColor' : void 0
+                statusColor: i ? 'currentColor' : void 0
             }),
-            (0, i.jsx)(s.Z, {
+            (0, r.jsx)(a.Z, {
                 user: t,
                 hideDiscriminator: !0
             })
         ]
     });
 }
-function c(e) {
+function u(e) {
     let { label: t } = e;
-    return (0, i.jsxs)('div', {
-        className: o.memberItem,
-        children: [(0, i.jsx)('div', { className: r()(o.avatar, o.unknown) }), (0, i.jsx)('div', { children: t })]
+    return (0, r.jsxs)('div', {
+        className: s.memberItem,
+        children: [(0, r.jsx)('div', { className: l()(s.avatar, s.unknown) }), (0, r.jsx)('div', { children: t })]
     });
 }

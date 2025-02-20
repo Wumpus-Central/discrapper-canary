@@ -1,7 +1,7 @@
-n.d(t, { Z: () => l }), n(47120), n(757143), n(653041), n(627494);
-var i = n(710845),
-    r = n(287328);
-function a(e, t, n) {
+n.d(t, { Z: () => l }), n(47120), n(757143), n(301563), n(653041), n(627494);
+var r = n(710845),
+    i = n(287328);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,13 +14,13 @@ function a(e, t, n) {
         e
     );
 }
-let s = new i.Z('GuildEmojis');
-class o {
+let a = new r.Z('GuildEmojis');
+class s {
     async getAsync(e) {
         let t = performance.now(),
-            n = await r.Z.emojis(e).getMapEntries(),
-            i = performance.now();
-        return s.log('asynchronously loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
+            n = await i.Z.emojis(e).getMapEntries(),
+            r = performance.now();
+        return a.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n;
     }
     handleConnectionOpen(e, t) {
         for (let n of e.guilds) this.handleOneGuildCreate(n, t);
@@ -42,7 +42,7 @@ class o {
             Promise.all(
                 e.emojis.map((e) => {
                     if ('unavailable' === e.dataMode) return Promise.resolve();
-                    'full' === e.dataMode ? (s.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (s.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' emojis for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
+                    'full' === e.dataMode ? (a.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' emojis for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
                 })
             )
         );
@@ -52,17 +52,17 @@ class o {
     }
     resetInMemoryState() {}
     replace(e, t, n) {
-        r.Z.emojisTransaction(n).replaceAll(e, t);
+        i.Z.emojisTransaction(n).replaceAll(e, t);
     }
     delete(e, t) {
-        r.Z.emojisTransaction(t).delete(e);
+        i.Z.emojisTransaction(t).delete(e);
     }
-    update(e, t, n, i) {
-        let a = r.Z.emojisTransaction(i);
-        for (let i of (a.putAll(e, t), n)) a.delete(e, i);
+    update(e, t, n, r) {
+        let o = i.Z.emojisTransaction(r);
+        for (let r of (o.putAll(e, t), n)) o.delete(e, r);
     }
     constructor() {
-        a(this, 'actions', {
+        o(this, 'actions', {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
@@ -72,4 +72,4 @@ class o {
         });
     }
 }
-let l = new o();
+let l = new s();

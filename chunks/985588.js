@@ -1,46 +1,46 @@
 n.d(t, {
-    V: () => _,
+    V: () => p,
     s: () => f
 });
-var i = n(442837),
-    r = n(163612),
-    a = n(314897),
-    s = n(523746),
-    o = n(592125),
+var r = n(442837),
+    i = n(163612),
+    o = n(314897),
+    a = n(523746),
+    s = n(592125),
     l = n(271383),
-    u = n(699516),
-    c = n(979651),
+    c = n(699516),
+    u = n(979651),
     d = n(981631);
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'useCanRing',
         n = arguments.length > 2 ? arguments[2] : void 0,
-        s = (0, i.e7)([o.Z], () => o.Z.getChannel(n)),
-        c = (0, i.e7)([a.default], () => a.default.getId() === e.id),
-        f = (0, i.e7)([u.Z], () => u.Z.isFriend(e.id)),
-        _ = (0, i.e7)([l.ZP], () => (null == s ? void 0 : s.guild_id) != null && null != l.ZP.getMember(s.guild_id, e.id)),
-        { enabled: p } = r.Z.useExperiment({
-            guildId: null == s ? void 0 : s.guild_id,
+        a = (0, r.e7)([s.Z], () => s.Z.getChannel(n)),
+        u = (0, r.e7)([o.default], () => o.default.getId() === e.id),
+        f = (0, r.e7)([c.Z], () => c.Z.isFriend(e.id)),
+        p = (0, r.e7)([l.ZP], () => (null == a ? void 0 : a.guild_id) != null && null != l.ZP.getMember(a.guild_id, e.id)),
+        { enabled: _ } = i.Z.useExperiment({
+            guildId: null == a ? void 0 : a.guild_id,
             location: t
         }),
-        h = null == s ? void 0 : s.type,
+        h = null == a ? void 0 : a.type,
         m = h === d.d4z.GUILD_VOICE,
         g = null != h && d.TPd.CALLABLE.has(h),
-        E = (m && p && _) || g;
-    return f && !c && !e.bot && !e.system && !e.isProvisional && E;
+        E = (m && _ && p) || g;
+    return f && !u && !e.bot && !e.system && !e.isProvisional && E;
 }
-function _(e) {
+function p(e) {
     let t = d.TPd.CALLABLE.has(e.type),
         n = e.type === d.d4z.GUILD_VOICE;
     if (t) {
-        let t = s.Z.getCall(e.id);
-        return null != t && null != t.messageId && !s.Z.isCallUnavailable(e.id);
+        let t = a.Z.getCall(e.id);
+        return null != t && null != t.messageId && !a.Z.isCallUnavailable(e.id);
     }
     if (n) {
-        let { enabled: t } = r.Z.getCurrentConfig({
+        let { enabled: t } = i.Z.getCurrentConfig({
                 guildId: e.guild_id,
                 location: 'ring'
             }),
-            n = c.Z.getVoiceState(e.guild_id, a.default.getId());
+            n = u.Z.getVoiceState(e.guild_id, o.default.getId());
         return t && null != n && n.channelId === e.id;
     }
     return !1;

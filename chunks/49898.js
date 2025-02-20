@@ -1,27 +1,27 @@
 n.r(t),
     n.d(t, {
-        GLOBAL_DISCOVERY_DEFAULT_TAB: () => s,
-        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => o,
+        GLOBAL_DISCOVERY_DEFAULT_TAB: () => a,
+        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => s,
         GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => l,
-        GLOBAL_DISCOVERY_TABS: () => r,
+        GLOBAL_DISCOVERY_TABS: () => i,
         GlobalDiscoveryAnalyticsLocations: () => d,
-        GlobalDiscoveryRoutes: () => c,
-        GlobalDiscoverySearchBarState: () => u,
-        GlobalDiscoveryTab: () => i,
-        MOBILE_GLOBAL_DISCOVERY_TABS: () => a
+        GlobalDiscoveryRoutes: () => u,
+        GlobalDiscoverySearchBarState: () => c,
+        GlobalDiscoveryTab: () => r,
+        MOBILE_GLOBAL_DISCOVERY_TABS: () => o
     });
-var i = (function (e) {
+var r = (function (e) {
     return (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps'), e;
 })({});
-let r = ['apps', 'servers', 'quests'],
-    a = ['servers', 'quests'],
-    s = 'servers',
-    o = 24,
+let i = ['apps', 'servers', 'quests'],
+    o = ['servers', 'quests'],
+    a = 'servers',
+    s = 24,
     l = 240;
-var u = (function (e) {
+var c = (function (e) {
         return (e.DEFAULT = 'default'), (e.FLOATING = 'floating'), (e.COLLAPSED = 'collapsed'), e;
     })({}),
-    c = (function (e) {
+    u = (function (e) {
         return (e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search'), e;
     })({}),
     d = (function (e) {

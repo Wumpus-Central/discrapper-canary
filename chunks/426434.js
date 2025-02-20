@@ -1,71 +1,71 @@
-n.d(t, { Z: () => x });
-var i = n(200651);
+n.d(t, { Z: () => h });
+var r = n(200651);
 n(192379);
-var r = n(392711),
-    l = n(442837),
-    s = n(481060),
-    a = n(230711),
+var i = n(392711),
+    s = n(442837),
+    a = n(481060),
+    l = n(230711),
     o = n(496675),
     c = n(594174),
     d = n(434404),
     u = n(449226),
     m = n(981631),
-    h = n(388032),
-    g = n(45596);
-function x(e) {
+    p = n(388032),
+    g = n(412856);
+function h(e) {
     let t,
         { guild: n } = e,
-        x = n.mfaLevel,
-        p = (0, l.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
-        _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        C = n.isOwner(_),
-        f = null == _ ? void 0 : _.mfaEnabled,
-        v = x === m.BpS.ELEVATED,
-        N = C && f,
-        j = (0, r.throttle)(async (e) => {
-            N &&
+        h = n.mfaLevel,
+        f = (0, s.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
+        b = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        x = n.isOwner(b),
+        j = null == b ? void 0 : b.mfaEnabled,
+        N = h === m.BpS.ELEVATED,
+        v = x && j,
+        _ = (0, i.throttle)(async (e) => {
+            v &&
                 (await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
                     isEnabled: !e
                 }));
         }, 1000);
-    if (!p) return null;
-    N || (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
-    let I = n.hasFeature(m.oNc.DISCOVERABLE);
-    return (0, i.jsxs)('div', {
+    if (!f) return null;
+    v || (t = x ? p.NW.format(p.t.nFwNyc, { settingsHook: () => l.Z.open(m.oAB.ACCOUNT) }) : p.NW.string(p.t['9Ghu4+']));
+    let O = n.hasFeature(m.oNc.DISCOVERABLE);
+    return (0, r.jsxs)('div', {
         className: g.simpleItemWrapper,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: g.itemContent,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: h.intl.string(h.t.lbBfER)
+                        children: p.NW.string(p.t.lbBfER)
                     }),
-                    (0, i.jsxs)(s.Text, {
+                    (0, r.jsxs)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [h.intl.string(h.t['a/93Jy']), ' ', t]
+                        children: [p.NW.string(p.t['a/93Jy']), ' ', t]
                     })
                 ]
             }),
-            !N || (v && I)
-                ? (0, i.jsx)(s.ua7, {
-                      text: I ? h.intl.string(h.t['KG1V/P']) : C ? h.intl.string(h.t.NmsheX) : h.intl.string(h.t.LieBtb),
+            !v || (N && O)
+                ? (0, r.jsx)(a.ua7, {
+                      text: O ? p.NW.string(p.t['KG1V/P']) : x ? p.NW.string(p.t.NmsheX) : p.NW.string(p.t.LieBtb),
                       children: (e) =>
-                          (0, i.jsx)(u.Z, {
-                              checked: v,
+                          (0, r.jsx)(u.Z, {
+                              checked: N,
                               disabled: !0,
-                              onChange: j,
+                              onChange: _,
                               className: g.bringToFront,
                               tooltipProps: e
                           })
                   })
-                : (0, i.jsx)(u.Z, {
-                      checked: v,
-                      onChange: j,
+                : (0, r.jsx)(u.Z, {
+                      checked: N,
+                      onChange: _,
                       className: g.bringToFront
                   })
         ]

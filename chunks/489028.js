@@ -1,49 +1,49 @@
-n.d(t, { Z: () => y }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    a = n(782568),
+n.d(t, { Z: () => P }), n(47120), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(782568),
     o = n(223892),
     c = n(203498),
     d = n(641806),
     u = n(690221),
     m = n(30624),
-    h = n(577275),
+    p = n(577275),
     g = n(594174),
-    x = n(451478),
-    p = n(626135),
-    _ = n(584825),
-    C = n(723047),
-    f = n(416867),
-    v = n(903773),
-    N = n(215124),
-    j = n(326578),
-    I = n(981631),
-    E = n(674563),
-    b = n(829857),
-    T = n(388032),
-    S = n(783469);
-function R(e) {
+    h = n(451478),
+    f = n(626135),
+    b = n(584825),
+    x = n(723047),
+    j = n(416867),
+    N = n(903773),
+    v = n(215124),
+    _ = n(326578),
+    O = n(981631),
+    y = n(674563),
+    C = n(829857),
+    I = n(388032),
+    E = n(931211);
+function S(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
-    return (0, i.jsx)('div', {
-        className: S.selectTeamContainer,
-        children: (0, i.jsx)(s.zxk, {
+    return (0, r.jsx)('div', {
+        className: E.selectTeamContainer,
+        children: (0, r.jsx)(a.zxk, {
             disabled: !n,
             onClick: t,
-            className: S.enableTicketingButton,
+            className: E.enableTicketingButton,
             fullWidth: !0,
-            children: T.intl.string(T.t['5k6FfX'])
+            children: I.NW.string(I.t['5k6FfX'])
         })
     });
 }
-function Z(e) {
-    let { guild: t, eligibleTeams: n, isGuildOwner: l } = e,
-        [a, o] = r.useState(),
+function T(e) {
+    let { guild: t, eligibleTeams: n, isGuildOwner: s } = e,
+        [l, o] = i.useState(),
         { enableGuildMonetizationForTeam: d, submitting: u, error: m } = (0, c.Z)(),
-        { fetchSubscriptionsSettings: h } = (0, _.JH)(),
-        g = (0, C.mY)(),
-        x = r.useMemo(
+        { fetchSubscriptionsSettings: p } = (0, b.JH)(),
+        g = (0, x.mY)(),
+        h = i.useMemo(
             () =>
                 n.map((e) => ({
                     label: e.name,
@@ -51,118 +51,118 @@ function Z(e) {
                 })),
             [n]
         ),
-        p = async () => {
-            (await d(t, a, E.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
-                (h(t.id),
-                (0, f.B)({
-                    Icon: j.Z,
-                    title: T.intl.string(T.t['AP/2qa']),
-                    body: T.intl.string(T.t.kHMgaG)
+        f = async () => {
+            (await d(t, l, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+                (p(t.id),
+                (0, j.B)({
+                    Icon: _.Z,
+                    title: I.NW.string(I.t['AP/2qa']),
+                    body: I.NW.string(I.t.kHMgaG)
                 }));
         };
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)('div', {
-                className: S.selectTeamContainer,
+            (0, r.jsxs)('div', {
+                className: E.selectTeamContainer,
                 children: [
-                    (0, i.jsx)(s.q4e, {
-                        className: S.teamSelect,
-                        options: x,
-                        placeholder: T.intl.string(T.t.QXf93N),
-                        value: a,
-                        isDisabled: 0 === x.length || g || !l,
+                    (0, r.jsx)(a.q4e, {
+                        className: E.teamSelect,
+                        options: h,
+                        placeholder: I.NW.string(I.t.QXf93N),
+                        value: l,
+                        isDisabled: 0 === h.length || g || !s,
                         onChange: (e) => o(e),
-                        'aria-label': T.intl.string(T.t.QXf93N)
+                        'aria-label': I.NW.string(I.t.QXf93N)
                     }),
-                    (0, i.jsx)(s.zxk, {
-                        onClick: p,
-                        className: S.enableTicketingButton,
+                    (0, r.jsx)(a.zxk, {
+                        onClick: f,
+                        className: E.enableTicketingButton,
                         submitting: u,
-                        disabled: null == a || g || !l,
-                        children: T.intl.string(T.t['9HU3ZW'])
+                        disabled: null == l || g || !s,
+                        children: I.NW.string(I.t['9HU3ZW'])
                     })
                 ]
             }),
             null != m &&
-                (0, i.jsx)(s.Text, {
-                    className: S.error,
+                (0, r.jsx)(a.Text, {
+                    className: E.error,
                     variant: 'text-sm/normal',
                     children: m.getAnyErrorMessage()
                 })
         ]
     });
 }
-let y = (e) => {
+let P = (e) => {
     let { guild: t } = e,
-        n = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        n = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         c = t.isOwner(n),
-        _ = (0, o.Ob)(t),
-        C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: f, loading: j } = (0, h.Z)({ refreshOnDepChange: C }),
-        E = r.useMemo(
+        b = (0, o.Ob)(t),
+        x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
+        { teams: j, loading: _ } = (0, p.Z)({ refreshOnDepChange: x }),
+        y = i.useMemo(
             () =>
-                f.filter((e) => {
+                j.filter((e) => {
                     var t;
-                    return e.payout_account_status !== b.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : I.lds, e);
+                    return e.payout_account_status !== C.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : O.lds, e);
                 }),
-            [f, n]
+            [j, n]
         ),
-        y = E.length > 0,
-        A = r.useCallback(async () => {
-            p.default.track(I.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
-                is_onboarding_v2: _,
-                has_eligible_team: y,
+        P = y.length > 0,
+        w = i.useCallback(async () => {
+            f.default.track(O.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+                is_onboarding_v2: b,
+                has_eligible_team: P,
                 guild_id: t.id,
                 is_owner: c
             });
-            let e = await (0, d.$)(I.E07.DEVELOPER_PORTAL_TEAMS);
-            (0, a.Z)(e);
-        }, [t, c, _, y]),
-        L = r.useCallback(
+            let e = await (0, d.$)(O.E07.DEVELOPER_PORTAL_TEAMS);
+            (0, l.Z)(e);
+        }, [t, c, b, P]),
+        R = i.useCallback(
             (e) =>
                 c
-                    ? (0, i.jsx)(u.Z, {
-                          onClick: A,
+                    ? (0, r.jsx)(u.Z, {
+                          onClick: w,
                           children: e
                       })
                     : e,
-            [A, c]
+            [w, c]
         );
-    return j
-        ? (0, i.jsx)(s.$jN, {})
-        : (0, i.jsxs)(i.Fragment, {
+    return _
+        ? (0, r.jsx)(a.$jN, {})
+        : (0, r.jsxs)(r.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(v.Z, {
-                          className: S.nonOwnerNotice,
-                          children: T.intl.string(T.t.t56qWF)
+                      (0, r.jsx)(N.Z, {
+                          className: E.nonOwnerNotice,
+                          children: I.NW.string(I.t.t56qWF)
                       }),
-                  (0, i.jsxs)(s.hjN, {
-                      title: T.intl.string(T.t.sYLCY2),
+                  (0, r.jsxs)(a.hjN, {
+                      title: I.NW.string(I.t.sYLCY2),
                       disabled: !c,
                       children: [
-                          (0, i.jsx)(s.R94, {
-                              type: s.R94.Types.DESCRIPTION,
-                              className: S.description,
+                          (0, r.jsx)(a.R94, {
+                              type: a.R94.Types.DESCRIPTION,
+                              className: E.description,
                               disabled: !c,
-                              children: T.intl.format(T.t['5mfqpa'], { onCreateTeamHook: L })
+                              children: I.NW.format(I.t['5mfqpa'], { onCreateTeamHook: R })
                           }),
-                          y
-                              ? (0, i.jsx)(Z, {
+                          P
+                              ? (0, r.jsx)(T, {
                                     guild: t,
-                                    eligibleTeams: E,
+                                    eligibleTeams: y,
                                     isGuildOwner: c
                                 })
-                              : (0, i.jsx)(R, {
-                                    onCreateTeamClick: A,
+                              : (0, r.jsx)(S, {
+                                    onCreateTeamClick: w,
                                     isGuildOwner: c
                                 })
                       ]
                   }),
-                  (0, i.jsx)(s.hjN, {
-                      title: T.intl.string(T.t['0n7R2d']),
-                      className: S.selfDemonetization,
-                      children: (0, i.jsx)(N.Z, {
+                  (0, r.jsx)(a.hjN, {
+                      title: I.NW.string(I.t['0n7R2d']),
+                      className: E.selfDemonetization,
+                      children: (0, r.jsx)(v.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

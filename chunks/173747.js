@@ -1,16 +1,16 @@
-n.d(t, { Z: () => W }), n(47120), n(653041);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(846519),
+n.d(t, { Z: () => Y }), n(47120), n(653041);
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(846519),
     l = n(570140),
-    u = n(274616),
-    c = n(57513),
+    c = n(274616),
+    u = n(57513),
     d = n(51025),
     f = n(812206),
-    _ = n(283595),
-    p = n(417363),
+    p = n(283595),
+    _ = n(417363),
     h = n(391690),
     m = n(70956),
     g = n(780570),
@@ -28,158 +28,158 @@ function v(e, t, n) {
         e
     );
 }
-let y = new Set(),
-    I = {},
-    T = new Set(),
-    b = {},
-    S = new Set(),
-    A = {},
+let b = new Set(),
+    y = {},
+    O = new Set(),
+    S = {},
+    I = new Set(),
+    T = {},
     N = 10 * m.Z.Millis.MINUTE,
-    C = 6 * m.Z.Millis.HOUR,
-    R = 10 * m.Z.Millis.MINUTE,
-    O = new o.V7();
-function D(e) {
-    O.start(e + Math.random() * N, u.o);
+    A = 6 * m.Z.Millis.HOUR,
+    C = 10 * m.Z.Millis.MINUTE,
+    R = new s.V7();
+function P(e) {
+    R.start(e + Math.random() * N, c.o);
 }
-function L() {
-    return D(C), x();
+function w() {
+    return P(A), D();
+}
+function D() {
+    if (!(0, E.Q)()) return !1;
+    let e = p.Z.entitledBranchIds,
+        t = [];
+    for (let n of e) T.hasOwnProperty(n) || ((T[n] = null), t.push(n));
+    if (0 === t.length) return !1;
+    l.Z.wait(() => c.o(t));
 }
 function x() {
     if (!(0, E.Q)()) return !1;
-    let e = _.Z.entitledBranchIds,
-        t = [];
-    for (let n of e) A.hasOwnProperty(n) || ((A[n] = null), t.push(n));
-    if (0 === t.length) return !1;
-    l.Z.wait(() => u.o(t));
-}
-function P() {
-    if (!(0, E.Q)()) return !1;
-    for (let e of S) {
+    for (let e of I) {
         let { applicationId: t, branchId: n } = (0, g.CP)(e);
-        null != f.Z.getApplication(t) && (S.delete(e), w(t, n));
+        null != f.Z.getApplication(t) && (I.delete(e), L(t, n));
     }
 }
-function w(e, t) {
-    if (null != I[t] && h.Z.shouldBeInstalled(e, t)) {
-        let n = I[t],
-            i = n.manifestIds,
-            r = p.Z.getState(e, t);
-        null != r &&
-            r.shouldPatch &&
-            (r.buildId !== n.id || !a().isEqual(r.manifestIds, i)) &&
+function L(e, t) {
+    if (null != y[t] && h.Z.shouldBeInstalled(e, t)) {
+        let n = y[t],
+            r = n.manifestIds,
+            i = _.Z.getState(e, t);
+        null != i &&
+            i.shouldPatch &&
+            (i.buildId !== n.id || !o().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
-                let r = f.Z.getApplication(e);
-                null != r ? (S.delete((0, g.Tu)(e, t)), (0, d.li)(r, t, n.id, i, !0)) : S.add((0, g.Tu)(e, t));
+                let i = f.Z.getApplication(e);
+                null != i ? (I.delete((0, g.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : I.add((0, g.Tu)(e, t));
             });
     }
 }
 function M(e) {
     let { branchId: t } = e;
-    y.add(t);
+    b.add(t);
 }
 function k(e) {
-    let { applicationId: t, branchId: n, locale: i, build: r } = e;
-    y.delete(n);
-    let a = r.manifests.map((e) => {
+    let { applicationId: t, branchId: n, locale: r, build: i } = e;
+    b.delete(n);
+    let o = i.manifests.map((e) => {
             let { id: t } = e;
             return t;
         }),
-        s = r.id;
-    T.delete(n),
-        (I[n] = {
-            id: s,
+        a = i.id;
+    O.delete(n),
+        (y[n] = {
+            id: a,
             applicationId: t,
             branchId: n,
-            locale: i,
-            manifestIds: a
+            locale: r,
+            manifestIds: o
         }),
-        w(t, n);
+        L(t, n);
+}
+function j(e) {
+    let { branchId: t } = e;
+    b.delete(t), O.add(t);
 }
 function U(e) {
-    let { branchId: t } = e;
-    y.delete(t), T.add(t);
+    let { buildId: t } = e;
+    S.hasOwnProperty(t) || (S[t] = null);
 }
 function G(e) {
-    let { buildId: t } = e;
-    b.hasOwnProperty(t) || (b[t] = null);
+    let { buildId: t, sizeKB: n } = e;
+    S[t] = n;
 }
 function B(e) {
-    let { buildId: t, sizeKB: n } = e;
-    b[t] = n;
+    let { buildId: t } = e;
+    null == S[t] && delete S[t];
 }
 function Z(e) {
-    let { buildId: t } = e;
-    null == b[t] && delete b[t];
-}
-function F(e) {
     let { branches: t } = e,
         n = {};
-    for (let e in _.Z.libraryApplications) {
-        let t = _.Z.libraryApplications[e];
+    for (let e in p.Z.libraryApplications) {
+        let t = p.Z.libraryApplications[e];
         n[t.branchId] = t;
     }
     for (let e of t) {
-        let { id: t, liveBuildId: i } = e;
-        if (i !== A[t]) {
+        let { id: t, liveBuildId: r } = e;
+        if (r !== T[t]) {
             let e = n[t];
-            null != e && l.Z.wait(() => c.l(e.id, e.branchId, !0));
+            null != e && l.Z.wait(() => u.l(e.id, e.branchId, !0));
         }
-        A[t] = i;
+        T[t] = r;
     }
-    D(C);
+    P(A);
+}
+function F() {
+    P(C);
 }
 function V() {
-    D(R);
-}
-function j() {
-    O.stop();
+    R.stop();
 }
 function H(e) {
     let { entitlements: t } = e;
     if (!(0, E.Q)()) return !1;
     let n = new Set();
     for (let e of t) n.add(e.application_id);
-    for (let e in _.Z.libraryApplications) {
-        let t = _.Z.libraryApplications[e];
-        n.has(t.id) && (0, g.Je)(t) && l.Z.wait(() => c.l(t.id, t.branchId));
+    for (let e in p.Z.libraryApplications) {
+        let t = p.Z.libraryApplications[e];
+        n.has(t.id) && (0, g.Je)(t) && l.Z.wait(() => u.l(t.id, t.branchId));
     }
 }
-class Y extends (i = s.ZP.Store) {
+class W extends (r = a.ZP.Store) {
     initialize() {
-        this.syncWith([_.Z], x), this.waitFor(p.Z, _.Z, f.Z);
+        this.syncWith([p.Z], D), this.waitFor(_.Z, p.Z, f.Z);
     }
     getTargetBuildId(e, t) {
-        return null == I[t] ? null : I[t].id;
+        return null == y[t] ? null : y[t].id;
     }
     getTargetManifests(e, t) {
-        return null == I[t] ? null : I[t].manifestIds;
+        return null == y[t] ? null : y[t].manifestIds;
     }
     hasNoBuild(e, t) {
-        return T.has(t);
+        return O.has(t);
     }
     isFetching(e, t) {
-        return y.has(t);
+        return b.has(t);
     }
     needsToFetchBuildSize(e) {
-        return !b.hasOwnProperty(e);
+        return !S.hasOwnProperty(e);
     }
     getBuildSize(e) {
-        return b[e];
+        return S[e];
     }
 }
-v(Y, 'displayName', 'ApplicationBuildStore');
-let W = new Y(l.Z, {
-    CONNECTION_OPEN: L,
-    GAMES_DATABASE_UPDATE: P,
+v(W, 'displayName', 'ApplicationBuildStore');
+let Y = new W(l.Z, {
+    CONNECTION_OPEN: w,
+    GAMES_DATABASE_UPDATE: x,
     APPLICATION_BUILD_FETCH_START: M,
     APPLICATION_BUILD_FETCH_SUCCESS: k,
-    APPLICATION_BUILD_NOT_FOUND: U,
-    APPLICATION_BUILD_SIZE_FETCH_START: G,
-    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: B,
-    APPLICATION_BUILD_SIZE_FETCH_FAIL: Z,
-    APPLICATION_BRANCHES_FETCH_SUCCESS: F,
-    APPLICATION_BRANCHES_FETCH_FAIL: V,
-    CONNECTION_CLOSED: j,
-    LOGOUT: j,
+    APPLICATION_BUILD_NOT_FOUND: j,
+    APPLICATION_BUILD_SIZE_FETCH_START: U,
+    APPLICATION_BUILD_SIZE_FETCH_SUCCESS: G,
+    APPLICATION_BUILD_SIZE_FETCH_FAIL: B,
+    APPLICATION_BRANCHES_FETCH_SUCCESS: Z,
+    APPLICATION_BRANCHES_FETCH_FAIL: F,
+    CONNECTION_CLOSED: V,
+    LOGOUT: V,
     SKU_PURCHASE_SUCCESS: H
 });

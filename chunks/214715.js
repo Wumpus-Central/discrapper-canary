@@ -1,38 +1,38 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(288271);
-let u = r.memo(function (e) {
-    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: p } = e,
-        h = r.useMemo(() => {
-            if (null != p) return () => p(t);
-        }, [p, t]);
-    return (0, i.jsxs)(o.P3F, {
-        tabIndex: null == p ? -1 : 0,
-        className: s()(
+n.d(t, { Z: () => c });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(971042);
+let c = i.memo(function (e) {
+    let { text: t, variant: n = 'text-xs/medium', color: o = 'text-normal', icon: c, className: u, selected: d, onMouseEnter: f, onMouseLeave: p, onClick: _ } = e,
+        h = i.useMemo(() => {
+            if (null != _) return () => _(t);
+        }, [_, t]);
+    return (0, r.jsxs)(s.P3F, {
+        tabIndex: null == _ ? -1 : 0,
+        className: a()(
             l.trait,
             {
                 [l.selectable]: null != h && !d,
                 [l.selected]: d,
                 [l.clickable]: null != h
             },
-            c
+            u
         ),
         onMouseEnter: f,
-        onMouseLeave: _,
+        onMouseLeave: p,
         onClick: h,
         children: [
-            null != u &&
-                (0, i.jsx)(u, {
+            null != c &&
+                (0, r.jsx)(c, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: n,
-                color: a,
+                color: o,
                 lineClamp: 1,
                 children: t
             })

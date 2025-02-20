@@ -1,22 +1,22 @@
-n.d(t, { y: () => a }), n(47120);
-var r = n(192379),
-    l = n(442837),
-    i = n(19780),
-    u = n(630759),
-    s = n(760373);
+r.d(t, { y: () => a }), r(47120);
+var n = r(192379),
+    l = r(442837),
+    i = r(19780),
+    u = r(630759),
+    s = r(760373);
 function a(e) {
     let { userId: t } = e,
-        n = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
-        [a, o] = r.useState(!0),
-        [c, d] = r.useState(!1),
-        [f, E] = r.useState(!1),
-        _ = r.useCallback(async (e, t) => {
+        r = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
+        [a, o] = n.useState(!0),
+        [c, d] = n.useState(!1),
+        [f, E] = n.useState(!1),
+        g = n.useCallback(async (e, t) => {
             o(!0);
             try {
-                let n = s.GB,
-                    r = await (0, u.uX)(n),
-                    l = await (0, u.J6)(e, t, n);
-                d(r), E(l);
+                let r = s.GB,
+                    n = await (0, u.uX)(r),
+                    l = await (0, u.J6)(e, t, r);
+                d(n), E(l);
             } catch (e) {
                 d(!1), E(!1);
             } finally {
@@ -24,9 +24,9 @@ function a(e) {
             }
         }, []);
     return (
-        r.useEffect(() => {
-            null == n ? (d(!1), E(!1), o(!1)) : _(t, n);
-        }, [n, _, t]),
+        n.useEffect(() => {
+            null == r ? (d(!1), E(!1), o(!1)) : g(t, r);
+        }, [r, g, t]),
         {
             loading: a,
             isCurrentUserKeyPersistent: c,

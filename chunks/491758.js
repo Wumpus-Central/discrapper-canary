@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(131951),
     h = n(556296),
     f = n(924557),
-    N = n(435064),
-    x = n(894694),
-    b = n(779618),
+    b = n(435064),
+    N = n(894694),
+    x = n(779618),
     _ = n(39604),
     E = n(442334),
     j = n(356659),
@@ -28,11 +28,11 @@ var r = n(200651),
     y = n(455812);
 function A() {
     let e = (0, l.e7)([p.Z], () => p.Z.getHardwareEncoding()),
-        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, l.cj)([N.Z], () => N.Z.getSettings()),
-        R = (0, l.e7)([N.Z], () => N.Z.getHardwareClassification()),
+        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, l.cj)([b.Z], () => b.Z.getSettings()),
+        R = (0, l.e7)([b.Z], () => b.Z.getHardwareClassification()),
         D = (0, l.e7)([h.ZP], () => h.ZP.getKeybindForAction(C.kg4.SAVE_CLIP, !0)),
-        Z = N.Z.isDecoupledGameClippingEnabled(),
-        w = (0, b.Z)(p.Z),
+        Z = b.Z.isDecoupledGameClippingEnabled(),
+        w = (0, x.Z)(p.Z),
         { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     a()(null != D, 'Save clip keybind unset');
     let W = (0, l.e7)([m.default], () => m.default.locale),
@@ -153,7 +153,7 @@ function A() {
                             className: I.formItem,
                             children: S.NW.format(S.t.kiaF4e, { onClick: () => d.Z.open(C.oAB.VOICE, null, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    R === x.x.BELOW_MINIMUM
+                    R === N.x.BELOW_MINIMUM
                         ? (0, r.jsx)(g.Z, {
                               look: g.z.WARNING,
                               className: I.formItem,

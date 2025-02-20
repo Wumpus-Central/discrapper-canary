@@ -1,4 +1,4 @@
-function i() {
+function r() {
     return {
         top: 0,
         right: 0,
@@ -6,4 +6,4 @@ function i() {
         left: 0
     };
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

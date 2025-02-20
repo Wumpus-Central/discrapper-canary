@@ -1,16 +1,16 @@
 n.d(t, {
     Es: () => u,
-    RM: () => i,
+    RM: () => o,
     VP: () => c,
     Xb: () => s,
     sm: () => E,
-    y0: () => o
+    y0: () => i
 }),
     n(266796);
 var r = n(544891),
     l = n(570140),
     a = n(981631);
-let o = function (e) {
+let i = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_VIEW',
@@ -18,7 +18,7 @@ let o = function (e) {
             isLurking: t
         });
     },
-    i = async (e) => {
+    o = async (e) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let t = await r.tn.get({

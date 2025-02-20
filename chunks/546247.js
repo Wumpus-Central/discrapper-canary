@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
-var i = n(200651),
-    l = n(120356),
-    a = n.n(l),
-    r = n(784132);
-let s = function () {
-    return (0, i.jsx)('div', {
-        children: (0, i.jsxs)('div', {
-            className: a()(r.gradientBackground),
-            children: [(0, i.jsx)('div', { className: a()(r.backgroundDark, r.sphere) }), (0, i.jsx)('div', { className: a()(r.backgroundLight, r.sphere) }), (0, i.jsx)('div', { className: a()(r.foregroundRing, r.sphere) }), (0, i.jsx)('div', { className: a()(r.foregroundBase, r.sphere) })]
+n.d(t, { Z: () => a });
+var r = n(200651),
+    i = n(120356),
+    l = n.n(i),
+    o = n(299115);
+let a = function () {
+    return (0, r.jsx)('div', {
+        children: (0, r.jsxs)('div', {
+            className: l()(o.gradientBackground),
+            children: [(0, r.jsx)('div', { className: l()(o.backgroundDark, o.sphere) }), (0, r.jsx)('div', { className: l()(o.backgroundLight, o.sphere) }), (0, r.jsx)('div', { className: l()(o.foregroundRing, o.sphere) }), (0, r.jsx)('div', { className: l()(o.foregroundBase, o.sphere) })]
         })
     });
 };

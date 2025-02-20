@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(981631);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,14 +17,14 @@ function o(e, t, n) {
     );
 }
 let l = 0;
-function u(e) {
+function c(e) {
     let { port: t } = e;
-    l = s.V6Z - t;
+    l = a.V6Z - t;
 }
-class c extends (i = r.ZP.Store) {
+class u extends (r = i.ZP.Store) {
     getId() {
         return l;
     }
 }
-o(c, 'displayName', 'InstanceIdStore');
-let d = new c(a.Z, { RPC_SERVER_READY: u });
+s(u, 'displayName', 'InstanceIdStore');
+let d = new u(o.Z, { RPC_SERVER_READY: c });

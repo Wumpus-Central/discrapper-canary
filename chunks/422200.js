@@ -1,86 +1,86 @@
-i.d(e, { default: () => m });
-var t = i(200651);
-i(192379);
-var l = i(481060),
-    r = i(239091),
-    a = i(108843),
-    d = i(100527),
-    s = i(299206),
-    o = i(895563),
-    c = i(32750),
-    u = i(109764),
-    h = i(323597),
-    Z = i(461535),
-    f = i(438536),
-    x = i(251746),
-    j = i(193987),
-    v = i(933793),
-    g = i(13736),
-    _ = i(732393),
-    p = i(214906),
-    k = i(612856),
-    C = i(137591),
-    b = i(388032);
-let m = (0, a.Z)(
-    function (n) {
-        let { channel: e, onSelect: i } = n,
-            a = (0, u.Z)(e),
-            d = (0, Z.Z)(e),
-            m = (0, p.Z)(e),
-            P = (0, c.Z)(e),
-            E = (0, j.Z)(e),
-            N = (0, h.Z)(e),
-            S = (0, s.Z)({
-                id: e.id,
-                label: b.intl.string(b.t.DQ797u)
+t.d(n, { default: () => N });
+var r = t(200651);
+t(192379);
+var i = t(481060),
+    a = t(239091),
+    o = t(108843),
+    l = t(100527),
+    d = t(299206),
+    c = t(895563),
+    s = t(32750),
+    u = t(109764),
+    f = t(323597),
+    h = t(461535),
+    v = t(438536),
+    p = t(251746),
+    y = t(193987),
+    Z = t(933793),
+    O = t(13736),
+    b = t(732393),
+    C = t(214906),
+    E = t(612856),
+    _ = t(137591),
+    j = t(388032);
+let N = (0, o.Z)(
+    function (e) {
+        let { channel: n, onSelect: t } = e,
+            o = (0, u.Z)(n),
+            l = (0, h.Z)(n),
+            N = (0, C.Z)(n),
+            g = (0, s.Z)(n),
+            A = (0, y.Z)(n),
+            m = (0, f.Z)(n),
+            P = (0, d.Z)({
+                id: n.id,
+                label: j.NW.string(j.t.DQ797u)
             }),
-            G = (0, f.Z)(e, 'Context Menu'),
-            U = (0, v.Z)(e),
-            O = (0, k.Z)(e),
-            D = (0, g.Z)(e),
-            M = (0, _.Z)(e.id),
-            Q = (0, x.Z)(e),
-            T = (0, C.Z)(e),
-            y = (0, o.l)(e),
-            w = (0, o.P)(e);
-        return (0, t.jsxs)(l.v2r, {
+            I = (0, v.Z)(n, 'Context Menu'),
+            T = (0, Z.Z)(n),
+            R = (0, E.Z)(n),
+            U = (0, O.Z)(n),
+            k = (0, b.Z)(n.id),
+            F = (0, p.Z)(n),
+            S = (0, _.Z)(n),
+            x = (0, c.l)(n),
+            w = (0, c.P)(n);
+        return (0, r.jsxs)(i.v2r, {
             navId: 'thread-context',
-            onClose: r.Zy,
-            'aria-label': b.intl.string(b.t['1NBjqa']),
-            onSelect: i,
+            onClose: a.Zy,
+            'aria-label': j.NW.string(j.t['1NBjqa']),
+            onSelect: t,
             children: [
-                (0, t.jsxs)(
-                    l.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [d, y]
+                        children: [l, x]
                     },
                     'mark-as-read-or-favorite'
                 ),
-                (0, t.jsxs)(
-                    l.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [G, Q, P, E, D, M, a]
+                        children: [I, F, g, A, U, k, o]
                     },
                     'thread-actions'
                 ),
-                (0, t.jsxs)(
-                    l.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [m, O]
+                        children: [N, R]
                     },
                     'notifications'
                 ),
-                (0, t.jsx)(l.kSQ, { children: w }),
-                (0, t.jsxs)(
-                    l.kSQ,
+                (0, r.jsx)(i.kSQ, { children: w }),
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [T, U, N]
+                        children: [S, T, m]
                     },
                     'admin-actions'
                 ),
-                (0, t.jsx)(l.kSQ, { children: S }, 'developer-actions')
+                (0, r.jsx)(i.kSQ, { children: P }, 'developer-actions')
             ]
         });
     },
-    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_THREAD_MENU]
+    [l.Z.CONTEXT_MENU, l.Z.CHANNEL_LIST_THREAD_MENU]
 );

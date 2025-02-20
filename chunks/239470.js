@@ -1,32 +1,32 @@
-n.d(t, { Z: () => r });
-var i = n(647162);
-function r(e, t, n, r) {
-    var a, s, o;
+n.d(t, { Z: () => i });
+var r = n(647162);
+function i(e, t, n, i) {
+    var o, a, s;
     let l = e.hasConnectedAccount(),
-        u = (0, i.PY)(e),
-        c = e.getTrack(),
+        c = (0, r.PY)(e),
+        u = e.getTrack(),
         d = e.getSyncingWith(),
         f = e.getActivity(),
-        _ = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == f ? void 0 : f.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
-        p = n.id === t.getId(),
-        h = l && !u,
-        m = null != _ && _ === (null == r ? void 0 : r.sync_id),
-        g = (null == f ? void 0 : f.party) != null && (null == r ? void 0 : null === (a = r.party) || void 0 === a ? void 0 : a.id) === f.party.id,
+        p = null !== (s = null !== (a = null == u ? void 0 : u.id) && void 0 !== a ? a : null == f ? void 0 : f.sync_id) && void 0 !== s ? s : e.getLastPlayedTrackId(),
+        _ = n.id === t.getId(),
+        h = l && !c,
+        m = null != p && p === (null == i ? void 0 : i.sync_id),
+        g = (null == f ? void 0 : f.party) != null && (null == i ? void 0 : null === (o = i.party) || void 0 === o ? void 0 : o.id) === f.party.id,
         E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id,
-        v = p || h || m,
-        y = p || E || g;
+        v = _ || h || m,
+        b = _ || E || g;
     return {
         user: n,
-        activity: r,
+        activity: i,
         hasSpotifyAccount: l,
-        canPlaySpotify: u,
+        canPlaySpotify: c,
         notPlayable: h,
         syncingWithParty: g,
         syncingWithUser: E,
-        isCurrentUser: p,
-        currentUserTrackId: _,
+        isCurrentUser: _,
+        currentUserTrackId: p,
         playingSameTrack: m,
         playDisabled: v,
-        syncDisabled: y
+        syncDisabled: b
     };
 }

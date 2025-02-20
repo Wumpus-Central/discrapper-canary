@@ -1,62 +1,62 @@
 n.d(t, { Z: () => m }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(236413),
-    s = n(866894),
-    a = n(65912),
+var r = n(200651),
+    i = n(192379),
+    s = n(236413),
+    a = n(866894),
+    l = n(65912),
     o = n(572456),
     c = n(59192),
     d = n(11265),
     u = n(495892);
-let m = r.memo(function (e) {
+let m = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
-        { hasChanges: h, editingRule: g, createNewEditingRule: x, setEditingRule: p } = (0, a.V)(),
-        { isLoading: _ } = (0, a.w)(),
-        [C] = r.useState(() => !(0, l.Vb)(t)),
-        f = (null == g ? void 0 : g.id) === t.id || n,
-        v = (0, s.U)(null == t ? void 0 : t.id),
-        N = f && null != g ? g : t,
-        j = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
-        I = r.useCallback(() => {
-            x(t.guildId, t.triggerType);
-        }, [t.guildId, t.triggerType, x]),
-        E = r.useCallback(
+        { hasChanges: p, editingRule: g, createNewEditingRule: h, setEditingRule: f } = (0, l.V)(),
+        { isLoading: b } = (0, l.w)(),
+        [x] = i.useState(() => !(0, s.Vb)(t)),
+        j = (null == g ? void 0 : g.id) === t.id || n,
+        N = (0, a.U)(null == t ? void 0 : t.id),
+        v = j && null != g ? g : t,
+        _ = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
+        O = i.useCallback(() => {
+            h(t.guildId, t.triggerType);
+        }, [t.guildId, t.triggerType, h]),
+        y = i.useCallback(
             (e) => {
-                !_ && p(e, !0);
+                !b && f(e, !0);
             },
-            [_, p]
+            [b, f]
         );
-    r.useEffect(() => {
-        m && p(t, !0);
-    }, [m, t, p]);
-    let b = r.useCallback(() => {
-        f
-            ? h || p(null)
-            : h
-              ? j(() => {
-                    p(t);
+    i.useEffect(() => {
+        m && f(t, !0);
+    }, [m, t, f]);
+    let C = i.useCallback(() => {
+        j
+            ? p || f(null)
+            : p
+              ? _(() => {
+                    f(t);
                 })
-              : p(t);
-    }, [f, h, j, t, p]);
-    return (0, i.jsx)(d.Z, {
-        renderHeader: (0, i.jsx)(u.Z, {
-            rule: N,
-            forceSetup: C && !f && !v,
+              : f(t);
+    }, [j, p, _, t, f]);
+    return (0, r.jsx)(d.Z, {
+        renderHeader: (0, r.jsx)(u.Z, {
+            rule: v,
+            forceSetup: x && !j && !N,
             triggerType: t.triggerType,
-            isEditMode: f,
-            isDefaultRule: v,
-            onChangeRule: E,
-            onSetupRule: I
+            isEditMode: j,
+            isDefaultRule: N,
+            onChangeRule: y,
+            onSetupRule: O
         }),
-        isStuck: f && h,
-        isExpanded: f,
-        onExpand: b,
+        isStuck: j && p,
+        isExpanded: j,
+        onExpand: C,
         children:
-            f &&
-            (0, i.jsx)(c.Z, {
-                rule: N,
-                isLoading: _,
-                onChangeRule: E
+            j &&
+            (0, r.jsx)(c.Z, {
+                rule: v,
+                isLoading: b,
+                onChangeRule: y
             })
     });
 });

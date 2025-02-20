@@ -1,8 +1,8 @@
 n.d(t, { T: () => l });
-var i = n(259443),
-    r = n(818083),
-    a = n(231338);
-let s = (0, r.B)({
+var r = n(259443),
+    i = n(818083),
+    o = n(231338);
+let a = (0, i.B)({
         id: '2024-04_quests_logging',
         kind: 'user',
         label: 'Quests Logging',
@@ -20,21 +20,21 @@ let s = (0, r.B)({
             }
         ]
     }),
-    o = () => s.getCurrentConfig({ location: 'quests_logging' }, { autoTrackExposure: !1 }).enabled;
+    s = () => a.getCurrentConfig({ location: 'quests_logging' }, { autoTrackExposure: !1 }).enabled;
 function l() {
     let { quest: e, location: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        n = o(),
-        r = null == e ? void 0 : e.config.messages.questName,
-        s = null != t ? '-'.concat(t) : '',
-        l = null != r ? '-'.concat(r, ')') : '',
-        u = 'QuestLogger'.concat(s).concat(l),
-        c = new i.Yd(u);
+        n = s(),
+        i = null == e ? void 0 : e.config.messages.questName,
+        a = null != t ? '-'.concat(t) : '',
+        l = null != i ? '-'.concat(i, ')') : '',
+        c = 'QuestLogger'.concat(a).concat(l),
+        u = new r.Yd(c);
     return {
-        log: n ? c.log : a.dG,
-        warn: n ? c.warn : a.dG,
-        error: n ? c.error : a.dG,
-        info: n ? c.info : a.dG,
-        verbose: n ? c.verbose : a.dG,
-        trace: n ? c.trace : a.dG
+        log: n ? u.log : o.dG,
+        warn: n ? u.warn : o.dG,
+        error: n ? u.error : o.dG,
+        info: n ? u.info : o.dG,
+        verbose: n ? u.verbose : o.dG,
+        trace: n ? u.trace : o.dG
     };
 }

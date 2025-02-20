@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(617136),
     h = n(497505),
     f = n(341907),
-    N = n(981631),
-    x = n(388032),
-    b = n(788090),
+    b = n(981631),
+    N = n(388032),
+    x = n(788090),
     _ = n(66094);
 function E() {
     let e = (0, o.wj)((0, u.ZP)()),
@@ -24,7 +24,7 @@ function E() {
             (0, d.xf)(),
                 (0, f.navigateToQuestHome)({ fromContent: h.jn.QUEST_HOME_MOVE_CALLOUT }),
                 g.default.track(
-                    N.rMx.QUEST_CONTENT_CLICKED,
+                    b.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -58,43 +58,43 @@ function E() {
         }, []),
         (0, m.un)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, r.jsxs)('div', {
-            className: a()(b.container),
+            className: a()(x.container),
             style: t,
             children: [
                 !1,
                 (0, r.jsxs)('div', {
-                    className: b.textContainer,
+                    className: x.textContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: b.headerContainer,
+                            className: x.headerContainer,
                             children: [
                                 (0, r.jsx)('img', {
                                     alt: '',
                                     src: _,
-                                    className: b.icon
+                                    className: x.icon
                                 }),
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: x.NW.string(x.t.z8YP2N)
+                                    children: N.NW.string(N.t.z8YP2N)
                                 })
                             ]
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: x.NW.string(x.t.IqmRZ2)
+                            children: N.NW.string(N.t.IqmRZ2)
                         }),
                         (0, r.jsx)(c.zxk, {
                             size: 'large',
                             color: e ? c.Ttl.BRAND : c.Ttl.WHITE,
-                            className: b.button,
+                            className: x.button,
                             onClick: n,
-                            innerClassName: b.innerButton,
+                            innerClassName: x.innerButton,
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: x.NW.string(x.t.GURBQk)
+                                children: N.NW.string(N.t.GURBQk)
                             })
                         })
                     ]

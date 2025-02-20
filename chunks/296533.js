@@ -18,9 +18,9 @@ var r = n(200651),
     p = n(430824),
     h = n(267642),
     f = n(709054),
-    N = n(357956),
-    x = n(275909),
-    b = n(300037),
+    b = n(357956),
+    N = n(275909),
+    x = n(300037),
     _ = n(981631),
     E = n(474936),
     j = n(388032),
@@ -90,7 +90,7 @@ function v(e) {
     let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: d, showAltText: m, isLastGuildBoostSlot: g } = e,
         p = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         f = i.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
-        b = i.useMemo(() => null != f && f > new Date(), [f]),
+        x = i.useMemo(() => null != f && f > new Date(), [f]),
         _ = (0, h.tl)(n),
         { fractionalState: E } = (0, c.Z)();
     return (0, r.jsxs)('div', {
@@ -99,16 +99,16 @@ function v(e) {
             (0, r.jsxs)('div', {
                 className: C.boostInnerContainer,
                 children: [
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(N.Z, {
                         isCanceled: _,
-                        hasCooldown: b,
+                        hasCooldown: x,
                         useReducedMotion: p
                     }),
                     (0, r.jsx)('div', {
                         className: C.boostDescriptionContainer,
                         children:
-                            null != f && b && !_
-                                ? (0, r.jsx)(N.Z, {
+                            null != f && x && !_
+                                ? (0, r.jsx)(b.Z, {
                                       className: C.boostDescriptionInnerContainer,
                                       cooldown: f.getTime()
                                   })
@@ -199,7 +199,7 @@ function S(e) {
     return (0, r.jsxs)('div', {
         className: C.appliedBoostContainer,
         children: [
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(x.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),
@@ -247,7 +247,7 @@ function T(e) {
     return (0, r.jsxs)('div', {
         className: C.appliedBoostContainer,
         children: [
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(x.Z, {
                 guildId: t,
                 boostingVariant: !1
             }),

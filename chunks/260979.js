@@ -1,28 +1,28 @@
-n.d(t, { Z: () => s }), n(653041);
-var i = n(200651),
-    l = n(192379),
-    a = n(965288),
-    r = n(434725);
-let s = l.memo(function (e) {
-    let { channel: t, participants: n, maxTiles: l } = e;
+n.d(t, { Z: () => a }), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(965288),
+    o = n(877677);
+let a = i.memo(function (e) {
+    let { channel: t, participants: n, maxTiles: i } = e;
     if (0 === n.length) return null;
-    let s = [];
-    for (let e = 0; e < l; e++)
+    let a = [];
+    for (let e = 0; e < i; e++)
         if (e < n.length) {
-            let l = n[e];
-            s.push(
-                (0, i.jsx)(
-                    a.Z,
+            let i = n[e];
+            a.push(
+                (0, r.jsx)(
+                    l.Z,
                     {
                         channel: t,
-                        participant: l
+                        participant: i
                     },
-                    l.id
+                    i.id
                 )
             );
-        } else s.push((0, i.jsx)(a.y, {}, e));
-    return (0, i.jsx)('div', {
-        className: r.participants,
-        children: s
+        } else a.push((0, r.jsx)(l.y, {}, e));
+    return (0, r.jsx)('div', {
+        className: o.participants,
+        children: a
     });
 });

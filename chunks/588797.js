@@ -1,5 +1,5 @@
-i.d(n, { Z: () => t });
-let t = (0, i(818083).B)({
+t.d(n, { Z: () => i });
+let i = (0, t(818083).B)({
     kind: 'user',
     id: '2023-06_guild_boosting_legacy_pricing_fix_experiment',
     label: 'Guild Boosting Legacy Pricing Fix Experiment',

@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(87051),
     h = n(419363),
     f = n(818083),
-    N = n(688465),
-    x = n(487419),
-    b = n(197344),
+    b = n(688465),
+    N = n(487419),
+    x = n(197344),
     _ = n(476756),
     E = n(734934),
     j = n(223683),
@@ -226,7 +226,7 @@ function K(e) {
                 sound: 'reconnect'
             }
         ],
-        p = null != b.Z.useHolidaySoundpack();
+        p = null != x.Z.useHolidaySoundpack();
     return (0, r.jsx)(I.F, {
         setting: L.s6.NOTIFICATIONS_SOUNDS,
         children: (0, r.jsxs)(u.hjN, {
@@ -278,7 +278,7 @@ function K(e) {
     });
 }
 function q() {
-    let e = (0, c.e7)([x.Z], () => x.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([N.Z], () => N.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
         s = Z.default.keys(e).map((t) => {
             let n = e[t];
@@ -295,7 +295,7 @@ function q() {
                   (0, r.jsxs)(u.X6q, {
                       variant: 'heading-lg/semibold',
                       className: a()(V.titleWithBeta, G.marginBottom20),
-                      children: [U.NW.string(U.t.D9yVAA), (0, r.jsx)(N.Z, {})]
+                      children: [U.NW.string(U.t.D9yVAA), (0, r.jsx)(b.Z, {})]
                   }),
                   (0, r.jsx)(u.R94, {
                       type: u.geA.DESCRIPTION,

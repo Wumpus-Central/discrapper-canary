@@ -1,18 +1,18 @@
 n.d(t, {
-    F: () => s,
-    i: () => a
+    F: () => a,
+    i: () => l
 }),
     n(653041),
     n(47120);
-var i = n(149765),
-    r = n(233608),
-    l = n(981631);
-function s(e) {
-    return i.Db(e.permissions, l.TC2);
+var r = n(149765),
+    i = n(233608),
+    s = n(981631);
+function a(e) {
+    return r.Db(e.permissions, s.TC2);
 }
-function a(e, t) {
+function l(e, t) {
     let n = [],
-        s = r.Z.getGuildPermissionSpecMap(e);
-    for (let e of l.yYS) i.e$(t.permissions, e) && n.push(s[e.toString()].title);
+        a = i.Z.getGuildPermissionSpecMap(e);
+    for (let e of s.yYS) r.e$(t.permissions, e) && n.push(a[e.toString()].title);
     return n;
 }

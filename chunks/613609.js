@@ -1,46 +1,46 @@
-n.d(t, { Z: () => _ }), n(47120), n(773603);
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(447543),
-    s = n(568154),
-    o = n(703656),
-    d = n(430824),
-    c = n(701190),
-    u = n(449934),
-    h = n(650233),
-    m = n(981631),
-    p = n(898625),
-    g = n(639673);
-let _ = (e) => {
+n.d(t, { Z: () => m }), n(47120), n(773603);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(447543),
+    a = n(568154),
+    s = n(703656),
+    c = n(430824),
+    u = n(701190),
+    d = n(449934),
+    p = n(650233),
+    h = n(981631),
+    g = n(898625),
+    f = n(507103);
+let m = (e) => {
     let { guildId: t, inviteCode: n } = e,
-        [_, f] = l.useState(p.hO.INITIAL),
-        [E, I] = l.useState(null != n);
-    l.useEffect(() => {
-        null != n && a.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
+        [m, b] = i.useState(g.hO.INITIAL),
+        [_, E] = i.useState(null != n);
+    i.useEffect(() => {
+        null != n && o.Z.resolveInvite(n, 'Hub').finally(() => E(!1));
     }, [n]);
-    let C = (0, r.e7)([c.Z], () => (null != n ? c.Z.getInvite(n) : null)),
-        N = (0, r.e7)([d.Z], () => d.Z.getGuild(t));
-    l.useEffect(() => {
-        null != N && (0, o.uL)(m.Z5c.CHANNEL(t));
+    let O = (0, l.e7)([u.Z], () => (null != n ? u.Z.getInvite(n) : null)),
+        N = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
+    i.useEffect(() => {
+        null != N && (0, s.uL)(h.Z5c.CHANNEL(t));
     }, [N, t]);
-    let v = l.useCallback((e) => {
-            f((t) => Math.max(t, e));
+    let v = i.useCallback((e) => {
+            b((t) => Math.max(t, e));
         }, []),
-        T = (0, u.gK)();
-    return (0, i.jsx)('div', {
-        className: g.page,
-        children: (0, i.jsxs)(s.Z, {
+        y = (0, d.gK)();
+    return (0, r.jsx)('div', {
+        className: f.page,
+        children: (0, r.jsxs)(a.Z, {
             embedded: !0,
-            splash: T,
-            waveState: _,
+            splash: y,
+            waveState: m,
             showLogo: !1,
             updateWaveState: v,
             children: [
-                (0, i.jsx)('div', { className: g.dragRegion }),
-                (0, i.jsx)('div', {
-                    className: g.contentWrapper,
-                    children: !E && (0, i.jsx)(h.H, { invite: C })
+                (0, r.jsx)('div', { className: f.dragRegion }),
+                (0, r.jsx)('div', {
+                    className: f.contentWrapper,
+                    children: !_ && (0, r.jsx)(p.H, { invite: O })
                 })
             ]
         })

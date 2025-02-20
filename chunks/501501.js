@@ -1,34 +1,34 @@
-var i = (function () {
+var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-var a = n(780643),
-    s = (function () {
+var o = n(780643),
+    a = (function () {
         function e() {
-            r(this, e);
+            i(this, e);
         }
         return (
-            i(e, null, [
+            r(e, null, [
                 {
                     key: 'step0',
                     value: function (e) {
-                        return e > 0 ? 1 : 0;
+                        return +(e > 0);
                     }
                 },
                 {
                     key: 'step1',
                     value: function (e) {
-                        return e >= 1 ? 1 : 0;
+                        return +(e >= 1);
                     }
                 },
                 {
@@ -40,7 +40,7 @@ var a = n(780643),
                 {
                     key: 'ease',
                     value: function (e) {
-                        return o(e);
+                        return s(e);
                     }
                 },
                 {
@@ -110,8 +110,8 @@ var a = n(780643),
                 },
                 {
                     key: 'bezier',
-                    value: function (e, t, n, i) {
-                        return a(e, t, n, i);
+                    value: function (e, t, n, r) {
+                        return o(e, t, n, r);
                     }
                 },
                 {
@@ -140,5 +140,5 @@ var a = n(780643),
             e
         );
     })(),
-    o = s.bezier(0.42, 0, 1, 1);
-e.exports = s;
+    s = a.bezier(0.42, 0, 1, 1);
+e.exports = a;

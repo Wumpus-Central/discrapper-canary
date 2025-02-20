@@ -24,12 +24,12 @@
             return (12 === e && (e = 0), '凌晨' === t || '早上' === t || '上午' === t) ? e : '中午' === t ? (e >= 11 ? e : e + 12) : '下午' === t || '晚上' === t ? e + 12 : void 0;
         },
         meridiem: function (e, t, n) {
-            var i = 100 * e + t;
-            if (i < 600) return '凌晨';
-            if (i < 900) return '早上';
-            if (i < 1130) return '上午';
-            if (i < 1230) return '中午';
-            if (i < 1800) return '下午';
+            var r = 100 * e + t;
+            if (r < 600) return '凌晨';
+            if (r < 900) return '早上';
+            if (r < 1130) return '上午';
+            if (r < 1230) return '中午';
+            if (r < 1800) return '下午';
             else return '晚上';
         },
         calendar: {

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
-var i = n(314897),
-    r = n(592125),
-    a = n(979651);
-function s() {
-    let e = a.Z.getVoiceStateForSession(i.default.getId(), i.default.getSessionId()),
+n.d(t, { Z: () => a });
+var r = n(314897),
+    i = n(592125),
+    o = n(979651);
+function a() {
+    let e = o.Z.getVoiceStateForSession(r.default.getId(), r.default.getSessionId()),
         t = null == e ? void 0 : e.channelId;
-    return r.Z.getChannel(t);
+    return i.Z.getChannel(t);
 }

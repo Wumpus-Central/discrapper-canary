@@ -1,25 +1,25 @@
-function t(e, t, n, i, r, a, s) {
+function t(e, t, n, r, i, o, a) {
     try {
-        var o = e[a](s),
-            l = o.value;
+        var s = e[o](a),
+            l = s.value;
     } catch (e) {
         return void n(e);
     }
-    o.done ? t(l) : Promise.resolve(l).then(i, r);
+    s.done ? t(l) : Promise.resolve(l).then(r, i);
 }
 function n(e) {
     return function () {
         var n = this,
-            i = arguments;
-        return new Promise(function (r, a) {
-            var s = e.apply(n, i);
-            function o(e) {
-                t(s, r, a, o, l, 'next', e);
+            r = arguments;
+        return new Promise(function (i, o) {
+            var a = e.apply(n, r);
+            function s(e) {
+                t(a, i, o, s, l, 'next', e);
             }
             function l(e) {
-                t(s, r, a, o, l, 'throw', e);
+                t(a, i, o, s, l, 'throw', e);
             }
-            o(void 0);
+            s(void 0);
         });
     };
 }

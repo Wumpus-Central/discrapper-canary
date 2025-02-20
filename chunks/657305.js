@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(388032);
-function r(e) {
-    return null != e && '' !== e ? e : i.intl.string(i.t['2YCamp']);
+n.d(t, { Z: () => i });
+var r = n(388032);
+function i(e) {
+    return null != e && '' !== e ? e : r.NW.string(r.t['2YCamp']);
 }

@@ -1,46 +1,46 @@
-n.d(t, { Z: () => f }), n(47120);
-var i,
+n.d(t, { Z: () => m }), n(47120);
+var r,
+    i,
     l,
-    a,
-    r = n(442837),
-    s = n(570140),
-    o = n(430198),
+    o = n(442837),
+    a = n(570140),
+    s = n(430198),
     c = n(314897),
-    d = n(592125),
-    u = n(709054),
-    h = n(522579);
-let p = new Set();
-class m extends (i = r.ZP.Store) {
+    u = n(592125),
+    d = n(709054),
+    p = n(522579);
+let h = new Set();
+class f extends (r = o.ZP.Store) {
     shouldDisplayPrompt(e) {
-        return p.has(e);
+        return h.has(e);
     }
 }
-(a = 'MediaPostSharePromptStore'),
-    (l = 'displayName') in m
-        ? Object.defineProperty(m, l, {
-              value: a,
+(l = 'MediaPostSharePromptStore'),
+    (i = 'displayName') in f
+        ? Object.defineProperty(f, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[l] = a);
-let f = new m(s.Z, {
+        : (f[i] = l);
+let m = new f(a.Z, {
     CONNECTION_OPEN: function () {
-        p = new Set();
+        h = new Set();
     },
     MESSAGE_CREATE: function (e) {
         var t;
         if (e.isPushNotification) return;
         let n = e.message;
-        if (c.default.getId() !== (null === (t = n.author) || void 0 === t ? void 0 : t.id) || !(0, h.z9)(n.id, n.channel_id)) return;
-        let i = d.Z.getChannel(n.channel_id);
-        null != i && null != i.parent_id && o.Z.isChannelGated(i.guild_id, i.parent_id) && p.add(u.default.castMessageIdAsChannelId(e.message.id));
+        if (c.default.getId() !== (null === (t = n.author) || void 0 === t ? void 0 : t.id) || !(0, p.z9)(n.id, n.channel_id)) return;
+        let r = u.Z.getChannel(n.channel_id);
+        null != r && null != r.parent_id && s.Z.isChannelGated(r.guild_id, r.parent_id) && h.add(d.default.castMessageIdAsChannelId(e.message.id));
     },
     DISMISS_MEDIA_POST_SHARE_PROMPT: function (e) {
         let { threadId: t } = e;
-        p.delete(t);
+        h.delete(t);
     },
     LOGOUT: function (e) {
-        p.clear();
+        h.clear();
     }
 });

@@ -1,7 +1,7 @@
-var i = n(67867),
-    r = n(228042),
-    a = n(146321).remove;
-i(
+var r = n(67867),
+    i = n(228042),
+    o = n(146321).remove;
+r(
     {
         target: 'Map',
         proto: !0,
@@ -10,7 +10,7 @@ i(
     },
     {
         deleteAll: function () {
-            for (var e, t = r(this), n = !0, i = 0, s = arguments.length; i < s; i++) (e = a(t, arguments[i])), (n = n && e);
+            for (var e, t = i(this), n = !0, r = 0, a = arguments.length; r < a; r++) (e = o(t, arguments[r])), (n = n && e);
             return !!n;
         }
     }

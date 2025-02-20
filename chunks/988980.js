@@ -1,14 +1,14 @@
 n.d(t, {
-    Z: () => s,
-    q: () => o
+    Z: () => a,
+    q: () => s
 });
-var i = n(192379),
-    r = n(812206),
-    a = n(701488);
-function s(e) {
-    return i.useMemo(() => o(e), [e]);
+var r = n(192379),
+    i = n(812206),
+    o = n(701488);
+function a(e) {
+    return r.useMemo(() => s(e), [e]);
 }
-function o(e) {
+function s(e) {
     var t, n;
-    return !(null != e && a.P9.includes(null != e ? e : '')) || (null === (n = r.Z.getApplication(e)) || void 0 === n ? void 0 : null === (t = n.embeddedActivityConfig) || void 0 === t ? void 0 : t.legacy_responsive_aspect_ratio);
+    return !(null != e && o.P9.includes(null != e ? e : '')) || (null === (n = i.Z.getApplication(e)) || void 0 === n ? void 0 : null === (t = n.embeddedActivityConfig) || void 0 === t ? void 0 : t.legacy_responsive_aspect_ratio);
 }

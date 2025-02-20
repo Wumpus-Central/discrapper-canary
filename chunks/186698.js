@@ -6,33 +6,33 @@
         var t = e;
         return -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'leS' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'waQ' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'nem' : t + ' pIq';
     }
-    function i(e) {
+    function r(e) {
         var t = e;
         return -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'Hu\u2019' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'wen' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'ben' : t + ' ret';
     }
-    function r(e, t, n, i) {
-        var r = a(e);
+    function i(e, t, n, r) {
+        var i = o(e);
         switch (n) {
             case 'ss':
-                return r + ' lup';
+                return i + ' lup';
             case 'mm':
-                return r + ' tup';
+                return i + ' tup';
             case 'hh':
-                return r + ' rep';
+                return i + ' rep';
             case 'dd':
-                return r + ' jaj';
+                return i + ' jaj';
             case 'MM':
-                return r + ' jar';
+                return i + ' jar';
             case 'yy':
-                return r + ' DIS';
+                return i + ' DIS';
         }
     }
-    function a(e) {
+    function o(e) {
         var n = Math.floor((e % 1000) / 100),
-            i = Math.floor((e % 100) / 10),
-            r = e % 10,
-            a = '';
-        return n > 0 && (a += t[n] + 'vatlh'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i] + 'maH'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r]), '' === a ? 'pagh' : a;
+            r = Math.floor((e % 100) / 10),
+            i = e % 10,
+            o = '';
+        return n > 0 && (o += t[n] + 'vatlh'), r > 0 && (o += ('' !== o ? ' ' : '') + t[r] + 'maH'), i > 0 && (o += ('' !== o ? ' ' : '') + t[i]), '' === o ? 'pagh' : o;
     }
     return e.defineLocale('tlh', {
         months: 'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split('_'),
@@ -59,19 +59,19 @@
         },
         relativeTime: {
             future: n,
-            past: i,
+            past: r,
             s: 'puS lup',
-            ss: r,
+            ss: i,
             m: 'wa\u2019 tup',
-            mm: r,
+            mm: i,
             h: 'wa\u2019 rep',
-            hh: r,
+            hh: i,
             d: 'wa\u2019 jaj',
-            dd: r,
+            dd: i,
             M: 'wa\u2019 jar',
-            MM: r,
+            MM: i,
             y: 'wa\u2019 DIS',
-            yy: r
+            yy: i
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

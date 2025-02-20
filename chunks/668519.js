@@ -1,7 +1,7 @@
-l.d(n, { a: () => a });
-var t = l(818083),
-    i = l(984134);
-let s = (0, t.B)({
+t.d(n, { a: () => s });
+var l = t(818083),
+    i = t(984134);
+let r = (0, l.B)({
     kind: 'user',
     id: '2025-01_go_live_modal_refresh',
     label: 'Go Live Modal Refresh',
@@ -14,14 +14,14 @@ let s = (0, t.B)({
         }
     ]
 });
-function a(e) {
-    let { location: n, autoTrackExposure: l = !0 } = e,
-        { isInHoldout: t } = i.h.useExperiment({ location: n }, { autoTrackExposure: l });
-    return s.useExperiment(
+function s(e) {
+    let { location: n, autoTrackExposure: t = !0 } = e,
+        { isInHoldout: l } = i.h.useExperiment({ location: n }, { autoTrackExposure: t });
+    return r.useExperiment(
         { location: n },
         {
-            disable: t,
-            autoTrackExposure: l
+            disable: l,
+            autoTrackExposure: t
         }
     );
 }

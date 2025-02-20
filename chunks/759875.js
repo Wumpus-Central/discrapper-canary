@@ -1,22 +1,22 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(346610),
-    s = n(868643),
-    r = n(245216),
-    o = n(996861),
-    d = n(388032);
-function c(e, t) {
-    let n = (0, s.a)(e),
-        { canForwardMessages: c } = (0, a.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
-    return n && c
-        ? (0, i.jsx)(l.sNh, {
+var i = n(481060),
+    l = n(346610),
+    a = n(868643),
+    o = n(245216),
+    s = n(996861),
+    c = n(388032);
+function u(e, t) {
+    let n = (0, a.a)(e),
+        { canForwardMessages: u } = (0, l.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
+    return n && u
+        ? (0, r.jsx)(i.sNh, {
               id: 'forward',
-              label: d.intl.string(d.t.I3ltXF),
-              icon: r.Z,
+              label: c.NW.string(c.t.I3ltXF),
+              icon: o.Z,
               action: () => {
-                  (0, o.ts)(t, e);
+                  (0, s.ts)(t, e);
               }
           })
         : null;

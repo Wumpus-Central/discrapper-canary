@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(914010),
     h = n(727785),
     f = n(388032),
-    N = n(370369);
-function x(e) {
+    b = n(370369);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,11 +74,11 @@ function v() {
 }
 function S() {
     return (0, r.jsx)('div', {
-        className: N.voiceListSearchEmpty,
+        className: b.voiceListSearchEmpty,
         children: (0, r.jsx)(a.Text, {
             variant: 'text-md/medium',
             color: 'text-muted',
-            className: N.noVoiceChannelSelected,
+            className: b.noVoiceChannelSelected,
             children: f.NW.string(f.t.zHjCd3)
         })
     });
@@ -96,9 +96,9 @@ function T(e) {
                 async () => (e) =>
                     (0, r.jsx)(
                         I,
-                        b(x({}, e), {
+                        x(N({}, e), {
                             onSelect: (e) => {
-                                u(e), l.Z.setKeybind(b(x({}, o.current), { params: { channelId: e } }));
+                                u(e), l.Z.setKeybind(x(N({}, o.current), { params: { channelId: e } }));
                             }
                         })
                     )
@@ -106,12 +106,12 @@ function T(e) {
         }, []);
     return (0, r.jsx)(a.hjN, {
         title: f.NW.string(f.t.q4JpMz),
-        className: N.channelIdSection,
+        className: b.channelIdSection,
         children: (0, r.jsxs)(c.Z, {
             align: c.Z.Align.STRETCH,
             children: [
                 (0, r.jsx)('div', {
-                    className: N.selectedVoiceChannel,
+                    className: b.selectedVoiceChannel,
                     children: (0, r.jsx)(y, { channelId: d })
                 }),
                 (0, r.jsx)(c.Z.Child, {
@@ -129,9 +129,9 @@ function T(e) {
 function I(e) {
     let { transitionState: t, onClose: n, onSelect: l } = e,
         c = i.useId(),
-        x = i.useRef(null),
+        N = i.useRef(null),
         {
-            mouseFocusEnabled: b,
+            mouseFocusEnabled: x,
             enableMouseFocus: _,
             disableMouseFocus: C
         } = (function () {
@@ -190,7 +190,7 @@ function I(e) {
             );
         })(T);
     i.useEffect(() => {
-        let { current: e } = x;
+        let { current: e } = N;
         null == e ||
             e.isItemVisible(0, P, !0) ||
             e.scrollToIndex({
@@ -208,15 +208,15 @@ function I(e) {
             if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
         })();
     return (0, r.jsx)('div', {
-        className: N.voiceModalContainer,
+        className: b.voiceModalContainer,
         onMouseMove: _,
         children: (0, r.jsxs)(a.Y0X, {
             transitionState: t,
             size: a.CgR.MEDIUM,
-            className: N.voiceModalRootContainer,
+            className: b.voiceModalRootContainer,
             children: [
                 (0, r.jsx)('div', {
-                    className: N.inputWrapper,
+                    className: b.inputWrapper,
                     children: (0, r.jsx)(a.oil, {
                         value: T,
                         onChange: I,
@@ -259,7 +259,7 @@ function I(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': f.NW.string(f.t['+N3fW1']),
-                        ref: x,
+                        ref: N,
                         sections: [D],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -278,7 +278,7 @@ function I(e) {
                                     channel: i,
                                     category: s,
                                     focused: P === t,
-                                    onMouseEnter: () => b.current && R(t),
+                                    onMouseEnter: () => x.current && R(t),
                                     onClick: () => {
                                         l(i.id), n();
                                     },
@@ -286,7 +286,7 @@ function I(e) {
                                     children:
                                         null != a
                                             ? (0, r.jsx)('div', {
-                                                  className: N.guildName,
+                                                  className: b.guildName,
                                                   children: a.name
                                               })
                                             : null
@@ -298,7 +298,7 @@ function I(e) {
                         renderFooter: O,
                         sectionHeight: 0,
                         rowHeight: 34,
-                        className: N.voiceChannelList,
+                        className: b.voiceChannelList,
                         listHeaderHeight: 8,
                         footerHeight: 16
                     })
@@ -330,7 +330,7 @@ function y(e) {
         ? (0, r.jsx)(a.Text, {
               variant: 'text-md/medium',
               color: 'text-muted',
-              className: N.noVoiceChannelSelected,
+              className: b.noVoiceChannelSelected,
               children: f.NW.string(f.t['/fYIKy'])
           })
         : (0, r.jsx)(d.$W, {
@@ -344,7 +344,7 @@ function y(e) {
               children:
                   null != l
                       ? (0, r.jsx)('div', {
-                            className: N.guildName,
+                            className: b.guildName,
                             children: l.name
                         })
                       : null

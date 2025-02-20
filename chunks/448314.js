@@ -5,8 +5,8 @@
         n = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
     return e.defineLocale('es-us', {
         months: 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split('_'),
-        monthsShort: function (e, i) {
-            return e ? (/-MMM-/.test(i) ? n[e.month()] : t[e.month()]) : t;
+        monthsShort: function (e, r) {
+            return e ? (/-MMM-/.test(r) ? n[e.month()] : t[e.month()]) : t;
         },
         monthsParseExact: !0,
         weekdays: 'domingo_lunes_martes_miércoles_jueves_viernes_sábado'.split('_'),

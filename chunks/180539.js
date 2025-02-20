@@ -1,33 +1,33 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(816782),
-    s = n(221292),
-    o = n(687158),
+var i = n(442837),
+    l = n(481060),
+    o = n(816782),
+    a = n(221292),
+    s = n(687158),
     c = n(646915),
-    d = n(433355),
-    u = n(665149),
-    h = n(981631),
-    p = n(388032);
-function m(e) {
+    u = n(433355),
+    d = n(665149),
+    p = n(981631),
+    h = n(388032);
+function f(e) {
     let { channel: t, showCallOrActivityPanel: n } = e,
-        m = (0, l.e7)([d.ZP], () => d.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
-        f = (0, o.ZP)(t.getRecipientId()),
+        f = (0, i.e7)([u.ZP], () => u.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
+        m = (0, s.ZP)(t.getRecipientId()),
         g = (0, c.Z)(),
-        _ = m === h.ULH.PROFILE && !g;
-    return (0, i.jsx)(u.JO, {
+        b = f === p.ULH.PROFILE && !g;
+    return (0, r.jsx)(d.JO, {
         disabled: g || n,
-        tooltip: g || n ? p.intl.string(p.t.YneDgI) : _ ? p.intl.string(p.t.niD64e) : p.intl.string(p.t['+FAsHh']),
-        icon: a.z65,
+        tooltip: g || n ? h.NW.string(h.t.YneDgI) : b ? h.NW.string(h.t.niD64e) : h.NW.string(h.t['+FAsHh']),
+        icon: l.z65,
         onClick: () => {
-            (0, s.TY)({
-                displayProfile: f,
-                isProfileOpen: !_
+            (0, a.TY)({
+                displayProfile: m,
+                isProfileOpen: !b
             }),
-                r.Z.toggleProfilePanelSection();
+                o.Z.toggleProfilePanelSection();
         },
-        selected: _ && !g && !n
+        selected: b && !g && !n
     });
 }

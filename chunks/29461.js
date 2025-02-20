@@ -1,60 +1,60 @@
-var i,
-    r,
-    a,
-    s = n(723455),
-    o = n(668530),
+var r,
+    i,
+    o,
+    a = n(723455),
+    s = n(668530),
     l = n(982665),
-    u = n(948634),
-    c = n(141603),
+    c = n(948634),
+    u = n(141603),
     d = n(980277),
     f = n(964653),
-    _ = n(511364),
-    p = 'Object already initialized',
-    h = o.TypeError,
-    m = o.WeakMap,
+    p = n(511364),
+    _ = 'Object already initialized',
+    h = s.TypeError,
+    m = s.WeakMap,
     g = function (e) {
-        return a(e) ? r(e) : i(e, {});
+        return o(e) ? i(e) : r(e, {});
     },
     E = function (e) {
         return function (t) {
             var n;
-            if (!l(t) || (n = r(t)).type !== e) throw new h('Incompatible receiver, ' + e + ' required');
+            if (!l(t) || (n = i(t)).type !== e) throw new h('Incompatible receiver, ' + e + ' required');
             return n;
         };
     };
-if (s || d.state) {
+if (a || d.state) {
     var v = d.state || (d.state = new m());
     (v.get = v.get),
         (v.has = v.has),
         (v.set = v.set),
-        (i = function (e, t) {
-            if (v.has(e)) throw new h(p);
+        (r = function (e, t) {
+            if (v.has(e)) throw new h(_);
             return (t.facade = e), v.set(e, t), t;
         }),
-        (r = function (e) {
+        (i = function (e) {
             return v.get(e) || {};
         }),
-        (a = function (e) {
+        (o = function (e) {
             return v.has(e);
         });
 } else {
-    var y = f('state');
-    (_[y] = !0),
-        (i = function (e, t) {
-            if (c(e, y)) throw new h(p);
-            return (t.facade = e), u(e, y, t), t;
+    var b = f('state');
+    (p[b] = !0),
+        (r = function (e, t) {
+            if (u(e, b)) throw new h(_);
+            return (t.facade = e), c(e, b, t), t;
         }),
-        (r = function (e) {
-            return c(e, y) ? e[y] : {};
+        (i = function (e) {
+            return u(e, b) ? e[b] : {};
         }),
-        (a = function (e) {
-            return c(e, y);
+        (o = function (e) {
+            return u(e, b);
         });
 }
 e.exports = {
-    set: i,
-    get: r,
-    has: a,
+    set: r,
+    get: i,
+    has: o,
     enforce: g,
     getterFor: E
 };

@@ -1,47 +1,47 @@
-n.d(t, { Z: () => E });
-var i = n(200651),
-    l = n(192379),
-    r = n(512969),
-    a = n(442837),
-    s = n(252618),
-    o = n(353926),
-    d = n(319443),
-    c = n(106075),
-    u = n(121711),
-    h = n(823379),
-    m = n(571457),
-    p = n(836768),
-    g = n(766219),
-    _ = n(49898),
-    f = n(624527);
-let E = function () {
-    let e = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
-        t = p.Z.useField('selectedTab'),
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    l = n(512969),
+    o = n(442837),
+    a = n(252618),
+    s = n(353926),
+    c = n(319443),
+    u = n(106075),
+    d = n(121711),
+    p = n(823379),
+    h = n(571457),
+    g = n(836768),
+    f = n(766219),
+    m = n(49898),
+    b = n(605280);
+let _ = function () {
+    let e = (0, o.e7)([s.Z], () => s.Z.hasLoadedExperiments),
+        t = g.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
-                case _.GlobalDiscoveryTab.SERVERS:
-                    return (0, i.jsx)(c.Z, {});
-                case _.GlobalDiscoveryTab.APPS:
-                    return (0, i.jsx)(d.default, {});
-                case _.GlobalDiscoveryTab.QUESTS:
-                    return (0, i.jsx)(u.Z, {});
+                case m.GlobalDiscoveryTab.SERVERS:
+                    return (0, r.jsx)(u.Z, {});
+                case m.GlobalDiscoveryTab.APPS:
+                    return (0, r.jsx)(c.default, {});
+                case m.GlobalDiscoveryTab.QUESTS:
+                    return (0, r.jsx)(d.Z, {});
                 default:
-                    (0, h.vE)(e);
+                    (0, p.vE)(e);
             }
         })(t),
-        E = (0, r.TH)();
+        _ = (0, l.TH)();
     return (
-        l.useEffect(() => {
-            let e = E.pathname,
-                t = (0, g.I)(e);
-            t !== p.Z.getField('selectedTab') && p.Z.setState({ selectedTab: t });
-        }, [E.pathname]),
-        l.useEffect(() => {
-            e && (0, m.RI)({ selectedTab: t });
+        i.useEffect(() => {
+            let e = _.pathname,
+                t = (0, f.I)(e);
+            t !== g.Z.getField('selectedTab') && g.Z.setState({ selectedTab: t });
+        }, [_.pathname]),
+        i.useEffect(() => {
+            e && (0, h.RI)({ selectedTab: t });
         }, [t, e]),
-        (0, i.jsxs)('section', {
-            className: f.container,
-            children: [(0, i.jsx)(s.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
+        (0, r.jsxs)('section', {
+            className: b.container,
+            children: [(0, r.jsx)(a.yY, { location: (0, f.s)(t) }), (0, r.jsx)('div', { className: b.dragRegion }), n]
         })
     );
 };

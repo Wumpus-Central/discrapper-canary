@@ -1,6 +1,6 @@
-l.d(t, { default: () => f }), l(47120);
-var s = l(200651),
-    r = l(192379),
+l.d(t, { default: () => b }), l(301563), l(47120);
+var r = l(200651),
+    s = l(192379),
     n = l(120356),
     a = l.n(n),
     i = l(442837),
@@ -9,15 +9,15 @@ var s = l(200651),
     o = l(461745),
     d = l(212819),
     h = l(43267),
-    _ = l(447003),
-    p = l(933557),
+    p = l(447003),
+    _ = l(933557),
     m = l(606206),
     N = l(585483),
-    E = l(981631),
-    g = l(388032),
-    x = l(870714),
-    v = l(483938);
-function C(e, t, l) {
+    g = l(981631),
+    E = l(388032),
+    v = l(939890),
+    f = l(455812);
+function y(e, t, l) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,79 +30,79 @@ function C(e, t, l) {
         e
     );
 }
-let I = (e) => {
-        let { channel: t, categoryName: l, guildName: r } = e,
+let x = (e) => {
+        let { channel: t, categoryName: l, guildName: s } = e,
             n = u.VL1;
         return (
-            (0, _.Z)(t) ? (n = u.W4G) : t.isNSFW() && (n = u.z0B),
-            (0, s.jsxs)('div', {
-                className: x.result,
+            (0, p.Z)(t) ? (n = u.W4G) : t.isNSFW() && (n = u.z0B),
+            (0, r.jsxs)('div', {
+                className: v.result,
                 children: [
-                    (0, s.jsx)(n, {
-                        className: x.resultIcon,
-                        colorClass: x.resultIconBackground,
+                    (0, r.jsx)(n, {
+                        className: v.resultIcon,
+                        colorClass: v.resultIconBackground,
                         size: 'xs'
                     }),
-                    (0, s.jsxs)('div', {
-                        className: x.resultText,
+                    (0, r.jsxs)('div', {
+                        className: v.resultText,
                         children: [
-                            (0, s.jsx)('span', { children: t.name }),
-                            (0, s.jsx)('span', {
-                                className: x.resultCategoryName,
+                            (0, r.jsx)('span', { children: t.name }),
+                            (0, r.jsx)('span', {
+                                className: v.resultCategoryName,
                                 children: l
                             })
                         ]
                     }),
-                    (0, s.jsx)('div', {
-                        className: x.resultGuildName,
-                        children: r
+                    (0, r.jsx)('div', {
+                        className: v.resultGuildName,
+                        children: s
                     })
                 ]
             })
         );
     },
-    S = (e) => {
+    C = (e) => {
         let { channel: t } = e,
-            l = (0, p.ZP)(t);
-        return (0, s.jsxs)('div', {
-            className: x.result,
+            l = (0, _.ZP)(t);
+        return (0, r.jsxs)('div', {
+            className: v.result,
             children: [
-                (0, s.jsx)(u.qEK, {
+                (0, r.jsx)(u.qEK, {
                     src: (0, h.x)(t),
                     'aria-label': null != l ? l : '',
-                    className: x.resultAvatar,
+                    className: v.resultAvatar,
                     size: u.EFr.SIZE_32
                 }),
-                (0, s.jsx)('div', {
-                    className: x.resultText,
+                (0, r.jsx)('div', {
+                    className: v.resultText,
                     children: l
                 })
             ]
         });
     },
-    T = (e) => {
+    O = (e) => {
         let t,
-            { user: l, comparator: r, status: n } = e;
-        if (null != r && r === l.tag) {
-            let e = r.split('#');
+            { user: l, comparator: s, status: n } = e;
+        if (null != s && s === l.tag) {
+            let e = s.split('#');
             e.pop(), (t = e.join('#'));
-        } else t = null != r && '' !== r ? r : l.username;
-        return (0, s.jsxs)('div', {
-            className: x.result,
+        } else t = null != s && '' !== s ? s : l.username;
+        return (0, r.jsxs)('div', {
+            className: v.result,
             children: [
-                (0, s.jsx)(u.qEK, {
+                (0, r.jsx)(u.qEK, {
                     src: l.getAvatarURL(void 0, 32),
                     'aria-label': l.username,
-                    className: x.resultAvatar,
+                    className: v.resultAvatar,
                     size: u.EFr.SIZE_32,
                     status: n
                 }),
-                (0, s.jsxs)('div', {
-                    className: x.resultText,
+                (0, r.jsxs)('div', {
+                    className: v.resultText,
                     children: [
-                        (0, s.jsx)('span', { children: t }),
-                        (0, s.jsx)('span', {
-                            className: x.resultUsername,
+                        (0, r.jsx)('span', { children: t }),
+                        (0, r.jsx)('span', {
+                            className: v.resultUsername,
                             children: l.tag
                         })
                     ]
@@ -110,56 +110,56 @@ let I = (e) => {
             ]
         });
     };
-class A extends r.Component {
+class S extends s.Component {
     render() {
         let e, t;
-        let { result: l, selected: r, sending: n } = this.props;
+        let { result: l, selected: s, sending: n } = this.props;
         switch (l.type) {
             case d.h8.GROUP_DM:
-                e = (0, s.jsx)(S, { channel: l.data.record });
+                e = (0, r.jsx)(C, { channel: l.data.record });
                 break;
             case d.h8.TEXT_CHANNEL: {
-                let { categoryName: t, guildName: r } = l;
-                e = (0, s.jsx)(I, {
+                let { categoryName: t, guildName: s } = l;
+                e = (0, r.jsx)(x, {
                     channel: l.data.record,
                     categoryName: t,
-                    guildName: r
+                    guildName: s
                 });
                 break;
             }
             case d.h8.USER: {
                 let {
-                    data: { comparator: t, record: r },
+                    data: { comparator: t, record: s },
                     status: n
                 } = l;
-                e = (0, s.jsx)(T, {
+                e = (0, r.jsx)(O, {
                     comparator: t,
-                    user: r,
+                    user: s,
                     status: n
                 });
             }
         }
         return (
             (t = l.sent
-                ? (0, s.jsx)(u.zxk, {
-                      className: x.inviteButton,
+                ? (0, r.jsx)(u.zxk, {
+                      className: v.inviteButton,
                       look: u.zxk.Looks.LINK,
                       size: u.zxk.Sizes.SMALL,
                       disabled: !0,
                       color: u.zxk.Colors.WHITE,
-                      children: g.intl.string(g.t.i6A1X1)
+                      children: E.NW.string(E.t.i6A1X1)
                   })
-                : (0, s.jsx)(u.zxk, {
+                : (0, r.jsx)(u.zxk, {
                       color: u.zxk.Colors.GREEN,
-                      look: r ? u.zxk.Looks.FILLED : u.zxk.Looks.OUTLINED,
-                      className: x.inviteButton,
+                      look: s ? u.zxk.Looks.FILLED : u.zxk.Looks.OUTLINED,
+                      className: v.inviteButton,
                       size: u.zxk.Sizes.SMALL,
                       submitting: n,
                       onClick: this.handleClick,
-                      children: g.intl.string(g.t['6F9ivr'])
+                      children: E.NW.string(E.t['6F9ivr'])
                   })),
-            (0, s.jsxs)('div', {
-                className: a()(x.resultWrapper, { [x.resultWrapperSelected]: r }),
+            (0, r.jsxs)('div', {
+                className: a()(v.resultWrapper, { [v.resultWrapperSelected]: s }),
                 onMouseEnter: this.handleMouseEnter,
                 children: [e, t]
             })
@@ -167,17 +167,17 @@ class A extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'handleClick', () => {
+            y(this, 'handleClick', () => {
                 let { onInvite: e, row: t } = this.props;
                 e(t);
             }),
-            C(this, 'handleMouseEnter', () => {
+            y(this, 'handleMouseEnter', () => {
                 let { onMouseEnter: e, row: t } = this.props;
                 e(t);
             });
     }
 }
-function f(e) {
+function b(e) {
     let { transitionState: t, onClose: l } = e,
         {
             results: n,
@@ -192,45 +192,45 @@ function f(e) {
             }),
             []
         ),
-        [_, p] = r.useState(a),
-        [C, I] = r.useState(0),
-        [S, T] = r.useState([]),
-        [f, L] = r.useState(!1),
-        y = r.useRef(null),
-        k = r.useCallback(() => {
+        [p, _] = s.useState(a),
+        [y, x] = s.useState(0),
+        [C, O] = s.useState([]),
+        [b, I] = s.useState(!1),
+        j = s.useRef(null),
+        T = s.useCallback(() => {
             var e;
-            null === (e = y.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
-        }, [y]),
-        R = r.useCallback(() => {
+            null === (e = j.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
+        }, [j]),
+        A = s.useCallback(() => {
             var e;
-            null === (e = y.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
-        }, [y]);
-    r.useEffect(
+            null === (e = j.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
+        }, [j]);
+    s.useEffect(
         () => (
-            N.S.subscribe(E.CkL.SCROLL_PAGE_UP, k),
+            N.S.subscribe(g.CkL.SCROLL_PAGE_UP, T),
             () => {
-                N.S.unsubscribe(E.CkL.SCROLL_PAGE_UP, k);
+                N.S.unsubscribe(g.CkL.SCROLL_PAGE_UP, T);
             }
         ),
-        [k]
+        [T]
     ),
-        r.useEffect(
+        s.useEffect(
             () => (
-                N.S.subscribe(E.CkL.SCROLL_PAGE_DOWN, R),
+                N.S.subscribe(g.CkL.SCROLL_PAGE_DOWN, A),
                 () => {
-                    N.S.unsubscribe(E.CkL.SCROLL_PAGE_DOWN, R);
+                    N.S.unsubscribe(g.CkL.SCROLL_PAGE_DOWN, A);
                 }
             ),
-            [R]
+            [A]
         ),
-        r.useEffect(() => {
+        s.useEffect(() => {
             null == h && l();
         }, [l, h]),
-        r.useEffect(() => {
+        s.useEffect(() => {
             var e;
-            null === (e = y.current) || void 0 === e || e.scrollToTop(), I(0);
-        }, [y, n]);
-    let j = r.useCallback(
+            null === (e = j.current) || void 0 === e || e.scrollToTop(), x(0);
+        }, [j, n]);
+    let L = s.useCallback(
             (e) => {
                 let {
                     data: t,
@@ -238,8 +238,8 @@ function f(e) {
                         record: { id: l }
                     }
                 } = n[e];
-                if (!(null == l || S.includes(l)))
-                    switch ((T([...S, l]), t.type)) {
+                if (!(null == l || C.includes(l)))
+                    switch ((O([...C, l]), t.type)) {
                         case d.h8.GROUP_DM:
                         case d.h8.TEXT_CHANNEL:
                             (0, c.GG)(t.record.id);
@@ -248,64 +248,64 @@ function f(e) {
                             (0, c.R2)(t.record.id);
                     }
             },
-            [n, S]
+            [n, C]
         ),
-        b = r.useCallback(
+        k = s.useCallback(
             (e) => {
-                I(e);
+                x(e);
             },
-            [I]
+            [x]
         ),
         P = () => {
-            O('');
+            R('');
         },
-        O = (e) => {
-            p(e), (0, c.rh)(e);
+        R = (e) => {
+            _(e), (0, c.rh)(e);
         };
     return null == h
         ? null
-        : (0, s.jsxs)(u.Y0X, {
+        : (0, r.jsxs)(u.Y0X, {
               transitionState: t,
               size: u.CgR.SMALL,
-              'aria-label': g.intl.formatToPlainString(g.t['2tN7io'], { name: h.name }),
+              'aria-label': E.NW.formatToPlainString(E.t['2tN7io'], { name: h.name }),
               children: [
-                  (0, s.jsxs)(u.xBx, {
-                      separator: f,
+                  (0, r.jsxs)(u.xBx, {
+                      separator: b,
                       children: [
-                          (0, s.jsx)(u.olH, {
-                              className: x.closeButton,
+                          (0, r.jsx)(u.olH, {
+                              className: v.closeButton,
                               onClick: l
                           }),
-                          (0, s.jsxs)('div', {
-                              className: x.header,
+                          (0, r.jsxs)('div', {
+                              className: v.header,
                               children: [
-                                  (0, s.jsx)(u.vwX, {
+                                  (0, r.jsx)(u.vwX, {
                                       tag: 'h2',
-                                      className: v.marginBottom8,
-                                      children: g.intl.format(g.t['2tN7io'], { name: h.name })
+                                      className: f.marginBottom8,
+                                      children: E.NW.format(E.t['2tN7io'], { name: h.name })
                                   }),
-                                  (0, s.jsx)(o.ZP, {
+                                  (0, r.jsx)(o.ZP, {
                                       size: o.ZP.Sizes.MEDIUM,
-                                      query: _,
+                                      query: p,
                                       selectedSection: 0,
-                                      selectedRow: C,
+                                      selectedRow: y,
                                       sections: [n.length],
-                                      className: v.marginTop4,
+                                      className: f.marginTop4,
                                       onSelect: (e, t) => {
-                                          null == t ? P() : j(t);
+                                          null == t ? P() : L(t);
                                       },
                                       onSelectionChange: (e, t) => {
                                           var l;
-                                          I(t),
-                                              null === (l = y.current) ||
+                                          x(t),
+                                              null === (l = j.current) ||
                                                   void 0 === l ||
                                                   l.scrollIntoViewRect({
                                                       start: 44 * t,
                                                       end: 44 * t + 44
                                                   });
                                       },
-                                      onQueryChange: O,
-                                      placeholder: g.intl.string(g.t.IJExws),
+                                      onQueryChange: R,
+                                      placeholder: E.NW.string(E.t.IJExws),
                                       autoFocus: !0,
                                       onClear: P
                                   })
@@ -313,36 +313,36 @@ function f(e) {
                           })
                       ]
                   }),
-                  (0, s.jsx)(u.YAO, {
-                      scrollerRef: y,
-                      className: 0 === n.length ? x.noResults : x.results,
+                  (0, r.jsx)(u.YAO, {
+                      scrollerRef: j,
+                      className: 0 === n.length ? v.noResults : v.results,
                       paddingBottom: 8,
                       sections: [n.length],
                       sectionHeight: 0,
-                      renderSection: E.VqG,
-                      rowHeight: (e, t) => (e > 0 ? 0 : null != n[t] ? 44 : 0),
+                      renderSection: g.VqG,
+                      rowHeight: (e, t) => (e > 0 ? 0 : 44 * (null != n[t])),
                       renderRow: (e) => {
                           let { section: t, row: l } = e;
                           if (t > 0) return null;
-                          let r = n[l];
-                          return null == r
+                          let s = n[l];
+                          return null == s
                               ? null
-                              : (0, s.jsx)(
-                                    A,
+                              : (0, r.jsx)(
+                                    S,
                                     {
                                         row: l,
-                                        result: r,
-                                        sending: null != r.data.record.id && S.includes(r.data.record.id),
-                                        selected: l === C,
-                                        onMouseEnter: b,
-                                        onInvite: j
+                                        result: s,
+                                        sending: null != s.data.record.id && C.includes(s.data.record.id),
+                                        selected: l === y,
+                                        onMouseEnter: k,
+                                        onInvite: L
                                     },
-                                    r.data.record.id
+                                    s.data.record.id
                                 );
                       },
                       onScroll: (e) => {
                           let t = e.currentTarget.scrollTop > 0;
-                          f !== t && L(t);
+                          b !== t && I(t);
                       }
                   })
               ]

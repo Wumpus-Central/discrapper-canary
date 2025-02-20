@@ -1,34 +1,34 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(529103),
-    r = n(377171),
-    s = n(497089),
-    o = n(849862),
+    o = n(377171),
+    l = n(497089),
+    s = n(849862),
     c = n(703656),
     d = n(626135),
     u = n(981631),
-    m = n(388032),
-    _ = n(119504);
-function h(e) {
+    p = n(388032),
+    m = n(23702);
+function f(e) {
     let { closePopout: t } = e,
-        n = (0, o.If)();
-    return (0, i.jsx)(l.DY3, {
-        text: m.intl.string(m.t['lMR96+']),
-        children: (0, i.jsxs)(l.P3F, {
-            className: _.friendRequestsButton,
+        n = (0, s.If)();
+    return (0, r.jsx)(i.DY3, {
+        text: p.NW.string(p.t['lMR96+']),
+        children: (0, r.jsxs)(i.P3F, {
+            className: m.friendRequestsButton,
             onClick: () => {
-                d.default.track(u.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(u.Z5c.FRIENDS), a.Z.setSection(u.pJs.PENDING), t();
+                d.default.track(u.rMx.NOTIFICATION_CENTER_ACTION, { action_type: l.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(u.Z5c.FRIENDS), a.Z.setSection(u.pJs.PENDING), t();
             },
             children: [
-                (0, i.jsx)(l.iFz, {
+                (0, r.jsx)(i.iFz, {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, i.jsx)(l.mAB, {
+                (0, r.jsx)(i.mAB, {
                     count: n,
-                    color: r.Z.BACKGROUND_ACCENT
+                    color: o.Z.BACKGROUND_ACCENT
                 })
             ]
         })

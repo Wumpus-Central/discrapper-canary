@@ -1,41 +1,41 @@
 n.d(t, { Z: () => m });
-var l = n(200651),
-    i = n(481060),
-    r = n(99690),
+var r = n(200651),
+    l = n(481060),
+    i = n(99690),
     a = n(473188),
-    s = n(17463),
-    o = n(191420),
-    d = n(774621),
-    c = n(49274),
+    o = n(825739),
+    s = n(191420),
+    c = n(774621),
+    d = n(49274),
     u = n(904141);
 function m(e) {
-    let { user: t, rank: n, rankBadgeVisibility: m = 'visible', avatarClassName: x, avatarSize: _ = i.EFr.SIZE_40 } = e,
-        h = (0, i.pxk)(_);
-    return (0, l.jsxs)('div', {
-        className: s.container,
+    let { user: t, rank: n, rankBadgeVisibility: m = 'visible', avatarClassName: x, avatarSize: p = l.EFr.SIZE_40 } = e,
+        f = (0, l.pxk)(p);
+    return (0, r.jsxs)('div', {
+        className: o.container,
         style: {
-            width: ''.concat(h, 'px'),
-            height: ''.concat(h, 'px')
+            width: ''.concat(f, 'px'),
+            height: ''.concat(f, 'px')
         },
         children: [
-            (0, l.jsx)('img', {
-                className: s.frame,
-                src: 1 === n ? o : 2 === n ? d : 3 === n ? c : u,
+            (0, r.jsx)('img', {
+                className: o.frame,
+                src: 1 === n ? s : 2 === n ? c : 3 === n ? d : u,
                 style: {
-                    width: h + 8,
-                    height: h + 8
+                    width: f + 8,
+                    height: f + 8
                 },
                 alt: ''
             }),
-            (0, l.jsx)(r.Z, {
+            (0, r.jsx)(i.Z, {
                 className: x,
                 user: t,
-                size: _
+                size: p
             }),
             'hidden' !== m &&
-                (0, l.jsx)('div', {
-                    className: s.rankBadge,
-                    children: (0, l.jsx)(a._, {
+                (0, r.jsx)('div', {
+                    className: o.rankBadge,
+                    children: (0, r.jsx)(a._, {
                         rank: n,
                         hideInnerBorder: 'visibleWithoutBorder' === m
                     })

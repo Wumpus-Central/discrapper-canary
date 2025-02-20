@@ -1,12 +1,12 @@
-l.d(n, { Z: () => d });
-var t = l(209739),
-    i = l.n(t),
-    s = l(579806),
-    a = l(131951),
-    r = l(358085),
-    o = l(70722),
-    u = l(65154),
-    c = l(388032);
+t.d(n, { Z: () => d });
+var l = t(209739),
+    i = t.n(l),
+    r = t(579806),
+    s = t(131951),
+    a = t(358085),
+    o = t(70722),
+    c = t(65154),
+    u = t(388032);
 function d() {
-    return a.Z.supports(u.AN.SOUNDSHARE) ? ((0, r.isWindows)() && !i().satisfies(null === s.Z || void 0 === s.Z ? void 0 : s.Z.os.release, o.I9) ? c.intl.string(c.t.voRPTE) : (0, r.isMac)() && !i().satisfies(null === s.Z || void 0 === s.Z ? void 0 : s.Z.os.release, o.Ec) ? c.intl.string(c.t.v2y9PT) : null) : c.intl.string(c.t['1b0Gm5']);
+    return s.Z.supports(c.AN.SOUNDSHARE) ? ((0, a.isWindows)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.I9) ? u.NW.string(u.t.voRPTE) : (0, a.isMac)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.Ec) ? u.NW.string(u.t.v2y9PT) : null) : u.NW.string(u.t['1b0Gm5']);
 }

@@ -1,11 +1,11 @@
-var i = n(400353),
-    r = n(991530),
-    a = n(433005),
-    s = 1 / 0,
-    o =
-        i && 1 / a(new i([, -0]))[1] == s
+var r = n(400353),
+    i = n(991530),
+    o = n(433005),
+    a = 1 / 0,
+    s =
+        r && 1 / o(new r([, -0]))[1] == a
             ? function (e) {
-                  return new i(e);
+                  return new r(e);
               }
-            : r;
-e.exports = o;
+            : i;
+e.exports = s;

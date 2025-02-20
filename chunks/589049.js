@@ -1,19 +1,19 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(230711),
-    r = n(906732),
-    s = n(981631),
-    o = n(388032);
-function c() {
-    let { analyticsLocations: e } = (0, r.ZP)();
-    return (0, i.jsx)(l.sNh, {
+var i = n(481060),
+    o = n(230711),
+    l = n(906732),
+    c = n(981631),
+    a = n(388032);
+function u() {
+    let { analyticsLocations: e } = (0, l.ZP)();
+    return (0, r.jsx)(i.sNh, {
         id: 'voice-and-video-settings',
-        label: o.intl.string(o.t.dsXapK),
+        label: a.NW.string(a.t.dsXapK),
         action: () => {
-            a.Z.open(s.oAB.VOICE, null, { analyticsLocations: e });
+            o.Z.open(c.oAB.VOICE, null, { analyticsLocations: e });
         },
-        icon: l.ewm
+        icon: i.ewm
     });
 }

@@ -1,103 +1,103 @@
-n.d(e, { Z: () => h });
+n.d(t, { Z: () => y });
 var r = n(570140),
     i = n(668781),
     a = n(287734),
     o = n(881052),
-    l = n(314897),
-    c = n(592125),
-    u = n(979651),
-    E = n(352954),
-    s = n(630759),
+    c = n(314897),
+    u = n(592125),
+    l = n(979651),
+    s = n(352954),
+    E = n(630759),
     d = n(760373),
-    _ = n(981631),
-    f = n(388032);
-async function S(t, e) {
-    if (t) {
+    f = n(981631),
+    _ = n(388032);
+async function S(e, t) {
+    if (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_SETTINGS_UPDATE',
-            persistentCodesEnabled: t
+            persistentCodesEnabled: e
         });
         try {
-            await (0, s.om)(d.GB), null == e || e();
-        } catch (e) {
+            await (0, E.om)(d.GB), null == t || t();
+        } catch (t) {
             var n;
-            let t = new o.Hx(e);
+            let e = new o.Hx(t);
             r.Z.dispatch({
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: !1
             }),
                 i.Z.show({
-                    title: f.intl.string(f.t.R0RpRU),
-                    body: null !== (n = t.getAnyErrorMessage()) && void 0 !== n ? n : f.intl.string(f.t.eAn6z8)
+                    title: _.NW.string(_.t.R0RpRU),
+                    body: null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : _.NW.string(_.t.eAn6z8)
                 });
         }
     } else
         r.Z.dispatch({
             type: 'SECURE_FRAMES_SETTINGS_UPDATE',
-            persistentCodesEnabled: t
+            persistentCodesEnabled: e
         }),
-            null == e || e();
+            null == t || t();
 }
-let h = {
+let y = {
     clearUploadedKeyVersions: function () {
         r.Z.dispatch({ type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR' });
     },
-    updatePersistentCodesEnabled: async function t(t) {
-        let e = (function () {
-            let t = u.Z.getVoiceStateForUser(l.default.getId()),
-                e = c.Z.getChannel(null == t ? void 0 : t.channelId);
-            return l.default.getSessionId() === (null == t ? void 0 : t.sessionId) && null != e && e.type !== _.d4z.GUILD_STAGE_VOICE ? e.id : null;
+    updatePersistentCodesEnabled: async function e(e) {
+        let t = (function () {
+            let e = l.Z.getVoiceStateForUser(c.default.getId()),
+                t = u.Z.getChannel(null == e ? void 0 : e.channelId);
+            return c.default.getSessionId() === (null == e ? void 0 : e.sessionId) && null != t && t.type !== f.d4z.GUILD_STAGE_VOICE ? t.id : null;
         })();
-        null != e
-            ? E.Z.openSecureFramesUpdateConfirmation({
-                  title: t ? f.intl.string(f.t.DRFN1N) : f.intl.string(f.t.q29xJy),
-                  subtitle: t ? f.intl.string(f.t.y015ZW) : f.intl.string(f.t.E66FQk),
-                  confirmText: f.intl.string(f.t.aTuFYW),
+        null != t
+            ? s.Z.openSecureFramesUpdateConfirmation({
+                  title: e ? _.NW.string(_.t.DRFN1N) : _.NW.string(_.t.q29xJy),
+                  subtitle: e ? _.NW.string(_.t.y015ZW) : _.NW.string(_.t.E66FQk),
+                  confirmText: _.NW.string(_.t.aTuFYW),
                   onConfirm: async () => {
-                      await S(t, () => {
-                          a.default.disconnect(), a.default.selectVoiceChannel(e);
+                      await S(e, () => {
+                          a.default.disconnect(), a.default.selectVoiceChannel(t);
                       });
                   }
               })
-            : await S(t);
+            : await S(e);
     },
-    addUploadedKeyVersion: function (t) {
+    addUploadedKeyVersion: function (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD',
-            keyVersion: t
+            keyVersion: e
         });
     },
-    createSecureFramesVerifiedKey: function (t, e) {
+    createSecureFramesVerifiedKey: function (e, t) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_VERIFIED_KEY_CREATE',
-            userId: t,
-            key: e
+            userId: e,
+            key: t
         });
     },
-    deleteSecureFramesVerifiedKey: function (t, e) {
+    deleteSecureFramesVerifiedKey: function (e, t) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_VERIFIED_KEY_DELETE',
-            userId: t,
-            serializedKey: e
+            userId: e,
+            serializedKey: t
         });
     },
-    deleteSecureFramesUserVerifiedKeys: function (t) {
+    deleteSecureFramesUserVerifiedKeys: function (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE',
-            userId: t
+            userId: e
         });
     },
-    createSecureFramesTransientKey: function (t, e) {
+    createSecureFramesTransientKey: function (e, t) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_TRANSIENT_KEY_CREATE',
-            userId: t,
-            key: e
+            userId: e,
+            key: t
         });
     },
-    deleteSecureFramesTransientKey: function (t) {
+    deleteSecureFramesTransientKey: function (e) {
         r.Z.dispatch({
             type: 'SECURE_FRAMES_TRANSIENT_KEY_DELETE',
-            userId: t
+            userId: e
         });
     }
 };

@@ -1,25 +1,25 @@
-t.d(n, { Z: () => d }), t(47120);
-var i = t(192379),
-    o = t(688619),
-    r = t.n(o);
-t(979590);
-var a = t(442837),
-    l = t(866442),
-    c = t(607070),
-    s = t(220082),
-    _ = t(981631);
+n.d(t, { Z: () => d }), n(47120);
+var i = n(192379),
+    o = n(688619),
+    r = n.n(o);
+n(979590);
+var a = n(442837),
+    c = n(866442),
+    l = n(607070),
+    s = n(220082),
+    _ = n(981631);
 let d = (e) => {
-    var n, o, d, u, p, I;
-    let f;
-    f = t(481060).TVs;
-    let m = (0, a.e7)([c.Z], () => c.Z.saturation),
-        [S, C] = (0, s.Cf)(
+    var t, o, d, u, p, f;
+    let I;
+    I = n(481060).TVs;
+    let m = (0, a.e7)([l.Z], () => l.Z.saturation),
+        [S, b] = (0, s.Cf)(
             e,
             null !==
-                (I =
-                    null == f
+                (f =
+                    null == I
                         ? void 0
-                        : null === (p = f.colors) || void 0 === p
+                        : null === (p = I.colors) || void 0 === p
                           ? void 0
                           : null === (u = p.BACKGROUND_FLOATING) || void 0 === u
                             ? void 0
@@ -31,20 +31,20 @@ let d = (e) => {
                                           saturation: m
                                       })) || void 0 === o
                                 ? void 0
-                                : null === (n = o.hex) || void 0 === n
+                                : null === (t = o.hex) || void 0 === t
                                   ? void 0
-                                  : n.call(o)) && void 0 !== I
-                ? I
+                                  : t.call(o)) && void 0 !== f
+                ? f
                 : '#000'
         );
     return i.useMemo(() => {
-        let e = (0, l._i)(S),
-            n = (0, l._i)(C);
-        for (let n = 1; n < 8 && !((0, l.Bd)(e) >= 0.725); n++) e = r()(e).darken(0.5).num();
-        for (let e = 1; e < 8 && !((0, l.Bd)(n) >= 0.725); e++) n = r()(n).darken(0.5).num();
+        let e = (0, c._i)(S),
+            t = (0, c._i)(b);
+        for (let t = 1; t < 8 && !((0, c.Bd)(e) >= 0.725); t++) e = r()(e).darken(0.5).num();
+        for (let e = 1; e < 8 && !((0, c.Bd)(t) >= 0.725); e++) t = r()(t).darken(0.5).num();
         return {
-            primaryColor: (0, l.Rf)(e),
-            secondaryColor: (0, l.Rf)(n)
+            primaryColor: (0, c.Rf)(e),
+            secondaryColor: (0, c.Rf)(t)
         };
-    }, [S, C]);
+    }, [S, b]);
 };

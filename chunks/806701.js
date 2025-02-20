@@ -1,21 +1,21 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    l = n(481060),
-    o = n(388905),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    l = n(388905),
     s = n(661824),
     c = n(720196),
-    d = n(981631),
-    u = n(388032),
-    h = n(584925),
-    _ = n(483938);
-function m(e) {
+    u = n(981631),
+    d = n(388032),
+    h = n(279178),
+    p = n(455812);
+function _(e) {
     let { children: t } = e;
-    return (0, i.jsx)('li', {
+    return (0, r.jsx)('li', {
         className: h.listItem,
-        children: (0, i.jsx)(l.Text, {
+        children: (0, r.jsx)(a.Text, {
             variant: 'text-sm/medium',
             color: 'text-normal',
             children: t
@@ -23,42 +23,42 @@ function m(e) {
     });
 }
 function g(e) {
-    let { setSlide: t, transitionTo: r } = e;
-    return (0, i.jsxs)('div', {
+    let { setSlide: t, transitionTo: i } = e;
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(o.Ee, {
+            (0, r.jsx)(l.Ee, {
                 src: n(26230),
-                className: a()(_.marginBottom20, _.marginTop8)
+                className: o()(p.marginBottom20, p.marginTop8)
             }),
-            (0, i.jsx)(o.Dx, {
-                className: _.marginBottom8,
-                children: u.intl.string(u.t['8UcxIy'])
+            (0, r.jsx)(l.Dx, {
+                className: p.marginBottom8,
+                children: d.NW.string(d.t['8UcxIy'])
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
-                children: u.intl.string(u.t.O37hMj)
+                children: d.NW.string(d.t.O37hMj)
             }),
-            (0, i.jsxs)(o.gO, {
-                className: a()(_.marginBottom20, _.marginTop20),
+            (0, r.jsxs)(l.gO, {
+                className: o()(p.marginBottom20, p.marginTop20),
                 children: [
-                    (0, i.jsx)(l.Text, { variant: 'text-sm/normal' }),
-                    (0, i.jsxs)('ul', {
+                    (0, r.jsx)(a.Text, { variant: 'text-sm/normal' }),
+                    (0, r.jsxs)('ul', {
                         className: h.listContainer,
-                        children: [(0, i.jsx)(m, { children: u.intl.string(u.t.Gj1Zr6) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(m, { children: u.intl.string(u.t['8C6t3N']) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(m, { children: u.intl.string(u.t.mToZMD) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(m, { children: u.intl.string(u.t.TPEvkZ) }), (0, i.jsx)(s.Z, {}), (0, i.jsx)(m, { children: u.intl.string(u.t.H8Y1Li) })]
+                        children: [(0, r.jsx)(_, { children: d.NW.string(d.t.Gj1Zr6) }), (0, r.jsx)(s.Z, {}), (0, r.jsx)(_, { children: d.NW.string(d.t['8C6t3N']) }), (0, r.jsx)(s.Z, {}), (0, r.jsx)(_, { children: d.NW.string(d.t.mToZMD) }), (0, r.jsx)(s.Z, {}), (0, r.jsx)(_, { children: d.NW.string(d.t.TPEvkZ) }), (0, r.jsx)(s.Z, {}), (0, r.jsx)(_, { children: d.NW.string(d.t.H8Y1Li) })]
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: h.buttonContainer,
                 children: [
-                    (0, i.jsx)(o.zx, {
+                    (0, r.jsx)(l.zx, {
                         onClick: () => t(c.n.PASSWORD),
-                        children: u.intl.string(u.t.GgCRqa)
+                        children: d.NW.string(d.t.GgCRqa)
                     }),
-                    (0, i.jsx)(o.zx, {
-                        color: o.zx.Colors.PRIMARY,
-                        onClick: () => r(d.Z5c.LOGIN),
-                        children: u.intl.string(u.t['B/yHcX'])
+                    (0, r.jsx)(l.zx, {
+                        color: l.zx.Colors.PRIMARY,
+                        onClick: () => i(u.Z5c.LOGIN),
+                        children: d.NW.string(d.t['B/yHcX'])
                     })
                 ]
             })

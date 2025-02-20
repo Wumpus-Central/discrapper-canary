@@ -1,4 +1,4 @@
-i.d(e, { Z: () => h }), i(47120);
+i.d(e, { Z: () => l }), i(47120);
 var s = i(512722),
     n = i.n(s),
     a = i(921608),
@@ -16,7 +16,7 @@ function o(t, e, i) {
         t
     );
 }
-let h = class {
+let l = class {
     getCanvas() {
         return this.canvas;
     }
@@ -28,8 +28,8 @@ let h = class {
         (this.font.style = null !== (e = t.style) && void 0 !== e ? e : this.font.style), (this.font.size = null !== (i = t.size) && void 0 !== i ? i : this.font.size), (this.font.weight = null !== (s = t.weight) && void 0 !== s ? s : this.font.weight), (this.font.family = null !== (n = t.family) && void 0 !== n ? n : this.font.family), (this.font.truncate = null !== (a = t.truncate) && void 0 !== a ? a : this.font.truncate);
     }
     setFilter(t) {
-        var e, i, s, n, a, r, o, h, l;
-        (this.filter.blur = null !== (e = t.blur) && void 0 !== e ? e : this.filter.blur), (this.filter.brightness = null !== (i = t.brightness) && void 0 !== i ? i : this.filter.brightness), (this.filter.contrast = null !== (s = t.contrast) && void 0 !== s ? s : this.filter.contrast), (this.filter.grayscale = null !== (n = t.grayscale) && void 0 !== n ? n : this.filter.grayscale), (this.filter.hueRotation = null !== (a = t.hueRotation) && void 0 !== a ? a : this.filter.hueRotation), (this.filter.invert = null !== (r = t.invert) && void 0 !== r ? r : this.filter.invert), (this.filter.opacity = null !== (o = t.opacity) && void 0 !== o ? o : this.filter.opacity), (this.filter.saturate = null !== (h = t.saturate) && void 0 !== h ? h : this.filter.saturate), (this.filter.sepia = null !== (l = t.sepia) && void 0 !== l ? l : this.filter.sepia);
+        var e, i, s, n, a, r, o, l, h;
+        (this.filter.blur = null !== (e = t.blur) && void 0 !== e ? e : this.filter.blur), (this.filter.brightness = null !== (i = t.brightness) && void 0 !== i ? i : this.filter.brightness), (this.filter.contrast = null !== (s = t.contrast) && void 0 !== s ? s : this.filter.contrast), (this.filter.grayscale = null !== (n = t.grayscale) && void 0 !== n ? n : this.filter.grayscale), (this.filter.hueRotation = null !== (a = t.hueRotation) && void 0 !== a ? a : this.filter.hueRotation), (this.filter.invert = null !== (r = t.invert) && void 0 !== r ? r : this.filter.invert), (this.filter.opacity = null !== (o = t.opacity) && void 0 !== o ? o : this.filter.opacity), (this.filter.saturate = null !== (l = t.saturate) && void 0 !== l ? l : this.filter.saturate), (this.filter.sepia = null !== (h = t.sepia) && void 0 !== h ? h : this.filter.sepia);
     }
     getFilterString() {
         return ['blur('.concat(this.filter.blur, 'px)'), 'hue-rotate('.concat(this.filter.hueRotation, 'deg)'), ...['brightness', 'contrast', 'grayscale', 'invert', 'opacity', 'saturate', 'sepia'].map((t) => ''.concat(t, '(').concat(this.filter[t], ')'))].join(' ');

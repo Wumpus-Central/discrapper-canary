@@ -1,11 +1,11 @@
-let i;
-n.d(t, { Z: () => _ });
-var r,
-    a = n(442837),
-    s = n(570140),
-    o = n(594190),
+let r;
+n.d(t, { Z: () => p });
+var i,
+    o = n(442837),
+    a = n(570140),
+    s = n(594190),
     l = n(77498);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,25 +18,25 @@ function u(e, t, n) {
         e
     );
 }
-function c(e) {
-    i = e.currentGame;
+function u(e) {
+    r = e.currentGame;
 }
 function d(e) {
-    i = e.associatedGame;
+    r = e.associatedGame;
 }
-class f extends (r = a.ZP.Store) {
+class f extends (i = o.ZP.Store) {
     getGameForPID(e) {
         var t;
         if (__OVERLAY__ || null == e) return null;
-        let n = null === (t = o.ZP.getGameForPID(e)) || void 0 === t ? void 0 : t.name;
+        let n = null === (t = s.ZP.getGameForPID(e)) || void 0 === t ? void 0 : t.name;
         return l.Z.getGameByName(n);
     }
     getGame() {
-        return i;
+        return r;
     }
 }
-u(f, 'displayName', 'OverlayRunningGameStore');
-let _ = new f(s.Z, {
-    OVERLAY_INITIALIZE: c,
+c(f, 'displayName', 'OverlayRunningGameStore');
+let p = new f(a.Z, {
+    OVERLAY_INITIALIZE: u,
     OVERLAY_SET_ASSOCIATED_GAME: d
 });

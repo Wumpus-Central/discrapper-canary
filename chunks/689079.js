@@ -1,62 +1,62 @@
 n.d(t, {
     Fu: () => h,
-    Lu: () => s,
-    Vd: () => _,
-    WO: () => a,
+    Lu: () => a,
+    Vd: () => p,
+    WO: () => o,
     _n: () => f,
-    ak: () => o,
+    ak: () => s,
     al: () => m,
     bi: () => l,
-    hz: () => c,
-    lr: () => p,
+    hz: () => u,
+    lr: () => _,
     oQ: () => d,
-    tn: () => u
+    tn: () => c
 });
-var i = n(911969),
-    r = n(388032);
-let a = 'True',
-    s = 'False',
-    o = [
+var r = n(911969),
+    i = n(388032);
+let o = 'True',
+    a = 'False',
+    s = [
         {
-            name: a,
-            displayName: a,
+            name: o,
+            displayName: o,
             value: 'true'
         },
         {
-            name: s,
-            displayName: s,
+            name: a,
+            displayName: a,
             value: 'false'
         }
     ];
 var l = (function (e) {
     return (e.BUILT_IN = '-1'), (e.FRECENCY = '-2'), e;
 })({});
-let u = 10,
-    c = 5,
+let c = 10,
+    u = 5,
     d = '\0',
     f = 100,
-    _ = 3,
-    p = 10,
+    p = 3,
+    _ = 10,
     h = 500;
 function m(e) {
-    if (null != e.choices) return r.intl.string(r.t.xi5aam);
+    if (null != e.choices) return i.NW.string(i.t.xi5aam);
     switch (e.type) {
-        case i.jw.BOOLEAN:
-            return r.intl.string(r.t.ATIx6O);
-        case i.jw.CHANNEL:
-            return r.intl.string(r.t.Q0z2Gx);
-        case i.jw.INTEGER:
-            return r.intl.string(r.t['d/9Rk5']);
-        case i.jw.NUMBER:
-            return r.intl.string(r.t['FDyk/f']);
-        case i.jw.ROLE:
-            return r.intl.string(r.t.vrRQn5);
-        case i.jw.USER:
-            return r.intl.string(r.t.i2r7j4);
-        case i.jw.MENTIONABLE:
-            return r.intl.string(r.t.I7imeX);
+        case r.jw.BOOLEAN:
+            return i.NW.string(i.t.ATIx6O);
+        case r.jw.CHANNEL:
+            return i.NW.string(i.t.Q0z2Gx);
+        case r.jw.INTEGER:
+            return i.NW.string(i.t['d/9Rk5']);
+        case r.jw.NUMBER:
+            return i.NW.string(i.t['FDyk/f']);
+        case r.jw.ROLE:
+            return i.NW.string(i.t.vrRQn5);
+        case r.jw.USER:
+            return i.NW.string(i.t.i2r7j4);
+        case r.jw.MENTIONABLE:
+            return i.NW.string(i.t.I7imeX);
         default:
-            return r.intl.string(r.t.EkDo1t);
+            return i.NW.string(i.t.EkDo1t);
     }
 }
 Object.freeze([]), Object.freeze([]);

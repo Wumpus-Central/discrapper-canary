@@ -1,11 +1,11 @@
-n.d(t, { w: () => a });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { w: () => o });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-08_friend_anniversaries',
     label: 'Friend Anniversaries',
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     defaultConfig: {
         enabled: !1,
         enableEmojiCTA: !1

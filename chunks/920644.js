@@ -1,69 +1,69 @@
-n.d(t, { Z: () => p });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var l = n(990547),
-    r = n(481060),
-    a = n(313201),
-    s = n(703656),
-    o = n(63063),
-    d = n(758119),
-    c = n(981631),
-    u = n(388032),
-    h = n(682042);
-function m() {
-    (0, d.qV)(), (0, s.uL)(c.Z5c.LOGIN);
+var i = n(990547),
+    l = n(481060),
+    o = n(313201),
+    a = n(703656),
+    s = n(63063),
+    c = n(758119),
+    u = n(981631),
+    d = n(388032),
+    p = n(386724);
+function h() {
+    (0, c.qV)(), (0, a.uL)(u.Z5c.LOGIN);
 }
-function p(e) {
-    let { underageMessage: t, transitionState: s } = e,
-        d = (0, a.Dt)();
-    return (0, i.jsxs)(r.Y0X, {
-        transitionState: s,
-        size: r.CgR.SMALL,
-        'aria-labelledby': d,
+function g(e) {
+    let { underageMessage: t, transitionState: a } = e,
+        c = (0, o.Dt)();
+    return (0, r.jsxs)(l.Y0X, {
+        transitionState: a,
+        size: l.CgR.SMALL,
+        'aria-labelledby': c,
         impression: {
-            impressionName: l.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+            impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(r.hzk, {
-                children: (0, i.jsxs)('div', {
-                    className: h.container,
+            (0, r.jsx)(l.hzk, {
+                children: (0, r.jsxs)('div', {
+                    className: p.container,
                     children: [
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
                             src: n(231443),
-                            className: h.img
+                            className: p.img
                         }),
-                        (0, i.jsx)(r.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: h.title,
-                            id: d,
-                            children: u.intl.string(u.t['NR/zrK'])
+                            className: p.title,
+                            id: c,
+                            children: d.NW.string(d.t['NR/zrK'])
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
-                            className: h.subtitle,
+                            className: p.subtitle,
                             variant: 'text-sm/normal',
-                            children: u.intl.format(u.t.b0QzXV, {
-                                underageMessage: null != t ? t : u.intl.string(u.t.WqEH4O),
-                                helpURL: o.Z.getArticleURL(c.BhN.AGE_GATE)
+                            children: d.NW.format(d.t.b0QzXV, {
+                                underageMessage: null != t ? t : d.NW.string(d.t.WqEH4O),
+                                helpURL: s.Z.getArticleURL(u.BhN.AGE_GATE)
                             })
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
-                            className: h.subtitle,
+                            className: p.subtitle,
                             variant: 'text-sm/normal',
-                            children: u.intl.format(u.t['3axQdH'], { days: 30 })
+                            children: d.NW.format(d.t['3axQdH'], { days: 30 })
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(r.mzw, {
-                children: (0, i.jsx)(r.zxk, {
-                    size: r.PhG.SMALL,
+            (0, r.jsx)(l.mzw, {
+                children: (0, r.jsx)(l.zxk, {
+                    size: l.PhG.SMALL,
                     fullWidth: !0,
-                    onClick: m,
-                    children: u.intl.string(u.t.szzQ6O)
+                    onClick: h,
+                    children: d.NW.string(d.t.szzQ6O)
                 })
             })
         ]

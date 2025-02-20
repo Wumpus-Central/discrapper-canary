@@ -1,25 +1,25 @@
-a.d(l, { P: () => t });
-var s = a(544891),
-    n = a(570140),
-    i = a(981631);
-async function t(e) {
-    n.Z.dispatch({
+n.d(t, { P: () => s });
+var r = n(544891),
+    l = n(570140),
+    a = n(981631);
+async function s(e) {
+    l.Z.dispatch({
         type: 'GUILD_POPOUT_FETCH_START',
         guildId: e
     });
     try {
-        let l = await s.tn.get({
-            url: i.ANM.GUILD_PREVIEW(e),
+        let t = await r.tn.get({
+            url: a.ANM.GUILD_PREVIEW(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
-        n.Z.dispatch({
+        l.Z.dispatch({
             type: 'GUILD_POPOUT_FETCH_SUCCESS',
             guildId: e,
-            guild: l.body
+            guild: t.body
         });
-    } catch (l) {
-        n.Z.dispatch({
+    } catch (t) {
+        l.Z.dispatch({
             type: 'GUILD_POPOUT_FETCH_FAILURE',
             guildId: e
         });

@@ -1,32 +1,32 @@
-n.d(t, { Z: () => f });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    s = n(668781),
-    r = n(79390),
-    o = n(222677),
-    d = n(665906),
-    c = n(496675),
-    u = n(981631),
-    g = n(388032);
-function f(e, t) {
-    let n = (0, d.$R)(t);
-    return !(0, l.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, r.eQ)(e))
+var i = n(442837),
+    l = n(481060),
+    a = n(668781),
+    o = n(79390),
+    s = n(222677),
+    c = n(665906),
+    u = n(496675),
+    d = n(981631),
+    f = n(388032);
+function g(e, t) {
+    let n = (0, c.$R)(t);
+    return !(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_MESSAGES, t) && n, [t, n]) || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
-        : (0, i.jsx)(a.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'remove-reactions',
-              label: g.intl.string(g.t.ZbtGBg),
+              label: f.NW.string(f.t.ZbtGBg),
               action: function (n) {
                   n.shiftKey
-                      ? (0, o.wX)(t.id, e.id)
-                      : s.Z.show({
-                            title: g.intl.string(g.t.iz3vYW),
-                            body: g.intl.string(g.t.VpjOCg),
-                            confirmText: g.intl.string(g.t.p89ACg),
-                            cancelText: g.intl.string(g.t.gm1Ven),
+                      ? (0, s.wX)(t.id, e.id)
+                      : a.Z.show({
+                            title: f.NW.string(f.t.iz3vYW),
+                            body: f.NW.string(f.t.VpjOCg),
+                            confirmText: f.NW.string(f.t.p89ACg),
+                            cancelText: f.NW.string(f.t.gm1Ven),
                             onConfirm: () => {
-                                (0, o.wX)(t.id, e.id);
+                                (0, s.wX)(t.id, e.id);
                             }
                         });
               },

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => f }), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
-var i = n(442837),
-    l = n(704215),
-    r = n(524437),
-    a = n(381499),
-    s = n(433517),
-    o = n(581364),
-    d = n(536442),
-    c = n(592125),
-    u = n(915486),
-    h = n(48481),
-    m = n(981631),
-    p = n(71509);
-function g(e, t) {
+n.d(t, { Z: () => b }), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(610885), n(126298);
+var r = n(442837),
+    i = n(704215),
+    l = n(524437),
+    o = n(381499),
+    a = n(433517),
+    s = n(581364),
+    c = n(536442),
+    u = n(592125),
+    d = n(915486),
+    p = n(48481),
+    h = n(981631),
+    g = n(71509);
+function f(e, t) {
     let n = !1;
     return (
         null == e.userContent &&
@@ -21,47 +21,47 @@ function g(e, t) {
                 recurringDismissibleContentStates: {}
             }),
         null == e.userContent.dismissedContents && (e.userContent.dismissedContents = new Uint8Array()),
-        (0, u.jl)(e.userContent.dismissedContents, t) || ((e.userContent.dismissedContents = (0, u.GV)(e.userContent.dismissedContents, t)), (n = !0)),
+        (0, d.jl)(e.userContent.dismissedContents, t) || ((e.userContent.dismissedContents = (0, d.GV)(e.userContent.dismissedContents, t)), (n = !0)),
         n
     );
 }
-function _(e, t, n) {
-    return !!d.qc.hasHiddenHotspot(t) && g(e, n);
+function m(e, t, n) {
+    return !!c.qc.hasHiddenHotspot(t) && f(e, n);
 }
-let f = [
+let b = [
     {
         version: 2,
         run(e) {
             var t, n;
             if (null != e.inbox) return !1;
-            let i = !1,
-                l = r.f9.create();
-            (e.inbox = l), s.K.get('seenInboxTutorial', !1) && ((l.viewedTutorial = !0), (i = !0));
-            let a = s.K.get('recentsButtonTab2');
-            null != a && ((l.currentTab = 'Recent Mentions' === a ? r.X.MENTIONS : r.X.UNREADS), (i = !0));
-            let o = null !== (t = s.K.get('unread-messages-collapsed-channels')) && void 0 !== t ? t : {};
-            for (let t in o) {
-                if (!o[t]) continue;
-                let l = c.Z.getChannel(t);
-                null != l &&
-                    ((i = !0),
-                    (0, h.i7)(e, null !== (n = l.guild_id) && void 0 !== n ? n : '0', l.id, (e) => {
+            let r = !1,
+                i = l.f9.create();
+            (e.inbox = i), a.K.get('seenInboxTutorial', !1) && ((i.viewedTutorial = !0), (r = !0));
+            let o = a.K.get('recentsButtonTab2');
+            null != o && ((i.currentTab = 'Recent Mentions' === o ? l.X.MENTIONS : l.X.UNREADS), (r = !0));
+            let s = null !== (t = a.K.get('unread-messages-collapsed-channels')) && void 0 !== t ? t : {};
+            for (let t in s) {
+                if (!s[t]) continue;
+                let i = u.Z.getChannel(t);
+                null != i &&
+                    ((r = !0),
+                    (0, p.i7)(e, null !== (n = i.guild_id) && void 0 !== n ? n : '0', i.id, (e) => {
                         e.collapsedInInbox = !0;
                     }));
             }
-            return i;
+            return r;
         },
         cleanup() {
-            s.K.remove('seenInboxTutorial'), s.K.remove('recentsButtonTab2'), s.K.remove('unread-messages-collapsed-channels');
+            a.K.remove('seenInboxTutorial'), a.K.remove('recentsButtonTab2'), a.K.remove('unread-messages-collapsed-channels');
         }
     },
     {
         version: 3,
         run(e) {
-            let { state: t } = i.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ diversitySurrogate: s.K.get('EmojiDiversitySurrogate') || '' })]);
+            let { state: t } = r.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ diversitySurrogate: a.K.get('EmojiDiversitySurrogate') || '' })]);
             if (null == t) return !1;
             let n = !1;
-            return null != t.diversitySurrogate && '' !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = r.Me.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = a.Gm.create()), (e.textAndImages.diversitySurrogate.value = t.diversitySurrogate), (n = !0)), n;
+            return null != t.diversitySurrogate && '' !== t.diversitySurrogate && (null == e.textAndImages && (e.textAndImages = l.Me.create()), null == e.textAndImages.diversitySurrogate && (e.textAndImages.diversitySurrogate = o.Gm.create()), (e.textAndImages.diversitySurrogate.value = t.diversitySurrogate), (n = !0)), n;
         },
         cleanup() {}
     },
@@ -69,55 +69,55 @@ let f = [
         version: 4,
         run(e) {
             let t = !1;
-            return (!0 === s.K.get('HAS_SEEN_HUB_UPSELL') || d.qc.hasHiddenHotspot(d.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = g(e, l.z.HUB_WAITLIST_UPSELL)), t;
+            return (!0 === a.K.get('HAS_SEEN_HUB_UPSELL') || c.qc.hasHiddenHotspot(c.v6.HUB_SECOND_EMAIL_CONNECTION_UPSELL)) && (t = f(e, i.z.HUB_WAITLIST_UPSELL)), t;
         },
         cleanup() {
-            s.K.remove('HAS_SEEN_HUB_UPSELL');
+            a.K.remove('HAS_SEEN_HUB_UPSELL');
         }
     },
     {
         version: 5,
         run(e) {
-            var t, n, i, l, o, d, c;
-            let u = !1;
-            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : r.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : r.sf.create()), (e.privacy = null !== (i = e.privacy) && void 0 !== i ? i : r.bE.create()), (e.voiceAndVideo = null !== (l = e.voiceAndVideo) && void 0 !== l ? l : r.v_.create()), (e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : r.Fm.create()), (e.debug = null !== (d = e.debug) && void 0 !== d ? d : r.tA.create());
-            let h = null !== (c = s.K.get('UserSettingsStore')) && void 0 !== c ? c : {};
-            return 'boolean' == typeof h.useRichChatTextBox && ((e.textAndImages.useRichChatInput = a.D5.create({ value: h.useRichChatTextBox })), (u = !0)), 'string' == typeof h.renderSpoilers && ((e.textAndImages.renderSpoilers = a.Gm.create({ value: h.renderSpoilers })), (u = !0)), 'boolean' == typeof h.useThreadSidebar && ((e.textAndImages.useThreadSidebar = a.D5.create({ value: h.useThreadSidebar })), (u = !0)), 'boolean' == typeof h.showInAppNotifications && ((e.notifications.showInAppNotifications = a.D5.create({ value: h.showInAppNotifications })), (u = !0)), h.emojiPickerCollapsedSections instanceof Array && ((e.textAndImages.emojiPickerCollapsedSections = h.emojiPickerCollapsedSections), (u = !0)), h.stickerPickerCollapsedSections instanceof Array && ((e.textAndImages.stickerPickerCollapsedSections = h.stickerPickerCollapsedSections), (u = !0)), 'boolean' == typeof h.viewImageDescriptions && ((e.textAndImages.viewImageDescriptions = a.D5.create({ value: h.viewImageDescriptions })), (u = !0)), 'boolean' == typeof h.showCommandSuggestions && ((e.textAndImages.showCommandSuggestions = a.D5.create({ value: h.showCommandSuggestions })), (u = !0)), 'boolean' == typeof h.alwaysPreviewVideo && ((e.voiceAndVideo.alwaysPreviewVideo = a.D5.create({ value: h.alwaysPreviewVideo })), (u = !0)), 'boolean' == typeof h.notifyFriendsOnGoLive && ((e.notifications.notifyFriendsOnGoLive = a.D5.create({ value: h.notifyFriendsOnGoLive })), (u = !0)), 'boolean' == typeof h.installShortcutDesktop && ((e.gameLibrary.installShortcutDesktop = a.D5.create({ value: h.installShortcutDesktop })), (u = !0)), 'boolean' == typeof h.installShortcutStartMenu && ((e.gameLibrary.installShortcutStartMenu = a.D5.create({ value: h.installShortcutStartMenu })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyFriends && ((e.privacy.allowActivityPartyPrivacyFriends = a.D5.create({ value: h.allowActivityPartyPrivacyFriends })), (u = !0)), 'boolean' == typeof h.allowActivityPartyPrivacyVoiceChannel && ((e.privacy.allowActivityPartyPrivacyVoiceChannel = a.D5.create({ value: h.allowActivityPartyPrivacyVoiceChannel })), (u = !0)), 'boolean' == typeof h.rtcPanelShowVoiceStates && ((e.debug.rtcPanelShowVoiceStates = a.D5.create({ value: h.rtcPanelShowVoiceStates })), (u = !0)), u;
+            var t, n, r, i, s, c, u;
+            let d = !1;
+            (e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : l.Me.create()), (e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : l.sf.create()), (e.privacy = null !== (r = e.privacy) && void 0 !== r ? r : l.bE.create()), (e.voiceAndVideo = null !== (i = e.voiceAndVideo) && void 0 !== i ? i : l.v_.create()), (e.gameLibrary = null !== (s = e.gameLibrary) && void 0 !== s ? s : l.Fm.create()), (e.debug = null !== (c = e.debug) && void 0 !== c ? c : l.tA.create());
+            let p = null !== (u = a.K.get('UserSettingsStore')) && void 0 !== u ? u : {};
+            return 'boolean' == typeof p.useRichChatTextBox && ((e.textAndImages.useRichChatInput = o.D5.create({ value: p.useRichChatTextBox })), (d = !0)), 'string' == typeof p.renderSpoilers && ((e.textAndImages.renderSpoilers = o.Gm.create({ value: p.renderSpoilers })), (d = !0)), 'boolean' == typeof p.useThreadSidebar && ((e.textAndImages.useThreadSidebar = o.D5.create({ value: p.useThreadSidebar })), (d = !0)), 'boolean' == typeof p.showInAppNotifications && ((e.notifications.showInAppNotifications = o.D5.create({ value: p.showInAppNotifications })), (d = !0)), p.emojiPickerCollapsedSections instanceof Array && ((e.textAndImages.emojiPickerCollapsedSections = p.emojiPickerCollapsedSections), (d = !0)), p.stickerPickerCollapsedSections instanceof Array && ((e.textAndImages.stickerPickerCollapsedSections = p.stickerPickerCollapsedSections), (d = !0)), 'boolean' == typeof p.viewImageDescriptions && ((e.textAndImages.viewImageDescriptions = o.D5.create({ value: p.viewImageDescriptions })), (d = !0)), 'boolean' == typeof p.showCommandSuggestions && ((e.textAndImages.showCommandSuggestions = o.D5.create({ value: p.showCommandSuggestions })), (d = !0)), 'boolean' == typeof p.alwaysPreviewVideo && ((e.voiceAndVideo.alwaysPreviewVideo = o.D5.create({ value: p.alwaysPreviewVideo })), (d = !0)), 'boolean' == typeof p.notifyFriendsOnGoLive && ((e.notifications.notifyFriendsOnGoLive = o.D5.create({ value: p.notifyFriendsOnGoLive })), (d = !0)), 'boolean' == typeof p.installShortcutDesktop && ((e.gameLibrary.installShortcutDesktop = o.D5.create({ value: p.installShortcutDesktop })), (d = !0)), 'boolean' == typeof p.installShortcutStartMenu && ((e.gameLibrary.installShortcutStartMenu = o.D5.create({ value: p.installShortcutStartMenu })), (d = !0)), 'boolean' == typeof p.allowActivityPartyPrivacyFriends && ((e.privacy.allowActivityPartyPrivacyFriends = o.D5.create({ value: p.allowActivityPartyPrivacyFriends })), (d = !0)), 'boolean' == typeof p.allowActivityPartyPrivacyVoiceChannel && ((e.privacy.allowActivityPartyPrivacyVoiceChannel = o.D5.create({ value: p.allowActivityPartyPrivacyVoiceChannel })), (d = !0)), 'boolean' == typeof p.rtcPanelShowVoiceStates && ((e.debug.rtcPanelShowVoiceStates = o.D5.create({ value: p.rtcPanelShowVoiceStates })), (d = !0)), d;
         },
         cleanup() {}
     },
     {
         version: 7,
-        run: (e) => _(e, d.v6.APPLICATION_COMMAND_TOOLTIP, l.z.APPLICATION_COMMAND_TOOLTIP),
+        run: (e) => m(e, c.v6.APPLICATION_COMMAND_TOOLTIP, i.z.APPLICATION_COMMAND_TOOLTIP),
         cleanup() {}
     },
     {
         version: 8,
-        run: (e) => _(e, d.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, l.z.CHANNELINFO_CHANNELBANNER_NOTICE),
+        run: (e) => m(e, c.v6.CHANNEL_BANNER_MEMBER_LIST_NOTICE, i.z.CHANNELINFO_CHANNELBANNER_NOTICE),
         cleanup() {}
     },
     {
         version: 9,
-        run: (e) => (d.qc.hasHiddenHotspot(d.v6.MULTI_ACCOUNT_TOOLTIP) && s.K.set(p.Ip, 'true'), _(e, d.v6.MULTI_ACCOUNT_TOOLTIP, l.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && a.K.set(g.Ip, 'true'), m(e, c.v6.MULTI_ACCOUNT_TOOLTIP, i.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
         cleanup() {}
     },
     {
         version: 10,
         run(e) {
             var t;
-            let n = _(e, d.v6.HUB_LINK_CHANNEL_NOTICE, l.z.CHANNEL_NOTICE_HUBLINK),
-                i = null !== (t = s.K.get('channelNotices')) && void 0 !== t ? t : {};
-            return !1 === i[m.vID.INVITE] && g(e, l.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[m.vID.QUICKSWITCHER] && g(e, l.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[m.vID.GUILD_BOOSTING] && g(e, l.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
+            let n = m(e, c.v6.HUB_LINK_CHANNEL_NOTICE, i.z.CHANNEL_NOTICE_HUBLINK),
+                r = null !== (t = a.K.get('channelNotices')) && void 0 !== t ? t : {};
+            return !1 === r[h.vID.INVITE] && f(e, i.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === r[h.vID.QUICKSWITCHER] && f(e, i.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === r[h.vID.GUILD_BOOSTING] && f(e, i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
         },
         cleanup() {
-            s.K.remove('channelNotices');
+            a.K.remove('channelNotices');
         }
     },
     {
         version: 11,
         run(e) {
             let t = !1;
-            return _(e, d.v6.GUILD_EVENT_UPSELL, l.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), _(e, d.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), _(e, d.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
+            return m(e, c.v6.GUILD_EVENT_UPSELL, i.z.GUILD_HEADER_EVENT_UPSELL) && (t = !0), m(e, c.v6.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS) && (t = !0), m(e, c.v6.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_ANIMATED_GUILD_BANNER) && (t = !0), t;
         },
         cleanup() {}
     },
@@ -125,59 +125,59 @@ let f = [
         version: 12,
         run(e) {
             let t = !1;
-            return s.K.get('hideNag') && g(e, l.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), s.K.get('hideConnectSpotify') && g(e, l.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), s.K.get('hideConnectPlayStation') && g(e, l.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), s.K.get('hideMFASMSNotice') && g(e, l.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
+            return a.K.get('hideNag') && f(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), a.K.get('hideConnectSpotify') && f(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), a.K.get('hideConnectPlayStation') && f(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), a.K.get('hideMFASMSNotice') && f(e, i.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t;
         },
         cleanup() {
-            s.K.remove('hideNag'), s.K.remove('hideConnectSpotify'), s.K.remove('hideConnectPlayStation'), s.K.remove('hideMFASMSNotice');
+            a.K.remove('hideNag'), a.K.remove('hideConnectSpotify'), a.K.remove('hideConnectPlayStation'), a.K.remove('hideMFASMSNotice');
         }
     },
     {
         version: 13,
         run(e) {
             let t = !1;
-            return s.K.get('hidePremiumPromo') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), s.K.get('hidePremiumTier2TrialEnding') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), s.K.get('hidePremiumReactivateNotice') && g(e, l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, d.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, l.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
+            return a.K.get('hidePremiumPromo') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), a.K.get('hidePremiumTier2TrialEnding') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), a.K.get('hidePremiumReactivateNotice') && f(e, i.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), m(e, c.v6.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, i.z.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t;
         },
         cleanup() {
-            s.K.remove('hidePremiumPromo'), s.K.remove('hidePremiumTier2TrialEnding'), s.K.remove('hidePremiumReactivateNotice');
+            a.K.remove('hidePremiumPromo'), a.K.remove('hidePremiumTier2TrialEnding'), a.K.remove('hidePremiumReactivateNotice');
         }
     },
     {
         version: 14,
-        run: (e) => _(e, d.v6.ACTIVITY_BEB_TUTORIAL, l.z.ACTIVITIES_TUTORIAL_COACH_MARK),
+        run: (e) => m(e, c.v6.ACTIVITY_BEB_TUTORIAL, i.z.ACTIVITIES_TUTORIAL_COACH_MARK),
         cleanup() {}
     },
     {
         version: 15,
-        run: (e) => _(e, d.v6.NOW_PLAYING_CONSENT_CARD, l.z.NOW_PLAYING_CONSENT_CARD),
+        run: (e) => m(e, c.v6.NOW_PLAYING_CONSENT_CARD, i.z.NOW_PLAYING_CONSENT_CARD),
         cleanup() {}
     },
     {
         version: 16,
         run(e) {
-            let t = s.K.get('PromotionsPersistedStore');
+            let t = a.K.get('PromotionsPersistedStore');
             if (null == t) return !1;
             let n = t._state.lastDismissedOutboundPromotionStartDate;
-            return null != n && (null == e.userContent && (e.userContent = r.az.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && ((e.userContent.lastDismissedOutboundPromotionStartDate = a.Gm.create({ value: n })), !0);
+            return null != n && (null == e.userContent && (e.userContent = l.az.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && ((e.userContent.lastDismissedOutboundPromotionStartDate = o.Gm.create({ value: n })), !0);
         },
         cleanup() {}
     },
     {
         version: 17,
         run(e) {
-            let { state: t } = i.ZP.PersistedStore.migrateAndReadStoreState('ExpressionSuggestionsPersistedStore', null);
+            let { state: t } = r.ZP.PersistedStore.migrateAndReadStoreState('ExpressionSuggestionsPersistedStore', null);
             if (null == t) return !1;
             let n = t.expressionSuggestionsEnabled;
-            return null != n && (null == e.textAndImages && (e.textAndImages = r.Me.create()), null == e.textAndImages.expressionSuggestionsEnabled) && ((e.textAndImages.expressionSuggestionsEnabled = a.D5.create({ value: n })), !0);
+            return null != n && (null == e.textAndImages && (e.textAndImages = l.Me.create()), null == e.textAndImages.expressionSuggestionsEnabled) && ((e.textAndImages.expressionSuggestionsEnabled = o.D5.create({ value: n })), !0);
         },
         cleanup() {
-            s.K.remove('ExpressionSuggestionsPersistedStore');
+            a.K.remove('ExpressionSuggestionsPersistedStore');
         }
     },
     {
         version: 18,
         run(e) {
             let t = !1;
-            return _(e, d.v6.GUILD_DELETE_FEEDBACK, l.z.GUILD_DELETE_FEEDBACK) && (t = !0), _(e, d.v6.GUILD_LEAVE_FEEDBACK, l.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
+            return m(e, c.v6.GUILD_DELETE_FEEDBACK, i.z.GUILD_DELETE_FEEDBACK) && (t = !0), m(e, c.v6.GUILD_LEAVE_FEEDBACK, i.z.GUILD_LEAVE_FEEDBACK) && (t = !0), t;
         },
         cleanup() {}
     },
@@ -186,24 +186,24 @@ let f = [
         run(e) {
             var t;
             let n = !1;
-            return null !== (t = s.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = g(e, l.z.FORUM_CHANNEL_HELPER_CARD)), n;
+            return null !== (t = a.K.get('forumHelperCardStorageKey')) && void 0 !== t && t && (n = f(e, i.z.FORUM_CHANNEL_HELPER_CARD)), n;
         },
         cleanup() {
-            s.K.remove('forumHelperCardStorageKey');
+            a.K.remove('forumHelperCardStorageKey');
         }
     },
     {
         version: 20,
         run(e) {
-            let t = s.K.get('lastChangeLogId');
+            let t = a.K.get('lastChangeLogId');
             if (null == t) return !1;
-            if (!(0, o.BH)(t)) return s.K.remove('lastChangeLogId'), !1;
-            if (null == e.userContent) e.userContent = r.az.create();
-            else if (null != e.userContent && null != e.userContent.lastReceivedChangelogId && '0' !== e.userContent.lastReceivedChangelogId) return s.K.remove('lastChangeLogId'), !1;
+            if (!(0, s.BH)(t)) return a.K.remove('lastChangeLogId'), !1;
+            if (null == e.userContent) e.userContent = l.az.create();
+            else if (null != e.userContent && null != e.userContent.lastReceivedChangelogId && '0' !== e.userContent.lastReceivedChangelogId) return a.K.remove('lastChangeLogId'), !1;
             return (e.userContent.lastReceivedChangelogId = t), !0;
         },
         cleanup() {
-            s.K.remove('lastChangeLogId');
+            a.K.remove('lastChangeLogId');
         }
     }
 ];

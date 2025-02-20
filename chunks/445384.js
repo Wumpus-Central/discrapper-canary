@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l });
-var i = n(570140);
-let l = {
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
     viewPrompt: function (e, t) {
-        i.Z.wait(() => {
-            i.Z.dispatch({
+        r.Z.wait(() => {
+            r.Z.dispatch({
                 type: 'GUILD_PROMPT_VIEWED',
                 prompt: e,
                 guildId: t

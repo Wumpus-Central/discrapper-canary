@@ -1,15 +1,15 @@
 n.d(t, {
-    G0: () => a,
-    L3: () => r,
-    LG: () => s,
-    _b: () => i,
+    G0: () => o,
+    L3: () => i,
+    LG: () => a,
+    _b: () => r,
     _y: () => l,
-    ti: () => o
+    ti: () => s
 });
-var i = (function (e) {
+var r = (function (e) {
     return (e.NONE = 'NONE'), (e.TEXT = 'TEXT'), (e.VOICE = 'VOICE'), e;
 })({});
-let r = {
+let i = {
         SEARCH: 'search',
         RECENT: 'recent',
         INSTALLED: 'installed',
@@ -19,14 +19,14 @@ let r = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    a = {
+    o = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };
-var s = (function (e) {
+var a = (function (e) {
         return (e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found'), e;
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (e[(e.DISMISSED = 0)] = 'DISMISSED'), (e[(e.COMMAND = 1)] = 'COMMAND'), (e[(e.ACTIVITY = 2)] = 'ACTIVITY'), e;
     })({}),
     l = (function (e) {

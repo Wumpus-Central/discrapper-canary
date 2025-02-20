@@ -2,24 +2,24 @@
     t(n(913527));
 })(0, function (e) {
     function t(e, t, n) {
-        var i = e + ' ';
+        var r = e + ' ';
         switch (n) {
             case 'ss':
-                return 1 === e ? (i += 'sekunda') : 2 === e || 3 === e || 4 === e ? (i += 'sekunde') : (i += 'sekundi'), i;
+                return 1 === e ? (r += 'sekunda') : 2 === e || 3 === e || 4 === e ? (r += 'sekunde') : (r += 'sekundi'), r;
             case 'm':
                 return t ? 'jedna minuta' : 'jedne minute';
             case 'mm':
-                return 1 === e ? (i += 'minuta') : 2 === e || 3 === e || 4 === e ? (i += 'minute') : (i += 'minuta'), i;
+                return 1 === e ? (r += 'minuta') : 2 === e || 3 === e || 4 === e ? (r += 'minute') : (r += 'minuta'), r;
             case 'h':
                 return t ? 'jedan sat' : 'jednog sata';
             case 'hh':
-                return 1 === e ? (i += 'sat') : 2 === e || 3 === e || 4 === e ? (i += 'sata') : (i += 'sati'), i;
+                return 1 === e ? (r += 'sat') : 2 === e || 3 === e || 4 === e ? (r += 'sata') : (r += 'sati'), r;
             case 'dd':
-                return 1 === e ? (i += 'dan') : (i += 'dana'), i;
+                return 1 === e ? (r += 'dan') : (r += 'dana'), r;
             case 'MM':
-                return 1 === e ? (i += 'mjesec') : 2 === e || 3 === e || 4 === e ? (i += 'mjeseca') : (i += 'mjeseci'), i;
+                return 1 === e ? (r += 'mjesec') : 2 === e || 3 === e || 4 === e ? (r += 'mjeseca') : (r += 'mjeseci'), r;
             case 'yy':
-                return 1 === e ? (i += 'godina') : 2 === e || 3 === e || 4 === e ? (i += 'godine') : (i += 'godina'), i;
+                return 1 === e ? (r += 'godina') : 2 === e || 3 === e || 4 === e ? (r += 'godine') : (r += 'godina'), r;
         }
     }
     return e.defineLocale('bs', {

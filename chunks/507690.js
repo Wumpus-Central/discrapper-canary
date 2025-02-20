@@ -4,9 +4,9 @@ function r(t) {
         r = 1;
     for (; r < t.length; ) {
         let n = t[r],
-            _ = t[r + 1];
+            o = t[r + 1];
         if (((r += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == a)) return;
-        'access' === n || 'optionalAccess' === n ? ((e = a), (a = _(a))) : ('call' === n || 'optionalCall' === n) && ((a = _((...t) => a.call(e, ...t))), (e = void 0));
+        'access' === n || 'optionalAccess' === n ? ((e = a), (a = o(a))) : ('call' === n || 'optionalCall' === n) && ((a = o((...t) => a.call(e, ...t))), (e = void 0));
     }
     return a;
 }

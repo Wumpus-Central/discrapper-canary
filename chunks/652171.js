@@ -1,33 +1,33 @@
-n.d(t, { default: () => h });
-var l = n(200651);
+n.d(t, { default: () => b });
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(239091),
-    d = n(984933),
-    r = n(904483),
-    s = n(522762),
-    c = n(466330),
+var l = n(481060),
+    i = n(239091),
+    c = n(984933),
+    a = n(904483),
+    o = n(522762),
+    s = n(466330),
     u = n(981631),
-    o = n(388032);
-function h(e) {
+    d = n(388032);
+function b(e) {
     let { guild: t, onSelect: n } = e,
-        h = d.ZP.getDefaultChannel(t.id, !0, u.Plq.CREATE_INSTANT_INVITE),
-        Z = (0, s.Z)(t.id),
-        N = (0, r.Z)(t),
-        _ = (0, c.Z)({
+        b = c.ZP.getDefaultChannel(t.id, !0, u.Plq.CREATE_INSTANT_INVITE),
+        p = (0, o.Z)(t.id),
+        y = (0, a.Z)(t),
+        O = (0, s.Z)({
             guild: t,
             source: u.t4x.GUILD_CONTEXT_MENU,
-            channel: h
+            channel: b
         });
-    return (0, l.jsxs)(i.v2r, {
+    return (0, r.jsxs)(l.v2r, {
         navId: 'guild-context',
-        'aria-label': o.intl.string(o.t.HpQykZ),
-        onClose: a.Zy,
+        'aria-label': d.NW.string(d.t.HpQykZ),
+        onClose: i.Zy,
         onSelect: n,
         children: [
-            (0, l.jsx)(i.kSQ, { children: Z }),
-            (0, l.jsxs)(i.kSQ, {
-                children: [N, _]
+            (0, r.jsx)(l.kSQ, { children: p }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [y, O]
             })
         ]
     });

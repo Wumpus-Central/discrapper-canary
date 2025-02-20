@@ -1,7 +1,7 @@
 function t(e) {
     let t = ['add', 'and', 'cmp', 'cmpg', 'cmpl', 'const', 'div', 'double', 'float', 'goto', 'if', 'int', 'long', 'move', 'mul', 'neg', 'new', 'nop', 'not', 'or', 'rem', 'return', 'shl', 'shr', 'sput', 'sub', 'throw', 'ushr', 'xor'],
         n = ['aget', 'aput', 'array', 'check', 'execute', 'fill', 'filled', 'goto/16', 'goto/32', 'iget', 'instance', 'invoke', 'iput', 'monitor', 'packed', 'sget', 'sparse'],
-        i = ['transient', 'constructor', 'abstract', 'final', 'synthetic', 'public', 'private', 'protected', 'static', 'bridge', 'system'];
+        r = ['transient', 'constructor', 'abstract', 'final', 'synthetic', 'public', 'private', 'protected', 'static', 'bridge', 'system'];
     return {
         name: 'Smali',
         contains: [
@@ -24,7 +24,7 @@ function t(e) {
                         begin: '\\s:[a-zA-Z_0-9]*',
                         relevance: 0
                     },
-                    { begin: '\\s(' + i.join('|') + ')' }
+                    { begin: '\\s(' + r.join('|') + ')' }
                 ]
             },
             {

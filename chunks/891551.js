@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(442837),
-    s = n(846027),
-    o = n(793148),
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(846027),
+    s = n(793148),
     c = n(131951),
-    d = n(36703),
-    u = n(358085),
-    h = n(618158),
-    p = n(607820);
-function m(e) {
-    let { className: t, iconClassName: n, sliderClassName: l, userId: m, context: f, currentWindow: g = window } = e,
-        { currentVolume: _, muted: C } = (0, r.cj)([c.Z], () => ({
-            currentVolume: c.Z.getLocalVolume(m, f),
-            muted: c.Z.isLocalMute(m, f)
+    u = n(36703),
+    d = n(358085),
+    p = n(618158),
+    h = n(570105);
+function f(e) {
+    let { className: t, iconClassName: n, sliderClassName: i, userId: f, context: m, currentWindow: g = window } = e,
+        { currentVolume: b, muted: _ } = (0, o.cj)([c.Z], () => ({
+            currentVolume: c.Z.getLocalVolume(f, m),
+            muted: c.Z.isLocalMute(f, m)
         }));
-    return (0, i.jsx)(h.Z, {
-        children: (0, i.jsx)(o.Z, {
+    return (0, r.jsx)(p.Z, {
+        children: (0, r.jsx)(s.Z, {
             currentWindow: g,
-            iconClassName: a()(n, p.controlIcon),
-            sliderClassName: l,
+            iconClassName: l()(n, h.controlIcon),
+            sliderClassName: i,
             className: t,
-            value: (0, d.P)(_),
-            muted: C,
-            maxValue: u.isPlatformEmbedded ? 200 : 100,
+            value: (0, u.P)(b),
+            muted: _,
+            maxValue: d.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && C && s.Z.toggleLocalMute(m, f), s.Z.setLocalVolume(m, (0, d.A)(e), f);
+                e > 0 && _ && a.Z.toggleLocalMute(f, m), a.Z.setLocalVolume(f, (0, u.A)(e), m);
             },
             onToggleMute: () => {
-                s.Z.toggleLocalMute(m, f);
+                a.Z.toggleLocalMute(f, m);
             }
         })
     });

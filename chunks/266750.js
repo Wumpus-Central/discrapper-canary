@@ -1,12 +1,12 @@
-n.d(t, { Z: () => _ });
-var i = n(392711),
-    r = n.n(i),
-    a = n(250407),
-    s = n(710845),
-    o = n(914010),
+n.d(t, { Z: () => p }), n(977457);
+var r = n(392711),
+    i = n.n(r),
+    o = n(250407),
+    a = n(710845),
+    s = n(914010),
     l = n(70956),
-    u = n(287328);
-function c(e, t, n) {
+    c = n(287328);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,11 +19,11 @@ function c(e, t, n) {
         e
     );
 }
-let d = new s.Z('NonGuildVersions');
+let d = new a.Z('NonGuildVersions');
 class f {
     async getCommittedVersions() {
         try {
-            let e = u.Z.nonGuildVersions();
+            let e = c.Z.nonGuildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, 'version' in e ? e.version : e.versionString]);
             return Object.fromEntries(null != t ? t : []);
@@ -33,7 +33,7 @@ class f {
     }
     handleConnectionOpen(e, t) {
         null != e.apiCodeVersion &&
-            u.Z.nonGuildVersionsTransaction(t).put({
+            c.Z.nonGuildVersionsTransaction(t).put({
                 id: 'api_code_version',
                 version: e.apiCodeVersion
             });
@@ -41,23 +41,23 @@ class f {
     resetInMemoryState() {}
     constructor() {
         if (
-            (c(this, 'actions', {
+            (u(this, 'actions', {
                 CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
                 BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t)
             }),
-            !(0, a.O)())
+            !(0, o.O)())
         )
             return;
-        o.Z.addChangeListener(
-            r().throttle(() => {
+        s.Z.addChangeListener(
+            i().throttle(() => {
                 var e;
-                null === (e = u.Z.database()) ||
+                null === (e = c.Z.database()) ||
                     void 0 === e ||
                     e.transaction((e) => {
-                        let t = o.Z.getGuildId();
+                        let t = s.Z.getGuildId();
                         null == t || isNaN(Number(t))
-                            ? u.Z.nonGuildVersionsTransaction(e).delete('initial_guild_id')
-                            : u.Z.nonGuildVersionsTransaction(e).put({
+                            ? c.Z.nonGuildVersionsTransaction(e).delete('initial_guild_id')
+                            : c.Z.nonGuildVersionsTransaction(e).put({
                                   id: 'initial_guild_id',
                                   versionString: t
                               });
@@ -66,4 +66,4 @@ class f {
         );
     }
 }
-let _ = new f();
+let p = new f();

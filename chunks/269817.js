@@ -1,59 +1,59 @@
 s.d(e, { default: () => c });
-var i = s(200651);
+var a = s(200651);
 s(192379);
-var n = s(481060),
-    a = s(782568),
-    l = s(313201),
-    o = s(388032),
-    r = s(548020);
+var i = s(481060),
+    n = s(782568),
+    o = s(313201),
+    r = s(388032),
+    l = s(908651);
 function c(t) {
     let { url: e, onClose: c, transitionState: d } = t,
-        x = (0, l.Dt)();
-    return (0, i.jsxs)(n.Y0X, {
+        x = (0, o.Dt)();
+    return (0, a.jsxs)(i.Y0X, {
         transitionState: d,
         'aria-labelledby': x,
         children: [
-            (0, i.jsx)('img', {
-                className: r.art,
+            (0, a.jsx)('img', {
+                className: l.art,
                 src: s(902623),
                 alt: ''
             }),
-            (0, i.jsx)(n.hzk, {
-                children: (0, i.jsxs)('div', {
-                    className: r.modalContent,
+            (0, a.jsx)(i.hzk, {
+                children: (0, a.jsxs)('div', {
+                    className: l.modalContent,
                     children: [
-                        (0, i.jsx)(n.X6q, {
+                        (0, a.jsx)(i.X6q, {
                             id: x,
                             variant: 'heading-lg/semibold',
-                            className: r.title,
-                            children: o.intl.string(o.t.biy1X1)
+                            className: l.title,
+                            children: r.NW.string(r.t.biy1X1)
                         }),
-                        (0, i.jsx)(n.Text, {
+                        (0, a.jsx)(i.Text, {
                             variant: 'text-md/normal',
-                            className: r.body,
-                            children: o.intl.format(o.t.J86cyc, { url: e })
+                            className: l.body,
+                            children: r.NW.format(r.t.J86cyc, { url: e })
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(n.mzw, {
+            (0, a.jsxs)(i.mzw, {
                 children: [
-                    (0, i.jsx)(n.zxk, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.BRAND,
+                        size: i.zxk.Sizes.MEDIUM,
+                        color: i.zxk.Colors.BRAND,
                         onClick: c,
-                        children: o.intl.string(o.t['xl8R+/'])
+                        children: r.NW.string(r.t['xl8R+/'])
                     }),
-                    (0, i.jsx)(n.zxk, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'button',
-                        size: n.zxk.Sizes.MEDIUM,
-                        color: n.zxk.Colors.TRANSPARENT,
-                        look: n.zxk.Looks.LINK,
+                        size: i.zxk.Sizes.MEDIUM,
+                        color: i.zxk.Colors.TRANSPARENT,
+                        look: i.zxk.Looks.LINK,
                         onClick: () => {
-                            (0, a.Z)(e, !0);
+                            (0, n.Z)(e, !0);
                         },
-                        children: o.intl.string(o.t.gQrLtr)
+                        children: r.NW.string(r.t.gQrLtr)
                     })
                 ]
             })

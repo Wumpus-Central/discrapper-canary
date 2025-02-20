@@ -1,26 +1,26 @@
-l.d(n, { S: () => i }), l(47120);
-var t = l(192379);
-class i extends t.PureComponent {
+r.d(t, { S: () => l }), r(47120);
+var n = r(192379);
+class l extends n.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }
-    componentDidCatch(e, n) {
-        console.error('ErrorBoundary caught an error', e, n);
+    componentDidCatch(e, t) {
+        console.error('ErrorBoundary caught an error', e, t);
     }
     render() {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        var n, l;
+        var t, r;
         super(...e),
-            (l = { error: null }),
-            (n = 'state') in this
-                ? Object.defineProperty(this, n, {
-                      value: l,
+            (r = { error: null }),
+            (t = 'state') in this
+                ? Object.defineProperty(this, t, {
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (this[n] = l);
+                : (this[t] = r);
     }
 }

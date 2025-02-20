@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(153867),
-    o = n(468026),
-    l = n(394059),
-    c = n(388032);
-function a(e) {
+    l = n(468026),
+    a = n(394059),
+    o = n(388032);
+function u(e) {
     var { type: t, onConfirm: n } = e,
-        a = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -16,20 +16,20 @@ function a(e) {
                     var n,
                         r,
                         i = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ['type', 'onConfirm']);
-    let u = t === l.K.STREAM ? c.NW.string(c.t['/lFMWl']) : c.NW.string(c.t.xzxhZW),
-        s = t === l.K.STREAM ? c.NW.string(c.t.xaOX7e) : c.NW.string(c.t.oU1p9P);
+    let d = t === a.K.STREAM ? o.NW.string(o.t['/lFMWl']) : o.NW.string(o.t.xzxhZW),
+        s = t === a.K.STREAM ? o.NW.string(o.t.xaOX7e) : o.NW.string(o.t.oU1p9P);
     return (0, r.jsx)(
-        o.default,
+        l.default,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -56,17 +56,17 @@ function a(e) {
             return e;
         })(
             {
-                confirmText: c.NW.string(c.t['cY+Ooa']),
-                secondaryConfirmText: c.NW.string(c.t['JdIQ/f']),
-                title: u,
-                cancelText: c.NW.string(c.t['ETE/oK']),
+                confirmText: o.NW.string(o.t['cY+Ooa']),
+                secondaryConfirmText: o.NW.string(o.t['JdIQ/f']),
+                title: d,
+                cancelText: o.NW.string(o.t['ETE/oK']),
                 onConfirm: n,
                 onConfirmSecondary: () => {
                     i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
                 },
                 body: s
             },
-            a
+            u
         )
     );
 }

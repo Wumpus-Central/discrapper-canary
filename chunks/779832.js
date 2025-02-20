@@ -1,11 +1,11 @@
-n.d(t, { ZP: () => a });
-let i = -1,
-    r = (e) => new Promise((e) => e(i)),
-    a = {
-        backgroundTaskIdentifierInvalid: i,
+n.d(t, { ZP: () => o });
+let r = -1,
+    i = (e) => new Promise((e) => e(r)),
+    o = {
+        backgroundTaskIdentifierInvalid: r,
         backgroundify: function (e, t) {
             return e;
         },
-        startBackgroundTask: r,
+        startBackgroundTask: i,
         endBackgroundTask: (e) => {}
     };

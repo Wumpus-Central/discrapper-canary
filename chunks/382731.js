@@ -1,21 +1,21 @@
-n.d(t, { Z: () => s });
-var i = n(192379),
-    r = n(995295);
-let a = Object.freeze({ box: 'border-box' });
-function s(e) {
-    let { ref: t, onUpdate: n, resizeObserver: s, listenerMap: o, key: l } = e;
-    (0, i.useLayoutEffect)(() => {
+n.d(t, { Z: () => a });
+var r = n(192379),
+    i = n(995295);
+let o = Object.freeze({ box: 'border-box' });
+function a(e) {
+    let { ref: t, onUpdate: n, resizeObserver: a, listenerMap: s, key: l } = e;
+    (0, r.useLayoutEffect)(() => {
         let e = (e) => {
-                (0, r.flushSync)(() => {
+                (0, i.flushSync)(() => {
                     n(e, l);
                 });
             },
-            { current: i } = t;
+            { current: r } = t;
         return (
-            null != i && (o.set(i, e), s.observe(i, a)),
+            null != r && (s.set(r, e), a.observe(r, o)),
             () => {
-                null != i && (s.unobserve(i), o.delete(i));
+                null != r && (a.unobserve(r), s.delete(r));
             }
         );
-    }, [n, s, t, o, l]);
+    }, [n, a, t, s, l]);
 }

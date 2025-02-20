@@ -1,41 +1,41 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(399606),
+var i = n(399606),
     a = n(481060),
-    r = n(607070),
-    s = n(739566),
-    o = n(942951),
+    o = n(607070),
+    l = n(739566),
+    s = n(942951),
     c = n(834129),
     d = n(703656),
     u = n(331372),
-    m = n(981631),
-    _ = n(388032),
-    h = n(599555);
-function p(e) {
-    let { guildId: t, user: n, username: s } = e,
-        o = (0, l.e7)([r.Z], () => !r.Z.useReducedMotion),
-        c = n.getAvatarURL(t, 56, o),
-        d = (0, i.jsx)('img', {
+    p = n(981631),
+    m = n(388032),
+    f = n(666100);
+function h(e) {
+    let { guildId: t, user: n, username: l } = e,
+        s = (0, i.e7)([o.Z], () => !o.Z.useReducedMotion),
+        c = n.getAvatarURL(t, 56, s),
+        d = (0, r.jsx)('img', {
             src: c,
-            className: h.userAvatar,
+            className: f.userAvatar,
             alt: ''
         });
-    return (0, i.jsxs)('div', {
-        className: h.thankYouCard,
+    return (0, r.jsxs)('div', {
+        className: f.thankYouCard,
         role: 'img',
-        'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: s }),
+        'aria-label': m.NW.formatToPlainString(m.t['utf8+f'], { username: l }),
         children: [
-            (0, i.jsx)(u.Z, { avatar: d }),
-            (0, i.jsx)(a.Text, {
-                className: h.thankYouText,
+            (0, r.jsx)(u.Z, { avatar: d }),
+            (0, r.jsx)(a.Text, {
+                className: f.thankYouText,
                 tag: 'p',
                 color: 'status-positive-text',
                 variant: 'heading-xl/medium',
-                children: _.intl.format(_.t['52BAtL'], {
-                    username: s,
+                children: m.NW.format(m.t['52BAtL'], {
+                    username: l,
                     usernameHook: (e, t) =>
-                        (0, i.jsx)(
+                        (0, r.jsx)(
                             a.Text,
                             {
                                 tag: 'span',
@@ -52,35 +52,35 @@ function p(e) {
     });
 }
 function g(e) {
-    var t, l, a;
-    let { channel: r, message: u, compact: h } = e,
-        g = (0, s.ZP)(u),
-        f = (0, o.l)({
+    var t, i, a;
+    let { channel: o, message: u, compact: f } = e,
+        g = (0, l.ZP)(u),
+        _ = (0, s.l)({
             user: u.author,
-            channelId: r.id,
-            guildId: r.guild_id,
+            channelId: o.id,
+            guildId: o.guild_id,
             messageId: u.id
         })(g),
-        x = _.intl.format(_.t.TQs67u, {
+        b = m.NW.format(m.t.TQs67u, {
             username: g.nick,
-            usernameHook: f,
-            productName: null !== (a = null === (l = u.purchaseNotification) || void 0 === l ? void 0 : null === (t = l.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : '',
+            usernameHook: _,
+            productName: null !== (a = null === (i = u.purchaseNotification) || void 0 === i ? void 0 : null === (t = i.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : '',
             handleProductListingClick: () => {
                 var e, t, n;
-                (0, d.uL)(m.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = u.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
+                (0, d.uL)(p.Z5c.GUILD_PRODUCT(o.guild_id, null !== (n = null === (t = u.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
             }
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 icon: n(570111),
                 timestamp: u.timestamp,
-                compact: h,
-                children: x
+                compact: f,
+                children: b
             }),
-            (0, i.jsx)(p, {
+            (0, r.jsx)(h, {
                 username: g.nick,
-                guildId: r.guild_id,
+                guildId: o.guild_id,
                 user: u.author
             })
         ]

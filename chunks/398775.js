@@ -19,9 +19,9 @@ var r = n(200651),
     p = n(600164),
     h = n(296848),
     f = n(798769),
-    N = n(981631),
-    x = n(388032),
-    b = n(992572);
+    b = n(981631),
+    N = n(388032),
+    x = n(992572);
 async function _(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: r, setHasError: i, setIsCancelling: s, analyticsLocations: a, analyticsLocation: l } = e;
     try {
@@ -39,26 +39,26 @@ function E(e) {
             },
             [a]
         ),
-        g = d.status === N.O0b.PAUSED ? x.NW.string(x.t.Lp9WoK) : x.NW.string(x.t.eSR83d),
+        g = d.status === b.O0b.PAUSED ? N.NW.string(N.t.Lp9WoK) : N.NW.string(N.t.eSR83d),
         _ = (function (e) {
-            let t = e.status === N.O0b.PAUSED ? x.t.o3upfX : x.t.dBXZEh,
+            let t = e.status === b.O0b.PAUSED ? N.t.o3upfX : N.t.dBXZEh,
                 { durations: n, currentDaysPaused: r } = (0, h.AT)(e),
                 i = [];
             for (let e of n) {
                 let n = l.T[e];
                 i.push({
-                    name: x.NW.formatToPlainString(t, { days: n - r }),
+                    name: N.NW.formatToPlainString(t, { days: n - r }),
                     value: n,
-                    radioItemIconClassName: b.radioOption
+                    radioItemIconClassName: x.radioOption
                 });
             }
             return (
                 i.sort((e, t) => e.value - t.value),
                 i.push({
-                    name: x.NW.string(x.t.OCPUMz),
+                    name: N.NW.string(N.t.OCPUMz),
                     value: 0,
-                    radioBarClassName: b.cancelText,
-                    radioItemIconClassName: b.cancelText
+                    radioBarClassName: x.cancelText,
+                    radioItemIconClassName: x.cancelText
                 }),
                 i
             );
@@ -76,23 +76,23 @@ function E(e) {
                 (0, r.jsx)(c.xBx, {
                     separator: !1,
                     children: (0, r.jsxs)('div', {
-                        className: b.__invalid_header,
+                        className: x.__invalid_header,
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
-                                className: b.__invalid_modalHeader,
-                                children: x.NW.string(x.t.f3nnBw)
+                                className: x.__invalid_modalHeader,
+                                children: N.NW.string(N.t.f3nnBw)
                             }),
                             (0, r.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
-                                className: b.subtitle,
+                                className: x.subtitle,
                                 children: g
                             })
                         ]
                     })
                 }),
                 (0, r.jsx)(c.hzk, {
-                    className: b.body,
+                    className: x.body,
                     children: (0, r.jsx)(c.FXm, {
                         options: _,
                         onChange: m,
@@ -115,20 +115,20 @@ function j(e) {
         O = (0, m.ZP)(),
         v = null,
         S = null,
-        T = [N.O0b.PAST_DUE, N.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        T = [b.O0b.PAST_DUE, b.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         I = a()(T).add(l, 'days').toDate();
     switch (t.status) {
-        case N.O0b.PAST_DUE:
-            S = x.NW.format(x.t['xaS18/'], {
+        case b.O0b.PAST_DUE:
+            S = N.NW.format(N.t['xaS18/'], {
                 pauseDuration: l,
                 resumeDate: I
             });
             break;
-        case N.O0b.PAUSED:
-            S = x.NW.format(x.t.Vur3FR, { resumeDate: I });
+        case b.O0b.PAUSED:
+            S = N.NW.format(N.t.Vur3FR, { resumeDate: I });
             break;
         default:
-            S = x.NW.format(x.t.W85vFB, {
+            S = N.NW.format(N.t.W85vFB, {
                 pauseDate: T,
                 resumeDate: I,
                 pauseDuration: l
@@ -136,7 +136,7 @@ function j(e) {
     }
     return (
         (v = (0, r.jsx)('div', {
-            className: b.body,
+            className: x.body,
             children: S
         })),
         (0, r.jsxs)(r.Fragment, {
@@ -148,21 +148,21 @@ function j(e) {
                 (0, r.jsx)(c.xBx, {
                     separator: !1,
                     children: (0, r.jsx)('div', {
-                        className: b.__invalid_header,
+                        className: x.__invalid_header,
                         children: (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
-                            className: b.__invalid_modalHeader,
-                            children: x.NW.string(x.t['AnMG5+'])
+                            className: x.__invalid_modalHeader,
+                            children: N.NW.string(N.t['AnMG5+'])
                         })
                     })
                 }),
                 (0, r.jsxs)(c.hzk, {
-                    className: b.body,
+                    className: x.body,
                     children: [
                         u
                             ? (0, r.jsx)(c.kzN, {
-                                  className: b.errorBlock,
-                                  children: x.NW.string(x.t['5mlOCQ'])
+                                  className: x.errorBlock,
+                                  children: N.NW.string(N.t['5mlOCQ'])
                               })
                             : null,
                         v
@@ -171,7 +171,7 @@ function j(e) {
                 (0, r.jsx)(c.mzw, {
                     justify: p.Z.Justify.START,
                     children: (0, r.jsxs)('div', {
-                        className: b.whatYouLoseButtonContainer,
+                        className: x.whatYouLoseButtonContainer,
                         children: [
                             (0, r.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
@@ -187,13 +187,13 @@ function j(e) {
                                         analyticsLocation: d
                                     });
                                 },
-                                children: x.NW.string(x.t['cY+Ooa'])
+                                children: N.NW.string(N.t['cY+Ooa'])
                             }),
                             (0, r.jsx)(c.zxk, {
                                 look: c.zxk.Looks.LINK,
                                 color: (0, o.wj)(O) ? c.zxk.Colors.WHITE : c.zxk.Colors.PRIMARY,
                                 onClick: s,
-                                children: x.NW.string(x.t.h9tkAA)
+                                children: N.NW.string(N.t.h9tkAA)
                             })
                         ]
                     })

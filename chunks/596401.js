@@ -1,18 +1,18 @@
 n.d(t, {
-    D2: () => a,
+    D2: () => o,
     LU: () => l,
-    Vw: () => s,
-    Xd: () => i,
-    h3: () => o,
-    sP: () => r
+    Vw: () => a,
+    Xd: () => r,
+    h3: () => s,
+    sP: () => i
 });
-let i = 'CHANGELOG_MODAL',
-    r = '1232523165893132288',
-    a = 'https://discord.com/category/product';
-var s = (function (e) {
+let r = 'CHANGELOG_MODAL',
+    i = '1232523165893132288',
+    o = 'https://discord.com/category/product';
+var a = (function (e) {
         return (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), e;
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (e[(e.YOUTUBE_VIDEO_ID = 0)] = 'YOUTUBE_VIDEO_ID'), (e[(e.IMAGE = 1)] = 'IMAGE'), e;
     })({}),
     l = (function (e) {

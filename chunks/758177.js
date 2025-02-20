@@ -1,16 +1,16 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(594174),
-    l = n(768581),
-    r = n(956664),
-    a = n(996106),
-    s = n(452426),
-    o = n(186901),
-    d = n(981631);
-let c = {
-    [d.Etm.GET_IMAGE]: {
-        scope: o.lH,
+n.d(t, { Z: () => u }), n(47120);
+var r = n(594174),
+    i = n(768581),
+    l = n(956664),
+    o = n(996106),
+    a = n(452426),
+    s = n(186901),
+    c = n(981631);
+let u = {
+    [c.Etm.GET_IMAGE]: {
+        scope: s.lH,
         validation: (e) =>
-            (0, s.Z)(e)
+            (0, a.Z)(e)
                 .required()
                 .keys({
                     type: e.string().required().valid(['user']),
@@ -21,20 +21,20 @@ let c = {
         handler(e) {
             let t,
                 {
-                    args: { type: n, id: s, format: o = 'png', size: c = 128 }
+                    args: { type: n, id: a, format: s = 'png', size: u = 128 }
                 } = e;
             if ('user' === n) {
-                let e = i.default.getUser(s);
+                let e = r.default.getUser(a);
                 if (null != e) {
-                    t = l.ZP.getUserAvatarURL(e, !1, c, o);
+                    t = i.ZP.getUserAvatarURL(e, !1, u, s);
                     let n = window.GLOBAL_ENV.CDN_HOST;
                     null != n && -1 !== t.indexOf(n) && (t += '&_=');
-                } else throw new a.Z({ errorCode: d.lTL.INVALID_USER }, 'Invalid user id: '.concat(s));
+                } else throw new o.Z({ errorCode: c.lTL.INVALID_USER }, 'Invalid user id: '.concat(a));
             }
-            if (null == t) throw new a.Z({ errorCode: d.lTL.INVALID_COMMAND }, 'No valid type.');
+            if (null == t) throw new o.Z({ errorCode: c.lTL.INVALID_COMMAND }, 'No valid type.');
             return fetch(t)
                 .then((e) => e.blob())
-                .then((e) => (0, r.fD)(e))
+                .then((e) => (0, l.fD)(e))
                 .then((e) => ({ data_url: e }));
         }
     }

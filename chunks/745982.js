@@ -1,24 +1,24 @@
-n.d(e, { Z: () => d });
-var s = n(200651);
+n.d(e, { Z: () => u });
+var r = n(200651);
 n(192379);
-var i = n(353672),
-    r = n(850165),
-    o = n(134612),
-    a = n(388032),
-    c = n(26445),
+var s = n(353672),
+    o = n(850165),
+    i = n(134612),
+    c = n(388032),
+    a = n(878418),
     l = n(190113);
-function d(t) {
+function u(t) {
     let {} = t,
-        e = (0, o.Nn)();
-    return (0, s.jsx)(r.Z, {
+        e = (0, i.Nn)();
+    return (0, r.jsx)(o.Z, {
         heroImageSrc: l,
-        heroImageAlt: a.intl.string(a.t['2mJo29']),
-        header: a.intl.string(a.t.eAbVfX),
-        children: (0, s.jsx)('div', {
-            className: c.safetyTips,
-            children: (0, s.jsx)(i.Z, {
+        heroImageAlt: c.NW.string(c.t['2mJo29']),
+        header: c.NW.string(c.t.eAbVfX),
+        children: (0, r.jsx)('div', {
+            className: a.safetyTips,
+            children: (0, r.jsx)(s.Z, {
                 tips: e,
-                headerText: a.intl.string(a.t['0QSL1N'])
+                headerText: c.NW.string(c.t['0QSL1N'])
             })
         })
     });

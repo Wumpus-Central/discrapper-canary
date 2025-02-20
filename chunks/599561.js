@@ -7235,28 +7235,28 @@ let t = [
 ];
 function n(e) {
     let n = e.regex,
-        i = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
-        r = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        a = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        s = n.either(n.concat(i, r), a),
-        o = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
+        r = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
+        i = /(\w*\.\w+|\w+\.\w*|\w+)/,
+        o = /(\d*\.\d+|\d+\.\d*|\d+)/,
+        a = n.either(n.concat(r, i), o),
+        s = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
         l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
-        u = n.either(o, l),
-        c = /\*\^[+-]?\d+/,
+        c = n.either(s, l),
+        u = /\*\^[+-]?\d+/,
         d = {
             className: 'number',
             relevance: 0,
-            begin: n.concat(s, n.optional(u), n.optional(c))
+            begin: n.concat(a, n.optional(c), n.optional(u))
         },
         f = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        _ = new Set(t),
-        p = {
+        p = new Set(t),
+        _ = {
             variants: [
                 {
                     className: 'builtin-symbol',
                     begin: f,
                     'on:begin': (e, t) => {
-                        _.has(e[0]) || t.ignoreMatch();
+                        p.has(e[0]) || t.ignoreMatch();
                     }
                 },
                 {
@@ -7290,7 +7290,7 @@ function n(e) {
             relevance: 0,
             begin: /[[\](){}]/
         },
-        y = {
+        b = {
             className: 'message-name',
             relevance: 0,
             begin: n.concat('::', f)
@@ -7307,7 +7307,7 @@ function n(e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), g, E, y, p, h, e.QUOTE_STRING_MODE, d, m, v]
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), g, E, b, _, h, e.QUOTE_STRING_MODE, d, m, v]
     };
 }
 e.exports = n;

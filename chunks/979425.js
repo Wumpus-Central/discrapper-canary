@@ -1,40 +1,40 @@
-n.d(t, { Z: () => c });
-var l = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var i = n(120356),
-    r = n.n(i),
+var l = n(120356),
+    i = n.n(l),
     a = n(481060),
-    s = n(871118),
-    o = n(388032),
-    u = n(707945);
-function c(e) {
-    let { stream: t, isSmall: n, selected: i, isSelfStream: c } = e;
-    return (0, l.jsxs)(l.Fragment, {
+    o = n(871118),
+    s = n(388032),
+    c = n(668595);
+function u(e) {
+    let { stream: t, isSmall: n, selected: l, isSelfStream: u } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsx)(s.Z, {
-                className: r()(u.absoluteFill, u.streamPreviewOpacity),
+            (0, r.jsx)(o.Z, {
+                className: i()(c.absoluteFill, c.streamPreviewOpacity),
                 stream: t,
                 noText: !0
             }),
-            !i &&
-                (0, l.jsxs)('div', {
-                    className: r()(u.content, u.streamUnavailable, { [u.small]: n }),
+            !l &&
+                (0, r.jsxs)('div', {
+                    className: i()(c.content, c.streamUnavailable, { [c.small]: n }),
                     children: [
-                        (0, l.jsx)(a.Text, {
-                            className: u.streamUnavailableText,
+                        (0, r.jsx)(a.Text, {
+                            className: c.streamUnavailableText,
                             color: 'always-white',
                             variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-                            children: c ? o.intl.string(o.t.UeEwj4) : o.intl.string(o.t['1i3tSU'])
+                            children: u ? s.NW.string(s.t.UeEwj4) : s.NW.string(s.t['1i3tSU'])
                         }),
-                        (0, l.jsx)(a.DY3, {
-                            text: c ? o.intl.string(o.t['ro/HNz']) : o.intl.string(o.t.UPf6ZG),
-                            className: u.darkCircle,
-                            children: (0, l.jsx)('div', {
-                                children: (0, l.jsx)(a.o8v, {
+                        (0, r.jsx)(a.DY3, {
+                            text: u ? s.NW.string(s.t['ro/HNz']) : s.NW.string(s.t.UPf6ZG),
+                            className: c.darkCircle,
+                            children: (0, r.jsx)('div', {
+                                children: (0, r.jsx)(a.o8v, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: u.stopStreamIcon,
-                                    colorClass: u.stopStreamForeground
+                                    className: c.stopStreamIcon,
+                                    colorClass: c.stopStreamForeground
                                 })
                             })
                         })

@@ -19,9 +19,9 @@ var i = n(120356),
     p = n(650032),
     h = n(104494),
     f = n(639119),
-    N = n(105759),
-    x = n(346497),
-    b = n(422034),
+    b = n(105759),
+    N = n(346497),
+    x = n(422034),
     _ = n(206127),
     E = n(710220),
     j = n(318747),
@@ -79,9 +79,9 @@ let A = (e) => {
         w = (0, h.Wp)(Z, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
         k = (0, f.N)(),
         W = (0, m.Nx)(),
-        L = (0, x.Vi)(),
+        L = (0, N.Vi)(),
         B = (0, a.e7)([u.Z], () => u.Z.affinities),
-        M = (0, N.Z)(),
+        M = (0, b.Z)(),
         { enabled: U } = p._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
         V = A === O.EZ.ApplicationStoreHome && null != M && U,
         G = B.length > 0;
@@ -107,7 +107,7 @@ let A = (e) => {
                             : G
                               ? (0, r.jsx)('div', {
                                     className: s()(S.affinityDescription),
-                                    children: (0, r.jsx)(b.Z, {
+                                    children: (0, r.jsx)(x.Z, {
                                         textColor: 'always-white',
                                         smallerText: !i
                                     })

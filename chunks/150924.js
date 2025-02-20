@@ -1,16 +1,16 @@
 n.r(t), n.d(t, { default: () => l });
-var i = n(212059),
-    r = n(667895),
-    a = n(11608),
-    s = n(682751),
-    o = n(109515);
+var r = n(212059),
+    i = n(667895),
+    o = n(11608),
+    a = n(682751),
+    s = n(109515);
 let l = {
     code: 'en-US',
-    formatDistance: i.Z,
-    formatLong: r.Z,
-    formatRelative: a.Z,
-    localize: s.Z,
-    match: o.Z,
+    formatDistance: r.Z,
+    formatLong: i.Z,
+    formatRelative: o.Z,
+    localize: a.Z,
+    match: s.Z,
     options: {
         weekStartsOn: 0,
         firstWeekContainsDate: 1

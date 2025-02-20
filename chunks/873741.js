@@ -1,10 +1,10 @@
-function i() {
+function r() {
     return !1;
 }
-function r() {
+function i() {
     return null;
 }
 n.d(t, {
-    K: () => i,
-    d: () => r
+    K: () => r,
+    d: () => i
 });

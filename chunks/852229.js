@@ -1,11 +1,11 @@
-function i(e) {
+function r(e) {
     let t = document.body;
     if (null == t) throw Error('[Utils] ClipboardUtils.copy(): assert failed: document.body != null');
     let n = document.createRange(),
-        i = window.getSelection(),
-        r = document.createElement('textarea');
-    (r.value = e), (r.contentEditable = 'true'), (r.style.visibility = 'none'), t.appendChild(r), n.selectNodeContents(r), null == i || i.removeAllRanges(), null == i || i.addRange(n), r.focus(), r.setSelectionRange(0, e.length);
-    let a = document.execCommand('copy');
-    return t.removeChild(r), a;
+        r = window.getSelection(),
+        i = document.createElement('textarea');
+    (i.value = e), (i.contentEditable = 'true'), (i.style.visibility = 'none'), t.appendChild(i), n.selectNodeContents(i), null == r || r.removeAllRanges(), null == r || r.addRange(n), i.focus(), i.setSelectionRange(0, e.length);
+    let o = document.execCommand('copy');
+    return t.removeChild(i), o;
 }
-n.d(t, { J: () => i }), n(411104);
+n.d(t, { J: () => r }), n(411104);

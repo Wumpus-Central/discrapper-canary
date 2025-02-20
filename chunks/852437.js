@@ -1,15 +1,15 @@
-var i = n(147018),
-    r = n(82246).findLast,
-    a = n(345374);
-i(
+var r = n(147018),
+    i = n(82246).findLast,
+    o = n(345374);
+r(
     {
         target: 'Array',
         proto: !0
     },
     {
         findLast: function (e) {
-            return r(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 ),
-    a('findLast');
+    o('findLast');

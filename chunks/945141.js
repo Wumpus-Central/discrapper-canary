@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(47120);
-var i = n(433517),
-    r = n(147913);
-function a(e, t, n) {
+var r = n(433517),
+    i = n(147913);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,23 +14,23 @@ function a(e, t, n) {
         e
     );
 }
-let s = 'formGuidelinesStorageKey';
-class o extends r.Z {
+let a = 'formGuidelinesStorageKey';
+class s extends i.Z {
     _initialize() {
-        let e = i.K.get(s);
+        let e = r.K.get(a);
         null != e && (this.seenForumGuidelines = new Set(e));
     }
     _terminate() {
-        i.K.set(s, this.seenForumGuidelines);
+        r.K.set(a, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), i.K.set(s, this.seenForumGuidelines);
+        this.seenForumGuidelines.add(e), r.K.set(a, this.seenForumGuidelines);
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
     constructor(...e) {
-        super(...e), a(this, 'seenForumGuidelines', new Set());
+        super(...e), o(this, 'seenForumGuidelines', new Set());
     }
 }
-let l = new o();
+let l = new s();

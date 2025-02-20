@@ -1,37 +1,37 @@
-e.d(n, { Z: () => _ });
-var i = e(200651);
-e(192379);
-var o = e(120356),
-    a = e.n(o),
-    s = e(793030),
-    r = e(481060),
-    c = e(759198),
-    l = e(552958),
-    p = e(767157),
-    C = e(388032),
-    d = e(163698);
-function _(t) {
-    let { label: n, className: e, description: o, soundpack: _, location: u } = t,
-        { playSound: x, isPlaying: I } = (0, l.Z)();
-    return (0, i.jsxs)(r.P3F, {
-        'aria-label': C.intl.string(C.t.RscU7O),
-        className: a()(d.container, e, { [d.containerActive]: I }),
+n.d(e, { Z: () => b }), n(266796);
+var r = n(200651);
+n(192379);
+var o = n(120356),
+    i = n.n(o),
+    a = n(793030),
+    c = n(481060),
+    s = n(759198),
+    l = n(552958),
+    p = n(767157),
+    u = n(388032),
+    O = n(103866);
+function b(t) {
+    let { label: e, className: n, description: o, soundpack: b, location: f } = t,
+        { playSound: d, isPlaying: y } = (0, l.Z)();
+    return (0, r.jsxs)(c.P3F, {
+        'aria-label': u.NW.string(u.t.RscU7O),
+        className: i()(O.container, n, { [O.containerActive]: y }),
         onClick: () => {
-            (0, p.Z)(_, u), x(_);
+            (0, p.Z)(b, f), d(b);
         },
         children: [
-            (0, i.jsx)(r.g8d, {
-                className: d.playButton,
-                color: I ? r.TVs.colors.INTERACTIVE_ACTIVE : r.TVs.colors.INTERACTIVE_NORMAL
+            (0, r.jsx)(c.g8d, {
+                className: O.playButton,
+                color: y ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_NORMAL
             }),
-            (0, i.jsxs)('div', {
-                className: d.textContainer,
+            (0, r.jsxs)('div', {
+                className: O.textContainer,
                 children: [
-                    (0, i.jsx)(c.Z, {
+                    (0, r.jsx)(s.Z, {
                         variant: 'text-md/medium',
-                        children: n
+                        children: e
                     }),
-                    (0, i.jsx)(s.xv, {
+                    (0, r.jsx)(a.xv, {
                         variant: 'text-sm/normal',
                         children: o
                     })

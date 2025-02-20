@@ -1,39 +1,39 @@
 n.d(t, { Z: () => u }), n(47120);
-var a = n(200651),
-    i = n(192379),
-    r = n(442837),
-    l = n(481060),
-    o = n(287734),
+var r = n(200651),
+    a = n(192379),
+    i = n(442837),
+    o = n(481060),
+    l = n(287734),
     s = n(592125),
     c = n(693546),
     d = n(388032);
 function u(e) {
     let { joinRequest: t } = e,
-        [n, u] = i.useState(!1),
-        m = (0, r.e7)([s.Z], () => s.Z.getChannel(t.interviewChannelId)),
-        x = i.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(d.intl.string(d.t.R0RpRU), l.ToastType.FAILURE));
+        [n, u] = a.useState(!1),
+        m = (0, i.e7)([s.Z], () => s.Z.getChannel(t.interviewChannelId)),
+        p = a.useCallback(() => {
+            (0, o.showToast)((0, o.createToast)(d.NW.string(d.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
-        h = i.useCallback(async () => {
+        f = a.useCallback(async () => {
             if (null != m) {
-                o.default.selectPrivateChannel(m.id);
+                l.default.selectPrivateChannel(m.id);
                 return;
             }
             if (!n) {
                 u(!0);
                 try {
                     await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
-                } catch {
-                    x();
+                } catch (e) {
+                    p();
                 } finally {
                     u(!1);
                 }
             }
-        }, [m, t.joinRequestId, x, n]);
-    return (0, a.jsx)(l.zxk, {
-        color: l.zxk.Colors.BRAND,
+        }, [m, t.joinRequestId, p, n]);
+    return (0, r.jsx)(o.zxk, {
+        color: o.zxk.Colors.BRAND,
         submitting: n,
-        onClick: h,
-        children: d.intl.string(d.t.aqiUAA)
+        onClick: f,
+        children: d.NW.string(d.t.aqiUAA)
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -37,13 +37,13 @@ let p = {
         [d.gkr.HOUSE_2]: n(797148),
         [d.gkr.HOUSE_3]: n(374347)
     },
-    N = (e) =>
+    b = (e) =>
         ({
             [d.gkr.HOUSE_1]: u.NW.string(u.t.CpG10d),
             [d.gkr.HOUSE_2]: u.NW.string(u.t.VNPE6u),
             [d.gkr.HOUSE_3]: u.NW.string(u.t.KNfiTU)
         })[e];
-class x extends i.Component {
+class N extends i.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;
@@ -73,7 +73,7 @@ class x extends i.Component {
                                         (0, r.jsx)(l.Text, {
                                             className: m.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
-                                            children: N(e)
+                                            children: b(e)
                                         })
                                     ]
                                 }),

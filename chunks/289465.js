@@ -1,28 +1,28 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(319589);
-function o(e) {
-    let { bar: t, children: n, className: l, inModal: o, title: d } = e;
-    return (0, i.jsxs)(r.Zbd, {
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(587340);
+function s(e) {
+    let { bar: t, children: n, className: i, inModal: s, title: c } = e;
+    return (0, r.jsxs)(o.Zbd, {
         editable: !0,
-        className: a()(s.card, l, { [s.inModal]: o }),
+        className: l()(a.card, i, { [a.inModal]: s }),
         children: [
-            (0, i.jsxs)('div', {
-                className: a()(s.cardHeader, { [s.inModal]: o }),
+            (0, r.jsxs)('div', {
+                className: l()(a.cardHeader, { [a.inModal]: s }),
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-xs/semibold',
-                        className: s.title,
-                        children: d
+                        className: a.title,
+                        children: c
                     }),
-                    (0, i.jsx)('div', { children: t })
+                    (0, r.jsx)('div', { children: t })
                 ]
             }),
-            o ? (0, i.jsx)(r.$i$, {}) : null,
+            s ? (0, r.jsx)(o.$i$, {}) : null,
             n
         ]
     });

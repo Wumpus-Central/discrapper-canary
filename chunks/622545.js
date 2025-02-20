@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
-var i = n(388032);
-let l = ['a', 'b', 'c', 'd'],
+n.d(t, { Z: () => l });
+var r = n(388032);
+let i = ['a', 'b', 'c', 'd'],
     a = (e) => e;
-function r(e, t) {
+function o(e, t) {
     let n = {},
-        i = Math.min(e.length, l.length);
-    for (let a = 0; a < i; ++a) n[l[a]] = (n, i) => t(e[a], i);
+        r = Math.min(e.length, i.length);
+    for (let a = 0; a < r; ++a) n[i[a]] = (n, r) => t(e[a], r);
     return n;
 }
-class s {
+class l {
     asString() {
         return this.transformed(a);
     }
@@ -22,11 +22,11 @@ class s {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_TWO, r(this.items, e));
+                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_TWO, o(this.items, e));
             case 3:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_THREE, r(this.items, e));
+                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_THREE, o(this.items, e));
             default:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_FOUR, r(this.items, e));
+                return r.NW.format(r.t.GENERIC_FORMATTED_LIST_FOUR, o(this.items, e));
         }
     }
     constructor(e) {

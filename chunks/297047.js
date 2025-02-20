@@ -1,47 +1,47 @@
-t.d(n, {
-    Z: () => p,
-    q: () => f
+n.d(t, {
+    Z: () => E,
+    q: () => g
 }),
-    t(47120);
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    a = t(481060),
-    l = t(144144),
-    o = t(592125),
-    s = t(496675),
-    d = t(944486),
-    u = t(585483),
-    c = t(51144),
-    _ = t(981631),
-    h = t(388032);
-function f(e, n) {
-    let { id: t } = e,
-        i = '@'.concat(c.ZP.getUserTag(e, { decoration: 'never' }));
-    u.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
-        plainText: i,
-        rawText: '<@'.concat(t, '>')
+    n(47120);
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(144144),
+    u = n(592125),
+    a = n(496675),
+    c = n(944486),
+    d = n(585483),
+    s = n(51144),
+    f = n(981631),
+    _ = n(388032);
+function g(e, t) {
+    let { id: n } = e,
+        r = '@'.concat(s.ZP.getUserTag(e, { decoration: 'never' }));
+    d.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
+        plainText: r,
+        rawText: '<@'.concat(n, '>')
     }),
-        null != n && l.Z.startTyping(n);
+        null != t && o.Z.startTyping(t);
 }
-function p(e, n, t) {
-    let [l, u] = (0, r.Wu)(
-            [d.Z, o.Z, s.Z],
+function E(e, t, n) {
+    let [o, d] = (0, l.Wu)(
+            [c.Z, u.Z, a.Z],
             () => {
-                let e = d.Z.getChannelId(n),
-                    t = o.Z.getChannel(e);
-                return [e, null != t && (t.isMultiUserDM() || s.Z.can(_.Plq.SEND_MESSAGES, t))];
+                let e = c.Z.getChannelId(t),
+                    n = u.Z.getChannel(e);
+                return [e, null != n && (n.isMultiUserDM() || a.Z.can(f.Plq.SEND_MESSAGES, n))];
             },
-            [n]
+            [t]
         ),
-        c = t === _.IlC.POPOUT;
-    return !u || c
+        s = n === f.IlC.POPOUT;
+    return !d || s
         ? null
-        : (0, i.jsx)(a.sNh, {
+        : (0, r.jsx)(i.sNh, {
               id: 'mention',
-              label: h.intl.string(h.t.P8tvKC),
+              label: _.NW.string(_.t.P8tvKC),
               action: function () {
-                  f(e, l);
+                  g(e, o);
               }
           });
 }

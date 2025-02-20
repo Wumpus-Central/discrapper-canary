@@ -1,12 +1,12 @@
 n.d(t, {
-    Z: () => E,
-    _: () => w
+    Z: () => T,
+    _: () => S
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(512722),
-    a = n.n(l),
+var r = n(200651),
+    a = n(192379),
+    i = n(512722),
+    l = n.n(i),
     s = n(642128),
     o = n(442837),
     c = n(481060),
@@ -15,115 +15,115 @@ var i = n(200651),
     m = n(541716),
     h = n(859235),
     g = n(898463),
-    x = n(592125),
-    f = n(703558),
-    p = n(117530),
-    v = n(585483),
-    C = n(127654),
-    _ = n(228392),
-    b = n(981631),
-    j = n(763890);
-let N = {
+    f = n(592125),
+    p = n(703558),
+    x = n(117530),
+    b = n(585483),
+    v = n(127654),
+    j = n(228392),
+    C = n(981631),
+    _ = n(157075);
+let y = {
         scale: 0.95,
         opacity: 0
     },
-    T = {
+    N = {
         scale: 1,
         opacity: 1
     },
-    I = {
+    O = {
         scale: 1,
         opacity: 1
     },
-    S = {
+    w = {
         tension: 2400,
         friction: 52
     };
-function w(e) {
-    let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
-        u = r.useRef(null),
-        m = (0, o.e7)([x.Z], () => x.Z.getChannel(t), [t]);
+function S(e) {
+    let { channelId: t, onClick: n, onClose: i, onMouseEnter: s } = e,
+        u = a.useRef(null),
+        m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return (
-        a()(null != m, 'Forum Channel is null'),
-        (0, i.jsxs)(c.P3F, {
-            className: j.uploadInput,
+        l()(null != m, 'Forum Channel is null'),
+        (0, r.jsxs)(c.P3F, {
+            className: _.uploadInput,
             onMouseEnter: s,
             onClick: () => {
-                (0, _.N3)({ isMobile: !1 }), null == n || n();
+                (0, j.N3)({ isMobile: !1 }), null == n || n();
             },
             onKeyPress: (e) => {
                 if ('Enter' === e.key) {
                     var t;
-                    null === (t = u.current) || void 0 === t || t.activateUploadDialogue(), (0, _.N3)({ isMobile: !1 });
+                    null === (t = u.current) || void 0 === t || t.activateUploadDialogue(), (0, j.N3)({ isMobile: !1 });
                 }
             },
             children: [
-                (0, i.jsx)(d.Z, {
-                    className: j.fileInput,
+                (0, r.jsx)(d.Z, {
+                    className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == l || l(), (0, C.d)(e.currentTarget.files, m, f.d.FirstThreadMessage, { requireConfirm: !0 }), v.S.dispatch(b.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == i || i(), (0, v.d)(e.currentTarget.files, m, p.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
                     'aria-hidden': !0
                 }),
-                (0, i.jsx)(c.FmF, {
+                (0, r.jsx)(c.FmF, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 28,
                     height: 28,
-                    className: j.uploadIcon
+                    className: _.uploadIcon
                 })
             ]
         })
     );
 }
-function y(e) {
+function P(e) {
     let { channelId: t, closePopout: n } = e,
-        [l, a] = r.useState(!1),
-        { reducedMotion: d } = r.useContext(c.Sfi),
-        x = (0, c.q_F)(
+        [i, l] = a.useState(!1),
+        { reducedMotion: d } = a.useContext(c.Sfi),
+        f = (0, c.q_F)(
             {
-                from: d.enabled ? T : N,
-                to: I,
-                config: S
+                from: d.enabled ? N : y,
+                to: O,
+                config: w
             },
             'animate-always'
         ),
-        f = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        v = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
-    return (0, i.jsx)(s.animated.div, {
-        className: j.popoutContainer,
+        p = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        b = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
+    return (0, r.jsx)(s.animated.div, {
+        className: _.popoutContainer,
         onMouseLeave: () => {
-            l || n();
+            i || n();
         },
-        style: x,
-        children: (0, i.jsxs)(c.zJl, {
+        style: f,
+        children: (0, r.jsxs)(c.zJl, {
             orientation: 'horizontal',
-            className: j.popout,
+            className: _.popout,
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, i.jsx)(w, {
+                (0, r.jsx)(S, {
                     channelId: t,
                     onClick: () => {
-                        a(!0);
+                        l(!0);
                     },
                     onClose: () => {
-                        a(!1), n();
+                        l(!1), n();
                     }
                 }),
-                (0, i.jsx)('div', {
-                    className: j.uploads,
-                    children: v.map((e) =>
-                        (0, i.jsx)(
+                (0, r.jsx)('div', {
+                    className: _.uploads,
+                    children: b.map((e) =>
+                        (0, r.jsx)(
                             g.Z,
                             {
                                 channelId: t,
                                 draftType: m.Ie.CREATE_FORUM_POST.drafts.type,
                                 upload: e,
-                                keyboardModeEnabled: f,
+                                keyboardModeEnabled: p,
                                 hideFileName: !0,
                                 size: h.q.SMALL
                             },
@@ -135,45 +135,45 @@ function y(e) {
         })
     });
 }
-function E(e) {
+function T(e) {
     let { channelId: t } = e,
-        [n, l] = r.useState(!1),
-        a = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
-        s = a.length,
+        [n, i] = a.useState(!1),
+        l = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
+        s = l.length,
         c = s > 0;
-    r.useEffect(() => {
-        n && !c && l(!1);
+    a.useEffect(() => {
+        n && !c && i(!1);
     }, [n, c]);
     let d = () => {
-        c && l(!0);
+        c && i(!0);
     };
-    return (0, i.jsxs)('div', {
-        className: j.container,
+    return (0, r.jsxs)('div', {
+        className: _.container,
         children: [
             c
-                ? (0, i.jsxs)(i.Fragment, {
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsx)(g.r, {
-                              upload: a[0],
+                          (0, r.jsx)(g.r, {
+                              upload: l[0],
                               size: h.q.SMALL,
                               onMouseEnter: d
                           }),
                           !n &&
-                              (0, i.jsx)('div', {
-                                  className: j.badge,
+                              (0, r.jsx)('div', {
+                                  className: _.badge,
                                   children: s
                               })
                       ]
                   })
-                : (0, i.jsx)(w, {
+                : (0, r.jsx)(S, {
                       onMouseEnter: d,
                       channelId: t
                   }),
             n &&
-                (0, i.jsx)(y, {
+                (0, r.jsx)(P, {
                     channelId: t,
                     closePopout: () => {
-                        l(!1);
+                        i(!1);
                     }
                 })
         ]

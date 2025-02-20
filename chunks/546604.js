@@ -1,112 +1,112 @@
-n.d(t, { default: () => v });
-var a = n(200651);
+n.d(t, { default: () => v }), n(266796);
+var r = n(200651);
 n(192379);
-var i = n(512722),
-    s = n.n(i),
-    r = n(990547),
+var a = n(512722),
+    i = n.n(a),
+    s = n(990547),
     l = n(442837),
     o = n(481060),
     c = n(100527),
     d = n(213609),
-    x = n(240657),
+    u = n(240657),
     m = n(809086),
-    u = n(430824),
-    h = n(240864),
-    _ = n(942833),
-    f = n(409110),
-    j = n(226060),
+    x = n(430824),
+    f = n(240864),
+    h = n(942833),
+    j = n(409110),
+    _ = n(226060),
     p = n(388032),
-    g = n(769975);
+    g = n(761632);
 function v(e) {
     var t, n;
-    let { transitionState: i, guildProductListingId: v, analyticsLocation: Z, guildId: N, onClose: C } = e,
-        b = (0, l.e7)([h.Z], () => h.Z.getGuildProduct(v));
-    s()(null != b, 'guildProductListing cannot be null'),
+    let { transitionState: a, guildProductListingId: v, analyticsLocation: b, guildId: N, onClose: Z } = e,
+        C = (0, l.e7)([f.Z], () => f.Z.getGuildProduct(v));
+    i()(null != C, 'guildProductListing cannot be null'),
         (0, d.Z)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
+            type: s.ImpressionTypes.MODAL,
+            name: s.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
             properties: {
                 guild_product_listing_id: v,
-                has_entitlement: !0 === b.has_entitlement,
-                location: Z
+                has_entitlement: !0 === C.has_entitlement,
+                location: b
             }
         });
-    let I = null !== (t = (0, _.C)(b)) && void 0 !== t ? t : '',
-        L = (0, _.k)(b),
-        z = (0, l.e7)([u.Z], () => u.Z.getGuild(N));
-    return (0, a.jsxs)(o.Y0X, {
+    let y = null !== (t = (0, h.C)(C)) && void 0 !== t ? t : '',
+        I = (0, h.k)(C),
+        O = (0, l.e7)([x.Z], () => x.Z.getGuild(N));
+    return (0, r.jsxs)(o.Y0X, {
         className: g.modal,
         size: o.CgR.MEDIUM,
-        transitionState: i,
-        'aria-label': b.name,
+        transitionState: a,
+        'aria-label': C.name,
         children: [
-            (0, a.jsxs)(o.xBx, {
+            (0, r.jsxs)(o.xBx, {
                 separator: !1,
                 children: [
-                    (0, a.jsx)(m.e, {
+                    (0, r.jsx)(m.e, {
                         height: 267,
-                        listing: b,
+                        listing: C,
                         className: g.headerImage,
                         alt: ''
                     }),
-                    (0, a.jsx)(o.olH, {
+                    (0, r.jsx)(o.olH, {
                         className: g.closeButton,
-                        onClick: C,
+                        onClick: Z,
                         withCircleBackground: !0
                     })
                 ]
             }),
-            (0, a.jsx)(o.hzk, {
-                children: (0, a.jsxs)('div', {
+            (0, r.jsx)(o.hzk, {
+                children: (0, r.jsxs)('div', {
                     className: g.body,
                     children: [
-                        (0, a.jsx)(o.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-xl/medium',
                             color: 'header-primary',
-                            children: b.name
+                            children: C.name
                         }),
-                        (0, a.jsx)(o.LZC, { size: 4 }),
-                        (0, a.jsx)(o.Text, {
+                        (0, r.jsx)(o.LZC, { size: 4 }),
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: p.intl.format(p.t.xImSen, {
-                                productType: I,
-                                personName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : ''
+                            children: p.NW.format(p.t.xImSen, {
+                                productType: y,
+                                personName: null !== (n = null == O ? void 0 : O.name) && void 0 !== n ? n : ''
                             })
                         }),
-                        (0, a.jsx)(o.LZC, { size: 16 }),
-                        (0, a.jsx)(f.Z, { listing: b }),
-                        (0, a.jsx)(o.LZC, { size: 16 }),
-                        (0, a.jsx)('div', { className: g.seperator }),
-                        (0, a.jsx)(o.LZC, { size: 16 }),
-                        (0, a.jsx)(o.X6q, {
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)(j.Z, { listing: C }),
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)('div', { className: g.seperator }),
+                        (0, r.jsx)(o.LZC, { size: 16 }),
+                        (0, r.jsx)(o.X6q, {
                             variant: 'heading-lg/medium',
                             color: 'header-primary',
-                            children: p.intl.string(p.t.TNnDJi)
+                            children: p.NW.string(p.t.TNnDJi)
                         }),
-                        (0, a.jsx)(o.LZC, { size: 12 }),
-                        (0, a.jsx)(x.Z, {
+                        (0, r.jsx)(o.LZC, { size: 12 }),
+                        (0, r.jsx)(u.Z, {
                             className: g.description,
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            text: b.description
+                            text: C.description
                         })
                     ]
                 })
             }),
-            (0, a.jsxs)(o.mzw, {
+            (0, r.jsxs)(o.mzw, {
                 className: g.footer,
                 children: [
-                    (0, a.jsx)(j.Z, {
+                    (0, r.jsx)(_.Z, {
                         guildId: N,
                         guildProductListingId: v,
                         sourceAnalyticsLocations: c.Z.GUILD_PRODUCT_INFO_MODAL
                     }),
-                    (0, a.jsx)(o.Text, {
+                    (0, r.jsx)(o.Text, {
                         tag: 'div',
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: L
+                        children: I
                     })
                 ]
             })

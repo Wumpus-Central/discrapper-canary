@@ -1,57 +1,57 @@
-n.d(t, { Z: () => b });
-var i = n(200651);
+n.d(t, { Z: () => j });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(40851),
-    s = n(812206),
-    o = n(831002),
+var i = n(442837),
+    l = n(481060),
+    o = n(40851),
+    a = n(812206),
+    s = n(831002),
     c = n(430824),
-    d = n(358221),
-    u = n(843638),
-    h = n(441061),
-    p = n(167675),
-    m = n(532239),
-    f = n(811423),
+    u = n(358221),
+    d = n(843638),
+    p = n(441061),
+    h = n(167675),
+    f = n(532239),
+    m = n(811423),
     g = n(418469),
-    _ = n(673539),
-    C = n(589049),
-    x = n(354459),
+    b = n(673539),
+    _ = n(589049),
+    C = n(354459),
     v = n(981631),
-    E = n(388032),
-    I = n(821948);
-function b(e) {
-    let { onClose: t, onSelect: n, channel: b } = e,
-        Z = (0, r.bp)(),
-        { id: N, type: T } = b,
-        S = (0, l.e7)([c.Z], () => c.Z.getGuild(b.guild_id), [b.guild_id]),
-        j = (0, l.e7)([d.Z], () => d.Z.getSelectedParticipant(N)),
-        y = (null == j ? void 0 : j.type) === x.fO.STREAM ? j.stream : null,
-        A = (0, l.e7)([s.Z], () => ((null == j ? void 0 : j.type) === x.fO.ACTIVITY ? s.Z.getApplication(j.applicationId) : void 0)),
-        P = (0, h.Z)(N),
-        R = (0, _.Z)(N),
-        M = (0, m.Z)(b, S, null == y ? void 0 : y.ownerId, null == A ? void 0 : A.id),
-        L = (0, u.Z)(N),
-        k = (0, C.Z)(),
-        O = (0, o.$A)(N),
-        D = (0, o.j8)(N),
-        w = (0, g.Z)(y, Z),
-        U = (0, f.Z)(A, N),
-        B = (0, p.Z)();
-    return (0, i.jsxs)(a.v2r, {
-        className: I.menu,
+    y = n(388032),
+    x = n(694189);
+function j(e) {
+    let { onClose: t, onSelect: n, channel: j } = e,
+        O = (0, o.bp)(),
+        { id: N, type: E } = j,
+        P = (0, i.e7)([c.Z], () => c.Z.getGuild(j.guild_id), [j.guild_id]),
+        I = (0, i.e7)([u.Z], () => u.Z.getSelectedParticipant(N)),
+        S = (null == I ? void 0 : I.type) === C.fO.STREAM ? I.stream : null,
+        Z = (0, i.e7)([a.Z], () => ((null == I ? void 0 : I.type) === C.fO.ACTIVITY ? a.Z.getApplication(I.applicationId) : void 0)),
+        T = (0, p.Z)(N),
+        A = (0, b.Z)(N),
+        w = (0, f.Z)(j, P, null == S ? void 0 : S.ownerId, null == Z ? void 0 : Z.id),
+        R = (0, d.Z)(N),
+        k = (0, _.Z)(),
+        M = (0, s.$A)(N),
+        L = (0, s.j8)(N),
+        D = (0, g.Z)(S, O),
+        W = (0, m.Z)(Z, N),
+        U = (0, h.Z)();
+    return (0, r.jsxs)(l.v2r, {
+        className: x.menu,
         onClose: t,
         onSelect: n,
         navId: 'more-settings-context',
-        'aria-label': E.intl.string(E.t.FTLzdX),
+        'aria-label': y.NW.string(y.t.FTLzdX),
         children: [
-            (0, i.jsx)(a.kSQ, { children: T !== v.d4z.GUILD_STAGE_VOICE ? M : null }),
-            (0, i.jsxs)(a.kSQ, {
-                children: [T === v.d4z.GUILD_STAGE_VOICE ? O : null, T === v.d4z.GUILD_STAGE_VOICE ? D : null, T !== v.d4z.GUILD_STAGE_VOICE ? L : null, B, T !== v.d4z.GUILD_STAGE_VOICE ? P : null, T === v.d4z.GUILD_STAGE_VOICE || T === v.d4z.GUILD_VOICE ? R : null]
+            (0, r.jsx)(l.kSQ, { children: E !== v.d4z.GUILD_STAGE_VOICE ? w : null }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [E === v.d4z.GUILD_STAGE_VOICE ? M : null, E === v.d4z.GUILD_STAGE_VOICE ? L : null, E !== v.d4z.GUILD_STAGE_VOICE ? R : null, U, E !== v.d4z.GUILD_STAGE_VOICE ? T : null, E === v.d4z.GUILD_STAGE_VOICE || E === v.d4z.GUILD_VOICE ? A : null]
             }),
-            (0, i.jsx)(a.kSQ, { children: k }),
-            (0, i.jsxs)(a.kSQ, {
-                children: [null != y ? w : null, null != A ? U : null]
+            (0, r.jsx)(l.kSQ, { children: k }),
+            (0, r.jsxs)(l.kSQ, {
+                children: [null != S ? D : null, null != Z ? W : null]
             })
         ]
     });

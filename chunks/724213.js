@@ -1,50 +1,50 @@
-t.d(n, {
-    hi: () => u,
-    kH: () => h,
-    rz: () => m
+r.d(t, {
+    hi: () => b,
+    kH: () => O,
+    rz: () => f
 }),
-    t(789020),
-    t(47120),
-    t(653041),
-    t(524437);
-var l = t(549817);
-t(581883);
-var i = t(984933),
-    a = t(271383),
-    r = t(9156),
-    o = t(630388),
-    s = t(152376),
-    d = t(398758),
-    c = t(372897);
-function u(e) {
-    var n, t;
-    let l = (0, d.r1)(e),
-        i = null !== (t = null === (n = a.ZP.getSelfMember(e)) || void 0 === n ? void 0 : n.flags) && void 0 !== t ? t : 0,
-        s = (0, o.yE)(i, c.q.COMPLETED_ONBOARDING),
-        u = r.ZP.getOptedInChannels(e).size > 0;
-    return !l && !s && !u;
+    r(789020),
+    r(47120),
+    r(653041),
+    r(524437);
+var n = r(549817);
+r(581883);
+var i = r(984933),
+    o = r(271383),
+    l = r(9156),
+    c = r(630388),
+    a = r(152376),
+    u = r(398758),
+    s = r(372897);
+function b(e) {
+    var t, r;
+    let n = (0, u.r1)(e),
+        i = null !== (r = null === (t = o.ZP.getSelfMember(e)) || void 0 === t ? void 0 : t.flags) && void 0 !== r ? r : 0,
+        a = (0, c.yE)(i, s.q.COMPLETED_ONBOARDING),
+        b = l.ZP.getOptedInChannels(e).size > 0;
+    return !n && !a && !b;
 }
-function h(e) {
-    if (u(e)) {
-        m(e);
+function O(e) {
+    if (b(e)) {
+        f(e);
         return;
     }
     {
-        let n = (0, d.r1)(e);
-        (0, s.QG)(e, !n);
+        let t = (0, u.r1)(e);
+        (0, a.QG)(e, !t);
     }
 }
-function m(e) {
-    let { include: n = new Set(), exclude: t = new Set() } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        a = i.ZP.getChannels(e),
-        r = [...a[i.sH], ...a[i.Zb]]
+function f(e) {
+    let { include: t = new Set(), exclude: r = new Set() } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        o = i.ZP.getChannels(e),
+        l = [...o[i.sH], ...o[i.Zb]]
             .filter((e) => {
-                let { channel: n } = e;
-                return !n.isThread() && !t.has(n.id);
+                let { channel: t } = e;
+                return !t.isThread() && !r.has(t.id);
             })
             .map((e) => {
-                let { channel: n } = e;
-                return n.id;
+                let { channel: t } = e;
+                return t.id;
             });
-    n.forEach((e) => r.push(e)), l.Z.onboardExistingMember(e, new Set(r));
+    t.forEach((e) => l.push(e)), n.Z.onboardExistingMember(e, new Set(l));
 }

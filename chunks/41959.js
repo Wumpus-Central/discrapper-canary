@@ -1,37 +1,37 @@
 n.d(t, {
-    H: () => u,
+    H: () => c,
     Z: () => d
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(768581),
-    o = n(73346),
-    l = n(225505),
-    u = (function (e) {
+var i = n(120356),
+    o = n.n(i),
+    a = n(768581),
+    s = n(73346),
+    l = n(326738),
+    c = (function (e) {
         return (e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM'), e;
     })({});
-let c = {
+let u = {
         40: l.small,
         66: l.medium
     },
     d = (e) => {
         let t,
-            { application: n, size: r, asset: u, className: d } = e;
+            { application: n, size: i, asset: c, className: d } = e;
         return (
             (t =
-                null != u
-                    ? (0, o._W)(n.id, u, r)
-                    : s.ZP.getApplicationIconURL({
+                null != c
+                    ? (0, s._W)(n.id, c, i)
+                    : a.ZP.getApplicationIconURL({
                           id: n.id,
                           icon: n.icon,
-                          size: r
+                          size: i
                       })),
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
                 src: t,
-                className: a()(l.icon, c[r], d)
+                className: o()(l.icon, u[i], d)
             })
         );
     };

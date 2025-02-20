@@ -1,37 +1,37 @@
-var i =
+var r =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    r = 'src/createAnimatedComponent.js',
-    a = (function () {
+    i = 'src/createAnimatedComponent.js',
+    o = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function s(e, t) {
+function a(e, t) {
     var n = {};
-    for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
+    for (var r in e) !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
     return n;
 }
-function o(e, t) {
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function u(e, t) {
+function c(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -43,18 +43,18 @@ function u(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var c = n(192379),
+var u = n(192379),
     d = n(724027),
     f = n(457958);
-function _(e) {
+function p(e) {
     var t = 'node',
         n = (function (n) {
-            function _() {
-                return o(this, _), l(this, (_.__proto__ || Object.getPrototypeOf(_)).apply(this, arguments));
+            function p() {
+                return s(this, p), l(this, (p.__proto__ || Object.getPrototypeOf(p)).apply(this, arguments));
             }
             return (
-                u(_, n),
-                a(_, [
+                c(p, n),
+                o(p, [
                     {
                         key: 'componentWillUnmount',
                         value: function () {
@@ -77,11 +77,11 @@ function _(e) {
                         key: 'attachProps',
                         value: function (e) {
                             var n = this,
-                                i = this._propsAnimated,
-                                r = function () {
+                                r = this._propsAnimated,
+                                i = function () {
                                     !1 === f.current(n.refs[t], n._propsAnimated.__getAnimatedValue(), n) && n.forceUpdate();
                                 };
-                            (this._propsAnimated = new d(e, r)), i && i.__detach();
+                            (this._propsAnimated = new d(e, i)), r && r.__detach();
                         }
                     },
                     {
@@ -94,15 +94,15 @@ function _(e) {
                         key: 'render',
                         value: function () {
                             var n = this._propsAnimated.__getValue(),
-                                a = n.style,
-                                o = s(n, ['style']);
-                            return c.createElement(
+                                o = n.style,
+                                s = a(n, ['style']);
+                            return u.createElement(
                                 e,
-                                i({}, o, {
-                                    style: f.transformStyles(a),
+                                r({}, s, {
+                                    style: f.transformStyles(o),
                                     ref: t,
                                     __source: {
-                                        fileName: r,
+                                        fileName: i,
                                         lineNumber: 78
                                     }
                                 })
@@ -110,16 +110,16 @@ function _(e) {
                         }
                     }
                 ]),
-                _
+                p
             );
-        })(c.Component);
+        })(u.Component);
     return (
         (n.propTypes = {
-            style: function (t, n, i) {
+            style: function (t, n, r) {
                 if (!e.propTypes) return;
             }
         }),
         n
     );
 }
-e.exports = _;
+e.exports = p;

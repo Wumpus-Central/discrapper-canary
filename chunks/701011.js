@@ -1,77 +1,77 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     a = n(110924),
-    d = n(812206),
-    c = n(554370),
+    c = n(812206),
+    d = n(554370),
     u = n(788983),
     s = n(214629),
-    f = n(317381),
-    p = n(16609),
+    p = n(317381),
+    f = n(16609),
     m = n(781780),
-    h = n(325749),
-    x = n(981631),
-    v = n(169006);
-function _() {
+    v = n(325749),
+    h = n(981631),
+    x = n(859492);
+function b() {
     let {
             embeddedActivity: e,
             channelId: t,
             guildId: n
-        } = (0, l.cj)([f.ZP], () => {
-            let e = f.ZP.getCurrentEmbeddedActivity(),
-                t = (0, p.pY)(null == e ? void 0 : e.location),
-                n = (0, p.jS)(null == e ? void 0 : e.location);
+        } = (0, o.cj)([p.ZP], () => {
+            let e = p.ZP.getCurrentEmbeddedActivity(),
+                t = (0, f.pY)(null == e ? void 0 : e.location),
+                n = (0, f.jS)(null == e ? void 0 : e.location);
             return {
                 embeddedActivity: e,
                 channelId: t,
                 guildId: n
             };
         }),
-        _ = i.useRef(null),
-        Z = (0, a.Z)(e);
+        b = i.useRef(null),
+        j = (0, a.Z)(e);
     i.useEffect(() => {
         null != e
-            ? clearTimeout(_.current)
-            : null != Z &&
+            ? clearTimeout(b.current)
+            : null != j &&
               null == e &&
-              (_.current = window.setTimeout(() => {
-                  (0, u.xv)(x.KJ3.ACTIVITY_POPOUT);
+              (b.current = window.setTimeout(() => {
+                  (0, u.xv)(h.KJ3.ACTIVITY_POPOUT);
               }, 5000));
-    }, [e, Z]);
-    let C = (0, l.e7)([d.Z], () => {
+    }, [e, j]);
+    let _ = (0, o.e7)([c.Z], () => {
             let t = null == e ? void 0 : e.applicationId;
-            return null == t ? void 0 : d.Z.getApplication(t);
+            return null == t ? void 0 : c.Z.getApplication(t);
         }),
-        b = (0, s.PR)();
+        g = (0, s.PR)();
     return (0, r.jsx)('div', {
-        className: v.container,
+        className: x.container,
         children:
-            null == e || null == C
-                ? (0, r.jsx)(o.$jN, { className: v.iframe })
+            null == e || null == _
+                ? (0, r.jsx)(l.$jN, { className: x.iframe })
                 : (0, r.jsx)('div', {
-                      className: v.loadedContentContainer,
+                      className: x.loadedContentContainer,
                       children: (0, r.jsxs)('div', {
-                          className: v.iframeAndHeaderContainer,
+                          className: x.iframeAndHeaderContainer,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: v.headerContainer,
-                                  children: (0, r.jsx)(h.Z, {
-                                      applicationId: C.id,
+                                  className: x.headerContainer,
+                                  children: (0, r.jsx)(v.Z, {
+                                      applicationId: _.id,
                                       channelId: t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: v.iframeContainer,
+                                  className: x.iframeContainer,
                                   children: (0, r.jsx)(m.Z, {
                                       channelId: t,
                                       guildId: n,
                                       embeddedActivity: e,
-                                      application: C
+                                      application: _
                                   })
                               }),
-                              b ? (0, r.jsx)(c.Z, { isEmbeddedActivity: !0 }) : null
+                              g ? (0, r.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })

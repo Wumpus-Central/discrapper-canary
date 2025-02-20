@@ -1,16 +1,16 @@
 function t(e) {
     let t = '\\d(_|\\d)*',
         n = '[eE][-+]?' + t,
-        i = t + '(\\.' + t + ')?(' + n + ')?',
-        r = '\\w+',
-        a = '\\b(' + (t + '#' + r + '(\\.' + r + ')?#(' + n) + ')?|' + i + ')',
-        s = '[A-Za-z](_?[A-Za-z0-9.])*',
-        o = '[]\\{\\}%#\'"',
+        r = t + '(\\.' + t + ')?(' + n + ')?',
+        i = '\\w+',
+        o = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')',
+        a = '[A-Za-z](_?[A-Za-z0-9.])*',
+        s = '[]\\{\\}%#\'"',
         l = e.COMMENT('--', '$'),
-        u = {
+        c = {
             begin: '\\s+:\\s+',
             end: '\\s*(:=|;|\\)|=>|$)',
-            illegal: o,
+            illegal: s,
             contains: [
                 {
                     beginKeywords: 'loop for declare others',
@@ -22,7 +22,7 @@ function t(e) {
                 },
                 {
                     className: 'type',
-                    begin: s,
+                    begin: a,
                     endsParent: !0,
                     relevance: 0
                 }
@@ -54,12 +54,12 @@ function t(e) {
             },
             {
                 className: 'number',
-                begin: a,
+                begin: o,
                 relevance: 0
             },
             {
                 className: 'symbol',
-                begin: "'" + s
+                begin: "'" + a
             },
             {
                 className: 'title',
@@ -68,7 +68,7 @@ function t(e) {
                 keywords: 'package body',
                 excludeBegin: !0,
                 excludeEnd: !0,
-                illegal: o
+                illegal: s
             },
             {
                 begin: '(\\b(with|overriding)\\s+)?\\b(function|procedure)\\s+',
@@ -83,9 +83,9 @@ function t(e) {
                         end: '(\\(|\\s+|$)',
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        illegal: o
+                        illegal: s
                     },
-                    u,
+                    c,
                     {
                         className: 'type',
                         begin: '\\breturn\\s+',
@@ -94,7 +94,7 @@ function t(e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         endsParent: !0,
-                        illegal: o
+                        illegal: s
                     }
                 ]
             },
@@ -104,9 +104,9 @@ function t(e) {
                 end: '\\s+',
                 keywords: 'type',
                 excludeBegin: !0,
-                illegal: o
+                illegal: s
             },
-            u
+            c
         ]
     };
 }

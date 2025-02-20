@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var i = n(131704),
-    r = n(981631);
-function a(e, t) {
-    return (0, i.hv)(e.type) || t.canBasicChannel(r.S7T.CONNECT | r.S7T.VIEW_CHANNEL, e);
+n.d(t, { Z: () => o });
+var r = n(131704),
+    i = n(981631);
+function o(e, t) {
+    return (0, r.hv)(e.type) || t.canBasicChannel(i.S7T.CONNECT | i.S7T.VIEW_CHANNEL, e);
 }

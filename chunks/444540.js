@@ -1,18 +1,18 @@
 function n(e) {
     return 'IntlMessagesProxy' === e[Symbol.toStringTag];
 }
-function i(e, t) {
-    let i = n(e),
-        r = n(t),
-        a = e;
-    return i && r ? (e.$$loader.fallbackWith(t.$$loader), (a = e)) : i || r ? (i && !r ? (a = Object.assign(e.$$baseObject, t)) : r && !i && (a = Object.assign(t.$$baseObject, e))) : (a = Object.assign(Object.assign({}, t), e)), a;
+function r(e, t) {
+    let r = n(e),
+        i = n(t),
+        o = e;
+    return r && i ? (e.$$loader.fallbackWith(t.$$loader), (o = e)) : r || i ? (r && !i ? (o = Object.assign(e.$$baseObject, t)) : i && !r && (o = Object.assign(t.$$baseObject, e))) : (o = Object.assign(Object.assign({}, t), e)), o;
 }
-function r(e) {
+function i(e) {
     function t(t) {
         return (n) => e.get(t, n);
     }
     let n = {},
-        i = new Proxy(n, {
+        r = new Proxy(n, {
             ownKeys: (e) => Reflect.ownKeys(e),
             getOwnPropertyDescriptor: (e, n) => ({
                 value: e[n] || (e[n] = t(n)),
@@ -23,19 +23,19 @@ function r(e) {
             get: (e, n) => ('$$typeof' === n ? 'object' : n === Symbol.toStringTag ? 'IntlMessagesProxy' : (e[n] || (e[n] = t(n)), e[n]))
         });
     return (
-        Object.defineProperty(i, '$$baseObject', {
+        Object.defineProperty(r, '$$baseObject', {
             value: n,
             enumerable: !1,
             configurable: !1,
             writable: !1
         }),
-        Object.defineProperty(i, '$$loader', {
+        Object.defineProperty(r, '$$loader', {
             value: e,
             enumerable: !1,
             configurable: !1,
             writable: !1
         }),
-        i
+        r
     );
 }
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.chainMessagesObjects = i), (t.makeMessagesProxy = r);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.chainMessagesObjects = r), (t.makeMessagesProxy = i);

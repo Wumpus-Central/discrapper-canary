@@ -1,28 +1,28 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    r = n(481060),
-    a = n(210887),
-    s = n(687683),
-    o = n(388032),
-    d = n(32090),
-    c = n(138715),
-    u = n(979770);
-function h(e) {
+var i = n(442837),
+    l = n(481060),
+    o = n(210887),
+    a = n(687683),
+    s = n(388032),
+    c = n(414990),
+    u = n(138715),
+    d = n(979770);
+function p(e) {
     let { section: t } = e,
-        n = (0, l.e7)([a.Z], () => a.Z.theme);
-    return (0, i.jsxs)(r.ubH, {
+        n = (0, i.e7)([o.Z], () => o.Z.theme);
+    return (0, r.jsxs)(l.ubH, {
         theme: n,
-        className: d.emptyStateContainer,
+        className: c.emptyStateContainer,
         children: [
-            (0, i.jsx)(r.oxh, {
+            (0, r.jsx)(l.oxh, {
                 width: 415,
                 height: 200,
-                lightSrc: u,
-                darkSrc: c
+                lightSrc: d,
+                darkSrc: u
             }),
-            (0, i.jsx)(r.OZU, { note: t === s.pS.SPAM ? o.intl.string(o.t.hasFPT) : o.intl.string(o.t.SXrqTU) })
+            (0, r.jsx)(l.OZU, { note: t === a.pS.SPAM ? s.NW.string(s.t.hasFPT) : s.NW.string(s.t.SXrqTU) })
         ]
     });
 }

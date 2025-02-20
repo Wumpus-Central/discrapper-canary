@@ -1,11 +1,11 @@
 n.d(t, {
-    DB: () => o,
-    TZ: () => s,
-    sf: () => a
+    DB: () => s,
+    TZ: () => a,
+    sf: () => o
 });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     id: '2025-01_valentines_gifting_2025',
     label: 'Valentines Gifting 2025',
     kind: 'user',
@@ -13,7 +13,7 @@ let a = (0, i.B)({
         enableGiftingFlow: !1,
         enableCoachmark: !1
     },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -33,11 +33,11 @@ let a = (0, i.B)({
         }
     ]
 });
-function s() {
-    let { enableGiftingFlow: e, enableCoachmark: t } = a.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
+function a() {
+    let { enableGiftingFlow: e, enableCoachmark: t } = o.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
     return e || t;
 }
-function o() {
-    let { enableCoachmark: e } = a.useExperiment({ location: 'useIsValentinesCoachmarkEnabled' }, { autoTrackExposure: !1 });
+function s() {
+    let { enableCoachmark: e } = o.useExperiment({ location: 'useIsValentinesCoachmarkEnabled' }, { autoTrackExposure: !1 });
     return e;
 }

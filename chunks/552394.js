@@ -1,60 +1,60 @@
-a.d(t, { default: () => r });
-var i = a(200651);
-a(192379);
-var s = a(481060),
-    d = a(447564),
-    e = a(921944),
-    l = a(388032),
-    c = a(984681);
-function r(n) {
-    let { transitionState: t, channel: a, markAsDismissed: d } = n;
-    return (0, i.jsx)(s.Y0X, {
-        size: s.CgR.DYNAMIC,
-        transitionState: t,
-        children: (0, i.jsx)(o, {
+n.d(s, { default: () => o });
+var t = n(200651);
+n(192379);
+var i = n(481060),
+    d = n(447564),
+    e = n(921944),
+    c = n(388032),
+    r = n(755248);
+function o(a) {
+    let { transitionState: s, channel: n, markAsDismissed: d } = a;
+    return (0, t.jsx)(i.Y0X, {
+        size: i.CgR.DYNAMIC,
+        transitionState: s,
+        children: (0, t.jsx)(l, {
             markAsDismissed: d,
-            channel: a
+            channel: n
         })
     });
 }
-function o(n) {
-    let { channel: t, markAsDismissed: a } = n;
-    return (0, i.jsxs)('div', {
-        className: c.modal,
+function l(a) {
+    let { channel: s, markAsDismissed: n } = a;
+    return (0, t.jsxs)('div', {
+        className: r.modal,
         children: [
-            (0, i.jsx)('img', {
-                className: c.img,
+            (0, t.jsx)('img', {
+                className: r.img,
                 src: 'https://cdn.discordapp.com/assets/content/28f991389d76cad2f134080324967f70d380d072bca7ac88595287fd7f8f45e5.png',
-                alt: l.intl.string(l.t.UygxRk)
+                alt: c.NW.string(c.t.UygxRk)
             }),
-            (0, i.jsxs)('div', {
-                className: c.body,
+            (0, t.jsxs)('div', {
+                className: r.body,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, t.jsx)(i.X6q, {
                         variant: 'heading-lg/bold',
-                        children: l.intl.string(l.t.DSyT5O)
+                        children: c.NW.string(c.t.DSyT5O)
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, t.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: l.intl.format(l.t['0n58Li'], { channel_name: t.name })
+                        children: c.NW.format(c.t['0n58Li'], { channel_name: s.name })
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: c.footer,
+            (0, t.jsxs)('div', {
+                className: r.footer,
                 children: [
-                    (0, i.jsx)(s.zxk, {
+                    (0, t.jsx)(i.zxk, {
                         onClick: () => {
-                            a(e.L.USER_DISMISS), (0, s.pTH)();
+                            n(e.L.USER_DISMISS), (0, i.pTH)();
                         },
-                        color: s.Ttl.PRIMARY,
-                        children: l.intl.string(l.t.i5lSbW)
+                        color: i.Ttl.PRIMARY,
+                        children: c.NW.string(c.t.i5lSbW)
                     }),
-                    (0, i.jsx)(s.zxk, {
+                    (0, t.jsx)(i.zxk, {
                         onClick: () => {
-                            a(e.L.TAKE_ACTION), (0, d.k)(t, 'HDStreamingPotionUpsellModal');
+                            n(e.L.TAKE_ACTION), (0, d.k)(s, 'HDStreamingPotionUpsellModal');
                         },
-                        children: l.intl.string(l.t.w1qPc3)
+                        children: c.NW.string(c.t.w1qPc3)
                     })
                 ]
             })

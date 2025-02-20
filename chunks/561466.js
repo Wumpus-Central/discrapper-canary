@@ -1,17 +1,17 @@
 n.d(t, {
-    az: () => a,
-    pC: () => r,
-    si: () => s
+    az: () => o,
+    pC: () => i,
+    si: () => a
 });
-let i = 3000;
-var r = (function (e) {
+let r = 3000;
+var i = (function (e) {
         return (e.MESSAGE = 'message'), (e.SUCCESS = 'success'), (e.FAILURE = 'failure'), (e.CUSTOM = 'custom'), (e.CLIP = 'clip'), (e.LINK = 'link'), (e.FORWARD = 'forward'), (e.BOOKMARK = 'bookmark'), (e.CLOCK = 'clock'), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.TOP = 0)] = 'TOP'), (e[(e.BOTTOM = 1)] = 'BOTTOM'), e;
     })({});
-let s = {
+let a = {
     position: 0,
     component: null,
-    duration: i
+    duration: r
 };

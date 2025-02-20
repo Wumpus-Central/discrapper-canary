@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,16 +11,16 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { S: () => a }), n(47120);
-let r = Symbol.iterator;
-class a {
+n.d(t, { S: () => o }), n(266796), n(47120), n(978209);
+let i = Symbol.iterator;
+class o {
     get length() {
         return this.items.size;
     }
     get capacity() {
         return this.limit;
     }
-    [r]() {
+    [i]() {
         return this.items.entries();
     }
     entries() {
@@ -58,6 +58,6 @@ class a {
         return this.items.keys().next().value;
     }
     constructor(e) {
-        i(this, 'items', void 0), i(this, 'limit', void 0), (this.items = new Map()), (this.limit = e);
+        r(this, 'items', void 0), r(this, 'limit', void 0), (this.items = new Map()), (this.limit = e);
     }
 }

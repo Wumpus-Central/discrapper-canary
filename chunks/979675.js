@@ -1,15 +1,15 @@
-n.d(t, { $: () => i });
-let i = (e, t) =>
-    function (n, i, r) {
-        return new Promise((a) => {
-            var s;
+n.d(t, { $: () => r });
+let r = (e, t) =>
+    function (n, r, i) {
+        return new Promise((o) => {
+            var a;
             e.dispatch({
                 type: t,
                 event: n,
-                properties: i,
-                flush: null !== (s = null == r ? void 0 : r.flush) && void 0 !== s && s,
-                fingerprint: null == r ? void 0 : r.fingerprint,
-                resolve: a
+                properties: r,
+                flush: null !== (a = null == i ? void 0 : i.flush) && void 0 !== a && a,
+                fingerprint: null == i ? void 0 : i.fingerprint,
+                resolve: o
             });
         });
     };

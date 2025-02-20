@@ -1,34 +1,34 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(481060),
-    o = n(741914),
-    c = n(469614),
-    d = n(663362);
-function u(e) {
-    let { color: t, className: n, variant: a, text: u, lineClamp: m } = e,
-        _ = (0, s.xSt)(),
-        h = l.useMemo(
+r.d(t, { Z: () => d });
+var A = r(200651),
+    n = r(192379),
+    o = r(120356),
+    a = r.n(o),
+    l = r(481060),
+    i = r(741914),
+    s = r(445992),
+    c = r(368365);
+function d(e) {
+    let { color: t, className: r, variant: o, text: d, lineClamp: u } = e,
+        f = (0, l.xSt)(),
+        g = n.useMemo(
             () =>
-                null == u
+                null == d
                     ? null
-                    : (0, o.Z)(u, !0, {
-                          allowHeading: null == m,
-                          allowList: null == m,
-                          initialHeaderLevel: _
+                    : (0, i.Z)(d, !0, {
+                          allowHeading: null == u,
+                          allowList: null == u,
+                          initialHeaderLevel: f
                       }),
-            [u, m, _]
+            [d, u, f]
         );
-    return (0, i.jsx)(s.Text, {
-        className: r()(n, d.markup, {
-            [c.lineClamp2Plus]: null != m && m > 1,
-            [c.lineClamp1]: 1 === m
+    return (0, A.jsx)(l.Text, {
+        className: a()(r, c.markup, {
+            [s.lineClamp2Plus]: null != u && u > 1,
+            [s.lineClamp1]: 1 === u
         }),
         color: t,
-        variant: a,
-        lineClamp: m,
-        children: h
+        variant: o,
+        lineClamp: u,
+        children: g
     });
 }

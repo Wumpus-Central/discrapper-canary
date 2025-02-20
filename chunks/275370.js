@@ -1,86 +1,86 @@
-t.d(r, { default: () => j }), t(47120);
+t.d(r, { default: () => x }), t(47120);
 var n = t(200651),
-    s = t(192379),
-    i = t(512722),
-    o = t.n(i),
-    l = t(481060),
-    a = t(51144),
-    c = t(985002),
+    o = t(192379),
+    s = t(512722),
+    c = t.n(s),
+    i = t(481060),
+    l = t(51144),
+    a = t(985002),
     d = t(880257),
-    x = t(957656),
-    h = t(130310),
-    u = t(388032),
-    m = t(54666);
-let j = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: i, onClose: j } = e,
-        k = s.useCallback(() => {
-            j();
-        }, [j]),
-        b = (0, d.Z)(),
-        [_, f] = s.useState(!1),
-        N = s.useCallback(() => {
-            f(!0);
+    u = t(957656),
+    b = t(130310),
+    h = t(388032),
+    j = t(720674);
+let x = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: s, onClose: x } = e,
+        f = o.useCallback(() => {
+            x();
+        }, [x]),
+        p = (0, d.Z)(),
+        [m, y] = o.useState(!1),
+        O = o.useCallback(() => {
+            y(!0);
         }, []),
-        { acceptLinkRequest: p, isAcceptLoading: g } = (0, c.G)({
-            onError: N,
-            onSuccess: k
+        { acceptLinkRequest: g, isAcceptLoading: N } = (0, a.G)({
+            onError: O,
+            onSuccess: f
         });
     return (
-        o()(!b, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
-        (0, n.jsxs)(x.Z, {
-            transitionState: i,
-            'aria-label': u.intl.string(u.t.rlNJwc),
-            className: m.root,
+        c()(!p, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        (0, n.jsxs)(u.Z, {
+            transitionState: s,
+            'aria-label': h.NW.string(h.t.rlNJwc),
+            className: j.root,
             children: [
-                (0, n.jsx)(x.Z.Error, { error: _ ? u.intl.string(u.t.pegSMz) : void 0 }),
-                (0, n.jsxs)(l.hzk, {
+                (0, n.jsx)(u.Z.Error, { error: m ? h.NW.string(h.t.pegSMz) : void 0 }),
+                (0, n.jsxs)(i.hzk, {
                     children: [
-                        (0, n.jsx)(x.Z.Header, {
+                        (0, n.jsx)(u.Z.Header, {
                             currentUser: r,
                             otherUser: t,
-                            header: u.intl.string(u.t.rlNJwc),
-                            icon: (0, n.jsx)(l.xPt, {
+                            header: h.NW.string(h.t.rlNJwc),
+                            icon: (0, n.jsx)(i.xPt, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: m.linkIcon
+                                className: j.linkIcon
                             })
                         }),
-                        (0, n.jsxs)(x.Z.Content, {
+                        (0, n.jsxs)(u.Z.Content, {
                             children: [
-                                (0, n.jsx)(h.Z, { inModal: !0 }),
-                                (0, n.jsx)(l.Text, {
-                                    className: m.disclaimer,
+                                (0, n.jsx)(b.Z, { inModal: !0 }),
+                                (0, n.jsx)(i.Text, {
+                                    className: j.disclaimer,
                                     variant: 'text-xs/normal',
                                     color: 'text-normal',
-                                    children: u.intl.format(u.t.snlFqa, { username: a.ZP.getName(t) })
+                                    children: h.NW.format(h.t.snlFqa, { username: l.ZP.getName(t) })
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)(l.mzw, {
+                (0, n.jsx)(i.mzw, {
                     children: (0, n.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), p(t);
+                            e.preventDefault(), g(t);
                         },
-                        children: (0, n.jsxs)(x.Z.ButtonFooter, {
+                        children: (0, n.jsxs)(u.Z.ButtonFooter, {
                             children: [
-                                (0, n.jsx)(l.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     type: 'button',
-                                    disabled: g,
-                                    look: l.zxk.Looks.LINK,
-                                    color: l.zxk.Colors.PRIMARY,
-                                    onClick: j,
-                                    size: l.zxk.Sizes.SMALL,
-                                    children: u.intl.string(u.t['ETE/oK'])
+                                    disabled: N,
+                                    look: i.zxk.Looks.LINK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    onClick: x,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: h.NW.string(h.t['ETE/oK'])
                                 }),
-                                (0, n.jsx)(l.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     type: 'submit',
-                                    disabled: g,
-                                    submitting: g,
-                                    color: l.Ttl.BRAND,
-                                    size: l.zxk.Sizes.SMALL,
-                                    children: u.intl.string(u.t['wI/jo6'])
+                                    disabled: N,
+                                    submitting: N,
+                                    color: i.Ttl.BRAND,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: h.NW.string(h.t['wI/jo6'])
                                 })
                             ]
                         })

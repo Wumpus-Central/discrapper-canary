@@ -1,30 +1,30 @@
-e.d(t, { default: () => u });
-var i = e(200651);
-e(192379);
-var l = e(481060),
-    r = e(287734),
-    a = e(313201),
-    s = e(471253),
-    c = e(939863),
-    o = e(388032),
-    d = e(320384);
-function u(n) {
-    let { channel: t, transitionState: e, onClose: u } = n,
-        _ = (0, a.Dt)();
+n.d(t, { default: () => u });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(287734),
+    c = n(313201),
+    a = n(471253),
+    o = n(939863),
+    s = n(388032),
+    d = n(646676);
+function u(e) {
+    let { channel: t, transitionState: n, onClose: u } = e,
+        _ = (0, c.Dt)();
     function h() {
-        r.default.disconnect(), u();
+        l.default.disconnect(), u();
     }
-    return (0, i.jsxs)(l.Y0X, {
-        transitionState: e,
+    return (0, r.jsxs)(i.Y0X, {
+        transitionState: n,
         'aria-labelledby': _,
         children: [
-            (0, i.jsxs)(l.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 className: d.content,
                 children: [
-                    (0, i.jsx)(c.Z, {
-                        children: (0, i.jsx)('div', {
+                    (0, r.jsx)(o.Z, {
+                        children: (0, r.jsx)('div', {
                             className: d.iconBackground,
-                            children: (0, i.jsx)(l.XzT, {
+                            children: (0, r.jsx)(i.XzT, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
@@ -33,35 +33,35 @@ function u(n) {
                             })
                         })
                     }),
-                    (0, i.jsx)(l.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         id: _,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: d.title,
-                        children: o.intl.string(o.t.pADdJi)
+                        children: s.NW.string(s.t.pADdJi)
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: d.subtitle,
-                        children: o.intl.string(o.t.mT7jwM)
+                        children: s.NW.string(s.t.mT7jwM)
                     })
                 ]
             }),
-            (0, i.jsxs)(l.mzw, {
+            (0, r.jsxs)(i.mzw, {
                 children: [
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.RED,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.RED,
                         onClick: function () {
-                            (0, s.NZ)(t), h();
+                            (0, a.NZ)(t), h();
                         },
-                        children: o.intl.string(o.t['sBP/1t'])
+                        children: s.NW.string(s.t['sBP/1t'])
                     }),
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.PRIMARY,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.PRIMARY,
                         className: d.cancelButton,
                         onClick: h,
-                        children: o.intl.string(o.t.xTwqz8)
+                        children: s.NW.string(s.t.xTwqz8)
                     })
                 ]
             })

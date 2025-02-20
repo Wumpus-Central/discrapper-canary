@@ -44,8 +44,8 @@
         ordinal: function (e) {
             var t = e,
                 n = '',
-                i = ['', 'af', 'il', 'ydd', 'ydd', 'ed', 'ed', 'ed', 'fed', 'fed', 'fed', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'fed'];
-            return t > 20 ? (n = 40 === t || 50 === t || 60 === t || 80 === t || 100 === t ? 'fed' : 'ain') : t > 0 && (n = i[t]), e + n;
+                r = ['', 'af', 'il', 'ydd', 'ydd', 'ed', 'ed', 'ed', 'fed', 'fed', 'fed', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'fed'];
+            return t > 20 ? (n = 40 === t || 50 === t || 60 === t || 80 === t || 100 === t ? 'fed' : 'ain') : t > 0 && (n = r[t]), e + n;
         },
         week: {
             dow: 1,

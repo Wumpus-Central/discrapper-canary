@@ -1,34 +1,34 @@
 n.d(t, { Z: () => c }), n(47120);
-var i = n(200651),
-    l = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(481060),
-    r = n(298213),
-    s = n(388032),
-    o = n(149681);
+    o = n(298213),
+    l = n(388032),
+    s = n(632852);
 function c(e) {
     let { userId: t, applicationId: n } = e,
-        [c, d] = l.useState(!1),
-        [u, m] = l.useState(!1),
-        _ = l.useCallback(
+        [c, d] = i.useState(!1),
+        [u, p] = i.useState(!1),
+        m = i.useCallback(
             async (e) => {
-                e.stopPropagation(), m(!0);
+                e.stopPropagation(), p(!0);
                 try {
-                    await r.Z.cancelFriendRequest({
+                    await o.Z.cancelFriendRequest({
                         userId: t,
                         applicationId: n,
                         location: 'ActionButtonFriendRequest'
                     });
                 } finally {
-                    m(!1);
+                    p(!1);
                 }
             },
             [n, t]
         ),
-        h = l.useCallback(
+        f = i.useCallback(
             async (e) => {
                 e.stopPropagation(), d(!0);
                 try {
-                    await r.Z.maybeConfirmFriendRequestAccept({
+                    await o.Z.maybeConfirmFriendRequestAccept({
                         userId: t,
                         applicationId: n,
                         location: 'ActionButtonFriendRequest'
@@ -39,35 +39,35 @@ function c(e) {
             },
             [n, t]
         );
-    return (0, i.jsxs)('div', {
-        className: o.friendRequestContainer,
+    return (0, r.jsxs)('div', {
+        className: s.friendRequestContainer,
         children: [
-            (0, i.jsx)(a.zxk, {
-                className: o.acceptButton,
+            (0, r.jsx)(a.zxk, {
+                className: s.acceptButton,
                 look: a.zxk.Looks.FILLED,
                 color: a.zxk.Colors.GREEN,
                 size: a.zxk.Sizes.NONE,
                 submitting: c,
                 disabled: u,
-                onClick: h,
-                children: (0, i.jsx)(a.Text, {
+                onClick: f,
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.intl.string(s.t.ZcibdX)
+                    children: l.NW.string(l.t.ZcibdX)
                 })
             }),
-            (0, i.jsx)(a.zxk, {
-                className: o.ignoreButton,
+            (0, r.jsx)(a.zxk, {
+                className: s.ignoreButton,
                 look: a.zxk.Looks.FILLED,
                 color: a.zxk.Colors.PRIMARY,
                 size: a.zxk.Sizes.NONE,
                 submitting: u,
                 disabled: c,
-                onClick: _,
-                children: (0, i.jsx)(a.Text, {
+                onClick: m,
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: s.intl.string(s.t.xuio0N)
+                    children: l.NW.string(l.t.xuio0N)
                 })
             })
         ]

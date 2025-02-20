@@ -1,98 +1,98 @@
-l.d(n, { Z: () => N });
-var t = l(200651),
-    i = l(192379),
-    a = l(442837),
-    r = l(481060),
-    s = l(471445),
-    o = l(41776),
-    d = l(592125),
-    c = l(430824),
-    u = l(594174),
-    x = l(236373),
-    m = l(230900),
-    h = l(405613),
-    v = l(460838),
-    g = l(388032),
-    j = l(86574);
-function N(e) {
-    var n, l;
-    let { guildId: N, guildEvent: f, guildEventId: p, error: E } = e,
-        C = i.useMemo(() => (0, x.Gb)(f, N), [f, N]),
-        { channel_id: I, name: T, image: Z, description: S } = C,
-        b = (0, a.e7)([d.Z], () => d.Z.getChannel(I), [I]),
-        y = (0, a.e7)([c.Z], () => c.Z.getGuild(N), [N]),
-        k = (0, m.cS)(C),
-        _ = (0, a.e7)([u.default], () => (null != f.creatorId ? u.default.getUser(f.creatorId) : u.default.getCurrentUser()), [f.creatorId]),
-        z = (0, a.e7)([o.Z], () => o.Z.isLurking(N), [N]),
-        R = (0, s.KS)(b, y);
-    return (0, t.jsxs)('div', {
-        className: j.content,
+n.d(t, { Z: () => p }), n(266796), n(301563);
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
+    a = n(481060),
+    s = n(471445),
+    o = n(41776),
+    c = n(592125),
+    d = n(430824),
+    u = n(594174),
+    m = n(236373),
+    x = n(230900),
+    g = n(405613),
+    h = n(460838),
+    v = n(388032),
+    f = n(216520);
+function p(e) {
+    var t, n;
+    let { guildId: p, guildEvent: j, guildEventId: N, error: b } = e,
+        y = l.useMemo(() => (0, m.Gb)(j, p), [j, p]),
+        { channel_id: O, name: E, image: C, description: I } = y,
+        S = (0, i.e7)([c.Z], () => c.Z.getChannel(O), [O]),
+        T = (0, i.e7)([d.Z], () => d.Z.getGuild(p), [p]),
+        P = (0, x.cS)(y),
+        W = (0, i.e7)([u.default], () => (null != j.creatorId ? u.default.getUser(j.creatorId) : u.default.getCurrentUser()), [j.creatorId]),
+        w = (0, i.e7)([o.Z], () => o.Z.isLurking(p), [p]),
+        Z = (0, s.KS)(S, T);
+    return (0, r.jsxs)('div', {
+        className: f.content,
         children: [
-            (0, t.jsx)(v.Z, {
-                className: j.previewCard,
-                guild: y,
-                channel: b,
-                location: null != k ? k : void 0,
-                creator: _,
-                name: T,
-                description: S,
-                imageSource: ((l = (0, x.Gb)(f, N, p)), null == Z && null == l.image ? null : null != Z && /^data:/.test(Z) ? Z : (0, h.Z)(l)),
+            (0, r.jsx)(h.Z, {
+                className: f.previewCard,
+                guild: T,
+                channel: S,
+                location: null != P ? P : void 0,
+                creator: W,
+                name: E,
+                description: I,
+                imageSource: ((n = (0, m.Gb)(j, p, N)), null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, g.Z)(n)),
                 isActive: !1,
-                isUserLurking: z,
+                isUserLurking: w,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: C,
-                eventPreview: C
+                guildEvent: y,
+                eventPreview: y
             }),
-            (0, t.jsxs)('div', {
-                className: j.textContainer,
+            (0, r.jsxs)('div', {
+                className: f.textContainer,
                 children: [
-                    (0, t.jsx)(r.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: g.intl.string(g.t.yBsFEx)
+                        children: v.NW.string(v.t.yBsFEx)
                     }),
-                    (0, t.jsx)(r.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: j.subheader,
+                        className: f.subheader,
                         children:
                             null != location
-                                ? g.intl.string(g.t.KDPFi4)
-                                : g.intl.format(g.t.f55NX1, {
-                                      channelName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '',
+                                ? v.NW.string(v.t.KDPFi4)
+                                : v.NW.format(v.t.f55NX1, {
+                                      channelName: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : '',
                                       channelHook: () => {
                                           var e;
-                                          return (0, t.jsxs)('div', {
-                                              className: j.channelName,
+                                          return (0, r.jsxs)('div', {
+                                              className: f.channelName,
                                               children: [
-                                                  null != R
-                                                      ? (0, t.jsx)(R, {
+                                                  null != Z
+                                                      ? (0, r.jsx)(Z, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             width: 20,
                                                             height: 20,
-                                                            className: j.icon
+                                                            className: f.icon
                                                         })
-                                                      : (0, t.jsx)(r._tJ, {
+                                                      : (0, r.jsx)(a._tJ, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             height: 18,
                                                             width: 18,
-                                                            className: j.locationIcon
+                                                            className: f.locationIcon
                                                         }),
-                                                  null !== (e = null == b ? void 0 : b.name) && void 0 !== e ? e : k
+                                                  null !== (e = null == S ? void 0 : S.name) && void 0 !== e ? e : P
                                               ]
                                           });
                                       }
                                   })
                     }),
-                    null != E &&
-                        (0, t.jsx)(r.Text, {
+                    null != b &&
+                        (0, r.jsx)(a.Text, {
                             color: 'text-danger',
                             variant: 'text-xs/normal',
-                            className: j.subheader,
-                            children: E.getAnyErrorMessage()
+                            className: f.subheader,
+                            children: b.getAnyErrorMessage()
                         })
                 ]
             })

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var i = !0,
-    r = 'Invariant failed';
-function a(e, t) {
+n.d(t, { Z: () => o });
+var r = !0,
+    i = 'Invariant failed';
+function o(e, t) {
     if (!e) {
-        if (i) throw Error(r);
+        if (r) throw Error(i);
         var n = 'function' == typeof t ? t() : t;
-        throw Error(n ? ''.concat(r, ': ').concat(n) : r);
+        throw Error(n ? ''.concat(i, ': ').concat(n) : i);
     }
 }

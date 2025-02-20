@@ -1,26 +1,26 @@
-l.d(n, { q: () => s }), l(724458), l(653041);
-var t = l(442837),
-    i = l(146085),
-    a = l(984933),
-    r = l(496675);
-function s(e) {
-    var n;
-    let l = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : null;
-    return (0, t.Wu)(
-        [a.ZP, r.Z],
+r.d(t, { q: () => c }), r(653041);
+var n = r(442837),
+    s = r(146085),
+    l = r(984933),
+    i = r(496675);
+function c(e) {
+    var t;
+    let r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null;
+    return (0, n.Wu)(
+        [l.ZP, i.Z],
         () =>
-            a.ZP.getChannels(l)[a.Zb].reduce((e, n) => {
-                let l = n.channel;
+            l.ZP.getChannels(r)[l.Zb].reduce((e, t) => {
+                let r = t.channel;
                 return (
-                    l.isGuildStageVoice() &&
+                    r.isGuildStageVoice() &&
                         (function (e) {
-                            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z;
-                            return !!e.isGuildStageVoice() && n.can(i.yP, e);
-                        })(n.channel, r.Z) &&
-                        e.push(l),
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+                            return !!e.isGuildStageVoice() && t.can(s.yP, e);
+                        })(t.channel, i.Z) &&
+                        e.push(r),
                     e
                 );
             }, []),
-        [l]
+        [r]
     );
 }

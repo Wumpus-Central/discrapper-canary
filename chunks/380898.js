@@ -1,27 +1,27 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(16084),
-    s = n(86040),
-    o = n(51499),
+n.d(t, { Z: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(16084),
+    a = n(86040),
+    s = n(51499),
     l = n(614277),
-    u = n(535503);
-function c() {
-    let [e, t] = r.useState(!1),
+    c = n(414993);
+function u() {
+    let [e, t] = i.useState(!1),
         n = async () => {
-            t(!0), await (0, a.xA)();
+            t(!0), await (0, o.xA)();
         };
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(o.Z, {}),
-            (0, i.jsx)(l.C3, {
-                children: (0, i.jsx)(s.C, {
-                    className: u.body,
+            (0, r.jsx)(s.Z, {}),
+            (0, r.jsx)(l.C3, {
+                children: (0, r.jsx)(a.C, {
+                    className: c.body,
                     isEmailResent: e,
                     resendEmail: n
                 })
             }),
-            (0, i.jsx)(l.O3, { children: (0, i.jsx)(s.N, {}) })
+            (0, r.jsx)(l.O3, { children: (0, r.jsx)(a.N, {}) })
         ]
     });
 }

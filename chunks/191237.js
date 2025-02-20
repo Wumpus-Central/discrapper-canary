@@ -35,7 +35,7 @@ let o = {
             return (n) => (0, r.jsx)(t, l({}, e, n));
         });
     },
-    showAgeVerificationModal: () => {
+    showAgeVerificationGetStartedModal: () => {
         (0, a.ZDy)(async () => {
             let { default: e } = await n.e('80144').then(n.bind(n, 634997));
             return (t) => (0, r.jsx)(e, l({}, t));

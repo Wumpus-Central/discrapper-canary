@@ -7,34 +7,34 @@ var s = n(200651),
     o = n(270144),
     d = n(689011),
     c = n(388032),
-    u = n(263868);
+    u = n(371750);
 function x(e) {
     let { transitionState: t, onClose: n, sku: x, onSelect: m, currentGuildId: h } = e,
-        [p, j] = i.useState(),
-        { guilds: _, isFetching: g } = (0, o.CR)(x.applicationId, x.id, !0),
-        b = i.useMemo(() => {
-            if (!g && null != h)
+        [p, N] = i.useState(),
+        { guilds: j, isFetching: _ } = (0, o.CR)(x.applicationId, x.id, !0),
+        g = i.useMemo(() => {
+            if (!_ && null != h)
                 return (
-                    _.findIndex((e) => {
+                    j.findIndex((e) => {
                         let { id: t } = e;
                         return t === h;
                     }) >= 0
                 );
-        }, [h, _, g]);
+        }, [h, j, _]);
     i.useLayoutEffect(() => {
-        b && j(h);
-    }, [h, b]);
-    let f = i.useMemo(() => {
+        g && N(h);
+    }, [h, g]);
+    let b = i.useMemo(() => {
         let e = [];
-        for (let t of _) {
+        for (let t of j) {
             let n = {
                 value: t.id,
                 label: t.name
             };
-            b && t.id === h ? e.unshift(n) : e.push(n);
+            g && t.id === h ? e.unshift(n) : e.push(n);
         }
         return e;
-    }, [h, _, b]);
+    }, [h, j, g]);
     return (0, s.jsxs)(l.Y0X, {
         transitionState: t,
         size: l.CgR.SMALL,
@@ -47,29 +47,29 @@ function x(e) {
                     (0, s.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         className: u.breadCrumb,
-                        children: c.intl.string(c.t['xgtI/P'])
+                        children: c.NW.string(c.t['xgtI/P'])
                     }),
                     (0, s.jsxs)('div', {
                         className: u.selectionBody,
                         children: [
                             (0, s.jsx)(l.Text, {
                                 variant: 'text-md/medium',
-                                children: c.intl.string(c.t.rAXXxM)
+                                children: c.NW.string(c.t.rAXXxM)
                             }),
                             (0, s.jsx)(l.Text, {
                                 variant: 'eyebrow',
-                                children: c.intl.string(c.t['5qyruL'])
+                                children: c.NW.string(c.t['5qyruL'])
                             }),
-                            g
+                            _
                                 ? (0, s.jsx)(l.$jN, {
                                       type: l.$jN.Type.PULSING_ELLIPSIS,
                                       className: u.spinner
                                   })
-                                : f.length > 0
+                                : b.length > 0
                                   ? (0, s.jsx)(l.VcW, {
-                                        options: f,
+                                        options: b,
                                         value: p,
-                                        onChange: j,
+                                        onChange: N,
                                         renderOptionPrefix: (e) => {
                                             let t = null == e ? void 0 : e.value,
                                                 n = null != t ? a.Z.getGuild(t) : null;
@@ -92,7 +92,7 @@ function x(e) {
                                                         (0, s.jsx)(l.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
-                                                            children: c.intl.string(c.t.RjtuAA)
+                                                            children: c.NW.string(c.t.RjtuAA)
                                                         })
                                                 ]
                                             });
@@ -102,7 +102,7 @@ function x(e) {
                                         messageType: l.QYI.WARNING,
                                         children: (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
-                                            children: c.intl.string(c.t.M2TbbG)
+                                            children: c.NW.string(c.t.M2TbbG)
                                         })
                                     })
                         ]
@@ -117,7 +117,7 @@ function x(e) {
                         size: l.zxk.Sizes.MIN,
                         className: u.closeBtn,
                         onClick: n,
-                        children: c.intl.string(c.t.cpT0Cg)
+                        children: c.NW.string(c.t.cpT0Cg)
                     }),
                     (0, s.jsx)(l.zxk, {
                         size: l.zxk.Sizes.SMALL,
@@ -125,7 +125,7 @@ function x(e) {
                         onClick: function () {
                             null != p && (m(p), n());
                         },
-                        children: c.intl.string(c.t['cY+Ooa'])
+                        children: c.NW.string(c.t['cY+Ooa'])
                     })
                 ]
             })

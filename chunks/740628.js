@@ -1,132 +1,132 @@
-t.d(n, { Z: () => g }), t(47120);
-var i = t(200651),
-    l = t(192379),
-    o = t(442837),
-    s = t(706898),
-    r = t(481060),
-    a = t(246946),
-    d = t(785717),
-    c = t(786366),
+t.d(n, { Z: () => h }), t(47120);
+var r = t(200651),
+    o = t(192379),
+    i = t(442837),
+    l = t(706898),
+    s = t(481060),
+    c = t(246946),
+    a = t(785717),
+    d = t(786366),
     u = t(323090),
-    I = t(296391),
-    f = t(384816),
-    p = t(389190),
-    x = t(428927),
-    m = t(228168),
-    h = t(388032),
-    _ = t(547759),
-    v = t(774645);
-function Z(e) {
-    let { section: n, subsection: t, user: l, currentUser: o, displayProfile: s, guildId: r, onClose: a } = e;
-    return n === m.oh.ACTIVITY
-        ? (0, i.jsx)(I.Z, {
-              user: l,
-              currentUser: o,
-              displayProfile: s,
-              guildId: r,
-              onClose: a
+    f = t(296391),
+    p = t(384816),
+    m = t(389190),
+    I = t(428927),
+    b = t(228168),
+    g = t(388032),
+    v = t(865152),
+    y = t(410214);
+function j(e) {
+    let { section: n, subsection: t, user: o, currentUser: i, displayProfile: l, guildId: s, onClose: c } = e;
+    return n === b.oh.ACTIVITY
+        ? (0, r.jsx)(f.Z, {
+              user: o,
+              currentUser: i,
+              displayProfile: l,
+              guildId: s,
+              onClose: c
           })
-        : n === m.oh.MUTUAL_FRIENDS
-          ? (0, i.jsx)(p.Z, {
-                user: l,
-                onClose: a
+        : n === b.oh.MUTUAL_FRIENDS
+          ? (0, r.jsx)(m.Z, {
+                user: o,
+                onClose: c
             })
-          : n === m.oh.MUTUAL_GUILDS
-            ? (0, i.jsx)(x.Z, {
-                  user: l,
-                  onClose: a
+          : n === b.oh.MUTUAL_GUILDS
+            ? (0, r.jsx)(I.Z, {
+                  user: o,
+                  onClose: c
               })
-            : n === m.oh.BOT_DATA_ACCESS
-              ? (0, i.jsx)(c.Z, { user: l })
-              : n === m.oh.BOT_INFO
-                ? (0, i.jsx)(u.Z, {
-                      user: l,
-                      currentUser: o,
-                      displayProfile: s,
+            : n === b.oh.BOT_DATA_ACCESS
+              ? (0, r.jsx)(d.Z, { user: o })
+              : n === b.oh.BOT_INFO
+                ? (0, r.jsx)(u.Z, {
+                      user: o,
+                      currentUser: i,
+                      displayProfile: l,
                       subsection: t,
-                      onClose: a
+                      onClose: c
                   })
-                : (0, i.jsx)(f.Z, {
-                      user: l,
-                      currentUser: o,
-                      displayProfile: s,
+                : (0, r.jsx)(p.Z, {
+                      user: o,
+                      currentUser: i,
+                      displayProfile: l,
                       subsection: t,
-                      onClose: a
+                      onClose: c
                   });
 }
-function g(e) {
-    var n, t, c;
-    let { user: u, currentUser: I, displayProfile: f, guildId: p, items: x, initialSection: g = m.oh.USER_INFO, initialSubsection: j, onClose: E } = e,
-        { trackUserProfileAction: y } = (0, d.KZ)(),
-        N = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        [{ section: T, subsection: b }, P] = l.useState({
+function h(e) {
+    var n, t, d;
+    let { user: u, currentUser: f, displayProfile: p, guildId: m, items: I, initialSection: h = b.oh.USER_INFO, initialSubsection: x, onClose: O } = e,
+        { trackUserProfileAction: _ } = (0, a.KZ)(),
+        Z = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        [{ section: N, subsection: P }, E] = o.useState({
             section:
                 null !==
-                    (c =
+                    (d =
                         null ===
-                            (n = x.find((e) => {
+                            (n = I.find((e) => {
                                 let { section: n } = e;
-                                return n === g;
+                                return n === h;
                             })) || void 0 === n
                             ? void 0
-                            : n.section) && void 0 !== c
-                    ? c
-                    : null === (t = x[0]) || void 0 === t
+                            : n.section) && void 0 !== d
+                    ? d
+                    : null === (t = I[0]) || void 0 === t
                       ? void 0
                       : t.section,
-            subsection: j
+            subsection: x
         });
-    l.useEffect(() => {
-        null == x.find((e) => e.section === T) &&
-            P({
-                section: x[0].section,
+    o.useEffect(() => {
+        null == I.find((e) => e.section === N) &&
+            E({
+                section: I[0].section,
                 subsection: void 0
             });
-    }, [x, T]);
-    let S = l.useCallback(
+    }, [I, N]);
+    let S = o.useCallback(
         (e) => {
-            y({
+            _({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                P({
+                E({
                     section: e,
                     subsection: void 0
                 });
         },
-        [y, P]
+        [_, E]
     );
-    return N
-        ? (0, i.jsx)('div', {
-              className: v.container,
-              children: (0, i.jsxs)('div', {
-                  className: _.empty,
+    return Z
+        ? (0, r.jsx)('div', {
+              className: y.container,
+              children: (0, r.jsxs)('div', {
+                  className: v.empty,
                   children: [
-                      (0, i.jsx)('div', { className: _.emptyIconStreamerMode }),
-                      (0, i.jsx)('div', {
-                          className: _.emptyText,
-                          children: h.intl.string(h.t.Br1ls7)
+                      (0, r.jsx)('div', { className: v.emptyIconStreamerMode }),
+                      (0, r.jsx)('div', {
+                          className: v.emptyText,
+                          children: g.NW.string(g.t.Br1ls7)
                       })
                   ]
               })
           })
-        : (0, i.jsxs)('div', {
-              className: v.container,
+        : (0, r.jsxs)('div', {
+              className: y.container,
               children: [
-                  (0, i.jsx)(s.n, {
-                      className: v.tabBar,
+                  (0, r.jsx)(l.n, {
+                      className: y.tabBar,
                       type: 'top',
-                      selectedItem: T,
+                      selectedItem: N,
                       onItemSelect: S,
-                      children: x.map((e) => {
+                      children: I.map((e) => {
                           let { section: n, text: t } = e;
-                          return (0, i.jsx)(
-                              s.n.Item,
+                          return (0, r.jsx)(
+                              l.n.Item,
                               {
-                                  className: v.tabBarItem,
+                                  className: y.tabBarItem,
                                   id: n,
                                   'aria-label': t,
-                                  children: (0, i.jsx)(r.Text, {
+                                  children: (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       children: t
                                   })
@@ -135,15 +135,15 @@ function g(e) {
                           );
                       })
                   }),
-                  (0, i.jsx)(Z, {
-                      items: x,
-                      section: T,
-                      subsection: b,
+                  (0, r.jsx)(j, {
+                      items: I,
+                      section: N,
+                      subsection: P,
                       user: u,
-                      currentUser: I,
-                      displayProfile: f,
-                      guildId: p,
-                      onClose: E
+                      currentUser: f,
+                      displayProfile: p,
+                      guildId: m,
+                      onClose: O
                   })
               ]
           });

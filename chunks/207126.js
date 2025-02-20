@@ -1,28 +1,28 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(422034),
-    r = n(938475),
-    s = n(771012);
-function o(e) {
+    o = n(938475),
+    l = n(189341);
+function s(e) {
     let { channel: t } = e;
     if (null == t) return null;
-    let n = r.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        o = n.map((e, t) => {
-            let { user: r } = e;
-            return (0, i.jsx)(
+    let n = o.ZP.getVoiceStatesForChannel(t).slice(0, 6),
+        s = n.map((e, t) => {
+            let { user: o } = e;
+            return (0, r.jsx)(
                 a.O,
                 {
-                    affinity: r,
+                    affinity: o,
                     applyMask: t !== n.length - 1,
-                    size: l.EFr.SIZE_20
+                    size: i.EFr.SIZE_20
                 },
-                r.id
+                o.id
             );
         });
-    return (0, i.jsx)('div', {
-        className: s.avatars,
-        children: o
+    return (0, r.jsx)('div', {
+        className: l.avatars,
+        children: s
     });
 }

@@ -5,8 +5,8 @@ a.d(e, {
 });
 var r = a(650665),
     n = a(423850),
-    _ = a(393523),
-    o = a(553062),
+    o = a(393523),
+    _ = a(553062),
     i = a(859502),
     c = a(988097),
     s = a(263449),
@@ -22,7 +22,7 @@ var r = a(650665),
     T = a(119128),
     N = a(799033);
 let L = {
-        ...o.A,
+        ..._.A,
         instrumentNavigation: !0,
         instrumentPageLoad: !0,
         markBackgroundSpan: !0,
@@ -63,9 +63,9 @@ let L = {
         function W(t, e) {
             let a = 'pageload' === e.op,
                 n = h ? h(e) : e,
-                _ = n.attributes || {};
-            e.name !== n.name && ((_[c.Zj] = 'custom'), (n.attributes = _)), (B.name = n.name), (B.source = _[c.Zj]);
-            let i = (0, o.R)(n, {
+                o = n.attributes || {};
+            e.name !== n.name && ((o[c.Zj] = 'custom'), (n.attributes = o)), (B.name = n.name), (B.source = o[c.Zj]);
+            let i = (0, _.R)(n, {
                 idleTimeout: m,
                 finalTimeout: y,
                 childSpanTimeout: P,
@@ -106,8 +106,8 @@ let L = {
                         L && !(0, E.XU)(L).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, E.XU)(L).op}`), L.end());
                         let r = a.sentryTrace || g('sentry-trace'),
                             n = a.baggage || g('baggage'),
-                            _ = (0, I.pT)(r, n);
-                        (0, s.nZ)().setPropagationContext(_),
+                            o = (0, I.pT)(r, n);
+                        (0, s.nZ)().setPropagationContext(o),
                             (L = W(t, {
                                 op: 'pageload',
                                 ...e
@@ -135,7 +135,7 @@ let L = {
                                 }
                             }),
                         U &&
-                            (0, _.a)(({ to: e, from: a }) => {
+                            (0, o.a)(({ to: e, from: a }) => {
                                 if (void 0 === a && w && -1 !== w.indexOf(e)) {
                                     w = void 0;
                                     return;
@@ -171,7 +171,7 @@ let L = {
                                         f.X && u.kg.warn(`[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`);
                                         return;
                                     }
-                                    h = (0, o.R)(
+                                    h = (0, _.R)(
                                         {
                                             name: d.name,
                                             op: t,

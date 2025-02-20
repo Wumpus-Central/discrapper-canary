@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = function (e, t, n) {
+n.d(t, { Z: () => r });
+let r = function (e, t, n) {
     switch (n.length) {
         case 0:
             return e.call(t);

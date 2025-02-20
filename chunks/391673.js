@@ -1,3 +1,3 @@
-var n = t(161581),
-    o = t(332916);
-r.exports = 'process' === o(n.process);
+var r = n(161581),
+    i = n(332916);
+e.exports = 'process' === i(r.process);

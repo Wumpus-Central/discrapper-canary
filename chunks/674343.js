@@ -1,31 +1,31 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => u }), n(266796);
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(313201),
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(313201),
     o = n(36703),
-    c = n(937596);
-let d = (0, a.hQ)();
+    c = n(465251);
+let d = (0, l.hQ)();
 function u(e) {
-    let { volume: t, title: n, description: s, label: a, onVolumeChange: u, refreshStyles: m = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(c.soundboardRow, { [c.refresh]: m }),
+    let { volume: t, title: n, description: i, label: l, onVolumeChange: u, refreshStyles: m = !1 } = e;
+    return (0, r.jsxs)('div', {
+        className: s()(c.soundboardRow, { [c.refresh]: m }),
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.soundboardColumn,
-                children: (0, i.jsx)(l.xJW, {
+                children: (0, r.jsx)(a.xJW, {
                     title: n,
-                    children: (0, i.jsx)(l.R94, { children: s })
+                    children: (0, r.jsx)(a.R94, { children: i })
                 })
             }),
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.soundboardColumn,
-                children: (0, i.jsx)(l.xJW, {
-                    title: a,
+                children: (0, r.jsx)(a.xJW, {
+                    title: l,
                     titleId: d,
-                    children: (0, i.jsx)(l.iRW, {
+                    children: (0, r.jsx)(a.iRW, {
                         initialValue: (0, o.P)(t),
                         maxValue: 100,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),

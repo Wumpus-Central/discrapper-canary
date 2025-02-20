@@ -1,30 +1,30 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(723184),
-    a = n(877837),
-    s = function (e) {
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(723184),
+    o = n(877837),
+    a = function (e) {
         var t = e.color,
             n = e.onClick,
-            s = e.onSwatchHover,
-            o = e.hover,
+            a = e.onSwatchHover,
+            s = e.hover,
             l = e.active,
-            u = e.circleSize,
-            c = e.circleSpacing,
-            d = (0, r.default)(
+            c = e.circleSize,
+            u = e.circleSpacing,
+            d = (0, i.default)(
                 {
                     default: {
                         swatch: {
-                            width: u,
-                            height: u,
-                            marginRight: c,
-                            marginBottom: c,
+                            width: c,
+                            height: c,
+                            marginRight: u,
+                            marginBottom: u,
                             transform: 'scale(1)',
                             transition: '100ms transform ease'
                         },
                         Swatch: {
                             borderRadius: '50%',
                             background: 'transparent',
-                            boxShadow: 'inset 0 0 0 ' + (u / 2 + 1) + 'px ' + t,
+                            boxShadow: 'inset 0 0 0 ' + (c / 2 + 1) + 'px ' + t,
                             transition: '100ms box-shadow ease'
                         }
                     },
@@ -32,24 +32,24 @@ var i = n(192379),
                     active: { Swatch: { boxShadow: 'inset 0 0 0 3px ' + t } }
                 },
                 {
-                    hover: o,
+                    hover: s,
                     active: l
                 }
             );
-        return i.createElement(
+        return r.createElement(
             'div',
             { style: d.swatch },
-            i.createElement(a.m4, {
+            r.createElement(o.m4, {
                 style: d.Swatch,
                 color: t,
                 onClick: n,
-                onHover: s,
+                onHover: a,
                 focusStyle: { boxShadow: d.Swatch.boxShadow + ', 0 0 5px ' + t }
             })
         );
     };
-s.defaultProps = {
+a.defaultProps = {
     circleSize: 28,
     circleSpacing: 14
 };
-let o = (0, r.handleHover)(s);
+let s = (0, i.handleHover)(a);

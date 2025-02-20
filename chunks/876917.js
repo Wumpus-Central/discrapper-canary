@@ -1,20 +1,20 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(802433),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(802433),
     l = n(680295),
-    u = n(319293),
-    c = n(241822);
+    c = n(248104),
+    u = n(241822);
 let d = 0.1,
     f = 250,
-    _ = (e) => {
-        let { profileEffectId: t, isHovering: n, forCollectedModal: a = !1, isPurchased: _, removeSetHeight: p = !1 } = e,
-            h = a ? f : d,
-            [m, g] = r.useState(!0);
-        return (r.useEffect(() => {
-            if (!0 !== a) g(!1);
+    p = (e) => {
+        let { profileEffectId: t, isHovering: n, forCollectedModal: o = !1, isPurchased: p, removeSetHeight: _ = !1 } = e,
+            h = o ? f : d,
+            [m, g] = i.useState(!0);
+        return (i.useEffect(() => {
+            if (!0 !== o) g(!1);
             else {
                 let e = setTimeout(() => {
                     g(!1);
@@ -23,28 +23,28 @@ let d = 0.1,
                     clearTimeout(e);
                 };
             }
-        }, [h, a]),
+        }, [h, o]),
         null != t)
-            ? (0, i.jsxs)('div', {
-                  className: s()(u.previewContainer, {
-                      [u.previewContainerAnimation]: a,
-                      [u.previewContainerSetHeight]: !p
+            ? (0, r.jsxs)('div', {
+                  className: a()(c.previewContainer, {
+                      [c.previewContainerAnimation]: o,
+                      [c.previewContainerSetHeight]: !_
                   }),
                   children: [
-                      (0, i.jsx)('img', {
-                          src: c,
+                      (0, r.jsx)('img', {
+                          src: u,
                           alt: ' ',
-                          className: a ? u.previewForCollected : u.preview,
+                          className: o ? c.previewForCollected : c.preview,
                           'aria-hidden': !0
                       }),
                       !m &&
-                          (0, i.jsx)('div', {
-                              className: _ ? u.purchasedEffect : void 0,
-                              children: (0, i.jsx)(l.Z, {
+                          (0, r.jsx)('div', {
+                              className: p ? c.purchasedEffect : void 0,
+                              children: (0, r.jsx)(l.Z, {
                                   profileEffectId: t,
                                   useThumbnail: !0,
-                                  autoPlay: a,
-                                  restartMethod: o.j.FromStart,
+                                  autoPlay: o,
+                                  restartMethod: s.j.FromStart,
                                   resetOnHover: !0,
                                   isHovering: n,
                                   introDelay: h,

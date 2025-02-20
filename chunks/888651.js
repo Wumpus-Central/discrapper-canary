@@ -1,33 +1,33 @@
 n.d(t, {
-    $: () => p,
-    Q: () => h
+    $: () => h,
+    Q: () => p
 });
-var i = n(155281),
-    l = n(222146),
-    a = n(749210),
-    r = n(430824),
-    s = n(496675),
-    o = n(979651),
+var r = n(155281),
+    i = n(222146),
+    l = n(749210),
+    o = n(430824),
+    a = n(496675),
+    s = n(979651),
     c = n(938475),
-    d = n(981631);
-let u = 'DRAGGABLE_USER';
-function h(e) {
-    return (0, i.G)(
-        u,
+    u = n(981631);
+let d = 'DRAGGABLE_USER';
+function p(e) {
+    return (0, r.G)(
+        d,
         {
             canDrop(e) {
                 var t, n;
-                let { channel: i } = e,
-                    l = i.getGuildId(),
-                    a = null !== (n = null === (t = r.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
-                    u = c.ZP.countVoiceStatesForChannel(i.id),
-                    h = null != l && o.Z.hasVideo(i.id) && a > 0 && u >= a + 1;
-                return s.Z.can(d.Plq.MOVE_MEMBERS, i) && s.Z.can(d.Plq.CONNECT, i) && !h;
+                let { channel: r } = e,
+                    i = r.getGuildId(),
+                    l = null !== (n = null === (t = o.Z.getGuild(i)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
+                    d = c.ZP.countVoiceStatesForChannel(r.id),
+                    p = null != i && s.Z.hasVideo(r.id) && l > 0 && d >= l + 1;
+                return a.Z.can(u.Plq.MOVE_MEMBERS, r) && a.Z.can(u.Plq.CONNECT, r) && !p;
             },
             drop(e, t) {
                 let { channel: n } = e,
-                    i = o.Z.getVoiceStateForUser(t.getItem().user.id);
-                (null == i ? void 0 : i.channelId) !== n.id && a.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
+                    r = s.Z.getVoiceStateForUser(t.getItem().user.id);
+                (null == r ? void 0 : r.channelId) !== n.id && l.Z.setChannel(n.getGuildId(), t.getItem().user.id, n.id);
             }
         },
         (e, t) => ({
@@ -36,9 +36,9 @@ function h(e) {
         })
     )(e);
 }
-function p(e) {
-    return (0, l.E)(
-        u,
+function h(e) {
+    return (0, i.E)(
+        d,
         {
             canDrag(e) {
                 let { user: t, canDrag: n } = e;

@@ -1,8 +1,8 @@
-var i = n(941332),
-    r = i.all;
-e.exports = i.IS_HTMLDDA
+var r = n(941332),
+    i = r.all;
+e.exports = r.IS_HTMLDDA
     ? function (e) {
-          return 'function' == typeof e || e === r;
+          return 'function' == typeof e || e === i;
       }
     : function (e) {
           return 'function' == typeof e;

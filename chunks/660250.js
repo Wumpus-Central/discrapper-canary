@@ -1,69 +1,69 @@
-n.r(t), n.d(t, { default: () => v });
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    o = n(959457),
-    c = n(571826),
-    a = n(630759),
-    d = n(301107),
-    u = n(785792),
-    h = n(190054),
-    x = n(245581),
-    m = n(760373),
-    f = n(388032),
-    _ = n(464459);
-let v = function (e) {
-    let { transitionState: t, streamKey: n, channelId: v } = e,
-        p = (0, l.e7)([o.Z], () => {
+r.r(t), r.d(t, { default: () => j });
+var n = r(200651),
+    o = r(192379),
+    c = r(442837),
+    i = r(481060),
+    s = r(959457),
+    l = r(571826),
+    a = r(630759),
+    d = r(301107),
+    u = r(785792),
+    h = r(190054),
+    f = r(245581),
+    p = r(760373),
+    m = r(388032),
+    b = r(54097);
+let j = function (e) {
+    let { transitionState: t, streamKey: r, channelId: j } = e,
+        x = (0, c.e7)([s.Z], () => {
             var e;
-            return null === (e = o.Z.getSecureFramesState(n)) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null === (e = s.Z.getSecureFramesState(r)) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        j = (0, d.W)({
-            fingerprintBase64: p,
-            chunkSize: m.y6,
-            desiredLength: m.YP
+        v = (0, d.W)({
+            fingerprintBase64: x,
+            chunkSize: p.y6,
+            desiredLength: p.YP
         }),
-        N = r.useCallback(() => {
-            (0, c.ih)({ channelId: v });
-        }, [v]);
-    return (0, i.jsxs)(x.Z, {
+        y = o.useCallback(() => {
+            (0, l.ih)({ channelId: j });
+        }, [j]);
+    return (0, n.jsxs)(f.Z, {
         transitionState: t,
-        title: f.intl.string(f.t.QogHlZ),
-        subtitle: f.intl.string(f.t.qODBkZ),
+        title: m.NW.string(m.t.QogHlZ),
+        subtitle: m.NW.string(m.t.qODBkZ),
         children: [
-            (0, i.jsxs)('div', {
-                className: _.verification,
+            (0, n.jsxs)('div', {
+                className: b.verification,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: _.header,
+                    (0, n.jsxs)('div', {
+                        className: b.header,
                         children: [
-                            (0, i.jsx)(s.X6q, {
+                            (0, n.jsx)(i.X6q, {
                                 variant: 'text-sm/bold',
                                 color: 'header-primary',
-                                children: f.intl.string(f.t.cgBTyM)
+                                children: m.NW.string(m.t.cgBTyM)
                             }),
-                            null != j &&
-                                (0, i.jsx)(h.H, {
-                                    className: _.copyIcon,
-                                    chunks: j,
-                                    color: s.TVs.colors.INTERACTIVE_NORMAL,
-                                    onCopy: N
+                            null != v &&
+                                (0, n.jsx)(h.H, {
+                                    className: b.copyIcon,
+                                    chunks: v,
+                                    color: i.TVs.colors.INTERACTIVE_NORMAL,
+                                    onCopy: y
                                 })
                         ]
                     }),
-                    (0, i.jsx)(u.b, {
-                        className: _.code,
-                        chunks: j,
-                        columns: m.WK
+                    (0, n.jsx)(u.b, {
+                        className: b.code,
+                        chunks: v,
+                        columns: p.WK
                     })
                 ]
             }),
-            (0, i.jsx)(s.Text, {
-                className: _.footer,
+            (0, n.jsx)(i.Text, {
+                className: b.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: f.intl.format(f.t['H3+ktr'], { helpArticle: (0, a.uV)() })
+                children: m.NW.format(m.t['H3+ktr'], { helpArticle: (0, a.uV)() })
             })
         ]
     });

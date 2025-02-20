@@ -1,16 +1,16 @@
 n.d(t, {
-    L_: () => u,
-    N: () => o,
+    L_: () => c,
+    N: () => s,
     gl: () => l,
-    xS: () => s,
-    yP: () => a
+    xS: () => a,
+    yP: () => o
 }),
     n(47120);
-var i = n(149765),
-    r = n(981631);
-let a = i.$e(r.Plq.MANAGE_CHANNELS, r.Plq.MUTE_MEMBERS, r.Plq.MOVE_MEMBERS);
-i.$e(r.Plq.MANAGE_CHANNELS, r.Plq.MANAGE_ROLES);
-let s = new Set([r.Plq.SPEAK, r.Plq.REQUEST_TO_SPEAK, r.Plq.USE_VAD]),
-    o = i.$e(a, r.Plq.MANAGE_ROLES),
-    l = i.$e(r.Plq.CONNECT, r.Plq.VIEW_CHANNEL),
-    u = i.$e(l, r.Plq.READ_MESSAGE_HISTORY, r.Plq.REQUEST_TO_SPEAK, r.Plq.SPEAK, r.Plq.USE_VAD);
+var r = n(149765),
+    i = n(981631);
+let o = r.$e(i.Plq.MANAGE_CHANNELS, i.Plq.MUTE_MEMBERS, i.Plq.MOVE_MEMBERS);
+r.$e(i.Plq.MANAGE_CHANNELS, i.Plq.MANAGE_ROLES);
+let a = new Set([i.Plq.SPEAK, i.Plq.REQUEST_TO_SPEAK, i.Plq.USE_VAD]),
+    s = r.$e(o, i.Plq.MANAGE_ROLES),
+    l = r.$e(i.Plq.CONNECT, i.Plq.VIEW_CHANNEL),
+    c = r.$e(l, i.Plq.READ_MESSAGE_HISTORY, i.Plq.REQUEST_TO_SPEAK, i.Plq.SPEAK, i.Plq.USE_VAD);

@@ -1,25 +1,25 @@
 n.d(t, { e: () => o });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(709586),
-    s = n(388032),
-    a = n(6545);
+var i = n(481060),
+    s = n(709586),
+    a = n(388032),
+    l = n(313135);
 function o(e) {
     let { onClick: t, className: n } = e;
-    return (0, i.jsxs)(r.gtL, {
-        color: r.zxk.Colors.GREEN,
+    return (0, r.jsxs)(i.gtL, {
+        color: i.zxk.Colors.GREEN,
         className: n,
-        innerClassName: a.upsellButton,
+        innerClassName: l.upsellButton,
         onClick: t,
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, r.jsx)(s.Z, {
                 height: 16,
                 width: 16,
-                className: a.premiumUpsellBadge
+                className: l.premiumUpsellBadge
             }),
             ' ',
-            s.intl.string(s.t['+7XY39'])
+            a.NW.string(a.t['+7XY39'])
         ]
     });
 }

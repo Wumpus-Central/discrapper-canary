@@ -1,76 +1,76 @@
-n.d(t, { Q: () => m });
-var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    l = n.n(s),
-    o = n(392711),
-    a = n.n(o),
-    c = n(481060),
-    d = n(100527),
-    C = n(267101),
-    u = n(675297),
-    x = n(891561),
-    p = n(333866),
-    h = n(388032),
-    _ = n(692409);
-function m(e) {
-    let { guildId: t, productId: n } = e,
-        { listingsLoaded: s } = (0, C.eD)(t),
-        o = (0, C.ue)(t),
-        m = r.useRef(null),
-        { sortOption: g } = (0, x.s)(),
-        v = r.useMemo(
+r.d(t, { Q: () => g });
+var n = r(200651),
+    i = r(192379),
+    o = r(120356),
+    s = r.n(o),
+    c = r(392711),
+    l = r.n(c),
+    a = r(481060),
+    d = r(100527),
+    u = r(267101),
+    C = r(675297),
+    p = r(891561),
+    f = r(333866),
+    b = r(388032),
+    j = r(946433);
+function g(e) {
+    let { guildId: t, productId: r } = e,
+        { listingsLoaded: o } = (0, u.eD)(t),
+        c = (0, u.ue)(t),
+        g = i.useRef(null),
+        { sortOption: h } = (0, p.s)(),
+        m = i.useMemo(
             () =>
                 (function (e, t) {
-                    let n, i;
+                    let r, n;
                     switch (t) {
-                        case p.zJ.NAME:
-                            (n = (e) => e.name.toLowerCase()), (i = 'asc');
+                        case f.zJ.NAME:
+                            (r = (e) => e.name.toLowerCase()), (n = 'asc');
                             break;
-                        case p.zJ.PRICE_ASC:
-                            (n = 'price_tier'), (i = 'asc');
+                        case f.zJ.PRICE_ASC:
+                            (r = 'price_tier'), (n = 'asc');
                             break;
-                        case p.zJ.PRICE_DESC:
-                            (n = 'price_tier'), (i = 'desc');
+                        case f.zJ.PRICE_DESC:
+                            (r = 'price_tier'), (n = 'desc');
                             break;
-                        case p.zJ.NEWEST_ARRIVALS:
-                            (n = 'published_at'), (i = 'desc');
+                        case f.zJ.NEWEST_ARRIVALS:
+                            (r = 'published_at'), (n = 'desc');
                             break;
                         default:
                             return e;
                     }
-                    return a().orderBy(e, [n], [i]);
-                })(o, g),
-            [o, g]
+                    return l().orderBy(e, [r], [n]);
+                })(c, h),
+            [c, h]
         );
-    return s
-        ? (0, i.jsx)('ul', {
-              className: _.cardContainer,
-              'aria-label': h.intl.string(h.t.qe4kTU),
-              children: v.map((e) =>
-                  (0, i.jsx)(
+    return o
+        ? (0, n.jsx)('ul', {
+              className: j.cardContainer,
+              'aria-label': b.NW.string(b.t.qe4kTU),
+              children: m.map((e) =>
+                  (0, n.jsx)(
                       'li',
                       {
-                          className: _.card,
-                          children: (0, i.jsx)(
+                          className: j.card,
+                          children: (0, n.jsx)(
                               'div',
                               {
-                                  className: l()(_.cardContent, { [_.selectedCard]: e.id === n }),
-                                  ref: e.id === n ? m : void 0,
+                                  className: s()(j.cardContent, { [j.selectedCard]: e.id === r }),
+                                  ref: e.id === r ? g : void 0,
                                   onLoad: () => {
-                                      let t = m.current;
+                                      let t = g.current;
                                       null != t &&
-                                          e.id === n &&
+                                          e.id === r &&
                                           (t.scrollIntoView({
                                               behavior: 'smooth',
                                               block: 'center'
                                           }),
                                           setTimeout(() => {
-                                              t.classList.remove(_.selectedCard);
+                                              t.classList.remove(j.selectedCard);
                                           }, 2000));
                                   },
-                                  children: (0, i.jsx)(
-                                      u.H,
+                                  children: (0, n.jsx)(
+                                      C.H,
                                       {
                                           guildProductListing: e,
                                           guildId: t,
@@ -94,5 +94,5 @@ function m(e) {
                   )
               )
           })
-        : (0, i.jsx)(c.$jN, {});
+        : (0, n.jsx)(a.$jN, {});
 }

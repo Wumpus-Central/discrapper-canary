@@ -1,5 +1,5 @@
-n.d(t, { v: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { v: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-04_genshin_user_signup',
     label: 'Genshin User Signup',
@@ -12,8 +12,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { showUserSignup: n } = i.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+        { showUserSignup: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return n;
 }

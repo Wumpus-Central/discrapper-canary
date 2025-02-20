@@ -1,16 +1,16 @@
 function t(e) {
     let t = e.regex,
         n = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
-        i = 'decltype\\(auto\\)',
-        r = '[a-zA-Z_]\\w*::',
-        a = '<[^<>]+>',
-        s = '(?!struct)(' + i + '|' + t.optional(r) + '[a-zA-Z_]\\w*' + t.optional(a) + ')',
-        o = {
+        r = 'decltype\\(auto\\)',
+        i = '[a-zA-Z_]\\w*::',
+        o = '<[^<>]+>',
+        a = '(?!struct)(' + r + '|' + t.optional(i) + '[a-zA-Z_]\\w*' + t.optional(o) + ')',
+        s = {
             className: 'type',
             begin: '\\b[a-z\\d_]*_t\\b'
         },
         l = '\\\\(x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4,8}|[0-7]{3}|\\S)',
-        u = {
+        c = {
             className: 'string',
             variants: [
                 {
@@ -30,7 +30,7 @@ function t(e) {
                 })
             ]
         },
-        c = {
+        u = {
             className: 'number',
             variants: [{ begin: "[+-]?(?:(?:[0-9](?:'?[0-9])*\\.(?:[0-9](?:'?[0-9])*)?|\\.[0-9](?:'?[0-9])*)(?:[Ee][+-]?[0-9](?:'?[0-9])*)?|[0-9](?:'?[0-9])*[Ee][+-]?[0-9](?:'?[0-9])*|0[Xx](?:[0-9A-Fa-f](?:'?[0-9A-Fa-f])*(?:\\.(?:[0-9A-Fa-f](?:'?[0-9A-Fa-f])*)?)?|\\.[0-9A-Fa-f](?:'?[0-9A-Fa-f])*)[Pp][+-]?[0-9](?:'?[0-9])*)(?:[Ff](?:16|32|64|128)?|(BF|bf)16|[Ll]|)" }, { begin: "[+-]?\\b(?:0[Bb][01](?:'?[01])*|0[Xx][0-9A-Fa-f](?:'?[0-9A-Fa-f])*|0(?:'?[0-7])*|[1-9](?:'?[0-9])*)(?:[Uu](?:LL?|ll?)|[Uu][Zz]?|(?:LL?|ll?)[Uu]?|[Zz][Uu]|)" }],
             relevance: 0
@@ -45,7 +45,7 @@ function t(e) {
                     begin: /\\\n/,
                     relevance: 0
                 },
-                e.inherit(u, { className: 'string' }),
+                e.inherit(c, { className: 'string' }),
                 {
                     className: 'string',
                     begin: /<.*?>/
@@ -56,11 +56,11 @@ function t(e) {
         },
         f = {
             className: 'title',
-            begin: t.optional(r) + e.IDENT_RE,
+            begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        _ = t.optional(r) + e.IDENT_RE + '\\s*\\(',
-        p = {
+        p = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        _ = {
             type: ['bool', 'char', 'char16_t', 'char32_t', 'char8_t', 'double', 'float', 'int', 'long', 'short', 'void', 'wchar_t', 'unsigned', 'signed', 'const', 'static'],
             keyword: ['alignas', 'alignof', 'and', 'and_eq', 'asm', 'atomic_cancel', 'atomic_commit', 'atomic_noexcept', 'auto', 'bitand', 'bitor', 'break', 'case', 'catch', 'class', 'co_await', 'co_return', 'co_yield', 'compl', 'concept', 'const_cast|10', 'consteval', 'constexpr', 'constinit', 'continue', 'decltype', 'default', 'delete', 'do', 'dynamic_cast|10', 'else', 'enum', 'explicit', 'export', 'extern', 'false', 'final', 'for', 'friend', 'goto', 'if', 'import', 'inline', 'module', 'mutable', 'namespace', 'new', 'noexcept', 'not', 'not_eq', 'nullptr', 'operator', 'or', 'or_eq', 'override', 'private', 'protected', 'public', 'reflexpr', 'register', 'reinterpret_cast|10', 'requires', 'return', 'sizeof', 'static_assert', 'static_cast|10', 'struct', 'switch', 'synchronized', 'template', 'this', 'thread_local', 'throw', 'transaction_safe', 'transaction_safe_dynamic', 'true', 'try', 'typedef', 'typeid', 'typename', 'union', 'using', 'virtual', 'volatile', 'while', 'xor', 'xor_eq'],
             literal: ['NULL', 'false', 'nullopt', 'nullptr', 'true'],
@@ -75,7 +75,7 @@ function t(e) {
             },
             begin: t.concat(/\b/, /(?!decltype)/, /(?!if)/, /(?!for)/, /(?!switch)/, /(?!while)/, e.IDENT_RE, t.lookahead(/(<[^<>]+>|)\s*\(/))
         },
-        m = [h, d, o, n, e.C_BLOCK_COMMENT_MODE, c, u],
+        m = [h, d, s, n, e.C_BLOCK_COMMENT_MODE, u, c],
         g = {
             variants: [
                 {
@@ -91,12 +91,12 @@ function t(e) {
                     end: /;/
                 }
             ],
-            keywords: p,
+            keywords: _,
             contains: m.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     contains: m.concat(['self']),
                     relevance: 0
                 }
@@ -105,20 +105,20 @@ function t(e) {
         },
         E = {
             className: 'function',
-            begin: '(' + s + '[\\*&\\s]+)+' + _,
+            begin: '(' + a + '[\\*&\\s]+)+' + p,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: p,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
-                    begin: i,
-                    keywords: p,
+                    begin: r,
+                    keywords: _,
                     relevance: 0
                 },
                 {
-                    begin: _,
+                    begin: p,
                     returnBegin: !0,
                     contains: [f],
                     relevance: 0
@@ -130,7 +130,7 @@ function t(e) {
                 {
                     begin: /:/,
                     endsWithParent: !0,
-                    contains: [u, c]
+                    contains: [c, u]
                 },
                 {
                     relevance: 0,
@@ -140,24 +140,24 @@ function t(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                     contains: [
                         n,
                         e.C_BLOCK_COMMENT_MODE,
-                        u,
                         c,
-                        o,
+                        u,
+                        s,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: p,
+                            keywords: _,
                             relevance: 0,
-                            contains: ['self', n, e.C_BLOCK_COMMENT_MODE, u, c, o]
+                            contains: ['self', n, e.C_BLOCK_COMMENT_MODE, c, u, s]
                         }
                     ]
                 },
-                o,
+                s,
                 n,
                 e.C_BLOCK_COMMENT_MODE,
                 d
@@ -166,7 +166,7 @@ function t(e) {
     return {
         name: 'C++',
         aliases: ['cc', 'c++', 'h++', 'hpp', 'hh', 'hxx', 'cxx'],
-        keywords: p,
+        keywords: _,
         illegal: '</',
         classNameAliases: { 'function.dispatch': 'built_in' },
         contains: [].concat(g, E, h, m, [
@@ -174,12 +174,12 @@ function t(e) {
             {
                 begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function|flat_map|flat_set)\\s*<(?!<)',
                 end: '>',
-                keywords: p,
-                contains: ['self', o]
+                keywords: _,
+                contains: ['self', s]
             },
             {
                 begin: e.IDENT_RE + '::',
-                keywords: p
+                keywords: _
             },
             {
                 match: [/\b(?:enum(?:\s+(?:class|struct))?|class|struct|union)/, /\s+/, /\w+/],

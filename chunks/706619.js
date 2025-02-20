@@ -1,34 +1,34 @@
 n.d(t, { Z: () => s }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    a = n(311308),
-    r = n(692547),
-    o = n(481060);
+var r = n(200651),
+    l = n(192379),
+    i = n(311308),
+    o = n(692547),
+    a = n(481060);
 function s(e) {
-    let t = (0, i.useRef)(null),
-        [n, s] = (0, i.useState)(null),
-        [c] = (0, i.useState)(() => new a.TimelineDataSeries()),
-        u = (0, o.dQu)(r.Z.colors.BACKGROUND_PRIMARY).hsl(),
-        d = (0, o.dQu)(r.Z.colors.TEXT_NORMAL).hsl(),
-        h = (0, o.dQu)(r.Z.colors.BACKGROUND_ACCENT).hsl(),
-        f = (0, o.dQu)(r.Z.unsafe_rawColors.BRAND_500).hsl();
-    (0, i.useEffect)(() => {
+    let t = (0, l.useRef)(null),
+        [n, s] = (0, l.useState)(null),
+        [c] = (0, l.useState)(() => new i.TimelineDataSeries()),
+        u = (0, a.dQu)(o.Z.colors.BACKGROUND_PRIMARY).hsl(),
+        d = (0, a.dQu)(o.Z.colors.TEXT_NORMAL).hsl(),
+        h = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
+        f = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();
+    (0, l.useEffect)(() => {
         var e;
         let n = t.current;
         if (null == n) return;
-        let l = new a.TimelineGraphView(n, null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1);
-        (l.backgroundColor = u), (l.textColor = d), (l.gridColor = h), (l.timeOptions = { timeStyle: 'short' }), (l.fontFamily = 'gg sans'), (l.fontSize = 11), c.setColor(f), l.addDataSeries(c), l.updateEndDate(), s(l);
+        let r = new i.TimelineGraphView(n, null !== (e = window.devicePixelRatio) && void 0 !== e ? e : 1);
+        (r.backgroundColor = u), (r.textColor = d), (r.gridColor = h), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), c.setColor(f), r.addDataSeries(c), r.updateEndDate(), s(r);
     }, [t, u, f, h, d, c]),
         c.setPoints(e.dataPoints),
         null == n || n.updateEndDate();
-    let g = {
+    let p = {
         width: e.width,
         height: e.height
     };
-    return (0, l.jsx)(
+    return (0, r.jsx)(
         'canvas',
         {
-            style: g,
+            style: p,
             width: e.width,
             height: e.height,
             ref: t

@@ -1,17 +1,17 @@
 function t(e) {
     let t = e.regex,
         n = /^[a-zA-Z][a-zA-Z0-9-]*/,
-        i = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
-        r = e.COMMENT(/;/, /$/),
-        a = {
+        r = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
+        i = e.COMMENT(/;/, /$/),
+        o = {
             scope: 'symbol',
             match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
         },
-        s = {
+        a = {
             scope: 'symbol',
             match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
         },
-        o = {
+        s = {
             scope: 'symbol',
             match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/
         },
@@ -22,7 +22,7 @@ function t(e) {
     return {
         name: 'Augmented Backus-Naur Form',
         illegal: /[!@#$^&',?+~`|:]/,
-        keywords: i,
+        keywords: r,
         contains: [
             {
                 scope: 'operator',
@@ -32,10 +32,10 @@ function t(e) {
                 scope: 'attribute',
                 match: t.concat(n, /(?=\s*=)/)
             },
-            r,
+            i,
+            o,
             a,
             s,
-            o,
             l,
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE

@@ -1,35 +1,35 @@
-var i = n(447631),
-    r = n(10012),
-    a = n(228129),
-    s = n(28886),
-    o = n(591794),
+var r = n(447631),
+    i = n(10012),
+    o = n(228129),
+    a = n(28886),
+    s = n(591794),
     l = TypeError,
-    u = Object.defineProperty,
-    c = Object.getOwnPropertyDescriptor,
+    c = Object.defineProperty,
+    u = Object.getOwnPropertyDescriptor,
     d = 'enumerable',
     f = 'configurable',
-    _ = 'writable';
-t.f = i
-    ? a
+    p = 'writable';
+t.f = r
+    ? o
         ? function (e, t, n) {
-              if ((s(e), (t = o(t)), s(n), 'function' == typeof e && 'prototype' === t && 'value' in n && _ in n && !n[_])) {
-                  var i = c(e, t);
-                  i &&
-                      i[_] &&
+              if ((a(e), (t = s(t)), a(n), 'function' == typeof e && 'prototype' === t && 'value' in n && p in n && !n[p])) {
+                  var r = u(e, t);
+                  r &&
+                      r[p] &&
                       ((e[t] = n.value),
                       (n = {
-                          configurable: f in n ? n[f] : i[f],
-                          enumerable: d in n ? n[d] : i[d],
+                          configurable: f in n ? n[f] : r[f],
+                          enumerable: d in n ? n[d] : r[d],
                           writable: !1
                       }));
               }
-              return u(e, t, n);
+              return c(e, t, n);
           }
-        : u
+        : c
     : function (e, t, n) {
-          if ((s(e), (t = o(t)), s(n), r))
+          if ((a(e), (t = s(t)), a(n), i))
               try {
-                  return u(e, t, n);
+                  return c(e, t, n);
               } catch (e) {}
           if ('get' in n || 'set' in n) throw new l('Accessors not supported');
           return 'value' in n && (e[t] = n.value), e;

@@ -1,52 +1,52 @@
-t.d(s, { Z: () => r });
+t.d(s, { Z: () => o }), t(266796);
 var n = t(200651);
 t(192379);
-var l = t(481060),
-    i = t(388032),
-    a = t(669154);
-function r(e) {
+var r = t(481060),
+    a = t(388032),
+    l = t(925495);
+function o(e) {
     let { email: s, onClose: t } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsxs)(l.xBx, {
+            (0, n.jsxs)(r.xBx, {
                 separator: !1,
-                className: a.header,
+                className: l.header,
                 children: [
-                    (0, n.jsx)(l.X6q, {
-                        className: a.title,
+                    (0, n.jsx)(r.X6q, {
+                        className: l.title,
                         variant: 'heading-xl/semibold',
-                        children: i.intl.string(i.t['8O+nFx'])
+                        children: a.NW.string(a.t['8O+nFx'])
                     }),
-                    (0, n.jsx)(l.olH, {
+                    (0, n.jsx)(r.olH, {
                         onClick: t,
-                        className: a.modalCloseButton
+                        className: l.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(l.hzk, {
-                className: a.content,
-                children: (0, n.jsx)(l.Text, {
-                    className: a.description,
+            (0, n.jsx)(r.hzk, {
+                className: l.content,
+                children: (0, n.jsx)(r.Text, {
+                    className: l.description,
                     variant: 'text-md/normal',
-                    children: i.intl.format(i.t.Zvx0Oz, { email: s })
+                    children: a.NW.format(a.t.Zvx0Oz, { email: s })
                 })
             }),
-            (0, n.jsx)(l.hzk, {
-                className: a.content,
-                children: (0, n.jsx)(l.Text, {
-                    className: a.tooltip,
+            (0, n.jsx)(r.hzk, {
+                className: l.content,
+                children: (0, n.jsx)(r.Text, {
+                    className: l.tooltip,
                     variant: 'text-sm/normal',
-                    children: i.intl.string(i.t.yb7itb)
+                    children: a.NW.string(a.t.yb7itb)
                 })
             }),
-            (0, n.jsx)(l.mzw, {
-                className: a.modalFooter,
-                children: (0, n.jsx)(l.zxk, {
-                    className: a.__invalid_submit,
-                    color: l.zxk.Colors.BRAND,
-                    size: l.zxk.Sizes.MEDIUM,
+            (0, n.jsx)(r.mzw, {
+                className: l.modalFooter,
+                children: (0, n.jsx)(r.zxk, {
+                    className: l.__invalid_submit,
+                    color: r.zxk.Colors.BRAND,
+                    size: r.zxk.Sizes.MEDIUM,
                     onClick: t,
-                    children: i.intl.string(i.t.BddRzc)
+                    children: a.NW.string(a.t.BddRzc)
                 })
             })
         ]

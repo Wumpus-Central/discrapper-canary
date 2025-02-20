@@ -1,6 +1,6 @@
-n.d(t, { U: () => r });
-var i = n(594174);
-let r = () => {
+n.d(t, { U: () => i });
+var r = n(594174);
+let i = () => {
     var e;
-    return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
+    return (null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
 };

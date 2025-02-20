@@ -1,20 +1,20 @@
-e.d(i, { Z: () => a }), e(653041);
-var s = e(342412),
-    n = e(722734);
-function h(t, i, e) {
+i.d(e, { Z: () => h }), i(653041);
+var s = i(342412),
+    n = i(722734);
+function a(t, e, i) {
     return (
-        i in t
-            ? Object.defineProperty(t, i, {
-                  value: e,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[i] = e),
+            : (t[e] = i),
         t
     );
 }
-let a = class {
+let h = class {
     initialize() {
         (this.particles = []),
             this.wind.initialize(),
@@ -26,15 +26,15 @@ let a = class {
         (this.particles = []), this.wind.terminate(), null != this.loadInTimer && clearTimeout(this.loadInTimer);
     }
     update(t) {
-        0 !== this.particles.length && (!this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), this.wind.update(), this.particles.forEach((i) => i.update(10 * this.wind.forceX * t, 10 * Math.min(this.wind.forceY, -0.001) * t + -0.1)));
+        0 !== this.particles.length && (!this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + t)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * t)), this.wind.update(), this.particles.forEach((e) => e.update(10 * this.wind.forceX * t, 10 * Math.min(this.wind.forceY, -0.001) * t + -0.1)));
     }
     render(t) {
-        0 !== this.particles.length && (t.save(), (t.globalCompositeOperation = 'source-atop'), this.particles.forEach((i) => i.render(t, this.alpha)), t.restore());
+        0 !== this.particles.length && (t.save(), (t.globalCompositeOperation = 'source-atop'), this.particles.forEach((e) => e.render(t, this.alpha)), t.restore());
     }
     fill() {
         this.isFilled = !0;
     }
     constructor() {
-        h(this, 'particles', []), h(this, 'wind', new n.Z()), h(this, 'alpha', 0), h(this, 'isFilled', !1), h(this, 'loadInTimer', null);
+        a(this, 'particles', []), a(this, 'wind', new n.Z()), a(this, 'alpha', 0), a(this, 'isFilled', !1), a(this, 'loadInTimer', null);
     }
 };

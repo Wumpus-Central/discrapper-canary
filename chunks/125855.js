@@ -1,42 +1,42 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var l = n(6025),
-    r = n(433355),
-    a = n(626135),
-    s = n(585483),
-    o = n(545724),
-    d = n(426051),
-    c = n(981631);
-function u(e) {
-    let { index: t, className: n, channel: u, user: h, hasSingleMessageRequest: m } = e;
-    return (0, i.jsx)(o.Z, {
+var i = n(6025),
+    l = n(433355),
+    o = n(626135),
+    a = n(585483),
+    s = n(545724),
+    c = n(426051),
+    u = n(981631);
+function d(e) {
+    let { index: t, className: n, channel: d, user: p, hasSingleMessageRequest: h } = e;
+    return (0, r.jsx)(s.Z, {
         index: t,
         className: n,
         isFocused: !1,
-        channel: u,
-        user: h,
+        channel: d,
+        user: p,
         onClick: (e) => {
             e.stopPropagation(),
-                l.Z.openPrivateChannelAsSidebar({
-                    channelId: u.id,
-                    baseChannelId: r.uZ,
-                    hasSingleMessageRequest: m
+                i.Z.openPrivateChannelAsSidebar({
+                    channelId: d.id,
+                    baseChannelId: l.uZ,
+                    hasSingleMessageRequest: h
                 }),
-                a.default.track(c.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                o.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
-                    channel_id: u.id,
-                    other_user_id: h.id
+                    channel_id: d.id,
+                    other_user_id: p.id
                 }),
                 setTimeout(() => {
-                    s.S.dispatch(c.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: u.id });
+                    a.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: d.id });
                 }, 0);
         },
         children: (e) =>
-            (0, i.jsx)(d.Z, {
+            (0, r.jsx)(c.Z, {
                 active: e,
-                user: h,
-                channel: u
+                user: p,
+                channel: d
             })
     });
 }

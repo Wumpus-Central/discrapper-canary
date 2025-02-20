@@ -1,22 +1,22 @@
-s.d(e, { Z: () => r });
-var i = s(200651);
+s.d(t, { Z: () => l });
+var a = s(200651);
 s(192379);
-var a = s(481060),
-    n = s(726169),
-    l = s(660097);
-function r(t) {
-    let { user: e, size: s } = t,
-        r = (0, a.UCu)(s),
-        c = null != e ? e.getAvatarURL(null, r.size) : l;
-    return (0, i.jsx)('div', {
-        className: n.avatarBackground,
-        children: (0, i.jsx)('div', {
-            className: n.avatar,
+var n = s(481060),
+    i = s(238209),
+    r = s(660097);
+function l(e) {
+    let { user: t, size: s } = e,
+        l = (0, n.UCu)(s),
+        c = null != t ? t.getAvatarURL(null, l.size) : r;
+    return (0, a.jsx)('div', {
+        className: i.avatarBackground,
+        children: (0, a.jsx)('div', {
+            className: i.avatar,
             style: {
-                width: r.size,
-                height: r.size
+                width: l.size,
+                height: l.size
             },
-            children: (0, i.jsx)(a.qEK, {
+            children: (0, a.jsx)(n.qEK, {
                 src: c,
                 'aria-hidden': !0,
                 size: s

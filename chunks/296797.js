@@ -1,31 +1,31 @@
-n.d(t, { Z: () => h });
-var i = n(192379),
-    l = n(592125),
-    a = n(944486),
-    r = n(585483),
-    s = n(16609),
-    o = n(917107),
+n.d(t, { Z: () => p });
+var r = n(192379),
+    i = n(592125),
+    l = n(944486),
+    o = n(585483),
+    a = n(16609),
+    s = n(917107),
     c = n(89425),
-    d = n(197386),
-    u = n(981631);
-function h(e) {
+    u = n(197386),
+    d = n(981631);
+function p(e) {
     let { onTransition: t } = e;
-    i.useEffect(() => {
+    r.useEffect(() => {
         async function e(e) {
             let { location: n } = e,
-                i = (0, s.pY)(n);
-            if (null == i || !(0, o.Z)(i)) return;
-            a.Z.getVoiceChannelId() !== i && (await (0, c.Z)({ channelId: i }));
-            let r = l.Z.getChannel(i),
-                u = null == r ? void 0 : r.guild_id;
+                r = (0, a.pY)(n);
+            if (null == r || !(0, s.Z)(r)) return;
+            l.Z.getVoiceChannelId() !== r && (await (0, c.Z)({ channelId: r }));
+            let o = i.Z.getChannel(r),
+                d = null == o ? void 0 : o.guild_id;
             setTimeout(() => {
-                (0, d.Z)(u, n), null == t || t();
+                (0, u.Z)(d, n), null == t || t();
             }, 0);
         }
         return (
-            r.S.subscribe(u.CkL.OPEN_EMBEDDED_ACTIVITY, e),
+            o.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e),
             () => {
-                r.S.unsubscribe(u.CkL.OPEN_EMBEDDED_ACTIVITY, e);
+                o.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
             }
         );
     }, [t]);

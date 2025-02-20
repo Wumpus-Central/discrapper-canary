@@ -1,26 +1,26 @@
-n.d(t, { Z: () => x });
-var i = n(200651);
+n.d(t, { Z: () => h });
+var r = n(200651);
 n(192379);
-var s = n(410575),
-    r = n(100527),
-    l = n(89057),
-    a = n(536844),
+var i = n(410575),
+    s = n(100527),
+    a = n(89057),
+    l = n(536844),
     o = n(625252),
     c = n(921801),
     d = n(541540),
     u = n(206339),
     m = n(726985),
     g = n(981631),
-    h = n(932653);
-function x() {
-    return (0, i.jsxs)(i.Fragment, {
+    p = n(101242);
+function h() {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(c.F, {
+            (0, r.jsx)(c.F, {
                 setting: m.s6.GIFT_NITRO,
-                children: (0, i.jsx)(a.Z, {
-                    location: r.Z.USER_SETTINGS_GIFT_INVENTORY,
-                    className: h.giftNitro,
-                    imageClassName: h.giftNitroImage,
+                children: (0, r.jsx)(l.Z, {
+                    location: s.Z.USER_SETTINGS_GIFT_INVENTORY,
+                    className: p.giftNitro,
+                    imageClassName: p.giftNitroImage,
                     textContainerOverrideStyles: {
                         padding: '32px',
                         width: '360px'
@@ -31,30 +31,30 @@ function x() {
                     }
                 })
             }),
-            (0, i.jsx)(c.F, {
+            (0, r.jsx)(c.F, {
                 setting: m.s6.GIFT_CODE_REDEMPTION,
-                children: (0, i.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     section: g.jXE.LIBRARY_INVENTORY_CODE_REDEMPTION,
-                    children: (0, i.jsx)(d.Z, {})
+                    children: (0, r.jsx)(d.Z, {})
                 })
             }),
-            (0, i.jsx)(c.F, {
+            (0, r.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_QUESTS,
-                children: (0, i.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     section: g.jXE.QUESTS,
-                    children: (0, i.jsx)(o.Z, {})
+                    children: (0, r.jsx)(o.Z, {})
                 })
             }),
-            (0, i.jsx)(c.F, {
+            (0, r.jsx)(c.F, {
                 setting: m.s6.GIFT_INVENTORY_LIST,
-                children: (0, i.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     section: g.jXE.LIBRARY_INVENTORY_GIFTS_LIST,
-                    children: (0, i.jsx)(u.Z, {})
+                    children: (0, r.jsx)(u.Z, {})
                 })
             }),
-            (0, i.jsx)(c.F, {
+            (0, r.jsx)(c.F, {
                 setting: m.s6.GIFT_BLOCKED_PAYMENTS,
-                children: (0, i.jsx)(l.c8, {})
+                children: (0, r.jsx)(a.c8, {})
             })
         ]
     });

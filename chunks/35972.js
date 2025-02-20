@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r });
-var i = n(871074);
-function r() {
-    if ('undefined' == typeof Reflect || !i || i.sham) return !1;
+n.d(t, { Z: () => i });
+var r = n(871074);
+function i() {
+    if ('undefined' == typeof Reflect || !r || r.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
-        return Boolean.prototype.valueOf.call(i(Boolean, [], function () {})), !0;
+        return Boolean.prototype.valueOf.call(r(Boolean, [], function () {})), !0;
     } catch (e) {
         return !1;
     }

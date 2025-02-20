@@ -1,5 +1,5 @@
-n.d(t, { J: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { J: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-02_app_dm_opt_out_settings',
     label: 'App DM Opt Out Settings',

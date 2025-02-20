@@ -1,10 +1,10 @@
-n.d(t, { _: () => r });
-var i = n(186928);
-let r = {
-    default: i.colorDefault,
-    brand: i.colorBrand,
-    danger: i.colorDanger,
-    premium: i.colorPremium,
-    'premium-gradient': i.colorPremiumGradient,
-    success: i.colorSuccess
+n.d(t, { _: () => i });
+var r = n(253068);
+let i = {
+    default: r.colorDefault,
+    brand: r.colorBrand,
+    danger: r.colorDanger,
+    premium: r.colorPremium,
+    'premium-gradient': r.colorPremiumGradient,
+    success: r.colorSuccess
 };

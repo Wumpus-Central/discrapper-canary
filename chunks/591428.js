@@ -1,18 +1,18 @@
 n.d(t, { Z: () => m });
-var i = n(192379),
-    r = n(723184),
-    a = (function () {
+var r = n(192379),
+    i = n(723184),
+    o = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function s(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,14 +25,14 @@ function s(e, t, n) {
         e
     );
 }
-function o(e, t) {
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function u(e, t) {
+function c(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -44,19 +44,19 @@ function u(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var c = 1,
+var u = 1,
     d = 38,
     f = [38, 40],
-    _ = function (e) {
+    p = function (e) {
         return f.indexOf(e) > -1;
     },
-    p = function (e) {
+    _ = function (e) {
         return Number(String(e).replace(/%/g, ''));
     },
     h = 1;
 let m = (function (e) {
     function t(e) {
-        o(this, t);
+        s(this, t);
         var n = l(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             (n.handleBlur = function () {
@@ -70,11 +70,11 @@ let m = (function (e) {
                 n.setUpdatedValue(e.target.value, e);
             }),
             (n.handleKeyDown = function (e) {
-                var t = p(e.target.value);
-                if (!isNaN(t) && _(e.keyCode)) {
-                    var i = n.getArrowOffset(),
-                        r = e.keyCode === d ? t + i : t - i;
-                    n.setUpdatedValue(r, e);
+                var t = _(e.target.value);
+                if (!isNaN(t) && p(e.keyCode)) {
+                    var r = n.getArrowOffset(),
+                        i = e.keyCode === d ? t + r : t - r;
+                    n.setUpdatedValue(i, e);
                 }
             }),
             (n.handleDrag = function (e) {
@@ -101,8 +101,8 @@ let m = (function (e) {
         );
     }
     return (
-        u(t, e),
-        a(t, [
+        c(t, e),
+        o(t, [
             {
                 key: 'componentDidUpdate',
                 value: function (e, t) {
@@ -125,13 +125,13 @@ let m = (function (e) {
             {
                 key: 'getValueObjectWithLabel',
                 value: function (e) {
-                    return s({}, this.props.label, e);
+                    return a({}, this.props.label, e);
                 }
             },
             {
                 key: 'getArrowOffset',
                 value: function () {
-                    return this.props.arrowOffset || c;
+                    return this.props.arrowOffset || u;
                 }
             },
             {
@@ -145,7 +145,7 @@ let m = (function (e) {
                 key: 'render',
                 value: function () {
                     var e = this,
-                        t = (0, r.default)(
+                        t = (0, i.default)(
                             {
                                 default: { wrap: { position: 'relative' } },
                                 'user-override': {
@@ -158,10 +158,10 @@ let m = (function (e) {
                             { 'user-override': !0 },
                             this.props
                         );
-                    return i.createElement(
+                    return r.createElement(
                         'div',
                         { style: t.wrap },
-                        i.createElement('input', {
+                        r.createElement('input', {
                             id: this.inputId,
                             style: t.input,
                             ref: function (t) {
@@ -175,7 +175,7 @@ let m = (function (e) {
                             spellCheck: 'false'
                         }),
                         this.props.label && !this.props.hideLabel
-                            ? i.createElement(
+                            ? r.createElement(
                                   'label',
                                   {
                                       htmlFor: this.inputId,
@@ -191,4 +191,4 @@ let m = (function (e) {
         ]),
         t
     );
-})(i.PureComponent || i.Component);
+})(r.PureComponent || r.Component);

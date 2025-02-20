@@ -1,12 +1,12 @@
 n.d(t, { Z: () => E }), n(47120);
-var i = n(570140),
-    r = n(147913),
-    a = n(314897),
-    s = n(967368),
-    o = n(592125),
+var r = n(570140),
+    i = n(147913),
+    o = n(314897),
+    a = n(967368),
+    s = n(592125),
     l = n(944486),
-    u = n(631768),
-    c = n(981631);
+    c = n(631768),
+    u = n(981631);
 function d(e, t, n) {
     return (
         t in e
@@ -22,44 +22,44 @@ function d(e, t, n) {
 }
 function f() {
     let e = l.Z.getVoiceChannelId(),
-        t = s.Z.bitrate;
+        t = a.Z.bitrate;
     if (null == e) return;
-    let n = o.Z.getChannel(e);
+    let n = s.Z.getChannel(e);
     null != n &&
         t !== n.bitrate &&
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'SET_CHANNEL_BITRATE',
             bitrate: n.bitrate
         });
 }
-function _() {
+function p() {
     var e;
     let t = l.Z.getVoiceChannelId(),
-        n = u.Z.mode;
+        n = c.Z.mode;
     if (null == t) return;
-    let r = o.Z.getChannel(t);
-    if (null == r) return;
-    let a = null !== (e = r.videoQualityMode) && void 0 !== e ? e : c.Ucd.AUTO;
-    n !== a &&
-        i.Z.dispatch({
+    let i = s.Z.getChannel(t);
+    if (null == i) return;
+    let o = null !== (e = i.videoQualityMode) && void 0 !== e ? e : u.Ucd.AUTO;
+    n !== o &&
+        r.Z.dispatch({
             type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
-            mode: a
+            mode: o
         });
 }
-function p() {
-    f(), _();
+function _() {
+    f(), p();
 }
 function h(e) {
     let { channels: t } = e;
-    for (let e of t) l.Z.getVoiceChannelId() === e.id && p();
+    for (let e of t) l.Z.getVoiceChannelId() === e.id && _();
 }
 function m(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
-        a.default.getSessionId() === e.sessionId && p();
+        o.default.getSessionId() === e.sessionId && _();
     });
 }
-class g extends r.Z {
+class g extends i.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', {

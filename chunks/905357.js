@@ -1,23 +1,23 @@
 n.d(t, {
-    T: () => o,
-    k: () => s
+    T: () => s,
+    k: () => a
 });
-var i = n(311570),
-    r = n(228624),
-    a = n(388032);
-let s = (e) => {
-        let t = (0, r.hv)('useProductName') === i.v.VARIANTS_GROUP;
+var r = n(311570),
+    i = n(228624),
+    o = n(388032);
+let a = (e) => {
+        let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
         if (null == e) return '';
-        let n = a.intl.string(a.t.z7y5vL);
+        let n = o.NW.string(o.t.z7y5vL);
         return t && 'baseVariantName' in e && null != e.baseVariantName && e.variantLabel !== n
-            ? a.intl.formatToPlainString(a.t.BZN5k5, {
+            ? o.NW.formatToPlainString(o.t.BZN5k5, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel
               })
             : e.name;
     },
-    o = (e) => {
-        let t = (0, r.hv)('useProductName') === i.v.VARIANTS_GROUP;
+    s = (e) => {
+        let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
         if (null == e) return '';
         if (t) {
             if ('baseVariantName' in e && null != e.baseVariantName) return e.baseVariantName;

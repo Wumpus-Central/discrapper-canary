@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
-var i = n(392711),
-    l = n.n(i),
-    r = n(996106),
-    a = n(981631);
-function s(e, t, n) {
+n.d(t, { Z: () => s });
+var r = n(392711),
+    i = n.n(r),
+    l = n(996106),
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,19 +16,19 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+class s {
     constructor(e, t, n) {
         if (
-            (s(this, 'transport', void 0),
-            s(this, 'version', void 0),
-            s(this, 'encoding', void 0),
-            s(this, 'id', void 0),
-            s(this, 'authorization', void 0),
-            s(this, 'application', void 0),
+            (a(this, 'transport', void 0),
+            a(this, 'version', void 0),
+            a(this, 'encoding', void 0),
+            a(this, 'id', void 0),
+            a(this, 'authorization', void 0),
+            a(this, 'application', void 0),
             (this.transport = e),
             (this.version = t),
             (this.encoding = n),
-            (this.id = l().uniqueId()),
+            (this.id = i().uniqueId()),
             (this.authorization = {
                 authing: !1,
                 scopes: [],
@@ -40,8 +40,8 @@ class o {
                 name: null,
                 icon: null
             }),
-            null == t || t > a.X6Q || t < 1)
+            null == t || t > o.X6Q || t < 1)
         )
-            throw new r.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
+            throw new l.Z({ closeCode: o.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
     }
 }

@@ -1,60 +1,60 @@
 n.d(t, {
-    BG: () => x,
-    DO: () => _,
-    pt: () => p
+    BG: () => h,
+    DO: () => b,
+    pt: () => f
 }),
     n(47120);
-var i = n(570140),
-    r = n(668781),
-    l = n(881052),
-    s = n(45966),
-    a = n(637853),
+var r = n(570140),
+    i = n(668781),
+    s = n(881052),
+    a = n(45966),
+    l = n(637853),
     o = n(592125),
     c = n(823379),
     d = n(889369),
     u = n(570961),
     m = n(208665),
-    h = n(290511),
+    p = n(290511),
     g = n(388032);
-function x() {
-    i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
+function h() {
+    r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
 }
-function p(e) {
-    i.Z.dispatch({
+function f(e) {
+    r.Z.dispatch({
         type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE',
         channelId: e
     });
 }
-async function _(e) {
+async function b(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
-        [x, p] = (0, a.d9)(e.id, [...t]),
-        _ = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
-        C = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (s.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (_.length < h.md || C.length < h.X)))) {
-        r.Z.show({
-            title: g.intl.string(g.t.iLdiqa),
-            body: g.intl.string(g.t.JOT74e)
+        [h, f] = (0, l.d9)(e.id, [...t]),
+        b = (0, l.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        x = (0, l.kl)(e.id, t, m.Z.editedOnboardingPrompts, l.V7);
+    if (a.Z.getEnabled(e.id) && ((!n && (f.length < p.md || h.length < p.X)) || (n && (b.length < p.md || x.length < p.X)))) {
+        i.Z.show({
+            title: g.NW.string(g.t.iLdiqa),
+            body: g.NW.string(g.t.JOT74e)
         });
         return;
     }
     if (d.Z.hasChanges()) {
-        i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
+        r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT' });
         try {
             await (0, u.n_)(e.id, { default_channel_ids: t }),
-                i.Z.dispatch({
+                r.Z.dispatch({
                     type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS',
                     guildId: e.id,
                     channelIds: t
                 });
         } catch (n) {
-            var f;
-            let { fieldName: e, error: t } = null !== (f = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== f ? f : {};
-            r.Z.show({
-                title: g.intl.string(g.t.iLdiqa),
+            var j;
+            let { fieldName: e, error: t } = null !== (j = new s.Hx(n).getAnyErrorMessageAndField()) && void 0 !== j ? j : {};
+            i.Z.show({
+                title: g.NW.string(g.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')
             }),
-                i.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });
+                r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED' });
         }
     }
 }

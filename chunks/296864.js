@@ -1,85 +1,85 @@
-i.d(n, { default: () => k }), i(47120);
-var l = i(200651),
-    t = i(192379),
+i.d(n, { default: () => y }), i(47120), i(266796);
+var t = i(200651),
+    l = i(192379),
     a = i(120356),
-    s = i.n(a),
-    r = i(442837),
+    r = i.n(a),
+    s = i(442837),
     c = i(481060),
     o = i(313201),
-    d = i(41776),
-    u = i(357156),
+    u = i(41776),
+    d = i(357156),
     h = i(513449),
     v = i(592125),
-    x = i(430824),
-    m = i(305298),
+    m = i(430824),
+    x = i(305298),
     g = i(405613),
-    C = i(460838),
-    N = i(765305),
-    j = i(388032),
-    p = i(618575);
-function k(e) {
+    N = i(460838),
+    j = i(765305),
+    p = i(388032),
+    C = i(353590);
+function y(e) {
     var n;
-    let { transitionState: i, event: a, onSuccess: k, onClose: E } = e,
-        I = (0, o.Dt)(),
-        { guild_id: Z, privacy_level: y } = a,
-        f = (0, r.e7)([v.Z], () => v.Z.getChannel(a.channel_id), [a]),
-        T = (0, r.e7)([x.Z], () => x.Z.getGuild(Z), [Z]),
-        { canManageGuildEvent: w } = (0, u.XJ)(null != f ? f : T),
-        _ = w(a),
-        S = (0, r.e7)([d.Z], () => d.Z.isLurking(Z), [Z]),
-        A = a.entity_type === N.WX.STAGE_INSTANCE,
-        [G, L] = t.useState(A),
-        [b, { loading: X, error: R }] = (0, m.Z)();
-    if (!_) return null;
-    let P = y === N.j8.PUBLIC ? j.intl.string(j.t.HhlaLC) : j.intl.string(j.t.GI3xXV),
-        M = () => {
-            null == k || k(), E(), (0, h.Ku)(!1);
+    let { transitionState: i, event: a, onSuccess: y, onClose: f } = e,
+        k = (0, o.Dt)(),
+        { guild_id: b, privacy_level: E } = a,
+        w = (0, s.e7)([v.Z], () => v.Z.getChannel(a.channel_id), [a]),
+        I = (0, s.e7)([m.Z], () => m.Z.getGuild(b), [b]),
+        { canManageGuildEvent: Z } = (0, d.XJ)(null != w ? w : I),
+        S = Z(a),
+        T = (0, s.e7)([u.Z], () => u.Z.isLurking(b), [b]),
+        O = a.entity_type === j.WX.STAGE_INSTANCE,
+        [_, P] = l.useState(O),
+        [A, { loading: G, error: L }] = (0, x.Z)();
+    if (!S) return null;
+    let X = E === j.j8.PUBLIC ? p.NW.string(p.t.HhlaLC) : p.NW.string(p.t.GI3xXV),
+        W = () => {
+            null == y || y(), f(), (0, h.Ku)(!1);
         },
-        z = async () => {
-            await b(a, G, { onSuccess: M });
+        R = async () => {
+            await A(a, _, { onSuccess: W });
         };
-    return (0, l.jsx)(c.Y0X, {
+    return (0, t.jsx)(c.Y0X, {
         transitionState: i,
-        'aria-labelledby': I,
-        children: (0, l.jsxs)(c.hzk, {
-            className: p.content,
+        'aria-labelledby': k,
+        children: (0, t.jsxs)(c.hzk, {
+            className: C.content,
             children: [
-                (0, l.jsx)('div', {
-                    className: p.previewCard,
-                    children: (0, l.jsx)(C.Z, {
-                        guild: T,
-                        channel: f,
+                (0, t.jsx)('div', {
+                    className: C.previewCard,
+                    children: (0, t.jsx)(N.Z, {
+                        guild: I,
+                        channel: w,
                         name: a.name,
                         description: null !== (n = a.description) && void 0 !== n ? n : void 0,
                         imageSource: (0, g.Z)(a),
                         isActive: !1,
-                        isUserLurking: S,
+                        isUserLurking: T,
                         speakers: [],
                         speakerCount: 0,
                         rsvped: !0,
                         guildEvent: a
                     })
                 }),
-                (0, l.jsx)(c.Text, {
+                (0, t.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: p.privacyLevel,
+                    className: C.privacyLevel,
                     variant: 'text-sm/normal',
-                    children: j.intl.format(j.t.UMajoq, {
-                        privacyLevel: P,
+                    children: p.NW.format(p.t.UMajoq, {
+                        privacyLevel: X,
                         privacyLevelHook: (e, n) =>
-                            y !== N.j8.PUBLIC
+                            E !== j.j8.PUBLIC
                                 ? null
-                                : (0, l.jsxs)(
+                                : (0, t.jsxs)(
                                       'div',
                                       {
-                                          className: p.privacyLevel,
+                                          className: C.privacyLevel,
                                           children: [
-                                              (0, l.jsx)(c.enf, {
+                                              (0, t.jsx)(c.enf, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: p.publicIcon
+                                                  className: C.publicIcon
                                               }),
-                                              (0, l.jsx)(c.Text, {
+                                              (0, t.jsx)(c.Text, {
                                                   variant: 'text-sm/normal',
                                                   children: e
                                               })
@@ -89,51 +89,51 @@ function k(e) {
                                   )
                     })
                 }),
-                (0, l.jsx)(c.X6q, {
+                (0, t.jsx)(c.X6q, {
                     variant: 'heading-xl/semibold',
-                    className: p.header,
+                    className: C.header,
                     children: a.name
                 }),
-                A &&
-                    (0, l.jsx)(c.XZJ, {
-                        className: p.verticalSpacing,
+                O &&
+                    (0, t.jsx)(c.XZJ, {
+                        className: C.verticalSpacing,
                         type: c.XZJ.Types.INVERTED,
-                        value: G,
+                        value: _,
                         onChange: (e) => {
                             let { currentTarget: n } = e;
-                            return L(n.checked);
+                            return P(n.checked);
                         },
-                        children: (0, l.jsx)(c.Text, {
+                        children: (0, t.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: j.intl.string(j.t.dGNtgI)
+                            children: p.NW.string(p.t.dGNtgI)
                         })
                     }),
-                (0, l.jsxs)('div', {
-                    className: s()(p.inline, p.buttons, p.verticalSpacing),
+                (0, t.jsxs)('div', {
+                    className: r()(C.inline, C.buttons, C.verticalSpacing),
                     children: [
-                        (0, l.jsx)(c.zxk, {
+                        (0, t.jsx)(c.zxk, {
                             color: c.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                E();
+                                f();
                             },
-                            className: s()(p.button, p.spacing),
-                            children: j.intl.string(j.t.CZGqeX)
+                            className: r()(C.button, C.spacing),
+                            children: p.NW.string(p.t.CZGqeX)
                         }),
-                        (0, l.jsx)(c.zxk, {
+                        (0, t.jsx)(c.zxk, {
                             color: c.zxk.Colors.GREEN,
-                            onClick: z,
-                            submitting: X,
-                            className: p.button,
-                            children: j.intl.string(j.t.cK1GGR)
+                            onClick: R,
+                            submitting: G,
+                            className: C.button,
+                            children: p.NW.string(p.t.cK1GGR)
                         })
                     ]
                 }),
-                null != R && null != R.getAnyErrorMessage()
-                    ? (0, l.jsx)(c.Text, {
+                null != L && null != L.getAnyErrorMessage()
+                    ? (0, t.jsx)(c.Text, {
                           color: 'text-danger',
                           variant: 'text-sm/normal',
-                          className: p.errorMessage,
-                          children: R.getAnyErrorMessage()
+                          className: C.errorMessage,
+                          children: L.getAnyErrorMessage()
                       })
                     : null
             ]

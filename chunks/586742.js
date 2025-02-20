@@ -20,9 +20,9 @@ var i = n(200651),
     y = n(444295),
     E = n(906037),
     x = n(804570),
-    S = n(501787),
-    C = n(981631),
-    I = n(65154),
+    I = n(501787),
+    S = n(981631),
+    C = n(65154),
     j = n(388032),
     w = n(772630);
 function Z(e) {
@@ -75,10 +75,10 @@ function P(e) {
     return (0, a.e7)([v.Z], () => null != n.user && null != o && null != r && v.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(g.ZP, Z({}, e));
 }
 function T(e) {
-    let { context: t = I.Yn.DEFAULT, participants: o, locked: a, widget: u, channel: d, width: p, height: f, containerRef: g } = e,
+    let { context: t = C.Yn.DEFAULT, participants: o, locked: a, widget: u, channel: d, width: p, height: f, containerRef: g } = e,
         _ = (e, r) => {
             let o = e.user;
-            (0, y.Ws)(C.Odu.VIDEO, {
+            (0, y.Ws)(S.Odu.VIDEO, {
                 type: y.Qu.CAMERA,
                 value: y.bk.SETTINGS_OPENED,
                 userId: null == o ? void 0 : o.id
@@ -176,7 +176,7 @@ function k(e) {
         h = e.widget.pinned || !e.locked;
     r.useEffect(() => {
         h &&
-            (0, y.zi)(C.Odu.VIDEO, {
+            (0, y.zi)(S.Odu.VIDEO, {
                 locked: b.Z.isInstanceLocked(),
                 shownUserIds: c,
                 liveUserIds: c,
@@ -185,10 +185,10 @@ function k(e) {
     }, [c, h]);
     let g = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: v, height: E, ref: x } = (0, d.Z)(e.locked, e.widget.pinned),
-        { participantTileWidth: I, visibleParticipants: j } = (0, _.ZB)(g ? (null != v ? v : e.width) : null != E ? E : e.height, l, {
-            tileWidth: S.vZ,
-            tileMinWidth: S.mo,
-            tileMargin: S.F$,
+        { participantTileWidth: C, visibleParticipants: j } = (0, _.ZB)(g ? (null != v ? v : e.width) : null != E ? E : e.height, l, {
+            tileWidth: I.vZ,
+            tileMinWidth: I.mo,
+            tileMargin: I.F$,
             limit: 8,
             cropSelfVideo: !0,
             version: s
@@ -221,8 +221,8 @@ function k(e) {
                 title: null != n ? n : '',
                 participants: j,
                 participantsVersion: s,
-                width: g ? I : null != v ? v : e.width,
-                height: g ? (null != E ? E : e.height) : I,
+                width: g ? C : null != v ? v : e.width,
+                height: g ? (null != E ? E : e.height) : C,
                 containerRef: x
             })
         )

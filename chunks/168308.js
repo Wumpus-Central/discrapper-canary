@@ -1,16 +1,16 @@
 n.d(t, {
-    Jw: () => s,
+    Jw: () => a,
     bC: () => l
 });
-var i = n(442837),
-    r = n(808506),
-    a = n(358085);
-function s() {
-    return a.isPlatformEmbedded;
+var r = n(442837),
+    i = n(808506),
+    o = n(358085);
+function a() {
+    return o.isPlatformEmbedded;
 }
-function o(e) {
+function s(e) {
     return e || !1;
 }
 function l() {
-    return o((0, i.e7)([r.Z], () => r.Z.isSupported()));
+    return s((0, r.e7)([i.Z], () => i.Z.isSupported()));
 }

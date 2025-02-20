@@ -1,40 +1,40 @@
 n.d(t, {
     Mt: () => d,
-    Sh: () => i.S,
+    Sh: () => r.S,
     TO: () => l,
-    W$: () => s,
-    Yn: () => a.Yn,
-    aB: () => r.a,
-    jj: () => c,
-    zZ: () => o
+    W$: () => a,
+    Yn: () => o.Yn,
+    aB: () => i.a,
+    jj: () => u,
+    zZ: () => s
 });
-var i = n(839548),
-    r = n(946695),
-    a = n(65154),
-    s = (function (e) {
+var r = n(839548),
+    i = n(946695),
+    o = n(65154),
+    a = (function (e) {
         return (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream'), e;
     })({}),
-    o = (function (e) {
+    s = (function (e) {
         return (e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement'), e;
     })({}),
     l = (function (e) {
         return (e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive'), e;
     })({});
-function u(e) {
+function c(e) {
     switch (e) {
-        case a.AS.NATIVE:
+        case o.AS.NATIVE:
             return n(743426).Z;
-        case a.AS.WEBRTC:
+        case o.AS.WEBRTC:
             return n(959856).Z;
-        case a.AS.DUMMY:
+        case o.AS.DUMMY:
         default:
             return n(135670).Z;
     }
 }
-function c() {
+function u() {
     var e;
-    return null !== (e = [a.AS.NATIVE, a.AS.WEBRTC].find((e) => u(e).supported())) && void 0 !== e ? e : a.AS.DUMMY;
+    return null !== (e = [o.AS.NATIVE, o.AS.WEBRTC].find((e) => c(e).supported())) && void 0 !== e ? e : o.AS.DUMMY;
 }
 function d(e) {
-    return new (u(e))();
+    return new (c(e))();
 }

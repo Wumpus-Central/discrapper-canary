@@ -1,38 +1,38 @@
 function t(e) {
     var t;
-    return 'number' == typeof e ? (e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null) : (t = l.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : _.hasOwnProperty(e) ? _[e] : (t = l.rgb.exec(e)) ? ((u(t[1]) << 24) | (u(t[2]) << 16) | (u(t[3]) << 8) | 255) >>> 0 : (t = l.rgba.exec(e)) ? ((u(t[1]) << 24) | (u(t[2]) << 16) | (u(t[3]) << 8) | d(t[4])) >>> 0 : (t = l.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = l.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = l.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = l.hsl.exec(e)) ? (255 | i(c(t[1]), f(t[2]), f(t[3]))) >>> 0 : (t = l.hsla.exec(e)) ? (i(c(t[1]), f(t[2]), f(t[3])) | d(t[4])) >>> 0 : null;
+    return 'number' == typeof e ? (e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null) : (t = l.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : p.hasOwnProperty(e) ? p[e] : (t = l.rgb.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | 255) >>> 0 : (t = l.rgba.exec(e)) ? ((c(t[1]) << 24) | (c(t[2]) << 16) | (c(t[3]) << 8) | d(t[4])) >>> 0 : (t = l.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = l.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = l.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = l.hsl.exec(e)) ? (255 | r(u(t[1]), f(t[2]), f(t[3]))) >>> 0 : (t = l.hsla.exec(e)) ? (r(u(t[1]), f(t[2]), f(t[3])) | d(t[4])) >>> 0 : null;
 }
 function n(e, t, n) {
     return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
 }
-function i(e, t, i) {
-    var r = i < 0.5 ? i * (1 + t) : i + t - i * t,
-        a = 2 * i - r;
-    return (Math.round(255 * n(a, r, e + 1 / 3)) << 24) | (Math.round(255 * n(a, r, e)) << 16) | (Math.round(255 * n(a, r, e - 1 / 3)) << 8);
+function r(e, t, r) {
+    var i = r < 0.5 ? r * (1 + t) : r + t - r * t,
+        o = 2 * r - i;
+    return (Math.round(255 * n(o, i, e + 1 / 3)) << 24) | (Math.round(255 * n(o, i, e)) << 16) | (Math.round(255 * n(o, i, e - 1 / 3)) << 8);
 }
-var r = '[-+]?\\d*\\.?\\d+',
-    a = r + '%';
-function s(e) {
+var i = '[-+]?\\d*\\.?\\d+',
+    o = i + '%';
+function a(e) {
     return Array.prototype.slice.call(e, 0);
 }
-function o() {
-    return '\\(\\s*(' + s(arguments).join(')\\s*,\\s*(') + ')\\s*\\)';
+function s() {
+    return '\\(\\s*(' + a(arguments).join(')\\s*,\\s*(') + ')\\s*\\)';
 }
 var l = {
-    rgb: RegExp('rgb' + o(r, r, r)),
-    rgba: RegExp('rgba' + o(r, r, r, r)),
-    hsl: RegExp('hsl' + o(r, a, a)),
-    hsla: RegExp('hsla' + o(r, a, a, r)),
+    rgb: RegExp('rgb' + s(i, i, i)),
+    rgba: RegExp('rgba' + s(i, i, i, i)),
+    hsl: RegExp('hsl' + s(i, o, o)),
+    hsla: RegExp('hsla' + s(i, o, o, i)),
     hex3: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex4: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex6: /^#([0-9a-fA-F]{6})$/,
     hex8: /^#([0-9a-fA-F]{8})$/
 };
-function u(e) {
+function c(e) {
     var t = parseInt(e, 10);
     return t < 0 ? 0 : t > 255 ? 255 : t;
 }
-function c(e) {
+function u(e) {
     return (((parseFloat(e) % 360) + 360) % 360) / 360;
 }
 function d(e) {
@@ -43,7 +43,7 @@ function f(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-var _ = {
+var p = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,
@@ -195,7 +195,7 @@ var _ = {
     yellow: 4294902015,
     yellowgreen: 2597139199
 };
-function p(e) {
+function _(e) {
     return {
         r: Math.round((4278190080 & e) >>> 24),
         g: Math.round((16711680 & e) >>> 16),
@@ -203,4 +203,4 @@ function p(e) {
         a: ((255 & e) >>> 0) / 255
     };
 }
-(t.rgba = p), (e.exports = t);
+(t.rgba = _), (e.exports = t);

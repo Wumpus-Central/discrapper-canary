@@ -1,55 +1,55 @@
-i = { value: !0 };
-var i,
-    r = n(703403);
-i = {
+r = { value: !0 };
+var r,
+    i = n(703403);
+r = {
     enumerable: !0,
     get: function () {
-        return d(r).default;
+        return d(i).default;
     }
 };
-var a = n(122024);
-i = {
+var o = n(122024);
+r = {
+    enumerable: !0,
+    get: function () {
+        return d(o).default;
+    }
+};
+var a = n(101401);
+r = {
     enumerable: !0,
     get: function () {
         return d(a).default;
     }
 };
-var s = n(101401);
-i = {
+var s = n(302019);
+Object.defineProperty(t, 'Hue', {
     enumerable: !0,
     get: function () {
         return d(s).default;
     }
-};
-var o = n(302019);
-Object.defineProperty(t, 'Hue', {
-    enumerable: !0,
-    get: function () {
-        return d(o).default;
-    }
 });
 var l = n(87977);
-i = {
+r = {
     enumerable: !0,
     get: function () {
         return d(l).default;
     }
 };
-var u = n(138473);
+var c = n(138473);
 Object.defineProperty(t, 'Saturation', {
     enumerable: !0,
     get: function () {
-        return d(u).default;
+        return d(c).default;
     }
 });
-var c = n(15488);
+var u = n(15488);
 function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-(i = {
+(r = {
     enumerable: !0,
     get: function () {
-        return d(c).default;
+        return d(u).default;
     }
 }),
     n(393377);

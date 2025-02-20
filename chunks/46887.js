@@ -1,10 +1,10 @@
-s.d(t, { Z: () => r });
-var l = s(192379),
-    i = s(442837),
-    n = s(430824),
-    a = s(687476);
-function r(e) {
-    let t = (0, i.e7)([n.Z], () => n.Z.getRoles(e)),
-        s = (0, i.e7)([a.Z], () => a.Z.getSubscriptionRoles(e));
-    return l.useMemo(() => Object.values(t).filter((e) => s.has(e.id)), [t, s]);
+r.d(t, { Z: () => a });
+var n = r(192379),
+    i = r(442837),
+    l = r(430824),
+    s = r(687476);
+function a(e) {
+    let t = (0, i.e7)([l.Z], () => l.Z.getRoles(e)),
+        r = (0, i.e7)([s.Z], () => s.Z.getSubscriptionRoles(e));
+    return n.useMemo(() => Object.values(t).filter((e) => r.has(e.id)), [t, r]);
 }

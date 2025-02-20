@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(931619),
-    o = n(981631);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(931619),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,27 +17,27 @@ function l(e, t, n) {
         e
     );
 }
-let u = o.IWh.UNKNOWN,
-    c = o.IyS.UNKNOWN,
+let c = s.IWh.UNKNOWN,
+    u = s.IyS.UNKNOWN,
     d = null;
 function f(e) {
     var t;
-    (u = null != e.type ? e.type : o.IWh.UNKNOWN), (c = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : o.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange();
+    (c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), _.emitChange();
 }
-class _ extends (i = r.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     initialize() {
-        s.Z.getNetworkInformation().then(f), s.Z.addChangeCallback(f);
+        a.Z.getNetworkInformation().then(f), a.Z.addChangeCallback(f);
     }
     getType() {
-        return u;
+        return c;
     }
     getEffectiveConnectionSpeed() {
-        return c;
+        return u;
     }
     getServiceProvider() {
         return d;
     }
 }
-l(_, 'displayName', 'NetworkStore');
-let p = new _(a.Z, {}),
-    h = p;
+l(p, 'displayName', 'NetworkStore');
+let _ = new p(o.Z, {}),
+    h = _;

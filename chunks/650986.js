@@ -6,11 +6,11 @@ function t(e) {
             subLanguage: 'xml',
             relevance: 0
         },
-        i = {
+        r = {
             begin: '^[-\\*]{3,}',
             end: '$'
         },
-        r = {
+        i = {
             className: 'code',
             variants: [
                 { begin: '(`{3,})[^`](.|\\n)*?\\1`*[ ]*' },
@@ -36,13 +36,13 @@ function t(e) {
                 }
             ]
         },
-        a = {
+        o = {
             className: 'bullet',
             begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
             end: '\\s+',
             excludeEnd: !0
         },
-        s = {
+        a = {
             begin: /^\[[^\n]+\]:/,
             returnBegin: !0,
             contains: [
@@ -61,7 +61,7 @@ function t(e) {
                 }
             ]
         },
-        o = /[A-Za-z][A-Za-z0-9+.-]*/,
+        s = /[A-Za-z][A-Za-z0-9+.-]*/,
         l = {
             variants: [
                 {
@@ -73,7 +73,7 @@ function t(e) {
                     relevance: 2
                 },
                 {
-                    begin: t.concat(/\[.+?\]\(/, o, /:\/\/.*?\)/),
+                    begin: t.concat(/\[.+?\]\(/, s, /:\/\/.*?\)/),
                     relevance: 2
                 },
                 {
@@ -114,7 +114,7 @@ function t(e) {
                 }
             ]
         },
-        u = {
+        c = {
             className: 'strong',
             contains: [],
             variants: [
@@ -128,7 +128,7 @@ function t(e) {
                 }
             ]
         },
-        c = {
+        u = {
             className: 'emphasis',
             contains: [],
             variants: [
@@ -143,13 +143,13 @@ function t(e) {
                 }
             ]
         },
-        d = e.inherit(u, { contains: [] }),
-        f = e.inherit(c, { contains: [] });
-    u.contains.push(f), c.contains.push(d);
-    let _ = [n, l];
+        d = e.inherit(c, { contains: [] }),
+        f = e.inherit(u, { contains: [] });
+    c.contains.push(f), u.contains.push(d);
+    let p = [n, l];
     return (
-        [u, c, d, f].forEach((e) => {
-            e.contains = e.contains.concat(_);
+        [c, u, d, f].forEach((e) => {
+            e.contains = e.contains.concat(p);
         }),
         {
             name: 'Markdown',
@@ -161,7 +161,7 @@ function t(e) {
                         {
                             begin: '^#{1,6}',
                             end: '$',
-                            contains: (_ = _.concat(u, c))
+                            contains: (p = p.concat(c, u))
                         },
                         {
                             begin: '(?=^.+?\\n[=-]{2,}$)',
@@ -170,26 +170,26 @@ function t(e) {
                                 {
                                     begin: '^',
                                     end: '\\n',
-                                    contains: _
+                                    contains: p
                                 }
                             ]
                         }
                     ]
                 },
                 n,
-                a,
-                u,
+                o,
                 c,
+                u,
                 {
                     className: 'quote',
                     begin: '^>\\s+',
-                    contains: _,
+                    contains: p,
                     end: '$'
                 },
-                r,
                 i,
+                r,
                 l,
-                s,
+                a,
                 {
                     scope: 'literal',
                     match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/

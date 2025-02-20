@@ -1,27 +1,27 @@
-n.d(t, { B: () => o }), n(47120), n(653041);
-var l = n(192379),
-    r = n(512969),
-    i = n(822857),
-    a = n(215023),
-    s = n(981631);
-let o = (e, t, n) => {
-    let { enabled: o } = (0, i.W)({ location: 'useShopViewTransition' }),
-        d = l.useMemo(() => (t !== a.AW.ORBS || o ? t : a.AW.HOME), [t, o]),
-        [c, u] = l.useState(d),
-        [C, h] = l.useState(a.f7.HIDDEN);
-    l.useEffect(() => {
-        u(d), h(a.f7.VISIBLE);
-    }, [d]);
-    let m = (e) => new Promise((t) => setTimeout(t, e)),
-        p = (0, r.k6)();
+r.d(t, { B: () => s }), r(47120), r(653041);
+var n = r(192379),
+    l = r(512969),
+    i = r(822857),
+    a = r(215023),
+    o = r(981631);
+let s = (e, t, r) => {
+    let { enabled: s } = (0, i.W)({ location: 'useShopViewTransition' }),
+        c = n.useMemo(() => (t !== a.AW.ORBS || s ? t : a.AW.HOME), [t, s]),
+        [d, u] = n.useState(c),
+        [p, f] = n.useState(a.f7.HIDDEN);
+    n.useEffect(() => {
+        u(c), f(a.f7.VISIBLE);
+    }, [c]);
+    let h = (e) => new Promise((t) => setTimeout(t, e)),
+        C = (0, l.k6)();
     return {
-        selectedTab: c,
-        transitionState: C,
-        transitionToTab: l.useCallback(
-            async (t, l) => {
-                l ? (h(a.f7.OUT), await m(1.1 * a.lb), u(t), n || p.push(s.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), h(a.f7.IN)) : (u(t), n || p.push(s.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), h(a.f7.VISIBLE);
+        selectedTab: d,
+        transitionState: p,
+        transitionToTab: n.useCallback(
+            async (t, n) => {
+                n ? (f(a.f7.OUT), await h(1.1 * a.lb), u(t), r || C.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), f(a.f7.IN)) : (u(t), r || C.push(o.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), f(a.f7.VISIBLE);
             },
-            [p, n, e]
+            [C, r, e]
         )
     };
 };

@@ -1,6 +1,6 @@
-n.d(t, { X: () => o });
-var i = n(596691),
-    r = n(91641),
-    a = n(89805),
-    s = n(987338);
-let o = new r.E([a.NR, a.ZI, a.Ob, a.uc, a.m1, i.K], s.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });
+n.d(t, { X: () => s });
+var r = n(596691),
+    i = n(91641),
+    o = n(89805),
+    a = n(987338);
+let s = new i.E([o.NR, o.ZI, o.Ob, o.uc, o.m1, r.K], a.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => p }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,23 @@ function s(e, t, n) {
         e
     );
 }
-let o = new Set(),
+let s = new Set(),
     l = {};
-function u(e) {
+function c(e) {
     let { gameId: t, isLaunchable: n } = e;
     l[t] = n;
 }
-function c(e) {
+function u(e) {
     let { applicationId: t } = e;
-    o.add(t);
+    s.add(t);
 }
 function d(e) {
     let { applicationId: t } = e;
-    o.delete(t);
+    s.delete(t);
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     get launchingGames() {
-        return o;
+        return s;
     }
     get launchableGames() {
         return l;
@@ -40,18 +40,18 @@ class f extends (i = r.ZP.Store) {
         return null != l[e]
             ? l[e]
             : ((l[e] = !1),
-              a.Z.dispatch({
+              o.Z.dispatch({
                   type: 'CHECK_LAUNCHABLE_GAME',
                   gameId: e
               }),
               !1);
     }
 }
-s(f, 'displayName', 'LaunchableGameStore');
-let _ = new f(a.Z, {
-    GAME_LAUNCHABLE_UPDATE: u,
-    GAME_CLOUD_SYNC_START: c,
-    GAME_LAUNCH_START: c,
+a(f, 'displayName', 'LaunchableGameStore');
+let p = new f(o.Z, {
+    GAME_LAUNCHABLE_UPDATE: c,
+    GAME_CLOUD_SYNC_START: u,
+    GAME_LAUNCH_START: u,
     GAME_LAUNCH_SUCCESS: d,
     GAME_LAUNCH_FAIL: d,
     GAME_CLOUD_SYNC_CONFLICT: d,

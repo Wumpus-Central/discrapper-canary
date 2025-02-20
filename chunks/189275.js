@@ -1,36 +1,36 @@
-n.d(t, { O: () => u });
-var i = n(200651);
+n.d(t, { O: () => c });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(626135),
-    s = n(799352),
-    o = n(110223),
+var i = n(481060),
+    o = n(626135),
+    a = n(799352),
+    s = n(110223),
     l = n(981631);
-function u(e) {
-    let { channelId: t, blockedUserIds: u, ignoredUserIds: c } = e;
-    (0, r.ZDy)(
+function c(e) {
+    let { channelId: t, blockedUserIds: c, ignoredUserIds: u } = e;
+    (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('87337').then(n.bind(n, 164375));
+            let { default: e } = await Promise.all([n.e('25176'), n.e('94094')]).then(n.bind(n, 164375));
             return (n) => {
-                let { transitionState: r, onClose: a } = n;
-                return (0, i.jsx)(e, {
+                let { transitionState: i, onClose: o } = n;
+                return (0, r.jsx)(e, {
                     channelId: t,
-                    blockedUserIds: u,
-                    ignoredUserIds: c,
-                    transitionState: r,
-                    onClose: a
+                    blockedUserIds: c,
+                    ignoredUserIds: u,
+                    transitionState: i,
+                    onClose: o
                 });
             };
         },
         {
             onCloseCallback: () => {
-                (0, s.O)(t),
-                    a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                        action: o.q.DISMISS,
+                (0, a.O)(t),
+                    o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: s.q.DISMISS,
                         channel_id: t,
-                        warning_medium: o.WR.MODAL,
-                        blocked_user_ids: u,
-                        ignored_user_ids: c
+                        warning_medium: s.WR.MODAL,
+                        blocked_user_ids: c,
+                        ignored_user_ids: u
                     });
             }
         }

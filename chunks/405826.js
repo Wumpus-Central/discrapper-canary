@@ -1,15 +1,15 @@
-n.d(t, { N: () => T }), n(757143), n(47120);
-var i = n(623279),
-    r = n(392711),
-    a = n.n(r),
-    s = n(374470),
-    o = n(579806),
+n.d(t, { N: () => O }), n(757143), n(301563), n(47120);
+var r = n(623279),
+    i = n(392711),
+    o = n.n(i),
+    a = n(374470),
+    s = n(579806),
     l = n(710845),
-    u = n(706454),
-    c = n(823379),
+    c = n(706454),
+    u = n(823379),
     d = n(598105),
     f = n(643413);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,19 +22,19 @@ function _(e, t, n) {
         e
     );
 }
-let p = 250,
+let _ = 250,
     h = new l.Z('Spellchecker'),
-    m = null === o.Z || void 0 === o.Z ? void 0 : o.Z.spellCheck;
+    m = null === s.Z || void 0 === s.Z ? void 0 : s.Z.spellCheck;
 function g(e) {
     var t;
     e = null !== (t = f.Z[e]) && void 0 !== t ? t : e;
-    let n = (0, i.parse)(e.replace(/[_-]/g, '-'));
+    let n = (0, r.parse)(e.replace(/[_-]/g, '-'));
     if (null == n || null == n.langtag.language || null == n.langtag.region) {
         h.error(''.concat(e, ' is not a valid locale.'));
         return;
     }
-    let { language: r, region: a } = n.langtag;
-    return ''.concat(r.language.toLowerCase(), '-').concat(a.toUpperCase());
+    let { language: i, region: o } = n.langtag;
+    return ''.concat(i.language.toLowerCase(), '-').concat(o.toUpperCase());
 }
 class E {
     get enabled() {
@@ -65,8 +65,8 @@ class E {
         return (
             e.forEach((e) => {
                 var n;
-                let [i] = e.split('-');
-                t[i] = null !== (n = t[i]) && void 0 !== n ? n : e;
+                let [r] = e.split('-');
+                t[r] = null !== (n = t[r]) && void 0 !== n ? n : e;
             }),
             t
         );
@@ -81,16 +81,16 @@ class E {
         m.replaceMisspelling(e);
     }
     constructor(e) {
-        _(this, 'languageDetector', void 0), _(this, 'regionPreference', void 0), _(this, '_enabled', !0), _(this, 'misspelledWord', ''), _(this, 'corrections', []);
-        let [t, n] = u.default.locale.split('-');
+        p(this, 'languageDetector', void 0), p(this, 'regionPreference', void 0), p(this, '_enabled', !0), p(this, 'misspelledWord', ''), p(this, 'corrections', []);
+        let [t, n] = c.default.locale.split('-');
         this.regionPreference = n;
-        let i = this.getAvailableLanguages(e);
+        let r = this.getAvailableLanguages(e);
         (this.languageDetector = new d.Z(t, (n) => {
-            let r = ''.concat(n, '-').concat(this.regionPreference);
-            if (-1 !== e.indexOf(r)) this.setLocale(r);
+            let i = ''.concat(n, '-').concat(this.regionPreference);
+            if (-1 !== e.indexOf(i)) this.setLocale(i);
             else {
-                var a;
-                let e = null !== (a = i[n]) && void 0 !== a ? a : f.Z[t];
+                var o;
+                let e = null !== (o = r[n]) && void 0 !== o ? o : f.Z[t];
                 null != e && this.setLocale(e);
             }
         })),
@@ -99,18 +99,18 @@ class E {
             });
     }
 }
-let v = a().debounce((e, t) => {
-    let n = I(t);
+let v = o().debounce((e, t) => {
+    let n = y(t);
     null != n && e.detectLanguage(n);
-}, p);
-function y(e) {
+}, _);
+function b(e) {
     null != document.body && document.body.addEventListener('beforeinput', (t) => v(e, t.target), !0);
 }
-function I(e) {
-    return null == e ? null : (0, s.k)(e, HTMLInputElement) || (0, s.k)(e, HTMLTextAreaElement) ? e.value : (0, s.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
+function y(e) {
+    return null == e ? null : (0, a.k)(e, HTMLInputElement) || (0, a.k)(e, HTMLTextAreaElement) ? e.value : (0, a.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
 }
-async function T() {
+async function O() {
     var e;
-    let t = new E((null !== (e = await m.getAvailableDictionaries()) && void 0 !== e ? e : []).map(g).filter(c.lm));
-    return y(t), t;
+    let t = new E((null !== (e = await m.getAvailableDictionaries()) && void 0 !== e ? e : []).map(g).filter(u.lm));
+    return b(t), t;
 }

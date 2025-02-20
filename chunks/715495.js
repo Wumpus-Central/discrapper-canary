@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(711325),
     h = n(852630),
     f = n(731994),
-    N = n(178389);
-function x(e) {
+    b = n(178389);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,10 +64,10 @@ function _() {
         [l, c] = (0, i.useState)(null),
         [m, g] = (0, i.useState)([]),
         h = (0, i.useCallback)((e) => {
-            c((t) => (null == t ? { src: e } : b(x({}, t), { src: e })));
+            c((t) => (null == t ? { src: e } : x(N({}, t), { src: e })));
         }, []),
         _ = (0, i.useCallback)((e) => {
-            c((t) => (null == t ? { animatedSrc: e } : b(x({}, t), { animatedSrc: e })));
+            c((t) => (null == t ? { animatedSrc: e } : x(N({}, t), { animatedSrc: e })));
         }, []),
         T = (0, i.useCallback)((e) => {
             g((t) => t.filter((t) => t !== e));
@@ -75,13 +75,13 @@ function _() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: N.controls,
+                className: b.controls,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.toggles,
+                        className: b.toggles,
                         children: [
                             (0, r.jsx)(o.zxk, {
-                                className: N.toggleButton,
+                                className: b.toggleButton,
                                 size: o.PhG.SMALL,
                                 onClick: () => {
                                     a(!1), n((e) => !e);
@@ -90,7 +90,7 @@ function _() {
                                 children: 'Toggle Themes'
                             }),
                             (0, r.jsx)(o.zxk, {
-                                className: N.toggleButton,
+                                className: b.toggleButton,
                                 size: o.PhG.SMALL,
                                 onClick: () => {
                                     n(!1), a((e) => !e);
@@ -101,7 +101,7 @@ function _() {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: N.themePicker,
+                        className: b.themePicker,
                         children: [
                             t && (0, r.jsx)(u.i, {}),
                             ' ',
@@ -109,7 +109,7 @@ function _() {
                                 (0, r.jsx)(p.Z, {
                                     selected: null == l ? void 0 : null === (e = l.palette) || void 0 === e ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        c((t) => (null == t ? { palette: e } : b(x({}, t), { palette: e })));
+                                        c((t) => (null == t ? { palette: e } : x(N({}, t), { palette: e })));
                                     }
                                 })
                         ]
@@ -117,10 +117,10 @@ function _() {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: N.main,
+                className: b.main,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: N.previews,
+                        className: b.previews,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
@@ -140,7 +140,7 @@ function _() {
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: N.buttons,
+                        className: b.buttons,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
@@ -159,7 +159,7 @@ function _() {
                                 }
                             }),
                             (0, r.jsx)('div', {
-                                className: N.uploadedArea,
+                                className: b.uploadedArea,
                                 children: m.map((e) =>
                                     (0, r.jsx)(
                                         E,
@@ -175,7 +175,7 @@ function _() {
                             }),
                             (0, r.jsx)(C, {
                                 label: 'border color',
-                                onChange: (e) => c((t) => (null == t ? { borderColor: e } : b(x({}, t), { borderColor: e })))
+                                onChange: (e) => c((t) => (null == t ? { borderColor: e } : x(N({}, t), { borderColor: e })))
                             }),
                             (0, r.jsx)(j, {
                                 label: 'set',
@@ -191,11 +191,11 @@ function _() {
 function E(e) {
     let { src: t, onSetStatic: n, onSetAnimated: i, removeAsset: s } = e;
     return (0, r.jsxs)('div', {
-        className: N.uploaded,
+        className: b.uploaded,
         children: [
             (0, r.jsx)(o.P3F, {
                 onClick: () => s(t),
-                className: N.xicon,
+                className: b.xicon,
                 children: (0, r.jsx)(o.Dio, {
                     size: 'custom',
                     width: 16,
@@ -204,12 +204,12 @@ function E(e) {
                 })
             }),
             (0, r.jsx)('img', {
-                className: N.uploadedImg,
+                className: b.uploadedImg,
                 src: t,
                 alt: ''
             }),
             (0, r.jsxs)('div', {
-                className: N.uploadedControls,
+                className: b.uploadedControls,
                 children: [
                     (0, r.jsx)(o.zxk, {
                         onClick: () => n(t),
@@ -231,7 +231,7 @@ function E(e) {
 function j(e) {
     let { label: t, onClick: n } = e;
     return (0, r.jsxs)('div', {
-        className: N.flex,
+        className: b.flex,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-sm/normal',
@@ -250,7 +250,7 @@ function j(e) {
 function C(e) {
     let { label: t, onChange: n } = e;
     return (0, r.jsxs)('div', {
-        className: N.hexInput,
+        className: b.hexInput,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-sm/normal',
@@ -260,7 +260,7 @@ function C(e) {
                 onChange: (e) => {
                     n(e.target.value);
                 },
-                className: N.inputs,
+                className: b.inputs,
                 placeholder: '#000000'
             })
         ]
@@ -270,12 +270,12 @@ function O(e) {
     let { nameplate: t } = e,
         n = (0, l.e7)([m.default], () => m.default.getCurrentUser());
     return (0, r.jsx)('div', {
-        className: N.preview,
+        className: b.preview,
         children: (0, r.jsxs)('div', {
-            className: N.simArea,
+            className: b.simArea,
             children: [
                 (0, r.jsx)(o.Text, {
-                    className: N.label,
+                    className: b.label,
                     variant: 'text-sm/semibold',
                     children: 'DEFAULT'
                 }),
@@ -285,7 +285,7 @@ function O(e) {
                     currentUser: n
                 }),
                 (0, r.jsx)(o.Text, {
-                    className: N.label,
+                    className: b.label,
                     variant: 'text-sm/semibold',
                     children: 'FOCUSED'
                 }),
@@ -311,18 +311,18 @@ function O(e) {
 function v(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)('div', {
-        className: a()(N.preview, N.resizer),
+        className: a()(b.preview, b.resizer),
         children: (0, r.jsxs)('div', {
-            className: N.simArea,
+            className: b.simArea,
             children: [
                 (0, r.jsx)(o.Text, {
-                    className: N.label,
+                    className: b.label,
                     variant: 'text-sm/semibold',
                     children: 'DEFAULT'
                 }),
                 (0, r.jsx)(h.Z, { nameplate: t }),
                 (0, r.jsx)(o.Text, {
-                    className: N.label,
+                    className: b.label,
                     variant: 'text-sm/semibold',
                     children: 'FOCUSED'
                 }),
@@ -342,7 +342,7 @@ function v(e) {
 function S(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)('div', {
-        className: N.rtcSim,
+        className: b.rtcSim,
         children: (0, r.jsx)(g.Z, { nameplate: t })
     });
 }

@@ -1,52 +1,52 @@
-t.d(n, {
-    Pz: () => p,
-    ZP: () => C,
-    am: () => f
+n.d(t, {
+    Pz: () => g,
+    ZP: () => _,
+    am: () => h
 }),
-    t(47120);
-var a,
-    i = t(200651),
-    r = t(192379),
-    l = t(120356),
-    o = t.n(l),
-    s = t(481060),
-    c = t(768762),
-    u = t(843436);
-function d(e, n, t) {
+    n(47120);
+var r,
+    a = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    s = n(481060),
+    c = n(768762),
+    d = n(156266);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let _ = {
-    CENTER: u.alignCenter,
-    LEFT: u.alignLeft
+let p = {
+    CENTER: d.alignCenter,
+    LEFT: d.alignLeft
 };
-class h extends (a = r.PureComponent) {
+class m extends (r = i.PureComponent) {
     componentDidUpdate(e) {
-        let { selectedIndex: n } = this.props;
-        e.selectedIndex !== n && this.handleSelectedIndexChange(n);
+        let { selectedIndex: t } = this.props;
+        e.selectedIndex !== t && this.handleSelectedIndexChange(t);
     }
     render() {
-        let { renderItem: e, items: n, vertical: t, paginationContainerClass: a, align: l } = this.props,
-            c = t ? u.verticalPaginationItemContainer : u.horizontalPaginationItemContainer;
-        return (0, i.jsx)(s.yWw, {
-            orientation: t ? 'vertical' : 'horizontal',
-            className: o()(c, a, l),
+        let { renderItem: e, items: t, vertical: n, paginationContainerClass: r, align: l } = this.props,
+            c = n ? d.verticalPaginationItemContainer : d.horizontalPaginationItemContainer;
+        return (0, a.jsx)(s.yWw, {
+            orientation: n ? 'vertical' : 'horizontal',
+            className: o()(c, r, l),
             ref: this.handleSetScrollerRef,
-            children: n.map((n, t) =>
-                r.cloneElement(e(n, t), {
-                    onClick: () => this.handlePageClick(t),
-                    key: t,
+            children: t.map((t, n) =>
+                i.cloneElement(e(t, n), {
+                    onClick: () => this.handlePageClick(n),
+                    key: n,
                     ref: (e) => {
-                        this._paginationItemRefs[t] = e;
+                        this._paginationItemRefs[n] = e;
                     }
                 })
             )
@@ -54,82 +54,82 @@ class h extends (a = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, '_scrollerRef', null),
-            d(this, '_paginationItemRefs', []),
-            d(this, 'handleSetScrollerRef', (e) => {
+            u(this, '_scrollerRef', null),
+            u(this, '_paginationItemRefs', []),
+            u(this, 'handleSetScrollerRef', (e) => {
                 this._scrollerRef = e;
             }),
-            d(this, 'handleSelectedIndexChange', (e) => {
-                let n = this._scrollerRef;
-                if (null == n) return;
-                let t = this._paginationItemRefs[e];
-                null != t &&
-                    n.scrollIntoViewNode({
-                        node: t,
+            u(this, 'handleSelectedIndexChange', (e) => {
+                let t = this._scrollerRef;
+                if (null == t) return;
+                let n = this._paginationItemRefs[e];
+                null != n &&
+                    t.scrollIntoViewNode({
+                        node: n,
                         animate: !0,
                         padding: this.props.scrollToPadding
                     });
             }),
-            d(this, 'handlePageClick', (e) => {
-                let { onSetItem: n } = this.props;
-                n(e);
+            u(this, 'handlePageClick', (e) => {
+                let { onSetItem: t } = this.props;
+                t(e);
             });
     }
 }
-d(h, 'Align', _),
-    d(h, 'defaultProps', {
+u(m, 'Align', p),
+    u(m, 'defaultProps', {
         scrollToPadding: {
             top: 0,
             left: 0,
             bottom: 0,
             right: 0
         },
-        align: _.CENTER
+        align: p.CENTER
     });
-class f extends r.PureComponent {
+class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, i.jsx)(s.zxk, {
+        return (0, a.jsx)(s.zxk, {
             look: s.zxk.Looks.BLANK,
             size: s.zxk.Sizes.NONE,
-            className: o()(u.prevButtonContainer, e),
+            className: o()(d.prevButtonContainer, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(c.Z, {
-                className: u.arrow,
+            children: (0, a.jsx)(c.Z, {
+                className: d.arrow,
                 direction: c.Z.Directions.LEFT
             })
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, 'handlePrevClick', (e) => {
+            u(this, 'handlePrevClick', (e) => {
                 e.stopPropagation(), e.preventDefault();
-                let { onClick: n } = this.props;
-                null == n || n(e);
+                let { onClick: t } = this.props;
+                null == t || t(e);
             });
     }
 }
-class p extends r.PureComponent {
+class g extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, i.jsx)(s.zxk, {
+        return (0, a.jsx)(s.zxk, {
             look: s.zxk.Looks.BLANK,
             size: s.zxk.Sizes.NONE,
-            className: o()(u.nextButtonContainer, e),
+            className: o()(d.nextButtonContainer, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(c.Z, {
-                className: u.arrow,
+            children: (0, a.jsx)(c.Z, {
+                className: d.arrow,
                 direction: c.Z.Directions.RIGHT
             })
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, 'handleNextClick', (e) => {
+            u(this, 'handleNextClick', (e) => {
                 e.stopPropagation(), e.preventDefault();
-                let { onClick: n } = this.props;
-                null == n || n(e);
+                let { onClick: t } = this.props;
+                null == t || t(e);
             });
     }
 }
-let C = 12633 == t.j ? h : null;
+let _ = m;

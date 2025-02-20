@@ -1,5 +1,5 @@
-n.d(t, { b: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { b: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-04_game_settings_merge',
     label: 'Game Settings Merge',

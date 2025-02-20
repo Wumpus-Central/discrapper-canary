@@ -1,17 +1,17 @@
 n.d(t, {
-    NW: () => a,
-    tf: () => r,
-    zH: () => s
+    NW: () => o,
+    tf: () => i,
+    zH: () => a
 });
-var i = n(192379),
-    r = function (e) {
-        return (0, i.useEffect)(e, []);
+var r = n(192379),
+    i = function (e) {
+        return (0, r.useEffect)(e, []);
     },
-    a = function () {
-        var e = (0, i.useState)(0)[1],
-            t = (0, i.useRef)(!1);
+    o = function () {
+        var e = (0, r.useState)(0)[1],
+            t = (0, r.useRef)(!1);
         return (
-            r(function () {
+            i(function () {
                 return function () {
                     t.current = !0;
                 };
@@ -21,10 +21,10 @@ var i = n(192379),
             }
         );
     };
-function s(e) {
-    var t = (0, i.useRef)(void 0);
+function a(e) {
+    var t = (0, r.useRef)(void 0);
     return (
-        (0, i.useEffect)(function () {
+        (0, r.useEffect)(function () {
             t.current = e;
         }),
         t.current

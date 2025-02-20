@@ -1,6 +1,6 @@
 n(3532);
-var i = n(974802).Object,
-    r = (e.exports = function (e, t) {
-        return i.getOwnPropertyDescriptor(e, t);
+var r = n(974802).Object,
+    i = (e.exports = function (e, t) {
+        return r.getOwnPropertyDescriptor(e, t);
     });
-i.getOwnPropertyDescriptor.sham && (r.sham = !0);
+r.getOwnPropertyDescriptor.sham && (i.sham = !0);

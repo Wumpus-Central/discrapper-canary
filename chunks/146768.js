@@ -1,35 +1,35 @@
-i.d(n, { Z: () => c });
-var t = i(442837),
-    l = i(431328),
-    a = i(501655),
-    r = i(427679),
-    o = i(592125),
-    s = i(430824);
-function c(e) {
+t.d(n, { Z: () => s });
+var r = t(442837),
+    i = t(431328),
+    l = t(501655),
+    o = t(427679),
+    c = t(592125),
+    a = t(430824);
+function s(e) {
     let {
             id: n,
-            data: { guild: i, instance: c, speakers: d, participantCount: u },
+            data: { guild: t, instance: s, speakers: u, participantCount: d },
             context: g
         } = e,
-        h = (0, t.e7)(
-            [s.Z, o.Z],
+        p = (0, r.e7)(
+            [a.Z, c.Z],
             () => {
                 var e;
-                return s.Z.getGuild(null === (e = o.Z.getChannel(n)) || void 0 === e ? void 0 : e.getGuildId());
+                return a.Z.getGuild(null === (e = c.Z.getChannel(n)) || void 0 === e ? void 0 : e.getGuildId());
             },
             [n]
         ),
-        v = (0, t.e7)([r.Z], () => r.Z.getStageInstanceByChannel(n), [n]),
-        x = (0, l.w8)(n, a.pV.SPEAKER),
-        Z = (0, l.Rk)(n),
-        m = null != v ? x : d,
-        C = (null != v ? Z : u) - m.length;
+        v = (0, r.e7)([o.Z], () => o.Z.getStageInstanceByChannel(n), [n]),
+        h = (0, i.w8)(n, l.pV.SPEAKER),
+        f = (0, i.Rk)(n),
+        m = null != v ? h : u,
+        j = (null != v ? f : d) - m.length;
     return {
         channelId: n,
-        guild: null != h ? h : i,
-        stage: null != v ? v : c,
+        guild: null != p ? p : t,
+        stage: null != v ? v : s,
         speakers: m,
-        audienceCount: C,
+        audienceCount: j,
         context: g
     };
 }

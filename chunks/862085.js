@@ -1,63 +1,63 @@
 n.d(t, { Z: () => o });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(556012),
-    s = n(388032),
-    a = n(112862);
+var i = n(481060),
+    s = n(556012),
+    a = n(388032),
+    l = n(644378);
 function o(e) {
     let { action: t, triggerType: n, toggled: o, onToggleAction: c } = e,
         d = (e) => () => c(e),
-        u = (0, l.c)(t.type, t, n);
+        u = (0, s.c)(t.type, t, n);
     if (null == u) return null;
-    let { headerText: m, descriptionText: h, icon: g } = u;
-    return (0, i.jsxs)('div', {
-        className: a.actionContainer,
+    let { headerText: m, descriptionText: p, icon: g } = u;
+    return (0, r.jsxs)('div', {
+        className: l.actionContainer,
         children: [
-            (0, i.jsx)('div', {
-                className: a.actionIconContainer,
-                children: (0, i.jsx)(g, {
+            (0, r.jsx)('div', {
+                className: l.actionIconContainer,
+                children: (0, r.jsx)(g, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: a.actionIcon
+                    className: l.actionIcon
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: a.actionTextContainer,
+            (0, r.jsxs)('div', {
+                className: l.actionTextContainer,
                 children: [
-                    (0, i.jsx)(r.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-sm/semibold',
                         children: m
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: h
+                        children: p
                     }),
                     o
-                        ? (0, i.jsxs)(r.Text, {
+                        ? (0, r.jsxs)(i.Text, {
                               color: 'text-muted',
                               variant: 'text-xs/medium',
                               children: [
-                                  s.intl.string(s.t.Oa9oWF),
-                                  (0, i.jsx)(r.P3F, {
+                                  a.NW.string(a.t.Oa9oWF),
+                                  (0, r.jsx)(i.P3F, {
                                       onClick: d(!0),
-                                      className: a.editChannel,
+                                      className: l.editChannel,
                                       tag: 'span',
                                       role: 'link',
-                                      children: s.intl.string(s.t.QupmYW)
+                                      children: a.NW.string(a.t.QupmYW)
                                   })
                               ]
                           })
                         : null
                 ]
             }),
-            (0, i.jsx)('div', {
-                children: (0, i.jsx)(r.XZJ, {
-                    type: r.XZJ.Types.INVERTED,
+            (0, r.jsx)('div', {
+                children: (0, r.jsx)(i.XZJ, {
+                    type: i.XZJ.Types.INVERTED,
                     value: o,
                     onChange: d(!1),
-                    className: a.__invalid_actionCheckbox
+                    className: l.__invalid_actionCheckbox
                 })
             })
         ]

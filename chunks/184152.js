@@ -1,12 +1,12 @@
 function t(e) {
     let t = e.regex,
         n = t.concat(/[\p{L}_]/u, t.optional(/[\p{L}0-9_.-]*:/u), /[\p{L}0-9_.-]*/u),
-        i = /[\p{L}0-9._:-]+/u,
-        r = {
+        r = /[\p{L}0-9._:-]+/u,
+        i = {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        a = {
+        o = {
             begin: /\s/,
             contains: [
                 {
@@ -16,20 +16,20 @@ function t(e) {
                 }
             ]
         },
-        s = e.inherit(a, {
+        a = e.inherit(o, {
             begin: /\(/,
             end: /\)/
         }),
-        o = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
+        s = e.inherit(e.APOS_STRING_MODE, { className: 'string' }),
         l = e.inherit(e.QUOTE_STRING_MODE, { className: 'string' }),
-        u = {
+        c = {
             endsWithParent: !0,
             illegal: /</,
             relevance: 0,
             contains: [
                 {
                     className: 'attr',
-                    begin: i,
+                    begin: r,
                     relevance: 0
                 },
                 {
@@ -43,12 +43,12 @@ function t(e) {
                                 {
                                     begin: /"/,
                                     end: /"/,
-                                    contains: [r]
+                                    contains: [i]
                                 },
                                 {
                                     begin: /'/,
                                     end: /'/,
-                                    contains: [r]
+                                    contains: [i]
                                 },
                                 { begin: /[^\s"'=<>`]+/ }
                             ]
@@ -69,10 +69,10 @@ function t(e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    a,
-                    l,
                     o,
+                    l,
                     s,
+                    a,
                     {
                         begin: /\[/,
                         end: /\]/,
@@ -81,7 +81,7 @@ function t(e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [a, s, l, o]
+                                contains: [o, a, l, s]
                             }
                         ]
                     }
@@ -93,7 +93,7 @@ function t(e) {
                 end: /\]\]>/,
                 relevance: 10
             },
-            r,
+            i,
             {
                 className: 'meta',
                 end: /\?>/,
@@ -111,7 +111,7 @@ function t(e) {
                 begin: /<style(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'style' },
-                contains: [u],
+                contains: [c],
                 starts: {
                     end: /<\/style>/,
                     returnEnd: !0,
@@ -123,7 +123,7 @@ function t(e) {
                 begin: /<script(?=\s|>)/,
                 end: />/,
                 keywords: { name: 'script' },
-                contains: [u],
+                contains: [c],
                 starts: {
                     end: /<\/script>/,
                     returnEnd: !0,
@@ -143,7 +143,7 @@ function t(e) {
                         className: 'name',
                         begin: n,
                         relevance: 0,
-                        starts: u
+                        starts: c
                     }
                 ]
             },

@@ -1,12 +1,12 @@
 n.d(t, {
-    C5: () => r,
-    ZP: () => s
+    C5: () => i,
+    ZP: () => a
 });
-var i = n(818083),
-    r = (function (e) {
+var r = n(818083),
+    i = (function (e) {
         return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (e[(e.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (e[(e.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (e[(e.SHY = 5)] = 'SHY'), (e[(e.GALAXY = 6)] = 'GALAXY'), (e[(e.TIDE = 7)] = 'TIDE'), (e[(e.ROBERT = 8)] = 'ROBERT'), (e[(e.STORM = 9)] = 'STORM'), (e[(e.EQUINOX_FALL = 10)] = 'EQUINOX_FALL'), e;
     })({});
-let a = (0, i.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2023-12_collectibles_shop_marketing',
         label: 'Collectibles Shop Marketing Variations',
@@ -34,4 +34,4 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (e) => a.useExperiment({ location: e }).variant;
+    a = (e) => o.useExperiment({ location: e }).variant;

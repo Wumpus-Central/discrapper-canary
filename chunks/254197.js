@@ -1,34 +1,34 @@
 n.d(t, { k: () => l });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(925329),
-    s = n(388032),
-    o = n(123493);
+var i = n(481060),
+    o = n(925329),
+    a = n(388032),
+    s = n(735053);
 function l(e) {
     let { applications: t } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-normal',
-                className: o.header,
-                children: s.intl.string(s.t['Uv/eT0'])
+                className: s.header,
+                children: a.NW.string(a.t['Uv/eT0'])
             }),
-            (0, i.jsx)('div', {
-                className: o.list,
+            (0, r.jsx)('div', {
+                className: s.list,
                 children: t.map((e) => {
                     if (null != e)
-                        return (0, i.jsxs)(
+                        return (0, r.jsxs)(
                             'div',
                             {
-                                className: o.row,
+                                className: s.row,
                                 children: [
-                                    (0, i.jsx)(a.Z, {
+                                    (0, r.jsx)(o.Z, {
                                         game: e,
-                                        size: a.Z.Sizes.XXSMALL
+                                        size: o.Z.Sizes.XXSMALL
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, r.jsx)(i.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         children: e.name

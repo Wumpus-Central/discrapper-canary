@@ -1,26 +1,26 @@
 n.d(t, {
     OU: () => d,
     ZP: () => f,
-    fC: () => s
+    fC: () => a
 });
-var i = n(192379),
-    r = function () {
+var r = n(192379),
+    i = function () {
         (this.locks = []), (this.listeners = []);
     };
-function a(e, t, n) {
+function o(e, t, n) {
     void 0 === n && (n = !1);
-    var i = (function (e) {
+    var r = (function (e) {
             return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
                 acceptNode: function (e) {
                     return e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
                 }
             });
         })(e),
-        r = t.compareDocumentPosition(e),
-        a = null;
-    r & Node.DOCUMENT_POSITION_PRECEDING || n ? (a = i.firstChild()) : r & Node.DOCUMENT_POSITION_FOLLOWING && (a = i.lastChild()), (null != a ? a : e).focus();
+        i = t.compareDocumentPosition(e),
+        o = null;
+    i & Node.DOCUMENT_POSITION_PRECEDING || n ? (o = r.firstChild()) : i & Node.DOCUMENT_POSITION_FOLLOWING && (o = r.lastChild()), (null != o ? o : e).focus();
 }
-(r.prototype.add = function (e, t) {
+(i.prototype.add = function (e, t) {
     var n = {
         uid: e,
         setEnabled: t,
@@ -28,30 +28,30 @@ function a(e, t, n) {
     };
     this.toggleLayer(this.current(), !1), this.locks.push(n), this.toggleLayer(n, !0), this.emit();
 }),
-    (r.prototype.remove = function (e) {
+    (i.prototype.remove = function (e) {
         var t = this.locks.find(function (t) {
             return t.uid === e;
         });
         this.toggleLayer(t, !1);
         var n = this.current(),
-            i = null != n && n.uid === e;
+            r = null != n && n.uid === e;
         (this.locks = this.locks.filter(function (t) {
             return t.uid !== e;
         })),
-            i && this.toggleLayer(this.current(), !0),
+            r && this.toggleLayer(this.current(), !0),
             this.emit();
     }),
-    (r.prototype.current = function () {
+    (i.prototype.current = function () {
         return this.locks[this.locks.length - 1];
     }),
-    (r.prototype.isActive = function () {
+    (i.prototype.isActive = function () {
         var e = this.current();
         return null != e && e.enabled;
     }),
-    (r.prototype.toggleLayer = function (e, t) {
+    (i.prototype.toggleLayer = function (e, t) {
         null != e && (e.setEnabled(t), (e.enabled = t));
     }),
-    (r.prototype.subscribe = function (e) {
+    (i.prototype.subscribe = function (e) {
         var t = this;
         return (
             this.listeners.push(e),
@@ -63,28 +63,28 @@ function a(e, t, n) {
             }
         );
     }),
-    (r.prototype.emit = function () {
+    (i.prototype.emit = function () {
         var e = this,
             t = this.isActive();
         this.listeners.forEach(function (n) {
             return n(t, e.locks);
         });
     });
-var s = new r(),
-    o = 0;
+var a = new i(),
+    s = 0;
 function l(e) {
-    (0, i.useEffect)(
+    (0, r.useEffect)(
         function () {
-            return s.subscribe(e);
+            return a.subscribe(e);
         },
         [e]
     );
 }
-function u(e) {
-    var t = (0, i.useState)(function () {
+function c(e) {
+    var t = (0, r.useState)(function () {
         return document.activeElement;
     })[0];
-    (0, i.useLayoutEffect)(function () {
+    (0, r.useLayoutEffect)(function () {
         return function () {
             (null != e && e.current) ||
                 requestAnimationFrame(function () {
@@ -93,20 +93,20 @@ function u(e) {
         };
     }, []);
 }
-function c(e) {
-    var t = (0, i.useState)(function () {
-            return e || 'lock-' + o++;
+function u(e) {
+    var t = (0, r.useState)(function () {
+            return e || 'lock-' + s++;
         })[0],
-        n = (0, i.useRef)(!1);
+        n = (0, r.useRef)(!1);
     return (
-        (0, i.useLayoutEffect)(
+        (0, r.useLayoutEffect)(
             function () {
                 return (
-                    s.add(t, function (e) {
+                    a.add(t, function (e) {
                         return (n.current = e);
                     }),
                     function () {
-                        return s.remove(t);
+                        return a.remove(t);
                     }
                 );
             },
@@ -115,12 +115,12 @@ function c(e) {
         n
     );
 }
-var d = (0, i.memo)(function () {
-    var e = (0, i.useState)(!1),
+var d = (0, r.memo)(function () {
+    var e = (0, r.useState)(!1),
         t = e[0];
     return (
         l(e[1]),
-        (0, i.createElement)('div', {
+        (0, r.createElement)('div', {
             tabIndex: t ? 0 : void 0,
             style: {
                 position: 'fixed',
@@ -133,48 +133,48 @@ var d = (0, i.memo)(function () {
 function f(e, t) {
     void 0 === t && (t = {});
     var n = t.disableReturnRef,
-        r = t.attachTo;
-    void 0 === r && (r = document);
-    var s = t.disable,
-        o = c();
-    (0, i.useEffect)(
+        i = t.attachTo;
+    void 0 === i && (i = document);
+    var a = t.disable,
+        s = u();
+    (0, r.useEffect)(
         function () {
-            s && (o.current = !1);
+            a && (s.current = !1);
         },
-        [s]
+        [a]
     ),
-        (0, i.useLayoutEffect)(
+        (0, r.useLayoutEffect)(
             function () {
                 var t = e.current;
                 function n(t) {
-                    if (o.current) {
+                    if (s.current) {
                         var n = e.current;
                         if (null != n) {
-                            var i = t.target || document.body;
-                            n.contains(i) || (t.preventDefault(), t.stopImmediatePropagation(), a(n, i));
+                            var r = t.target || document.body;
+                            n.contains(r) || (t.preventDefault(), t.stopImmediatePropagation(), o(n, r));
                         }
                     }
                 }
-                function i(t) {
-                    if (o.current) {
+                function r(t) {
+                    if (s.current) {
                         var n = e.current;
                         if (null != n) {
                             (null != t.relatedTarget && t.relatedTarget !== document.body) || (t.preventDefault(), n.focus());
-                            var i = t.target || document.body;
-                            n.contains(i) || a(n, i);
+                            var r = t.target || document.body;
+                            n.contains(r) || o(n, r);
                         }
                     }
                 }
                 return (
-                    null == t || null == document.activeElement || t.contains(document.activeElement) || null != t.querySelector('[autofocus]') || a(t, document.activeElement, !0),
-                    r.addEventListener('focusin', n, { capture: !0 }),
-                    r.addEventListener('focusout', i, { capture: !0 }),
+                    null == t || null == document.activeElement || t.contains(document.activeElement) || null != t.querySelector('[autofocus]') || o(t, document.activeElement, !0),
+                    i.addEventListener('focusin', n, { capture: !0 }),
+                    i.addEventListener('focusout', r, { capture: !0 }),
                     function () {
-                        r.removeEventListener('focusin', n, { capture: !0 }), r.removeEventListener('focusout', i, { capture: !0 });
+                        i.removeEventListener('focusin', n, { capture: !0 }), i.removeEventListener('focusout', r, { capture: !0 });
                     }
                 );
             },
             [e]
         ),
-        u(n);
+        c(n);
 }

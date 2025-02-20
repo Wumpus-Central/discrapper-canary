@@ -10,7 +10,7 @@ var r = n(120356),
     s = n(476770),
     l = n(592286),
     c = n(388032),
-    d = n(35761);
+    d = n(513903);
 function u(e) {
     let { value: t, placeholder: n, onChange: r, disabled: s, className: c, autofocus: u } = e;
     return (0, o.jsx)(a.Kx8, {
@@ -44,7 +44,7 @@ function _(e) {
             value: t.response,
             onChange: r,
             autofocus: n,
-            placeholder: c.intl.string(c.t['Sqn+Wl'])
+            placeholder: c.NW.string(c.t['Sqn+Wl'])
         })
     });
 }

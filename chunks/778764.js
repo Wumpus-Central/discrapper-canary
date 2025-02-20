@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(960048),
     h = n(998502),
     f = n(365007),
-    N = n(15980),
-    x = n(755733),
-    b = n(981631),
+    b = n(15980),
+    N = n(755733),
+    x = n(981631),
     _ = n(388032),
     E = n(372811);
 function j(e) {
@@ -64,22 +64,22 @@ function C(e, t) {
 function O(e) {
     let { transitionState: t, onClose: a, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
-        [N, j] = i.useState(''),
+        [b, j] = i.useState(''),
         [C, O] = i.useState(!0),
-        [v, S] = i.useState(x.x.INIT),
+        [v, S] = i.useState(N.x.INIT),
         [T, I] = i.useState(''),
         [y, A] = i.useState(null),
         P = async () => {
             let e;
-            S(x.x.REGISTER);
-            let t = g.isPlatformEmbedded && h.ZP.supportsFeature(b.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            S(N.x.REGISTER);
+            let t = g.isPlatformEmbedded && h.ZP.supportsFeature(x.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                p.Z.captureException(e), A(_.NW.string(_.t.xSCvBQ)), S(x.x.INIT);
+                p.Z.captureException(e), A(_.NW.string(_.t.xSCvBQ)), S(N.x.INIT);
                 return;
             }
-            I(e), S(x.x.NAME);
+            I(e), S(N.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
@@ -92,7 +92,7 @@ function O(e) {
                     (0, r.jsxs)(l.X6q, {
                         id: m,
                         variant: 'heading-lg/semibold',
-                        children: [v === x.x.INIT && _.NW.string(_.t.vrOCCg), v === x.x.REGISTER && _.NW.string(_.t.wePEBA), v === x.x.NAME && _.NW.string(_.t['cY/IOj'])]
+                        children: [v === N.x.INIT && _.NW.string(_.t.vrOCCg), v === N.x.REGISTER && _.NW.string(_.t.wePEBA), v === N.x.NAME && _.NW.string(_.t['cY/IOj'])]
                     }),
                     (0, r.jsx)(l.olH, {
                         onClick: a,
@@ -105,7 +105,7 @@ function O(e) {
                 width: 440,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
-                        id: x.x.INIT,
+                        id: N.x.INIT,
                         children: [
                             (0, r.jsxs)(l.hzk, {
                                 className: E.content,
@@ -143,7 +143,7 @@ function O(e) {
                         ]
                     }),
                     (0, r.jsxs)(l.Mi4, {
-                        id: x.x.REGISTER,
+                        id: N.x.REGISTER,
                         children: [
                             (0, r.jsxs)(l.hzk, {
                                 className: E.content,
@@ -167,17 +167,17 @@ function O(e) {
                         ]
                     }),
                     (0, r.jsx)(l.Mi4, {
-                        id: x.x.NAME,
+                        id: N.x.NAME,
                         children: (0, r.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, f.Sr)(N, o, T)
+                                    (0, f.Sr)(b, o, T)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            A(_.NW.string(_.t.fEptJC)), S(x.x.INIT);
+                                            A(_.NW.string(_.t.fEptJC)), S(N.x.INIT);
                                         });
                             },
                             children: [
@@ -199,7 +199,7 @@ function O(e) {
                                                 }),
                                                 (0, r.jsx)(l.oil, {
                                                     className: E.input,
-                                                    value: N,
+                                                    value: b,
                                                     onChange: (e) => {
                                                         j(e), O(0 === e.length);
                                                     },
@@ -222,7 +222,7 @@ function O(e) {
                                             look: l.zxk.Looks.LINK,
                                             color: l.zxk.Colors.PRIMARY,
                                             onClick: () => {
-                                                S(x.x.INIT);
+                                                S(N.x.INIT);
                                             },
                                             children: _.NW.string(_.t['13/7kZ'])
                                         })
@@ -266,9 +266,9 @@ function v(e) {
     });
 }
 function S() {
-    let { credentials: e, hasFetchedCredentials: t } = (0, a.cj)([N.Z], () => ({
-        hasFetchedCredentials: N.Z.hasFetchedCredentials(),
-        credentials: N.Z.getCredentials()
+    let { credentials: e, hasFetchedCredentials: t } = (0, a.cj)([b.Z], () => ({
+        hasFetchedCredentials: b.Z.hasFetchedCredentials(),
+        credentials: b.Z.getCredentials()
     }));
     i.useEffect(() => {
         t || (0, f.hL)();

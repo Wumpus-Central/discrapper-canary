@@ -1,36 +1,36 @@
-n.d(i, { default: () => c });
-var r = n(200651);
-n(192379);
-var e = n(481060),
-    s = n(388032),
-    l = n(223387);
-function c(t) {
-    let { onClose: i, transitionState: n, body: c } = t;
-    return (0, r.jsxs)(e.Y0X, {
-        transitionState: n,
+r.d(i, { default: () => a });
+var e = r(200651);
+r(192379);
+var n = r(481060),
+    s = r(388032),
+    c = r(843552);
+function a(t) {
+    let { onClose: i, transitionState: r, body: a } = t;
+    return (0, e.jsxs)(n.Y0X, {
+        transitionState: r,
         children: [
-            (0, r.jsx)(e.xBx, {
+            (0, e.jsx)(n.xBx, {
                 separator: !1,
-                children: (0, r.jsx)(e.vwX, {
+                children: (0, e.jsx)(n.vwX, {
                     tag: 'h2',
-                    className: l.title,
-                    children: s.intl.string(s.t.KTjjrK)
+                    className: c.title,
+                    children: s.NW.string(s.t.KTjjrK)
                 })
             }),
-            (0, r.jsx)(e.hzk, {
+            (0, e.jsx)(n.hzk, {
                 children:
-                    'string' == typeof c
-                        ? (0, r.jsx)(e.Text, {
+                    'string' == typeof a
+                        ? (0, e.jsx)(n.Text, {
                               variant: 'text-md/normal',
-                              children: c
+                              children: a
                           })
-                        : c
+                        : a
             }),
-            (0, r.jsx)(e.mzw, {
-                children: (0, r.jsx)(e.zxk, {
-                    color: e.zxk.Colors.BRAND,
+            (0, e.jsx)(n.mzw, {
+                children: (0, e.jsx)(n.zxk, {
+                    color: n.zxk.Colors.BRAND,
                     onClick: i,
-                    children: s.intl.string(s.t.i4jeWV)
+                    children: s.NW.string(s.t.i4jeWV)
                 })
             })
         ]

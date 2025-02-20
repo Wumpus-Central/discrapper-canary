@@ -1,22 +1,22 @@
-n.d(t, { Z: () => u });
-var i = n(192379),
-    r = n(979590),
-    a = n.n(r),
-    s = n(866442),
-    o = n(442837),
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(979590),
+    o = n.n(i),
+    a = n(866442),
+    s = n(442837),
     l = n(607070);
-let u = (e) => {
-    let t = (0, o.e7)([l.Z], () => (l.Z.desaturateUserColors ? l.Z.saturation : 1));
-    return (0, i.useMemo)(() => {
-        let { h: n, s: i, l: r } = a()((0, s.Rf)(e)).toHsl(),
-            o = a()({
+let c = (e) => {
+    let t = (0, s.e7)([l.Z], () => (l.Z.desaturateUserColors ? l.Z.saturation : 1));
+    return (0, r.useMemo)(() => {
+        let { h: n, s: r, l: i } = o()((0, a.Rf)(e)).toHsl(),
+            s = o()({
                 h: n,
-                s: i * t,
-                l: r
+                s: r * t,
+                l: i
             });
         return {
-            hex: o.toHexString(),
-            hsl: o.toHslString()
+            hex: s.toHexString(),
+            hsl: s.toHslString()
         };
     }, [e, t]);
 };

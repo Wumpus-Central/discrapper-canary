@@ -1,19 +1,19 @@
 n.r(t),
     n.d(t, {
-        announce: () => a,
-        clearAnnouncer: () => s,
-        destroyAnnouncer: () => o
+        announce: () => o,
+        clearAnnouncer: () => a,
+        destroyAnnouncer: () => s
     });
-let i = 7000,
-    r = null;
-function a(e, t = 'assertive', n = i) {
-    r || (r = new l()), r.announce(e, t, n);
+let r = 7000,
+    i = null;
+function o(e, t = 'assertive', n = r) {
+    i || (i = new l()), i.announce(e, t, n);
 }
-function s(e) {
-    r && r.clear(e);
+function a(e) {
+    i && i.clear(e);
 }
-function o() {
-    r && (r.destroy(), (r = null));
+function s() {
+    i && (i.destroy(), (i = null));
 }
 class l {
     createLog(e) {
@@ -23,14 +23,14 @@ class l {
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, t = 'assertive', n = i) {
+    announce(e, t = 'assertive', n = r) {
         if (!this.node) return;
-        let r = document.createElement('div');
-        (r.textContent = e),
-            'assertive' === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
+        let i = document.createElement('div');
+        (i.textContent = e),
+            'assertive' === t ? this.assertiveLog.appendChild(i) : this.politeLog.appendChild(i),
             '' !== e &&
                 setTimeout(() => {
-                    r.remove();
+                    i.remove();
                 }, n);
     }
     clear(e) {

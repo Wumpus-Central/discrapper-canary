@@ -1,82 +1,82 @@
-n.d(t, { Z: () => I });
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(704215),
-    a = n(481060),
+n.d(t, { Z: () => O });
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(704215),
+    l = n(481060),
     o = n(906732),
     c = n(605236),
     d = n(441167),
     u = n(695346),
     m = n(131951),
     g = n(924557),
-    h = n(435064),
-    x = n(779618),
-    _ = n(39604),
-    p = n(703288),
-    E = n(491758),
-    C = n(233685),
-    f = n(388032),
-    T = n(547536),
-    N = n(301899),
-    S = n(483938);
-function I(e) {
+    p = n(435064),
+    h = n(779618),
+    f = n(39604),
+    b = n(703288),
+    N = n(491758),
+    x = n(233685),
+    _ = n(388032),
+    E = n(383662),
+    j = n(857433),
+    C = n(455812);
+function O(e) {
     let { className: t, showHeader: n = !0 } = e,
-        I = u.tU.useSetting(),
-        { enableViewerClipping: b } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
-        { analyticsLocations: v } = (0, o.ZP)(),
-        j = (0, g.Go)(),
-        { viewerClipsEnabled: A } = (0, r.cj)([h.Z], () => h.Z.getSettings()),
-        O = (0, x.Z)(m.Z);
+        O = u.tU.useSetting(),
+        { enableViewerClipping: v } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        { analyticsLocations: S } = (0, o.ZP)(),
+        T = (0, g.Go)(),
+        { viewerClipsEnabled: I } = (0, s.cj)([p.Z], () => p.Z.getSettings()),
+        y = (0, h.Z)(m.Z);
     return (
-        s.useEffect(() => {
-            (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);
+        i.useEffect(() => {
+            (0, c.EW)(a.z.CLIPS_SETTINGS_BETA_TAG);
         }),
-        (0, i.jsxs)(o.Gt, {
-            value: v,
+        (0, r.jsxs)(o.Gt, {
+            value: S,
             children: [
-                (j || n) &&
-                    (0, i.jsx)(a.hjN, {
+                (T || n) &&
+                    (0, r.jsx)(l.hjN, {
                         className: t,
-                        tag: a.RB0.H1,
+                        tag: l.RB0.H1,
                         title: n
-                            ? (0, i.jsxs)('div', {
-                                  className: T.headerContainer,
-                                  children: [f.intl.string(f.t.z2jK6e), (0, i.jsx)(p.Z, {})]
+                            ? (0, r.jsxs)('div', {
+                                  className: E.headerContainer,
+                                  children: [_.NW.string(_.t.z2jK6e), (0, r.jsx)(b.Z, {})]
                               })
                             : null,
                         children:
-                            j &&
-                            (0, i.jsxs)('form', {
+                            T &&
+                            (0, r.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
-                                children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(C.Z, {})]
+                                children: [(0, r.jsx)(N.Z, {}), (0, r.jsx)(x.Z, {})]
                             })
                     }),
-                j && (0, i.jsx)(a.$i$, {}),
-                (0, i.jsxs)(a.hjN, {
-                    className: n || j ? S.marginTop20 : t,
+                T && (0, r.jsx)(l.$i$, {}),
+                (0, r.jsxs)(l.hjN, {
+                    className: n || T ? C.marginTop20 : t,
                     children: [
-                        (0, i.jsx)(a.j7V, {
+                        (0, r.jsx)(l.j7V, {
                             hideBorder: !0,
-                            className: N.formItem,
-                            value: I,
-                            note: f.intl.string(f.t['wW9/zc']),
-                            onChange: (e) => _.yg({ allowVoiceRecording: e }),
-                            children: f.intl.string(f.t.AGDDkJ)
+                            className: j.formItem,
+                            value: O,
+                            note: _.NW.string(_.t['wW9/zc']),
+                            onChange: (e) => f.yg({ allowVoiceRecording: e }),
+                            children: _.NW.string(_.t.AGDDkJ)
                         }),
-                        b &&
-                            O &&
-                            (0, i.jsx)(a.j7V, {
+                        v &&
+                            y &&
+                            (0, r.jsx)(l.j7V, {
                                 hideBorder: !0,
-                                className: N.formItem,
-                                value: A,
-                                note: f.intl.string(f.t['0vjy8P']),
+                                className: j.formItem,
+                                value: I,
+                                note: _.NW.string(_.t['0vjy8P']),
                                 onChange: (e) =>
-                                    _.yl({
+                                    f.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
-                                children: f.intl.string(f.t.NWw7kZ)
+                                children: _.NW.string(_.t.NWw7kZ)
                             })
                     ]
                 })

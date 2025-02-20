@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
-var i = n(442837),
-    l = n(937111),
-    r = n(430824);
-function a() {
-    return (0, i.Wu)([l.Z, r.Z], () => {
-        let e = l.Z.computeGuildIds(),
-            t = r.Z.getGuilds();
+n.d(t, { Z: () => o });
+var r = n(442837),
+    i = n(937111),
+    l = n(430824);
+function o() {
+    return (0, r.Wu)([i.Z, l.Z], () => {
+        let e = i.Z.computeGuildIds(),
+            t = l.Z.getGuilds();
         return e.filter((e) => null == t[e]);
     });
 }

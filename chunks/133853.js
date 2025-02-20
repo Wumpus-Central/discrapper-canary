@@ -1,13 +1,13 @@
-n.d(t, { Z: () => h }), n(47120);
-var a,
-    r = n(200651),
+n.d(t, { Z: () => p }), n(47120);
+var r,
+    a = n(200651),
     o = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     s = n(748780),
     c = n(481060),
     d = n(981631),
-    u = n(293419);
+    u = n(913018);
 function f(e, t, n) {
     return (
         t in e
@@ -21,12 +21,12 @@ function f(e, t, n) {
         e
     );
 }
-class h extends (a = o.Component) {
+class p extends (r = o.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
     componentDidUpdate(e) {
-        e.show !== this.props.show && this.animate(this.props.show ? 1 : 0);
+        e.show !== this.props.show && this.animate(+!!this.props.show);
     }
     getAnimatedStyle() {
         let { anim: e } = this,
@@ -47,11 +47,11 @@ class h extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(s.Z.a, {
+        return (0, a.jsx)(s.Z.a, {
             href: d.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
-            className: l()(u.logo, this.props.className),
+            className: i()(u.logo, this.props.className),
             style: this.getAnimatedStyle()
         });
     }
@@ -67,4 +67,4 @@ class h extends (a = o.Component) {
             });
     }
 }
-f(h, 'contextType', c.Sfi);
+f(p, 'contextType', c.Sfi);

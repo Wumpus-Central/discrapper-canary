@@ -1,21 +1,21 @@
-n.d(t, { Z: () => c });
-var i = n(799761),
-    r = {
+n.d(t, { Z: () => u });
+var r = n(799761),
+    i = {
         narrow: ['B', 'A'],
         abbreviated: ['BC', 'AD'],
         wide: ['Before Christ', 'Anno Domini']
     },
-    a = {
+    o = {
         narrow: ['1', '2', '3', '4'],
         abbreviated: ['Q1', 'Q2', 'Q3', 'Q4'],
         wide: ['1st quarter', '2nd quarter', '3rd quarter', '4th quarter']
     },
-    s = {
+    a = {
         narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
         abbreviated: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         wide: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     },
-    o = {
+    s = {
         narrow: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         short: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
         abbreviated: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -53,7 +53,7 @@ var i = n(799761),
             night: 'night'
         }
     },
-    u = {
+    c = {
         narrow: {
             am: 'a',
             pm: 'p',
@@ -85,12 +85,12 @@ var i = n(799761),
             night: 'at night'
         }
     };
-let c = {
+let u = {
     ordinalNumber: function (e, t) {
         var n = Number(e),
-            i = n % 100;
-        if (i > 20 || i < 10)
-            switch (i % 10) {
+            r = n % 100;
+        if (r > 20 || r < 10)
+            switch (r % 10) {
                 case 1:
                     return n + 'st';
                 case 2:
@@ -100,29 +100,29 @@ let c = {
             }
         return n + 'th';
     },
-    era: (0, i.Z)({
-        values: r,
+    era: (0, r.Z)({
+        values: i,
         defaultWidth: 'wide'
     }),
-    quarter: (0, i.Z)({
-        values: a,
+    quarter: (0, r.Z)({
+        values: o,
         defaultWidth: 'wide',
         argumentCallback: function (e) {
             return e - 1;
         }
     }),
-    month: (0, i.Z)({
+    month: (0, r.Z)({
+        values: a,
+        defaultWidth: 'wide'
+    }),
+    day: (0, r.Z)({
         values: s,
         defaultWidth: 'wide'
     }),
-    day: (0, i.Z)({
-        values: o,
-        defaultWidth: 'wide'
-    }),
-    dayPeriod: (0, i.Z)({
+    dayPeriod: (0, r.Z)({
         values: l,
         defaultWidth: 'wide',
-        formattingValues: u,
+        formattingValues: c,
         defaultFormattingWidth: 'wide'
     })
 };

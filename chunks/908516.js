@@ -1,7 +1,7 @@
-var i = n(65064),
-    r = n(389109),
-    a = '[object Set]';
-function s(e) {
-    return r(e) && i(e) == a;
+var r = n(65064),
+    i = n(389109),
+    o = '[object Set]';
+function a(e) {
+    return i(e) && r(e) == o;
 }
-e.exports = s;
+e.exports = a;

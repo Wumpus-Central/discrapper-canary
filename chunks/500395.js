@@ -1,72 +1,72 @@
-n.d(t, { Z: () => x });
-var i = n(200651);
+n.d(t, { Z: () => h });
+var r = n(200651);
 n(192379);
-var r = n(990547),
-    l = n(481060),
-    s = n(213609),
-    a = n(787051),
+var i = n(990547),
+    s = n(481060),
+    a = n(213609),
+    l = n(787051),
     o = n(696936),
     c = n(539290),
     d = n(975464),
     u = n(388032),
-    m = n(375620),
-    h = n(270395);
+    m = n(761207),
+    p = n(270395);
 function g(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: r, ctaClickable: s, onCtaClicked: a } = t;
-    return (0, i.jsxs)('div', {
+        { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: l } = t;
+    return (0, r.jsxs)('div', {
         className: m.__invalid_ctaContainer,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: m.__invalid_heroBanner,
-                src: h,
-                alt: u.intl.string(u.t.Af4klJ)
+                src: p,
+                alt: u.NW.string(u.t.Af4klJ)
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.__invalid_ctaContent,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: u.intl.string(u.t.PqYfh4)
+                        children: u.NW.string(u.t.PqYfh4)
                     }),
-                    (0, i.jsx)(l.LZC, { size: 12 }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(s.LZC, { size: 12 }),
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: u.intl.string(u.t['41wkMT'])
+                        children: u.NW.string(u.t['41wkMT'])
                     }),
-                    (0, i.jsx)(l.LZC, { size: 24 }),
-                    (0, i.jsx)(c.Z, {
+                    (0, r.jsx)(s.LZC, { size: 24 }),
+                    (0, r.jsx)(c.Z, {
                         className: m.waitlist,
                         color: o.W.BROWN,
                         buttonPosition: c.E.RIGHT,
                         notice: n,
-                        ctaLabel: r,
-                        ctaDisabled: !s,
+                        ctaLabel: i,
+                        ctaDisabled: !a,
                         ctaClassName: m.waitlistCtaButton,
-                        onClick: a
+                        onClick: l
                     })
                 ]
             })
         ]
     });
 }
-function x(e) {
+function h(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
-    return ((0, s.Z)({
-        type: r.ImpressionTypes.PANE,
-        name: r.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, l.Z)(t.id);
+    return ((0, a.Z)({
+        type: i.ImpressionTypes.PANE,
+        name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id }
     }),
     o)
-        ? (0, i.jsx)(l.$jN, {})
-        : (0, i.jsxs)('div', {
+        ? (0, r.jsx)(s.$jN, {})
+        : (0, r.jsxs)('div', {
               className: m.__invalid_container,
               children: [
-                  (0, i.jsx)(g, { config: n }),
-                  (0, i.jsx)(d.C, {
+                  (0, r.jsx)(g, { config: n }),
+                  (0, r.jsx)(d.C, {
                       onboardingMarketing: u,
                       onboardingMarketingError: c
                   })

@@ -1,16 +1,16 @@
 n.d(t, { W: () => E });
-var i = n(200651),
-    r = n(192379),
-    a = n(468204),
-    s = n(348288),
-    o = ['children'];
+var r = n(200651),
+    i = n(192379),
+    o = n(468204),
+    a = n(348288),
+    s = ['children'];
 function l(e, t) {
-    return _(e) || f(e, t) || c(e, t) || u();
+    return p(e) || f(e, t) || u(e, t) || c();
 }
-function u() {
+function c() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-function c(e, t) {
+function u(e, t) {
     if (e) {
         if ('string' == typeof e) return d(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -20,65 +20,65 @@ function c(e, t) {
 }
 function d(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+    return r;
 }
 function f(e, t) {
     var n,
-        i,
-        r = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
-    if (null != r) {
-        var a = [],
-            s = !0,
-            o = !1;
+        r,
+        i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    if (null != i) {
+        var o = [],
+            a = !0,
+            s = !1;
         try {
-            for (r = r.call(e); !(s = (n = r.next()).done) && (a.push(n.value), !t || a.length !== t); s = !0);
+            for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); a = !0);
         } catch (e) {
-            (o = !0), (i = e);
+            (s = !0), (r = e);
         } finally {
             try {
-                s || null == r.return || r.return();
+                a || null == i.return || i.return();
             } finally {
-                if (o) throw i;
+                if (s) throw r;
             }
         }
-        return a;
+        return o;
     }
 }
-function _(e) {
+function p(e) {
     if (Array.isArray(e)) return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
-        i,
-        r = h(e, t);
+        r,
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < a.length; i++) (n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-    return r;
+    return i;
 }
 function h(e, t) {
     if (null == e) return {};
     var n,
-        i,
-        r = {},
-        a = Object.keys(e);
-    for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-    return r;
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
 var m = 0,
     g = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
-    E = (0, r.memo)(function (e) {
+    E = (0, i.memo)(function (e) {
         var t = e.children,
-            n = l(v(p(e, o)), 2),
-            a = n[0],
-            u = n[1];
+            n = l(v(_(e, s)), 2),
+            o = n[0],
+            c = n[1];
         return (
-            (0, r.useEffect)(function () {
-                if (u) {
-                    var e = I();
+            (0, i.useEffect)(function () {
+                if (c) {
+                    var e = y();
                     return (
                         ++m,
                         function () {
@@ -87,19 +87,19 @@ var m = 0,
                     );
                 }
             }, []),
-            (0, i.jsx)(s.L.Provider, Object.assign({ value: a }, { children: t }), void 0)
+            (0, r.jsx)(a.L.Provider, Object.assign({ value: o }, { children: t }), void 0)
         );
     });
 function v(e) {
-    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
+    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [b(e.backend, e.context, e.options, e.debugMode), !e.context];
 }
-function y(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
+function b(e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y(),
         n = arguments.length > 2 ? arguments[2] : void 0,
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        r = t;
-    return r[g] || (r[g] = { dragDropManager: (0, a.i)(e, t, n, i) }), r[g];
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        i = t;
+    return i[g] || (i[g] = { dragDropManager: (0, o.i)(e, t, n, r) }), i[g];
 }
-function I() {
+function y() {
     return void 0 !== n.g ? n.g : window;
 }

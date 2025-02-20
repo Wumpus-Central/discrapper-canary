@@ -1,6 +1,6 @@
-var i = n(67867),
-    r = n(168013);
-i(
+var r = n(67867),
+    i = n(168013);
+r(
     {
         target: 'Array',
         stat: !0,
@@ -8,5 +8,5 @@ i(
             Array.from(e);
         })
     },
-    { from: r }
+    { from: i }
 );

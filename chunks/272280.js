@@ -1,6 +1,6 @@
-n.d(t, { I: () => a });
-var i = n(264181);
-function r(e, t, n) {
+n.d(t, { I: () => o });
+var r = n(264181);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,11 +13,11 @@ function r(e, t, n) {
         e
     );
 }
-class a {
+class o {
     static fromServer(e) {
-        return new a(e);
+        return new o(e);
     }
     constructor(e) {
-        r(this, 'title', void 0), r(this, 'body', void 0), r(this, 'asset', void 0), r(this, 'popoutAsset', void 0), r(this, 'version', void 0), r(this, 'revertTextColor', void 0), (this.type = i.Z.BANNER), (this.title = e.title), (this.body = e.body), (this.asset = e.asset), (this.popoutAsset = e.popout_asset), (this.version = e.version), (this.revertTextColor = e.revert_text_color);
+        i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'asset', void 0), i(this, 'popoutAsset', void 0), i(this, 'version', void 0), i(this, 'revertTextColor', void 0), (this.type = r.Z.BANNER), (this.title = e.title), (this.body = e.body), (this.asset = e.asset), (this.popoutAsset = e.popout_asset), (this.version = e.version), (this.revertTextColor = e.revert_text_color);
     }
 }

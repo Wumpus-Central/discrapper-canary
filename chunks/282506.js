@@ -1,65 +1,65 @@
-let i;
-n.d(t, { Z: () => T });
-var l = n(570140),
-    r = n(519938),
-    a = n(317770),
-    s = n(317381),
-    o = n(928518),
-    d = n(199902),
-    c = n(592125),
-    u = n(819640),
-    h = n(131951),
-    m = n(366050),
-    p = n(19780),
-    g = n(944486),
-    _ = n(914010),
-    f = n(979651),
-    E = n(981631),
-    I = n(65154);
-function C() {
+let r;
+n.d(t, { Z: () => y });
+var i = n(570140),
+    l = n(519938),
+    o = n(317770),
+    a = n(317381),
+    s = n(928518),
+    c = n(199902),
+    u = n(592125),
+    d = n(819640),
+    p = n(131951),
+    h = n(366050),
+    g = n(19780),
+    f = n(944486),
+    m = n(914010),
+    b = n(979651),
+    _ = n(981631),
+    E = n(65154);
+function O() {
     var e;
-    let t = i;
-    if (null == t || !m.Z.isOpen(t)) return !1;
-    l.Z.wait(() => r.xv(t)), null === (e = p.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), (i = null);
+    let t = r;
+    if (null == t || !h.Z.isOpen(t)) return !1;
+    i.Z.wait(() => l.xv(t)), null === (e = g.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), (r = null);
 }
 function N() {
-    let e = p.Z.getChannelId(),
-        t = i === e;
+    let e = g.Z.getChannelId(),
+        t = r === e;
     return !(function () {
-        let e = p.Z.getChannelId(),
-            t = g.Z.getChannelId();
-        if (!h.Z.supports(I.AN.VIDEO) || o.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT)) return !0;
-        let n = d.Z.getAllActiveStreams().length > 0;
+        let e = g.Z.getChannelId(),
+            t = f.Z.getChannelId();
+        if (!p.Z.supports(E.AN.VIDEO) || s.Z.getWindowOpen(_.KJ3.CHANNEL_CALL_POPOUT)) return !0;
+        let n = c.Z.getAllActiveStreams().length > 0;
         if (
             !(
                 (null != e &&
-                    Object.values(f.Z.getVideoVoiceStatesForChannel(e)).some((e) => {
+                    Object.values(b.Z.getVideoVoiceStatesForChannel(e)).some((e) => {
                         let { userId: t } = e;
-                        return !h.Z.isLocalVideoDisabled(t);
+                        return !p.Z.isLocalVideoDisabled(t);
                     })) ||
                 n
             )
         )
             return !0;
-        let i = u.Z.hasLayers();
-        return !(i && u.Z.getLayers().includes(E.S9g.RTC_DEBUG)) && (!!i || e === t);
+        let r = d.Z.hasLayers();
+        return !(r && d.Z.getLayers().includes(_.S9g.RTC_DEBUG)) && (!!r || e === t);
     })()
-        ? (t || C(),
+        ? (t || O(),
           null != e &&
               (function (e) {
                   var t;
-                  let n = c.Z.getChannel(e);
-                  if (null == n || m.Z.isOpen(e)) return !1;
-                  l.Z.wait(() => r.bA(n.id, E.NYg.VIDEO, { channel: n })), null === (t = p.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (i = e);
+                  let n = u.Z.getChannel(e);
+                  if (null == n || h.Z.isOpen(e)) return !1;
+                  i.Z.wait(() => l.bA(n.id, _.NYg.VIDEO, { channel: n })), null === (t = g.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (r = e);
               })(e))
-        : C();
+        : O();
 }
-class v extends a.Z {
+class v extends o.Z {
     _initialize() {
-        g.Z.addChangeListener(N), _.Z.addChangeListener(N), p.Z.addChangeListener(N), f.Z.addChangeListener(N), u.Z.addChangeListener(N), d.Z.addChangeListener(N), o.Z.addChangeListener(N), h.Z.addChangeListener(N), s.ZP.addChangeListener(N);
+        f.Z.addChangeListener(N), m.Z.addChangeListener(N), g.Z.addChangeListener(N), b.Z.addChangeListener(N), d.Z.addChangeListener(N), c.Z.addChangeListener(N), s.Z.addChangeListener(N), p.Z.addChangeListener(N), a.ZP.addChangeListener(N);
     }
     _terminate() {
-        g.Z.removeChangeListener(N), _.Z.removeChangeListener(N), p.Z.removeChangeListener(N), f.Z.removeChangeListener(N), u.Z.removeChangeListener(N), d.Z.removeChangeListener(N), o.Z.removeChangeListener(N), h.Z.removeChangeListener(N), s.ZP.removeChangeListener(N);
+        f.Z.removeChangeListener(N), m.Z.removeChangeListener(N), g.Z.removeChangeListener(N), b.Z.removeChangeListener(N), d.Z.removeChangeListener(N), c.Z.removeChangeListener(N), s.Z.removeChangeListener(N), p.Z.removeChangeListener(N), a.ZP.removeChangeListener(N);
     }
 }
-let T = new v();
+let y = new v();

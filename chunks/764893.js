@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(158969);
-function a(e, t) {
-    let { message: n, compact: a } = e;
-    return (0, i.jsx)(l.Z, {
+var i = n(158969);
+function l(e, t) {
+    let { message: n, compact: l } = e;
+    return (0, r.jsx)(i.Z, {
         message: n,
         content: t,
-        compact: a
+        compact: l
     });
 }

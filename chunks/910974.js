@@ -1,12 +1,12 @@
-function i() {
-    return (i = Object.assign
+function r() {
+    return (r = Object.assign
         ? Object.assign.bind()
         : function (e) {
               for (var t = 1; t < arguments.length; t++) {
                   var n = arguments[t];
-                  for (var i in n) ({}).hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                  for (var r in n) ({}).hasOwnProperty.call(n, r) && (e[r] = n[r]);
               }
               return e;
           }).apply(null, arguments);
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

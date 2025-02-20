@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(177593), n(47120);
-var i = n(147913),
-    r = n(695346);
-function a(e, t, n) {
+var r = n(147913),
+    i = n(695346);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,21 +14,21 @@ function a(e, t, n) {
         e
     );
 }
-let s = !1;
-class o extends i.Z {
+let a = !1;
+class s extends r.Z {
     maybeShowChangeLanguageToast() {}
     setVerifyTimezone() {
-        s = !0;
+        a = !0;
     }
     ensureTimezoneUpdated() {
-        if (!s) return;
-        s = !1;
+        if (!a) return;
+        a = !1;
         let e = new Date().getTimezoneOffset();
-        r.rN.getSetting() !== e && setImmediate(() => r.rN.updateSetting(e));
+        i.rN.getSetting() !== e && setImmediate(() => i.rN.updateSetting(e));
     }
     constructor(...e) {
         super(...e),
-            a(this, 'actions', {
+            o(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
                     this.setVerifyTimezone(), this.maybeShowChangeLanguageToast();
                 },
@@ -37,4 +37,4 @@ class o extends i.Z {
             });
     }
 }
-let l = new o();
+let l = new s();

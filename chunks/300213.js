@@ -1,28 +1,28 @@
-n.d(t, { m: () => d }), n(192379);
-var i = n(442837);
+n.d(t, { m: () => c }), n(192379);
+var r = n(442837);
 n(565799), n(431328), n(501655);
-var l = n(427679),
-    r = n(517334);
+var i = n(427679),
+    l = n(517334);
 n(199902);
-var a = n(592125);
+var o = n(592125);
 n(496675), n(938475);
-var s = n(151864);
+var a = n(151864);
 n(497656);
-var o = n(554747);
-function d(e) {
+var s = n(554747);
+function c(e) {
     var t;
-    let n = (0, r.ZP)(e),
-        d = a.Z.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
-        c = (0, i.e7)([l.Z], () => l.Z.getStageInstanceByChannel(null == d ? void 0 : d.id), [d]),
-        u = (0, o.k5)(e),
-        { isStageNoticeHidden: h, isEventNoticeHidden: m } = (0, i.cj)(
-            [s.Z],
+    let n = (0, l.ZP)(e),
+        c = o.Z.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
+        u = (0, r.e7)([i.Z], () => i.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]),
+        d = (0, s.k5)(e),
+        { isStageNoticeHidden: p, isEventNoticeHidden: h } = (0, r.cj)(
+            [a.Z],
             () => ({
-                isStageNoticeHidden: s.Z.isLiveChannelNoticeHidden({ stageId: null == c ? void 0 : c.id }),
-                isEventNoticeHidden: s.Z.isLiveChannelNoticeHidden({ eventId: null == u ? void 0 : u.id })
+                isStageNoticeHidden: a.Z.isLiveChannelNoticeHidden({ stageId: null == u ? void 0 : u.id }),
+                isEventNoticeHidden: a.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id })
             }),
-            [c, u]
+            [u, d]
         );
-    return null != u ? (null != c ? !h : !m) : null != c && !h;
+    return null != d ? (null != u ? !p : !h) : null != u && !p;
 }
 n(765305), n(231338);

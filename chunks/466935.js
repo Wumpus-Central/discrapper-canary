@@ -1,53 +1,53 @@
-n.d(t, { Z: () => C });
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    o = n(970606),
+n.d(t, { Z: () => y });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(970606),
     s = n(693546),
     c = n(826581),
-    d = n(246364),
-    u = n(98493),
-    h = n(703656),
-    p = n(496675),
-    m = n(785195),
+    u = n(246364),
+    d = n(98493),
+    p = n(703656),
+    h = n(496675),
+    f = n(785195),
     g = n(434479),
-    f = n(981631),
-    _ = n(176505),
+    m = n(981631),
+    b = n(176505),
     v = n(388032);
-function C(e) {
+function y(e) {
     let { guild: t, selected: n } = e,
-        C = (0, r.e7)([p.Z], () => p.Z.can(f.Plq.KICK_MEMBERS, t)),
-        x = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = C && null != x ? x : 0;
+        y = (0, l.e7)([h.Z], () => h.Z.can(m.Plq.KICK_MEMBERS, t)),
+        _ = (0, l.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        O = y && null != _ ? _ : 0;
     return (
-        l.useEffect(() => {
-            C &&
+        i.useEffect(() => {
+            y &&
                 s.Z.fetchGuildJoinRequests({
                     guildId: t.id,
-                    status: d.wB.SUBMITTED,
-                    limit: u.p
+                    status: u.wB.SUBMITTED,
+                    limit: d.p
                 });
-        }, [C, t.id]),
-        (0, i.jsx)(g.m, {
+        }, [y, t.id]),
+        (0, r.jsx)(g.m, {
             id: 'application-review-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(m.Z, {
+                (0, r.jsx)(f.Z, {
                     className: e,
                     width: 24,
                     height: 24
                 }),
-            text: v.intl.string(v.t.tcvVXF),
+            text: v.NW.string(v.t.tcvVXF),
             selected: n,
             onClick: () => {
-                (0, o.Q2)({
+                (0, a.Q2)({
                     guildId: t.id,
-                    source: f.jXE.CHANNEL_LIST,
-                    tab: _.oC.MEMBER_APPLICATIONS
+                    source: m.jXE.CHANNEL_LIST,
+                    tab: b.oC.MEMBER_APPLICATIONS
                 }),
-                    (0, h.uL)(f.Z5c.CHANNEL(t.id, _.oC.MEMBER_APPLICATIONS));
+                    (0, p.uL)(m.Z5c.CHANNEL(t.id, b.oC.MEMBER_APPLICATIONS));
             },
-            trailing: I > 0 ? (0, i.jsx)(a.mAB, { count: I }) : null
+            trailing: O > 0 ? (0, r.jsx)(o.mAB, { count: O }) : null
         })
     );
 }

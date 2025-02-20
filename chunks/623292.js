@@ -1,29 +1,29 @@
 n.d(t, {
-    A6: () => s,
-    fE: () => r,
-    qx: () => a
+    A6: () => a,
+    fE: () => i,
+    qx: () => o
 });
-var i = n(570140);
-function r(e) {
-    let { message: t, channel: n, shouldMention: r, showMentionToggle: a, source: s } = e;
-    i.Z.dispatch({
+var r = n(570140);
+function i(e) {
+    let { message: t, channel: n, shouldMention: i, showMentionToggle: o, source: a } = e;
+    r.Z.dispatch({
         type: 'CREATE_PENDING_REPLY',
         message: t,
         channel: n,
-        shouldMention: r,
-        showMentionToggle: a,
-        source: s
+        shouldMention: i,
+        showMentionToggle: o,
+        source: a
     });
 }
-function a(e, t) {
-    i.Z.dispatch({
+function o(e, t) {
+    r.Z.dispatch({
         type: 'SET_PENDING_REPLY_SHOULD_MENTION',
         channelId: e,
         shouldMention: t
     });
 }
-function s(e) {
-    i.Z.dispatch({
+function a(e) {
+    r.Z.dispatch({
         type: 'DELETE_PENDING_REPLY',
         channelId: e
     });

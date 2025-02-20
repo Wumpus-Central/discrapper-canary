@@ -1,8 +1,8 @@
 a.d(e, { R: () => l });
 var r = a(448171),
     n = a(78355),
-    _ = a(747677),
-    o = a(622916),
+    o = a(747677),
+    _ = a(622916),
     i = a(454463),
     c = a(878719),
     s = a(163162),
@@ -13,7 +13,7 @@ class l extends r.W {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...t
             },
-            a = s.m9.SENTRY_SDK_SOURCE || (0, _.S)();
+            a = s.m9.SENTRY_SDK_SOURCE || (0, o.S)();
         (0, n.V)(e, 'browser', ['browser'], a),
             super(e),
             e.sendClientReports &&
@@ -30,7 +30,7 @@ class l extends r.W {
     }
     captureUserFeedback(t) {
         if (!this._isEnabled()) {
-            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && _.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
         let e = (0, E.r)(t, {

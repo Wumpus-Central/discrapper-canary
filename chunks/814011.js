@@ -1,14 +1,14 @@
 n.d(t, { Z: () => l }), n(47120);
-var i = n(327432),
-    r = n(772096),
-    a = n(925994),
-    s = n(436660),
-    o = n(887490);
+var r = n(327432),
+    i = n(772096),
+    o = n(925994),
+    a = n(436660),
+    s = n(887490);
 function l(e) {
     return (
         (e.setFragmentData = (t) => {
             if (null != e.selection) {
-                let n = (0, a.sk)(o.bN.richValue(e), {
+                let n = (0, o.sk)(s.bN.richValue(e), {
                     mode: 'plain',
                     range: e.selection,
                     preventEmojiSurrogates: !0
@@ -23,21 +23,21 @@ function l(e) {
         (e.insertTextData = (t) => {
             let n = t.getData('text/plain');
             if (0 === n.length) return !1;
-            if (null != e.selection && o.M8.isExpanded(e.selection)) {
-                let t = i.ML.string(e, e.selection),
-                    a = (0, r.yw)(n),
-                    l = (0, r.yw)(t);
-                if (null != a && null == l) {
-                    let [t, n] = o.M8.edges(e.selection);
+            if (null != e.selection && s.M8.isExpanded(e.selection)) {
+                let t = r.ML.string(e, e.selection),
+                    o = (0, i.yw)(n),
+                    l = (0, i.yw)(t);
+                if (null != o && null == l) {
+                    let [t, n] = s.M8.edges(e.selection);
                     return (
-                        o.bN.withoutNormalizing(e, () => {
-                            s.Q.select(e, t), e.insertText('['), s.Q.select(e, n), 0 === o.C0.compare(t.path, n.path) && s.Q.move(e, { distance: 1 }), e.insertText(']('.concat(a.target, ')'));
+                        s.bN.withoutNormalizing(e, () => {
+                            a.Q.select(e, t), e.insertText('['), a.Q.select(e, n), 0 === s.C0.compare(t.path, n.path) && a.Q.move(e, { distance: 1 }), e.insertText(']('.concat(o.target, ')'));
                         }),
                         !0
                     );
                 }
-                if (null != a && null != l) return s.Q.delete(e, { at: e.selection }), e.insertText(a.target), !0;
-                s.Q.delete(e, { at: e.selection });
+                if (null != o && null != l) return a.Q.delete(e, { at: e.selection }), e.insertText(o.target), !0;
+                a.Q.delete(e, { at: e.selection });
             }
             return e.insertText(n), !0;
         }),

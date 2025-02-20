@@ -93,19 +93,19 @@ let g = 8,
             })),
             E = (0, c.Z)(n),
             x = r === d.C5.VERTICAL,
+            I = 0,
             S = 0,
-            C = 0,
-            I = (0, s.Yzy)(
+            C = (0, s.Yzy)(
                 x
                     ? y.map((e, t) =>
                           h(f({}, e), {
-                              y: (S += e.height + (t > 0 ? g : 0)) - e.height,
+                              y: (I += e.height + (t > 0 ? g : 0)) - e.height,
                               x: 0
                           })
                       )
                     : y.map((e, t) =>
                           h(f({}, e), {
-                              x: (C += e.width + (t > 0 ? g : 0)) - e.width,
+                              x: (S += e.width + (t > 0 ? g : 0)) - e.width,
                               y: 0
                           })
                       ),
@@ -149,8 +149,8 @@ let g = 8,
                 [p.vertical]: x,
                 [p.horizontal]: !x
             }),
-            style: x ? { height: S } : { width: C },
-            children: I((e, t, r, o) =>
+            style: x ? { height: I } : { width: S },
+            children: C((e, t, r, o) =>
                 (0, i.jsx)(a.animated.div, {
                     className: p.gridItem,
                     style: Object.assign({}, e, {

@@ -1,30 +1,30 @@
-n.d(t, { Z: () => h });
-var i = n(442837),
-    l = n(594190),
-    r = n(480294),
-    a = n(131951),
-    s = n(924557),
-    o = n(435064),
-    d = n(779618),
-    c = n(356659),
-    u = n(981631);
-function h(e) {
-    let t = (0, s.nM)({ autoTrackExposure: !0 }),
-        n = o.Z.isDecoupledGameClippingEnabled();
-    return (0, i.e7)([o.Z, l.ZP, r.Z, a.Z], () => {
-        if (!(0, d.Z)(a.Z) || !t || !n) return !1;
-        if (null != o.Z.getLastClipsError()) return !0;
-        if (!r.Z.hasConsented(u.pjP.PERSONALIZATION) || null == l.ZP.getVisibleGame()) return !1;
+n.d(t, { Z: () => p });
+var r = n(442837),
+    i = n(594190),
+    l = n(480294),
+    o = n(131951),
+    a = n(924557),
+    s = n(435064),
+    c = n(779618),
+    u = n(356659),
+    d = n(981631);
+function p(e) {
+    let t = (0, a.nM)({ autoTrackExposure: !0 }),
+        n = s.Z.isDecoupledGameClippingEnabled();
+    return (0, r.e7)([s.Z, i.ZP, l.Z, o.Z], () => {
+        if (!(0, c.Z)(o.Z) || !t || !n) return !1;
+        if (null != s.Z.getLastClipsError()) return !0;
+        if (!l.Z.hasConsented(d.pjP.PERSONALIZATION) || null == i.ZP.getVisibleGame()) return !1;
         let {
-            clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: h, numberOfTimesDismissed: m },
-            hasTakenDecoupledClip: p,
-            clipsSettings: { clipsEnabled: g }
-        } = o.Z.getState();
-        if (null === i) return !0;
-        if (!(null != e && (0, s.xt)(e))) return !1;
-        let _ = Date.now() - i > c.xx,
-            f = h >= c._U,
-            E = g ? c.xd : c.A5;
-        return _ && f && m < E && !p;
+            clipsEducationState: { dismissedAt: r, numberOfGamesLaunchedSinceDismissal: p, numberOfTimesDismissed: h },
+            hasTakenDecoupledClip: g,
+            clipsSettings: { clipsEnabled: f }
+        } = s.Z.getState();
+        if (null === r) return !0;
+        if (!(null != e && (0, a.xt)(e))) return !1;
+        let m = Date.now() - r > u.xx,
+            b = p >= u._U,
+            _ = f ? u.xd : u.A5;
+        return m && b && h < _ && !g;
     });
 }

@@ -1,70 +1,70 @@
 n.d(t, { t: () => o }), n(411104);
-var i = n(120356),
-    r = n.n(i),
-    l = n(481060),
-    s = n(267642),
-    a = n(245010);
+var r = n(120356),
+    i = n.n(r),
+    s = n(481060),
+    a = n(267642),
+    l = n(179856);
 function o(e, t) {
     if (t)
         return {
-            icon: l.dz2,
-            className: a.unlocked
+            icon: s.dz2,
+            className: l.unlocked
         };
     switch (e) {
-        case s.Ro.EMOJI:
+        case a.Ro.EMOJI:
             return {
-                icon: l.EO4,
-                className: r()(a.icon, a.emoji)
+                icon: s.EO4,
+                className: i()(l.icon, l.emoji)
             };
-        case s.Ro.AUDIO:
+        case a.Ro.AUDIO:
             return {
-                icon: l.VWR,
-                className: r()(a.icon, a.audio)
+                icon: s.VWR,
+                className: i()(l.icon, l.audio)
             };
-        case s.Ro.ANIMATED:
+        case a.Ro.ANIMATED:
             return {
-                icon: l.OUq,
-                className: r()(a.icon, a.animated)
+                icon: s.OUq,
+                className: i()(l.icon, l.animated)
             };
-        case s.Ro.CUSTOMIZATION:
+        case a.Ro.CUSTOMIZATION:
             return {
-                icon: l.Ka2,
-                className: r()(a.icon, a.customization)
+                icon: s.Ka2,
+                className: i()(l.icon, l.customization)
             };
-        case s.Ro.UPLOAD:
+        case a.Ro.UPLOAD:
             return {
-                icon: l.rG2,
-                className: r()(a.icon, a.upload)
+                icon: s.rG2,
+                className: i()(l.icon, l.upload)
             };
-        case s.Ro.VANITY:
+        case a.Ro.VANITY:
             return {
-                icon: l.r7p,
-                className: r()(a.icon, a.vanity)
+                icon: s.r7p,
+                className: i()(l.icon, l.vanity)
             };
-        case s.Ro.STREAM:
+        case a.Ro.STREAM:
             return {
-                icon: l.hGI,
-                className: r()(a.icon, a.stream)
+                icon: s.hGI,
+                className: i()(l.icon, l.stream)
             };
-        case s.Ro.STICKER:
+        case a.Ro.STICKER:
             return {
-                icon: l.SlE,
-                className: r()(a.icon, a.sticker)
+                icon: s.SlE,
+                className: i()(l.icon, l.sticker)
             };
-        case s.Ro.CUSTOM_ROLE_ICON:
+        case a.Ro.CUSTOM_ROLE_ICON:
             return {
-                icon: l.lZ8,
-                className: r()(a.icon, a.customRoleIcon)
+                icon: s.lZ8,
+                className: i()(l.icon, l.customRoleIcon)
             };
-        case s.Ro.STAGE_VIDEO:
+        case a.Ro.STAGE_VIDEO:
             return {
-                icon: l.ewx,
-                className: r()(a.icon, a.stage)
+                icon: s.ewx,
+                className: i()(l.icon, l.stage)
             };
-        case s.Ro.SOUNDBOARD:
+        case a.Ro.SOUNDBOARD:
             return {
-                icon: l.KY1,
-                className: r()(a.icon, a.soundboard)
+                icon: s.KY1,
+                className: i()(l.icon, l.soundboard)
             };
     }
     throw Error('Unexpected perk icon '.concat(e));

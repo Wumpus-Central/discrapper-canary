@@ -1,5 +1,5 @@
-n.d(t, { I: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { I: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_rustadm',
     label: 'Rust Audio Device Manager',

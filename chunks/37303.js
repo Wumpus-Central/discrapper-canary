@@ -1,91 +1,91 @@
-n.d(t, { Z: () => C }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    l = n(642128);
+n.d(t, { Z: () => h }), n(47120);
+var r = n(200651),
+    s = n(192379),
+    i = n(642128);
 n(442837);
-var a = n(686777),
-    r = n(113434);
+var o = n(686777),
+    l = n(113434);
 n(569984);
-var o = n(497505),
-    d = n(602667),
+var a = n(497505),
+    c = n(602667),
     u = n(87894),
-    c = n(372113),
+    d = n(372113),
     m = n(206044),
-    x = n(266843),
-    h = n(46140),
-    g = n(643027);
-function C(e) {
-    let { quest: t, location: n, initiallyExpanded: C, contentPosition: p } = e,
-        [j, T] = i.useState(!1),
-        v = i.useCallback(() => T(!0), []),
-        E = i.useCallback(() => T(!1), []),
-        f = (0, r.tP)(t),
-        { containerRef: N, size: S, height: q } = (0, x.h)(),
-        A = (0, a.q)({ location: h.dr.QUESTS_CARD }),
+    p = n(266843),
+    x = n(46140),
+    g = n(357920);
+function h(e) {
+    let { quest: t, location: n, initiallyExpanded: h, contentPosition: f } = e,
+        [j, v] = s.useState(!1),
+        b = s.useCallback(() => v(!0), []),
+        C = s.useCallback(() => v(!1), []),
+        N = (0, l.tP)(t),
+        { containerRef: E, size: T, height: y } = (0, p.h)(),
+        S = (0, o.q)({ location: x.dr.QUESTS_CARD }),
         {
-            expansionSpring: R,
-            isAnimating: _,
-            isExpanded: b,
-            toggleExpanded: Z
-        } = (0, x.O)({
+            expansionSpring: O,
+            isAnimating: q,
+            isExpanded: P,
+            toggleExpanded: w
+        } = (0, p.O)({
             initiallyExpanded:
-                !A ||
-                C ||
+                !S ||
+                h ||
                 (0, u.iM)({
                     location: n,
                     quest: t
                 })
         }),
-        I = null != q ? q : u.U0;
-    return (0, s.jsx)(d.A, {
+        A = null != y ? y : u.U0;
+    return (0, r.jsx)(c.A, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: p,
-        trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
+        questContentPosition: f,
+        trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
         children: (e) =>
-            (0, s.jsx)(s.Fragment, {
-                children: (0, s.jsx)(l.animated.div, {
+            (0, r.jsx)(r.Fragment, {
+                children: (0, r.jsx)(i.animated.div, {
                     style: {
                         maxHeight:
-                            n === o.jn.QUESTS_EMBED
+                            n === a.jn.QUESTS_EMBED
                                 ? void 0
-                                : R.to({
+                                : O.to({
                                       range: [0, 1],
-                                      output: [u.DJ, I]
+                                      output: [u.DJ, A]
                                   })
                     },
                     className: g.questsCard,
-                    onFocus: v,
-                    onMouseEnter: v,
-                    onBlur: E,
-                    onMouseLeave: E,
-                    children: (0, s.jsxs)('div', {
+                    onFocus: b,
+                    onMouseEnter: b,
+                    onBlur: C,
+                    onMouseLeave: C,
+                    children: (0, r.jsxs)('div', {
                         ref: (t) => {
-                            (e.current = t), (N.current = t);
+                            (e.current = t), (E.current = t);
                         },
                         children: [
-                            (0, s.jsx)(m.Z, {
+                            (0, r.jsx)(m.Z, {
                                 isFocused: j,
-                                isQuestExpired: f,
+                                isQuestExpired: N,
                                 location: n,
                                 quest: t,
-                                size: S,
-                                expansionSpring: R,
-                                isAnimating: _,
-                                isExpanded: b,
-                                isInConcurrentQuestExperiment: A,
-                                contentPosition: p,
-                                toggleExpanded: Z
+                                size: T,
+                                expansionSpring: O,
+                                isAnimating: q,
+                                isExpanded: P,
+                                isInConcurrentQuestExperiment: S,
+                                contentPosition: f,
+                                toggleExpanded: w
                             }),
-                            (0, s.jsx)(c.Z, {
+                            (0, r.jsx)(d.Z, {
                                 quest: t,
-                                isQuestExpired: f,
+                                isQuestExpired: N,
                                 location: n,
-                                size: S,
+                                size: T,
                                 isFocused: j,
-                                isExpanded: b,
-                                isAnimating: _,
-                                contentPosition: p
+                                isExpanded: P,
+                                isAnimating: q,
+                                contentPosition: f
                             })
                         ]
                     })

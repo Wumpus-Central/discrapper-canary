@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => m,
+    Z: () => O,
     m: () => E
 });
 var i = n(200651);
@@ -124,7 +124,7 @@ function C(e) {
     });
 }
 function E(e) {
-    let { product: t, guildId: n, showEditProduct: r, showUnpublishProduct: l, showTestDownload: s, showCopyLink: a, showDeleteProduct: u, showReportProduct: d, onEditProduct: c, onUnpublishProduct: h, onDeleteProduct: E, onCopyProductLink: m, onTestDownload: O, onReportProduct: S } = e;
+    let { product: t, guildId: n, showEditProduct: r, showUnpublishProduct: l, showTestDownload: s, showCopyLink: a, showDeleteProduct: u, showReportProduct: d, onEditProduct: c, onUnpublishProduct: h, onDeleteProduct: E, onCopyProductLink: O, onTestDownload: m, onReportProduct: S } = e;
     return (0, i.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -149,8 +149,8 @@ function E(e) {
                         onEditProduct: c,
                         onUnpublishProduct: h,
                         onDeleteProduct: E,
-                        onCopyLink: m,
-                        onTestDownload: O,
+                        onCopyLink: O,
+                        onTestDownload: m,
                         onReportProduct: S
                     })
                 ),
@@ -175,15 +175,15 @@ function E(e) {
         })
     });
 }
-function m(e) {
-    let { product: t, guildId: n, onEditProduct: r, onUnpublishProduct: m, onDeleteProduct: O, onCopyProductLink: S, onTestDownload: b, disabled: _ = !1 } = e,
+function O(e) {
+    let { product: t, guildId: n, onEditProduct: r, onUnpublishProduct: O, onDeleteProduct: m, onCopyProductLink: S, onTestDownload: _, disabled: b = !1 } = e,
         I = (0, a.U)(t, 600),
         y = null !== t.price_tier ? (0, u.T4)(t.price_tier, h.pK.USD) : void 0,
         N = (0, d.C)(t);
     return (0, i.jsxs)(o.kL8, {
         tag: 'article',
-        className: l()(p.productCardClickable, p.productCard, { [p.disabled]: _ }),
-        onClick: _ ? void 0 : r,
+        className: l()(p.productCardClickable, p.productCard, { [p.disabled]: b }),
+        onClick: b ? void 0 : r,
         onContextMenu: function (e) {
             (0, s.jW)(e, () =>
                 Promise.resolve((e) =>
@@ -200,10 +200,10 @@ function m(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: r,
-                            onUnpublishProduct: m,
-                            onDeleteProduct: O,
+                            onUnpublishProduct: O,
+                            onDeleteProduct: m,
                             onCopyLink: S,
-                            onTestDownload: b,
+                            onTestDownload: _,
                             onReportProduct: () => {}
                         })
                     )
@@ -256,7 +256,7 @@ function m(e) {
                             t.published ? (0, i.jsx)(c.t, {}) : (0, i.jsx)(c.b, {})
                         ]
                     }),
-                    !_ &&
+                    !b &&
                         (0, i.jsx)(E, {
                             product: t,
                             guildId: n,
@@ -267,10 +267,10 @@ function m(e) {
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: r,
-                            onUnpublishProduct: m,
-                            onDeleteProduct: O,
+                            onUnpublishProduct: O,
+                            onDeleteProduct: m,
                             onCopyProductLink: S,
-                            onTestDownload: b,
+                            onTestDownload: _,
                             onReportProduct: () => {}
                         })
                 ]

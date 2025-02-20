@@ -1,25 +1,25 @@
 n.d(t, {
-    Gk: () => o,
-    Ni: () => s,
-    PV: () => a,
-    d$: () => r
+    Gk: () => s,
+    Ni: () => a,
+    PV: () => o,
+    d$: () => i
 });
-var i = n(570140);
-function r() {
-    i.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
+var r = n(570140);
+function i() {
+    r.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
 }
-function a(e) {
-    i.Z.dispatch({
+function o(e) {
+    r.Z.dispatch({
         type: 'MESSAGE_GIFT_INTENT_SHOWN',
         recipientUserId: e
     });
 }
-function s(e) {
-    i.Z.dispatch({
+function a(e) {
+    r.Z.dispatch({
         type: 'GIFT_INTENT_FLOW_PURCHASED_GIFT',
         recipientUserId: e
     });
 }
-function o() {
-    i.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
+function s() {
+    r.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }

@@ -2,11 +2,11 @@
     t(n(913527));
 })(0, function (e) {
     function t(e, t, n) {
-        var i = ' ';
+        var r = ' ';
         return (
-            (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (i = ' de '),
+            (e % 100 >= 20 || (e >= 100 && e % 100 == 0)) && (r = ' de '),
             e +
-                i +
+                r +
                 {
                     ss: 'secunde',
                     mm: 'minute',

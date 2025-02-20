@@ -1,34 +1,34 @@
-n.d(t, { Z: () => I }), n(47120), n(411104);
-var i = n(200651),
-    r = n(192379),
-    a = n(734530),
-    s = n(120356),
-    o = n.n(s),
+n.d(t, { Z: () => y }), n(47120), n(411104);
+var r = n(200651),
+    i = n(192379),
+    o = n(734530),
+    a = n(120356),
+    s = n.n(a),
     l = n(846519),
-    u = n(481060),
-    c = n(609194),
+    c = n(481060),
+    u = n(609194),
     d = n(881052),
     f = n(128069),
-    _ = n(563132),
-    p = n(409813);
+    p = n(563132),
+    _ = n(409813);
 n(51499), n(614277);
 var h = n(122289),
     m = n(70956),
     g = n(981631),
     E = n(388032),
-    v = n(169188);
-let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
-function I(e) {
-    let { steps: t, currentStep: n, body: s, paymentError: I, header: T, footer: b, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: O, planError: D, onScroll: L, scrollerClassName: x, hasCurrencies: P = !1 } = e,
-        w = null;
-    null != I && null == (0, p.ly)(I) ? (w = I) : null != R ? (w = R) : null != D && (w = D);
-    let M = null != w ? w.message : '';
-    null != w && w instanceof d.HF && (w.code === f.SM.CARD_DECLINED && P && (M += ' '.concat(E.intl.string(E.t.iWvwQU))), w.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)), w.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
-    let { stripe: k } = (0, _.JL)();
-    C = C || null == k;
-    let U = r.useRef(new l.V7());
-    r.useEffect(() => {
-        let e = U.current;
+    v = n(202941);
+let b = new Set([_.h8.SKU_SELECT, _.h8.AWAITING_AUTHENTICATION, _.h8.AWAITING_PURCHASE_TOKEN_AUTH, _.h8.CONFIRM]);
+function y(e) {
+    let { steps: t, currentStep: n, body: a, paymentError: y, header: O, footer: S, isGift: I = !1, giftMessage: T = E.NW.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: A = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: x = !1 } = e,
+        L = null;
+    null != y && null == (0, _.ly)(y) ? (L = y) : null != C ? (L = C) : null != P && (L = P);
+    let M = null != L ? L.message : '';
+    null != L && L instanceof d.HF && (L.code === f.SM.CARD_DECLINED && x && (M += ' '.concat(E.NW.string(E.t.iWvwQU))), L.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.NW.string(E.t.ypuSd3)), L.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.NW.string(E.t.mXMmWF)));
+    let { stripe: k } = (0, p.JL)();
+    A = A || null == k;
+    let j = i.useRef(new l.V7());
+    i.useEffect(() => {
+        let e = j.current;
         return (
             null != k || e.isStarted()
                 ? null != k && e.stop()
@@ -41,53 +41,53 @@ function I(e) {
             }
         );
     }, [k]);
-    let G = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
-    return (0, i.jsxs)(a.Elements, {
+    let U = t.includes(_.h8.PAYMENT_TYPE) ? _.h8.PAYMENT_TYPE : _.h8.ADD_PAYMENT_STEPS;
+    return (0, r.jsxs)(o.Elements, {
         options: g.OBo,
         stripe: k,
         children: [
-            T,
-            (0, i.jsxs)('div', {
-                className: o()('paymentModalContent', v.content),
+            O,
+            (0, r.jsxs)('div', {
+                className: s()('paymentModalContent', v.content),
                 children: [
-                    S && n !== p.h8.CONFIRM
-                        ? (0, i.jsx)(c.Z, {
+                    I && n !== _.h8.CONFIRM
+                        ? (0, r.jsx)(u.Z, {
                               className: v.paymentNote,
-                              iconSize: c.Z.Sizes.SMALL,
-                              icon: u.OgN,
-                              color: null == A ? c.Z.Colors.PRIMARY : c.Z.Colors.SECONDARY,
-                              children: A
+                              iconSize: u.Z.Sizes.SMALL,
+                              icon: c.OgN,
+                              color: null == T ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
+                              children: T
                           })
                         : null,
                     N
                         ? null
-                        : (0, i.jsx)('div', {
+                        : (0, r.jsx)('div', {
                               className: v.breadcrumbsWrapper,
-                              children: (0, i.jsx)(u.OoM, {
-                                  activeId: p.Ck.has(n) ? G : n,
+                              children: (0, r.jsx)(c.OoM, {
+                                  activeId: _.Ck.has(n) ? U : n,
                                   breadcrumbs: t
-                                      .filter((e) => !p.Ck.has(e) && !y.has(e))
+                                      .filter((e) => !_.Ck.has(e) && !b.has(e))
                                       .map((e) => ({
                                           id: e,
-                                          label: (0, p.DJ)(e)
+                                          label: (0, _.DJ)(e)
                                       }))
                               })
                           }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: v.bodyWrapper,
                         children: [
-                            null == w
+                            null == L
                                 ? null
-                                : (0, i.jsx)('div', {
+                                : (0, r.jsx)('div', {
                                       className: v.errorBlockWrapper,
-                                      children: (0, i.jsx)(u.kzN, {
-                                          ref: O,
+                                      children: (0, r.jsx)(c.kzN, {
+                                          ref: R,
                                           children: M
                                       })
                                   }),
-                            C
-                                ? (0, i.jsx)(u.$jN, { className: v.loadingBlock })
-                                : (0, i.jsx)(u.qBt, {
+                            A
+                                ? (0, r.jsx)(c.$jN, { className: v.loadingBlock })
+                                : (0, r.jsx)(c.qBt, {
                                       className: v.sequencer,
                                       staticClassName: v.sequencerStatic,
                                       animatedNodeClassName: v.sequencerAnimatedNode,
@@ -95,17 +95,17 @@ function I(e) {
                                       step: n,
                                       steps: t,
                                       sideMargin: 20,
-                                      children: (0, i.jsx)(u.h21, {
-                                          onScroll: L,
-                                          className: o()(v.scroller, x),
-                                          children: s
+                                      children: (0, r.jsx)(c.h21, {
+                                          onScroll: w,
+                                          className: s()(v.scroller, D),
+                                          children: a
                                       })
                                   })
                         ]
                     })
                 ]
             }),
-            b
+            S
         ]
     });
 }

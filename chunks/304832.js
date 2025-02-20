@@ -1,16 +1,16 @@
 n.d(t, {
-    Hj: () => a,
-    YJ: () => r
+    Hj: () => o,
+    YJ: () => i
 });
-var i = function (e, t) {
+var r = function (e, t) {
     return e === t;
 };
-function r(e, t) {
+function i(e, t) {
     return (!e && !t) || (!!e && !!t && e.x === t.x && e.y === t.y);
 }
-function a(e, t) {
-    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i;
+function o(e, t) {
+    var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
     if (e.length !== t.length) return !1;
-    for (var r = 0; r < e.length; ++r) if (!n(e[r], t[r])) return !1;
+    for (var i = 0; i < e.length; ++i) if (!n(e[i], t[i])) return !1;
     return !0;
 }

@@ -1,21 +1,21 @@
-var e = r(581031),
+var n = r(581031),
     i = r(959318),
     o = r(714050),
-    u = r(676125),
-    a = e(''.charAt),
-    c = e(''.charCodeAt),
-    s = e(''.slice),
-    f = function (n) {
-        return function (t, r) {
-            var e,
-                f,
-                l = o(u(t)),
-                h = i(r),
-                v = l.length;
-            return h < 0 || h >= v ? (n ? '' : void 0) : (e = c(l, h)) < 55296 || e > 56319 || h + 1 === v || (f = c(l, h + 1)) < 56320 || f > 57343 ? (n ? a(l, h) : e) : n ? s(l, h, h + 2) : ((e - 55296) << 10) + (f - 56320) + 65536;
+    a = r(676125),
+    c = n(''.charAt),
+    u = n(''.charCodeAt),
+    s = n(''.slice),
+    l = function (t) {
+        return function (e, r) {
+            var n,
+                l,
+                f = o(a(e)),
+                p = i(r),
+                v = f.length;
+            return p < 0 || p >= v ? (t ? '' : void 0) : (n = u(f, p)) < 55296 || n > 56319 || p + 1 === v || (l = u(f, p + 1)) < 56320 || l > 57343 ? (t ? c(f, p) : n) : t ? s(f, p, p + 2) : ((n - 55296) << 10) + (l - 56320) + 65536;
         };
     };
-n.exports = {
-    codeAt: f(!1),
-    charAt: f(!0)
+t.exports = {
+    codeAt: l(!1),
+    charAt: l(!0)
 };

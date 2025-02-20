@@ -1,44 +1,44 @@
-n.d(t, { s: () => s });
-var i = n(200651);
+n.d(t, { s: () => a });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(388032),
-    a = n(739387);
-function s(e) {
-    let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
-    return (0, i.jsxs)('div', {
-        className: a.confirmation,
+var i = n(481060),
+    l = n(388032),
+    o = n(92850);
+function a(e) {
+    let { onDiscardApplication: t, onContinueApplication: n, guild: a } = e;
+    return (0, r.jsxs)('div', {
+        className: o.confirmation,
         children: [
-            (0, i.jsx)('div', {
-                className: a.iconWrapper,
-                children: (0, i.jsx)(l.Gzi, {
+            (0, r.jsx)('div', {
+                className: o.iconWrapper,
+                children: (0, r.jsx)(i.Gzi, {
                     size: 'md',
-                    color: l.TVs.colors.INTERACTIVE_ACTIVE
+                    color: i.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: null != s ? r.intl.formatToPlainString(r.t.f5Jaw8, { guildName: s.name }) : r.intl.string(r.t['0sTyER'])
+                children: null != a ? l.NW.formatToPlainString(l.t.f5Jaw8, { guildName: a.name }) : l.NW.string(l.t['0sTyER'])
             }),
-            (0, i.jsxs)('div', {
-                className: a.incompleteButtonsContainer,
+            (0, r.jsxs)('div', {
+                className: o.incompleteButtonsContainer,
                 children: [
-                    (0, i.jsx)(l.zxk, {
+                    (0, r.jsx)(i.zxk, {
                         fullWidth: !0,
                         onClick: n,
-                        look: l.zxk.Looks.FILLED,
-                        color: l.zxk.Colors.PRIMARY,
-                        size: l.zxk.Sizes.LARGE,
-                        children: r.intl.string(r.t.h3aGmp)
+                        look: i.zxk.Looks.FILLED,
+                        color: i.zxk.Colors.PRIMARY,
+                        size: i.zxk.Sizes.LARGE,
+                        children: l.NW.string(l.t.h3aGmp)
                     }),
-                    (0, i.jsx)(l.zxk, {
+                    (0, r.jsx)(i.zxk, {
                         fullWidth: !0,
                         onClick: t,
-                        look: l.zxk.Looks.FILLED,
-                        color: l.zxk.Colors.RED,
-                        size: l.zxk.Sizes.LARGE,
-                        children: r.intl.string(r.t.OQFlFB)
+                        look: i.zxk.Looks.FILLED,
+                        color: i.zxk.Colors.RED,
+                        size: i.zxk.Sizes.LARGE,
+                        children: l.NW.string(l.t.OQFlFB)
                     })
                 ]
             })

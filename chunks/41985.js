@@ -25,85 +25,85 @@
             '९': '9',
             '०': '0'
         };
-    function i(e, t, n, i) {
-        var r = '';
+    function r(e, t, n, r) {
+        var i = '';
         if (t)
             switch (n) {
                 case 's':
-                    r = 'काही सेकंद';
+                    i = 'काही सेकंद';
                     break;
                 case 'ss':
-                    r = '%d सेकंद';
+                    i = '%d सेकंद';
                     break;
                 case 'm':
-                    r = 'एक मिनिट';
+                    i = 'एक मिनिट';
                     break;
                 case 'mm':
-                    r = '%d मिनिटे';
+                    i = '%d मिनिटे';
                     break;
                 case 'h':
-                    r = 'एक तास';
+                    i = 'एक तास';
                     break;
                 case 'hh':
-                    r = '%d तास';
+                    i = '%d तास';
                     break;
                 case 'd':
-                    r = 'एक दिवस';
+                    i = 'एक दिवस';
                     break;
                 case 'dd':
-                    r = '%d दिवस';
+                    i = '%d दिवस';
                     break;
                 case 'M':
-                    r = 'एक महिना';
+                    i = 'एक महिना';
                     break;
                 case 'MM':
-                    r = '%d महिने';
+                    i = '%d महिने';
                     break;
                 case 'y':
-                    r = 'एक वर्ष';
+                    i = 'एक वर्ष';
                     break;
                 case 'yy':
-                    r = '%d वर्षे';
+                    i = '%d वर्षे';
             }
         else
             switch (n) {
                 case 's':
-                    r = 'काही सेकंदां';
+                    i = 'काही सेकंदां';
                     break;
                 case 'ss':
-                    r = '%d सेकंदां';
+                    i = '%d सेकंदां';
                     break;
                 case 'm':
-                    r = 'एका मिनिटा';
+                    i = 'एका मिनिटा';
                     break;
                 case 'mm':
-                    r = '%d मिनिटां';
+                    i = '%d मिनिटां';
                     break;
                 case 'h':
-                    r = 'एका तासा';
+                    i = 'एका तासा';
                     break;
                 case 'hh':
-                    r = '%d तासां';
+                    i = '%d तासां';
                     break;
                 case 'd':
-                    r = 'एका दिवसा';
+                    i = 'एका दिवसा';
                     break;
                 case 'dd':
-                    r = '%d दिवसां';
+                    i = '%d दिवसां';
                     break;
                 case 'M':
-                    r = 'एका महिन्या';
+                    i = 'एका महिन्या';
                     break;
                 case 'MM':
-                    r = '%d महिन्यां';
+                    i = '%d महिन्यां';
                     break;
                 case 'y':
-                    r = 'एका वर्षा';
+                    i = 'एका वर्षा';
                     break;
                 case 'yy':
-                    r = '%d वर्षां';
+                    i = '%d वर्षां';
             }
-        return r.replace(/%d/i, e);
+        return i.replace(/%d/i, e);
     }
     return e.defineLocale('mr', {
         months: 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split('_'),
@@ -131,18 +131,18 @@
         relativeTime: {
             future: '%sमध्ये',
             past: '%sपूर्वी',
-            s: i,
-            ss: i,
-            m: i,
-            mm: i,
-            h: i,
-            hh: i,
-            d: i,
-            dd: i,
-            M: i,
-            MM: i,
-            y: i,
-            yy: i
+            s: r,
+            ss: r,
+            m: r,
+            mm: r,
+            h: r,
+            hh: r,
+            d: r,
+            dd: r,
+            M: r,
+            MM: r,
+            y: r,
+            yy: r
         },
         preparse: function (e) {
             return e.replace(/[१२३४५६७८९०]/g, function (e) {

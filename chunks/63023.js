@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => l }), n(653041);
-class l {
+n.d(t, { Z: () => i }), n(653041);
+class i {
     _processQueue() {
         setTimeout(() => {
             if (this._queue.length > 0 && this._tokenCount > 0) {
@@ -31,6 +31,6 @@ class l {
         });
     }
     constructor(e, t) {
-        i(this, '_capacity', void 0), i(this, '_tokenCount', void 0), i(this, '_queue', void 0), i(this, '_intervalPeriod', void 0), i(this, '_intervalID', void 0), (this._capacity = e), (this._tokenCount = e), (this._queue = []), (this._intervalPeriod = t / e), (this._intervalID = null);
+        r(this, '_capacity', void 0), r(this, '_tokenCount', void 0), r(this, '_queue', void 0), r(this, '_intervalPeriod', void 0), r(this, '_intervalID', void 0), (this._capacity = e), (this._tokenCount = e), (this._queue = []), (this._intervalPeriod = t / e), (this._intervalID = null);
     }
 }

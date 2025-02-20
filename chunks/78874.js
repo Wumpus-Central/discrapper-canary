@@ -1,36 +1,36 @@
-t.d(i, { Z: () => I });
-var l = t(200651);
-t(192379);
-var a = t(442837),
-    e = t(481060),
-    r = t(594190),
-    d = t(757266),
-    c = t(283595),
-    s = t(417363),
-    o = t(804739),
-    u = t(346329),
-    h = t(592745),
-    b = t(388032);
-function I(n, i) {
-    let t = (0, a.e7)([r.ZP], () => r.ZP.getRunningVerifiedApplicationIds().includes(n.id), [n.id]),
-        I = (0, a.e7)(
-            [c.Z, h.Z, s.Z, d.Z],
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(594190),
+    c = n(757266),
+    o = n(283595),
+    u = n(417363),
+    s = n(804739),
+    d = n(346329),
+    b = n(592745),
+    p = n(388032);
+function f(e, t) {
+    let n = (0, i.e7)([a.ZP], () => a.ZP.getRunningVerifiedApplicationIds().includes(e.id), [e.id]),
+        f = (0, i.e7)(
+            [o.Z, b.Z, u.Z, c.Z],
             () =>
-                (0, o.t)({
-                    LibraryApplicationStore: c.Z,
-                    LaunchableGameStore: h.Z,
-                    DispatchApplicationStore: s.Z,
-                    ConnectedAppsStore: d.Z,
-                    applicationId: n.id,
-                    branchId: n.branchId
+                (0, s.t)({
+                    LibraryApplicationStore: o.Z,
+                    LaunchableGameStore: b.Z,
+                    DispatchApplicationStore: u.Z,
+                    ConnectedAppsStore: c.Z,
+                    applicationId: e.id,
+                    branchId: e.branchId
                 }),
-            [n.branchId, n.id]
+            [e.branchId, e.id]
         );
-    return t || !I
+    return n || !f
         ? null
-        : (0, l.jsx)(e.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'launch',
-              label: b.intl.string(b.t.XKUw8v),
-              action: () => u.playApplication(n.id, n, { analyticsParams: { location: i } })
+              label: p.NW.string(p.t.XKUw8v),
+              action: () => d.playApplication(e.id, e, { analyticsParams: { location: t } })
           });
 }

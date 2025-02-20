@@ -1,7 +1,7 @@
-n.d(t, { Z: () => i });
-let i = function (e, t) {
+n.d(t, { Z: () => r });
+let r = function (e, t) {
     var n = -1,
-        i = e.length;
-    for (t || (t = Array(i)); ++n < i; ) t[n] = e[n];
+        r = e.length;
+    for (t || (t = Array(r)); ++n < r; ) t[n] = e[n];
     return t;
 };

@@ -1,51 +1,51 @@
-n.d(t, { Z: () => p });
-var i = n(192379),
-    l = n(442837),
-    a = n(661111),
-    r = n(706454),
-    s = n(306680),
-    o = n(626135),
+n.d(t, { Z: () => h });
+var r = n(192379),
+    i = n(442837),
+    l = n(661111),
+    o = n(706454),
+    a = n(306680),
+    s = n(626135),
     c = n(802098),
-    d = n(193701),
-    u = n(702321),
-    h = n(981631);
-function p(e) {
-    let t = (0, d.Z)(e),
-        n = (0, l.e7)([r.default], () => r.default.locale),
-        p = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
-        m = (0, u.Z)(e),
-        f = i.useRef(m ? Date.now() : null),
-        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]),
-        _ = i.useRef(g);
-    i.useEffect(() => {
-        _.current = g;
+    u = n(193701),
+    d = n(702321),
+    p = n(981631);
+function h(e) {
+    let t = (0, u.Z)(e),
+        n = (0, i.e7)([o.default], () => o.default.locale),
+        h = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
+        f = (0, d.Z)(e),
+        m = r.useRef(f ? Date.now() : null),
+        g = (0, i.e7)([a.ZP], () => a.ZP.getUnreadCount(e), [e]),
+        b = r.useRef(g);
+    r.useEffect(() => {
+        b.current = g;
     }),
-        i.useEffect(() => {
-            f.current = Date.now();
-        }, [m]),
-        i.useEffect(() => {
-            m && null != t && a.Z.fetchChangelog(t, n, !0);
-        }, [t, n, m]),
-        i.useEffect(() => {
-            m &&
-                null != p &&
-                o.default.track(h.rMx.CHANGE_LOG_OPENED, {
-                    change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                    unread_count: _.current
+        r.useEffect(() => {
+            m.current = Date.now();
+        }, [f]),
+        r.useEffect(() => {
+            f && null != t && l.Z.fetchChangelog(t, n, !0);
+        }, [t, n, f]),
+        r.useEffect(() => {
+            f &&
+                null != h &&
+                s.default.track(p.rMx.CHANGE_LOG_OPENED, {
+                    change_log_id: ''.concat(h.date, ':').concat(h.revision),
+                    unread_count: b.current
                 });
-        }, [m, p]),
-        i.useEffect(() => {
-            let e = f.current;
+        }, [f, h]),
+        r.useEffect(() => {
+            let e = m.current;
             return () => {
-                m &&
-                    null != p &&
+                f &&
+                    null != h &&
                     null != e &&
-                    (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
+                    (s.default.track(p.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                        unread_count: _.current
+                        change_log_id: ''.concat(h.date, ':').concat(h.revision),
+                        unread_count: b.current
                     }),
-                    (f.current = 0));
+                    (m.current = 0));
             };
-        }, [m, p]);
+        }, [f, h]);
 }

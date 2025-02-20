@@ -1,22 +1,22 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(739566),
+var i = n(739566),
     a = n(834129),
-    r = n(388032);
-function s(e) {
-    let { message: t, channel: s, targetUser: o, actorUsernameHook: c, targetUsernameHook: d, compact: u } = e,
-        m = (0, l.ZP)(t),
-        _ = (0, l.Sw)(o, s),
-        h = c(m),
-        p = d(null != _ ? _ : void 0),
-        g = r.intl.format(r.t.tusv2t, {
-            actorName: m.nick,
-            actorHook: h,
-            targetName: null == _ ? void 0 : _.nick,
-            targetHook: p
+    o = n(388032);
+function l(e) {
+    let { message: t, channel: l, targetUser: s, actorUsernameHook: c, targetUsernameHook: d, compact: u } = e,
+        p = (0, i.ZP)(t),
+        m = (0, i.Sw)(s, l),
+        f = c(p),
+        h = d(null != m ? m : void 0),
+        g = o.NW.format(o.t.tusv2t, {
+            actorName: p.nick,
+            actorHook: f,
+            targetName: null == m ? void 0 : m.nick,
+            targetHook: h
         });
-    return (0, i.jsx)(a.Z, {
+    return (0, r.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: u,

@@ -1,33 +1,33 @@
-n.d(t, { Z: () => M }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    r = n(392711),
-    a = n.n(r),
-    s = n(642128),
-    o = n(818405),
-    u = n(587158),
-    c = n(286379),
+n.d(t, { Z: () => D }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(392711),
+    a = n.n(i),
+    o = n(642128),
+    s = n(818405),
+    c = n(587158),
+    u = n(286379),
     d = n(442837),
-    m = n(481060),
-    f = n(224706),
-    h = n(13245),
-    p = n(615287),
+    f = n(481060),
+    m = n(224706),
+    p = n(13245),
+    h = n(615287),
     v = n(493773),
     g = n(797614),
-    E = n(703656),
-    x = n(594174),
-    Z = n(254761),
-    S = n(70956),
-    C = n(960048),
-    b = n(145597),
-    I = n(333031),
-    _ = n(610394),
-    R = n(380736),
-    y = n(987650),
-    j = n(981631),
+    b = n(703656),
+    y = n(594174),
+    E = n(254761),
+    O = n(70956),
+    S = n(960048),
+    j = n(145597),
+    x = n(333031),
+    Z = n(610394),
+    w = n(380736),
+    C = n(987650),
+    P = n(981631),
     N = n(388032),
-    w = n(446851);
-function A(e, t, n) {
+    I = n(99537);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,12 +40,12 @@ function A(e, t, n) {
         e
     );
 }
-let T = a().throttle(
+let _ = a().throttle(
         () => {
             g.Z.increment(
                 {
-                    name: c.V.APP_CRASHED,
-                    tags: ['reason:'.concat(o.v.UNHANDLED_JS_ERROR), 'level:'.concat(u.c.FATAL)]
+                    name: u.V.APP_CRASHED,
+                    tags: ['reason:'.concat(s.v.UNHANDLED_JS_ERROR), 'level:'.concat(c.c.FATAL)]
                 },
                 !0
             );
@@ -53,80 +53,80 @@ let T = a().throttle(
         100,
         { trailing: !1 }
     ),
-    k = 10 * S.Z.Millis.SECOND;
-function O(e) {
+    k = 10 * O.Z.Millis.SECOND;
+function A(e) {
     var t, n;
-    let { error: r, onLock: a, onReload: o, onDisable: u, onCrashDisabled: c } = e,
-        f = i.useMemo(() => new s.SpringValue(1), []),
-        p = i.useRef(null),
-        [g, E] = i.useState(!1),
-        [S, C] = i.useState(!1),
-        b = (0, d.e7)([x.default], () => x.default.getCurrentUser());
+    let { error: i, onLock: a, onReload: s, onDisable: c, onCrashDisabled: u } = e,
+        m = l.useMemo(() => new o.SpringValue(1), []),
+        h = l.useRef(null),
+        [g, b] = l.useState(!1),
+        [O, S] = l.useState(!1),
+        j = (0, d.e7)([y.default], () => y.default.getCurrentUser());
     (0, v.ZP)(
         () => (
-            (p.current = setTimeout(I, k)),
-            h.Z.track(j.rMx.NOTIFICATION_VIEWED, { notif_type: y.n0.OverlayCrashed }),
+            (h.current = setTimeout(x, k)),
+            p.Z.track(P.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed }),
             () => {
-                null != p.current && clearTimeout(p.current);
+                null != h.current && clearTimeout(h.current);
             }
         )
     );
-    let I = i.useCallback(() => {
-            f.set(0), null != p.current && clearTimeout(p.current), (p.current = null), null == a || a(), null == c || c();
-        }, [f, a, c]),
-        A = i.useCallback(
+    let x = l.useCallback(() => {
+            m.set(0), null != h.current && clearTimeout(h.current), (h.current = null), null == a || a(), null == u || u();
+        }, [m, a, u]),
+        R = l.useCallback(
             (e) => {
-                !S &&
-                    (C(!0),
+                !O &&
+                    (S(!0),
                     null == a || a(),
-                    h.Z.track(
-                        j.rMx.NOTIFICATION_CLICKED,
+                    p.Z.track(
+                        P.rMx.NOTIFICATION_CLICKED,
                         {
-                            notif_type: y.n0.OverlayCrashed,
+                            notif_type: C.n0.OverlayCrashed,
                             action_type: 'reload'
                         },
                         !0
                     ),
                     e.stopPropagation(),
-                    setTimeout(() => (null == o ? void 0 : o()), 200));
+                    setTimeout(() => (null == s ? void 0 : s()), 200));
             },
-            [a, o, S]
+            [a, s, O]
         ),
-        T = i.useCallback(
+        _ = l.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (E(!0), null != p.current && clearTimeout(p.current)) : E(!1);
+                e.stopPropagation(), e.shiftKey ? (b(!0), null != h.current && clearTimeout(h.current)) : b(!1);
             },
-            [E]
+            [b]
         ),
-        O = i.useCallback(
+        A = l.useCallback(
             (e) => {
-                e.stopPropagation(), null == a || a(), null == u || u();
+                e.stopPropagation(), null == a || a(), null == c || c();
             },
-            [u, a]
+            [c, a]
         ),
-        P = (0, d.e7)([_.ZP], () => _.ZP.getFocusedRunningGame()),
-        M = g
-            ? (0, l.jsxs)('div', {
+        T = (0, d.e7)([Z.ZP], () => Z.ZP.getFocusedRunningGame()),
+        D = g
+            ? (0, r.jsxs)('div', {
                   children: [
-                      (0, l.jsx)(m.Text, {
+                      (0, r.jsx)(f.Text, {
                           variant: 'text-md/semibold',
                           color: 'text-primary',
-                          children: N.intl.string(N.t.mn4eXF)
+                          children: N.NW.string(N.t.mn4eXF)
                       }),
-                      (0, l.jsxs)('div', {
-                          className: w.stackTraceCode,
+                      (0, r.jsxs)('div', {
+                          className: I.stackTraceCode,
                           children: [
-                              (0, l.jsx)(m.Text, {
+                              (0, r.jsx)(f.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
-                                  children: r.message
+                                  children: i.message
                               }),
-                              (0, l.jsx)(m.Text, {
+                              (0, r.jsx)(f.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-secondary',
-                                  children: (0, l.jsx)('code', {
-                                      className: w.code,
-                                      children: (0, l.jsx)('pre', { children: r.stack })
+                                  children: (0, r.jsx)('code', {
+                                      className: I.code,
+                                      children: (0, r.jsx)('pre', { children: i.stack })
                                   })
                               })
                           ]
@@ -134,97 +134,97 @@ function O(e) {
                   ]
               })
             : null,
-        D = g ? null : N.intl.string(N.t.oEJEFh),
-        L = (null !== (t = null == b ? void 0 : b.isStaff()) && void 0 !== t && t) || (null !== (n = null == b ? void 0 : b.isStaffPersonal()) && void 0 !== n && n);
-    return (0, l.jsx)(R.Yj, {
-        title: N.intl.string(N.t.U38qZm),
-        body: M,
-        hint: L ? D : void 0,
-        confirmText: N.intl.string(N.t.a3HlgI),
-        cancelText: null != P ? N.intl.string(N.t.qIYnPj) : void 0,
-        icon: (0, l.jsx)(Z.Z, {
+        M = g ? null : N.NW.string(N.t.oEJEFh),
+        L = (null !== (t = null == j ? void 0 : j.isStaff()) && void 0 !== t && t) || (null !== (n = null == j ? void 0 : j.isStaffPersonal()) && void 0 !== n && n);
+    return (0, r.jsx)(w.Yj, {
+        title: N.NW.string(N.t.U38qZm),
+        body: D,
+        hint: L ? M : void 0,
+        confirmText: N.NW.string(N.t.a3HlgI),
+        cancelText: null != T ? N.NW.string(N.t.qIYnPj) : void 0,
+        icon: (0, r.jsx)(E.Z, {
             width: 40,
             height: 40,
-            className: w.notificationIcon
+            className: I.notificationIcon
         }),
-        onNotificationClick: T,
-        onConfirmClick: A,
-        onCancelClick: null != P ? O : void 0,
+        onNotificationClick: _,
+        onConfirmClick: R,
+        onCancelClick: null != T ? A : void 0,
         onDismissClick: a,
         expand: !0,
         locked: !0,
         notificationId: 'overlay-crashed',
         index: 0,
-        status: j._1z.ACTIVE,
+        status: P._1z.ACTIVE,
         containerRef: null,
-        contentOpacity: f,
-        className: w.errorNotificationContainer,
-        wrapperClassName: w.errorNotificationWrapper
+        contentOpacity: m,
+        className: I.errorNotificationContainer,
+        wrapperClassName: I.errorNotificationWrapper
     });
 }
-class P extends i.PureComponent {
+class T extends l.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, E.s1)().location;
+        let n = (0, b.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let l = (0, b.QF)();
-        h.Z.setOverlayCrashed(l, e), h.Z.setInputLocked(!0, l);
-        let i = C.Z.captureCrash(e, { extra: t });
-        h.Z.track(j.rMx.APP_CRASHED, {
+        let r = (0, j.QF)();
+        p.Z.setOverlayCrashed(r, e), p.Z.setInputLocked(!0, r);
+        let l = S.Z.captureCrash(e, { extra: t });
+        p.Z.track(P.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: i,
+            sentry_issue_id: l,
             error_level: 'fatal'
         }),
-            T(),
-            (this.pid = l);
+            _(),
+            (this.pid = r);
     }
     render() {
         let { children: e, className: t } = this.props,
-            { error: n, showError: i } = this.state;
+            { error: n, showError: l } = this.state;
         return null != n
-            ? i
-                ? (0, l.jsx)(I.Z, {
-                      className: w.errorClickNotification,
-                      children: (0, l.jsx)(O, {
+            ? l
+                ? (0, r.jsx)(x.Z, {
+                      className: I.errorClickNotification,
+                      children: (0, r.jsx)(A, {
                           error: n,
                           onLock: () => {
                               var e;
-                              let t = null !== (e = this.pid) && void 0 !== e ? e : (0, b.QF)();
-                              h.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
+                              let t = null !== (e = this.pid) && void 0 !== e ? e : (0, j.QF)();
+                              p.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
-                              let e = _.ZP.getFocusedRunningGame();
-                              null != e && f.Z.toggleOverlay(e, !1, !1);
+                              let e = Z.ZP.getFocusedRunningGame();
+                              null != e && m.Z.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               var e;
-                              let t = null !== (e = this.pid) && void 0 !== e ? e : (0, b.QF)();
-                              h.Z.updateOverlayState(t, p.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 });
+                              let t = null !== (e = this.pid) && void 0 !== e ? e : (0, j.QF)();
+                              p.Z.updateOverlayState(t, h.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 });
                           },
                           onReload: () => {
-                              h.Z.setReloadOverlay((0, b.QF)()), this.setState({ showError: !1 });
+                              p.Z.setReloadOverlay((0, j.QF)()), this.setState({ showError: !1 });
                           }
                       })
                   })
                 : null
-            : (0, l.jsx)('div', {
+            : (0, r.jsx)('div', {
                   className: t,
                   children: e
               });
     }
     constructor(...e) {
         super(...e),
-            A(this, 'state', {
+            R(this, 'state', {
                 error: null,
                 showError: !0,
                 info: null
             }),
-            A(this, 'pid', null);
+            R(this, 'pid', null);
     }
 }
-let M = P;
+let D = T;

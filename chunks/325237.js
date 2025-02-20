@@ -1,4 +1,4 @@
-var i = n(788255),
-    r = 'object' == typeof self && self && self.Object === Object && self,
-    a = i || r || Function('return this')();
-e.exports = a;
+var r = n(788255),
+    i = 'object' == typeof self && self && self.Object === Object && self,
+    o = r || i || Function('return this')();
+e.exports = o;

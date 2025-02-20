@@ -1,20 +1,20 @@
 function t(e) {
     let t = '(_?[ui](8|16|32|64|128))?',
         n = '(_?f(32|64))?',
-        i = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
-        r = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
-        a = {
+        r = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
+        i = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
+        o = {
             $pattern: '[a-zA-Z_]\\w*[!?=]?',
             keyword: 'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
             literal: 'false nil true'
         },
-        s = {
+        a = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: a
+            keywords: o
         },
-        o = {
+        s = {
             className: 'variable',
             begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
         },
@@ -30,9 +30,9 @@ function t(e) {
                     end: '%\\}'
                 }
             ],
-            keywords: a
+            keywords: o
         };
-    function u(e, t) {
+    function c(e, t) {
         let n = [
             {
                 begin: e,
@@ -41,9 +41,9 @@ function t(e) {
         ];
         return (n[0].contains = n), n;
     }
-    let c = {
+    let u = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, s],
+            contains: [e.BACKSLASH_ESCAPE, a],
             variants: [
                 {
                     begin: /'/,
@@ -60,22 +60,22 @@ function t(e) {
                 {
                     begin: '%[Qwi]?\\(',
                     end: '\\)',
-                    contains: u('\\(', '\\)')
+                    contains: c('\\(', '\\)')
                 },
                 {
                     begin: '%[Qwi]?\\[',
                     end: '\\]',
-                    contains: u('\\[', '\\]')
+                    contains: c('\\[', '\\]')
                 },
                 {
                     begin: '%[Qwi]?\\{',
                     end: /\}/,
-                    contains: u(/\{/, /\}/)
+                    contains: c(/\{/, /\}/)
                 },
                 {
                     begin: '%[Qwi]?<',
                     end: '>',
-                    contains: u('<', '>')
+                    contains: c('<', '>')
                 },
                 {
                     begin: '%[Qwi]?\\|',
@@ -94,22 +94,22 @@ function t(e) {
                 {
                     begin: '%q\\(',
                     end: '\\)',
-                    contains: u('\\(', '\\)')
+                    contains: c('\\(', '\\)')
                 },
                 {
                     begin: '%q\\[',
                     end: '\\]',
-                    contains: u('\\[', '\\]')
+                    contains: c('\\[', '\\]')
                 },
                 {
                     begin: '%q\\{',
                     end: /\}/,
-                    contains: u(/\{/, /\}/)
+                    contains: c(/\{/, /\}/)
                 },
                 {
                     begin: '%q<',
                     end: '>',
-                    contains: u('<', '>')
+                    contains: c('<', '>')
                 },
                 {
                     begin: '%q\\|',
@@ -128,7 +128,7 @@ function t(e) {
             contains: [
                 {
                     className: 'regexp',
-                    contains: [e.BACKSLASH_ESCAPE, s],
+                    contains: [e.BACKSLASH_ESCAPE, a],
                     variants: [
                         {
                             begin: '//[a-z]*',
@@ -143,33 +143,33 @@ function t(e) {
             ],
             relevance: 0
         },
-        _ = [
+        p = [
             l,
-            c,
+            u,
             d,
             {
                 className: 'regexp',
-                contains: [e.BACKSLASH_ESCAPE, s],
+                contains: [e.BACKSLASH_ESCAPE, a],
                 variants: [
                     {
                         begin: '%r\\(',
                         end: '\\)',
-                        contains: u('\\(', '\\)')
+                        contains: c('\\(', '\\)')
                     },
                     {
                         begin: '%r\\[',
                         end: '\\]',
-                        contains: u('\\[', '\\]')
+                        contains: c('\\[', '\\]')
                     },
                     {
                         begin: '%r\\{',
                         end: /\}/,
-                        contains: u(/\{/, /\}/)
+                        contains: c(/\{/, /\}/)
                     },
                     {
                         begin: '%r<',
                         end: '>',
-                        contains: u('<', '>')
+                        contains: c('<', '>')
                     },
                     {
                         begin: '%r\\|',
@@ -185,27 +185,27 @@ function t(e) {
                 end: '\\]',
                 contains: [e.inherit(e.QUOTE_STRING_MODE, { className: 'string' })]
             },
-            o,
+            s,
             e.HASH_COMMENT_MODE,
             {
                 className: 'class',
                 beginKeywords: 'class module struct',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r }), { begin: '<' }]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i }), { begin: '<' }]
             },
             {
                 className: 'class',
                 beginKeywords: 'lib enum union',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })]
             },
             {
                 beginKeywords: 'annotation',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: i })],
                 relevance: 2
             },
             {
@@ -214,7 +214,7 @@ function t(e) {
                 end: /\B\b/,
                 contains: [
                     e.inherit(e.TITLE_MODE, {
-                        begin: i,
+                        begin: r,
                         endsParent: !0
                     })
                 ]
@@ -225,7 +225,7 @@ function t(e) {
                 end: /\B\b/,
                 contains: [
                     e.inherit(e.TITLE_MODE, {
-                        begin: i,
+                        begin: r,
                         endsParent: !0
                     })
                 ],
@@ -239,7 +239,7 @@ function t(e) {
             {
                 className: 'symbol',
                 begin: ':',
-                contains: [c, { begin: i }],
+                contains: [u, { begin: r }],
                 relevance: 0
             },
             {
@@ -249,13 +249,13 @@ function t(e) {
             }
         ];
     return (
-        (s.contains = _),
-        (l.contains = _.slice(1)),
+        (a.contains = p),
+        (l.contains = p.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
-            keywords: a,
-            contains: _
+            keywords: o,
+            contains: p
         }
     );
 }

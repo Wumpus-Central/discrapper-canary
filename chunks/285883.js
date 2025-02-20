@@ -1,12 +1,12 @@
 a.d(e, {
     EN: () => s,
     IQ: () => E,
-    bU: () => o
+    bU: () => _
 });
 var r = a(176984),
     n = a(573736),
-    _ = a(622916);
-let o = 'baggage',
+    o = a(622916);
+let _ = 'baggage',
     i = 'sentry-',
     c = /^sentry-/;
 function s(t) {
@@ -34,9 +34,9 @@ function E(t) {
         return (function (t) {
             if (0 !== Object.keys(t).length)
                 return Object.entries(t).reduce((t, [e, a], n) => {
-                    let o = `${encodeURIComponent(e)}=${encodeURIComponent(a)}`,
-                        i = 0 === n ? o : `${t},${o}`;
-                    return i.length > 8192 ? (r.X && _.kg.warn(`Not adding key: ${e} with val: ${a} to baggage header due to exceeding baggage size limits.`), t) : i;
+                    let _ = `${encodeURIComponent(e)}=${encodeURIComponent(a)}`,
+                        i = 0 === n ? _ : `${t},${_}`;
+                    return i.length > 8192 ? (r.X && o.kg.warn(`Not adding key: ${e} with val: ${a} to baggage header due to exceeding baggage size limits.`), t) : i;
                 }, '');
         })(Object.entries(t).reduce((t, [e, a]) => (a && (t[`${i}${e}`] = a), t), {}));
 }

@@ -3,18 +3,18 @@
 })(function () {
     var e,
         t,
-        i,
         r,
-        a = 'undefined' != typeof window ? window : (n.g, n.g),
-        s = (a.cancelRequestAnimationFrame && a.requestAnimationFrame) || setTimeout,
-        o = a.cancelRequestAnimationFrame || clearTimeout,
+        i,
+        o = 'undefined' != typeof window ? window : (n.g, n.g),
+        a = (o.cancelRequestAnimationFrame && o.requestAnimationFrame) || setTimeout,
+        s = o.cancelRequestAnimationFrame || clearTimeout,
         l = [],
-        u = 0,
-        c = !1,
+        c = 0,
+        u = !1,
         d = 7,
         f = 35,
-        _ = 125,
-        p = 0,
+        p = 125,
+        _ = 0,
         h = 0,
         m = 0,
         g = {
@@ -27,61 +27,61 @@
             }
         },
         E = v(function () {
-            (d = 22), (_ = 66), (f = 0);
+            (d = 22), (p = 66), (f = 0);
         });
     function v(e) {
         var t,
             n,
-            i = 99,
-            r = function () {
-                var a = Date.now() - n;
-                a < i ? (t = setTimeout(r, i - a)) : ((t = null), e());
+            r = 99,
+            i = function () {
+                var o = Date.now() - n;
+                o < r ? (t = setTimeout(i, r - o)) : ((t = null), e());
             };
         return function () {
-            (n = Date.now()), t || (t = setTimeout(r, i));
+            (n = Date.now()), t || (t = setTimeout(i, r));
         };
     }
-    function y() {
-        c && (r && o(r), i && clearTimeout(i), (c = !1));
-    }
-    function I() {
-        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (y(), S())), E();
-    }
-    function T() {
-        (r = null), (i = setTimeout(A, 0));
-    }
     function b() {
-        (i = null), s(T);
+        u && (i && s(i), r && clearTimeout(r), (u = !1));
+    }
+    function y() {
+        125 != p && ((d = 7), (p = 125), (f = 35), u && (b(), I())), E();
+    }
+    function O() {
+        (i = null), (r = setTimeout(T, 0));
     }
     function S() {
-        !c && ((t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (i = setTimeout(b, t)) : ((t = 0), b()));
+        (r = null), a(O);
     }
-    function A() {
+    function I() {
+        !u && ((t = p - (Date.now() - h)), (e = Date.now()), (u = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S()));
+    }
+    function T() {
         var n,
-            r,
-            a,
-            s = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (c = !1), (i = null), u > 2 || h - t - 50 < e)) for (r = 0, a = l.length; r < a && g.timeRemaining() > s; r++) (n = l.shift()), m++, n && n(g);
-        l.length ? S() : (u = 0);
+            i,
+            o,
+            a = d > 9 ? 9 : 1;
+        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, o = l.length; i < o && g.timeRemaining() > a; i++) (n = l.shift()), m++, n && n(g);
+        l.length ? I() : (c = 0);
     }
     function N(e) {
-        return p++, l.push(e), S(), p;
+        return _++, l.push(e), I(), _;
     }
-    function C(e) {
+    function A(e) {
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
-    if (a.requestIdleCallback && a.cancelIdleCallback)
+    if (o.requestIdleCallback && o.cancelIdleCallback)
         try {
-            a.requestIdleCallback(function () {}, { timeout: 0 });
+            o.requestIdleCallback(function () {}, { timeout: 0 });
         } catch (e) {
             !(function (e) {
                 var t, n;
                 if (
-                    ((a.requestIdleCallback = function (t, n) {
+                    ((o.requestIdleCallback = function (t, n) {
                         return n && 'number' == typeof n.timeout ? e(t, n.timeout) : e(t);
                     }),
-                    a.IdleCallbackDeadline && (t = IdleCallbackDeadline.prototype))
+                    o.IdleCallbackDeadline && (t = IdleCallbackDeadline.prototype))
                 ) {
                     if (!(n = Object.getOwnPropertyDescriptor(t, 'timeRemaining')) || !n.configurable || !n.get) return;
                     Object.defineProperty(t, 'timeRemaining', {
@@ -92,31 +92,31 @@
                         configurable: !0
                     });
                 }
-            })(a.requestIdleCallback);
+            })(o.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = N),
-            (a.cancelIdleCallback = C),
-            a.document &&
+        (o.requestIdleCallback = N),
+            (o.cancelIdleCallback = A),
+            o.document &&
                 document.addEventListener &&
-                (a.addEventListener('scroll', I, !0),
-                a.addEventListener('resize', I),
-                document.addEventListener('focus', I, !0),
-                document.addEventListener('mouseover', I, !0),
+                (o.addEventListener('scroll', y, !0),
+                o.addEventListener('resize', y),
+                document.addEventListener('focus', y, !0),
+                document.addEventListener('mouseover', y, !0),
                 ['click', 'keypress', 'touchstart', 'mousedown'].forEach(function (e) {
-                    document.addEventListener(e, I, {
+                    document.addEventListener(e, y, {
                         capture: !0,
                         passive: !0
                     });
                 }),
-                a.MutationObserver &&
-                    new MutationObserver(I).observe(document.documentElement, {
+                o.MutationObserver &&
+                    new MutationObserver(y).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0
                     }));
     return {
         request: N,
-        cancel: C
+        cancel: A
     };
 });

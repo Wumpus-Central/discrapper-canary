@@ -1,4 +1,4 @@
-n.d(e, { default: () => p });
+n.d(t, { default: () => p });
 var l = n(200651),
     i = n(192379),
     c = n(481060),
@@ -7,18 +7,18 @@ var l = n(200651),
     o = n(313201),
     s = n(63063),
     _ = n(857595),
-    d = n(981631),
-    u = n(388032),
-    h = n(164048);
-function p(t) {
-    let { transitionState: e, onClose: n } = t,
+    u = n(981631),
+    d = n(388032),
+    h = n(556384);
+function p(e) {
+    let { transitionState: t, onClose: n } = e,
         p = (0, o.Dt)();
     return (
         i.useEffect(() => {
             _.r_();
         }, []),
         (0, l.jsxs)(c.Y0X, {
-            transitionState: e,
+            transitionState: t,
             role: 'alertdialog',
             'aria-labelledby': p,
             children: [
@@ -29,21 +29,21 @@ function p(t) {
                             variant: 'heading-xl/semibold',
                             id: p,
                             className: h.header,
-                            children: u.intl.format(u.t.V4fxrq, {
-                                tab: (t, e) =>
+                            children: d.NW.format(d.t.V4fxrq, {
+                                tab: (e, t) =>
                                     (0, l.jsx)(
                                         c.M2$,
                                         {
                                             shortcut: 'tab',
                                             className: h.headerShortcut
                                         },
-                                        e
+                                        t
                                     )
                             })
                         }),
                         (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: u.intl.string(u.t['oQA/OD'])
+                            children: d.NW.string(d.t['oQA/OD'])
                         }),
                         (0, l.jsxs)('ul', {
                             className: h.tips,
@@ -53,7 +53,7 @@ function p(t) {
                                         (0, l.jsx)(c.M2$, { shortcut: r._.binds['0'] }),
                                         (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: u.intl.string(u.t['43Qn2t'])
+                                            children: d.NW.string(d.t['43Qn2t'])
                                         })
                                     ]
                                 }),
@@ -62,7 +62,7 @@ function p(t) {
                                         (0, l.jsx)(c.M2$, { shortcut: a.$.binds['0'] }),
                                         (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: u.intl.string(u.t.zJg4FR)
+                                            children: d.NW.string(d.t.zJg4FR)
                                         })
                                     ]
                                 })
@@ -70,7 +70,7 @@ function p(t) {
                         }),
                         (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: u.intl.format(u.t.EWFVSU, { link: s.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
+                            children: d.NW.format(d.t.EWFVSU, { link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),
@@ -80,7 +80,7 @@ function p(t) {
                         color: c.zxk.Colors.BRAND,
                         size: c.zxk.Sizes.SMALL,
                         autoFocus: !0,
-                        children: u.intl.string(u.t.BddRzc)
+                        children: d.NW.string(d.t.BddRzc)
                     })
                 })
             ]

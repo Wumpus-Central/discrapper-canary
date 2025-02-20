@@ -1,13 +1,13 @@
 var t = '\uD800-\uDFFF',
     n = '[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]',
-    i = '\uD83C[\uDFFB-\uDFFF]',
-    r = '[^' + t + ']',
-    a = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
-    o = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
-    s = '(?:' + n + '|' + i + ')?',
-    d = '[\\ufe0e\\ufe0f]?',
-    l = '(?:\\u200d(?:' + [r, a, o].join('|') + ')' + d + s + ')*',
-    c = RegExp(i + '(?=' + i + ')|' + ('(?:' + [r + n + '?', n, a, o, '[' + t + ']'].join('|')) + ')' + (d + s + l), 'g');
+    r = '\uD83C[\uDFFB-\uDFFF]',
+    i = '[^' + t + ']',
+    s = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
+    a = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
+    l = '(?:' + n + '|' + r + ')?',
+    o = '[\\ufe0e\\ufe0f]?',
+    c = '(?:\\u200d(?:' + [i, s, a].join('|') + ')' + o + l + ')*',
+    d = RegExp(r + '(?=' + r + ')|' + ('(?:' + [i + n + '?', n, s, a, '[' + t + ']'].join('|')) + ')' + (o + l + c), 'g');
 e.exports = function (e) {
-    return e.match(c) || [];
+    return e.match(d) || [];
 };

@@ -89,8 +89,8 @@ let _ = s()((e) => {
             { isPurchased: y } = (0, C.L)(r),
             O = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             { onFocus: k } = O,
-            S = x(O, ['onFocus']),
-            P = l.useCallback(
+            P = x(O, ['onFocus']),
+            S = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, h.$)(t, i), k();
                 },
@@ -103,7 +103,7 @@ let _ = s()((e) => {
             children: (e) =>
                 (0, n.jsx)(
                     p.P3F,
-                    v(g({}, S), {
+                    v(g({}, P), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -121,9 +121,9 @@ let _ = s()((e) => {
                             var t;
                             f(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
                         },
-                        onClick: P,
+                        onClick: S,
                         onKeyDown: (e) => {
-                            e.key === d.R8.ENTER && P(e);
+                            e.key === d.R8.ENTER && S(e);
                         },
                         className: b.colorVariant,
                         children: (0, n.jsx)('div', {
@@ -152,12 +152,12 @@ let _ = s()((e) => {
             y = (0, h.o)(l, C),
             O = o.previewingVariantIndex,
             k = null === (t = l.variants) || void 0 === t ? void 0 : t[y],
-            S = null !== O ? (null === (r = l.variants) || void 0 === r ? void 0 : r[O]) : void 0,
-            P = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), d.hy.HORIZONTAL);
+            P = null !== O ? (null === (r = l.variants) || void 0 === r ? void 0 : r[O]) : void 0,
+            S = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), d.hy.HORIZONTAL);
         if (null == k) return null;
-        let w = null != S ? S.variantLabel : null == k ? void 0 : k.variantLabel;
+        let E = null != P ? P.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, n.jsx)(c.bG, {
-            navigator: P,
+            navigator: S,
             children: (0, n.jsx)(c.SJ, {
                 children: (e) => {
                     var t,
@@ -200,7 +200,7 @@ let _ = s()((e) => {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: b.variantLabel,
-                                    children: u ? m.NW.string(m.t.wbgaj4) : w
+                                    children: u ? m.NW.string(m.t.wbgaj4) : E
                                 })
                             ]
                         })

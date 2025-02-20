@@ -1,7 +1,7 @@
-var i = n(735471),
-    r = n(858698),
-    a = TypeError;
+var r = n(735471),
+    i = n(858698),
+    o = TypeError;
 e.exports = function (e) {
-    if (i(e)) return e;
-    throw new a(r(e) + ' is not a function');
+    if (r(e)) return e;
+    throw new o(i(e) + ' is not a function');
 };

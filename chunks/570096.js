@@ -1,34 +1,34 @@
-n.d(t, { N: () => x }), n(47120);
-var i = n(200651),
-    l = n(442837),
-    a = n(704215),
-    r = n(481060),
-    s = n(782568),
-    o = n(243778),
+n.d(t, { N: () => C }), n(47120);
+var r = n(200651),
+    i = n(442837),
+    l = n(704215),
+    o = n(481060),
+    a = n(782568),
+    s = n(243778),
     c = n(970731),
-    d = n(594174),
-    u = n(63063),
-    h = n(69589),
-    p = n(981631),
-    m = n(921944),
-    f = n(388032),
-    g = n(562758);
-let _ = (e) => {
+    u = n(594174),
+    d = n(63063),
+    p = n(69589),
+    h = n(981631),
+    f = n(921944),
+    m = n(388032),
+    g = n(680188);
+let b = (e) => {
         let { user: t, markAsDismissed: n } = e;
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: g.assetContainer,
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, r.jsx)(p.Z, {
                     user: t,
                     rank: 1,
-                    avatarSize: r.EFr.SIZE_56
+                    avatarSize: o.EFr.SIZE_56
                 }),
-                (0, i.jsx)(r.P3F, {
+                (0, r.jsx)(o.P3F, {
                     className: g.closeIcon,
                     onClick: () => {
-                        n(m.L.USER_DISMISS);
+                        n(f.L.USER_DISMISS);
                     },
-                    children: (0, i.jsx)(r.Dio, {
+                    children: (0, r.jsx)(o.Dio, {
                         color: 'currentColor',
                         size: 'sm'
                     })
@@ -36,43 +36,43 @@ let _ = (e) => {
             ]
         });
     },
-    C = (e) => {
+    _ = (e) => {
         let { user: t, markAsDismissed: n } = e;
-        return (0, i.jsx)(c.ZP, {
-            asset: (0, i.jsx)(_, {
+        return (0, r.jsx)(c.ZP, {
+            asset: (0, r.jsx)(b, {
                 user: t,
                 markAsDismissed: n
             }),
-            header: f.intl.string(f.t.wAtFS0),
-            content: f.intl.string(f.t.qIZICA),
-            buttonCTA: f.intl.string(f.t.hvVgAQ),
+            header: m.NW.string(m.t.wAtFS0),
+            content: m.NW.string(m.t.qIZICA),
+            buttonCTA: m.NW.string(m.t.hvVgAQ),
             onClick: () => {
-                (0, s.Z)(u.Z.getArticleURL(p.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS);
+                (0, a.Z)(d.Z.getArticleURL(h.BhN.GUILD_LEADERBOARD)), n(f.L.USER_DISMISS);
             },
             markAsDismissed: n,
             caretPosition: c.DF.RIGHT_TOP,
             buttonProps: {
-                color: r.zxk.Colors.WHITE,
-                look: r.zxk.Looks.LINK,
-                size: r.zxk.Sizes.MIN
+                color: o.zxk.Colors.WHITE,
+                look: o.zxk.Looks.LINK,
+                size: o.zxk.Sizes.MIN
             }
         });
     };
-function x(e) {
+function C(e) {
     let { children: t } = e,
-        n = [a.z.LEADERBOARD_NUX_COACHMARK],
-        [s, c] = (0, o.US)(n, void 0),
-        u = (0, l.e7)([d.default], () => d.default.getCurrentUser());
-    return s !== a.z.LEADERBOARD_NUX_COACHMARK || null == u
-        ? (0, i.jsx)(i.Fragment, { children: t })
-        : (0, i.jsx)(r.yRy, {
+        n = [l.z.LEADERBOARD_NUX_COACHMARK],
+        [a, c] = (0, s.US)(n, void 0),
+        d = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+    return a !== l.z.LEADERBOARD_NUX_COACHMARK || null == d
+        ? (0, r.jsx)(r.Fragment, { children: t })
+        : (0, r.jsx)(o.yRy, {
               renderPopout: () =>
-                  C({
-                      user: u,
+                  _({
+                      user: d,
                       markAsDismissed: c
                   }),
               position: 'left',
-              animation: r.yRy.Animation.TRANSLATE,
+              animation: o.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => t
           });

@@ -1,112 +1,112 @@
 n.d(t, { Z: () => N }), n(47120), n(177593);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(642128),
-    o = n(442837),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(642128),
+    s = n(442837),
     c = n(481060),
-    d = n(393238),
-    u = n(607070),
-    h = n(44315),
-    p = n(314897),
-    m = n(111583),
-    f = n(889901),
+    u = n(393238),
+    d = n(607070),
+    p = n(44315),
+    h = n(314897),
+    f = n(111583),
+    m = n(889901),
     g = n(64078),
-    _ = n(351780),
-    C = n(843693),
-    x = n(641033),
+    b = n(351780),
+    _ = n(843693),
+    C = n(641033),
     v = n(989830),
-    E = n(388032),
-    I = n(882669);
-let b = l.memo(function (e) {
+    y = n(388032),
+    x = n(819831);
+let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
-            a = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-            r = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]),
-            [d, h] = l.useState(!1);
-        l.useEffect(() => {
-            if (null == r ? void 0 : r.displayed) return;
-            h(!1),
+            l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+            o = (0, s.e7)([_.ZP], () => _.ZP.getMostRecentMessageCombo(t), [t]),
+            [u, p] = i.useState(!1);
+        i.useEffect(() => {
+            if (null == o ? void 0 : o.displayed) return;
+            p(!1),
                 setImmediate(() => {
-                    h((null != r ? (0, x.Eo)(r.combo) : 0) > 0);
+                    p((null != o ? (0, C.Eo)(o.combo) : 0) > 0);
                 });
             let e = setTimeout(() => {
-                h(!1), null != r && (0, g.ew)(r);
+                p(!1), null != o && (0, g.ew)(o);
             }, 2000);
             return () => clearTimeout(e);
-        }, [r]);
-        let p = null != r ? '100%' : '200%',
-            m = (0, c.q_F)(
+        }, [o]);
+        let h = null != o ? '100%' : '200%',
+            f = (0, c.q_F)(
                 {
-                    opacity: d ? 1 : 0,
-                    translateY: d ? '0' : p,
+                    opacity: +!!u,
+                    translateY: u ? '0' : h,
                     pointerEvents: 'none',
                     width: n,
-                    config: a ? s.config.stiff : s.config.slow
+                    config: l ? a.config.stiff : a.config.slow
                 },
                 'animate-always'
             );
-        return (0, i.jsx)(i.Fragment, {
+        return (0, r.jsx)(r.Fragment, {
             children:
-                null != r &&
-                (0, i.jsx)(s.animated.div, {
-                    className: I.messageComboScore,
-                    style: m,
-                    children: (0, i.jsx)(c.Text, {
-                        className: I.comboScore,
+                null != o &&
+                (0, r.jsx)(a.animated.div, {
+                    className: x.messageComboScore,
+                    style: f,
+                    children: (0, r.jsx)(c.Text, {
+                        className: x.comboScore,
                         variant: 'text-sm/bold',
-                        children: (0, x.Eo)(r.combo)
+                        children: (0, C.Eo)(o.combo)
                     })
                 })
         });
     }),
-    Z = l.memo(function (e) {
+    O = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
-            { color: a, square: s, flair: o } = l.useMemo(() => (0, x.yz)(n), [n]),
-            d = (0, h.Lq)(a);
-        return (0, i.jsxs)(i.Fragment, {
+            { color: l, square: a, flair: s } = i.useMemo(() => (0, C.yz)(n), [n]),
+            u = (0, p.Lq)(l);
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(c.Text, {
-                    className: I.comboValue,
+                (0, r.jsx)(c.Text, {
+                    className: x.comboValue,
                     variant: 'text-sm/bold',
                     children: t
                 }),
-                (0, i.jsxs)('div', {
-                    className: I.comboNameplate,
-                    style: { color: d },
+                (0, r.jsxs)('div', {
+                    className: x.comboNameplate,
+                    style: { color: u },
                     children: [
-                        (0, i.jsx)(c.Text, {
-                            className: I.comboMultiplier,
-                            style: { color: d },
+                        (0, r.jsx)(c.Text, {
+                            className: x.comboMultiplier,
+                            style: { color: u },
                             variant: 'text-sm/bold',
-                            children: E.intl.format(E.t['6bgVlp'], { multiplier: n })
+                            children: y.NW.format(y.t['6bgVlp'], { multiplier: n })
                         }),
-                        s &&
-                            (0, i.jsxs)(i.Fragment, {
+                        a &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        className: r()(I.comboSquare, I.left),
-                                        style: { backgroundColor: d }
+                                    (0, r.jsx)('div', {
+                                        className: o()(x.comboSquare, x.left),
+                                        style: { backgroundColor: u }
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: r()(I.comboSquare, I.right),
-                                        style: { backgroundColor: d }
+                                    (0, r.jsx)('div', {
+                                        className: o()(x.comboSquare, x.right),
+                                        style: { backgroundColor: u }
                                     })
                                 ]
                             }),
-                        o &&
-                            (0, i.jsxs)(i.Fragment, {
+                        s &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        className: r()(I.confettiIcon, I.left),
-                                        children: (0, i.jsx)(f.Z, {
+                                    (0, r.jsx)('div', {
+                                        className: o()(x.confettiIcon, x.left),
+                                        children: (0, r.jsx)(m.Z, {
                                             width: 24,
                                             height: 24
                                         })
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: r()(I.confettiIcon, I.right),
-                                        children: (0, i.jsx)(f.Z, {
+                                    (0, r.jsx)('div', {
+                                        className: o()(x.confettiIcon, x.right),
+                                        children: (0, r.jsx)(m.Z, {
                                             width: 24,
                                             height: 24
                                         })
@@ -114,71 +114,71 @@ let b = l.memo(function (e) {
                                 ]
                             }),
                         1 === n &&
-                            (0, i.jsx)(c.Text, {
-                                className: I.tip,
+                            (0, r.jsx)(c.Text, {
+                                className: x.tip,
                                 variant: 'text-sm/bold',
-                                children: E.intl.string(E.t.b5Cpoa)
+                                children: y.NW.string(y.t.b5Cpoa)
                             })
                     ]
                 })
             ]
         });
     }),
-    N = l.memo(function (e) {
+    N = i.memo(function (e) {
         let { channelId: t } = e,
-            n = (0, o.e7)([p.default], () => p.default.getId()),
-            a = (0, o.e7)([m.Z], () => m.Z.isTyping(t, n), [t, n]),
-            r = (0, o.e7)([_.Z], () => _.Z.isEnabled()),
-            u = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]),
-            { ref: h, width: f = 0 } = (0, d.Z)(),
-            [g, x] = l.useState(!1),
-            E = (0, v.Z)(t),
-            N = r && u && a;
-        l.useEffect(() => {
-            N && x(!0);
-            let e = setTimeout(() => x(N), 1000);
+            n = (0, s.e7)([h.default], () => h.default.getId()),
+            l = (0, s.e7)([f.Z], () => f.Z.isTyping(t, n), [t, n]),
+            o = (0, s.e7)([b.Z], () => b.Z.isEnabled()),
+            d = (0, s.e7)([_.ZP], () => _.ZP.isComboing(n, t), [t, n]),
+            { ref: p, width: m = 0 } = (0, u.Z)(),
+            [g, C] = i.useState(!1),
+            y = (0, v.Z)(t),
+            N = o && d && l;
+        i.useEffect(() => {
+            N && C(!0);
+            let e = setTimeout(() => C(N), 1000);
             return () => clearTimeout(e);
         }, [N]);
-        let T = (0, c.q_F)({
-                opacity: g ? 1 : 0,
+        let E = (0, c.q_F)({
+                opacity: +!!g,
                 transform: g ? 'translateY(0)' : 'translateY(100%)',
                 pointerEvents: 'none',
-                config: s.config.stiff
+                config: a.config.stiff
             }),
-            S = l.useMemo(
+            P = i.useMemo(
                 () =>
-                    null != E
-                        ? E
+                    null != y
+                        ? y
                         : {
                               value: 0,
                               multiplier: 1
                           },
-                [E]
+                [y]
             ),
-            j = l.useRef(S);
-        l.useEffect(() => {
-            (S.multiplier > 1 || S.value > 0) && (j.current = S);
-        }, [S]);
-        let { multiplier: y, value: A } = l.useMemo(
+            I = i.useRef(P);
+        i.useEffect(() => {
+            (P.multiplier > 1 || P.value > 0) && (I.current = P);
+        }, [P]);
+        let { multiplier: S, value: Z } = i.useMemo(
             () => ({
-                value: N ? S.value : j.current.value,
-                multiplier: N ? S.multiplier : j.current.multiplier
+                value: N ? P.value : I.current.value,
+                multiplier: N ? P.multiplier : I.current.multiplier
             }),
-            [N, S, j]
+            [N, P, I]
         );
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(b, {
+                (0, r.jsx)(j, {
                     channelId: t,
-                    width: f
+                    width: m
                 }),
-                (0, i.jsx)(s.animated.div, {
-                    ref: h,
-                    className: I.combo,
-                    style: T,
-                    children: (0, i.jsx)(Z, {
-                        value: A,
-                        multiplier: y
+                (0, r.jsx)(a.animated.div, {
+                    ref: p,
+                    className: x.combo,
+                    style: E,
+                    children: (0, r.jsx)(O, {
+                        value: Z,
+                        multiplier: S
                     })
                 })
             ]

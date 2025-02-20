@@ -1,126 +1,126 @@
-t.d(n, { Z: () => D }), t(477488), t(47120);
-var a = t(200651),
-    i = t(192379),
-    r = t(120356),
-    l = t.n(r),
-    o = t(299608),
-    s = t.n(o),
-    c = t(642128),
-    u = t(442837),
-    d = t(481060),
-    _ = t(794295),
-    h = t(95398),
-    f = t(247206),
-    p = t(394779),
-    C = t(134432),
-    m = t(254109),
-    E = t(169525),
-    S = t(375954),
-    g = t(585483),
-    L = t(44488),
-    x = t(341176),
-    O = t(981631),
-    v = t(388032),
-    b = t(737387);
-function A(e) {
-    let { width: n, height: t } = e;
-    return null == n || 0 === n || null == t || 0 === t;
+n.d(t, { Z: () => j }), n(477488), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    l = n(299608),
+    s = n.n(l),
+    c = n(642128),
+    u = n(442837),
+    d = n(481060),
+    f = n(794295),
+    p = n(95398),
+    _ = n(247206),
+    h = n(394779),
+    O = n(134432),
+    b = n(254109),
+    m = n(169525),
+    g = n(375954),
+    y = n(585483),
+    C = n(44488),
+    E = n(341176),
+    S = n(981631),
+    v = n(388032),
+    P = n(137801);
+function x(e) {
+    let { width: t, height: n } = e;
+    return null == t || 0 === t || null == n || 0 === n;
 }
-function N(e) {
-    let { children: n, hasMediaControls: t, isObscured: r, src: o } = e,
+function L(e) {
+    let { children: t, hasMediaControls: n, isObscured: o, src: l } = e,
         [s, c] = (0, i.useState)(!1);
-    return r
-        ? (0, a.jsx)(h.a.Provider, {
+    return o
+        ? (0, r.jsx)(p.a.Provider, {
               value: s,
-              children: (0, a.jsx)(
-                  h.Z,
+              children: (0, r.jsx)(
+                  p.Z,
                   {
-                      type: h.Z.Types.ATTACHMENT,
-                      reason: E.wk.EXPLICIT_CONTENT,
-                      className: b.obscureContainer,
+                      type: p.Z.Types.ATTACHMENT,
+                      reason: m.wk.EXPLICIT_CONTENT,
+                      className: P.obscureContainer,
                       obscured: !0,
                       isSingleMosaicItem: !0,
-                      obscurityControlClassName: l()({ [b.controlsOffset]: t && s }),
+                      obscurityControlClassName: a()({ [P.controlsOffset]: n && s }),
                       onToggleObscurity: (e) => {
                           e.stopPropagation(), e.nativeEvent.stopPropagation(), c((e) => !e);
                       },
                       children: (e) =>
-                          (0, a.jsx)(a.Fragment, {
-                              children: (0, a.jsx)('div', {
-                                  className: l()(b.obscureWrapper, { [b.obscure]: e }),
-                                  children: n(e)
+                          (0, r.jsx)(r.Fragment, {
+                              children: (0, r.jsx)('div', {
+                                  className: a()(P.obscureWrapper, { [P.obscure]: e }),
+                                  children: t(e)
                               })
                           })
                   },
-                  o
+                  l
               )
           })
-        : (0, a.jsx)(a.Fragment, { children: n(!1) });
+        : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
-function D(e) {
-    var n, t, r;
-    let { items: l, fit: o, startIndex: h = 0, shouldRedactExplicitContent: E = !1, shouldHideMediaOptions: D = !1, shouldAnimateCarousel: R = !1 } = e,
-        [k, M] = (0, i.useState)(h),
-        T = (0, i.useRef)(h),
-        [y, P] = (0, i.useState)([]);
+function j(e) {
+    var t, n, o;
+    let { items: a, fit: l, startIndex: p = 0, shouldRedactExplicitContent: m = !1, shouldHideMediaOptions: j = !1, shouldAnimateCarousel: D = !1 } = e,
+        [N, A] = (0, i.useState)(p),
+        w = (0, i.useRef)(p),
+        [k, R] = (0, i.useState)([]);
     (0, i.useEffect)(() => {
-        var e, n;
-        let t = (((k + 1) % (e = l.length)) + e) % e,
-            a = (((k - 1) % (n = l.length)) + n) % n;
-        A(l[t]) && (0, C.po)(l[t].url), A(l[a]) && (0, C.po)(l[a].url);
-    }, [k, l]);
-    let I = (0, i.useCallback)(
+        var e, t;
+        let n = (((N + 1) % (e = a.length)) + e) % e,
+            r = (((N - 1) % (t = a.length)) + t) % t;
+        x(a[n]) && (0, O.po)(a[n].url), x(a[r]) && (0, O.po)(a[r].url);
+    }, [N, a]);
+    let M = (0, i.useCallback)(
         (e) => {
-            var n;
-            let t = e - T.current;
-            M((e = ((e % (n = l.length)) + n) % n)), (T.current = e), P((e) => [...e, t]), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
+            var t;
+            let n = e - w.current;
+            A((e = ((e % (t = a.length)) + t) % t)), (w.current = e), R((e) => [...e, n]), (0, b.yg)(b.uG.SELECTED_ITEM_CHANGE);
         },
-        [l]
+        [a]
     );
     (0, i.useEffect)(() => {
         let e = s()(() => {
-                I(T.current + 1);
+                M(w.current + 1);
             }, 300),
-            n = s()(() => {
-                I(T.current - 1);
+            t = s()(() => {
+                M(w.current - 1);
             }, 300);
         return (
-            g.S.subscribe(O.CkL.MODAL_CAROUSEL_NEXT, e),
-            g.S.subscribe(O.CkL.MODAL_CAROUSEL_PREV, n),
+            y.S.subscribe(S.CkL.MODAL_CAROUSEL_NEXT, e),
+            y.S.subscribe(S.CkL.MODAL_CAROUSEL_PREV, t),
             () => {
-                g.S.unsubscribe(O.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(O.CkL.MODAL_CAROUSEL_PREV, n);
+                y.S.unsubscribe(S.CkL.MODAL_CAROUSEL_NEXT, e), y.S.unsubscribe(S.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [I]);
-    let w = l[k],
-        j = null !== (r = w.sourceMetadata) && void 0 !== r ? r : {},
-        Z = null == j ? void 0 : null === (n = j.message) || void 0 === n ? void 0 : n.id,
-        F = null == j ? void 0 : null === (t = j.message) || void 0 === t ? void 0 : t.channel_id,
-        W = (0, u.e7)([S.Z], () => (null != F && null != Z ? S.Z.getMessage(F, Z) : null), [F, Z]),
-        G = null != W ? W : null == j ? void 0 : j.message,
-        U = (0, i.useCallback)(() => (0, m.yg)(m.uG.FORWARD_PRESSED), []),
-        z = null != G && null != j.identifier ? (0, p.s)(G, j.identifier, U) : null,
-        H = (0, f.KP)(
+    }, [M]);
+    let T = a[N],
+        I = null !== (o = T.sourceMetadata) && void 0 !== o ? o : {},
+        Z = null == I ? void 0 : null === (t = I.message) || void 0 === t ? void 0 : t.id,
+        W = null == I ? void 0 : null === (n = I.message) || void 0 === n ? void 0 : n.channel_id,
+        F = (0, u.e7)([g.Z], () => (null != W && null != Z ? g.Z.getMessage(W, Z) : null), [W, Z]),
+        U = null != F ? F : null == I ? void 0 : I.message,
+        G = (0, i.useCallback)(() => (0, b.yg)(b.uG.FORWARD_PRESSED), []),
+        H = null != U && null != I.identifier ? (0, h.s)(U, I.identifier, G) : null,
+        z = (0, _.KP)(
             {
-                type: f.lJ.GenericMedia,
-                media: w
+                type: _.lJ.GenericMedia,
+                media: T
             },
-            E
+            m
         ),
-        X = D
+        X = j
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
-            : () => (0, m.yg)(m.uG.CONTEXT_MENU_OPENED),
+            : () => (0, b.yg)(b.uG.CONTEXT_MENU_OPENED),
         B = (function (e) {
             if (0 === e) return ['translateX(0)'];
-            let n = ['translateX(100px)', 'translateX(-100px)'];
-            return e > 0 ? n : n.toReversed();
-        })(y[y.length - 1]),
+            let t = ['translateX(100px)', 'translateX(-100px)'];
+            return e > 0 ? t : t.toReversed();
+        })(k[k.length - 1]),
         V = (0, d.Yzy)(
-            w,
+            T,
             {
-                key: w.url,
+                key: T.url,
                 from: {
                     opacity: 0,
                     transform: B[0]
@@ -138,64 +138,64 @@ function D(e) {
                     tension: 250
                 }
             },
-            R ? 'respect-motion-settings' : 'animate-never'
+            D ? 'respect-motion-settings' : 'animate-never'
         );
-    return (0, a.jsxs)('div', {
-        className: b.wrapper,
+    return (0, r.jsxs)('div', {
+        className: P.wrapper,
         children: [
-            l.length > 1
-                ? (0, a.jsx)(L.am, {
-                      className: b.navPrev,
-                      onClick: () => g.S.dispatch(O.CkL.MODAL_CAROUSEL_PREV)
+            a.length > 1
+                ? (0, r.jsx)(C.am, {
+                      className: P.navPrev,
+                      onClick: () => y.S.dispatch(S.CkL.MODAL_CAROUSEL_PREV)
                   })
                 : null,
-            V((e, n) => {
-                var t;
-                return (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)(
+            V((e, t) => {
+                var n;
+                return (0, r.jsx)(r.Fragment, {
+                    children: (0, r.jsx)(
                         c.animated.div,
                         {
                             style: e,
-                            className: b.zoomedMediaFitWrapper,
-                            children: (0, a.jsxs)('div', {
-                                onClick: (e) => (null != o && [x.D.CONTAIN, x.D.SCALE_DOWN].includes(o) ? null : e.stopPropagation()),
+                            className: P.zoomedMediaFitWrapper,
+                            children: (0, r.jsxs)('div', {
+                                onClick: (e) => (null != l && [E.D.CONTAIN, E.D.SCALE_DOWN].includes(l) ? null : e.stopPropagation()),
                                 children: [
-                                    (0, a.jsx)(N, {
-                                        isObscured: H,
-                                        src: n.url,
+                                    (0, r.jsx)(L, {
+                                        isObscured: z,
+                                        src: t.url,
                                         children: (e) =>
-                                            (0, a.jsx)(x.Z, {
-                                                media: n,
-                                                fit: o,
+                                            (0, r.jsx)(E.Z, {
+                                                media: t,
+                                                fit: l,
                                                 obscured: e,
                                                 onContextMenu: X
                                             })
                                     }),
-                                    ('IMAGE' !== n.type || null != n.original) &&
-                                        !D &&
-                                        (0, a.jsxs)('div', {
-                                            className: b.optionsContainer,
+                                    ('IMAGE' !== t.type || null != t.original) &&
+                                        !j &&
+                                        (0, r.jsxs)('div', {
+                                            className: P.optionsContainer,
                                             children: [
-                                                (0, a.jsx)(_.Z, {
-                                                    href: null !== (t = n.original) && void 0 !== t ? t : n.url,
-                                                    className: b.downloadLink,
-                                                    onClick: () => ((0, m.yg)(m.uG.OPEN_LINK_PRESSED), !1),
-                                                    children: v.intl.string(v.t.q5jLJC)
+                                                (0, r.jsx)(f.Z, {
+                                                    href: null !== (n = t.original) && void 0 !== n ? n : t.url,
+                                                    className: P.downloadLink,
+                                                    onClick: () => ((0, b.yg)(b.uG.OPEN_LINK_PRESSED), !1),
+                                                    children: v.NW.string(v.t.q5jLJC)
                                                 }),
-                                                null != z && (0, a.jsx)(z, { className: b.forward })
+                                                null != H && (0, r.jsx)(H, { className: P.forward })
                                             ]
                                         })
                                 ]
                             })
                         },
-                        n.url
+                        t.url
                     )
                 });
             }),
-            l.length > 1
-                ? (0, a.jsx)(L.Pz, {
-                      className: b.navNext,
-                      onClick: () => g.S.dispatch(O.CkL.MODAL_CAROUSEL_NEXT)
+            a.length > 1
+                ? (0, r.jsx)(C.Pz, {
+                      className: P.navNext,
+                      onClick: () => y.S.dispatch(S.CkL.MODAL_CAROUSEL_NEXT)
                   })
                 : null
         ]

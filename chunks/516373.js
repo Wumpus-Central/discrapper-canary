@@ -1,13 +1,13 @@
-n.d(t, { D: () => o });
-var i = n(192379),
-    r = n(442837),
-    a = n(675478),
-    s = n(581883);
-function o() {
+n.d(t, { D: () => s });
+var r = n(192379),
+    i = n(442837),
+    o = n(675478),
+    a = n(581883);
+function s() {
     return (
-        i.useEffect(() => {
-            a.DZ.loadIfNecessary();
+        r.useEffect(() => {
+            o.DZ.loadIfNecessary();
         }, []),
-        (0, r.e7)([s.Z], () => s.Z.frecencyWithoutFetchingLatest)
+        (0, i.e7)([a.Z], () => a.Z.frecencyWithoutFetchingLatest)
     );
 }

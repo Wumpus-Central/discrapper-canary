@@ -12,11 +12,11 @@ var i = n(200651),
 let f = r.memo(function (e) {
     var t, n, r;
     let { message: l, channel: f, compact: p, className: g, isGroupStart: v, hideSimpleEmbedContent: C = !0, disableInteraction: E } = e,
-        m = (0, s.A)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()),
-        { content: O } = (0, u.Z)(l, {
+        O = (0, s.A)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()),
+        { content: m } = (0, u.Z)(l, {
             hideSimpleEmbedContent: C,
-            allowList: m,
-            allowHeading: m,
+            allowList: O,
+            allowHeading: O,
             allowLinks: !0,
             previewLinkTarget: !0
         });
@@ -72,7 +72,7 @@ let f = r.memo(function (e) {
                   }),
             n)
         ),
-        childrenMessageContent: (0, d.Z)(e, O),
+        childrenMessageContent: (0, d.Z)(e, m),
         disableInteraction: E
     });
 });

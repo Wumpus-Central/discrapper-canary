@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(47120);
-var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
+n.d(t, { Z: () => j }), n(47120), n(230036);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
     o = n(442837),
     s = n(481060),
     c = n(665149),
@@ -10,17 +10,17 @@ var a = n(200651),
     u = n(484036),
     h = n(681619),
     m = n(621060),
-    x = n(658951),
-    _ = n(539742);
-function p(e, t) {
+    x = n(841699),
+    p = n(843777);
+function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function f(e) {
+function b(e) {
     let { store: t, dataGetter: n } = e,
-        [l, i] = r.useState(n(t));
+        [i, l] = a.useState(n(t));
     return (
-        r.useEffect(() => {
-            let e = () => i(n(t));
+        a.useEffect(() => {
+            let e = () => l(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -29,16 +29,16 @@ function f(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(s.zJl, {
-            className: _.inspectorContainer,
-            children: (0, a.jsx)(d.Z, { data: l })
+        (0, r.jsx)(s.zJl, {
+            className: p.inspectorContainer,
+            children: (0, r.jsx)(d.Z, { data: i })
         })
     );
 }
-let b = [
+let _ = [
         {
             key: 'name',
-            cellClassName: _.__invalid_eventColumn,
+            cellClassName: p.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -52,11 +52,11 @@ let b = [
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
-                    ? (0, a.jsxs)('div', {
-                          className: _.inspectorContainer,
-                          children: ['Store is missing ', (0, a.jsx)('code', { children: '__getLocalVars' }), ' method.']
+                    ? (0, r.jsxs)('div', {
+                          className: p.inspectorContainer,
+                          children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, a.jsx)(f, {
+                    : (0, r.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -67,7 +67,7 @@ let b = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, a.jsx)(f, {
+                return (0, r.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -76,41 +76,41 @@ let b = [
     ];
 function v(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, m.Z)({ tabs: g }, []);
-    return (0, a.jsxs)(u.Z, {
-        className: _.subPanel,
+        { TabBar: a, renderSelectedTab: i } = (0, m.Z)({ tabs: g }, []);
+    return (0, r.jsxs)(u.Z, {
+        className: p.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(r, {}),
-            (0, a.jsxs)(c.ZP, {
-                className: i()(x.headerBar, _.subPanelHeaderBar),
+            (0, r.jsx)(a, {}),
+            (0, r.jsxs)(c.ZP, {
+                className: l()(x.headerBar, p.subPanelHeaderBar),
                 children: [
-                    (0, a.jsx)(c.ZP.Icon, {
+                    (0, r.jsx)(c.ZP.Icon, {
                         icon: s.lO_,
                         tooltip: t.getName()
                     }),
-                    (0, a.jsx)(c.ZP.Title, { children: t.getName() })
+                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
                 ]
             }),
-            l({ store: t })
+            i({ store: t })
         ]
     });
 }
 function j() {
-    let e = r.useRef(null),
-        [t, n] = r.useState(''),
-        l = o.yh.getAll(),
-        c = r
+    let e = a.useRef(null),
+        [t, n] = a.useState(''),
+        i = o.yh.getAll(),
+        c = a
             .useMemo(
                 () =>
-                    l
+                    i
                         .map((e) => ({
                             key: e._dispatchToken,
                             store: e
                         }))
-                        .sort(p),
-                [l]
+                        .sort(f),
+                [i]
             )
             .filter((e) =>
                 (function (e, t) {
@@ -118,16 +118,16 @@ function j() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t)
             ),
-        [d, u] = r.useState(),
-        m = l.find((e) => e._dispatchToken === d);
-    return (0, a.jsxs)('div', {
+        [d, u] = a.useState(),
+        m = i.find((e) => e._dispatchToken === d);
+    return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(x.panel, _.panel),
+        className: l()(x.panel, p.panel),
         children: [
-            (0, a.jsx)('div', {
-                className: _.toolbar,
-                children: (0, a.jsx)(s.E1j, {
-                    className: _.searchBar,
+            (0, r.jsx)('div', {
+                className: p.toolbar,
+                children: (0, r.jsx)(s.E1j, {
+                    className: p.searchBar,
                     size: s.E1j.Sizes.SMALL,
                     query: t,
                     onChange: n,
@@ -136,14 +136,14 @@ function j() {
                     'aria-label': 'Search stores'
                 })
             }),
-            (0, a.jsx)(h.Z, {
-                columns: b,
+            (0, r.jsx)(h.Z, {
+                columns: _,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
             null != m &&
-                (0, a.jsx)(v, {
+                (0, r.jsx)(v, {
                     store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

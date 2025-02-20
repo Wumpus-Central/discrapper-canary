@@ -1,12 +1,12 @@
 n.d(t, {
-    DQ: () => i,
-    LH: () => a,
-    Wj: () => s,
-    aQ: () => r,
-    pL: () => o
+    DQ: () => r,
+    LH: () => o,
+    Wj: () => a,
+    aQ: () => i,
+    pL: () => s
 });
-let i = 'hello',
-    r = 'version',
-    a = 'force-resync-version',
-    s = 3,
-    o = 'stable-53';
+let r = 'hello',
+    i = 'version',
+    o = 'force-resync-version',
+    a = 3,
+    s = 'stable-53';

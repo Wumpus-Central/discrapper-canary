@@ -1,34 +1,34 @@
-var i,
-    r,
+var r,
+    i,
+    o,
     a,
-    s,
-    o = n(192853),
+    s = n(192853),
     l = n(703825)();
 if (l) {
-    (i = o('Object.prototype.hasOwnProperty')), (r = o('RegExp.prototype.exec')), (a = {});
-    var u = function () {
-        throw a;
+    (r = s('Object.prototype.hasOwnProperty')), (i = s('RegExp.prototype.exec')), (o = {});
+    var c = function () {
+        throw o;
     };
-    (s = {
-        toString: u,
-        valueOf: u
+    (a = {
+        toString: c,
+        valueOf: c
     }),
-        'symbol' == typeof Symbol.toPrimitive && (s[Symbol.toPrimitive] = u);
+        'symbol' == typeof Symbol.toPrimitive && (a[Symbol.toPrimitive] = c);
 }
-var c = o('Object.prototype.toString'),
+var u = s('Object.prototype.toString'),
     d = Object.getOwnPropertyDescriptor,
     f = '[object RegExp]';
 e.exports = l
     ? function (e) {
           if (!e || 'object' != typeof e) return !1;
           var t = d(e, 'lastIndex');
-          if (!(t && i(t, 'value'))) return !1;
+          if (!(t && r(t, 'value'))) return !1;
           try {
-              r(e, s);
+              i(e, a);
           } catch (e) {
-              return e === a;
+              return e === o;
           }
       }
     : function (e) {
-          return !!e && ('object' == typeof e || 'function' == typeof e) && c(e) === f;
+          return !!e && ('object' == typeof e || 'function' == typeof e) && u(e) === f;
       };

@@ -1,39 +1,39 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => a });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(700224);
-function s(e) {
-    let { step: t, header: n, children: s } = e;
-    return (0, i.jsxs)('div', {
-        className: l.triggerContainer,
+var i = n(481060),
+    s = n(874835);
+function a(e) {
+    let { step: t, header: n, children: a } = e;
+    return (0, r.jsxs)('div', {
+        className: s.triggerContainer,
         children: [
-            (0, i.jsx)('div', {
-                className: l.triggerCounterContainer,
-                children: (0, i.jsx)('div', {
-                    className: l.stepCountIcon,
-                    children: (0, i.jsx)(r.Text, {
-                        className: l.stepCount,
+            (0, r.jsx)('div', {
+                className: s.triggerCounterContainer,
+                children: (0, r.jsx)('div', {
+                    className: s.stepCountIcon,
+                    children: (0, r.jsx)(i.Text, {
+                        className: s.stepCount,
                         variant: 'text-sm/bold',
                         children: t
                     })
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: l.triggerMainContainer,
+            (0, r.jsxs)('div', {
+                className: s.triggerMainContainer,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: l.__invalid_triggerHeaderContainer,
-                        children: (0, i.jsx)(r.Text, {
-                            className: l.triggerHeader,
+                    (0, r.jsx)('div', {
+                        className: s.__invalid_triggerHeaderContainer,
+                        children: (0, r.jsx)(i.Text, {
+                            className: s.triggerHeader,
                             variant: 'text-sm/normal',
                             children: n
                         })
                     }),
-                    null != s &&
-                        (0, i.jsx)('div', {
-                            className: l.triggerSettingsContainer,
-                            children: s
+                    null != a &&
+                        (0, r.jsx)('div', {
+                            className: s.triggerSettingsContainer,
+                            children: a
                         })
                 ]
             })

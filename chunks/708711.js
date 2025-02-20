@@ -1,11 +1,11 @@
-n.d(t, { Z: () => r });
-var i = n(818083),
-    l = n(987338);
-let r = (0, i.B)({
+n.d(t, { Z: () => l });
+var r = n(818083),
+    i = n(987338);
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-01_tiered_tenure_badges_mobile',
     label: 'Tiered Tenure Badging Mobile Experience',
-    commonTriggerPoint: l.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     defaultConfig: {
         enabled: !1,
         isBadgeVersion2: !1

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => r }), n(789020);
-var i = n(864106);
-function r(e) {
-    let { id: t, username: n, discriminator: r, globalName: a, avatar: s, avatarDecoration: o, bot: l, flags: u, premiumType: c } = e;
+n.d(t, { Z: () => i }), n(789020);
+var r = n(864106);
+function i(e) {
+    let { id: t, username: n, discriminator: i, globalName: o, avatar: a, avatarDecoration: s, bot: l, flags: c, premiumType: u } = e;
     return {
         id: t,
         username: n,
-        discriminator: r,
-        global_name: a,
-        avatar: s,
-        avatar_decoration_data: (0, i.FG)(o),
+        discriminator: i,
+        global_name: o,
+        avatar: a,
+        avatar_decoration_data: (0, r.FG)(s),
         bot: l,
-        flags: u,
-        premium_type: null != c ? c : 0
+        flags: c,
+        premium_type: null != u ? u : 0
     };
 }

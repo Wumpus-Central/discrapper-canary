@@ -1,18 +1,18 @@
-n.d(e, { Z: () => s });
-var i = n(192379),
-    l = n(442837),
-    d = n(480608),
-    r = n(243730);
-let a = {};
-function s(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        n = (0, l.e7)([r.Z], () => r.Z.getRoleMemberCount(t));
+n.d(t, { Z: () => l });
+var r = n(192379),
+    i = n(442837),
+    o = n(480608),
+    a = n(243730);
+let s = {};
+function l(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        n = (0, i.e7)([a.Z], () => a.Z.getRoleMemberCount(e));
     return (
-        i.useEffect(() => {
-            if (null == t) return;
-            let n = a[t];
-            (null != n && e > 0 && Date.now() - n < e) || ((a[t] = Date.now()), d.E(t));
-        }, [t, e]),
+        r.useEffect(() => {
+            if (null == e) return;
+            let n = s[e];
+            (null != n && t > 0 && Date.now() - n < t) || ((s[e] = Date.now()), o.E(e));
+        }, [e, t]),
         n
     );
 }

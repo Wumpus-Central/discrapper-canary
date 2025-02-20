@@ -18,9 +18,9 @@ var i = n(120356),
     p = n(963249),
     h = n(301766),
     f = n(509545),
-    N = n(931331),
-    x = n(754347),
-    b = n(122289),
+    b = n(931331),
+    N = n(754347),
+    x = n(122289),
     _ = n(74538),
     E = n(212895),
     j = n(296848),
@@ -168,7 +168,7 @@ function U() {
     return (0, r.jsxs)('div', {
         className: D.wordMark,
         children: [
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(N.Z, {
                 className: D.discordWordmark,
                 'aria-label': R.NW.string(R.t['FSOz7+'])
             }),
@@ -258,7 +258,7 @@ let G = function (e) {
         },
         er = () => {
             if (!L.includes(i.status) || null == i.pauseEndsAt) {
-                (0, b.q2)(Error('Invalid subscription to resume'), {
+                (0, x.q2)(Error('Invalid subscription to resume'), {
                     extra: {
                         subscriptionId: i.id,
                         status: i.status,
@@ -303,7 +303,7 @@ let G = function (e) {
             ed = (0, r.jsxs)('div', {
                 className: D.wordMark,
                 children: [
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(N.Z, {
                         className: D.discordWordmark,
                         'aria-label': R.NW.string(R.t['t9uG/v'])
                     }),
@@ -315,7 +315,7 @@ let G = function (e) {
             ed = (0, r.jsx)(U, {});
             break;
         case A.p9.TIER_2:
-            ed = (0, r.jsx)(N.Z, {
+            ed = (0, r.jsx)(b.Z, {
                 className: D.planName,
                 'aria-label': R.NW.string(R.t.lpNrPj)
             });

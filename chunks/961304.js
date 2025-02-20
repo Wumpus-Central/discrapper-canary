@@ -1,12 +1,12 @@
 n.d(t, {
-    X: () => c,
+    X: () => u,
     Z: () => d
 });
-var i = n(259443),
-    r = n(47770),
-    a = n(740197),
-    s = n(376398),
-    o = n(65154);
+var r = n(259443),
+    i = n(47770),
+    o = n(740197),
+    a = n(376398),
+    s = n(65154);
 function l(e, t, n) {
     return (
         t in e
@@ -20,18 +20,18 @@ function l(e, t, n) {
         e
     );
 }
-let u = new i.Yd('Output');
-var c = (function (e) {
+let c = new r.Yd('Output');
+var u = (function (e) {
     return (e.InteractionRequired = 'interactionrequired'), (e.Speaking = 'speaking'), (e.Video = 'video'), e;
 })({});
-class d extends r.Z {
+class d extends i.Z {
     play() {
         var e;
         null === (e = this.audioElement) || void 0 === e || e.play();
     }
     destroy() {
         var e;
-        null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, s.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(o.Dg.NONE), this.removeAllListeners();
+        null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, a.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(s.Dg.NONE), this.removeAllListeners();
     }
     addTrack(e) {
         if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;
@@ -50,16 +50,16 @@ class d extends r.Z {
                     }),
                     null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode);
             } catch (e) {
-                u.warn('Output#Failed to setup speaking indicator: '.concat(e));
+                c.warn('Output#Failed to setup speaking indicator: '.concat(e));
             }
         }
         return (
             'video' === e.kind &&
-                (null != this.videoStreamId && (0, s.jC)(this.videoStreamId),
+                (null != this.videoStreamId && (0, a.jC)(this.videoStreamId),
                 this.stream.getVideoTracks().forEach((t) => {
                     e !== t && ((t.discordIsTearingDown = !0), this.stream.removeTrack(t));
                 }),
-                (this.videoStreamId = (0, s.N7)(this.stream)),
+                (this.videoStreamId = (0, a.N7)(this.stream)),
                 this.emit('video', this.videoStreamId)),
             'audio' === e.kind &&
                 this.stream.getAudioTracks().forEach((t) => {
@@ -69,7 +69,7 @@ class d extends r.Z {
         );
     }
     removeTrack(e) {
-        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, s.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
+        return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, a.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
     }
     setSinkId(e) {
         (this.sinkId = e), this.updateAudioElement();
@@ -81,13 +81,13 @@ class d extends r.Z {
         (this._mute = e || !1), this.updateAudioElement();
     }
     get priority() {
-        return (this._speakingFlags & o.Dg.PRIORITY) === o.Dg.PRIORITY;
+        return (this._speakingFlags & s.Dg.PRIORITY) === s.Dg.PRIORITY;
     }
     get volume() {
         return this._volume;
     }
     set volume(e) {
-        (this._volume = Math.max(0, Math.min(Math.round(e), o.Qx))), this.updateAudioElement();
+        (this._volume = Math.max(0, Math.min(Math.round(e), s.Qx))), this.updateAudioElement();
     }
     get speakingFlags() {
         return this._speakingFlags;
@@ -100,10 +100,10 @@ class d extends r.Z {
         if (null != e) {
             (e.muted = this._mute), (e.volume = this._volume / 100);
             let t = this.sinkId;
-            null != t && a.ZA && e.setSinkId(t);
+            null != t && o.ZA && e.setSinkId(t);
         }
     }
     constructor(e, t) {
-        super(), l(this, 'id', void 0), l(this, '_speakingFlags', o.Dg.NONE), l(this, '_mute', !1), l(this, '_volume', o.Qx), l(this, 'sinkId', null), l(this, 'audioElement', null), l(this, 'stream', new MediaStream()), l(this, 'videoStreamId', null), l(this, 'levelNode', null), l(this, 'streamSourceNode', null), l(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
+        super(), l(this, 'id', void 0), l(this, '_speakingFlags', s.Dg.NONE), l(this, '_mute', !1), l(this, '_volume', s.Qx), l(this, 'sinkId', null), l(this, 'audioElement', null), l(this, 'stream', new MediaStream()), l(this, 'videoStreamId', null), l(this, 'levelNode', null), l(this, 'streamSourceNode', null), l(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
     }
 }

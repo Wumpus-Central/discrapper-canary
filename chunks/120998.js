@@ -1,12 +1,12 @@
-n.d(t, { Z: () => h }), n(47120);
-var i,
-    l = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(302221),
-    d = n(281642);
-function c(e, t, n) {
+n.d(t, { Z: () => p }), n(47120);
+var r,
+    i = n(200651),
+    l = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(302221),
+    c = n(43018);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,12 +19,12 @@ function c(e, t, n) {
         e
     );
 }
-class u extends (i = r.PureComponent) {
+class d extends (r = l.PureComponent) {
     onDataUpdate(e, t) {
-        let { maxValue: n, data: i, animate: l } = this.props,
-            r = null == e || (e.data !== t.data && !s().isEqual(e.data, t.data));
-        if ((r && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))), r || null == e || (!e.animate && l) || e.color !== this.props.color)) {
-            let e = o.oo(this.props.color);
+        let { maxValue: n, data: r, animate: i } = this.props,
+            l = null == e || (e.data !== t.data && !a().isEqual(e.data, t.data));
+        if ((l && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...r))), l || null == e || (!e.animate && i) || e.color !== this.props.color)) {
+            let e = s.oo(this.props.color);
             (this.fillColor = 'rgba('.concat(e.r, ', ').concat(e.g, ', ').concat(e.b, ', 0.5)')), window.cancelAnimationFrame(this.animationFrameRequestId), (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
         }
     }
@@ -39,11 +39,11 @@ class u extends (i = r.PureComponent) {
     }
     render() {
         let { className: e, pixelWidth: t, pixelHeight: n } = this.props;
-        return (0, l.jsx)('div', {
+        return (0, i.jsx)('div', {
             className: e,
-            children: (0, l.jsx)('canvas', {
+            children: (0, i.jsx)('canvas', {
                 ref: this.canvas,
-                className: d.canvas,
+                className: c.canvas,
                 width: t,
                 height: n
             })
@@ -51,51 +51,51 @@ class u extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            c(this, 'dataChangedAt', void 0),
-            c(this, 'fillColor', void 0),
-            c(this, 'maxValue', void 0),
-            c(this, 'canvas', r.createRef()),
-            c(this, 'animationFrameRequestId', void 0),
-            c(this, 'updateAnimation', (e) => {
+            u(this, 'dataChangedAt', void 0),
+            u(this, 'fillColor', void 0),
+            u(this, 'maxValue', void 0),
+            u(this, 'canvas', l.createRef()),
+            u(this, 'animationFrameRequestId', void 0),
+            u(this, 'updateAnimation', (e) => {
                 let t, n;
-                let i = this.canvas.current;
-                if (null == i) return;
-                let { data: l, updateInterval: r, color: a, numUpdatesToShow: s, lineWidth: d, animate: c, gradientStopColor: u } = this.props;
-                if (l.length < 2) return;
-                let h = Math.max(Math.min((e - this.dataChangedAt) / r, 1), 0),
-                    m = i.getContext('2d'),
-                    p = this.maxValue;
-                (m.strokeStyle = a), (m.lineWidth = d);
-                let g = i.height - m.lineWidth,
-                    _ = m.createLinearGradient(0, 0, 0, g);
-                if (null != u) _.addColorStop(0, u);
+                let r = this.canvas.current;
+                if (null == r) return;
+                let { data: i, updateInterval: l, color: o, numUpdatesToShow: a, lineWidth: c, animate: u, gradientStopColor: d } = this.props;
+                if (i.length < 2) return;
+                let p = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
+                    h = r.getContext('2d'),
+                    g = this.maxValue;
+                (h.strokeStyle = o), (h.lineWidth = c);
+                let f = r.height - h.lineWidth,
+                    m = h.createLinearGradient(0, 0, 0, f);
+                if (null != d) m.addColorStop(0, d);
                 else {
-                    let { r: e, g: t, b: n } = o.oo(a);
-                    _.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
+                    let { r: e, g: t, b: n } = s.oo(o);
+                    m.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
                 }
-                _.addColorStop(1, this.fillColor), (m.fillStyle = _);
-                let f = l.length >= s ? s : l.length;
-                m.setTransform(1, 0, 0, -1, 0, i.height), m.clearRect(0, 0, i.width, i.height), m.translate(0, 0.5 * m.lineWidth);
-                let E = Math.floor(i.width / (f - 3)),
-                    I = 0.5 * E;
-                m.translate(E - E * h, 0), m.beginPath();
-                let C = -E;
-                l.forEach((e, i) => {
+                m.addColorStop(1, this.fillColor), (h.fillStyle = m);
+                let b = i.length >= a ? a : i.length;
+                h.setTransform(1, 0, 0, -1, 0, r.height), h.clearRect(0, 0, r.width, r.height), h.translate(0, 0.5 * h.lineWidth);
+                let _ = Math.floor(r.width / (b - 3)),
+                    E = 0.5 * _;
+                h.translate(_ - _ * p, 0), h.beginPath();
+                let O = -_;
+                i.forEach((e, r) => {
                     (t = {
-                        x: C,
-                        y: (g * e) / p
+                        x: O,
+                        y: (f * e) / g
                     }),
-                        0 === i ? m.moveTo(t.x, t.y) : m.bezierCurveTo(n.x + I, n.y, t.x - I, t.y, t.x, t.y),
+                        0 === r ? h.moveTo(t.x, t.y) : h.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),
-                        (C += E);
+                        (O += _);
                 }),
-                    m.stroke(),
-                    m.lineTo(C - E, 0),
-                    m.lineTo(0, 0),
-                    m.fill(),
-                    c && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+                    h.stroke(),
+                    h.lineTo(O - _, 0),
+                    h.lineTo(0, 0),
+                    h.fill(),
+                    u && p < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
             });
     }
 }
-c(u, 'defaultProps', { animate: !0 });
-let h = u;
+u(d, 'defaultProps', { animate: !0 });
+let p = d;

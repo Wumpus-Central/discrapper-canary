@@ -1,4 +1,4 @@
-n.d(t, { B: () => b });
+n.d(t, { B: () => x });
 var r = n(200651),
     i = n(192379),
     s = n(512722),
@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(292352),
     h = n(388032),
     f = n(563840);
-function N(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function N(e) {
     }
     return e;
 }
-function x(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,10 +56,10 @@ function x(e, t) {
         e
     );
 }
-function b(e) {
+function x(e) {
     let { user: t } = e,
         s = (0, d.Z)(),
-        b = (0, u.VM)(),
+        x = (0, u.VM)(),
         _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         E = i.useCallback(() => {
             a()(void 0 !== _, 'User must be logged in to accept a link request'),
@@ -68,7 +68,7 @@ function b(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(N({}, n), {
+                            N(b({}, n), {
                                 currentUser: _,
                                 otherUser: t
                             })
@@ -82,7 +82,7 @@ function b(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(N({}, n), {
+                            N(b({}, n), {
                                 currentUser: _,
                                 otherUser: t
                             })
@@ -96,7 +96,7 @@ function b(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(N({}, n), {
+                            N(b({}, n), {
                                 currentUser: _,
                                 otherUser: t
                             })
@@ -124,7 +124,7 @@ function b(e) {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              b
+                              x
                                   ? null
                                   : (0, r.jsx)(m.Z, {
                                         icon: o.dz2,

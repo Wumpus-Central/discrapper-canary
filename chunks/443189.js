@@ -3,16 +3,16 @@ var n = a(200651),
     s = a(192379),
     c = a(481060),
     r = a(313201),
-    i = a(626135),
-    o = a(981631),
+    o = a(626135),
+    i = a(981631),
     l = a(388032),
-    d = a(416933),
+    d = a(31693),
     b = a(963705);
 function h(e) {
     let { source: t, onClose: a, transitionState: h } = e;
     s.useEffect(() => {
-        i.default.track(o.rMx.OPEN_MODAL, {
-            type: o.jXE.CONTACT_SYNC_NC_MODAL,
+        o.default.track(i.rMx.OPEN_MODAL, {
+            type: i.jXE.CONTACT_SYNC_NC_MODAL,
             source: { location: t }
         });
     }, [t]);
@@ -33,12 +33,12 @@ function h(e) {
                         variant: 'heading-xl/extrabold',
                         color: 'header-primary',
                         className: d.header,
-                        children: l.intl.string(l.t.fdR8HR)
+                        children: l.NW.string(l.t.fdR8HR)
                     }),
                     (0, n.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: l.intl.string(l.t.JXyNq6)
+                        children: l.NW.string(l.t.JXyNq6)
                     })
                 ]
             }),

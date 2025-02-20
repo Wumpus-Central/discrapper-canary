@@ -1,25 +1,25 @@
-n.d(t, { Z: () => o });
-var i = n(49691),
-    r = n(285363),
-    a = n(977489),
-    s = n(436857);
-function o(e, t) {
-    var n = (0, i.Z)(e),
-        o = (0, r.Z)(e),
+n.d(t, { Z: () => s });
+var r = n(49691),
+    i = n(285363),
+    o = n(977489),
+    a = n(436857);
+function s(e, t) {
+    var n = (0, r.Z)(e),
+        s = (0, i.Z)(e),
         l = n.visualViewport,
-        u = o.clientWidth,
-        c = o.clientHeight,
+        c = s.clientWidth,
+        u = s.clientHeight,
         d = 0,
         f = 0;
     if (l) {
-        (u = l.width), (c = l.height);
-        var _ = (0, s.Z)();
-        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
+        (c = l.width), (u = l.height);
+        var p = (0, a.Z)();
+        (p || (!p && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }
     return {
-        width: u,
-        height: c,
-        x: d + (0, a.Z)(e),
+        width: c,
+        height: u,
+        x: d + (0, o.Z)(e),
         y: f
     };
 }

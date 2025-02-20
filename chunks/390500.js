@@ -1,49 +1,49 @@
-n.d(t, { Z: () => d });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(970606),
-    s = n(388032),
-    o = n(739387);
-let d = function (e) {
+n.d(t, { Z: () => c });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(970606),
+    a = n(388032),
+    s = n(92850);
+let c = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        d = null == n ? void 0 : n.id;
+        c = null == n ? void 0 : n.id;
     return (
-        l.useEffect(() => {
-            null != d && (0, a.Pq)(d);
-        }, [d]),
-        (0, i.jsxs)('div', {
-            className: o.confirmation,
+        i.useEffect(() => {
+            null != c && (0, o.Pq)(c);
+        }, [c]),
+        (0, r.jsxs)('div', {
+            className: s.confirmation,
             children: [
-                (0, i.jsx)('div', {
-                    className: o.iconWrapper,
-                    children: (0, i.jsx)(r.wGF, {
+                (0, r.jsx)('div', {
+                    className: s.iconWrapper,
+                    children: (0, r.jsx)(l.wGF, {
                         size: 'md',
-                        color: r.TVs.colors.INTERACTIVE_ACTIVE
+                        color: l.TVs.colors.INTERACTIVE_ACTIVE
                     })
                 }),
-                (0, i.jsxs)('div', {
-                    className: o.statusTextContainer,
+                (0, r.jsxs)('div', {
+                    className: s.statusTextContainer,
                     children: [
-                        (0, i.jsx)(r.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
+                            children: (null == n ? void 0 : n.name) != null ? a.NW.formatToPlainString(a.t['0Qlu//'], { guildName: n.name }) : a.NW.string(a.t['5iLvS0'])
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: s.intl.string(s.t.FdsK4u)
+                            children: a.NW.string(a.t.FdsK4u)
                         })
                     ]
                 }),
-                (0, i.jsx)(r.zxk, {
+                (0, r.jsx)(l.zxk, {
                     fullWidth: !0,
                     onClick: t,
-                    look: r.zxk.Looks.FILLED,
-                    color: r.zxk.Colors.RED,
-                    size: r.zxk.Sizes.LARGE,
-                    children: s.intl.string(s.t.g9tK0t)
+                    look: l.zxk.Looks.FILLED,
+                    color: l.zxk.Colors.RED,
+                    size: l.zxk.Sizes.LARGE,
+                    children: a.NW.string(a.t.g9tK0t)
                 })
             ]
         })

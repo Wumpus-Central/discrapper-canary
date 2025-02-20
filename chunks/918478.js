@@ -15,7 +15,7 @@ function t(e) {
                 3: 'title.function'
             }
         },
-        i = {
+        r = {
             variants: [
                 {
                     match: [/(class|interface|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE]
@@ -39,7 +39,7 @@ function t(e) {
             e.COMMENT('#rem', '#end'),
             e.COMMENT("'", '$', { relevance: 0 }),
             n,
-            i,
+            r,
             {
                 className: 'variable.language',
                 begin: /\b(self|super)\b/

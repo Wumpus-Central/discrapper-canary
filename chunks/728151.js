@@ -1,9 +1,9 @@
 n.d(t, {
-    Ii: () => s,
-    pY: () => r,
-    sp: () => a
+    Ii: () => a,
+    pY: () => i,
+    sp: () => o
 });
-var i = n(243814);
-let r = 'https://crunchyroll.com',
-    a = '981509069309354054',
-    s = [i.x.ACTIVITIES_WRITE, i.x.EMAIL, i.x.IDENTIFY];
+var r = n(243814);
+let i = 'https://crunchyroll.com',
+    o = '981509069309354054',
+    a = [r.x.ACTIVITIES_WRITE, r.x.EMAIL, r.x.IDENTIFY];

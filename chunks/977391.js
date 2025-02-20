@@ -1,66 +1,66 @@
 n.d(t, {
-    ZP: () => u,
-    aJ: () => d
+    ZP: () => d,
+    aJ: () => u
 }),
     n(411104),
     n(653041),
     n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(392711),
-    r = n.n(a),
-    s = n(566898),
-    o = n(981631),
-    c = n(142637);
-function d(e) {
-    let { compact: t, messageGroups: n, groupRange: i, attachments: l, fontSize: a, groupSpacing: c } = e;
-    if (l > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(l));
-    let d = a / o.yqN.FONT_SIZE_DEFAULT,
-        u = t ? s.iv : s.pk,
-        h = t ? s.Pb : s.XX,
-        p = 0,
-        m = Array(n)
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(566898),
+    s = n(981631),
+    c = n(337604);
+function u(e) {
+    let { compact: t, messageGroups: n, groupRange: r, attachments: i, fontSize: l, groupSpacing: c } = e;
+    if (i > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(i));
+    let u = l / s.yqN.FONT_SIZE_DEFAULT,
+        d = t ? a.iv : a.pk,
+        p = t ? a.Pb : a.XX,
+        h = 0,
+        f = Array(n)
             .fill(null)
             .map(() => {
-                let e = r().random(1, i);
-                return (p += c * d), (p += u * d), (p += (e - 1) * h * d), e;
+                let e = o().random(1, r);
+                return (h += c * u), (h += d * u), (h += (e - 1) * p * u), e;
             }),
-        f = m.map((e, t) => t),
+        m = f.map((e, t) => t),
         g = [];
-    for (; g.length < l; ) {
+    for (; g.length < i; ) {
         let e = {
-            width: r().random(140, 400),
-            height: r().random(100, 320)
+            width: o().random(140, 400),
+            height: o().random(100, 320)
         };
-        g.push([f.splice(r().random(0, f.length - 1), 1)[0], e]), (p += e.height + s.M9 * d);
+        g.push([m.splice(o().random(0, m.length - 1), 1)[0], e]), (h += e.height + a.M9 * u);
     }
     return {
-        messages: m,
+        messages: f,
         attachmentSpecs: g,
-        totalHeight: p,
+        totalHeight: h,
         groupSpacing: c
     };
 }
-function u(e) {
-    let { compact: t, messages: n, attachmentSpecs: a, totalHeight: r, groupSpacing: o } = e;
-    return l.useMemo(() => {
+function d(e) {
+    let { compact: t, messages: n, attachmentSpecs: l, totalHeight: o, groupSpacing: s } = e;
+    return i.useMemo(() => {
         let e = Array(n.length).fill(void 0);
-        for (let [t, n] of a) e[t] = n;
-        return (0, i.jsx)('div', {
+        for (let [t, n] of l) e[t] = n;
+        return (0, r.jsx)('div', {
             className: c.wrapper,
-            style: { height: r },
-            children: n.map((n, l) =>
-                (0, i.jsx)(
-                    s.ZP,
+            style: { height: o },
+            children: n.map((n, i) =>
+                (0, r.jsx)(
+                    a.ZP,
                     {
-                        groupSpacing: o,
+                        groupSpacing: s,
                         compact: t,
                         messages: n,
-                        attachmentSpecs: e[l]
+                        attachmentSpecs: e[i]
                     },
-                    l
+                    i
                 )
             )
         });
-    }, [t, n, a, r, o]);
+    }, [t, n, l, o, s]);
 }

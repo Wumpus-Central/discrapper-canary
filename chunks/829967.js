@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(316138),
-    r = n(882159);
-let a = {
+n.d(t, { Z: () => o });
+var r = n(316138),
+    i = n(882159);
+let o = {
     name: 'applyStyles',
     enabled: !0,
     phase: 'write',
@@ -9,14 +9,14 @@ let a = {
         var t = e.state;
         Object.keys(t.elements).forEach(function (e) {
             var n = t.styles[e] || {},
-                a = t.attributes[e] || {},
-                s = t.elements[e];
-            (0, r.Re)(s) &&
-                (0, i.Z)(s) &&
-                (Object.assign(s.style, n),
-                Object.keys(a).forEach(function (e) {
-                    var t = a[e];
-                    !1 === t ? s.removeAttribute(e) : s.setAttribute(e, !0 === t ? '' : t);
+                o = t.attributes[e] || {},
+                a = t.elements[e];
+            (0, i.Re)(a) &&
+                (0, r.Z)(a) &&
+                (Object.assign(a.style, n),
+                Object.keys(o).forEach(function (e) {
+                    var t = o[e];
+                    !1 === t ? a.removeAttribute(e) : a.setAttribute(e, !0 === t ? '' : t);
                 }));
         });
     },
@@ -38,16 +38,16 @@ let a = {
             t.elements.arrow && Object.assign(t.elements.arrow.style, n.arrow),
             function () {
                 Object.keys(t.elements).forEach(function (e) {
-                    var a = t.elements[e],
-                        s = t.attributes[e] || {},
-                        o = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function (e, t) {
+                    var o = t.elements[e],
+                        a = t.attributes[e] || {},
+                        s = Object.keys(t.styles.hasOwnProperty(e) ? t.styles[e] : n[e]).reduce(function (e, t) {
                             return (e[t] = ''), e;
                         }, {});
-                    (0, r.Re)(a) &&
-                        (0, i.Z)(a) &&
-                        (Object.assign(a.style, o),
-                        Object.keys(s).forEach(function (e) {
-                            a.removeAttribute(e);
+                    (0, i.Re)(o) &&
+                        (0, r.Z)(o) &&
+                        (Object.assign(o.style, s),
+                        Object.keys(a).forEach(function (e) {
+                            o.removeAttribute(e);
                         }));
                 });
             }

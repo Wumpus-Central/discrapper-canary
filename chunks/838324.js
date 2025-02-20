@@ -1,123 +1,123 @@
 n.d(t, { Z: () => g }), n(47120);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(692547),
-    s = n(481060),
-    a = n(45966),
+var i = n(442837),
+    s = n(692547),
+    a = n(481060),
+    l = n(45966),
     o = n(637853),
     c = n(889369),
     d = n(974513),
     u = n(290511),
     m = n(388032),
-    h = n(940196);
+    p = n(21294);
 function g(e) {
     let { guildId: t, scrollToQuestions: n } = e,
-        g = (0, r.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
-        x = (0, r.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [p, _] = (0, o.VF)(t, x),
-        [C, f] = (0, d.OA)(t, [...x]),
-        v = g ? f.length : _.length,
-        N = g ? C.length : p.length,
-        j = v < u.md,
-        I = N >= u.X,
-        E = f.length - _.length,
-        b = (0, i.jsx)(s.owK, {
+        g = (0, i.e7)([l.Z], () => l.Z.isAdvancedMode(t)),
+        h = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [f, b] = (0, o.VF)(t, h),
+        [x, j] = (0, d.OA)(t, [...h]),
+        N = g ? j.length : b.length,
+        v = g ? x.length : f.length,
+        _ = N < u.md,
+        O = v >= u.X,
+        y = j.length - b.length,
+        C = (0, r.jsx)(a.owK, {
             size: 'sm',
-            color: l.Z.unsafe_rawColors.BRAND_500.css,
-            secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
-            className: h.icon
+            color: s.Z.unsafe_rawColors.BRAND_500.css,
+            secondaryColor: s.Z.unsafe_rawColors.WHITE_100.css,
+            className: p.icon
         }),
-        T = (0, i.jsx)(s.k$p, {
+        I = (0, r.jsx)(a.k$p, {
             size: 'sm',
-            className: h.icon,
-            color: l.Z.colors.WHITE.css,
-            secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
+            className: p.icon,
+            color: s.Z.colors.WHITE.css,
+            secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css
         }),
-        S = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
-        R = !j && I ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
-    return (0, i.jsxs)('div', {
-        className: h.container,
+        E = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
+        S = !_ && O ? [s.Z.colors.TEXT_POSITIVE.css, s.Z.colors.TEXT_POSITIVE.css] : [s.Z.colors.TEXT_BRAND.css, s.Z.colors.TEXT_MUTED.css];
+    return (0, r.jsxs)('div', {
+        className: p.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: h.header,
+            (0, r.jsxs)('div', {
+                className: p.header,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: m.intl.format(m.t.kvroKC, { count: N })
+                        children: m.NW.format(m.t.kvroKC, { count: v })
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        children: m.intl.format(m.t['0MjxJy'], { count: v })
+                        children: m.NW.format(m.t['0MjxJy'], { count: N })
                     })
                 ]
             }),
-            (0, i.jsx)(s.yGy, {
-                foregroundColors: R,
-                percents: S,
-                size: s.yGy.Sizes.XSMALL
+            (0, r.jsx)(a.yGy, {
+                foregroundColors: S,
+                percents: E,
+                size: a.yGy.Sizes.XSMALL
             }),
-            (0, i.jsxs)('div', {
-                className: h.requiredItem,
+            (0, r.jsxs)('div', {
+                className: p.requiredItem,
                 children: [
-                    j ? T : b,
-                    (0, i.jsx)(s.Text, {
+                    _ ? I : C,
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: m.intl.format(m.t.k0COZW, { count: u.md })
+                        children: m.NW.format(m.t.k0COZW, { count: u.md })
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: h.requiredItem,
+            (0, r.jsxs)('div', {
+                className: p.requiredItem,
                 children: [
-                    I ? b : T,
-                    (0, i.jsx)(s.Text, {
+                    O ? C : I,
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: m.intl.format(m.t.PwXgS0, { count: u.X })
+                        children: m.NW.format(m.t.PwXgS0, { count: u.X })
                     })
                 ]
             }),
             g &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: h.requiredItem,
+                        (0, r.jsxs)('div', {
+                            className: p.requiredItem,
                             children: [
-                                (0, i.jsx)(s.d3s, {
+                                (0, r.jsx)(a.d3s, {
                                     size: 'sm',
-                                    color: l.Z.colors.WHITE.css,
-                                    secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: h.icon
+                                    color: s.Z.colors.WHITE.css,
+                                    secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css,
+                                    className: p.icon
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: m.intl.string(m.t.AyvkOD)
+                                    children: m.NW.string(m.t.AyvkOD)
                                 })
                             ]
                         }),
-                        (0, i.jsxs)('div', {
-                            className: h.requiredItem,
+                        (0, r.jsxs)('div', {
+                            className: p.requiredItem,
                             children: [
-                                (0, i.jsx)(s.d3s, {
+                                (0, r.jsx)(a.d3s, {
                                     size: 'sm',
-                                    color: l.Z.colors.WHITE.css,
-                                    secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: h.icon
+                                    color: s.Z.colors.WHITE.css,
+                                    secondaryColor: s.Z.colors.BACKGROUND_ACCENT.css,
+                                    className: p.icon
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: m.intl.format(m.t['8Geut7'], {
-                                        count: E,
+                                    children: m.NW.format(m.t['8Geut7'], {
+                                        count: y,
                                         prejoinHook: (e) =>
-                                            (0, i.jsx)(s.eee, {
+                                            (0, r.jsx)(a.eee, {
                                                 onClick: n,
-                                                children: (0, i.jsx)(s.Text, {
+                                                children: (0, r.jsx)(a.Text, {
                                                     tag: 'span',
                                                     variant: 'text-xs/normal',
                                                     color: 'text-link',

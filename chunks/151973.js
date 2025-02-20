@@ -1,30 +1,30 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(192379);
-function r(e, t, n) {
+n.d(t, { Z: () => a }), n(47120);
+var r = n(192379);
+function i(e, t, n) {
     return [Math.floor(e / n) - 1, Math.ceil((e + t) / n) + 1];
 }
-let a = [0, 0];
-function s(e) {
-    let { chunkSize: t, getScrollerState: n, forceUpdate: s } = e,
-        { dirty: o, scrollTop: l, offsetHeight: u } = n();
-    (0, i.useLayoutEffect)(() => {
-        o > 0 && s();
-    }, [o, s]);
-    let c = (0, i.useRef)(a);
-    c.current = r(l, u, t);
-    let [d, f] = c.current;
+let o = [0, 0];
+function a(e) {
+    let { chunkSize: t, getScrollerState: n, forceUpdate: a } = e,
+        { dirty: s, scrollTop: l, offsetHeight: c } = n();
+    (0, r.useLayoutEffect)(() => {
+        s > 0 && a();
+    }, [s, a]);
+    let u = (0, r.useRef)(o);
+    u.current = i(l, c, t);
+    let [d, f] = u.current;
     return {
-        forceUpdateOnChunkChange: (0, i.useCallback)(
+        forceUpdateOnChunkChange: (0, r.useCallback)(
             (e) => {
-                let { dirty: i, scrollTop: a, offsetHeight: o } = n();
-                if (i > 0) return;
-                let [l, u] = r(a, o, t);
-                l !== c.current[0] ? s() : 2 === e && u !== c.current[1] && s();
+                let { dirty: r, scrollTop: o, offsetHeight: s } = n();
+                if (r > 0) return;
+                let [l, c] = i(o, s, t);
+                l !== u.current[0] ? a() : 2 === e && c !== u.current[1] && a();
             },
-            [s, t, n]
+            [a, t, n]
         ),
         chunkStart: d,
         chunkEnd: f,
-        dirty: o
+        dirty: s
     };
 }

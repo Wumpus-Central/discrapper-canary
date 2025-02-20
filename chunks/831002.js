@@ -1,68 +1,68 @@
 n.d(t, {
-    $A: () => Z,
-    ZP: () => T,
+    $A: () => O,
+    ZP: () => E,
     j8: () => N
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(512722),
-    a = n.n(l),
-    r = n(442837),
-    s = n(481060),
-    o = n(40851),
+var i = n(512722),
+    l = n.n(i),
+    o = n(442837),
+    a = n(481060),
+    s = n(40851),
     c = n(358221),
-    d = n(431368),
-    u = n(167675),
-    h = n(418469),
-    p = n(673539),
-    m = n(218035),
-    f = n(775666),
+    u = n(431368),
+    d = n(167675),
+    p = n(418469),
+    h = n(673539),
+    f = n(218035),
+    m = n(775666),
     g = n(423589),
-    _ = n(592125),
-    C = n(496675),
-    x = n(881824),
+    b = n(592125),
+    _ = n(496675),
+    C = n(881824),
     v = n(146085),
-    E = n(427679),
-    I = n(354459),
-    b = n(388032);
-function Z(e) {
-    let t = (0, r.e7)([_.Z], () => _.Z.getChannel(e), [e]),
-        n = (0, r.e7)([C.Z], () => C.Z.can(v.yP, t)),
-        l = (0, r.e7)([E.Z], () => E.Z.getStageInstanceByChannel(e), [e]),
-        a = (0, o.bp)(),
-        c = () => null != t && (0, x.T)(t, a);
+    y = n(427679),
+    x = n(354459),
+    j = n(388032);
+function O(e) {
+    let t = (0, o.e7)([b.Z], () => b.Z.getChannel(e), [e]),
+        n = (0, o.e7)([_.Z], () => _.Z.can(v.yP, t)),
+        i = (0, o.e7)([y.Z], () => y.Z.getStageInstanceByChannel(e), [e]),
+        l = (0, s.bp)(),
+        c = () => null != t && (0, C.T)(t, l);
     return (null == t ? void 0 : t.isGuildStageVoice()) && n
-        ? null != l
-            ? (0, i.jsx)(s.sNh, {
+        ? null != i
+            ? (0, r.jsx)(a.sNh, {
                   id: 'edit-stage',
-                  label: b.intl.string(b.t['I+9bLy']),
+                  label: j.NW.string(j.t['I+9bLy']),
                   action: c
               })
-            : (0, i.jsx)(s.sNh, {
+            : (0, r.jsx)(a.sNh, {
                   id: 'start-stage',
-                  label: b.intl.string(b.t.OYbHfn),
+                  label: j.NW.string(j.t.OYbHfn),
                   action: c
               })
         : null;
 }
 function N(e) {
-    let t = (0, r.e7)([_.Z], () => _.Z.getChannel(e), [e]);
-    a()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
+    let t = (0, o.e7)([b.Z], () => b.Z.getChannel(e), [e]);
+    l()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
     let n = (0, g.Mn)('StageChannelCallOverflowMenu'),
-        i = (0, f.ZP)(t),
-        l = (0, m.Z)(t);
-    return n ? i : l;
+        r = (0, m.ZP)(t),
+        i = (0, f.Z)(t);
+    return n ? r : i;
 }
-function T(e) {
-    let { channelId: t, closePopout: n, appContext: l, onSelect: a } = e,
-        o = (0, r.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        m = (null == o ? void 0 : o.type) === I.fO.STREAM ? o.stream : null,
-        f = (0, p.Z)(t);
-    return (0, i.jsxs)(s.v2r, {
+function E(e) {
+    let { channelId: t, closePopout: n, appContext: i, onSelect: l } = e,
+        s = (0, o.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        f = (null == s ? void 0 : s.type) === x.fO.STREAM ? s.stream : null,
+        m = (0, h.Z)(t);
+    return (0, r.jsxs)(a.v2r, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
-        'aria-label': b.intl.string(b.t.pkYeAw),
-        onSelect: a,
-        children: [Z(t), N(t), (0, u.Z)(), (0, d.Z)(t), f, (0, h.Z)(m, l)]
+        'aria-label': j.NW.string(j.t.pkYeAw),
+        onSelect: l,
+        children: [O(t), N(t), (0, d.Z)(), (0, u.Z)(t), m, (0, p.Z)(f, i)]
     });
 }

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(280845),
-    s = n(996861),
-    r = n(388032);
-function o(e, t) {
-    return (0, a.U)(t, e)
-        ? (0, i.jsx)(l.sNh, {
+var i = n(481060),
+    l = n(280845),
+    a = n(996861),
+    o = n(388032);
+function s(e, t) {
+    return (0, l.U)(t, e)
+        ? (0, r.jsx)(i.sNh, {
               id: 'reply',
-              label: r.intl.string(r.t['5IEsGx']),
-              icon: l.n$P,
+              label: o.NW.string(o.t['5IEsGx']),
+              icon: i.n$P,
               action: (n) => {
-                  (0, s.HH)(t, e, n);
+                  (0, a.HH)(t, e, n);
               }
           })
         : null;

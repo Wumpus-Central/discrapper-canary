@@ -1,8 +1,8 @@
 n.d(t, {
-    d: () => r,
-    t: () => i
+    d: () => i,
+    t: () => r
 });
-let i = 202;
-var r = (function (e) {
+let r = 202;
+var i = (function (e) {
     return (e[(e.SUCCESSFUL_QUERY = 1)] = 'SUCCESSFUL_QUERY'), (e[(e.ERROR = 2)] = 'ERROR'), e;
 })({});

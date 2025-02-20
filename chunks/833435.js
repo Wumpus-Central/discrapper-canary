@@ -1,5 +1,5 @@
-n.d(t, { _: () => l });
-let i = (0, n(818083).B)({
+n.d(t, { _: () => i });
+let r = (0, n(818083).B)({
         id: '2024-09_quests_trophy_case',
         kind: 'user',
         label: 'Trophy Case',
@@ -17,7 +17,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => {
+    i = (e) => {
         let { location: t, autoTrackExposure: n = !1 } = e;
-        return i.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
+        return r.useExperiment({ location: t }, { autoTrackExposure: n }).enabled;
     };

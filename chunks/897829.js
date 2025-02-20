@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(442837),
-    a = n(355467),
-    s = n(78839);
-function o() {
-    let e = (0, r.e7)([s.ZP], () => s.ZP.hasFetchedSubscriptions());
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(442837),
+    o = n(355467),
+    a = n(78839);
+function s() {
+    let e = (0, i.e7)([a.ZP], () => a.ZP.hasFetchedSubscriptions());
     return (
-        i.useEffect(() => {
-            e || (0, a.jg)();
+        r.useEffect(() => {
+            e || (0, o.jg)();
         }, [e]),
         e
     );

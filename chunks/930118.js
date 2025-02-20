@@ -1,8 +1,8 @@
-n.d(t, { Y: () => l });
-var i = n(570140);
-function l(e) {
-    i.Z.wait(() =>
-        i.Z.dispatch({
+n.d(t, { Y: () => i });
+var r = n(570140);
+function i(e) {
+    r.Z.wait(() =>
+        r.Z.dispatch({
             type: 'APPLICATION_STORE_LOCATION_CHANGE',
             location: e
         })

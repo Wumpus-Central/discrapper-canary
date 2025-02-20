@@ -1,41 +1,41 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(372444),
-    s = n(267642),
-    a = n(981631),
+var i = n(481060),
+    s = n(372444),
+    a = n(267642),
+    l = n(981631),
     o = n(474936),
     c = n(388032),
-    d = n(764002);
+    d = n(820683);
 function u(e) {
     let { guild: t, numSounds: n, isOutOfSlots: u } = e,
         m = t.premiumTier,
-        h = (0, s.FZ)(m, t.id),
+        p = (0, a.FZ)(m, t.id),
         g = o._k[m] - 2;
-    if (null == h || m === a.Eu4.TIER_3 || n < g) return null;
-    let x = u
+    if (null == p || m === l.Eu4.TIER_3 || n < g) return null;
+    let h = u
         ? {
-              color: r.Ttl.GREEN,
-              look: r.iLD.FILLED,
-              text: c.intl.string(c.t.cYzxGh)
+              color: i.Ttl.GREEN,
+              look: i.iLD.FILLED,
+              text: c.NW.string(c.t.cYzxGh)
           }
         : void 0;
-    return (0, i.jsx)(l.Z, {
-        header: c.intl.string(c.t.zT9Sxc),
-        text: c.intl.formatToPlainString(c.t.OKqEAQ, {
-            level: h,
-            numAdditional: (0, s.Je)(h)
+    return (0, r.jsx)(s.Z, {
+        header: c.NW.string(c.t.zT9Sxc),
+        text: c.NW.formatToPlainString(c.t.OKqEAQ, {
+            level: p,
+            numAdditional: (0, a.Je)(p)
         }),
         headerColor: 'header-primary',
         textColor: 'text-normal',
-        buttonProps: x,
+        buttonProps: h,
         guild: t,
         analyticsLocation: {
-            page: a.ZY5.GUILD_SETTINGS,
-            section: a.jXE.GUILD_SETTINGS_SOUNDBOARD,
-            object: a.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
-            objectType: (0, s.ge)(h)
+            page: l.ZY5.GUILD_SETTINGS,
+            section: l.jXE.GUILD_SETTINGS_SOUNDBOARD,
+            object: l.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL,
+            objectType: (0, a.ge)(p)
         },
         className: d.container
     });

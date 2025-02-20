@@ -1,11 +1,11 @@
 n.d(t, {
-    Kc: () => s,
-    Yu: () => a,
-    dP: () => o
+    Kc: () => a,
+    Yu: () => o,
+    dP: () => s
 });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-10_improved_media_viewer',
     label: 'Improved Desktop Media Viewer',
@@ -13,7 +13,7 @@ let a = (0, i.B)({
         improvedDesktopMediaViewerEnabled: !1,
         mediaViewerAffordanceEnabled: !1
     },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -33,10 +33,10 @@ let a = (0, i.B)({
         }
     ]
 });
-function s(e) {
-    let { improvedDesktopMediaViewerEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function a(e) {
+    let { improvedDesktopMediaViewerEnabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t;
 }
-function o(e) {
-    return a.useExperiment({ location: e }, { autoTrackExposure: !1 });
+function s(e) {
+    return o.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }

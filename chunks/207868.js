@@ -1,46 +1,46 @@
-n.d(t, { Z: () => x });
-var i = n(200651),
-    l = n(192379),
-    a = n(392711),
-    r = n.n(a),
-    s = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => C });
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(557135),
-    d = n(590293),
-    u = n(66999),
-    h = n(665906),
-    p = n(496675),
-    m = n(979651),
-    f = n(585483),
+    u = n(590293),
+    d = n(66999),
+    p = n(665906),
+    h = n(496675),
+    f = n(979651),
+    m = n(585483),
     g = n(665149),
-    _ = n(981631),
-    C = n(388032);
-let x = l.memo(function (e) {
+    b = n(981631),
+    _ = n(388032);
+let C = i.memo(function (e) {
     let { channel: t } = e,
-        n = (0, d.Z)(),
-        a = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
-        x = (0, s.e7)([m.Z], () => !r().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
-        v = (0, s.e7)([p.Z], () => p.Z.can(_.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: E } = (0, u.Z)(t.id),
-        I = (0, h.$R)(t),
-        b = l.useCallback(() => {
+        n = (0, u.Z)(),
+        l = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        C = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        v = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: y } = (0, d.Z)(t.id),
+        x = (0, p.$R)(t),
+        j = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
-                connected: a,
-                needSubscriptionToAccess: E,
+                connected: l,
+                needSubscriptionToAccess: y,
                 locked: !1
             });
-        }, [t, a, E]);
-    return (l.useEffect(
+        }, [t, l, y]);
+    return (i.useEffect(
         () => (
-            f.S.subscribe(_.CkL.CALL_START, b),
+            m.S.subscribe(b.CkL.CALL_START, j),
             () => {
-                f.S.unsubscribe(_.CkL.CALL_START, b);
+                m.S.unsubscribe(b.CkL.CALL_START, j);
             }
         ),
-        [b]
+        [j]
     ),
-    h.tM.useExperiment(
+    p.tM.useExperiment(
         {
             guildId: t.guild_id,
             location: '63250c_1'
@@ -48,14 +48,14 @@ let x = l.memo(function (e) {
         { autoTrackExposure: !1 }
     ).enabled &&
         !n &&
-        !a &&
+        !l &&
         v &&
-        I &&
+        x &&
         t.isVocalThread())
-        ? (0, i.jsx)(g.ZP.Icon, {
-              icon: o.Csw,
-              onClick: b,
-              tooltip: x ? C.intl.string(C.t.fdEeb2) : C.intl.string(C.t.focH1t)
+        ? (0, r.jsx)(g.ZP.Icon, {
+              icon: s.Csw,
+              onClick: j,
+              tooltip: C ? _.NW.string(_.t.fdEeb2) : _.NW.string(_.t.focH1t)
           })
         : null;
 });

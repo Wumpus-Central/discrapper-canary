@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g });
-var i = n(475637),
-    r = n(925300),
-    a = /^(\d+)(th|st|nd|rd)?/i,
-    s = /\d+/i,
-    o = {
+var r = n(475637),
+    i = n(925300),
+    o = /^(\d+)(th|st|nd|rd)?/i,
+    a = /\d+/i,
+    s = {
         narrow: /^(b|a)/i,
         abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
         wide: /^(before christ|before common era|anno domini|common era)/i
@@ -11,12 +11,12 @@ var i = n(475637),
     l = {
         any: [/^b/i, /^(a|c)/i]
     },
-    u = {
+    c = {
         narrow: /^[1234]/i,
         abbreviated: /^q[1234]/i,
         wide: /^[1234](th|st|nd|rd)? quarter/i
     },
-    c = {
+    u = {
         any: [/1/i, /2/i, /3/i, /4/i]
     },
     d = {
@@ -28,13 +28,13 @@ var i = n(475637),
         narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
         any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
     },
-    _ = {
+    p = {
         narrow: /^[smtwf]/i,
         short: /^(su|mo|tu|we|th|fr|sa)/i,
         abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
         wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
     },
-    p = {
+    _ = {
         narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
         any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
     },
@@ -55,41 +55,41 @@ var i = n(475637),
         }
     };
 let g = {
-    ordinalNumber: (0, r.Z)({
-        matchPattern: a,
-        parsePattern: s,
+    ordinalNumber: (0, i.Z)({
+        matchPattern: o,
+        parsePattern: a,
         valueCallback: function (e) {
             return parseInt(e, 10);
         }
     }),
-    era: (0, i.Z)({
-        matchPatterns: o,
+    era: (0, r.Z)({
+        matchPatterns: s,
         defaultMatchWidth: 'wide',
         parsePatterns: l,
         defaultParseWidth: 'any'
     }),
-    quarter: (0, i.Z)({
-        matchPatterns: u,
+    quarter: (0, r.Z)({
+        matchPatterns: c,
         defaultMatchWidth: 'wide',
-        parsePatterns: c,
+        parsePatterns: u,
         defaultParseWidth: 'any',
         valueCallback: function (e) {
             return e + 1;
         }
     }),
-    month: (0, i.Z)({
+    month: (0, r.Z)({
         matchPatterns: d,
         defaultMatchWidth: 'wide',
         parsePatterns: f,
         defaultParseWidth: 'any'
     }),
-    day: (0, i.Z)({
-        matchPatterns: _,
+    day: (0, r.Z)({
+        matchPatterns: p,
         defaultMatchWidth: 'wide',
-        parsePatterns: p,
+        parsePatterns: _,
         defaultParseWidth: 'any'
     }),
-    dayPeriod: (0, i.Z)({
+    dayPeriod: (0, r.Z)({
         matchPatterns: h,
         defaultMatchWidth: 'any',
         parsePatterns: m,

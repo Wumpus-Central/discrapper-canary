@@ -1,11 +1,11 @@
 n.d(t, {
-    P: () => o,
-    Z: () => _
+    P: () => s,
+    Z: () => p
 });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,27 +18,27 @@ function s(e, t, n) {
         e
     );
 }
-var o = (function (e) {
+var s = (function (e) {
     return (e[(e.NOT_STARTED = 0)] = 'NOT_STARTED'), (e[(e.IN_PROGRESS = 1)] = 'IN_PROGRESS'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.SKIPPED = 3)] = 'SKIPPED'), e;
 })({});
 let l = 0;
-function u() {
+function c() {
     l = 1;
 }
-function c() {
+function u() {
     l = 2;
 }
 function d() {
     l = 3;
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getMigrationStatus() {
         return l;
     }
 }
-s(f, 'displayName', 'DomainMigrationStore');
-let _ = new f(a.Z, {
-    DOMAIN_MIGRATION_START: u,
-    DOMAIN_MIGRATION_FAILURE: c,
+a(f, 'displayName', 'DomainMigrationStore');
+let p = new f(o.Z, {
+    DOMAIN_MIGRATION_START: c,
+    DOMAIN_MIGRATION_FAILURE: u,
     DOMAIN_MIGRATION_SKIP: d
 });

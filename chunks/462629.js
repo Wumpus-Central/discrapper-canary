@@ -3,42 +3,42 @@
 })(0, function (e) {
     var t = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split('_'),
         n = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_');
-    function i(e) {
+    function r(e) {
         return e > 1 && e < 5 && 1 != ~~(e / 10);
     }
-    function r(e, t, n, r) {
-        var a = e + ' ';
+    function i(e, t, n, i) {
+        var o = e + ' ';
         switch (n) {
             case 's':
-                return t || r ? 'pár sekund' : 'pár sekundami';
+                return t || i ? 'pár sekund' : 'pár sekundami';
             case 'ss':
-                if (t || r) return a + (i(e) ? 'sekundy' : 'sekund');
-                return a + 'sekundami';
+                if (t || i) return o + (r(e) ? 'sekundy' : 'sekund');
+                return o + 'sekundami';
             case 'm':
-                return t ? 'minuta' : r ? 'minutu' : 'minutou';
+                return t ? 'minuta' : i ? 'minutu' : 'minutou';
             case 'mm':
-                if (t || r) return a + (i(e) ? 'minuty' : 'minut');
-                return a + 'minutami';
+                if (t || i) return o + (r(e) ? 'minuty' : 'minut');
+                return o + 'minutami';
             case 'h':
-                return t ? 'hodina' : r ? 'hodinu' : 'hodinou';
+                return t ? 'hodina' : i ? 'hodinu' : 'hodinou';
             case 'hh':
-                if (t || r) return a + (i(e) ? 'hodiny' : 'hodin');
-                return a + 'hodinami';
+                if (t || i) return o + (r(e) ? 'hodiny' : 'hodin');
+                return o + 'hodinami';
             case 'd':
-                return t || r ? 'den' : 'dnem';
+                return t || i ? 'den' : 'dnem';
             case 'dd':
-                if (t || r) return a + (i(e) ? 'dny' : 'dní');
-                return a + 'dny';
+                if (t || i) return o + (r(e) ? 'dny' : 'dní');
+                return o + 'dny';
             case 'M':
-                return t || r ? 'měsíc' : 'měsícem';
+                return t || i ? 'měsíc' : 'měsícem';
             case 'MM':
-                if (t || r) return a + (i(e) ? 'měsíce' : 'měsíců');
-                return a + 'měsíci';
+                if (t || i) return o + (r(e) ? 'měsíce' : 'měsíců');
+                return o + 'měsíci';
             case 'y':
-                return t || r ? 'rok' : 'rokem';
+                return t || i ? 'rok' : 'rokem';
             case 'yy':
-                if (t || r) return a + (i(e) ? 'roky' : 'let');
-                return a + 'lety';
+                if (t || i) return o + (r(e) ? 'roky' : 'let');
+                return o + 'lety';
         }
     }
     return e.defineLocale('cs', {
@@ -46,9 +46,9 @@
         monthsShort: n,
         monthsParse: (function (e, t) {
             var n,
-                i = [];
-            for (n = 0; n < 12; n++) i[n] = RegExp('^' + e[n] + '$|^' + t[n] + '$', 'i');
-            return i;
+                r = [];
+            for (n = 0; n < 12; n++) r[n] = RegExp('^' + e[n] + '$|^' + t[n] + '$', 'i');
+            return r;
         })(t, n),
         shortMonthsParse: (function (e) {
             var t,
@@ -116,18 +116,18 @@
         relativeTime: {
             future: 'za %s',
             past: 'před %s',
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r
+            s: i,
+            ss: i,
+            m: i,
+            mm: i,
+            h: i,
+            hh: i,
+            d: i,
+            dd: i,
+            M: i,
+            MM: i,
+            y: i,
+            yy: i
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

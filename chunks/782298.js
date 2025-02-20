@@ -5,20 +5,20 @@ function t(e) {
             built_in: 'some all not if then else true fail false try catch catch_any semidet_true semidet_false semidet_fail impure_true impure semipure'
         },
         n = e.COMMENT('%', '$'),
-        i = {
+        r = {
             className: 'number',
             begin: "0'.\\|0[box][0-9a-fA-F]*"
         },
-        r = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
-        a = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
-        s = {
+        i = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
+        o = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
+        a = {
             className: 'subst',
             begin: '\\\\[abfnrtv]\\|\\\\x[0-9a-fA-F]*\\\\\\|%[-+# *.0-9]*[dioxXucsfeEgGp]',
             relevance: 0
         };
     return (
-        (a.contains = a.contains.slice()),
-        a.contains.push(s),
+        (o.contains = o.contains.slice()),
+        o.contains.push(a),
         {
             name: 'Mercury',
             aliases: ['m', 'moo'],
@@ -52,10 +52,10 @@ function t(e) {
                 },
                 n,
                 e.C_BLOCK_COMMENT_MODE,
-                i,
-                e.NUMBER_MODE,
                 r,
-                a,
+                e.NUMBER_MODE,
+                i,
+                o,
                 { begin: /:-/ },
                 { begin: /\.$/ }
             ]

@@ -1,16 +1,16 @@
-n.d(t, { T: () => l });
-var i = n(132871),
-    s = n(147890),
-    r = n(914010);
-let l = {
+n.d(t, { T: () => a });
+var r = n(132871),
+    i = n(147890),
+    s = n(914010);
+let a = {
     binds: ['mod+ctrl+a'],
     comboKeysBindGlobal: !0,
     action() {
         var e;
-        let t = null !== (e = r.Z.getGuildId()) && void 0 !== e ? e : void 0;
-        (0, s.dx)({
+        let t = null !== (e = s.Z.getGuildId()) && void 0 !== e ? e : void 0;
+        (0, i.dx)({
             guildId: t,
-            entrypoint: { name: i.n3.KEYBOARD_SHORTCUT }
+            entrypoint: { name: r.n3.KEYBOARD_SHORTCUT }
         });
     }
 };

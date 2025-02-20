@@ -1,10 +1,10 @@
-let i = n(40231),
-    r = (e, t, n, r, a) => {
-        'string' == typeof n && ((a = r), (r = n), (n = void 0));
+let r = n(40231),
+    i = (e, t, n, i, o) => {
+        'string' == typeof n && ((o = i), (i = n), (n = void 0));
         try {
-            return new i(e instanceof i ? e.version : e, n).inc(t, r, a).version;
+            return new r(e instanceof r ? e.version : e, n).inc(t, i, o).version;
         } catch (e) {
             return null;
         }
     };
-e.exports = r;
+e.exports = i;

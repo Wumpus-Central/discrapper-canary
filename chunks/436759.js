@@ -1,24 +1,24 @@
-n.d(t, { N: () => s });
-var i = n(36056),
-    r = n(929412),
-    a = n(69122);
-function s(e, t = i.pz.STRING) {
+n.d(t, { N: () => a });
+var r = n(36056),
+    i = n(929412),
+    o = n(69122);
+function a(e, t = r.pz.STRING) {
     switch (e) {
-        case i.wx.BOOL:
+        case r.wx.BOOL:
             return !1;
-        case i.wx.UINT64:
-        case i.wx.FIXED64:
-            return (0, r._)(a.p.ZERO, t);
-        case i.wx.INT64:
-        case i.wx.SFIXED64:
-        case i.wx.SINT64:
-            return (0, r._)(a.M.ZERO, t);
-        case i.wx.DOUBLE:
-        case i.wx.FLOAT:
+        case r.wx.UINT64:
+        case r.wx.FIXED64:
+            return (0, i._)(o.p.ZERO, t);
+        case r.wx.INT64:
+        case r.wx.SFIXED64:
+        case r.wx.SINT64:
+            return (0, i._)(o.M.ZERO, t);
+        case r.wx.DOUBLE:
+        case r.wx.FLOAT:
             return 0;
-        case i.wx.BYTES:
+        case r.wx.BYTES:
             return new Uint8Array(0);
-        case i.wx.STRING:
+        case r.wx.STRING:
             return '';
         default:
             return 0;

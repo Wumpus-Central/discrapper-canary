@@ -1,25 +1,25 @@
-n.d(t, { Z: () => r });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(643560);
-let r = (e) => {
-    let { entry: t, hideEditButton: n, children: r, onRequestOpen: s, onRequestClose: o } = e;
-    return (0, i.jsx)(l.yRy, {
-        onRequestOpen: s,
-        onRequestClose: o,
-        animation: l.yRy.Animation.NONE,
+var i = n(481060),
+    l = n(643560);
+let o = (e) => {
+    let { entry: t, hideEditButton: n, children: o, onRequestOpen: a, onRequestClose: s } = e;
+    return (0, r.jsx)(i.yRy, {
+        onRequestOpen: a,
+        onRequestClose: s,
+        animation: i.yRy.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',
         renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, i.jsx)(a.default, {
+            let { closePopout: i } = e;
+            return (0, r.jsx)(l.default, {
                 entry: t,
-                closePopout: l,
+                closePopout: i,
                 hideEditButton: n
             });
         },
-        children: r
+        children: o
     });
 };

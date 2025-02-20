@@ -1,71 +1,71 @@
-i.d(t, { default: () => g });
-var n = i(200651),
-    r = i(192379),
-    l = i(481060),
-    o = i(651711),
-    a = i(434404),
-    s = i(202858),
-    c = i(587431),
-    d = i(400842),
-    _ = i(271267),
-    u = i(981631),
-    h = i(388032),
-    E = i(9710),
-    b = i(653904);
-function A() {
+r.d(t, { default: () => h }), r(266796);
+var n = r(200651),
+    i = r(192379),
+    o = r(481060),
+    l = r(651711),
+    c = r(434404),
+    a = r(202858),
+    s = r(587431),
+    d = r(400842),
+    u = r(271267),
+    b = r(981631),
+    y = r(388032),
+    p = r(422835),
+    _ = r(653904);
+function f() {
     return (0, n.jsxs)('div', {
-        className: E.eligibilityHeader,
+        className: p.eligibilityHeader,
         children: [
-            (0, n.jsx)(l.X6q, {
-                className: E.eligibilityHeaderText,
+            (0, n.jsx)(o.X6q, {
+                className: p.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
-                children: h.intl.string(h.t['3s47iI'])
+                children: y.NW.string(y.t['3s47iI'])
             }),
             (0, n.jsx)('img', {
-                className: E.eligibilityHeaderImage,
-                src: b,
+                className: p.eligibilityHeaderImage,
+                src: _,
                 alt: ''
             }),
-            (0, n.jsx)(l.olH, {
-                className: E.eligibilityHeaderCloseButton,
+            (0, n.jsx)(o.olH, {
+                className: p.eligibilityHeaderCloseButton,
                 onClick: () => {
-                    (0, l.Mr3)(_.Q);
+                    (0, o.Mr3)(u.Q);
                 }
             })
         ]
     });
 }
-function M(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: h, guildId: b, onEligibilityBecameStale: A } = e,
-        M = r.useMemo(
+function g(e) {
+    let { eligibility: t, eligibilityLoading: r, eligibilityError: y, guildId: _, onEligibilityBecameStale: f } = e,
+        g = i.useMemo(
             () => ({
-                onEligibilityBecameStale: A,
+                onEligibilityBecameStale: f,
                 sortedByIneligible: !0,
                 actions: {
-                    onEnableMFAClick: s.ZP.enableMFA,
+                    onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        (0, l.Mr3)(_.Q), a.Z.open(b, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS);
+                        (0, o.Mr3)(u.Q), c.Z.open(_, b.pNK.SAFETY, void 0, b.KsC.SAFETY_PERMISSIONS);
                     }
                 }
             }),
-            [b, A]
+            [_, f]
         ),
-        g = (0, o.Z)(t, M);
-    return null != h
+        h = (0, l.Z)(t, g);
+    return null != y
         ? (0, n.jsx)('div', {
-              className: E.paddedContainer,
-              children: (0, n.jsx)(c.Z, { children: h.message })
+              className: p.paddedContainer,
+              children: (0, n.jsx)(s.Z, { children: y.message })
           })
-        : null == g || i
+        : null == h || r
           ? (0, n.jsx)('div', {
-                className: E.paddedContainer,
-                children: (0, n.jsx)(l.$jN, {})
+                className: p.paddedContainer,
+                children: (0, n.jsx)(o.$jN, {})
             })
           : (0, n.jsx)('div', {
-                children: g.map((e, t) =>
+                children: h.map((e, t) =>
                     (0, n.jsxs)(
-                        r.Fragment,
+                        i.Fragment,
                         {
                             children: [
                                 (0, n.jsx)(d.d, {
@@ -75,7 +75,7 @@ function M(e) {
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler
                                 }),
-                                t < g.length - 1 ? (0, n.jsx)(l.$i$, {}) : null
+                                t < h.length - 1 ? (0, n.jsx)(o.$i$, {}) : null
                             ]
                         },
                         e.checkedLabel
@@ -83,21 +83,21 @@ function M(e) {
                 )
             });
 }
-function g(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: r, refreshEligibility: o, guildId: a, transitionState: s } = e;
-    return (0, n.jsxs)(l.Y0X, {
-        className: E.eligibilityModal,
-        size: l.CgR.MEDIUM,
-        transitionState: s,
+function h(e) {
+    let { eligibility: t, eligibilityLoading: r, eligibilityError: i, refreshEligibility: l, guildId: c, transitionState: a } = e;
+    return (0, n.jsxs)(o.Y0X, {
+        className: p.eligibilityModal,
+        size: o.CgR.MEDIUM,
+        transitionState: a,
         children: [
-            (0, n.jsx)(A, {}),
-            (0, n.jsx)(l.hzk, {
-                children: (0, n.jsx)(M, {
+            (0, n.jsx)(f, {}),
+            (0, n.jsx)(o.hzk, {
+                children: (0, n.jsx)(g, {
                     eligibility: t,
-                    eligibilityLoading: i,
-                    eligibilityError: r,
-                    guildId: a,
-                    onEligibilityBecameStale: o
+                    eligibilityLoading: r,
+                    eligibilityError: i,
+                    guildId: c,
+                    onEligibilityBecameStale: l
                 })
             })
         ]

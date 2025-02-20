@@ -1,36 +1,36 @@
 n.d(t, { Z: () => m });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
-    l = n(993413),
-    a = n(496675),
+var i = n(442837),
+    s = n(481060),
+    a = n(993413),
+    l = n(496675),
     o = n(52597),
     c = n(981631),
     d = n(388032),
-    u = n(292845);
+    u = n(811285);
 function m(e) {
-    let { errors: t, pendingNick: n, currentNick: m, username: g, guild: h } = e,
-        x = null != n ? n : m,
-        _ = (0, s.e7)([a.Z], () => a.Z.can(c.Plq.CHANGE_NICKNAME, h) || a.Z.can(c.Plq.MANAGE_NICKNAMES, h));
-    return (0, i.jsxs)(l.Z, {
-        title: d.intl.string(d.t.me1lRk),
+    let { errors: t, pendingNick: n, currentNick: m, username: g, guild: p } = e,
+        h = null != n ? n : m,
+        f = (0, i.e7)([l.Z], () => l.Z.can(c.Plq.CHANGE_NICKNAME, p) || l.Z.can(c.Plq.MANAGE_NICKNAMES, p));
+    return (0, r.jsxs)(a.Z, {
+        title: d.NW.string(d.t.me1lRk),
         errors: t,
         children: [
-            (0, i.jsx)(r.oil, {
-                value: null != x ? x : '',
+            (0, r.jsx)(s.oil, {
+                value: null != h ? h : '',
                 placeholder: g,
                 maxLength: c.l$U,
                 onChange: function (e) {
                     (0, o.wi)(e, m);
                 },
-                disabled: !_
+                disabled: !f
             }),
-            !_ &&
-                (0, i.jsx)(r.R94, {
+            !f &&
+                (0, r.jsx)(s.R94, {
                     className: u.nicknameDisabled,
-                    type: r.R94.Types.DESCRIPTION,
-                    children: d.intl.string(d.t.gzjxQk)
+                    type: s.R94.Types.DESCRIPTION,
+                    children: d.NW.string(d.t.gzjxQk)
                 })
         ]
     });

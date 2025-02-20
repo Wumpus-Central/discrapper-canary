@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(74538),
     x = n(709706),
     O = n(378441),
-    j = n(799143),
-    E = n(358820),
+    E = n(799143),
+    j = n(358820),
     N = n(448697),
     C = n(365831),
     I = n(639539),
@@ -122,7 +122,7 @@ function R(e) {
         q = i.useRef(null);
     return (
         (0, d.ZP)(() => {
-            (0, E.r5)(), b.default.track(P.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != z ? z : null });
+            (0, j.r5)(), b.default.track(P.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != z ? z : null });
         }),
         (0, r.jsx)(m.Gt, {
             value: D,
@@ -192,13 +192,13 @@ function R(e) {
                                 })
                             ]
                         }),
-                    (0, r.jsx)(N.R, {}),
                     (0, r.jsx)(C.y, {}),
+                    (0, r.jsx)(N.R, {}),
                     (0, r.jsxs)('div', {
                         className: o()(w.voiceFiltersFooter, { [w.hasActiveVoice]: null != z }),
                         children: [
-                            (0, r.jsx)(j.Y, {}),
-                            a && (0, r.jsx)(j.a, {}),
+                            (0, r.jsx)(E.Y, {}),
+                            a && (0, r.jsx)(E.a, {}),
                             null != t &&
                                 (0, r.jsx)(c.yRy, {
                                     position: 'top',

@@ -5,8 +5,8 @@ function t(e) {
             relevance: 0,
             variants: [{ begin: /([+-]+)?[\d]+_[\d_]+/ }, { begin: e.NUMBER_RE }]
         },
-        i = e.COMMENT();
-    i.variants = [
+        r = e.COMMENT();
+    r.variants = [
         {
             begin: /;/,
             end: /$/
@@ -16,15 +16,15 @@ function t(e) {
             end: /$/
         }
     ];
-    let r = {
+    let i = {
             className: 'variable',
             variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        a = {
+        o = {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
-        s = {
+        a = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -48,23 +48,23 @@ function t(e) {
                 }
             ]
         },
-        o = {
+        s = {
             begin: /\[/,
             end: /\]/,
-            contains: [i, a, r, s, n, 'self'],
+            contains: [r, o, i, a, n, 'self'],
             relevance: 0
         },
         l = /[A-Za-z0-9_-]+/,
-        u = /"(\\"|[^"])*"/,
-        c = /'[^']*'/,
-        d = t.either(l, u, c);
+        c = /"(\\"|[^"])*"/,
+        u = /'[^']*'/,
+        d = t.either(l, c, u);
     return {
         name: 'TOML, also INI',
         aliases: ['toml'],
         case_insensitive: !0,
         illegal: /\S/,
         contains: [
-            i,
+            r,
             {
                 className: 'section',
                 begin: /\[+/,
@@ -75,7 +75,7 @@ function t(e) {
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [i, o, a, r, s, n]
+                    contains: [r, s, o, i, a, n]
                 }
             }
         ]

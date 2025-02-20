@@ -1,11 +1,11 @@
-n.d(t, { Z: () => h }), n(47120), n(733860);
-var l,
+n.d(t, { Z: () => f }), n(47120), n(733860);
+var r,
     i = n(442837),
-    r = n(570140),
-    u = n(592125),
-    a = n(271383),
-    o = n(430824);
-function d(e, t, n) {
+    a = n(570140),
+    o = n(592125),
+    l = n(271383),
+    c = n(430824);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,28 +18,28 @@ function d(e, t, n) {
         e
     );
 }
-let s = [],
-    c = new Set();
-class f extends (l = i.ZP.PersistedStore) {
+let u = [],
+    d = new Set();
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(a.ZP, o.Z, u.Z), (c = new Set([...(s = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
+        this.waitFor(l.ZP, c.Z, o.Z), (d = new Set([...(u = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: s };
+        return { channelHistory: u };
     }
     getChannelHistory() {
-        return s;
+        return u;
     }
 }
-d(f, 'displayName', 'RecentVoiceChannelStore'), d(f, 'persistKey', 'RecentVoiceChannelStore');
-let h = new f(r.Z, {
+s(_, 'displayName', 'RecentVoiceChannelStore'), s(_, 'persistKey', 'RecentVoiceChannelStore');
+let f = new _(a.Z, {
     POST_CONNECTION_OPEN: function () {
-        c = new Set([...s]);
+        d = new Set([...u]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
-        let { channelId: l } = e;
-        return !(null == l || !(null !== (n = null === (t = u.Z.getChannel(l)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || c.has(l)) && (s.unshift(l), c.add(l), s.length > 10 && ((s.length = 10), (c = new Set([...s]))), !0);
+        let { channelId: r } = e;
+        return !(null == r || !(null !== (n = null === (t = o.Z.getChannel(r)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || d.has(r)) && (u.unshift(r), d.add(r), u.length > 10 && ((u.length = 10), (d = new Set([...u]))), !0);
     }
 });

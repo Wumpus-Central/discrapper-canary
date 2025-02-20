@@ -1,4 +1,4 @@
-t.d(e, { default: () => M }), t(653041), t(47120);
+t.d(e, { default: () => M }), t(653041), t(230036), t(47120);
 var i = t(200651),
     l = t(192379),
     r = t(120356),
@@ -16,8 +16,8 @@ var i = t(200651),
     S = t(359110),
     I = t(814443),
     L = t(210887),
-    D = t(131704),
-    N = t(699516),
+    N = t(131704),
+    D = t(699516),
     h = t(944486),
     U = t(914010),
     P = t(594174),
@@ -27,7 +27,7 @@ var i = t(200651),
     G = t(407316),
     O = t(937784),
     m = t(388032),
-    v = t(949574),
+    v = t(158923),
     Z = t(138715),
     H = t(979770);
 function x(n) {
@@ -59,9 +59,9 @@ function p(n) {
             let n = [];
             return (
                 _.forEachChannel((e) => {
-                    !1 !== (0, G.W)(e.id) && ((0, D.r8)(e.type) || (0, D.bw)(e.type)) && n.push(e);
+                    !1 !== (0, G.W)(e.id) && ((0, N.r8)(e.type) || (0, N.bw)(e.type)) && n.push(e);
                 }),
-                n.sort((n, e) => (n.id === d ? -1 : e.id === d ? 1 : 0))
+                n.sort((n, e) => (n.id === d ? -1 : +(e.id === d)))
             );
         }, [_, d]);
     return 0 === u.length
@@ -73,7 +73,7 @@ function p(n) {
                       variant: 'eyebrow',
                       color: 'interactive-normal',
                       className: v.contentPadding,
-                      children: m.intl.string(m.t.SOtDeX)
+                      children: m.NW.string(m.t.SOtDeX)
                   }),
                   (0, i.jsx)(o.aVo, {
                       sections: [u.length],
@@ -96,7 +96,7 @@ function p(n) {
                                     E.id
                                 );
                       },
-                      rowHeight: (n, e) => (n > 0 ? 0 : null != u[e] ? 56 : 0),
+                      rowHeight: (n, e) => (n > 0 ? 0 : 56 * (null != u[e])),
                       renderSection: () => null,
                       className: E()(v.channelList, v.contentPadding),
                       fade: !0
@@ -119,7 +119,7 @@ function b(n) {
                       lightSrc: H,
                       darkSrc: Z
                   }),
-                  (0, i.jsx)(o.OZU, { note: m.intl.string(m.t['+Zg0lZ']) })
+                  (0, i.jsx)(o.OZU, { note: m.NW.string(m.t['+Zg0lZ']) })
               ]
           })
         : (0, i.jsx)(o.aVo, {
@@ -150,7 +150,7 @@ function b(n) {
                                   color: o.Ttl.BRAND,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/medium',
-                                      children: m.intl.string(m.t.RDE0SU)
+                                      children: m.NW.string(m.t.RDE0SU)
                                   })
                               })
                           ]
@@ -158,7 +158,7 @@ function b(n) {
                       l.id
                   );
               },
-              rowHeight: (n, e) => (n > 0 ? 0 : null != _[e] ? 52 : 0),
+              rowHeight: (n, e) => (n > 0 ? 0 : 52 * (null != _[e])),
               renderSection: () => null,
               className: E()(v.friendsList, v.contentPadding),
               fade: !0
@@ -168,8 +168,8 @@ function M(n) {
     let { clip: e, editMetadata: t, transitionState: r, onClose: u } = n,
         [C, A] = l.useState(''),
         [T, L] = l.useState(!1),
-        [D, h] = l.useState(null),
-        R = (0, a.Wu)([N.Z], () => N.Z.getFriendIDs()),
+        [N, h] = l.useState(null),
+        R = (0, a.Wu)([D.Z], () => D.Z.getFriendIDs()),
         f = (0, a.Wu)(
             [I.Z, P.default],
             () =>
@@ -184,7 +184,7 @@ function M(n) {
         G = (0, a.e7)([U.Z], () => U.Z.getGuildId()),
         { analyticsLocations: Z } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
     async function H(n) {
-        let i = null != n ? n : D;
+        let i = null != n ? n : N;
         if (null != i) {
             L(!0);
             try {
@@ -213,13 +213,13 @@ function M(n) {
                 className: E()(v.title, v.contentPadding),
                 variant: 'heading-lg/semibold',
                 color: 'interactive-active',
-                children: m.intl.string(m.t['6EcIlJ'])
+                children: m.NW.string(m.t['6EcIlJ'])
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-normal',
                 className: E()(v.subtitle, v.contentPadding),
-                children: m.intl.string(m.t.Ey7mOT)
+                children: m.NW.string(m.t.Ey7mOT)
             }),
             (0, i.jsx)(o.E1j, {
                 className: v.searchBar,
@@ -229,7 +229,7 @@ function M(n) {
                 onClear: function () {
                     A('');
                 },
-                placeholder: m.intl.string(m.t.CmSHY2)
+                placeholder: m.NW.string(m.t.CmSHY2)
             }),
             (0, i.jsx)('div', { className: E()(v.divider, v.topDivider) }),
             (0, i.jsx)(b, {
@@ -241,24 +241,24 @@ function M(n) {
             null != G &&
                 (0, i.jsx)(p, {
                     guildId: G,
-                    selectedChannelId: D,
+                    selectedChannelId: N,
                     onSelectChannelId: h
                 }),
             (0, i.jsxs)(o.mzw, {
                 children: [
                     (0, i.jsx)(o.zxk, {
-                        disabled: null == D,
+                        disabled: null == N,
                         submitting: T,
                         color: o.zxk.Colors.BRAND,
                         onClick: () => H(),
-                        children: m.intl.string(m.t.I8lglZ)
+                        children: m.NW.string(m.t.I8lglZ)
                     }),
                     (0, i.jsx)(o.zxk, {
                         submitting: T,
                         look: o.iLD.LINK,
                         onClick: u,
                         color: o.Ttl.PRIMARY,
-                        children: m.intl.string(m.t['13/7kZ'])
+                        children: m.NW.string(m.t['13/7kZ'])
                     })
                 ]
             })

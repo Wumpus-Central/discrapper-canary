@@ -1,8 +1,8 @@
 n.d(t, {
-    AZ: () => l,
-    Y9: () => i,
+    AZ: () => i,
+    Y9: () => r,
     bj: () => a
 });
-let i = '#83DDC5',
-    l = '#F47FFF',
+let r = '#83DDC5',
+    i = '#F47FFF',
     a = '#FFDE4D';

@@ -65,11 +65,11 @@ let g = new o.Z('BalanceCounter'),
             }
         ].sort((e, t) => e.delta - t.delta)
     },
-    N = {
+    b = {
         POSITIVE: f.POSITIVE[f.POSITIVE.length - 1],
         NEGATIVE: f.NEGATIVE[f.NEGATIVE.length - 1]
     };
-function x(e, t) {
+function N(e, t) {
     return e > t
         ? {
               jump: Math.ceil((2 * e) / t),
@@ -87,7 +87,7 @@ function x(e, t) {
         for (let r of f[e]) {
             let e = Math.abs(r.delta - n),
                 i = Math.abs(r.duration - t);
-            (r.tickConfig = x(e, i)), (t = r.duration), (n = r.delta);
+            (r.tickConfig = N(e, i)), (t = r.duration), (n = r.delta);
         }
     }
 })(),
@@ -96,11 +96,11 @@ function x(e, t) {
             MAX_ANIMATION_DURATION_MS: 3000,
             ANIMATION_THRESHOLDS: f
         });
-let b = (e, t, n, r) => {
+let x = (e, t, n, r) => {
         let i = Math.abs(r - n),
             s = f[t],
-            a = N[t];
-        if (i > a.delta) return x(i, 3000 - a.duration);
+            a = b[t];
+        if (i > a.delta) return N(i, 3000 - a.duration);
         for (let e of s) if (i <= e.delta) return e.tickConfig;
         return {
             jump: 1,
@@ -152,7 +152,7 @@ let b = (e, t, n, r) => {
                                   totalDelta: Math.abs(t - d.current),
                                   changeType: t > d.current ? 'POSITIVE' : 'NEGATIVE'
                               },
-                    { jump: i, duration: a } = b(n, r, t, s);
+                    { jump: i, duration: a } = x(n, r, t, s);
                 c.current = setTimeout(() => {
                     (c.current = null), s < t ? o(s + i) : s > t && o(s - i);
                 }, a);

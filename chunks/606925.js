@@ -1,39 +1,39 @@
-n.d(t, { Z: () => c });
-var l = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var i = n(442837),
-    r = n(231757),
+var l = n(442837),
+    i = n(231757),
     a = n(553795),
-    s = n(915863),
-    o = n(388032),
-    u = n(770662);
-function c(e) {
-    let { platform: t, color: n, look: c, onAction: d, Icon: m } = e;
-    if ((0, i.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let f =
-        null != m
-            ? (0, l.jsx)(m, { className: u.platformIcon })
-            : (0, l.jsx)('img', {
+    o = n(915863),
+    s = n(388032),
+    c = n(624042);
+function u(e) {
+    let { platform: t, color: n, look: u, onAction: d, Icon: f } = e;
+    if ((0, l.e7)([a.Z], () => a.Z.getAccounts().some((e) => e.type === t.type))) return null;
+    let p =
+        null != f
+            ? (0, r.jsx)(f, { className: c.platformIcon })
+            : (0, r.jsx)('img', {
                   alt: '',
-                  className: u.platformIcon,
+                  className: c.platformIcon,
                   src: t.icon.whiteSVG
               });
-    return (0, l.jsx)(
-        s.Z,
+    return (0, r.jsx)(
+        o.Z,
         {
             onClick: () => {
                 null == d || d(),
-                    (0, r.Z)({
+                    (0, i.Z)({
                         platformType: t.type,
                         location: 'Activity Action'
                     });
             },
             color: n,
-            look: c,
+            look: u,
             fullWidth: !0,
-            children: (0, l.jsxs)('div', {
-                className: u.flex,
-                children: [f, o.intl.format(o.t.XWSHTU, { platform: t.name })]
+            children: (0, r.jsxs)('div', {
+                className: c.flex,
+                children: [p, s.NW.format(s.t.XWSHTU, { platform: t.name })]
             })
         },
         'connect-platform-activity'

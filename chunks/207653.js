@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './af': '238447',
     './af.js': '238447',
     './ar': '504184',
@@ -246,19 +246,19 @@ var i = {
     './zh-tw': '685767',
     './zh-tw.js': '685767'
 };
-function r(e) {
-    return n(a(e));
+function i(e) {
+    return n(o(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function o(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 207653);
+    (i.resolve = o),
+    (e.exports = i),
+    (i.id = 207653);

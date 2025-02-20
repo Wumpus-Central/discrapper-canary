@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(723184),
-    a = n(820611),
-    s = n(877837);
-let o = function (e) {
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(723184),
+    o = n(820611),
+    a = n(877837);
+let s = function (e) {
     var t = e.color,
         n = e.onClick,
-        o = void 0 === n ? function () {} : n,
+        s = void 0 === n ? function () {} : n,
         l = e.onSwatchHover,
-        u = e.active,
-        c = (0, r.default)(
+        c = e.active,
+        u = (0, i.default)(
             {
                 default: {
                     color: {
@@ -24,7 +24,7 @@ let o = function (e) {
                     },
                     dot: {
                         absolute: '5px 5px 5px 5px',
-                        background: a.Qg(t),
+                        background: o.Qg(t),
                         borderRadius: '50%',
                         opacity: '0'
                     }
@@ -37,20 +37,20 @@ let o = function (e) {
                 transparent: { dot: { background: '#000' } }
             },
             {
-                active: u,
+                active: c,
                 'color-#FFFFFF': '#FFFFFF' === t,
                 transparent: 'transparent' === t
             }
         );
-    return i.createElement(
-        s.m4,
+    return r.createElement(
+        a.m4,
         {
-            style: c.color,
+            style: u.color,
             color: t,
-            onClick: o,
+            onClick: s,
             onHover: l,
             focusStyle: { boxShadow: '0 0 4px ' + t }
         },
-        i.createElement('div', { style: c.dot })
+        r.createElement('div', { style: u.dot })
     );
 };

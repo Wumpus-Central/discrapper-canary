@@ -1,88 +1,88 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var l = n(200651),
-    i = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    r = n(481060),
+    r = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     o = n(231239),
     c = n(881052),
     d = n(313201),
     u = n(888592),
     m = n(981631),
-    x = n(388032),
-    h = n(149982);
-let _ = (0, d.hQ)(),
-    N = (e) => {
-        let { email: t, setStep: n, onBack: s, school: d, setSchool: N } = e,
-            [v, g] = i.useState(null),
-            [E, I] = i.useState(!1),
-            f = async () => {
-                g(null), I(!0);
+    N = n(388032),
+    x = n(424579);
+let h = (0, d.hQ)(),
+    v = (e) => {
+        let { email: t, setStep: n, onBack: i, school: d, setSchool: v } = e,
+            [_, g] = r.useState(null),
+            [f, p] = r.useState(!1),
+            E = async () => {
+                g(null), p(!0);
                 try {
                     await o.Z.signup(t, d), n(u.tF.EMAIL_WAITLIST);
                 } catch (e) {
                     g(new c.Hx(e));
                 } finally {
-                    I(!1);
+                    p(!1);
                 }
             },
             S = async (e) => {
-                null != d && '' !== d && e.charCode === m.yXg.ENTER && (await f());
+                null != d && '' !== d && e.charCode === m.yXg.ENTER && (await E());
             };
         return (0, l.jsxs)('div', {
-            className: h.container,
+            className: x.container,
             children: [
-                (0, l.jsx)('div', { className: h.__invalid_topImage }),
-                (0, l.jsx)(r.X6q, {
-                    className: a()(h.centerText, h.header),
+                (0, l.jsx)('div', { className: x.__invalid_topImage }),
+                (0, l.jsx)(a.X6q, {
+                    className: s()(x.centerText, x.header),
                     variant: 'heading-xl/semibold',
-                    children: x.intl.string(x.t['2FNWBA'])
+                    children: N.NW.string(N.t['2FNWBA'])
                 }),
                 (0, l.jsx)('div', {
-                    className: h.descriptionWidth,
-                    children: (0, l.jsx)(r.Text, {
-                        className: h.centerText,
+                    className: x.descriptionWidth,
+                    children: (0, l.jsx)(a.Text, {
+                        className: x.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: x.intl.string(x.t['/4y6o6'])
+                        children: N.NW.string(N.t['/4y6o6'])
                     })
                 }),
-                (0, l.jsxs)(r.xJW, {
-                    className: h.formItem,
+                (0, l.jsxs)(a.xJW, {
+                    className: x.formItem,
                     children: [
-                        (0, l.jsx)(r.vwX, {
-                            id: _,
-                            children: x.intl.string(x.t['L+AfJi'])
+                        (0, l.jsx)(a.vwX, {
+                            id: h,
+                            children: N.NW.string(N.t['L+AfJi'])
                         }),
-                        (0, l.jsx)(r.oil, {
+                        (0, l.jsx)(a.oil, {
                             onKeyPress: S,
-                            placeholder: x.intl.string(x.t.Y1btJS),
+                            placeholder: N.NW.string(N.t.Y1btJS),
                             onChange: (e) => {
-                                N(e);
+                                v(e);
                             },
-                            error: null == v ? void 0 : v.getAnyErrorMessage(),
-                            'aria-labelledby': _
+                            error: null == _ ? void 0 : _.getAnyErrorMessage(),
+                            'aria-labelledby': h
                         })
                     ]
                 }),
                 (0, l.jsxs)('div', {
-                    className: h.footer,
+                    className: x.footer,
                     children: [
-                        (0, l.jsx)(r.zxk, {
-                            className: h.backButton,
-                            onClick: s,
-                            look: r.zxk.Looks.LINK,
-                            size: r.zxk.Sizes.NONE,
-                            color: r.zxk.Colors.PRIMARY,
-                            children: x.intl.string(x.t['13/7kZ'])
+                        (0, l.jsx)(a.zxk, {
+                            className: x.backButton,
+                            onClick: i,
+                            look: a.zxk.Looks.LINK,
+                            size: a.zxk.Sizes.NONE,
+                            color: a.zxk.Colors.PRIMARY,
+                            children: N.NW.string(N.t['13/7kZ'])
                         }),
-                        (0, l.jsx)(r.zxk, {
-                            onClick: f,
-                            size: r.zxk.Sizes.MEDIUM,
-                            color: r.zxk.Colors.BRAND,
-                            className: h.__invalid_submitButton,
-                            submitting: E,
-                            children: x.intl.string(x.t.PDsYAg)
+                        (0, l.jsx)(a.zxk, {
+                            onClick: E,
+                            size: a.zxk.Sizes.MEDIUM,
+                            color: a.zxk.Colors.BRAND,
+                            className: x.__invalid_submitButton,
+                            submitting: f,
+                            children: N.NW.string(N.t.PDsYAg)
                         })
                     ]
                 })

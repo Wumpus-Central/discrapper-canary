@@ -1,51 +1,51 @@
-var i;
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.astFormatter = t.RichTextNodeType = void 0), (t.formatToAst = o);
-let r = n(756880);
+var r;
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.astFormatter = t.RichTextNodeType = void 0), (t.formatToAst = s);
+let i = n(756880);
 !(function (e) {
     (e.Text = 'text'), (e.Strong = 'strong'), (e.Emphasis = 'em'), (e.Strikethrough = 's'), (e.Code = 'inlineCode'), (e.Link = 'link'), (e.Paragraph = 'paragraph');
-})(i || (t.RichTextNodeType = i = {}));
-let a = {
+})(r || (t.RichTextNodeType = r = {}));
+let o = {
     $b: (e) => ({
-        type: i.Strong,
+        type: r.Strong,
         content: e
     }),
     $i: (e) => ({
-        type: i.Emphasis,
+        type: r.Emphasis,
         content: e
     }),
     $del: (e) => ({
-        type: i.Strikethrough,
+        type: r.Strikethrough,
         content: e
     }),
     $code: (e) => ({
-        type: i.Code,
+        type: r.Code,
         content: e
     }),
     $link: (e, t, [n]) => ({
-        type: i.Link,
+        type: r.Link,
         target: n,
         content: e
     }),
     $p: (e) => ({
-        type: i.Paragraph,
+        type: r.Paragraph,
         content: e
     })
 };
-class s extends r.FormatBuilder {
+class a extends i.FormatBuilder {
     constructor() {
         super(...arguments), (this.result = []);
     }
     pushRichTextTag(e, t, n) {
-        if (!(e in a)) throw `${e} is not a known rich text formatting tag`;
-        let i = a[e](t, '', n);
-        Array.isArray(i) ? this.result.push(...i) : this.result.push(i);
+        if (!(e in o)) throw `${e} is not a known rich text formatting tag`;
+        let r = o[e](t, '', n);
+        Array.isArray(r) ? this.result.push(...r) : this.result.push(r);
     }
     pushLiteralText(e) {
         let t = this.result[this.result.length - 1];
-        null != t && t.type === i.Text
+        null != t && t.type === r.Text
             ? (t.content += e)
             : this.result.push({
-                  type: i.Text,
+                  type: r.Text,
                   content: e
               });
     }
@@ -56,17 +56,17 @@ class s extends r.FormatBuilder {
         return this.result;
     }
 }
-function o(e, t) {
+function s(e, t) {
     return 'string' == typeof e
         ? [
               {
-                  type: i.Text,
+                  type: r.Text,
                   content: e
               }
           ]
-        : this.bindFormatValues(s, e, t);
+        : this.bindFormatValues(a, e, t);
 }
 t.astFormatter = {
-    format: o,
-    builder: s
+    format: s,
+    builder: a
 };

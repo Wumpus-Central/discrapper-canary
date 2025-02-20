@@ -19,12 +19,12 @@ function f() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
         n = (0, s.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         g = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
-        { hideGuildOptions: f, hideGlobalOption: N } = (0, m.b)(),
-        x = n[0];
+        { hideGuildOptions: f, hideGlobalOption: b } = (0, m.b)(),
+        N = n[0];
     i.useEffect(() => {
-        (!N || !f) && (e === u.Th && e !== x && N && t(x), e !== u.Th && f && t(u.Th));
-    }, [e, t, N, f, x]);
-    let b = i.useMemo(() => {
+        (!b || !f) && (e === u.Th && e !== N && b && t(N), e !== u.Th && f && t(u.Th));
+    }, [e, t, b, f, N]);
+    let x = i.useMemo(() => {
             let e = f
                 ? []
                 : n
@@ -38,7 +38,7 @@ function f() {
                                 };
                       })
                       .filter(d.lm);
-            if (!N) {
+            if (!b) {
                 var t, r;
                 e.unshift(
                     ((t = (function (e) {
@@ -83,7 +83,7 @@ function f() {
                 );
             }
             return e;
-        }, [f, n, N, g]),
+        }, [f, n, b, g]),
         _ = i.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
@@ -112,7 +112,7 @@ function f() {
             t(e);
         },
         value: e,
-        options: b,
+        options: x,
         renderOptionPrefix: _
     });
 }

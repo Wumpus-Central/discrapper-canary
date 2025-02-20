@@ -1,26 +1,26 @@
-e.d(n, { Z: () => c }), e(47120);
-var l = e(200651);
-e(192379);
-var i = e(442837),
-    r = e(481060),
-    u = e(357156),
-    d = e(924301),
-    a = e(495279),
-    s = e(894017),
-    o = e(388032);
-function c(t) {
-    let { guildEventId: n, recurrenceId: e, guild: c, channel: E } = t,
-        g = null != e,
-        { canManageGuildEvent: v } = (0, u.XJ)(null != E ? E : c),
-        [h, _] = (0, i.Wu)([d.ZP], () => [d.ZP.isActive(n), d.ZP.getGuildScheduledEvent(n)]),
-        f = (0, s.Z)(e, null == _ ? void 0 : _.id),
-        Z = null != _ && v(_);
-    return g && (null == f ? void 0 : f.is_canceled) && Z && (!h || g)
-        ? (0, l.jsx)(r.sNh, {
-              id: o.intl.string(o.t.b8606O),
-              label: o.intl.string(o.t.b8606O),
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651);
+n(192379);
+var l = n(442837),
+    i = n(481060),
+    o = n(357156),
+    c = n(924301),
+    a = n(495279),
+    u = n(894017),
+    s = n(388032);
+function d(e) {
+    let { guildEventId: t, recurrenceId: n, guild: d, channel: g } = e,
+        f = null != n,
+        { canManageGuildEvent: b } = (0, o.XJ)(null != g ? g : d),
+        [p, v] = (0, l.Wu)([c.ZP], () => [c.ZP.isActive(t), c.ZP.getGuildScheduledEvent(t)]),
+        h = (0, u.Z)(n, null == v ? void 0 : v.id),
+        y = null != v && b(v);
+    return f && (null == h ? void 0 : h.is_canceled) && y && (!p || f)
+        ? (0, r.jsx)(i.sNh, {
+              id: s.NW.string(s.t.b8606O),
+              label: s.NW.string(s.t.b8606O),
               action: () => {
-                  null != e && null != f && (0, a.Z)(f, c.id, n, e);
+                  null != n && null != h && (0, a.Z)(h, d.id, t, n);
               }
           })
         : null;

@@ -1,9 +1,9 @@
 n.r(t);
-var i = n(540379),
-    r = {};
-for (var a in i)
-    'default' !== a &&
-        (r[a] = function (e) {
-            return i[e];
-        }.bind(0, a));
-n.d(t, r);
+var r = n(540379),
+    i = {};
+for (var o in r)
+    'default' !== o &&
+        (i[o] = function (e) {
+            return r[e];
+        }.bind(0, o));
+n.d(t, i);

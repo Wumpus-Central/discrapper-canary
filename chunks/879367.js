@@ -1,21 +1,21 @@
-e.d(a, { default: () => i });
+e.d(t, { default: () => i });
 var n = e(200651),
     s = e(192379),
     c = e(481060),
     o = e(388032),
-    r = e(66375);
-let i = function (t) {
-    let { onClose: a, onComplete: e, transitionState: i, webviewUrl: l } = t,
+    r = e(642941);
+let i = function (a) {
+    let { onClose: t, onComplete: e, transitionState: i, webviewUrl: l } = a,
         d = s.useCallback(() => {
-            a(), e();
-        }, [e, a]),
+            t(), e();
+        }, [e, t]),
         u = s.useCallback(
-            (t) => {
-                if ('' !== l && 'string' == typeof t.data)
+            (a) => {
+                if ('' !== l && 'string' == typeof a.data)
                     try {
-                        var a = JSON.parse(t.data);
-                        'AGE_CHECK_COMPLETE' === a.status && d();
-                    } catch (t) {}
+                        var t = JSON.parse(a.data);
+                        'AGE_CHECK_COMPLETE' === t.status && d();
+                    } catch (a) {}
             },
             [l, d]
         );
@@ -37,7 +37,7 @@ let i = function (t) {
                 children: [
                     (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
-                        children: o.intl.string(o.t.tYNaXF)
+                        children: o.NW.string(o.t.tYNaXF)
                     }),
                     (0, n.jsx)('iframe', {
                         id: 'frame',
@@ -48,9 +48,9 @@ let i = function (t) {
                     (0, n.jsx)(c.zxk, {
                         color: c.zxk.Colors.TRANSPARENT,
                         look: c.zxk.Looks.BLANK,
-                        onClick: a,
+                        onClick: t,
                         className: r.cancelButton,
-                        children: o.intl.string(o.t['4gTnU1'])
+                        children: o.NW.string(o.t['4gTnU1'])
                     })
                 ]
             })

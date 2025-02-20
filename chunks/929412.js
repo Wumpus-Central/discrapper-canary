@@ -1,10 +1,10 @@
-n.d(t, { _: () => r });
-var i = n(36056);
-function r(e, t) {
+n.d(t, { _: () => i });
+var r = n(36056);
+function i(e, t) {
     switch (t) {
-        case i.pz.BIGINT:
+        case r.pz.BIGINT:
             return e.toBigInt();
-        case i.pz.NUMBER:
+        case r.pz.NUMBER:
             return e.toNumber();
         default:
             return e.toString();

@@ -1,30 +1,30 @@
-s.r(r), s.d(r, { default: () => g });
+s.r(r), s.d(r, { default: () => N });
 var t = s(200651),
     o = s(192379),
-    i = s(120356),
-    n = s.n(i),
-    a = s(568611),
-    c = s(481060),
-    l = s(710845),
-    d = s(361207),
+    a = s(120356),
+    c = s.n(a),
+    i = s(568611),
+    n = s(481060),
+    d = s(710845),
+    l = s(361207),
     w = s(954824),
     b = s(981631),
     m = s(388032),
-    p = s(877815);
+    p = s(227831);
 let h = [
         {
             id: 'discord',
-            getName: () => m.intl.string(m.t.uON9Ul),
-            url: (0, d.t3)()
+            getName: () => m.NW.string(m.t.uON9Ul),
+            url: (0, l.t3)()
         },
         {
             id: 'chrome',
-            getName: () => m.intl.string(m.t['80Ut6e']),
+            getName: () => m.NW.string(m.t['80Ut6e']),
             url: 'https://www.google.com/chrome/browser/desktop/'
         },
         {
             id: 'firefox',
-            getName: () => m.intl.string(m.t.LVbA5e),
+            getName: () => m.NW.string(m.t.LVbA5e),
             url: 'https://www.mozilla.org/en-US/firefox/new/?scene=2'
         }
     ],
@@ -40,20 +40,20 @@ class u extends o.Component {
         return (
             (e =
                 null != o
-                    ? (0, t.jsx)(c.eee, {
+                    ? (0, t.jsx)(n.eee, {
                           className: p.btn,
                           href: o,
-                          children: m.intl.string(m.t['1WjMbG'])
+                          children: m.NW.string(m.t['1WjMbG'])
                       })
-                    : (0, t.jsx)(a.rU, {
+                    : (0, t.jsx)(i.rU, {
                           className: p.btn,
                           to: b.Z5c.APPS,
-                          children: m.intl.string(m.t['1WjMbG'])
+                          children: m.NW.string(m.t['1WjMbG'])
                       })),
             (0, t.jsxs)('li', {
                 className: p.browserItem,
                 children: [
-                    (0, t.jsx)('div', { className: n()(p.browserItemText, p.browser, p[_[r]]) }),
+                    (0, t.jsx)('div', { className: c()(p.browserItemText, p.browser, p[_[r]]) }),
                     (0, t.jsx)('div', {
                         className: p.browserItemText,
                         children: s()
@@ -67,7 +67,7 @@ class u extends o.Component {
 class x extends o.Component {
     componentDidMount() {
         w.Z.launch('discord://' + this.props.location.pathname, (e) => {
-            new l.Z('UnsupportedBrowser').log('discord://', e);
+            new d.Z('UnsupportedBrowser').log('discord://', e);
         });
     }
     render() {
@@ -77,13 +77,13 @@ class x extends o.Component {
             children: (0, t.jsxs)('div', {
                 className: p.wrap,
                 children: [
-                    (0, t.jsx)(c.H, {
+                    (0, t.jsx)(n.H, {
                         className: p.title,
-                        children: m.intl.string(m.t['3h+n+/'])
+                        children: m.NW.string(m.t['3h+n+/'])
                     }),
                     (0, t.jsx)('p', {
                         className: p.message,
-                        children: m.intl.string(m.t.yNDLDA)
+                        children: m.NW.string(m.t.yNDLDA)
                     }),
                     (0, t.jsx)('ul', {
                         className: p.browserList,
@@ -94,4 +94,4 @@ class x extends o.Component {
         });
     }
 }
-let g = x;
+let N = x;

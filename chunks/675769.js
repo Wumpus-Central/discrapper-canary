@@ -1,21 +1,21 @@
-var i = n(661233),
-    r = n(158698),
-    a = 0 / 0,
-    s = /^\s+|\s+$/g,
-    o = /^[-+]0x[0-9a-f]+$/i,
+var r = n(661233),
+    i = n(158698),
+    o = 0 / 0,
+    a = /^\s+|\s+$/g,
+    s = /^[-+]0x[0-9a-f]+$/i,
     l = /^0b[01]+$/i,
-    u = /^0o[0-7]+$/i,
-    c = parseInt;
+    c = /^0o[0-7]+$/i,
+    u = parseInt;
 function d(e) {
     if ('number' == typeof e) return e;
-    if (r(e)) return a;
-    if (i(e)) {
+    if (i(e)) return o;
+    if (r(e)) {
         var t = 'function' == typeof e.valueOf ? e.valueOf() : e;
-        e = i(t) ? t + '' : t;
+        e = r(t) ? t + '' : t;
     }
     if ('string' != typeof e) return 0 === e ? e : +e;
-    e = e.replace(s, '');
+    e = e.replace(a, '');
     var n = l.test(e);
-    return n || u.test(e) ? c(e.slice(2), n ? 2 : 8) : o.test(e) ? a : +e;
+    return n || c.test(e) ? u(e.slice(2), n ? 2 : 8) : s.test(e) ? o : +e;
 }
 e.exports = d;

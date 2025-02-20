@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(300284),
     h = n(680295),
     f = n(785717),
-    N = n(687158),
-    x = n(899007),
-    b = n(648052),
+    b = n(687158),
+    N = n(899007),
+    x = n(648052),
     _ = n(867176),
     E = n(537006),
     j = n(483424),
@@ -70,7 +70,7 @@ function z(e) {
 function Y(e) {
     let { currentUser: t, onClose: n, setPopoutRef: Y } = e,
         K = __OVERLAY__,
-        q = (0, N.ZP)(t.id),
+        q = (0, b.ZP)(t.id),
         { analyticsLocations: X } = (0, m.ZP)(u.Z.ACCOUNT_PROFILE_POPOUT),
         J = (0, f.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
@@ -113,7 +113,7 @@ function Y(e) {
                                     displayProfile: q,
                                     profileType: V.y0.BITE_SIZE
                                 }),
-                                (0, r.jsx)(x.Z, {
+                                (0, r.jsx)(N.Z, {
                                     user: t,
                                     displayProfile: q,
                                     profileType: V.y0.BITE_SIZE,
@@ -142,7 +142,7 @@ function Y(e) {
                                     nickname: Z.ZP.getName(null, null, t),
                                     onOpenProfile: K ? void 0 : eo,
                                     pronouns: null == q ? void 0 : q.pronouns,
-                                    tags: (0, r.jsx)(b.Z, {
+                                    tags: (0, r.jsx)(x.Z, {
                                         displayProfile: q,
                                         profileType: V.y0.BITE_SIZE,
                                         onClose: n

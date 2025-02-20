@@ -1,98 +1,98 @@
-n.d(t, { D: () => f }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(780384),
-    a = n(481060),
+n.d(t, { D: () => _ }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(780384),
+    l = n(481060),
     o = n(410030),
     c = n(607070),
     d = n(530618),
     u = n(74538),
     m = n(937615),
     g = n(230916),
-    h = n(798769),
-    x = n(474936),
-    _ = n(388032),
-    p = n(804247),
-    E = n(982404),
-    C = n(299156);
-function f(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: f, confettiCanvas: T, userWasChurned: N = !1, userDiscountOffer: S } = e,
-        I = (0, o.ZP)(),
-        b = (0, l.wj)(I) ? E : C,
-        v = s.useRef(null),
-        [j, A] = s.useState(!1),
-        O = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, S),
-        R = (0, u.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+    p = n(798769),
+    h = n(474936),
+    f = n(388032),
+    b = n(347709),
+    N = n(982404),
+    x = n(299156);
+function _(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: _, confettiCanvas: E, userWasChurned: j = !1, userDiscountOffer: C } = e,
+        O = (0, o.ZP)(),
+        v = (0, a.wj)(O) ? N : x,
+        S = i.useRef(null),
+        [T, I] = i.useState(!1),
+        y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, C),
+        A = (0, u.aS)(h.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        P = (0, m.T4)(R.amount, R.currency),
-        D = (0, r.e7)([c.Z], () => c.Z.useReducedMotion);
+        P = (0, m.T4)(A.amount, A.currency),
+        R = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
-        (s.useEffect(() => {
-            null != v.current && null != O && A(!0);
-        }, [v, j, O]),
-        null == S || null == O)
+        (i.useEffect(() => {
+            null != S.current && null != y && I(!0);
+        }, [S, T, y]),
+        null == C || null == y)
     )
         return null;
-    let y = _.intl.format(_.t.gPzMHR, {
-            numMonths: S.discount.user_usage_limit,
-            discountedPrice: O,
+    let D = f.NW.format(f.t.gPzMHR, {
+            numMonths: C.discount.user_usage_limit,
+            discountedPrice: y,
             regularPrice: P
         }),
-        Z = (0, i.jsx)('div', {
-            className: p.whatYouLoseButtonContainer,
-            children: (0, i.jsx)(a.zxk, {
-                color: a.zxk.Colors.BRAND,
-                onClick: f,
-                children: _.intl.string(_.t['/r8g/v'])
+        Z = (0, r.jsx)('div', {
+            className: b.whatYouLoseButtonContainer,
+            children: (0, r.jsx)(l.zxk, {
+                color: l.zxk.Colors.BRAND,
+                onClick: _,
+                children: f.NW.string(f.t['/r8g/v'])
             })
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, r.jsx)(p.Z, {
                 premiumType: n,
-                className: p.cancellationHeader,
-                onClose: f
+                className: b.cancellationHeader,
+                onClose: _
             }),
-            (0, i.jsx)('div', {
-                ref: v,
-                children: (0, i.jsx)(a.hzk, {
-                    className: p.body,
+            (0, r.jsx)('div', {
+                ref: S,
+                children: (0, r.jsx)(l.hzk, {
+                    className: b.body,
                     children:
-                        null != O
-                            ? (0, i.jsxs)(i.Fragment, {
+                        null != y
+                            ? (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, i.jsxs)('div', {
-                                          className: p.discountAppliedBody,
+                                      (0, r.jsxs)('div', {
+                                          className: b.discountAppliedBody,
                                           children: [
-                                              (0, i.jsx)('img', {
+                                              (0, r.jsx)('img', {
                                                   alt: '',
-                                                  src: b,
-                                                  className: p.nitroIcon
+                                                  src: v,
+                                                  className: b.nitroIcon
                                               }),
-                                              (0, i.jsx)(a.X6q, {
+                                              (0, r.jsx)(l.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: N ? _.intl.string(_.t.gOOPaG) : _.intl.string(_.t.PZSyRk)
+                                                  children: j ? f.NW.string(f.t.gOOPaG) : f.NW.string(f.t.PZSyRk)
                                               })
                                           ]
                                       }),
-                                      (0, i.jsx)('div', {
-                                          className: p.bodyString,
-                                          children: y
+                                      (0, r.jsx)('div', {
+                                          className: b.bodyString,
+                                          children: D
                                       }),
                                       Z
                                   ]
                               })
-                            : (0, i.jsx)(a.$jN, {})
+                            : (0, r.jsx)(l.$jN, {})
                 })
             }),
-            !D &&
-                j &&
-                (0, i.jsx)(d.Z, {
-                    confettiTarget: v.current,
-                    confettiCanvas: T,
+            !R &&
+                T &&
+                (0, r.jsx)(d.Z, {
+                    confettiTarget: S.current,
+                    confettiCanvas: E,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

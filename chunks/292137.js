@@ -1,7 +1,7 @@
-var i = n(714760);
+var r = n(714760);
 e.exports = function (e, t, n) {
     return n
-        ? i(
+        ? r(
               e.entries(),
               function (e) {
                   return t(e[1], e[0]);

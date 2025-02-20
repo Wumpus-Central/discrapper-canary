@@ -1,15 +1,15 @@
 n.d(t, {
-    G8: () => a,
-    O7: () => s,
-    nJ: () => r
+    G8: () => o,
+    O7: () => a,
+    nJ: () => i
 });
-var i = n(570140);
-function r() {
-    i.Z.dispatch({ type: 'APP_ICON_EDITOR_OPEN' });
+var r = n(570140);
+function i() {
+    r.Z.dispatch({ type: 'APP_ICON_EDITOR_OPEN' });
+}
+function o() {
+    r.Z.dispatch({ type: 'APP_ICON_EDITOR_CLOSE' });
 }
 function a() {
-    i.Z.dispatch({ type: 'APP_ICON_EDITOR_CLOSE' });
-}
-function s() {
-    i.Z.dispatch({ type: 'APP_ICON_EDITOR_RESET' });
+    r.Z.dispatch({ type: 'APP_ICON_EDITOR_RESET' });
 }

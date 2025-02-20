@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a }), n(47120);
-var i = n(836560);
-function r(e, t, n) {
+n.d(t, { Z: () => o }), n(47120);
+var r = n(836560);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,7 +13,7 @@ function r(e, t, n) {
         e
     );
 }
-class a {
+class o {
     on(e, t) {
         this.emitter.on(e, t);
     }
@@ -33,17 +33,17 @@ class a {
         this.emitter.removeAllListeners();
     }
     emit(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         this.emitter.emit(e, ...n);
     }
     emitUnsafe(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         this.emitter.emit(e, ...n);
     }
     listenerCount(e) {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        r(this, 'emitter', new i.EventEmitter());
+        i(this, 'emitter', new r.EventEmitter());
     }
 }

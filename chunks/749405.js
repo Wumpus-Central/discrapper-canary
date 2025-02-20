@@ -1,74 +1,74 @@
-n.d(t, { C: () => p });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(359110),
-    s = n(6025),
-    o = n(433355),
-    d = n(26373),
-    c = n(486622),
-    u = n(376191),
-    h = n(388032),
-    m = n(64284);
-function p(e) {
-    let { active: t, user: n, channel: p } = e,
-        g = (0, d.K)(),
-        _ = l.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(h.intl.string(h.t.EDYbS0), r.ToastType.FAILURE));
+n.d(t, { C: () => g });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(359110),
+    a = n(6025),
+    s = n(433355),
+    c = n(26373),
+    u = n(486622),
+    d = n(376191),
+    p = n(388032),
+    h = n(310037);
+function g(e) {
+    let { active: t, user: n, channel: g } = e,
+        f = (0, c.K)(),
+        m = i.useCallback(() => {
+            (0, l.showToast)((0, l.createToast)(p.NW.string(p.t.EDYbS0), l.ToastType.FAILURE));
         }, []),
-        f = l.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ);
+        b = i.useCallback(() => {
+            a.Z.closeChannelSidebar(s.uZ);
         }, []),
-        E = l.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(p.id);
-        }, [p.id, g]),
+        _ = i.useCallback(() => {
+            a.Z.closeChannelSidebar(s.uZ), f && (0, o.Kh)(g.id);
+        }, [g.id, f]),
         {
-            acceptMessageRequest: I,
-            rejectMessageRequest: C,
+            acceptMessageRequest: E,
+            rejectMessageRequest: O,
             isAcceptLoading: N,
             isRejectLoading: v,
-            isUserProfileLoading: T,
-            isOptimisticAccepted: S,
-            isOptimisticRejected: A
-        } = (0, c.m)({
+            isUserProfileLoading: y,
+            isOptimisticAccepted: I,
+            isOptimisticRejected: C
+        } = (0, u.m)({
             user: n,
-            onAcceptSuccess: E,
-            onRejectSuccess: f,
-            onError: _
+            onAcceptSuccess: _,
+            onRejectSuccess: b,
+            onError: m
         }),
-        Z = N || v || T || S || A;
-    return (0, i.jsxs)('div', {
-        className: m.container,
+        S = N || v || y || I || C;
+    return (0, r.jsxs)('div', {
+        className: h.container,
         children: [
-            (0, i.jsx)(u.Z, {
-                channel: p,
+            (0, r.jsx)(d.Z, {
+                channel: g,
                 otherUser: n,
                 active: t
             }),
-            (0, i.jsxs)('div', {
-                className: m.actions,
+            (0, r.jsxs)('div', {
+                className: h.actions,
                 children: [
-                    (0, i.jsx)(r.zxk, {
-                        className: m.button,
-                        color: r.Ttl.PRIMARY,
-                        size: r.zxk.Sizes.SMALL,
+                    (0, r.jsx)(l.zxk, {
+                        className: h.button,
+                        color: l.Ttl.PRIMARY,
+                        size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), C(p.id);
+                            e.stopPropagation(), O(g.id);
                         },
-                        disabled: Z,
-                        submitting: v || A,
-                        children: h.intl.string(h.t.B2nygY)
+                        disabled: S,
+                        submitting: v || C,
+                        children: p.NW.string(p.t.B2nygY)
                     }),
-                    (0, i.jsx)(r.zxk, {
-                        className: m.button,
-                        color: r.Ttl.BRAND,
-                        size: r.zxk.Sizes.SMALL,
+                    (0, r.jsx)(l.zxk, {
+                        className: h.button,
+                        color: l.Ttl.BRAND,
+                        size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), I(p.id);
+                            e.stopPropagation(), E(g.id);
                         },
-                        disabled: Z,
-                        submitting: N || T || S,
-                        children: h.intl.string(h.t.Kz8Pws)
+                        disabled: S,
+                        submitting: N || y || I,
+                        children: p.NW.string(p.t.Kz8Pws)
                     })
                 ]
             })

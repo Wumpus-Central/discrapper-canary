@@ -1,28 +1,28 @@
-t.d(n, { Z: () => o });
-var i = t(200651);
-t(192379);
-var l = t(73880),
-    s = t(137158),
-    a = t(388032),
-    r = t(42497);
-let o = function (e) {
-    let { formField: n, index: t, isDragEnabled: o, isDropHovered: c, onDrop: d, onEdit: u, onRemove: x, canRemove: m, actionsLocation: h, fieldStyle: f } = e,
-        { label: v, placeholder: g } = n;
-    return (0, i.jsx)(s.Z, {
-        field: n,
-        index: t,
-        isDragEnabled: o,
-        isDropHovered: c,
-        onDrop: d,
-        onEdit: u,
-        onRemove: x,
-        title: v,
-        canRemove: m,
-        actionsLocation: h,
-        fieldStyle: f,
-        children: (0, i.jsx)(l.Q8, {
-            className: r.fieldBackground,
-            placeholder: null != g ? g : a.intl.string(a.t['Sqn+Wl']),
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(73880),
+    o = n(137158),
+    c = n(388032),
+    s = n(327237);
+let a = function (e) {
+    let { formField: t, index: n, isDragEnabled: a, isDropHovered: l, onDrop: u, onEdit: d, onRemove: f, canRemove: p, actionsLocation: b, fieldStyle: j } = e,
+        { label: y, placeholder: m } = t;
+    return (0, r.jsx)(o.Z, {
+        field: t,
+        index: n,
+        isDragEnabled: a,
+        isDropHovered: l,
+        onDrop: u,
+        onEdit: d,
+        onRemove: f,
+        title: y,
+        canRemove: p,
+        actionsLocation: b,
+        fieldStyle: j,
+        children: (0, r.jsx)(i.Q8, {
+            className: s.fieldBackground,
+            placeholder: null != m ? m : c.NW.string(c.t['Sqn+Wl']),
             disabled: !0
         })
     });

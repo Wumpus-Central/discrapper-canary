@@ -5,8 +5,8 @@ function t(e) {
             literal: 'true false null undefined NaN Infinity',
             built_in: 'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent encodeURI encodeURIComponent escape unescape Object Function Boolean Error EvalError InternalError RangeError ReferenceError StopIteration SyntaxError TypeError URIError Number Math Date String RegExp Array Float32Array Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect Behavior bool color coordinate date double enumeration font geocircle georectangle geoshape int list matrix4x4 parent point quaternion real rect size string url variant vector2d vector3d vector4d Promise'
         },
-        i = '[a-zA-Z_][a-zA-Z0-9\\._]*',
-        r = {
+        r = '[a-zA-Z_][a-zA-Z0-9\\._]*',
+        i = {
             className: 'keyword',
             begin: '\\bproperty\\b',
             starts: {
@@ -15,7 +15,7 @@ function t(e) {
                 returnEnd: !0
             }
         },
-        a = {
+        o = {
             className: 'keyword',
             begin: '\\bsignal\\b',
             starts: {
@@ -24,22 +24,22 @@ function t(e) {
                 returnEnd: !0
             }
         },
-        s = {
+        a = {
             className: 'attribute',
             begin: '\\bid\\s*:',
             starts: {
                 className: 'string',
-                end: i,
+                end: r,
                 returnEnd: !1
             }
         },
-        o = {
-            begin: i + '\\s*:',
+        s = {
+            begin: r + '\\s*:',
             returnBegin: !0,
             contains: [
                 {
                     className: 'attribute',
-                    begin: i,
+                    begin: r,
                     end: '\\s*:',
                     excludeEnd: !0,
                     relevance: 0
@@ -48,11 +48,11 @@ function t(e) {
             relevance: 0
         },
         l = {
-            begin: t.concat(i, /\s*\{/),
+            begin: t.concat(r, /\s*\{/),
             end: /\{/,
             returnBegin: !0,
             relevance: 0,
-            contains: [e.inherit(e.TITLE_MODE, { begin: i })]
+            contains: [e.inherit(e.TITLE_MODE, { begin: r })]
         };
     return {
         name: 'QML',
@@ -102,8 +102,8 @@ function t(e) {
                 ],
                 relevance: 0
             },
-            a,
-            r,
+            o,
+            i,
             {
                 className: 'function',
                 beginKeywords: 'function',
@@ -126,8 +126,8 @@ function t(e) {
                 begin: '\\.' + e.IDENT_RE,
                 relevance: 0
             },
+            a,
             s,
-            o,
             l
         ],
         illegal: /#/

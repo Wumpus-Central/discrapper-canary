@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    l = n(10718);
+n.d(t, { Z: () => a }), n(26686), n(566702);
+var r = n(192379),
+    i = n(10718);
 function a(e, t) {
-    let n = i.useRef(null),
-        a = i.useCallback((e, t) => {
-            var i, l, a;
-            e.preventDefault(), e.clipboardData.setData('application/x-discord-interaction-data', JSON.stringify(t)), e.clipboardData.setData('text/plain', null !== (a = null === (l = n.current) || void 0 === l ? void 0 : null === (i = l.textContent) || void 0 === i ? void 0 : i.trim()) && void 0 !== a ? a : '');
+    let n = r.useRef(null),
+        a = r.useCallback((e, t) => {
+            var r, i, a;
+            e.preventDefault(), e.clipboardData.setData('application/x-discord-interaction-data', JSON.stringify(t)), e.clipboardData.setData('text/plain', null !== (a = null === (i = n.current) || void 0 === i ? void 0 : null === (r = i.textContent) || void 0 === r ? void 0 : r.trim()) && void 0 !== a ? a : '');
         }, []);
     return (
-        l.YZ(
+        i.YZ(
             {
                 channel: e,
                 type: 'channel'

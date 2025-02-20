@@ -1,86 +1,86 @@
-var r = i(147018),
-    n = i(161581),
-    a = i(197187),
-    s = i(261987),
-    o = 'WebAssembly',
-    u = n[o],
-    c = 7 !== Error('e', { cause: 7 }).cause,
-    h = function (t, e) {
-        var i = {};
-        (i[t] = s(t, e, c)),
+var r = a(147018),
+    n = a(161581),
+    o = a(197187),
+    _ = a(261987),
+    i = 'WebAssembly',
+    c = n[i],
+    s = 7 !== Error('e', { cause: 7 }).cause,
+    E = function (t, e) {
+        var a = {};
+        (a[t] = _(t, e, s)),
             r(
                 {
                     global: !0,
                     constructor: !0,
                     arity: 1,
-                    forced: c
+                    forced: s
                 },
-                i
+                a
             );
     },
     l = function (t, e) {
-        if (u && u[t]) {
-            var i = {};
-            (i[t] = s(o + '.' + t, e, c)),
+        if (c && c[t]) {
+            var a = {};
+            (a[t] = _(i + '.' + t, e, s)),
                 r(
                     {
-                        target: o,
+                        target: i,
                         stat: !0,
                         constructor: !0,
                         arity: 1,
-                        forced: c
+                        forced: s
                     },
-                    i
+                    a
                 );
         }
     };
-h('Error', function (t) {
+E('Error', function (t) {
     return function (e) {
-        return a(t, this, arguments);
+        return o(t, this, arguments);
     };
 }),
-    h('EvalError', function (t) {
+    E('EvalError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
-    h('RangeError', function (t) {
+    E('RangeError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
-    h('ReferenceError', function (t) {
+    E('ReferenceError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
-    h('SyntaxError', function (t) {
+    E('SyntaxError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
-    h('TypeError', function (t) {
+    E('TypeError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
-    h('URIError', function (t) {
+    E('URIError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
     l('CompileError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
     l('LinkError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     }),
     l('RuntimeError', function (t) {
         return function (e) {
-            return a(t, this, arguments);
+            return o(t, this, arguments);
         };
     });

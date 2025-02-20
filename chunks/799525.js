@@ -1,5 +1,5 @@
-n.d(t, { U: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { U: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_test_child_2_safety_xp_holdout',
     label: 'Holdout experiment',
@@ -12,7 +12,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
-    let { enabled: e } = i.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
+function i() {
+    let { enabled: e } = r.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
     return e;
 }

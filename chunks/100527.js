@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = (function (e) {
+n.d(t, { Z: () => i });
+var r = (function (e) {
     return (
         (e.POPOUT_WINDOW = 'popout window'),
         (e.OVERLAY = 'overlay'),
@@ -395,5 +395,5 @@ var i = (function (e) {
         (e.USER_PROFILE_CUSTOM_STATUS_BUBBLE = 'user profile custom status bubble'),
         e
     );
-})(i || {});
-let r = i;
+})(r || {});
+let i = r;

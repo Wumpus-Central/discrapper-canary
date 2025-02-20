@@ -1,65 +1,65 @@
-n.d(t, { Z: () => m });
-var i = n(200651),
-    l = n(192379),
-    a = n(481060),
-    r = n(139387),
-    s = n(726542),
-    o = n(434404),
-    d = n(486199),
-    c = n(13051),
-    u = n(73690);
-function m(e) {
-    let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: x, descriptionText: g, helpText: p, canNavigate: f } = e,
-        b = s.Z.get(h),
-        v = l.useCallback(
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(139387),
+    a = n(726542),
+    s = n(434404),
+    c = n(486199),
+    d = n(13051),
+    u = n(823479);
+function p(e) {
+    let { integrations: t, editedIntegration: n, guild: p, platformType: m, labelText: b, descriptionText: g, helpText: f, canNavigate: h } = e,
+        x = a.Z.get(m),
+        j = i.useCallback(
             async (e) => {
-                f() && (await o.Z.enableIntegration(m.id, e.type, e.id), r.Z.startEditingIntegration(e.id));
+                h() && (await s.Z.enableIntegration(p.id, e.type, e.id), o.Z.startEditingIntegration(e.id));
             },
-            [f, m.id]
+            [h, p.id]
         ),
-        _ = l.useCallback(
+        v = i.useCallback(
             (e) => {
-                f() && (e.id === (null == n ? void 0 : n.id) && r.Z.stopEditingIntegration(), o.Z.disableIntegration(m.id, e.id));
+                h() && (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(), s.Z.disableIntegration(p.id, e.id));
             },
-            [f, n, m.id]
+            [h, n, p.id]
         ),
-        N = l.useCallback(
+        N = i.useCallback(
             (e) => {
-                f() && (e === (null == n ? void 0 : n.id) ? r.Z.stopEditingIntegration() : r.Z.startEditingIntegration(e));
+                h() && (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
             },
-            [f, n]
+            [h, n]
         );
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(d.Z, {
-                name: x,
-                icon: null == b ? void 0 : b.icon.whiteSVG,
-                iconBackgroundColor: null == b ? void 0 : b.color,
+            (0, r.jsx)(c.Z, {
+                name: b,
+                icon: null == x ? void 0 : x.icon.whiteSVG,
+                iconBackgroundColor: null == x ? void 0 : x.color,
                 iconClassName: u.platformIcon,
                 description: g,
                 isHeader: !0
             }),
-            (0, i.jsx)(a.$i$, { className: u.headerDivider }),
+            (0, r.jsx)(l.$i$, { className: u.headerDivider }),
             t.map((e) =>
-                (0, i.jsx)(
-                    c.Z,
+                (0, r.jsx)(
+                    d.Z,
                     {
                         integration: e,
                         editedIntegration: n,
-                        guild: m,
+                        guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
-                        onEnable: v,
-                        onDisable: _,
+                        onEnable: j,
+                        onDisable: v,
                         onToggleExpand: () => N(e.id)
                     },
                     e.id
                 )
             ),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 className: u.helpText,
                 color: 'text-muted',
                 variant: 'text-sm/normal',
-                children: p
+                children: f
             })
         ]
     });

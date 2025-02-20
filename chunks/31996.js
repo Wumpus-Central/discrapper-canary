@@ -1,31 +1,31 @@
-n.d(t, { Q: () => u }), n(47120);
-var i = n(544891),
-    r = n(570140),
-    a = n(430824),
-    s = n(356264),
-    o = n(981631);
+n.d(t, { Q: () => c }), n(47120);
+var r = n(544891),
+    i = n(570140),
+    o = n(430824),
+    a = n(356264),
+    s = n(981631);
 let l = new Set();
-async function u(e) {
-    if (null == a.Z.getGuild(e) && null == s.Z.getGuildOrStatus(e) && !l.has(e)) {
-        r.Z.dispatch({
+async function c(e) {
+    if (null == o.Z.getGuild(e) && null == a.Z.getGuildOrStatus(e) && !l.has(e)) {
+        i.Z.dispatch({
             type: 'BASIC_GUILD_FETCH',
             guildId: e
         }),
             l.add(e);
         try {
             let t = (
-                await i.tn.get({
-                    url: o.ANM.GUILD_BASIC(e),
+                await r.tn.get({
+                    url: s.ANM.GUILD_BASIC(e),
                     rejectWithError: !0
                 })
             ).body;
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'BASIC_GUILD_FETCH_SUCCESS',
                 guildId: e,
                 guildInfo: t
             });
         } catch (t) {
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'BASIC_GUILD_FETCH_FAILURE',
                 guildId: e
             });

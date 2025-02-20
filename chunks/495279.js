@@ -1,17 +1,17 @@
-e.d(n, { Z: () => i });
-var l = e(482241);
-function i(t, n, e, i) {
-    let { scheduled_start_time: r, scheduled_end_time: u } = t;
-    return null == r && null == u
-        ? l.Z.deleteGuildEventException(n, e, i)
-        : l.Z.updateGuildEventException(
+n.d(t, { Z: () => l });
+var r = n(482241);
+function l(e, t, n, l) {
+    let { scheduled_start_time: i, scheduled_end_time: o } = e;
+    return null == i && null == o
+        ? r.Z.deleteGuildEventException(t, n, l)
+        : r.Z.updateGuildEventException(
               {
-                  scheduled_start_time: r,
-                  scheduled_end_time: u,
+                  scheduled_start_time: i,
+                  scheduled_end_time: o,
                   is_canceled: !1
               },
+              t,
               n,
-              e,
-              i
+              l
           );
 }

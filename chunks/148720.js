@@ -1,16 +1,16 @@
 n.d(t, { k: () => E });
-var i = n(668781),
-    r = n(728345),
-    a = n(835873),
-    s = n(973616),
-    o = n(592125),
+var r = n(668781),
+    i = n(728345),
+    o = n(835873),
+    a = n(973616),
+    s = n(592125),
     l = n(430824),
-    u = n(496675),
-    c = n(594174),
+    c = n(496675),
+    u = n(594174),
     d = n(979651),
     f = n(317381),
-    _ = n(638880),
-    p = n(782769),
+    p = n(638880),
+    _ = n(782769),
     h = n(527805),
     m = n(388032);
 function g(e) {
@@ -20,26 +20,26 @@ function g(e) {
             null == n || n();
             break;
         case h.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-            (0, a.w)();
+            (0, o.w)();
             break;
         case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-            i.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.UXoQTk),
+            r.Z.show({
+                title: m.NW.string(m.t.PtobXV),
+                body: m.NW.string(m.t.UXoQTk),
                 hideActionSheet: !1
             });
             break;
         case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
-            i.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.uGDCc3),
+            r.Z.show({
+                title: m.NW.string(m.t.PtobXV),
+                body: m.NW.string(m.t.uGDCc3),
                 hideActionSheet: !1
             });
             break;
         case h.Fw.ACTIVITY_AGE_GATED:
-            i.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t['4WuFRE']),
+            r.Z.show({
+                title: m.NW.string(m.t.PtobXV),
+                body: m.NW.string(m.t['4WuFRE']),
                 hideActionSheet: !1
             });
             break;
@@ -47,48 +47,48 @@ function g(e) {
         case h.Fw.CHANNEL_FULL:
         case h.Fw.NO_CHANNEL:
         case h.Fw.NO_USER:
-            i.Z.show({
-                title: m.intl.string(m.t.PtobXV),
-                body: m.intl.string(m.t.FUCQcn),
+            r.Z.show({
+                title: m.NW.string(m.t.PtobXV),
+                body: m.NW.string(m.t.FUCQcn),
                 hideActionSheet: !1
             });
     }
 }
 async function E(e) {
-    let { channelId: t, applicationId: n, launchId: i, inputApplication: a, analyticsLocations: m, launchingComponentId: E, sectionName: v, inviterUserId: y } = e,
-        I = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
-        T = a;
-    if (null == T) {
-        let e = await r.ZP.fetchApplication(n);
-        T = s.ZP.createFromServer(e);
+    let { channelId: t, applicationId: n, launchId: r, inputApplication: o, analyticsLocations: m, launchingComponentId: E, sectionName: v, inviterUserId: b } = e,
+        y = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
+        O = o;
+    if (null == O) {
+        let e = await i.ZP.fetchApplication(n);
+        O = a.ZP.createFromServer(e);
     }
-    if (null == I || null == T) return;
-    let b = c.default.getCurrentUser(),
-        S = o.Z.getChannel(t);
-    async function A() {
-        null != I &&
-            (await (0, _.Z)({
-                applicationId: I.applicationId,
+    if (null == y || null == O) return;
+    let S = u.default.getCurrentUser(),
+        I = s.Z.getChannel(t);
+    async function T() {
+        null != y &&
+            (await (0, p.Z)({
+                applicationId: y.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: m,
                 componentId: E,
                 sectionName: v,
-                inviterUserId: y
+                inviterUserId: b
             }));
     }
     g({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == b ? void 0 : b.id,
-            application: T,
+            userId: null == S ? void 0 : S.id,
+            application: O,
             channelId: t,
-            currentUser: b,
-            isActivitiesEnabledForCurrentPlatform: (0, p.a)(S),
-            ChannelStore: o.Z,
+            currentUser: S,
+            isActivitiesEnabledForCurrentPlatform: (0, _.a)(I),
+            ChannelStore: s.Z,
             VoiceStateStore: d.Z,
-            PermissionStore: u.Z,
+            PermissionStore: c.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: A
+        handleCanJoin: T
     });
 }

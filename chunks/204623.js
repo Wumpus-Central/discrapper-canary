@@ -1,23 +1,23 @@
-n.d(t, { Z: () => S }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(525654),
-    s = n.n(a),
-    o = n(765053),
+n.d(t, { Z: () => I }), n(301563), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(525654),
+    a = n.n(o),
+    s = n(765053),
     l = n(442837),
-    u = n(336317),
-    c = n(481060),
+    c = n(336317),
+    u = n(481060),
     d = n(596454),
     f = n(406128),
-    _ = n(451478),
-    p = n(176354),
+    p = n(451478),
+    _ = n(176354),
     h = n(63063),
     m = n(358085),
     g = n(998502),
     E = n(151851),
     v = n(981631),
-    y = n(388032);
-function I(e, t, n) {
+    b = n(388032);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function T() {
+function O() {
     let e = window.require('electron').remote.getCurrentWindow();
     (g.ZP.minimize = () => e.minimize()),
         (g.ZP.maximize = () => {
@@ -38,41 +38,41 @@ function T() {
         }),
         (g.ZP.close = () => e.close());
 }
-let b = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
-class S extends r.PureComponent {
+let S = l.ZP.connectStores([p.Z], () => ({ focused: p.Z.isFocused() }))(E.Z);
+class I extends i.PureComponent {
     getPlatform() {
         var e;
-        let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
+        let t = null === (e = a().os) || void 0 === e ? void 0 : e.family;
         return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX;
     }
     componentDidMount() {
-        T();
+        O();
     }
     render() {
-        let e = (0, i.jsx)('div', {
-                children: (0, i.jsxs)('p', {
+        let e = (0, r.jsx)('div', {
+                children: (0, r.jsxs)('p', {
                     children: [
-                        y.intl.string(y.t['4tRjHB']),
+                        b.NW.string(b.t['4tRjHB']),
                         ' ',
-                        (0, i.jsx)(d.Z, {
-                            src: p.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
+                        (0, r.jsx)(d.Z, {
+                            src: _.ZP.getURL(c.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
                         })
                     ]
                 })
             }),
-            t = (0, i.jsx)(c.zxk, {
-                size: c.PhG.LARGE,
+            t = (0, r.jsx)(u.zxk, {
+                size: u.PhG.LARGE,
                 onClick: this.handleDownload,
-                children: y.intl.string(y.t['1WjMbG'])
+                children: b.NW.string(b.t['1WjMbG'])
             });
-        return (0, i.jsxs)(r.Fragment, {
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(o.ql, { children: (0, i.jsx)('html', { className: (0, c.QeD)(v.BRd.DARK) }) }),
-                (0, i.jsx)(b, { type: this.getPlatform() }),
-                (0, i.jsx)(f.Z, {
-                    title: y.intl.string(y.t['3h+n+/']),
+                (0, r.jsx)(s.ql, { children: (0, r.jsx)('html', { className: (0, u.QeD)(v.BRd.DARK) }) }),
+                (0, r.jsx)(S, { type: this.getPlatform() }),
+                (0, r.jsx)(f.Z, {
+                    title: b.NW.string(b.t['3h+n+/']),
                     note: e,
                     action: t
                 })
@@ -81,7 +81,7 @@ class S extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'handleDownload', () => {
+            y(this, 'handleDownload', () => {
                 window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? h.Z.getArticleURL(v.BhN.CORRUPT_INSTALLATION) : v.EYA.DOWNLOAD);
             });
     }

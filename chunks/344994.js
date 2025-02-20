@@ -1,9 +1,9 @@
 n.d(t, { i: () => E });
-var i = n(717029),
-    r = n(846042),
-    a = n(894149);
-function s(e) {
-    return (s =
+var r = n(717029),
+    i = n(846042),
+    o = n(894149);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -12,19 +12,19 @@ function s(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function o(e, t) {
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function u(e, t, n) {
+function c(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
-function c(e, t) {
+function u(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -46,14 +46,14 @@ function f(e) {
     var t = h();
     return function () {
         var n,
-            i = m(e);
-        return (n = t ? Reflect.construct(i, arguments, m(this).constructor) : i.apply(this, arguments)), _(this, n);
+            r = m(e);
+        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), p(this, n);
     };
 }
-function _(e, t) {
-    return t && ('object' === s(t) || 'function' == typeof t) ? t : p(e);
+function p(e, t) {
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : _(e);
 }
-function p(e) {
+function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
@@ -87,30 +87,30 @@ function g(e, t, n) {
     );
 }
 var E = (function (e) {
-    c(n, e);
+    u(n, e);
     var t = f(n);
     function n() {
         var e;
-        o(this, n);
-        for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
-        return g(p((e = t.call.apply(t, [this].concat(r)))), 'priority', 90), g(p(e), 'incompatibleTokens', ['y', 'Y', 'u', 'q', 'Q', 'M', 'L', 'w', 'd', 'D', 'E', 'e', 'c', 't', 'T']), e;
+        s(this, n);
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        return g(_((e = t.call.apply(t, [this].concat(i)))), 'priority', 90), g(_(e), 'incompatibleTokens', ['y', 'Y', 'u', 'q', 'Q', 'M', 'L', 'w', 'd', 'D', 'E', 'e', 'c', 't', 'T']), e;
     }
     return (
-        u(n, [
+        c(n, [
             {
                 key: 'parse',
                 value: function (e, t, n) {
-                    var i = function (e) {
+                    var r = function (e) {
                         return 0 === e ? 7 : e;
                     };
                     switch (t) {
                         case 'i':
                         case 'ii':
-                            return (0, r.ZL)(t.length, e);
+                            return (0, i.ZL)(t.length, e);
                         case 'io':
                             return n.ordinalNumber(e, { unit: 'day' });
                         case 'iii':
-                            return (0, r.jg)(
+                            return (0, i.jg)(
                                 n.day(e, {
                                     width: 'abbreviated',
                                     context: 'formatting'
@@ -123,18 +123,18 @@ var E = (function (e) {
                                         width: 'narrow',
                                         context: 'formatting'
                                     }),
-                                i
+                                r
                             );
                         case 'iiiii':
-                            return (0, r.jg)(
+                            return (0, i.jg)(
                                 n.day(e, {
                                     width: 'narrow',
                                     context: 'formatting'
                                 }),
-                                i
+                                r
                             );
                         case 'iiiiii':
-                            return (0, r.jg)(
+                            return (0, i.jg)(
                                 n.day(e, {
                                     width: 'short',
                                     context: 'formatting'
@@ -143,10 +143,10 @@ var E = (function (e) {
                                         width: 'narrow',
                                         context: 'formatting'
                                     }),
-                                i
+                                r
                             );
                         default:
-                            return (0, r.jg)(
+                            return (0, i.jg)(
                                 n.day(e, {
                                     width: 'wide',
                                     context: 'formatting'
@@ -163,7 +163,7 @@ var E = (function (e) {
                                         width: 'narrow',
                                         context: 'formatting'
                                     }),
-                                i
+                                r
                             );
                     }
                 }
@@ -177,10 +177,10 @@ var E = (function (e) {
             {
                 key: 'set',
                 value: function (e, t, n) {
-                    return (e = (0, a.Z)(e, n)).setUTCHours(0, 0, 0, 0), e;
+                    return (e = (0, o.Z)(e, n)).setUTCHours(0, 0, 0, 0), e;
                 }
             }
         ]),
         n
     );
-})(i._);
+})(r._);

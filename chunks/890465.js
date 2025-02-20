@@ -1,5 +1,5 @@
-n.d(t, { V: () => i });
-class i {
+n.d(t, { V: () => r });
+class r {
     call() {
         try {
             this.task && this.task();

@@ -1,10 +1,10 @@
-n.d(t, {
+a.d(t, {
     Ui: () => o,
     p$: () => c
 });
-var a = n(818083),
-    i = n(981631);
-let r = (0, a.B)({
+var n = a(818083),
+    r = a(981631);
+let i = (0, n.B)({
     kind: 'guild',
     id: '2023-03_guild_media_channel',
     label: 'Media Channel',
@@ -19,16 +19,16 @@ let r = (0, a.B)({
 });
 function o(e) {
     var t;
-    let { enabled: n } = r.useExperiment(
+    let { enabled: a } = i.useExperiment(
         {
-            guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.lds,
+            guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : r.lds,
             location: '96e84c_1'
         },
         { autoTrackExposure: !0 }
     );
-    return (null == e ? void 0 : e.id) != null && n;
+    return (null == e ? void 0 : e.id) != null && a;
 }
-let l = (0, a.B)({
+let l = (0, n.B)({
     kind: 'user',
     id: '2023-04_guild_media_channel_post_preview_embed_users',
     label: 'Guild Role Subscription Users',

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var r = n(174522);
-function a(e) {
+var i = n(767701);
+function o(e) {
     let { children: t } = e;
-    return (0, i.jsxs)('span', {
-        className: r.nowrap,
+    return (0, r.jsxs)('span', {
+        className: i.nowrap,
         children: [t, '\u2060']
     });
 }

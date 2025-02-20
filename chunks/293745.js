@@ -1,10 +1,10 @@
-let i = n(52878),
-    r = n(172959),
-    a = n(393808),
-    s = n(725616),
-    o = n(690217),
+let r = n(52878),
+    i = n(172959),
+    o = n(393808),
+    a = n(725616),
+    s = n(690217),
     l = n(689478),
-    u = (e, t, n, u) => {
+    c = (e, t, n, c) => {
         switch (t) {
             case '===':
                 return 'object' == typeof e && (e = e.version), 'object' == typeof n && (n = n.version), e === n;
@@ -13,19 +13,19 @@ let i = n(52878),
             case '':
             case '=':
             case '==':
-                return i(e, n, u);
+                return r(e, n, c);
             case '!=':
-                return r(e, n, u);
+                return i(e, n, c);
             case '>':
-                return a(e, n, u);
+                return o(e, n, c);
             case '>=':
-                return s(e, n, u);
+                return a(e, n, c);
             case '<':
-                return o(e, n, u);
+                return s(e, n, c);
             case '<=':
-                return l(e, n, u);
+                return l(e, n, c);
             default:
                 throw TypeError(`Invalid operator: ${t}`);
         }
     };
-e.exports = u;
+e.exports = c;

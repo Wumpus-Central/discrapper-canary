@@ -1,29 +1,29 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    l = n(442837),
-    a = n(499254),
-    r = n(213459),
-    s = n(592125);
-function o(e) {
-    let { isProfileFetching: t, wasProfileFetching: n, applicationId: o, channelId: c, commands: d } = e;
-    i.useEffect(() => {
-        !t && n && null == o && (0, a.Tv)(c);
-    }, [t, n, o, c]),
-        i.useEffect(() => {
-            (0, a.Hm)(c);
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(442837),
+    l = n(499254),
+    o = n(213459),
+    a = n(592125);
+function s(e) {
+    let { isProfileFetching: t, wasProfileFetching: n, applicationId: s, channelId: c, commands: u } = e;
+    r.useEffect(() => {
+        !t && n && null == s && (0, l.Tv)(c);
+    }, [t, n, s, c]),
+        r.useEffect(() => {
+            (0, l.Hm)(c);
         }, [c]);
-    let u = (0, l.e7)([r.ZP], () => {
+    let d = (0, i.e7)([o.ZP], () => {
             var e, t;
-            return null !== (t = null === (e = r.ZP.getApplicationState(o)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
+            return null !== (t = null === (e = o.ZP.getApplicationState(s)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
         }),
-        h = (0, l.e7)([r.ZP, s.Z], () => {
+        p = (0, i.e7)([o.ZP, a.Z], () => {
             var e, t;
-            let n = s.Z.getChannel(c);
+            let n = a.Z.getChannel(c);
             return (
                 null !==
                     (t =
                         null ===
-                            (e = r.ZP.getContextState(
+                            (e = o.ZP.getContextState(
                                 null != n
                                     ? {
                                           channel: n,
@@ -37,18 +37,18 @@ function o(e) {
                 t
             );
         }),
-        p = i.useRef(!1),
-        m = i.useRef(!1);
-    i.useEffect(() => {
-        (p.current = !1), (m.current = !1);
+        h = r.useRef(!1),
+        f = r.useRef(!1);
+    r.useEffect(() => {
+        (h.current = !1), (f.current = !1);
     }, [c]),
-        i.useEffect(() => {
-            u && (p.current = !0);
-        }, [u]),
-        i.useEffect(() => {
-            h && (m.current = !0);
-        }, [h]),
-        i.useEffect(() => {
-            !u && !h && p.current && m.current && 0 === d.length && (0, a.Tv)(c);
-        }, [u, h, d, c]);
+        r.useEffect(() => {
+            d && (h.current = !0);
+        }, [d]),
+        r.useEffect(() => {
+            p && (f.current = !0);
+        }, [p]),
+        r.useEffect(() => {
+            !d && !p && h.current && f.current && 0 === u.length && (0, l.Tv)(c);
+        }, [d, p, u, c]);
 }

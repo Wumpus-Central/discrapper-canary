@@ -1,29 +1,29 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(927316);
-function o(e) {
-    let { children: t, className: n, flashKey: a } = e,
-        [o, c] = l.useState(!1),
-        d = l.useRef(null);
+n.d(t, { Z: () => s }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(769916);
+function s(e) {
+    let { children: t, className: n, flashKey: l } = e,
+        [s, c] = i.useState(!1),
+        u = i.useRef(null);
     return (
-        l.useEffect(
+        i.useEffect(
             () => (
                 c(!0),
-                (d.current = window.setTimeout(() => {
+                (u.current = window.setTimeout(() => {
                     c(!1);
                 }, 2000)),
                 () => {
-                    null != d.current && clearTimeout(d.current);
+                    null != u.current && clearTimeout(u.current);
                 }
             ),
-            [a]
+            [l]
         ),
-        (0, i.jsx)('div', {
-            'data-flash': o,
-            className: r()(s.flash, n),
+        (0, r.jsx)('div', {
+            'data-flash': s,
+            className: o()(a.flash, n),
             children: t
         })
     );

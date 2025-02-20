@@ -1,6 +1,6 @@
-n.r(t), n.d(t, { openMFAModal: () => a }), n(51350);
-var r = n(658550),
-    i = n(48550);
-function a(e, t, a) {
-    (e.methods = e.methods.filter((e) => Object.hasOwn(i.P, e.type))), n(124860).YR(e, (e) => (0, r.P0)(e, t), a);
+s.r(e), s.d(e, { openMFAModal: () => r }), s(51350);
+var n = s(658550),
+    o = s(48550);
+function r(t, e, r) {
+    (t.methods = t.methods.filter((t) => Object.hasOwn(o.P, t.type))), s(124860).YR(t, (t) => (0, n.P0)(t, e), r);
 }

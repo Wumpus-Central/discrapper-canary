@@ -13,12 +13,12 @@ function t(e) {
             ],
             keywords: 'true false null this is new super'
         },
-        i = {
+        r = {
             className: 'number',
             relevance: 0,
             variants: [{ match: /\b[0-9][0-9_]*(\.[0-9][0-9_]*)?([eE][+-]?[0-9][0-9_]*)?\b/ }, { match: /\b0[xX][0-9A-Fa-f][0-9A-Fa-f_]*\b/ }]
         },
-        r = {
+        i = {
             className: 'string',
             variants: [
                 {
@@ -63,18 +63,18 @@ function t(e) {
                 }
             ]
         };
-    n.contains = [i, r];
-    let a = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
-        s = a.map((e) => `${e}?`);
+    n.contains = [r, i];
+    let o = ['Comparable', 'DateTime', 'Duration', 'Function', 'Iterable', 'Iterator', 'List', 'Map', 'Match', 'Object', 'Pattern', 'RegExp', 'Set', 'Stopwatch', 'String', 'StringBuffer', 'StringSink', 'Symbol', 'Type', 'Uri', 'bool', 'double', 'int', 'num', 'Element', 'ElementList'],
+        a = o.map((e) => `${e}?`);
     return {
         name: 'Dart',
         keywords: {
             keyword: ['abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch', 'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do', 'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external', 'factory', 'false', 'final', 'finally', 'for', 'Function', 'get', 'hide', 'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library', 'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow', 'return', 'sealed', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this', 'throw', 'true', 'try', 'typedef', 'var', 'void', 'when', 'while', 'with', 'yield'],
-            built_in: a.concat(s).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
+            built_in: o.concat(a).concat(['Never', 'Null', 'dynamic', 'print', 'document', 'querySelector', 'querySelectorAll', 'window']),
             $pattern: /[A-Za-z][A-Za-z0-9_]*\??/
         },
         contains: [
-            r,
+            i,
             e.COMMENT(/\/\*\*(?!\/)/, /\*\//, {
                 subLanguage: 'markdown',
                 relevance: 0
@@ -98,7 +98,7 @@ function t(e) {
                 excludeEnd: !0,
                 contains: [{ beginKeywords: 'extends implements' }, e.UNDERSCORE_TITLE_MODE]
             },
-            i,
+            r,
             {
                 className: 'meta',
                 begin: '@[A-Za-z]+'

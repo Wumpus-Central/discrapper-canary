@@ -1,28 +1,28 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(921944),
-    a = n(388032),
-    s = n(18918);
-function o(e) {
+var i = n(481060),
+    l = n(921944),
+    o = n(388032),
+    a = n(376493);
+function s(e) {
     let { markAsDismissed: t } = e;
-    return (0, i.jsxs)('div', {
-        className: s.container,
+    return (0, r.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, i.jsx)('div', { className: s.pointer }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)('div', { className: a.pointer }),
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
-                className: s.content,
-                children: a.intl.string(a.t.rdzeVF)
+                className: a.content,
+                children: o.NW.string(o.t.rdzeVF)
             }),
-            (0, i.jsx)(l.zxk, {
-                color: l.zxk.Colors.BRAND_INVERTED,
+            (0, r.jsx)(i.zxk, {
+                color: i.zxk.Colors.BRAND_INVERTED,
                 fullWidth: !0,
                 onClick: () => {
-                    t(r.L.AUTO);
+                    t(l.L.AUTO);
                 },
-                children: a.intl.string(a.t['NX+WJC'])
+                children: o.NW.string(o.t['NX+WJC'])
             })
         ]
     });

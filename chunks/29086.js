@@ -1,23 +1,23 @@
-n.d(t, { Y: () => s });
-var i = n(192379),
-    l = n(726115),
-    r = n(859921),
-    a = n(128449);
-function s() {
-    let e = r.Z.useField('selectedTab'),
-        t = i.useMemo(
+n.d(t, { Y: () => a });
+var r = n(192379),
+    i = n(726115),
+    l = n(859921),
+    o = n(128449);
+function a() {
+    let e = l.Z.useField('selectedTab'),
+        t = r.useMemo(
             () =>
-                [a.vf.FEATURED, a.vf.GAMING, a.vf.MUSIC, a.vf.ENTERTAINMENT, a.vf.TECH, a.vf.EDUCATION, a.vf.HUBS].map((e) => ({
+                [o.vf.FEATURED, o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS].map((e) => ({
                     id: e,
-                    label: (0, l.vb)(e)
+                    label: (0, i.vb)(e)
                 })),
             []
         ),
-        n = i.useCallback((e) => {
-            r.Z.setState({ selectedTab: e });
+        n = r.useCallback((e) => {
+            l.Z.setState({ selectedTab: e });
         }, []);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             (null != e && t.some((t) => t.id === e)) || n(t[0].id);
         }, [e, t, n]),
         {

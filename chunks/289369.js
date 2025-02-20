@@ -1,10 +1,10 @@
 function t(e) {
     let t = '[ \\t\\f]*',
         n = t + '[:=]' + t,
-        i = '[ \\t\\f]+',
-        r = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
-        a = {
-            end: '(' + n + '|' + i + ')',
+        r = '[ \\t\\f]+',
+        i = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
+        o = {
+            end: '(' + n + '|' + r + ')',
             relevance: 0,
             starts: {
                 className: 'string',
@@ -22,19 +22,19 @@ function t(e) {
             e.COMMENT('^\\s*[!#]', '$'),
             {
                 returnBegin: !0,
-                variants: [{ begin: r + n }, { begin: r + i }],
+                variants: [{ begin: i + n }, { begin: i + r }],
                 contains: [
                     {
                         className: 'attr',
-                        begin: r,
+                        begin: i,
                         endsParent: !0
                     }
                 ],
-                starts: a
+                starts: o
             },
             {
                 className: 'attr',
-                begin: r + t + '$'
+                begin: i + t + '$'
             }
         ]
     };

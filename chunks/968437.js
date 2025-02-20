@@ -1,35 +1,35 @@
 n.d(t, {
-    WD: () => u,
+    WD: () => c,
     nt: () => l
 });
-var i = n(404759),
-    r = n.n(i);
+var r = n(404759),
+    i = n.n(r);
 n(913527);
-var a = n(70956),
-    s = n(124368),
-    o = n(388032);
+var o = n(70956),
+    a = n(124368),
+    s = n(388032);
 function l() {
     return [
         {
-            label: o.intl.string(o.t.cs8A1d),
-            value: a.Z.Minutes.HOUR
+            label: s.NW.string(s.t.cs8A1d),
+            value: o.Z.Minutes.HOUR
         },
         {
-            label: o.intl.string(o.t.zFKbrK),
-            value: a.Z.Minutes.DAY
+            label: s.NW.string(s.t.zFKbrK),
+            value: o.Z.Minutes.DAY
         },
         {
-            label: o.intl.string(o.t.TmPIZW),
-            value: 3 * a.Z.Minutes.DAY
+            label: s.NW.string(s.t.TmPIZW),
+            value: 3 * o.Z.Minutes.DAY
         },
         {
-            label: o.intl.string(o.t['/7i2en']),
-            value: a.Z.Minutes.WEEK
+            label: s.NW.string(s.t['/7i2en']),
+            value: o.Z.Minutes.WEEK
         }
     ];
 }
-function u(e, t) {
+function c(e, t) {
     var n;
-    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : s.AX;
+    return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.AX;
 }
-a.Z.Minutes.HOUR, a.Z.Minutes.DAY, a.Z.Minutes.DAY, a.Z.Minutes.WEEK, r()(() => l().map((e) => e.value));
+o.Z.Minutes.HOUR, o.Z.Minutes.DAY, o.Z.Minutes.DAY, o.Z.Minutes.WEEK, i()(() => l().map((e) => e.value));

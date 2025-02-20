@@ -1,25 +1,25 @@
-c.d(e, { Z: () => N }), c(47120);
+c.d(e, { Z: () => O }), c(47120);
 var d = c(200651),
     a = c(192379),
     s = c(481060),
     n = c(835473),
     o = c(626135),
     f = c(709054),
-    i = c(814059),
-    p = c(873128),
+    p = c(814059),
+    i = c(873128),
     r = c(428268),
     b = c(114201),
     u = c(154658),
     l = c(370611),
     m = c(981631),
     g = c(701488),
-    h = c(231338),
-    j = c(388032),
-    _ = c(401162);
+    j = c(231338),
+    h = c(388032),
+    _ = c(989662);
 function v(t) {
     let { children: e } = t;
     return (0, d.jsx)(s.f6W, {
-        theme: h.BR.DARK,
+        theme: j.BR.DARK,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, d.jsx)('div', {
@@ -30,9 +30,9 @@ function v(t) {
 }
 function x(t) {
     let { leaderboard: e, application: c } = t,
-        n = a.useMemo(() => (0, i.n)(f.default.extractTimestamp(e.interval_end)), [e]),
+        n = a.useMemo(() => (0, p.n)(f.default.extractTimestamp(e.interval_end)), [e]),
         o = c.getIconURL(g.Si.LARGE),
-        p =
+        i =
             null == o
                 ? null
                 : (0, d.jsx)('img', {
@@ -44,7 +44,7 @@ function x(t) {
     return (0, d.jsxs)('div', {
         className: _.header,
         children: [
-            p,
+            i,
             (0, d.jsx)(s.LZC, {
                 size: 8,
                 horizontal: !0
@@ -52,7 +52,7 @@ function x(t) {
             (0, d.jsx)(s.X6q, {
                 variant: 'text-xs/normal',
                 className: _.leaderboardTitle,
-                children: j.intl.format(j.t['MlT4+P'], {
+                children: h.NW.format(h.t['MlT4+P'], {
                     leaderboardName: c.name,
                     timeLeft: n,
                     leaderboardNameHook: (t, e) =>
@@ -74,31 +74,31 @@ function x(t) {
         ]
     });
 }
-let N = (t) => {
+let O = (t) => {
     var e;
-    let { guildId: c, leaderboardId: f, previewMode: i = !1, source: b, trackRankingItemInteraction: g } = t,
-        [h, N] = a.useState(i),
-        Z = a.useRef(null),
-        T = (0, p.Z)({
+    let { guildId: c, leaderboardId: f, previewMode: p = !1, source: b, trackRankingItemInteraction: g } = t,
+        [j, O] = a.useState(p),
+        y = a.useRef(null),
+        N = (0, i.Z)({
             guildId: c,
             leaderboardId: f,
             intervalOffset: 0
         }),
-        E = (0, p.Z)({
+        S = (0, i.Z)({
             guildId: c,
             leaderboardId: f,
             intervalOffset: -1
         });
-    (0, s.Tbt)(Z),
+    (0, s.Tbt)(y),
         (function (t) {
             let { guildId: e, leaderboardId: c, source: d } = t,
                 s = {
-                    leaderboard: (0, p.Z)({
+                    leaderboard: (0, i.Z)({
                         guildId: null != e ? e : '',
                         leaderboardId: c,
                         intervalOffset: 0
                     }),
-                    prevLeaderboard: (0, p.Z)({
+                    prevLeaderboard: (0, i.Z)({
                         guildId: null != e ? e : '',
                         leaderboardId: c,
                         intervalOffset: -1
@@ -114,10 +114,10 @@ let N = (t) => {
                     if (null == a) return;
                     let f = a.guild_settings.sort_by_statistic_id;
                     if (null != s) {
-                        var i, p;
+                        var p, i;
                         let e = s.guild_settings.sort_by_statistic_id,
                             d = s.users[0];
-                        (t = null == d ? void 0 : d.user_id), (c = null == d ? void 0 : null === (p = d.statistics) || void 0 === p ? void 0 : null === (i = p[e]) || void 0 === i ? void 0 : i.value);
+                        (t = null == d ? void 0 : d.user_id), (c = null == d ? void 0 : null === (i = d.statistics) || void 0 === i ? void 0 : null === (p = i[e]) || void 0 === p ? void 0 : p.value);
                     }
                     o.default.track(m.rMx.LEADERBOARD_POPOUT_VIEWED, {
                         guild_id: e,
@@ -141,35 +141,35 @@ let N = (t) => {
             leaderboardId: f,
             source: b
         });
-    let I = (0, n.q)(null == T ? void 0 : null === (e = T.settings) || void 0 === e ? void 0 : e.application_id);
-    return null == T || null == I
+    let Z = (0, n.q)(null == N ? void 0 : null === (e = N.settings) || void 0 === e ? void 0 : e.application_id);
+    return null == N || null == Z
         ? null
         : (0, d.jsx)(v, {
               children: (0, d.jsxs)('div', {
                   className: _.popout,
-                  ref: Z,
+                  ref: y,
                   children: [
                       (0, d.jsxs)('div', {
                           className: _.content,
                           children: [
                               (0, d.jsx)(x, {
-                                  leaderboard: T,
-                                  application: I
+                                  leaderboard: N,
+                                  application: Z
                               }),
                               (0, d.jsx)(l.Z, {
-                                  leaderboard: T,
-                                  previewMode: h,
+                                  leaderboard: N,
+                                  previewMode: j,
                                   trackRankingItemInteraction: g
                               }),
-                              h
+                              j
                                   ? null
                                   : (0, d.jsxs)(d.Fragment, {
                                         children: [
-                                            null != E &&
+                                            null != S &&
                                                 (0, d.jsx)(u.Z, {
                                                     className: _.previousChampion,
                                                     guildId: c,
-                                                    leaderboard: E
+                                                    leaderboard: S
                                                 }),
                                             (0, d.jsx)(r.Z, {
                                                 guildId: c,
@@ -179,16 +179,16 @@ let N = (t) => {
                                     })
                           ]
                       }),
-                      h
+                      j
                           ? (0, d.jsx)(d.Fragment, {
                                 children: (0, d.jsx)(s.P3F, {
-                                    onClick: () => N(!1),
+                                    onClick: () => O(!1),
                                     children: (0, d.jsx)('div', {
                                         className: _.exitPreviewModeButton,
                                         children: (0, d.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
                                             className: _.exitPreviewModeText,
-                                            children: j.intl.string(j.t.GLeQe3)
+                                            children: h.NW.string(h.t.GLeQe3)
                                         })
                                     })
                                 })

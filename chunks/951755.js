@@ -1,12 +1,12 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(147913),
-    r = n(716364),
-    a = n(474873),
-    s = n(135906),
-    o = n(378364),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(147913),
+    i = n(716364),
+    o = n(474873),
+    a = n(135906),
+    s = n(378364),
     l = n(197344),
-    u = n(860973),
-    c = n(871465);
+    c = n(860973),
+    u = n(871465);
 function d(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends i.Z {
+class f extends r.Z {
     _initialize() {
         this.subscription = l.Z.subscribe(this.handleExperimentUpdated);
     }
@@ -29,17 +29,17 @@ class f extends i.Z {
         null === (e = (t = this).subscription) || void 0 === e || e.call(t), (this.subscription = void 0);
     }
     updateSoundpack() {
-        let e = a.Z.getSoundpack(),
-            t = a.Z.getLastSoundpackExperimentId(),
-            n = o.Z.experiment.definition.id,
-            i = l.Z.isEligible();
-        i || (null == t && e === c.YC.CLASSIC) ? i && null != o.Z.soundpack && n !== t && e !== o.Z.soundpack && (0, r.c)(o.Z.soundpack, n) : (0, r.c)(c.YC.CLASSIC, null);
+        let e = o.Z.getSoundpack(),
+            t = o.Z.getLastSoundpackExperimentId(),
+            n = s.Z.experiment.definition.id,
+            r = l.Z.isEligible();
+        r || (null == t && e === u.YC.CLASSIC) ? r && null != s.Z.soundpack && n !== t && e !== s.Z.soundpack && (0, i.c)(s.Z.soundpack, n) : (0, i.c)(u.YC.CLASSIC, null);
     }
     updateRingtone() {
         if (l.Z.isEligible()) {
-            let e = (0, s.Z)(a.Z.getSoundpack());
-            null != e.call_ringing && (0, u._)('call_ringing', e.call_ringing + '.mp3');
-        } else (0, u._)('call_ringing', 'call_ringing.mp3');
+            let e = (0, a.Z)(o.Z.getSoundpack());
+            null != e.call_ringing && (0, c._)('call_ringing', e.call_ringing + '.mp3');
+        } else (0, c._)('call_ringing', 'call_ringing.mp3');
     }
     constructor(...e) {
         super(...e),
@@ -50,4 +50,4 @@ class f extends i.Z {
             });
     }
 }
-let _ = new f();
+let p = new f();

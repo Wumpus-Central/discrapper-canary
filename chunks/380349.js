@@ -1,42 +1,42 @@
-n.d(t, { Z: () => p });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    r = n(481060),
-    a = n(314897),
-    s = n(768419),
-    o = n(456190),
-    d = n(239470),
-    c = n(894344),
-    u = n(203777),
-    h = n(616922),
-    m = n(388032);
-function p(e, t, n) {
-    let p = (0, l.e7)([s.Z, a.default], () => (null != t ? (0, d.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
-    if (null == p || null == e || null == t) return null;
-    let g = p.isCurrentUser || p.notPlayable || p.playingSameTrack,
-        _ = p.isCurrentUser || p.syncingWithUser || p.syncingWithParty;
+var i = n(442837),
+    l = n(481060),
+    o = n(314897),
+    a = n(768419),
+    s = n(456190),
+    c = n(239470),
+    u = n(894344),
+    d = n(203777),
+    p = n(616922),
+    h = n(388032);
+function g(e, t, n) {
+    let g = (0, i.e7)([a.Z, o.default], () => (null != t ? (0, c.Z)(a.Z, o.default, t, e) : void 0), [e, t]);
+    if (null == g || null == e || null == t) return null;
+    let f = g.isCurrentUser || g.notPlayable || g.playingSameTrack,
+        m = g.isCurrentUser || g.syncingWithUser || g.syncingWithParty;
     return [
-        (0, i.jsx)(
-            r.sNh,
+        (0, r.jsx)(
+            l.sNh,
             {
                 id: 'spotify-play-'.concat(e.session_id),
-                action: () => (0, u.Z)(p, h.kG.USER_ACTIVITY_PLAY, n),
-                label: m.intl.string(m.t.rRffNz),
-                subtext: g ? (0, o.Z)(p, h.kG.USER_ACTIVITY_PLAY) : void 0,
-                disabled: g
+                action: () => (0, d.Z)(g, p.kG.USER_ACTIVITY_PLAY, n),
+                label: h.NW.string(h.t.rRffNz),
+                subtext: f ? (0, s.Z)(g, p.kG.USER_ACTIVITY_PLAY) : void 0,
+                disabled: f
             },
             'spotify-play-'.concat(e.session_id)
         ),
-        p.canPlaySpotify
-            ? (0, i.jsx)(
-                  r.sNh,
+        g.canPlaySpotify
+            ? (0, r.jsx)(
+                  l.sNh,
                   {
                       id: 'spotify-sync-'.concat(e.session_id),
-                      action: () => (0, c.Z)(p, h.kG.USER_ACTIVITY_SYNC, n),
-                      label: m.intl.string(m.t.eU3inJ),
-                      subtext: _ ? (0, o.Z)(p, h.kG.USER_ACTIVITY_SYNC) : void 0,
-                      disabled: _
+                      action: () => (0, u.Z)(g, p.kG.USER_ACTIVITY_SYNC, n),
+                      label: h.NW.string(h.t.eU3inJ),
+                      subtext: m ? (0, s.Z)(g, p.kG.USER_ACTIVITY_SYNC) : void 0,
+                      disabled: m
                   },
                   'spotify-sync-'.concat(e.session_id)
               )

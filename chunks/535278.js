@@ -4,7 +4,7 @@ i(192379);
 var r = i(481060),
     a = i(313201),
     s = i(388032),
-    l = i(30974),
+    l = i(531163),
     c = i(365627);
 function o(t) {
     let { transitionState: e, onClose: i, storeListing: o, subscription: d } = t,
@@ -25,13 +25,13 @@ function o(t) {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         id: u,
-                        children: s.intl.format(s.t['wLFT6+'], { tier: o.summary })
+                        children: s.NW.format(s.t['wLFT6+'], { tier: o.summary })
                     }),
                     (0, n.jsx)(r.Text, {
                         className: l.subtitle,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: s.intl.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
+                        children: s.NW.format(s.t.OsAK9v, { timestamp: null == d ? void 0 : d.currentPeriodEnd })
                     })
                 ]
             }),
@@ -40,7 +40,7 @@ function o(t) {
                     size: r.zxk.Sizes.MEDIUM,
                     grow: !1,
                     onClick: i,
-                    children: s.intl.string(s.t['JtWl+f'])
+                    children: s.NW.string(s.t['JtWl+f'])
                 })
             })
         ]

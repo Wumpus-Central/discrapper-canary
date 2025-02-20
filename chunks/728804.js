@@ -1,26 +1,26 @@
-var i = n(690244),
-    r = n(192853),
-    a = n(813426),
-    s = i('%TypeError%'),
-    o = i('%WeakMap%', !0),
-    l = i('%Map%', !0),
-    u = r('WeakMap.prototype.get', !0),
-    c = r('WeakMap.prototype.set', !0),
-    d = r('WeakMap.prototype.has', !0),
-    f = r('Map.prototype.get', !0),
-    _ = r('Map.prototype.set', !0),
-    p = r('Map.prototype.has', !0),
+var r = n(690244),
+    i = n(192853),
+    o = n(813426),
+    a = r('%TypeError%'),
+    s = r('%WeakMap%', !0),
+    l = r('%Map%', !0),
+    c = i('WeakMap.prototype.get', !0),
+    u = i('WeakMap.prototype.set', !0),
+    d = i('WeakMap.prototype.has', !0),
+    f = i('Map.prototype.get', !0),
+    p = i('Map.prototype.set', !0),
+    _ = i('Map.prototype.has', !0),
     h = function (e, t) {
-        for (var n, i = e; null !== (n = i.next); i = n) if (n.key === t) return (i.next = n.next), (n.next = e.next), (e.next = n), n;
+        for (var n, r = e; null !== (n = r.next); r = n) if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
     },
     m = function (e, t) {
         var n = h(e, t);
         return n && n.value;
     },
     g = function (e, t, n) {
-        var i = h(e, t);
-        i
-            ? (i.value = n)
+        var r = h(e, t);
+        r
+            ? (r.value = n)
             : (e.next = {
                   key: t,
                   next: e.next,
@@ -34,37 +34,37 @@ e.exports = function () {
     var e,
         t,
         n,
-        i = {
+        r = {
             assert: function (e) {
-                if (!i.has(e)) throw new s('Side channel does not contain ' + a(e));
+                if (!r.has(e)) throw new a('Side channel does not contain ' + o(e));
             },
-            get: function (i) {
-                if (o && i && ('object' == typeof i || 'function' == typeof i)) {
-                    if (e) return u(e, i);
+            get: function (r) {
+                if (s && r && ('object' == typeof r || 'function' == typeof r)) {
+                    if (e) return c(e, r);
                 } else if (l) {
-                    if (t) return f(t, i);
-                } else if (n) return m(n, i);
+                    if (t) return f(t, r);
+                } else if (n) return m(n, r);
             },
-            has: function (i) {
-                if (o && i && ('object' == typeof i || 'function' == typeof i)) {
-                    if (e) return d(e, i);
+            has: function (r) {
+                if (s && r && ('object' == typeof r || 'function' == typeof r)) {
+                    if (e) return d(e, r);
                 } else if (l) {
-                    if (t) return p(t, i);
-                } else if (n) return E(n, i);
+                    if (t) return _(t, r);
+                } else if (n) return E(n, r);
                 return !1;
             },
-            set: function (i, r) {
-                o && i && ('object' == typeof i || 'function' == typeof i)
-                    ? (e || (e = new o()), c(e, i, r))
+            set: function (r, i) {
+                s && r && ('object' == typeof r || 'function' == typeof r)
+                    ? (e || (e = new s()), u(e, r, i))
                     : l
-                      ? (t || (t = new l()), _(t, i, r))
+                      ? (t || (t = new l()), p(t, r, i))
                       : (n ||
                             (n = {
                                 key: {},
                                 next: null
                             }),
-                        g(n, i, r));
+                        g(n, r, i));
             }
         };
-    return i;
+    return r;
 };

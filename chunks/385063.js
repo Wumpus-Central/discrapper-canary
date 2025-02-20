@@ -1,22 +1,22 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(739566),
+var i = n(739566),
     a = n(834129),
-    r = n(388032),
-    s = n(771009);
-function o(e) {
-    let { message: t, usernameHook: o, compact: c, isForumPost: d } = e,
-        u = (0, l.ZP)(t),
-        m = o(u);
-    return (0, i.jsx)(a.Z, {
+    o = n(388032),
+    l = n(896438);
+function s(e) {
+    let { message: t, usernameHook: s, compact: c, isForumPost: d } = e,
+        u = (0, i.ZP)(t),
+        p = s(u);
+    return (0, r.jsx)(a.Z, {
         compact: c,
-        className: s.channelNameChange,
+        className: l.channelNameChange,
         icon: n(819373),
         timestamp: t.timestamp,
-        children: r.intl.format(d ? r.t.SOQ4hI : r.t.oItgEx, {
+        children: o.NW.format(d ? o.t.SOQ4hI : o.t.oItgEx, {
             username: u.nick,
-            usernameHook: m,
+            usernameHook: p,
             channelName: t.content
         })
     });

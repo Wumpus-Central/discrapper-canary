@@ -1,20 +1,20 @@
-n.d(t, { Z: () => s });
-var i = n(200651),
-    l = n(192379),
-    a = n(390322),
-    r = n(381871);
-let s = (e) => {
-    let { isHovered: t, closePopout: n, onMouseEnter: s, onMouseLeave: o, onFocus: c, channel: d } = e;
+n.d(t, { Z: () => a });
+var r = n(200651),
+    i = n(192379),
+    l = n(390322),
+    o = n(381871);
+let a = (e) => {
+    let { isHovered: t, closePopout: n, onMouseEnter: a, onMouseLeave: s, onFocus: c, channel: u } = e;
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             t || n();
         }, [n, t]),
-        (0, i.jsx)(a.Z, {
-            children: (0, i.jsx)('div', {
-                onMouseEnter: s,
-                onMouseLeave: o,
-                children: (0, i.jsx)(r.Z, {
-                    channel: d,
+        (0, r.jsx)(l.Z, {
+            children: (0, r.jsx)('div', {
+                onMouseEnter: a,
+                onMouseLeave: s,
+                children: (0, r.jsx)(o.Z, {
+                    channel: u,
                     closePopout: n,
                     onFocus: c
                 })

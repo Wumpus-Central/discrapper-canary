@@ -1,93 +1,93 @@
 n.d(t, {
-    A: () => _,
+    A: () => p,
     q: () => d
 }),
-    n(724458);
-var i = n(392711),
-    r = n.n(i),
-    a = n(131704),
-    s = n(592125),
-    o = n(580005),
+    n(978209);
+var r = n(392711),
+    i = n.n(r),
+    o = n(131704),
+    a = n(592125),
+    s = n(580005),
     l = n(650774),
-    u = n(70956),
-    c = n(789662);
-function d(e, t, n, i, r) {
-    var a, o, u, d;
-    let _ = s.Z.getMutableGuildChannelsForGuild(e.id),
-        p = i.filter((e) => e.channel_id in _),
-        h = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
+    c = n(70956),
+    u = n(789662);
+function d(e, t, n, r, i) {
+    var o, s, c, d;
+    let p = a.Z.getMutableGuildChannelsForGuild(e.id),
+        _ = r.filter((e) => e.channel_id in p),
+        h = null !== (o = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== o ? o : {},
         m = l.Z.getMemberCount(e.id),
-        g = f('year', i, p, (e) => {
+        g = f('year', r, _, (e) => {
             var t;
             return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0);
         }),
-        E = f('one month', i, p, (e) => {
+        E = f('one month', r, _, (e) => {
             var t;
             return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0);
         }),
-        v = f('three month', i, p, (e) => {
+        v = f('three month', r, _, (e) => {
             var t;
             return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0);
         }),
-        y = [
+        b = [
             E,
             v,
-            f('six month', i, p, (e) => {
+            f('six month', r, _, (e) => {
                 var t;
                 return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0);
             }),
             g
         ],
-        I = 0,
-        T = 0;
-    p.forEach((e) => {
+        y = 0,
+        O = 0;
+    _.forEach((e) => {
         var t;
-        I++, (T += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
+        y++, (O += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
     });
-    let b = '\n**Pain**:\n- Everyones: '
-            .concat(c.XR[null !== (o = h.everyones) && void 0 !== o ? o : 0], '\n- Messages: ')
-            .concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ')
+    let S = '\n**Pain**:\n- Everyones: '
+            .concat(u.XR[null !== (s = h.everyones) && void 0 !== s ? s : 0], '\n- Messages: ')
+            .concat(u.XR[null !== (c = h.messages) && void 0 !== c ? c : 0], '\n- Size: ')
             .concat(m, '\n**Remote**:\n- Channels: ')
-            .concat(I, '\n- AllVisits: ')
-            .concat(y.map((e) => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ')
-            .concat(y.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
-            .concat(y.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
-            .concat(y.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
-            .concat(T, '\n'),
-        S = v.guildOpens >= 0.02 * v.totalOpensAcrossAllServers,
-        A = (null !== (d = g.guildOpens) && void 0 !== d ? d : 0) > 0;
-    return h.messages !== c.XR.High || (r && (S || !A)) ? [c.AR.KeepAsIs, S, 'KeepAsIs' + b] : [c.AR.UseGreyDot, S, 'UseGreyDot' + b];
+            .concat(y, '\n- AllVisits: ')
+            .concat(b.map((e) => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ')
+            .concat(b.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
+            .concat(b.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
+            .concat(b.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
+            .concat(O, '\n'),
+        I = v.guildOpens >= 0.02 * v.totalOpensAcrossAllServers,
+        T = (null !== (d = g.guildOpens) && void 0 !== d ? d : 0) > 0;
+    return h.messages !== u.XR.High || (i && (I || !T)) ? [u.AR.KeepAsIs, I, 'KeepAsIs' + S] : [u.AR.UseGreyDot, I, 'UseGreyDot' + S];
 }
-function f(e, t, n, i) {
-    let a = t.reduce((e, t) => e + i(t), 0),
-        s = n.reduce((e, t) => e + i(t), 0),
-        o = r().sortBy(n, i).reverse()[0],
-        l = null == o ? 0 : i(o),
-        u = ((l / s) * 100).toFixed(1);
+function f(e, t, n, r) {
+    let o = t.reduce((e, t) => e + r(t), 0),
+        a = n.reduce((e, t) => e + r(t), 0),
+        s = i().sortBy(n, r).reverse()[0],
+        l = null == s ? 0 : r(s),
+        c = ((l / a) * 100).toFixed(1);
     return {
         label: e,
-        totalOpensAcrossAllServers: a,
-        guildOpens: s,
+        totalOpensAcrossAllServers: o,
+        guildOpens: a,
         biggestChannel: l,
-        biggestChannelFormatted: u
+        biggestChannelFormatted: c
     };
 }
-function _(e, t) {
-    var n, i;
-    let r = null !== (n = t.filter((t) => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
-        s = null !== (i = l.Z.getMemberCount(e.id)) && void 0 !== i ? i : 0,
-        d = Date.now() - u.Z.Millis.DAYS_30,
-        f = o.Z.getFrequentlyWithoutFetchingLatest().filter((t) => t instanceof a.Sf && t.guild_id === e.id),
-        _ = f.filter((e) => {
+function p(e, t) {
+    var n, r;
+    let i = null !== (n = t.filter((t) => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
+        a = null !== (r = l.Z.getMemberCount(e.id)) && void 0 !== r ? r : 0,
+        d = Date.now() - c.Z.Millis.DAYS_30,
+        f = s.Z.getFrequentlyWithoutFetchingLatest().filter((t) => t instanceof o.Sf && t.guild_id === e.id),
+        p = f.filter((e) => {
             var t, n;
-            let i = null !== (n = null === (t = o.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
-            return 0 !== i.length && i[i.length - 1] >= d;
+            let r = null !== (n = null === (t = s.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+            return 0 !== r.length && r[r.length - 1] >= d;
         }),
-        p = _.length >= 5,
+        _ = p.length >= 5,
         h = f.reduce((e, t) => {
-            var n, i;
-            return e + (null !== (i = null === (n = o.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== i ? i : 0);
+            var n, r;
+            return e + (null !== (r = null === (n = s.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== r ? r : 0);
         }, 0),
-        m = '\n- **Local**:\n    - Guild Visits: '.concat(h, '\n    - Channels: ').concat(f.length, '\n    - Recent Channels: ').concat(_.length, '\n');
-    return r.messages === c.XR.High || s > 1000 ? [c.AR.UseGreyDot, p, 'SuggestGreyDot' + m] : [c.AR.KeepAsIs, p, 'KeepAsIs' + m];
+        m = '\n- **Local**:\n    - Guild Visits: '.concat(h, '\n    - Channels: ').concat(f.length, '\n    - Recent Channels: ').concat(p.length, '\n');
+    return i.messages === u.XR.High || a > 1000 ? [u.AR.UseGreyDot, _, 'SuggestGreyDot' + m] : [u.AR.KeepAsIs, _, 'KeepAsIs' + m];
 }

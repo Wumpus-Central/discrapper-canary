@@ -1,29 +1,29 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(385499),
-    o = n(739566),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    l = n(385499),
+    s = n(739566),
     c = n(464891),
     d = n(83561),
     u = n(834129),
-    m = n(981631),
-    _ = n(674563),
-    h = n(388032),
-    p = n(783711);
+    p = n(981631),
+    m = n(674563),
+    f = n(388032),
+    h = n(39684);
 function g(e) {
-    let { message: t, compact: n, usernameHook: l } = e,
-        g = (0, o.ZP)(t),
-        f = l(g),
+    let { message: t, compact: n, usernameHook: i } = e,
+        g = (0, s.ZP)(t),
+        _ = i(g),
         {
-            avatarSrc: x,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: E }
+            avatarSrc: b,
+            eventHandlers: { onMouseEnter: v, onMouseLeave: y }
         } = (0, d.m)(!0),
-        v =
+        x =
             '' !== t.content
-                ? new Date(t.content).toLocaleString(h.intl.currentLocale, {
+                ? new Date(t.content).toLocaleString(f.NW.currentLocale, {
                       hour: 'numeric',
                       minute: '2-digit',
                       month: '2-digit',
@@ -31,52 +31,52 @@ function g(e) {
                       year: 'numeric'
                   })
                 : '';
-    return (0, i.jsx)('div', {
-        onMouseEnter: C,
-        onMouseLeave: E,
-        children: (0, i.jsx)(u.Z, {
-            className: a()(p.mainContainer, { [p.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(d.S, { src: x }),
-            iconContainerClassName: p.iconContainer,
+    return (0, r.jsx)('div', {
+        onMouseEnter: v,
+        onMouseLeave: y,
+        children: (0, r.jsx)(u.Z, {
+            className: a()(h.mainContainer, { [h.compact]: n }),
+            iconNode: n ? null : (0, r.jsx)(d.S, { src: b }),
+            iconContainerClassName: h.iconContainer,
             compact: n,
-            children: (0, i.jsxs)('div', {
-                className: a()(p.content, { [p.compact]: n }),
+            children: (0, r.jsxs)('div', {
+                className: a()(h.content, { [h.compact]: n }),
                 children: [
-                    (0, i.jsx)(c.nD, {
+                    (0, r.jsx)(c.nD, {
                         message: t,
-                        messageClassname: p.spanCorrection,
-                        className: a()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
-                        username: (0, i.jsxs)('div', {
-                            className: p.spanCorrection,
+                        messageClassname: h.spanCorrection,
+                        className: a()(h.usernameContainer, h.spanCorrection, { [h.compact]: n }),
+                        username: (0, r.jsxs)('div', {
+                            className: h.spanCorrection,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: p.username,
-                                    children: h.intl.string(h.t.hG1StL)
+                                    className: h.username,
+                                    children: f.NW.string(f.t.hG1StL)
                                 }),
-                                (0, i.jsx)(s.Z, {
-                                    type: _.Hb.SYSTEM_DM,
-                                    className: p.systemTag
+                                (0, r.jsx)(l.Z, {
+                                    type: m.Hb.SYSTEM_DM,
+                                    className: h.systemTag
                                 })
                             ]
                         }),
                         compact: n,
                         showTimestamp: !0
                     }),
-                    (0, i.jsx)('div', {
-                        className: a()(p.__invalid_messageContent, { [p.compact]: n }),
+                    (0, r.jsx)('div', {
+                        className: a()(h.__invalid_messageContent, { [h.compact]: n }),
                         children:
-                            t.type === m.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? h.intl.format(h.t['+m8eDw'], {
+                            t.type === p.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
+                                ? f.NW.format(f.t['+m8eDw'], {
                                       username: g.nick,
-                                      usernameHook: f,
-                                      time: v
+                                      usernameHook: _,
+                                      time: x
                                   })
-                                : h.intl.format(h.t.BHeke3, {
+                                : f.NW.format(f.t.BHeke3, {
                                       username: g.nick,
-                                      usernameHook: f
+                                      usernameHook: _
                                   })
                     })
                 ]

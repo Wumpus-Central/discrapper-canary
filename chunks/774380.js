@@ -1,37 +1,37 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
-    s = n(98278),
-    a = n(823188),
+var i = n(442837),
+    s = n(481060),
+    a = n(98278),
+    l = n(823188),
     o = n(594174),
     c = n(74538),
     d = n(474936),
     u = n(388032),
-    m = n(801706);
-let h = (e) => {
+    m = n(486557);
+let p = (e) => {
         let { onOpenPremiumClick: t } = e,
-            n = (0, i.jsx)(l.zxk, {
+            n = (0, r.jsx)(s.zxk, {
                 className: m.tier0Button,
-                color: l.zxk.Colors.BRAND_INVERTED,
+                color: s.zxk.Colors.BRAND_INVERTED,
                 onClick: () => {
-                    (0, s.z)(), null != t && t();
+                    (0, a.z)(), null != t && t();
                 },
-                children: u.intl.string(u.t.hvVgAQ)
+                children: u.NW.string(u.t.hvVgAQ)
             });
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: m.tier0Container,
             children: [
-                (0, i.jsx)(l.X6q, {
+                (0, r.jsx)(s.X6q, {
                     className: m.tier0Heading,
                     variant: 'heading-xxl/extrabold',
-                    children: u.intl.string(u.t['qUl+Ky'])
+                    children: u.NW.string(u.t['qUl+Ky'])
                 }),
-                (0, i.jsx)(a.wp, {
+                (0, r.jsx)(l.wp, {
                     className: m.tier0Card,
                     ctaButton: n,
-                    featureSet: a.uZ.BOOSTING,
+                    featureSet: l.uZ.BOOSTING,
                     showWumpus: !0,
                     showYearlyPrice: !0
                 })
@@ -40,6 +40,6 @@ let h = (e) => {
     },
     g = (e) => {
         let { onOpenPremiumClick: t } = e,
-            n = (0, r.e7)([o.default], () => o.default.getCurrentUser());
-        return c.ZP.isPremium(n, d.p9.TIER_2) ? null : (0, i.jsx)(h, { onOpenPremiumClick: t });
+            n = (0, i.e7)([o.default], () => o.default.getCurrentUser());
+        return c.ZP.isPremium(n, d.p9.TIER_2) ? null : (0, r.jsx)(p, { onOpenPremiumClick: t });
     };

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
-var i = n(192379),
-    r = n(723184),
-    a = n(341518);
-let s = function (e) {
+n.d(t, { Z: () => a });
+var r = n(192379),
+    i = n(723184),
+    o = n(341518);
+let a = function (e) {
     var t = e.onClick,
         n = e.hsl,
-        s = (0, r.default)({
+        a = (0, i.default)({
             default: {
                 swatches: { marginTop: '20px' },
                 swatch: {
@@ -17,62 +17,62 @@ let s = function (e) {
                 clear: { clear: 'both' }
             }
         }),
-        o = 0.1;
-    return i.createElement(
+        s = 0.1;
+    return r.createElement(
         'div',
-        { style: s.swatches },
-        i.createElement(
+        { style: a.swatches },
+        r.createElement(
             'div',
-            { style: s.swatch },
-            i.createElement(a.Z, {
+            { style: a.swatch },
+            r.createElement(o.Z, {
                 hsl: n,
                 offset: '.80',
-                active: Math.abs(n.l - 0.8) < o && Math.abs(n.s - 0.5) < o,
+                active: Math.abs(n.l - 0.8) < s && Math.abs(n.s - 0.5) < s,
                 onClick: t,
                 first: !0
             })
         ),
-        i.createElement(
+        r.createElement(
             'div',
-            { style: s.swatch },
-            i.createElement(a.Z, {
+            { style: a.swatch },
+            r.createElement(o.Z, {
                 hsl: n,
                 offset: '.65',
-                active: Math.abs(n.l - 0.65) < o && Math.abs(n.s - 0.5) < o,
+                active: Math.abs(n.l - 0.65) < s && Math.abs(n.s - 0.5) < s,
                 onClick: t
             })
         ),
-        i.createElement(
+        r.createElement(
             'div',
-            { style: s.swatch },
-            i.createElement(a.Z, {
+            { style: a.swatch },
+            r.createElement(o.Z, {
                 hsl: n,
                 offset: '.50',
-                active: Math.abs(n.l - 0.5) < o && Math.abs(n.s - 0.5) < o,
+                active: Math.abs(n.l - 0.5) < s && Math.abs(n.s - 0.5) < s,
                 onClick: t
             })
         ),
-        i.createElement(
+        r.createElement(
             'div',
-            { style: s.swatch },
-            i.createElement(a.Z, {
+            { style: a.swatch },
+            r.createElement(o.Z, {
                 hsl: n,
                 offset: '.35',
-                active: Math.abs(n.l - 0.35) < o && Math.abs(n.s - 0.5) < o,
+                active: Math.abs(n.l - 0.35) < s && Math.abs(n.s - 0.5) < s,
                 onClick: t
             })
         ),
-        i.createElement(
+        r.createElement(
             'div',
-            { style: s.swatch },
-            i.createElement(a.Z, {
+            { style: a.swatch },
+            r.createElement(o.Z, {
                 hsl: n,
                 offset: '.20',
-                active: Math.abs(n.l - 0.2) < o && Math.abs(n.s - 0.5) < o,
+                active: Math.abs(n.l - 0.2) < s && Math.abs(n.s - 0.5) < s,
                 onClick: t,
                 last: !0
             })
         ),
-        i.createElement('div', { style: s.clear })
+        r.createElement('div', { style: a.clear })
     );
 };

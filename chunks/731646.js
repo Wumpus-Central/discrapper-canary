@@ -1,27 +1,27 @@
-t.d(i, { default: () => s });
-var l = t(200651),
-    a = t(192379),
-    e = t(481060),
-    r = t(239091),
-    d = t(299206),
-    c = t(388032);
-function s(n) {
-    var i;
-    let t = (0, d.Z)({
-        id: n.id,
-        label: n.label,
-        shiftId: n.shiftId
+n.d(t, { default: () => u });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(239091),
+    c = n(299206),
+    o = n(388032);
+function u(e) {
+    var t;
+    let n = (0, c.Z)({
+        id: e.id,
+        label: e.label,
+        shiftId: e.shiftId
     });
     return (
-        a.useEffect(() => {
-            null == t && (0, r.Zy)();
-        }, [t]),
-        (0, l.jsx)(e.v2r, {
-            onSelect: n.onSelect,
+        i.useEffect(() => {
+            null == n && (0, a.Zy)();
+        }, [n]),
+        (0, r.jsx)(l.v2r, {
+            onSelect: e.onSelect,
             navId: 'dev-context',
-            'aria-label': null !== (i = n['aria-label']) && void 0 !== i ? i : c.intl.string(c.t.ogxXGh),
-            onClose: r.Zy,
-            children: t
+            'aria-label': null !== (t = e['aria-label']) && void 0 !== t ? t : o.NW.string(o.t.ogxXGh),
+            onClose: a.Zy,
+            children: n
         })
     );
 }

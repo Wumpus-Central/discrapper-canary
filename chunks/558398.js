@@ -4,7 +4,7 @@ function t(e) {
             className: 'variable',
             variants: [{ begin: /\$\d+/ }, { begin: /\$\{\w+\}/ }, { begin: t.concat(/[$@]/, e.UNDERSCORE_IDENT_RE) }]
         },
-        i = {
+        r = {
             endsWithParent: !0,
             keywords: {
                 $pattern: /[a-z_]{2,}|\/dev\/poll/,
@@ -73,7 +73,7 @@ function t(e) {
             {
                 beginKeywords: 'upstream location',
                 end: /;|\{/,
-                contains: i.contains,
+                contains: r.contains,
                 keywords: { section: 'upstream location' }
             },
             {
@@ -88,7 +88,7 @@ function t(e) {
                     {
                         className: 'attribute',
                         begin: e.UNDERSCORE_IDENT_RE,
-                        starts: i
+                        starts: r
                     }
                 ],
                 relevance: 0

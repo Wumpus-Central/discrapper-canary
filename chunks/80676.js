@@ -5,11 +5,11 @@ function t(e) {
             begin: '\\(',
             end: '\\)'
         },
-        i = /(_[a-z_\d]+)?/,
-        r = /([de][+-]?\d+)?/,
-        a = {
+        r = /(_[a-z_\d]+)?/,
+        i = /([de][+-]?\d+)?/,
+        o = {
             className: 'number',
-            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, r, i) }, { begin: t.concat(/\b\d+/, r, i) }, { begin: t.concat(/\.\d+/, r, i) }],
+            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, i, r) }, { begin: t.concat(/\b\d+/, i, r) }, { begin: t.concat(/\.\d+/, i, r) }],
             relevance: 0
         };
     return {
@@ -38,7 +38,7 @@ function t(e) {
             },
             e.COMMENT('!', '$', { relevance: 0 }),
             e.COMMENT('begin_doc', 'end_doc', { relevance: 10 }),
-            a
+            o
         ]
     };
 }

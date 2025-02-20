@@ -1,49 +1,49 @@
 n.d(t, { Z: () => _ });
-var i = n(200651),
+var r = n(200651),
     a = n(192379),
-    r = n(793030),
+    i = n(793030),
     l = n(442837),
-    s = n(445986),
-    o = n(9807),
+    o = n(445986),
+    s = n(9807),
     c = n(341176),
     d = n(312097),
     u = n(451478),
-    m = n(981631),
-    h = n(388032),
-    p = n(97729),
+    p = n(981631),
+    m = n(388032),
+    h = n(373705),
     g = n(902294);
 function _(e) {
     let { application: t, carouselItems: n } = e,
         _ = (0, l.e7)([u.Z], () => u.Z.isFocused()),
-        x = (0, i.jsxs)(i.Fragment, {
+        f = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)('img', {
-                    className: p.errorImage,
+                (0, r.jsx)('img', {
+                    className: h.errorImage,
                     src: g,
                     'aria-hidden': !0,
                     alt: ''
                 }),
-                (0, i.jsx)(r.X6, {
+                (0, r.jsx)(i.X6, {
                     variant: 'heading-xl/semibold',
-                    children: h.intl.string(h.t.UvDfMz)
+                    children: m.NW.string(m.t.UvDfMz)
                 })
             ]
         });
-    n.forEach((e, i) => {
-        e.alt = h.intl.formatToPlainString(h.t.sSEhHR, {
-            index: i + 1,
+    n.forEach((e, r) => {
+        e.alt = m.NW.formatToPlainString(m.t.sSEhHR, {
+            index: r + 1,
             totalImages: n.length,
             name: t.name
         });
     });
-    let C = a.useCallback(
+    let v = a.useCallback(
         (e, t) => {
-            if (e.type === m.s9s.IMG) {
-                let t = n.filter((e) => e.type === m.s9s.IMG),
-                    i = t.findIndex((t) => t === e);
-                if (i < 0) return;
+            if (e.type === p.s9s.IMG) {
+                let t = n.filter((e) => e.type === p.s9s.IMG),
+                    r = t.findIndex((t) => t === e);
+                if (r < 0) return;
                 let a = t.map((e) => ({
-                    url: (0, s.Q)(e.src),
+                    url: (0, o.Q)(e.src),
                     original: e.src,
                     width: e.width,
                     height: e.height,
@@ -51,7 +51,7 @@ function _(e) {
                 }));
                 (0, d.K)({
                     items: a,
-                    startingIndex: i,
+                    startingIndex: r,
                     fit: c.D.CONTAIN,
                     shouldHideMediaOptions: !0,
                     shouldAnimateCarousel: !0,
@@ -63,14 +63,14 @@ function _(e) {
     );
     return 0 === n.length
         ? null
-        : (0, i.jsx)(o.Z, {
-              className: p.carousel,
+        : (0, r.jsx)(s.Z, {
+              className: h.carousel,
               themedPagination: !0,
               items: n,
               autoplayInterval: 8000,
               paused: !_,
               videoAutoPlay: !0,
-              onCurrentItemClick: C,
-              errorComponent: x
+              onCurrentItemClick: v,
+              errorComponent: f
           });
 }

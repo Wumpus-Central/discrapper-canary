@@ -1,28 +1,28 @@
-e.d(t, { default: () => d });
-var a = e(200651);
-e(192379);
-var l = e(481060),
-    c = e(239091),
-    i = e(108843),
-    r = e(100527),
-    s = e(299206),
-    u = e(852245),
-    o = e(388032);
-let d = (0, i.Z)(
+t.d(e, { default: () => d });
+var r = t(200651);
+t(192379);
+var a = t(481060),
+    c = t(239091),
+    l = t(108843),
+    i = t(100527),
+    o = t(299206),
+    s = t(852245),
+    u = t(388032);
+let d = (0, l.Z)(
     function (n) {
-        let { channel: t, onSelect: e } = n,
-            i = (0, u.Z)(t),
-            r = (0, s.Z)({
-                id: t.id,
-                label: o.intl.string(o.t.gFHI3t)
+        let { channel: e, onSelect: t } = n,
+            l = (0, s.Z)(e),
+            i = (0, o.Z)({
+                id: e.id,
+                label: u.NW.string(u.t.gFHI3t)
             });
-        return (0, a.jsxs)(l.v2r, {
+        return (0, r.jsxs)(a.v2r, {
             navId: 'channel-context',
             onClose: c.Zy,
-            'aria-label': o.intl.string(o.t.Xm41aW),
-            onSelect: e,
-            children: [(0, a.jsx)(l.kSQ, { children: i }), (0, a.jsx)(l.kSQ, { children: r })]
+            'aria-label': u.NW.string(u.t.Xm41aW),
+            onSelect: t,
+            children: [(0, r.jsx)(a.kSQ, { children: l }), (0, r.jsx)(a.kSQ, { children: i })]
         });
     },
-    [r.Z.CONTEXT_MENU, r.Z.CHANNEL_LIST_DIRECTORY_CHANNEL_MENU]
+    [i.Z.CONTEXT_MENU, i.Z.CHANNEL_LIST_DIRECTORY_CHANNEL_MENU]
 );

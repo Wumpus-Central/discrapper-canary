@@ -1,56 +1,56 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(192379),
-    l = n(585483),
-    a = n(424602),
-    r = n(783097),
-    s = n(981631);
-function o(e) {
+n.d(t, { Z: () => s }), n(47120);
+var r = n(192379),
+    i = n(585483),
+    l = n(424602),
+    o = n(783097),
+    a = n(981631);
+function s(e) {
     let { obstructedFromView: t, disabled: n } = e,
-        o = a._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
-        [c, d] = i.useState(null),
-        u = i.useRef(c);
-    i.useInsertionEffect(() => {
-        u.current = c;
+        s = l._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
+        [c, u] = r.useState(null),
+        d = r.useRef(c);
+    r.useInsertionEffect(() => {
+        d.current = c;
     });
-    let h = i.useMemo(() => (null != c ? (0, r.sl)(c) : null), [c]);
-    i.useEffect(() => {
-        n && d(null);
+    let p = r.useMemo(() => (null != c ? (0, o.sl)(c) : null), [c]);
+    r.useEffect(() => {
+        n && u(null);
     }, [n]);
-    let p = null != c && !t;
+    let h = null != c && !t;
     return (
-        i.useEffect(() => {
-            if (!p) return;
+        r.useEffect(() => {
+            if (!h) return;
             let e = setTimeout(() => {
-                !t && d(null);
+                !t && u(null);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
-        }, [t, p]),
-        i.useEffect(() => {
+        }, [t, h]),
+        r.useEffect(() => {
             if (t) return;
             let e = (e) => {
                     let { application: t } = e;
-                    d(t), (u.current = t);
+                    u(t), (d.current = t);
                 },
                 n = (e) => {
                     var t;
                     let { applicationId: n } = e;
-                    (null === (t = u.current) || void 0 === t ? void 0 : t.id) === n && (d(null), (u.current = null));
+                    (null === (t = d.current) || void 0 === t ? void 0 : t.id) === n && (u(null), (d.current = null));
                 };
             return (
-                l.S.subscribe(s.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e),
-                l.S.subscribe(s.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n),
+                i.S.subscribe(a.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e),
+                i.S.subscribe(a.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n),
                 () => {
-                    l.S.unsubscribe(s.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e), l.S.unsubscribe(s.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n);
+                    i.S.unsubscribe(a.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e), i.S.unsubscribe(a.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n);
                 }
             );
         }, [t]),
         {
-            enabled: o.enabled,
-            showsTooltip: o.showsTooltip,
-            applicationDetails: h,
-            shouldShow: p
+            enabled: s.enabled,
+            showsTooltip: s.showsTooltip,
+            applicationDetails: p,
+            shouldShow: h
         }
     );
 }

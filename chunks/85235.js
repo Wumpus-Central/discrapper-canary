@@ -1,26 +1,26 @@
-n.d(t, { Z: () => o });
-var i = n(544891),
-    r = n(570140),
-    a = n(718745),
-    s = n(981631);
-let o = {
+n.d(t, { Z: () => s });
+var r = n(544891),
+    i = n(570140),
+    o = n(718745),
+    a = n(981631);
+let s = {
     search(e, t) {
-        null == a.Z.getResults(e, t) &&
-            (r.Z.dispatch({
+        null == o.Z.getResults(e, t) &&
+            (i.Z.dispatch({
                 type: 'INTEGRATION_QUERY',
                 integration: e,
                 query: t
             }),
-            i.tn
+            r.tn
                 .get({
-                    url: s.ANM.INTEGRATION_SEARCH('tenor'),
+                    url: a.ANM.INTEGRATION_SEARCH('tenor'),
                     query: { q: t },
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
                 .then(
                     (n) => {
-                        r.Z.dispatch({
+                        i.Z.dispatch({
                             type: 'INTEGRATION_QUERY_SUCCESS',
                             integration: e,
                             query: t,
@@ -28,7 +28,7 @@ let o = {
                         });
                     },
                     () =>
-                        r.Z.dispatch({
+                        i.Z.dispatch({
                             type: 'INTEGRATION_QUERY_FAILURE',
                             integration: e,
                             query: t

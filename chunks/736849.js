@@ -1,19 +1,19 @@
-var i = n(570596),
-    r = n(28886),
-    a = n(621528);
+var r = n(570596),
+    i = n(28886),
+    o = n(621528);
 e.exports = function (e, t, n) {
-    var s, o;
-    r(e);
+    var a, s;
+    i(e);
     try {
-        if (!(s = a(e, 'return'))) {
+        if (!(a = o(e, 'return'))) {
             if ('throw' === t) throw n;
             return n;
         }
-        s = i(s, e);
+        a = r(a, e);
     } catch (e) {
-        (o = !0), (s = e);
+        (s = !0), (a = e);
     }
     if ('throw' === t) throw n;
-    if (o) throw s;
-    return r(s), n;
+    if (s) throw a;
+    return i(a), n;
 };

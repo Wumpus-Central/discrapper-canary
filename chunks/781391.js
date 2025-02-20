@@ -1,16 +1,16 @@
 n.d(t, {
-    F8: () => a,
-    hi: () => r
+    F8: () => o,
+    hi: () => i
 });
-var i = n(570140);
-function r(e) {
-    i.Z.dispatch({
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
         type: 'UNSYNCED_USER_SETTINGS_UPDATE',
         settings: { useSystemTheme: e }
     });
 }
-function a(e) {
-    i.Z.dispatch({
+function o(e) {
+    r.Z.dispatch({
         type: 'SET_DARK_MODE_THEME',
         theme: e
     });

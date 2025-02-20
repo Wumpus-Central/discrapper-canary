@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = n(764303);
-function r(e) {
+n.d(t, { Z: () => i });
+var r = n(764303);
+function i(e) {
     var t;
-    return -1 !== i((t = Function.toString.call(e))).call(t, '[native code]');
+    return -1 !== r((t = Function.toString.call(e))).call(t, '[native code]');
 }

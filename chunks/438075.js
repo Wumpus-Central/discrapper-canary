@@ -1,56 +1,56 @@
 n.d(t, {
-    Q: () => s,
-    Z: () => r
+    Q: () => l,
+    Z: () => o
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(275344),
+var i = n(275344),
     a = n(938353);
-function r(e) {
+function o(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: r = !1 },
-        hasSpoilerEmbeds: s,
-        handleContextMenu: o,
+        channelMessageProps: { message: t, channel: n, compact: o = !1 },
+        hasSpoilerEmbeds: l,
+        handleContextMenu: s,
         isInteracting: c,
         isAutomodBlockedMessage: d,
         isMessageSnapshot: u,
-        renderThreadAccessory: m,
-        renderSuppressEmbeds: _,
-        renderReactions: h,
-        forceAddReactions: p,
+        renderThreadAccessory: p,
+        renderSuppressEmbeds: m,
+        renderReactions: f,
+        forceAddReactions: h,
         disableComponentInteractivity: g,
-        className: f
+        className: _
     } = e;
     return d
         ? null
-        : (0, i.jsx)(l.Z, {
+        : (0, r.jsx)(i.Z, {
               message: t,
-              children: (0, i.jsx)(a.ZP, {
-                  className: f,
+              children: (0, r.jsx)(a.ZP, {
+                  className: _,
                   isInteracting: c,
                   message: t,
                   channel: n,
-                  compact: r,
-                  hasSpoilerEmbeds: s,
+                  compact: o,
+                  hasSpoilerEmbeds: l,
                   isMessageSnapshot: u,
-                  onMediaItemContextMenu: o,
-                  renderThreadAccessory: m,
+                  onMediaItemContextMenu: s,
+                  renderThreadAccessory: p,
                   disableComponentInteractivity: g,
-                  renderSuppressEmbeds: _,
-                  forceAddReactions: p,
-                  renderReactions: h
+                  renderSuppressEmbeds: m,
+                  forceAddReactions: h,
+                  renderReactions: f
               })
           });
 }
-function s(e, t) {
-    let { message: n, channel: l, compact: r = !1, renderThreadAccessory: s, disableReactionCreates: o, disableReactionUpdates: c, isSearchResult: d } = e;
-    return (0, i.jsx)(a.$p, {
+function l(e, t) {
+    let { message: n, channel: i, compact: o = !1, renderThreadAccessory: l, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: d } = e;
+    return (0, r.jsx)(a.$p, {
         message: n,
-        channel: l,
-        compact: r,
+        channel: i,
+        compact: o,
         hasSpoilerEmbeds: t,
-        renderThreadAccessory: s,
-        disableReactionCreates: o,
+        renderThreadAccessory: l,
+        disableReactionCreates: s,
         disableReactionUpdates: c,
         isSearchResult: d
     });

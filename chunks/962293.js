@@ -1,17 +1,17 @@
-n.d(t, { B: () => s });
-var i = n(200651);
+n.d(t, { B: () => a });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(614777);
-function s(e) {
+var i = n(481060),
+    o = n(193504);
+function a(e) {
     let { onClick: t } = e;
-    return (0, i.jsx)(r.P3F, {
-        className: a.closeButton,
+    return (0, r.jsx)(i.P3F, {
+        className: o.closeButton,
         onClick: t,
-        children: (0, i.jsx)(r.k$p, {
+        children: (0, r.jsx)(i.k$p, {
             size: 'md',
             color: 'currentColor',
-            className: a.closeIcon
+            className: o.closeIcon
         })
     });
 }

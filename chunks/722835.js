@@ -1,35 +1,35 @@
 n.d(t, { Z: () => N });
-var i = n(209739),
-    l = n.n(i),
-    r = n(872810),
-    a = n(579806),
-    s = n(594190),
-    o = n(199902),
-    d = n(592125),
-    c = n(430824),
-    u = n(131951),
-    h = n(496675),
-    m = n(944486),
-    p = n(449224),
-    g = n(358085),
-    _ = n(102172),
-    f = n(74299),
-    E = n(299570),
-    I = n(989941),
-    C = n(70722);
+var r = n(209739),
+    i = n.n(r),
+    l = n(872810),
+    o = n(579806),
+    a = n(594190),
+    s = n(199902),
+    c = n(592125),
+    u = n(430824),
+    d = n(131951),
+    p = n(496675),
+    h = n(944486),
+    g = n(449224),
+    f = n(358085),
+    m = n(102172),
+    b = n(74299),
+    _ = n(299570),
+    E = n(989941),
+    O = n(70722);
 function N() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (!(0, f.Z)(u.Z) || null != o.Z.getCurrentUserActiveStream()) return !1;
-    let t = m.Z.getVoiceChannelId(),
-        n = d.Z.getChannel(t);
+    if (!(0, b.Z)(d.Z) || null != s.Z.getCurrentUserActiveStream()) return !1;
+    let t = h.Z.getVoiceChannelId(),
+        n = c.Z.getChannel(t);
     if (null == n) return !1;
-    let i = n.getGuildId();
-    if (!(0, _.JL)(n, c.Z, h.Z, !1)) return !1;
-    if (u.Z.getUseSystemScreensharePicker()) (0, g.isMac)() && l().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, C.jR) ? (0, E.T)() : (0, E.T)('window');
+    let r = n.getGuildId();
+    if (!(0, m.JL)(n, u.Z, p.Z, !1)) return !1;
+    if (d.Z.getUseSystemScreensharePicker()) (0, f.isMac)() && i().satisfies(null === o.Z || void 0 === o.Z ? void 0 : o.Z.os.release, O.jR) ? (0, _.T)() : (0, _.T)('window');
     else {
-        let t = (0, I.Z)(s.ZP, p.Z);
+        let t = (0, E.Z)(a.ZP, g.Z);
         if (null == t || (t.isLauncher && !e)) return !1;
-        (0, r.WH)(i, n.id, { pid: t.pid });
+        (0, l.WH)(r, n.id, { pid: t.pid });
     }
     return !0;
 }

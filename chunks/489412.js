@@ -1,22 +1,22 @@
-var e = r(936940),
+var n = r(936940),
     i = r(161581).RegExp,
-    o = e(function () {
-        var n = i('a', 'y');
-        return (n.lastIndex = 2), null !== n.exec('abcd');
+    o = n(function () {
+        var t = i('a', 'y');
+        return (t.lastIndex = 2), null !== t.exec('abcd');
     }),
-    u =
-        o ||
-        e(function () {
-            return !i('a', 'y').sticky;
-        }),
     a =
         o ||
-        e(function () {
-            var n = i('^r', 'gy');
-            return (n.lastIndex = 2), null !== n.exec('str');
+        n(function () {
+            return !i('a', 'y').sticky;
+        }),
+    c =
+        o ||
+        n(function () {
+            var t = i('^r', 'gy');
+            return (t.lastIndex = 2), null !== t.exec('str');
         });
-n.exports = {
-    BROKEN_CARET: a,
-    MISSED_STICKY: u,
+t.exports = {
+    BROKEN_CARET: c,
+    MISSED_STICKY: a,
     UNSUPPORTED_Y: o
 };

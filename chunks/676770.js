@@ -1,38 +1,38 @@
 n.d(t, {
-    Fl: () => o,
+    Fl: () => s,
     c1: () => l,
-    cv: () => u,
-    lp: () => s
+    cv: () => c,
+    lp: () => a
 });
-var i = n(149765),
-    r = n(231338),
-    a = n(388032);
-let s = 2,
-    o = 2,
+var r = n(149765),
+    i = n(231338),
+    o = n(388032);
+let a = 2,
+    s = 2,
     l = () => [
         {
             value: 1,
-            label: a.intl.string(a.t['GA/d4O'])
+            label: o.NW.string(o.t['GA/d4O'])
         },
         {
             value: 2,
-            label: a.intl.string(a.t['+rHFen'])
+            label: o.NW.string(o.t['+rHFen'])
         },
         {
             value: 4,
-            label: a.intl.string(a.t['5CNt/P'])
+            label: o.NW.string(o.t['5CNt/P'])
         },
         {
             value: 6,
-            label: a.intl.string(a.t.oQ4PND)
+            label: o.NW.string(o.t.oQ4PND)
         },
         {
             value: 12,
-            label: a.intl.string(a.t.LOQ0j4)
+            label: o.NW.string(o.t.LOQ0j4)
         },
         {
             value: 24,
-            label: a.intl.string(a.t['W0+Lsb'])
+            label: o.NW.string(o.t['W0+Lsb'])
         }
     ],
-    u = i.$e(r.Pl.ADMINISTRATOR, r.Pl.MANAGE_GUILD, r.Pl.BAN_MEMBERS, r.Pl.KICK_MEMBERS, r.Pl.MODERATE_MEMBERS);
+    c = r.$e(i.Pl.ADMINISTRATOR, i.Pl.MANAGE_GUILD, i.Pl.BAN_MEMBERS, i.Pl.KICK_MEMBERS, i.Pl.MODERATE_MEMBERS);

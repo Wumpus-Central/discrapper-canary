@@ -1,27 +1,27 @@
-var i = n(957578).Buffer,
-    r = n(292735);
-function a(e, t, n, a) {
-    if ((i.isBuffer(e) || (e = i.from(e, 'binary')), t && (i.isBuffer(t) || (t = i.from(t, 'binary')), 8 !== t.length))) throw RangeError('salt should be Buffer with 8 byte length');
-    for (var s = n / 8, o = i.alloc(s), l = i.alloc(a || 0), u = i.alloc(0); s > 0 || a > 0; ) {
-        var c = new r();
-        c.update(u), c.update(e), t && c.update(t), (u = c.digest());
+var r = n(957578).Buffer,
+    i = n(292735);
+function o(e, t, n, o) {
+    if ((r.isBuffer(e) || (e = r.from(e, 'binary')), t && (r.isBuffer(t) || (t = r.from(t, 'binary')), 8 !== t.length))) throw RangeError('salt should be Buffer with 8 byte length');
+    for (var a = n / 8, s = r.alloc(a), l = r.alloc(o || 0), c = r.alloc(0); a > 0 || o > 0; ) {
+        var u = new i();
+        u.update(c), u.update(e), t && u.update(t), (c = u.digest());
         var d = 0;
-        if (s > 0) {
-            var f = o.length - s;
-            (d = Math.min(s, u.length)), u.copy(o, f, 0, d), (s -= d);
+        if (a > 0) {
+            var f = s.length - a;
+            (d = Math.min(a, c.length)), c.copy(s, f, 0, d), (a -= d);
         }
-        if (d < u.length && a > 0) {
-            var _ = l.length - a,
-                p = Math.min(a, u.length - d);
-            u.copy(l, _, d, d + p), (a -= p);
+        if (d < c.length && o > 0) {
+            var p = l.length - o,
+                _ = Math.min(o, c.length - d);
+            c.copy(l, p, d, d + _), (o -= _);
         }
     }
     return (
-        u.fill(0),
+        c.fill(0),
         {
-            key: o,
+            key: s,
             iv: l
         }
     );
 }
-e.exports = a;
+e.exports = o;

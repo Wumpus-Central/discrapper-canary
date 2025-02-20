@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = n(808506);
-function r() {
-    let e = i.Z.getFocusedPID();
-    return null != e && (i.Z.isReady(e) || i.Z.isCrashed(e)) ? e : null;
+n.d(t, { Z: () => i });
+var r = n(808506);
+function i() {
+    let e = r.Z.getFocusedPID();
+    return null != e && (r.Z.isReady(e) || r.Z.isCrashed(e)) ? e : null;
 }

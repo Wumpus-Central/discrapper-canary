@@ -1,64 +1,64 @@
-n.d(t, { Z: () => g }), n(653041);
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(322665),
-    s = n(17845),
-    o = n(374939),
-    d = n(283293),
-    c = n(726115),
-    u = n(294330),
-    h = n(981631),
-    m = n(545091);
-let p = {
-    page: h.ZY5.GUILD_DISCOVERY,
-    object: h.qAy.CARD,
-    section: h.jXE.DISCOVER_POPULAR
+n.d(t, { Z: () => f }), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(322665),
+    a = n(17845),
+    s = n(374939),
+    c = n(283293),
+    u = n(726115),
+    d = n(294330),
+    p = n(981631),
+    h = n(578942);
+let g = {
+    page: p.ZY5.GUILD_DISCOVERY,
+    object: p.qAy.CARD,
+    section: p.jXE.DISCOVER_POPULAR
 };
-function g(e) {
-    let { tab: t, guildIds: n, loading: h, onScroll: g, onGuildCardClick: _, onGuildCardSeen: f } = e,
-        E = (0, c.Mf)(t),
-        I = (0, c.a$)(t),
-        C = (0, c.QW)(t),
-        N = (0, c.lg)(t),
-        v = l.useMemo(() => {
-            let e = h ? 30 : n.length,
+function f(e) {
+    let { tab: t, guildIds: n, loading: p, onScroll: f, onGuildCardClick: m, onGuildCardSeen: b } = e,
+        _ = (0, u.Mf)(t),
+        E = (0, u.a$)(t),
+        O = (0, u.QW)(t),
+        N = (0, u.lg)(t),
+        v = i.useMemo(() => {
+            let e = p ? 30 : n.length,
                 t = [];
-            for (let a = 0; a < e; a++) {
-                var l, r;
+            for (let o = 0; o < e; o++) {
+                var i, l;
                 t.push(
-                    (0, i.jsx)(
-                        u.Eo,
+                    (0, r.jsx)(
+                        d.Eo,
                         {
-                            guildId: null !== (l = n[a]) && void 0 !== l ? l : null,
-                            index: a,
-                            onClick: (e) => _(e, a, N, p),
-                            onView: (e) => f(e, N)
+                            guildId: null !== (i = n[o]) && void 0 !== i ? i : null,
+                            index: o,
+                            onClick: (e) => m(e, o, N, g),
+                            onView: (e) => b(e, N)
                         },
-                        null !== (r = n[a]) && void 0 !== r ? r : a
+                        null !== (l = n[o]) && void 0 !== l ? l : o
                     )
                 );
             }
             return t;
-        }, [N, n, h, _, f]);
-    return (0, i.jsxs)(d.Z, {
-        onScroll: g,
+        }, [N, n, p, m, b]);
+    return (0, r.jsxs)(c.Z, {
+        onScroll: f,
         children: [
-            (0, i.jsx)(s.Z, {
-                title: E,
-                description: I,
-                children: (0, i.jsx)(a.Z, {})
+            (0, r.jsx)(a.Z, {
+                title: _,
+                description: E,
+                children: (0, r.jsx)(o.Z, {})
             }),
-            (0, i.jsxs)(o.Z, {
+            (0, r.jsxs)(s.Z, {
                 children: [
-                    (0, i.jsx)(r.X6q, {
-                        className: m.sectionTitle,
+                    (0, r.jsx)(l.X6q, {
+                        className: h.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: C
+                        children: O
                     }),
-                    (0, i.jsx)('div', {
-                        className: m.content,
+                    (0, r.jsx)('div', {
+                        className: h.content,
                         children: v
                     })
                 ]

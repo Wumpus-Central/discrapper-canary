@@ -1,13 +1,13 @@
 n.d(t, { R: () => d });
-var i = n(192379),
-    r = n(348288);
-function a(e, t) {
-    return c(e) || u(e, t) || o(e, t) || s();
+var r = n(192379),
+    i = n(348288);
+function o(e, t) {
+    return u(e) || c(e, t) || s(e, t) || a();
 }
-function s() {
+function a() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-function o(e, t) {
+function s(e, t) {
     if (e) {
         if ('string' == typeof e) return l(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -17,56 +17,56 @@ function o(e, t) {
 }
 function l(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+    return r;
 }
-function u(e, t) {
+function c(e, t) {
     if ('undefined' != typeof Symbol && Symbol.iterator in Object(e)) {
         var n = [],
-            i = !0,
-            r = !1,
-            a = void 0;
+            r = !0,
+            i = !1,
+            o = void 0;
         try {
-            for (var s, o = e[Symbol.iterator](); !(i = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); i = !0);
+            for (var a, s = e[Symbol.iterator](); !(r = (a = s.next()).done) && (n.push(a.value), !t || n.length !== t); r = !0);
         } catch (e) {
-            (r = !0), (a = e);
+            (i = !0), (o = e);
         } finally {
             try {
-                i || null == o.return || o.return();
+                r || null == s.return || s.return();
             } finally {
-                if (r) throw a;
+                if (i) throw o;
             }
         }
         return n;
     }
 }
-function c(e) {
+function u(e) {
     if (Array.isArray(e)) return e;
 }
 var d = function () {
-    var e = a((0, i.useState)(!1), 2),
+    var e = o((0, r.useState)(!1), 2),
         t = e[0],
         n = e[1],
-        s = (0, i.useContext)(r.L);
+        a = (0, r.useContext)(i.L);
     return (
-        (0, i.useEffect)(
+        (0, r.useEffect)(
             function () {
                 var e,
-                    t = null == s ? void 0 : null === (e = s.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
-                    i = {
+                    t = null == a ? void 0 : null === (e = a.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
+                    r = {
                         backendChanged: function (e) {
                             n(e.previewEnabled());
                         }
                     };
                 return (
                     n(t.previewEnabled()),
-                    t.previewsList().register(i),
+                    t.previewsList().register(r),
                     function () {
-                        t.previewsList().unregister(i);
+                        t.previewsList().unregister(r);
                     }
                 );
             },
-            [s, s.dragDropManager]
+            [a, a.dragDropManager]
         ),
         t
     );

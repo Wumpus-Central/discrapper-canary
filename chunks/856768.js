@@ -16,12 +16,12 @@ var t = l(200651),
     f = l(823379),
     v = l(778825),
     m = l(388032),
-    x = l(336427);
+    x = l(134540);
 function g(e) {
     let { guildId: n, className: l, globalOption: i, hideDivider: a = !1, onChange: o, renderOptionSuffix: r } = e;
     return (0, t.jsx)(s.Z, {
         className: d()(x.section, l),
-        title: m.intl.string(m.t.ref7Ki),
+        title: m.NW.string(m.t.ref7Ki),
         hideDivider: a,
         forcedDivider: !0,
         children: (0, t.jsx)(j, {
@@ -79,6 +79,6 @@ function j(e) {
         options: p,
         renderOptionPrefix: C,
         renderOptionSuffix: d,
-        placeholder: m.intl.string(m.t['kMgj+f'])
+        placeholder: m.NW.string(m.t['kMgj+f'])
     });
 }

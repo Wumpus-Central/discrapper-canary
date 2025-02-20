@@ -1,3 +1,3 @@
-n.d(t, { n: () => r });
-var i,
-    r = (((i = {}).START = 'start'), (i.PASSWORD = 'password'), (i.SUCCESS = 'success'), (i.FAILED = 'failed'), i);
+n.d(t, { n: () => i });
+var r,
+    i = (((r = {}).START = 'start'), (r.PASSWORD = 'password'), (r.SUCCESS = 'success'), (r.FAILED = 'failed'), r);

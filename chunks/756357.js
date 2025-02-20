@@ -1,8 +1,8 @@
 !(function (e, t) {
     t(n(913527));
 })(0, function (e) {
-    function t(e, t, n, i) {
-        var r = {
+    function t(e, t, n, r) {
+        var i = {
             s: ['mõne sekundi', 'mõni sekund', 'paar sekundit'],
             ss: [e + 'sekundi', e + 'sekundit'],
             m: ['ühe minuti', 'üks minut'],
@@ -15,7 +15,7 @@
             y: ['ühe aasta', 'aasta', 'üks aasta'],
             yy: [e + ' aasta', e + ' aastat']
         };
-        return t ? (r[n][2] ? r[n][2] : r[n][1]) : i ? r[n][0] : r[n][1];
+        return t ? (i[n][2] ? i[n][2] : i[n][1]) : r ? i[n][0] : i[n][1];
     }
     return e.defineLocale('et', {
         months: 'jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember'.split('_'),

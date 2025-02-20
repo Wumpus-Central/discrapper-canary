@@ -1,4 +1,4 @@
-n.d(t, { v: () => i });
-var i = function (e) {
+n.d(t, { v: () => r });
+var r = function (e) {
     return Object.freeze(e);
 };

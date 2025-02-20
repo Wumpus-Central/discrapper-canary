@@ -1,49 +1,49 @@
-i.d(n, { default: () => p });
-var l = i(200651);
-i(192379);
-var e = i(442837),
-    a = i(481060),
-    c = i(239091),
-    o = i(547972),
-    r = i(435064),
-    s = i(621781),
-    u = i(39604),
-    d = i(332325),
-    h = i(388032);
+e.d(n, { default: () => p });
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    a = e(481060),
+    c = e(239091),
+    o = e(547972),
+    r = e(435064),
+    s = e(621781),
+    u = e(39604),
+    d = e(332325),
+    h = e(388032);
 function p(t) {
     let { onSelect: n } = t,
-        { clipsLength: i } = (0, e.cj)([r.Z], () => r.Z.getSettings()),
+        { clipsLength: e } = (0, l.cj)([r.Z], () => r.Z.getSettings()),
         p = (0, s.Z)();
-    return (0, l.jsxs)(a.v2r, {
+    return (0, i.jsxs)(a.v2r, {
         navId: 'clips-context',
-        'aria-label': h.intl.string(h.t.J1hsY2),
+        'aria-label': h.NW.string(h.t.J1hsY2),
         onClose: c.Zy,
         onSelect: n,
         children: [
-            (0, l.jsx)(a.kSQ, {
-                children: (0, l.jsx)(a.sNh, {
+            (0, i.jsx)(a.kSQ, {
+                children: (0, i.jsx)(a.sNh, {
                     id: 'clips-duration',
-                    label: h.intl.string(h.t.OgfUio),
+                    label: h.NW.string(h.t.OgfUio),
                     children: p.map((t) => {
-                        let { value: n, label: e } = t;
-                        return (0, l.jsx)(
+                        let { value: n, label: l } = t;
+                        return (0, i.jsx)(
                             a.k5B,
                             {
                                 id: 'clips-duration-'.concat(n),
                                 group: 'clips-duration',
-                                label: e,
+                                label: l,
                                 action: () => (0, u.eU)(n),
-                                checked: n === i
+                                checked: n === e
                             },
                             n
                         );
                     })
                 })
             }),
-            (0, l.jsx)(a.kSQ, {
-                children: (0, l.jsx)(a.sNh, {
+            (0, i.jsx)(a.kSQ, {
+                children: (0, i.jsx)(a.sNh, {
                     id: 'clips-settings',
-                    label: h.intl.string(h.t.J1hsY2),
+                    label: h.NW.string(h.t.J1hsY2),
                     action: () => (0, o.Z)(d.Z.CLIPS)
                 })
             })

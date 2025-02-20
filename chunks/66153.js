@@ -1,8 +1,8 @@
-i(250668)(
+n(250668)(
     'Uint8',
-    function (t) {
-        return function (e, i, r) {
-            return t(this, e, i, r);
+    function (e) {
+        return function (t, n, r) {
+            return e(this, t, n, r);
         };
     },
     !0

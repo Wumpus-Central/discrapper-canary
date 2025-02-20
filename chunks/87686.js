@@ -1,61 +1,61 @@
 t.d(n, { Z: () => p }), t(47120);
 var l = t(200651),
     a = t(192379),
-    i = t(120356),
-    s = t.n(i),
-    r = t(481060),
-    u = t(70956),
-    o = t(747071),
-    d = t(586826),
-    c = t(622594),
+    r = t(120356),
+    i = t.n(r),
+    s = t(481060),
+    o = t(70956),
+    u = t(747071),
+    c = t(586826),
+    d = t(622594),
     f = t(174727),
     m = t(710111),
-    h = t(543776);
+    h = t(283624);
 let g = {
         startPositionMs: 0,
-        endPositionMs: 2 * (10 * u.Z.Millis.SECOND),
+        endPositionMs: 2 * (10 * o.Z.Millis.SECOND),
         playheadPositionMs: 0
     },
     p = a.memo(function (e) {
-        let { className: n, volume: t, disabled: i = !1, onChange: p } = e,
-            { audio: x } = (0, d.p)(),
+        let { className: n, volume: t, disabled: r = !1, onChange: p } = e,
+            { audio: b } = (0, c.p)(),
             [v, y] = a.useState(!1),
-            [b, N] = a.useState(g),
-            { playheadPositionMs: j, endPositionMs: w, startPositionMs: C } = b,
-            S = null != x,
-            Z = w - C,
-            M = Z > m.YW * u.Z.Millis.SECOND;
+            [x, j] = a.useState(g),
+            { playheadPositionMs: N, endPositionMs: w, startPositionMs: C } = x,
+            S = null != b,
+            O = w - C,
+            P = O > m.YW * o.Z.Millis.SECOND;
         a.useEffect(() => {
-            if (null != x)
+            if (null != b)
                 return (
-                    N({
+                    j({
                         playheadPositionMs: 0,
-                        endPositionMs: x.duration * u.Z.Millis.SECOND,
+                        endPositionMs: b.duration * o.Z.Millis.SECOND,
                         startPositionMs: 0
                     }),
                     () => {
-                        x.pause(), y(!1);
+                        b.pause(), y(!1);
                     }
                 );
-        }, [x]);
+        }, [b]);
         let k = a.useCallback(
                 (e) => {
-                    null != x && (x.pause(), null != e && (x.currentTime = e), y(!1));
+                    null != b && (b.pause(), null != e && (b.currentTime = e), y(!1));
                 },
-                [x]
+                [b]
             ),
-            E = a.useCallback(() => {
-                if (null != x) {
+            Z = a.useCallback(() => {
+                if (null != b) {
                     if (v) {
                         k();
                         return;
                     }
-                    j >= w ? (x.currentTime = (0, f.my)(C)) : (x.currentTime = (0, f.my)(j)), (x.volume = (0, o.Z)(t)), x.play(), y(!0);
+                    N >= w ? (b.currentTime = (0, f.my)(C)) : (b.currentTime = (0, f.my)(N)), (b.volume = (0, u.Z)(t)), b.play(), y(!0);
                 }
-            }, [x, w, k, j, v, C, t]),
-            I = a.useCallback(
+            }, [b, w, k, N, v, C, t]),
+            M = a.useCallback(
                 (e) => {
-                    N(e),
+                    j(e),
                         null == p ||
                             p({
                                 startMs: e.startPositionMs,
@@ -64,18 +64,18 @@ let g = {
                 },
                 [p]
             ),
-            P = a.useCallback(
+            E = a.useCallback(
                 (e) => {
-                    null != x && (x.currentTime = e);
+                    null != b && (b.currentTime = e);
                 },
-                [x]
+                [b]
             );
         return (0, l.jsxs)('div', {
-            className: s()(
+            className: i()(
                 h.container,
                 {
                     [h.initialized]: S,
-                    [h.disabled]: !S || i
+                    [h.disabled]: !S || r
                 },
                 n
             ),
@@ -83,16 +83,16 @@ let g = {
                 (0, l.jsxs)('div', {
                     className: h.playButtonContainer,
                     children: [
-                        (0, l.jsx)(r.P3F, {
+                        (0, l.jsx)(s.P3F, {
                             className: h.playButton,
-                            onClick: S ? E : void 0,
+                            onClick: S ? Z : void 0,
                             children: v
-                                ? (0, l.jsx)(r.wNq, {
+                                ? (0, l.jsx)(s.wNq, {
                                       size: 'xs',
                                       color: 'currentColor',
                                       className: h.playButtonIcon
                                   })
-                                : (0, l.jsx)(r.o1U, {
+                                : (0, l.jsx)(s.o1U, {
                                       size: 'xs',
                                       color: 'currentColor',
                                       className: h.playButtonIcon
@@ -100,21 +100,21 @@ let g = {
                         }),
                         (0, l.jsx)('div', {
                             className: h.durationContainer,
-                            children: (0, l.jsx)(r.Text, {
+                            children: (0, l.jsx)(s.Text, {
                                 className: h.__invalid_duration,
                                 variant: 'text-xs/normal',
-                                color: M ? 'text-warning' : 'text-positive',
-                                children: ''.concat((0, f.my)(Z).toFixed(2), 's')
+                                color: P ? 'text-warning' : 'text-positive',
+                                children: ''.concat((0, f.my)(O).toFixed(2), 's')
                             })
                         })
                     ]
                 }),
-                (0, l.jsx)(c.Z, {
+                (0, l.jsx)(d.Z, {
                     playing: v,
-                    onPlaybackChange: P,
+                    onPlaybackChange: E,
                     onPausePlayback: k,
-                    onChangePosition: I,
-                    disabled: i
+                    onChangePosition: M,
+                    disabled: r
                 })
             ]
         });

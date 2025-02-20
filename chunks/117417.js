@@ -11,9 +11,9 @@ var t = (e.exports = {});
                     var e,
                         t = 3,
                         n = document.createElement('div'),
-                        i = n.getElementsByTagName('i');
+                        r = n.getElementsByTagName('i');
                     do n.innerHTML = '<!--[if gt IE ' + ++t + ']><i></i><![endif]-->';
-                    while (i[0]);
+                    while (r[0]);
                     return t > 4 ? t : e;
                 })())
     );

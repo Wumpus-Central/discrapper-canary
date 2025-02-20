@@ -1,32 +1,32 @@
 n.d(t, { Z: () => f });
-var i = n(192379),
-    r = n(723184),
-    a = n(88758),
-    s = n(716708),
-    o =
+var r = n(192379),
+    i = n(723184),
+    o = n(88758),
+    a = n(716708),
+    s =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
     l = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function u(e, t) {
+function c(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function c(e, t) {
+function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
@@ -44,24 +44,24 @@ function d(e, t) {
 }
 let f = (function (e) {
     function t() {
-        u(this, t);
-        for (var e, n, i, r = arguments.length, s = Array(r), o = 0; o < r; o++) s[o] = arguments[o];
+        c(this, t);
+        for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
         return (
-            (n = i = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
-            (i.handleChange = function (e) {
-                var t = a.T(e, i.props.hsl, i.props.direction, i.props.a, i.container);
-                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
+            (n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+            (r.handleChange = function (e) {
+                var t = o.T(e, r.props.hsl, r.props.direction, r.props.a, r.container);
+                t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
             }),
-            (i.handleMouseDown = function (e) {
-                i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
+            (r.handleMouseDown = function (e) {
+                r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
             }),
-            (i.handleMouseUp = function () {
-                i.unbindEventListeners();
+            (r.handleMouseUp = function () {
+                r.unbindEventListeners();
             }),
-            (i.unbindEventListeners = function () {
-                window.removeEventListener('mousemove', i.handleChange), window.removeEventListener('mouseup', i.handleMouseUp);
+            (r.unbindEventListeners = function () {
+                window.removeEventListener('mousemove', r.handleChange), window.removeEventListener('mouseup', r.handleMouseUp);
             }),
-            c(i, n)
+            u(r, n)
         );
     }
     return (
@@ -78,7 +78,7 @@ let f = (function (e) {
                 value: function () {
                     var e = this,
                         t = this.props.rgb,
-                        n = (0, r.default)(
+                        n = (0, i.default)(
                             {
                                 default: {
                                     alpha: {
@@ -122,19 +122,19 @@ let f = (function (e) {
                                         top: 100 * t.a + '%'
                                     }
                                 },
-                                overwrite: o({}, this.props.style)
+                                overwrite: s({}, this.props.style)
                             },
                             {
                                 vertical: 'vertical' === this.props.direction,
                                 overwrite: !0
                             }
                         );
-                    return i.createElement(
+                    return r.createElement(
                         'div',
                         { style: n.alpha },
-                        i.createElement('div', { style: n.checkboard }, i.createElement(s.Z, { renderers: this.props.renderers })),
-                        i.createElement('div', { style: n.gradient }),
-                        i.createElement(
+                        r.createElement('div', { style: n.checkboard }, r.createElement(a.Z, { renderers: this.props.renderers })),
+                        r.createElement('div', { style: n.gradient }),
+                        r.createElement(
                             'div',
                             {
                                 style: n.container,
@@ -145,7 +145,7 @@ let f = (function (e) {
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            i.createElement('div', { style: n.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: n.slider }))
+                            r.createElement('div', { style: n.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: n.slider }))
                         )
                     );
                 }
@@ -153,4 +153,4 @@ let f = (function (e) {
         ]),
         t
     );
-})(i.PureComponent || i.Component);
+})(r.PureComponent || r.Component);

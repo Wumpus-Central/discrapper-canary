@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     var t = e.reduce(function (e, t) {
         var n = e[t.name];
         return (
@@ -15,4 +15,4 @@ function i(e) {
         return t[e];
     });
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

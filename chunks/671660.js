@@ -1,7 +1,7 @@
-var i = n(88579),
-    r = n(708187),
-    a = n(292403);
-function s(e) {
-    return 'function' != typeof e.constructor || a(e) ? {} : i(r(e));
+var r = n(88579),
+    i = n(708187),
+    o = n(292403);
+function a(e) {
+    return 'function' != typeof e.constructor || o(e) ? {} : r(i(e));
 }
-e.exports = s;
+e.exports = a;

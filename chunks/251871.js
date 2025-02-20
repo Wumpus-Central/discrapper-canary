@@ -1,53 +1,53 @@
-e.d(t, { default: () => A }), e(47120);
-var i = e(200651),
-    l = e(192379),
-    r = e(399606),
-    s = e(481060),
-    o = e(493773),
-    a = e(100527),
-    d = e(906732),
-    u = e(565138),
-    c = e(314897),
-    _ = e(271383),
-    g = e(430824),
-    h = e(626135),
-    N = e(715903),
-    I = e(295474),
-    f = e(273504),
-    k = e(981631),
-    x = e(372897),
-    C = e(388032),
-    Z = e(284132);
-function A(n) {
-    var t;
-    let { onClose: e, transitionState: A, guildId: E } = n,
-        m = (0, r.e7)([c.default], () => c.default.getId()),
-        R = (0, r.e7)([_.ZP], () => _.ZP.getMember(E, m), [E, m]),
-        O = (0, r.e7)([g.Z], () => g.Z.getGuild(E), [E]),
-        P = null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : '',
-        p = (0, N.no)(R),
+t.d(n, { default: () => A }), t(47120);
+var i = t(200651),
+    r = t(192379),
+    l = t(399606),
+    s = t(481060),
+    o = t(493773),
+    a = t(100527),
+    d = t(906732),
+    u = t(565138),
+    c = t(314897),
+    N = t(271383),
+    _ = t(430824),
+    g = t(626135),
+    h = t(715903),
+    I = t(295474),
+    f = t(273504),
+    k = t(981631),
+    x = t(372897),
+    C = t(388032),
+    Z = t(520847);
+function A(e) {
+    var n;
+    let { onClose: t, transitionState: A, guildId: E } = e,
+        m = (0, l.e7)([c.default], () => c.default.getId()),
+        R = (0, l.e7)([N.ZP], () => N.ZP.getMember(E, m), [E, m]),
+        O = (0, l.e7)([_.Z], () => _.Z.getGuild(E), [E]),
+        P = null !== (n = null == O ? void 0 : O.name) && void 0 !== n ? n : '',
+        p = (0, h.no)(R),
         { analyticsLocations: v } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
         [L, M] = (0, I.ww)({
             guildId: E,
             analyticsLocations: v,
             openWithoutBackstack: !0
         }),
-        U = p.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
-    M || (U = C.intl.string(C.t.FFj5Dg));
-    let j = M ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
+        U = p.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.NW.string(C.t.SpDXIy) : C.NW.string(C.t['QRN+Sk']);
+    M || (U = C.NW.string(C.t.FFj5Dg));
+    let j = M ? C.NW.string(C.t['/PGQf3']) : C.NW.string(C.t.WikgZ2);
     return ((0, o.ZP)(() => {
-        h.default.track(k.rMx.OPEN_MODAL, {
+        g.default.track(k.rMx.OPEN_MODAL, {
             type: f.dc,
             guild_id: E,
             other_user_id: m
         });
     }),
-    l.useEffect(() => {
+    r.useEffect(() => {
         if (null == O) {
-            e();
+            t();
             return;
         }
-    }, [O, e]),
+    }, [O, t]),
     null == O)
         ? null
         : (0, i.jsxs)(s.Y0X, {
@@ -79,7 +79,7 @@ function A(n) {
                               (0, i.jsx)(s.X6q, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
-                                  children: C.intl.format(C.t.kcYdTk, { guildName: P })
+                                  children: C.NW.format(C.t.kcYdTk, { guildName: P })
                               })
                           ]
                       })
@@ -98,17 +98,17 @@ function A(n) {
                       children: [
                           (0, i.jsx)(s.zxk, {
                               onClick: () => {
-                                  L(), e();
+                                  L(), t();
                               },
                               color: s.zxk.Colors.BRAND,
                               look: s.zxk.Looks.FILLED,
                               children: j
                           }),
                           (0, i.jsx)(s.zxk, {
-                              onClick: e,
+                              onClick: t,
                               color: s.zxk.Colors.PRIMARY,
                               look: s.zxk.Looks.LINK,
-                              children: C.intl.string(C.t['ETE/oK'])
+                              children: C.NW.string(C.t['ETE/oK'])
                           })
                       ]
                   })

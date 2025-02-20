@@ -1,35 +1,35 @@
-n.d(t, { Z: () => h });
-var i = n(200651),
-    l = n(192379),
-    a = n(481369),
-    r = n(944103),
-    s = n(946050),
-    o = n(256413),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    l = n(481369),
+    o = n(944103),
+    a = n(946050),
+    s = n(256413),
     c = n(292853),
-    d = n(359565),
-    u = n(226027);
-let h = l.memo(function (e) {
+    u = n(359565),
+    d = n(226027);
+let p = i.memo(function (e) {
     let { channel: t, narrow: n } = e,
-        l = (0, o.Z)(t),
-        h = (0, a.Z)(),
-        { showUnreadsNotice: p, clearUnreadsNotice: m } = (0, r.Z)(t);
+        i = (0, s.Z)(t),
+        p = (0, l.Z)(),
+        { showUnreadsNotice: h, clearUnreadsNotice: f } = (0, o.Z)(t);
     return t.isArchivedLockedThread()
-        ? (0, i.jsx)(d.s, {
+        ? (0, r.jsx)(u.s, {
               channel: t,
               narrow: n
           })
         : t.isLockedThread()
-          ? (0, i.jsx)(d.q, {
+          ? (0, r.jsx)(u.q, {
                 channel: t,
                 narrow: n
             })
-          : p
-            ? (0, i.jsx)(s.Z, {
+          : h
+            ? (0, r.jsx)(a.Z, {
                   channel: t,
-                  clearUnreadsNotice: m
+                  clearUnreadsNotice: f
               })
-            : l && h.includes(u.E.OPT_IN_CHANNEL)
-              ? (0, i.jsx)(c.Z, {
+            : i && p.includes(d.E.OPT_IN_CHANNEL)
+              ? (0, r.jsx)(c.Z, {
                     channel: t,
                     narrow: n
                 })

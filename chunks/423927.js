@@ -17,13 +17,13 @@
     function n(e, t, n) {
         return n ? (t % 10 == 1 && t % 100 != 11 ? e[2] : e[3]) : t % 10 == 1 && t % 100 != 11 ? e[0] : e[1];
     }
-    function i(e, i, r) {
-        return e + ' ' + n(t[r], e, i);
+    function r(e, r, i) {
+        return e + ' ' + n(t[i], e, r);
     }
-    function r(e, i, r) {
-        return n(t[r], e, i);
+    function i(e, r, i) {
+        return n(t[i], e, r);
     }
-    function a(e, t) {
+    function o(e, t) {
         return t ? 'dažas sekundes' : 'dažām sekundēm';
     }
     return e.defineLocale('lv', {
@@ -52,18 +52,18 @@
         relativeTime: {
             future: 'pēc %s',
             past: 'pirms %s',
-            s: a,
-            ss: i,
-            m: r,
-            mm: i,
-            h: r,
-            hh: i,
-            d: r,
-            dd: i,
-            M: r,
-            MM: i,
-            y: r,
-            yy: i
+            s: o,
+            ss: r,
+            m: i,
+            mm: r,
+            h: i,
+            hh: r,
+            d: i,
+            dd: r,
+            M: i,
+            MM: r,
+            y: i,
+            yy: r
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

@@ -1,62 +1,62 @@
-a.d(l, { Z: () => m });
-var s = a(200651);
-a(192379);
-var n = a(692547),
-    i = a(481060),
-    t = a(410030),
-    r = a(686546),
-    d = a(60034),
-    c = a(686369),
-    o = a(388032),
-    u = a(712617);
+n.d(t, { Z: () => m });
+var r = n(200651);
+n(192379);
+var l = n(692547),
+    a = n(481060),
+    s = n(410030),
+    i = n(686546),
+    c = n(60034),
+    o = n(686369),
+    d = n(388032),
+    u = n(545495);
 function m(e) {
-    let { name: l, onRetry: a } = e,
-        m = (0, t.ZP)(),
-        h = (0, i.dQu)(n.Z.colors.BG_BASE_TERTIARY),
-        x = (0, c.d)(m, h.hex()),
-        j = null != l ? l : o.intl.string(o.t.DmIUGB);
-    return (0, s.jsxs)('div', {
+    let { name: t, onRetry: n } = e,
+        m = (0, s.ZP)(),
+        h = (0, a.dQu)(l.Z.colors.BG_BASE_TERTIARY),
+        j = (0, o.d)(m, h.hex()),
+        f = null != t ? t : d.NW.string(d.t.DmIUGB);
+    return (0, r.jsxs)('div', {
         className: u.container,
         children: [
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: u.banner,
-                style: { background: x }
+                style: { background: j }
             }),
-            (0, s.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: u.avatarContainer,
-                children: (0, s.jsx)(r.ZP, {
-                    mask: r.QS.CLAN_ICON,
+                children: (0, r.jsx)(i.ZP, {
+                    mask: i.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
-                    children: (0, s.jsx)('div', {
+                    children: (0, r.jsx)('div', {
                         className: u.avatarWrapper,
-                        children: (0, s.jsx)(d.R, {
-                            guildName: j,
+                        children: (0, r.jsx)(c.R, {
+                            guildName: f,
                             iconSize: 64
                         })
                     })
                 })
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: u.header,
                 children: [
-                    (0, s.jsx)(i.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
-                        children: j
+                        children: f
                     }),
-                    (0, s.jsxs)(i.P3F, {
+                    (0, r.jsxs)(a.P3F, {
                         className: u.error,
-                        onClick: a,
+                        onClick: n,
                         children: [
-                            (0, s.jsx)(i.P4T, {
+                            (0, r.jsx)(a.P4T, {
                                 size: 'sm',
                                 color: 'currentColor'
                             }),
-                            (0, s.jsx)(i.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-warning',
-                                children: o.intl.string(o.t.tmGHjY)
+                                children: d.NW.string(d.t.tmGHjY)
                             })
                         ]
                     })

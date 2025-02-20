@@ -1,18 +1,18 @@
-a.d(t, { D: () => k }), a(47120);
+a.d(t, { D: () => g }), a(47120);
 var n = a(200651),
     s = a(192379),
-    l = a(557533),
-    i = a.n(l),
-    r = a(39383),
-    o = a.n(r),
+    r = a(557533),
+    l = a.n(r),
+    i = a(39383),
+    o = a.n(i),
     c = a(608863),
     d = a(66037),
     u = a(643103),
-    _ = a(34211),
-    N = a(231338),
+    p = a(34211),
+    _ = a(231338),
     h = a(431138),
-    m = a(768587);
-function p(e, t, a) {
+    m = a(889015);
+function N(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,8 +25,8 @@ function p(e, t, a) {
         e
     );
 }
-let I = N.j_.MAIN_NAVIGATION_MENU;
-class k extends s.PureComponent {
+let I = _.j_.MAIN_NAVIGATION_MENU;
+class g extends s.PureComponent {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
     }
@@ -34,10 +34,10 @@ class k extends s.PureComponent {
         window.removeEventListener('keydown', this.handleKeyDown);
     }
     render() {
-        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: l, hideNavAriaLabel: r } = this.props,
+        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: r, hideNavAriaLabel: i } = this.props,
             { menuOpen: o } = this.state;
         return (0, n.jsx)('header', {
-            className: i()(m.header, e),
+            className: l()(m.header, e),
             children: (0, n.jsxs)('nav', {
                 className: m.headerInner,
                 children: [
@@ -49,8 +49,8 @@ class k extends s.PureComponent {
                         children: (0, n.jsx)(d.Z, {
                             avoidRouter: s,
                             className: m.logoWrapper,
-                            to: N.am.INDEX,
-                            from: N.j_.MAIN_NAVIGATION_MENU,
+                            to: _.am.INDEX,
+                            from: _.j_.MAIN_NAVIGATION_MENU,
                             children: (0, n.jsx)('img', {
                                 className: m.logo,
                                 src: h.r.ASSET_LOGO_DISCORD_SVG,
@@ -67,7 +67,7 @@ class k extends s.PureComponent {
                         children: (0, n.jsx)(c.r, {
                             open: o,
                             'aria-haspopup': 'true',
-                            'aria-label': o ? r : l,
+                            'aria-label': o ? i : r,
                             'aria-expanded': o,
                             'aria-controls': this._mainNavId,
                             onClick: this.toggleMenu
@@ -76,7 +76,7 @@ class k extends s.PureComponent {
                     (0, n.jsxs)('ul', {
                         className: o ? m.headerNavOpen : m.headerNav,
                         children: [
-                            (0, n.jsx)(_.o, {
+                            (0, n.jsx)(p.o, {
                                 avoidRouter: s,
                                 TrackClick: t,
                                 styles: m,
@@ -92,12 +92,12 @@ class k extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_mainNavId', o()('mainNav')),
-            p(this, 'state', { menuOpen: !1 }),
-            p(this, 'toggleMenu', () => {
+            N(this, '_mainNavId', o()('mainNav')),
+            N(this, 'state', { menuOpen: !1 }),
+            N(this, 'toggleMenu', () => {
                 this.setState({ menuOpen: !this.state.menuOpen });
             }),
-            p(this, 'handleKeyDown', (e) => {
+            N(this, 'handleKeyDown', (e) => {
                 let { menuOpen: t } = this.state;
                 ('Escape' === e.key || 'Esc' === e.key) && (e.preventDefault(), t && this.toggleMenu());
             });

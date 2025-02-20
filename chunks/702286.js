@@ -1,7 +1,7 @@
-o.d(e, { Z: () => l });
-var t = o(703656),
-    i = o(981631);
-function l() {
-    let n = (0, t.s1)();
-    n.length > 0 ? n.goBack() : (0, t.uL)(i.Z5c.ME);
+t.d(n, { Z: () => r });
+var o = t(703656),
+    i = t(981631);
+function r() {
+    let e = (0, o.s1)();
+    e.length > 0 ? e.goBack() : (0, o.uL)(i.Z5c.ME);
 }

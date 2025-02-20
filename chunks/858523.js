@@ -1,47 +1,47 @@
 n.d(t, {
-    R: () => c,
-    default: () => d
+    R: () => u,
+    default: () => c
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(239091),
-    s = n(299206),
-    o = n(388032);
-function d(e) {
-    let { guild: t, shiftId: n, onSelect: d, closePopout: c, 'aria-label': u } = e,
-        h = (0, s.Z)({
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(239091),
+    a = n(299206),
+    s = n(388032);
+function c(e) {
+    let { guild: t, shiftId: n, onSelect: c, closePopout: u, 'aria-label': d } = e,
+        p = (0, a.Z)({
             id: t.id,
-            label: o.intl.string(o.t['94lLDw']),
+            label: s.NW.string(s.t['94lLDw']),
             shiftId: n,
-            onSuccess: c
+            onSuccess: u
         }),
-        m = l.useCallback((e) => {
+        h = i.useCallback((e) => {
             e.stopPropagation();
         }, []);
-    return (0, i.jsx)(r.P3F, {
-        onClick: m,
-        children: (0, i.jsx)(r.v2r, {
-            onSelect: d,
+    return (0, r.jsx)(l.P3F, {
+        onClick: h,
+        children: (0, r.jsx)(l.v2r, {
+            onSelect: c,
             navId: 'guild-discovery-context-menu',
-            'aria-label': null != u ? u : o.intl.string(o.t.ogxXGh),
-            onClose: a.Zy,
-            children: (0, i.jsx)(r.kSQ, { children: h })
+            'aria-label': null != d ? d : s.NW.string(s.t.ogxXGh),
+            onClose: o.Zy,
+            children: (0, r.jsx)(l.kSQ, { children: p })
         })
     });
 }
-let c = (e) => {
-    let { guild: t, children: n, onRequestOpen: l, onRequestClose: a } = e;
-    return (0, i.jsx)(r.yRy, {
-        onRequestOpen: l,
-        onRequestClose: a,
-        animation: r.yRy.Animation.NONE,
+let u = (e) => {
+    let { guild: t, children: n, onRequestOpen: i, onRequestClose: o } = e;
+    return (0, r.jsx)(l.yRy, {
+        onRequestOpen: i,
+        onRequestClose: o,
+        animation: l.yRy.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(d, {
+            return (0, r.jsx)(c, {
                 guild: t,
                 closePopout: n
             });

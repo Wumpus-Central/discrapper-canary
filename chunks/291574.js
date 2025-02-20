@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { Z: () => o });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-09_app_dms',
     label: 'App DMs Experiment',
@@ -10,7 +10,7 @@ let a = (0, i.B)({
         quickLaunchEnabled: !1,
         activityPopoutWindowInAppDMEnabled: !1
     },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

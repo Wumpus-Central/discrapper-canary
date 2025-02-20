@@ -1,31 +1,31 @@
-n.d(t, { _: () => o });
-var i = n(608297);
-function r(e, t) {
+n.d(t, { _: () => s });
+var r = n(608297);
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function s(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
+function a(e, t, n) {
+    return t && o(e.prototype, t), n && o(e, n), e;
 }
-var o = (function () {
+var s = (function () {
     function e() {
-        r(this, e);
+        i(this, e);
     }
     return (
-        s(e, [
+        a(e, [
             {
                 key: 'run',
-                value: function (e, t, n, r) {
-                    var a = this.parse(e, t, n, r);
-                    return a
+                value: function (e, t, n, i) {
+                    var o = this.parse(e, t, n, i);
+                    return o
                         ? {
-                              setter: new i.gr(a.value, this.validate, this.set, this.priority, this.subPriority),
-                              rest: a.rest
+                              setter: new r.gr(o.value, this.validate, this.set, this.priority, this.subPriority),
+                              rest: o.rest
                           }
                         : null;
                 }

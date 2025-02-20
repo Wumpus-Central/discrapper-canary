@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
-var i = n(442837),
-    l = n(430824),
-    r = n(496675),
-    a = n(312146),
-    s = n(981631);
-function o(e) {
-    let t = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
-        n = (0, a.Ui)(t),
-        o = r.Z.can(s.Plq.MANAGE_CHANNELS, t);
-    return n && o;
+n.d(t, { Z: () => s });
+var r = n(442837),
+    i = n(430824),
+    l = n(496675),
+    o = n(312146),
+    a = n(981631);
+function s(e) {
+    let t = (0, r.e7)([i.Z], () => i.Z.getGuild(e)),
+        n = (0, o.Ui)(t),
+        s = l.Z.can(a.Plq.MANAGE_CHANNELS, t);
+    return n && s;
 }

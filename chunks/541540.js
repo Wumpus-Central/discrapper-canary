@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function N(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function N(e) {
     }
     return e;
 }
-function x(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,12 +59,12 @@ function x(e, t) {
         e
     );
 }
-class b extends i.Component {
+class x extends i.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return x(N({}, e), { object: g.qAy.BUTTON_CTA });
+        return N(b({}, e), { object: g.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
@@ -137,7 +137,7 @@ class b extends i.Component {
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
                     u.default.track(g.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: x(N({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
+                        location: N(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
                     }),
                         (0, c.V)({ processedCode: n }),
                         this.setState({ codeInput: '' });
@@ -152,7 +152,7 @@ class b extends i.Component {
 function _() {
     let e = i.useContext(u.AnalyticsContext),
         t = (0, s.e7)([d.Z], () => d.Z.enabled);
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(x, {
         analyticsContext: e,
         obscureInput: t
     });

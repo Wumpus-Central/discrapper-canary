@@ -1,41 +1,41 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
-n(192379);
-var l = n(866442),
-    a = n(481060),
-    r = n(388032),
-    s = n(935919);
-function o(e) {
-    let { locked: t, role: n, textVariant: o = 'text-xs/medium' } = e,
-        c = (0, a.dQu)(a.TVs.colors.INTERACTIVE_NORMAL).hex();
-    return (0, i.jsx)('div', {
-        className: s.roleTagContainer,
-        children: (0, i.jsxs)('div', {
-            className: s.roleTag,
+r.d(t, { Z: () => i });
+var A = r(200651);
+r(192379);
+var n = r(866442),
+    o = r(481060),
+    a = r(388032),
+    l = r(439857);
+function i(e) {
+    let { locked: t, role: r, textVariant: i = 'text-xs/medium' } = e,
+        s = (0, o.dQu)(o.TVs.colors.INTERACTIVE_NORMAL).hex();
+    return (0, A.jsx)('div', {
+        className: l.roleTagContainer,
+        children: (0, A.jsxs)('div', {
+            className: l.roleTag,
             children: [
-                (0, i.jsx)('div', {
-                    className: s.roleColor,
-                    style: { backgroundColor: (0, l.Rf)(n.color) }
+                (0, A.jsx)('div', {
+                    className: l.roleColor,
+                    style: { backgroundColor: (0, n.Rf)(r.color) }
                 }),
-                (0, i.jsx)(a.LZC, {
+                (0, A.jsx)(o.LZC, {
                     size: 8,
                     horizontal: !0
                 }),
-                (0, i.jsxs)(a.Text, {
-                    variant: o,
+                (0, A.jsxs)(o.Text, {
+                    variant: i,
                     color: 'text-normal',
-                    children: [(0, i.jsx)(a.nn4, { children: r.intl.string(r.t.RnyseH) }), n.name]
+                    children: [(0, A.jsx)(o.nn4, { children: a.NW.string(a.t.RnyseH) }), r.name]
                 }),
                 !0 === t &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, A.jsxs)(A.Fragment, {
                         children: [
-                            (0, i.jsx)(a.LZC, {
+                            (0, A.jsx)(o.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, i.jsx)(a.mBM, {
+                            (0, A.jsx)(o.mBM, {
                                 size: 'md',
-                                color: c
+                                color: s
                             })
                         ]
                     })

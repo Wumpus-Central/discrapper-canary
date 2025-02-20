@@ -1,35 +1,35 @@
 n.d(t, { y: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(777207),
-    o = n(962293),
+var i = n(120356),
+    o = n.n(i),
+    a = n(777207),
+    s = n(962293),
     l = n(45251),
-    u = n(388032),
-    c = n(305727);
+    c = n(388032),
+    u = n(162341);
 function d(e) {
     let { pendingScheduledMessage: t } = e,
-        { channelId: n, scheduledTimestamp: r } = t;
+        { channelId: n, scheduledTimestamp: i } = t;
     function d(e) {
         e.stopPropagation(), (0, l.pO)(n);
     }
-    return (0, i.jsx)('div', {
-        className: c.clipContainer,
-        children: (0, i.jsx)('div', {
-            className: c.container,
-            children: (0, i.jsxs)('div', {
-                className: c.scheduledMessageBar,
+    return (0, r.jsx)('div', {
+        className: u.clipContainer,
+        children: (0, r.jsx)('div', {
+            className: u.container,
+            children: (0, r.jsxs)('div', {
+                className: u.scheduledMessageBar,
                 children: [
-                    (0, i.jsx)(s.x, {
+                    (0, r.jsx)(a.x, {
                         color: 'header-secondary',
-                        className: a()(c.text, c.scheduledMessageBarLabel),
+                        className: o()(u.text, u.scheduledMessageBarLabel),
                         variant: 'text-sm/normal',
-                        children: u.intl.formatToPlainString(u.t.MQcRX1, { timestamp: new Date(r).valueOf() })
+                        children: c.NW.formatToPlainString(c.t.MQcRX1, { timestamp: new Date(i).valueOf() })
                     }),
-                    (0, i.jsx)('div', {
-                        className: c.actions,
-                        children: (0, i.jsx)(o.B, { onClick: d })
+                    (0, r.jsx)('div', {
+                        className: u.actions,
+                        children: (0, r.jsx)(s.B, { onClick: d })
                     })
                 ]
             })

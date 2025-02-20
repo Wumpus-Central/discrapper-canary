@@ -4,21 +4,21 @@ function t(e) {
             $pattern: /[\w.\/]+/,
             built_in: ['action', 'bindattr', 'collection', 'component', 'concat', 'debugger', 'each', 'each-in', 'get', 'hash', 'if', 'in', 'input', 'link-to', 'loc', 'log', 'lookup', 'mut', 'outlet', 'partial', 'query-params', 'render', 'template', 'textarea', 'unbound', 'unless', 'view', 'with', 'yield']
         },
-        i = {
+        r = {
             $pattern: /[\w.\/]+/,
             literal: ['true', 'false', 'undefined', 'null']
         },
-        r = /""|"[^"]+"/,
-        a = /''|'[^']+'/,
-        s = /\[\]|\[[^\]]+\]/,
-        o = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
+        i = /""|"[^"]+"/,
+        o = /''|'[^']+'/,
+        a = /\[\]|\[[^\]]+\]/,
+        s = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
         l = /(\.|\/)/,
-        u = t.either(r, a, s, o),
-        c = t.concat(t.optional(/\.|\.\/|\//), u, t.anyNumberOfTimes(t.concat(l, u))),
-        d = t.concat('(', s, '|', o, ')(?==)'),
-        f = { begin: c },
-        _ = e.inherit(f, { keywords: i }),
-        p = {
+        c = t.either(i, o, a, s),
+        u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
+        d = t.concat('(', a, '|', s, ')(?==)'),
+        f = { begin: u },
+        p = e.inherit(f, { keywords: r }),
+        _ = {
             begin: /\(/,
             end: /\)/
         },
@@ -30,7 +30,7 @@ function t(e) {
                 begin: /=/,
                 end: /=/,
                 starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, _, p]
+                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, p, _]
                 }
             }
         },
@@ -41,7 +41,7 @@ function t(e) {
             contains: [{ begin: /\w+/ }]
         },
         g = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, _, p],
+            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, p, _],
             returnEnd: !0
         },
         E = e.inherit(f, {
@@ -49,17 +49,17 @@ function t(e) {
             keywords: n,
             starts: e.inherit(g, { end: /\)/ })
         });
-    p.contains = [E];
+    _.contains = [E];
     let v = e.inherit(f, {
             keywords: n,
             className: 'name',
             starts: e.inherit(g, { end: /\}\}/ })
         }),
-        y = e.inherit(f, {
+        b = e.inherit(f, {
             keywords: n,
             className: 'name'
         }),
-        I = e.inherit(f, {
+        y = e.inherit(f, {
             className: 'name',
             keywords: n,
             starts: e.inherit(g, { end: /\}\}/ })
@@ -95,7 +95,7 @@ function t(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{\//,
                 end: /\}\}\}\}/,
-                contains: [y]
+                contains: [b]
             },
             {
                 className: 'template-tag',
@@ -119,19 +119,19 @@ function t(e) {
                 className: 'template-tag',
                 begin: /\{\{\//,
                 end: /\}\}/,
-                contains: [y]
+                contains: [b]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{\{/,
                 end: /\}\}\}/,
-                contains: [I]
+                contains: [y]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: [I]
+                contains: [y]
             }
         ]
     };

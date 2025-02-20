@@ -1,5 +1,5 @@
-n.d(t, { F: () => i });
-let i = {
+n.d(t, { F: () => r });
+let r = {
     tension: 2400,
     friction: 52
 };

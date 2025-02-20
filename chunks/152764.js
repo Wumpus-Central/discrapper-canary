@@ -5,28 +5,28 @@ function t(e) {
             literal: ['true', 'false', 'null'],
             built_in: ['abort', 'baseNameOf', 'builtins', 'derivation', 'derivationStrict', 'dirOf', 'fetchGit', 'fetchMercurial', 'fetchTarball', 'fetchTree', 'fromTOML', 'import', 'isNull', 'map', 'placeholder', 'removeAttrs', 'scopedImport', 'throw', 'toString']
         },
-        i = {
+        r = {
             scope: 'built_in',
             match: t.either(...['abort', 'add', 'addDrvOutputDependencies', 'addErrorContext', 'all', 'any', 'appendContext', 'attrNames', 'attrValues', 'baseNameOf', 'bitAnd', 'bitOr', 'bitXor', 'break', 'builtins', 'catAttrs', 'ceil', 'compareVersions', 'concatLists', 'concatMap', 'concatStringsSep', 'convertHash', 'currentSystem', 'currentTime', 'deepSeq', 'derivation', 'derivationStrict', 'dirOf', 'div', 'elem', 'elemAt', 'false', 'fetchGit', 'fetchMercurial', 'fetchTarball', 'fetchTree', 'fetchurl', 'filter', 'filterSource', 'findFile', 'flakeRefToString', 'floor', "foldl'", 'fromJSON', 'fromTOML', 'functionArgs', 'genList', 'genericClosure', 'getAttr', 'getContext', 'getEnv', 'getFlake', 'groupBy', 'hasAttr', 'hasContext', 'hashFile', 'hashString', 'head', 'import', 'intersectAttrs', 'isAttrs', 'isBool', 'isFloat', 'isFunction', 'isInt', 'isList', 'isNull', 'isPath', 'isString', 'langVersion', 'length', 'lessThan', 'listToAttrs', 'map', 'mapAttrs', 'match', 'mul', 'nixPath', 'nixVersion', 'null', 'parseDrvName', 'parseFlakeRef', 'partition', 'path', 'pathExists', 'placeholder', 'readDir', 'readFile', 'readFileType', 'removeAttrs', 'replaceStrings', 'scopedImport', 'seq', 'sort', 'split', 'splitVersion', 'storeDir', 'storePath', 'stringLength', 'sub', 'substring', 'tail', 'throw', 'toFile', 'toJSON', 'toPath', 'toString', 'toXML', 'trace', 'traceVerbose', 'true', 'tryEval', 'typeOf', 'unsafeDiscardOutputDependency', 'unsafeDiscardStringContext', 'unsafeGetAttrPos', 'warn', 'zipAttrsWith'].map((e) => `builtins\\.${e}`)),
             relevance: 10
         },
-        r = "[A-Za-z_][A-Za-z0-9_'-]*",
-        a = {
-            scope: 'symbol',
-            match: RegExp(`<${r}(/${r})*>`)
-        },
-        s = '[A-Za-z0-9_\\+\\.-]+',
+        i = "[A-Za-z_][A-Za-z0-9_'-]*",
         o = {
             scope: 'symbol',
-            match: RegExp(`(\\.\\.|\\.|~)?/(${s})?(/${s})*(?=[\\s;])`)
+            match: RegExp(`<${i}(/${i})*>`)
+        },
+        a = '[A-Za-z0-9_\\+\\.-]+',
+        s = {
+            scope: 'symbol',
+            match: RegExp(`(\\.\\.|\\.|~)?/(${a})?(/${a})*(?=[\\s;])`)
         },
         l = t.either('==', '=', '\\+\\+', '\\+', '<=', '<\\|', '<', '>=', '>', '->', '//', '/', '!=', '!', '\\|\\|', '\\|>', '\\?', '\\*', '&&'),
-        u = {
+        c = {
             scope: 'operator',
             match: t.concat(l, /(?!-)/),
             relevance: 0
         },
-        c = {
+        u = {
             scope: 'number',
             match: RegExp(`${e.NUMBER_RE}(?!-)`),
             relevance: 0
@@ -57,24 +57,24 @@ function t(e) {
         },
         f = {
             beforeMatch: /(^|\{|;)\s*/,
-            begin: RegExp(`${r}(\\.${r})*\\s*=(?!=)`),
+            begin: RegExp(`${i}(\\.${i})*\\s*=(?!=)`),
             returnBegin: !0,
             relevance: 0,
             contains: [
                 {
                     scope: 'attr',
-                    match: RegExp(`${r}(\\.${r})*(?=\\s*=)`),
+                    match: RegExp(`${i}(\\.${i})*(?=\\s*=)`),
                     relevance: 0.2
                 }
             ]
         },
-        _ = {
+        p = {
             scope: 'subst',
             begin: /\$\{/,
             end: /\}/,
             keywords: n
         },
-        p = {
+        _ = {
             scope: 'char.escape',
             match: /\\(?!\$)./
         },
@@ -89,12 +89,12 @@ function t(e) {
                             scope: 'char.escape',
                             match: /''\$/
                         },
-                        _,
+                        p,
                         {
                             scope: 'char.escape',
                             match: /'''/
                         },
-                        p
+                        _
                     ]
                 },
                 {
@@ -105,35 +105,35 @@ function t(e) {
                             scope: 'char.escape',
                             match: /\\\$/
                         },
-                        _,
-                        p
+                        p,
+                        _
                     ]
                 }
             ]
         },
         m = {
             scope: 'params',
-            match: RegExp(`${r}\\s*:(?=\\s)`)
+            match: RegExp(`${i}\\s*:(?=\\s)`)
         },
         g = [
-            c,
+            u,
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT(/\/\*\*(?!\/)/, /\*\//, {
                 subLanguage: 'markdown',
                 relevance: 0
             }),
-            i,
+            r,
             h,
-            a,
             o,
+            s,
             m,
             f,
             d,
-            u
+            c
         ];
     return (
-        (_.contains = g),
+        (p.contains = g),
         {
             name: 'Nix',
             aliases: ['nixos'],

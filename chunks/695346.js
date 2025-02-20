@@ -1,620 +1,620 @@
 n.d(t, {
     AY: () => J,
     CM: () => ee,
-    Cr: () => ec,
+    Cr: () => eu,
     DC: () => et,
-    Ex: () => eD,
+    Ex: () => eP,
     Fg: () => z,
-    G6: () => eo,
-    H1: () => O,
-    I0: () => x,
-    L1: () => eI,
+    G6: () => es,
+    H1: () => R,
+    I0: () => D,
+    L1: () => ey,
     NA: () => eh,
-    OW: () => er,
+    OW: () => ei,
     Ok: () => ed,
-    Ou: () => B,
-    Pe: () => U,
-    QK: () => eT,
-    QZ: () => b,
+    Ou: () => G,
+    Pe: () => j,
+    QK: () => eO,
+    QZ: () => S,
     R$: () => m,
-    RS: () => ep,
-    R_: () => eL,
-    Rt: () => eU,
+    RS: () => e_,
+    R_: () => ew,
+    Rt: () => ej,
     SE: () => eN,
-    Sb: () => ey,
-    Sh: () => eP,
-    T4: () => R,
-    UP: () => ea,
-    Wp: () => eS,
-    Wz: () => eO,
+    Sb: () => eb,
+    Sh: () => ex,
+    T4: () => C,
+    UP: () => eo,
+    Wp: () => eI,
+    Wz: () => eR,
     Xc: () => k,
-    Xk: () => D,
-    Xr: () => es,
-    YC: () => eG,
-    Yk: () => eb,
-    _O: () => C,
-    _j: () => ex,
+    Xk: () => P,
+    Xr: () => ea,
+    YC: () => eU,
+    Yk: () => eS,
+    _O: () => A,
+    _j: () => eD,
     bh: () => $,
-    bm: () => ei,
-    cC: () => y,
-    cP: () => G,
-    co: () => eu,
+    bm: () => er,
+    cC: () => b,
+    cP: () => U,
+    co: () => ec,
     d$: () => M,
     d4: () => N,
     dN: () => h,
     eR: () => v,
-    eo: () => P,
+    eo: () => x,
     ev: () => q,
     fq: () => E,
-    fv: () => S,
-    fz: () => T,
-    gR: () => Y,
-    gw: () => ew,
-    h2: () => W,
+    fv: () => I,
+    fz: () => O,
+    gR: () => W,
+    gw: () => eL,
+    h2: () => Y,
     hg: () => eM,
     iG: () => H,
-    iH: () => eR,
+    iH: () => eC,
     jU: () => Q,
-    kJ: () => j,
+    kJ: () => V,
     kU: () => X,
     l4: () => ek,
-    mX: () => V,
+    mX: () => F,
     nc: () => em,
-    qF: () => L,
+    qF: () => w,
     rN: () => eg,
     tU: () => ef,
-    uL: () => w,
+    uL: () => L,
     up: () => g,
-    vF: () => I,
-    x4: () => e_,
+    vF: () => y,
+    x4: () => ep,
     xM: () => en,
     xq: () => K,
-    zA: () => F
+    zA: () => Z
 }),
     n(47120);
-var i = n(442837),
-    r = n(524437),
-    a = n(381499),
-    s = n(85746),
-    o = n(362352),
+var r = n(442837),
+    i = n(524437),
+    o = n(381499),
+    a = n(85746),
+    s = n(362352),
     l = n(497060),
-    u = n(560997),
-    c = n(263937),
+    c = n(560997),
+    u = n(263937),
     d = n(973005),
     f = n(981631),
-    _ = n(969943),
-    p = n(611480);
-let h = (0, u.Zc)(
+    p = n(969943),
+    _ = n(611480);
+let h = (0, c.Zc)(
         'textAndImages',
         'useLegacyChatInput',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    m = (0, u.Zc)(
+    m = (0, c.Zc)(
         'textAndImages',
         'useRichChatInput',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    g = (0, u.Zc)(
+    g = (0, c.Zc)(
         'textAndImages',
         'expressionSuggestionsEnabled',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    E = (0, u.Zc)(
+    E = (0, c.Zc)(
         'textAndImages',
         'includeStickersInAutocomplete',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    v = (0, u.Zc)(
+    v = (0, c.Zc)(
         'textAndImages',
         'includeSoundmojiInAutocomplete',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    y = (0, u.Zc)(
+    b = (0, c.Zc)(
         'textAndImages',
         'renderSpoilers',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : f.A2N.ON_CLICK;
         },
-        (e) => a.Gm.create({ value: e })
+        (e) => o.Gm.create({ value: e })
     ),
-    I = (0, u.Zc)(
+    y = (0, c.Zc)(
         'textAndImages',
         'useThreadSidebar',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'notifications',
     'showInAppNotifications',
     (e) => {
         var t;
         return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-let T = (0, u.Zc)(
+let O = (0, c.Zc)(
         'notifications',
         'reactionNotifications',
-        (e) => (null != e ? e : r.Ns.NOTIFICATIONS_ENABLED),
+        (e) => (null != e ? e : i.Ns.NOTIFICATIONS_ENABLED),
         (e) => e
     ),
-    b = (0, u.Zc)(
+    S = (0, c.Zc)(
         'notifications',
         'quietMode',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: !!e })
+        (e) => o.D5.create({ value: !!e })
     ),
-    S = (0, u.Zc)(
+    I = (0, c.Zc)(
         'notifications',
         'focusModeExpiresAtMs',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    A = [],
-    N = (0, u.Zc)(
+    T = [],
+    N = (0, c.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
-        (e) => (null != e ? e : A),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
-    C = (0, u.Zc)(
+    A = (0, c.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
-        (e) => (null != e ? e : A),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
-    R = (0, u.Zc)(
+    C = (0, c.Zc)(
         'textAndImages',
         'soundboardPickerCollapsedSections',
-        (e) => (null != e ? e : A),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
-    O = (0, u.Zc)(
+    R = (0, c.Zc)(
         'textAndImages',
         'viewImageDescriptions',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    D = (0, u.Zc)(
+    P = (0, c.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    L = (0, u.Zc)(
+    w = (0, c.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    x = (0, u.Zc)(
+    D = (0, c.Zc)(
         'voiceAndVideo',
         'disableStreamPreviews',
         (e) => (null == e ? void 0 : e.value),
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    P = (0, u.Zc)(
+    x = (0, c.Zc)(
         'notifications',
         'notifyFriendsOnGoLive',
         (e) => (null == e ? void 0 : e.value),
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    w = '0',
-    M = (0, u.Zc)(
+    L = '0',
+    M = (0, c.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : w),
+        (e) => (null != e ? e : L),
         (e) => e
     ),
-    k = (0, u.Zc)(
+    k = (0, c.Zc)(
         'gameLibrary',
         'installShortcutDesktop',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    U = (0, u.Zc)(
+    j = (0, c.Zc)(
         'gameLibrary',
         'installShortcutStartMenu',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    G = (0, u.Zc)(
+    U = (0, c.Zc)(
         'privacy',
         'allowActivityPartyPrivacyFriends',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    B = (0, u.Zc)(
+    G = (0, c.Zc)(
         'privacy',
         'allowActivityPartyPrivacyVoiceChannel',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    Z = [],
-    F = (0, u.Zc)(
+    B = [],
+    Z = (0, c.Zc)(
         'privacy',
         'messageRequestRestrictedGuildIds',
-        (e) => (null != e ? e : Z),
+        (e) => (null != e ? e : B),
         (e) => e
     ),
-    V = (0, u.Zc)(
+    F = (0, c.Zc)(
         'privacy',
         'defaultMessageRequestRestricted',
         (e) => (null == e ? void 0 : e.value),
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    j = (0, u.Zc)(
+    V = (0, c.Zc)(
         'privacy',
         'nonSpamRetrainingOptIn',
         (e) => (null == e ? void 0 : e.value),
-        (e) => (null == e ? void 0 : a.D5.create({ value: e }))
+        (e) => (null == e ? void 0 : o.D5.create({ value: e }))
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'privacy',
     'contactSyncEnabled',
     (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-let H = (0, u.Zc)(
+let H = (0, c.Zc)(
         'privacy',
         'defaultGuildsRestricted',
         (e) => null != e && e,
         (e) => e
     ),
-    Y = (0, u.Zc)(
+    W = (0, c.Zc)(
         'privacy',
         'defaultGuildsRestrictedV2',
         (e) => (null == e ? void 0 : e.value),
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    W = (0, u.Zc)(
+    Y = (0, c.Zc)(
         'privacy',
         'restrictedGuildIds',
         (e) => (null != e ? e : []),
         (e) => e
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'privacy',
     'friendDiscoveryFlags',
     (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 0;
     },
-    (e) => a.yC.create({ value: e })
+    (e) => o.yC.create({ value: e })
 );
-let K = (0, u.TG)({
-        baseSetting: (0, u.Zc)(
+let K = (0, c.TG)({
+        baseSetting: (0, c.Zc)(
             'privacy',
             'friendSourceFlags',
             (e) => (null == e ? void 0 : e.value),
-            (e) => a.yC.create({ value: e })
+            (e) => o.yC.create({ value: e })
         ),
         isEligible: () => (0, l.k6)('user_settings'),
         useIsEligible: () => (0, l.kH)('user_settings'),
         ineligibleDefault: f.HGf,
         eligibleDefault: () => f.O8q
     }),
-    z = (0, u.Zc)(
+    z = (0, c.Zc)(
         'debug',
         'rtcPanelShowVoiceStates',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    q = (0, u.Zc)(
+    q = (0, c.Zc)(
         'textAndImages',
         'convertEmoticons',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    Q = (0, u.Zc)(
+    Q = (0, c.Zc)(
         'textAndImages',
         'messageDisplayCompact',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    X = (0, u.Zc)(
+    X = (0, c.Zc)(
         'voiceAndVideo',
         'soundboardSettings',
         (e) => e,
         (e) => e
     ),
-    J = (0, u.Zc)(
+    J = (0, c.Zc)(
         'voiceAndVideo',
         'soundmojiVolume',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 100;
         },
-        (e) => a.A8.create({ value: e })
+        (e) => o.A8.create({ value: e })
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'voiceAndVideo',
     'streamNotificationsEnabled',
     (e) => {
         var t;
         return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-let $ = (0, u.Zc)(
+let $ = (0, c.Zc)(
     'privacy',
     'dropsOptedOut',
     (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-(0, u.Zc)(
+(0, c.Zc)(
     'voiceAndVideo',
     'nativePhoneIntegrationEnabled',
     (e) => {
         var t;
         return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-let ee = (0, u.Zc)(
+let ee = (0, c.Zc)(
         'voiceAndVideo',
         'afkTimeout',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : 600;
         },
-        (e) => a.yC.create({ value: e })
+        (e) => o.yC.create({ value: e })
     ),
-    et = (0, u.Zc)(
+    et = (0, c.Zc)(
         'textAndImages',
         'viewNsfwGuilds',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    en = (0, u.Zc)(
+    en = (0, c.Zc)(
         'textAndImages',
         'viewNsfwCommands',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'privacy',
     'detectPlatformAccounts',
     (e) => {
         var t;
         return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
-let ei = (0, u.Zc)(
+let er = (0, c.Zc)(
         'gameLibrary',
         'disableGamesTab',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    er = (0, u.Zc)(
+    ei = (0, c.Zc)(
         'textAndImages',
         'enableTtsCommand',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    ea = (0, u.Zc)(
+    eo = (0, c.Zc)(
         'textAndImages',
         'explicitContentFilter',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.TI.NON_FRIENDS;
         },
-        (e) => a.yC.create({ value: e })
+        (e) => o.yC.create({ value: e })
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'textAndImages',
     'dmSpamFilter',
     (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : d.fQ.NON_FRIENDS;
     },
-    (e) => a.yC.create({ value: e })
+    (e) => o.yC.create({ value: e })
 );
-let es = (0, u.Zc)(
+let ea = (0, c.Zc)(
         'textAndImages',
         'dmSpamFilterV2',
-        (e) => (null != e ? e : r.Xr.DEFAULT_UNSET),
+        (e) => (null != e ? e : i.Xr.DEFAULT_UNSET),
         (e) => e
     ),
-    eo = (0, u.Zc)(
+    es = (0, c.Zc)(
         'status',
         'showCurrentGame',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'privacy',
     'recentGamesEnabled',
     (e) => {
         var t;
         return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 );
 let el = new Set(Object.values(f.Skl)),
-    eu = (0, u.Zc)(
+    ec = (0, c.Zc)(
         'status',
         'status',
         (e) => (null != e && el.has(e.value) ? e.value : f.Skl.UNKNOWN),
-        (e) => a.Gm.create({ value: e })
+        (e) => o.Gm.create({ value: e })
     ),
-    ec = (0, u.Zc)(
+    eu = (0, c.Zc)(
         'status',
         'statusExpiresAtMs',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    ed = (0, u.Zc)(
+    ed = (0, c.Zc)(
         'status',
         'customStatus',
         (e) => e,
         (e) => e
     ),
-    ef = (0, u.Zc)(
+    ef = (0, c.Zc)(
         'clips',
         'allowVoiceRecording',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    e_ = (0, u.KM)(
-        (0, u.Zc)(
+    ep = (0, c.KM)(
+        (0, c.Zc)(
             'textAndImages',
             'inlineAttachmentMedia',
             (e) => {
                 var t;
                 return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
             },
-            (e) => a.D5.create({ value: e })
+            (e) => o.D5.create({ value: e })
         ),
         'text',
         'inlineAttachmentMedia'
     ),
-    ep = (0, u.KM)(
-        (0, u.Zc)(
+    e_ = (0, c.KM)(
+        (0, c.Zc)(
             'textAndImages',
             'inlineEmbedMedia',
             (e) => {
                 var t;
                 return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
             },
-            (e) => a.D5.create({ value: e })
+            (e) => o.D5.create({ value: e })
         ),
         'text',
         'inlineEmbedMedia'
     ),
-    eh = (0, u.KM)(
-        (0, u.Zc)(
+    eh = (0, c.KM)(
+        (0, c.Zc)(
             'textAndImages',
             'renderEmbeds',
             (e) => {
                 var t;
                 return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
             },
-            (e) => a.D5.create({ value: e })
+            (e) => o.D5.create({ value: e })
         ),
         'text',
         'renderEmbeds'
     ),
-    em = (0, u.KM)(
-        (0, u.Zc)(
+    em = (0, c.KM)(
+        (0, c.Zc)(
             'textAndImages',
             'renderReactions',
             (e) => {
                 var t;
                 return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
             },
-            (e) => a.D5.create({ value: e })
+            (e) => o.D5.create({ value: e })
         ),
         'text',
         'renderReactions'
     ),
-    eg = (0, u.Zc)(
+    eg = (0, c.Zc)(
         'localization',
         'timezoneOffset',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : null;
         },
-        (e) => a.T4.create({ value: null != e ? e : 0 })
+        (e) => o.T4.create({ value: null != e ? e : 0 })
     ),
-    eE = new Set([_.fx.AUTO, s.l.COZY, s.l.COMPACT]);
-(0, u.Zc)(
+    eE = new Set([p.fx.AUTO, a.l.COZY, a.l.COMPACT]);
+(0, c.Zc)(
     'appearance',
     'channelListLayout',
-    (e) => (null != e && eE.has(e.value) ? e.value : s.l.COZY),
-    (e) => a.Gm.create({ value: e })
+    (e) => (null != e && eE.has(e.value) ? e.value : a.l.COZY),
+    (e) => o.Gm.create({ value: e })
 );
-let ev = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
-(0, u.Zc)(
+let ev = new Set([a.Z.ALL, a.Z.UNREADS, a.Z.NONE]);
+(0, c.Zc)(
     'appearance',
     'messagePreviews',
-    (e) => (null != e && ev.has(e.value) ? e.value : s.Z.ALL),
-    (e) => a.Gm.create({ value: e })
+    (e) => (null != e && ev.has(e.value) ? e.value : a.Z.ALL),
+    (e) => o.Gm.create({ value: e })
 );
-let ey = (0, u.KM)(
-        (0, u.Zc)(
+let eb = (0, c.KM)(
+        (0, c.Zc)(
             'appearance',
             'developerMode',
             (e) => null != e && e,
@@ -623,25 +623,25 @@ let ey = (0, u.KM)(
         'appearance',
         'developerMode'
     ),
-    eI = (0, u.Zc)(
+    ey = (0, c.Zc)(
         'appearance',
         'clientThemeSettings',
         (e) => {
             var t;
             return { backgroundGradientPresetId: null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value };
         },
-        (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
+        (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? o.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
     ),
-    eT = (0, u.R2)(
-        (0, u.KM)(
-            (0, u.Zc)(
+    eO = (0, c.R2)(
+        (0, c.KM)(
+            (0, c.Zc)(
                 'textAndImages',
                 'gifAutoPlay',
                 (e) => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
                 },
-                (e) => a.D5.create({ value: e })
+                (e) => o.D5.create({ value: e })
             ),
             'text',
             'gifAutoPlay'
@@ -649,24 +649,24 @@ let ey = (0, u.KM)(
         'gifAutoPlay',
         () => {
             var e;
-            return null === (e = c.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
+            return null === (e = u.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
         },
         () =>
-            (0, i.e7)([c.Z], () => {
+            (0, r.e7)([u.Z], () => {
                 var e;
-                return null === (e = c.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
+                return null === (e = u.Z.getOverride('gifAutoPlay')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eb = (0, u.R2)(
-        (0, u.KM)(
-            (0, u.Zc)(
+    eS = (0, c.R2)(
+        (0, c.KM)(
+            (0, c.Zc)(
                 'textAndImages',
                 'animateEmoji',
                 (e) => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
                 },
-                (e) => a.D5.create({ value: e })
+                (e) => o.D5.create({ value: e })
             ),
             'text',
             'animateEmoji'
@@ -674,24 +674,24 @@ let ey = (0, u.KM)(
         'animateEmoji',
         () => {
             var e;
-            return null === (e = c.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
+            return null === (e = u.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
         },
         () =>
-            (0, i.e7)([c.Z], () => {
+            (0, r.e7)([u.Z], () => {
                 var e;
-                return null === (e = c.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
+                return null === (e = u.Z.getOverride('animateEmoji')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eS = (0, u.R2)(
-        (0, u.KM)(
-            (0, u.Zc)(
+    eI = (0, c.R2)(
+        (0, c.KM)(
+            (0, c.Zc)(
                 'textAndImages',
                 'animateStickers',
                 (e) => {
                     var t;
-                    return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : p.yr.ALWAYS_ANIMATE;
+                    return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : _.yr.ALWAYS_ANIMATE;
                 },
-                (e) => a.yC.create({ value: e })
+                (e) => o.yC.create({ value: e })
             ),
             'text',
             'animateStickers'
@@ -699,149 +699,149 @@ let ey = (0, u.KM)(
         'animateStickers',
         () => {
             var e;
-            return null === (e = c.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
+            return null === (e = u.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
         },
         () =>
-            (0, i.e7)([c.Z], () => {
+            (0, r.e7)([u.Z], () => {
                 var e;
-                return null === (e = c.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
+                return null === (e = u.Z.getOverride('animateStickers')) || void 0 === e ? void 0 : e.value;
             })
     ),
-    eA = [],
-    eN = (0, u.Zc)(
+    eT = [],
+    eN = (0, c.Zc)(
         'privacy',
         'activityRestrictedGuildIds',
+        (e) => (null != e ? e : eT),
+        (e) => e
+    ),
+    eA = [],
+    eC = (0, c.Zc)(
+        'privacy',
+        'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eA),
         (e) => e
     ),
-    eC = [],
-    eR = (0, u.Zc)(
-        'privacy',
-        'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : eC),
-        (e) => e
-    ),
-    eO = (0, u.TG)({
-        baseSetting: (0, u.Zc)(
+    eR = (0, c.TG)({
+        baseSetting: (0, c.Zc)(
             'privacy',
             'defaultGuildsActivityRestricted',
             (e) => e,
-            (e) => (null != e ? e : r.E5.OFF)
+            (e) => (null != e ? e : i.E5.OFF)
         ),
-        isEligible: () => (0, o.o0)('user_settings'),
-        useIsEligible: () => (0, o.Yd)('user_settings'),
-        ineligibleDefault: r.E5.OFF,
-        eligibleDefault: () => r.E5.ON
+        isEligible: () => (0, s.o0)('user_settings'),
+        useIsEligible: () => (0, s.Yd)('user_settings'),
+        ineligibleDefault: i.E5.OFF,
+        eligibleDefault: () => i.E5.ON
     }),
-    eD = (0, u.Zc)(
+    eP = (0, c.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    eL = (0, u.Zc)(
+    ew = (0, c.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    ex = (0, u.Zc)(
+    eD = (0, c.Zc)(
         'privacy',
         'allowGameFriendDmsInDiscord',
         (e) => {
             var t;
             return null === (t = null == e ? void 0 : e.value) || void 0 === t || t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     ),
-    eP = (0, u.Zc)(
+    ex = (0, c.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
-            let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = null != e ? e : {};
+            let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = null != e ? e : {};
             return {
-                explicitContentGuilds: null != t ? t : r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
-                explicitContentFriendDm: null != n ? n : r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
-                explicitContentNonFriendDm: null != i ? i : r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION
+                explicitContentGuilds: null != t ? t : i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
+                explicitContentFriendDm: null != n ? n : i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
+                explicitContentNonFriendDm: null != r ? r : i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION
             };
         },
         (e) => {
-            let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e;
+            let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = e;
             return {
                 explicitContentGuilds: null != t ? t : void 0,
                 explicitContentFriendDm: null != n ? n : void 0,
-                explicitContentNonFriendDm: null != i ? i : void 0
+                explicitContentNonFriendDm: null != r ? r : void 0
             };
         }
     ),
-    ew = (0, u.Zc)(
+    eL = (0, c.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {
-            let { profanity: t, sexualContent: n, slurs: i } = null != e ? e : {};
+            let { profanity: t, sexualContent: n, slurs: r } = null != e ? e : {};
             return {
                 profanity: null == t ? void 0 : t.value,
                 sexualContent: null == n ? void 0 : n.value,
-                slurs: null == i ? void 0 : i.value
+                slurs: null == r ? void 0 : r.value
             };
         },
         (e) => {
-            let { profanity: t, sexualContent: n, slurs: i } = e;
+            let { profanity: t, sexualContent: n, slurs: r } = e;
             return {
-                profanity: a.D5.create({ value: t }),
-                sexualContent: a.D5.create({ value: n }),
-                slurs: a.D5.create({ value: i })
+                profanity: o.D5.create({ value: t }),
+                sexualContent: o.D5.create({ value: n }),
+                slurs: o.D5.create({ value: r })
             };
         }
     );
-(0, u.Zc)(
+(0, c.Zc)(
     'appearance',
     'searchResultExactCountEnabled',
     (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
     },
-    (e) => a.D5.create({ value: e })
+    (e) => o.D5.create({ value: e })
 ),
-    (0, u.Zc)(
+    (0, c.Zc)(
         'appearance',
         'happeningNowCardsDisabled',
         (e) => {
             var t;
             return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
         },
-        (e) => a.D5.create({ value: e })
+        (e) => o.D5.create({ value: e })
     );
-let eM = (0, u.Zc)(
+let eM = (0, c.Zc)(
     'appearance',
     'timestampHourCycle',
-    (e) => (null != e ? e : r.hg.AUTO),
+    (e) => (null != e ? e : i.hg.AUTO),
     (e) => e
 );
-(0, u.Zc)(
+(0, c.Zc)(
     'appearance',
     'launchPadMode',
-    (e) => (null != e ? e : r.l1.LAUNCH_PAD_DISABLED),
+    (e) => (null != e ? e : i.l1.LAUNCH_PAD_DISABLED),
     (e) => e
 );
-let ek = (0, u.Zc)(
+let ek = (0, c.Zc)(
         'userContent',
         'lastReceivedChangelogId',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    eU = (0, u.Zc)(
+    ej = (0, c.Zc)(
         'safetySettings',
         'ignoreProfileSpeedbumpDisabled',
         (e) => null != e && e,
         (e) => e
     ),
-    eG = (0, u.Zc)(
+    eU = (0, c.Zc)(
         'appearance',
         'uiDensity',
-        (e) => (e === r.Pi.UNSET_UI_DENSITY ? r.Pi.COMPACT : null != e ? e : r.Pi.COMPACT),
+        (e) => (e === i.Pi.UNSET_UI_DENSITY ? i.Pi.COMPACT : null != e ? e : i.Pi.COMPACT),
         (e) => e
     );

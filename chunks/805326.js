@@ -1,16 +1,16 @@
 function t(e) {
     let t = '([0-9]_*)+',
         n = '([0-9a-fA-F]_*)+',
-        i = '([01]_*)+',
-        r = '([0-7]_*)+',
-        a = '[!#$%&*+.\\/<=>?@\\\\^~-]',
-        s = '(\\p{S}|\\p{P})',
-        o = '[(),;\\[\\]`|{}]',
-        l = `(${a}|(?!(${o}|[_:"']))${s})`,
-        u = {
+        r = '([01]_*)+',
+        i = '([0-7]_*)+',
+        o = '[!#$%&*+.\\/<=>?@\\\\^~-]',
+        a = '(\\p{S}|\\p{P})',
+        s = '[(),;\\[\\]`|{}]',
+        l = `(${o}|(?!(${s}|[_:"']))${a})`,
+        c = {
             variants: [e.COMMENT('--+', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
-        c = {
+        u = {
             className: 'meta',
             begin: /\{-#/,
             end: /#-\}/
@@ -25,30 +25,30 @@ function t(e) {
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        _ = {
+        p = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
             contains: [
-                c,
+                u,
                 d,
                 {
                     className: 'type',
                     begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'
                 },
                 e.inherit(e.TITLE_MODE, { begin: "[_a-z][\\w']*" }),
-                u
+                c
             ]
         },
-        p = {
+        _ = {
             begin: /\{/,
             end: /\}/,
-            contains: _.contains
+            contains: p.contains
         },
         h = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b` }, { match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b` }, { match: `\\b0[oO](${r})\\b` }, { match: `\\b0[bB](${i})\\b` }]
+            variants: [{ match: `\\b(${t})(\\.(${t}))?([eE][+-]?(${t}))?\\b` }, { match: `\\b0[xX]_*(${n})(\\.(${n}))?([pP][+-]?(${t}))?\\b` }, { match: `\\b0[oO](${i})\\b` }, { match: `\\b0[bB](${r})\\b` }]
         };
     return {
         name: 'Haskell',
@@ -60,14 +60,14 @@ function t(e) {
                 beginKeywords: 'module',
                 end: 'where',
                 keywords: 'module where',
-                contains: [_, u],
+                contains: [p, c],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: '\\bimport\\b',
                 end: '$',
                 keywords: 'import qualified as hiding',
-                contains: [_, u],
+                contains: [p, c],
                 illegal: '\\W\\.|;'
             },
             {
@@ -75,37 +75,37 @@ function t(e) {
                 begin: '^(\\s*)?(class|instance)\\b',
                 end: 'where',
                 keywords: 'class family instance where',
-                contains: [f, _, u]
+                contains: [f, p, c]
             },
             {
                 className: 'class',
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [c, f, _, p, u]
+                contains: [u, f, p, _, c]
             },
             {
                 beginKeywords: 'default',
                 end: '$',
-                contains: [f, _, u]
+                contains: [f, p, c]
             },
             {
                 beginKeywords: 'infix infixl infixr',
                 end: '$',
-                contains: [e.C_NUMBER_MODE, u]
+                contains: [e.C_NUMBER_MODE, c]
             },
             {
                 begin: '\\bforeign\\b',
                 end: '$',
                 keywords: 'foreign import export ccall stdcall cplusplus jvm dotnet safe unsafe',
-                contains: [f, e.QUOTE_STRING_MODE, u]
+                contains: [f, e.QUOTE_STRING_MODE, c]
             },
             {
                 className: 'meta',
                 begin: '#!\\/usr\\/bin\\/env runhaskell',
                 end: '$'
             },
-            c,
+            u,
             d,
             {
                 scope: 'string',
@@ -123,7 +123,7 @@ function t(e) {
             f,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             { begin: `(?!-)${l}--+|--+(?!-)${l}` },
-            u,
+            c,
             { begin: '->|<-' }
         ]
     };

@@ -4,21 +4,21 @@ function t(e) {
         e.forEach(function (e) {
             n.push(e);
         });
-    else if (arguments.length > 0) for (var i = 0, r = arguments.length; i < r; i++) n.push(arguments[i]);
+    else if (arguments.length > 0) for (var r = 0, i = arguments.length; r < i; r++) n.push(arguments[r]);
     return n;
 }
 function n(e, t) {
-    (e.tail = new r(t, e.tail, null, e)), e.head || (e.head = e.tail), e.length++;
+    (e.tail = new i(t, e.tail, null, e)), e.head || (e.head = e.tail), e.length++;
 }
-function i(e, t) {
-    (e.head = new r(t, null, e.head, e)), e.tail || (e.tail = e.head), e.length++;
+function r(e, t) {
+    (e.head = new i(t, null, e.head, e)), e.tail || (e.tail = e.head), e.length++;
 }
-function r(e, t, n, i) {
-    if (!(this instanceof r)) return new r(e, t, n, i);
-    (this.list = i), (this.value = e), t ? ((t.next = this), (this.prev = t)) : (this.prev = null), n ? ((n.prev = this), (this.next = n)) : (this.next = null);
+function i(e, t, n, r) {
+    if (!(this instanceof i)) return new i(e, t, n, r);
+    (this.list = r), (this.value = e), t ? ((t.next = this), (this.prev = t)) : (this.prev = null), n ? ((n.prev = this), (this.next = n)) : (this.next = null);
 }
 (e.exports = t),
-    (t.Node = r),
+    (t.Node = i),
     (t.create = t),
     (t.prototype.removeNode = function (e) {
         if (e.list !== this) throw Error('removing node which does not belong to this list');
@@ -45,7 +45,7 @@ function r(e, t, n, i) {
         return this.length;
     }),
     (t.prototype.unshift = function () {
-        for (var e = 0, t = arguments.length; e < t; e++) i(this, arguments[e]);
+        for (var e = 0, t = arguments.length; e < t; e++) r(this, arguments[e]);
         return this.length;
     }),
     (t.prototype.pop = function () {
@@ -62,11 +62,11 @@ function r(e, t, n, i) {
     }),
     (t.prototype.forEach = function (e, t) {
         t = t || this;
-        for (var n = this.head, i = 0; null !== n; i++) e.call(t, n.value, i, this), (n = n.next);
+        for (var n = this.head, r = 0; null !== n; r++) e.call(t, n.value, r, this), (n = n.next);
     }),
     (t.prototype.forEachReverse = function (e, t) {
         t = t || this;
-        for (var n = this.tail, i = this.length - 1; null !== n; i--) e.call(t, n.value, i, this), (n = n.prev);
+        for (var n = this.tail, r = this.length - 1; null !== n; r--) e.call(t, n.value, r, this), (n = n.prev);
     }),
     (t.prototype.get = function (e) {
         for (var t = 0, n = this.head; null !== n && t < e; t++) n = n.next;
@@ -78,30 +78,30 @@ function r(e, t, n, i) {
     }),
     (t.prototype.map = function (e, n) {
         n = n || this;
-        for (var i = new t(), r = this.head; null !== r; ) i.push(e.call(n, r.value, this)), (r = r.next);
-        return i;
+        for (var r = new t(), i = this.head; null !== i; ) r.push(e.call(n, i.value, this)), (i = i.next);
+        return r;
     }),
     (t.prototype.mapReverse = function (e, n) {
         n = n || this;
-        for (var i = new t(), r = this.tail; null !== r; ) i.push(e.call(n, r.value, this)), (r = r.prev);
-        return i;
+        for (var r = new t(), i = this.tail; null !== i; ) r.push(e.call(n, i.value, this)), (i = i.prev);
+        return r;
     }),
     (t.prototype.reduce = function (e, t) {
         var n,
-            i = this.head;
+            r = this.head;
         if (arguments.length > 1) n = t;
-        else if (this.head) (i = this.head.next), (n = this.head.value);
+        else if (this.head) (r = this.head.next), (n = this.head.value);
         else throw TypeError('Reduce of empty list with no initial value');
-        for (var r = 0; null !== i; r++) (n = e(n, i.value, r)), (i = i.next);
+        for (var i = 0; null !== r; i++) (n = e(n, r.value, i)), (r = r.next);
         return n;
     }),
     (t.prototype.reduceReverse = function (e, t) {
         var n,
-            i = this.tail;
+            r = this.tail;
         if (arguments.length > 1) n = t;
-        else if (this.tail) (i = this.tail.prev), (n = this.tail.value);
+        else if (this.tail) (r = this.tail.prev), (n = this.tail.value);
         else throw TypeError('Reduce of empty list with no initial value');
-        for (var r = this.length - 1; null !== i; r--) (n = e(n, i.value, r)), (i = i.prev);
+        for (var i = this.length - 1; null !== r; i--) (n = e(n, r.value, i)), (r = r.prev);
         return n;
     }),
     (t.prototype.toArray = function () {
@@ -114,26 +114,26 @@ function r(e, t, n, i) {
     }),
     (t.prototype.slice = function (e, n) {
         (n = n || this.length) < 0 && (n += this.length), (e = e || 0) < 0 && (e += this.length);
-        var i = new t();
-        if (n < e || n < 0) return i;
+        var r = new t();
+        if (n < e || n < 0) return r;
         e < 0 && (e = 0), n > this.length && (n = this.length);
-        for (var r = 0, a = this.head; null !== a && r < e; r++) a = a.next;
-        for (; null !== a && r < n; r++, a = a.next) i.push(a.value);
-        return i;
+        for (var i = 0, o = this.head; null !== o && i < e; i++) o = o.next;
+        for (; null !== o && i < n; i++, o = o.next) r.push(o.value);
+        return r;
     }),
     (t.prototype.sliceReverse = function (e, n) {
         (n = n || this.length) < 0 && (n += this.length), (e = e || 0) < 0 && (e += this.length);
-        var i = new t();
-        if (n < e || n < 0) return i;
+        var r = new t();
+        if (n < e || n < 0) return r;
         e < 0 && (e = 0), n > this.length && (n = this.length);
-        for (var r = this.length, a = this.tail; null !== a && r > n; r--) a = a.prev;
-        for (; null !== a && r > e; r--, a = a.prev) i.push(a.value);
-        return i;
+        for (var i = this.length, o = this.tail; null !== o && i > n; i--) o = o.prev;
+        for (; null !== o && i > e; i--, o = o.prev) r.push(o.value);
+        return r;
     }),
     (t.prototype.reverse = function () {
         for (var e = this.head, t = this.tail, n = e; null !== n; n = n.prev) {
-            var i = n.prev;
-            (n.prev = n.next), (n.next = i);
+            var r = n.prev;
+            (n.prev = n.next), (n.next = r);
         }
         return (this.head = t), (this.tail = e), this;
     });

@@ -1,37 +1,37 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i,
-    l,
     r,
-    s = n(106351),
-    a = n(442837),
-    o = n(570140),
-    d = n(38618);
-let u = new Set(),
+    l,
+    o = n(106351),
+    s = n(442837),
+    a = n(570140),
+    u = n(38618);
+let d = new Set(),
     c = {};
 function h() {
-    u.clear();
+    d.clear();
 }
-function g(e) {
-    u.delete(e.guild.id);
+function f(e) {
+    d.delete(e.guild.id);
 }
-class f extends (i = a.ZP.Store) {
+class p extends (i = s.ZP.Store) {
     getChannelStatus(e) {
         var t;
-        if (null != e && null != e.guild_id && e.type === s.d.GUILD_VOICE) return u.has(e.guild_id) || (u.add(e.guild_id), d.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = c[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
+        if (null != e && null != e.guild_id && e.type === o.d.GUILD_VOICE) return d.has(e.guild_id) || (d.add(e.guild_id), u.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = c[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
     }
 }
-(r = 'ChannelStatusStore'),
-    (l = 'displayName') in f
-        ? Object.defineProperty(f, l, {
-              value: r,
+(l = 'ChannelStatusStore'),
+    (r = 'displayName') in p
+        ? Object.defineProperty(p, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (f[l] = r);
-let p = new f(o.Z, {
-    GUILD_CREATE: g,
-    GUILD_DELETE: g,
+        : (p[r] = l);
+let g = new p(a.Z, {
+    GUILD_CREATE: f,
+    GUILD_DELETE: f,
     CONNECTION_RESUMED: h,
     CONNECTION_OPEN: h,
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {

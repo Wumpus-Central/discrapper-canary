@@ -1,11 +1,11 @@
-var i,
-    r,
-    a = n(957578).Buffer,
-    s = n(180756),
-    o = n(138031),
+var r,
+    i,
+    o = n(957578).Buffer,
+    a = n(180756),
+    s = n(138031),
     l = n(275227),
-    u = n(871230),
-    c = n.g.crypto && n.g.crypto.subtle,
+    c = n(871230),
+    u = n.g.crypto && n.g.crypto.subtle,
     d = {
         sha: 'SHA-1',
         'sha-1': 'SHA-1',
@@ -18,10 +18,10 @@ var i,
         sha512: 'SHA-512'
     },
     f = [];
-function _(e) {
-    if ((n.g.process && !n.g.process.browser) || !c || !c.importKey || !c.deriveBits) return Promise.resolve(!1);
+function p(e) {
+    if ((n.g.process && !n.g.process.browser) || !u || !u.importKey || !u.deriveBits) return Promise.resolve(!1);
     if (void 0 !== f[e]) return f[e];
-    var t = h((i = i || a.alloc(8)), i, 10, 128, e)
+    var t = h((r = r || o.alloc(8)), r, 10, 128, e)
         .then(function () {
             return !0;
         })
@@ -30,62 +30,62 @@ function _(e) {
         });
     return (f[e] = t), t;
 }
-function p() {
-    return r || (r = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout);
+function _() {
+    return i || (i = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout);
 }
-function h(e, t, n, i, r) {
-    return c
+function h(e, t, n, r, i) {
+    return u
         .importKey('raw', e, { name: 'PBKDF2' }, !1, ['deriveBits'])
         .then(function (e) {
-            return c.deriveBits(
+            return u.deriveBits(
                 {
                     name: 'PBKDF2',
                     salt: t,
                     iterations: n,
-                    hash: { name: r }
+                    hash: { name: i }
                 },
                 e,
-                i << 3
+                r << 3
             );
         })
         .then(function (e) {
-            return a.from(e);
+            return o.from(e);
         });
 }
 function m(e, t) {
     e.then(
         function (e) {
-            p()(function () {
+            _()(function () {
                 t(null, e);
             });
         },
         function (e) {
-            p()(function () {
+            _()(function () {
                 t(e);
             });
         }
     );
 }
-e.exports = function (e, t, i, r, a, c) {
-    'function' == typeof a && ((c = a), (a = void 0));
-    var f = d[(a = a || 'sha1').toLowerCase()];
+e.exports = function (e, t, r, i, o, u) {
+    'function' == typeof o && ((u = o), (o = void 0));
+    var f = d[(o = o || 'sha1').toLowerCase()];
     if (!f || 'function' != typeof n.g.Promise) {
-        p()(function () {
+        _()(function () {
             var n;
             try {
-                n = l(e, t, i, r, a);
+                n = l(e, t, r, i, o);
             } catch (e) {
-                return c(e);
+                return u(e);
             }
-            c(null, n);
+            u(null, n);
         });
         return;
     }
-    if ((s(i, r), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof c)) throw Error('No callback provided to pbkdf2');
+    if ((a(r, i), (e = c(e, s, 'Password')), (t = c(t, s, 'Salt')), 'function' != typeof u)) throw Error('No callback provided to pbkdf2');
     m(
-        _(f).then(function (n) {
-            return n ? h(e, t, i, r, f) : l(e, t, i, r, a);
+        p(f).then(function (n) {
+            return n ? h(e, t, r, i, f) : l(e, t, r, i, o);
         }),
-        c
+        u
     );
 };

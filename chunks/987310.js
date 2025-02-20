@@ -1,12 +1,12 @@
 n.d(t, { Z: () => l });
-var i = n(195168),
-    r = 'object' == typeof exports && exports && !exports.nodeType && exports,
-    a = r && 'object' == typeof module && module && !module.nodeType && module,
-    s = a && a.exports === r ? i.Z.Buffer : void 0,
-    o = s ? s.allocUnsafe : void 0;
+var r = n(195168),
+    i = 'object' == typeof exports && exports && !exports.nodeType && exports,
+    o = i && 'object' == typeof module && module && !module.nodeType && module,
+    a = o && o.exports === i ? r.Z.Buffer : void 0,
+    s = a ? a.allocUnsafe : void 0;
 let l = function (e, t) {
     if (t) return e.slice();
     var n = e.length,
-        i = o ? o(n) : new e.constructor(n);
-    return e.copy(i), i;
+        r = s ? s(n) : new e.constructor(n);
+    return e.copy(r), r;
 };

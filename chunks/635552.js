@@ -1,35 +1,35 @@
 n.d(t, { W: () => d }), n(47120);
-var i = n(192379),
-    r = n(979554),
-    a = n(809206),
-    s = n(350327),
-    o = n(884697),
+var r = n(192379),
+    i = n(979554),
+    o = n(809206),
+    a = n(350327),
+    s = n(884697),
     l = n(328456),
-    u = n(388032);
-let c = 6000,
+    c = n(388032);
+let u = 6000,
     d = (e) => {
         let { product: t, onSuccess: d, onError: f } = e,
-            [_, p] = i.useState(!1),
+            [p, _] = r.useState(!1),
             { firstAvatarDecoration: h, firstProfileEffect: m } = (0, l.R)(t),
-            g = (0, o.x6)(t) ? u.intl.string(u.t.tf1ZZ2) : t.type === r.Z.AVATAR_DECORATION ? u.intl.string(u.t.zOA4a2) : u.intl.string(u.t.SWm2am);
+            g = (0, s.x6)(t) ? c.NW.string(c.t.tf1ZZ2) : t.type === i.Z.AVATAR_DECORATION ? c.NW.string(c.t.zOA4a2) : c.NW.string(c.t.SWm2am);
         return {
-            handleUseNow: i.useCallback(async () => {
-                p(!0);
+            handleUseNow: r.useCallback(async () => {
+                _(!0);
                 try {
                     if (null != h) {
                         let e = { avatarDecoration: h };
-                        await (0, a.Mn)(e);
+                        await (0, o.Mn)(e);
                     }
                     if (null != m) {
                         let e = { profile_effect_id: m.id };
-                        await (0, s.Z)(e);
+                        await (0, a.Z)(e);
                     }
                     {
-                        let { ToastPosition: e, ToastType: t, createToast: i, popToast: r, showToast: a } = await Promise.resolve().then(n.bind(n, 481060));
-                        r(),
-                            a(
-                                i(g, t.MESSAGE, {
-                                    duration: c,
+                        let { ToastPosition: e, ToastType: t, createToast: r, popToast: i, showToast: o } = await Promise.resolve().then(n.bind(n, 481060));
+                        i(),
+                            o(
+                                r(g, t.MESSAGE, {
+                                    duration: u,
                                     position: e.TOP
                                 })
                             );
@@ -38,9 +38,9 @@ let c = 6000,
                 } catch (e) {
                     null == f || f(e);
                 } finally {
-                    p(!1);
+                    _(!1);
                 }
             }, [h, m, d, g, f]),
-            isApplying: _
+            isApplying: p
         };
     };

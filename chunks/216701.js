@@ -1,26 +1,26 @@
 n.d(t, {
-    R: () => o,
+    R: () => s,
     Z: () => l
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(596454),
-    a = n(307707),
-    s = n(197280);
-let o = {
-    SMALL: s.small,
-    MEDIUM: s.medium,
-    LARGE: s.large
+var i = n(596454),
+    o = n(307707),
+    a = n(21379);
+let s = {
+    SMALL: a.small,
+    MEDIUM: a.medium,
+    LARGE: a.large
 };
 function l(e) {
-    let { emojiId: t, emojiName: n, defaultComponent: s, size: l = o.MEDIUM } = e,
-        { customEmoji: u, unicodeEmoji: c } = (0, a.Z)(t, n);
-    return null == u && null == c
-        ? (0, i.jsx)(i.Fragment, { children: s })
-        : (0, i.jsx)(r.Z, {
-              emojiName: null != u ? (null == u ? void 0 : u.name) : n,
-              animated: null != u && u.animated,
-              emojiId: null == u ? void 0 : u.id,
+    let { emojiId: t, emojiName: n, defaultComponent: a, size: l = s.MEDIUM } = e,
+        { customEmoji: c, unicodeEmoji: u } = (0, o.Z)(t, n);
+    return null == c && null == u
+        ? (0, r.jsx)(r.Fragment, { children: a })
+        : (0, r.jsx)(i.Z, {
+              emojiName: null != c ? (null == c ? void 0 : c.name) : n,
+              animated: null != c && c.animated,
+              emojiId: null == c ? void 0 : c.id,
               autoplay: !0,
               className: l
           });

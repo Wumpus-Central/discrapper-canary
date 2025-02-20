@@ -1,7 +1,7 @@
-n.d(t, { b: () => s }), n(47120);
-var i = n(689320),
-    r = n(143806);
-function a(e, t, n) {
+n.d(t, { b: () => a }), n(47120);
+var r = n(689320),
+    i = n(143806);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     get totalLength() {
         return this.primary.length + this.extended.length;
     }
@@ -63,15 +63,15 @@ class s {
         return this.primary.values();
     }
     allEntries() {
-        return i.t(this.extended.entries(), this.primary.entries());
+        return r.t(this.extended.entries(), this.primary.entries());
     }
     allKeys() {
-        return i.t(this.extended.keys(), this.primary.keys());
+        return r.t(this.extended.keys(), this.primary.keys());
     }
     allValues() {
-        return i.t(this.extended.values(), this.primary.values());
+        return r.t(this.extended.values(), this.primary.values());
     }
     constructor(e, t) {
-        a(this, 'primary', void 0), a(this, 'extended', void 0), (this.primary = new r.S(e)), (this.extended = new r.S(t));
+        o(this, 'primary', void 0), o(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
     }
 }

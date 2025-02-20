@@ -1,41 +1,41 @@
-var e = r(581031),
+var n = r(581031),
     i = r(339718),
     o = Math.floor,
-    u = e(''.charAt),
-    a = e(''.replace),
-    c = e(''.slice),
+    a = n(''.charAt),
+    c = n(''.replace),
+    u = n(''.slice),
     s = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
-    f = /\$([$&'`]|\d{1,2})/g;
-n.exports = function (n, t, r, e, l, h) {
-    var v = r + n.length,
-        p = e.length,
-        d = f;
+    l = /\$([$&'`]|\d{1,2})/g;
+t.exports = function (t, e, r, n, f, p) {
+    var v = r + t.length,
+        g = n.length,
+        x = l;
     return (
-        void 0 !== l && ((l = i(l)), (d = s)),
-        a(h, d, function (i, a) {
+        void 0 !== f && ((f = i(f)), (x = s)),
+        c(p, x, function (i, c) {
             var s;
-            switch (u(a, 0)) {
+            switch (a(c, 0)) {
                 case '$':
                     return '$';
                 case '&':
-                    return n;
+                    return t;
                 case '`':
-                    return c(t, 0, r);
+                    return u(e, 0, r);
                 case "'":
-                    return c(t, v);
+                    return u(e, v);
                 case '<':
-                    s = l[c(a, 1, -1)];
+                    s = f[u(c, 1, -1)];
                     break;
                 default:
-                    var f = +a;
-                    if (0 === f) return i;
-                    if (f > p) {
-                        var h = o(f / 10);
-                        if (0 === h) return i;
-                        if (h <= p) return void 0 === e[h - 1] ? u(a, 1) : e[h - 1] + u(a, 1);
+                    var l = +c;
+                    if (0 === l) return i;
+                    if (l > g) {
+                        var p = o(l / 10);
+                        if (0 === p) return i;
+                        if (p <= g) return void 0 === n[p - 1] ? a(c, 1) : n[p - 1] + a(c, 1);
                         return i;
                     }
-                    s = e[f - 1];
+                    s = n[l - 1];
             }
             return void 0 === s ? '' : s;
         })

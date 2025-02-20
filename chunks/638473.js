@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(809948),
-    r = n(670097);
-let a = function (e, t) {
+n.d(t, { Z: () => o });
+var r = n(809948),
+    i = n(670097);
+let o = function (e, t) {
     var n = -1,
-        a = (0, r.Z)(e) ? Array(e.length) : [];
+        o = (0, i.Z)(e) ? Array(e.length) : [];
     return (
-        (0, i.Z)(e, function (e, i, r) {
-            a[++n] = t(e, i, r);
+        (0, r.Z)(e, function (e, r, i) {
+            o[++n] = t(e, r, i);
         }),
-        a
+        o
     );
 };

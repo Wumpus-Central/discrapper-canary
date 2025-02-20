@@ -4,7 +4,7 @@ function t(e) {
             className: 'meta',
             begin: '@[A-Za-z]+'
         },
-        i = {
+        r = {
             className: 'subst',
             variants: [
                 { begin: '\\$[A-Za-z0-9_]+' },
@@ -14,7 +14,7 @@ function t(e) {
                 }
             ]
         },
-        r = {
+        i = {
             className: 'string',
             variants: [
                 {
@@ -31,28 +31,28 @@ function t(e) {
                     begin: '[a-z]+"',
                     end: '"',
                     illegal: '\\n',
-                    contains: [e.BACKSLASH_ESCAPE, i]
+                    contains: [e.BACKSLASH_ESCAPE, r]
                 },
                 {
                     className: 'string',
                     begin: '[a-z]+"""',
                     end: '"""',
-                    contains: [i],
+                    contains: [r],
                     relevance: 10
                 }
             ]
         },
-        a = {
+        o = {
             className: 'type',
             begin: '\\b[A-Z][A-Za-z0-9_]*',
             relevance: 0
         },
-        s = {
+        a = {
             className: 'title',
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0
         },
-        o = {
+        s = {
             className: 'class',
             beginKeywords: 'class object trait type',
             end: /[:={\[\n;]/,
@@ -70,7 +70,7 @@ function t(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
                 {
                     className: 'params',
@@ -79,22 +79,22 @@ function t(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
-                s
+                a
             ]
         },
         l = {
             className: 'function',
             beginKeywords: 'def',
             end: t.lookahead(/[:={\[(\n;]/),
-            contains: [s]
+            contains: [a]
         },
-        u = {
+        c = {
             begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
             beginScope: { 2: 'keyword' }
         },
-        c = {
+        u = {
             begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/],
             beginScope: {
                 2: 'keyword',
@@ -136,13 +136,13 @@ function t(e) {
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            r,
-            a,
-            l,
+            i,
             o,
+            l,
+            s,
             e.C_NUMBER_MODE,
-            u,
             c,
+            u,
             ...d,
             f,
             n

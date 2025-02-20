@@ -1,20 +1,20 @@
-var i = n(67867),
-    r = n(294377),
-    a = n(414629),
-    s = n(197859),
-    o = n(732116).CONSTRUCTOR,
+var r = n(67867),
+    i = n(294377),
+    o = n(414629),
+    a = n(197859),
+    s = n(732116).CONSTRUCTOR,
     l = n(607672),
-    u = r('Promise'),
-    c = a && !o;
-i(
+    c = i('Promise'),
+    u = o && !s;
+r(
     {
         target: 'Promise',
         stat: !0,
-        forced: a || o
+        forced: o || s
     },
     {
         resolve: function (e) {
-            return l(c && this === u ? s : this, e);
+            return l(u && this === c ? a : this, e);
         }
     }
 );

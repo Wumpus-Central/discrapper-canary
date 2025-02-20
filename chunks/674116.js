@@ -1,152 +1,152 @@
-n.d(t, { Z: () => F });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+n.d(t, { Z: () => G });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(846027),
     d = n(230711),
     u = n(921801),
     m = n(131951),
     g = n(663389),
-    h = n(63063),
-    x = n(680924),
-    _ = n(58765),
-    p = n(429789),
-    E = n(726763),
-    C = n(208113),
-    f = n(894939),
-    T = n(710808),
-    N = n(625205),
-    S = n(325808),
-    I = n(823087),
-    b = n(232388),
-    v = n(546997),
-    j = n(186934),
-    A = n(716210),
-    O = n(520384),
-    R = n(459674),
+    p = n(63063),
+    h = n(680924),
+    f = n(58765),
+    b = n(429789),
+    N = n(726763),
+    x = n(208113),
+    _ = n(894939),
+    E = n(710808),
+    j = n(625205),
+    C = n(325808),
+    O = n(823087),
+    v = n(232388),
+    S = n(546997),
+    T = n(186934),
+    I = n(716210),
+    y = n(520384),
+    A = n(459674),
     P = n(167540),
-    D = n(267006),
-    y = n(803567),
+    R = n(267006),
+    D = n(803567),
     Z = n(269876),
-    k = n(976758),
-    L = n(526761),
-    B = n(726985),
-    M = n(981631),
-    w = n(65154),
-    V = n(388032),
-    U = n(483938);
-let G = ''.concat(h.Z.getArticleURL(M.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
-function F() {
-    let { inputMode: e } = (0, a.cj)([m.Z], () => ({ inputMode: m.Z.getMode() })),
-        t = (0, a.e7)([g.Z], () => g.Z.getSubsection()),
-        n = s.createRef(),
-        r = s.createRef();
-    s.useEffect(() => {
-        var e, i;
-        t === L.GA && (null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection()), t === L.gP && (null == r || null === (i = r.current) || void 0 === i || i.scrollIntoView(), d.Z.clearSubsection());
-    }, [n, r, t]);
-    let h = (0, _.Z)();
-    return (0, i.jsxs)(o.hjN, {
+    w = n(976758),
+    k = n(526761),
+    W = n(726985),
+    L = n(981631),
+    B = n(65154),
+    M = n(388032),
+    U = n(455812);
+let V = ''.concat(p.Z.getArticleURL(L.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+function G() {
+    let { inputMode: e } = (0, l.cj)([m.Z], () => ({ inputMode: m.Z.getMode() })),
+        t = (0, l.e7)([g.Z], () => g.Z.getSubsection()),
+        n = i.createRef(),
+        s = i.createRef();
+    i.useEffect(() => {
+        var e, r;
+        t === k.GA && (null == n || null === (e = n.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection()), t === k.gP && (null == s || null === (r = s.current) || void 0 === r || r.scrollIntoView(), d.Z.clearSubsection());
+    }, [n, s, t]);
+    let p = (0, f.Z)();
+    return (0, r.jsxs)(o.hjN, {
         tag: o.RB0.H1,
-        title: V.intl.string(V.t.NiTd0d),
+        title: M.NW.string(M.t.NiTd0d),
         children: [
-            (0, i.jsxs)(u.F, {
-                setting: B.s6.VOICE_AND_VIDEO_VOICE,
+            (0, r.jsxs)(u.F, {
+                setting: W.s6.VOICE_AND_VIDEO_VOICE,
                 children: [
-                    (0, i.jsx)(u.F, {
-                        setting: B.s6.VOICE_AND_VIDEO_DEVICES,
-                        children: (0, i.jsx)(N.Z, {})
+                    (0, r.jsx)(u.F, {
+                        setting: W.s6.VOICE_AND_VIDEO_DEVICES,
+                        children: (0, r.jsx)(j.Z, {})
                     }),
-                    (0, i.jsx)(u.F, {
-                        setting: B.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                        children: (0, i.jsx)(k.Z, {})
+                    (0, r.jsx)(u.F, {
+                        setting: W.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                        children: (0, r.jsx)(w.Z, {})
                     }),
-                    (0, i.jsxs)(u.F, {
-                        setting: B.s6.VOICE_AND_VIDEO_MIC_TEST,
+                    (0, r.jsxs)(u.F, {
+                        setting: W.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(I.Z, {}),
-                            (0, i.jsx)(o.R94, {
+                            (0, r.jsx)(O.Z, {}),
+                            (0, r.jsx)(o.R94, {
                                 className: U.marginBottom20,
                                 type: o.R94.Types.DESCRIPTION,
-                                children: V.intl.format(V.t['V+B3FB'], { guideURL: G })
+                                children: M.NW.format(M.t['V+B3FB'], { guideURL: V })
                             }),
-                            (0, i.jsx)(o.$i$, { className: l()(U.marginBottom20) })
+                            (0, r.jsx)(o.$i$, { className: a()(U.marginBottom20) })
                         ]
                     }),
-                    (0, i.jsx)(u.F, {
-                        setting: B.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(S.Z, {})
+                    (0, r.jsx)(u.F, {
+                        setting: W.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                        children: (0, r.jsx)(C.Z, {})
                     }),
-                    (0, i.jsx)(u.F, {
-                        setting: B.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                        children: e === w.pM.VOICE_ACTIVITY && (0, i.jsx)(Z.Z, {})
+                    (0, r.jsx)(u.F, {
+                        setting: W.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                        children: e === B.pM.VOICE_ACTIVITY && (0, r.jsx)(Z.Z, {})
                     }),
-                    (0, i.jsx)(o.$i$, { className: U.marginBottom40 })
+                    (0, r.jsx)(o.$i$, { className: U.marginBottom40 })
                 ]
             }),
-            (0, i.jsx)(u.F, {
-                setting: B.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, i.jsx)('div', {
+            (0, r.jsx)(u.F, {
+                setting: W.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: (0, r.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
                     ref: n
                 })
             }),
-            (0, i.jsx)(u.F, {
-                setting: B.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(f.Z, {})
+            (0, r.jsx)(u.F, {
+                setting: W.s6.VOICE_AND_VIDEO_SOUNDS,
+                children: (0, r.jsx)(_.Z, {})
             }),
-            (0, i.jsxs)(u.F, {
-                setting: B.s6.VOICE_AND_VIDEO_VIDEO,
+            (0, r.jsxs)(u.F, {
+                setting: W.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         style: { scrollMarginTop: '48px' },
-                        ref: r
+                        ref: s
                     }),
-                    (0, i.jsx)(P.Z, {})
+                    (0, r.jsx)(P.Z, {})
                 ]
             }),
-            (0, i.jsx)(u.F, {
-                setting: B.s6.VOICE_AND_VIDEO_ADVANCED,
-                children: (0, i.jsxs)(o.y5t, {
-                    component: (0, i.jsx)(o.vwX, {
+            (0, r.jsx)(u.F, {
+                setting: W.s6.VOICE_AND_VIDEO_ADVANCED,
+                children: (0, r.jsxs)(o.y5t, {
+                    component: (0, r.jsx)(o.vwX, {
                         tag: o.RB0.H1,
                         className: U.marginBottom20,
-                        children: V.intl.string(V.t['8/udY2'])
+                        children: M.NW.string(M.t['8/udY2'])
                     }),
                     children: [
-                        (0, i.jsx)(E.Z, {}),
-                        (0, i.jsx)(D.Z, {}),
-                        (0, i.jsx)(u.F, {
-                            setting: B.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(y.Z, {})
+                        (0, r.jsx)(N.Z, {}),
+                        (0, r.jsx)(R.Z, {}),
+                        (0, r.jsx)(u.F, {
+                            setting: W.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                            children: (0, r.jsx)(D.Z, {})
                         }),
-                        (0, i.jsx)(O.Z, {}),
-                        (0, i.jsx)(b.Z, {}),
-                        (0, i.jsx)(p.Z, {}),
-                        h && (0, i.jsx)(j.Z, {}),
-                        (0, i.jsx)(C.Z, {}),
-                        (0, i.jsx)(v.Z, {}),
-                        (0, i.jsx)(A.Z, {}),
-                        (0, i.jsx)(R.Z, { refreshStyles: !0 }),
-                        (0, i.jsx)(o.$i$, { className: U.marginBottom40 }),
-                        (0, i.jsx)(u.F, {
-                            setting: B.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(T.Z, {})
+                        (0, r.jsx)(y.Z, {}),
+                        (0, r.jsx)(v.Z, {}),
+                        (0, r.jsx)(b.Z, {}),
+                        p && (0, r.jsx)(T.Z, {}),
+                        (0, r.jsx)(x.Z, {}),
+                        (0, r.jsx)(S.Z, {}),
+                        (0, r.jsx)(I.Z, {}),
+                        (0, r.jsx)(A.Z, { refreshStyles: !0 }),
+                        (0, r.jsx)(o.$i$, { className: U.marginBottom40 }),
+                        (0, r.jsx)(u.F, {
+                            setting: W.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                            children: (0, r.jsx)(E.Z, {})
                         }),
-                        (0, i.jsx)(u.F, {
-                            setting: B.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
-                            children: (0, i.jsx)(o.xJW, {
-                                children: (0, i.jsx)(o.zxk, {
+                        (0, r.jsx)(u.F, {
+                            setting: W.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+                            children: (0, r.jsx)(o.xJW, {
+                                children: (0, r.jsx)(o.zxk, {
                                     look: o.zxk.Looks.OUTLINED,
                                     color: o.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, x.Z)(V.intl.string(V.t['/RXu6+']), V.intl.string(V.t.sQ42iY), c.Z.reset);
+                                        (0, h.Z)(M.NW.string(M.t['/RXu6+']), M.NW.string(M.t.sQ42iY), c.Z.reset);
                                     },
                                     size: o.zxk.Sizes.SMALL,
-                                    children: V.intl.string(V.t['/RXu6+'])
+                                    children: M.NW.string(M.t['/RXu6+'])
                                 })
                             })
                         })

@@ -1,40 +1,40 @@
-n.d(t, { Z: () => x }), n(47120), n(642549);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(772848),
+n.d(t, { Z: () => h }), n(47120), n(301563), n(866573), n(642549), n(787622);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(772848),
     o = n(481060),
     c = n(53281),
     d = n(451593),
     u = n(694539),
-    m = n(336600);
+    m = n(250105);
 let g = (e) => {
-        var t, n, s;
-        let { effect: r, onClick: a } = e,
+        var t, n, i;
+        let { effect: s, onClick: l } = e,
             { deleteConfig: c } = (0, d.E)();
-        return (0, i.jsxs)(o.P3F, {
+        return (0, r.jsxs)(o.P3F, {
             className: m.previewCard,
             onClick: () => {
-                a(r);
+                l(s);
             },
             children: [
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: m.previewCardImage,
-                    style: { backgroundImage: 'url('.concat(null === (s = r.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
+                    style: { backgroundImage: 'url('.concat(null === (i = s.config) || void 0 === i ? void 0 : null === (n = i.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
                 }),
-                (0, i.jsxs)('div', {
-                    className: l()(m.previewCardFooter, m.row),
+                (0, r.jsxs)('div', {
+                    className: a()(m.previewCardFooter, m.row),
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/bold',
-                            children: r.name
+                            children: s.name
                         }),
-                        (0, i.jsx)(o.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             color: o.Ttl.RED,
                             look: o.iLD.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), c(r.id);
+                                e.preventDefault(), e.stopPropagation(), c(s.id);
                             },
                             children: 'Delete'
                         })
@@ -43,43 +43,43 @@ let g = (e) => {
             ]
         });
     },
-    h = () => ({
-        id: (0, a.Z)(),
+    p = () => ({
+        id: (0, l.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function x() {
+function h() {
     let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
-        [n, r] = s.useState(),
-        a = s.useRef(null),
-        x = (e) => {
+        [n, s] = i.useState(),
+        l = i.useRef(null),
+        h = (e) => {
             (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: m.root,
         children: [
             null == n &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: m.col,
                             children: [
-                                (0, i.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: m.section,
-                                    children: (0, i.jsx)(o.X6q, {
+                                    children: (0, r.jsx)(o.X6q, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
-                                (0, i.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: m.grid,
                                     children: Object.values(e).map((e) =>
-                                        (0, i.jsx)(
+                                        (0, r.jsx)(
                                             g,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
-                                                    r(e);
+                                                    s(e);
                                                 }
                                             },
                                             e.id
@@ -88,39 +88,39 @@ function x() {
                                 })
                             ]
                         }),
-                        (0, i.jsxs)('div', {
-                            className: l()(m.row, m.end, m.section),
+                        (0, r.jsxs)('div', {
+                            className: a()(m.row, m.end, m.section),
                             children: [
-                                (0, i.jsxs)('div', {
+                                (0, r.jsxs)('div', {
                                     className: m.uploadButton,
                                     children: [
-                                        (0, i.jsx)(o.Text, {
+                                        (0, r.jsx)(o.Text, {
                                             variant: 'text-md/normal',
                                             color: 'always-white',
                                             children: 'Import Shared Config'
                                         }),
-                                        (0, i.jsx)(c.Z, {
-                                            ref: a,
+                                        (0, r.jsx)(c.Z, {
+                                            ref: l,
                                             onChange: (e) => {
                                                 let n = e.currentTarget.files;
                                                 if (null == n) return;
-                                                let i = n[0],
-                                                    s = new FileReader();
-                                                (s.onload = (e) => {
-                                                    if (null == e.target || 'string' != typeof e.target.result) return x('Something went wrong, try again!');
-                                                    let [n, i] = e.target.result.split(',');
-                                                    if (!n.includes('text/plain')) return x("Make sure you're only uploading text files!");
-                                                    t(JSON.parse(atob(i))), (0, o.showToast)((0, o.createToast)('Profile Effect (maybe??) imported!', o.ToastType.SUCCESS));
+                                                let r = n[0],
+                                                    i = new FileReader();
+                                                (i.onload = (e) => {
+                                                    if (null == e.target || 'string' != typeof e.target.result) return h('Something went wrong, try again!');
+                                                    let [n, r] = e.target.result.split(',');
+                                                    if (!n.includes('text/plain')) return h("Make sure you're only uploading text files!");
+                                                    t(JSON.parse(atob(r))), (0, o.showToast)((0, o.createToast)('Profile Effect (maybe??) imported!', o.ToastType.SUCCESS));
                                                 }),
-                                                    s.readAsDataURL(i);
+                                                    i.readAsDataURL(r);
                                             },
                                             multiple: !1
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(o.zxk, {
+                                (0, r.jsx)(o.zxk, {
                                     onClick: () => {
-                                        t(h());
+                                        t(p());
                                     },
                                     children: 'Create New Effect'
                                 })
@@ -129,10 +129,10 @@ function x() {
                     ]
                 }),
             null != n &&
-                (0, i.jsx)(u.Z, {
+                (0, r.jsx)(u.Z, {
                     effect: n,
                     back: () => {
-                        r(void 0);
+                        s(void 0);
                     }
                 })
         ]

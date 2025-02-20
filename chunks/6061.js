@@ -1,9 +1,9 @@
 n.d(t, { F: () => E });
-var i = n(717029),
-    r = n(25487),
-    a = n(846042);
-function s(e) {
-    return (s =
+var r = n(717029),
+    i = n(25487),
+    o = n(846042);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -12,19 +12,19 @@ function s(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function o(e, t) {
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function u(e, t, n) {
+function c(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
-function c(e, t) {
+function u(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -46,14 +46,14 @@ function f(e) {
     var t = h();
     return function () {
         var n,
-            i = m(e);
-        return (n = t ? Reflect.construct(i, arguments, m(this).constructor) : i.apply(this, arguments)), _(this, n);
+            r = m(e);
+        return (n = t ? Reflect.construct(r, arguments, m(this).constructor) : r.apply(this, arguments)), p(this, n);
     };
 }
-function _(e, t) {
-    return t && ('object' === s(t) || 'function' == typeof t) ? t : p(e);
+function p(e, t) {
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : _(e);
 }
-function p(e) {
+function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
@@ -87,30 +87,30 @@ function g(e, t, n) {
     );
 }
 var E = (function (e) {
-    c(n, e);
+    u(n, e);
     var t = f(n);
     function n() {
         var e;
-        o(this, n);
-        for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
-        return g(p((e = t.call.apply(t, [this].concat(r)))), 'priority', 10), g(p(e), 'incompatibleTokens', ['t', 'T', 'x']), e;
+        s(this, n);
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        return g(_((e = t.call.apply(t, [this].concat(i)))), 'priority', 10), g(_(e), 'incompatibleTokens', ['t', 'T', 'x']), e;
     }
     return (
-        u(n, [
+        c(n, [
             {
                 key: 'parse',
                 value: function (e, t) {
                     switch (t) {
                         case 'X':
-                            return (0, a.DA)(r.s.basicOptionalMinutes, e);
+                            return (0, o.DA)(i.s.basicOptionalMinutes, e);
                         case 'XX':
-                            return (0, a.DA)(r.s.basic, e);
+                            return (0, o.DA)(i.s.basic, e);
                         case 'XXXX':
-                            return (0, a.DA)(r.s.basicOptionalSeconds, e);
+                            return (0, o.DA)(i.s.basicOptionalSeconds, e);
                         case 'XXXXX':
-                            return (0, a.DA)(r.s.extendedOptionalSeconds, e);
+                            return (0, o.DA)(i.s.extendedOptionalSeconds, e);
                         default:
-                            return (0, a.DA)(r.s.extended, e);
+                            return (0, o.DA)(i.s.extended, e);
                     }
                 }
             },
@@ -123,4 +123,4 @@ var E = (function (e) {
         ]),
         n
     );
-})(i._);
+})(r._);

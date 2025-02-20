@@ -112,7 +112,7 @@ var o = r(338091),
             for (var o = 0; o < e; o++) for (var n = 0; n < e - 6; n++) t.isDark(o, n) && !t.isDark(o, n + 1) && t.isDark(o, n + 2) && t.isDark(o, n + 3) && t.isDark(o, n + 4) && !t.isDark(o, n + 5) && t.isDark(o, n + 6) && (r += 40);
             for (var n = 0; n < e; n++) for (var o = 0; o < e - 6; o++) t.isDark(o, n) && !t.isDark(o + 1, n) && t.isDark(o + 2, n) && t.isDark(o + 3, n) && t.isDark(o + 4, n) && !t.isDark(o + 5, n) && t.isDark(o + 6, n) && (r += 40);
             for (var f = 0, n = 0; n < e; n++) for (var o = 0; o < e; o++) t.isDark(o, n) && f++;
-            return r + (Math.abs((100 * f) / e / e - 50) / 5) * 10;
+            return r + 10 * (Math.abs((100 * f) / e / e - 50) / 5);
         }
     };
 t.exports = u;

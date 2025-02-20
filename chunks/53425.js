@@ -1,47 +1,47 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(540059),
-    d = n(592125),
-    u = n(938475),
-    h = n(823379),
-    p = n(734190),
-    m = n(388032),
-    g = n(37670);
-let f = l.memo(function (e) {
-    let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: f } = e,
-        { density: _ } = (0, s.TCT)(),
+    u = n(592125),
+    d = n(938475),
+    p = n(823379),
+    h = n(734190),
+    f = n(388032),
+    g = n(366772);
+let m = i.memo(function (e) {
+    let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: m } = e,
+        { density: b } = (0, s.TCT)(),
         v = (0, c.Q3)('GuildSidebarThreadList'),
-        C = (0, o.Wu)([d.Z], () => r.map((e) => d.Z.getChannel(e)).filter(h.lm), [r]),
-        x = (0, o.e7)([u.ZP], () => {
-            let e = C[C.length - 1];
+        y = (0, a.Wu)([u.Z], () => l.map((e) => u.Z.getChannel(e)).filter(p.lm), [l]),
+        _ = (0, a.e7)([d.ZP], () => {
+            let e = y[y.length - 1];
             if (null == e) return 0;
-            let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
-            return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
+            let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
+            return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
-    return (0, i.jsx)('li', {
+    return (0, r.jsx)('li', {
         className: g.container,
-        children: (0, i.jsxs)('ul', {
+        children: (0, r.jsxs)('ul', {
             role: 'group',
-            'aria-label': m.intl.formatToPlainString(m.t.EiyIi4, { channelName: t.name }),
+            'aria-label': f.NW.formatToPlainString(f.t.EiyIi4, { channelName: t.name }),
             children: [
-                (0, i.jsx)('div', {
-                    className: a()(g.spineBorder, { [g.spineBorderWithGuildIcon]: f }),
-                    style: { bottom: (v && 'cozy' === _ ? 28 : 24) + x }
+                (0, r.jsx)('div', {
+                    className: o()(g.spineBorder, { [g.spineBorderWithGuildIcon]: m }),
+                    style: { bottom: (v && 'cozy' === b ? 28 : 24) + _ }
                 }),
-                C.map((e, t) =>
-                    (0, i.jsx)(
-                        p.Z,
+                y.map((e, t) =>
+                    (0, r.jsx)(
+                        h.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
-                            isSelectedVoice: l === e.id,
-                            isLast: t === C.length - 1,
-                            withGuildIcon: f
+                            isSelectedVoice: i === e.id,
+                            isLast: t === y.length - 1,
+                            withGuildIcon: m
                         },
                         e.id
                     )

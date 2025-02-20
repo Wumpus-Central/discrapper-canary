@@ -1,40 +1,40 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(873546),
-    s = n(481060),
-    o = n(470134),
-    c = n(960691);
-function d(e) {
-    let { guildId: t, children: n, className: l } = e,
-        { horizontalScrollNotice: d, handleScroll: u, handleSetScrollerRef: h, handleSetContainerRef: p } = (0, o.Z)(t),
-        m = (0, i.jsx)('div', {
+var i = n(120356),
+    l = n.n(i),
+    o = n(873546),
+    a = n(481060),
+    s = n(470134),
+    c = n(126814);
+function u(e) {
+    let { guildId: t, children: n, className: i } = e,
+        { horizontalScrollNotice: u, handleScroll: d, handleSetScrollerRef: p, handleSetContainerRef: h } = (0, s.Z)(t),
+        f = (0, r.jsx)('div', {
             className: c.tierPreviewsContainer,
-            children: (0, i.jsx)('div', {
-                className: a()(c.tierPreviews, l),
+            children: (0, r.jsx)('div', {
+                className: l()(c.tierPreviews, i),
                 children: n
             })
         });
     return (
-        r.tq ||
-            (m = (0, i.jsxs)(i.Fragment, {
+        o.tq ||
+            (f = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    d,
-                    (0, i.jsx)(s.Den, {
+                    u,
+                    (0, r.jsx)(a.Den, {
                         className: c.scroller,
                         orientation: 'horizontal',
-                        ref: h,
-                        onScroll: u,
-                        children: m
+                        ref: p,
+                        onScroll: d,
+                        children: f
                     })
                 ]
             })),
-        (0, i.jsx)('div', {
+        (0, r.jsx)('div', {
             className: c.carouselMaxWidth,
-            ref: p,
-            children: m
+            ref: h,
+            children: f
         })
     );
 }

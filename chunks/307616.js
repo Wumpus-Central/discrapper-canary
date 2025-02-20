@@ -1,26 +1,26 @@
 n.d(t, {
-    n: () => S,
-    v: () => T
+    n: () => I,
+    v: () => O
 }),
     n(47120),
     n(411104),
     n(852437);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(392711),
-    l = n.n(o),
-    u = n(215569),
-    c = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(392711),
+    l = n.n(s),
+    c = n(215569),
+    u = n(481060),
     d = n(40851),
     f = n(314910),
-    _ = n(429142),
-    p = n(585483),
+    p = n(429142),
+    _ = n(585483),
     h = n(952265),
     m = n(602091),
     g = n(981631),
-    E = n(950177);
+    E = n(521285);
 function v(e, t, n) {
     return (
         t in e
@@ -34,16 +34,16 @@ function v(e, t, n) {
         e
     );
 }
-let y = [f.ZP, _.ZP];
-class I extends r.PureComponent {
+let b = [f.ZP, p.ZP];
+class y extends i.PureComponent {
     render() {
-        let { render: e, LayerComponent: t, isTopModal: n, instant: r } = this.props,
-            a = r ? m.Dv.ENTERED : this.state.transitionState;
-        return (0, i.jsx)(t, {
-            children: (0, i.jsx)('div', {
-                className: s()(E.layer, !n && E.hidden),
+        let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
+            o = i ? m.Dv.ENTERED : this.state.transitionState;
+        return (0, r.jsx)(t, {
+            children: (0, r.jsx)('div', {
+                className: a()(E.layer, !n && E.hidden),
                 children: e({
-                    transitionState: a,
+                    transitionState: o,
                     onClose: this.close
                 })
             })
@@ -91,73 +91,73 @@ class I extends r.PureComponent {
             );
     }
 }
-function T() {
+function O() {
     return (0, h.Vn)((0, d.bp)());
 }
-let b = [];
-function S() {
-    let e = T(),
-        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : b)),
-        n = r.useRef();
-    r.useLayoutEffect(() => {
+let S = [];
+function I() {
+    let e = O(),
+        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : S)),
+        n = i.useRef();
+    i.useLayoutEffect(() => {
         n.current = t[t.length - 1];
     }, [t]);
-    let a = t.length > 0;
-    r.useLayoutEffect(() => {
-        if (!a) return;
+    let o = t.length > 0;
+    i.useLayoutEffect(() => {
+        if (!o) return;
         let e = () => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         };
         return (
-            p.S.subscribe(g.CkL.MODAL_CLOSE, e),
+            _.S.subscribe(g.CkL.MODAL_CLOSE, e),
             () => {
-                p.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
+                _.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
             }
         );
-    }, [a]);
-    let s = r.useCallback(() => {
+    }, [o]);
+    let a = i.useCallback(() => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
-        o = r.useCallback(
+        s = i.useCallback(
             (t) => {
                 (0, h.Mr)(t, e);
             },
             [e]
         ),
-        d = y.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.ZP)));
-    return (0, i.jsxs)(u.W, {
-        component: r.Fragment,
+        d = b.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.ZP)));
+    return (0, r.jsxs)(c.W, {
+        component: i.Fragment,
         children: [
-            y.map((e, n) => {
-                var r;
-                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
-                return (0, i.jsx)(
-                    c.YMn,
+            b.map((e, n) => {
+                var i;
+                let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
+                return (0, r.jsx)(
+                    u.YMn,
                     {
                         isVisible: d[n],
-                        backdropStyle: null !== (r = null == a ? void 0 : a.backdropStyle) && void 0 !== r ? r : c.fCB.DARK,
-                        onClose: s,
+                        backdropStyle: null !== (i = null == o ? void 0 : o.backdropStyle) && void 0 !== i ? i : u.fCB.DARK,
+                        onClose: a,
                         LayerComponent: e,
-                        backdropInstant: null == a ? void 0 : a.instant
+                        backdropInstant: null == o ? void 0 : o.instant
                     },
                     'layer-'.concat(n)
                 );
             }),
             t.map((e, n) => {
-                let { key: r, Layer: a, render: s, instant: l } = e;
-                return (0, i.jsx)(
-                    I,
+                let { key: i, Layer: o, render: a, instant: l } = e;
+                return (0, r.jsx)(
+                    y,
                     {
-                        modalKey: r,
-                        LayerComponent: null != a ? a : f.ZP,
+                        modalKey: i,
+                        LayerComponent: null != o ? o : f.ZP,
                         isTopModal: n === t.length - 1,
-                        render: s,
-                        closeModal: o,
+                        render: a,
+                        closeModal: s,
                         instant: l
                     },
-                    r
+                    i
                 );
             })
         ]

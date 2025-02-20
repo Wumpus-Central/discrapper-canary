@@ -1,27 +1,27 @@
 n.d(t, {
     $c: () => g,
-    Nx: () => h,
-    On: () => x,
+    Nx: () => p,
+    On: () => h,
     tQ: () => u,
     x5: () => m
 });
-var i = n(140492),
-    s = n(475468),
-    r = n(703656),
-    l = n(769654),
-    a = n(944486),
+var r = n(140492),
+    i = n(475468),
+    s = n(703656),
+    a = n(769654),
+    l = n(944486),
     o = n(914010),
     c = n(358085),
     d = n(981631);
 let u = {
         binds: ['alt+down'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.Z)(), !1)
+        action: () => ((0, r.Z)(), !1)
     },
     m = {
         binds: ['alt+up'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, i.Z)(-1), !1)
+        action: () => ((0, r.Z)(-1), !1)
     },
     g = {
         binds: ['mod+alt+right'],
@@ -31,18 +31,18 @@ let u = {
             if (null != o.Z.getGuildId()) e = d.ME;
             else {
                 let t = o.Z.getLastSelectedGuildId();
-                null != t && ((e = t), (0, s.K)(t, a.Z.getChannelId(t)));
+                null != t && ((e = t), (0, i.K)(t, l.Z.getChannelId(t)));
             }
-            return null != e && (0, l.X)(e), !1;
+            return null != e && (0, a.X)(e), !1;
         }
     },
-    h = {
+    p = {
         binds: (0, c.isMac)() ? ['mod+['] : ['alt+left'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, r.op)(), !1)
+        action: () => ((0, s.op)(), !1)
     },
-    x = {
+    h = {
         binds: (0, c.isMac)() ? ['mod+]'] : ['alt+right'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, r.eH)(), !1)
+        action: () => ((0, s.eH)(), !1)
     };

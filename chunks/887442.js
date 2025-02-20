@@ -1,9 +1,9 @@
-var i = {
+var r = {
     current: function (e) {
         return n.g.cancelAnimationFrame(e);
     },
     inject: function (e) {
-        i.current = e;
+        r.current = e;
     }
 };
-e.exports = i;
+e.exports = r;

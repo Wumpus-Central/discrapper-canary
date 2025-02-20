@@ -1,16 +1,16 @@
-function i(e, t) {
+function r(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function r(e, t) {
+function i(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
-    return t && r(e.prototype, t), n && r(e, n), e;
+function o(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), e;
 }
-function s(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,13 +23,13 @@ function s(e, t, n) {
         e
     );
 }
-n.d(t, { r: () => o });
-var o = (function () {
+n.d(t, { r: () => s });
+var s = (function () {
     function e(t, n) {
-        i(this, e), s(this, 'ownerDocument', null), s(this, 'globalContext', void 0), s(this, 'optionsArgs', void 0), (this.globalContext = t), (this.optionsArgs = n);
+        r(this, e), a(this, 'ownerDocument', null), a(this, 'globalContext', void 0), a(this, 'optionsArgs', void 0), (this.globalContext = t), (this.optionsArgs = n);
     }
     return (
-        a(e, [
+        o(e, [
             {
                 key: 'window',
                 get: function () {

@@ -1,39 +1,39 @@
-n.d(t, { Z: () => m });
-var i,
+n.d(t, { Z: () => h });
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    s = n(570140),
-    o = n(331114),
-    d = n(356164);
-let c = [];
-function u() {
-    c = [];
+    o = n(442837),
+    a = n(570140),
+    s = n(331114),
+    c = n(356164);
+let u = [];
+function d() {
+    u = [];
 }
-class h extends (r = a.ZP.Store) {
+class p extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, d.Z);
+        this.waitFor(s.Z, c.Z);
     }
     getVisibleTabs() {
-        return c;
+        return u;
     }
 }
-(l = 'GlobalDiscoveryServersSearchLayoutStore'),
-    (i = 'displayName') in h
-        ? Object.defineProperty(h, i, {
-              value: l,
+(i = 'GlobalDiscoveryServersSearchLayoutStore'),
+    (r = 'displayName') in p
+        ? Object.defineProperty(p, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[i] = l);
-let m = new h(s.Z, {
-    CONNECTION_OPEN: u,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: u,
+        : (p[r] = i);
+let h = new p(a.Z, {
+    CONNECTION_OPEN: d,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: d,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t } = e,
-            n = o.Z.getCounts(t);
+            n = s.Z.getCounts(t);
         if (null == n) return !1;
-        c = n;
+        u = n;
     }
 });

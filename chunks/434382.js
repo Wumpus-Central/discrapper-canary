@@ -1,15 +1,15 @@
-n.d(t, { Z: () => O }), n(47120);
-var i = n(152057),
-    r = n(570140),
-    a = n(147913),
-    s = n(38618),
-    o = n(517100),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(152057),
+    i = n(570140),
+    o = n(147913),
+    a = n(38618),
+    s = n(517100),
     l = n(914010),
-    u = n(451478),
-    c = n(425128),
+    c = n(451478),
+    u = n(425128),
     d = n(994752),
     f = n(276344);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,121 +22,121 @@ function _(e, t, n) {
         e
     );
 }
-let p = i.v.LEAGUE_OF_LEGENDS_WEEKLY,
+let _ = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
     h = 3,
     m = 5,
     g = 900000,
     E = new Map(),
     v = new Set(),
-    y = new Map();
-function I(e, t) {
+    b = new Map();
+function y(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function T(e, t) {
+function O(e, t) {
     var n;
-    let i = I(e, t);
-    if (v.has(i) || (null !== (n = y.get(i)) && void 0 !== n ? n : 0) > h) return !1;
+    let r = y(e, t);
+    if (v.has(r) || (null !== (n = b.get(r)) && void 0 !== n ? n : 0) > h) return !1;
     if (l.Z.getGuildId() !== e) return;
     if (
         !(0, f.NM)({
             guildId: e,
             location: 'GuildLeaderboardManager'
         }) ||
-        !u.Z.isFocused() ||
-        !s.Z.isConnected()
+        !c.Z.isFocused() ||
+        !a.Z.isConnected()
     )
         return !1;
-    let r = o.Z.getIdleSince();
-    return !(null != r && Date.now() - r > g);
-}
-function b() {
-    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
+    let i = s.Z.getIdleSince();
+    return !(null != i && Date.now() - i > g);
 }
 function S() {
+    for (let e in E) clearTimeout(E.get(e)), E.delete(e);
+}
+function I() {
     var e;
-    b();
+    S();
     let t = l.Z.getGuildId();
-    if (null == t || !T(t, p)) return;
-    let n = d.Z.getLeaderboardResponse(t, p),
-        i = setTimeout(
+    if (null == t || !O(t, _)) return;
+    let n = d.Z.getLeaderboardResponse(t, _),
+        r = setTimeout(
             () =>
-                A({
+                T({
                     guildId: t,
-                    leaderboardId: p
+                    leaderboardId: _
                 }),
             Math.max(0, (null !== (e = null == n ? void 0 : n.expires_at) && void 0 !== e ? e : Date.now()) - Date.now())
         ),
-        r = I(t, p);
-    E.set(r, i);
+        i = y(t, _);
+    E.set(i, r);
 }
-async function A(e) {
-    let { guildId: t, leaderboardId: n, force: i = !1 } = e;
-    if (!(T(t, n) || i)) return;
-    let a = I(t, n);
-    if (!v.has(a))
+async function T(e) {
+    let { guildId: t, leaderboardId: n, force: r = !1 } = e;
+    if (!(O(t, n) || r)) return;
+    let o = y(t, n);
+    if (!v.has(o))
         try {
-            v.add(a);
-            let e = await (0, c.pV)({
+            v.add(o);
+            let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: 0,
-                    force: i
+                    force: r
                 }),
-                s = d.Z.get(t, n);
-            if ((null == s ? void 0 : s.interval_start) !== e.leaderboard.interval_start) {
-                let e = await (0, c.pV)({
+                a = d.Z.get(t, n);
+            if ((null == a ? void 0 : a.interval_start) !== e.leaderboard.interval_start) {
+                let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: -1,
-                    force: i
+                    force: r
                 });
-                r.Z.dispatch({
+                i.Z.dispatch({
                     type: 'SET_GUILD_LEADERBOARD',
                     leaderboardResponse: e,
                     intervalOffset: -1
                 });
             }
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'SET_GUILD_LEADERBOARD',
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
-                y.delete(a),
-                v.delete(a),
-                S();
-        } catch (r) {
-            var s;
-            let e = (null !== (s = y.get(a)) && void 0 !== s ? s : 0) + 1;
-            if ((y.set(a, e), !T(t, n))) return;
-            let i = 1000 * Math.pow(m, e);
+                b.delete(o),
+                v.delete(o),
+                I();
+        } catch (i) {
+            var a;
+            let e = (null !== (a = b.get(o)) && void 0 !== a ? a : 0) + 1;
+            if ((b.set(o, e), !O(t, n))) return;
+            let r = 1000 * Math.pow(m, e);
             E.set(
-                a,
+                o,
                 setTimeout(
                     () =>
-                        A({
+                        T({
                             guildId: t,
                             leaderboardId: n,
                             force: !0
                         }),
-                    i
+                    r
                 )
             );
         }
 }
 function N() {
-    S();
+    I();
 }
-function C() {
-    b(), (E = new Map()), (v = new Set()), (y = new Map()), N();
+function A() {
+    S(), (E = new Map()), (v = new Set()), (b = new Map()), N();
 }
-class R extends a.Z {
+class C extends o.Z {
     fetchLeaderboard(e) {
-        return A(e);
+        return T(e);
     }
     constructor(...e) {
         super(...e),
-            _(this, 'actions', {
-                POST_CONNECTION_OPEN: C,
+            p(this, 'actions', {
+                POST_CONNECTION_OPEN: A,
                 CONNECTION_CLOSED: N,
                 WINDOW_FOCUS: N,
                 IDLE: N,
@@ -144,4 +144,4 @@ class R extends a.Z {
             });
     }
 }
-let O = new R();
+let R = new C();

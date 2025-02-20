@@ -22,11 +22,11 @@ class n {
         return this._getCached(this.relativeTime, e, (e) => new Intl.RelativeTimeFormat(...e));
     }
     _getCached(e, t, n) {
-        let i = this._getKey(t),
-            r = e.get(i);
-        if (r) return r;
-        let a = n(t);
-        return e.set(i, a), a;
+        let r = this._getKey(t),
+            i = e.get(r);
+        if (i) return i;
+        let o = n(t);
+        return e.set(r, o), o;
     }
     _getKey(...e) {
         return JSON.stringify(e);

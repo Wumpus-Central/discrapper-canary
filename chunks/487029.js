@@ -1,130 +1,130 @@
-n.d(t, { Z: () => E }), n(47120), n(653041);
-var l = n(200651),
-    i = n(192379),
-    a = n(990547),
-    r = n(442837),
-    o = n(100527),
+n.d(t, { Z: () => x }), n(47120), n(230036), n(653041);
+var r = n(200651),
+    l = n(192379),
+    i = n(990547),
+    o = n(442837),
+    a = n(100527),
     s = n(906732),
     c = n(213609),
     u = n(675478),
     d = n(19780),
     h = n(709054),
     f = n(208049),
-    g = n(763296),
-    p = n(242291),
+    p = n(763296),
+    g = n(242291),
     N = n(174470),
     v = n(549771),
-    x = n(964398),
-    m = n(409673),
-    C = n(710111),
-    I = n(901008);
-function E(e) {
-    let { guildId: t, channel: n, width: E, height: T, keepOpen: y, interactive: Z = !0, analyticsSource: O, onClose: b } = e,
-        _ = (function (e) {
-            let [t, n] = (0, r.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
-            return i.useMemo(() => {
-                let l = [],
-                    i = [...e, C.X8],
-                    a = (e, i) => {
-                        var a, r;
-                        for (let o of null !== (r = null === (a = t.get(e)) || void 0 === a ? void 0 : a.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== r ? r : []) {
-                            let e = n.has(o.soundId);
-                            ((e && i) || (!e && !i)) && o.available && l.push(o);
+    O = n(964398),
+    y = n(409673),
+    m = n(710111),
+    b = n(8305);
+function x(e) {
+    let { guildId: t, channel: n, width: x, height: C, keepOpen: I, interactive: E = !0, analyticsSource: T, onClose: j } = e,
+        w = (function (e) {
+            let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
+            return l.useMemo(() => {
+                let r = [],
+                    l = [...e, m.X8],
+                    i = (e, l) => {
+                        var i, o;
+                        for (let a of null !== (o = null === (i = t.get(e)) || void 0 === i ? void 0 : i.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== o ? o : []) {
+                            let e = n.has(a.soundId);
+                            ((e && l) || (!e && !l)) && a.available && r.push(a);
                         }
                     };
-                return i.forEach((e) => a(e, !0)), i.forEach((e) => a(e, !1)), l;
+                return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
             }, [t, n, e]);
         })((0, v.h)(n, !0)),
-        S = (0, N.j)(),
-        w = i.useRef(null),
-        [A, P] = i.useState(void 0),
-        j = (0, r.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: R } = (0, s.ZP)(o.Z.SOUNDBOARD_WHEEL),
-        k = i.useCallback(
+        P = (0, N.j)(),
+        S = l.useRef(null),
+        [Z, _] = l.useState(void 0),
+        A = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
+        k = l.useCallback(
             (e) => {
-                (0, p.GN)(e, n.id, R), b();
+                (0, g.GN)(e, n.id, R), j();
             },
-            [R, n.id, b]
+            [R, n.id, j]
         );
-    i.useEffect(() => {
+    l.useEffect(() => {
         f.w(), u.DZ.loadIfNecessary();
     }, []),
-        i.useEffect(() => {
-            0 === _.length && 0 === S.length && b();
-        }, [_.length, S, b]),
-        i.useEffect(
+        l.useEffect(() => {
+            0 === w.length && 0 === P.length && j();
+        }, [w.length, P, j]),
+        l.useEffect(
             () => () => {
-                let e = w.current;
-                y || null == e || k(e);
+                let e = S.current;
+                I || null == e || k(e);
             },
-            [y, k]
+            [I, k]
         ),
         (0, c.Z)(
             {
-                type: a.ImpressionTypes.POPOUT,
-                name: a.ImpressionNames.SOUNDBOARD_POPOUT,
+                type: i.ImpressionTypes.POPOUT,
+                name: i.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: O,
+                    source: T,
                     guild_id: t,
-                    media_session_id: j
+                    media_session_id: A
                 }
             },
-            { disableTrack: !Z }
+            { disableTrack: !E }
         );
-    let D = i.useCallback((e) => {
-            (w.current = e), P(null == e ? void 0 : e.soundId);
+    let D = l.useCallback((e) => {
+            (S.current = e), _(null == e ? void 0 : e.soundId);
         }, []),
-        F = i.useCallback(
+        W = l.useCallback(
             (e) => {
                 if (null == e) {
                     D(null);
                     return;
                 }
-                let t = _[e];
+                let t = w[e];
                 null != t && D(t);
             },
-            [D, _]
+            [D, w]
         ),
-        M = i.useCallback(
+        F = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = _[e];
+                let t = w[e];
                 null != t && k(t);
             },
-            [_, k]
+            [w, k]
         ),
-        B = i.useMemo(
+        M = l.useMemo(
             () =>
-                _.map((e) =>
-                    (0, l.jsx)(
-                        m.ZP,
+                w.map((e) =>
+                    (0, r.jsx)(
+                        y.ZP,
                         {
-                            interactive: Z,
-                            className: I.soundButton,
+                            interactive: E,
+                            className: b.soundButton,
                             sound: e,
-                            focused: A === e.soundId,
+                            focused: Z === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [A, n, Z, _]
+            [Z, n, E, w]
         );
-    return 0 === _.length
+    return 0 === w.length
         ? null
-        : (0, l.jsx)(s.Gt, {
+        : (0, r.jsx)(s.Gt, {
               value: R,
-              children: (0, l.jsx)(x.Z, {
-                  wheelWidth: E,
-                  wheelHeight: T,
+              children: (0, r.jsx)(O.Z, {
+                  wheelWidth: x,
+                  wheelHeight: C,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !y,
-                  activeItem: A,
-                  onItemSelect: F,
-                  onItemAction: M,
-                  interactive: Z,
-                  children: B
+                  showDeadZoneIndicator: !I,
+                  activeItem: Z,
+                  onItemSelect: W,
+                  onItemAction: F,
+                  interactive: E,
+                  children: M
               })
           });
 }

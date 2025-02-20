@@ -1,16 +1,16 @@
-n.d(t, { Z: () => r });
-var i = n(687516),
-    l = n(5192),
-    a = n(388032);
-function r(e, t, n) {
-    let r = (0, i.Cf)(n),
-        s = l.ZP.getName(e.getGuildId(), e.id, t);
+n.d(t, { Z: () => o });
+var r = n(687516),
+    i = n(5192),
+    l = n(388032);
+function o(e, t, n) {
+    let o = (0, r.Cf)(n),
+        a = i.ZP.getName(e.getGuildId(), e.id, t);
     return null == n
-        ? s
-        : (null == r ? void 0 : r.name) != null
-          ? a.intl.formatToPlainString(a.t['9jpVOT'], {
-                applicationName: null == r ? void 0 : r.name,
-                username: s
+        ? a
+        : (null == o ? void 0 : o.name) != null
+          ? l.NW.formatToPlainString(l.t['9jpVOT'], {
+                applicationName: null == o ? void 0 : o.name,
+                username: a
             })
-          : a.intl.formatToPlainString(a.t['+h0Z5+'], { username: s });
+          : l.NW.formatToPlainString(l.t['+h0Z5+'], { username: a });
 }

@@ -1,7 +1,7 @@
 var t = Object.prototype.hasOwnProperty;
 function n(e) {
     var n = e.length,
-        i = new e.constructor(n);
-    return n && 'string' == typeof e[0] && t.call(e, 'index') && ((i.index = e.index), (i.input = e.input)), i;
+        r = new e.constructor(n);
+    return n && 'string' == typeof e[0] && t.call(e, 'index') && ((r.index = e.index), (r.input = e.input)), r;
 }
 e.exports = n;

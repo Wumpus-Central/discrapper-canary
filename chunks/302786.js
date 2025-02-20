@@ -1,9 +1,9 @@
 function t(e) {
     let t = '\\d(_|\\d)*',
         n = '[eE][-+]?' + t,
-        i = t + '(\\.' + t + ')?(' + n + ')?',
-        r = '\\w+',
-        a = '\\b(' + (t + '#' + r + '(\\.' + r + ')?#(' + n) + ')?|' + i + ')';
+        r = t + '(\\.' + t + ')?(' + n + ')?',
+        i = '\\w+',
+        o = '\\b(' + (t + '#' + i + '(\\.' + i + ')?#(' + n) + ')?|' + r + ')';
     return {
         name: 'VHDL',
         case_insensitive: !0,
@@ -19,7 +19,7 @@ function t(e) {
             e.QUOTE_STRING_MODE,
             {
                 className: 'number',
-                begin: a,
+                begin: o,
                 relevance: 0
             },
             {

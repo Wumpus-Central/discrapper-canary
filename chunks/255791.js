@@ -1,40 +1,40 @@
-n.d(t, { Z: () => g }), n(47120);
-var i,
+n.d(t, { Z: () => f }), n(47120);
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    s = n(433517),
-    o = n(570140),
-    d = n(650774),
-    c = n(430824),
-    u = n(496675),
-    h = n(981631);
-let m = { MAX_MEMBER_COUNT: new Set() };
-class p extends (i = a.ZP.Store) {
+    o = n(442837),
+    a = n(433517),
+    s = n(570140),
+    c = n(650774),
+    u = n(430824),
+    d = n(496675),
+    p = n(981631);
+let h = { MAX_MEMBER_COUNT: new Set() };
+class g extends (r = o.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(u.Z, c.Z, d.Z), this.syncWith([u.Z, c.Z, d.Z], h.dG4), s.K.remove(h.vID.MAX_MEMBER_COUNT_100), s.K.remove(h.vID.MAX_MEMBER_COUNT_250), (e = new Set(s.K.get(h.vID.MAX_MEMBER_COUNT))), (m[h.vID.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
+        this.waitFor(d.Z, u.Z, c.Z), this.syncWith([d.Z, u.Z, c.Z], p.dG4), a.K.remove(p.vID.MAX_MEMBER_COUNT_100), a.K.remove(p.vID.MAX_MEMBER_COUNT_250), (e = new Set(a.K.get(p.vID.MAX_MEMBER_COUNT))), (h[p.vID.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
     }
     isVisible(e) {
         var t;
         if (null == e) return !1;
-        let n = null !== (t = d.Z.getMemberCount(e.id)) && void 0 !== t ? t : 0,
-            i = u.Z.can(h.Plq.ADMINISTRATOR, e);
-        return !e.hasFeature(h.oNc.CLAN) && !m[h.vID.MAX_MEMBER_COUNT].has(e.id) && i && e.maxMembers > 0 && e.maxMembers - n <= 10000;
+        let n = null !== (t = c.Z.getMemberCount(e.id)) && void 0 !== t ? t : 0,
+            r = d.Z.can(p.Plq.ADMINISTRATOR, e);
+        return !e.hasFeature(p.oNc.CLAN) && !h[p.vID.MAX_MEMBER_COUNT].has(e.id) && r && e.maxMembers > 0 && e.maxMembers - n <= 10000;
     }
 }
-(r = 'MaxMemberCountChannelNoticeStore'),
-    (l = 'displayName') in p
-        ? Object.defineProperty(p, l, {
-              value: r,
+(l = 'MaxMemberCountChannelNoticeStore'),
+    (i = 'displayName') in g
+        ? Object.defineProperty(g, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (p[l] = r);
-let g = new p(o.Z, {
+        : (g[i] = l);
+let f = new g(s.Z, {
     MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
-        if (!m[h.vID.MAX_MEMBER_COUNT].has(t)) return m[h.vID.MAX_MEMBER_COUNT].add(t), s.K.set(h.vID.MAX_MEMBER_COUNT, m[h.vID.MAX_MEMBER_COUNT]), !0;
+        if (!h[p.vID.MAX_MEMBER_COUNT].has(t)) return h[p.vID.MAX_MEMBER_COUNT].add(t), a.K.set(p.vID.MAX_MEMBER_COUNT, h[p.vID.MAX_MEMBER_COUNT]), !0;
     }
 });

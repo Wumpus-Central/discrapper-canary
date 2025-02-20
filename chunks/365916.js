@@ -1,11 +1,11 @@
-var i = n(690244),
-    r = i('%Object.preventExtensions%', !0),
-    a = i('%Object.isExtensible%', !0),
-    s = n(814277);
-e.exports = r
+var r = n(690244),
+    i = r('%Object.preventExtensions%', !0),
+    o = r('%Object.isExtensible%', !0),
+    a = n(814277);
+e.exports = i
     ? function (e) {
-          return !s(e) && a(e);
+          return !a(e) && o(e);
       }
     : function (e) {
-          return !s(e);
+          return !a(e);
       };

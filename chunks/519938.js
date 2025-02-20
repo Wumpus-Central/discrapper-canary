@@ -1,64 +1,64 @@
 n.d(t, {
-    $Z: () => o,
+    $Z: () => s,
     Ao: () => l,
-    Cp: () => s,
-    Cz: () => c,
-    bA: () => r,
-    d7: () => u,
+    Cp: () => a,
+    Cz: () => u,
+    bA: () => i,
+    d7: () => c,
     k3: () => d,
-    xv: () => a
+    xv: () => o
 });
-var i = n(570140);
-function r(e, t) {
+var r = n(570140);
+function i(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_OPEN',
         id: e,
         component: t,
         props: n
     });
 }
-function a(e) {
-    i.Z.dispatch({
+function o(e) {
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_CLOSE',
         id: e
     });
 }
-function s(e) {
-    i.Z.dispatch({
+function a(e) {
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_HIDE',
         id: e
     });
 }
-function o(e) {
-    i.Z.dispatch({
+function s(e) {
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_SHOW',
         id: e
     });
 }
 function l(e, t) {
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_MOVE',
         id: e,
         position: t
     });
 }
-function u(e, t) {
-    i.Z.dispatch({
+function c(e, t) {
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_RESIZE',
         width: e,
         pipType: t
     });
 }
-function c(e, t) {
-    i.Z.dispatch({
+function u(e, t) {
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_UPDATE_RECT',
         id: e,
         rect: t
     });
 }
 function d(e) {
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW',
         id: e
     });

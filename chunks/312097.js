@@ -89,7 +89,7 @@ function h(e) {
                 modalKey: u.U,
                 contextKey: m,
                 onCloseCallback: l.VO,
-                backdropStyle: i.fCB.IMMERSIVE
+                backdropStyle: i.fCB.LIGHTBOX
             }
         );
 }

@@ -1,35 +1,35 @@
-i.d(t, { Z: () => r });
-var n = i(990547),
-    s = i(881052),
-    l = i(573261),
-    a = i(981631);
-let r = {
-    createGuildFromTemplate: async function (e, t, i, r, o) {
+n.d(t, { Z: () => a });
+var s = n(990547),
+    i = n(881052),
+    r = n(573261),
+    l = n(981631);
+let a = {
+    createGuildFromTemplate: async function (e, t, n, a, o) {
         try {
             return (
-                await l.Z.post({
-                    url: a.ANM.GUILDS,
+                await r.Z.post({
+                    url: l.ANM.GUILDS,
                     body: {
                         name: e,
                         icon: t,
-                        channels: i.channels,
-                        system_channel_id: i.system_channel_id,
-                        roles: i.roles,
-                        guild_template_code: i.code,
+                        channels: n.channels,
+                        system_channel_id: n.system_channel_id,
+                        roles: n.roles,
+                        guild_template_code: n.code,
                         staff_only: !!o || void 0
                     },
                     trackedActionData: {
-                        event: n.NetworkActionNames.GUILD_CREATE,
+                        event: s.NetworkActionNames.GUILD_CREATE,
                         properties: {
-                            template_name: i.id,
-                            is_community_intent: r
+                            template_name: n.id,
+                            is_community_intent: a
                         }
                     },
                     rejectWithError: !1
                 })
             ).body;
         } catch (e) {
-            throw new s.Hx(e);
+            throw new i.Hx(e);
         }
     }
 };

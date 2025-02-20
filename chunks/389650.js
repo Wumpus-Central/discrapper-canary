@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(825209),
     h = n(721383),
     f = n(612226),
-    N = n(714338),
-    x = n(924557),
-    b = n(600164),
+    b = n(714338),
+    N = n(924557),
+    x = n(600164),
     _ = n(74299),
     E = n(131951),
     j = n(556296),
@@ -91,7 +91,7 @@ class U extends i.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
             t = S.BB(e.shortcut);
-        return N.Z.hasBind(t)
+        return b.Z.hasBind(t)
             ? (0, r.jsx)(u.R94, {
                   className: R.keybindMessage,
                   type: u.geA.DESCRIPTION,
@@ -113,8 +113,8 @@ class U extends i.PureComponent {
     }
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
-        return (0, r.jsxs)(b.Z, {
-            direction: b.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(x.Z, {
+            direction: x.Z.Direction.VERTICAL,
             className: a()(R.keybindGroup, D.card),
             children: [
                 !e &&
@@ -124,10 +124,10 @@ class U extends i.PureComponent {
                         onClick: this.handleDeleteKeybind,
                         look: g.Z.Looks.FILLED
                     }),
-                (0, r.jsxs)(b.Z, {
+                (0, r.jsxs)(x.Z, {
                     className: Z.marginBottom8,
                     children: [
-                        (0, r.jsx)(b.Z.Child, {
+                        (0, r.jsx)(x.Z.Child, {
                             basis: '45%',
                             children: (0, r.jsx)(u.xJW, {
                                 title: P.NW.string(P.t.UUpADw),
@@ -140,7 +140,7 @@ class U extends i.PureComponent {
                                 })
                             })
                         }),
-                        (0, r.jsx)(b.Z.Child, {
+                        (0, r.jsx)(x.Z.Child, {
                             basis: '45%',
                             children: (0, r.jsx)(u.xJW, {
                                 title: P.NW.string(P.t['1La4tL']),
@@ -151,7 +151,7 @@ class U extends i.PureComponent {
                                 })
                             })
                         }),
-                        (0, r.jsx)(b.Z.Child, {
+                        (0, r.jsx)(x.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, r.jsx)(u.xJW, {
@@ -173,7 +173,7 @@ class U extends i.PureComponent {
                         })
                     ]
                 }),
-                (0, r.jsx)(b.Z.Child, { children: this.renderMessage() }),
+                (0, r.jsx)(x.Z.Child, { children: this.renderMessage() }),
                 this.renderExtraSettings()
             ]
         });
@@ -363,18 +363,18 @@ class V extends i.PureComponent {
                     children: v.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsxs)(b.Z, {
-                                      justify: b.Z.Justify.BETWEEN,
+                                  (0, r.jsxs)(x.Z, {
+                                      justify: x.Z.Justify.BETWEEN,
                                       className: Z.marginBottom20,
                                       children: [
-                                          (0, r.jsx)(b.Z.Child, {
+                                          (0, r.jsx)(x.Z.Child, {
                                               grow: 0,
                                               children: (0, r.jsx)(u.Wn, {
                                                   messageType: u.QYI.WARNING,
                                                   children: P.NW.string(P.t.NoKjWF)
                                               })
                                           }),
-                                          (0, r.jsx)(b.Z.Child, {
+                                          (0, r.jsx)(x.Z.Child, {
                                               wrap: !0,
                                               grow: 0,
                                               children: (0, r.jsx)(u.zxk, {
@@ -493,7 +493,7 @@ function G() {
     let e = (0, c.e7)([j.ZP], () => j.ZP.getState()),
         t = (0, c.e7)([E.Z], () => (0, _.Z)(E.Z)),
         n = (0, c.e7)([C.Z], () => C.Z.isSupported()),
-        i = (0, x.Go)();
+        i = (0, N.Go)();
     return (0, r.jsx)(V, {
         keybinds: e,
         canGoLive: t,

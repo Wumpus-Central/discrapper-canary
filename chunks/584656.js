@@ -1,9 +1,9 @@
-n.d(t, { t: () => r });
-var i = n(200651);
+n.d(t, { t: () => o });
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(820644);
-function r(e) {
+function o(e) {
     let { text: t, id: n } = e;
-    (0, l.showToast)((0, l.createToast)(t, l.ToastType.CUSTOM, { component: (0, i.jsx)(a.o, { text: t }, n) }));
+    (0, i.showToast)((0, i.createToast)(t, i.ToastType.CUSTOM, { component: (0, r.jsx)(a.o, { text: t }, n) }));
 }

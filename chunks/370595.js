@@ -1,38 +1,38 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(50493),
-    r = n(388032),
-    s = n(827344),
-    o = n(859113);
+var i = n(481060),
+    l = n(50493),
+    o = n(388032),
+    a = n(557677),
+    s = n(211971);
 function c(e) {
-    let { onNavigate: t, backPanel: n = a.k.INFO } = e;
-    return (0, i.jsxs)('div', {
-        className: o.header,
+    let { onNavigate: t, backPanel: n = l.k.INFO } = e;
+    return (0, r.jsxs)('div', {
+        className: s.header,
         children: [
-            (0, i.jsx)('div', {
-                className: o.headerTitle,
-                children: (0, i.jsxs)(l.P3F, {
-                    className: s.backButton,
+            (0, r.jsx)('div', {
+                className: s.headerTitle,
+                children: (0, r.jsxs)(i.P3F, {
+                    className: a.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
-                        (0, i.jsx)(l.whL, {
+                        (0, r.jsx)(i.whL, {
                             size: 'custom',
                             width: 20,
                             height: 20
                         }),
-                        (0, i.jsx)(l.X6q, {
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-md/semibold',
-                            children: r.intl.string(r.t['13/7kZ'])
+                            children: o.NW.string(o.t['13/7kZ'])
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(l.M2$, {
+            (0, r.jsx)(i.M2$, {
                 shortcut: 'esc',
-                keyClassName: s.keyComboInner,
-                className: s.keyComboContainer
+                keyClassName: a.keyComboInner,
+                className: a.keyComboContainer
             })
         ]
     });

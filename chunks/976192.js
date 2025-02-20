@@ -16,7 +16,7 @@ var r = n(200651),
     p = n(388032),
     P = n(705025);
 function h(e) {
-    let { guildId: t, userId: h, analyticsLocation: j, analyticsLocations: N, context: m, icon: y } = e,
+    let { guildId: t, userId: h, analyticsLocation: N, analyticsLocations: j, context: m, icon: y } = e,
         v = Z.Z.getGuild(t),
         E = d.default.getId(),
         x = (0, i.e7)([g.default], () => g.default.getUser(h)),
@@ -27,28 +27,28 @@ function h(e) {
     let T = m === O.IlC.POPOUT,
         w = (0, s.Z)({
             guild: v,
-            analyticsLocation: j
+            analyticsLocation: N
         }),
         I = (0, u.Aq)();
     if (null == v || T) return null;
-    let _ = E === h && (b.Z.can(O.Plq.CHANGE_NICKNAME, v) || b.Z.can(O.Plq.MANAGE_NICKNAMES, v)),
-        U = E === h,
+    let W = E === h && (b.Z.can(O.Plq.CHANGE_NICKNAME, v) || b.Z.can(O.Plq.MANAGE_NICKNAMES, v)),
+        _ = E === h,
         k = b.Z.canManageUser(O.Plq.MANAGE_NICKNAMES, h, v);
-    if (!(_ || k || U) || null == x || C) return null;
+    if (!(W || k || _) || null == x || C) return null;
     let A = v.hasFeature(O.oNc.HUB) ? p.NW.string(p.t['+MWrWl']) : p.NW.string(p.t['PKQB/P']),
-        M = U ? A : p.NW.string(p.t.dilOFx);
+        U = _ ? A : p.NW.string(p.t.dilOFx);
     return (0, r.jsx)(o.sNh, {
         id: 'change-nickname',
         label: (0, r.jsx)('div', {
             className: P.labelWrapper,
             children: (0, r.jsx)('span', {
                 className: P.label,
-                children: M
+                children: U
             })
         }),
         icon: y,
         action: () => {
-            U
+            _
                 ? ((0, c.Z)(x.id, x.getAvatarURL(t, 80), { guildId: t }), w(), I.dispatch(O.CkL.POPOUT_CLOSE), (0, o.pTH)())
                 : (0, o.ZDy)(async () => {
                       let { default: e } = await n.e('17712').then(n.bind(n, 620021));
@@ -85,8 +85,8 @@ function h(e) {
                                   {
                                       guildId: t,
                                       user: x,
-                                      analyticsSource: j,
-                                      analyticsLocations: N
+                                      analyticsSource: N,
+                                      analyticsLocations: j
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))

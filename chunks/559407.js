@@ -1,13 +1,13 @@
 n.d(t, {
-    F: () => r,
-    Z: () => s
+    F: () => i,
+    Z: () => a
 });
-var i = n(200651);
-n(192379), n(250677);
-let r = 'cash-app-pay-container';
-function a() {
-    return (0, i.jsx)(i.Fragment, { children: (0, i.jsx)('div', { id: r }) });
+var r = n(200651);
+n(192379), n(560597);
+let i = 'cash-app-pay-container';
+function o() {
+    return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)('div', { id: i }) });
 }
-function s() {
-    return (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(a, {}) });
+function a() {
+    return (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(o, {}) });
 }

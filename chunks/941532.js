@@ -1,21 +1,21 @@
-n.d(t, { i: () => r });
-var i = n(388032);
-function r(e) {
+n.d(t, { i: () => i });
+var r = n(388032);
+function i(e) {
     return null != e.privacy_policy_url && null != e.terms_of_service_url
-        ? i.intl.format(i.t.rxlyKC, {
+        ? r.NW.format(r.t.rxlyKC, {
               application: e.name,
               privacyPolicyURL: e.privacy_policy_url,
               termsOfServiceURL: e.terms_of_service_url
           })
         : null != e.privacy_policy_url
-          ? i.intl.format(i.t.TBvmMz, {
+          ? r.NW.format(r.t.TBvmMz, {
                 application: e.name,
                 privacyPolicyURL: e.privacy_policy_url
             })
           : null != e.terms_of_service_url
-            ? i.intl.format(i.t['q0T/Q0'], {
+            ? r.NW.format(r.t['q0T/Q0'], {
                   application: e.name,
                   termsOfServiceURL: e.terms_of_service_url
               })
-            : i.intl.formatToPlainString(i.t['3Ywek5'], { application: e.name });
+            : r.NW.formatToPlainString(r.t['3Ywek5'], { application: e.name });
 }

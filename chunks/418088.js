@@ -1,4 +1,4 @@
-function i(e, t) {
+function r(e, t) {
     return {
         id: e.id,
         topic: e.topic,
@@ -12,4 +12,4 @@ function i(e, t) {
         type: e.type
     };
 }
-n.d(t, { b: () => i }), n(47120);
+n.d(t, { b: () => r }), n(47120);

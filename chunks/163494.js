@@ -1,14 +1,14 @@
-var i = String.prototype.valueOf,
-    r = function (e) {
+var r = String.prototype.valueOf,
+    i = function (e) {
         try {
-            return i.call(e), !0;
+            return r.call(e), !0;
         } catch (e) {
             return !1;
         }
     },
-    a = Object.prototype.toString,
-    s = '[object String]',
-    o = n(703825)();
+    o = Object.prototype.toString,
+    a = '[object String]',
+    s = n(703825)();
 e.exports = function (e) {
-    return 'string' == typeof e || ('object' == typeof e && (o ? r(e) : a.call(e) === s));
+    return 'string' == typeof e || ('object' == typeof e && (s ? i(e) : o.call(e) === a));
 };

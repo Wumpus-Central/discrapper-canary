@@ -11,11 +11,11 @@ var r = t(200651),
     f = t(680295),
     p = t(699516),
     m = t(5192),
-    b = t(785717),
-    I = t(221292),
+    I = t(785717),
+    b = t(221292),
     g = t(687158),
-    y = t(326094),
-    v = t(510659),
+    v = t(326094),
+    y = t(510659),
     j = t(113557),
     h = t(867176),
     x = t(451834),
@@ -31,9 +31,9 @@ var r = t(200651),
     L = t(412317),
     w = t(228168),
     A = t(981631),
-    R = t(388032),
-    M = t(608685);
-function D(e) {
+    M = t(388032),
+    R = t(608685);
+function U(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -58,7 +58,7 @@ function D(e) {
     }
     return e;
 }
-function U(e, n) {
+function D(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -79,12 +79,12 @@ function U(e, n) {
 function B(e) {
     let { user: n, currentUser: t, guildId: B, channelId: W, messageId: F, roleId: G, sessionId: k, friendToken: V, initialSection: Y, initialSubsection: K, transitionState: J, onClose: X, showGuildProfile: q = !0, sourceAnalyticsLocations: z = [] } = e,
         { analyticsLocations: H } = (0, u.ZP)([...z, d.Z.SIMPLIFIED_PROFILE_MODAL]),
-        Q = (0, y.Z)({
+        Q = (0, v.Z)({
             user: n,
             currentUser: t,
             location: A.Sbl.SIMPLIFIED_USER_PROFILE
         }),
-        $ = (0, b.ZB)({
+        $ = (0, I.ZB)({
             layout: Q ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: k,
@@ -94,7 +94,7 @@ function B(e) {
             roleId: G,
             showGuildProfile: q
         }),
-        ee = (0, v.$m)(),
+        ee = (0, y.$m)(),
         en = (0, s.q_F)({
             opacity: +(null != ee.interactionType),
             config: { duration: 150 }
@@ -109,15 +109,15 @@ function B(e) {
         ec = (0, c.Z)(es);
     return (0, r.jsx)(u.Gt, {
         value: H,
-        children: (0, r.jsx)(b.Mt, {
+        children: (0, r.jsx)(I.Mt, {
             value: $,
-            children: (0, r.jsx)(v.NJ, {
+            children: (0, r.jsx)(y.NJ, {
                 value: ee,
                 children: (0, r.jsxs)(s.Y0X, {
                     transitionState: J,
-                    className: M.root,
+                    className: R.root,
                     hideShadow: !0,
-                    'aria-label': R.NW.string(R.t['3N/J2t']),
+                    'aria-label': M.NW.string(M.t['3N/J2t']),
                     children: [
                         (0, r.jsxs)(O.Z, {
                             user: n,
@@ -150,19 +150,19 @@ function B(e) {
                                                     : (null == et ? void 0 : et.guildId) != null
                                                       ? (0, r.jsx)(s.sNh, {
                                                             id: 'view-main-profile',
-                                                            label: R.NW.string(R.t.GISTtb),
-                                                            subtext: R.NW.formatToPlainString(R.t['mn/nW1'], { displayName: m.ZP.getName(void 0, void 0, n) }),
+                                                            label: M.NW.string(M.t.GISTtb),
+                                                            subtext: M.NW.formatToPlainString(M.t['mn/nW1'], { displayName: m.ZP.getName(void 0, void 0, n) }),
                                                             action: () => {
                                                                 X(),
                                                                     (0, T.openUserProfileModal)(
-                                                                        U(D({}, $), {
+                                                                        D(U({}, $), {
                                                                             showGuildProfile: !1,
                                                                             friendToken: V,
                                                                             sourceAnalyticsLocations: z
                                                                         })
                                                                     ),
-                                                                    (0, I.pQ)(
-                                                                        D(
+                                                                    (0, b.pQ)(
+                                                                        U(
                                                                             {
                                                                                 action: 'PRESS_VIEW_MAIN_PROFILE',
                                                                                 analyticsLocations: H
@@ -174,19 +174,19 @@ function B(e) {
                                                         })
                                                       : (0, r.jsx)(s.sNh, {
                                                             id: 'view-server-profile',
-                                                            label: R.NW.string(R.t.DisZzM),
-                                                            subtext: R.NW.formatToPlainString(R.t['mn/nW1'], { displayName: m.ZP.getName(B, W, n) }),
+                                                            label: M.NW.string(M.t.DisZzM),
+                                                            subtext: M.NW.formatToPlainString(M.t['mn/nW1'], { displayName: m.ZP.getName(B, W, n) }),
                                                             action: () => {
                                                                 X(),
                                                                     (0, T.openUserProfileModal)(
-                                                                        U(D({}, $), {
+                                                                        D(U({}, $), {
                                                                             showGuildProfile: !0,
                                                                             friendToken: V,
                                                                             sourceAnalyticsLocations: z
                                                                         })
                                                                     ),
-                                                                    (0, I.pQ)(
-                                                                        D(
+                                                                    (0, b.pQ)(
+                                                                        U(
                                                                             {
                                                                                 action: 'PRESS_VIEW_SERVER_PROFILE',
                                                                                 analyticsLocations: H
@@ -209,15 +209,15 @@ function B(e) {
                                         (0, r.jsx)(x.Z, {
                                             userId: n.id,
                                             onClose: X,
-                                            className: M.toast
+                                            className: R.toast
                                         }),
                                         null != ee.interactionType &&
                                             (0, r.jsx)(i.animated.div, {
                                                 style: en,
-                                                className: M.backdrop
+                                                className: R.backdrop
                                             }),
                                         (0, r.jsxs)('div', {
-                                            className: M.headerInner,
+                                            className: R.headerInner,
                                             children: [
                                                 (0, r.jsx)(j.Z, {
                                                     location: 'UserProfileModal',
@@ -237,7 +237,7 @@ function B(e) {
                                                     onCloseProfile: X
                                                 }),
                                                 (0, r.jsxs)('div', {
-                                                    className: M.headerButtons,
+                                                    className: R.headerButtons,
                                                     children: [
                                                         (0, r.jsx)(L.Z, {
                                                             isCurrentUser: ei,

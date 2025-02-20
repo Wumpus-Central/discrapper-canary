@@ -1,58 +1,58 @@
-n.d(t, { Z: () => u }), n(390547), n(653041);
-var i = n(200651);
+n.d(t, { Z: () => u }), n(13667), n(390547), n(653041);
+var r = n(200651);
 n(192379);
-var l = n(392711),
-    a = n.n(l),
-    r = n(661824),
-    s = n(289481),
-    o = n(809780),
+var i = n(392711),
+    a = n.n(i),
+    o = n(661824),
+    l = n(289481),
+    s = n(809780),
     c = n(388032),
-    d = n(397736);
+    d = n(737324);
 function u(e, t, n) {
-    let { markChannelRead: l, markGuildRead: u, deleteChannel: m, toggle: _, getNumUnreadChannels: h } = t,
-        p = null;
+    let { markChannelRead: i, markGuildRead: u, deleteChannel: p, toggle: m, getNumUnreadChannels: f } = t,
+        h = null;
     return a().flatMap(e, (e) => {
-        let t = e.sortOrder !== p;
-        p = e.sortOrder;
+        let t = e.sortOrder !== h;
+        h = e.sortOrder;
         let a = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel
+                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
                     ? a.push(
-                          (0, i.jsx)(
-                              r.Z,
+                          (0, r.jsx)(
+                              o.Z,
                               {
                                   className: d.divider,
                                   contentClassName: d.dividerContent,
-                                  children: c.intl.string(c.t.roBMzs)
+                                  children: c.NW.string(c.t.roBMzs)
                               },
                               'old-divider'
                           )
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === o.As.NoNotifications &&
+                      e.sortOrder === s.As.NoNotifications &&
                       a.push(
-                          (0, i.jsx)(
-                              r.Z,
+                          (0, r.jsx)(
+                              o.Z,
                               {
                                   className: d.divider,
                                   contentClassName: d.dividerContent,
-                                  children: c.intl.string(c.t['2Ys7np'])
+                                  children: c.NW.string(c.t['2Ys7np'])
                               },
                               'disabled-divider'
                           )
                       )),
             a.push(
-                (0, i.jsx)(
-                    s.Z,
+                (0, r.jsx)(
+                    l.Z,
                     {
                         channel: e,
-                        markChannelRead: l,
+                        markChannelRead: i,
                         markGuildRead: u,
-                        toggle: _,
-                        deleteChannel: m,
+                        toggle: m,
+                        deleteChannel: p,
                         onJump: n,
-                        getNumUnreadChannels: h
+                        getNumUnreadChannels: f
                     },
                     e.channelId
                 )

@@ -1,22 +1,22 @@
-n.d(t, { Z: () => C });
-var i,
-    r = n(348327),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => A });
+var r,
+    i = n(348327),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(592125),
-    u = n(430824),
-    c = n(19780),
+    c = n(430824),
+    u = n(19780),
     d = n(944486),
     f = n(700785),
-    _ = n(565799),
-    p = n(501655),
+    p = n(565799),
+    _ = n(501655),
     h = n(750154),
     m = n(427679),
     g = n(368442),
     E = n(157925),
     v = n(981631);
-function y(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,70 +29,70 @@ function y(e, t, n) {
         e
     );
 }
-let I = null;
-function T() {
-    var e, t, n, i, r, a, s;
-    let o = d.Z.getVoiceChannelId();
-    if (null == o) return null;
-    let c = m.Z.getStageInstanceByChannel(o);
-    if (null == c) return null;
-    let y = l.Z.getChannel(o);
-    if (null == y || !f.oz(v.Plq.VIEW_CHANNEL, y)) return null;
-    let T = u.Z.getGuild(y.getGuildId());
-    if (null == T || !T.hasFeature(v.oNc.DISCOVERABLE)) return null;
-    let b = (0, h.Lw)(y, c),
-        S = (null == I ? void 0 : null === (e = I.party) || void 0 === e ? void 0 : e.id) === b ? I : null,
-        A = _.Z.getMutableParticipants(y.id, p.pV.SPEAKER),
-        N = A.filter((e) => e.type === p.Ui.STREAM).length,
-        C = A.length - N,
-        R = _.Z.getParticipantCount(o) - N,
-        O = (null == S ? void 0 : null === (t = S.party) || void 0 === t ? void 0 : t.size) != null ? S.party.size[1] : 0;
+let y = null;
+function O() {
+    var e, t, n, r, i, o, a;
+    let s = d.Z.getVoiceChannelId();
+    if (null == s) return null;
+    let u = m.Z.getStageInstanceByChannel(s);
+    if (null == u) return null;
+    let b = l.Z.getChannel(s);
+    if (null == b || !f.oz(v.Plq.VIEW_CHANNEL, b)) return null;
+    let O = c.Z.getGuild(b.getGuildId());
+    if (null == O || !O.hasFeature(v.oNc.DISCOVERABLE)) return null;
+    let S = (0, h.Lw)(b, u),
+        I = (null == y ? void 0 : null === (e = y.party) || void 0 === e ? void 0 : e.id) === S ? y : null,
+        T = p.Z.getMutableParticipants(b.id, _.pV.SPEAKER),
+        N = T.filter((e) => e.type === _.Ui.STREAM).length,
+        A = T.length - N,
+        C = p.Z.getParticipantCount(s) - N,
+        R = (null == I ? void 0 : null === (t = I.party) || void 0 === t ? void 0 : t.size) != null ? I.party.size[1] : 0;
     return {
         application_id: E.gD,
-        name: null !== (r = null !== (i = c.topic) && void 0 !== i ? i : y.topic) && void 0 !== r ? r : y.name,
-        type: (0, g.xJ)(y.id) ? v.IIU.WATCHING : v.IIU.LISTENING,
-        timestamps: { start: null !== (a = null == S ? void 0 : null === (n = S.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime() },
+        name: null !== (i = null !== (r = u.topic) && void 0 !== r ? r : b.topic) && void 0 !== i ? i : b.name,
+        type: (0, g.xJ)(b.id) ? v.IIU.WATCHING : v.IIU.LISTENING,
+        timestamps: { start: null !== (o = null == I ? void 0 : null === (n = I.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== o ? o : new Date().getTime() },
         assets: {
-            small_image: null !== (s = T.icon) && void 0 !== s ? s : void 0,
-            small_text: T.name
+            small_image: null !== (a = O.icon) && void 0 !== a ? a : void 0,
+            small_text: O.name
         },
         party: {
-            id: b,
-            size: [C, Math.max(R, O)]
+            id: S,
+            size: [A, Math.max(C, R)]
         }
     };
 }
-function b() {
-    let e = T();
-    return !a()(e, I) && ((I = e), !0);
+function S() {
+    let e = O();
+    return !o()(e, y) && ((y = e), !0);
 }
-function S(e) {
+function I(e) {
     let { voiceStates: t } = e;
-    if (null == I) return;
-    let n = (0, h.rq)(I);
-    null != n && null != t.find((e) => e.channelId === n.channelId) && b();
+    if (null == y) return;
+    let n = (0, h.rq)(y);
+    null != n && null != t.find((e) => e.channelId === n.channelId) && S();
 }
-function A(e) {
-    var t, n, i;
-    let { state: r } = e,
-        a = null !== (i = null == I ? void 0 : null === (n = I.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== i ? i : 0;
-    return r === v.hes.RTC_CONNECTED && !(a > 0) && b();
+function T(e) {
+    var t, n, r;
+    let { state: i } = e,
+        o = null !== (r = null == y ? void 0 : null === (n = y.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== r ? r : 0;
+    return i === v.hes.RTC_CONNECTED && !(o > 0) && S();
 }
-class N extends (i = s.ZP.Store) {
+class N extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, d.Z, m.Z, c.Z);
+        this.waitFor(l.Z, d.Z, m.Z, u.Z);
     }
     getActivity() {
-        return I;
+        return y;
     }
 }
-y(N, 'displayName', 'StageChannelSelfRichPresenceStore');
-let C = new N(o.Z, {
-    CONNECTION_OPEN: b,
-    STAGE_INSTANCE_CREATE: b,
-    STAGE_INSTANCE_UPDATE: b,
-    STAGE_INSTANCE_DELETE: b,
-    VOICE_CHANNEL_SELECT: b,
-    RTC_CONNECTION_STATE: A,
-    VOICE_STATE_UPDATES: S
+b(N, 'displayName', 'StageChannelSelfRichPresenceStore');
+let A = new N(s.Z, {
+    CONNECTION_OPEN: S,
+    STAGE_INSTANCE_CREATE: S,
+    STAGE_INSTANCE_UPDATE: S,
+    STAGE_INSTANCE_DELETE: S,
+    VOICE_CHANNEL_SELECT: S,
+    RTC_CONNECTION_STATE: T,
+    VOICE_STATE_UPDATES: I
 });

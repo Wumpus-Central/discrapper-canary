@@ -1,35 +1,35 @@
-n.d(t, { M: () => u });
-var i = n(392711),
-    l = n.n(i),
-    r = n(283595),
-    a = n(808506),
-    s = n(237997),
-    o = n(996106),
-    d = n(186901),
-    c = n(981631);
-let u = {
-    [c.zMe.OVERLAY_UPDATE]: {
-        scope: d.lH,
+n.d(t, { M: () => d });
+var r = n(392711),
+    i = n.n(r),
+    l = n(283595),
+    o = n(808506),
+    a = n(237997),
+    s = n(996106),
+    c = n(186901),
+    u = n(981631);
+let d = {
+    [u.zMe.OVERLAY_UPDATE]: {
+        scope: c.lH,
         handler(e) {
             let {
                 args: { pid: t },
                 socket: n
             } = e;
-            if ('number' != typeof t || t < 10) throw new o.Z({ errorCode: c.lTL.INVALID_EVENT }, 'Invalid pid');
+            if ('number' != typeof t || t < 10) throw new s.Z({ errorCode: u.lTL.INVALID_EVENT }, 'Invalid pid');
             return (e) => {
-                let { prevState: i, dispatch: o } = e,
-                    d = a.Z.enabled,
-                    c = !0,
-                    u = n.application.id;
-                if (null != u) {
-                    let e = r.Z.getActiveLibraryApplication(u);
-                    null != e && (d = d && e.isOverlayEnabled()), (c = s.Z.isLocked(t));
+                let { prevState: r, dispatch: s } = e,
+                    c = o.Z.enabled,
+                    u = !0,
+                    d = n.application.id;
+                if (null != d) {
+                    let e = l.Z.getActiveLibraryApplication(d);
+                    null != e && (c = c && e.isOverlayEnabled()), (u = a.Z.isLocked(t));
                 }
-                let h = {
-                    enabled: d,
-                    locked: c
+                let p = {
+                    enabled: c,
+                    locked: u
                 };
-                return l().isEqual(h, i) || o(h), h;
+                return i().isEqual(p, r) || s(p), p;
             };
         }
     }

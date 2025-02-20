@@ -1,83 +1,83 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => C }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(774078),
-    d = n(579185),
-    u = n(272929),
-    h = n(456631),
-    p = n(861254),
-    m = n(82965),
-    f = n(643720),
+    u = n(579185),
+    d = n(272929),
+    p = n(456631),
+    h = n(861254),
+    f = n(82965),
+    m = n(643720),
     g = n(127379),
-    _ = n(981631),
-    C = n(131175);
-let x = (e) => {
-    let { channel: t, className: n, whichPopoutIsOpen: a, setWhichPopoutIsOpen: x } = e,
-        { isHovered: v, setIsHovered: E, onMouseEnter: I, onMouseLeave: b, cancelTimers: Z } = (0, d.Z)(200, 300),
-        [N, T] = l.useState(!1),
-        S = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
-        j = l.useMemo(() => (null != S ? (S.getTime() - Date.now()) / 1000 : 0), [S]),
-        { seconds: y } = (0, c.Z)(null != S ? S : new Date()),
-        A = y > 0,
-        { mode: P } = (0, p.ZP)({ location: 'ActionBarSoundboardButton' }),
-        R = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
-        M = P === p.BK.GroupedButtonsRedMic ? 'green' : void 0,
-        L = l.useCallback(
+    b = n(981631),
+    _ = n(657452);
+let C = (e) => {
+    let { channel: t, className: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: C } = e,
+        { isHovered: v, setIsHovered: y, onMouseEnter: x, onMouseLeave: j, cancelTimers: O } = (0, u.Z)(200, 300),
+        [N, E] = i.useState(!1),
+        P = (0, a.e7)([p.Z], () => p.Z.effectCooldownEndTime),
+        I = i.useMemo(() => (null != P ? (P.getTime() - Date.now()) / 1000 : 0), [P]),
+        { seconds: S } = (0, c.Z)(null != P ? P : new Date()),
+        Z = S > 0,
+        { mode: T } = (0, h.ZP)({ location: 'ActionBarSoundboardButton' }),
+        A = (0, f.Z)({ location: 'ActionBarSoundboardButton' }),
+        w = T === h.BK.GroupedButtonsRedMic ? 'green' : void 0,
+        R = i.useCallback(
             (e) => {
-                'focus' !== e.type && (N || A || I());
+                'focus' !== e.type && (N || Z || x());
             },
-            [N, A, I]
+            [N, Z, x]
         ),
-        k = l.useCallback(() => {
-            N || b();
-        }, [b, N]),
-        O = l.useCallback(
+        k = i.useCallback(() => {
+            N || j();
+        }, [j, N]),
+        M = i.useCallback(
             (e, t) => {
-                Z(), T(!N), a === g.D.EMOJI ? null == x || x(void 0) : null == x || x(g.D.EMOJI), (!v || N) && (null == t || t(e));
+                O(), E(!N), l === g.D.EMOJI ? null == C || C(void 0) : null == C || C(g.D.EMOJI), (!v || N) && (null == t || t(e));
             },
-            [Z, N, v, x, a]
+            [O, N, v, C, l]
         ),
-        D = (v || N) && (a === g.D.EMOJI || null == a);
-    return (0, i.jsx)(o.yRy, {
-        shouldShow: D,
-        animation: R ? o.yRy.Animation.FADE : o.yRy.Animation.TRANSLATE,
-        animationPosition: R ? 'top' : 'bottom',
+        L = (v || N) && (l === g.D.EMOJI || null == l);
+    return (0, r.jsx)(s.yRy, {
+        shouldShow: L,
+        animation: A ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
+        animationPosition: A ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            E(!1), T(!1), null == x || x(void 0);
+            y(!1), E(!1), null == C || C(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(f.Z, {
-                isHovered: D,
+            return (0, r.jsx)(m.Z, {
+                isHovered: L,
                 channel: t,
                 closePopout: n,
-                onMouseEnter: I,
+                onMouseEnter: x,
                 onMouseLeave: k,
-                onFocus: () => T(!0)
+                onFocus: () => E(!0)
             });
         },
         children: (e) => {
-            let { onClick: t, onKeyDown: l } = e;
-            return (0, i.jsx)(u.Z, {
+            let { onClick: t, onKeyDown: i } = e;
+            return (0, r.jsx)(d.Z, {
                 isCenterButton: !0,
-                color: N ? M : void 0,
-                totalCooldownSeconds: j,
-                remainingCooldownSeconds: y,
-                className: r()(!R && C.controlButton, n),
+                color: N ? w : void 0,
+                totalCooldownSeconds: I,
+                remainingCooldownSeconds: S,
+                className: o()(!A && _.controlButton, n),
                 onKeyDown: (e) => {
-                    e.keyCode === _.yXg.ENTER && e.keyCode === _.yXg.SPACE && O(e, l);
+                    e.keyCode === b.yXg.ENTER && e.keyCode === b.yXg.SPACE && M(e, i);
                 },
                 onClick: (e) => {
-                    O(e, t);
+                    M(e, t);
                 },
-                onMouseEnter: L,
+                onMouseEnter: R,
                 onMouseLeave: k,
                 isActive: N
             });

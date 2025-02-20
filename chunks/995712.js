@@ -1,49 +1,49 @@
-n.d(t, { Z: () => d });
-var l = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    r = n(686546),
+var l = n(481060),
+    i = n(686546),
     a = n(768581),
-    s = n(388032),
-    o = n(826168);
-let d = (e) => {
+    o = n(388032),
+    s = n(849105);
+let c = (e) => {
     var t;
     let { entry: n } = e,
-        { id: d, icon: c, name: u } = n,
+        { id: c, icon: d, name: u } = n,
         m =
             null !==
                 (t = a.ZP.getGuildIconURL({
-                    id: d,
-                    icon: c,
+                    id: c,
+                    icon: d,
                     size: 32
                 })) && void 0 !== t
                 ? t
                 : void 0;
-    return (0, l.jsxs)('div', {
-        className: o.container,
+    return (0, r.jsxs)('div', {
+        className: s.container,
         children: [
-            (0, l.jsx)(i.X6q, {
-                className: o.header,
+            (0, r.jsx)(l.X6q, {
+                className: s.header,
                 variant: 'heading-sm/semibold',
-                children: s.intl.string(s.t.nTe4HB)
+                children: o.NW.string(o.t.nTe4HB)
             }),
-            (0, l.jsx)('div', {
-                className: o.guildContainer,
-                children: (0, l.jsxs)('div', {
-                    className: o.guildInfo,
+            (0, r.jsx)('div', {
+                className: s.guildContainer,
+                children: (0, r.jsxs)('div', {
+                    className: s.guildInfo,
                     children: [
-                        (0, l.jsx)(r.ZP, {
-                            mask: r.ZP.Masks.SQUIRCLE,
+                        (0, r.jsx)(i.ZP, {
+                            mask: i.ZP.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: o.guildIconMask,
-                            children: (0, l.jsx)('img', {
+                            className: s.guildIconMask,
+                            children: (0, r.jsx)('img', {
                                 src: m,
                                 alt: '',
-                                className: o.guildIcon
+                                className: s.guildIcon
                             })
                         }),
-                        (0, l.jsx)(i.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
                             children: u

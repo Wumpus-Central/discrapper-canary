@@ -1,87 +1,87 @@
-n.d(t, { Z: () => T });
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(481060),
-    d = n(95398),
-    c = n(905405),
-    u = n(255269),
-    h = n(937889),
-    m = n(267128),
-    p = n(695346),
-    g = n(496675),
-    _ = n(699516),
-    f = n(868807),
-    E = n(981631),
-    I = n(217702),
-    C = n(388032),
-    N = n(795479),
-    v = n(663362);
-let T = l.memo(function (e) {
+n.d(t, { Z: () => y });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
+    c = n(95398),
+    u = n(905405),
+    d = n(255269),
+    p = n(937889),
+    h = n(267128),
+    g = n(695346),
+    f = n(496675),
+    m = n(699516),
+    b = n(868807),
+    _ = n(981631),
+    E = n(217702),
+    O = n(388032),
+    N = n(951129),
+    v = n(368365);
+let y = i.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: r, message: T } = (0, f.a)(t),
-        S = (0, c.p)(),
-        { isBlocked: A, isIgnored: Z } = (0, s.cj)(
-            [_.Z],
+        { loaded: n, error: l, message: y } = (0, b.a)(t),
+        I = (0, u.p)(),
+        { isBlocked: C, isIgnored: S } = (0, a.cj)(
+            [m.Z],
             () => ({
-                isBlocked: null != T && _.Z.isBlockedForMessage(T),
-                isIgnored: null != T && _.Z.isIgnoredForMessage(T)
+                isBlocked: null != y && m.Z.isBlockedForMessage(y),
+                isIgnored: null != y && m.Z.isIgnoredForMessage(y)
             }),
-            [T]
+            [y]
         ),
-        x = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
-        b = p.cC.useSetting(),
-        { content: L } = l.useMemo(
+        T = (0, a.e7)([f.Z], () => f.Z.can(_.Plq.MANAGE_MESSAGES, t)),
+        P = g.cC.useSetting(),
+        { content: j } = i.useMemo(
             () =>
-                (null == T ? void 0 : T.content) != null && '' !== T.content
-                    ? (0, h.ZP)(T, {
+                (null == y ? void 0 : y.content) != null && '' !== y.content
+                    ? (0, p.ZP)(y, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: S
+                          shouldFilterKeywords: I
                       })
                     : { content: null },
-            [T, S]
+            [y, I]
         ),
-        y = null;
-    if (r)
-        y = (0, i.jsx)(o.Text, {
+        A = null;
+    if (l)
+        A = (0, r.jsx)(s.Text, {
             className: N.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
-            children: C.intl.string(C.t.BZHld3)
+            children: O.NW.string(O.t.BZHld3)
         });
     else if (n) {
-        if (null != T && A)
-            y = (0, i.jsx)(o.Text, {
+        if (null != y && C)
+            A = (0, r.jsx)(s.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: C.intl.string(C.t['WPe+xM'])
+                children: O.NW.string(O.t['WPe+xM'])
             });
-        else if (null != T && Z)
-            y = (0, i.jsx)(o.Text, {
+        else if (null != y && S)
+            A = (0, r.jsx)(s.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: C.intl.string(C.t.uxrh1N)
+                children: O.NW.string(O.t.uxrh1N)
             });
-        else if (null != T) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, Z, a()(N.messageContent, v.inlineFormat), {
+        else if (null != y) {
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(y, j, C, S, o()(N.messageContent, v.inlineFormat), {
                 leadingIconClass: N.messageContentIcon,
                 trailingIconClass: N.messageContentIcon,
-                iconSize: I.WW
+                iconSize: E.WW
             });
-            y =
+            A =
                 null != t
-                    ? (0, i.jsx)(o.Text, {
+                    ? (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           className: N.messageContent,
                           children: t
                       })
-                    : (0, i.jsx)(o.Text, {
+                    : (0, r.jsx)(s.Text, {
                           tag: 'span',
                           variant: 'text-sm/normal',
                           color: 'text-muted',
@@ -89,18 +89,18 @@ let T = l.memo(function (e) {
                           children: e
                       });
         } else
-            y = (0, i.jsx)(o.Text, {
+            A = (0, r.jsx)(s.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: C.intl.string(C.t['0KfDxM'])
+                children: O.NW.string(O.t['0KfDxM'])
             });
-    } else y = null;
-    return (0, i.jsx)(d.a.Provider, {
-        value: (0, u.Z)(b, x),
-        children: (0, i.jsx)(o.Rny, {
+    } else A = null;
+    return (0, r.jsx)(c.a.Provider, {
+        value: (0, d.Z)(P, T),
+        children: (0, r.jsx)(s.Rny, {
             className: N.messageFocusBlock,
-            children: y
+            children: A
         })
     });
 });

@@ -1,6 +1,6 @@
-var i = n(814033),
-    r = n(957578).Buffer;
-function a(e, t) {
-    return r.from(e.toRed(i.mont(t.modulus)).redPow(new i(t.publicExponent)).fromRed().toArray());
+var r = n(814033),
+    i = n(957578).Buffer;
+function o(e, t) {
+    return i.from(e.toRed(r.mont(t.modulus)).redPow(new r(t.publicExponent)).fromRed().toArray());
 }
-e.exports = a;
+e.exports = o;

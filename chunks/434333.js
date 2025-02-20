@@ -1,42 +1,42 @@
 n.d(t, {
     k: () => d,
-    m: () => c
+    m: () => u
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(1561),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(1561),
     l = n(481060),
-    u = n(398207);
-let c = {
-        RED: u.backgroundRed,
-        BACKGROUND_TERTIARY: u.backgroundTertiary,
-        BACKGROUND_ACCENT: u.backgroundAccent
+    c = n(92535);
+let u = {
+        RED: c.backgroundRed,
+        BACKGROUND_TERTIARY: c.backgroundTertiary,
+        BACKGROUND_ACCENT: c.backgroundAccent
     },
-    d = r.forwardRef(function (e, t) {
-        let { role: n, children: r, className: a, onDismiss: d, backgroundColor: f = c.RED, icon: _ = l.P4T, iconClassName: p } = e;
-        return (0, i.jsxs)('div', {
-            className: s()(u.error, a, f),
+    d = i.forwardRef(function (e, t) {
+        let { role: n, children: i, className: o, onDismiss: d, backgroundColor: f = u.RED, icon: p = l.P4T, iconClassName: _ } = e;
+        return (0, r.jsxs)('div', {
+            className: a()(c.error, o, f),
             ref: t,
             children: [
-                (0, i.jsx)(_, {
-                    className: s()(u.icon, p),
+                (0, r.jsx)(p, {
+                    className: a()(c.icon, _),
                     color: 'currentColor'
                 }),
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     role: n,
-                    className: u.text,
-                    children: r
+                    className: c.text,
+                    children: i
                 }),
                 null != d
-                    ? (0, i.jsx)(o.P, {
+                    ? (0, r.jsx)(s.P, {
                           onClick: d,
-                          className: u.errorClose,
-                          children: (0, i.jsx)(l.Dio, {
+                          className: c.errorClose,
+                          children: (0, r.jsx)(l.Dio, {
                               size: 'md',
                               color: 'currentColor',
-                              className: u.errorCloseIcon
+                              className: c.errorCloseIcon
                           })
                       })
                     : null

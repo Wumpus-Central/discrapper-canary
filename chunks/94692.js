@@ -8,7 +8,7 @@ var l = s(200651),
     o = s(424218),
     d = s(998502),
     u = s(388032),
-    c = s(154229);
+    c = s(938111);
 function p(t, e, s) {
     return (
         e in t
@@ -57,7 +57,7 @@ class m extends n.PureComponent {
                 }),
             s.push({
                 value: I,
-                label: u.intl.string(u.t['cL/rrq'])
+                label: u.NW.string(u.t['cL/rrq'])
             }),
             s
         );
@@ -77,20 +77,20 @@ class m extends n.PureComponent {
         return null != e[t] && !1 === e[t].hasPermission
             ? (0, l.jsx)('div', {
                   className: c.error,
-                  children: u.intl.string(u.t.cEUT8P)
+                  children: u.NW.string(u.t.cEUT8P)
               })
             : this.hasEnoughDiskSpace(t)
               ? null
               : (0, l.jsx)('div', {
                     className: c.error,
-                    children: u.intl.string(u.t.duXbEx)
+                    children: u.NW.string(u.t.duXbEx)
                 });
     }
     renderLabel(t, e) {
         let { installationPathsMetadata: s } = this.props,
             l = null != e ? e : t;
         return null != s[t] && null != s[t].availableKB
-            ? u.intl.formatToPlainString(u.t['Y+M3rq'], {
+            ? u.NW.formatToPlainString(u.t['Y+M3rq'], {
                   path: l,
                   size: (0, o.BU)(s[t].availableKB, { useKibibytes: !0 })
               })
@@ -103,7 +103,7 @@ class m extends n.PureComponent {
             children: [
                 (0, l.jsx)(i.vwX, {
                     tag: 'h5',
-                    children: u.intl.string(u.t.WTJuNj)
+                    children: u.NW.string(u.t.WTJuNj)
                 }),
                 (0, l.jsx)(i.q4e, {
                     autoFocus: s,

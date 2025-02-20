@@ -1,16 +1,16 @@
-function i(e, t) {
+function r(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function r(e, t) {
+function i(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
-    return t && r(e.prototype, t), n && r(e, n), e;
+function o(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), e;
 }
-function s(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,13 +23,13 @@ function s(e, t, n) {
         e
     );
 }
-n.d(t, { p: () => o });
-var o = (function () {
+n.d(t, { p: () => s });
+var s = (function () {
     function e(t) {
-        i(this, e), s(this, 'item', void 0), s(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
+        r(this, e), a(this, 'item', void 0), a(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
     }
     return (
-        a(e, [
+        o(e, [
             {
                 key: 'initializeExposedProperties',
                 value: function () {
@@ -51,9 +51,9 @@ var o = (function () {
                     var t = this;
                     if (e) {
                         var n = {};
-                        Object.keys(this.config.exposeProperties).forEach(function (i) {
-                            n[i] = {
-                                value: t.config.exposeProperties[i](e, t.config.matchesTypes),
+                        Object.keys(this.config.exposeProperties).forEach(function (r) {
+                            n[r] = {
+                                value: t.config.exposeProperties[r](e, t.config.matchesTypes),
                                 configurable: !0,
                                 enumerable: !0
                             };

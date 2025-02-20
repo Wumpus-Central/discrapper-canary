@@ -1,9 +1,9 @@
-let i;
+let r;
 n.d(t, { Z: () => h });
-var r,
-    a = n(442837),
-    s = n(570140);
-function o(e, t, n) {
+var i,
+    o = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,39 +17,39 @@ function o(e, t, n) {
     );
 }
 let l = [],
-    u = l,
-    c = null,
+    c = l,
+    u = null,
     d = (e) => {
         var t, n;
-        (u = null !== (t = e.analyticsLocations) && void 0 !== t ? t : l), (c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (i = e.initialProductSkuId);
+        (c = null !== (t = e.analyticsLocations) && void 0 !== t ? t : l), (u = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
     },
     f = (e) => {
-        (u = l), (c = null);
+        (c = l), (u = null);
     },
-    _ = (e) => {
-        e.item.skuId === i && (i = void 0);
+    p = (e) => {
+        e.item.skuId === r && (r = void 0);
     };
-class p extends (r = a.ZP.Store) {
+class _ extends (i = o.ZP.Store) {
     get analyticsLocations() {
-        return u;
-    }
-    get analyticsSource() {
         return c;
     }
+    get analyticsSource() {
+        return u;
+    }
     get initialProductSkuId() {
-        return i;
+        return r;
     }
     getAnalytics() {
         return {
-            analyticsLocations: u,
-            analyticsSource: c
+            analyticsLocations: c,
+            analyticsSource: u
         };
     }
 }
-o(p, 'displayName', 'CollectiblesShopStore');
-let h = new p(s.Z, {
+s(_, 'displayName', 'CollectiblesShopStore');
+let h = new _(a.Z, {
     COLLECTIBLES_SHOP_OPEN: d,
     COLLECTIBLES_SHOP_CLOSE: f,
-    COLLECTIBLES_PRODUCT_DETAILS_OPEN: _,
+    COLLECTIBLES_PRODUCT_DETAILS_OPEN: p,
     LOGOUT: f
 });

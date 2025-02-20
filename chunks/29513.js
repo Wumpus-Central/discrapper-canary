@@ -1,5 +1,5 @@
 function t(e, t, n) {
-    var i = e[t];
-    return null == i && void 0 !== n ? n : i;
+    var r = e[t];
+    return null == r && void 0 !== n ? n : r;
 }
 (e.exports = {}).getOption = t;

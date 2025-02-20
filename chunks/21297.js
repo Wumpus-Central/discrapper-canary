@@ -1,27 +1,27 @@
-n.d(t, { z: () => a });
-var i = n(664751),
-    r = n(544891),
-    l = n(570140),
-    s = n(981631);
-async function a(e) {
-    l.Z.dispatch({
+n.d(t, { z: () => l });
+var r = n(664751),
+    i = n(544891),
+    s = n(570140),
+    a = n(981631);
+async function l(e) {
+    s.Z.dispatch({
         type: 'DISCOVER_GUILDS_FETCH_START',
         guildIds: e
     });
     try {
         let { guilds: t } = (
-            await r.tn.get({
-                url: s.ANM.GUILD_DISCOVERY,
-                query: i.stringify({ guild_ids: e }),
+            await i.tn.get({
+                url: a.ANM.GUILD_DISCOVERY,
+                query: r.stringify({ guild_ids: e }),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
         ).body;
-        l.Z.dispatch({
+        s.Z.dispatch({
             type: 'DISCOVER_GUILDS_FETCH_SUCCESS',
             guilds: t
         });
     } catch (e) {
-        l.Z.dispatch({ type: 'DISCOVER_GUILDS_FETCH_FAILURE' });
+        s.Z.dispatch({ type: 'DISCOVER_GUILDS_FETCH_FAILURE' });
     }
 }

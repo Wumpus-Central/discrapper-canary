@@ -1,29 +1,29 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => i });
 var r = n(200651);
 n(192379);
-var i = n(325767);
-function l(e) {
+var l = n(325767);
+function i(e) {
     var t,
         n,
-        { width: l = 16, height: a = 16, color: o = 'currentColor', foreground: s } = e,
+        { width: i = 16, height: a = 16, color: o = 'currentColor', foreground: s } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
+            return l;
         })(e, ['width', 'height', 'color', 'foreground']);
     return (0, r.jsx)(
         'svg',
@@ -51,10 +51,10 @@ function l(e) {
                     });
             }
             return e;
-        })({}, (0, i.Z)(c))),
+        })({}, (0, l.Z)(c))),
         (n = n =
             {
-                width: l,
+                width: i,
                 height: a,
                 viewBox: '0 0 430 430',
                 children: (0, r.jsx)('path', {

@@ -1,7 +1,7 @@
-n.d(t, { B: () => s });
-var i = n(503461),
-    r = n(190313);
-function a(e, t, n) {
+n.d(t, { B: () => a });
+var r = n(503461),
+    i = n(190313);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,12 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -27,8 +27,8 @@ class s {
     getMany(e, t) {
         return this.table.getMany([e], t);
     }
-    getRange(e, t, n, i) {
-        return this.table.getRange([e, t], [e, n], i);
+    getRange(e, t, n, r) {
+        return this.table.getRange([e, t], [e, n], r);
     }
     getKvEntries() {
         return this.table.getKvEntries();
@@ -46,18 +46,18 @@ class s {
         return this.table.getParentId([null, e]);
     }
     put(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace;
-        return this.putWithGeneration(e, t, n, null, r);
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
+        return this.putWithGeneration(e, t, n, null, i);
     }
-    putWithGeneration(e, t, n, r) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.Sn.Replace;
+    putWithGeneration(e, t, n, i) {
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
         return this.table.put(
             {
                 key: [e, t],
                 data: n,
-                generation: r
+                generation: i
             },
-            a
+            o
         );
     }
     delete(e, t) {
@@ -74,10 +74,10 @@ class s {
         return this.table.deleteGeneration([], e, t);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new o(t)), t);
+        return this.table.transaction((t) => e(new s(t)), t);
     }
     upgradeTransaction(e) {
-        return new o(this.table.upgradeTransaction(e));
+        return new s(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -85,27 +85,27 @@ class s {
     getMapEntriesSyncUnsafe() {
         return this.table.getMapEntriesSyncUnsafe();
     }
-    constructor(e, t, n, i = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new r.i([e], t, n, i));
+    constructor(e, t, n, r = !0) {
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
-class o {
+class s {
     static fromDatabaseTransaction(e, t, n) {
-        return new o(new r.E(e, t, n));
+        return new s(new i.E(e, t, n));
     }
     put(e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Sn.Replace;
-        this.putWithGeneration(e, t, n, null, r);
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
+        this.putWithGeneration(e, t, n, null, i);
     }
-    putWithGeneration(e, t, n, r) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.Sn.Replace;
+    putWithGeneration(e, t, n, i) {
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
         return this.state.put(
             {
                 key: [e, t],
                 data: n,
-                generation: r
+                generation: i
             },
-            a
+            o
         );
     }
     delete(e, t) {
@@ -124,6 +124,6 @@ class o {
         return this.state.deleteGeneration([], e, t);
     }
     constructor(e) {
-        a(this, 'state', void 0), (this.state = e);
+        o(this, 'state', void 0), (this.state = e);
     }
 }

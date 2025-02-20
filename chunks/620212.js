@@ -1,13 +1,13 @@
-n.d(t, { U: () => a });
-var i = n(592125),
-    s = n(944486),
-    r = n(585483),
-    l = n(981631);
-let a = {
+n.d(t, { U: () => l });
+var r = n(592125),
+    i = n(944486),
+    s = n(585483),
+    a = n(981631);
+let l = {
     binds: ['mod+shift+u'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = i.Z.getChannel(s.Z.getChannelId());
-        return null == e || e.isManaged() || r.S.dispatch(l.CkL.UPLOAD_FILE), !1;
+        let e = r.Z.getChannel(i.Z.getChannelId());
+        return null == e || e.isManaged() || s.S.dispatch(a.CkL.UPLOAD_FILE), !1;
     }
 };

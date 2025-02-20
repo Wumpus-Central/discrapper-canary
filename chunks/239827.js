@@ -30,7 +30,7 @@ let d = i.forwardRef(function (e, t) {
             return i;
         })(e, ['currentPageIndex', 'numPages', 'onChangePage', 'children', 'className', 'showPageCount']);
     let f = s <= 0,
-        N = s >= d - 1;
+        b = s >= d - 1;
     return (0, r.jsxs)(
         'div',
         ((n = (function (e) {
@@ -95,9 +95,9 @@ let d = i.forwardRef(function (e, t) {
                                       children: o.NW.format(o.t.bKI77e, { currentPage: s + 1 })
                                   }),
                             (0, r.jsx)(l.P3F, {
-                                className: a()(c.pageButtonNext, { [c.disabled]: N }),
-                                tabIndex: N ? -1 : 0,
-                                onClick: N ? void 0 : () => u(s + 1),
+                                className: a()(c.pageButtonNext, { [c.disabled]: b }),
+                                tabIndex: b ? -1 : 0,
+                                onClick: b ? void 0 : () => u(s + 1),
                                 children: (0, r.jsx)(l.Fbu, {
                                     size: 'md',
                                     color: 'currentColor',

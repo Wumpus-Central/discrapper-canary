@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s });
-var i = n(358085),
-    r = n(924557),
-    a = n(65154);
-function s(e) {
-    let { ignorePlatformRestriction: t } = r.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
-    return t || (i.isDesktop() && e.getMediaEngine().supports(a.AN.CLIPS));
+n.d(t, { Z: () => a });
+var r = n(358085),
+    i = n(924557),
+    o = n(65154);
+function a(e) {
+    let { ignorePlatformRestriction: t } = i.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
+    return t || (r.isDesktop() && e.getMediaEngine().supports(o.AN.CLIPS));
 }

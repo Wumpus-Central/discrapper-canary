@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var r = n(18791);
-let a = (e) => {
+var i = n(682773);
+let o = (e) => {
     let { children: t, shouldAnimate: n } = e;
     return n
-        ? (0, i.jsx)('div', {
-              className: r.outerContainer,
-              children: (0, i.jsx)('div', {
-                  className: r.innerContainer,
+        ? (0, r.jsx)('div', {
+              className: i.outerContainer,
+              children: (0, r.jsx)('div', {
+                  className: i.innerContainer,
                   children: t
               })
           })

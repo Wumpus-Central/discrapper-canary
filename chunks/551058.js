@@ -1,40 +1,40 @@
-n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(464065);
-let u = 16,
-    c = r.memo(function (e) {
-        let { children: t, trailing: n, className: r, icon: a, isCollapsed: c, onClick: d, 'aria-label': f } = e;
-        return (0, i.jsxs)('div', {
-            className: s()(l.wrapper, r),
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(301300);
+let c = 16,
+    u = i.memo(function (e) {
+        let { children: t, trailing: n, className: i, icon: o, isCollapsed: u, onClick: d, 'aria-label': f } = e;
+        return (0, r.jsxs)('div', {
+            className: a()(l.wrapper, i),
             children: [
-                (0, i.jsxs)(o.P3F, {
+                (0, r.jsxs)(s.P3F, {
                     onClick: d,
                     onKeyDown: (e) => e.stopPropagation(),
-                    className: s()(l.header, { [l.interactive]: null != c }),
-                    'aria-expanded': null != c ? !c : void 0,
+                    className: a()(l.header, { [l.interactive]: null != u }),
+                    'aria-expanded': null != u ? !u : void 0,
                     'aria-label': f,
                     children: [
-                        null != a &&
-                            (0, i.jsx)('div', {
+                        null != o &&
+                            (0, r.jsx)('div', {
                                 'aria-hidden': !0,
                                 className: l.headerIcon,
-                                children: a
+                                children: o
                             }),
-                        (0, i.jsx)('span', {
+                        (0, r.jsx)('span', {
                             className: l.headerLabel,
                             children: t
                         }),
-                        null != c
-                            ? (0, i.jsx)(o.CJ0, {
+                        null != u
+                            ? (0, r.jsx)(s.CJ0, {
                                   size: 'custom',
                                   color: 'currentColor',
-                                  className: s()(l.headerCollapseIcon, { [l.headerCollapseIconCollapsed]: c }),
-                                  height: u,
-                                  width: u
+                                  className: a()(l.headerCollapseIcon, { [l.headerCollapseIconCollapsed]: u }),
+                                  height: c,
+                                  width: c
                               })
                             : null
                     ]

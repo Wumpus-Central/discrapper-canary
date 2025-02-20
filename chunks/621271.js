@@ -1,11 +1,11 @@
-var i = n(67867),
-    r = n(38548);
-i(
+var r = n(67867),
+    i = n(38548);
+r(
     {
         target: 'String',
         proto: !0,
         name: 'trimStart',
-        forced: void 0 !== r
+        forced: void 0 !== i
     },
-    { trimLeft: r }
+    { trimLeft: i }
 );

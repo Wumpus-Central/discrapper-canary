@@ -1,19 +1,19 @@
 n.d(t, {
-    Qh: () => a,
-    SO: () => s,
-    Zw: () => o
+    Qh: () => o,
+    SO: () => a,
+    Zw: () => s
 });
-var i = n(570140),
-    r = n(19759);
-function a(e) {
-    i.Z.dispatch({
+var r = n(570140),
+    i = n(19759);
+function o(e) {
+    r.Z.dispatch({
         type: 'DEV_TOOLS_SETTINGS_UPDATE',
         settings: e
     });
 }
-function s() {
-    a({ displayTools: !r.Z.displayTools });
+function a() {
+    o({ displayTools: !i.Z.displayTools });
 }
-function o() {
-    i.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
+function s() {
+    r.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });
 }

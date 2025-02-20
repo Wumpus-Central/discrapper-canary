@@ -1,3 +1,3 @@
 n(790745);
-var i = n(387992);
-e.exports = i('Array', 'map');
+var r = n(387992);
+e.exports = r('Array', 'map');

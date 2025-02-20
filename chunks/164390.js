@@ -1,80 +1,80 @@
-(e.exports = s), (s.default = s), (s.stable = c), (s.stableStringify = c);
+(e.exports = a), (a.default = a), (a.stable = u), (a.stableStringify = u);
 var t = '[...]',
     n = '[Circular]',
-    i = [],
-    r = [];
-function a() {
+    r = [],
+    i = [];
+function o() {
     return {
         depthLimit: Number.MAX_SAFE_INTEGER,
         edgesLimit: Number.MAX_SAFE_INTEGER
     };
 }
-function s(e, t, n, s) {
-    void 0 === s && (s = a()), l(e, '', 0, [], void 0, 0, s);
+function a(e, t, n, a) {
+    void 0 === a && (a = o()), l(e, '', 0, [], void 0, 0, a);
     try {
-        o = 0 === r.length ? JSON.stringify(e, t, n) : JSON.stringify(e, f(t), n);
+        s = 0 === i.length ? JSON.stringify(e, t, n) : JSON.stringify(e, f(t), n);
     } catch (e) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
-        for (; 0 !== i.length; ) {
-            var o,
-                u = i.pop();
-            4 === u.length ? Object.defineProperty(u[0], u[1], u[3]) : (u[0][u[1]] = u[2]);
+        for (; 0 !== r.length; ) {
+            var s,
+                c = r.pop();
+            4 === c.length ? Object.defineProperty(c[0], c[1], c[3]) : (c[0][c[1]] = c[2]);
         }
     }
-    return o;
+    return s;
 }
-function o(e, t, n, a) {
-    var s = Object.getOwnPropertyDescriptor(a, n);
-    void 0 !== s.get ? (s.configurable ? (Object.defineProperty(a, n, { value: e }), i.push([a, n, t, s])) : r.push([t, n, e])) : ((a[n] = e), i.push([a, n, t]));
+function s(e, t, n, o) {
+    var a = Object.getOwnPropertyDescriptor(o, n);
+    void 0 !== a.get ? (a.configurable ? (Object.defineProperty(o, n, { value: e }), r.push([o, n, t, a])) : i.push([t, n, e])) : ((o[n] = e), r.push([o, n, t]));
 }
-function l(e, i, r, a, s, u, c) {
-    if (((u += 1), 'object' == typeof e && null !== e)) {
-        for (d = 0; d < a.length; d++)
-            if (a[d] === e) {
-                o(n, e, i, s);
+function l(e, r, i, o, a, c, u) {
+    if (((c += 1), 'object' == typeof e && null !== e)) {
+        for (d = 0; d < o.length; d++)
+            if (o[d] === e) {
+                s(n, e, r, a);
                 return;
             }
-        if ((void 0 !== c.depthLimit && u > c.depthLimit) || (void 0 !== c.edgesLimit && r + 1 > c.edgesLimit)) {
-            o(t, e, i, s);
+        if ((void 0 !== u.depthLimit && c > u.depthLimit) || (void 0 !== u.edgesLimit && i + 1 > u.edgesLimit)) {
+            s(t, e, r, a);
             return;
         }
-        if ((a.push(e), Array.isArray(e))) for (d = 0; d < e.length; d++) l(e[d], d, d, a, e, u, c);
+        if ((o.push(e), Array.isArray(e))) for (d = 0; d < e.length; d++) l(e[d], d, d, o, e, c, u);
         else {
             var d,
                 f = Object.keys(e);
             for (d = 0; d < f.length; d++) {
-                var _ = f[d];
-                l(e[_], _, d, a, e, u, c);
+                var p = f[d];
+                l(e[p], p, d, o, e, c, u);
             }
         }
-        a.pop();
+        o.pop();
     }
 }
-function u(e, t) {
-    return e < t ? -1 : e > t ? 1 : 0;
+function c(e, t) {
+    return e < t ? -1 : +(e > t);
 }
-function c(e, t, n, s) {
-    void 0 === s && (s = a());
-    var o,
-        l = d(e, '', 0, [], void 0, 0, s) || e;
+function u(e, t, n, a) {
+    void 0 === a && (a = o());
+    var s,
+        l = d(e, '', 0, [], void 0, 0, a) || e;
     try {
-        o = 0 === r.length ? JSON.stringify(l, t, n) : JSON.stringify(l, f(t), n);
+        s = 0 === i.length ? JSON.stringify(l, t, n) : JSON.stringify(l, f(t), n);
     } catch (e) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
-        for (; 0 !== i.length; ) {
-            var u = i.pop();
-            4 === u.length ? Object.defineProperty(u[0], u[1], u[3]) : (u[0][u[1]] = u[2]);
+        for (; 0 !== r.length; ) {
+            var c = r.pop();
+            4 === c.length ? Object.defineProperty(c[0], c[1], c[3]) : (c[0][c[1]] = c[2]);
         }
     }
-    return o;
+    return s;
 }
-function d(e, r, a, s, l, c, f) {
-    if (((c += 1), 'object' == typeof e && null !== e)) {
-        for (_ = 0; _ < s.length; _++)
-            if (s[_] === e) {
-                o(n, e, r, l);
+function d(e, i, o, a, l, u, f) {
+    if (((u += 1), 'object' == typeof e && null !== e)) {
+        for (p = 0; p < a.length; p++)
+            if (a[p] === e) {
+                s(n, e, i, l);
                 return;
             }
         try {
@@ -82,23 +82,23 @@ function d(e, r, a, s, l, c, f) {
         } catch (e) {
             return;
         }
-        if ((void 0 !== f.depthLimit && c > f.depthLimit) || (void 0 !== f.edgesLimit && a + 1 > f.edgesLimit)) {
-            o(t, e, r, l);
+        if ((void 0 !== f.depthLimit && u > f.depthLimit) || (void 0 !== f.edgesLimit && o + 1 > f.edgesLimit)) {
+            s(t, e, i, l);
             return;
         }
-        if ((s.push(e), Array.isArray(e))) for (_ = 0; _ < e.length; _++) d(e[_], _, _, s, e, c, f);
+        if ((a.push(e), Array.isArray(e))) for (p = 0; p < e.length; p++) d(e[p], p, p, a, e, u, f);
         else {
-            var _,
-                p = {},
-                h = Object.keys(e).sort(u);
-            for (_ = 0; _ < h.length; _++) {
-                var m = h[_];
-                d(e[m], m, _, s, e, c, f), (p[m] = e[m]);
+            var p,
+                _ = {},
+                h = Object.keys(e).sort(c);
+            for (p = 0; p < h.length; p++) {
+                var m = h[p];
+                d(e[m], m, p, a, e, u, f), (_[m] = e[m]);
             }
-            if (void 0 === l) return p;
-            i.push([l, r, e]), (l[r] = p);
+            if (void 0 === l) return _;
+            r.push([l, i, e]), (l[i] = _);
         }
-        s.pop();
+        a.pop();
     }
 }
 function f(e) {
@@ -110,11 +110,11 @@ function f(e) {
                       return t;
                   }),
         function (t, n) {
-            if (r.length > 0)
-                for (var i = 0; i < r.length; i++) {
-                    var a = r[i];
-                    if (a[1] === t && a[0] === n) {
-                        (n = a[2]), r.splice(i, 1);
+            if (i.length > 0)
+                for (var r = 0; r < i.length; r++) {
+                    var o = i[r];
+                    if (o[1] === t && o[0] === n) {
+                        (n = o[2]), i.splice(r, 1);
                         break;
                     }
                 }

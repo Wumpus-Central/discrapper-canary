@@ -1,39 +1,39 @@
 n.d(t, { Z: () => l });
-var i = n(378364);
-function r() {
-    return s() && i.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
-}
-function a() {
-    let { enabled: e } = i.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
-    return s() && e;
-}
-function s() {
-    let e = Date.now();
-    return e >= i.Z.startTimeMs && e <= i.Z.endTimeMs;
+var r = n(378364);
+function i() {
+    return a() && r.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
 }
 function o() {
-    return r() && i.Z.soundpack ? i.Z.soundpack : null;
+    let { enabled: e } = r.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
+    return a() && e;
+}
+function a() {
+    let e = Date.now();
+    return e >= r.Z.startTimeMs && e <= r.Z.endTimeMs;
+}
+function s() {
+    return i() && r.Z.soundpack ? r.Z.soundpack : null;
 }
 let l = {
     subscribe: function (e) {
-        return i.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
+        return r.Z.experiment.subscribe({ location: 'holiday_events_subscribe' }, e);
     },
-    isEligible: r,
+    isEligible: i,
     useHolidaySoundpack: function () {
-        return a() && i.Z.soundpack && null != i.Z.soundpackLabel
+        return o() && r.Z.soundpack && null != r.Z.soundpackLabel
             ? {
-                  soundpack: i.Z.soundpack,
-                  soundpackLabel: i.Z.soundpackLabel
+                  soundpack: r.Z.soundpack,
+                  soundpackLabel: r.Z.soundpackLabel
               }
             : null;
     },
-    useIsEligible: a,
+    useIsEligible: o,
     getAppSpinnerSources: function () {
-        return s() ? i.Z.appSpinnerSources : null;
+        return a() ? r.Z.appSpinnerSources : null;
     },
     getLoadingTips: function () {
         var e;
-        return s() ? (null === (e = i.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(i.Z)) : null;
+        return a() ? (null === (e = r.Z.getLoadingTips) || void 0 === e ? void 0 : e.call(r.Z)) : null;
     },
-    getHolidaySoundpack: o
+    getHolidaySoundpack: s
 };

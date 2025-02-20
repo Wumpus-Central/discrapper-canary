@@ -1,20 +1,20 @@
 n.d(t, {
     RO: () => l,
     TX: () => d,
-    Ys: () => u,
+    Ys: () => c,
     ZP: () => f,
-    rK: () => c
+    rK: () => u
 });
-var i = n(987170),
-    r = n(535201),
-    a = n(987338);
-let s = new Date('2025-01-06T07:59:59.000Z'),
-    o = (0, i.Z)({
+var r = n(987170),
+    i = n(535201),
+    o = n(987338);
+let a = new Date('2025-01-06T07:59:59.000Z'),
+    s = (0, r.Z)({
         id: '2024-11_seasonal_gifting',
         label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -23,7 +23,7 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    l = (0, i.Z)({
+    l = (0, r.Z)({
         id: '2023-11_seasonal_gifting_marketing_2023',
         label: 'Seasonal Gifting Marketing 2023',
         kind: 'user',
@@ -36,12 +36,12 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    u = (0, i.Z)({
+    c = (0, r.Z)({
         id: '2024-11_seasonal_gifting_reminder',
         label: 'Seasonal Gifting Reminder 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -50,12 +50,12 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     });
-function c() {
-    return (0, r.p)(s);
+function u() {
+    return (0, i.p)(a);
 }
 function d() {
-    let e = c(),
-        { enabled: t } = o.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
+    let e = u(),
+        { enabled: t } = s.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
     return e && t;
 }
-let f = o;
+let f = s;

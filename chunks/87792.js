@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(785681),
     h = n(985002),
     f = n(858719),
-    N = n(780985),
-    x = n(880257),
-    b = n(631885),
+    b = n(780985),
+    N = n(880257),
+    x = n(631885),
     _ = n(240351),
     E = n(792258),
     j = n(657825),
@@ -79,18 +79,18 @@ function R(e) {
         n = i.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(I.NW.string(I.t.Wu8BKy), o.ToastType.FAILURE));
         }, []),
-        s = (0, x.Z)(),
+        s = (0, N.Z)(),
         l = (0, f.ws)(t),
         c = (0, f.C7)(t),
         { loadMore: u, isMoreLoading: p } = (0, h.G)({ onError: n }),
-        N = S.tx.get(t),
-        [b, _] = i.useState(S.iB),
+        b = S.tx.get(t),
+        [x, _] = i.useState(S.iB),
         C = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
         O = i.useCallback(() => {
             _((e) => e + S.iB), u(t);
         }, [t, u]);
-    a()(N, 'No text for action type');
-    let v = N.sectionHeader(c),
+    a()(b, 'No text for action type');
+    let v = b.sectionHeader(c),
         T = i.useCallback(
             (e) => {
                 let { row: t } = e,
@@ -101,7 +101,7 @@ function R(e) {
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
-                              timestampFormatter: N.timestampFormatter
+                              timestampFormatter: b.timestampFormatter
                           },
                           n.event_id
                       )
@@ -109,7 +109,7 @@ function R(e) {
                       ? (0, r.jsx)(E.Z, { guildId: n.entity_id }, n.event_id)
                       : void 0;
             },
-            [l, N.timestampFormatter]
+            [l, b.timestampFormatter]
         ),
         A = i.useCallback(
             () =>
@@ -121,20 +121,20 @@ function R(e) {
                             color: 'header-secondary',
                             children: v
                         }),
-                        void 0 !== N.sectionDescription
+                        void 0 !== b.sectionDescription
                             ? (0, r.jsx)(o.Text, {
                                   className: y.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: N.sectionDescription(null != s && s, C)
+                                  children: b.sectionDescription(null != s && s, C)
                               })
                             : null
                     ]
                 }),
-            [v, N, s, C]
+            [v, b, s, C]
         );
     if (0 === l.length) return null;
-    let P = l.slice(0, b);
+    let P = l.slice(0, x);
     return (0, r.jsxs)('div', {
         className: y.actionSection,
         children: [
@@ -165,11 +165,11 @@ function R(e) {
     });
 }
 let D = () => {
-        let e = (0, x.Z)(),
-            t = (0, b.mq)(S.ne.ACTIVE),
+        let e = (0, N.Z)(),
+            t = (0, x.mq)(S.ne.ACTIVE),
             n = (0, p.o)(I.NW.formatToPlainString(I.t['7hqFl5'], { activeLinks: t.length }), I.NW.string(I.t['Q/D/0d'])),
             i = (0, m.Qr)(!!e),
-            s = (0, b.Rd)(i);
+            s = (0, x.Rd)(i);
         return e && t.length > 1
             ? (0, r.jsx)(o.Text, {
                   variant: 'eyebrow',
@@ -193,7 +193,7 @@ let D = () => {
     },
     Z = (e) => {
         let { userId: t, subText: n, avatarSize: i = o.EFr.SIZE_40 } = e,
-            s = (0, N.I)(t);
+            s = (0, b.I)(t);
         return void 0 === s
             ? null
             : (0, r.jsxs)('div', {
@@ -220,7 +220,7 @@ let D = () => {
               });
     },
     w = () => {
-        let e = (0, b.mq)(S.ne.ACTIVE),
+        let e = (0, x.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, h.G)({}),
             s = e.map((e) => ({
@@ -252,10 +252,10 @@ let D = () => {
     },
     k = (e) => {
         let { userId: t } = e,
-            n = (0, x.Z)(),
-            i = (0, b.mq)(S.ne.ACTIVE),
+            n = (0, N.Z)(),
+            i = (0, x.mq)(S.ne.ACTIVE),
             s = (0, m.Qr)(!!n),
-            a = (0, b.Rd)(s);
+            a = (0, x.Rd)(s);
         return n && 1 !== i.length
             ? (0, r.jsx)(w, {})
             : (0, r.jsx)(Z, {
@@ -268,7 +268,7 @@ let D = () => {
             n = Array.from(S.tx.entries()),
             i = (0, f.kE)(),
             s = (0, m.t3)(),
-            a = (0, b.Rd)(s);
+            a = (0, x.Rd)(s);
         return (0, r.jsxs)('div', {
             className: y.container,
             children: [

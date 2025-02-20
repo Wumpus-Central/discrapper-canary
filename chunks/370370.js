@@ -1,36 +1,36 @@
 n.d(t, {
     Z: () => f,
-    j: () => c
+    j: () => u
 });
-var i = n(200651),
-    r = n(192379),
-    a = n(379357),
-    s = n(442550),
-    o = n(297781),
+var r = n(200651),
+    i = n(192379),
+    o = n(379357),
+    a = n(442550),
+    s = n(297781),
     l = n(443487),
-    u = n(704927);
-let c = [o.OV, o.EE, o.Af, o.U9, o.n8, o.pQ],
+    c = n(62545);
+let u = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ],
     d = (e) => {
-        let { entry: t, channel: n, selected: r, hovered: d } = e,
-            { largeImage: f } = (0, a.rv)({
+        let { entry: t, channel: n, selected: i, hovered: d } = e,
+            { largeImage: f } = (0, o.rv)({
                 entry: t,
                 showCoverImage: !1
             });
-        return (0, i.jsxs)(l.Zb, {
-            selected: r,
+        return (0, r.jsxs)(l.Zb, {
+            selected: i,
             children: [
-                (0, i.jsxs)(l.e$, {
+                (0, r.jsxs)(l.e$, {
                     children: [
-                        (0, i.jsx)(l.F9, {
+                        (0, r.jsx)(l.F9, {
                             entry: t,
                             channelId: n.id,
                             guildId: n.guild_id
                         }),
-                        (0, i.jsx)(l.ll, { children: t.extra.activity_name }),
-                        (0, i.jsx)(o.Gk, {
-                            location: o.Gt.CARD,
-                            children: c.map((e, n) =>
-                                (0, i.jsx)(
+                        (0, r.jsx)(l.ll, { children: t.extra.activity_name }),
+                        (0, r.jsx)(s.Gk, {
+                            location: s.Gt.CARD,
+                            children: u.map((e, n) =>
+                                (0, r.jsx)(
                                     e,
                                     {
                                         entry: t,
@@ -42,13 +42,13 @@ let c = [o.OV, o.EE, o.Af, o.U9, o.n8, o.pQ],
                         })
                     ]
                 }),
-                (0, i.jsx)(s.f, {
+                (0, r.jsx)(a.f, {
                     alt: null == f ? void 0 : f.alt,
                     src: null == f ? void 0 : f.src,
                     size: 48,
-                    className: u.thumbnail
+                    className: c.thumbnail
                 })
             ]
         });
     },
-    f = r.memo(d);
+    f = i.memo(d);

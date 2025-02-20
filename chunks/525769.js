@@ -1,8 +1,8 @@
 n.d(t, {
-    a: () => r,
-    z: () => i
+    a: () => i,
+    z: () => r
 });
-var i = (function (e) {
+var r = (function (e) {
         return (
             (e.ACCOUNT_REVERT_CHANGE_PASSWORD = 'impression_account_revert_change_password'),
             (e.ACCOUNT_REVERT_EXPLAINER = 'impression_account_revert_explainer'),
@@ -212,7 +212,7 @@ var i = (function (e) {
             e
         );
     })({}),
-    r = (function (e) {
+    i = (function (e) {
         return (
             (e.ACCOUNT_REVERT = 'network_action_account_revert'),
             (e.APPLE_JWT_TOKEN_CREATE = 'network_action_apple_jwt_token_create'),

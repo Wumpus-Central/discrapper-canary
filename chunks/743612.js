@@ -1,35 +1,35 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => o }), n(266796);
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(510040);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(596470);
 let o = (e) => {
-    var t, n, s, o;
-    let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: m, titleClassName: g = '', subtitle: h = '', subtitleClassName: x } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    var t, n, i, o;
+    let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: m, titleClassName: g = '', subtitle: p = '', subtitleClassName: h } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/extrabold',
-                className: r()(a.cardHeading, g),
+                className: s()(l.cardHeading, g),
                 children: c
             }),
-            '' !== h &&
+            '' !== p &&
                 (null == d || d(null == u ? void 0 : u.subtitle)) &&
-                (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsxs)('div', {
-                        className: x,
+                (0, r.jsx)(r.Fragment, {
+                    children: (0, r.jsxs)('div', {
+                        className: h,
                         children: [
-                            (0, i.jsx)(l.Text, {
-                                variant: null !== (s = null == u ? void 0 : null === (t = u.subtitle) || void 0 === t ? void 0 : t.textVariant) && void 0 !== s ? s : 'text-sm/normal',
-                                children: h
+                            (0, r.jsx)(a.Text, {
+                                variant: null !== (i = null == u ? void 0 : null === (t = u.subtitle) || void 0 === t ? void 0 : t.textVariant) && void 0 !== i ? i : 'text-sm/normal',
+                                children: p
                             }),
                             null != m &&
-                                (0, i.jsx)(l.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: null !== (o = null == u ? void 0 : null === (n = u.description) || void 0 === n ? void 0 : n.textVariant) && void 0 !== o ? o : 'text-sm/normal',
-                                    children: (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('br', {}), m]
+                                    children: (0, r.jsxs)(r.Fragment, {
+                                        children: [(0, r.jsx)('br', {}), m]
                                     })
                                 })
                         ]

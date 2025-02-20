@@ -1,36 +1,36 @@
 n.d(t, {
-    Z: () => o,
-    b: () => s
+    Z: () => s,
+    b: () => a
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(991862);
-function s(e) {
-    let { currencies: t, className: n, children: r } = e;
+var i = n(481060),
+    o = n(991862);
+function a(e) {
+    let { currencies: t, className: n, children: i } = e;
     return t.length < 2
         ? null
-        : (0, i.jsx)('div', {
+        : (0, r.jsx)('div', {
               className: n,
-              children: r
+              children: i
           });
 }
-let o = function (e) {
-    let { currencies: t, onChange: n, selectedCurrency: s, className: o, disabled: l = !1 } = e;
+let s = function (e) {
+    let { currencies: t, onChange: n, selectedCurrency: a, className: s, disabled: l = !1 } = e;
     if (t.length < 2) return null;
-    let u = t.map((e, t) => ({
+    let c = t.map((e, t) => ({
             key: t,
             value: e,
-            label: ''.concat(e.toUpperCase(), ' - ').concat((0, a.T)(e))
+            label: ''.concat(e.toUpperCase(), ' - ').concat((0, o.T)(e))
         })),
-        c = (e) => {
+        u = (e) => {
             null != e && n(e);
         };
-    return (0, i.jsx)(r.q4e, {
-        value: s,
-        options: u,
-        onChange: c,
-        className: o,
+    return (0, r.jsx)(i.q4e, {
+        value: a,
+        options: c,
+        onChange: u,
+        className: s,
         isDisabled: l
     });
 };

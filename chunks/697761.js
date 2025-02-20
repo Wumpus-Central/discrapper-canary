@@ -1,24 +1,24 @@
-n.d(t, { Z: () => u });
-var l = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var i = n(710845),
-    r = n(620662),
+var l = n(710845),
+    i = n(620662),
     a = n(915863),
-    s = n(981631),
-    o = n(388032);
-function u(e) {
-    let { activity: t, user: n, look: u, color: c, onAction: d } = e;
-    return (0, r.Z)(t, s.xjy.INSTANCE)
-        ? (0, l.jsx)(
+    o = n(981631),
+    s = n(388032);
+function c(e) {
+    let { activity: t, user: n, look: c, color: u, onAction: d } = e;
+    return (0, i.Z)(t, o.xjy.INSTANCE)
+        ? (0, r.jsx)(
               a.Z,
               {
-                  look: u,
-                  color: c,
+                  look: c,
+                  color: u,
                   onClick: () => {
-                      null == d || d(), new i.Z('UserActivityActions').log('notify', n.id, t);
+                      null == d || d(), new l.Z('UserActivityActions').log('notify', n.id, t);
                   },
                   fullWidth: !0,
-                  children: o.intl.string(o.t.vwl1PD)
+                  children: s.NW.string(s.t.vwl1PD)
               },
               'notify'
           )

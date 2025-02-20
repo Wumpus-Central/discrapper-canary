@@ -1,46 +1,46 @@
 n.d(t, { Z: () => l });
-var i = n(192379),
-    r = n(481060),
-    a = n(1585),
-    s = n(125988),
-    o = n(287008);
+var r = n(192379),
+    i = n(481060),
+    o = n(1585),
+    a = n(125988),
+    s = n(287008);
 function l(e) {
-    let { user: t, guildId: n, size: l, showPending: u = !1, showTryItOut: c = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: _ } = e,
+    let { user: t, guildId: n, size: l, showPending: c = !1, showTryItOut: u = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: p } = e,
         {
-            avatarSrc: p,
+            avatarSrc: _,
             isAvatarAnimating: h,
             eventHandlers: m
-        } = (0, o.Z)({
+        } = (0, s.Z)({
             user: t,
             guildId: n,
-            size: (0, r.pxk)(l),
-            showPending: u,
+            size: (0, i.pxk)(l),
+            showPending: c,
             animateOnHover: d,
-            avatarOverride: _
+            avatarOverride: p
         }),
         {
             avatarPlaceholderSrc: g,
             avatarDecorationSrc: E,
             eventHandlers: v
-        } = (0, s.Z)({
+        } = (0, a.Z)({
             user: t,
             guildId: null != n ? n : void 0,
-            size: (0, a.y9)(l),
-            showPending: u,
+            size: (0, o.y9)(l),
+            showPending: c,
             onlyAnimateOnHover: d,
             avatarDecorationOverride: f,
-            showTryItOut: c
+            showTryItOut: u
         });
     return {
         avatarPlaceholderSrc: g,
         avatarDecorationSrc: E,
-        avatarSrc: p,
+        avatarSrc: _,
         isAnimating: h,
         eventHandlers: {
-            onMouseEnter: i.useCallback(() => {
+            onMouseEnter: r.useCallback(() => {
                 m.onMouseEnter(), v.onMouseEnter();
             }, [m, v]),
-            onMouseLeave: i.useCallback(() => {
+            onMouseLeave: r.useCallback(() => {
                 m.onMouseLeave(), v.onMouseLeave();
             }, [m, v])
         }

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => u });
-var i = n(686266),
-    r = n(185490),
-    a = n(49767),
-    s = n(627324),
-    o = n(759638);
+n.d(t, { Z: () => c });
+var r = n(686266),
+    i = n(185490),
+    o = n(49767),
+    a = n(627324),
+    s = n(759638);
 function l(e) {
     var t = -1,
         n = null == e ? 0 : e.length;
     for (this.clear(); ++t < n; ) {
-        var i = e[t];
-        this.set(i[0], i[1]);
+        var r = e[t];
+        this.set(r[0], r[1]);
     }
 }
-(l.prototype.clear = i.Z), (l.prototype.delete = r.Z), (l.prototype.get = a.Z), (l.prototype.has = s.Z), (l.prototype.set = o.Z);
-let u = l;
+(l.prototype.clear = r.Z), (l.prototype.delete = i.Z), (l.prototype.get = o.Z), (l.prototype.has = a.Z), (l.prototype.set = s.Z);
+let c = l;

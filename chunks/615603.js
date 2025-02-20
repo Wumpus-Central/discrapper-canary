@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(760558),
     h = n(401786),
     f = n(450468),
-    N = n(98278),
-    x = n(314684),
-    b = n(594174),
+    b = n(98278),
+    N = n(314684),
+    x = n(594174),
     _ = n(78839),
     E = n(267642),
     j = n(63063),
@@ -169,8 +169,8 @@ let W = function (e) {
         v = (null == f ? void 0 : f.isPausedOrPausePending) === !0,
         { fractionalState: S } = (0, u.Z)(),
         W = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        L = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        B = (0, x.Vp)(),
+        L = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        B = (0, N.Vp)(),
         M = S === I.a$.FP_SUB_PAUSED,
         U = S !== I.a$.NONE,
         V = v && !M,
@@ -233,7 +233,7 @@ let W = function (e) {
                         className: P.headerLearnMoreLink,
                         tag: 'span',
                         onClick: () => {
-                            (0, N.z)();
+                            (0, b.z)();
                         },
                         children: e
                     },

@@ -1,11 +1,11 @@
 n.d(t, {
-    Q: () => s,
-    s: () => o
+    Q: () => a,
+    s: () => s
 });
-var i = n(418793),
-    r = n(460597),
-    a = n(608591);
-let s = (e) => ({
+var r = n(418793),
+    i = n(460597),
+    o = n(608591);
+let a = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -33,12 +33,12 @@ let s = (e) => ({
         gameTitle: e.messages.game_title,
         gamePublisher: e.messages.game_publisher
     },
-    taskConfig: (0, r.f)(e.task_config),
-    rewardsConfig: (0, i.v)(e.rewards_config),
-    videoMetadata: (0, a.F)(e.video_metadata),
-    cosponsorMetadata: o(e.cosponsor_metadata)
+    taskConfig: (0, i.f)(e.task_config),
+    rewardsConfig: (0, r.v)(e.rewards_config),
+    videoMetadata: (0, o.F)(e.video_metadata),
+    cosponsorMetadata: s(e.cosponsor_metadata)
 });
-function o(e) {
+function s(e) {
     if (null != e)
         return {
             name: e.name,

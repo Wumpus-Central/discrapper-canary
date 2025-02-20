@@ -1,21 +1,21 @@
-n.d(t, { Z: () => r });
-var i = n(570140);
-let r = {
-    updateChannelDimensions(e, t, n, r, a) {
-        i.Z.wait(() => {
-            i.Z.dispatch({
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
+    updateChannelDimensions(e, t, n, i, o) {
+        r.Z.wait(() => {
+            r.Z.dispatch({
                 type: 'UPDATE_CHANNEL_DIMENSIONS',
                 channelId: e,
                 scrollTop: t,
                 scrollHeight: n,
-                offsetHeight: r
+                offsetHeight: i
             }),
-                null != a && a();
+                null != o && o();
         });
     },
     updateChannelListScroll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
             scrollTop: t,
@@ -23,7 +23,7 @@ let r = {
         });
     },
     channelListScrollTo(e, t) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
             scrollTo: t,
@@ -31,7 +31,7 @@ let r = {
         });
     },
     clearChannelListScrollTo(e) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
             scrollTo: null,
@@ -42,7 +42,7 @@ let r = {
         this.updateChannelDimensions(e, null, null, null, t);
     },
     updateGuildListScrollTo(e) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'UPDATE_GUILD_LIST_DIMENSIONS',
             scrollTop: e
         });

@@ -1,8 +1,8 @@
 n.d(t, {
-    S: () => r,
-    Z: () => a
+    S: () => i,
+    Z: () => o
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_frecency_list_split',
     label: 'Frecency List Split',
@@ -15,9 +15,9 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { canSplitFrecencyList: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return { canSplitFrecencyList: r };
+        { canSplitFrecencyList: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return { canSplitFrecencyList: i };
 }
-let a = i;
+let o = r;

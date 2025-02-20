@@ -1,15 +1,15 @@
-n.d(t, { Z: () => u });
-var i = n(192379),
-    r = n(442837),
-    a = n(544891),
-    s = n(570140),
-    o = n(722086),
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(442837),
+    o = n(544891),
+    a = n(570140),
+    s = n(722086),
     l = n(981631);
-function u(e) {
-    let t = (0, r.e7)([o.Z], () => o.Z.getNote(e));
+function c(e) {
+    let t = (0, i.e7)([s.Z], () => s.Z.getNote(e));
     return (
-        i.useEffect(() => {
-            null == t && c(e);
+        r.useEffect(() => {
+            null == t && u(e);
         }, [t, e]),
         null != t
             ? t
@@ -19,24 +19,24 @@ function u(e) {
               }
     );
 }
-async function c(e) {
-    s.Z.dispatch({
+async function u(e) {
+    a.Z.dispatch({
         type: 'USER_NOTE_LOAD_START',
         userId: e
     });
     try {
-        let { body: t } = await a.tn.get({
+        let { body: t } = await o.tn.get({
             url: l.ANM.NOTE(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e,
             note: t
         });
     } catch (t) {
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e
         });

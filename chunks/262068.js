@@ -1,31 +1,31 @@
 n.d(t, {
-    vg: () => p,
-    w7: () => _
+    vg: () => _,
+    w7: () => p
 });
-var i = n(961742),
-    r = n(295415),
-    a = n(27273);
-let s = /url\((['"]?)([^'"]+?)\1\)/g,
-    o = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
+var r = n(961742),
+    i = n(295415),
+    o = n(27273);
+let a = /url\((['"]?)([^'"]+?)\1\)/g,
+    s = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
     l = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
-function u(e) {
+function c(e) {
     let t = e.replace(/([.*+?^${}()|\[\]\/\\])/g, '\\$1');
     return RegExp(`(url\\(['"]?)(${t})(['"]?\\))`, 'g');
 }
-function c(e) {
+function u(e) {
     let t = [];
-    return e.replace(s, (e, n, i) => (t.push(i), e)), t.filter((e) => !(0, a.pZ)(e));
+    return e.replace(a, (e, n, r) => (t.push(r), e)), t.filter((e) => !(0, o.pZ)(e));
 }
-async function d(e, t, n, s, o) {
+async function d(e, t, n, a, s) {
     try {
         let l;
-        let c = n ? (0, i.Kk)(t, n) : t,
-            d = (0, r.b)(t);
-        if (o) {
-            let e = await o(c);
-            l = (0, a.DT)(e, d);
-        } else l = await (0, a.sx)(c, d, s);
-        return e.replace(u(t), `$1${l}$3`);
+        let u = n ? (0, r.Kk)(t, n) : t,
+            d = (0, i.b)(t);
+        if (s) {
+            let e = await s(u);
+            l = (0, o.DT)(e, d);
+        } else l = await (0, o.sx)(u, d, a);
+        return e.replace(c(t), `$1${l}$3`);
     } catch (e) {}
     return e;
 }
@@ -33,18 +33,18 @@ function f(e, { preferredFontFormat: t }) {
     return t
         ? e.replace(l, (e) => {
               for (;;) {
-                  let [n, , i] = o.exec(e) || [];
-                  if (!i) return '';
-                  if (i === t) return `src: ${n};`;
+                  let [n, , r] = s.exec(e) || [];
+                  if (!r) return '';
+                  if (r === t) return `src: ${n};`;
               }
           })
         : e;
 }
-function _(e) {
-    return -1 !== e.search(s);
+function p(e) {
+    return -1 !== e.search(a);
 }
-async function p(e, t, n) {
-    if (!_(e)) return e;
-    let i = f(e, n);
-    return c(i).reduce((e, i) => e.then((e) => d(e, i, t, n)), Promise.resolve(i));
+async function _(e, t, n) {
+    if (!p(e)) return e;
+    let r = f(e, n);
+    return u(r).reduce((e, r) => e.then((e) => d(e, r, t, n)), Promise.resolve(r));
 }

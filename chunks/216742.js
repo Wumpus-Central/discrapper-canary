@@ -1,7 +1,7 @@
-n.d(t, { g: () => r });
-var i = n(818083),
-    l = n(987338);
-let r = (0, i.B)({
+n.d(t, { g: () => l });
+var r = n(818083),
+    i = n(987338);
+let l = (0, r.B)({
     kind: 'user',
     id: '2024-10_rapidash_discovery_plus',
     label: 'Rapidash Discovery Plus',
@@ -9,7 +9,7 @@ let r = (0, i.B)({
         enabled: !1,
         treatment: 'control'
     },
-    commonTriggerPoint: l.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

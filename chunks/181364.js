@@ -1,47 +1,47 @@
 n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
-var s = n(13245),
-    l = n(593481),
-    a = n(371651),
-    o = n(237997),
-    r = n(145597),
-    d = n(312839),
-    c = n(987650),
+var r = n(13245),
+    s = n(593481),
+    o = n(371651),
+    l = n(237997),
+    a = n(145597),
+    c = n(312839),
+    d = n(987650),
     u = n(388032);
 let h = () => ({
         icon: n(328756),
-        title: u.intl.string(u.t.pkXAeH),
+        title: u.NW.string(u.t.pkXAeH),
         body: null,
         hint: p,
-        notifType: c.n0.WelcomeNudge
+        notifType: d.n0.WelcomeNudge
     }),
-    p = (e) => (0, l.QR)(e, (0, d.P)(), u.t['z8/sgI']);
+    p = (e) => (0, s.QR)(e, (0, c.P)(), u.t['z8/sgI']);
 function g(e) {
     let { type: t } = e,
         {
             icon: n,
-            title: l,
+            title: s,
             body: p,
             hint: g,
-            notifType: m
+            notifType: f
         } = (function (e, t) {
-            if (t.type === c.nc.NEWS) {
-                var n, i, s, l, a, o, r, d;
+            if (t.type === d.nc.NEWS) {
+                var n, i, r, s, o, l, a, c;
                 return {
-                    icon: null !== (a = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== a ? a : e.icon,
-                    title: null !== (o = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== o ? o : e.title,
-                    body: null !== (r = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== r ? r : e.body,
-                    hint: null !== (d = null === (l = t.news) || void 0 === l ? void 0 : l.hint) && void 0 !== d ? d : e.hint,
-                    notifType: null != t.news ? c.n0.NewsNudge : e.notifType
+                    icon: null !== (o = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== o ? o : e.icon,
+                    title: null !== (l = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== l ? l : e.title,
+                    body: null !== (a = null === (r = t.news) || void 0 === r ? void 0 : r.body) && void 0 !== a ? a : e.body,
+                    hint: null !== (c = null === (s = t.news) || void 0 === s ? void 0 : s.hint) && void 0 !== c ? c : e.hint,
+                    notifType: null != t.news ? d.n0.NewsNudge : e.notifType
                 };
             }
             return e;
         })(h(), e),
-        { trackView: f, trackClick: v } = (0, d.R)(m, { notif_type: m });
+        { trackView: m, trackClick: y } = (0, c.R)(f, { notif_type: f });
     return {
         icon: n,
-        title: l,
+        title: s,
         body: p,
         hint: g,
         renderFooter: () =>
@@ -50,16 +50,16 @@ function g(e) {
                     textAlign: 'center',
                     padding: 2
                 },
-                children: u.intl.string(u.t['9MyuT0'])
+                children: u.NW.string(u.t['9MyuT0'])
             }),
         onNotificationShow: () => {
-            f();
+            m();
         },
         onNotificationClick: (e, n) => {
-            v('unlock'), t === c.nc.NEWS && s.Z.updateNotificationStatus(n), a.default.isOverlayOOPEnabledForPid((0, r.QF)()) ? s.Z.setInputLocked(!1, (0, r.QF)()) : o.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
+            y('unlock'), t === d.nc.NEWS && r.Z.updateNotificationStatus(n), o.default.isOverlayOOPEnabledForPid((0, a.QF)()) ? r.Z.setInputLocked(!1, (0, a.QF)()) : l.Z.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            v('dismiss');
+            y('dismiss');
         }
     };
 }

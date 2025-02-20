@@ -1,66 +1,66 @@
-n.d(t, { Z: () => _ }), n(47120);
-var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    o = n.n(i),
-    l = n(793030),
-    s = n(481060),
-    c = n(383895),
-    d = n(388032),
-    u = n(497329),
-    m = n(807941);
-function _(e) {
-    let { entries: t, viewId: n, officialGuildId: i, onClose: _ } = e,
-        g = t.length > 7,
-        [p, f] = a.useState(!1),
-        h = a.useMemo(() => t.slice(0, g && !p ? 6 : void 0), [t, g, p]);
-    return (0, r.jsxs)('div', {
+r.d(t, { Z: () => m }), r(47120);
+var n = r(200651),
+    a = r(192379),
+    o = r(120356),
+    i = r.n(o),
+    s = r(793030),
+    l = r(481060),
+    c = r(383895),
+    u = r(388032),
+    d = r(384370),
+    p = r(32559);
+function m(e) {
+    let { entries: t, viewId: r, officialGuildId: o, onClose: m } = e,
+        f = t.length > 7,
+        [g, b] = a.useState(!1),
+        _ = a.useMemo(() => t.slice(0, f && !g ? 6 : void 0), [t, f, g]);
+    return (0, n.jsxs)('div', {
         children: [
-            (0, r.jsx)(l.X6, {
-                className: u.sectionHeader,
+            (0, n.jsx)(s.X6, {
+                className: d.sectionHeader,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
-                children: d.intl.string(d.t.ak8OHh)
+                children: u.NW.string(u.t.ak8OHh)
             }),
             0 === t.length
-                ? (0, r.jsx)(l.xv, {
+                ? (0, n.jsx)(s.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
-                      className: m.emptyState,
-                      children: d.intl.string(d.t.R5fYVF)
+                      className: p.emptyState,
+                      children: u.NW.string(u.t.R5fYVF)
                   })
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, r.jsx)('div', {
-                              className: o()(m.friends, { [m.fadedEntries]: g && !p }),
-                              children: (0, r.jsx)('div', {
-                                  className: u.column,
-                                  children: h.map((e) =>
-                                      (0, r.jsx)(
+                          (0, n.jsx)('div', {
+                              className: i()(p.friends, { [p.fadedEntries]: f && !g }),
+                              children: (0, n.jsx)('div', {
+                                  className: d.column,
+                                  children: _.map((e) =>
+                                      (0, n.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
-                                              viewId: n,
-                                              onClose: _,
-                                              officialGuildId: i
+                                              viewId: r,
+                                              onClose: m,
+                                              officialGuildId: o
                                           },
                                           e.id
                                       )
                                   )
                               })
                           }),
-                          g &&
-                              !p &&
-                              (0, r.jsxs)(s.P3F, {
-                                  className: m.expandEntriesButton,
-                                  onClick: () => f(!0),
+                          f &&
+                              !g &&
+                              (0, n.jsxs)(l.P3F, {
+                                  className: p.expandEntriesButton,
+                                  onClick: () => b(!0),
                                   children: [
-                                      (0, r.jsx)(l.xv, {
+                                      (0, n.jsx)(s.xv, {
                                           variant: 'text-xs/semibold',
                                           color: 'interactive-normal',
-                                          children: d.intl.string(d.t.yohc6O)
+                                          children: u.NW.string(u.t.yohc6O)
                                       }),
-                                      (0, r.jsx)(s.CJ0, { size: 'xs' })
+                                      (0, n.jsx)(l.CJ0, { size: 'xs' })
                                   ]
                               })
                       ]

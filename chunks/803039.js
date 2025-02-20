@@ -1,14 +1,14 @@
 function t(e) {
     let t = e.regex,
         n = /(?![A-Za-z0-9])(?![$])/,
-        i = t.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, n),
-        r = t.concat(/(\\?[A-Z][a-z0-9_\x7f-\xff]+|\\?[A-Z]+(?=[A-Z][a-z0-9_\x7f-\xff])){1,}/, n),
-        a = t.concat(/[A-Z]+/, n),
-        s = {
+        r = t.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, n),
+        i = t.concat(/(\\?[A-Z][a-z0-9_\x7f-\xff]+|\\?[A-Z]+(?=[A-Z][a-z0-9_\x7f-\xff])){1,}/, n),
+        o = t.concat(/[A-Z]+/, n),
+        a = {
             scope: 'variable',
-            match: '\\$+' + i
+            match: '\\$+' + r
         },
-        o = {
+        s = {
             scope: 'meta',
             variants: [
                 {
@@ -33,8 +33,8 @@ function t(e) {
                 }
             ]
         },
-        u = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
-        c = e.inherit(e.QUOTE_STRING_MODE, {
+        c = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
+        u = e.inherit(e.QUOTE_STRING_MODE, {
             illegal: null,
             contains: e.QUOTE_STRING_MODE.contains.concat(l)
         }),
@@ -53,10 +53,10 @@ function t(e) {
             begin: /<<<[ \t]*'(\w+)'\n/,
             end: /[ \t]*(\w+)\b/
         }),
-        _ = '[ \t\n]',
-        p = {
+        p = '[ \t\n]',
+        _ = {
             scope: 'string',
-            variants: [c, u, d, f]
+            variants: [u, c, d, f]
         },
         h = {
             scope: 'number',
@@ -79,11 +79,11 @@ function t(e) {
             })(m),
             built_in: E
         },
-        y = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
-        I = {
+        b = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
+        y = {
             variants: [
                 {
-                    match: [/new/, t.concat(_, '+'), t.concat('(?!', y(E).join('\\b|'), '\\b)'), r],
+                    match: [/new/, t.concat(p, '+'), t.concat('(?!', b(E).join('\\b|'), '\\b)'), i],
                     scope: {
                         1: 'keyword',
                         4: 'title.class'
@@ -91,11 +91,11 @@ function t(e) {
                 }
             ]
         },
-        T = t.concat(i, '\\b(?!\\()'),
-        b = {
+        O = t.concat(r, '\\b(?!\\()'),
+        S = {
             variants: [
                 {
-                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
+                    match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), O],
                     scope: { 2: 'variable.constant' }
                 },
                 {
@@ -103,18 +103,18 @@ function t(e) {
                     scope: { 2: 'variable.language' }
                 },
                 {
-                    match: [r, t.concat(/::/, t.lookahead(/(?!class\b)/)), T],
+                    match: [i, t.concat(/::/, t.lookahead(/(?!class\b)/)), O],
                     scope: {
                         1: 'title.class',
                         3: 'variable.constant'
                     }
                 },
                 {
-                    match: [r, t.concat('::', t.lookahead(/(?!class\b)/))],
+                    match: [i, t.concat('::', t.lookahead(/(?!class\b)/))],
                     scope: { 1: 'title.class' }
                 },
                 {
-                    match: [r, /::/, /class/],
+                    match: [i, /::/, /class/],
                     scope: {
                         1: 'title.class',
                         3: 'variable.language'
@@ -122,27 +122,27 @@ function t(e) {
                 }
             ]
         },
-        S = {
+        I = {
             scope: 'attr',
-            match: t.concat(i, t.lookahead(':'), t.lookahead(/(?!::)/))
+            match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
-        A = {
+        T = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
             keywords: v,
-            contains: [S, s, b, e.C_BLOCK_COMMENT_MODE, p, h, I]
+            contains: [I, a, S, e.C_BLOCK_COMMENT_MODE, _, h, y]
         },
         N = {
             relevance: 0,
-            match: [/\b/, t.concat('(?!fn\\b|function\\b|', y(g).join('\\b|'), '|', y(E).join('\\b|'), '\\b)'), i, t.concat(_, '*'), t.lookahead(/(?=\()/)],
+            match: [/\b/, t.concat('(?!fn\\b|function\\b|', b(g).join('\\b|'), '|', b(E).join('\\b|'), '\\b)'), r, t.concat(p, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
-            contains: [A]
+            contains: [T]
         };
-    A.contains.push(N);
-    let C = [S, b, e.C_BLOCK_COMMENT_MODE, p, h, I],
-        R = {
-            begin: t.concat(/#\[\s*\\?/, t.either(r, a)),
+    T.contains.push(N);
+    let A = [I, S, e.C_BLOCK_COMMENT_MODE, _, h, y],
+        C = {
+            begin: t.concat(/#\[\s*\\?/, t.either(i, o)),
             beginScope: 'meta',
             end: /]/,
             endScope: 'meta',
@@ -158,12 +158,12 @@ function t(e) {
                         literal: m,
                         keyword: ['new', 'array']
                     },
-                    contains: ['self', ...C]
+                    contains: ['self', ...A]
                 },
-                ...C,
+                ...A,
                 {
                     scope: 'meta',
-                    variants: [{ match: r }, { match: a }]
+                    variants: [{ match: i }, { match: o }]
                 }
             ]
         };
@@ -171,7 +171,7 @@ function t(e) {
         case_insensitive: !1,
         keywords: v,
         contains: [
-            R,
+            C,
             e.HASH_COMMENT_MODE,
             e.COMMENT('//', '$'),
             e.COMMENT('/\\*', '\\*/', {
@@ -197,22 +197,22 @@ function t(e) {
                     ]
                 }
             },
-            o,
+            s,
             {
                 scope: 'variable.language',
                 match: /\$this\b/
             },
-            s,
+            a,
             N,
-            b,
+            S,
             {
-                match: [/const/, /\s/, i],
+                match: [/const/, /\s/, r],
                 scope: {
                     1: 'keyword',
                     3: 'variable.constant'
                 }
             },
-            I,
+            y,
             {
                 scope: 'function',
                 relevance: 0,
@@ -234,7 +234,7 @@ function t(e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         keywords: v,
-                        contains: ['self', R, s, b, e.C_BLOCK_COMMENT_MODE, p, h]
+                        contains: ['self', C, a, S, e.C_BLOCK_COMMENT_MODE, _, h]
                     }
                 ]
             },
@@ -274,7 +274,7 @@ function t(e) {
                     e.UNDERSCORE_TITLE_MODE
                 ]
             },
-            p,
+            _,
             h
         ]
     };

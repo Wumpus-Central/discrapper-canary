@@ -1,38 +1,38 @@
-var i = n(814033),
-    r = n(685053),
-    a = r.assert,
-    s = r.cachedProperty,
-    o = r.parseBytes;
+var r = n(814033),
+    i = n(685053),
+    o = i.assert,
+    a = i.cachedProperty,
+    s = i.parseBytes;
 function l(e, t) {
     (this.eddsa = e),
-        'object' != typeof t && (t = o(t)),
+        'object' != typeof t && (t = s(t)),
         Array.isArray(t) &&
             (t = {
                 R: t.slice(0, e.encodingLength),
                 S: t.slice(e.encodingLength)
             }),
-        a(t.R && t.S, 'Signature without R or S'),
+        o(t.R && t.S, 'Signature without R or S'),
         e.isPoint(t.R) && (this._R = t.R),
-        t.S instanceof i && (this._S = t.S),
+        t.S instanceof r && (this._S = t.S),
         (this._Rencoded = Array.isArray(t.R) ? t.R : t.Rencoded),
         (this._Sencoded = Array.isArray(t.S) ? t.S : t.Sencoded);
 }
-s(l, 'S', function () {
+a(l, 'S', function () {
     return this.eddsa.decodeInt(this.Sencoded());
 }),
-    s(l, 'R', function () {
+    a(l, 'R', function () {
         return this.eddsa.decodePoint(this.Rencoded());
     }),
-    s(l, 'Rencoded', function () {
+    a(l, 'Rencoded', function () {
         return this.eddsa.encodePoint(this.R());
     }),
-    s(l, 'Sencoded', function () {
+    a(l, 'Sencoded', function () {
         return this.eddsa.encodeInt(this.S());
     }),
     (l.prototype.toBytes = function () {
         return this.Rencoded().concat(this.Sencoded());
     }),
     (l.prototype.toHex = function () {
-        return r.encode(this.toBytes(), 'hex').toUpperCase();
+        return i.encode(this.toBytes(), 'hex').toUpperCase();
     }),
     (e.exports = l);

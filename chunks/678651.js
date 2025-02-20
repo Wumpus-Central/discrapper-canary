@@ -1,48 +1,48 @@
-a.d(t, { Z: () => p }), a(47120);
-var n = a(200651),
-    l = a(192379),
-    i = a(442837),
-    r = a(481060),
-    o = a(835473),
-    s = a(925329),
-    u = a(706454),
-    d = a(709054),
-    c = a(388032),
-    m = a(371383);
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    l = n(442837),
+    i = n(481060),
+    o = n(835473),
+    s = n(925329),
+    u = n(706454),
+    c = n(709054),
+    d = n(388032),
+    m = n(599520);
 function p(e) {
-    var t, a;
+    var t, n;
     let { clip: p } = e,
-        [v] = (0, o.Z)([null !== (t = p.applicationId) && void 0 !== t ? t : '']),
-        f = (0, i.e7)([u.default], () => u.default.locale),
-        h = l.useMemo(() => new Date(d.default.extractTimestamp(p.id)), [p.id]);
-    return (0, n.jsxs)('div', {
+        [f] = (0, o.Z)([null !== (t = p.applicationId) && void 0 !== t ? t : '']),
+        v = (0, l.e7)([u.default], () => u.default.locale),
+        h = a.useMemo(() => new Date(c.default.extractTimestamp(p.id)), [p.id]);
+    return (0, r.jsxs)('div', {
         className: m.root,
         children: [
-            (0, n.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.nameSection,
                 children: [
-                    (0, n.jsx)(s.Z, { game: v }),
-                    (0, n.jsx)(r.Text, {
+                    (0, r.jsx)(s.Z, { game: f }),
+                    (0, r.jsx)(i.Text, {
                         className: m.name,
                         variant: 'text-md/medium',
                         color: 'interactive-active',
-                        children: null !== (a = null == v ? void 0 : v.name) && void 0 !== a ? a : p.applicationName
+                        children: null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : p.applicationName
                     })
                 ]
             }),
-            (0, n.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.timeContainer,
                 children: [
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, n.jsx)(r.vwX, {
+                            (0, r.jsx)(i.vwX, {
                                 className: m.timeTitle,
-                                children: c.intl.string(c.t.g8pDeX)
+                                children: d.NW.string(d.t.g8pDeX)
                             }),
-                            (0, n.jsx)(r.Text, {
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'interactive-active',
-                                children: h.toLocaleDateString(f, {
+                                children: h.toLocaleDateString(v, {
                                     year: '2-digit',
                                     month: '2-digit',
                                     day: '2-digit'
@@ -50,16 +50,16 @@ function p(e) {
                             })
                         ]
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, n.jsx)(r.vwX, {
+                            (0, r.jsx)(i.vwX, {
                                 className: m.timeTitle,
-                                children: c.intl.string(c.t.v6XAgo)
+                                children: d.NW.string(d.t.v6XAgo)
                             }),
-                            (0, n.jsx)(r.Text, {
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'interactive-active',
-                                children: h.toLocaleTimeString(f, {
+                                children: h.toLocaleTimeString(v, {
                                     hour: 'numeric',
                                     minute: 'numeric'
                                 })

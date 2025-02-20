@@ -1,5 +1,5 @@
-n.d(t, { u: () => a });
-var i = {
+n.d(t, { u: () => o });
+var r = {
         ceil: Math.ceil,
         round: Math.round,
         floor: Math.floor,
@@ -7,7 +7,7 @@ var i = {
             return e < 0 ? Math.ceil(e) : Math.floor(e);
         }
     },
-    r = 'trunc';
-function a(e) {
-    return e ? i[e] : i[r];
+    i = 'trunc';
+function o(e) {
+    return e ? r[e] : r[i];
 }

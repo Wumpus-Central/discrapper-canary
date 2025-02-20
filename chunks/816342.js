@@ -1,41 +1,41 @@
-n.d(t, { Z: () => v });
-var l = n(200651),
-    i = n(192379),
-    r = n(442837),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
     a = n(481060),
-    s = n(194359),
-    o = n(367907),
-    d = n(681678),
-    c = n(138201),
+    o = n(194359),
+    s = n(367907),
+    c = n(681678),
+    d = n(138201),
     u = n(592125),
     m = n(699516),
     x = n(5192),
-    _ = n(981631),
-    h = n(388032);
-let v = (e) => {
-    let { user: t, channelId: n, reportId: v, reportType: g } = e,
-        p = (0, r.e7)([m.Z], () => m.Z.isBlocked(t.id), [t.id]),
-        f = (0, r.e7)([u.Z], () => u.Z.getChannel(n), [n]),
-        b = i.useMemo(() => x.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, t), [f, t]),
-        Z = i.useCallback(() => {
-            o.ZP.trackWithMetadata(_.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
+    p = n(981631),
+    f = n(388032);
+let b = (e) => {
+    let { user: t, channelId: n, reportId: b, reportType: h } = e,
+        _ = (0, i.e7)([m.Z], () => m.Z.isBlocked(t.id), [t.id]),
+        g = (0, i.e7)([u.Z], () => u.Z.getChannel(n), [n]),
+        v = l.useMemo(() => x.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, t), [g, t]),
+        j = l.useCallback(() => {
+            s.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: v
+                report_id: b
             }),
-                s.Z.addRelationship({
+                o.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'ReportMenuBlockUser-iOS' },
-                    type: _.OGo.BLOCKED
+                    type: p.OGo.BLOCKED
                 }),
-                d.Z.showBlockSuccessToast(t.id, n);
-        }, [t, v, n]);
-    return (0, l.jsx)(c.ZP, {
-        title: h.intl.formatToPlainString(h.t['Q1o/f3'], { username: b }),
-        description: h.intl.string(h.t.G08MKi),
-        buttonText: p ? h.intl.string(h.t.ot2tSk) : h.intl.string(h.t['l+7PZW']),
-        buttonDisabled: p,
-        onButtonPress: Z,
-        buttonColor: 'application' === g.name && p ? a.zxk.Colors.WHITE : a.zxk.Colors.RED,
-        buttonLook: 'application' === g.name && p ? a.zxk.Looks.LINK : a.zxk.Looks.FILLED
+                c.Z.showBlockSuccessToast(t.id, n);
+        }, [t, b, n]);
+    return (0, r.jsx)(d.ZP, {
+        title: f.NW.formatToPlainString(f.t['Q1o/f3'], { username: v }),
+        description: f.NW.string(f.t.G08MKi),
+        buttonText: _ ? f.NW.string(f.t.ot2tSk) : f.NW.string(f.t['l+7PZW']),
+        buttonDisabled: _,
+        onButtonPress: j,
+        buttonColor: 'application' === h.name && _ ? a.zxk.Colors.WHITE : a.zxk.Colors.RED,
+        buttonLook: 'application' === h.name && _ ? a.zxk.Looks.LINK : a.zxk.Looks.FILLED
     });
 };

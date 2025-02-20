@@ -18,9 +18,9 @@ var r,
     p = n(355467),
     h = n(410030),
     f = n(100527),
-    N = n(906732),
-    x = n(211242),
-    b = n(600164),
+    b = n(906732),
+    N = n(211242),
+    x = n(600164),
     _ = n(509545),
     E = n(626135),
     j = n(122289),
@@ -88,11 +88,11 @@ async function z(e) {
 function Y(e) {
     var t;
     let { premiumSubscription: n, premiumType: r, setStep: a, onClose: l, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
-        d = (0, x.Q)(),
+        d = (0, N.Q)(),
         [u, p] = s.useState(!1),
         [f, _] = s.useState(!1),
         E = (0, h.ZP)(),
-        { analyticsLocations: j } = (0, N.ZP)(),
+        { analyticsLocations: j } = (0, b.ZP)(),
         v = null;
     switch (n.status) {
         case U.O0b.PAST_DUE:
@@ -196,7 +196,7 @@ function Y(e) {
                 ]
             }),
             (0, i.jsxs)(g.mzw, {
-                justify: b.Z.Justify.START,
+                justify: x.Z.Justify.START,
                 children: [S, T]
             })
         ]
@@ -205,7 +205,7 @@ function Y(e) {
 function K(e) {
     var t, n;
     let { premiumSubscription: r } = e,
-        { analyticsLocations: s } = (0, N.ZP)(),
+        { analyticsLocations: s } = (0, b.ZP)(),
         [a] = (0, S.ED)({
             subscriptionId: r.id,
             items: (0, O.Ue)(null !== (n = null === (t = r.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== n ? n : r.items),
@@ -252,7 +252,7 @@ function q(e) {
     let { premiumSubscription: t, premiumType: n, onBack: r, onClose: a, analyticsLocation: o } = e,
         [c, d] = s.useState(!1),
         [u, m] = s.useState(!1),
-        { analyticsLocations: p } = (0, N.ZP)();
+        { analyticsLocations: p } = (0, b.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(k.Z, {
@@ -272,8 +272,8 @@ function q(e) {
                 ]
             }),
             (0, i.jsxs)(g.mzw, {
-                align: b.Z.Align.CENTER,
-                justify: b.Z.Justify.BETWEEN,
+                align: x.Z.Align.CENTER,
+                justify: x.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(g.zxk, {
                         color: g.zxk.Colors.RED,
@@ -319,8 +319,8 @@ function Q(e) {
     var t;
     let n,
         { premiumSubscription: r, transitionState: a, onClose: l, analyticsLocations: c, analyticsLocation: u, initialStep: p } = e,
-        x = s.useRef(new o.qA()),
-        [b, _] = s.useState(null),
+        N = s.useRef(new o.qA()),
+        [x, _] = s.useState(null),
         C = (0, I.yQ)(),
         v = (null == C ? void 0 : C.showCard) === !0,
         S = (null == C ? void 0 : C.tenureRewardType) === M.nW.AVATAR_DECO,
@@ -333,7 +333,7 @@ function Q(e) {
     }, [r]);
     let k = Z === B.p9.TIER_0 || Z === B.p9.TIER_1 || Z === B.p9.TIER_2;
     null == p && (p = k ? 1 : 2);
-    let { analyticsLocations: H } = (0, N.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+    let { analyticsLocations: H } = (0, b.ZP)(c, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [z, K, Q, $] = (function (e, t, n) {
             let [r, i] = s.useState(e),
                 [a, l] = s.useState(Date.now()),
@@ -510,20 +510,20 @@ function Q(e) {
                 premiumSubscription: r,
                 premiumType: Z,
                 onClose: () => en(z),
-                confettiCanvas: b,
+                confettiCanvas: x,
                 userDiscountOffer: ei
             });
             break;
         default:
             throw Error('Unexpected step: '.concat(z));
     }
-    return (0, i.jsxs)(N.Gt, {
+    return (0, i.jsxs)(b.Gt, {
         value: H,
         children: [
             (0, i.jsx)(o.O_, {
                 ref: _,
                 className: G.confettiCanvas,
-                environment: x.current
+                environment: N.current
             }),
             (0, i.jsx)(g.Y0X, {
                 transitionState: a,

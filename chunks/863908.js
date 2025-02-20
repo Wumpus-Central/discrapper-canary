@@ -1,27 +1,27 @@
-n.d(t, { Z: () => s });
-var i = n(5192),
-    r = n(981631),
-    a = n(388032);
-function s(e, t, n, s) {
-    return e.state === r.jm8.RECONNECTING
+n.d(t, { Z: () => a });
+var r = n(5192),
+    i = n(981631),
+    o = n(388032);
+function a(e, t, n, a) {
+    return e.state === i.jm8.RECONNECTING
         ? {
-              mainText: a.intl.string(a.t.pdFFKy),
-              supportingText: a.intl.string(a.t['+PuO2N'])
+              mainText: o.NW.string(o.t.pdFFKy),
+              supportingText: o.NW.string(o.t['+PuO2N'])
           }
-        : e.state === r.jm8.PAUSED
+        : e.state === i.jm8.PAUSED
           ? n
               ? {
-                    mainText: a.intl.string(a.t['5q17w8']),
-                    supportingText: a.intl.string(a.t.LV1NSE)
+                    mainText: o.NW.string(o.t['5q17w8']),
+                    supportingText: o.NW.string(o.t.LV1NSE)
                 }
               : {
-                    mainText: a.intl.string(a.t['5q17w8']),
-                    supportingText: a.intl.formatToPlainString(a.t.meVVlZ, { username: i.ZP.getName(e.guildId, e.channelId, t) })
+                    mainText: o.NW.string(o.t['5q17w8']),
+                    supportingText: o.NW.formatToPlainString(o.t.meVVlZ, { username: r.ZP.getName(e.guildId, e.channelId, t) })
                 }
-          : s
+          : a
             ? {
-                  mainText: a.intl.string(a.t.JmaKtL),
-                  supportingText: a.intl.string(a.t['hC3+BA'])
+                  mainText: o.NW.string(o.t.JmaKtL),
+                  supportingText: o.NW.string(o.t['hC3+BA'])
               }
             : null;
 }

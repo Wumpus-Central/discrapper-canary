@@ -1,10 +1,10 @@
 n.d(t, { Z: () => c }), n(47120);
-var i = n(192379),
-    r = n(796075),
-    l = n(481060);
-let a = 'undefined' == typeof ResizeObserver ? r.d : ResizeObserver,
+var r = n(192379),
+    a = n(796075),
+    i = n(481060);
+let l = 'undefined' == typeof ResizeObserver ? a.d : ResizeObserver,
     s = new Map(),
-    o = new a((e) => {
+    o = new l((e) => {
         e.forEach((e) => {
             var t;
             let { target: n } = e;
@@ -12,16 +12,16 @@ let a = 'undefined' == typeof ResizeObserver ? r.d : ResizeObserver,
         });
     }),
     c = () => {
-        let e = i.useRef(null),
-            [t, n] = i.useState(400),
-            r = i.useCallback(() => {
+        let e = r.useRef(null),
+            [t, n] = r.useState(400),
+            a = r.useCallback(() => {
                 null !== e.current && n(e.current.clientWidth);
             }, [n, e]);
         return (
-            (0, l.znF)({
+            (0, i.znF)({
                 ref: e,
                 key: 'forum-container',
-                onUpdate: r,
+                onUpdate: a,
                 resizeObserver: o,
                 listenerMap: s
             }),

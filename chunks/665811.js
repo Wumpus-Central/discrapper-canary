@@ -1,22 +1,22 @@
-n.d(t, { U: () => o });
+n.d(t, { U: () => c });
 var a = n(200651);
 n(192379);
 var i = n(481060),
     l = n(542094),
     s = n(388032),
-    c = n(261529);
-function o(e) {
+    r = n(640547);
+function c(e) {
     let { action: t, onClick: n } = e,
-        o = t === l.JS.JOIN ? s.intl.string(s.t['4i2vj4']) : s.intl.string(s.t['R/FK4O']),
-        r = t === l.JS.JOIN ? i.zxk.Colors.PRIMARY : i.zxk.Colors.RED;
+        c = t === l.JS.JOIN ? s.NW.string(s.t['4i2vj4']) : s.NW.string(s.t['R/FK4O']),
+        o = t === l.JS.JOIN ? i.zxk.Colors.PRIMARY : i.zxk.Colors.RED;
     return (0, a.jsx)('div', {
-        className: c.activityOverlay,
+        className: r.activityOverlay,
         children: (0, a.jsx)(i.zxk, {
-            className: c.actionButton,
+            className: r.actionButton,
             onClick: n,
             size: i.zxk.Sizes.MEDIUM,
-            color: r,
-            children: o
+            color: o,
+            children: c
         })
     });
 }

@@ -1,15 +1,15 @@
-var i = n(459584),
-    r = n(957578).Buffer,
-    a = n(737372),
-    s = n(222822),
-    o = n(764900),
+var r = n(459584),
+    i = n(957578).Buffer,
+    o = n(737372),
+    a = n(222822),
+    s = n(764900),
     l = n(458340),
-    u = n(245413);
-function c(e, t, n) {
-    o.call(this), (this._cache = new d()), (this._last = void 0), (this._cipher = new l.AES(t)), (this._prev = r.from(n)), (this._mode = e), (this._autopadding = !0);
+    c = n(245413);
+function u(e, t, n) {
+    s.call(this), (this._cache = new d()), (this._last = void 0), (this._cipher = new l.AES(t)), (this._prev = i.from(n)), (this._mode = e), (this._autopadding = !0);
 }
 function d() {
-    this.cache = r.allocUnsafe(0);
+    this.cache = i.allocUnsafe(0);
 }
 function f(e) {
     var t = e[15];
@@ -17,35 +17,35 @@ function f(e) {
     for (var n = -1; ++n < t; ) if (e[n + (16 - t)] !== t) throw Error('unable to decrypt data');
     if (16 !== t) return e.slice(0, 16 - t);
 }
-function _(e, t, n) {
-    var o = a[e.toLowerCase()];
-    if (!o) throw TypeError('invalid suite type');
-    if (('string' == typeof n && (n = r.from(n)), 'GCM' !== o.mode && n.length !== o.iv)) throw TypeError('invalid iv length ' + n.length);
-    if (('string' == typeof t && (t = r.from(t)), t.length !== o.key / 8)) throw TypeError('invalid key length ' + t.length);
-    return 'stream' === o.type ? new s(o.module, t, n, !0) : 'auth' === o.type ? new i(o.module, t, n, !0) : new c(o.module, t, n);
+function p(e, t, n) {
+    var s = o[e.toLowerCase()];
+    if (!s) throw TypeError('invalid suite type');
+    if (('string' == typeof n && (n = i.from(n)), 'GCM' !== s.mode && n.length !== s.iv)) throw TypeError('invalid iv length ' + n.length);
+    if (('string' == typeof t && (t = i.from(t)), t.length !== s.key / 8)) throw TypeError('invalid key length ' + t.length);
+    return 'stream' === s.type ? new a(s.module, t, n, !0) : 'auth' === s.type ? new r(s.module, t, n, !0) : new u(s.module, t, n);
 }
-function p(e, t) {
-    var n = a[e.toLowerCase()];
+function _(e, t) {
+    var n = o[e.toLowerCase()];
     if (!n) throw TypeError('invalid suite type');
-    var i = u(t, !1, n.key, n.iv);
-    return _(e, i.key, i.iv);
+    var r = c(t, !1, n.key, n.iv);
+    return p(e, r.key, r.iv);
 }
-n(689118)(c, o),
-    (c.prototype._update = function (e) {
+n(689118)(u, s),
+    (u.prototype._update = function (e) {
         this._cache.add(e);
-        for (var t, n, i = []; (t = this._cache.get(this._autopadding)); ) (n = this._mode.decrypt(this, t)), i.push(n);
-        return r.concat(i);
+        for (var t, n, r = []; (t = this._cache.get(this._autopadding)); ) (n = this._mode.decrypt(this, t)), r.push(n);
+        return i.concat(r);
     }),
-    (c.prototype._final = function () {
+    (u.prototype._final = function () {
         var e = this._cache.flush();
         if (this._autopadding) return f(this._mode.decrypt(this, e));
         if (e) throw Error('data not multiple of block length');
     }),
-    (c.prototype.setAutoPadding = function (e) {
+    (u.prototype.setAutoPadding = function (e) {
         return (this._autopadding = !!e), this;
     }),
     (d.prototype.add = function (e) {
-        this.cache = r.concat([this.cache, e]);
+        this.cache = i.concat([this.cache, e]);
     }),
     (d.prototype.get = function (e) {
         var t;
@@ -57,5 +57,5 @@ n(689118)(c, o),
     (d.prototype.flush = function () {
         if (this.cache.length) return this.cache;
     }),
-    (t.createDecipher = p),
-    (t.createDecipheriv = _);
+    (t.createDecipher = _),
+    (t.createDecipheriv = p);

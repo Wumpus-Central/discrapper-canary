@@ -4,8 +4,8 @@ function t(e) {
             begin: "^'{3,}[ \\t]*$",
             relevance: 10
         },
-        i = [{ begin: /\\[*_`]/ }, { begin: /\\\\\*{2}[^\n]*?\*{2}/ }, { begin: /\\\\_{2}[^\n]*_{2}/ }, { begin: /\\\\`{2}[^\n]*`{2}/ }, { begin: /[:;}][*_`](?![*_`])/ }],
-        r = [
+        r = [{ begin: /\\[*_`]/ }, { begin: /\\\\\*{2}[^\n]*?\*{2}/ }, { begin: /\\\\_{2}[^\n]*_{2}/ }, { begin: /\\\\`{2}[^\n]*`{2}/ }, { begin: /[:;}][*_`](?![*_`])/ }],
+        i = [
             {
                 className: 'strong',
                 begin: /\*{2}([^\n]+?)\*{2}/
@@ -24,7 +24,7 @@ function t(e) {
                 begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/
             }
         ],
-        a = [
+        o = [
             {
                 className: 'emphasis',
                 begin: /_{2}([^\n]+?)_{2}/
@@ -55,12 +55,12 @@ function t(e) {
                 relevance: 0
             }
         ],
-        s = {
+        a = {
             className: 'symbol',
             begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
             relevance: 10
         },
-        o = {
+        s = {
             className: 'bullet',
             begin: '^(\\*+|-+|\\.+|[^\\n]+?::)\\s+'
         };
@@ -121,11 +121,11 @@ function t(e) {
                 ],
                 relevance: 10
             },
-            o,
             s,
-            ...i,
+            a,
             ...r,
-            ...a,
+            ...i,
+            ...o,
             {
                 className: 'string',
                 variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }]

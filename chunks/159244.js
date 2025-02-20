@@ -1,11 +1,11 @@
-n.d(t, { Z: () => s });
-var l = n(442837),
-    i = n(699516),
-    r = n(594174),
+n.d(t, { Z: () => o });
+var r = n(442837),
+    l = n(699516),
+    i = n(594174),
     a = n(981631);
-let s = (e) => {
-    let t = (0, l.e7)([r.default], () => r.default.getCurrentUser()),
-        n = (0, l.e7)([i.Z], () => i.Z.getRelationshipType(e.id)),
-        s = e.isNonUserBot();
-    return e.id !== (null == t ? void 0 : t.id) && n !== a.OGo.BLOCKED && !s;
+let o = (e) => {
+    let t = (0, r.e7)([i.default], () => i.default.getCurrentUser()),
+        n = (0, r.e7)([l.Z], () => l.Z.getRelationshipType(e.id)),
+        o = e.isNonUserBot();
+    return e.id !== (null == t ? void 0 : t.id) && n !== a.OGo.BLOCKED && !o;
 };

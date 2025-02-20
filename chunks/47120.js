@@ -1,30 +1,30 @@
-var r = a(161581),
-    n = a(824232),
-    _ = a(957833),
-    o = a(996173),
-    i = a(251069),
-    c = a(641236),
+var n = e(161581),
+    o = e(824232),
+    i = e(957833),
+    u = e(996173),
+    a = e(251069),
+    c = e(641236),
     s = c('iterator'),
-    E = c('toStringTag'),
-    l = o.values,
-    u = function (t, e) {
+    f = c('toStringTag'),
+    l = u.values,
+    p = function (t, r) {
         if (t) {
             if (t[s] !== l)
                 try {
-                    i(t, s, l);
-                } catch (e) {
+                    a(t, s, l);
+                } catch (r) {
                     t[s] = l;
                 }
-            if ((t[E] || i(t, E, e), n[e])) {
-                for (var a in o)
-                    if (t[a] !== o[a])
+            if ((t[f] || a(t, f, r), o[r])) {
+                for (var e in u)
+                    if (t[e] !== u[e])
                         try {
-                            i(t, a, o[a]);
-                        } catch (e) {
-                            t[a] = o[a];
+                            a(t, e, u[e]);
+                        } catch (r) {
+                            t[e] = u[e];
                         }
             }
         }
     };
-for (var I in n) u(r[I] && r[I].prototype, I);
-u(_, 'DOMTokenList');
+for (var v in o) p(n[v] && n[v].prototype, v);
+p(i, 'DOMTokenList');

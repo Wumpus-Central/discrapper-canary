@@ -1,19 +1,19 @@
 n.d(t, {
-    WR: () => _,
+    WR: () => p,
     qE: () => f,
-    wQ: () => p
+    wQ: () => _
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(833062),
-    s = n(678738),
-    o = n(502762),
+var i = n(481060),
+    o = n(833062),
+    a = n(678738),
+    s = n(502762),
     l = n(292814),
-    u = n(388032),
-    c = n(121225);
+    c = n(388032),
+    u = n(374883);
 function d(e) {
-    return (0, i.jsx)(a.Z, { application: e }, e.id);
+    return (0, r.jsx)(o.Z, { application: e }, e.id);
 }
 function f(e) {
     let { userId: t } = e,
@@ -21,24 +21,24 @@ function f(e) {
             userId: t,
             renderApplicationName: d
         });
-    return (0, i.jsxs)(r.Zbd, {
-        className: c.channelHeader,
+    return (0, r.jsxs)(i.Zbd, {
+        className: u.channelHeader,
         children: [
-            (0, i.jsxs)('div', {
-                className: c.header,
+            (0, r.jsxs)('div', {
+                className: u.header,
                 children: [
-                    (0, i.jsx)(r.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'text-md/semibold',
                         color: 'text-normal',
-                        children: u.intl.string(u.t.Iyka0d)
+                        children: c.NW.string(c.t.Iyka0d)
                     }),
-                    (0, i.jsx)(r.P4T, {
+                    (0, r.jsx)(i.P4T, {
                         size: 'xs',
-                        className: c.icon
+                        className: u.icon
                     })
                 ]
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'text-normal',
                 children: n
@@ -46,28 +46,28 @@ function f(e) {
         ]
     });
 }
-function _(e) {
+function p(e) {
     let { userId: t, headingColor: n } = e,
-        a = (0, l.e)({
+        o = (0, l.e)({
             userId: t,
             renderApplicationName: d
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         headingColor: n,
-        heading: u.intl.string(u.t.Iyka0d),
-        headingIcon: r.P4T,
-        children: (0, i.jsx)(r.Text, {
+        heading: c.NW.string(c.t.Iyka0d),
+        headingIcon: i.P4T,
+        children: (0, r.jsx)(i.Text, {
             variant: 'text-xs/normal',
             color: 'text-normal',
-            children: a
+            children: o
         })
     });
 }
-function p(e) {
+function _(e) {
     let { userId: t, headingColor: n } = e;
-    return (0, i.jsx)(o.Z.Overlay, {
-        className: c.profile,
-        children: (0, i.jsx)(_, {
+    return (0, r.jsx)(s.Z.Overlay, {
+        className: u.profile,
+        children: (0, r.jsx)(p, {
             userId: t,
             headingColor: n
         })

@@ -1,4 +1,4 @@
-function i(e, t) {
+function r(e, t) {
     return null === t
         ? null === e
         : Array.isArray(e)
@@ -7,4 +7,4 @@ function i(e, t) {
             })
           : e === t;
 }
-n.d(t, { s: () => i });
+n.d(t, { s: () => r });

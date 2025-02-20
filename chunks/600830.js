@@ -20,14 +20,14 @@ function p(t) {
                 ? null
                 : (0, i.jsx)(s.sNh, {
                       id: 'popout-call',
-                      label: h.intl.string(h.t.JzWez8),
+                      label: h.NW.string(h.t.JzWez8),
                       icon: s.rgF,
                       action: () => u.hP(t)
                   });
         })(null != n ? n : void 0);
     return (0, i.jsxs)(s.v2r, {
         navId: 'rtc-channel',
-        'aria-label': h.intl.string(h.t.ogxXGh),
+        'aria-label': h.NW.string(h.t.ogxXGh),
         onClose: c.Zy,
         onSelect: e,
         children: [
@@ -39,7 +39,7 @@ function p(t) {
                         id: 'show-voice-states',
                         checked: g,
                         action: () => o.Fg.updateSetting(!g),
-                        label: h.intl.string(h.t.vkbSBw)
+                        label: h.NW.string(h.t.vkbSBw)
                     })
                 ]
             })

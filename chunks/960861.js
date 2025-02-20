@@ -1,21 +1,21 @@
 n.d(t, {
-    UB: () => R,
+    UB: () => C,
     Uc: () => v,
-    ZP: () => U,
-    kE: () => O
+    ZP: () => j,
+    kE: () => R
 });
-var i,
-    r = n(192379),
-    a = n(442837),
-    s = n(570140),
-    o = n(872810),
+var r,
+    i = n(192379),
+    o = n(442837),
+    a = n(570140),
+    s = n(872810),
     l = n(998594),
-    u = n(592125),
-    c = n(430824),
+    c = n(592125),
+    u = n(430824),
     d = n(131951),
     f = n(496675),
-    _ = n(944486),
-    p = n(102172),
+    p = n(944486),
+    _ = n(102172),
     h = n(74299),
     m = n(299570),
     g = n(65154);
@@ -35,58 +35,58 @@ function E(e, t, n) {
 var v = (function (e) {
     return (e[(e.Present = 0)] = 'Present'), (e[(e.Update = 1)] = 'Update'), (e[(e.Cancel = 2)] = 'Cancel'), (e[(e.Error = 3)] = 'Error'), e;
 })({});
-let y = !1,
-    I = 0,
-    T = 0,
-    b = !1,
-    S = {};
-function A() {
+let b = !1,
+    y = 0,
+    O = 0,
+    S = !1,
+    I = {};
+function T() {
     return d.Z.supports(g.AN.NATIVE_SCREENSHARE_PICKER);
 }
 function N() {
     return d.Z.getUseSystemScreensharePicker();
 }
-function C() {
-    let e = N() && (T > 0 || (y && 0 === I));
-    if (e !== b) {
+function A() {
+    let e = N() && (O > 0 || (b && 0 === y));
+    if (e !== S) {
         var t, n;
-        (b = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, b);
+        (S = e), null === (n = d.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, S);
     }
+}
+function C() {
+    return (0, i.useEffect)(
+        () => (
+            y++,
+            A(),
+            () => {
+                0 == --y && A();
+            }
+        ),
+        []
+    );
 }
 function R() {
-    return (0, r.useEffect)(
+    return (0, i.useEffect)(
         () => (
-            I++,
-            C(),
+            O++,
+            A(),
             () => {
-                0 == --I && C();
+                --O, A();
             }
         ),
         []
     );
 }
-function O() {
-    return (0, r.useEffect)(
-        () => (
-            T++,
-            C(),
-            () => {
-                --T, C();
-            }
-        ),
-        []
-    );
+function P() {
+    let e = c.Z.getChannel(p.Z.getVoiceChannelId());
+    return (b = null != e && (0, h.Z)(d.Z) && (0, _.JL)(e, u.Z, f.Z, !1)), A(), !1;
 }
-function D() {
-    let e = u.Z.getChannel(_.Z.getVoiceChannelId());
-    return (y = null != e && (0, h.Z)(d.Z) && (0, p.JL)(e, c.Z, f.Z, !1)), C(), !1;
-}
-class L extends (i = a.ZP.Store) {
+class w extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([d.Z, _.Z, u.Z, c.Z, f.Z], D), l.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, C), D();
+        this.syncWith([d.Z, p.Z, c.Z, u.Z, f.Z], P), l.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, A), P();
     }
     supported() {
-        return A();
+        return T();
     }
     enabled() {
         return N();
@@ -95,47 +95,47 @@ class L extends (i = a.ZP.Store) {
         (0, m.t)();
     }
     getPickerState() {
-        return S;
+        return I;
     }
 }
-function x(e) {
+function D(e) {
     let { existing: t } = e;
-    if (((S = { lastPickerAction: 1 }), 0 === I && !t)) {
-        let e = u.Z.getChannel(_.Z.getVoiceChannelId());
+    if (((I = { lastPickerAction: 1 }), 0 === y && !t)) {
+        let e = c.Z.getChannel(p.Z.getVoiceChannelId());
         null != e &&
             (0, h.Z)(d.Z) &&
-            (0, p.JL)(e, c.Z, f.Z, !1) &&
-            (0, o.WH)(e.getGuildId(), e.id, {
+            (0, _.JL)(e, u.Z, f.Z, !1) &&
+            (0, s.WH)(e.getGuildId(), e.id, {
                 sourceId: 'prepicked:0',
-                nativePickerStyleUsed: S.lastPresentedPickerStyle
+                nativePickerStyleUsed: I.lastPresentedPickerStyle
             });
     }
 }
-function P() {
-    S = { lastPickerAction: 2 };
+function x() {
+    I = { lastPickerAction: 2 };
 }
-function w(e) {
+function L(e) {
     let { error: t } = e;
-    S = {
+    I = {
         lastPickerAction: 3,
         lastPickerError: t
     };
 }
 function M(e) {
     let { style: t } = e;
-    S = {
+    I = {
         lastPickerAction: 0,
         lastPresentedPickerStyle: t
     };
 }
 function k() {
-    S = {};
+    I = {};
 }
-E(L, 'displayName', 'NativeScreenSharePickerStore');
-let U = new L(s.Z, {
-    NATIVE_SCREEN_SHARE_PICKER_UPDATE: x,
-    NATIVE_SCREEN_SHARE_PICKER_CANCEL: P,
-    NATIVE_SCREEN_SHARE_PICKER_ERROR: w,
+E(w, 'displayName', 'NativeScreenSharePickerStore');
+let j = new w(a.Z, {
+    NATIVE_SCREEN_SHARE_PICKER_UPDATE: D,
+    NATIVE_SCREEN_SHARE_PICKER_CANCEL: x,
+    NATIVE_SCREEN_SHARE_PICKER_ERROR: L,
     NATIVE_SCREEN_SHARE_PICKER_PRESENT: M,
     NATIVE_SCREEN_SHARE_PICKER_RELEASE: k
 });

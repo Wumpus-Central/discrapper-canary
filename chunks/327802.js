@@ -1,17 +1,17 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var r = n(205822),
-    l = n(731994),
-    s = n(388032);
-let a = function (e) {
-    let { className: t, style: n, onDrop: a } = e;
-    return (0, i.jsx)(r.Z, {
+var i = n(205822),
+    s = n(731994),
+    a = n(388032);
+let l = function (e) {
+    let { className: t, style: n, onDrop: l } = e;
+    return (0, r.jsx)(i.Z, {
         className: t,
         style: n,
-        title: s.intl.string(s.t.DU0dy8),
-        description: s.intl.string(s.t.bpycfH),
-        icons: l.pA,
-        onDrop: a
+        title: a.NW.string(a.t.DU0dy8),
+        description: a.NW.string(a.t.bpycfH),
+        icons: s.pA,
+        onDrop: l
     });
 };

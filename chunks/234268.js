@@ -1,5 +1,5 @@
-var i = n(535213),
-    r = n(383252);
+var r = n(535213),
+    i = n(383252);
 e.exports = function () {
-    return i(), 'function' == typeof Promise.allSettled ? Promise.allSettled : r;
+    return r(), 'function' == typeof Promise.allSettled ? Promise.allSettled : i;
 };

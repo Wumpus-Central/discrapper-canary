@@ -1,35 +1,35 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var l = n(399606),
-    r = n(607070),
+var i = n(399606),
+    s = n(607070),
     a = n(70097),
-    s = n(970731),
+    l = n(970731),
     o = n(19199),
-    d = n(921944),
-    c = n(388032),
-    u = n(357616);
-let h = (e) => {
+    c = n(921944),
+    d = n(388032),
+    u = n(402628);
+let m = (e) => {
     let { markAsDismissed: t } = e,
-        n = (0, l.e7)([r.Z], () => r.Z.useReducedMotion);
+        n = (0, i.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, o.D)()
-        ? (0, i.jsx)(s.ZP, {
-              asset: (0, i.jsx)(a.Z, {
+        ? (0, r.jsx)(l.ZP, {
+              asset: (0, r.jsx)(a.Z, {
                   className: u.video,
                   src: 'https://cdn.discordapp.com/attachments/1067194967979733053/1067195117439557712/Safety_BLOCK_Coachmark.mp4',
                   loop: !0,
                   autoPlay: !n,
                   width: '100%'
               }),
-              header: c.intl.string(c.t['61GrDA']),
-              content: c.intl.string(c.t['1zzTSk']),
-              buttonCTA: c.intl.string(c.t['NX+WJC']),
+              header: d.NW.string(d.t['61GrDA']),
+              content: d.NW.string(d.t['1zzTSk']),
+              buttonCTA: d.NW.string(d.t['NX+WJC']),
               className: u.__invalid_coachmark,
               onClick: (e) => {
-                  e.stopPropagation(), t(d.L.UNKNOWN);
+                  e.stopPropagation(), t(c.L.UNKNOWN);
               },
               markAsDismissed: t,
-              caretPosition: s.DF.BOTTOM_CENTER,
+              caretPosition: l.DF.BOTTOM_CENTER,
               headerClassName: u.header
           })
         : null;

@@ -1,65 +1,65 @@
-n.d(t, { Z: () => d }), n(47120);
-var i = n(657305),
-    r = n(841784),
-    a = n(420660),
-    s = n(981631),
-    o = n(388032);
+n.d(t, { Z: () => d }), n(566702), n(47120);
+var r = n(657305),
+    i = n(841784),
+    o = n(420660),
+    a = n(981631),
+    s = n(388032);
 function l(e) {
     return {
-        [s.IIU.STREAMING]: e ? o.t['4CQq9f'] : o.t['0wJXSk'],
-        [s.IIU.LISTENING]: e ? o.t['b+lA5+'] : o.t.Vnuxub,
-        [s.IIU.WATCHING]: e ? o.t.mqdfDQ : o.t.pW3Ip6,
-        [s.IIU.COMPETING]: e ? o.t.oHF7Cg : o.t.QQ2wVF
+        [a.IIU.STREAMING]: e ? s.t['4CQq9f'] : s.t['0wJXSk'],
+        [a.IIU.LISTENING]: e ? s.t['b+lA5+'] : s.t.Vnuxub,
+        [a.IIU.WATCHING]: e ? s.t.mqdfDQ : s.t.pW3Ip6,
+        [a.IIU.COMPETING]: e ? s.t.oHF7Cg : s.t.QQ2wVF
     };
 }
-function u(e, t, n) {
-    let i = l(n);
+function c(e, t, n) {
+    let r = l(n);
     switch (e) {
-        case s.IIU.LISTENING:
-        case s.IIU.WATCHING:
-        case s.IIU.COMPETING:
-            return o.intl.format(i[e], { name: t });
-        case s.IIU.CUSTOM_STATUS:
-        case s.IIU.HANG_STATUS:
+        case a.IIU.LISTENING:
+        case a.IIU.WATCHING:
+        case a.IIU.COMPETING:
+            return s.NW.format(r[e], { name: t });
+        case a.IIU.CUSTOM_STATUS:
+        case a.IIU.HANG_STATUS:
             return null;
-        case s.IIU.PLAYING:
+        case a.IIU.PLAYING:
         default:
-            return n ? o.intl.formatToPlainString(o.t.Sq9xJy, { game: t }) : o.intl.format(o.t.lFApm5, { game: t });
+            return n ? s.NW.formatToPlainString(s.t.Sq9xJy, { game: t }) : s.NW.format(s.t.lFApm5, { game: t });
     }
 }
-function c(e, t) {
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (null != e && e.type === s.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-    if (null != t) return null == e || e.type !== s.IIU.PLAYING ? o.intl.string(o.t.eXan7O) : o.intl.format(l(n)[s.IIU.STREAMING], { name: e.name });
+    if (null != e && e.type === a.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+    if (null != t) return null == e || e.type !== a.IIU.PLAYING ? s.NW.string(s.t.eXan7O) : s.NW.format(l(n)[a.IIU.STREAMING], { name: e.name });
     if (null == e || null == e.name) return null;
-    if ((0, a.Z)(e)) {
+    if ((0, o.Z)(e)) {
         let t = null != e.details && '' !== e.details ? e.details : e.name;
-        return o.intl.format(l(n)[s.IIU.STREAMING], { name: t });
+        return s.NW.format(l(n)[a.IIU.STREAMING], { name: t });
     }
-    return (0, r.Z)(e) ? (0, i.Z)(e.name) : u(e.type, e.name, n);
+    return (0, i.Z)(e) ? (0, r.Z)(e.name) : c(e.type, e.name, n);
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0;
+        r = arguments.length > 3 ? arguments[3] : void 0;
     if (Array.isArray(e)) {
-        let r = e;
-        null == t || (i && !1 === t.discoverable) || (r = [...r, null]);
-        let a = null;
-        for (let e of r) {
-            let i = c(e, t, n);
-            if (null != i)
+        let i = e;
+        null == t || (r && !1 === t.discoverable) || (i = [...i, null]);
+        let o = null;
+        for (let e of i) {
+            let r = u(e, t, n);
+            if (null != r)
                 return {
                     activity: e,
-                    activityText: i
+                    activityText: r
                 };
-            (null == e ? void 0 : e.type) === s.IIU.CUSTOM_STATUS && null != e.emoji && (a = e);
+            (null == e ? void 0 : e.type) === a.IIU.CUSTOM_STATUS && null != e.emoji && (o = e);
         }
-        return (null == a ? void 0 : a.emoji) != null
+        return (null == o ? void 0 : o.emoji) != null
             ? {
-                  activity: a,
+                  activity: o,
                   activityText: null
               }
             : null;
     }
-    return c(e, t, n);
+    return u(e, t, n);
 }

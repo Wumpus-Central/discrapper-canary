@@ -1,71 +1,71 @@
-t.d(s, { Z: () => m }), t(47120);
+t.d(s, { Z: () => N }), t(47120), t(266796);
 var n = t(200651),
-    l = t(192379),
-    i = t(442837),
-    a = t(481060),
-    r = t(479531),
-    o = t(393869),
+    r = t(192379),
+    a = t(442837),
+    l = t(481060),
+    o = t(479531),
+    i = t(393869),
     c = t(594174),
     d = t(388032),
-    x = t(669154);
-function m(e) {
+    x = t(925495);
+function N(e) {
     let { onNext: s, onClose: t } = e,
-        [m, u] = l.useState(!1),
-        _ = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        E = async (e) => {
-            e.preventDefault(), u(!0);
+        [N, m] = r.useState(!1),
+        u = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        _ = async (e) => {
+            e.preventDefault(), m(!0);
             try {
-                await (0, o.i)(), s();
+                await (0, i.i)(), s();
             } catch (s) {
-                let e = new r.Z(s).getAnyErrorMessage();
-                null != e && (0, a.showToast)((0, a.createToast)(e, a.ToastType.FAILURE));
+                let e = new o.Z(s).getAnyErrorMessage();
+                null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
             } finally {
-                u(!1);
+                m(!1);
             }
         };
     return (0, n.jsxs)('form', {
-        onSubmit: E,
+        onSubmit: _,
         children: [
-            (0, n.jsxs)(a.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 separator: !1,
                 className: x.header,
                 children: [
-                    (0, n.jsx)(a.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         className: x.title,
                         variant: 'heading-xl/extrabold',
-                        children: d.intl.string(d.t.uFxYq6)
+                        children: d.NW.string(d.t.uFxYq6)
                     }),
-                    (0, n.jsx)(a.olH, {
+                    (0, n.jsx)(l.olH, {
                         onClick: t,
                         className: x.modalCloseButton
                     })
                 ]
             }),
-            (0, n.jsx)(a.hzk, {
+            (0, n.jsx)(l.hzk, {
                 className: x.content,
-                children: (0, n.jsx)(a.Text, {
+                children: (0, n.jsx)(l.Text, {
                     className: x.description,
                     variant: 'text-md/normal',
-                    children: d.intl.format(d.t.oMFSgo, { oldEmail: null == _ ? void 0 : _.email })
+                    children: d.NW.format(d.t.oMFSgo, { oldEmail: null == u ? void 0 : u.email })
                 })
             }),
-            (0, n.jsxs)(a.mzw, {
+            (0, n.jsxs)(l.mzw, {
                 className: x.modalFooter,
                 children: [
-                    (0, n.jsx)(a.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         type: 'submit',
-                        color: a.zxk.Colors.BRAND,
-                        size: a.zxk.Sizes.MEDIUM,
-                        submitting: m,
+                        color: l.zxk.Colors.BRAND,
+                        size: l.zxk.Sizes.MEDIUM,
+                        submitting: N,
                         className: x.__invalid_submit,
-                        children: d.intl.string(d.t.rXV81N)
+                        children: d.NW.string(d.t.rXV81N)
                     }),
-                    (0, n.jsx)(a.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         className: x.__invalid_cancel,
-                        look: a.zxk.Looks.LINK,
-                        color: a.zxk.Colors.PRIMARY,
+                        look: l.zxk.Looks.LINK,
+                        color: l.zxk.Colors.PRIMARY,
                         onClick: t,
-                        children: d.intl.string(d.t['ETE/oK'])
+                        children: d.NW.string(d.t['ETE/oK'])
                     })
                 ]
             })

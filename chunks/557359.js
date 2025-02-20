@@ -1,84 +1,84 @@
-n.d(t, { A: () => _ }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(793030),
+n.d(t, { A: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(793030),
     o = n(442837),
     c = n(481060),
     d = n(296991),
     u = n(999382),
     m = n(217472),
-    h = n(651390),
+    p = n(651390),
     g = n(981631),
-    x = n(388032),
-    p = n(517668);
-function _(e) {
+    h = n(388032),
+    f = n(932372);
+function b(e) {
     let { requireTerms: t, rules: n } = e,
-        l = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
-        _ = null == l ? void 0 : l.id,
-        C = r.useCallback(
+        s = (0, o.e7)([u.Z], () => u.Z.getProps().guild),
+        b = null == s ? void 0 : s.id,
+        x = i.useCallback(
             (e) => {
-                if (null == _ || null == n) return null;
-                m.Z.setPendingInviteRules(_, e, [...n]);
+                if (null == b || null == n) return null;
+                m.Z.setPendingInviteRules(b, e, [...n]);
             },
-            [_, n]
+            [b, n]
         ),
-        f = r.useCallback(
+        j = i.useCallback(
             (e) => {
-                if (null == _) return null;
-                m.Z.setPendingInviteRules(_, t, e);
+                if (null == b) return null;
+                m.Z.setPendingInviteRules(b, t, e);
             },
-            [_, t]
+            [b, t]
         );
-    if (null == l) return null;
-    if (null == n) return (0, i.jsx)(c.$jN, {});
-    let v = !l.hasFeature(g.oNc.CLAN);
-    return (0, i.jsxs)(i.Fragment, {
+    if (null == s) return null;
+    if (null == n) return (0, r.jsx)(c.$jN, {});
+    let N = !s.hasFeature(g.oNc.CLAN);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)('div', {
-                className: p.headerContainer,
+            (0, r.jsxs)('div', {
+                className: f.headerContainer,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: p.headerText,
+                    (0, r.jsxs)('div', {
+                        className: f.headerText,
                         children: [
-                            (0, i.jsx)(a.X6, {
+                            (0, r.jsx)(l.X6, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: x.intl.string(x.t.d21uOj)
+                                children: h.NW.string(h.t.d21uOj)
                             }),
-                            (0, i.jsx)(a.xv, {
+                            (0, r.jsx)(l.xv, {
                                 tag: 'p',
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
-                                className: p.bodyText,
-                                children: x.intl.string(x.t.SzpUBA)
+                                className: f.bodyText,
+                                children: h.NW.string(h.t.SzpUBA)
                             })
                         ]
                     }),
-                    v &&
-                        (0, i.jsx)(c.rsf, {
-                            onChange: C,
+                    N &&
+                        (0, r.jsx)(c.rsf, {
+                            onChange: x,
                             checked: t
                         })
                 ]
             }),
-            t && (0, i.jsx)(h.c, { guildId: l.id }),
-            (0, i.jsx)('div', {
-                className: s()(p.rules, { [p.disabled]: !t }),
-                children: (0, i.jsxs)('div', {
+            t && (0, r.jsx)(p.c, { guildId: s.id }),
+            (0, r.jsx)('div', {
+                className: a()(f.rules, { [f.disabled]: !t }),
+                children: (0, r.jsxs)('div', {
                     inert: t ? void 0 : '',
                     children: [
-                        (0, i.jsx)(a.X6, {
+                        (0, r.jsx)(l.X6, {
                             variant: 'text-xs/bold',
                             color: 'text-muted',
-                            className: p.rulesHeader,
-                            children: x.intl.string(x.t.XcAzbm)
+                            className: f.rulesHeader,
+                            children: h.NW.string(h.t.XcAzbm)
                         }),
-                        (0, i.jsx)(d.k, {
-                            guild: l,
+                        (0, r.jsx)(d.k, {
+                            guild: s,
                             rules: n,
-                            setRules: f
+                            setRules: j
                         })
                     ]
                 })

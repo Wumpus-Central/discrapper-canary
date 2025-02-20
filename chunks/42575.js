@@ -1,25 +1,25 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(194359),
-    s = n(906732),
-    o = n(388380),
-    d = n(171368),
-    c = n(626135),
-    u = n(321488),
-    h = n(417183),
-    m = n(170245),
-    p = n(981631),
-    g = n(388032),
-    _ = n(290457);
-function f(e) {
-    let { user: t, nickname: n, status: f, isFocused: E } = e,
-        I = l.useContext(c.AnalyticsContext),
-        { analyticsLocations: C } = (0, s.ZP)(),
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(194359),
+    a = n(906732),
+    s = n(388380),
+    c = n(171368),
+    u = n(626135),
+    d = n(321488),
+    p = n(417183),
+    h = n(170245),
+    g = n(981631),
+    f = n(388032),
+    m = n(400609);
+function b(e) {
+    let { user: t, nickname: n, status: b, isFocused: _ } = e,
+        E = i.useContext(u.AnalyticsContext),
+        { analyticsLocations: O } = (0, a.ZP)(),
         N = (e) => {
             null == e || e.stopPropagation(),
-                a.Z.addRelationship({
+                o.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
@@ -28,50 +28,50 @@ function f(e) {
                 });
         },
         v = (e) => {
-            null == e || e.stopPropagation(), o.Z.ignore(t.id);
+            null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        T = f === p.Skl.OFFLINE ? p.Skl.UNKNOWN : f;
-    return (0, i.jsx)(h.Z, {
-        isFocused: E,
+        y = b === g.Skl.OFFLINE ? g.Skl.UNKNOWN : b;
+    return (0, r.jsx)(p.Z, {
+        isFocused: _,
         user: t,
         onClick: () =>
-            (0, d.openUserProfileModal)({
+            (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: C,
-                analyticsLocation: I.location
+                sourceAnalyticsLocations: O,
+                analyticsLocation: E.location
             }),
         children: (e) => {
-            let l = (0, i.jsxs)(i.Fragment, {
+            let i = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(u.Z, {
-                        icon: r.dz2,
-                        actionType: u.Z.ActionTypes.ACCEPT,
-                        tooltip: g.intl.string(g.t.ZcibdX),
+                    (0, r.jsx)(d.Z, {
+                        icon: l.dz2,
+                        actionType: d.Z.ActionTypes.ACCEPT,
+                        tooltip: f.NW.string(f.t.ZcibdX),
                         onClick: N,
                         shouldHighlight: e
                     }),
-                    (0, i.jsx)(u.Z, {
-                        icon: r.Dio,
-                        actionType: u.Z.ActionTypes.DENY,
-                        tooltip: g.intl.string(g.t.xuio0N),
+                    (0, r.jsx)(d.Z, {
+                        icon: l.Dio,
+                        actionType: d.Z.ActionTypes.DENY,
+                        tooltip: f.NW.string(f.t.xuio0N),
                         onClick: v,
                         shouldHighlight: e
                     })
                 ]
             });
-            return (0, i.jsxs)('div', {
-                className: _.listItemContents,
+            return (0, r.jsxs)('div', {
+                className: m.listItemContents,
                 children: [
-                    (0, i.jsx)(m.Z, {
+                    (0, r.jsx)(h.Z, {
                         user: t,
                         hovered: e,
-                        status: T,
+                        status: y,
                         subText: n,
-                        className: _.__invalid_userInfo
+                        className: m.__invalid_userInfo
                     }),
-                    (0, i.jsx)('div', {
-                        className: _.actions,
-                        children: l
+                    (0, r.jsx)('div', {
+                        className: m.actions,
+                        children: i
                     })
                 ]
             });

@@ -1,4 +1,4 @@
-a.d(t, { default: () => h }), a(47120);
+a.d(t, { default: () => h }), a(47120), a(266796);
 var i = a(200651),
     n = a(192379),
     l = a(481060),
@@ -7,27 +7,27 @@ var i = a(200651),
     c = a(99325),
     o = a(75666),
     d = a(388032),
-    u = a(864712);
+    u = a(583311);
 function h(e) {
     var t, a;
     let { transitionState: h, onClose: m, entry: x } = e,
         [b, p] = n.useState(null !== (t = x.description) && void 0 !== t ? t : ''),
-        [g, I] = n.useState(null !== (a = x.primaryCategoryId) && void 0 !== a ? a : o.AR.UNCATEGORIZED),
-        [j, k] = n.useState(!1),
-        [N, _] = n.useState(null),
+        [g, N] = n.useState(null !== (a = x.primaryCategoryId) && void 0 !== a ? a : o.AR.UNCATEGORIZED),
+        [I, j] = n.useState(!1),
+        [k, _] = n.useState(null),
         f = async () => {
             if ((_(null), b !== x.description || g !== x.primaryCategoryId)) {
-                k(!0);
+                j(!0);
                 try {
-                    await (0, c.Dr)(x.channelId, x.guildId, b, g), k(!1), m();
+                    await (0, c.Dr)(x.channelId, x.guildId, b, g), j(!1), m();
                 } catch (e) {
-                    k(!1), _(new s.Z(e));
+                    j(!1), _(new s.Z(e));
                 }
             }
         };
     return (0, i.jsxs)(l.Y0X, {
         transitionState: h,
-        'aria-label': d.intl.string(d.t.eQ2bLi),
+        'aria-label': d.NW.string(d.t.eQ2bLi),
         children: [
             (0, i.jsxs)(l.xBx, {
                 direction: r.Z.Direction.VERTICAL,
@@ -37,13 +37,13 @@ function h(e) {
                     (0, i.jsx)(l.X6q, {
                         className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: d.intl.format(d.t.w9tsNj, { guildName: x.name })
+                        children: d.NW.format(d.t.w9tsNj, { guildName: x.name })
                     }),
                     (0, i.jsx)(l.Text, {
                         className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: d.intl.string(d.t['vEkX//'])
+                        children: d.NW.string(d.t['vEkX//'])
                     }),
                     null != m &&
                         (0, i.jsx)(l.olH, {
@@ -57,24 +57,24 @@ function h(e) {
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(l.xJW, {
-                        title: d.intl.string(d.t.FFFAGh),
+                        title: d.NW.string(d.t.FFFAGh),
                         children: (0, i.jsx)(l.Kx8, {
                             value: b,
                             maxLength: 200,
-                            placeholder: d.intl.string(d.t.VzuITE),
+                            placeholder: d.NW.string(d.t.VzuITE),
                             onChange: p,
-                            error: null == N ? void 0 : N.getAnyErrorMessage()
+                            error: null == k ? void 0 : k.getAnyErrorMessage()
                         })
                     }),
                     (0, i.jsx)(l.xJW, {
                         className: u.formItemSpaced,
-                        title: d.intl.string(d.t.Olo8FB),
+                        title: d.NW.string(d.t.Olo8FB),
                         children: (0, i.jsx)(l.q4e, {
-                            placeholder: d.intl.string(d.t.XqMe3N),
+                            placeholder: d.NW.string(d.t.XqMe3N),
                             options: (0, o.b7)(x.channelId),
                             clearable: !1,
                             value: g,
-                            onChange: I,
+                            onChange: N,
                             maxVisibleItems: 4
                         })
                     })
@@ -85,8 +85,8 @@ function h(e) {
                 children: (0, i.jsx)(l.zxk, {
                     color: l.zxk.Colors.BRAND,
                     onClick: f,
-                    submitting: j,
-                    children: d.intl.string(d.t.R3BPHx)
+                    submitting: I,
+                    children: d.NW.string(d.t.R3BPHx)
                 })
             })
         ]

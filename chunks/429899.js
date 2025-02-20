@@ -1,22 +1,22 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(558381),
-    a = n(613311);
-class s extends l.Component {
+n.d(t, { Z: () => s }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(558381),
+    o = n(613311);
+class a extends i.Component {
     componentDidMount() {
         this.fetchStoreListing();
     }
     render() {
-        let { skuId: e, applicationId: t, slug: n, storeListingId: l, pageSize: r, location: s } = this.props;
-        return (0, i.jsx)(a.Z, {
+        let { skuId: e, applicationId: t, slug: n, storeListingId: i, pageSize: l, location: a } = this.props;
+        return (0, r.jsx)(o.Z, {
             inputSkuId: e,
             applicationId: t,
             fetchStoreListing: this.fetchStoreListing,
             slug: n,
-            storeListingId: l,
-            location: s,
-            pageSize: r
+            storeListingId: i,
+            location: a,
+            pageSize: l
         });
     }
     constructor(...e) {
@@ -24,9 +24,9 @@ class s extends l.Component {
         super(...e),
             (t = 'fetchStoreListing'),
             (n = (e) => {
-                let { storeListingId: t, skuId: n, applicationId: i } = this.props,
-                    l = null != e ? e : n;
-                return null != t ? (0, r.rV)(t) : null != l ? (0, r.km)(l) : null != i ? (0, r.Hq)(i) : void 0;
+                let { storeListingId: t, skuId: n, applicationId: r } = this.props,
+                    i = null != e ? e : n;
+                return null != t ? (0, l.rV)(t) : null != i ? (0, l.km)(i) : null != r ? (0, l.Hq)(r) : void 0;
             }),
             t in this
                 ? Object.defineProperty(this, t, {
@@ -38,4 +38,4 @@ class s extends l.Component {
                 : (this[t] = n);
     }
 }
-let o = s;
+let s = a;

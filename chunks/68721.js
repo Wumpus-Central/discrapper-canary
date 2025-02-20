@@ -1,12 +1,12 @@
-n.d(t, { Z: () => p }), n(411104);
-var i = n(836560),
-    r = n(259443),
-    a = n(740197),
-    s = n(106617),
-    o = n(290488),
+n.d(t, { Z: () => _ }), n(411104);
+var r = n(836560),
+    i = n(259443),
+    o = n(740197),
+    a = n(106617),
+    s = n(290488),
     l = n(830795),
-    u = n(65154),
-    c = n(231338);
+    c = n(65154),
+    u = n(231338);
 function d(e, t, n) {
     return (
         t in e
@@ -20,12 +20,12 @@ function d(e, t, n) {
         e
     );
 }
-let f = new r.Yd('Output'),
-    _ = new s.Z();
-class p extends i.EventEmitter {
+let f = new i.Yd('Output'),
+    p = new a.Z();
+class _ extends r.EventEmitter {
     destroy() {
         var e, t, n;
-        this.removeAllListeners(), null === (e = (t = this).cleanup) || void 0 === e || e.call(t), this.reset(), null != this.stream && (_.release(this.stream), (this.stream = void 0)), null === (n = this._audioFilter) || void 0 === n || n.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
+        this.removeAllListeners(), null === (e = (t = this).cleanup) || void 0 === e || e.call(t), this.reset(), null != this.stream && (p.release(this.stream), (this.stream = void 0)), null === (n = this._audioFilter) || void 0 === n || n.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
     }
     reset() {
         this.setSpeaking(!1);
@@ -42,8 +42,8 @@ class p extends i.EventEmitter {
         if (null == this.stream) throw Error('AudioInput: No MediaStream');
         let n = t.createDelay(e);
         (n.delayTime.value = e), t.createMediaStreamSource(this.stream).connect(n);
-        let i = t.createMediaStreamDestination();
-        return n.connect(i), i.stream;
+        let r = t.createMediaStreamDestination();
+        return n.connect(r), r.stream;
     }
     get mute() {
         return this._mute;
@@ -76,8 +76,8 @@ class p extends i.EventEmitter {
         this._automaticGainControl !== e && ((this._automaticGainControl = e), null != this.stream && this.enable());
     }
     async enable() {
-        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (_.release(this.stream), (this.stream = void 0));
-        let e = await (0, a.Hg)(),
+        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (p.release(this.stream), (this.stream = void 0));
+        let e = await (0, o.Hg)(),
             t = {
                 echoCancellation: this.echoCancellation,
                 noiseSuppression: this.noiseSuppression,
@@ -85,22 +85,22 @@ class p extends i.EventEmitter {
             };
         e.some((e) => e.id === this.sourceId) && (t.deviceId = this.sourceId);
         try {
-            let e = await _.acquire({ audio: t });
-            if (this.destroyed) throw (_.release(e), Error('AudioInput: Already destroyed'));
+            let e = await p.acquire({ audio: t });
+            if (this.destroyed) throw (p.release(e), Error('AudioInput: Already destroyed'));
             if (this._noiseCancellation)
                 try {
-                    let t = await (0, o.n)();
+                    let t = await (0, s.n)();
                     (this._audioFilter = await t.createNoiseFilter(this.context)),
                         this._audioFilter.addEventListener('ready', (e) => {
                             var t;
                             null === (t = this._audioFilter) || void 0 === t || t.enable();
                         }),
                         this._audioFilter.addEventListener('dispose', (t) => {
-                            _.release(e);
+                            p.release(e);
                         });
                     let n = this.context.createMediaStreamSource(e),
-                        i = this.context.createMediaStreamDestination();
-                    n.connect(this._audioFilter), this._audioFilter.connect(i), (this.stream = i.stream);
+                        r = this.context.createMediaStreamDestination();
+                    n.connect(this._audioFilter), this._audioFilter.connect(r), (this.stream = r.stream);
                 } catch (t) {
                     f.error('failure creating krisp node'), f.error(t), (this.stream = e);
                 }
@@ -111,12 +111,12 @@ class p extends i.EventEmitter {
                 switch (e.name) {
                     case 'PermissionDeniedError':
                     case 'NotAllowedError':
-                        throw (this.emit('permission', !1), c.ET.PERMISSION_DENIED);
+                        throw (this.emit('permission', !1), u.ET.PERMISSION_DENIED);
                     case 'PermissionDismissedError':
-                        throw (this.emit('permission', !1), c.ET.PERMISSION_DISMISSED);
+                        throw (this.emit('permission', !1), u.ET.PERMISSION_DISMISSED);
                     case 'DevicesNotFoundError':
                     case 'NotFoundError':
-                        throw c.ET.NO_DEVICES_FOUND;
+                        throw u.ET.NO_DEVICES_FOUND;
                     default:
                         throw e.name || 'UNKNOWN';
                 }
@@ -140,7 +140,7 @@ class p extends i.EventEmitter {
         (this.mode = e), (this.modeOptions = t), null != this.stream && this.enable();
     }
     updateMode() {
-        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && this.mode === u.pM.VOICE_ACTIVITY && (this.cleanup = this.setupVoiceActivity(this.modeOptions));
+        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && this.mode === c.pM.VOICE_ACTIVITY && (this.cleanup = this.setupVoiceActivity(this.modeOptions));
     }
     setupVoiceActivity(e) {
         let { threshold: t } = e;
@@ -177,7 +177,7 @@ class p extends i.EventEmitter {
             d(this, '_noiseCancellation', !1),
             d(this, '_audioFilter', void 0),
             d(this, 'speaking', !1),
-            d(this, 'mode', u.pM.VOICE_ACTIVITY),
+            d(this, 'mode', c.pM.VOICE_ACTIVITY),
             d(this, 'modeOptions', {
                 delay: 20,
                 threshold: -40

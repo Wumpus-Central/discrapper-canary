@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(871465);
-let r = {
-    [i.YC.CLASSIC]: {
+n.d(t, { Z: () => o });
+var r = n(871465);
+let i = {
+    [r.YC.CLASSIC]: {
         discodo: 'discodo',
         message1: 'message1',
         deafen: 'deafen',
@@ -25,13 +25,13 @@ let r = {
         poggermode_achievement_unlock: 'poggermode_achievement_unlock',
         stage_waiting: 'stage_waiting'
     },
-    [i.YC.RETRO]: { message1: 'bit_message1' },
-    [i.YC.BUBBLE]: { message1: 'bop_message1' },
-    [i.YC.DUCKY]: { message1: 'ducky_message1' },
-    [i.YC.LOFI]: { message1: 'lofi_message1' },
-    [i.YC.ASMR]: { message1: 'asmr_message1' },
-    [i.YC.DISCODO]: { message1: 'discodo' },
-    [i.YC.HALLOWEEN]: {
+    [r.YC.RETRO]: { message1: 'bit_message1' },
+    [r.YC.BUBBLE]: { message1: 'bop_message1' },
+    [r.YC.DUCKY]: { message1: 'ducky_message1' },
+    [r.YC.LOFI]: { message1: 'lofi_message1' },
+    [r.YC.ASMR]: { message1: 'asmr_message1' },
+    [r.YC.DISCODO]: { message1: 'discodo' },
+    [r.YC.HALLOWEEN]: {
         call_calling: 'halloween_call_calling',
         call_ringing: 'halloween_call_ringing',
         message1: 'halloween_message1',
@@ -43,7 +43,7 @@ let r = {
         user_join: 'halloween_user_join',
         user_leave: 'halloween_user_leave'
     },
-    [i.YC.WINTER_HOLIDAY]: {
+    [r.YC.WINTER_HOLIDAY]: {
         call_calling: 'winter_call_calling',
         call_ringing: 'winter_call_ringing',
         deafen: 'winter_deafen',
@@ -55,6 +55,6 @@ let r = {
         user_leave: 'winter_user_leave'
     }
 };
-function a(e) {
-    return r[e];
+function o(e) {
+    return i[e];
 }

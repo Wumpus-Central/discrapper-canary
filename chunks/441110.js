@@ -1,70 +1,70 @@
-n.d(t, { Z: () => _ });
-var a = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
 var o = n(481060),
-    i = n(493773),
-    r = n(367907),
+    a = n(493773),
+    i = n(367907),
     s = n(524444),
-    l = n(297047),
-    c = n(592125),
+    c = n(297047),
+    l = n(592125),
     u = n(944486),
     d = n(626135),
     p = n(981631),
-    m = n(388032),
-    g = n(171460);
-let _ = function (e) {
-    let { guild: t, message: n, onClose: _ } = e,
-        h = c.Z.getChannel(u.Z.getChannelId(t.id));
-    return ((0, i.ZP)(() => {
+    g = n(388032),
+    m = n(608111);
+let f = function (e) {
+    let { guild: t, message: n, onClose: f } = e,
+        _ = l.Z.getChannel(u.Z.getChannelId(t.id));
+    return ((0, a.ZP)(() => {
         d.default.track(p.rMx.OPEN_POPOUT, {
             type: 'New Member Badge Popout',
             guild_id: t.id,
-            channel_id: null == h ? void 0 : h.id
+            channel_id: null == _ ? void 0 : _.id
         });
     }),
-    null == h)
+    null == _)
         ? null
-        : (0, a.jsx)(s.W_, {
-              children: (0, a.jsxs)('div', {
-                  className: g.popoutContainer,
+        : (0, r.jsx)(s.W_, {
+              children: (0, r.jsxs)('div', {
+                  className: m.popoutContainer,
                   children: [
-                      (0, a.jsxs)('div', {
-                          className: g.mainContent,
+                      (0, r.jsxs)('div', {
+                          className: m.mainContent,
                           children: [
-                              (0, a.jsx)('div', {
-                                  className: g.iconContainer,
-                                  children: (0, a.jsx)(o.hg2, {
+                              (0, r.jsx)('div', {
+                                  className: m.iconContainer,
+                                  children: (0, r.jsx)(o.hg2, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 40,
                                       height: 40
                                   })
                               }),
-                              (0, a.jsxs)('div', {
+                              (0, r.jsxs)('div', {
                                   children: [
-                                      (0, a.jsx)(o.X6q, {
+                                      (0, r.jsx)(o.X6q, {
                                           variant: 'heading-md/semibold',
-                                          className: g.header,
-                                          children: m.intl.string(m.t['v/OYd3'])
+                                          className: m.header,
+                                          children: g.NW.string(g.t['v/OYd3'])
                                       }),
-                                      (0, a.jsx)(o.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/normal',
-                                          children: m.intl.string(m.t.Z85MlJ)
+                                          children: g.NW.string(g.t.Z85MlJ)
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, a.jsx)(o.zxk, {
+                      (0, r.jsx)(o.zxk, {
                           size: o.zxk.Sizes.SMALL,
                           color: o.zxk.Colors.BRAND,
-                          className: g.ctaButton,
-                          innerClassName: g.ctaButtonContent,
+                          className: m.ctaButton,
+                          innerClassName: m.ctaButtonContent,
                           fullWidth: !0,
                           onClick: () => {
-                              r.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), _(), (0, l.q)(n.author, h.id);
+                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, c.q)(n.author, _.id);
                           },
-                          children: m.intl.format(m.t['+xsVS0'], { username: n.author.username })
+                          children: g.NW.format(g.t['+xsVS0'], { username: n.author.username })
                       })
                   ]
               })

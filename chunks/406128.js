@@ -1,37 +1,37 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(600164),
-    u = n(218695);
-class c extends r.PureComponent {
+    c = n(740945);
+class u extends i.PureComponent {
     render() {
-        let { note: e, title: t, action: n, className: r } = this.props;
-        return (0, i.jsx)('div', {
-            className: s()(u.wrapper, r),
-            children: (0, i.jsxs)(l.Z, {
-                className: u.flexWrapper,
+        let { note: e, title: t, action: n, className: i } = this.props;
+        return (0, r.jsx)('div', {
+            className: a()(c.wrapper, i),
+            children: (0, r.jsxs)(l.Z, {
+                className: c.flexWrapper,
                 direction: l.Z.Direction.VERTICAL,
                 align: l.Z.Align.CENTER,
                 justify: l.Z.Justify.CENTER,
                 children: [
-                    (0, i.jsx)(l.Z.Child, {
+                    (0, r.jsx)(l.Z.Child, {
                         grow: 0,
-                        className: u.image
+                        className: c.image
                     }),
-                    (0, i.jsxs)(l.Z.Child, {
+                    (0, r.jsxs)(l.Z.Child, {
                         grow: 0,
-                        className: u.text,
+                        className: c.text,
                         children: [
-                            (0, i.jsx)(o.H, {
-                                className: u.title,
+                            (0, r.jsx)(s.H, {
+                                className: c.title,
                                 children: t
                             }),
                             null != e
-                                ? (0, i.jsx)('div', {
-                                      className: u.note,
+                                ? (0, r.jsx)('div', {
+                                      className: c.note,
                                       children: e
                                   })
                                 : null
@@ -43,4 +43,4 @@ class c extends r.PureComponent {
         });
     }
 }
-let d = c;
+let d = u;

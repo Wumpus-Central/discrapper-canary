@@ -1,20 +1,20 @@
-e.exports = function (e, t, i) {
-    var r,
+e.exports = function (e, t, r) {
+    var i,
+        o,
         a,
         s,
-        o,
         l = this,
-        u = {},
-        c = 0,
+        c = {},
+        u = 0,
         d = !1;
-    for (a = 0, r = l.getMatches(e, t, i); a < r.length; ++a) r[a].seq && (c = Math.max(c, r[a].level));
-    for (a = 0; a < r.length; ++a) {
-        if (r[a].seq) {
-            if (r[a].level !== c) continue;
-            (d = !0), (u[r[a].seq] = 1), l.fireCallback(r[a].callback, i, r[a].combo, r[a].seq);
+    for (o = 0, i = l.getMatches(e, t, r); o < i.length; ++o) i[o].seq && (u = Math.max(u, i[o].level));
+    for (o = 0; o < i.length; ++o) {
+        if (i[o].seq) {
+            if (i[o].level !== u) continue;
+            (d = !0), (c[i[o].seq] = 1), l.fireCallback(i[o].callback, r, i[o].combo, i[o].seq);
             continue;
         }
-        d || l.fireCallback(r[a].callback, i, r[a].combo);
+        d || l.fireCallback(i[o].callback, r, i[o].combo);
     }
-    (o = 'keypress' === i.type && l.ignoreNextKeypress), (s = n(64000)), i.type !== l.nextExpectedAction || s(e) || o || l.resetSequences(u), (l.ignoreNextKeypress = d && 'keydown' === i.type);
+    (s = 'keypress' === r.type && l.ignoreNextKeypress), (a = n(64000)), r.type !== l.nextExpectedAction || a(e) || s || l.resetSequences(c), (l.ignoreNextKeypress = d && 'keydown' === r.type);
 };

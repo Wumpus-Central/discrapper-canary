@@ -1,47 +1,47 @@
-n.d(t, { Z: () => h });
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    a = n(496675),
+n.d(t, { Z: () => p }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(496675),
     o = n(434404),
     c = n(999382),
     d = n(981631),
     u = n(388032),
-    m = n(750609);
-function h(e) {
+    m = n(541946);
+function p(e) {
     var t, n;
-    let { guild: h } = e,
-        g = h.id,
-        x = (0, l.e7)([a.Z], () => a.Z.can(d.Plq.MANAGE_GUILD, h)),
-        p = r.useCallback(
+    let { guild: p } = e,
+        g = p.id,
+        h = (0, s.e7)([l.Z], () => l.Z.can(d.Plq.MANAGE_GUILD, p)),
+        f = i.useCallback(
             (e) => {
                 o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(g, { description: e });
             },
             [g]
         ),
-        _ = (0, l.e7)([c.Z], () => c.Z.getError('description')),
-        C = (0, l.e7)([c.Z], () => c.Z.getGuildProfile());
-    return (0, i.jsxs)(s.hjN, {
+        b = (0, s.e7)([c.Z], () => c.Z.getError('description')),
+        x = (0, s.e7)([c.Z], () => c.Z.getGuildProfile());
+    return (0, r.jsxs)(a.hjN, {
         className: m.section,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.sectionHeader,
                 children: [
-                    (0, i.jsx)(s.vwX, { children: u.intl.string(u.t.Z27SCQ) }),
-                    (0, i.jsx)(s.R94, {
-                        type: s.geA.DESCRIPTION,
-                        children: u.intl.string(u.t.pw0MIi)
+                    (0, r.jsx)(a.vwX, { children: u.NW.string(u.t.Z27SCQ) }),
+                    (0, r.jsx)(a.R94, {
+                        type: a.geA.DESCRIPTION,
+                        children: u.NW.string(u.t.pw0MIi)
                     })
                 ]
             }),
-            (0, i.jsx)(s.Kx8, {
-                value: null !== (n = null !== (t = null == C ? void 0 : C.description) && void 0 !== t ? t : h.description) && void 0 !== n ? n : '',
-                placeholder: u.intl.string(u.t.Nvfows),
-                onChange: p,
+            (0, r.jsx)(a.Kx8, {
+                value: null !== (n = null !== (t = null == x ? void 0 : x.description) && void 0 !== t ? t : p.description) && void 0 !== n ? n : '',
+                placeholder: u.NW.string(u.t.Nvfows),
+                onChange: f,
                 maxLength: 120,
-                disabled: !x,
-                error: _
+                disabled: !h,
+                error: b
             })
         ]
     });

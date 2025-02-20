@@ -1,17 +1,17 @@
-n.d(t, { Z: () => r });
-var i = n(175922);
-function r(e) {
-    var t = (0, i.Z)(e),
+n.d(t, { Z: () => i });
+var r = n(175922);
+function i(e) {
+    var t = (0, r.Z)(e),
         n = e.offsetWidth,
-        r = e.offsetHeight;
+        i = e.offsetHeight;
     return (
         1 >= Math.abs(t.width - n) && (n = t.width),
-        1 >= Math.abs(t.height - r) && (r = t.height),
+        1 >= Math.abs(t.height - i) && (i = t.height),
         {
             x: e.offsetLeft,
             y: e.offsetTop,
             width: n,
-            height: r
+            height: i
         }
     );
 }

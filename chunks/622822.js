@@ -1,16 +1,16 @@
 n.d(t, {
     Y: () => c,
-    b: () => o
+    b: () => s
 });
-var i = n(594174),
-    l = n(709054),
+var r = n(594174),
+    i = n(709054),
     a = n(981631);
-let r = new Date('06/16/2020'),
-    s = [a.V_K.AGE_RESTRICTED, a.V_K.EXPLICIT];
-function o() {
-    let e = i.default.getCurrentUser();
-    return null != e && l.default.extractTimestamp(e.id) > r.getTime() && null == e.nsfwAllowed;
+let o = new Date('06/16/2020'),
+    l = [a.V_K.AGE_RESTRICTED, a.V_K.EXPLICIT];
+function s() {
+    let e = r.default.getCurrentUser();
+    return null != e && i.default.extractTimestamp(e.id) > o.getTime() && null == e.nsfwAllowed;
 }
 function c(e) {
-    return s.includes(e.nsfwLevel);
+    return l.includes(e.nsfwLevel);
 }

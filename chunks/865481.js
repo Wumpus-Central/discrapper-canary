@@ -1,5 +1,5 @@
-n.r(t), n.d(t, { default: () => i });
-let i = {
+n.r(t), n.d(t, { default: () => r });
+let r = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,

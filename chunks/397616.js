@@ -1,22 +1,22 @@
 t.d(n, { Z: () => u });
-var i = t(200651);
+var r = t(200651);
 t(192379);
-var r = t(442837),
-    a = t(481060),
-    l = t(493683),
-    o = t(592125),
+var i = t(442837),
+    l = t(481060),
+    o = t(493683),
+    a = t(592125),
     s = t(594174),
-    d = t(388032);
+    c = t(388032);
 function u(e, n) {
     var t;
-    let u = (0, r.e7)([s.default], () => s.default.getCurrentUser(), []),
-        c = (0, r.e7)([o.Z], () => o.Z.getChannel(n), [n]);
-    return null == c || c.isOwner(e) || null == u || !c.isOwner(u.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(e))
+    let u = (0, i.e7)([s.default], () => s.default.getCurrentUser(), []),
+        d = (0, i.e7)([a.Z], () => a.Z.getChannel(n), [n]);
+    return null == d || d.isOwner(e) || null == u || !d.isOwner(u.id) || !(null === (t = d.recipients) || void 0 === t ? void 0 : t.includes(e))
         ? null
-        : (0, i.jsx)(a.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'remove',
-              label: d.intl.string(d.t.n5zMIy),
-              action: () => l.Z.removeRecipient(n, e),
+              label: c.NW.string(c.t.n5zMIy),
+              action: () => o.Z.removeRecipient(n, e),
               color: 'danger'
           });
 }

@@ -1,77 +1,77 @@
 n.r(t),
     n.d(t, {
-        default: () => D,
-        useAppSidebarState: () => R
+        default: () => R,
+        useAppSidebarState: () => L
     });
-var i = n(200651),
-    l = n(192379),
-    r = n(512969),
-    a = n(15729),
-    s = n(442837),
-    o = n(481060),
-    d = n(230711),
-    c = n(174556),
-    u = n(320007),
-    h = n(540059),
-    m = n(916069),
-    p = n(565138),
-    g = n(300986),
-    _ = n(314451),
-    f = n(35583),
-    E = n(522474),
-    I = n(141321),
-    C = n(210887),
+var r = n(200651),
+    i = n(192379),
+    l = n(512969),
+    o = n(15729),
+    a = n(442837),
+    s = n(481060),
+    c = n(230711),
+    u = n(174556),
+    d = n(320007),
+    p = n(540059),
+    h = n(916069),
+    g = n(565138),
+    f = n(300986),
+    m = n(314451),
+    b = n(35583),
+    _ = n(522474),
+    E = n(141321),
+    O = n(210887),
     N = n(592125),
     v = n(430824),
-    T = n(944486),
-    S = n(914010),
-    A = n(451478),
-    Z = n(998502),
-    x = n(228488),
-    b = n(950796),
-    L = n(981631),
-    y = n(741764),
-    O = n(388032),
-    P = n(136813);
-let R = (0, a.U)(() => ({ isOpen: !0 }));
-function j() {
+    y = n(944486),
+    I = n(914010),
+    C = n(451478),
+    S = n(998502),
+    T = n(228488),
+    P = n(950796),
+    j = n(981631),
+    A = n(741764),
+    Z = n(388032),
+    x = n(339135);
+let L = (0, o.U)(() => ({ isOpen: !0 }));
+function w() {
     let e;
-    let t = (0, r.TH)(),
-        n = (0, s.e7)([T.Z], () => T.Z.getChannelId()),
-        l = (0, s.e7)([S.Z], () => S.Z.getGuildId()),
-        a = (0, s.e7)([N.Z], () => N.Z.getChannel(n), [n]),
-        d = v.Z.getGuild(l),
-        c = (0, m.Z)(),
-        u = null;
+    let t = (0, l.TH)(),
+        n = (0, a.e7)([y.Z], () => y.Z.getChannelId()),
+        i = (0, a.e7)([I.Z], () => I.Z.getGuildId()),
+        o = (0, a.e7)([N.Z], () => N.Z.getChannel(n), [n]),
+        c = v.Z.getGuild(i),
+        u = (0, h.Z)(),
+        d = null;
     return (
-        null != d
-            ? ((u = c
-                  ? (0, i.jsx)(o.r7p, { size: 'xs' })
-                  : (0, i.jsx)(p.Z, {
-                        guild: d,
-                        size: p.Z.Sizes.MINI,
+        null != c
+            ? ((d = u
+                  ? (0, r.jsx)(s.r7p, { size: 'xs' })
+                  : (0, r.jsx)(g.Z, {
+                        guild: c,
+                        size: g.Z.Sizes.MINI,
                         active: !0,
-                        className: P.guildIcon
+                        className: x.guildIcon
                     })),
-              (e = d.name))
-            : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = O.intl.string(O.t.YUU0RE)), (u = (0, i.jsx)(o.gw7, { size: 'xs' })))
-              : t.pathname.startsWith(L.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = O.intl.string(O.t['4nEZLi'])), (u = (0, i.jsx)(o.Jmo, { size: 'xs' })))
-                : t.pathname.startsWith(L.Z5c.NITRO_HOME)
-                  ? ((e = O.intl.string(O.t.Ipxkoq)), (u = (0, i.jsx)(o.SrA, { size: 'xs' })))
-                  : t.pathname.startsWith(L.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = O.intl.string(O.t.pWG4zc)), (u = (0, i.jsx)(o.EOn, { size: 'xs' })))
-                    : t.pathname.startsWith(L.Z5c.FRIENDS)
-                      ? ((e = O.intl.string(O.t.TdEu5e)), (u = (0, i.jsx)(o.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(L.Z5c.FAMILY_CENTER) && ((e = O.intl.string(O.t.RZqaJi)), (u = (0, i.jsx)(o.BFJ, { size: 'xs' }))),
+              (e = c.name))
+            : null != o && (o.isDM() || o.isGroupDM())
+              ? ((e = Z.NW.string(Z.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
+              : t.pathname.startsWith(j.Z5c.GLOBAL_DISCOVERY)
+                ? ((e = Z.NW.string(Z.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                : t.pathname.startsWith(j.Z5c.NITRO_HOME)
+                  ? ((e = Z.NW.string(Z.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                  : t.pathname.startsWith(j.Z5c.COLLECTIBLES_SHOP)
+                    ? ((e = Z.NW.string(Z.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                    : t.pathname.startsWith(j.Z5c.FRIENDS)
+                      ? ((e = Z.NW.string(Z.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                      : t.pathname.startsWith(j.Z5c.FAMILY_CENTER) && ((e = Z.NW.string(Z.t.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
-            (0, i.jsxs)('div', {
-                className: P.title,
+            (0, r.jsxs)('div', {
+                className: x.title,
                 children: [
-                    u,
-                    (0, i.jsx)(o.Text, {
+                    d,
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         lineClamp: 1,
                         children: e
@@ -80,66 +80,66 @@ function j() {
             })
     );
 }
-function D() {
-    l.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(y.J, y.N);
+function R() {
+    i.useLayoutEffect(() => {
+        S.ZP.setMinimumSize(A.J, A.N);
     }, []);
-    let e = (0, h.TH)('AppTitleBar'),
-        t = !R((e) => e.isOpen) && e,
-        { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
-    l.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(y.J, y.N);
+    let e = (0, p.TH)('AppTitleBar'),
+        t = !L((e) => e.isOpen) && e,
+        { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    i.useLayoutEffect(() => {
+        S.ZP.setMinimumSize(A.J, A.N);
     }, []);
-    let r = (0, s.e7)([C.Z], () => (C.Z.darkSidebar ? L.BRd.DARK : void 0));
-    return (0, s.e7)([A.Z, E.Z], () => (0, x.rB)())
+    let l = (0, a.e7)([O.Z], () => (O.Z.darkSidebar ? j.BRd.DARK : void 0));
+    return (0, a.e7)([C.Z, _.Z], () => (0, T.rB)())
         ? null
-        : (0, i.jsx)(o.f6W, {
-              theme: r,
+        : (0, r.jsx)(s.f6W, {
+              theme: l,
               children: (e) =>
-                  (0, i.jsx)(b.T, {
+                  (0, r.jsx)(P.T, {
                       className: e,
                       leading:
                           t &&
-                          (0, i.jsxs)(i.Fragment, {
+                          (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(o.P3F, {
-                                      className: P.button,
+                                  (0, r.jsx)(s.P3F, {
+                                      className: x.button,
                                       onClick: () => {
-                                          R.setState({ isOpen: !R.getState().isOpen });
+                                          L.setState({ isOpen: !L.getState().isOpen });
                                       },
-                                      children: (0, i.jsx)(w, {})
+                                      children: (0, r.jsx)(D, {})
                                   }),
-                                  (0, i.jsx)(o.P3F, {
-                                      className: P.button,
+                                  (0, r.jsx)(s.P3F, {
+                                      className: x.button,
                                       onClick: () => {
-                                          d.Z.open(L.oAB.ACCOUNT);
+                                          c.Z.open(j.oAB.ACCOUNT);
                                       },
-                                      children: (0, i.jsx)(o.ewm, {
+                                      children: (0, r.jsx)(s.ewm, {
                                           size: 'xs',
                                           color: 'currentColor'
                                       })
                                   })
                               ]
                           }),
-                      title: (0, i.jsx)(j, {}),
-                      trailing: (0, i.jsxs)(i.Fragment, {
+                      title: (0, r.jsx)(w, {}),
+                      trailing: (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(u.Z, {
+                              (0, r.jsx)(d.Z, {
                                   canShowReminder: !0,
-                                  className: P.button
+                                  className: x.button
                               }),
-                              (0, i.jsx)(I.Z, { className: P.button }),
-                              n ? (0, i.jsx)(_.Z, { className: P.button }) : (0, i.jsx)(g.Z, { className: P.button }),
-                              (0, i.jsx)(f.Z, { className: P.button })
+                              (0, r.jsx)(E.Z, { className: x.button }),
+                              n ? (0, r.jsx)(m.Z, { className: x.button }) : (0, r.jsx)(f.Z, { className: x.button }),
+                              (0, r.jsx)(b.Z, { className: x.button })
                           ]
                       })
                   })
           });
 }
-function w() {
-    return (0, i.jsxs)('svg', {
+function D() {
+    return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: P.icon,
+        className: x.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
@@ -149,14 +149,14 @@ function w() {
         'stroke-linecap': 'round',
         'stroke-linejoin': 'round',
         children: [
-            (0, i.jsx)('rect', {
+            (0, r.jsx)('rect', {
                 width: '18',
                 height: '18',
                 x: '3',
                 y: '3',
                 rx: '2'
             }),
-            (0, i.jsx)('path', { d: 'M9 3v18' })
+            (0, r.jsx)('path', { d: 'M9 3v18' })
         ]
     });
 }

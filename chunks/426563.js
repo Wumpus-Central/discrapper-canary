@@ -1,49 +1,49 @@
 n.d(t, {
-    Z: () => L,
-    j: () => D
+    Z: () => w,
+    j: () => P
 });
-var i = n(526167),
-    r = n(621554),
-    a = n(328756),
-    s = n(639525),
-    o = n(131812),
+var r = n(526167),
+    i = n(621554),
+    o = n(328756),
+    a = n(639525),
+    s = n(131812),
     l = n(265174),
-    u = n(926425),
-    c = n(844049),
+    c = n(926425),
+    u = n(844049),
     d = n(712386),
     f = n(602722),
-    _ = n(534109),
-    p = n(859500),
+    p = n(534109),
+    _ = n(859500),
     h = n(484542),
     m = n(881500),
     g = n(910826),
     E = n(307244),
     v = n(669730),
-    y = n(666828),
-    I = n(131999),
-    T = n(649272),
-    b = n(241372),
-    S = n(538387),
-    A = n(213921),
+    b = n(666828),
+    y = n(131999),
+    O = n(649272),
+    S = n(241372),
+    I = n(538387),
+    T = n(213921),
     N = n(34721),
-    C = n(410693),
-    R = n(185672),
-    O = n(235731);
-function D() {
+    A = n(410693),
+    C = n(185672),
+    R = n(235731);
+function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? O : r;
+    return e ? R : i;
 }
-let L = {
-    DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_PROVISIONAL_AVATARS: [T, b, S, A, N, C],
-    DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
+let w = {
+    DEFAULT_AVATARS: [o, a, s, l, c, u],
+    DEFAULT_PROVISIONAL_AVATARS: [O, S, I, T, N, A],
+    DEFAULT_GROUP_DM_AVATARS: [d, f, p, _, h, m, g, E],
     BOT_AVATARS: {
-        clyde: R,
-        nitro: y,
-        nitro_wumpus: I
+        clyde: C,
+        nitro: b,
+        nitro_wumpus: y
     },
     DEFAULT_CHANNEL_ICON: v,
     canUseWebp: function () {
-        return i.og();
+        return r.og();
     }
 };

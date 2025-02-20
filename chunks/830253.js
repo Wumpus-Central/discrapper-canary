@@ -1,51 +1,51 @@
-n.d(t, { Z: () => p }), n(47120);
-var i,
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(386965),
+n.d(t, { Z: () => _ }), n(47120);
+var r,
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(386965),
     l = n(695346),
-    u = n(763296),
-    c = n(242291),
+    c = n(763296),
+    u = n(242291),
     d = n(22382),
     f = n(747071),
-    _ = n(388032);
-function p(e, t) {
+    p = n(388032);
+function _(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : (() => {
                       var e;
-                      return null !== (i = null === (e = l.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
+                      return null !== (r = null === (e = l.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== r ? r : 100;
                   })(),
-        { audioRef: p } = r.useContext(o.Z),
-        [h, m] = r.useState(!1),
-        g = (0, a.e7)([u.Z], () => u.Z.isPlayingSound(e.soundId), [e]),
-        E = r.useCallback(
+        { audioRef: _ } = i.useContext(s.Z),
+        [h, m] = i.useState(!1),
+        g = (0, o.e7)([c.Z], () => c.Z.isPlayingSound(e.soundId), [e]),
+        E = i.useCallback(
             (n) => {
-                null != p.current && p.current.pause(), null != t && (0, c.GN)(e, t, n);
+                null != _.current && _.current.pause(), null != t && (0, u.GN)(e, t, n);
             },
-            [e, p, t]
+            [e, _, t]
         ),
-        v = r.useCallback(() => {
+        v = i.useCallback(() => {
             let t = new Audio((0, d.Z)(e.soundId));
-            null != p.current && p.current.pause(),
-                (p.current = t),
+            null != _.current && _.current.pause(),
+                (_.current = t),
                 (t.currentTime = 0),
                 (t.volume = (0, f.Z)(e.volume, n)),
                 t.play().catch(() => {
-                    'Safari' === platform.name && (0, s.showToast)((0, s.createToast)(_.intl.string(_.t.qAsyjI), s.ToastType.FAILURE));
+                    'Safari' === platform.name && (0, a.showToast)((0, a.createToast)(p.NW.string(p.t.qAsyjI), a.ToastType.FAILURE));
                 }),
                 m(!0),
                 t.addEventListener('pause', () => m(!1), { once: !0 });
-        }, [e, n, p]);
+        }, [e, n, _]);
     return (
-        r.useCallback(
+        i.useCallback(
             () => () => {
                 var e;
-                return null === (e = p.current) || void 0 === e ? void 0 : e.pause();
+                return null === (e = _.current) || void 0 === e ? void 0 : e.pause();
             },
-            [p]
+            [_]
         ),
         {
             playSoundboardSound: E,

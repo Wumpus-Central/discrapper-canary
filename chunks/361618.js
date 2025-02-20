@@ -1,8 +1,8 @@
 function t(e) {
     let t = ['struct', 'enum', 'interface', 'union', 'group', 'import', 'using', 'const', 'annotation', 'extends', 'in', 'of', 'on', 'as', 'with', 'from', 'fixed'],
         n = ['Void', 'Bool', 'Int8', 'Int16', 'Int32', 'Int64', 'UInt8', 'UInt16', 'UInt32', 'UInt64', 'Float32', 'Float64', 'Text', 'Data', 'AnyPointer', 'AnyStruct', 'Capability', 'List'],
-        i = ['true', 'false'],
-        r = {
+        r = ['true', 'false'],
+        i = {
             variants: [
                 {
                     match: [/(struct|enum|interface)/, /\s+/, e.IDENT_RE]
@@ -22,7 +22,7 @@ function t(e) {
         keywords: {
             keyword: t,
             type: n,
-            literal: i
+            literal: r
         },
         contains: [
             e.QUOTE_STRING_MODE,
@@ -37,7 +37,7 @@ function t(e) {
                 className: 'symbol',
                 begin: /@\d+\b/
             },
-            r
+            i
         ]
     };
 }

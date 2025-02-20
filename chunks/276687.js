@@ -1,22 +1,22 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(852860),
-    s = n(999382),
-    a = n(524329),
+var i = n(442837),
+    s = n(852860),
+    a = n(999382),
+    l = n(524329),
     o = n(575258),
     c = n(388032);
 let d = () => {
-    let { guild: e } = (0, r.e7)([s.Z], () => s.Z.getProps()),
-        { submitting: t, welcomeSettings: n } = (0, r.e7)([o.Z], () => o.Z.getSettingsProps());
+    let { guild: e } = (0, i.e7)([a.Z], () => a.Z.getProps()),
+        { submitting: t, welcomeSettings: n } = (0, i.e7)([o.Z], () => o.Z.getSettingsProps());
     return null == e
         ? null
-        : (0, i.jsx)(l.Z, {
-              onSave: () => (0, a.Es)(e.id, n),
-              onReset: a.Xb,
+        : (0, r.jsx)(s.Z, {
+              onSave: () => (0, l.Es)(e.id, n),
+              onReset: l.Xb,
               submitting: t,
-              onSaveText: c.intl.string(c.t['7NqTJi']),
-              message: c.intl.string(c.t['Z0/WmZ'])
+              onSaveText: c.NW.string(c.t['7NqTJi']),
+              message: c.NW.string(c.t['Z0/WmZ'])
           });
 };

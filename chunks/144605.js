@@ -1,15 +1,15 @@
-var i = n(67867),
-    r = n(294377),
-    a = n(156741),
-    s = n(420926),
-    o = n(831496),
+var r = n(67867),
+    i = n(294377),
+    o = n(156741),
+    a = n(420926),
+    s = n(831496),
     l = n(28886),
-    u = n(982665),
-    c = n(224106),
+    c = n(982665),
+    u = n(224106),
     d = n(821819),
-    f = r('Reflect', 'construct'),
-    _ = Object.prototype,
-    p = [].push,
+    f = i('Reflect', 'construct'),
+    p = Object.prototype,
+    _ = [].push,
     h = d(function () {
         function e() {}
         return !(f(function () {}, [], e) instanceof e);
@@ -18,7 +18,7 @@ var i = n(67867),
         f(function () {});
     }),
     g = h || m;
-i(
+r(
     {
         target: 'Reflect',
         stat: !0,
@@ -27,8 +27,8 @@ i(
     },
     {
         construct: function (e, t) {
-            o(e), l(t);
-            var n = arguments.length < 3 ? e : o(arguments[2]);
+            s(e), l(t);
+            var n = arguments.length < 3 ? e : s(arguments[2]);
             if (m && !h) return f(e, t, n);
             if (e === n) {
                 switch (t.length) {
@@ -43,13 +43,13 @@ i(
                     case 4:
                         return new e(t[0], t[1], t[2], t[3]);
                 }
-                var i = [null];
-                return a(p, i, t), new (a(s, e, i))();
+                var r = [null];
+                return o(_, r, t), new (o(a, e, r))();
             }
-            var r = n.prototype,
-                d = c(u(r) ? r : _),
-                g = a(e, d, t);
-            return u(g) ? g : d;
+            var i = n.prototype,
+                d = u(c(i) ? i : p),
+                g = o(e, d, t);
+            return c(g) ? g : d;
         }
     }
 );

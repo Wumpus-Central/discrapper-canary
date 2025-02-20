@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +11,12 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { h: () => r });
-class r {
+n.d(t, { h: () => i });
+class i {
     getCPUCoreCount() {
         return this.cpuCoreCount;
     }
     constructor() {
-        i(this, 'cpuCoreCount', void 0);
+        r(this, 'cpuCoreCount', void 0);
     }
 }

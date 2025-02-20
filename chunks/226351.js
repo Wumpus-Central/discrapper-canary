@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +11,12 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { o: () => r });
-class r {
+n.d(t, { o: () => i });
+class i {
     constructor() {
-        i(this, 'promise', void 0),
-            i(this, 'resolve', void 0),
-            i(this, 'reject', void 0),
+        r(this, 'promise', void 0),
+            r(this, 'resolve', void 0),
+            r(this, 'reject', void 0),
             (this.promise = new Promise((e, t) => {
                 (this.resolve = e), (this.reject = t);
             }));

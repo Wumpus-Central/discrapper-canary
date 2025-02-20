@@ -11,10 +11,10 @@ var r = t(200651),
     f = t(594174),
     p = t(971393),
     m = t(787018),
-    b = t(752342),
-    I = t(886794),
+    I = t(752342),
+    b = t(886794),
     g = t(910364);
-function y(e) {
+function v(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -39,7 +39,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, n) {
+function y(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ function h(e) {
     return O && Z && N && !x
         ? (0, r.jsx)(
               m.Z,
-              y(
+              v(
                   {
                       user: n,
                       currentUser: i,
@@ -111,7 +111,7 @@ function h(e) {
         : O && N && x && !(h && P)
           ? (0, r.jsx)(
                 m.W,
-                y(
+                v(
                     {
                         user: n,
                         currentUser: i,
@@ -122,23 +122,23 @@ function h(e) {
             )
           : n.isNonUserBot()
             ? (0, r.jsx)(
-                  I.Z,
-                  v(y({}, t), {
+                  b.Z,
+                  y(v({}, t), {
                       user: n,
                       currentUser: i
                   })
               )
             : n.bot
               ? (0, r.jsx)(
-                    b.Z,
-                    v(y({}, t), {
+                    I.Z,
+                    y(v({}, t), {
                         user: n,
                         currentUser: i
                     })
                 )
               : (0, r.jsx)(
                     g.Z,
-                    v(y({}, t), {
+                    y(v({}, t), {
                         user: n,
                         currentUser: i
                     })

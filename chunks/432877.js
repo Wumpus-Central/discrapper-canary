@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: () => f,
-    zU: () => o
+    zU: () => s
 }),
     n(47120);
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function s(e, t, n) {
         e
     );
 }
-var o = (function (e) {
+var s = (function (e) {
     return (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), e;
 })({});
 let l = {
@@ -64,42 +64,42 @@ let l = {
             category: 4
         }
     },
-    u = {};
-function c(e) {
-    u[e.toggle] = e.value;
+    c = {};
+function u(e) {
+    c[e.toggle] = e.value;
 }
-class d extends (i = r.ZP.DeviceSettingsStore) {
+class d extends (r = i.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: u };
+        return { toggleStates: c };
     }
     initialize(e) {
         for (var t in l) {
-            var n, i;
-            let r = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-            u[t] = r;
+            var n, r;
+            let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
+            c[t] = i;
         }
     }
     get(e) {
         var t;
-        return null !== (t = u[e]) && void 0 !== t && t;
+        return null !== (t = c[e]) && void 0 !== t && t;
     }
     set(e, t) {
-        return (u[e] = t), t;
+        return (c[e] = t), t;
     }
     all() {
-        return u;
+        return c;
     }
     allByCategory(e) {
         return Object.entries(l)
             .filter((t) => {
-                let [n, i] = t;
-                return i.category === e;
+                let [n, r] = t;
+                return r.category === e;
             })
             .map((e) => {
                 let [t, n] = e;
-                return [t, u[t], n];
+                return [t, c[t], n];
             });
     }
 }
-s(d, 'displayName', 'DevToolsDevSettingsStore'), s(d, 'persistKey', 'DevToolsDevSettingsStore');
-let f = new d(a.Z, { DEV_TOOLS_DEV_SETTING_SET: c });
+a(d, 'displayName', 'DevToolsDevSettingsStore'), a(d, 'persistKey', 'DevToolsDevSettingsStore');
+let f = new d(o.Z, { DEV_TOOLS_DEV_SETTING_SET: u });

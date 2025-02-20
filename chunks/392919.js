@@ -5,7 +5,7 @@ t.exports = function (t) {
             ? t.slice()
             : (function (t) {
                   var e = t.length;
-                  if (((Array.isArray(t) || ('object' != typeof t && 'function' != typeof t)) && n(!1), 'number' != typeof e && n(!1), 0 === e || e - 1 in t || n(!1), 'function' != typeof t.callee || n(!1), t.hasOwnProperty))
+                  if (((Array.isArray(t) || ('object' != typeof t && 'function' != typeof t)) && n(!1), 'number' != typeof e && n(!1), 0 === e || e - 1 in t || n(!1), 'function' == typeof t.callee && n(!1), t.hasOwnProperty))
                       try {
                           return Array.prototype.slice.call(t);
                       } catch (t) {}

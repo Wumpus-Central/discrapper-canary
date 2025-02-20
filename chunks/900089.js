@@ -1,19 +1,19 @@
 n.d(t, {
-    Fw: () => r,
-    RC: () => s,
-    gs: () => o,
-    uJ: () => a
+    Fw: () => i,
+    RC: () => a,
+    gs: () => s,
+    uJ: () => o
 });
-var i = n(692547);
-function r(e) {
-    return i.Z.unsafe_rawColors[e].css;
+var r = n(692547);
+function i(e) {
+    return r.Z.unsafe_rawColors[e].css;
 }
-function a(e, t) {
-    return i.Z.colors[e].resolve(t).hex();
+function o(e, t) {
+    return r.Z.colors[e].resolve(t).hex();
+}
+function a() {
+    return r.Z.themes;
 }
 function s() {
-    return i.Z.themes;
-}
-function o() {
-    return i.Z.radii;
+    return r.Z.radii;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => r });
-var i = n(606271),
-    l = n(30643);
-let r = new i.Z(l.Z);
+n.d(t, { Z: () => l });
+var r = n(606271),
+    i = n(30643);
+let l = new r.Z(i.Z);

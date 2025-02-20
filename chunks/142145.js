@@ -1,30 +1,30 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var r = n(119837),
-    a = n(802433),
-    s = n(150563);
-let o = (e) => {
-    var t, n, o, l;
-    let { layerConfig: u, animationType: c, ticking: d, time: f, accessibilityLabel: _, hasPlayedThrough: p, setHasPlayedThrough: h, urlQueryString: m, maxLoops: g, loopEnd: E, bannerAdjustment: v } = e,
-        y = !0;
-    if ((d || (y = !1), f < u.start && (y = !1), !u.loop && f > u.duration + u.start && (y = !1), c === a.Q.PERSISTENT && !p && null != g && f >= E && h(!0), u.loop && void 0 !== u.loopDelay && u.loopDelay > 0)) {
-        let e = u.duration + u.loopDelay,
-            t = Math.floor((f - u.start) / e);
-        f - u.start - t * e > u.duration && (c === a.Q.INTERMITTENT && !p && null != g && t >= g && h(!0), (y = !1));
+var i = n(119837),
+    o = n(802433),
+    a = n(663058);
+let s = (e) => {
+    var t, n, s, l;
+    let { layerConfig: c, animationType: u, ticking: d, time: f, accessibilityLabel: p, hasPlayedThrough: _, setHasPlayedThrough: h, urlQueryString: m, maxLoops: g, loopEnd: E, bannerAdjustment: v } = e,
+        b = !0;
+    if ((d || (b = !1), f < c.start && (b = !1), !c.loop && f > c.duration + c.start && (b = !1), u === o.Q.PERSISTENT && !_ && null != g && f >= E && h(!0), c.loop && void 0 !== c.loopDelay && c.loopDelay > 0)) {
+        let e = c.duration + c.loopDelay,
+            t = Math.floor((f - c.start) / e);
+        f - c.start - t * e > c.duration && (u === o.Q.INTERMITTENT && !_ && null != g && t >= g && h(!0), (b = !1));
     }
-    return y
-        ? (0, i.jsx)('img', {
-              src: null != m ? ''.concat(u.src, '?query=').concat(m) : u.src,
-              className: s.effect,
+    return b
+        ? (0, r.jsx)('img', {
+              src: null != m ? ''.concat(c.src, '?query=').concat(m) : c.src,
+              className: a.effect,
               style: {
-                  top: (null !== (o = null === (t = u.position) || void 0 === t ? void 0 : t.y) && void 0 !== o ? o : 0) - v,
-                  left: null !== (l = null === (n = u.position) || void 0 === n ? void 0 : n.x) && void 0 !== l ? l : 0
+                  top: (null !== (s = null === (t = c.position) || void 0 === t ? void 0 : t.y) && void 0 !== s ? s : 0) - v,
+                  left: null !== (l = null === (n = c.position) || void 0 === n ? void 0 : n.x) && void 0 !== l ? l : 0
               },
-              alt: _
+              alt: p
           })
-        : (0, i.jsx)('img', {
-              src: r.td,
-              alt: _
+        : (0, r.jsx)('img', {
+              src: i.td,
+              alt: p
           });
 };

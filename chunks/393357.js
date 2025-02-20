@@ -1,26 +1,26 @@
-i.r(e), i.d(e, { default: () => u });
-var t = i(200651),
-    a = i(442837),
-    r = i(443002),
-    o = i(430824),
-    s = i(496675),
-    c = i(504392),
-    l = i(981631),
-    d = i(231338);
-function u(n) {
-    let { guildId: e } = n,
-        i = (0, a.e7)([o.Z], () => o.Z.getGuild(e)),
-        u = (0, a.e7)([s.Z], () => (null == i || null == s.Z.getGuildPermissions(i) ? null : s.Z.can(d.Pl.ADMINISTRATOR, i)));
-    return null == u || null == i
+t.r(n), t.d(n, { default: () => u });
+var i = t(200651),
+    r = t(442837),
+    a = t(443002),
+    o = t(430824),
+    s = t(496675),
+    c = t(504392),
+    l = t(981631),
+    d = t(231338);
+function u(e) {
+    let { guildId: n } = e,
+        t = (0, r.e7)([o.Z], () => o.Z.getGuild(n)),
+        u = (0, r.e7)([s.Z], () => (null == t || null == s.Z.getGuildPermissions(t) ? null : s.Z.can(d.Pl.ADMINISTRATOR, t)));
+    return null == u || null == t
         ? null
         : u
-          ? (0, t.jsx)(c.Z, { guildId: e })
-          : (0, t.jsx)(r.Z, {
+          ? (0, i.jsx)(c.Z, { guildId: n })
+          : (0, i.jsx)(a.Z, {
                 analyticsLocation: {
                     section: l.jXE.CHANNEL_LIST,
                     object: l.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
                 },
                 onClose: () => {},
-                guild: i
+                guild: t
             });
 }

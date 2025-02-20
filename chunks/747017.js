@@ -1,32 +1,32 @@
 n.d(t, { Z: () => E });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(122810),
+var i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(122810),
     l = n(74433),
-    u = n(750881),
-    c = n(545957),
+    c = n(750881),
+    u = n(545957),
     d = n(699516),
     f = n(6074),
-    _ = n(584973),
-    p = n(303524),
+    p = n(584973),
+    _ = n(303524),
     h = n(170187),
     m = n(981631),
-    g = n(394347);
+    g = n(66973);
 function E(e) {
     var t;
-    let { activities: n, applicationStream: r, textClassName: E, emojiClassName: v, animate: y = !0, hideTooltip: I = !1, hideEmoji: T = !1, user: b, hasQuest: S } = e,
-        A = 'activity-status-web',
-        { blockeeExperimentEnabled: N, blockerExperimentEnabled: C } = (0, u.NR)(A);
-    (0, c.Z)(null == b ? void 0 : b.id, A);
-    let R = (0, s.e7)([d.Z], () => d.Z.isBlocked(null == b ? void 0 : b.id));
-    if (C && R) return null;
-    let O = (0, l.Z)(n, r, void 0, N),
-        D = null == O ? void 0 : O.activityText,
-        L = null != D && '' !== D,
-        x =
+    let { activities: n, applicationStream: i, textClassName: E, emojiClassName: v, animate: b = !0, hideTooltip: y = !1, hideEmoji: O = !1, user: S, hasQuest: I } = e,
+        T = 'activity-status-web',
+        { blockeeExperimentEnabled: N, blockerExperimentEnabled: A } = (0, c.NR)(T);
+    (0, u.Z)(null == S ? void 0 : S.id, T);
+    let C = (0, a.e7)([d.Z], () => d.Z.isBlocked(null == S ? void 0 : S.id));
+    if (A && C) return null;
+    let R = (0, l.Z)(n, i, void 0, N),
+        P = null == R ? void 0 : R.activityText,
+        w = null != P && '' !== P,
+        D =
             null !==
                 (t =
                     null == n
@@ -37,27 +37,27 @@ function E(e) {
                           })) && void 0 !== t
                 ? t
                 : null,
-        P =
-            (null == x ? void 0 : x.emoji) == null || T
+        x =
+            (null == D ? void 0 : D.emoji) == null || O
                 ? null
-                : (0, i.jsx)(_.Z, {
-                      emoji: x.emoji,
-                      animate: y,
-                      hideTooltip: I,
-                      className: a()(g.emoji, v)
+                : (0, r.jsx)(p.Z, {
+                      emoji: D.emoji,
+                      animate: b,
+                      hideTooltip: y,
+                      className: o()(g.emoji, v)
                   });
-    return L || null != P
-        ? (0, i.jsxs)('div', {
+    return w || null != x
+        ? (0, r.jsxs)('div', {
               className: g.container,
               children: [
-                  P,
-                  (0, i.jsx)(h.Z, {
+                  x,
+                  (0, r.jsx)(h.Z, {
                       className: E,
-                      children: D
+                      children: P
                   }),
-                  S && (0, i.jsx)(p.Z, { className: g.questsIcon }),
-                  (null == n ? void 0 : n.some(o.Z)) &&
-                      (0, i.jsx)(f.Z, {
+                  I && (0, r.jsx)(_.Z, { className: g.questsIcon }),
+                  (null == n ? void 0 : n.some(s.Z)) &&
+                      (0, r.jsx)(f.Z, {
                           width: 16,
                           height: 16,
                           className: g.icon

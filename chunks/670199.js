@@ -1,103 +1,103 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => h }), t(266796);
 var i = t(200651);
 t(192379);
 var s = t(120356),
-    l = t.n(s),
-    a = t(481060),
+    a = t.n(s),
+    l = t(481060),
     r = t(600164),
     o = t(788080),
     c = t(548647),
     d = t(696375),
     x = t(97568),
     m = t(800530),
-    u = t(388032),
-    h = t(213597);
-function _(e) {
+    N = t(388032),
+    u = t(205130);
+function h(e) {
     var n, t;
-    let { classification: s, isDsaEligible: _ = !1, isSpam: C = !1, isCoppa: N = !1, className: p, onClose: g, onNext: j } = e,
+    let { classification: s, isDsaEligible: h = !1, isSpam: _ = !1, isCoppa: C = !1, className: p, onClose: g, onNext: j } = e,
         I = (0, c.n)(),
         k = null !== (n = null == s ? void 0 : s.explainer_link) && void 0 !== n ? n : '',
         E = null != s && null != s.flagged_content && s.flagged_content.length > 0,
         T = (0, o.c7)(null == s ? void 0 : s.description),
-        v = !C && !N,
+        v = !_ && !C,
         f = null != s && ((0, o.FB)(s) || E);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(a.xBx, {
+            (0, i.jsxs)(l.xBx, {
                 direction: r.Z.Direction.VERTICAL,
-                className: h.header,
+                className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(a.X6q, {
-                        className: h.title,
+                    (0, i.jsx)(l.X6q, {
+                        className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: u.intl.string(u.t['C5q+pa'])
+                        children: N.NW.string(N.t['C5q+pa'])
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: h.subtitle,
+                    (0, i.jsx)(l.Text, {
+                        className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: u.intl.string(u.t.URt7VF)
+                        children: N.NW.string(N.t.URt7VF)
                     }),
                     null != g &&
-                        (0, i.jsx)(a.olH, {
-                            className: h.closeButton,
+                        (0, i.jsx)(l.olH, {
+                            className: u.closeButton,
                             onClick: g
                         })
                 ]
             }),
-            (0, i.jsxs)(a.hzk, {
-                className: l()(h.modalContent, !f && h.evidenceOffset, p),
+            (0, i.jsxs)(l.hzk, {
+                className: a()(u.modalContent, !f && u.evidenceOffset, p),
                 paddingFix: !1,
                 children: [
                     f && (0, i.jsx)(x.s, { flaggedContent: null !== (t = s.flagged_content) && void 0 !== t ? t : [] }),
-                    (0, i.jsx)(a.Text, {
-                        className: h.optionHeader,
+                    (0, i.jsx)(l.Text, {
+                        className: u.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: u.intl.string(u.t.xsdcxs)
+                        children: N.NW.string(N.t.xsdcxs)
                     }),
                     (0, i.jsx)('div', {
-                        className: h.policyContainer,
-                        children: (0, i.jsx)(a.Text, {
+                        className: u.policyContainer,
+                        children: (0, i.jsx)(l.Text, {
                             variant: 'text-md/semibold',
                             children: T
                         })
                     }),
-                    N &&
+                    C &&
                         (0, i.jsx)(d.Z, {
                             url: m.sQ.AGE_VERIFICATION_LINK,
-                            text: u.intl.string(u.t['gJs+kZ']),
+                            text: N.NW.string(N.t['gJs+kZ']),
                             onClick: () => I(m.n0.ClickAgeVerificationLink)
                         }),
-                    C &&
-                        !N &&
+                    _ &&
+                        !C &&
                         (0, i.jsx)(d.Z, {
                             url: m.sQ.SPAM_LINK,
-                            text: u.intl.string(u.t['PaNS+P']),
+                            text: N.NW.string(N.t['PaNS+P']),
                             onClick: () => I(m.n0.ClickSpamWebformLink)
                         }),
-                    !N &&
+                    !C &&
                         (0, i.jsx)(d.Z, {
-                            text: u.intl.string(u.t['Vtyn//']),
+                            text: N.NW.string(N.t['Vtyn//']),
                             url: k,
                             onClick: () => I(m.n0.ClickLearnMoreLink)
                         }),
                     v &&
-                        _ &&
-                        (0, i.jsx)(a.Text, {
-                            className: h.learnMore,
+                        h &&
+                        (0, i.jsx)(l.Text, {
+                            className: u.learnMore,
                             variant: 'text-xs/normal',
-                            children: u.intl.format(u.t.WMUgCQ, {})
+                            children: N.NW.format(N.t.WMUgCQ, {})
                         })
                 ]
             }),
             v &&
-                (0, i.jsx)(a.mzw, {
-                    children: (0, i.jsx)(a.zxk, {
+                (0, i.jsx)(l.mzw, {
+                    children: (0, i.jsx)(l.zxk, {
                         onClick: j,
-                        color: a.zxk.Colors.BRAND,
-                        children: u.intl.string(u.t.PDTjLC)
+                        color: l.zxk.Colors.BRAND,
+                        children: N.NW.string(N.t.PDTjLC)
                     })
                 })
         ]

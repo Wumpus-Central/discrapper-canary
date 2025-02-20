@@ -1,43 +1,43 @@
 n.d(t, { Z: () => N });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(653603),
-    o = n.n(s),
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(653603),
+    s = n.n(a),
     c = n(442837),
-    d = n(481060),
-    u = n(904245),
-    h = n(232961),
-    p = n(223606),
-    m = n(63063),
-    f = n(530472),
+    u = n(481060),
+    d = n(904245),
+    p = n(232961),
+    h = n(223606),
+    f = n(63063),
+    m = n(530472),
     g = n(453687),
-    _ = n(930282),
-    C = n(318713),
-    x = n(981631),
+    b = n(930282),
+    _ = n(318713),
+    C = n(981631),
     v = n(388032),
-    E = n(797949),
-    I = n(732175),
-    b = n(663362);
-let Z = l.memo(function (e) {
-        let { message: t, notice: n, compact: l = !1, onDismiss: a } = e;
-        return (0, i.jsxs)(i.Fragment, {
+    y = n(147109),
+    x = n(456536),
+    j = n(368365);
+let O = i.memo(function (e) {
+        let { message: t, notice: n, compact: i = !1, onDismiss: l } = e;
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: r()(E.blockedNoticeContainer, { [E.compact]: l }),
+                (0, r.jsxs)('div', {
+                    className: o()(y.blockedNoticeContainer, { [y.compact]: i }),
                     children: [
-                        (0, i.jsx)('div', {
-                            className: E.blockedNoticeIcon,
-                            children: (0, i.jsx)(d.b7C, {
+                        (0, r.jsx)('div', {
+                            className: y.blockedNoticeIcon,
+                            children: (0, r.jsx)(u.b7C, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: E.shieldIcon
+                                className: y.shieldIcon
                             })
                         }),
-                        (0, i.jsx)('div', {
-                            className: E.blockedNotice,
-                            children: (0, i.jsx)(d.Text, {
+                        (0, r.jsx)('div', {
+                            className: y.blockedNotice,
+                            children: (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'interactive-normal',
                                 children: n
@@ -45,69 +45,69 @@ let Z = l.memo(function (e) {
                         })
                     ]
                 }),
-                (0, i.jsx)('div', {
-                    className: r()(E.ephemeralAccessories, { [E.compact]: l }),
-                    children: (0, i.jsx)(f.Z, {
+                (0, r.jsx)('div', {
+                    className: o()(y.ephemeralAccessories, { [y.compact]: i }),
+                    children: (0, r.jsx)(m.Z, {
                         message: t,
-                        onDeleteMessage: a,
-                        children: (0, i.jsx)(d.Text, {
+                        onDeleteMessage: l,
+                        children: (0, r.jsx)(u.Text, {
                             variant: 'text-xs/normal',
                             color: 'interactive-normal',
                             tag: 'span',
-                            className: E.learnMore,
-                            children: v.intl.format(v.t.Nd3Gh4, { helpUrl: m.Z.getArticleURL(x.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                            className: y.learnMore,
+                            children: v.NW.format(v.t.Nd3Gh4, { helpUrl: f.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                         })
                     })
                 })
             ]
         });
     }),
-    N = l.memo(function (e) {
+    N = i.memo(function (e) {
         var t, n;
-        let { className: a, compact: s, message: d, children: m, content: f, onUpdate: x } = e,
-            N = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-            T = l.useRef(!1),
-            S = (0, c.e7)([p.Z], () => p.Z.getMessage(d.id), [d.id]),
-            j = l.useCallback(() => {
-                (null == S ? void 0 : S.isBlockedEdit) ? (0, h.I)(d.id) : u.Z.deleteMessage(d.channel_id, d.id, !0);
-            }, [d, S]);
+        let { className: l, compact: a, message: u, children: f, content: m, onUpdate: C } = e,
+            N = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+            E = i.useRef(!1),
+            P = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
+            I = i.useCallback(() => {
+                (null == P ? void 0 : P.isBlockedEdit) ? (0, p.I)(u.id) : d.Z.deleteMessage(u.channel_id, u.id, !0);
+            }, [u, P]);
         return (
-            l.useLayoutEffect(() => {
-                T.current ? null != x && x() : (T.current = !0);
-            }, [x, d.content, f, N, m]),
-            (0, i.jsxs)('div', {
-                id: (0, g.ut)(d),
-                className: r()(a, b.markup, {
-                    [I.messageContent]: !0,
-                    [I.markupRtl]: 'rtl' === o()(d.content),
-                    [E.blockedEdit]: null == S ? void 0 : S.isBlockedEdit,
-                    [E.blockedSend]: !(null == S ? void 0 : S.isBlockedEdit)
+            i.useLayoutEffect(() => {
+                E.current ? null != C && C() : (E.current = !0);
+            }, [C, u.content, m, N, f]),
+            (0, r.jsxs)('div', {
+                id: (0, g.ut)(u),
+                className: o()(l, j.markup, {
+                    [x.messageContent]: !0,
+                    [x.markupRtl]: 'rtl' === s()(u.content),
+                    [y.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
+                    [y.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit)
                 }),
                 children: [
-                    null != m ? m : (0, _.L5)(d, f),
-                    (null == S ? void 0 : S.isBlockedEdit) &&
-                        null != d.timestamp &&
-                        (0, i.jsxs)(i.Fragment, {
+                    null != f ? f : (0, b.L5)(u, m),
+                    (null == P ? void 0 : P.isBlockedEdit) &&
+                        null != u.timestamp &&
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
                                 ' ',
-                                (0, i.jsx)(C.Z, {
-                                    timestamp: d.timestamp,
+                                (0, r.jsx)(_.Z, {
+                                    timestamp: u.timestamp,
                                     isEdited: !0,
                                     isInline: !1,
-                                    children: (0, i.jsxs)('span', {
-                                        className: I.edited,
-                                        children: ['(', v.intl.string(v.t.Z7eEx8), ')']
+                                    children: (0, r.jsxs)('span', {
+                                        className: x.edited,
+                                        children: ['(', v.NW.string(v.t.Z7eEx8), ')']
                                     })
                                 })
                             ]
                         }),
-                    (0, i.jsx)(Z, {
-                        notice: null !== (n = null == S ? void 0 : S.errorMessage) && void 0 !== n ? n : v.intl.string(v.t.zQ69pq),
-                        message: d,
-                        compact: s,
-                        onDismiss: j
+                    (0, r.jsx)(O, {
+                        notice: null !== (n = null == P ? void 0 : P.errorMessage) && void 0 !== n ? n : v.NW.string(v.t.zQ69pq),
+                        message: u,
+                        compact: a,
+                        onDismiss: I
                     })
                 ]
             })
         );
-    }, _.HR);
+    }, b.HR);

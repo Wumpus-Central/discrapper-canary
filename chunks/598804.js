@@ -1,57 +1,57 @@
-n.d(t, { Z: () => T }), n(390547), n(653041), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => O }), n(13667), n(390547), n(653041), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(442837),
     l = n(481060),
-    u = n(208049),
-    c = n(763296),
+    c = n(208049),
+    u = n(763296),
     d = n(409673),
     f = n(592125),
-    _ = n(430824),
-    p = n(496675),
+    p = n(430824),
+    _ = n(496675),
     h = n(594174),
     m = n(74538),
     g = n(710111),
     E = n(231338),
-    v = n(671203);
-let y = 4;
-function I(e) {
-    let t = (0, o.e7)([h.default], () => m.ZP.canUseSoundboardEverywhere(h.default.getCurrentUser())),
-        n = (0, o.e7)([c.Z], () => c.Z.getSoundsForGuild(g.X8)),
-        i = (0, o.Wu)([_.Z], () => _.Z.getGuildIds()),
-        a = r.useMemo(() => p.Z.can(E.Pl.USE_EXTERNAL_SOUNDS, e), [e]);
-    return r.useMemo(() => {
-        let r = [];
-        if (t && a) {
-            let e = i.flatMap((e) => {
+    v = n(411937);
+let b = 4;
+function y(e) {
+    let t = (0, s.e7)([h.default], () => m.ZP.canUseSoundboardEverywhere(h.default.getCurrentUser())),
+        n = (0, s.e7)([u.Z], () => u.Z.getSoundsForGuild(g.X8)),
+        r = (0, s.Wu)([p.Z], () => p.Z.getGuildIds()),
+        o = i.useMemo(() => _.Z.can(E.Pl.USE_EXTERNAL_SOUNDS, e), [e]);
+    return i.useMemo(() => {
+        let i = [];
+        if (t && o) {
+            let e = r.flatMap((e) => {
                 var t, n;
-                return null !== (n = null === (t = c.Z.getSoundsForGuild(e)) || void 0 === t ? void 0 : t.filter((e) => e.available)) && void 0 !== n ? n : [];
+                return null !== (n = null === (t = u.Z.getSoundsForGuild(e)) || void 0 === t ? void 0 : t.filter((e) => e.available)) && void 0 !== n ? n : [];
             });
-            r.push(...s().sampleSize(e, y));
+            i.push(...a().sampleSize(e, b));
         } else if ((null == e ? void 0 : e.guild_id) != null) {
-            var o;
-            let t = null === (o = c.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id)) || void 0 === o ? void 0 : o.filter((e) => e.available);
-            r.push(...s().sampleSize(t, y));
+            var s;
+            let t = null === (s = u.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id)) || void 0 === s ? void 0 : s.filter((e) => e.available);
+            i.push(...a().sampleSize(t, b));
         }
-        return r.length < y && r.push(...s().sampleSize(null != n ? n : [], y - r.length)), r;
-    }, [a, null == e ? void 0 : e.guild_id, n, i, t]);
+        return i.length < b && i.push(...a().sampleSize(null != n ? n : [], b - i.length)), i;
+    }, [o, null == e ? void 0 : e.guild_id, n, r, t]);
 }
-let T = r.memo(function (e) {
+let O = i.memo(function (e) {
     let { channelId: t, onSelectSoundmoji: n } = e,
-        a = (0, o.e7)([c.Z], () => !c.Z.isFetching() && !c.Z.hasFetchedAllSounds(), []),
-        s = (0, o.e7)([f.Z], () => f.Z.getChannel(t)),
-        _ = I(s);
-    return (r.useEffect(() => {
-        (0, u.w)();
-    }, [a]),
-    0 === _.length)
-        ? (0, i.jsx)(l.$jN, {})
-        : (0, i.jsx)('div', {
+        o = (0, s.e7)([u.Z], () => !u.Z.isFetching() && !u.Z.hasFetchedAllSounds(), []),
+        a = (0, s.e7)([f.Z], () => f.Z.getChannel(t)),
+        p = y(a);
+    return (i.useEffect(() => {
+        (0, c.w)();
+    }, [o]),
+    0 === p.length)
+        ? (0, r.jsx)(l.$jN, {})
+        : (0, r.jsx)('div', {
               className: v.rowContainer,
-              children: _.map((e, t) =>
-                  (0, i.jsx)(
+              children: p.map((e, t) =>
+                  (0, r.jsx)(
                       d.ZP,
                       {
                           suppressPlaySound: !0,
@@ -59,7 +59,7 @@ let T = r.memo(function (e) {
                           refreshEnabled: !0,
                           isSoundmoji: !0,
                           sound: e,
-                          channel: s,
+                          channel: a,
                           onSelectItem: (t) => (null == n ? void 0 : n(e, !t.shiftKey))
                       },
                       t

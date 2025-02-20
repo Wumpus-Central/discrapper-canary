@@ -1,9 +1,9 @@
 a.d(t, { o: () => h }), a(47120);
 var n,
     s = a(200651),
-    l = a(192379),
-    i = a(948789),
-    r = a(66037),
+    r = a(192379),
+    l = a(948789),
+    i = a(66037),
     o = a(248108),
     c = a(231338),
     d = a(330711);
@@ -20,8 +20,8 @@ function u(e, t, a) {
         e
     );
 }
-let _ = c.j_.MAIN_NAVIGATION_MENU,
-    N = (e) => [
+let p = c.j_.MAIN_NAVIGATION_MENU,
+    _ = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
@@ -119,66 +119,66 @@ let _ = c.j_.MAIN_NAVIGATION_MENU,
             ]
         }
     ];
-class h extends (n = l.PureComponent) {
+class h extends (n = r.PureComponent) {
     render() {
-        let e = (0, i.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: l, avoidRouter: u } = this.props,
+        let e = (0, l.fQ)(this.context.router),
+            { isMobile: t, isVisible: a, styles: n, TrackClick: r, avoidRouter: u } = this.props,
             { sectionShown: h } = this.state;
-        return N(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((i) =>
-            null != i.links
+        return _(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((l) =>
+            null != l.links
                 ? (0, s.jsx)(
                       o.Z,
                       {
-                          title: i.title,
-                          links: i.links,
-                          isOpen: h === i.title,
+                          title: l.title,
+                          links: l.links,
+                          isOpen: h === l.title,
                           isMobile: t,
                           avoidRouter: u,
-                          TrackClick: l,
+                          TrackClick: r,
                           onClose: this.closeSubNav,
                           onOpen: this.openSubNav
                       },
-                      i.title
+                      l.title
                   )
-                : i.external && null != i.route
+                : l.external && null != l.route
                   ? (0, s.jsx)(
                         'li',
                         {
                             className: n.listItemInactive,
                             role: 'none',
-                            children: (0, s.jsx)(l, {
+                            children: (0, s.jsx)(r, {
                                 className: n.mainNavLink,
-                                eventName: _,
-                                data: i.linkClicked ? { linkClicked: i.linkClicked } : {},
-                                href: i.route,
+                                eventName: p,
+                                data: l.linkClicked ? { linkClicked: l.linkClicked } : {},
+                                href: l.route,
                                 rel: 'me',
-                                children: i.title
+                                children: l.title
                             })
                         },
-                        'external_link_'.concat(i.route)
+                        'external_link_'.concat(l.route)
                     )
-                  : null != i.route
+                  : null != l.route
                     ? (0, s.jsx)(
                           'li',
                           {
-                              className: e(i.route) ? n.listItemActive : n.listItemInactive,
+                              className: e(l.route) ? n.listItemActive : n.listItemInactive,
                               role: 'none',
-                              children: (0, s.jsx)(r.Z, {
+                              children: (0, s.jsx)(i.Z, {
                                   avoidRouter: u,
-                                  to: i.route,
+                                  to: l.route,
                                   from: c.j_.MAIN_NAVIGATION_MENU,
                                   tabIndex: a ? 0 : -1,
                                   role: 'menuitem',
-                                  children: (0, s.jsx)(l, {
+                                  children: (0, s.jsx)(r, {
                                       tag: 'span',
                                       className: n.mainNavLink,
-                                      eventName: _,
-                                      data: { linkClicked: i.linkClicked },
-                                      children: i.title
+                                      eventName: p,
+                                      data: { linkClicked: l.linkClicked },
+                                      children: l.title
                                   })
                               })
                           },
-                          'link_'.concat(i.route)
+                          'link_'.concat(l.route)
                       )
                     : []
         );

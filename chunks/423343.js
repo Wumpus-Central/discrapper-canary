@@ -1,9 +1,9 @@
-n.d(t, { K: () => u }), n(653041);
-var i = n(392711),
-    r = n.n(i),
-    a = n(379649),
-    s = n(126168),
-    o = n(981631);
+n.d(t, { K: () => c }), n(653041);
+var r = n(392711),
+    i = n.n(r),
+    o = n(379649),
+    a = n(126168),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,7 +17,7 @@ function l(e, t, n) {
         e
     );
 }
-class u {
+class c {
     reset(e) {
         (this.current = null), (this.history = []), null != e && this.update(e);
     }
@@ -26,32 +26,32 @@ class u {
             ((this.current = e),
             this.history.push({
                 state: e,
-                startTime: (0, a.zO)()
+                startTime: (0, o.zO)()
             }));
     }
     getVoiceConnectionSuccessStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.zO)(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.zO)(),
             t = this.getStateDurations(e),
-            n = (e) => r().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
+            n = (e) => i().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
         return {
-            state_awaiting_endpoint_ms: n(o.hes.AWAITING_ENDPOINT),
-            state_authenticating_ms: n(o.hes.AUTHENTICATING),
-            state_connecting_ms: n(o.hes.CONNECTING),
-            state_disconnected_ms: n(o.hes.DISCONNECTED),
-            state_ice_checking_ms: n(o.hes.ICE_CHECKING),
-            state_no_route_ms: n(o.hes.NO_ROUTE),
-            state_rtc_connecting_ms: n(o.hes.RTC_CONNECTING),
-            state_rtc_disconnected_ms: n(o.hes.RTC_DISCONNECTED)
+            state_awaiting_endpoint_ms: n(s.hes.AWAITING_ENDPOINT),
+            state_authenticating_ms: n(s.hes.AUTHENTICATING),
+            state_connecting_ms: n(s.hes.CONNECTING),
+            state_disconnected_ms: n(s.hes.DISCONNECTED),
+            state_ice_checking_ms: n(s.hes.ICE_CHECKING),
+            state_no_route_ms: n(s.hes.NO_ROUTE),
+            state_rtc_connecting_ms: n(s.hes.RTC_CONNECTING),
+            state_rtc_disconnected_ms: n(s.hes.RTC_DISCONNECTED)
         };
     }
     getStateDurations(e) {
         if (0 === this.history.length) return [];
-        let t = (0, s.Z)(this.history, (e, t) => ({
+        let t = (0, a.Z)(this.history, (e, t) => ({
                 state: e.state,
                 durationMs: t.startTime - e.startTime
             })),
             n = () => {
-                let t = r().last(this.history);
+                let t = i().last(this.history);
                 return {
                     state: t.state,
                     durationMs: e - t.startTime

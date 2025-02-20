@@ -1,5 +1,5 @@
-var i = n(661233);
-function r(e) {
-    return e == e && !i(e);
+var r = n(661233);
+function i(e) {
+    return e == e && !r(e);
 }
-e.exports = r;
+e.exports = i;

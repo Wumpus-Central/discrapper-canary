@@ -1,166 +1,166 @@
-n.d(t, { Z: () => b }), n(724458), n(653041), n(47120);
+n.d(t, { Z: () => w }), n(230036), n(653041), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    r = n(192379),
+    o = n(120356),
+    l = n.n(o),
     a = n(442837),
     s = n(481060),
-    d = n(410575),
+    c = n(410575),
     u = n(933557),
-    c = n(471445),
-    h = n(318374),
-    _ = n(46145),
-    p = n(814443),
-    f = n(592125),
-    m = n(430824),
-    g = n(496675),
+    d = n(471445),
+    p = n(318374),
+    f = n(46145),
+    h = n(814443),
+    g = n(592125),
+    _ = n(430824),
+    m = n(496675),
     v = n(699516),
-    E = n(594174),
-    x = n(979651),
-    I = n(823379),
-    C = n(981631),
-    S = n(388032),
-    Z = n(181435);
-function y(e) {
+    O = n(594174),
+    b = n(979651),
+    y = n(823379),
+    E = n(981631),
+    x = n(388032),
+    I = n(769254);
+function S(e) {
     let { channel: t, currentVoiceChannel: n } = e,
-        l = (0, c.KS)(t),
-        r = t.id === (null == n ? void 0 : n.id),
-        a = r ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL;
+        r = (0, d.KS)(t),
+        o = t.id === (null == n ? void 0 : n.id),
+        a = o ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL;
     return (0, i.jsxs)('div', {
-        className: Z.channelNameContainer,
+        className: I.channelNameContainer,
         children: [
-            null != l
-                ? (0, i.jsx)(l, {
+            null != r
+                ? (0, i.jsx)(r, {
                       color: a,
                       size: 'xs'
                   })
                 : void 0,
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
-                className: o()(Z.label, Z.channelName),
-                color: r ? 'text-positive' : 'text-normal',
-                children: (0, u.F6)(t, E.default, v.Z)
+                className: l()(I.label, I.channelName),
+                color: o ? 'text-positive' : 'text-normal',
+                children: (0, u.F6)(t, O.default, v.Z)
             })
         ]
     });
 }
-function O(e) {
+function C(e) {
     let { channel: t, currentVoiceChannel: n } = e,
-        l = t.getGuildId(),
-        r = (0, a.e7)([m.Z], () => m.Z.getGuild(l), [l]),
-        o = t.id === (null == n ? void 0 : n.id);
-    return null == r
+        r = t.getGuildId(),
+        o = (0, a.e7)([_.Z], () => _.Z.getGuild(r), [r]),
+        l = t.id === (null == n ? void 0 : n.id);
+    return null == o
         ? null
         : (0, i.jsx)('div', {
-              className: Z.channelMenuSubContainer,
+              className: I.channelMenuSubContainer,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/normal',
-                  color: o ? 'text-positive' : void 0,
-                  children: r.name
+                  color: l ? 'text-positive' : void 0,
+                  children: o.name
               })
           });
 }
-function N(e) {
+function j(e) {
     let { channel: t } = e,
         n = (0, a.Wu)(
-            [x.Z, E.default, p.Z],
+            [b.Z, O.default, h.Z],
             () =>
-                Object.values(x.Z.getVoiceStatesForChannel(t.id))
-                    .map((e) => E.default.getUser(e.userId))
-                    .filter(I.lm)
+                Object.values(b.Z.getVoiceStatesForChannel(t.id))
+                    .map((e) => O.default.getUser(e.userId))
+                    .filter(y.lm)
                     .sort((e, t) => {
-                        var n, i, l, r;
-                        return (null !== (l = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
+                        var n, i, r, o;
+                        return (null !== (r = null === (n = h.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (o = null === (i = h.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== o ? o : 0);
                     }),
             [t.id]
         ),
-        l = t.getGuildId();
-    return null == l
+        r = t.getGuildId();
+    return null == r
         ? null
-        : (0, i.jsx)(h.Z, {
+        : (0, i.jsx)(p.Z, {
               users: n,
-              guildId: l,
+              guildId: r,
               maxUsers: 3,
               size: s.EFr.SIZE_20,
-              overflowCountClassName: Z.overflowCount,
+              overflowCountClassName: I.overflowCount,
               overflowCountVariant: 'text-xxs/semibold',
               disableUserPopout: !0
           });
 }
-function b(e) {
-    let { currentVoiceChannel: t, onClose: n, onSelect: r } = e,
-        o = (0, a.Wu)([v.Z, p.Z], () =>
+function w(e) {
+    let { currentVoiceChannel: t, onClose: n, onSelect: o } = e,
+        l = (0, a.Wu)([v.Z, h.Z], () =>
             v.Z.getFriendIDs().sort((e, t) => {
-                var n, i, l, r;
-                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (l = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== l ? l : 0) - (null !== (r = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== r ? r : 0);
+                var n, i, r, o;
+                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (r = null === (n = h.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (o = null === (i = h.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== o ? o : 0);
             })
         ),
         u = (0, a.Wu)(
-            [E.default],
+            [O.default],
             () =>
-                o.reduce((e, t) => {
-                    let n = E.default.getUser(t);
+                l.reduce((e, t) => {
+                    let n = O.default.getUser(t);
                     return null != n && e.push(n), e;
                 }, []),
-            [o]
+            [l]
         ),
-        c = (0, a.Wu)(
-            [_.Z, x.Z, f.Z, g.Z],
+        d = (0, a.Wu)(
+            [f.Z, b.Z, g.Z, m.Z],
             () => {
                 let e = new Set(
-                        _.Z.getChannelHistory().reduce((e, t) => {
-                            let n = f.Z.getChannel(t);
-                            return null != n && g.Z.can(C.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
+                        f.Z.getChannelHistory().reduce((e, t) => {
+                            let n = g.Z.getChannel(t);
+                            return null != n && m.Z.can(E.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
                     t = u
-                        .map((e) => x.Z.getDiscoverableVoiceStateForUser(e.id))
+                        .map((e) => b.Z.getDiscoverableVoiceStateForUser(e.id))
                         .reduce((t, n) => {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
-                            let l = f.Z.getChannel(i);
-                            return null != l && g.Z.can(C.Plq.CONNECT, l) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            let r = g.Z.getChannel(i);
+                            return null != r && m.Z.can(E.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
-                return [...Array.from(e), ...t].map((e) => f.Z.getChannel(e)).filter(I.lm);
+                return [...Array.from(e), ...t].map((e) => g.Z.getChannel(e)).filter(y.lm);
             },
             [u]
         ),
-        h = l.useCallback(
+        p = r.useCallback(
             (e) => {
-                r(e), n();
+                o(e), n();
             },
-            [r, n]
+            [o, n]
         );
-    return (0, i.jsx)(d.Z, {
-        section: C.jXE.CONTEXT_MENU,
+    return (0, i.jsx)(c.Z, {
+        section: E.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(s.v2r, {
             onSelect: n,
             navId: 'manage-streams',
             onClose: n,
-            'aria-label': S.intl.string(S.t['+9QSnp']),
+            'aria-label': x.NW.string(x.t['+9QSnp']),
             children: (0, i.jsx)(s.kSQ, {
-                children: c.map((e) =>
+                children: d.map((e) =>
                     (0, i.jsx)(
                         s.sNh,
                         {
                             id: e.id,
-                            label: (0, i.jsx)(y, {
+                            label: (0, i.jsx)(S, {
                                 channel: e,
                                 currentVoiceChannel: t
                             }),
-                            subtext: (0, i.jsx)(O, {
+                            subtext: (0, i.jsx)(C, {
                                 channel: e,
                                 currentVoiceChannel: t
                             }),
                             icon: (0, i.jsx)('div', {
-                                className: Z.icon,
-                                children: (0, i.jsx)(N, {
+                                className: I.icon,
+                                children: (0, i.jsx)(j, {
                                     channel: e,
                                     currentVoiceChannel: t
                                 })
                             }),
                             subtextLineClamp: 1,
-                            action: () => h(e)
+                            action: () => p(e)
                         },
                         e.id
                     )

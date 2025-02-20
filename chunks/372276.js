@@ -1,49 +1,49 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => c }), n(47120);
+var r = n(200651);
 n(192379);
-var r = n(278074),
-    a = n(26033),
-    s = n(170187),
-    o = n(388032),
-    l = n(21478);
-function u(e) {
+var i = n(278074),
+    o = n(26033),
+    a = n(170187),
+    s = n(388032),
+    l = n(967616);
+function c(e) {
     let { entry: t, textClassName: n } = e,
-        { message: u, title: c } = (0, r.EQ)(t)
-            .when(a.dX, (e) => {
+        { message: c, title: u } = (0, i.EQ)(t)
+            .when(o.dX, (e) => {
                 let { extra: t } = e;
                 return {
-                    message: o.t['wgtd/f'],
+                    message: s.t['wgtd/f'],
                     title: t.game_name
                 };
             })
-            .when(a.Mq, (e) => {
+            .when(o.Mq, (e) => {
                 let { extra: t } = e;
                 return {
-                    message: o.t['wgtd/f'],
+                    message: s.t['wgtd/f'],
                     title: t.activity_name
                 };
             })
-            .when(a.y0, (e) => {
+            .when(o.y0, (e) => {
                 let { extra: t } = e;
                 return {
-                    message: o.t.nCCdMD,
+                    message: s.t.nCCdMD,
                     title: t.media_title
                 };
             })
-            .when(a.dU, (e) => {
+            .when(o.dU, (e) => {
                 var t, n;
-                let { extra: i } = e;
+                let { extra: r } = e;
                 return {
-                    message: o.t.PYEeFh,
-                    title: null === (n = i.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.title
+                    message: s.t.PYEeFh,
+                    title: null === (n = r.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.title
                 };
             })
             .exhaustive();
-    return (0, i.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: l.container,
-        children: (0, i.jsx)(s.Z, {
+        children: (0, r.jsx)(a.Z, {
             className: n,
-            children: o.intl.format(u, { title: c })
+            children: s.NW.format(c, { title: u })
         })
     });
 }

@@ -1,68 +1,68 @@
-var i = n(444675);
+var r = n(444675);
 !(function (e, t) {
     if (!e.setImmediate) {
         var n,
-            r = 1,
-            a = {},
-            s = !1,
-            o = e.document,
+            i = 1,
+            o = {},
+            a = !1,
+            s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : o && 'onreadystatechange' in o.createElement('script') ? g() : E(), (l.setImmediate = u), (l.clearImmediate = c);
+        (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? p() : _() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u);
     }
-    function u(e) {
+    function c(e) {
         'function' != typeof e && (e = Function('' + e));
-        for (var t = Array(arguments.length - 1), i = 0; i < t.length; i++) t[i] = arguments[i + 1];
-        var s = {
+        for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
+        var a = {
             callback: e,
             args: t
         };
-        return (a[r] = s), n(r), r++;
+        return (o[i] = a), n(i), i++;
     }
-    function c(e) {
-        delete a[e];
+    function u(e) {
+        delete o[e];
     }
     function d(e) {
         var n = e.callback,
-            i = e.args;
-        switch (i.length) {
+            r = e.args;
+        switch (r.length) {
             case 0:
                 n();
                 break;
             case 1:
-                n(i[0]);
+                n(r[0]);
                 break;
             case 2:
-                n(i[0], i[1]);
+                n(r[0], r[1]);
                 break;
             case 3:
-                n(i[0], i[1], i[2]);
+                n(r[0], r[1], r[2]);
                 break;
             default:
-                n.apply(t, i);
+                n.apply(t, r);
         }
     }
     function f(e) {
-        if (s) setTimeout(f, 0, e);
+        if (a) setTimeout(f, 0, e);
         else {
-            var t = a[e];
+            var t = o[e];
             if (t) {
-                s = !0;
+                a = !0;
                 try {
                     d(t);
                 } finally {
-                    c(e), (s = !1);
+                    u(e), (a = !1);
                 }
             }
         }
     }
-    function _() {
+    function p() {
         n = function (e) {
-            i.nextTick(function () {
+            r.nextTick(function () {
                 f(e);
             });
         };
     }
-    function p() {
+    function _() {
         if (e.postMessage && !e.importScripts) {
             var t = !0,
                 n = e.onmessage;
@@ -78,10 +78,10 @@ var i = n(444675);
     }
     function h() {
         var t = 'setImmediate$' + Math.random() + '$',
-            i = function (n) {
+            r = function (n) {
                 n.source === e && 'string' == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
             };
-        e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
+        e.addEventListener ? e.addEventListener('message', r, !1) : e.attachEvent('onmessage', r),
             (n = function (n) {
                 e.postMessage(t + n, '*');
             });
@@ -96,9 +96,9 @@ var i = n(444675);
             });
     }
     function g() {
-        var e = o.documentElement;
+        var e = s.documentElement;
         n = function (t) {
-            var n = o.createElement('script');
+            var n = s.createElement('script');
             (n.onreadystatechange = function () {
                 f(t), (n.onreadystatechange = null), e.removeChild(n), (n = null);
             }),

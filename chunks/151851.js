@@ -1,66 +1,66 @@
-n.d(t, { Z: () => O });
-var i = n(200651);
+n.d(t, { Z: () => R });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(481060),
+var i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    s = n(481060),
     l = n(350810),
-    u = n(579806),
-    c = n(40851),
+    c = n(579806),
+    u = n(40851),
     d = n(358221),
     f = n(754347),
-    _ = n(428548),
-    p = n(718759),
+    p = n(428548),
+    _ = n(718759),
     h = n(679219),
     m = n(835225),
     g = n(939039),
     E = n(117795),
     v = n(358085),
-    y = n(998502),
-    I = n(388032),
-    T = n(641513);
-let b = '#ffffff',
-    S = (e) => y.ZP.close(e),
-    A = (e) => y.ZP.minimize(e),
+    b = n(998502),
+    y = n(388032),
+    O = n(550164);
+let S = '#ffffff',
+    I = (e) => b.ZP.close(e),
+    T = (e) => b.ZP.minimize(e),
     N = (e, t) => {
-        (0, v.isMac)() && !t.altKey ? y.ZP.fullscreen(e) : y.ZP.maximize(e);
+        (0, v.isMac)() && !t.altKey ? b.ZP.fullscreen(e) : b.ZP.maximize(e);
     },
-    C = (e) => {
-        let { children: t, windowKey: n, themeOverride: r, hasOpenLayer: s } = e,
-            l = (0, i.jsx)(o.P3F, {
-                className: T.winButtonClose,
-                onClick: () => S(n),
-                'aria-label': I.intl.string(I.t.ZdNUj4),
+    A = (e) => {
+        let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: a } = e,
+            l = (0, r.jsx)(s.P3F, {
+                className: O.winButtonClose,
+                onClick: () => I(n),
+                'aria-label': y.NW.string(y.t.ZdNUj4),
                 tabIndex: -1,
-                children: (0, i.jsx)(_.Z, {})
+                children: (0, r.jsx)(p.Z, {})
             }),
-            u = (0, i.jsx)(o.P3F, {
-                className: T.winButtonMinMax,
+            c = (0, r.jsx)(s.P3F, {
+                className: O.winButtonMinMax,
                 onClick: (e) => N(n, e),
-                'aria-label': I.intl.string(I.t.G1u0hI),
+                'aria-label': y.NW.string(y.t.G1u0hI),
                 tabIndex: -1,
-                children: (0, i.jsx)(h.Z, {})
+                children: (0, r.jsx)(h.Z, {})
             }),
-            c = (0, i.jsx)(o.P3F, {
-                className: T.winButtonMinMax,
-                onClick: () => A(n),
-                'aria-label': I.intl.string(I.t.CxOC4e),
+            u = (0, r.jsx)(s.P3F, {
+                className: O.winButtonMinMax,
+                onClick: () => T(n),
+                'aria-label': y.NW.string(y.t.CxOC4e),
                 tabIndex: -1,
-                children: (0, i.jsx)(g.Z, {})
+                children: (0, r.jsx)(g.Z, {})
             }),
-            d = (0, i.jsxs)(i.Fragment, {
-                children: [l, u, c]
+            d = (0, r.jsxs)(r.Fragment, {
+                children: [l, c, u]
             });
-        return (0, i.jsx)(o.f6W, {
-            theme: r,
+        return (0, r.jsx)(s.f6W, {
+            theme: i,
             children: (e) =>
-                (0, i.jsxs)('div', {
-                    className: a()(T.typeWindows, e, { [T.withBackgroundOverride]: !s }),
+                (0, r.jsxs)('div', {
+                    className: o()(O.typeWindows, e, { [O.withBackgroundOverride]: !a }),
                     children: [
-                        (0, i.jsx)('div', {
-                            className: T.wordmarkWindows,
-                            children: (0, i.jsx)(f.Z, {})
+                        (0, r.jsx)('div', {
+                            className: O.wordmarkWindows,
+                            children: (0, r.jsx)(f.Z, {})
                         }),
                         t,
                         d
@@ -68,74 +68,74 @@ let b = '#ffffff',
                 })
         });
     },
-    R = (e) => {
-        let { focused: t, windowKey: n, frame: r, themeOverride: s, hasOpenLayer: l, children: c } = e;
-        return (0, i.jsx)(o.f6W, {
-            theme: s,
+    C = (e) => {
+        let { focused: t, windowKey: n, frame: i, themeOverride: a, hasOpenLayer: l, children: u } = e;
+        return (0, r.jsx)(s.f6W, {
+            theme: a,
             children: (e) =>
-                (0, i.jsxs)(o.P3F, {
-                    className: a()(r ? T.typeMacOSWithFrame : T.typeMacOS, t ? T.focused : T.unfocused, e, { [T.withBackgroundOverride]: !l }),
-                    onDoubleClick: () => y.ZP.maximize(n),
+                (0, r.jsxs)(s.P3F, {
+                    className: o()(i ? O.typeMacOSWithFrame : O.typeMacOS, t ? O.focused : O.unfocused, e, { [O.withBackgroundOverride]: !l }),
+                    onDoubleClick: () => b.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
-                        u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
-                            ? c
-                            : (0, i.jsxs)('div', {
-                                  className: T.macButtons,
+                        c.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
+                            ? u
+                            : (0, r.jsxs)('div', {
+                                  className: O.macButtons,
                                   children: [
-                                      (0, i.jsx)(o.P3F, {
-                                          className: T.macButtonClose,
-                                          onClick: () => S(n),
-                                          'aria-label': I.intl.string(I.t.ZdNUj4),
+                                      (0, r.jsx)(s.P3F, {
+                                          className: O.macButtonClose,
+                                          onClick: () => I(n),
+                                          'aria-label': y.NW.string(y.t.ZdNUj4),
                                           tabIndex: -1,
-                                          children: (0, i.jsx)(p.Z, { color: '#4c0000' })
+                                          children: (0, r.jsx)(_.Z, { color: '#4c0000' })
                                       }),
-                                      (0, i.jsx)(o.P3F, {
-                                          className: T.macButtonMinimize,
-                                          onClick: () => A(n),
-                                          'aria-label': I.intl.string(I.t.CxOC4e),
+                                      (0, r.jsx)(s.P3F, {
+                                          className: O.macButtonMinimize,
+                                          onClick: () => T(n),
+                                          'aria-label': y.NW.string(y.t.CxOC4e),
                                           tabIndex: -1,
-                                          children: (0, i.jsx)(E.Z, { color: '#975500' })
+                                          children: (0, r.jsx)(E.Z, { color: '#975500' })
                                       }),
-                                      (0, i.jsx)(o.P3F, {
-                                          className: T.macButtonMaximize,
+                                      (0, r.jsx)(s.P3F, {
+                                          className: O.macButtonMaximize,
                                           onClick: (e) => N(n, e),
-                                          'aria-label': I.intl.string(I.t['2nM3Pj']),
+                                          'aria-label': y.NW.string(y.t['2nM3Pj']),
                                           tabIndex: -1,
-                                          children: (0, i.jsx)(m.Z, { color: '#006500' })
+                                          children: (0, r.jsx)(m.Z, { color: '#006500' })
                                       })
                                   ]
                               }),
-                        r
-                            ? (0, i.jsx)('div', {
-                                  className: T.wordmarkMacOS,
-                                  children: (0, i.jsx)(f.Z, { color: b })
+                        i
+                            ? (0, r.jsx)('div', {
+                                  className: O.wordmarkMacOS,
+                                  children: (0, r.jsx)(f.Z, { color: S })
                               })
                             : null
                     ]
                 })
         });
     };
-function O(e) {
-    let { focused: t, type: n, windowKey: r, macOSFrame: a = !1, themeOverride: o } = e,
-        u = (0, c.bp)(),
-        f = (0, s.e7)([d.Z], () => d.Z.isFullscreenInContext(u)),
-        _ = (0, l.Z)();
+function R(e) {
+    let { focused: t, type: n, windowKey: i, macOSFrame: o = !1, themeOverride: s } = e,
+        c = (0, u.bp)(),
+        f = (0, a.e7)([d.Z], () => d.Z.isFullscreenInContext(c)),
+        p = (0, l.Z)();
     if (f) return null;
     switch (n) {
         case v.PlatformTypes.WINDOWS:
-            return (0, i.jsx)(C, {
-                windowKey: r,
-                themeOverride: o,
-                hasOpenLayer: _
+            return (0, r.jsx)(A, {
+                windowKey: i,
+                themeOverride: s,
+                hasOpenLayer: p
             });
         case v.PlatformTypes.OSX:
-            return (0, i.jsx)(R, {
+            return (0, r.jsx)(C, {
                 focused: t,
-                windowKey: r,
-                frame: a,
-                themeOverride: o,
-                hasOpenLayer: _
+                windowKey: i,
+                frame: o,
+                themeOverride: s,
+                hasOpenLayer: p
             });
         default:
             return null;

@@ -1,48 +1,48 @@
 n.d(t, { l: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(793030),
-    l = n(578053),
-    s = n(715224),
-    a = n(388032),
-    o = n(25136);
+var i = n(793030),
+    s = n(578053),
+    a = n(715224),
+    l = n(388032),
+    o = n(962428);
 function c(e) {
     let { canManageGuild: t, guild: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(r.X6, {
+            (0, r.jsx)(i.X6, {
                 variant: 'text-xs/bold',
-                color: 'text-muted',
+                color: 'interactive-normal',
                 className: o.subtitle,
-                children: a.intl.string(a.t.Cv6ANz)
+                children: l.NW.string(l.t.Cv6ANz)
             }),
-            (0, i.jsx)(s.W, {
+            (0, r.jsx)(a.W, {
                 canManageGuild: t,
                 guild: n,
                 switchClassName: o.switch
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.systemChannel,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: o.halfWidth,
                         children: [
-                            (0, i.jsx)(r.X6, {
+                            (0, r.jsx)(i.X6, {
                                 variant: 'text-xs/bold',
-                                color: 'text-muted',
+                                color: 'interactive-normal',
                                 className: o.subtitle,
-                                children: a.intl.string(a.t.NASFnp)
+                                children: l.NW.string(l.t.NASFnp)
                             }),
-                            (0, i.jsx)(r.xv, {
+                            (0, r.jsx)(i.xv, {
                                 variant: 'text-sm/medium',
-                                color: 'header-secondary',
-                                children: a.intl.string(a.t.BT9zR0)
+                                color: 'text-secondary',
+                                children: l.NW.string(l.t.BT9zR0)
                             })
                         ]
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: o.halfWidth,
-                        children: (0, i.jsx)(l.u, {
+                        children: (0, r.jsx)(s.u, {
                             canManageGuild: t,
                             guildId: n.id,
                             systemChannelId: n.systemChannelId

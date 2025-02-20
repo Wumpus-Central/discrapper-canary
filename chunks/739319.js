@@ -1,54 +1,54 @@
 n.d(t, { Z: () => m }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(454585),
-    d = n(572004),
-    c = n(388032),
-    u = n(228732);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(454585),
+    c = n(572004),
+    d = n(388032),
+    u = n(103404);
 function m(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: r, is_localized: m }
+                data: { title: t, body: n, sms: i, is_localized: m }
             }
         } = e,
-        [x, _] = i.useState(!1),
-        h = i.useRef(o.Z.reactParserFor(o.Z.defaultRules));
+        [x, p] = l.useState(!1),
+        f = l.useRef(s.Z.reactParserFor(s.Z.defaultRules));
     return m
-        ? (0, l.jsxs)('div', {
+        ? (0, r.jsxs)('div', {
               className: u.container,
               children: [
-                  (0, l.jsx)(s.X6q, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-secondary',
                       className: u.header,
                       children: t
                   }),
-                  (0, l.jsx)(s.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
                       className: u.bodyText,
-                      children: h.current(n)
+                      children: f.current(n)
                   }),
-                  (0, l.jsx)('div', {
-                      children: (0, l.jsxs)('div', {
+                  (0, r.jsx)('div', {
+                      children: (0, r.jsxs)('div', {
                           className: a()(u.smsNumberContainer, { [u.copied]: x }),
                           children: [
-                              (0, l.jsx)(s.Text, {
+                              (0, r.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   selectable: !0,
                                   className: u.smsNumberText,
-                                  children: r
+                                  children: i
                               }),
-                              (0, l.jsx)(s.zxk, {
-                                  size: s.zxk.Sizes.SMALL,
+                              (0, r.jsx)(o.zxk, {
+                                  size: o.zxk.Sizes.SMALL,
                                   className: u.__invalid_trailingButton,
                                   onClick: () => {
-                                      (0, d.JG)(r) && _(!0);
+                                      (0, c.JG)(i) && p(!0);
                                   },
-                                  color: s.zxk.Colors.PRIMARY,
-                                  children: x ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)
+                                  color: o.zxk.Colors.PRIMARY,
+                                  children: x ? d.NW.string(d.t['t5VZ8/']) : d.NW.string(d.t.OpuAlJ)
                               })
                           ]
                       })

@@ -1,41 +1,41 @@
 n.d(t, { Z: () => d });
-var i = n(544891),
-    r = n(780384),
-    a = n(668781),
-    s = n(881052),
-    o = n(981631),
+var r = n(544891),
+    i = n(780384),
+    o = n(668781),
+    a = n(881052),
+    s = n(981631),
     l = n(388032);
-async function u(e) {
-    let { userId: t, applicationId: n, onSuccess: r, type: u } = e;
+async function c(e) {
+    let { userId: t, applicationId: n, onSuccess: i, type: c } = e;
     try {
-        await i.tn.put({
-            url: o.ANM.USER_GAME_RELATIONSHIP(t, n),
-            body: { type: u },
+        await r.tn.put({
+            url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
+            body: { type: c },
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            r();
+            i();
     } catch (t) {
-        let e = new s.Hx(t);
-        a.Z.show({
-            title: l.intl.string(l.t['328j/P']),
+        let e = new a.Hx(t);
+        o.Z.show({
+            title: l.NW.string(l.t['328j/P']),
             body: e.getAnyErrorMessage()
         });
     }
 }
-async function c(e) {
-    let { userId: t, applicationId: n, onSuccess: r } = e;
+async function u(e) {
+    let { userId: t, applicationId: n, onSuccess: i } = e;
     try {
-        await i.tn.del({
-            url: o.ANM.USER_GAME_RELATIONSHIP(t, n),
+        await r.tn.del({
+            url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            r();
+            i();
     } catch (t) {
-        let e = new s.Hx(t);
-        a.Z.show({
-            title: l.intl.string(l.t['328j/P']),
+        let e = new a.Hx(t);
+        o.Z.show({
+            title: l.NW.string(l.t['328j/P']),
             body: e.getAnyErrorMessage()
         });
     }
@@ -43,32 +43,32 @@ async function c(e) {
 let d = {
     removeGameFriend: async function (e) {
         let { userId: t, applicationId: n } = e;
-        await c({
+        await u({
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                r.uv.announce(l.intl.string(l.t.zRf8cH));
+                i.uv.announce(l.NW.string(l.t.zRf8cH));
             }
         });
     },
     acceptGameFriendRequest: async function (e) {
         let { userId: t, applicationId: n } = e;
-        await u({
+        await c({
             userId: t,
             applicationId: n,
-            type: o.OGo.FRIEND,
+            type: s.OGo.FRIEND,
             onSuccess: () => {
-                r.uv.announce(l.intl.string(l.t.taJiub));
+                i.uv.announce(l.NW.string(l.t.taJiub));
             }
         });
     },
     cancelGameFriendRequest: async function (e) {
         let { userId: t, applicationId: n } = e;
-        await c({
+        await u({
             userId: t,
             applicationId: n,
             onSuccess: () => {
-                r.uv.announce(l.intl.string(l.t.XMf21t));
+                i.uv.announce(l.NW.string(l.t.XMf21t));
             }
         });
     }

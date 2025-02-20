@@ -1,11 +1,11 @@
 n.d(t, { Z: () => f }), n(789020), n(47120);
-var i = n(533800),
-    r = n(147913),
-    a = n(82085),
-    s = n(630388),
-    o = n(461014),
+var r = n(533800),
+    i = n(147913),
+    o = n(82085),
+    a = n(630388),
+    s = n(461014),
     l = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,19 +18,19 @@ function u(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     var t, n;
-    let { guild: r } = e.invite,
-        u = null !== (n = e.invite.flags) && void 0 !== n ? n : 0;
-    if (null != r && (null == r ? void 0 : null === (t = r.features) || void 0 === t ? void 0 : t.includes(l.oNc.HUB))) {
-        a.Z.onOpenHubInvite(e.invite);
+    let { guild: i } = e.invite,
+        c = null !== (n = e.invite.flags) && void 0 !== n ? n : 0;
+    if (null != i && (null == i ? void 0 : null === (t = i.features) || void 0 === t ? void 0 : t.includes(l.oNc.HUB))) {
+        o.Z.onOpenHubInvite(e.invite);
         return;
     }
-    !((0, s.yE)(u, i.$.IS_GUEST_INVITE) || (0, s.yE)(u, i.$.IS_APPLICATION_BYPASS)) && null != r && (0, o.u)(r) && (0, o._)(r.id);
+    !((0, a.yE)(c, r.$.IS_GUEST_INVITE) || (0, a.yE)(c, r.$.IS_APPLICATION_BYPASS)) && null != i && (0, s.u)(i) && (0, s._)(i.id);
 }
-class d extends r.Z {
+class d extends i.Z {
     constructor(...e) {
-        super(...e), u(this, 'actions', { INVITE_ACCEPT_SUCCESS: c });
+        super(...e), c(this, 'actions', { INVITE_ACCEPT_SUCCESS: u });
     }
 }
 let f = new d();

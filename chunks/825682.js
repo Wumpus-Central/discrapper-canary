@@ -1,53 +1,53 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => h });
+var r = n(200651);
 n(192379);
-var l = n(468363),
-    r = n(297369),
-    a = n(956221),
-    s = n(771173),
-    o = n(372276),
-    d = n(565640),
-    c = n(51144),
-    u = n(388032),
-    h = n(116324);
-let m = function (e) {
-    let { hovered: t, activities: n, applicationStream: m, status: p, user: g, userIgnored: _ } = e,
-        f = (0, d.Z)(null == g ? void 0 : g.id, 'StatusText'),
-        { voiceActivityStatusEnabled: E } = (0, l.U)({ location: 'StatusText' }),
-        { voiceChannel: I } = (0, a.Z)({
-            userId: null == g ? void 0 : g.id,
+var i = n(468363),
+    l = n(297369),
+    o = n(956221),
+    a = n(771173),
+    s = n(372276),
+    c = n(565640),
+    u = n(51144),
+    d = n(388032),
+    p = n(321036);
+let h = function (e) {
+    let { hovered: t, activities: n, applicationStream: h, status: g, user: f, userIgnored: m } = e,
+        b = (0, c.Z)(null == f ? void 0 : f.id, 'StatusText'),
+        { voiceActivityStatusEnabled: _ } = (0, i.U)({ location: 'StatusText' }),
+        { voiceChannel: E } = (0, o.Z)({
+            userId: null == f ? void 0 : f.id,
             surface: 'status-text'
         }),
-        C = E ? I : void 0;
-    return _
-        ? (0, i.jsx)('div', {
-              className: h.text,
-              children: u.intl.string(u.t.tFY5ZW)
+        O = _ ? E : void 0;
+    return m
+        ? (0, r.jsx)('div', {
+              className: p.text,
+              children: d.NW.string(d.t.tFY5ZW)
           })
-        : (0, r.Z)({
+        : (0, l.Z)({
                 activities: n,
-                status: p,
-                applicationStream: m,
-                voiceChannel: C
+                status: g,
+                applicationStream: h,
+                voiceChannel: O
             })
-          ? (0, i.jsx)(s.Z, {
+          ? (0, r.jsx)(a.Z, {
                 location: 'StatusText',
-                textClassName: h.text,
-                emojiClassName: h.customStatusEmoji,
+                textClassName: p.text,
+                emojiClassName: p.customStatusEmoji,
                 activities: n,
-                applicationStream: m,
-                voiceChannel: C,
+                applicationStream: h,
+                voiceChannel: O,
                 animate: t,
-                user: g,
+                user: f,
                 textSize: 'sm'
             })
-          : null != f
-            ? (0, i.jsx)(o.Z, {
-                  textClassName: h.text,
-                  entry: f
+          : null != b
+            ? (0, r.jsx)(s.Z, {
+                  textClassName: p.text,
+                  entry: b
               })
-            : (0, i.jsx)('div', {
-                  className: h.text,
-                  children: (0, c.u5)(p)
+            : (0, r.jsx)('div', {
+                  className: p.text,
+                  children: (0, u.u5)(g)
               });
 };

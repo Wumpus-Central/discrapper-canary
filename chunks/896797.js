@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
-var i,
-    r = n(442837),
-    a = n(433517),
-    s = n(570140),
-    o = n(981631);
+var r,
+    i = n(442837),
+    o = n(433517),
+    a = n(570140),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,48 +17,48 @@ function l(e, t, n) {
         e
     );
 }
-let u = {
+let c = {
         lastViewedPath: null,
         lastViewedNonVoicePath: null
     },
-    c = u,
+    u = c,
     d = 'LAST_VIEWED_PATH';
 function f(e) {
     let { path: t } = e;
-    return (c.lastViewedPath = t), !0;
+    return (u.lastViewedPath = t), !0;
 }
-function _(e) {
+function p(e) {
     let { path: t } = e;
-    return (c.lastViewedNonVoicePath = t), !0;
+    return (u.lastViewedNonVoicePath = t), !0;
 }
-class p extends (i = r.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u;
-        c = null != e ? e : u;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c;
+        u = null != e ? e : c;
     }
     get defaultRoute() {
-        return o.Z5c.ME;
+        return s.Z5c.ME;
     }
     get lastNonVoiceRoute() {
         var e;
-        return null !== (e = c.lastViewedNonVoicePath) && void 0 !== e ? e : o.Z5c.ME;
+        return null !== (e = u.lastViewedNonVoicePath) && void 0 !== e ? e : s.Z5c.ME;
     }
     get fallbackRoute() {
-        return o.Z5c.ME;
+        return s.Z5c.ME;
     }
     getState() {
-        return c;
+        return u;
     }
 }
-l(p, 'displayName', 'DefaultRouteStore'),
-    l(p, 'persistKey', 'DefaultRouteStore'),
-    l(p, 'migrations', [
+l(_, 'displayName', 'DefaultRouteStore'),
+    l(_, 'persistKey', 'DefaultRouteStore'),
+    l(_, 'migrations', [
         () => {
-            let e = a.K.get(d, null);
-            return a.K.remove(d), { lastViewedPath: e };
+            let e = o.K.get(d, null);
+            return o.K.remove(d), { lastViewedPath: e };
         }
     ]);
-let h = new p(s.Z, {
+let h = new _(a.Z, {
     SAVE_LAST_ROUTE: f,
-    SAVE_LAST_NON_VOICE_ROUTE: _
+    SAVE_LAST_NON_VOICE_ROUTE: p
 });

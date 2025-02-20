@@ -1,188 +1,188 @@
-n.d(t, { Z: () => x });
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(692547),
-    s = n(481060),
-    o = n(906732),
-    d = n(812206),
-    c = n(925329),
-    u = n(79712),
-    h = n(171368),
-    m = n(594174),
-    p = n(626135),
-    g = n(51144),
-    _ = n(743056),
-    f = n(321488),
-    E = n(417183),
-    I = n(170245),
-    C = n(981631),
+n.d(t, { Z: () => T });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(692547),
+    a = n(481060),
+    s = n(906732),
+    c = n(812206),
+    u = n(925329),
+    d = n(79712),
+    p = n(171368),
+    h = n(594174),
+    g = n(626135),
+    f = n(51144),
+    m = n(743056),
+    b = n(321488),
+    _ = n(417183),
+    E = n(170245),
+    O = n(981631),
     N = n(388032),
-    v = n(715137);
-function T(e) {
+    v = n(920411);
+function y(e) {
     var t;
-    let { user: n, applicationId: r, isGameRelationship: o, active: d } = e,
-        c = (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
-        { acceptFriendRequest: u, cancelFriendRequest: h } = (0, _.u)({
+    let { user: n, applicationId: l, isGameRelationship: s, active: c } = e,
+        u = (null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
+        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, m.u)({
             userId: n.id,
-            applicationId: r,
-            isGameRelationship: o,
+            applicationId: l,
+            isGameRelationship: s,
             location: 'Friends'
         }),
-        p = l.useCallback(
+        g = i.useCallback(
             (e) => {
-                e.stopPropagation(), u();
+                e.stopPropagation(), d();
             },
-            [u]
+            [d]
         ),
-        g = l.useCallback(
+        f = i.useCallback(
             (e) => {
-                e.stopPropagation(), h();
+                e.stopPropagation(), p();
             },
-            [h]
+            [p]
         );
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            c &&
-                (0, i.jsx)('div', {
+            u &&
+                (0, r.jsx)('div', {
                     className: v.staffIndicator,
-                    children: (0, i.jsx)(s.IGR, {
-                        color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: N.intl.string(N.t.oMx98P)
+                    children: (0, r.jsx)(a.IGR, {
+                        color: o.Z.unsafe_rawColors.BRAND_500.css,
+                        text: N.NW.string(N.t.oMx98P)
                     })
                 }),
-            (0, i.jsx)(f.Z, {
-                icon: s.dz2,
-                actionType: f.Z.ActionTypes.ACCEPT,
-                tooltip: N.intl.string(N.t.ZcibdX),
-                onClick: p,
-                shouldHighlight: d
-            }),
-            (0, i.jsx)(f.Z, {
-                icon: s.Dio,
-                actionType: f.Z.ActionTypes.DENY,
-                tooltip: N.intl.string(N.t.xuio0N),
+            (0, r.jsx)(b.Z, {
+                icon: a.dz2,
+                actionType: b.Z.ActionTypes.ACCEPT,
+                tooltip: N.NW.string(N.t.ZcibdX),
                 onClick: g,
-                shouldHighlight: d
+                shouldHighlight: c
+            }),
+            (0, r.jsx)(b.Z, {
+                icon: a.Dio,
+                actionType: b.Z.ActionTypes.DENY,
+                tooltip: N.NW.string(N.t.xuio0N),
+                onClick: f,
+                shouldHighlight: c
             })
         ]
     });
 }
-function S(e) {
-    let { userId: t, applicationId: n, isGameRelationship: r, active: a } = e,
-        { cancelFriendRequest: o } = (0, _.u)({
+function I(e) {
+    let { userId: t, applicationId: n, isGameRelationship: l, active: o } = e,
+        { cancelFriendRequest: s } = (0, m.u)({
             userId: t,
             applicationId: n,
-            isGameRelationship: r,
+            isGameRelationship: l,
             location: 'Friends'
         }),
-        d = l.useCallback(
+        c = i.useCallback(
             (e) => {
-                e.stopPropagation(), o();
+                e.stopPropagation(), s();
             },
-            [o]
+            [s]
         );
-    return (0, i.jsx)(f.Z, {
-        icon: s.Dio,
-        actionType: f.Z.ActionTypes.DENY,
-        tooltip: N.intl.string(N.t.eaq81d),
-        onClick: d,
-        shouldHighlight: a
+    return (0, r.jsx)(b.Z, {
+        icon: a.Dio,
+        actionType: b.Z.ActionTypes.DENY,
+        tooltip: N.NW.string(N.t.eaq81d),
+        onClick: c,
+        shouldHighlight: o
     });
 }
-function A(e) {
-    let { disambiguateGameRelationships: t, isGameRelationship: n, applicationId: a, userTag: o } = e,
-        h = l.useMemo(() => (t ? (n ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY)) : o), [t, n, o]),
-        m = (0, r.e7)([d.Z], () => (null != a ? d.Z.getApplication(a) : null));
-    return (0, i.jsxs)('div', {
+function C(e) {
+    let { disambiguateGameRelationships: t, isGameRelationship: n, applicationId: o, userTag: s } = e,
+        p = i.useMemo(() => (t ? (n ? N.NW.string(N.t.ujfP6e) : N.NW.string(N.t.yltuhY)) : s), [t, n, s]),
+        h = (0, l.e7)([c.Z], () => (null != o ? c.Z.getApplication(o) : null));
+    return (0, r.jsxs)('div', {
         className: v.applicationSublabel,
         children: [
-            (0, i.jsx)(s.Text, {
-                variant: 'text-xs/medium',
+            (0, r.jsx)(a.Text, {
+                variant: 'text-sm/medium',
                 color: 'text-secondary',
-                children: h
+                children: p
             }),
-            null != m &&
-                (0, i.jsxs)(i.Fragment, {
+            null != h &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(u.Z, {
+                        (0, r.jsx)(d.Z, {
                             height: 2,
                             width: 2
                         }),
-                        (0, i.jsx)(c.Z, {
-                            game: m,
-                            size: c.Z.Sizes.XXSMALL
+                        (0, r.jsx)(u.Z, {
+                            game: h,
+                            size: u.Z.Sizes.XXSMALL
                         }),
-                        (0, i.jsx)(s.Text, {
-                            variant: 'text-xs/medium',
+                        (0, r.jsx)(a.Text, {
+                            variant: 'text-sm/medium',
                             color: 'text-secondary',
-                            children: m.name
+                            children: h.name
                         })
                     ]
                 })
         ]
     });
 }
-function Z(e) {
-    let { user: t, hovered: n, status: l, disambiguateGameRelationships: r, isGameRelationship: a, applicationId: s } = e,
-        o = g.ZP.useUserTag(t);
-    return (0, i.jsx)(I.Z, {
+function S(e) {
+    let { user: t, hovered: n, status: i, disambiguateGameRelationships: l, isGameRelationship: o, applicationId: a } = e,
+        s = f.ZP.useUserTag(t);
+    return (0, r.jsx)(E.Z, {
         user: t,
         hovered: n,
-        status: l,
-        showAccountIdentifier: !!r && !a,
-        subText: (0, i.jsx)(A, {
-            disambiguateGameRelationships: r,
-            isGameRelationship: a,
-            applicationId: s,
-            userTag: o
+        status: i,
+        showAccountIdentifier: !!l && !o,
+        subText: (0, r.jsx)(C, {
+            disambiguateGameRelationships: l,
+            isGameRelationship: o,
+            applicationId: a,
+            userTag: s
         })
     });
 }
-function x(e) {
-    let { user: t, type: n, status: r, isFocused: a, applicationId: s, disambiguateGameRelationships: d, isGameRelationship: c } = e,
-        u = l.useContext(p.AnalyticsContext),
-        { analyticsLocations: m } = (0, o.ZP)(),
-        g = r === C.Skl.OFFLINE ? C.Skl.UNKNOWN : r,
-        _ = l.useCallback(
+function T(e) {
+    let { user: t, type: n, status: l, isFocused: o, applicationId: a, disambiguateGameRelationships: c, isGameRelationship: u } = e,
+        d = i.useContext(g.AnalyticsContext),
+        { analyticsLocations: h } = (0, s.ZP)(),
+        f = l === O.Skl.OFFLINE ? O.Skl.UNKNOWN : l,
+        m = i.useCallback(
             () =>
-                (0, h.openUserProfileModal)({
+                (0, p.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: m,
-                    analyticsLocation: u.location
+                    sourceAnalyticsLocations: h,
+                    analyticsLocation: d.location
                 }),
-            [u.location, m, t.id]
+            [d.location, h, t.id]
         );
-    return (0, i.jsx)(E.Z, {
-        isFocused: a,
+    return (0, r.jsx)(_.Z, {
+        isFocused: o,
         user: t,
-        onClick: _,
+        onClick: m,
         children: (e) =>
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: v.listItemContents,
                 children: [
-                    (0, i.jsx)(Z, {
+                    (0, r.jsx)(S, {
                         user: t,
                         hovered: e,
-                        status: g,
-                        disambiguateGameRelationships: d,
-                        isGameRelationship: c,
-                        applicationId: s
+                        status: f,
+                        disambiguateGameRelationships: c,
+                        isGameRelationship: u,
+                        applicationId: a
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: v.actions,
                         children:
-                            n === C.OGo.PENDING_INCOMING
-                                ? (0, i.jsx)(T, {
+                            n === O.OGo.PENDING_INCOMING
+                                ? (0, r.jsx)(y, {
                                       user: t,
-                                      applicationId: s,
-                                      isGameRelationship: c,
+                                      applicationId: a,
+                                      isGameRelationship: u,
                                       active: e
                                   })
-                                : (0, i.jsx)(S, {
+                                : (0, r.jsx)(I, {
                                       userId: t.id,
-                                      applicationId: s,
-                                      isGameRelationship: c,
+                                      applicationId: a,
+                                      isGameRelationship: u,
                                       active: e
                                   })
                     })

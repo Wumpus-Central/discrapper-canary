@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,32 +15,32 @@ function s(e, t, n) {
         e
     );
 }
-let o = [];
+let s = [];
 function l(e) {
     let { component: t } = e;
-    if (o.indexOf(t) >= 0) return !1;
-    o = [...o, t];
-}
-function u() {
-    if (0 === o.length) return !1;
-    o = o.slice(0, -1);
+    if (s.indexOf(t) >= 0) return !1;
+    s = [...s, t];
 }
 function c() {
-    o = [];
+    if (0 === s.length) return !1;
+    s = s.slice(0, -1);
 }
-class d extends (i = r.ZP.Store) {
+function u() {
+    s = [];
+}
+class d extends (r = i.ZP.Store) {
     hasLayers() {
-        return o.length > 0;
+        return s.length > 0;
     }
     getLayers() {
-        return o;
+        return s;
     }
 }
-s(d, 'displayName', 'LayerStore');
-let f = new d(a.Z, {
+a(d, 'displayName', 'LayerStore');
+let f = new d(o.Z, {
     LAYER_PUSH: l,
-    LAYER_POP: u,
-    LAYER_POP_ALL: c,
-    LOGOUT: c,
-    NOTIFICATION_CLICK: c
+    LAYER_POP: c,
+    LAYER_POP_ALL: u,
+    LOGOUT: u,
+    NOTIFICATION_CLICK: u
 });

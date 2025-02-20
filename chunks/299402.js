@@ -1,128 +1,128 @@
 n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(512722),
-    o = n.n(r),
+var r = n(200651),
+    o = n(192379),
+    i = n(512722),
+    l = n.n(i),
     a = n(990547),
     s = n(481060),
     c = n(110924),
     u = n(626135),
     _ = n(215292),
     d = n(382086),
-    m = n(996453),
-    p = n(446706),
-    I = n(867581),
-    f = n(675999),
-    N = n(981631),
-    T = n(658604);
+    p = n(996453),
+    m = n(446706),
+    f = n(867581),
+    N = n(675999),
+    I = n(981631),
+    T = n(121798);
 function E(e) {
-    let { transitionState: t, initialSlide: n = f._m.GUILD_TEMPLATES, onSuccess: r, onClose: E, onSlideChange: C, hasJoinButton: S } = e,
-        [L, A] = l.useState(n),
-        D = (0, c.Z)(L),
-        [x, U] = l.useState(null),
-        [h, g] = l.useState(null),
-        [G, O] = l.useState(null),
-        [w, M] = l.useState(!1);
-    l.useEffect(() => {
-        A(n);
-    }, [A, n]),
-        l.useEffect(() => {
-            L !== D && C(L);
-        }, [C, L, D]);
-    let v = l.useCallback((e) => {
-            A(f._m.CREATION_INTENT),
-                g(e),
-                u.default.track(N.rMx.GUILD_TEMPLATE_SELECTED, {
+    let { transitionState: t, initialSlide: n = N._m.GUILD_TEMPLATES, onSuccess: i, onClose: E, onSlideChange: S, hasJoinButton: O } = e,
+        [C, b] = o.useState(n),
+        g = (0, c.Z)(C),
+        [L, D] = o.useState(null),
+        [h, A] = o.useState(null),
+        [x, v] = o.useState(null),
+        [w, U] = o.useState(!1);
+    o.useEffect(() => {
+        b(n);
+    }, [b, n]),
+        o.useEffect(() => {
+            C !== g && S(C);
+        }, [S, C, g]);
+    let y = o.useCallback((e) => {
+            b(N._m.CREATION_INTENT),
+                A(e),
+                u.default.track(I.rMx.GUILD_TEMPLATE_SELECTED, {
                     template_name: e.id,
                     template_code: e.code
                 });
         }, []),
-        k = l.useCallback((e) => {
-            M(e === f.lr.COMMUNITY), A(f._m.CUSTOMIZE_GUILD);
+        G = o.useCallback((e) => {
+            U(e === N.lr.COMMUNITY), b(N._m.CUSTOMIZE_GUILD);
         }, []),
-        b = l.useCallback(() => A(f._m.JOIN_GUILD), [A]),
-        R = l.useCallback(() => {
-            if (L === f._m.CUSTOMIZE_GUILD) {
-                A(f._m.CREATION_INTENT);
+        j = o.useCallback(() => b(N._m.JOIN_GUILD), [b]),
+        M = o.useCallback(() => {
+            if (C === N._m.CUSTOMIZE_GUILD) {
+                b(N._m.CREATION_INTENT);
                 return;
             }
-            A(f._m.GUILD_TEMPLATES), g(null);
-        }, [L]),
-        j = l.useCallback(
+            b(N._m.GUILD_TEMPLATES), A(null);
+        }, [C]),
+        P = o.useCallback(
             (e) => {
-                O(e), r(e);
+                v(e), i(e);
             },
-            [r, O]
+            [i, v]
         ),
-        P = l.useCallback(() => {
-            o()(null != G, 'handleSuccess called before onGuildCreated'), r(G);
-        }, [r, G]),
-        Z = { impression_group: a.ImpressionGroups.GUILD_ADD_FLOW },
-        y = (0, s.dQu)(s.TVs.modules.modal.WIDTH_SMALL);
-    return (0, i.jsx)('div', {
-        children: (0, i.jsx)(s.Y0X, {
+        k = o.useCallback(() => {
+            l()(null != x, 'handleSuccess called before onGuildCreated'), i(x);
+        }, [i, x]),
+        R = { impression_group: a.ImpressionGroups.GUILD_ADD_FLOW },
+        Z = (0, s.dQu)(s.TVs.modules.modal.WIDTH_SMALL);
+    return (0, r.jsx)('div', {
+        children: (0, r.jsx)(s.Y0X, {
             transitionState: t,
             disableTrack: !0,
-            children: (0, i.jsx)('div', {
+            children: (0, r.jsx)('div', {
                 className: T.container,
-                children: (0, i.jsxs)(s.MyZ, {
-                    activeSlide: L,
-                    width: y,
-                    onSlideReady: (e) => U(e),
+                children: (0, r.jsxs)(s.MyZ, {
+                    activeSlide: C,
+                    width: Z,
+                    onSlideReady: (e) => D(e),
                     children: [
-                        (0, i.jsx)(s.Mi4, {
-                            id: f._m.GUILD_TEMPLATES,
+                        (0, r.jsx)(s.Mi4, {
+                            id: N._m.GUILD_TEMPLATES,
                             impressionName: a.ImpressionNames.GUILD_ADD_LANDING,
-                            impressionProperties: Z,
-                            children: (0, i.jsx)(p.Z, {
+                            impressionProperties: R,
+                            children: (0, r.jsx)(m.Z, {
                                 isNewUser: !1,
-                                onJoin: S ? b : void 0,
-                                onChooseTemplate: v,
+                                onJoin: O ? j : void 0,
+                                onChooseTemplate: y,
                                 onClose: E
                             })
                         }),
-                        (0, i.jsx)(s.Mi4, {
-                            id: f._m.CREATION_INTENT,
+                        (0, r.jsx)(s.Mi4, {
+                            id: N._m.CREATION_INTENT,
                             impressionName: a.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-                            impressionProperties: Z,
-                            children: (0, i.jsx)(d.Z, {
+                            impressionProperties: R,
+                            children: (0, r.jsx)(d.Z, {
                                 onClose: E,
-                                onBack: R,
-                                onCreationIntentChosen: k
+                                onBack: M,
+                                onCreationIntentChosen: G
                             })
                         }),
-                        (0, i.jsx)(s.Mi4, {
-                            id: f._m.CUSTOMIZE_GUILD,
+                        (0, r.jsx)(s.Mi4, {
+                            id: N._m.CUSTOMIZE_GUILD,
                             impressionName: a.ImpressionNames.GUILD_ADD_CUSTOMIZE,
-                            impressionProperties: Z,
-                            children: (0, i.jsx)(m.Z, {
+                            impressionProperties: R,
+                            children: (0, r.jsx)(p.Z, {
                                 guildTemplate: h,
-                                onGuildCreated: j,
+                                onGuildCreated: P,
                                 onClose: E,
-                                onBack: R,
-                                isSlideReady: x === f._m.CUSTOMIZE_GUILD,
+                                onBack: M,
+                                isSlideReady: L === N._m.CUSTOMIZE_GUILD,
                                 isCommunity: w
                             })
                         }),
-                        (0, i.jsx)(s.Mi4, {
-                            id: f._m.CHANNEL_PROMPT,
+                        (0, r.jsx)(s.Mi4, {
+                            id: N._m.CHANNEL_PROMPT,
                             impressionName: a.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-                            impressionProperties: Z,
-                            children: (0, i.jsx)(_.Z, {
-                                createdGuildId: G,
+                            impressionProperties: R,
+                            children: (0, r.jsx)(_.Z, {
+                                createdGuildId: x,
                                 onClose: E,
-                                onChannelPromptCompleted: P,
-                                isSlideReady: x === f._m.CHANNEL_PROMPT
+                                onChannelPromptCompleted: k,
+                                isSlideReady: L === N._m.CHANNEL_PROMPT
                             })
                         }),
-                        (0, i.jsx)(s.Mi4, {
-                            id: f._m.JOIN_GUILD,
+                        (0, r.jsx)(s.Mi4, {
+                            id: N._m.JOIN_GUILD,
                             impressionName: a.ImpressionNames.GUILD_ADD_JOIN,
-                            impressionProperties: Z,
-                            children: (0, i.jsx)(I.Z, {
-                                onBack: R,
+                            impressionProperties: R,
+                            children: (0, r.jsx)(f.Z, {
+                                onBack: M,
                                 onClose: E,
-                                isSlideReady: x === f._m.JOIN_GUILD
+                                isSlideReady: L === N._m.JOIN_GUILD
                             })
                         })
                     ]

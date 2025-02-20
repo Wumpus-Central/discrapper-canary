@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = 9007199254740991,
-    r = /^(?:0|[1-9]\d*)$/;
-let a = function (e, t) {
+n.d(t, { Z: () => o });
+var r = 9007199254740991,
+    i = /^(?:0|[1-9]\d*)$/;
+let o = function (e, t) {
     var n = typeof e;
-    return !!(t = null == t ? i : t) && ('number' == n || ('symbol' != n && r.test(e))) && e > -1 && e % 1 == 0 && e < t;
+    return !!(t = null == t ? r : t) && ('number' == n || ('symbol' != n && i.test(e))) && e > -1 && e % 1 == 0 && e < t;
 };

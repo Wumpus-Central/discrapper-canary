@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(279837),
     h = n(952306),
     f = n(299206),
-    N = n(295474),
-    x = n(144114),
-    b = n(918505),
+    b = n(295474),
+    N = n(144114),
+    x = n(918505),
     _ = n(332473),
     E = n(921801),
     j = n(485341),
@@ -84,13 +84,13 @@ function G(e) {
     var t, s;
     let { className: l, user: o } = e,
         c = i.useRef(null),
-        m = (0, b.o9)(),
+        m = (0, x.o9)(),
         g = (0, _.b)(),
-        p = (0, N.gS)(),
+        p = (0, b.gS)(),
         h = null !== (s = null == p ? void 0 : null === (t = p.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null,
-        [f, x] = i.useState(!1);
+        [f, N] = i.useState(!1);
     i.useEffect(() => {
-        x(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        N(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let E = !o.isClaimed(),
         j = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || E,
@@ -206,7 +206,7 @@ function G(e) {
 function F(e) {
     var t, n;
     let { user: s, className: l } = e,
-        o = (0, N.gS)(),
+        o = (0, b.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
         m = A.ZP.getGlobalName(s),
         g = i.useRef(null),
@@ -424,7 +424,7 @@ function Y(e) {
                                                   title: L.NW.string(L.t['3CTiKi']),
                                                   children: s.hasFlag(w.xW$.MFA_SMS) ? L.NW.string(L.t.jrhJys) : void 0,
                                                   actionText: L.NW.string(L.t.N86XcH),
-                                                  handleSubmit: (e) => x.Z.removePhone(e, x.L.USER_SETTINGS_UPDATE)
+                                                  handleSubmit: (e) => N.Z.removePhone(e, N.L.USER_SETTINGS_UPDATE)
                                               })
                                           )
                                       );
@@ -441,7 +441,7 @@ function Y(e) {
                                 (0, u.ZDy)(
                                     async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                        return (t) => (0, r.jsx)(e, M({ reason: x.L.USER_SETTINGS_UPDATE }, t));
+                                        return (t) => (0, r.jsx)(e, M({ reason: N.L.USER_SETTINGS_UPDATE }, t));
                                     },
                                     { modalKey: k.M }
                                 );

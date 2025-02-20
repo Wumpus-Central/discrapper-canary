@@ -1,62 +1,62 @@
-n.d(l, { Z: () => y }), n(724458), n(653041), n(47120);
-var t,
-    s = n(200651),
-    i = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
-    d = n(215569),
-    c = n(481060),
+n.d(t, { Z: () => S }), n(653041), n(47120);
+var l,
+    r = n(200651),
+    s = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(442837),
+    c = n(215569),
+    d = n(481060),
     u = n(600164),
-    m = n(777789),
+    m = n(238807),
     x = n(78839),
     h = n(709054),
-    C = n(388032),
-    g = n(329209);
-function j(e, l, n) {
+    p = n(388032),
+    g = n(451107);
+function f(e, t, n) {
     return (
-        l in e
-            ? Object.defineProperty(e, l, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[l] = n),
+            : (e[t] = n),
         e
     );
 }
-class p extends i.PureComponent {
+class j extends s.PureComponent {
     render() {
         let { onClose: e } = this.props;
-        return (0, s.jsxs)(c.xBx, {
+        return (0, r.jsxs)(d.xBx, {
             separator: !1,
             justify: u.Z.Justify.BETWEEN,
             children: [
-                (0, s.jsx)(c.X6q, {
+                (0, r.jsx)(d.X6q, {
                     variant: 'heading-md/semibold',
                     children: this.props.text
                 }),
-                null != e ? (0, s.jsx)(c.olH, { onClick: e }) : null
+                null != e ? (0, r.jsx)(d.olH, { onClick: e }) : null
             ]
         });
     }
 }
-function f(e) {
-    let { imageClass: l, children: n, error: t, onDismissError: i } = e;
-    return (0, s.jsxs)('div', {
+function C(e) {
+    let { imageClass: t, children: n, error: l, onDismissError: s } = e;
+    return (0, r.jsxs)('div', {
         className: g.content,
         children: [
-            (0, s.jsx)('div', { className: a()(g.image, l) }),
+            (0, r.jsx)('div', { className: o()(g.image, t) }),
             n,
-            (0, s.jsx)(d.W, {
+            (0, r.jsx)(c.W, {
                 children:
-                    null != t
-                        ? (0, s.jsx)(c.oXn, {
+                    null != l
+                        ? (0, r.jsx)(d.oXn, {
                               className: g.error,
-                              children: (0, s.jsx)(c.kzN, {
-                                  onDismiss: i,
-                                  children: t.message
+                              children: (0, r.jsx)(d.kzN, {
+                                  onDismiss: s,
+                                  children: l.message
                               })
                           })
                         : null
@@ -65,97 +65,97 @@ function f(e) {
     });
 }
 let v = (e) => {
-    let { canceledCount: l } = e,
-        n = (0, o.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription());
+    let { canceledCount: t } = e,
+        n = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription());
     return null == n
         ? null
-        : (0, s.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: g.pendingCancellation,
               children: [
-                  (0, s.jsx)(c.P4T, {
+                  (0, r.jsx)(d.P4T, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
                       className: g.pendingCancellationIcon
                   }),
-                  (0, s.jsx)(c.Text, {
+                  (0, r.jsx)(d.Text, {
                       variant: 'text-md/normal',
                       className: g.pendingCancellationMessage,
-                      children: C.intl.format(C.t.SFpsCA, {
+                      children: p.NW.format(p.t.SFpsCA, {
                           date: n.currentPeriodEnd,
-                          canceledCount: l
+                          canceledCount: t
                       })
                   })
               ]
           });
 };
-function S(e) {
-    let { imageClass: l, blurb: n, guild: t, warning: i, error: r, onDismissError: a, slotCount: o = 1, canceledCount: d = 0 } = e;
-    return (0, s.jsxs)(f, {
-        imageClass: l,
-        error: r,
-        onDismissError: a,
+function b(e) {
+    let { imageClass: t, blurb: n, guild: l, warning: s, error: i, onDismissError: o, slotCount: a = 1, canceledCount: c = 0 } = e;
+    return (0, r.jsxs)(C, {
+        imageClass: t,
+        error: i,
+        onDismissError: o,
         children: [
-            (0, s.jsx)(c.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: 'text-md/normal',
                 children: n
             }),
-            (0, s.jsx)(m.Z, {
+            (0, r.jsx)(m.Z, {
                 className: g.guildCard,
-                guild: t,
-                subscriptionChange: o
+                guild: l,
+                subscriptionChange: a
             }),
-            (0, s.jsx)(c.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: 'text-md/normal',
-                children: i
+                children: s
             }),
-            d > 0 ? (0, s.jsx)(v, { canceledCount: d }) : null
+            c > 0 ? (0, r.jsx)(v, { canceledCount: c }) : null
         ]
     });
 }
-class N extends i.PureComponent {
+class N extends s.PureComponent {
     render() {
-        let { confirmation: e, confirmationLabel: l, isModifyingSubscription: n, onConfirm: t, onCancel: i } = this.props;
-        return (0, s.jsxs)(c.mzw, {
+        let { confirmation: e, confirmationLabel: t, isModifyingSubscription: n, onConfirm: l, onCancel: s } = this.props;
+        return (0, r.jsxs)(d.mzw, {
             children: [
-                (0, s.jsx)(c.zxk, {
-                    onClick: t,
+                (0, r.jsx)(d.zxk, {
+                    onClick: l,
                     submitting: n,
-                    'aria-label': l,
+                    'aria-label': t,
                     children: e
                 }),
-                (0, s.jsx)(c.zxk, {
-                    look: c.zxk.Looks.LINK,
-                    color: c.zxk.Colors.PRIMARY,
-                    onClick: i,
+                (0, r.jsx)(d.zxk, {
+                    look: d.zxk.Looks.LINK,
+                    color: d.zxk.Colors.PRIMARY,
+                    onClick: s,
                     disabled: n,
-                    children: C.intl.string(C.t['ETE/oK'])
+                    children: p.NW.string(p.t['ETE/oK'])
                 })
             ]
         });
     }
 }
-class b extends (t = i.PureComponent) {
+class y extends (l = s.PureComponent) {
     render() {
-        let { guild: e, header: l, blurb: n, warning: t, confirmation: r, confirmationLabel: a, imageClass: o, error: d, isModifyingSubscription: u, onConfirm: m, onCancel: x, onDismissError: h, canceledCount: C } = this.props;
-        return (0, s.jsxs)(i.Fragment, {
+        let { guild: e, header: t, blurb: n, warning: l, confirmation: i, confirmationLabel: o, imageClass: a, error: c, isModifyingSubscription: u, onConfirm: m, onCancel: x, onDismissError: h, canceledCount: p } = this.props;
+        return (0, r.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(p, { text: l }),
-                (0, s.jsx)(c.hzk, {
-                    children: (0, s.jsx)(S, {
+                (0, r.jsx)(j, { text: t }),
+                (0, r.jsx)(d.hzk, {
+                    children: (0, r.jsx)(b, {
                         guild: e,
                         blurb: n,
-                        warning: t,
-                        imageClass: o,
-                        error: d,
+                        warning: l,
+                        imageClass: a,
+                        error: c,
                         onDismissError: h,
-                        canceledCount: C
+                        canceledCount: p
                     })
                 }),
-                (0, s.jsx)(N, {
-                    confirmation: r,
-                    confirmationLabel: a,
+                (0, r.jsx)(N, {
+                    confirmation: i,
+                    confirmationLabel: o,
                     isModifyingSubscription: u,
                     onConfirm: m,
                     onCancel: x
@@ -164,31 +164,31 @@ class b extends (t = i.PureComponent) {
         });
     }
 }
-j(b, 'Header', p),
-    j(b, 'ApplyBody', S),
-    j(b, 'TransferBody', function (e) {
-        var l, n;
-        let { imageClass: t, blurb: r, fromGuilds: a, toGuild: o, error: d, onDismissError: u, slotCount: x = 1, canceledCount: j = 0 } = e,
-            p = i.useRef(a),
-            S = null === (l = p.current) || void 0 === l ? void 0 : l.length,
-            N = null === (n = p.current) || void 0 === n ? void 0 : n.reduce((e, l) => (e.hasOwnProperty(l.id) || (e[l.id] = []), e[l.id].push(l), e), {});
-        return (0, s.jsxs)(f, {
-            imageClass: t,
-            error: d,
+f(y, 'Header', j),
+    f(y, 'ApplyBody', b),
+    f(y, 'TransferBody', function (e) {
+        var t, n;
+        let { imageClass: l, blurb: i, fromGuilds: o, toGuild: a, error: c, onDismissError: u, slotCount: x = 1, canceledCount: f = 0 } = e,
+            j = s.useRef(o),
+            b = null === (t = j.current) || void 0 === t ? void 0 : t.length,
+            N = null === (n = j.current) || void 0 === n ? void 0 : n.reduce((e, t) => (e.hasOwnProperty(t.id) || (e[t.id] = []), e[t.id].push(t), e), {});
+        return (0, r.jsxs)(C, {
+            imageClass: l,
+            error: c,
             onDismissError: u,
             children: [
-                (0, s.jsx)(c.Text, {
+                (0, r.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: r
+                    children: i
                 }),
-                (0, s.jsx)(c.Text, {
+                (0, r.jsx)(d.Text, {
                     variant: 'text-xs/bold',
                     className: g.transferGuildCardHeader,
-                    children: C.intl.format(C.t['5zQYEx'], { guildCount: S })
+                    children: p.NW.format(p.t['5zQYEx'], { guildCount: b })
                 }),
                 null != N
                     ? h.default.keys(N).map((e) =>
-                          (0, s.jsx)(
+                          (0, r.jsx)(
                               m.Z,
                               {
                                   className: g.transferFromGuildCard,
@@ -199,22 +199,22 @@ j(b, 'Header', p),
                           )
                       )
                     : null,
-                (0, s.jsx)(c.Text, {
+                (0, r.jsx)(d.Text, {
                     variant: 'text-xs/normal',
                     className: g.transferGuildCardHeader,
-                    children: C.intl.format(C.t.ct6oxM, { slotCount: x })
+                    children: p.NW.format(p.t.ct6oxM, { slotCount: x })
                 }),
-                (0, s.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: g.activeTransferGuildCardBorder,
-                    children: (0, s.jsx)(m.Z, {
+                    children: (0, r.jsx)(m.Z, {
                         className: g.transferToGuildCard,
-                        guild: o,
-                        subscriptionChange: null != a ? a.length : 1
+                        guild: a,
+                        subscriptionChange: null != o ? o.length : 1
                     })
                 }),
-                j > 0 ? (0, s.jsx)(v, { canceledCount: j }) : null
+                f > 0 ? (0, r.jsx)(v, { canceledCount: f }) : null
             ]
         });
     }),
-    j(b, 'Footer', N);
-let y = b;
+    f(y, 'Footer', N);
+let S = y;

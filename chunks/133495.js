@@ -1,53 +1,53 @@
-var i = n(531478).codes.ERR_STREAM_PREMATURE_CLOSE;
-function r(e) {
+var r = n(531478).codes.ERR_STREAM_PREMATURE_CLOSE;
+function i(e) {
     var t = !1;
     return function () {
         if (!t) {
             t = !0;
-            for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-            e.apply(this, i);
+            for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+            e.apply(this, r);
         }
     };
 }
-function a() {}
-function s(e) {
+function o() {}
+function a(e) {
     return e.setHeader && 'function' == typeof e.abort;
 }
-function o(e, t, n) {
-    if ('function' == typeof t) return o(e, null, t);
-    t || (t = {}), (n = r(n || a));
+function s(e, t, n) {
+    if ('function' == typeof t) return s(e, null, t);
+    t || (t = {}), (n = i(n || o));
     var l = t.readable || (!1 !== t.readable && e.readable),
-        u = t.writable || (!1 !== t.writable && e.writable),
-        c = function () {
+        c = t.writable || (!1 !== t.writable && e.writable),
+        u = function () {
             e.writable || f();
         },
         d = e._writableState && e._writableState.finished,
         f = function () {
-            (u = !1), (d = !0), l || n.call(e);
+            (c = !1), (d = !0), l || n.call(e);
         },
-        _ = e._readableState && e._readableState.endEmitted,
-        p = function () {
-            (l = !1), (_ = !0), u || n.call(e);
+        p = e._readableState && e._readableState.endEmitted,
+        _ = function () {
+            (l = !1), (p = !0), c || n.call(e);
         },
         h = function (t) {
             n.call(e, t);
         },
         m = function () {
             var t;
-            return l && !_ ? ((e._readableState && e._readableState.ended) || (t = new i()), n.call(e, t)) : u && !d ? ((e._writableState && e._writableState.ended) || (t = new i()), n.call(e, t)) : void 0;
+            return l && !p ? ((e._readableState && e._readableState.ended) || (t = new r()), n.call(e, t)) : c && !d ? ((e._writableState && e._writableState.ended) || (t = new r()), n.call(e, t)) : void 0;
         },
         g = function () {
             e.req.on('finish', f);
         };
     return (
-        s(e) ? (e.on('complete', f), e.on('abort', m), e.req ? g() : e.on('request', g)) : u && !e._writableState && (e.on('end', c), e.on('close', c)),
-        e.on('end', p),
+        a(e) ? (e.on('complete', f), e.on('abort', m), e.req ? g() : e.on('request', g)) : c && !e._writableState && (e.on('end', u), e.on('close', u)),
+        e.on('end', _),
         e.on('finish', f),
         !1 !== t.error && e.on('error', h),
         e.on('close', m),
         function () {
-            e.removeListener('complete', f), e.removeListener('abort', m), e.removeListener('request', g), e.req && e.req.removeListener('finish', f), e.removeListener('end', c), e.removeListener('close', c), e.removeListener('finish', f), e.removeListener('end', p), e.removeListener('error', h), e.removeListener('close', m);
+            e.removeListener('complete', f), e.removeListener('abort', m), e.removeListener('request', g), e.req && e.req.removeListener('finish', f), e.removeListener('end', u), e.removeListener('close', u), e.removeListener('finish', f), e.removeListener('end', _), e.removeListener('error', h), e.removeListener('close', m);
         }
     );
 }
-e.exports = o;
+e.exports = s;

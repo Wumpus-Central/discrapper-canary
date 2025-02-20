@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(571846),
-    r = n(17851);
-function a(e) {
-    return (a =
-        'function' == typeof i && 'symbol' == typeof r
+n.d(t, { Z: () => o });
+var r = n(571846),
+    i = n(17851);
+function o(e) {
+    return (o =
+        'function' == typeof r && 'symbol' == typeof i
             ? function (e) {
                   return typeof e;
               }
             : function (e) {
-                  return e && 'function' == typeof i && e.constructor === i && e !== i.prototype ? 'symbol' : typeof e;
+                  return e && 'function' == typeof r && e.constructor === r && e !== r.prototype ? 'symbol' : typeof e;
               })(e);
 }

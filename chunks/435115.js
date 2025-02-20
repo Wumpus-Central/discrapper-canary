@@ -1,7 +1,7 @@
 function t(e) {
     let t = ['package', 'import', 'option', 'optional', 'required', 'repeated', 'group', 'oneof'],
         n = ['double', 'float', 'int32', 'int64', 'uint32', 'uint64', 'sint32', 'sint64', 'fixed32', 'fixed64', 'sfixed32', 'sfixed64', 'bool', 'string', 'bytes'],
-        i = {
+        r = {
             match: [/(message|enum|service)\s+/, e.IDENT_RE],
             scope: {
                 1: 'keyword',
@@ -21,7 +21,7 @@ function t(e) {
             e.NUMBER_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            i,
+            r,
             {
                 className: 'function',
                 beginKeywords: 'rpc',

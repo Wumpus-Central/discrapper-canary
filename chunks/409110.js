@@ -1,64 +1,64 @@
-n.d(t, { Z: () => j }), n(47120);
-var a = n(200651),
-    i = n(192379),
-    s = n(442837),
-    r = n(481060),
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(442837),
+    s = n(481060),
     l = n(430824),
     o = n(259580),
     c = n(598952),
     d = n(392739),
-    x = n(916001),
+    u = n(916001),
     m = n(981631),
-    u = n(388032),
-    h = n(121581);
-let _ = 'expanded-area';
-function f(e) {
-    let { attachments: t, role: n, roleLocked: s } = e,
-        [l, m] = i.useState(!1);
-    return (0, a.jsxs)(a.Fragment, {
+    x = n(388032),
+    f = n(529020);
+let h = 'expanded-area';
+function j(e) {
+    let { attachments: t, role: n, roleLocked: i } = e,
+        [l, m] = a.useState(!1);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsxs)(r.P3F, {
-                className: h.viewContents,
+            (0, r.jsxs)(s.P3F, {
+                className: f.viewContents,
                 onClick: () => {
                     m((e) => !e);
                 },
                 'aria-expanded': l,
-                'aria-controls': _,
+                'aria-controls': h,
                 children: [
-                    (0, a.jsx)(r.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: l ? u.intl.string(u.t.DKNxgI) : u.intl.string(u.t.ESEKub)
+                        children: l ? x.NW.string(x.t.DKNxgI) : x.NW.string(x.t.ESEKub)
                     }),
-                    (0, a.jsx)(o.Z, {
-                        className: h.caretIcon,
+                    (0, r.jsx)(o.Z, {
+                        className: f.caretIcon,
                         direction: l ? o.Z.Directions.UP : o.Z.Directions.DOWN
                     })
                 ]
             }),
-            (0, a.jsx)(r.LZC, { size: 12 }),
+            (0, r.jsx)(s.LZC, { size: 12 }),
             l &&
-                (0, a.jsxs)('ul', {
-                    className: h.contentsContainer,
-                    id: _,
+                (0, r.jsxs)('ul', {
+                    className: f.contentsContainer,
+                    id: h,
                     children: [
-                        (0, a.jsx)(d.Z, {
-                            label: u.intl.string(u.t.DWYJub),
-                            children: (0, a.jsx)('ul', {
-                                className: h.attachmentGrid,
-                                children: t.map((e) => (0, a.jsx)(c.Z, { attachment: e }, e.id))
+                        (0, r.jsx)(d.Z, {
+                            label: x.NW.string(x.t.DWYJub),
+                            children: (0, r.jsx)('ul', {
+                                className: f.attachmentGrid,
+                                children: t.map((e) => (0, r.jsx)(c.Z, { attachment: e }, e.id))
                             })
                         }),
                         null != n &&
-                            (0, a.jsxs)(a.Fragment, {
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, a.jsx)('div', { className: h.separator }),
-                                    (0, a.jsx)(d.Z, {
-                                        label: u.intl.string(u.t.o9xphY),
-                                        children: (0, a.jsx)(x.Z, {
+                                    (0, r.jsx)('div', { className: f.separator }),
+                                    (0, r.jsx)(d.Z, {
+                                        label: x.NW.string(x.t.o9xphY),
+                                        children: (0, r.jsx)(u.Z, {
                                             role: n,
                                             textVariant: 'text-md/medium',
-                                            locked: s
+                                            locked: i
                                         })
                                     })
                                 ]
@@ -68,26 +68,26 @@ function f(e) {
         ]
     });
 }
-function j(e) {
+function _(e) {
     var t;
     let { listing: n } = e,
-        i = null !== (t = n.attachments) && void 0 !== t ? t : [],
-        r = (0, s.e7)([l.Z], () => {
+        a = null !== (t = n.attachments) && void 0 !== t ? t : [],
+        s = (0, i.e7)([l.Z], () => {
             var e;
             return l.Z.getRole(n.guild_id, null !== (e = n.role_id) && void 0 !== e ? e : m.lds);
         }),
         o = !n.has_entitlement;
-    return 0 === i.length && null == r
+    return 0 === a.length && null == s
         ? null
-        : 0 === i.length && null != r
-          ? (0, a.jsx)(x.Z, {
-                role: r,
+        : 0 === a.length && null != s
+          ? (0, r.jsx)(u.Z, {
+                role: s,
                 textVariant: 'text-md/medium',
                 locked: o
             })
-          : (0, a.jsx)(f, {
-                attachments: i,
-                role: r,
+          : (0, r.jsx)(j, {
+                attachments: a,
+                role: s,
                 roleLocked: o
             });
 }

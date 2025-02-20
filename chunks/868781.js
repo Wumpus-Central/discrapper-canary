@@ -1,35 +1,35 @@
 n.d(t, { Z: () => d }), n(627341);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(278074),
-    a = n(657707),
-    s = n(841784),
-    o = n(495630),
+var i = n(278074),
+    o = n(657707),
+    a = n(841784),
+    s = n(495630),
     l = n(170187),
-    u = n(937008),
-    c = n(981631);
+    c = n(937008),
+    u = n(981631);
 function d(e) {
-    let { activity: t, textVariant: n, textClassName: d, hideIcon: f = !1, hideText: _ = !1, hideTooltip: p = !1 } = e;
-    if (f && _) return null;
-    let { text: h, tooltip: m } = (0, o.Z)({ activity: t }),
-        g = (0, r.EQ)(t)
-            .when(s.Z, () => a.jje)
-            .with({ type: c.IIU.PLAYING }, () => a.iWm)
-            .with({ type: c.IIU.LISTENING }, () => a.aXf)
-            .with({ type: c.IIU.WATCHING }, () => a.ARS)
-            .with({ type: c.IIU.STREAMING }, () => a.m3e)
-            .with({ type: c.IIU.COMPETING }, () => a.iWm)
+    let { activity: t, textVariant: n, textClassName: d, hideIcon: f = !1, hideText: p = !1, hideTooltip: _ = !1 } = e;
+    if (f && p) return null;
+    let { text: h, tooltip: m } = (0, s.Z)({ activity: t }),
+        g = (0, i.EQ)(t)
+            .when(a.Z, () => o.jje)
+            .with({ type: u.IIU.PLAYING }, () => o.iWm)
+            .with({ type: u.IIU.LISTENING }, () => o.aXf)
+            .with({ type: u.IIU.WATCHING }, () => o.ARS)
+            .with({ type: u.IIU.STREAMING }, () => o.ARS)
+            .with({ type: u.IIU.COMPETING }, () => o.iWm)
             .otherwise(() => null);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
             !f &&
                 null != g &&
-                (0, i.jsx)(u.Z, {
+                (0, r.jsx)(c.Z, {
                     icon: g,
-                    tooltip: _ && !p ? m : void 0
+                    tooltip: p && !_ ? m : void 0
                 }),
-            !_ &&
-                (0, i.jsx)(l.Z, {
+            !p &&
+                (0, r.jsx)(l.Z, {
                     variant: n,
                     className: d,
                     children: h

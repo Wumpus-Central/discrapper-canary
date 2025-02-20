@@ -1,16 +1,16 @@
 n.d(t, { Z: () => l });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(575140);
-let l = r.forwardRef(function (e, t) {
-    let { children: n, className: r, style: a, noBorder: l = !1, participantUserId: u } = e;
-    return (0, i.jsx)('div', {
-        className: s()(r, o.tile, { [o.noBorder]: l }),
-        style: a,
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(384828);
+let l = i.forwardRef(function (e, t) {
+    let { children: n, className: i, style: o, noBorder: l = !1, participantUserId: c } = e;
+    return (0, r.jsx)('div', {
+        className: a()(i, s.tile, { [s.noBorder]: l }),
+        style: o,
         ref: t,
-        'data-selenium-video-tile': u,
+        'data-selenium-video-tile': c,
         children: n
     });
 });

@@ -1,44 +1,44 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(313201),
-    s = n(464459);
-function o(e) {
-    let { transitionState: t, title: n, subtitle: o, children: c } = e,
-        a = (0, l.Dt)();
-    return (0, i.jsxs)(r.Y0X, {
+r.d(t, { Z: () => s });
+var n = r(200651);
+r(192379);
+var o = r(481060),
+    c = r(313201),
+    i = r(54097);
+function s(e) {
+    let { transitionState: t, title: r, subtitle: s, children: l } = e,
+        a = (0, c.Dt)();
+    return (0, n.jsxs)(o.Y0X, {
         transitionState: t,
         'aria-labelledby': a,
         children: [
-            (0, i.jsx)('div', {
-                className: s.shieldIconContainer,
-                children: (0, i.jsx)('div', {
-                    className: s.shieldIcon,
-                    children: (0, i.jsx)(r.tQf, {
+            (0, n.jsx)('div', {
+                className: i.shieldIconContainer,
+                children: (0, n.jsx)('div', {
+                    className: i.shieldIcon,
+                    children: (0, n.jsx)(o.tQf, {
                         size: 'custom',
                         width: 55,
                         height: 55,
-                        color: r.TVs.colors.HEADER_SECONDARY
+                        color: o.TVs.colors.HEADER_SECONDARY
                     })
                 })
             }),
-            (0, i.jsxs)(r.hzk, {
-                className: s.content,
+            (0, n.jsxs)(o.hzk, {
+                className: i.content,
                 children: [
-                    (0, i.jsx)(r.X6q, {
-                        className: s.title,
+                    (0, n.jsx)(o.X6q, {
+                        className: i.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: n
+                        children: r
                     }),
-                    (0, i.jsx)(r.Text, {
-                        className: s.subtitle,
+                    (0, n.jsx)(o.Text, {
+                        className: i.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: o
+                        children: s
                     }),
-                    c
+                    l
                 ]
             })
         ]

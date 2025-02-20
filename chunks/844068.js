@@ -1,25 +1,25 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(563132),
-    l = n(824587);
-function u(e) {
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(563132),
+    l = n(16754);
+function c(e) {
     let { notificationBlockRef: t } = e,
-        { selectedPlanNotification: n } = (0, o.JL)();
+        { selectedPlanNotification: n } = (0, s.JL)();
     return null == n
         ? null
-        : (0, i.jsxs)('div', {
-              className: a()(l.notification),
+        : (0, r.jsxs)('div', {
+              className: o()(l.notification),
               ref: t,
               children: [
-                  (0, i.jsx)(s.owK, {
-                      className: a()(l.icon),
+                  (0, r.jsx)(a.owK, {
+                      className: o()(l.icon),
                       color: 'currentColor'
                   }),
-                  (0, i.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: l.text,
                       children: n
                   })

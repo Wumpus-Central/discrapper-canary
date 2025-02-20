@@ -1,5 +1,5 @@
-n.d(t, { r: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { r: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-05_discount_model_data_collection',
     label: 'Discount Model Data Collection',

@@ -1,5 +1,5 @@
-n.d(t, { j: () => r });
-var i = n(995295);
-function r(e) {
-    (0, i.unstable_batchedUpdates)(e);
+n.d(t, { j: () => i });
+var r = n(995295);
+function i(e) {
+    (0, r.unstable_batchedUpdates)(e);
 }

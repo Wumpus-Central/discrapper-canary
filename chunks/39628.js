@@ -1,12 +1,12 @@
-n.d(t, { Z: () => p }), n(47120);
-var l,
-    i = n(200651),
-    r = n(192379),
+n.d(t, { Z: () => y }), n(47120);
+var r,
+    l = n(200651),
+    i = n(192379),
     a = n(120356),
-    s = n.n(a),
-    o = n(846519),
-    u = n(600164),
-    c = n(29954);
+    o = n.n(a),
+    s = n(846519),
+    c = n(600164),
+    u = n(415511);
 function d(e, t, n) {
     return (
         t in e
@@ -20,30 +20,30 @@ function d(e, t, n) {
         e
     );
 }
-function m(e) {
+function f(e) {
     let { percentage: t, isSingleLine: n } = e;
-    return (0, i.jsx)('div', {
-        className: s()({
-            [c.bar]: n,
-            [c.barInMultiLine]: !n
+    return (0, l.jsx)('div', {
+        className: o()({
+            [u.bar]: n,
+            [u.barInMultiLine]: !n
         }),
-        children: (0, i.jsx)('div', {
-            className: c.barInner,
+        children: (0, l.jsx)('div', {
+            className: u.barInner,
             style: { width: ''.concat(100 * Math.max(Math.min(t, 1), 0), '%') }
         })
     });
 }
-function f(e) {
+function p(e) {
     return String(e).padStart(2, '0');
 }
-function h(e) {
+function m(e) {
     let { time: t, padLargestUnit: n } = e,
-        l = Math.floor(t) % 60,
-        i = Math.floor(t / 60) % 60,
-        r = Math.floor(t / 3600);
-    return 0 === r ? (n ? ''.concat(f(i), ':').concat(f(l)) : ''.concat(i, ':').concat(f(l))) : n ? ''.concat(f(r), ':').concat(f(i), ':').concat(f(l)) : ''.concat(r, ':').concat(f(i), ':').concat(f(l));
+        r = Math.floor(t) % 60,
+        l = Math.floor(t / 60) % 60,
+        i = Math.floor(t / 3600);
+    return 0 === i ? (n ? ''.concat(p(l), ':').concat(p(r)) : ''.concat(l, ':').concat(p(r))) : n ? ''.concat(p(i), ':').concat(p(l), ':').concat(p(r)) : ''.concat(i, ':').concat(p(l), ':').concat(p(r));
 }
-class g extends (l = r.PureComponent) {
+class g extends (r = i.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -53,59 +53,59 @@ class g extends (l = r.PureComponent) {
         this.timer.stop();
     }
     render() {
-        let { start: e, end: t, className: n, themed: l, singleLine: r = !1 } = this.props,
+        let { start: e, end: t, className: n, themed: r, singleLine: i = !1 } = this.props,
             { now: a } = this.state,
-            o = (t - e) / 1000,
-            d = Math.max(Math.min((a - e) / 1000, o), 0);
-        return r
-            ? (0, i.jsxs)('div', {
-                  className: s()(n, { [c.themed]: l }, c.singleLineContainer),
+            s = (t - e) / 1000,
+            d = Math.max(Math.min((a - e) / 1000, s), 0);
+        return i
+            ? (0, l.jsxs)('div', {
+                  className: o()(n, { [u.themed]: r }, u.singleLineContainer),
                   children: [
-                      (0, i.jsx)('div', {
-                          className: c.textLeftInSingleLine,
-                          children: h({
+                      (0, l.jsx)('div', {
+                          className: u.textLeftInSingleLine,
+                          children: m({
                               time: d,
                               padLargestUnit: !0
                           })
                       }),
-                      (0, i.jsx)('div', {
-                          className: c.barInSingleLine,
-                          children: (0, i.jsx)(m, {
-                              percentage: d / o,
+                      (0, l.jsx)('div', {
+                          className: u.barInSingleLine,
+                          children: (0, l.jsx)(f, {
+                              percentage: d / s,
                               isSingleLine: !0
                           })
                       }),
-                      (0, i.jsx)('div', {
-                          className: c.textRight,
-                          children: h({
-                              time: o,
+                      (0, l.jsx)('div', {
+                          className: u.textRight,
+                          children: m({
+                              time: s,
                               padLargestUnit: !0
                           })
                       })
                   ]
               })
-            : (0, i.jsxs)('div', {
-                  className: s()(n, { [c.themed]: l }),
+            : (0, l.jsxs)('div', {
+                  className: o()(n, { [u.themed]: r }),
                   children: [
-                      (0, i.jsx)(m, {
-                          percentage: d / o,
+                      (0, l.jsx)(f, {
+                          percentage: d / s,
                           isSingleLine: !1
                       }),
-                      (0, i.jsxs)(u.Z, {
+                      (0, l.jsxs)(c.Z, {
                           children: [
-                              (0, i.jsx)(u.Z.Child, {
+                              (0, l.jsx)(c.Z.Child, {
                                   grow: 1,
-                                  className: c.textLeft,
-                                  children: h({
+                                  className: u.textLeft,
+                                  children: m({
                                       time: d,
                                       padLargestUnit: !1
                                   })
                               }),
-                              (0, i.jsx)(u.Z.Child, {
+                              (0, l.jsx)(c.Z.Child, {
                                   grow: 0,
-                                  className: c.textRight,
-                                  children: h({
-                                      time: o,
+                                  className: u.textRight,
+                                  children: m({
+                                      time: s,
                                       padLargestUnit: !1
                                   })
                               })
@@ -115,8 +115,8 @@ class g extends (l = r.PureComponent) {
               });
     }
     constructor(...e) {
-        super(...e), d(this, 'timer', new o.Xp()), d(this, 'state', { now: Date.now() });
+        super(...e), d(this, 'timer', new s.Xp()), d(this, 'state', { now: Date.now() });
     }
 }
 d(g, 'defaultProps', { themed: !1 });
-let p = g;
+let y = g;

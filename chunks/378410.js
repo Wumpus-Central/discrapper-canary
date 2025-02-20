@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(710845),
-    l = n(914946),
-    r = n(452426),
-    a = n(981631);
-let s = new i.Z(a.BZL),
-    o = {
-        [a.Etm.CAPTURE_LOG]: {
+n.d(t, { Z: () => s }), n(47120);
+var r = n(710845),
+    i = n(914946),
+    l = n(452426),
+    o = n(981631);
+let a = new r.Z(o.BZL),
+    s = {
+        [o.Etm.CAPTURE_LOG]: {
             validation: (e) =>
-                (0, r.Z)(e)
+                (0, l.Z)(e)
                     .required()
                     .keys({
                         level: e.string().max(10).required(),
@@ -16,26 +16,26 @@ let s = new i.Z(a.BZL),
             handler(e) {
                 let {
                     socket: t,
-                    args: { level: n, message: i }
+                    args: { level: n, message: r }
                 } = e;
-                (0, l.bu)(t.transport);
-                let r = t.application.id,
-                    a = ''.concat(r, ' - ').concat(i);
+                (0, i.bu)(t.transport);
+                let l = t.application.id,
+                    o = ''.concat(l, ' - ').concat(r);
                 switch (n) {
                     case 'log':
-                        s.log(a);
+                        a.log(o);
                         break;
                     case 'warn':
-                        s.warn(a);
+                        a.warn(o);
                         break;
                     case 'debug':
-                        s.verbose(a);
+                        a.verbose(o);
                         break;
                     case 'info':
-                        s.info(a);
+                        a.info(o);
                         break;
                     case 'error':
-                        s.error(a);
+                        a.error(o);
                 }
             }
         }

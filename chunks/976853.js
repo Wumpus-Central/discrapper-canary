@@ -1,11 +1,11 @@
-l.d(t, { Z: () => r });
-var e = l(399606),
-    i = l(592125),
-    a = l(176505);
-function r(n) {
-    let t = (0, e.e7)([i.Z], () => {
-        let t = i.Z.getChannel(n);
-        return (null == t ? void 0 : t.parent_id) != null && t.isForumPost() ? i.Z.getChannel(null == t ? void 0 : t.parent_id) : null;
+t.d(e, { Z: () => o });
+var l = t(399606),
+    r = t(592125),
+    i = t(176505);
+function o(n) {
+    let e = (0, l.e7)([r.Z], () => {
+        let e = r.Z.getChannel(n);
+        return (null == e ? void 0 : e.parent_id) != null && e.isForumPost() ? r.Z.getChannel(null == e ? void 0 : e.parent_id) : null;
     });
-    return (null == t ? void 0 : t.hasFlag(a.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0;
+    return (null == e ? void 0 : e.hasFlag(i.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0;
 }

@@ -1,30 +1,30 @@
 n.d(t, { Z: () => c });
-var i = n(200651),
-    l = n(481060),
-    a = n(475179),
-    r = n(841397),
-    s = n(388032),
-    o = n(931481);
+var r = n(200651),
+    i = n(481060),
+    l = n(475179),
+    o = n(841397),
+    a = n(388032),
+    s = n(844579);
 function c(e) {
     let { channelId: t } = e;
-    return (0, i.jsxs)('div', {
-        className: o.container,
+    return (0, r.jsxs)('div', {
+        className: s.container,
         children: [
-            (0, i.jsx)(r.Z, {}),
-            (0, i.jsxs)('div', {
-                className: o.content,
+            (0, r.jsx)(o.Z, {}),
+            (0, r.jsxs)('div', {
+                className: s.content,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-lg/normal',
-                        children: s.intl.format(s.t.ilLVLi, {})
+                        children: a.NW.format(a.t.ilLVLi, {})
                     }),
-                    (0, i.jsx)(l.zxk, {
-                        size: l.zxk.Sizes.LARGE,
-                        color: l.zxk.Colors.PRIMARY,
+                    (0, r.jsx)(i.zxk, {
+                        size: i.zxk.Sizes.LARGE,
+                        color: i.zxk.Colors.PRIMARY,
                         onClick: (e) => {
-                            e.stopPropagation(), a.Z.toggleVoiceParticipantsHidden(t, !1);
+                            e.stopPropagation(), l.Z.toggleVoiceParticipantsHidden(t, !1);
                         },
-                        children: s.intl.string(s.t.kLQySE)
+                        children: a.NW.string(a.t.kLQySE)
                     })
                 ]
             })

@@ -1,33 +1,33 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
-    s = n(481060),
-    r = n(410030),
-    l = n(583901),
-    a = n(359135),
+var r = n(200651),
+    i = n(481060),
+    s = n(410030),
+    a = n(583901),
+    l = n(359135),
     o = n(981631),
-    c = n(898663);
+    c = n(678937);
 function d(e) {
     let { selected: t, onSelect: n } = e,
-        d = (0, r.ZP)();
-    return (0, i.jsxs)('div', {
+        d = (0, s.ZP)();
+    return (0, r.jsxs)('div', {
         className: c.picker,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/semibold',
                 children: 'Preselected Gradient'
             }),
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: c.themes,
-                children: a.vs.map((e) => {
-                    let s = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
-                        r = t === e.name;
-                    return (0, i.jsx)(
-                        l.S4,
+                children: l.vs.map((e) => {
+                    let i = d !== o.BRd.LIGHT ? e.darkBackground : e.lightBackground,
+                        s = t === e.name;
+                    return (0, r.jsx)(
+                        a.S4,
                         {
                             onSelect: () => n(e),
-                            style: { background: s },
+                            style: { background: i },
                             name: e.name,
-                            isSelected: r
+                            isSelected: s
                         },
                         e.name
                     );

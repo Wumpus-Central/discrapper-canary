@@ -1,17 +1,17 @@
-var i = n(286233),
-    r = n(796768),
-    a = n(192853),
-    s = n(815814),
-    o = n(673555),
-    l = o(),
-    u = n(515171),
-    c = a('Array.prototype.slice'),
+var r = n(286233),
+    i = n(796768),
+    o = n(192853),
+    a = n(815814),
+    s = n(673555),
+    l = s(),
+    c = n(515171),
+    u = o('Array.prototype.slice'),
     d = function (e, t) {
-        return r(e), l.apply(e, c(arguments, 1));
+        return i(e), l.apply(e, u(arguments, 1));
     };
-i(d, {
-    getPolyfill: o,
-    implementation: s,
-    shim: u
+r(d, {
+    getPolyfill: s,
+    implementation: a,
+    shim: c
 }),
     (e.exports = d);

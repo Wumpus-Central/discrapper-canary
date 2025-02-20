@@ -1,11 +1,11 @@
-n.d(t, { A: () => o }), n(47120);
-var i = n(192379),
-    r = n(524437),
-    a = n(695346);
-function s() {
-    let [e, t] = i.useState('cozy');
+n.d(t, { A: () => s }), n(47120);
+var r = n(192379),
+    i = n(524437),
+    o = n(695346);
+function a() {
+    let [e, t] = r.useState('cozy');
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let e = window.matchMedia('(min-width: 1024px) and (min-height: 820px)'),
                 n = (e) => {
                     t(e.matches ? 'cozy' : 'compact');
@@ -20,15 +20,15 @@ function s() {
         e
     );
 }
-function o() {
-    let e = a.YC.useSetting(),
-        t = s();
+function s() {
+    let e = o.YC.useSetting(),
+        t = a();
     switch (e) {
-        case r.Pi.RESPONSIVE:
+        case i.Pi.RESPONSIVE:
             return t;
-        case r.Pi.COZY:
+        case i.Pi.COZY:
             return 'cozy';
-        case r.Pi.COMPACT:
+        case i.Pi.COMPACT:
         default:
             return 'compact';
     }

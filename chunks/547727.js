@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-class i {
+n.d(t, { Z: () => i });
+class r {
     nativeMuteChanged(e) {}
     updateNativeMute() {}
 }
-let r = new i();
+let i = new r();

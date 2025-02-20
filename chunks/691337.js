@@ -1,12 +1,12 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(600164),
-    u = n(259580),
-    c = n(161090);
+    c = n(259580),
+    u = n(415806);
 function d(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends r.PureComponent {
+class f extends i.PureComponent {
     handleClick(e) {
         let { onBreadcrumbClick: t } = this.props;
         null != t && t(e);
@@ -28,47 +28,47 @@ class f extends r.PureComponent {
     render() {
         let { breadcrumbs: e, className: t } = this.props,
             n = e.map(this.renderBreadcrumb);
-        return (0, i.jsx)(l.Z, {
+        return (0, r.jsx)(l.Z, {
             justify: l.Z.Justify.START,
-            className: s()(c.breadcrumbs, t),
+            className: a()(u.breadcrumbs, t),
             children: n
         });
     }
     constructor(...e) {
         super(...e),
             d(this, 'renderBreadcrumb', (e, t) => {
-                let { activeId: n, onBreadcrumbClick: r, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
+                let { activeId: n, onBreadcrumbClick: i, breadcrumbs: o, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
                     f = e.id === n,
-                    _ = () => this.handleClick(e),
-                    p = t === a.length - 1,
+                    p = () => this.handleClick(e),
+                    _ = t === o.length - 1,
                     h =
                         null != l
                             ? l(e, f)
-                            : (0, i.jsx)('span', {
-                                  className: s()(c.breadcrumb, {
-                                      [c.activeBreadcrumb]: f,
-                                      [c.interactiveBreadcrumb]: null != r
+                            : (0, r.jsx)('span', {
+                                  className: a()(u.breadcrumb, {
+                                      [u.activeBreadcrumb]: f,
+                                      [u.interactiveBreadcrumb]: null != i
                                   }),
                                   children: e.label
                               });
-                return (0, i.jsxs)(
+                return (0, r.jsxs)(
                     'div',
                     {
-                        className: s()(c.breadcrumbWrapper, { [c.breadcrumbFinalWrapper]: p }),
+                        className: a()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: _ }),
                         children: [
-                            null != r
-                                ? (0, i.jsx)(o.P3F, {
+                            null != i
+                                ? (0, r.jsx)(s.P3F, {
                                       tag: 'span',
-                                      onClick: _,
-                                      className: c.breadcrumbClickWrapper,
+                                      onClick: p,
+                                      className: u.breadcrumbClickWrapper,
                                       children: h
                                   })
                                 : h,
-                            p
+                            _
                                 ? null
-                                : (0, i.jsx)(u.Z, {
-                                      className: s()(c.breadcrumbArrow, d),
-                                      direction: u.Z.Directions.RIGHT
+                                : (0, r.jsx)(c.Z, {
+                                      className: a()(u.breadcrumbArrow, d),
+                                      direction: c.Z.Directions.RIGHT
                                   })
                         ]
                     },
@@ -77,4 +77,4 @@ class f extends r.PureComponent {
             });
     }
 }
-let _ = f;
+let p = f;

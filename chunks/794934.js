@@ -1,8 +1,8 @@
-n.d(t, { I: () => o });
-var i = n(87290),
-    r = n(685816),
-    a = n(565669);
-function s(e, t, n) {
+n.d(t, { I: () => s });
+var r = n(87290),
+    i = n(685816),
+    o = n(565669);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,11 +15,11 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+class s {
     static fromServer(e) {
-        return new o(e);
+        return new s(e);
     }
     constructor(e) {
-        s(this, 'subblocks', void 0), (this.type = r.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === i.O.CATEGORY ? a.H.fromServer(e) : e)));
+        a(this, 'subblocks', void 0), (this.type = i.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === r.O.CATEGORY ? o.H.fromServer(e) : e)));
     }
 }

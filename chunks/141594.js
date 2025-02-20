@@ -1,47 +1,47 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(192379),
-    l = n(115434),
-    r = n(264181),
-    a = n(442837),
-    s = n(704215),
-    o = n(243778),
-    d = n(594174),
-    c = n(51144),
-    u = n(874703),
-    h = n(302800),
-    m = n(921944);
-let p = () => {
-    var e, t, n, p, g, _, f;
-    let E = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        I = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(l.K.DESKTOP_SHOP_BUTTON)),
-        C = (null == I ? void 0 : I.dismissibleContent) === s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        N = i.useMemo(() => ((0, c.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
-        [v, T] = (0, o.US)(N, void 0, !0),
-        [S, A] = (0, o.XR)(C && (null == I ? void 0 : I.type) === r.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
-        Z = null;
-    if ((null != v || null != S) && null != I && I.type === r.Z.COACHTIP) {
-        Z = {
-            type: h.k2.COACHTIP,
-            title: () => I.title,
-            body: () => I.body,
-            imageSrc: I.avatar,
-            assetIds: I.decorations,
-            entrypointBackgroundStyle: null === (t = I.refTargetBackground) || void 0 === t ? void 0 : t.style
+n.d(t, { Z: () => g }), n(47120);
+var r = n(192379),
+    i = n(115434),
+    l = n(264181),
+    o = n(442837),
+    a = n(704215),
+    s = n(243778),
+    c = n(594174),
+    u = n(51144),
+    d = n(874703),
+    p = n(302800),
+    h = n(921944);
+let g = () => {
+    var e, t, n, g, f, m, b;
+    let _ = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
+        E = (0, o.e7)([d.Z], () => d.Z.getMarketingBySurface(i.K.DESKTOP_SHOP_BUTTON)),
+        O = (null == E ? void 0 : E.dismissibleContent) === a.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
+        N = r.useMemo(() => ((0, u.Fc)(_) && null != E && !O ? [E.dismissibleContent] : []), [_, E, O]),
+        [v, y] = (0, s.US)(N, void 0, !0),
+        [I, C] = (0, s.XR)(O && (null == E ? void 0 : E.type) === l.Z.COACHTIP ? a.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == E ? void 0 : E.version) && void 0 !== e ? e : 0, void 0, !0),
+        S = null;
+    if ((null != v || null != I) && null != E && E.type === l.Z.COACHTIP) {
+        S = {
+            type: p.k2.COACHTIP,
+            title: () => E.title,
+            body: () => E.body,
+            imageSrc: E.avatar,
+            assetIds: E.decorations,
+            entrypointBackgroundStyle: null === (t = E.refTargetBackground) || void 0 === t ? void 0 : t.style
         };
-        let e = null === (n = I.refTargetBackground) || void 0 === n ? void 0 : n.asset;
+        let e = null === (n = E.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
-            (Z.entryPointBackgroundAssets = {
-                srcDark: null === (p = e.resting) || void 0 === p ? void 0 : p.dark,
-                srcLight: null === (g = e.resting) || void 0 === g ? void 0 : g.light,
-                srcDarkHovered: null === (_ = e.hovered) || void 0 === _ ? void 0 : _.dark,
-                srcLightHovered: null === (f = e.hovered) || void 0 === f ? void 0 : f.light
+            (S.entryPointBackgroundAssets = {
+                srcDark: null === (g = e.resting) || void 0 === g ? void 0 : g.dark,
+                srcLight: null === (f = e.resting) || void 0 === f ? void 0 : f.light,
+                srcDarkHovered: null === (m = e.hovered) || void 0 === m ? void 0 : m.dark,
+                srcLightHovered: null === (b = e.hovered) || void 0 === b ? void 0 : b.light
             });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: Z,
+        collectiblesShopTabNewBadgeDisplayOptions: S,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = C ? A : T;
-            null != Z && e(m.L.AUTO);
+            let e = O ? C : y;
+            null != S && e(h.L.AUTO);
         }
     };
 };

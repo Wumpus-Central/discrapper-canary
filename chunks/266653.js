@@ -1,120 +1,120 @@
 s.d(t, { default: () => x }), s(47120);
-var n = s(200651),
-    r = s(192379),
+var r = s(200651),
+    n = s(192379),
     o = s(990547),
     i = s(442837),
     a = s(481060),
     l = s(213609),
-    d = s(594174),
-    c = s(726745),
-    h = s(475062),
-    u = s(760213),
-    m = s(71509),
+    c = s(594174),
+    d = s(726745),
+    u = s(475062),
+    h = s(760213),
+    p = s(71509),
     f = s(981631),
-    p = s(388032),
-    _ = s(765471);
-let g = {
+    m = s(388032),
+    g = s(681040);
+let _ = {
     0: a.CgR.SMALL,
     1: a.CgR.DYNAMIC
 };
 function x(e) {
     let { transitionState: t, onClose: s } = e,
-        [x, C] = r.useState(0),
-        { currentUser: b, multiAccountUsers: R } = (0, i.cj)([d.default, c.Z], () => ({
-            currentUser: d.default.getCurrentUser(),
-            multiAccountUsers: c.Z.getUsers()
+        [x, b] = n.useState(0),
+        { currentUser: N, multiAccountUsers: C } = (0, i.cj)([c.default, d.Z], () => ({
+            currentUser: c.default.getCurrentUser(),
+            multiAccountUsers: d.Z.getUsers()
         })),
-        [k, N] = r.useState(!1),
-        [A, v] = r.useState(f.lds),
-        [w, j] = r.useState(null);
-    r.useEffect(() => {
-        if (k)
-            j(
-                (0, n.jsx)(a.Wn, {
+        [j, w] = n.useState(!1),
+        [k, v] = n.useState(f.lds),
+        [R, P] = n.useState(null);
+    n.useEffect(() => {
+        if (j)
+            P(
+                (0, r.jsx)(a.Wn, {
                     messageType: a.QYI.ERROR,
-                    className: _.infoMessage,
-                    children: p.intl.format(p.t.HAuRSE, { maxNumAccounts: m.$H })
+                    className: g.infoMessage,
+                    children: m.NW.format(m.t.HAuRSE, { maxNumAccounts: p.$H })
                 })
             ),
                 v(f.lds);
-        else if (null != A) {
-            let e = d.default.getUser(A);
+        else if (null != k) {
+            let e = c.default.getUser(k);
             null != e &&
-                j(
-                    (0, n.jsx)(a.Wn, {
+                P(
+                    (0, r.jsx)(a.Wn, {
                         messageType: a.QYI.POSITIVE,
-                        className: _.infoMessage,
-                        children: p.intl.format(p.t['09qidX'], { username: e.username })
+                        className: g.infoMessage,
+                        children: m.NW.format(m.t['09qidX'], { username: e.username })
                     })
                 ),
-                N(!1);
+                w(!1);
         }
-    }, [A, k]),
-        r.useEffect(() => {
-            R.length < m.$H && N(!1);
-        }, [R]),
+    }, [k, j]),
+        n.useEffect(() => {
+            C.length < p.$H && w(!1);
+        }, [C]),
         (0, l.Z)({
             type: o.ImpressionTypes.MODAL,
             name: 0 === x ? o.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : o.ImpressionNames.USER_LOGIN
         });
-    let I = null;
+    let y = null;
     return (
         0 === x
-            ? (I = (0, n.jsxs)(n.Fragment, {
+            ? (y = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, n.jsx)(a.xBx, {
+                      (0, r.jsx)(a.xBx, {
                           separator: !1,
-                          children: (0, n.jsxs)('div', {
-                              className: _.header,
+                          children: (0, r.jsxs)('div', {
+                              className: g.header,
                               children: [
-                                  (0, n.jsx)(a.X6q, {
+                                  (0, r.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
                                       color: 'header-primary',
-                                      children: p.intl.string(p.t.WbFpq6)
+                                      children: m.NW.string(m.t.WbFpq6)
                                   }),
-                                  (0, n.jsx)(a.Text, {
-                                      className: _.subheaderText,
+                                  (0, r.jsx)(a.Text, {
+                                      className: g.subheaderText,
                                       color: 'header-secondary',
                                       variant: 'text-md/normal',
-                                      children: p.intl.string(p.t['+1Uk3d'])
+                                      children: m.NW.string(m.t['+1Uk3d'])
                                   })
                               ]
                           })
                       }),
-                      (0, n.jsxs)(a.hzk, {
+                      (0, r.jsxs)(a.hzk, {
                           children: [
-                              w,
-                              (0, n.jsx)(u.Z, {
-                                  actionText: p.intl.string(p.t.Wf421N),
+                              R,
+                              (0, r.jsx)(h.Z, {
+                                  actionText: m.NW.string(m.t.Wf421N),
                                   onAction: (e, t) => {
                                       switch (e) {
-                                          case u.W.LOGIN_REQUIRED:
-                                              C(1);
+                                          case h.W.LOGIN_REQUIRED:
+                                              b(1);
                                               break;
-                                          case u.W.SWITCHED:
+                                          case h.W.SWITCHED:
                                               s();
                                               break;
-                                          case u.W.REMOVED:
-                                              t === (null == b ? void 0 : b.id) && s(), v(t);
+                                          case h.W.REMOVED:
+                                              t === (null == N ? void 0 : N.id) && s(), v(t);
                                       }
                                   }
                               }),
-                              (0, n.jsx)('div', {
-                                  className: _.actions,
-                                  children: (0, n.jsx)(a.zxk, {
+                              (0, r.jsx)('div', {
+                                  className: g.actions,
+                                  children: (0, r.jsx)(a.zxk, {
                                       look: a.zxk.Looks.LINK,
                                       color: a.zxk.Colors.PRIMARY,
                                       onClick: () => {
-                                          if (R.length >= m.$H) {
-                                              N(!0);
+                                          if (C.length >= p.$H) {
+                                              w(!0);
                                               return;
                                           }
-                                          C(1);
+                                          b(1);
                                       },
                                       size: a.zxk.Sizes.MEDIUM,
-                                      children: (0, n.jsx)(a.Text, {
+                                      children: (0, r.jsx)(a.Text, {
                                           variant: 'text-sm/semibold',
-                                          children: p.intl.string(p.t['9g2mqa'])
+                                          children: m.NW.string(m.t['9g2mqa'])
                                       })
                                   })
                               })
@@ -123,20 +123,20 @@ function x(e) {
                   ]
               }))
             : 1 === x &&
-              (I = (0, n.jsx)(h.Z, {
+              (y = (0, r.jsx)(u.Z, {
                   onClose: () => {
-                      C(0);
+                      b(0);
                   }
               })),
-        (0, n.jsx)(a.Y0X, {
-            className: _.modal,
+        (0, r.jsx)(a.Y0X, {
+            className: g.modal,
             transitionState: t,
-            size: g[x],
-            'aria-label': p.intl.string(p.t.WbFpq6),
-            children: (0, n.jsx)(a.qBt, {
+            size: _[x],
+            'aria-label': m.NW.string(m.t.WbFpq6),
+            children: (0, r.jsx)(a.qBt, {
                 step: x,
                 steps: [0, 1],
-                children: I
+                children: y
             })
         })
     );

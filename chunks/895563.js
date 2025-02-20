@@ -1,64 +1,64 @@
 t.d(n, {
-    P: () => O,
-    l: () => j
+    P: () => Z,
+    l: () => y
 }),
     t(47120);
 var r = t(200651);
 t(192379);
 var i = t(392711),
     a = t.n(i),
-    l = t(442837),
-    o = t(481060),
-    c = t(984933),
-    s = t(853856),
-    u = t(117984),
-    d = t(593214),
+    o = t(442837),
+    l = t(481060),
+    d = t(984933),
+    c = t(853856),
+    s = t(117984),
+    u = t(593214),
     f = t(362658),
     h = t(981631),
-    b = t(388032);
+    v = t(388032);
 function p(e, n) {
-    return e.type === h.d4z.GROUP_DM ? (n ? b.NW.string(b.t['0BWmSE']) : b.NW.string(b.t.uuVTOD)) : e.type === h.d4z.DM ? (n ? b.NW.string(b.t['2wfKGh']) : b.NW.string(b.t.wPbAsb)) : n ? b.NW.string(b.t.Bou7lZ) : b.NW.string(b.t['4wcdEx']);
+    return e.type === h.d4z.GROUP_DM ? (n ? v.NW.string(v.t['0BWmSE']) : v.NW.string(v.t.uuVTOD)) : e.type === h.d4z.DM ? (n ? v.NW.string(v.t['2wfKGh']) : v.NW.string(v.t.wPbAsb)) : n ? v.NW.string(v.t.Bou7lZ) : v.NW.string(v.t['4wcdEx']);
 }
-function j(e) {
-    let n = (0, l.e7)([c.ZP], () => c.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
+function y(e) {
+    let n = (0, o.e7)([d.ZP], () => d.ZP.getChannels(h.I_8))[h.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: t } = (0, f.z)('58e21a_1'),
-        { notifyFavoriteAdded: i } = (0, d.up)();
-    if (!(0, d.li)(e)) return null;
-    let [[s], b] = a().partition(n, (e) => 'null' === e.channel.id);
-    function j(n) {
-        i(), (0, u.kj)(e.id, n);
+        { notifyFavoriteAdded: i } = (0, u.up)();
+    if (!(0, u.li)(e)) return null;
+    let [[c], v] = a().partition(n, (e) => 'null' === e.channel.id);
+    function y(n) {
+        i(), (0, s.kj)(e.id, n);
     }
-    return 0 === b.length
-        ? (0, r.jsx)(o.sNh, {
+    return 0 === v.length
+        ? (0, r.jsx)(l.sNh, {
               id: 'favorite-channel',
               label: p(e, !1),
-              action: () => j(null)
+              action: () => y(null)
           })
-        : (0, r.jsxs)(o.sNh, {
+        : (0, r.jsxs)(l.sNh, {
               id: 'favorite-channel',
               label: p(e, !1),
-              action: () => j(null),
+              action: () => y(null),
               children: [
                   t &&
-                      (0, r.jsx)(o.kSQ, {
+                      (0, r.jsx)(l.kSQ, {
                           children: (0, r.jsx)(
-                              o.sNh,
+                              l.sNh,
                               {
-                                  id: 'favorite-'.concat(s.channel.id),
-                                  label: s.channel.name,
-                                  action: () => j('null' === s.channel.id ? null : s.channel.id)
+                                  id: 'favorite-'.concat(c.channel.id),
+                                  label: c.channel.name,
+                                  action: () => y('null' === c.channel.id ? null : c.channel.id)
                               },
-                              s.channel.id
+                              c.channel.id
                           )
                       }),
-                  (0, r.jsx)(o.kSQ, {
-                      children: b.map((e) =>
+                  (0, r.jsx)(l.kSQ, {
+                      children: v.map((e) =>
                           (0, r.jsx)(
-                              o.sNh,
+                              l.sNh,
                               {
                                   id: 'favorite-'.concat(e.channel.id),
                                   label: e.channel.name,
-                                  action: () => j(e.channel.id)
+                                  action: () => y(e.channel.id)
                               },
                               e.channel.id
                           )
@@ -67,17 +67,17 @@ function j(e) {
               ]
           });
 }
-function O(e) {
-    let n = (0, l.e7)([s.Z], () => s.Z.isFavorite(e.id));
+function Z(e) {
+    let n = (0, o.e7)([c.Z], () => c.Z.isFavorite(e.id));
     return __OVERLAY__ || !n
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'favorite-channel',
               label: p(e, !0),
               color: 'danger',
               action: () =>
                   e.type === h.d4z.GUILD_CATEGORY
-                      ? (0, o.ZDy)(async () => {
+                      ? (0, l.ZDy)(async () => {
                             let { default: n } = await t.e('37720').then(t.bind(t, 357632));
                             return (t) => {
                                 var i, a;
@@ -111,7 +111,7 @@ function O(e) {
                                     (a = a =
                                         {
                                             onConfirm: () => {
-                                                t.onClose(), (0, u.oC)(e.id);
+                                                t.onClose(), (0, s.oC)(e.id);
                                             },
                                             channel: e
                                         }),
@@ -131,6 +131,6 @@ function O(e) {
                                 );
                             };
                         })
-                      : (0, u.oC)(e.id)
+                      : (0, s.oC)(e.id)
           });
 }

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
-var i = n(675717),
-    r = Object.create;
-let a = (function () {
+n.d(t, { Z: () => o });
+var r = n(675717),
+    i = Object.create;
+let o = (function () {
     function e() {}
     return function (t) {
-        if (!(0, i.Z)(t)) return {};
-        if (r) return r(t);
+        if (!(0, r.Z)(t)) return {};
+        if (i) return i(t);
         e.prototype = t;
         var n = new e();
         return (e.prototype = void 0), n;

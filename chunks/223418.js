@@ -1,14 +1,14 @@
 n.d(t, {
-    CY: () => u,
-    Y1: () => c,
-    rq: () => o,
+    CY: () => c,
+    Y1: () => u,
+    rq: () => s,
     yE: () => a
 });
 var r,
-    l,
+    o,
     i,
-    s,
-    o = (((r = {}).PLAYING = 'playing'), (r.PAUSED = 'paused'), (r.ENDED = 'ended'), r),
-    a = (((l = {}).PAUSE_BUTTON = 'PAUSE_BUTTON'), (l.LOST_FOCUS = 'LOST_FOCUS'), (l.MODAL_CLOSED = 'MODAL_CLOSED'), l),
-    u = (((i = {}).ERROR = 'ERROR'), (i.SOURCE_ERROR = 'SOURCE_ERROR'), (i.ABORT = 'ABORT'), (i.EMPTIED = 'EMPTIED'), (i.STALLED = 'STALLED'), (i.SUSPEND = 'SUSPEND'), i),
-    c = (((s = {}).PLAYBACK = 'k'), (s.SPACE = ' '), (s.SEEK_BACK = 'j'), (s.SEEK_FORWARD = 'l'), (s.CAPTION = 'c'), (s.FULLSCREEN = 'f'), (s.MUTE = 'm'), s);
+    l,
+    s = (((r = {}).PLAYING = 'playing'), (r.PAUSED = 'paused'), (r.ENDED = 'ended'), r),
+    a = (((o = {}).PAUSE_BUTTON = 'PAUSE_BUTTON'), (o.LOST_FOCUS = 'LOST_FOCUS'), (o.MODAL_CLOSED = 'MODAL_CLOSED'), o),
+    c = (((i = {}).ERROR = 'ERROR'), (i.SOURCE_ERROR = 'SOURCE_ERROR'), (i.ABORT = 'ABORT'), (i.EMPTIED = 'EMPTIED'), (i.STALLED = 'STALLED'), (i.SUSPEND = 'SUSPEND'), i),
+    u = (((l = {}).PLAYBACK = 'k'), (l.SPACE = ' '), (l.SEEK_BACK = 'j'), (l.SEEK_FORWARD = 'l'), (l.CAPTION = 'c'), (l.FULLSCREEN = 'f'), (l.MUTE = 'm'), l);

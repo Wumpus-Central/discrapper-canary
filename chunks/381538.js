@@ -1,26 +1,26 @@
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
-    i = Object.prototype.propertyIsEnumerable;
-function r(e) {
+    r = Object.prototype.propertyIsEnumerable;
+function i(e) {
     if (null == e) throw TypeError('Object.assign cannot be called with null or undefined');
     return Object(e);
 }
-function a() {
+function o() {
     try {
         if (!Object.assign) return !1;
         var e = new String('abc');
         if (((e[5] = 'de'), '5' === Object.getOwnPropertyNames(e)[0])) return !1;
         for (var t = {}, n = 0; n < 10; n++) t['_' + String.fromCharCode(n)] = n;
-        var i = Object.getOwnPropertyNames(t).map(function (e) {
+        var r = Object.getOwnPropertyNames(t).map(function (e) {
             return t[e];
         });
-        if ('0123456789' !== i.join('')) return !1;
-        var r = {};
+        if ('0123456789' !== r.join('')) return !1;
+        var i = {};
         if (
             ('abcdefghijklmnopqrst'.split('').forEach(function (e) {
-                r[e] = e;
+                i[e] = e;
             }),
-            'abcdefghijklmnopqrst' !== Object.keys(Object.assign({}, r)).join(''))
+            'abcdefghijklmnopqrst' !== Object.keys(Object.assign({}, i)).join(''))
         )
             return !1;
         return !0;
@@ -28,14 +28,14 @@ function a() {
         return !1;
     }
 }
-e.exports = a()
+e.exports = o()
     ? Object.assign
-    : function (e, a) {
-          for (var s, o, l = r(e), u = 1; u < arguments.length; u++) {
-              for (var c in (s = Object(arguments[u]))) n.call(s, c) && (l[c] = s[c]);
+    : function (e, o) {
+          for (var a, s, l = i(e), c = 1; c < arguments.length; c++) {
+              for (var u in (a = Object(arguments[c]))) n.call(a, u) && (l[u] = a[u]);
               if (t) {
-                  o = t(s);
-                  for (var d = 0; d < o.length; d++) i.call(s, o[d]) && (l[o[d]] = s[o[d]]);
+                  s = t(a);
+                  for (var d = 0; d < s.length; d++) r.call(a, s[d]) && (l[s[d]] = a[s[d]]);
               }
           }
           return l;

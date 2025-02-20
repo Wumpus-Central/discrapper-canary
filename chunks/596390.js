@@ -1,13 +1,13 @@
 n.d(t, {
-    Bd: () => r,
-    I5: () => l,
-    tq: () => s,
-    uz: () => a,
-    ye: () => i
+    Bd: () => i,
+    I5: () => s,
+    tq: () => a,
+    uz: () => l,
+    ye: () => r
 }),
     n(47120);
-let i = new Set(['Enter', 'Tab']),
-    r = new Set(['z', 'y']),
-    l = 5000,
-    s = 100,
-    a = /[\n\t\r\f\v\x10]/;
+let r = new Set(['Enter', 'Tab']),
+    i = new Set(['z', 'y']),
+    s = 5000,
+    a = 100,
+    l = /[\n\t\r\f\v\x10]/;

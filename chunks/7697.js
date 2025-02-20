@@ -1,44 +1,44 @@
-l.d(n, { Z: () => k }), l(47120);
-var e = l(192379),
-    i = l(392711),
-    s = l.n(i),
-    r = l(442837),
-    o = l(699682),
-    a = l(70956),
-    u = l(709054),
-    c = l(897285),
-    d = l(924301),
-    x = l(854698);
-function k(t, n, l) {
-    let i = (0, r.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(t)),
-        k = (0, o.Z)(l),
-        [h, m] = e.useState(null != l && null != i ? (0, x.PJ)(4, (0, x.Ho)(l), new Date(i.scheduled_start_time)) : []);
-    e.useEffect(() => {
-        if (null == k || null == l || null == i || s().isEqual(k, l)) return;
-        let t = (0, x.Ho)(l);
-        m((0, x.PJ)(h.length, t, new Date(i.scheduled_start_time)));
-    }, [l, h.length, i, k]),
-        e.useEffect(() => {
-            if (null == n) return;
-            let l = h.map((t) => u.default.fromTimestamp(Math.floor(t.getTime() / a.Z.Millis.SECOND) * a.Z.Millis.SECOND));
-            c.Z.getGuildEventUserCounts(n, t, l);
-        }, [t, n, h]);
-    let z = e.useMemo(() => {
-        if (null == l || 0 === h.length || (null == i ? void 0 : i.scheduled_start_time) == null) return !1;
-        let t = new Date();
-        t.setFullYear(t.getFullYear() + x.hn);
-        let n = h[h.length - 1],
-            e = (0, x.Ho)(l).after(n);
-        return null != e && e <= t;
-    }, [l, h, null == i ? void 0 : i.scheduled_start_time]);
+n.d(t, { Z: () => b }), n(47120);
+var r = n(192379),
+    l = n(392711),
+    i = n.n(l),
+    s = n(442837),
+    o = n(699682),
+    c = n(70956),
+    u = n(709054),
+    a = n(897285),
+    d = n(924301),
+    p = n(854698);
+function b(e, t, n) {
+    let l = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(e)),
+        b = (0, o.Z)(n),
+        [g, x] = r.useState(null != n && null != l ? (0, p.PJ)(4, (0, p.Ho)(n), new Date(l.scheduled_start_time)) : []);
+    r.useEffect(() => {
+        if (null == b || null == n || null == l || i().isEqual(b, n)) return;
+        let e = (0, p.Ho)(n);
+        x((0, p.PJ)(g.length, e, new Date(l.scheduled_start_time)));
+    }, [n, g.length, l, b]),
+        r.useEffect(() => {
+            if (null == t) return;
+            let n = g.map((e) => u.default.fromTimestamp(Math.floor(e.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND));
+            a.Z.getGuildEventUserCounts(t, e, n);
+        }, [e, t, g]);
+    let f = r.useMemo(() => {
+        if (null == n || 0 === g.length || (null == l ? void 0 : l.scheduled_start_time) == null) return !1;
+        let e = new Date();
+        e.setFullYear(e.getFullYear() + p.hn);
+        let t = g[g.length - 1],
+            r = (0, p.Ho)(n).after(t);
+        return null != r && r <= e;
+    }, [n, g, null == l ? void 0 : l.scheduled_start_time]);
     return {
-        recurrenceStartTimes: h,
-        canViewMoreRecurrences: z,
+        recurrenceStartTimes: g,
+        canViewMoreRecurrences: f,
         updateRecurrenceStartTimes: () => {
-            if (null == l || null == i) return;
-            let t = (0, x.Ho)(l),
-                n = h[h.length - 1];
-            m([...h, ...(0, x.PJ)(4, t, n, !0)]);
+            if (null == n || null == l) return;
+            let e = (0, p.Ho)(n),
+                t = g[g.length - 1];
+            x([...g, ...(0, p.PJ)(4, e, t, !0)]);
         }
     };
 }

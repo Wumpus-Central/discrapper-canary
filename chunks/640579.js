@@ -1,20 +1,20 @@
-var i = n(67867),
-    r = n(821819),
-    a = n(611345),
-    s = n(646948),
-    o = n(925768);
-i(
+var r = n(67867),
+    i = n(821819),
+    o = n(611345),
+    a = n(646948),
+    s = n(925768);
+r(
     {
         target: 'Object',
         stat: !0,
-        forced: r(function () {
-            s(1);
+        forced: i(function () {
+            a(1);
         }),
-        sham: !o
+        sham: !s
     },
     {
         getPrototypeOf: function (e) {
-            return s(a(e));
+            return a(o(e));
         }
     }
 );

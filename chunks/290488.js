@@ -1,8 +1,8 @@
-let i;
-function r() {
-    return null != i
-        ? i
-        : (i = (async () => {
+let r;
+function i() {
+    return null != r
+        ? r
+        : (r = (async () => {
               let { default: e } = await n.e('20353').then(n.t.bind(n, 62994, 23)),
                   t = new e({
                       params: {
@@ -20,4 +20,4 @@ function r() {
               return await t.init(), t;
           })());
 }
-n.d(t, { n: () => r });
+n.d(t, { n: () => i });

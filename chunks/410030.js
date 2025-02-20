@@ -1,23 +1,23 @@
 n.d(t, {
-    Fg: () => a,
+    Fg: () => o,
     ZP: () => l,
-    i6: () => s
+    i6: () => a
 });
-var i = n(780384),
-    r = n(981631);
-function a() {
-    let { theme: e } = (0, i.TC)();
+var r = n(780384),
+    i = n(981631);
+function o() {
+    let { theme: e } = (0, r.TC)();
     return e;
 }
-function s() {
-    return o(a());
+function a() {
+    return s(o());
 }
-function o(e) {
+function s(e) {
     switch (e) {
-        case r.BRd.DARK:
+        case i.BRd.DARK:
             return 0;
-        case r.BRd.LIGHT:
+        case i.BRd.LIGHT:
             return 1;
     }
 }
-let l = a;
+let l = o;

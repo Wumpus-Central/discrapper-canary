@@ -1,6 +1,6 @@
-n.d(t, { K: () => a });
-var i = n(685816);
-function r(e, t, n) {
+n.d(t, { K: () => o });
+var r = n(685816);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,11 +13,11 @@ function r(e, t, n) {
         e
     );
 }
-class a {
+class o {
     static fromServer(e) {
-        return new a(e);
+        return new o(e);
     }
     constructor(e) {
-        r(this, 'rankedSkuIds', void 0), (this.type = i.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids);
+        i(this, 'rankedSkuIds', void 0), (this.type = r.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids);
     }
 }

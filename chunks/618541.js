@@ -1,11 +1,11 @@
-let i, r;
-n.d(t, { Z: () => S }), n(411104);
-var a,
-    s = n(442837),
-    o = n(544891),
+let r, i;
+n.d(t, { Z: () => I }), n(411104);
+var o,
+    a = n(442837),
+    s = n(544891),
     l = n(570140),
-    u = n(358085),
-    c = n(981631);
+    c = n(358085),
+    u = n(981631);
 function d(e, t, n) {
     return (
         t in e
@@ -20,72 +20,72 @@ function d(e, t, n) {
     );
 }
 let f = null,
-    _ = null,
-    p = null;
+    p = null,
+    _ = null;
 function h(e) {
     let { client: t } = e;
     f = t;
 }
 function m(e) {
     let { paypalClient: t } = e;
-    _ = t;
+    p = t;
 }
 function g(e) {
     let { venmoClient: t } = e;
-    p = t;
+    _ = t;
 }
 function E(e) {
-    let { paymentSourceType: t, state: n, path: r, query: a } = e;
-    if (t !== c.HeQ.PAYPAL || n !== i) return;
-    let s = window.popupBridge.onComplete;
-    'function' == typeof s &&
-        s(null, {
-            path: r,
-            queryItems: a
+    let { paymentSourceType: t, state: n, path: i, query: o } = e;
+    if (t !== u.HeQ.PAYPAL || n !== r) return;
+    let a = window.popupBridge.onComplete;
+    'function' == typeof a &&
+        a(null, {
+            path: i,
+            queryItems: o
         });
 }
 function v(e) {
     let { paymentSourceType: t, state: n } = e;
-    t === c.HeQ.PAYPAL && (i = n);
+    t === u.HeQ.PAYPAL && (r = n);
+}
+function b() {
+    p = null;
 }
 function y() {
     _ = null;
 }
-function I() {
-    p = null;
-}
-(0, u.isDesktop)() &&
+(0, c.isDesktop)() &&
     (window.popupBridge = {
         getReturnUrlPrefix: () => {
-            if (null == i) throw Error('popupBridgeState is unset');
-            return (0, o.K0)() + c.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(c.gg$.BRAINTREE, i);
+            if (null == r) throw Error('popupBridgeState is unset');
+            return (0, s.K0)() + u.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.gg$.BRAINTREE, r);
         },
         open: (e) => {
-            (r = e), window.open(e), b.emitChange();
+            (i = e), window.open(e), S.emitChange();
         }
     });
-class T extends (a = s.ZP.Store) {
+class O extends (o = a.ZP.Store) {
     getClient() {
         return f;
     }
     getPayPalClient() {
-        return _;
-    }
-    getVenmoClient() {
         return p;
     }
+    getVenmoClient() {
+        return _;
+    }
     getLastURL() {
-        return r;
+        return i;
     }
 }
-d(T, 'displayName', 'BraintreeStore');
-let b = new T(l.Z, {
+d(O, 'displayName', 'BraintreeStore');
+let S = new O(l.Z, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: h,
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: m,
         BILLING_POPUP_BRIDGE_CALLBACK: E,
         BILLING_POPUP_BRIDGE_STATE_UPDATE: v,
-        BRAINTREE_TEARDOWN_PAYPAL_CLIENT: y,
+        BRAINTREE_TEARDOWN_PAYPAL_CLIENT: b,
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: g,
-        BRAINTREE_TEARDOWN_VENMO_CLIENT: I
+        BRAINTREE_TEARDOWN_VENMO_CLIENT: y
     }),
-    S = b;
+    I = S;

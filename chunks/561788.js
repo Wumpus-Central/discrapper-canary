@@ -1,22 +1,22 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    r = n(481060),
-    a = n(471445),
-    o = n(430824),
-    s = n(325595);
+var i = n(442837),
+    l = n(481060),
+    o = n(471445),
+    a = n(430824),
+    s = n(610287);
 function c(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([o.Z], () => o.Z.getGuild(t.guild_id)),
-        c = (0, a.KS)(t, n);
+        n = (0, i.e7)([a.Z], () => a.Z.getGuild(t.guild_id)),
+        c = (0, o.KS)(t, n);
     return null == c
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: s.popoutHeader,
               children: [
-                  (0, i.jsx)(c, { className: s.channelIcon }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(c, { className: s.channelIcon }),
+                  (0, r.jsx)(l.Text, {
                       variant: 'text-md/semibold',
                       color: 'interactive-normal',
                       className: s.channelName,

@@ -1,65 +1,65 @@
-n.d(t, { Z: () => c });
-var i = n(194359),
-    r = n(855796),
-    a = n(497060),
-    s = n(699516),
-    o = n(885149);
+n.d(t, { Z: () => u });
+var r = n(194359),
+    i = n(855796),
+    o = n(497060),
+    a = n(699516),
+    s = n(885149);
 function l(e) {
-    let { userId: t, applicationId: n, location: a, friendToken: s } = e;
+    let { userId: t, applicationId: n, location: o, friendToken: a } = e;
     return null != n
-        ? r.Z.acceptGameFriendRequest({
+        ? i.Z.acceptGameFriendRequest({
               userId: t,
               applicationId: n
           })
-        : i.Z.acceptFriendRequest({
+        : r.Z.acceptFriendRequest({
               userId: t,
-              friendToken: s,
-              context: { location: a }
+              friendToken: a,
+              context: { location: o }
           });
 }
-function u(e) {
-    let { userId: t, applicationId: n, location: i, friendToken: r, onConfirm: u, onCancel: c } = e,
-        d = s.Z.isStrangerRequest(t),
-        f = (0, a.pB)('useFriendRequestActions');
+function c(e) {
+    let { userId: t, applicationId: n, location: r, friendToken: i, onConfirm: c, onCancel: u } = e,
+        d = a.Z.isStrangerRequest(t),
+        f = (0, o.pB)('useFriendRequestActions');
     if (null != n || !d || !f)
         return l({
             userId: t,
             applicationId: n,
-            location: i,
-            friendToken: r
+            location: r,
+            friendToken: i
         });
-    (0, o.c)({
+    (0, s.c)({
         onConfirm: () => {
             l({
                 userId: t,
                 applicationId: n,
-                location: i,
-                friendToken: r
+                location: r,
+                friendToken: i
             }),
-                null == u || u();
+                null == c || c();
         },
-        onCancel: c
+        onCancel: u
     });
 }
-let c = {
+let u = {
     removeFriend: function (e) {
-        let { userId: t, applicationId: n, location: a } = e;
+        let { userId: t, applicationId: n, location: o } = e;
         null != n
-            ? r.Z.removeGameFriend({
+            ? i.Z.removeGameFriend({
                   userId: t,
                   applicationId: n
               })
-            : i.Z.removeFriend(t, { location: a });
+            : r.Z.removeFriend(t, { location: o });
     },
     cancelFriendRequest: function (e) {
-        let { userId: t, applicationId: n, location: a } = e;
+        let { userId: t, applicationId: n, location: o } = e;
         return null != n
-            ? r.Z.cancelGameFriendRequest({
+            ? i.Z.cancelGameFriendRequest({
                   userId: t,
                   applicationId: n
               })
-            : i.Z.cancelFriendRequest(t, { location: a });
+            : r.Z.cancelFriendRequest(t, { location: o });
     },
     acceptFriendRequest: l,
-    maybeConfirmFriendRequestAccept: u
+    maybeConfirmFriendRequestAccept: c
 };

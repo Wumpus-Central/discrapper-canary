@@ -6,7 +6,7 @@ var n = i(200651),
     s = i(745510),
     d = i(981631),
     u = i(388032),
-    c = i(210883);
+    c = i(784077);
 function h(e) {
     let { onClose: t, initialPercent: i, numActions: h } = e,
         [l, p] = a.useState(i),
@@ -42,7 +42,7 @@ function h(e) {
                     className: c.heading,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
-                    children: u.intl.format(u.t.pGj5u7, { count: h })
+                    children: u.NW.format(u.t.pGj5u7, { count: h })
                 }),
                 (0, n.jsx)(o.Exd, {
                     foregroundGradientColor: [(0, r.Lq)(d.Ilk.GREEN_300), (0, r.Lq)(d.Ilk.GREEN_230)],

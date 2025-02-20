@@ -1,43 +1,43 @@
 n.d(t, { Z: () => l });
-var i = n(358085),
-    r = n(782769),
-    a = n(527805),
-    s = n(620662),
-    o = n(981631);
+var r = n(358085),
+    i = n(782769),
+    o = n(527805),
+    a = n(620662),
+    s = n(981631);
 function l(e) {
-    let { user: t, activity: n, application: l, channelId: u, currentUser: c, isEmbedded: d, ChannelStore: f, GuildStore: _, GuildMemberCountStore: p, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
-        v = f.getChannel(u),
-        y = (0, r.a)(v);
+    let { user: t, activity: n, application: l, channelId: c, currentUser: u, isEmbedded: d, ChannelStore: f, GuildStore: p, GuildMemberCountStore: _, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
+        v = f.getChannel(c),
+        b = (0, i.a)(v);
     if (null == t) return !1;
-    if (d && null != u)
+    if (d && null != c)
         return (
-            (0, a.ZP)({
+            (0, o.ZP)({
                 userId: t.id,
                 activity: n,
-                channelId: u,
-                currentUser: c,
+                channelId: c,
+                currentUser: u,
                 application: l,
-                isActivitiesEnabledForCurrentPlatform: y,
+                isActivitiesEnabledForCurrentPlatform: b,
                 ChannelStore: f,
                 VoiceStateStore: g,
                 PermissionStore: E,
-                GuildStore: _
-            }) === a.Fw.CAN_JOIN
+                GuildStore: p
+            }) === o.Fw.CAN_JOIN
         );
-    if (!(0, i.isDesktop)() && !d) return !1;
-    if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
-    if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
+    if (!(0, r.isDesktop)() && !d) return !1;
+    if ((0, a.Z)(n, s.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
+    if ((0, a.Z)(n, s.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
         let e = f.getChannel(m.getVoiceChannelId());
         if (null == e || !g.isInChannel(e.id, t.id)) return !1;
         switch (e.type) {
-            case o.d4z.DM:
-            case o.d4z.GROUP_DM:
+            case s.d4z.DM:
+            case s.d4z.GROUP_DM:
                 return !0;
         }
-        let n = _.getGuild(e.getGuildId());
-        if (null == n || n.hasFeature(o.oNc.COMMUNITY)) return !1;
-        let i = p.getMemberCount(n.id);
-        return null != i && i < 100;
+        let n = p.getGuild(e.getGuildId());
+        if (null == n || n.hasFeature(s.oNc.COMMUNITY)) return !1;
+        let r = _.getMemberCount(n.id);
+        return null != r && r < 100;
     }
     return !1;
 }

@@ -1,59 +1,59 @@
-i.d(n, { Z: () => v });
-var t = i(200651);
-i(192379);
-var a = i(481060),
-    r = i(413335),
-    s = i(984370),
-    o = i(11658),
-    c = i(166351),
-    l = i(953478),
-    d = i(460608),
-    u = i(953476),
-    x = i(947494),
-    m = i(388032),
-    p = i(303035);
-function v(e) {
+t.d(n, { Z: () => p });
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    a = t(413335),
+    o = t(984370),
+    s = t(11658),
+    c = t(166351),
+    l = t(953478),
+    d = t(460608),
+    u = t(953476),
+    x = t(783684),
+    v = t(388032),
+    m = t(748448);
+function p(e) {
     let { guildId: n } = e;
-    return (0, t.jsxs)('div', {
-        className: p.container,
+    return (0, i.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, t.jsxs)(s.Z, {
+            (0, i.jsxs)(o.Z, {
                 hideSearch: !0,
-                toolbar: (0, t.jsx)('div', {}),
+                toolbar: (0, i.jsx)('div', {}),
                 children: [
-                    (0, t.jsx)(s.Z.Icon, {
-                        icon: (0, a.GSL)(r.Z),
+                    (0, i.jsx)(o.Z.Icon, {
+                        icon: (0, r.GSL)(a.Z),
                         disabled: !0,
                         'aria-label': ''
                     }),
-                    (0, t.jsx)(s.Z.Title, { children: m.intl.string(x.Z.yv3DJC) }),
-                    (0, t.jsx)(s.Z.Divider, {})
+                    (0, i.jsx)(o.Z.Title, { children: v.NW.string(x.Z.yv3DJC) }),
+                    (0, i.jsx)(o.Z.Divider, {})
                 ]
             }),
-            (0, t.jsxs)('div', {
-                className: p.contentContainer,
+            (0, i.jsxs)('div', {
+                className: m.contentContainer,
                 children: [
-                    (0, t.jsxs)('div', {
-                        className: p.powerupsContainer,
+                    (0, i.jsxs)('div', {
+                        className: m.powerupsContainer,
                         children: [
-                            (0, t.jsxs)('div', {
-                                className: p.powerupTextContainer,
+                            (0, i.jsxs)('div', {
+                                className: m.powerupTextContainer,
                                 children: [
-                                    (0, t.jsx)(a.X6q, {
+                                    (0, i.jsx)(r.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: m.intl.string(x.Z['TXY/b2'])
+                                        children: v.NW.string(x.Z['TXY/b2'])
                                     }),
-                                    (0, t.jsx)(a.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
-                                        children: m.intl.string(x.Z.aJv4PD)
+                                        children: v.NW.string(x.Z.aJv4PD)
                                     })
                                 ]
                             }),
-                            (0, t.jsx)('div', {
-                                className: p.powerupContainer,
+                            (0, i.jsx)('div', {
+                                className: m.powerupContainer,
                                 children: u.G.map((e, n) =>
-                                    (0, t.jsx)(
-                                        o.Z,
+                                    (0, i.jsx)(
+                                        s.Z,
                                         {
                                             index: n,
                                             powerup: e,
@@ -63,28 +63,28 @@ function v(e) {
                                     )
                                 )
                             }),
-                            (0, t.jsxs)('div', {
-                                className: p.powerupTextContainer,
+                            (0, i.jsxs)('div', {
+                                className: m.powerupTextContainer,
                                 children: [
-                                    (0, t.jsx)(a.X6q, {
+                                    (0, i.jsx)(r.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: m.intl.string(x.Z['TXY/b2'])
+                                        children: v.NW.string(x.Z['TXY/b2'])
                                     }),
-                                    (0, t.jsx)(a.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
-                                        children: m.intl.string(x.Z.aJv4PD)
+                                        children: v.NW.string(x.Z.aJv4PD)
                                     })
                                 ]
                             }),
-                            (0, t.jsx)('div', {
-                                className: p.powerupContainer,
-                                children: u.O.map((e) => (0, t.jsx)(c.Z, { powerup: e }, 'powerup-'.concat(e.skuId)))
+                            (0, i.jsx)('div', {
+                                className: m.powerupContainer,
+                                children: u.O.map((e) => (0, i.jsx)(c.Z, { powerup: e }, 'powerup-'.concat(e.skuId)))
                             })
                         ]
                     }),
-                    (0, t.jsxs)('div', {
-                        className: p.sidebarContainer,
-                        children: [(0, t.jsx)(l.Z, {}), (0, t.jsx)(d.Z, { guildId: n })]
+                    (0, i.jsxs)('div', {
+                        className: m.sidebarContainer,
+                        children: [(0, i.jsx)(l.Z, { guildId: n }), (0, i.jsx)(d.Z, { guildId: n })]
                     })
                 ]
             })

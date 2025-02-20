@@ -1,59 +1,59 @@
-t.d(n, { Z: () => u }), t(47120);
-var i = t(200651),
-    l = t(192379),
-    s = t(481060),
-    a = t(881052),
-    r = t(484455),
-    o = t(592286),
-    c = t(388032),
-    d = t(42497);
-let u = function (e) {
-    let { guildId: n, onSave: t, formDescription: u, disable: x } = e,
-        [m, h] = l.useState(null),
-        [f, v] = l.useState(u),
-        g = l.useRef(!1),
-        j = l.useRef(!1);
-    l.useEffect(
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    c = n(881052),
+    s = n(484455),
+    a = n(592286),
+    l = n(388032),
+    u = n(327237);
+let d = function (e) {
+    let { guildId: t, onSave: n, formDescription: d, disable: f } = e,
+        [p, b] = i.useState(null),
+        [j, y] = i.useState(d),
+        m = i.useRef(!1),
+        g = i.useRef(!1);
+    i.useEffect(
         () => () => {
-            j.current = !0;
+            g.current = !0;
         },
         []
     );
-    let C = l.useCallback(async () => {
-        if (!g.current) {
-            h(null);
+    let O = i.useCallback(async () => {
+        if (!m.current) {
+            b(null);
             try {
-                await t(n, f);
+                await n(t, j);
             } catch (e) {
-                if (j.current) return;
-                h(new a.Hx(e).getAnyErrorMessage());
+                if (g.current) return;
+                b(new c.Hx(e).getAnyErrorMessage());
             } finally {
-                if (j.current) return;
-                g.current = !1;
+                if (g.current) return;
+                m.current = !1;
             }
         }
-    }, [f, n, t]);
-    return (0, i.jsxs)(r.Z, {
-        title: c.intl.string(c.t.aDJAfn),
+    }, [j, t, n]);
+    return (0, r.jsxs)(s.Z, {
+        title: l.NW.string(l.t.aDJAfn),
         children: [
-            (0, i.jsx)(s.Kx8, {
-                className: d.fieldBackground,
-                maxLength: o.Us,
-                value: null != f ? f : '',
-                placeholder: c.intl.string(c.t.AJfv3d),
+            (0, r.jsx)(o.Kx8, {
+                className: u.fieldBackground,
+                maxLength: a.Us,
+                value: null != j ? j : '',
+                placeholder: l.NW.string(l.t.AJfv3d),
                 onChange: (e) => {
-                    v(e);
+                    y(e);
                 },
-                onBlur: C,
+                onBlur: O,
                 autosize: !0,
-                disabled: x
+                disabled: f
             }),
-            null != m && '' !== m
-                ? (0, i.jsx)(s.Text, {
-                      className: d.errorText,
+            null != p && '' !== p
+                ? (0, r.jsx)(o.Text, {
+                      className: u.errorText,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: m
+                      children: p
                   })
                 : null
         ]

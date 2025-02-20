@@ -1,14 +1,14 @@
-var i = n(447631),
-    r = n(228129),
-    a = n(349446),
-    s = n(28886),
-    o = n(729605),
+var r = n(447631),
+    i = n(228129),
+    o = n(349446),
+    a = n(28886),
+    s = n(729605),
     l = n(302231);
 t.f =
-    i && !r
+    r && !i
         ? Object.defineProperties
         : function (e, t) {
-              s(e);
-              for (var n, i = o(t), r = l(t), u = r.length, c = 0; u > c; ) a.f(e, (n = r[c++]), i[n]);
+              a(e);
+              for (var n, r = s(t), i = l(t), c = i.length, u = 0; c > u; ) o.f(e, (n = i[u++]), r[n]);
               return e;
           };

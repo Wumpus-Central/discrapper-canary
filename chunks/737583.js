@@ -1,26 +1,26 @@
 n.d(t, {
-    J: () => i,
-    l: () => r
+    J: () => l,
+    l: () => i
 }),
     n(47120);
-var l = n(693824),
+var r = n(693824),
     a = n(169040);
-function i(e) {
+function l(e) {
     let t,
-        { canvas: n, badges: i, startPosition: r, maxWidth: o } = e;
+        { canvas: n, badges: l, startPosition: i, maxWidth: o } = e;
     for (let { iconPath: e, text: s } of (n.setFont({
         size: 12,
         family: a.I8,
         weight: a.Ue,
-        truncate: l.GX.None
+        truncate: r.GX.None
     }),
-    i)) {
-        let l = null != t ? t.w + t.x + a.PW : r,
-            i = null != t ? t.w + t.x + a.PW + a.NC : r + a.NC;
+    l)) {
+        let r = null != t ? t.w + t.x + a.PW : i,
+            l = null != t ? t.w + t.x + a.PW + a.NC : i + a.NC;
         n.drawPath(
             e,
             {
-                x: l,
+                x: r,
                 y: a.f0
             },
             !0,
@@ -29,7 +29,7 @@ function i(e) {
             (t = n.drawText(
                 s,
                 {
-                    x: i,
+                    x: l,
                     y: a.m2,
                     w: o
                 },
@@ -37,37 +37,37 @@ function i(e) {
             ));
     }
 }
-function r(e) {
+function i(e) {
     let {
         canvas: t,
         avatarSrcs: n,
-        position: { x: a, y: i },
-        avatarImageSize: r
+        position: { x: a, y: l },
+        avatarImageSize: i
     } = e;
     for (let e = 0; e < n.length; e++)
         e < n.length - 1 &&
             t.clipRoundedRect(
                 {
-                    x: a + (e + 1) * (r - 8) - 2,
-                    y: i - 1,
-                    w: r + 2,
-                    h: r + 2
+                    x: a + (e + 1) * (i - 8) - 2,
+                    y: l - 1,
+                    w: i + 2,
+                    h: i + 2
                 },
-                r / 2,
+                i / 2,
                 !0
             ),
             t.drawRoundedImage(
                 n[e],
                 {
-                    x: a + e * (r - 8),
-                    y: i
+                    x: a + e * (i - 8),
+                    y: l
                 },
                 {
-                    w: r,
-                    h: r
+                    w: i,
+                    h: i
                 },
                 50,
-                { fillMode: l.JU.Cover }
+                { fillMode: r.JU.Cover }
             ),
             t.restoreContext();
 }

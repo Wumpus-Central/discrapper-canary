@@ -1,20 +1,20 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    o = n(686546),
-    s = n(523288);
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(686546),
+    s = n(984324);
 function c(e) {
     let { className: t } = e,
-        n = (0, a.dQu)(a.TVs.modules.guildbar.AVATAR_SIZE);
-    return (0, i.jsx)(o.ZP, {
-        mask: o.ZP.Masks.SQUIRCLE,
-        className: r()(t, s.placeholderMask),
+        n = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE);
+    return (0, r.jsx)(a.ZP, {
+        mask: a.ZP.Masks.SQUIRCLE,
+        className: l()(t, s.placeholderMask),
         width: n,
         height: n,
         style: { display: 'block' },
-        children: (0, i.jsx)('div', { className: s.dragInner })
+        children: (0, r.jsx)('div', { className: s.dragInner })
     });
 }

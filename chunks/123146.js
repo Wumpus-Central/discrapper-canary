@@ -1,21 +1,21 @@
-n.d(t, { Z: () => a });
-var i = n(861990),
-    r = n(981631);
-class a {
+n.d(t, { Z: () => o });
+var r = n(861990),
+    i = n(981631);
+class o {
     getCreateAttachmentURL(e) {
-        return r.ANM.GRAVITY_ATTACHMENTS;
+        return i.ANM.GRAVITY_ATTACHMENTS;
     }
     getDeleteUploadURL(e) {
-        return r.ANM.MESSAGE_DELETE_UPLOAD(e);
+        return i.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        return r.mBz;
+        return i.mBz;
     }
     getMaxAttachmentsCount() {
-        return r.dN1;
+        return i.dN1;
     }
     getMaxTotalAttachmentSize() {
-        return i.zz;
+        return r.zz;
     }
     get shouldReactNativeCompressUploads() {
         return !0;

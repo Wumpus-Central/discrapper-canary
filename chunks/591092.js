@@ -5,8 +5,8 @@
         var n = e.split('_');
         return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2];
     }
-    function n(e, n, i) {
-        var r = {
+    function n(e, n, r) {
+        var i = {
             ss: n ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
             mm: n ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
             hh: n ? 'година_години_годин' : 'годину_години_годин',
@@ -14,9 +14,9 @@
             MM: 'місяць_місяці_місяців',
             yy: 'рік_роки_років'
         };
-        return 'm' === i ? (n ? 'хвилина' : 'хвилину') : 'h' === i ? (n ? 'година' : 'годину') : e + ' ' + t(r[i], +e);
+        return 'm' === r ? (n ? 'хвилина' : 'хвилину') : 'h' === r ? (n ? 'година' : 'годину') : e + ' ' + t(i[r], +e);
     }
-    function i(e, t) {
+    function r(e, t) {
         var n = {
             nominative: 'неділя_понеділок_вівторок_середа_четвер_п\u2019ятниця_субота'.split('_'),
             accusative: 'неділю_понеділок_вівторок_середу_четвер_п\u2019ятницю_суботу'.split('_'),
@@ -24,7 +24,7 @@
         };
         return e ? n[/(\[[ВвУу]\]) ?dddd/.test(t) ? 'accusative' : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t) ? 'genitive' : 'nominative'][e.day()] : n.nominative;
     }
-    function r(e) {
+    function i(e) {
         return function () {
             return e + 'о' + (11 === this.hours() ? 'б' : '') + '] LT';
         };
@@ -35,7 +35,7 @@
             standalone: 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split('_')
         },
         monthsShort: 'січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд'.split('_'),
-        weekdays: i,
+        weekdays: r,
         weekdaysShort: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
         weekdaysMin: 'нд_пн_вт_ср_чт_пт_сб'.split('_'),
         longDateFormat: {
@@ -47,21 +47,21 @@
             LLLL: 'dddd, D MMMM YYYY р., HH:mm'
         },
         calendar: {
-            sameDay: r('[Сьогодні '),
-            nextDay: r('[Завтра '),
-            lastDay: r('[Вчора '),
-            nextWeek: r('[У] dddd ['),
+            sameDay: i('[Сьогодні '),
+            nextDay: i('[Завтра '),
+            lastDay: i('[Вчора '),
+            nextWeek: i('[У] dddd ['),
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
                     case 3:
                     case 5:
                     case 6:
-                        return r('[Минулої] dddd [').call(this);
+                        return i('[Минулої] dddd [').call(this);
                     case 1:
                     case 2:
                     case 4:
-                        return r('[Минулого] dddd [').call(this);
+                        return i('[Минулого] dddd [').call(this);
                 }
             },
             sameElse: 'L'

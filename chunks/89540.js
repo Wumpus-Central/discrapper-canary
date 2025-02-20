@@ -1,3 +1,3 @@
-n.d(t, { L: () => r });
-var i = n(192379),
-    r = 'undefined' != typeof window ? i.useLayoutEffect : i.useEffect;
+n.d(t, { L: () => i });
+var r = n(192379),
+    i = 'undefined' != typeof window ? r.useLayoutEffect : r.useEffect;

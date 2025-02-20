@@ -1,21 +1,21 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => a });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(276973);
-let s = function (e) {
+var i = n(481060),
+    o = n(222850);
+let a = function (e) {
     let { message: t } = e;
-    return (0, i.jsxs)('div', {
-        className: a.container,
+    return (0, r.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, i.jsx)(r.d3s, {
+            (0, r.jsx)(i.d3s, {
                 size: 'custom',
-                className: a.icon,
+                className: o.icon,
                 width: 20,
                 height: 20,
-                color: r.TVs.colors.TEXT_WARNING
+                color: i.TVs.colors.TEXT_WARNING
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-muted',
                 children: t

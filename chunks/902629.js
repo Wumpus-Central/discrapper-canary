@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(47120);
-var i = n(147913),
-    r = n(313261),
-    a = n(38618);
-function s(e, t, n) {
+var r = n(147913),
+    i = n(313261),
+    o = n(38618);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,14 +15,14 @@ function s(e, t, n) {
         e
     );
 }
-class o extends i.Z {
+class s extends r.Z {
     handleCheckExperiments() {
-        let { enabled: e } = r.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
-        a.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
+        let { enabled: e } = i.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
+        o.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
         super(...e),
-            s(this, 'actions', {
+            a(this, 'actions', {
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleCheckExperiments,
                 LOGIN_SUCCESS: this.handleCheckExperiments,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleCheckExperiments,
@@ -31,4 +31,4 @@ class o extends i.Z {
             });
     }
 }
-let l = new o();
+let l = new s();

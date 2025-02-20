@@ -11,19 +11,19 @@ var o = n(200651),
     m = n(200305),
     _ = n(592286),
     h = n(388032),
-    b = n(739387);
+    b = n(92850);
 let p = () =>
         (0, o.jsx)(s.Z, {
             submitting: !1,
-            message: h.intl.string(h.t['8g514e']),
+            message: h.NW.string(h.t['8g514e']),
             onReset: () => {
                 (0, d.PE)(!1);
             },
-            onResetText: h.intl.string(h.t['ETE/oK']),
+            onResetText: h.NW.string(h.t['ETE/oK']),
             onSave: () => {
                 (0, d.PE)(!1), (0, a.Mr3)(_.Pn);
             },
-            onSaveText: h.intl.string(h.t['Xt+UaW']),
+            onSaveText: h.NW.string(h.t['Xt+UaW']),
             onSaveButtonColor: a.Ttl.RED
         }),
     x = (e) => {

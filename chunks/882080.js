@@ -8,28 +8,28 @@ function t(e) {
             variants: [{ begin: /[A-Z][a-zA-Z0-9_]*/ }, { begin: /_[A-Za-z0-9_]*/ }],
             relevance: 0
         },
-        i = {
+        r = {
             begin: /\(/,
             end: /\)/,
             relevance: 0
         },
-        r = {
+        i = {
             begin: /\[/,
             end: /\]/
         },
-        a = {
+        o = {
             className: 'comment',
             begin: /%/,
             end: /$/,
             contains: [e.PHRASAL_WORDS_MODE]
         },
-        s = {
+        a = {
             className: 'string',
             begin: /`/,
             end: /`/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = {
+        s = {
             className: 'string',
             begin: /0'(\\'|.)/
         },
@@ -37,13 +37,13 @@ function t(e) {
             className: 'string',
             begin: /0'\\s/
         },
-        u = [t, n, i, { begin: /:-/ }, r, a, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s, o, l, e.C_NUMBER_MODE];
+        c = [t, n, r, { begin: /:-/ }, i, o, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, a, s, l, e.C_NUMBER_MODE];
     return (
-        (i.contains = u),
-        (r.contains = u),
+        (r.contains = c),
+        (i.contains = c),
         {
             name: 'Prolog',
-            contains: u.concat([{ begin: /\.$/ }])
+            contains: c.concat([{ begin: /\.$/ }])
         }
     );
 }

@@ -1,53 +1,53 @@
-n.d(t, { Z: () => x }), n(653041);
-var i = n(200651);
+n.d(t, { Z: () => b }), n(653041);
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(749210),
-    s = n(240872),
-    o = n(605436),
-    d = n(228643),
-    c = n(299206),
+var i = n(442837),
+    l = n(481060),
+    o = n(749210),
+    a = n(240872),
+    s = n(605436),
+    c = n(228643),
+    d = n(299206),
     u = n(496675),
-    m = n(867108),
-    h = n(388032);
-function x(e, t) {
+    p = n(867108),
+    m = n(388032);
+function b(e, t) {
     var n;
-    let x = (0, l.e7)([u.Z], () => {
+    let b = (0, i.e7)([u.Z], () => {
             let n = u.Z.getHighestRole(e);
             return !u.Z.isRoleHigher(e, n, t);
         }),
         g = [],
-        p = (0, m.Z)(e, t);
-    null != p && g.push(p);
-    let f = (0, c.Z)({
-        id: t.id,
-        label: h.intl.string(h.t.sMsaLi)
-    });
+        f = (0, p.Z)(e, t);
     null != f && g.push(f);
-    let b = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
-        v = t.managed && !b,
-        _ = null != t && (0, o.pM)(e.id, t.id);
+    let h = (0, d.Z)({
+        id: t.id,
+        label: m.NW.string(m.t.sMsaLi)
+    });
+    null != h && g.push(h);
+    let x = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
+        j = t.managed && !x,
+        v = null != t && (0, s.pM)(e.id, t.id);
     return (
-        x ||
+        b ||
+            j ||
             v ||
-            _ ||
             g.push(
-                (0, i.jsx)(
-                    a.kSQ,
+                (0, r.jsx)(
+                    l.kSQ,
                     {
-                        children: (0, i.jsx)(a.sNh, {
+                        children: (0, r.jsx)(l.sNh, {
                             id: 'delete-role',
-                            label: h.intl.string(h.t.oyYWHB),
+                            label: m.NW.string(m.t.oyYWHB),
                             color: 'danger',
-                            icon: a.XHJ,
+                            icon: l.XHJ,
                             action: () => {
-                                s.Z.show({
-                                    title: h.intl.string(h.t.YWISbW),
-                                    body: h.intl.format(h.t['9+nrUV'], { name: t.name }),
-                                    cancelText: h.intl.string(h.t['ETE/oK']),
+                                a.Z.show({
+                                    title: m.NW.string(m.t.YWISbW),
+                                    body: m.NW.format(m.t['9+nrUV'], { name: t.name }),
+                                    cancelText: m.NW.string(m.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        b && (await (0, d.L_)(e.id, t.id, [])), r.Z.deleteRole(e.id, t.id);
+                                        x && (await (0, c.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }

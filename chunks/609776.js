@@ -20,8 +20,8 @@ var r = n(200651),
     N = n(427679),
     j = n(930180),
     I = n(46920),
-    y = n(157925),
-    C = n(981631),
+    C = n(157925),
+    y = n(981631),
     O = n(765305),
     S = n(190378),
     E = n(388032),
@@ -81,7 +81,7 @@ function w(e) {
         ep = null != B,
         ef = eg.length > 1;
     (0, s.ZP)(() => {
-        x.default.track(C.rMx.START_STAGE_OPENED, {
+        x.default.track(y.rMx.START_STAGE_OPENED, {
             stage_instance_id: null == F ? void 0 : F.id,
             can_start_public_stage: !1,
             guild_id: k.guild_id
@@ -199,7 +199,7 @@ function w(e) {
                                         className: T.textInput,
                                         onChange: (e) => V(e),
                                         placeholder: E.NW.string(E.t.ZwWrub),
-                                        maxLength: y.xA,
+                                        maxLength: C.xA,
                                         value: H,
                                         autoComplete: 'off',
                                         inputRef: ej

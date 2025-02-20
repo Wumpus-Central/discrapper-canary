@@ -1,15 +1,15 @@
 n.d(t, {
     e: () => d,
-    w: () => _
+    w: () => p
 });
-var i = n(47770),
-    r = n(846519),
-    a = n(570140),
-    s = n(710845),
-    o = n(646047),
+var r = n(47770),
+    i = n(846519),
+    o = n(570140),
+    a = n(710845),
+    s = n(646047),
     l = n(70956),
-    u = n(27414);
-function c(e, t, n) {
+    c = n(27414);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function c(e, t, n) {
 var d = (function (e) {
     return (e.WindowVisibilityChanged = 'window-visibility-changed'), (e.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed'), e;
 })({});
-class f extends i.Z {
+class f extends r.Z {
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
     }
@@ -35,14 +35,14 @@ class f extends i.Z {
     }
     constructor() {
         super(),
-            c(this, 'disableVideoTimer', new r.V7()),
-            c(this, 'discordVisible', !0),
-            c(this, 'incomingVideoEnabled', !0),
-            c(this, 'logger', new s.Z('WindowVisibilityVideoManager')),
-            c(this, 'HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS', 30 * l.Z.Millis.SECOND),
-            c(this, 'update', () => {
-                this.discordVisible !== (0, u.Z)() &&
-                    ((this.discordVisible = (0, u.Z)()),
+            u(this, 'disableVideoTimer', new i.V7()),
+            u(this, 'discordVisible', !0),
+            u(this, 'incomingVideoEnabled', !0),
+            u(this, 'logger', new a.Z('WindowVisibilityVideoManager')),
+            u(this, 'HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS', 30 * l.Z.Millis.SECOND),
+            u(this, 'update', () => {
+                this.discordVisible !== (0, c.Z)() &&
+                    ((this.discordVisible = (0, c.Z)()),
                     this.emit('window-visibility-changed', this.discordVisible),
                     this.discordVisible
                         ? (this.disableVideoTimer.stop(), this.setIncomingVideoEnabled(!0))
@@ -50,9 +50,9 @@ class f extends i.Z {
                               this.setIncomingVideoEnabled(!1);
                           }));
             }),
-            a.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.update),
-            a.Z.subscribe('APP_STATE_UPDATE', this.update),
-            o.Z.addOnPipModeChangedListener(this.update);
+            o.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.update),
+            o.Z.subscribe('APP_STATE_UPDATE', this.update),
+            s.Z.addOnPipModeChangedListener(this.update);
     }
 }
-let _ = new f();
+let p = new f();

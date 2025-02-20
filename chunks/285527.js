@@ -5,14 +5,14 @@ function t(e) {
             variants: [e.inherit(e.APOS_STRING_MODE, { illegal: null }), e.inherit(e.QUOTE_STRING_MODE, { illegal: null })]
         },
         n = e.UNDERSCORE_TITLE_MODE,
-        i = {
+        r = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        r = 'namespace class interface use extends function return abstract final public protected private static deprecated throw try catch Exception echo empty isset instanceof unset let var new const self require if else elseif switch case default do while loop for continue break likely unlikely __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__ array boolean float double integer object resource string char long unsigned bool int uint ulong uchar true false null undefined';
+        i = 'namespace class interface use extends function return abstract final public protected private static deprecated throw try catch Exception echo empty isset instanceof unset let var new const self require if else elseif switch case default do while loop for continue break likely unlikely __LINE__ __FILE__ __DIR__ __FUNCTION__ __CLASS__ __TRAIT__ __METHOD__ __NAMESPACE__ array boolean float double integer object resource string char long unsigned bool int uint ulong uchar true false null undefined';
     return {
         name: 'Zephir',
         aliases: ['zep'],
-        keywords: r,
+        keywords: i,
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.COMMENT(/\/\*/, /\*\//, {
@@ -42,8 +42,8 @@ function t(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        keywords: r,
-                        contains: ['self', e.C_BLOCK_COMMENT_MODE, t, i]
+                        keywords: i,
+                        contains: ['self', e.C_BLOCK_COMMENT_MODE, t, r]
                     }
                 ]
             },
@@ -68,7 +68,7 @@ function t(e) {
             },
             { begin: /=>/ },
             t,
-            i
+            r
         ]
     };
 }

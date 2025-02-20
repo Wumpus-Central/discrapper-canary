@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => r });
-class r {
+n.d(t, { Z: () => i });
+class i {
     setParams(e) {
         this.param !== e && ((this.param = e), (this.loading = !1), (this.loaded = !1));
     }
@@ -28,6 +28,6 @@ class r {
             });
     }
     constructor(e) {
-        i(this, 'val', void 0), i(this, 'loading', !1), i(this, 'loaded', !1), i(this, 'param', void 0), i(this, 'loader', void 0), (this.loader = e);
+        r(this, 'val', void 0), r(this, 'loading', !1), r(this, 'loaded', !1), r(this, 'param', void 0), r(this, 'loader', void 0), (this.loader = e);
     }
 }

@@ -1,61 +1,61 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(446411),
-    o = n(454585),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    l = n(446411),
+    s = n(454585),
     c = n(834129),
     d = n(553385),
     u = n(981631),
-    m = n(388032),
-    _ = n(436289);
-function h(e) {
-    let { message: t, channel: l, compact: s } = e,
-        o = null != t.embeds && t.embeds.length > 0;
-    return (0, i.jsxs)('div', {
+    p = n(388032),
+    m = n(768562);
+function f(e) {
+    let { message: t, channel: i, compact: l } = e,
+        s = null != t.embeds && t.embeds.length > 0;
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(c.Z, {
-                className: a()(_.mainContainer, { [_.compact]: s }),
+            (0, r.jsx)(c.Z, {
+                className: a()(m.mainContainer, { [m.compact]: l }),
                 icon: n(570111),
-                compact: s,
-                children: (0, i.jsx)('div', {
-                    className: a()(_.__invalid_content, { [_.compact]: s }),
-                    children: (0, i.jsx)('div', {
-                        className: a()(_.__invalid_messageContent, { [_.compact]: s }),
+                compact: l,
+                children: (0, r.jsx)('div', {
+                    className: a()(m.__invalid_content, { [m.compact]: l }),
+                    children: (0, r.jsx)('div', {
+                        className: a()(m.__invalid_messageContent, { [m.compact]: l }),
                         children: t.content
                     })
                 })
             }),
-            (0, i.jsx)('div', {
-                className: a()(_.__invalid_embedContent, { [_.compact]: s }),
-                children: (0, i.jsx)(p, { message: t })
+            (0, r.jsx)('div', {
+                className: a()(m.__invalid_embedContent, { [m.compact]: l }),
+                children: (0, r.jsx)(h, { message: t })
             }),
-            (0, i.jsx)('div', {
-                className: _.actions,
-                children: (0, i.jsx)(r.zxk, {
-                    color: r.zxk.Colors.PRIMARY,
+            (0, r.jsx)('div', {
+                className: m.actions,
+                children: (0, r.jsx)(o.zxk, {
+                    color: o.zxk.Colors.PRIMARY,
                     onClick: () => {
-                        o ? (0, d.z$)(t) : (0, d.XP)(l.guild_id, l.id, t.id);
+                        s ? (0, d.z$)(t) : (0, d.XP)(i.guild_id, i.id, t.id);
                     },
-                    children: m.intl.string(m.t.zdBCIi)
+                    children: p.NW.string(p.t.zdBCIi)
                 })
             })
         ]
     });
 }
-function p(e) {
+function h(e) {
     var t;
     let { message: n } = e,
-        [l] = null !== (t = n.embeds) && void 0 !== t ? t : [];
-    return null == l
+        [i] = null !== (t = n.embeds) && void 0 !== t ? t : [];
+    return null == i
         ? null
-        : (0, i.jsx)(s.ZP, {
-              className: _.embed,
-              embed: l,
-              renderTitle: (e, t) => o.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
-              renderDescription: (e, t, i) => o.Z.parse(t, !0, { channelId: n.channel_id }),
+        : (0, r.jsx)(l.ZP, {
+              className: m.embed,
+              embed: i,
+              renderTitle: (e, t) => s.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
+              renderDescription: (e, t, r) => s.Z.parse(t, !0, { channelId: n.channel_id }),
               autoPlayGif: !1,
               renderImageComponent: u.VqG,
               renderVideoComponent: u.VqG,

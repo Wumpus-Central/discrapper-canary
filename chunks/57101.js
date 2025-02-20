@@ -1,10 +1,10 @@
 n.d(t, { Z: () => a });
-var i = n(392711),
-    l = n(897325);
-let a = (0, i.memoize)(
+var r = n(392711),
+    i = n(897325);
+let a = (0, r.memoize)(
     function (e) {
         let { theme: t, layoutType: n } = e;
-        return (0, l._)(t, n);
+        return (0, i._)(t, n);
     },
     (e) => {
         let { theme: t, layoutType: n } = e;

@@ -1,11 +1,11 @@
-function i(e, t) {
+function r(e, t) {
     if (e.length < 2) return [];
     let n = [],
-        i = e[0];
-    for (let r = 1; r < e.length; r++) {
-        let a = e[r];
-        n.push(t(i, a)), (i = a);
+        r = e[0];
+    for (let i = 1; i < e.length; i++) {
+        let o = e[i];
+        n.push(t(r, o)), (r = o);
     }
     return n;
 }
-n.d(t, { Z: () => i }), n(653041);
+n.d(t, { Z: () => r }), n(653041);

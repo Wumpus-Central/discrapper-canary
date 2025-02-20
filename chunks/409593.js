@@ -15,15 +15,15 @@ function t(e) {
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE, t]
         },
-        i = {
+        r = {
             className: 'variable',
             begin: /\$\([\w-]+\s/,
             end: /\)/,
             keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
             contains: [t, n]
         },
-        r = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' },
-        a = {
+        i = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' },
+        o = {
             className: 'meta',
             begin: /^\.PHONY:/,
             end: /$/,
@@ -32,7 +32,7 @@ function t(e) {
                 keyword: '.PHONY'
             }
         },
-        s = {
+        a = {
             className: 'section',
             begin: /^[^\s]+:/,
             end: /$/,
@@ -45,7 +45,7 @@ function t(e) {
             $pattern: /[\w-]+/,
             keyword: 'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
         },
-        contains: [e.HASH_COMMENT_MODE, t, n, i, r, a, s]
+        contains: [e.HASH_COMMENT_MODE, t, n, r, i, o, a]
     };
 }
 e.exports = t;

@@ -1,8 +1,8 @@
-var i;
-function r(e) {}
-function a(e, t) {}
+var r;
+function i(e) {}
+function o(e, t) {}
 n.d(t, {
-    B1: () => r,
-    L8: () => a
+    B1: () => i,
+    L8: () => o
 }),
-    (i = n.g.performance);
+    (r = n.g.performance);

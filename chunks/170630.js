@@ -1,5 +1,5 @@
-var i = n(346391);
-function r(e) {
-    return i(this, e).has(e);
+var r = n(346391);
+function i(e) {
+    return r(this, e).has(e);
 }
-e.exports = r;
+e.exports = i;

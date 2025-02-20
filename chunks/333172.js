@@ -1,26 +1,26 @@
-n.d(t, { Z: () => c });
-var i = n(192379),
-    r = n(723184),
-    a = n(925489),
-    s = (function () {
+n.d(t, { Z: () => u });
+var r = n(192379),
+    i = n(723184),
+    o = n(925489),
+    a = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function o(e, t) {
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function u(e, t) {
+function c(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -32,28 +32,28 @@ function u(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-let c = (function (e) {
+let u = (function (e) {
     function t() {
-        o(this, t);
-        for (var e, n, i, r = arguments.length, s = Array(r), u = 0; u < r; u++) s[u] = arguments[u];
+        s(this, t);
+        for (var e, n, r, i = arguments.length, a = Array(i), c = 0; c < i; c++) a[c] = arguments[c];
         return (
-            (n = i = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(s)))),
-            (i.handleChange = function (e) {
-                var t = a.T(e, i.props.direction, i.props.hsl, i.container);
-                t && 'function' == typeof i.props.onChange && i.props.onChange(t, e);
+            (n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+            (r.handleChange = function (e) {
+                var t = o.T(e, r.props.direction, r.props.hsl, r.container);
+                t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
             }),
-            (i.handleMouseDown = function (e) {
-                i.handleChange(e), window.addEventListener('mousemove', i.handleChange), window.addEventListener('mouseup', i.handleMouseUp);
+            (r.handleMouseDown = function (e) {
+                r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
             }),
-            (i.handleMouseUp = function () {
-                i.unbindEventListeners();
+            (r.handleMouseUp = function () {
+                r.unbindEventListeners();
             }),
-            l(i, n)
+            l(r, n)
         );
     }
     return (
-        u(t, e),
-        s(t, [
+        c(t, e),
+        a(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -72,7 +72,7 @@ let c = (function (e) {
                     var e = this,
                         t = this.props.direction,
                         n = void 0 === t ? 'horizontal' : t,
-                        a = (0, r.default)(
+                        o = (0, i.default)(
                             {
                                 default: {
                                     hue: {
@@ -109,14 +109,14 @@ let c = (function (e) {
                             },
                             { vertical: 'vertical' === n }
                         );
-                    return i.createElement(
+                    return r.createElement(
                         'div',
-                        { style: a.hue },
-                        i.createElement(
+                        { style: o.hue },
+                        r.createElement(
                             'div',
                             {
                                 className: 'hue-' + n,
-                                style: a.container,
+                                style: o.container,
                                 ref: function (t) {
                                     return (e.container = t);
                                 },
@@ -124,8 +124,8 @@ let c = (function (e) {
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            i.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            i.createElement('div', { style: a.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: a.slider }))
+                            r.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
+                            r.createElement('div', { style: o.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: o.slider }))
                         )
                     );
                 }
@@ -133,4 +133,4 @@ let c = (function (e) {
         ]),
         t
     );
-})(i.PureComponent || i.Component);
+})(r.PureComponent || r.Component);

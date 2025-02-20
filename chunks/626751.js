@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(987909),
-    s = n(430824),
-    o = n(630388),
+    o = n(987909),
+    l = n(430824),
+    s = n(630388),
     c = n(35125),
     d = n(523361),
     u = n(981631);
-function m(e) {
+function p(e) {
     var t, n;
-    let { channel: m, message: _ } = e,
-        h = null !== (n = null === (t = _.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.Md)() : (0, d.Q8)(),
-        p = m.guild_id,
+    let { channel: p, message: m } = e,
+        f = null !== (n = null === (t = m.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.Md)() : (0, d.Q8)(),
+        h = p.guild_id,
         g = (0, a.e7)(
-            [s.Z],
+            [l.Z],
             () => {
                 var e;
-                return null === (e = s.Z.getGuild(p)) || void 0 === e ? void 0 : e.systemChannelFlags;
+                return null === (e = l.Z.getGuild(h)) || void 0 === e ? void 0 : e.systemChannelFlags;
             },
-            [p]
+            [h]
         ),
-        f = null != g && (0, o.yE)(g, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        x = l.useMemo(() => (0, c._i)(m, _), [m, _]);
-    return f
+        _ = null != g && (0, s.yE)(g, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        b = i.useMemo(() => (0, c._i)(p, m), [p, m]);
+    return _
         ? null
-        : (0, i.jsx)(r.Z, {
-              channel: m,
-              message: _,
-              buttonLabels: h,
+        : (0, r.jsx)(o.Z, {
+              channel: p,
+              message: m,
+              buttonLabels: f,
               stickers: d.HG,
               event: u.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
-              eventProperties: x
+              eventProperties: b
           });
 }

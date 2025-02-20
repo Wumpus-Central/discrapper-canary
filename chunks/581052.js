@@ -1,27 +1,27 @@
-e.d(t, { V: () => u });
-var i = e(200651);
-e(192379);
-var l = e(442837),
-    r = e(481060),
-    a = e(823162),
-    s = e(594174),
-    d = e(388032);
-function u(n) {
-    let t = (0, l.e7)([s.default], () => s.default.getCurrentUser());
+n.d(t, { V: () => c });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(823162),
+    o = n(594174),
+    s = n(388032);
+function c(e) {
+    let t = (0, i.e7)([o.default], () => o.default.getCurrentUser());
     return (null == t ? void 0 : t.isStaff()) !== !0
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  !n.isMessageRequest &&
-                      (0, i.jsx)(r.sNh, {
+                  !e.isMessageRequest &&
+                      (0, r.jsx)(l.sNh, {
                           id: 'mark-as-message-request',
-                          label: d.intl.string(d.t.L6623t),
-                          action: () => (0, a.Xy)(n.id)
+                          label: s.NW.string(s.t.L6623t),
+                          action: () => (0, a.Xy)(e.id)
                       }),
-                  (0, i.jsx)(r.sNh, {
+                  (0, r.jsx)(l.sNh, {
                       id: 'clear-message-request',
-                      label: d.intl.string(d.t['85YWlZ']),
-                      action: () => (0, a.qR)(n.id)
+                      label: s.NW.string(s.t['85YWlZ']),
+                      action: () => (0, a.qR)(e.id)
                   })
               ]
           });

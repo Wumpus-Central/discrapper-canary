@@ -1,67 +1,67 @@
-n.d(t, { s: () => h }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(481060),
-    s = n(287734),
-    o = n(592125),
+n.d(t, { s: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(287734),
+    s = n(592125),
     c = n(693546),
-    d = n(246364),
-    u = n(388032);
-function h(e, t, h, p) {
-    let [m, f] = l.useState(!1),
-        g = (0, a.e7)([o.Z], () => o.Z.getChannel(p)),
-        _ = l.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(u.intl.string(u.t.R0RpRU), r.ToastType.FAILURE));
+    u = n(246364),
+    d = n(388032);
+function p(e, t, p, h) {
+    let [f, m] = i.useState(!1),
+        g = (0, l.e7)([s.Z], () => s.Z.getChannel(h)),
+        b = i.useCallback(() => {
+            (0, o.showToast)((0, o.createToast)(d.NW.string(d.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
-        C = l.useCallback(async () => {
-            if (!m && null != e && null != t && null != h) {
+        _ = i.useCallback(async () => {
+            if (!f && null != e && null != t && null != p) {
                 if (null != g) {
-                    s.default.selectPrivateChannel(g.id);
+                    a.default.selectPrivateChannel(g.id);
                     return;
                 }
-                if (!m) {
-                    f(!0);
+                if (!f) {
+                    m(!0);
                     try {
-                        await c.Z.createOrEnterJoinRequestInterview(h);
-                    } catch {
-                        _();
+                        await c.Z.createOrEnterJoinRequestInterview(p);
+                    } catch (e) {
+                        b();
                     } finally {
-                        f(!1);
+                        m(!1);
                     }
                 }
             }
-        }, [e, h, g, _, m, t]);
+        }, [e, p, g, b, f, t]);
     return {
         approveRequest: async () => {
-            if (!m && null != e && null != t && null != h) {
-                f(!0);
+            if (!f && null != e && null != t && null != p) {
+                m(!0);
                 try {
-                    await c.Z.updateGuildJoinRequest(e, t, h, d.wB.APPROVED);
-                } catch {
-                    _();
+                    await c.Z.updateGuildJoinRequest(e, t, p, u.wB.APPROVED);
+                } catch (e) {
+                    b();
                 } finally {
-                    f(!1);
+                    m(!1);
                 }
             }
         },
         rejectRequest: () => {
             null != e &&
                 null != t &&
-                null != h &&
-                (0, r.ZDy)(async () => {
-                    let { default: l } = await n.e('56496').then(n.bind(n, 113886));
+                null != p &&
+                (0, o.ZDy)(async () => {
+                    let { default: i } = await n.e('56496').then(n.bind(n, 113886));
                     return (n) =>
-                        (0, i.jsx)(l, {
+                        (0, r.jsx)(i, {
                             modalProps: n,
                             guildId: e,
                             userId: t,
-                            guildJoinRequestId: h,
-                            onError: _
+                            guildJoinRequestId: p,
+                            onError: b
                         });
                 });
         },
-        submitting: m,
-        handleOpenInterview: C
+        submitting: f,
+        handleOpenInterview: _
     };
 }

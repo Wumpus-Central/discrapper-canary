@@ -5,7 +5,7 @@ function t(e) {
             built_in: ['anytype', 'boolean', 'byte', 'char', 'container', 'date', 'double', 'enum', 'guid', 'int', 'int64', 'long', 'real', 'short', 'str', 'utcdatetime', 'var'],
             literal: ['default', 'false', 'null', 'true']
         },
-        i = {
+        r = {
             variants: [
                 {
                     match: [/(class|interface)\s+/, t, /\s+(extends|implements)\s+/, t]
@@ -35,7 +35,7 @@ function t(e) {
                 begin: '#',
                 end: '$'
             },
-            i
+            r
         ]
     };
 }

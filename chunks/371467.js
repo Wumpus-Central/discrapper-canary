@@ -20,9 +20,9 @@ var i,
     y = n(594174),
     E = n(974180),
     x = n(237997),
-    S = n(70956),
-    C = n(150097),
-    I = n(129724),
+    I = n(70956),
+    S = n(150097),
+    C = n(129724),
     j = n(145597),
     w = n(371651),
     Z = n(610394),
@@ -83,10 +83,10 @@ function U(e, t) {
         e
     );
 }
-let F = 5 * S.Z.Millis.SECOND,
-    B = 8 * S.Z.Millis.SECOND,
-    G = 30 * S.Z.Millis.SECOND,
-    H = 30 * S.Z.Millis.SECOND,
+let F = 5 * I.Z.Millis.SECOND,
+    B = 8 * I.Z.Millis.SECOND,
+    G = 30 * I.Z.Millis.SECOND,
+    H = 30 * I.Z.Millis.SECOND,
     Y = Object.freeze({
         timestamp: 0,
         priority: 0,
@@ -244,7 +244,7 @@ let eo = new er(s.Z, {
             c = y.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == c) return !1;
         if ((null === (n = a.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = a.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
-            if (!(0, C.eF)(a, l, !0, !0)) return !1;
+            if (!(0, S.eF)(a, l, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 var i;
                 let r, l;
@@ -274,7 +274,7 @@ let eo = new er(s.Z, {
             })(s, a, c);
             if (!1 !== e) return e;
         }
-        if (x.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || b.Z.disableNotifications || !(0, C.eF)(a, l)) return !1;
+        if (x.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || b.Z.disableNotifications || !(0, S.eF)(a, l)) return !1;
         let u = !m.Z.isSoundDisabled(E.Ay),
             p = null !== (r = _.Z.getMessage(l, a.id)) && void 0 !== r ? r : (0, d.e5)(a);
         en((0, R.Z)(s, p, c, u), {
@@ -331,7 +331,7 @@ let eo = new er(s.Z, {
         en((0, k.f)(M.NW.string(M.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        en((0, k.f)(M.NW.format(M.t.KLhk6u, { duration: (0, I.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
+        en((0, k.f)(M.NW.format(M.t.KLhk6u, { duration: (0, C.A)(u.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         en((0, k.f)(M.NW.string(M.t['1ZbZur'])));

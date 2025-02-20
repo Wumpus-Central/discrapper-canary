@@ -1,25 +1,25 @@
 function t(e) {
     let t = e.regex,
         n = /[dualxmsipngr]{0,12}/,
-        i = {
+        r = {
             $pattern: /[\w.]+/,
             keyword: 'abs accept alarm and atan2 bind binmode bless break caller chdir chmod chomp chop chown chr chroot class close closedir connect continue cos crypt dbmclose dbmopen defined delete die do dump each else elsif endgrent endhostent endnetent endprotoent endpwent endservent eof eval exec exists exit exp fcntl field fileno flock for foreach fork format formline getc getgrent getgrgid getgrnam gethostbyaddr gethostbyname gethostent getlogin getnetbyaddr getnetbyname getnetent getpeername getpgrp getpriority getprotobyname getprotobynumber getprotoent getpwent getpwnam getpwuid getservbyname getservbyport getservent getsockname getsockopt given glob gmtime goto grep gt hex if index int ioctl join keys kill last lc lcfirst length link listen local localtime log lstat lt ma map method mkdir msgctl msgget msgrcv msgsnd my ne next no not oct open opendir or ord our pack package pipe pop pos print printf prototype push q|0 qq quotemeta qw qx rand read readdir readline readlink readpipe recv redo ref rename require reset return reverse rewinddir rindex rmdir say scalar seek seekdir select semctl semget semop send setgrent sethostent setnetent setpgrp setpriority setprotoent setpwent setservent setsockopt shift shmctl shmget shmread shmwrite shutdown sin sleep socket socketpair sort splice split sprintf sqrt srand stat state study sub substr symlink syscall sysopen sysread sysseek system syswrite tell telldir tie tied time times tr truncate uc ucfirst umask undef unless unlink unpack unshift untie until use utime values vec wait waitpid wantarray warn when while write x|0 xor y|0'
         },
-        r = {
+        i = {
             className: 'subst',
             begin: '[$@]\\{',
             end: '\\}',
-            keywords: i
+            keywords: r
         },
-        a = {
+        o = {
             begin: /->\{/,
             end: /\}/
         },
-        s = {
+        a = {
             scope: 'attr',
             match: /\s+:\s*\w+(\s*\(.*?\))?/
         },
-        o = {
+        s = {
             scope: 'variable',
             variants: [
                 { begin: /\$\d/ },
@@ -29,28 +29,28 @@ function t(e) {
                     relevance: 0
                 }
             ],
-            contains: [s]
+            contains: [a]
         },
         l = {
             className: 'number',
             variants: [{ match: /0?\.[0-9][0-9_]+\b/ }, { match: /\bv?(0|[1-9][0-9_]*(\.[0-9_]+)?|[1-9][0-9_]*)\b/ }, { match: /\b0[0-7][0-7_]*\b/ }, { match: /\b0x[0-9a-fA-F][0-9a-fA-F_]*\b/ }, { match: /\b0b[0-1][0-1_]*\b/ }],
             relevance: 0
         },
-        u = [e.BACKSLASH_ESCAPE, r, o],
-        c = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
-        d = (e, i, r = '\\1') => {
-            let a = '\\1' === r ? r : t.concat(r, i);
-            return t.concat(t.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, /(?:\\.|[^\\\/])*?/, r, n);
+        c = [e.BACKSLASH_ESCAPE, i, s],
+        u = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
+        d = (e, r, i = '\\1') => {
+            let o = '\\1' === i ? i : t.concat(i, r);
+            return t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, o, /(?:\\.|[^\\\/])*?/, i, n);
         },
-        f = (e, i, r) => t.concat(t.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, r, n),
-        _ = [
-            o,
+        f = (e, r, i) => t.concat(t.concat('(?:', e, ')'), r, /(?:\\.|[^\\\/])*?/, i, n),
+        p = [
+            s,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            a,
+            o,
             {
                 className: 'string',
-                contains: u,
+                contains: c,
                 variants: [
                     {
                         begin: 'q[qwxr]?\\s*\\(',
@@ -115,7 +115,7 @@ function t(e) {
                     e.HASH_COMMENT_MODE,
                     {
                         className: 'regexp',
-                        variants: [{ begin: d('s|tr|y', t.either(...c, { capture: !0 })) }, { begin: d('s|tr|y', '\\(', '\\)') }, { begin: d('s|tr|y', '\\[', '\\]') }, { begin: d('s|tr|y', '\\{', '\\}') }],
+                        variants: [{ begin: d('s|tr|y', t.either(...u, { capture: !0 })) }, { begin: d('s|tr|y', '\\(', '\\)') }, { begin: d('s|tr|y', '\\[', '\\]') }, { begin: d('s|tr|y', '\\{', '\\}') }],
                         relevance: 2
                     },
                     {
@@ -126,7 +126,7 @@ function t(e) {
                                 relevance: 0
                             },
                             { begin: f('(?:m|qr)?', /\//, /\//) },
-                            { begin: f('m|qr', t.either(...c, { capture: !0 }), /\1/) },
+                            { begin: f('m|qr', t.either(...u, { capture: !0 }), /\1/) },
                             { begin: f('m|qr', /\(/, /\)/) },
                             { begin: f('m|qr', /\[/, /\]/) },
                             { begin: f('m|qr', /\{/, /\}/) }
@@ -140,7 +140,7 @@ function t(e) {
                 end: '(\\s*\\(.*?\\))?[;{]',
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, s]
+                contains: [e.TITLE_MODE, a]
             },
             {
                 className: 'class',
@@ -148,7 +148,7 @@ function t(e) {
                 end: '[;{]',
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, s, l]
+                contains: [e.TITLE_MODE, a, l]
             },
             {
                 begin: '-\\w\\b',
@@ -168,13 +168,13 @@ function t(e) {
             }
         ];
     return (
-        (r.contains = _),
-        (a.contains = _),
+        (i.contains = p),
+        (o.contains = p),
         {
             name: 'Perl',
             aliases: ['pl', 'pm'],
-            keywords: i,
-            contains: _
+            keywords: r,
+            contains: p
         }
     );
 }

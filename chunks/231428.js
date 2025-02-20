@@ -13,9 +13,9 @@ var r,
     p = n(355467),
     h = n(827837),
     f = n(821849),
-    N = n(724757),
-    x = n(600164),
-    b = n(239827),
+    b = n(724757),
+    N = n(600164),
+    x = n(239827),
     _ = n(818035),
     E = n(509545),
     j = n(78839),
@@ -83,7 +83,7 @@ function D(e) {
         var e;
         null === (e = o.current) || void 0 === e || e.scrollTo({ to: 0 });
     }, [c]);
-    let x = s.useCallback(
+    let N = s.useCallback(
             (e) => {
                 u(e);
                 let n = t[t.length - 1].id;
@@ -91,7 +91,7 @@ function D(e) {
             },
             [t, a, g]
         ),
-        _ = (0, N.Z)('billing-history', o);
+        _ = (0, b.Z)('billing-history', o);
     return (0, i.jsx)(d.bG, {
         navigator: _,
         children: (0, i.jsx)(d.SJ, {
@@ -117,13 +117,13 @@ function D(e) {
                         return i;
                     })(e, ['ref']);
                 return (0, i.jsx)(
-                    b.Z,
+                    x.Z,
                     R(
                         P(
                             {
                                 className: l()(I.verticalFit, I.paginator),
                                 currentPageIndex: c,
-                                onChangePage: x,
+                                onChangePage: N,
                                 numPages: a,
                                 showPageCount: !1,
                                 ref: t
@@ -200,7 +200,7 @@ class Z extends (r = s.PureComponent) {
                                         ? null
                                         : (0, i.jsx)('div', {
                                               className: l()(I.paymentRow, I.bottomDivider),
-                                              children: (0, i.jsxs)(x.Z, {
+                                              children: (0, i.jsxs)(N.Z, {
                                                   className: I.paymentRowHeader,
                                                   children: [
                                                       (0, i.jsx)('div', {

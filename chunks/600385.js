@@ -1,6 +1,6 @@
-var i = n(606861),
-    r = n(28886),
-    a = n(962768);
+var r = n(606861),
+    i = n(28886),
+    o = n(962768);
 e.exports =
     Object.setPrototypeOf ||
     ('__proto__' in {}
@@ -9,10 +9,10 @@ e.exports =
                   t = !1,
                   n = {};
               try {
-                  (e = i(Object.prototype, '__proto__', 'set'))(n, []), (t = n instanceof Array);
+                  (e = r(Object.prototype, '__proto__', 'set'))(n, []), (t = n instanceof Array);
               } catch (e) {}
-              return function (n, i) {
-                  return r(n), a(i), t ? e(n, i) : (n.__proto__ = i), n;
+              return function (n, r) {
+                  return i(n), o(r), t ? e(n, r) : (n.__proto__ = r), n;
               };
           })()
         : void 0);

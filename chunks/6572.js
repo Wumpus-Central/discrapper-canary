@@ -1,54 +1,54 @@
 n.d(t, { Z: () => d }), n(47120);
-var l = n(200651);
+var r = n(200651);
 n(192379);
-var i = n(120356),
-    r = n.n(i),
+var l = n(120356),
+    i = n.n(l),
     a = n(442837),
-    s = n(963838),
-    o = n(37091),
-    u = n(388032),
-    c = n(794977);
+    o = n(963838),
+    s = n(37091),
+    c = n(388032),
+    u = n(451972);
 function d(e) {
     let t,
-        { channelId: n, userId: i } = e,
-        [d, m] = (0, a.Wu)([o.Z], () => [o.Z.getWaitingHighFive(n, i), o.Z.getCompletedHighFive(n, i)]);
-    if (null != m)
-        t = (0, l.jsxs)(l.Fragment, {
+        { channelId: n, userId: l } = e,
+        [d, f] = (0, a.Wu)([s.Z], () => [s.Z.getWaitingHighFive(n, l), s.Z.getCompletedHighFive(n, l)]);
+    if (null != f)
+        t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, l.jsx)('img', {
-                    alt: u.intl.string(u.t.W6HwU1),
-                    src: (0, s._r)({
-                        name: m[0],
+                (0, r.jsx)('img', {
+                    alt: c.NW.string(c.t.W6HwU1),
+                    src: (0, o._r)({
+                        name: f[0],
                         id: null,
                         animated: !1
                     }),
-                    className: r()(c.completeLeft, c.highFive)
+                    className: i()(u.completeLeft, u.highFive)
                 }),
-                (0, l.jsx)('img', {
-                    alt: u.intl.string(u.t.W6HwU1),
-                    src: (0, s._r)({
-                        name: m[1],
+                (0, r.jsx)('img', {
+                    alt: c.NW.string(c.t.W6HwU1),
+                    src: (0, o._r)({
+                        name: f[1],
                         id: null,
                         animated: !1
                     }),
-                    className: r()(c.completeRight, c.highFive)
+                    className: i()(u.completeRight, u.highFive)
                 })
             ]
         });
     else {
         if (null == d) return null;
-        t = (0, l.jsx)('img', {
-            alt: u.intl.string(u.t.W6HwU1),
-            src: (0, s._r)({
+        t = (0, r.jsx)('img', {
+            alt: c.NW.string(c.t.W6HwU1),
+            src: (0, o._r)({
                 name: d,
                 id: null,
                 animated: !1
             }),
-            className: r()(c.waiting, c.highFive)
+            className: i()(u.waiting, u.highFive)
         });
     }
-    return (0, l.jsx)('div', {
-        className: c.root,
+    return (0, r.jsx)('div', {
+        className: u.root,
         children: t
     });
 }

@@ -1,19 +1,19 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(436774),
-    u = n(891598);
-let c = (e, t) =>
-        (0, i.jsx)('div', {
+    c = n(587945);
+let u = (e, t) =>
+        (0, r.jsx)('div', {
             ref: t,
-            className: s()(u.nitroRewardTileAssetContainer, e.className),
-            children: (0, i.jsx)(o.SrA, {
+            className: a()(c.nitroRewardTileAssetContainer, e.className),
+            children: (0, r.jsx)(s.SrA, {
                 size: 'lg',
-                className: u.nitroRewardTileAsset,
+                className: c.nitroRewardTileAsset,
                 color: l.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
             })
         }),
-    d = r.forwardRef(c);
+    d = i.forwardRef(u);

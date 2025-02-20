@@ -1,14 +1,14 @@
-var i = n(710170),
-    r = n(481062),
-    a = n(660326),
-    s = 200;
-function o(e, t) {
+var r = n(710170),
+    i = n(481062),
+    o = n(660326),
+    a = 200;
+function s(e, t) {
     var n = this.__data__;
-    if (n instanceof i) {
-        var o = n.__data__;
-        if (!r || o.length < s - 1) return o.push([e, t]), (this.size = ++n.size), this;
-        n = this.__data__ = new a(o);
+    if (n instanceof r) {
+        var s = n.__data__;
+        if (!i || s.length < a - 1) return s.push([e, t]), (this.size = ++n.size), this;
+        n = this.__data__ = new o(s);
     }
     return n.set(e, t), (this.size = n.size), this;
 }
-e.exports = o;
+e.exports = s;

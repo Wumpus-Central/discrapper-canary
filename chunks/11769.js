@@ -1,22 +1,22 @@
-n.d(t, { k: () => a });
-var i = n(70956),
-    r = n(388032);
-function a(e) {
-    if (e >= i.Z.Seconds.HOUR) {
-        let t = Math.floor(e / i.Z.Seconds.HOUR),
-            n = Math.floor((e - t * i.Z.Seconds.HOUR) / i.Z.Seconds.MINUTE),
-            a = e - t * i.Z.Seconds.HOUR - n * i.Z.Seconds.MINUTE;
-        return r.intl.formatToPlainString(r.t['3hz51N'], {
+n.d(t, { k: () => o });
+var r = n(70956),
+    i = n(388032);
+function o(e) {
+    if (e >= r.Z.Seconds.HOUR) {
+        let t = Math.floor(e / r.Z.Seconds.HOUR),
+            n = Math.floor((e - t * r.Z.Seconds.HOUR) / r.Z.Seconds.MINUTE),
+            o = e - t * r.Z.Seconds.HOUR - n * r.Z.Seconds.MINUTE;
+        return i.NW.formatToPlainString(i.t['3hz51N'], {
             hours: t,
             minutes: n,
-            seconds: a
+            seconds: o
         });
     }
-    if (!(e >= 60)) return r.intl.formatToPlainString(r.t.IWntYm, { seconds: e });
+    if (!(e >= 60)) return i.NW.formatToPlainString(i.t.IWntYm, { seconds: e });
     {
         let t = Math.floor(e / 60),
             n = e - 60 * t;
-        return r.intl.formatToPlainString(r.t.sY3wlJ, {
+        return i.NW.formatToPlainString(i.t.sY3wlJ, {
             minutes: t,
             seconds: n
         });

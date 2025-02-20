@@ -1,58 +1,58 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(481060),
-    o = n(194082),
+n.d(t, { Z: () => d });
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(194082),
     c = n(14338),
-    d = n(597498);
-let u = l.memo(function (e) {
-    let { label: t, participantCount: n, onClick: l, className: a, collapsed: u, speakers: h, channel: p, isStreamLive: m } = e;
-    return (0, i.jsxs)(s.P3F, {
-        onClick: l,
-        className: r()(d.container, a),
+    u = n(231418);
+let d = i.memo(function (e) {
+    let { label: t, participantCount: n, onClick: i, className: l, collapsed: d, speakers: p, channel: h, isStreamLive: f } = e;
+    return (0, r.jsxs)(a.P3F, {
+        onClick: i,
+        className: o()(u.container, l),
         children: [
-            null == h
-                ? (0, i.jsx)(s.BFJ, {
+            null == p
+                ? (0, r.jsx)(a.BFJ, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
                       height: 20,
-                      className: d.micIcon
+                      className: u.micIcon
                   })
-                : (0, i.jsx)(s.S6n, {
+                : (0, r.jsx)(a.S6n, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,
                       height: 20,
-                      className: d.micIcon
+                      className: u.micIcon
                   }),
-            (0, i.jsxs)(s.Text, {
+            (0, r.jsxs)(a.Text, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
-                className: d.text,
+                className: u.text,
                 children: [t, ' \u2014 ', n]
             }),
-            u &&
-                null != p &&
+            d &&
                 null != h &&
-                h.length > 0 &&
-                (0, i.jsxs)(i.Fragment, {
+                null != p &&
+                p.length > 0 &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(c.Z, {
-                            channel: p,
-                            speakers: h
+                        (0, r.jsx)(c.Z, {
+                            channel: h,
+                            speakers: p
                         }),
-                        m && (0, i.jsx)(o.ZP, {})
+                        f && (0, r.jsx)(s.ZP, {})
                     ]
                 }),
-            (0, i.jsx)(s.CJ0, {
+            (0, r.jsx)(a.CJ0, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: r()(d.downIcon, { [d.upIcon]: u })
+                className: o()(u.downIcon, { [u.upIcon]: d })
             })
         ]
     });

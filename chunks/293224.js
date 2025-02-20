@@ -28,9 +28,9 @@ var i = n(200651),
     y = n(55311),
     E = n(575175),
     x = n(933557),
-    S = n(471445),
-    C = n(44315),
-    I = n(74299),
+    I = n(471445),
+    S = n(44315),
+    C = n(74299),
     j = n(803647),
     w = n(565138),
     Z = n(917405),
@@ -186,7 +186,7 @@ function ei(e) {
                 onPopoutClick: m(n),
                 onContextMenu: m(n),
                 popoutOpen: r,
-                iconColor: u ? (0, C.Lq)(o.I.RED_400) : void 0,
+                iconColor: u ? (0, S.Lq)(o.I.RED_400) : void 0,
                 onMouseEnter: () => {
                     g.onMouseEnter();
                 },
@@ -288,7 +288,7 @@ function eo(e) {
             play: y,
             events: { onMouseEnter: E, onMouseLeave: x }
         } = (0, p.o)(a ? 'disable' : 'enable'),
-        S =
+        I =
             null != n
                 ? (0, D.X)({
                       enabled: a,
@@ -298,13 +298,13 @@ function eo(e) {
                   })
                 : void 0;
     r.useEffect(() => () => y(), [a, y]);
-    let C = et(o),
-        I = null == n || !d;
+    let S = et(o),
+        C = null == n || !d;
     return (0, i.jsx)(f.yRy, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(b.Z, {
-                onClose: C(t),
+                onClose: S(t),
                 appContext: J.IlC.OVERLAY
             });
         },
@@ -316,7 +316,7 @@ function eo(e) {
                 { isShown: r } = t;
             return (0, i.jsx)(en, {
                 iconComponent: O,
-                tooltip: S,
+                tooltip: I,
                 onClick: v,
                 isToggled: a,
                 highlightedColor: a ? 'green' : 'white',
@@ -326,7 +326,7 @@ function eo(e) {
                 onContextMenu: m(n),
                 onMouseEnter: E,
                 onMouseLeave: x,
-                disabled: I
+                disabled: C
             });
         }
     });
@@ -336,7 +336,7 @@ function el(e) {
         { voiceChannel: n, locked: o } = e,
         a = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
         s = (0, k.Z)(n),
-        c = (0, l.cj)([F.Z], () => (0, I.Z)(F.Z)),
+        c = (0, l.cj)([F.Z], () => (0, C.Z)(F.Z)),
         d = (0, l.e7)([z.Z], () => z.Z.getCurrentUserActiveStream()),
         p = (0, X.B)(),
         h = () => {
@@ -581,7 +581,7 @@ function ec(e) {
 }
 function eu(e) {
     let { voiceChannel: t } = e,
-        n = (0, S.KS)(t),
+        n = (0, I.KS)(t),
         r = (0, x.ZP)(t);
     return (0, i.jsxs)('div', {
         className: $.voiceChannelNameContainer,

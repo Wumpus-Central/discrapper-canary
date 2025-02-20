@@ -1,201 +1,201 @@
-t.d(n, { default: () => k }), t(47120);
-var i = t(200651),
-    l = t(192379),
-    s = t(392711),
-    o = t.n(s),
-    r = t(442837),
-    a = t(481060),
-    d = t(706371),
-    c = t(563115),
-    u = t(313201),
-    m = t(661824),
-    h = t(984933),
-    x = t(430824),
-    v = t(823379),
-    j = t(402148),
-    g = t(570961),
-    p = t(208665),
-    N = t(460117),
-    I = t(290511),
-    f = t(388032),
-    C = t(703735);
-function k(e) {
-    let { transitionState: n, onClose: t, onSave: s, onDelete: x, option: v, guild: j, prompt: k, index: b } = e,
-        z = (0, u.Dt)(),
-        S = (0, r.e7)([h.ZP], () => h.ZP.getDefaultChannel(j.id)),
-        [B, T] = l.useState(() => {
+n.d(t, { default: () => y }), n(47120), n(266796), n(230036);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    l = n.n(o),
+    s = n(442837),
+    a = n(481060),
+    c = n(706371),
+    d = n(563115),
+    u = n(313201),
+    m = n(661824),
+    h = n(984933),
+    v = n(430824),
+    j = n(823379),
+    x = n(402148),
+    p = n(570961),
+    g = n(208665),
+    N = n(460117),
+    b = n(290511),
+    f = n(388032),
+    I = n(838103);
+function y(e) {
+    let { transitionState: t, onClose: n, onSave: o, onDelete: v, option: j, guild: x, prompt: y, index: k } = e,
+        C = (0, u.Dt)(),
+        P = (0, s.e7)([h.ZP], () => h.ZP.getDefaultChannel(x.id)),
+        [S, _] = i.useState(() => {
             var e;
-            return null !== (e = null == v ? void 0 : v.emoji) && void 0 !== e ? e : null;
+            return null !== (e = null == j ? void 0 : j.emoji) && void 0 !== e ? e : null;
         }),
-        [Z, E] = l.useState(() => {
+        [z, w] = i.useState(() => {
             var e;
-            return null !== (e = null == v ? void 0 : v.title) && void 0 !== e ? e : '';
+            return null !== (e = null == j ? void 0 : j.title) && void 0 !== e ? e : '';
         }),
-        [R, y] = l.useState(() => {
+        [W, B] = i.useState(() => {
             var e;
-            return null !== (e = null == v ? void 0 : v.description) && void 0 !== e ? e : '';
+            return null !== (e = null == j ? void 0 : j.description) && void 0 !== e ? e : '';
         }),
-        [H, L] = l.useState(() => {
+        [T, E] = i.useState(() => {
             var e;
-            return new Set(null !== (e = null == v ? void 0 : v.channelIds) && void 0 !== e ? e : []);
+            return new Set(null !== (e = null == j ? void 0 : j.channelIds) && void 0 !== e ? e : []);
         }),
-        [P, M] = l.useState(() => {
+        [Z, R] = i.useState(() => {
             var e;
-            return new Set(null !== (e = null == v ? void 0 : v.roleIds) && void 0 !== e ? e : []);
+            return new Set(null !== (e = null == j ? void 0 : j.roleIds) && void 0 !== e ? e : []);
         }),
-        [w, q] = l.useState({}),
-        Y = l.useRef(null);
+        [H, L] = i.useState({}),
+        D = i.useRef(null);
     return (
-        l.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             var e;
-            return null === (e = Y.current) || void 0 === e ? void 0 : e.focus();
+            return null === (e = D.current) || void 0 === e ? void 0 : e.focus();
         }, []),
-        (0, i.jsxs)(a.Y0X, {
-            transitionState: n,
-            'aria-labelledby': z,
+        (0, r.jsxs)(a.Y0X, {
+            transitionState: t,
+            'aria-labelledby': C,
             children: [
-                (0, i.jsxs)('div', {
-                    className: C.container,
+                (0, r.jsxs)('div', {
+                    className: I.container,
                     children: [
-                        (0, i.jsx)(a.olH, {
-                            className: C.closeButton,
-                            onClick: t
+                        (0, r.jsx)(a.olH, {
+                            className: I.closeButton,
+                            onClick: n
                         }),
-                        (0, i.jsx)(a.Text, {
-                            className: C.questionNumber,
+                        (0, r.jsx)(a.Text, {
+                            className: I.questionNumber,
                             variant: 'text-xs/semibold',
                             color: 'text-muted',
-                            children: f.intl.format(f.t.yjS3zs, { index: b + 1 })
+                            children: f.NW.format(f.t.yjS3zs, { index: k + 1 })
                         }),
-                        (0, i.jsx)(a.X6q, {
-                            id: z,
-                            className: C.header,
+                        (0, r.jsx)(a.X6q, {
+                            id: C,
+                            className: I.header,
                             variant: 'heading-lg/semibold',
-                            children: null != k.title && k.title.length > 0 ? k.title : f.intl.string(f.t.vY91Cw)
+                            children: null != y.title && y.title.length > 0 ? y.title : f.NW.string(f.t.vY91Cw)
                         }),
-                        (0, i.jsx)(a.X6q, {
-                            className: C.nameHeader,
+                        (0, r.jsx)(a.X6q, {
+                            className: I.nameHeader,
                             variant: 'heading-md/semibold',
-                            children: f.intl.string(f.t.VWdcBg)
+                            children: f.NW.string(f.t.VWdcBg)
                         }),
-                        (0, i.jsx)(a.oil, {
-                            inputRef: Y,
-                            placeholder: f.intl.string(f.t.EHe6gY),
-                            value: Z,
-                            onChange: (e) => E(e),
-                            maxLength: I.NE,
+                        (0, r.jsx)(a.oil, {
+                            inputRef: D,
+                            placeholder: f.NW.string(f.t.EHe6gY),
+                            value: z,
+                            onChange: (e) => w(e),
+                            maxLength: b.NE,
                             autoFocus: !0
                         }),
-                        (0, i.jsx)(a.pdY, { error: w.title }),
-                        (0, i.jsx)(a.oil, {
-                            className: C.descriptionInput,
-                            placeholder: f.intl.string(f.t.mIjgJC),
-                            value: R,
-                            onChange: (e) => y(e),
-                            maxLength: I.NO
+                        (0, r.jsx)(a.pdY, { error: H.title }),
+                        (0, r.jsx)(a.oil, {
+                            className: I.descriptionInput,
+                            placeholder: f.NW.string(f.t.mIjgJC),
+                            value: W,
+                            onChange: (e) => B(e),
+                            maxLength: b.NO
                         }),
-                        (0, i.jsx)(m.Z, { className: C.divider }),
-                        (0, i.jsx)(a.X6q, {
-                            className: C.rolesHeader,
+                        (0, r.jsx)(m.Z, { className: I.divider }),
+                        (0, r.jsx)(a.X6q, {
+                            className: I.rolesHeader,
                             variant: 'heading-md/semibold',
-                            children: f.intl.string(f.t.TtIbPD)
+                            children: f.NW.string(f.t.TtIbPD)
                         }),
-                        (0, i.jsx)(d.Z, {
-                            guildId: j.id,
-                            selectedChannelIds: H,
-                            placeholder: f.intl.string(f.t.vephiI),
-                            onChange: L,
-                            helperText: f.intl.string(f.t.SoT6wc),
-                            className: C.searchInput
+                        (0, r.jsx)(c.Z, {
+                            guildId: x.id,
+                            selectedChannelIds: T,
+                            placeholder: f.NW.string(f.t.vephiI),
+                            onChange: E,
+                            helperText: f.NW.string(f.t.SoT6wc),
+                            className: I.searchInput
                         }),
-                        (0, i.jsx)(c.Z, {
-                            guildId: j.id,
-                            selectedRoleIds: P,
+                        (0, r.jsx)(d.Z, {
+                            guildId: x.id,
+                            selectedRoleIds: Z,
                             disableEveryoneRole: !0,
-                            placeholder: f.intl.string(f.t.aFO1Iy),
-                            onChange: M,
-                            helperText: f.intl.string(f.t.Mbvpv7),
-                            className: C.searchInput,
+                            placeholder: f.NW.string(f.t.aFO1Iy),
+                            onChange: R,
+                            helperText: f.NW.string(f.t.Mbvpv7),
+                            className: I.searchInput,
                             selectableRoleFilter: (e) => !e.managed
                         }),
-                        null == w.roles ? null : (0, i.jsx)(a.pdY, { error: w.roles }),
-                        (0, i.jsx)(_, {
-                            guild: j,
-                            roleIds: P
+                        null == H.roles ? null : (0, r.jsx)(a.pdY, { error: H.roles }),
+                        (0, r.jsx)(O, {
+                            guild: x,
+                            roleIds: Z
                         }),
-                        (0, i.jsx)(m.Z, { className: C.divider }),
-                        (0, i.jsxs)('div', {
-                            className: C.emojiQuestionContainer,
+                        (0, r.jsx)(m.Z, { className: I.divider }),
+                        (0, r.jsxs)('div', {
+                            className: I.emojiQuestionContainer,
                             children: [
-                                (0, i.jsxs)('div', {
-                                    className: C.emojiQuestionText,
+                                (0, r.jsxs)('div', {
+                                    className: I.emojiQuestionText,
                                     children: [
-                                        (0, i.jsx)(a.X6q, {
+                                        (0, r.jsx)(a.X6q, {
                                             variant: 'heading-md/semibold',
-                                            children: f.intl.string(f.t['4ahTBg'])
+                                            children: f.NW.string(f.t['4ahTBg'])
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: f.intl.string(f.t.Iv9RGh)
+                                            children: f.NW.string(f.t.Iv9RGh)
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(N.Z, {
-                                    emoji: B,
-                                    setEmoji: T,
-                                    channel: S
+                                (0, r.jsx)(N.Z, {
+                                    emoji: S,
+                                    setEmoji: _,
+                                    channel: P
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(a.mzw, {
-                    children: (0, i.jsxs)('div', {
-                        className: C.footerButtons,
+                (0, r.jsx)(a.mzw, {
+                    children: (0, r.jsxs)('div', {
+                        className: I.footerButtons,
                         children: [
-                            (0, i.jsx)('div', {
-                                className: C.removeButton,
-                                children: (0, i.jsx)(a.zxk, {
+                            (0, r.jsx)('div', {
+                                className: I.removeButton,
+                                children: (0, r.jsx)(a.zxk, {
                                     size: a.zxk.Sizes.SMALL,
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.RED,
                                     onClick: () => {
-                                        x(), t();
+                                        v(), n();
                                     },
-                                    children: f.intl.string(f.t.N86XcH)
+                                    children: f.NW.string(f.t.N86XcH)
                                 })
                             }),
-                            (0, i.jsxs)('div', {
-                                className: C.rightButtons,
+                            (0, r.jsxs)('div', {
+                                className: I.rightButtons,
                                 children: [
-                                    (0, i.jsx)(a.zxk, {
-                                        onClick: t,
+                                    (0, r.jsx)(a.zxk, {
+                                        onClick: n,
                                         size: a.zxk.Sizes.SMALL,
                                         look: a.zxk.Looks.LINK,
                                         color: a.zxk.Colors.PRIMARY,
-                                        children: f.intl.string(f.t['ETE/oK'])
+                                        children: f.NW.string(f.t['ETE/oK'])
                                     }),
-                                    (0, i.jsx)(a.zxk, {
+                                    (0, r.jsx)(a.zxk, {
                                         onClick: () => {
                                             var e;
-                                            let n = {
-                                                    id: null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : ''.concat(Date.now()),
-                                                    title: Z,
-                                                    description: R,
-                                                    channelIds: Array.from(H).sort(),
-                                                    roleIds: Array.from(P).sort(),
-                                                    emoji: null == B ? void 0 : B
+                                            let t = {
+                                                    id: null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : ''.concat(Date.now()),
+                                                    title: z,
+                                                    description: W,
+                                                    channelIds: Array.from(T).sort(),
+                                                    roleIds: Array.from(Z).sort(),
+                                                    emoji: null == S ? void 0 : S
                                                 },
-                                                i = (function (e, n, t, i) {
-                                                    let l = {};
-                                                    i.title.length <= 0 && (l.title = f.intl.string(f.t.p3PKzM));
-                                                    let s = (0, g.en)(e, n, t, i);
-                                                    return null != s && (l.roles = s), l;
-                                                })(j, p.Z.editedOnboardingPrompts, k, n);
-                                            q(i), o().isEmpty(i) && (s(n), t());
+                                                r = (function (e, t, n, r) {
+                                                    let i = {};
+                                                    r.title.length <= 0 && (i.title = f.NW.string(f.t.p3PKzM));
+                                                    let o = (0, p.en)(e, t, n, r);
+                                                    return null != o && (i.roles = o), i;
+                                                })(x, g.Z.editedOnboardingPrompts, y, t);
+                                            L(r), l().isEmpty(r) && (o(t), n());
                                         },
-                                        children: f.intl.string(f.t.R3BPHx)
+                                        children: f.NW.string(f.t.R3BPHx)
                                     })
                                 ]
                             })
@@ -206,30 +206,30 @@ function k(e) {
         })
     );
 }
-function _(e) {
-    let { guild: n, roleIds: t } = e,
-        l = (0, r.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        s = Array.from(t)
-            .map((e) => l[e])
-            .filter(v.lm)
-            .find(j.F);
-    return null == s
+function O(e) {
+    let { guild: t, roleIds: n } = e,
+        i = (0, s.e7)([v.Z], () => v.Z.getRoles(t.id)),
+        o = Array.from(n)
+            .map((e) => i[e])
+            .filter(j.lm)
+            .find(x.F);
+    return null == o
         ? null
-        : (0, i.jsx)('div', {
-              className: C.notice,
-              children: (0, i.jsxs)('div', {
-                  className: C.noticeMessage,
+        : (0, r.jsx)('div', {
+              className: I.notice,
+              children: (0, r.jsxs)('div', {
+                  className: I.noticeMessage,
                   children: [
-                      (0, i.jsx)(a.P4T, {
+                      (0, r.jsx)(a.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
-                          className: C.noticeIcon
+                          className: I.noticeIcon
                       }),
-                      (0, i.jsx)(a.Text, {
+                      (0, r.jsx)(a.Text, {
                           variant: 'text-sm/normal',
-                          children: f.intl.format(f.t['5zPJER'], { permissions: (0, j.i)(n, s).join(', ') })
+                          children: f.NW.format(f.t['5zPJER'], { permissions: (0, x.i)(t, o).join(', ') })
                       })
                   ]
               })

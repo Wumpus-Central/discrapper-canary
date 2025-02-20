@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(392711),
@@ -14,7 +14,7 @@ var i = n(392711),
     p = n(475468),
     h = n(981631),
     f = n(490897);
-function N(e, t) {
+function b(e, t) {
     return [
         {
             resourceId: e,
@@ -28,10 +28,10 @@ function N(e, t) {
               }).map((e) => e.id))
     ];
 }
-let x = s().throttle(function (e, t) {
+let N = s().throttle(function (e, t) {
     var i, s;
     let l,
-        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: b = () => !1, withVoiceChannels: _ = !1 } = t,
+        { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: N = () => !1, ensureChatIsVisible: x = () => !1, withVoiceChannels: _ = !1 } = t,
         E = null !== (i = o.Z.getState().guildId) && void 0 !== i ? i : h.ME,
         j = o.Z.getState().channelId,
         C = (function (e, t) {
@@ -40,14 +40,14 @@ let x = s().throttle(function (e, t) {
             return t > 0 ? n.slice(r).concat(n.slice(0, r), e) : (n.splice(r, 0, e), n.slice(r + 1).concat(n.slice(0, r + 1)));
         })(E, e),
         O = e > 0 ? 0 : C.length - 1,
-        v = N(E, _),
+        v = b(E, _),
         S = v.indexOf(j) + e;
     for (; null != E && '' !== E; ) {
         if (((l = v[S]), f(E)))
             for (; null != l && '' !== l; ) {
                 if ('string' == typeof l) {
-                    if (m(E, l)) return (0, p.K)(E, l, !1, b(E, l));
-                } else if ('object' == typeof l && x(l.resourceId, l.type))
+                    if (m(E, l)) return (0, p.K)(E, l, !1, x(E, l));
+                } else if ('object' == typeof l && N(l.resourceId, l.type))
                     return (
                         E !== d.Z.getGuildId() && (0, p.K)(E, null === (s = c.ZP.getDefaultChannel(E)) || void 0 === s ? void 0 : s.id),
                         (0, a.ZDy)(async () => {
@@ -106,7 +106,7 @@ let x = s().throttle(function (e, t) {
                 (S += e), (l = v[S]);
             }
         if (((O += e), null == (E = C[O]) || '' === E)) break;
-        (v = N(E, _)), (S = e < 0 ? v.length - 1 : 0);
+        (v = b(E, _)), (S = e < 0 ? v.length - 1 : 0);
     }
     g.S.dispatch(h.CkL.SHAKE_APP, {
         duration: 200,

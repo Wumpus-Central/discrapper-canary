@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = n(74748);
-let r = function (e) {
+n.d(t, { Z: () => i });
+var r = n(74748);
+let i = function (e) {
     var t = new e.constructor(e.byteLength);
-    return new i.Z(t).set(new i.Z(e)), t;
+    return new r.Z(t).set(new r.Z(e)), t;
 };

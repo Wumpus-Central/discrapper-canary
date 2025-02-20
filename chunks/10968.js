@@ -1,27 +1,27 @@
 e.exports = function (e) {
     var t = {};
     function n(n) {
-        var i = e.get(n);
-        return void 0 === i ? [] : t[i] || [];
+        var r = e.get(n);
+        return void 0 === r ? [] : t[r] || [];
     }
-    function i(e, t) {
-        for (var i = n(e), r = 0, a = i.length; r < a; ++r)
-            if (i[r] === t) {
-                i.splice(r, 1);
+    function r(e, t) {
+        for (var r = n(e), i = 0, o = r.length; i < o; ++i)
+            if (r[i] === t) {
+                r.splice(i, 1);
                 break;
             }
     }
-    function r(e) {
+    function i(e) {
         var t = n(e);
         t && (t.length = 0);
     }
     return {
         get: n,
-        add: function (n, i) {
-            var r = e.get(n);
-            t[r] || (t[r] = []), t[r].push(i);
+        add: function (n, r) {
+            var i = e.get(n);
+            t[i] || (t[i] = []), t[i].push(r);
         },
-        removeListener: i,
-        removeAllListeners: r
+        removeListener: r,
+        removeAllListeners: i
     };
 };

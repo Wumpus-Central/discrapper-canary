@@ -1,49 +1,49 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(442837),
-    a = n(481060),
+var i = n(120356),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
     o = n(846027),
     c = n(921801),
     d = n(131951),
     u = n(726985),
     m = n(388032),
-    g = n(483938);
-function h(e) {
+    g = n(455812);
+function p(e) {
     let { refreshStyles: t = !1 } = e,
-        { sidechainEnabled: n, sidechainStrength: s } = (0, l.cj)([d.Z], () => ({
+        { sidechainEnabled: n, sidechainStrength: i } = (0, a.cj)([d.Z], () => ({
             sidechainEnabled: d.Z.getSidechainCompression(),
             sidechainStrength: d.Z.getSidechainCompressionStrength()
         })),
-        h = (0, i.jsxs)(i.Fragment, {
+        p = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(a.j7V, {
-                    className: t ? null : r()(g.marginTop8, g.marginBottom20),
+                (0, r.jsx)(l.j7V, {
+                    className: t ? null : s()(g.marginTop8, g.marginBottom20),
                     value: n,
                     onChange: (e) => o.Z.setSidechainCompression(e),
-                    note: m.intl.string(m.t.zlA23N),
+                    note: m.NW.string(m.t.zlA23N),
                     hideBorder: t,
-                    children: m.intl.string(m.t['/jwMtr'])
+                    children: m.NW.string(m.t['/jwMtr'])
                 }),
-                (0, i.jsx)(a.xJW, {
-                    title: m.intl.string(m.t.fhEzfn),
-                    children: (0, i.jsx)(a.iRW, {
-                        initialValue: s,
+                (0, r.jsx)(l.xJW, {
+                    title: m.NW.string(m.t.fhEzfn),
+                    children: (0, r.jsx)(l.iRW, {
+                        initialValue: i,
                         minValue: 1,
                         onValueChange: (e) => o.Z.setSidechainCompressionStrength(e)
                     })
                 })
             ]
         });
-    return (0, i.jsx)(c.F, {
+    return (0, r.jsx)(c.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
         children: t
-            ? h
-            : (0, i.jsx)(a.hjN, {
+            ? p
+            : (0, r.jsx)(l.hjN, {
                   className: g.marginBottom20,
-                  children: h
+                  children: p
               })
     });
 }

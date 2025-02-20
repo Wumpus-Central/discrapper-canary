@@ -1,32 +1,32 @@
-n.d(t, { Z: () => d });
-var i,
+n.d(t, { Z: () => u });
+var r,
+    i,
     l,
-    a,
-    r = n(442837),
-    s = n(570140);
-let o = {};
-class c extends (a = r.ZP.Store) {
+    o = n(442837),
+    a = n(570140);
+let s = {};
+class c extends (l = o.ZP.Store) {
     getFollowerStatsForChannel(e) {
-        return o[e];
+        return s[e];
     }
 }
-(l = 'ChannelFollowerStatsStore'),
-    (i = 'displayName') in c
-        ? Object.defineProperty(c, i, {
-              value: l,
+(i = 'ChannelFollowerStatsStore'),
+    (r = 'displayName') in c
+        ? Object.defineProperty(c, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[i] = l);
-let d = new c(s.Z, {
+        : (c[r] = i);
+let u = new c(a.Z, {
     CONNECTION_OPEN: function () {
-        o = {};
+        s = {};
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
         let { channelId: t, stats: n } = e;
         (n = null != n ? n : {}),
-            (o[t] = {
+            (s[t] = {
                 loadingStatus: 'succeeded',
                 lastFetched: Date.now(),
                 channelsFollowing: n.channels_following,
@@ -39,7 +39,7 @@ let d = new c(s.Z, {
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
         let { channelId: t } = e;
-        o[t] = {
+        s[t] = {
             loadingStatus: 'failed',
             lastFetched: Date.now(),
             channelsFollowing: 0,

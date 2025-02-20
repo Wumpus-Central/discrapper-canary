@@ -1,114 +1,114 @@
 n.d(t, { Z: () => v });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
-    s = n(481060),
-    o = n(547972),
-    d = n(556296),
-    c = n(63063),
-    u = n(13140),
-    h = n(435064),
-    m = n(39604),
-    p = n(356659),
-    g = n(981631),
-    _ = n(332325),
-    f = n(388032),
-    E = n(548392);
-function I(e) {
-    (0, o.Z)(_.Z.CLIPS), (0, m.UW)(e);
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(481060),
+    s = n(547972),
+    c = n(556296),
+    u = n(63063),
+    d = n(13140),
+    p = n(435064),
+    h = n(39604),
+    g = n(356659),
+    f = n(981631),
+    m = n(332325),
+    b = n(388032),
+    _ = n(596259);
+function E(e) {
+    (0, s.Z)(m.Z.CLIPS), (0, h.UW)(e);
 }
-function C() {
-    let e = (0, a.e7)([d.ZP], () => d.ZP.getKeybindForAction(g.kg4.SAVE_CLIP));
-    if (null == e) return (0, i.jsx)(i.Fragment, { children: f.intl.string(f.t.miecxM) });
-    let t = u.BB(e.shortcut, !0);
-    return (0, i.jsx)(i.Fragment, {
-        children: f.intl.format(f.t.a3HdiI, {
+function O() {
+    let e = (0, o.e7)([c.ZP], () => c.ZP.getKeybindForAction(f.kg4.SAVE_CLIP));
+    if (null == e) return (0, r.jsx)(r.Fragment, { children: b.NW.string(b.t.miecxM) });
+    let t = d.BB(e.shortcut, !0);
+    return (0, r.jsx)(r.Fragment, {
+        children: b.NW.format(b.t.a3HdiI, {
             keybind: t,
             keybindHook: () =>
-                (0, i.jsx)('span', {
-                    className: E.keyCombo,
-                    children: (0, i.jsx)(s.M2$, { shortcut: t })
+                (0, r.jsx)('span', {
+                    className: _.keyCombo,
+                    children: (0, r.jsx)(a.M2$, { shortcut: t })
                 })
         })
     });
 }
 let N = {
-    [p.D5.Error]: {
+    [g.D5.Error]: {
         textColor: 'text-primary',
-        buttonLook: s.zxk.Looks.FILLED,
-        buttonColor: s.zxk.Colors.PRIMARY,
+        buttonLook: a.zxk.Looks.FILLED,
+        buttonColor: a.zxk.Colors.PRIMARY,
         bodyCopy: () =>
-            (0, i.jsxs)(i.Fragment, {
+            (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(s.aNP, {
+                    (0, r.jsx)(a.aNP, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: E.errorWarningIcon
+                        className: _.errorWarningIcon
                     }),
-                    f.intl.string(f.t.Sr64AA)
+                    b.NW.string(b.t.Sr64AA)
                 ]
             }),
-        buttonCopy: () => f.intl.string(f.t.vDGv9f),
+        buttonCopy: () => b.NW.string(b.t.vDGv9f),
         ctaOnClick: () => {
-            window.open(c.Z.getArticleURL(g.BhN.CLIPS), '_blank');
+            window.open(u.Z.getArticleURL(f.BhN.CLIPS), '_blank');
         },
-        containerClass: E.container
+        containerClass: _.container
     },
-    [p.D5.Disabled]: {
+    [g.D5.Disabled]: {
         textColor: 'text-primary',
-        buttonLook: s.zxk.Looks.FILLED,
-        buttonColor: s.zxk.Colors.BRAND,
-        bodyCopy: () => f.intl.string(f.t.MhrVg4),
-        buttonCopy: () => f.intl.string(f.t.GMLBKS),
-        ctaOnClick: () => I(p.D5.Disabled),
-        containerClass: E.container
+        buttonLook: a.zxk.Looks.FILLED,
+        buttonColor: a.zxk.Colors.BRAND,
+        bodyCopy: () => b.NW.string(b.t.MhrVg4),
+        buttonCopy: () => b.NW.string(b.t.GMLBKS),
+        ctaOnClick: () => E(g.D5.Disabled),
+        containerClass: _.container
     },
-    [p.D5.Enabled]: {
+    [g.D5.Enabled]: {
         textColor: 'always-white',
-        buttonLook: s.zxk.Looks.FILLED,
-        buttonColor: s.zxk.Colors.BRAND_INVERTED,
-        bodyCopy: () => (0, i.jsx)(C, {}),
-        buttonCopy: () => f.intl.string(f.t.GMLBKS),
-        ctaOnClick: () => I(p.D5.Enabled),
-        containerClass: r()(E.container, E.containerEnabled)
+        buttonLook: a.zxk.Looks.FILLED,
+        buttonColor: a.zxk.Colors.BRAND_INVERTED,
+        bodyCopy: () => (0, r.jsx)(O, {}),
+        buttonCopy: () => b.NW.string(b.t.GMLBKS),
+        ctaOnClick: () => E(g.D5.Enabled),
+        containerClass: l()(_.container, _.containerEnabled)
     }
 };
 function v() {
-    let { decoupledClipsEnabled: e, clipsError: t } = (0, a.cj)([h.Z], () => ({
-            decoupledClipsEnabled: h.Z.getSettings().decoupledClipsEnabled,
-            clipsError: h.Z.getLastClipsError()
+    let { decoupledClipsEnabled: e, clipsError: t } = (0, o.cj)([p.Z], () => ({
+            decoupledClipsEnabled: p.Z.getSettings().decoupledClipsEnabled,
+            clipsError: p.Z.getLastClipsError()
         })),
-        n = null != t ? p.D5.Error : e ? p.D5.Enabled : p.D5.Disabled,
-        { bodyCopy: l, buttonCopy: r, ctaOnClick: o, textColor: d, buttonColor: c, buttonLook: u, containerClass: g } = N[n];
-    return (0, i.jsxs)('div', {
-        className: g,
+        n = null != t ? g.D5.Error : e ? g.D5.Enabled : g.D5.Disabled,
+        { bodyCopy: i, buttonCopy: l, ctaOnClick: s, textColor: c, buttonColor: u, buttonLook: d, containerClass: f } = N[n];
+    return (0, r.jsxs)('div', {
+        className: f,
         children: [
-            (0, i.jsx)(s.Text, {
-                color: d,
+            (0, r.jsx)(a.Text, {
+                color: c,
                 variant: 'text-sm/medium',
-                children: l()
+                children: i()
             }),
-            (0, i.jsx)(s.zxk, {
-                onClick: () => (0, m.UW)(n),
-                size: s.zxk.Sizes.NONE,
-                look: s.zxk.Looks.BLANK,
-                className: E.buttonClose,
-                children: (0, i.jsx)(s.Dio, {
+            (0, r.jsx)(a.zxk, {
+                onClick: () => (0, h.UW)(n),
+                size: a.zxk.Sizes.NONE,
+                look: a.zxk.Looks.BLANK,
+                className: _.buttonClose,
+                children: (0, r.jsx)(a.Dio, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: E.dismissIcon
+                    className: _.dismissIcon
                 })
             }),
-            (0, i.jsx)(s.zxk, {
-                onClick: o,
-                className: E.buttonCTA,
-                color: c,
-                look: u,
+            (0, r.jsx)(a.zxk, {
+                onClick: s,
+                className: _.buttonCTA,
+                color: u,
+                look: d,
                 fullWidth: !0,
-                size: s.zxk.Sizes.SMALL,
-                children: r()
+                size: a.zxk.Sizes.SMALL,
+                children: l()
             })
         ]
     });

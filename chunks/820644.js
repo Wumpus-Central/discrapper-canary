@@ -1,19 +1,19 @@
 n.d(t, { o: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(799868),
-    o = n(533386);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    l = n(125260),
+    s = n(179730);
 function c(e) {
     let { text: t } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(o.toast, s.toast),
+    return (0, r.jsxs)('div', {
+        className: a()(s.toast, l.toast),
         children: [
-            (0, i.jsx)(r.b7C, { color: r.TVs.colors.TEXT_BRAND }),
-            (0, i.jsx)(r.Text, {
-                className: o.__invalid_content,
+            (0, r.jsx)(o.b7C, { color: o.TVs.colors.TEXT_BRAND }),
+            (0, r.jsx)(o.Text, {
+                className: s.__invalid_content,
                 color: 'header-primary',
                 variant: 'text-md/normal',
                 children: t

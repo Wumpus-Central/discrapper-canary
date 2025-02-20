@@ -1,37 +1,37 @@
-n.d(t, { Z: () => s });
-var l = n(192379),
-    i = n(772848),
-    r = n(125268);
+n.d(t, { Z: () => o });
+var r = n(192379),
+    l = n(772848),
+    i = n(125268);
 let a = () => {};
-function s(e, t, n) {
-    let s = l.useRef((0, i.Z)()),
-        o = l.useRef(Date.now()),
-        u = l.useCallback(
-            (l, i) => {
+function o(e, t, n) {
+    let o = r.useRef((0, l.Z)()),
+        s = r.useRef(Date.now()),
+        c = r.useCallback(
+            (r, l) => {
                 let a = {
-                    x: l,
-                    y: i,
-                    deltaTime: Date.now() - o.current
+                    x: r,
+                    y: l,
+                    deltaTime: Date.now() - s.current
                 };
-                (0, r.oW)(t, s.current, e, n, a), (0, r.cV)(s.current, e, n, [a]);
+                (0, i.oW)(t, o.current, e, n, a), (0, i.cV)(o.current, e, n, [a]);
             },
             [t, n, e]
         ),
-        c = l.useCallback(
+        u = r.useCallback(
             (e, t, n) => {
-                (s.current = (0, i.Z)()), (o.current = Date.now()), u(t, n);
+                (o.current = (0, l.Z)()), (s.current = Date.now()), c(t, n);
             },
-            [u]
+            [c]
         ),
-        d = l.useCallback((e, t, n) => u(t, n), [u]),
-        m = l.useCallback((e, t, n) => c(e, t, n), [c]);
-    return l.useMemo(
+        d = r.useCallback((e, t, n) => c(t, n), [c]),
+        f = r.useCallback((e, t, n) => u(e, t, n), [u]);
+    return r.useMemo(
         () => ({
-            handleMouseDown: c,
+            handleMouseDown: u,
             handleMouseMove: d,
             handleMouseUp: a,
-            handleMouseEnter: m
+            handleMouseEnter: f
         }),
-        [c, m, d]
+        [u, f, d]
     );
 }

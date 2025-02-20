@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => r });
+let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-08_deadchat_simple_prompt_guild',
     label: 'Simple deadchat prompt',

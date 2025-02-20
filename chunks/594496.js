@@ -14,9 +14,9 @@ var i = n(512722),
     p = n(513901),
     h = n(451392),
     f = n(906364),
-    N = n(621853),
-    x = n(271383),
-    b = n(594174),
+    b = n(621853),
+    N = n(271383),
+    x = n(594174),
     _ = n(74538),
     E = n(51144),
     j = n(18438),
@@ -72,8 +72,8 @@ function A(e, t) {
 function P(e) {
     var t, n, i, P;
     let { guild: R } = e,
-        D = (0, a.e7)([b.default], () => {
-            let e = b.default.getCurrentUser();
+        D = (0, a.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
@@ -101,8 +101,8 @@ function P(e) {
         V = null != R ? R : U;
     s()(null != V, 'guild should not be null');
     let G = (0, o.gS)(V.id),
-        F = (0, a.e7)([x.ZP], () => (null == V.id ? null : x.ZP.getMember(V.id, D.id))),
-        H = (0, a.e7)([N.Z], () => N.Z.getGuildMemberProfile(D.id, V.id)),
+        F = (0, a.e7)([N.ZP], () => (null == V.id ? null : N.ZP.getMember(V.id, D.id))),
+        H = (0, a.e7)([b.Z], () => b.Z.getGuildMemberProfile(D.id, V.id)),
         z = _.ZP.canUsePremiumProfileCustomization(D),
         Y = (0, c.gd)(Z, null == F ? void 0 : F.avatar),
         K = (0, c.f$)(k, null == H ? void 0 : H.banner),

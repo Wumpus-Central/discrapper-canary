@@ -1,8 +1,8 @@
 n.d(t, { Z: () => a }), n(47120), n(653041);
 var r = n(200651),
     o = n(192379),
-    l = n(481060);
-let s = [
+    s = n(481060);
+let l = [
     {
         position: 0,
         alpha: 0
@@ -82,24 +82,24 @@ function a(e) {
         let e = [];
         if ((e.push('to bottom'), d > 0)) {
             let t = c > 0 ? 1 - Math.min(c, d) / c : 1;
-            for (let n = 0; n < s.length; n++) {
-                let { position: r, alpha: o } = s[n],
-                    l = (r * i).toFixed(2);
-                e.push('hsla(0, 0%, 0%, '.concat(t + o * (1 - t), ') ').concat(l, 'px'));
+            for (let n = 0; n < l.length; n++) {
+                let { position: r, alpha: o } = l[n],
+                    s = (r * i).toFixed(2);
+                e.push('hsla(0, 0%, 0%, '.concat(t + o * (1 - t), ') ').concat(s, 'px'));
             }
         }
         if (h > 0) {
             let t = p - i,
                 n = c > 0 ? 1 - Math.min(c, h) / c : 1;
-            for (let r = s.length - 1; r >= 0; r--) {
-                let { position: o, alpha: l } = s[r],
+            for (let r = l.length - 1; r >= 0; r--) {
+                let { position: o, alpha: s } = l[r],
                     a = (t + (1 - o) * i).toFixed(2);
-                e.push('hsla(0, 0%, 0%, '.concat(n + l * (1 - n), ') ').concat(a, 'px'));
+                e.push('hsla(0, 0%, 0%, '.concat(n + s * (1 - n), ') ').concat(a, 'px'));
             }
         }
         return { maskImage: 'linear-gradient('.concat(e.join(','), ')') };
     }, [h, d, c, i, p]);
-    return (0, r.jsx)(l.xVE, {
+    return (0, r.jsx)(s.xVE, {
         ref: u,
         style: v,
         className: t,

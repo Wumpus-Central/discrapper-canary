@@ -1,35 +1,35 @@
 n.d(t, { Z: () => d });
-var i = n(192379),
-    r = n(924102),
-    a = n(820611),
-    s =
+var r = n(192379),
+    i = n(924102),
+    o = n(820611),
+    a =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    o = (function () {
+    s = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
 function l(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function u(e, t) {
+function c(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function c(e, t) {
+function u(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -45,37 +45,37 @@ let d = function (e) {
     var t = (function (t) {
         function n(e) {
             l(this, n);
-            var t = u(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            var t = c(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (
                 (t.handleChange = function (e, n) {
-                    if (a.LX(e)) {
-                        var i = a.jH(e, e.h || t.state.oldHue);
-                        t.setState(i), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, i, n), t.props.onChange && t.props.onChange(i, n);
+                    if (o.LX(e)) {
+                        var r = o.jH(e, e.h || t.state.oldHue);
+                        t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n);
                     }
                 }),
                 (t.handleSwatchHover = function (e, n) {
-                    if (a.LX(e)) {
-                        var i = a.jH(e, e.h || t.state.oldHue);
-                        t.props.onSwatchHover && t.props.onSwatchHover(i, n);
+                    if (o.LX(e)) {
+                        var r = o.jH(e, e.h || t.state.oldHue);
+                        t.props.onSwatchHover && t.props.onSwatchHover(r, n);
                     }
                 }),
-                (t.state = s({}, a.jH(e.color, 0))),
-                (t.debounce = (0, r.Z)(function (e, t, n) {
+                (t.state = a({}, o.jH(e.color, 0))),
+                (t.debounce = (0, i.Z)(function (e, t, n) {
                     e(t, n);
                 }, 100)),
                 t
             );
         }
         return (
-            c(n, t),
-            o(
+            u(n, t),
+            s(
                 n,
                 [
                     {
                         key: 'render',
                         value: function () {
                             var t = {};
-                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), i.createElement(e, s({}, this.props, this.state, { onChange: this.handleChange }, t));
+                            return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), r.createElement(e, a({}, this.props, this.state, { onChange: this.handleChange }, t));
                         }
                     }
                 ],
@@ -83,17 +83,17 @@ let d = function (e) {
                     {
                         key: 'getDerivedStateFromProps',
                         value: function (e, t) {
-                            return s({}, a.jH(e.color, t.oldHue));
+                            return a({}, o.jH(e.color, t.oldHue));
                         }
                     }
                 ]
             ),
             n
         );
-    })(i.PureComponent || i.Component);
+    })(r.PureComponent || r.Component);
     return (
-        (t.propTypes = s({}, e.propTypes)),
-        (t.defaultProps = s({}, e.defaultProps, {
+        (t.propTypes = a({}, e.propTypes)),
+        (t.defaultProps = a({}, e.defaultProps, {
             color: {
                 h: 250,
                 s: 0.5,

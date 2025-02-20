@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = n(972959);
-let l = Object.freeze({
+n.d(t, { Z: () => l });
+var r = n(972959);
+let i = Object.freeze({
         query: '',
         languageCode: null,
         categoryId: n(128449).Hk,
@@ -9,4 +9,4 @@ let l = Object.freeze({
         resultsInitialCategoryId: null,
         scrollPosition: null
     }),
-    r = (0, i.H)(() => l);
+    l = (0, r.H)(() => i);

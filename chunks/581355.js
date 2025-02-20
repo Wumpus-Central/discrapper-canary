@@ -87,7 +87,7 @@ function x(e) {
     let v = (0, l.Dt)(),
         N = (0, i.e7)([c.Z], () => c.Z.getGuild(d.guild_id)),
         j = a.useMemo(() => s.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: I, error: y, onSave: C } = (0, m.Z)(d, _),
+        { loading: I, error: C, onSave: y } = (0, m.Z)(d, _),
         {
             modalStep: O,
             setModalStep: S,
@@ -99,8 +99,8 @@ function x(e) {
         } = (0, b.Z)({
             stageInstance: j,
             defaultStep: h.lv.STAGE_CHANNEL_SETTINGS,
-            error: y,
-            onSave: C
+            error: C,
+            onSave: y
         });
     return (a.useEffect(() => {
         null == N && _();
@@ -159,7 +159,7 @@ function x(e) {
                                           headerId: v,
                                           onClose: _,
                                           loading: I,
-                                          error: y,
+                                          error: C,
                                           onSave: w,
                                           defaultOptions: P,
                                           isSlideReady: E === h.lv.STAGE_CHANNEL_SETTINGS

@@ -13,8 +13,8 @@ a.d(e, {
 });
 var r = a(967752),
     n = a(202811),
-    _ = a(370336),
-    o = a(899517);
+    o = a(370336),
+    _ = a(899517);
 function i(t, e = []) {
     return [t, e];
 }
@@ -33,23 +33,23 @@ function E(t, e) {
     return s(t, (t, a) => e.includes(a));
 }
 function l(t) {
-    return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(t) : new TextEncoder().encode(t);
+    return _.n.__SENTRY__ && _.n.__SENTRY__.encodePolyfill ? _.n.__SENTRY__.encodePolyfill(t) : new TextEncoder().encode(t);
 }
 function u(t) {
     let [e, a] = t,
         r = JSON.stringify(e);
-    function _(t) {
+    function o(t) {
         'string' == typeof r ? (r = 'string' == typeof t ? r + t : [l(r), t]) : r.push('string' == typeof t ? l(t) : t);
     }
     for (let t of a) {
         let [e, a] = t;
         if (
-            (_(`
+            (o(`
 ${JSON.stringify(e)}
 `),
             'string' == typeof a || a instanceof Uint8Array)
         )
-            _(a);
+            o(a);
         else {
             let t;
             try {
@@ -57,7 +57,7 @@ ${JSON.stringify(e)}
             } catch (e) {
                 t = JSON.stringify((0, n.Fv)(a));
             }
-            _(t);
+            o(t);
         }
     }
     return 'string' == typeof r
@@ -78,16 +78,16 @@ function I(t) {
     function r() {
         var t;
         let r = e.indexOf(10);
-        return r < 0 && (r = e.length), JSON.parse(((t = a(r)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(t) : new TextDecoder().decode(t)));
+        return r < 0 && (r = e.length), JSON.parse(((t = a(r)), _.n.__SENTRY__ && _.n.__SENTRY__.decodePolyfill ? _.n.__SENTRY__.decodePolyfill(t) : new TextDecoder().decode(t)));
     }
     let n = r(),
-        _ = [];
+        o = [];
     for (; e.length; ) {
         let t = r(),
             e = 'number' == typeof t.length ? t.length : void 0;
-        _.push([t, e ? a(e) : r()]);
+        o.push([t, e ? a(e) : r()]);
     }
-    return [n, _];
+    return [n, o];
 }
 function R(t) {
     return [{ type: 'span' }, t];
@@ -95,7 +95,7 @@ function R(t) {
 function d(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
-        (0, _.Jr)({
+        (0, o.Jr)({
             type: 'attachment',
             length: e.length,
             filename: t.filename,
@@ -134,12 +134,12 @@ function p(t) {
     };
 }
 function T(t, e, a, n) {
-    let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
+    let _ = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: t.event_id,
         sent_at: new Date().toISOString(),
         ...(e && { sdk: e }),
         ...(!!a && n && { dsn: (0, r.RA)(n) }),
-        ...(o && { trace: (0, _.Jr)({ ...o }) })
+        ...(_ && { trace: (0, o.Jr)({ ..._ }) })
     };
 }

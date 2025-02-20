@@ -3,16 +3,16 @@
 })(0, function (e) {
     var t = ['Am Faoilleach', 'An Gearran', 'Am Màrt', 'An Giblean', 'An Cèitean', 'An t-Ògmhios', 'An t-Iuchar', 'An Lùnastal', 'An t-Sultain', 'An Dàmhair', 'An t-Samhain', 'An Dùbhlachd'],
         n = ['Faoi', 'Gear', 'Màrt', 'Gibl', 'Cèit', 'Ògmh', 'Iuch', 'Lùn', 'Sult', 'Dàmh', 'Samh', 'Dùbh'],
-        i = ['Didòmhnaich', 'Diluain', 'Dimàirt', 'Diciadain', 'Diardaoin', 'Dihaoine', 'Disathairne'],
-        r = ['Did', 'Dil', 'Dim', 'Dic', 'Dia', 'Dih', 'Dis'],
-        a = ['Dò', 'Lu', 'Mà', 'Ci', 'Ar', 'Ha', 'Sa'];
+        r = ['Didòmhnaich', 'Diluain', 'Dimàirt', 'Diciadain', 'Diardaoin', 'Dihaoine', 'Disathairne'],
+        i = ['Did', 'Dil', 'Dim', 'Dic', 'Dia', 'Dih', 'Dis'],
+        o = ['Dò', 'Lu', 'Mà', 'Ci', 'Ar', 'Ha', 'Sa'];
     return e.defineLocale('gd', {
         months: t,
         monthsShort: n,
         monthsParseExact: !0,
-        weekdays: i,
-        weekdaysShort: r,
-        weekdaysMin: a,
+        weekdays: r,
+        weekdaysShort: i,
+        weekdaysMin: o,
         longDateFormat: {
             LT: 'HH:mm',
             LTS: 'HH:mm:ss',

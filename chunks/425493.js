@@ -1,48 +1,48 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(873546),
-    o = n(481060),
+var i = n(120356),
+    o = n.n(i),
+    a = n(873546),
+    s = n(481060),
     l = n(388032),
-    u = n(25601),
-    c = (function (e) {
+    c = n(409716),
+    u = (function (e) {
         return (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e;
-    })(c || {});
+    })(u || {});
 function d(e) {
-    let { closeAction: t, variant: n = '', keybind: r, className: c } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(u.container, c),
+    let { closeAction: t, variant: n = '', keybind: i, className: u } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(c.container, u),
         children: [
-            (0, i.jsx)(o.P3F, {
-                className: a()(u.closeButton, {
-                    [u.closeButtonBold]: 'Bold' === n,
-                    [u.closeButtonSolid]: 'Solid' === n
+            (0, r.jsx)(s.P3F, {
+                className: o()(c.closeButton, {
+                    [c.closeButtonBold]: 'Bold' === n,
+                    [c.closeButtonSolid]: 'Solid' === n
                 }),
                 onClick: t,
-                'aria-label': l.intl.string(l.t.cpT0Cg),
+                'aria-label': l.NW.string(l.t.cpT0Cg),
                 children:
                     'Solid' === n
-                        ? (0, i.jsx)(o.k$p, {
+                        ? (0, r.jsx)(s.k$p, {
                               size: 'md',
                               color: 'currentColor',
                               'aria-hidden': !0
                           })
-                        : (0, i.jsx)(o.Dio, {
+                        : (0, r.jsx)(s.Dio, {
                               size: 'sm',
                               color: 'currentColor',
                               'aria-hidden': !0
                           })
             }),
-            s.tq
+            a.tq
                 ? null
-                : (0, i.jsx)('div', {
-                      className: a()(u.keybind),
+                : (0, r.jsx)('div', {
+                      className: o()(c.keybind),
                       'aria-hidden': !0,
-                      children: r
+                      children: i
                   })
         ]
     });
 }
-d.Variants = c;
+d.Variants = u;

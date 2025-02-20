@@ -1,85 +1,85 @@
-t.d(n, {
-    $K: () => p,
-    IG: () => C,
-    Nb: () => v,
+n.d(t, {
+    $K: () => O,
+    IG: () => v,
+    Nb: () => _,
     Ts: () => j,
-    Wy: () => D,
-    di: () => O
+    Wy: () => b,
+    di: () => D
 }),
-    t(47120);
-var l = t(570140),
-    i = t(668781),
-    s = t(479531),
-    r = t(983736),
-    a = t(45966),
-    o = t(819553),
-    d = t(637853),
-    c = t(17181),
-    u = t(962086),
-    m = t(225675),
-    I = t(592125),
-    h = t(430824),
-    N = t(823379),
-    g = t(434404),
-    E = t(889369),
-    x = t(570961),
-    T = t(84658),
-    S = t(176505),
-    _ = t(290511),
-    f = t(388032);
-function p(e) {
+    n(47120);
+var l = n(570140),
+    r = n(668781),
+    i = n(479531),
+    s = n(983736),
+    a = n(45966),
+    o = n(819553),
+    c = n(637853),
+    d = n(17181),
+    u = n(962086),
+    m = n(225675),
+    N = n(592125),
+    h = n(430824),
+    I = n(823379),
+    g = n(434404),
+    f = n(889369),
+    p = n(570961),
+    E = n(84658),
+    S = n(176505),
+    x = n(290511),
+    T = n(388032);
+function O(e) {
     l.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
     });
 }
-function v(e) {
+function _(e) {
     null != e &&
         l.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED',
             upsellType: e
         });
 }
-async function j(e, n) {
-    let t = a.Z.getEnabled(e),
-        r = Array.from(E.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
-        [o, c] = (0, d.d9)(e, [...r]);
-    if (t && n === _.Un.ONBOARDING_DEFAULT && (c.length < _.md || o.length < _.X)) {
-        i.Z.show({
-            title: f.intl.string(f.t.iLdiqa),
-            body: f.intl.string(f.t.JOT74e)
+async function j(e, t) {
+    let n = a.Z.getEnabled(e),
+        s = Array.from(f.Z.editedDefaultChannelIds).filter((e) => null != N.Z.getChannel(e)),
+        [o, d] = (0, c.d9)(e, [...s]);
+    if (n && t === x.Un.ONBOARDING_DEFAULT && (d.length < x.md || o.length < x.X)) {
+        r.Z.show({
+            title: T.NW.string(T.t.iLdiqa),
+            body: T.NW.string(T.t.JOT74e)
         });
         return;
     }
     try {
-        await (0, x.n_)(e, { mode: n });
-    } catch (t) {
+        await (0, p.n_)(e, { mode: t });
+    } catch (n) {
         var u;
-        let { fieldName: e, error: n } = null !== (u = new s.Z(t).getAnyErrorMessageAndField()) && void 0 !== u ? u : {};
-        i.Z.show({
-            title: f.intl.string(f.t.iLdiqa),
-            body: [e, n].filter(N.lm).join(': ')
+        let { fieldName: e, error: t } = null !== (u = new i.Z(n).getAnyErrorMessageAndField()) && void 0 !== u ? u : {};
+        r.Z.show({
+            title: T.NW.string(T.t.iLdiqa),
+            body: [e, t].filter(I.lm).join(': ')
         });
     }
     l.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_SET_MODE',
         guildId: e,
-        mode: n
+        mode: t
     });
 }
-function C(e, n) {
-    let t = T.xh.findIndex((e) => e === n);
-    -1 !== t && t !== T.xh.length - 1 && p(T.xh[t + 1]);
+function v(e, t) {
+    let n = E.xh.findIndex((e) => e === t);
+    -1 !== n && n !== E.xh.length - 1 && O(E.xh[n + 1]);
 }
-function D(e, n) {
-    let t = T.xh.findIndex((e) => e === n);
-    -1 !== t && 0 !== t && p(T.xh[t - 1]);
+function b(e, t) {
+    let n = E.xh.findIndex((e) => e === t);
+    -1 !== n && 0 !== n && O(E.xh[n - 1]);
 }
-async function O(e) {
-    let n = h.Z.getGuild(e);
-    null != n &&
+async function D(e) {
+    let t = h.Z.getGuild(e);
+    null != t &&
         (g.Z.close(),
-        (0, u.iD)(n.id, {
+        (0, u.iD)(t.id, {
             type: m.z.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
@@ -87,14 +87,14 @@ async function O(e) {
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
             memberOptions: {
-                isPending: (0, r.Dc)(n),
+                isPending: (0, s.Dc)(t),
                 flags: 0
             }
         }),
-        o.ZP.resetOnboardingStatus(n.id),
-        (0, c.EI)(n.id),
-        await (0, c.default)({
-            guildId: n.id,
+        o.ZP.resetOnboardingStatus(t.id),
+        (0, d.EI)(t.id),
+        await (0, d.default)({
+            guildId: t.id,
             isPreview: !0,
             returnChannelId: S.oC.GUILD_HOME
         }));

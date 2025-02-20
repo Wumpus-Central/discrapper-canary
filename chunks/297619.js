@@ -1,43 +1,43 @@
-t.d(n, { Z: () => u });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    s = t.n(l),
-    a = t(481060),
-    r = t(246364),
-    o = t(700833),
-    c = t(388032),
-    d = t(42497);
-let u = function (e) {
-    let { addFormField: n, guild: t } = e;
-    return (0, i.jsxs)('div', {
-        className: s()(d.spacingContainer, d.leftRailIconContainer, d.backgroundContainer),
+n.d(t, { Z: () => d });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    c = n(481060),
+    s = n(246364),
+    a = n(700833),
+    l = n(388032),
+    u = n(327237);
+let d = function (e) {
+    let { addFormField: t, guild: n } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
         children: [
-            (0, i.jsx)('div', {
-                className: d.iconContainer,
-                children: (0, i.jsx)(a.snC, {
+            (0, r.jsx)('div', {
+                className: u.iconContainer,
+                children: (0, r.jsx)(c.snC, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
                     height: 20,
-                    className: d.icon
+                    className: u.icon
                 })
             }),
-            (0, i.jsxs)(a.hjN, {
+            (0, r.jsxs)(c.hjN, {
                 children: [
-                    (0, i.jsx)(a.vwX, {
+                    (0, r.jsx)(c.vwX, {
                         tag: 'h3',
-                        className: d.leftRailIconContainerTitle,
-                        children: c.intl.string(c.t.qWqnws)
+                        className: u.leftRailIconContainerTitle,
+                        children: l.NW.string(l.t.qWqnws)
                     }),
-                    (0, i.jsx)(a.R94, {
-                        className: d.leftRailIconContainerDescription,
-                        type: a.R94.Types.DESCRIPTION,
-                        children: c.intl.string(c.t['3+rPkp'])
+                    (0, r.jsx)(c.R94, {
+                        className: u.leftRailIconContainerDescription,
+                        type: c.R94.Types.DESCRIPTION,
+                        children: l.NW.string(l.t['3+rPkp'])
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        onClick: () => (0, o.Md)(r.QJ.TERMS, n, t),
-                        children: c.intl.string(c.t['5AelkZ'])
+                    (0, r.jsx)(c.zxk, {
+                        onClick: () => (0, a.Md)(s.QJ.TERMS, t, n),
+                        children: l.NW.string(l.t['5AelkZ'])
                     })
                 ]
             })

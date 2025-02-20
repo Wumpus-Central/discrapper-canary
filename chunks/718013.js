@@ -4,7 +4,7 @@ function t(e) {
             className: 'string',
             begin: '\\$.{1}'
         },
-        i = {
+        r = {
             className: 'symbol',
             begin: '#' + e.UNDERSCORE_IDENT_RE
         };
@@ -25,7 +25,7 @@ function t(e) {
                 relevance: 0
             },
             e.C_NUMBER_MODE,
-            i,
+            r,
             n,
             {
                 begin: '\\|[ ]*' + t + '([ ]+' + t + ')*[ ]*\\|',
@@ -37,7 +37,7 @@ function t(e) {
             {
                 begin: '#\\(',
                 end: '\\)',
-                contains: [e.APOS_STRING_MODE, n, e.C_NUMBER_MODE, i]
+                contains: [e.APOS_STRING_MODE, n, e.C_NUMBER_MODE, r]
             }
         ]
     };

@@ -1,206 +1,206 @@
-n.r(t), n.d(t, { default: () => B });
-var i = n(200651),
-    l = n(192379),
-    s = n(442837),
-    a = n(481060),
-    r = n(570140),
+n.r(t), n.d(t, { default: () => M });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    s = n(481060),
+    a = n(570140),
     o = n(787014),
-    d = n(37234),
-    c = n(503089),
+    c = n(37234),
+    d = n(503089),
     u = n(493544),
     h = n(367907),
-    m = n(933557),
-    g = n(471445),
+    g = n(933557),
+    m = n(471445),
     p = n(351123),
-    x = n(685929),
-    f = n(665906),
-    v = n(210887),
-    j = n(131704),
-    C = n(533947),
-    N = n(277053),
-    Z = n(388610),
-    b = n(592125),
-    T = n(496675),
-    S = n(699516),
-    E = n(594174),
-    R = n(585483),
-    y = n(787263),
-    _ = n(975316),
-    w = n(428813),
-    I = n(2147),
-    L = n(856606),
-    A = n(981631),
-    M = n(388032),
-    D = n(375703);
-function P(e) {
+    f = n(685929),
+    x = n(665906),
+    j = n(210887),
+    b = n(131704),
+    N = n(533947),
+    v = n(277053),
+    y = n(388610),
+    C = n(592125),
+    S = n(496675),
+    Z = n(699516),
+    w = n(594174),
+    O = n(585483),
+    E = n(787263),
+    T = n(975316),
+    R = n(428813),
+    _ = n(2147),
+    I = n(856606),
+    P = n(981631),
+    W = n(388032),
+    L = n(400713);
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    h.ZP.trackWithMetadata(A.rMx.SETTINGS_PANE_VIEWED, {
+    h.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: 'channel',
         origin_pane: t,
         destination_pane: e,
         location: n
     });
 }
-class k extends l.PureComponent {
+class A extends i.PureComponent {
     componentDidMount() {
-        P(this.props.section, null, this.props.analyticsLocation);
+        D(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
-        r.Z.wait(() => (0, o.xv)());
+        a.Z.wait(() => (0, o.xv)());
     }
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
-            { formState: i, section: l, canManageRoles: s, canManageChannels: a, canManageWebhooks: r, canUnlinkChannel: o } = this.props;
-        (a || s || r || o) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (r || o || l !== A.CoT.INTEGRATIONS) ? l !== n && P(l, n) : (0, d.xf)();
+            { formState: r, section: i, canManageRoles: l, canManageChannels: s, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
+        (s || l || a || o) && (r !== P.QZA.CLOSED || r === t) && (l || i !== P.CoT.PERMISSIONS) && (a || o || i !== P.CoT.INTEGRATIONS) ? i !== n && D(i, n) : (0, c.xf)();
     }
     render() {
-        let { theme: e, sidebarTheme: t, section: n, channel: l, category: s, canManageRoles: r, canManageChannels: h, canDeleteChannels: x, canManageWebhooks: f, canUnlinkChannel: v } = this.props;
-        return null == l
+        let { theme: e, sidebarTheme: t, section: n, channel: i, category: l, canManageRoles: a, canManageChannels: h, canDeleteChannels: f, canManageWebhooks: x, canUnlinkChannel: j } = this.props;
+        return null == i
             ? null
-            : (0, i.jsx)(c.ZP, {
+            : (0, r.jsx)(d.ZP, {
                   theme: e,
                   sidebarTheme: t,
-                  section: null != n ? n : A.CoT.OVERVIEW,
+                  section: null != n ? n : P.CoT.OVERVIEW,
                   onSetSection: o.zc,
-                  onClose: d.xf,
+                  onClose: c.xf,
                   sections: (function (e) {
-                      let { channel: t, category: n, canManageRoles: l, canManageChannels: s, canDeleteChannels: r, canManageWebhooks: c, canUnlinkChannel: h } = e,
-                          x = (0, g.KS)(t),
-                          { GUILD_CATEGORY: f } = A.d4z,
-                          v = j.Ec.has(t.type),
-                          b = t.type === f ? M.intl.string(M.t.ifbXnJ) : v ? (t.isForumPost() ? M.intl.string(M.t.nEOg1N) : M.intl.string(M.t.H7vTe3)) : M.intl.string(M.t['8D8Rsb']);
+                      let { channel: t, category: n, canManageRoles: i, canManageChannels: l, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
+                          f = (0, m.KS)(t),
+                          { GUILD_CATEGORY: x } = P.d4z,
+                          j = b.Ec.has(t.type),
+                          C = t.type === x ? W.NW.string(W.t.ifbXnJ) : j ? (t.isForumPost() ? W.NW.string(W.t.nEOg1N) : W.NW.string(W.t.H7vTe3)) : W.NW.string(W.t['8D8Rsb']);
                       return [
                           {
                               section: u.ID.HEADER,
                               label:
                                   null != t
-                                      ? (0, i.jsxs)(i.Fragment, {
+                                      ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                null != x
-                                                    ? (0, i.jsx)(x, {
+                                                null != f
+                                                    ? (0, r.jsx)(f, {
                                                           size: 'xxs',
                                                           color: 'currentColor',
-                                                          className: D.channelIcon
+                                                          className: L.channelIcon
                                                       })
                                                     : null,
-                                                (0, m.F6)(t, E.default, S.Z),
+                                                (0, g.F6)(t, w.default, Z.Z),
                                                 null != n
-                                                    ? (0, i.jsx)(a.Text, {
+                                                    ? (0, r.jsx)(s.Text, {
                                                           tag: 'span',
                                                           variant: 'text-xs/semibold',
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
-                                                          className: D.category,
-                                                          children: (0, m.F6)(n, E.default, S.Z)
+                                                          className: L.category,
+                                                          children: (0, g.F6)(n, w.default, Z.Z)
                                                       })
                                                     : null
                                             ]
                                         })
-                                      : M.intl.string(M.t.XPDhcX)
+                                      : W.NW.string(W.t.XPDhcX)
                           },
                           {
-                              section: A.CoT.OVERVIEW,
-                              label: M.intl.string(M.t['/dp6yc']),
-                              ariaLabel: M.intl.string(M.t['/dp6yc']),
-                              element: I.Z,
+                              section: P.CoT.OVERVIEW,
+                              label: W.NW.string(W.t['/dp6yc']),
+                              ariaLabel: W.NW.string(W.t['/dp6yc']),
+                              element: _.Z,
                               notice: {
-                                  element: I.G,
-                                  stores: [Z.Z]
+                                  element: _.G,
+                                  stores: [y.Z]
                               }
                           },
                           {
-                              section: A.CoT.PERMISSIONS,
-                              label: M.intl.string(M.t.xrmhRU),
+                              section: P.CoT.PERMISSIONS,
+                              label: W.NW.string(W.t.xrmhRU),
                               element: p.Z,
                               notice: {
-                                  element: L.n,
-                                  stores: [N.Z]
+                                  element: I.n,
+                                  stores: [v.Z]
                               },
-                              predicate: () => l && !v
+                              predicate: () => i && !j
                           },
                           {
-                              section: A.CoT.INSTANT_INVITES,
-                              label: M.intl.string(M.t['9F90iY']),
-                              element: w.Z,
+                              section: P.CoT.INSTANT_INVITES,
+                              label: W.NW.string(W.t['9F90iY']),
+                              element: R.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => t.type !== f && s && !v
+                              predicate: () => t.type !== x && l && !j
                           },
                           {
-                              section: A.CoT.INTEGRATIONS,
-                              label: M.intl.string(M.t.s69NLC),
-                              ariaLabel: M.intl.string(M.t.s69NLC),
-                              element: _.Z,
+                              section: P.CoT.INTEGRATIONS,
+                              label: W.NW.string(W.t.s69NLC),
+                              ariaLabel: W.NW.string(W.t.s69NLC),
+                              element: T.Z,
                               notice: {
-                                  stores: [C.Z],
-                                  element: _.B
+                                  stores: [N.Z],
+                                  element: T.B
                               },
-                              predicate: () => (!!c || !!h) && j.Ti.has(t.type)
+                              predicate: () => (!!d || !!h) && b.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {
-                              section: A.CoT.DELETE,
+                              section: P.CoT.DELETE,
                               onClick() {
-                                  (0, y.w)(t, function () {
-                                      R.S.subscribeOnce(A.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, E.w)(t, function () {
+                                      O.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
-                                          (0, d.xf)();
+                                          (0, c.xf)();
                                   });
                               },
-                              label: b,
-                              ariaLabel: b,
-                              icon: (0, i.jsx)(a.XHJ, {
+                              label: C,
+                              ariaLabel: C,
+                              icon: (0, r.jsx)(s.XHJ, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              predicate: () => r
+                              predicate: () => a
                           }
                       ];
                   })({
-                      channel: l,
-                      category: s,
-                      canManageRoles: r,
+                      channel: i,
+                      category: l,
+                      canManageRoles: a,
                       canManageChannels: h,
-                      canDeleteChannels: x,
-                      canManageWebhooks: f,
-                      canUnlinkChannel: v
+                      canDeleteChannels: f,
+                      canManageWebhooks: x,
+                      canUnlinkChannel: j
                   })
               });
     }
 }
-function B() {
-    let { channel: e, analyticsLocation: t } = (0, s.cj)([Z.Z], () => Z.Z.getProps()),
-        n = (0, s.e7)([Z.Z], () => Z.Z.getFormState()),
-        l = (0, s.e7)([Z.Z], () => Z.Z.getSection()),
-        a = (0, s.e7)([v.Z], () => v.Z.theme),
-        r = (0, s.e7)([v.Z], () => (v.Z.darkSidebar ? A.BRd.DARK : void 0)),
-        o = (0, f.C7)(e),
-        d = (0, f.Xb)(e),
+function M() {
+    let { channel: e, analyticsLocation: t } = (0, l.cj)([y.Z], () => y.Z.getProps()),
+        n = (0, l.e7)([y.Z], () => y.Z.getFormState()),
+        i = (0, l.e7)([y.Z], () => y.Z.getSection()),
+        s = (0, l.e7)([j.Z], () => j.Z.theme),
+        a = (0, l.e7)([j.Z], () => (j.Z.darkSidebar ? P.BRd.DARK : void 0)),
+        o = (0, x.C7)(e),
+        c = (0, x.Xb)(e),
         {
-            canManageChannels: c,
+            canManageChannels: d,
             canManageRoles: u,
             canManageWebhooks: h,
-            canUnlinkChannel: m
-        } = (0, s.cj)([T.Z], () => ({
-            canManageChannels: T.Z.can(A.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && T.Z.can(A.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && T.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, x.C)(e, T.Z)
+            canUnlinkChannel: g
+        } = (0, l.cj)([S.Z], () => ({
+            canManageChannels: S.Z.can(P.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && S.Z.can(P.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && S.Z.can(P.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, S.Z)
         })),
-        g = (0, s.e7)([b.Z], () => b.Z.getChannel(null == e ? void 0 : e.parent_id));
-    return (0, i.jsx)(k, {
+        m = (0, l.e7)([C.Z], () => C.Z.getChannel(null == e ? void 0 : e.parent_id));
+    return (0, r.jsx)(A, {
         channel: e,
-        category: g,
-        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : c,
-        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? d : c,
+        category: m,
+        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
+        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? c : d,
         canManageRoles: u,
         canManageWebhooks: h,
-        canUnlinkChannel: m,
+        canUnlinkChannel: g,
         formState: n,
-        theme: a,
-        sidebarTheme: r,
-        section: l,
+        theme: s,
+        sidebarTheme: a,
+        section: i,
         analyticsLocation: t
     });
 }

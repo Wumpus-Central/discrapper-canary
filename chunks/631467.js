@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = {
+n.d(t, { Z: () => r });
+let r = {
     HANDSHAKE: 0,
     FRAME: 1,
     CLOSE: 2,

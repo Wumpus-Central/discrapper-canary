@@ -1,74 +1,74 @@
-n.d(t, { Z: () => p }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    r = n(772848),
+n.d(t, { Z: () => y }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(772848),
     a = n(442837),
-    s = n(570140),
-    o = n(607070),
-    u = n(367907),
-    c = n(37091),
+    o = n(570140),
+    s = n(607070),
+    c = n(367907),
+    u = n(37091),
     d = n(721264),
-    m = n(963838),
-    f = n(39127),
-    h = n(981631),
-    g = n(893904);
-function p(e) {
-    let { channelId: t, guildId: n, userId: p, containerDimensions: v } = e,
-        S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        [I, x] = i.useState([]),
-        E = I.length < 50;
-    i.useEffect(() => {
+    f = n(963838),
+    p = n(39127),
+    m = n(981631),
+    g = n(133521);
+function y(e) {
+    let { channelId: t, guildId: n, userId: y, containerDimensions: b } = e,
+        h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [v, O] = l.useState([]),
+        j = v.length < 50;
+    l.useEffect(() => {
         function e(e) {
-            var l;
-            let { channelId: i, userId: a, emoji: s, animationType: o, animationId: f } = e;
-            if ((null != p && p !== a) || (c.Z.getEnabled() && (0, d.Z)(null !== (l = null == s ? void 0 : s.name) && void 0 !== l ? l : ''))) return;
-            let g = null != s && null != o && null != f;
-            if (i === t && !S && E && g) {
-                let e = (0, m._r)(s),
-                    l = null != s.id && !s.animated,
-                    i = {
-                        id: (0, r.Z)(),
-                        animationType: o,
-                        animationId: f,
-                        shouldResize: l,
+            var r;
+            let { channelId: l, userId: a, emoji: o, animationType: s, animationId: p } = e;
+            if ((null != y && y !== a) || (u.Z.getEnabled() && (0, d.Z)(null !== (r = null == o ? void 0 : o.name) && void 0 !== r ? r : ''))) return;
+            let g = null != o && null != s && null != p;
+            if (l === t && !h && j && g) {
+                let e = (0, f._r)(o),
+                    r = null != o.id && !o.animated,
+                    l = {
+                        id: (0, i.Z)(),
+                        animationType: s,
+                        animationId: p,
+                        shouldResize: r,
                         url: e,
                         userId: a
                     };
-                x((e) => [...e, i]),
-                    u.ZP.trackWithMetadata(h.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                O((e) => [...e, l]),
+                    c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
                     });
             }
         }
         return (
-            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            o.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
             () => {
-                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, p, S, E]);
-    let T = i.useCallback((e) => {
-        x((t) => {
+    }, [t, n, y, h, j]);
+    let S = l.useCallback((e) => {
+        O((t) => {
             let n = [...t],
-                l = n.findIndex((t) => t.id === e);
-            return n.splice(l, 1), n;
+                r = n.findIndex((t) => t.id === e);
+            return n.splice(r, 1), n;
         });
     }, []);
-    return S
+    return h
         ? null
-        : (0, l.jsx)('div', {
+        : (0, r.jsx)('div', {
               className: g.effectsWrapper,
-              style: { width: v.width },
-              children: (0, l.jsx)('div', {
+              style: { width: b.width },
+              children: (0, r.jsx)('div', {
                   className: g.effects,
-                  children: I.map((e) =>
-                      (0, l.jsx)(
-                          f.Z,
+                  children: v.map((e) =>
+                      (0, r.jsx)(
+                          p.Z,
                           {
-                              containerDimensions: v,
+                              containerDimensions: b,
                               effect: e,
-                              onComplete: T
+                              onComplete: S
                           },
                           e.id
                       )

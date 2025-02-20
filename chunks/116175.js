@@ -1,16 +1,16 @@
 n.d(t, {
     ME: () => l,
-    Nh: () => a,
-    ZD: () => i,
-    lP: () => u,
-    sg: () => r,
-    vY: () => s,
-    yf: () => o
+    Nh: () => o,
+    ZD: () => r,
+    lP: () => c,
+    sg: () => i,
+    vY: () => a,
+    yf: () => s
 });
-var i = (function (e) {
+var r = (function (e) {
     return (e[(e.SWORD = 0)] = 'SWORD'), (e[(e.WATER_DROP = 1)] = 'WATER_DROP'), (e[(e.SKULL = 2)] = 'SKULL'), (e[(e.TOADSTOOL = 3)] = 'TOADSTOOL'), (e[(e.MOON = 4)] = 'MOON'), (e[(e.LIGHTNING = 5)] = 'LIGHTNING'), (e[(e.LEAF = 6)] = 'LEAF'), (e[(e.HEART = 7)] = 'HEART'), (e[(e.FIRE = 8)] = 'FIRE'), (e[(e.COMPASS = 9)] = 'COMPASS'), (e[(e.CROSSHAIRS = 10)] = 'CROSSHAIRS'), (e[(e.FLOWER = 11)] = 'FLOWER'), (e[(e.FORCE = 12)] = 'FORCE'), (e[(e.GEM = 13)] = 'GEM'), (e[(e.LAVA = 14)] = 'LAVA'), (e[(e.PSYCHIC = 15)] = 'PSYCHIC'), (e[(e.SMOKE = 16)] = 'SMOKE'), (e[(e.SNOW = 17)] = 'SNOW'), (e[(e.SOUND = 18)] = 'SOUND'), (e[(e.SUN = 19)] = 'SUN'), (e[(e.WIND = 20)] = 'WIND'), e;
 })({});
-let r = [
+let i = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -64,10 +64,10 @@ let r = [
             secondary: '#cccccc'
         }
     ],
-    a = r[0].primary,
-    s = r[0].secondary;
-function o() {
-    return r[Math.floor(Math.random() * r.length)];
+    o = i[0].primary,
+    a = i[0].secondary;
+function s() {
+    return i[Math.floor(Math.random() * i.length)];
 }
 let l = {
     0: 2,
@@ -92,7 +92,7 @@ let l = {
     19: 2,
     20: 2
 };
-function u() {
-    let e = Object.keys(i).filter((e) => isNaN(Number(e)));
-    return i[e[Math.floor(Math.random() * e.length)]];
+function c() {
+    let e = Object.keys(r).filter((e) => isNaN(Number(e)));
+    return r[e[Math.floor(Math.random() * e.length)]];
 }

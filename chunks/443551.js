@@ -1,33 +1,33 @@
-function i(e, t) {
+function r(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
+        var r = Object.getOwnPropertySymbols(e);
         t &&
-            (i = i.filter(function (t) {
+            (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, i);
+            n.push.apply(n, r);
     }
     return n;
 }
-function r(e) {
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? i(Object(n), !0).forEach(function (t) {
-                  a(e, t, n[t]);
+            ? r(Object(n), !0).forEach(function (t) {
+                  o(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : i(Object(n)).forEach(function (t) {
+              : r(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
     return e;
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return (
-        (t = u(t)) in e
+        (t = c(t)) in e
             ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
@@ -38,41 +38,41 @@ function a(e, t, n) {
         e
     );
 }
-function s(e, t) {
+function a(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, t) {
+function s(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, u(i.key), i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, c(r.key), r);
     }
 }
 function l(e, t, n) {
-    return t && o(e.prototype, t), n && o(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
+    return t && s(e.prototype, t), n && s(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
 }
-function u(e) {
-    var t = c(e, 'string');
+function c(e) {
+    var t = u(e, 'string');
     return 'symbol' == typeof t ? t : String(t);
 }
-function c(e, t) {
+function u(e, t) {
     if ('object' != typeof e || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
-        var i = n.call(e, t || 'default');
-        if ('object' != typeof i) return i;
+        var r = n.call(e, t || 'default');
+        if ('object' != typeof r) return r;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
     return ('string' === t ? String : Number)(e);
 }
 var d = n(413135).Buffer,
     f = n(252602).inspect,
-    _ = (f && f.custom) || 'inspect';
-function p(e, t, n) {
+    p = (f && f.custom) || 'inspect';
+function _(e, t, n) {
     d.prototype.copy.call(e, t, n);
 }
 e.exports = (function () {
     function e() {
-        s(this, e), (this.head = null), (this.tail = null), (this.length = 0);
+        a(this, e), (this.head = null), (this.tail = null), (this.length = 0);
     }
     return (
         l(e, [
@@ -123,7 +123,7 @@ e.exports = (function () {
                 key: 'concat',
                 value: function (e) {
                     if (0 === this.length) return d.alloc(0);
-                    for (var t = d.allocUnsafe(e >>> 0), n = this.head, i = 0; n; ) p(n.data, t, i), (i += n.data.length), (n = n.next);
+                    for (var t = d.allocUnsafe(e >>> 0), n = this.head, r = 0; n; ) _(n.data, t, r), (r += n.data.length), (n = n.next);
                     return t;
                 }
             },
@@ -145,17 +145,17 @@ e.exports = (function () {
                 value: function (e) {
                     var t = this.head,
                         n = 1,
-                        i = t.data;
-                    for (e -= i.length; (t = t.next); ) {
-                        var r = t.data,
-                            a = e > r.length ? r.length : e;
-                        if ((a === r.length ? (i += r) : (i += r.slice(0, e)), 0 == (e -= a))) {
-                            a === r.length ? (++n, t.next ? (this.head = t.next) : (this.head = this.tail = null)) : ((this.head = t), (t.data = r.slice(a)));
+                        r = t.data;
+                    for (e -= r.length; (t = t.next); ) {
+                        var i = t.data,
+                            o = e > i.length ? i.length : e;
+                        if ((o === i.length ? (r += i) : (r += i.slice(0, e)), 0 == (e -= o))) {
+                            o === i.length ? (++n, t.next ? (this.head = t.next) : (this.head = this.tail = null)) : ((this.head = t), (t.data = i.slice(o)));
                             break;
                         }
                         ++n;
                     }
-                    return (this.length -= n), i;
+                    return (this.length -= n), r;
                 }
             },
             {
@@ -163,26 +163,26 @@ e.exports = (function () {
                 value: function (e) {
                     var t = d.allocUnsafe(e),
                         n = this.head,
-                        i = 1;
+                        r = 1;
                     for (n.data.copy(t), e -= n.data.length; (n = n.next); ) {
-                        var r = n.data,
-                            a = e > r.length ? r.length : e;
-                        if ((r.copy(t, t.length - e, 0, a), 0 == (e -= a))) {
-                            a === r.length ? (++i, n.next ? (this.head = n.next) : (this.head = this.tail = null)) : ((this.head = n), (n.data = r.slice(a)));
+                        var i = n.data,
+                            o = e > i.length ? i.length : e;
+                        if ((i.copy(t, t.length - e, 0, o), 0 == (e -= o))) {
+                            o === i.length ? (++r, n.next ? (this.head = n.next) : (this.head = this.tail = null)) : ((this.head = n), (n.data = i.slice(o)));
                             break;
                         }
-                        ++i;
+                        ++r;
                     }
-                    return (this.length -= i), t;
+                    return (this.length -= r), t;
                 }
             },
             {
-                key: _,
+                key: p,
                 value: function (e, t) {
                     return f(
                         this,
-                        r(
-                            r({}, t),
+                        i(
+                            i({}, t),
                             {},
                             {
                                 depth: 0,

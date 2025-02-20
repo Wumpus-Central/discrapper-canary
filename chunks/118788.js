@@ -1,6 +1,6 @@
-var i = n(50248),
-    r = n(939556),
-    a = n(285709),
-    s = a && a.isMap,
-    o = s ? r(s) : i;
-e.exports = o;
+var r = n(50248),
+    i = n(939556),
+    o = n(285709),
+    a = o && o.isMap,
+    s = a ? i(a) : r;
+e.exports = s;

@@ -1,36 +1,36 @@
-n.d(t, { q: () => _ });
-var i = n(200651);
+n.d(t, { q: () => _ }), n(266796);
+var r = n(200651);
 n(192379);
-var l = n(704215),
-    r = n(481060),
-    a = n(906732),
-    s = n(963249),
-    o = n(286961),
+var i = n(704215),
+    l = n(481060),
+    o = n(906732),
+    a = n(963249),
+    s = n(286961),
     c = n(644916),
     u = n(243778),
     E = n(921944),
-    d = n(693763);
+    d = n(923627);
 let _ = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        I = (0, o.Z)();
-    return (0, i.jsx)(u.Xf, {
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        N = (0, s.Z)();
+    return (0, r.jsx)(u.Xf, {
         contentType: t,
         latestVersion: (0, c.t)(t),
         groupName: E.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: t, markAsDismissed: a } = e;
-            if (t === l.z.GIFTING_PROMOTION_REMINDER) {
-                let e = null == I ? void 0 : I.reminderNagbar;
-                return (0, i.jsxs)(r.qXd, {
-                    color: r.DM8.PREMIUM_TIER_2,
+            let { visibleContent: t, markAsDismissed: o } = e;
+            if (t === i.z.GIFTING_PROMOTION_REMINDER) {
+                let e = null == N ? void 0 : N.reminderNagbar;
+                return (0, r.jsxs)(l.qXd, {
+                    color: l.DM8.PREMIUM_TIER_2,
                     children: [
-                        (0, i.jsx)(r.RyX, {
-                            onClick: () => a(E.L.USER_DISMISS),
+                        (0, r.jsx)(l.RyX, {
+                            onClick: () => o(E.L.USER_DISMISS),
                             noticeType: n
                         }),
-                        (0, i.jsx)(r.OgN, {
+                        (0, r.jsx)(l.OgN, {
                             size: 'custom',
                             width: 20,
                             height: 20,
@@ -38,9 +38,9 @@ let _ = (e) => {
                             className: d.giftIcon
                         }),
                         null == e ? void 0 : e.description(),
-                        (0, i.jsx)(r.NoS, {
+                        (0, r.jsx)(l.NoS, {
                             onClick: () => {
-                                (0, s.Z)({
+                                (0, a.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
                                     analyticsLocations: _,

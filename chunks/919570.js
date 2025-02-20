@@ -1,17 +1,17 @@
 n.d(t, {
-    GR: () => a,
-    HQ: () => o,
-    gK: () => s,
-    wu: () => i
+    GR: () => o,
+    HQ: () => s,
+    gK: () => a,
+    wu: () => r
 });
-let i = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'contextmenu'],
-    r = null;
-function a() {
-    return r;
+let r = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'contextmenu'],
+    i = null;
+function o() {
+    return i;
+}
+function a(e) {
+    i = e;
 }
 function s(e) {
-    r = e;
-}
-function o(e) {
-    r === e && (r = null);
+    i === e && (i = null);
 }

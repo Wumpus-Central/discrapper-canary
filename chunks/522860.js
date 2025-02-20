@@ -1,44 +1,44 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(194082),
-    r = n(739566),
-    s = n(834129),
-    o = n(388032);
+    o = n(739566),
+    l = n(834129),
+    s = n(388032);
 function c(e) {
     var t;
-    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: m, compact: _ } = e,
-        h = (0, r.ZP)(n),
-        p = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
-        g = m(h),
-        f = o.intl.format(o.t.FKXvaG, {
-            username: h.nick,
+    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: p, compact: m } = e,
+        f = (0, o.ZP)(n),
+        h = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
+        g = p(f),
+        _ = s.NW.format(s.t.FKXvaG, {
+            username: f.nick,
             activityName: null != d ? d.name : 'unknown',
             onJoinStream: u,
             usernameHook: g
         });
     return (
-        null != p &&
-            (f = o.intl.format(o.t.NEFxtb, {
-                username: h.nick,
-                duration: p.humanize(),
+        null != h &&
+            (_ = s.NW.format(s.t.NEFxtb, {
+                username: f.nick,
+                duration: h.humanize(),
                 channelName: c.name,
                 usernameHook: g
             })),
-        (0, i.jsx)(s.Z, {
+        (0, r.jsx)(l.Z, {
             iconNode:
-                null != p
-                    ? (0, i.jsx)(l.g5r, {
+                null != h
+                    ? (0, r.jsx)(i.g5r, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 20,
                           height: 20
                       })
-                    : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
+                    : (0, r.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: _,
-            children: f
+            compact: m,
+            children: _
         })
     );
 }

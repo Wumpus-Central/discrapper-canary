@@ -1,93 +1,93 @@
-n.d(t, { Z: () => C }), n(47120), n(536091);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => v }), n(47120), n(86693), n(536091);
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
-    r = n.n(a),
-    s = n(442837),
-    o = n(481060),
+    o = n.n(a),
+    l = n(442837),
+    s = n(481060),
     c = n(834129),
     d = n(623292),
     u = n(926491),
-    m = n(419922),
-    _ = n(626135),
-    h = n(585483),
-    p = n(115610),
+    p = n(419922),
+    m = n(626135),
+    f = n(585483),
+    h = n(115610),
     g = n(981631),
-    f = n(388032),
-    x = n(635511);
-function C(e) {
-    let { message: t, channel: a, compact: C } = e,
-        E = (0, s.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [v, I] = l.useState(null);
-    return (l.useEffect(() => {
+    _ = n(388032),
+    b = n(986434);
+function v(e) {
+    let { message: t, channel: a, compact: v } = e,
+        y = (0, l.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [x, O] = i.useState(null);
+    return (i.useEffect(() => {
         let e = setInterval(() => {
-            E.length > 0 && I(E[Math.floor(Math.random() * E.length)]);
+            y.length > 0 && O(y[Math.floor(Math.random() * y.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [E]),
+    }, [y]),
     null == a.guild_id)
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               children: [
-                  (0, i.jsx)(c.Z, {
-                      className: r()(x.mainContainer, { [x.compact]: C }),
+                  (0, r.jsx)(c.Z, {
+                      className: o()(b.mainContainer, { [b.compact]: v }),
                       icon: n(570111),
-                      compact: C,
-                      children: (0, i.jsx)('div', {
-                          className: r()(x.__invalid_content, { [x.compact]: C }),
-                          children: (0, i.jsx)('div', {
-                              className: r()(x.__invalid_messageContent, { [x.compact]: C }),
-                              children: '' !== t.content ? t.content : f.intl.string(f.t.wnn1DQ)
+                      compact: v,
+                      children: (0, r.jsx)('div', {
+                          className: o()(b.__invalid_content, { [b.compact]: v }),
+                          children: (0, r.jsx)('div', {
+                              className: o()(b.__invalid_messageContent, { [b.compact]: v }),
+                              children: '' !== t.content ? t.content : _.NW.string(_.t.wnn1DQ)
                           })
                       })
                   }),
-                  (0, i.jsxs)('div', {
-                      className: x.actions,
+                  (0, r.jsxs)('div', {
+                      className: b.actions,
                       children: [
-                          (0, i.jsx)(o.DY3, {
-                              text: f.intl.string(f.t.ASZTf3),
-                              children: (0, i.jsx)(o.zxk, {
-                                  color: o.zxk.Colors.PRIMARY,
+                          (0, r.jsx)(s.DY3, {
+                              text: _.NW.string(_.t.ASZTf3),
+                              children: (0, r.jsx)(s.zxk, {
+                                  color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      _.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: a.id,
                                           guild_id: a.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          h.S.dispatch(g.CkL.UPLOAD_FILE),
+                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
                                           (0, d.fE)({
                                               message: t,
                                               channel: a,
                                               shouldMention: !0
                                           });
                                   },
-                                  children: (0, i.jsx)(o.FmF, {
+                                  children: (0, r.jsx)(s.FmF, {
                                       size: 'md',
                                       color: 'currentColor'
                                   })
                               })
                           }),
-                          (0, i.jsx)(o.DY3, {
-                              text: f.intl.string(f.t.gbrrAw),
-                              children: (0, i.jsx)(o.zxk, {
-                                  color: o.zxk.Colors.PRIMARY,
+                          (0, r.jsx)(s.DY3, {
+                              text: _.NW.string(_.t.gbrrAw),
+                              children: (0, r.jsx)(s.zxk, {
+                                  color: s.zxk.Colors.PRIMARY,
                                   onClick: () => {
-                                      _.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      m.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: a.id,
                                           guild_id: a.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, p.O)(t.id, a);
+                                          (0, h.O)(t.id, a);
                                   },
                                   children:
-                                      null != v
-                                          ? (0, i.jsx)(m.ZP, {
+                                      null != x
+                                          ? (0, r.jsx)(p.ZP, {
                                                 size: 32,
-                                                sticker: v
+                                                sticker: x
                                             })
-                                          : (0, i.jsx)(o.EO4, {
+                                          : (0, r.jsx)(s.EO4, {
                                                 size: 'md',
                                                 color: 'currentColor'
                                             })

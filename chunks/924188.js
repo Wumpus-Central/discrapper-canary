@@ -1,50 +1,50 @@
-t.d(a, { default: () => d });
+t.d(a, { default: () => c });
 var n = t(200651);
 t(192379);
-var i = t(481060),
-    r = t(313201),
+var r = t(481060),
+    i = t(313201),
     s = t(468706),
     o = t(388032),
-    l = t(596063);
-function d(e) {
-    let { channelId: a, messageId: t, onClose: d, transitionState: c } = e,
-        h = (0, r.Dt)();
-    return (0, n.jsx)(i.Y0X, {
-        transitionState: c,
+    d = t(223866);
+function c(e) {
+    let { channelId: a, messageId: t, onClose: c, transitionState: l } = e,
+        h = (0, i.Dt)();
+    return (0, n.jsx)(r.Y0X, {
+        transitionState: l,
         'aria-labelledby': h,
-        size: i.CgR.SMALL,
-        children: (0, n.jsxs)(i.hzk, {
-            className: l.container,
+        size: r.CgR.SMALL,
+        children: (0, n.jsxs)(r.hzk, {
+            className: d.container,
             children: [
-                (0, n.jsx)(i.X6q, {
+                (0, n.jsx)(r.X6q, {
                     id: h,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    className: l.header,
-                    children: o.intl.string(o.t.B3vFdX)
+                    className: d.header,
+                    children: o.NW.string(o.t.B3vFdX)
                 }),
-                (0, n.jsx)(i.Text, {
+                (0, n.jsx)(r.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    className: l.__invalid_subheader,
-                    children: o.intl.string(o.t.bNMQVF)
+                    className: d.__invalid_subheader,
+                    children: o.NW.string(o.t.bNMQVF)
                 }),
                 (0, n.jsxs)('div', {
-                    className: l.buttonContainer,
+                    className: d.buttonContainer,
                     children: [
-                        (0, n.jsx)(i.zxk, {
-                            className: l.button,
-                            size: i.zxk.Sizes.MEDIUM,
-                            color: i.zxk.Colors.BRAND,
-                            onClick: d,
-                            children: o.intl.string(o.t.WAI6xs)
+                        (0, n.jsx)(r.zxk, {
+                            className: d.button,
+                            size: r.zxk.Sizes.MEDIUM,
+                            color: r.zxk.Colors.BRAND,
+                            onClick: c,
+                            children: o.NW.string(o.t.WAI6xs)
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(r.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            children: o.intl.format(o.t.Ge0HUl, {
+                            children: o.NW.format(o.t.Ge0HUl, {
                                 handleFalsePositiveHook: () => {
-                                    d(), (0, s.e)(a, t);
+                                    c(), (0, s.e)(a, t);
                                 }
                             })
                         })

@@ -3,42 +3,42 @@
 })(0, function (e) {
     var t = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_'),
         n = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
-    function i(e) {
+    function r(e) {
         return e > 1 && e < 5;
     }
-    function r(e, t, n, r) {
-        var a = e + ' ';
+    function i(e, t, n, i) {
+        var o = e + ' ';
         switch (n) {
             case 's':
-                return t || r ? 'pár sekúnd' : 'pár sekundami';
+                return t || i ? 'pár sekúnd' : 'pár sekundami';
             case 'ss':
-                if (t || r) return a + (i(e) ? 'sekundy' : 'sekúnd');
-                return a + 'sekundami';
+                if (t || i) return o + (r(e) ? 'sekundy' : 'sekúnd');
+                return o + 'sekundami';
             case 'm':
-                return t ? 'minúta' : r ? 'minútu' : 'minútou';
+                return t ? 'minúta' : i ? 'minútu' : 'minútou';
             case 'mm':
-                if (t || r) return a + (i(e) ? 'minúty' : 'minút');
-                return a + 'minútami';
+                if (t || i) return o + (r(e) ? 'minúty' : 'minút');
+                return o + 'minútami';
             case 'h':
-                return t ? 'hodina' : r ? 'hodinu' : 'hodinou';
+                return t ? 'hodina' : i ? 'hodinu' : 'hodinou';
             case 'hh':
-                if (t || r) return a + (i(e) ? 'hodiny' : 'hodín');
-                return a + 'hodinami';
+                if (t || i) return o + (r(e) ? 'hodiny' : 'hodín');
+                return o + 'hodinami';
             case 'd':
-                return t || r ? 'deň' : 'dňom';
+                return t || i ? 'deň' : 'dňom';
             case 'dd':
-                if (t || r) return a + (i(e) ? 'dni' : 'dní');
-                return a + 'dňami';
+                if (t || i) return o + (r(e) ? 'dni' : 'dní');
+                return o + 'dňami';
             case 'M':
-                return t || r ? 'mesiac' : 'mesiacom';
+                return t || i ? 'mesiac' : 'mesiacom';
             case 'MM':
-                if (t || r) return a + (i(e) ? 'mesiace' : 'mesiacov');
-                return a + 'mesiacmi';
+                if (t || i) return o + (r(e) ? 'mesiace' : 'mesiacov');
+                return o + 'mesiacmi';
             case 'y':
-                return t || r ? 'rok' : 'rokom';
+                return t || i ? 'rok' : 'rokom';
             case 'yy':
-                if (t || r) return a + (i(e) ? 'roky' : 'rokov');
-                return a + 'rokmi';
+                if (t || i) return o + (r(e) ? 'roky' : 'rokov');
+                return o + 'rokmi';
         }
     }
     return e.defineLocale('sk', {
@@ -96,18 +96,18 @@
         relativeTime: {
             future: 'za %s',
             past: 'pred %s',
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r
+            s: i,
+            ss: i,
+            m: i,
+            mm: i,
+            h: i,
+            hh: i,
+            d: i,
+            dd: i,
+            M: i,
+            MM: i,
+            y: i,
+            yy: i
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

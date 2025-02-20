@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(780384),
-    r = n(147913),
-    a = n(844070),
-    s = n(922611),
-    o = n(981631),
+n.d(t, { Z: () => p }), n(47120);
+var r = n(780384),
+    i = n(147913),
+    o = n(844070),
+    a = n(922611),
+    s = n(981631),
     l = n(388032);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,22 +18,22 @@ function u(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     let { relationship: t } = e,
-        n = (0, s.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && t.userIgnored;
-    t.type !== o.OGo.PENDING_INCOMING || n || (i.uv.announce(l.intl.formatToPlainString(l.t.zH0kCw, { username: t.user.username })), a.T(t.user));
+        n = (0, a.JX)({ location: 'RelationshipManager.handleRelationshipAdd' }) && t.userIgnored;
+    t.type !== s.OGo.PENDING_INCOMING || n || (r.uv.announce(l.NW.formatToPlainString(l.t.zH0kCw, { username: t.user.username })), o.T(t.user));
 }
 function d(e) {
     let { user: t } = e;
-    i.uv.announce(l.intl.formatToPlainString(l.t['/+7xk5'], { username: t.username })), a.z(t);
+    r.uv.announce(l.NW.formatToPlainString(l.t['/+7xk5'], { username: t.username })), o.z(t);
 }
-class f extends r.Z {
+class f extends i.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', {
-                RELATIONSHIP_ADD: c,
+            c(this, 'actions', {
+                RELATIONSHIP_ADD: u,
                 FRIEND_REQUEST_ACCEPTED: d
             });
     }
 }
-let _ = new f();
+let p = new f();

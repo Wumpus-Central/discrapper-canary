@@ -1,17 +1,17 @@
-n.d(t, { Z: () => r });
-var i = n(192379),
-    l = n(914010);
-function r(e) {
-    i.useEffect(() => {
+n.d(t, { Z: () => l });
+var r = n(192379),
+    i = n(914010);
+function l(e) {
+    r.useEffect(() => {
         let t = null;
         function n() {
-            let n = l.Z.getGuildId();
+            let n = i.Z.getGuildId();
             n !== t && ((t = null != n ? n : null), e(null != n ? n : null, !1));
         }
         return (
-            l.Z.addChangeListener(n),
+            i.Z.addChangeListener(n),
             () => {
-                l.Z.removeChangeListener(n);
+                i.Z.removeChangeListener(n);
             }
         );
     }, [e]);

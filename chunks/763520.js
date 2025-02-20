@@ -5,13 +5,13 @@ t.d(l, {
     t(47120);
 var n,
     i = t(259443),
-    s = t(379649),
-    a = t(314897),
-    r = t(592125),
+    r = t(379649),
+    s = t(314897),
+    a = t(592125),
     o = t(866960),
     c = t(19780),
-    d = t(979651),
-    u = t(626135),
+    u = t(979651),
+    d = t(626135),
     m = t(981631);
 function p(e, l, t) {
     return (
@@ -30,7 +30,7 @@ var f = (((n = {}).SELF_VIDEO = 'self_video'), (n.SELF_STREAM = 'self_stream'), 
 let v = new Map();
 class x {
     onSpinnerStarted() {
-        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, s.zO)());
+        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, r.zO)());
     }
     trackSpinnerDuration(e, l, t) {
         if (null == this.spinnerVisibleStart) return;
@@ -39,14 +39,14 @@ class x {
                 let t = (null !== (l = v.get(e)) && void 0 !== l ? l : 0) + 1;
                 return v.set(e, t), t;
             })(t),
-            i = (0, s.zO)() - this.spinnerVisibleStart;
+            i = (0, r.zO)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), i < 0)) {
             this.logger.warn('spinner duration is negative: '.concat(i, ' ms\n        [').concat(e, ', count for stream: ').concat(n, ']'));
             return;
         }
         this.logger.info('spinner visible for '.concat(i, ' ms\n      [').concat(e, ', count for stream: ').concat(n, ']'));
         let p = c.Z.getGuildId(),
-            f = d.Z.getUserVoiceChannelId(p, a.default.getId()),
+            f = u.Z.getUserVoiceChannelId(p, s.default.getId()),
             x = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return 'guild_voice';
@@ -55,8 +55,8 @@ class x {
                     if (e.isGroupDM()) return 'group_dm';
                 }
                 return null;
-            })(r.Z.getChannel(f));
-        u.default.track(m.rMx.VIDEO_SPINNER_SHOWN_V2, {
+            })(a.Z.getChannel(f));
+        d.default.track(m.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: i,
             rtc_connection_id: c.Z.getRTCConnectionId(),

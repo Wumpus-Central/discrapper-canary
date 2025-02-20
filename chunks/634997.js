@@ -1,88 +1,88 @@
-e.d(n, { default: () => d });
-var r = e(200651);
-e(192379);
-var i = e(481060),
-    o = e(600164),
-    s = e(138201),
-    l = e(469775),
-    a = e(388032),
-    c = e(711963);
-let d = function (t) {
-    let { transitionState: n } = t;
-    return (0, r.jsxs)(i.Y0X, {
-        transitionState: n,
+n.d(t, { default: () => d }), n(266796);
+var r = n(200651);
+n(192379);
+var o = n(481060),
+    i = n(600164),
+    s = n(138201),
+    a = n(469775),
+    l = n(388032),
+    c = n(916087);
+let d = function (e) {
+    let { transitionState: t } = e;
+    return (0, r.jsxs)(o.Y0X, {
+        transitionState: t,
         className: c.root,
         children: [
-            (0, r.jsxs)(i.hzk, {
+            (0, r.jsxs)(o.hzk, {
                 className: c.content,
                 children: [
                     (0, r.jsxs)('div', {
                         className: c.headersContainer,
                         children: [
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: a.intl.string(a.t.JHNunp)
+                                children: l.NW.string(l.t.JHNunp)
                             }),
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: 'heading-md/medium',
                                 color: 'text-normal',
-                                children: a.intl.string(a.t['+BLIGh'])
+                                children: l.NW.string(l.t['+BLIGh'])
                             })
                         ]
                     }),
-                    l.E.map((t, n) => {
-                        let { title: e, description: i } = t;
+                    a.E.map((e, t) => {
+                        let { title: n, description: o } = e;
                         return (0, r.jsx)(
                             s.ZP,
                             {
-                                title: e,
-                                description: i,
+                                title: n,
+                                description: o,
                                 listType: 'numbered',
-                                index: n
+                                index: t
                             },
-                            n
+                            t
                         );
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
                         className: c.requestContainer,
-                        children: a.intl.format(a.t['5HcUPj'], {
+                        children: l.NW.format(l.t['5HcUPj'], {
                             onRequest: () => {}
                         })
                     })
                 ]
             }),
-            (0, r.jsxs)(i.mzw, {
-                justify: o.Z.Justify.BETWEEN,
-                direction: o.Z.Direction.HORIZONTAL,
+            (0, r.jsxs)(o.mzw, {
+                justify: i.Z.Justify.BETWEEN,
+                direction: i.Z.Direction.HORIZONTAL,
                 children: [
-                    (0, r.jsxs)(i.zxk, {
+                    (0, r.jsxs)(o.zxk, {
                         innerClassName: c.button,
-                        color: i.zxk.Colors.TRANSPARENT,
-                        look: i.zxk.Looks.BLANK,
+                        color: o.zxk.Colors.TRANSPARENT,
+                        look: o.zxk.Looks.BLANK,
                         children: [
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
-                                children: a.intl.string(a.t['aA6q//'])
+                                children: l.NW.string(l.t['aA6q//'])
                             }),
-                            (0, r.jsx)(i.Gr1, {
+                            (0, r.jsx)(o.Gr1, {
                                 size: 'xs',
-                                color: i.TVs.colors.HEADER_PRIMARY
+                                color: o.TVs.colors.HEADER_PRIMARY
                             })
                         ]
                     }),
-                    (0, r.jsxs)(i.zxk, {
+                    (0, r.jsxs)(o.zxk, {
                         innerClassName: c.button,
-                        color: i.zxk.Colors.BRAND,
+                        color: o.zxk.Colors.BRAND,
                         children: [
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'always-white',
-                                children: a.intl.string(a.t.Vk6xpK)
+                                children: l.NW.string(l.t.Vk6xpK)
                             }),
-                            (0, r.jsx)(i.Gr1, {
+                            (0, r.jsx)(o.Gr1, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })

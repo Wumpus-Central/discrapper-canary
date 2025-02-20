@@ -1,21 +1,21 @@
-n.r(t), n.d(t, { default: () => f }), n(757143);
+n.r(t), n.d(t, { default: () => d }), n(301563), n(757143);
 var r = n(200651),
-    c = n(192379),
-    o = n(593473),
+    o = n(192379),
+    c = n(593473),
     l = n(512969),
     i = n(478677),
     a = n(457330),
     s = n(675207),
     u = n(981631);
-function d(e) {
+function f(e) {
     let { platformType: t } = e,
         n = (0, l.k6)();
     return (
-        c.useEffect(() => {
-            let { code: e, state: r } = o.parse(window.location.search),
-                c = ''.concat(u.Z5c.CONNECTIONS_ERROR(t)).concat(window.location.search);
+        o.useEffect(() => {
+            let { code: e, state: r } = c.parse(window.location.search),
+                o = ''.concat(u.Z5c.CONNECTIONS_ERROR(t)).concat(window.location.search);
             if (null == e || null == r) {
-                n.replace(c);
+                n.replace(o);
                 return;
             }
             a.Z.linkDispatchAuthCallback(t, {
@@ -24,19 +24,19 @@ function d(e) {
             }).then(
                 (e) => {
                     let { status: r } = e;
-                    204 === r ? n.replace(u.Z5c.CONNECTIONS_SUCCESS(t)) : n.replace(c);
+                    204 === r ? n.replace(u.Z5c.CONNECTIONS_SUCCESS(t)) : n.replace(o);
                 },
                 () => {
-                    n.replace(c);
+                    n.replace(o);
                 }
             );
         }, [n, t]),
         (0, r.jsx)(s.VerifyAccountLoading, { platformType: t })
     );
 }
-let f = function (e) {
+let d = function (e) {
     let { match: t } = e,
         n = t.params.type,
-        { two_way_link_type: c } = o.parse(window.location.search);
-    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(n) && c === i.g.DESKTOP ? (0, r.jsx)(d, { platformType: n }) : null;
+        { two_way_link_type: o } = c.parse(window.location.search);
+    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(n) && o === i.g.DESKTOP ? (0, r.jsx)(f, { platformType: n }) : null;
 };

@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(320724),
     h = n(297700),
     f = n(77498),
-    N = n(283595),
-    x = n(626135),
-    b = n(251625),
+    b = n(283595),
+    N = n(626135),
+    x = n(251625),
     _ = n(358085),
     E = n(210887),
     j = n(981631),
@@ -124,26 +124,26 @@ function D(e) {
 function Z(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: p } = e,
-        b = (0, l.cj)([g.ZP, f.Z, N.Z], () => (0, g.FZ)(n, [g.ZP, f.Z, N.Z])),
+        x = (0, l.cj)([g.ZP, f.Z, b.Z], () => (0, g.FZ)(n, [g.ZP, f.Z, b.Z])),
         [_, E] = i.useState(!1),
-        [v, I] = i.useState(null !== (t = b.name) && void 0 !== t ? t : '???'),
+        [v, I] = i.useState(null !== (t = x.name) && void 0 !== t ? t : '???'),
         P = a()(S.flexCenter, {
             [O.game]: !s,
             [O.activeGame]: s,
             [T.card]: !s,
-            [O.nowPlaying]: null != b && s
+            [O.nowPlaying]: null != x && s
         });
     function D() {
-        d.Z.toggleDetection(b);
+        d.Z.toggleDetection(x);
     }
     function Z() {
         if (_) return;
-        let e = null != b.id ? f.Z.getDetectableGame(b.id) : null;
-        x.default.track(j.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        let e = null != x.id ? f.Z.getDetectableGame(x.id) : null;
+        N.default.track(j.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: b.name
+            game_name: x.name
         }),
-            (0, c.showToast)((0, c.createToast)(C.NW.formatToPlainString(C.t['6klMOj'], { gameName: b.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(C.NW.formatToPlainString(C.t['6klMOj'], { gameName: x.name }), c.ToastType.SUCCESS)),
             E(!0);
     }
     return (0, r.jsxs)('div', {
@@ -152,13 +152,13 @@ function Z(e) {
             (0, r.jsxs)('div', {
                 className: a()(O.gameNameLastPlayed, S.vertical),
                 children: [
-                    b.verified && !p
+                    x.verified && !p
                         ? (0, r.jsxs)('div', {
                               className: O.detectedApplication,
                               children: [
                                   (0, r.jsx)('div', {
                                       className: O.gameName,
-                                      children: b.name
+                                      children: x.name
                                   }),
                                   (0, r.jsx)(c.ua7, {
                                       text: C.NW.string(C.t['4PJP5u']),
@@ -193,7 +193,7 @@ function Z(e) {
                               maxLength: 128,
                               value: v,
                               onBlur: function () {
-                                  b.name !== v && d.Z.editName(b, v);
+                                  x.name !== v && d.Z.editName(x, v);
                               },
                               onKeyDown: function (e) {
                                   13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
@@ -202,7 +202,7 @@ function Z(e) {
                           }),
                     (function () {
                         let e;
-                        let { played: t, exePath: n } = b;
+                        let { played: t, exePath: n } = x;
                         return (
                             s ? (e = C.NW.string(C.t.VbV5dn)) : null != t && '' !== t && (e = C.NW.format(C.t.gGeOEx, { when: t })),
                             (0, r.jsx)('div', {
@@ -243,7 +243,7 @@ function Z(e) {
                         })
                     }),
             (function () {
-                let { detectable: e } = b,
+                let { detectable: e } = x,
                     t = e
                         ? (0, r.jsx)(c.tEF, {
                               size: 'md',
@@ -277,7 +277,7 @@ function Z(e) {
             })(),
             (function () {
                 if (!R) return null;
-                let { overlay: e, overlayWarn: t } = b,
+                let { overlay: e, overlayWarn: t } = x,
                     n = e
                         ? (0, r.jsx)(c.pzj, {
                               size: 'md',
@@ -310,7 +310,7 @@ function Z(e) {
                                     className: O.toggleIcon,
                                     onClick: () => {
                                         var t;
-                                        return (t = !e), void d.Z.toggleOverlay(b, t, t);
+                                        return (t = !e), void d.Z.toggleOverlay(x, t, t);
                                     },
                                     onMouseEnter: i,
                                     onMouseLeave: s,
@@ -325,7 +325,7 @@ function Z(e) {
                 ? (0, r.jsx)(u.Z, {
                       className: O.removeGame,
                       onClick: function () {
-                          d.Z.deleteEntry(b);
+                          d.Z.deleteEntry(x);
                       }
                   })
                 : null
@@ -365,7 +365,7 @@ function k(e) {
         ]
     });
 }
-let W = (0, b.oH)(function () {
+let W = (0, x.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),

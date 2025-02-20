@@ -1,55 +1,55 @@
-l.d(t, { Z: () => g });
-var a = l(200651),
-    n = l(192379),
-    i = l(120356),
-    s = l.n(i),
-    r = l(399606),
-    o = l(481060),
-    c = l(547972),
-    d = l(556296),
-    u = l(13140),
-    m = l(435064),
-    p = l(981631),
-    x = l(332325),
-    v = l(388032),
-    h = l(45671);
+n.d(t, { Z: () => g });
+var r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    i = n.n(a),
+    o = n(399606),
+    s = n(481060),
+    c = n(547972),
+    u = n(556296),
+    d = n(13140),
+    p = n(435064),
+    m = n(981631),
+    f = n(332325),
+    b = n(388032),
+    v = n(291099);
 function g(e) {
-    let { isEmptyBecauseQuery: t, closePopout: l } = e,
-        i = (0, r.e7)([d.ZP], () => d.ZP.getKeybindForAction(p.kg4.SAVE_CLIP)),
-        g = (0, r.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
-        C = t ? h.noSearchResultsImage : h.noClipsImage,
-        f = n.useCallback(() => {
-            l(), (0, c.Z)(x.Z.CLIPS);
-        }, [l]),
-        j = (() => {
-            if (!g) return v.intl.format(v.t['3iveam'], { onClick: f });
-            if (t) return v.intl.string(v.t['xrEs6+']);
-            if (null == i) return v.intl.format(v.t.jpKk7e, { onClick: f });
+    let { isEmptyBecauseQuery: t, closePopout: n } = e,
+        a = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
+        g = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
+        j = t ? v.noSearchResultsImage : v.noClipsImage,
+        h = l.useCallback(() => {
+            n(), (0, c.Z)(f.Z.CLIPS);
+        }, [n]),
+        y = (() => {
+            if (!g) return b.NW.format(b.t['3iveam'], { onClick: h });
+            if (t) return b.NW.string(b.t['xrEs6+']);
+            if (null == a) return b.NW.format(b.t.jpKk7e, { onClick: h });
             {
-                let e = u.BB(i.shortcut, !0);
-                return v.intl.format(v.t['xY/8Ky'], {
+                let e = d.BB(a.shortcut, !0);
+                return b.NW.format(b.t['xY/8Ky'], {
                     keybind: e,
                     keybindHook: () =>
-                        (0, a.jsx)('span', {
-                            className: h.keybindHintKeys,
-                            children: (0, a.jsx)(o.M2$, {
-                                className: h.keybindShortcut,
+                        (0, r.jsx)('span', {
+                            className: v.keybindHintKeys,
+                            children: (0, r.jsx)(s.M2$, {
+                                className: v.keybindShortcut,
                                 shortcut: e
                             })
                         })
                 });
             }
         })();
-    return (0, a.jsx)('div', {
-        className: h.container,
-        children: (0, a.jsxs)('div', {
-            className: h.content,
+    return (0, r.jsx)('div', {
+        className: v.container,
+        children: (0, r.jsxs)('div', {
+            className: v.content,
             children: [
-                (0, a.jsx)('div', { className: C }),
-                (0, a.jsx)(o.Text, {
+                (0, r.jsx)('div', { className: j }),
+                (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
-                    className: s()(h.noClipsText, { [h.noSearchResultsText]: t }),
-                    children: j
+                    className: i()(v.noClipsText, { [v.noSearchResultsText]: t }),
+                    children: y
                 })
             ]
         })

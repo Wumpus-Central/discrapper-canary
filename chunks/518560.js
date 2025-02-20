@@ -1,52 +1,52 @@
-s.d(e, { Z: () => f });
-var i = s(200651),
-    a = s(192379),
-    n = s(286379),
-    l = s(481060),
-    r = s(493773),
+s.d(t, { Z: () => f });
+var a = s(200651),
+    n = s(192379),
+    i = s(286379),
+    r = s(481060),
+    l = s(493773),
     c = s(797614),
     o = s(626135),
     d = s(103879),
-    m = s(451284),
-    u = s(802429),
-    x = s(846488),
-    h = s(181211),
+    u = s(451284),
+    m = s(802429),
+    h = s(846488),
+    x = s(181211),
     g = s(811085),
     j = s(967254),
-    v = s(981631),
-    N = s(388032),
-    p = s(382661);
+    N = s(981631),
+    v = s(388032),
+    p = s(164657);
 function f() {
-    let t = (0, h.Z)(),
-        e = (0, x.e)(),
-        s = (0, m.P)(),
-        f = (0, u.i)();
-    (0, r.ZP)(() => {
+    let e = (0, x.Z)(),
+        t = (0, h.e)(),
+        s = (0, u.P)(),
+        f = (0, m.i)();
+    (0, l.ZP)(() => {
         d.yq();
     });
-    let T = a.useRef(s);
-    return (a.useEffect(() => {
-        T.current = s;
+    let S = n.useRef(s);
+    return (n.useEffect(() => {
+        S.current = s;
     }),
-    a.useEffect(() => {
-        e && (o.default.track(v.rMx.SAFETY_HUB_VIEWED, { account_standing: T.current.state }), c.Z.increment({ name: n.V.SAFETY_HUB_VIEW }));
-    }, [e]),
-    t)
-        ? (0, i.jsx)('div', { children: (0, i.jsx)(l.$jN, {}) })
+    n.useEffect(() => {
+        t && (o.default.track(N.rMx.SAFETY_HUB_VIEWED, { account_standing: S.current.state }), c.Z.increment({ name: i.V.SAFETY_HUB_VIEW }));
+    }, [t]),
+    e)
+        ? (0, a.jsx)('div', { children: (0, a.jsx)(r.$jN, {}) })
         : null != f
-          ? (0, i.jsxs)(l.qXd, {
-                color: l.DM8.DANGER,
+          ? (0, a.jsxs)(r.qXd, {
+                color: r.DM8.DANGER,
                 className: p.nagbar,
                 children: [
-                    N.intl.string(N.t.TDRvqq),
-                    (0, i.jsx)(l.EyT, {
+                    v.NW.string(v.t.TDRvqq),
+                    (0, a.jsx)(r.EyT, {
                         onClick: () => d.yq(),
-                        children: N.intl.string(N.t.R1AN4O)
+                        children: v.NW.string(v.t.R1AN4O)
                     })
                 ]
             })
-          : (0, i.jsxs)('div', {
+          : (0, a.jsxs)('div', {
                 className: p.container,
-                children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(j.N, {})]
+                children: [(0, a.jsx)(g.Z, {}), (0, a.jsx)(j.N, {})]
             });
 }

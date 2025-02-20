@@ -1,7 +1,7 @@
-n.d(t, { p: () => r });
-var i = n(452463),
-    r = function (e) {
-        (0, i.G)(function () {
+n.d(t, { p: () => i });
+var r = n(452463),
+    i = function (e) {
+        (0, r.G)(function () {
             requestAnimationFrame(e);
         });
     };

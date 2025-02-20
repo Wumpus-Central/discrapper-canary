@@ -1,11 +1,11 @@
-n.d(t, { V: () => a });
-var i = n(331119),
-    s = n(575595),
-    r = n(650032);
-let l = 'getWhatsNewBadgeCount',
-    a = () => {
-        let { enabled: e } = r._.getCurrentConfig({ location: l }, { autoTrackExposure: !1 }),
-            { enabled: t } = s.r.getCurrentConfig({ location: l }, { autoTrackExposure: !1 }),
-            { enabled: n } = i.C.getCurrentConfig({ location: l }, { autoTrackExposure: !1 });
+n.d(t, { V: () => l });
+var r = n(331119),
+    i = n(575595),
+    s = n(650032);
+let a = 'getWhatsNewBadgeCount',
+    l = () => {
+        let { enabled: e } = s._.getCurrentConfig({ location: a }, { autoTrackExposure: !1 }),
+            { enabled: t } = i.r.getCurrentConfig({ location: a }, { autoTrackExposure: !1 }),
+            { enabled: n } = r.C.getCurrentConfig({ location: a }, { autoTrackExposure: !1 });
         return e && !t && !n;
     };

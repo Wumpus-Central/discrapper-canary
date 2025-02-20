@@ -1,24 +1,24 @@
 n.d(t, {
-    d: () => c,
-    p: () => u
+    d: () => u,
+    p: () => c
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(775953),
-    s = n(512722),
-    o = n.n(s);
-let l = r.createContext(void 0);
-function u(e) {
+var r = n(200651),
+    i = n(192379),
+    o = n(775953),
+    a = n(512722),
+    s = n.n(a);
+let l = i.createContext(void 0);
+function c(e) {
     let { children: t } = e,
-        [n, a] = r.useState(null),
-        s = r.useMemo(() => ({ setComponentToSnapshot: a }), [a]);
-    return (0, i.jsxs)(l.Provider, {
-        value: s,
+        [n, o] = i.useState(null),
+        a = i.useMemo(() => ({ setComponentToSnapshot: o }), [o]);
+    return (0, r.jsxs)(l.Provider, {
+        value: a,
         children: [
             t,
             null != n &&
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     id: 'component-to-image-container',
                     style: {
                         position: 'fixed',
@@ -30,27 +30,27 @@ function u(e) {
         ]
     });
 }
-function c(e) {
+function u(e) {
     let { renderComponent: t, imageOptions: n } = e,
-        i = r.useContext(l);
-    o()(null != i, 'useComponentToImageContext must be used within a ComponentToImageProvider');
-    let [s, u] = r.useState(!1);
+        r = i.useContext(l);
+    s()(null != r, 'useComponentToImageContext must be used within a ComponentToImageProvider');
+    let [a, c] = i.useState(!1);
     return {
-        generatingImage: s,
+        generatingImage: a,
         generateImage: () =>
-            new Promise((e, r) => {
-                u(!0);
-                let s = async (t) => {
+            new Promise((e, i) => {
+                c(!0);
+                let a = async (t) => {
                     try {
-                        let i = await (0, a.SE)(t, n);
-                        o()(null != i, 'Unable to generate image'), e(i);
+                        let r = await (0, o.SE)(t, n);
+                        s()(null != r, 'Unable to generate image'), e(r);
                     } catch (e) {
-                        r(e);
+                        i(e);
                     } finally {
-                        u(!1), i.setComponentToSnapshot(null);
+                        c(!1), r.setComponentToSnapshot(null);
                     }
                 };
-                i.setComponentToSnapshot(t({ generateImageRef: s }));
+                r.setComponentToSnapshot(t({ generateImageRef: a }));
             })
     };
 }

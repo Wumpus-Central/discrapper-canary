@@ -23,11 +23,11 @@ function t(e) {
             begin: /:[\w\-.]+/,
             relevance: 0
         },
-        i = {
+        r = {
             className: 'string',
             begin: /\B([\/.])[\w\-.\/=]+/
         },
-        r = {
+        i = {
             className: 'params',
             begin: /--[\w\-=\/]+/
         };
@@ -39,7 +39,7 @@ function t(e) {
             keyword: 'alias batch cd clear command connect connection-factory connection-info data-source deploy deployment-info deployment-overlay echo echo-dmr help history if jdbc-driver-info jms-queue|20 jms-topic|20 ls patch pwd quit read-attribute read-operation reload rollout-plan run-batch set shutdown try unalias undeploy unset version xa-data-source',
             literal: 'true false'
         },
-        contains: [e.HASH_COMMENT_MODE, e.QUOTE_STRING_MODE, r, n, i, t]
+        contains: [e.HASH_COMMENT_MODE, e.QUOTE_STRING_MODE, i, n, r, t]
     };
 }
 e.exports = t;

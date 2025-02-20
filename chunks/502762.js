@@ -1,50 +1,50 @@
-n.d(t, { Z: () => _ });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(576635),
-    u = n(213053),
-    c = n(652853),
+    c = n(213053),
+    u = n(652853),
     d = n(228168),
-    f = n(452953);
-let _ = Object.assign(
-    r.forwardRef(function (e, t) {
-        let { user: n, displayProfile: r, profileType: a, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
+    f = n(292481);
+let p = Object.assign(
+    i.forwardRef(function (e, t) {
+        let { user: n, displayProfile: i, profileType: o, className: p, pendingThemeColors: _, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
             {
                 theme: E,
                 primaryColor: v,
-                secondaryColor: y
+                secondaryColor: b
             } = (0, l.Z)({
                 user: n,
-                displayProfile: r,
-                pendingThemeColors: p,
+                displayProfile: i,
+                pendingThemeColors: _,
                 isPreview: g
             }),
-            { profileThemeStyle: I, profileThemeClassName: T } = (0, u.Z)({
+            { profileThemeStyle: y, profileThemeClassName: O } = (0, c.Z)({
                 theme: null != h ? h : E,
                 primaryColor: v,
-                secondaryColor: y
+                secondaryColor: b
             }),
-            b = {
-                [f.biteSize]: a === d.y0.BITE_SIZE,
-                [f.fullSize]: a === d.y0.FULL_SIZE,
-                [f.panel]: a === d.y0.PANEL
+            S = {
+                [f.biteSize]: o === d.y0.BITE_SIZE,
+                [f.fullSize]: o === d.y0.FULL_SIZE,
+                [f.panel]: o === d.y0.PANEL
             };
-        return (0, i.jsx)('div', {
-            className: s()(f.outer, T, b, _),
-            style: I,
+        return (0, r.jsx)('div', {
+            className: a()(f.outer, O, S, p),
+            style: y,
             ref: t,
-            children: (0, i.jsx)('div', {
-                className: s()(f.inner, b),
-                children: (0, i.jsx)(o.ze6, {
+            children: (0, r.jsx)('div', {
+                className: a()(f.inner, S),
+                children: (0, r.jsx)(s.ze6, {
                     theme: null != h ? h : E,
-                    children: (0, i.jsx)(c.X, {
-                        profileType: a,
+                    children: (0, r.jsx)(u.X, {
+                        profileType: o,
                         theme: null != h ? h : E,
                         primaryColor: v,
-                        secondaryColor: y,
+                        secondaryColor: b,
                         children: m
                     })
                 })
@@ -52,17 +52,17 @@ let _ = Object.assign(
         });
     }),
     {
-        Overlay: r.forwardRef(function (e, t) {
-            let { children: n, className: r } = e,
-                { profileType: a } = (0, c.z)(),
-                o = {
-                    [f.biteSize]: a === d.y0.BITE_SIZE,
-                    [f.fullSize]: a === d.y0.FULL_SIZE,
-                    [f.panel]: a === d.y0.PANEL
+        Overlay: i.forwardRef(function (e, t) {
+            let { children: n, className: i } = e,
+                { profileType: o } = (0, u.z)(),
+                s = {
+                    [f.biteSize]: o === d.y0.BITE_SIZE,
+                    [f.fullSize]: o === d.y0.FULL_SIZE,
+                    [f.panel]: o === d.y0.PANEL
                 };
-            return (0, i.jsx)('div', {
+            return (0, r.jsx)('div', {
                 ref: t,
-                className: s()(f.overlay, o, r),
+                className: a()(f.overlay, s, i),
                 children: n
             });
         })

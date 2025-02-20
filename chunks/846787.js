@@ -1,5 +1,5 @@
-function i(e, t, n) {
-    let i = new n.constructor(n.toJS());
-    return (i.position_ = t.order), null != t.nickname && (i.name = t.nickname), null != t.parentId && t.parentId in e && (i.parent_id = t.parentId), i;
+function r(e, t, n) {
+    let r = new n.constructor(n.toJS());
+    return (r.position_ = t.order), null != t.nickname && (r.name = t.nickname), null != t.parentId && t.parentId in e && (r.parent_id = t.parentId), r;
 }
-n.d(t, { r: () => i });
+n.d(t, { r: () => r });

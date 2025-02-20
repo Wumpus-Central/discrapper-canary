@@ -23,22 +23,22 @@ function n(e) {
             function (e, t) {
                 if (((this._callbacks = this._callbacks || {}), 0 == arguments.length)) return (this._callbacks = {}), this;
                 var n,
-                    i = this._callbacks['$' + e];
-                if (!i) return this;
+                    r = this._callbacks['$' + e];
+                if (!r) return this;
                 if (1 == arguments.length) return delete this._callbacks['$' + e], this;
-                for (var r = 0; r < i.length; r++)
-                    if ((n = i[r]) === t || n.fn === t) {
-                        i.splice(r, 1);
+                for (var i = 0; i < r.length; i++)
+                    if ((n = r[i]) === t || n.fn === t) {
+                        r.splice(i, 1);
                         break;
                     }
-                return 0 === i.length && delete this._callbacks['$' + e], this;
+                return 0 === r.length && delete this._callbacks['$' + e], this;
             }),
     (t.prototype.emit = function (e) {
         this._callbacks = this._callbacks || {};
-        for (var t = Array(arguments.length - 1), n = this._callbacks['$' + e], i = 1; i < arguments.length; i++) t[i - 1] = arguments[i];
+        for (var t = Array(arguments.length - 1), n = this._callbacks['$' + e], r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
         if (n) {
             n = n.slice(0);
-            for (var i = 0, r = n.length; i < r; ++i) n[i].apply(this, t);
+            for (var r = 0, i = n.length; r < i; ++r) n[r].apply(this, t);
         }
         return this;
     }),

@@ -1,114 +1,114 @@
-n.d(t, { Z: () => v }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var l = n(200651),
-    i = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    r = n(481060),
+    r = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    a = n(481060),
     o = n(231239),
     c = n(881052),
     d = n(313201),
     u = n(592125),
     m = n(888592),
-    x = n(981631),
-    h = n(388032),
-    _ = n(267096);
-let N = (0, d.hQ)(),
-    v = (e) => {
-        let { setStep: t, setGuildsInfo: n, email: s, setEmail: d, setGuildId: v, invite: g, onClose: E, isNUXFlow: I } = e,
-            [f, S] = i.useState(null),
-            [p, C] = i.useState(!1),
-            T = async (e) => {
-                e.preventDefault(), S(null), C(!0);
+    N = n(981631),
+    x = n(388032),
+    h = n(689602);
+let v = (0, d.hQ)(),
+    _ = (e) => {
+        let { setStep: t, setGuildsInfo: n, email: i, setEmail: d, setGuildId: _, invite: g, onClose: f, isNUXFlow: p } = e,
+            [E, S] = r.useState(null),
+            [I, j] = r.useState(!1),
+            y = async (e) => {
+                e.preventDefault(), S(null), j(!0);
                 try {
-                    var l, i, a, r, d;
-                    let e = null !== (d = null !== (r = null == g ? void 0 : null === (l = g.guild) || void 0 === l ? void 0 : l.id) && void 0 !== r ? r : null === (i = u.Z.getChannel(null == g ? void 0 : null === (a = g.channel) || void 0 === a ? void 0 : a.id)) || void 0 === i ? void 0 : i.getGuildId()) && void 0 !== d ? d : void 0;
+                    var l, r, s, a, d;
+                    let e = null !== (d = null !== (a = null == g ? void 0 : null === (l = g.guild) || void 0 === l ? void 0 : l.id) && void 0 !== a ? a : null === (r = u.Z.getChannel(null == g ? void 0 : null === (s = g.channel) || void 0 === s ? void 0 : s.id)) || void 0 === r ? void 0 : r.getGuildId()) && void 0 !== d ? d : void 0;
                     e === m.fQ && (e = void 0);
-                    let c = await o.Z.sendVerificationEmail(s, !0, e),
-                        x = c.guilds_info;
-                    c.has_matching_guild ? (v(e), t(m.tF.VERIFY_PIN)) : 0 === x.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === x.length ? (v(x[0].id), await o.Z.sendVerificationEmail(s, !0, x[0].id), t(m.tF.VERIFY_PIN)) : (n(x), t(m.tF.SELECT_SCHOOL));
+                    let c = await o.Z.sendVerificationEmail(i, !0, e),
+                        N = c.guilds_info;
+                    c.has_matching_guild ? (_(e), t(m.tF.VERIFY_PIN)) : 0 === N.length ? t(m.tF.SUBMIT_SCHOOL) : 1 === N.length ? (_(N[0].id), await o.Z.sendVerificationEmail(i, !0, N[0].id), t(m.tF.VERIFY_PIN)) : (n(N), t(m.tF.SELECT_SCHOOL));
                 } catch (e) {
                     S(new c.Hx(e));
                 } finally {
-                    C(!1);
+                    j(!1);
                 }
             },
-            A = h.intl.string(h.t.H1jCHB),
-            j = h.intl.string(h.t.YfeHRE);
-        if (I) (A = h.intl.string(h.t.LVyxND)), (j = h.intl.string(h.t.ECd7Rk));
+            C = x.NW.string(x.t.H1jCHB),
+            T = x.NW.string(x.t.YfeHRE);
+        if (p) (C = x.NW.string(x.t.LVyxND)), (T = x.NW.string(x.t.ECd7Rk));
         else if ((null == g ? void 0 : g.guild) != null && g.guild.id !== m.fQ && (null == g ? void 0 : g.approximate_member_count) != null) {
             let { name: e } = g.guild;
-            A = h.intl.formatToPlainString(h.t['4T4+p6'], {
+            C = x.NW.formatToPlainString(x.t['4T4+p6'], {
                 guildName: e,
                 count: g.approximate_member_count
             });
         }
         return (0, l.jsxs)('div', {
-            className: _.container,
+            className: h.container,
             children: [
-                (0, l.jsx)('div', { className: _.topImage }),
-                (0, l.jsx)(r.X6q, {
-                    className: a()(_.centerText, _.header),
+                (0, l.jsx)('div', { className: h.topImage }),
+                (0, l.jsx)(a.X6q, {
+                    className: s()(h.centerText, h.header),
                     variant: 'heading-xl/semibold',
-                    children: A
+                    children: C
                 }),
                 (0, l.jsx)('div', {
-                    className: _.descriptionWidth,
-                    children: (0, l.jsx)(r.Text, {
-                        className: _.centerText,
+                    className: h.descriptionWidth,
+                    children: (0, l.jsx)(a.Text, {
+                        className: h.centerText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: j
+                        children: T
                     })
                 }),
                 (0, l.jsxs)('form', {
-                    className: _.formContent,
-                    onSubmit: T,
+                    className: h.formContent,
+                    onSubmit: y,
                     children: [
-                        (0, l.jsxs)(r.xJW, {
+                        (0, l.jsxs)(a.xJW, {
                             children: [
-                                (0, l.jsx)(r.vwX, {
-                                    id: N,
-                                    children: h.intl.string(h.t.kmCxkZ)
+                                (0, l.jsx)(a.vwX, {
+                                    id: v,
+                                    children: x.NW.string(x.t.kmCxkZ)
                                 }),
-                                (0, l.jsx)(r.oil, {
-                                    placeholder: h.intl.string(h.t.ImAOh4),
+                                (0, l.jsx)(a.oil, {
+                                    placeholder: x.NW.string(x.t.ImAOh4),
                                     onChange: (e) => {
                                         d(e);
                                     },
-                                    error: null == f ? void 0 : f.getAnyErrorMessage(),
-                                    'aria-labelledby': N
+                                    error: null == E ? void 0 : E.getAnyErrorMessage(),
+                                    'aria-labelledby': v
                                 })
                             ]
                         }),
-                        (0, l.jsx)(r.Text, {
+                        (0, l.jsx)(a.Text, {
                             color: 'header-secondary',
-                            className: _.formDescription,
+                            className: h.formDescription,
                             variant: 'text-sm/normal',
-                            children: h.intl.string(h.t.Cv7mmJ)
+                            children: x.NW.string(x.t.Cv7mmJ)
                         }),
-                        (0, l.jsx)(r.zxk, {
+                        (0, l.jsx)(a.zxk, {
                             type: 'submit',
-                            size: r.zxk.Sizes.LARGE,
-                            color: r.zxk.Colors.BRAND,
-                            className: _.submitButton,
-                            submitting: p,
-                            children: h.intl.string(h.t['8vmKOz'])
+                            size: a.zxk.Sizes.LARGE,
+                            color: a.zxk.Colors.BRAND,
+                            className: h.submitButton,
+                            submitting: I,
+                            children: x.NW.string(x.t['8vmKOz'])
                         }),
-                        (0, l.jsx)(r.Text, {
-                            className: _.termsPhrase,
+                        (0, l.jsx)(a.Text, {
+                            className: h.termsPhrase,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: h.intl.format(h.t.RPT0vr, {
-                                termsURL: x.EYA.TERMS,
-                                privacyURL: x.EYA.PRIVACY
+                            children: x.NW.format(x.t.RPT0vr, {
+                                termsURL: N.EYA.TERMS,
+                                privacyURL: N.EYA.PRIVACY
                             })
                         }),
-                        I &&
-                            (0, l.jsx)(r.zxk, {
-                                look: r.zxk.Looks.LINK,
-                                onClick: E,
-                                className: _.cancelButton,
-                                children: h.intl.string(h.t.hO6qJy)
+                        p &&
+                            (0, l.jsx)(a.zxk, {
+                                look: a.zxk.Looks.LINK,
+                                onClick: f,
+                                className: h.cancelButton,
+                                children: x.NW.string(x.t.hO6qJy)
                             })
                     ]
                 })

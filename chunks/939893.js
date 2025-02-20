@@ -1,7 +1,7 @@
-n.d(t, { Z: () => _ }), n(301563);
+n.d(t, { Z: () => f }), n(301563);
 var r,
-    i,
-    a = n(200651);
+    a,
+    i = n(200651);
 n(192379);
 var l = n(477660),
     o = n.n(l),
@@ -37,16 +37,16 @@ function g(e) {
     }
     return e;
 }
-let f = /^discord.gg\/[a-zA-Z0-9-]+/,
-    _ =
+let _ = /^discord.gg\/[a-zA-Z0-9-]+/,
+    f =
         ((r = g({}, h.Z.rules)),
-        (i = i =
+        (a = a =
             {
                 heading: g({}, d.i.heading),
                 image: g({}, o().defaultRules.image),
                 inviteLink: {
                     order: h.Z.rules.link.order + 1,
-                    match: (e, t) => (t.inline ? f.exec(e) : null),
+                    match: (e, t) => (t.inline ? _.exec(e) : null),
                     parse: (e, t, n) => {
                         let r = (0, p.zO)(e[0]);
                         return null == r || r.type !== u.g.INVITE
@@ -73,7 +73,7 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                               };
                     },
                     react: (e, t, n) =>
-                        (0, a.jsx)(
+                        (0, i.jsx)(
                             s.eee,
                             {
                                 onClick: (t) => {
@@ -86,7 +86,7 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                 }
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -94,7 +94,7 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(i)).forEach(function (e) {
-                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+              })(Object(a)).forEach(function (e) {
+                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
               }),
         r);

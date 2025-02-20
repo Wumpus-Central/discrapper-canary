@@ -1,28 +1,28 @@
-n.d(t, { B: () => s });
-var i = n(270445),
-    r = n(436660),
-    a = n(887490);
-let s = (e, t) => {
-    let { addMark: n, removeMark: s, deleteBackward: o, deleteForward: l, setFragmentData: u, insertData: c, insertFragmentData: d, insertTextData: f } = e;
+n.d(t, { B: () => a });
+var r = n(270445),
+    i = n(436660),
+    o = n(887490);
+let a = (e, t) => {
+    let { addMark: n, removeMark: a, deleteBackward: s, deleteForward: l, setFragmentData: c, insertData: u, insertFragmentData: d, insertTextData: f } = e;
     return (
-        ((e = (0, i.BU)(e)).addMark = n),
-        (e.removeMark = s),
-        (e.setFragmentData = u),
-        (e.insertData = c),
+        ((e = (0, r.BU)(e)).addMark = n),
+        (e.removeMark = a),
+        (e.setFragmentData = c),
+        (e.insertData = u),
         (e.insertFragmentData = d),
         (e.insertTextData = f),
         (e.deleteBackward = (n) => {
-            if ('line' !== n || t) o(n);
+            if ('line' !== n || t) s(n);
             else {
-                let t = a.lP.getLineActionRange(e, !0);
-                null != t && r.Q.delete(e, { at: t });
+                let t = o.lP.getLineActionRange(e, !0);
+                null != t && i.Q.delete(e, { at: t });
             }
         }),
         (e.deleteForward = (n) => {
             if ('line' !== n || t) l(n);
             else {
-                let t = a.lP.getLineActionRange(e, !1);
-                null != t && r.Q.delete(e, { at: t });
+                let t = o.lP.getLineActionRange(e, !1);
+                null != t && i.Q.delete(e, { at: t });
             }
         }),
         e

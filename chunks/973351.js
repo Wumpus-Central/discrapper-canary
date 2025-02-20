@@ -1,12 +1,12 @@
-var i;
+var r;
 if (!Object.keys) {
-    var r = Object.prototype.hasOwnProperty,
-        a = Object.prototype.toString,
-        s = n(560640),
-        o = Object.prototype.propertyIsEnumerable,
-        l = !o.call({ toString: null }, 'toString'),
-        u = o.call(function () {}, 'prototype'),
-        c = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'],
+    var i = Object.prototype.hasOwnProperty,
+        o = Object.prototype.toString,
+        a = n(560640),
+        s = Object.prototype.propertyIsEnumerable,
+        l = !s.call({ toString: null }, 'toString'),
+        c = s.call(function () {}, 'prototype'),
+        u = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'],
         d = function (e) {
             var t = e.constructor;
             return t && t.prototype === e;
@@ -36,11 +36,11 @@ if (!Object.keys) {
             $webkitStorageInfo: !0,
             $window: !0
         },
-        _ = (function () {
+        p = (function () {
             if ('undefined' == typeof window) return !1;
             for (var e in window)
                 try {
-                    if (!f['$' + e] && r.call(window, e) && null !== window[e] && 'object' == typeof window[e])
+                    if (!f['$' + e] && i.call(window, e) && null !== window[e] && 'object' == typeof window[e])
                         try {
                             d(window[e]);
                         } catch (e) {
@@ -51,27 +51,27 @@ if (!Object.keys) {
                 }
             return !1;
         })(),
-        p = function (e) {
-            if ('undefined' == typeof window || !_) return d(e);
+        _ = function (e) {
+            if ('undefined' == typeof window || !p) return d(e);
             try {
                 return d(e);
             } catch (e) {
                 return !1;
             }
         };
-    i = function (e) {
+    r = function (e) {
         var t = null !== e && 'object' == typeof e,
-            n = '[object Function]' === a.call(e),
-            i = s(e),
-            o = t && '[object String]' === a.call(e),
+            n = '[object Function]' === o.call(e),
+            r = a(e),
+            s = t && '[object String]' === o.call(e),
             d = [];
-        if (!t && !n && !i) throw TypeError('Object.keys called on a non-object');
-        var f = u && n;
-        if (o && e.length > 0 && !r.call(e, 0)) for (var _ = 0; _ < e.length; ++_) d.push(String(_));
-        if (i && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
-        else for (var m in e) !(f && 'prototype' === m) && r.call(e, m) && d.push(String(m));
-        if (l) for (var g = p(e), E = 0; E < c.length; ++E) !(g && 'constructor' === c[E]) && r.call(e, c[E]) && d.push(c[E]);
+        if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
+        var f = c && n;
+        if (s && e.length > 0 && !i.call(e, 0)) for (var p = 0; p < e.length; ++p) d.push(String(p));
+        if (r && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
+        else for (var m in e) !(f && 'prototype' === m) && i.call(e, m) && d.push(String(m));
+        if (l) for (var g = _(e), E = 0; E < u.length; ++E) !(g && 'constructor' === u[E]) && i.call(e, u[E]) && d.push(u[E]);
         return d;
     };
 }
-e.exports = i;
+e.exports = r;

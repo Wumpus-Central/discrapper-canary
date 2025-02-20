@@ -1,43 +1,43 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(826298),
-    l = n(61530);
-let u = (e) => {
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(826298),
+    l = n(799328);
+let c = (e) => {
     let { showImage: t } = e,
         {
             usageWidth: n,
-            descriptionWidth: a,
-            sourceWidth: u
-        } = r.useMemo(
+            descriptionWidth: o,
+            sourceWidth: c
+        } = i.useMemo(
             () => ({
-                usageWidth: s().random(60, 120),
-                descriptionWidth: s().random(200, 600),
-                sourceWidth: s().random(45, 90)
+                usageWidth: a().random(60, 120),
+                descriptionWidth: a().random(200, 600),
+                sourceWidth: a().random(45, 90)
             }),
             []
         );
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: l.wrapper,
         children: [
-            t ? (0, i.jsx)('div', { className: l.image }) : null,
-            (0, i.jsxs)('div', {
+            t ? (0, r.jsx)('div', { className: l.image }) : null,
+            (0, r.jsxs)('div', {
                 className: l.infoWrapper,
                 children: [
-                    (0, i.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(n) },
+                    (0, r.jsx)('div', {
+                        style: { maxWidth: (0, s.Q1)(n) },
                         className: l.usageWrapper
                     }),
-                    (0, i.jsx)('div', {
-                        style: { maxWidth: (0, o.Q1)(a) },
+                    (0, r.jsx)('div', {
+                        style: { maxWidth: (0, s.Q1)(o) },
                         className: l.description
                     })
                 ]
             }),
-            (0, i.jsx)('div', {
-                style: { width: (0, o.Q1)(u) },
+            (0, r.jsx)('div', {
+                style: { width: (0, s.Q1)(c) },
                 className: l.source
             })
         ]

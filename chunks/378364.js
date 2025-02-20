@@ -1,25 +1,25 @@
 n.d(t, {
     O: () => l,
-    Z: () => u
+    Z: () => c
 });
-var i = n(306968),
-    r = n(871465),
-    a = n(388032),
-    s = n(586393),
-    o = n(464912),
+var r = n(306968),
+    i = n(871465),
+    o = n(388032),
+    a = n(586393),
+    s = n(464912),
     l = (function (e) {
         return (e[(e.THROW_EMOJI = 0)] = 'THROW_EMOJI'), (e[(e.SNOW = 1)] = 'SNOW'), e;
     })({});
-let u = {
-    experiment: i.Z,
+let c = {
+    experiment: r.Z,
     startTimeMs: 1734631200000,
     endTimeMs: 1735952400000,
     isDesktopOnly: !0,
-    soundpack: r.YC.WINTER_HOLIDAY,
-    soundpackLabel: a.t.Z5OQNj,
+    soundpack: i.YC.WINTER_HOLIDAY,
+    soundpackLabel: o.t.Z5OQNj,
     appSpinnerSources: {
-        webmDark: s,
-        webmLight: o
+        webmDark: a,
+        webmLight: s
     },
     emojiAnimationType: 1,
     emojiAnimationTriggers: ['snowflake'],

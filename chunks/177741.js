@@ -32,7 +32,7 @@ var i,
     I = n(553300),
     b = n(949772),
     S = n(981631),
-    g = n(781256),
+    g = n(723529),
     P = n(426401),
     Z = n(926734),
     y = n(601046),
@@ -98,7 +98,7 @@ function H() {
     let [y, C] = c.useState(!1),
         [F, U] = c.useState(!1),
         O = (0, u.q_F)({
-            opacity: y ? 0.2 : 0,
+            opacity: 0.2 * !!y,
             config: { duration: 100 }
         }),
         H = (0, u.q_F)(

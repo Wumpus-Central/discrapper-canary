@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => r });
 var i = n(812236),
     l = n(989573);
-function a(e) {
-    let { context: t, applicationId: n, botUserId: a } = e,
+function r(e) {
+    let { context: t, applicationId: n, botUserId: r } = e,
         o = (0, i.ms)({
             context: t,
             applicationId: n,
-            botUserId: a
+            botUserId: r
         }),
-        s = (0, l.Z)({ context: t });
-    return o && null != a && !s;
+        a = (0, l.Z)({ context: t });
+    return o && null != r && !a;
 }

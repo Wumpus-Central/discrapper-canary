@@ -2,37 +2,37 @@
     t(n(913527));
 })(0, function (e) {
     var t = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
-    function n(e, t, n, i) {
-        var r = e;
+    function n(e, t, n, r) {
+        var i = e;
         switch (n) {
             case 's':
-                return i || t ? 'néhány másodperc' : 'néhány másodperce';
+                return r || t ? 'néhány másodperc' : 'néhány másodperce';
             case 'ss':
-                return r + (i || t) ? ' másodperc' : ' másodperce';
+                return i + (r || t) ? ' másodperc' : ' másodperce';
             case 'm':
-                return 'egy' + (i || t ? ' perc' : ' perce');
+                return 'egy' + (r || t ? ' perc' : ' perce');
             case 'mm':
-                return r + (i || t ? ' perc' : ' perce');
+                return i + (r || t ? ' perc' : ' perce');
             case 'h':
-                return 'egy' + (i || t ? ' óra' : ' órája');
+                return 'egy' + (r || t ? ' óra' : ' órája');
             case 'hh':
-                return r + (i || t ? ' óra' : ' órája');
+                return i + (r || t ? ' óra' : ' órája');
             case 'd':
-                return 'egy' + (i || t ? ' nap' : ' napja');
+                return 'egy' + (r || t ? ' nap' : ' napja');
             case 'dd':
-                return r + (i || t ? ' nap' : ' napja');
+                return i + (r || t ? ' nap' : ' napja');
             case 'M':
-                return 'egy' + (i || t ? ' hónap' : ' hónapja');
+                return 'egy' + (r || t ? ' hónap' : ' hónapja');
             case 'MM':
-                return r + (i || t ? ' hónap' : ' hónapja');
+                return i + (r || t ? ' hónap' : ' hónapja');
             case 'y':
-                return 'egy' + (i || t ? ' év' : ' éve');
+                return 'egy' + (r || t ? ' év' : ' éve');
             case 'yy':
-                return r + (i || t ? ' év' : ' éve');
+                return i + (r || t ? ' év' : ' éve');
         }
         return '';
     }
-    function i(e) {
+    function r(e) {
         return (e ? '' : '[múlt] ') + '[' + t[this.day()] + '] LT[-kor]';
     }
     return e.defineLocale('hu', {
@@ -60,11 +60,11 @@
             sameDay: '[ma] LT[-kor]',
             nextDay: '[holnap] LT[-kor]',
             nextWeek: function () {
-                return i.call(this, !0);
+                return r.call(this, !0);
             },
             lastDay: '[tegnap] LT[-kor]',
             lastWeek: function () {
-                return i.call(this, !1);
+                return r.call(this, !1);
             },
             sameElse: 'L'
         },

@@ -1,51 +1,51 @@
-n.d(t, { Z: () => _ });
-var i = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(493773),
-    a = n(626135),
-    s = n(144145),
-    o = n(555927),
-    d = n(738762),
-    c = n(244080),
-    u = n(247530),
-    h = n(260889),
-    m = n(981631),
-    p = n(674563),
-    g = n(388032);
-function _(e) {
-    let { party: t, close: n, onSelect: _ } = e,
-        f = (0, d.Z)(t),
-        E = (0, h.Z)(t),
-        I = (0, u.Z)(t),
-        C = (0, c.Z)(t),
-        N = (0, s.Z)(t),
-        v = (0, o.Z)(t);
+var i = n(481060),
+    l = n(493773),
+    o = n(626135),
+    a = n(144145),
+    s = n(555927),
+    c = n(738762),
+    u = n(244080),
+    d = n(247530),
+    p = n(260889),
+    h = n(981631),
+    g = n(674563),
+    f = n(388032);
+function m(e) {
+    let { party: t, close: n, onSelect: m } = e,
+        b = (0, c.Z)(t),
+        _ = (0, p.Z)(t),
+        E = (0, d.Z)(t),
+        O = (0, u.Z)(t),
+        N = (0, a.Z)(t),
+        v = (0, s.Z)(t);
     return (
-        (0, r.ZP)(() => {
+        (0, l.ZP)(() => {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === p.wW.GAME;
+                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === g.wW.GAME;
                 })
                 .map((e) => e.game.name);
-            a.default.track(m.rMx.OPEN_POPOUT, {
+            o.default.track(h.rMx.OPEN_POPOUT, {
                 type: 'Now Playing Card Popout',
                 games_detected: e
             });
         }),
-        (0, i.jsxs)(l.v2r, {
+        (0, r.jsxs)(i.v2r, {
             navId: 'now-playing-menu',
             onClose: n,
-            'aria-label': g.intl.string(g.t.ogxXGh),
-            onSelect: _,
+            'aria-label': f.NW.string(f.t.ogxXGh),
+            onSelect: m,
             children: [
-                f,
-                (0, i.jsxs)(l.kSQ, {
-                    children: [E, I]
+                b,
+                (0, r.jsxs)(i.kSQ, {
+                    children: [_, E]
                 }),
-                (0, i.jsx)(l.kSQ, { children: C }),
-                (0, i.jsx)(l.kSQ, { children: N }),
+                (0, r.jsx)(i.kSQ, { children: O }),
+                (0, r.jsx)(i.kSQ, { children: N }),
                 v
             ]
         })

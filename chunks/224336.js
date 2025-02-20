@@ -1,7 +1,7 @@
-n.d(t, { Z: () => r });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(870903);
-function r() {
-    return (0, i.jsx)('div', { className: l.divider });
+var i = n(354963);
+function l() {
+    return (0, r.jsx)('div', { className: i.divider });
 }

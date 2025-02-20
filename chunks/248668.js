@@ -1,10 +1,10 @@
-var i = n(67867),
-    r = n(570596),
-    a = n(548828),
-    s = n(653457),
-    o = n(139545),
+var r = n(67867),
+    i = n(570596),
+    o = n(548828),
+    a = n(653457),
+    s = n(139545),
     l = n(730427);
-i(
+r(
     {
         target: 'Promise',
         stat: !0,
@@ -13,15 +13,15 @@ i(
     {
         race: function (e) {
             var t = this,
-                n = s.f(t),
-                i = n.reject,
-                u = o(function () {
-                    var s = a(t.resolve);
+                n = a.f(t),
+                r = n.reject,
+                c = s(function () {
+                    var a = o(t.resolve);
                     l(e, function (e) {
-                        r(s, t, e).then(n.resolve, i);
+                        i(a, t, e).then(n.resolve, r);
                     });
                 });
-            return u.error && i(u.value), n.promise;
+            return c.error && r(c.value), n.promise;
         }
     }
 );

@@ -1,10 +1,10 @@
-var i = n(67867),
-    r = n(228042),
-    a = n(146321),
-    s = a.get,
-    o = a.has,
-    l = a.set;
-i(
+var r = n(67867),
+    i = n(228042),
+    o = n(146321),
+    a = o.get,
+    s = o.has,
+    l = o.set;
+r(
     {
         target: 'Map',
         proto: !0,
@@ -14,9 +14,9 @@ i(
     {
         emplace: function (e, t) {
             var n,
-                i,
-                a = r(this);
-            return o(a, e) ? ((n = s(a, e)), 'update' in t && ((n = t.update(n, e, a)), l(a, e, n)), n) : ((i = t.insert(e, a)), l(a, e, i), i);
+                r,
+                o = i(this);
+            return s(o, e) ? ((n = a(o, e)), 'update' in t && ((n = t.update(n, e, o)), l(o, e, n)), n) : ((r = t.insert(e, o)), l(o, e, r), r);
         }
     }
 );

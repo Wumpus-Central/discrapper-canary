@@ -80,7 +80,7 @@ function g(e) {
 function E(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e('84335'), n.e('68241'), n.e('82758'), n.e('57604')]).then(n.bind(n, 581355));
+            let { default: t } = await Promise.all([n.e('84335'), n.e('68241'), n.e('82758'), n.e('3908')]).then(n.bind(n, 581355));
             return (n) => (0, r.jsx)(t, m(_({}, n), { channel: e }));
         },
         { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }

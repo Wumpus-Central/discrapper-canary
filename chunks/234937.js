@@ -1,44 +1,44 @@
-n.d(t, { Z: () => c });
-var l = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var i = n(442837),
-    r = n(481060),
+var l = n(442837),
+    i = n(481060),
     a = n(565138),
-    s = n(430824),
-    o = n(388032),
-    d = n(494762);
-let c = (e) => {
+    o = n(430824),
+    s = n(388032),
+    c = n(940978);
+let d = (e) => {
     let { event: t } = e,
-        n = (0, i.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
+        n = (0, l.e7)([o.Z], () => o.Z.getGuild(t.guild_id));
     return null == n
         ? null
-        : (0, l.jsxs)('div', {
-              className: d.container,
+        : (0, r.jsxs)('div', {
+              className: c.container,
               children: [
-                  (0, l.jsx)(r.X6q, {
-                      className: d.header,
+                  (0, r.jsx)(i.X6q, {
+                      className: c.header,
                       variant: 'heading-sm/semibold',
-                      children: o.intl.string(o.t.SDTOLy)
+                      children: s.NW.string(s.t.SDTOLy)
                   }),
-                  (0, l.jsxs)('div', {
-                      className: d.guildContainer,
+                  (0, r.jsxs)('div', {
+                      className: c.guildContainer,
                       children: [
-                          (0, l.jsxs)('div', {
-                              className: d.guildInfo,
+                          (0, r.jsxs)('div', {
+                              className: c.guildInfo,
                               children: [
-                                  (0, l.jsx)(a.Z, {
+                                  (0, r.jsx)(a.Z, {
                                       guild: n,
                                       size: a.Z.Sizes.MINI,
-                                      className: d.guildIcon
+                                      className: c.guildIcon
                                   }),
-                                  (0, l.jsx)(r.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
                                       children: n.name
                                   })
                               ]
                           }),
-                          (0, l.jsx)(r.Text, {
+                          (0, r.jsx)(i.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
                               children: t.name

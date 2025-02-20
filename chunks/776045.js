@@ -1,91 +1,91 @@
-t.d(e, {
+r.d(t, {
     A: () => s,
-    default: () => d
+    default: () => c
 }),
-    t(47120);
-var n,
-    a = t(200651),
-    l = t(192379),
-    r = t(481060),
-    i = t(388032),
-    o = t(230288),
-    s = (((n = {}).DANGER = 'danger'), (n.WARNING = 'warning'), n);
-function d(A) {
-    let { transitionState: e, onClose: t, title: n, body: s, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = A,
-        [m, h] = l.useState(!1),
-        f = async () => {
-            h(!0);
+    r(47120);
+var A,
+    n = r(200651),
+    o = r(192379),
+    a = r(481060),
+    l = r(388032),
+    i = r(589992),
+    s = (((A = {}).DANGER = 'danger'), (A.WARNING = 'warning'), A);
+function c(e) {
+    let { transitionState: t, onClose: r, title: A, body: s, cta: c, closeLabel: d, onConfirm: u, iconVariant: f = 'warning' } = e,
+        [g, p] = o.useState(!1),
+        m = async () => {
+            p(!0);
             try {
-                await u(), t();
+                await u(), r();
             } finally {
-                h(!1);
+                p(!1);
             }
         },
-        C = null != n ? n : i.intl.string(i.t.D94rwc);
-    return (0, a.jsxs)(r.Y0X, {
-        className: o.__invalid_container,
-        size: r.CgR.DYNAMIC,
-        transitionState: e,
-        'aria-label': C,
+        h = null != A ? A : l.NW.string(l.t.D94rwc);
+    return (0, n.jsxs)(a.Y0X, {
+        className: i.__invalid_container,
+        size: a.CgR.DYNAMIC,
+        transitionState: t,
+        'aria-label': h,
         children: [
-            (0, a.jsxs)(r.hzk, {
-                className: o.content,
+            (0, n.jsxs)(a.hzk, {
+                className: i.content,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: o.header,
+                    (0, n.jsxs)('div', {
+                        className: i.header,
                         children: [
-                            (0, a.jsx)(r.P4T, {
+                            (0, n.jsx)(a.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
-                                className: (function (A) {
-                                    switch (A) {
+                                className: (function (e) {
+                                    switch (e) {
                                         case 'danger':
-                                            return o.dangerIcon;
+                                            return i.dangerIcon;
                                         case 'warning':
-                                            return o.warningIcon;
+                                            return i.warningIcon;
                                     }
-                                })(g)
+                                })(f)
                             }),
-                            (0, a.jsx)(r.LZC, {
+                            (0, n.jsx)(a.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, a.jsx)(r.X6q, {
+                            (0, n.jsx)(a.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: C
+                                children: h
                             })
                         ]
                     }),
-                    (0, a.jsx)(r.LZC, { size: 12 }),
-                    (0, a.jsx)(r.Text, {
+                    (0, n.jsx)(a.LZC, { size: 12 }),
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        className: o.__invalid_body,
+                        className: i.__invalid_body,
                         children: s
                     })
                 ]
             }),
-            (0, a.jsxs)(r.mzw, {
+            (0, n.jsxs)(a.mzw, {
                 children: [
-                    (0, a.jsx)(r.zxk, {
-                        color: r.zxk.Colors.BRAND,
-                        onClick: f,
-                        submitting: m,
-                        children: d
+                    (0, n.jsx)(a.zxk, {
+                        color: a.zxk.Colors.BRAND,
+                        onClick: m,
+                        submitting: g,
+                        children: c
                     }),
-                    (0, a.jsx)(r.LZC, {
+                    (0, n.jsx)(a.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
-                    null != c &&
-                        (0, a.jsx)(r.zxk, {
-                            color: r.zxk.Colors.PRIMARY,
-                            look: r.zxk.Looks.OUTLINED,
-                            onClick: t,
-                            children: c
+                    null != d &&
+                        (0, n.jsx)(a.zxk, {
+                            color: a.zxk.Colors.PRIMARY,
+                            look: a.zxk.Looks.OUTLINED,
+                            onClick: r,
+                            children: d
                         })
                 ]
             })

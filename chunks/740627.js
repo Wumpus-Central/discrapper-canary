@@ -15,9 +15,9 @@
         correctGrammaticalCase: function (e, t) {
             return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2];
         },
-        translate: function (e, n, i) {
-            var r = t.words[i];
-            return 1 === i.length ? (n ? r[0] : r[1]) : e + ' ' + t.correctGrammaticalCase(e, r);
+        translate: function (e, n, r) {
+            var i = t.words[r];
+            return 1 === r.length ? (n ? i[0] : i[1]) : e + ' ' + t.correctGrammaticalCase(e, i);
         }
     };
     return e.defineLocale('me', {

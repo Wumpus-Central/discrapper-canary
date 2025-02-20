@@ -1,19 +1,19 @@
 n.d(t, {
-    Nd: () => a,
-    bk: () => r,
-    d3: () => s,
-    oP: () => o
+    Nd: () => o,
+    bk: () => i,
+    d3: () => a,
+    oP: () => s
 });
-var i = n(246364);
-function r(e) {
-    return e === i.wB.APPROVED || e === i.wB.REJECTED;
-}
-function a(e) {
-    return e === i.wB.SUBMITTED;
-}
-function s(e) {
-    return e.applicationStatus === i.wB.APPROVED && null != e.lastSeen;
+var r = n(246364);
+function i(e) {
+    return e === r.wB.APPROVED || e === r.wB.REJECTED;
 }
 function o(e) {
-    return r(e.applicationStatus) && null == e.lastSeen;
+    return e === r.wB.SUBMITTED;
+}
+function a(e) {
+    return e.applicationStatus === r.wB.APPROVED && null != e.lastSeen;
+}
+function s(e) {
+    return i(e.applicationStatus) && null == e.lastSeen;
 }

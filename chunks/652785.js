@@ -1,50 +1,50 @@
 n.d(t, {
-    HG: () => m,
-    Iv: () => u,
-    XN: () => h
+    HG: () => h,
+    Iv: () => d,
+    XN: () => p
 });
-var i = n(704215),
-    l = n(823385),
-    r = n(327689),
-    a = n(421176),
-    s = n(456065),
-    o = n(683743),
-    d = n(823379),
-    c = n(981631);
-let u = 'lastHiddenChannelNotice',
-    h = [
+var r = n(704215),
+    i = n(823385),
+    l = n(327689),
+    o = n(421176),
+    a = n(456065),
+    s = n(683743),
+    c = n(823379),
+    u = n(981631);
+let d = 'lastHiddenChannelNotice',
+    p = [
         {
-            type: c.vID.CLAN_ADMIN_UPSELL,
-            dismissibleContentType: i.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
+            type: u.vID.CLAN_ADMIN_UPSELL,
+            dismissibleContentType: r.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL
         },
         {
-            type: c.vID.GUILD_BOOSTING,
-            store: a.Z,
-            dismissibleContentType: i.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
-        },
-        {
-            type: c.vID.GUILD_BANNER,
-            store: r.Z,
-            dismissibleContentType: i.z.CHANNEL_NOTICE_GUILD_BANNER
-        },
-        {
-            type: c.vID.INVITE,
+            type: u.vID.GUILD_BOOSTING,
             store: o.Z,
-            dismissibleContentType: i.z.CHANNEL_NOTICE_INVITE
+            dismissibleContentType: r.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
         },
         {
-            type: c.vID.HUB_LINK,
-            store: s.Z,
-            dismissibleContentType: i.z.CHANNEL_NOTICE_HUBLINK
-        },
-        {
-            type: c.vID.QUICKSWITCHER,
+            type: u.vID.GUILD_BANNER,
             store: l.Z,
-            dismissibleContentType: i.z.CHANNEL_NOTICE_QUICKSWITCHER
+            dismissibleContentType: r.z.CHANNEL_NOTICE_GUILD_BANNER
         },
         {
-            type: c.vID.LINKED_ROLES_ADMIN,
-            dismissibleContentType: i.z.LINKED_ROLE_ADMIN_GUILD
+            type: u.vID.INVITE,
+            store: s.Z,
+            dismissibleContentType: r.z.CHANNEL_NOTICE_INVITE
+        },
+        {
+            type: u.vID.HUB_LINK,
+            store: a.Z,
+            dismissibleContentType: r.z.CHANNEL_NOTICE_HUBLINK
+        },
+        {
+            type: u.vID.QUICKSWITCHER,
+            store: i.Z,
+            dismissibleContentType: r.z.CHANNEL_NOTICE_QUICKSWITCHER
+        },
+        {
+            type: u.vID.LINKED_ROLES_ADMIN,
+            dismissibleContentType: r.z.LINKED_ROLE_ADMIN_GUILD
         }
     ],
-    m = h.map((e) => e.store).filter(d.lm);
+    h = p.map((e) => e.store).filter(c.lm);

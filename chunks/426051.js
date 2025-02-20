@@ -1,69 +1,69 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    r = n(286379),
-    a = n(481060),
-    s = n(797614),
-    o = n(359110),
-    d = n(6025),
-    c = n(433355),
-    u = n(26373),
-    h = n(486622),
-    m = n(376191),
-    p = n(86203),
-    g = n(388032),
-    _ = n(724776);
-function f(e) {
-    let { active: t, user: n, channel: f } = e,
-        E = (0, u.V)(),
-        I = l.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: r.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+n.d(t, { Z: () => b });
+var r = n(200651),
+    i = n(192379),
+    l = n(286379),
+    o = n(481060),
+    a = n(797614),
+    s = n(359110),
+    c = n(6025),
+    u = n(433355),
+    d = n(26373),
+    p = n(486622),
+    h = n(376191),
+    g = n(86203),
+    f = n(388032),
+    m = n(108402);
+function b(e) {
+    let { active: t, user: n, channel: b } = e,
+        _ = (0, d.V)(),
+        E = i.useCallback(() => {
+            (0, o.showToast)((0, o.createToast)(f.NW.string(f.t.pIQ3h4), o.ToastType.FAILURE)), a.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
-        C = l.useCallback(() => {
-            d.Z.closeChannelSidebar(c.uZ);
+        O = i.useCallback(() => {
+            c.Z.closeChannelSidebar(u.uZ);
         }, []),
-        N = l.useCallback(() => {
-            d.Z.closeChannelSidebar(c.uZ), E && (0, o.Kh)(f.id);
-        }, [f.id, E]),
+        N = i.useCallback(() => {
+            c.Z.closeChannelSidebar(u.uZ), _ && (0, s.Kh)(b.id);
+        }, [b.id, _]),
         {
             acceptMessageRequest: v,
-            isAcceptLoading: T,
-            isUserProfileLoading: S,
-            isOptimisticAccepted: A
-        } = (0, h.m)({
+            isAcceptLoading: y,
+            isUserProfileLoading: I,
+            isOptimisticAccepted: C
+        } = (0, p.m)({
             user: n,
             onAcceptSuccess: N,
-            onRejectSuccess: C,
-            onError: I
+            onRejectSuccess: O,
+            onError: E
         }),
-        Z = T || S,
-        x = Z || A;
-    return (0, i.jsxs)('div', {
-        className: _.container,
+        S = y || I,
+        T = S || C;
+    return (0, r.jsxs)('div', {
+        className: m.container,
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, r.jsx)(h.Z, {
                 otherUser: n,
-                channel: f,
+                channel: b,
                 active: t
             }),
-            (0, i.jsxs)('div', {
-                className: _.actions,
+            (0, r.jsxs)('div', {
+                className: m.actions,
                 children: [
-                    (0, i.jsx)(a.zxk, {
-                        className: _.button,
-                        color: a.Ttl.PRIMARY,
-                        size: a.zxk.Sizes.SMALL,
+                    (0, r.jsx)(o.zxk, {
+                        className: m.button,
+                        color: o.Ttl.PRIMARY,
+                        size: o.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            v(f.id), e.stopPropagation();
+                            v(b.id), e.stopPropagation();
                         },
-                        disabled: x,
-                        submitting: Z,
-                        children: g.intl.string(g.t.vicfl5)
+                        disabled: T,
+                        submitting: S,
+                        children: f.NW.string(f.t.vicfl5)
                     }),
-                    (0, i.jsx)(p.Z, {
-                        className: _.button,
-                        channel: f,
-                        buttonSize: a.zxk.Sizes.SMALL
+                    (0, r.jsx)(g.Z, {
+                        className: m.button,
+                        channel: b,
+                        buttonSize: o.zxk.Sizes.SMALL
                     })
                 ]
             })

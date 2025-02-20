@@ -3,115 +3,115 @@ n.d(t, {
     Ji: () => m,
     KU: () => h,
     PO: () => d,
-    R$: () => _,
-    i$: () => p,
+    R$: () => p,
+    i$: () => _,
     q9: () => f
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(911969),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(911969),
     l = n(937615),
-    u = n(388032),
-    c = n(778168);
+    c = n(388032),
+    u = n(717711);
 function d(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)('div', {
-        className: a()(c.table, n),
+    return (0, r.jsx)('div', {
+        className: o()(u.table, n),
         children: t
     });
 }
 function f(e) {
     let { children: t } = e;
-    return (0, i.jsx)('div', {
-        className: c.header,
+    return (0, r.jsx)('div', {
+        className: u.header,
         children: t
     });
 }
-function _(e) {
-    let { label: t, value: n, className: r } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(c.row, r),
+function p(e) {
+    let { label: t, value: n, className: i } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(u.row, i),
         children: [
-            (0, i.jsx)('div', {
-                className: c.rowLabel,
+            (0, r.jsx)('div', {
+                className: u.rowLabel,
                 children: t
             }),
-            (0, i.jsx)('div', {
-                className: c.rowAmount,
+            (0, r.jsx)('div', {
+                className: u.rowAmount,
                 children: n
             })
         ]
     });
 }
-function p(e) {
-    let { label: t, value: n, discounts: r, originalAmount: a, interval: d, currency: f, className: p, intervalCount: h, inTrialPeriod: m } = e,
-        g = (e) => (null != r ? r.find((t) => t.type === e) : null),
-        E = g(o.eW.SUBSCRIPTION_PLAN),
-        v = g(o.eW.ENTITLEMENT),
-        y = null != E ? Math.floor((E.amount / a) * 100) : null,
-        I = (0, l.T4)(a, f);
-    return (0, i.jsxs)(i.Fragment, {
+function _(e) {
+    let { label: t, value: n, discounts: i, originalAmount: o, interval: d, currency: f, className: _, intervalCount: h, inTrialPeriod: m } = e,
+        g = (e) => (null != i ? i.find((t) => t.type === e) : null),
+        E = g(s.eW.SUBSCRIPTION_PLAN),
+        v = g(s.eW.ENTITLEMENT),
+        b = null != E ? Math.floor((E.amount / o) * 100) : null,
+        y = (0, l.T4)(o, f);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(_, {
+            (0, r.jsx)(p, {
                 label: t,
-                value: (0, i.jsxs)(i.Fragment, {
+                value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        m ? u.intl.formatToPlainString(u.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
-                        null != y
-                            ? (0, i.jsxs)('div', {
-                                  className: c.rowPercentDiscount,
-                                  children: ['-', y, '%']
+                        m ? c.NW.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
+                        null != b
+                            ? (0, r.jsxs)('div', {
+                                  className: u.rowPercentDiscount,
+                                  children: ['-', b, '%']
                               })
                             : null
                     ]
                 }),
-                className: p
+                className: _
             }),
             m &&
-                (0, i.jsx)(s.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: 'text-md/medium',
-                    className: c.trialEndPrice,
-                    children: u.intl.format(u.t.v9QeOD, { price: I })
+                    className: u.trialEndPrice,
+                    children: c.NW.format(c.t.v9QeOD, { price: y })
                 }),
-            null != y
-                ? (0, i.jsxs)('div', {
-                      className: c.rowDiscountOriginalPrice,
-                      children: ['(', null != d && null != h ? (0, l.og)(I, d, h) : I, ')']
+            null != b
+                ? (0, r.jsxs)('div', {
+                      className: u.rowDiscountOriginalPrice,
+                      children: ['(', null != d && null != h ? (0, l.og)(y, d, h) : y, ')']
                   })
                 : null,
             null != v
-                ? (0, i.jsx)('div', {
-                      className: c.entitlementDiscountRow,
-                      children: u.intl.string(u.t.A7Hpfn)
+                ? (0, r.jsx)('div', {
+                      className: u.entitlementDiscountRow,
+                      children: c.NW.string(c.t.A7Hpfn)
                   })
                 : null
         ]
     });
 }
 function h(e) {
-    let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: r = !1 } = e;
-    return (0, i.jsx)('div', {
-        className: a()(c.divider, {
-            [c.dividerExtended]: t,
-            [c.negativeMarginTop]: n,
-            [c.negativeMarginBottom]: r
+    let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: i = !1 } = e;
+    return (0, r.jsx)('div', {
+        className: o()(u.divider, {
+            [u.dividerExtended]: t,
+            [u.negativeMarginTop]: n,
+            [u.negativeMarginBottom]: i
         })
     });
 }
 function m(e) {
-    let { label: t, value: n, className: r } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(c.totalRow, r),
+    let { label: t, value: n, className: i } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(u.totalRow, i),
         children: [
-            (0, i.jsx)('div', {
-                className: c.totalLabel,
+            (0, r.jsx)('div', {
+                className: u.totalLabel,
                 children: t
             }),
-            (0, i.jsx)('div', {
-                className: c.totalAmount,
+            (0, r.jsx)('div', {
+                className: u.totalAmount,
                 children: n
             })
         ]
@@ -119,8 +119,8 @@ function m(e) {
 }
 function g(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)('div', {
-        className: a()(c.finePrint, n),
+    return (0, r.jsx)('div', {
+        className: o()(u.finePrint, n),
         children: t
     });
 }

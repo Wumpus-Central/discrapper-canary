@@ -1,26 +1,26 @@
-n.r(t), n.d(t, { default: () => u }), n(47120), n(757143);
-var i = n(147519),
-    r = n(392711),
-    a = n.n(r),
-    s = n(462176);
-i.Z.registerLanguage('ansi', s.Z);
-let o = /<[^>]*>[^>]*(html\\`)/g,
+n.r(t), n.d(t, { default: () => c }), n(47120), n(301563), n(757143);
+var r = n(147519),
+    i = n(392711),
+    o = n.n(i),
+    a = n(462176);
+r.Z.registerLanguage('ansi', a.Z);
+let s = /<[^>]*>[^>]*(html\\`)/g,
     l = new Set(['html', 'xml']),
-    u = {
+    c = {
         highlight(e, t, n) {
             if (!d(t, e)) return null;
             Date.now();
-            let r = i.Z.highlight(t, {
+            let i = r.Z.highlight(t, {
                 ignoreIllegals: n,
                 language: e
             });
-            return Date.now(), r;
+            return Date.now(), i;
         },
-        hasLanguage: (e) => null != i.Z.getLanguage(e)
+        hasLanguage: (e) => null != r.Z.getLanguage(e)
     },
-    c = a().repeat('/', 15);
+    u = o().repeat('/', 15);
 function d(e, t) {
-    if (e.indexOf(c) >= 0) return !1;
+    if (e.indexOf(u) >= 0) return !1;
     let n = 0;
     for (let t of e.split('\n')) {
         if (t.length > 1000) return !1;
@@ -29,9 +29,9 @@ function d(e, t) {
         if (null != e && (n += e.length) > 30) return !1;
     }
     if (l.has(t)) {
-        var i;
-        let t = e.replace(/\s*/g, '').match(o);
-        if ((null !== (i = null == t ? void 0 : t.length) && void 0 !== i ? i : 0) > 10) return !1;
+        var r;
+        let t = e.replace(/\s*/g, '').match(s);
+        if ((null !== (r = null == t ? void 0 : t.length) && void 0 !== r ? r : 0) > 10) return !1;
     }
     return !0;
 }

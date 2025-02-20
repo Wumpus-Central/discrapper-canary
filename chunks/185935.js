@@ -1,5 +1,5 @@
-n.d(t, { Z: () => l });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_participants_panel',
     label: 'Participants Panel',
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    return i.useExperiment(e);
+function i(e) {
+    return r.useExperiment(e);
 }

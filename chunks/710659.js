@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = {
+n.d(t, { Z: () => r });
+let r = {
     dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     tokens: {

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => l });
-var i = n(81825),
-    r = n(74538),
-    a = n(659181),
-    s = n(981631);
-function o(e, t, n) {
+var r = n(81825),
+    i = n(74538),
+    o = n(659181),
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,9 +16,9 @@ function o(e, t, n) {
         e
     );
 }
-class l extends i.Z {
+class l extends r.Z {
     static createFromServer(e) {
-        var t, n, i;
+        var t, n, r;
         return new l({
             id: e.id,
             skuId: e.sku_id,
@@ -37,22 +37,22 @@ class l extends i.Z {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? a.Z.createFromServer(e.sku) : null,
-            sourceType: null !== (i = e.source_type) && void 0 !== i ? i : null
+            sku: null != e.sku ? o.Z.createFromServer(e.sku) : null,
+            sourceType: null !== (r = e.source_type) && void 0 !== r ? r : null
         });
     }
     get isGiftable() {
-        return this.type === s.qc2.USER_GIFT && null == this.gifterId;
+        return this.type === a.qc2.USER_GIFT && null == this.gifterId;
     }
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === s.qc2.PREMIUM_SUBSCRIPTION) {
+        if (this.type === a.qc2.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
-            if ((null != n && !n.premium) || !r.ZP.canInstallPremiumApplications(e)) return !1;
+            if ((null != n && !n.premium) || !i.ZP.canInstallPremiumApplications(e)) return !1;
         }
-        let i = new Date();
-        if ((null != this.startsAt && i < this.startsAt) || (null != this.endsAt && i >= this.endsAt)) return !1;
+        let r = new Date();
+        if ((null != this.startsAt && r < this.startsAt) || (null != this.endsAt && r >= this.endsAt)) return !1;
         if (null != n) {
             if (0 === this.branches.length) {
                 if (this.applicationId !== n) return !1;
@@ -61,6 +61,6 @@ class l extends i.Z {
         return !0;
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'skuId', void 0), o(this, 'applicationId', void 0), o(this, 'userId', void 0), o(this, 'gifterId', void 0), o(this, 'type', void 0), o(this, 'branches', void 0), o(this, 'startsAt', void 0), o(this, 'endsAt', void 0), o(this, 'subscriptionId', void 0), o(this, 'subscriptionPlanId', void 0), o(this, 'parentId', void 0), o(this, 'consumed', void 0), o(this, 'giftCodeBatchId', void 0), o(this, 'giftStyle', void 0), o(this, 'guildId', void 0), o(this, 'deleted', void 0), o(this, 'sourceType', void 0), (this.id = e.id), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.userId = e.userId), (this.gifterId = e.gifterId), (this.type = e.type), (this.branches = e.branches), (this.startsAt = e.startsAt), (this.endsAt = e.endsAt), (this.subscriptionId = e.subscriptionId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.parentId = e.parentId), (this.consumed = e.consumed), (this.giftCodeBatchId = e.giftCodeBatchId), (this.giftStyle = e.giftStyle), (this.guildId = e.guildId), (this.deleted = e.deleted), (this.sourceType = e.sourceType);
+        super(), s(this, 'id', void 0), s(this, 'skuId', void 0), s(this, 'applicationId', void 0), s(this, 'userId', void 0), s(this, 'gifterId', void 0), s(this, 'type', void 0), s(this, 'branches', void 0), s(this, 'startsAt', void 0), s(this, 'endsAt', void 0), s(this, 'subscriptionId', void 0), s(this, 'subscriptionPlanId', void 0), s(this, 'parentId', void 0), s(this, 'consumed', void 0), s(this, 'giftCodeBatchId', void 0), s(this, 'giftStyle', void 0), s(this, 'guildId', void 0), s(this, 'deleted', void 0), s(this, 'sourceType', void 0), (this.id = e.id), (this.skuId = e.skuId), (this.applicationId = e.applicationId), (this.userId = e.userId), (this.gifterId = e.gifterId), (this.type = e.type), (this.branches = e.branches), (this.startsAt = e.startsAt), (this.endsAt = e.endsAt), (this.subscriptionId = e.subscriptionId), (this.subscriptionPlanId = e.subscriptionPlanId), (this.parentId = e.parentId), (this.consumed = e.consumed), (this.giftCodeBatchId = e.giftCodeBatchId), (this.giftStyle = e.giftStyle), (this.guildId = e.guildId), (this.deleted = e.deleted), (this.sourceType = e.sourceType);
     }
 }

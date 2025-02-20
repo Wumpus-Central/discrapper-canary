@@ -1,29 +1,29 @@
-i.d(e, { Z: () => x });
-var t = i(200651),
-    a = i(192379),
-    r = i(793030),
-    o = i(442837),
-    s = i(179360),
-    c = i(899667),
-    l = i(659679),
-    d = i(388032),
-    u = i(148976);
-function x(n) {
-    let { guildId: e } = n,
-        i = (0, o.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(e), [e]);
-    return (a.useEffect(() => {
-        (0, s.C0)(e);
-    }, [e]),
-    null == i)
+t.d(n, { Z: () => x });
+var i = t(200651),
+    r = t(192379),
+    a = t(793030),
+    o = t(442837),
+    s = t(179360),
+    c = t(899667),
+    l = t(659679),
+    d = t(388032),
+    u = t(699908);
+function x(e) {
+    let { guildId: n } = e,
+        t = (0, o.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(n), [n]);
+    return (r.useEffect(() => {
+        (0, s.C0)(n);
+    }, [n]),
+    null == t)
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: u.container,
               children: [
-                  (0, t.jsx)(r.X6, {
+                  (0, i.jsx)(a.X6, {
                       variant: 'eyebrow',
-                      children: d.intl.string(d.t.yM9Krq)
+                      children: d.NW.string(d.t.yM9Krq)
                   }),
-                  i.map((n, e) => (0, t.jsx)(l.Z, { boost: n }, e))
+                  t.map((e, n) => (0, i.jsx)(l.Z, { boost: e }, n))
               ]
           });
 }

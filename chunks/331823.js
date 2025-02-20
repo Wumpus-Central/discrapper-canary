@@ -1,23 +1,23 @@
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(329022),
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(329022),
     l = n(829307),
-    u = n(820611),
-    c = n(877837),
+    c = n(820611),
+    u = n(877837),
     d = function (e) {
         var t = e.onChange,
             n = e.onSwatchHover,
-            r = e.hex,
-            a = e.colors,
+            i = e.hex,
+            o = e.colors,
             d = e.width,
             f = e.triangle,
-            _ = e.styles,
-            p = void 0 === _ ? {} : _,
+            p = e.styles,
+            _ = void 0 === p ? {} : p,
             h = e.className,
             m = void 0 === h ? '' : h,
-            g = (0, s.default)(
+            g = (0, a.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -108,7 +108,7 @@ var i = n(192379),
                             }
                         }
                     },
-                    p
+                    _
                 ),
                 {
                     'hide-triangle': 'hide' === f,
@@ -117,7 +117,7 @@ var i = n(192379),
                 }
             ),
             E = function (e, n) {
-                u.FX(e) &&
+                c.FX(e) &&
                     t(
                         {
                             hex: e,
@@ -126,19 +126,19 @@ var i = n(192379),
                         n
                     );
             };
-        return i.createElement(
+        return r.createElement(
             'div',
             {
                 style: g.card,
                 className: 'twitter-picker ' + m
             },
-            i.createElement('div', { style: g.triangleShadow }),
-            i.createElement('div', { style: g.triangle }),
-            i.createElement(
+            r.createElement('div', { style: g.triangleShadow }),
+            r.createElement('div', { style: g.triangle }),
+            r.createElement(
                 'div',
                 { style: g.body },
-                (0, o.Z)(a, function (e, t) {
-                    return i.createElement(c.m4, {
+                (0, s.Z)(o, function (e, t) {
+                    return r.createElement(u.m4, {
                         key: t,
                         color: e,
                         hex: e,
@@ -148,22 +148,22 @@ var i = n(192379),
                         focusStyle: { boxShadow: '0 0 4px ' + e }
                     });
                 }),
-                i.createElement('div', { style: g.hash }, '#'),
-                i.createElement(c.Vm, {
+                r.createElement('div', { style: g.hash }, '#'),
+                r.createElement(u.Vm, {
                     label: null,
                     style: { input: g.input },
-                    value: r.replace('#', ''),
+                    value: i.replace('#', ''),
                     onChange: E
                 }),
-                i.createElement('div', { style: g.clear })
+                r.createElement('div', { style: g.clear })
             )
         );
     };
 (d.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    triangle: a().oneOf(['hide', 'top-left', 'top-right']),
-    colors: a().arrayOf(a().string),
-    styles: a().object
+    width: o().oneOfType([o().string, o().number]),
+    triangle: o().oneOf(['hide', 'top-left', 'top-right']),
+    colors: o().arrayOf(o().string),
+    styles: o().object
 }),
     (d.defaultProps = {
         width: 276,
@@ -171,4 +171,4 @@ var i = n(192379),
         triangle: 'top-left',
         styles: {}
     }),
-    (0, c.t1)(d);
+    (0, u.t1)(d);

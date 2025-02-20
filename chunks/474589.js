@@ -1,11 +1,11 @@
 e.exports = function (e) {
     var t = !0,
         n = !0,
-        i = !1;
+        r = !1;
     if ('function' == typeof e) {
         try {
-            e.call('f', function (e, n, i) {
-                'object' != typeof i && (t = !1);
+            e.call('f', function (e, n, r) {
+                'object' != typeof r && (t = !1);
             }),
                 e.call(
                     [null],
@@ -15,9 +15,9 @@ e.exports = function (e) {
                     'x'
                 );
         } catch (e) {
-            i = !0;
+            r = !0;
         }
-        return !i && t && n;
+        return !r && t && n;
     }
     return !1;
 };

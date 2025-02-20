@@ -1,19 +1,19 @@
 n.d(t, {
-    F: () => c,
+    F: () => u,
     s: () => l
 });
-var i = n(192379),
-    r = n(584171),
-    a = n(5907);
-let { useSyncExternalStoreWithSelector: s } = r,
-    o = (e) => e;
-function l(e, t = o, n) {
-    let r = s(e.subscribe, e.getState, e.getInitialState, t, n);
-    return i.useDebugValue(r), r;
+var r = n(192379),
+    i = n(584171),
+    o = n(5907);
+let { useSyncExternalStoreWithSelector: a } = i,
+    s = (e) => e;
+function l(e, t = s, n) {
+    let i = a(e.subscribe, e.getState, e.getInitialState, t, n);
+    return r.useDebugValue(i), i;
 }
-let u = (e, t) => {
-        let n = (0, a.M)(e),
-            i = (e, i = t) => l(n, e, i);
-        return Object.assign(i, n), i;
+let c = (e, t) => {
+        let n = (0, o.M)(e),
+            r = (e, r = t) => l(n, e, r);
+        return Object.assign(r, n), r;
     },
-    c = (e, t) => (e ? u(e, t) : u);
+    u = (e, t) => (e ? c(e, t) : c);

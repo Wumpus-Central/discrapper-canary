@@ -1,47 +1,47 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(499033),
-    r = n(388032),
-    s = n(525882);
-function o(e) {
-    let { Icon: t, header: n, tip: o, disableStars: c } = e;
-    return (0, i.jsxs)('div', {
-        className: s.container,
+    o = n(388032),
+    l = n(108457);
+function s(e) {
+    let { Icon: t, header: n, tip: s, disableStars: c } = e;
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: s.iconContainer,
+            (0, r.jsxs)('div', {
+                className: l.iconContainer,
                 children: [
-                    (0, i.jsx)(t, {
+                    (0, r.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        className: s.icon,
+                        className: l.icon,
                         width: 36,
                         height: 36
                     }),
-                    c ? null : (0, i.jsx)(a.Z, { className: s.stars })
+                    c ? null : (0, r.jsx)(a.Z, { className: l.stars })
                 ]
             }),
-            (0, i.jsx)(l.X6q, {
-                className: s.header,
+            (0, r.jsx)(i.X6q, {
+                className: l.header,
                 variant: 'heading-xl/semibold',
                 children: n
             }),
-            (0, i.jsxs)(l.Text, {
+            (0, r.jsxs)(i.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 children: [
                     c
                         ? null
-                        : (0, i.jsxs)(l.Text, {
+                        : (0, r.jsxs)(i.Text, {
                               tag: 'span',
-                              className: s.protip,
+                              className: l.protip,
                               variant: 'text-xs/bold',
                               color: 'text-positive',
-                              children: [r.intl.string(r.t['8tvIiI']), ':', ' ']
+                              children: [o.NW.string(o.t['8tvIiI']), ':', ' ']
                           }),
-                    o
+                    s
                 ]
             })
         ]

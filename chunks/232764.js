@@ -4,124 +4,124 @@ n.d(t, {
     g6: () => u,
     j7: () => o
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(983135),
-    s = n(388032),
-    a = n(482973);
+var i = n(481060),
+    s = n(983135),
+    a = n(388032),
+    l = n(494371);
 function o() {
-    return (0, i.jsxs)('div', {
-        className: a.container,
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: a.stepHeader,
-                children: s.intl.format(s.t.tCQ3Hx, { number: 1 })
+                className: l.stepHeader,
+                children: a.NW.format(a.t.tCQ3Hx, { number: 1 })
             }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: a.header,
-                children: s.intl.string(s.t.e6spZm)
+                className: l.header,
+                children: a.NW.string(a.t.e6spZm)
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: s.intl.string(s.t['8ega19'])
+                children: a.NW.string(a.t['8ega19'])
             }),
-            (0, i.jsx)(r.zxk, {
-                className: a.button,
-                onClick: () => (0, l.Nb)('Safety Check'),
-                children: s.intl.string(s.t.TbzK39)
+            (0, r.jsx)(i.zxk, {
+                className: l.button,
+                onClick: () => (0, s.Nb)('Safety Check'),
+                children: a.NW.string(a.t.TbzK39)
             })
         ]
     });
 }
 function c() {
-    return (0, i.jsxs)('div', {
-        className: a.container,
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: a.stepHeader,
-                children: s.intl.format(s.t.tCQ3Hx, { number: 2 })
+                className: l.stepHeader,
+                children: a.NW.format(a.t.tCQ3Hx, { number: 2 })
             }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: a.header,
-                children: s.intl.string(s.t.nRE3tb)
+                className: l.header,
+                children: a.NW.string(a.t.nRE3tb)
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: s.intl.string(s.t.y08PCA)
+                children: a.NW.string(a.t.y08PCA)
             }),
-            (0, i.jsx)(r.zxk, {
-                className: a.button,
-                onClick: () => (0, l.Nb)('Default Channels'),
-                children: s.intl.string(s.t.TbzK39)
+            (0, r.jsx)(i.zxk, {
+                className: l.button,
+                onClick: () => (0, s.Nb)('Default Channels'),
+                children: a.NW.string(a.t.TbzK39)
             })
         ]
     });
 }
 function d() {
-    return (0, i.jsxs)('div', {
-        className: a.container,
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: a.stepHeader,
-                children: s.intl.format(s.t.tCQ3Hx, { number: 3 })
+                className: l.stepHeader,
+                children: a.NW.format(a.t.tCQ3Hx, { number: 3 })
             }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: a.header,
-                children: s.intl.string(s.t.VkaI6u)
+                className: l.header,
+                children: a.NW.string(a.t.VkaI6u)
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: s.intl.string(s.t.TVGk1d)
+                children: a.NW.string(a.t.TVGk1d)
             }),
-            (0, i.jsx)(r.zxk, {
-                className: a.button,
-                onClick: () => (0, l.Nb)('Customization Questions'),
-                children: s.intl.string(s.t.TbzK39)
+            (0, r.jsx)(i.zxk, {
+                className: l.button,
+                onClick: () => (0, s.Nb)('Customization Questions'),
+                children: a.NW.string(a.t.TbzK39)
             })
         ]
     });
 }
 function u() {
-    return (0, i.jsxs)('div', {
-        className: a.container,
+    return (0, r.jsxs)('div', {
+        className: l.container,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: a.stepHeader,
-                children: s.intl.format(s.t.tCQ3Hx, { number: 4 })
+                className: l.stepHeader,
+                children: a.NW.format(a.t.tCQ3Hx, { number: 4 })
             }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: a.header,
-                children: s.intl.string(s.t['3SM68P'])
+                className: l.header,
+                children: a.NW.string(a.t['3SM68P'])
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: s.intl.string(s.t.eamP29)
+                children: a.NW.string(a.t.eamP29)
             }),
-            (0, i.jsx)(r.zxk, {
-                className: a.button,
-                onClick: () => (0, l.Nb)('Home Settings'),
-                children: s.intl.string(s.t.TbzK39)
+            (0, r.jsx)(i.zxk, {
+                className: l.button,
+                onClick: () => (0, s.Nb)('Home Settings'),
+                children: a.NW.string(a.t.TbzK39)
             })
         ]
     });

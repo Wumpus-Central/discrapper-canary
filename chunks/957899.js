@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(47120);
-var i = n(147913),
-    r = n(604375),
-    a = n(268004);
-function s(e, t, n) {
+var r = n(147913),
+    i = n(604375),
+    o = n(268004);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,23 @@ function s(e, t, n) {
         e
     );
 }
-class o extends i.Z {
+class s extends r.Z {
     handleVoiceChannelSelect() {
-        a.M.trigger();
+        o.M.trigger();
     }
     handleCallCreate() {
-        a.M.trigger();
+        o.M.trigger();
     }
     handleUserSettingsModalOpen() {
-        r.X.trigger();
+        i.X.trigger();
     }
     constructor(...e) {
         super(...e),
-            s(this, 'actions', {
+            a(this, 'actions', {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 CALL_CREATE: this.handleCallCreate,
                 USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
             });
     }
 }
-let l = new o();
+let l = new s();

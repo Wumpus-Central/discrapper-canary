@@ -1,19 +1,19 @@
-n.d(e, { Z: () => c });
-var a = n(200651);
-n(192379);
-var i = n(481060),
-    o = n(239091),
-    l = n(765250),
-    r = n(388032);
-function c(t, e) {
-    return (0, a.jsx)(
-        i.S89,
+r.d(t, { Z: () => l });
+var n = r(200651);
+r(192379);
+var o = r(481060),
+    a = r(239091),
+    c = r(765250),
+    i = r(388032);
+function l(e, t) {
+    return (0, n.jsx)(
+        o.S89,
         {
-            label: r.intl.string(r.t.XQQQFB),
-            checked: e,
+            label: i.NW.string(i.t.XQQQFB),
+            checked: t,
             id: 'widget-layout-type',
             action: () => {
-                (0, l.zG)(t, { horizontal: !e }), (0, o.Zy)();
+                (0, c.zG)(e, { horizontal: !t }), (0, a.Zy)();
             }
         },
         'widget-layout-type'

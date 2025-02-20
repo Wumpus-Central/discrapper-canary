@@ -1,12 +1,12 @@
 n.d(t, {
     AS: () => a,
-    S4: () => s,
-    X4: () => c
+    S4: () => o,
+    X4: () => u
 }),
     n(47120);
-var l = n(192379),
-    i = n(481060);
-function r(e, t, n) {
+var r = n(192379),
+    l = n(481060);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,11 +46,11 @@ class a {
         this.queuedCompute = !1;
         let t = 0,
             n = 0;
-        for (let l of this.items) {
-            let i = this.listeners.get(l.notification.id);
-            if (null == i) continue;
-            let { offsetHeight: r } = i.element;
-            (i.top !== t || i.height !== r || i.index !== n) && (e = !0), (i.top = t), (i.height = r), (i.index = n), 0 === t && (this.matchHeight !== r && (e = !0), (this.matchHeight = r)), (t += r + 8), n++;
+        for (let r of this.items) {
+            let l = this.listeners.get(r.notification.id);
+            if (null == l) continue;
+            let { offsetHeight: i } = l.element;
+            (l.top !== t || l.height !== i || l.index !== n) && (e = !0), (l.top = t), (l.height = i), (l.index = n), 0 === t && (this.matchHeight !== i && (e = !0), (this.matchHeight = i)), (t += i + 8), n++;
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -68,7 +68,7 @@ class a {
         }
     }
     subscribe(e, t, n) {
-        var l;
+        var r;
         this.listeners.set(e, {
             notificationId: e,
             callback: n,
@@ -77,7 +77,7 @@ class a {
             top: 0,
             index: 0
         }),
-            null === (l = this.resizeObserver) || void 0 === l || l.observe(t),
+            null === (r = this.resizeObserver) || void 0 === r || r.observe(t),
             this.queueCompute();
     }
     unsubscribe(e) {
@@ -89,29 +89,29 @@ class a {
         return this.listeners.get(e);
     }
     constructor(e) {
-        r(this, 'resizeObserver', void 0),
-            r(this, 'listeners', new Map()),
-            r(this, 'queuedCompute', !1),
-            r(this, 'items', []),
-            r(this, 'matchHeight', 0),
-            r(this, 'locked', !0),
-            r(this, 'handleResize', (e) => {
+        i(this, 'resizeObserver', void 0),
+            i(this, 'listeners', new Map()),
+            i(this, 'queuedCompute', !1),
+            i(this, 'items', []),
+            i(this, 'matchHeight', 0),
+            i(this, 'locked', !0),
+            i(this, 'handleResize', (e) => {
                 this.computeLayout();
             }),
             (this.locked = e);
     }
 }
-let s = l.createContext(new a(!0));
-function o(e, t, n) {
+let o = r.createContext(new a(!0));
+function s(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let u = {
+let c = {
     mass: 0.8,
     friction: 25,
     tension: 320
 };
-function c(e, t, n) {
-    let [r, a] = (0, i.q_F)(
+function u(e, t, n) {
+    let [i, a] = (0, l.q_F)(
             () => ({
                 from: {
                     opacity: 0,
@@ -124,62 +124,62 @@ function c(e, t, n) {
             void 0,
             []
         ),
-        c = l.useRef(a),
-        d = l.useContext(s),
-        m = l.useMemo(() => {
+        u = r.useRef(a),
+        d = r.useContext(o),
+        f = r.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
                     ? d.unsubscribe(e)
                     : d.subscribe(e, n, (e) => {
-                          let { locked: n, matchHeight: l, height: i, top: r, index: a } = e,
-                              { current: s } = c,
+                          let { locked: n, matchHeight: r, height: l, top: i, index: a } = e,
+                              { current: o } = u,
                               d = {
                                   opacity: n && a > 4 ? 0 : n ? Math.min(1 - a / 4, 1) : 1,
                                   scale: n ? Math.min(1 - a / 4, 1) : 1,
-                                  transform: o(a, n, r),
+                                  transform: s(a, n, i),
                                   contentOpacity: n && a > 0 ? 0 : 1,
-                                  height: n ? l : i
+                                  height: n ? r : l
                               };
-                          s({
+                          o({
                               from: t
                                   ? void 0
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((n ? l : i) * 1),
+                                        transform: -((n ? r : l) * 1),
                                         contentOpacity: 1,
-                                        height: n ? l : i
+                                        height: n ? r : l
                                     },
                               to: d,
-                              config: u
+                              config: c
                           }),
                               (t = !0);
                       });
             };
         }, [e, d]);
     return (
-        l.useLayoutEffect(() => {
-            if (t === i.pJH.YEETED) {
+        r.useLayoutEffect(() => {
+            if (t === l.pJH.YEETED) {
                 let t = d.getLayoutSpecs(e);
                 if (null == t) {
                     n();
                     return;
                 }
-                c.current({
+                u.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: o(t.index, d.locked, t.top) + (d.locked ? 0 : t.height / 2)
+                        transform: s(t.index, d.locked, t.top) + (d.locked ? 0 : t.height / 2)
                     },
-                    config: u
+                    config: c
                 }),
                     setTimeout(n, 300);
             }
         }, [t, n, e, d]),
         {
-            ref: m,
-            springs: r
+            ref: f,
+            springs: i
         }
     );
 }

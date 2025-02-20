@@ -14,16 +14,16 @@ var r = n(200651),
     g = n(918701),
     f = n(475595),
     x = n(566078),
-    j = n(644646),
-    v = n(114732),
-    N = n(46140),
+    N = n(644646),
+    j = n(114732),
+    v = n(46140),
     _ = n(675654),
     w = n(388032),
-    p = n(100081);
+    p = n(383486);
 function R(e) {
     var a;
-    let { transitionState: n, onClose: o, quest: h, location: g, reward: j } = e,
-        N = t.useRef(null),
+    let { transitionState: n, onClose: o, quest: h, location: g, reward: N } = e,
+        v = t.useRef(null),
         [w, R] = t.useState(null),
         S = t.useRef(new i.qA()),
         y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -48,7 +48,7 @@ function R(e) {
                 environment: S.current
             }),
             (0, r.jsx)('div', {
-                ref: N,
+                ref: v,
                 children: (0, r.jsx)(l.Y0X, {
                     transitionState: n,
                     size: l.CgR.DYNAMIC,
@@ -57,10 +57,10 @@ function R(e) {
                     children: B
                         ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
                         : 'error' === T
-                          ? (0, r.jsx)(v.Z, { onClose: o })
+                          ? (0, r.jsx)(j.Z, { onClose: o })
                           : (0, r.jsx)(k, {
                                 quest: h,
-                                rewardName: j.messages.name,
+                                rewardName: N.messages.name,
                                 backgroundUrl: A.url,
                                 location: g,
                                 onClose: o
@@ -71,7 +71,7 @@ function R(e) {
                 !M &&
                 'claimed' === T &&
                 (0, r.jsx)(u.Z, {
-                    confettiTarget: N.current,
+                    confettiTarget: v.current,
                     confettiCanvas: w,
                     sprites: _.CA,
                     colors: _.Br
@@ -101,13 +101,13 @@ function k(e) {
                         children: [
                             (0, r.jsx)('div', {
                                 className: p.previewContainer,
-                                children: (0, r.jsx)(j.Z, {
+                                children: (0, r.jsx)(N.Z, {
                                     autoplay: !0,
                                     className: d()(p.rewardTile),
                                     learnMoreStyle: null,
                                     quest: a,
                                     questContent: o,
-                                    location: N.dr.INGAME_REWARD_MODAL
+                                    location: v.dr.INGAME_REWARD_MODAL
                                 })
                             }),
                             (0, r.jsx)(l.olH, {
@@ -129,13 +129,13 @@ function k(e) {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
                             className: p.heading,
-                            children: w.intl.string(w.t['0/Yz+f'])
+                            children: w.NW.string(w.t['0/Yz+f'])
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'always-white',
                             className: p.text,
-                            children: w.intl.format(w.t['v1u/zs'], { rewardName: n })
+                            children: w.NW.format(w.t['v1u/zs'], { rewardName: n })
                         })
                     ]
                 })

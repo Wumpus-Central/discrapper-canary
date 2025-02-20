@@ -1,11 +1,11 @@
-n.d(t, { y: () => a });
-var i = n(517334),
-    l = n(592125),
-    r = n(554747);
-function a(e) {
+n.d(t, { y: () => o });
+var r = n(517334),
+    i = n(592125),
+    l = n(554747);
+function o(e) {
     var t;
-    let n = (0, r.eF)(e),
-        a = (0, i.ZP)(e),
-        s = l.Z.getChannel(null === (t = a[0]) || void 0 === t ? void 0 : t.id);
-    return null != n ? n : s;
+    let n = (0, l.eF)(e),
+        o = (0, r.ZP)(e),
+        a = i.Z.getChannel(null === (t = o[0]) || void 0 === t ? void 0 : t.id);
+    return null != n ? n : a;
 }

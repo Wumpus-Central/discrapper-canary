@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
         id: '2024-08_quests_separate_decision_endpoint',
         kind: 'user',
         label: 'Quests separate decision endpoint',
@@ -17,7 +17,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => {
+    i = (e) => {
         let { location: t } = e;
-        return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+        return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
     };

@@ -1,61 +1,61 @@
-t.d(n, { Z: () => d });
-var a = t(200651);
-t(192379);
-var r = t(120356),
-    i = t.n(r),
-    o = t(481060),
-    l = t(511281);
-function d(e) {
-    var { className: n, color: t } = e,
-        r = (function (e, n) {
-            if (null == e) return {};
-            var t,
-                a,
-                r = (function (e, n) {
-                    if (null == e) return {};
-                    var t,
-                        a,
+n.d(e, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    l = n(481060),
+    o = n(511281);
+function u(t) {
+    var { className: e, color: n } = t,
+        r = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                i,
+                r = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        i,
                         r = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (t = i[a]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                        a = Object.keys(t);
+                    for (i = 0; i < a.length; i++) (n = a[i]), e.indexOf(n) >= 0 || (r[n] = t[n]);
                     return r;
-                })(e, n);
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++) (t = i[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                var a = Object.getOwnPropertySymbols(t);
+                for (i = 0; i < a.length; i++) (n = a[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]);
             }
             return r;
-        })(e, ['className', 'color']);
-    return (0, a.jsx)(
-        o.Text,
-        (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    a = Object.keys(t);
+        })(t, ['className', 'color']);
+    return (0, i.jsx)(
+        l.Text,
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    i = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (a = a.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                    (i = i.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                         })
                     )),
-                    a.forEach(function (n) {
-                        var a;
-                        (a = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
-                                      value: a,
+                    i.forEach(function (e) {
+                        var i;
+                        (i = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: i,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[n] = a);
+                                : (t[e] = i);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                className: i()({ [l.text]: null == t }, n),
-                color: t
+                className: a()({ [o.text]: null == n }, e),
+                color: n
             },
             r
         )

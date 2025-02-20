@@ -1,15 +1,15 @@
 n.d(t, {
-    C5: () => s,
-    ZL: () => r,
-    js: () => a
+    C5: () => a,
+    ZL: () => i,
+    js: () => o
 });
-var i = n(981631);
-function r(e) {
-    return (null == e ? void 0 : e.type) === i.Odu.GO_LIVE;
+var r = n(981631);
+function i(e) {
+    return (null == e ? void 0 : e.type) === r.Odu.GO_LIVE;
 }
-function a(e) {
-    return e.type === i.Odu.VIDEO;
+function o(e) {
+    return e.type === r.Odu.VIDEO;
 }
-var s = (function (e) {
+var a = (function (e) {
     return (e.HORIZONTAL = 'horizontal'), (e.VERTICAL = 'vertical'), e;
 })({});

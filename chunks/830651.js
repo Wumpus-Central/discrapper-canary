@@ -1,29 +1,29 @@
-n.d(t, { u: () => c });
-var i = n(964742),
-    r = n(40284),
-    a = n(144459);
-function s(e, t) {
+n.d(t, { u: () => u });
+var r = n(964742),
+    i = n(40284),
+    o = n(144459);
+function a(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
+        var r = Object.getOwnPropertySymbols(e);
         t &&
-            (i = i.filter(function (t) {
+            (r = r.filter(function (t) {
                 return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            n.push.apply(n, i);
+            n.push.apply(n, r);
     }
     return n;
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? s(Object(n), !0).forEach(function (t) {
+            ? a(Object(n), !0).forEach(function (t) {
                   l(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : s(Object(n)).forEach(function (t) {
+              : a(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
@@ -42,7 +42,7 @@ function l(e, t, n) {
         e
     );
 }
-var u = {
+var c = {
     itemType: null,
     item: null,
     sourceId: null,
@@ -51,14 +51,14 @@ var u = {
     didDrop: !1,
     isSourcePublic: null
 };
-function c() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+function u() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = t.payload;
     switch (t.type) {
-        case i.qu:
-            return o(
-                o({}, e),
+        case r.qu:
+            return s(
+                s({}, e),
                 {},
                 {
                     itemType: n.itemType,
@@ -69,16 +69,16 @@ function c() {
                     didDrop: !1
                 }
             );
-        case i.js:
-            return o(o({}, e), {}, { isSourcePublic: !0 });
-        case i.$T:
-            return o(o({}, e), {}, { targetIds: n.targetIds });
-        case r.IS:
+        case r.js:
+            return s(s({}, e), {}, { isSourcePublic: !0 });
+        case r.$T:
+            return s(s({}, e), {}, { targetIds: n.targetIds });
+        case i.IS:
             if (-1 === e.targetIds.indexOf(n.targetId)) return e;
-            return o(o({}, e), {}, { targetIds: (0, a.zu)(e.targetIds, n.targetId) });
-        case i.rp:
-            return o(
-                o({}, e),
+            return s(s({}, e), {}, { targetIds: (0, o.zu)(e.targetIds, n.targetId) });
+        case r.rp:
+            return s(
+                s({}, e),
                 {},
                 {
                     dropResult: n.dropResult,
@@ -86,9 +86,9 @@ function c() {
                     targetIds: []
                 }
             );
-        case i.Bs:
-            return o(
-                o({}, e),
+        case r.Bs:
+            return s(
+                s({}, e),
                 {},
                 {
                     itemType: null,

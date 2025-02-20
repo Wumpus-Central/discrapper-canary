@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s });
-var i = n(442837),
-    r = n(131951),
-    a = n(638457);
-function s() {
-    return (0, i.e7)([r.Z], () => (0, a.Z)(r.Z));
+n.d(t, { Z: () => a });
+var r = n(442837),
+    i = n(131951),
+    o = n(638457);
+function a() {
+    return (0, r.e7)([i.Z], () => (0, o.Z)(i.Z));
 }

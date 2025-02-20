@@ -1,3 +1,3 @@
 n(62037);
-var i = n(387992);
-e.exports = i('Array', 'forEach');
+var r = n(387992);
+e.exports = r('Array', 'forEach');

@@ -1,40 +1,40 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(429551),
-    s = n(520488);
-function o(e) {
+var i = n(481060),
+    o = n(429551),
+    a = n(737208);
+function s(e) {
     let { start: t, end: n } = e,
         {
-            elapsed: o,
+            elapsed: s,
             duration: l,
-            percentage: u
-        } = (0, a.Z)({
+            percentage: c
+        } = (0, o.Z)({
             start: t,
             end: n
         });
-    return (0, i.jsxs)('div', {
-        className: s.container,
+    return (0, r.jsxs)('div', {
+        className: a.container,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: s.text,
-                children: (0, a.m)(o)
+                className: a.text,
+                children: (0, o.m)(s)
             }),
-            (0, i.jsx)('div', {
-                className: s.bar,
-                children: (0, i.jsx)('div', {
-                    className: s.progress,
-                    style: { width: ''.concat(100 * u, '%') }
+            (0, r.jsx)('div', {
+                className: a.bar,
+                children: (0, r.jsx)('div', {
+                    className: a.progress,
+                    style: { width: ''.concat(100 * c, '%') }
                 })
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: s.text,
-                children: (0, a.m)(l)
+                className: a.text,
+                children: (0, o.m)(l)
             })
         ]
     });

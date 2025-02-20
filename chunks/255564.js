@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(150039),
-    r = n(768581),
-    a = n(74538),
-    s = n(474936);
-function o(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(150039),
+    i = n(768581),
+    o = n(74538),
+    a = n(474936);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function o(e, t, n) {
 function l(e, t) {
     return null == t || '' === t ? e : t;
 }
-class u {
+class c {
     get premiumSince() {
         return this._userProfile.premiumSince;
     }
@@ -34,7 +34,7 @@ class u {
         return null !== (t = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== t ? t : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return a.ZP.isPremiumAtLeast(this.premiumType, s.p9.TIER_2);
+        return o.ZP.isPremiumAtLeast(this.premiumType, a.p9.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -67,14 +67,14 @@ class u {
     getBannerURL(e) {
         let { canAnimate: t, size: n } = e;
         return null != this.guildId && this.isUsingGuildMemberBanner()
-            ? (0, r.tp)({
+            ? (0, i.tp)({
                   id: this.userId,
                   guildId: this.guildId,
                   banner: this.banner,
                   canAnimate: t,
                   size: n
               })
-            : (0, r.aN)({
+            : (0, i.aN)({
                   id: this.userId,
                   banner: this.banner,
                   canAnimate: t,
@@ -87,7 +87,7 @@ class u {
             ? e
             : null === e
               ? this.isUsingGuildMemberBanner()
-                  ? (0, r.aN)({
+                  ? (0, i.aN)({
                         id: this.userId,
                         banner: this._userProfile.banner,
                         canAnimate: t,
@@ -101,7 +101,7 @@ class u {
     }
     getPreviewBio(e) {
         var t;
-        return (0, i.Wx)(e, null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio, this._userProfile.bio, null != this.guildId);
+        return (0, r.Wx)(e, null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio, this._userProfile.bio, null != this.guildId);
     }
     getPreviewThemeColors(e) {
         return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors;
@@ -114,7 +114,7 @@ class u {
         return this._userProfile.legacyUsername;
     }
     constructor(e, t) {
-        var n, i, r;
-        o(this, 'userId', void 0), o(this, 'guildId', void 0), o(this, 'banner', void 0), o(this, 'bio', void 0), o(this, 'pronouns', void 0), o(this, 'accentColor', void 0), o(this, 'themeColors', void 0), o(this, 'popoutAnimationParticleType', void 0), o(this, 'profileEffectId', void 0), o(this, 'profileEffectExpiresAt', void 0), o(this, '_userProfile', void 0), o(this, '_guildMemberProfile', void 0), (this.userId = e.userId), (this.guildId = null == t ? void 0 : t.guildId), (this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner), (this.bio = l(e.bio, null == t ? void 0 : t.bio)), (this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns)), (this.accentColor = e.accentColor), (this.themeColors = null !== (i = null == t ? void 0 : t.themeColors) && void 0 !== i ? i : e.themeColors), (this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType), (null == t ? void 0 : t.profileEffectId) != null ? ((this.profileEffectId = t.profileEffectId), (this.profileEffectExpiresAt = t.profileEffectExpiresAt)) : null != e.profileEffectId && ((this.profileEffectId = e.profileEffectId), (this.profileEffectExpiresAt = e.profileEffectExpiresAt)), (this._userProfile = e), (this._guildMemberProfile = t);
+        var n, r, i;
+        s(this, 'userId', void 0), s(this, 'guildId', void 0), s(this, 'banner', void 0), s(this, 'bio', void 0), s(this, 'pronouns', void 0), s(this, 'accentColor', void 0), s(this, 'themeColors', void 0), s(this, 'popoutAnimationParticleType', void 0), s(this, 'profileEffectId', void 0), s(this, 'profileEffectExpiresAt', void 0), s(this, '_userProfile', void 0), s(this, '_guildMemberProfile', void 0), (this.userId = e.userId), (this.guildId = null == t ? void 0 : t.guildId), (this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner), (this.bio = l(e.bio, null == t ? void 0 : t.bio)), (this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns)), (this.accentColor = e.accentColor), (this.themeColors = null !== (r = null == t ? void 0 : t.themeColors) && void 0 !== r ? r : e.themeColors), (this.popoutAnimationParticleType = null !== (i = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== i ? i : e.popoutAnimationParticleType), (null == t ? void 0 : t.profileEffectId) != null ? ((this.profileEffectId = t.profileEffectId), (this.profileEffectExpiresAt = t.profileEffectExpiresAt)) : null != e.profileEffectId && ((this.profileEffectId = e.profileEffectId), (this.profileEffectExpiresAt = e.profileEffectExpiresAt)), (this._userProfile = e), (this._guildMemberProfile = t);
     }
 }

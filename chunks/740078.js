@@ -1,36 +1,36 @@
 n.d(t, {
-    BL: () => u,
+    BL: () => c,
     Ct: () => m,
-    F2: () => a,
-    I: () => r,
+    F2: () => o,
+    I: () => i,
     Pj: () => f,
-    YP: () => p,
+    YP: () => _,
     bw: () => h,
-    d7: () => o,
-    k5: () => _,
+    d7: () => s,
+    k5: () => p,
     mv: () => l,
-    t$: () => s,
-    ut: () => c,
-    we: () => i,
+    t$: () => a,
+    ut: () => u,
+    we: () => r,
     xs: () => g,
     zV: () => d
 });
-var i = 'top',
-    r = 'bottom',
-    a = 'right',
-    s = 'left',
-    o = 'auto',
-    l = [i, r, a, s],
-    u = 'start',
-    c = 'end',
+var r = 'top',
+    i = 'bottom',
+    o = 'right',
+    a = 'left',
+    s = 'auto',
+    l = [r, i, o, a],
+    c = 'start',
+    u = 'end',
     d = 'clippingParents',
     f = 'viewport',
-    _ = 'popper',
-    p = 'reference',
+    p = 'popper',
+    _ = 'reference',
     h = l.reduce(function (e, t) {
-        return e.concat([t + '-' + u, t + '-' + c]);
+        return e.concat([t + '-' + c, t + '-' + u]);
     }, []),
-    m = [].concat(l, [o]).reduce(function (e, t) {
-        return e.concat([t, t + '-' + u, t + '-' + c]);
+    m = [].concat(l, [s]).reduce(function (e, t) {
+        return e.concat([t, t + '-' + c, t + '-' + u]);
     }, []),
     g = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];

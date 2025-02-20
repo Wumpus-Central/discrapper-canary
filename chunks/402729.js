@@ -1,3 +1,3 @@
 n(640579);
-var i = n(974802);
-e.exports = i.Object.getPrototypeOf;
+var r = n(974802);
+e.exports = r.Object.getPrototypeOf;

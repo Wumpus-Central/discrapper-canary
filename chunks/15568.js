@@ -1,6 +1,6 @@
-function i(e, t) {
+function r(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+    return r;
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

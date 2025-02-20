@@ -1,58 +1,58 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(642128),
-    o = n(692547),
+var i = n(120356),
+    l = n.n(i),
+    o = n(642128),
+    a = n(692547),
     s = n(481060),
     c = n(565138),
-    d = n(252686),
-    u = n(895134);
-function h(e) {
-    let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
-        m = {},
+    u = n(252686),
+    d = n(602079);
+function p(e) {
+    let { guild: t, show: n, active: i, onAnimationStart: p, onAnimationRest: h } = e,
+        f = {},
         g = {};
-    (m.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (g.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
-    let f = (0, s.dQu)(o.Z.unsafe_rawColors.BRAND_500).hex(),
-        _ = (0, s.dQu)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((m.backgroundColor = f), (g.backgroundColor = _));
+    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (g.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
+    let m = (0, s.dQu)(a.Z.unsafe_rawColors.BRAND_500).hex(),
+        b = (0, s.dQu)(a.Z.unsafe_rawColors.PRIMARY_630).hex();
+    i && null == t.icon && ((f.backgroundColor = m), (g.backgroundColor = b));
     let v = (0, s.Yzy)(n, {
-        from: m,
+        from: f,
         enter: g,
-        leave: m,
+        leave: f,
         config: { duration: 100 },
-        onStart: h,
-        onRest: p
+        onStart: p,
+        onRest: h
     });
-    return (0, i.jsx)(i.Fragment, {
+    return (0, r.jsx)(r.Fragment, {
         children: v(
-            (e, n, l) =>
+            (e, n, i) =>
                 n &&
-                (0, i.jsx)(
+                (0, r.jsx)(
                     'div',
                     {
-                        className: r()(u.folder, u.hover),
-                        children: (0, i.jsx)('div', {
-                            className: u.folderIconWrapper,
-                            children: (0, i.jsxs)('div', {
-                                className: u.closedFolderIconWrapper,
+                        className: l()(d.folder, d.hover),
+                        children: (0, r.jsx)('div', {
+                            className: d.folderIconWrapper,
+                            children: (0, r.jsxs)('div', {
+                                className: d.closedFolderIconWrapper,
                                 children: [
-                                    (0, i.jsx)(a.animated.div, {
-                                        className: u.folderIconPreview,
+                                    (0, r.jsx)(o.animated.div, {
+                                        className: d.folderIconPreview,
                                         style: e,
-                                        children: (0, i.jsx)(c.Z, {
+                                        children: (0, r.jsx)(c.Z, {
                                             guild: t,
                                             size: c.Z.Sizes.SMOL,
-                                            className: u.guildIcon
+                                            className: d.guildIcon
                                         })
                                     }),
-                                    (0, i.jsx)(d.Z, { className: u.miniPlaceholder })
+                                    (0, r.jsx)(u.Z, { className: d.miniPlaceholder })
                                 ]
                             })
                         })
                     },
-                    l.key
+                    i.key
                 )
         )
     });

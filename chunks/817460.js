@@ -1,47 +1,47 @@
 n.d(t, {
-    JE: () => a,
-    ab: () => s,
-    iG: () => o,
-    lL: () => u,
-    rC: () => d
+    JE: () => s,
+    ab: () => o,
+    iG: () => a,
+    lL: () => d,
+    rC: () => u
 });
 var i = n(293810),
-    l = n(474936),
-    r = n(388032);
-function s(e) {
+    r = n(474936),
+    l = n(388032);
+function o(e) {
     return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
 }
-function a(e) {
+function s(e) {
     let { interval: t, interval_count: n } = e;
-    return r.intl.format(
+    return l.NW.format(
         (function (e) {
             switch (e) {
-                case l.rV.DAY:
-                    return r.t['3rUmPT'];
-                case l.rV.MONTH:
-                    return r.t['zuN54+'];
-                case l.rV.YEAR:
-                    return r.t.cuSp8f;
+                case r.rV.DAY:
+                    return l.t['3rUmPT'];
+                case r.rV.MONTH:
+                    return l.t['zuN54+'];
+                case r.rV.YEAR:
+                    return l.t.cuSp8f;
             }
         })(t),
         { count: n }
     );
 }
-function o(e) {
+function a(e) {
     let { interval: t, interval_count: n } = e;
     switch (t) {
-        case l.rV.DAY:
-            if (n > 0 && n % 7 == 0) return r.intl.formatToPlainString(r.t.iVZYys, { weeks: n / 7 });
-            return r.intl.formatToPlainString(r.t.jzH70d, { days: n });
-        case l.rV.MONTH:
-            return r.intl.formatToPlainString(r.t.erUSmJ, { months: n });
-        case l.rV.YEAR:
-            return r.intl.formatToPlainString(r.t.IfYQVF, { years: n });
+        case r.rV.DAY:
+            if (n > 0 && n % 7 == 0) return l.NW.formatToPlainString(l.t.iVZYys, { weeks: n / 7 });
+            return l.NW.formatToPlainString(l.t.jzH70d, { days: n });
+        case r.rV.MONTH:
+            return l.NW.formatToPlainString(l.t.erUSmJ, { months: n });
+        case r.rV.YEAR:
+            return l.NW.formatToPlainString(l.t.IfYQVF, { years: n });
     }
 }
-function d(e) {
+function u(e) {
     return e.ref_type === i.Qs.CHANNEL;
 }
-function u(e) {
+function d(e) {
     return e.ref_type === i.Qs.INTANGIBLE;
 }

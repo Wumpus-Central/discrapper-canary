@@ -1,9 +1,9 @@
 n.d(t, {
-    N: () => a,
-    m: () => r
+    N: () => o,
+    m: () => i
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         kind: 'user',
         id: '2023-08_secure_frames_encryption',
         label: 'Allowing testing DAVE protocol for voice/video',
@@ -22,7 +22,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (0, i.B)({
+    o = (0, r.B)({
         kind: 'guild',
         id: '2024-08_secure_frames_encryption_guilds_v2',
         label: 'Allowing testing DAVE protocol for voice/video (Guilds)',

@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,10 +11,10 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { t: () => s }), n(47120);
-let r = Symbol.iterator;
-class a {
-    [r]() {
+n.d(t, { t: () => a }), n(266796), n(47120);
+let i = Symbol.iterator;
+class o {
+    [i]() {
         return this;
     }
     next() {
@@ -29,10 +29,10 @@ class a {
         };
     }
     constructor(e) {
-        i(this, 'index', void 0), i(this, 'items', void 0), (this.index = 0), (this.items = e);
+        r(this, 'index', void 0), r(this, 'items', void 0), (this.index = 0), (this.items = e);
     }
 }
-function s() {
+function a() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return new a(t);
+    return new o(t);
 }

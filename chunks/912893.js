@@ -1,19 +1,19 @@
 n.d(t, {
-    G: () => a,
-    U: () => r
+    G: () => o,
+    U: () => i
 });
-var i = n(570140);
-function r(e, t, n, r) {
-    i.Z.dispatch({
+var r = n(570140);
+function i(e, t, n, i) {
+    r.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_ADD',
         messageId: e,
         emojiName: t,
         emojiId: n,
-        startPosition: r
+        startPosition: i
     });
 }
-function a(e, t, n) {
-    i.Z.dispatch({
+function o(e, t, n) {
+    r.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_CLEAR',
         messageId: e,
         emojiName: t,

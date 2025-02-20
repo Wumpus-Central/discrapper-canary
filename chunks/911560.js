@@ -1,55 +1,55 @@
 n.d(t, { Z: () => E });
-var i = n(512969),
-    r = n(544891),
-    a = n(570140),
-    s = n(333023),
-    o = n(38618),
+var r = n(512969),
+    i = n(544891),
+    o = n(570140),
+    a = n(333023),
+    s = n(38618),
     l = n(893607),
-    u = n(131704),
-    c = n(592125),
+    c = n(131704),
+    u = n(592125),
     d = n(944486),
     f = n(981631),
-    _ = n(176505);
-let p = {},
+    p = n(176505);
+let _ = {},
     h = !1;
 function m() {
     h ||
         ((h = !0),
-        a.Z.subscribe('CONNECTION_OPEN', () => {
-            p = {};
+        o.Z.subscribe('CONNECTION_OPEN', () => {
+            _ = {};
             let e = d.Z.getChannelId(),
-                t = c.Z.getChannel(e);
+                t = u.Z.getChannel(e);
             null != e && null == t && g(e);
         }));
 }
 function g(e) {
-    if (null == e || e === s.V || (0, _.AB)(e) || null != c.Z.getChannel(e) || (m(), !o.Z.isConnected())) return Promise.resolve();
-    let t = p[e];
+    if (null == e || e === a.V || (0, p.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected())) return Promise.resolve();
+    let t = _[e];
     if (null != t) return 'LOADING' === t.type ? t.promise : Promise.resolve();
-    let n = (0, i.LX)(location.pathname, {
+    let n = (0, r.LX)(location.pathname, {
             path: f.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId(), ':messageId'),
             exact: !0
         }),
-        d = r.tn
+        d = i.tn
             .get({
                 url: f.ANM.CHANNEL(e),
                 rejectWithError: !1
             })
             .then((t) => {
-                let { body: i } = t;
-                if (((p[e] = { type: 'LOADED' }), u.Ec.has(i.type))) {
-                    var r;
-                    a.Z.dispatch({
+                let { body: r } = t;
+                if (((_[e] = { type: 'LOADED' }), c.Ec.has(r.type))) {
+                    var i;
+                    o.Z.dispatch({
                         type: 'THREAD_CREATE',
-                        channel: (0, u.q_)(i),
-                        messageId: null == n ? void 0 : null === (r = n.params) || void 0 === r ? void 0 : r.messageId
+                        channel: (0, c.q_)(r),
+                        messageId: null == n ? void 0 : null === (i = n.params) || void 0 === i ? void 0 : i.messageId
                     });
                 }
             })
             .catch(() => {
                 var t;
-                (p[e] = { type: 'NOT_FOUND' }),
-                    a.Z.dispatch({
+                (_[e] = { type: 'NOT_FOUND' }),
+                    o.Z.dispatch({
                         type: 'CHANNEL_DELETE',
                         channel: {
                             id: e,
@@ -59,7 +59,7 @@ function g(e) {
                     });
             });
     return (
-        (p[e] = {
+        (_[e] = {
             type: 'LOADING',
             promise: d
         }),

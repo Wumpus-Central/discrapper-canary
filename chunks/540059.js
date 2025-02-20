@@ -1,26 +1,26 @@
 n.d(t, {
     O_: () => d,
     Q3: () => g,
-    R6: () => p,
+    R6: () => _,
     TH: () => E,
-    i9: () => _,
-    k9: () => u,
+    i9: () => p,
+    k9: () => c,
     nm: () => v,
     o9: () => m,
     yl: () => h
 });
-var i = n(442837),
-    r = n(433517),
-    a = n(818083),
-    s = n(353926),
-    o = n(740492),
+var r = n(442837),
+    i = n(433517),
+    o = n(818083),
+    a = n(353926),
+    s = n(740492),
     l = n(594174);
-let u = 'desktop_refresh_enabled',
-    c = 'true' === r.K.get(u);
+let c = 'desktop_refresh_enabled',
+    u = 'true' === i.K.get(c);
 function d(e) {
-    return s.Z.hasLoadedExperiments ? _(e) : c;
+    return a.Z.hasLoadedExperiments ? p(e) : u;
 }
-let f = (0, a.B)({
+let f = (0, o.B)({
     id: '2024-05_desktop_visual_refresh',
     label: 'Desktop Visual Refresh',
     kind: 'user',
@@ -100,12 +100,12 @@ let f = (0, a.B)({
         }
     ]
 });
-function _(e) {
-    let { enabled: t, disabledByDefault: n } = f.getCurrentConfig({ location: e }),
-        i = o.ZP.isVisualRefreshDisabled(n);
-    return !!t && !i;
-}
 function p(e) {
+    let { enabled: t, disabledByDefault: n } = f.getCurrentConfig({ location: e }),
+        r = s.ZP.isVisualRefreshDisabled(n);
+    return !!t && !r;
+}
+function _(e) {
     let t = g(e),
         { newChatInput: n } = f.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t && n;
@@ -118,8 +118,8 @@ function m(e) {
 }
 function g(e) {
     let { enabled: t, disabledByDefault: n } = f.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-        r = (0, i.e7)([o.ZP], () => o.ZP.isVisualRefreshDisabled(n));
-    return !!t && !r;
+        i = (0, r.e7)([s.ZP], () => s.ZP.isVisualRefreshDisabled(n));
+    return !!t && !i;
 }
 function E(e) {
     let t = g(e),
@@ -128,7 +128,7 @@ function E(e) {
 }
 function v(e) {
     let { canOptOut: t } = f.getCurrentConfig({ location: e }),
-        n = (0, i.e7)([l.default], () => {
+        n = (0, r.e7)([l.default], () => {
             var e, t;
             return null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : null === (e = t.isStaff) || void 0 === e ? void 0 : e.call(t);
         });

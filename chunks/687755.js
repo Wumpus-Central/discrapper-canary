@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(388032),
-    s = n(286492);
-let o = (e) => {
+var i = n(120356),
+    a = n.n(i),
+    o = n(388032),
+    l = n(752536);
+let s = (e) => {
     let { className: t } = e;
-    return (0, i.jsx)('div', {
-        className: a()(s.tag, t),
-        children: (0, i.jsx)('span', {
-            className: s.text,
-            children: r.intl.string(r.t['14lP0d'])
+    return (0, r.jsx)('div', {
+        className: a()(l.tag, t),
+        children: (0, r.jsx)('span', {
+            className: l.text,
+            children: o.NW.string(o.t['14lP0d'])
         })
     });
 };

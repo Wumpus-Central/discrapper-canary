@@ -1,12 +1,12 @@
-n.d(t, { Z: () => r });
-var i = n(969943),
-    s = n(388032);
-function r(e) {
+n.d(t, { Z: () => s });
+var r = n(969943),
+    i = n(388032);
+function s(e) {
     switch (e) {
-        case i.mX.REDUCED_MOTION:
-            return s.intl.format(s.t['1dT9V1'], {});
-        case i.mX.REDUCED_MOTION_STICKERS:
-            return s.intl.string(s.t['2ExvRk']);
+        case r.mX.REDUCED_MOTION:
+            return i.NW.format(i.t['1dT9V1'], {});
+        case r.mX.REDUCED_MOTION_STICKERS:
+            return i.NW.string(i.t['2ExvRk']);
         default:
             return;
     }

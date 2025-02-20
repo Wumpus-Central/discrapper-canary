@@ -1,7 +1,7 @@
-n.d(t, { D: () => a });
+n.d(t, { D: () => r });
 var i = n(192379),
     l = n(430824);
-function a(e) {
+function r(e) {
     return i.useMemo(
         () =>
             'contextless' === e.type

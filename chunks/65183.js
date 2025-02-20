@@ -1406,7 +1406,7 @@ var e;
                         return t;
                     });
                 }
-                return t.__iterator(1 === e ? 0 : 1, r);
+                return t.__iterator(+(1 !== e), r);
             }),
             e
         );
@@ -2718,7 +2718,7 @@ var e;
                             r,
                             n = b(t),
                             i = v(t),
-                            o = n ? 1 : 0;
+                            o = +!!n;
                         return (
                             (e = t.__iterate(
                                 i

@@ -1,51 +1,51 @@
-i.d(e, { Z: () => p });
-var t = i(200651),
-    a = i(192379),
-    r = i(793030),
-    o = i(442837),
-    s = i(481060),
-    c = i(834129),
-    l = i(271383),
-    d = i(709586),
-    u = i(388032),
-    x = i(494248);
-function p(n) {
-    var e;
-    let { boost: i } = n,
-        { username: p, roleColor: v } = (0, o.cj)(
+t.d(n, { Z: () => v });
+var i = t(200651),
+    r = t(192379),
+    a = t(793030),
+    o = t(442837),
+    s = t(481060),
+    c = t(834129),
+    l = t(271383),
+    d = t(709586),
+    u = t(388032),
+    x = t(212590);
+function v(e) {
+    var n;
+    let { boost: t } = e,
+        { username: v, roleColor: m } = (0, o.cj)(
             [l.ZP],
             () => {
-                var n, e, t;
+                var e, n, i;
                 return {
-                    username: null !== (t = l.ZP.getNick(i.guildId, i.userId)) && void 0 !== t ? t : null === (n = i.user) || void 0 === n ? void 0 : n.username,
-                    roleColor: null === (e = l.ZP.getMember(i.guildId, i.userId)) || void 0 === e ? void 0 : e.colorString
+                    username: null !== (i = l.ZP.getNick(t.guildId, t.userId)) && void 0 !== i ? i : null === (e = t.user) || void 0 === e ? void 0 : e.username,
+                    roleColor: null === (n = l.ZP.getMember(t.guildId, t.userId)) || void 0 === n ? void 0 : n.colorString
                 };
             },
-            [i]
+            [t]
         ),
-        m = a.useCallback(
+        p = r.useCallback(
             () =>
-                (0, t.jsx)(s.PUh, {
-                    name: p,
-                    color: null != v ? v : void 0
+                (0, i.jsx)(s.PUh, {
+                    name: v,
+                    color: null != m ? m : void 0
                 }),
-            [p, v]
+            [v, m]
         );
-    return (0, t.jsx)(c.Z, {
+    return (0, i.jsx)(c.Z, {
         className: x.textContainer,
-        iconNode: (0, t.jsx)(d.Z, {
+        iconNode: (0, i.jsx)(d.Z, {
             className: x.icon,
             width: 16,
             height: 16
         }),
         iconContainerClassName: x.iconContainer,
-        timestamp: null !== (e = i.endsAt) && void 0 !== e ? e : void 0,
+        timestamp: null !== (n = t.endsAt) && void 0 !== n ? n : void 0,
         compact: !0,
-        children: (0, t.jsx)(r.xv, {
+        children: (0, i.jsx)(a.xv, {
             variant: 'text-md/semibold',
-            children: u.intl.format(u.t['57St//'], {
-                username: p,
-                usernameHook: m
+            children: u.NW.format(u.t['57St//'], {
+                username: v,
+                usernameHook: p
             })
         })
     });

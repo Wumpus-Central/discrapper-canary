@@ -1,6 +1,6 @@
-n.d(t, { s: () => r });
-var i = n(442837),
-    s = n(651941);
-function r() {
-    return (0, i.Wu)([s.Z], () => s.Z.getUserIds());
+n.d(t, { s: () => s });
+var r = n(442837),
+    i = n(651941);
+function s() {
+    return (0, r.Wu)([i.Z], () => i.Z.getUserIds());
 }

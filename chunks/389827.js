@@ -6,7 +6,7 @@ function t(e) {
             literal: 'DB_AFTER_LAST_ROW DB_ALL_TABLES DB_BATCH_OPERATIONS DB_BEFORE_FIRST_ROW DB_BLOB DB_EVENT_NOTIFICATIONS DB_FINISH_QUERY DB_HIGH_PRECISION DB_LAST_INSERT_ID DB_LOW_PRECISION_DOUBLE DB_LOW_PRECISION_INT32 DB_LOW_PRECISION_INT64 DB_LOW_PRECISION_NUMBERS DB_MULTIPLE_RESULT_SETS DB_NAMED_PLACEHOLDERS DB_POSITIONAL_PLACEHOLDERS DB_PREPARED_QUERIES DB_QUERY_SIZE DB_SIMPLE_LOCKING DB_SYSTEM_TABLES DB_TABLES DB_TRANSACTIONS DB_UNICODE DB_VIEWS __STDIN __STDOUT __STDERR __FILE_DIR'
         },
         n = e.COMMENT('@', '@'),
-        i = {
+        r = {
             className: 'meta',
             begin: '#',
             end: '$',
@@ -34,7 +34,7 @@ function t(e) {
                 n
             ]
         },
-        r = {
+        i = {
             begin: /\bstruct\s+/,
             end: /\s/,
             keywords: 'struct',
@@ -46,7 +46,7 @@ function t(e) {
                 }
             ]
         },
-        a = [
+        o = [
             {
                 className: 'params',
                 begin: /\(/,
@@ -63,40 +63,40 @@ function t(e) {
                     e.C_NUMBER_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                     n,
-                    r
+                    i
                 ]
             }
         ],
-        s = {
+        a = {
             className: 'title',
             begin: e.UNDERSCORE_IDENT_RE,
             relevance: 0
         },
-        o = function (t, i, r) {
-            let o = e.inherit(
+        s = function (t, r, i) {
+            let s = e.inherit(
                 {
                     className: 'function',
                     beginKeywords: t,
-                    end: i,
+                    end: r,
                     excludeEnd: !0,
-                    contains: [].concat(a)
+                    contains: [].concat(o)
                 },
                 {}
             );
-            return o.contains.push(s), o.contains.push(e.C_NUMBER_MODE), o.contains.push(e.C_BLOCK_COMMENT_MODE), o.contains.push(n), o;
+            return s.contains.push(a), s.contains.push(e.C_NUMBER_MODE), s.contains.push(e.C_BLOCK_COMMENT_MODE), s.contains.push(n), s;
         },
         l = {
             className: 'built_in',
             begin: '\\b(' + t.built_in.split(' ').join('|') + ')\\b'
         },
-        u = {
+        c = {
             className: 'string',
             begin: '"',
             end: '"',
             contains: [e.BACKSLASH_ESCAPE],
             relevance: 0
         },
-        c = {
+        u = {
             begin: e.UNDERSCORE_IDENT_RE + '\\s*\\(',
             returnBegin: !0,
             keywords: t,
@@ -119,10 +119,10 @@ function t(e) {
                 built_in: t.built_in,
                 literal: t.literal
             },
-            contains: [e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, n, l, c, u, 'self']
+            contains: [e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, n, l, u, c, 'self']
         };
     return (
-        c.contains.push(d),
+        u.contains.push(d),
         {
             name: 'GAUSS',
             aliases: ['gss'],
@@ -134,14 +134,14 @@ function t(e) {
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 n,
-                u,
-                i,
+                c,
+                r,
                 {
                     className: 'keyword',
                     begin: /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/
                 },
-                o('proc keyword', ';'),
-                o('fn', '='),
+                s('proc keyword', ';'),
+                s('fn', '='),
                 {
                     beginKeywords: 'for threadfor',
                     end: /;/,
@@ -152,8 +152,8 @@ function t(e) {
                     variants: [{ begin: e.UNDERSCORE_IDENT_RE + '\\.' + e.UNDERSCORE_IDENT_RE }, { begin: e.UNDERSCORE_IDENT_RE + '\\s*=' }],
                     relevance: 0
                 },
-                c,
-                r
+                u,
+                i
             ]
         }
     );

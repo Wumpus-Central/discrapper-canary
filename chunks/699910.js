@@ -1,5 +1,5 @@
-n.d(t, { v: () => l });
-let i = (0, n(818083).B)({
+n.d(t, { v: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-08_collectibles_expiry_modal',
         label: 'Collectibles Expiry Experiment',
@@ -12,4 +12,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => i.getCurrentConfig({ location: e }).expiryModalEnabled;
+    i = (e) => r.getCurrentConfig({ location: e }).expiryModalEnabled;

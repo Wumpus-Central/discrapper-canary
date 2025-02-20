@@ -1,50 +1,50 @@
-i = { value: !0 };
-var i,
-    r =
+r = { value: !0 };
+var r,
+    i =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    a = s(n(192379));
-function s(e) {
+    o = a(n(192379));
+function a(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function o(e, t) {
+function s(e, t) {
     var n = {};
-    for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
+    for (var r in e) !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
     return n;
 }
 var l = 24;
 t.default = function (e) {
     var t = e.fill,
         n = void 0 === t ? 'currentColor' : t,
-        i = e.width,
-        s = void 0 === i ? l : i,
-        u = e.height,
-        c = void 0 === u ? l : u,
+        r = e.width,
+        a = void 0 === r ? l : r,
+        c = e.height,
+        u = void 0 === c ? l : c,
         d = e.style,
         f = void 0 === d ? {} : d,
-        _ = o(e, ['fill', 'width', 'height', 'style']);
-    return a.default.createElement(
+        p = s(e, ['fill', 'width', 'height', 'style']);
+    return o.default.createElement(
         'svg',
-        r(
+        i(
             {
                 viewBox: '0 0 ' + l + ' ' + l,
-                style: r(
+                style: i(
                     {
                         fill: n,
-                        width: s,
-                        height: c
+                        width: a,
+                        height: u
                     },
                     f
                 )
             },
-            _
+            p
         ),
-        a.default.createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
+        o.default.createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
     );
 };

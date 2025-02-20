@@ -1,18 +1,18 @@
-var i = n(192379),
-    r = n(723184),
-    a = n(829307),
-    s = n(820611),
-    o = n(877837),
+var r = n(192379),
+    i = n(723184),
+    o = n(829307),
+    a = n(820611),
+    s = n(877837),
     l = function (e) {
         var t = e.onChange,
             n = e.hex,
             l = e.rgb,
-            u = e.styles,
-            c = void 0 === u ? {} : u,
+            c = e.styles,
+            u = void 0 === c ? {} : c,
             d = e.className,
             f = void 0 === d ? '' : d,
-            _ = (0, r.default)(
-                (0, a.Z)(
+            p = (0, i.default)(
+                (0, o.Z)(
                     {
                         default: {
                             material: {
@@ -73,12 +73,12 @@ var i = n(192379),
                             }
                         }
                     },
-                    c
+                    u
                 )
             ),
-            p = function (e, n) {
+            _ = function (e, n) {
                 e.hex
-                    ? s.FX(e.hex) &&
+                    ? a.FX(e.hex) &&
                       t(
                           {
                               hex: e.hex,
@@ -97,75 +97,75 @@ var i = n(192379),
                           n
                       );
             };
-        return i.createElement(
-            o.xZ,
-            { styles: c },
-            i.createElement(
+        return r.createElement(
+            s.xZ,
+            { styles: u },
+            r.createElement(
                 'div',
                 {
-                    style: _.material,
+                    style: p.material,
                     className: 'material-picker ' + f
                 },
-                i.createElement(o.Vm, {
+                r.createElement(s.Vm, {
                     style: {
-                        wrap: _.HEXwrap,
-                        input: _.HEXinput,
-                        label: _.HEXlabel
+                        wrap: p.HEXwrap,
+                        input: p.HEXinput,
+                        label: p.HEXlabel
                     },
                     label: 'hex',
                     value: n,
-                    onChange: p
+                    onChange: _
                 }),
-                i.createElement(
+                r.createElement(
                     'div',
                     {
-                        style: _.split,
+                        style: p.split,
                         className: 'flexbox-fix'
                     },
-                    i.createElement(
+                    r.createElement(
                         'div',
-                        { style: _.third },
-                        i.createElement(o.Vm, {
+                        { style: p.third },
+                        r.createElement(s.Vm, {
                             style: {
-                                wrap: _.RGBwrap,
-                                input: _.RGBinput,
-                                label: _.RGBlabel
+                                wrap: p.RGBwrap,
+                                input: p.RGBinput,
+                                label: p.RGBlabel
                             },
                             label: 'r',
                             value: l.r,
-                            onChange: p
+                            onChange: _
                         })
                     ),
-                    i.createElement(
+                    r.createElement(
                         'div',
-                        { style: _.third },
-                        i.createElement(o.Vm, {
+                        { style: p.third },
+                        r.createElement(s.Vm, {
                             style: {
-                                wrap: _.RGBwrap,
-                                input: _.RGBinput,
-                                label: _.RGBlabel
+                                wrap: p.RGBwrap,
+                                input: p.RGBinput,
+                                label: p.RGBlabel
                             },
                             label: 'g',
                             value: l.g,
-                            onChange: p
+                            onChange: _
                         })
                     ),
-                    i.createElement(
+                    r.createElement(
                         'div',
-                        { style: _.third },
-                        i.createElement(o.Vm, {
+                        { style: p.third },
+                        r.createElement(s.Vm, {
                             style: {
-                                wrap: _.RGBwrap,
-                                input: _.RGBinput,
-                                label: _.RGBlabel
+                                wrap: p.RGBwrap,
+                                input: p.RGBinput,
+                                label: p.RGBlabel
                             },
                             label: 'b',
                             value: l.b,
-                            onChange: p
+                            onChange: _
                         })
                     )
                 )
             )
         );
     };
-(0, o.t1)(l);
+(0, s.t1)(l);

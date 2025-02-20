@@ -1,36 +1,36 @@
 n.d(t, { s: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(700582),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(700582),
     l = n(51144),
-    u = n(388032),
-    c = n(595288);
+    c = n(388032),
+    u = n(835247);
 let d = (e) => {
     let { className: t, giftRecipient: n } = e;
     return null == n
         ? null
-        : (0, i.jsxs)('div', {
-              className: a()(c.content, t),
+        : (0, r.jsxs)('div', {
+              className: o()(u.content, t),
               children: [
-                  (0, i.jsx)(s.vwX, { children: u.intl.string(u.t.xFn72t) }),
-                  (0, i.jsxs)('div', {
-                      className: c.giftRecipientInfo,
+                  (0, r.jsx)(a.vwX, { children: c.NW.string(c.t.xFn72t) }),
+                  (0, r.jsxs)('div', {
+                      className: u.giftRecipientInfo,
                       children: [
-                          (0, i.jsx)(o.Z, {
+                          (0, r.jsx)(s.Z, {
                               user: n,
-                              className: c.__invalid_giftRecipient,
-                              size: s.EFr.SIZE_20
+                              className: u.__invalid_giftRecipient,
+                              size: a.EFr.SIZE_20
                           }),
-                          (0, i.jsx)(s.X6q, {
-                              className: c.giftRecipientName,
+                          (0, r.jsx)(a.X6q, {
+                              className: u.giftRecipientName,
                               variant: 'text-md/normal',
                               children: l.ZP.getName(n)
                           }),
-                          (0, i.jsx)(s.X6q, {
-                              className: c.giftRecipientTag,
+                          (0, r.jsx)(a.X6q, {
+                              className: u.giftRecipientTag,
                               variant: 'text-md/normal',
                               children: l.ZP.getUserTag(n)
                           })

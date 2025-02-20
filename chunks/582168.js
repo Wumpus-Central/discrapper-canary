@@ -1,20 +1,20 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(376398),
-    s = n(825040);
-function o(e) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(376398),
+    a = n(825040);
+function s(e) {
     null != e && e.getTracks().forEach((e) => e.stop());
 }
 async function l(e) {
-    let { deviceId: t, width: n, height: i, disabled: r } = e;
-    if (r) return null;
+    let { deviceId: t, width: n, height: r, disabled: i } = e;
+    if (i) return null;
     try {
         return await navigator.mediaDevices.getUserMedia({
             audio: !1,
             video: {
                 width: n * window.devicePixelRatio,
-                height: i * window.devicePixelRatio,
+                height: r * window.devicePixelRatio,
                 frameRate: 30,
                 deviceId: t
             }
@@ -23,18 +23,18 @@ async function l(e) {
         return null;
     }
 }
-function u(e) {
-    let { deviceId: t, width: n, height: u, disabled: c } = e,
-        [d, f] = r.useState();
+function c(e) {
+    let { deviceId: t, width: n, height: c, disabled: u } = e,
+        [d, f] = i.useState();
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = l({
                 deviceId: t,
                 width: n,
-                height: u,
-                disabled: c
+                height: c,
+                disabled: u
             }).then((e) => {
-                let t = null != e ? (0, a.N7)(e) : null;
+                let t = null != e ? (0, o.N7)(e) : null;
                 return (
                     f(t),
                     {
@@ -46,28 +46,28 @@ function u(e) {
             return () => {
                 e.then((e) => {
                     let { stream: t, streamId: n } = e;
-                    o(t), null != n && (0, a.jC)(n);
+                    s(t), null != n && (0, o.jC)(n);
                 });
             };
-        }, [t, n, u, c]),
+        }, [t, n, c, u]),
         null == d
-            ? (0, i.jsx)('div', {
+            ? (0, r.jsx)('div', {
                   className: 'media-engine-video',
                   style: {
                       width: n,
-                      height: u
+                      height: c
                   }
               })
-            : (0, i.jsx)(s.Z, {
+            : (0, r.jsx)(a.Z, {
                   streamId: d,
                   style: {
                       width: n,
-                      height: u
+                      height: c
                   }
               })
     );
 }
-u.defaultProps = {
+c.defaultProps = {
     disabled: !1,
     width: 320,
     height: 180

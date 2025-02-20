@@ -1,11 +1,11 @@
-var i = n(690244)('%TypeError%'),
-    r = n(828148),
-    a = n(379284),
-    s = n(632384);
+var r = n(690244)('%TypeError%'),
+    i = n(828148),
+    o = n(379284),
+    a = n(632384);
 e.exports = function (e, t, n) {
-    if ('Object' !== s(e)) throw new i('Assertion failed: Type(O) is not Object');
-    if (!r(t)) throw new i('Assertion failed: IsPropertyKey(P) is not true');
-    return a(e, t, {
+    if ('Object' !== a(e)) throw new r('Assertion failed: Type(O) is not Object');
+    if (!i(t)) throw new r('Assertion failed: IsPropertyKey(P) is not true');
+    return o(e, t, {
         '[[Configurable]]': !0,
         '[[Enumerable]]': !0,
         '[[Value]]': n,

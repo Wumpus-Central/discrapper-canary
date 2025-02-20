@@ -1,12 +1,12 @@
 n.d(t, { Z: () => h }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(168232),
-    o = n(430824),
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(168232),
+    s = n(430824),
     l = n(594174),
-    u = n(987338),
-    c = n(48541);
+    c = n(987338),
+    u = n(48541);
 function d(e, t, n) {
     return (
         t in e
@@ -20,13 +20,13 @@ function d(e, t, n) {
         e
     );
 }
-let f = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === c.C.STAGING;
-function _() {
-    f = (0, s.QI)(l.default.getCurrentUser());
+let f = 'production' === u.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.C.STAGING;
+function p() {
+    f = (0, a.QI)(l.default.getCurrentUser());
 }
-class p extends (i = r.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.default, o.Z),
+        this.waitFor(l.default, s.Z),
             Object.defineProperties(this, {
                 isDeveloper: {
                     configurable: !1,
@@ -34,7 +34,7 @@ class p extends (i = r.ZP.Store) {
                     set: () => {}
                 }
             }),
-            _(),
+            p(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
@@ -44,7 +44,7 @@ class p extends (i = r.ZP.Store) {
                   name: 'discord_dev_testing',
                   revision: 1,
                   override: !0,
-                  bucket: u.NZ.TREATMENT_1
+                  bucket: c.NZ.TREATMENT_1
               }
             : null;
     }
@@ -52,9 +52,9 @@ class p extends (i = r.ZP.Store) {
         super(...e), d(this, 'isDeveloper', !1);
     }
 }
-d(p, 'displayName', 'DeveloperExperimentStore');
-let h = new p(a.Z, {
-    CONNECTION_OPEN: _,
-    OVERLAY_INITIALIZE: _,
-    CURRENT_USER_UPDATE: _
+d(_, 'displayName', 'DeveloperExperimentStore');
+let h = new _(o.Z, {
+    CONNECTION_OPEN: p,
+    OVERLAY_INITIALIZE: p,
+    CURRENT_USER_UPDATE: p
 });

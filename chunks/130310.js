@@ -1,32 +1,32 @@
-n.d(t, { Z: () => g });
-var i = n(200651);
+n.d(t, { Z: () => g }), n(266796);
+var r = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    a = n(785681),
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(785681),
     o = n(231994),
     c = n(388032),
-    d = n(447830),
-    u = n(483938);
+    d = n(788594),
+    u = n(455812);
 let m = (e) => {
-        let { header: t, description: n, icon: s, inModal: a } = e;
-        return (0, i.jsxs)('div', {
-            className: r()(d.row, u.marginBottom8, { [d.inModal]: a }),
+        let { header: t, description: n, icon: i, inModal: l } = e;
+        return (0, r.jsxs)('div', {
+            className: s()(d.row, u.marginBottom8, { [d.inModal]: l }),
             children: [
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: d.iconContainer,
-                    children: s
+                    children: i
                 }),
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(a.Text, {
                             className: d.header,
                             variant: 'text-sm/bold',
                             color: 'header-primary',
                             children: t
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-xs/medium',
                             color: 'header-secondary',
                             children: n
@@ -38,64 +38,64 @@ let m = (e) => {
     },
     g = (e) => {
         let { inModal: t } = e,
-            n = (0, a.o)(c.intl.string(c.t.Sm8Gq6), c.intl.string(c.t.YU7aaW)),
-            s = (0, a.o)(c.intl.string(c.t['TCzk/f']), c.intl.string(c.t['2OqtJC'])),
-            r = (0, a.o)(c.intl.string(c.t.ASf7XF), c.intl.string(c.t['82y87e'])),
-            u = (0, a.o)(c.intl.string(c.t['0QDVFB']), c.intl.string(c.t['1xBHHR']));
-        return (0, i.jsxs)('div', {
+            n = (0, l.o)(c.NW.string(c.t.Sm8Gq6), c.NW.string(c.t.YU7aaW)),
+            i = (0, l.o)(c.NW.string(c.t['TCzk/f']), c.NW.string(c.t['2OqtJC'])),
+            s = (0, l.o)(c.NW.string(c.t.ASf7XF), c.NW.string(c.t['82y87e'])),
+            u = (0, l.o)(c.NW.string(c.t['0QDVFB']), c.NW.string(c.t['1xBHHR']));
+        return (0, r.jsxs)('div', {
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(a.Text, {
                     className: d.groupHeader,
                     variant: 'text-xxs/bold',
                     color: 'header-secondary',
                     children: n
                 }),
-                (0, i.jsx)(m, {
-                    header: c.intl.string(c.t['/zMYZW']),
-                    description: c.intl.string(c.t.DxFKkZ),
-                    icon: (0, i.jsx)(l.iFz, {
+                (0, r.jsx)(m, {
+                    header: c.NW.string(c.t['/zMYZW']),
+                    description: c.NW.string(c.t.DxFKkZ),
+                    icon: (0, r.jsx)(a.iFz, {
                         size: 'custom',
                         width: 20,
                         height: 20,
-                        color: l.TVs.colors.TEXT_PRIMARY.css
+                        color: a.TVs.colors.TEXT_PRIMARY.css
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(m, {
-                    header: c.intl.string(c.t['44NEx8']),
-                    description: c.intl.string(c.t.WrY56O),
-                    icon: (0, i.jsx)(l.dRF, {
+                (0, r.jsx)(m, {
+                    header: c.NW.string(c.t['44NEx8']),
+                    description: c.NW.string(c.t.WrY56O),
+                    icon: (0, r.jsx)(a.dRF, {
                         size: 'custom',
                         width: 20,
                         height: 20,
-                        color: l.TVs.colors.TEXT_PRIMARY.css
+                        color: a.TVs.colors.TEXT_PRIMARY.css
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(m, {
-                    header: c.intl.string(c.t['Z3G+8v']),
-                    description: c.intl.string(c.t.KBgAra),
-                    icon: (0, i.jsx)(o.Z, {
+                (0, r.jsx)(m, {
+                    header: c.NW.string(c.t['Z3G+8v']),
+                    description: c.NW.string(c.t.KBgAra),
+                    icon: (0, r.jsx)(o.Z, {
                         width: 20,
                         height: 20,
-                        color: l.TVs.colors.TEXT_PRIMARY.css
+                        color: a.TVs.colors.TEXT_PRIMARY.css
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(a.Text, {
                     className: d.groupHeader,
                     variant: 'text-xxs/bold',
                     color: 'header-secondary',
-                    children: s
+                    children: i
                 }),
-                (0, i.jsx)(m, {
-                    header: r,
+                (0, r.jsx)(m, {
+                    header: s,
                     description: u,
-                    icon: (0, i.jsx)(l.Dio, {
+                    icon: (0, r.jsx)(a.Dio, {
                         size: 'custom',
                         width: 20,
                         height: 20,
-                        color: l.TVs.colors.TEXT_PRIMARY.css
+                        color: a.TVs.colors.TEXT_PRIMARY.css
                     }),
                     inModal: t
                 })

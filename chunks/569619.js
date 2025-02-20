@@ -1670,7 +1670,7 @@ var eF = {
                                 background: 0,
                                 border: 0,
                                 fontSize: 'inherit',
-                                opacity: u ? 0 : 1,
+                                opacity: +!u,
                                 outline: 0,
                                 padding: 0,
                                 color: 'inherit'

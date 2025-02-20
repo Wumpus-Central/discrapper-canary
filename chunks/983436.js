@@ -1,52 +1,52 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => h });
+var r = n(200651),
+    i = n(192379),
     a = n(287734),
-    r = n(475468),
-    s = n(358555),
-    o = n(955415),
+    o = n(475468),
+    l = n(358555),
+    s = n(955415),
     c = n(944486),
     d = n(914010),
     u = n(626135),
-    m = n(981631),
-    _ = n(388032),
-    h = n(791686);
-function p(e) {
+    p = n(981631),
+    m = n(388032),
+    f = n(217480);
+function h(e) {
     var t;
-    let { guild: n, channel: p, messageData: g } = e,
-        f = d.Z.getGuildId(),
-        x = c.Z.getChannelId(f),
-        C = l.useCallback(() => {
+    let { guild: n, channel: h, messageData: g } = e,
+        _ = d.Z.getGuildId(),
+        b = c.Z.getChannelId(_),
+        v = i.useCallback(() => {
             var e;
-            u.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+            u.default.track(p.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
-                link_channel_id: p.id,
-                link_channel_type: p.type,
-                guild_id: f,
-                channel_id: x
+                link_channel_id: h.id,
+                link_channel_type: h.type,
+                guild_id: _,
+                channel_id: b
             }),
-                (0, r.K)(n.id, p.id),
-                a.default.selectVoiceChannel(p.id);
-        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, f, x]),
-        E = (0, i.jsx)(o.Z.Channel, { channel: p });
-    return (0, i.jsx)(o.Z, {
-        children: (0, i.jsxs)(o.Z.Body, {
+                (0, o.K)(n.id, h.id),
+                a.default.selectVoiceChannel(h.id);
+        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, h.id, h.type, _, b]),
+        y = (0, r.jsx)(s.Z.Channel, { channel: h });
+    return (0, r.jsx)(s.Z, {
+        children: (0, r.jsxs)(s.Z.Body, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: h.headerLine,
+                (0, r.jsxs)('div', {
+                    className: f.headerLine,
                     children: [
-                        (0, i.jsx)(o.Z.Icon, { guild: n }),
-                        (0, i.jsx)(o.Z.Info, {
-                            title: E,
-                            onClick: C,
-                            children: (0, i.jsxs)('span', {
-                                className: h.infoTitle,
+                        (0, r.jsx)(s.Z.Icon, { guild: n }),
+                        (0, r.jsx)(s.Z.Info, {
+                            title: y,
+                            onClick: v,
+                            children: (0, r.jsxs)('span', {
+                                className: f.infoTitle,
                                 children: [
-                                    _.intl.format(_.t['2wimj4'], { guildName: n.name }),
-                                    (0, i.jsx)('span', {
-                                        className: h.infoBadge,
-                                        children: (0, i.jsx)(s.Z, {
+                                    m.NW.format(m.t['2wimj4'], { guildName: n.name }),
+                                    (0, r.jsx)('span', {
+                                        className: f.infoBadge,
+                                        children: (0, r.jsx)(l.Z, {
                                             guild: n,
                                             isBannerVisible: !1
                                         })
@@ -56,10 +56,10 @@ function p(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Z.Button, {
-                    onClick: C,
-                    color: o.Z.Button.Colors.GREEN,
-                    children: p.isGuildStageVoice() ? _.intl.string(_.t['7vb2cX']) : _.intl.string(_.t['96ANUF'])
+                (0, r.jsx)(s.Z.Button, {
+                    onClick: v,
+                    color: s.Z.Button.Colors.GREEN,
+                    children: h.isGuildStageVoice() ? m.NW.string(m.t['7vb2cX']) : m.NW.string(m.t['96ANUF'])
                 })
             ]
         })

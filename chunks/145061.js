@@ -1,32 +1,32 @@
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(829307),
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(829307),
     l = n(877837),
-    u = n(361016),
-    c =
+    c = n(361016),
+    u =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
     d = function (e) {
         var t = e.width,
             n = e.height,
-            r = e.onChange,
-            a = e.hsl,
-            u = e.direction,
+            i = e.onChange,
+            o = e.hsl,
+            c = e.direction,
             d = e.pointer,
             f = e.styles,
-            _ = void 0 === f ? {} : f,
-            p = e.className,
-            h = void 0 === p ? '' : p,
-            m = (0, s.default)(
-                (0, o.Z)(
+            p = void 0 === f ? {} : f,
+            _ = e.className,
+            h = void 0 === _ ? '' : _,
+            m = (0, a.default)(
+                (0, s.Z)(
                     {
                         default: {
                             picker: {
@@ -37,40 +37,40 @@ var i = n(192379),
                             hue: { radius: '2px' }
                         }
                     },
-                    _
+                    p
                 )
             ),
             g = function (e) {
-                return r({
+                return i({
                     a: 1,
                     h: e.h,
                     l: 0.5,
                     s: 1
                 });
             };
-        return i.createElement(
+        return r.createElement(
             'div',
             {
                 style: m.picker,
                 className: 'hue-picker ' + h
             },
-            i.createElement(
+            r.createElement(
                 l.PS,
-                c({}, m.hue, {
-                    hsl: a,
+                u({}, m.hue, {
+                    hsl: o,
                     pointer: d,
                     onChange: g,
-                    direction: u
+                    direction: c
                 })
             )
         );
     };
-(d.propTypes = { styles: a().object }),
+(d.propTypes = { styles: o().object }),
     (d.defaultProps = {
         width: '316px',
         height: '16px',
         direction: 'horizontal',
-        pointer: u.Z,
+        pointer: c.Z,
         styles: {}
     }),
     (0, l.t1)(d);

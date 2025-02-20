@@ -1,21 +1,21 @@
-n.d(t, { Z: () => s });
-var i = n(192379),
-    r = n(512722),
-    a = n.n(r);
-function s(e, t) {
-    let n = (0, i.useRef)(e),
-        r = (0, i.useRef)(null);
-    (0, i.useEffect)(() => {
+n.d(t, { Z: () => a });
+var r = n(192379),
+    i = n(512722),
+    o = n.n(i);
+function a(e, t) {
+    let n = (0, r.useRef)(e),
+        i = (0, r.useRef)(null);
+    (0, r.useEffect)(() => {
         n.current = e;
     }, [e]),
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             function e() {
-                a()(null != n.current, 'Missing callback'), n.current();
+                o()(null != n.current, 'Missing callback'), n.current();
             }
             if (null === t) {
-                null !== r.current && (clearInterval(r.current), (r.current = null));
+                null !== i.current && (clearInterval(i.current), (i.current = null));
                 return;
             }
-            return (r.current = setInterval(e, t)), () => clearInterval(r.current);
+            return (i.current = setInterval(e, t)), () => clearInterval(i.current);
         }, [t]);
 }

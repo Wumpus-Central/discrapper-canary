@@ -1,3 +1,3 @@
 e.exports = function (e, t, n) {
-    for (var i = this, r = 0; r < e.length; ++r) i.bindSingle(e[r], t, n);
+    for (var r = this, i = 0; i < e.length; ++i) r.bindSingle(e[i], t, n);
 };

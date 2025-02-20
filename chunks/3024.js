@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s });
-var i = n(192379),
-    r = n(723184),
-    a = n(877837);
-let s = function (e) {
+n.d(t, { Z: () => a });
+var r = n(192379),
+    i = n(723184),
+    o = n(877837);
+let a = function (e) {
     var t = e.hex,
         n = e.rgb,
-        s = e.onChange,
-        o = (0, r.default)({
+        a = e.onChange,
+        s = (0, i.default)({
             default: {
                 fields: {
                     display: 'flex',
@@ -66,7 +66,7 @@ let s = function (e) {
         }),
         l = function (e, t) {
             e.r || e.g || e.b
-                ? s(
+                ? a(
                       {
                           r: e.r || n.r,
                           g: e.g || n.g,
@@ -75,7 +75,7 @@ let s = function (e) {
                       },
                       t
                   )
-                : s(
+                : a(
                       {
                           hex: e.hex,
                           source: 'hex'
@@ -83,48 +83,48 @@ let s = function (e) {
                       t
                   );
         };
-    return i.createElement(
+    return r.createElement(
         'div',
         {
-            style: o.fields,
+            style: s.fields,
             className: 'flexbox-fix'
         },
-        i.createElement('div', { style: o.active }),
-        i.createElement(a.Vm, {
+        r.createElement('div', { style: s.active }),
+        r.createElement(o.Vm, {
             style: {
-                wrap: o.HEXwrap,
-                input: o.HEXinput,
-                label: o.HEXlabel
+                wrap: s.HEXwrap,
+                input: s.HEXinput,
+                label: s.HEXlabel
             },
             label: 'hex',
             value: t,
             onChange: l
         }),
-        i.createElement(a.Vm, {
+        r.createElement(o.Vm, {
             style: {
-                wrap: o.RGBwrap,
-                input: o.RGBinput,
-                label: o.RGBlabel
+                wrap: s.RGBwrap,
+                input: s.RGBinput,
+                label: s.RGBlabel
             },
             label: 'r',
             value: n.r,
             onChange: l
         }),
-        i.createElement(a.Vm, {
+        r.createElement(o.Vm, {
             style: {
-                wrap: o.RGBwrap,
-                input: o.RGBinput,
-                label: o.RGBlabel
+                wrap: s.RGBwrap,
+                input: s.RGBinput,
+                label: s.RGBlabel
             },
             label: 'g',
             value: n.g,
             onChange: l
         }),
-        i.createElement(a.Vm, {
+        r.createElement(o.Vm, {
             style: {
-                wrap: o.RGBwrap,
-                input: o.RGBinput,
-                label: o.RGBlabel
+                wrap: s.RGBwrap,
+                input: s.RGBinput,
+                label: s.RGBlabel
             },
             label: 'b',
             value: n.b,

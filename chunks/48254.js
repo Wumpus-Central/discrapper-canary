@@ -1,12 +1,12 @@
-n.d(t, { C: () => a });
-var i = n(192379),
-    r = n(723184);
-let a = function (e) {
+n.d(t, { C: () => o });
+var r = n(192379),
+    i = n(723184);
+let o = function (e) {
     var t = e.onClick,
         n = e.label,
-        a = e.children,
-        s = e.active,
-        o = (0, r.default)(
+        o = e.children,
+        a = e.active,
+        s = (0, i.default)(
             {
                 default: {
                     button: {
@@ -25,14 +25,14 @@ let a = function (e) {
                 },
                 active: { button: { boxShadow: '0 0 0 1px #878787' } }
             },
-            { active: s }
+            { active: a }
         );
-    return i.createElement(
+    return r.createElement(
         'div',
         {
-            style: o.button,
+            style: s.button,
             onClick: t
         },
-        n || a
+        n || o
     );
 };

@@ -1,10 +1,10 @@
-var i = n(703284),
-    r = n(771701),
-    a = n(830911),
-    s = n(706627);
-function o(e, t, n) {
-    if (!s(n)) return !1;
-    var o = typeof t;
-    return ('number' == o ? !!(r(n) && a(t, n.length)) : 'string' == o && t in n) && i(n[t], e);
+var r = n(703284),
+    i = n(771701),
+    o = n(830911),
+    a = n(706627);
+function s(e, t, n) {
+    if (!a(n)) return !1;
+    var s = typeof t;
+    return ('number' == s ? !!(i(n) && o(t, n.length)) : 'string' == s && t in n) && r(n[t], e);
 }
-e.exports = o;
+e.exports = s;

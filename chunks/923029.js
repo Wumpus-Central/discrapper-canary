@@ -1,44 +1,44 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    a = n(873546),
-    r = n(442837),
-    s = n(481060),
-    o = n(665149),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    l = n(873546),
+    o = n(442837),
+    a = n(481060),
+    s = n(665149),
     c = n(911560),
-    d = n(210887),
-    u = n(914010),
-    h = n(981631),
-    p = n(388032),
-    m = n(603332);
-function f(e) {
+    u = n(210887),
+    d = n(914010),
+    p = n(981631),
+    h = n(388032),
+    f = n(515302);
+function m(e) {
     let t,
-        { channelId: f } = e;
-    l.useEffect(() => {
-        c.Z.loadThread(f);
+        { channelId: m } = e;
+    i.useEffect(() => {
+        c.Z.loadThread(m);
     });
-    let g = (0, r.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
-        _ = (0, r.e7)([d.Z], () => d.Z.theme);
+    let g = (0, o.e7)([d.Z], () => d.Z.getGuildId()) === p.I_8,
+        b = (0, o.e7)([u.Z], () => u.Z.theme);
     return (
         (t = g
-            ? (0, i.jsx)(s.OZU, {
-                  note: p.intl.string(p.t['D5SN5+']),
-                  children: p.intl.string(p.t.xVTAdX)
+            ? (0, r.jsx)(a.OZU, {
+                  note: h.NW.string(h.t['D5SN5+']),
+                  children: h.NW.string(h.t.xVTAdX)
               })
-            : null != f
-              ? (0, i.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
-              : (0, i.jsx)(s.OZU, {
-                    note: p.intl.string(p.t['LTr+x8']),
-                    children: p.intl.string(p.t.ai6Lbm)
+            : null != m
+              ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.SPINNING_CIRCLE })
+              : (0, r.jsx)(a.OZU, {
+                    note: h.NW.string(h.t['LTr+x8']),
+                    children: h.NW.string(h.t.ai6Lbm)
                 })),
-        (0, i.jsxs)('div', {
-            className: m.noChannel,
+        (0, r.jsxs)('div', {
+            className: f.noChannel,
             children: [
-                a.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.Fragment, {}) }),
-                (0, i.jsxs)(s.ubH, {
-                    theme: _,
+                l.tq && (0, r.jsx)(s.ZP, { children: (0, r.jsx)(i.Fragment, {}) }),
+                (0, r.jsxs)(a.ubH, {
+                    theme: b,
                     children: [
-                        (0, i.jsx)(s.oxh, {
+                        (0, r.jsx)(a.oxh, {
                             darkSrc: g ? n(691270) : n(625065),
                             lightSrc: g ? n(704139) : n(875184),
                             width: 272,

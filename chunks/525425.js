@@ -1,6 +1,6 @@
-var i = n(580897),
-    r = n(703284);
-function a(e, t, n) {
-    ((void 0 === n || r(e[t], n)) && (void 0 !== n || t in e)) || i(e, t, n);
+var r = n(580897),
+    i = n(703284);
+function o(e, t, n) {
+    ((void 0 === n || i(e[t], n)) && (void 0 !== n || t in e)) || r(e, t, n);
 }
-e.exports = a;
+e.exports = o;

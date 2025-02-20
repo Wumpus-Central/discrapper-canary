@@ -1,18 +1,18 @@
-t.d(e, { Z: () => d });
-var l = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(40851),
-    a = t(981631),
-    u = t(388032);
-function d(n) {
-    let { label: e, onAction: t } = n,
-        d = (0, r.Aq)();
-    return (0, l.jsx)(i.sNh, {
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(40851),
+    o = n(981631),
+    a = n(388032);
+function u(e) {
+    let { label: t, onAction: n } = e,
+        u = (0, i.Aq)();
+    return (0, r.jsx)(l.sNh, {
         id: 'user-profile-overlay',
-        label: null != e ? e : u.intl.string(u.t.LYju5O),
+        label: null != t ? t : a.NW.string(a.t.LYju5O),
         action: () => {
-            null == t || t(), d.dispatch(a.CkL.POPOUT_CLOSE);
+            null == n || n(), u.dispatch(o.CkL.POPOUT_CLOSE);
         }
     });
 }

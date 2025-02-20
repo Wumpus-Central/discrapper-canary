@@ -1,11 +1,11 @@
-n.d(t, {
-    ZP: () => l,
-    lY: () => a
+t.d(n, {
+    ZP: () => r,
+    lY: () => c
 });
-var i = n(388032);
-function l(e) {
-    return e > 0 ? i.intl.formatToPlainString(i.t['p/YmkZ'], { count: e }) : i.intl.string(i.t.s1vQIC);
+var o = t(388032);
+function r(e) {
+    return e > 0 ? o.NW.formatToPlainString(o.t['p/YmkZ'], { count: e }) : o.NW.string(o.t.s1vQIC);
 }
-function a(e) {
-    return e > 0 ? '1-'.concat(e) : i.intl.string(i.t.zMNEiI);
+function c(e) {
+    return e > 0 ? '1-'.concat(e) : o.NW.string(o.t.zMNEiI);
 }

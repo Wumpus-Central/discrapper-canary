@@ -1,30 +1,30 @@
-n.d(t, { Z: () => o });
-var i = n(392711),
-    l = n.n(i),
-    r = n(243814),
-    a = n(186901),
-    s = n(981631);
-function o(e, t) {
+n.d(t, { Z: () => s });
+var r = n(392711),
+    i = n.n(r),
+    l = n(243814),
+    o = n(186901),
+    a = n(981631);
+function s(e, t) {
     return {
-        [s.zMe.VOICE_SETTINGS_UPDATE]: {
+        [a.zMe.VOICE_SETTINGS_UPDATE]: {
             scope: {
-                [a.Gp.ANY]: [r.x.RPC, r.x.RPC_VOICE_READ]
+                [o.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
             },
             handler: () => (t) => {
-                let { prevState: n, dispatch: i } = t,
-                    r = e();
-                return l().isEqual(r, n) || i(r), r;
+                let { prevState: n, dispatch: r } = t,
+                    l = e();
+                return i().isEqual(l, n) || r(l), l;
             }
         },
-        [s.zMe.VOICE_SETTINGS_UPDATE_2]: {
-            scope: a.lH,
+        [a.zMe.VOICE_SETTINGS_UPDATE_2]: {
+            scope: o.lH,
             handler(e) {
                 let { socket: n } = e;
                 return (e) => {
-                    let { prevState: i, dispatch: r } = e;
-                    if (null == n.application.id) return i;
-                    let a = t(n.application.id);
-                    return l().isEqual(a, i) || r(a), a;
+                    let { prevState: r, dispatch: l } = e;
+                    if (null == n.application.id) return r;
+                    let o = t(n.application.id);
+                    return i().isEqual(o, r) || l(o), o;
                 };
             }
         }

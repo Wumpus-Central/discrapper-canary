@@ -1,57 +1,57 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(990547),
-    r = n(481060),
-    a = n(313201),
-    s = n(758119),
-    o = n(388032),
-    d = n(283026);
-function c(e) {
+var i = n(990547),
+    l = n(481060),
+    o = n(313201),
+    a = n(758119),
+    s = n(388032),
+    c = n(315743);
+function u(e) {
     let { transitionState: t } = e,
-        c = (0, a.Dt)();
-    return (0, i.jsxs)(r.Y0X, {
+        u = (0, o.Dt)();
+    return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        size: r.CgR.SMALL,
-        'aria-labelledby': c,
+        size: l.CgR.SMALL,
+        'aria-labelledby': u,
         impression: {
-            impressionName: l.ImpressionNames.USER_AGE_GATE,
+            impressionName: i.ImpressionNames.USER_AGE_GATE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(r.hzk, {
-                children: (0, i.jsxs)('div', {
-                    className: d.container,
+            (0, r.jsx)(l.hzk, {
+                children: (0, r.jsxs)('div', {
+                    className: c.container,
                     children: [
-                        (0, i.jsx)('img', {
+                        (0, r.jsx)('img', {
                             alt: '',
                             src: n(863181),
-                            className: d.img
+                            className: c.img
                         }),
-                        (0, i.jsx)(r.X6q, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: d.title,
-                            id: c,
-                            children: o.intl.string(o.t.gUiIGR)
+                            className: c.title,
+                            id: u,
+                            children: s.NW.string(s.t.gUiIGR)
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
-                            className: d.subtitle,
+                            className: c.subtitle,
                             variant: 'text-sm/normal',
-                            children: o.intl.string(o.t.susqq6)
+                            children: s.NW.string(s.t.susqq6)
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(r.mzw, {
-                children: (0, i.jsx)(r.zxk, {
-                    size: r.PhG.SMALL,
+            (0, r.jsx)(l.mzw, {
+                children: (0, r.jsx)(l.zxk, {
+                    size: l.PhG.SMALL,
                     fullWidth: !0,
                     onClick: function () {
-                        (0, s.qV)();
+                        (0, a.qV)();
                     },
                     autoFocus: !0,
-                    children: o.intl.string(o.t.cpT0Cg)
+                    children: s.NW.string(s.t.cpT0Cg)
                 })
             })
         ]

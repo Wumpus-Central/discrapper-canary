@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(147913),
-    r = n(592125),
-    a = n(109590),
-    s = n(176505);
-function o(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(147913),
+    i = n(592125),
+    o = n(109590),
+    a = n(176505);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,15 +16,15 @@ function o(e, t, n) {
         e
     );
 }
-class l extends i.Z {
+class l extends r.Z {
     handleChannelPreload(e) {
         let { channelId: t } = e;
-        if ((0, s.AB)(t)) return;
-        let n = r.Z.getChannel(t);
-        null != n && n.isForumLikeChannel() && (0, a.EB)(n);
+        if ((0, a.AB)(t)) return;
+        let n = i.Z.getChannel(t);
+        null != n && n.isForumLikeChannel() && (0, o.EB)(n);
     }
     constructor(...e) {
-        super(...e), o(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload });
+        super(...e), s(this, 'actions', { CHANNEL_PRELOAD: this.handleChannelPreload });
     }
 }
-let u = new l();
+let c = new l();

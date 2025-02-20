@@ -1,24 +1,24 @@
 n.d(t, {
-    VK: () => s,
-    qu: () => o
+    VK: () => a,
+    qu: () => s
 }),
     n(47120);
-var i = n(44315),
-    r = n(469115),
-    a = n(231338);
-function s(e) {
+var r = n(44315),
+    i = n(469115),
+    o = n(231338);
+function a(e) {
     let { angle: t, colors: n } = e;
     return 'linear-gradient('.concat(t, 'deg, ').concat(
         n
             .map((e) => {
                 let { token: t, stop: n } = e;
-                return ''.concat((0, i.Lq)(t), ' ').concat(n, '%');
+                return ''.concat((0, r.Lq)(t), ' ').concat(n, '%');
             })
             .join(', '),
         ')'
     );
 }
-function o(e, t) {
-    return e === t || (e === a.BR.DARK && t === a.BR.DARKER) || (e === a.BR.DARKER && t === a.BR.DARK);
+function s(e, t) {
+    return e === t || (e === o.BR.DARK && t === o.BR.DARKER) || (e === o.BR.DARKER && t === o.BR.DARK);
 }
-[...r.bV, ...r.Qf];
+[...i.bV, ...i.Qf];

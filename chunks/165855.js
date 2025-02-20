@@ -1,27 +1,27 @@
-e.d(t, { Z: () => h });
-var i = e(200651);
-e(192379);
-var l = e(442837),
-    r = e(481060),
-    a = e(455395),
-    s = e(750850),
-    d = e(581052),
-    u = e(875252),
-    o = e(583332),
-    c = e(594174);
-function h(n) {
-    let { channel: t } = n,
-        e = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        h = (0, d.V)(t),
-        f = (0, a.i)(t),
-        x = (0, o.g)(t),
-        _ = (0, u.H)(t),
-        g = (0, s.e)(t);
-    return (null == e ? void 0 : e.isStaff()) !== !0
+n.d(t, { Z: () => f });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(455395),
+    o = n(750850),
+    s = n(581052),
+    c = n(875252),
+    u = n(583332),
+    d = n(594174);
+function f(e) {
+    let { channel: t } = e,
+        n = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
+        f = (0, s.V)(t),
+        h = (0, a.i)(t),
+        g = (0, u.g)(t),
+        O = (0, c.H)(t),
+        j = (0, o.e)(t);
+    return (null == n ? void 0 : n.isStaff()) !== !0
         ? null
-        : (0, i.jsxs)(r.sNh, {
+        : (0, r.jsxs)(l.sNh, {
               id: 'dev tools',
               label: 'Dev Tools',
-              children: [(0, i.jsx)(r.kSQ, { children: h }), (0, i.jsx)(r.kSQ, { children: _ }), (0, i.jsx)(r.kSQ, { children: x }), (0, i.jsx)(r.kSQ, { children: f }), (0, i.jsx)(r.kSQ, { children: g })]
+              children: [(0, r.jsx)(l.kSQ, { children: f }), (0, r.jsx)(l.kSQ, { children: O }), (0, r.jsx)(l.kSQ, { children: g }), (0, r.jsx)(l.kSQ, { children: h }), (0, r.jsx)(l.kSQ, { children: j })]
           });
 }

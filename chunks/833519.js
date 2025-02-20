@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
     o = n(442837),
     s = n(481060),
     c = n(475179),
@@ -44,10 +44,10 @@ var r = n(200651),
     U = n(668595);
 let z = new p.Z('StreamTile');
 function V(e) {
-    let { participant: t, selected: n, focused: l, idle: a, width: s, premiumIndicator: c } = e,
+    let { participant: t, selected: n, focused: i, idle: a, width: s, premiumIndicator: c } = e,
         u = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, D.K)(s),
-        [f, p] = i.useState(!1),
+        [f, p] = l.useState(!1),
         h = (0, o.e7)([Z.Z], () => Z.Z.getChannel(null == u ? void 0 : u.channelId));
     return (
         (0, E.J)(h, () => {
@@ -64,7 +64,7 @@ function V(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 n ? null : (0, r.jsx)(T.Z, { participant: t }),
-                l || null == u || u.state === M.jm8.ENDED || u.state === M.jm8.FAILED
+                i || null == u || u.state === M.jm8.ENDED || u.state === M.jm8.FAILED
                     ? null
                     : (0, r.jsx)(b.Z, {
                           size: m.ZP.Sizes.SMALL,
@@ -79,7 +79,7 @@ function V(e) {
     );
 }
 function H(e) {
-    let { participant: t, selected: n, onVideoResize: l, paused: m, fit: p, inPopout: b, inOverlayPopout: E = !1, width: T, focused: D, wrapperClassName: V } = e,
+    let { participant: t, selected: n, onVideoResize: i, paused: m, fit: p, inPopout: b, inOverlayPopout: E = !1, width: T, focused: D, wrapperClassName: V } = e,
         H = w.Z.getVideoComponent(),
         Y = (0, o.e7)([x.default], () => x.default.getId()),
         B = (0, h.Z)(),
@@ -96,7 +96,7 @@ function H(e) {
         ((0, d.ZP)(() => {
             !X && (null == J ? void 0 : J.isGuildStageVoice()) && !ee && ((0, u.rn)(K), c.Z.updateStageStreamSize(K.channelId, !1));
         }),
-        i.useEffect(() => {
+        l.useEffect(() => {
             z.info(
                 'Stream Tile State - activeStream: '
                     .concat(null != Q, ' | selected: ')
@@ -188,7 +188,7 @@ function H(e) {
                 (0, r.jsx)(
                     y.Z,
                     {
-                        onResize: l,
+                        onResize: i,
                         wrapperClassName: a()(U.videoWrapper, V),
                         className: U.content,
                         streamId: G,

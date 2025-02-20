@@ -1,73 +1,73 @@
-l.d(n, { Z: () => S }), l(724458), l(47120);
-var t = l(200651),
-    i = l(192379),
-    s = l(512722),
-    a = l.n(s),
-    r = l(392711),
-    o = l.n(r),
-    u = l(856901),
-    c = l(481060),
-    d = l(687058),
-    m = l(537135),
-    x = l(176940),
-    g = l(388032),
-    h = l(604196),
-    Z = l(323499),
-    v = l(483938);
-function S(e) {
-    let { selectedSource: n, onChangeVideoDeviceSource: l, onChangeAudioDevice: s } = e;
-    a()(null != n, 'Camera capture device cannot be null');
-    let r = (0, x.Z)(),
-        S = (0, d.Z)(),
-        [j, C] = i.useState(
-            (function (e, n, l) {
-                if (null != n && null != l) {
-                    let t = n.find((n) => n.id === e);
-                    if (null == t) return;
-                    let i = o().reduce(l, (e, n) => ((0, u.stringSimilarity)(t.name, n.name) > (0, u.stringSimilarity)(t.name, e.name) ? n : e));
+t.d(n, { Z: () => j }), t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(512722),
+    s = t.n(r),
+    a = t(392711),
+    o = t.n(a),
+    c = t(856901),
+    u = t(481060),
+    d = t(687058),
+    m = t(537135),
+    g = t(176940),
+    h = t(388032),
+    x = t(414803),
+    v = t(382840),
+    f = t(455812);
+function j(e) {
+    let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: r } = e;
+    s()(null != n, 'Camera capture device cannot be null');
+    let a = (0, g.Z)(),
+        j = (0, d.Z)(),
+        [Z, N] = i.useState(
+            (function (e, n, t) {
+                if (null != n && null != t) {
+                    let l = n.find((n) => n.id === e);
+                    if (null == l) return;
+                    let i = o().reduce(t, (e, n) => ((0, c.stringSimilarity)(l.name, n.name) > (0, c.stringSimilarity)(l.name, e.name) ? n : e));
                     if (null != i) return i.id;
                 }
-            })(n.id, r, S)
+            })(n.id, a, j)
         );
     return (
-        null != j && s(j),
-        (0, t.jsx)(i.Fragment, {
-            children: (0, t.jsxs)(c.xJW, {
+        null != Z && r(Z),
+        (0, l.jsx)(i.Fragment, {
+            children: (0, l.jsxs)(u.xJW, {
                 title: 'Capture Device',
-                className: Z.modalContent,
+                className: v.modalContent,
                 children: [
-                    (0, t.jsx)(c.xJW, {
-                        className: v.marginTop8,
-                        children: (0, t.jsxs)(m.Z, {
+                    (0, l.jsx)(u.xJW, {
+                        className: f.marginTop8,
+                        children: (0, l.jsxs)(m.Z, {
                             children: [
-                                (0, t.jsx)('span', {
-                                    className: h.ellipsisText,
+                                (0, l.jsx)('span', {
+                                    className: x.ellipsisText,
                                     children: n.name
                                 }),
-                                (0, t.jsx)(c.zxk, {
-                                    className: h.changeButton,
-                                    color: c.zxk.Colors.PRIMARY,
-                                    size: c.zxk.Sizes.SMALL,
-                                    onClick: l,
-                                    children: g.intl.string(g.t.GEgsAw)
+                                (0, l.jsx)(u.zxk, {
+                                    className: x.changeButton,
+                                    color: u.zxk.Colors.PRIMARY,
+                                    size: u.zxk.Sizes.SMALL,
+                                    onClick: t,
+                                    children: h.NW.string(h.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
-                    (0, t.jsx)(c.xJW, {
-                        className: v.marginTop8,
-                        title: g.intl.string(g.t.y4ooen),
-                        children: (0, t.jsx)(c.q4e, {
-                            value: j,
-                            className: v.__invalid_marginaTop8,
+                    (0, l.jsx)(u.xJW, {
+                        className: f.marginTop8,
+                        title: h.NW.string(h.t.y4ooen),
+                        children: (0, l.jsx)(u.q4e, {
+                            value: Z,
+                            className: f.__invalid_marginaTop8,
                             onChange: (e) => {
-                                C(e), s(e);
+                                N(e), r(e);
                             },
-                            options: o().map(S, (e) => {
-                                let { id: n, name: l } = e;
+                            options: o().map(j, (e) => {
+                                let { id: n, name: t } = e;
                                 return {
                                     value: n,
-                                    label: l
+                                    label: t
                                 };
                             })
                         })

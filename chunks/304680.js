@@ -1,52 +1,52 @@
 n.d(t, {
     MS: () => f,
     TC: () => d,
-    bA: () => o,
-    gl: () => _,
+    bA: () => s,
+    gl: () => p,
     xv: () => l,
-    z4: () => u,
-    zc: () => c
+    z4: () => c,
+    zc: () => u
 });
-var i = n(570140),
-    r = n(579806),
-    a = n(569550),
-    s = n(226961);
-function o(e) {
-    i.Z.dispatch({
+var r = n(570140),
+    i = n(579806),
+    o = n(569550),
+    a = n(226961);
+function s(e) {
+    r.Z.dispatch({
         type: 'RTC_DEBUG_MODAL_OPEN',
         section: e
     }),
-        i.Z.dispatch({ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN' });
+        r.Z.dispatch({ type: 'RTC_DEBUG_POPOUT_WINDOW_OPEN' });
 }
 function l() {
-    i.Z.dispatch({ type: 'RTC_DEBUG_MODAL_CLOSE' });
+    r.Z.dispatch({ type: 'RTC_DEBUG_MODAL_CLOSE' });
 }
-function u() {
-    i.Z.dispatch({ type: 'RTC_DEBUG_MODAL_OPEN_REPLAY' });
+function c() {
+    r.Z.dispatch({ type: 'RTC_DEBUG_MODAL_OPEN_REPLAY' });
 }
-function c(e) {
-    i.Z.dispatch({
+function u(e) {
+    r.Z.dispatch({
         type: 'RTC_DEBUG_MODAL_SET_SECTION',
         section: e
     });
 }
 function d(e) {
-    (0, a.Z)('connection_replay_log_enabled', e, s.ZP.shouldRecordNextConnection()),
-        i.Z.dispatch({
+    (0, o.Z)('connection_replay_log_enabled', e, a.ZP.shouldRecordNextConnection()),
+        r.Z.dispatch({
             type: 'RTC_DEBUG_SET_RECORDING_FLAG',
             value: e
         });
 }
 function f(e, t, n) {
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'RTC_DEBUG_SET_SIMULCAST_OVERRIDE',
         userId: e,
         context: t,
         quality: n
     });
 }
-function _() {
-    r.Z.fileManager
+function p() {
+    i.Z.fileManager
         .showOpenDialog({
             filters: [
                 {
@@ -57,7 +57,7 @@ function _() {
         })
         .then((e) => {
             let t = 0 === e.length ? '' : e[0];
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH',
                 path: t
             });

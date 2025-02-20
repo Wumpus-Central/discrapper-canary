@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(836560),
-    r = n(68721),
-    a = n(961304),
-    s = n(65154);
-function o(e, t, n) {
+n.d(t, { Z: () => c }), n(47120), n(301563);
+var r = n(836560),
+    i = n(68721),
+    o = n(961304),
+    a = n(65154);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ let l = {
     offerToReceiveVideo: !1,
     iceRestart: !1
 };
-class u extends i.EventEmitter {
+class c extends r.EventEmitter {
     stop() {
         for (let e of (this.pc1.close(), this.pc2.close(), this.input.destroy(), Object.keys(this.outputs))) this.destroyOutput(e);
     }
@@ -37,7 +37,7 @@ class u extends i.EventEmitter {
     }
     createOutput(e, t) {
         let n = this.outputs[e];
-        null == n && (((n = new a.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(s.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
+        null == n && (((n = new o.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(a.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
     }
     destroyOutput(e, t) {
         let n = this.outputs[e];
@@ -64,21 +64,21 @@ class u extends i.EventEmitter {
             });
         });
     }
-    constructor(e, t, n, i = '') {
+    constructor(e, t, n, r = '') {
         super(),
-            o(this, 'userId', void 0),
-            o(this, 'sinkId', void 0),
-            o(this, 'input', void 0),
-            o(this, 'pc1', void 0),
-            o(this, 'pc2', void 0),
-            o(this, 'senders', []),
-            o(this, 'outputs', {}),
-            o(this, 'audioContext', void 0),
-            o(this, 'handleStream', () => {
+            s(this, 'userId', void 0),
+            s(this, 'sinkId', void 0),
+            s(this, 'input', void 0),
+            s(this, 'pc1', void 0),
+            s(this, 'pc2', void 0),
+            s(this, 'senders', []),
+            s(this, 'outputs', {}),
+            s(this, 'audioContext', void 0),
+            s(this, 'handleStream', () => {
                 let e = this.input.getDelayedStream();
                 this.senders.forEach((e) => this.pc1.removeTrack(e)), (this.senders = [...e.getAudioTracks().map((t) => this.pc1.addTrack(t, e))]), this.handshake();
             }),
-            o(this, 'handleTrack', (e) => {
+            s(this, 'handleTrack', (e) => {
                 e.streams[0].getTracks().forEach((e) => {
                     this.createOutput(e.id, e),
                         (e.onmute = () => {
@@ -86,7 +86,7 @@ class u extends i.EventEmitter {
                         });
                 });
             }),
-            (this.userId = i),
+            (this.userId = r),
             (this.sinkId = n),
             (this.pc1 = new RTCPeerConnection()),
             (this.pc1.onicecandidate = (e) => {
@@ -97,7 +97,7 @@ class u extends i.EventEmitter {
                 null != e.candidate && this.pc1.addIceCandidate(e.candidate);
             }),
             (this.pc2.ontrack = this.handleTrack),
-            (this.input = new r.Z(e)),
+            (this.input = new i.Z(e)),
             this.input.setSource(t),
             this.input.on('stream', this.handleStream),
             this.input.enable(),

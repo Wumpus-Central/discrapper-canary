@@ -25,7 +25,7 @@ let o = function (e) {
             case 58:
                 return e.trim() + t.replace(m, '$1' + e.trim());
             default:
-                if (0 < 1 * n && 0 < t.indexOf('\f')) return t.replace(m, (58 === e.charCodeAt(0) ? '' : '$1') + e.trim());
+                if (0 < +n && 0 < t.indexOf('\f')) return t.replace(m, (58 === e.charCodeAt(0) ? '' : '$1') + e.trim());
         }
         return e + t;
     }

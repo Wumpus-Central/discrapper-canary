@@ -1,7 +1,7 @@
-var i = n(611345),
-    r = n(223944),
-    a = n(474883);
+var r = n(611345),
+    i = n(223944),
+    o = n(474883);
 e.exports = function (e) {
-    for (var t = i(this), n = a(t), s = arguments.length, o = r(s > 1 ? arguments[1] : void 0, n), l = s > 2 ? arguments[2] : void 0, u = void 0 === l ? n : r(l, n); u > o; ) t[o++] = e;
+    for (var t = r(this), n = o(t), a = arguments.length, s = i(a > 1 ? arguments[1] : void 0, n), l = a > 2 ? arguments[2] : void 0, c = void 0 === l ? n : i(l, n); c > s; ) t[s++] = e;
     return t;
 };

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l }), n(47120);
-var i = n(192379);
-function l() {
-    let [e, t] = i.useState(window.innerWidth < 1132);
+n.d(t, { Z: () => i }), n(47120);
+var r = n(192379);
+function i() {
+    let [e, t] = r.useState(window.innerWidth < 1132);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             function e() {
                 t(window.innerWidth < 1132);
             }

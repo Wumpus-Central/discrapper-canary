@@ -1,9 +1,9 @@
-n.d(t, { Z: () => r });
-var i = n(874900);
-function r(e) {
-    var t = (0, i.Z)(e),
+n.d(t, { Z: () => i });
+var r = n(874900);
+function i(e) {
+    var t = (0, r.Z)(e),
         n = t.overflow,
-        r = t.overflowX,
-        a = t.overflowY;
-    return /auto|scroll|overlay|hidden/.test(n + a + r);
+        i = t.overflowX,
+        o = t.overflowY;
+    return /auto|scroll|overlay|hidden/.test(n + o + i);
 }

@@ -1,6 +1,6 @@
 Object.defineProperty(t, '__esModule', { value: !0 });
-let i = n(851409);
-class r {
+let r = n(851409);
+class i {
     constructor() {
         this._queue = [];
     }
@@ -13,8 +13,8 @@ class r {
             this._queue.push(n);
             return;
         }
-        let r = i.default(this._queue, n, (e, t) => t.priority - e.priority);
-        this._queue.splice(r, 0, n);
+        let i = r.default(this._queue, n, (e, t) => t.priority - e.priority);
+        this._queue.splice(i, 0, n);
     }
     dequeue() {
         let e = this._queue.shift();
@@ -27,4 +27,4 @@ class r {
         return this._queue.length;
     }
 }
-t.default = r;
+t.default = i;

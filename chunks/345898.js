@@ -1,33 +1,33 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s }), n(266796);
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(382785);
-let o = (e) => {
-    let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: c, isHorizontal: d = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(s.tile, { [s.tileHorizontal]: d }, c),
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    l = n(483590);
+let s = (e) => {
+    let { renderTitle: t, renderTagline: n, renderActions: i, renderMedia: s, className: c, isHorizontal: d = !1 } = e;
+    return (0, r.jsxs)('div', {
+        className: a()(l.tile, { [l.tileHorizontal]: d }, c),
         children: [
-            (0, i.jsx)('div', {
-                className: a()(s.media, { [s.mediaHorizontal]: d }),
-                children: null == o ? void 0 : o()
+            (0, r.jsx)('div', {
+                className: a()(l.media, { [l.mediaHorizontal]: d }),
+                children: null == s ? void 0 : s()
             }),
-            (0, i.jsxs)('div', {
-                className: s.description,
+            (0, r.jsxs)('div', {
+                className: l.description,
                 children: [
-                    (0, i.jsx)(r.H, {
-                        className: s.title,
+                    (0, r.jsx)(o.H, {
+                        className: l.title,
                         children: null == t ? void 0 : t()
                     }),
-                    (0, i.jsx)('div', {
-                        className: s.tagline,
+                    (0, r.jsx)('div', {
+                        className: l.tagline,
                         children: null == n ? void 0 : n()
                     }),
-                    (0, i.jsx)('div', {
-                        className: s.actions,
-                        children: null == l ? void 0 : l()
+                    (0, r.jsx)('div', {
+                        className: l.actions,
+                        children: null == i ? void 0 : i()
                     })
                 ]
             })

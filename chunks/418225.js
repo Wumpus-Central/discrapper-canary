@@ -1,15 +1,15 @@
-s.d(e, { default: () => m }), s(47120);
+s.d(t, { default: () => m }), s(47120);
 var r = s(200651);
 s(192379);
 var i = s(481060),
-    n = s(935369),
-    l = s(53365),
-    a = s(388032),
-    o = s(647740),
+    a = s(935369),
+    n = s(53365),
+    l = s(388032),
+    o = s(870694),
     c = s(490962),
     d = s(221870);
-function x(t) {
-    let { header: e, body: s } = t;
+function x(e) {
+    let { header: t, body: s } = e;
     return (0, r.jsxs)('div', {
         className: o.bulletItem,
         children: [
@@ -23,7 +23,7 @@ function x(t) {
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
-                        children: e
+                        children: t
                     }),
                     (0, r.jsx)(i.LZC, { size: 4 }),
                     (0, r.jsx)(i.Text, {
@@ -36,20 +36,20 @@ function x(t) {
         ]
     });
 }
-function m(t) {
-    let { guildId: e, demonetized: s, transitionState: c, onClose: m } = t,
-        [h, { loading: u, error: j }] = (0, n.Z)(s ? l.$J : l.hY),
+function m(e) {
+    let { guildId: t, demonetized: s, transitionState: c, onClose: m } = e,
+        [h, { loading: u, error: j }] = (0, a.Z)(s ? n.$J : n.hY),
         g = async () => {
             try {
-                let t = await h(e);
-                null != t && (null == m || m());
-            } catch (t) {}
+                let e = await h(t);
+                null != e && (null == m || m());
+            } catch (e) {}
         };
     return (0, r.jsxs)(i.Y0X, {
         className: o.__invalid_container,
         size: i.CgR.SMALL,
         transitionState: c,
-        'aria-label': a.intl.string(a.t.TP4GSk),
+        'aria-label': l.NW.string(l.t.TP4GSk),
         children: [
             (0, r.jsx)(i.xBx, {
                 separator: !1,
@@ -70,23 +70,23 @@ function m(t) {
                         (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/medium',
                             color: 'header-primary',
-                            children: a.intl.string(a.t.TP4GSk)
+                            children: l.NW.string(l.t.TP4GSk)
                         }),
                         (0, r.jsx)(i.LZC, { size: 12 }),
                         (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: a.intl.format(a.t.c0IsOD, { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: l.NW.format(l.t.c0IsOD, { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         }),
                         (0, r.jsx)(i.LZC, { size: 24 }),
                         (0, r.jsx)(x, {
-                            header: a.intl.string(a.t.UzDaWF),
-                            body: a.intl.string(a.t.IDk8Fx)
+                            header: l.NW.string(l.t.UzDaWF),
+                            body: l.NW.string(l.t.IDk8Fx)
                         }),
                         (0, r.jsx)(i.LZC, { size: 16 }),
                         (0, r.jsx)(x, {
-                            header: a.intl.string(a.t['36/RiY']),
-                            body: a.intl.string(a.t.CBzNtr)
+                            header: l.NW.string(l.t['36/RiY']),
+                            body: l.NW.string(l.t.CBzNtr)
                         })
                     ]
                 })
@@ -99,7 +99,7 @@ function m(t) {
                             fullWidth: !0,
                             onClick: g,
                             submitting: u,
-                            children: a.intl.string(a.t['pC/ozM'])
+                            children: l.NW.string(l.t['pC/ozM'])
                         }),
                         (0, r.jsx)(i.LZC, { size: 4 }),
                         (0, r.jsx)(i.zxk, {
@@ -108,7 +108,7 @@ function m(t) {
                             look: i.zxk.Looks.LINK,
                             fullWidth: !0,
                             onClick: m,
-                            children: a.intl.string(a.t.Jj8nUF)
+                            children: l.NW.string(l.t.Jj8nUF)
                         }),
                         null == j
                             ? null
@@ -126,7 +126,7 @@ function m(t) {
                         (0, r.jsx)(i.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: a.intl.format(a.t['+oNl6+'], { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
+                            children: l.NW.format(l.t['+oNl6+'], { termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
                         })
                     ]
                 })

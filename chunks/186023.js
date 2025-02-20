@@ -10,15 +10,15 @@ var r = n(200651),
     u = n(981631),
     m = n(107360);
 let x = (e) => {
-    let { reportType: t, menu: n, modalProps: x, onSubmit: p, onNavigate: f, emailToken: b, isAuthenticated: _ = !0 } = e,
-        h = (0, o.Dt)(),
+    let { reportType: t, menu: n, modalProps: x, onSubmit: p, onNavigate: f, emailToken: b, isAuthenticated: h = !0 } = e,
+        _ = (0, o.Dt)(),
         { nodes: g, root_node_id: v, success_node_id: j, fail_node_id: N } = n,
         [y, O] = l.useState(v),
         [Z, I] = l.useState(void 0),
-        [T, C] = l.useState(void 0),
+        [C, T] = l.useState(void 0),
         [S, P] = l.useState([]),
-        [E, k] = l.useState(void 0),
-        [W, D] = l.useState(void 0),
+        [k, E] = l.useState(void 0),
+        [W, L] = l.useState(void 0),
         w = (e) => {
             var n, r, l;
             let { destination: i } = e,
@@ -69,7 +69,7 @@ let x = (e) => {
                           }),
                     r)
                 );
-            if ((P([...S, e]), null != c.key && (null == f || f(c.key)), I(void 0), C(void 0), t.name === s.b.MESSAGE || t.name === s.b.FIRST_DM)) {
+            if ((P([...S, e]), null != c.key && (null == f || f(c.key)), I(void 0), T(void 0), t.name === s.b.MESSAGE || t.name === s.b.FIRST_DM)) {
                 let e = t.record.id;
                 a.ZP.trackWithMetadata(u.rMx.IAR_NAVIGATE, {
                     message_id: e,
@@ -81,13 +81,13 @@ let x = (e) => {
             }
             O(o);
         },
-        A = async (e) => {
+        D = async (e) => {
             var r;
-            let l = _ ? await (0, c.ZD)(n, t, [...S, e]) : await (0, c.fw)(n, t, [...S, e], b),
+            let l = h ? await (0, c.ZD)(n, t, [...S, e]) : await (0, c.fw)(n, t, [...S, e], b),
                 i = null == l ? void 0 : null === (r = l.body) || void 0 === r ? void 0 : r.report_id;
-            null != i && k(i), D(g[e.nodeRef].report_type), null == p || p(i);
+            null != i && E(i), L(g[e.nodeRef].report_type), null == p || p(i);
         },
-        L = () => {
+        A = () => {
             var e, n;
             if (S.length < 1) return;
             let r = [...S],
@@ -103,7 +103,7 @@ let x = (e) => {
                     next_node: g[i].id
                 });
             }
-            I(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), O(i), P(r), null == f || f('..');
+            I(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), T(null == l ? void 0 : l.textInput), O(i), P(r), null == f || f('..');
         },
         R = l.useMemo(() => {
             let e = [],
@@ -127,7 +127,7 @@ let x = (e) => {
         }, [g, v, N, j]);
     return (0, r.jsx)(i.Y0X, {
         transitionState: x.transitionState,
-        'aria-labelledby': h,
+        'aria-labelledby': _,
         children: (0, r.jsx)(i.MyZ, {
             width: 440,
             activeSlide: y,
@@ -146,13 +146,13 @@ let x = (e) => {
                                 history: S,
                                 onModalClose: x.onClose,
                                 onSelectChild: w,
-                                onNavigateBack: L,
+                                onNavigateBack: A,
                                 multiSelect: Z,
-                                textInput: T,
+                                textInput: C,
                                 successNodeId: j,
                                 failNodeId: N,
-                                onSubmit: A,
-                                reportId: E
+                                onSubmit: D,
+                                reportId: k
                             })
                         })
                     },

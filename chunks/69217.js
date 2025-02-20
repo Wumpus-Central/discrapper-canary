@@ -90,7 +90,7 @@ var n = r(763453),
                 return;
             }
             S ? d.push(t) : d.push(f(t, u, o)),
-                o.slice(S ? 0 : 1, g - 1).forEach(function (t) {
+                o.slice(+!S, g - 1).forEach(function (t) {
                     return d.push(t);
                 }),
                 d.push(p(t, u, o));

@@ -1,16 +1,16 @@
-n.d(t, { T: () => i });
-var i = function (e, t, n, i) {
-    var r = i.clientWidth,
-        a = i.clientHeight,
-        s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        o = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        l = s - (i.getBoundingClientRect().left + window.pageXOffset),
-        u = o - (i.getBoundingClientRect().top + window.pageYOffset);
+n.d(t, { T: () => r });
+var r = function (e, t, n, r) {
+    var i = r.clientWidth,
+        o = r.clientHeight,
+        a = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+        s = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+        l = a - (r.getBoundingClientRect().left + window.pageXOffset),
+        c = s - (r.getBoundingClientRect().top + window.pageYOffset);
     if ('vertical' === t) {
-        var c = void 0;
-        if (((c = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), n.h !== c))
+        var u = void 0;
+        if (((u = c < 0 ? 359 : c > o ? 0 : (360 * (-((100 * c) / o) + 100)) / 100), n.h !== u))
             return {
-                h: c,
+                h: u,
                 s: n.s,
                 l: n.l,
                 a: n.a,
@@ -18,7 +18,7 @@ var i = function (e, t, n, i) {
             };
     } else {
         var d = void 0;
-        if (((d = l < 0 ? 0 : l > r ? 359 : (((100 * l) / r) * 360) / 100), n.h !== d))
+        if (((d = l < 0 ? 0 : l > i ? 359 : (((100 * l) / i) * 360) / 100), n.h !== d))
             return {
                 h: d,
                 s: n.s,

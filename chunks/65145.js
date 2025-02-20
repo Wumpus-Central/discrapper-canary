@@ -1,55 +1,55 @@
 n.d(t, {
     Pk: () => c,
-    dv: () => s
+    dv: () => l
 }),
     n(411104),
     n(47120);
-var i = n(200651),
-    l = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(823379);
-let r = l.createContext(void 0);
-function s() {
-    let e = l.useContext(r);
+let o = i.createContext(void 0);
+function l() {
+    let e = i.useContext(o);
     if (null == e) throw Error('No PollFocusContextProvider found');
     return e;
 }
-function o(e) {
-    let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: s } = e,
-        o = l.useMemo(
+function s(e) {
+    let { children: t, actionButtonRef: n, pollAnswerRef: a, manageFocusOnAction: l } = e,
+        s = i.useMemo(
             () => ({
                 actionButtonRef: n,
                 pollAnswerRef: a,
-                manageFocusOnAction: s
+                manageFocusOnAction: l
             }),
-            [n, a, s]
+            [n, a, l]
         );
-    return (0, i.jsx)(r.Provider, {
-        value: o,
+    return (0, r.jsx)(o.Provider, {
+        value: s,
         children: t
     });
 }
 function c(e) {
     let { children: t } = e,
-        [n, r] = l.useState(),
-        s = l.useRef(null),
-        c = l.useRef(null);
+        [n, o] = i.useState(),
+        l = i.useRef(null),
+        c = i.useRef(null);
     return (
-        l.useEffect(() => {
-            var e, t, i;
-            'POLL_ANSWERS' === n && null != c.current && (null === (t = c.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), 'ACTION_BUTTON' === n && null != s.current && (null === (i = s.current) || void 0 === i || i.focus());
+        i.useEffect(() => {
+            var e, t, r;
+            'POLL_ANSWERS' === n && null != c.current && (null === (t = c.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), 'ACTION_BUTTON' === n && null != l.current && (null === (r = l.current) || void 0 === r || r.focus());
         }, [n]),
-        (0, i.jsx)(o, {
+        (0, r.jsx)(s, {
             pollAnswerRef: c,
-            actionButtonRef: s,
+            actionButtonRef: l,
             manageFocusOnAction: (e) => {
                 switch (e) {
                     case 'submit':
                     case 'cancel':
-                        r('ACTION_BUTTON');
+                        o('ACTION_BUTTON');
                         break;
                     case 'remove':
                     case 'showVotes':
-                        r('POLL_ANSWERS');
+                        o('POLL_ANSWERS');
                         break;
                     case 'showVoterDetails':
                         break;

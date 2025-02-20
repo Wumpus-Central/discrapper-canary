@@ -1,13 +1,13 @@
-var i = Array.prototype.slice,
-    r = n(560640),
-    a = Object.keys,
-    s = a
+var r = Array.prototype.slice,
+    i = n(560640),
+    o = Object.keys,
+    a = o
         ? function (e) {
-              return a(e);
+              return o(e);
           }
         : n(973351),
-    o = Object.keys;
-(s.shim = function () {
+    s = Object.keys;
+(a.shim = function () {
     return (
         Object.keys
             ? !(function () {
@@ -15,10 +15,10 @@ var i = Array.prototype.slice,
                   return e && e.length === arguments.length;
               })(1, 2) &&
               (Object.keys = function (e) {
-                  return r(e) ? o(i.call(e)) : o(e);
+                  return i(e) ? s(r.call(e)) : s(e);
               })
-            : (Object.keys = s),
-        Object.keys || s
+            : (Object.keys = a),
+        Object.keys || a
     );
 }),
-    (e.exports = s);
+    (e.exports = a);

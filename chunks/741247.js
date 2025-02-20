@@ -1,26 +1,26 @@
 n.d(t, {
-    default: () => d,
-    e: () => o
+    default: () => c,
+    e: () => s
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(239091),
-    r = n(241635),
-    s = n(388032);
-function o(e, t) {
-    return (0, r.Z)(e, t).length > 0;
+var i = n(481060),
+    l = n(239091),
+    o = n(241635),
+    a = n(388032);
+function s(e, t) {
+    return (0, o.Z)(e, t).length > 0;
 }
-function d(e) {
-    let { role: t, guild: n, onSelect: o } = e,
-        d = (0, r.Z)(n, t);
-    return 0 === d.length
+function c(e) {
+    let { role: t, guild: n, onSelect: s } = e,
+        c = (0, o.Z)(n, t);
+    return 0 === c.length
         ? null
-        : (0, i.jsx)(l.v2r, {
+        : (0, r.jsx)(i.v2r, {
               navId: 'guild-settings-role-context',
-              'aria-label': s.intl.string(s.t['337Ja2']),
-              onClose: a.Zy,
-              onSelect: o,
-              children: d
+              'aria-label': a.NW.string(a.t['337Ja2']),
+              onClose: l.Zy,
+              onSelect: s,
+              children: c
           });
 }

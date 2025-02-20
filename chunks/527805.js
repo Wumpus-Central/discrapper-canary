@@ -1,67 +1,67 @@
 n.d(t, {
-    Fw: () => _,
-    ZP: () => p,
+    Fw: () => p,
+    ZP: () => _,
     s5: () => h
 });
-var i = n(442837),
-    r = n(592125),
-    a = n(430824),
-    s = n(496675),
-    o = n(594174),
+var r = n(442837),
+    i = n(592125),
+    o = n(430824),
+    a = n(496675),
+    s = n(594174),
     l = n(979651),
-    u = n(934415),
-    c = n(782769),
+    c = n(934415),
+    u = n(782769),
     d = n(983695),
     f = n(981631),
-    _ = (function (e) {
+    p = (function (e) {
         return (e[(e.CAN_JOIN = 0)] = 'CAN_JOIN'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.CHANNEL_FULL = 3)] = 'CHANNEL_FULL'), (e[(e.NO_CHANNEL = 4)] = 'NO_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 5)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), (e[(e.ACTIVITY_NOT_SUPPORTED_ON_OS = 6)] = 'ACTIVITY_NOT_SUPPORTED_ON_OS'), (e[(e.ACTIVITY_AGE_GATED = 7)] = 'ACTIVITY_AGE_GATED'), (e[(e.NO_USER = 8)] = 'NO_USER'), (e[(e.IS_AFK_CHANNEL = 9)] = 'IS_AFK_CHANNEL'), (e[(e.NO_GUILD = 10)] = 'NO_GUILD'), e;
     })({});
-function p(e) {
-    var t, n, i;
-    let { userId: r, activity: a, application: s, channelId: o, currentUser: l, isActivitiesEnabledForCurrentPlatform: c, ChannelStore: _, VoiceStateStore: p, PermissionStore: h, GuildStore: m } = e;
-    if (null == r) return 8;
-    if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == s ? void 0 : null === (t = s.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
-    if (!c) return 5;
-    if (!(0, d.Z)(null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
-    let g = null != o ? o : null === (i = p.getVoiceStateForSession(r, null == a ? void 0 : a.session_id)) || void 0 === i ? void 0 : i.channelId;
+function _(e) {
+    var t, n, r;
+    let { userId: i, activity: o, application: a, channelId: s, currentUser: l, isActivitiesEnabledForCurrentPlatform: u, ChannelStore: p, VoiceStateStore: _, PermissionStore: h, GuildStore: m } = e;
+    if (null == i) return 8;
+    if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == a ? void 0 : null === (t = a.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
+    if (!u) return 5;
+    if (!(0, d.Z)(null == a ? void 0 : null === (n = a.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
+    let g = null != s ? s : null === (r = _.getVoiceStateForSession(i, null == o ? void 0 : o.session_id)) || void 0 === r ? void 0 : r.channelId;
     if (null == g) return 4;
-    let E = _.getChannel(o);
+    let E = p.getChannel(s);
     if (null == E) return 4;
     if (!E.isPrivate()) {
         let e = E.getGuildId();
         if (null == e) return 10;
         let t = m.getGuild(e);
         if ((null == t ? void 0 : t.afkChannelId) === E.id) return 9;
-        let n = p.getCurrentClientVoiceChannelId(E.getGuildId()) === g,
-            i = (0, u.rY)(E, p, m),
-            r = h.can(f.Plq.CONNECT, E);
+        let n = _.getCurrentClientVoiceChannelId(E.getGuildId()) === g,
+            r = (0, c.rY)(E, _, m),
+            i = h.can(f.Plq.CONNECT, E);
         if (!h.can(f.Plq.USE_EMBEDDED_ACTIVITIES, E)) return 1;
         if (E.isVocal() && !n) {
-            if (i) return 3;
-            if (!r) return 2;
+            if (r) return 3;
+            if (!i) return 2;
         }
     }
     return 0;
 }
 function h(e) {
-    let { userId: t, activity: n, channelId: u, application: d } = e,
-        f = (0, c.z)(null != u ? u : void 0),
-        _ = (0, i.e7)([o.default], () => o.default.getCurrentUser());
-    return (0, i.e7)(
-        [r.Z, l.Z, s.Z, a.Z],
+    let { userId: t, activity: n, channelId: c, application: d } = e,
+        f = (0, u.z)(null != c ? c : void 0),
+        p = (0, r.e7)([s.default], () => s.default.getCurrentUser());
+    return (0, r.e7)(
+        [i.Z, l.Z, a.Z, o.Z],
         () =>
-            p({
+            _({
                 userId: t,
                 activity: n,
                 application: d,
-                channelId: u,
-                currentUser: _,
+                channelId: c,
+                currentUser: p,
                 isActivitiesEnabledForCurrentPlatform: f,
-                ChannelStore: r.Z,
+                ChannelStore: i.Z,
                 VoiceStateStore: l.Z,
-                PermissionStore: s.Z,
-                GuildStore: a.Z
+                PermissionStore: a.Z,
+                GuildStore: o.Z
             }),
-        [n, d, u, _, f, t]
+        [n, d, c, p, f, t]
     );
 }

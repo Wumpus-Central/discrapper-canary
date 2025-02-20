@@ -1,5 +1,5 @@
-n.d(t, { o: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { o: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2025-01_user_profile_voice_activity_card',
         label: 'User Profile Voice Activity Card',
@@ -12,7 +12,7 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => {
+    i = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;
-        return i.useExperiment({ location: t }, { autoTrackExposure: n });
+        return r.useExperiment({ location: t }, { autoTrackExposure: n });
     };

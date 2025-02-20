@@ -1,10 +1,10 @@
 n.d(t, {
-    u2: () => o,
-    w0: () => s,
-    zJ: () => a
+    u2: () => s,
+    w0: () => a,
+    zJ: () => o
 });
-var i = n(627472),
-    r = n(626526);
-let a = (0, i.z)(r.thin, r.fade),
-    s = (0, i.z)(r.auto, r.fade),
-    o = (0, i.z)(r.none, r.fade);
+var r = n(627472),
+    i = n(76349);
+let o = (0, r.z)(i.thin, i.fade),
+    a = (0, r.z)(i.auto, i.fade),
+    s = (0, r.z)(i.none, i.fade);

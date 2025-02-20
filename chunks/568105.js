@@ -1,11 +1,11 @@
-var i = n(67867),
-    r = n(668530),
-    a = n(867325)(r.setInterval, !0);
-i(
+var r = n(67867),
+    i = n(668530),
+    o = n(867325)(i.setInterval, !0);
+r(
     {
         global: !0,
         bind: !0,
-        forced: r.setInterval !== a
+        forced: i.setInterval !== o
     },
-    { setInterval: a }
+    { setInterval: o }
 );

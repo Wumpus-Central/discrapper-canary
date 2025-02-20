@@ -1,20 +1,20 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(828214),
-    r = n(475179),
-    s = n(358221),
-    o = n(354459),
+var i = n(442837),
+    l = n(828214),
+    o = n(475179),
+    a = n(358221),
+    s = n(354459),
     c = n(388032);
-function d(e) {
-    let { selectedParticipant: t } = (0, l.cj)([s.Z], () => ({ selectedParticipant: s.Z.getSelectedParticipant(e) }), [e]);
-    return (0, i.jsx)(a.S8, {
+function u(e) {
+    let { selectedParticipant: t } = (0, i.cj)([a.Z], () => ({ selectedParticipant: a.Z.getSelectedParticipant(e) }), [e]);
+    return (0, r.jsx)(l.S8, {
         id: 'call-grid-view',
-        label: c.intl.string(c.t['3jrUBg']),
+        label: c.NW.string(c.t['3jrUBg']),
         checked: null == t,
         action: () => {
-            null != t ? r.Z.selectParticipant(e, null) : r.Z.selectParticipant(e, o.dF.AUTO);
+            null != t ? o.Z.selectParticipant(e, null) : o.Z.selectParticipant(e, s.dF.AUTO);
         }
     });
 }

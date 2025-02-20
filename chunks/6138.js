@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     return Object.assign({}, e, {
         left: e.x,
         top: e.y,
@@ -6,4 +6,4 @@ function i(e) {
         bottom: e.y + e.height
     });
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

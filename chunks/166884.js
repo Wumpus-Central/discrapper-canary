@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-10_golive_simulcast',
         label: 'GoLive Simulcast',
@@ -27,8 +27,8 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = {
-        getConfig: () => i.getCurrentConfig({ location: 'getConfig' }, { autoTrackExposure: !1 }),
-        simulcastEnabled: () => i.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled,
-        workerExperimentString: () => i.getCurrentConfig({ location: 'workerExperimentString' }, { autoTrackExposure: !1 }).workerExperimentString
+    i = {
+        getConfig: () => r.getCurrentConfig({ location: 'getConfig' }, { autoTrackExposure: !1 }),
+        simulcastEnabled: () => r.getCurrentConfig({ location: 'simulcastEnabled' }, { autoTrackExposure: !0 }).simulcastEnabled,
+        workerExperimentString: () => r.getCurrentConfig({ location: 'workerExperimentString' }, { autoTrackExposure: !1 }).workerExperimentString
     };

@@ -9799,7 +9799,7 @@ var t;
                         }),
                         (s.prototype._onInlineSetup = function (e, t, n, r) {
                             var a, c;
-                            if ((e && t ? ('CCA' !== t.paymentType ? (c = !0) : 'suppress' === t.data.mode || 'static' === t.data.mode || (c = !0)) : (c = !0), c)) {
+                            if ((e && t ? ('CCA' !== t.paymentType ? (c = !0) : 'suppress' !== t.data.mode && 'static' !== t.data.mode && (c = !0)) : (c = !0), c)) {
                                 r(new i(o.THREEDS_INLINE_IFRAME_DETAILS_INCORRECT));
                                 return;
                             }
@@ -11345,7 +11345,7 @@ var t;
                     (d.prototype.fetchPaymentMethods = function (e) {
                         var t;
                         return (
-                            (t = !0 === (e = e || {}).defaultFirst ? 1 : 0),
+                            (t = +(!0 === (e = e || {}).defaultFirst)),
                             this._createPromise
                                 .then(function (e) {
                                     return e.request({

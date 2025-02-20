@@ -1,18 +1,18 @@
-n.d(t, { Z: () => s });
-var i = n(200651),
-    r = n(925329),
-    a = n(392877);
-function s(e) {
+n.d(t, { Z: () => a });
+var r = n(200651),
+    i = n(925329),
+    o = n(38219);
+function a(e) {
     let { application: t, useComma: n = !1 } = e;
-    return (0, i.jsxs)('div', {
-        className: a.applicationNameWrapper,
+    return (0, r.jsxs)('div', {
+        className: o.applicationNameWrapper,
         children: [
-            (0, i.jsx)(r.Z, {
-                className: a.applicationIcon,
+            (0, r.jsx)(i.Z, {
+                className: o.applicationIcon,
                 game: t,
-                size: r.Z.Sizes.XSMALL
+                size: i.Z.Sizes.XSMALL
             }),
-            (0, i.jsx)('strong', { children: ''.concat(t.name).concat(n ? ', ' : '') })
+            (0, r.jsx)('strong', { children: ''.concat(t.name).concat(n ? ', ' : '') })
         ]
     });
 }

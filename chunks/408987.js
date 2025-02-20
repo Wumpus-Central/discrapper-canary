@@ -1,25 +1,25 @@
-n.d(t, { Z: () => o });
-var i = n(570140),
-    r = n(496675),
-    a = n(751189),
-    s = n(981631);
-let o = {
+n.d(t, { Z: () => s });
+var r = n(570140),
+    i = n(496675),
+    o = n(751189),
+    a = n(981631);
+let s = {
     async checkGuildTemplateDirty(e) {
-        if (!r.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, { guildId: e })) return;
-        let t = await a.Z.loadTemplatesForGuild(e);
+        if (!i.Z.canWithPartialContext(a.Plq.MANAGE_GUILD, { guildId: e })) return;
+        let t = await o.Z.loadTemplatesForGuild(e);
         t.body.length > 0 &&
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH',
                 guildTemplate: t.body[0]
             });
     },
     hideGuildTemplateDirtyTooltip(e) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE',
             guildId: e
         });
     },
     hideGuildTemplatePromotionTooltip() {
-        i.Z.dispatch({ type: 'GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE' });
+        r.Z.dispatch({ type: 'GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE' });
     }
 };

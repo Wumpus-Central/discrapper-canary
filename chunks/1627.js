@@ -1,20 +1,20 @@
-n.d(t, { Z: () => u });
-var i = n(481060),
-    r = n(703656),
-    a = n(302155),
-    s = n(71509),
-    o = n(981631),
+n.d(t, { Z: () => c });
+var r = n(481060),
+    i = n(703656),
+    o = n(302155),
+    a = n(71509),
+    s = n(981631),
     l = n(388032);
-let u = new a.Z({
+let c = new o.Z({
     onSwitchSuccess(e, t) {
         setTimeout(() => {
-            t && (0, r.uL)(o.Z5c.ME), (0, i.showToast)((0, i.createToast)(l.intl.formatToPlainString(l.t.wx7O3N, { username: e.username }), i.ToastType.SUCCESS));
+            t && (0, i.uL)(s.Z5c.ME), (0, r.showToast)((0, r.createToast)(l.NW.formatToPlainString(l.t.wx7O3N, { username: e.username }), r.ToastType.SUCCESS));
         }, 100);
     },
     onSwitchError() {
-        (0, i.showToast)((0, i.createToast)(l.intl.string(l.t.pqvKWF), i.ToastType.FAILURE));
+        (0, r.showToast)((0, r.createToast)(l.NW.string(l.t.pqvKWF), r.ToastType.FAILURE));
     },
     onTokenSet() {
-        (0, i.Mr3)(s.Ui);
+        (0, r.Mr3)(a.Ui);
     }
 });

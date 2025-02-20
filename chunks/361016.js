@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    r = n(723184);
-let a = function (e) {
+n.d(t, { Z: () => o });
+var r = n(192379),
+    i = n(723184);
+let o = function (e) {
     var t = e.direction,
-        n = (0, r.default)(
+        n = (0, i.default)(
             {
                 default: {
                     picker: {
@@ -19,5 +19,5 @@ let a = function (e) {
             },
             { vertical: 'vertical' === t }
         );
-    return i.createElement('div', { style: n.picker });
+    return r.createElement('div', { style: n.picker });
 };

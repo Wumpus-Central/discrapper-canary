@@ -1,86 +1,86 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    l = n(392711),
-    s = n(399606),
-    a = n(481060),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    i = n(192379),
+    s = n(392711),
+    a = n(399606),
+    l = n(481060),
     o = n(734893),
     c = n(984933),
     d = n(430824),
     u = n(700785),
     m = n(8426),
-    h = n(969632),
+    p = n(969632),
     g = n(824990),
-    x = n(981631),
-    p = n(388032),
-    _ = n(73806);
-let C = [],
-    f = function (e) {
+    h = n(981631),
+    f = n(388032),
+    b = n(339945);
+let x = [],
+    j = function (e) {
         let { guildId: t } = e,
-            n = (0, s.e7)([d.Z], () => d.Z.getGuild(t)),
-            f = (0, s.Wu)([h.Z], () => {
+            n = (0, a.e7)([d.Z], () => d.Z.getGuild(t)),
+            j = (0, a.Wu)([p.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = h.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : C;
+                return null !== (t = null === (e = p.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : x;
             }),
-            v = (0, s.Wu)([h.Z], () => h.Z.getDismissedSuggestedChannelIds(t)),
-            N = (0, s.e7)([c.ZP], () => c.ZP.getSelectableChannels(t)),
-            j = r.useMemo(
+            N = (0, a.Wu)([p.Z], () => p.Z.getDismissedSuggestedChannelIds(t)),
+            v = (0, a.e7)([c.ZP], () => c.ZP.getSelectableChannels(t)),
+            _ = i.useMemo(
                 () =>
-                    (0, l.chain)(N)
-                        .filter((e) => e.channel.type === x.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !v.includes(e.channel.id) && !f.includes(e.channel.id) && u.Uu(x.Plq.VIEW_CHANNEL, e.channel) && !u.Uu(x.Plq.SEND_MESSAGES, e.channel))
+                    (0, s.chain)(v)
+                        .filter((e) => e.channel.type === h.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !N.includes(e.channel.id) && !j.includes(e.channel.id) && u.Uu(h.Plq.VIEW_CHANNEL, e.channel) && !u.Uu(h.Plq.SEND_MESSAGES, e.channel))
                         .take(5)
                         .value(),
-                [N, v, null == n ? void 0 : n.rulesChannelId, f]
+                [v, N, null == n ? void 0 : n.rulesChannelId, j]
             ),
-            I = r.useCallback(() => {
-                let e = j.map((e) => e.channel.id);
+            O = i.useCallback(() => {
+                let e = _.map((e) => e.channel.id);
                 (0, m.q6)(t, e);
-            }, [t, j]);
-        return j.length <= 0 || f.length >= o.x3
+            }, [t, _]);
+        return _.length <= 0 || j.length >= o.x3
             ? null
-            : (0, i.jsxs)(i.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: _.suggestedChannelsSection,
+                      (0, r.jsxs)('div', {
+                          className: b.suggestedChannelsSection,
                           children: [
-                              (0, i.jsx)(a.Text, {
+                              (0, r.jsx)(l.Text, {
                                   variant: 'text-md/semibold',
-                                  children: p.intl.string(p.t.WThgAQ)
+                                  children: f.NW.string(f.t.WThgAQ)
                               }),
-                              (0, i.jsxs)('div', {
-                                  className: _.suggestedChannelsHeader,
+                              (0, r.jsxs)('div', {
+                                  className: b.suggestedChannelsHeader,
                                   children: [
-                                      (0, i.jsx)(a.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
-                                          children: p.intl.string(p.t.YtNI8P)
+                                          children: f.NW.string(f.t.YtNI8P)
                                       }),
-                                      (0, i.jsxs)(a.P3F, {
-                                          className: _.suggestedChannelsDismiss,
-                                          onClick: I,
+                                      (0, r.jsxs)(l.P3F, {
+                                          className: b.suggestedChannelsDismiss,
+                                          onClick: O,
                                           children: [
-                                              (0, i.jsx)(a.dz2, {
+                                              (0, r.jsx)(l.dz2, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.suggestedChannelsDismissCheck
+                                                  className: b.suggestedChannelsDismissCheck
                                               }),
-                                              (0, i.jsx)(a.Text, {
+                                              (0, r.jsx)(l.Text, {
                                                   variant: 'text-xs/semibold',
                                                   color: 'text-brand',
-                                                  children: p.intl.string(p.t.aLqZTk)
+                                                  children: f.NW.string(f.t.aLqZTk)
                                               })
                                           ]
                                       })
                                   ]
                               }),
-                              (0, i.jsx)('div', {
-                                  className: _.suggestedChannels,
-                                  children: j.map((e, t) =>
-                                      (0, i.jsx)(
+                              (0, r.jsx)('div', {
+                                  className: b.suggestedChannels,
+                                  children: _.map((e, t) =>
+                                      (0, r.jsx)(
                                           g.Z,
                                           {
                                               channel: e.channel,
-                                              end: t < j.length - 1
+                                              end: t < _.length - 1
                                           },
                                           e.channel.id
                                       )
@@ -88,7 +88,7 @@ let C = [],
                               })
                           ]
                       }),
-                      (0, i.jsx)('div', { className: _.sectionSeparator })
+                      (0, r.jsx)('div', { className: b.sectionSeparator })
                   ]
               });
     };

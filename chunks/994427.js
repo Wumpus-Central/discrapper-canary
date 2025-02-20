@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(192379),
-    r = n(409813),
-    a = n(45572);
-function s(e) {
-    let [t, n] = i.useState(a.A.WAITING);
+n.d(t, { Z: () => a }), n(47120);
+var r = n(192379),
+    i = n(409813),
+    o = n(45572);
+function a(e) {
+    let [t, n] = r.useState(o.A.WAITING);
     return (
-        i.useEffect(() => {
-            null != e && e !== r.h8.REVIEW && t !== a.A.WAITING && t !== a.A.COMPLETED && n(a.A.WAITING);
+        r.useEffect(() => {
+            null != e && e !== i.h8.REVIEW && t !== o.A.WAITING && t !== o.A.COMPLETED && n(o.A.WAITING);
         }, [e, t, n]),
         [t, n]
     );

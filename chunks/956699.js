@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(661111),
     h = n(179658),
     f = n(491428),
-    N = n(225433),
-    x = n(484614),
-    b = n(615287),
+    b = n(225433),
+    N = n(484614),
+    x = n(615287),
     _ = n(386506),
     E = n(865427),
     j = n(802098),
@@ -109,7 +109,7 @@ class J extends i.Component {
             direction: O.Z.Direction.VERTICAL,
             className: a()(U.buildOverrideGroup, G.marginBottom20, V.card, U.row),
             children: [
-                (0, r.jsx)(N.Z, {
+                (0, r.jsx)(b.Z, {
                     className: a()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: i }),
                     onClick: i ? void 0 : this.handleRemoveBuildOverride
                 }),
@@ -642,7 +642,7 @@ class $ extends i.Component {
                             (0, r.jsx)(O.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
-                                children: (0, r.jsx)(x.Z, { value: n })
+                                children: (0, r.jsx)(N.Z, { value: n })
                             }),
                             (0, r.jsx)(m.zxk, {
                                 onClick: this.handleGenerateLink,
@@ -895,7 +895,7 @@ function en() {
         t = (0, d.e7)([y.default], () => y.default.getForcedRenderMode()),
         [n, s] = i.useState(!1),
         [a, l] = i.useState(''),
-        o = e || t === b.R5.OUT_OF_PROCESS_V2 || t === b.R5.OUT_OF_PROCESS_V3 || t === b.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
+        o = e || t === x.R5.OUT_OF_PROCESS_V2 || t === x.R5.OUT_OF_PROCESS_V3 || t === x.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (i.useEffect(() => {
         (async () => {
             l(await (0, Z.Y)());
@@ -1037,7 +1037,7 @@ let er = d.ZP.connectStores([R.default], () => ({
     disableAppCollectionsCache: R.default.disableAppCollectionsCache,
     preventPopoutClose: R.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: f, preventPopoutClose: N } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: f, preventPopoutClose: b } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(P.F, {
@@ -1130,7 +1130,7 @@ let er = d.ZP.connectStores([R.default], () => ({
                         (0, r.jsx)(P.F, {
                             setting: L.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
                             children: (0, r.jsx)(m.j7V, {
-                                value: N,
+                                value: b,
                                 note: 'This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.',
                                 onChange: (e) => (0, h.y)({ preventPopoutClose: e }),
                                 children: 'Prevent Popouts From Closing Automatically'

@@ -20,12 +20,12 @@
             return (12 === e && (e = 0), 'يېرىم كېچە' === t || 'سەھەر' === t || 'چۈشتىن بۇرۇن' === t) ? e : 'چۈشتىن كېيىن' === t || 'كەچ' === t ? e + 12 : e >= 11 ? e : e + 12;
         },
         meridiem: function (e, t, n) {
-            var i = 100 * e + t;
-            if (i < 600) return 'يېرىم كېچە';
-            if (i < 900) return 'سەھەر';
-            if (i < 1130) return 'چۈشتىن بۇرۇن';
-            if (i < 1230) return 'چۈش';
-            if (i < 1800) return 'چۈشتىن كېيىن';
+            var r = 100 * e + t;
+            if (r < 600) return 'يېرىم كېچە';
+            if (r < 900) return 'سەھەر';
+            if (r < 1130) return 'چۈشتىن بۇرۇن';
+            if (r < 1230) return 'چۈش';
+            if (r < 1800) return 'چۈشتىن كېيىن';
             else return 'كەچ';
         },
         calendar: {

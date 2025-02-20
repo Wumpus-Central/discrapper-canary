@@ -1,38 +1,38 @@
 n.d(t, {
-    Rg: () => p,
-    Xh: () => _,
+    Rg: () => _,
+    Xh: () => p,
     ho: () => f
 }),
     n(627341);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(278074),
-    a = n(481060),
-    s = n(841784),
-    o = n(297781),
+var i = n(278074),
+    o = n(481060),
+    a = n(841784),
+    s = n(297781),
     l = n(371991),
-    u = n(561308),
-    c = n(232174),
+    c = n(561308),
+    u = n(232174),
     d = n(981631);
 function f(e) {
-    var t, n, u;
+    var t, n, c;
     let { activity: f } = e,
-        _ = null !== (u = null === (t = f.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : f.created_at;
-    if (null == _ || (0, c.Z)(f)) return null;
-    let p = (0, r.EQ)(f)
-        .when(s.Z, () => a.jje)
-        .with({ type: d.IIU.LISTENING }, () => a.aXf)
-        .with({ type: d.IIU.WATCHING }, () => a.ARS)
-        .otherwise(() => a.iWm);
-    return (0, i.jsxs)(o.m7, {
+        p = null !== (c = null === (t = f.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== c ? c : f.created_at;
+    if (null == p || (0, u.Z)(f)) return null;
+    let _ = (0, i.EQ)(f)
+        .when(a.Z, () => o.jje)
+        .with({ type: d.IIU.LISTENING }, () => o.aXf)
+        .with({ type: d.IIU.WATCHING }, () => o.ARS)
+        .otherwise(() => o.iWm);
+    return (0, r.jsxs)(s.m7, {
         children: [
-            (0, i.jsx)(p, {
+            (0, r.jsx)(_, {
                 size: 'xxs',
-                color: a.TVs.colors.TEXT_POSITIVE
+                color: o.TVs.colors.TEXT_POSITIVE
             }),
-            (0, i.jsx)(l.x3, {
+            (0, r.jsx)(l.x3, {
                 entry: {
-                    start: _,
+                    start: p,
                     end: null === (n = f.timestamps) || void 0 === n ? void 0 : n.end
                 },
                 textColor: 'text-positive',
@@ -41,25 +41,25 @@ function f(e) {
         ]
     });
 }
-function _(e) {
+function p(e) {
     let { activity: t } = e;
-    if ((0, s.Z)(t) || null == t.party) return null;
-    let n = (0, u.bT)(t.state, t.party);
+    if ((0, a.Z)(t) || null == t.party) return null;
+    let n = (0, c.bT)(t.state, t.party);
     return null == n
         ? null
-        : (0, i.jsx)(o.ej, {
-              Icon: a.BFJ,
+        : (0, r.jsx)(s.ej, {
+              Icon: o.BFJ,
               text: n
           });
 }
-function p(e) {
+function _(e) {
     var t;
     let { activity: n } = e,
-        r = (0, u.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
-    return null == r
+        i = (0, c.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);
+    return null == i
         ? null
-        : (0, i.jsx)(o.ej, {
-              Icon: a.sVe,
-              text: r
+        : (0, r.jsx)(s.ej, {
+              Icon: o.sVe,
+              text: i
           });
 }

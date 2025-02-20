@@ -1,16 +1,16 @@
-n.d(t, { Z: () => y }), n(724458);
+n.d(t, { Z: () => y });
 var i,
-    l = n(442837),
-    r = n(570140),
-    s = n(673750),
-    a = n(786761),
-    o = n(592125),
-    d = n(375954),
-    u = n(709054),
+    r = n(442837),
+    l = n(570140),
+    o = n(673750),
+    s = n(786761),
+    a = n(592125),
+    u = n(375954),
+    d = n(709054),
     c = n(539573),
     h = n(825829),
-    g = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,58 +23,58 @@ function f(e, t, n) {
         e
     );
 }
-let p = {},
-    C = 0,
-    v = {},
+let g = {},
+    v = 0,
+    C = {},
     E = {},
-    _ = (e, t) => {
-        let n = (0, s.hc)(e),
+    O = (e, t) => {
+        let n = (0, o.hc)(e),
             i = {
                 id: n,
-                isBlockedEdit: (0, s.Bz)(e),
+                isBlockedEdit: (0, o.Bz)(e),
                 messageData: e,
                 errorMessage: (0, c.uF)(e, t)
             };
-        (p[n] = i), C++;
+        (g[n] = i), v++;
     },
-    m = (e) => p[e],
-    I = (e) => {
-        null != p[e] && delete p[e], C++;
+    m = (e) => g[e],
+    S = (e) => {
+        null != g[e] && delete g[e], v++;
     };
-function S(e) {
+function _(e) {
     let { messageData: t, errorResponseBody: n } = e;
-    return _(t, n), !0;
+    return O(t, n), !0;
 }
-function T(e) {
+function b(e) {
     var t;
     let { channelId: n, messages: i } = e,
-        l = null === (t = o.Z.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
-    if (null == l) return !1;
-    let r = E[l],
-        s = i.reduce((e, t) => {
+        r = null === (t = a.Z.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
+    if (null == r) return !1;
+    let l = E[r],
+        o = i.reduce((e, t) => {
             var n;
-            return t.type === g.uaV.AUTO_MODERATION_ACTION &&
+            return t.type === f.uaV.AUTO_MODERATION_ACTION &&
                 (null === (n = t.embeds) || void 0 === n
                     ? void 0
                     : n.some((e) => {
                           let { type: t } = e;
-                          return t === g.hBH.AUTO_MODERATION_NOTIFICATION;
+                          return t === f.hBH.AUTO_MODERATION_NOTIFICATION;
                       }))
-                ? null == e || -1 === u.default.compare(e, t.id)
+                ? null == e || -1 === d.default.compare(e, t.id)
                     ? t.id
                     : void 0
                 : e;
-        }, r);
-    return null != s && E[l] !== s && ((E[l] = s), !0);
+        }, l);
+    return null != o && E[r] !== o && ((E[r] = o), !0);
 }
-class N extends (i = l.ZP.PersistedStore) {
+class I extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && ((p = e.automodFailedMessages), (v = e.mentionRaidDetectionByGuild));
+        this.waitFor(u.Z), null != e && ((g = e.automodFailedMessages), (C = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
-            automodFailedMessages: p,
-            mentionRaidDetectionByGuild: v,
+            automodFailedMessages: g,
+            mentionRaidDetectionByGuild: C,
             lastIncidentAlertMessage: E
         };
     }
@@ -83,47 +83,47 @@ class N extends (i = l.ZP.PersistedStore) {
         return null == e ? null : null !== (t = m(e)) && void 0 !== t ? t : null;
     }
     getMessagesVersion() {
-        return C;
+        return v;
     }
     getMentionRaidDetected(e) {
         var t;
-        return null !== (t = v[e]) && void 0 !== t ? t : null;
+        return null !== (t = C[e]) && void 0 !== t ? t : null;
     }
     getLastIncidentAlertMessage(e) {
         var t;
         return null !== (t = E[e]) && void 0 !== t ? t : null;
     }
 }
-f(N, 'displayName', 'GuildAutomodMessageStore'), f(N, 'persistKey', 'GuildAutomodMessages');
-let y = new N(r.Z, {
+p(I, 'displayName', 'GuildAutomodMessageStore'), p(I, 'persistKey', 'GuildAutomodMessages');
+let y = new I(l.Z, {
     CONNECTION_OPEN: function (e) {
-        return (p = {}), C++, !0;
+        return (g = {}), v++, !0;
     },
-    LOAD_MESSAGES_SUCCESS: T,
-    LOCAL_MESSAGES_LOADED: T,
+    LOAD_MESSAGES_SUCCESS: b,
+    LOCAL_MESSAGES_LOADED: b,
     MESSAGE_CREATE: function (e) {
         let { guildId: t, message: n } = e;
-        if (null == t || n.type !== g.uaV.AUTO_MODERATION_ACTION) return !1;
-        let i = (0, a.e5)(n);
+        if (null == t || n.type !== f.uaV.AUTO_MODERATION_ACTION) return !1;
+        let i = (0, s.e5)(n);
         return !!(0, h.nY)(i) && !!(0, h.OP)(i) && ((E[t] = i.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: S,
-    MESSAGE_EDIT_FAILED_AUTOMOD: S,
+    MESSAGE_SEND_FAILED_AUTOMOD: _,
+    MESSAGE_EDIT_FAILED_AUTOMOD: _,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return I(t), !0;
+        return S(t), !0;
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
-        if ((null == t ? void 0 : t.body) == null || t.body.code === g.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
+        if ((null == t ? void 0 : t.body) == null || t.body.code === f.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
         let n = t.body.id;
         if (null == n) return !1;
-        I(n);
+        S(n);
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
         let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
         return (
-            (v[t] = {
+            (C[t] = {
                 guildId: t,
                 decisionId: n,
                 suspiciousMentionActivityUntil: i
@@ -133,6 +133,6 @@ let y = new N(r.Z, {
     },
     AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
         let { guildId: t } = e;
-        return delete v[t], !0;
+        return delete C[t], !0;
     }
 });

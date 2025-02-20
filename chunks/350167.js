@@ -1,8 +1,8 @@
-n.d(t, { r: () => c }), n(653041), n(47120), n(411104);
-var i = n(259443),
-    r = n(198584),
-    a = n(444675);
-function s(e, t, n) {
+n.d(t, { r: () => u }), n(653041), n(47120), n(411104);
+var r = n(259443),
+    i = n(198584),
+    o = n(444675);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,25 +15,25 @@ function s(e, t, n) {
         e
     );
 }
-let o = 1000000,
-    l = '1' === a.env.KV_STORAGE_LOGGING,
-    u = new i.Yd('Runtime');
-class c {
+let s = 1000000,
+    l = '1' === o.env.KV_STORAGE_LOGGING,
+    c = new r.Yd('Runtime');
+class u {
     static nextId() {
         return ++this.counter;
     }
     static executeAsync(e, t) {
         return (
             this.initialize(),
-            new Promise((n, i) => {
-                let r = this.nextId();
-                t(r),
-                    this.pending.set(r, {
-                        id: r,
+            new Promise((n, r) => {
+                let i = this.nextId();
+                t(i),
+                    this.pending.set(i, {
+                        id: i,
                         tag: e,
                         started: performance.now(),
                         resolve: n,
-                        reject: i
+                        reject: r
                     });
             })
         );
@@ -52,8 +52,8 @@ class c {
     }
     static onResponse(e, t) {
         let n = performance.now(),
-            i = this.pending.get(e.id);
-        null != i && (this.pending.delete(e.id), (e.timings.materializationTimeNanoseconds = null != t ? t : 0), this.completeOperation(i, e, n), this.resolveOperation(i, e));
+            r = this.pending.get(e.id);
+        null != r && (this.pending.delete(e.id), (e.timings.materializationTimeNanoseconds = null != t ? t : 0), this.completeOperation(r, e, n), this.resolveOperation(r, e));
     }
     static onStatus(e) {
         for (let t of this.dbStateCallbacks) t(e.handle, e.state);
@@ -63,25 +63,25 @@ class c {
     }
     static completeOperation(e, t, n) {
         if (this.completionCallbacks.length > 0) {
-            let i = {
+            let r = {
                 id: e.id,
                 tag: e.tag,
                 ok: t.ok,
                 value: t.data,
                 timings: {
-                    queue: t.timings.queueTimeNanoseconds / o,
-                    execution: t.timings.executionTimeNanoseconds / o,
-                    materialization: t.timings.materializationTimeNanoseconds / o,
-                    ccTotal: t.timings.totalTimeNanoseconds / o,
+                    queue: t.timings.queueTimeNanoseconds / s,
+                    execution: t.timings.executionTimeNanoseconds / s,
+                    materialization: t.timings.materializationTimeNanoseconds / s,
+                    ccTotal: t.timings.totalTimeNanoseconds / s,
                     jsTotal: n - e.started
                 }
             };
-            for (let e of this.completionCallbacks) e(i);
+            for (let e of this.completionCallbacks) e(r);
         }
     }
     static initialize() {
         !this.initialized &&
-            (r.d.setCallbacks({
+            (i.d.setCallbacks({
                 status: (e) => this.onStatus(e),
                 response: (e, t) => this.onResponse(e, t)
             }),
@@ -89,10 +89,10 @@ class c {
                 (this.addCompletionCallback((e) => {
                     let t = e.ok ? 'completed' : 'failed',
                         n = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
-                    u.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
+                    c.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
                 }),
-                this.addDatabaseStateCallback((e, t) => u.info(''.concat(e, ' (state: ').concat(t, ')')))),
+                this.addDatabaseStateCallback((e, t) => c.info(''.concat(e, ' (state: ').concat(t, ')')))),
             (this.initialized = !0));
     }
 }
-s(c, 'counter', 0), s(c, 'pending', new Map()), s(c, 'initialized', !1), s(c, 'dbStateCallbacks', []), s(c, 'completionCallbacks', []);
+a(u, 'counter', 0), a(u, 'pending', new Map()), a(u, 'initialized', !1), a(u, 'dbStateCallbacks', []), a(u, 'completionCallbacks', []);

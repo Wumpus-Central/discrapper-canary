@@ -1,5 +1,5 @@
-n.d(t, { $: () => r });
-var i = n(881824);
-function r(e) {
-    i.$Q(e);
+n.d(t, { $: () => i });
+var r = n(881824);
+function i(e) {
+    r.$Q(e);
 }

@@ -1,10 +1,10 @@
-var i = n(67867),
-    r = n(570596),
-    a = n(730427),
-    s = n(735471),
-    o = n(548828),
+var r = n(67867),
+    i = n(570596),
+    o = n(730427),
+    a = n(735471),
+    s = n(548828),
     l = n(146321).Map;
-i(
+r(
     {
         target: 'Map',
         stat: !0,
@@ -12,12 +12,12 @@ i(
     },
     {
         keyBy: function (e, t) {
-            var n = new (s(this) ? this : l)();
-            o(t);
-            var i = o(n.set);
+            var n = new (a(this) ? this : l)();
+            s(t);
+            var r = s(n.set);
             return (
-                a(e, function (e) {
-                    r(i, n, t(e), e);
+                o(e, function (e) {
+                    i(r, n, t(e), e);
                 }),
                 n
             );

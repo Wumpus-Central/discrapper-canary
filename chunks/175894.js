@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    r = n(570140);
-function a(e) {
+n.d(t, { Z: () => o });
+var r = n(192379),
+    i = n(570140);
+function o(e) {
     let { userActivity: t } = e,
         n = null == t ? void 0 : t.applicationId;
-    i.useEffect(() => {
+    r.useEffect(() => {
         null != t &&
             null != n &&
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_OPEN',
                 location: t.location,
                 applicationId: n

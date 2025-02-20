@@ -1,14 +1,14 @@
-n.d(t, { Z: () => l });
-var i = n(192379);
-let l = () => {
-    let e = i.useRef(!0);
+n.d(t, { Z: () => o });
+var r = n(192379);
+let o = () => {
+    let e = r.useRef(!0);
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 e.current = !1;
             },
             []
         ),
-        i.useCallback(() => e.current, [])
+        r.useCallback(() => e.current, [])
     );
 };

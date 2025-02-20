@@ -30,7 +30,7 @@ t.a(n, async function (r, i) {
             try {
                 let w = a.__wbindgen_add_to_stack_pointer(-16);
                 var c = (function (n, e) {
-                        let t = e(1 * n.length);
+                        let t = e(+n.length);
                         return o().set(n, t / 1), (b = n.length), t;
                     })(n, a.__wbindgen_malloc),
                     d = b;
@@ -40,7 +40,7 @@ t.a(n, async function (r, i) {
                     h = o()
                         .subarray(f / 1, f / 1 + l)
                         .slice();
-                return a.__wbindgen_free(f, 1 * l), h;
+                return a.__wbindgen_free(f, +l), h;
             } finally {
                 a.__wbindgen_add_to_stack_pointer(16);
             }

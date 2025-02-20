@@ -1,33 +1,33 @@
 n.d(t, {
-    PQ: () => u,
+    PQ: () => c,
     ZP: () => f,
-    e3: () => c
+    e3: () => u
 }),
     n(47120);
-var i = n(192379),
-    r = n(691324),
-    a = n(442837),
-    s = n(780384),
-    o = n(514361),
+var r = n(192379),
+    i = n(691324),
+    o = n(442837),
+    a = n(780384),
+    s = n(514361),
     l = n(629935);
-let u = 'data-client-themes',
-    c = 'custom-theme-background',
+let c = 'data-client-themes',
+    u = 'custom-theme-background',
     d = () => {
-        let e = (0, a.e7)([o.Z], () => o.Z.gradientPreset);
-        return (0, i.useMemo)(() => {
+        let e = (0, o.e7)([s.Z], () => s.Z.gradientPreset);
+        return (0, r.useMemo)(() => {
             if (null == e) return null;
-            let t = o.Z.getLinearGradient();
+            let t = s.Z.getLinearGradient();
             if (null == t) return null;
-            let n = r.b[e.colors[0].token].hex,
-                i = r.b[e.colors[e.colors.length - 1].token].hex,
-                a = (0, l.W4)({
+            let n = i.b[e.colors[0].token].hex,
+                r = i.b[e.colors[e.colors.length - 1].token].hex,
+                o = (0, l.W4)({
                     enabled: !0,
                     primaryColor: n,
-                    secondaryColor: i,
-                    isDarkTheme: (0, s.wj)(e.theme)
+                    secondaryColor: r,
+                    isDarkTheme: (0, a.wj)(e.theme)
                 }),
-                u = '\n      '.concat(
-                    Object.entries(a)
+                c = '\n      '.concat(
+                    Object.entries(o)
                         .map((e) => {
                             let [t, n] = e;
                             return ''.concat(t, ': ').concat(n, ';');
@@ -35,7 +35,7 @@ let u = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(c, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(i, ';\n      ').concat(u, '\n    }');
+            return '.'.concat(u, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(c, '\n    }');
         }, [e]);
     },
     f = () => {
@@ -47,6 +47,6 @@ let u = 'data-client-themes',
               }
             : {
                   clientThemesCSS: e,
-                  clientThemesClassName: c
+                  clientThemesClassName: u
               };
     };

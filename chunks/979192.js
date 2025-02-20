@@ -1,11 +1,11 @@
-c.d(e, { O: () => p });
+c.d(e, { O: () => i });
 var d = c(442837),
     a = c(675478),
     s = c(581883),
     n = c(626135),
     o = c(434382),
     f = c(981631);
-async function i(t, e) {
+async function p(t, e) {
     await (0, a.PS)(
         t,
         (c) => {
@@ -25,7 +25,7 @@ async function i(t, e) {
             force: !0
         });
 }
-function p(t, e) {
+function i(t, e) {
     let c = (0, d.e7)(
         [s.Z],
         () => {
@@ -36,6 +36,6 @@ function p(t, e) {
     );
     return {
         leaderboardsDisabled: (null == c ? void 0 : c.leaderboardsDisabled) === !0,
-        toggleGuildLeaderboardsDisabled: () => i(t, e)
+        toggleGuildLeaderboardsDisabled: () => p(t, e)
     };
 }

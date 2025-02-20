@@ -1,11 +1,11 @@
 function t(e) {
     let t = 'true false yes no null',
         n = "[\\w#;/?:@&=+$,.~*'()[\\]]+",
-        i = {
+        r = {
             className: 'attr',
             variants: [{ begin: /[\w*@][\w*@ :()\./-]*:(?=[ \t]|$)/ }, { begin: /"[\w*@][\w*@ :()\./-]*":(?=[ \t]|$)/ }, { begin: /'[\w*@][\w*@ :()\./-]*':(?=[ \t]|$)/ }]
         },
-        r = {
+        i = {
             className: 'template-variable',
             variants: [
                 {
@@ -18,7 +18,7 @@ function t(e) {
                 }
             ]
         },
-        a = {
+        o = {
             className: 'string',
             relevance: 0,
             begin: /'/,
@@ -31,7 +31,7 @@ function t(e) {
                 }
             ]
         },
-        s = {
+        a = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -41,9 +41,9 @@ function t(e) {
                 },
                 { begin: /\S+/ }
             ],
-            contains: [e.BACKSLASH_ESCAPE, r]
+            contains: [e.BACKSLASH_ESCAPE, i]
         },
-        o = e.inherit(s, {
+        s = e.inherit(a, {
             variants: [
                 {
                     begin: /'/,
@@ -66,29 +66,29 @@ function t(e) {
             className: 'number',
             begin: '\\b[0-9]{4}(-[0-9][0-9]){0,2}([Tt \\t][0-9][0-9]?(:[0-9][0-9]){2})?(\\.[0-9]*)?([ \\t])*(Z|[-+][0-9][0-9]?(:[0-9][0-9])?)?\\b'
         },
-        u = {
+        c = {
             end: ',',
             endsWithParent: !0,
             excludeEnd: !0,
             keywords: t,
             relevance: 0
         },
-        c = {
+        u = {
             begin: /\{/,
             end: /\}/,
-            contains: [u],
+            contains: [c],
             illegal: '\\n',
             relevance: 0
         },
         d = {
             begin: '\\[',
             end: '\\]',
-            contains: [u],
+            contains: [c],
             illegal: '\\n',
             relevance: 0
         },
         f = [
-            i,
+            r,
             {
                 className: 'meta',
                 begin: '^---\\s*$',
@@ -146,16 +146,16 @@ function t(e) {
                 begin: e.C_NUMBER_RE + '\\b',
                 relevance: 0
             },
-            c,
+            u,
             d,
-            a,
-            s
+            o,
+            a
         ],
-        _ = [...f];
+        p = [...f];
     return (
-        _.pop(),
-        _.push(o),
-        (u.contains = _),
+        p.pop(),
+        p.push(s),
+        (c.contains = p),
         {
             name: 'YAML',
             case_insensitive: !0,

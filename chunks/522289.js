@@ -1,36 +1,36 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+var i = n(120356),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(481060),
-    u = n(565138),
-    c = n(630083);
+    c = n(565138),
+    u = n(802747);
 function d(e) {
-    let { className: t, maxGuilds: n, guilds: r, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: p = !1 } = e;
+    let { className: t, maxGuilds: n, guilds: i, onFocus: a, onClick: d, size: f = c.Z.Sizes.SMALLER, hideOverflowCount: p = !1, disableGuildNameTooltip: _ = !1 } = e;
     function h() {
-        let e = o()(r)
+        let e = s()(i)
                 .take(n)
                 .map((e) => {
                     let t = e.name;
-                    return p
-                        ? (0, i.jsx)('div', {
-                              className: c.avatar,
-                              children: (0, i.jsx)(u.Z, {
+                    return _
+                        ? (0, r.jsx)('div', {
+                              className: u.avatar,
+                              children: (0, r.jsx)(c.Z, {
                                   guild: e,
                                   onClick: d,
                                   size: f,
                                   showTooltip: !1
                               })
                           })
-                        : (0, i.jsx)(
+                        : (0, r.jsx)(
                               l.DY3,
                               {
                                   text: t,
-                                  className: c.avatar,
-                                  children: (0, i.jsx)(u.Z, {
+                                  className: u.avatar,
+                                  children: (0, r.jsx)(c.Z, {
                                       guild: e,
                                       onClick: d,
                                       size: f
@@ -40,13 +40,13 @@ function d(e) {
                           );
                 })
                 .value(),
-            t = r.length - n;
+            t = i.length - n;
         return (
             t > 0 &&
-                !_ &&
-                (e[e.length - 1] = (0, i.jsxs)(l.zxk, {
-                    className: a()(c.avatar, c.overflow),
-                    onFocus: s,
+                !p &&
+                (e[e.length - 1] = (0, r.jsxs)(l.zxk, {
+                    className: o()(u.avatar, u.overflow),
+                    onFocus: a,
                     onClick: (e) => (null == d ? void 0 : d(e)),
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.NONE,
@@ -55,10 +55,10 @@ function d(e) {
             e
         );
     }
-    return r.length <= 0
+    return i.length <= 0
         ? null
-        : (0, i.jsx)('div', {
-              className: a()(t, c.avatars),
+        : (0, r.jsx)('div', {
+              className: o()(t, u.avatars),
               children: h()
           });
 }

@@ -1,26 +1,26 @@
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(829307),
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(829307),
     l = n(877837),
-    u = n(474527),
-    c = n(372712),
+    c = n(474527),
+    u = n(372712),
     d = n(899627),
     f = function (e) {
         var t = e.width,
             n = e.onChange,
-            r = e.rgb,
-            a = e.hsl,
+            i = e.rgb,
+            o = e.hsl,
             f = e.hsv,
-            _ = e.hex,
-            p = e.header,
+            p = e.hex,
+            _ = e.header,
             h = e.styles,
             m = void 0 === h ? {} : h,
             g = e.className,
             E = void 0 === g ? '' : g,
-            v = (0, s.default)(
-                (0, o.Z)(
+            v = (0, a.default)(
+                (0, s.Z)(
                     {
                         default: {
                             picker: {
@@ -52,7 +52,7 @@ var i = n(192379),
                                 width: '30%',
                                 height: '228px',
                                 padding: '0px',
-                                background: 'rgba(' + r.r + ', ' + r.g + ', ' + r.b + ', 1)',
+                                background: 'rgba(' + i.r + ', ' + i.g + ', ' + i.b + ', 1)',
                                 position: 'relative',
                                 overflow: 'hidden'
                             },
@@ -79,49 +79,49 @@ var i = n(192379),
                     m
                 )
             );
-        return i.createElement(
+        return r.createElement(
             'div',
             {
                 style: v.picker,
                 className: 'google-picker ' + E
             },
-            i.createElement('div', { style: v.head }, p),
-            i.createElement('div', { style: v.swatch }),
-            i.createElement(
+            r.createElement('div', { style: v.head }, _),
+            r.createElement('div', { style: v.swatch }),
+            r.createElement(
                 'div',
                 { style: v.saturation },
-                i.createElement(l.OQ, {
-                    hsl: a,
+                r.createElement(l.OQ, {
+                    hsl: o,
                     hsv: f,
-                    pointer: u.C,
+                    pointer: c.C,
                     onChange: n
                 })
             ),
-            i.createElement(
+            r.createElement(
                 'div',
                 { style: v.body },
-                i.createElement(
+                r.createElement(
                     'div',
                     {
                         style: v.controls,
                         className: 'flexbox-fix'
                     },
-                    i.createElement(
+                    r.createElement(
                         'div',
                         { style: v.hue },
-                        i.createElement(l.PS, {
+                        r.createElement(l.PS, {
                             style: v.Hue,
-                            hsl: a,
+                            hsl: o,
                             radius: '4px',
-                            pointer: c.Z,
+                            pointer: u.Z,
                             onChange: n
                         })
                     )
                 ),
-                i.createElement(d.Z, {
-                    rgb: r,
-                    hsl: a,
-                    hex: _,
+                r.createElement(d.Z, {
+                    rgb: i,
+                    hsl: o,
+                    hex: p,
                     hsv: f,
                     onChange: n
                 })
@@ -129,9 +129,9 @@ var i = n(192379),
         );
     };
 (f.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    styles: a().object,
-    header: a().string
+    width: o().oneOfType([o().string, o().number]),
+    styles: o().object,
+    header: o().string
 }),
     (f.defaultProps = {
         width: 652,

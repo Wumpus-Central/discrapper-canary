@@ -1,16 +1,16 @@
-e.d(n, { X: () => c });
-var o = e(200651);
-e(192379);
-var i = e(859097),
-    r = e(981631),
-    s = e(388032);
+n.d(e, { X: () => c });
+var o = n(200651);
+n(192379);
+var i = n(859097),
+    r = n(981631),
+    s = n(388032);
 function c(t) {
-    let { onContinue: n, onClose: e, errorCode: c } = t,
-        a = c === r.evJ.UNDER_MINIMUM_AGE ? s.intl.string(s.t['3dIn2N']) : s.intl.string(s.t.qE9nqK);
+    let { onContinue: e, onClose: n, errorCode: c } = t,
+        a = c === r.evJ.UNDER_MINIMUM_AGE ? s.NW.string(s.t['3dIn2N']) : s.NW.string(s.t.qE9nqK);
     return (0, o.jsx)(i.C, {
-        title: s.intl.string(s.t.eY3qHR),
+        title: s.NW.string(s.t.eY3qHR),
         body: a,
-        onClose: e,
-        onContinue: n
+        onClose: n,
+        onContinue: e
     });
 }

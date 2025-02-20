@@ -1,34 +1,34 @@
-var i = n(821164),
-    r = 1,
-    a = Object.prototype.hasOwnProperty;
-function s(e, t, n, s, o, l) {
-    var u = n & r,
-        c = i(e),
-        d = c.length;
-    if (d != i(t).length && !u) return !1;
+var r = n(821164),
+    i = 1,
+    o = Object.prototype.hasOwnProperty;
+function a(e, t, n, a, s, l) {
+    var c = n & i,
+        u = r(e),
+        d = u.length;
+    if (d != r(t).length && !c) return !1;
     for (var f = d; f--; ) {
-        var _ = c[f];
-        if (!(u ? _ in t : a.call(t, _))) return !1;
+        var p = u[f];
+        if (!(c ? p in t : o.call(t, p))) return !1;
     }
-    var p = l.get(e);
-    if (p && l.get(t)) return p == t;
+    var _ = l.get(e);
+    if (_ && l.get(t)) return _ == t;
     var h = !0;
     l.set(e, t), l.set(t, e);
-    for (var m = u; ++f < d; ) {
-        var g = e[(_ = c[f])],
-            E = t[_];
-        if (s) var v = u ? s(E, g, _, t, e, l) : s(g, E, _, e, t, l);
-        if (!(void 0 === v ? g === E || o(g, E, n, s, l) : v)) {
+    for (var m = c; ++f < d; ) {
+        var g = e[(p = u[f])],
+            E = t[p];
+        if (a) var v = c ? a(E, g, p, t, e, l) : a(g, E, p, e, t, l);
+        if (!(void 0 === v ? g === E || s(g, E, n, a, l) : v)) {
             h = !1;
             break;
         }
-        m || (m = 'constructor' == _);
+        m || (m = 'constructor' == p);
     }
     if (h && !m) {
-        var y = e.constructor,
-            I = t.constructor;
-        y != I && 'constructor' in e && 'constructor' in t && !('function' == typeof y && y instanceof y && 'function' == typeof I && I instanceof I) && (h = !1);
+        var b = e.constructor,
+            y = t.constructor;
+        b != y && 'constructor' in e && 'constructor' in t && !('function' == typeof b && b instanceof b && 'function' == typeof y && y instanceof y) && (h = !1);
     }
     return l.delete(e), l.delete(t), h;
 }
-e.exports = s;
+e.exports = a;

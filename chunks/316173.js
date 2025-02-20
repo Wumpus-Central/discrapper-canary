@@ -1,48 +1,48 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(442837),
-    o = n(433517),
-    d = n(481060),
-    c = n(304761),
-    u = n(865427),
-    h = n(820254),
-    m = n(388032),
-    p = n(499259);
-let g = 'isHideDevBanner',
-    _ = () => {
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(433517),
+    c = n(481060),
+    u = n(304761),
+    d = n(865427),
+    p = n(820254),
+    h = n(388032),
+    g = n(179439);
+let f = 'isHideDevBanner',
+    m = () => {
         var e;
-        let [t, n] = (0, l.useState)((null === (e = o.K.get(g, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
-            r = (0, s.e7)([c.C], () => {
+        let [t, n] = (0, i.useState)((null === (e = s.K.get(f, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
+            l = (0, a.e7)([u.C], () => {
                 var e;
-                return (0, u.fD)() ? (null === (e = c.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+                return (0, d.fD)() ? (null === (e = u.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
             });
         if (t) return null;
-        let _ = () => {
-                o.K.set(g, !0), n(!0);
+        let m = () => {
+                s.K.set(f, !0), n(!0);
             },
-            f = () =>
-                (0, i.jsx)(d.P3F, {
-                    onClick: _,
-                    className: p.closeButton,
-                    'aria-label': m.intl.string(m.t.WAI6xs),
-                    children: (0, i.jsx)(d.Dio, {
+            b = () =>
+                (0, r.jsx)(c.P3F, {
+                    onClick: m,
+                    className: g.closeButton,
+                    'aria-label': h.NW.string(h.t.WAI6xs),
+                    children: (0, r.jsx)(c.Dio, {
                         size: 'md',
                         color: 'currentColor',
-                        className: p.closeIcon
+                        className: g.closeIcon
                     })
                 });
-        return null != r
-            ? (0, i.jsxs)('div', {
-                  className: a()(p.devBanner, p.buildOverride),
-                  children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.string(m.t.Wj3LW1), (0, i.jsx)(f, {})]
+        return null != l
+            ? (0, r.jsxs)('div', {
+                  className: o()(g.devBanner, g.buildOverride),
+                  children: [(0, r.jsx)(p.Z, { className: g.icon }), h.NW.string(h.t.Wj3LW1), (0, r.jsx)(b, {})]
               })
             : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
-              ? (0, i.jsxs)('div', {
-                    className: a()(p.devBanner, p.staging),
-                    children: [(0, i.jsx)(h.Z, { className: p.icon }), m.intl.format(m.t.uyrfYG, { buildNumber: '369170' }), (0, i.jsx)(f, {})]
+              ? (0, r.jsxs)('div', {
+                    className: o()(g.devBanner, g.staging),
+                    children: [(0, r.jsx)(p.Z, { className: g.icon }), h.NW.format(h.t.uyrfYG, { buildNumber: '370144' }), (0, r.jsx)(b, {})]
                 })
               : null;
     };

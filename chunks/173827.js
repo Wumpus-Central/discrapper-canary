@@ -1,11 +1,11 @@
-n.d(t, { M: () => s });
-var i = n(192379),
-    r = n(409447),
-    a = n(330905);
-let s = (e) => {
+n.d(t, { M: () => a });
+var r = n(192379),
+    i = n(409447),
+    o = n(330905);
+let a = (e) => {
     let t;
-    let n = (0, r.u)();
+    let n = (0, i.u)();
     if (!n.display) return null;
-    let { display: s, ...o } = n;
-    return (t = 'children' in e ? ('function' == typeof e.children ? e.children(o) : e.children) : e.generator(o)), i.createElement(a._.Provider, { value: o }, t);
+    let { display: a, ...s } = n;
+    return (t = 'children' in e ? ('function' == typeof e.children ? e.children(s) : e.children) : e.generator(s)), r.createElement(o._.Provider, { value: s }, t);
 };

@@ -4,27 +4,27 @@ function t(e) {
             className: 'string',
             begin: /"(""|[^/n])"C\b/
         },
-        i = {
+        r = {
             className: 'string',
             begin: /"/,
             end: /"/,
             illegal: /\n/,
             contains: [{ begin: /""/ }]
         },
-        r = /\d{1,2}\/\d{1,2}\/\d{4}/,
-        a = /\d{4}-\d{1,2}-\d{1,2}/,
-        s = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
-        o = /\d{1,2}(:\d{1,2}){1,2}/,
+        i = /\d{1,2}\/\d{1,2}\/\d{4}/,
+        o = /\d{4}-\d{1,2}-\d{1,2}/,
+        a = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
+        s = /\d{1,2}(:\d{1,2}){1,2}/,
         l = {
             className: 'literal',
-            variants: [{ begin: t.concat(/# */, t.either(a, r), / *#/) }, { begin: t.concat(/# */, o, / *#/) }, { begin: t.concat(/# */, s, / *#/) }, { begin: t.concat(/# */, t.either(a, r), / +/, t.either(s, o), / *#/) }]
+            variants: [{ begin: t.concat(/# */, t.either(o, i), / *#/) }, { begin: t.concat(/# */, s, / *#/) }, { begin: t.concat(/# */, a, / *#/) }, { begin: t.concat(/# */, t.either(o, i), / +/, t.either(a, s), / *#/) }]
         },
-        u = {
+        c = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: /\b\d[\d_]*((\.[\d_]+(E[+-]?[\d_]+)?)|(E[+-]?[\d_]+))[RFD@!#]?/ }, { begin: /\b\d[\d_]*((U?[SIL])|[%&])?/ }, { begin: /&H[\dA-F_]+((U?[SIL])|[%&])?/ }, { begin: /&O[0-7_]+((U?[SIL])|[%&])?/ }, { begin: /&B[01_]+((U?[SIL])|[%&])?/ }]
         },
-        c = {
+        u = {
             className: 'label',
             begin: /^\w+:/
         },
@@ -40,7 +40,7 @@ function t(e) {
         f = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }]
         }),
-        _ = {
+        p = {
             className: 'meta',
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
@@ -59,7 +59,7 @@ function t(e) {
             literal: 'true false nothing'
         },
         illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ',
-        contains: [n, i, l, u, c, d, f, _]
+        contains: [n, r, l, c, u, d, f, p]
     };
 }
 e.exports = t;

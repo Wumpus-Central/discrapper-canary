@@ -1,23 +1,23 @@
 let t = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
     n = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
-    i = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
-function r(e) {
-    let r = ['npm', 'print'],
-        a = ['yes', 'no', 'on', 'off'],
-        s = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
-        o = ['var', 'const', 'let', 'function', 'static'],
+    r = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
+function i(e) {
+    let i = ['npm', 'print'],
+        o = ['yes', 'no', 'on', 'off'],
+        a = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
+        s = ['var', 'const', 'let', 'function', 'static'],
         l = (e) => (t) => !e.includes(t),
-        u = {
-            keyword: t.concat(s).filter(l(o)),
-            literal: n.concat(a),
-            built_in: i.concat(r)
+        c = {
+            keyword: t.concat(a).filter(l(s)),
+            literal: n.concat(o),
+            built_in: r.concat(i)
         },
-        c = '[A-Za-z$_][0-9A-Za-z$_]*',
+        u = '[A-Za-z$_][0-9A-Za-z$_]*',
         d = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: u
+            keywords: c
         },
         f = [
             e.BINARY_NUMBER_MODE,
@@ -67,7 +67,7 @@ function r(e) {
                     { begin: /\/(?![ *]).*?(?![\\]).\/[gim]{0,3}(?=\W)/ }
                 ]
             },
-            { begin: '@' + c },
+            { begin: '@' + u },
             {
                 subLanguage: 'javascript',
                 excludeBegin: !0,
@@ -85,8 +85,8 @@ function r(e) {
             }
         ];
     d.contains = f;
-    let _ = e.inherit(e.TITLE_MODE, { begin: c }),
-        p = '(\\(.*\\)\\s*)?\\B[-=]>',
+    let p = e.inherit(e.TITLE_MODE, { begin: u }),
+        _ = '(\\(.*\\)\\s*)?\\B[-=]>',
         h = {
             className: 'params',
             begin: '\\([^\\(]',
@@ -95,7 +95,7 @@ function r(e) {
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: u,
+                    keywords: c,
                     contains: ['self'].concat(f)
                 }
             ]
@@ -103,22 +103,22 @@ function r(e) {
         m = {
             variants: [
                 {
-                    match: [/class\s+/, c, /\s+extends\s+/, c]
+                    match: [/class\s+/, u, /\s+extends\s+/, u]
                 },
                 {
-                    match: [/class\s+/, c]
+                    match: [/class\s+/, u]
                 }
             ],
             scope: {
                 2: 'title.class',
                 4: 'title.class.inherited'
             },
-            keywords: u
+            keywords: c
         };
     return {
         name: 'CoffeeScript',
         aliases: ['coffee', 'cson', 'iced'],
-        keywords: u,
+        keywords: c,
         illegal: /\/\*/,
         contains: [
             ...f,
@@ -126,10 +126,10 @@ function r(e) {
             e.HASH_COMMENT_MODE,
             {
                 className: 'function',
-                begin: '^\\s*' + c + '\\s*=\\s*' + p,
+                begin: '^\\s*' + u + '\\s*=\\s*' + _,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [_, h]
+                contains: [p, h]
             },
             {
                 begin: /[:\(,=]\s*/,
@@ -137,7 +137,7 @@ function r(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: p,
+                        begin: _,
                         end: '[-=]>',
                         returnBegin: !0,
                         contains: [h]
@@ -146,7 +146,7 @@ function r(e) {
             },
             m,
             {
-                begin: c + ':',
+                begin: u + ':',
                 end: ':',
                 returnBegin: !0,
                 returnEnd: !0,
@@ -155,4 +155,4 @@ function r(e) {
         ]
     };
 }
-e.exports = r;
+e.exports = i;

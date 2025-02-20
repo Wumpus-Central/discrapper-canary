@@ -1,79 +1,79 @@
-n.d(t, { Z: () => g }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(990547),
-    a = n(399606),
-    s = n(481060),
-    o = n(232567),
-    d = n(213609),
-    c = n(313201),
-    u = n(23434),
-    h = n(981631),
-    m = n(388032),
-    p = n(87055);
-function g(e) {
+n.d(t, { Z: () => f }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(990547),
+    o = n(399606),
+    a = n(481060),
+    s = n(232567),
+    c = n(213609),
+    u = n(313201),
+    d = n(23434),
+    p = n(981631),
+    h = n(388032),
+    g = n(670430);
+function f(e) {
     let { transitionState: t } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.getAction()),
-        [_, f] = l.useState(!1),
-        E = (0, c.Dt)();
-    async function I() {
-        return f(!0), g === h.c2C.AGREEMENTS && f(await (0, o.Lr)()), null;
+        f = (0, o.e7)([d.Z], () => d.Z.getAction()),
+        [m, b] = i.useState(!1),
+        _ = (0, u.Dt)();
+    async function E() {
+        return b(!0), f === p.c2C.AGREEMENTS && b(await (0, s.Lr)()), null;
     }
     return (
-        (0, d.Z)(
+        (0, c.Z)(
             {
-                type: r.ImpressionTypes.VIEW,
-                name: r.ImpressionNames.USER_AGREEMENTS,
-                properties: { required_action: g }
+                type: l.ImpressionTypes.VIEW,
+                name: l.ImpressionNames.USER_AGREEMENTS,
+                properties: { required_action: f }
             },
             {},
             []
         ),
-        (0, i.jsxs)(s.Y0X, {
-            'aria-labelledby': E,
+        (0, r.jsxs)(a.Y0X, {
+            'aria-labelledby': _,
             transitionState: t,
             children: [
-                (0, i.jsx)('div', { id: E }),
-                (0, i.jsx)(s.xBx, {
+                (0, r.jsx)('div', { id: _ }),
+                (0, r.jsx)(a.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(s.X6q, {
+                    children: (0, r.jsx)(a.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: m.intl.string(m.t['7glvXl'])
+                        children: h.NW.string(h.t['7glvXl'])
                     })
                 }),
-                (0, i.jsxs)(s.hzk, {
+                (0, r.jsxs)(a.hzk, {
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            children: g === h.c2C.AGREEMENTS ? m.intl.format(m.t.zHolhY, {}) : null
+                            children: f === p.c2C.AGREEMENTS ? h.NW.format(h.t.zHolhY, {}) : null
                         }),
-                        (0, i.jsxs)('div', {
-                            className: p.container,
+                        (0, r.jsxs)('div', {
+                            className: g.container,
                             children: [
-                                (0, i.jsxs)('ul', {
-                                    className: p.links,
-                                    children: [(0, i.jsx)('li', { children: m.intl.format(m.t.iw0hFh, { url: h.EYA.TERMS }) }), (0, i.jsx)('li', { children: m.intl.format(m.t['36klnJ'], { url: h.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: m.intl.format(m.t.TquFBA, { url: h.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: m.intl.format(m.t.ia96TU, { url: h.EYA.GUIDELINES }) })]
+                                (0, r.jsxs)('ul', {
+                                    className: g.links,
+                                    children: [(0, r.jsx)('li', { children: h.NW.format(h.t.iw0hFh, { url: p.EYA.TERMS }) }), (0, r.jsx)('li', { children: h.NW.format(h.t['36klnJ'], { url: p.EYA.PAID_TERMS }) }), (0, r.jsx)('li', { children: h.NW.format(h.t.TquFBA, { url: p.EYA.PRIVACY }) }), (0, r.jsx)('li', { children: h.NW.format(h.t.ia96TU, { url: p.EYA.GUIDELINES }) })]
                                 }),
-                                (0, i.jsx)('img', {
-                                    className: p.image,
+                                (0, r.jsx)('img', {
+                                    className: g.image,
                                     alt: '',
                                     src: n(146714)
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            className: p.agreementDescription,
-                            children: m.intl.string(m.t['+USXQE'])
+                            className: g.agreementDescription,
+                            children: h.NW.string(h.t['+USXQE'])
                         })
                     ]
                 }),
-                (0, i.jsx)(s.mzw, {
-                    children: (0, i.jsx)(s.zxk, {
-                        submitting: _,
-                        onClick: I,
-                        color: s.zxk.Colors.GREEN,
-                        children: m.intl.string(m.t['+TBKLy'])
+                (0, r.jsx)(a.mzw, {
+                    children: (0, r.jsx)(a.zxk, {
+                        submitting: m,
+                        onClick: E,
+                        color: a.zxk.Colors.GREEN,
+                        children: h.NW.string(h.t['+TBKLy'])
                     })
                 })
             ]

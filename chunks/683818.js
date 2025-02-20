@@ -1,23 +1,23 @@
 n.d(t, {
     G: () => c,
-    Z: () => o
+    Z: () => s
 });
-var i = n(442837),
-    l = n(592125),
-    a = n(430824),
-    r = n(496675),
-    s = n(981631);
-function o(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e.guildId)),
-        n = (0, i.e7)([l.Z], () => l.Z.getChannel(e.channelId)),
-        o = (0, i.e7)([r.Z], () => r.Z.can(s.Plq.ADMINISTRATOR, t)),
-        c = (0, i.e7)([r.Z], () => r.Z.can(s.Plq.MANAGE_MESSAGES, n));
+var r = n(442837),
+    i = n(592125),
+    l = n(430824),
+    o = n(496675),
+    a = n(981631);
+function s(e) {
+    let t = (0, r.e7)([l.Z], () => l.Z.getGuild(e.guildId)),
+        n = (0, r.e7)([i.Z], () => i.Z.getChannel(e.channelId)),
+        s = (0, r.e7)([o.Z], () => o.Z.can(a.Plq.ADMINISTRATOR, t)),
+        c = (0, r.e7)([o.Z], () => o.Z.can(a.Plq.MANAGE_MESSAGES, n));
     return {
-        isEntryAdmin: o,
-        canEdit: o || c,
-        canRemove: o || c
+        isEntryAdmin: s,
+        canEdit: s || c,
+        canRemove: s || c
     };
 }
 function c(e) {
-    return (0, i.e7)([r.Z], () => r.Z.can(s.Plq.SEND_MESSAGES, e));
+    return (0, r.e7)([o.Z], () => o.Z.can(a.Plq.SEND_MESSAGES, e));
 }

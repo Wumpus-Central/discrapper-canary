@@ -1,21 +1,21 @@
 n.d(t, {
-    V: () => I,
+    V: () => y,
     e: () => v
 }),
     n(47120);
-var i,
-    r = n(200651);
+var r,
+    i = n(200651);
 n(192379);
-var a = n(442837),
-    s = n(481060),
-    o = n(570140),
+var o = n(442837),
+    a = n(481060),
+    s = n(570140),
     l = n(962293),
-    u = n(592125),
-    c = n(271383),
+    c = n(592125),
+    u = n(271383),
     d = n(944486),
     f = n(594174),
-    _ = n(388032),
-    p = n(896006);
+    p = n(388032),
+    _ = n(759624);
 function h(e, t, n) {
     return (
         t in e
@@ -30,7 +30,7 @@ function h(e, t, n) {
     );
 }
 let m = new Set();
-class g extends (i = a.ZP.PersistedStore) {
+class g extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (m = new Set(e));
     }
@@ -42,30 +42,30 @@ class g extends (i = a.ZP.PersistedStore) {
     }
 }
 h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore');
-let E = new g(o.Z, {}),
+let E = new g(s.Z, {}),
     v = (e) =>
-        (0, a.e7)([c.ZP, f.default, E], () => {
+        (0, o.e7)([u.ZP, f.default, E], () => {
             let t = f.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
             let n = f.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
-            let i = c.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
-            return i ? !E.hasId(n.id) && i : (m.delete(n.id) && E.emitChange(), !1);
+            let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
+            return r ? !E.hasId(n.id) && r : (m.delete(n.id) && E.emitChange(), !1);
         }),
-    y = () => {
+    b = () => {
         let e = d.Z.getChannelId();
         if (null == e) return;
-        let t = u.Z.getChannel(e);
+        let t = c.Z.getChannel(e);
         null != t && t.isPrivate() && !m.has(t.getRecipientId()) && (m.add(t.getRecipientId()), E.emitChange());
     },
-    I = () =>
-        (0, r.jsxs)('div', {
-            className: p.bar,
+    y = () =>
+        (0, i.jsxs)('div', {
+            className: _.bar,
             children: [
-                (0, r.jsx)(s.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
-                    children: _.intl.string(_.t['2UvR1N'])
+                    children: p.NW.string(p.t['2UvR1N'])
                 }),
-                (0, r.jsx)(l.B, { onClick: y })
+                (0, i.jsx)(l.B, { onClick: b })
             ]
         });

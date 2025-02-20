@@ -1,48 +1,48 @@
-n.d(t, { Z: () => x });
-var s = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
-    r = n(467628),
-    o = n(373370),
-    d = n(65443),
+var s = n(120356),
+    i = n.n(s),
+    o = n(481060),
+    l = n(467628),
+    a = n(373370),
+    c = n(65443),
     u = n(644646),
-    c = n(46140),
-    m = n(521460);
-let x = function (e) {
-    let { className: t, autoplay: n, quest: i, questContent: x, taskDetails: h, location: g } = e,
-        C = (0, o.DD)({
-            quest: i,
-            taskDetails: h,
+    d = n(46140),
+    m = n(445546);
+let p = function (e) {
+    let { className: t, autoplay: n, quest: s, questContent: p, taskDetails: x, location: g } = e,
+        h = (0, a.DD)({
+            quest: s,
+            taskDetails: x,
             location: g,
-            questContent: x
+            questContent: p
         }),
-        p = (0, r.j)({ location: c.dr.QUESTS_BAR_MOBILE });
-    return (0, s.jsxs)('div', {
-        className: l()(m.wrapper, t),
-        style: { color: i.config.colors.primary },
+        f = (0, l.j)({ location: d.dr.QUESTS_BAR_MOBILE });
+    return (0, r.jsxs)('div', {
+        className: i()(m.wrapper, t),
+        style: { color: s.config.colors.primary },
         children: [
-            (0, s.jsx)(u.Z, {
+            (0, r.jsx)(u.Z, {
                 autoplay: n,
                 className: m.rewardTile,
-                quest: i,
-                questContent: x,
+                quest: s,
+                questContent: p,
                 location: g
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.copy,
                 children: [
-                    (0, s.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-normal',
-                        children: C
+                        children: h
                     }),
-                    p &&
-                        (0, s.jsx)(d.Z, {
+                    f &&
+                        (0, r.jsx)(c.Z, {
                             textColor: 'text-muted',
                             withRewardName: !0,
-                            quest: i
+                            quest: s
                         })
                 ]
             })

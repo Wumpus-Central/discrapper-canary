@@ -1,22 +1,22 @@
 n.d(t, {
     p: () => f,
-    t: () => _
+    t: () => p
 });
-var i = n(468343),
-    r = n(559972),
-    a = n(789741),
-    s = 0,
-    o = function () {
-        return !!s;
+var r = n(468343),
+    i = n(559972),
+    o = n(789741),
+    a = 0,
+    s = function () {
+        return !!a;
     },
     l = 12,
-    u = {
+    c = {
         attributes: !0,
         characterData: !0,
         childList: !0,
         subtree: !0
     },
-    c = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    u = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
     d = !1,
     f = new ((function () {
         function e() {
@@ -31,12 +31,12 @@ var i = n(468343),
                 var t = this;
                 !d &&
                     ((d = !0),
-                    (0, a.p)(function () {
+                    (0, o.p)(function () {
                         var n = !1;
                         try {
-                            n = (0, i.N)();
+                            n = (0, r.N)();
                         } finally {
-                            if (((d = !1), !o())) return;
+                            if (((d = !1), !s())) return;
                             n ? t.run(60) : e ? t.run(e - 1) : t.start();
                         }
                     }));
@@ -47,9 +47,9 @@ var i = n(468343),
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, u);
+                        return e.observer && e.observer.observe(document.body, c);
                     };
-                document.body ? t() : r.C.addEventListener('DOMContentLoaded', t);
+                document.body ? t() : i.C.addEventListener('DOMContentLoaded', t);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -57,22 +57,22 @@ var i = n(468343),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    c.forEach(function (t) {
-                        return r.C.addEventListener(t, e.listener, !0);
+                    u.forEach(function (t) {
+                        return i.C.addEventListener(t, e.listener, !0);
                     }));
             }),
             (e.prototype.stop = function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    c.forEach(function (t) {
-                        return r.C.removeEventListener(t, e.listener, !0);
+                    u.forEach(function (t) {
+                        return i.C.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
             }),
             e
         );
     })())(),
-    _ = function (e) {
-        !s && e > 0 && f.start(), (s += e) || f.stop();
+    p = function (e) {
+        !a && e > 0 && f.start(), (a += e) || f.stop();
     };

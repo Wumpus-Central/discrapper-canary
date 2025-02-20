@@ -1,9 +1,9 @@
-n.d(t, { Z: () => r });
-var i = n(243814),
-    l = n(706454);
-let r = {
+n.d(t, { Z: () => l });
+var r = n(243814),
+    i = n(706454);
+let l = {
     [n(981631).Etm.USER_SETTINGS_GET_LOCALE]: {
-        scope: i.x.IDENTIFY,
-        handler: () => ({ locale: l.default.locale })
+        scope: r.x.IDENTIFY,
+        handler: () => ({ locale: i.default.locale })
     }
 };

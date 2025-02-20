@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = (0, n(987170).Z)({
+n.d(t, { Z: () => r });
+let r = (0, n(987170).Z)({
     kind: 'user',
     id: '2024-10_web_display_animated_webp_embeds',
     label: 'Web Display Animated WebP Embeds Experiment',

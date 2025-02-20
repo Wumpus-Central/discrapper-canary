@@ -1,8 +1,8 @@
-n.d(t, { u: () => o });
-var i = n(192379),
-    r = n(676062),
-    a = n(749537);
-let s = (e) => {
+n.d(t, { u: () => s });
+var r = n(192379),
+    i = n(676062),
+    o = n(749537);
+let a = (e) => {
         let t = 'translate('.concat(e.x.toFixed(1), 'px, ').concat(e.y.toFixed(1), 'px)');
         return {
             pointerEvents: 'none',
@@ -13,10 +13,10 @@ let s = (e) => {
             WebkitTransform: t
         };
     },
-    o = () => {
-        let e = (0, i.useRef)(null),
-            t = (0, r.f)((t) => ({
-                currentOffset: (0, a.s)(t, e),
+    s = () => {
+        let e = (0, r.useRef)(null),
+            t = (0, i.f)((t) => ({
+                currentOffset: (0, o.s)(t, e),
                 isDragging: t.isDragging(),
                 itemType: t.getItemType(),
                 item: t.getItem(),
@@ -27,7 +27,7 @@ let s = (e) => {
                   display: !0,
                   itemType: t.itemType,
                   item: t.item,
-                  style: s(t.currentOffset),
+                  style: a(t.currentOffset),
                   monitor: t.monitor,
                   ref: e
               }

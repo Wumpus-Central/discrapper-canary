@@ -1,36 +1,36 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => u });
+var r = n(200651);
 n(192379);
-var l = n(399606),
-    a = n(595519),
-    r = n(317381),
-    s = n(917107),
-    o = n(9145),
+var i = n(399606),
+    l = n(595519),
+    o = n(317381),
+    a = n(917107),
+    s = n(9145),
     c = n(918559);
-function d(e) {
+function u(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {
-            connectedChannelId: d,
-            connectedActivity: u,
-            activityPanelMode: h
-        } = (0, l.cj)([r.ZP], () => {
+            connectedChannelId: u,
+            connectedActivity: d,
+            activityPanelMode: p
+        } = (0, i.cj)([o.ZP], () => {
             var e;
-            let t = r.ZP.getConnectedActivityChannelId();
+            let t = o.ZP.getConnectedActivityChannelId();
             return {
                 connectedChannelId: t,
-                connectedActivity: null != t && null !== (e = r.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
-                activityPanelMode: r.ZP.getActivityPanelMode()
+                connectedActivity: null != t && null !== (e = o.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
+                activityPanelMode: o.ZP.getActivityPanelMode()
             };
         });
-    if (!(0, a.NX)(d)) return null;
-    let p = null == u ? void 0 : u.applicationId;
-    return h !== c.Ez.PANEL || null == p
+    if (!(0, l.NX)(u)) return null;
+    let h = null == d ? void 0 : d.applicationId;
+    return p !== c.Ez.PANEL || null == h
         ? null
-        : null == d || null == u || (0, s.Z)(d)
+        : null == u || null == d || (0, a.Z)(u)
           ? null
-          : (0, i.jsx)(o.Z, {
+          : (0, r.jsx)(s.Z, {
                 maxHeight: t,
-                connectedLocation: u.location,
+                connectedLocation: d.location,
                 renderExternalHeader: n
             });
 }

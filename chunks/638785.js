@@ -1,69 +1,69 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(481060),
-    o = n(566898),
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(566898),
     c = n(785717),
-    d = n(981936);
-function u(e) {
-    let { section: t, header: n, items: a, minItems: u = 0, isLoading: h, listClassName: p } = e,
-        { trackUserProfileAction: m } = (0, c.KZ)(),
-        f = l.useId(),
-        [g, _] = l.useState(!1),
-        C = g ? s.CJ0 : s.Fbu;
-    return (0, i.jsxs)('section', {
-        className: d.section,
+    u = n(296075);
+function d(e) {
+    let { section: t, header: n, items: l, minItems: d = 0, isLoading: p, listClassName: h } = e,
+        { trackUserProfileAction: f } = (0, c.KZ)(),
+        m = i.useId(),
+        [g, b] = i.useState(!1),
+        _ = g ? a.CJ0 : a.Fbu;
+    return (0, r.jsxs)('section', {
+        className: u.section,
         children: [
-            h
-                ? (0, i.jsxs)('div', {
-                      className: r()(d.header, d.loading),
+            p
+                ? (0, r.jsxs)('div', {
+                      className: o()(u.header, u.loading),
                       children: [
-                          (0, i.jsx)(o.ZT, {
+                          (0, r.jsx)(s.ZT, {
                               width: 135,
                               opacity: 0.08
                           }),
-                          (0, i.jsx)(o.ZT, {
+                          (0, r.jsx)(s.ZT, {
                               width: 34,
                               opacity: 0.08
                           })
                       ]
                   })
-                : a.length <= u
-                  ? (0, i.jsxs)(s.X6q, {
+                : l.length <= d
+                  ? (0, r.jsxs)(a.X6q, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        className: d.header,
-                        children: [n, ' \u2014 ', a.length]
+                        className: u.header,
+                        children: [n, ' \u2014 ', l.length]
                     })
-                  : (0, i.jsxs)(s.P3F, {
-                        className: r()(d.header, d.clickable),
-                        'aria-controls': f,
+                  : (0, r.jsxs)(a.P3F, {
+                        className: o()(u.header, u.clickable),
+                        'aria-controls': m,
                         'aria-expanded': g,
                         onClick: () => {
-                            _(!g),
+                            b(!g),
                                 g ||
-                                    m({
+                                    f({
                                         action: 'PRESS_SECTION',
                                         section: t
                                     });
                         },
                         children: [
-                            (0, i.jsxs)(s.X6q, {
+                            (0, r.jsxs)(a.X6q, {
                                 variant: 'text-sm/medium',
                                 color: 'text-normal',
-                                children: [n, ' \u2014 ', a.length]
+                                children: [n, ' \u2014 ', l.length]
                             }),
-                            (0, i.jsx)(C, { size: 'md' })
+                            (0, r.jsx)(_, { size: 'md' })
                         ]
                     }),
-            a.length > 0 &&
-                (0, i.jsx)('ul', {
-                    id: f,
-                    hidden: !g && u <= 0,
-                    className: r()(d.list, p),
-                    children: g || a.length <= u ? a : a.slice(0, u)
+            l.length > 0 &&
+                (0, r.jsx)('ul', {
+                    id: m,
+                    hidden: !g && d <= 0,
+                    className: o()(u.list, h),
+                    children: g || l.length <= d ? l : l.slice(0, d)
                 })
         ]
     });

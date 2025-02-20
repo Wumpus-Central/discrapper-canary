@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(65154);
-function r(e) {
-    return e.supportsInApp(i.AN.VIDEO) && e.supportsInApp(i.AN.DESKTOP_CAPTURE);
+n.d(t, { Z: () => i });
+var r = n(65154);
+function i(e) {
+    return e.supportsInApp(r.AN.VIDEO) && e.supportsInApp(r.AN.DESKTOP_CAPTURE);
 }

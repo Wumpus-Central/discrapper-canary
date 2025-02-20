@@ -1,10 +1,10 @@
 n.d(t, { default: () => d }), n(47120), n(773603);
 var s,
     i = n(200651),
-    l = n(192379),
+    r = n(192379),
     o = n(481060),
-    a = n(388032),
-    r = n(204905);
+    l = n(388032),
+    a = n(239884);
 function h(e, t, n) {
     return (
         t in e
@@ -18,17 +18,17 @@ function h(e, t, n) {
         e
     );
 }
-class c extends (s = l.PureComponent) {
+class c extends (s = r.PureComponent) {
     render() {
         let { title: e, actionText: t, children: n, transitionState: s } = this.props,
             { error: h, isLoading: c, value: d } = this.state,
             u =
-                l.Children.count(n) > 0
+                r.Children.count(n) > 0
                     ? (0, i.jsx)(o.Zbd, {
                           type: o.Zbd.Types.WARNING,
-                          className: r.card,
+                          className: a.card,
                           children: (0, i.jsx)(o.Text, {
-                              className: r.warning,
+                              className: a.warning,
                               variant: 'text-md/normal',
                               children: n
                           })
@@ -50,8 +50,8 @@ class c extends (s = l.PureComponent) {
                         children: [
                             u,
                             (0, i.jsxs)(o.xJW, {
-                                title: a.intl.string(a.t['CIGa+/']),
-                                className: r.spacing,
+                                title: l.NW.string(l.t['CIGa+/']),
+                                className: a.spacing,
                                 children: [
                                     (0, i.jsx)(o.oil, {
                                         type: 'password',
@@ -64,7 +64,7 @@ class c extends (s = l.PureComponent) {
                                         ? (0, i.jsxs)(o.Text, {
                                               variant: 'text-xs/normal',
                                               color: 'text-danger',
-                                              className: r.error,
+                                              className: a.error,
                                               children: [' ', h, ' ']
                                           })
                                         : null
@@ -77,13 +77,13 @@ class c extends (s = l.PureComponent) {
                             (0, i.jsx)(o.zxk, {
                                 type: 'submit',
                                 disabled: c || 0 === d.length,
-                                children: null != t ? t : a.intl.string(a.t['cY+Ooa'])
+                                children: null != t ? t : l.NW.string(l.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(o.zxk, {
                                 onClick: this.handleCancel,
                                 look: o.zxk.Looks.LINK,
                                 color: o.zxk.Colors.PRIMARY,
-                                children: a.intl.string(a.t['ETE/oK'])
+                                children: l.NW.string(l.t['ETE/oK'])
                             })
                         ]
                     })

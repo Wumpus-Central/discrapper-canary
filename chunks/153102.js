@@ -1,7 +1,7 @@
-n.d(t, { Z: () => c }), n(177593), n(47120), n(411104), n(17089);
-var i = n(259443),
-    r = n(625306);
-function a(e, t, n) {
+n.d(t, { Z: () => u }), n(177593), n(47120), n(411104), n(17089);
+var r = n(259443),
+    i = n(625306);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,10 +14,10 @@ function a(e, t, n) {
         e
     );
 }
-let s = new i.Yd('Flux'),
-    o = 100,
+let a = new r.Yd('Flux'),
+    s = 100,
     l = (e) => e();
-class u {
+class c {
     destroy() {
         this.changedStores.clear(), this.reactChangedStores.clear(), (l = (e) => e());
     }
@@ -55,11 +55,11 @@ class u {
                         t = new Set(),
                         n = new Set();
                     for (; this.changedStores.size > 0; ) {
-                        if (++e > 100) throw (s.error('LastFewActions', r.qC()), Error('change emit loop detected, aborting'));
+                        if (++e > 100) throw (a.error('LastFewActions', i.qC()), Error('change emit loop detected, aborting'));
                         this.emitNonReactOnce(t, n);
                     }
                     for (; this.reactChangedStores.size > 0; ) {
-                        if (++e > 100) throw (s.error('LastFewActions', r.qC()), Error('react change emit loop detected, aborting'));
+                        if (++e > 100) throw (a.error('LastFewActions', i.qC()), Error('react change emit loop detected, aborting'));
                         this.emitReactOnce();
                     }
                 } finally {
@@ -78,19 +78,19 @@ class u {
     }
     emitNonReactOnce(e, t) {
         let n = Date.now(),
-            i = this.changedStores;
+            r = this.changedStores;
         (this.changedStores = new Set()),
-            i.forEach((e) => {
+            r.forEach((e) => {
                 t.add(e), e._changeCallbacks.invokeAll(), this.changedStores.delete(e);
             }),
-            i.forEach((n) => {
+            r.forEach((n) => {
                 n._syncWiths.forEach((n) => {
-                    let { func: i, store: r } = n;
-                    !e.has(i) && (e.add(i), !1 === i() || t.has(r) || (t.add(r), this.markChanged(r)));
+                    let { func: r, store: i } = n;
+                    !e.has(r) && (e.add(r), !1 === r() || t.has(i) || (t.add(i), this.markChanged(i)));
                 });
             });
-        let a = Date.now();
-        a - n > o && s.verbose('Slow batch emitChanges took '.concat(a - n, 'ms recentActions:'), r.qC());
+        let o = Date.now();
+        o - n > s && a.verbose('Slow batch emitChanges took '.concat(o - n, 'ms recentActions:'), i.qC());
     }
     emitReactOnce() {
         let e = Date.now(),
@@ -100,10 +100,10 @@ class u {
                 e._reactChangeCallbacks.invokeAll(), this.reactChangedStores.delete(e);
             });
         let n = Date.now();
-        n - e > o && s.verbose('Slow batch emitReactChanges took '.concat(n - e, 'ms recentActions:'), r.qC());
+        n - e > s && a.verbose('Slow batch emitReactChanges took '.concat(n - e, 'ms recentActions:'), i.qC());
     }
     constructor() {
-        a(this, 'changedStores', new Set()), a(this, 'reactChangedStores', new Set()), a(this, 'changeSentinel', 0), a(this, 'isBatchEmitting', !1), a(this, 'isDispatching', !1), a(this, 'isPaused', !1), a(this, 'pauseTimer', null);
+        o(this, 'changedStores', new Set()), o(this, 'reactChangedStores', new Set()), o(this, 'changeSentinel', 0), o(this, 'isBatchEmitting', !1), o(this, 'isDispatching', !1), o(this, 'isPaused', !1), o(this, 'pauseTimer', null);
     }
 }
-let c = new u();
+let u = new c();

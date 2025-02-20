@@ -1,21 +1,21 @@
-i.d(t, { Z: () => o });
-var e = i(200651);
-i(192379);
-var l = i(442837),
-    a = i(481060),
-    r = i(703656),
-    d = i(914010),
-    s = i(981631),
-    c = i(388032);
-function o(n) {
-    let t = (0, l.e7)([d.Z], () => d.Z.getGuildId());
-    return __OVERLAY__ || t !== s.I_8
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    o = n(703656),
+    a = n(914010),
+    c = n(981631),
+    s = n(388032);
+function u(e) {
+    let t = (0, i.e7)([a.Z], () => a.Z.getGuildId());
+    return __OVERLAY__ || t !== c.I_8
         ? null
-        : (0, e.jsx)(a.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: 'go-to-original-guild',
-              label: c.intl.string(c.t.WYj55e),
+              label: s.NW.string(s.t.WYj55e),
               action: function () {
-                  (0, r.XU)(n.guild_id, n.id);
+                  (0, o.XU)(e.guild_id, e.id);
               }
           });
 }

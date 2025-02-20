@@ -1,23 +1,23 @@
 n.d(t, {
     AQ: () => g,
-    DY: () => p,
+    DY: () => _,
     yQ: () => h
 }),
     n(653041),
     n(733860);
-var i,
-    r,
+var r,
+    i,
+    o,
     a,
     s,
-    o,
     l,
-    u = n(553813),
-    c = n.n(u),
+    c = n(553813),
+    u = n.n(c),
     d = n(65154);
 let f = [
     {
         name: 'H265',
-        encode: (null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64' && c().satisfies(null === (l = window) || void 0 === l ? void 0 : null === (o = l.DiscordNative) || void 0 === o ? void 0 : o.os.release, d.n4)),
+        encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || ((null === (a = window) || void 0 === a ? void 0 : null === (o = a.DiscordNative) || void 0 === o ? void 0 : o.os.arch) === 'arm64' && u().satisfies(null === (l = window) || void 0 === l ? void 0 : null === (s = l.DiscordNative) || void 0 === s ? void 0 : s.os.release, d.n4)),
         decode: !0
     },
     {
@@ -36,23 +36,23 @@ let f = [
         decode: !0
     }
 ];
-function _(e, t) {
+function p(e, t) {
     let n = t.concat(f),
-        i = [];
+        r = [];
     return (
         n.forEach((t) => {
             let n = e.find((e) => t.name === e.codec);
             null != n &&
-                i.push({
+                r.push({
                     name: n.codec,
                     encode: n.encode && t.encode,
                     decode: n.decode && t.decode
                 });
         }),
-        i
+        r
     );
 }
-function p(e) {
+function _(e) {
     let t = [];
     return (
         e.has(d.V8.SIGNAL_AV1_DECODE)
@@ -72,7 +72,7 @@ function p(e) {
 }
 function h(e, t) {
     return 'string' == typeof e
-        ? _(
+        ? p(
               JSON.parse(e).map((e) => ({
                   codec: m(e.codec),
                   encode: e.encode,
@@ -80,7 +80,7 @@ function h(e, t) {
               })),
               t
           )
-        : _(
+        : p(
               e.map((e) => ({
                   codec: m(e),
                   encode: !0,

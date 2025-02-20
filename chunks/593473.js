@@ -1,11 +1,11 @@
-var i = n(492476),
-    r = n(381538),
-    a = n(26018);
-function s(e) {
+var r = n(492476),
+    i = n(381538),
+    o = n(26018);
+function a(e) {
     switch (e.arrayFormat) {
         case 'index':
-            return function (t, n, i) {
-                return null === n ? [l(t, e), '[', i, ']'].join('') : [l(t, e), '[', l(i, e), ']=', l(n, e)].join('');
+            return function (t, n, r) {
+                return null === n ? [l(t, e), '[', r, ']'].join('') : [l(t, e), '[', l(r, e), ']=', l(n, e)].join('');
             };
         case 'bracket':
             return function (t, n) {
@@ -17,29 +17,29 @@ function s(e) {
             };
     }
 }
-function o(e) {
+function s(e) {
     var t;
     switch (e.arrayFormat) {
         case 'index':
-            return function (e, n, i) {
+            return function (e, n, r) {
                 if (((t = /\[(\d*)\]$/.exec(e)), (e = e.replace(/\[\d*\]$/, '')), !t)) {
-                    i[e] = n;
+                    r[e] = n;
                     return;
                 }
-                void 0 === i[e] && (i[e] = {}), (i[e][t[1]] = n);
+                void 0 === r[e] && (r[e] = {}), (r[e][t[1]] = n);
             };
         case 'bracket':
-            return function (e, n, i) {
+            return function (e, n, r) {
                 if (((t = /(\[\])$/.exec(e)), (e = e.replace(/\[\]$/, '')), t)) {
-                    if (void 0 === i[e]) {
-                        i[e] = [n];
+                    if (void 0 === r[e]) {
+                        r[e] = [n];
                         return;
                     }
                 } else {
-                    i[e] = n;
+                    r[e] = n;
                     return;
                 }
-                i[e] = [].concat(i[e], n);
+                r[e] = [].concat(r[e], n);
             };
         default:
             return function (e, t, n) {
@@ -52,13 +52,13 @@ function o(e) {
     }
 }
 function l(e, t) {
-    return t.encode ? (t.strict ? i(e) : encodeURIComponent(e)) : e;
+    return t.encode ? (t.strict ? r(e) : encodeURIComponent(e)) : e;
 }
-function u(e) {
+function c(e) {
     return Array.isArray(e)
         ? e.sort()
         : 'object' == typeof e
-          ? u(Object.keys(e))
+          ? c(Object.keys(e))
                 .sort(function (e, t) {
                     return Number(e) - Number(t);
                 })
@@ -71,26 +71,26 @@ function u(e) {
     return e.split('?')[1] || '';
 }),
     (t.parse = function (e, t) {
-        var n = o((t = r({ arrayFormat: 'none' }, t))),
-            i = Object.create(null);
+        var n = s((t = i({ arrayFormat: 'none' }, t))),
+            r = Object.create(null);
         return 'string' == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ''))
             ? (e.split('&').forEach(function (e) {
                   var t = e.replace(/\+/g, ' ').split('='),
-                      r = t.shift(),
-                      s = t.length > 0 ? t.join('=') : void 0;
-                  (s = void 0 === s ? null : a(s)), n(a(r), s, i);
+                      i = t.shift(),
+                      a = t.length > 0 ? t.join('=') : void 0;
+                  (a = void 0 === a ? null : o(a)), n(o(i), a, r);
               }),
-              Object.keys(i)
+              Object.keys(r)
                   .sort()
                   .reduce(function (e, t) {
-                      var n = i[t];
-                      return n && 'object' == typeof n && !Array.isArray(n) ? (e[t] = u(n)) : (e[t] = n), e;
+                      var n = r[t];
+                      return n && 'object' == typeof n && !Array.isArray(n) ? (e[t] = c(n)) : (e[t] = n), e;
                   }, Object.create(null)))
-            : i;
+            : r;
     }),
     (t.stringify = function (e, t) {
-        var n = s(
-            (t = r(
+        var n = a(
+            (t = i(
                 {
                     encode: !0,
                     strict: !0,
@@ -102,20 +102,20 @@ function u(e) {
         return e
             ? Object.keys(e)
                   .sort()
-                  .map(function (i) {
-                      var r = e[i];
-                      if (void 0 === r) return '';
-                      if (null === r) return l(i, t);
-                      if (Array.isArray(r)) {
-                          var a = [];
+                  .map(function (r) {
+                      var i = e[r];
+                      if (void 0 === i) return '';
+                      if (null === i) return l(r, t);
+                      if (Array.isArray(i)) {
+                          var o = [];
                           return (
-                              r.slice().forEach(function (e) {
-                                  void 0 !== e && a.push(n(i, e, a.length));
+                              i.slice().forEach(function (e) {
+                                  void 0 !== e && o.push(n(r, e, o.length));
                               }),
-                              a.join('&')
+                              o.join('&')
                           );
                       }
-                      return l(i, t) + '=' + l(r, t);
+                      return l(r, t) + '=' + l(i, t);
                   })
                   .filter(function (e) {
                       return e.length > 0;

@@ -1,23 +1,23 @@
-i.d(t, { Q: () => l }), i(653041);
-var n = i(442837),
-    a = i(699516),
-    o = i(111583),
-    s = i(594174);
-function l(e) {
+n.d(t, { Q: () => s }), n(653041);
+var i = n(442837),
+    o = n(699516),
+    r = n(111583),
+    a = n(594174);
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Number.MAX_SAFE_INTEGER;
-    return (0, n.Wu)(
-        [s.default, o.Z, a.Z],
+    return (0, i.Wu)(
+        [a.default, r.Z, o.Z],
         () => {
-            var i;
-            let n = null === (i = s.default.getCurrentUser()) || void 0 === i ? void 0 : i.id,
-                l = o.Z.getTypingUsers(e),
-                r = [];
-            for (let e in l) {
-                if (r.length >= t) break;
-                let i = s.default.getUser(e);
-                !(null == i || i.id === n || a.Z.isBlockedOrIgnored(i.id)) && r.push(i.id);
+            var n;
+            let i = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+                s = r.Z.getTypingUsers(e),
+                l = [];
+            for (let e in s) {
+                if (l.length >= t) break;
+                let n = a.default.getUser(e);
+                !(null == n || n.id === i || o.Z.isBlockedOrIgnored(n.id)) && l.push(n.id);
             }
-            return r;
+            return l;
         },
         [e, t]
     );

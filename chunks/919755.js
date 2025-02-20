@@ -1,18 +1,18 @@
-n.d(t, { Z: () => d }), n(47120), n(724458);
-var i = n(442837),
-    l = n(592125),
-    r = n(496675),
-    a = n(306680),
-    o = n(9156),
+n.d(t, { Z: () => u }), n(47120);
+var r = n(442837),
+    i = n(592125),
+    l = n(496675),
+    o = n(306680),
+    a = n(9156),
     s = n(709054),
     c = n(231338);
-function d(e) {
-    return (0, i.cj)([l.Z, a.ZP, o.ZP, r.Z], () =>
+function u(e) {
+    return (0, r.cj)([i.Z, o.ZP, a.ZP, l.Z], () =>
         s.default.keys(e).reduce(
             (e, t) => {
-                let n = l.Z.getChannel(t),
-                    i = null == n ? void 0 : n.isGuildVocal();
-                return (e.badge = e.badge + a.ZP.getMentionCount(t)), (e.unread = e.unread || (!i && r.Z.can(c.Pl.VIEW_CHANNEL, n) && a.ZP.hasUnread(t) && !o.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))), e;
+                let n = i.Z.getChannel(t),
+                    r = null == n ? void 0 : n.isGuildVocal();
+                return (e.badge = e.badge + o.ZP.getMentionCount(t)), (e.unread = e.unread || (!r && l.Z.can(c.Pl.VIEW_CHANNEL, n) && o.ZP.hasUnread(t) && !a.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))), e;
             },
             {
                 badge: 0,

@@ -1,15 +1,15 @@
 n.d(t, {
-    bb: () => r,
-    lN: () => a
+    bb: () => l,
+    lN: () => o
 });
-var i = n(818083),
-    l = n(987338);
-let r = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let l = (0, r.B)({
     kind: 'user',
     id: '2024-09_browsechannelbuttonoptin',
     label: "Don't show guild Browse Channels when all channels are already visible",
     defaultConfig: { alwaysShowDirectory: !0 },
-    commonTriggerPoint: l.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -18,7 +18,7 @@ let r = (0, i.B)({
         }
     ]
 });
-function a(e) {
-    let { alwaysShowDirectory: t } = r.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
+function o(e) {
+    let { alwaysShowDirectory: t } = l.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
     return t || !e;
 }

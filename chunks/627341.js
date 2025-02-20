@@ -1,15 +1,15 @@
-var i = n(147018),
-    r = n(717441),
-    a = n(299623),
-    s = Array;
-i(
+var r = n(147018),
+    i = n(717441),
+    o = n(299623),
+    a = Array;
+r(
     {
         target: 'Array',
         proto: !0
     },
     {
         with: function (e, t) {
-            return r(a(this), s, e, t);
+            return i(o(this), a, e, t);
         }
     }
 );

@@ -1,54 +1,54 @@
 n.d(t, { Z: () => f }), n(47120), n(653041);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    a = n(481060),
-    s = n(314910),
-    o = n(857192),
+var i = n(442837),
+    o = n(481060),
+    a = n(314910),
+    s = n(857192),
     l = n(517100),
-    u = n(594174),
-    c = n(231338),
-    d = n(233732);
+    c = n(594174),
+    u = n(231338),
+    d = n(968253);
 function f() {
     var e;
-    let t = (0, r.e7)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
-        n = (0, r.e7)([u.default], () => {
+    let t = (0, i.e7)([s.default], () => s.default.isIdleStatusIndicatorEnabled),
+        n = (0, i.e7)([c.default], () => {
             var e, t;
-            return null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
+            return null !== (t = null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
         }),
-        [f, _] = (0, r.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
-        p = [];
+        [f, p] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
+        _ = [];
     return (
-        f || _ || p.push('ACTIVE'),
-        f && p.push('IDLE'),
-        _ && p.push('AFK'),
+        f || p || _.push('ACTIVE'),
+        f && _.push('IDLE'),
+        p && _.push('AFK'),
         n && t
-            ? (0, i.jsx)(s.ZP, {
-                  children: (0, i.jsxs)('div', {
+            ? (0, r.jsx)(a.ZP, {
+                  children: (0, r.jsxs)('div', {
                       className: d.container,
                       children: [
-                          (0, i.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               className: d.status,
                               children: [
-                                  (0, i.jsx)(a.qbd, {
-                                      status: p.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
+                                  (0, r.jsx)(o.qbd, {
+                                      status: _.includes('ACTIVE') ? u.Sk.ONLINE : u.Sk.IDLE,
                                       className: d.statusIndicator
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-md/normal',
                                       children: 'IDLE STATUS:'
                                   }),
-                                  (0, i.jsx)('div', {
+                                  (0, r.jsx)('div', {
                                       className: d.statusText,
-                                      children: (0, i.jsx)(a.Text, {
+                                      children: (0, r.jsx)(o.Text, {
                                           variant: 'text-md/bold',
-                                          children: p.join(' + ')
+                                          children: _.join(' + ')
                                       })
                                   })
                               ]
                           }),
                           f &&
-                              (0, i.jsxs)(a.Text, {
+                              (0, r.jsxs)(o.Text, {
                                   variant: 'text-md/normal',
                                   children: [
                                       'Idle since:',

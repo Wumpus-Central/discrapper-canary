@@ -1,19 +1,19 @@
-n.d(t, { O: () => d });
-var i = n(192379),
-    l = n(442837),
-    r = n(570140),
-    a = n(621853),
-    s = n(484459),
-    o = n(594174);
-function d(e) {
-    let t = (0, l.e7)([o.default], () => o.default.getUser(e)),
-        n = (0, l.Wu)([a.Z], () => {
+n.d(t, { O: () => c });
+var r = n(192379),
+    i = n(442837),
+    l = n(570140),
+    o = n(621853),
+    a = n(484459),
+    s = n(594174);
+function c(e) {
+    let t = (0, i.e7)([s.default], () => s.default.getUser(e)),
+        n = (0, i.Wu)([o.Z], () => {
             var t, n;
-            return null !== (n = null === (t = a.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.map((e) => e.guild)) && void 0 !== n ? n : [];
+            return null !== (n = null === (t = o.Z.getMutualGuilds(e)) || void 0 === t ? void 0 : t.map((e) => e.guild)) && void 0 !== n ? n : [];
         });
     return (
-        i.useEffect(() => {
-            0 === n.length && null != t && null == a.Z.getMutualGuilds(e) && r.Z.wait(() => (0, s.Z)(e, void 0, { withMutualGuilds: !0 }));
+        r.useEffect(() => {
+            0 === n.length && null != t && null == o.Z.getMutualGuilds(e) && l.Z.wait(() => (0, a.Z)(e, void 0, { withMutualGuilds: !0 }));
         }, [n, t, e]),
         n
     );

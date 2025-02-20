@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(358085),
-    s = n(998502),
-    r = n(388032);
-function o(e, t) {
-    return a.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
-        ? (0, i.jsx)(l.sNh, {
+var i = n(481060),
+    l = n(358085),
+    a = n(998502),
+    o = n(388032);
+function s(e, t) {
+    return l.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
+        ? (0, r.jsx)(i.sNh, {
               id: 'copy',
-              label: r.intl.string(r.t.OpuAlJ),
-              hint: (0, a.isMac)() ? '\u2318C' : 'Ctrl+C',
+              label: o.NW.string(o.t.OpuAlJ),
+              hint: (0, l.isMac)() ? '\u2318C' : 'Ctrl+C',
               action: () => {
-                  s.ZP.copy(e), null == t || t.focus();
+                  a.ZP.copy(e), null == t || t.focus();
               }
           })
         : null;

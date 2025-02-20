@@ -1,17 +1,17 @@
-var a = t(147018),
-    i = t(863664),
-    r = t(299623),
-    l = t(345374),
-    o = Array;
-a(
+var r = n(147018),
+    i = n(863664),
+    o = n(299623),
+    a = n(345374),
+    l = Array;
+r(
     {
         target: 'Array',
         proto: !0
     },
     {
         toReversed: function () {
-            return i(r(this), o);
+            return i(o(this), l);
         }
     }
 ),
-    l('toReversed');
+    a('toReversed');

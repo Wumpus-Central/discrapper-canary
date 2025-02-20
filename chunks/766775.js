@@ -9,7 +9,7 @@ var o = n(120356),
     d = n(659900),
     _ = n(473855),
     s = n(388032),
-    f = n(219610);
+    f = n(558241);
 function m(e) {
     let { transitionState: i, onClose: n, guildTemplate: o } = e,
         { form: m, preview: h, handleSubmit: p } = (0, d.Z)(o, !1),
@@ -41,7 +41,7 @@ function m(e) {
                                 children: [
                                     (0, c.jsx)(t.Dx, {
                                         className: f.header,
-                                        children: s.intl.string(s.t.UNFvtL)
+                                        children: s.NW.string(s.t.UNFvtL)
                                     }),
                                     m,
                                     h
@@ -56,14 +56,14 @@ function m(e) {
                         (0, c.jsx)(r.zxk, {
                             color: r.zxk.Colors.PRIMARY,
                             onClick: n,
-                            children: s.intl.string(s.t.cpT0Cg)
+                            children: s.NW.string(s.t.cpT0Cg)
                         }),
                         (0, c.jsx)(r.zxk, {
                             color: r.zxk.Colors.GREEN,
                             onClick: async () => {
                                 null != (await p()) && n();
                             },
-                            children: s.intl.string(s.t.CumH4u)
+                            children: s.NW.string(s.t.CumH4u)
                         })
                     ]
                 })

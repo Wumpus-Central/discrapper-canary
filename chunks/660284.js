@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     let t = typeof e;
     if ('object' == t) {
         if (Array.isArray(e)) return 'array';
@@ -6,10 +6,10 @@ function i(e) {
     }
     return t;
 }
-function r(e) {
+function i(e) {
     return null !== e && 'object' == typeof e && !Array.isArray(e);
 }
 n.d(t, {
-    Z: () => i,
-    b: () => r
+    Z: () => r,
+    b: () => i
 });

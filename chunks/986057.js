@@ -1,12 +1,12 @@
 n.d(t, { Z: () => h }), n(47120);
-var i = n(846027),
-    r = n(147913),
-    a = n(353926),
-    s = n(131951),
-    o = n(19780),
+var r = n(846027),
+    i = n(147913),
+    o = n(353926),
+    a = n(131951),
+    s = n(19780),
     l = n(626135),
-    u = n(743498),
-    c = n(875527),
+    c = n(743498),
+    u = n(875527),
     d = n(981631);
 function f(e, t, n) {
     return (
@@ -21,39 +21,39 @@ function f(e, t, n) {
         e
     );
 }
-function _() {
-    return (0, c.wt)({
+function p() {
+    return (0, u.wt)({
         location: 'VoiceFilterLoopbackManager',
         autoTrackExposure: !1
     });
 }
-class p extends r.Z {
+class _ extends i.Z {
     handleExperimentStateChange() {
-        !_() && s.Z.getVoiceFilterPlaybackEnabled() && (0, u._j)(!1);
+        !p() && a.Z.getVoiceFilterPlaybackEnabled() && (0, c._j)(!1);
     }
     handleRtcConnectionState(e) {
         let { state: t } = e,
-            n = s.Z.getActiveVoiceFilter();
-        if (!_() || null == n) return;
-        let r = s.Z.getVoiceFilterPlaybackEnabled();
-        t === d.hes.RTC_CONNECTED ? i.Z.setLoopback(r) : t === d.hes.RTC_DISCONNECTED && i.Z.setLoopback(!1);
+            n = a.Z.getActiveVoiceFilter();
+        if (!p() || null == n) return;
+        let i = a.Z.getVoiceFilterPlaybackEnabled();
+        t === d.hes.RTC_CONNECTED ? r.Z.setLoopback(i) : t === d.hes.RTC_DISCONNECTED && r.Z.setLoopback(!1);
     }
     handleLoopbackToggle(e) {
         var t;
         let { enabled: n } = e;
         l.default.track(d.rMx.VOICE_FILTER_PLAYBACK_TOGGLED, {
-            active_voice_filter_id: null !== (t = s.Z.getActiveVoiceFilter()) && void 0 !== t ? t : null,
+            active_voice_filter_id: null !== (t = a.Z.getActiveVoiceFilter()) && void 0 !== t ? t : null,
             enabled: n
         }),
-            o.Z.isConnected() && i.Z.setLoopback(n);
+            s.Z.isConnected() && r.Z.setLoopback(n);
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t } = e,
-            n = s.Z.getVoiceFilterPlaybackEnabled();
+            n = a.Z.getVoiceFilterPlaybackEnabled();
         if (null == t) {
-            let e = s.Z.getLoopback();
-            n && e && i.Z.setLoopback(!1);
-        } else n && o.Z.isConnected() && i.Z.setLoopback(!0);
+            let e = a.Z.getLoopback();
+            n && e && r.Z.setLoopback(!1);
+        } else n && s.Z.isConnected() && r.Z.setLoopback(!0);
     }
     constructor(...e) {
         super(...e),
@@ -62,7 +62,7 @@ class p extends r.Z {
                 VOICE_FILTER_LOOPBACK_TOGGLE: this.handleLoopbackToggle,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied
             }),
-            f(this, 'stores', new Map().set(a.Z, this.handleExperimentStateChange));
+            f(this, 'stores', new Map().set(o.Z, this.handleExperimentStateChange));
     }
 }
-let h = new p();
+let h = new _();

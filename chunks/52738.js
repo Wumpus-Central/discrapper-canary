@@ -1,22 +1,22 @@
-var i = (function () {
+var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, t) {
+function a(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -29,23 +29,23 @@ function s(e, t) {
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 n(129629);
-var o = n(420633),
+var s = n(420633),
     l = n(22672),
-    u = n(512722),
-    c = n(16686),
+    c = n(512722),
+    u = n(16686),
     d = (function (e) {
         function t(e) {
-            r(this, t);
-            var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
-                i = e || {
+            i(this, t);
+            var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
+                r = e || {
                     x: 0,
                     y: 0
                 };
-            return 'number' == typeof i.x && 'number' == typeof i.y ? ((n.x = new o(i.x)), (n.y = new o(i.y))) : (u(i.x instanceof o && i.y instanceof o, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = i.x), (n.y = i.y)), (n._listeners = {}), n;
+            return 'number' == typeof r.x && 'number' == typeof r.y ? ((n.x = new s(r.x)), (n.y = new s(r.y))) : (c(r.x instanceof s && r.y instanceof s, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = r.x), (n.y = r.y)), (n._listeners = {}), n;
         }
         return (
-            s(t, e),
-            i(t, [
+            a(t, e),
+            r(t, [
                 {
                     key: 'setValue',
                     value: function (e) {
@@ -83,14 +83,14 @@ var o = n(420633),
                     key: 'addListener',
                     value: function (e) {
                         var t = this,
-                            n = c(),
-                            i = function (n) {
+                            n = u(),
+                            r = function (n) {
                                 n.value, e(t.__getValue());
                             };
                         return (
                             (this._listeners[n] = {
-                                x: this.x.addListener(i),
-                                y: this.y.addListener(i)
+                                x: this.x.addListener(r),
+                                y: this.y.addListener(r)
                             }),
                             n
                         );

@@ -5,10 +5,10 @@ function t(e) {
             relevance: 0
         },
         n = [e.C_BLOCK_COMMENT_MODE, e.HASH_COMMENT_MODE, e.COMMENT('--', '$'), e.COMMENT('[^:]//', '$')],
-        i = e.inherit(e.TITLE_MODE, {
+        r = e.inherit(e.TITLE_MODE, {
             variants: [{ begin: '\\b_*rig[A-Z][A-Za-z0-9_\\-]*' }, { begin: '\\b_[a-z0-9\\-]+' }]
         }),
-        r = e.inherit(e.TITLE_MODE, { begin: '\\b([A-Za-z0-9_\\-]+)\\b' });
+        i = e.inherit(e.TITLE_MODE, { begin: '\\b([A-Za-z0-9_\\-]+)\\b' });
     return {
         name: 'LiveCode',
         case_insensitive: !1,
@@ -28,20 +28,20 @@ function t(e) {
                 className: 'function',
                 beginKeywords: 'function',
                 end: '$',
-                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, i]
+                contains: [t, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, r]
             },
             {
                 className: 'function',
                 begin: '\\bend\\s+',
                 end: '$',
                 keywords: 'end',
-                contains: [r, i],
+                contains: [i, r],
                 relevance: 0
             },
             {
                 beginKeywords: 'command on',
                 end: '$',
-                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, i]
+                contains: [t, i, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, r]
             },
             {
                 className: 'meta',
@@ -58,7 +58,7 @@ function t(e) {
             e.QUOTE_STRING_MODE,
             e.BINARY_NUMBER_MODE,
             e.C_NUMBER_MODE,
-            i
+            r
         ].concat(n),
         illegal: ';$|^\\[|^=|&|\\{'
     };

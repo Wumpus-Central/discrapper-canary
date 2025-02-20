@@ -1,84 +1,84 @@
-n.d(t, { k: () => h }), n(757143);
-var i = n(200651);
+n.d(t, { k: () => p }), n(757143), n(301563);
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(430824),
-    s = n(914010),
-    o = n(388032),
-    c = n(667679);
-let d = () =>
-        (0, i.jsx)(i.Fragment, {
-            children: o.intl.format(o.t.ymkBtr, {
-                shareIcon: o.intl.string(o.t.VINpSE),
-                shareIconHook: () => (0, i.jsx)(a.ejJ, { className: c.icon }, 'icon')
+var i = n(442837),
+    l = n(481060),
+    o = n(430824),
+    a = n(914010),
+    s = n(388032),
+    c = n(513230);
+let u = () =>
+        (0, r.jsx)(r.Fragment, {
+            children: s.NW.format(s.t.ymkBtr, {
+                shareIcon: s.NW.string(s.t.VINpSE),
+                shareIconHook: () => (0, r.jsx)(l.ejJ, { className: c.icon }, 'icon')
             })
         }),
-    u = () => {
-        let e = (0, l.e7)([r.Z, s.Z], () => r.Z.getGuild(s.Z.getGuildId()), []),
+    d = () => {
+        let e = (0, i.e7)([o.Z, a.Z], () => o.Z.getGuild(a.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
-        return (0, i.jsx)(i.Fragment, { children: o.intl.format(o.t.oQuG3N, { serverName: t }) });
+        return (0, r.jsx)(r.Fragment, { children: s.NW.format(s.t.oQuG3N, { serverName: t }) });
     },
-    h = (e) => {
+    p = (e) => {
         var t, n;
-        let l =
+        let i =
             null !==
                 (t = {
                     VOICE_CONVERSATIONS: {
-                        title: (0, i.jsx)('div', {
+                        title: (0, r.jsx)('div', {
                             className: c.voiceChannelsTitle,
-                            children: o.intl.string(o.t.w5HAlp)
+                            children: s.NW.string(s.t.w5HAlp)
                         }),
-                        body: o.intl.string(o.t.Ww4hho)
+                        body: s.NW.string(s.t.Ww4hho)
                     },
                     WRITING_MESSAGES: {
-                        title: (0, i.jsx)('div', {
+                        title: (0, r.jsx)('div', {
                             className: c.writingMessagesTitle,
-                            children: o.intl.string(o.t.nkP0l5)
+                            children: s.NW.string(s.t.nkP0l5)
                         }),
-                        body: (0, i.jsx)(u, {})
+                        body: (0, r.jsx)(d, {})
                     },
                     ORGANIZE_BY_TOPIC: {
-                        title: (0, i.jsx)('div', {
+                        title: (0, r.jsx)('div', {
                             className: c.channelsTitle,
-                            children: o.intl.string(o.t['j/5+IS'])
+                            children: s.NW.string(s.t['j/5+IS'])
                         }),
-                        body: o.intl.string(o.t.mufH2N)
+                        body: s.NW.string(s.t.mufH2N)
                     },
                     WHOS_ONLINE: {
-                        title: o.intl.string(o.t.l2nSoK),
-                        body: o.intl.format(o.t.y6tbBA, {})
+                        title: s.NW.string(s.t.l2nSoK),
+                        body: s.NW.format(s.t.y6tbBA, {})
                     },
                     INSTANT_INVITE: {
-                        title: o.intl.string(o.t.XcehY2),
-                        body: (0, i.jsx)(d, {})
+                        title: s.NW.string(s.t.XcehY2),
+                        body: (0, r.jsx)(u, {})
                     },
                     SERVER_SETTINGS: {
-                        title: o.intl.string(o.t.wc8wi4),
-                        body: o.intl.format(o.t.mIfDhY, {})
+                        title: s.NW.string(s.t.wc8wi4),
+                        body: s.NW.format(s.t.mIfDhY, {})
                     },
                     DIRECT_MESSAGES: {
-                        title: o.intl.string(o.t['V07x5+']),
-                        body: o.intl.format(o.t.GEBBe3, {})
+                        title: s.NW.string(s.t['V07x5+']),
+                        body: s.NW.format(s.t.GEBBe3, {})
                     },
                     CREATE_MORE_SERVERS: {
-                        title: o.intl.string(o.t['50FORk']),
-                        body: o.intl.format(o.t.zVL4qa, {})
+                        title: s.NW.string(s.t['50FORk']),
+                        body: s.NW.format(s.t.zVL4qa, {})
                     },
                     CREATE_FIRST_SERVER: {
-                        title: o.intl.string(o.t.CtOX9f),
-                        body: o.intl.format(o.t.TflqTU, {})
+                        title: s.NW.string(s.t.CtOX9f),
+                        body: s.NW.format(s.t.TflqTU, {})
                     },
                     FRIENDS_LIST: {
-                        title: o.intl.string(o.t.Fnk9Ly),
-                        body: o.intl.format(o.t.NTq0AQ, {})
+                        title: s.NW.string(s.t.Fnk9Ly),
+                        body: s.NW.format(s.t.NTq0AQ, {})
                     }
                 }[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t
                 ? t
                 : {};
         return {
-            title: l.title,
-            body: l.body,
-            isLongText: null !== (n = l.isLongText) && void 0 !== n && n
+            title: i.title,
+            body: i.body,
+            isLongText: null !== (n = i.isLongText) && void 0 !== n && n
         };
     };

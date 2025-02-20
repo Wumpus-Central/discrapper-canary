@@ -1,5 +1,5 @@
-var i = n(690244)('%Object%'),
-    r = n(796768);
+var r = n(690244)('%Object%'),
+    i = n(796768);
 e.exports = function (e) {
-    return r(e), i(e);
+    return i(e), r(e);
 };

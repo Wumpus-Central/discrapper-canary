@@ -1,5 +1,5 @@
-n.d(t, { z: () => i });
-let i = {
+n.d(t, { z: () => r });
+let r = {
     authorIds: [],
     message: ''
 };

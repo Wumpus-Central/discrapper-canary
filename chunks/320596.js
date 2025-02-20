@@ -11,8 +11,8 @@ let u = (e) => {
         var t, n;
         let {
                 data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: f, pattern: b },
-                onChange: _,
-                initialText: h,
+                onChange: h,
+                initialText: _,
                 isRequired: g
             } = e,
             v = l.useRef(
@@ -62,26 +62,26 @@ let u = (e) => {
             [y, O] = l.useState('');
         l.useEffect(() => {
             var e;
-            N(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : '');
-        }, [h]);
+            N(null !== (e = null == _ ? void 0 : _.value) && void 0 !== e ? e : '');
+        }, [_]);
         let Z = l.useCallback(
             (e) => {
                 let t = null != b ? new RegExp(b) : null;
                 null != t && null == t.exec(e)
                     ? (O(s.NW.string(s.t['24xrGR'])),
-                      _({
+                      h({
                           value: e,
                           isValid: !1
                       }))
                     : null != e &&
                       (O(''),
                       N(e),
-                      _({
+                      h({
                           value: e,
                           isValid: !0
                       }));
             },
-            [_, b]
+            [h, b]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,

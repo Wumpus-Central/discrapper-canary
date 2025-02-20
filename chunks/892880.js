@@ -1,58 +1,58 @@
-let i;
+let r;
 n.d(t, { Z: () => g }), n(653041);
-var r = n(392711),
-    a = n.n(r),
-    s = n(31775),
-    o = n.n(s),
+var i = n(392711),
+    o = n.n(i),
+    a = n(31775),
+    s = n.n(a),
     l = n(749210),
-    u = n(430824),
-    c = n(594174),
+    c = n(430824),
+    u = n(594174),
     d = n(70956),
     f = n(51144),
-    _ = n(388032);
-let p = new (o())({ maxAge: 1 * d.Z.Millis.MINUTE });
+    p = n(388032);
+let _ = new (s())({ maxAge: +d.Z.Millis.MINUTE });
 function h(e, t, n) {
-    null != i && clearTimeout(i),
-        (i = setTimeout(() => {
-            let i = [],
-                r = (e) => {
-                    i.push(e.id);
+    null != r && clearTimeout(r),
+        (r = setTimeout(() => {
+            let r = [],
+                i = (e) => {
+                    r.push(e.id);
                 };
-            if (null == e) a().forEach(u.Z.getGuilds(), r);
+            if (null == e) o().forEach(c.Z.getGuilds(), i);
             else if (Array.isArray(e))
                 e.forEach((e) => {
-                    let t = u.Z.getGuild(e);
-                    null != t && r(t);
+                    let t = c.Z.getGuild(e);
+                    null != t && i(t);
                 });
             else {
-                let t = u.Z.getGuild(e);
-                null != t && r(t);
+                let t = c.Z.getGuild(e);
+                null != t && i(t);
             }
-            i.length > 0 && l.Z.requestMembers(i, t.toLocaleLowerCase(), n);
+            r.length > 0 && l.Z.requestMembers(r, t.toLocaleLowerCase(), n);
         }, 200));
 }
 function m(e, t) {
     let n = ''.concat(null != e ? e : '', ':').concat(t),
-        i = p.get(n);
-    if (null != i) return i;
-    p.set(n, !0);
+        r = _.get(n);
+    if (null != r) return r;
+    _.set(n, !0);
 }
 let g = {
     getGuildNameSuggestion: function (e) {
-        let t = c.default.getCurrentUser(),
+        let t = u.default.getCurrentUser(),
             n = f.oY(t);
-        return null == n || 0 === n.length ? '' : _.intl.formatToPlainString(_.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
+        return null == n || 0 === n.length ? '' : p.NW.formatToPlainString(p.t.Y6Qfjo, { username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-            i = Array.isArray(e),
-            r = [],
-            a = !1;
-        i
+            r = Array.isArray(e),
+            i = [],
+            o = !1;
+        r
             ? e.forEach((e) => {
-                  null == m(e, t) && r.push(e);
+                  null == m(e, t) && i.push(e);
               })
-            : null == m(e, t) && (a = !0),
-            r.length > 0 && i ? h(r, t, n) : a && h(e, t, n);
+            : null == m(e, t) && (o = !0),
+            i.length > 0 && r ? h(i, t, n) : o && h(e, t, n);
     }
 };

@@ -1,4 +1,4 @@
-n.d(t, { O: () => a });
-var i = n(192379),
-    r = n(626135);
-let a = () => i.useContext(r.AnalyticsContext);
+n.d(t, { O: () => o });
+var r = n(192379),
+    i = n(626135);
+let o = () => r.useContext(i.AnalyticsContext);

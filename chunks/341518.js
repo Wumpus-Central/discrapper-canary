@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    r = n(723184);
-let a = function (e) {
+n.d(t, { Z: () => o });
+var r = n(192379),
+    i = n(723184);
+let o = function (e) {
     var t = e.hsl,
         n = e.offset,
-        a = e.onClick,
-        s = void 0 === a ? function () {} : a,
-        o = e.active,
+        o = e.onClick,
+        a = void 0 === o ? function () {} : o,
+        s = e.active,
         l = e.first,
-        u = e.last,
-        c = (0, r.default)(
+        c = e.last,
+        u = (0, i.default)(
             {
                 default: {
                     swatch: {
@@ -28,13 +28,13 @@ let a = function (e) {
                 }
             },
             {
-                active: o,
+                active: s,
                 first: l,
-                last: u
+                last: c
             }
         ),
         d = function (e) {
-            return s(
+            return a(
                 {
                     h: t.h,
                     s: 0.5,
@@ -44,8 +44,8 @@ let a = function (e) {
                 e
             );
         };
-    return i.createElement('div', {
-        style: c.swatch,
+    return r.createElement('div', {
+        style: u.swatch,
         onClick: d
     });
 };

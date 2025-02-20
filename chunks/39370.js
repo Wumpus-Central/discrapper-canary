@@ -1,22 +1,22 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var l = n(704215),
-    r = n(765585),
+var i = n(704215),
+    s = n(765585),
     a = n(300284),
-    s = n(526761),
+    l = n(526761),
     o = n(388032),
-    d = n(884423);
-function c() {
-    let e = (0, a.Z)({ scrollPosition: s.Y_.TRY_IT_OUT });
-    return (0, i.jsx)(r.Z, {
+    c = n(383727);
+function d() {
+    let e = (0, a.Z)({ scrollPosition: l.Y_.TRY_IT_OUT });
+    return (0, r.jsx)(s.Z, {
         isPremiumFeature: !0,
         shouldUseHorizontalButtons: !0,
         inlineArt: !0,
-        artClassName: d.profileThemesArt,
+        artClassName: c.profileThemesArt,
         onTryFeature: e,
-        header: o.intl.string(o.t.V95BHB),
-        body: o.intl.string(o.t['Cxm79/']),
-        dismissibleContent: l.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2
+        header: o.NW.string(o.t.V95BHB),
+        body: o.NW.string(o.t['Cxm79/']),
+        dismissibleContent: i.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2
     });
 }

@@ -1,5 +1,5 @@
-n.d(t, { y: () => i });
-let i = {
+n.d(t, { y: () => r });
+let r = {
     bg: () => Promise.resolve().then(n.t.bind(n, 16130, 23)),
     cs: () => Promise.resolve().then(n.t.bind(n, 462629, 23)),
     da: () => Promise.resolve().then(n.t.bind(n, 744776, 23)),

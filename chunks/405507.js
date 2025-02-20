@@ -5,15 +5,15 @@ function t(e) {
             built_in: 'architecture augeasversion blockdevices boardmanufacturer boardproductname boardserialnumber cfkey dhcp_servers domain ec2_ ec2_userdata facterversion filesystems ldom fqdn gid hardwareisa hardwaremodel hostname id|0 interfaces ipaddress ipaddress_ ipaddress6 ipaddress6_ iphostnumber is_virtual kernel kernelmajversion kernelrelease kernelversion kernelrelease kernelversion lsbdistcodename lsbdistdescription lsbdistid lsbdistrelease lsbmajdistrelease lsbminordistrelease lsbrelease macaddress macaddress_ macosx_buildversion macosx_productname macosx_productversion macosx_productverson_major macosx_productversion_minor manufacturer memoryfree memorysize netmask metmask_ network_ operatingsystem operatingsystemmajrelease operatingsystemrelease osfamily partitions path physicalprocessorcount processor processorcount productname ps puppetversion rubysitedir rubyversion selinux selinux_config_mode selinux_config_policy selinux_current_mode selinux_current_mode selinux_enforced selinux_policyversion serialnumber sp_ sshdsakey sshecdsakey sshrsakey swapencrypted swapfree swapsize timezone type uniqueid uptime uptime_days uptime_hours uptime_seconds uuid virtual vlans xendomains zfs_version zonenae zones zpool_version'
         },
         n = e.COMMENT('#', '$'),
-        i = '([A-Za-z_]|::)(\\w|::)*',
-        r = e.inherit(e.TITLE_MODE, { begin: i }),
-        a = {
+        r = '([A-Za-z_]|::)(\\w|::)*',
+        i = e.inherit(e.TITLE_MODE, { begin: r }),
+        o = {
             className: 'variable',
-            begin: '\\$' + i
+            begin: '\\$' + r
         },
-        s = {
+        a = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: /'/,
@@ -30,13 +30,13 @@ function t(e) {
         aliases: ['pp'],
         contains: [
             n,
+            o,
             a,
-            s,
             {
                 beginKeywords: 'class',
                 end: '\\{|;',
                 illegal: /=/,
-                contains: [r, n]
+                contains: [i, n]
             },
             {
                 beginKeywords: 'define',
@@ -65,7 +65,7 @@ function t(e) {
                         keywords: t,
                         relevance: 0,
                         contains: [
-                            s,
+                            a,
                             n,
                             {
                                 begin: '[a-zA-Z_]+\\s*=>',
@@ -83,7 +83,7 @@ function t(e) {
                                 begin: '(\\b0[0-7_]+)|(\\b0x[0-9a-fA-F_]+)|(\\b[1-9][0-9_]*(\\.[0-9_]+)?)|[0_]\\b',
                                 relevance: 0
                             },
-                            a
+                            o
                         ]
                     }
                 ],

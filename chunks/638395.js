@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(288219);
-function o(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(288219);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,18 +17,18 @@ function o(e, t, n) {
     );
 }
 let l = {};
-function u(e) {
+function c(e) {
     let { labFeature: t, enabled: n } = e;
     l[t] = n;
 }
-class c extends (i = r.ZP.DeviceSettingsStore) {
+class u extends (r = i.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: l };
     }
     initialize(e) {
-        for (var t in s.Z) {
-            var n, i;
-            l[t] = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
+        for (var t in a.Z) {
+            var n, r;
+            l[t] = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
         }
     }
     get(e) {
@@ -39,5 +39,5 @@ class c extends (i = r.ZP.DeviceSettingsStore) {
         return (l[e] = t), t;
     }
 }
-o(c, 'displayName', 'LabFeatureStore'), o(c, 'persistKey', 'LabFeatureStore');
-let d = new c(a.Z, { LAB_FEATURE_TOGGLE: u });
+s(u, 'displayName', 'LabFeatureStore'), s(u, 'persistKey', 'LabFeatureStore');
+let d = new u(o.Z, { LAB_FEATURE_TOGGLE: c });

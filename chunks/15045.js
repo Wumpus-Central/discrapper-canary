@@ -1,6 +1,6 @@
-var i = n(67867),
-    r = n(625014).trim;
-i(
+var r = n(67867),
+    i = n(625014).trim;
+r(
     {
         target: 'String',
         proto: !0,
@@ -8,7 +8,7 @@ i(
     },
     {
         trim: function () {
-            return r(this);
+            return i(this);
         }
     }
 );

@@ -26,13 +26,13 @@ function t(e) {
                 }
             ]
         },
-        i = {
+        r = {
             match: [t, /(?=\()/],
             scope: { 1: 'keyword' },
             contains: [n]
         };
     return (
-        n.contains.unshift(i),
+        n.contains.unshift(r),
         {
             name: 'Leaf',
             contains: [

@@ -1,77 +1,77 @@
 n.r(t), n.d(t, { default: () => w }), n(47120);
-var l = n(200651),
-    r = n(192379),
-    i = n(120356),
-    o = n.n(i),
+var r = n(200651),
+    l = n(192379),
+    o = n(120356),
+    i = n.n(o),
     s = n(642128),
     a = n(442837),
-    d = n(481060),
-    c = n(749210),
+    c = n(481060),
+    d = n(749210),
     u = n(830064),
     m = n(393238),
-    x = n(877604),
-    h = n(998730),
-    p = n(480608),
+    h = n(877604),
+    p = n(998730),
+    x = n(480608),
     f = n(160404),
     g = n(703656),
-    v = n(430824),
-    _ = n(768581),
-    j = n(302221),
-    C = n(549817),
-    N = n(45966),
-    b = n(819553),
+    j = n(430824),
+    v = n(768581),
+    b = n(302221),
+    N = n(549817),
+    _ = n(45966),
+    C = n(819553),
     k = n(548473),
-    Z = n(15320),
-    I = n(973051),
+    O = n(15320),
+    Z = n(973051),
     E = n(981631),
-    T = n(388032),
-    D = n(130748);
+    I = n(388032),
+    y = n(161986);
 function w(e) {
     let { guildId: t } = e,
-        { ref: n, width: i, height: w } = (0, m.Z)(),
-        R = (0, a.Wu)([N.Z], () => N.Z.getOnboardingPromptsForOnboarding(t)),
-        P = (0, a.e7)([N.Z], () => N.Z.getEnabled(t)),
-        M = r.useCallback(
-            (e, n, l) => {
-                C.Z.selectOption(t, e, n, l);
+        { ref: n, width: o, height: w } = (0, m.Z)(),
+        P = (0, a.Wu)([_.Z], () => _.Z.getOnboardingPromptsForOnboarding(t)),
+        D = (0, a.e7)([_.Z], () => _.Z.getEnabled(t)),
+        T = l.useCallback(
+            (e, n, r) => {
+                N.Z.selectOption(t, e, n, r);
             },
             [t]
         ),
-        O = r.useCallback(() => {
-            C.Z.completeOnboarding(t, R);
-        }, [t, R]),
-        B = (0, a.e7)([v.Z], () => v.Z.getGuild(t)),
-        y = r.useMemo(
+        R = l.useCallback(() => {
+            N.Z.completeOnboarding(t, P);
+        }, [t, P]),
+        M = (0, a.e7)([j.Z], () => j.Z.getGuild(t)),
+        S = l.useMemo(
             () =>
-                null == B
+                null == M
                     ? null
-                    : _.ZP.getGuildSplashURL({
-                          id: B.id,
-                          splash: B.splash
+                    : v.ZP.getGuildSplashURL({
+                          id: M.id,
+                          splash: M.splash
                       }),
-            [B]
+            [M]
         ),
-        A = (0, h.N)(y),
-        S = (0, a.e7)([b.ZP], () => b.ZP.getCurrentOnboardingStep(t)),
-        [z, L] = r.useState(null != y ? null : 'cover'),
-        F = r.useCallback(
+        W = (0, p.N)(S),
+        B = (0, a.e7)([C.ZP], () => C.ZP.getCurrentOnboardingStep(t)),
+        [A, z] = l.useState(null != S ? null : 'cover'),
+        L = l.useCallback(
             (e) => {
-                L(S), C.Z.setUserOnboardingStep(t, e);
+                z(B), N.Z.setUserOnboardingStep(t, e);
             },
-            [t, S]
+            [t, B]
         ),
-        G = (0, a.e7)([f.Z], () => f.Z.isFullServerPreview(t)),
-        U = (0, a.e7)([b.ZP], () => b.ZP.getOnboardingStatus(t)),
-        q = null != R && R.length > 0,
-        H = r.useCallback(() => {
-            (0, b.kp)(U) && P && q ? F(0) : O();
-        }, [U, P, q, F, O]);
-    r.useEffect(() => {
-        if (!b.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
-        (0, p.E)(t);
+        F = (0, a.e7)([f.Z], () => f.Z.isFullServerPreview(t)),
+        G = (0, a.e7)([C.ZP], () => C.ZP.getOnboardingStatus(t)),
+        U = null != P && P.length > 0,
+        q = l.useCallback(() => {
+            (0, C.kp)(G) && D && U ? L(0) : R();
+        }, [G, D, U, L, R]);
+    l.useEffect(() => {
+        if (!C.ZP.shouldShowOnboarding(t)) return d.Z.escapeToDefaultChannel(t);
+        (0, x.E)(t);
     }, [t]);
-    let W = (0, d.Yzy)(
-            S,
+    let H = (0, c.Yzy)(
+            B,
             {
                 config: s.config.default,
                 from: {
@@ -83,12 +83,12 @@ function w(e) {
                     opacity: 1
                 }
             },
-            'cover' !== z && null !== z ? 'animate-never' : 'respect-motion-settings'
+            'cover' !== A && null !== A ? 'animate-never' : 'respect-motion-settings'
         ),
-        V = b.ZP.shouldShowOnboarding(t),
-        X = null == B;
+        V = C.ZP.shouldShowOnboarding(t),
+        X = null == M;
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             if (!V || X) {
                 let e = setTimeout(() => {
                     (0, g.uL)(E.Z5c.CHANNEL(t));
@@ -96,81 +96,81 @@ function w(e) {
                 return () => clearTimeout(e);
             }
         }, [V, X, t]),
-        !b.ZP.shouldShowOnboarding(t) || null == B)
+        !C.ZP.shouldShowOnboarding(t) || null == M)
     )
         return null;
     let Y = () => {
-        switch (S) {
+        switch (B) {
             case 'cover':
-                return (0, l.jsx)(k.ZP, {
-                    guild: B,
-                    onboardingStatus: b.uX.READY,
-                    onStart: H,
-                    disableTracking: G
+                return (0, r.jsx)(k.ZP, {
+                    guild: M,
+                    onboardingStatus: C.uX.READY,
+                    onStart: q,
+                    disableTracking: F
                 });
             case 'rules':
-                return (0, l.jsx)(I.Z, {
-                    setCurrentStep: F,
-                    previousPromptIndex: R.length - 1,
-                    guild: B,
-                    prompts: R,
-                    completeOnboarding: O,
-                    disableTracking: G
+                return (0, r.jsx)(Z.Z, {
+                    setCurrentStep: L,
+                    previousPromptIndex: P.length - 1,
+                    guild: M,
+                    prompts: P,
+                    completeOnboarding: R,
+                    disableTracking: F
                 });
             case null:
                 return null;
             default:
-                return (0, l.jsx)(Z.Z, {
-                    guild: B,
-                    prompts: R,
-                    step: S,
-                    selectOption: M,
-                    completeOnboarding: O,
-                    setCurrentStep: F,
-                    disableTracking: G
+                return (0, r.jsx)(O.Z, {
+                    guild: M,
+                    prompts: P,
+                    step: B,
+                    selectOption: T,
+                    completeOnboarding: R,
+                    setCurrentStep: L,
+                    disableTracking: F
                 });
         }
     };
-    return (0, l.jsxs)('div', {
-        className: D.main,
+    return (0, r.jsxs)('div', {
+        className: y.main,
         ref: n,
         children: [
-            null != y
-                ? (0, l.jsx)(x.Z, {
-                      className: o()(D.artwork),
-                      src: y,
-                      width: i,
+            null != S
+                ? (0, r.jsx)(h.Z, {
+                      className: i()(y.artwork),
+                      src: S,
+                      width: o,
                       height: w,
-                      imageClassName: D.cover
+                      imageClassName: y.cover
                   })
-                : (0, l.jsx)(u.Z, {
-                      className: D.artwork,
+                : (0, r.jsx)(u.Z, {
+                      className: y.artwork,
                       preserveAspectRatio: 'xMinYMin slice'
                   }),
-            null != A &&
-                (0, l.jsx)('div', {
-                    className: D.gradient,
-                    style: { background: 'linear-gradient(180deg, '.concat((0, j.aD)(A, 0.16), ' 0%, ').concat((0, j.aD)(A, 1), ' 100%)') }
+            null != W &&
+                (0, r.jsx)('div', {
+                    className: y.gradient,
+                    style: { background: 'linear-gradient(180deg, '.concat((0, b.aD)(W, 0.16), ' 0%, ').concat((0, b.aD)(W, 1), ' 100%)') }
                 }),
-            (0, l.jsx)('div', { className: D.gradient }),
-            W((e, t, n) => {
-                let { key: r } = n;
-                return (0, l.jsx)(
+            (0, r.jsx)('div', { className: y.gradient }),
+            H((e, t, n) => {
+                let { key: l } = n;
+                return (0, r.jsx)(
                     s.animated.div,
                     {
                         style: e,
                         children: Y()
                     },
-                    r
+                    l
                 );
             }),
-            'cover' === S &&
-                (0, l.jsx)('div', {
-                    className: D.bottomCenterContent,
-                    children: (0, l.jsx)(d.X6q, {
+            'cover' === B &&
+                (0, r.jsx)('div', {
+                    className: y.bottomCenterContent,
+                    children: (0, r.jsx)(c.X6q, {
                         variant: 'heading-sm/normal',
                         color: 'header-secondary',
-                        children: T.intl.format(T.t.kI6UoK, { privacyLink: E.EYA.PRIVACY })
+                        children: I.NW.format(I.t.kI6UoK, { privacyLink: E.EYA.PRIVACY })
                     })
                 })
         ]

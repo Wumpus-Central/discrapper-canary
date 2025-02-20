@@ -1,8 +1,8 @@
 n.d(t, {
-    GI: () => i.GI,
-    Un: () => i.Un,
-    wE: () => i.wE
+    GI: () => r.GI,
+    Un: () => r.Un,
+    wE: () => r.wE
 });
-var i = n(608787),
-    r = n(931619);
-(0, i.Jt)(r.Z.awaitOnline);
+var r = n(608787),
+    i = n(931619);
+(0, r.Jt)(i.Z.awaitOnline);

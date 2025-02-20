@@ -1,5 +1,5 @@
-n.d(t, { G: () => i });
-let i = [
+n.d(t, { G: () => r });
+let r = [
     {
         label: 'Alabama',
         value: 'AL'

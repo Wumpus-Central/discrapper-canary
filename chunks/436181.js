@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => p });
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,33 +15,33 @@ function s(e, t, n) {
         e
     );
 }
-let o = null,
+let s = null,
     l = !1;
-function u(e) {
-    let { progress: t, total: n, name: i } = e;
-    o = {
+function c(e) {
+    let { progress: t, total: n, name: r } = e;
+    s = {
         progress: t,
         total: n,
-        name: i
+        name: r
     };
 }
-function c() {
-    (o = null), (l = !1);
+function u() {
+    (s = null), (l = !1);
 }
 function d() {
     l = !0;
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getLastProgress() {
-        return o;
+        return s;
     }
     isRunning() {
         return l;
     }
 }
-s(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
-let _ = new f(a.Z, {
+a(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
+let p = new f(o.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
-    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: u,
-    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: c
+    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
+    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u
 });

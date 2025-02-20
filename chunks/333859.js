@@ -1,28 +1,28 @@
-n.d(t, { c: () => T });
-var i = n(200651);
+n.d(t, { c: () => E });
+var r = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
-    l = n(37234),
-    a = n(493773),
+var i = n(442837),
+    s = n(481060),
+    a = n(37234),
+    l = n(493773),
     o = n(100527),
     c = n(906732),
     d = n(94795),
     u = n(327943),
     m = n(539873),
     g = n(311476),
-    h = n(197115),
-    x = n(626135),
-    _ = n(981631),
-    p = n(474936),
-    E = n(388032),
-    C = n(369890);
-let f = () => {
-        (0, d.nJ)(), (0, l.xf)();
+    p = n(197115),
+    h = n(626135),
+    f = n(981631),
+    b = n(474936),
+    N = n(388032),
+    x = n(866989);
+let _ = () => {
+        (0, d.nJ)(), (0, a.xf)();
     },
-    T = () => {
+    E = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
-            t = (0, s.e7)([u.Z], () => u.Z.isUpsellPreview),
+            t = (0, i.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
@@ -31,40 +31,40 @@ let f = () => {
                 }
             );
         return (
-            (0, a.ZP)(() => {
+            (0, l.ZP)(() => {
                 t &&
-                    x.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: p.cd.APP_ICON_UPSELL,
+                    h.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: b.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
             }),
-            (0, i.jsxs)('div', {
-                className: C.selectionGroup,
+            (0, r.jsxs)('div', {
+                className: x.selectionGroup,
                 children: [
-                    (0, i.jsx)(m.Z, {
+                    (0, r.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
-                            (0, i.jsxs)('div', {
-                                className: C.tryItOutButtons,
+                            (0, r.jsxs)('div', {
+                                className: x.tryItOutButtons,
                                 children: [
-                                    (0, i.jsx)(r.zxk, {
-                                        size: r.zxk.Sizes.MEDIUM,
-                                        color: !n && t ? r.zxk.Colors.PRIMARY : r.zxk.Colors.BRAND,
-                                        onClick: () => f(),
-                                        children: n ? E.intl.string(E.t.SKNnqq) : E.intl.string(E.t['hb/wEx'])
+                                    (0, r.jsx)(s.zxk, {
+                                        size: s.zxk.Sizes.MEDIUM,
+                                        color: !n && t ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
+                                        onClick: () => _(),
+                                        children: n ? N.NW.string(N.t.SKNnqq) : N.NW.string(N.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, i.jsx)(h.Z, {
-                                              className: C.tryItOutButton,
+                                        ? (0, r.jsx)(p.Z, {
+                                              className: x.tryItOutButton,
                                               showGradient: n,
-                                              subscriptionTier: p.Si.TIER_2,
-                                              buttonText: n ? E.intl.string(E.t.pj0XBA) : E.intl.string(E.t.mr4K7O)
+                                              subscriptionTier: b.Si.TIER_2,
+                                              buttonText: n ? N.NW.string(N.t.pj0XBA) : N.NW.string(N.t.mr4K7O)
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, i.jsx)(r.$i$, { className: C.divider })
+                    (0, r.jsx)(s.$i$, { className: x.divider })
                 ]
             })
         );

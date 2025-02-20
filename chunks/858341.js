@@ -1,4 +1,4 @@
-l.d(e, { default: () => p });
+l.d(n, { default: () => p });
 var t = l(200651);
 l(192379);
 var i = l(374470),
@@ -13,46 +13,46 @@ var i = l(374470),
     k = l(168405),
     Z = l(536639),
     f = l(388032);
-function p(n) {
-    var e;
+function p(e) {
+    var n;
     let l,
         p,
         S,
-        { channel: g, message: v, target: x, attachment: j, onSelect: b } = n,
+        { channel: g, message: v, target: x, attachment: j, onSelect: b } = e,
         m = x;
     if (null != j) p = l = j.url;
     else for (; (0, i.k)(m); ) (0, i.k)(m, HTMLImageElement) && null != m.src && (p = m.src), (0, i.k)(m, HTMLAnchorElement) && null != m.href && ((l = m.href), (S = m.textContent)), (m = m.parentNode);
-    let C = null === (e = document.getSelection()) || void 0 === e ? void 0 : e.toString(),
-        Q = (0, d.Z)(C),
-        w = (0, o.Z)(C),
-        H = (0, Z.Z)(v, g),
-        I = (0, k.Z)(v, g),
-        M = (0, h.Z)(v, g),
-        _ = (0, u.Z)(v, g),
-        E = (0, a.Z)(null != l ? l : p, S),
-        L = (0, c.Z)({
+    let C = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString(),
+        N = (0, d.Z)(C),
+        Q = (0, o.Z)(C),
+        w = (0, Z.Z)(v, g),
+        H = (0, k.Z)(v, g),
+        I = (0, h.Z)(v, g),
+        M = (0, u.Z)(v, g),
+        W = (0, a.Z)(null != l ? l : p, S),
+        _ = (0, c.Z)({
             id: v.id,
-            label: f.intl.string(f.t.zBoHlZ),
+            label: f.NW.string(f.t.zBoHlZ),
             shiftId: ''.concat(v.channel_id, '-').concat(v.id)
         }),
-        N = (0, c.Z)({
+        E = (0, c.Z)({
             id: v.author.id,
-            label: f.intl.string(f.t.Muw4ws)
+            label: f.NW.string(f.t.Muw4ws)
         });
     return (0, t.jsxs)(r.v2r, {
         navId: 'message',
         onClose: s.Zy,
-        'aria-label': f.intl.string(f.t.ChPNkJ),
+        'aria-label': f.NW.string(f.t.ChPNkJ),
         onSelect: b,
         children: [
+            (0, t.jsx)(r.kSQ, { children: N }),
             (0, t.jsx)(r.kSQ, { children: Q }),
-            (0, t.jsx)(r.kSQ, { children: w }),
             (0, t.jsxs)(r.kSQ, {
-                children: [H, I, M, _]
+                children: [w, H, I, M]
             }),
-            (0, t.jsx)(r.kSQ, { children: E }),
+            (0, t.jsx)(r.kSQ, { children: W }),
             (0, t.jsxs)(r.kSQ, {
-                children: [L, N]
+                children: [_, E]
             })
         ]
     });

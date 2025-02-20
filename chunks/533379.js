@@ -1,15 +1,15 @@
-n.d(t, { R: () => s });
-var i = n(442837),
-    l = n(998698),
-    a = n(873387),
-    r = n(424602);
-function s(e) {
-    let { channel: t, chatInputType: n, location: s } = e,
-        o = r.T.useExperiment({ location: s }, { autoTrackExposure: !0 }).enabled,
-        c = (0, a.g)(t),
-        { activeCommand: d } = (0, i.cj)([l.Z], () => {
+n.d(t, { R: () => a });
+var r = n(442837),
+    i = n(998698),
+    l = n(873387),
+    o = n(424602);
+function a(e) {
+    let { channel: t, chatInputType: n, location: a } = e,
+        s = o.T.useExperiment({ location: a }, { autoTrackExposure: !0 }).enabled,
+        c = (0, l.g)(t),
+        { activeCommand: u } = (0, r.cj)([i.Z], () => {
             var e;
-            return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? l.Z.getActiveCommand(t.id) : null };
+            return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? i.Z.getActiveCommand(t.id) : null };
         });
-    return o && null == d && c;
+    return s && null == u && c;
 }

@@ -1,4 +1,4 @@
-function i(e, t) {
+function r(e, t) {
     return '<sound:'.concat(e, ':').concat(t, '>');
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

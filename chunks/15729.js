@@ -1,18 +1,18 @@
 n.d(t, { U: () => l });
-var i = n(192379),
-    r = n(5907);
-let a = (e) => e;
-function s(e, t = a) {
-    let n = i.useSyncExternalStore(
+var r = n(192379),
+    i = n(5907);
+let o = (e) => e;
+function a(e, t = o) {
+    let n = r.useSyncExternalStore(
         e.subscribe,
         () => t(e.getState()),
         () => t(e.getInitialState())
     );
-    return i.useDebugValue(n), n;
+    return r.useDebugValue(n), n;
 }
-let o = (e) => {
-        let t = (0, r.M)(e),
-            n = (e) => s(t, e);
+let s = (e) => {
+        let t = (0, i.M)(e),
+            n = (e) => a(t, e);
         return Object.assign(n, t), n;
     },
-    l = (e) => (e ? o(e) : o);
+    l = (e) => (e ? s(e) : s);

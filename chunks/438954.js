@@ -1,5 +1,5 @@
-n.d(t, { a: () => i });
-let i = {
+n.d(t, { a: () => r });
+let r = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,

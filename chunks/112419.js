@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var i = n(785423),
-    r = /^\s+/;
-let a = function (e) {
-    return e ? e.slice(0, (0, i.Z)(e) + 1).replace(r, '') : e;
+n.d(t, { Z: () => o });
+var r = n(785423),
+    i = /^\s+/;
+let o = function (e) {
+    return e ? e.slice(0, (0, r.Z)(e) + 1).replace(i, '') : e;
 };

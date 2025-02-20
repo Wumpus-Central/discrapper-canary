@@ -1,30 +1,30 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(692547),
+var i = n(692547),
     a = n(481060),
-    r = n(739566),
-    s = n(834129),
-    o = n(388032),
-    c = n(261187);
+    o = n(739566),
+    l = n(834129),
+    s = n(388032),
+    c = n(931505);
 function d(e) {
     let { message: t, compact: n, usernameHook: d } = e,
-        u = (0, r.ZP)(t),
-        m = d(u),
-        _ = o.intl.format(o.t['Rv+TSE'], {
+        u = (0, o.ZP)(t),
+        p = d(u),
+        m = s.NW.format(s.t['Rv+TSE'], {
             username: u.nick,
-            usernameHook: m,
+            usernameHook: p,
             topic: t.content
         });
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(l.Z, {
         className: c.stageSystemMessage,
-        iconNode: (0, i.jsx)(a.ewx, {
+        iconNode: (0, r.jsx)(a.ewx, {
             size: 'md',
-            color: l.Z.unsafe_rawColors.GREEN_360.css
+            color: i.Z.unsafe_rawColors.GREEN_360.css
         }),
         iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: _
+        children: m
     });
 }

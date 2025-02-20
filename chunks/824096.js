@@ -1,9 +1,9 @@
-n.d(t, { y: () => _ }), n(653041), n(47120);
-var i = n(259443),
-    r = n(379649),
-    a = n(147063),
-    s = n(70956),
-    o = n(981631);
+n.d(t, { y: () => p }), n(653041), n(47120);
+var r = n(259443),
+    i = n(379649),
+    o = n(147063),
+    a = n(70956),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,39 +17,39 @@ function l(e, t, n) {
         e
     );
 }
-let u = 16,
-    c = 600,
+let c = 16,
+    u = 600,
     d = 900,
     f = !1;
-class _ {
+class p {
     calculateFps(e, t, n) {
         if (-1 === this.prevFramesCodec[e] || t < this.prevFramesCodec[e] || n < this.prevTimestamp[e] || n > this.prevTimestamp[e] + 1000 * this.windowLength) return (this.prevFramesCodec[e] = t), (this.prevTimestamp[e] = n), (this.perUserFpsWindow[e] = []), NaN;
         if (n < this.prevTimestamp[e] + d) return NaN;
-        let i = this.elapsedSeconds(n, this.prevTimestamp[e]);
+        let r = this.elapsedSeconds(n, this.prevTimestamp[e]);
         this.prevTimestamp[e] = n;
-        let r = (t - this.prevFramesCodec[e]) / i;
-        return (this.prevFramesCodec[e] = t), r;
+        let i = (t - this.prevFramesCodec[e]) / r;
+        return (this.prevFramesCodec[e] = t), i;
     }
     updateFps(e, t, n) {
         if (!this.disabled && !this.streamDisabledUsers.has(e)) {
-            let i = this.calculateFps(e, t, n);
-            if ((f && this.logger.info('frames='.concat(t, ', timestamp=').concat(n, ' fps=').concat(i)), !(i < 0) && Number.isFinite(i) && (this.perUserFpsWindow[e].push(i), !(this.perUserFpsWindow[e].length < this.windowLength)))) this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(), this.perUserFpsWindow[e].filter((e) => e < this.fpsThreshold).length >= this.fpsWindowBorderlineCount ? (this.logger.info(''.concat(e, ': detected poor network quality, turning off video')), this.streamDisabledUsers.add(e), (this.currentVideoAutoToggleState[e] = o.ZUi.DISABLED), (0, a.Z)(e, o.ZUi.DISABLED), this.startReenableBackoffTimer(e)) : this.currentVideoAutoToggleState[e] === o.ZUi.AUTO_PROBING && ((this.currentVideoAutoToggleState[e] = o.ZUi.AUTO_ENABLED), this.logger.info('acceptable conditions reached, will reset and send a AUTO_ENABLED for user '.concat(e)), (0, a.Z)(e, o.ZUi.AUTO_ENABLED)), this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue());
+            let r = this.calculateFps(e, t, n);
+            if ((f && this.logger.info('frames='.concat(t, ', timestamp=').concat(n, ' fps=').concat(r)), !(r < 0) && Number.isFinite(r) && (this.perUserFpsWindow[e].push(r), !(this.perUserFpsWindow[e].length < this.windowLength)))) this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(), this.perUserFpsWindow[e].filter((e) => e < this.fpsThreshold).length >= this.fpsWindowBorderlineCount ? (this.logger.info(''.concat(e, ': detected poor network quality, turning off video')), this.streamDisabledUsers.add(e), (this.currentVideoAutoToggleState[e] = s.ZUi.DISABLED), (0, o.Z)(e, s.ZUi.DISABLED), this.startReenableBackoffTimer(e)) : this.currentVideoAutoToggleState[e] === s.ZUi.AUTO_PROBING && ((this.currentVideoAutoToggleState[e] = s.ZUi.AUTO_ENABLED), this.logger.info('acceptable conditions reached, will reset and send a AUTO_ENABLED for user '.concat(e)), (0, o.Z)(e, s.ZUi.AUTO_ENABLED)), this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue());
         }
     }
     startReenableBackoffTimer(e) {
         if (this.disabled) return;
         this.logger.info('startReenableBackoffTimer for user '.concat(e));
         let { lastBackoffTime: t, expBackoffFactor: n } = this.retryBackoffCache[e];
-        null === t || n > u || this.elapsedSeconds((0, r.zO)(), t) > c ? (n = 1) : (n *= 2),
+        null === t || n > c || this.elapsedSeconds((0, i.zO)(), t) > u ? (n = 1) : (n *= 2),
             (this.retryBackoffCache[e] = {
-                lastBackoffTime: (0, r.zO)(),
+                lastBackoffTime: (0, i.zO)(),
                 expBackoffFactor: n
             });
-        let i = n * this.backoffTimeSec * s.Z.Millis.SECOND;
-        this.logger.info('starting backoff timer with time = '.concat(i, ' milliseconds')),
+        let r = n * this.backoffTimeSec * a.Z.Millis.SECOND;
+        this.logger.info('starting backoff timer with time = '.concat(r, ' milliseconds')),
             (this.timeoutIdCache[e] = setTimeout(() => {
                 this.queueReenable(e);
-            }, i));
+            }, r));
     }
     queueReenable(e) {
         this.enableQueue.push(e), this.tryReenableQueue();
@@ -58,7 +58,7 @@ class _ {
         if (!this.disabled && (null == this.probingUserId || !(this.probingUserId in this.perUserFpsWindow))) for (let e = this.enableQueue.shift(); null != e && !this.reenableVideo(e); );
     }
     reenableVideo(e) {
-        return e in this.perUserFpsWindow && (this.logger.info('reenableVideo called for user '.concat(e, ' - time = ').concat((0, r.zO)())), this.stateCleanupBeforeEnable(e), (this.currentVideoAutoToggleState[e] = o.ZUi.AUTO_PROBING), (this.probingUserId = e), (0, a.Z)(e, o.ZUi.AUTO_PROBING), !0);
+        return e in this.perUserFpsWindow && (this.logger.info('reenableVideo called for user '.concat(e, ' - time = ').concat((0, i.zO)())), this.stateCleanupBeforeEnable(e), (this.currentVideoAutoToggleState[e] = s.ZUi.AUTO_PROBING), (this.probingUserId = e), (0, o.Z)(e, s.ZUi.AUTO_PROBING), !0);
     }
     elapsedSeconds(e, t) {
         return (e - t) / 1000;
@@ -74,7 +74,7 @@ class _ {
             e in this.perUserFpsWindow ||
                 ((this.perUserFpsWindow[e] = []),
                 (this.prevFramesCodec[e] = -1),
-                (this.currentVideoAutoToggleState[e] = o.ZUi.NONE),
+                (this.currentVideoAutoToggleState[e] = s.ZUi.NONE),
                 (this.retryBackoffCache[e] = {
                     lastBackoffTime: null,
                     expBackoffFactor: 1
@@ -86,7 +86,7 @@ class _ {
     disable() {
         for (let e in ((this.disabled = !0), this.perUserFpsWindow)) this.deleteUser(e);
     }
-    constructor(e, t, n, r) {
-        l(this, 'logger', new i.Yd('VideoHealthManager')), l(this, 'windowLength', void 0), l(this, 'fpsThreshold', void 0), l(this, 'fpsWindowBorderlineCount', void 0), l(this, 'backoffTimeSec', void 0), l(this, 'disabled', !1), l(this, 'perUserFpsWindow', {}), l(this, 'prevFramesCodec', {}), l(this, 'prevTimestamp', {}), l(this, 'streamDisabledUsers', new Set()), l(this, 'retryBackoffCache', {}), l(this, 'timeoutIdCache', {}), l(this, 'currentVideoAutoToggleState', {}), l(this, 'probingUserId', void 0), l(this, 'enableQueue', []), (this.windowLength = e), (this.fpsThreshold = n), (this.fpsWindowBorderlineCount = Math.ceil(e * t)), (this.backoffTimeSec = r), this.logger.info('constructor with windowLength = '.concat(this.windowLength, ',\n      fpsWindowBorderlineCount = ').concat(this.fpsWindowBorderlineCount, ',\n      fpsThreshold = ').concat(this.fpsThreshold, ',\n      backoffTimeSec = ').concat(r));
+    constructor(e, t, n, i) {
+        l(this, 'logger', new r.Yd('VideoHealthManager')), l(this, 'windowLength', void 0), l(this, 'fpsThreshold', void 0), l(this, 'fpsWindowBorderlineCount', void 0), l(this, 'backoffTimeSec', void 0), l(this, 'disabled', !1), l(this, 'perUserFpsWindow', {}), l(this, 'prevFramesCodec', {}), l(this, 'prevTimestamp', {}), l(this, 'streamDisabledUsers', new Set()), l(this, 'retryBackoffCache', {}), l(this, 'timeoutIdCache', {}), l(this, 'currentVideoAutoToggleState', {}), l(this, 'probingUserId', void 0), l(this, 'enableQueue', []), (this.windowLength = e), (this.fpsThreshold = n), (this.fpsWindowBorderlineCount = Math.ceil(e * t)), (this.backoffTimeSec = i), this.logger.info('constructor with windowLength = '.concat(this.windowLength, ',\n      fpsWindowBorderlineCount = ').concat(this.fpsWindowBorderlineCount, ',\n      fpsThreshold = ').concat(this.fpsThreshold, ',\n      backoffTimeSec = ').concat(i));
     }
 }

@@ -1,17 +1,17 @@
-n.d(t, { Z: () => s });
-var l = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var i = n(120356),
-    r = n.n(i),
-    a = n(650685);
-function s(e) {
+var l = n(120356),
+    i = n.n(l),
+    a = n(219049);
+function o(e) {
     let { keybind: t, className: n } = e;
-    return (0, l.jsx)(l.Fragment, {
+    return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) =>
-            (0, l.jsx)(
+            (0, r.jsx)(
                 'span',
                 {
-                    className: r()(a.key, n),
+                    className: i()(a.key, n),
                     children: e
                 },
                 t

@@ -1,7 +1,7 @@
 !(function (e, t) {
     t(n(913527));
 })(0, function (e) {
-    function t(e, t, n, i) {
+    function t(e, t, n, r) {
         switch (n) {
             case 's':
                 return t ? 'хэдхэн секунд' : 'хэдхэн секундын';

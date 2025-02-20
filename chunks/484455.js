@@ -1,21 +1,21 @@
-t.d(n, { Z: () => o });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    s = t.n(l),
-    a = t(481060),
-    r = t(42497);
-function o(e) {
-    let { title: n, children: t } = e;
-    return (0, i.jsxs)(a.hjN, {
-        className: s()(r.backgroundContainer, r.spacingContainer, r.containerPadding),
+n.d(t, { Z: () => a });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    c = n(481060),
+    s = n(327237);
+function a(e) {
+    let { title: t, children: n } = e;
+    return (0, r.jsxs)(c.hjN, {
+        className: o()(s.backgroundContainer, s.spacingContainer, s.containerPadding),
         children: [
-            (0, i.jsx)(a.vwX, {
+            (0, r.jsx)(c.vwX, {
                 tag: 'h3',
-                className: r.containerTitle,
-                children: n
+                className: s.containerTitle,
+                children: t
             }),
-            t
+            n
         ]
     });
 }

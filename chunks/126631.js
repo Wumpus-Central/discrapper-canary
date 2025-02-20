@@ -1,62 +1,62 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(481060),
-    l = n(541716),
-    a = n(752305),
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(541716),
+    l = n(752305),
     o = n(893718),
     c = n(313201),
     d = n(131704),
     u = n(993413),
     m = n(981631),
     g = n(388032),
-    h = n(548286);
-let x = (0, c.hQ)(),
-    _ = (0, d.kt)({
+    p = n(276558);
+let h = (0, c.hQ)(),
+    f = (0, d.kt)({
         id: '1',
         type: m.d4z.DM
     }),
-    p = (0, c.hQ)();
-function E(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: E, currentBio: C, disabled: f = !1 } = e,
-        [T, N] = s.useState(null != d ? d : C),
-        [S, I] = s.useState((0, a.JM)(T)),
-        b = s.useRef(!1);
+    b = (0, c.hQ)();
+function N(e) {
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: N, currentBio: x, disabled: _ = !1 } = e,
+        [E, j] = i.useState(null != d ? d : x),
+        [C, O] = i.useState((0, l.JM)(E)),
+        v = i.useRef(!1);
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, a.JM)(C);
-                N(C), I(e);
+                let e = (0, l.JM)(x);
+                j(x), O(e);
             }
-        }, [d, C]),
-        (0, i.jsxs)(u.Z, {
+        }, [d, x]),
+        (0, r.jsxs)(u.Z, {
             title: t,
-            titleId: x,
-            description: g.intl.string(g.t.Bbw6AQ),
+            titleId: h,
+            description: g.NW.string(g.t.Bbw6AQ),
             errors: n,
-            disabled: f,
+            disabled: _,
             children: [
-                (0, i.jsx)(o.Z, {
-                    'aria-describedby': p,
-                    'aria-labelledby': x,
-                    className: h.bioTextAreaContainer,
-                    innerClassName: h.bioTextArea,
+                (0, r.jsx)(o.Z, {
+                    'aria-describedby': b,
+                    'aria-labelledby': h,
+                    className: p.bioTextAreaContainer,
+                    innerClassName: p.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== T && (N(t), I(n), c(t));
+                        t !== E && (j(t), O(n), c(t));
                     },
-                    placeholder: E,
-                    channel: _,
-                    textValue: T,
-                    richValue: S,
-                    type: l.Ie.PROFILE_BIO_INPUT,
+                    placeholder: N,
+                    channel: f,
+                    textValue: E,
+                    richValue: C,
+                    type: a.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        b.current = !1;
+                        v.current = !1;
                     },
                     onFocus: () => {
-                        b.current = !0;
+                        v.current = !0;
                     },
-                    focused: b.current,
+                    focused: v.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({
@@ -66,9 +66,9 @@ function E(e) {
                         });
                     }
                 }),
-                (0, i.jsx)(r.nn4, {
-                    id: p,
-                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
+                (0, r.jsx)(s.nn4, {
+                    id: b,
+                    children: g.NW.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

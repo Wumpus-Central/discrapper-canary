@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r }), n(47120);
-var i = n(192379);
-function r() {
-    let [e, t] = i.useState(null),
-        n = i.useRef(null);
+n.d(t, { Z: () => i }), n(47120);
+var r = n(192379);
+function i() {
+    let [e, t] = r.useState(null),
+        n = r.useRef(null);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             null != e && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
         }, [e]),
         {

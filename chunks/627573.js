@@ -1,64 +1,64 @@
-i.d(t, { Z: () => u });
-var s = i(200651),
-    a = i(192379),
-    n = i(120356),
-    r = i.n(n),
-    l = i(481060),
-    c = i(450269),
-    d = i(388032),
-    o = i(184330);
+r.d(t, { Z: () => u });
+var s = r(200651),
+    a = r(192379),
+    i = r(120356),
+    n = r.n(i),
+    c = r(481060),
+    l = r(450269),
+    o = r(388032),
+    d = r(414225);
 let u = (e) => {
-    let { headerId: t, guild: i, onAgreedChange: n } = e,
-        { rules: u, rulesAccepted: m } = (0, c.V)(i.id);
+    let { headerId: t, guild: r, onAgreedChange: i } = e,
+        { rules: u, rulesAccepted: m } = (0, l.V)(r.id);
     return (
         a.useEffect(() => {
-            n(m);
-        }, [n, m]),
+            i(m);
+        }, [i, m]),
         (0, s.jsxs)('div', {
-            className: o.container,
+            className: d.container,
             children: [
                 (0, s.jsxs)('div', {
-                    className: o.content,
+                    className: d.content,
                     children: [
-                        (0, s.jsx)('div', { className: r()(o.stepImage, o.checkImage) }),
-                        (0, s.jsx)(l.X6q, {
+                        (0, s.jsx)('div', { className: n()(d.stepImage, d.checkImage) }),
+                        (0, s.jsx)(c.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: o.header,
+                            className: d.header,
                             id: t,
-                            children: d.intl.string(d.t.Q8OFNz)
+                            children: o.NW.string(o.t.Q8OFNz)
                         }),
-                        (0, s.jsx)(l.Text, {
+                        (0, s.jsx)(c.Text, {
                             color: 'none',
                             variant: 'text-md/normal',
-                            className: o.headerCaption,
-                            children: d.intl.string(d.t['20piMT'])
+                            className: d.headerCaption,
+                            children: o.NW.string(o.t['20piMT'])
                         })
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: o.form,
+                    className: d.form,
                     children: [
-                        (0, s.jsx)(l.vwX, {
+                        (0, s.jsx)(c.vwX, {
                             required: !0,
-                            children: d.intl.string(d.t.HsM7a2)
+                            children: o.NW.string(o.t.HsM7a2)
                         }),
                         u.map((e) =>
                             (0, s.jsx)(
                                 'div',
                                 {
-                                    className: o.checkboxWrapper,
-                                    children: (0, s.jsxs)(l.XZJ, {
-                                        type: l.XZJ.Types.ROW,
+                                    className: d.checkboxWrapper,
+                                    children: (0, s.jsxs)(c.XZJ, {
+                                        type: c.XZJ.Types.ROW,
                                         value: e.checked,
-                                        align: l.XZJ.Aligns.TOP,
+                                        align: c.XZJ.Aligns.TOP,
                                         onChange: e.onCheck,
                                         children: [
-                                            (0, s.jsx)(l.Text, {
+                                            (0, s.jsx)(c.Text, {
                                                 variant: 'text-md/semibold',
-                                                className: o.checkboxTitle,
+                                                className: d.checkboxTitle,
                                                 children: e.title
                                             }),
-                                            (0, s.jsx)(l.Text, {
+                                            (0, s.jsx)(c.Text, {
                                                 variant: 'text-sm/normal',
                                                 children: e.body
                                             })

@@ -1,7 +1,7 @@
-a.d(e, { b: () => _ });
+a.d(e, { b: () => o });
 var r = a(394798),
     n = a(696486);
-class _ {
+class o {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()), (this._spanId = t.spanId || (0, r.DM)().substring(16));
     }

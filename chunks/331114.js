@@ -1,9 +1,9 @@
-n.d(t, { Z: () => m }), n(47120);
-var i,
-    l = n(442837),
-    r = n(570140),
-    a = n(881052);
-function s(e, t, n) {
+n.d(t, { Z: () => h }), n(47120);
+var r,
+    i = n(442837),
+    l = n(570140),
+    o = n(881052);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,8 +16,8 @@ function s(e, t, n) {
         e
     );
 }
-let o = new Map();
-class d {
+let s = new Map();
+class c {
     handleSearchCountStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -25,54 +25,54 @@ class d {
         (this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0);
     }
     handleSearchCountFailure(e) {
-        (this.error = new a.Hx(e)), (this.isFetching = !1);
+        (this.error = new o.Hx(e)), (this.isFetching = !1);
     }
     constructor() {
-        s(this, 'isInitialFetchComplete', !1), s(this, 'isFetching', !1), s(this, 'error', null), s(this, 'counts', null);
+        a(this, 'isInitialFetchComplete', !1), a(this, 'isFetching', !1), a(this, 'error', null), a(this, 'counts', null);
     }
 }
-function c(e) {
+function u(e) {
     var t;
-    let n = null !== (t = o.get(e)) && void 0 !== t ? t : new d();
-    return o.set(e, n), n;
+    let n = null !== (t = s.get(e)) && void 0 !== t ? t : new c();
+    return s.set(e, n), n;
 }
-function u(e, t) {
-    let n = o.get(e);
+function d(e, t) {
+    let n = s.get(e);
     return null != n ? t(n) : null;
 }
-class h extends (i = l.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getIsInitialFetchComplete(e) {
-        return u(e, (e) => e.isInitialFetchComplete);
+        return d(e, (e) => e.isInitialFetchComplete);
     }
     getIsFetchingCounts(e) {
-        return u(e, (e) => e.isFetching);
+        return d(e, (e) => e.isFetching);
     }
     getCounts(e) {
-        return u(e, (e) => e.counts);
+        return d(e, (e) => e.counts);
     }
 }
-s(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore');
-let m = new h(r.Z, {
+a(p, 'displayName', 'GlobalDiscoveryServersSearchCountStore');
+let h = new p(l.Z, {
     CONNECTION_OPEN: function () {
-        o.clear();
+        s.clear();
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
         let { query: t } = e;
-        c(t).handleSearchCountStart();
+        u(t).handleSearchCountStart();
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t, categoryCounts: n } = e;
-        c(t).handleSearchCountSuccess(n);
+        u(t).handleSearchCountSuccess(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
         let { query: t, error: n } = e;
-        c(t).handleSearchCountFailure(n);
+        u(t).handleSearchCountFailure(n);
     },
     GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
         let { ignoreQueries: t } = e,
             n = new Set(t);
-        o.forEach((e, t) => {
-            n.has(t) || o.delete(t);
+        s.forEach((e, t) => {
+            n.has(t) || s.delete(t);
         });
     }
 });

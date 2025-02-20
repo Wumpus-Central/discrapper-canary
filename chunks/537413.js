@@ -1,7 +1,7 @@
-l.d(t, { Z: () => r }), l(47120);
-var i = l(451467),
-    s = l(37113);
-function r(e, t, l) {
-    for (let r of s.no[e]) if ((0, i.Z)(e, r.resolution, r.fps, t, l)) return [r.resolution, r.fps];
+l.d(t, { Z: () => i }), l(47120);
+var s = l(451467),
+    r = l(37113);
+function i(e, t, l) {
+    for (let i of r.no[e]) if ((0, s.Z)(e, i.resolution, i.fps, t, l)) return [i.resolution, i.fps];
     return null;
 }

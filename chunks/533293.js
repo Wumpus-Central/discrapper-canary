@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +11,12 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => r });
-class r {
+n.d(t, { Z: () => i }), n(266796);
+class i {
     constructor(e, t, n) {
-        i(this, 'name', void 0),
-            i(this, 'description', void 0),
-            i(this, 'getFeatureValue', void 0),
+        r(this, 'name', void 0),
+            r(this, 'description', void 0),
+            r(this, 'getFeatureValue', void 0),
             (this.name = e),
             (this.description = n),
             (this.getFeatureValue = t),

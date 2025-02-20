@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_hotwheels_overlay_invites_v2',
     label: 'Overlay Invites Notification',

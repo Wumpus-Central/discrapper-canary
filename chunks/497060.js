@@ -1,10 +1,10 @@
 n.d(t, {
-    k6: () => s,
+    k6: () => a,
     kH: () => l,
-    pB: () => o
+    pB: () => s
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         kind: 'user',
         id: '2025-01_friend_requests_alerts',
         label: 'Friend Request Setting Defaults',
@@ -31,7 +31,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (0, i.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2025-01_friend_requests_alerts_new_users',
         label: 'Friend Request Setting Defaults',
@@ -58,10 +58,10 @@ let r = (0, i.B)({
             }
         ]
     }),
-    s = (e) => 2 === r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 2 === a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
-    o = (e) => 1 === r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 1 === a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
+    a = (e) => 2 === i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 2 === o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
+    s = (e) => 1 === i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket || 1 === o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).bucket,
     l = (e) => {
-        let t = r.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket,
-            n = a.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket;
+        let t = i.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket,
+            n = o.useExperiment({ location: e }, { autoTrackExposure: !1 }).bucket;
         return 2 === t || 2 === n;
     };

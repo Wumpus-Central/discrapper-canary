@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l });
-var i = n(570140);
-let l = {
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
     disableFalsePositiveButton: function (e, t) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT',
             messageId: t,
             channelId: e

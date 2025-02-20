@@ -1,46 +1,46 @@
-n.d(t, { R: () => p }), n(47120);
-var i = n(200651);
+n.d(t, { R: () => g }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(704215),
-    r = n(481060),
-    a = n(230711),
-    s = n(243778),
-    o = n(981631),
-    d = n(921944),
-    c = n(526761),
-    u = n(726985),
-    h = n(388032),
-    m = n(502781);
-function p() {
-    let [e, t] = (0, s.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
-        n = e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
-        p = () => {
-            a.Z.open(o.oAB.CONTENT_AND_SOCIAL, u.s6.RESTRICTED_USERS, { scrollPosition: c.FY.RESTRICTED_ACCOUNTS });
+var i = n(704215),
+    l = n(481060),
+    o = n(230711),
+    a = n(243778),
+    s = n(981631),
+    c = n(921944),
+    u = n(526761),
+    d = n(726985),
+    p = n(388032),
+    h = n(907661);
+function g() {
+    let [e, t] = (0, a.US)([i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
+        n = e === i.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
+        g = () => {
+            o.Z.open(s.oAB.CONTENT_AND_SOCIAL, d.s6.RESTRICTED_USERS, { scrollPosition: u.FY.RESTRICTED_ACCOUNTS });
         };
     return n
-        ? (0, i.jsxs)('div', {
-              className: m.blockedIgnoredSettingsNotice,
+        ? (0, r.jsxs)('div', {
+              className: h.blockedIgnoredSettingsNotice,
               children: [
-                  (0, i.jsx)(r.d3s, { size: 'md' }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(l.d3s, { size: 'md' }),
+                  (0, r.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'interactive-active',
-                      children: h.intl.format(h.t.zqv4nZ, {
+                      children: p.NW.format(p.t.zqv4nZ, {
                           hook: (e, t) =>
-                              (0, i.jsx)(
-                                  r.eee,
+                              (0, r.jsx)(
+                                  l.eee,
                                   {
-                                      onClick: p,
+                                      onClick: g,
                                       children: e
                                   },
                                   t
                               )
                       })
                   }),
-                  (0, i.jsx)(r.P3F, {
-                      className: m.closeButton,
-                      onClick: () => t(d.L.USER_DISMISS),
-                      children: (0, i.jsx)(r.Dio, {})
+                  (0, r.jsx)(l.P3F, {
+                      className: h.closeButton,
+                      onClick: () => t(c.L.USER_DISMISS),
+                      children: (0, r.jsx)(l.Dio, {})
                   })
               ]
           })

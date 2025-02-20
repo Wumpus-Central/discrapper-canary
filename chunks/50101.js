@@ -1,15 +1,15 @@
 n.d(t, {
-    Ek: () => s,
+    Ek: () => a,
     ZP: () => l,
-    gV: () => o
+    gV: () => s
 });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'guild',
     id: '2025-02_skill_trees',
     label: 'Skill Trees',
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -19,8 +19,17 @@ let a = (0, i.B)({
         }
     ]
 });
+function a(e, t) {
+    return o.useExperiment(
+        {
+            guildId: null == e ? void 0 : e.id,
+            location: t
+        },
+        { autoTrackExposure: !1 }
+    ).enabled;
+}
 function s(e, t) {
-    return a.useExperiment(
+    return o.getCurrentConfig(
         {
             guildId: null == e ? void 0 : e.id,
             location: t
@@ -28,13 +37,4 @@ function s(e, t) {
         { autoTrackExposure: !1 }
     ).enabled;
 }
-function o(e, t) {
-    return a.getCurrentConfig(
-        {
-            guildId: null == e ? void 0 : e.id,
-            location: t
-        },
-        { autoTrackExposure: !1 }
-    ).enabled;
-}
-let l = a;
+let l = o;

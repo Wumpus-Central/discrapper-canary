@@ -1,47 +1,47 @@
-s.d(t, { Z: () => u });
-var n = s(200651);
-s(192379);
-var r = s(481060),
-    i = s(600164),
-    l = s(7557),
-    a = s(388905),
-    o = s(388032),
-    c = s(428581),
-    d = s(483938);
-function u(e) {
-    let { title: t, subtitle: s, error: u, onSubmit: h, onCancel: m } = e;
+r.d(t, { Z: () => d });
+var n = r(200651);
+r(192379);
+var s = r(481060),
+    i = r(600164),
+    a = r(7557),
+    l = r(388905),
+    o = r(388032),
+    c = r(300187),
+    u = r(455812);
+function d(e) {
+    let { title: t, subtitle: r, error: d, onSubmit: h, onCancel: p } = e;
     return (0, n.jsxs)(i.Z, {
         direction: i.Z.Direction.VERTICAL,
         children: [
-            (0, n.jsx)(a.Dx, {
-                className: d.marginBottom8,
+            (0, n.jsx)(l.Dx, {
+                className: u.marginBottom8,
                 children: t
             }),
-            (0, n.jsx)(a.DK, {
+            (0, n.jsx)(l.DK, {
                 className: c.subTitle,
-                children: s
+                children: r
             }),
             (0, n.jsxs)('div', {
                 children: [
-                    (0, n.jsx)(l.Z, {
+                    (0, n.jsx)(a.Z, {
                         inputClassName: c.codeInput,
                         onSubmit: h
                     }),
-                    null != u
-                        ? (0, n.jsx)(r.Text, {
+                    null != d
+                        ? (0, n.jsx)(s.Text, {
                               className: c.error,
                               variant: 'text-sm/normal',
-                              children: u
+                              children: d
                           })
                         : null
                 ]
             }),
-            null != m &&
-                (0, n.jsx)(r.zxk, {
+            null != p &&
+                (0, n.jsx)(s.zxk, {
                     className: c.button,
-                    onClick: m,
-                    color: r.zxk.Colors.PRIMARY,
-                    children: o.intl.string(o.t['ETE/oK'])
+                    onClick: p,
+                    color: s.zxk.Colors.PRIMARY,
+                    children: o.NW.string(o.t['ETE/oK'])
                 })
         ]
     });

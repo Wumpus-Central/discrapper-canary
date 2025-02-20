@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = n(192379);
-function r() {
-    let [, e] = (0, i.useState)({});
-    return (0, i.useCallback)(() => e({}), []);
+n.d(t, { Z: () => i });
+var r = n(192379);
+function i() {
+    let [, e] = (0, r.useState)({});
+    return (0, r.useCallback)(() => e({}), []);
 }

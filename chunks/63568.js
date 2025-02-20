@@ -1,14 +1,14 @@
 n.d(t, {
-    K2: () => c,
-    jS: () => u,
+    K2: () => u,
+    jS: () => c,
     tW: () => l
 });
-var i = n(442837),
-    r = n(818083),
-    a = n(701190),
-    s = n(937111),
-    o = n(981631);
-let l = (0, r.B)({
+var r = n(442837),
+    i = n(818083),
+    o = n(701190),
+    a = n(937111),
+    s = n(981631);
+let l = (0, i.B)({
     kind: 'guild',
     id: '2024-11_member_verification_rollout',
     label: 'Member verification rollout',
@@ -21,13 +21,13 @@ let l = (0, r.B)({
         }
     ]
 });
-function u(e, t) {
-    let n = (0, i.e7)([s.Z, a.Z], () => {
+function c(e, t) {
+    let n = (0, r.e7)([a.Z, o.Z], () => {
         var t, n;
-        let i = null != e ? s.Z.getJoinRequestGuild(e) : null,
-            r = null != e ? a.Z.getInviteKeyForGuildId(e) : null,
-            l = null != r ? (null === (t = a.Z.getInvite(r)) || void 0 === t ? void 0 : t.guild) : null;
-        return (null == i ? void 0 : i.hasFeature(o.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) || (null == l ? void 0 : null === (n = l.features) || void 0 === n ? void 0 : n.includes(o.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST));
+        let r = null != e ? a.Z.getJoinRequestGuild(e) : null,
+            i = null != e ? o.Z.getInviteKeyForGuildId(e) : null,
+            l = null != i ? (null === (t = o.Z.getInvite(i)) || void 0 === t ? void 0 : t.guild) : null;
+        return (null == r ? void 0 : r.hasFeature(s.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) || (null == l ? void 0 : null === (n = l.features) || void 0 === n ? void 0 : n.includes(s.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST));
     });
     return !!(
         l.useExperiment(
@@ -39,14 +39,14 @@ function u(e, t) {
         ).enabled || n
     );
 }
-function c(e, t) {
-    var n, i;
-    let r = null != e ? s.Z.getJoinRequestGuild(e) : null,
-        u = null != e ? a.Z.getInviteKeyForGuildId(e) : null,
-        c = null != u ? (null === (n = a.Z.getInvite(u)) || void 0 === n ? void 0 : n.guild) : null;
+function u(e, t) {
+    var n, r;
+    let i = null != e ? a.Z.getJoinRequestGuild(e) : null,
+        c = null != e ? o.Z.getInviteKeyForGuildId(e) : null,
+        u = null != c ? (null === (n = o.Z.getInvite(c)) || void 0 === n ? void 0 : n.guild) : null;
     return !!(
-        (null == r ? void 0 : r.hasFeature(o.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) ||
-        (null == c ? void 0 : null === (i = c.features) || void 0 === i ? void 0 : i.includes(o.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) ||
+        (null == i ? void 0 : i.hasFeature(s.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) ||
+        (null == u ? void 0 : null === (r = u.features) || void 0 === r ? void 0 : r.includes(s.oNc.MEMBER_VERIFICATION_ROLLOUT_TEST)) ||
         l.getCurrentConfig(
             {
                 guildId: e,

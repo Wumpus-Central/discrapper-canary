@@ -1,30 +1,30 @@
 n.d(t, { Z: () => l });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(837411),
-    a = n(705556),
-    s = n(955418),
-    o = n(593401);
+var i = n(837411),
+    o = n(705556),
+    a = n(955418),
+    s = n(913340);
 function l(e) {
-    let { user: t, guildId: n, channelId: l, onClose: u, appContext: c } = e,
-        d = (0, r.Z)(t.id, n);
-    return (0, i.jsxs)('footer', {
-        className: o.footer,
+    let { user: t, guildId: n, channelId: l, onClose: c, appContext: u } = e,
+        d = (0, i.Z)(t.id, n);
+    return (0, r.jsxs)('footer', {
+        className: s.footer,
         children: [
             d &&
-                (0, i.jsx)(s.Z, {
+                (0, r.jsx)(a.Z, {
                     user: t,
                     guildId: n,
                     channelId: l,
-                    onClose: u
+                    onClose: c
                 }),
             !d &&
-                (0, i.jsx)(a.Z, {
+                (0, r.jsx)(o.Z, {
                     user: t,
                     guildId: n,
-                    onClose: u,
+                    onClose: c,
                     fullWidth: !0,
-                    appContext: c
+                    appContext: u
                 })
         ]
     });

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => x });
-var i,
-    r,
-    l,
-    s = n(442837),
-    a = n(570140),
+n.d(t, { Z: () => h });
+var r,
+    i,
+    s,
+    a = n(442837),
+    l = n(570140),
     o = n(999382),
     c = n(740903),
     d = n(981631);
 let u = c.u.OVERVIEW,
     m = null;
-function h(e) {
+function p(e) {
     let { subsection: t } = e;
     switch (t) {
         case d.KsC.SAFETY_AUTOMOD:
@@ -29,27 +29,27 @@ function h(e) {
             u = c.u.OVERVIEW;
     }
 }
-class g extends (l = s.ZP.Store) {
+class g extends (s = a.ZP.Store) {
     getCurrentPage() {
         return u;
     }
 }
-(r = 'GuildSettingsSafetyStore'),
-    (i = 'displayName') in g
-        ? Object.defineProperty(g, i, {
-              value: r,
+(i = 'GuildSettingsSafetyStore'),
+    (r = 'displayName') in g
+        ? Object.defineProperty(g, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (g[i] = r);
-let x = new g(a.Z, {
+        : (g[r] = i);
+let h = new g(l.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (o.Z.getGuildId() === m) return !1;
         m = o.Z.getGuildId();
     },
-    GUILD_SETTINGS_SET_SECTION: h,
-    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: h,
+    GUILD_SETTINGS_SET_SECTION: p,
+    GUILD_SETTINGS_SAFETY_SET_SUBSECTION: p,
     GUILD_SETTINGS_SAFETY_PAGE: function (e) {
         let { page: t } = e;
         u = t;

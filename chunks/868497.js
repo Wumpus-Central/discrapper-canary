@@ -1,8 +1,8 @@
 a.d(e, { m: () => d });
 var r = a(873567),
     n = a(370541),
-    _ = a(285883),
-    o = a(573736),
+    o = a(285883),
+    _ = a(573736),
     i = a(263449),
     c = a(988097),
     s = a(73453),
@@ -80,20 +80,20 @@ function d(t, e, a, A, f = 'auto.http.browser') {
                     ...a.getPropagationContext()
                 },
                 d = c ? (0, E.Hb)(c) : (0, n.$p)(s, l, u),
-                A = (0, _.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(s, e))),
-                f = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
+                A = (0, o.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(s, e))),
+                f = r.headers || ('undefined' != typeof Request && (0, _.V9)(t, Request) ? t.headers : void 0);
             if (!f)
                 return {
                     'sentry-trace': d,
                     baggage: A
                 };
-            if ('undefined' != typeof Headers && (0, o.V9)(f, Headers)) {
+            if ('undefined' != typeof Headers && (0, _.V9)(f, Headers)) {
                 let t = new Headers(f);
-                return t.append('sentry-trace', d), A && t.append(_.bU, A), t;
+                return t.append('sentry-trace', d), A && t.append(o.bU, A), t;
             }
             if (Array.isArray(f)) {
                 let t = [...f, ['sentry-trace', d]];
-                return A && t.push([_.bU, A]), t;
+                return A && t.push([o.bU, A]), t;
             }
             {
                 let t = 'baggage' in f ? f.baggage : void 0,

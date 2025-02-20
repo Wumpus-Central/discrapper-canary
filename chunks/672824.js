@@ -1,17 +1,17 @@
-e.d(t, { Z: () => c });
-var i = e(200651);
-e(192379);
-var l = e(442837),
-    a = e(481060),
-    r = e(211739),
-    s = e(680089),
-    d = e(388032);
-function c(n) {
-    let t = (0, l.e7)([s.Z], () => s.Z.isCollapsed(n.id), [n.id]);
-    return (0, i.jsx)(a.S89, {
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    o = n(481060),
+    c = n(211739),
+    a = n(680089),
+    l = n(388032);
+function s(e) {
+    let t = (0, i.e7)([a.Z], () => a.Z.isCollapsed(e.id), [e.id]);
+    return (0, r.jsx)(o.S89, {
         id: 'collapse-category',
-        label: d.intl.string(d.t.SvVRsr),
-        action: () => (t ? (0, r.mJ)(n.id) : (0, r.c4)(n.id)),
+        label: l.NW.string(l.t.SvVRsr),
+        action: () => (t ? (0, c.mJ)(e.id) : (0, c.c4)(e.id)),
         checked: t
     });
 }

@@ -1,28 +1,28 @@
-var i = n(413135),
-    r = i.Buffer;
-function a(e, t) {
+var r = n(413135),
+    i = r.Buffer;
+function o(e, t) {
     for (var n in e) t[n] = e[n];
 }
-function s(e, t, n) {
-    return r(e, t, n);
+function a(e, t, n) {
+    return i(e, t, n);
 }
-r.from && r.alloc && r.allocUnsafe && r.allocUnsafeSlow ? (e.exports = i) : (a(i, t), (t.Buffer = s)),
-    (s.prototype = Object.create(r.prototype)),
-    a(r, s),
-    (s.from = function (e, t, n) {
+i.from && i.alloc && i.allocUnsafe && i.allocUnsafeSlow ? (e.exports = r) : (o(r, t), (t.Buffer = a)),
+    (a.prototype = Object.create(i.prototype)),
+    o(i, a),
+    (a.from = function (e, t, n) {
         if ('number' == typeof e) throw TypeError('Argument must not be a number');
-        return r(e, t, n);
+        return i(e, t, n);
     }),
-    (s.alloc = function (e, t, n) {
+    (a.alloc = function (e, t, n) {
         if ('number' != typeof e) throw TypeError('Argument must be a number');
-        var i = r(e);
-        return void 0 !== t ? ('string' == typeof n ? i.fill(t, n) : i.fill(t)) : i.fill(0), i;
+        var r = i(e);
+        return void 0 !== t ? ('string' == typeof n ? r.fill(t, n) : r.fill(t)) : r.fill(0), r;
     }),
-    (s.allocUnsafe = function (e) {
+    (a.allocUnsafe = function (e) {
         if ('number' != typeof e) throw TypeError('Argument must be a number');
-        return r(e);
+        return i(e);
     }),
-    (s.allocUnsafeSlow = function (e) {
+    (a.allocUnsafeSlow = function (e) {
         if ('number' != typeof e) throw TypeError('Argument must be a number');
-        return i.SlowBuffer(e);
+        return r.SlowBuffer(e);
     });

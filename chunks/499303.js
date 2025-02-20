@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { I: () => r });
-class r {
+n.d(t, { I: () => i });
+class i {
     schedule(e, t) {
         this.unschedule(),
             (this.timeoutId = setTimeout(() => {
@@ -26,6 +26,6 @@ class r {
         return null !== this.timeoutId;
     }
     constructor() {
-        i(this, 'timeoutId', null);
+        r(this, 'timeoutId', null);
     }
 }

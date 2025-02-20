@@ -1,8 +1,8 @@
-n.d(t, { Z: () => A }), n(47120);
-var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
+n.d(t, { Z: () => P }), n(47120);
+var r = n(200651),
+    a = n(192379),
+    i = n(120356),
+    l = n.n(i),
     o = n(392711),
     s = n.n(o),
     c = n(876215),
@@ -11,30 +11,30 @@ var a = n(200651),
     h = n(433517),
     m = n(481060),
     x = n(570140),
-    _ = n(812206),
-    p = n(835473),
-    f = n(246992),
-    b = n(681619),
+    p = n(812206),
+    f = n(835473),
+    b = n(246992),
+    _ = n(681619),
     g = n(810568),
     v = n(168524),
     j = n(77498),
     C = n(823379),
-    N = n(550532),
-    T = n(71585),
-    E = n(146282),
-    y = n(780106),
-    S = n(650613),
-    k = n(789086),
-    R = n(206583),
-    I = n(166470),
-    O = n(658951);
-let Z = [
+    y = n(550532),
+    O = n(71585),
+    N = n(146282),
+    T = n(780106),
+    E = n(650613),
+    S = n(789086),
+    k = n(206583),
+    I = n(811372),
+    w = n(841699);
+let R = [
     {
         key: 'type',
-        cellClassName: i()(I.cell, I.cellType),
+        cellClassName: l()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(m.Text, {
+            return (0, r.jsx)(m.Text, {
                 variant: 'text-md/semibold',
                 children: c.s[t]
             });
@@ -42,11 +42,11 @@ let Z = [
     },
     {
         key: 'count',
-        cellClassName: i()(I.cell, I.cellCount),
+        cellClassName: l()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
-            return (0, a.jsx)('div', {
-                children: (0, a.jsx)(m.Text, {
+            return (0, r.jsx)('div', {
+                children: (0, r.jsx)(m.Text, {
                     variant: 'text-md/normal',
                     children: t.length
                 })
@@ -58,35 +58,35 @@ let Z = [
         cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(w, { type: t });
+            return (0, r.jsx)(Z, { type: t });
         }
     }
 ];
-function w(e) {
+function Z(e) {
     var t, n;
-    let { type: r } = e,
-        l = (0, u.e7)([E.Z], () => E.Z.getFilters()),
-        i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(r)) && void 0 !== n && n;
-    return (0, a.jsx)(m.XZJ, {
-        value: i,
+    let { type: a } = e,
+        i = (0, u.e7)([N.Z], () => N.Z.getFilters()),
+        l = null !== (n = null == i ? void 0 : null === (t = i.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
+    return (0, r.jsx)(m.XZJ, {
+        value: l,
         onClick: function () {
-            i
+            l
                 ? x.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: void 0
                   })
                 : x.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
-                      filters: { types: new Set([r]) }
+                      filters: { types: new Set([a]) }
                   });
         }
     });
 }
-function A() {
+function P() {
     var e, t;
-    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(R.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
-        o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(k.YN.GLOBAL_FEED)),
+        i = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
+        o = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
             let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -98,18 +98,18 @@ function A() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, u.e7)([E.Z], () => {
+        Z = (0, u.e7)([N.Z], () => {
             var e;
-            return (null === (e = E.Z.getFeedState(R.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = N.Z.getFeedState(k.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [A, P] = r.useState(''),
+        [P, L] = a.useState(''),
         D = (0, u.e7)(
-            [j.Z, _.Z],
+            [j.Z, p.Z],
             () => {
                 var e, t, n;
-                return parseInt(A) > 0 ? A : null !== (n = null === (e = j.Z.getGameByName(A)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = _.Z.getApplicationByName(A)) || void 0 === t ? void 0 : t.id;
+                return parseInt(P) > 0 ? P : null !== (n = null === (e = j.Z.getGameByName(P)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = p.Z.getApplicationByName(P)) || void 0 === t ? void 0 : t.id;
             },
-            [A]
+            [P]
         ),
         B = (0, v.Z)({
             applicationId: D,
@@ -125,65 +125,65 @@ function A() {
                 let [t] = e;
                 return t;
             }),
-        F = (0, p.Z)(M).filter(C.lm),
-        U = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
-    return (0, a.jsx)('div', {
-        className: i()(O.panel),
-        children: (0, a.jsxs)(m.zJl, {
+        F = (0, f.Z)(M).filter(C.lm),
+        U = (0, u.e7)([y.Z], () => y.Z.getFakeGameToShow());
+    return (0, r.jsx)('div', {
+        className: l()(w.panel),
+        children: (0, r.jsxs)(m.zJl, {
             className: I.content,
             children: [
-                (0, a.jsxs)(m.hjN, {
+                (0, r.jsxs)(m.hjN, {
                     children: [
-                        (0, a.jsx)(m.vwX, { children: 'Inventory' }),
+                        (0, r.jsx)(m.vwX, { children: 'Inventory' }),
                         c.length > 0 &&
-                            (0, a.jsx)(b.Z, {
-                                columns: Z,
+                            (0, r.jsx)(_.Z, {
+                                columns: R,
                                 data: c
                             }),
-                        (0, a.jsx)(m.LZC, { size: 8 }),
-                        (0, a.jsx)(k.Z, {}),
-                        (0, a.jsx)(m.zxk, {
+                        (0, r.jsx)(m.LZC, { size: 8 }),
+                        (0, r.jsx)(S.Z, {}),
+                        (0, r.jsx)(m.zxk, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: R.YN.GLOBAL_FEED,
+                                    feedId: k.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
-                            submitting: w,
+                            submitting: Z,
                             children: 'Refresh Now'
                         })
                     ]
                 }),
-                (0, a.jsxs)(m.hjN, {
+                (0, r.jsxs)(m.hjN, {
                     children: [
-                        (0, a.jsx)(m.vwX, { children: 'Impression Capping' }),
-                        (0, a.jsx)(m.zxk, {
+                        (0, r.jsx)(m.vwX, { children: 'Impression Capping' }),
+                        (0, r.jsx)(m.zxk, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
                             },
                             children: 'Clear Impressions'
                         }),
-                        (0, a.jsx)(m.LZC, { size: 8 }),
-                        (0, a.jsx)(m.zxk, {
+                        (0, r.jsx)(m.LZC, { size: 8 }),
+                        (0, r.jsx)(m.zxk, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
                             },
                             children: 'Log Impressions'
                         }),
-                        (0, a.jsx)(m.LZC, { size: 8 }),
-                        (0, a.jsx)(m.zxk, {
+                        (0, r.jsx)(m.LZC, { size: 8 }),
+                        (0, r.jsx)(m.zxk, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
                             },
-                            children: l ? 'Enable Impression Capping' : 'Disable Impression Capping'
+                            children: i ? 'Enable Impression Capping' : 'Disable Impression Capping'
                         }),
-                        (0, a.jsx)(m.LZC, { size: 8 }),
-                        (0, a.jsx)(m.zxk, {
+                        (0, r.jsx)(m.LZC, { size: 8 }),
+                        (0, r.jsx)(m.zxk, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
@@ -193,31 +193,31 @@ function A() {
                     ]
                 }),
                 !1,
-                (0, a.jsx)(S.Z, {}),
-                (0, a.jsxs)(m.hjN, {
+                (0, r.jsx)(E.Z, {}),
+                (0, r.jsxs)(m.hjN, {
                     children: [
-                        (0, a.jsx)(m.vwX, { children: 'Game Profile' }),
-                        (0, a.jsx)(m.oil, {
+                        (0, r.jsx)(m.vwX, { children: 'Game Profile' }),
+                        (0, r.jsx)(m.oil, {
                             placeholder: 'App ID or full name',
-                            onChange: (e) => (0 === e.length || e.length >= 18) && P(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && L(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (A === e.currentTarget.value ? null == B || B(e) : P(e.currentTarget.value));
+                                'Enter' === e.key && (P === e.currentTarget.value ? null == B || B(e) : L(e.currentTarget.value));
                             },
-                            error: A.length > 0 && null == B ? 'No game profile for '.concat(null != D ? D : A + ' - try by id', '.') : void 0,
+                            error: P.length > 0 && null == B ? 'No game profile for '.concat(null != D ? D : P + ' - try by id', '.') : void 0,
                             style: null != B ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: F.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: F.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
-                (0, a.jsxs)(m.hjN, {
+                (0, r.jsxs)(m.hjN, {
                     children: [
-                        (0, a.jsx)(m.vwX, { children: 'Activity Sharing' }),
-                        (0, a.jsx)(m.Text, {
+                        (0, r.jsx)(m.vwX, { children: 'Activity Sharing' }),
+                        (0, r.jsx)(m.Text, {
                             variant: 'text-md/normal',
                             children: 'Force show game:'
                         }),
-                        (0, a.jsx)(m.PhF, {
-                            options: y.h.map((e) => ({
+                        (0, r.jsx)(m.PhF, {
+                            options: T.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),
@@ -229,7 +229,7 @@ function A() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: f.O$
+                            popoutLayerContext: b.O$
                         })
                     ]
                 })
@@ -237,20 +237,20 @@ function A() {
         })
     });
 }
-let L = (e) => {
+let A = (e) => {
     let { application: t } = e,
         n = (0, v.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         });
-    return (0, a.jsx)(m.P3F, {
+    return (0, r.jsx)(m.P3F, {
         onClick: n,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, a.jsx)(m.Text, {
+        children: (0, r.jsx)(m.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: t.name

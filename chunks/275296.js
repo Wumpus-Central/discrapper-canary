@@ -1,45 +1,45 @@
 n.d(t, { Z: () => d }), n(789020);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(630388),
-    s = n(402148),
-    a = n(981631),
+var i = n(481060),
+    s = n(630388),
+    a = n(402148),
+    l = n(981631),
     o = n(388032),
-    c = n(191679);
+    c = n(266171);
 let d = (e) => {
     let { role: t } = e;
-    return (0, l.yE)(t.flags, a.aO5.IN_PROMPT)
-        ? (0, s.F)(t)
-            ? (0, i.jsxs)('div', {
+    return (0, s.yE)(t.flags, l.aO5.IN_PROMPT)
+        ? (0, a.F)(t)
+            ? (0, r.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, i.jsx)(r.P4T, {
+                      (0, r.jsx)(i.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
                           className: c.noticeIconPowerful
                       }),
-                      (0, i.jsx)(r.Text, {
+                      (0, r.jsx)(i.Text, {
                           variant: 'text-sm/normal',
-                          children: o.intl.string(o.t.YRbgX1)
+                          children: o.NW.string(o.t.YRbgX1)
                       })
                   ]
               })
-            : (0, i.jsxs)('div', {
+            : (0, r.jsxs)('div', {
                   className: c.notice,
                   children: [
-                      (0, i.jsx)(r.P4T, {
+                      (0, r.jsx)(i.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
                           className: c.noticeIcon
                       }),
-                      (0, i.jsx)(r.Text, {
+                      (0, r.jsx)(i.Text, {
                           variant: 'text-sm/normal',
-                          children: o.intl.string(o.t.mqeO2t)
+                          children: o.NW.string(o.t.mqeO2t)
                       })
                   ]
               })

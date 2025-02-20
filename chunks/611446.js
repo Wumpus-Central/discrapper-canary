@@ -1,132 +1,132 @@
 n.d(e, {
-    O: () => x,
-    default: () => b
+    O: () => b,
+    default: () => N
 }),
     n(47120);
-var i,
+var r,
     s = n(200651),
-    l = n(192379),
-    r = n(481060),
-    o = n(600164),
+    i = n(192379),
+    o = n(481060),
+    l = n(600164),
     a = n(367408),
     c = n(473092),
-    d = n(419672),
-    u = n(858597),
+    u = n(419672),
+    d = n(858597),
     T = n(486213),
-    _ = n(388032),
-    S = n(869931),
-    x = (((i = {}).ACTIONS = 'ACTIONS'), (i.SAFETY_TIPS = 'SAFETY_TIPS'), (i.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), i);
-let b = (t) => {
-    let { onClose: e, channelId: n, warningId: i, warningType: x, otherUserId: b, transitionState: p } = t,
-        A = null != (0, a.M)(n),
-        [h, E] = l.useState('ACTIONS'),
-        N = l.useCallback(
+    S = n(388032),
+    _ = n(923010),
+    b = (((r = {}).ACTIONS = 'ACTIONS'), (r.SAFETY_TIPS = 'SAFETY_TIPS'), (r.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), r);
+let N = (t) => {
+    let { onClose: e, channelId: n, warningId: r, warningType: b, otherUserId: N, transitionState: x } = t,
+        p = null != (0, a.M)(n),
+        [O, h] = i.useState('ACTIONS'),
+        A = i.useCallback(
             (t) => {
                 (0, c.qc)({
                     channelId: n,
-                    warningId: i,
-                    warningType: x,
-                    senderId: b,
+                    warningId: r,
+                    warningType: b,
+                    senderId: N,
                     cta: t,
-                    isNudgeWarning: A
+                    isNudgeWarning: p
                 });
             },
-            [n, i, x, b, A]
+            [n, r, b, N, p]
         ),
-        R = l.useCallback((t) => {
+        E = i.useCallback((t) => {
             let { text: e, onClick: n } = t;
-            return (0, s.jsx)(r.zxk, {
-                look: r.zxk.Looks.LINK,
-                size: r.zxk.Sizes.MIN,
+            return (0, s.jsx)(o.zxk, {
+                look: o.zxk.Looks.LINK,
+                size: o.zxk.Sizes.MIN,
                 onClick: n,
-                color: r.zxk.Colors.CUSTOM,
-                className: S.footerLink,
+                color: o.zxk.Colors.CUSTOM,
+                className: _.footerLink,
                 children: e
             });
         }, []),
-        C = l.useCallback(() => {
-            switch (h) {
+        f = i.useCallback(() => {
+            switch (O) {
                 case 'SAFETY_TIPS':
                 case 'ABOUT_SAFETY_ALERTS':
-                    return (0, s.jsx)(R, {
-                        text: _.intl.string(_.t['13/7kZ']),
-                        onClick: () => E('ACTIONS')
+                    return (0, s.jsx)(E, {
+                        text: S.NW.string(S.t['13/7kZ']),
+                        onClick: () => h('ACTIONS')
                     });
                 default:
                     return null;
             }
-        }, [h, R]),
-        O = l.useCallback(() => {
-            switch (h) {
+        }, [O, E]),
+        g = i.useCallback(() => {
+            switch (O) {
                 case 'SAFETY_TIPS':
-                    return _.intl.string(_.t.EtNxi4);
+                    return S.NW.string(S.t.EtNxi4);
                 case 'ABOUT_SAFETY_ALERTS':
-                    return _.intl.string(_.t.qI14KC);
+                    return S.NW.string(S.t.qI14KC);
                 default:
-                    return _.intl.string(_.t.MAhAp6);
+                    return S.NW.string(S.t.MAhAp6);
             }
-        }, [h]),
-        L = l.useCallback(
+        }, [O]),
+        R = i.useCallback(
             (t) => {
-                E(t);
+                h(t);
             },
-            [E]
+            [h]
         );
-    return (0, s.jsxs)(r.Y0X, {
-        transitionState: p,
-        'aria-label': _.intl.string(_.t.eXlt09),
-        size: r.CgR.SMALL,
+    return (0, s.jsxs)(o.Y0X, {
+        transitionState: x,
+        'aria-label': S.NW.string(S.t.eXlt09),
+        size: o.CgR.SMALL,
         children: [
-            (0, s.jsx)(r.xBx, {
+            (0, s.jsx)(o.xBx, {
                 separator: !1,
-                className: S.modalHeader,
-                justify: o.Z.Justify.CENTER,
-                children: (0, s.jsx)(r.X6q, {
+                className: _.modalHeader,
+                justify: l.Z.Justify.CENTER,
+                children: (0, s.jsx)(o.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: O()
+                    children: g()
                 })
             }),
-            (0, s.jsx)(r.Ttm, {
-                children: (0, s.jsxs)(r.MyZ, {
-                    activeSlide: h,
+            (0, s.jsx)(o.Ttm, {
+                children: (0, s.jsxs)(o.MyZ, {
+                    activeSlide: O,
                     width: 440,
                     children: [
-                        (0, s.jsx)(r.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 'ACTIONS',
-                            children: (0, s.jsx)(u.Z, {
-                                otherUserId: b,
+                            children: (0, s.jsx)(d.Z, {
+                                otherUserId: N,
                                 channelId: n,
-                                warningId: i,
-                                warningType: x,
-                                transitionToSlide: L
+                                warningId: r,
+                                warningType: b,
+                                transitionToSlide: R
                             })
                         }),
-                        (0, s.jsx)(r.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 'ABOUT_SAFETY_ALERTS',
-                            children: (0, s.jsx)(d.Z, {
+                            children: (0, s.jsx)(u.Z, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), N(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    e(), A(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
                                 }
                             })
                         }),
-                        (0, s.jsx)(r.Mi4, {
+                        (0, s.jsx)(o.Mi4, {
                             id: 'SAFETY_TIPS',
                             children: (0, s.jsx)(T.Z, {})
                         })
                     ]
                 })
             }),
-            (0, s.jsxs)(r.mzw, {
-                justify: o.Z.Justify.BETWEEN,
+            (0, s.jsxs)(o.mzw, {
+                justify: l.Z.Justify.BETWEEN,
                 children: [
-                    (0, s.jsx)(R, {
-                        text: _.intl.string(_.t.cpT0Cg),
+                    (0, s.jsx)(E, {
+                        text: S.NW.string(S.t.cpT0Cg),
                         onClick: () => {
-                            e(), N(c.NM.USER_SAFETY_TOOLS_DISMISS);
+                            e(), A(c.NM.USER_SAFETY_TOOLS_DISMISS);
                         }
                     }),
-                    C()
+                    f()
                 ]
             })
         ]

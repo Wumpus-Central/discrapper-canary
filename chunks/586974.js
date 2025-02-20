@@ -1,30 +1,30 @@
 function t(e) {
     let t = e.regex,
         n = '[a-zA-Z_][a-zA-Z0-9_.]*(!|\\?)?',
-        i = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?',
-        r = {
+        r = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?',
+        i = {
             $pattern: n,
             keyword: ['after', 'alias', 'and', 'case', 'catch', 'cond', 'defstruct', 'defguard', 'do', 'else', 'end', 'fn', 'for', 'if', 'import', 'in', 'not', 'or', 'quote', 'raise', 'receive', 'require', 'reraise', 'rescue', 'try', 'unless', 'unquote', 'unquote_splicing', 'use', 'when', 'with|0'],
             literal: ['false', 'nil', 'true']
         },
-        a = {
+        o = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: r
+            keywords: i
         },
-        s = {
+        a = {
             className: 'number',
             begin: '(\\b0o[0-7_]+)|(\\b0b[01_]+)|(\\b0x[0-9a-fA-F_]+)|(-?\\b[0-9][0-9_]*(\\.[0-9_]+([eE][-+]?[0-9]+)?)?)',
             relevance: 0
         },
-        o = {
+        s = {
             match: /\\[\s\S]/,
             scope: 'char.escape',
             relevance: 0
         },
         l = '[/|([{<"\']',
-        u = [
+        c = [
             {
                 begin: /"/,
                 end: /"/
@@ -58,7 +58,7 @@ function t(e) {
                 end: />/
             }
         ],
-        c = (e) => ({
+        u = (e) => ({
             scope: 'char.escape',
             begin: t.concat(/\\/, e),
             relevance: 0
@@ -66,43 +66,43 @@ function t(e) {
         d = {
             className: 'string',
             begin: '~[a-z](?=' + l + ')',
-            contains: u.map((t) =>
+            contains: c.map((t) =>
                 e.inherit(t, {
-                    contains: [c(t.end), o, a]
+                    contains: [u(t.end), s, o]
                 })
             )
         },
         f = {
             className: 'string',
             begin: '~[A-Z](?=' + l + ')',
-            contains: u.map((t) => e.inherit(t, { contains: [c(t.end)] }))
+            contains: c.map((t) => e.inherit(t, { contains: [u(t.end)] }))
         },
-        _ = {
+        p = {
             className: 'regex',
             variants: [
                 {
                     begin: '~r(?=' + l + ')',
-                    contains: u.map((n) =>
+                    contains: c.map((n) =>
                         e.inherit(n, {
                             end: t.concat(n.end, /[uismxfU]{0,7}/),
-                            contains: [c(n.end), o, a]
+                            contains: [u(n.end), s, o]
                         })
                     )
                 },
                 {
                     begin: '~R(?=' + l + ')',
-                    contains: u.map((n) =>
+                    contains: c.map((n) =>
                         e.inherit(n, {
                             end: t.concat(n.end, /[uismxfU]{0,7}/),
-                            contains: [c(n.end)]
+                            contains: [u(n.end)]
                         })
                     )
                 }
             ]
         },
-        p = {
+        _ = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: /"""/,
@@ -159,8 +159,8 @@ function t(e) {
             end: /\bdo\b|$|;/
         }),
         g = [
-            p,
             _,
+            p,
             f,
             d,
             e.HASH_COMMENT_MODE,
@@ -170,7 +170,7 @@ function t(e) {
             {
                 className: 'symbol',
                 begin: ':(?![\\s:])',
-                contains: [p, { begin: i }],
+                contains: [_, { begin: r }],
                 relevance: 0
             },
             {
@@ -183,18 +183,18 @@ function t(e) {
                 begin: /(\b[A-Z][a-zA-Z0-9_]+)/,
                 relevance: 0
             },
-            s,
+            a,
             {
                 className: 'variable',
                 begin: '(\\$\\W)|((\\$|@@?)(\\w+))'
             }
         ];
     return (
-        (a.contains = g),
+        (o.contains = g),
         {
             name: 'Elixir',
             aliases: ['ex', 'exs'],
-            keywords: r,
+            keywords: i,
             contains: g
         }
     );

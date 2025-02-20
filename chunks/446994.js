@@ -750,7 +750,7 @@ var t, i;
                                                                 setTempo: function (e) {
                                                                     (f = l = d),
                                                                         e >= 1 ? (l = Math.round(f / e)) : (f = Math.round(l * e)),
-                                                                        (j = (1 / e - (1 * l) / f) * f),
+                                                                        (j = (1 / e - +l / f) * f),
                                                                         (B = (function (e, t) {
                                                                             for (var i = (e.length / t) | 0, r = 0, o = 0; o < i; o++) r += e[o * t];
                                                                             return 0.9 / r;
@@ -830,7 +830,7 @@ var t, i;
                                                                 var e = 0 | (I += 2 * j);
                                                                 I -= e;
                                                                 for (var t = 0; t < s; t++) (u.m_re[t] = _[t] * c[t]), (u.m_im[t] = _[t] * c[f + t]);
-                                                                r.blit(c, 2 * f, c, 0, s - f), u.inplace(!1), u.unpack(V, v, g, y), X(D, V, v, 0, 0, (1 * l) / f), X(D + 1, g, y, 0, 0, (1 * (l + e)) / f), r.blit(g, 0, b, 0, m), r.blit(y, 0, T, 0, m), u.repack(V, v, g, y), u.inplace(!0);
+                                                                r.blit(c, 2 * f, c, 0, s - f), u.inplace(!1), u.unpack(V, v, g, y), X(D, V, v, 0, 0, +l / f), X(D + 1, g, y, 0, 0, +(l + e) / f), r.blit(g, 0, b, 0, m), r.blit(y, 0, T, 0, m), u.repack(V, v, g, y), u.inplace(!0);
                                                                 var i = h.length;
                                                                 for (r.blit(h, M, h, 0, i - M), t = i - M; t < i; t++) h[t] = 0;
                                                                 var o = 0,
@@ -838,7 +838,7 @@ var t, i;
                                                                 for (t = 0; t < l; t++) Math.abs(2 * u.m_re[t]) > o && (o = Math.abs(2 * u.m_re[t]));
                                                                 for (t = 0; t < s - l; t++) Math.abs(u.m_re[t + l + e] + u.m_im[t]) > o && (o = Math.abs(u.m_re[t + l + e] + u.m_im[t]));
                                                                 for (t = s - l; t < s; t++) Math.abs(2 * u.m_im[t]) > o && (o = Math.abs(2 * u.m_im[t]));
-                                                                var a = 1 / Math.floor((1 * s) / (2 * l));
+                                                                var a = 1 / Math.floor(+s / (2 * l));
                                                                 for (n * o > a && (n = a / o), t = 0; t < s; t++) (h[t] += n * u.m_re[t]), (h[t + l + e] += n * u.m_im[t]);
                                                                 return (D += 2), (M = 2 * l + e);
                                                             };

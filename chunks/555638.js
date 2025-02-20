@@ -1,13 +1,13 @@
-e.d(n, { A: () => a });
-var o = e(200651);
-e(192379);
-var i = e(212598),
-    r = e(388032),
-    s = e(436200),
-    c = e(757685);
+n.d(e, { A: () => a });
+var o = n(200651);
+n(192379);
+var i = n(212598),
+    r = n(388032),
+    s = n(436200),
+    c = n(757685);
 function a(t) {
-    let { platformType: n, isWaitingForConnection: e, onWaitingForConnection: a, expectedCallbackState: l, onAuthToken: d, onError: u, onClose: _ } = t,
-        p = e
+    let { platformType: e, isWaitingForConnection: n, onWaitingForConnection: a, expectedCallbackState: d, onAuthToken: l, onError: u, onClose: p } = t,
+        _ = n
             ? (0, o.jsx)('img', {
                   src: c.Z,
                   width: '231',
@@ -20,18 +20,18 @@ function a(t) {
                   height: '160',
                   alt: ''
               }),
-        A = e ? r.intl.string(r.t.TTIocn) : r.intl.string(r.t['6n+UPT']),
-        T = e ? r.intl.string(r.t.MNmoKC) : r.intl.string(r.t.JaaqIS);
+        b = n ? r.NW.string(r.t.TTIocn) : r.NW.string(r.t['6n+UPT']),
+        N = n ? r.NW.string(r.t.MNmoKC) : r.NW.string(r.t.JaaqIS);
     return (0, o.jsx)(i.t, {
-        platformType: n,
-        isWaitingForConnection: e,
+        platformType: e,
+        isWaitingForConnection: n,
         onWaitingForConnection: a,
-        expectedCallbackState: l,
-        onAuthToken: d,
+        expectedCallbackState: d,
+        onAuthToken: l,
         onError: u,
-        onClose: _,
-        img: p,
-        title: A,
-        body: T
+        onClose: p,
+        img: _,
+        title: b,
+        body: N
     });
 }

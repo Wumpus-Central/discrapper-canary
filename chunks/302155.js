@@ -1,11 +1,11 @@
-let i, r;
-n.d(t, { Z: () => p });
-var a = n(213919),
-    s = n(570140),
-    o = n(147913),
+let r, i;
+n.d(t, { Z: () => _ });
+var o = n(213919),
+    a = n(570140),
+    s = n(147913),
     l = n(594174),
-    u = n(626135),
-    c = n(726745),
+    c = n(626135),
+    u = n(726745),
     d = n(981631);
 function f(e, t, n) {
     return (
@@ -20,15 +20,15 @@ function f(e, t, n) {
         e
     );
 }
-let _ = !1;
-class p extends o.Z {
+let p = !1;
+class _ extends s.Z {
     _initialize() {
-        s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
+        a.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
     }
     _terminate() {
-        s.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
+        a.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
     }
-    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: s }) {
+    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: a }) {
         super(),
             f(this, 'onSwitchStart', void 0),
             f(this, 'onSwitchSuccess', void 0),
@@ -36,37 +36,37 @@ class p extends o.Z {
             f(this, 'onTokenSet', void 0),
             f(this, 'actions', { LOGOUT: (e) => this.handleLogout(e) }),
             f(this, 'handleConnectionOpen', () => {
-                var e, t, n, s, o, f;
-                let p = l.default.getCurrentUser();
-                if (null == p) return;
-                if (null != r) {
-                    if (r !== i) {
-                        let e = c.Z.getUsers().map((e) => {
+                var e, t, n, a, s, f;
+                let _ = l.default.getCurrentUser();
+                if (null == _) return;
+                if (null != i) {
+                    if (i !== r) {
+                        let e = u.Z.getUsers().map((e) => {
                             let { id: t } = e;
                             return t;
                         });
-                        u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
-                            from_user_id: r,
+                        c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
+                            from_user_id: i,
                             linked_user_ids: e
                         }),
-                            null === (n = (s = this).onSwitchSuccess) || void 0 === n || n.call(s, p, _);
-                    } else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (o = (f = this).onSwitchError) || void 0 === o || o.call(f, p);
-                    r = null;
+                            null === (n = (a = this).onSwitchSuccess) || void 0 === n || n.call(a, _, p);
+                    } else c.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (s = (f = this).onSwitchError) || void 0 === s || s.call(f, _);
+                    i = null;
                 }
-                i = p.id;
-                let h = a.getToken();
-                null != h && '' !== h && a.setToken(h, p.id), null === (e = (t = this).onTokenSet) || void 0 === e || e.call(t, p);
+                r = _.id;
+                let h = o.getToken();
+                null != h && '' !== h && o.setToken(h, _.id), null === (e = (t = this).onTokenSet) || void 0 === e || e.call(t, _);
             }),
             f(this, 'handleLogout', (e) => {
                 if (e.isSwitchingAccount) {
                     var t, n;
-                    (r = i), null === (t = (n = this).onSwitchStart) || void 0 === t || t.call(n), (_ = !!e.goHomeAfterSwitching);
-                } else (_ = !1), a.removeToken(i);
-                i = null;
+                    (i = r), null === (t = (n = this).onSwitchStart) || void 0 === t || t.call(n), (p = !!e.goHomeAfterSwitching);
+                } else (p = !1), o.removeToken(r);
+                r = null;
             }),
             (this.onSwitchStart = e),
             (this.onSwitchSuccess = t),
             (this.onSwitchError = n),
-            (this.onTokenSet = s);
+            (this.onTokenSet = a);
     }
 }

@@ -1,173 +1,173 @@
-n.d(t, { Z: () => R });
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => A });
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(447543),
-    s = n(410575),
-    o = n(758119),
+    o = n(447543),
+    l = n(410575),
+    s = n(758119),
     c = n(622822),
     d = n(906732),
     u = n(924301),
-    m = n(11868),
-    _ = n(413605),
-    h = n(451603),
-    p = n(885714),
+    p = n(11868),
+    m = n(413605),
+    f = n(451603),
+    h = n(885714),
     g = n(314897),
-    f = n(430824),
-    x = n(701190),
-    C = n(411198),
-    E = n(610699),
-    v = n(313876),
-    I = n(778333),
-    N = n(949981),
-    S = n(680668),
-    T = n(143708),
-    b = n(358595),
-    A = n(563917),
-    j = n(135845),
-    y = n(981631),
-    Z = n(723359);
-function R(e) {
-    let { code: t, author: n, getAcceptInviteContext: R } = e,
-        { invite: L, inviteError: P } = (0, a.cj)(
-            [x.Z],
+    _ = n(430824),
+    b = n(701190),
+    v = n(411198),
+    y = n(610699),
+    x = n(313876),
+    O = n(778333),
+    E = n(949981),
+    j = n(680668),
+    N = n(143708),
+    C = n(358595),
+    I = n(563917),
+    S = n(135845),
+    P = n(981631),
+    T = n(723359);
+function A(e) {
+    let { code: t, author: n, getAcceptInviteContext: A } = e,
+        { invite: w, inviteError: Z } = (0, a.cj)(
+            [b.Z],
             () => ({
-                invite: x.Z.getInvite(t),
-                inviteError: x.Z.getInviteError(t)
+                invite: b.Z.getInvite(t),
+                inviteError: b.Z.getInviteError(t)
             }),
             [t]
         ),
-        k = null == L;
-    l.useEffect(() => {
-        k && r.Z.resolveInvite(t);
+        k = null == w;
+    i.useEffect(() => {
+        k && o.Z.resolveInvite(t);
     }, [t, k]);
-    let M =
-            null != L
-                ? L
+    let R =
+            null != w
+                ? w
                 : {
-                      state: y.r2o.RESOLVING,
+                      state: P.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: O } = (0, d.ZP)(),
-        D = (0, a.e7)([f.Z], () => ((null == L ? void 0 : L.guild) != null ? f.Z.getGuild(L.guild.id) : null), [L]),
-        w = (0, a.e7)([g.default], () => g.default.getId()),
-        F = (0, a.e7)(
+        { analyticsLocations: L } = (0, d.ZP)(),
+        D = (0, a.e7)([_.Z], () => ((null == w ? void 0 : w.guild) != null ? _.Z.getGuild(w.guild.id) : null), [w]),
+        M = (0, a.e7)([g.default], () => g.default.getId()),
+        W = (0, a.e7)(
             [u.ZP],
             () => {
                 var e;
-                return u.ZP.getGuildScheduledEvent(null === (e = M.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
+                return u.ZP.getGuildScheduledEvent(null === (e = R.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
             },
-            [M]
+            [R]
         ),
-        U = () => {
-            null != M.channel && r.Z.transitionToInviteSync(M);
+        F = () => {
+            null != R.channel && o.Z.transitionToInviteSync(R);
         },
-        B = () => {
-            if (null == D && (null == L ? void 0 : L.guild) != null) {
-                let e = C.Qs(L.guild);
+        U = () => {
+            if (null == D && (null == w ? void 0 : w.guild) != null) {
+                let e = v.Qs(w.guild);
                 if ((0, c.b)() && (0, c.Y)(e)) {
-                    (0, o.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
+                    (0, s.mN)(T.L0.NSFW_SERVER_INVITE_EMBED);
                     return;
                 }
             }
-            (0, h.yU)()
-                ? (0, p.Z)({
-                      analyticsSource: { page: y.ZY5.INVITE_EMBED },
+            (0, f.yU)()
+                ? (0, h.Z)({
+                      analyticsSource: { page: P.ZY5.INVITE_EMBED },
                       analyticsLocation: {
-                          page: y.ZY5.INVITE_EMBED,
-                          section: y.jXE.GUILD_CAP_UPSELL_MODAL
+                          page: P.ZY5.INVITE_EMBED,
+                          section: P.jXE.GUILD_CAP_UPSELL_MODAL
                       },
-                      analyticsLocations: O
+                      analyticsLocations: L
                   })
-                : r.Z.acceptInviteAndTransitionToInviteChannel({
+                : o.Z.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
-                      context: R('Invite Button Embed')
+                      context: A('Invite Button Embed')
                   });
         },
-        G = (0, i.jsx)(S.Z, {
-            onTransitionToInviteChannel: U,
-            onAcceptInstantInvite: B,
-            currentUserId: w,
+        B = (0, r.jsx)(j.Z, {
+            onTransitionToInviteChannel: F,
+            onAcceptInstantInvite: U,
+            currentUserId: M,
             guild: D,
-            invite: M,
+            invite: R,
             author: n
         });
-    switch (M.state) {
-        case y.r2o.RESOLVING:
-            G = (0, i.jsx)(b.Z, {});
+    switch (R.state) {
+        case P.r2o.RESOLVING:
+            B = (0, r.jsx)(C.Z, {});
             break;
-        case y.r2o.EXPIRED:
-        case y.r2o.BANNED:
-            G = (0, i.jsx)(T.Z, {
-                banned: M.state === y.r2o.BANNED,
+        case P.r2o.EXPIRED:
+        case P.r2o.BANNED:
+            B = (0, r.jsx)(N.Z, {
+                banned: R.state === P.r2o.BANNED,
                 author: n
             });
             break;
-        case y.r2o.ERROR:
-            G = (0, i.jsx)(v.Z, {
+        case P.r2o.ERROR:
+            B = (0, r.jsx)(x.Z, {
                 author: n,
-                inviteError: P
+                inviteError: Z
             });
             break;
         default:
-            switch ((0, _.VR)(M)) {
-                case _.wx.GROUP_DM:
-                    G = (0, i.jsx)(N.Z, {
-                        onTransitionToInviteChannel: U,
-                        onAcceptInstantInvite: B,
-                        currentUserId: w,
-                        invite: M,
+            switch ((0, m.VR)(R)) {
+                case m.wx.GROUP_DM:
+                    B = (0, r.jsx)(E.Z, {
+                        onTransitionToInviteChannel: F,
+                        onAcceptInstantInvite: U,
+                        currentUserId: M,
+                        invite: R,
                         author: n
                     });
                     break;
-                case _.wx.FRIEND:
-                    G = (0, i.jsx)(I.Z, {
-                        invite: M,
+                case m.wx.FRIEND:
+                    B = (0, r.jsx)(O.Z, {
+                        invite: R,
                         author: n,
-                        getAcceptInviteContext: R
+                        getAcceptInviteContext: A
                     });
                     break;
                 default:
-                    if ((0, _.TY)(M)) {
-                        G = (0, i.jsx)(j.Z, {
-                            onTransitionToInviteChannel: U,
-                            onAcceptInstantInvite: B,
-                            currentUserId: w,
+                    if ((0, m.TY)(R)) {
+                        B = (0, r.jsx)(S.Z, {
+                            onTransitionToInviteChannel: F,
+                            onAcceptInstantInvite: U,
+                            currentUserId: M,
                             guild: D,
-                            invite: M
+                            invite: R
                         });
                         break;
                     }
-                    if ((0, _.Tx)(M)) {
-                        G = (0, i.jsx)(m.ZP, {
-                            guildScheduledEvent: F,
-                            guild: M.guild,
-                            channel: M.channel,
+                    if ((0, m.Tx)(R)) {
+                        B = (0, r.jsx)(p.ZP, {
+                            guildScheduledEvent: W,
+                            guild: R.guild,
+                            channel: R.channel,
                             isMember: null != D,
-                            onAcceptInstantInvite: B,
-                            onTransitionToInviteChannel: U
+                            onAcceptInstantInvite: U,
+                            onTransitionToInviteChannel: F
                         });
                         break;
                     }
-                    if ((0, _.$P)(M)) {
-                        G = (0, i.jsx)(A.Z, {
-                            stageInstance: M.stage_instance,
-                            guild: M.guild,
+                    if ((0, m.$P)(R)) {
+                        B = (0, r.jsx)(I.Z, {
+                            stageInstance: R.stage_instance,
+                            guild: R.guild,
                             isMember: null != D,
-                            onTransitionToInviteChannel: U,
-                            onAcceptInstantInvite: B
+                            onTransitionToInviteChannel: F,
+                            onAcceptInstantInvite: U
                         });
                         break;
                     }
-                    (0, _.P1)(M) &&
-                        (G = (0, i.jsx)(E.Z, {
-                            invite: M,
-                            getAcceptInviteContext: R
+                    (0, m.P1)(R) &&
+                        (B = (0, r.jsx)(y.Z, {
+                            invite: R,
+                            getAcceptInviteContext: A
                         }));
             }
     }
-    return (0, i.jsx)(s.Z, {
-        section: y.jXE.INVITE_LINK,
-        children: G
+    return (0, r.jsx)(l.Z, {
+        section: P.jXE.INVITE_LINK,
+        children: B
     });
 }

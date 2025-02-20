@@ -1,31 +1,31 @@
-n.d(t, { Z: () => u });
-var i = n(200651),
-    r = n(793030),
-    a = n(483444),
-    s = n(787528),
-    o = n(388032),
-    l = n(239196);
-let u = (e) => {
+n.d(t, { Z: () => c }), n(266796);
+var r = n(200651),
+    i = n(793030),
+    o = n(483444),
+    a = n(787528),
+    s = n(388032),
+    l = n(108337);
+let c = (e) => {
     let { profileBadge: t, tenureBadge: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: l.tooltipContainer,
         children: [
-            (0, i.jsx)('img', {
-                src: (0, s.J)(n.id),
+            (0, r.jsx)('img', {
+                src: (0, a.J)(n.id),
                 alt: ''
             }),
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: l.tooltipWordmarkContainer,
-                children: (0, i.jsx)(a.Z, {
+                children: (0, r.jsx)(o.Z, {
                     width: 56,
                     className: l.tooltipWordmark
                 })
             }),
-            (0, i.jsx)(r.X6, {
+            (0, r.jsx)(i.X6, {
                 variant: 'heading-xl/extrabold',
-                children: o.intl.string(n.nameUnformatted)
+                children: s.NW.string(n.nameUnformatted)
             }),
-            (0, i.jsx)(r.xv, {
+            (0, r.jsx)(i.xv, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
                 className: l.tooltipDescription,

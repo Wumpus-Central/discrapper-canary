@@ -1,4 +1,4 @@
-var i = n(294377),
-    r = n(187203),
-    a = n(414847);
-r('toStringTag'), a(i('Symbol'), 'Symbol');
+var r = n(294377),
+    i = n(187203),
+    o = n(414847);
+i('toStringTag'), o(r('Symbol'), 'Symbol');

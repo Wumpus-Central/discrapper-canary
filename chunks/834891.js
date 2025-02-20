@@ -1,62 +1,62 @@
-e.d(n, {
+n.d(t, {
     E: () => o,
     l: () => d
 });
 var i,
-    l = e(149765),
-    s = e(700785),
-    a = e(981631),
-    r = e(388032),
+    s = n(149765),
+    a = n(700785),
+    l = n(981631),
+    r = n(388032),
     d = (((i = {}).CREATE = 'CREATE'), (i.GAMING = 'GAMING'), (i.FRIENDS = 'FRIENDS'), (i.STUDY = 'STUDY'), (i.CLUBS = 'CLUBS'), (i.CREATORS = 'CREATORS'), (i.LOCAL_COMMUNITY = 'LOCAL_COMMUNITY'), (i.SCHOOL_CLUB = 'SCHOOL_CLUB'), i);
 function o() {
     return {
         CREATE: {
             id: 'CREATE',
             code: '2TffvPucqHkN',
-            label: r.intl.string(r.t['H3+6BA']),
+            label: r.NW.string(r.t['H3+6BA']),
             channels: [],
             system_channel_id: null
         },
         GAMING: {
             id: 'GAMING',
             code: 'hvtBQMfw6uSJ',
-            label: r.intl.string(r.t.wdOb3N),
+            label: r.NW.string(r.t.wdOb3N),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t['C3TN9/']),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t['C3TN9/']),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.a7GzDw),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.a7GzDw),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t['2COskZ']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['2COskZ']),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '01'
@@ -64,49 +64,49 @@ function o() {
         FRIENDS: {
             id: 'FRIENDS',
             code: 'hgM48av5Q69A',
-            label: r.intl.string(r.t.OVHBtb),
+            label: r.NW.string(r.t.OVHBtb),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t.cd5smJ),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.cd5smJ),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: r.intl.string(r.t['OcnR8/']),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t['OcnR8/']),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t['5aYFRk']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['5aYFRk']),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '01'
@@ -114,79 +114,79 @@ function o() {
         STUDY: {
             id: 'STUDY',
             code: 'FbwUwRp4j8Es',
-            label: r.intl.string(r.t.fYwSi4),
+            label: r.NW.string(r.t.fYwSi4),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t['VCAA/f']),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t['VCAA/f']),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.GHQoER),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.GHQoER),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t['3eM+Li']),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t['3eM+Li']),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t.YjGYMD),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.YjGYMD),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: r.intl.string(r.t.MBCSqa),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.MBCSqa),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '14',
                     parent_id: '10',
-                    name: r.intl.string(r.t.AIszv7),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.AIszv7),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.formatToPlainString(r.t.LuNsNT, { number: 1 }),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.formatToPlainString(r.t.LuNsNT, { number: 1 }),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '23',
                     parent_id: '20',
-                    name: r.intl.formatToPlainString(r.t.LuNsNT, { number: 2 }),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.formatToPlainString(r.t.LuNsNT, { number: 2 }),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '11'
@@ -194,61 +194,61 @@ function o() {
         CLUBS: {
             id: 'CLUBS',
             code: 's4WNnBxTDPsY',
-            label: r.intl.string(r.t.ZRpilp),
+            label: r.NW.string(r.t.ZRpilp),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t['VCAA/f']),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t['VCAA/f']),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.GHQoER),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.GHQoER),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t.nSsoSE),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.nSsoSE),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t.z3KWvr),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.z3KWvr),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.string(r.t['3xFaKi']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['3xFaKi']),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '11'
@@ -256,73 +256,73 @@ function o() {
         CREATORS: {
             id: 'CREATORS',
             code: '6exdzMgjZgah',
-            label: r.intl.string(r.t['+HJio6']),
+            label: r.NW.string(r.t['+HJio6']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t['VCAA/f']),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t['VCAA/f']),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.GHQoER),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.GHQoER),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t.nSsoSE),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.nSsoSE),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t.FvD6y8),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.FvD6y8),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: r.intl.string(r.t.DmviYW),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.DmviYW),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.string(r.t['g/Jx6e']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['g/Jx6e']),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '23',
                     parent_id: '20',
-                    name: r.intl.string(r.t['5aYFRk']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['5aYFRk']),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '11'
@@ -330,73 +330,73 @@ function o() {
         LOCAL_COMMUNITY: {
             id: 'LOCAL_COMMUNITY',
             code: '64UDvRNCC52Y',
-            label: r.intl.string(r.t['8EUbzs']),
+            label: r.NW.string(r.t['8EUbzs']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t['VCAA/f']),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t['VCAA/f']),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.GHQoER),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.GHQoER),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t.nSsoSE),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.nSsoSE),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: r.intl.string(r.t.yZCzMT),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.yZCzMT),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t.z3KWvr),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.z3KWvr),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: r.intl.string(r.t.AIszv7),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.AIszv7),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.string(r.t['3xFaKi']),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t['3xFaKi']),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             system_channel_id: '11'
@@ -404,93 +404,93 @@ function o() {
         SCHOOL_CLUB: {
             id: 'SCHOOL_CLUB',
             code: 'Ctg7PUHcQmZu',
-            label: r.intl.string(r.t['mmFA5+']),
+            label: r.NW.string(r.t['mmFA5+']),
             channels: [
                 {
                     id: '00',
                     parent_id: null,
-                    name: r.intl.string(r.t['VCAA/f']),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t['VCAA/f']),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '01',
                     parent_id: '00',
-                    name: r.intl.string(r.t.GHQoER),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.GHQoER),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '02',
                     parent_id: '00',
-                    name: r.intl.string(r.t.nSsoSE),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.nSsoSE),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '03',
                     parent_id: '00',
-                    name: r.intl.string(r.t.yZCzMT),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.yZCzMT),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '10',
                     parent_id: null,
-                    name: r.intl.string(r.t.mobYpK),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.mobYpK),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '11',
                     parent_id: '10',
-                    name: r.intl.string(r.t.ao2wxs),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.ao2wxs),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '12',
                     parent_id: '10',
-                    name: r.intl.string(r.t.z3KWvr),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.z3KWvr),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '13',
                     parent_id: '10',
-                    name: r.intl.string(r.t.AIszv7),
-                    type: a.d4z.GUILD_TEXT
+                    name: r.NW.string(r.t.AIszv7),
+                    type: l.d4z.GUILD_TEXT
                 },
                 {
                     id: '20',
                     parent_id: null,
-                    name: r.intl.string(r.t.vcKDMj),
-                    type: a.d4z.GUILD_CATEGORY
+                    name: r.NW.string(r.t.vcKDMj),
+                    type: l.d4z.GUILD_CATEGORY
                 },
                 {
                     id: '21',
                     parent_id: '20',
-                    name: r.intl.string(r.t.XS6gcH),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.XS6gcH),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.string(r.t.hi1Ykp),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.hi1Ykp),
+                    type: l.d4z.GUILD_VOICE
                 },
                 {
                     id: '22',
                     parent_id: '20',
-                    name: r.intl.string(r.t.vw8oaW),
-                    type: a.d4z.GUILD_VOICE
+                    name: r.NW.string(r.t.vw8oaW),
+                    type: l.d4z.GUILD_VOICE
                 }
             ],
             roles: [
                 {
                     id: '00',
                     name: '@everyone',
-                    permissions: s.TP
+                    permissions: a.TP
                 },
                 {
                     id: '01',
                     name: 'officers (example)',
                     mentionable: !0,
                     hoist: !0,
-                    permissions: l.$e(s.TP, a.Plq.MANAGE_ROLES, a.Plq.MANAGE_CHANNELS, a.Plq.KICK_MEMBERS, a.Plq.BAN_MEMBERS, a.Plq.MANAGE_NICKNAMES, a.Plq.MANAGE_GUILD_EXPRESSIONS, a.Plq.MANAGE_MESSAGES, a.Plq.SEND_TTS_MESSAGES),
+                    permissions: s.$e(a.TP, l.Plq.MANAGE_ROLES, l.Plq.MANAGE_CHANNELS, l.Plq.KICK_MEMBERS, l.Plq.BAN_MEMBERS, l.Plq.MANAGE_NICKNAMES, l.Plq.MANAGE_GUILD_EXPRESSIONS, l.Plq.MANAGE_MESSAGES, l.Plq.SEND_TTS_MESSAGES),
                     color: 3066993
                 }
             ],

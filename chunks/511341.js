@@ -1,54 +1,54 @@
-n.d(t, { Z: () => T });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(780384),
-    o = n(907040),
+n.d(t, { Z: () => O });
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(780384),
+    s = n(907040),
     l = n(210887),
-    u = n(823379),
-    c = n(51144),
+    c = n(823379),
+    u = n(51144),
     d = n(698305),
     f = n(510659),
-    _ = n(810097),
-    p = n(652853),
+    p = n(810097),
+    _ = n(652853),
     h = n(228168),
     m = n(185923),
     g = n(420212),
     E = n(231338),
     v = n(388032),
-    y = n(569766);
-let I = (e) => {
-    let { emoji: t, username: n, sourceType: i, sourceDetails: r } = e,
-        a = ':'.concat(t.name, ':');
-    switch (i) {
+    b = n(666868);
+let y = (e) => {
+    let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
+        o = ':'.concat(t.name, ':');
+    switch (r) {
         case h.n_.ACTIVITY:
-            let s = v.intl.formatToPlainString(v.t.EUFEJi, { username: n }),
-                o = '\n> '.concat(r);
-            return null != r ? ''.concat(_.jd).concat(s, '*').concat(o, '\n').concat(a) : ''.concat(_.jd).concat(s, '*\n').concat(a);
+            let a = v.NW.formatToPlainString(v.t.EUFEJi, { username: n }),
+                s = '\n> '.concat(i);
+            return null != i ? ''.concat(p.jd).concat(a, '*').concat(s, '\n').concat(o) : ''.concat(p.jd).concat(a, '*\n').concat(o);
         case h.n_.AVATAR:
-            let l = v.intl.formatToPlainString(v.t.E6H15u, { username: n });
-            return ''.concat(_.jd).concat(l, '*\n').concat(a);
+            let l = v.NW.formatToPlainString(v.t.E6H15u, { username: n });
+            return ''.concat(p.jd).concat(l, '*\n').concat(o);
         case h.n_.STATUS:
-            let c = v.intl.formatToPlainString(v.t.XPQgLy, { username: n }),
-                d = '\n> '.concat(r);
-            return null != r ? ''.concat(_.jd).concat(c, '*').concat(d, '\n').concat(a) : ''.concat(_.jd).concat(c, '*\n').concat(a);
+            let u = v.NW.formatToPlainString(v.t.XPQgLy, { username: n }),
+                d = '\n> '.concat(i);
+            return null != i ? ''.concat(p.jd).concat(u, '*').concat(d, '\n').concat(o) : ''.concat(p.jd).concat(u, '*\n').concat(o);
         default:
-            (0, u.vE)(i);
+            (0, c.vE)(r);
     }
 };
-function T(e) {
-    let { user: t, guildId: n, entry: u, sourceType: _, sourceDetails: v, setPopoutRef: T, onAction: b, onClose: S } = e,
-        { resetInteraction: A, setInteractionToast: N } = (0, f.Xo)(),
-        { theme: C } = (0, p.z)(),
-        R = (0, a.e7)([l.Z], () => l.Z.theme),
-        O = (0, s.wj)(R) ? !(0, s.wj)(C) : (0, s.wj)(C),
-        D = r.useRef(null);
-    r.useEffect(() => {
-        null == T || T(null == D ? void 0 : D.current);
-    }, [D, T]),
-        r.useEffect(() => {
+function O(e) {
+    let { user: t, guildId: n, entry: c, sourceType: p, sourceDetails: v, setPopoutRef: O, onAction: S, onClose: I } = e,
+        { resetInteraction: T, setInteractionToast: N } = (0, f.Xo)(),
+        { theme: A } = (0, _.z)(),
+        C = (0, o.e7)([l.Z], () => l.Z.theme),
+        R = (0, a.wj)(C) ? !(0, a.wj)(A) : (0, a.wj)(A),
+        P = i.useRef(null);
+    i.useEffect(() => {
+        null == O || O(null == P ? void 0 : P.current);
+    }, [P, O]),
+        i.useEffect(() => {
             let e = (e) => {
-                e.key === g.vn.ESCAPE && (e.stopPropagation(), A());
+                e.key === g.vn.ESCAPE && (e.stopPropagation(), T());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -56,14 +56,14 @@ function T(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [S, A]);
-    let L = async (e) => {
+        }, [I, T]);
+    let w = async (e) => {
         if (null == e) return;
-        _ === h.n_.AVATAR ? b({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? b({ action: 'SEND_REACT_CUSTOM_STATUS' }) : b({ action: 'SEND_REACT_ACTIVITY' });
-        let n = I({
+        p === h.n_.AVATAR ? S({ action: 'SEND_REACT_AVATAR' }) : p === h.n_.STATUS ? S({ action: 'SEND_REACT_CUSTOM_STATUS' }) : S({ action: 'SEND_REACT_ACTIVITY' });
+        let n = y({
             emoji: e,
-            username: c.ZP.getName(t),
-            sourceType: _,
+            username: u.ZP.getName(t),
+            sourceType: p,
             sourceDetails: v
         });
         N(null);
@@ -74,17 +74,17 @@ function T(e) {
                 location: 'UserProfileReactPopout',
                 openChannel: !1,
                 whenReady: !1,
-                entry: u
+                entry: c
             });
         } catch (e) {}
         N(h.P.REACT);
     };
-    return (0, i.jsx)(o.Z, {
-        headerClassName: O ? y.noBoxShadowMargin : void 0,
+    return (0, r.jsx)(s.Z, {
+        headerClassName: R ? b.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
         closePopout: E.dG,
         onSelectEmoji: async (e, t) => {
-            await L(e), t && (A(), null == S || S());
+            await w(e), t && (T(), null == I || I());
         },
         pickerIntention: m.Hz.PROFILE
     });

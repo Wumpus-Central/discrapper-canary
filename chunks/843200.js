@@ -41,8 +41,8 @@ function f(e) {
     let { unclaimedNotice: t, unverifiedNotice: i, className: a } = e,
         {
             isClaimed: f,
-            isVerified: N,
-            hasEmail: x
+            isVerified: b,
+            hasEmail: N
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
@@ -54,13 +54,13 @@ function f(e) {
                 }
             );
         });
-    function b() {
+    function x() {
         (0, c.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('9343'), n.e('8850')]).then(n.bind(n, 642298));
             return (t) => (0, r.jsx)(e, h({}, t));
         });
     }
-    return f && N
+    return f && b
         ? null
         : (0, r.jsx)(c.Zbd, {
               className: s()(p.wrapper, a),
@@ -83,7 +83,7 @@ function f(e) {
                                   className: p.content,
                                   children: [
                                       f
-                                          ? x
+                                          ? N
                                               ? (0, r.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
@@ -92,7 +92,7 @@ function f(e) {
                                               : (0, r.jsx)(c.zxk, {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
-                                                    onClick: b,
+                                                    onClick: x,
                                                     children: g.NW.string(g.t.ydw5nZ)
                                                 })
                                           : (0, r.jsx)(d.Z.Child, {
@@ -110,14 +110,14 @@ function f(e) {
                                                     children: g.NW.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      f && x
+                                      f && N
                                           ? (0, r.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
                                                 children: (0, r.jsx)(c.zxk, {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
-                                                    onClick: b,
+                                                    onClick: x,
                                                     children: g.NW.string(g.t.Vm8akJ)
                                                 })
                                             })

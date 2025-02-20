@@ -1,5 +1,5 @@
-n.d(t, { j: () => r });
-var i = {};
-function r() {
-    return i;
+n.d(t, { j: () => i });
+var r = {};
+function i() {
+    return r;
 }

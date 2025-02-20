@@ -1,6 +1,6 @@
-n.d(t, { F: () => r });
-var i = n(607070);
-function r(e) {
+n.d(t, { F: () => i });
+var r = n(607070);
+function i(e) {
     var t;
-    i.Z.keyboardModeEnabled && (null === (t = e.current) || void 0 === t || t.scrollIntoView({ block: 'nearest' }));
+    r.Z.keyboardModeEnabled && (null === (t = e.current) || void 0 === t || t.scrollIntoView({ block: 'nearest' }));
 }

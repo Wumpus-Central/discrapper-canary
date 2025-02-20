@@ -1,9 +1,9 @@
 function t(e) {
     let t = e.regex,
         n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
-        i = t.concat(n, t.concat('(\\.', n, ')*')),
-        r = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        a = {
+        r = t.concat(n, t.concat('(\\.', n, ')*')),
+        i = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
+        o = {
             className: 'rest_arg',
             begin: /[.]{3}/,
             end: n,
@@ -23,7 +23,7 @@ function t(e) {
             e.C_BLOCK_COMMENT_MODE,
             e.C_NUMBER_MODE,
             {
-                match: [/\bpackage/, /\s+/, i],
+                match: [/\bpackage/, /\s+/, r],
                 className: {
                     1: 'keyword',
                     3: 'title.class'
@@ -53,9 +53,9 @@ function t(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, a]
+                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, o]
                     },
-                    { begin: t.concat(/:\s*/, r) }
+                    { begin: t.concat(/:\s*/, i) }
                 ]
             },
             e.METHOD_GUARD

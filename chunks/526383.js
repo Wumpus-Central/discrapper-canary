@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a }), n(47120);
-var i = n(442837),
-    l = n(430824),
-    r = n(981631);
-function a() {
-    return (0, i.Wu)([l.Z], () =>
-        Object.entries(l.Z.getGuilds())
+n.d(t, { Z: () => o }), n(47120);
+var r = n(442837),
+    i = n(430824),
+    l = n(981631);
+function o() {
+    return (0, r.Wu)([i.Z], () =>
+        Object.entries(i.Z.getGuilds())
             .filter((e) => {
                 let [t, n] = e;
-                return n.hasFeature(r.oNc.HUB);
+                return n.hasFeature(l.oNc.HUB);
             })
             .map((e) => {
                 let [t, n] = e;

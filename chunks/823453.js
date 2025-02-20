@@ -1,76 +1,76 @@
-n.d(t, { Z: () => O }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(765053),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(765053),
     l = n(512969),
-    u = n(873546),
-    c = n(442837),
+    c = n(873546),
+    u = n(442837),
     d = n(316792),
     f = n(481060),
-    _ = n(168551),
-    p = n(540059),
+    p = n(168551),
+    _ = n(540059),
     h = n(19759),
     m = n(823961),
     g = n(706454),
     E = n(451478),
     v = n(597952),
-    y = n(252618),
-    I = n(80006),
-    T = n(587061),
-    b = n(392358),
-    S = n(981631);
-n(507104);
-let A = new Set([S.Z5c.LOGIN, S.Z5c.REGISTER]);
+    b = n(252618),
+    y = n(80006),
+    O = n(587061),
+    S = n(392358),
+    I = n(981631);
+n(589330);
+let T = new Set([I.Z5c.LOGIN, I.Z5c.REGISTER]);
 function N(e) {
-    let t = (0, c.e7)([g.default], () => g.default.locale),
-        n = (0, c.e7)([E.Z], () => E.Z.isFocused(), []),
-        { theme: a, density: o } = (0, f.TCT)(),
-        { reducedMotion: d } = r.useContext(f.Sfi),
-        { accessibilitySettings: _, appWrapperClassName: y } = (0, I.I)(),
-        { fontScale: S, fontScaleClass: N, saturation: C, desaturateUserColors: R, useForcedColors: O, systemForcedColors: D } = _,
-        L = (0, c.e7)([m.Z], () => m.Z.confettiMode),
-        x = (0, l.TH)(),
-        P = r.useMemo(() => A.has(x.pathname), [x.pathname]);
-    (0, T.Z)(window, P);
-    let w = (0, b.Z)(window, __OVERLAY__ || n),
-        M = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
+    let t = (0, u.e7)([g.default], () => g.default.locale),
+        n = (0, u.e7)([E.Z], () => E.Z.isFocused(), []),
+        { theme: o, density: s } = (0, f.TCT)(),
+        { reducedMotion: d } = i.useContext(f.Sfi),
+        { accessibilitySettings: p, appWrapperClassName: b } = (0, y.I)(),
+        { fontScale: I, fontScaleClass: N, saturation: A, desaturateUserColors: C, useForcedColors: R, systemForcedColors: P } = p,
+        w = (0, u.e7)([m.Z], () => m.Z.confettiMode),
+        D = (0, l.TH)(),
+        x = i.useMemo(() => T.has(D.pathname), [D.pathname]);
+    (0, O.Z)(window, x);
+    let L = (0, S.Z)(window, __OVERLAY__ || n),
+        M = (0, u.e7)([h.Z], () => h.Z.sidebarWidth),
         k = (0, f.bWb)().enabled,
-        U = (0, p.Q3)('AppHelmet'),
-        G = (0, p.R6)('AppHelmet');
-    return (0, i.jsx)('html', {
+        j = (0, _.Q3)('AppHelmet'),
+        U = (0, _.R6)('AppHelmet');
+    return (0, r.jsx)('html', {
         lang: t,
-        style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(C, '; --devtools-sidebar-width: ').concat(M, 'px;'),
-        className: s()(
+        style: 'font-size: '.concat(I, '%; --saturation-factor: ').concat(A, '; --devtools-sidebar-width: ').concat(M, 'px;'),
+        className: a()(
             e,
-            y,
+            b,
             {
                 overlay: __OVERLAY__,
-                'mouse-mode': w,
+                'mouse-mode': L,
                 'reduce-motion': d.enabled,
                 'full-motion': !d.enabled,
-                'is-mobile': u.tq,
+                'is-mobile': c.tq,
                 'app-focused': n,
-                'desaturate-user-colors': R,
-                'disable-forced-colors': !O && 'active' === D,
-                'enable-forced-colors': O,
+                'desaturate-user-colors': C,
+                'disable-forced-colors': !R && 'active' === P,
+                'enable-forced-colors': R,
                 'show-redesigned-icons': k,
-                'visual-refresh': U,
-                'visual-refresh-chat-input': G,
-                'confetti-mode': L
+                'visual-refresh': j,
+                'visual-refresh-chat-input': U,
+                'confetti-mode': w
             },
-            (0, f.QeD)(a),
-            'density-'.concat(o),
+            (0, f.QeD)(o),
+            'density-'.concat(s),
             (0, v.Z)(),
             N
         )
     });
 }
-function C() {
-    let [e, t] = r.useState([]);
+function A() {
+    let [e, t] = i.useState([]);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             Promise.all(
                 d.L.map((e) =>
                     n(959598)('./'.concat(e, '.woff2')).then((e) => {
@@ -80,9 +80,9 @@ function C() {
                 )
             ).then((e) => t(e));
         }, []),
-        (0, i.jsx)(i.Fragment, {
+        (0, r.jsx)(r.Fragment, {
             children: e.map((e, t) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     'link',
                     {
                         rel: 'preload',
@@ -97,13 +97,13 @@ function C() {
         })
     );
 }
-function R(e) {
+function C(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
-    (0, y.ZD)({ skipsSettingDefaultPageTitle: n });
-    let { clientThemesClassName: a, clientThemesCSS: s } = (0, _.ZP)(),
-        l = r.createElement('style', { [_.PQ]: !0 }, s);
-    return (0, i.jsxs)(o.ql, {
-        children: [N(a), C(), l, t]
+    (0, b.ZD)({ skipsSettingDefaultPageTitle: n });
+    let { clientThemesClassName: o, clientThemesCSS: a } = (0, p.ZP)(),
+        l = i.createElement('style', { [p.PQ]: !0 }, a);
+    return (0, r.jsxs)(s.ql, {
+        children: [N(o), A(), l, t]
     });
 }
-let O = r.memo(R);
+let R = i.memo(C);

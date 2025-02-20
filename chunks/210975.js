@@ -1,47 +1,47 @@
-n.d(t, {
-    m$: () => m,
+r.d(t, {
+    m$: () => f,
     wV: () => c,
     zU: () => d
 });
-var l = n(442837),
-    i = n(569545),
-    r = n(314897),
-    a = n(19780),
-    s = n(98369),
-    o = n(277642),
-    u = n(441894);
+var n = r(442837),
+    l = r(569545),
+    i = r(314897),
+    u = r(19780),
+    s = r(98369),
+    a = r(277642),
+    o = r(441894);
 function c(e) {
-    let { userId: t, channelId: n, location: i } = e,
-        o = (0, u.J)({
-            channelId: n,
-            location: i
+    let { userId: t, channelId: r, location: l } = e,
+        a = (0, o.J)({
+            channelId: r,
+            location: l
         });
-    return (0, l.e7)([s.Z, r.default, a.Z], () => null != t && o && a.Z.isUserConnected(t) && r.default.getId() !== t && s.Z.isUserVerified(t), [o, t]);
+    return (0, n.e7)([s.Z, i.default, u.Z], () => null != t && a && u.Z.isUserConnected(t) && i.default.getId() !== t && s.Z.isUserVerified(t), [a, t]);
 }
 function d(e) {
-    let { streamKey: t, channelId: n, location: a } = e,
-        c = (0, u.J)({
-            channelId: n,
-            location: a
+    let { streamKey: t, channelId: r, location: u } = e,
+        c = (0, o.J)({
+            channelId: r,
+            location: u
         }),
-        d = (0, o.t)(t);
-    return (0, l.e7)(
-        [s.Z, r.default],
+        d = (0, a.t)(t);
+    return (0, n.e7)(
+        [s.Z, i.default],
         () => {
             if (!c || d || null == t) return !1;
-            let e = r.default.getId(),
-                { ownerId: n } = (0, i.my)(t);
-            return n !== e && s.Z.isStreamVerified(t);
+            let e = i.default.getId(),
+                { ownerId: r } = (0, l.my)(t);
+            return r !== e && s.Z.isStreamVerified(t);
         },
         [d, c, t]
     );
 }
-function m(e) {
-    let { channelId: t, location: n } = e,
-        i = (0, u.J)({
+function f(e) {
+    let { channelId: t, location: r } = e,
+        l = (0, o.J)({
             channelId: t,
-            location: n
+            location: r
         }),
-        r = (0, o.r)();
-    return (0, l.e7)([s.Z], () => !!i && !r && s.Z.isCallVerified(), [r, i]);
+        i = (0, a.r)();
+    return (0, n.e7)([s.Z], () => !!l && !i && s.Z.isCallVerified(), [i, l]);
 }

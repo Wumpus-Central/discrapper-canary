@@ -1,44 +1,44 @@
-n.d(t, { O: () => c }), n(47120);
-var i = n(192379),
-    r = n(237617),
-    a = n(266338);
-let s = {};
-function o(e, t) {
+n.d(t, { O: () => u }), n(47120);
+var r = n(192379),
+    i = n(237617),
+    o = n(266338);
+let a = {};
+function s(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        o = (0, i.useRef)(null),
-        l = (0, r.Z)(null != t ? t : s),
-        u = (0, i.useRef)(null);
+        s = (0, r.useRef)(null),
+        l = (0, i.Z)(null != t ? t : a),
+        c = (0, r.useRef)(null);
     return (
-        (0, i.useLayoutEffect)(() => {
+        (0, r.useLayoutEffect)(() => {
             if (!n) return;
-            null == u.current && (u.current = (0, a.c)(l.current));
-            let t = o.current,
-                i = u.current;
-            null != t && null != i && (0, a.YP)(i, t, e);
+            null == c.current && (c.current = (0, o.c)(l.current));
+            let t = s.current,
+                r = c.current;
+            null != t && null != r && (0, o.YP)(r, t, e);
         }, [n, e, l]),
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (!n) return;
-            let e = o.current,
-                t = u.current;
+            let e = s.current,
+                t = c.current;
             if (null != e && null != t)
                 return () => {
-                    (0, a.UC)(t, e);
+                    (0, o.UC)(t, e);
                 };
         }, [n, t]),
-        o
+        s
     );
 }
 let l = new Map([[1, { threshold: 1 }]]);
-function u(e) {
+function c(e) {
     let t = l.get(e);
     return null != t || ((t = { threshold: e }), l.set(e, t)), t;
 }
-function c(e) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        a = (0, r.Z)((t) => {
+        o = (0, i.Z)((t) => {
             e(t.isIntersecting);
         }),
-        s = (0, i.useMemo)(() => u(t), [t]);
-    return o(a.current, s, n);
+        a = (0, r.useMemo)(() => c(t), [t]);
+    return s(o.current, a, n);
 }

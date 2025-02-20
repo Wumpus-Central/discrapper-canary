@@ -1,20 +1,20 @@
 n.d(t, { Z: () => o });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(993413),
-    l = n(981631),
-    a = n(388032);
+var i = n(481060),
+    s = n(993413),
+    a = n(981631),
+    l = n(388032);
 function o(e) {
     var t, n;
-    return (0, i.jsx)(r.Z, {
+    return (0, r.jsx)(s.Z, {
         errors: e.errors,
         disabled: e.disabled,
-        title: a.intl.string(a.t['9AjdkJ']),
-        children: (0, i.jsx)('div', {
-            children: (0, i.jsx)(s.oil, {
+        title: l.NW.string(l.t['9AjdkJ']),
+        children: (0, r.jsx)('div', {
+            children: (0, r.jsx)(i.oil, {
                 placeholder: e.placeholder,
-                maxLength: l.JuI,
+                maxLength: a.JuI,
                 onChange: e.onGlobalNameChange,
                 value: null !== (n = null !== (t = e.pendingGlobalName) && void 0 !== t ? t : e.currentGlobalName) && void 0 !== n ? n : ''
             })

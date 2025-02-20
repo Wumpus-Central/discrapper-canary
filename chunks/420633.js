@@ -1,22 +1,22 @@
-var i = (function () {
+var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, t) {
+function a(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -28,14 +28,14 @@ function s(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var o = n(22672),
+var s = n(22672),
     l = n(431732),
-    u = n(526811),
-    c = n(912037);
+    c = n(526811),
+    u = n(912037);
 n(328794);
 var d = n(16686),
     f = n.g.Set || n(344460);
-function _(e) {
+function p(e) {
     var t = new f();
     function n(e) {
         'function' == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
@@ -45,15 +45,15 @@ function _(e) {
             return e.update();
         });
 }
-var p = (function (e) {
+var _ = (function (e) {
     function t(e) {
-        r(this, t);
-        var n = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        i(this, t);
+        var n = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (n._value = e), (n._offset = 0), (n._animation = null), (n._listeners = {}), n;
     }
     return (
-        s(t, e),
-        i(t, [
+        a(t, e),
+        r(t, [
             {
                 key: '__detach',
                 value: function () {
@@ -112,16 +112,16 @@ var p = (function (e) {
             {
                 key: 'interpolate',
                 value: function (e) {
-                    return new u(this, c.create(e));
+                    return new c(this, u.create(e));
                 }
             },
             {
                 key: 'animate',
                 value: function (e, t) {
                     var n = this,
-                        i = null;
-                    e.__isInteraction && (i = l.current.createInteractionHandle());
-                    var r = this._animation;
+                        r = null;
+                    e.__isInteraction && (r = l.current.createInteractionHandle());
+                    var i = this._animation;
                     this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
@@ -130,9 +130,9 @@ var p = (function (e) {
                                 n._updateValue(e);
                             },
                             function (e) {
-                                (n._animation = null), null !== i && l.current.clearInteractionHandle(i), t && t(e);
+                                (n._animation = null), null !== r && l.current.clearInteractionHandle(r), t && t(e);
                             },
-                            r
+                            i
                         );
                 }
             },
@@ -151,11 +151,11 @@ var p = (function (e) {
             {
                 key: '_updateValue',
                 value: function (e) {
-                    for (var t in ((this._value = e), _(this), this._listeners)) this._listeners[t]({ value: this.__getValue() });
+                    for (var t in ((this._value = e), p(this), this._listeners)) this._listeners[t]({ value: this.__getValue() });
                 }
             }
         ]),
         t
     );
-})(o);
-e.exports = p;
+})(s);
+e.exports = _;

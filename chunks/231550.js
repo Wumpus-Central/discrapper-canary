@@ -1,8 +1,8 @@
 a.d(e, { Y: () => A });
 var r = a(395848),
     n = a(140955),
-    _ = a(596308),
-    o = a(622574),
+    o = a(596308),
+    _ = a(622574),
     i = a(433691),
     c = a(412828),
     s = a(662355);
@@ -37,7 +37,7 @@ let E = [200, 500],
         (0, s.A)(() => {
             let a;
             (0, c.Y)();
-            let s = (0, _.I)('INP'),
+            let s = (0, o.I)('INP'),
                 I = (t) => {
                     t.forEach((t) => {
                         t.interactionId && R(t), 'first-input' !== t.entryType || u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t);
@@ -45,7 +45,7 @@ let E = [200, 500],
                     let e = d();
                     e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
-                A = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
+                A = (0, _.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
             (a = (0, n._)(t, s, E, e.reportAllChanges)),
                 A &&
                     ('PerformanceEventTiming' in r.m &&

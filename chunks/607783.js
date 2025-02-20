@@ -1,41 +1,41 @@
-e.d(n, { B: () => Z });
-var i = e(200651),
-    l = e(192379),
-    a = e(442837),
-    o = e(481060),
-    d = e(40851),
-    r = e(352954),
-    s = e(630759),
-    u = e(441894),
-    c = e(314897),
-    g = e(388032);
-function Z(t) {
-    let { userId: n, channelId: e, guildId: Z, location: f, simplified: v = !1 } = t,
-        b = (0, u.J)({
-            channelId: e,
-            location: f
+n.d(t, { B: () => g });
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    o = n(481060),
+    a = n(40851),
+    u = n(352954),
+    s = n(630759),
+    c = n(441894),
+    d = n(314897),
+    f = n(388032);
+function g(e) {
+    let { userId: t, channelId: n, guildId: g, location: b, simplified: Z = !1 } = e,
+        v = (0, c.J)({
+            channelId: n,
+            location: b
         }),
-        h = (0, a.e7)([c.default], () => c.default.getId() === n),
-        m = (0, d.bp)(),
-        x = l.useCallback(() => {
-            r.Z.openSecureFramesUserVerificationModal(
+        p = (0, r.e7)([d.default], () => d.default.getId() === t),
+        N = (0, a.bp)(),
+        O = l.useCallback(() => {
+            u.Z.openSecureFramesUserVerificationModal(
+                t,
                 n,
-                e,
                 () =>
                     (0, s.fz)({
-                        userId: n,
-                        channelId: e,
-                        guildId: Z
+                        userId: t,
+                        channelId: n,
+                        guildId: g
                     }),
-                m
+                N
             );
-        }, [m, e, Z, n]);
-    return !b || h
+        }, [N, n, g, t]);
+    return !v || p
         ? null
         : (0, i.jsx)(o.sNh, {
               id: 'secure-frames-user-verification',
-              label: g.intl.string(g.t['8ErYvb']),
-              action: x,
-              icon: v ? o._uN : null
+              label: f.NW.string(f.t['8ErYvb']),
+              action: O,
+              icon: Z ? o._uN : null
           });
 }

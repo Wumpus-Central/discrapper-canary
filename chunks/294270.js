@@ -1,15 +1,15 @@
-n.d(t, { Z: () => O }), n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(846519),
-    s = n(147913),
-    o = n(460181),
+n.d(t, { Z: () => R }), n(47120), n(301563);
+var r = n(392711),
+    i = n.n(r),
+    o = n(846519),
+    a = n(147913),
+    s = n(460181),
     l = n(314897),
-    u = n(70956),
-    c = n(697492),
+    c = n(70956),
+    u = n(697492),
     d = n(37091),
     f = n(721264);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,8 +22,8 @@ function _(e, t, n) {
         e
     );
 }
-let p = 15 * u.Z.Millis.SECOND,
-    h = 15 * u.Z.Millis.SECOND,
+let _ = 15 * c.Z.Millis.SECOND,
+    h = 15 * c.Z.Millis.SECOND,
     m = 550,
     g = ['\uD83C\uDDE9', '\uD83C\uDDF4', '\uD83C\uDDF9', '\uD83C\uDDE6'],
     E = g.length,
@@ -31,59 +31,59 @@ let p = 15 * u.Z.Millis.SECOND,
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return ''.concat(e, ':').concat(t, ':').concat(n);
     },
-    y = new a.V7(),
-    I = [],
-    T = {},
-    b = (0, o.tu)('highfive_whistle', 'highfive_whistle', 0.6),
-    S = (0, o.tu)('highfive_clap', 'highfive_clap', 0.6);
-function A(e) {
-    let { emoji: t, channelId: n, userId: i } = e,
-        a = l.default.getId(),
-        s = d.Z.getEnabled();
+    b = new o.V7(),
+    y = [],
+    O = {},
+    S = (0, s.tu)('highfive_whistle', 'highfive_whistle', 0.6),
+    I = (0, s.tu)('highfive_clap', 'highfive_clap', 0.6);
+function T(e) {
+    let { emoji: t, channelId: n, userId: r } = e,
+        o = l.default.getId(),
+        a = d.Z.getEnabled();
     if (null != t) {
-        if (s && (0, f.Z)(t.name)) return C(t.name, i, n);
-        i === a && ((I = [...I, t.name].slice(-1 * E)), r().isEqual(I, g) ? (b.play(), y.stop(), (I = []), (0, c.ME)(!s)) : y.start(p, () => (I = [])));
+        if (a && (0, f.Z)(t.name)) return A(t.name, r, n);
+        r === o && ((y = [...y, t.name].slice(-1 * E)), i().isEqual(y, g) ? (S.play(), b.stop(), (y = []), (0, u.ME)(!a)) : b.start(_, () => (y = [])));
     }
 }
 function N(e) {
-    let { completingUserId: t, waitingUserId: n, channelId: i } = e,
-        r = v(''.concat(t).concat(n), i, !0);
-    (T[r] = new a.sW(m, () => {
-        delete T[r], (0, c.hu)(t, n, i);
+    let { completingUserId: t, waitingUserId: n, channelId: r } = e,
+        i = v(''.concat(t).concat(n), r, !0);
+    (O[i] = new o.sW(m, () => {
+        delete O[i], (0, u.hu)(t, n, r);
     })),
-        T[r].delay();
+        O[i].delay();
 }
-function C(e, t, n) {
-    var i;
-    let r = v(t, n);
+function A(e, t, n) {
+    var r;
+    let i = v(t, n);
     if (null != d.Z.getWaitingHighFive(n, t)) return;
-    let [s, o] =
+    let [a, s] =
         null !==
-            (i = Object.entries(T).find((e) => {
+            (r = Object.entries(O).find((e) => {
                 let [t] = e;
-                return t !== r;
-            })) && void 0 !== i
-            ? i
+                return t !== i;
+            })) && void 0 !== r
+            ? r
             : [];
-    if (null != s && null != o) o.cancel(), S.play(), delete T[s], (0, c.Ym)(s.split(':')[0], t, n, e);
+    if (null != a && null != s) s.cancel(), I.play(), delete O[a], (0, u.Ym)(a.split(':')[0], t, n, e);
     else {
-        (0, c._g)(e, t, n), b.play();
-        let i = new a.sW(h, () => {
-            delete T[t], (0, c.Gd)(t, n);
+        (0, u._g)(e, t, n), S.play();
+        let r = new o.sW(h, () => {
+            delete O[t], (0, u.Gd)(t, n);
         });
-        (T[t] = i), i.delay();
+        (O[t] = r), r.delay();
     }
 }
-class R extends s.Z {
+class C extends a.Z {
     _terminate() {
-        Object.values(T).forEach((e) => e.cancel()), (T = {});
+        Object.values(O).forEach((e) => e.cancel()), (O = {});
     }
     constructor(...e) {
         super(...e),
-            _(this, 'actions', {
-                VOICE_CHANNEL_EFFECT_SEND: A,
+            p(this, 'actions', {
+                VOICE_CHANNEL_EFFECT_SEND: T,
                 HIGH_FIVE_COMPLETE: N
             });
     }
 }
-let O = new R();
+let R = new C();

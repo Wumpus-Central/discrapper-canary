@@ -72,8 +72,8 @@
         dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
         ordinal: function (e) {
             var n = e % 10,
-                i = e >= 100 ? 100 : null;
-            return e + (t[e] || t[n] || t[i]);
+                r = e >= 100 ? 100 : null;
+            return e + (t[e] || t[n] || t[r]);
         },
         week: {
             dow: 1,

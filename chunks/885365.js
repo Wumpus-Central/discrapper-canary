@@ -1,5 +1,5 @@
-var i = n(573401),
-    r = function () {
-        return i.Date.now();
+var r = n(573401),
+    i = function () {
+        return r.Date.now();
     };
-e.exports = r;
+e.exports = i;

@@ -1,73 +1,73 @@
-n.d(t, { Z: () => h }), n(653041);
-var i = n(200651);
+n.d(t, { Z: () => p }), n(653041);
+var r = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
-    l = n(846027),
-    a = n(921801),
+var i = n(442837),
+    s = n(481060),
+    a = n(846027),
+    l = n(921801),
     o = n(131951),
     c = n(680924),
     d = n(726985),
     u = n(65154),
     m = n(388032),
-    g = n(483938);
-function h(e) {
+    g = n(455812);
+function p(e) {
     let { refreshStyles: t = !1 } = e,
         {
             audioSubsystem: n,
-            legacyAudioSubsystemSupported: h,
-            experimentalAudioSubsystemSupported: x,
-            automaticAudioSubsystemSupported: _
-        } = (0, s.cj)([o.Z], () => ({
+            legacyAudioSubsystemSupported: p,
+            experimentalAudioSubsystemSupported: h,
+            automaticAudioSubsystemSupported: f
+        } = (0, i.cj)([o.Z], () => ({
             audioSubsystem: o.Z.getAudioSubsystem(),
             legacyAudioSubsystemSupported: o.Z.supports(u.AN.LEGACY_AUDIO_SUBSYSTEM),
             experimentalAudioSubsystemSupported: o.Z.supports(u.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
             automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM)
         })),
-        p = (0, i.jsx)(r.q4e, {
+        b = (0, r.jsx)(s.q4e, {
             className: g.marginBottom20,
             value: n,
             options: (function (e, t, n) {
-                let i = [
+                let r = [
                     {
                         value: u.iA.STANDARD,
-                        label: m.intl.string(m.t.dqb2JS)
+                        label: m.NW.string(m.t.dqb2JS)
                     }
                 ];
                 return (
                     e &&
-                        i.push({
+                        r.push({
                             value: u.iA.LEGACY,
-                            label: m.intl.string(m.t['TYfH+/'])
+                            label: m.NW.string(m.t['TYfH+/'])
                         }),
                     t &&
-                        i.push({
+                        r.push({
                             value: u.iA.EXPERIMENTAL,
-                            label: m.intl.string(m.t.liQmtr)
+                            label: m.NW.string(m.t.liQmtr)
                         }),
                     n &&
-                        i.push({
+                        r.push({
                             value: u.iA.AUTOMATIC,
-                            label: m.intl.string(m.t.qNgtOz)
+                            label: m.NW.string(m.t.qNgtOz)
                         }),
-                    i
+                    r
                 );
-            })(h, x, _),
+            })(p, h, f),
             onChange: (e) => {
-                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => l.Z.setAudioSubsystem(e));
+                (0, c.Z)(m.NW.string(m.t.uY7AcX), m.NW.string(m.t.gBqik5), () => a.Z.setAudioSubsystem(e));
             }
         });
-    return (0, i.jsx)(a.F, {
+    return (0, r.jsx)(l.F, {
         setting: d.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: t
-            ? (0, i.jsx)(r.xJW, {
-                  title: m.intl.string(m.t.wVBHr6),
-                  children: p
+            ? (0, r.jsx)(s.xJW, {
+                  title: m.NW.string(m.t.wVBHr6),
+                  children: b
               })
-            : (0, i.jsxs)(r.hjN, {
+            : (0, r.jsxs)(s.hjN, {
                   className: g.marginBottom20,
-                  title: m.intl.string(m.t.wVBHr6),
-                  children: [p, (0, i.jsx)(r.$i$, { className: g.marginBottom20 })]
+                  title: m.NW.string(m.t.wVBHr6),
+                  children: [b, (0, r.jsx)(s.$i$, { className: g.marginBottom20 })]
               })
     });
 }

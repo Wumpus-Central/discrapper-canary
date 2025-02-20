@@ -1,9 +1,9 @@
 n.d(t, { Z: () => N }), n(47120);
-var i = n(570140),
-    r = n(147913),
-    a = n(650774),
-    s = n(709054),
-    o = n(893966);
+var r = n(570140),
+    i = n(147913),
+    o = n(650774),
+    a = n(709054),
+    s = n(893966);
 function l(e, t, n) {
     return (
         t in e
@@ -17,77 +17,77 @@ function l(e, t, n) {
         e
     );
 }
-let u = 75000,
-    c = 10,
+let c = 75000,
+    u = 10,
     d = 5000,
     f = 2,
-    _ = 2000,
-    p = 10000;
+    p = 2000,
+    _ = 10000;
 function h(e) {
     var t;
-    return (null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= u ? c : f;
+    return (null !== (t = o.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= c ? u : f;
 }
 function m(e) {
     var t;
-    return (null !== (t = a.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= u ? d : _;
+    return (null !== (t = o.Z.getMemberCount(e)) && void 0 !== t ? t : 0) >= c ? d : p;
 }
 let g = {},
     E = {},
     v = null;
-function y() {
+function b() {
     null == v &&
         (v = setInterval(() => {
-            s.default.forEachKey(g, (e) => {
-                b(e) && T(e);
+            a.default.forEachKey(g, (e) => {
+                S(e) && O(e);
             });
-        }, p));
+        }, _));
 }
-async function I(e, t) {
-    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), b(e) && (await T(e));
+async function y(e, t) {
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), S(e) && (await O(e));
 }
-function T(e) {
+function O(e) {
     if (null == g[e]) return;
     let t = Array.from(g[e]);
     (g[e] = new Set()),
         (E[e] = Date.now()),
         requestAnimationFrame(async () => {
-            await i.Z.dispatch({
+            await r.Z.dispatch({
                 type: 'MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH',
                 guildId: e,
                 userIds: t
             });
         });
 }
-function b(e) {
+function S(e) {
     let t = g[e];
     if (null == t) return !1;
     let n = t.size >= h(e),
-        i = E[e];
+        r = E[e];
     if (n) return !0;
-    if (null == i) return !1;
-    let r = Date.now() - i;
-    return null != i && r >= m(e);
+    if (null == r) return !1;
+    let i = Date.now() - r;
+    return null != r && i >= m(e);
 }
-function S(e) {
+function I(e) {
     (g[e] = new Set()), (E[e] = null);
 }
-class A extends r.Z {
+class T extends i.Z {
     handleInitialize() {
-        null == v && y();
+        null == v && b();
     }
     handleGuildMemberUpdate(e, t) {
-        if (o.Z.isInitialized(e)) return I(e, t);
+        if (s.Z.isInitialized(e)) return y(e, t);
     }
     handleGuildMemberRemove(e, t) {
-        if (o.Z.isInitialized(e)) return I(e, t);
+        if (s.Z.isInitialized(e)) return y(e, t);
     }
     handleGuildDelete(e) {
         let t = e.guild.id;
-        o.Z.isInitialized(t) && S(t);
+        s.Z.isInitialized(t) && I(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        o.Z.isInitialized(t) && S(t);
+        s.Z.isInitialized(t) && I(t);
     }
     constructor(...e) {
         super(...e),
@@ -100,4 +100,4 @@ class A extends r.Z {
             });
     }
 }
-let N = new A();
+let N = new T();

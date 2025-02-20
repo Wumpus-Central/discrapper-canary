@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r });
-var i = n(670097);
-let r = function (e, t) {
-    return function (n, r) {
+n.d(t, { Z: () => i });
+var r = n(670097);
+let i = function (e, t) {
+    return function (n, i) {
         if (null == n) return n;
-        if (!(0, i.Z)(n)) return e(n, r);
-        for (var a = n.length, s = t ? a : -1, o = Object(n); (t ? s-- : ++s < a) && !1 !== r(o[s], s, o); );
+        if (!(0, r.Z)(n)) return e(n, i);
+        for (var o = n.length, a = t ? o : -1, s = Object(n); (t ? a-- : ++a < o) && !1 !== i(s[a], a, s); );
         return n;
     };
 };

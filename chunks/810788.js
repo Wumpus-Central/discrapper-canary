@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(374023),
-    o = n(188785);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(374023),
+    s = n(188785);
 function l(e, t, n) {
     return (
         t in e
@@ -17,45 +17,45 @@ function l(e, t, n) {
         e
     );
 }
-let u = new Set(),
-    c = {};
+let c = new Set(),
+    u = {};
 function d(e) {
     let { location: t } = e;
-    if (u.has(t)) return !1;
-    u.add(t);
+    if (c.has(t)) return !1;
+    c.add(t);
 }
 function f(e) {
     let { location: t, enabled: n } = e;
-    c[t] = n;
-}
-function _(e) {
-    let { location: t } = e;
-    if (null == c[t]) return !1;
-    delete c[t];
+    u[t] = n;
 }
 function p(e) {
-    let { hiddenHotspots: t } = e;
-    u = new Set(t);
+    let { location: t } = e;
+    if (null == u[t]) return !1;
+    delete u[t];
 }
-class h extends (i = r.ZP.PersistedStore) {
+function _(e) {
+    let { hiddenHotspots: t } = e;
+    c = new Set(t);
+}
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (c = e.hotspotOverrides));
+        null != e && (Array.isArray(e.hiddenHotspots) && (c = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (u = e.hotspotOverrides));
     }
     hasHotspot(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = !t && c[e];
-        return !(o.a || s.s.isDisallowPopupsSet()) && (n || !u.has(e));
+            n = !t && u[e];
+        return !(s.a || a.s.isDisallowPopupsSet()) && (n || !c.has(e));
     }
     hasHiddenHotspot(e) {
-        return u.has(e);
+        return c.has(e);
     }
     getHotspotOverride(e) {
-        return c[e];
+        return u[e];
     }
     getState() {
         return {
-            hiddenHotspots: u,
-            hotspotOverrides: c
+            hiddenHotspots: c,
+            hotspotOverrides: u
         };
     }
 }
@@ -67,9 +67,9 @@ l(h, 'displayName', 'HotspotStore'),
             hotspotOverrides: {}
         })
     ]);
-let m = new h(a.Z, {
-    OVERLAY_INITIALIZE: p,
+let m = new h(o.Z, {
+    OVERLAY_INITIALIZE: _,
     HOTSPOT_HIDE: d,
     HOTSPOT_OVERRIDE_SET: f,
-    HOTSPOT_OVERRIDE_CLEAR: _
+    HOTSPOT_OVERRIDE_CLEAR: p
 });

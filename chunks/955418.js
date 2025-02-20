@@ -1,46 +1,46 @@
-n.d(t, { Z: () => g }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(906732),
-    s = n(541716),
-    o = n(752305),
+n.d(t, { Z: () => g }), n(47120), n(566702);
+var r = n(200651),
+    i = n(192379),
+    o = n(906732),
+    a = n(541716),
+    s = n(752305),
     l = n(893718),
-    u = n(131704),
-    c = n(5192),
+    c = n(131704),
+    u = n(5192),
     d = n(785717),
     f = n(698305),
-    _ = n(981631),
-    p = n(388032),
-    h = n(451865);
-let m = (0, u.kt)({
+    p = n(981631),
+    _ = n(388032),
+    h = n(995773);
+let m = (0, c.kt)({
     id: '1',
-    type: _.d4z.DM
+    type: p.d4z.DM
 });
 function g(e) {
-    let { user: t, guildId: n, channelId: u, onClose: _ } = e,
-        { newestAnalyticsLocation: g } = (0, a.ZP)(),
+    let { user: t, guildId: n, channelId: c, onClose: p } = e,
+        { newestAnalyticsLocation: g } = (0, o.ZP)(),
         { trackUserProfileAction: E } = (0, d.KZ)(),
-        [v, y] = r.useState(''),
-        [I, T] = r.useState((0, o.JM)(v)),
-        b = r.useRef(!1);
-    return (0, i.jsx)(l.Z, {
+        [v, b] = i.useState(''),
+        [y, O] = i.useState((0, s.JM)(v)),
+        S = i.useRef(!1);
+    return (0, r.jsx)(l.Z, {
         className: h.container,
         innerClassName: h.inner,
         editorClassName: h.editor,
-        type: s.Ie.USER_PROFILE,
-        placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
+        type: a.Ie.USER_PROFILE,
+        placeholder: _.NW.formatToPlainString(_.t['0ZQw/f'], { name: u.ZP.getName(n, c, t) }),
         channel: m,
         textValue: v,
-        richValue: I,
+        richValue: y,
         onChange: (e, t, n) => {
-            t !== v && (y(t), T(n));
+            t !== v && (b(t), O(n));
         },
-        focused: b.current,
+        focused: S.current,
         onFocus: () => {
-            b.current = !0;
+            S.current = !0;
         },
         onBlur: () => {
-            b.current = !1;
+            S.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;
@@ -52,13 +52,13 @@ function g(e) {
                         content: n.trim(),
                         location: g
                     }),
-                    null == _ || _(),
+                    null == p || p(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1
                     }
                 );
-            } catch {
+            } catch (e) {
                 return {
                     shouldClear: !1,
                     shouldRefocus: !1

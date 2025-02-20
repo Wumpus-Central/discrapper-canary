@@ -1,3 +1,3 @@
 n(742467);
-var i = n(387992);
-e.exports = i('Function', 'bind');
+var r = n(387992);
+e.exports = r('Function', 'bind');

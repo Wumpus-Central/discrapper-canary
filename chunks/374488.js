@@ -30,10 +30,10 @@ let t = (e) => ({
         }
     }),
     n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
-    i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
-    r = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
-    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
-    s = [
+    r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
+    i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
+    o = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
+    a = [
         'accent-color',
         'align-content',
         'align-items',
@@ -551,14 +551,14 @@ let t = (e) => ({
     ]
         .sort()
         .reverse();
-function o(e) {
-    let o = e.regex,
+function s(e) {
+    let s = e.regex,
         l = t(e),
-        u = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
-        c = 'and or not only',
+        c = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
+        u = 'and or not only',
         d = /@-?\w[\w]*(-\w+)*/,
         f = '[a-zA-Z-][a-zA-Z0-9_-]*',
-        _ = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        p = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: 'CSS',
         case_insensitive: !0,
@@ -567,7 +567,7 @@ function o(e) {
         classNameAliases: { keyframePosition: 'selector-tag' },
         contains: [
             l.BLOCK_COMMENT,
-            u,
+            c,
             l.CSS_NUMBER_MODE,
             {
                 className: 'selector-id',
@@ -582,12 +582,12 @@ function o(e) {
             l.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: 'selector-pseudo',
-                variants: [{ begin: ':(' + r.join('|') + ')' }, { begin: ':(:)?(' + a.join('|') + ')' }]
+                variants: [{ begin: ':(' + i.join('|') + ')' }, { begin: ':(:)?(' + o.join('|') + ')' }]
             },
             l.CSS_VARIABLE,
             {
                 className: 'attribute',
-                begin: '\\b(' + s.join('|') + ')\\b'
+                begin: '\\b(' + a.join('|') + ')\\b'
             },
             {
                 begin: /:/,
@@ -597,14 +597,14 @@ function o(e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ..._,
+                    ...p,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: 'url data-uri' },
                         contains: [
-                            ..._,
+                            ...p,
                             {
                                 className: 'string',
                                 begin: /[^)]/,
@@ -617,7 +617,7 @@ function o(e) {
                 ]
             },
             {
-                begin: o.lookahead(/@/),
+                begin: s.lookahead(/@/),
                 end: '[{;]',
                 relevance: 0,
                 illegal: /:/,
@@ -633,15 +633,15 @@ function o(e) {
                         relevance: 0,
                         keywords: {
                             $pattern: /[a-z-]+/,
-                            keyword: c,
-                            attribute: i.join(' ')
+                            keyword: u,
+                            attribute: r.join(' ')
                         },
                         contains: [
                             {
                                 begin: /[a-z-]+(?=:)/,
                                 className: 'attribute'
                             },
-                            ..._,
+                            ...p,
                             l.CSS_NUMBER_MODE
                         ]
                     }
@@ -654,4 +654,4 @@ function o(e) {
         ]
     };
 }
-e.exports = o;
+e.exports = s;

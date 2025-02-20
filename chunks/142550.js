@@ -1,7 +1,7 @@
 n.d(t, {
-    L: () => r,
-    z: () => l
+    L: () => o,
+    z: () => r
 });
-let l = 200;
-var i,
-    r = (((i = {}).ReactBegin = 'React Begin'), (i.ReplyBegin = 'Reply Begin'), (i.ReactSubmit = 'React Submit'), (i.ReplySubmit = 'Reply Submit'), (i.ReactSend = 'React Send'), (i.ReplySend = 'Reply Send'), i);
+let r = 200;
+var l,
+    o = (((l = {}).ReactBegin = 'React Begin'), (l.ReplyBegin = 'Reply Begin'), (l.ReactSubmit = 'React Submit'), (l.ReplySubmit = 'Reply Submit'), (l.ReactSend = 'React Send'), (l.ReplySend = 'Reply Send'), l);

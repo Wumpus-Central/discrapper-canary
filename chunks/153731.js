@@ -1,12 +1,12 @@
-r.d(t, { Z: () => k }), r(653041), r(47120), r(390547), r(733860);
+r.d(t, { Z: () => B }), r(653041), r(47120), r(13667), r(390547), r(733860);
 var n = r(200651),
     a = r(192379),
     i = r(392711),
-    l = r.n(i),
-    s = r(442837),
+    s = r.n(i),
+    l = r(442837),
     o = r(481060),
-    d = r(304680),
-    c = r(503089),
+    c = r(304680),
+    d = r(503089),
     u = r(493544),
     m = r(600164),
     p = r(210887),
@@ -16,16 +16,16 @@ var n = r(200651),
     f = r(226961),
     v = r(594174),
     D = r(51144),
-    E = r(189648),
-    C = r(775194),
-    Z = r(499848),
-    N = r(724392),
-    R = r(442580),
-    j = r(770800),
-    x = r(981631),
-    b = r(65154),
-    F = r(388032),
-    P = r(316095);
+    N = r(189648),
+    b = r(775194),
+    E = r(499848),
+    j = r(724392),
+    C = r(442580),
+    Z = r(770800),
+    P = r(981631),
+    R = r(65154),
+    x = r(388032),
+    F = r(687366);
 let S = (e, t, r) =>
         (0, n.jsx)(m.Z, {
             align: m.Z.Align.CENTER,
@@ -37,10 +37,10 @@ let S = (e, t, r) =>
                             size: o.EFr.SIZE_24,
                             src: e.getAvatarURL(r, 24),
                             'aria-label': e.username,
-                            className: P.avatar
+                            className: F.avatar
                         }),
                         (0, n.jsx)('span', {
-                            className: P.username,
+                            className: F.username,
                             children: null != t ? t : D.ZP.getName(e)
                         })
                     ]
@@ -54,41 +54,41 @@ let S = (e, t, r) =>
                 children: (0, n.jsx)(m.Z, {
                     align: m.Z.Align.CENTER,
                     children: (0, n.jsx)('span', {
-                        className: P.username,
+                        className: F.username,
                         children: e
                     })
                 })
             })
         });
-function B(e, t, r, n, a) {
+function k(e, t, r, n, a) {
     let i = [];
     if (null == t) return i;
     let {
-        transport: s,
-        rtp: { inbound: o, outbound: c },
+        transport: l,
+        rtp: { inbound: o, outbound: d },
         camera: m
     } = t;
     if (
         (i.push({
             section: u.ID.HEADER,
-            label: F.intl.formatToPlainString(F.t.PK5fOD, { context: e })
+            label: x.NW.formatToPlainString(x.t.PK5fOD, { context: e })
         }),
-        null != s &&
+        null != l &&
             i.push({
-                section: (0, f.J$)(e, x._s_.TRANSPORT, r),
-                label: F.intl.string(F.t.wU9INz),
-                element: j.Z,
+                section: (0, f.J$)(e, P._s_.TRANSPORT, r),
+                label: x.NW.string(x.t.wU9INz),
+                element: Z.Z,
                 elementProps: {
                     context: e,
                     index: r
                 }
             }),
-        null == c ||
-            l().isEmpty(c) ||
+        null == d ||
+            s().isEmpty(d) ||
             i.push({
-                section: (0, f.J$)(e, x._s_.OUTBOUND, r),
-                label: F.intl.string(F.t['3u0gIC']),
-                element: N.Z,
+                section: (0, f.J$)(e, P._s_.OUTBOUND, r),
+                label: x.NW.string(x.t['3u0gIC']),
+                element: j.Z,
                 elementProps: {
                     context: e,
                     index: r
@@ -96,32 +96,32 @@ function B(e, t, r, n, a) {
             }),
         null != m &&
             i.push({
-                section: (0, f.J$)(e, x._s_.CAMERA, r),
-                label: F.intl.string(F.t['2AGBWF']),
-                element: E.Z,
+                section: (0, f.J$)(e, P._s_.CAMERA, r),
+                label: x.NW.string(x.t['2AGBWF']),
+                element: N.Z,
                 elementProps: {
                     context: e,
                     index: r,
                     camera: m
                 }
             }),
-        null != o && !l().isEmpty(o))
+        null != o && !s().isEmpty(o))
     ) {
         let t = [];
         Object.keys(o).forEach((i) => {
-            let l = v.default.getUser(i),
-                s = y.ZP.getNick(a, i),
-                c = (0, f.J$)(e, i, r);
+            let s = v.default.getUser(i),
+                l = y.ZP.getNick(a, i),
+                d = (0, f.J$)(e, i, r);
             null != o[i] &&
                 o[i].length > 0 &&
                 t.push({
-                    section: c,
-                    label: null != l ? S(l, s, a) : I(null != s ? s : i),
-                    ariaLabel: null != l ? l.tag : i,
+                    section: d,
+                    label: null != s ? S(s, l, a) : I(null != l ? l : i),
+                    ariaLabel: null != s ? s.tag : i,
                     onClick: () => {
-                        d.zc(c);
+                        c.zc(d);
                     },
-                    element: Z.Z,
+                    element: E.Z,
                     elementProps: {
                         context: e,
                         index: r,
@@ -132,33 +132,33 @@ function B(e, t, r, n, a) {
             t.length > 0 &&
                 (i.push({
                     section: u.ID.HEADER,
-                    label: F.intl.string(F.t.SJmZam)
+                    label: x.NW.string(x.t.SJmZam)
                 }),
                 i.push(...t));
     }
     return i;
 }
-function k() {
+function B() {
     var e, t;
-    let { defaultStats: r, streamStats: i } = (0, s.e7)(
+    let { defaultStats: r, streamStats: i } = (0, l.e7)(
             [f.ZP],
             () => ({
-                defaultStats: f.ZP.getAllStats(b.Yn.DEFAULT),
-                streamStats: f.ZP.getAllStats(b.Yn.STREAM)
+                defaultStats: f.ZP.getAllStats(R.Yn.DEFAULT),
+                streamStats: f.ZP.getAllStats(R.Yn.STREAM)
             }),
             [],
-            s.pF
+            l.pF
         ),
-        l = (0, s.e7)([g.Z, h.Z], () => h.Z.getChannel(g.Z.getChannelId())),
+        s = (0, l.e7)([g.Z, h.Z], () => h.Z.getChannel(g.Z.getChannelId())),
         m = null === (e = r.concat(i).find((e) => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare,
         y = null === (t = i.find((e) => null != e.clips)) || void 0 === t ? void 0 : t.clips,
-        v = (0, s.e7)([p.Z], () => p.Z.theme),
-        D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? x.BRd.DARK : void 0)),
-        E = (0, s.e7)([f.ZP], () => f.ZP.getSection()),
-        Z = (function (e) {
-            let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: l, channel: s, connectionState: d } = e,
-                c = t.flatMap((e, t) => B(b.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
-                m = r.flatMap((e, t) => B(b.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
+        v = (0, l.e7)([p.Z], () => p.Z.theme),
+        D = (0, l.e7)([p.Z], () => (p.Z.darkSidebar ? P.BRd.DARK : void 0)),
+        N = (0, l.e7)([f.ZP], () => f.ZP.getSection()),
+        E = (function (e) {
+            let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: s, channel: l, connectionState: c } = e,
+                d = t.flatMap((e, t) => k(R.Yn.DEFAULT, e, t, a, null == l ? void 0 : l.getGuildId())),
+                m = r.flatMap((e, t) => k(R.Yn.STREAM, e, t, a, null == l ? void 0 : l.getGuildId())),
                 p = [],
                 h = [],
                 y = { section: u.ID.DIVIDER };
@@ -166,31 +166,31 @@ function k() {
                 null != i &&
                     (p.push(y),
                     p.push({
-                        section: x._s_.SCREENSHARE,
-                        label: F.intl.string(F.t['gWbr/f']),
-                        element: R.Z,
+                        section: P._s_.SCREENSHARE,
+                        label: x.NW.string(x.t['gWbr/f']),
+                        element: C.Z,
                         elementProps: { screenshare: i }
                     })),
-                null != l &&
+                null != s &&
                     (h.push(y),
                     h.push({
-                        section: x._s_.CLIPS,
-                        label: F.intl.string(F.t.MKrFKC),
-                        element: C.Z,
-                        elementProps: { clips: l }
+                        section: P._s_.CLIPS,
+                        label: x.NW.string(x.t.MKrFKC),
+                        element: b.Z,
+                        elementProps: { clips: s }
                     })),
                 m.length > 0 && m.unshift(y),
                 [
-                    ...(null != s
+                    ...(null != l
                         ? [
                               {
                                   section: u.ID.CUSTOM,
                                   label: 'Channel Name',
                                   element: () =>
                                       (0, n.jsx)(o.X6q, {
-                                          className: P.channelName,
+                                          className: F.channelName,
                                           variant: 'heading-lg/semibold',
-                                          children: s.name
+                                          children: l.name
                                       })
                               }
                           ]
@@ -200,12 +200,12 @@ function k() {
                         label: 'Connection State',
                         element: () =>
                             (0, n.jsx)(o.X6q, {
-                                className: P.channelName,
+                                className: F.channelName,
                                 variant: 'heading-md/normal',
-                                children: d === x.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
+                                children: c === P.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
                             })
                     },
-                    ...c,
+                    ...d,
                     ...m,
                     ...p,
                     ...h
@@ -214,25 +214,25 @@ function k() {
         })({
             defaultStats: r,
             streamStats: i,
-            videoStreams: (0, s.e7)([f.ZP], () => f.ZP.getVideoStreams()),
+            videoStreams: (0, l.e7)([f.ZP], () => f.ZP.getVideoStreams()),
             screenshare: m,
             clips: y,
-            channel: l,
-            connectionState: (0, s.e7)([g.Z], () => g.Z.getState())
+            channel: s,
+            connectionState: (0, l.e7)([g.Z], () => g.Z.getState())
         });
     return (
         a.useEffect(
             () => () => {
-                d.xv();
+                c.xv();
             },
             []
         ),
-        (0, n.jsx)(c.ZP, {
+        (0, n.jsx)(d.ZP, {
             theme: v,
             sidebarTheme: D,
-            section: E,
-            onSetSection: d.zc,
-            sections: Z
+            section: N,
+            onSetSection: c.zc,
+            sections: E
         })
     );
 }

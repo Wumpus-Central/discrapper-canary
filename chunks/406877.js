@@ -1,37 +1,37 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(192379),
-    l = n(668781),
-    a = n(881052),
-    r = n(824389),
-    s = n(179838),
-    o = n(388032);
-function c(e, t) {
-    let [n, c] = i.useState(!1);
+n.d(e, { Z: () => s }), n(47120);
+var r = n(192379),
+    a = n(668781),
+    o = n(881052),
+    i = n(824389),
+    l = n(179838),
+    c = n(388032);
+function s(t, e) {
+    let [n, s] = r.useState(!1);
     return {
         isLoading: n,
-        downloadAttachment: i.useCallback(
+        downloadAttachment: r.useCallback(
             async (n) => {
-                if (null != e && null != t) {
-                    c(!0);
+                if (null != t && null != e) {
+                    s(!0);
                     try {
-                        let { url: i } = await r.gs({
-                            guildId: e,
-                            productId: t,
+                        let { url: r } = await i.gs({
+                            guildId: t,
+                            productId: e,
                             attachmentId: n
                         });
-                        await s.L(i);
-                    } catch (t) {
-                        let e = t instanceof a.Hx ? t.getAnyErrorMessage() : void 0;
-                        l.Z.show({
-                            title: o.intl.string(o.t.R0RpRU),
-                            body: null != e ? e : o.intl.string(o.t.eAn6z8)
+                        await l.L(r);
+                    } catch (e) {
+                        let t = e instanceof o.Hx ? e.getAnyErrorMessage() : void 0;
+                        a.Z.show({
+                            title: c.NW.string(c.t.R0RpRU),
+                            body: null != t ? t : c.NW.string(c.t.eAn6z8)
                         });
                     } finally {
-                        c(!1);
+                        s(!1);
                     }
                 }
             },
-            [e, t]
+            [t, e]
         )
     };
 }

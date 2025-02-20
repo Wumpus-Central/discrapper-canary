@@ -1,8 +1,8 @@
 n.d(t, {
-    Dj: () => a,
-    i1: () => r
+    Dj: () => o,
+    i1: () => i
 });
-let i = (0, n(987170).Z)({
+let r = (0, n(987170).Z)({
     kind: 'guild',
     id: '2025-01_guild_settings_foundation',
     label: 'Guild Settings Foundation Revamp',
@@ -15,25 +15,25 @@ let i = (0, n(987170).Z)({
         }
     ]
 });
-function r(e) {
-    let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
-        { enabled: a } = i.getCurrentConfig(
+function i(e) {
+    let { guildId: t, location: n, autoTrackExposure: i = !0 } = e,
+        { enabled: o } = r.getCurrentConfig(
             {
                 guildId: t,
                 location: n
             },
-            { autoTrackExposure: r }
+            { autoTrackExposure: i }
         );
-    return a;
+    return o;
 }
-function a(e) {
-    let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
-        { enabled: a } = i.useExperiment(
+function o(e) {
+    let { guildId: t, location: n, autoTrackExposure: i = !0 } = e,
+        { enabled: o } = r.useExperiment(
             {
                 guildId: t,
                 location: n
             },
-            { autoTrackExposure: r }
+            { autoTrackExposure: i }
         );
-    return a;
+    return o;
 }

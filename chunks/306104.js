@@ -1,21 +1,21 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.hover = void 0);
-var i =
+var r =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    r = a(n(192379));
-function a(e) {
+    i = o(n(192379));
+function o(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function s(e, t) {
+function a(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, t) {
+function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
@@ -31,35 +31,35 @@ function l(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var u = (t.hover = function (e) {
+var c = (t.hover = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (n) {
-        function a() {
-            s(this, a);
-            for (var n, l, u, c = arguments.length, d = Array(c), f = 0; f < c; f++) d[f] = arguments[f];
+        function o() {
+            a(this, o);
+            for (var n, l, c, u = arguments.length, d = Array(u), f = 0; f < u; f++) d[f] = arguments[f];
             return (
-                (l = u = o(this, (n = a.__proto__ || Object.getPrototypeOf(a)).call.apply(n, [this].concat(d)))),
-                (u.state = { hover: !1 }),
-                (u.handleMouseOver = function () {
-                    return u.setState({ hover: !0 });
+                (l = c = s(this, (n = o.__proto__ || Object.getPrototypeOf(o)).call.apply(n, [this].concat(d)))),
+                (c.state = { hover: !1 }),
+                (c.handleMouseOver = function () {
+                    return c.setState({ hover: !0 });
                 }),
-                (u.handleMouseOut = function () {
-                    return u.setState({ hover: !1 });
+                (c.handleMouseOut = function () {
+                    return c.setState({ hover: !1 });
                 }),
-                (u.render = function () {
-                    return r.default.createElement(
+                (c.render = function () {
+                    return i.default.createElement(
                         t,
                         {
-                            onMouseOver: u.handleMouseOver,
-                            onMouseOut: u.handleMouseOut
+                            onMouseOver: c.handleMouseOver,
+                            onMouseOut: c.handleMouseOut
                         },
-                        r.default.createElement(e, i({}, u.props, u.state))
+                        i.default.createElement(e, r({}, c.props, c.state))
                     );
                 }),
-                o(u, l)
+                s(c, l)
             );
         }
-        return l(a, n), a;
-    })(r.default.Component);
+        return l(o, n), o;
+    })(i.default.Component);
 });
-t.default = u;
+t.default = c;

@@ -1,92 +1,92 @@
-n.d(t, { Z: () => L });
-var i = n(200651),
-    l = n(192379),
-    r = n(873546),
-    a = n(442837),
-    s = n(481060),
-    o = n(355467),
-    d = n(270237),
-    c = n(252618),
-    u = n(423000),
-    h = n(200876),
-    m = n(674180),
-    p = n(38618),
-    g = n(984370),
-    _ = n(430824),
-    f = n(351402),
-    E = n(730647),
-    I = n(772021),
-    C = n(396828),
+n.d(t, { Z: () => j });
+var r = n(200651),
+    i = n(192379),
+    l = n(873546),
+    o = n(442837),
+    a = n(481060),
+    s = n(355467),
+    c = n(270237),
+    u = n(252618),
+    d = n(423000),
+    p = n(200876),
+    h = n(674180),
+    g = n(38618),
+    f = n(984370),
+    m = n(430824),
+    b = n(351402),
+    _ = n(730647),
+    E = n(772021),
+    O = n(396828),
     N = n(293423),
     v = n(20967),
-    T = n(504762),
-    S = n(807152),
-    A = n(176505),
-    Z = n(388032),
-    x = n(255653);
-function b(e) {
+    y = n(504762),
+    I = n(807152),
+    C = n(176505),
+    S = n(388032),
+    T = n(985167);
+function P(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([_.Z], () => _.Z.getGuild(t), [t]),
-        b = (0, a.e7)([p.Z], () => p.Z.isConnected()),
-        L = (0, h.Z)(t),
-        y = (0, I.Z)(t),
-        O = (0, a.e7)([f.Z], () => f.Z.isSubscriptionFetching),
-        P = (0, E.f)(),
-        { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !P || O || j;
-    (0, c.Tt)({
-        subsection: Z.intl.string(Z.t['KzCF//']),
+        n = (0, o.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        P = (0, o.e7)([g.Z], () => g.Z.isConnected()),
+        j = (0, p.Z)(t),
+        A = (0, E.Z)(t),
+        Z = (0, o.e7)([b.Z], () => b.Z.isSubscriptionFetching),
+        x = (0, _.f)(),
+        { shouldHideGuildPurchaseEntryPoints: L, restrictionsLoading: w } = (0, h.uP)(t),
+        R = null == n || !x || Z || w;
+    (0, u.Tt)({
+        subsection: S.NW.string(S.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
-        (0, d.Z)(r.tq ? 'role-subscriptions-overview' : void 0);
-    let w = b && (null == n || !(L || y) || (R && !j));
+        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
+    let D = P && (null == n || !(j || A) || (L && !w));
     if (
-        (l.useEffect(() => {
-            o.jg();
+        (i.useEffect(() => {
+            s.jg();
         }, []),
-        l.useEffect(() => {
-            w && !r.tq && (0, u.M)(t, A.oC.ROLE_SUBSCRIPTIONS);
-        }, [t, w]),
-        r.tq && w)
+        i.useEffect(() => {
+            D && !l.tq && (0, d.M)(t, C.oC.ROLE_SUBSCRIPTIONS);
+        }, [t, D]),
+        l.tq && D)
     ) {
         let e = null == n ? v.J.NOT_GUILD_MEMBER : v.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(v.z, { errorType: e });
+        return (0, r.jsx)(v.z, { errorType: e });
     }
-    return (0, i.jsxs)('div', {
-        className: x.container,
+    return (0, r.jsxs)('div', {
+        className: T.container,
         children: [
-            (0, i.jsxs)(g.Z, {
-                toolbar: (0, i.jsx)(l.Fragment, {}),
-                className: x.headerBar,
+            (0, r.jsxs)(f.Z, {
+                toolbar: (0, r.jsx)(i.Fragment, {}),
+                className: T.headerBar,
                 children: [
-                    (0, i.jsx)(g.Z.Icon, {
-                        icon: (0, s.GSL)(C.Z),
+                    (0, r.jsx)(f.Z.Icon, {
+                        icon: (0, a.GSL)(O.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: Z.intl.string(Z.t['KzCF//']) })
+                    (0, r.jsx)(f.Z.Title, { children: S.NW.string(S.t['KzCF//']) })
                 ]
             }),
-            (0, i.jsx)('div', { id: S.v }),
-            (0, i.jsx)('div', {
-                className: x.content,
-                children: L
-                    ? (0, i.jsx)(s.u2D, {
-                          className: x.scroller,
-                          children: (0, i.jsx)('div', {
-                              className: x.scrollerContent,
-                              children: D ? (0, i.jsx)(s.$jN, {}) : (0, i.jsx)(N.Z, { guild: n })
+            (0, r.jsx)('div', { id: I.v }),
+            (0, r.jsx)('div', {
+                className: T.content,
+                children: j
+                    ? (0, r.jsx)(a.u2D, {
+                          className: T.scroller,
+                          children: (0, r.jsx)('div', {
+                              className: T.scrollerContent,
+                              children: R ? (0, r.jsx)(a.$jN, {}) : (0, r.jsx)(N.Z, { guild: n })
                           })
                       })
-                    : (0, i.jsx)(T.Z, {})
+                    : (0, r.jsx)(y.Z, {})
             })
         ]
     });
 }
-function L(e) {
+function j(e) {
     let { guildId: t } = e;
-    return (0, i.jsx)(E.l, {
+    return (0, r.jsx)(_.l, {
         guildId: t,
         refetchOnMount: !0,
-        children: (0, i.jsx)(b, { guildId: t })
+        children: (0, r.jsx)(P, { guildId: t })
     });
 }

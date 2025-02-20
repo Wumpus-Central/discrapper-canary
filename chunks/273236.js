@@ -1,109 +1,109 @@
 s.d(t, { Z: () => x }), s(47120);
-var i = s(200651),
-    n = s(192379),
-    a = s(120356),
-    r = s.n(a),
+var n = s(200651),
+    i = s(192379),
+    r = s(120356),
+    a = s.n(r),
     l = s(995295),
     c = s(481060),
     d = s(388032),
-    o = s(374239),
-    m = s(249999);
-let x = n.forwardRef(function (e, t) {
+    o = s(784279),
+    m = s(157465);
+let x = i.forwardRef(function (e, t) {
     let {} = e,
-        [a, r] = n.useState('before'),
-        [x, j] = n.useState(!1),
-        [g, _] = n.useState(!1);
-    n.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (g || v('after'), g) }));
-    let v = n.useCallback((e) => {
+        [r, a] = i.useState('before'),
+        [x, j] = i.useState(!1),
+        [g, N] = i.useState(!1);
+    i.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (g || _('after'), g) }));
+    let _ = i.useCallback((e) => {
         j(!0),
             setTimeout(() => {
                 l.unstable_batchedUpdates(() => {
-                    'after' === e && _(!0), j(!1), r(e);
+                    'after' === e && N(!0), j(!1), a(e);
                 });
             }, 400);
     }, []);
-    return (0, i.jsxs)(c.Ttm, {
+    return (0, n.jsxs)(c.Ttm, {
         className: m.content,
         children: [
-            (0, i.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 className: m.header,
                 children: [
-                    (0, i.jsx)(c.Dkj, {
+                    (0, n.jsx)(c.Dkj, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40
                     }),
-                    (0, i.jsx)(c.X6q, {
+                    (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: d.intl.string(d.t.c0Fhpa)
+                        children: d.NW.string(d.t.c0Fhpa)
                     }),
-                    (0, i.jsx)(c.Text, {
+                    (0, n.jsx)(c.Text, {
                         className: m.__invalid_subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.intl.string(d.t.dKPfBQ)
+                        children: d.NW.string(d.t.dKPfBQ)
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 className: o.container,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, n.jsxs)('div', {
                         className: o.tabs,
                         children: [
-                            (0, i.jsx)('div', {
+                            (0, n.jsx)('div', {
                                 className: o.tabBackground,
-                                style: { left: 'before' === a ? 0 : '50%' }
+                                style: { left: 'before' === r ? 0 : '50%' }
                             }),
-                            (0, i.jsx)(c.P3F, {
+                            (0, n.jsx)(c.P3F, {
                                 className: o.tab,
-                                onClick: () => v('before'),
-                                children: (0, i.jsx)(c.Text, {
+                                onClick: () => _('before'),
+                                children: (0, n.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'before' === a ? 'header-primary' : 'text-muted',
-                                    children: d.intl.string(d.t.sLv7LC)
+                                    color: 'before' === r ? 'header-primary' : 'text-muted',
+                                    children: d.NW.string(d.t.sLv7LC)
                                 })
                             }),
-                            (0, i.jsx)(c.P3F, {
+                            (0, n.jsx)(c.P3F, {
                                 className: o.tab,
-                                onClick: () => v('after'),
-                                children: (0, i.jsx)(c.Text, {
+                                onClick: () => _('after'),
+                                children: (0, n.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'after' === a ? 'header-primary' : 'text-muted',
-                                    children: d.intl.string(d.t.R8eSY2)
+                                    color: 'after' === r ? 'header-primary' : 'text-muted',
+                                    children: d.NW.string(d.t.R8eSY2)
                                 })
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, n.jsxs)('div', {
                         className: o.previewContainer,
                         children: [
-                            (0, i.jsxs)('div', {
+                            (0, n.jsxs)('div', {
                                 className: o.guilds,
                                 children: [
-                                    (0, i.jsx)('div', {
+                                    (0, n.jsx)('div', {
                                         className: o.unreadGuild,
-                                        children: (0, i.jsx)('img', {
+                                        children: (0, n.jsx)('img', {
                                             src: s(180681),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'
                                         })
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: 'after' === a ? o.guild : o.unreadGuild,
-                                        children: (0, i.jsx)('img', {
+                                    (0, n.jsx)('div', {
+                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        children: (0, n.jsx)('img', {
                                             src: s(390115),
                                             width: 36,
                                             height: 36,
                                             alt: 'Example Guild Icon'
                                         })
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: 'after' === a ? o.guild : o.unreadGuild,
-                                        children: (0, i.jsx)('img', {
+                                    (0, n.jsx)('div', {
+                                        className: 'after' === r ? o.guild : o.unreadGuild,
+                                        children: (0, n.jsx)('img', {
                                             src: s(536411),
                                             width: 36,
                                             height: 36,
@@ -112,54 +112,54 @@ let x = n.forwardRef(function (e, t) {
                                     })
                                 ]
                             }),
-                            (0, i.jsxs)('div', {
+                            (0, n.jsxs)('div', {
                                 className: o.channels,
                                 children: [
-                                    (0, i.jsx)(u, {
+                                    (0, n.jsx)(u, {
                                         mention: !0,
-                                        name: d.intl.string(d.t.WFejRk)
+                                        name: d.NW.string(d.t.WFejRk)
                                     }),
-                                    (0, i.jsx)(u, { name: d.intl.string(d.t.jqWm9f) }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === a,
-                                        name: d.intl.string(d.t.p9z9Iy)
+                                    (0, n.jsx)(u, { name: d.NW.string(d.t.jqWm9f) }),
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: d.NW.string(d.t.p9z9Iy)
                                     }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === a,
-                                        name: d.intl.string(d.t['2bdWDw'])
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: d.NW.string(d.t['2bdWDw'])
                                     }),
-                                    (0, i.jsx)(u, { name: d.intl.string(d.t['Ci+Our']) }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === a,
-                                        name: d.intl.string(d.t['/7TEdn'])
+                                    (0, n.jsx)(u, { name: d.NW.string(d.t['Ci+Our']) }),
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: d.NW.string(d.t['/7TEdn'])
                                     }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === a,
-                                        name: d.intl.string(d.t['Ime/t7'])
+                                    (0, n.jsx)(u, {
+                                        grey: 'after' === r,
+                                        name: d.NW.string(d.t['Ime/t7'])
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'after' === a,
+                    (0, n.jsx)(h, {
+                        hidden: x || 'after' === r,
                         className: o.tipBefore1,
-                        text: d.intl.string(d.t.WrPMOD)
+                        text: d.NW.string(d.t.WrPMOD)
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'after' === a,
+                    (0, n.jsx)(h, {
+                        hidden: x || 'after' === r,
                         className: o.tipBefore2,
-                        text: d.intl.string(d.t['pApL7+'])
+                        text: d.NW.string(d.t['pApL7+'])
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'before' === a,
+                    (0, n.jsx)(h, {
+                        hidden: x || 'before' === r,
                         className: o.tipAfter1,
-                        text: d.intl.string(d.t.eZb3iY)
+                        text: d.NW.string(d.t.eZb3iY)
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'before' === a,
+                    (0, n.jsx)(h, {
+                        hidden: x || 'before' === r,
                         className: o.tipAfter2,
-                        text: d.intl.string(d.t.M3KrJS)
+                        text: d.NW.string(d.t.M3KrJS)
                     })
                 ]
             })
@@ -167,37 +167,37 @@ let x = n.forwardRef(function (e, t) {
     });
 });
 function h(e) {
-    let { text: t, className: s, hidden: n } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(s, o.tip, { [o.hidden]: n }),
+    let { text: t, className: s, hidden: i } = e;
+    return (0, n.jsxs)('div', {
+        className: a()(s, o.tip, { [o.hidden]: i }),
         children: [
-            (0, i.jsx)(c.Text, {
+            (0, n.jsx)(c.Text, {
                 className: o.__invalid_tipText,
                 variant: 'text-sm/normal',
                 color: 'text-secondary',
                 children: t
             }),
-            (0, i.jsx)('div', { className: o.tipLine })
+            (0, n.jsx)('div', { className: o.tipLine })
         ]
     });
 }
 function u(e) {
-    let { grey: t, mention: s, name: n } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(o.channel, {
+    let { grey: t, mention: s, name: i } = e;
+    return (0, n.jsxs)('div', {
+        className: a()(o.channel, {
             [o.grey]: t,
             [o.mention]: s
         }),
         children: [
-            (0, i.jsx)(c.VL1, {
+            (0, n.jsx)(c.VL1, {
                 size: 'xs',
                 color: 'currentColor',
                 className: o.channelIcon
             }),
-            (0, i.jsx)(c.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 className: o.channelName,
-                children: n
+                children: i
             })
         ]
     });

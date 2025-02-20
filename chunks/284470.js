@@ -1,28 +1,28 @@
-var i = n(67867),
-    r = n(821819),
-    a = n(952256),
-    s = n(982665),
-    o = n(611345),
+var r = n(67867),
+    i = n(821819),
+    o = n(952256),
+    a = n(982665),
+    s = n(611345),
     l = n(474883),
-    u = n(741674),
-    c = n(256110),
+    c = n(741674),
+    u = n(256110),
     d = n(15507),
     f = n(469624),
-    _ = n(360518),
-    p = n(882708),
-    h = _('isConcatSpreadable'),
+    p = n(360518),
+    _ = n(882708),
+    h = p('isConcatSpreadable'),
     m =
-        p >= 51 ||
-        !r(function () {
+        _ >= 51 ||
+        !i(function () {
             var e = [];
             return (e[h] = !1), e.concat()[0] !== e;
         }),
     g = function (e) {
-        if (!s(e)) return !1;
+        if (!a(e)) return !1;
         var t = e[h];
-        return void 0 !== t ? !!t : a(e);
+        return void 0 !== t ? !!t : o(e);
     };
-i(
+r(
     {
         target: 'Array',
         proto: !0,
@@ -33,16 +33,16 @@ i(
         concat: function (e) {
             var t,
                 n,
-                i,
                 r,
-                a,
-                s = o(this),
-                f = d(s, 0),
-                _ = 0;
-            for (t = -1, i = arguments.length; t < i; t++)
-                if (((a = -1 === t ? s : arguments[t]), g(a))) for (u(_ + (r = l(a))), n = 0; n < r; n++, _++) n in a && c(f, _, a[n]);
-                else u(_ + 1), c(f, _++, a);
-            return (f.length = _), f;
+                i,
+                o,
+                a = s(this),
+                f = d(a, 0),
+                p = 0;
+            for (t = -1, r = arguments.length; t < r; t++)
+                if (((o = -1 === t ? a : arguments[t]), g(o))) for (c(p + (i = l(o))), n = 0; n < i; n++, p++) n in o && u(f, p, o[n]);
+                else c(p + 1), u(f, p++, o);
+            return (f.length = p), f;
         }
     }
 );

@@ -44,13 +44,13 @@ var t = {
 function n(e, t) {
     return e + t.charAt(0).toUpperCase() + t.substring(1);
 }
-var i = ['Webkit', 'ms', 'Moz', 'O'];
+var r = ['Webkit', 'ms', 'Moz', 'O'];
 Object.keys(t).forEach(function (e) {
-    i.forEach(function (i) {
-        t[n(i, e)] = t[e];
+    r.forEach(function (r) {
+        t[n(r, e)] = t[e];
     });
 });
-var r = {
+var i = {
         isUnitlessNumber: t,
         shorthandPropertyExpansions: {
             background: {
@@ -105,36 +105,36 @@ var r = {
             }
         }
     },
-    a = !!('undefined' != typeof window && window.document && window.document.createElement),
-    s = {
-        canUseDOM: a,
+    o = !!('undefined' != typeof window && window.document && window.document.createElement),
+    a = {
+        canUseDOM: o,
         canUseWorkers: 'undefined' != typeof Worker,
-        canUseEventListeners: a && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: a && !!window.screen,
-        isInWorker: !a
+        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: o && !!window.screen,
+        isInWorker: !o
     },
-    o = r.isUnitlessNumber;
+    s = i.isUnitlessNumber;
 function l(e, t, n) {
-    return null == t || 'boolean' == typeof t || '' === t ? '' : n || 'number' != typeof t || 0 === t || (o.hasOwnProperty(e) && o[e]) ? ('' + t).trim() : t + 'px';
+    return null == t || 'boolean' == typeof t || '' === t ? '' : n || 'number' != typeof t || 0 === t || (s.hasOwnProperty(e) && s[e]) ? ('' + t).trim() : t + 'px';
 }
-function u(e) {
+function c(e) {
     return function () {
         return e;
     };
 }
-var c = function () {};
-(c.thatReturns = u),
-    (c.thatReturnsFalse = u(!1)),
-    (c.thatReturnsTrue = u(!0)),
-    (c.thatReturnsNull = u(null)),
-    (c.thatReturnsThis = function () {
+var u = function () {};
+(u.thatReturns = c),
+    (u.thatReturnsFalse = c(!1)),
+    (u.thatReturnsTrue = c(!0)),
+    (u.thatReturnsNull = c(null)),
+    (u.thatReturnsThis = function () {
         return this;
     }),
-    (c.thatReturnsArgument = function (e) {
+    (u.thatReturnsArgument = function (e) {
         return e;
     });
 var d = !1;
-if (s.canUseDOM) {
+if (a.canUseDOM) {
     var f = document.createElement('div').style;
     try {
         f.font = '';
@@ -142,22 +142,22 @@ if (s.canUseDOM) {
         d = !0;
     }
 }
-var _ = {
+var p = {
     createDangerousStringForStyles: function (e) {},
     setValueForStyles: function (e, t, n) {
-        var i = e.style;
-        for (var a in t)
-            if (t.hasOwnProperty(a)) {
-                var s = 0 === a.indexOf('--'),
-                    o = l(a, t[a], s);
-                if (('float' === a && (a = 'cssFloat'), s)) i.setProperty(a, o);
-                else if (o) i[a] = o;
+        var r = e.style;
+        for (var o in t)
+            if (t.hasOwnProperty(o)) {
+                var a = 0 === o.indexOf('--'),
+                    s = l(o, t[o], a);
+                if (('float' === o && (o = 'cssFloat'), a)) r.setProperty(o, s);
+                else if (s) r[o] = s;
                 else {
-                    var u = d && r.shorthandPropertyExpansions[a];
-                    if (u) for (var c in u) i[c] = '';
-                    else i[a] = '';
+                    var c = d && i.shorthandPropertyExpansions[o];
+                    if (c) for (var u in c) r[u] = '';
+                    else r[o] = '';
                 }
             }
     }
 };
-e.exports = _;
+e.exports = p;

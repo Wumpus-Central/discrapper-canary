@@ -1,14 +1,14 @@
-n.d(t, { Z: () => i });
-var l = n(192379),
+n.d(t, { Z: () => s });
+var r = n(192379),
     a = n(252618),
-    o = n(358085),
-    r = n(388032);
-function i() {
+    l = n(358085),
+    o = n(388032);
+function s() {
     return (
-        l.useEffect(() => {
-            o.isPlatformEmbedded ||
+        r.useEffect(() => {
+            l.isPlatformEmbedded ||
                 (0, a.EM)({
-                    messages: [r.intl.string(r.t.KIX3cn), r.intl.string(r.t['UbO+8v']), r.intl.string(r.t.MbySu7)],
+                    messages: [o.NW.string(o.t.KIX3cn), o.NW.string(o.t['UbO+8v']), o.NW.string(o.t.MbySu7)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0

@@ -1,8 +1,8 @@
-n.d(t, { K: () => r });
-var i = n(998502);
-async function r(e) {
+n.d(t, { K: () => i });
+var r = n(998502);
+async function i(e) {
     try {
-        return (await i.ZP.getSetting('USERNAME_PREFIX', '')) + e;
+        return (await r.ZP.getSetting('USERNAME_PREFIX', '')) + e;
     } catch (e) {}
     return e;
 }

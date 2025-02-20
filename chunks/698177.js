@@ -1,104 +1,104 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => b }), n(47120), n(301563);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    l = n(442837),
     s = n(481060),
     c = n(144114),
-    d = n(742458),
-    u = n(541692),
+    u = n(742458),
+    d = n(541692),
     h = n(952802),
-    _ = n(388905),
-    m = n(815660),
+    p = n(388905),
+    _ = n(815660),
     g = n(388032),
-    p = n(179683),
-    f = n(483938);
-let x = () => {
-    let [e, t] = r.useState(''),
-        [a, x] = r.useState(''),
-        [E, I] = r.useState(!1),
-        [v, C] = r.useState(!1),
-        [N, b] = r.useState(null),
-        [S, T] = r.useState(null),
-        A = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        R = A.code.split(' ')[0],
-        Z = async () => {
+    f = n(968693),
+    m = n(455812);
+let b = () => {
+    let [e, t] = i.useState(''),
+        [o, b] = i.useState(''),
+        [N, x] = i.useState(!1),
+        [v, E] = i.useState(!1),
+        [I, O] = i.useState(null),
+        [C, S] = i.useState(null),
+        j = (0, l.e7)([d.Z], () => d.Z.getCountryCode()),
+        y = j.code.split(' ')[0],
+        T = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                T(e.body.message);
+                S(e.body.message);
             }
         },
-        j = async () => {
-            I(!0);
+        A = async () => {
+            x(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(R + e, a);
-                b(null), T(null), C(!0), c.Z.validatePhoneForSupport(t);
+                let { token: t } = await c.Z.verifyPhone(y + e, o);
+                O(null), S(null), E(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (b(null), T(e.body.message)) : (b(e.body.phone), T(e.body.code));
+                e.body.message ? (O(null), S(e.body.message)) : (O(e.body.phone), S(e.body.code));
             } finally {
-                I(!1);
+                x(!1);
             }
         },
-        O = (0, i.jsxs)(_.ZP, {
+        R = (0, r.jsxs)(p.ZP, {
             children: [
-                (0, i.jsx)(_.Ee, { src: n(292824) }),
-                (0, i.jsxs)(_.Dx, {
-                    className: l()(f.marginTop20, p.flex, p.justifyCenter, p.alignCenter),
+                (0, r.jsx)(p.Ee, { src: n(292824) }),
+                (0, r.jsxs)(p.Dx, {
+                    className: a()(m.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
-                        g.intl.string(g.t.WWzQtb),
-                        (0, i.jsx)(s.owK, {
+                        g.NW.string(g.t.WWzQtb),
+                        (0, r.jsx)(s.owK, {
                             size: 'md',
                             color: 'currentColor',
-                            className: f.marginLeft8
+                            className: m.marginLeft8
                         })
                     ]
                 })
             ]
         });
     return v
-        ? O
-        : (0, i.jsxs)(_.ZP, {
+        ? R
+        : (0, r.jsxs)(p.ZP, {
               children: [
-                  (0, i.jsx)(_.Dx, { children: g.intl.string(g.t.o4JNrK) }),
-                  (0, i.jsx)(_.DK, {
-                      className: f.marginTop8,
-                      children: g.intl.string(g.t.y0tVbm)
+                  (0, r.jsx)(p.Dx, { children: g.NW.string(g.t.o4JNrK) }),
+                  (0, r.jsx)(p.DK, {
+                      className: m.marginTop8,
+                      children: g.NW.string(g.t.y0tVbm)
                   }),
-                  (0, i.jsxs)(_.gO, {
-                      className: f.marginTop20,
+                  (0, r.jsxs)(p.gO, {
+                      className: m.marginTop20,
                       children: [
-                          (0, i.jsx)(h.Z, {
-                              label: g.intl.string(g.t.eJnn09),
-                              alpha2: A.alpha2,
-                              countryCode: R,
+                          (0, r.jsx)(h.Z, {
+                              label: g.NW.string(g.t.eJnn09),
+                              alpha2: j.alpha2,
+                              countryCode: y,
                               value: e,
                               autoComplete: 'off',
                               spellCheck: 'false',
                               onChange: t,
-                              forceMode: d.Nz.PHONE,
-                              error: N
+                              forceMode: u.Nz.PHONE,
+                              error: I
                           }),
-                          (0, i.jsx)(_.II, {
-                              className: f.marginTop20,
-                              label: g.intl.string(g.t.OdzNbm),
-                              value: a,
-                              onChange: x,
-                              maxLength: m.z,
-                              error: S
+                          (0, r.jsx)(p.II, {
+                              className: m.marginTop20,
+                              label: g.NW.string(g.t.OdzNbm),
+                              value: o,
+                              onChange: b,
+                              maxLength: _.z,
+                              error: C
                           }),
-                          (0, i.jsx)(_.zx, {
-                              size: _.zx.Sizes.SMALL,
-                              look: _.zx.Looks.LINK,
-                              onClick: Z,
-                              children: g.intl.string(g.t['5b60go'])
+                          (0, r.jsx)(p.zx, {
+                              size: p.zx.Sizes.SMALL,
+                              look: p.zx.Looks.LINK,
+                              onClick: T,
+                              children: g.NW.string(g.t['5b60go'])
                           }),
-                          (0, i.jsx)(_.zx, {
-                              className: f.marginTop20,
-                              onClick: j,
-                              submitting: E,
-                              children: g.intl.string(g.t.i4jeWV)
+                          (0, r.jsx)(p.zx, {
+                              className: m.marginTop20,
+                              onClick: A,
+                              submitting: N,
+                              children: g.NW.string(g.t.i4jeWV)
                           })
                       ]
                   })

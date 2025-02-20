@@ -1,56 +1,56 @@
-n.d(t, { Z: () => g }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
-    d = n(642128),
-    c = n(442837),
+n.d(t, { Z: () => h }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(392711),
+    o = n.n(l),
+    c = n(642128),
+    d = n(442837),
     u = n(481060),
-    h = n(607070),
-    m = n(939486);
+    m = n(607070),
+    g = n(337909);
 let p = {
     mass: 10,
     tension: 550,
     friction: 140
 };
-function g(e) {
+function h(e) {
     let { className: t, pageMultiplier: n } = e,
-        r = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
-        [s, g] = l.useState({
+        s = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        [l, h] = i.useState({
             x: 0,
             y: 0
         }),
-        _ = l.useMemo(
+        f = i.useMemo(
             () =>
                 o().throttle((e) => {
-                    if (!r)
-                        g({
+                    if (!s)
+                        h({
                             x: (window.innerWidth - e.pageX * n) / 90,
                             y: (window.innerHeight - e.pageY * n) / 90
                         });
                 }, 20),
-            [n, r]
+            [n, s]
         );
-    l.useEffect(() => (window.addEventListener('mousemove', _), () => window.removeEventListener('mousemove', _)), [_]);
-    let [f, E] = (0, u.q_F)(() => ({
+    i.useEffect(() => (window.addEventListener('mousemove', f), () => window.removeEventListener('mousemove', f)), [f]);
+    let [b, N] = (0, u.q_F)(() => ({
         x: 0,
         y: 0,
         config: p
     }));
     return (
-        l.useEffect(() => {
-            E({
-                x: s.x,
-                y: s.y
+        i.useEffect(() => {
+            N({
+                x: l.x,
+                y: l.y
             });
-        }, [s.x, s.y, E]),
-        (0, i.jsx)(d.animated.div, {
+        }, [l.x, l.y, N]),
+        (0, r.jsx)(c.animated.div, {
             style: {
-                transform: (0, d.to)([f.x, f.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
+                transform: (0, c.to)([b.x, b.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
             },
-            className: a()(m.background, t)
+            className: a()(g.background, t)
         })
     );
 }

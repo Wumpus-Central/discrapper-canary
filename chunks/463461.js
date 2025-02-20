@@ -1,8 +1,8 @@
-a.d(e, { r: () => _ });
+a.d(e, { r: () => o });
 var r = a(967752),
     n = a(617726);
-function _(t, { metadata: e, tunnel: a, dsn: _ }) {
-    let o = {
+function o(t, { metadata: e, tunnel: a, dsn: o }) {
+    let _ = {
             event_id: t.event_id,
             sent_at: new Date().toISOString(),
             ...(e &&
@@ -12,8 +12,8 @@ function _(t, { metadata: e, tunnel: a, dsn: _ }) {
                         version: e.sdk.version
                     }
                 }),
-            ...(!!a && !!_ && { dsn: (0, r.RA)(_) })
+            ...(!!a && !!o && { dsn: (0, r.RA)(o) })
         },
         i = [{ type: 'user_report' }, t];
-    return (0, n.Jd)(o, [i]);
+    return (0, n.Jd)(_, [i]);
 }

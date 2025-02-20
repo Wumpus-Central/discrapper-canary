@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => N });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -57,10 +57,10 @@ function h(e, t) {
         e
     );
 }
-function j(e, t, j) {
-    let N = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]);
-    (0, a.$)(N), (0, i.e7)([b.Z], () => b.Z.getGuildVersion(t), [t]);
-    let m = (0, i.e7)([f.Z], () => f.Z.getChannel(j)),
+function N(e, t, N) {
+    let j = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]);
+    (0, a.$)(j), (0, i.e7)([b.Z], () => b.Z.getGuildVersion(t), [t]);
+    let m = (0, i.e7)([f.Z], () => f.Z.getChannel(N)),
         y = (0, i.e7)([Z.Z], () => Z.Z.getGuild(t), [t]),
         v = (0, i.e7)([g.default], () => g.default.getCurrentUser()),
         E = (0, u.Z)(m, 'Context Menu'),

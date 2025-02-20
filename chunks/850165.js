@@ -1,38 +1,38 @@
-n.d(e, { Z: () => o });
-var s = n(200651);
+n.d(e, { Z: () => i }), n(266796);
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    r = n(26445);
-function o(t) {
-    let { heroImageSrc: e, heroImageAlt: n, children: o, header: a, description: c } = t;
-    return (0, s.jsxs)(s.Fragment, {
+var s = n(481060),
+    o = n(878418);
+function i(t) {
+    let { heroImageSrc: e, heroImageAlt: n, children: i, header: c, description: a } = t;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, s.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: e,
                 alt: n,
-                className: r.heroImage
+                className: o.heroImage
             }),
-            (0, s.jsxs)(i.hzk, {
-                className: r.body,
+            (0, r.jsxs)(s.hzk, {
+                className: o.body,
                 children: [
-                    (0, s.jsxs)('div', {
-                        className: r.textContainer,
+                    (0, r.jsxs)('div', {
+                        className: o.textContainer,
                         children: [
-                            (0, s.jsx)(i.X6q, {
+                            (0, r.jsx)(s.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: a
+                                children: c
                             }),
-                            null != c &&
-                                (0, s.jsx)(i.Text, {
+                            null != a &&
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: r.description,
-                                    children: c
+                                    className: o.description,
+                                    children: a
                                 })
                         ]
                     }),
-                    o
+                    i
                 ]
             })
         ]

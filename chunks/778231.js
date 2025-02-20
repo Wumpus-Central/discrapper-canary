@@ -1,92 +1,92 @@
-n.d(t, { Z: () => g });
-var l = n(200651),
-    i = n(192379),
-    r = n(442837),
+n.d(t, { Z: () => h });
+var r = n(200651),
+    l = n(192379),
+    i = n(442837),
     a = n(481060),
-    s = n(384275),
-    o = n(824606),
-    d = n(686546),
-    c = n(522289),
+    o = n(384275),
+    s = n(824606),
+    c = n(686546),
+    d = n(522289),
     u = n(146078),
     m = n(881998),
     x = n(709054),
-    _ = n(388032),
-    h = n(698184),
-    v = n(970952);
-let g = (e) => {
+    p = n(388032),
+    f = n(245442),
+    b = n(970952);
+let h = (e) => {
     var t, n;
-    let { entry: g } = e,
-        { name: p } = g,
-        f = (0, r.e7)([m.Z], () => {
+    let { entry: h } = e,
+        { name: _ } = h,
+        g = (0, i.e7)([m.Z], () => {
             let e = m.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === g.id) : null;
+            return null != e ? e.find((e) => e.application.id === h.id) : null;
         }),
-        b = null !== (n = g.getIconURL(40)) && void 0 !== n ? n : v,
-        Z = (0, o.Z)({ application: g }),
-        j = i.useRef(!1);
-    i.useEffect(() => {
-        j.current || (s.Z.fetch(), (j.current = !0));
+        v = null !== (n = h.getIconURL(40)) && void 0 !== n ? n : b,
+        j = (0, s.Z)({ application: h }),
+        N = l.useRef(!1);
+    l.useEffect(() => {
+        N.current || (o.Z.fetch(), (N.current = !0));
     }, []);
-    let I = null != f ? x.default.extractTimestamp(f.id) : void 0;
-    return (0, l.jsxs)('div', {
-        className: h.container,
+    let y = null != g ? x.default.extractTimestamp(g.id) : void 0;
+    return (0, r.jsxs)('div', {
+        className: f.container,
         children: [
-            (0, l.jsx)(a.X6q, {
-                className: h.header,
+            (0, r.jsx)(a.X6q, {
+                className: f.header,
                 variant: 'heading-sm/semibold',
-                children: _.intl.string(_.t['aYfK//'])
+                children: p.NW.string(p.t['aYfK//'])
             }),
-            (0, l.jsx)('div', {
-                className: h.appContainer,
-                children: (0, l.jsxs)('div', {
-                    className: h.appInfo,
+            (0, r.jsx)('div', {
+                className: f.appContainer,
+                children: (0, r.jsxs)('div', {
+                    className: f.appInfo,
                     children: [
-                        (0, l.jsx)(d.ZP, {
-                            mask: d.ZP.Masks.AVATAR_DEFAULT,
+                        (0, r.jsx)(c.ZP, {
+                            mask: c.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: h.appIconMask,
-                            children: (0, l.jsx)('img', {
-                                src: b,
+                            className: f.appIconMask,
+                            children: (0, r.jsx)('img', {
+                                src: v,
                                 alt: '',
-                                className: h.appIcon
+                                className: f.appIcon
                             })
                         }),
-                        (0, l.jsxs)('div', {
-                            className: h.textContainer,
+                        (0, r.jsxs)('div', {
+                            className: f.textContainer,
                             children: [
-                                (0, l.jsx)(a.Text, {
+                                (0, r.jsx)(a.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/medium',
-                                    children: p
+                                    children: _
                                 }),
-                                Z.length > 0
-                                    ? (0, l.jsxs)(l.Fragment, {
+                                j.length > 0
+                                    ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, l.jsx)(a.Text, {
+                                              (0, r.jsx)(a.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-md/normal',
-                                                  children: (0, u.Z)(Z.length)
+                                                  children: (0, u.Z)(j.length)
                                               }),
-                                              (0, l.jsx)(c.Z, {
-                                                  className: h.guildStack,
-                                                  guilds: Z,
+                                              (0, r.jsx)(d.Z, {
+                                                  className: f.guildStack,
+                                                  guilds: j,
                                                   maxGuilds: 6
                                               })
                                           ]
                                       })
-                                    : (0, l.jsxs)(l.Fragment, {
+                                    : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, l.jsx)(a.Text, {
+                                              (0, r.jsx)(a.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-md/normal',
-                                                  children: null === (t = g.bot) || void 0 === t ? void 0 : t.tag
+                                                  children: null === (t = h.bot) || void 0 === t ? void 0 : t.tag
                                               }),
-                                              null != I &&
-                                                  (0, l.jsx)(a.Text, {
+                                              null != y &&
+                                                  (0, r.jsx)(a.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-md/normal',
-                                                      children: _.intl.formatToPlainString(_.t.C9rUOz, { authorizedAt: I })
+                                                      children: p.NW.formatToPlainString(p.t.C9rUOz, { authorizedAt: y })
                                                   })
                                           ]
                                       })

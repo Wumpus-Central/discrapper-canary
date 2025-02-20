@@ -1,17 +1,17 @@
 n.d(t, { Z: () => l });
-var s = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    o = n(481060),
-    i = n(970533);
+var o = n(120356),
+    s = n.n(o),
+    a = n(481060),
+    i = n(475526);
 let l = function (e) {
-    let { allowClicks: t = !1, children: n, withBorder: r = !1 } = e;
-    return (0, s.jsx)(o.Rny, {
-        children: (0, s.jsx)(o.Zbd, {
-            className: a()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: r }),
-            outline: r,
-            children: (0, s.jsx)('div', {
+    let { allowClicks: t = !1, children: n, withBorder: o = !1 } = e;
+    return (0, r.jsx)(a.Rny, {
+        children: (0, r.jsx)(a.Zbd, {
+            className: s()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: o }),
+            outline: o,
+            children: (0, r.jsx)('div', {
                 className: i.componentPreview,
                 onClickCapture: t
                     ? void 0

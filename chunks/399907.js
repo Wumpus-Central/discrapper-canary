@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d }), n(47120);
-var i = n(956067),
-    r = n(147913),
-    a = n(70956),
-    s = n(640795),
-    o = n(139674);
+var r = n(956067),
+    i = n(147913),
+    o = n(70956),
+    a = n(640795),
+    s = n(139674);
 function l(e, t, n) {
     return (
         t in e
@@ -17,10 +17,10 @@ function l(e, t, n) {
         e
     );
 }
-let u = 4 * a.Z.Millis.HOUR;
-class c extends r.Z {
+let c = 4 * o.Z.Millis.HOUR;
+class u extends i.Z {
     _initialize() {
-        setTimeout(() => i.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => o.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, s.q)(), 10 * a.Z.Millis.SECOND), (this.intervalID = setInterval(s.q, u));
+        setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => s.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, a.q)(), 10 * o.Z.Millis.SECOND), (this.intervalID = setInterval(a.q, c));
     }
     _terminate() {
         clearInterval(this.intervalID);
@@ -29,4 +29,4 @@ class c extends r.Z {
         super(...e), l(this, 'intervalID', void 0);
     }
 }
-let d = new c();
+let d = new u();

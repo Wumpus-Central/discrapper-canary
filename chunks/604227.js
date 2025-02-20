@@ -13,11 +13,11 @@ var i = n(525654),
 function g() {
     var e, t, n, i, g;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '369630',
-        f = '25a4f8c314369040c8e94d0a860b7fe53461f1a4'.substring(0, 7),
-        N = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
-        x = null === l.Z || void 0 === l.Z ? void 0 : null === (e = (t = l.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
-        b = null === l.Z || void 0 === l.Z ? void 0 : null === (n = (i = l.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(i),
+        h = '370144',
+        f = '87242b0118890b28f8473160cbfd1665569c2977'.substring(0, 7),
+        b = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
+        N = null === l.Z || void 0 === l.Z ? void 0 : null === (e = (t = l.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
+        x = null === l.Z || void 0 === l.Z ? void 0 : null === (n = (i = l.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(i),
         _ = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
         E = (function () {
             var e;
@@ -29,7 +29,7 @@ function g() {
         })(),
         j = [p, h, '('.concat(f, ')')];
     return (
-        null != N && (j.push('Host '.concat(N)), null != b && j.push(b.toLowerCase()), null != x && j.push('('.concat(x, ')'))),
+        null != b && (j.push('Host '.concat(b)), null != x && j.push(x.toLowerCase()), null != N && j.push('('.concat(N, ')'))),
         j.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
         null != E && j.push(E),
         (0, r.jsx)(c.Z, {
@@ -100,7 +100,7 @@ function g() {
                                                 children: ['Build Override: ', _.id]
                                             })
                                         }),
-                                    null != N
+                                    null != b
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsxs)(a.Text, {
@@ -110,17 +110,17 @@ function g() {
                                                       color: 'text-muted',
                                                       children: [
                                                           'Host ',
-                                                          N,
+                                                          b,
                                                           ' ',
-                                                          null != b
-                                                              ? (0, r.jsxs)('span', {
-                                                                    className: m.appArch,
-                                                                    children: [b.toLowerCase(), ' ']
-                                                                })
-                                                              : null,
                                                           null != x
                                                               ? (0, r.jsxs)('span', {
-                                                                    children: ['(', x, ')']
+                                                                    className: m.appArch,
+                                                                    children: [x.toLowerCase(), ' ']
+                                                                })
+                                                              : null,
+                                                          null != N
+                                                              ? (0, r.jsxs)('span', {
+                                                                    children: ['(', N, ')']
                                                                 })
                                                               : null
                                                       ]

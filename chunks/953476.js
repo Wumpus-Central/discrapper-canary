@@ -1,8 +1,8 @@
-i.d(n, {
-    G: () => t,
-    O: () => a
+n.d(t, {
+    G: () => r,
+    O: () => i
 });
-let t = [
+let r = [
         {
             skuId: '1',
             title: 'Lorem ipsum',
@@ -28,7 +28,7 @@ let t = [
             active: !1
         }
     ],
-    a = [
+    i = [
         {
             skuId: '1',
             title: 'Lorem ipsum',

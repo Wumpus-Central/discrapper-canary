@@ -1,18 +1,18 @@
-var i = n(36478),
-    r = n(573492);
-function a(t) {
+var r = n(36478),
+    i = n(573492);
+function o(t) {
     return (
-        (e.exports = a =
-            'function' == typeof i && 'symbol' == typeof r
+        (e.exports = o =
+            'function' == typeof r && 'symbol' == typeof i
                 ? function (e) {
                       return typeof e;
                   }
                 : function (e) {
-                      return e && 'function' == typeof i && e.constructor === i && e !== i.prototype ? 'symbol' : typeof e;
+                      return e && 'function' == typeof r && e.constructor === r && e !== r.prototype ? 'symbol' : typeof e;
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        a(t)
+        o(t)
     );
 }
-(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = o), (e.exports.__esModule = !0), (e.exports.default = e.exports);

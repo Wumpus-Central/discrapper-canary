@@ -1,28 +1,28 @@
 n.d(t, { f: () => o }), n(47120);
-var i = n(192379),
-    s = n(442837),
-    r = n(751648),
-    l = n(479766),
-    a = n(388032);
+var r = n(192379),
+    i = n(442837),
+    s = n(751648),
+    a = n(479766),
+    l = n(388032);
 function o() {
-    let [e, t] = (0, i.useState)(''),
+    let [e, t] = (0, r.useState)(''),
         {
             entitlements: n,
             error: o,
             isSubmitting: c
-        } = (0, s.cj)([l.Z], () => {
+        } = (0, i.cj)([a.Z], () => {
             var e;
             return {
-                entitlements: null !== (e = l.Z.entitlements) && void 0 !== e ? e : [],
-                error: l.Z.redeemError,
-                isSubmitting: l.Z.isRedeeming
+                entitlements: null !== (e = a.Z.entitlements) && void 0 !== e ? e : [],
+                error: a.Z.redeemError,
+                isSubmitting: a.Z.isRedeeming
             };
         });
     return (
-        (0, i.useEffect)(() => {
+        (0, r.useEffect)(() => {
             if (null != o) {
                 t(
-                    a.intl.format(a.t['7gHWra'], {
+                    l.NW.format(l.t['7gHWra'], {
                         amount: '1 orb',
                         errorMessage: o.message
                     })
@@ -35,7 +35,7 @@ function o() {
                     return null === (t = e.sku) || void 0 === t ? void 0 : t.name;
                 });
                 t(
-                    a.intl.format(a.t.JxNFam, {
+                    l.NW.format(l.t.JxNFam, {
                         amountDescription: '1 orb',
                         redeemedItemDescription: ''
                             .concat(1 === e.length ? 'SKU' : 'SKUs', ': ')
@@ -53,8 +53,8 @@ function o() {
             error: o,
             isSubmitting: c,
             responseMessage: e,
-            redeemVirtualCurrency: function (e) {
-                return (0, r.df)(e);
+            redeemVirtualCurrency: function (e, t) {
+                return (0, s.df)(e, t);
             }
         }
     );

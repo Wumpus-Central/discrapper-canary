@@ -1,40 +1,40 @@
-var i = n(67867),
-    r = n(570596),
-    a = n(414629),
-    s = n(670622),
-    o = n(735471),
+var r = n(67867),
+    i = n(570596),
+    o = n(414629),
+    a = n(670622),
+    s = n(735471),
     l = n(468154),
-    u = n(646948),
-    c = n(600385),
+    c = n(646948),
+    u = n(600385),
     d = n(414847),
     f = n(948634),
-    _ = n(691244),
-    p = n(360518),
+    p = n(691244),
+    _ = n(360518),
     h = n(519723),
     m = n(594463),
-    g = s.PROPER,
-    E = s.CONFIGURABLE,
+    g = a.PROPER,
+    E = a.CONFIGURABLE,
     v = m.IteratorPrototype,
-    y = m.BUGGY_SAFARI_ITERATORS,
-    I = p('iterator'),
-    T = 'keys',
-    b = 'values',
-    S = 'entries',
-    A = function () {
+    b = m.BUGGY_SAFARI_ITERATORS,
+    y = _('iterator'),
+    O = 'keys',
+    S = 'values',
+    I = 'entries',
+    T = function () {
         return this;
     };
-e.exports = function (e, t, n, s, p, m, N) {
-    l(n, t, s);
-    var C,
+e.exports = function (e, t, n, a, _, m, N) {
+    l(n, t, a);
+    var A,
+        C,
         R,
-        O,
-        D = function (e) {
-            if (e === p && M) return M;
-            if (!y && e && e in P) return P[e];
+        P = function (e) {
+            if (e === _ && M) return M;
+            if (!b && e && e in x) return x[e];
             switch (e) {
-                case T:
-                case b:
+                case O:
                 case S:
+                case I:
                     return function () {
                         return new n(this, e);
                     };
@@ -43,44 +43,44 @@ e.exports = function (e, t, n, s, p, m, N) {
                 return new n(this);
             };
         },
-        L = t + ' Iterator',
-        x = !1,
-        P = e.prototype,
-        w = P[I] || P['@@iterator'] || (p && P[p]),
-        M = (!y && w) || D(p),
-        k = ('Array' === t && P.entries) || w;
+        w = t + ' Iterator',
+        D = !1,
+        x = e.prototype,
+        L = x[y] || x['@@iterator'] || (_ && x[_]),
+        M = (!b && L) || P(_),
+        k = ('Array' === t && x.entries) || L;
     if (
-        (k && (C = u(k.call(new e()))) !== Object.prototype && C.next && (a || u(C) === v || (c ? c(C, v) : o(C[I]) || _(C, I, A)), d(C, L, !0, !0), a && (h[L] = A)),
+        (k && (A = c(k.call(new e()))) !== Object.prototype && A.next && (o || c(A) === v || (u ? u(A, v) : s(A[y]) || p(A, y, T)), d(A, w, !0, !0), o && (h[w] = T)),
         g &&
-            p === b &&
-            w &&
-            w.name !== b &&
-            (!a && E
-                ? f(P, 'name', b)
-                : ((x = !0),
+            _ === S &&
+            L &&
+            L.name !== S &&
+            (!o && E
+                ? f(x, 'name', S)
+                : ((D = !0),
                   (M = function () {
-                      return r(w, this);
+                      return i(L, this);
                   }))),
-        p)
+        _)
     ) {
         if (
-            ((R = {
-                values: D(b),
-                keys: m ? M : D(T),
-                entries: D(S)
+            ((C = {
+                values: P(S),
+                keys: m ? M : P(O),
+                entries: P(I)
             }),
             N)
         )
-            for (O in R) (!y && !x && O in P) || _(P, O, R[O]);
+            for (R in C) (!b && !D && R in x) || p(x, R, C[R]);
         else
-            i(
+            r(
                 {
                     target: t,
                     proto: !0,
-                    forced: y || x
+                    forced: b || D
                 },
-                R
+                C
             );
     }
-    return (!a || N) && P[I] !== M && _(P, I, M, { name: p }), (h[t] = M), R;
+    return (!o || N) && x[y] !== M && p(x, y, M, { name: _ }), (h[t] = M), C;
 };

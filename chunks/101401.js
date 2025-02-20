@@ -1,19 +1,19 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.EditableInput = void 0);
-var i = (function () {
+var r = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })(),
-    r = n(192379),
-    a = o(r),
-    s = o(n(723184));
-function o(e) {
+    i = n(192379),
+    o = s(i),
+    a = s(n(723184));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 function l(e, t, n) {
@@ -29,10 +29,10 @@ function l(e, t, n) {
         e
     );
 }
-function u(e, t) {
+function c(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function c(e, t) {
+function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
@@ -49,10 +49,10 @@ function d(e, t) {
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 var f = 1,
-    _ = 38,
-    p = [38, 40],
+    p = 38,
+    _ = [38, 40],
     h = function (e) {
-        return p.indexOf(e) > -1;
+        return _.indexOf(e) > -1;
     },
     m = function (e) {
         return Number(String(e).replace(/%/g, ''));
@@ -60,8 +60,8 @@ var f = 1,
     g = 1,
     E = (t.EditableInput = (function (e) {
         function t(e) {
-            u(this, t);
-            var n = c(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            c(this, t);
+            var n = u(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
             return (
                 (n.handleBlur = function () {
                     n.state.blurValue &&
@@ -76,9 +76,9 @@ var f = 1,
                 (n.handleKeyDown = function (e) {
                     var t = m(e.target.value);
                     if (!isNaN(t) && h(e.keyCode)) {
-                        var i = n.getArrowOffset(),
-                            r = e.keyCode === _ ? t + i : t - i;
-                        n.setUpdatedValue(r, e);
+                        var r = n.getArrowOffset(),
+                            i = e.keyCode === p ? t + r : t - r;
+                        n.setUpdatedValue(i, e);
                     }
                 }),
                 (n.handleDrag = function (e) {
@@ -106,7 +106,7 @@ var f = 1,
         }
         return (
             d(t, e),
-            i(t, [
+            r(t, [
                 {
                     key: 'componentDidUpdate',
                     value: function (e, t) {
@@ -149,7 +149,7 @@ var f = 1,
                     key: 'render',
                     value: function () {
                         var e = this,
-                            t = (0, s.default)(
+                            t = (0, a.default)(
                                 {
                                     default: { wrap: { position: 'relative' } },
                                     'user-override': {
@@ -162,10 +162,10 @@ var f = 1,
                                 { 'user-override': !0 },
                                 this.props
                             );
-                        return a.default.createElement(
+                        return o.default.createElement(
                             'div',
                             { style: t.wrap },
-                            a.default.createElement('input', {
+                            o.default.createElement('input', {
                                 id: this.inputId,
                                 style: t.input,
                                 ref: function (t) {
@@ -179,7 +179,7 @@ var f = 1,
                                 spellCheck: 'false'
                             }),
                             this.props.label && !this.props.hideLabel
-                                ? a.default.createElement(
+                                ? o.default.createElement(
                                       'label',
                                       {
                                           htmlFor: this.inputId,
@@ -195,5 +195,5 @@ var f = 1,
             ]),
             t
         );
-    })(r.PureComponent || r.Component));
+    })(i.PureComponent || i.Component));
 t.default = E;

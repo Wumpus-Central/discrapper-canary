@@ -1,20 +1,20 @@
 s.d(t, { Z: () => l });
 var n = s(200651);
 s(192379);
-var a = s(120356),
-    o = s.n(a),
-    i = s(785997),
-    r = s(578362);
+var o = s(120356),
+    a = s.n(o),
+    r = s(785997),
+    i = s(679351);
 function l(e) {
     let { step: t } = e,
-        s = t === i.F.AGE_GATE,
-        a = t === i.F.CHOOSE_TEMPLATE || t === i.F.CREATION_INTENT,
-        l = t === i.F.CUSTOMIZE_GUILD,
-        c = t === i.F.CHANNEL_PROMPT || t === i.F.JOIN_GUILD,
+        s = t === r.F.AGE_GATE,
+        o = t === r.F.CHOOSE_TEMPLATE || t === r.F.CREATION_INTENT,
+        l = t === r.F.CUSTOMIZE_GUILD,
+        c = t === r.F.CHANNEL_PROMPT || t === r.F.JOIN_GUILD,
         d = l || c,
-        _ = a || d;
+        _ = o || d;
     return (0, n.jsxs)('div', {
-        className: r.sidebar,
-        children: [(0, n.jsx)('div', { className: o()(r.step1, { [r.show]: s }) }), (0, n.jsx)('div', { className: o()(r.step24Clouds, { [r.show]: _ }) }), (0, n.jsx)('div', { className: o()(r.step34Flag, { [r.show]: d }) }), (0, n.jsx)('div', { className: o()(r.step24Base, { [r.show]: _ }) }), (0, n.jsx)('div', { className: o()(r.step24Ground, { [r.show]: _ }) }), (0, n.jsx)('div', { className: o()(r.step2Base, { [r.show]: a }) }), (0, n.jsx)('div', { className: o()(r.step2Character, { [r.show]: a }) }), (0, n.jsx)('div', { className: o()(r.step34Base, { [r.show]: d }) }), (0, n.jsx)('div', { className: o()(r.step3Character, { [r.show]: l }) }), (0, n.jsx)('div', { className: o()(r.step4Character, { [r.show]: c }) }), (0, n.jsx)('div', { className: o()(r.step24Foreground, { [r.show]: _ }) })]
+        className: i.sidebar,
+        children: [(0, n.jsx)('div', { className: a()(i.step1, { [i.show]: s }) }), (0, n.jsx)('div', { className: a()(i.step24Clouds, { [i.show]: _ }) }), (0, n.jsx)('div', { className: a()(i.step34Flag, { [i.show]: d }) }), (0, n.jsx)('div', { className: a()(i.step24Base, { [i.show]: _ }) }), (0, n.jsx)('div', { className: a()(i.step24Ground, { [i.show]: _ }) }), (0, n.jsx)('div', { className: a()(i.step2Base, { [i.show]: o }) }), (0, n.jsx)('div', { className: a()(i.step2Character, { [i.show]: o }) }), (0, n.jsx)('div', { className: a()(i.step34Base, { [i.show]: d }) }), (0, n.jsx)('div', { className: a()(i.step3Character, { [i.show]: l }) }), (0, n.jsx)('div', { className: a()(i.step4Character, { [i.show]: c }) }), (0, n.jsx)('div', { className: a()(i.step24Foreground, { [i.show]: _ }) })]
     });
 }

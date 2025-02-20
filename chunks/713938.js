@@ -1,108 +1,108 @@
 n.d(t, {
-    CI: () => u,
-    Qe: () => s,
-    W3: () => c,
-    ZW: () => a,
-    ak: () => o,
+    CI: () => c,
+    Qe: () => a,
+    W3: () => u,
+    ZW: () => o,
+    ak: () => s,
     up: () => l
 });
-var i = n(243814),
-    r = n(388032);
-let a = [() => r.intl.string(r.t['6xfSCg']), () => r.intl.string(r.t.ymSk0t), () => r.intl.string(r.t.EnN7c3), () => r.intl.string(r.t['4wMpBg']), () => r.intl.string(r.t.CncpnJ), () => r.intl.string(r.t.X9pGvL), () => r.intl.string(r.t.sGOSGx), () => r.intl.string(r.t.JfibUl)],
-    s = [i.x.BOT, i.x.OPENID, i.x.IDENTIFY, i.x.EMAIL, i.x.CONNECTIONS, i.x.MESSAGES_READ, i.x.GUILDS, i.x.GUILDS_JOIN, i.x.GUILDS_MEMBERS_READ, i.x.GUILDS_CHANNELS_READ, i.x.GDM_JOIN, i.x.RPC, i.x.RPC_NOTIFICATIONS_READ, i.x.RPC_VOICE_READ, i.x.RPC_VOICE_WRITE, i.x.RPC_VIDEO_READ, i.x.RPC_VIDEO_WRITE, i.x.RPC_SCREENSHARE_READ, i.x.RPC_SCREENSHARE_WRITE, i.x.RPC_ACTIVITIES_WRITE, i.x.APPLICATIONS_BUILDS_UPLOAD, i.x.APPLICATIONS_BUILDS_READ, i.x.APPLICATIONS_COMMANDS, i.x.APPLICATIONS_COMMANDS_UPDATE, i.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, i.x.APPLICATIONS_STORE_UPDATE, i.x.APPLICATIONS_ENTITLEMENTS, i.x.ACTIVITIES_INVITES_WRITE, i.x.ACTIVITIES_READ, i.x.ACTIVITIES_WRITE, i.x.RELATIONSHIPS_READ, i.x.RELATIONSHIPS_WRITE, i.x.VOICE, i.x.DM_CHANNELS_READ, i.x.DM_CHANNELS_MESSAGES_READ, i.x.DM_CHANNELS_MESSAGES_WRITE, i.x.ROLE_CONNECTIONS_WRITE, i.x.PRESENCES_READ, i.x.PRESENCES_WRITE, i.x.GATEWAY_CONNECT, i.x.PAYMENT_SOURCES_COUNTRY_CODE, i.x.SDK_SOCIAL_LAYER],
-    o = s.concat([i.x.WEBHOOK_INCOMING, i.x.BOT]),
+var r = n(243814),
+    i = n(388032);
+let o = [() => i.NW.string(i.t['6xfSCg']), () => i.NW.string(i.t.ymSk0t), () => i.NW.string(i.t.EnN7c3), () => i.NW.string(i.t['4wMpBg']), () => i.NW.string(i.t.CncpnJ), () => i.NW.string(i.t.X9pGvL), () => i.NW.string(i.t.sGOSGx), () => i.NW.string(i.t.JfibUl)],
+    a = [r.x.BOT, r.x.OPENID, r.x.IDENTIFY, r.x.EMAIL, r.x.CONNECTIONS, r.x.MESSAGES_READ, r.x.GUILDS, r.x.GUILDS_JOIN, r.x.GUILDS_MEMBERS_READ, r.x.GUILDS_CHANNELS_READ, r.x.GDM_JOIN, r.x.RPC, r.x.RPC_NOTIFICATIONS_READ, r.x.RPC_VOICE_READ, r.x.RPC_VOICE_WRITE, r.x.RPC_VIDEO_READ, r.x.RPC_VIDEO_WRITE, r.x.RPC_SCREENSHARE_READ, r.x.RPC_SCREENSHARE_WRITE, r.x.RPC_ACTIVITIES_WRITE, r.x.APPLICATIONS_BUILDS_UPLOAD, r.x.APPLICATIONS_BUILDS_READ, r.x.APPLICATIONS_COMMANDS, r.x.APPLICATIONS_COMMANDS_UPDATE, r.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, r.x.APPLICATIONS_STORE_UPDATE, r.x.APPLICATIONS_ENTITLEMENTS, r.x.ACTIVITIES_INVITES_WRITE, r.x.ACTIVITIES_READ, r.x.ACTIVITIES_WRITE, r.x.RELATIONSHIPS_READ, r.x.RELATIONSHIPS_WRITE, r.x.VOICE, r.x.DM_CHANNELS_READ, r.x.DM_CHANNELS_MESSAGES_READ, r.x.DM_CHANNELS_MESSAGES_WRITE, r.x.ROLE_CONNECTIONS_WRITE, r.x.PRESENCES_READ, r.x.PRESENCES_WRITE, r.x.GATEWAY_CONNECT, r.x.PAYMENT_SOURCES_COUNTRY_CODE, r.x.SDK_SOCIAL_LAYER],
+    s = a.concat([r.x.WEBHOOK_INCOMING, r.x.BOT]),
     l = ['rpc.api'];
-function u(e, t) {
+function c(e, t) {
     switch (e) {
-        case i.x.IDENTIFY:
-            return [r.intl.string(r.t.DD9KQk)];
-        case i.x.OPENID:
-            return [r.intl.string(r.t.R5IKv7)];
-        case i.x.EMAIL:
-            return [r.intl.string(r.t.rvFS2t)];
-        case i.x.BOT:
-            return [r.intl.string(r.t.pRpdo6)];
-        case i.x.CONNECTIONS:
-            return [r.intl.string(r.t['1AwaU1'])];
-        case i.x.MESSAGES_READ:
-            return [r.intl.string(r.t.jVXrHR)];
-        case i.x.GUILDS:
-            return [r.intl.string(r.t.QKGJkJ)];
-        case i.x.GUILDS_JOIN:
-            return [r.intl.string(r.t.ETGDR0)];
-        case i.x.GUILDS_MEMBERS_READ:
-            if (t.includes(i.x.VOICE)) return [r.intl.string(r.t.OSvmfH)];
-            return [r.intl.string(r.t.o6M1aW)];
-        case i.x.GUILDS_CHANNELS_READ:
-            return [r.intl.string(r.t.BWGAgo)];
-        case i.x.GDM_JOIN:
-            return [r.intl.string(r.t['55B4wM'])];
-        case i.x.RPC:
-            return [r.intl.string(r.t.EDBEeH)];
-        case i.x.RPC_NOTIFICATIONS_READ:
-            return [r.intl.string(r.t['6kDHWV'])];
-        case i.x.RPC_VOICE_WRITE:
-            return [r.intl.string(r.t['531s7e'])];
-        case i.x.RPC_VIDEO_READ:
-            return [r.intl.string(r.t.zbUSWF)];
-        case i.x.RPC_VIDEO_WRITE:
-            return [r.intl.string(r.t['y+MdAA'])];
-        case i.x.RPC_SCREENSHARE_READ:
-            return [r.intl.string(r.t.b0i0CA)];
-        case i.x.RPC_SCREENSHARE_WRITE:
-            return [r.intl.string(r.t['9Rmxu7'])];
-        case i.x.RPC_VOICE_READ:
-            return [r.intl.string(r.t.rznmp6)];
-        case i.x.RPC_ACTIVITIES_WRITE:
-            return [r.intl.string(r.t.KQwJDQ)];
-        case i.x.APPLICATIONS_BUILDS_UPLOAD:
-            return [r.intl.string(r.t.Iwbtgo)];
-        case i.x.APPLICATIONS_BUILDS_READ:
-            return [r.intl.string(r.t.ZkZCCQ)];
-        case i.x.APPLICATIONS_COMMANDS:
-            return [r.intl.string(r.t.H4q49f)];
-        case i.x.APPLICATIONS_COMMANDS_UPDATE:
-            return [r.intl.string(r.t.mxeq6u)];
-        case i.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE:
-            return [r.intl.string(r.t['7SIoW1'])];
-        case i.x.APPLICATIONS_STORE_UPDATE:
-            return [r.intl.string(r.t['Rba/Xl'])];
-        case i.x.APPLICATIONS_ENTITLEMENTS:
-            return [r.intl.string(r.t.xeNgGB)];
-        case i.x.ACTIVITIES_READ:
-            return [r.intl.string(r.t['4+tScX'])];
-        case i.x.ACTIVITIES_WRITE:
-            return [r.intl.string(r.t['6OsWXV'])];
-        case i.x.RELATIONSHIPS_READ:
-            return [r.intl.string(r.t['521/7e'])];
-        case i.x.RELATIONSHIPS_WRITE:
-            return [r.intl.string(r.t['qR/txc'])];
-        case i.x.VOICE:
-            return [r.intl.string(r.t.XK5zdH)];
-        case i.x.DM_CHANNELS_READ:
-            return [r.intl.string(r.t.w8emlZ)];
-        case i.x.ROLE_CONNECTIONS_WRITE:
-            return [r.intl.string(r.t.Bv0wZm)];
-        case i.x.PRESENCES_READ:
-            return [r.intl.string(r.t.JUWeyc)];
-        case i.x.PRESENCES_WRITE:
-            return [r.intl.string(r.t.apHLws)];
-        case i.x.DM_CHANNELS_MESSAGES_READ:
-            return [r.intl.string(r.t.FHeB8v)];
-        case i.x.DM_CHANNELS_MESSAGES_WRITE:
-            return [r.intl.string(r.t['mdh+xc'])];
-        case i.x.GATEWAY_CONNECT:
-            return [r.intl.string(r.t['uJd+8/'])];
-        case i.x.PAYMENT_SOURCES_COUNTRY_CODE:
-            return [r.intl.string(r.t.hycwLC)];
-        case i.x.ACTIVITIES_INVITES_WRITE:
-            return [r.intl.string(r.t.IM4CjY)];
-        case i.x.SDK_SOCIAL_LAYER:
-            return [r.intl.string(r.t.Pl1dTU), r.intl.string(r.t['hc/+ys']), r.intl.string(r.t.mPRcyc), r.intl.string(r.t.F7J4ND), r.intl.string(r.t['2wxXX1'])];
+        case r.x.IDENTIFY:
+            return [i.NW.string(i.t.DD9KQk)];
+        case r.x.OPENID:
+            return [i.NW.string(i.t.R5IKv7)];
+        case r.x.EMAIL:
+            return [i.NW.string(i.t.rvFS2t)];
+        case r.x.BOT:
+            return [i.NW.string(i.t.pRpdo6)];
+        case r.x.CONNECTIONS:
+            return [i.NW.string(i.t['1AwaU1'])];
+        case r.x.MESSAGES_READ:
+            return [i.NW.string(i.t.jVXrHR)];
+        case r.x.GUILDS:
+            return [i.NW.string(i.t.QKGJkJ)];
+        case r.x.GUILDS_JOIN:
+            return [i.NW.string(i.t.ETGDR0)];
+        case r.x.GUILDS_MEMBERS_READ:
+            if (t.includes(r.x.VOICE)) return [i.NW.string(i.t.OSvmfH)];
+            return [i.NW.string(i.t.o6M1aW)];
+        case r.x.GUILDS_CHANNELS_READ:
+            return [i.NW.string(i.t.BWGAgo)];
+        case r.x.GDM_JOIN:
+            return [i.NW.string(i.t['55B4wM'])];
+        case r.x.RPC:
+            return [i.NW.string(i.t.EDBEeH)];
+        case r.x.RPC_NOTIFICATIONS_READ:
+            return [i.NW.string(i.t['6kDHWV'])];
+        case r.x.RPC_VOICE_WRITE:
+            return [i.NW.string(i.t['531s7e'])];
+        case r.x.RPC_VIDEO_READ:
+            return [i.NW.string(i.t.zbUSWF)];
+        case r.x.RPC_VIDEO_WRITE:
+            return [i.NW.string(i.t['y+MdAA'])];
+        case r.x.RPC_SCREENSHARE_READ:
+            return [i.NW.string(i.t.b0i0CA)];
+        case r.x.RPC_SCREENSHARE_WRITE:
+            return [i.NW.string(i.t['9Rmxu7'])];
+        case r.x.RPC_VOICE_READ:
+            return [i.NW.string(i.t.rznmp6)];
+        case r.x.RPC_ACTIVITIES_WRITE:
+            return [i.NW.string(i.t.KQwJDQ)];
+        case r.x.APPLICATIONS_BUILDS_UPLOAD:
+            return [i.NW.string(i.t.Iwbtgo)];
+        case r.x.APPLICATIONS_BUILDS_READ:
+            return [i.NW.string(i.t.ZkZCCQ)];
+        case r.x.APPLICATIONS_COMMANDS:
+            return [i.NW.string(i.t.H4q49f)];
+        case r.x.APPLICATIONS_COMMANDS_UPDATE:
+            return [i.NW.string(i.t.mxeq6u)];
+        case r.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE:
+            return [i.NW.string(i.t['7SIoW1'])];
+        case r.x.APPLICATIONS_STORE_UPDATE:
+            return [i.NW.string(i.t['Rba/Xl'])];
+        case r.x.APPLICATIONS_ENTITLEMENTS:
+            return [i.NW.string(i.t.xeNgGB)];
+        case r.x.ACTIVITIES_READ:
+            return [i.NW.string(i.t['4+tScX'])];
+        case r.x.ACTIVITIES_WRITE:
+            return [i.NW.string(i.t['6OsWXV'])];
+        case r.x.RELATIONSHIPS_READ:
+            return [i.NW.string(i.t['521/7e'])];
+        case r.x.RELATIONSHIPS_WRITE:
+            return [i.NW.string(i.t['qR/txc'])];
+        case r.x.VOICE:
+            return [i.NW.string(i.t.XK5zdH)];
+        case r.x.DM_CHANNELS_READ:
+            return [i.NW.string(i.t.w8emlZ)];
+        case r.x.ROLE_CONNECTIONS_WRITE:
+            return [i.NW.string(i.t.Bv0wZm)];
+        case r.x.PRESENCES_READ:
+            return [i.NW.string(i.t.JUWeyc)];
+        case r.x.PRESENCES_WRITE:
+            return [i.NW.string(i.t.apHLws)];
+        case r.x.DM_CHANNELS_MESSAGES_READ:
+            return [i.NW.string(i.t.FHeB8v)];
+        case r.x.DM_CHANNELS_MESSAGES_WRITE:
+            return [i.NW.string(i.t['mdh+xc'])];
+        case r.x.GATEWAY_CONNECT:
+            return [i.NW.string(i.t['uJd+8/'])];
+        case r.x.PAYMENT_SOURCES_COUNTRY_CODE:
+            return [i.NW.string(i.t.hycwLC)];
+        case r.x.ACTIVITIES_INVITES_WRITE:
+            return [i.NW.string(i.t.IM4CjY)];
+        case r.x.SDK_SOCIAL_LAYER:
+            return [i.NW.string(i.t.Pl1dTU), i.NW.string(i.t['hc/+ys']), i.NW.string(i.t.mPRcyc), i.NW.string(i.t.F7J4ND), i.NW.string(i.t['2wxXX1'])];
         default:
             return [e];
     }
 }
-function c(e) {
-    return e.includes(i.x.DM_CHANNELS_MESSAGES_WRITE) || e.includes(i.x.SDK_SOCIAL_LAYER) ? r.intl.format(r.t.o0GMBA, {}) : e.includes(i.x.MESSAGES_READ) || e.includes(i.x.DM_CHANNELS_MESSAGES_READ) ? r.intl.format(r.t.Soy7jI, {}) : r.intl.format(r.t['TeL+Cg'], {});
+function u(e) {
+    return e.includes(r.x.DM_CHANNELS_MESSAGES_WRITE) || e.includes(r.x.SDK_SOCIAL_LAYER) ? i.NW.format(i.t.o0GMBA, {}) : e.includes(r.x.MESSAGES_READ) || e.includes(r.x.DM_CHANNELS_MESSAGES_READ) ? i.NW.format(i.t.Soy7jI, {}) : i.NW.format(i.t['TeL+Cg'], {});
 }

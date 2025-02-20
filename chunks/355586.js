@@ -1,11 +1,11 @@
-var i = n(270572);
-function r(e, t) {
+var r = n(270572);
+function i(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, i(r.key), r);
+        var i = t[n];
+        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, r(i.key), i);
     }
 }
-function a(e, t, n) {
-    return t && r(e.prototype, t), n && r(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
+function o(e, t, n) {
+    return t && i(e.prototype, t), n && i(e, n), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
 }
-(e.exports = a), (e.exports.__esModule = !0), (e.exports.default = e.exports);
+(e.exports = o), (e.exports.__esModule = !0), (e.exports.default = e.exports);

@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
     o = n(642128),
     s = n(481060),
     c = n(13245),
@@ -27,49 +27,49 @@ function b(e, t, n) {
     });
 }
 function y(e) {
-    let { keybind: t, message: n, messageWithoutKeybind: i } = e,
-        l = (0, u.o)();
+    let { keybind: t, message: n, messageWithoutKeybind: l } = e,
+        i = (0, u.o)();
     return (0, r.jsx)(r.Fragment, {
-        children: l
+        children: i
             ? v.NW.format(n, {
                   keybind: t,
                   keybindHook: (e) => (0, r.jsx)(f.Z, { keybind: t }, t.join('+'))
               })
-            : i
+            : l
     });
 }
 function E(e) {
     e.currentTarget.scrollTo(0, 0);
 }
-let O = i.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: l, onDismissClick: c, onConfirmClick: u, onCancelClick: f, onNotificationClick: m, hint: p, cancelText: b, confirmText: y, icon: O, body: S, title: j, renderFooter: x, contentOpacity: Z, status: w, containerRef: C, className: P, wrapperClassName: N } = e,
-        [I, R] = i.useState(!1),
+let O = l.memo(function (e) {
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: i, onDismissClick: c, onConfirmClick: u, onCancelClick: f, onNotificationClick: m, hint: p, cancelText: b, confirmText: y, icon: O, body: S, title: j, renderFooter: x, contentOpacity: Z, status: w, containerRef: C, className: P, wrapperClassName: N } = e,
+        [I, R] = l.useState(!1),
         _ = n || I || w === h._1z.FOCUSED;
-    i.useEffect(() => {
-        null == l || l();
-    }, [l]);
-    let k = i.useCallback(
+    l.useEffect(() => {
+        null == i || i();
+    }, [i]);
+    let k = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == c || c(e);
             },
             [c]
         ),
-        A = i.useCallback(
+        A = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == u || u(e);
             },
             [u]
         ),
-        T = i.useCallback(
+        T = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == f || f(e);
             },
             [f]
         ),
-        D = i.useCallback(() => {
+        D = l.useCallback(() => {
             R(!0);
         }, []),
-        M = i.useCallback(() => {
+        M = l.useCallback(() => {
             R(!1);
         }, []);
     return (0, r.jsxs)(r.Fragment, {
@@ -185,7 +185,7 @@ let O = i.memo(function (e) {
 });
 function S(e) {
     let {
-        springs: { opacity: t, scale: n, transform: i, height: l },
+        springs: { opacity: t, scale: n, transform: l, height: i },
         index: a,
         children: s,
         locked: c
@@ -196,72 +196,72 @@ function S(e) {
             pointerEvents: c && 0 !== a ? 'none' : 'auto',
             zIndex: Math.max(5 - a, 0),
             opacity: t,
-            transform: i.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
+            transform: l.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
             scale: n.to([0, 1], [0.7, 1]),
-            height: l
+            height: i
         },
         children: s
     });
 }
 function j(e) {
     var t, n;
-    let { notification: l, index: a, locked: o, transitionState: s, cleanUp: u } = e,
+    let { notification: i, index: a, locked: o, transitionState: s, cleanUp: u } = e,
         {
             id: d,
             props: { onNotificationShow: f, onDismissClick: h, onNotificationClick: v, onConfirmClick: b, onCancelClick: y, renderFooter: E }
-        } = l,
-        j = i.useCallback(() => {
+        } = i,
+        j = l.useCallback(() => {
             f(d);
         }, [f, d]),
-        x = i.useCallback(
+        x = l.useCallback(
             (e) => {
                 c.Z.updateNotificationStatus(d), null == h || h(e, d);
             },
             [d, h]
         ),
-        Z = i.useCallback(
+        Z = l.useCallback(
             (e) => {
                 null == v || v(e, d);
             },
             [v, d]
         ),
-        w = i.useCallback(
+        w = l.useCallback(
             (e) => {
                 null == b || b(e, d);
             },
             [b, d]
         ),
-        C = i.useCallback(
+        C = l.useCallback(
             (e) => {
                 null == y || y(e, d);
             },
             [y, d]
         ),
-        P = i.useCallback((e) => (null == E ? void 0 : E(e, d)), [E, d]),
+        P = l.useCallback((e) => (null == E ? void 0 : E(e, d)), [E, d]),
         {
             props: { onNotificationShow: N, onDismissClick: I, renderFooter: R, onNotificationClick: _, onConfirmClick: k, onCancelClick: A },
             status: T
-        } = l,
+        } = i,
         D = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return i;
-        })(l.props, ['onNotificationShow', 'onDismissClick', 'renderFooter', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']),
-        { ref: M, springs: L } = (0, p.X4)(l.id, s, u);
+            return l;
+        })(i.props, ['onNotificationShow', 'onDismissClick', 'renderFooter', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']),
+        { ref: M, springs: L } = (0, p.X4)(i.id, s, u);
     return (0, r.jsx)(S, {
         transitionState: s,
         springs: L,
@@ -301,7 +301,7 @@ function j(e) {
                     {
                         title: 'function' == typeof D.title ? D.title(x) : D.title,
                         containerRef: M,
-                        notificationId: l.id,
+                        notificationId: i.id,
                         onNotificationShow: 0 === a ? j : void 0,
                         onDismissClick: x,
                         onNotificationClick: null != v ? Z : void 0,

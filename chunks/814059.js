@@ -7,14 +7,14 @@ let o = (t) => {
     let e = Math.max(0, a()(t).diff(a()(), 's'));
     if (e < 2 * s.Z.Seconds.HOUR) {
         let t = Math.round(e / s.Z.Seconds.MINUTE);
-        return n.intl.formatToPlainString(n.t['2JbxRE'], { count: t });
+        return n.NW.formatToPlainString(n.t['2JbxRE'], { count: t });
     }
     if (e < s.Z.Seconds.DAY) {
         let t = Math.round(e / s.Z.Seconds.HOUR);
-        return n.intl.formatToPlainString(n.t.V9Ebys, { count: t });
+        return n.NW.formatToPlainString(n.t.V9Ebys, { count: t });
     }
     {
         let t = Math.round(e / s.Z.Seconds.DAY);
-        return n.intl.formatToPlainString(n.t.OQFxHh, { count: t });
+        return n.NW.formatToPlainString(n.t.OQFxHh, { count: t });
     }
 };

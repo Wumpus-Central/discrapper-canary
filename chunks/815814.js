@@ -1,30 +1,30 @@
-var i = n(640767),
-    r = n(393020),
-    a = n(493883),
-    s = n(755228),
-    o = n(383718),
+var r = n(640767),
+    i = n(393020),
+    o = n(493883),
+    a = n(755228),
+    s = n(383718),
     l = n(713720),
-    u = n(1213),
-    c = n(124084),
+    c = n(1213),
+    u = n(124084),
     d = n(581527),
     f = n(192853),
-    _ = n(163494),
-    p = Object('a'),
-    h = 'a' !== p[0] || !(0 in p),
+    p = n(163494),
+    _ = Object('a'),
+    h = 'a' !== _[0] || !(0 in _),
     m = f('String.prototype.split');
 e.exports = function (e) {
     var t,
-        n = c(this),
-        f = u((h && _(n) ? m(n, '') : n).length);
+        n = u(this),
+        f = c((h && p(n) ? m(n, '') : n).length);
     if (!l(e)) throw TypeError('Array.prototype.map callback must be a function');
     arguments.length > 1 && (t = arguments[1]);
-    for (var p = i(n, f), g = 0; g < f; ) {
+    for (var _ = r(n, f), g = 0; g < f; ) {
         var E = d(g);
-        if (o(n, E)) {
-            var v = r(e, t, [s(n, E), g, n]);
-            a(p, E, v);
+        if (s(n, E)) {
+            var v = i(e, t, [a(n, E), g, n]);
+            o(_, E, v);
         }
         g += 1;
     }
-    return p;
+    return _;
 };

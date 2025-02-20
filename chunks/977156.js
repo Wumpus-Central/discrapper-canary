@@ -1,10 +1,10 @@
 n.d(t, {
     X7: () => l,
-    Zy: () => s,
-    cB: () => a
+    Zy: () => a,
+    cB: () => o
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         id: '2023-12_quests',
         kind: 'user',
         label: 'Quests',
@@ -22,15 +22,15 @@ let r = (0, i.B)({
             }
         ]
     }),
+    o = (e) => {
+        let { location: t } = e;
+        return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    },
     a = (e) => {
         let { location: t } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+        return i.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
-    s = (e) => {
-        let { location: t } = e;
-        return r.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
-    },
-    o = (0, i.B)({
+    s = (0, r.B)({
         id: '2024-04_quest_preview_tool',
         kind: 'user',
         label: 'Quest Preview Tool',
@@ -45,5 +45,5 @@ let r = (0, i.B)({
     });
 function l(e) {
     let { location: t } = e;
-    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return s.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

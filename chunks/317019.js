@@ -1,29 +1,29 @@
-n.d(t, { I: () => u });
-var i = n(192379),
-    r =
+n.d(t, { I: () => c });
+var r = n(192379),
+    i =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    a = (function () {
+    o = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function s(e, t) {
+function a(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, t) {
+function s(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
@@ -39,14 +39,14 @@ function l(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var u = function (e) {
+var c = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (n) {
-        function u() {
-            s(this, u);
-            for (var e, t, n, i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
+        function c() {
+            a(this, c);
+            for (var e, t, n, r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
             return (
-                (t = n = o(this, (e = u.__proto__ || Object.getPrototypeOf(u)).call.apply(e, [this].concat(r)))),
+                (t = n = s(this, (e = c.__proto__ || Object.getPrototypeOf(c)).call.apply(e, [this].concat(i)))),
                 (n.state = { focus: !1 }),
                 (n.handleFocus = function () {
                     return n.setState({ focus: !0 });
@@ -54,27 +54,27 @@ var u = function (e) {
                 (n.handleBlur = function () {
                     return n.setState({ focus: !1 });
                 }),
-                o(n, t)
+                s(n, t)
             );
         }
         return (
-            l(u, n),
-            a(u, [
+            l(c, n),
+            o(c, [
                 {
                     key: 'render',
                     value: function () {
-                        return i.createElement(
+                        return r.createElement(
                             t,
                             {
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
                             },
-                            i.createElement(e, r({}, this.props, this.state))
+                            r.createElement(e, i({}, this.props, this.state))
                         );
                     }
                 }
             ]),
-            u
+            c
         );
-    })(i.Component);
+    })(r.Component);
 };

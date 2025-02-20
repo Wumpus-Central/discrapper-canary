@@ -1,29 +1,29 @@
-n.d(e, { default: () => u });
-var i = n(200651),
-    o = n(192379),
-    l = n(481060),
-    r = n(239091),
-    a = n(167675),
-    d = n(249453),
-    s = n(991249),
-    c = n(388032);
-function u(t) {
-    let { onSelect: e, onClose: n, widget: u } = t,
-        f = (0, a.Z)(),
-        Z = (0, d.Z)(u),
-        p = o.useRef(n),
-        g = (0, s.Z)(u.id, 'boolean' != typeof u.meta.horizontal || u.meta.horizontal);
+r.d(t, { default: () => s });
+var n = r(200651),
+    o = r(192379),
+    i = r(481060),
+    c = r(239091),
+    a = r(167675),
+    l = r(249453),
+    u = r(991249),
+    f = r(388032);
+function s(e) {
+    let { onSelect: t, onClose: r, widget: s } = e,
+        b = (0, a.Z)(),
+        p = (0, l.Z)(s),
+        y = o.useRef(r),
+        O = (0, u.Z)(s.id, 'boolean' != typeof s.meta.horizontal || s.meta.horizontal);
     return (
         o.useEffect(() => {
-            p.current = n;
+            y.current = r;
         }),
-        o.useEffect(() => () => p.current(), []),
-        (0, i.jsxs)(l.v2r, {
+        o.useEffect(() => () => y.current(), []),
+        (0, n.jsxs)(i.v2r, {
             navId: 'overlay-video-widget-context-menu',
-            onClose: r.Zy,
-            'aria-label': c.intl.string(c.t.tPfVWl),
-            onSelect: e,
-            children: [f, g, Z]
+            onClose: c.Zy,
+            'aria-label': f.NW.string(f.t.tPfVWl),
+            onSelect: t,
+            children: [b, O, p]
         })
     );
 }

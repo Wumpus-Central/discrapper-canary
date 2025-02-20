@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
-var i = n(570140),
-    l = n(211644);
-let r = {
+n.d(t, { Z: () => l });
+var r = n(570140),
+    i = n(211644);
+let l = {
     init() {
-        i.Z.subscribe('CONNECTION_OPEN', () => {
-            (0, l.mc)();
+        r.Z.subscribe('CONNECTION_OPEN', () => {
+            (0, i.mc)();
         }),
-            i.Z.subscribe('LOGOUT', () => {
-                (0, l.mc)();
+            r.Z.subscribe('LOGOUT', () => {
+                (0, i.mc)();
             });
     }
 };

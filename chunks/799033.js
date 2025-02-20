@@ -4,8 +4,8 @@ a.d(e, {
 });
 var r = a(157079),
     n = a(501684),
-    _ = a(868497),
-    o = a(696486),
+    o = a(868497),
+    _ = a(696486),
     i = a(73453),
     c = a(793373),
     s = a(152228),
@@ -50,8 +50,8 @@ function D(t, e) {
                     } catch (t) {
                         return !1;
                     }
-                    let _ = r.origin === n;
-                    return e ? (0, f.U0)(r.toString(), e) || (_ && (0, f.U0)(r.pathname, e)) : _;
+                    let o = r.origin === n;
+                    return e ? (0, f.U0)(r.toString(), e) || (o && (0, f.U0)(r.pathname, e)) : o;
                 }
                 {
                     let a = !!t.match(/^\/(?!\/)/);
@@ -80,7 +80,7 @@ function D(t, e) {
             }
         }),
         (0, R.Uf)((t) => {
-            let e = (0, _.m)(t, P, v, C);
+            let e = (0, o.m)(t, P, v, C);
             if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
                 let a = y(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
@@ -94,12 +94,12 @@ function D(t, e) {
         n &&
             (0, r.UK)((t) => {
                 let e = (function (t, e, a, n) {
-                    let _ = t.xhr,
-                        R = _ && _[r.xU];
-                    if (!_ || _.__sentry_own_request__ || !R) return;
+                    let o = t.xhr,
+                        R = o && o[r.xU];
+                    if (!o || o.__sentry_own_request__ || !R) return;
                     let A = (0, i.z)() && e(R.url);
                     if (t.endTimestamp && A) {
-                        let t = _.__sentry_xhr_span_id__;
+                        let t = o.__sentry_xhr_span_id__;
                         if (!t) return;
                         let e = n[t];
                         e && void 0 !== R.status_code && ((0, c.Q0)(e, R.status_code), e.end(), delete n[t]);
@@ -107,7 +107,7 @@ function D(t, e) {
                     }
                     let f = y(R.url),
                         N = f ? (0, d.en)(f).host : void 0,
-                        L = !!(0, o.HN)(),
+                        L = !!(0, _.HN)(),
                         h =
                             A && L
                                 ? (0, s.qp)({
@@ -123,17 +123,17 @@ function D(t, e) {
                                       }
                                   })
                                 : new l.b();
-                    (_.__sentry_xhr_span_id__ = h.spanContext().spanId), (n[_.__sentry_xhr_span_id__] = h);
+                    (o.__sentry_xhr_span_id__ = h.spanContext().spanId), (n[o.__sentry_xhr_span_id__] = h);
                     let O = (0, u.s3)();
                     return (
-                        _.setRequestHeader &&
+                        o.setRequestHeader &&
                             a(R.url) &&
                             O &&
                             (function (t, e, a) {
                                 let r = (0, u.nZ)(),
                                     {
                                         traceId: n,
-                                        spanId: _,
+                                        spanId: o,
                                         sampled: c,
                                         dsc: s
                                     } = {
@@ -144,8 +144,8 @@ function D(t, e) {
                                     try {
                                         t.setRequestHeader('sentry-trace', e), a && t.setRequestHeader(T.bU, a);
                                     } catch (t) {}
-                                })(t, a && (0, i.z)() ? (0, o.Hb)(a) : (0, p.$p)(n, _, c), (0, T.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(n, e))));
-                            })(_, O, (0, i.z)() && L ? h : void 0),
+                                })(t, a && (0, i.z)() ? (0, _.Hb)(a) : (0, p.$p)(n, o, c), (0, T.IQ)(s || (a ? (0, I.jC)(a) : (0, I._l)(n, e))));
+                            })(o, O, (0, i.z)() && L ? h : void 0),
                         h
                     );
                 })(t, P, v, C);
@@ -153,7 +153,7 @@ function D(t, e) {
             });
 }
 function g(t) {
-    let { url: e } = (0, o.XU)(t).data || {};
+    let { url: e } = (0, _.XU)(t).data || {};
     if (!e || 'string' != typeof e) return;
     let a = (0, n._j)('resource', ({ entries: r }) => {
         r.forEach((r) => {

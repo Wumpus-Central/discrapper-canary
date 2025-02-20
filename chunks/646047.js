@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-class i {
+n.d(t, { Z: () => i });
+class r {
     setActive(e) {
         return Promise.resolve();
     }
@@ -21,4 +21,4 @@ class i {
         return !1;
     }
 }
-let r = new i();
+let i = new r();

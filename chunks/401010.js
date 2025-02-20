@@ -1,7 +1,7 @@
-function i(e, t, n) {
-    var i = t.reduce(function (t, n) {
+function r(e, t, n) {
+    var r = t.reduce(function (t, n) {
         return t || e.getData(n);
     }, '');
-    return null != i ? i : n;
+    return null != r ? r : n;
 }
-n.d(t, { R: () => i });
+n.d(t, { R: () => r });

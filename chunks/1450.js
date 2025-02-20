@@ -1,104 +1,104 @@
-n.d(t, { Z: () => T });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(442837),
+n.d(t, { Z: () => O });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
     l = n(481060),
-    u = n(2052),
-    c = n(367907),
+    c = n(2052),
+    u = n(367907),
     d = n(906732),
     f = n(28546),
-    _ = n(26323),
-    p = n(434404),
+    p = n(26323),
+    _ = n(434404),
     h = n(357156),
     m = n(430824),
     g = n(267642),
     E = n(981631),
     v = n(30513),
-    y = n(388032),
-    I = n(408246);
-let T = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: b } = e,
-        { location: S } = (0, u.O)(),
-        { analyticsLocations: A } = (0, d.ZP)(),
-        N = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.XJ)(N),
-        R = null != N && 0 === (0, g.A3)(N.premiumTier) && !N.hasFeature(E.oNc.MORE_STICKERS);
+    b = n(388032),
+    y = n(741963);
+let O = (e) => {
+    let { className: t, guildId: n, channel: o, shouldTrackUpsellViewed: O, setTrackedUpsellViewed: S } = e,
+        { location: I } = (0, c.O)(),
+        { analyticsLocations: T } = (0, d.ZP)(),
+        N = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
+        { canManageAllExpressions: A } = (0, h.XJ)(N),
+        C = null != N && 0 === (0, g.A3)(N.premiumTier) && !N.hasFeature(E.oNc.MORE_STICKERS);
     if (
-        (r.useEffect(() => {
-            C &&
-                R &&
-                T &&
-                ((0, c.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                    location: S,
+        (i.useEffect(() => {
+            A &&
+                C &&
+                O &&
+                ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+                    location: I,
                     guild_id: null == N ? void 0 : N.id,
-                    channel_id: null == a ? void 0 : a.id,
+                    channel_id: null == o ? void 0 : o.id,
                     type: 'Expression Picker Inline Sticker Upsell',
-                    location_stack: A
+                    location_stack: T
                 }),
-                b(!0));
-        }, [R, N, a, S, T, b, A, C]),
-        null == N || !C)
+                S(!0));
+        }, [C, N, o, I, O, S, T, A]),
+        null == N || !A)
     )
         return null;
-    if (R) {
+    if (C) {
         let e = () => {
-            (0, _.Z)({
-                analyticsLocations: A,
-                analyticsSourceLocation: S,
+            (0, p.Z)({
+                analyticsLocations: T,
+                analyticsSourceLocation: I,
                 guild: N,
                 perks: (0, v.hC)()
             });
         };
-        return (0, i.jsxs)('div', {
-            className: s()(I.upsell, t),
+        return (0, r.jsxs)('div', {
+            className: a()(y.upsell, t),
             children: [
-                (0, i.jsx)(l.$zw, {
+                (0, r.jsx)(l.$zw, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.icon
+                    className: y.icon
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(l.Text, {
                     color: 'interactive-normal',
-                    className: I.body,
+                    className: y.body,
                     variant: 'text-sm/normal',
-                    children: y.intl.format(y.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
+                    children: b.NW.format(b.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                 }),
-                (0, i.jsx)(l.zxk, {
+                (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.LINK,
                     color: l.zxk.Colors.LINK,
                     onClick: e,
-                    children: y.intl.string(y.t['Gb+BJC'])
+                    children: b.NW.string(b.t['Gb+BJC'])
                 })
             ]
         });
     }
     {
         let e = () => {
-            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, S);
+            (0, f._Q)(), _.Z.open(n, E.pNK.STICKERS, I);
         };
-        return (0, i.jsxs)('div', {
-            className: s()(I.upsell, t),
+        return (0, r.jsxs)('div', {
+            className: a()(y.upsell, t),
             children: [
-                (0, i.jsx)(l.SlE, {
+                (0, r.jsx)(l.SlE, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: I.icon,
+                    className: y.icon,
                     width: 20,
                     height: 20
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(l.Text, {
                     color: 'interactive-normal',
-                    className: I.body,
+                    className: y.body,
                     variant: 'text-sm/normal',
-                    children: y.intl.string(y.t.S83wgo)
+                    children: b.NW.string(b.t.S83wgo)
                 }),
-                (0, i.jsx)(l.zxk, {
+                (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.LINK,
                     color: l.zxk.Colors.LINK,
                     onClick: e,
-                    children: y.intl.string(y.t.bwNjur)
+                    children: b.NW.string(b.t.bwNjur)
                 })
             ]
         });

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => b,
-    f: () => _
+    Z: () => _,
+    f: () => b
 }),
     n(47120);
 var i,
@@ -19,7 +19,7 @@ var i,
     v = n(572004),
     C = n(388032),
     E = n(250486);
-function m(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -44,7 +44,7 @@ function m(e) {
     }
     return e;
 }
-function O(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,13 +63,13 @@ function O(e, t) {
     );
 }
 var S = (((i = S || {})[(i.SMALL = 0)] = 'SMALL'), (i[(i.MEDIUM = 1)] = 'MEDIUM'), i);
-function b(e) {
-    let { tag: t, size: i = 1, disabled: o, className: S, onClick: b, onRemove: _, selected: I, ariaLabel: y } = e,
+function _(e) {
+    let { tag: t, size: i = 1, disabled: o, className: S, onClick: _, onRemove: b, selected: I, ariaLabel: y } = e,
         { name: N, emojiId: T, emojiName: P } = t,
-        w = null != _,
+        w = null != b,
         [A, j] = l.useState(!1),
         L = (0, u.e7)([p.ZP], () => (null != T ? p.ZP.getUsableCustomEmojiById(T) : null)),
-        D = w || null != b,
+        D = w || null != _,
         R = (!w || !A) && (null != T || null != P),
         Z = 0 === i,
         M = l.useRef(null),
@@ -80,7 +80,7 @@ function b(e) {
                 i &&
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
-                    return (n) => (0, r.jsx)(e, O(m({}, n), { tag: t }));
+                    return (n) => (0, r.jsx)(e, m(O({}, n), { tag: t }));
                 });
         },
         G = (0, r.jsxs)(r.Fragment, {
@@ -125,7 +125,7 @@ function b(e) {
                 S
             ),
             onClick: (e) => {
-                null == b || b(e), null == _ || _(t), U || null == M.current || M.current.blur();
+                null == _ || _(e), null == b || b(t), U || null == M.current || M.current.blur();
             },
             onContextMenu: (e) => x(e),
             onMouseEnter: () => w && j(!0),
@@ -135,9 +135,9 @@ function b(e) {
     return D
         ? (0, r.jsx)(
               d.P3F,
-              O(
-                  m(
-                      O(m({}, H), {
+              m(
+                  O(
+                      m(O({}, H), {
                           innerRef: M,
                           focusProps: { ringTarget: M },
                           'aria-label': null != y ? y : C.NW.formatToPlainString(C.t.iyRTLi, { tagName: N }),
@@ -149,9 +149,9 @@ function b(e) {
                   { children: G }
               )
           )
-        : (0, r.jsx)('div', O(m({}, F), { children: G }));
+        : (0, r.jsx)('div', m(O({}, F), { children: G }));
 }
-function _(e) {
+function b(e) {
     let { tags: t, count: n, size: i = 1 } = e,
         l = 0 === i;
     return (0, r.jsx)(d.ua7, {
@@ -159,11 +159,11 @@ function _(e) {
         text: (0, r.jsx)(r.Fragment, {
             children: t.map((e) =>
                 (0, r.jsx)(
-                    b,
+                    _,
                     {
                         tag: e,
                         className: E.tooltipPill,
-                        size: b.Sizes.SMALL
+                        size: _.Sizes.SMALL
                     },
                     e.id
                 )
@@ -172,7 +172,7 @@ function _(e) {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                O(m({}, e), {
+                m(O({}, e), {
                     className: s()(E.pill, { [E.small]: l }),
                     children: (0, r.jsxs)(d.Text, {
                         variant: l ? 'text-xs/semibold' : 'text-sm/semibold',
@@ -182,4 +182,4 @@ function _(e) {
             )
     });
 }
-b.Sizes = S;
+_.Sizes = S;

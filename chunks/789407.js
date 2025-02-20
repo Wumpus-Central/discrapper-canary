@@ -1,18 +1,18 @@
 n.d(t, {
-    XB: () => r,
-    ZP: () => s,
-    r9: () => o
+    XB: () => i,
+    ZP: () => o,
+    r9: () => s
 });
-var l = n(726542),
-    i = n(973616);
-let r = 'spotify',
-    a = l.Z.get(r);
-class s extends i.ZP {
+var r = n(726542),
+    l = n(973616);
+let i = 'spotify',
+    a = r.Z.get(i);
+class o extends l.ZP {
     getIconURL(e) {
         return a.icon.lightPNG;
     }
     constructor() {
-        super({}), (this.id = r), (this.name = a.name);
+        super({}), (this.id = i), (this.name = a.name);
     }
 }
-let o = new s();
+let s = new o();

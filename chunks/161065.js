@@ -54,10 +54,10 @@ var n = r(806998),
         });
     };
 t.exports = function (t, e, r, o) {
-    'replace' !== o || a(!1);
+    'replace' === o && a(!1);
     var s = r.getKey(),
         c = e.getKey();
-    c !== s || a(!1);
+    c === s && a(!1);
     var f = t.getBlockMap(),
         p = e instanceof n,
         h = [e],

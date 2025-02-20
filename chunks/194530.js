@@ -1,35 +1,35 @@
-s.d(e, { default: () => v }), s(47120);
+s.d(t, { default: () => v }), s(47120);
 var l = s(200651),
     n = s(192379),
-    i = s(442837),
-    o = s(481060),
+    o = s(442837),
+    i = s(481060),
     r = s(809206),
     a = s(118012),
     d = s(25990),
     c = s(155433),
     u = s(981631),
     x = s(388032),
-    h = s(609769);
-function v(t) {
-    var e, s, v, m;
-    let { transitionState: p, onSuccess: g, onClose: w, requirementsUpdated: _, noSkip: f = !1 } = t,
-        [j, k] = n.useState(''),
+    h = s(518347);
+function v(e) {
+    var t, s, v, N;
+    let { transitionState: m, onSuccess: p, onClose: g, requirementsUpdated: w, noSkip: _ = !1 } = e,
+        [f, j] = n.useState(''),
+        [W, k] = n.useState(''),
         [C, E] = n.useState(''),
-        [z, N] = n.useState(''),
-        [S, b] = n.useState(null),
-        [R, T] = n.useState(null),
-        Z = (0, i.e7)([d.Z], () => d.Z.getErrors()),
-        I = (0, i.e7)([d.Z], () => d.Z.getFormState()),
-        P = n.useRef(null);
-    async function y(t) {
-        t.preventDefault(), (0, r.b9)();
-        let e = !1;
-        if (('' === C ? (b(x.intl.string(x.t['/7/oPT'])), (e = !0)) : b(null), C !== z ? (T(x.intl.string(x.t.IEKYZ2)), (e = !0)) : T(null), e)) return;
+        [z, S] = n.useState(null),
+        [b, R] = n.useState(null),
+        T = (0, o.e7)([d.Z], () => d.Z.getErrors()),
+        Z = (0, o.e7)([d.Z], () => d.Z.getFormState()),
+        I = n.useRef(null);
+    async function P(e) {
+        e.preventDefault(), (0, r.b9)();
+        let t = !1;
+        if (('' === W ? (S(x.NW.string(x.t['/7/oPT'])), (t = !0)) : S(null), W !== C ? (R(x.NW.string(x.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let s = await (0, r.Mn)({
-            password: j,
-            newPassword: C
+            password: f,
+            newPassword: W
         });
-        if (null == s ? void 0 : s.ok) g();
+        if (null == s ? void 0 : s.ok) p();
         else {
             var l;
             (null == s ? void 0 : null === (l = s.body) || void 0 === l ? void 0 : l.username) != null && (0, c.P)();
@@ -37,15 +37,15 @@ function v(t) {
     }
     return (
         n.useEffect(() => {
-            if (p === o.Dvm.ENTERED) {
-                var t;
-                null === (t = P.current) || void 0 === t || t.focus();
+            if (m === i.Dvm.ENTERED) {
+                var e;
+                null === (e = I.current) || void 0 === e || e.focus();
             }
-        }, [p]),
-        (0, l.jsxs)(o.Y0X, {
-            transitionState: p,
+        }, [m]),
+        (0, l.jsxs)(i.Y0X, {
+            transitionState: m,
             children: [
-                (0, l.jsxs)(o.xBx, {
+                (0, l.jsxs)(i.xBx, {
                     separator: !1,
                     className: h.header,
                     children: [
@@ -53,75 +53,75 @@ function v(t) {
                             color: a.Z.Colors.HEADER_PRIMARY,
                             size: a.Z.Sizes.SIZE_24,
                             className: h.title,
-                            children: x.intl.string(x.t['geta7+'])
+                            children: x.NW.string(x.t['geta7+'])
                         }),
-                        (0, l.jsx)(o.Text, {
+                        (0, l.jsx)(i.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: h.subtitle,
-                            children: _ ? x.intl.string(x.t['37iHbW']) : x.intl.string(x.t.iOurYm)
+                            children: w ? x.NW.string(x.t['37iHbW']) : x.NW.string(x.t.iOurYm)
                         }),
-                        !0 !== f &&
-                            (0, l.jsx)(o.olH, {
-                                onClick: w,
+                        !0 !== _ &&
+                            (0, l.jsx)(i.olH, {
+                                onClick: g,
                                 className: h.modalCloseButton
                             })
                     ]
                 }),
                 (0, l.jsxs)('form', {
-                    onSubmit: y,
+                    onSubmit: P,
                     children: [
-                        (0, l.jsxs)(o.hzk, {
+                        (0, l.jsxs)(i.hzk, {
                             className: h.content,
                             children: [
-                                (0, l.jsx)(o.xJW, {
-                                    title: x.intl.string(x.t.WBqMRU),
-                                    error: null == Z ? void 0 : null === (e = Z.password) || void 0 === e ? void 0 : e[0],
-                                    children: (0, l.jsx)(o.oil, {
+                                (0, l.jsx)(i.xJW, {
+                                    title: x.NW.string(x.t.WBqMRU),
+                                    error: null == T ? void 0 : null === (t = T.password) || void 0 === t ? void 0 : t[0],
+                                    children: (0, l.jsx)(i.oil, {
                                         type: 'password',
-                                        value: j,
-                                        onChange: k,
-                                        inputRef: P
+                                        value: f,
+                                        onChange: j,
+                                        inputRef: I
                                     })
                                 }),
-                                (0, l.jsx)(o.xJW, {
+                                (0, l.jsx)(i.xJW, {
                                     className: h.newPassword,
-                                    title: x.intl.string(x.t['8dM4FB']),
-                                    error: null !== (m = null !== (v = null == Z ? void 0 : null === (s = Z.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== v ? v : S) && void 0 !== m ? m : void 0,
-                                    children: (0, l.jsx)(o.oil, {
+                                    title: x.NW.string(x.t['8dM4FB']),
+                                    error: null !== (N = null !== (v = null == T ? void 0 : null === (s = T.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== v ? v : z) && void 0 !== N ? N : void 0,
+                                    children: (0, l.jsx)(i.oil, {
+                                        type: 'password',
+                                        value: W,
+                                        onChange: k
+                                    })
+                                }),
+                                (0, l.jsx)(i.xJW, {
+                                    className: h.newPassword,
+                                    title: x.NW.string(x.t.iQG2KC),
+                                    error: null != b ? b : void 0,
+                                    children: (0, l.jsx)(i.oil, {
                                         type: 'password',
                                         value: C,
                                         onChange: E
                                     })
-                                }),
-                                (0, l.jsx)(o.xJW, {
-                                    className: h.newPassword,
-                                    title: x.intl.string(x.t.iQG2KC),
-                                    error: null != R ? R : void 0,
-                                    children: (0, l.jsx)(o.oil, {
-                                        type: 'password',
-                                        value: z,
-                                        onChange: N
-                                    })
                                 })
                             ]
                         }),
-                        (0, l.jsxs)(o.mzw, {
+                        (0, l.jsxs)(i.mzw, {
                             children: [
-                                (0, l.jsx)(o.zxk, {
+                                (0, l.jsx)(i.zxk, {
                                     type: 'submit',
-                                    color: o.zxk.Colors.BRAND,
-                                    size: o.zxk.Sizes.MEDIUM,
-                                    submitting: I === u.QZA.SUBMITTING,
-                                    children: x.intl.string(x.t.i4jeWV)
+                                    color: i.zxk.Colors.BRAND,
+                                    size: i.zxk.Sizes.MEDIUM,
+                                    submitting: Z === u.QZA.SUBMITTING,
+                                    children: x.NW.string(x.t.i4jeWV)
                                 }),
-                                !0 !== f &&
-                                    (0, l.jsx)(o.zxk, {
+                                !0 !== _ &&
+                                    (0, l.jsx)(i.zxk, {
                                         className: h.cancel,
-                                        look: o.zxk.Looks.LINK,
-                                        color: o.zxk.Colors.PRIMARY,
-                                        onClick: w,
-                                        children: x.intl.string(x.t['ETE/oK'])
+                                        look: i.zxk.Looks.LINK,
+                                        color: i.zxk.Colors.PRIMARY,
+                                        onClick: g,
+                                        children: x.NW.string(x.t['ETE/oK'])
                                     })
                             ]
                         })

@@ -6,13 +6,13 @@ var r = n(481060),
     o = n(488131),
     t = n(124368),
     i = n(388032),
-    l = n(937256);
+    l = n(996796);
 function d(e) {
     let { guildId: a, onClose: n, transitionState: d } = e;
     return (0, s.jsx)(r.Y0X, {
         className: l.modal,
         transitionState: d,
-        'aria-label': i.intl.string(i.t.B2panJ),
+        'aria-label': i.NW.string(i.t.B2panJ),
         size: r.CgR.DYNAMIC,
         children: (0, s.jsxs)('div', {
             className: l.container,
@@ -28,13 +28,13 @@ function d(e) {
                         (0, s.jsx)(r.X6q, {
                             variant: 'heading-md/semibold',
                             className: l.__invalid_title,
-                            children: i.intl.string(i.t['dOWb+f'])
+                            children: i.NW.string(i.t['dOWb+f'])
                         }),
                         (0, s.jsx)('div', { className: l.spacer }),
                         (0, s.jsx)(r.P3F, {
                             className: l.closeIcon,
                             onClick: n,
-                            'aria-label': i.intl.string(i.t.cpT0Cg),
+                            'aria-label': i.NW.string(i.t.cpT0Cg),
                             children: (0, s.jsx)(r.Dio, {
                                 size: 'md',
                                 color: 'currentColor'

@@ -1,7 +1,7 @@
-var i = n(108101),
-    r = 1,
-    a = 4;
-function s(e) {
-    return i(e, r | a);
+var r = n(108101),
+    i = 1,
+    o = 4;
+function a(e) {
+    return r(e, i | o);
 }
-e.exports = s;
+e.exports = a;

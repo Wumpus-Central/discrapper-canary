@@ -1,9 +1,9 @@
 n.d(t, {
-    Am: () => i,
-    ZP: () => a,
-    aW: () => r
+    Am: () => r,
+    ZP: () => o,
+    aW: () => i
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2023-06_bogo_promotion_gate',
         label: 'BOGO Promotion Manager',
@@ -16,11 +16,11 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = function () {
+    i = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return i.getCurrentConfig({ location: '489551_2' }, { autoTrackExposure: e });
+        return r.getCurrentConfig({ location: '489551_2' }, { autoTrackExposure: e });
     },
-    a = function () {
+    o = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return i.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
+        return r.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
     };

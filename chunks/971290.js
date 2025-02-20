@@ -1,18 +1,18 @@
 function t(e) {
     let t = e.regex,
         n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        i = {
+        r = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
             contains: ['self', e.C_NUMBER_MODE, n]
         },
-        r = e.COMMENT(/--/, /$/),
-        a = e.COMMENT(/\(\*/, /\*\)/, {
-            contains: ['self', r]
+        i = e.COMMENT(/--/, /$/),
+        o = e.COMMENT(/\(\*/, /\*\)/, {
+            contains: ['self', i]
         }),
-        s = [r, a, e.HASH_COMMENT_MODE],
-        o = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
+        a = [i, o, e.HASH_COMMENT_MODE],
+        s = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
         l = [/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/];
     return {
         name: 'AppleScript',
@@ -39,14 +39,14 @@ function t(e) {
             },
             {
                 className: 'keyword',
-                begin: t.concat(/\b/, t.either(...o), /\b/)
+                begin: t.concat(/\b/, t.either(...s), /\b/)
             },
             {
                 beginKeywords: 'on',
                 illegal: /[${=;\n]/,
-                contains: [e.UNDERSCORE_TITLE_MODE, i]
+                contains: [e.UNDERSCORE_TITLE_MODE, r]
             },
-            ...s
+            ...a
         ],
         illegal: /\/\/|->|=>|\[\[/
     };

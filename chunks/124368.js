@@ -1,25 +1,25 @@
 n.d(t, {
-    AX: () => a,
-    M3: () => o,
-    RN: () => p,
-    SX: () => _,
-    dg: () => u,
+    AX: () => o,
+    M3: () => s,
+    RN: () => _,
+    SX: () => p,
+    dg: () => c,
     fZ: () => h,
-    iN: () => c,
+    iN: () => u,
     on: () => d,
-    vw: () => s,
+    vw: () => a,
     yX: () => l,
     zb: () => f
 }),
     n(47120);
-var i = n(981631),
-    r = n(388032);
-let a = 4320,
-    s = 50,
-    o = 100000,
+var r = n(981631),
+    i = n(388032);
+let o = 4320,
+    a = 50,
+    s = 100000,
     l = 50,
-    u = 25,
-    c = {
+    c = 25,
+    u = {
         HAS_INTERACTED: 1,
         ALL_MESSAGES: 2,
         ONLY_MENTIONS: 4,
@@ -31,21 +31,21 @@ var d = (function (e) {
 function f() {
     return [
         {
-            setting: c.ALL_MESSAGES,
-            label: r.intl.string(r.t['n/bTaW'])
+            setting: u.ALL_MESSAGES,
+            label: i.NW.string(i.t['n/bTaW'])
         },
         {
-            setting: c.ONLY_MENTIONS,
-            label: r.intl.format(r.t.L2hmY2, {})
+            setting: u.ONLY_MENTIONS,
+            label: i.NW.format(i.t.L2hmY2, {})
         },
         {
-            setting: c.NO_MESSAGES,
-            label: r.intl.string(r.t.CtVGyc)
+            setting: u.NO_MESSAGES,
+            label: i.NW.string(i.t.CtVGyc)
         }
     ];
 }
-var _ = (function (e) {
+var p = (function (e) {
     return (e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation'), e;
 })({});
-let p = new Set([i.evJ.TOO_MANY_ATTACHMENTS, i.evJ.EXPLICIT_CONTENT, i.evJ.ENTITY_TOO_LARGE, i.evJ.EXPLICIT_CONTENT]),
-    h = new Set([i.evJ.AUTOMOD_MESSAGE_BLOCKED, i.evJ.AUTOMOD_TITLE_BLOCKED]);
+let _ = new Set([r.evJ.TOO_MANY_ATTACHMENTS, r.evJ.EXPLICIT_CONTENT, r.evJ.ENTITY_TOO_LARGE, r.evJ.EXPLICIT_CONTENT]),
+    h = new Set([r.evJ.AUTOMOD_MESSAGE_BLOCKED, r.evJ.AUTOMOD_TITLE_BLOCKED]);

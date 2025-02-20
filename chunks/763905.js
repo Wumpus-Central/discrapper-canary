@@ -1,33 +1,33 @@
 !(function (e, t) {
     t(n(913527));
 })(0, function (e) {
-    function t(e, t, n, i) {
-        var r = e + ' ';
+    function t(e, t, n, r) {
+        var i = e + ' ';
         switch (n) {
             case 's':
-                return t || i ? 'nekaj sekund' : 'nekaj sekundami';
+                return t || r ? 'nekaj sekund' : 'nekaj sekundami';
             case 'ss':
-                return 1 === e ? (r += t ? 'sekundo' : 'sekundi') : 2 === e ? (r += t || i ? 'sekundi' : 'sekundah') : e < 5 ? (r += t || i ? 'sekunde' : 'sekundah') : (r += 'sekund'), r;
+                return 1 === e ? (i += t ? 'sekundo' : 'sekundi') : 2 === e ? (i += t || r ? 'sekundi' : 'sekundah') : e < 5 ? (i += t || r ? 'sekunde' : 'sekundah') : (i += 'sekund'), i;
             case 'm':
                 return t ? 'ena minuta' : 'eno minuto';
             case 'mm':
-                return 1 === e ? (r += t ? 'minuta' : 'minuto') : 2 === e ? (r += t || i ? 'minuti' : 'minutama') : e < 5 ? (r += t || i ? 'minute' : 'minutami') : (r += t || i ? 'minut' : 'minutami'), r;
+                return 1 === e ? (i += t ? 'minuta' : 'minuto') : 2 === e ? (i += t || r ? 'minuti' : 'minutama') : e < 5 ? (i += t || r ? 'minute' : 'minutami') : (i += t || r ? 'minut' : 'minutami'), i;
             case 'h':
                 return t ? 'ena ura' : 'eno uro';
             case 'hh':
-                return 1 === e ? (r += t ? 'ura' : 'uro') : 2 === e ? (r += t || i ? 'uri' : 'urama') : e < 5 ? (r += t || i ? 'ure' : 'urami') : (r += t || i ? 'ur' : 'urami'), r;
+                return 1 === e ? (i += t ? 'ura' : 'uro') : 2 === e ? (i += t || r ? 'uri' : 'urama') : e < 5 ? (i += t || r ? 'ure' : 'urami') : (i += t || r ? 'ur' : 'urami'), i;
             case 'd':
-                return t || i ? 'en dan' : 'enim dnem';
+                return t || r ? 'en dan' : 'enim dnem';
             case 'dd':
-                return 1 === e ? (r += t || i ? 'dan' : 'dnem') : 2 === e ? (r += t || i ? 'dni' : 'dnevoma') : (r += t || i ? 'dni' : 'dnevi'), r;
+                return 1 === e ? (i += t || r ? 'dan' : 'dnem') : 2 === e ? (i += t || r ? 'dni' : 'dnevoma') : (i += t || r ? 'dni' : 'dnevi'), i;
             case 'M':
-                return t || i ? 'en mesec' : 'enim mesecem';
+                return t || r ? 'en mesec' : 'enim mesecem';
             case 'MM':
-                return 1 === e ? (r += t || i ? 'mesec' : 'mesecem') : 2 === e ? (r += t || i ? 'meseca' : 'mesecema') : e < 5 ? (r += t || i ? 'mesece' : 'meseci') : (r += t || i ? 'mesecev' : 'meseci'), r;
+                return 1 === e ? (i += t || r ? 'mesec' : 'mesecem') : 2 === e ? (i += t || r ? 'meseca' : 'mesecema') : e < 5 ? (i += t || r ? 'mesece' : 'meseci') : (i += t || r ? 'mesecev' : 'meseci'), i;
             case 'y':
-                return t || i ? 'eno leto' : 'enim letom';
+                return t || r ? 'eno leto' : 'enim letom';
             case 'yy':
-                return 1 === e ? (r += t || i ? 'leto' : 'letom') : 2 === e ? (r += t || i ? 'leti' : 'letoma') : e < 5 ? (r += t || i ? 'leta' : 'leti') : (r += t || i ? 'let' : 'leti'), r;
+                return 1 === e ? (i += t || r ? 'leto' : 'letom') : 2 === e ? (i += t || r ? 'leti' : 'letoma') : e < 5 ? (i += t || r ? 'leta' : 'leti') : (i += t || r ? 'let' : 'leti'), i;
         }
     }
     return e.defineLocale('sl', {

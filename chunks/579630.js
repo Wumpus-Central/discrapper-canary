@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var i = n(834353),
-    r = n(802856);
-function a(e) {
-    return (0, r.Z)(e) || (0, i.Z)(e);
+n.d(t, { Z: () => o });
+var r = n(834353),
+    i = n(802856);
+function o(e) {
+    return (0, i.Z)(e) || (0, r.Z)(e);
 }

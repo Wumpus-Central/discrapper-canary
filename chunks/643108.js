@@ -71,9 +71,9 @@
         ordinal: function (e) {
             if (0 === e) return e + '-ıncı';
             var n = e % 10,
-                i = (e % 100) - n,
-                r = e >= 100 ? 100 : null;
-            return e + (t[n] || t[i] || t[r]);
+                r = (e % 100) - n,
+                i = e >= 100 ? 100 : null;
+            return e + (t[n] || t[r] || t[i]);
         },
         week: {
             dow: 1,

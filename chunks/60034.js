@@ -1,22 +1,22 @@
-a.d(l, { R: () => c });
-var s = a(200651);
-a(192379);
-var n = a(120356),
-    i = a.n(n),
-    t = a(686546),
-    r = a(624138),
-    d = a(499556);
-function c(e) {
-    let { guildName: l, iconSize: a, className: n } = e,
-        c = (0, r.Zg)(l);
-    return (0, s.jsx)(t.ZP, {
-        mask: t.ZP.Masks.CLAN_ICON,
-        width: a,
-        height: a,
-        className: n,
-        children: (0, s.jsx)('div', {
-            className: i()(d.guildIconImage, d.acronym),
-            children: c
+n.d(t, { R: () => o });
+var r = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    s = n(686546),
+    i = n(624138),
+    c = n(889230);
+function o(e) {
+    let { guildName: t, iconSize: n, className: l } = e,
+        o = (0, i.Zg)(t);
+    return (0, r.jsx)(s.ZP, {
+        mask: s.ZP.Masks.CLAN_ICON,
+        width: n,
+        height: n,
+        className: l,
+        children: (0, r.jsx)('div', {
+            className: a()(c.guildIconImage, c.acronym),
+            children: o
         })
     });
 }

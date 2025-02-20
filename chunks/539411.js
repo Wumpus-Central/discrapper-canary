@@ -8,7 +8,7 @@ function t(e) {
             built_in: ['dispatch_once_t', 'dispatch_queue_t', 'dispatch_sync', 'dispatch_async', 'dispatch_once'],
             type: ['int', 'float', 'char', 'unsigned', 'signed', 'short', 'long', 'double', 'wchar_t', 'unichar', 'void', 'bool', 'BOOL', 'id|0', '_Bool']
         },
-        i = {
+        r = {
             $pattern: t,
             keyword: ['@interface', '@class', '@protocol', '@implementation']
         };
@@ -61,10 +61,10 @@ function t(e) {
             },
             {
                 className: 'class',
-                begin: '(' + i.keyword.join('|') + ')\\b',
+                begin: '(' + r.keyword.join('|') + ')\\b',
                 end: /(\{|$)/,
                 excludeEnd: !0,
-                keywords: i,
+                keywords: r,
                 contains: [e.UNDERSCORE_TITLE_MODE]
             },
             {

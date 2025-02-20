@@ -3,11 +3,11 @@ var i = r(200651),
     t = r(192379),
     s = r(481060),
     c = r(388032),
-    o = r(769110);
+    o = r(381465);
 function a(n) {
     let { transitionState: e, onClose: r, title: a, body: l, cta: d, closeLabel: h, onConfirm: x, iconVariant: u = 'warning' } = n,
         [g, k] = t.useState(!1),
-        z = null != a ? a : c.intl.string(c.t.HMrgcn);
+        z = null != a ? a : c.NW.string(c.t.HMrgcn);
     return (0, i.jsxs)(s.Y0X, {
         size: s.CgR.DYNAMIC,
         transitionState: e,

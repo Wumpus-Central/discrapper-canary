@@ -1,64 +1,64 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(481060),
-    a = n(388032),
-    o = n(362995);
+var i = n(120356),
+    s = n.n(i),
+    a = n(481060),
+    l = n(388032),
+    o = n(859050);
 function c(e) {
-    let { className: t, enabled: n, previewCTA: r, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: h, disabled: g } = e;
-    return (0, i.jsxs)('div', {
-        className: l()(t, o.enableContainer),
+    let { className: t, enabled: n, previewCTA: i, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: p, disabled: g } = e;
+    return (0, r.jsxs)('div', {
+        className: s()(t, o.enableContainer),
         children: [
             n
-                ? (0, i.jsx)(s.dz2, {
+                ? (0, r.jsx)(a.dz2, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.activeCircle, { [o.animate]: u })
+                      className: s()(o.activeCircle, { [o.animate]: u })
                   })
-                : (0, i.jsx)(s.vdY, {
+                : (0, r.jsx)(a.vdY, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: l()(o.editCircle, { [o.animate]: u })
+                      className: s()(o.editCircle, { [o.animate]: u })
                   }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.enableDescription,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         children: m
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: h
+                        children: p
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
                     null == c
                         ? null
-                        : (0, i.jsx)(s.zxk, {
+                        : (0, r.jsx)(a.zxk, {
                               className: o.previewButton,
-                              look: s.zxk.Looks.LINK,
-                              size: s.zxk.Sizes.SMALL,
+                              look: a.zxk.Looks.LINK,
+                              size: a.zxk.Sizes.SMALL,
                               onClick: c,
                               disabled: g,
-                              color: s.zxk.Colors.PRIMARY,
-                              children: null != r ? r : a.intl.string(a.t['5U0kLy'])
+                              color: a.zxk.Colors.PRIMARY,
+                              children: null != i ? i : l.NW.string(l.t['5U0kLy'])
                           }),
-                    (0, i.jsx)(s.zxk, {
+                    (0, r.jsx)(a.zxk, {
                         disabled: null == d || g,
-                        size: s.zxk.Sizes.SMALL,
-                        color: n ? s.zxk.Colors.RED : s.zxk.Colors.BRAND,
+                        size: a.zxk.Sizes.SMALL,
+                        color: n ? a.zxk.Colors.RED : a.zxk.Colors.BRAND,
                         onClick: d,
-                        children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
+                        children: n ? l.NW.string(l.t.R9GHyc) : l.NW.string(l.t.JFfinp)
                     })
                 ]
             })

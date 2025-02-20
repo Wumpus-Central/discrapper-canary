@@ -1,40 +1,40 @@
 n.d(t, {
-    Cj: () => p,
-    M$: () => m,
-    Zw: () => h
+    Cj: () => g,
+    M$: () => h,
+    Zw: () => p
 }),
     n(789020);
-var i = n(570140),
-    l = n(728345),
-    r = n(812206),
-    a = n(973616),
-    s = n(314897),
-    o = n(630388),
-    d = n(774226),
-    c = n(317381),
-    u = n(981631);
-async function h(e) {
+var r = n(570140),
+    i = n(728345),
+    l = n(812206),
+    o = n(973616),
+    a = n(314897),
+    s = n(630388),
+    c = n(774226),
+    u = n(317381),
+    d = n(981631);
+async function p(e) {
     var t, n;
-    let { applicationId: h, socketId: g } = e,
-        _ = c.ZP.getCurrentEmbeddedActivity();
-    if ((null == _ ? void 0 : _.applicationId) !== h) return;
-    let f = _.compositeInstanceId,
-        E = null !== (t = r.Z.getApplication(h)) && void 0 !== t ? t : a.ZP.createFromServer(await l.ZP.fetchApplication(h));
-    if (!(0, d.Kb)(E) || null == f || null == E || !(0, o.yE)(E.flags, u.udG.EMBEDDED)) return;
-    let I = {
+    let { applicationId: p, socketId: f } = e,
+        m = u.ZP.getCurrentEmbeddedActivity();
+    if ((null == m ? void 0 : m.applicationId) !== p) return;
+    let b = m.compositeInstanceId,
+        _ = null !== (t = l.Z.getApplication(p)) && void 0 !== t ? t : o.ZP.createFromServer(await i.ZP.fetchApplication(p));
+    if (!(0, c.Kb)(_) || null == b || null == _ || !(0, s.yE)(_.flags, d.udG.EMBEDDED)) return;
+    let E = {
         type: 0,
-        session_id: null !== (n = s.default.getSessionId()) && void 0 !== n ? n : void 0,
-        name: E.name,
-        application_id: h,
-        secrets: { join: f },
-        party: { size: m },
-        flags: p
+        session_id: null !== (n = a.default.getSessionId()) && void 0 !== n ? n : void 0,
+        name: _.name,
+        application_id: p,
+        secrets: { join: b },
+        party: { size: h },
+        flags: g
     };
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'LOCAL_ACTIVITY_UPDATE',
-        socketId: g,
-        activity: I
+        socketId: f,
+        activity: E
     });
 }
-let m = [1, 100],
-    p = u.xjy.JOIN | u.xjy.PARTY_PRIVACY_FRIENDS | u.xjy.PARTY_PRIVACY_VOICE_CHANNEL | u.xjy.EMBEDDED | u.xjy.CONTEXTLESS;
+let h = [1, 100],
+    g = d.xjy.JOIN | d.xjy.PARTY_PRIVACY_FRIENDS | d.xjy.PARTY_PRIVACY_VOICE_CHANNEL | d.xjy.EMBEDDED | d.xjy.CONTEXTLESS;

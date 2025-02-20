@@ -1,10 +1,10 @@
 n.d(t, {
-    S: () => a,
-    V: () => r
+    S: () => o,
+    V: () => l
 });
-var i = n(818083),
-    l = n(987338);
-let r = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-02_optimized_rpc_authorize',
     label: 'Optimized RPC Authorization Experiment',
@@ -16,8 +16,8 @@ let r = (0, i.B)({
             config: { enabled: !0 }
         }
     ],
-    commonTriggerPoint: l.$P.CONNECTION_OPEN
+    commonTriggerPoint: i.$P.CONNECTION_OPEN
 });
-function a() {
-    return r.getCurrentConfig({ location: 'isOptimizedRPCAuthorizeEnabled' }).enabled;
+function o() {
+    return l.getCurrentConfig({ location: 'isOptimizedRPCAuthorizeEnabled' }).enabled;
 }

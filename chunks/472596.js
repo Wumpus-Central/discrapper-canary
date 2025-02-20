@@ -1,62 +1,62 @@
 n.d(t, {
     RE: () => _,
     RN: () => A,
-    po: () => I,
+    po: () => N,
     vN: () => d,
-    xb: () => N,
+    xb: () => I,
     zq: () => T
 });
 var r,
     l = n(192379),
-    i = n(399606),
-    a = n(906732),
-    s = n(171368),
-    o = n(430824),
+    a = n(399606),
+    i = n(906732),
+    o = n(171368),
+    s = n(430824),
     E = n(594174),
-    u = n(91047),
-    c = n(981631);
+    c = n(91047),
+    u = n(981631);
 let _ = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
-    (0, s.openUserProfileModal)({
+    (0, o.openUserProfileModal)({
         userId: r,
         guildId: n,
         sourceAnalyticsLocations: t,
         roleId: l,
         analyticsLocation: {
-            section: c.jXE.MEMBER_SAFETY_PAGE,
-            object: c.qAy.ACTIONED_BY_USER
+            section: u.jXE.MEMBER_SAFETY_PAGE,
+            object: u.qAy.ACTIONED_BY_USER
         }
     });
 };
 function d(e, t, n, r) {
-    let { analyticsLocations: i } = (0, a.ZP)();
-    return l.useCallback(
-        (l) => {
-            if (null == e) return;
-            let a = E.default.getUser(e.userId);
-            null != a &&
-                (l.stopPropagation(),
-                (0, u.nm)(l, {
-                    user: a,
-                    guildId: e.guildId,
-                    analyticsLocations: null != n ? [n] : i,
-                    onCloseContextMenu: r,
-                    isViewOnly: t
-                }));
-        },
-        [e, i, r, n, t]
-    );
-}
-function A(e, t, n) {
-    let { analyticsLocations: r } = (0, a.ZP)();
+    let { analyticsLocations: a } = (0, i.ZP)();
     return l.useCallback(
         (l) => {
             if (null == e) return;
             let i = E.default.getUser(e.userId);
             null != i &&
                 (l.stopPropagation(),
-                (0, u._j)(l, {
+                (0, c.nm)(l, {
                     user: i,
+                    guildId: e.guildId,
+                    analyticsLocations: null != n ? [n] : a,
+                    onCloseContextMenu: r,
+                    isViewOnly: t
+                }));
+        },
+        [e, a, r, n, t]
+    );
+}
+function A(e, t, n) {
+    let { analyticsLocations: r } = (0, i.ZP)();
+    return l.useCallback(
+        (l) => {
+            if (null == e) return;
+            let a = E.default.getUser(e.userId);
+            null != a &&
+                (l.stopPropagation(),
+                (0, c._j)(l, {
+                    user: a,
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : r,
                     onCloseContextMenu: n,
@@ -67,18 +67,18 @@ function A(e, t, n) {
     );
 }
 function T(e) {
-    return (0, i.e7)(
-        [o.Z],
+    return (0, a.e7)(
+        [s.Z],
         () => {
             var t;
             if (null == e) return null;
-            let n = o.Z.getGuild(e.guildId);
-            return null == n || null == e.highestRoleId ? null : null !== (t = o.Z.getRole(n.id, e.highestRoleId)) && void 0 !== t ? t : null;
+            let n = s.Z.getGuild(e.guildId);
+            return null == n || null == e.highestRoleId ? null : null !== (t = s.Z.getRole(n.id, e.highestRoleId)) && void 0 !== t ? t : null;
         },
         [e]
     );
 }
-var I = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
-function N(e, t, n) {
+var N = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
+function I(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }

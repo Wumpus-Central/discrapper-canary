@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let i = 32;
-function r(e, t) {
-    return ''.concat(e.toLowerCase().padEnd(i, '!')).concat(t.id);
+n.d(t, { Z: () => i });
+let r = 32;
+function i(e, t) {
+    return ''.concat(e.toLowerCase().padEnd(r, '!')).concat(t.id);
 }

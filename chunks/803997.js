@@ -1,15 +1,15 @@
 !(function () {
     var t = {}.hasOwnProperty;
     function n() {
-        for (var e = [], i = 0; i < arguments.length; i++) {
-            var r = arguments[i];
-            if (r) {
-                var a = typeof r;
-                if ('string' === a || 'number' === a) e.push(r);
-                else if (Array.isArray(r) && r.length) {
-                    var s = n.apply(null, r);
-                    s && e.push(s);
-                } else if ('object' === a) for (var o in r) t.call(r, o) && r[o] && e.push(o);
+        for (var e = [], r = 0; r < arguments.length; r++) {
+            var i = arguments[r];
+            if (i) {
+                var o = typeof i;
+                if ('string' === o || 'number' === o) e.push(i);
+                else if (Array.isArray(i) && i.length) {
+                    var a = n.apply(null, i);
+                    a && e.push(a);
+                } else if ('object' === o) for (var s in i) t.call(i, s) && i[s] && e.push(s);
             }
         }
         return e.join(' ');

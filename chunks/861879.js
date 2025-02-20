@@ -1,3 +1,3 @@
-var i = n(227956),
-    r = n(49041)(i);
-e.exports = r;
+var r = n(227956),
+    i = n(49041)(r);
+e.exports = i;

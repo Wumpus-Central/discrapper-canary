@@ -1,4 +1,4 @@
-l.d(t, { default: () => h }), l(47120);
+l.d(t, { default: () => h }), l(474991), l(398202), l(301563), l(47120);
 var s = l(200651),
     n = l(192379),
     i = l(990547),
@@ -6,21 +6,21 @@ var s = l(200651),
     r = l(479531),
     a = l(213609),
     u = l(388032),
-    c = l(875068);
+    c = l(388331);
 let d = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
 function h(e) {
     let { transitionState: t, onFormSubmit: l, onSuccess: h, onClose: x, headerText: p, confirmButtonText: k, confirmButtonColor: m, impressionName: f } = e,
         [j, g] = n.useState(!1),
         [z, A] = n.useState(''),
         [C, _] = n.useState(null),
-        Z = n.useRef(null);
+        N = n.useRef(null);
     (0, a.Z)({
         type: i.ImpressionTypes.MODAL,
         name: f
     });
-    let y = async (e) => {
+    let Z = async (e) => {
         if ((e.preventDefault(), _(null), g(!0), !1 === d.test(z))) {
-            _(u.intl.string(u.t.hML7Gx)), g(!1);
+            _(u.NW.string(u.t.hML7Gx)), g(!1);
             return;
         }
         try {
@@ -42,7 +42,7 @@ function h(e) {
     return (0, s.jsx)(o.Y0X, {
         transitionState: t,
         children: (0, s.jsxs)('form', {
-            onSubmit: y,
+            onSubmit: Z,
             children: [
                 (0, s.jsxs)(o.xBx, {
                     separator: !1,
@@ -61,12 +61,12 @@ function h(e) {
                 }),
                 (0, s.jsx)(o.hzk, {
                     children: (0, s.jsx)(o.xJW, {
-                        title: u.intl.string(u.t.hvOfmJ),
+                        title: u.NW.string(u.t.hvOfmJ),
                         error: C,
                         children: (0, s.jsx)(o.oil, {
                             value: z,
                             onChange: A,
-                            inputRef: Z
+                            inputRef: N
                         })
                     })
                 }),
@@ -83,7 +83,7 @@ function h(e) {
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
                             onClick: x,
-                            children: u.intl.string(u.t['ETE/oK'])
+                            children: u.NW.string(u.t['ETE/oK'])
                         })
                     ]
                 })

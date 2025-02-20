@@ -1,23 +1,23 @@
-let i;
-n.d(t, { y: () => o });
-var r = n(37082);
+let r;
+n.d(t, { y: () => s }), n(26686);
+var i = n(37082);
 try {
-    i = window.sessionStorage;
+    r = window.sessionStorage;
 } catch (e) {}
 try {
     delete window.sessionStorage;
 } catch (e) {}
-function a() {
+function o() {
     let e = 'test';
     try {
-        return i.setItem(e, e), i.removeItem(e), !0;
+        return r.setItem(e, e), r.removeItem(e), !0;
     } catch (e) {
         return !1;
     }
 }
-class s {
+class a {
     get(e, t) {
-        let n = i.getItem(e);
+        let n = r.getItem(e);
         if (null != n)
             try {
                 n = JSON.parse(n);
@@ -28,13 +28,13 @@ class s {
         return n;
     }
     set(e, t) {
-        i.setItem(e, JSON.stringify(t));
+        r.setItem(e, JSON.stringify(t));
     }
     remove(e) {
-        i.removeItem(e);
+        r.removeItem(e);
     }
     clear() {
-        i.clear();
+        r.clear();
     }
 }
-let o = a() ? new s() : new r.R();
+let s = o() ? new a() : new i.R();

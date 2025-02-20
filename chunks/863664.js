@@ -1,5 +1,5 @@
-var i = n(49693);
+var r = n(49693);
 e.exports = function (e, t) {
-    for (var n = i(e), r = new t(n), a = 0; a < n; a++) r[a] = e[n - a - 1];
-    return r;
+    for (var n = r(e), i = new t(n), o = 0; o < n; o++) i[o] = e[n - o - 1];
+    return i;
 };

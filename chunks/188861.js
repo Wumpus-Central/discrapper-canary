@@ -1,32 +1,32 @@
-n.d(t, { Z: () => h });
-var i = n(710845),
-    l = n(857192),
-    r = n(901077),
-    a = n(46832),
-    s = n(852926),
-    o = n(748635),
-    d = n(981631);
-let c = new i.Z('RPCServer:PostMessage'),
-    u = (e, t, n) => {
-        (l.default.isLoggingOverlayEvents || e.cmd !== d.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, r.Z)(e));
+n.d(t, { Z: () => p });
+var r = n(710845),
+    i = n(857192),
+    l = n(901077),
+    o = n(46832),
+    a = n(852926),
+    s = n(748635),
+    c = n(981631);
+let u = new r.Z('RPCServer:PostMessage'),
+    d = (e, t, n) => {
+        (i.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, l.Z)(e));
     },
-    h = (function () {
-        let e = new a.Z(s.em, c, o.Z, u);
+    p = (function () {
+        let e = new o.Z(a.em, u, s.Z, d);
         return (
             window.addEventListener('message', (t) => {
                 if (window === t.source) return;
                 if (null == t.source || null == t.source.postMessage) {
-                    c.error('Unknown event source');
+                    u.error('Unknown event source');
                     return;
                 }
                 let n = t.source,
-                    i = t.data,
-                    l = t.origin;
-                e.handleMessage(i, l, (e, t) => {
+                    r = t.data,
+                    i = t.origin;
+                e.handleMessage(r, i, (e, t) => {
                     !(function (e) {
                         try {
                             return e.closed;
-                        } catch {
+                        } catch (e) {
                             return !1;
                         }
                     })(n) && n.postMessage(e, t);

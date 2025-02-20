@@ -20,7 +20,7 @@ function t(e) {
             variants: [{ begin: '\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)' }, { begin: e.C_NUMBER_RE }],
             relevance: 0
         },
-        i = {
+        r = {
             className: 'meta',
             begin: '#',
             end: '$',
@@ -49,18 +49,18 @@ function t(e) {
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        r = {
+        i = {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
         },
-        a = {
+        o = {
             className: 'params',
             relevance: 0,
             begin: '<',
             end: '>',
-            contains: [n, r]
+            contains: [n, i]
         },
-        s = {
+        a = {
             scope: 'punctuation',
             relevance: 0,
             match: /\};|[;{}]/
@@ -73,7 +73,7 @@ function t(e) {
                 begin: /^\/(?=\s*\{)/,
                 relevance: 10
             },
-            r,
+            i,
             {
                 className: 'keyword',
                 begin: '/[a-z][a-z\\d-]*/'
@@ -100,13 +100,13 @@ function t(e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            a,
+            o,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
             t,
-            i,
-            s,
+            r,
+            a,
             {
                 begin: e.IDENT_RE + '::',
                 keywords: ''

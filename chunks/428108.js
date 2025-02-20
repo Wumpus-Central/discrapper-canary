@@ -1,43 +1,43 @@
-t.d(e, { default: () => h });
-var l = t(200651);
-t(192379);
-var a = t(481060),
-    i = t(239091),
-    c = t(108843),
-    r = t(100527),
-    d = t(299206),
-    s = t(398048),
-    u = t(3689),
-    o = t(323597),
-    E = t(852245),
-    Z = t(367722),
-    _ = t(388032);
-let h = (0, c.Z)(
-    function (n) {
-        let { channel: e, guild: t, onSelect: c } = n,
-            r = (0, E.Z)(e),
-            h = (0, Z.Z)(e, t),
-            N = (0, s.Z)(e, t),
-            A = (0, u.Z)(e, t),
-            f = (0, o.Z)(e),
-            C = (0, d.Z)({
-                id: e.id,
-                label: _.intl.string(_.t.gFHI3t)
+n.d(t, { default: () => y });
+var r = n(200651);
+n(192379);
+var c = n(481060),
+    o = n(239091),
+    l = n(108843),
+    a = n(100527),
+    i = n(299206),
+    u = n(398048),
+    s = n(3689),
+    b = n(323597),
+    O = n(852245),
+    f = n(367722),
+    p = n(388032);
+let y = (0, l.Z)(
+    function (e) {
+        let { channel: t, guild: n, onSelect: l } = e,
+            a = (0, O.Z)(t),
+            y = (0, f.Z)(t, n),
+            d = (0, u.Z)(t, n),
+            j = (0, s.Z)(t, n),
+            g = (0, b.Z)(t),
+            P = (0, i.Z)({
+                id: t.id,
+                label: p.NW.string(p.t.gFHI3t)
             });
-        return (0, l.jsxs)(a.v2r, {
+        return (0, r.jsxs)(c.v2r, {
             navId: 'channel-context',
-            onClose: i.Zy,
-            'aria-label': _.intl.string(_.t.Xm41aW),
-            onSelect: c,
+            onClose: o.Zy,
+            'aria-label': p.NW.string(p.t.Xm41aW),
+            onSelect: l,
             children: [
-                (0, l.jsx)(a.kSQ, { children: r }),
-                (0, l.jsxs)(a.kSQ, {
-                    children: [h, N, A]
+                (0, r.jsx)(c.kSQ, { children: a }),
+                (0, r.jsxs)(c.kSQ, {
+                    children: [y, d, j]
                 }),
-                (0, l.jsx)(a.kSQ, { children: f }),
-                (0, l.jsx)(a.kSQ, { children: C })
+                (0, r.jsx)(c.kSQ, { children: g }),
+                (0, r.jsx)(c.kSQ, { children: P })
             ]
         });
     },
-    [r.Z.CONTEXT_MENU, r.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU]
+    [a.Z.CONTEXT_MENU, a.Z.CHANNEL_ACTIVITY_FEED_VOICE_MENU]
 );

@@ -1,22 +1,22 @@
-var i = n(147018),
-    r = n(992051),
-    a = n(955903),
-    s = n(936940),
-    o = n(545576),
+var r = n(147018),
+    i = n(992051),
+    o = n(955903),
+    a = n(936940),
+    s = n(545576),
     l = n(354848),
-    u = n(344135),
-    c = n(457110),
+    c = n(344135),
+    u = n(457110),
     d = n(859209),
-    f = a && a.prototype;
+    f = o && o.prototype;
 if (
-    (i(
+    (r(
         {
             target: 'Promise',
             proto: !0,
             real: !0,
             forced:
-                !!a &&
-                s(function () {
+                !!o &&
+                a(function () {
                     f.finally.call(
                         {
                             then: function () {}
@@ -27,19 +27,19 @@ if (
         },
         {
             finally: function (e) {
-                var t = u(this, o('Promise')),
+                var t = c(this, s('Promise')),
                     n = l(e);
                 return this.then(
                     n
                         ? function (n) {
-                              return c(t, e()).then(function () {
+                              return u(t, e()).then(function () {
                                   return n;
                               });
                           }
                         : e,
                     n
                         ? function (n) {
-                              return c(t, e()).then(function () {
+                              return u(t, e()).then(function () {
                                   throw n;
                               });
                           }
@@ -48,8 +48,8 @@ if (
             }
         }
     ),
-    !r && l(a))
+    !i && l(o))
 ) {
-    var _ = o('Promise').prototype.finally;
-    f.finally !== _ && d(f, 'finally', _, { unsafe: !0 });
+    var p = s('Promise').prototype.finally;
+    f.finally !== p && d(f, 'finally', p, { unsafe: !0 });
 }

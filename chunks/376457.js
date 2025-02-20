@@ -1,23 +1,23 @@
-a.d(e, { s: () => _ });
+a.d(e, { s: () => o });
 var r = a(151122),
     n = a(163162);
-let _ = (0, r._I)(() => ({
+let o = (0, r._I)(() => ({
     name: 'HttpContext',
     preprocessEvent(t) {
         if (!n.m9.navigator && !n.m9.location && !n.m9.document) return;
         let e = (t.request && t.request.url) || (n.m9.location && n.m9.location.href),
             { referrer: a } = n.m9.document || {},
             { userAgent: r } = n.m9.navigator || {},
-            _ = {
+            o = {
                 ...(t.request && t.request.headers),
                 ...(a && { Referer: a }),
                 ...(r && { 'User-Agent': r })
             },
-            o = {
+            _ = {
                 ...t.request,
                 ...(e && { url: e }),
-                headers: _
+                headers: o
             };
-        t.request = o;
+        t.request = _;
     }
 }));

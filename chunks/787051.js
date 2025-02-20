@@ -1,29 +1,29 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(192379),
-    r = n(881052),
-    l = n(53365);
-function s(e) {
-    let [t, n] = i.useState(!0),
-        [s, a] = i.useState(),
-        [o, c] = i.useState(),
-        d = i.useCallback(async (e) => {
-            n(!0), a(void 0);
+n.d(t, { Z: () => a }), n(47120);
+var r = n(192379),
+    i = n(881052),
+    s = n(53365);
+function a(e) {
+    let [t, n] = r.useState(!0),
+        [a, l] = r.useState(),
+        [o, c] = r.useState(),
+        d = r.useCallback(async (e) => {
+            n(!0), l(void 0);
             try {
-                let t = await l.wZ(e);
+                let t = await s.wZ(e);
                 c(t);
             } catch (e) {
-                a(new r.Hx(e));
+                l(new i.Hx(e));
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             d(e);
         }, [e, d]),
         {
             isLoading: t,
-            error: s,
+            error: a,
             creatorMonetizationOnboardingMarketing: o
         }
     );

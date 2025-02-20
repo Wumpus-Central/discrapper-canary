@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(496675),
     x = n(944486),
     O = n(914010),
-    j = n(768581),
-    E = n(135431),
+    E = n(768581),
+    j = n(135431),
     N = n(758199),
     C = n(981631),
     I = n(388032),
@@ -29,7 +29,7 @@ function P(e) {
     let { app: t, embedUrl: n, activityCustomId: l, activityReferrerId: b } = e,
         { name: S, bot: P, isDiscoverable: w } = t,
         Z = null == P ? void 0 : P.id,
-        k = (0, E.Eb)({
+        k = (0, j.Eb)({
             customInstallUrl: t.customInstallUrl,
             installParams: t.installParams,
             integrationTypesConfig: t.integrationTypesConfig
@@ -42,10 +42,10 @@ function P(e) {
         }),
         M = (0, f.PL)(!0, !1),
         W = (0, f.LD)(D, !1),
-        F = (0, E.TK)(t.id, M),
-        U = (0, E.TK)(t.id, W),
+        F = (0, j.TK)(t.id, M),
+        U = (0, j.TK)(t.id, W),
         B = (0, p.ye)(t),
-        G = j.ZP.getApplicationIconURL({
+        G = E.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
             bot: P
@@ -64,15 +64,15 @@ function P(e) {
             let r = N.u.BOT;
             if (null != P) {
                 let { banner: t } = P;
-                (e = (0, j.aN)({
+                (e = (0, E.aN)({
                     id: P.id,
                     banner: t,
                     size: 512,
                     canAnimate: !1
                 })),
-                    (0, j.xR)(t) &&
+                    (0, E.xR)(t) &&
                         null == H &&
-                        (n = (0, j.aN)({
+                        (n = (0, E.aN)({
                             id: P.id,
                             banner: t,
                             size: 512,
@@ -113,7 +113,7 @@ function P(e) {
             });
         }, [t.id, q]),
         $ = i.useCallback(() => {
-            (0, E.LO)({
+            (0, j.LO)({
                 applicationId: t.id,
                 customInstallUrl: t.customInstallUrl,
                 installParams: t.installParams,

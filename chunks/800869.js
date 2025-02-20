@@ -1,31 +1,31 @@
-i.d(n, { Z: () => d });
-var t = i(200651),
-    a = i(793030),
-    r = i(481060),
-    s = i(947494),
-    o = i(388032),
-    c = i(285385),
-    l = i(719119);
+t.d(n, { Z: () => d });
+var i = t(200651),
+    r = t(793030),
+    a = t(481060),
+    o = t(783684),
+    s = t(388032),
+    c = t(503388),
+    l = t(719119);
 function d() {
-    return (0, t.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: c.container,
         children: [
-            (0, t.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
                 className: c.image,
                 src: l
             }),
-            (0, t.jsx)(a.xv, {
+            (0, i.jsx)(r.xv, {
                 color: 'always-white',
                 variant: 'text-md/semibold',
-                children: o.intl.string(s.Z.diMhWV)
+                children: s.NW.string(o.Z.diMhWV)
             }),
-            (0, t.jsx)(a.xv, {
+            (0, i.jsx)(r.xv, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: o.intl.string(s.Z.pycxTk)
+                children: s.NW.string(o.Z.pycxTk)
             }),
-            (0, t.jsx)(r.olH, {
+            (0, i.jsx)(a.olH, {
                 className: c.close,
                 innerClassName: c.innerClose
             })

@@ -1,44 +1,44 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651);
 n(192379);
-var l = n(913527),
-    a = n.n(l),
-    r = n(442837),
-    s = n(481060),
-    o = n(777861),
-    c = n(569471),
-    d = n(346479),
-    u = n(776568),
-    m = n(388032);
-function _(e) {
-    let [t, n, l] = (0, r.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
-        _ = (0, o.U)(n);
-    function h(t) {
-        d.Z.setNotificationSettings(e, { muted: t });
+var r = n(913527),
+    a = n.n(r),
+    l = n(442837),
+    o = n(481060),
+    d = n(777861),
+    u = n(569471),
+    s = n(346479),
+    c = n(776568),
+    f = n(388032);
+function h(e) {
+    let [t, n, r] = (0, l.Wu)([u.Z], () => [u.Z.isMuted(e.id), u.Z.getMuteConfig(e.id), u.Z.hasJoined(e.id)]),
+        h = (0, d.U)(n);
+    function v(t) {
+        s.Z.setNotificationSettings(e, { muted: t });
     }
-    return l
+    return r
         ? t
-            ? (0, i.jsx)(s.sNh, {
+            ? (0, i.jsx)(o.sNh, {
                   id: 'unmute-channel',
-                  label: e.isForumPost() ? m.intl.string(m.t['0JQfsL']) : m.intl.string(m.t['Cq/TzM']),
-                  subtext: _,
-                  action: () => h(!1)
+                  label: e.isForumPost() ? f.NW.string(f.t['0JQfsL']) : f.NW.string(f.t['Cq/TzM']),
+                  subtext: h,
+                  action: () => v(!1)
               })
-            : (0, i.jsx)(s.sNh, {
+            : (0, i.jsx)(o.sNh, {
                   id: 'mute-channel',
-                  label: e.isForumPost() ? m.intl.string(m.t['nP+YkZ']) : m.intl.string(m.t.bUUd8v),
-                  action: () => h(!0),
-                  children: (0, u.k)().map((t) => {
-                      let { value: n, label: l } = t;
+                  label: e.isForumPost() ? f.NW.string(f.t['nP+YkZ']) : f.NW.string(f.t.bUUd8v),
+                  action: () => v(!0),
+                  children: (0, c.k)().map((t) => {
+                      let { value: n, label: r } = t;
                       return (0, i.jsx)(
-                          s.sNh,
+                          o.sNh,
                           {
                               id: ''.concat(n),
-                              label: l,
+                              label: r,
                               action: () =>
                                   (function (t) {
                                       let n = t > 0 ? a()().add(t, 'second').toISOString() : null;
-                                      d.Z.setNotificationSettings(e, {
+                                      s.Z.setNotificationSettings(e, {
                                           muted: !0,
                                           mute_config: {
                                               selected_time_window: t,
@@ -51,9 +51,9 @@ function _(e) {
                       );
                   })
               })
-        : (0, i.jsx)(s.sNh, {
+        : (0, i.jsx)(o.sNh, {
               id: 'mute-disabled',
-              label: e.isForumPost() ? m.intl.string(m.t['nP+YkZ']) : m.intl.string(m.t.bUUd8v),
+              label: e.isForumPost() ? f.NW.string(f.t['nP+YkZ']) : f.NW.string(f.t.bUUd8v),
               disabled: !0
           });
 }

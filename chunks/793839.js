@@ -1,16 +1,16 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(392711),
-    l = n.n(i),
-    r = n(243814),
-    a = n(430824),
-    s = n(996106),
-    o = n(452426),
-    d = n(981631);
-let c = {
-    [d.Etm.GET_GUILD]: {
-        scope: r.x.RPC,
+n.d(t, { Z: () => u }), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    l = n(243814),
+    o = n(430824),
+    a = n(996106),
+    s = n(452426),
+    c = n(981631);
+let u = {
+    [c.Etm.GET_GUILD]: {
+        scope: l.x.RPC,
         validation: (e) =>
-            (0, o.Z)(e)
+            (0, s.Z)(e)
                 .required()
                 .keys({
                     guild_id: e.string(),
@@ -20,16 +20,16 @@ let c = {
             let {
                 socket: t,
                 server: n,
-                args: { guild_id: i, timeout: l = 0 }
+                args: { guild_id: r, timeout: i = 0 }
             } = e;
             return n
-                .storeWait(t, () => a.Z.getGuild(i), l)
+                .storeWait(t, () => o.Z.getGuild(r), i)
                 .catch(() => {
-                    throw new s.Z({ errorCode: d.lTL.GET_GUILD_TIMED_OUT }, 'Request to get guild timed out.');
+                    throw new a.Z({ errorCode: c.lTL.GET_GUILD_TIMED_OUT }, 'Request to get guild timed out.');
                 })
                 .then((e) => {
                     var t;
-                    if (null == e) throw new s.Z({ errorCode: d.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(i));
+                    if (null == e) throw new a.Z({ errorCode: c.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(r));
                     return {
                         id: e.id,
                         name: e.name,
@@ -40,12 +40,12 @@ let c = {
                 });
         }
     },
-    [d.Etm.GET_GUILDS]: {
-        scope: r.x.RPC,
+    [c.Etm.GET_GUILDS]: {
+        scope: l.x.RPC,
         handler() {
-            let e = a.Z.getGuilds();
+            let e = o.Z.getGuilds();
             return {
-                guilds: l().map(e, (e) => ({
+                guilds: i().map(e, (e) => ({
                     id: e.id,
                     name: e.name,
                     icon_url: e.getIconURL(128)

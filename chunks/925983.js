@@ -1,35 +1,35 @@
-var i = n(767172),
-    r = /%[sdv%]/g,
-    a = function (e) {
+var r = n(767172),
+    i = /%[sdv%]/g,
+    o = function (e) {
         var t = 1,
             n = arguments,
-            i = n.length;
-        return e.replace(r, function (e) {
-            if (t >= i) return e;
-            var r = n[t];
+            r = n.length;
+        return e.replace(i, function (e) {
+            if (t >= r) return e;
+            var i = n[t];
             switch (((t += 1), e)) {
                 case '%%':
                     return '%';
                 case '%s':
-                    return String(r);
+                    return String(i);
                 case '%d':
-                    return Number(r);
+                    return Number(i);
                 case '%v':
                     return '';
             }
         });
     },
-    s = function (e, t, n) {
-        var i = [e + '=' + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
+    a = function (e, t, n) {
+        var r = [e + '=' + (t.format instanceof Function ? t.format(t.push ? n : n[t.name]) : t.format)];
         if (t.names)
-            for (var r = 0; r < t.names.length; r += 1) {
-                var s = t.names[r];
-                t.name ? i.push(n[t.name][s]) : i.push(n[t.names[r]]);
+            for (var i = 0; i < t.names.length; i += 1) {
+                var a = t.names[i];
+                t.name ? r.push(n[t.name][a]) : r.push(n[t.names[i]]);
             }
-        else i.push(n[t.name]);
-        return a.apply(null, i);
+        else r.push(n[t.name]);
+        return o.apply(null, r);
     },
-    o = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
+    s = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
     l = ['i', 'c', 'b', 'a'];
 e.exports = function (e, t) {
     (t = t || {}),
@@ -38,35 +38,35 @@ e.exports = function (e, t) {
         e.media.forEach(function (e) {
             null == e.payloads && (e.payloads = '');
         });
-    var n = t.outerOrder || o,
-        r = t.innerOrder || l,
-        a = [];
+    var n = t.outerOrder || s,
+        i = t.innerOrder || l,
+        o = [];
     return (
         n.forEach(function (t) {
-            i[t].forEach(function (n) {
+            r[t].forEach(function (n) {
                 n.name in e && null != e[n.name]
-                    ? a.push(s(t, n, e))
+                    ? o.push(a(t, n, e))
                     : n.push in e &&
                       null != e[n.push] &&
                       e[n.push].forEach(function (e) {
-                          a.push(s(t, n, e));
+                          o.push(a(t, n, e));
                       });
             });
         }),
         e.media.forEach(function (e) {
-            a.push(s('m', i.m[0], e)),
-                r.forEach(function (t) {
-                    i[t].forEach(function (n) {
+            o.push(a('m', r.m[0], e)),
+                i.forEach(function (t) {
+                    r[t].forEach(function (n) {
                         n.name in e && null != e[n.name]
-                            ? a.push(s(t, n, e))
+                            ? o.push(a(t, n, e))
                             : n.push in e &&
                               null != e[n.push] &&
                               e[n.push].forEach(function (e) {
-                                  a.push(s(t, n, e));
+                                  o.push(a(t, n, e));
                               });
                     });
                 });
         }),
-        a.join('\r\n') + '\r\n'
+        o.join('\r\n') + '\r\n'
     );
 };

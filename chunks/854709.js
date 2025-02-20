@@ -1,6 +1,6 @@
-n.d(t, { X: () => l });
-var i = n(594174);
-function l() {
+n.d(t, { X: () => i });
+var r = n(594174);
+function i() {
     var e, t;
-    return null !== (t = null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
+    return null !== (t = null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
 }

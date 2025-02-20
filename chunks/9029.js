@@ -1,22 +1,22 @@
-n.d(t, { Z: () => d });
-var i = n(481060),
-    l = n(570140),
-    r = n(317770),
-    a = n(507294),
-    s = n(458034);
-class o extends r.Z {
+n.d(t, { Z: () => c });
+var r = n(481060),
+    i = n(570140),
+    l = n(317770),
+    o = n(507294),
+    a = n(458034);
+class s extends l.Z {
     _initialize() {
-        l.Z.subscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
+        i.Z.subscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
     }
     _terminate() {
-        l.Z.unsubscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
+        i.Z.unsubscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
     }
     handleShow(e) {
         let { role: t, guildId: n } = e;
-        if (!(0, i.nfh)('GUILD_ROLE_CONNECTIONS_MODAL_KEY')) {
-            var l;
-            null != t && (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) === null ? (0, a.g)(t, n) : (0, s.Am)(n);
+        if (!(0, r.nfh)('GUILD_ROLE_CONNECTIONS_MODAL_KEY')) {
+            var i;
+            null != t && (null === (i = t.tags) || void 0 === i ? void 0 : i.guild_connections) === null ? (0, o.g)(t, n) : (0, a.Am)(n);
         }
     }
 }
-let d = new o();
+let c = new s();

@@ -1,39 +1,39 @@
-var i = n(161581),
-    r = n(173850),
-    a = n(936940),
-    s = n(526988),
-    o = n(976418),
+var r = n(161581),
+    i = n(173850),
+    o = n(936940),
+    a = n(526988),
+    s = n(976418),
     l = n(192291),
-    u = n(679622),
-    c = n(310731),
+    c = n(679622),
+    u = n(310731),
     d = n(106295),
     f = n(361270),
-    _ = l.aTypedArray,
-    p = l.exportTypedArrayMethod,
-    h = i.Uint16Array,
-    m = h && r(h.prototype.sort),
+    p = l.aTypedArray,
+    _ = l.exportTypedArrayMethod,
+    h = r.Uint16Array,
+    m = h && i(h.prototype.sort),
     g =
         !!m &&
         !(
-            a(function () {
+            o(function () {
                 m(new h(2), null);
             }) &&
-            a(function () {
+            o(function () {
                 m(new h(2), {});
             })
         ),
     E =
         !!m &&
-        !a(function () {
+        !o(function () {
             if (d) return d < 74;
-            if (u) return u < 67;
-            if (c) return !0;
+            if (c) return c < 67;
+            if (u) return !0;
             if (f) return f < 602;
             var e,
                 t,
                 n = new h(516),
-                i = Array(516);
-            for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (i[e] = e - 2 * t + 3);
+                r = Array(516);
+            for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3);
             for (
                 m(n, function (e, t) {
                     return ((e / 4) | 0) - ((t / 4) | 0);
@@ -42,17 +42,17 @@ var i = n(161581),
                 e < 516;
                 e++
             )
-                if (n[e] !== i[e]) return !0;
+                if (n[e] !== r[e]) return !0;
         }),
     v = function (e) {
         return function (t, n) {
             return void 0 !== e ? +e(t, n) || 0 : n != n ? -1 : t != t ? 1 : 0 === t && 0 === n ? (1 / t > 0 && 1 / n < 0 ? 1 : -1) : t > n;
         };
     };
-p(
+_(
     'sort',
     function (e) {
-        return (void 0 !== e && s(e), E) ? m(this, e) : o(_(this), v(e));
+        return (void 0 !== e && a(e), E) ? m(this, e) : s(p(this), v(e));
     },
     !E || g
 );

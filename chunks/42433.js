@@ -1,3 +1,3 @@
-var i = n(668530),
-    r = n(726433);
-e.exports = 'process' === r(i.process);
+var r = n(668530),
+    i = n(726433);
+e.exports = 'process' === i(r.process);

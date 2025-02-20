@@ -1,30 +1,30 @@
-var i, r;
+var r, i;
 n.d(t, {
-    TD: () => r,
-    z: () => i
+    TD: () => i,
+    z: () => r
 }),
     (function (e) {
         (e.symbol = Symbol.for('protobuf-ts/unknown')),
-            (e.onRead = (n, i, r, a, s) => {
-                (t(i) ? i[e.symbol] : (i[e.symbol] = [])).push({
-                    no: r,
-                    wireType: a,
-                    data: s
+            (e.onRead = (n, r, i, o, a) => {
+                (t(r) ? r[e.symbol] : (r[e.symbol] = [])).push({
+                    no: i,
+                    wireType: o,
+                    data: a
                 });
             }),
-            (e.onWrite = (t, n, i) => {
-                for (let { no: t, wireType: r, data: a } of e.list(n)) i.tag(t, r).raw(a);
+            (e.onWrite = (t, n, r) => {
+                for (let { no: t, wireType: i, data: o } of e.list(n)) r.tag(t, i).raw(o);
             }),
-            (e.list = (n, i) => {
+            (e.list = (n, r) => {
                 if (t(n)) {
                     let t = n[e.symbol];
-                    return i ? t.filter((e) => e.no == i) : t;
+                    return r ? t.filter((e) => e.no == r) : t;
                 }
                 return [];
             }),
             (e.last = (t, n) => e.list(t, n).slice(-1)[0]);
         let t = (t) => t && Array.isArray(t[e.symbol]);
-    })(i || (i = {})),
+    })(r || (r = {})),
     !(function (e) {
         (e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32');
-    })(r || (r = {}));
+    })(i || (i = {}));

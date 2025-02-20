@@ -1,12 +1,12 @@
-n.d(t, { Z: () => r });
-var i = n(911969);
-function r(e) {
+n.d(t, { Z: () => i });
+var r = n(911969);
+function i(e) {
     switch (e) {
         case 'android':
-            return i.C3.ANDROID;
+            return r.C3.ANDROID;
         case 'ios':
-            return i.C3.IOS;
+            return r.C3.IOS;
         default:
-            return i.C3.WEB;
+            return r.C3.WEB;
     }
 }

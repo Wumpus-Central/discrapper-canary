@@ -15,19 +15,19 @@ function n(e) {
     }),
     (t.prototype.findIter = function (e) {
         for (var t = this._root, n = this.iterator(); null !== t; ) {
-            var i = this._comparator(e, t.data);
-            if (0 === i) return (n._cursor = t), n;
-            n._ancestors.push(t), (t = t.get_child(i > 0));
+            var r = this._comparator(e, t.data);
+            if (0 === r) return (n._cursor = t), n;
+            n._ancestors.push(t), (t = t.get_child(r > 0));
         }
         return null;
     }),
     (t.prototype.lowerBound = function (e) {
-        for (var t = this._root, n = this.iterator(), i = this._comparator; null !== t; ) {
-            var r = i(e, t.data);
-            if (0 === r) return (n._cursor = t), n;
-            n._ancestors.push(t), (t = t.get_child(r > 0));
+        for (var t = this._root, n = this.iterator(), r = this._comparator; null !== t; ) {
+            var i = r(e, t.data);
+            if (0 === i) return (n._cursor = t), n;
+            n._ancestors.push(t), (t = t.get_child(i > 0));
         }
-        for (var a = n._ancestors.length - 1; a >= 0; --a) if (0 > i(e, (t = n._ancestors[a]).data)) return (n._cursor = t), (n._ancestors.length = a), n;
+        for (var o = n._ancestors.length - 1; o >= 0; --o) if (0 > r(e, (t = n._ancestors[o]).data)) return (n._cursor = t), (n._ancestors.length = o), n;
         return (n._ancestors.length = 0), n;
     }),
     (t.prototype.upperBound = function (e) {

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => s });
-var i = n(81825);
-function r(e, t, n) {
+n.d(t, { Z: () => a });
+var r = n(81825);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,15 +13,15 @@ function r(e, t, n) {
         e
     );
 }
-class a extends i.Z {
+class o extends r.Z {
     static fromPath(e) {
-        return new a({
+        return new o({
             id: e,
             path: e
         });
     }
     constructor(e) {
-        super(), r(this, 'id', void 0), r(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
+        super(), i(this, 'id', void 0), i(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
     }
 }
-let s = a;
+let a = o;

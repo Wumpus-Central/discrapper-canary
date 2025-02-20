@@ -1,50 +1,50 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => u }), n(266796), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(565138),
-    a = n(695346),
-    s = n(506071),
-    o = n(353254),
-    d = n(770570);
-function c(e) {
-    let { coverImageAsset: t, title: n, guild: c, description: u, children: h } = e,
-        m = a.QK.useSetting(),
-        p = (0, s.n)(),
-        [g, _] = (0, o.Z)(t, p && m);
-    return (0, i.jsxs)('div', {
-        className: d.container,
+var i = n(481060),
+    l = n(565138),
+    o = n(695346),
+    a = n(506071),
+    s = n(353254),
+    c = n(793669);
+function u(e) {
+    let { coverImageAsset: t, title: n, guild: u, description: d, children: p } = e,
+        h = o.QK.useSetting(),
+        g = (0, a.n)(),
+        [f, m] = (0, s.Z)(t, g && h);
+    return (0, r.jsxs)('div', {
+        className: c.container,
         children: [
-            (0, i.jsx)('div', {
-                ref: g,
-                className: d.coverImageContainer,
+            (0, r.jsx)('div', {
+                ref: f,
+                className: c.coverImageContainer,
                 children:
-                    null != _ &&
-                    (0, i.jsx)('img', {
-                        src: _,
+                    null != m &&
+                    (0, r.jsx)('img', {
+                        src: m,
                         alt: '',
-                        className: d.coverImage
+                        className: c.coverImage
                     })
             }),
-            (0, i.jsx)('div', {
-                className: d.guildIconContainer,
-                children: (0, i.jsx)(r.Z, {
-                    guild: c,
-                    size: r.Z.Sizes.XLARGE
+            (0, r.jsx)('div', {
+                className: c.guildIconContainer,
+                children: (0, r.jsx)(l.Z, {
+                    guild: u,
+                    size: l.Z.Sizes.XLARGE
                 })
             }),
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-xl/semibold',
-                className: d.ctaTitle,
+                className: c.ctaTitle,
                 children: n
             }),
-            (0, i.jsx)(l.Text, {
-                className: d.ctaSubtitle,
+            (0, r.jsx)(i.Text, {
+                className: c.ctaSubtitle,
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: u
+                children: d
             }),
-            h
+            p
         ]
     });
 }

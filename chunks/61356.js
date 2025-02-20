@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
-var i = n(399606),
-    l = n(541099);
-function a(e) {
+n.d(t, { Z: () => l });
+var r = n(399606),
+    i = n(541099);
+function l(e) {
     let { type: t } = e;
-    return (0, i.e7)(
-        [l.Z],
+    return (0, r.e7)(
+        [i.Z],
         () => {
-            let e = l.Z.activeViewType();
-            return null != e && e === t && l.Z.shouldShowPopup();
+            let e = i.Z.activeViewType();
+            return null != e && e === t && i.Z.shouldShowPopup();
         },
         [t]
     );

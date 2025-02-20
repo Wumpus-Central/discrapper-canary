@@ -1,10 +1,10 @@
 n.d(t, { Z: () => l });
-var i = n(192379),
-    r = n(723184),
-    a = n(476400),
-    s = n.n(a),
-    o = function (e) {
-        var t = (0, r.default)({
+var r = n(192379),
+    i = n(723184),
+    o = n(476400),
+    a = n.n(o),
+    s = function (e) {
+        var t = (0, i.default)({
             default: {
                 picker: {
                     width: '20px',
@@ -16,17 +16,17 @@ var i = n(192379),
                 }
             }
         });
-        return i.createElement('div', { style: t.picker });
+        return r.createElement('div', { style: t.picker });
     };
-(o.propTypes = {
-    hsl: s().shape({
-        h: s().number,
-        s: s().number,
-        l: s().number,
-        a: s().number
+(s.propTypes = {
+    hsl: a().shape({
+        h: a().number,
+        s: a().number,
+        l: a().number,
+        a: a().number
     })
 }),
-    (o.defaultProps = {
+    (s.defaultProps = {
         hsl: {
             a: 1,
             h: 249.94,
@@ -34,4 +34,4 @@ var i = n(192379),
             s: 0.5
         }
     });
-let l = o;
+let l = s;

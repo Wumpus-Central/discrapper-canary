@@ -1,47 +1,47 @@
 n.d(t, {
-    O: () => o,
-    h: () => r
+    O: () => a,
+    h: () => l
 }),
     n(47120);
-var s = n(192379),
-    i = n(481060),
-    l = n(393238),
-    a = n(87894);
-function r() {
-    let e = s.useRef(null),
-        [t, n] = s.useState('lg'),
-        [i, r] = s.useState(void 0);
+var r = n(192379),
+    s = n(481060),
+    i = n(393238),
+    o = n(87894);
+function l() {
+    let e = r.useRef(null),
+        [t, n] = r.useState('lg'),
+        [s, l] = r.useState(void 0);
     return (
-        (0, l.P)(e, (e) => {
-            let { width: t, scrollHeight: s } = e;
-            return (r(s), null == t || t > a.j2) ? n('lg') : t > a.Z0 ? n('sm') : n('xs');
+        (0, i.P)(e, (e) => {
+            let { width: t, scrollHeight: r } = e;
+            return (l(r), null == t || t > o.j2) ? n('lg') : t > o.Z0 ? n('sm') : n('xs');
         }),
         {
             containerRef: e,
             size: t,
-            height: i
+            height: s
         }
     );
 }
-function o(e) {
+function a(e) {
     let { initiallyExpanded: t } = e,
-        [n, l] = s.useState(t),
-        [a, r] = s.useState(!1),
-        o = s.useCallback(() => {
-            l((e) => !e), r(!0);
+        [n, i] = r.useState(t),
+        [o, l] = r.useState(!1),
+        a = r.useCallback(() => {
+            i((e) => !e), l(!0);
         }, []),
-        { expansionSpring: d } = (0, i.q_F)({
-            expansionSpring: n ? 1 : 0,
+        { expansionSpring: c } = (0, s.q_F)({
+            expansionSpring: +!!n,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => r(!1)
+            onRest: () => l(!1)
         });
     return {
-        expansionSpring: d,
-        isAnimating: a,
+        expansionSpring: c,
+        isAnimating: o,
         isExpanded: n,
-        toggleExpanded: o
+        toggleExpanded: a
     };
 }

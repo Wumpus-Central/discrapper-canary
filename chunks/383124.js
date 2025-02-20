@@ -1,16 +1,16 @@
 n.d(t, { Z: () => m });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(442837),
     c = n(210753),
     d = n(77498),
-    u = n(371233);
+    u = n(955016);
 function m(e) {
-    let { applicationId: t, selected: n, onClick: l } = e,
-        { isFetching: m, coverImageUrl: h } = (0, c.$)(t, {
+    let { applicationId: t, selected: n, onClick: s } = e,
+        { isFetching: m, coverImageUrl: p } = (0, c.$)(t, {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
@@ -18,44 +18,44 @@ function m(e) {
             var e, n;
             return null !== (n = null === (e = d.Z.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
         }),
-        x = r.useCallback(() => {
-            null == l || l(t);
-        }, [t, l]),
-        p = r.useMemo(
+        h = i.useCallback(() => {
+            null == s || s(t);
+        }, [t, s]),
+        f = i.useMemo(
             () =>
                 m
                     ? null
-                    : null == h
-                      ? (0, i.jsx)('div', {
+                    : null == p
+                      ? (0, r.jsx)('div', {
                             className: u.gameUnknownImage,
-                            children: (0, i.jsx)(a.IMN, { size: 'lg' })
+                            children: (0, r.jsx)(l.IMN, { size: 'lg' })
                         })
-                      : (0, i.jsx)('img', {
+                      : (0, r.jsx)('img', {
                             className: u.gameImage,
                             alt: g,
-                            src: h
+                            src: p
                         }),
-            [h, m, g]
+            [p, m, g]
         );
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: u.selectedGame,
         children: [
-            (0, i.jsxs)(a.P3F, {
-                onClick: x,
-                className: s()(u.gameImageBackground, { [u.gameImageLoading]: m }),
+            (0, r.jsxs)(l.P3F, {
+                onClick: h,
+                className: a()(u.gameImageBackground, { [u.gameImageLoading]: m }),
                 children: [
                     n &&
-                        (0, i.jsx)('div', {
+                        (0, r.jsx)('div', {
                             className: u.checkBackground,
-                            children: (0, i.jsx)(a.XZJ, {
+                            children: (0, r.jsx)(l.XZJ, {
                                 displayOnly: !0,
                                 value: n
                             })
                         }),
-                    p
+                    f
                 ]
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 className: u.gameName,
                 variant: 'text-xs/normal',
                 color: 'header-primary',

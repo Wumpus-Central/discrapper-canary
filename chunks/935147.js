@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(884697),
     h = n(175756),
     f = n(104494),
-    N = n(639119),
-    x = n(211712),
-    b = n(629654),
+    b = n(639119),
+    N = n(211712),
+    x = n(629654),
     _ = n(53691),
     E = n(165583),
     j = n(267717),
@@ -99,14 +99,14 @@ function U(e) {
         $ = i.useRef(null);
     (0, O.Z)($, L.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        [en, er] = i.useState(Math.floor(Math.random() * x.J2.length)),
+        [en, er] = i.useState(Math.floor(Math.random() * N.J2.length)),
         ei = (e) => {
             if (e) {
                 if (((0, l.I5)(K), (0, C.z5)(Y), (0, C.ho)(q), null != J)) {
                     let e = m.Z.getProduct(J.skuId);
                     null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, l.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, l.cV)(J);
                 }
-                S.default.track(k.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: x.J2[en].presetName });
+                S.default.track(k.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: N.J2[en].presetName });
             }
         };
     i.useEffect(() => {
@@ -117,7 +117,7 @@ function U(e) {
                 location_stack: et
             });
     }, [et, U, V]);
-    let es = (null === (n = (0, N.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === W.Si.TIER_2,
+    let es = (null === (n = (0, b.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === W.Si.TIER_2,
         ea = (0, f.Ng)(),
         el = (0, f.Wp)(ea, W.Si.TIER_2),
         eo = 'TryOutPremiumSection';
@@ -153,7 +153,7 @@ function U(e) {
                           }),
                           profilePreview: (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(b.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       selectedIndex: en,
                                       setSelectedIndex: er
                                   }),

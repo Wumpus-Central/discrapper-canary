@@ -1,5 +1,5 @@
-n.d(t, { q: () => i });
-let i = {
+n.d(t, { q: () => r });
+let r = {
     bg: () => n.e('71953').then(n.bind(n, 487012)),
     cs: () => n.e('28990').then(n.bind(n, 998121)),
     da: () => n.e('86200').then(n.bind(n, 129843)),

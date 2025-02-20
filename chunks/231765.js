@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(57562),
     h = n(955204),
     f = n(64078),
-    N = n(351780),
-    x = n(954794),
-    b = n(112843),
+    b = n(351780),
+    N = n(954794),
+    x = n(112843),
     _ = n(524484),
     E = n(981631),
     j = n(388032),
@@ -425,12 +425,12 @@ let U = () =>
         });
 function V(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
-        s = (0, a.cj)([N.Z], () => N.Z.getState()),
+        s = (0, a.cj)([b.Z], () => b.Z.getState()),
         [l, c] = i.useState({
             x: 0,
             y: 0
         }),
-        d = (0, b.Z)();
+        d = (0, x.Z)();
     function u(e, t, n, r) {
         return (null != t ? t : e) && (null != r ? r : n);
     }
@@ -458,14 +458,14 @@ function V(e) {
                 });
             }
         },
-        x = (e) => {
+        N = (e) => {
             c({
                 x: e.clientX,
                 y: e.clientY
             });
         };
     return (
-        i.useEffect(() => (window.addEventListener('mousemove', x), () => window.removeEventListener('mousemove', x)), []),
+        i.useEffect(() => (window.addEventListener('mousemove', N), () => window.removeEventListener('mousemove', N)), []),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.X6q, {
@@ -506,7 +506,7 @@ let G = (e, t, n) => {
                     setShowEnableAnimation: n
                 });
             case 1:
-                return (0, r.jsx)(x.Z, { onBackClick: i(0) });
+                return (0, r.jsx)(N.Z, { onBackClick: i(0) });
             default:
                 return null;
         }

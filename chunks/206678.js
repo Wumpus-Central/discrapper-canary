@@ -1,39 +1,39 @@
-n.d(t, { Z: () => a }), n(47120);
-var i = n(192379);
-function r(e, t) {
+n.d(t, { Z: () => o }), n(47120);
+var r = n(192379);
+function i(e, t) {
     let n = e.getBoundingClientRect();
     return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));
 }
-function a(e) {
-    let { ref: t, onDrag: n, onDragStart: a, onDragEnd: s } = e,
-        [o, l] = i.useState(!1);
+function o(e) {
+    let { ref: t, onDrag: n, onDragStart: o, onDragEnd: a } = e,
+        [s, l] = r.useState(!1);
     return (
-        i.useEffect(() => {
-            if (o)
+        r.useEffect(() => {
+            if (s)
                 return (
                     window.addEventListener('mouseup', e),
-                    window.addEventListener('mousemove', i),
+                    window.addEventListener('mousemove', r),
                     () => {
-                        window.removeEventListener('mouseup', e), window.removeEventListener('mousemove', i);
+                        window.removeEventListener('mouseup', e), window.removeEventListener('mousemove', r);
                     }
                 );
             function e() {
-                null == s || s(), l(!1);
+                null == a || a(), l(!1);
             }
-            function i(e) {
-                let i = t.current;
-                null != i && (null == n || n(r(i, e)));
+            function r(e) {
+                let r = t.current;
+                null != r && (null == n || n(i(r, e)));
             }
-        }, [t, o, s, n]),
+        }, [t, s, a, n]),
         [
-            o,
-            i.useCallback(
+            s,
+            r.useCallback(
                 (e) => {
                     e.preventDefault();
-                    let i = t.current;
-                    null != i && (l(!0), null == a || a(), null == n || n(r(i, e)));
+                    let r = t.current;
+                    null != r && (l(!0), null == o || o(), null == n || n(i(r, e)));
                 },
-                [t, a, n]
+                [t, o, n]
             )
         ]
     );

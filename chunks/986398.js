@@ -10,6 +10,6 @@ function n(t) {
         : (0, d.jsx)('img', {
               className: c,
               src: n,
-              alt: s.intl.string(s.t.QyRmzc)
+              alt: s.NW.string(s.t.QyRmzc)
           });
 }

@@ -1,8 +1,8 @@
-function i() {
+function r() {
     return null;
 }
-function r(e) {}
+function i(e) {}
 n.d(t, {
-    I: () => r,
-    n: () => i
+    I: () => i,
+    n: () => r
 });

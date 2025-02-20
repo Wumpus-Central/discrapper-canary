@@ -1,75 +1,75 @@
-t.d(n, { Z: () => I }), t(789020);
-var i = t(200651);
+t.d(n, { Z: () => f }), t(266796), t(789020);
+var r = t(200651);
 t(192379);
-var l = t(597312),
-    o = t(442837),
-    s = t(481060),
-    r = t(860719),
-    a = t(621853),
-    d = t(388032),
-    c = t(62071);
+var o = t(597312),
+    i = t(442837),
+    l = t(481060),
+    s = t(860719),
+    c = t(621853),
+    a = t(388032),
+    d = t(203395);
 function u(e) {
-    let { icon: n, title: t, description: l } = e;
-    return (0, i.jsxs)('div', {
-        className: c.row,
+    let { icon: n, title: t, description: o } = e;
+    return (0, r.jsxs)('div', {
+        className: d.row,
         children: [
-            (0, i.jsx)('div', {
-                className: c.rowIcon,
-                children: (0, i.jsx)(n, {
+            (0, r.jsx)('div', {
+                className: d.rowIcon,
+                children: (0, r.jsx)(n, {
                     size: 'custom',
                     width: 20,
                     height: 20,
                     color: 'currentColor'
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: c.rowText,
+            (0, r.jsxs)('div', {
+                className: d.rowText,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'text-xs/semibold',
                         children: t
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: l
+                        children: o
                     })
                 ]
             })
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { user: n } = e,
-        t = (0, o.e7)([a.Z], () => {
+        t = (0, i.e7)([c.Z], () => {
             var e;
-            return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = c.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
-        { hasMessageContent: I, hasGuildPresences: f, hasGuildMembers: p } = (0, r.w)({ flags: null == t ? void 0 : t.flags });
-    return (0, i.jsxs)(l.zJ, {
+        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: m } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
+    return (0, r.jsxs)(o.zJ, {
         fade: !0,
-        className: c.scroller,
+        className: d.scroller,
         children: [
-            I &&
-                (0, i.jsx)(u, {
-                    icon: s.kBi,
-                    title: d.intl.string(d.t['7Tmhfn']),
-                    description: d.intl.string(d.t['eu5x7+'])
-                }),
             f &&
-                (0, i.jsx)(u, {
-                    icon: s.iWm,
-                    title: d.intl.string(d.t.awYSsL),
-                    description: d.intl.string(d.t.TpsXoK)
+                (0, r.jsx)(u, {
+                    icon: l.kBi,
+                    title: a.NW.string(a.t['7Tmhfn']),
+                    description: a.NW.string(a.t['eu5x7+'])
                 }),
             p &&
-                (0, i.jsx)(u, {
-                    icon: s.BFJ,
-                    title: d.intl.string(d.t.WuKeSE),
-                    description: d.intl.string(d.t.wOBmtb)
+                (0, r.jsx)(u, {
+                    icon: l.iWm,
+                    title: a.NW.string(a.t.awYSsL),
+                    description: a.NW.string(a.t.TpsXoK)
                 }),
-            (0, i.jsx)(s.Text, {
+            m &&
+                (0, r.jsx)(u, {
+                    icon: l.BFJ,
+                    title: a.NW.string(a.t.WuKeSE),
+                    description: a.NW.string(a.t.wOBmtb)
+                }),
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: a.NW.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => D }), n(47120);
-var i,
-    r = n(442837),
-    a = n(433517),
-    s = n(570140),
-    o = n(706454),
+n.d(t, { Z: () => P }), n(47120);
+var r,
+    i = n(442837),
+    o = n(433517),
+    a = n(570140),
+    s = n(706454),
     l = n(695346),
-    u = n(581883),
-    c = n(596401);
+    c = n(581883),
+    u = n(596401);
 function d(e, t, n) {
     return (
         t in e
@@ -21,29 +21,29 @@ function d(e, t, n) {
     );
 }
 let f = {},
-    _ = {},
-    p = null,
+    p = {},
+    _ = null,
     h = null,
     m = null,
     g = 'lastChangeLogDate',
     E = null,
     v = null,
-    y = new Set();
-function I(e) {
+    b = new Set();
+function y(e) {
     let { key: t } = e;
-    if (y.has(t)) return !1;
-    (y = new Set(y)).add(t);
+    if (b.has(t)) return !1;
+    (b = new Set(b)).add(t);
 }
-function T(e) {
+function O(e) {
     let { key: t } = e;
-    if (!y.has(t)) return !1;
-    (y = new Set(y)).delete(t);
-}
-function b(e) {
-    let { config: t, latestChangelogId: n } = e;
-    (p = n), (m = t);
+    if (!b.has(t)) return !1;
+    (b = new Set(b)).delete(t);
 }
 function S(e) {
+    let { config: t, latestChangelogId: n } = e;
+    (_ = n), (m = t);
+}
+function I(e) {
     let { id: t, changelog: n } = e;
     null == f[t] && (f[t] = {}),
         (f[t][n.locale] = {
@@ -52,48 +52,48 @@ function S(e) {
             body: n.content,
             revision: 1,
             locale: n.locale,
-            [n.asset_type === c.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: n.asset
+            [n.asset_type === u.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: n.asset
         }),
-        null == _[t] && (_[t] = {}),
-        (_[t][n.locale] = c.LU.LOADED_SUCCESS);
+        null == p[t] && (p[t] = {}),
+        (p[t][n.locale] = u.LU.LOADED_SUCCESS);
 }
-function A(e) {
+function T(e) {
     let { id: t, locale: n } = e;
     if (null != f[t] && null != f[t][n]) return !1;
-    null == _[t] && (_[t] = {}), (_[t][n] = c.LU.LOADED_FAILURE);
+    null == p[t] && (p[t] = {}), (p[t][n] = u.LU.LOADED_FAILURE);
 }
 function N(e) {
     let { id: t } = e;
     h = t;
 }
-function C(e) {
+function A(e) {
     let { changelogDate: t } = e;
-    (v = new Date(t)), a.K.set(g, t);
+    (v = new Date(t)), o.K.set(g, t);
 }
-function R() {
+function C() {
     E = l.l4.getSetting();
 }
-class O extends (i = r.ZP.Store) {
+class R extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.default, u.Z), this.syncWith([o.default], () => !0), this.syncWith([u.Z], R);
-        let e = a.K.get(g);
+        this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], C);
+        let e = o.K.get(g);
         if (null != e)
             try {
                 v = new Date(e);
-            } catch {
-                a.K.remove(g);
+            } catch (e) {
+                o.K.remove(g);
             }
     }
     getChangelog(e, t) {
-        var n, i;
-        return null !== (i = null === (n = f[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : null;
+        var n, r;
+        return null !== (r = null === (n = f[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : null;
     }
     latestChangelogId() {
-        return p;
+        return _;
     }
     getChangelogLoadStatus(e, t) {
-        var n, i;
-        return null !== (i = null === (n = _[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : c.LU.NOT_LOADED;
+        var n, r;
+        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : u.LU.NOT_LOADED;
     }
     hasLoadedConfig() {
         return null != m;
@@ -113,22 +113,22 @@ class O extends (i = r.ZP.Store) {
     getStateForDebugging() {
         return {
             changelogConfig: m,
-            loadedChangelogs: _,
+            loadedChangelogs: p,
             lastSeenChangelogId: E,
             lastSeenChangelogDate: v
         };
     }
     isLocked() {
-        return y.size > 0;
+        return b.size > 0;
     }
 }
-d(O, 'displayName', 'ChangelogStore');
-let D = new O(s.Z, {
-    CHANGE_LOG_LOCK: I,
-    CHANGE_LOG_UNLOCK: T,
-    CHANGE_LOG_SET_CONFIG: b,
-    CHANGE_LOG_FETCH_SUCCESS: S,
-    CHANGE_LOG_FETCH_FAILED: A,
+d(R, 'displayName', 'ChangelogStore');
+let P = new R(a.Z, {
+    CHANGE_LOG_LOCK: y,
+    CHANGE_LOG_UNLOCK: O,
+    CHANGE_LOG_SET_CONFIG: S,
+    CHANGE_LOG_FETCH_SUCCESS: I,
+    CHANGE_LOG_FETCH_FAILED: T,
     CHANGE_LOG_SET_OVERRIDE: N,
-    CHANGE_LOG_MARK_SEEN: C
+    CHANGE_LOG_MARK_SEEN: A
 });

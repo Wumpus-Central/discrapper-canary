@@ -1,34 +1,34 @@
-n.d(t, { Z: () => I });
-var i = n(200651),
-    r = n(192379),
-    a = n(477690),
-    s = n(481060),
-    o = n(880949),
+n.d(t, { Z: () => y });
+var r = n(200651),
+    i = n(192379),
+    o = n(477690),
+    a = n(481060),
+    s = n(880949),
     l = n(806966),
-    u = n(65029),
-    c = n(430824),
+    c = n(65029),
+    u = n(430824),
     d = n(624138),
     f = n(926491),
-    _ = n(373228),
-    p = n(378233),
+    p = n(373228),
+    _ = n(378233),
     h = n(419922),
     m = n(388032),
-    g = n(39257);
-let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    v = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-    y = (e) => {
+    g = n(506522);
+let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    v = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+    b = (e) => {
         let t = null,
             n = null;
-        if ((!(0, p.jl)(e) && !(0, p.J8)(e)) || (0, p.J8)(e)) {
-            let r = c.Z.getGuild(e.guild_id);
-            null != r && ((t = m.intl.format(m.t.cZOkbm, { source: r.name })), (n = (0, i.jsx)(o.Z, { guild: r })));
-        } else if ((0, p.jl)(e)) {
-            let r = f.Z.getStickerPack(e.pack_id);
-            null != r &&
-                ((t = m.intl.format(m.t.cZOkbm, { source: r.name })),
-                (n = (0, i.jsx)(h.ZP, {
+        if ((!(0, _.jl)(e) && !(0, _.J8)(e)) || (0, _.J8)(e)) {
+            let i = u.Z.getGuild(e.guild_id);
+            null != i && ((t = m.NW.format(m.t.cZOkbm, { source: i.name })), (n = (0, r.jsx)(s.Z, { guild: i })));
+        } else if ((0, _.jl)(e)) {
+            let i = f.Z.getStickerPack(e.pack_id);
+            null != i &&
+                ((t = m.NW.format(m.t.cZOkbm, { source: i.name })),
+                (n = (0, r.jsx)(h.ZP, {
                     size: v,
-                    sticker: (0, p.Zt)(r),
+                    sticker: (0, _.Zt)(i),
                     disableAnimation: !0
                 })));
         }
@@ -37,44 +37,44 @@ let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
             graphic: n
         };
     },
-    I = r.memo(function (e) {
+    y = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = l.ZN.useStore((e) => e.inspectedExpressionPosition),
-            a = r.useMemo(() => {
+            o = i.useMemo(() => {
                 var e;
-                let { rowIndex: i, columnIndex: r } = n,
-                    a = null === (e = t[i]) || void 0 === e ? void 0 : e[r];
-                return (null == a ? void 0 : a.type) === _.al.CREATE_STICKER
+                let { rowIndex: r, columnIndex: i } = n,
+                    o = null === (e = t[r]) || void 0 === e ? void 0 : e[i];
+                return (null == o ? void 0 : o.type) === p.al.CREATE_STICKER
                     ? {
-                          guild_id: a.guild_id,
-                          name: a.name
+                          guild_id: o.guild_id,
+                          name: o.name
                       }
-                    : (null == a ? void 0 : a.type) !== _.al.STICKER
+                    : (null == o ? void 0 : o.type) !== p.al.STICKER
                       ? null
-                      : a.sticker;
+                      : o.sticker;
             }, [t, n]);
-        if (null == a) return null;
-        let { graphic: o, title: c } = y(a),
+        if (null == o) return null;
+        let { graphic: s, title: u } = b(o),
             d =
-                (0, p.jl)(a) || (0, p.J8)(a)
-                    ? (0, i.jsx)(h.ZP, {
+                (0, _.jl)(o) || (0, _.J8)(o)
+                    ? (0, r.jsx)(h.ZP, {
                           isInteracting: !0,
                           size: E,
-                          sticker: a,
+                          sticker: o,
                           disableAnimation: !0
                       })
-                    : (0, i.jsx)('div', {
+                    : (0, r.jsx)('div', {
                           className: g.iconWrapper,
-                          children: (0, i.jsx)(s.qJs, {
+                          children: (0, r.jsx)(a.qJs, {
                               size: 'md',
                               color: 'currentColor',
                               className: g.icon
                           })
                       });
-        return (0, i.jsx)(u.Z, {
+        return (0, r.jsx)(c.Z, {
             graphicPrimary: d,
-            graphicSecondary: o,
-            titlePrimary: a.name,
-            titleSecondary: (0, p.jl)(a) || (0, p.J8)(a) ? c : null
+            graphicSecondary: s,
+            titlePrimary: o.name,
+            titleSecondary: (0, _.jl)(o) || (0, _.J8)(o) ? u : null
         });
     });

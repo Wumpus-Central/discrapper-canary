@@ -1,12 +1,12 @@
-n.d(e, { U: () => r });
+n.d(e, { U: () => a });
 var i = n(442837),
-    a = n(594174);
-function r() {
+    r = n(594174);
+function a() {
     return (
         !1 ===
-        (0, i.e7)([a.default], () => {
+        (0, i.e7)([r.default], () => {
             var t;
-            return null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed;
+            return null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed;
         })
     );
 }

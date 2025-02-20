@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(408431);
-function r() {
-    return !/^((?!chrome|android).)*safari/i.test((0, i.Z)());
+n.d(t, { Z: () => i });
+var r = n(408431);
+function i() {
+    return !/^((?!chrome|android).)*safari/i.test((0, r.Z)());
 }

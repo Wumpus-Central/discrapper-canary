@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(410030),
     h = n(726542),
     f = n(921801),
-    N = n(553795),
-    x = n(430824),
-    b = n(63063),
+    b = n(553795),
+    N = n(430824),
+    x = n(63063),
     _ = n(358085),
     E = n(709054),
     j = n(362352),
@@ -28,7 +28,7 @@ var r = n(200651),
     y = n(455812);
 function A(e) {
     let t = () => {
-        O.SE.updateSetting(e ? E.default.keys(x.Z.getGuilds()) : []);
+        O.SE.updateSetting(e ? E.default.keys(N.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) => {
         var n, i;
@@ -140,7 +140,7 @@ function P() {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: y.marginBottom8,
-                                  children: T.NW.format(T.t.aUxRra, { helpdeskArticle: b.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                  children: T.NW.format(T.t.aUxRra, { helpdeskArticle: x.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) })
                               }),
                               (0, r.jsx)(m.q4e, {
                                   options: o,
@@ -151,7 +151,7 @@ function P() {
                       })
                     : (0, r.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: T.NW.format(T.t['+5/xu7'], { helpdeskArticle: b.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: T.NW.format(T.t['+5/xu7'], { helpdeskArticle: x.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: T.NW.string(T.t.D5GXTU)
                       }),
@@ -260,7 +260,7 @@ function w(e) {
     });
 }
 function k() {
-    let e = (0, c.e7)([N.Z], () => N.Z.getAccounts()),
+    let e = (0, c.e7)([b.Z], () => b.Z.getAccounts()),
         t = i.useMemo(() => e.filter((e) => h.Z.isSupported(e.type) && S.vbS.has(e.type)), [e]),
         [n, s] = i.useState(''),
         a = i.useMemo(() => {

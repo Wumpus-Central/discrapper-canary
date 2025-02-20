@@ -1,47 +1,47 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => x }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(749210),
     c = n(493544),
     d = n(607070),
     u = n(714939),
     m = n(981631),
-    h = n(388032),
-    g = n(432519);
-function x(e) {
+    p = n(388032),
+    g = n(266329);
+function h(e) {
     let { color: t, children: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: g.roleTag,
         children: [
-            (0, i.jsx)(a.xko, {
+            (0, r.jsx)(l.xko, {
                 className: g.roleDot,
                 color: t
             }),
-            (0, i.jsx)('span', {
+            (0, r.jsx)('span', {
                 className: g.roleText,
                 children: n
             })
         ]
     });
 }
-function p(e) {
+function f(e) {
     let { guild: t, display: n } = e;
-    return (0, i.jsxs)('div', {
-        className: s()(g.banner, t.backgroundClass, { [g.bannerOut]: !n }),
+    return (0, r.jsxs)('div', {
+        className: a()(g.banner, t.backgroundClass, { [g.bannerOut]: !n }),
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: g.roles,
                 children: t.roles.map((e, t) =>
-                    (0, i.jsx)(
+                    (0, r.jsx)(
                         'div',
                         {
                             className: g.rolesRow,
                             children: e.map((e) =>
-                                (0, i.jsx)(
-                                    x,
+                                (0, r.jsx)(
+                                    h,
                                     {
                                         color: e.color,
                                         children: e.name
@@ -54,18 +54,18 @@ function p(e) {
                     )
                 )
             }),
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: g.profileCard,
-                children: (0, i.jsxs)('div', {
+                children: (0, r.jsxs)('div', {
                     className: g.avatarContainer,
                     children: [
-                        (0, i.jsx)(a.qEK, {
-                            size: a.EFr.SIZE_56,
+                        (0, r.jsx)(l.qEK, {
+                            size: l.EFr.SIZE_56,
                             'aria-hidden': !0,
                             status: m.Skl.ONLINE,
                             src: t.avatar
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-primary',
                             variant: 'text-md/bold',
                             className: g.avatarName,
@@ -77,8 +77,8 @@ function p(e) {
         ]
     });
 }
-function _() {
-    let e = r.useMemo(
+function b() {
+    let e = i.useMemo(
             () => [
                 {
                     backgroundClass: g.bannerClubs,
@@ -87,29 +87,29 @@ function _() {
                     roles: [
                         [
                             {
-                                name: h.intl.string(h.t['7oaPPj']),
+                                name: p.NW.string(p.t['7oaPPj']),
                                 color: '#7e00fc'
                             },
                             {
-                                name: h.intl.string(h.t['Z/HN6+']),
+                                name: p.NW.string(p.t['Z/HN6+']),
                                 color: '#faa61a'
                             },
                             {
-                                name: h.intl.string(h.t.lvHTg4),
+                                name: p.NW.string(p.t.lvHTg4),
                                 color: '#f06ea8'
                             }
                         ],
                         [
                             {
-                                name: h.intl.string(h.t['6yECkp']),
+                                name: p.NW.string(p.t['6yECkp']),
                                 color: '#45ddc0'
                             },
                             {
-                                name: h.intl.string(h.t['5DabCQ']),
+                                name: p.NW.string(p.t['5DabCQ']),
                                 color: '#00b0f4'
                             },
                             {
-                                name: h.intl.string(h.t.bB900d),
+                                name: p.NW.string(p.t.bB900d),
                                 color: '#ba1616'
                             }
                         ]
@@ -122,29 +122,29 @@ function _() {
                     roles: [
                         [
                             {
-                                name: h.intl.string(h.t['xz/Vfn']),
+                                name: p.NW.string(p.t['xz/Vfn']),
                                 color: '#4a76e6'
                             },
                             {
-                                name: h.intl.string(h.t.Bceru7),
+                                name: p.NW.string(p.t.Bceru7),
                                 color: '#ad87ff'
                             },
                             {
-                                name: h.intl.string(h.t.W51slp),
+                                name: p.NW.string(p.t.W51slp),
                                 color: '#6defcf'
                             }
                         ],
                         [
                             {
-                                name: h.intl.string(h.t.y9gTiY),
+                                name: p.NW.string(p.t.y9gTiY),
                                 color: '#ff73fa'
                             },
                             {
-                                name: h.intl.string(h.t.HslvdX),
+                                name: p.NW.string(p.t.HslvdX),
                                 color: '#3ba55c'
                             },
                             {
-                                name: h.intl.string(h.t.ipL1AA),
+                                name: p.NW.string(p.t.ipL1AA),
                                 color: '#ff1b66'
                             }
                         ]
@@ -157,29 +157,29 @@ function _() {
                     roles: [
                         [
                             {
-                                name: h.intl.string(h.t.pAFEbm),
+                                name: p.NW.string(p.t.pAFEbm),
                                 color: '#20d6b8'
                             },
                             {
-                                name: h.intl.string(h.t['p/HZEB']),
+                                name: p.NW.string(p.t['p/HZEB']),
                                 color: '#236136'
                             },
                             {
-                                name: h.intl.string(h.t['9Qp/JS']),
+                                name: p.NW.string(p.t['9Qp/JS']),
                                 color: '#ff9a15'
                             }
                         ],
                         [
                             {
-                                name: h.intl.string(h.t.craF5e),
+                                name: p.NW.string(p.t.craF5e),
                                 color: '#ff78b9'
                             },
                             {
-                                name: h.intl.string(h.t.L1TvXF),
+                                name: p.NW.string(p.t.L1TvXF),
                                 color: '#00b0f4'
                             },
                             {
-                                name: h.intl.string(h.t.lqKz9P),
+                                name: p.NW.string(p.t.lqKz9P),
                                 color: '#6f52e4'
                             }
                         ]
@@ -188,23 +188,23 @@ function _() {
             ],
             []
         ),
-        [t, l] = r.useState(0),
-        s = r.useRef(e);
+        [t, s] = i.useState(0),
+        a = i.useRef(e);
     return (
-        r.useEffect(() => {
-            s.current = e;
+        i.useEffect(() => {
+            a.current = e;
         }),
-        r.useEffect(() => {
+        i.useEffect(() => {
             if (d.Z.useReducedMotion) return;
-            let e = setTimeout(() => l((t + 1) % s.current.length), 6332);
+            let e = setTimeout(() => s((t + 1) % a.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
-        (0, i.jsx)('div', {
+        (0, r.jsx)('div', {
             className: g.bannerContainer,
             'aria-hidden': !0,
             children: e.map((e, n) =>
-                (0, i.jsx)(
-                    p,
+                (0, r.jsx)(
+                    f,
                     {
                         guild: e,
                         display: n === t
@@ -215,48 +215,48 @@ function _() {
         })
     );
 }
-function C(e) {
-    let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
-        [s, d] = r.useState(!1),
+function x(e) {
+    let { guild: t, everyoneRole: n, setEditRoleId: s } = e,
+        [a, d] = i.useState(!1),
         m = async () => {
             d(!0), await o.Z.createRole(t.id), d(!1);
         },
-        x = r.useCallback(() => {
-            l(n.id);
-        }, [l, n.id]);
-    return (0, i.jsx)(c.NM, {
-        children: (0, i.jsxs)(a.hjN, {
+        h = i.useCallback(() => {
+            s(n.id);
+        }, [s, n.id]);
+    return (0, r.jsx)(c.NM, {
+        children: (0, r.jsxs)(l.hjN, {
             className: g.section,
-            title: h.intl.string(h.t.LPJmLy),
-            tag: a.RB0.H2,
+            title: p.NW.string(p.t.LPJmLy),
+            tag: l.RB0.H2,
             children: [
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: g.container,
                     children: [
-                        (0, i.jsx)(_, {}),
-                        (0, i.jsx)(a.X6q, {
+                        (0, r.jsx)(b, {}),
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: h.intl.string(h.t.ALlnbm)
+                            children: p.NW.string(p.t.ALlnbm)
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, r.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: g.introBody,
-                            children: h.intl.string(h.t['1ydhVl'])
+                            children: p.NW.string(p.t['1ydhVl'])
                         }),
-                        (0, i.jsx)(a.zxk, {
+                        (0, r.jsx)(l.zxk, {
                             className: g.button,
-                            size: a.zxk.Sizes.MEDIUM,
+                            size: l.zxk.Sizes.MEDIUM,
                             onClick: m,
-                            submitting: s,
-                            children: h.intl.string(h.t.JZZjQE)
+                            submitting: a,
+                            children: p.NW.string(p.t.JZZjQE)
                         })
                     ]
                 }),
-                (0, i.jsx)(a.$i$, { className: g.divider }),
-                (0, i.jsx)(u.Z, {
+                (0, r.jsx)(l.$i$, { className: g.divider }),
+                (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: x
+                    onClick: h
                 })
             ]
         })

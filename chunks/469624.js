@@ -1,14 +1,14 @@
-var i = n(821819),
-    r = n(360518),
-    a = n(882708),
-    s = r('species');
+var r = n(821819),
+    i = n(360518),
+    o = n(882708),
+    a = i('species');
 e.exports = function (e) {
     return (
-        a >= 51 ||
-        !i(function () {
+        o >= 51 ||
+        !r(function () {
             var t = [];
             return (
-                ((t.constructor = {})[s] = function () {
+                ((t.constructor = {})[a] = function () {
                     return { foo: 1 };
                 }),
                 1 !== t[e](Boolean).foo

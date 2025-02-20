@@ -2,43 +2,43 @@ s.d(n, { default: () => _ }), s(47120);
 var t = s(200651);
 s(192379);
 var l = s(399606),
-    i = s(481060),
-    o = s(904245),
+    o = s(481060),
+    i = s(904245),
     a = s(434404),
     r = s(592125),
     c = s(812545),
     u = s(981631),
     d = s(388032),
-    g = s(316334);
+    g = s(491664);
 function _(e) {
     let { channelId: n, messageId: s, transitionState: _, onClose: f } = e,
         h = (0, l.e7)([r.Z], () => r.Z.getChannel(n)),
         [m, p] = (0, c.Z)(n),
         F = null == h ? void 0 : h.guild_id;
-    return (0, t.jsx)(i.ConfirmModal, {
-        header: d.intl.string(d.t.aIz1oa),
-        confirmText: d.intl.string(d.t['cY+Ooa']),
-        cancelText: d.intl.string(d.t['ETE/oK']),
-        confirmButtonColor: i.zxk.Colors.BRAND,
-        onConfirm: () => o.Z.crosspostMessage(n, s),
+    return (0, t.jsx)(o.ConfirmModal, {
+        header: d.NW.string(d.t.aIz1oa),
+        confirmText: d.NW.string(d.t['cY+Ooa']),
+        cancelText: d.NW.string(d.t['ETE/oK']),
+        confirmButtonColor: o.zxk.Colors.BRAND,
+        onConfirm: () => i.Z.crosspostMessage(n, s),
         transitionState: _,
         onClose: f,
-        children: (0, t.jsx)(i.Text, {
+        children: (0, t.jsx)(o.Text, {
             variant: 'text-md/normal',
             className: g.spacing,
             children: p
-                ? (0, t.jsx)(i.$jN, {})
+                ? (0, t.jsx)(o.$jN, {})
                 : null != m && null != m.guildsFollowing && m.guildsFollowing > 0
                   ? (0, t.jsxs)(t.Fragment, {
                         children: [
-                            (0, t.jsx)(i.Text, {
+                            (0, t.jsx)(o.Text, {
                                 className: g.spacing,
                                 variant: 'text-sm/normal',
-                                children: d.intl.format(d.t.GCGrND, { numGuildsFollowing: m.guildsFollowing })
+                                children: d.NW.format(d.t.GCGrND, { numGuildsFollowing: m.guildsFollowing })
                             }),
-                            (0, t.jsx)(i.Text, {
+                            (0, t.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
-                                children: d.intl.format(d.t.IMhGZ2, {
+                                children: d.NW.format(d.t.IMhGZ2, {
                                     onClick: () => {
                                         null != F && null != f && (f(), a.Z.open(F, u.pNK.ANALYTICS));
                                     }
@@ -46,7 +46,7 @@ function _(e) {
                             })
                         ]
                     })
-                  : d.intl.string(d.t['8FpqOj'])
+                  : d.NW.string(d.t['8FpqOj'])
         })
     });
 }

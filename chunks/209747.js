@@ -1,6 +1,6 @@
-n.d(t, { Z: () => s });
-var i = n(81825);
-function r(e, t, n) {
+n.d(t, { Z: () => a });
+var r = n(81825);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,9 +13,9 @@ function r(e, t, n) {
         e
     );
 }
-class a extends i.Z {
+class o extends r.Z {
     static createFromServer(e, t) {
-        return new a({
+        return new o({
             id: e.id,
             subscriptionId: e.subscription_id,
             premiumGuildSubscription:
@@ -37,7 +37,7 @@ class a extends i.Z {
         return null == this.premiumGuildSubscription && !this.isOnCooldown();
     }
     constructor(e) {
-        super(), r(this, 'id', void 0), r(this, 'subscriptionId', void 0), r(this, 'premiumGuildSubscription', void 0), r(this, 'canceled', void 0), r(this, 'cooldownEndsAt', void 0), r(this, 'subscription', void 0), (this.id = e.id), (this.subscriptionId = e.subscriptionId), (this.premiumGuildSubscription = e.premiumGuildSubscription), (this.canceled = e.canceled), (this.cooldownEndsAt = e.cooldownEndsAt), (this.subscription = e.subscription);
+        super(), i(this, 'id', void 0), i(this, 'subscriptionId', void 0), i(this, 'premiumGuildSubscription', void 0), i(this, 'canceled', void 0), i(this, 'cooldownEndsAt', void 0), i(this, 'subscription', void 0), (this.id = e.id), (this.subscriptionId = e.subscriptionId), (this.premiumGuildSubscription = e.premiumGuildSubscription), (this.canceled = e.canceled), (this.cooldownEndsAt = e.cooldownEndsAt), (this.subscription = e.subscription);
     }
 }
-let s = a;
+let a = o;

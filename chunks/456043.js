@@ -1,13 +1,13 @@
-var i = n(67867),
-    r = n(181301).entries;
-i(
+var r = n(67867),
+    i = n(181301).entries;
+r(
     {
         target: 'Object',
         stat: !0
     },
     {
         entries: function (e) {
-            return r(e);
+            return i(e);
         }
     }
 );

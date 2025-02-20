@@ -1,44 +1,44 @@
-n.d(t, { Z: () => m }), n(47120), n(724458);
-var i = n(442837),
-    l = n(853856),
-    r = n(592125),
-    a = n(938475),
-    o = n(823379),
+n.d(t, { Z: () => f }), n(47120);
+var r = n(442837),
+    i = n(853856),
+    l = n(592125),
+    o = n(938475),
+    a = n(823379),
     s = n(136015),
     c = n(709054),
-    d = n(565799),
-    u = n(501655),
-    h = n(981631);
-function p(e) {
-    let { voiceState: t, userNick: n, user: i } = e,
-        l = (0, a.sQ)(t, n);
+    u = n(565799),
+    d = n(501655),
+    p = n(981631);
+function h(e) {
+    let { voiceState: t, userNick: n, user: r } = e,
+        i = (0, o.sQ)(t, n);
     return {
-        user: i,
+        user: r,
         voiceState: t,
         nick: n,
-        comparator: l
+        comparator: i
     };
 }
-function m(e) {
-    let [t] = (0, i.e7)(
-        [d.Z, r.Z, l.Z],
+function f(e) {
+    let [t] = (0, r.e7)(
+        [u.Z, l.Z, i.Z],
         () => {
             let t;
             return [
                 (t =
-                    e === h.I_8
+                    e === p.I_8
                         ? c.default
-                              .keys(l.Z.getFavoriteChannels())
-                              .map((e) => r.Z.getChannel(e))
-                              .filter(o.lm)
+                              .keys(i.Z.getFavoriteChannels())
+                              .map((e) => l.Z.getChannel(e))
+                              .filter(a.lm)
                               .filter((e) => e.isGuildStageVoice())
-                        : d.Z.getChannels(e)).reduce((e, t) => {
-                    let n = d.Z.getMutableParticipants(t.id, u.pV.SPEAKER);
-                    return (e[t.id] = n.filter((e) => e.type === u.Ui.VOICE).map(p)), e;
+                        : u.Z.getChannels(e)).reduce((e, t) => {
+                    let n = u.Z.getMutableParticipants(t.id, d.pV.SPEAKER);
+                    return (e[t.id] = n.filter((e) => e.type === d.Ui.VOICE).map(h)), e;
                 }, {}),
                 t.reduce((e, t) => {
                     let { id: n } = t;
-                    return e + d.Z.getParticipantsVersion(n);
+                    return e + u.Z.getParticipantsVersion(n);
                 }, 0)
             ];
         },

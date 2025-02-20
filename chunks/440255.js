@@ -98,7 +98,7 @@ function M(e, t) {
                 return (0, n.g6)(r * (0, n.$7)(t / (400 - t), 2.380952380952381), e);
             });
         })(
-            (0, s.Z)(b, [v, Z * a, Z * i]).map((e) => (1 * e) / 1403),
+            (0, s.Z)(b, [v, Z * a, Z * i]).map((e) => +e / 1403),
             t.fl
         );
     return (0, s.Z)(

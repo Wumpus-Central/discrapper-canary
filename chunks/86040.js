@@ -1,46 +1,46 @@
 n.d(t, {
     C: () => l,
-    N: () => u
+    N: () => c
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(600164),
-    s = n(388032),
-    o = n(348421);
+var i = n(481060),
+    o = n(600164),
+    a = n(388032),
+    s = n(895039);
 let l = (e) => {
-        let { className: t, isEmailResent: n, resendEmail: a } = e;
-        return (0, i.jsx)('div', {
+        let { className: t, isEmailResent: n, resendEmail: o } = e;
+        return (0, r.jsx)('div', {
             className: t,
-            children: (0, i.jsxs)('div', {
-                className: o.awaitingWrapper,
+            children: (0, r.jsxs)('div', {
+                className: s.awaitingWrapper,
                 children: [
-                    (0, i.jsx)(r.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-xl/bold',
-                        children: s.intl.string(s.t.Q03WWV)
+                        children: a.NW.string(a.t.Q03WWV)
                     }),
-                    (0, i.jsxs)('p', {
+                    (0, r.jsxs)('p', {
                         children: [
-                            (0, i.jsx)(r.Text, {
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
-                                children: s.intl.string(s.t.BxPxhI)
+                                children: a.NW.string(a.t.BxPxhI)
                             }),
-                            (0, i.jsx)('br', {}),
-                            (0, i.jsx)(r.Text, {
+                            (0, r.jsx)('br', {}),
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
-                                children: s.intl.string(s.t.Y3fdOj)
+                                children: a.NW.string(a.t.Y3fdOj)
                             }),
-                            (0, i.jsx)('br', {}),
-                            (0, i.jsxs)(r.Text, {
+                            (0, r.jsx)('br', {}),
+                            (0, r.jsxs)(i.Text, {
                                 variant: 'text-md/normal',
                                 children: [
-                                    s.intl.string(s.t.Paa4v7),
+                                    a.NW.string(a.t.Paa4v7),
                                     '\xA0',
                                     n
-                                        ? s.intl.string(s.t.StGVvL)
-                                        : (0, i.jsx)(r.eee, {
-                                              onClick: a,
-                                              children: s.intl.string(s.t.Ex7sk5)
+                                        ? a.NW.string(a.t.StGVvL)
+                                        : (0, r.jsx)(i.eee, {
+                                              onClick: o,
+                                              children: a.NW.string(a.t.Ex7sk5)
                                           })
                                 ]
                             })
@@ -50,16 +50,16 @@ let l = (e) => {
             })
         });
     },
-    u = () =>
-        (0, i.jsx)('div', {
-            children: (0, i.jsx)(r.mzw, {
-                justify: a.Z.Justify.BETWEEN,
-                align: a.Z.Align.CENTER,
-                children: (0, i.jsx)(r.zxk, {
+    c = () =>
+        (0, r.jsx)('div', {
+            children: (0, r.jsx)(i.mzw, {
+                justify: o.Z.Justify.BETWEEN,
+                align: o.Z.Align.CENTER,
+                children: (0, r.jsx)(i.zxk, {
                     'data-testid': 'continue',
-                    color: r.zxk.Colors.BRAND,
+                    color: i.zxk.Colors.BRAND,
                     disabled: !0,
-                    children: s.intl.string(s.t.g8vPz8)
+                    children: a.NW.string(a.t.g8vPz8)
                 })
             })
         });

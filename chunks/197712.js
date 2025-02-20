@@ -25,18 +25,18 @@ n.d(t, {
     n(873817),
     n(610885),
     n(126298);
-var i = n(392711),
-    r = n(36793),
+var r = n(392711),
+    i = n(36793),
     a = n(486324);
 async function o(e) {
-    let { file: t, image: i, cropDimensions: o, cropOriginCoordinates: s, maxDimensions: l, imageRotation: c = 0 } = e,
+    let { file: t, image: r, cropDimensions: o, cropOriginCoordinates: s, maxDimensions: l, imageRotation: c = 0 } = e,
         {
             sourceX: u,
             sourceY: d,
             sourceWidth: m,
             sourceHeight: g
-        } = (0, r.GS)({
-            image: i,
+        } = (0, i.GS)({
+            image: r,
             cropDimensions: o,
             cropOriginCoordinates: s,
             maxDimensions: l,
@@ -46,23 +46,23 @@ async function o(e) {
         p = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
         E = new Promise((e, t) => {
             p.onmessage = (n) => {
-                let { data: i } = n;
-                if (i.type === a.u.CROP_GIF_COMPLETE) {
-                    var r;
+                let { data: r } = n;
+                if (r.type === a.u.CROP_GIF_COMPLETE) {
+                    var i;
                     e(
-                        ((r = new Blob([i.result])),
+                        ((i = new Blob([r.result])),
                         new Promise((e) => {
                             let t = new FileReader();
                             (t.onload = (t) => {
                                 var n;
-                                let i = null === (n = t.target) || void 0 === n ? void 0 : n.result;
-                                'string' == typeof i ? e(i) : e('');
+                                let r = null === (n = t.target) || void 0 === n ? void 0 : n.result;
+                                'string' == typeof r ? e(r) : e('');
                             }),
-                                t.readAsDataURL(r);
+                                t.readAsDataURL(i);
                         }))
                     ),
                         p.terminate();
-                } else i.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF')), p.terminate());
+                } else r.type === a.u.CROP_GIF_ERROR && (t(Error('Error cropping GIF')), p.terminate());
             };
         });
     return (
@@ -83,15 +83,15 @@ async function o(e) {
 }
 function s(e, t, n) {
     return {
-        x: (0, i.clamp)(e, n.left, n.right),
-        y: (0, i.clamp)(t, n.bottom, n.top)
+        x: (0, r.clamp)(e, n.left, n.right),
+        y: (0, r.clamp)(t, n.bottom, n.top)
     };
 }
-function l(e, t, n, i, r) {
+function l(e, t, n, r, i) {
     let o = n,
-        s = i,
-        l = r ? a.US : a.vJ;
-    return (n > l && ((o = l), (s = (l / n) * i)), n / i < e)
+        s = r,
+        l = i ? a.US : a.vJ;
+    return (n > l && ((o = l), (s = (l / n) * r)), n / r < e)
         ? {
               width: o,
               height: s
@@ -101,7 +101,7 @@ function l(e, t, n, i, r) {
               height: t
           };
 }
-function c(e, t, n, i) {
+function c(e, t, n, r) {
     switch (e) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
@@ -110,34 +110,34 @@ function c(e, t, n, i) {
                 height: n
             };
         case a.pC.BANNER:
-            let r = i ? a.SP : a.qj;
-            return l(a.MY, r, t, n, i);
+            let i = r ? a.SP : a.qj;
+            return l(a.MY, i, t, n, r);
         case a.pC.GUILD_BANNER:
-            let o = i ? a.t2 : a.C5;
-            return l(a.Ij, o, t, n, i);
+            let o = r ? a.t2 : a.C5;
+            return l(a.Ij, o, t, n, r);
         case a.pC.VIDEO_BACKGROUND:
-            let s = i ? a.kP : a.PB;
-            return l(a.Ff, s, t, n, i);
+            let s = r ? a.kP : a.PB;
+            return l(a.Ff, s, t, n, r);
         case a.pC.SCHEDULED_EVENT_IMAGE:
-            let c = i ? a.tv : a.WV;
-            return l(a.ut, c, t, n, i);
+            let c = r ? a.tv : a.WV;
+            return l(a.ut, c, t, n, r);
         case a.pC.HOME_HEADER:
-            return l(a.sX, a.SW, t, n, i);
+            return l(a.sX, a.SW, t, n, r);
     }
 }
 function u(e, t, n) {
-    let i = {
+    let r = {
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         },
-        r = e - n.width,
+        i = e - n.width,
         a = t - n.height;
-    return 0 !== r && ((i.left = -Math.abs(r / 2)), (i.right = r / 2)), 0 !== a && ((i.bottom = -Math.abs(a / 2)), (i.top = a / 2)), i;
+    return 0 !== i && ((r.left = -Math.abs(i / 2)), (r.right = i / 2)), 0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)), r;
 }
-function d(e, t, n, i, r) {
-    let o = r ? a.US : a.vJ;
+function d(e, t, n, r, i) {
+    let o = i ? a.US : a.vJ;
     switch (e) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
@@ -156,7 +156,7 @@ function d(e, t, n, i, r) {
             let c = Math.min(t, o);
             return {
                 width: c,
-                height: Math.min((9 / 16) * c, i)
+                height: Math.min((9 / 16) * c, r)
             };
         case a.pC.VIDEO_BACKGROUND:
             let u = Math.min(t, o);

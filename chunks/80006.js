@@ -1,30 +1,30 @@
-n.d(t, { I: () => u });
-var i = n(120356),
-    r = n.n(i),
-    a = n(442837),
-    s = n(481060),
-    o = n(607070);
+n.d(t, { I: () => c });
+var r = n(120356),
+    i = n.n(r),
+    o = n(442837),
+    a = n(481060),
+    s = n(607070);
 function l() {
-    return (0, a.cj)([o.Z], () => {
-        let { fontScale: e, fontScaleClass: t, keyboardModeEnabled: n, saturation: i, desaturateUserColors: r, useForcedColors: a, systemForcedColors: s, useReducedMotion: l, alwaysShowLinkDecorations: u } = o.Z;
+    return (0, o.cj)([s.Z], () => {
+        let { fontScale: e, fontScaleClass: t, keyboardModeEnabled: n, saturation: r, desaturateUserColors: i, useForcedColors: o, systemForcedColors: a, useReducedMotion: l, alwaysShowLinkDecorations: c } = s.Z;
         return {
             fontScale: e,
             fontScaleClass: t,
             keyboardModeEnabled: n,
-            saturation: i,
-            desaturateUserColors: r,
-            useForcedColors: a,
-            systemForcedColors: s,
+            saturation: r,
+            desaturateUserColors: i,
+            useForcedColors: o,
+            systemForcedColors: a,
             useReducedMotion: l,
-            alwaysShowLinkDecorations: u
+            alwaysShowLinkDecorations: c
         };
     });
 }
-function u() {
+function c() {
     let e = l(),
         t = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        n = r()({
-            'low-saturation': e.saturation <= s.AEw,
+        n = i()({
+            'low-saturation': e.saturation <= a.AEw,
             'keyboard-mode': e.keyboardModeEnabled,
             'decorate-links': e.alwaysShowLinkDecorations,
             'no-webkit-scrollbar': !t,

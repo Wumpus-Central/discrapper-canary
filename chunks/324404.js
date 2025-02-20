@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(995295),
-    r = n(374470);
-function a(e, t, n) {
+n.d(t, { Z: () => s }), n(47120);
+var r = n(995295),
+    i = n(374470);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,12 @@ function a(e, t, n) {
         e
     );
 }
-let s = {
+let a = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
 };
-class o {
+class s {
     isVisible(e) {
         return null == this._observer || this._visibleComponents.has(e);
     }
@@ -27,8 +27,8 @@ class o {
         let t = this._observer;
         if (null == t) return;
         this.unobserve(e);
-        let n = (0, i.findDOMNode)(e);
-        (0, r.k)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
+        let n = (0, r.findDOMNode)(e);
+        (0, i.k)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
     }
     unobserve(e) {
         let t = this._observer;
@@ -36,13 +36,13 @@ class o {
         let n = this._components.get(e);
         null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
     }
-    constructor(e = s) {
-        a(this, '_observer', void 0),
-            a(this, '_options', void 0),
-            a(this, '_nodes', new WeakMap()),
-            a(this, '_components', new WeakMap()),
-            a(this, '_visibleComponents', new WeakSet()),
-            a(this, '_handleEntries', (e) => {
+    constructor(e = a) {
+        o(this, '_observer', void 0),
+            o(this, '_options', void 0),
+            o(this, '_nodes', new WeakMap()),
+            o(this, '_components', new WeakMap()),
+            o(this, '_visibleComponents', new WeakSet()),
+            o(this, '_handleEntries', (e) => {
                 e.forEach((e) => {
                     let t;
                     if (null != e.isIntersecting) t = e.isIntersecting;

@@ -4,7 +4,7 @@ function t(e) {
             className: 'attribute',
             begin: /^[ ]*[a-zA-Z]+([\s_-]+[a-zA-Z]+)*/
         },
-        i = {
+        r = {
             begin: /=/,
             end: /[.;]/,
             contains: [
@@ -29,7 +29,7 @@ function t(e) {
     return {
         name: 'Extended Backus-Naur Form',
         illegal: /\S/,
-        contains: [t, n, i]
+        contains: [t, n, r]
     };
 }
 e.exports = t;

@@ -1,6 +1,6 @@
-var i = n(812639);
-function r(e, t, n) {
-    var r = e.length;
-    return (n = void 0 === n ? r : n), !t && n >= r ? e : i(e, t, n);
+var r = n(812639);
+function i(e, t, n) {
+    var i = e.length;
+    return (n = void 0 === n ? i : n), !t && n >= i ? e : r(e, t, n);
 }
-e.exports = r;
+e.exports = i;

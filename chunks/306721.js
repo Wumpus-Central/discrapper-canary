@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
-var i = n(401430),
-    l = n(283595),
-    r = n(695103);
-let a = {
+n.d(t, { Z: () => o });
+var r = n(401430),
+    i = n(283595),
+    l = n(695103);
+let o = {
     init() {
-        l.Z.whenInitialized(() => {
-            null != r.Z.testModeApplicationId && (0, i.Wt)(r.Z.testModeApplicationId, r.Z.testModeOriginURL);
+        i.Z.whenInitialized(() => {
+            null != l.Z.testModeApplicationId && (0, r.Wt)(l.Z.testModeApplicationId, l.Z.testModeOriginURL);
         });
     }
 };

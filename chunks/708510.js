@@ -1,30 +1,30 @@
-n.d(t, { O: () => j });
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    a = n(456268),
+n.d(t, { O: () => _ });
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(456268),
     o = n(863249),
     c = n(999382),
     d = n(209054),
     u = n(96788),
     m = n(217472),
-    h = n(202905),
+    p = n(202905),
     g = n(44867),
-    x = n(557359),
-    p = n(658666),
-    _ = n(307375),
-    C = n(384632),
-    f = n(388032),
-    v = n(233355);
-function N(e) {
+    h = n(557359),
+    f = n(658666),
+    b = n(307375),
+    x = n(384632),
+    j = n(388032),
+    N = n(317187);
+function v(e) {
     let { pendingState: t } = e,
-        n = r.useRef(!1),
-        l = r.useCallback(
+        n = i.useRef(!1),
+        s = i.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, d.k)(e), (0, u.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, d.k)(e), (0, u.V)(e), (0, l.le)(), (0, l.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -32,51 +32,51 @@ function N(e) {
             [n]
         );
     switch (t.joinType) {
-        case C.A.INVITE:
-            return (0, i.jsx)(x.A, {
+        case x.A.INVITE:
+            return (0, r.jsx)(h.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules
             });
-        case C.A.APPLY:
-            return (0, i.jsx)(h.r, { pendingFields: t.pendingVerificationFields });
-        case C.A.DISCOVERABLE:
-            return (0, i.jsx)(g.c, {
-                fetchDiscoveryData: l,
+        case x.A.APPLY:
+            return (0, r.jsx)(p.r, { pendingFields: t.pendingVerificationFields });
+        case x.A.DISCOVERABLE:
+            return (0, r.jsx)(g.c, {
+                fetchDiscoveryData: s,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
                 rules: t.termRules
             });
     }
 }
-function j() {
-    let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
-        t = (0, l.e7)([p.Z], () => p.Z.pendingState);
-    r.useEffect(() => {
+function _() {
+    let e = (0, s.e7)([c.Z], () => c.Z.getProps().guild),
+        t = (0, s.e7)([f.Z], () => f.Z.pendingState);
+    i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
-    let n = r.useCallback(
+    let n = i.useCallback(
         (t) => {
             (null == e ? void 0 : e.id) != null && m.Z.setSelectedJoinType(e.id, t);
         },
         [null == e ? void 0 : e.id]
     );
     if (null == e || null == t) return null;
-    let { joinType: a } = t;
-    return (0, i.jsxs)(s.Kqy, {
+    let { joinType: l } = t;
+    return (0, r.jsxs)(a.Kqy, {
         gap: 32,
         children: [
-            (0, i.jsx)(s.X6q, {
+            (0, r.jsx)(a.X6q, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: f.intl.string(f.t['+hFV+P'])
+                children: j.NW.string(j.t['+hFV+P'])
             }),
-            (0, i.jsx)(_.h, {
+            (0, r.jsx)(b.h, {
                 onTypePicked: n,
-                activeType: a,
+                activeType: l,
                 guild: e
             }),
-            (0, i.jsx)('div', { className: v.divider }),
-            (0, i.jsx)('div', { children: (0, i.jsx)(N, { pendingState: t }) })
+            (0, r.jsx)('div', { className: N.divider }),
+            (0, r.jsx)('div', { children: (0, r.jsx)(v, { pendingState: t }) })
         ]
     });
 }

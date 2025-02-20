@@ -1,10 +1,10 @@
-function i(e, t) {
+function r(e, t) {
     if (null == e) return {};
     var n,
-        i,
-        r = {},
-        a = Object.keys(e);
-    for (i = 0; i < a.length; i++) (n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-    return r;
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

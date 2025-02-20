@@ -1,36 +1,36 @@
-l.d(n, { Z: () => p });
-var t = l(200651),
-    i = l(192379),
-    r = l(120356),
-    a = l.n(r),
-    s = l(454585),
-    o = l(937889),
-    u = l(970184),
-    c = l(985184),
-    d = l(870456),
-    m = l(580173),
-    h = l(663362);
-function p(e) {
-    let { content: n, className: l } = e,
-        r = (function (e) {
-            let n = (0, u.CJ)();
-            return (0, i.useMemo)(() => {
-                let l;
-                return null === n
+r.d(t, { Z: () => f });
+var n = r(200651),
+    l = r(192379),
+    i = r(120356),
+    o = r.n(i),
+    a = r(454585),
+    c = r(937889),
+    s = r(970184),
+    u = r(985184),
+    d = r(870456),
+    p = r(483758),
+    b = r(368365);
+function f(e) {
+    let { content: t, className: r } = e,
+        i = (function (e) {
+            let t = (0, s.CJ)();
+            return (0, l.useMemo)(() => {
+                let r;
+                return null === t
                     ? null
-                    : ((l =
-                          null != n.message
-                              ? (0, o.rs)(n.message, d.u)
-                              : (0, o.p6)({
-                                    channelId: n.channelId,
+                    : ((r =
+                          null != t.message
+                              ? (0, c.rs)(t.message, d.u)
+                              : (0, c.p6)({
+                                    channelId: t.channelId,
                                     renderOptions: d.u
                                 })),
-                      s.Z.parse(e, !0, l));
-            }, [e, n]);
-        })(n),
-        p = (0, c.Gt)();
-    return (0, t.jsx)('div', {
-        className: a()(l, h.markup, m.markdownContainer, { [m.containerSizedText]: p }),
-        children: r
+                      a.Z.parse(e, !0, r));
+            }, [e, t]);
+        })(t),
+        f = (0, u.Gt)();
+    return (0, n.jsx)('div', {
+        className: o()(r, b.markup, p.markdownContainer, { [p.containerSizedText]: f }),
+        children: i
     });
 }

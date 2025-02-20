@@ -1,8 +1,8 @@
 a.d(e, { W: () => h });
 var r = a(967752),
     n = a(622916),
-    _ = a(394798),
-    o = a(573736),
+    o = a(394798),
+    _ = a(573736),
     i = a(928541),
     c = a(617726),
     s = a(370336),
@@ -31,32 +31,32 @@ class h {
         }
     }
     captureException(t, e, a) {
-        let r = (0, _.DM)();
-        if ((0, _.YO)(t)) return R.X && n.kg.log(L), r;
-        let o = {
+        let r = (0, o.DM)();
+        if ((0, o.YO)(t)) return R.X && n.kg.log(L), r;
+        let _ = {
             event_id: r,
             ...e
         };
-        return this._process(this.eventFromException(t, o).then((t) => this._captureEvent(t, o, a))), o.event_id;
+        return this._process(this.eventFromException(t, _).then((t) => this._captureEvent(t, _, a))), _.event_id;
     }
     captureMessage(t, e, a, r) {
         let n = {
-                event_id: (0, _.DM)(),
+                event_id: (0, o.DM)(),
                 ...a
             },
-            i = (0, o.Le)(t) ? t : String(t),
-            c = (0, o.pt)(t) ? this.eventFromMessage(i, e, n) : this.eventFromException(t, n);
+            i = (0, _.Le)(t) ? t : String(t),
+            c = (0, _.pt)(t) ? this.eventFromMessage(i, e, n) : this.eventFromException(t, n);
         return this._process(c.then((t) => this._captureEvent(t, n, r))), n.event_id;
     }
     captureEvent(t, e, a) {
-        let r = (0, _.DM)();
-        if (e && e.originalException && (0, _.YO)(e.originalException)) return R.X && n.kg.log(L), r;
-        let o = {
+        let r = (0, o.DM)();
+        if (e && e.originalException && (0, o.YO)(e.originalException)) return R.X && n.kg.log(L), r;
+        let _ = {
                 event_id: r,
                 ...e
             },
             i = (t.sdkProcessingMetadata || {}).capturedSpanScope;
-        return this._process(this._captureEvent(t, o, i || a)), o.event_id;
+        return this._process(this._captureEvent(t, _, i || a)), _.event_id;
     }
     captureSession(t) {
         'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
@@ -110,8 +110,8 @@ class h {
     recordDroppedEvent(t, e, a) {
         if (this._options.sendClientReports) {
             let r = 'number' == typeof a ? a : 1,
-                _ = `${t}:${e}`;
-            R.X && n.kg.log(`Recording outcome: "${_}"${r > 1 ? ` (${r} times)` : ''}`), (this._outcomes[_] = (this._outcomes[_] || 0) + r);
+                o = `${t}:${e}`;
+            R.X && n.kg.log(`Recording outcome: "${o}"${r > 1 ? ` (${r} times)` : ''}`), (this._outcomes[o] = (this._outcomes[o] || 0) + r);
         }
     }
     on(t, e) {
@@ -147,8 +147,8 @@ class h {
                     break;
                 }
             }
-        let _ = 'ok' === t.status;
-        ((_ && 0 === t.errors) || (_ && a)) &&
+        let o = 'ok' === t.status;
+        ((o && 0 === t.errors) || (o && a)) &&
             ((0, f.CT)(t, {
                 ...(a && { status: 'crashed' }),
                 errors: t.errors || Number(r || a)
@@ -168,9 +168,9 @@ class h {
     }
     _prepareEvent(t, e, a, r = (0, I.aF)()) {
         let n = this.getOptions(),
-            _ = Object.keys(this._integrations);
+            o = Object.keys(this._integrations);
         return (
-            !e.integrations && _.length > 0 && (e.integrations = _),
+            !e.integrations && o.length > 0 && (e.integrations = o),
             this.emit('preprocessEvent', t, e),
             t.type || r.setLastEventId(t.event_id || e.event_id),
             (0, N.R)(n, t, e, a, this, r).then((t) => {
@@ -180,7 +180,7 @@ class h {
                     ...(a ? a.getPropagationContext() : void 0)
                 };
                 if (!(t.contexts && t.contexts.trace) && e) {
-                    let { traceId: a, spanId: r, parentSpanId: n, dsc: _ } = e;
+                    let { traceId: a, spanId: r, parentSpanId: n, dsc: o } = e;
                     t.contexts = {
                         trace: (0, s.Jr)({
                             trace_id: a,
@@ -189,9 +189,9 @@ class h {
                         }),
                         ...t.contexts
                     };
-                    let o = _ || (0, p._l)(a, this);
+                    let _ = o || (0, p._l)(a, this);
                     t.sdkProcessingMetadata = {
-                        dynamicSamplingContext: o,
+                        dynamicSamplingContext: _,
                         ...t.sdkProcessingMetadata
                     };
                 }
@@ -210,7 +210,7 @@ class h {
     _processEvent(t, e, a) {
         let r = this.getOptions(),
             { sampleRate: n } = r,
-            _ = D(t),
+            o = D(t),
             c = O(t),
             s = t.type || 'error',
             l = `before send for type \`${s}\``,
@@ -225,32 +225,32 @@ class h {
                     ? a
                     : (function (t, e) {
                           let a = `${e} must return \`null\` or a valid event.`;
-                          if ((0, o.J8)(t))
+                          if ((0, _.J8)(t))
                               return t.then(
                                   (t) => {
-                                      if (!(0, o.PO)(t) && null !== t) throw new E.b(a);
+                                      if (!(0, _.PO)(t) && null !== t) throw new E.b(a);
                                       return t;
                                   },
                                   (t) => {
                                       throw new E.b(`${e} rejected with ${t}`);
                                   }
                               );
-                          if (!(0, o.PO)(t) && null !== t) throw new E.b(a);
+                          if (!(0, _.PO)(t) && null !== t) throw new E.b(a);
                           return t;
                       })(
                           (function (t, e, a, r) {
-                              let { beforeSend: n, beforeSendTransaction: _, beforeSendSpan: o } = e;
+                              let { beforeSend: n, beforeSendTransaction: o, beforeSendSpan: _ } = e;
                               if (O(a) && n) return n(a, r);
                               if (D(a)) {
-                                  if (a.spans && o) {
+                                  if (a.spans && _) {
                                       let e = [];
                                       for (let r of a.spans) {
-                                          let a = o(r);
+                                          let a = _(r);
                                           a ? e.push(a) : t.recordDroppedEvent('before_send', 'span');
                                       }
                                       a.spans = e;
                                   }
-                                  if (_) {
+                                  if (o) {
                                       if (a.spans) {
                                           let t = a.spans.length;
                                           a.sdkProcessingMetadata = {
@@ -258,7 +258,7 @@ class h {
                                               spanCountBeforeProcessing: t
                                           };
                                       }
-                                      return _(a, r);
+                                      return o(a, r);
                                   }
                               }
                               return a;
@@ -268,24 +268,24 @@ class h {
             })
             .then((r) => {
                 if (null === r) {
-                    if ((this.recordDroppedEvent('before_send', I, t), _)) {
+                    if ((this.recordDroppedEvent('before_send', I, t), o)) {
                         let e = 1 + (t.spans || []).length;
                         this.recordDroppedEvent('before_send', 'span', e);
                     }
                     throw new E.b(`${l} returned \`null\`, will not send event.`, 'log');
                 }
                 let n = a && a.getSession();
-                if ((!_ && n && this._updateSessionFromEvent(n, r), _)) {
+                if ((!o && n && this._updateSessionFromEvent(n, r), o)) {
                     let t = ((r.sdkProcessingMetadata && r.sdkProcessingMetadata.spanCountBeforeProcessing) || 0) - (r.spans ? r.spans.length : 0);
                     t > 0 && this.recordDroppedEvent('before_send', 'span', t);
                 }
-                let o = r.transaction_info;
+                let _ = r.transaction_info;
                 return (
-                    _ &&
-                        o &&
+                    o &&
+                        _ &&
                         r.transaction !== t.transaction &&
                         (r.transaction_info = {
-                            ...o,
+                            ..._,
                             source: 'custom'
                         }),
                     this.sendEvent(r, e),

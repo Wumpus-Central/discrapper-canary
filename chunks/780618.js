@@ -1,3 +1,3 @@
 n(15045);
-var i = n(387992);
-e.exports = i('String', 'trim');
+var r = n(387992);
+e.exports = r('String', 'trim');

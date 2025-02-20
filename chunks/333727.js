@@ -1,50 +1,50 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(278323),
-    l = n(13245),
-    r = n(45114),
-    o = n(237997),
+    r = n(13245),
+    o = n(45114),
+    l = n(237997),
     a = n(145597),
     s = n(620954),
-    d = n(987650),
+    c = n(987650),
     u = n(981631),
-    c = n(388032);
-function h(e, t, n, h) {
-    let _ = t.username,
-        p = c.intl.format(c.t.VDODnp, {
+    d = n(388032);
+function p(e, t, n, p) {
+    let f = t.username,
+        h = d.NW.format(d.t.VDODnp, {
             username: '',
             game: n.name
         }),
-        f = t.getAvatarURL(e.guild_id, 80),
-        { trackView: m, trackClick: g } = (0, s.R)(d.n0.ActivityInvite, {
-            notif_type: d.n0.ActivityInvite,
+        g = t.getAvatarURL(e.guild_id, 80),
+        { trackView: _, trackClick: m } = (0, s.R)(c.n0.ActivityInvite, {
+            notif_type: c.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: u.mFx.JOIN_REQUEST,
-            activity_name: h.name
+            activity_name: p.name
         });
     return {
-        icon: f,
-        title: _,
-        body: p,
-        confirmText: c.intl.string(c.t['fgP/wc']),
-        cancelText: c.intl.string(c.t.tpXzJy),
+        icon: g,
+        title: f,
+        body: h,
+        confirmText: d.NW.string(d.t['fgP/wc']),
+        cancelText: d.NW.string(d.t.tpXzJy),
         onNotificationShow: () => {
-            m();
+            _();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
                 channelId: e.id,
                 type: u.mFx.JOIN,
-                activity: h,
-                location: o.Z.isLocked((0, a.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
+                activity: p,
+                location: l.Z.isLocked((0, a.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY
             }),
-                g('join'),
-                l.Z.updateNotificationStatus(n);
+                m('join'),
+                r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, r.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
+            (0, o.In)(e.id, !0, !0), r.Z.updateNotificationStatus(n), m('decline');
         },
         onDismissClick: () => {
-            g('dismiss');
+            m('dismiss');
         }
     };
 }

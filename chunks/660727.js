@@ -12,14 +12,14 @@ var o = n(200651),
     v = n(984933),
     m = n(768581),
     x = n(956664),
-    f = n(185923),
-    h = n(388032),
-    j = n(916074),
-    b = n(84717);
-function N() {
+    N = n(185923),
+    f = n(388032),
+    h = n(834094),
+    j = n(84717);
+function b() {
     return [
         {
-            name: h.intl.string(h.t.Sp2NFx),
+            name: f.NW.string(f.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png']
         }
     ];
@@ -41,7 +41,7 @@ let I = function (e) {
         z = v.ZP.getDefaultChannel(a),
         [g, C] = i.useState('tab-id-role-icon-file-upload'),
         [_, S] = i.useState(!1),
-        B = (0, r.Z)(N);
+        B = (0, r.Z)(b);
     return (
         i.useEffect(() => {
             S(!1);
@@ -50,19 +50,19 @@ let I = function (e) {
             transitionState: x,
             'aria-labelledby': I,
             size: d.CgR.MEDIUM,
-            className: j.modalRoot,
+            className: h.modalRoot,
             children: (0, o.jsxs)('div', {
-                className: j.contentWrapper,
+                className: h.contentWrapper,
                 children: [
                     (0, o.jsx)('nav', {
-                        className: l()(j.nav, { [j.navUploadSelected]: 'tab-id-role-icon-file-upload' === g }),
+                        className: l()(h.nav, { [h.navUploadSelected]: 'tab-id-role-icon-file-upload' === g }),
                         children: (0, o.jsxs)('div', {
-                            className: j.navList,
+                            className: h.navList,
                             role: 'tablist',
                             'aria-label': 'Expression Picker',
                             children: [
                                 (0, o.jsx)('div', {
-                                    className: j.navItem,
+                                    className: h.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-file-upload',
                                     'aria-selected': 'tab-id-role-icon-file-upload' === g,
@@ -71,14 +71,14 @@ let I = function (e) {
                                             C('tab-id-role-icon-file-upload');
                                         },
                                         'aria-current': 'page',
-                                        className: l()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-file-upload' === g }),
+                                        className: l()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-file-upload' === g }),
                                         look: d.zxk.Looks.BLANK,
                                         size: d.zxk.Sizes.NONE,
-                                        children: h.intl.string(h.t.royWSE)
+                                        children: f.NW.string(f.t.royWSE)
                                     })
                                 }),
                                 (0, o.jsx)('div', {
-                                    className: j.navItem,
+                                    className: h.navItem,
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-emoji',
                                     'aria-selected': 'tab-id-role-icon-emoji' === g,
@@ -87,10 +87,10 @@ let I = function (e) {
                                             C('tab-id-role-icon-emoji');
                                         },
                                         'aria-current': 'page',
-                                        className: l()(j.navButton, { [j.navButtonActive]: 'tab-id-role-icon-emoji' === g }),
+                                        className: l()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-emoji' === g }),
                                         look: d.zxk.Looks.BLANK,
                                         size: d.zxk.Sizes.NONE,
-                                        children: h.intl.string(h.t['/Ny2wc'])
+                                        children: f.NW.string(f.t['/Ny2wc'])
                                     })
                                 })
                             ]
@@ -99,33 +99,33 @@ let I = function (e) {
                     'tab-id-role-icon-file-upload' === g
                         ? (0, o.jsx)(d.hzk, {
                               children: (0, o.jsxs)('div', {
-                                  className: j.uploadContainer,
+                                  className: h.uploadContainer,
                                   children: [
                                       (0, o.jsxs)('div', {
-                                          className: j.uploadIconOuterContainer,
+                                          className: h.uploadIconOuterContainer,
                                           children: [
                                               (0, o.jsx)('img', {
-                                                  src: b,
+                                                  src: j,
                                                   alt: 'sparkles'
                                               }),
                                               (0, o.jsx)('div', {
-                                                  className: j.uploadIconInnerContainer,
+                                                  className: h.uploadIconInnerContainer,
                                                   children: (0, o.jsx)(d.FmF, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: j.uploadIcon
+                                                      className: h.uploadIcon
                                                   })
                                               })
                                           ]
                                       }),
                                       (0, o.jsx)('div', {
-                                          className: j.uploadInfo,
-                                          children: h.intl.string(h.t['mz++Qk'])
+                                          className: h.uploadInfo,
+                                          children: f.NW.string(f.t['mz++Qk'])
                                       }),
                                       (0, o.jsxs)(d.zxk, {
                                           size: d.zxk.Sizes.SMALL,
                                           children: [
-                                              h.intl.string(h.t.sdCQY2),
+                                              f.NW.string(f.t.sdCQY2),
                                               (0, o.jsx)(p.ZP, {
                                                   onChange: (e) => {
                                                       S(!1), n(e), m();
@@ -141,10 +141,10 @@ let I = function (e) {
                                       }),
                                       _
                                           ? (0, o.jsx)(d.Text, {
-                                                className: j.uploadError,
+                                                className: h.uploadError,
                                                 color: 'text-danger',
                                                 variant: 'text-sm/normal',
-                                                children: h.intl.string(h.t.HFyKsb)
+                                                children: f.NW.string(f.t.HFyKsb)
                                             })
                                           : null
                                   ]
@@ -163,7 +163,7 @@ let I = function (e) {
                                   }
                                   m();
                               },
-                              pickerIntention: f.Hz.COMMUNITY_CONTENT,
+                              pickerIntention: N.Hz.COMMUNITY_CONTENT,
                               channel: z
                           })
                         : null

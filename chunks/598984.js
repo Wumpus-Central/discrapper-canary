@@ -1,19 +1,19 @@
 n.d(t, {
-    NR: () => a,
+    NR: () => o,
     Ob: () => l,
-    Vx: () => c,
-    ZI: () => s,
-    m1: () => u,
-    uc: () => o
+    Vx: () => u,
+    ZI: () => a,
+    m1: () => c,
+    uc: () => s
 });
-var i = n(987170),
-    r = n(987338);
-let a = (0, i.Z)({
+var r = n(987170),
+    i = n(987338);
+let o = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_vanilla',
         label: 'CTP app open - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -22,12 +22,12 @@ let a = (0, i.Z)({
             }
         ]
     }),
-    s = (0, i.Z)({
+    a = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_filters',
         label: 'CTP app open - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -36,12 +36,12 @@ let a = (0, i.Z)({
             }
         ]
     }),
-    o = (0, i.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_multiple_buckets',
         label: 'CTP app open - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -55,12 +55,12 @@ let a = (0, i.Z)({
             }
         ]
     }),
-    l = (0, i.Z)({
+    l = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_everyone',
         label: 'CTP app open - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -69,12 +69,12 @@ let a = (0, i.Z)({
             }
         ]
     }),
-    u = (0, i.Z)({
+    c = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_uneven_buckets',
         label: 'CTP app open - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -83,7 +83,7 @@ let a = (0, i.Z)({
             }
         ]
     }),
-    c = (0, i.Z)({
+    u = (0, r.Z)({
         kind: 'user',
         id: '2024-06_ctp_delta_vanilla',
         label: 'CTP Delta Vanilla - A/A test',

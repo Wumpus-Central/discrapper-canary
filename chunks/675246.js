@@ -1,71 +1,71 @@
 function t(e, t) {
-    var i = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
-    if (!i) {
-        if (Array.isArray(e) || (i = n(e)) || (t && e && 'number' == typeof e.length)) {
-            i && (e = i);
-            var r = 0,
-                a = function () {};
+    var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    if (!r) {
+        if (Array.isArray(e) || (r = n(e)) || (t && e && 'number' == typeof e.length)) {
+            r && (e = r);
+            var i = 0,
+                o = function () {};
             return {
-                s: a,
+                s: o,
                 n: function () {
-                    return r >= e.length
+                    return i >= e.length
                         ? { done: !0 }
                         : {
                               done: !1,
-                              value: e[r++]
+                              value: e[i++]
                           };
                 },
                 e: function (e) {
                     throw e;
                 },
-                f: a
+                f: o
             };
         }
         throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
-    var s,
-        o = !0,
+    var a,
+        s = !0,
         l = !1;
     return {
         s: function () {
-            i = i.call(e);
+            r = r.call(e);
         },
         n: function () {
-            var e = i.next();
-            return (o = e.done), e;
+            var e = r.next();
+            return (s = e.done), e;
         },
         e: function (e) {
-            (l = !0), (s = e);
+            (l = !0), (a = e);
         },
         f: function () {
             try {
-                o || null == i.return || i.return();
+                s || null == r.return || r.return();
             } finally {
-                if (l) throw s;
+                if (l) throw a;
             }
         }
     };
 }
 function n(e, t) {
     if (e) {
-        if ('string' == typeof e) return i(e, t);
+        if ('string' == typeof e) return r(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
         if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return i(e, t);
+        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return r(e, t);
     }
 }
-function i(e, t) {
+function r(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+    return r;
 }
-function r() {
+function i() {
     this._defaults = [];
 }
-for (var a = 0, s = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert', 'disableTLSCerts']; a < s.length; a++) {
-    let e = s[a];
-    r.prototype[e] = function () {
-        for (var t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+for (var o = 0, a = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert', 'disableTLSCerts']; o < a.length; o++) {
+    let e = a[o];
+    i.prototype[e] = function () {
+        for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
         return (
             this._defaults.push({
                 fn: e,
@@ -75,18 +75,18 @@ for (var a = 0, s = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'aut
         );
     };
 }
-(r.prototype._setDefaults = function (e) {
+(i.prototype._setDefaults = function (e) {
     var n,
-        i = t(this._defaults);
+        r = t(this._defaults);
     try {
-        for (i.s(); !(n = i.n()).done; ) {
+        for (r.s(); !(n = r.n()).done; ) {
             let t = n.value;
             e[t.fn](...t.args);
         }
     } catch (e) {
-        i.e(e);
+        r.e(e);
     } finally {
-        i.f();
+        r.f();
     }
 }),
-    (e.exports = r);
+    (e.exports = i);

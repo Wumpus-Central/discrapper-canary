@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    r = n(723184);
-let a = function () {
-    var e = (0, r.default)({
+n.d(t, { Z: () => o });
+var r = n(192379),
+    i = n(723184);
+let o = function () {
+    var e = (0, i.default)({
         default: {
             picker: {
                 width: '14px',
@@ -14,5 +14,5 @@ let a = function () {
             }
         }
     });
-    return i.createElement('div', { style: e.picker });
+    return r.createElement('div', { style: e.picker });
 };

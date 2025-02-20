@@ -1,40 +1,40 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => a });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(388032),
-    r = n(322822);
-function s(e) {
+var i = n(481060),
+    l = n(388032),
+    o = n(482152);
+function a(e) {
     let { onClose: t, guildName: n } = e;
-    return (0, i.jsxs)('div', {
-        className: r.container,
+    return (0, r.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, i.jsx)('div', {
-                className: r.iconContainer,
-                children: (0, i.jsx)(l.YlB, {
+            (0, r.jsx)('div', {
+                className: o.iconContainer,
+                children: (0, r.jsx)(i.YlB, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: r.icon,
+                    className: o.icon,
                     width: 20,
                     height: 20
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: r.header,
+            (0, r.jsxs)('div', {
+                className: o.header,
                 children: [
-                    (0, i.jsx)(l.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'heading-md/semibold',
-                        className: r.headerText,
-                        children: a.intl.string(a.t.LIIyeH)
+                        className: o.headerText,
+                        children: l.NW.string(l.t.LIIyeH)
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: a.intl.format(a.t['4/6vQk'], { guildName: n })
+                        children: l.NW.format(l.t['4/6vQk'], { guildName: n })
                     }),
-                    (0, i.jsx)(l.zxk, {
+                    (0, r.jsx)(i.zxk, {
                         onClick: t,
-                        className: r.button,
-                        children: a.intl.string(a.t.BddRzc)
+                        className: o.button,
+                        children: l.NW.string(l.t.BddRzc)
                     })
                 ]
             })

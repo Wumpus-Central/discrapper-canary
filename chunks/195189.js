@@ -1,26 +1,26 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(449226),
-    s = n(231338),
-    a = n(388032),
-    o = n(45596);
+var i = n(481060),
+    s = n(449226),
+    a = n(231338),
+    l = n(388032),
+    o = n(412856);
 function c(e) {
     let { title: t, details: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: o.simpleItemWrapper,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.itemContent,
                 children: [
-                    (0, i.jsx)(r.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: t
                     }),
                     'string' == typeof n
-                        ? (0, i.jsx)(r.Text, {
+                        ? (0, r.jsx)(i.Text, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
                               children: n
@@ -28,14 +28,14 @@ function c(e) {
                         : n
                 ]
             }),
-            (0, i.jsx)(r.ua7, {
+            (0, r.jsx)(i.ua7, {
                 tooltipContentClassName: o.tooltip,
-                text: a.intl.string(a.t.NQ4nCg),
+                text: l.NW.string(l.t.NQ4nCg),
                 children: (e) =>
-                    (0, i.jsx)(l.Z, {
+                    (0, r.jsx)(s.Z, {
                         checked: !0,
                         disabled: !0,
-                        onChange: s.dG,
+                        onChange: a.dG,
                         className: o.bringToFront,
                         tooltipProps: e
                     })

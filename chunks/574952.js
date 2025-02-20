@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(513202);
-function r() {
-    return i.Z;
+n.d(t, { Z: () => i });
+var r = n(513202);
+function i() {
+    return r.Z;
 }

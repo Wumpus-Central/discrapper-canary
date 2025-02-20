@@ -1,10 +1,10 @@
-let i, r, a;
-n.d(t, { Z: () => b }), n(47120);
-var s,
-    o = n(392711),
+let r, i, o;
+n.d(t, { Z: () => S }), n(47120);
+var a,
+    s = n(392711),
     l = n(442837),
-    u = n(570140);
-function c(e, t, n) {
+    c = n(570140);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,61 +19,61 @@ function c(e, t, n) {
 }
 let d = new Map(),
     f = d,
-    _ = !1,
     p = !1,
+    _ = !1,
     h = (e) => {
-        (_ = !0), (r = void 0);
+        (p = !0), (i = void 0);
     },
     m = (e) => {
         let { error: t } = e;
-        (f = d), (_ = !1), (r = t), (p = !0);
+        (f = d), (p = !1), (i = t), (_ = !0);
     },
     g = (e) => {
-        0 === e.purchases.length ? (f = d) : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (p = !0), (_ = !1), (r = void 0);
+        0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (_ = !0), (p = !1), (i = void 0);
     },
     E = (e) => {
-        (i = e.skuId), (a = void 0);
+        (r = e.skuId), (o = void 0);
     },
     v = (e) => {
-        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, o.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (i = void 0), (a = void 0);
+        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (o = void 0);
+    },
+    b = (e) => {
+        let { error: t, skuId: n } = e;
+        (r = n), (o = t);
     },
     y = (e) => {
-        let { error: t, skuId: n } = e;
-        (i = n), (a = t);
-    },
-    I = (e) => {
-        (f = d), (_ = !1), (i = void 0), (r = void 0), (a = void 0), (p = !1);
+        (f = d), (p = !1), (r = void 0), (i = void 0), (o = void 0), (_ = !1);
     };
-class T extends (s = l.ZP.Store) {
+class O extends (a = l.ZP.Store) {
     get isFetching() {
-        return _;
+        return p;
     }
     get isClaiming() {
-        return i;
+        return r;
     }
     get purchases() {
         return f;
     }
     get fetchError() {
-        return r;
+        return i;
     }
     get claimError() {
-        return a;
+        return o;
     }
     get hasPreviouslyFetched() {
-        return p;
+        return _;
     }
     getPurchase(e) {
         return null != e ? f.get(e) : void 0;
     }
 }
-c(T, 'displayName', 'CollectiblesPurchaseStore');
-let b = new T(u.Z, {
+u(O, 'displayName', 'CollectiblesPurchaseStore');
+let S = new O(c.Z, {
     COLLECTIBLES_PURCHASES_FETCH: h,
     COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
     COLLECTIBLES_PURCHASES_FETCH_FAILURE: m,
     COLLECTIBLES_CLAIM: E,
     COLLECTIBLES_CLAIM_SUCCESS: v,
-    COLLECTIBLES_CLAIM_FAILURE: y,
-    LOGOUT: I
+    COLLECTIBLES_CLAIM_FAILURE: b,
+    LOGOUT: y
 });

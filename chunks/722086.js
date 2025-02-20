@@ -1,8 +1,8 @@
-n.d(t, { Z: () => _ });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => p });
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,40 +15,40 @@ function s(e, t, n) {
         e
     );
 }
-let o = {};
+let s = {};
 function l() {
-    o = {};
+    s = {};
 }
-function u(e) {
-    o[e.id] = {
+function c(e) {
+    s[e.id] = {
         loading: !1,
         note: e.note
     };
 }
-function c(e) {
+function u(e) {
     let { userId: t } = e;
-    o[t] = {
+    s[t] = {
         loading: !0,
         note: null
     };
 }
 function d(e) {
     let { userId: t, note: n } = e;
-    o[t] = {
+    s[t] = {
         loading: !1,
         note: null == n ? void 0 : n.note
     };
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getNote(e) {
-        return o[e];
+        return s[e];
     }
 }
-s(f, 'displayName', 'NoteStore');
-let _ = new f(a.Z, {
+a(f, 'displayName', 'NoteStore');
+let p = new f(o.Z, {
     CONNECTION_OPEN: l,
     OVERLAY_INITIALIZE: l,
-    USER_NOTE_UPDATE: u,
-    USER_NOTE_LOAD_START: c,
+    USER_NOTE_UPDATE: c,
+    USER_NOTE_LOAD_START: u,
     USER_NOTE_LOADED: d
 });

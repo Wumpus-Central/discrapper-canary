@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(251625),
-    i = n(823379),
-    l = n(981631),
+    l = n(823379),
+    i = n(981631),
     a = n(388032);
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
@@ -16,7 +16,7 @@ function s(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        r = e.slice(-1 * t).filter(i.lm);
+        r = e.slice(-1 * t).filter(l.lm);
     if (0 === r.length)
         return (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -46,10 +46,10 @@ function s(e, t) {
     r.forEach((e, t, r) => {
         (n.packetsSentOrReceived += t > 0 ? r[t].packetsSentOrReceived - r[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? r[t].packetsLost - r[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
-    let l = r[0].type,
+    let i = r[0].type,
         a = r.length;
     return {
-        type: l,
+        type: i,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
@@ -78,9 +78,9 @@ function d(e, t, n, r) {
         let e = s(t, 5),
             n = s(t, 30);
         if (n.numDatapoints >= 5) {
-            var i;
-            return null !== (i = u(e, null == r ? void 0 : r.maxFrameRate)) && void 0 !== i ? i : u(n, null == r ? void 0 : r.maxFrameRate);
+            var l;
+            return null !== (l = u(e, null == r ? void 0 : r.maxFrameRate)) && void 0 !== l ? l : u(n, null == r ? void 0 : r.maxFrameRate);
         }
     }
-    return e === l.IE4.BAD ? c(a.NW.string(a.t.Ic588P), 'Bad Connection') : null;
+    return e === i.IE4.BAD ? c(a.NW.string(a.t.Ic588P), 'Bad Connection') : null;
 }

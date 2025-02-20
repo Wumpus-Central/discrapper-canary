@@ -1,63 +1,63 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    l = n(192379),
-    a = n(990547),
-    r = n(481060),
-    s = n(213609),
-    o = n(536442),
+n.d(t, { Z: () => h });
+var r = n(200651),
+    i = n(192379),
+    l = n(990547),
+    o = n(481060),
+    a = n(213609),
+    s = n(536442),
     c = n(39604),
-    d = n(176127),
-    u = n(388032),
-    h = n(317539);
-function p(e) {
-    let { onOpenClips: t, lastClipsSession: n, closePopout: p } = e;
-    return (l.useEffect(
+    u = n(176127),
+    d = n(388032),
+    p = n(377769);
+function h(e) {
+    let { onOpenClips: t, lastClipsSession: n, closePopout: h } = e;
+    return (i.useEffect(
         () => () => {
             (0, c.eL)();
         },
         []
     ),
-    (0, s.Z)({
-        type: a.ImpressionTypes.VIEW,
-        name: a.ImpressionNames.HOTSPOT,
-        properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
+    (0, a.Z)({
+        type: l.ImpressionTypes.VIEW,
+        name: l.ImpressionNames.HOTSPOT,
+        properties: { hotspot_location: s.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
-        ? (0, i.jsx)(i.Fragment, {})
-        : (0, i.jsxs)('div', {
-              className: h.recentClipsPopout,
+        ? (0, r.jsx)(r.Fragment, {})
+        : (0, r.jsxs)('div', {
+              className: p.recentClipsPopout,
               children: [
-                  (0, i.jsx)('div', {
-                      className: h.thumbnailStackContainer,
-                      children: (0, i.jsx)(d.Z, {})
+                  (0, r.jsx)('div', {
+                      className: p.thumbnailStackContainer,
+                      children: (0, r.jsx)(u.Z, {})
                   }),
-                  (0, i.jsx)(r.X6q, {
-                      className: h.header,
+                  (0, r.jsx)(o.X6q, {
+                      className: p.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
-                      children: u.intl.format(u.t['+qxkzM'], { count: n.newClipIds.length })
+                      children: d.NW.format(d.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, r.jsx)(o.Text, {
                       color: 'text-normal',
-                      className: h.__invalid_content,
+                      className: p.__invalid_content,
                       variant: 'text-sm/medium',
-                      children: u.intl.format(u.t['7XX0/f'], { applicationName: n.applicationName })
+                      children: d.NW.format(d.t['7XX0/f'], { applicationName: n.applicationName })
                   }),
-                  (0, i.jsxs)('div', {
-                      className: h.buttonsContainer,
+                  (0, r.jsxs)('div', {
+                      className: p.buttonsContainer,
                       children: [
-                          (0, i.jsx)(r.zxk, {
-                              color: r.zxk.Colors.PRIMARY,
-                              look: r.zxk.Looks.LINK,
+                          (0, r.jsx)(o.zxk, {
+                              color: o.zxk.Colors.PRIMARY,
+                              look: o.zxk.Looks.LINK,
                               onClick: function () {
-                                  (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
+                                  (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
                               },
-                              children: u.intl.string(u.t['7r5Z19'])
+                              children: d.NW.string(d.t['7r5Z19'])
                           }),
-                          (0, i.jsx)(r.zxk, {
-                              color: r.zxk.Colors.BRAND,
+                          (0, r.jsx)(o.zxk, {
+                              color: o.zxk.Colors.BRAND,
                               onClick: t,
-                              children: u.intl.string(u.t.md4qKy)
+                              children: d.NW.string(d.t.md4qKy)
                           })
                       ]
                   })

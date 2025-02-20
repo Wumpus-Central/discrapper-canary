@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(497321),
     h = n(23551),
     f = n(468026),
-    N = n(410030),
-    x = n(726542),
-    b = n(122021),
+    b = n(410030),
+    N = n(726542),
+    x = n(122021),
     _ = n(275759),
     E = n(231757),
     j = n(888496),
@@ -111,7 +111,7 @@ let F = (e) => {
                                     children: s.guild.toString()
                                 }),
                                 (0, r.jsx)(u.eee, {
-                                    href: null === (n = x.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
+                                    href: null === (n = N.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
                                     children: (0, r.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
@@ -140,7 +140,7 @@ function H(e) {
         s,
         a,
         { onDisconnect: l, account: o, theme: m, locale: p } = e,
-        [h, N] = i.useState(o.friendSync),
+        [h, b] = i.useState(o.friendSync),
         [C, O] = i.useState(o.visibility),
         [S, T] = i.useState(o.metadataVisibility),
         [I, y] = i.useState(o.showActivity),
@@ -148,10 +148,10 @@ function H(e) {
         [B, V] = i.useState(null),
         [H, z] = i.useState(!1),
         [Y, K] = i.useState([]),
-        q = (0, b.rR)(o.type),
-        X = x.Z.get(q);
+        q = (0, x.rR)(o.type),
+        X = N.Z.get(q);
     i.useEffect(() => {
-        N(o.friendSync), O(o.visibility), T(o.metadataVisibility), y(o.showActivity);
+        b(o.friendSync), O(o.visibility), T(o.metadataVisibility), y(o.showActivity);
     }, [o]);
     let J = {
             inProgressVisibility: A,
@@ -167,7 +167,7 @@ function H(e) {
             null != e && (O(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (T(t), g.Z.setMetadataVisibility(o.type, o.id, t), V(null));
         }, [o]);
     function $() {
-        let e = x.Z.get(o.type),
+        let e = N.Z.get(o.type),
             t = M.NW.string(M.t.apVJu7);
         (0, D.Z)(o) &&
             (t = (0, r.jsxs)(r.Fragment, {
@@ -200,8 +200,8 @@ function H(e) {
         children: [
             (function (e) {
                 var t;
-                let n = x.Z.get(e.type),
-                    i = x.Z.get(q),
+                let n = N.Z.get(e.type),
+                    i = N.Z.get(q),
                     s = '1' === (null !== (t = e.metadata) && void 0 !== t ? t : {})[L.PC.TWITTER_VERIFIED],
                     a = null;
                 return (
@@ -349,7 +349,7 @@ function H(e) {
                 let a = Y.includes(e.id),
                     l = M.NW.string(M.t.wzzjk5);
                 if (null == i || 0 === i.length) {
-                    if (!0 !== x.Z.get(e.type).hasMetadata) return null;
+                    if (!0 !== N.Z.get(e.type).hasMetadata) return null;
                     (i = [
                         (0, r.jsx)(
                             u.IGR,
@@ -410,7 +410,7 @@ function H(e) {
                     hideBorder: !0,
                     value: h,
                     onChange: function (e) {
-                        N(e), g.Z.setFriendSync(o.type, o.id, e);
+                        b(e), g.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -430,7 +430,7 @@ function H(e) {
                         children: M.NW.format(M.t['6u6J0t'], { platform: X.name })
                     })
                 })),
-            (null === (t = x.Z.get(o.type)) || void 0 === t ? void 0 : t.hasMetadata) === !0 &&
+            (null === (t = N.Z.get(o.type)) || void 0 === t ? void 0 : t.hasMetadata) === !0 &&
                 (a = (0, r.jsx)(u.j7V, {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
@@ -551,7 +551,7 @@ function z() {
     );
 }
 function Y(e) {
-    let t = x.Z.get(e);
+    let t = N.Z.get(e);
     (0, E.Z)({ platformType: t.type }),
         A.default.track(W.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
@@ -566,7 +566,7 @@ function K() {
             onComplete: Y
         });
     }
-    let t = (0, b.fq)(),
+    let t = (0, x.fq)(),
         n = (0, u.bWb)().enabled ? 24 : 18;
     return (0, r.jsxs)('div', {
         className: U.connectionsContainer,
@@ -638,7 +638,7 @@ function q(e) {
                     ]
                 })
               : s
-                    .filter((e) => x.Z.isSupported(e.type))
+                    .filter((e) => N.Z.isSupported(e.type))
                     .map((e, t) =>
                         (0, r.jsx)(
                             H,
@@ -665,7 +665,7 @@ let X = () => {
     let e = (0, l.e7)([y.Z], () => y.Z.hidePersonalInformation),
         t = (0, l.e7)([S.Z], () => S.Z.isFetching()),
         n = (0, l.e7)([S.Z], () => S.Z.getAccounts()),
-        s = (0, N.ZP)();
+        s = (0, b.ZP)();
     (0, l.e7)([I.ZP], () => I.ZP.getFlattenedGuildIds());
     let a = (0, l.e7)([R.default], () => R.default.locale);
     return (i.useEffect(() => {

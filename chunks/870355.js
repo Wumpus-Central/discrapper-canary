@@ -1,4 +1,4 @@
-var i = n(780524);
+var r = n(780524);
 e.exports = function () {
-    return new this(i(arguments));
+    return new this(r(arguments));
 };

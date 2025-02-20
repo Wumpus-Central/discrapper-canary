@@ -2,20 +2,20 @@ n.d(t, { A: () => m });
 var i = n(200651);
 n(192379);
 var l = n(780384),
-    a = n(481060),
+    r = n(481060),
     o = n(410030),
-    s = n(540059),
-    r = n(176412),
-    c = n(124252),
-    d = n(983008),
-    u = n(478408);
+    a = n(540059),
+    s = n(176412),
+    c = n(211065),
+    u = n(983008),
+    d = n(478408);
 function m(e) {
     let { searchQuery: t, textContent: n, type: m } = e,
-        p = (0, s.Q3)('AppLauncherEmptyState'),
+        p = (0, a.Q3)('AppLauncherEmptyState'),
         h = (0, o.ZP)(),
-        x = (0, l.ap)(h) ? u : d;
+        f = (0, l.ap)(h) ? d : u;
     return (
-        (0, r.Bm)(m, t),
+        (0, s.Bm)(m, t),
         (0, i.jsxs)('div', {
             className: c.emptyStateContainer,
             children: [
@@ -23,10 +23,10 @@ function m(e) {
                     ? null
                     : (0, i.jsx)('img', {
                           className: c.emptyStateImage,
-                          src: x,
+                          src: f,
                           alt: 'empty state'
                       }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-md/medium',
                     color: 'text-muted',
                     children: n

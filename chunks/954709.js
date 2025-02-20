@@ -1,19 +1,19 @@
-n.d(t, { Z: () => d });
-var i = n(664081),
-    l = n(570140),
-    r = n(317770),
-    a = n(863750),
-    s = n(335131);
-class o extends r.Z {
+n.d(t, { Z: () => c });
+var r = n(664081),
+    i = n(570140),
+    l = n(317770),
+    o = n(863750),
+    a = n(335131);
+class s extends l.Z {
     _initialize() {
-        l.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        i.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     _terminate() {
-        l.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        i.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     handlePostConnectionOpen() {
-        let e = a.Z.get('shop_include_unpublished');
-        (0, s.R2)({ release: e ? i.P.BETA : i.P.PROD });
+        let e = o.Z.get('shop_include_unpublished');
+        (0, a.R2)({ release: e ? r.P.BETA : r.P.PROD });
     }
 }
-let d = new o();
+let c = new s();

@@ -1,51 +1,51 @@
-e.d(t, { default: () => C });
-var r = e(200651);
-e(192379);
-var s = e(990547),
-    o = e(442837),
-    i = e(481060),
-    n = e(37234),
-    c = e(100527),
-    d = e(906732),
-    l = e(213609),
-    _ = e(204418),
-    u = e(1585),
-    m = e(223143),
-    v = e(313201),
-    x = e(300284),
-    p = e(158776),
-    T = e(594174),
-    f = e(741245),
-    I = e(474936),
-    k = e(388032),
-    h = e(605119);
-function j(a) {
-    let { user: t, deco: e } = a,
-        s = (0, o.e7)([p.Z], () => p.Z.getStatus(t.id));
+t.d(e, { default: () => j });
+var r = t(200651);
+t(192379);
+var s = t(990547),
+    o = t(442837),
+    i = t(481060),
+    n = t(37234),
+    c = t(100527),
+    d = t(906732),
+    l = t(213609),
+    _ = t(204418),
+    u = t(1585),
+    m = t(223143),
+    v = t(313201),
+    x = t(300284),
+    p = t(158776),
+    T = t(594174),
+    f = t(741245),
+    I = t(474936),
+    k = t(388032),
+    N = t(123297);
+function h(a) {
+    let { user: e, deco: t } = a,
+        s = (0, o.e7)([p.Z], () => p.Z.getStatus(e.id));
     return (0, r.jsxs)('div', {
-        className: h.avatarBackground,
+        className: N.avatarBackground,
         children: [
             (0, r.jsx)(_.Z, {
-                user: t,
+                user: e,
                 guildId: void 0,
-                avatarDecorationOverride: e,
+                avatarDecorationOverride: t,
                 status: s,
-                className: h.avatar
+                className: N.avatar
             }),
-            (0, r.jsx)('div', { className: h.rect }),
-            (0, r.jsx)('div', { className: h.rect }),
-            (0, r.jsx)('div', { className: h.bottomOverlay })
+            (0, r.jsx)('div', { className: N.rect }),
+            (0, r.jsx)('div', { className: N.rect }),
+            (0, r.jsx)('div', { className: N.bottomOverlay })
         ]
     });
 }
-function C(a) {
-    var t;
-    let { transitionState: e, onClose: _ } = a,
+function j(a) {
+    var e;
+    let { transitionState: t, onClose: _ } = a,
         p = (0, v.Dt)(),
-        { theme: C } = (0, i.TCT)(),
-        N = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
+        { theme: j } = (0, i.TCT)(),
+        C = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
         { purchases: y } = (0, m.c7)(),
-        A = null === (t = y.get('1225876188074082374')) || void 0 === t ? void 0 : t.items,
+        A = null === (e = y.get('1225876188074082374')) || void 0 === e ? void 0 : e.items,
         M = void 0 !== A ? A[0] : void 0,
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),
         b = (0, x.Z)({ analyticsLocations: D });
@@ -56,28 +56,28 @@ function C(a) {
             properties: { location_stack: D }
         }),
         (0, r.jsxs)(i.Y0X, {
-            transitionState: e,
+            transitionState: t,
             'aria-labelledby': p,
-            className: h.container,
+            className: N.container,
             children: [
-                void 0 !== N &&
-                    (0, r.jsx)(j, {
-                        user: N,
+                void 0 !== C &&
+                    (0, r.jsx)(h, {
+                        user: C,
                         deco: M
                     }),
                 (0, r.jsxs)(i.hzk, {
-                    className: h.content,
+                    className: N.content,
                     children: [
                         (0, r.jsx)(f.C, {
-                            theme: C,
+                            theme: j,
                             premiumType: I.p9.TIER_2,
                             type: f.C.Types.PREMIUM_ACTIVATED
                         }),
                         (0, r.jsx)(i.Text, {
                             variant: 'text-md/medium',
                             color: 'text-normal',
-                            className: h.bodyText,
-                            children: k.intl.format(k.t['9juoTE'], {})
+                            className: N.bodyText,
+                            children: k.NW.format(k.t['9juoTE'], {})
                         })
                     ]
                 }),
@@ -94,7 +94,7 @@ function C(a) {
                                     analyticsLocations: D
                                 });
                         },
-                        children: k.intl.string(k.t['Tna/TU'])
+                        children: k.NW.string(k.t['Tna/TU'])
                     })
                 })
             ]

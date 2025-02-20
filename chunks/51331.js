@@ -1,45 +1,45 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(838436),
-    c = n(340322);
+    c = n(300459);
 function d(e) {
-    let { value: t, onChange: n, className: r, note: d, title: u, disabled: m } = e,
-        g = s.useRef(null),
-        h = s.useRef(null),
-        x = s.useId(),
-        _ = (0, i.jsx)(a.rsf, {
-            id: x,
+    let { value: t, onChange: n, className: s, note: d, title: u, disabled: m } = e,
+        g = i.useRef(null),
+        p = i.useRef(null),
+        h = i.useId(),
+        f = (0, r.jsx)(l.rsf, {
+            id: h,
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
             innerRef: g,
             disabled: m
         });
-    return (0, i.jsx)('div', {
-        className: l()(c.container, r, { [c.disabled]: m }),
-        children: (0, i.jsx)(a.tEY, {
+    return (0, r.jsx)('div', {
+        className: a()(c.container, s, { [c.disabled]: m }),
+        children: (0, r.jsx)(l.tEY, {
             within: !0,
             offset: -4,
             focusTarget: g,
-            ringTarget: h,
-            children: (0, i.jsxs)(i.Fragment, {
+            ringTarget: p,
+            children: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: c.text,
-                        children: (0, i.jsx)(o.H, {
+                        children: (0, r.jsx)(o.H, {
                             header: u,
                             description: d,
-                            relatedId: x,
+                            relatedId: h,
                             disabled: m
                         })
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: c.control,
-                        children: _
+                        children: f
                     })
                 ]
             })

@@ -3,7 +3,7 @@ var t = n(200651),
     i = n(192379),
     r = n(481060),
     a = n(388032),
-    l = n(164249);
+    l = n(416515);
 function o(e, s, n) {
     return (
         s in e
@@ -55,7 +55,7 @@ class c extends i.PureComponent {
                             look: r.zxk.Looks.LINK,
                             color: r.zxk.Colors.PRIMARY,
                             onClick: this.handleDismiss,
-                            children: a.intl.string(a.t.cpT0Cg)
+                            children: a.NW.string(a.t.cpT0Cg)
                         })
                     ]
                 })

@@ -1,64 +1,64 @@
 n.d(t, {
-    FJ: () => o,
+    FJ: () => s,
     HL: () => d,
     Yc: () => u,
     xe: () => c
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(834129),
-    r = n(388032),
-    s = n(791666);
-function o(e) {
-    let { message: t, compact: l, onClick: o } = e;
-    return (0, i.jsx)(a.Z, {
+    o = n(388032),
+    l = n(373455);
+function s(e) {
+    let { message: t, compact: i, onClick: s } = e;
+    return (0, r.jsx)(a.Z, {
         icon: n(508933),
         timestamp: t.timestamp,
-        compact: l,
-        contentClassName: s.messageContent,
-        children: r.intl.format(r.t.bYdG3d, { onClick: o })
+        compact: i,
+        contentClassName: l.messageContent,
+        children: o.NW.format(o.t.bYdG3d, { onClick: s })
     });
 }
 function c(e) {
-    let { message: t, compact: l } = e;
-    return (0, i.jsx)(a.Z, {
+    let { message: t, compact: i } = e;
+    return (0, r.jsx)(a.Z, {
         icon: n(324606),
         timestamp: t.timestamp,
-        compact: l,
-        contentClassName: s.messageContent,
-        children: r.intl.string(r.t.tu6tOT)
+        compact: i,
+        contentClassName: l.messageContent,
+        children: o.NW.string(o.t.tu6tOT)
     });
 }
 function d(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(a.Z, {
-        iconNode: (0, i.jsx)(l.P4T, {
+    return (0, r.jsx)(a.Z, {
+        iconNode: (0, r.jsx)(i.P4T, {
             size: 'custom',
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: s.alertIcon
+            className: l.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: s.messageContent,
-        children: r.intl.string(r.t.vzfXqq)
+        contentClassName: l.messageContent,
+        children: o.NW.string(o.t.vzfXqq)
     });
 }
 function u(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(a.Z, {
-        iconNode: (0, i.jsx)(l.P4T, {
+    return (0, r.jsx)(a.Z, {
+        iconNode: (0, r.jsx)(i.P4T, {
             size: 'custom',
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: s.alertIcon
+            className: l.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: s.messageContent,
-        children: r.intl.string(r.t['/Tfvyc'])
+        contentClassName: l.messageContent,
+        children: o.NW.string(o.t['/Tfvyc'])
     });
 }

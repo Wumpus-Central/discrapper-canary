@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-function i(e) {
+n.d(t, { Z: () => r });
+function r(e) {
     return {
         name: e.name,
         id: e.id,

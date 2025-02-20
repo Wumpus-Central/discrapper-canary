@@ -1,31 +1,31 @@
-n.d(t, { Z: () => c });
-var i = n(442837),
-    r = n(570140);
-let a = {
+n.d(t, { Z: () => u });
+var r = n(442837),
+    i = n(570140);
+let o = {
     fetched: !1,
     affinities: []
 };
-function s(e) {
+function a(e) {
     let {} = e;
-    a.fetched = !0;
+    o.fetched = !0;
 }
-function o(e) {
+function s(e) {
     let { res: t } = e;
-    a.affinities = t;
+    o.affinities = t;
 }
 function l() {
-    (a.fetched = !1), (a.affinities = []);
+    (o.fetched = !1), (o.affinities = []);
 }
-class u extends i.ZP.Store {
+class c extends r.ZP.Store {
     get hasFetched() {
-        return a.fetched;
+        return o.fetched;
     }
     get affinities() {
-        return a.affinities;
+        return o.affinities;
     }
 }
-let c = new u(r.Z, {
-    BILLING_NITRO_AFFINITY_FETCHED: s,
-    BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: o,
+let u = new c(i.Z, {
+    BILLING_NITRO_AFFINITY_FETCHED: a,
+    BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: s,
     LOGOUT: l
 });

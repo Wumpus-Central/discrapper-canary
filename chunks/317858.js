@@ -1,55 +1,55 @@
 n.d(t, { Z: () => v }), n(47120);
-var i = n(192379),
-    l = n(166516),
-    r = n.n(l),
-    a = n(525654),
-    s = n.n(a),
-    o = n(442837),
-    d = n(91896),
-    c = n(849862),
-    u = n(888369),
-    h = n(292959),
-    m = n(699516),
-    p = n(340895),
-    g = n(358085),
-    _ = n(998502),
-    f = n(252618),
-    E = n(981631),
-    I = n(388032);
-let C = new Set(['Blink', 'Gecko', 'WebKit']),
-    N = E.dG4;
-if (g.isPlatformEmbedded) N = (e) => _.ZP.setBadge(e);
-else if (C.has(s().layout)) {
-    let e = new (r())({ animation: 'none' });
+var r = n(192379),
+    i = n(166516),
+    l = n.n(i),
+    o = n(525654),
+    a = n.n(o),
+    s = n(442837),
+    c = n(91896),
+    u = n(849862),
+    d = n(888369),
+    p = n(292959),
+    h = n(699516),
+    g = n(340895),
+    f = n(358085),
+    m = n(998502),
+    b = n(252618),
+    _ = n(981631),
+    E = n(388032);
+let O = new Set(['Blink', 'Gecko', 'WebKit']),
+    N = _.dG4;
+if (f.isPlatformEmbedded) N = (e) => m.ZP.setBadge(e);
+else if (O.has(a().layout)) {
+    let e = new (l())({ animation: 'none' });
     N = (t) => {
         try {
-            (0, f.PR)(t), e.badge(-1 === t ? '\u2022' : t);
+            (0, b.PR)(t), e.badge(-1 === t ? '\u2022' : t);
         } catch (e) {}
     };
 }
 function v() {
-    let e = (0, o.e7)([p.Z], () => p.Z.hasIncomingCalls()),
-        t = (0, o.e7)([u.default, m.Z, h.Z, d.Z], () => {
-            let e = u.default.getTotalMentionCount(),
-                t = (0, c.m$)([m.Z, d.Z]),
-                n = u.default.hasAnyUnread(),
-                i = h.Z.getDisableUnreadBadge(),
-                l = e + t;
-            return 0 === l && n && !i && (l = -1), l;
+    let e = (0, s.e7)([g.Z], () => g.Z.hasIncomingCalls()),
+        t = (0, s.e7)([d.default, h.Z, p.Z, c.Z], () => {
+            let e = d.default.getTotalMentionCount(),
+                t = (0, u.m$)([h.Z, c.Z]),
+                n = d.default.hasAnyUnread(),
+                r = p.Z.getDisableUnreadBadge(),
+                i = e + t;
+            return 0 === i && n && !r && (i = -1), i;
         });
-    i.useEffect(() => {
+    r.useEffect(() => {
         if (!e) return;
-        let t = _.ZP.bounceDock('critical'),
-            n = (0, f.EM)({
-                messages: [I.intl.string(I.t['fk1/bW'])],
+        let t = m.ZP.bounceDock('critical'),
+            n = (0, b.EM)({
+                messages: [E.NW.string(E.t['fk1/bW'])],
                 count: 50
             });
         return () => {
             null == t || t(), n();
         };
     }, [e]),
-        i.useEffect(() => {
+        r.useEffect(() => {
             N(t);
         }, [t]),
-        i.useEffect(() => () => N(0), []);
+        r.useEffect(() => () => N(0), []);
 }

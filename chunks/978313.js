@@ -1,68 +1,68 @@
-n.d(t, { Z: () => h }), n(47120);
-var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    o = n.n(i),
-    l = n(657707),
-    s = n(793030),
-    c = n(692547),
-    d = n(481060),
-    u = n(885006),
-    m = n(810568),
-    _ = n(221370),
-    g = n(388032),
-    p = n(497329),
-    f = n(904853);
-function h(e) {
-    let { detectedGame: t, trackAction: n } = e,
-        [i, h] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [x, v] = a.useState(!0),
-        [I, C] = a.useState(!1),
-        E = a.useRef(null),
-        { width: b, height: T } = (0, u.Z)();
+r.d(t, { Z: () => _ }), r(47120);
+var n = r(200651),
+    a = r(192379),
+    o = r(120356),
+    i = r.n(o),
+    s = r(657707),
+    l = r(793030),
+    c = r(692547),
+    u = r(481060),
+    d = r(885006),
+    p = r(810568),
+    m = r(221370),
+    f = r(388032),
+    g = r(384370),
+    b = r(837254);
+function _(e) {
+    let { detectedGame: t, trackAction: r } = e,
+        [o, _] = a.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [h, O] = a.useState(!0),
+        [y, v] = a.useState(!1),
+        j = a.useRef(null),
+        { width: x, height: P } = (0, d.Z)();
     return (a.useEffect(() => {
-        let e = E.current;
-        null != e && C(e.scrollHeight - e.clientHeight > 1 || !x);
-    }, [E, b, T, x]),
+        let e = j.current;
+        null != e && v(e.scrollHeight - e.clientHeight > 1 || !h);
+    }, [j, x, P, h]),
     null == t.summary)
         ? null
-        : (0, r.jsxs)('div', {
-              className: o()(p.column, p.gapMd),
+        : (0, n.jsxs)('div', {
+              className: i()(g.column, g.gapMd),
               children: [
                   null != t.summaryLocalized &&
-                      (0, r.jsxs)('div', {
-                          className: o()(p.row, p.gapSm),
+                      (0, n.jsxs)('div', {
+                          className: i()(g.row, g.gapSm),
                           children: [
-                              (0, r.jsx)(l.SxY, {
+                              (0, n.jsx)(s.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: 'xs'
                               }),
-                              (0, r.jsx)(s.xv, {
+                              (0, n.jsx)(l.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: i ? g.intl.format(g.t.aZ2iIi, { onShowOriginal: () => h(!1) }) : g.intl.format(g.t['/2ylFx'], { onShowTranslated: () => h(!0) })
+                                  children: o ? f.NW.format(f.t.aZ2iIi, { onShowOriginal: () => _(!1) }) : f.NW.format(f.t['/2ylFx'], { onShowTranslated: () => _(!0) })
                               })
                           ]
                       }),
-                  (0, r.jsx)(s.xv, {
-                      ref: E,
-                      lineClamp: x ? 8 : void 0,
+                  (0, n.jsx)(l.xv, {
+                      ref: j,
+                      lineClamp: h ? 8 : void 0,
                       variant: 'text-sm/normal',
-                      children: i ? t.summaryLocalized : t.summary
+                      children: o ? t.summaryLocalized : t.summary
                   }),
-                  I &&
-                      (0, r.jsx)(d.P3F, {
-                          className: p.clickable,
+                  y &&
+                      (0, n.jsx)(u.P3F, {
+                          className: g.clickable,
                           onClick: () => {
-                              n(x ? m.as.ShowMore : m.as.ShowLess), v(!x);
+                              r(h ? p.as.ShowMore : p.as.ShowLess), O(!h);
                           },
-                          children: (0, r.jsx)(s.xv, {
+                          children: (0, n.jsx)(l.xv, {
                               variant: 'text-sm/semibold',
-                              children: x ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t['6MwJo6'])
+                              children: h ? f.NW.string(f.t.lBeKY2) : f.NW.string(f.t['6MwJo6'])
                           })
                       }),
-                  (0, r.jsx)(_.Z, {
-                      className: f.platforms,
+                  (0, n.jsx)(m.Z, {
+                      className: b.platforms,
                       detectedGame: t
                   })
               ]

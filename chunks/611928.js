@@ -1,28 +1,28 @@
 n.d(t, {
-    Cm: () => h,
+    Cm: () => m,
     ZP: () => g,
-    _6: () => p,
-    aV: () => m,
+    _6: () => h,
+    aV: () => p,
     z6: () => u
 });
-var i,
+var r,
     a = n(200651),
-    r = n(192379),
+    i = n(192379),
     l = n(120356),
-    s = n.n(l),
-    o = n(642128),
+    o = n.n(l),
+    s = n(642128),
     c = n(481060),
-    d = n(834480);
+    d = n(568047);
 function u(e) {
     let { scrollPosition: t } = e;
-    return (0, a.jsx)(o.animated.div, {
+    return (0, a.jsx)(s.animated.div, {
         className: d.backdrop,
         style: {
             opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
         }
     });
 }
-function m(e) {
+function p(e) {
     let { icon: t } = e;
     return (0, a.jsx)(t, {
         className: d.icon,
@@ -30,7 +30,7 @@ function m(e) {
         size: 'md'
     });
 }
-function h(e) {
+function m(e) {
     let { onClick: t, icon: n } = e;
     return (0, a.jsx)(c.P3F, {
         className: d.iconButton,
@@ -41,12 +41,12 @@ function h(e) {
         })
     });
 }
-var p = (((i = {}).OVERLAY = 'overlay'), (i.RELATIVE = 'relative'), i);
+var h = (((r = {}).OVERLAY = 'overlay'), (r.RELATIVE = 'relative'), r);
 function g(e) {
-    let { className: t, variant: n, children: i } = e,
-        l = r.useMemo(() => ('overlay' === n ? d.overlay : d.relative), [n]);
+    let { className: t, variant: n, children: r } = e,
+        l = i.useMemo(() => ('overlay' === n ? d.overlay : d.relative), [n]);
     return (0, a.jsx)('div', {
-        className: s()(d.headerBar, l, t),
-        children: i
+        className: o()(d.headerBar, l, t),
+        children: r
     });
 }

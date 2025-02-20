@@ -1,21 +1,21 @@
-function s(t, i, e) {
+function s(t, e, i) {
     return (
-        i in t
-            ? Object.defineProperty(t, i, {
-                  value: e,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[i] = e),
+            : (t[e] = i),
         t
     );
 }
-function n(t, i) {
-    return Math.max(Math.min((t - i) / 30, 1), -1);
+function n(t, e) {
+    return Math.max(Math.min((t - e) / 30, 1), -1);
 }
-e.d(i, { Z: () => h });
-let h = class {
+i.d(e, { Z: () => a });
+let a = class {
     initialize() {
         window.addEventListener('mousemove', this.handleMouseMove);
     }
@@ -35,8 +35,8 @@ let h = class {
             s(this, 'forceX', 0),
             s(this, 'forceY', 0),
             s(this, 'handleMouseMove', (t) => {
-                let { clientX: i, clientY: e } = t;
-                (this.x = i), (this.y = e);
+                let { clientX: e, clientY: i } = t;
+                (this.x = e), (this.y = i);
             });
     }
 };

@@ -5,17 +5,17 @@ function t(e) {
             begin: '\\(',
             end: '\\)'
         },
-        i = {
+        r = {
             variants: [e.COMMENT('!', '$', { relevance: 0 }), e.COMMENT('^C[ ]', '$', { relevance: 0 }), e.COMMENT('^C$', '$', { relevance: 0 })]
         },
-        r = /(_[a-z_\d]+)?/,
-        a = /([de][+-]?\d+)?/,
-        s = {
+        i = /(_[a-z_\d]+)?/,
+        o = /([de][+-]?\d+)?/,
+        a = {
             className: 'number',
-            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, a, r) }, { begin: t.concat(/\b\d+/, a, r) }, { begin: t.concat(/\.\d+/, a, r) }],
+            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, o, i) }, { begin: t.concat(/\b\d+/, o, i) }, { begin: t.concat(/\.\d+/, o, i) }],
             relevance: 0
         },
-        o = {
+        s = {
             className: 'function',
             beginKeywords: 'subroutine function program',
             illegal: '[${=\\n]',
@@ -38,13 +38,13 @@ function t(e) {
                 relevance: 0,
                 variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
             },
-            o,
+            s,
             {
                 begin: /^C\s*=(?!=)/,
                 relevance: 0
             },
-            i,
-            s
+            r,
+            a
         ]
     };
 }

@@ -1,9 +1,9 @@
 n.d(t, {
-    A: () => a,
-    a: () => s
+    A: () => o,
+    a: () => a
 });
-var i = n(75834);
-function r(e, t, n) {
+var r = n(75834);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,12 +16,12 @@ function r(e, t, n) {
         e
     );
 }
-var a = (function (e) {
+var o = (function (e) {
     return (e.STREAM = 'stream'), (e.PAUSE = 'pause'), (e.STOP = 'stop'), e;
 })({});
-class s {
+class a {
     onStreamBegin(e, t) {
-        let n = (0, i.e)(e, t);
+        let n = (0, r.e)(e, t);
         null == n || null == n.windowHandle ? this.callback({ type: 'stop' }) : this._stream(n);
     }
     onStreamKilled() {
@@ -42,7 +42,7 @@ class s {
         return (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop();
     }
     _update(e) {
-        let t = (0, i.s)(e, this.application);
+        let t = (0, r.s)(e, this.application);
         if (null != t) return null == t.windowHandle ? this._pause() : this._stream(t);
         this._stop();
     }
@@ -67,6 +67,6 @@ class s {
         this.active && ((this.application.windowHandle = null), this.callback({ type: 'pause' }));
     }
     constructor(e) {
-        r(this, 'callback', void 0), r(this, 'active', void 0), r(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
+        i(this, 'callback', void 0), i(this, 'active', void 0), i(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
     }
 }

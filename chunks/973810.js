@@ -1,58 +1,58 @@
-n.d(t, { Z: () => f }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    s = n(849055),
-    r = n(544891),
-    o = n(481060),
-    a = n(358085),
-    d = n(960048),
-    u = n(998502),
-    c = n(507453),
-    h = n(981631),
-    m = n(388032);
-function f(e) {
-    let { mfaChallenge: t, finish: n, setSlide: f, onClose: x } = e,
-        [g, S] = i.useState(!1),
-        [v, p] = i.useState(null),
-        { challenge: j } = t.methods.find((e) => 'webauthn' === e.type),
-        b = async () => {
-            S(!0), p(null);
-            let e = a.isPlatformEmbedded && u.ZP.supportsFeature(h.eRX.WEBAUTHN) ? u.ZP.webAuthnAuthenticate(j) : s.U2(JSON.parse(j)).then((e) => JSON.stringify(e)),
+r.d(t, { Z: () => m }), r(47120), r(26686);
+var n = r(200651),
+    l = r(192379),
+    i = r(849055),
+    s = r(544891),
+    o = r(481060),
+    a = r(358085),
+    c = r(960048),
+    d = r(998502),
+    u = r(507453),
+    f = r(981631),
+    h = r(388032);
+function m(e) {
+    let { mfaChallenge: t, finish: r, setSlide: m, onClose: p } = e,
+        [g, b] = l.useState(!1),
+        [j, y] = l.useState(null),
+        { challenge: x } = t.methods.find((e) => 'webauthn' === e.type),
+        v = async () => {
+            b(!0), y(null);
+            let e = a.isPlatformEmbedded && d.ZP.supportsFeature(f.eRX.WEBAUTHN) ? d.ZP.webAuthnAuthenticate(x) : i.U2(JSON.parse(x)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
-                        await n({
+                        await r({
                             mfaType: 'webauthn',
                             data: e
                         });
                     } catch (e) {
-                        e instanceof r.Pd ? p(m.intl.string(m.t.xSCvBQ)) : p(e.message);
+                        e instanceof s.Pd ? y(h.NW.string(h.t.xSCvBQ)) : y(e.message);
                     }
                 };
             try {
-                let n = await e;
-                await t(n);
+                let r = await e;
+                await t(r);
             } catch (e) {
-                d.Z.captureException(e), p(m.intl.string(m.t.xSCvBQ));
+                c.Z.captureException(e), y(h.NW.string(h.t.xSCvBQ));
             } finally {
-                S(!1);
+                b(!1);
             }
         };
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, l.jsx)(c.Z.SlideHeader, { onClose: x }),
-            (0, l.jsxs)(c.Z.SlideContent, {
+            (0, n.jsx)(u.Z.SlideHeader, { onClose: p }),
+            (0, n.jsxs)(u.Z.SlideContent, {
                 children: [
-                    (0, l.jsx)(o.zxk, {
+                    (0, n.jsx)(o.zxk, {
                         submitting: g,
-                        onClick: b,
-                        children: m.intl.string(m.t.Xr3Ekp)
+                        onClick: v,
+                        children: h.NW.string(h.t.Xr3Ekp)
                     }),
-                    (0, l.jsx)(c.Z.SlideError, { error: v })
+                    (0, n.jsx)(u.Z.SlideError, { error: j })
                 ]
             }),
-            (0, l.jsx)(c.Z.SlideFooter, {
+            (0, n.jsx)(u.Z.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: f
+                setSlide: m
             })
         ]
     });

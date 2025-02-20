@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { Z: () => a });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-02-voice_call_buttons_v2',
     label: 'Voice and Video buttons V2',
@@ -9,7 +9,7 @@ let a = (0, i.B)({
         squareButtons: !1,
         coloredIcons: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -29,6 +29,6 @@ let a = (0, i.B)({
         }
     ]
 });
-function s(e) {
-    return a.useExperiment(e, { autoTrackExposure: !1 });
+function a(e) {
+    return o.useExperiment(e, { autoTrackExposure: !1 });
 }

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { Z: () => o });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'guild',
     id: '2024-12_guild_voice_channel_ringing',
     label: 'Guild Voice Ringing',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,

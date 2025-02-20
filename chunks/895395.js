@@ -1,46 +1,46 @@
 n.d(t, {
-    Z: () => N,
-    d: () => j
+    Z: () => Z,
+    d: () => S
 }),
     n(47120);
 var a = n(200651),
     i = n(192379),
     l = n(120356),
     s = n.n(l),
-    c = n(468194),
-    o = n(442837),
-    r = n(477690),
+    r = n(468194),
+    c = n(442837),
+    o = n(477690),
     d = n(481060),
     u = n(100527),
     p = n(906732),
-    m = n(430824),
+    f = n(430824),
     g = n(594174),
-    f = n(115130),
+    m = n(115130),
     v = n(566620),
     h = n(127255),
-    x = n(880308),
-    _ = n(451576),
-    b = n(439934),
+    b = n(880308),
+    x = n(451576),
+    _ = n(439934),
     C = n(701488),
     I = n(388032),
-    T = n(71077);
-let Z = (0, c.Mg)(r.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-    S = (0, c.Mg)(r.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-    y = (0, c.Mg)(r.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
-function N(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: c, onActivityItemVisible: r, scrollerRef: C } = e,
-        [N, j] = i.useState(0),
-        E = (0, h.Z)({
+    y = n(867689);
+let T = (0, r.Mg)(o.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+    j = (0, r.Mg)(o.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+    N = (0, r.Mg)(o.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+function Z(e) {
+    let { channel: t, guildId: n, locationObject: l, onClose: r, onActivityItemVisible: o, scrollerRef: C } = e,
+        [Z, S] = i.useState(0),
+        O = (0, h.Z)({
             guildId: n,
             enableFilter: !0
         }),
-        A = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        M = (0, o.e7)([m.Z], () => m.Z.getGuild(n), [n]),
-        { analyticsLocations: O } = (0, p.ZP)(u.Z.ACTIVITY_DIRECTORY),
-        L = (0, _.Z)(null == t ? void 0 : t.id),
-        { isDeveloperActivityShelfEnabled: k, filter: w } = (0, o.cj)([f.Z], () => ({
-            filter: f.Z.getFilter(),
-            isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
+        E = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+        A = (0, c.e7)([f.Z], () => f.Z.getGuild(n), [n]),
+        { analyticsLocations: M } = (0, p.ZP)(u.Z.ACTIVITY_DIRECTORY),
+        P = (0, x.Z)(null == t ? void 0 : t.id),
+        { isDeveloperActivityShelfEnabled: w, filter: L } = (0, c.cj)([m.Z], () => ({
+            filter: m.Z.getFilter(),
+            isDeveloperActivityShelfEnabled: m.Z.getIsEnabled()
         }));
     if (
         (i.useEffect(() => {
@@ -54,56 +54,56 @@ function N(e) {
                 );
             function t() {
                 var e, t;
-                j(null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
+                S(null !== (t = null === (e = C.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
             }
         }, [C]),
         i.useEffect(() => {
-            (L || null != n) &&
+            (P || null != n) &&
                 (0, v.w1)({
                     guildId: n,
                     force: !0
                 });
-        }, [n, L]),
-        (0, x.g)(),
-        (null == M && !L) || null == A)
+        }, [n, P]),
+        (0, b.g)(),
+        (null == A && !P) || null == E)
     )
         return null;
-    let P = E.length > 0;
+    let k = O.length > 0;
     return (0, a.jsx)(p.Gt, {
-        value: O,
+        value: M,
         children: (0, a.jsxs)('div', {
-            className: T.scrollContainer,
+            className: y.scrollContainer,
             children: [
-                P
+                k
                     ? (0, a.jsx)('div', {
-                          className: T.scrollBackgroundContainer,
-                          style: { top: -N },
+                          className: y.scrollBackgroundContainer,
+                          style: { top: -Z },
                           children: (0, a.jsx)('div', {
-                              className: s()(T.scrollTierBackground),
+                              className: s()(y.scrollTierBackground),
                               style: {
                                   height: ((e) => {
                                       let t = 1 === e.length;
-                                      return Z + Math.ceil(e.length / 2) * (t ? y : S);
-                                  })(E)
+                                      return T + Math.ceil(e.length / 2) * (t ? N : j);
+                                  })(O)
                               }
                           })
                       })
                     : null,
                 (0, a.jsxs)(d.Ttm, {
                     ref: C,
-                    className: T.scroller,
+                    className: y.scroller,
                     children: [
                         null,
-                        P && null != t
+                        k && null != t
                             ? (0, a.jsx)('div', {
-                                  className: T.scrollSection,
+                                  className: y.scrollSection,
                                   children: (0, a.jsx)('div', {
-                                      className: s()(T.shelf),
-                                      children: E.map((e) =>
+                                      className: s()(y.shelf),
+                                      children: O.map((e) =>
                                           (0, a.jsx)(
-                                              b.Z,
+                                              _.Z,
                                               {
-                                                  large: 1 === E.length,
+                                                  large: 1 === O.length,
                                                   activityItem: e,
                                                   context: {
                                                       channel: t,
@@ -111,10 +111,10 @@ function N(e) {
                                                   },
                                                   guildId: n,
                                                   locationObject: l,
-                                                  onActivityItemVisible: r,
+                                                  onActivityItemVisible: o,
                                                   onActivityItemSelected: () => {
                                                       var t;
-                                                      e.application.id, c();
+                                                      e.application.id, r();
                                                   }
                                               },
                                               'activity-shelf-item-'.concat(e.application.id)
@@ -122,14 +122,14 @@ function N(e) {
                                       )
                                   })
                               })
-                            : k && w.length > 0
+                            : w && L.length > 0
                               ? (0, a.jsx)(d.Text, {
                                     variant: 'text-md/normal',
-                                    className: T.filterError,
-                                    children: I.intl.format(I.t.p0PRFB, { filter: w })
+                                    className: y.filterError,
+                                    children: I.NW.format(I.t.p0PRFB, { filter: L })
                                 })
                               : (0, a.jsx)('div', {
-                                    className: T.spinnerContainer,
+                                    className: y.spinnerContainer,
                                     children: (0, a.jsx)(d.$jN, {})
                                 })
                     ]
@@ -138,9 +138,9 @@ function N(e) {
         })
     });
 }
-function j() {
+function S() {
     return (0, a.jsx)(d.Text, {
         variant: 'text-sm/normal',
-        children: I.intl.format(I.t.fijcEB, { surveyURL: C.Es })
+        children: I.NW.format(I.t.fijcEB, { surveyURL: C.Es })
     });
 }

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => p });
-var i = n(192379),
-    r = n(190031),
-    a = n(476400),
-    s = n.n(a),
-    o = 1073741823,
+n.d(t, { Z: () => _ });
+var r = n(192379),
+    i = n(190031),
+    o = n(476400),
+    a = n.n(o),
+    s = 1073741823,
     l = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== n.g ? n.g : {};
-function u() {
+function c() {
     var e = '__global_unique_id__';
     return (l[e] = (l[e] || 0) + 1);
 }
-function c(e, t) {
+function u(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
 function d(e) {
@@ -26,10 +26,10 @@ function d(e) {
         get: function () {
             return e;
         },
-        set: function (n, i) {
+        set: function (n, r) {
             (e = n),
                 t.forEach(function (t) {
-                    return t(e, i);
+                    return t(e, r);
                 });
         }
     };
@@ -37,38 +37,38 @@ function d(e) {
 function f(e) {
     return Array.isArray(e) ? e[0] : e;
 }
-function _(e, t) {
+function p(e, t) {
     var n,
-        a,
-        l = '__create-react-context-' + u() + '__',
-        _ = (function (e) {
+        o,
+        l = '__create-react-context-' + c() + '__',
+        p = (function (e) {
             function n() {
                 var t;
                 return (t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t;
             }
-            (0, r.Z)(n, e);
-            var i = n.prototype;
+            (0, i.Z)(n, e);
+            var r = n.prototype;
             return (
-                (i.getChildContext = function () {
+                (r.getChildContext = function () {
                     var e;
                     return ((e = {})[l] = this.emitter), e;
                 }),
-                (i.componentWillReceiveProps = function (e) {
+                (r.componentWillReceiveProps = function (e) {
                     if (this.props.value !== e.value) {
                         var n,
-                            i = this.props.value,
-                            r = e.value;
-                        c(i, r) ? (n = 0) : 0 != (n = ('function' == typeof t ? t(i, r) : o) | 0) && this.emitter.set(e.value, n);
+                            r = this.props.value,
+                            i = e.value;
+                        u(r, i) ? (n = 0) : 0 != (n = ('function' == typeof t ? t(r, i) : s) | 0) && this.emitter.set(e.value, n);
                     }
                 }),
-                (i.render = function () {
+                (r.render = function () {
                     return this.props.children;
                 }),
                 n
             );
-        })(i.Component);
-    _.childContextTypes = (((n = {})[l] = s().object.isRequired), n);
-    var p = (function (t) {
+        })(r.Component);
+    p.childContextTypes = (((n = {})[l] = a().object.isRequired), n);
+    var _ = (function (t) {
         function n() {
             var e;
             return (
@@ -80,36 +80,36 @@ function _(e, t) {
                 e
             );
         }
-        (0, r.Z)(n, t);
-        var i = n.prototype;
+        (0, i.Z)(n, t);
+        var r = n.prototype;
         return (
-            (i.componentWillReceiveProps = function (e) {
+            (r.componentWillReceiveProps = function (e) {
                 var t = e.observedBits;
-                this.observedBits = null == t ? o : t;
+                this.observedBits = null == t ? s : t;
             }),
-            (i.componentDidMount = function () {
+            (r.componentDidMount = function () {
                 this.context[l] && this.context[l].on(this.onUpdate);
                 var e = this.props.observedBits;
-                this.observedBits = null == e ? o : e;
+                this.observedBits = null == e ? s : e;
             }),
-            (i.componentWillUnmount = function () {
+            (r.componentWillUnmount = function () {
                 this.context[l] && this.context[l].off(this.onUpdate);
             }),
-            (i.getValue = function () {
+            (r.getValue = function () {
                 return this.context[l] ? this.context[l].get() : e;
             }),
-            (i.render = function () {
+            (r.render = function () {
                 return f(this.props.children)(this.state.value);
             }),
             n
         );
-    })(i.Component);
+    })(r.Component);
     return (
-        (p.contextTypes = (((a = {})[l] = s().object), a)),
+        (_.contextTypes = (((o = {})[l] = a().object), o)),
         {
-            Provider: _,
-            Consumer: p
+            Provider: p,
+            Consumer: _
         }
     );
 }
-let p = i.createContext || _;
+let _ = r.createContext || p;

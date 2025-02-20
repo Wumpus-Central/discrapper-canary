@@ -1,39 +1,39 @@
-n.d(t, { L: () => o }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
-var i = n(192379),
-    r = n(772848);
-let a = new Worker(new URL('/assets/' + n.u('77459'), n.b));
-function s(e) {
+n.d(t, { L: () => s }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
+var r = n(192379),
+    i = n(772848);
+let o = new Worker(new URL('/assets/' + n.u('77459'), n.b));
+function a(e) {
     return new Promise((t) => {
-        let n = (0, r.Z)(),
-            i = (e) => {
+        let n = (0, i.Z)(),
+            r = (e) => {
                 let {
-                    data: { id: r, png: s }
+                    data: { id: i, png: a }
                 } = e;
-                n === r && (t(s), a.removeEventListener('message', i));
+                n === i && (t(a), o.removeEventListener('message', r));
             };
-        a.addEventListener('message', i),
-            a.postMessage({
+        o.addEventListener('message', r),
+            o.postMessage({
                 id: n,
                 placeholderData: e
             });
     });
 }
-function o(e, t, n) {
-    let r = n && 1 === t && null != e,
-        [a, o] = i.useState(void 0);
+function s(e, t, n) {
+    let i = n && 1 === t && null != e,
+        [o, s] = r.useState(void 0);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let t = !1;
             return (
-                r &&
-                    s(e).then((e) => {
-                        !t && o(e);
+                i &&
+                    a(e).then((e) => {
+                        !t && s(e);
                     }),
                 () => {
                     t = !0;
                 }
             );
-        }, [e, r]),
-        a
+        }, [e, i]),
+        o
     );
 }

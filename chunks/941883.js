@@ -1,6 +1,6 @@
-var i = n(67867),
-    r = n(804104).some;
-i(
+var r = n(67867),
+    i = n(804104).some;
+r(
     {
         target: 'Array',
         proto: !0,
@@ -8,7 +8,7 @@ i(
     },
     {
         some: function (e) {
-            return r(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 );

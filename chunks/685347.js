@@ -1,7 +1,7 @@
-var i = n(704446);
-function r(e, t, n) {
-    '__proto__' == t && i
-        ? i(e, t, {
+var r = n(704446);
+function i(e, t, n) {
+    '__proto__' == t && r
+        ? r(e, t, {
               configurable: !0,
               enumerable: !0,
               value: n,
@@ -9,4 +9,4 @@ function r(e, t, n) {
           })
         : (e[t] = n);
 }
-e.exports = r;
+e.exports = i;

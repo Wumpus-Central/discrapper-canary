@@ -1,5 +1,5 @@
-n.d(t, { _: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { _: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-03_referral_program_recipient',
     label: 'Referral Program Recipient Experience',

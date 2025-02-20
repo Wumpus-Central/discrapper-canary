@@ -5,18 +5,18 @@ function t(e) {
             literal: 'eps inf na',
             built_in: 'abs arccos arcsin arctan arctan2 Beta betaReg binomial ceil centropy cos cosh cvPower div div0 eDist entropy errorf execSeed exp fact floor frac gamma gammaReg log logBeta logGamma log10 log2 mapVal max min mod ncpCM ncpF ncpVUpow ncpVUsin normal pi poly power randBinomial randLinear randTriangle round rPower sigmoid sign signPower sin sinh slexp sllog10 slrec sqexp sqlog10 sqr sqrec sqrt tan tanh trunc uniform uniformInt vcPower bool_and bool_eqv bool_imp bool_not bool_or bool_xor ifThen rel_eq rel_ge rel_gt rel_le rel_lt rel_ne gday gdow ghour gleap gmillisec gminute gmonth gsecond gyear jdate jnow jstart jtime errorLevel execError gamsRelease gamsVersion handleCollect handleDelete handleStatus handleSubmit heapFree heapLimit heapSize jobHandle jobKill jobStatus jobTerminate licenseLevel licenseStatus maxExecError sleep timeClose timeComp timeElapsed timeExec timeStart'
         },
-        i = {
+        r = {
             className: 'params',
             begin: /\(/,
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0
         },
-        r = {
+        i = {
             className: 'symbol',
             variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }]
         },
-        a = {
+        o = {
             className: 'comment',
             variants: [
                 {
@@ -31,24 +31,24 @@ function t(e) {
             illegal: '\\n',
             contains: [e.BACKSLASH_ESCAPE]
         },
-        s = {
+        a = {
             begin: '/',
             end: '/',
             keywords: n,
-            contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
+            contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
         },
-        o = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
+        s = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
         l = {
             begin: /[a-z][a-z0-9_]*(\([a-z0-9_, ]*\))?[ \t]+/,
             excludeBegin: !0,
             end: '$',
             endsWithParent: !0,
             contains: [
+                o,
                 a,
-                s,
                 {
                     className: 'comment',
-                    begin: t.concat(o, t.anyNumberOfTimes(t.concat(/[ ]+/, o))),
+                    begin: t.concat(s, t.anyNumberOfTimes(t.concat(/[ ]+/, s))),
                     relevance: 0
                 }
             ]
@@ -80,7 +80,7 @@ function t(e) {
             {
                 beginKeywords: 'set sets parameter parameters variable variables scalar scalars equation equations',
                 end: ';',
-                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s, l]
+                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, a, l]
             },
             {
                 beginKeywords: 'table',
@@ -109,12 +109,12 @@ function t(e) {
                         className: 'title',
                         begin: /^[a-z0-9_]+/
                     },
-                    i,
-                    r
+                    r,
+                    i
                 ]
             },
             e.C_NUMBER_MODE,
-            r
+            i
         ]
     };
 }

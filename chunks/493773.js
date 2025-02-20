@@ -1,23 +1,23 @@
 n.d(t, {
-    Ng: () => a,
-    ZP: () => r,
-    zq: () => s
+    Ng: () => o,
+    ZP: () => i,
+    zq: () => a
 });
-var i = n(192379);
-function r(e) {
-    let t = i.useRef(e);
-    i.useEffect(() => t.current(), []);
+var r = n(192379);
+function i(e) {
+    let t = r.useRef(e);
+    r.useEffect(() => t.current(), []);
+}
+function o(e) {
+    let t = r.useRef(e);
+    r.useLayoutEffect(() => t.current(), []);
 }
 function a(e) {
-    let t = i.useRef(e);
-    i.useLayoutEffect(() => t.current(), []);
-}
-function s(e) {
-    let t = i.useRef(e);
-    i.useEffect(() => {
+    let t = r.useRef(e);
+    r.useEffect(() => {
         t.current = e;
     }),
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 t.current();
             },

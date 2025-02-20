@@ -1,61 +1,61 @@
-n.d(t, { default: () => d }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    l = n(481060),
-    a = n(313201),
-    o = n(117984),
-    r = n(388032),
-    c = n(774318);
+s.d(t, { default: () => d }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    a = s(481060),
+    l = s(313201),
+    o = s(117984),
+    r = s(388032),
+    c = s(724263);
 function d(e) {
-    let { onClose: t, transitionState: n } = e,
-        d = (0, a.Dt)(),
+    let { onClose: t, transitionState: s } = e,
+        d = (0, l.Dt)(),
         [h, u] = i.useState('');
-    return (0, s.jsx)('form', {
+    return (0, n.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(), (0, o.CM)(h), t();
         },
-        children: (0, s.jsxs)(l.Y0X, {
-            transitionState: n,
+        children: (0, n.jsxs)(a.Y0X, {
+            transitionState: s,
             'aria-labelledby': d,
             children: [
-                (0, s.jsxs)(l.hzk, {
+                (0, n.jsxs)(a.hzk, {
                     children: [
-                        (0, s.jsx)(l.X6q, {
+                        (0, n.jsx)(a.X6q, {
                             id: d,
                             className: c.header,
                             variant: 'heading-xl/semibold',
-                            children: r.intl.string(r.t['ISN+ND'])
+                            children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, s.jsx)(l.olH, {
+                        (0, n.jsx)(a.olH, {
                             onClick: t,
                             className: c.closeButton
                         }),
-                        (0, s.jsx)(l.xJW, {
-                            title: r.intl.string(r.t.OCAkGB),
+                        (0, n.jsx)(a.xJW, {
+                            title: r.NW.string(r.t.OCAkGB),
                             className: c.name,
-                            children: (0, s.jsx)(l.oil, {
+                            children: (0, n.jsx)(a.oil, {
                                 value: h,
                                 onChange: u,
                                 maxLength: 100,
-                                placeholder: r.intl.string(r.t.eTVbt7),
+                                placeholder: r.NW.string(r.t.eTVbt7),
                                 className: c.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, s.jsxs)(l.mzw, {
+                (0, n.jsxs)(a.mzw, {
                     children: [
-                        (0, s.jsx)(l.zxk, {
+                        (0, n.jsx)(a.zxk, {
                             type: 'submit',
                             disabled: '' === h,
-                            children: r.intl.string(r.t['ISN+ND'])
+                            children: r.NW.string(r.t['ISN+ND'])
                         }),
-                        (0, s.jsx)(l.zxk, {
+                        (0, n.jsx)(a.zxk, {
                             onClick: t,
-                            look: l.zxk.Looks.LINK,
-                            color: l.zxk.Colors.PRIMARY,
-                            children: r.intl.string(r.t['ETE/oK'])
+                            look: a.zxk.Looks.LINK,
+                            color: a.zxk.Colors.PRIMARY,
+                            children: r.NW.string(r.t['ETE/oK'])
                         })
                     ]
                 })

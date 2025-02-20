@@ -1,29 +1,29 @@
-e.d(n, {
+n.d(t, {
     M: () => c,
     U: () => C
 });
-var i = e(481060),
-    l = e(43236),
-    s = e(103714),
-    a = e(940328),
-    r = e(888395),
-    d = e(389028),
-    o = e(142390);
+var i = n(481060),
+    s = n(43236),
+    a = n(103714),
+    l = n(940328),
+    r = n(888395),
+    d = n(389028),
+    o = n(142390);
 let c = {
-        CREATE: a,
+        CREATE: l,
         GAMING: d,
         FRIENDS: r,
-        STUDY: e(425506),
-        CLUBS: s,
-        CREATORS: l,
+        STUDY: n(425506),
+        CLUBS: a,
+        CREATORS: s,
         LOCAL_COMMUNITY: o,
-        SCHOOL_CLUB: s
+        SCHOOL_CLUB: a
     },
     C = {
         CREATE: i.B0A,
         GAMING: i.Tg$,
         FRIENDS: i.z93,
-        CLUBS: s,
+        CLUBS: a,
         SCHOOL_CLUB: i.FGi,
         STUDY: i.Dwq,
         LOCAL_COMMUNITY: i.YdV,

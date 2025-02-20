@@ -1,17 +1,17 @@
-t.d(n, { Z: () => s });
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    a = t(132871),
-    r = t(147890),
-    d = t(388032);
-function s(e) {
-    return (0, i.jsx)(l.sNh, {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(132871),
+    l = n(147890),
+    o = n(388032);
+function c(e) {
+    return (0, i.jsx)(r.sNh, {
         id: 'application-directory',
-        label: (0, i.jsx)(i.Fragment, { children: d.intl.string(d.t.AKcFUl) }),
-        icon: l.jje,
+        label: (0, i.jsx)(i.Fragment, { children: o.NW.string(o.t.AKcFUl) }),
+        icon: r.jje,
         action: () => {
-            (0, r.dx)({
+            (0, l.dx)({
                 guildId: e.id,
                 entrypoint: { name: a.n3.GUILD_HEADER_POPOUT }
             });

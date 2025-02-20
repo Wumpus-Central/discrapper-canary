@@ -1,51 +1,51 @@
 n.d(t, { Z: () => m });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var s = n(873546),
-    r = n(481060),
-    l = n(270237),
-    a = n(584825),
+var i = n(873546),
+    s = n(481060),
+    a = n(270237),
+    l = n(584825),
     o = n(892729),
     c = n(949914),
     d = n(388032),
-    u = n(326839);
+    u = n(63827);
 let m = (e) => {
     let { onGoBack: t } = e,
         n = (0, o.Z)(),
-        { loading: m } = (0, a.sp)(n);
-    return ((0, l.Z)(s.tq ? 'role-subscriptions-user-setting' : void 0), m)
-        ? (0, i.jsx)(r.$jN, {})
+        { loading: m } = (0, l.sp)(n);
+    return ((0, a.Z)(i.tq ? 'role-subscriptions-user-setting' : void 0), m)
+        ? (0, r.jsx)(s.$jN, {})
         : 0 === n.length
           ? null
-          : (0, i.jsxs)('div', {
+          : (0, r.jsxs)('div', {
                 className: u.__invalid_container,
                 children: [
-                    (0, i.jsxs)(r.zxk, {
-                        look: r.zxk.Looks.BLANK,
+                    (0, r.jsxs)(s.zxk, {
+                        look: s.zxk.Looks.BLANK,
                         innerClassName: u.backButtonContents,
                         onClick: t,
                         children: [
-                            (0, i.jsx)(r.ZSh, {
+                            (0, r.jsx)(s.ZSh, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: u.arrowIcon
                             }),
-                            d.intl.string(d.t.hqyhKS)
+                            d.NW.string(d.t.hqyhKS)
                         ]
                     }),
-                    (0, i.jsx)(r.LZC, { size: 10 }),
-                    (0, i.jsx)(r.vwX, {
+                    (0, r.jsx)(s.LZC, { size: 10 }),
+                    (0, r.jsx)(s.vwX, {
                         tag: 'h1',
-                        children: d.intl.string(d.t['KzCF//'])
+                        children: d.NW.string(d.t['KzCF//'])
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         className: u.pageDescription,
-                        children: d.intl.string(d.t['Y+ucR0'])
+                        children: d.NW.string(d.t['Y+ucR0'])
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: u.subscriptionsContainer,
-                        children: n.map((e) => (0, i.jsx)(c.Z, { subscription: e }, e.id))
+                        children: n.map((e) => (0, r.jsx)(c.Z, { subscription: e }, e.id))
                     })
                 ]
             });

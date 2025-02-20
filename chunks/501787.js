@@ -1,12 +1,12 @@
 n.d(t, {
-    $J: () => i,
-    F$: () => o,
-    OVERLAY_V3_LAYOUT_ID: () => r,
-    mo: () => s,
-    vZ: () => a
+    $J: () => r,
+    F$: () => s,
+    OVERLAY_V3_LAYOUT_ID: () => i,
+    mo: () => a,
+    vZ: () => o
 });
-let i = 'DISCORD_OutOfProcessOverlay',
-    r = 'overlay_v3_default',
-    a = 192,
-    s = 120,
-    o = 4;
+let r = 'DISCORD_OutOfProcessOverlay',
+    i = 'overlay_v3_default',
+    o = 192,
+    a = 120,
+    s = 4;

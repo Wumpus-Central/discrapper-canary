@@ -1,7 +1,7 @@
-var i = n(903425),
-    r = n(533206),
-    a = '[object Symbol]';
-function s(e) {
-    return 'symbol' == typeof e || (r(e) && i(e) == a);
+var r = n(903425),
+    i = n(533206),
+    o = '[object Symbol]';
+function a(e) {
+    return 'symbol' == typeof e || (i(e) && r(e) == o);
 }
-e.exports = s;
+e.exports = a;

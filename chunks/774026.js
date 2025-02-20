@@ -1,47 +1,47 @@
-l.d(n, { Z: () => g });
-var t = l(200651);
-l(192379);
-var i = l(913527),
-    s = l.n(i),
-    a = l(793030),
-    r = l(739566),
-    o = l(942951),
-    u = l(67390),
-    c = l(63063),
-    d = l(981631),
-    m = l(388032),
-    x = l(434687);
-function g(e) {
+t.d(n, { Z: () => h });
+var l = t(200651);
+t(192379);
+var i = t(913527),
+    r = t.n(i),
+    s = t(793030),
+    a = t(739566),
+    o = t(942951),
+    c = t(67390),
+    u = t(63063),
+    d = t(981631),
+    m = t(388032),
+    g = t(637402);
+function h(e) {
     var n;
-    let { streamingUntil: l, user: i, channel: g } = e,
-        h = (0, r.JZ)(i, g),
-        Z = (0, o.l)({
+    let { streamingUntil: t, user: i, channel: h } = e,
+        x = (0, a.JZ)(i, h),
+        v = (0, o.l)({
             user: i,
-            channelId: g.id,
-            guildId: g.guild_id,
+            channelId: h.id,
+            guildId: h.guild_id,
             messageId: void 0
-        })(h),
-        v = s()(l).diff(s()(), 'hours');
-    return v <= 0
+        })(x),
+        f = r()(t).diff(r()(), 'hours');
+    return f <= 0
         ? null
-        : (0, t.jsxs)('div', {
-              className: x.attribution,
+        : (0, l.jsxs)('div', {
+              className: g.attribution,
               children: [
-                  (0, t.jsx)(u.Z, { className: x.img }),
-                  (0, t.jsxs)('div', {
+                  (0, l.jsx)(c.Z, { className: g.img }),
+                  (0, l.jsxs)('div', {
                       children: [
-                          (0, t.jsx)(a.X6, {
+                          (0, l.jsx)(s.X6, {
                               variant: 'heading-sm/bold',
-                              children: m.intl.string(m.t.K04rOD)
+                              children: m.NW.string(m.t.K04rOD)
                           }),
-                          (0, t.jsx)(a.xv, {
+                          (0, l.jsx)(s.xv, {
                               color: 'text-muted',
                               variant: 'text-sm/medium',
-                              children: m.intl.format(m.t.NZDuBg, {
+                              children: m.NW.format(m.t.NZDuBg, {
                                   actorName: null !== (n = i.globalName) && void 0 !== n ? n : i.username,
-                                  actorHook: Z,
-                                  num: v,
-                                  helpCenterLink: c.Z.getArticleURL(d.BhN.HD_STREAMING_POTION)
+                                  actorHook: v,
+                                  num: f,
+                                  helpCenterLink: u.Z.getArticleURL(d.BhN.HD_STREAMING_POTION)
                               })
                           })
                       ]

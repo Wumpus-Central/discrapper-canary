@@ -1,57 +1,57 @@
-n.d(t, { S: () => c });
-var i = n(573654),
-    r = n(778010),
-    a = n(112457),
-    s = n(603565);
-function o(e, t) {
+n.d(t, { S: () => u });
+var r = n(573654),
+    i = n(778010),
+    o = n(112457),
+    a = n(603565);
+function s(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function u(e, t, n) {
+function c(e, t, n) {
     return t && l(e.prototype, t), n && l(e, n), e;
 }
-var c = (function () {
+var u = (function () {
     function e(t, n) {
-        o(this, e), (this.store = t), (this.registry = n);
+        s(this, e), (this.store = t), (this.registry = n);
     }
     return (
-        u(e, [
+        c(e, [
             {
                 key: 'subscribeToStateChange',
                 value: function (e) {
                     var t = this,
                         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
-                        r = n.handlerIds;
-                    (0, i.k)('function' == typeof e, 'listener must be a function.'), (0, i.k)(void 0 === r || Array.isArray(r), 'handlerIds, when specified, must be an array of strings.');
-                    var a = this.store.getState().stateId,
-                        o = function () {
+                        i = n.handlerIds;
+                    (0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
+                    var o = this.store.getState().stateId,
+                        s = function () {
                             var n = t.store.getState(),
-                                i = n.stateId;
+                                r = n.stateId;
                             try {
-                                i === a || (i === a + 1 && !(0, s.co)(n.dirtyHandlerIds, r)) || e();
+                                r === o || (r === o + 1 && !(0, a.co)(n.dirtyHandlerIds, i)) || e();
                             } finally {
-                                a = i;
+                                o = r;
                             }
                         };
-                    return this.store.subscribe(o);
+                    return this.store.subscribe(s);
                 }
             },
             {
                 key: 'subscribeToOffsetChange',
                 value: function (e) {
                     var t = this;
-                    (0, i.k)('function' == typeof e, 'listener must be a function.');
+                    (0, r.k)('function' == typeof e, 'listener must be a function.');
                     var n = this.store.getState().dragOffset,
-                        r = function () {
-                            var i = t.store.getState().dragOffset;
-                            i !== n && ((n = i), e());
+                        i = function () {
+                            var r = t.store.getState().dragOffset;
+                            r !== n && ((n = r), e());
                         };
-                    return this.store.subscribe(r);
+                    return this.store.subscribe(i);
                 }
             },
             {
@@ -59,7 +59,7 @@ var c = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getSource(e);
-                    return (0, i.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e);
+                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e);
                 }
             },
             {
@@ -67,10 +67,10 @@ var c = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getTarget(e);
-                    if (((0, i.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
+                    if (((0, r.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
                     var n = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    return (0, r.s)(n, a) && t.canDrop(this, e);
+                        o = this.getItemType();
+                    return (0, i.s)(n, o) && t.canDrop(this, e);
                 }
             },
             {
@@ -84,7 +84,7 @@ var c = (function () {
                 value: function (e) {
                     if (!e) return !1;
                     var t = this.registry.getSource(e, !0);
-                    return (0, i.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
+                    return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
                 }
             },
             {
@@ -94,13 +94,13 @@ var c = (function () {
                     if (!e) return !1;
                     var n = t.shallow;
                     if (!this.isDragging()) return !1;
-                    var i = this.registry.getTargetType(e),
-                        a = this.getItemType();
-                    if (a && !(0, r.s)(i, a)) return !1;
-                    var s = this.getTargetIds();
-                    if (!s.length) return !1;
-                    var o = s.indexOf(e);
-                    return n ? o === s.length - 1 : o > -1;
+                    var r = this.registry.getTargetType(e),
+                        o = this.getItemType();
+                    if (o && !(0, i.s)(r, o)) return !1;
+                    var a = this.getTargetIds();
+                    if (!a.length) return !1;
+                    var s = a.indexOf(e);
+                    return n ? s === a.length - 1 : s > -1;
                 }
             },
             {
@@ -166,13 +166,13 @@ var c = (function () {
             {
                 key: 'getSourceClientOffset',
                 value: function () {
-                    return (0, a.YY)(this.store.getState().dragOffset);
+                    return (0, o.YY)(this.store.getState().dragOffset);
                 }
             },
             {
                 key: 'getDifferenceFromInitialOffset',
                 value: function () {
-                    return (0, a.ar)(this.store.getState().dragOffset);
+                    return (0, o.ar)(this.store.getState().dragOffset);
                 }
             }
         ]),

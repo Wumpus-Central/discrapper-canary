@@ -1,8 +1,8 @@
 function t(e) {
     let t = ['assembly', 'module', 'package', 'import', 'alias', 'class', 'interface', 'object', 'given', 'value', 'assign', 'void', 'function', 'new', 'of', 'extends', 'satisfies', 'abstracts', 'in', 'out', 'return', 'break', 'continue', 'throw', 'assert', 'dynamic', 'if', 'else', 'switch', 'case', 'for', 'while', 'try', 'catch', 'finally', 'then', 'let', 'this', 'outer', 'super', 'is', 'exists', 'nonempty'],
         n = ['shared', 'abstract', 'formal', 'default', 'actual', 'variable', 'late', 'native', 'deprecated', 'final', 'sealed', 'annotation', 'suppressWarnings', 'small'],
-        i = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
-        r = {
+        r = ['doc', 'by', 'license', 'see', 'throws', 'tagged'],
+        i = {
             className: 'subst',
             excludeBegin: !0,
             excludeEnd: !0,
@@ -11,7 +11,7 @@ function t(e) {
             keywords: t,
             relevance: 10
         },
-        a = [
+        o = [
             {
                 className: 'string',
                 begin: '"""',
@@ -22,7 +22,7 @@ function t(e) {
                 className: 'string',
                 begin: '"',
                 end: '"',
-                contains: [r]
+                contains: [i]
             },
             {
                 className: 'string',
@@ -36,12 +36,12 @@ function t(e) {
             }
         ];
     return (
-        (r.contains = a),
+        (i.contains = o),
         {
             name: 'Ceylon',
             keywords: {
                 keyword: t.concat(n),
-                meta: i
+                meta: r
             },
             illegal: '\\$[^01]|#[^0-9a-fA-F]',
             contains: [
@@ -51,7 +51,7 @@ function t(e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(a)
+            ].concat(o)
         }
     );
 }

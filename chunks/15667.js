@@ -1,42 +1,42 @@
-n.d(t, { Z: () => o }), n(47120);
-var l = n(200651);
+n.d(t, { Z: () => s }), n(47120);
+var r = n(200651);
 n(192379);
-var i = n(392711),
-    r = n(481060),
+var l = n(392711),
+    i = n(481060),
     a = n(388032),
-    s = n(386092);
-let o = (e) => {
-    let t = (0, i.flatMap)(e.history, (e) => {
+    o = n(52955);
+let s = (e) => {
+    let t = (0, l.flatMap)(e.history, (e) => {
         var t;
         let {
                 destination: [n],
-                multiSelect: l
+                multiSelect: r
             } = e,
-            i = [null, null],
-            r = Object.values(null !== (t = null == l ? void 0 : l.state) && void 0 !== t ? t : {});
-        return r.length > 0 && (i[0] = r.join(', ')), '' !== n && (i[1] = n), i;
+            l = [null, null],
+            i = Object.values(null !== (t = null == r ? void 0 : r.state) && void 0 !== t ? t : {});
+        return i.length > 0 && (l[0] = i.join(', ')), '' !== n && (l[1] = n), l;
     }).filter((e) => null != e);
     return 0 === t.length
         ? null
-        : (0, l.jsxs)('div', {
-              className: s.container,
+        : (0, r.jsxs)('div', {
+              className: o.container,
               children: [
-                  (0, l.jsx)(r.X6q, {
-                      className: s.breadcrumbsHeader,
+                  (0, r.jsx)(i.X6q, {
+                      className: o.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: a.intl.string(a.t['+3V9Tk'])
+                      children: a.NW.string(a.t['+3V9Tk'])
                   }),
                   t.map((e, t) =>
-                      (0, l.jsxs)(
+                      (0, r.jsxs)(
                           'div',
                           {
-                              className: s.breadcrumbContainer,
+                              className: o.breadcrumbContainer,
                               children: [
-                                  (0, l.jsx)('div', { className: s.breadcrumbDot }),
-                                  (0, l.jsx)(r.Text, {
+                                  (0, r.jsx)('div', { className: o.breadcrumbDot }),
+                                  (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
-                                      className: s.breadcrumbText,
+                                      className: o.breadcrumbText,
                                       children: e
                                   })
                               ]

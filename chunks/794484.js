@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(675619),
     h = n(119850),
     f = n(32173),
-    N = n(391110),
-    x = n(75077),
-    b = n(320319),
+    b = n(391110),
+    N = n(75077),
+    x = n(320319),
     _ = n(276671);
 let E = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: s } = e,
@@ -49,12 +49,12 @@ let E = (e) => {
     },
     j = (e) => {
         var t, n;
-        let { className: s, variant: j = N.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: O = !1, showAllPerksButton: v, headerClassname: S, isFullScreen: T = !0, shouldAutoScroll: I = !1 } = e,
+        let { className: s, variant: j = b.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: O = !1, showAllPerksButton: v, headerClassname: S, isFullScreen: T = !0, shouldAutoScroll: I = !1 } = e,
             y = i.useRef(null),
             A = (0, m.yQ)(),
             P = (0, g.vi)(A),
             R = (0, d.ZP)('perks-discoverability'),
-            D = j === N.R0.WHATS_NEW,
+            D = j === b.R0.WHATS_NEW,
             Z = (0, m.IY)(),
             w = (0, h.x)();
         i.useEffect(() => {
@@ -70,12 +70,12 @@ let E = (e) => {
             onScrollEnd: k,
             onCleanup: k
         });
-        let L = (0, x.Op)(D),
+        let L = (0, N.Op)(D),
             B = (0, f.Z)(),
-            M = (0, x.mN)(),
+            M = (0, N.mN)(),
             { fractionalState: U } = (0, c.Z)(),
             V = (0, u.W)(),
-            G = (0, x.sP)({
+            G = (0, N.sP)({
                 perksCards: B,
                 variant: j,
                 shopMarketingVariation: R,
@@ -140,7 +140,7 @@ let E = (e) => {
                             children: G.map((e, t) => {
                                 var n, i;
                                 return (0, r.jsx)(
-                                    b.Z,
+                                    x.Z,
                                     ((n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},

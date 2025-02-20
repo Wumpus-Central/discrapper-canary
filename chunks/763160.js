@@ -6,14 +6,14 @@ e.exports = function (e) {
         error: t
     };
     if (!e && window.console) {
-        var i = function (e, t) {
+        var r = function (e, t) {
             e[t] = function () {
                 var e = console[t];
                 if (e.apply) e.apply(console, arguments);
                 else for (var n = 0; n < arguments.length; n++) e(arguments[n]);
             };
         };
-        i(n, 'log'), i(n, 'warn'), i(n, 'error');
+        r(n, 'log'), r(n, 'warn'), r(n, 'error');
     }
     return n;
 };

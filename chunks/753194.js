@@ -11,10 +11,10 @@ var l = n(866442),
 function u(e) {
     let t,
         { color: n, size: u, forcedIconColor: m, className: x, iconClassName: p, tooltipText: f } = e,
-        [b, _] = (0, i.Wu)([s.Z], () => [s.Z.desaturateUserColors, s.Z.saturation]),
-        h = (0, o.dQu)(a.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        g = (0, l._i)(null != n ? n : h),
-        v = (0, l.ho)(g, !1, b ? _ : null);
+        [b, h] = (0, i.Wu)([s.Z], () => [s.Z.desaturateUserColors, s.Z.saturation]),
+        _ = (0, o.dQu)(a.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        g = (0, l._i)(null != n ? n : _),
+        v = (0, l.ho)(g, !1, b ? h : null);
     return (
         (t = null != m ? m : 0.3 > (0, l.Bd)(g) ? a.Z.unsafe_rawColors.PRIMARY_630.css : a.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(o.ua7, {

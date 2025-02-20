@@ -1,19 +1,19 @@
 n.d(t, { Z: () => g }), n(47120), n(653041);
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(835473),
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(835473),
     l = n(925329),
-    u = n(372460),
-    c = n(699516),
+    c = n(372460),
+    u = n(699516),
     d = n(594174),
     f = n(981631),
-    _ = n(702197);
-let p = [];
+    p = n(827468);
+let _ = [];
 function h(e, t) {
-    let n = (0, o.Z)(e, t);
-    return r.useMemo(() => {
+    let n = (0, s.Z)(e, t);
+    return i.useMemo(() => {
         let e = new Map();
         return (
             n.forEach((t) => {
@@ -25,66 +25,66 @@ function h(e, t) {
 }
 function m(e) {
     let { application: t } = e;
-    return (0, i.jsxs)('div', {
-        className: _.subtext,
+    return (0, r.jsxs)('div', {
+        className: p.subtext,
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, r.jsx)(l.Z, {
                 game: t,
                 size: l.Z.Sizes.XXSMALL
             }),
-            (0, i.jsx)('span', { children: t.name })
+            (0, r.jsx)('span', { children: t.name })
         ]
     });
 }
 function g(e) {
-    let { menuItemId: t, user: n, label: o, gameRelationships: _, onClick: g, color: E } = e,
-        { id: v, bot: y } = n,
-        I = (0, a.e7)([d.default], () => {
+    let { menuItemId: t, user: n, label: s, gameRelationships: p, onClick: g, color: E } = e,
+        { id: v, bot: b } = n,
+        y = (0, o.e7)([d.default], () => {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
         }),
-        T = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
-        b = I || y || !T,
-        S = b ? p : _,
-        [A, N] = r.useState(!1),
-        C = r.useCallback(() => N(!0), []),
-        R = r.useMemo(
+        O = (0, c.wn)({ location: 'useAcceptGameFriendRequest' }),
+        S = y || b || !O,
+        I = S ? _ : p,
+        [T, N] = i.useState(!1),
+        A = i.useCallback(() => N(!0), []),
+        C = i.useMemo(
             () =>
-                S.map((e) => {
+                I.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [S]
+            [I]
         ),
-        O = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(v), [v]),
-        D = h(R, A || 1 === S.length);
-    if (b || 0 === S.length || O === f.OGo.FRIEND) return null;
-    if (1 === S.length) {
-        let { applicationId: e } = S[0],
-            n = D.get(e);
+        R = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(v), [v]),
+        P = h(C, T || 1 === I.length);
+    if (S || 0 === I.length || R === f.OGo.FRIEND) return null;
+    if (1 === I.length) {
+        let { applicationId: e } = I[0],
+            n = P.get(e);
         return null == n
             ? null
-            : (0, i.jsx)(s.sNh, {
+            : (0, r.jsx)(a.sNh, {
                   color: E,
                   id: t,
-                  label: o,
-                  subtext: (0, i.jsx)(m, { application: n }),
-                  onFocus: C,
+                  label: s,
+                  subtext: (0, r.jsx)(m, { application: n }),
+                  onFocus: A,
                   action: () => g(n)
               });
     }
-    let L = [];
-    return (S.forEach((e) => {
+    let w = [];
+    return (I.forEach((e) => {
         let { applicationId: t } = e,
-            n = D.get(t);
+            n = P.get(t);
         null != n &&
-            L.push(
-                (0, i.jsx)(
-                    s.sNh,
+            w.push(
+                (0, r.jsx)(
+                    a.sNh,
                     {
                         id: t,
                         label: n.name,
-                        icon: (0, i.jsx)(l.Z, {
+                        icon: (0, r.jsx)(l.Z, {
                             game: n,
                             size: l.Z.Sizes.XXSMALL
                         }),
@@ -94,13 +94,13 @@ function g(e) {
                 )
             );
     }),
-    0 === L.length)
+    0 === w.length)
         ? null
-        : (0, i.jsx)(s.sNh, {
+        : (0, r.jsx)(a.sNh, {
               color: E,
               id: t,
-              label: o,
-              onFocus: C,
-              children: L
+              label: s,
+              onFocus: A,
+              children: w
           });
 }

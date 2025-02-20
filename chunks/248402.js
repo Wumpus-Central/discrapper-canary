@@ -1,15 +1,15 @@
-let i, r;
-n.d(t, { Z: () => b }), n(47120);
-var a,
-    s = n(392711),
-    o = n.n(s),
+let r, i;
+n.d(t, { Z: () => S }), n(47120);
+var o,
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
-    u = n(570140),
-    c = n(358221),
+    c = n(570140),
+    u = n(358221),
     d = n(569545),
     f = n(199902),
-    _ = n(314897),
-    p = n(131951),
+    p = n(314897),
+    _ = n(131951),
     h = n(606304),
     m = n(354459);
 function g(e, t, n) {
@@ -28,21 +28,21 @@ function g(e, t, n) {
 function E() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (null == i) e = null;
+    if (null == r) e = null;
     else {
-        var n, a, s, l, u;
-        e = c.Z.getSelectedParticipantId(i);
+        var n, o, a, l, c;
+        e = u.Z.getSelectedParticipantId(r);
         let t = f.Z.getLastActiveStream(),
-            g = null != e ? c.Z.getParticipant(i, e) : null;
-        if ((((null == g ? void 0 : g.type) !== m.fO.ACTIVITY && ((null == g ? void 0 : g.type) !== m.fO.USER || (null === (n = g.voiceState) || void 0 === n ? void 0 : n.selfVideo))) || (e = null), null != t && null == e && (e = null === (a = c.Z.getParticipant(i, (0, d.V9)(t))) || void 0 === a ? void 0 : a.id), null == e)) {
-            let t = _.default.getId(),
-                n = o()(c.Z.getVideoParticipants(i)).filter((e) => e.type === m.fO.USER && e.user.id !== t && !p.Z.isLocalVideoDisabled(e.user.id)),
-                a = n.map((e) => e.user.id),
+            g = null != e ? u.Z.getParticipant(r, e) : null;
+        if ((((null == g ? void 0 : g.type) !== m.fO.ACTIVITY && ((null == g ? void 0 : g.type) !== m.fO.USER || (null === (n = g.voiceState) || void 0 === n ? void 0 : n.selfVideo))) || (e = null), null != t && null == e && (e = null === (o = u.Z.getParticipant(r, (0, d.V9)(t))) || void 0 === o ? void 0 : o.id), null == e)) {
+            let t = p.default.getId(),
+                n = s()(u.Z.getVideoParticipants(r)).filter((e) => e.type === m.fO.USER && e.user.id !== t && !_.Z.isLocalVideoDisabled(e.user.id)),
+                o = n.map((e) => e.user.id),
                 d = Date.now();
             null ==
                 (e =
                     null ===
-                        (s = n
+                        (a = n
                             .map((e) => [e.user.id, h.Z.getSpeakingDuration(e.user.id, d)])
                             .filter((e) => {
                                 let [t, n] = e;
@@ -51,25 +51,25 @@ function E() {
                             .maxBy((e) => {
                                 let [t, n] = e;
                                 return -n;
-                            })) || void 0 === s
+                            })) || void 0 === a
                         ? void 0
-                        : s[0]) && (e = null != r && a.has(r) ? r : null === (u = n.first()) || void 0 === u ? void 0 : null === (l = u.user) || void 0 === l ? void 0 : l.id);
+                        : a[0]) && (e = null != i && o.has(i) ? i : null === (c = n.first()) || void 0 === c ? void 0 : null === (l = c.user) || void 0 === l ? void 0 : l.id);
         }
     }
-    r !== e && ((r = e), t && T.emitChange());
+    i !== e && ((i = e), t && O.emitChange());
 }
-let v = o().debounce(E, 300);
-function y() {
+let v = s().debounce(E, 300);
+function b() {
     return v(), !1;
 }
-class I extends (a = l.ZP.Store) {
+class y extends (o = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, _.default, h.Z, f.Z, p.Z), this.syncWith([c.Z, f.Z], y);
+        this.waitFor(u.Z, p.default, h.Z, f.Z, _.Z), this.syncWith([u.Z, f.Z], b);
     }
     getSpeaker(e) {
-        return i !== e && ((i = e), E(!1)), null != r ? r : _.default.getId();
+        return r !== e && ((r = e), E(!1)), null != i ? i : p.default.getId();
     }
 }
-g(I, 'displayName', 'VideoSpeakerStore');
-let T = new I(u.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: y }),
-    b = T;
+g(y, 'displayName', 'VideoSpeakerStore');
+let O = new y(c.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: b }),
+    S = O;

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => s });
-var i = n(442837),
-    r = n(706454),
-    a = n(388032);
-function s(e) {
-    let t = (0, i.e7)([r.default], () => r.default.locale.startsWith('en-'));
-    return ':pizza:' === e && t ? a.intl.formatToPlainString(a.t['1knDPD'], { emojiName: e }) : e;
+n.d(t, { Z: () => a });
+var r = n(442837),
+    i = n(706454),
+    o = n(388032);
+function a(e) {
+    let t = (0, r.e7)([i.default], () => i.default.locale.startsWith('en-'));
+    return ':pizza:' === e && t ? o.NW.formatToPlainString(o.t['1knDPD'], { emojiName: e }) : e;
 }

@@ -1,5 +1,5 @@
-n.d(t, { UQ: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { UQ: () => i });
+let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-02_onboarding_advanced_mode',
     label: 'Enables setting up onboarding with advanced mode',
@@ -12,8 +12,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    return i.useExperiment(
+function i(e) {
+    return r.useExperiment(
         {
             guildId: e,
             location: 'ed5d33_1'

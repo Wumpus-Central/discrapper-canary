@@ -1,14 +1,14 @@
-r.d(t, { Z: () => p }), r(653041), r(47120);
+r.d(t, { Z: () => p }), r(230036), r(653041), r(47120);
 var n = r(200651);
 r(192379);
 var a = r(392711),
     i = r.n(a),
-    l = r(481060),
-    s = r(481250),
+    s = r(481060),
+    l = r(481250),
     o = r(513547),
-    d = r(388032),
-    c = r(316095),
-    u = r(483938);
+    c = r(388032),
+    d = r(687366),
+    u = r(455812);
 let m = {
     userId: 1,
     dataType: 2,
@@ -23,7 +23,7 @@ let m = {
 };
 function p(e) {
     let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
     let r = i().map(t, (e, t) => {
         if (void 0 !== e && 'buffers' !== t)
             return (0, n.jsx)(
@@ -46,11 +46,11 @@ function p(e) {
                 'framerate'
             )
         ),
-        (0, n.jsxs)(l.hjN, {
-            tag: l.RB0.H2,
-            title: d.intl.string(d.t.MKrFKC),
+        (0, n.jsxs)(s.hjN, {
+            tag: s.RB0.H2,
+            title: c.NW.string(c.t.MKrFKC),
             children: [
-                (0, s.a)(r),
+                (0, l.a)(r),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
@@ -75,12 +75,12 @@ function p(e) {
                                     );
                             }
                             return (0, n.jsx)(
-                                l.hjN,
+                                s.hjN,
                                 {
                                     className: u.marginBottom40,
                                     title: 'Buffer: '.concat(e.key),
-                                    titleClassName: c.title,
-                                    children: (0, s.a)(t)
+                                    titleClassName: d.title,
+                                    children: (0, l.a)(t)
                                 },
                                 'Buffer: '.concat(e.key)
                             );

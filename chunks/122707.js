@@ -1,10 +1,10 @@
-n.d(t, { q: () => a }), n(47120);
-var i = n(709054),
-    l = n(765104);
-function a(e, t) {
+n.d(t, { q: () => l }), n(47120);
+var r = n(709054),
+    i = n(765104);
+function l(e, t) {
     var n;
-    let a = null !== (n = l.Z.summaries(e)) && void 0 !== n ? n : [],
-        r = 0;
-    for (let e of a) i.default.compare(e.endId, t) > 0 && (r += 1);
-    return r;
+    let l = null !== (n = i.Z.summaries(e)) && void 0 !== n ? n : [],
+        o = 0;
+    for (let e of l) r.default.compare(e.endId, t) > 0 && (o += 1);
+    return o;
 }

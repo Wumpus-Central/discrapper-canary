@@ -1,8 +1,8 @@
-var i = n(67867),
-    r = n(55525),
-    a = n(228042),
-    s = n(292137);
-i(
+var r = n(67867),
+    i = n(55525),
+    o = n(228042),
+    a = n(292137);
+r(
     {
         target: 'Map',
         proto: !0,
@@ -13,10 +13,10 @@ i(
         includes: function (e) {
             return (
                 !0 ===
-                s(
-                    a(this),
+                a(
+                    o(this),
                     function (t) {
-                        if (r(t, e)) return !0;
+                        if (i(t, e)) return !0;
                     },
                     !0
                 )

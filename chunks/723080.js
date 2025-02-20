@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './1f004.svg': '35121',
     './1f0cf.svg': '854093',
     './1f170.svg': '538289',
@@ -3838,19 +3838,19 @@ var i = {
     './ae.svg': '813577',
     './e50a.svg': '2707'
 };
-function r(e) {
-    return n(a(e));
+function i(e) {
+    return n(o(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function o(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 723080);
+    (i.resolve = o),
+    (e.exports = i),
+    (i.id = 723080);

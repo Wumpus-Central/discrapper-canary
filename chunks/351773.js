@@ -1,9 +1,9 @@
-n.d(t, { Z: () => r });
-var i = n(192379);
-function r(e, t) {
-    let n = i.useRef(e);
+n.d(t, { Z: () => i });
+var r = n(192379);
+function i(e, t) {
+    let n = r.useRef(e);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             function e(e) {
                 null == n.current || n.current.contains(e.target) || t();
             }

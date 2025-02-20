@@ -1,14 +1,14 @@
-n.d(t, { c: () => _ });
+n.d(t, { c: () => j });
 var r = n(481060),
-    l = n(933557),
-    i = n(592125),
+    i = n(933557),
+    l = n(592125),
     a = n(699516),
     u = n(594174),
     o = n(273504),
     s = n(590433),
-    E = n(388032);
-let c = (e) => e !== o.jj.QUARANTINE_USER,
-    d = (e) => {
+    c = n(388032);
+let f = (e) => e !== o.jj.QUARANTINE_USER,
+    E = (e) => {
         switch (e) {
             case o.jj.BLOCK_MESSAGE:
             case o.jj.FLAG_TO_CHANNEL:
@@ -19,16 +19,16 @@ let c = (e) => e !== o.jj.QUARANTINE_USER,
                 return !1;
         }
     },
-    f = (e) => {
+    d = (e) => {
         switch (e) {
             case o.jj.BLOCK_MESSAGE:
-                return E.intl.string(E.t.d1ab8v);
+                return c.NW.string(c.t.d1ab8v);
             case o.jj.FLAG_TO_CHANNEL:
-                return E.intl.string(E.t['Y+Vmvb']);
+                return c.NW.string(c.t['Y+Vmvb']);
             case o.jj.USER_COMMUNICATION_DISABLED:
-                return E.intl.string(E.t.Xz2njI);
+                return c.NW.string(c.t.Xz2njI);
             case o.jj.QUARANTINE_USER:
-                return E.intl.string(E.t.NPO8eX);
+                return c.NW.string(c.t.NPO8eX);
         }
     },
     g = function (e) {
@@ -37,22 +37,22 @@ let c = (e) => e !== o.jj.QUARANTINE_USER,
             case o.jj.BLOCK_MESSAGE:
                 switch (t) {
                     case o.fX.MENTION_SPAM:
-                        return E.intl.string(E.t['8hdId3']);
+                        return c.NW.string(c.t['8hdId3']);
                     case o.fX.ML_SPAM:
-                        return E.intl.string(E.t.tLQYs7);
+                        return c.NW.string(c.t.tLQYs7);
                     default:
-                        return E.intl.string(E.t.xAAocn);
+                        return c.NW.string(c.t.xAAocn);
                 }
             case o.jj.FLAG_TO_CHANNEL:
-                return E.intl.string(E.t.BHAXfX);
+                return c.NW.string(c.t.BHAXfX);
             case o.jj.USER_COMMUNICATION_DISABLED:
-                return E.intl.string(E.t['bNK+gI']);
+                return c.NW.string(c.t['bNK+gI']);
             case o.jj.QUARANTINE_USER:
-                return E.intl.string(E.t['/7nL5e']);
+                return c.NW.string(c.t['/7nL5e']);
         }
     },
     S = (e, t) => {
-        var n, r, c;
+        var n, r, f;
         switch (e) {
             case o.jj.QUARANTINE_USER:
             case o.jj.BLOCK_MESSAGE:
@@ -60,20 +60,20 @@ let c = (e) => e !== o.jj.QUARANTINE_USER,
             case o.jj.FLAG_TO_CHANNEL: {
                 let e = null == t ? void 0 : null === (n = t.metadata) || void 0 === n ? void 0 : n.channelId;
                 if (null == e) return null;
-                let r = i.Z.getChannel(e);
+                let r = l.Z.getChannel(e);
                 if (null == r) return null;
-                let o = (0, l.F6)(r, u.default, a.Z);
-                return E.intl.format(E.t.xQXnkJ, { channelName: o });
+                let o = (0, i.F6)(r, u.default, a.Z);
+                return c.NW.format(c.t.xQXnkJ, { channelName: o });
             }
             case o.jj.USER_COMMUNICATION_DISABLED: {
-                let e = null !== (c = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== c ? c : 0,
+                let e = null !== (f = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== f ? f : 0,
                     n = (0, s.L9)(e);
                 if (null == n) return null;
-                return E.intl.format(E.t.AFmbfX, { duration: n });
+                return c.NW.format(c.t.AFmbfX, { duration: n });
             }
         }
     },
-    A = (e) => {
+    O = (e) => {
         switch (e) {
             case o.jj.BLOCK_MESSAGE:
                 return r.k$p;
@@ -85,15 +85,15 @@ let c = (e) => e !== o.jj.QUARANTINE_USER,
                 return r.ics;
         }
     };
-function _(e, t, n) {
-    var l, i, a, u;
-    return d(e)
+function j(e, t, n) {
+    var i, l, a, u;
+    return E(e)
         ? {
-              headerText: null !== (l = f(e)) && void 0 !== l ? l : '',
-              descriptionText: null !== (i = g(e, n)) && void 0 !== i ? i : '',
+              headerText: null !== (i = d(e)) && void 0 !== i ? i : '',
+              descriptionText: null !== (l = g(e, n)) && void 0 !== l ? l : '',
               helperText: null !== (a = S(e, t)) && void 0 !== a ? a : null,
-              icon: null !== (u = A(e)) && void 0 !== u ? u : r.k$p,
-              isEditable: c(e)
+              icon: null !== (u = O(e)) && void 0 !== u ? u : r.k$p,
+              isEditable: f(e)
           }
         : null;
 }

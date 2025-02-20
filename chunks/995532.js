@@ -1,16 +1,16 @@
 n.d(t, {
-    Z: () => N,
-    a: () => o
+    Z: () => I,
+    a: () => s
 });
 var r,
     l,
-    i,
-    a = n(442837),
-    s = n(570140);
-let o = {},
+    a,
+    i = n(442837),
+    o = n(570140);
+let s = {},
     E = {},
-    u = {},
-    c = !1,
+    c = {},
+    u = !1,
     _ = !1,
     d = !1;
 function A(e) {
@@ -19,9 +19,9 @@ function A(e) {
 }
 function T(e) {
     let { welcomeScreen: t, guildId: n } = e;
-    E[n] = null != t ? t : o;
+    E[n] = null != t ? t : s;
 }
-class I extends (i = a.ZP.Store) {
+class N extends (a = i.ZP.Store) {
     get(e) {
         if (null != e) return E[e];
     }
@@ -33,7 +33,7 @@ class I extends (i = a.ZP.Store) {
     }
     hasSeen(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null != e && (t ? c : u[e] || !1);
+        return null != e && (t ? u : c[e] || !1);
     }
     isEmpty(e) {
         if (null == e) return !0;
@@ -42,31 +42,31 @@ class I extends (i = a.ZP.Store) {
     }
 }
 (l = 'WelcomeScreenStore'),
-    (r = 'displayName') in I
-        ? Object.defineProperty(I, r, {
+    (r = 'displayName') in N
+        ? Object.defineProperty(N, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[r] = l);
-let N = new I(s.Z, {
+        : (N[r] = l);
+let I = new N(o.Z, {
     INVITE_RESOLVE_SUCCESS: A,
     INVITE_ACCEPT_SUCCESS: A,
     WELCOME_SCREEN_SUBMIT_SUCCESS: T,
     WELCOME_SCREEN_UPDATE: T,
     WELCOME_SCREEN_VIEW: function (e) {
         let { guildId: t, isLurking: n } = e;
-        (u[t] = !0), n && (c = !0);
+        (c[t] = !0), n && (u = !0);
     },
     GUILD_STOP_LURKING: function () {
-        c = !1;
+        u = !1;
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t }
         } = e;
-        u[t] = !1;
+        c[t] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
         (_ = !0), (d = !1);
@@ -74,7 +74,7 @@ let N = new I(s.Z, {
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
         (_ = !1), (d = !1);
         let { welcomeScreen: t, guildId: n } = e;
-        E[n] = null != t ? t : o;
+        E[n] = null != t ? t : s;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
         (_ = !1), (d = !0);

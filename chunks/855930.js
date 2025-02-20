@@ -29,7 +29,7 @@ let s = new a.Z({
         if (0 !== l) {
             switch (((i = 0 === c || 1 === c ? 0 : (t - c) / Math.min(c, 1 - c)), t)) {
                 case a:
-                    o = (n - s) / l + (n < s ? 6 : 0);
+                    o = (n - s) / l + 6 * (n < s);
                     break;
                 case n:
                     o = (s - a) / l + 2;

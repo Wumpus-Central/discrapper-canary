@@ -16,8 +16,8 @@ var i,
     S = t(314897),
     I = t(680089),
     L = t(592125),
-    D = t(58468),
-    N = t(77498),
+    N = t(58468),
+    D = t(77498),
     h = t(496675),
     U = t(306680),
     P = t(944486),
@@ -96,7 +96,7 @@ function Y(n) {
 }
 class k extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(C.Z, S.default, I.Z, L.Z, D.Z, _.ZP, N.Z, s.Z, c.ZP, A.Z, h.Z, U.ZP, P.Z, R.ZP, T.Z);
+        this.waitFor(C.Z, S.default, I.Z, L.Z, N.Z, _.ZP, D.Z, s.Z, c.ZP, A.Z, h.Z, U.ZP, P.Z, R.ZP, T.Z);
     }
     getGuild(n, e) {
         var t, i;

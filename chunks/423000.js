@@ -1,13 +1,13 @@
-n.d(t, { M: () => d });
-var i = n(645727),
-    l = n(703656),
-    r = n(896797),
-    a = n(984933),
-    s = n(944486),
-    o = n(981631);
-function d(e, t) {
-    if (((0, i.k)({ kind: 'channel' }), s.Z.getChannelId(e) === t)) {
+n.d(t, { M: () => c });
+var r = n(645727),
+    i = n(703656),
+    l = n(896797),
+    o = n(984933),
+    a = n(944486),
+    s = n(981631);
+function c(e, t) {
+    if (((0, r.k)({ kind: 'channel' }), a.Z.getChannelId(e) === t)) {
         var n;
-        (0, l.dL)(o.Z5c.CHANNEL(e, null === (n = a.ZP.getDefaultChannel(e)) || void 0 === n ? void 0 : n.id));
-    } else (0, l.dL)(r.Z.defaultRoute);
+        (0, i.dL)(s.Z5c.CHANNEL(e, null === (n = o.ZP.getDefaultChannel(e)) || void 0 === n ? void 0 : n.id));
+    } else (0, i.dL)(l.Z.defaultRoute);
 }

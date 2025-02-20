@@ -1,81 +1,81 @@
 n.d(t, { U: () => g }), n(653041), n(47120), n(733860);
-var i = n(192379),
-    l = n(512722),
-    a = n.n(l),
-    r = n(149765),
-    s = n(442837),
-    o = n(271383),
-    d = n(430824),
-    c = n(496675),
+var r = n(192379),
+    i = n(512722),
+    l = n.n(i),
+    o = n(149765),
+    a = n(442837),
+    s = n(271383),
+    c = n(430824),
+    d = n(496675),
     u = n(594174),
-    m = n(700785),
-    h = n(282923),
-    x = n(981631);
+    p = n(700785),
+    m = n(282923),
+    b = n(981631);
 function g(e) {
-    let t = (0, s.e7)([d.Z], () => d.Z.getGuild(e));
-    a()(null != t, 'guild must be present to be editing its integration settings');
-    let n = (0, s.e7)([c.Z], () => c.Z.getHighestRole(t)),
-        l = (0, s.Wu)([o.ZP], () => o.ZP.getMembers(e), [e]),
-        g = (0, s.cj)([u.default], () => u.default.getUsers()),
-        b = (0, s.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
-        v = i.useMemo(() => {
+    let t = (0, a.e7)([c.Z], () => c.Z.getGuild(e));
+    l()(null != t, 'guild must be present to be editing its integration settings');
+    let n = (0, a.e7)([d.Z], () => d.Z.getHighestRole(t)),
+        i = (0, a.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
+        g = (0, a.cj)([u.default], () => u.default.getUsers()),
+        x = (0, a.Wu)([c.Z], () => Object.values(c.Z.getRoles(e)), [e]),
+        j = r.useMemo(() => {
             let e = [];
-            for (let n of l) {
-                let i = g[n.userId];
-                if (null == i || i.bot) continue;
-                let l =
-                    i.id !== t.ownerId &&
-                    !m.BT({
-                        permission: x.Plq.ADMINISTRATOR,
-                        user: i,
+            for (let n of i) {
+                let r = g[n.userId];
+                if (null == r || r.bot) continue;
+                let i =
+                    r.id !== t.ownerId &&
+                    !p.BT({
+                        permission: b.Plq.ADMINISTRATOR,
+                        user: r,
                         context: t
                     }) &&
-                    c.Z.canManageUser(x.Plq.USE_APPLICATION_COMMANDS, i, t);
+                    d.Z.canManageUser(b.Plq.USE_APPLICATION_COMMANDS, r, t);
                 e.push({
-                    id: i.id,
-                    canManage: l,
+                    id: r.id,
+                    canManage: i,
                     nick: n.nick,
-                    username: i.username
+                    username: r.username
                 });
             }
             return e;
-        }, [t, l, g]),
-        _ = (e) => {
+        }, [t, i, g]),
+        v = (e) => {
             var t;
             return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null;
         },
-        N = i.useMemo(() => {
-            let i = [];
-            for (let l of b) {
-                if (_(l)) continue;
-                let a = !r.e$(l.permissions, x.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(t, n, l),
-                    s = {
-                        id: l.id,
-                        name: l.name,
-                        canManage: a
+        N = r.useMemo(() => {
+            let r = [];
+            for (let i of x) {
+                if (v(i)) continue;
+                let l = !o.e$(i.permissions, b.Plq.ADMINISTRATOR) && d.Z.isRoleHigher(t, n, i),
+                    a = {
+                        id: i.id,
+                        name: i.name,
+                        canManage: l
                     };
-                l.id === e ? i.unshift(s) : i.push(s);
+                i.id === e ? r.unshift(a) : r.push(a);
             }
-            return i;
-        }, [b, e, t, n]),
-        [j, C] = i.useState(''),
-        I = i.useMemo(() => {
+            return r;
+        }, [x, e, t, n]),
+        [O, y] = r.useState(''),
+        _ = r.useMemo(() => {
             var t;
-            let n = (t = j).startsWith('@') ? t.substr(1) : t,
-                i = j.startsWith('@') ? N.filter((t) => t.id === e) : N;
+            let n = (t = O).startsWith('@') ? t.substr(1) : t,
+                r = O.startsWith('@') ? N.filter((t) => t.id === e) : N;
             return {
-                members: (0, h.B)(v, p, n),
-                roles: (0, h.B)(i, f, n)
+                members: (0, m.B)(j, f, n),
+                roles: (0, m.B)(r, h, n)
             };
-        }, [e, v, j, N]);
+        }, [e, j, O, N]);
     return {
-        query: j,
-        results: I,
-        setQuery: C,
-        unfilteredCount: I.members.length + I.roles.length
+        query: O,
+        results: _,
+        setQuery: y,
+        unfilteredCount: _.members.length + _.roles.length
     };
 }
-function p(e) {
+function f(e) {
     let t = [e.username];
     return (
         (null == e ? void 0 : e.nick) != null && t.push(e.nick),
@@ -85,7 +85,7 @@ function p(e) {
         }
     );
 }
-function f(e) {
+function h(e) {
     return {
         id: e.id,
         names: [e.name]

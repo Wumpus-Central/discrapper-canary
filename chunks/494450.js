@@ -1,20 +1,20 @@
-n.d(t, { l: () => s });
-var i = n(442837),
-    r = n(291175),
-    a = n(621853);
-function s(e) {
-    return (0, i.e7)([a.Z], () => {
+n.d(t, { l: () => a });
+var r = n(442837),
+    i = n(291175),
+    o = n(621853);
+function a(e) {
+    return (0, r.e7)([o.Z], () => {
         var t;
         let n;
-        let i = null != e ? a.Z.getUserProfile(e) : null,
-            s = null == i ? void 0 : i.premiumSince;
-        return null == i || null == s
+        let r = null != e ? o.Z.getUserProfile(e) : null,
+            a = null == r ? void 0 : r.premiumSince;
+        return null == r || null == a
             ? null
-            : (null == i ||
-                  null === (t = i.badges) ||
+            : (null == r ||
+                  null === (t = r.badges) ||
                   void 0 === t ||
                   t.forEach((e) => {
-                      let t = (0, r.gn)(e.id);
+                      let t = (0, i.gn)(e.id);
                       null != t && (n = t);
                   }),
               n);

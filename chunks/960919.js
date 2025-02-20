@@ -1,22 +1,22 @@
 n.d(t, {
     M: () => l,
-    Z: () => u
+    Z: () => c
 });
-var i = n(200651),
-    r = n(120356),
-    a = n.n(r),
-    s = n(555154);
-let o = n(223640),
+var r = n(200651),
+    i = n(120356),
+    o = n.n(i),
+    a = n(426751);
+let s = n(223640),
     l = (e) => {
         let { loading: t } = e;
-        return (0, i.jsx)('div', {
+        return (0, r.jsx)('div', {
             role: 'img',
-            className: a()(s.orbIconContainer, { [s.loading]: t }),
-            children: (0, i.jsx)('img', {
-                className: s.orbIconSVG,
-                src: o,
+            className: o()(a.orbIconContainer, { [a.loading]: t }),
+            children: (0, r.jsx)('img', {
+                className: a.orbIconSVG,
+                src: s,
                 alt: 'Orb Icon'
             })
         });
     },
-    u = l;
+    c = l;

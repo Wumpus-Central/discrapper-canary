@@ -1,9 +1,9 @@
 n.d(t, {
-    WR: () => a,
-    gY: () => r,
-    m4: () => s
+    WR: () => o,
+    gY: () => i,
+    m4: () => a
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_advanced_server_join',
     label: 'Advanced Server Join Experiment',
@@ -30,15 +30,15 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return r.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
 function a(e) {
     let { location: t } = e;
-    return i.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
-}
-function s(e) {
-    let { location: t } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).allowServerMute;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).allowServerMute;
 }

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(224706),
-    r = n(978085),
-    a = n(147913),
-    s = n(283595),
-    o = n(358085);
+n.d(t, { Z: () => u }), n(47120);
+var r = n(224706),
+    i = n(978085),
+    o = n(147913),
+    a = n(283595),
+    s = n(358085);
 function l(e, t, n) {
     return (
         t in e
@@ -17,12 +17,12 @@ function l(e, t, n) {
         e
     );
 }
-class u extends a.Z {
+class c extends o.Z {
     handlePostConnectionOpen() {
-        (0, o.isDesktop)() && (s.Z.fetched || (0, r.b8)(), i.Z.getDetectableGames());
+        (0, s.isDesktop)() && (a.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames());
     }
     constructor(...e) {
         super(...e), l(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
     }
 }
-let c = new u();
+let u = new c();

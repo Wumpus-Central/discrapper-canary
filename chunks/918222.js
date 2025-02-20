@@ -1,21 +1,21 @@
-n.d(t, { R: () => l }), n(47120);
-var i = n(192379),
-    s = n(433517),
-    r = n(493773);
-function l(e, t) {
-    let [n, l] = i.useState(() => {
-        let n = s.K.get(e);
+n.d(t, { R: () => a }), n(47120);
+var r = n(192379),
+    i = n(433517),
+    s = n(493773);
+function a(e, t) {
+    let [n, a] = r.useState(() => {
+        let n = i.K.get(e);
         return null != n ? n : t;
     });
     return (
-        (0, r.ZP)(() => {
-            null == s.K.get(e) && s.K.set(e, t);
+        (0, s.ZP)(() => {
+            null == i.K.get(e) && i.K.set(e, t);
         }),
         [
             n,
-            i.useCallback(
+            r.useCallback(
                 (t) => {
-                    l(t), s.K.set(e, t);
+                    a(t), i.K.set(e, t);
                 },
                 [e]
             )

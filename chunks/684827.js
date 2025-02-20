@@ -1,10 +1,10 @@
-function s(t, i) {
-    return Math.floor(Math.random() * (i - t + 1) + t);
+function s(t, e) {
+    return Math.floor(Math.random() * (e - t + 1) + t);
 }
-function n(t, i, e, s) {
-    return s.tension * (t - i) - s.friction * e;
+function n(t, e, i, s) {
+    return s.tension * (t - e) - s.friction * i;
 }
-e.d(i, {
+i.d(e, {
     B: () => n,
     M: () => s
 });

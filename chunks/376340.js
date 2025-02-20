@@ -1,40 +1,40 @@
-a.d(t, { L: () => i });
-var r = a(200651);
-a(192379);
-var l = a(481060),
-    s = a(600164),
-    n = a(424071),
-    o = a(388032),
-    c = a(522137);
+r.d(a, { L: () => i });
+var s = r(200651);
+r(192379);
+var t = r(481060),
+    l = r(600164),
+    n = r(424071),
+    o = r(388032),
+    c = r(144887);
 function i(e) {
-    let { onClose: t, img: a, title: i, body: d, content: x } = e;
-    return (0, r.jsxs)(n.Z, {
+    let { onClose: a, img: r, title: i, body: d, content: x } = e;
+    return (0, s.jsxs)(n.Z, {
         children: [
-            (0, r.jsxs)(l.xBx, {
-                direction: s.Z.Direction.VERTICAL,
+            (0, s.jsxs)(t.xBx, {
+                direction: l.Z.Direction.VERTICAL,
                 className: c.header,
                 separator: !1,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, s.jsx)('div', {
                         className: c.illustration,
-                        children: a
+                        children: r
                     }),
-                    (0, r.jsx)(l.X6q, {
+                    (0, s.jsx)(t.X6q, {
                         className: c.title,
                         variant: 'heading-xl/extrabold',
                         children: i
                     }),
-                    (0, r.jsx)(l.olH, {
+                    (0, s.jsx)(t.olH, {
                         className: c.closeButton,
-                        onClick: t
+                        onClick: a
                     })
                 ]
             }),
-            (0, r.jsxs)(l.hzk, {
+            (0, s.jsxs)(t.hzk, {
                 className: c.body,
                 paddingFix: !1,
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, s.jsx)(t.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
@@ -43,13 +43,13 @@ function i(e) {
                     x
                 ]
             }),
-            (0, r.jsx)(l.mzw, {
+            (0, s.jsx)(t.mzw, {
                 className: c.footer,
-                children: (0, r.jsx)(l.zxk, {
+                children: (0, s.jsx)(t.zxk, {
                     className: c.footerButton,
-                    color: l.zxk.Colors.BRAND,
-                    onClick: t,
-                    children: o.intl.string(o.t.i4jeWV)
+                    color: t.zxk.Colors.BRAND,
+                    onClick: a,
+                    children: o.NW.string(o.t.i4jeWV)
                 })
             })
         ]

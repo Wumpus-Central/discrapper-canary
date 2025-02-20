@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => i,
-    k: () => r
+    G: () => r,
+    k: () => i
 });
-let i = 'dmSettingsUpsellLastShown',
-    r = 604800000;
+let r = 'dmSettingsUpsellLastShown',
+    i = 604800000;

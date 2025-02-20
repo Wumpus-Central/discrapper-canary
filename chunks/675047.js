@@ -1,55 +1,55 @@
-n.d(t, { Z: () => S });
-var i = n(200651);
+n.d(t, { Z: () => C });
+var r = n(200651);
 n(192379);
-var s = n(924628),
-    r = n(493773),
-    l = n(977059),
-    a = n(630759),
+var i = n(924628),
+    s = n(493773),
+    a = n(977059),
+    l = n(630759),
     o = n(398826),
     c = n(10298),
     d = n(623196),
     u = n(993315),
     m = n(883382),
     g = n(940021),
-    h = n(402583),
-    x = n(230341),
-    _ = n(893996),
-    p = n(266132),
-    E = n(726985),
-    C = n(388032);
-function f() {
-    let { enabled: e } = (0, l.S)({ location: 'UserSettingsDataAndPrivacy' });
+    p = n(402583),
+    h = n(230341),
+    f = n(893996),
+    b = n(266132),
+    N = n(726985),
+    x = n(388032);
+function _() {
+    let { enabled: e } = (0, a.S)({ location: 'UserSettingsDataAndPrivacy' });
     return e
-        ? (0, i.jsxs)(_.Z, {
-              title: C.intl.string(C.t.WWaFn5),
-              description: C.intl.format(C.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
-              webSetting: E.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-              children: [(0, i.jsx)(x.Z, {}), (0, i.jsx)(p.Z, {})]
+        ? (0, r.jsxs)(f.Z, {
+              title: x.NW.string(x.t.WWaFn5),
+              description: x.NW.format(x.t['/6sFWV'], { helpArticle: (0, l.uV)() }),
+              webSetting: N.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+              children: [(0, r.jsx)(h.Z, {}), (0, r.jsx)(b.Z, {})]
           })
         : null;
 }
-function T() {
-    return (0, i.jsx)(_.Z, {
-        title: C.intl.string(C.t.BG7Qsb),
-        webSetting: E.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
-        children: (0, i.jsx)(d.Z, {})
+function E() {
+    return (0, r.jsx)(f.Z, {
+        title: x.NW.string(x.t.BG7Qsb),
+        webSetting: N.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        children: (0, r.jsx)(d.Z, {})
     });
 }
-function N() {
-    return (0, i.jsxs)(_.Z, {
-        title: C.intl.string(C.t.SRZyHh),
-        webSetting: E.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(h.Z, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
+function j() {
+    return (0, r.jsxs)(f.Z, {
+        title: x.NW.string(x.t.SRZyHh),
+        webSetting: N.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(g.Z, {}), (0, r.jsx)(m.Z, {}), (0, r.jsx)(u.Z, {})]
     });
 }
-function S() {
+function C() {
     return (
-        (0, r.ZP)(() => {
-            (0, s.I)(), (0, o.A)();
+        (0, s.ZP)(() => {
+            (0, i.I)(), (0, o.A)();
         }),
-        (0, i.jsxs)(c.N, {
-            header: C.intl.string(C.t.OAuOHB),
-            children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(f, {})]
+        (0, r.jsxs)(c.N, {
+            header: x.NW.string(x.t.OAuOHB),
+            children: [(0, r.jsx)(j, {}), (0, r.jsx)(E, {}), (0, r.jsx)(_, {})]
         })
     );
 }

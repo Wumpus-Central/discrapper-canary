@@ -1,6 +1,6 @@
-n.d(t, { w: () => r });
-var i = n(442837),
-    l = n(333984);
-function r() {
-    return (0, i.e7)([l.Z], () => l.Z.getSpamChannelsCount());
+n.d(t, { w: () => l });
+var r = n(442837),
+    i = n(333984);
+function l() {
+    return (0, r.e7)([i.Z], () => i.Z.getSpamChannelsCount());
 }

@@ -20,10 +20,10 @@ function l(t) {
         (0, n.jsx)(a.v2r, {
             navId: 'overlay-notifications-widget-context-menu',
             onClose: s.Zy,
-            'aria-label': f.intl.string(f.t.tPfVWl),
+            'aria-label': f.NW.string(f.t.tPfVWl),
             onSelect: e,
             children: (0, n.jsx)(a.S89, {
-                label: f.intl.string(f.t.Fy5kPj),
+                label: f.NW.string(f.t.Fy5kPj),
                 checked: l === d.Ypu.ENABLED,
                 id: 'overlay-text-chat-notifications',
                 action: () => u.Z.setTextChatNotificationMode(l === d.Ypu.ENABLED ? d.Ypu.DISABLED : d.Ypu.ENABLED)

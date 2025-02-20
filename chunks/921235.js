@@ -1,102 +1,102 @@
-n.d(t, { Z: () => b }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(392711),
-    r = n.n(a),
-    s = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => j }), n(47120), n(978209);
+var r = n(200651),
+    i = n(192379),
+    l = n(392711),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     c = n(904245),
-    d = n(268350),
-    u = n(926491),
-    h = n(419922),
-    p = n(314897),
-    m = n(375954),
-    f = n(594174),
+    u = n(268350),
+    d = n(926491),
+    p = n(419922),
+    h = n(314897),
+    f = n(375954),
+    m = n(594174),
     g = n(626135),
-    _ = n(51144),
-    C = n(901461),
-    x = n(981631),
+    b = n(51144),
+    _ = n(901461),
+    C = n(981631),
     v = n(388032),
-    E = n(336221);
-let I = '749054660769218631';
-function b(e) {
+    y = n(676161);
+let x = '749054660769218631';
+function j(e) {
     var t;
     let { channel: n } = e,
-        [a, b] = l.useState('');
-    l.useEffect(() => {
-        (0, d.FQ)('847199849233514549', !0);
+        [l, j] = i.useState('');
+    i.useEffect(() => {
+        (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let Z = (0, s.e7)(
-            [m.Z, p.default],
+    let O = (0, a.e7)(
+            [f.Z, h.default],
             () =>
-                !!r()(m.Z.getMessages(n.id).toArray())
+                !!o()(f.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== p.default.getId() && e.state === x.yb.SENT && !(0, C.Z)(e))
+                    .find((e) => e.author.id !== h.default.getId() && e.state === C.yb.SENT && !(0, _.Z)(e))
         ),
-        N = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        T = null !== (t = _.ZP.useName(N)) && void 0 !== t ? t : v.intl.string(v.t.y1Wu2d),
-        S = (0, s.e7)([u.Z], () => u.Z.getStickerById(I)),
-        j = l.useCallback(async () => {
-            if (null == a || '' === a)
+        N = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        E = null !== (t = b.ZP.useName(N)) && void 0 !== t ? t : v.NW.string(v.t.y1Wu2d),
+        P = (0, a.e7)([d.Z], () => d.Z.getStickerById(x)),
+        I = i.useCallback(async () => {
+            if (null == l || '' === l)
                 try {
-                    await c.Z.sendGreetMessage(n.id, I),
-                        g.default.track(x.rMx.DM_EMPTY_ACTION, {
+                    await c.Z.sendGreetMessage(n.id, x),
+                        g.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || b(v.intl.string(v.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(v.NW.string(v.t['Whhv4+']));
                 }
-        }, [n.id, n.type, a]),
-        y = v.intl.formatToPlainString(v.t.m0zYbW, { username: T }),
-        A =
-            null != a && '' !== a
-                ? (0, i.jsx)(o.Text, {
-                      className: E.error,
+        }, [n.id, n.type, l]),
+        S = v.NW.formatToPlainString(v.t.m0zYbW, { username: E }),
+        Z =
+            null != l && '' !== l
+                ? (0, r.jsx)(s.Text, {
+                      className: y.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
-                      children: a
+                      children: l
                   })
                 : null;
-    return Z
-        ? (0, i.jsxs)('div', {
-              className: E.containerCompact,
+    return O
+        ? (0, r.jsxs)('div', {
+              className: y.containerCompact,
               children: [
-                  (0, i.jsxs)(o.P3F, {
-                      className: null != a && '' !== a ? E.compactButtonDisabled : E.compactButton,
-                      'aria-label': v.intl.string(v.t.pJObYG),
-                      onClick: j,
+                  (0, r.jsxs)(s.P3F, {
+                      className: null != l && '' !== l ? y.compactButtonDisabled : y.compactButton,
+                      'aria-label': v.NW.string(v.t.pJObYG),
+                      onClick: I,
                       children: [
-                          (0, i.jsx)(h.ZP, {
-                              sticker: S,
+                          (0, r.jsx)(p.ZP, {
+                              sticker: P,
                               size: 24
                           }),
-                          (0, i.jsx)(o.Text, {
-                              className: E.text,
+                          (0, r.jsx)(s.Text, {
+                              className: y.text,
                               variant: 'text-md/medium',
-                              children: y
+                              children: S
                           })
                       ]
                   }),
-                  A
+                  Z
               ]
           })
-        : (0, i.jsxs)('div', {
-              className: E.containerExpanded,
+        : (0, r.jsxs)('div', {
+              className: y.containerExpanded,
               children: [
-                  (0, i.jsx)(h.ZP, {
-                      sticker: S,
+                  (0, r.jsx)(p.ZP, {
+                      sticker: P,
                       size: 160
                   }),
-                  (0, i.jsx)(o.zxk, {
-                      className: E.button,
-                      onClick: j,
-                      disabled: !!a,
-                      children: y
+                  (0, r.jsx)(s.zxk, {
+                      className: y.button,
+                      onClick: I,
+                      disabled: !!l,
+                      children: S
                   }),
-                  A
+                  Z
               ]
           });
 }

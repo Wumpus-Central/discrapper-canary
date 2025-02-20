@@ -1,28 +1,28 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => a });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(74145);
-let s = (e) => {
-    let { title: t, subtitle: n, icon: s } = e;
-    return (0, i.jsxs)('div', {
-        className: a.wrapper,
+var i = n(481060),
+    o = n(743328);
+let a = (e) => {
+    let { title: t, subtitle: n, icon: a } = e;
+    return (0, r.jsxs)('div', {
+        className: o.wrapper,
         children: [
-            null != s &&
-                (0, i.jsx)(s, {
+            null != a &&
+                (0, r.jsx)(a, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: a.icon
+                    className: o.icon
                 }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-md/normal',
-                className: a.title,
+                className: o.title,
                 children: t
             }),
             null != n && '' !== n
-                ? (0, i.jsx)(r.Text, {
+                ? (0, r.jsx)(i.Text, {
                       variant: 'text-xs/semibold',
-                      className: a.subtitle,
+                      className: o.subtitle,
                       children: n
                   })
                 : null

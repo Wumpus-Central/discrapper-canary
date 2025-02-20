@@ -1,19 +1,19 @@
-n.d(t, { Z: () => d });
-var i = n(200651);
+n.d(t, { Z: () => c });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(496675),
-    s = n(996861),
-    r = n(981631),
-    o = n(388032);
-function d(e, t) {
+var i = n(481060),
+    l = n(496675),
+    a = n(996861),
+    o = n(981631),
+    s = n(388032);
+function c(e, t) {
     let n = t.getGuildId();
-    return null != n && (e.type === r.uaV.USER_JOIN || e.type === r.uaV.GUILD_INVITE_REMINDER) && a.Z.canWithPartialContext(r.Plq.MANAGE_GUILD, { guildId: n })
-        ? (0, i.jsx)(l.sNh, {
+    return null != n && (e.type === o.uaV.USER_JOIN || e.type === o.uaV.GUILD_INVITE_REMINDER) && l.Z.canWithPartialContext(o.Plq.MANAGE_GUILD, { guildId: n })
+        ? (0, r.jsx)(i.sNh, {
               id: 'configure',
-              label: o.intl.string(o.t.NpHUi4),
-              icon: l.idN,
-              action: () => (0, s.zW)(t)
+              label: s.NW.string(s.t.NpHUi4),
+              icon: i.idN,
+              action: () => (0, a.zW)(t)
           })
         : null;
 }

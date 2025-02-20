@@ -6,18 +6,18 @@ var a = c(442837),
     n = c(594174),
     o = c(5192),
     f = c(371583),
-    i = c(864138),
-    p = c(986398),
+    p = c(864138),
+    i = c(986398),
     r = c(69589),
     b = c(388032),
-    u = c(773246);
+    u = c(214188);
 function l(t) {
     let { userId: e, leaderboard: c } = t,
         l = (0, a.e7)([n.default], () => n.default.getUser(e));
     if (null == l) return null;
     let m = (0, f.r)(c),
         g = o.ZP.getName(c.guild_id, void 0, l);
-    return (0, d.jsx)(i.z, {
+    return (0, d.jsx)(p.z, {
         imageUrl: m,
         children: (0, d.jsxs)('div', {
             className: u.userContainer,
@@ -45,7 +45,7 @@ function l(t) {
                                     size: 4,
                                     horizontal: !0
                                 }),
-                                (0, d.jsx)(p.Z, {
+                                (0, d.jsx)(i.Z, {
                                     className: u.winnerImage,
                                     leaderboard: c
                                 })
@@ -54,7 +54,7 @@ function l(t) {
                         (0, d.jsx)(s.Text, {
                             variant: 'text-xs/normal',
                             className: u.userSubtitle,
-                            children: b.intl.string(b.t['0ScUkZ'])
+                            children: b.NW.string(b.t['0ScUkZ'])
                         })
                     ]
                 })

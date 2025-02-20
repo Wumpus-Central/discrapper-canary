@@ -1,6 +1,6 @@
-var i = n(915012),
-    r = /^\s+/;
-function a(e) {
-    return e ? e.slice(0, i(e) + 1).replace(r, '') : e;
+var r = n(915012),
+    i = /^\s+/;
+function o(e) {
+    return e ? e.slice(0, r(e) + 1).replace(i, '') : e;
 }
-e.exports = a;
+e.exports = o;

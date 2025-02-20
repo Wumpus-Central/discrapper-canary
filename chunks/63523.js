@@ -1,38 +1,38 @@
-e.exports = r;
-var i = n(836560).EventEmitter;
-function r() {
-    i.call(this);
+e.exports = i;
+var r = n(836560).EventEmitter;
+function i() {
+    r.call(this);
 }
-n(689118)(r, i),
-    (r.Readable = n(555170)),
-    (r.Writable = n(833327)),
-    (r.Duplex = n(827664)),
-    (r.Transform = n(92057)),
-    (r.PassThrough = n(203163)),
-    (r.finished = n(133495)),
-    (r.pipeline = n(614805)),
-    (r.Stream = r),
-    (r.prototype.pipe = function (e, t) {
+n(689118)(i, r),
+    (i.Readable = n(555170)),
+    (i.Writable = n(833327)),
+    (i.Duplex = n(827664)),
+    (i.Transform = n(92057)),
+    (i.PassThrough = n(203163)),
+    (i.finished = n(133495)),
+    (i.pipeline = n(614805)),
+    (i.Stream = i),
+    (i.prototype.pipe = function (e, t) {
         var n = this;
-        function r(t) {
+        function i(t) {
             e.writable && !1 === e.write(t) && n.pause && n.pause();
         }
-        function a() {
+        function o() {
             n.readable && n.resume && n.resume();
         }
-        n.on('data', r), e.on('drain', a), e._isStdio || (t && !1 === t.end) || (n.on('end', o), n.on('close', l));
-        var s = !1;
-        function o() {
-            s || ((s = !0), e.end());
+        n.on('data', i), e.on('drain', o), e._isStdio || (t && !1 === t.end) || (n.on('end', s), n.on('close', l));
+        var a = !1;
+        function s() {
+            a || ((a = !0), e.end());
         }
         function l() {
-            s || ((s = !0), 'function' == typeof e.destroy && e.destroy());
+            a || ((a = !0), 'function' == typeof e.destroy && e.destroy());
         }
-        function u(e) {
-            if ((c(), 0 === i.listenerCount(this, 'error'))) throw e;
+        function c(e) {
+            if ((u(), 0 === r.listenerCount(this, 'error'))) throw e;
         }
-        function c() {
-            n.removeListener('data', r), e.removeListener('drain', a), n.removeListener('end', o), n.removeListener('close', l), n.removeListener('error', u), e.removeListener('error', u), n.removeListener('end', c), n.removeListener('close', c), e.removeListener('close', c);
+        function u() {
+            n.removeListener('data', i), e.removeListener('drain', o), n.removeListener('end', s), n.removeListener('close', l), n.removeListener('error', c), e.removeListener('error', c), n.removeListener('end', u), n.removeListener('close', u), e.removeListener('close', u);
         }
-        return n.on('error', u), e.on('error', u), n.on('end', c), n.on('close', c), e.on('close', c), e.emit('pipe', n), e;
+        return n.on('error', c), e.on('error', c), n.on('end', u), n.on('close', u), e.on('close', u), e.emit('pipe', n), e;
     });

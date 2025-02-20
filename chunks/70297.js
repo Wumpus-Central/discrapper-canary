@@ -1,111 +1,111 @@
 t.d(n, {
-    Z: () => g,
-    q: () => f
+    Z: () => _,
+    q: () => x
 });
-var l = t(200651);
+var r = t(200651);
 t(192379);
-var i = t(120356),
-    a = t.n(i),
-    r = t(704215),
+var l = t(120356),
+    a = t.n(l),
+    i = t(704215),
     o = t(481060),
     s = t(605236),
-    d = t(434404),
-    c = t(707076),
+    c = t(434404),
+    d = t(707076),
     u = t(398758),
-    h = t(981631),
-    m = t(921944),
-    x = t(388032),
-    _ = t(721525),
-    p = t(697611);
-function f(e) {
+    m = t(981631),
+    h = t(921944),
+    p = t(388032),
+    f = t(642871),
+    g = t(697611);
+function x(e) {
     return (0, u.te)(e) ? 250 : 152;
 }
-function g(e) {
+function _(e) {
     let { guild: n } = e,
         t = (0, u.te)(n.id),
-        i = (0, s.wE)(r.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
-        f = t && !i ? r.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : r.z.CHANNEL_BROWSER_NUX;
-    (0, s.kk)(f);
-    let g = t
-        ? (0, l.jsxs)(l.Fragment, {
+        l = (0, s.wE)(i.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
+        x = t && !l ? i.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : i.z.CHANNEL_BROWSER_NUX;
+    (0, s.kk)(x);
+    let _ = t
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, l.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       children: [
-                          (0, l.jsx)(o.X6q, {
-                              className: _.heading,
+                          (0, r.jsx)(o.X6q, {
+                              className: f.heading,
                               color: 'always-white',
                               variant: 'heading-lg/semibold',
-                              children: x.intl.string(x.t.AalzkJ)
+                              children: p.NW.string(p.t.AalzkJ)
                           }),
-                          (0, l.jsx)(o.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: 'text-md/normal',
                               color: 'always-white',
-                              children: x.intl.string(x.t.CXh95e)
+                              children: p.NW.string(p.t.CXh95e)
                           }),
-                          (0, l.jsx)(o.zxk, {
-                              className: _.checkItOut,
+                          (0, r.jsx)(o.zxk, {
+                              className: f.checkItOut,
                               onClick: () => {
-                                  d.Z.open(n.id, h.pNK.ONBOARDING), (0, s.EW)(f, { dismissAction: m.L.PRIMARY });
+                                  c.Z.open(n.id, m.pNK.ONBOARDING), (0, s.EW)(x, { dismissAction: h.L.PRIMARY });
                               },
                               color: o.zxk.Colors.BRAND_INVERTED,
-                              children: (0, l.jsx)(o.Text, {
+                              children: (0, r.jsx)(o.Text, {
                                   variant: 'text-md/medium',
                                   color: 'none',
-                                  children: x.intl.string(x.t['+OtO4e'])
+                                  children: p.NW.string(p.t['+OtO4e'])
                               })
                           })
                       ]
                   }),
-                  (0, l.jsx)(c.j, { isTooltip: !0 })
+                  (0, r.jsx)(d.j, { isTooltip: !0 })
               ]
           })
-        : (0, l.jsxs)('div', {
-              className: _.nuxContent,
+        : (0, r.jsxs)('div', {
+              className: f.nuxContent,
               children: [
-                  (0, l.jsx)('img', {
+                  (0, r.jsx)('img', {
                       width: 180,
-                      className: _.image,
-                      src: p,
+                      className: f.image,
+                      src: g,
                       alt: '',
                       'aria-hidden': !0
                   }),
-                  (0, l.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       children: [
-                          (0, l.jsx)(o.X6q, {
-                              className: _.heading,
+                          (0, r.jsx)(o.X6q, {
+                              className: f.heading,
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
-                              children: x.intl.string(x.t.utqWEB)
+                              children: p.NW.string(p.t.utqWEB)
                           }),
-                          (0, l.jsx)(o.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: 'text-md/normal',
                               color: 'header-secondary',
-                              children: x.intl.string(x.t['+9etcH'])
+                              children: p.NW.string(p.t['+9etcH'])
                           }),
-                          (0, l.jsx)(o.Text, {
-                              className: _.tip,
+                          (0, r.jsx)(o.Text, {
+                              className: f.tip,
                               variant: 'text-md/normal',
                               color: 'header-secondary',
-                              children: x.intl.format(x.t.Z0axjo, {})
+                              children: p.NW.format(p.t.Z0axjo, {})
                           })
                       ]
                   })
               ]
           });
-    return (0, l.jsxs)('div', {
-        className: a()(_.container, { [_.adminUpsell]: t }),
+    return (0, r.jsxs)('div', {
+        className: a()(f.container, { [f.adminUpsell]: t }),
         children: [
-            (0, l.jsx)(o.P3F, {
-                className: _.closeButton,
+            (0, r.jsx)(o.P3F, {
+                className: f.closeButton,
                 onClick: () => {
-                    (0, s.EW)(f, { dismissAction: m.L.DISMISS });
+                    (0, s.EW)(x, { dismissAction: h.L.DISMISS });
                 },
-                children: (0, l.jsx)(o.Dio, {
+                children: (0, r.jsx)(o.Dio, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            g
+            _
         ]
     });
 }

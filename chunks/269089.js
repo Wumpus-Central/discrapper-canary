@@ -1,52 +1,52 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(570140),
-    r = n(765250),
-    a = n(317770),
-    s = n(663993),
-    o = n(355863),
-    d = n(788983),
-    c = n(981631);
-n(316095);
-let u = (0, s.Un)({
+var i = n(570140),
+    l = n(765250),
+    o = n(317770),
+    a = n(663993),
+    s = n(355863),
+    c = n(788983),
+    u = n(981631);
+n(687366);
+let d = (0, a.Un)({
         createPromise: () => n.e('80960').then(n.bind(n, 223455)),
         webpackId: 223455,
         name: 'PopoutWindowChannelCall'
     }),
-    h = (0, s.Un)({
+    p = (0, a.Un)({
         createPromise: () => n.e('20176').then(n.bind(n, 432472)),
         webpackId: 432472,
         name: 'PopoutWindowStageChannelCall'
     }),
-    m = (0, s.Un)({
+    h = (0, a.Un)({
         createPromise: () => n.e('80960').then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),
-    p = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('93382'), n.e('92922'), n.e('69838'), n.e('27278')]).then(n.bind(n, 748623)),
+    g = (0, a.Un)({
+        createPromise: () => Promise.all([n.e('93382'), n.e('92922'), n.e('37874'), n.e('27278')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
     });
-class g extends a.Z {
+class f extends o.Z {
     _initialize() {
-        l.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), l.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), l.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
+        i.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
     }
     _terminate() {
-        l.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), l.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), l.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver();
+        i.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), i.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), i.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
-        d.bA(
-            c.KJ3.CHANNEL_CALL_POPOUT,
+        c.bA(
+            u.KJ3.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
-                    ? (0, i.jsx)(h, {
+                    ? (0, r.jsx)(p, {
                           windowKey: e,
                           channelId: t.id
                       })
-                    : (0, i.jsx)(u, {
+                    : (0, r.jsx)(d, {
                           windowKey: e,
                           channelId: t.id
                       }),
@@ -64,7 +64,7 @@ class g extends a.Z {
                         if (e.nodeType === Node.ELEMENT_NODE && 'LINK' === e.tagName && 'stylesheet' === e.rel) {
                             let t = e.href,
                                 n = e.integrity;
-                            d.YS(t, n);
+                            c.YS(t, n);
                         }
                 }
         })),
@@ -74,15 +74,15 @@ class g extends a.Z {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        d.bA(c.KJ3.RTC_DEBUG_POPOUT, (e) => (0, i.jsx)(m, { windowKey: e }), {
+        c.bA(u.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(h, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480
         });
     }
     async handleOpenActivityPopout() {
         let { OVERLAY_V3_LAYOUT_ID: e } = await Promise.resolve().then(n.bind(n, 501787));
-        (0, r.te)(e, o.Z.getDefaultLayout(e, 1), 1),
-            d.bA(c.KJ3.ACTIVITY_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
+        (0, l.te)(e, s.Z.getDefaultLayout(e, 1), 1),
+            c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480
             });
@@ -100,4 +100,4 @@ class g extends a.Z {
                 : (this[t] = null);
     }
 }
-let _ = new g();
+let m = new f();

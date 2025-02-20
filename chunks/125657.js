@@ -1,84 +1,84 @@
 n.d(t, { Z: () => N }), n(653041), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(149765),
-    r = n(442837),
-    s = n(481060),
-    o = n(749210),
-    d = n(412899),
-    c = n(995648),
+var r = n(200651),
+    i = n(192379),
+    l = n(149765),
+    o = n(442837),
+    a = n(481060),
+    s = n(749210),
+    c = n(412899),
+    d = n(995648),
     u = n(385499),
-    m = n(600164),
-    h = n(422559),
-    x = n(598077),
+    p = n(600164),
+    m = n(422559),
+    b = n(598077),
     g = n(271383),
-    p = n(430824),
-    f = n(823379),
-    b = n(700785),
-    v = n(388032),
-    _ = n(767981);
+    f = n(430824),
+    h = n(823379),
+    x = n(700785),
+    j = n(388032),
+    v = n(914228);
 function N(e) {
     var t;
     let { guild: n, applicationIntegration: N } = e,
-        j = (0, r.e7)([p.Z], () => p.Z.getRoles(n.id)),
-        { application: C } = N,
-        I = null != C.bot ? new x.Z(C.bot) : null,
-        Z = (0, r.e7)([g.ZP], () => (null != I ? g.ZP.getMember(n.id, I.id) : null), [I, n]),
-        T = null == I ? void 0 : I.id;
-    l.useEffect(() => {
-        null != T && o.Z.requestMembersById(n.id, T);
-    }, [n.id, T]);
-    let E = l.useMemo(() => {
-        var e, t, i;
-        let l = j[n.getEveryoneRoleId()],
-            r = null !== (t = null == Z ? void 0 : null === (e = Z.roles) || void 0 === e ? void 0 : e.map((e) => j[e]).filter(f.lm)) && void 0 !== t ? t : [],
-            s = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : b.Hn;
-        for (let e of r) s = a.IH(s, e.permissions);
-        return s;
-    }, [n, j, Z]);
-    return null == I
+        O = (0, o.e7)([f.Z], () => f.Z.getRoles(n.id)),
+        { application: y } = N,
+        _ = null != y.bot ? new b.Z(y.bot) : null,
+        C = (0, o.e7)([g.ZP], () => (null != _ ? g.ZP.getMember(n.id, _.id) : null), [_, n]),
+        I = null == _ ? void 0 : _.id;
+    i.useEffect(() => {
+        null != I && s.Z.requestMembersById(n.id, I);
+    }, [n.id, I]);
+    let E = i.useMemo(() => {
+        var e, t, r;
+        let i = O[n.getEveryoneRoleId()],
+            o = null !== (t = null == C ? void 0 : null === (e = C.roles) || void 0 === e ? void 0 : e.map((e) => O[e]).filter(h.lm)) && void 0 !== t ? t : [],
+            a = null !== (r = null == i ? void 0 : i.permissions) && void 0 !== r ? r : x.Hn;
+        for (let e of o) a = l.IH(a, e.permissions);
+        return a;
+    }, [n, O, C]);
+    return null == _
         ? null
-        : (0, i.jsx)(s.Zbd, {
+        : (0, r.jsx)(a.Zbd, {
               editable: !0,
-              className: _.card,
-              children: (0, i.jsxs)(m.Z, {
-                  direction: m.Z.Direction.VERTICAL,
+              className: v.card,
+              children: (0, r.jsxs)(p.Z, {
+                  direction: p.Z.Direction.VERTICAL,
                   children: [
-                      (0, i.jsxs)(m.Z, {
-                          align: m.Z.Align.CENTER,
+                      (0, r.jsxs)(p.Z, {
+                          align: p.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('img', {
+                              (0, r.jsx)('img', {
                                   alt: '',
-                                  src: I.getAvatarURL(n.id, 32),
-                                  className: _.iconWrapper
+                                  src: _.getAvatarURL(n.id, 32),
+                                  className: v.iconWrapper
                               }),
-                              (0, i.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t.GyhzGx, { user: I.toString() })
+                                  children: j.NW.format(j.t.GyhzGx, { user: _.toString() })
                               }),
-                              (0, i.jsx)(u.Z, {
-                                  className: _.tag,
-                                  verified: I.isVerifiedBot()
+                              (0, r.jsx)(u.Z, {
+                                  className: v.tag,
+                                  verified: _.isVerifiedBot()
                               })
                           ]
                       }),
-                      (function (e, t, n, l) {
-                          let r = [],
-                              o = [];
-                          for (let e of h.VY) a.e$(l, e) ? r.push(e) : o.push(e);
-                          return (0, i.jsxs)(i.Fragment, {
+                      (function (e, t, n, i) {
+                          let o = [],
+                              s = [];
+                          for (let e of m.VY) l.e$(i, e) ? o.push(e) : s.push(e);
+                          return (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(s.$i$, { className: _.divider }),
+                                  (0, r.jsx)(a.$i$, { className: v.divider }),
                                   n.length > 0
-                                      ? (0, i.jsxs)(i.Fragment, {
+                                      ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, i.jsx)(s.vwX, {
-                                                    className: _.permissionHeader,
-                                                    children: v.intl.format(v.t.PCs0oq, { numRoles: n.length })
+                                                (0, r.jsx)(a.vwX, {
+                                                    className: v.permissionHeader,
+                                                    children: j.NW.format(j.t.PCs0oq, { numRoles: n.length })
                                                 }),
-                                                (0, i.jsx)(d.ZP, {
-                                                    className: _.rolePills,
+                                                (0, r.jsx)(c.ZP, {
+                                                    className: v.rolePills,
                                                     user: e,
                                                     guild: t,
                                                     userRoles: n,
@@ -88,17 +88,17 @@ function N(e) {
                                             ]
                                         })
                                       : null,
-                                  r.length > 0 || o.length > 0
-                                      ? (0, i.jsx)(c.Z, {
-                                            grantedPermissions: r,
-                                            grantedPermissionsHeader: v.intl.string(v.t['hA4+sr']),
-                                            disabledPermissions: o,
-                                            disabledPermissionsHeader: v.intl.string(v.t['/rEZ2t'])
+                                  o.length > 0 || s.length > 0
+                                      ? (0, r.jsx)(d.Z, {
+                                            grantedPermissions: o,
+                                            grantedPermissionsHeader: j.NW.string(j.t['hA4+sr']),
+                                            disabledPermissions: s,
+                                            disabledPermissionsHeader: j.NW.string(j.t['/rEZ2t'])
                                         })
                                       : null
                               ]
                           });
-                      })(I, n, null !== (t = null == Z ? void 0 : Z.roles) && void 0 !== t ? t : [], E)
+                      })(_, n, null !== (t = null == C ? void 0 : C.roles) && void 0 !== t ? t : [], E)
                   ]
               })
           });

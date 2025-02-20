@@ -1,7 +1,7 @@
-var i = n(816925);
-function r(e) {
+var r = n(816925);
+function i(e) {
     return function (t) {
-        return i(t, e);
+        return r(t, e);
     };
 }
-e.exports = r;
+e.exports = i;

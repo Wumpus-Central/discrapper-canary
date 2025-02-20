@@ -1,5 +1,5 @@
-n.d(t, { L: () => i });
-let i = {
+n.d(t, { L: () => r });
+let r = {
     __proto__: null,
     bg: {
         group: ' ',

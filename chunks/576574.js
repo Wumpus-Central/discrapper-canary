@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-12_nv_relaxed_rate_control',
     label: 'Alternative rate control proposal for Nvidia encoder',

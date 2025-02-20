@@ -1,9 +1,9 @@
-var i = n(608282),
-    r = (function () {
-        var e = /[^.]+$/.exec((i && i.keys && i.keys.IE_PROTO) || '');
+var r = n(608282),
+    i = (function () {
+        var e = /[^.]+$/.exec((r && r.keys && r.keys.IE_PROTO) || '');
         return e ? 'Symbol(src)_1.' + e : '';
     })();
-function a(e) {
-    return !!r && r in e;
+function o(e) {
+    return !!i && i in e;
 }
-e.exports = a;
+e.exports = o;

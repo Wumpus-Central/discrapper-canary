@@ -1,27 +1,27 @@
 n.d(t, {
-    Gy: () => u,
-    Id: () => o,
-    Jh: () => r,
-    K7: () => c,
+    Gy: () => c,
+    Id: () => s,
+    Jh: () => i,
+    K7: () => u,
     NN: () => l,
-    bS: () => i,
-    e9: () => a,
+    bS: () => r,
+    e9: () => o,
     lv: () => d,
-    t4: () => s,
+    t4: () => a,
     u$: () => f
 });
-var i = (function (e) {
+var r = (function (e) {
     return (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e;
 })({});
-let r = 'app-launcher-element',
-    a = 'app-launcher-modal',
-    s = 'app-launcher-entrypoint',
-    o = 'app-launcher-app-dm-entrypoint',
+let i = 'app-launcher-element',
+    o = 'app-launcher-modal',
+    a = 'app-launcher-entrypoint',
+    s = 'app-launcher-app-dm-entrypoint',
     l = 'app-launcher-app-details-more-menu',
-    u = 500,
-    c = 680,
-    d = 'min(100vh, '.concat(c, 'px)'),
+    c = 500,
+    u = 680,
+    d = 'min(100vh, '.concat(u, 'px)'),
     f = {
-        '--custom-app-launcher-width': ''.concat(u, 'px'),
+        '--custom-app-launcher-width': ''.concat(c, 'px'),
         '--custom-app-launcher-height': d
     };

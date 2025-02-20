@@ -1,71 +1,71 @@
-n.d(t, { Z: () => C });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+n.d(t, { Z: () => x });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(906732),
     c = n(642619),
     d = n(626135),
     u = n(74538),
     m = n(150039),
     g = n(993413),
-    h = n(504983),
-    x = n(981631),
-    _ = n(474936),
-    p = n(388032),
-    E = n(980657);
-function C(e) {
-    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: f = !1, withTutorial: T = !1, showBorder: N = !1, isTryItOutFlow: S = !1, initialSelectedEffectId: I } = e,
-        b = (0, m.Kg)(t, n),
-        v = u.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: j } = (0, o.ZP)(),
-        { pendingProfileEffectId: A, errors: O } = (0, m.bd)(n),
-        R = s.useCallback(
+    p = n(504983),
+    h = n(981631),
+    f = n(474936),
+    b = n(388032),
+    N = n(183589);
+function x(e) {
+    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: _ = !1, withTutorial: E = !1, showBorder: j = !1, isTryItOutFlow: C = !1, initialSelectedEffectId: O } = e,
+        v = (0, m.Kg)(t, n),
+        S = u.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: T } = (0, o.ZP)(),
+        { pendingProfileEffectId: I, errors: y } = (0, m.bd)(n),
+        A = i.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: j,
-                    initialSelectedEffectId: I,
+                    analyticsLocations: T,
+                    initialSelectedEffectId: O,
                     guild: n
                 }),
-            [j, I, n]
+            [T, O, n]
         );
-    s.useEffect(() => {
-        v &&
-            d.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: _.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: j
+    i.useEffect(() => {
+        S &&
+            d.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: f.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
+                location_stack: T
             });
-    }, [v, j]);
+    }, [S, T]);
     let P = null != n,
-        D = T ? a.gtL : a.zxk;
-    return (0, i.jsx)(g.Z, {
-        forcedDivider: f,
-        borderType: h.Y.PREMIUM,
+        R = E ? l.gtL : l.zxk;
+    return (0, r.jsx)(g.Z, {
+        forcedDivider: _,
+        borderType: p.Y.PREMIUM,
         hasBackground: !0,
-        title: C,
-        showBorder: N,
-        errors: O,
-        className: r,
-        children: (0, i.jsxs)('div', {
-            className: E.buttonsContainer,
+        title: x,
+        showBorder: j,
+        errors: y,
+        className: s,
+        children: (0, r.jsxs)('div', {
+            className: N.buttonsContainer,
             children: [
-                (0, i.jsx)(D, {
-                    size: a.zxk.Sizes.SMALL,
-                    onClick: R,
-                    className: l()({ [E.buttonHighlighted]: T }),
-                    children: p.intl.string(p.t['0nEVoK'])
+                (0, r.jsx)(R, {
+                    size: l.zxk.Sizes.SMALL,
+                    onClick: A,
+                    className: a()({ [N.buttonHighlighted]: E }),
+                    children: b.NW.string(b.t['0nEVoK'])
                 }),
-                (S || void 0 !== A ? null != A : null != b) &&
-                    (0, i.jsx)(a.zxk, {
-                        className: E.removeButton,
-                        color: a.zxk.Colors.PRIMARY,
-                        look: a.zxk.Looks.LINK,
-                        size: a.zxk.Sizes.SMALL,
+                (C || void 0 !== I ? null != I : null != v) &&
+                    (0, r.jsx)(l.zxk, {
+                        className: N.removeButton,
+                        color: l.zxk.Colors.PRIMARY,
+                        look: l.zxk.Looks.LINK,
+                        size: l.zxk.Sizes.SMALL,
                         onClick: function () {
-                            (0, m.s6)(null, b, null == n ? void 0 : n.id);
+                            (0, m.s6)(null, v, null == n ? void 0 : n.id);
                         },
-                        children: P ? p.intl.string(p.t.GJ3Fcn) : p.intl.string(p.t['Ld+f5e'])
+                        children: P ? b.NW.string(b.t.GJ3Fcn) : b.NW.string(b.t['Ld+f5e'])
                     })
             ]
         })

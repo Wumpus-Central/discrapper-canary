@@ -1,153 +1,153 @@
-function i(e) {
+function r(e) {
     return Math.max(Math.min(e, 1), 0);
 }
-function r(e, t) {
-    let { top: n, bottom: r, left: a, right: s } = e;
+function i(e, t) {
+    let { top: n, bottom: i, left: o, right: a } = e;
     return {
-        top: null != n ? Math.floor(i(n) * t.height) : void 0,
-        left: null != a ? Math.floor(i(a) * t.width) : void 0,
-        bottom: null != r ? Math.floor(i(r) * t.height) : void 0,
-        right: null != s ? Math.floor(i(s) * t.width) : void 0
-    };
-}
-function a(e, t) {
-    let { width: n, height: r, fixed: a = !1 } = e;
-    return a
-        ? {
-              width: n,
-              height: r
-          }
-        : {
-              width: 'auto' === n ? n : Math.floor(i(n) * t.width),
-              height: 'auto' === r ? r : Math.floor(i(r) * t.height)
-          };
-}
-function s(e, t) {
-    let { top: n, bottom: r, left: a, right: s } = e;
-    return {
-        top: null != n ? i(n / t.height) : void 0,
-        left: null != a ? i(a / t.width) : void 0,
-        bottom: null != r ? i(r / t.height) : void 0,
-        right: null != s ? i(s / t.width) : void 0
+        top: null != n ? Math.floor(r(n) * t.height) : void 0,
+        left: null != o ? Math.floor(r(o) * t.width) : void 0,
+        bottom: null != i ? Math.floor(r(i) * t.height) : void 0,
+        right: null != a ? Math.floor(r(a) * t.width) : void 0
     };
 }
 function o(e, t) {
-    let { width: n, height: i } = e;
+    let { width: n, height: i, fixed: o = !1 } = e;
+    return o
+        ? {
+              width: n,
+              height: i
+          }
+        : {
+              width: 'auto' === n ? n : Math.floor(r(n) * t.width),
+              height: 'auto' === i ? i : Math.floor(r(i) * t.height)
+          };
+}
+function a(e, t) {
+    let { top: n, bottom: i, left: o, right: a } = e;
     return {
-        width: 'auto' === n ? n : n / t.width,
-        height: 'auto' === i ? i : i / t.height
+        top: null != n ? r(n / t.height) : void 0,
+        left: null != o ? r(o / t.width) : void 0,
+        bottom: null != i ? r(i / t.height) : void 0,
+        right: null != a ? r(a / t.width) : void 0
     };
 }
-function l(e, t, n, i, r) {
-    let { top: a, bottom: s, left: o, right: l } = e;
-    if ((null == a && null == s ? ((a = 0), (s = n - r)) : null == a && null != s ? (a = n - (s + r)) : null != a && (s = n - (a + r)), null == o && null == l ? ((o = 0), (l = t - i)) : null == o && null != l ? (o = t - (l + i)) : null == l && null != o && (l = t - (o + i)), null == a || null == s || null == o || null == l)) throw Error('Logically this can never happen based on our if/else statements');
+function s(e, t) {
+    let { width: n, height: r } = e;
     return {
-        top: a,
-        left: o,
-        bottom: s,
+        width: 'auto' === n ? n : n / t.width,
+        height: 'auto' === r ? r : r / t.height
+    };
+}
+function l(e, t, n, r, i) {
+    let { top: o, bottom: a, left: s, right: l } = e;
+    if ((null == o && null == a ? ((o = 0), (a = n - i)) : null == o && null != a ? (o = n - (a + i)) : null != o && (a = n - (o + i)), null == s && null == l ? ((s = 0), (l = t - r)) : null == s && null != l ? (s = t - (l + r)) : null == l && null != s && (l = t - (s + r)), null == o || null == a || null == s || null == l)) throw Error('Logically this can never happen based on our if/else statements');
+    return {
+        top: o,
+        left: s,
+        bottom: a,
         right: l
     };
 }
-function u(e) {
-    let { top: t, left: n, bottom: i, right: r } = e;
+function c(e) {
+    let { top: t, left: n, bottom: r, right: i } = e;
     return (
-        0 === t || t <= i ? (i = null) : (t = null),
-        0 === n || n <= r ? (r = null) : (n = null),
+        0 === t || t <= r ? (r = null) : (t = null),
+        0 === n || n <= i ? (i = null) : (n = null),
         {
             top: t,
             left: n,
-            bottom: i,
-            right: r
+            bottom: r,
+            right: i
         }
     );
 }
-function c(e) {
-    let { top: t, left: n, bottom: i, right: r } = e;
+function u(e) {
+    let { top: t, left: n, bottom: r, right: i } = e;
     return (
-        i < 0 && ((t += i), (i = 0)),
-        t < 0 && ((i += t), (t = 0)),
-        r < 0 && ((n += r), (r = 0)),
-        n < 0 && ((r += n), (n = 0)),
+        r < 0 && ((t += r), (r = 0)),
+        t < 0 && ((r += t), (t = 0)),
+        i < 0 && ((n += i), (i = 0)),
+        n < 0 && ((i += n), (n = 0)),
         {
             top: t,
             left: n,
-            bottom: i,
-            right: r
+            bottom: r,
+            right: i
         }
     );
 }
 function d(e, t, n) {
-    e = r(e, n);
-    let { width: i, height: s } = a(t, n);
-    return (i = 'string' == typeof i ? 0 : i), (s = 'string' == typeof s ? 0 : s), l(e, n.width, n.height, i, s);
+    e = i(e, n);
+    let { width: r, height: a } = o(t, n);
+    return (r = 'string' == typeof r ? 0 : r), (a = 'string' == typeof a ? 0 : a), l(e, n.width, n.height, r, a);
 }
 function f(e, t, n) {
-    let { top: i, left: r } = e,
-        { x: a, y: d } =
+    let { top: r, left: i } = e,
+        { x: o, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : {
                       x: 0,
                       y: 0
                   },
-        { width: f, height: _ } = t;
+        { width: f, height: p } = t;
     return [
-        s(
-            u(
-                c(
+        a(
+            c(
+                u(
                     l(
                         {
-                            top: i + d,
-                            left: r + a,
+                            top: r + d,
+                            left: i + o,
                             bottom: void 0,
                             right: void 0
                         },
                         n.width,
                         n.height,
                         'number' == typeof f ? f : 0,
-                        'number' == typeof _ ? _ : 0
+                        'number' == typeof p ? p : 0
                     )
                 )
             ),
             n
         ),
-        o(t, n)
+        s(t, n)
     ];
 }
-function _(e, t, n) {
-    let { top: i, right: r } = e,
-        { x: a, y: d } =
+function p(e, t, n) {
+    let { top: r, right: i } = e,
+        { x: o, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : {
                       x: 0,
                       y: 0
                   },
-        { width: f, height: _ } = t;
+        { width: f, height: p } = t;
     return [
-        s(
-            u(
-                c(
+        a(
+            c(
+                u(
                     l(
                         {
-                            top: i + d,
+                            top: r + d,
                             left: void 0,
                             bottom: void 0,
-                            right: r - a
+                            right: i - o
                         },
                         n.width,
                         n.height,
                         'number' == typeof f ? f : 0,
-                        'number' == typeof _ ? _ : 0
+                        'number' == typeof p ? p : 0
                     )
                 )
             ),
             n
         ),
-        o(t, n)
+        s(t, n)
     ];
 }
-function p(e, t) {
+function _(e, t) {
     let n = {
         top: void 0,
         bottom: void 0,
@@ -157,16 +157,16 @@ function p(e, t) {
     return null != t.top && (n.top = e.top), null != t.bottom && (n.bottom = e.bottom), null != t.left && (n.left = e.left), null != t.right && (n.right = e.right), n;
 }
 n.d(t, {
-    BL: () => p,
-    KR: () => r,
-    Ox: () => o,
+    BL: () => _,
+    KR: () => i,
+    Ox: () => s,
     PY: () => l,
-    R: () => u,
-    jL: () => s,
+    R: () => c,
+    jL: () => a,
     o4: () => f,
-    ou: () => c,
-    uq: () => _,
+    ou: () => u,
+    uq: () => p,
     vS: () => d,
-    w_: () => a
+    w_: () => o
 }),
     n(411104);

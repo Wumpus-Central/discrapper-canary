@@ -1,12 +1,12 @@
-n.d(t, { Z: () => f }), n(47120);
-var l = n(200651),
-    r = n(192379),
-    i = n(642128),
-    a = n(780384),
-    s = n(481060),
-    o = n(410030),
-    d = n(965645),
-    c = n(362061);
+r.d(t, { Z: () => b }), r(47120);
+var n = r(200651),
+    l = r(192379),
+    i = r(642128),
+    a = r(780384),
+    o = r(481060),
+    s = r(410030),
+    c = r(965645),
+    d = r(362061);
 let u = [
         {
             box: '#FFD89E',
@@ -37,7 +37,7 @@ let u = [
             ribbon: '#67DA9C'
         }
     ],
-    C = [
+    p = [
         {
             box: '#EABB75',
             ribbon: '#E4595C'
@@ -67,44 +67,44 @@ let u = [
             ribbon: '#81C29F'
         }
     ],
-    h = 1 / 300,
-    m = (0, i.animated)(d.Z),
-    p = (0, i.animated)(c.Z),
-    g = (0, i.animated)(s.OgN),
-    f = r.memo(function (e) {
+    f = 1 / 300,
+    h = (0, i.animated)(c.Z),
+    C = (0, i.animated)(d.Z),
+    m = (0, i.animated)(o.OgN),
+    b = l.memo(function (e) {
         let {
                 themeOverride: t,
-                hovered: n,
+                hovered: r,
                 isContentDismissed: i,
-                boxColors: d = {
+                boxColors: c = {
                     dark: u,
-                    light: C
+                    light: p
                 }
             } = e,
-            c = (0, o.ZP)(),
-            [f, x] = (function (e) {
-                let [t, n] = r.useState(!1),
-                    [l, i] = r.useState(Math.floor(7 * Math.random())),
-                    a = r.useRef(l);
+            d = (0, s.ZP)(),
+            [b, g] = (function (e) {
+                let [t, r] = l.useState(!1),
+                    [n, i] = l.useState(Math.floor(7 * Math.random())),
+                    a = l.useRef(n);
                 return (
-                    r.useEffect(() => {
-                        a.current = l;
+                    l.useEffect(() => {
+                        a.current = n;
                     }),
-                    r.useEffect(() => {
+                    l.useEffect(() => {
                         if (e) return;
-                        let t = Math.random() <= h;
-                        if ((n(t), !t)) {
+                        let t = Math.random() <= f;
+                        if ((r(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
                             while (e === a.current);
                             i(e);
                         }
                     }, [e]),
-                    [t, l]
+                    [t, n]
                 );
-            })(n),
-            b = (0, s.q_F)({
-                reverse: !n,
+            })(r),
+            v = (0, o.q_F)({
+                reverse: !r,
                 reset: !0,
                 from: { scale: 1 },
                 to: { scale: 1.14 },
@@ -113,18 +113,18 @@ let u = [
                     friction: 24
                 }
             }),
-            v = i ? x : 0,
-            _ = (0, a.wj)(null != t ? t : c) ? d.dark[v] : d.light[v];
-        return !n && i
-            ? (0, l.jsx)(g, {})
-            : i && f
-              ? (0, l.jsx)(p, {
-                    isDark: (0, a.wj)(c),
-                    style: b
+            x = i ? g : 0,
+            _ = (0, a.wj)(null != t ? t : d) ? c.dark[x] : c.light[x];
+        return !r && i
+            ? (0, n.jsx)(m, {})
+            : i && b
+              ? (0, n.jsx)(C, {
+                    isDark: (0, a.wj)(d),
+                    style: v
                 })
-              : (0, l.jsx)(m, {
+              : (0, n.jsx)(h, {
                     boxColor: _.box,
                     ribbonColor: _.ribbon,
-                    style: b
+                    style: v
                 });
     });

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(305342),
     h = n(293810),
     f = n(388032),
-    N = n(447701);
-let x = (e) => {
+    b = n(447701);
+let N = (e) => {
         let [t, n] = i.useState(!1),
             [r, s] = i.useState(null);
         return {
@@ -31,20 +31,20 @@ let x = (e) => {
             submitting: t
         };
     },
-    b = (e) => {
+    x = (e) => {
         var t;
-        let { transitionState: n, groupListing: i, guildId: s, listing: o, subscription: b, onClose: _ } = e,
+        let { transitionState: n, groupListing: i, guildId: s, listing: o, subscription: x, onClose: _ } = e,
             E = (0, u.Dt)(),
             j = (0, g.YB)(s),
             C = (null == j ? void 0 : null === (t = j.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
             { analyticsLocations: O } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: v, error: S, submitting: T } = x(O),
+            { cancelSubscription: v, error: S, submitting: T } = N(O),
             I = async () => {
-                (await v(b.id)) && _();
+                (await v(x.id)) && _();
             },
             y = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.CHANNEL),
             A = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.INTANGIBLE),
-            P = a()(b.currentPeriodEnd).format('MMMM Do, YYYY'),
+            P = a()(x.currentPeriodEnd).format('MMMM Do, YYYY'),
             R = f.NW.formatToPlainString(f.t.KsMRPz, {
                 numChannels: y.length,
                 numAdditionalBenefits: A.length,
@@ -52,7 +52,7 @@ let x = (e) => {
             });
         return (0, r.jsxs)(l.Y0X, {
             transitionState: n,
-            className: N.__invalid_modal,
+            className: b.__invalid_modal,
             'aria-labelledby': E,
             children: [
                 (0, r.jsxs)('div', {
@@ -60,39 +60,39 @@ let x = (e) => {
                         (0, r.jsx)('img', {
                             src: C,
                             alt: '',
-                            className: N.headerImage
+                            className: b.headerImage
                         }),
                         (0, r.jsx)(l.olH, {
                             withCircleBackground: !0,
-                            className: N.closeButton,
+                            className: b.closeButton,
                             onClick: _
                         })
                     ]
                 }),
                 null != S ? (0, r.jsx)(l.kzN, { children: S.message }) : null,
                 (0, r.jsxs)(l.hzk, {
-                    className: N.content,
+                    className: b.content,
                     children: [
                         (0, r.jsx)(l.X6q, {
                             id: E,
                             variant: 'text-md/medium',
-                            className: N.title,
+                            className: b.title,
                             children: f.NW.string(f.t.O6l5tL)
                         }),
                         (0, r.jsx)(l.Text, {
-                            className: N.description,
+                            className: b.description,
                             variant: 'text-sm/normal',
                             children: R
                         }),
                         (0, r.jsx)(p.c, {
                             listingId: o.id,
                             guildId: i.guild_id,
-                            className: N.benefits
+                            className: b.benefits
                         })
                     ]
                 }),
                 (0, r.jsxs)(l.mzw, {
-                    className: N.footer,
+                    className: b.footer,
                     children: [
                         (0, r.jsx)(l.zxk, {
                             color: l.zxk.Colors.RED,
@@ -103,7 +103,7 @@ let x = (e) => {
                         (0, r.jsx)(l.zxk, {
                             look: l.zxk.Looks.LINK,
                             color: l.zxk.Colors.WHITE,
-                            className: N.goBackButton,
+                            className: b.goBackButton,
                             onClick: _,
                             children: f.NW.string(f.t.EP6EPT)
                         })
@@ -115,7 +115,7 @@ let x = (e) => {
     _ = (e) => {
         (0, l.h7j)((t) =>
             (0, r.jsx)(
-                b,
+                x,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

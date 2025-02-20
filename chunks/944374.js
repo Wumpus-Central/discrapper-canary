@@ -1,23 +1,23 @@
-let i = n(689118),
-    r = n(988324).Buffer,
-    a = n(1199);
-function s(e) {
-    a.call(this, e), (this.enc = 'pem');
+let r = n(689118),
+    i = n(988324).Buffer,
+    o = n(1199);
+function a(e) {
+    o.call(this, e), (this.enc = 'pem');
 }
-i(s, a),
-    (e.exports = s),
-    (s.prototype.decode = function (e, t) {
+r(a, o),
+    (e.exports = a),
+    (a.prototype.decode = function (e, t) {
         let n = e.toString().split(/[\r\n]+/g),
-            i = t.label.toUpperCase(),
-            s = /^-----(BEGIN|END) ([^-]+)-----$/,
-            o = -1,
+            r = t.label.toUpperCase(),
+            a = /^-----(BEGIN|END) ([^-]+)-----$/,
+            s = -1,
             l = -1;
         for (let e = 0; e < n.length; e++) {
-            let t = n[e].match(s);
-            if (null !== t && t[2] === i) {
-                if (-1 === o) {
+            let t = n[e].match(a);
+            if (null !== t && t[2] === r) {
+                if (-1 === s) {
                     if ('BEGIN' !== t[1]) break;
-                    o = e;
+                    s = e;
                 } else {
                     if ('END' !== t[1]) break;
                     l = e;
@@ -25,9 +25,9 @@ i(s, a),
                 }
             }
         }
-        if (-1 === o || -1 === l) throw Error('PEM section not found for: ' + i);
-        let u = n.slice(o + 1, l).join('');
-        u.replace(/[^a-z0-9+/=]+/gi, '');
-        let c = r.from(u, 'base64');
-        return a.prototype.decode.call(this, c, t);
+        if (-1 === s || -1 === l) throw Error('PEM section not found for: ' + r);
+        let c = n.slice(s + 1, l).join('');
+        c.replace(/[^a-z0-9+/=]+/gi, '');
+        let u = i.from(c, 'base64');
+        return o.prototype.decode.call(this, u, t);
     });

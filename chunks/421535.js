@@ -1,3 +1,3 @@
-n.d(t, { T: () => r });
-var i,
-    r = (((i = {}).ADMIN = 'admin'), (i.DEVELOPER = 'developer'), (i.READ_ONLY = 'read_only'), i);
+n.d(t, { T: () => i });
+var r,
+    i = (((r = {}).ADMIN = 'admin'), (r.DEVELOPER = 'developer'), (r.READ_ONLY = 'read_only'), r);

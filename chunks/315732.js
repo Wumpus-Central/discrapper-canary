@@ -1,15 +1,15 @@
-e.d(t, { Z: () => c });
-var i = e(200651);
-e(192379);
-var l = e(481060),
-    a = e(572004),
-    r = e(388032);
-function c(n) {
-    return a.wS
-        ? (0, i.jsx)(l.sNh, {
+n.d(t, { Z: () => o });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(572004),
+    c = n(388032);
+function o(e) {
+    return l.wS
+        ? (0, r.jsx)(i.sNh, {
               id: 'copy-channel-topic',
-              label: r.intl.string(r.t.Tb3Vsr),
-              action: () => (0, a.JG)(n.topic)
+              label: c.NW.string(c.t.Tb3Vsr),
+              action: () => (0, l.JG)(e.topic)
           })
         : null;
 }

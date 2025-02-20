@@ -1,14 +1,14 @@
 n.d(t, {
-    E: () => s,
-    _: () => r
+    E: () => l,
+    _: () => o
 }),
     n(627341);
-var i = n(278074),
-    l = n(263568),
-    a = n(871215);
-function r(e, t) {
-    let n = (0, i.EQ)(t)
-        .with(l.C.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers)
+var r = n(278074),
+    i = n(263568),
+    a = n(205518);
+function o(e, t) {
+    let n = (0, r.EQ)(t)
+        .with(i.C.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers)
         .otherwise(() => a.normalStylesDefault);
     return {
         styles: {
@@ -23,6 +23,6 @@ function r(e, t) {
         }
     };
 }
-function s(e, t) {
+function l(e, t) {
     return e.getAvatarURL(t, 20, !1);
 }

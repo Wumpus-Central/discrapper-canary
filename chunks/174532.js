@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(445686),
-    r = n(379649);
-function a(e, t, n) {
+n.d(t, { Z: () => a }), n(47120);
+var r = n(445686),
+    i = n(379649);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-class s {
+class a {
     start() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         this.listeningUsers.clear(),
@@ -24,11 +24,11 @@ class s {
             this.muted.reset(),
             this.connected.reset(),
             this.connected.start(),
-            this.connection.on(i.S.Speaking, (e, t, n) => {
+            this.connection.on(r.S.Speaking, (e, t, n) => {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);
             }),
             this.onMuted(e),
-            this.connection.on(i.S.Mute, (e) => {
+            this.connection.on(r.S.Mute, (e) => {
                 this.onMuted(e);
             });
     }
@@ -53,7 +53,7 @@ class s {
             duration_muted_ms: this.muted.elapsed().asMilliseconds()
         };
     }
-    constructor(e, t, n = r.Z_) {
-        a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), a(this, 'muted', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new r.G9(this.timestampProducer)), (this.speaking = new r.G9(this.timestampProducer)), (this.participation = new r.G9(this.timestampProducer)), (this.connected = new r.G9(this.timestampProducer)), (this.muted = new r.G9(this.timestampProducer));
+    constructor(e, t, n = i.Z_) {
+        o(this, 'userId', void 0), o(this, 'connection', void 0), o(this, 'timestampProducer', void 0), o(this, 'listeningUsers', void 0), o(this, 'listening', void 0), o(this, 'speaking', void 0), o(this, 'participation', void 0), o(this, 'connected', void 0), o(this, 'muted', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer)), (this.muted = new i.G9(this.timestampProducer));
     }
 }

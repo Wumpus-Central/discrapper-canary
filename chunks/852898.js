@@ -1,57 +1,57 @@
 n.d(t, { Z: () => g });
-var i = n(200651),
-    r = n(192379),
-    l = n(951284),
-    s = n(442837),
-    a = n(139387),
+var r = n(200651),
+    i = n(192379),
+    s = n(951284),
+    a = n(442837),
+    l = n(139387),
     o = n(726542),
     c = n(690221),
     d = n(434404),
     u = n(999382),
     m = n(981631),
-    h = n(388032);
+    p = n(388032);
 function g(e) {
-    let t = (0, s.e7)([u.Z], () => u.Z.getProps().integrations);
-    return r.useMemo(
+    let t = (0, a.e7)([u.Z], () => u.Z.getProps().integrations);
+    return i.useMemo(
         () =>
             (function (e, t) {
-                var n, r, s, u;
+                var n, i, a, u;
                 let g;
                 if (!e.managed) return null;
-                let x = null === (n = e.tags) || void 0 === n ? void 0 : n.bot_id,
-                    p = null === (r = e.tags) || void 0 === r ? void 0 : r.integration_id,
-                    _ = (null === (s = e.tags) || void 0 === s ? void 0 : s.premium_subscriber) !== void 0,
-                    C = (null === (u = e.tags) || void 0 === u ? void 0 : u.guild_connections) !== void 0;
+                let h = null === (n = e.tags) || void 0 === n ? void 0 : n.bot_id,
+                    f = null === (i = e.tags) || void 0 === i ? void 0 : i.integration_id,
+                    b = (null === (a = e.tags) || void 0 === a ? void 0 : a.premium_subscriber) !== void 0,
+                    x = (null === (u = e.tags) || void 0 === u ? void 0 : u.guild_connections) !== void 0;
                 if (
-                    (null != x
+                    (null != h
                         ? (g =
                               null == t
                                   ? void 0
                                   : t.find((e) => {
                                         var t;
                                         let { application: n } = e;
-                                        return (null == n ? void 0 : null === (t = n.bot) || void 0 === t ? void 0 : t.id) === x;
+                                        return (null == n ? void 0 : null === (t = n.bot) || void 0 === t ? void 0 : t.id) === h;
                                     }))
-                        : null != p &&
+                        : null != f &&
                           (g =
                               null == t
                                   ? void 0
                                   : t.find((e) => {
                                         let { id: t } = e;
-                                        return t === p;
+                                        return t === f;
                                     })),
                     null != g && null != g.application && null != g.name)
                 ) {
                     let e = g.application.id,
                         t = g.name;
-                    [l.b.TWITCH, l.b.YOUTUBE].includes(g.type) && (t = ''.concat(o.Z.get(g.type).name, ' - ').concat(t));
+                    [s.b.TWITCH, s.b.YOUTUBE].includes(g.type) && (t = ''.concat(o.Z.get(g.type).name, ' - ').concat(t));
                     let n = () => {
-                        d.Z.setSection(m.pNK.INTEGRATIONS), a.Z.setSection(m.b4C.APPLICATION, e);
+                        d.Z.setSection(m.pNK.INTEGRATIONS), l.Z.setSection(m.b4C.APPLICATION, e);
                     };
-                    return h.intl.format(h.t.FuXsWl, {
+                    return p.NW.format(p.t.FuXsWl, {
                         name: t,
                         integrationNameHook: (e, t) =>
-                            (0, i.jsx)(
+                            (0, r.jsx)(
                                 c.Z,
                                 {
                                     onClick: n,
@@ -61,7 +61,7 @@ function g(e) {
                             )
                     });
                 }
-                return _ ? h.intl.string(h.t.oF6FYW) : C ? h.intl.string(h.t.ZQ37tL) : h.intl.string(h.t.k5d7DA);
+                return b ? p.NW.string(p.t.oF6FYW) : x ? p.NW.string(p.t.ZQ37tL) : p.NW.string(p.t.k5d7DA);
             })(e, t),
         [e, t]
     );

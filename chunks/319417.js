@@ -1,36 +1,36 @@
 n.d(t, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
     l = n(443603),
-    u = n(388032),
-    c = n(48669);
+    c = n(388032),
+    u = n(640862);
 function d(e) {
     let { onClick: t, disabled: n = !1 } = e;
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: c.separator }),
-            (0, i.jsx)('div', {
-                className: c.container,
-                children: (0, i.jsx)('div', {
-                    className: c.buttonContainer,
-                    children: (0, i.jsx)(l.Z, {
-                        className: c.button,
-                        innerClassName: c.innerButton,
-                        childClassName: s()(c.buttonChild, {
-                            [c.disabled]: n,
-                            [c.activeButtonChild]: !n
+            (0, r.jsx)('div', { className: u.separator }),
+            (0, r.jsx)('div', {
+                className: u.container,
+                children: (0, r.jsx)('div', {
+                    className: u.buttonContainer,
+                    children: (0, r.jsx)(l.Z, {
+                        className: u.button,
+                        innerClassName: u.innerButton,
+                        childClassName: a()(u.buttonChild, {
+                            [u.disabled]: n,
+                            [u.activeButtonChild]: !n
                         }),
                         onClick: t,
                         disabled: n,
                         isActive: !1,
-                        'aria-label': u.intl.string(u.t.oeb1vr),
-                        children: (0, i.jsx)(o.Uuj, {
+                        'aria-label': c.NW.string(c.t.oeb1vr),
+                        children: (0, r.jsx)(s.Uuj, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: c.sendIcon
+                            className: u.sendIcon
                         })
                     })
                 })
@@ -38,4 +38,4 @@ function d(e) {
         ]
     });
 }
-let f = r.memo(d);
+let f = i.memo(d);

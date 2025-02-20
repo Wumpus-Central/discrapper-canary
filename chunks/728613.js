@@ -1,22 +1,22 @@
-var i = (function () {
+var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, t) {
+function a(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -29,18 +29,18 @@ function s(e, t) {
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
 n(129629);
-var o = n(22672),
+var s = n(22672),
     l = n(526811),
-    u = n(912037),
-    c = (function (e) {
+    c = n(912037),
+    u = (function (e) {
         function t(e, n) {
-            r(this, t);
-            var i = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (i._a = e), (i._modulus = n), (i._listeners = {}), i;
+            i(this, t);
+            var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (r._a = e), (r._modulus = n), (r._listeners = {}), r;
         }
         return (
-            s(t, e),
-            i(t, [
+            a(t, e),
+            r(t, [
                 {
                     key: '__getValue',
                     value: function () {
@@ -68,7 +68,7 @@ var o = n(22672),
                 {
                     key: 'interpolate',
                     value: function (e) {
-                        return new l(this, u.create(e));
+                        return new l(this, c.create(e));
                     }
                 },
                 {
@@ -86,5 +86,5 @@ var o = n(22672),
             ]),
             t
         );
-    })(o);
-e.exports = c;
+    })(s);
+e.exports = u;

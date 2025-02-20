@@ -1,3 +1,3 @@
 n(71483), n(748159), n(30913), n(226309);
-var i = n(974802);
-e.exports = i.URL;
+var r = n(974802);
+e.exports = r.URL;

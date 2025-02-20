@@ -1,6 +1,6 @@
-n.d(t, { Z: () => s });
-var i = n(81825);
-function r(e, t, n) {
+n.d(t, { Z: () => a });
+var r = n(81825);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,9 +13,9 @@ function r(e, t, n) {
         e
     );
 }
-class a extends i.Z {
+class o extends r.Z {
     static createFromServer(e) {
-        return new a({
+        return new o({
             id: e.id,
             guildId: e.guild_id,
             userId: null != e.user ? e.user.id : e.user_id,
@@ -25,7 +25,7 @@ class a extends i.Z {
         });
     }
     constructor(e) {
-        super(), r(this, 'id', void 0), r(this, 'guildId', void 0), r(this, 'userId', void 0), r(this, 'user', void 0), r(this, 'ended', void 0), r(this, 'endsAt', void 0), (this.id = e.id), (this.guildId = e.guildId), (this.userId = e.userId), (this.user = e.user), (this.ended = e.ended), (this.endsAt = null != e.endsAt ? e.endsAt : null);
+        super(), i(this, 'id', void 0), i(this, 'guildId', void 0), i(this, 'userId', void 0), i(this, 'user', void 0), i(this, 'ended', void 0), i(this, 'endsAt', void 0), (this.id = e.id), (this.guildId = e.guildId), (this.userId = e.userId), (this.user = e.user), (this.ended = e.ended), (this.endsAt = null != e.endsAt ? e.endsAt : null);
     }
 }
-let s = a;
+let a = o;

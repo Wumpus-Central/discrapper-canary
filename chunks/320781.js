@@ -1,44 +1,44 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => h }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(471445),
-    s = n(456269),
-    o = n(660189),
+var i = n(442837),
+    l = n(481060),
+    o = n(471445),
+    a = n(456269),
+    s = n(660189),
     c = n(257511),
-    d = n(967128),
-    u = n(388032),
-    h = n(577612);
-function p(e) {
+    u = n(967128),
+    d = n(388032),
+    p = n(168814);
+function h(e) {
     var t;
     let { channel: n } = e,
-        p = (0, s.eV)(n),
-        { firstMessage: m } = (0, l.cj)([o.Z], () => o.Z.getMessage(n.id)),
-        f = new Set((0, s.kn)(n, p)),
-        g = null !== (t = (0, r.KS)(n)) && void 0 !== t ? t : a.kBi;
-    return (0, i.jsxs)(d.ZP, {
+        h = (0, a.eV)(n),
+        { firstMessage: f } = (0, i.cj)([s.Z], () => s.Z.getMessage(n.id)),
+        m = new Set((0, a.kn)(n, h)),
+        g = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : l.kBi;
+    return (0, r.jsxs)(u.ZP, {
         channelId: n.id,
-        className: h.container,
+        className: p.container,
         children: [
-            (0, i.jsx)('div', {
-                className: h.iconWrapper,
-                children: (0, i.jsx)(g, {
-                    className: h.icon,
+            (0, r.jsx)('div', {
+                className: p.iconWrapper,
+                children: (0, r.jsx)(g, {
+                    className: p.icon,
                     strokeWidth: 1.75
                 })
             }),
-            (0, i.jsx)(d.Ot, {
-                className: h.header,
+            (0, r.jsx)(u.Ot, {
+                className: p.header,
                 children: n.name
             }),
-            null == m &&
-                (0, i.jsx)(a.Text, {
+            null == f &&
+                (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: u.intl.string(u.t.mE3KJC)
+                    children: d.NW.string(d.t.mE3KJC)
                 }),
-            (0, i.jsx)(c.Z, { appliedTags: f })
+            (0, r.jsx)(c.Z, { appliedTags: m })
         ]
     });
 }

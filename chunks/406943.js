@@ -1,6 +1,6 @@
-n.d(t, { D: () => r });
-var i = n(674563);
-function r(e) {
+n.d(t, { D: () => i });
+var r = n(674563);
+function i(e) {
     let t;
-    return e.isSystemUser() ? (t = i.Hb.SYSTEM_DM) : e.isClyde() ? (t = i.Hb.AI) : e.bot && (t = i.Hb.BOT), t;
+    return e.isSystemUser() ? (t = r.Hb.SYSTEM_DM) : e.isClyde() ? (t = r.Hb.AI) : e.bot && (t = r.Hb.BOT), t;
 }

@@ -30,10 +30,10 @@ let t = (e) => ({
         }
     }),
     n = ['a', 'abbr', 'address', 'article', 'aside', 'audio', 'b', 'blockquote', 'body', 'button', 'canvas', 'caption', 'cite', 'code', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'nav', 'object', 'ol', 'optgroup', 'option', 'p', 'picture', 'q', 'quote', 'samp', 'section', 'select', 'source', 'span', 'strong', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'ul', 'var', 'video', 'defs', 'g', 'marker', 'mask', 'pattern', 'svg', 'switch', 'symbol', 'feBlend', 'feColorMatrix', 'feComponentTransfer', 'feComposite', 'feConvolveMatrix', 'feDiffuseLighting', 'feDisplacementMap', 'feFlood', 'feGaussianBlur', 'feImage', 'feMerge', 'feMorphology', 'feOffset', 'feSpecularLighting', 'feTile', 'feTurbulence', 'linearGradient', 'radialGradient', 'stop', 'circle', 'ellipse', 'image', 'line', 'path', 'polygon', 'polyline', 'rect', 'text', 'use', 'textPath', 'tspan', 'foreignObject', 'clipPath'],
-    i = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
-    r = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
-    a = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
-    s = [
+    r = ['any-hover', 'any-pointer', 'aspect-ratio', 'color', 'color-gamut', 'color-index', 'device-aspect-ratio', 'device-height', 'device-width', 'display-mode', 'forced-colors', 'grid', 'height', 'hover', 'inverted-colors', 'monochrome', 'orientation', 'overflow-block', 'overflow-inline', 'pointer', 'prefers-color-scheme', 'prefers-contrast', 'prefers-reduced-motion', 'prefers-reduced-transparency', 'resolution', 'scan', 'scripting', 'update', 'width', 'min-width', 'max-width', 'min-height', 'max-height'].sort().reverse(),
+    i = ['active', 'any-link', 'blank', 'checked', 'current', 'default', 'defined', 'dir', 'disabled', 'drop', 'empty', 'enabled', 'first', 'first-child', 'first-of-type', 'fullscreen', 'future', 'focus', 'focus-visible', 'focus-within', 'has', 'host', 'host-context', 'hover', 'indeterminate', 'in-range', 'invalid', 'is', 'lang', 'last-child', 'last-of-type', 'left', 'link', 'local-link', 'not', 'nth-child', 'nth-col', 'nth-last-child', 'nth-last-col', 'nth-last-of-type', 'nth-of-type', 'only-child', 'only-of-type', 'optional', 'out-of-range', 'past', 'placeholder-shown', 'read-only', 'read-write', 'required', 'right', 'root', 'scope', 'target', 'target-within', 'user-invalid', 'valid', 'visited', 'where'].sort().reverse(),
+    o = ['after', 'backdrop', 'before', 'cue', 'cue-region', 'first-letter', 'first-line', 'grammar-error', 'marker', 'part', 'placeholder', 'selection', 'slotted', 'spelling-error'].sort().reverse(),
+    a = [
         'accent-color',
         'align-content',
         'align-items',
@@ -551,15 +551,15 @@ let t = (e) => ({
     ]
         .sort()
         .reverse(),
-    o = r.concat(a).sort().reverse();
+    s = i.concat(o).sort().reverse();
 function l(e) {
     let l = t(e),
-        u = o,
-        c = '[\\w-]+',
-        d = '(' + c + '|@\\{' + c + '\\})',
+        c = s,
+        u = '[\\w-]+',
+        d = '(' + u + '|@\\{' + u + '\\})',
         f = [],
-        _ = [],
-        p = function (e) {
+        p = [],
+        _ = function (e) {
             return {
                 className: 'string',
                 begin: '~?' + e + '.*?' + e
@@ -575,20 +575,20 @@ function l(e) {
         m = {
             $pattern: /[a-z-]+/,
             keyword: 'and or not only',
-            attribute: i.join(' ')
+            attribute: r.join(' ')
         },
         g = {
             begin: '\\(',
             end: '\\)',
-            contains: _,
+            contains: p,
             keywords: m,
             relevance: 0
         };
-    _.push(
+    p.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        p("'"),
-        p('"'),
+        _("'"),
+        _('"'),
         l.CSS_NUMBER_MODE,
         {
             begin: '(url|data-uri)\\(',
@@ -600,12 +600,12 @@ function l(e) {
         },
         l.HEXCOLOR,
         g,
-        h('variable', '@@?' + c, 10),
-        h('variable', '@\\{' + c + '\\}'),
+        h('variable', '@@?' + u, 10),
+        h('variable', '@\\{' + u + '\\}'),
         h('built_in', '~?`[^`]*?`'),
         {
             className: 'attribute',
-            begin: c + '\\s*:',
+            begin: u + '\\s*:',
             end: ':',
             returnBegin: !0,
             excludeEnd: !0
@@ -614,7 +614,7 @@ function l(e) {
         { beginKeywords: 'and not' },
         l.FUNCTION_DISPATCH
     );
-    let E = _.concat({
+    let E = p.concat({
             begin: /\{/,
             end: /\}/,
             contains: f
@@ -622,9 +622,9 @@ function l(e) {
         v = {
             beginKeywords: 'when',
             endsWithParent: !0,
-            contains: [{ beginKeywords: 'and not' }].concat(_)
+            contains: [{ beginKeywords: 'and not' }].concat(p)
         },
-        y = {
+        b = {
             begin: d + '\\s*:',
             returnBegin: !0,
             end: /[;}]/,
@@ -634,36 +634,36 @@ function l(e) {
                 l.CSS_VARIABLE,
                 {
                     className: 'attribute',
-                    begin: '\\b(' + s.join('|') + ')\\b',
+                    begin: '\\b(' + a.join('|') + ')\\b',
                     end: /(?=:)/,
                     starts: {
                         endsWithParent: !0,
                         illegal: '[<=$]',
                         relevance: 0,
-                        contains: _
+                        contains: p
                     }
                 }
             ]
         },
-        I = {
+        y = {
             className: 'keyword',
             begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
             starts: {
                 end: '[;{}]',
                 keywords: m,
                 returnEnd: !0,
-                contains: _,
+                contains: p,
                 relevance: 0
             }
         },
-        T = {
+        O = {
             className: 'variable',
             variants: [
                 {
-                    begin: '@' + c + '\\s*:',
+                    begin: '@' + u + '\\s*:',
                     relevance: 15
                 },
-                { begin: '@' + c }
+                { begin: '@' + u }
             ],
             starts: {
                 end: '[;}]',
@@ -671,7 +671,7 @@ function l(e) {
                 contains: E
             }
         },
-        b = {
+        S = {
             variants: [
                 {
                     begin: '[\\.#:&\\[>]',
@@ -691,7 +691,7 @@ function l(e) {
                 e.C_BLOCK_COMMENT_MODE,
                 v,
                 h('keyword', 'all\\b'),
-                h('variable', '@\\{' + c + '\\}'),
+                h('variable', '@\\{' + u + '\\}'),
                 {
                     begin: '\\b(' + n.join('|') + ')\\b',
                     className: 'selector-tag'
@@ -704,11 +704,11 @@ function l(e) {
                 l.ATTRIBUTE_SELECTOR_MODE,
                 {
                     className: 'selector-pseudo',
-                    begin: ':(' + r.join('|') + ')'
+                    begin: ':(' + i.join('|') + ')'
                 },
                 {
                     className: 'selector-pseudo',
-                    begin: ':(:)?(' + a.join('|') + ')'
+                    begin: ':(:)?(' + o.join('|') + ')'
                 },
                 {
                     begin: /\(/,
@@ -720,13 +720,13 @@ function l(e) {
                 l.FUNCTION_DISPATCH
             ]
         },
-        S = {
-            begin: c + ':(:)?' + `(${u.join('|')})`,
+        I = {
+            begin: u + ':(:)?' + `(${c.join('|')})`,
             returnBegin: !0,
-            contains: [b]
+            contains: [S]
         };
     return (
-        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, I, T, S, y, b, v, l.FUNCTION_DISPATCH),
+        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, y, O, I, b, S, v, l.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,

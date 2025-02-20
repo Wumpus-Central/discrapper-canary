@@ -1,9 +1,9 @@
-let i;
+let r;
 n.d(t, { Z: () => d });
-var r,
-    a = n(442837),
-    s = n(570140),
-    o = n(353368);
+var i,
+    o = n(442837),
+    a = n(570140),
+    s = n(353368);
 function l(e, t, n) {
     return (
         t in e
@@ -17,17 +17,17 @@ function l(e, t, n) {
         e
     );
 }
-let u = () => {
-    i = i === o.q.BASIC ? o.q.PREMIUM : o.q.BASIC;
+let c = () => {
+    r = r === s.q.BASIC ? s.q.PREMIUM : s.q.BASIC;
 };
-class c extends (r = a.ZP.PersistedStore) {
+class u extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        i = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : o.q.PREMIUM;
+        r = null !== (t = null == e ? void 0 : e.animationType) && void 0 !== t ? t : s.q.PREMIUM;
     }
     getState() {
-        return { animationType: i };
+        return { animationType: r };
     }
 }
-l(c, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(c, 'persistKey', 'VoiceChannelEffectsPersistedStore');
-let d = new c(s.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: u });
+l(u, 'displayName', 'VoiceChannelEffectsPersistedStore'), l(u, 'persistKey', 'VoiceChannelEffectsPersistedStore');
+let d = new u(a.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c });

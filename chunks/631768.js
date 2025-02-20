@@ -1,8 +1,8 @@
-n.d(t, { Z: () => c });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+n.d(t, { Z: () => u });
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,14 +15,14 @@ function s(e, t, n) {
         e
     );
 }
-let o = n(981631).Ucd.AUTO;
+let s = n(981631).Ucd.AUTO;
 function l(e) {
-    o = e.mode;
+    s = e.mode;
 }
-class u extends (i = r.ZP.Store) {
+class c extends (r = i.ZP.Store) {
     get mode() {
-        return o;
+        return s;
     }
 }
-s(u, 'displayName', 'VideoQualityModeStore');
-let c = new u(a.Z, { SET_CHANNEL_VIDEO_QUALITY_MODE: l });
+a(c, 'displayName', 'VideoQualityModeStore');
+let u = new c(o.Z, { SET_CHANNEL_VIDEO_QUALITY_MODE: l });

@@ -1,51 +1,51 @@
-n.d(t, { h: () => u }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(481060),
-    s = n(909820),
-    o = n(740492),
+n.d(t, { h: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(909820),
+    s = n(740492),
     c = n(937995),
-    d = n(618158);
-function u(e) {
-    let { buttonRef: t, dismissed: n, onDismiss: u, renderComponent: h, nudgeAlignIntoViewport: p = !1, skipForceHide: m = !1 } = e,
-        f = l.useContext(c.h9),
-        [g, _] = l.useState(''),
-        [C, x] = l.useState(!1),
-        v = (0, a.e7)([o.ZP], () => o.ZP.callHeaderHeight),
-        E = l.createRef(),
-        I = l.useRef(0);
-    l.useEffect(() => {
+    u = n(618158);
+function d(e) {
+    let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: p, nudgeAlignIntoViewport: h = !1, skipForceHide: f = !1 } = e,
+        m = i.useContext(c.h9),
+        [g, b] = i.useState(''),
+        [_, C] = i.useState(!1),
+        v = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
+        y = i.createRef(),
+        x = i.useRef(0);
+    i.useEffect(() => {
         let e = t.current;
-        if (null != e) return e.addEventListener('click', u), () => e.removeEventListener('click', u);
+        if (null != e) return e.addEventListener('click', d), () => e.removeEventListener('click', d);
     }),
-        l.useEffect(() => {
-            if (!m) {
+        i.useEffect(() => {
+            if (!f) {
                 var e, t;
-                _(String(I.current)), x(void 0 !== v && v < (null !== (t = null === (e = E.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
+                b(String(x.current)), C(void 0 !== v && v < (null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (x.current += 1);
             }
-        }, [v, E, m]);
-    let { preventIdle: b, allowIdle: Z } = (0, d.Y)('popup');
+        }, [v, y, f]);
+    let { preventIdle: j, allowIdle: O } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
-        : (0, i.jsx)(s.ZP, {
-              children: (0, i.jsx)(r.jRF, {
+        : (0, r.jsx)(a.ZP, {
+              children: (0, r.jsx)(o.jRF, {
                   targetRef: t,
                   position: 'top',
                   align: 'center',
                   spacing: 0,
                   positionKey: g,
-                  nudgeAlignIntoViewport: p,
+                  nudgeAlignIntoViewport: h,
                   children: () =>
-                      (0, i.jsx)('div', {
-                          ref: E,
-                          onMouseOver: b,
-                          onFocus: b,
-                          onBlur: Z,
-                          onMouseLeave: Z,
-                          children: h({
-                              hidden: C || f || n,
-                              onDismiss: u
+                      (0, r.jsx)('div', {
+                          ref: y,
+                          onMouseOver: j,
+                          onFocus: j,
+                          onBlur: O,
+                          onMouseLeave: O,
+                          children: p({
+                              hidden: _ || m || n,
+                              onDismiss: d
                           })
                       })
               })

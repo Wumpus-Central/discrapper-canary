@@ -1,42 +1,42 @@
-i.d(s, { default: () => d });
-var e = i(200651);
-i(192379);
-var n = i(481060),
-    r = i(600164),
-    l = i(388032),
-    a = i(934288);
-function d(t) {
-    let { transitionState: s, onClose: i } = t;
-    return (0, e.jsxs)(n.Y0X, {
-        size: n.CgR.DYNAMIC,
-        transitionState: s,
-        'aria-label': l.intl.string(l.t.elyVbm),
+e.d(t, { default: () => l });
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    n = e(600164),
+    a = e(388032),
+    d = e(783502);
+function l(s) {
+    let { transitionState: t, onClose: e } = s;
+    return (0, i.jsxs)(r.Y0X, {
+        size: r.CgR.DYNAMIC,
+        transitionState: t,
+        'aria-label': a.NW.string(a.t.elyVbm),
         children: [
-            (0, e.jsxs)(n.xBx, {
-                justify: r.Z.Justify.BETWEEN,
+            (0, i.jsxs)(r.xBx, {
+                justify: n.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, e.jsx)(n.X6q, {
+                    (0, i.jsx)(r.X6q, {
                         variant: 'heading-md/semibold',
-                        className: a.header,
-                        children: l.intl.string(l.t.elyVbm)
+                        className: d.header,
+                        children: a.NW.string(a.t.elyVbm)
                     }),
-                    (0, e.jsx)(n.olH, { onClick: i })
+                    (0, i.jsx)(r.olH, { onClick: e })
                 ]
             }),
-            (0, e.jsxs)(n.hzk, {
+            (0, i.jsxs)(r.hzk, {
                 children: [
-                    (0, e.jsx)(n.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
-                        children: l.intl.string(l.t.nIeRen)
+                        children: a.NW.string(a.t.nIeRen)
                     }),
-                    (0, e.jsx)('div', { className: a.fullArt })
+                    (0, i.jsx)('div', { className: d.fullArt })
                 ]
             }),
-            (0, e.jsx)(n.mzw, {
-                children: (0, e.jsx)(n.zxk, {
-                    onClick: i,
-                    children: l.intl.string(l.t.BddRzc)
+            (0, i.jsx)(r.mzw, {
+                children: (0, i.jsx)(r.zxk, {
+                    onClick: e,
+                    children: a.NW.string(a.t.BddRzc)
                 })
             })
         ]

@@ -1,86 +1,86 @@
-n.d(t, { Z: () => C });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(313201),
-    s = n(540059),
-    o = n(703656),
-    d = n(769654),
-    c = n(430824),
-    u = n(626135),
-    h = n(768581),
-    m = n(125631),
-    p = n(981631),
-    g = n(388032),
-    _ = n(953783);
-let f = (0, a.hQ)(),
-    E = ''.concat(f, '-decription');
-function I(e, t, n) {
-    return (0, i.jsxs)(
+n.d(t, { Z: () => O });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(313201),
+    a = n(540059),
+    s = n(703656),
+    c = n(769654),
+    u = n(430824),
+    d = n(626135),
+    p = n(768581),
+    h = n(125631),
+    g = n(981631),
+    f = n(388032),
+    m = n(924230);
+let b = (0, o.hQ)(),
+    _ = ''.concat(b, '-decription');
+function E(e, t, n) {
+    return (0, r.jsxs)(
         'button',
         {
-            className: _.container,
+            className: m.container,
             onClick: n,
             children: [
                 'function' == typeof e
-                    ? (0, i.jsx)('div', {
-                          className: _.icon,
-                          children: (0, i.jsx)(e, {
-                              className: _.__invalid_iconInner,
-                              color: r.TVs.colors.WHITE.css
+                    ? (0, r.jsx)('div', {
+                          className: m.icon,
+                          children: (0, r.jsx)(e, {
+                              className: m.__invalid_iconInner,
+                              color: l.TVs.colors.WHITE.css
                           })
                       })
-                    : (0, i.jsx)('img', {
-                          className: _.icon,
+                    : (0, r.jsx)('img', {
+                          className: m.icon,
                           alt: '',
                           src: e
                       }),
-                (0, i.jsx)(r.Text, {
-                    className: _.text,
+                (0, r.jsx)(l.Text, {
+                    className: m.text,
                     variant: 'text-md/medium',
                     children: t
                 }),
-                (0, i.jsx)(m.Z, { className: _.arrow })
+                (0, r.jsx)(h.Z, { className: m.arrow })
             ]
         },
         t
     );
 }
-function C() {
-    let e = Object.values(c.Z.getGuilds()).filter((e) => e.hasFeature(p.oNc.HUB)),
-        t = (0, s.Q3)('AddFriendOtherPlaces'),
+function O() {
+    let e = Object.values(u.Z.getGuilds()).filter((e) => e.hasFeature(g.oNc.HUB)),
+        t = (0, a.Q3)('AddFriendOtherPlaces'),
         n = (e) => {
-            u.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, d.X)(e);
+            d.default.track(g.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, c.X)(e);
         };
-    return (0, i.jsxs)(l.Fragment, {
+    return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)('header', {
-                className: _.header,
+            (0, r.jsxs)('header', {
+                className: m.header,
                 children: [
-                    (0, i.jsx)(r.vwX, {
+                    (0, r.jsx)(l.vwX, {
                         tag: t ? 'h1' : 'h2',
-                        className: _.title,
-                        children: g.intl.string(g.t.IuMx1d)
+                        className: m.title,
+                        children: f.NW.string(f.t.IuMx1d)
                     }),
                     t
-                        ? (0, i.jsx)(r.R94, {
-                              id: E,
-                              type: r.R94.Types.DESCRIPTION,
-                              children: (0, i.jsx)(r.Text, {
+                        ? (0, r.jsx)(l.R94, {
+                              id: _,
+                              type: l.R94.Types.DESCRIPTION,
+                              children: (0, r.jsx)(l.Text, {
                                   tag: 'div',
                                   variant: 'heading-md/normal',
-                                  children: g.intl.string(g.t.DwevPj)
+                                  children: f.NW.string(f.t.DwevPj)
                               })
                           })
                         : null
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: _.grid,
+            (0, r.jsxs)('div', {
+                className: m.grid,
                 children: [
                     e.map((e) =>
-                        I(
-                            h.ZP.getGuildIconURL({
+                        E(
+                            p.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
                                 size: 240
@@ -91,8 +91,8 @@ function C() {
                             }
                         )
                     ),
-                    I(r.Jmo, g.intl.string(g.t.AhKnz8), () => {
-                        u.default.track(p.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, o.uL)(p.Z5c.GUILD_DISCOVERY);
+                    E(l.Jmo, f.NW.string(f.t.AhKnz8), () => {
+                        d.default.track(g.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, s.uL)(g.Z5c.GUILD_DISCOVERY);
                     })
                 ]
             })

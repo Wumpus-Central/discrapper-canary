@@ -1,104 +1,104 @@
-t.d(i, { default: () => m }), t(47120);
-var n = t(200651),
-    l = t(192379),
-    s = t(512722),
-    d = t.n(s),
-    r = t(481060),
-    u = t(313201),
-    a = t(560067),
-    o = t(434404),
-    c = t(430824),
-    p = t(313741),
-    g = t(526079),
-    C = t(388032),
-    G = t(870236);
-function h(e) {
-    let { className: i, guildId: t, onChange: l, isGuildIncluded: s } = e,
-        { options: d } = (0, g.Z)({ isGuildIncluded: s });
-    return (0, n.jsx)(r.VcW, {
-        className: i,
+i.d(t, { default: () => m }), i(266796), i(47120);
+var n = i(200651),
+    l = i(192379),
+    r = i(512722),
+    s = i.n(r),
+    u = i(481060),
+    a = i(313201),
+    d = i(560067),
+    o = i(434404),
+    c = i(430824),
+    p = i(313741),
+    g = i(526079),
+    C = i(388032),
+    G = i(338497);
+function b(e) {
+    let { className: t, guildId: i, onChange: l, isGuildIncluded: r } = e,
+        { options: s } = (0, g.Z)({ isGuildIncluded: r });
+    return (0, n.jsx)(u.VcW, {
+        className: t,
         onChange: l,
-        value: t,
-        options: d,
-        placeholder: C.intl.string(C.t.etZ9tb)
+        value: i,
+        options: s,
+        placeholder: C.NW.string(C.t.etZ9tb)
     });
 }
 function m(e) {
-    let { transitionState: i, onClose: t, feature: s, section: g, subsection: C } = e,
-        m = (0, u.Dt)(),
-        { canCreateGuild: Z, createGuildCta: S, createGuildDescription: x, selectGuildCta: v, title: b, description: f, isGuildSupported: j } = (0, p.K)(s),
-        [I, F] = l.useState(),
-        [k, _] = l.useState(!1),
-        E = async () => {
-            _(!0);
+    let { transitionState: t, onClose: i, feature: r, section: g, subsection: C } = e,
+        m = (0, a.Dt)(),
+        { canCreateGuild: h, createGuildCta: v, createGuildDescription: S, selectGuildCta: Z, title: f, description: x, isGuildSupported: N } = (0, p.K)(r),
+        [j, O] = l.useState(),
+        [I, k] = l.useState(!1),
+        F = async () => {
+            k(!0);
             let e = await new Promise((e) => {
-                a.Z.openCreateGuildModal({ onSuccess: e });
+                d.Z.openCreateGuildModal({ onSuccess: e });
             });
-            await new Promise((i) => {
-                c.Z.addChangeListener(function t() {
-                    null != c.Z.getGuild(e) && (c.Z.removeChangeListener(t), i());
+            await new Promise((t) => {
+                c.Z.addChangeListener(function i() {
+                    null != c.Z.getGuild(e) && (c.Z.removeChangeListener(i), t());
                 });
             }),
                 o.Z.open(e, g, void 0, C),
-                null == t || t();
+                null == i || i();
         };
-    return (0, n.jsxs)(r.Y0X, {
-        transitionState: i,
+    return (0, n.jsxs)(u.Y0X, {
+        transitionState: t,
         'aria-labelledby': m,
         children: [
-            (0, n.jsxs)(r.xBx, {
+            (0, n.jsxs)(u.xBx, {
                 className: G.modalHeader,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(r.X6q, {
+                    (0, n.jsx)(u.X6q, {
                         id: m,
                         variant: 'heading-lg/medium',
-                        children: b
-                    }),
-                    (0, n.jsx)(r.olH, { onClick: t })
-                ]
-            }),
-            (0, n.jsxs)(r.hzk, {
-                className: G.modalContent,
-                children: [
-                    (0, n.jsx)(r.Text, {
-                        variant: 'text-md/medium',
                         children: f
                     }),
-                    (0, n.jsx)(r.LZC, { size: 16 }),
+                    (0, n.jsx)(u.olH, { onClick: i })
+                ]
+            }),
+            (0, n.jsxs)(u.hzk, {
+                className: G.modalContent,
+                children: [
+                    (0, n.jsx)(u.Text, {
+                        variant: 'text-md/medium',
+                        children: x
+                    }),
+                    (0, n.jsx)(u.LZC, { size: 16 }),
                     (0, n.jsxs)('div', {
                         className: G.guildSelection,
                         children: [
                             (0, n.jsx)('div', {
                                 className: G.guildSelectorContainer,
-                                children: (0, n.jsx)(h, {
-                                    guildId: I,
-                                    onChange: F,
-                                    isGuildIncluded: j
+                                children: (0, n.jsx)(b, {
+                                    guildId: j,
+                                    onChange: O,
+                                    isGuildIncluded: N
                                 })
                             }),
-                            (0, n.jsx)(r.zxk, {
+                            (0, n.jsx)(u.zxk, {
                                 onClick: () => {
-                                    d()(null != I, 'Guild ID must not be null on click'), o.Z.open(I, g, void 0, C), null == t || t();
+                                    s()(null != j, 'Guild ID must not be null on click'), o.Z.open(j, g, void 0, C), null == i || i();
                                 },
-                                disabled: null == I,
-                                children: v
+                                disabled: null == j,
+                                children: Z
                             })
                         ]
                     }),
-                    Z &&
+                    h &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(r.LZC, { size: 32 }),
-                                (0, n.jsx)(r.Text, {
+                                (0, n.jsx)(u.LZC, { size: 32 }),
+                                (0, n.jsx)(u.Text, {
                                     variant: 'text-md/medium',
-                                    children: x
-                                }),
-                                (0, n.jsx)(r.LZC, { size: 8 }),
-                                (0, n.jsx)(r.zxk, {
-                                    onClick: E,
-                                    submitting: k,
                                     children: S
+                                }),
+                                (0, n.jsx)(u.LZC, { size: 8 }),
+                                (0, n.jsx)(u.zxk, {
+                                    onClick: F,
+                                    submitting: I,
+                                    children: v
                                 })
                             ]
                         })

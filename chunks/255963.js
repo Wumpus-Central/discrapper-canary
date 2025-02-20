@@ -1,16 +1,16 @@
 n.d(t, {
-    D: () => r,
-    x: () => a
+    D: () => i,
+    x: () => o
 });
-var i = n(570140);
-let r = (e) => {
-    i.Z.dispatch({
+var r = n(570140);
+let i = (e) => {
+    r.Z.dispatch({
         type: 'TOGGLE_GUILD_EXPANDED_STATE',
         guildId: e
     });
 };
-function a(e) {
-    i.Z.dispatch({
+function o(e) {
+    r.Z.dispatch({
         type: 'EMOJI_INTERACTION_INITIATED',
         interaction: e
     });

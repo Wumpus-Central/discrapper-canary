@@ -1,11 +1,11 @@
 n.d(t, {
-    AN: () => o,
+    AN: () => s,
     LK: () => l,
-    TT: () => s
+    TT: () => a
 });
-var i = n(149765),
-    r = n(146085),
-    a = n(981631);
-let s = a.Plq.VIEW_CHANNEL,
-    o = i.$e(s, a.Plq.CONNECT),
-    l = i.$e(s, r.yP);
+var r = n(149765),
+    i = n(146085),
+    o = n(981631);
+let a = o.Plq.VIEW_CHANNEL,
+    s = r.$e(a, o.Plq.CONNECT),
+    l = r.$e(a, i.yP);

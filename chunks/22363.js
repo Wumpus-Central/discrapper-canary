@@ -1,42 +1,42 @@
-n.d(t, { Z: () => _ });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(646574),
-    o = n(543241),
+var i = n(120356),
+    o = n.n(i),
+    a = n(646574),
+    s = n(543241),
     l = n(747613),
-    u = n(533432),
-    c = n(149203),
+    c = n(533432),
+    u = n(149203),
     d = n(185923),
-    f = n(754595);
-let _ = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: r, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: y, onBurstReactionToggle: I, renderHeader: T } = e,
-        b = (0, i.jsxs)(i.Fragment, {
+    f = n(82845);
+let p = (e) => {
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: p, onKeyDown: _, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: b, onBurstReactionToggle: y, renderHeader: O } = e,
+        S = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(u.Z, {
-                    emojiListRef: _,
-                    gridNavigatorId: c.Vr,
-                    onKeyDown: p,
+                (0, r.jsx)(c.Z, {
+                    emojiListRef: p,
+                    gridNavigatorId: u.Vr,
+                    onKeyDown: _,
                     className: f.searchBar,
                     ref: g,
                     isFullRow: !1,
                     onFocus: h,
                     autoFocus: m,
-                    defaultSearchPlaceholder: (0, o.nV)(n, y)
+                    defaultSearchPlaceholder: (0, s.nV)(n, b)
                 }),
                 n === d.Hz.REACTION
-                    ? (0, i.jsx)('div', {
+                    ? (0, r.jsx)('div', {
                           className: f.burstToggle,
-                          children: (0, i.jsx)(s.Z, {
-                              checked: y,
-                              onClick: I
+                          children: (0, r.jsx)(a.Z, {
+                              checked: b,
+                              onClick: y
                           })
                       })
                     : null,
                 null != t
                     ? t
-                    : (0, i.jsx)(l.Z, {
+                    : (0, r.jsx)(l.Z, {
                           searchBarRef: g,
                           className: f.diversitySelector,
                           hasTabWrapper: E,
@@ -44,8 +44,8 @@ let _ = (e) => {
                       })
             ]
         });
-    return (0, i.jsx)('div', {
-        className: a()(f.header, r),
-        children: null != T ? T(b) : b
+    return (0, r.jsx)('div', {
+        className: o()(f.header, i),
+        children: null != O ? O(S) : S
     });
 };

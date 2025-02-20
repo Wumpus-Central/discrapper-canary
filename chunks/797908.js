@@ -1,73 +1,73 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(200651),
+n.d(t, { Z: () => m }), n(47120), n(266796);
+var r = n(200651),
     a = n(192379),
-    r = n(622535),
+    i = n(622535),
     l = n(481060),
-    s = n(783097),
-    o = n(66637),
+    o = n(783097),
+    s = n(66637),
     c = n(768581),
     d = n(956965),
     u = n(388032),
-    m = n(798807);
-let h = function (e) {
-    var t, n, h;
-    let { application: p, onSelectApplication: g, showCategory: _ = !1 } = e,
-        x = null === (t = p.categories) || void 0 === t ? void 0 : t[0],
-        [C, v] = a.useState(!1),
-        f = a.useCallback((e) => {
-            e && v(!0);
+    p = n(664454);
+let m = function (e) {
+    var t, n, m;
+    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
+        f = null === (t = h.categories) || void 0 === t ? void 0 : t[0],
+        [v, b] = a.useState(!1),
+        x = a.useCallback((e) => {
+            e && b(!0);
         }, []),
-        I = (0, s.lf)(p),
-        b = a.useCallback(() => {
-            g(p.id);
-        }, [g, p.id]),
-        j = a.useMemo(
+        C = (0, o.lf)(h),
+        j = a.useCallback(() => {
+            g(h.id);
+        }, [g, h.id]),
+        y = a.useMemo(
             () =>
-                C
+                v
                     ? c.ZP.getApplicationIconURL({
-                          id: p.id,
-                          icon: p.icon,
+                          id: h.id,
+                          icon: h.icon,
                           size: 48
                       })
                     : void 0,
-            [C, p]
+            [v, h]
         ),
-        S = _ && null != x;
-    return (0, i.jsx)(r.$, {
-        onChange: f,
-        active: !C,
-        children: (0, i.jsx)('div', {
-            className: m.container,
-            children: (0, i.jsxs)(o.Z, {
-                className: m.card,
-                onClick: b,
+        O = _ && null != f;
+    return (0, r.jsx)(i.$, {
+        onChange: x,
+        active: !v,
+        children: (0, r.jsx)('div', {
+            className: p.container,
+            children: (0, r.jsxs)(s.Z, {
+                className: p.card,
+                onClick: j,
                 onContextMenu: () => {},
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: m.header,
+                    (0, r.jsxs)('div', {
+                        className: p.header,
                         children: [
-                            (0, i.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 style: {
                                     width: '100%',
                                     display: 'block',
                                     aspectRatio: 16 / 9
                                 },
-                                children: C
-                                    ? (0, i.jsx)(d.Z, {
-                                          application: p,
+                                children: v
+                                    ? (0, r.jsx)(d.Z, {
+                                          application: h,
                                           bannerType: 'card',
-                                          iconURL: j
+                                          iconURL: y
                                       })
                                     : null
                             }),
-                            (0, i.jsx)('div', {
-                                className: m.avatarContainer,
+                            (0, r.jsx)('div', {
+                                className: p.avatarContainer,
                                 style: { height: 28 },
-                                children: C
-                                    ? (0, i.jsx)('img', {
-                                          src: j,
+                                children: v
+                                    ? (0, r.jsx)('img', {
+                                          src: y,
                                           alt: '',
-                                          className: m.avatar,
+                                          className: p.avatar,
                                           height: 48,
                                           width: 48,
                                           style: {
@@ -79,56 +79,56 @@ let h = function (e) {
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
-                        className: m.appDetails,
+                    (0, r.jsxs)('div', {
+                        className: p.appDetails,
                         children: [
-                            (0, i.jsx)('div', {
-                                className: m.titleContainer,
-                                children: (0, i.jsx)('div', {
-                                    className: m.title,
-                                    children: (0, i.jsx)(l.X6q, {
+                            (0, r.jsx)('div', {
+                                className: p.titleContainer,
+                                children: (0, r.jsx)('div', {
+                                    className: p.title,
+                                    children: (0, r.jsx)(l.X6q, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
-                                        className: m.appName,
-                                        children: p.name
+                                        className: p.appName,
+                                        children: h.name
                                     })
                                 })
                             }),
-                            S || I
-                                ? (0, i.jsxs)('div', {
-                                      className: m.infoContainer,
+                            O || C
+                                ? (0, r.jsxs)('div', {
+                                      className: p.infoContainer,
                                       children: [
-                                          S
-                                              ? (0, i.jsx)(l.Text, {
-                                                    className: m.appCategory,
+                                          O
+                                              ? (0, r.jsx)(l.Text, {
+                                                    className: p.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: x.name
+                                                    children: f.name
                                                 })
                                               : null,
-                                          S && I
-                                              ? (0, i.jsx)(l.Text, {
+                                          O && C
+                                              ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
                                                     children: '\u2022'
                                                 })
                                               : null,
-                                          I
-                                              ? (0, i.jsx)(l.Text, {
+                                          C
+                                              ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
-                                                    children: u.intl.string(u.t['/eVltr'])
+                                                    children: u.NW.string(u.t['/eVltr'])
                                                 })
                                               : null
                                       ]
                                   })
                                 : null,
-                            (0, i.jsx)(l.Text, {
-                                className: m.description,
+                            (0, r.jsx)(l.Text, {
+                                className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: S || I ? 2 : 3,
-                                children: null !== (h = null === (n = p.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== h ? h : p.description
+                                lineClamp: O || C ? 2 : 3,
+                                children: null !== (m = null === (n = h.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== m ? m : h.description
                             })
                         ]
                     })

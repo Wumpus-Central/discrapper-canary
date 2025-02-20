@@ -13,20 +13,20 @@ var l = n(442837),
     g = n(981631),
     b = n(388032);
 function Z(e) {
-    let { user: t, context: Z, label: v, joinCallVideo: p, id: O, onCall: N } = e,
+    let { user: t, context: Z, label: v, joinCallVideo: p, id: N, onCall: O } = e,
         m = (0, a.Aq)(),
         y = (0, l.e7)([s.default], () => s.default.getId() === t.id),
         h = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         j = (0, l.e7)([f.Z, c.Z], () => f.Z.getVoiceChannelId() === c.Z.getDMFromUserId(t.id));
     if (y || Z === g.IlC.POPOUT || j || t.bot || t.isProvisional) return null;
     let P = () => {
-            null == N || N(), o.Z.openPrivateChannel(t.id, !0, p), m.dispatch(g.CkL.POPOUT_CLOSE), (0, r.pTH)();
+            null == O || O(), o.Z.openPrivateChannel(t.id, !0, p), m.dispatch(g.CkL.POPOUT_CLOSE), (0, r.pTH)();
         },
-        x = !u.ZP.disableCallUserConfirmationPrompt;
+        W = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, i.jsx)(r.sNh, {
-        id: null != O ? O : 'call',
+        id: null != N ? N : 'call',
         label: null != v ? v : b.NW.string(b.t.JJogjo),
-        action: x
+        action: W
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await n.e('27157').then(n.bind(n, 736454));

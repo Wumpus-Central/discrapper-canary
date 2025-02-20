@@ -1,13 +1,13 @@
 n.d(t, {
     J7: () => l,
-    gf: () => s,
-    qm: () => r,
-    t7: () => a,
-    xv: () => o
+    gf: () => a,
+    qm: () => i,
+    t7: () => o,
+    xv: () => s
 });
-var i = n(70956);
-let r = 4,
-    a = 5,
-    s = 350,
-    o = i.Z.Millis.MINUTE,
-    l = 2 * i.Z.Millis.MINUTE;
+var r = n(70956);
+let i = 4,
+    o = 5,
+    a = 350,
+    s = r.Z.Millis.MINUTE,
+    l = 2 * r.Z.Millis.MINUTE;

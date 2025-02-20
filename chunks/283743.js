@@ -1,3 +1,3 @@
 n(876394);
-var i = n(387992);
-e.exports = i('Array', 'reverse');
+var r = n(387992);
+e.exports = r('Array', 'reverse');

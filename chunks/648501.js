@@ -1,90 +1,90 @@
-n.d(t, { Z: () => j });
-var i = n(200651);
+n.d(t, { Z: () => I });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    r = n(692547),
-    a = n(481060),
-    o = n(619915),
+var i = n(442837),
+    l = n(692547),
+    o = n(481060),
+    a = n(619915),
     s = n(456269),
     c = n(921711),
-    d = n(368442),
-    u = n(601070),
-    h = n(430824),
-    p = n(496675),
-    m = n(306680),
+    u = n(368442),
+    d = n(601070),
+    p = n(430824),
+    h = n(496675),
+    f = n(306680),
     g = n(979651),
-    f = n(968358),
-    _ = n(790901),
+    m = n(968358),
+    b = n(790901),
     v = n(714794),
-    C = n(355363),
-    x = n(687352),
-    I = n(876548),
-    Z = n(369272),
-    b = n(981631),
-    S = n(490897),
-    N = n(388032),
-    E = n(327262);
-function j(e) {
+    y = n(355363),
+    _ = n(687352),
+    O = n(876548),
+    j = n(25601),
+    C = n(981631),
+    x = n(490897),
+    P = n(388032),
+    S = n(160031);
+function I(e) {
     var t;
-    let { channel: n, isChannelSelected: j, isChannelCollapsed: y, voiceStates: T, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: w, isNewChannel: L, muted: M, resolvedUnreadSetting: D } = e,
-        G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
-        B = (0, o.ZP)(n),
-        O = (0, l.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, n)),
-        U = (0, l.e7)([g.Z], () => g.Z.hasVideo(n.id)),
-        V = (0, d.PK)(n.id) && n.isGuildStageVoice(),
-        F = (0, C.ZP)({
+    let { channel: n, isChannelSelected: I, isChannelCollapsed: N, voiceStates: Z, enableConnectedUserLimit: w, enableActivities: E, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: D, muted: R, resolvedUnreadSetting: L } = e,
+        M = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
+        k = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
+        G = (0, a.ZP)(n),
+        B = (0, i.e7)([h.Z], () => !h.Z.can(C.Plq.CONNECT, n)),
+        U = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
+        W = (0, u.PK)(n.id) && n.isGuildStageVoice(),
+        V = (0, y.ZP)({
             channel: n,
-            locked: O,
-            video: U || V,
-            selected: j
+            locked: B,
+            video: U || W,
+            selected: I
         }),
-        H = (0, l.e7)([u.Z], () => u.Z.getNewThreadCount(n.guild_id, n.id)),
-        z = (0, s.n2)(n.guild_id, n.id),
-        W = (0, l.e7)([h.Z], () => {
+        F = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        H = (0, s.n2)(n.guild_id, n.id),
+        z = (0, i.e7)([p.Z], () => {
             var e, t;
-            return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(b.oNc.COMMUNITY)) && void 0 !== t && t;
+            return null !== (t = null === (e = p.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(C.oNc.COMMUNITY)) && void 0 !== t && t;
         });
-    if ((0, v.Z)(G))
-        return (0, i.jsx)(Z.Z, {
-            mentionsCount: G,
+    if ((0, v.Z)(M))
+        return (0, r.jsx)(j.Z, {
+            mentionsCount: M,
             isMentionLowImportance: k
         });
-    if ((0, c.O)(R)) return (0, i.jsx)(c.Z, { locked: w });
-    if (L)
-        return (0, i.jsx)(a.IGR, {
-            text: N.intl.string(N.t.y2b7CA),
-            color: r.Z.unsafe_rawColors.BRAND_260.css,
-            className: E.newChannel
+    if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
+    if (D)
+        return (0, r.jsx)(o.IGR, {
+            text: P.NW.string(P.t.y2b7CA),
+            color: l.Z.unsafe_rawColors.BRAND_260.css,
+            className: S.newChannel
         });
-    if (!M && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
-        return (0, i.jsx)(a.Text, {
+    if (!R && L === x.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
+        return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: N.intl.format(N.t.GkAbqa, { count: (0, a.NGo)(H) })
+            children: P.NW.format(P.t.GkAbqa, { count: (0, o.NGo)(F) })
         });
-    if (!M && n.isForumLikeChannel() && null != z && z > 0)
-        return (0, i.jsx)(a.Text, {
+    if (!R && n.isForumLikeChannel() && null != H && H > 0)
+        return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, a.NGo)(z)
+            children: (0, o.NGo)(H)
         });
-    let q = null !== (t = null == T ? void 0 : T.length) && void 0 !== t ? t : 0;
-    return null != A && A && F
-        ? (0, i.jsx)(I.Z, {
+    let q = null !== (t = null == Z ? void 0 : Z.length) && void 0 !== t ? t : 0;
+    return null != w && w && V
+        ? (0, r.jsx)(O.Z, {
               userCount: q,
-              video: U || V,
+              video: U || W,
               channel: n
           })
-        : y && (0, f.a)(T) && W
-          ? (0, i.jsx)(a.IGR, {
-                text: N.intl.string(N.t.dI3q4u),
-                color: r.Z.unsafe_rawColors.RED_400.css
+        : N && (0, m.a)(Z) && z
+          ? (0, r.jsx)(o.IGR, {
+                text: P.NW.string(P.t.dI3q4u),
+                color: l.Z.unsafe_rawColors.RED_400.css
             })
-          : null != P && P && (0, _.u)(B)
-            ? (0, i.jsx)(x.Z, {
-                  embeddedApps: B,
-                  muted: M
+          : null != E && E && (0, b.u)(G)
+            ? (0, r.jsx)(_.Z, {
+                  embeddedApps: G,
+                  muted: R
               })
             : null;
 }

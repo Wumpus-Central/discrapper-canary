@@ -1,18 +1,18 @@
 function t(e) {
     let t = ['string', 'char', 'byte', 'int', 'long', 'bool', 'decimal', 'single', 'double', 'DateTime', 'xml', 'array', 'hashtable', 'void'],
         n = 'Add|Clear|Close|Copy|Enter|Exit|Find|Format|Get|Hide|Join|Lock|Move|New|Open|Optimize|Pop|Push|Redo|Remove|Rename|Reset|Resize|Search|Select|Set|Show|Skip|Split|Step|Switch|Undo|Unlock|Watch|Backup|Checkpoint|Compare|Compress|Convert|ConvertFrom|ConvertTo|Dismount|Edit|Expand|Export|Group|Import|Initialize|Limit|Merge|Mount|Out|Publish|Restore|Save|Sync|Unpublish|Update|Approve|Assert|Build|Complete|Confirm|Deny|Deploy|Disable|Enable|Install|Invoke|Register|Request|Restart|Resume|Start|Stop|Submit|Suspend|Uninstall|Unregister|Wait|Debug|Measure|Ping|Repair|Resolve|Test|Trace|Connect|Disconnect|Read|Receive|Send|Write|Block|Grant|Protect|Revoke|Unblock|Unprotect|Use|ForEach|Sort|Tee|Where',
-        i = '-and|-as|-band|-bnot|-bor|-bxor|-casesensitive|-ccontains|-ceq|-cge|-cgt|-cle|-clike|-clt|-cmatch|-cne|-cnotcontains|-cnotlike|-cnotmatch|-contains|-creplace|-csplit|-eq|-exact|-f|-file|-ge|-gt|-icontains|-ieq|-ige|-igt|-ile|-ilike|-ilt|-imatch|-in|-ine|-inotcontains|-inotlike|-inotmatch|-ireplace|-is|-isnot|-isplit|-join|-le|-like|-lt|-match|-ne|-not|-notcontains|-notin|-notlike|-notmatch|-or|-regex|-replace|-shl|-shr|-split|-wildcard|-xor',
-        r = {
+        r = '-and|-as|-band|-bnot|-bor|-bxor|-casesensitive|-ccontains|-ceq|-cge|-cgt|-cle|-clike|-clt|-cmatch|-cne|-cnotcontains|-cnotlike|-cnotmatch|-contains|-creplace|-csplit|-eq|-exact|-f|-file|-ge|-gt|-icontains|-ieq|-ige|-igt|-ile|-ilike|-ilt|-imatch|-in|-ine|-inotcontains|-inotlike|-inotmatch|-ireplace|-is|-isnot|-isplit|-join|-le|-like|-lt|-match|-ne|-not|-notcontains|-notin|-notlike|-notmatch|-or|-regex|-replace|-shl|-shr|-split|-wildcard|-xor',
+        i = {
             $pattern: /-?[A-z\.\-]+\b/,
             keyword: 'if else foreach return do while until elseif begin for trap data dynamicparam end break throw param continue finally in switch exit filter try process catch hidden static parameter',
             built_in: 'ac asnp cat cd CFS chdir clc clear clhy cli clp cls clv cnsn compare copy cp cpi cpp curl cvpa dbp del diff dir dnsn ebp echo|0 epal epcsv epsn erase etsn exsn fc fhx fl ft fw gal gbp gc gcb gci gcm gcs gdr gerr ghy gi gin gjb gl gm gmo gp gps gpv group gsn gsnp gsv gtz gu gv gwmi h history icm iex ihy ii ipal ipcsv ipmo ipsn irm ise iwmi iwr kill lp ls man md measure mi mount move mp mv nal ndr ni nmo npssc nsn nv ogv oh popd ps pushd pwd r rbp rcjb rcsn rd rdr ren ri rjb rm rmdir rmo rni rnp rp rsn rsnp rujb rv rvpa rwmi sajb sal saps sasv sbp sc scb select set shcm si sl sleep sls sort sp spjb spps spsv start stz sujb sv swmi tee trcm type wget where wjb write'
         },
-        a = /\w[\w\d]*((-)[\w\d]+)*/,
-        s = {
+        o = /\w[\w\d]*((-)[\w\d]+)*/,
+        a = {
             begin: '`[\\s\\S]',
             relevance: 0
         },
-        o = {
+        s = {
             className: 'variable',
             variants: [
                 { begin: /\$\B/ },
@@ -27,7 +27,7 @@ function t(e) {
             className: 'literal',
             begin: /\$(null|true|false)\b/
         },
-        u = {
+        c = {
             className: 'string',
             variants: [
                 {
@@ -40,8 +40,8 @@ function t(e) {
                 }
             ],
             contains: [
+                a,
                 s,
-                o,
                 {
                     className: 'variable',
                     begin: /\$[A-z]/,
@@ -49,7 +49,7 @@ function t(e) {
                 }
             ]
         },
-        c = {
+        u = {
             className: 'string',
             variants: [
                 {
@@ -79,11 +79,11 @@ function t(e) {
             ],
             contains: [d]
         }),
-        _ = {
+        p = {
             className: 'built_in',
             variants: [{ begin: '('.concat(n, ')+(-)[\\w\\d]+') }]
         },
-        p = {
+        _ = {
             className: 'class',
             beginKeywords: 'class enum',
             end: /\s*[{]/,
@@ -106,7 +106,7 @@ function t(e) {
                 },
                 {
                     className: 'title',
-                    begin: a,
+                    begin: o,
                     relevance: 0
                 },
                 {
@@ -114,7 +114,7 @@ function t(e) {
                     end: /\)/,
                     className: 'params',
                     relevance: 0,
-                    contains: [o]
+                    contains: [s]
                 }
             ]
         },
@@ -123,8 +123,8 @@ function t(e) {
             end: /$/,
             returnBegin: !0,
             contains: [
-                u,
                 c,
+                u,
                 {
                     className: 'keyword',
                     begin: /(using|assembly|command|module|namespace|type)/
@@ -135,7 +135,7 @@ function t(e) {
             variants: [
                 {
                     className: 'operator',
-                    begin: '('.concat(i, ')\\b')
+                    begin: '('.concat(r, ')\\b')
                 },
                 {
                     className: 'literal',
@@ -158,15 +158,15 @@ function t(e) {
             contains: [
                 {
                     className: 'keyword',
-                    begin: '('.concat(r.keyword.toString().replace(/\s/g, '|'), ')\\b'),
+                    begin: '('.concat(i.keyword.toString().replace(/\s/g, '|'), ')\\b'),
                     endsParent: !0,
                     relevance: 0
                 },
                 e.inherit(e.TITLE_MODE, { endsParent: !0 })
             ]
         },
-        y = [v, f, s, e.NUMBER_MODE, u, c, _, o, l, E],
-        I = {
+        b = [v, f, a, e.NUMBER_MODE, c, u, p, s, l, E],
+        y = {
             begin: /\[/,
             end: /\]/,
             excludeBegin: !0,
@@ -174,7 +174,7 @@ function t(e) {
             relevance: 0,
             contains: [].concat(
                 'self',
-                y,
+                b,
                 {
                     begin: '(' + t.join('|') + ')',
                     className: 'built_in',
@@ -188,13 +188,13 @@ function t(e) {
             )
         };
     return (
-        v.contains.unshift(I),
+        v.contains.unshift(y),
         {
             name: 'PowerShell',
             aliases: ['pwsh', 'ps', 'ps1'],
             case_insensitive: !0,
-            keywords: r,
-            contains: y.concat(p, h, m, g, I)
+            keywords: i,
+            contains: b.concat(_, h, m, g, y)
         }
     );
 }

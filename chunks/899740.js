@@ -1,6 +1,6 @@
-n.d(t, { q: () => r });
-var i = n(442837),
-    l = n(355298);
-function r() {
-    return (0, i.e7)([l.Z], () => l.Z.getMessageRequestsCount());
+n.d(t, { q: () => l });
+var r = n(442837),
+    i = n(355298);
+function l() {
+    return (0, r.e7)([i.Z], () => i.Z.getMessageRequestsCount());
 }

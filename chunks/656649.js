@@ -1,34 +1,34 @@
 n.d(t, {
-    KJ: () => d,
+    KJ: () => f,
     UV: () => u,
     vJ: () => s
 });
 var r = n(200651);
 n(192379);
-var c = n(120356),
-    o = n.n(c),
+var o = n(120356),
+    c = n.n(o),
     l = n(726542),
     i = n(981631),
-    a = n(490730);
+    a = n(471507);
 function s(e) {
     return null != e && Object.values(i.ABu).includes(e) ? e : null;
 }
 function u(e) {
     let { children: t, platformType: n } = e,
-        c = l.Z.get(n);
+        o = l.Z.get(n);
     return (0, r.jsx)('div', {
         className: a.verifyConnectedAccount,
         children: (0, r.jsxs)('div', {
-            children: [(0, r.jsx)(d, { platform: c }), t]
+            children: [(0, r.jsx)(f, { platform: o }), t]
         })
     });
 }
-function d(e) {
+function f(e) {
     let { platform: t, className: n } = e;
     return (0, r.jsxs)('div', {
-        className: o()(a.logos, n),
+        className: c()(a.logos, n),
         children: [
-            (0, r.jsx)('div', { className: o()(a.logo, a.logoDiscord) }),
+            (0, r.jsx)('div', { className: c()(a.logo, a.logoDiscord) }),
             (0, r.jsx)('div', { className: a.logosDivider }),
             (0, r.jsx)('div', {
                 className: a.logo,

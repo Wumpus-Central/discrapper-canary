@@ -1,15 +1,15 @@
-n.d(t, { F: () => a });
-var i = n(573654),
-    r = n(964742);
-function a(e) {
+n.d(t, { F: () => o });
+var r = n(573654),
+    i = n(964742);
+function o(e) {
     return function () {
         var t = e.getMonitor(),
             n = e.getRegistry();
-        s(t);
-        var i = t.getSourceId();
-        return null != i && (n.getSource(i, !0).endDrag(t, i), n.unpinSource()), { type: r.Bs };
+        a(t);
+        var r = t.getSourceId();
+        return null != r && (n.getSource(r, !0).endDrag(t, r), n.unpinSource()), { type: i.Bs };
     };
 }
-function s(e) {
-    (0, i.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
+function a(e) {
+    (0, r.k)(e.isDragging(), 'Cannot call endDrag while not dragging.');
 }

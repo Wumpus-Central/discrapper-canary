@@ -1,56 +1,56 @@
-t.d(n, { Z: () => m }), t(47120);
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    s = t.n(l),
-    a = t(692547),
-    r = t(481060),
-    o = t(259580),
-    c = t(196345),
-    d = t(137158),
-    u = t(388032),
-    x = t(42497);
-let m = function (e) {
-    let { channelId: n, formField: t, index: l, isDragEnabled: m, isDropHovered: h, onDrop: f, onEdit: v, onRemove: g, canRemove: j, title: C, actionsLocation: p, fieldStyle: N } = e,
-        R = t.values,
-        y = R.slice(0, 1),
-        w = R.length - y.length;
-    return (0, i.jsxs)(d.Z, {
-        field: t,
-        index: l,
-        isDragEnabled: m,
-        isDropHovered: h,
-        onDrop: f,
-        onEdit: v,
-        onRemove: g,
-        title: C,
-        canRemove: j,
-        actionsLocation: p,
-        fieldStyle: N,
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    c = n(692547),
+    s = n(481060),
+    a = n(259580),
+    l = n(196345),
+    u = n(137158),
+    d = n(388032),
+    f = n(327237);
+let p = function (e) {
+    let { channelId: t, formField: n, index: i, isDragEnabled: p, isDropHovered: b, onDrop: j, onEdit: y, onRemove: m, canRemove: g, title: O, actionsLocation: h, fieldStyle: v } = e,
+        x = n.values,
+        P = x.slice(0, 1),
+        w = x.length - P.length;
+    return (0, r.jsxs)(u.Z, {
+        field: n,
+        index: i,
+        isDragEnabled: p,
+        isDropHovered: b,
+        onDrop: j,
+        onEdit: y,
+        onRemove: m,
+        title: O,
+        canRemove: g,
+        actionsLocation: h,
+        fieldStyle: v,
         children: [
-            (0, i.jsx)(c.EK, {
-                className: s()(x.fieldBackground, { [x.withFooter]: 0 !== w }),
-                terms: y,
-                channelId: n
+            (0, r.jsx)(l.EK, {
+                className: o()(f.fieldBackground, { [f.withFooter]: 0 !== w }),
+                terms: P,
+                channelId: t
             }),
             0 !== w &&
-                (0, i.jsxs)(r.P3F, {
-                    className: s()(x.fieldFooterContainer, x.clickable),
-                    onClick: v,
+                (0, r.jsxs)(s.P3F, {
+                    className: o()(f.fieldFooterContainer, f.clickable),
+                    onClick: y,
                     children: [
-                        (0, i.jsx)(r.R94, {
-                            className: x.clickable,
-                            children: u.intl.format(u.t.jnhD0d, { count: w })
+                        (0, r.jsx)(s.R94, {
+                            className: f.clickable,
+                            children: d.NW.format(d.t.jnhD0d, { count: w })
                         }),
-                        (0, i.jsx)(o.Z, {
-                            className: x.termsFieldCaretIcon,
+                        (0, r.jsx)(a.Z, {
+                            className: f.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: a.Z.unsafe_rawColors.WHITE_500.css
+                            color: c.Z.unsafe_rawColors.WHITE_500.css
                         })
                     ]
                 }),
-            (0, i.jsx)(c.G0, {
+            (0, r.jsx)(l.G0, {
                 disabled: !0,
                 checked: !1
             })

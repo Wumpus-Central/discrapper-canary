@@ -1,10 +1,10 @@
 n.d(t, {
-    G7: () => s,
+    G7: () => a,
     bc: () => l,
-    g2: () => o
+    g2: () => s
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         kind: 'user',
         id: '2025-01_sensitive_content_defaults',
         label: 'Sensitive Content Defaults',
@@ -34,7 +34,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (0, i.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2025-01_sensitive_content_defaults_new_users',
         label: 'Sensitive Content Defaults - New Users',
@@ -64,16 +64,16 @@ let r = (0, i.B)({
             }
         ]
     });
-function s(e) {
-    let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
-        { enabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function a(e) {
+    let { enabled: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+        { enabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t || n;
 }
-function o(e) {
-    let { allBlur: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function s(e) {
+    let { allBlur: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t;
 }
 function l(e) {
-    let { mixed: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    let { mixed: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t;
 }

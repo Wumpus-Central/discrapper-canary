@@ -1,131 +1,131 @@
-s.d(t, {
-    W: () => S,
-    Z: () => A
+r.d(t, {
+    W: () => y,
+    Z: () => S
 }),
-    s(773603);
+    r(773603);
 var n,
-    r = s(200651),
-    i = s(192379),
-    l = s(120356),
-    a = s.n(l),
-    o = s(442837),
-    c = s(481060),
-    d = s(893776),
-    u = s(239091),
-    h = s(598077),
-    m = s(314897),
-    p = s(246946),
-    x = s(594174),
-    g = s(626135),
-    f = s(51144),
-    j = s(480387),
-    C = s(726745),
-    v = s(251423),
-    N = s(981631),
-    E = s(388032),
-    k = s(416906),
-    S = (((n = {})[(n.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (n[(n.SWITCHED = 1)] = 'SWITCHED'), (n[(n.REMOVED = 2)] = 'REMOVED'), n);
-function T(e) {
-    let { actionText: t, user: s, onAction: n } = e,
+    s = r(200651),
+    i = r(192379),
+    a = r(120356),
+    l = r.n(a),
+    o = r(442837),
+    c = r(481060),
+    u = r(893776),
+    d = r(239091),
+    h = r(598077),
+    p = r(314897),
+    m = r(246946),
+    f = r(594174),
+    x = r(626135),
+    g = r(51144),
+    N = r(480387),
+    j = r(726745),
+    v = r(251423),
+    C = r(981631),
+    O = r(388032),
+    b = r(559089),
+    y = (((n = {})[(n.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (n[(n.SWITCHED = 1)] = 'SWITCHED'), (n[(n.REMOVED = 2)] = 'REMOVED'), n);
+function E(e) {
+    let { actionText: t, user: r, onAction: n } = e,
         {
             currentUser: i,
-            hidePrivateData: l,
+            hidePrivateData: a,
             isAuthenticated: v
-        } = (0, o.cj)([x.default, p.Z, m.default], () => ({
-            currentUser: x.default.getCurrentUser(),
-            hidePrivateData: p.Z.hidePersonalInformation,
-            isAuthenticated: m.default.isAuthenticated()
+        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
+            currentUser: f.default.getCurrentUser(),
+            hidePrivateData: m.Z.hidePersonalInformation,
+            isAuthenticated: p.default.isAuthenticated()
         })),
-        S = new h.Z(s),
-        T = v && (null == i ? void 0 : i.id) === S.id,
-        A = s.tokenStatus === C.q.INVALID,
-        Z = l || S.isPomelo() ? null : '#'.concat(S.discriminator),
-        w = null;
+        y = new h.Z(r),
+        E = v && (null == i ? void 0 : i.id) === y.id,
+        S = r.tokenStatus === j.q.INVALID,
+        P = a || y.isPomelo() ? null : '#'.concat(y.discriminator),
+        T = null;
     return (
-        T
-            ? (w = (0, r.jsx)(c.Text, {
+        E
+            ? (T = (0, s.jsx)(c.Text, {
                   variant: 'text-sm/semibold',
-                  className: k.hintText,
+                  className: b.hintText,
                   color: 'text-positive',
-                  children: E.intl.string(E.t.seV8ys)
+                  children: O.NW.string(O.t.seV8ys)
               }))
-            : A &&
-              (w = (0, r.jsx)(c.Text, {
+            : S &&
+              (T = (0, s.jsx)(c.Text, {
                   variant: 'text-sm/semibold',
-                  className: k.hintText,
+                  className: b.hintText,
                   color: 'text-danger',
-                  children: E.intl.string(E.t.tYX2pq)
+                  children: O.NW.string(O.t.tYX2pq)
               })),
-        (0, r.jsx)('div', {
-            className: k.accountCard,
-            children: (0, r.jsxs)('div', {
-                className: k.userDetails,
+        (0, s.jsx)('div', {
+            className: b.accountCard,
+            children: (0, s.jsxs)('div', {
+                className: b.userDetails,
                 children: [
-                    (0, r.jsx)(c.qEK, {
-                        src: S.getAvatarURL(void 0, 40),
+                    (0, s.jsx)(c.qEK, {
+                        src: y.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
-                        'aria-label': s.username
+                        'aria-label': r.username
                     }),
-                    (0, r.jsxs)('div', {
-                        className: a()(k.usernameSection, { [k.hasActionMaxWidth]: !T }),
+                    (0, s.jsxs)('div', {
+                        className: l()(b.usernameSection, { [b.hasActionMaxWidth]: !E }),
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: k.username,
+                            (0, s.jsxs)('div', {
+                                className: b.username,
                                 children: [
-                                    (0, r.jsx)(c.Text, {
+                                    (0, s.jsx)(c.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        className: k.textOverflow,
-                                        children: f.ZP.getUserTag(S, {
+                                        className: b.textOverflow,
+                                        children: g.ZP.getUserTag(y, {
                                             mode: 'username',
-                                            identifiable: l ? 'never' : 'always'
+                                            identifiable: a ? 'never' : 'always'
                                         })
                                     }),
-                                    (0, r.jsx)(c.Text, {
+                                    (0, s.jsx)(c.Text, {
                                         color: 'header-secondary',
                                         variant: 'text-sm/normal',
-                                        children: Z
+                                        children: P
                                     })
                                 ]
                             }),
-                            w
+                            T
                         ]
                     }),
-                    (0, r.jsxs)('div', {
-                        className: k.userActions,
+                    (0, s.jsxs)('div', {
+                        className: b.userActions,
                         children: [
-                            !T &&
-                                (0, r.jsx)(c.zxk, {
+                            !E &&
+                                (0, s.jsx)(c.zxk, {
                                     onClick: function () {
-                                        if (A) {
-                                            n(0, s.id);
+                                        if (S) {
+                                            n(0, r.id);
                                             return;
                                         }
-                                        g.default.track(N.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: N.jXE.MANAGE_ACCOUNTS_MODAL } }), j.yD(s.id), n(1, s.id);
+                                        x.default.track(C.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: C.jXE.MANAGE_ACCOUNTS_MODAL } }), N.yD(r.id), n(1, r.id);
                                     },
                                     color: c.zxk.Colors.PRIMARY,
-                                    children: A ? E.intl.string(E.t['DSN+h4']) : t
+                                    children: S ? O.NW.string(O.t['DSN+h4']) : t
                                 }),
-                            (0, r.jsx)(c.zxk, {
-                                className: k.userActionMenu,
+                            (0, s.jsx)(c.zxk, {
+                                className: b.userActionMenu,
                                 onClick: function (e) {
-                                    (0, u.vq)(e, (e) => {
+                                    (0, d.vq)(e, (e) => {
                                         let { onSelect: t } = e;
-                                        return (0, r.jsx)(c.v2r, {
-                                            'aria-label': E.intl.string(E.t['41qiDQ']),
+                                        return (0, s.jsx)(c.v2r, {
+                                            'aria-label': O.NW.string(O.t['41qiDQ']),
                                             navId: 'manage-multi-account',
-                                            onClose: u.Zy,
+                                            onClose: d.Zy,
                                             onSelect: t,
-                                            children: (0, r.jsx)(c.sNh, {
+                                            children: (0, s.jsx)(c.sNh, {
                                                 id: 'remove-account',
-                                                label: E.intl.string(E.t.lSLMaW),
+                                                label: O.NW.string(O.t.lSLMaW),
                                                 action: () => {
                                                     (function () {
-                                                        d.Z.logout(null, s.id).finally(() => {
-                                                            j.Zd(s.id);
+                                                        u.Z.logout(null, r.id).finally(() => {
+                                                            N.Zd(r.id);
                                                         });
                                                         let e = {};
-                                                        null != i ? (e.section = N.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = N.Usc.LOGIN), g.default.track(N.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), n(2, s.id);
+                                                        null != i ? (e.section = C.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = C.Usc.LOGIN), x.default.track(C.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), n(2, r.id);
                                                     })(),
                                                         null != t && t();
                                                 },
@@ -137,11 +137,11 @@ function T(e) {
                                 size: c.zxk.Sizes.ICON,
                                 look: c.zxk.Looks.BLANK,
                                 color: c.zxk.Colors.WHITE,
-                                'aria-label': E.intl.string(E.t.PdRCRk),
-                                children: (0, r.jsx)(c.xhG, {
+                                'aria-label': O.NW.string(O.t.PdRCRk),
+                                children: (0, s.jsx)(c.xhG, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: k.overflowMenuIcon
+                                    className: b.overflowMenuIcon
                                 })
                             })
                         ]
@@ -151,31 +151,31 @@ function T(e) {
         })
     );
 }
-function A(e) {
-    let { actionText: t, onAction: s } = e,
-        { isLoading: n, multiAccountUsers: l } = (0, v.L)();
-    return (0, r.jsx)('div', {
-        className: k.list,
+function S(e) {
+    let { actionText: t, onAction: r } = e,
+        { isLoading: n, multiAccountUsers: a } = (0, v.L)();
+    return (0, s.jsx)('div', {
+        className: b.list,
         children: n
-            ? (0, r.jsx)(c.$jN, {})
-            : l.map((e, n) =>
-                  (0, r.jsxs)(
+            ? (0, s.jsx)(c.$jN, {})
+            : a.map((e, n) =>
+                  (0, s.jsxs)(
                       i.Fragment,
                       {
                           children: [
-                              (0, r.jsx)(
-                                  T,
+                              (0, s.jsx)(
+                                  E,
                                   {
                                       user: e,
                                       actionText: t,
-                                      onAction: s
+                                      onAction: r
                                   },
                                   e.id
                               ),
-                              l.length - 1 !== n &&
-                                  (0, r.jsx)('div', {
+                              a.length - 1 !== n &&
+                                  (0, s.jsx)('div', {
                                       role: 'separator',
-                                      className: k.separator
+                                      className: b.separator
                                   })
                           ]
                       },

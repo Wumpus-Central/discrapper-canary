@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './source-code-pro/sourcecodepro-700-bold.woff2': ['711313'],
     './gg-mono/ggmono-600-semibold.woff2': ['750499', '44999'],
     './gg-mono/ggmono-700-bold.woff2': ['757883'],
@@ -44,16 +44,16 @@ var i = {
     './noto-sans/notosans-600-semibold.woff2': ['381176'],
     './abc-ginto-nord/abcgintonord-800-extrabold.woff2': ['814727']
 };
-function r(e) {
-    if (!n.o(i, e))
+function i(e) {
+    if (!n.o(r, e))
         return Promise.resolve().then(function () {
             var t = Error("Cannot find module '" + e + "'");
             throw ((t.code = 'MODULE_NOT_FOUND'), t);
         });
-    var t = i[e],
-        r = t[0];
+    var t = r[e],
+        i = t[0];
     return Promise.all(t.slice(1).map(n.e)).then(function () {
-        return n.t(r, 17);
+        return n.t(i, 17);
     });
 }
-(r.keys = () => Object.keys(i)), (r.id = 959598), (e.exports = r);
+(i.keys = () => Object.keys(r)), (i.id = 959598), (e.exports = i);

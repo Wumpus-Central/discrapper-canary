@@ -125,7 +125,7 @@ function M(e, t, a, l) {
                 (0, o.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('33862'), n.e('93375'), n.e('37220'), n.e('22315')]).then(n.bind(n, 225138));
+                        let { default: e } = await Promise.all([n.e('93375'), n.e('37220'), n.e('22315')]).then(n.bind(n, 225138));
                         return (n) => {
                             var a, o;
                             return (0, r.jsx)(

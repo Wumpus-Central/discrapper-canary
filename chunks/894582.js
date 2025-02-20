@@ -1,79 +1,79 @@
-n.d(t, { Z: () => l });
-var a = n(987609),
-    r = n(190031),
-    i = n(192379),
-    c = n(616295),
-    o = 'hcaptcha-api-script-id',
+r.d(t, { Z: () => d });
+var n = r(987609),
+    a = r(190031),
+    i = r(192379),
+    o = r(616295),
+    c = 'hcaptcha-api-script-id',
     s = 'hcaptchaOnLoad',
     p = [],
-    d = function (e) {
+    l = function (e) {
         void 0 === e && (e = {});
-        var t = (0, c.as)(e.scriptLocation);
+        var t = (0, o.as)(e.scriptLocation);
         delete e.scriptLocation;
-        var n = (0, c.$h)(t),
-            a = p.find(function (e) {
-                return e.scope === n.window;
+        var r = (0, o.$h)(t),
+            n = p.find(function (e) {
+                return e.scope === r.window;
             });
-        if (n.document.getElementById(o) && a) return a.promise;
-        var r = new Promise(function (a, r) {
-            n.window[s] = a;
+        if (r.document.getElementById(c) && n) return n.promise;
+        var a = new Promise(function (n, a) {
+            r.window[s] = n;
             var i = e.apihost || 'https://js.hcaptcha.com';
             delete e.apihost;
-            var p = n.document.createElement('script');
-            (p.id = o),
+            var p = r.document.createElement('script');
+            (p.id = c),
                 (p.src = i + '/1/api.js?render=explicit&onload=' + s),
                 (p.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
                 (p.onerror = function (e) {
-                    return r('script-error');
+                    return a('script-error');
                 });
-            var d = (0, c.Ku)(e);
-            (p.src += '' !== d ? '&' + d : ''), t.appendChild(p);
+            var l = (0, o.Ku)(e);
+            (p.src += '' !== l ? '&' + l : ''), t.appendChild(p);
         });
         return (
             p.push({
-                promise: r,
-                scope: n.window
+                promise: a,
+                scope: r.window
             }),
-            r
+            a
         );
     };
-let l = (function (e) {
+let d = (function (e) {
     function t(t) {
-        var n;
+        var r;
         return (
-            ((n = e.call(this, t) || this)._hcaptcha = void 0),
-            (n.renderCaptcha = n.renderCaptcha.bind((0, a.Z)(n))),
-            (n.resetCaptcha = n.resetCaptcha.bind((0, a.Z)(n))),
-            (n.removeCaptcha = n.removeCaptcha.bind((0, a.Z)(n))),
-            (n.isReady = n.isReady.bind((0, a.Z)(n))),
-            (n.loadCaptcha = n.loadCaptcha.bind((0, a.Z)(n))),
-            (n.handleOnLoad = n.handleOnLoad.bind((0, a.Z)(n))),
-            (n.handleSubmit = n.handleSubmit.bind((0, a.Z)(n))),
-            (n.handleExpire = n.handleExpire.bind((0, a.Z)(n))),
-            (n.handleError = n.handleError.bind((0, a.Z)(n))),
-            (n.handleOpen = n.handleOpen.bind((0, a.Z)(n))),
-            (n.handleClose = n.handleClose.bind((0, a.Z)(n))),
-            (n.handleChallengeExpired = n.handleChallengeExpired.bind((0, a.Z)(n))),
-            (n.ref = i.createRef()),
-            (n.apiScriptRequested = !1),
-            (n.state = {
+            ((r = e.call(this, t) || this)._hcaptcha = void 0),
+            (r.renderCaptcha = r.renderCaptcha.bind((0, n.Z)(r))),
+            (r.resetCaptcha = r.resetCaptcha.bind((0, n.Z)(r))),
+            (r.removeCaptcha = r.removeCaptcha.bind((0, n.Z)(r))),
+            (r.isReady = r.isReady.bind((0, n.Z)(r))),
+            (r.loadCaptcha = r.loadCaptcha.bind((0, n.Z)(r))),
+            (r.handleOnLoad = r.handleOnLoad.bind((0, n.Z)(r))),
+            (r.handleSubmit = r.handleSubmit.bind((0, n.Z)(r))),
+            (r.handleExpire = r.handleExpire.bind((0, n.Z)(r))),
+            (r.handleError = r.handleError.bind((0, n.Z)(r))),
+            (r.handleOpen = r.handleOpen.bind((0, n.Z)(r))),
+            (r.handleClose = r.handleClose.bind((0, n.Z)(r))),
+            (r.handleChallengeExpired = r.handleChallengeExpired.bind((0, n.Z)(r))),
+            (r.ref = i.createRef()),
+            (r.apiScriptRequested = !1),
+            (r.state = {
                 isApiReady: !1,
                 isRemoved: !1,
                 elementId: t.id,
                 captchaId: ''
             }),
-            n
+            r
         );
     }
-    (0, r.Z)(t, e);
-    var n = t.prototype;
+    (0, a.Z)(t, e);
+    var r = t.prototype;
     return (
-        (n.componentDidMount = function () {
+        (r.componentDidMount = function () {
             var e = this,
-                t = (0, c.as)(this.props.scriptLocation),
-                n = (0, c.$h)(t);
-            if (((this._hcaptcha = n.window.hcaptcha || void 0), void 0 !== this._hcaptcha)) {
+                t = (0, o.as)(this.props.scriptLocation),
+                r = (0, o.$h)(t);
+            if (((this._hcaptcha = r.window.hcaptcha || void 0), void 0 !== this._hcaptcha)) {
                 this.setState({ isApiReady: !0 }, function () {
                     e.renderCaptcha();
                 });
@@ -81,37 +81,37 @@ let l = (function (e) {
             }
             this.loadCaptcha();
         }),
-        (n.componentWillUnmount = function () {
+        (r.componentWillUnmount = function () {
             var e = this.state.captchaId,
                 t = this._hcaptcha;
             this.isReady() && (t.reset(e), t.remove(e));
         }),
-        (n.shouldComponentUpdate = function (e, t) {
+        (r.shouldComponentUpdate = function (e, t) {
             return this.state.isApiReady === t.isApiReady && this.state.isRemoved === t.isRemoved;
         }),
-        (n.componentDidUpdate = function (e) {
+        (r.componentDidUpdate = function (e) {
             var t = this;
-            ['sitekey', 'size', 'theme', 'tabindex', 'languageOverride', 'endpoint'].every(function (n) {
-                return e[n] === t.props[n];
+            ['sitekey', 'size', 'theme', 'tabindex', 'languageOverride', 'endpoint'].every(function (r) {
+                return e[r] === t.props[r];
             }) ||
                 this.removeCaptcha(function () {
                     t.renderCaptcha();
                 });
         }),
-        (n.loadCaptcha = function () {
+        (r.loadCaptcha = function () {
             if (!this.apiScriptRequested) {
                 var e = this.props,
                     t = e.apihost,
-                    n = e.assethost,
-                    a = e.endpoint,
-                    r = e.host,
+                    r = e.assethost,
+                    n = e.endpoint,
+                    a = e.host,
                     i = e.imghost;
-                d({
+                l({
                     apihost: t,
-                    assethost: n,
-                    endpoint: a,
+                    assethost: r,
+                    endpoint: n,
                     hl: e.languageOverride,
-                    host: r,
+                    host: a,
                     imghost: i,
                     recaptchacompat: !1 === e.reCaptchaCompat ? 'off' : null,
                     reportapi: e.reportapi,
@@ -125,7 +125,7 @@ let l = (function (e) {
                     (this.apiScriptRequested = !0);
             }
         }),
-        (n.renderCaptcha = function (e) {
+        (r.renderCaptcha = function (e) {
             if (this.state.isApiReady) {
                 var t = Object.assign(
                         {
@@ -142,11 +142,11 @@ let l = (function (e) {
                             languageOverride: void 0
                         }
                     ),
-                    n = this._hcaptcha.render(this.ref.current, t);
+                    r = this._hcaptcha.render(this.ref.current, t);
                 this.setState(
                     {
                         isRemoved: !1,
-                        captchaId: n
+                        captchaId: r
                     },
                     function () {
                         e && e();
@@ -154,88 +154,88 @@ let l = (function (e) {
                 );
             }
         }),
-        (n.resetCaptcha = function () {
+        (r.resetCaptcha = function () {
             var e = this.state.captchaId,
                 t = this._hcaptcha;
             this.isReady() && t.reset(e);
         }),
-        (n.removeCaptcha = function (e) {
+        (r.removeCaptcha = function (e) {
             var t = this.state.captchaId,
-                n = this._hcaptcha;
+                r = this._hcaptcha;
             this.isReady() &&
                 this.setState({ isRemoved: !0 }, function () {
-                    n.remove(t), e && e();
+                    r.remove(t), e && e();
                 });
         }),
-        (n.handleOnLoad = function () {
+        (r.handleOnLoad = function () {
             var e = this;
             this.setState({ isApiReady: !0 }, function () {
-                var t = (0, c.as)(e.props.scriptLocation),
-                    n = (0, c.$h)(t);
-                (e._hcaptcha = n.window.hcaptcha),
+                var t = (0, o.as)(e.props.scriptLocation),
+                    r = (0, o.$h)(t);
+                (e._hcaptcha = r.window.hcaptcha),
                     e.renderCaptcha(function () {
                         var t = e.props.onLoad;
                         t && t();
                     });
             });
         }),
-        (n.handleSubmit = function (e) {
+        (r.handleSubmit = function (e) {
             var t = this.props.onVerify,
-                n = this.state,
-                a = n.isRemoved,
-                r = n.captchaId,
+                r = this.state,
+                n = r.isRemoved,
+                a = r.captchaId,
                 i = this._hcaptcha;
-            if (void 0 !== i && !a) {
-                var c = i.getResponse(r),
-                    o = i.getRespKey(r);
-                t && t(c, o);
+            if (void 0 !== i && !n) {
+                var o = i.getResponse(a),
+                    c = i.getRespKey(a);
+                t && t(o, c);
             }
         }),
-        (n.handleExpire = function () {
+        (r.handleExpire = function () {
             var e = this.props.onExpire,
                 t = this.state.captchaId,
-                n = this._hcaptcha;
-            this.isReady() && (n.reset(t), e && e());
+                r = this._hcaptcha;
+            this.isReady() && (r.reset(t), e && e());
         }),
-        (n.handleError = function (e) {
+        (r.handleError = function (e) {
             var t = this.props.onError,
-                n = this.state.captchaId,
-                a = this._hcaptcha;
-            this.isReady() && a.reset(n), t && t(e);
+                r = this.state.captchaId,
+                n = this._hcaptcha;
+            this.isReady() && n.reset(r), t && t(e);
         }),
-        (n.isReady = function () {
+        (r.isReady = function () {
             var e = this.state,
                 t = e.isApiReady,
-                n = e.isRemoved;
-            return t && !n;
+                r = e.isRemoved;
+            return t && !r;
         }),
-        (n.handleOpen = function () {
+        (r.handleOpen = function () {
             this.isReady() && this.props.onOpen && this.props.onOpen();
         }),
-        (n.handleClose = function () {
+        (r.handleClose = function () {
             this.isReady() && this.props.onClose && this.props.onClose();
         }),
-        (n.handleChallengeExpired = function () {
+        (r.handleChallengeExpired = function () {
             this.isReady() && this.props.onChalExpired && this.props.onChalExpired();
         }),
-        (n.execute = function (e) {
+        (r.execute = function (e) {
             void 0 === e && (e = null);
             var t = this.state.captchaId,
-                n = this._hcaptcha;
-            if (this.isReady()) return e && 'object' != typeof e && (e = null), n.execute(t, e);
+                r = this._hcaptcha;
+            if (this.isReady()) return e && 'object' != typeof e && (e = null), r.execute(t, e);
         }),
-        (n.setData = function (e) {
+        (r.setData = function (e) {
             var t = this.state.captchaId,
-                n = this._hcaptcha;
-            this.isReady() && (e && 'object' != typeof e && (e = null), n.setData(t, e));
+                r = this._hcaptcha;
+            this.isReady() && (e && 'object' != typeof e && (e = null), r.setData(t, e));
         }),
-        (n.getResponse = function () {
+        (r.getResponse = function () {
             return this._hcaptcha.getResponse(this.state.captchaId);
         }),
-        (n.getRespKey = function () {
+        (r.getRespKey = function () {
             return this._hcaptcha.getRespKey(this.state.captchaId);
         }),
-        (n.render = function () {
+        (r.render = function () {
             var e = this.state.elementId;
             return i.createElement('div', {
                 ref: this.ref,

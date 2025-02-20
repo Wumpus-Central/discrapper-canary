@@ -1,22 +1,22 @@
-var i = n(42848),
-    r = 4294967294,
-    a = Math.floor,
-    s = Math.min;
-function o(e, t, n, o) {
+var r = n(42848),
+    i = 4294967294,
+    o = Math.floor,
+    a = Math.min;
+function s(e, t, n, s) {
     var l = 0,
-        u = null == e ? 0 : e.length;
-    if (0 === u) return 0;
-    for (var c = (t = n(t)) != t, d = null === t, f = i(t), _ = void 0 === t; l < u; ) {
-        var p = a((l + u) / 2),
-            h = n(e[p]),
+        c = null == e ? 0 : e.length;
+    if (0 === c) return 0;
+    for (var u = (t = n(t)) != t, d = null === t, f = r(t), p = void 0 === t; l < c; ) {
+        var _ = o((l + c) / 2),
+            h = n(e[_]),
             m = void 0 !== h,
             g = null === h,
             E = h == h,
-            v = i(h);
-        if (c) var y = o || E;
-        else y = _ ? E && (o || m) : d ? E && m && (o || !g) : f ? E && m && !g && (o || !v) : !g && !v && (o ? h <= t : h < t);
-        y ? (l = p + 1) : (u = p);
+            v = r(h);
+        if (u) var b = s || E;
+        else b = p ? E && (s || m) : d ? E && m && (s || !g) : f ? E && m && !g && (s || !v) : !g && !v && (s ? h <= t : h < t);
+        b ? (l = _ + 1) : (c = _);
     }
-    return s(u, r);
+    return a(c, i);
 }
-e.exports = o;
+e.exports = s;

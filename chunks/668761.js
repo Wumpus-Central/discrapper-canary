@@ -4,28 +4,28 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    l = n(312839),
-    a = n(556296),
-    o = n(13140),
-    r = n(981631),
-    d = n(987650),
-    c = n(388032);
+var r = n(481060),
+    s = n(312839),
+    o = n(556296),
+    l = n(13140),
+    a = n(981631),
+    c = n(987650),
+    d = n(388032);
 function u() {
-    let { trackView: e, trackClick: t } = (0, l.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
-        n = a.ZP.getKeybindForAction(r.kg4.SAVE_CLIP);
+    let { trackView: e, trackClick: t } = (0, s.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
+        n = o.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let u = o.BB(n.shortcut, !0);
+    let u = l.BB(n.shortcut, !0);
     return {
-        title: c.intl.format(c.t.S5uhCA, {
+        title: d.NW.format(d.t.S5uhCA, {
             keybind: u,
             keybindHook: () =>
                 (0, i.jsx)('span', {
                     style: { display: 'inline-block' },
-                    children: (0, i.jsx)(s.M2$, { shortcut: u })
+                    children: (0, i.jsx)(r.M2$, { shortcut: u })
                 })
         }),
-        icon: (0, i.jsx)(s.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'xs',
             color: 'currentColor'
         }),
@@ -38,10 +38,10 @@ function u() {
     };
 }
 function h(e) {
-    let { trackView: t, trackClick: n } = (0, l.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
+    let { trackView: t, trackClick: n } = (0, s.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(s.AlX, {
+        icon: (0, i.jsx)(r.AlX, {
             size: 'xs',
             color: 'currentColor'
         }),

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => l });
-var i = n(192379),
-    r = n(320582),
-    a = n(298213),
-    s = n(749302),
-    o = n(388032);
+var r = n(192379),
+    i = n(320582),
+    o = n(298213),
+    a = n(749302),
+    s = n(388032);
 function l(e) {
     let { user: t } = e,
-        n = (0, r.vh)(t.id),
-        l = i.useCallback(
+        n = (0, i.vh)(t.id),
+        l = r.useCallback(
             (e) => {
-                a.Z.acceptFriendRequest({
+                o.Z.acceptFriendRequest({
                     userId: t.id,
                     applicationId: e.id,
                     location: 'Context Menu'
@@ -17,11 +17,11 @@ function l(e) {
             },
             [t.id]
         );
-    return (0, s.Z)({
+    return (0, a.Z)({
         user: t,
         gameRelationships: n,
         menuItemId: 'add-game-friend',
-        label: o.intl.string(o.t.X76oLC),
+        label: s.NW.string(s.t.X76oLC),
         onClick: l
     });
 }

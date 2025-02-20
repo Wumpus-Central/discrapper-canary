@@ -11,9 +11,9 @@ var i = t(200651),
     m = t(626135),
     _ = t(44609),
     p = t(731971),
-    x = t(981631),
-    g = t(388032),
-    N = t(181550);
+    N = t(981631),
+    x = t(388032),
+    g = t(276705);
 let h = () => {
     var e;
     let [n, t] = l.useState(!1),
@@ -22,35 +22,35 @@ let h = () => {
         A = null === (e = o.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable,
         T = (0, _.m4)({ location: 'InviteSettingsControls' });
     return (0, i.jsxs)('div', {
-        className: r()(N.editProfileContainer, { [N.opened]: n }),
+        className: r()(g.editProfileContainer, { [g.opened]: n }),
         children: [
             (0, i.jsxs)(s.P3F, {
-                className: N.header,
+                className: g.header,
                 onClick: () => {
-                    n || m.default.track(x.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), t(!n);
+                    n || m.default.track(N.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED), t(!n);
                 },
                 children: [
                     (0, i.jsx)('div', {
-                        className: N.headerIconWrapper,
+                        className: g.headerIconWrapper,
                         children: (0, i.jsx)(s.ewm, { size: 'md' })
                     }),
                     (0, i.jsxs)('div', {
-                        className: N.title,
+                        className: g.title,
                         children: [
                             (0, i.jsx)(s.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.A5wHQ0)
+                                children: x.NW.string(x.t.A5wHQ0)
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: g.intl.string(g.t.UKCSER)
+                                children: x.NW.string(x.t.UKCSER)
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: r()(N.caret, { [N.opened]: n }),
+                        className: r()(g.caret, { [g.opened]: n }),
                         children: (0, i.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -60,39 +60,39 @@ let h = () => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: r()(N.customizationSection, { [N.opened]: n }, A ? null : N.condensed),
+                className: r()(g.customizationSection, { [g.opened]: n }, A ? null : g.condensed),
                 children: [
                     A &&
                         (0, i.jsxs)('div', {
-                            className: N.serverNickname,
+                            className: g.serverNickname,
                             children: [
                                 (0, i.jsx)(s.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: g.intl.string(g.t.me1lRk)
+                                    children: x.NW.string(x.t.me1lRk)
                                 }),
                                 (0, i.jsx)(s.oil, {
-                                    placeholder: g.intl.string(g.t['09Q8ys']),
-                                    maxLength: x.l$U,
+                                    placeholder: x.NW.string(x.t['09Q8ys']),
+                                    maxLength: N.l$U,
                                     value: h,
                                     onChange: f
                                 })
                             ]
                         }),
                     (0, i.jsx)(u.Z, {
-                        title: g.intl.string(g.t['/2ed39']),
+                        title: x.NW.string(x.t['/2ed39']),
                         value: v,
                         onChange: j
                     }),
                     a &&
                         (0, i.jsx)(u.Z, {
-                            title: g.intl.string(g.t.bN4m1N),
+                            title: x.NW.string(x.t.bN4m1N),
                             value: E,
                             onChange: S
                         }),
                     T &&
                         (0, i.jsx)(u.Z, {
-                            title: g.intl.string(g.t['0nZCqK']),
+                            title: x.NW.string(x.t['0nZCqK']),
                             value: I,
                             onChange: C
                         })

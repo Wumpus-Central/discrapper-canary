@@ -1,15 +1,15 @@
-function i(e, t) {
-    if (r('noDeprecation')) return e;
+function r(e, t) {
+    if (i('noDeprecation')) return e;
     var n = !1;
     return function () {
         if (!n) {
-            if (r('throwDeprecation')) throw Error(t);
-            r('traceDeprecation') ? console.trace(t) : console.warn(t), (n = !0);
+            if (i('throwDeprecation')) throw Error(t);
+            i('traceDeprecation') ? console.trace(t) : console.warn(t), (n = !0);
         }
         return e.apply(this, arguments);
     };
 }
-function r(e) {
+function i(e) {
     try {
         if (!n.g.localStorage) return !1;
     } catch (e) {
@@ -18,4 +18,4 @@ function r(e) {
     var t = n.g.localStorage[e];
     return null != t && 'true' === String(t).toLowerCase();
 }
-e.exports = i;
+e.exports = r;

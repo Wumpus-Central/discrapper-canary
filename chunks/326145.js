@@ -1,36 +1,36 @@
-n.d(t, { Z: () => c });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(745752),
-    s = n(17181),
-    o = n(388032),
-    d = n(957050);
-function c(e) {
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(745752),
+    a = n(17181),
+    s = n(388032),
+    c = n(221740);
+function u(e) {
     let { guildId: t, channelId: n } = e,
-        c = l.useCallback(() => {
+        u = i.useCallback(() => {
             null != t &&
                 null != n &&
-                ((0, a.I1)(t),
-                (0, s.default)({
+                ((0, o.I1)(t),
+                (0, a.default)({
                     guildId: t,
                     returnChannelId: n
                 }));
         }, [t, n]);
-    return (0, i.jsx)('div', {
-        className: d.container,
-        children: (0, i.jsxs)('div', {
-            className: d.explainerContainer,
+    return (0, r.jsx)('div', {
+        className: c.container,
+        children: (0, r.jsxs)('div', {
+            className: c.explainerContainer,
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, r.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    children: o.intl.string(o.t.FWtdQk)
+                    children: s.NW.string(s.t.FWtdQk)
                 }),
-                (0, i.jsx)(r.zxk, {
-                    onClick: c,
-                    children: (0, i.jsx)(r.Text, {
+                (0, r.jsx)(l.zxk, {
+                    onClick: u,
+                    children: (0, r.jsx)(l.Text, {
                         variant: 'text-md/medium',
-                        children: o.intl.string(o.t.VVFjAA)
+                        children: s.NW.string(s.t.VVFjAA)
                     })
                 })
             ]

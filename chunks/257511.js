@@ -1,25 +1,25 @@
-n.d(t, { Z: () => r }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => o }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(479099),
-    a = n(112118);
-function r(e) {
+var i = n(479099),
+    l = n(890604);
+function o(e) {
     let { appliedTags: t, setAppliedTags: n } = e,
-        r =
+        o =
             null != n
                 ? (e) => {
                       t.has(e) && (t.delete(e), n(new Set(t)));
                   }
                 : void 0;
-    return (0, i.jsx)('div', {
-        className: a.tags,
+    return (0, r.jsx)('div', {
+        className: l.tags,
         children: Array.from(t).map((e) =>
-            (0, i.jsx)(
-                l.Z,
+            (0, r.jsx)(
+                i.Z,
                 {
                     tag: e,
-                    onRemove: r,
-                    size: null == r ? l.Z.Sizes.SMALL : l.Z.Sizes.MEDIUM
+                    onRemove: o,
+                    size: null == o ? i.Z.Sizes.SMALL : i.Z.Sizes.MEDIUM
                 },
                 e.id
             )

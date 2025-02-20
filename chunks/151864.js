@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c }), n(653041);
-var i,
-    l = n(442837),
-    r = n(570140),
-    a = n(765305);
-function s(e, t, n) {
+n.d(t, { Z: () => u }), n(653041);
+var r,
+    i = n(442837),
+    l = n(570140),
+    o = n(765305);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,38 +16,38 @@ function s(e, t, n) {
         e
     );
 }
-let o = { hiddenEventsAndStages: [] };
-class d extends (i = l.ZP.PersistedStore) {
+let s = { hiddenEventsAndStages: [] };
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && null != e.hiddenEventsAndStages && (o = e);
+        null != e && null != e.hiddenEventsAndStages && (s = e);
     }
     isLiveChannelNoticeHidden(e) {
         let { eventId: t, stageId: n } = e;
-        return !!(null != n && o.hiddenEventsAndStages.includes('stage-'.concat(n))) || (null != t && o.hiddenEventsAndStages.includes('event-'.concat(t)));
+        return !!(null != n && s.hiddenEventsAndStages.includes('stage-'.concat(n))) || (null != t && s.hiddenEventsAndStages.includes('event-'.concat(t)));
     }
     getState() {
-        return o;
+        return s;
     }
 }
-s(d, 'displayName', 'LiveChannelNoticesStore'), s(d, 'persistKey', 'liveChannelNotices_v2');
-let c = new d(r.Z, {
+a(c, 'displayName', 'LiveChannelNoticesStore'), a(c, 'persistKey', 'liveChannelNotices_v2');
+let u = new c(l.Z, {
     LIVE_CHANNEL_NOTICE_HIDE: function (e) {
         let { eventId: t, stageId: n } = e;
-        null != t ? o.hiddenEventsAndStages.push('event-'.concat(t)) : null != n && o.hiddenEventsAndStages.push('stage-'.concat(n));
+        null != t ? s.hiddenEventsAndStages.push('event-'.concat(t)) : null != n && s.hiddenEventsAndStages.push('stage-'.concat(n));
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e,
             n = 'event-'.concat(t.id);
-        o.hiddenEventsAndStages.includes(n) && (t.status === a.p1.CANCELED || t.status === a.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+        s.hiddenEventsAndStages.includes(n) && (t.status === o.p1.CANCELED || t.status === o.p1.COMPLETED) && (s.hiddenEventsAndStages = s.hiddenEventsAndStages.filter((e) => e !== n));
     },
     GUILD_SCHEDULED_EVENT_DELETE: function (e) {
         let { guildScheduledEvent: t } = e,
             n = 'event-'.concat(t.id);
-        o.hiddenEventsAndStages.includes(n) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+        s.hiddenEventsAndStages.includes(n) && (s.hiddenEventsAndStages = s.hiddenEventsAndStages.filter((e) => e !== n));
     },
     STAGE_INSTANCE_DELETE: function (e) {
         let { instance: t } = e,
             n = 'stage-'.concat(t.id);
-        o.hiddenEventsAndStages.includes(n) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+        s.hiddenEventsAndStages.includes(n) && (s.hiddenEventsAndStages = s.hiddenEventsAndStages.filter((e) => e !== n));
     }
 });

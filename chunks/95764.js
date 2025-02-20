@@ -1,70 +1,70 @@
 n.d(t, { Z: () => g });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(40851),
-    s = n(357156),
-    o = n(390322),
+var i = n(442837),
+    l = n(481060),
+    o = n(40851),
+    a = n(357156),
+    s = n(390322),
     c = n(88479),
-    d = n(592125),
-    u = n(15274),
-    h = n(482241),
-    p = n(389303),
-    m = n(554747),
-    f = n(388032);
+    u = n(592125),
+    d = n(15274),
+    p = n(482241),
+    h = n(389303),
+    f = n(554747),
+    m = n(388032);
 function g(e) {
     let { channelId: t, onClick: n } = e,
-        g = (0, r.bp)(),
-        _ = (0, m.qY)(t),
-        C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: x } = (0, s.XJ)(C),
-        v = x(_);
-    if (null == _) return null;
-    let E = () => {
-            if (null != C && (0, p.Z)(C)) {
-                (0, u.lC)(C, g);
+        g = (0, o.bp)(),
+        b = (0, f.qY)(t),
+        _ = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]),
+        { canManageGuildEvent: C } = (0, a.XJ)(_),
+        v = C(b);
+    if (null == b) return null;
+    let y = () => {
+            if (null != _ && (0, h.Z)(_)) {
+                (0, d.lC)(_, g);
                 return;
             }
             n();
         },
-        I = () => {
-            h.Z.endEvent(_.id, _.guild_id);
+        x = () => {
+            p.Z.endEvent(b.id, b.guild_id);
         };
     return v
-        ? (0, i.jsx)(a.yRy, {
+        ? (0, r.jsx)(l.yRy, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(o.Z, {
-                      children: (0, i.jsx)(a.v2r, {
+                  return (0, r.jsx)(s.Z, {
+                      children: (0, r.jsx)(l.v2r, {
                           navId: 'exit-options',
                           onSelect: () => {},
-                          'aria-label': f.intl.string(f.t['K6/mk5']),
+                          'aria-label': m.NW.string(m.t['K6/mk5']),
                           onClose: t,
-                          children: (0, i.jsx)(a.sNh, {
+                          children: (0, r.jsx)(l.sNh, {
                               id: 'end-voice-event',
                               color: 'danger',
-                              action: I,
-                              label: f.intl.string(f.t.qaYzPD),
-                              icon: a.k$p
+                              action: x,
+                              label: m.NW.string(m.t.qaYzPD),
+                              icon: l.k$p
                           })
                       })
                   });
               },
               align: 'center',
               position: 'top',
-              animation: a.yRy.Animation.FADE,
+              animation: l.yRy.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(c.Z, {
-                      label: f.intl.string(f.t['6vrfgo']),
-                      onClick: E,
+                  return (0, r.jsx)(c.Z, {
+                      label: m.NW.string(m.t['6vrfgo']),
+                      onClick: y,
                       onPopoutClick: t
                   });
               }
           })
-        : (0, i.jsx)(c.Z, {
-              label: f.intl.string(f.t['6vrfgo']),
+        : (0, r.jsx)(c.Z, {
+              label: m.NW.string(m.t['6vrfgo']),
               onClick: n
           });
 }

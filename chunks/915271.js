@@ -1,57 +1,57 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    s = n(481060),
-    o = n(873115),
+n.d(t, { Z: () => _ });
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    s = n(873115),
     l = n(219929),
-    u = n(618541),
-    c = n(975060),
+    c = n(618541),
+    u = n(975060),
     d = n(388032),
-    f = n(919604);
-class _ extends r.PureComponent {
+    f = n(683138);
+class p extends i.PureComponent {
     componentDidMount() {
-        null != this.props.venmoClient && o.by();
+        null != this.props.venmoClient && s.by();
     }
     componentWillUnmount() {
-        o.RS().then(() => o.ib());
+        s.RS().then(() => s.ib());
     }
     render() {
         let { venmoUsername: e, className: t, venmoClient: n } = this.props,
-            r = null != e && '' !== e;
-        return (0, i.jsxs)('div', {
+            i = null != e && '' !== e;
+        return (0, r.jsxs)('div', {
             className: t,
             children: [
-                (0, i.jsx)(l.ZP, {
+                (0, r.jsx)(l.ZP, {
                     type: l.ZP.Types.VENMO,
                     size: l.Uy.MEDIUM,
                     className: f.venmoIcon
                 }),
-                r
-                    ? (0, i.jsxs)(i.Fragment, {
+                i
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(s.X6q, {
+                              (0, r.jsx)(a.X6q, {
                                   variant: e.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
                                   className: f.connectionInstructions,
-                                  children: d.intl.format(d.t.DowIra, { venmoUsername: e })
+                                  children: d.NW.format(d.t.DowIra, { venmoUsername: e })
                               }),
-                              (0, i.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-md/medium',
                                   className: f.connectionInstructions,
-                                  children: d.intl.string(d.t.kmEvnZ)
+                                  children: d.NW.string(d.t.kmEvnZ)
                               })
                           ]
                       })
-                    : (0, i.jsx)(s.Text, {
+                    : (0, r.jsx)(a.Text, {
                           variant: 'text-md/medium',
                           className: f.connectionInstructions,
-                          children: null == n ? d.intl.string(d.t['2ouZDQ']) : d.intl.string(d.t.mIL6JS)
+                          children: null == n ? d.NW.string(d.t['2ouZDQ']) : d.NW.string(d.t.mIL6JS)
                       })
             ]
         });
     }
 }
-let p = a.ZP.connectStores([u.Z, c.Z], () => ({
-    venmoUsername: c.Z.venmoUsername,
-    venmoClient: u.Z.getVenmoClient()
-}))(_);
+let _ = o.ZP.connectStores([c.Z, u.Z], () => ({
+    venmoUsername: u.Z.venmoUsername,
+    venmoClient: c.Z.getVenmoClient()
+}))(p);

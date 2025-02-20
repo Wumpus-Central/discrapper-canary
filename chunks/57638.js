@@ -1,5 +1,5 @@
-r(250668)('Float64', function (n) {
-    return function (t, r, e) {
-        return n(this, t, r, e);
+r(250668)('Float64', function (t) {
+    return function (n, r, e) {
+        return t(this, n, r, e);
     };
 });

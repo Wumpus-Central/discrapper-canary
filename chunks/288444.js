@@ -1,12 +1,12 @@
 n.d(t, { Z: () => E }), n(47120);
-var i = n(846519),
-    r = n(904245),
-    a = n(287734),
-    s = n(147913),
-    o = n(317381),
+var r = n(846519),
+    i = n(904245),
+    o = n(287734),
+    a = n(147913),
+    s = n(317381),
     l = n(592125),
-    u = n(979651),
-    c = n(938475),
+    c = n(979651),
+    u = n(938475),
     d = n(388032);
 function f(e, t, n) {
     return (
@@ -21,35 +21,35 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 3,
-    p = 180000;
+let p = 3,
+    _ = 180000;
 function h() {
-    let e = u.Z.getCurrentClientVoiceChannelId(null);
+    let e = c.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
     let t = l.Z.getChannel(e);
-    return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e);
+    return !(null == t || !t.isPrivate() || t.recipients.length > 1 || u.ZP.countVoiceStatesForChannel(e) > 1) && null == s.ZP.getSelfEmbeddedActivityForChannel(e);
 }
 function m() {
     if (!h()) return;
-    let e = u.Z.getCurrentClientVoiceChannelId(null);
-    null != e && (r.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: _ })), a.default.selectVoiceChannel(null));
+    let e = c.Z.getCurrentClientVoiceChannelId(null);
+    null != e && (i.Z.sendBotMessage(e, d.NW.formatToPlainString(d.t.XYof5O, { number: p })), o.default.selectVoiceChannel(null));
 }
-class g extends s.Z {
+class g extends a.Z {
     constructor(...e) {
         super(...e),
-            f(this, 'idleTimeout', new i.V7()),
+            f(this, 'idleTimeout', new r.V7()),
             f(this, 'handleConnectionClosed', () => {
                 this.idleTimeout.stop();
             }),
             f(this, 'handleEmbeddedActivityDisconnect', () => {
-                h() && this.idleTimeout.start(p, m, !0);
+                h() && this.idleTimeout.start(_, m, !0);
             }),
             f(this, 'handleVoiceStateUpdates', () => {
                 if (!h()) {
                     this.idleTimeout.stop();
                     return;
                 }
-                this.idleTimeout.start(p, m, !1);
+                this.idleTimeout.start(_, m, !1);
             }),
             f(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,

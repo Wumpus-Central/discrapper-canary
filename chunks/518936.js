@@ -1,4 +1,4 @@
-function i() {
+function r() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = window.GLOBAL_ENV.GUILD_TEMPLATE_HOST;
@@ -7,4 +7,4 @@ function i() {
         .concat(n)
         .concat('/'.concat(e));
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

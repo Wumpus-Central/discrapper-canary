@@ -1,4 +1,4 @@
-n.d(t, { s: () => l });
+n.d(t, { s: () => r });
 let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-12_collectibles_share_link',
@@ -12,4 +12,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => i.useExperiment({ location: e }).showShareLinkButton;
+    r = (e) => i.useExperiment({ location: e }).showShareLinkButton;

@@ -11,28 +11,28 @@ function t(e) {
             end: '"',
             illegal: '\\n'
         },
-        i = {
+        r = {
             className: 'string',
             begin: "'",
             end: "'",
             illegal: '\\n'
         },
-        r = {
+        i = {
             className: 'string',
             begin: '<<',
             end: '>>'
         },
-        a = {
+        o = {
             className: 'number',
             begin: '[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?'
         },
-        s = {
+        a = {
             beginKeywords: 'import',
             end: '$',
             keywords: t,
             contains: [n]
         },
-        o = {
+        s = {
             className: 'function',
             begin: /[a-z][^\n]*->/,
             returnBegin: !0,
@@ -50,7 +50,7 @@ function t(e) {
         name: 'XL',
         aliases: ['tao'],
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, n, i, r, o, s, a, e.NUMBER_MODE]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, n, r, i, s, a, o, e.NUMBER_MODE]
     };
 }
 e.exports = t;

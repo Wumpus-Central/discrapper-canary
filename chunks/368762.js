@@ -1,5 +1,5 @@
-function i(e) {
-    return (i =
+function r(e) {
+    return (r =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -8,19 +8,19 @@ function i(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function s(e, t, n) {
-    return t && a(e.prototype, t), n && a(e, n), e;
+function a(e, t, n) {
+    return t && o(e.prototype, t), n && o(e, n), e;
 }
-function o(e, t) {
+function s(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -38,16 +38,16 @@ function l(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function u(e) {
+function c(e) {
     var t = f();
     return function () {
         var n,
-            i = _(e);
-        return (n = t ? Reflect.construct(i, arguments, _(this).constructor) : i.apply(this, arguments)), c(this, n);
+            r = p(e);
+        return (n = t ? Reflect.construct(r, arguments, p(this).constructor) : r.apply(this, arguments)), u(this, n);
     };
 }
-function c(e, t) {
-    return t && ('object' === i(t) || 'function' == typeof t) ? t : d(e);
+function u(e, t) {
+    return t && ('object' === r(t) || 'function' == typeof t) ? t : d(e);
 }
 function d(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -62,14 +62,14 @@ function f() {
         return !1;
     }
 }
-function _(e) {
-    return (_ = Object.setPrototypeOf
+function p(e) {
+    return (p = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -84,16 +84,16 @@ function p(e, t, n) {
 }
 n.d(t, { z: () => h });
 var h = (function (e) {
-    o(n, e);
-    var t = u(n);
+    s(n, e);
+    var t = c(n);
     function n() {
         var e;
-        r(this, n);
-        for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-        return p(d((e = t.call.apply(t, [this].concat(a)))), 'priority', 140), p(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
+        i(this, n);
+        for (var r = arguments.length, o = Array(r), a = 0; a < r; a++) o[a] = arguments[a];
+        return _(d((e = t.call.apply(t, [this].concat(o)))), 'priority', 140), _(d(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
     }
     return (
-        s(n, [
+        a(n, [
             {
                 key: 'parse',
                 value: function (e, t, n) {

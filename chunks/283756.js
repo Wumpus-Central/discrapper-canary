@@ -1,40 +1,40 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(249458),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(249458),
     l = n(138599),
-    u = n(388032),
-    c = n(102721);
+    c = n(388032),
+    u = n(245477);
 let d = (e) => {
-    let { onPlay: t, externalURL: n, className: r, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
-    return (0, i.jsx)(o.G.Consumer, {
+    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: p, channelId: _ } = e;
+    return (0, r.jsx)(s.G.Consumer, {
         children: (e) =>
-            (0, i.jsxs)('div', {
-                className: a()(r, c.wrapper, { [c.disableInteractions]: e.disableInteractions }),
+            (0, r.jsxs)('div', {
+                className: o()(i, u.wrapper, { [u.disableInteractions]: e.disableInteractions }),
                 children: [
                     f && null == t
-                        ? (0, i.jsx)('div', {
-                              className: c.iconWrapper,
-                              children: (0, i.jsx)(s.o1U, {
+                        ? (0, r.jsx)('div', {
+                              className: u.iconWrapper,
+                              children: (0, r.jsx)(a.o1U, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: c.iconPlay
+                                  className: u.iconPlay
                               })
                           })
                         : null,
                     null != t
-                        ? (0, i.jsx)(s.P3F, {
+                        ? (0, r.jsx)(a.P3F, {
                               onClick: t,
-                              className: a()(c.iconWrapperActive),
+                              className: o()(u.iconWrapperActive),
                               tabIndex: f ? -1 : 0,
-                              'aria-label': u.intl.string(u.t.RscU7O),
-                              children: (0, i.jsx)(s.o1U, {
+                              'aria-label': c.NW.string(c.t.RscU7O),
+                              children: (0, r.jsx)(a.o1U, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: c.iconPlay
+                                  className: u.iconPlay
                               })
                           })
                         : null,
@@ -43,13 +43,13 @@ let d = (e) => {
                               href: n,
                               target: '_blank',
                               rel: 'noreferrer noopener',
-                              className: c.iconWrapperActive,
-                              children: (0, i.jsx)(l.Z, {
-                                  'aria-label': u.intl.string(u.t.wuRE8P),
-                                  className: null != t ? c.iconExternalMargins : c.iconExternal
+                              className: u.iconWrapperActive,
+                              children: (0, r.jsx)(l.Z, {
+                                  'aria-label': c.NW.string(c.t.wuRE8P),
+                                  className: null != t ? u.iconExternalMargins : u.iconExternal
                               }),
-                              messageId: _,
-                              channelId: p
+                              messageId: p,
+                              channelId: _
                           })
                         : null
                 ]

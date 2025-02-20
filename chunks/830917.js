@@ -1,16 +1,16 @@
 n.d(t, {
-    Ig: () => a,
-    UU: () => s,
-    ZY: () => r
+    Ig: () => o,
+    UU: () => a,
+    ZY: () => i
 });
-var i = n(392711);
-function r(e) {
+var r = n(392711);
+function i(e) {
     return e.__DISCORD_WINDOW_ID;
 }
-function a(e) {
-    let t = (0, i.uniqueId)('window-');
+function o(e) {
+    let t = (0, r.uniqueId)('window-');
     return (e.__DISCORD_WINDOW_ID = t), t;
 }
-function s() {
-    return r(window);
+function a() {
+    return i(window);
 }

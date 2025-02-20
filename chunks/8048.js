@@ -1,6 +1,6 @@
-i.d(e, { default: () => u }), i(312677);
-var r = i(512722),
-    n = i.n(r),
+i.d(e, { default: () => h });
+var n = i(512722),
+    r = i.n(n),
     a = i(839766);
 function s(t, e, i) {
     return (
@@ -16,7 +16,7 @@ function s(t, e, i) {
     );
 }
 let o = 'undefined' != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope;
-class u {
+class h {
     setState(t, e) {
         null != e && (t || e === this.currentFrame || this.draw(e), (this.currentFrame = e)), t && !this.animate && this.resumeAnimation(), (this.animate = t), this.scheduleOrCancelTick();
     }
@@ -42,7 +42,7 @@ class u {
     requestAnimationFrame(t) {
         null != t && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(t)), null != t && null != this.requestAnimationFrameId && (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = requestAnimationFrame(t))), null == t && null != this.requestAnimationFrameId && (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = null));
     }
-    constructor({ canvas: t, id: e, assetUrl: i, assetData: r, isVisible: u, shouldAnimate: c, onInitialDraw: h, onError: l }) {
+    constructor({ canvas: t, id: e, assetUrl: i, assetData: n, isVisible: h, shouldAnimate: l, onInitialDraw: u, onError: c }) {
         s(this, 'canvas', void 0),
             s(this, 'canvasContext', void 0),
             s(this, 'animation', null),
@@ -70,28 +70,28 @@ class u {
                     i = Math.floor(((o ? e : t) - this.currentFrameTime) / this.frameDuration);
                 i > 0 && ((e - t < 12 || o) && (this.draw(this.currentFrame), (this.currentFrame += i)), (this.currentFrameTime += i * this.frameDuration)), this.scheduleOrCancelTick();
             });
-        let f = t.getContext('2d');
-        n()(null != f, "couldn't get canvas 2d context."),
+        let d = t.getContext('2d');
+        r()(null != d, "couldn't get canvas 2d context."),
             (this.canvas = t),
-            (this.canvasContext = f),
+            (this.canvasContext = d),
             (this.animation = null),
             (this.dropped = !1),
             (this.currentFrame = 0),
             (this.currentFrameTime = 0),
             (this.frameDuration = 1000),
-            (this.animate = c),
-            (this.visible = u),
+            (this.animate = l),
+            (this.visible = h),
             (this.requestAnimationFrameId = null),
             (this.hasInitialFrame = !1),
-            (this.onInitialDraw = h),
-            (this.onError = l),
+            (this.onInitialDraw = u),
+            (this.onError = c),
             (this.key = ''.concat(e, ':').concat(t.width, ':').concat(t.height)),
-            a.Z.create(this.key, t.width, t.height, i, r)
+            a.Z.create(this.key, t.width, t.height, i, n)
                 .then((t) => {
                     null != t && (this.dropped ? a.Z.drop(this.key) : ((this.animation = t), (this.frameDuration = 1000 / t.frameRate), this.scheduleOrCancelTick()));
                 })
                 .catch((t) => {
-                    null == l || l();
+                    null == c || c();
                 });
     }
 }

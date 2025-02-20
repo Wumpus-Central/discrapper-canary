@@ -1,15 +1,15 @@
-var i = n(325008),
-    r = n(581031),
-    a = n(4340),
-    s = URLSearchParams.prototype,
-    o = r(s.forEach);
-!i ||
-    'size' in s ||
-    a(s, 'size', {
+var r = n(325008),
+    i = n(581031),
+    o = n(4340),
+    a = URLSearchParams.prototype,
+    s = i(a.forEach);
+!r ||
+    'size' in a ||
+    o(a, 'size', {
         get: function () {
             var e = 0;
             return (
-                o(this, function () {
+                s(this, function () {
                     e++;
                 }),
                 e

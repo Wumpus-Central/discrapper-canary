@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(585483),
-    o = n(981631);
+n.d(t, { Z: () => _ });
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(585483),
+    s = n(981631);
 function l(e, t, n) {
     return (
         t in e
@@ -17,31 +17,31 @@ function l(e, t, n) {
         e
     );
 }
-let u = null,
-    c = 0;
+let c = null,
+    u = 0;
 function d(e) {
     let { contextMenu: t } = e;
-    c++, (u = t);
+    u++, (c = t);
 }
 function f() {
-    u = null;
+    c = null;
 }
-class _ extends (i = r.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     isOpen() {
-        return null != u;
+        return null != c;
     }
     get version() {
-        return c;
-    }
-    getContextMenu() {
         return u;
     }
+    getContextMenu() {
+        return c;
+    }
     close() {
-        return !!this.isOpen() && (s.S.dispatch(o.CkL.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (a.S.dispatch(s.CkL.CONTEXT_MENU_CLOSE), !0);
     }
 }
-l(_, 'displayName', 'ContextMenuStore');
-let p = new _(a.Z, {
+l(p, 'displayName', 'ContextMenuStore');
+let _ = new p(o.Z, {
     CONTEXT_MENU_OPEN: d,
     LAYER_PUSH: f,
     CONTEXT_MENU_CLOSE: f,

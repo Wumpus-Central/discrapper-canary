@@ -1,44 +1,44 @@
 n.d(t, { Z: () => c }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(428760),
-    a = n(388032),
-    o = n(227897);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(428760),
+    l = n(388032),
+    o = n(785470);
 function c(e) {
     let { onChange: t, initialValue: n, maxWordCount: c, collapsed: d = !1 } = e,
-        [u, m] = r.useState(!d);
-    return (0, i.jsx)(l.zF9, {
+        [u, m] = i.useState(!d);
+    return (0, r.jsx)(s.zF9, {
         isExpanded: u,
-        collapsibleContent: (0, i.jsx)(s.Z, {
+        collapsibleContent: (0, r.jsx)(a.Z, {
             onChangeText: t,
             maxWordCount: c,
             className: o.keywordTextAreaContainer,
             textAreaClassName: o.keywordTextArea,
-            subtitleText: a.intl.formatToMarkdownString(a.t.qm7UZ2, {}),
+            subtitleText: l.NW.formatToMarkdownString(l.t.qm7UZ2, {}),
             initialValue: n
         }),
         className: o.collapseable,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(l.P3F, {
+            return (0, r.jsx)(s.P3F, {
                 onClick: (e) => {
                     m(!u), t(e);
                 },
-                children: (0, i.jsxs)('div', {
+                children: (0, r.jsxs)('div', {
                     className: o.header,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: 'text-sm/medium',
-                            children: a.intl.string(a.t.lbE2Nj)
+                            children: l.NW.string(l.t.lbE2Nj)
                         }),
                         u
-                            ? (0, i.jsx)(l.u04, {
+                            ? (0, r.jsx)(s.u04, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow
                               })
-                            : (0, i.jsx)(l.CJ0, {
+                            : (0, r.jsx)(s.CJ0, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow

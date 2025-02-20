@@ -1,9 +1,9 @@
-n.d(t, { Z: () => r });
-var i = Function.prototype.toString;
-let r = function (e) {
+n.d(t, { Z: () => i });
+var r = Function.prototype.toString;
+let i = function (e) {
     if (null != e) {
         try {
-            return i.call(e);
+            return r.call(e);
         } catch (e) {}
         try {
             return e + '';

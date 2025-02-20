@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
-var a = n(972959);
-let i = Object.freeze({
+n.d(t, { Z: () => l });
+var r = n(972959);
+let c = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
         entrypoint: null,
         searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT
     }),
-    o = (0, a.H)(() => i);
+    l = (0, r.H)(() => c);

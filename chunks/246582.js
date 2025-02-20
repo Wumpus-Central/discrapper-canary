@@ -1,8 +1,8 @@
-var i = n(955903),
-    r = n(80270),
-    a = n(479374).CONSTRUCTOR;
+var r = n(955903),
+    i = n(80270),
+    o = n(479374).CONSTRUCTOR;
 e.exports =
-    a ||
-    !r(function (e) {
-        i.all(e).then(void 0, function () {});
+    o ||
+    !i(function (e) {
+        r.all(e).then(void 0, function () {});
     });

@@ -1,67 +1,67 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(893776),
-    l = n(129293),
-    o = n(388905),
+n.d(t, { Z: () => d }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(893776),
+    a = n(129293),
+    l = n(388905),
     s = n(108427),
     c = n(388032),
-    d = n(483938);
-function u(e) {
+    u = n(455812);
+function d(e) {
     let { location: t } = e,
-        [u, h] = r.useState('submitting');
-    return (r.useEffect(() => {
+        [d, h] = i.useState('submitting');
+    return (i.useEffect(() => {
         (0, s.e)('authorize_payment');
-        let e = (0, l.Z)(t);
+        let e = (0, a.Z)(t);
         if (null == e) {
             h('failed');
             return;
         }
         (async () => {
             try {
-                await a.Z.authorizePayment(e), h('succeeded');
+                await o.Z.authorizePayment(e), h('succeeded');
             } catch (e) {
                 h('failed');
             }
         })();
     }, [t]),
-    'failed' === u)
-        ? (0, i.jsxs)(o.ZP, {
+    'failed' === d)
+        ? (0, r.jsxs)(l.ZP, {
               children: [
-                  (0, i.jsx)('img', {
+                  (0, r.jsx)('img', {
                       alt: '',
                       src: n(375673),
-                      className: d.marginBottom20
+                      className: u.marginBottom20
                   }),
-                  (0, i.jsx)(o.Dx, {
-                      className: d.marginBottom8,
-                      children: c.intl.string(c.t.GHRpub)
+                  (0, r.jsx)(l.Dx, {
+                      className: u.marginBottom8,
+                      children: c.NW.string(c.t.GHRpub)
                   }),
-                  (0, i.jsx)(o.DK, {
-                      className: d.marginBottom40,
-                      children: c.intl.string(c.t['1nO55u'])
+                  (0, r.jsx)(l.DK, {
+                      className: u.marginBottom40,
+                      children: c.NW.string(c.t['1nO55u'])
                   })
               ]
           })
-        : 'succeeded' === u
-          ? (0, i.jsxs)(o.ZP, {
+        : 'succeeded' === d
+          ? (0, r.jsxs)(l.ZP, {
                 children: [
-                    (0, i.jsx)('img', {
+                    (0, r.jsx)('img', {
                         alt: '',
                         src: n(73962),
-                        className: d.marginBottom20
+                        className: u.marginBottom20
                     }),
-                    (0, i.jsx)(o.Dx, {
-                        className: d.marginBottom8,
-                        children: c.intl.string(c.t['ihHX5+'])
+                    (0, r.jsx)(l.Dx, {
+                        className: u.marginBottom8,
+                        children: c.NW.string(c.t['ihHX5+'])
                     }),
-                    (0, i.jsx)(o.DK, {
-                        className: d.marginBottom40,
-                        children: c.intl.string(c.t.pGPCv7)
+                    (0, r.jsx)(l.DK, {
+                        className: u.marginBottom40,
+                        children: c.NW.string(c.t.pGPCv7)
                     })
                 ]
             })
-          : (0, i.jsxs)(o.ZP, {
-                children: [(0, i.jsx)(o.Hh, {}), (0, i.jsx)(o.Dx, { children: c.intl.string(c.t.T3vC7u) })]
+          : (0, r.jsxs)(l.ZP, {
+                children: [(0, r.jsx)(l.Hh, {}), (0, r.jsx)(l.Dx, { children: c.NW.string(c.t.T3vC7u) })]
             });
 }

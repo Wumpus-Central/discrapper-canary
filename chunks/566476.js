@@ -1,49 +1,49 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(399606),
-    a = n(481060),
+var i = n(120356),
+    s = n.n(i),
+    a = n(399606),
+    l = n(481060),
     o = n(385499),
     c = n(246946),
-    d = n(451753);
+    d = n(27426);
 function u(e) {
-    let { className: t, avatarURL: n, name: r, bot: u, verifiedBot: m, userTag: h } = e,
-        g = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation);
-    return (0, i.jsxs)('div', {
-        className: l()(d.container, t),
+    let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: m, userTag: p } = e,
+        g = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation);
+    return (0, r.jsxs)('div', {
+        className: s()(d.container, t),
         children: [
-            (0, i.jsx)(a.qEK, {
+            (0, r.jsx)(l.qEK, {
                 className: d.avatar,
                 src: n,
-                size: a.EFr.SIZE_24,
-                'aria-label': r
+                size: l.EFr.SIZE_24,
+                'aria-label': i
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: d.textContainer,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, r.jsx)(l.Text, {
                         tag: 'span',
                         className: d.name,
                         color: 'header-primary',
                         variant: 'text-sm/semibold',
-                        children: r
+                        children: i
                     }),
                     u
-                        ? (0, i.jsx)(o.Z, {
+                        ? (0, r.jsx)(o.Z, {
                               className: d.botTag,
                               verified: m
                           })
                         : null,
                     g
                         ? null
-                        : (0, i.jsx)(a.Text, {
+                        : (0, r.jsx)(l.Text, {
                               tag: 'span',
                               color: 'interactive-normal',
                               className: d.userTag,
                               variant: 'text-sm/normal',
-                              children: h
+                              children: p
                           })
                 ]
             })

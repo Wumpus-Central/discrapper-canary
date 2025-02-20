@@ -3,14 +3,14 @@ n.d(t, {
     y: () => m
 }),
     n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(47770),
-    s = n(846519),
-    o = n(710845),
+var r = n(392711),
+    i = n.n(r),
+    o = n(47770),
+    a = n(846519),
+    s = n(710845),
     l = n(314897),
-    u = n(70956),
-    c = n(960048),
+    c = n(70956),
+    u = n(960048),
     d = n(65154);
 function f(e, t, n) {
     return (
@@ -25,16 +25,16 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 10 * u.Z.Millis.SECOND,
-    p = 10 * u.Z.Millis.SECOND,
+let p = 10 * c.Z.Millis.SECOND,
+    _ = 10 * c.Z.Millis.SECOND,
     h = 500;
 var m = (function (e) {
     return (e.RequestedSSRCsUpdate = 'requested-ssrcs-update'), (e.RequestedStreamsUpdate = 'requested-streams-update'), e;
 })({});
 function g(e, t) {
-    e || c.Z.captureMessage('Assert failed in GoLiveQualityManager: ' + t);
+    e || u.Z.captureMessage('Assert failed in GoLiveQualityManager: ' + t);
 }
-class E extends a.Z {
+class E extends o.Z {
     setUserID(e) {
         this.userId = e;
     }
@@ -43,13 +43,13 @@ class E extends a.Z {
     }
     updateAudioAndVideoStreamInfo(e, t) {
         let n = t.filter((e) => e.active),
-            i = this.videoStreams.length !== n.length;
+            r = this.videoStreams.length !== n.length;
         if (((this.audioSSRC = e), (this.videoStreams = n), this.videoStreams.length > 1)) {
-            var a, s, o, l;
-            let e = null !== (o = null === (a = r().minBy(this.videoStreams, (e) => e.quality)) || void 0 === a ? void 0 : a.ssrc) && void 0 !== o ? o : 0,
-                t = null !== (l = null === (s = r().maxBy(this.videoStreams, (e) => e.quality)) || void 0 === s ? void 0 : s.ssrc) && void 0 !== l ? l : 0;
-            (e !== this.lqSSRC || t !== this.hqSSRC || i) && ((this.lqSSRC = e), (this.hqSSRC = t), this.reset(), this.update());
-        } else i && this.reset(), this.update();
+            var o, a, s, l;
+            let e = null !== (s = null === (o = i().minBy(this.videoStreams, (e) => e.quality)) || void 0 === o ? void 0 : o.ssrc) && void 0 !== s ? s : 0,
+                t = null !== (l = null === (a = i().maxBy(this.videoStreams, (e) => e.quality)) || void 0 === a ? void 0 : a.ssrc) && void 0 !== l ? l : 0;
+            (e !== this.lqSSRC || t !== this.hqSSRC || r) && ((this.lqSSRC = e), (this.hqSSRC = t), this.reset(), this.update());
+        } else r && this.reset(), this.update();
     }
     setGoLiveStreamDowngraded(e) {
         !(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === d.Z.NO_OVERRIDE && e !== this.downgraded && this.isDowngradeChangeAllowed(e) && (this.logger.info('Setting downgraded to '.concat(e)), (this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());
@@ -131,7 +131,7 @@ class E extends a.Z {
         return -1 !== this.currentSSRC;
     }
     isDowngradeChangeAllowed(e) {
-        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= p : Date.now() - this.lastDowngradeChangeTime >= _);
+        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= _ : Date.now() - this.lastDowngradeChangeTime >= p);
     }
     shouldSeamlessTransition(e) {
         if (!this.supportsSeamless || !this.isReceiving()) return !1;
@@ -258,8 +258,8 @@ class E extends a.Z {
             (this.delayedUpdate = () => {
                 this.delayedCall.delay();
             }),
-            (this.logger = new o.Z('GoLiveQualityManager')),
-            (this.delayedCall = new s.sW(h, () => {
+            (this.logger = new s.Z('GoLiveQualityManager')),
+            (this.delayedCall = new a.sW(h, () => {
                 this.update();
             }));
     }

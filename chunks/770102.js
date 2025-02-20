@@ -1,13 +1,13 @@
-n.d(t, { $: () => o });
-var i = n(200651);
+n.d(t, { $: () => s });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(716094);
-function o(e) {
+var i = n(120356),
+    o = n.n(i),
+    a = n(452990);
+function s(e) {
     let { className: t, style: n } = e;
-    return (0, i.jsx)('div', {
-        className: a()(s.divider, t),
+    return (0, r.jsx)('div', {
+        className: o()(a.divider, t),
         style: n
     });
 }

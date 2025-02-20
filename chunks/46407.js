@@ -1,18 +1,18 @@
 function t(e) {
     let t = "[a-z'][a-zA-Z0-9_']*",
         n = '(' + t + ':' + t + '|' + t + ')',
-        i = {
+        r = {
             keyword: 'after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor maybe else',
             literal: 'false true'
         },
-        r = e.COMMENT('%', '$'),
-        a = {
+        i = e.COMMENT('%', '$'),
+        o = {
             className: 'number',
             begin: '\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)',
             relevance: 0
         },
-        s = { begin: 'fun\\s+' + t + '/\\d+' },
-        o = {
+        a = { begin: 'fun\\s+' + t + '/\\d+' },
+        s = {
             begin: n + '\\(',
             end: '\\)',
             returnBegin: !0,
@@ -36,11 +36,11 @@ function t(e) {
             end: /\}/,
             relevance: 0
         },
-        u = {
+        c = {
             begin: '\\b_([A-Z][A-Za-z0-9_]*)?',
             relevance: 0
         },
-        c = {
+        u = {
             begin: '[A-Z][a-zA-Z0-9_]*',
             relevance: 0
         },
@@ -64,11 +64,11 @@ function t(e) {
             scope: 'string',
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/
         },
-        _ = {
+        p = {
             scope: 'string',
             match: /"""("*)(?!")[\s\S]*?"""\1/
         },
-        p = {
+        _ = {
             scope: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -118,11 +118,11 @@ function t(e) {
         h = {
             beginKeywords: 'fun receive if try case maybe',
             end: 'end',
-            keywords: i
+            keywords: r
         };
-    h.contains = [r, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, o, p, _, e.QUOTE_STRING_MODE, a, l, u, c, d, f];
-    let m = [r, s, h, o, p, _, e.QUOTE_STRING_MODE, a, l, u, c, d, f];
-    (o.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
+    h.contains = [i, a, e.inherit(e.APOS_STRING_MODE, { className: '' }), h, s, _, p, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
+    let m = [i, a, h, s, _, p, e.QUOTE_STRING_MODE, o, l, c, u, d, f];
+    (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
     let g = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
         E = {
             className: 'params',
@@ -133,7 +133,7 @@ function t(e) {
     return {
         name: 'Erlang',
         aliases: ['erl'],
-        keywords: i,
+        keywords: r,
         illegal: '(</|\\*=|\\+=|-=|/\\*|\\*/|\\(\\*|\\*\\))',
         contains: [
             {
@@ -145,11 +145,11 @@ function t(e) {
                 contains: [E, e.inherit(e.TITLE_MODE, { begin: t })],
                 starts: {
                     end: ';|\\.',
-                    keywords: i,
+                    keywords: r,
                     contains: m
                 }
             },
-            r,
+            i,
             {
                 begin: '^-',
                 end: '\\.',
@@ -160,15 +160,15 @@ function t(e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: g.map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [E, p, _, e.QUOTE_STRING_MODE]
+                contains: [E, _, p, e.QUOTE_STRING_MODE]
             },
-            a,
-            p,
+            o,
             _,
+            p,
             e.QUOTE_STRING_MODE,
             d,
-            u,
             c,
+            u,
             l,
             f,
             { begin: /\.$/ }

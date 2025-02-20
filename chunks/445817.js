@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -13,10 +13,10 @@ var r = n(200651),
     p = n(594174),
     h = n(981631),
     f = n(388032),
-    N = n(839627);
-function x(e) {
-    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
-        b = g.Z.getCameraComponent(),
+    b = n(839627);
+function N(e) {
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: N } = e,
+        x = g.Z.getCameraComponent(),
         [_, E] = i.useState((0, c.P)(p.default.getCurrentUser())),
         j = i.useRef(!1),
         C = i.useRef(_),
@@ -34,15 +34,15 @@ function x(e) {
             onSelectBackgroundOption: (e) => {
                 (j.current = !0), (C.current = e), E(e), (0, u.wG)(e, { location: O.location }).catch(h.dG4);
             },
-            onCancelPreview: x,
+            onCancelPreview: N,
             renderCamera: (e) =>
                 t
                     ? (0, r.jsx)('div', {
-                          className: N.cameraWrapper,
+                          className: b.cameraWrapper,
                           children: (0, r.jsxs)('div', {
-                              className: N.camera,
+                              className: b.camera,
                               children: [
-                                  (0, r.jsx)(b, {
+                                  (0, r.jsx)(x, {
                                       deviceId: e,
                                       width: 387,
                                       height: 218,
@@ -53,9 +53,9 @@ function x(e) {
                           })
                       })
                     : (0, r.jsxs)('div', {
-                          className: N.cameraWrapper,
+                          className: b.cameraWrapper,
                           children: [
-                              (0, r.jsx)('div', { className: N.previewImage }),
+                              (0, r.jsx)('div', { className: b.previewImage }),
                               (0, r.jsx)(a.ua7, {
                                   text: v ? null : f.NW.string(f.t['8jSzSU']),
                                   children: (e) => {

@@ -1,17 +1,17 @@
 n.d(t, {
-    ZP: () => a,
-    n9: () => o
+    ZP: () => o,
+    n9: () => s
 });
-var i = n(695103),
-    r = n(115130);
-function a(e) {
-    return o() ? r.Z.getState().activityUrlOverride : i.Z.inTestModeForEmbeddedApplication(e) ? i.Z.testModeOriginURL : s(e);
+var r = n(695103),
+    i = n(115130);
+function o(e) {
+    return s() ? i.Z.getState().activityUrlOverride : r.Z.inTestModeForEmbeddedApplication(e) ? r.Z.testModeOriginURL : a(e);
 }
-function s(e) {
+function a(e) {
     let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
     return null == t ? null : 'https://'.concat(e, '.').concat(t);
 }
-function o() {
-    let e = r.Z.getState();
+function s() {
+    let e = i.Z.getState();
     return e.useActivityUrlOverride && null != e.activityUrlOverride && '' !== e.activityUrlOverride;
 }

@@ -1,13 +1,13 @@
-var i = n(387493),
-    r = n(698030),
-    a = n(459901),
-    s = n(44091);
-function o(e) {
+var r = n(387493),
+    i = n(698030),
+    o = n(459901),
+    a = n(44091);
+function s(e) {
     return function (t) {
-        var n = r((t = s(t))) ? a(t) : void 0,
-            o = n ? n[0] : t.charAt(0),
-            l = n ? i(n, 1).join('') : t.slice(1);
-        return o[e]() + l;
+        var n = i((t = a(t))) ? o(t) : void 0,
+            s = n ? n[0] : t.charAt(0),
+            l = n ? r(n, 1).join('') : t.slice(1);
+        return s[e]() + l;
     };
 }
-e.exports = o;
+e.exports = s;

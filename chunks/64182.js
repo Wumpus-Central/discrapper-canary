@@ -1,47 +1,47 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.stringFormatter = t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = t.makeReactFormatter = t.reactFormatter = t.markdownFormatter = t.RichTextNodeType = t.astFormatter = void 0);
-var i = n(474505);
+var r = n(474505);
 Object.defineProperty(t, 'astFormatter', {
     enumerable: !0,
     get: function () {
-        return i.astFormatter;
+        return r.astFormatter;
     }
 }),
     Object.defineProperty(t, 'RichTextNodeType', {
         enumerable: !0,
         get: function () {
-            return i.RichTextNodeType;
+            return r.RichTextNodeType;
         }
     });
-var r = n(850013);
+var i = n(850013);
 Object.defineProperty(t, 'markdownFormatter', {
     enumerable: !0,
     get: function () {
-        return r.markdownFormatter;
+        return i.markdownFormatter;
     }
 });
-var a = n(868852);
+var o = n(868852);
 Object.defineProperty(t, 'reactFormatter', {
     enumerable: !0,
     get: function () {
-        return a.reactFormatter;
+        return o.reactFormatter;
     }
 }),
     Object.defineProperty(t, 'makeReactFormatter', {
         enumerable: !0,
         get: function () {
-            return a.makeReactFormatter;
+            return o.makeReactFormatter;
         }
     }),
     Object.defineProperty(t, 'DEFAULT_REACT_RICH_TEXT_ELEMENTS', {
         enumerable: !0,
         get: function () {
-            return a.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+            return o.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
         }
     });
-var s = n(935122);
+var a = n(935122);
 Object.defineProperty(t, 'stringFormatter', {
     enumerable: !0,
     get: function () {
-        return s.stringFormatter;
+        return a.stringFormatter;
     }
 });

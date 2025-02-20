@@ -1,5 +1,5 @@
-n.d(t, { N: () => r });
-let i = null;
-function r() {
-    return null == i && (i = new AudioContext()), i;
+n.d(t, { N: () => i });
+let r = null;
+function i() {
+    return null == r && (r = new AudioContext()), r;
 }

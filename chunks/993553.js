@@ -31,8 +31,8 @@ function u(e) {
             return i;
         })(e, ['children', 'lineClamp']);
     let [p, h] = i.useState(!1),
-        [f, N] = i.useState(null),
-        x =
+        [f, b] = i.useState(null),
+        N =
             null != f &&
             (0, r.jsx)('button', {
                 className: d.button,
@@ -55,16 +55,16 @@ function u(e) {
                     ]
                 })
             }),
-        [b, _] = i.useState(null),
+        [x, _] = i.useState(null),
         E = i.useCallback(() => {
-            if (null == b) return;
-            let { scrollHeight: e, clientHeight: t } = b;
+            if (null == x) return;
+            let { scrollHeight: e, clientHeight: t } = x;
             e > t &&
-                N({
+                b({
                     truncatedHeight: t,
                     expandedHeight: e
                 });
-        }, [b]);
+        }, [x]);
     i.useEffect(() => {
         requestAnimationFrame(E);
     }, [E, u, m]);
@@ -122,7 +122,7 @@ function u(e) {
                           }),
                     t)
                 ),
-                x
+                N
             ]
         })
     );

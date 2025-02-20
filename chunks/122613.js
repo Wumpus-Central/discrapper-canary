@@ -1,35 +1,35 @@
 n.d(t, { Z: () => f });
-var i = n(592125),
-    r = n(594174),
-    a = n(585483),
-    s = n(636449),
-    o = n(337682),
+var r = n(592125),
+    i = n(594174),
+    o = n(585483),
+    a = n(636449),
+    s = n(337682),
     l = n(566620),
-    u = n(224189),
-    c = n(574952),
+    c = n(224189),
+    u = n(574952),
     d = n(981631);
 function f(e) {
-    return (0, s.C)(() => _(e));
+    return (0, a.C)(() => p(e));
 }
-async function _(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: s, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g, referrerId: E, customId: v, inviterUserId: y } = e,
-        I = (0, c.Z)(),
-        T = r.default.getCurrentUser();
+async function p(e) {
+    let { targetApplicationId: t, locationObject: n, channelId: a, analyticsLocations: f, componentId: p, commandOrigin: _, sectionName: h, source: m, onExecutedCallback: g, referrerId: E, customId: v, inviterUserId: b } = e,
+        y = (0, u.Z)(),
+        O = i.default.getCurrentUser();
     if (null == t) return !1;
-    let b = await (0, u.Z)(t, s);
-    return null == s
-        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
-        : null != i.Z.getChannel(s) &&
-              null != T &&
-              null != b &&
-              (o.tZ(b.id),
+    let S = await (0, c.Z)(t, a);
+    return null == a
+        ? (o.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
+        : null != r.Z.getChannel(a) &&
+              null != O &&
+              null != S &&
+              (s.tZ(S.id),
               await (0, l.af)({
-                  channelId: s,
-                  applicationId: b.id,
+                  channelId: a,
+                  applicationId: S.id,
                   isStart: !0,
-                  embeddedActivitiesManager: I,
-                  componentId: _,
-                  commandOrigin: p,
+                  embeddedActivitiesManager: y,
+                  componentId: p,
+                  commandOrigin: _,
                   sectionName: h,
                   locationObject: n,
                   analyticsLocations: f,
@@ -37,6 +37,6 @@ async function _(e) {
                   onExecutedCallback: g,
                   referrerId: E,
                   customId: v,
-                  inviterUserId: y
+                  inviterUserId: b
               }));
 }

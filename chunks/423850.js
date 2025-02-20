@@ -4,8 +4,8 @@ a.d(e, {
 });
 var r = a(263449),
     n = a(696486),
-    _ = a(988097),
-    o = a(152228),
+    o = a(988097),
+    _ = a(152228),
     i = a(101284),
     c = a(467510),
     s = a(370336),
@@ -44,14 +44,14 @@ function d() {
                     release: f.release,
                     environment: f.environment,
                     transaction: D,
-                    [_.JQ]: t.value,
-                    [_.S3]: 'auto.http.browser.inp',
+                    [o.JQ]: t.value,
+                    [o.S3]: 'auto.http.browser.inp',
                     user: P || void 0,
                     profile_id: e || void 0,
                     replay_id: y || void 0,
                     'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
-                S = (0, o.qp)({
+                S = (0, _.qp)({
                     name: v,
                     op: `ui.interaction.${d}`,
                     attributes: C,
@@ -59,8 +59,8 @@ function d() {
                     experimental: { standalone: !0 }
                 });
             S.addEvent('inp', {
-                [_.E1]: 'millisecond',
-                [_.Wb]: t.value
+                [o.E1]: 'millisecond',
+                [o.Wb]: t.value
             }),
                 S.end(p + T);
         });

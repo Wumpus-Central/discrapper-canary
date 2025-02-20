@@ -1,25 +1,25 @@
 n.d(t, { Z: () => l });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(929204),
-    s = n(388032),
-    o = n(725387);
+var i = n(481060),
+    o = n(929204),
+    a = n(388032),
+    s = n(697666);
 function l(e) {
     let { analyticsSection: t, buttonText: n } = e;
-    return (0, i.jsxs)(r.gtL, {
-        className: o.premiumButton,
-        innerClassName: o.premiumButtonInner,
-        color: r.zxk.Colors.GREEN,
-        size: r.zxk.Sizes.SMALL,
-        onClick: () => (0, a.Z)({ section: t }),
+    return (0, r.jsxs)(i.gtL, {
+        className: s.premiumButton,
+        innerClassName: s.premiumButtonInner,
+        color: i.zxk.Colors.GREEN,
+        size: i.zxk.Sizes.SMALL,
+        onClick: () => (0, o.Z)({ section: t }),
         children: [
-            (0, i.jsx)(r.SrA, {
+            (0, r.jsx)(i.SrA, {
                 size: 'md',
                 color: 'currentColor',
-                className: o.premiumButtonNitroWheel
+                className: s.premiumButtonNitroWheel
             }),
-            null != n ? n : s.intl.string(s.t['8Sh5fn'])
+            null != n ? n : a.NW.string(a.t['8Sh5fn'])
         ]
     });
 }

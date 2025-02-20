@@ -1,4 +1,4 @@
-n.d(t, { S: () => g });
+n.d(t, { S: () => E });
 var l = n(200651),
     i = n(192379),
     s = n(512722),
@@ -7,66 +7,66 @@ var l = n(200651),
     o = n(481060),
     C = n(204418),
     d = n(628952),
-    u = n(540059),
-    c = n(314404),
+    c = n(540059),
+    u = n(314404),
     p = n(594174),
     x = n(626135),
-    h = n(987209),
-    _ = n(563132),
-    f = n(409813),
+    f = n(987209),
+    h = n(563132),
+    _ = n(409813),
     j = n(614277),
     m = n(981631),
     L = n(388032),
-    E = n(816475);
-function g(e) {
+    g = n(934457);
+function E(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: s, selectedSkuId: g, step: S } = (0, _.JL)(),
-        { setSelectedGiftingPromotionReward: I, selectedGiftingPromotionReward: N, claimableRewards: T } = (0, h.wD)(),
-        M = (0, a.e7)([p.default], () => p.default.getCurrentUser());
+        { selectedPlan: s, selectedSkuId: E, step: S } = (0, h.JL)(),
+        { setSelectedGiftingPromotionReward: N, selectedGiftingPromotionReward: y, claimableRewards: I } = (0, f.wD)(),
+        O = (0, a.e7)([p.default], () => p.default.getCurrentUser());
     i.useEffect(() => {
-        let e = null != T && T.length > 0;
-        null == N && e && I(T[0]);
-    }, [T, N, I]);
+        let e = null != I && I.length > 0;
+        null == y && e && N(I[0]);
+    }, [I, y, N]);
     let v = (e) => {
             let t = e.skuId;
             return (0, l.jsx)(
                 d.Z,
                 {
                     skuId: t,
-                    price: L.intl.string(L.t.QQsaCQ),
-                    isSelected: t === (null == N ? void 0 : N.skuId),
-                    onSelect: () => I(e),
-                    className: E.giftSelectItem
+                    price: L.NW.string(L.t.QQsaCQ),
+                    isSelected: t === (null == y ? void 0 : y.skuId),
+                    onSelect: () => N(e),
+                    className: g.giftSelectItem
                 },
                 t
             );
         },
-        y = (0, u.Q3)('PremiumPaymentFreeSKUSelectStep');
-    r()(null != s, 'Expected plan to selected'), r()(null != g, 'Expected selectedSkuId'), r()(null != S, 'Step should be set');
-    let Z = null == T ? void 0 : T.map((e) => v(e)),
-        P =
-            null != N && null != M
+        P = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
+    r()(null != s, 'Expected plan to selected'), r()(null != E, 'Expected selectedSkuId'), r()(null != S, 'Step should be set');
+    let b = null == I ? void 0 : I.map((e) => v(e)),
+        T =
+            null != y && null != O
                 ? (0, l.jsx)(C.Z, {
-                      avatarDecorationOverride: { asset: N.assetId },
-                      user: M,
+                      avatarDecorationOverride: { asset: y.assetId },
+                      user: O,
                       guildId: null,
                       avatarSize: o.EFr.SIZE_152
                   })
                 : null,
-        k = (0, l.jsx)(j.O3, {
+        M = (0, l.jsx)(j.O3, {
             children: (0, l.jsx)(o.mzw, {
-                className: E.modalFooter,
-                children: (0, l.jsx)(c.y, {
+                className: g.modalFooter,
+                children: (0, l.jsx)(u.y, {
                     onStepChange: (e) => {
-                        null != M &&
-                            null != N &&
+                        null != O &&
+                            null != y &&
                             x.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: M.id,
-                                reward_sku_id: N.skuId
+                                user_id: O.id,
+                                reward_sku_id: y.skuId
                             }),
                             t(e);
                     },
-                    onBackClick: () => t(f.h8.PLAN_SELECT),
+                    onBackClick: () => t(_.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [s.id],
@@ -74,21 +74,21 @@ function g(e) {
                 })
             })
         }),
-        U = (0, l.jsx)(o.X6q, {
+        Z = (0, l.jsx)(o.X6q, {
             variant: 'heading-lg/bold',
             color: 'header-primary',
-            children: L.intl.string(L.t['Rp0+ZG'])
+            children: L.NW.string(L.t['Rp0+ZG'])
         });
-    return y
+    return P
         ? (0, l.jsxs)('div', {
-              className: E.container,
+              className: g.container,
               children: [
                   (0, l.jsx)(o.xBx, {
                       children: (0, l.jsxs)(o.Kqy, {
                           direction: 'horizontal',
                           justify: 'space-between',
                           align: 'center',
-                          children: [U, (0, l.jsx)(o.olH, { onClick: n })]
+                          children: [Z, (0, l.jsx)(o.olH, { onClick: n })]
                       })
                   }),
                   (0, l.jsx)(o.hzk, {
@@ -97,41 +97,41 @@ function g(e) {
                           align: 'center',
                           padding: { top: 24 },
                           children: [
-                              P,
+                              T,
                               (0, l.jsx)(o.Kqy, {
                                   gap: 8,
                                   padding: { top: 12 },
-                                  children: Z
+                                  children: b
                               })
                           ]
                       })
                   }),
-                  k
+                  M
               ]
           })
         : (0, l.jsx)(l.Fragment, {
               children: (0, l.jsxs)('div', {
-                  className: E.stepBodySkuSelect,
+                  className: g.stepBodySkuSelect,
                   children: [
                       (0, l.jsxs)('div', {
-                          className: E.bodyColumnLeft,
+                          className: g.bodyColumnLeft,
                           children: [
                               (0, l.jsx)('div', {
-                                  className: E.header,
-                                  children: U
+                                  className: g.header,
+                                  children: Z
                               }),
-                              Z
+                              b
                           ]
                       }),
                       (0, l.jsx)(o.olH, {
                           onClick: n,
-                          className: E.closeButton
+                          className: g.closeButton
                       }),
                       (0, l.jsx)('div', {
-                          className: E.bodyColumnRight,
-                          children: P
+                          className: g.bodyColumnRight,
+                          children: T
                       }),
-                      k
+                      M
                   ]
               })
           });

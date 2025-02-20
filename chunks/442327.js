@@ -1,7 +1,7 @@
 function t(e) {
     let t = 'primitive rsc_template',
         n = 'group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml',
-        i = 'property rsc_defaults op_defaults';
+        r = 'property rsc_defaults op_defaults';
     return {
         name: 'crmsh',
         aliases: ['crm', 'pcmk'],
@@ -39,7 +39,7 @@ function t(e) {
                 }
             },
             {
-                beginKeywords: i,
+                beginKeywords: r,
                 starts: {
                     className: 'title',
                     end: '\\s*([\\w_-]+:)?'

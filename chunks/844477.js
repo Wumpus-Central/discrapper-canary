@@ -61,8 +61,8 @@ let u = {
         lg: 'md'
     };
 function g(e) {
-    var { role: t = 'button', variant: n = 'primary', size: i = 'md', text: g, icon: p, iconPosition: h = 'end', iconOpticalOffsetMargin: f = 0, focusProps: N } = e,
-        x = (function (e, t) {
+    var { role: t = 'button', variant: n = 'primary', size: i = 'md', text: g, icon: p, iconPosition: h = 'end', iconOpticalOffsetMargin: f = 0, focusProps: b } = e,
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -81,7 +81,7 @@ function g(e) {
             }
             return i;
         })(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
-    function b() {
+    function x() {
         if (null == p) return;
         let e = (function () {
             if (0 === f) return {};
@@ -101,7 +101,7 @@ function g(e) {
     }
     return (0, r.jsx)(
         a.t,
-        d(c({}, N), {
+        d(c({}, b), {
             children: (0, r.jsxs)(
                 'button',
                 d(
@@ -110,11 +110,11 @@ function g(e) {
                             role: t,
                             className: s()(o.button, o[i], o[n])
                         },
-                        x
+                        N
                     ),
                     {
                         children: [
-                            null != p && 'start' === h && (0, r.jsx)(b, {}),
+                            null != p && 'start' === h && (0, r.jsx)(x, {}),
                             (0, r.jsx)(l.x, {
                                 tag: 'span',
                                 variant: u[i],
@@ -123,7 +123,7 @@ function g(e) {
                                 lineClamp: 1,
                                 children: g
                             }),
-                            null != p && 'end' === h && (0, r.jsx)(b, {})
+                            null != p && 'end' === h && (0, r.jsx)(x, {})
                         ]
                     }
                 )

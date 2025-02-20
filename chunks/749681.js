@@ -2,56 +2,56 @@ n.r(t),
     n.d(t, {
         transitionToGlobalDiscovery: () =>
             function e(t) {
-                var n, f, h;
-                let g = t.tab;
-                switch ((_.Z.setState({ selectedTab: g }), g)) {
+                var n, E, m;
+                let A = t.tab;
+                switch ((u.Z.setState({ selectedTab: A }), A)) {
                     case d.GlobalDiscoveryTab.SERVERS:
-                        let m = t.selectedServersTab;
+                        let v = t.selectedServersTab;
                         return (
-                            null != m
-                                ? o.Z.setState({
-                                      selectedTab: m,
-                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : b.Qq.UNKNOWN
+                            null != v
+                                ? l.Z.setState({
+                                      selectedTab: v,
+                                      entrypoint: null !== (n = t.entrypoint) && void 0 !== n ? n : T.Qq.UNKNOWN
                                   })
-                                : o.Z.setState({ entrypoint: null !== (f = t.entrypoint) && void 0 !== f ? f : b.Qq.UNKNOWN }),
-                            (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
+                                : l.Z.setState({ entrypoint: null !== (E = t.entrypoint) && void 0 !== E ? E : T.Qq.UNKNOWN }),
+                            (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
                         );
                     case d.GlobalDiscoveryTab.APPS:
                         if (null != t.newSessionState) {
-                            let n = (0, i.PM)(),
-                                { guildId: o, entrypoint: r } = t.newSessionState;
+                            let n = (0, c.PM)(),
+                                { guildId: l, entrypoint: a } = t.newSessionState;
                             if (
-                                (a.z8.setState({
+                                (r.z8.setState({
                                     sessionId: n,
-                                    guildId: null != o ? o : null,
-                                    entrypoint: r,
+                                    guildId: null != l ? l : null,
+                                    entrypoint: a,
                                     trackedOpenedFromExternalEntrypoint: !1
                                 }),
-                                s.default.track(u.rMx.APP_DIRECTORY_OPENED, {
-                                    source: null == r ? void 0 : r.name,
+                                s.default.track(p.rMx.APP_DIRECTORY_OPENED, {
+                                    source: null == a ? void 0 : a.name,
                                     session_id: n,
-                                    guild_id: o,
-                                    user_id: null === (h = c.default.getCurrentUser()) || void 0 === h ? void 0 : h.id
+                                    guild_id: l,
+                                    user_id: null === (m = i.default.getCurrentUser()) || void 0 === m ? void 0 : m.id
                                 }),
                                 t.newSessionState.restorePreviousView)
                             )
                                 return e(
                                     (function () {
-                                        let { lastItem: e } = a.aQ.getState();
+                                        let { lastItem: e } = r.aQ.getState();
                                         if (null != e)
                                             switch (e.type) {
-                                                case a.m_.APPLICATION:
+                                                case r.m_.APPLICATION:
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
                                                         applicationId: e.applicationId,
                                                         section: e.section
                                                     };
-                                                case a.m_.CATEGORY:
+                                                case r.m_.CATEGORY:
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
                                                         categoryId: Number(e.categoryId)
                                                     };
-                                                case a.m_.SEARCH:
+                                                case r.m_.SEARCH:
                                                     var t;
                                                     return {
                                                         tab: d.GlobalDiscoveryTab.APPS,
@@ -65,25 +65,25 @@ n.r(t),
                                 );
                         }
                         if (null != t.applicationId) {
-                            if (t.section === p.GlobalDiscoveryAppsSections.STORE) {
-                                if (null != t.skuId) return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
-                                return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, p.GlobalDiscoveryAppsSections.STORE));
+                            if (t.section === O.GlobalDiscoveryAppsSections.STORE) {
+                                if (null != t.skuId) return (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
+                                return (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, O.GlobalDiscoveryAppsSections.STORE));
                             }
-                            return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
+                            return (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                         }
                         if (null != t.query) {
                             let e = new URLSearchParams();
-                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
+                            return '' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() });
                         }
-                        if (null != t.categoryId) return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
-                        else return (0, l.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
+                        if (null != t.categoryId) return (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
+                        else return (0, o.uL)(p.Z5c.GLOBAL_DISCOVERY_APPS);
                     case d.GlobalDiscoveryTab.QUESTS:
-                        return (0, r.navigateToQuestHome)({
+                        return (0, a.navigateToQuestHome)({
                             fromContent: t.questContent,
                             questId: t.questId
                         });
                     default:
-                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(g));
+                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(A));
                 }
             }
     }),
@@ -93,15 +93,15 @@ n.r(t),
     n(815648),
     n(47120),
     n(411104);
-var a = n(258971),
-    i = n(726115),
-    o = n(859921),
-    r = n(341907),
-    l = n(703656),
-    c = n(594174),
+var r = n(258971),
+    c = n(726115),
+    l = n(859921),
+    a = n(341907),
+    o = n(703656),
+    i = n(594174),
     s = n(626135),
-    _ = n(836768),
+    u = n(836768),
     d = n(49898),
-    u = n(981631),
-    p = n(979007),
-    b = n(128449);
+    p = n(981631),
+    O = n(979007),
+    T = n(128449);

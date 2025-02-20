@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
-var i = n(177624),
-    r = n(195168);
-let a = (0, i.Z)(r.Z, 'Promise');
+n.d(t, { Z: () => o });
+var r = n(177624),
+    i = n(195168);
+let o = (0, r.Z)(i.Z, 'Promise');

@@ -1,16 +1,16 @@
 n.d(t, {
-    o: () => r,
-    u: () => a
+    o: () => i,
+    u: () => o
 });
-var i = n(570140);
-function r(e) {
-    i.Z.dispatch({
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_DOMAIN',
         url: e
     });
 }
-function a(e) {
-    i.Z.dispatch({
+function o(e) {
+    r.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_PROTOCOL',
         url: e
     });

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(481060),
-    s = n(607070),
-    o = n(665906),
+n.d(t, { Z: () => m });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(607070),
+    s = n(665906),
     c = n(314897),
-    d = n(496675),
-    u = n(981631),
-    h = n(388032),
-    p = n(570204);
-let m = () =>
+    u = n(496675),
+    d = n(981631),
+    p = n(388032),
+    h = n(797964);
+let f = () =>
         n
             .e('43841')
             .then(n.t.bind(n, 737848, 19))
@@ -18,38 +18,38 @@ let m = () =>
                 let { default: t } = e;
                 return t;
             }),
-    f = l.memo(function (e) {
+    m = i.memo(function (e) {
         let { channel: t, isLastItem: n } = e,
-            l = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-            f = (0, a.e7)([d.Z], () => d.Z.can(u.Plq.SEND_MESSAGES_IN_THREADS, t)),
-            g = (0, o.Gu)(t),
-            _ = (0, a.e7)([c.default], () => c.default.getId());
+            i = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+            m = (0, l.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
+            g = (0, s.Gu)(t),
+            b = (0, l.e7)([c.default], () => c.default.getId());
         return n
-            ? f && !g && t.ownerId !== _
-                ? (0, i.jsxs)('div', {
-                      className: p.box,
+            ? m && !g && t.ownerId !== b
+                ? (0, r.jsxs)('div', {
+                      className: h.box,
                       children: [
-                          (0, i.jsx)(r.Fmz, {
-                              importData: m,
-                              shouldAnimate: !l,
-                              className: p.animation
+                          (0, r.jsx)(o.Fmz, {
+                              importData: f,
+                              shouldAnimate: !i,
+                              className: h.animation
                           }),
-                          (0, i.jsxs)('div', {
-                              className: p.textContainer,
+                          (0, r.jsxs)('div', {
+                              className: h.textContainer,
                               children: [
-                                  (0, i.jsx)(r.X6q, {
+                                  (0, r.jsx)(o.X6q, {
                                       variant: 'heading-md/semibold',
-                                      children: h.intl.string(h.t.OmBThI)
+                                      children: p.NW.string(p.t.OmBThI)
                                   }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: h.intl.string(h.t.zcs5kp)
+                                      children: p.NW.string(p.t.zcs5kp)
                                   })
                               ]
                           })
                       ]
                   })
                 : null
-            : (0, i.jsx)('div', { className: p.divider });
+            : (0, r.jsx)('div', { className: h.divider });
     });

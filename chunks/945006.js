@@ -1,3 +1,3 @@
 n(30626);
-var i = n(974802);
-e.exports = i.Object.getOwnPropertySymbols;
+var r = n(974802);
+e.exports = r.Object.getOwnPropertySymbols;

@@ -1,26 +1,26 @@
 n.d(t, { Z: () => d });
-var i,
-    l,
+var r,
+    i,
     a,
-    r = n(442837),
-    s = n(570140);
-let o = { matureAgree: !1 };
-class c extends (a = r.ZP.Store) {
+    o = n(442837),
+    l = n(570140);
+let s = { matureAgree: !1 };
+class c extends (a = o.ZP.Store) {
     get didMatureAgree() {
-        return o.matureAgree;
+        return s.matureAgree;
     }
 }
-(l = 'ApplicationStoreSettingsStore'),
-    (i = 'displayName') in c
-        ? Object.defineProperty(c, i, {
-              value: l,
+(i = 'ApplicationStoreSettingsStore'),
+    (r = 'displayName') in c
+        ? Object.defineProperty(c, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[i] = l);
-let d = new c(s.Z, {
+        : (c[r] = i);
+let d = new c(l.Z, {
     APPLICATION_STORE_MATURE_AGREE: function () {
-        o.matureAgree = !0;
+        s.matureAgree = !0;
     }
 });

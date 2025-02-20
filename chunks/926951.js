@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(818083);
-let r = 'bandwidth_estimation',
-    a = (0, i.B)({
+n.d(t, { Z: () => a }), n(47120), n(301563);
+var r = n(818083);
+let i = 'bandwidth_estimation',
+    o = (0, r.B)({
         kind: 'user',
         id: '2024-06_rtc_pacer__simulcast',
         label: 'RTC Pacer & Golive Simulcast',
@@ -67,9 +67,9 @@ let r = 'bandwidth_estimation',
             }
         ]
     }),
-    s = {
+    a = {
         getConfig(e, t) {
-            let n = a.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
+            let n = o.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
             return this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) || (n.enabled = !1), n;
         },
         supportsBandwidthEstimationExperimentFullname(e, t) {
@@ -80,6 +80,6 @@ let r = 'bandwidth_estimation',
         },
         getMediaEngineExperiments(e) {
             let t = e.split('/');
-            return 3 !== t.length || t[0] !== r ? null : t[1].split(',').filter((e) => 0 !== e.length);
+            return 3 !== t.length || t[0] !== i ? null : t[1].split(',').filter((e) => 0 !== e.length);
         }
     };

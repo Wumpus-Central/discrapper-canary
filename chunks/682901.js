@@ -1,7 +1,7 @@
-n.d(t, { Z: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
-    id: '2025-1_call_settings',
+    id: '2025-01_call_settings',
     label: 'Simplified Call Settings Experiment',
     defaultConfig: { enabled: !1 },
     treatments: [
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    return i.useExperiment(e);
+function i(e) {
+    return r.useExperiment(e);
 }

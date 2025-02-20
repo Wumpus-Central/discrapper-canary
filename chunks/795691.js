@@ -1,53 +1,53 @@
-n.d(t, { Z: () => d }), n(47120), n(773603);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(279881),
-    a = n(383124),
+n.d(t, { Z: () => d }), n(47120), n(773603), n(230036);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(279881),
+    l = n(383124),
     o = n(388032),
-    c = n(237376);
+    c = n(430045);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d } = e,
-        { topGames: u, tryFetchTopGames: m } = (0, s.I)(),
-        h = u.get(t),
-        [g, x] = r.useState(!1);
-    r.useEffect(() => {
-        x(!0),
+        { topGames: u, tryFetchTopGames: m } = (0, a.I)(),
+        p = u.get(t),
+        [g, h] = i.useState(!1);
+    i.useEffect(() => {
+        h(!0),
             m(t).finally(() => {
-                x(!1);
+                h(!1);
             });
     }, [t, m]);
-    let p = r.useMemo(() => (null == h ? [] : Object.keys(h).sort((e, t) => h[t].score - h[e].score)), [h]),
-        _ = r.useCallback(
+    let f = i.useMemo(() => (null == p ? [] : Object.keys(p).sort((e, t) => p[t].score - p[e].score)), [p]),
+        b = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
             [d, n]
         );
-    return g && null == h
-        ? (0, i.jsx)(l.$jN, {})
-        : null == p || 0 === p.length
+    return g && null == p
+        ? (0, r.jsx)(s.$jN, {})
+        : null == f || 0 === f.length
           ? null
-          : (0, i.jsxs)(i.Fragment, {
+          : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)('div', { className: c.separator }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsx)('div', { className: c.separator }),
+                    (0, r.jsxs)('div', {
                         className: c.gamesContainer,
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: o.intl.string(o.t.bFGpub)
+                                children: o.NW.string(o.t.bFGpub)
                             }),
-                            (0, i.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: c.gamesList,
-                                children: p.map((e) =>
-                                    (0, i.jsx)(
-                                        a.Z,
+                                children: f.map((e) =>
+                                    (0, r.jsx)(
+                                        l.Z,
                                         {
                                             applicationId: e,
                                             selected: n.includes(e),
-                                            onClick: _
+                                            onClick: b
                                         },
                                         e
                                     )

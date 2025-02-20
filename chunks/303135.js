@@ -1,18 +1,18 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(739566),
+var i = n(739566),
     a = n(834129),
-    r = n(388032);
-function s(e) {
-    let { message: t, usernameHook: s, compact: o } = e,
-        c = (0, l.ZP)(t),
-        d = s(c);
-    return (0, i.jsx)(a.Z, {
+    o = n(388032);
+function l(e) {
+    let { message: t, usernameHook: l, compact: s } = e,
+        c = (0, i.ZP)(t),
+        d = l(c);
+    return (0, r.jsx)(a.Z, {
         icon: n(819373),
         timestamp: t.timestamp,
-        compact: o,
-        children: r.intl.format(r.t.OEdU6e, {
+        compact: s,
+        children: o.NW.format(o.t.OEdU6e, {
             username: c.nick,
             usernameHook: d
         })

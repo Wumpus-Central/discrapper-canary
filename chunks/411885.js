@@ -1,10 +1,10 @@
-var i = n(67867),
-    r = n(570596),
-    a = n(548828),
-    s = n(653457),
-    o = n(139545),
+var r = n(67867),
+    i = n(570596),
+    o = n(548828),
+    a = n(653457),
+    s = n(139545),
     l = n(730427);
-i(
+r(
     {
         target: 'Promise',
         stat: !0,
@@ -13,42 +13,42 @@ i(
     {
         allSettled: function (e) {
             var t = this,
-                n = s.f(t),
-                i = n.resolve,
-                u = n.reject,
-                c = o(function () {
-                    var n = a(t.resolve),
-                        s = [],
-                        o = 0,
-                        u = 1;
+                n = a.f(t),
+                r = n.resolve,
+                c = n.reject,
+                u = s(function () {
+                    var n = o(t.resolve),
+                        a = [],
+                        s = 0,
+                        c = 1;
                     l(e, function (e) {
-                        var a = o++,
+                        var o = s++,
                             l = !1;
-                        u++,
-                            r(n, t, e).then(
+                        c++,
+                            i(n, t, e).then(
                                 function (e) {
                                     !l &&
                                         ((l = !0),
-                                        (s[a] = {
+                                        (a[o] = {
                                             status: 'fulfilled',
                                             value: e
                                         }),
-                                        --u || i(s));
+                                        --c || r(a));
                                 },
                                 function (e) {
                                     !l &&
                                         ((l = !0),
-                                        (s[a] = {
+                                        (a[o] = {
                                             status: 'rejected',
                                             reason: e
                                         }),
-                                        --u || i(s));
+                                        --c || r(a));
                                 }
                             );
                     }),
-                        --u || i(s);
+                        --c || r(a);
                 });
-            return c.error && u(c.value), n.promise;
+            return u.error && c(u.value), n.promise;
         }
     }
 );

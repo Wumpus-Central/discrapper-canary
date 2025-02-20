@@ -1,26 +1,26 @@
-var i = n(927066)('%Reflect.construct%', !0),
-    r = n(751564);
+var r = n(927066)('%Reflect.construct%', !0),
+    i = n(751564);
 try {
-    r({}, '', {
+    i({}, '', {
         '[[Get]]': function () {}
     });
 } catch (e) {
-    r = null;
+    i = null;
 }
-if (r && i) {
-    var a = {},
-        s = {};
-    r(s, 'length', {
+if (i && r) {
+    var o = {},
+        a = {};
+    i(a, 'length', {
         '[[Get]]': function () {
-            throw a;
+            throw o;
         },
         '[[Enumerable]]': !0
     }),
         (e.exports = function (e) {
             try {
-                i(e, s);
+                r(e, a);
             } catch (e) {
-                return e === a;
+                return e === o;
             }
         });
 } else

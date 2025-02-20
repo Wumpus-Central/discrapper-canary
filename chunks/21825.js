@@ -1,23 +1,23 @@
 n.d(t, { S: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(997638),
-    a = n(113570),
-    r = n(482641),
-    s = n(613725);
-let o = Object.freeze({
+var i = n(997638),
+    l = n(113570),
+    o = n(482641),
+    a = n(613725);
+let s = Object.freeze({
         'voice-conversations': {
             popoutPosition: 'right',
             highPriority: !0,
-            textAlign: l.iu.CENTER,
-            media: () => (0, i.jsx)(r.Z, {})
+            textAlign: i.iu.CENTER,
+            media: () => (0, r.jsx)(o.Z, {})
         },
         'writing-messages': {
             popoutPosition: 'top',
             highPriority: !0,
-            textAlign: l.iu.CENTER,
+            textAlign: i.iu.CENTER,
             spacing: 10,
-            media: () => (0, i.jsx)(s.Z, {})
+            media: () => (0, r.jsx)(a.Z, {})
         },
         'direct-messages': { popoutPosition: 'right' },
         'create-first-server': {
@@ -26,9 +26,9 @@ let o = Object.freeze({
         },
         'organize-by-topic': {
             popoutPosition: 'right',
-            textAlign: l.iu.CENTER,
+            textAlign: i.iu.CENTER,
             spacing: 8,
-            media: () => (0, i.jsx)(a.Z, {})
+            media: () => (0, r.jsx)(l.Z, {})
         },
         'instant-invite': {
             popoutPosition: 'right',
@@ -52,4 +52,4 @@ let o = Object.freeze({
             popoutPosition: 'right'
         }
     }),
-    c = (e) => (e in o ? o[e] : null);
+    c = (e) => (e in s ? s[e] : null);

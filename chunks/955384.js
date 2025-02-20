@@ -1,12 +1,12 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(925975),
-    r = n(957730),
-    s = n(981631),
-    o = n(388032),
-    c = n(534625);
-function d(e, t, n) {
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(925975),
+    o = n(957730),
+    a = n(981631),
+    s = n(388032),
+    c = n(550740);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,73 +19,73 @@ function d(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     e.stopPropagation();
 }
-class h extends l.PureComponent {
+class p extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: a, onCancel: r, children: s, isRefreshEnabled: d } = this.props,
-            h = (0, i.jsx)('div', {
+        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: o, children: a, isRefreshEnabled: u } = this.props,
+            p = (0, r.jsx)('div', {
                 className: c.operations,
-                children: o.intl.format(o.t.wDsPXl, {
-                    onCancel: () => r(a.id),
+                children: s.NW.format(s.t.wDsPXl, {
+                    onCancel: () => o(l.id),
                     onSave: this.onClickSave
                 })
             });
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: e,
             ref: this.node,
-            onContextMenu: u,
+            onContextMenu: d,
             children: [
-                s({
+                a({
                     textValue: t,
                     richValue: n,
-                    message: l,
-                    channel: a,
+                    message: i,
+                    channel: l,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,
-                    renderLeftAccessories: () => h
+                    renderLeftAccessories: () => p
                 }),
-                d ? null : h
+                u ? null : p
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, 'node', l.createRef()),
-            d(this, 'onClickSave', () => {
+            u(this, 'node', i.createRef()),
+            u(this, 'onClickSave', () => {
                 let { textValue: e } = this.props;
                 this.onSubmit(e);
             }),
-            d(this, 'onSubmit', (e) => {
-                let { message: t, channel: n, onConfirmDelete: i, onCancel: l, saveMessage: s, validateEdit: o } = this.props;
+            u(this, 'onSubmit', (e) => {
+                let { message: t, channel: n, onConfirmDelete: r, onCancel: i, saveMessage: a, validateEdit: s } = this.props;
                 return 0 === e.length
-                    ? (i(n, t),
-                      l(n.id),
+                    ? (r(n, t),
+                      i(n.id),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !1
                       }))
-                    : o({
+                    : s({
                           value: e,
                           channel: n
                       }).then((t) => {
-                          let { valid: i } = t;
-                          if (!i)
+                          let { valid: r } = t;
+                          if (!r)
                               return Promise.resolve({
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let o = (0, a.g)(e, {
+                          let s = (0, l.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
-                          (null == o ? void 0 : o.content) != null && (e = o.content);
-                          let c = r.ZP.parse(this.props.channel, e);
+                          (null == s ? void 0 : s.content) != null && (e = s.content);
+                          let c = o.ZP.parse(this.props.channel, e);
                           return (
-                              c.content !== this.props.message.content && s(this.props.channel.id, this.props.message.id, c),
-                              l(n.id),
+                              c.content !== this.props.message.content && a(this.props.channel.id, this.props.message.id, c),
+                              i(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
                                   shouldRefocus: !0
@@ -93,12 +93,12 @@ class h extends l.PureComponent {
                           );
                       });
             }),
-            d(this, 'onChange', (e, t, n) => {
-                let { channel: i, onChange: l } = this.props;
-                l(i.id, t, n);
+            u(this, 'onChange', (e, t, n) => {
+                let { channel: r, onChange: i } = this.props;
+                i(r.id, t, n);
             }),
-            d(this, 'onKeyDown', (e) => {
-                if (e.keyCode === s.yXg.ESCAPE && !e.shiftKey) {
+            u(this, 'onKeyDown', (e) => {
+                if (e.keyCode === a.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }

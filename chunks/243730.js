@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,37 +15,37 @@ function s(e, t, n) {
         e
     );
 }
-let o = 120000,
+let s = 120000,
     l = {},
-    u = {};
-function c(e) {
+    c = {};
+function u(e) {
     let { guildId: t, roleMemberCount: n } = e;
-    (l[t] = n), (u[t] = Date.now());
+    (l[t] = n), (c[t] = Date.now());
 }
 function d(e) {
-    let { guildId: t, roleId: n, count: i } = e,
-        r = l[t];
-    if (null == r) return !1;
-    r[n] = i;
+    let { guildId: t, roleId: n, count: r } = e,
+        i = l[t];
+    if (null == i) return !1;
+    i[n] = r;
 }
 function f(e) {
-    let { guildId: t, roleId: n, added: i } = e,
-        r = l[t];
-    if (null == r || null == r[n]) return !1;
-    let a = Object.keys(i).length;
-    r[n] += a;
-}
-function _(e) {
-    let { guildId: t, roleId: n } = e,
+    let { guildId: t, roleId: n, added: r } = e,
         i = l[t];
     if (null == i || null == i[n]) return !1;
-    i[n] = i[n] + 1;
+    let o = Object.keys(r).length;
+    i[n] += o;
 }
 function p(e) {
     let { guildId: t, roleId: n } = e,
-        i = l[t];
-    if (null == i || null == i[n]) return !1;
-    i[n] = Math.max(i[n] - 1, 0);
+        r = l[t];
+    if (null == r || null == r[n]) return !1;
+    r[n] = r[n] + 1;
+}
+function _(e) {
+    let { guildId: t, roleId: n } = e,
+        r = l[t];
+    if (null == r || null == r[n]) return !1;
+    r[n] = Math.max(r[n] - 1, 0);
 }
 function h(e) {
     let { guildId: t, role: n } = e;
@@ -53,25 +53,25 @@ function h(e) {
 }
 function m(e) {
     let { guild: t } = e;
-    delete l[t.id], delete u[t.id];
+    delete l[t.id], delete c[t.id];
 }
-class g extends (i = r.ZP.Store) {
+class g extends (r = i.ZP.Store) {
     getRoleMemberCount(e) {
         return null != e ? l[e] : null;
     }
     shouldFetch(e) {
         if (null == e) return !1;
-        let t = u[e];
-        return null == t || Date.now() - t > o;
+        let t = c[e];
+        return null == t || Date.now() - t > s;
     }
 }
-s(g, 'displayName', 'GuildRoleMemberCountStore');
-let E = new g(a.Z, {
-    GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: c,
+a(g, 'displayName', 'GuildRoleMemberCountStore');
+let E = new g(o.Z, {
+    GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: u,
     GUILD_ROLE_MEMBER_COUNT_UPDATE: d,
     GUILD_ROLE_MEMBER_BULK_ADD: f,
-    GUILD_ROLE_MEMBER_ADD: _,
-    GUILD_ROLE_MEMBER_REMOVE: p,
+    GUILD_ROLE_MEMBER_ADD: p,
+    GUILD_ROLE_MEMBER_REMOVE: _,
     GUILD_ROLE_CREATE: h,
     GUILD_DELETE: m
 });

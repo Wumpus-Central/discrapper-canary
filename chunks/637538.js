@@ -1,20 +1,20 @@
-n.d(t, { Z: () => s });
-var a = n(192379),
-    r = n(493773),
-    i = n(626135),
-    c = n(353250),
-    o = n(981631);
+r.d(t, { Z: () => s });
+var n = r(192379),
+    a = r(493773),
+    i = r(626135),
+    o = r(353250),
+    c = r(981631);
 function s(e) {
-    let t = a.useRef(!0);
+    let t = n.useRef(!0);
     return (
-        (0, r.ZP)(() => () => {
-            t.current && (null == e || e(c.CaptchaError.CANCEL));
+        (0, a.ZP)(() => () => {
+            t.current && (null == e || e(o.CaptchaError.CANCEL));
         }),
-        a.useEffect(
+        n.useEffect(
             () => (
-                i.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                i.default.track(c.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
                 () => {
-                    t.current && i.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    t.current && i.default.track(c.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
                 }
             ),
             []

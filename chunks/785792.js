@@ -1,28 +1,28 @@
-n.d(t, { b: () => a });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    o = n(481060),
-    c = n(491585);
+r.d(t, { b: () => a });
+var n = r(200651),
+    o = r(192379),
+    c = r(120356),
+    i = r.n(c),
+    s = r(481060),
+    l = r(902355);
 function a(e) {
-    let { chunks: t, columns: n, className: l } = e,
-        a = r.useMemo(() => ({ '--secure-frames-columns': n }), [n]);
+    let { chunks: t, columns: r, className: c } = e,
+        a = o.useMemo(() => ({ '--secure-frames-columns': r }), [r]);
     return null == t
-        ? (0, i.jsx)('div', {
-              className: c.loading,
-              children: (0, i.jsx)(o.$jN, {})
+        ? (0, n.jsx)('div', {
+              className: l.loading,
+              children: (0, n.jsx)(s.$jN, {})
           })
-        : (0, i.jsx)('div', {
+        : (0, n.jsx)('div', {
               style: a,
-              className: s()(c.code, l),
+              className: i()(l.code, c),
               children: t.map((e, t) =>
-                  (0, i.jsx)(
+                  (0, n.jsx)(
                       'div',
                       {
-                          className: s()(c.chunk, { [c.divider]: t > n - 1 }),
-                          children: (0, i.jsx)(o.Text, {
-                              className: c.codeText,
+                          className: i()(l.chunk, { [l.divider]: t > r - 1 }),
+                          children: (0, n.jsx)(s.Text, {
+                              className: l.codeText,
                               variant: 'code',
                               color: 'text-normal',
                               children: e

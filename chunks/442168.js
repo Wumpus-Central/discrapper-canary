@@ -1,7 +1,7 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
-    i = n(192379),
-    l = n(642128),
+    l = n(192379),
+    i = n(642128),
     a = n(442837),
     o = n(780384),
     s = n(481060),
@@ -50,14 +50,14 @@ let v = { visibility: 'hidden' },
     y = { duration: 1000 };
 function E(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: E } = i.useContext(o.Sf),
-        O = (0, i.useRef)(null),
+        { reducedMotion: E } = l.useContext(o.Sf),
+        O = (0, l.useRef)(null),
         S = d.n.getState().clipsButtonRef,
         j = (0, f.V9)(t),
         x = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
         Z = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(j)),
-        w = (0, i.useRef)();
-    i.useEffect(
+        w = (0, l.useRef)();
+    l.useEffect(
         () => () => {
             (0, u.Gh)(j);
         },
@@ -78,15 +78,15 @@ function E(e) {
         P = (e) => {
             let t = null == S ? void 0 : S.getBoundingClientRect();
             if (((w.current = t), e.timestamp !== x || null == t || n)) return v;
-            let { top: r, left: i } = t;
+            let { top: r, left: l } = t;
             return {
                 top: r + 36,
-                left: i - 216,
+                left: l - 216,
                 height: 151,
                 width: 268
             };
         },
-        N = (0, i.useRef)(null),
+        N = (0, l.useRef)(null),
         I = (0, s.Yzy)(
             Z,
             {
@@ -98,7 +98,7 @@ function E(e) {
             },
             'animate-always'
         ),
-        R = (0, i.useRef)(null),
+        R = (0, l.useRef)(null),
         _ = (0, s.Yzy)(
             Z,
             {
@@ -147,7 +147,7 @@ function E(e) {
             'animate-always'
         );
     return (
-        (0, l.useChain)([N, R], [0, 0.1], 3000),
+        (0, i.useChain)([N, R], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
@@ -157,7 +157,7 @@ function E(e) {
                 I(
                     (e, t) =>
                         null != t &&
-                        (0, r.jsx)(l.animated.div, {
+                        (0, r.jsx)(i.animated.div, {
                             className: p.whiteFlash,
                             style: e
                         })
@@ -166,9 +166,9 @@ function E(e) {
                     children: (0, r.jsx)('div', {
                         className: p.hidden,
                         children: _(
-                            (e, t, n, i) =>
+                            (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, r.jsx)(l.animated.img, {
+                                (0, r.jsx)(i.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
                                     style: e

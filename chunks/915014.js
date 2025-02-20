@@ -1,86 +1,86 @@
 n.d(t, { Z: () => m });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(318374),
-    s = n(522289),
-    o = n(565138),
+var i = n(481060),
+    o = n(318374),
+    a = n(522289),
+    s = n(565138),
     l = n(697927),
-    u = n(200634),
-    c = n(708108),
+    c = n(200634),
+    u = n(708108),
     d = n(146078),
     f = n(228168),
-    _ = n(182294),
-    p = n(180767);
+    p = n(182294),
+    _ = n(285055);
 let h = 3;
 function m(e) {
     let { user: t, onOpenProfile: n } = e,
         { mutualFriends: m } = (0, l.Z)(t.id),
-        { mutualGuilds: g } = (0, u.Z)(t.id),
+        { mutualGuilds: g } = (0, c.Z)(t.id),
         E = null != m && m.length > 0,
         v = null != g && g.length > 0,
-        y = E && v ? 'text-xs/normal' : 'text-sm/normal';
+        b = E && v ? 'text-xs/normal' : 'text-sm/normal';
     if (!E && !v) return null;
-    let I = () =>
+    let y = () =>
             E
-                ? (0, i.jsxs)(r.P3F, {
-                      className: p.section,
+                ? (0, r.jsxs)(i.P3F, {
+                      className: _.section,
                       onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_FRIENDS)),
                       children: [
-                          (0, i.jsx)(a.Z, {
+                          (0, r.jsx)(o.Z, {
                               maxUsers: h,
                               users: m.map((e) => {
                                   let { user: t } = e;
                                   return t;
                               }),
-                              size: _.EF.SIZE_16,
+                              size: p.EF.SIZE_16,
                               hideOverflowCount: !0,
                               disableUsernameTooltip: !0
                           }),
-                          (0, i.jsx)(r.Text, {
-                              className: p.text,
-                              variant: y,
+                          (0, r.jsx)(i.Text, {
+                              className: _.text,
+                              variant: b,
                               color: 'interactive-normal',
-                              children: (0, c.Z)(m.length)
+                              children: (0, u.Z)(m.length)
                           })
                       ]
                   })
                 : null,
-        T = () =>
+        O = () =>
             E && v
-                ? (0, i.jsx)('div', {
+                ? (0, r.jsx)('div', {
                       'aria-hidden': 'true',
-                      className: p.spacer
+                      className: _.spacer
                   })
                 : null,
-        b = () =>
+        S = () =>
             v
-                ? (0, i.jsxs)(r.P3F, {
-                      className: p.section,
+                ? (0, r.jsxs)(i.P3F, {
+                      className: _.section,
                       onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_GUILDS)),
                       children: [
                           !E &&
-                              (0, i.jsx)(s.Z, {
+                              (0, r.jsx)(a.Z, {
                                   maxGuilds: h,
                                   guilds: g.map((e) => {
                                       let { guild: t } = e;
                                       return t;
                                   }),
-                                  size: o.Z.Sizes.SMOL,
+                                  size: s.Z.Sizes.SMOL,
                                   hideOverflowCount: !0,
                                   disableGuildNameTooltip: !0
                               }),
-                          (0, i.jsx)(r.Text, {
-                              className: p.text,
-                              variant: y,
+                          (0, r.jsx)(i.Text, {
+                              className: _.text,
+                              variant: b,
                               color: 'interactive-normal',
                               children: (0, d.Z)(g.length)
                           })
                       ]
                   })
                 : null;
-    return (0, i.jsxs)('div', {
-        className: p.mutuals,
-        children: [I(), T(), b()]
+    return (0, r.jsxs)('div', {
+        className: _.mutuals,
+        children: [y(), O(), S()]
     });
 }

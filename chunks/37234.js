@@ -1,18 +1,18 @@
 n.d(t, {
-    Ou: () => s,
-    jN: () => r,
-    xf: () => a
+    Ou: () => a,
+    jN: () => i,
+    xf: () => o
 });
-var i = n(570140);
-function r(e) {
-    i.Z.dispatch({
+var r = n(570140);
+function i(e) {
+    r.Z.dispatch({
         type: 'LAYER_PUSH',
         component: e
     });
 }
-function a() {
-    i.Z.dispatch({ type: 'LAYER_POP' });
+function o() {
+    r.Z.dispatch({ type: 'LAYER_POP' });
 }
-function s() {
-    i.Z.dispatch({ type: 'LAYER_POP_ALL' });
+function a() {
+    r.Z.dispatch({ type: 'LAYER_POP_ALL' });
 }

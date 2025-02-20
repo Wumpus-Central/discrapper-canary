@@ -4,11 +4,11 @@ i(192379);
 var e = i(442837),
     c = i(481060),
     d = i(978085),
-    l = i(283595),
-    r = i(417363);
+    r = i(283595),
+    l = i(417363);
 function u(n, t) {
-    let i = (0, e.e7)([r.Z], () => r.Z.getLaunchOptions(n.id, n.branchId)),
-        u = (0, e.e7)([l.Z], () => l.Z.getActiveLaunchOptionId(n.id, n.branchId));
+    let i = (0, e.e7)([l.Z], () => l.Z.getLaunchOptions(n.id, n.branchId)),
+        u = (0, e.e7)([r.Z], () => r.Z.getActiveLaunchOptionId(n.id, n.branchId));
     return i.length < 2
         ? null
         : i.map((i) =>

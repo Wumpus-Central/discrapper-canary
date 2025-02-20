@@ -1,47 +1,47 @@
 n.d(t, { Z: () => g });
-var i = n(200651),
+var r = n(200651),
     a = n(192379),
-    r = n(442837),
+    i = n(442837),
     l = n(894653),
-    s = n(322665),
-    o = n(17845),
+    o = n(322665),
+    s = n(17845),
     c = n(374939),
     d = n(283293),
     u = n(493646),
-    m = n(292191),
-    h = n(683544),
-    p = n(120676);
+    p = n(292191),
+    m = n(683544),
+    h = n(414789);
 let g = function (e) {
     var t;
     let { tabId: n, onSelectApplication: g, onScroll: _ } = e,
-        x = a.useRef(null),
-        C = a.useCallback(() => {
+        f = a.useRef(null),
+        v = a.useCallback(() => {
             var e;
-            null === (e = x.current) || void 0 === e || e.scrollTo({ to: 0 });
+            null === (e = f.current) || void 0 === e || e.scrollTo({ to: 0 });
         }, []),
-        v = (0, r.e7)([l.Z], () => l.Z.getCategories()),
-        f = a.useMemo(() => v.find((e) => e.id === n), [v, n]),
-        I = a.useMemo(() => (null != f ? (0, u.v)(f) : ''), [f]);
-    return (0, i.jsxs)(d.Z, {
+        b = (0, i.e7)([l.Z], () => l.Z.getCategories()),
+        x = a.useMemo(() => b.find((e) => e.id === n), [b, n]),
+        C = a.useMemo(() => (null != x ? (0, u.v)(x) : ''), [x]);
+    return (0, r.jsxs)(d.Z, {
         onScroll: _,
-        ref: x,
+        ref: f,
         children: [
-            (0, i.jsx)(o.Z, {
-                title: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : '',
-                description: I,
-                children: (0, i.jsx)(s.Z, {})
+            (0, r.jsx)(s.Z, {
+                title: null !== (t = null == x ? void 0 : x.name) && void 0 !== t ? t : '',
+                description: C,
+                children: (0, r.jsx)(o.Z, {})
             }),
-            (0, i.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 children:
-                    null == f
-                        ? (0, i.jsx)('div', {
-                              className: p.errorContainer,
-                              children: (0, i.jsx)(m.Z, { className: p.error })
+                    null == x
+                        ? (0, r.jsx)('div', {
+                              className: h.errorContainer,
+                              children: (0, r.jsx)(p.Z, { className: h.error })
                           })
-                        : (0, i.jsx)(h.Z, {
-                              categoryId: f.id,
+                        : (0, r.jsx)(m.Z, {
+                              categoryId: x.id,
                               onSelectApplication: g,
-                              resetScroll: C
+                              resetScroll: v
                           })
             })
         ]

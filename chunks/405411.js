@@ -1,11 +1,11 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
+var r = n(200651),
     a = n(192379),
-    r = n(481060),
+    i = n(481060),
     l = n(581364),
-    s = n(665692),
-    o = n(388032),
-    c = n(883295);
+    o = n(665692),
+    s = n(388032),
+    c = n(776815);
 function d(e) {
     let { application: t } = e,
         n = a.useMemo(() => {
@@ -23,29 +23,29 @@ function d(e) {
         }, [t]);
     return 0 === n.length
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: c.sectionContainer,
               children: [
-                  (0, i.jsx)(r.X6q, {
+                  (0, r.jsx)(i.X6q, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: o.intl.string(o.t.swIgTE)
+                      children: s.NW.string(s.t.swIgTE)
                   }),
-                  (0, i.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: c.contentContainer,
                       children: n.map((e) =>
-                          (0, i.jsxs)(
+                          (0, r.jsxs)(
                               'div',
                               {
                                   className: c.commandContainer,
                                   children: [
-                                      (0, i.jsxs)(r.Text, {
+                                      (0, r.jsxs)(i.Text, {
                                           className: c.commandName,
                                           variant: 'code',
                                           color: 'header-primary',
-                                          children: [s.GI, e.displayName]
+                                          children: [o.GI, e.displayName]
                                       }),
-                                      (0, i.jsx)(r.Text, {
+                                      (0, r.jsx)(i.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-normal',
                                           children: e.displayDescription

@@ -1,8 +1,8 @@
 function t(e) {
     let t = e.regex,
         n = ['displayHeight', 'displayWidth', 'mouseY', 'mouseX', 'mousePressed', 'pmouseX', 'pmouseY', 'key', 'keyCode', 'pixels', 'focused', 'frameCount', 'frameRate', 'height', 'width', 'size', 'createGraphics', 'beginDraw', 'createShape', 'loadShape', 'PShape', 'arc', 'ellipse', 'line', 'point', 'quad', 'rect', 'triangle', 'bezier', 'bezierDetail', 'bezierPoint', 'bezierTangent', 'curve', 'curveDetail', 'curvePoint', 'curveTangent', 'curveTightness', 'shape', 'shapeMode', 'beginContour', 'beginShape', 'bezierVertex', 'curveVertex', 'endContour', 'endShape', 'quadraticVertex', 'vertex', 'ellipseMode', 'noSmooth', 'rectMode', 'smooth', 'strokeCap', 'strokeJoin', 'strokeWeight', 'mouseClicked', 'mouseDragged', 'mouseMoved', 'mousePressed', 'mouseReleased', 'mouseWheel', 'keyPressed', 'keyPressedkeyReleased', 'keyTyped', 'print', 'println', 'save', 'saveFrame', 'day', 'hour', 'millis', 'minute', 'month', 'second', 'year', 'background', 'clear', 'colorMode', 'fill', 'noFill', 'noStroke', 'stroke', 'alpha', 'blue', 'brightness', 'color', 'green', 'hue', 'lerpColor', 'red', 'saturation', 'modelX', 'modelY', 'modelZ', 'screenX', 'screenY', 'screenZ', 'ambient', 'emissive', 'shininess', 'specular', 'add', 'createImage', 'beginCamera', 'camera', 'endCamera', 'frustum', 'ortho', 'perspective', 'printCamera', 'printProjection', 'cursor', 'frameRate', 'noCursor', 'exit', 'loop', 'noLoop', 'popStyle', 'pushStyle', 'redraw', 'binary', 'boolean', 'byte', 'char', 'float', 'hex', 'int', 'str', 'unbinary', 'unhex', 'join', 'match', 'matchAll', 'nf', 'nfc', 'nfp', 'nfs', 'split', 'splitTokens', 'trim', 'append', 'arrayCopy', 'concat', 'expand', 'reverse', 'shorten', 'sort', 'splice', 'subset', 'box', 'sphere', 'sphereDetail', 'createInput', 'createReader', 'loadBytes', 'loadJSONArray', 'loadJSONObject', 'loadStrings', 'loadTable', 'loadXML', 'open', 'parseXML', 'saveTable', 'selectFolder', 'selectInput', 'beginRaw', 'beginRecord', 'createOutput', 'createWriter', 'endRaw', 'endRecord', 'PrintWritersaveBytes', 'saveJSONArray', 'saveJSONObject', 'saveStream', 'saveStrings', 'saveXML', 'selectOutput', 'popMatrix', 'printMatrix', 'pushMatrix', 'resetMatrix', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'shearX', 'shearY', 'translate', 'ambientLight', 'directionalLight', 'lightFalloff', 'lights', 'lightSpecular', 'noLights', 'normal', 'pointLight', 'spotLight', 'image', 'imageMode', 'loadImage', 'noTint', 'requestImage', 'tint', 'texture', 'textureMode', 'textureWrap', 'blend', 'copy', 'filter', 'get', 'loadPixels', 'set', 'updatePixels', 'blendMode', 'loadShader', 'PShaderresetShader', 'shader', 'createFont', 'loadFont', 'text', 'textFont', 'textAlign', 'textLeading', 'textMode', 'textSize', 'textWidth', 'textAscent', 'textDescent', 'abs', 'ceil', 'constrain', 'dist', 'exp', 'floor', 'lerp', 'log', 'mag', 'map', 'max', 'min', 'norm', 'pow', 'round', 'sq', 'sqrt', 'acos', 'asin', 'atan', 'atan2', 'cos', 'degrees', 'radians', 'sin', 'tan', 'noise', 'noiseDetail', 'noiseSeed', 'random', 'randomGaussian', 'randomSeed'],
-        i = e.IDENT_RE,
-        r = {
+        r = e.IDENT_RE,
+        i = {
             variants: [
                 {
                     match: t.concat(t.either(...n), t.lookahead(/\s*\(/)),
@@ -10,21 +10,21 @@ function t(e) {
                 },
                 {
                     relevance: 0,
-                    match: t.concat(/\b(?!for|if|while)/, i, t.lookahead(/\s*\(/)),
+                    match: t.concat(/\b(?!for|if|while)/, r, t.lookahead(/\s*\(/)),
                     className: 'title.function'
                 }
             ]
         },
-        a = {
-            match: [/new\s+/, i],
+        o = {
+            match: [/new\s+/, r],
             className: {
                 1: 'keyword',
                 2: 'class.title'
             }
         },
-        s = {
+        a = {
             relevance: 0,
-            match: [/\./, i],
+            match: [/\./, r],
             className: { 2: 'property' }
         };
     return {
@@ -42,10 +42,10 @@ function t(e) {
             {
                 variants: [
                     {
-                        match: [/class/, /\s+/, i, /\s+/, /extends/, /\s+/, i]
+                        match: [/class/, /\s+/, r, /\s+/, /extends/, /\s+/, r]
                     },
                     {
-                        match: [/class/, /\s+/, i]
+                        match: [/class/, /\s+/, r]
                     }
                 ],
                 className: {
@@ -55,9 +55,9 @@ function t(e) {
                     7: 'title.class.inherited'
                 }
             },
+            o,
+            i,
             a,
-            r,
-            s,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,

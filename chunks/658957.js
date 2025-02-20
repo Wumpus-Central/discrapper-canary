@@ -68,10 +68,10 @@
                     return e;
                 default:
                     if (0 === e) return e + "'ıncı";
-                    var i = e % 10,
-                        r = (e % 100) - i,
-                        a = e >= 100 ? 100 : null;
-                    return e + (t[i] || t[r] || t[a]);
+                    var r = e % 10,
+                        i = (e % 100) - r,
+                        o = e >= 100 ? 100 : null;
+                    return e + (t[r] || t[i] || t[o]);
             }
         },
         week: {

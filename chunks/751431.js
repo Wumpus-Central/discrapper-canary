@@ -1,12 +1,12 @@
-var i = n(67867),
-    r = n(294377),
-    a = n(141603),
-    s = n(342545),
-    o = n(293303),
+var r = n(67867),
+    i = n(294377),
+    o = n(141603),
+    a = n(342545),
+    s = n(293303),
     l = n(56684),
-    u = o('string-to-symbol-registry'),
-    c = o('symbol-to-string-registry');
-i(
+    c = s('string-to-symbol-registry'),
+    u = s('symbol-to-string-registry');
+r(
     {
         target: 'Symbol',
         stat: !0,
@@ -14,10 +14,10 @@ i(
     },
     {
         for: function (e) {
-            var t = s(e);
-            if (a(u, t)) return u[t];
-            var n = r('Symbol')(t);
-            return (u[t] = n), (c[n] = t), n;
+            var t = a(e);
+            if (o(c, t)) return c[t];
+            var n = i('Symbol')(t);
+            return (c[t] = n), (u[n] = t), n;
         }
     }
 );

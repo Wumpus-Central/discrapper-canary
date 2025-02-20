@@ -2,11 +2,11 @@ IntlMessageFormat.__addLocaleData({
     locale: 'ru',
     pluralRuleFunction: function (e, t) {
         var n = String(e).split('.'),
-            i = n[0],
-            r = !n[1],
-            a = i.slice(-1),
-            s = i.slice(-2);
-        return t ? 'other' : r && 1 == a && 11 != s ? 'one' : r && a >= 2 && a <= 4 && (s < 12 || s > 14) ? 'few' : (r && 0 == a) || (r && a >= 5 && a <= 9) || (r && s >= 11 && s <= 14) ? 'many' : 'other';
+            r = n[0],
+            i = !n[1],
+            o = r.slice(-1),
+            a = r.slice(-2);
+        return t ? 'other' : i && 1 == o && 11 != a ? 'one' : i && o >= 2 && o <= 4 && (a < 12 || a > 14) ? 'few' : (i && 0 == o) || (i && o >= 5 && o <= 9) || (i && a >= 11 && a <= 14) ? 'many' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({

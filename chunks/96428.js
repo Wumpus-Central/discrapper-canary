@@ -1,7 +1,7 @@
-n.d(t, { N: () => i });
-var i = (function () {
-    function e(e, t, n, i) {
-        return (this.x = e), (this.y = t), (this.width = n), (this.height = i), (this.top = this.y), (this.left = this.x), (this.bottom = this.top + this.height), (this.right = this.left + this.width), Object.freeze(this);
+n.d(t, { N: () => r });
+var r = (function () {
+    function e(e, t, n, r) {
+        return (this.x = e), (this.y = t), (this.width = n), (this.height = r), (this.top = this.y), (this.left = this.x), (this.bottom = this.top + this.height), (this.right = this.left + this.width), Object.freeze(this);
     }
     return (
         (e.prototype.toJSON = function () {

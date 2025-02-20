@@ -1,111 +1,111 @@
-n.d(i, { default: () => I });
-var e = n(200651);
-n(192379);
-var a = n(481060),
-    l = n(600164),
-    s = n(623624),
-    o = n(430824),
-    r = n(496675),
-    d = n(626135),
-    c = n(565799),
-    u = n(501655),
-    _ = n(146085),
-    h = n(981631),
-    T = n(474936),
-    g = n(388032),
-    E = n(293040);
+e.d(i, { default: () => I });
+var a = e(200651);
+e(192379);
+var n = e(481060),
+    s = e(600164),
+    l = e(623624),
+    o = e(430824),
+    r = e(496675),
+    d = e(626135),
+    c = e(565799),
+    u = e(501655),
+    _ = e(146085),
+    h = e(981631),
+    T = e(474936),
+    g = e(388032),
+    E = e(872685);
 function I(t) {
     var i;
-    let n,
+    let e,
         { channel: I, transitionState: x, onClose: m } = t,
         L = o.Z.getGuild(I.guild_id),
         S = null !== (i = null == L ? void 0 : L.maxStageVideoChannelUsers) && void 0 !== i ? i : 0,
-        f = !!(null == L ? void 0 : L.isCommunity()),
-        p = g.intl.string(g.t.pqPQLy),
-        C = f ? S < h.TU7 : (null == L ? void 0 : L.premiumTier) !== h.Eu4.TIER_3 && S <= h.eez,
-        k = r.Z.can(_.yP, I);
-    n = f && (null == L ? void 0 : L.premiumTier) === h.Eu4.TIER_3 ? (S <= h.TU7 ? g.intl.string(g.t.tJmOu7) : g.intl.string(g.t['7FHbPD'])) : C ? g.intl.string(g.t['8/uDSE']) : g.intl.string(g.t['7FHbPD']);
-    let b = () => {
+        N = !!(null == L ? void 0 : L.isCommunity()),
+        f = g.NW.string(g.t.pqPQLy),
+        p = N ? S < h.TU7 : (null == L ? void 0 : L.premiumTier) !== h.Eu4.TIER_3 && S <= h.eez,
+        C = r.Z.can(_.yP, I);
+    e = N && (null == L ? void 0 : L.premiumTier) === h.Eu4.TIER_3 ? (S <= h.TU7 ? g.NW.string(g.t.tJmOu7) : g.NW.string(g.t['7FHbPD'])) : p ? g.NW.string(g.t['8/uDSE']) : g.NW.string(g.t['7FHbPD']);
+    let k = () => {
             m(),
                 d.default.track(h.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: I.guild_id,
                     type: T.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: k,
+                    is_moderator: C,
                     action: T.T7.DISMISS
                 });
         },
-        O = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
-        j = c.Z.getParticipantCount(I.id, u.pV.AUDIENCE);
+        b = c.Z.getMutableParticipants(I.id, u.pV.SPEAKER).filter((t) => t.type === u.Ui.VOICE).length,
+        O = c.Z.getParticipantCount(I.id, u.pV.AUDIENCE);
     return (
         d.default.track(h.rMx.BOOSTING_UPSELL_VIEWED, {
             guild_id: I.guild_id,
             type: T.cd.VIDEO_STAGE_LIMIT,
-            is_moderator: k,
-            listener_count: O + j
+            is_moderator: C,
+            listener_count: b + O
         }),
-        (0, e.jsxs)(a.Y0X, {
-            size: a.CgR.SMALL,
+        (0, a.jsxs)(n.Y0X, {
+            size: n.CgR.SMALL,
             transitionState: x,
-            'aria-label': p,
+            'aria-label': f,
             children: [
-                (0, e.jsxs)(a.xBx, {
-                    justify: l.Z.Justify.END,
+                (0, a.jsxs)(n.xBx, {
+                    justify: s.Z.Justify.END,
                     separator: !1,
                     className: E.header,
-                    children: [(0, e.jsx)('div', { className: E.fullArt }), (0, e.jsx)(a.olH, { onClick: m })]
+                    children: [(0, a.jsx)('div', { className: E.fullArt }), (0, a.jsx)(n.olH, { onClick: m })]
                 }),
-                (0, e.jsxs)(a.hzk, {
+                (0, a.jsxs)(n.hzk, {
                     className: E.content,
                     children: [
-                        (0, e.jsx)(a.X6q, {
+                        (0, a.jsx)(n.X6q, {
                             variant: 'heading-xl/bold',
-                            children: p
+                            children: f
                         }),
-                        (0, e.jsx)(a.Text, {
+                        (0, a.jsx)(n.Text, {
                             variant: 'text-md/medium',
-                            children: n
+                            children: e
                         })
                     ]
                 }),
-                (0, e.jsx)(a.mzw, {
+                (0, a.jsx)(n.mzw, {
                     className: E.footer,
-                    children: C
-                        ? (0, e.jsxs)(e.Fragment, {
+                    children: p
+                        ? (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, e.jsx)(a.zxk, {
-                                      look: a.iLD.LINK,
+                                  (0, a.jsx)(n.zxk, {
+                                      look: n.iLD.LINK,
                                       className: E.noThanksButton,
-                                      color: a.Ttl.CUSTOM,
-                                      size: a.PhG.SMALL,
-                                      onClick: b,
-                                      children: g.intl.string(g.t.f3Pet7)
+                                      color: n.Ttl.CUSTOM,
+                                      size: n.PhG.SMALL,
+                                      onClick: k,
+                                      children: g.NW.string(g.t.f3Pet7)
                                   }),
-                                  (0, e.jsx)(a.gtL, {
+                                  (0, a.jsx)(n.gtL, {
                                       onClick: () => {
                                           m(),
-                                              (0, s.f)({
+                                              (0, l.f)({
                                                   guildId: I.guild_id,
                                                   location: { section: h.jXE.STAGE_VIDEO_LIMIT }
                                               }),
                                               d.default.track(h.rMx.BOOSTING_UPSELL_CLICKED, {
                                                   guild_id: I.guild_id,
                                                   type: T.cd.VIDEO_STAGE_LIMIT,
-                                                  is_moderator: k,
+                                                  is_moderator: C,
                                                   action: T.T7.BOOST
                                               });
                                       },
-                                      size: a.PhG.SMALL,
+                                      size: n.PhG.SMALL,
                                       className: E.boostButton,
-                                      children: g.intl.string(g.t.Uj0md3)
+                                      children: g.NW.string(g.t.Uj0md3)
                                   })
                               ]
                           })
-                        : (0, e.jsx)(a.zxk, {
-                              onClick: b,
-                              size: a.PhG.SMALL,
-                              color: a.Ttl.CUSTOM,
+                        : (0, a.jsx)(n.zxk, {
+                              onClick: k,
+                              size: n.PhG.SMALL,
+                              color: n.Ttl.CUSTOM,
                               className: E.boostButton,
-                              children: g.intl.string(g.t['NX+WJC'])
+                              children: g.NW.string(g.t['NX+WJC'])
                           })
                 })
             ]

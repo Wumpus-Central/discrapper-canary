@@ -1,74 +1,74 @@
-n.d(t, { Z: () => v });
-var i = n(200651);
+n.d(t, { Z: () => b }), n(266796);
+var r = n(200651);
 n(192379);
 var a = n(120356),
-    r = n.n(a),
+    i = n.n(a),
     l = n(481060),
-    s = n(410030),
-    o = n(686546),
+    o = n(410030),
+    s = n(686546),
     c = n(565138),
     d = n(372769),
     u = n(134432),
-    m = n(601964),
-    h = n(768581),
-    p = n(981631),
+    p = n(601964),
+    m = n(768581),
+    h = n(981631),
     g = n(388032),
-    _ = n(116916),
-    x = n(129512),
-    C = n(330065);
-function v(e) {
+    _ = n(563753),
+    f = n(129512),
+    v = n(330065);
+function b(e) {
     let { guild: t, className: n, onClick: a } = e,
-        v = (0, s.ZP)(),
-        f = new m.ZP({
+        b = (0, o.ZP)(),
+        x = new p.ZP({
             name: t.name,
             icon: t.icon
         }),
-        I = h.ZP.getGuildDiscoverySplashURL({
+        C = m.ZP.getGuildDiscoverySplashURL({
             id: t.id,
             splash: t.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
-        b =
-            null != I
-                ? I
+        j =
+            null != C
+                ? C
                 : (function (e) {
                       switch (e) {
-                          case p.BRd.DARK:
-                              return x;
-                          case p.BRd.LIGHT:
-                              return C;
+                          case h.BRd.DARK:
+                              return f;
+                          case h.BRd.LIGHT:
+                              return v;
                       }
-                  })(v),
-        j = h.ZP.getGuildIconURL({
+                  })(b),
+        y = m.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 50
         });
-    return (0, i.jsxs)(l.P3F, {
-        className: r()(_.card, n),
+    return (0, r.jsxs)(l.P3F, {
+        className: i()(_.card, n),
         onClick: a,
-        'aria-label': g.intl.string(g.t.RB4L29),
+        'aria-label': g.NW.string(g.t.RB4L29),
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: _.cardHeader,
                 children: [
-                    (0, i.jsx)('img', {
-                        src: b,
+                    (0, r.jsx)('img', {
+                        src: j,
                         alt: '',
                         className: _.splashImage
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: _.guildIcon,
-                        children: (0, i.jsx)(o.ZP, {
-                            mask: o.ZP.Masks.AVATAR_DEFAULT,
+                        children: (0, r.jsx)(s.ZP, {
+                            mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
-                            children: (0, i.jsx)('div', {
+                            children: (0, r.jsx)('div', {
                                 className: _.iconMask,
-                                children: (0, i.jsx)(c.Z, {
+                                children: (0, r.jsx)(c.Z, {
                                     className: _.__invalid_icon,
-                                    iconSrc: j,
-                                    guild: f,
+                                    iconSrc: y,
+                                    guild: x,
                                     size: c.Z.Sizes.LARGE
                                 })
                             })
@@ -76,45 +76,45 @@ function v(e) {
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: _.cardDetails,
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: _.guildNameWrapper,
                         children: [
-                            (0, i.jsx)(d.Z, {
+                            (0, r.jsx)(d.Z, {
                                 className: _.guildBadge,
                                 guild: t,
                                 tooltipColor: l.ua7.Colors.PRIMARY
                             }),
-                            (0, i.jsx)(l.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
                                 className: _.guildName,
                                 children: t.name
                             })
                         ]
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, r.jsx)(l.Text, {
                         className: _.guildDescription,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         lineClamp: 2,
                         children: t.description
                     }),
-                    (0, i.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: _.memberInfo,
-                        children: (0, i.jsxs)('div', {
+                        children: (0, r.jsxs)('div', {
                             className: _.memberCountWrapper,
                             children: [
-                                (0, i.jsx)(l.tBG, {
+                                (0, r.jsx)(l.tBG, {
                                     color: 'currentColor',
                                     className: _.memberCountIcon,
                                     size: 'xs'
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-secondary',
-                                    children: g.intl.format(g.t.zRl6XV, { count: t.approximate_member_count })
+                                    children: g.NW.format(g.t.zRl6XV, { count: t.approximate_member_count })
                                 })
                             ]
                         })

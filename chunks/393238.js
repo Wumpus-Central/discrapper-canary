@@ -1,60 +1,60 @@
 n.d(t, {
-    P: () => a,
-    Z: () => r
+    P: () => o,
+    Z: () => i
 }),
     n(47120);
-var i = n(192379);
-function r() {
+var r = n(192379);
+function i() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [r, s] = i.useState(void 0),
-        [o, l] = i.useState(void 0),
-        [u, c] = i.useState(void 0),
-        [d, f] = i.useState(void 0),
-        _ = i.useRef(null);
+    let [i, a] = r.useState(void 0),
+        [s, l] = r.useState(void 0),
+        [c, u] = r.useState(void 0),
+        [d, f] = r.useState(void 0),
+        p = r.useRef(null);
     return (
-        a(
-            _,
+        o(
+            p,
             (e) => {
-                let { width: t, height: n, scrollWidth: i, scrollHeight: r } = e;
-                l(n), s(t), c(i), f(r);
+                let { width: t, height: n, scrollWidth: r, scrollHeight: i } = e;
+                l(n), a(t), u(r), f(i);
             },
             t
         ),
         {
-            ref: _,
-            width: r,
-            height: o,
+            ref: p,
+            width: i,
+            height: s,
             scrollHeight: d,
-            scrollWidth: u
+            scrollWidth: c
         }
     );
 }
-function a(e, t) {
+function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    i.useLayoutEffect(() => {
+    r.useLayoutEffect(() => {
         let n = e.current,
-            i = null == n ? void 0 : n.ownerDocument.defaultView;
-        if (null != n && null != i) {
-            let r = new i.ResizeObserver((n) => {
-                var i, r, a, s, o, l;
-                let u = n[0],
-                    c = null == u ? void 0 : null === (r = u.borderBoxSize) || void 0 === r ? void 0 : null === (i = r[0]) || void 0 === i ? void 0 : i.inlineSize,
-                    d = null == u ? void 0 : null === (s = u.borderBoxSize) || void 0 === s ? void 0 : null === (a = s[0]) || void 0 === a ? void 0 : a.blockSize;
-                if (null == c || null == d) {
+            r = null == n ? void 0 : n.ownerDocument.defaultView;
+        if (null != n && null != r) {
+            let i = new r.ResizeObserver((n) => {
+                var r, i, o, a, s, l;
+                let c = n[0],
+                    u = null == c ? void 0 : null === (i = c.borderBoxSize) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.inlineSize,
+                    d = null == c ? void 0 : null === (a = c.borderBoxSize) || void 0 === a ? void 0 : null === (o = a[0]) || void 0 === o ? void 0 : o.blockSize;
+                if (null == u || null == d) {
                     let t = e.current;
                     if (null != t) {
                         let e = window.getComputedStyle(t);
-                        null == c && (c = parseFloat(null !== (o = e.width) && void 0 !== o ? o : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
+                        null == u && (u = parseFloat(null !== (s = e.width) && void 0 !== s ? s : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
                     }
                 }
                 t({
-                    width: c,
+                    width: u,
                     height: d,
-                    scrollHeight: u.target.scrollHeight,
-                    scrollWidth: u.target.scrollWidth
+                    scrollHeight: c.target.scrollHeight,
+                    scrollWidth: c.target.scrollWidth
                 });
             });
-            return r.observe(n), () => r.disconnect();
+            return i.observe(n), () => i.disconnect();
         }
     }, [e.current, ...n]);
 }

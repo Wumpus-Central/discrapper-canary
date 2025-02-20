@@ -1,9 +1,9 @@
-n.d(t, { Z: () => l }), n(47120), n(653041);
-let i = {
+n.d(t, { Z: () => l }), n(474991), n(398202), n(301563), n(47120), n(653041);
+let r = {
         1: 'bold',
         4: 'underline'
     },
-    r = {
+    i = {
         30: 'black',
         31: 'red',
         32: 'green',
@@ -13,7 +13,7 @@ let i = {
         36: 'cyan',
         37: 'white'
     },
-    a = {
+    o = {
         40: 'black',
         41: 'red',
         42: 'green',
@@ -23,49 +23,49 @@ let i = {
         46: 'cyan',
         47: 'white'
     },
-    s = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-    o = new RegExp('(?='.concat(s.source, ')'));
+    a = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+    s = new RegExp('(?='.concat(a.source, ')'));
 function l() {
     let e = {
             className: 'ansi-control-sequence',
-            begin: s,
+            begin: a,
             starts: {
-                end: o,
+                end: s,
                 endsParent: !0
             }
         },
-        t = [...c('foreground', r, ['38', '39'], !0), ...c('background', a, ['48', '49'], !0), ...c('style', i, [], !1), e];
+        t = [...u('foreground', i, ['38', '39'], !0), ...u('background', o, ['48', '49'], !0), ...u('style', r, [], !1), e];
     return (
         d(t),
         {
             contains: [
                 {
-                    begin: o,
+                    begin: s,
                     contains: t
                 }
             ]
         }
     );
 }
-function u(e, t, n, i) {
+function c(e, t, n, r) {
     return {
         className: 'ansi-'.concat(e, '-').concat(t),
         endsParent: !0,
-        begin: o,
+        begin: s,
         'on:begin': (e, t) => {
-            let r = e[1].split(';');
-            for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), r)) e === n ? (t.data.isOn = !0) : i.includes(e) && (t.data.isOn = !1);
+            let i = e[1].split(';');
+            for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), i)) e === n ? (t.data.isOn = !0) : r.includes(e) && (t.data.isOn = !1);
             t.data.isOn || t.ignoreMatch();
         }
     };
 }
-function c(e, t, n, i) {
-    let r = ['0', ...n];
+function u(e, t, n, r) {
+    let i = ['0', ...n];
     return (
-        i && r.push(...Object.keys(t)),
+        r && i.push(...Object.keys(t)),
         Object.entries(t).map((t) => {
-            let [n, i] = t;
-            return u(e, i, n, r);
+            let [n, r] = t;
+            return c(e, r, n, i);
         })
     );
 }

@@ -1,33 +1,33 @@
-function i(e) {
+function r(e) {
     return function (t) {
         var n,
-            i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            s = i.width,
-            o = (s && e.matchPatterns[s]) || e.matchPatterns[e.defaultMatchWidth],
-            l = t.match(o);
+            r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            a = r.width,
+            s = (a && e.matchPatterns[a]) || e.matchPatterns[e.defaultMatchWidth],
+            l = t.match(s);
         if (!l) return null;
-        var u = l[0],
-            c = (s && e.parsePatterns[s]) || e.parsePatterns[e.defaultParseWidth],
-            d = Array.isArray(c)
-                ? a(c, function (e) {
-                      return e.test(u);
+        var c = l[0],
+            u = (a && e.parsePatterns[a]) || e.parsePatterns[e.defaultParseWidth],
+            d = Array.isArray(u)
+                ? o(u, function (e) {
+                      return e.test(c);
                   })
-                : r(c, function (e) {
-                      return e.test(u);
+                : i(u, function (e) {
+                      return e.test(c);
                   });
         return (
             (n = e.valueCallback ? e.valueCallback(d) : d),
             {
-                value: (n = i.valueCallback ? i.valueCallback(n) : n),
-                rest: t.slice(u.length)
+                value: (n = r.valueCallback ? r.valueCallback(n) : n),
+                rest: t.slice(c.length)
             }
         );
     };
 }
-function r(e, t) {
+function i(e, t) {
     for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
 }
-function a(e, t) {
+function o(e, t) {
     for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

@@ -16,11 +16,11 @@ var r = t(200651),
     f = t(699516),
     p = t(5192),
     m = t(785717),
-    b = t(221292),
-    I = t(687158),
+    I = t(221292),
+    b = t(687158),
     g = t(471879),
-    y = t(502762),
-    v = t(848780),
+    v = t(502762),
+    y = t(848780),
     j = t(907179),
     h = t(475413),
     x = t(228168),
@@ -54,7 +54,7 @@ function P(e) {
     return e;
 }
 function E(e) {
-    let { user: n, guildId: t, channelId: i, messageId: l, roleId: s, transitionState: f, onViewBlockedProfileClick: p, showGuildProfile: v = !0, sourceAnalyticsLocations: j = [] } = e,
+    let { user: n, guildId: t, channelId: i, messageId: l, roleId: s, transitionState: f, onViewBlockedProfileClick: p, showGuildProfile: y = !0, sourceAnalyticsLocations: j = [] } = e,
         E = t === O.ME ? void 0 : t,
         { analyticsLocations: S } = (0, d.ZP)([...j, a.Z.BLOCKED_PROFILE_MODAL]),
         T = (0, m.ZB)({
@@ -64,7 +64,7 @@ function E(e) {
             channelId: i,
             messageId: l,
             roleId: s,
-            showGuildProfile: v
+            showGuildProfile: y
         }),
         C = [
             {
@@ -76,7 +76,7 @@ function E(e) {
                 description: _.NW.string(_.t.QxrDY2)
             }
         ],
-        L = (0, I.ZP)(n.id, v ? E : void 0),
+        L = (0, b.ZP)(n.id, y ? E : void 0),
         w = o.createRef();
     return (0, r.jsx)(d.Gt, {
         value: S,
@@ -87,7 +87,7 @@ function E(e) {
                 className: Z.root,
                 hideShadow: !0,
                 'aria-label': _.NW.string(_.t['3N/J2t']),
-                children: (0, r.jsx)(y.Z, {
+                children: (0, r.jsx)(v.Z, {
                     user: n,
                     displayProfile: L,
                     profileType: x.y0.FULL_SIZE,
@@ -144,7 +144,7 @@ function E(e) {
                                         fullWidth: !1,
                                         onClick: () => {
                                             null == p || p(),
-                                                (0, b.pQ)(
+                                                (0, I.pQ)(
                                                     P(
                                                         {
                                                             action: 'VIEW_BLOCKED_PROFILE',
@@ -168,8 +168,8 @@ function S(e) {
     let { user: n, guildId: t, channelId: i, messageId: h, roleId: E, transitionState: S, onViewBlockedProfileClick: T, showGuildProfile: C = !0, sourceAnalyticsLocations: L = [] } = e,
         w = t === O.ME ? void 0 : t,
         A = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
-        { analyticsLocations: R } = (0, d.ZP)([...L, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
-        M = (0, m.ZB)({
+        { analyticsLocations: M } = (0, d.ZP)([...L, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        R = (0, m.ZB)({
             layout: A ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
             userId: n.id,
             guildId: w,
@@ -178,7 +178,7 @@ function S(e) {
             roleId: E,
             showGuildProfile: C
         }),
-        D = [
+        U = [
             {
                 icon: c.owK,
                 description: _.NW.string(_.t.kcuWvb)
@@ -188,20 +188,20 @@ function S(e) {
                 description: _.NW.string(A ? _.t.QxrDY2 : _.t.W6fjkZ)
             }
         ],
-        U = (0, I.ZP)(n.id, C ? w : void 0),
+        D = (0, b.ZP)(n.id, C ? w : void 0),
         B = o.createRef();
     return (0, r.jsx)(d.Gt, {
-        value: R,
+        value: M,
         children: (0, r.jsx)(m.Mt, {
-            value: M,
+            value: R,
             children: (0, r.jsx)(c.Y0X, {
                 transitionState: S,
                 className: Z.root,
                 hideShadow: !0,
                 'aria-label': _.NW.string(_.t['3N/J2t']),
-                children: (0, r.jsx)(y.Z, {
+                children: (0, r.jsx)(v.Z, {
                     user: n,
-                    displayProfile: U,
+                    displayProfile: D,
                     profileType: x.y0.FULL_SIZE,
                     ref: B,
                     children: (0, r.jsxs)('div', {
@@ -237,7 +237,7 @@ function S(e) {
                                     }),
                                     (0, r.jsx)('div', {
                                         className: Z.restrictedSafetyTable,
-                                        children: D.map((e, n) => {
+                                        children: U.map((e, n) => {
                                             let { icon: t, description: o } = e;
                                             return (0, r.jsx)(
                                                 u.ZP,
@@ -258,28 +258,28 @@ function S(e) {
                                                 isBlocked: A,
                                                 onClick: () => {
                                                     null == T || T(),
-                                                        (0, b.pQ)(
+                                                        (0, I.pQ)(
                                                             P(
                                                                 {
                                                                     action: A ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                                    analyticsLocations: R
+                                                                    analyticsLocations: M
                                                                 },
-                                                                M
+                                                                R
                                                             )
                                                         );
                                                 }
                                             }),
-                                            (0, r.jsx)(v.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 userId: n.id,
                                                 onClick: () => {
                                                     null == T || T(),
-                                                        (0, b.pQ)(
+                                                        (0, I.pQ)(
                                                             P(
                                                                 {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                                    analyticsLocations: R
+                                                                    analyticsLocations: M
                                                                 },
-                                                                M
+                                                                R
                                                             )
                                                         );
                                                 }

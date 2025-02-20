@@ -1,12 +1,12 @@
-n.d(t, { Z: () => S }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(823379),
-    o = n(592125),
+n.d(t, { Z: () => I }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(823379),
+    s = n(592125),
     l = n(486472),
-    u = n(984933),
-    c = n(981631);
+    c = n(984933),
+    u = n(981631);
 function d(e, t, n) {
     return (
         t in e
@@ -21,9 +21,9 @@ function d(e, t, n) {
     );
 }
 let f = {},
-    _ = 0;
-function p() {
-    _ += 1;
+    p = 0;
+function _() {
+    p += 1;
 }
 function h(e) {
     if (null == f[e]) return !1;
@@ -43,36 +43,36 @@ function E(e) {
 }
 function v(e) {
     let { userGuildSettings: t } = e,
-        n = new Set(t.map((e) => e.guild_id).filter(s.lm));
+        n = new Set(t.map((e) => e.guild_id).filter(a.lm));
     for (let e in f) {
-        let t = o.Z.getChannel(e);
+        let t = s.Z.getChannel(e);
         null != t && null != t.guild_id && n.has(t.guild_id) && delete f[t.id];
     }
     for (let e of t) for (let t of e.channel_overrides) t.collapsed && (f[t.channel_id] = !0);
 }
-function y(e) {
+function b(e) {
     let {
         channel: { id: t }
     } = e;
     return h(t);
 }
-function I(e) {
+function y(e) {
     let { guildId: t } = e;
-    u.ZP.getChannels(t)[c.d4z.GUILD_CATEGORY].forEach((e) => {
+    c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
         'null' !== t.id && (f[t.id] = !0);
     });
 }
-function T(e) {
+function O(e) {
     let { guildId: t } = e;
-    u.ZP.getChannels(t)[c.d4z.GUILD_CATEGORY].forEach((e) => {
+    c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
         delete f[t.id];
     });
 }
-class b extends (i = r.ZP.PersistedStore) {
+class S extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
+        this.waitFor(s.Z, l.Z), this.removeChangeListener(_), this.addChangeListener(_), (f = null != e ? e : {});
     }
     getState() {
         return f;
@@ -84,16 +84,16 @@ class b extends (i = r.ZP.PersistedStore) {
         return f;
     }
     get version() {
-        return _;
+        return p;
     }
 }
-d(b, 'displayName', 'CategoryCollapseStore'), d(b, 'persistKey', 'collapsedCategories');
-let S = new b(a.Z, {
+d(S, 'displayName', 'CategoryCollapseStore'), d(S, 'persistKey', 'collapsedCategories');
+let I = new S(o.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: v,
     CATEGORY_COLLAPSE: m,
     CATEGORY_EXPAND: g,
-    CATEGORY_COLLAPSE_ALL: I,
-    CATEGORY_EXPAND_ALL: T,
-    CHANNEL_DELETE: y
+    CATEGORY_COLLAPSE_ALL: y,
+    CATEGORY_EXPAND_ALL: O,
+    CHANNEL_DELETE: b
 });

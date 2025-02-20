@@ -1,9 +1,9 @@
-var i = n(96403),
-    r = n(735471),
-    a = n(980277),
-    s = i(Function.toString);
-r(a.inspectSource) ||
-    (a.inspectSource = function (e) {
-        return s(e);
+var r = n(96403),
+    i = n(735471),
+    o = n(980277),
+    a = r(Function.toString);
+i(o.inspectSource) ||
+    (o.inspectSource = function (e) {
+        return a(e);
     }),
-    (e.exports = a.inspectSource);
+    (e.exports = o.inspectSource);

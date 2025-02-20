@@ -1,35 +1,35 @@
-n.d(t, { Z: () => _ }), n(653041), n(47120);
-var i = n(243814),
-    l = n(100527),
-    r = n(208049),
-    a = n(763296),
-    s = n(697426),
-    o = n(242291),
-    d = n(641015),
-    c = n(594174),
-    u = n(996106),
-    h = n(452426),
-    m = n(736045),
-    p = n(186901),
-    g = n(231338);
-let _ = {
-    [g.Et.GET_SOUNDBOARD_SOUNDS]: {
+n.d(t, { Z: () => m }), n(653041), n(47120);
+var r = n(243814),
+    i = n(100527),
+    l = n(208049),
+    o = n(763296),
+    a = n(697426),
+    s = n(242291),
+    c = n(641015),
+    u = n(594174),
+    d = n(996106),
+    p = n(452426),
+    h = n(736045),
+    g = n(186901),
+    f = n(231338);
+let m = {
+    [f.Et.GET_SOUNDBOARD_SOUNDS]: {
         scope: {
-            [p.Gp.ANY]: [i.x.RPC, p.lH]
+            [g.Gp.ANY]: [r.x.RPC, g.lH]
         },
         async handler() {
-            await (0, r.w)();
-            let e = a.Z.getSounds(),
+            await (0, l.w)();
+            let e = o.Z.getSounds(),
                 t = [];
-            return e.forEach((e) => e.forEach((e) => t.push((0, s.QL)(e)))), t;
+            return e.forEach((e) => e.forEach((e) => t.push((0, a.QL)(e)))), t;
         }
     },
-    [g.Et.PLAY_SOUNDBOARD_SOUND]: {
+    [f.Et.PLAY_SOUNDBOARD_SOUND]: {
         scope: {
-            [p.Gp.ALL]: [i.x.RPC, i.x.RPC_VOICE_WRITE]
+            [g.Gp.ALL]: [r.x.RPC, r.x.RPC_VOICE_WRITE]
         },
         validation: (e) =>
-            (0, h.Z)(e).required().keys({
+            (0, p.Z)(e).required().keys({
                 guild_id: e.string(),
                 sound_id: e.string()
             }),
@@ -37,16 +37,16 @@ let _ = {
             let {
                 args: { guild_id: t, sound_id: n }
             } = e;
-            await (0, r.w)();
-            let i = c.default.getCurrentUser(),
-                s = a.Z.getSound(t, n),
-                h = (0, m.Z)(),
-                p = null != s && null != i && (0, o.Nq)(i, s, h);
-            if (null == h) throw new u.Z({ errorCode: g.lT.INVALID_CHANNEL }, 'Invalid Channel.');
-            if (p) {
-                if ((0, d.Z)(h)) null != s && (0, o.GN)(s, h.id, [l.Z.RPC]);
-                else throw new u.Z({ errorCode: g.lT.INVALID_PERMISSIONS }, 'Invalid Permissions.');
-            } else throw new u.Z({ errorCode: g.lT.INVALID_SOUND }, 'Invalid Sound.');
+            await (0, l.w)();
+            let r = u.default.getCurrentUser(),
+                a = o.Z.getSound(t, n),
+                p = (0, h.Z)(),
+                g = null != a && null != r && (0, s.Nq)(r, a, p);
+            if (null == p) throw new d.Z({ errorCode: f.lT.INVALID_CHANNEL }, 'Invalid Channel.');
+            if (g) {
+                if ((0, c.Z)(p)) null != a && (0, s.GN)(a, p.id, [i.Z.RPC]);
+                else throw new d.Z({ errorCode: f.lT.INVALID_PERMISSIONS }, 'Invalid Permissions.');
+            } else throw new d.Z({ errorCode: f.lT.INVALID_SOUND }, 'Invalid Sound.');
         }
     }
 };

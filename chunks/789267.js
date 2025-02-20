@@ -1,54 +1,54 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var l = n(739566),
+var i = n(739566),
     a = n(834129),
-    r = n(388032);
-function s(e) {
-    let { message: t, compact: s, missed: o, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
-        m = (0, l.ZP)(t),
-        _ = m.nick,
-        h = d(m),
-        p = (function (e) {
+    o = n(388032);
+function l(e) {
+    let { message: t, compact: l, missed: s, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
+        p = (0, i.ZP)(t),
+        m = p.nick,
+        f = d(p),
+        h = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
         })(t);
-    return o
-        ? (0, i.jsx)(a.Z, {
+    return s
+        ? (0, r.jsx)(a.Z, {
               icon: n(154239),
               timestamp: t.timestamp,
-              compact: s,
+              compact: l,
               children:
-                  null != p
-                      ? r.intl.format(r.t.AcqBmJ, {
-                            username: _,
-                            usernameHook: h,
-                            callDuration: p
+                  null != h
+                      ? o.NW.format(o.t.AcqBmJ, {
+                            username: m,
+                            usernameHook: f,
+                            callDuration: h
                         })
-                      : r.intl.format(r.t['43phHx'], {
-                            username: _,
-                            usernameHook: h
+                      : o.NW.format(o.t['43phHx'], {
+                            username: m,
+                            usernameHook: f
                         })
           })
-        : (0, i.jsxs)(a.Z, {
+        : (0, r.jsxs)(a.Z, {
               icon: n(344163),
               timestamp: t.timestamp,
-              compact: s,
+              compact: l,
               children: [
-                  null != p
-                      ? r.intl.format(r.t['7TeC1N'], {
-                            username: _,
-                            usernameHook: h,
-                            callDuration: p
+                  null != h
+                      ? o.NW.format(o.t['7TeC1N'], {
+                            username: m,
+                            usernameHook: f,
+                            callDuration: h
                         })
-                      : r.intl.format(r.t.LuB5RE, {
-                            username: _,
-                            usernameHook: h
+                      : o.NW.format(o.t.LuB5RE, {
+                            username: m,
+                            usernameHook: f
                         }),
                   c
-                      ? (0, i.jsx)(a.Z.Action, {
+                      ? (0, r.jsx)(a.Z.Action, {
                             onClick: u,
-                            children: r.intl.string(r.t.oa9mvb)
+                            children: o.NW.string(o.t.oa9mvb)
                         })
                       : null
               ]

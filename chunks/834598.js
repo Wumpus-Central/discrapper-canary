@@ -1,5 +1,5 @@
-var i = n(685036);
-function r(e, t) {
-    return !!(null == e ? 0 : e.length) && i(e, t, 0) > -1;
+var r = n(685036);
+function i(e, t) {
+    return !!(null == e ? 0 : e.length) && r(e, t, 0) > -1;
 }
-e.exports = r;
+e.exports = i;

@@ -1,16 +1,16 @@
-t.d(n, { Z: () => r });
-var i = t(442837),
-    l = t(430824),
-    a = t(981631);
-function r(e) {
+n.d(e, { Z: () => a });
+var i = n(442837),
+    d = n(430824),
+    _ = n(981631);
+function a(t) {
     return (0, i.e7)(
-        [l.Z],
+        [d.Z],
         () => {
-            var n;
-            if (null == e) return !1;
-            let t = l.Z.getGuild(e);
-            return null !== (n = null == t ? void 0 : t.hasFeature(a.oNc.HUB)) && void 0 !== n && n;
+            var e;
+            if (null == t) return !1;
+            let n = d.Z.getGuild(t);
+            return null !== (e = null == n ? void 0 : n.hasFeature(_.oNc.HUB)) && void 0 !== e && e;
         },
-        [e]
+        [t]
     );
 }

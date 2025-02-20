@@ -1,17 +1,17 @@
 n.d(t, {
-    C6: () => i,
-    GY: () => r,
-    Kq: () => s
+    C6: () => a,
+    GY: () => o,
+    Kq: () => i
 });
-var l = n(981631),
-    a = n(486324);
-function i(e, t) {
+var r = n(981631),
+    l = n(486324);
+function a(e, t) {
     let { isGIF: n } = t;
-    if (e === a.pC.GUILD_BANNER) return n ? l.oNc.ANIMATED_BANNER : l.oNc.BANNER;
+    if (e === l.pC.GUILD_BANNER) return n ? r.oNc.ANIMATED_BANNER : r.oNc.BANNER;
 }
-function s(e) {
-    return e === a.pC.AVATAR || e === a.pC.BANNER;
+function i(e) {
+    return e === l.pC.AVATAR || e === l.pC.BANNER;
 }
-function r(e) {
-    return e === a.pC.BANNER;
+function o(e) {
+    return e === l.pC.BANNER;
 }

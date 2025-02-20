@@ -1,3 +1,3 @@
 n(238325);
-var i = n(974802);
-e.exports = i.Date.now;
+var r = n(974802);
+e.exports = r.Date.now;

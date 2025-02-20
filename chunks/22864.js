@@ -2,19 +2,19 @@ n.d(t, { Z: () => u });
 var l = n(348327),
     a = n.n(l),
     s = n(392711),
-    i = n.n(s),
-    r = n(442837),
+    r = n.n(s),
+    i = n(442837),
     o = n(566006),
     c = n(542578),
     d = n(981631);
 function u(e) {
     var t, n;
     let { channelId: l, messageId: s, reaction: u } = e,
-        m = (0, r.e7)(
+        m = (0, i.e7)(
             [c.Z],
             () => {
                 let e = c.Z.getReactions(l, s, u.emoji, d.pTL, o.O.VOTE);
-                return i().map(e, (e) => e);
+                return r().map(e, (e) => e);
             },
             [l, s, u.emoji],
             a()

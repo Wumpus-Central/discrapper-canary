@@ -1,18 +1,18 @@
 n.d(t, {
-    AW: () => a,
-    Ju: () => s,
-    pR: () => o
+    AW: () => o,
+    Ju: () => a,
+    pR: () => s
 });
-var i = n(695346),
-    r = n(990266);
-function a(e) {
-    i.up.updateSetting(e);
+var r = n(695346),
+    i = n(990266);
+function o(e) {
+    r.up.updateSetting(e);
 }
-function s() {
-    let { disabled: e } = r.i.useExperiment({ location: 'ExpressionSuggestions' });
+function a() {
+    let { disabled: e } = i.i.useExperiment({ location: 'ExpressionSuggestions' });
     return e;
 }
-function o() {
-    let e = i.up.useSetting();
-    return !s() && e;
+function s() {
+    let e = r.up.useSetting();
+    return !a() && e;
 }

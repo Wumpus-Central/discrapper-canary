@@ -1,27 +1,27 @@
-n.d(t, { Z: () => O }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(392711),
-    s = n.n(a),
-    o = n(818405),
+n.d(t, { Z: () => R }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    s = n(818405),
     l = n(587158),
-    u = n(286379),
-    c = n(903772),
+    c = n(286379),
+    u = n(903772),
     d = n(442837),
     f = n(481060),
-    _ = n(386506),
-    p = n(304761),
+    p = n(386506),
+    _ = n(304761),
     h = n(865427),
     m = n(406128),
     g = n(797614),
     E = n(703656),
     v = n(626135),
-    y = n(960048),
-    I = n(998502),
-    T = n(981631),
-    b = n(388032),
-    S = n(910364);
-function A(e, t, n) {
+    b = n(960048),
+    y = n(998502),
+    O = n(981631),
+    S = n(388032),
+    I = n(677588);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,36 +35,36 @@ function A(e, t, n) {
     );
 }
 function N() {
-    let [e, t] = r.useState(!1);
+    let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, d.e7)([p.C], () => {
+        (0, d.e7)([_.C], () => {
             var e;
-            return (0, h.fD)() ? (null === (e = p.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, h.fD)() ? (null === (e = _.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         })
     )
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, _.bF)(), window.location.reload(!0);
+            t(!0), await (0, p.bF)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
     };
-    return (0, i.jsx)(f.zxk, {
+    return (0, r.jsx)(f.zxk, {
         size: f.PhG.LARGE,
         onClick: n,
         submitting: e,
-        className: S.clearOverrideButton,
-        children: b.intl.string(b.t['/Nz9ra'])
+        className: I.clearOverrideButton,
+        children: S.NW.string(S.t['/Nz9ra'])
     });
 }
-let C = s().throttle(
+let A = a().throttle(
     (e) => {
         g.Z.increment(
             {
-                name: u.V.APP_CRASHED,
-                tags: ['reason:'.concat(o.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL), 'modded_client:'.concat(e)]
+                name: c.V.APP_CRASHED,
+                tags: ['reason:'.concat(s.v.UNHANDLED_JS_ERROR), 'level:'.concat(l.c.FATAL), 'modded_client:'.concat(e)]
             },
             !0
         );
@@ -72,7 +72,7 @@ let C = s().throttle(
     100,
     { trailing: !1 }
 );
-class R extends r.PureComponent {
+class C extends i.PureComponent {
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
@@ -82,19 +82,19 @@ class R extends r.PureComponent {
             error: e,
             info: t
         });
-        let i = (0, c.e)(),
-            r = y.Z.captureCrash(e, { extra: t });
-        v.default.track(T.rMx.APP_CRASHED, {
+        let r = (0, u.e)(),
+            i = b.Z.captureCrash(e, { extra: t });
+        v.default.track(O.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: r,
-            uses_client_mods: i,
+            sentry_issue_id: i,
+            uses_client_mods: r,
             error_level: 'fatal'
         }),
-            C(i),
-            I.ZP.cleanupDisplaySleep();
+            A(r),
+            y.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -114,36 +114,36 @@ class R extends r.PureComponent {
     render() {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
-            let e = (0, i.jsxs)('div', {
-                    children: [(0, i.jsx)('p', { children: b.intl.string(b.t.tx8CkJ) }), (0, i.jsx)('p', { children: b.intl.string(b.t.CvQlAA) })]
+            let e = (0, r.jsxs)('div', {
+                    children: [(0, r.jsx)('p', { children: S.NW.string(S.t.tx8CkJ) }), (0, r.jsx)('p', { children: S.NW.string(S.t.CvQlAA) })]
                 }),
-                n = (0, i.jsxs)('div', {
-                    className: S.buttons,
+                n = (0, r.jsxs)('div', {
+                    className: I.buttons,
                     children: [
-                        (0, i.jsx)(f.zxk, {
+                        (0, r.jsx)(f.zxk, {
                             size: f.PhG.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: b.intl.string(b.t['+hivLS'])
+                            children: S.NW.string(S.t['+hivLS'])
                         }),
-                        (0, i.jsx)(N, {})
+                        (0, r.jsx)(N, {})
                     ]
                 });
-            return (0, i.jsx)(m.Z, {
-                title: b.intl.string(b.t['3h+n+/']),
+            return (0, r.jsx)(m.Z, {
+                title: S.NW.string(S.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
-                className: S.errorPage
+                className: I.errorPage
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            A(this, 'state', {
+            T(this, 'state', {
                 error: null,
                 info: null
             }),
-            A(this, 'discordErrorsSet', !1);
+            T(this, 'discordErrorsSet', !1);
     }
 }
-let O = R;
+let R = C;

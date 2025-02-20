@@ -1,58 +1,58 @@
-n.d(t, { Z: () => I });
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    l = n(481060),
-    o = n(388905),
+n.d(t, { Z: () => x }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
+    l = n(388905),
     s = n(409059),
     c = n(962220),
-    d = n(306453),
-    u = n(108427),
+    u = n(306453),
+    d = n(108427),
     h = n(314897),
-    _ = n(626135),
-    m = n(587444),
+    p = n(626135),
+    _ = n(587444),
     g = n(981631),
-    p = n(58346),
-    f = n(388032),
-    x = n(483938);
-function E(e, t, n) {
+    f = n(58346),
+    m = n(388032),
+    b = n(455812);
+function N(e, t, n) {
     e.preventDefault(),
-        _.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        p.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
             guild_template_guild_id: n.sourceGuildId
         });
-    let i = h.default.getFingerprint(),
-        r = null != i ? i : h.default.getId();
-    c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, r);
+    let r = h.default.getFingerprint(),
+        i = null != r ? r : h.default.getId();
+    c.Z.openMobileApp(n.state === f.Rj.RESOLVED ? t : void 0, i);
 }
-function I(e) {
+function x(e) {
     let { code: t } = e,
-        n = (0, a.e7)([s.Z], () => s.Z.getGuildTemplate(t));
-    return (r.useEffect(() => {
-        (0, u.e)('guild_template_mobile');
+        n = (0, o.e7)([s.Z], () => s.Z.getGuildTemplate(t));
+    return (i.useEffect(() => {
+        (0, d.e)('guild_template_mobile');
     }, []),
-    null == n || n.state === p.Rj.RESOLVING)
-        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.$jN, {}) })
-        : n.state === p.Rj.RESOLVED
-          ? (0, i.jsxs)(o.ZP, {
+    null == n || n.state === f.Rj.RESOLVING)
+        ? (0, r.jsx)(l.ZP, { children: (0, r.jsx)(a.$jN, {}) })
+        : n.state === f.Rj.RESOLVED
+          ? (0, r.jsxs)(l.ZP, {
                 children: [
-                    (0, i.jsx)(d.Z, {
+                    (0, r.jsx)(u.Z, {
                         guildTemplate: n,
                         tall: !0
                     }),
-                    (0, i.jsx)(o.zx, {
-                        onClick: (e) => E(e, t, n),
-                        className: x.marginTop20,
-                        children: f.intl.string(f.t['a3Gl+f'])
+                    (0, r.jsx)(l.zx, {
+                        onClick: (e) => N(e, t, n),
+                        className: b.marginTop20,
+                        children: m.NW.string(m.t['a3Gl+f'])
                     })
                 ]
             })
-          : (0, i.jsx)(m.Z, {
-                text: f.intl.string(f.t['e/rZ2t']),
-                buttonCta: f.intl.string(f.t.HAvYn5),
-                onClick: (e) => E(e, t, n)
+          : (0, r.jsx)(_.Z, {
+                text: m.NW.string(m.t['e/rZ2t']),
+                buttonCta: m.NW.string(m.t.HAvYn5),
+                onClick: (e) => N(e, t, n)
             });
 }
-a.ZP.initialize();
+o.ZP.initialize();

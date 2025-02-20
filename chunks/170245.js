@@ -1,42 +1,42 @@
-n.d(t, { Z: () => u });
-var i = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
-    s = n(129861),
-    o = n(700582),
-    d = n(699516);
+var i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    a = n(129861),
+    s = n(700582),
+    c = n(699516);
 n(51144);
-var c = n(922358);
-let u = function (e) {
-    let { user: t, hovered: n, subText: l, showAccountIdentifier: u, status: h, isMobile: m, className: p } = e,
-        g = (0, a.e7)([d.Z], () => d.Z.getNickname(t.id));
-    return (0, i.jsxs)('div', {
-        className: r()(c.userInfo, p, { [c.hovered]: n }),
+var u = n(966671);
+let d = function (e) {
+    let { user: t, hovered: n, subText: i, showAccountIdentifier: d, status: p, isMobile: h, className: g } = e,
+        f = (0, o.e7)([c.Z], () => c.Z.getNickname(t.id));
+    return (0, r.jsxs)('div', {
+        className: l()(u.userInfo, g, { [u.hovered]: n }),
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, r.jsx)(s.Z, {
                 user: t,
-                className: c.avatar,
+                className: u.avatar,
                 animate: n,
-                status: h,
-                isMobile: m
+                status: p,
+                isMobile: h
             }),
-            (0, i.jsxs)('div', {
-                className: c.text,
+            (0, r.jsxs)('div', {
+                className: u.text,
                 children: [
-                    (0, i.jsx)(s.Z, {
+                    (0, r.jsx)(a.Z, {
                         user: t,
-                        nick: g,
-                        botClass: c.botTag,
-                        className: r()(c.discordTag, { [c.alignPomelo]: t.isPomelo() }),
-                        usernameClass: c.username,
-                        discriminatorClass: c.discriminator,
-                        showAccountIdentifier: u
+                        nick: f,
+                        botClass: u.botTag,
+                        className: l()(u.discordTag, { [u.alignPomelo]: t.isPomelo() }),
+                        usernameClass: u.username,
+                        discriminatorClass: u.discriminator,
+                        showAccountIdentifier: d
                     }),
-                    (0, i.jsx)('div', {
-                        className: c.subtext,
-                        children: l
+                    (0, r.jsx)('div', {
+                        className: u.subtext,
+                        children: i
                     })
                 ]
             })

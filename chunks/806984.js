@@ -1,23 +1,23 @@
-t.d(n, { Z: () => c });
-var r = t(512722),
-    o = t.n(r),
-    l = t(493773),
-    s = t(563132),
-    u = t(390917),
-    a = t(464797);
-function c(e) {
-    let { handleClose: n } = e,
-        { guildProductListing: t, guildId: r } = (0, a._)(),
-        { selectedSkuPricePreview: c } = (0, s.JL)();
+r.d(t, { Z: () => a });
+var n = r(512722),
+    o = r.n(n),
+    c = r(493773),
+    l = r(563132),
+    u = r(390917),
+    i = r(464797);
+function a(e) {
+    let { handleClose: t } = e,
+        { guildProductListing: r, guildId: n } = (0, i._)(),
+        { selectedSkuPricePreview: a } = (0, l.JL)();
     return (
-        (0, l.ZP)(() => {
-            o()(null != c, 'selectedSkuPricePreview cannot be null'),
+        (0, c.ZP)(() => {
+            o()(null != a, 'selectedSkuPricePreview cannot be null'),
                 (0, u.u)({
-                    guildId: r,
-                    guildProductListingId: t.id,
-                    skuPricePreview: c
+                    guildId: n,
+                    guildProductListingId: r.id,
+                    skuPricePreview: a
                 }),
-                n();
+                t();
         }),
         null
     );

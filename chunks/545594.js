@@ -1,41 +1,41 @@
-n.d(t, { i: () => s });
-var i = n(200651);
+n.d(t, { i: () => a });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(881947);
-function s(e) {
-    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
-    return (0, i.jsxs)('div', {
-        className: r.spamBanner,
+var i = n(120356),
+    l = n.n(i),
+    o = n(169958);
+function a(e) {
+    let { bannerIcon: t, bannerHeader: n, bannerSubtext: i, containerStyles: a, headerStyles: s, children: c } = e;
+    return (0, r.jsxs)('div', {
+        className: o.spamBanner,
         children: [
-            (0, i.jsxs)('div', {
-                className: a()(r.bannerTextContainer, s),
+            (0, r.jsxs)('div', {
+                className: l()(o.bannerTextContainer, a),
                 children: [
                     'string' == typeof t
-                        ? (0, i.jsx)('img', {
+                        ? (0, r.jsx)('img', {
                               src: t,
                               alt: '',
-                              className: r.bannerIcon
+                              className: o.bannerIcon
                           })
                         : t,
-                    (0, i.jsxs)('div', {
-                        className: r.bannerText,
+                    (0, r.jsxs)('div', {
+                        className: o.bannerText,
                         children: [
-                            (0, i.jsx)('div', {
-                                className: a()(r.bannerHeader, o),
+                            (0, r.jsx)('div', {
+                                className: l()(o.bannerHeader, s),
                                 children: n
                             }),
-                            (0, i.jsx)('div', {
-                                className: r.bannerSubtext,
-                                children: l
+                            (0, r.jsx)('div', {
+                                className: o.bannerSubtext,
+                                children: i
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)('div', {
-                className: r.actionButtons,
+            (0, r.jsx)('div', {
+                className: o.actionButtons,
                 children: c
             })
         ]

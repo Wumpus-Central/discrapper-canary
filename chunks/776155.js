@@ -1,29 +1,29 @@
-n.d(t, { Z: () => l }), n(47120);
-var i = n(192379),
-    r = n(295141);
-function l(e) {
-    let [t, n] = i.useState(!0),
-        [l, s] = i.useState(),
-        [a, o] = i.useState(),
-        c = i.useCallback(async (e) => {
-            n(!0), s(void 0);
+n.d(t, { Z: () => s }), n(47120);
+var r = n(192379),
+    i = n(295141);
+function s(e) {
+    let [t, n] = r.useState(!0),
+        [s, a] = r.useState(),
+        [l, o] = r.useState(),
+        c = r.useCallback(async (e) => {
+            n(!0), a(void 0);
             try {
-                let t = await r.HT(e);
+                let t = await i.HT(e);
                 o(t);
             } catch (e) {
-                s(e);
+                a(e);
             } finally {
                 n(!1);
             }
         }, []);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             c(e);
         }, [e, c]),
         {
             isLoading: t,
-            error: l,
-            highlightedCreatorDetails: a
+            error: s,
+            highlightedCreatorDetails: l
         }
     );
 }

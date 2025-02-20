@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     return null == e.guild_id;
 }
-n.d(t, { p: () => i });
+n.d(t, { p: () => r });

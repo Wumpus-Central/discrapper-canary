@@ -1,62 +1,62 @@
-a.d(t, { Z: () => c });
-var n = a(200651),
-    l = a(192379),
-    i = a(481060),
-    r = a(673462),
-    o = a(826078),
-    s = a(917042),
-    u = a(20437),
-    d = a(969318);
-function c(e) {
-    let { isLoading: t, onDoneLoading: a, videoURL: c, audioURL: m, transitionState: p } = e,
-        { videoPlayerRef: v, cropData: f, applicationAudioEnabled: h, voiceAudioEnabled: x } = (0, u.S)(),
-        g = l.useCallback(() => {
+n.d(t, { Z: () => d });
+var r = n(200651),
+    a = n(192379),
+    l = n(481060),
+    i = n(673462),
+    o = n(826078),
+    s = n(917042),
+    u = n(20437),
+    c = n(659893);
+function d(e) {
+    let { isLoading: t, onDoneLoading: n, videoURL: d, audioURL: m, transitionState: p } = e,
+        { videoPlayerRef: f, cropData: v, applicationAudioEnabled: h, voiceAudioEnabled: g } = (0, u.S)(),
+        x = a.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.seek(f.start), a();
-        }, [a, f.start, v]);
+            null === (e = f.current) || void 0 === e || e.seek(v.start), n();
+        }, [n, v.start, f]);
     return (
-        l.useEffect(() => {
+        a.useEffect(() => {
             function e(e) {
-                var t, a;
+                var t, n;
                 if ((null === (t = document.activeElement) || void 0 === t ? void 0 : t.tagName) === 'INPUT') return;
-                let n = v.current;
-                if (null == n) return;
-                let l = null === (a = v.current) || void 0 === a ? void 0 : a.videoElement;
-                if (null == l) return;
-                let i = (0, s.Z)(l.duration, e.shiftKey),
-                    r = !1;
+                let r = f.current;
+                if (null == r) return;
+                let a = null === (n = f.current) || void 0 === n ? void 0 : n.videoElement;
+                if (null == a) return;
+                let l = (0, s.Z)(a.duration, e.shiftKey),
+                    i = !1;
                 switch (e.key) {
                     case ' ':
-                        (r = !0), l.paused ? n.play() : n.pause();
+                        (i = !0), a.paused ? r.play() : r.pause();
                         break;
                     case 'ArrowLeft':
-                        (r = !0), n.seek(Math.max(l.currentTime - i, f.start));
+                        (i = !0), r.seek(Math.max(a.currentTime - l, v.start));
                         break;
                     case 'ArrowRight':
-                        (r = !0), n.seek(Math.min(l.currentTime + i, f.end));
+                        (i = !0), r.seek(Math.min(a.currentTime + l, v.end));
                 }
-                r && (e.stopPropagation(), e.preventDefault());
+                i && (e.stopPropagation(), e.preventDefault());
             }
             return document.addEventListener('keydown', e), () => document.removeEventListener('keydown', e);
-        }, [f.start, f.end, v]),
-        (0, n.jsxs)('div', {
-            className: d.editorPane,
+        }, [v.start, v.end, f]),
+        (0, r.jsxs)('div', {
+            className: c.editorPane,
             children: [
-                (0, n.jsx)('div', {
-                    className: d.videoSizer,
-                    children: (0, n.jsx)(r.Z, {
+                (0, r.jsx)('div', {
+                    className: c.videoSizer,
+                    children: (0, r.jsx)(i.Z, {
                         applicationAudioEnabled: h,
-                        voiceAudioEnabled: x,
-                        ref: v,
+                        voiceAudioEnabled: g,
+                        ref: f,
                         audioSrc: m,
-                        src: c,
+                        src: d,
                         isLoading: t,
-                        onDoneLoading: g,
-                        startTime: f.start,
-                        endTime: f.end
+                        onDoneLoading: x,
+                        startTime: v.start,
+                        endTime: v.end
                     })
                 }),
-                !t && p && [i.Dvm.ENTERED, i.Dvm.HIDDEN].includes(p) ? (0, n.jsx)(o.Z, { sourceURL: c }) : null
+                !t && p && [l.Dvm.ENTERED, l.Dvm.HIDDEN].includes(p) ? (0, r.jsx)(o.Z, { sourceURL: d }) : null
             ]
         })
     );

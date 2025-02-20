@@ -1,6 +1,6 @@
-n.d(t, { NM: () => a });
-var i = n(162461);
-let r = (0, n(818083).B)({
+n.d(t, { NM: () => o });
+var r = n(162461);
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2024-09_league_of_legends_leaderboard',
     label: 'League of Legends Leaderboard',
@@ -13,16 +13,16 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
-    let { guildId: t, location: n, autoTrackExposure: a = !0 } = e,
-        { enabled: s } = i.DG.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
-    if (!s) return !1;
-    let { enabled: o } = r.getCurrentConfig(
+function o(e) {
+    let { guildId: t, location: n, autoTrackExposure: o = !0 } = e,
+        { enabled: a } = r.DG.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
+    if (!a) return !1;
+    let { enabled: s } = i.getCurrentConfig(
         {
             guildId: t,
             location: n
         },
-        { autoTrackExposure: a }
+        { autoTrackExposure: o }
     );
-    return o;
+    return s;
 }

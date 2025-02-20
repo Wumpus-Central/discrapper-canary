@@ -1,23 +1,23 @@
-n.d(t, { $: () => s });
-var i = n(544891),
-    l = n(570140),
-    r = n(34756),
-    a = n(981631);
-async function s(e) {
-    l.Z.dispatch({
+n.d(t, { $: () => a });
+var r = n(544891),
+    i = n(570140),
+    l = n(34756),
+    o = n(981631);
+async function a(e) {
+    i.Z.dispatch({
         type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_START',
         applicationId: e
     });
     try {
         let t = (
-            await i.tn.get({
-                url: a.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
+            await r.tn.get({
+                url: o.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
         ).body;
         return (
-            l.Z.dispatch({
+            i.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS',
                 statistics: t,
                 applicationId: e
@@ -26,11 +26,11 @@ async function s(e) {
         );
     } catch (t) {
         throw (
-            (l.Z.dispatch({
+            (i.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL',
                 applicationId: e
             }),
-            new r.Z(t))
+            new l.Z(t))
         );
     }
 }

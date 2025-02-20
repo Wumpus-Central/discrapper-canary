@@ -1,133 +1,133 @@
 n.d(e, { Z: () => m }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    r = n(481060),
-    o = n(442837),
-    a = n(194359),
-    c = n(782568),
+var r = n(200651),
+    s = n(192379),
+    o = n(481060),
+    i = n(442837),
+    c = n(194359),
+    a = n(782568),
     l = n(726521),
-    d = n(485664),
-    u = n(681678),
-    E = n(699516),
-    _ = n(473092),
+    u = n(485664),
+    d = n(681678),
+    N = n(699516),
+    E = n(473092),
     h = n(991981),
-    N = n(850165),
+    _ = n(850165),
     x = n(134612),
-    C = n(981631),
-    I = n(388032),
-    A = n(26445),
-    T = n(149355);
+    b = n(981631),
+    p = n(388032),
+    f = n(878418),
+    g = n(149355);
 function m(t) {
-    let { senderId: e, channelId: n, hasReported: m, onReport: g, trackAnalyticsEvent: b } = t,
-        f = (0, o.e7)([E.Z], () => E.Z.isBlocked(e)),
-        [p, S] = i.useState(f),
-        R = (0, d.o)(),
-        M = (0, d.Q)(),
-        [k, j] = i.useState(!1),
-        z = (0, h.q)(n),
-        L = i.useMemo(() => (R ? 0 : M ? 2 : 1), [R, M]),
-        v = () => {
+    let { senderId: e, channelId: n, hasReported: m, onReport: C, trackAnalyticsEvent: I } = t,
+        A = (0, i.e7)([N.Z], () => N.Z.isBlocked(e)),
+        [T, S] = s.useState(A),
+        O = (0, u.o)(),
+        j = (0, u.Q)(),
+        [R, k] = s.useState(!1),
+        M = (0, h.q)(n),
+        v = s.useMemo(() => (O ? 0 : j ? 2 : 1), [O, j]),
+        y = () => {
             S(!0),
-                a.Z.addRelationship({
+                c.Z.addRelationship({
                     userId: e,
                     context: { location: x.DL },
-                    type: C.OGo.BLOCKED
+                    type: b.OGo.BLOCKED
                 }),
-                b(_.NM.USER_TAKEOVER_MODAL_BLOCK),
-                u.Z.showBlockSuccessToast(e, n);
+                I(E.NM.USER_TAKEOVER_MODAL_BLOCK),
+                d.Z.showBlockSuccessToast(e, n);
         },
-        O = () => {
-            S(!1), a.Z.unblockUser(e, { location: x.DL }), b(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), u.Z.showUnblockSuccessToast(e, n);
+        z = () => {
+            S(!1), c.Z.unblockUser(e, { location: x.DL }), I(E.NM.USER_TAKEOVER_MODAL_UNBLOCK), d.Z.showUnblockSuccessToast(e, n);
         },
-        D = async () => {
-            null != z &&
-                (j(!0),
+        L = async () => {
+            null != M &&
+                (k(!0),
                 await (0, l.J7)(
-                    z,
+                    M,
                     () => {
-                        u.Z.showReportSuccessToast(e, n), g();
+                        d.Z.showReportSuccessToast(e, n), C();
                     },
                     () => {
-                        u.Z.showFailedToast();
+                        d.Z.showFailedToast();
                     }
                 ),
-                j(!1),
-                b(_.NM.USER_TAKEOVER_MODAL_REPORT));
+                k(!1),
+                I(E.NM.USER_TAKEOVER_MODAL_REPORT));
         },
-        Z = (t) => {
-            0 === t ? ((0, c.Z)(x.EI), b(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, c.Z)(x.$l), b(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, c.Z)(x.n4), b(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        w = (t) => {
+            0 === t ? ((0, a.Z)(x.EI), I(E.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, a.Z)(x.$l), I(E.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, a.Z)(x.n4), I(E.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        w = i.useMemo(() => {
-            switch (L) {
+        P = s.useMemo(() => {
+            switch (v) {
                 case 0:
-                    return I.intl.string(I.t.sZf6c3);
+                    return p.NW.string(p.t.sZf6c3);
                 case 2:
-                    return I.intl.string(I.t.HQ2nKi);
+                    return p.NW.string(p.t.HQ2nKi);
                 default:
-                    return I.intl.string(I.t['65XQam']);
+                    return p.NW.string(p.t['65XQam']);
             }
-        }, [L]);
-    return (0, s.jsx)(N.Z, {
-        heroImageSrc: T,
-        heroImageAlt: I.intl.string(I.t.RVyYCA),
-        header: I.intl.string(I.t['mWO+ys']),
-        description: I.intl.string(I.t.S0XtKC),
-        children: (0, s.jsxs)('div', {
-            className: A.buttonContainer,
+        }, [v]);
+    return (0, r.jsx)(_.Z, {
+        heroImageSrc: g,
+        heroImageAlt: p.NW.string(p.t.RVyYCA),
+        header: p.NW.string(p.t['mWO+ys']),
+        description: p.NW.string(p.t.S0XtKC),
+        children: (0, r.jsxs)('div', {
+            className: f.buttonContainer,
             children: [
-                (0, s.jsxs)(r.zxk, {
-                    color: r.zxk.Colors.BRAND,
-                    size: r.zxk.Sizes.LARGE,
-                    className: A.button,
-                    innerClassName: A.buttonInner,
+                (0, r.jsxs)(o.zxk, {
+                    color: o.zxk.Colors.BRAND,
+                    size: o.zxk.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
                     onClick: () => {
-                        p ? O() : v();
+                        T ? z() : y();
                     },
                     children: [
-                        (0, s.jsx)(r.k$p, {
+                        (0, r.jsx)(o.k$p, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: A.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        p ? I.intl.string(I.t.XyHpKC) : I.intl.string(I.t.l4EmaW)
+                        T ? p.NW.string(p.t.XyHpKC) : p.NW.string(p.t.l4EmaW)
                     ]
                 }),
-                (0, s.jsxs)(r.zxk, {
-                    color: r.zxk.Colors.PRIMARY,
-                    size: r.zxk.Sizes.LARGE,
-                    className: A.button,
-                    innerClassName: A.buttonInner,
-                    onClick: D,
-                    submitting: k,
+                (0, r.jsxs)(o.zxk, {
+                    color: o.zxk.Colors.PRIMARY,
+                    size: o.zxk.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
+                    onClick: L,
+                    submitting: R,
                     disabled: m,
                     children: [
-                        (0, s.jsx)(r.U65, {
+                        (0, r.jsx)(o.U65, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: A.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        m ? I.intl.string(I.t.QvwOJy) : I.intl.string(I.t['7fHyEx'])
+                        m ? p.NW.string(p.t.QvwOJy) : p.NW.string(p.t['7fHyEx'])
                     ]
                 }),
-                (0, s.jsxs)(r.zxk, {
-                    color: r.zxk.Colors.PRIMARY,
-                    size: r.zxk.Sizes.LARGE,
-                    className: A.button,
-                    innerClassName: A.buttonInner,
-                    onClick: () => Z(L),
+                (0, r.jsxs)(o.zxk, {
+                    color: o.zxk.Colors.PRIMARY,
+                    size: o.zxk.Sizes.LARGE,
+                    className: f.button,
+                    innerClassName: f.buttonInner,
+                    onClick: () => w(v),
                     children: [
-                        (0, s.jsx)(r.kBi, {
+                        (0, r.jsx)(o.kBi, {
                             size: 'custom',
                             height: 20,
                             width: 20,
-                            className: A.buttonIcon,
+                            className: f.buttonIcon,
                             color: 'currentColor'
                         }),
-                        w
+                        P
                     ]
                 })
             ]

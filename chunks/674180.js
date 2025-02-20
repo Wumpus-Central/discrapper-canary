@@ -1,55 +1,55 @@
 n.d(t, {
-    eC: () => p,
-    gX: () => _,
+    eC: () => _,
+    gX: () => p,
     uP: () => f
 });
-var i = n(192379),
-    r = n(442837),
-    a = n(81897),
-    s = n(423117),
-    o = n(289393),
+var r = n(192379),
+    i = n(442837),
+    o = n(81897),
+    a = n(423117),
+    s = n(289393),
     l = n(430824),
-    u = n(738774),
-    c = n(981631);
+    c = n(738774),
+    u = n(981631);
 let d = (e) => {
-        let t = (0, a.Z)();
-        i.useEffect(() => {
-            null != e && e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) && o.Z.getMonetizationRestrictionsFetchState(e.id) === o.M.NOT_FETCHED && s.Xj(e.id, { signal: t });
+        let t = (0, o.Z)();
+        r.useEffect(() => {
+            null != e && e.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED) && s.Z.getMonetizationRestrictionsFetchState(e.id) === s.M.NOT_FETCHED && a.Xj(e.id, { signal: t });
         }, [e, t]);
         let n = null == e ? void 0 : e.id;
         return {
-            restrictions: (0, r.Wu)([o.Z], () => {
+            restrictions: (0, i.Wu)([s.Z], () => {
                 var e;
-                return null !== (e = o.Z.getMonetizationRestrictions(null != n ? n : c.lds)) && void 0 !== e ? e : [];
+                return null !== (e = s.Z.getMonetizationRestrictions(null != n ? n : u.lds)) && void 0 !== e ? e : [];
             }),
-            restrictionsLoading: (0, r.e7)([o.Z], () => o.Z.getMonetizationRestrictionsFetchState(null != n ? n : c.lds) === o.M.FETCHING)
+            restrictionsLoading: (0, i.e7)([s.Z], () => s.Z.getMonetizationRestrictionsFetchState(null != n ? n : u.lds) === s.M.FETCHING)
         };
     },
     f = (e) => {
         var t;
-        let n = (0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]),
-            { restrictions: i, restrictionsLoading: a } = d(n);
+        let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+            { restrictions: r, restrictionsLoading: o } = d(n);
         return {
-            shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (a ? null === (t = null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.uq)(i)),
-            restrictionsLoading: a
-        };
-    },
-    _ = (e) => {
-        var t;
-        let n = (0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]),
-            { restrictions: i, restrictionsLoading: a } = d(n),
-            s = a ? null === (t = null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.Q6)(i),
-            o = !!(null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
-        return {
-            shouldRestrictUpdatingCreatorMonetizationSettings: s || o,
-            allowSelfRemoveMonetization: !s,
-            restrictionsLoading: a
+            shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (o ? null === (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, c.uq)(r)),
+            restrictionsLoading: o
         };
     },
     p = (e) => {
-        let { restrictions: t, restrictionsLoading: n } = d((0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]));
+        var t;
+        let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+            { restrictions: r, restrictionsLoading: o } = d(n),
+            a = o ? null === (t = null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, c.Q6)(r),
+            s = !!(null == n ? void 0 : n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
         return {
-            isMonetizationReapplicationDisabled: (0, u.m8)(t),
+            shouldRestrictUpdatingCreatorMonetizationSettings: a || s,
+            allowSelfRemoveMonetization: !a,
+            restrictionsLoading: o
+        };
+    },
+    _ = (e) => {
+        let { restrictions: t, restrictionsLoading: n } = d((0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]));
+        return {
+            isMonetizationReapplicationDisabled: (0, c.m8)(t),
             restrictionsLoading: n
         };
     };

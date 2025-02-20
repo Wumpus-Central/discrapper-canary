@@ -3,33 +3,33 @@ e.exports.parse = function (e) {
     if (!t) return null;
     t.shift();
     var n = null,
-        i = [];
-    t[2] && ((n = (s = t[2].split('-')).shift()), (i = s));
-    var r = [];
-    t[5] && (r = t[5].split('-')).shift();
-    var a = [];
+        r = [];
+    t[2] && ((n = (a = t[2].split('-')).shift()), (r = a));
+    var i = [];
+    t[5] && (i = t[5].split('-')).shift();
+    var o = [];
     if (t[6]) {
-        (s = t[6].split('-')).shift();
-        for (var s, o, l = []; s.length; ) {
-            var u = s.shift();
-            1 === u.length
-                ? o
-                    ? (a.push({
-                          singleton: o,
+        (a = t[6].split('-')).shift();
+        for (var a, s, l = []; a.length; ) {
+            var c = a.shift();
+            1 === c.length
+                ? s
+                    ? (o.push({
+                          singleton: s,
                           extension: l
                       }),
-                      (o = u),
+                      (s = c),
                       (l = []))
-                    : (o = u)
-                : l.push(u);
+                    : (s = c)
+                : l.push(c);
         }
-        a.push({
-            singleton: o,
+        o.push({
+            singleton: s,
             extension: l
         });
     }
-    var c = [];
-    t[7] && ((c = t[7].split('-')).shift(), c.shift());
+    var u = [];
+    t[7] && ((u = t[7].split('-')).shift(), u.shift());
     var d = [];
     return (
         t[8] && (d = t[8].split('-')).shift(),
@@ -37,13 +37,13 @@ e.exports.parse = function (e) {
             langtag: {
                 language: {
                     language: n,
-                    extlang: i
+                    extlang: r
                 },
                 script: t[3] || null,
                 region: t[4] || null,
-                variant: r,
-                extension: a,
-                privateuse: c
+                variant: i,
+                extension: o,
+                privateuse: u
             },
             privateuse: d,
             grandfathered: {

@@ -1,12 +1,12 @@
 var t = '[0-9](_*[0-9])*',
     n = `\\.(${t})`,
-    i = '[0-9a-fA-F](_*[0-9a-fA-F])*',
-    r = {
+    r = '[0-9a-fA-F](_*[0-9a-fA-F])*',
+    i = {
         className: 'number',
-        variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${i})\\.?|(${i})?\\.(${i}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${i})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
+        variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${r})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function a(e) {
+function o(e) {
     let t = {
             keyword: 'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
             built_in: 'Byte Short Char Int Long Boolean Float Double Void Unit Nothing',
@@ -24,27 +24,27 @@ function a(e) {
                 ]
             }
         },
-        i = {
+        r = {
             className: 'symbol',
             begin: e.UNDERSCORE_IDENT_RE + '@'
         },
-        a = {
+        o = {
             className: 'subst',
             begin: /\$\{/,
             end: /\}/,
             contains: [e.C_NUMBER_MODE]
         },
-        s = {
+        a = {
             className: 'variable',
             begin: '\\$' + e.UNDERSCORE_IDENT_RE
         },
-        o = {
+        s = {
             className: 'string',
             variants: [
                 {
                     begin: '"""',
                     end: '"""(?=[^"])',
-                    contains: [s, a]
+                    contains: [a, o]
                 },
                 {
                     begin: "'",
@@ -56,27 +56,27 @@ function a(e) {
                     begin: '"',
                     end: '"',
                     illegal: /\n/,
-                    contains: [e.BACKSLASH_ESCAPE, s, a]
+                    contains: [e.BACKSLASH_ESCAPE, a, o]
                 }
             ]
         };
-    a.contains.push(o);
+    o.contains.push(s);
     let l = {
             className: 'meta',
             begin: '@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
         },
-        u = {
+        c = {
             className: 'meta',
             begin: '@' + e.UNDERSCORE_IDENT_RE,
             contains: [
                 {
                     begin: /\(/,
                     end: /\)/,
-                    contains: [e.inherit(o, { className: 'string' }), 'self']
+                    contains: [e.inherit(s, { className: 'string' }), 'self']
                 }
             ]
         },
-        c = r,
+        u = i,
         d = e.COMMENT('/\\*', '\\*/', { contains: [e.C_BLOCK_COMMENT_MODE] }),
         f = {
             variants: [
@@ -91,10 +91,10 @@ function a(e) {
                 }
             ]
         },
-        _ = f;
+        p = f;
     return (
-        (_.variants[1].contains = [f]),
-        (f.variants[1].contains = [_]),
+        (p.variants[1].contains = [f]),
+        (f.variants[1].contains = [p]),
         {
             name: 'Kotlin',
             aliases: ['kt', 'kts'],
@@ -112,9 +112,9 @@ function a(e) {
                 e.C_LINE_COMMENT_MODE,
                 d,
                 n,
-                i,
+                r,
                 l,
-                u,
+                c,
                 {
                     className: 'function',
                     beginKeywords: 'fun',
@@ -155,8 +155,8 @@ function a(e) {
                                 e.C_LINE_COMMENT_MODE,
                                 d,
                                 l,
-                                u,
-                                o,
+                                c,
+                                s,
                                 e.C_NUMBER_MODE
                             ]
                         },
@@ -189,19 +189,19 @@ function a(e) {
                             returnEnd: !0
                         },
                         l,
-                        u
+                        c
                     ]
                 },
-                o,
+                s,
                 {
                     className: 'meta',
                     begin: '^#!/usr/bin/env',
                     end: '$',
                     illegal: '\n'
                 },
-                c
+                u
             ]
         }
     );
 }
-e.exports = a;
+e.exports = o;

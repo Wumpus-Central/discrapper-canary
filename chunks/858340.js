@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(981631);
-function o(e, t, n) {
+n.d(t, { Z: () => p });
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,27 +17,27 @@ function o(e, t, n) {
     );
 }
 let l = {};
-function u() {
+function c() {
     l = {};
 }
-function c() {
-    delete l[s.K3D.SOUND];
+function u() {
+    delete l[a.K3D.SOUND];
 }
 function d(e) {
     let { errorMessage: t, errorCode: n } = e;
-    l[s.K3D.SOUND] = {
+    l[a.K3D.SOUND] = {
         errorMessage: t,
         errorCode: n
     };
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getHookError(e) {
         return l[e];
     }
 }
-o(f, 'displayName', 'HookErrorStore');
-let _ = new f(a.Z, {
-    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: u,
-    MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: c,
+s(f, 'displayName', 'HookErrorStore');
+let p = new f(o.Z, {
+    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
+    MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: u,
     MEDIA_ENGINE_SOUNDSHARE_FAILED: d
 });

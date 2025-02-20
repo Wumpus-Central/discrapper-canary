@@ -1,11 +1,11 @@
 n.d(t, {
-    mv: () => s,
-    xJ: () => o
+    mv: () => a,
+    xJ: () => s
 });
-var i = n(358085);
-let r = null,
-    a = null,
-    s = null;
-function o() {
-    return (0, i.isAndroid)() ? r : a;
+var r = n(358085);
+let i = null,
+    o = null,
+    a = null;
+function s() {
+    return (0, r.isAndroid)() ? i : o;
 }

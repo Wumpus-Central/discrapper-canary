@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var i = n(528734),
-    r = n(951516);
-function a(e, t) {
-    (0, r.Z)(2, arguments);
-    var n = (0, i.default)(e),
-        a = (0, i.default)(t),
-        s = n.getTime() - a.getTime();
-    return s < 0 ? -1 : s > 0 ? 1 : s;
+n.d(t, { Z: () => o });
+var r = n(528734),
+    i = n(951516);
+function o(e, t) {
+    (0, i.Z)(2, arguments);
+    var n = (0, r.default)(e),
+        o = (0, r.default)(t),
+        a = n.getTime() - o.getTime();
+    return a < 0 ? -1 : a > 0 ? 1 : a;
 }

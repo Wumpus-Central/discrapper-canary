@@ -1,47 +1,47 @@
-n.d(t, { Z: () => p });
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    s = n(959165),
-    o = n(164991),
-    d = n(526429),
-    c = n(128449),
-    u = n(388032),
-    h = n(464865),
-    m = n(882008);
-let p = function (e) {
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(959165),
+    s = n(164991),
+    c = n(526429),
+    u = n(128449),
+    d = n(388032),
+    p = n(391308),
+    h = n(882008);
+let g = function (e) {
     let { loadId: t } = e,
-        n = o.Z.useField('categoryId'),
-        p = (0, r.e7)([d.Z], () => d.Z.getCategoryName(n)),
-        g = l.useCallback(() => {
-            o.Z.setState({ categoryId: c.Hk }),
-                s.Z.loadCategoryResults({
+        n = s.Z.useField('categoryId'),
+        g = (0, l.e7)([c.Z], () => c.Z.getCategoryName(n)),
+        f = i.useCallback(() => {
+            s.Z.setState({ categoryId: u.Hk }),
+                a.Z.loadCategoryResults({
                     loadId: t,
-                    categoryId: c.Hk,
-                    query: o.Z.getField('fetchedQuery'),
-                    languageCode: o.Z.getField('languageCode')
+                    categoryId: u.Hk,
+                    query: s.Z.getField('fetchedQuery'),
+                    languageCode: s.Z.getField('languageCode')
                 });
         }, [t]),
-        _ = n === c.Hk ? u.intl.string(u.t.Ivw1Ii) : u.intl.formatToPlainString(u.t['+1WAFR'], { categoryName: p }),
-        f = n === c.Hk ? u.intl.string(u.t.aXvEjY) : u.intl.format(u.t.XLioqq, { onClick: g });
-    return (0, i.jsxs)('div', {
-        className: h.container,
+        m = n === u.Hk ? d.NW.string(d.t.Ivw1Ii) : d.NW.formatToPlainString(d.t['+1WAFR'], { categoryName: g }),
+        b = n === u.Hk ? d.NW.string(d.t.aXvEjY) : d.NW.format(d.t.XLioqq, { onClick: f });
+    return (0, r.jsxs)('div', {
+        className: p.container,
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 alt: '',
-                src: m,
-                className: h.image
+                src: h,
+                className: p.image
             }),
-            (0, i.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-xl/semibold',
-                className: h.header,
-                children: _
+                className: p.header,
+                children: m
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: f
+                children: b
             })
         ]
     });

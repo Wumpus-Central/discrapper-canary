@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
-var l = n(592204),
-    i = n(131681),
-    r = n(695346),
+n.d(t, { Z: () => s });
+var r = n(592204),
+    l = n(131681),
+    i = n(695346),
     a = n(82554),
-    s = n(388032);
-let o = {
-    getTitle: () => s.intl.string(s.t.DPVOLS),
-    getDisabledTitle: () => s.intl.string(s.t['B/dag4']),
-    getDescription: () => s.intl.string(s.t['+Esd3N']),
+    o = n(388032);
+let s = {
+    getTitle: () => o.NW.string(o.t.DPVOLS),
+    getDisabledTitle: () => o.NW.string(o.t['B/dag4']),
+    getDescription: () => o.NW.string(o.t['+Esd3N']),
     eligibleReportSubtypes: [a.i5.SUB_GENERAL_HARASSMENT, a.i5.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY, a.i5.SUB_VULGAR_LANGUAGE],
     onApply: () =>
-        r.gw.updateSetting({
+        i.gw.updateSetting({
             profanity: !0,
             slurs: !0,
             sexualContent: !0
         }),
-    predicate: () => (0, l.pB)({ location: 'iar_settings_upsells' }) && !(0, i.U)()
+    predicate: () => (0, r.pB)({ location: 'iar_settings_upsells' }) && !(0, l.U)()
 };

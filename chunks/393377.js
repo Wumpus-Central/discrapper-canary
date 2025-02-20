@@ -1,37 +1,37 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.Swatch = void 0);
-var i =
+var r =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    r = l(n(192379)),
-    a = l(n(723184)),
-    s = n(425980),
-    o = l(n(122024));
+    i = l(n(192379)),
+    o = l(n(723184)),
+    a = n(425980),
+    s = l(n(122024));
 function l(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var u = 13,
-    c = (t.Swatch = function (e) {
+var c = 13,
+    u = (t.Swatch = function (e) {
         var t = e.color,
             n = e.style,
-            s = e.onClick,
-            l = void 0 === s ? function () {} : s,
-            c = e.onHover,
+            a = e.onClick,
+            l = void 0 === a ? function () {} : a,
+            u = e.onHover,
             d = e.title,
             f = void 0 === d ? t : d,
-            _ = e.children,
-            p = e.focus,
+            p = e.children,
+            _ = e.focus,
             h = e.focusStyle,
             m = void 0 === h ? {} : h,
             g = 'transparent' === t,
-            E = (0, a.default)({
+            E = (0, o.default)({
                 default: {
-                    swatch: i(
+                    swatch: r(
                         {
                             background: t,
                             height: '100%',
@@ -41,41 +41,41 @@ var u = 13,
                             outline: 'none'
                         },
                         n,
-                        p ? m : {}
+                        _ ? m : {}
                     )
                 }
             }),
             v = function (e) {
                 return l(t, e);
             },
+            b = function (e) {
+                return e.keyCode === c && l(t, e);
+            },
             y = function (e) {
-                return e.keyCode === u && l(t, e);
+                return u(t, e);
             },
-            I = function (e) {
-                return c(t, e);
-            },
-            T = {};
+            O = {};
         return (
-            c && (T.onMouseOver = I),
-            r.default.createElement(
+            u && (O.onMouseOver = y),
+            i.default.createElement(
                 'div',
-                i(
+                r(
                     {
                         style: E.swatch,
                         onClick: v,
                         title: f,
                         tabIndex: 0,
-                        onKeyDown: y
+                        onKeyDown: b
                     },
-                    T
+                    O
                 ),
-                _,
+                p,
                 g &&
-                    r.default.createElement(o.default, {
+                    i.default.createElement(s.default, {
                         borderRadius: E.swatch.borderRadius,
                         boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                     })
             )
         );
     });
-t.default = (0, s.handleFocus)(c);
+t.default = (0, a.handleFocus)(u);

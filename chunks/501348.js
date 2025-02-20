@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(493773),
     h = n(714338),
     f = n(857595),
-    N = n(607070),
-    x = n(627845),
-    b = n(514361),
+    b = n(607070),
+    N = n(627845),
+    x = n(514361),
     _ = n(600164),
     E = n(313201),
     j = n(540059),
@@ -177,7 +177,7 @@ let Y = {
     },
     $ = () => {
         let e = (0, j.Q3)('ThemeTitle'),
-            t = (0, l.e7)([b.Z], () => b.Z.isPreview),
+            t = (0, l.e7)([x.Z], () => x.Z.isPreview),
             { enabled: n } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -359,7 +359,7 @@ class ee extends i.Component {
                   children: (0, r.jsx)(u.R94, {
                       type: u.R94.Types.DEFAULT,
                       className: V.forcedColorsWarning,
-                      children: (0, x.b)()
+                      children: (0, N.b)()
                           ? U.NW.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(L.oAB.ACCESSIBILITY);
@@ -766,19 +766,19 @@ function er() {
     (0, p.ZP)(() => {
         en(o.z.CLIENT_THEMES_SETTINGS_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, l.cj)([R.Z, D.ZP, N.Z, A.default, b.Z], () => {
+    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, x.Z], () => {
             var e, t;
             return {
                 theme: R.Z.theme,
-                useForcedColors: N.Z.useForcedColors,
+                useForcedColors: b.Z.useForcedColors,
                 useSystemTheme: D.ZP.useSystemTheme,
                 darkSidebar: R.Z.darkSidebar,
-                fontSize: N.Z.fontSize,
-                zoom: N.Z.zoom,
-                messageGroupSpacing: N.Z.messageGroupSpacing,
+                fontSize: b.Z.fontSize,
+                zoom: b.Z.zoom,
+                messageGroupSpacing: b.Z.messageGroupSpacing,
                 displayCompactAvatars: D.ZP.displayCompactAvatars,
                 isStaff: null !== (t = null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-                gradientPreset: b.Z.gradientPreset
+                gradientPreset: x.Z.gradientPreset
             };
         }),
         d = (0, j.nm)('UserSettingsAppearance'),

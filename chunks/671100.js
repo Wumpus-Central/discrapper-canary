@@ -1,5 +1,5 @@
-n.d(t, { l: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { l: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-10_message_attachment_send_failure',
     label: 'Message Attachment Send Failure Experiment',

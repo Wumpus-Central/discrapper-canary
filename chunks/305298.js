@@ -1,23 +1,23 @@
 i.d(n, { Z: () => c }), i(47120);
-var l = i(192379),
-    t = i(881052),
+var t = i(192379),
+    l = i(881052),
     a = i(430927),
-    s = i(610665);
-let r = {
+    r = i(610665);
+let s = {
     onSuccess: () => {},
     permissionOverwrites: []
 };
 function c() {
-    let [e, n] = l.useState(!1),
-        [i, c] = l.useState(null);
+    let [e, n] = t.useState(!1),
+        [i, c] = t.useState(null);
     return [
         async function (e, i) {
-            let { onSuccess: l = r.onSuccess, permissionOverwrites: o = r.permissionOverwrites } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
+            let { onSuccess: t = s.onSuccess, permissionOverwrites: o = s.permissionOverwrites } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s;
             n(!0);
             try {
-                await s.GV(e, o), await s.iQ(e, i), await (0, a.o)(e, l), await (0, a.T)(e, l), n(!1);
+                await r.GV(e, o), await r.iQ(e, i), await (0, a.o)(e, t), await (0, a.T)(e, t), n(!1);
             } catch (e) {
-                c(new t.Hx(e)), n(!1);
+                c(new l.Hx(e)), n(!1);
             }
             n(!1);
         },

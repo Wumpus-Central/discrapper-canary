@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     let t = e.getContext('2d');
     return null == t
         ? null
@@ -8,4 +8,4 @@ function i(e) {
               }
           };
 }
-n.d(t, { y: () => i });
+n.d(t, { y: () => r });

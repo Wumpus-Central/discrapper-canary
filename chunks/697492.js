@@ -1,43 +1,43 @@
 n.d(t, {
-    Gd: () => a,
-    ME: () => s,
-    Ym: () => o,
-    _g: () => r,
+    Gd: () => o,
+    ME: () => a,
+    Ym: () => s,
+    _g: () => i,
     hu: () => l
 });
-var i = n(570140);
-function r(e, t, n) {
-    i.Z.dispatch({
+var r = n(570140);
+function i(e, t, n) {
+    r.Z.dispatch({
         type: 'HIGH_FIVE_QUEUE',
         userId: t,
         channelId: n,
         emoji: e
     });
 }
-function a(e, t) {
-    i.Z.dispatch({
+function o(e, t) {
+    r.Z.dispatch({
         type: 'HIGH_FIVE_REMOVE',
         channelId: t,
         userId: e
     });
 }
-function s(e) {
-    i.Z.dispatch({
+function a(e) {
+    r.Z.dispatch({
         type: 'HIGH_FIVE_SET_ENABLED',
         enabled: e
     });
 }
-function o(e, t, n, r) {
-    i.Z.dispatch({
+function s(e, t, n, i) {
+    r.Z.dispatch({
         type: 'HIGH_FIVE_COMPLETE',
         waitingUserId: e,
         completingUserId: t,
         channelId: n,
-        completingEmoji: r
+        completingEmoji: i
     });
 }
 function l(e, t, n) {
-    i.Z.dispatch({
+    r.Z.dispatch({
         type: 'HIGH_FIVE_COMPLETE_CLEAR',
         firstUserId: e,
         secondUserId: t,

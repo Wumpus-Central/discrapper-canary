@@ -1,12 +1,12 @@
-n.d(t, { Z: () => s });
-var i = n(544891),
-    r = n(388032);
-class a extends i.sX {
+n.d(t, { Z: () => a });
+var r = n(544891),
+    i = n(388032);
+class o extends r.sX {
     constructor(e, t) {
         var n;
-        super(e, t, r.intl.string(r.t.Mt8yDA));
-        let i = this.getFieldErrors('asset');
-        null != i && (null === (n = i[0]) || void 0 === n ? void 0 : n.code) === 'BINARY_TYPE_MAX_SIZE' && (this.message = r.intl.string(r.t.mrlScX));
+        super(e, t, i.NW.string(i.t.Mt8yDA));
+        let r = this.getFieldErrors('asset');
+        null != r && (null === (n = r[0]) || void 0 === n ? void 0 : n.code) === 'BINARY_TYPE_MAX_SIZE' && (this.message = i.NW.string(i.t.mrlScX));
     }
 }
-let s = a;
+let a = o;

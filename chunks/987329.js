@@ -1,18 +1,18 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(408534),
-    r = n(390322),
-    s = n(871499),
-    o = n(388032);
+var i = n(481060),
+    l = n(408534),
+    o = n(390322),
+    a = n(871499),
+    s = n(388032);
 let c = (e) => {
     let { channel: t } = e;
-    return (0, i.jsx)(l.yRy, {
+    return (0, r.jsx)(i.yRy, {
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(r.Z, {
-                children: (0, i.jsx)(a.Z, {
+            return (0, r.jsx)(o.Z, {
+                children: (0, r.jsx)(l.Z, {
                     onClose: n,
                     channel: t
                 })
@@ -20,17 +20,17 @@ let c = (e) => {
         },
         align: 'right',
         position: 'top',
-        animation: l.yRy.Animation.FADE,
+        animation: i.yRy.Animation.FADE,
         spacing: 16,
         children: (e, t) => {
             let { onClick: n } = e,
-                { isShown: a } = t;
-            return (0, i.jsx)(s.d, {
+                { isShown: l } = t;
+            return (0, r.jsx)(a.d, {
                 onClick: n,
-                label: o.intl.string(o.t.PdRCRk),
-                iconComponent: l.xhG,
+                label: s.NW.string(s.t.PdRCRk),
+                iconComponent: i.xhG,
                 color: 'primaryDark',
-                isActive: a
+                isActive: l
             });
         }
     });

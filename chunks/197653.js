@@ -1,78 +1,78 @@
-l.d(n, {
-    $Y: () => o,
-    am: () => a,
-    e4: () => u
+r.d(t, {
+    $Y: () => c,
+    am: () => o,
+    e4: () => s
 }),
-    l(47120),
-    l(411104);
-var t = l(200651),
-    i = l(192379);
-let r = i.createContext(null),
-    a = {
+    r(47120),
+    r(411104);
+var n = r(200651),
+    l = r(192379);
+let i = l.createContext(null),
+    o = {
         Root(e) {
-            let { containerInnerWidth: n, children: l } = e,
-                a = i.useMemo(
+            let { containerInnerWidth: t, children: r } = e,
+                o = l.useMemo(
                     () => ({
                         isParentWidthLimited: !0,
-                        parentContainerInnerWidth: n
+                        parentContainerInnerWidth: t
                     }),
-                    [n]
+                    [t]
                 );
-            return (0, t.jsx)(r.Provider, {
-                value: a,
-                children: l
+            return (0, n.jsx)(i.Provider, {
+                value: o,
+                children: r
             });
         },
         NestedContainer(e) {
-            let { containerOuterWidth: n, containerInnerWidth: l, children: a } = e,
-                { isParentWidthLimited: o, parentContainerInnerWidth: u } = s(),
-                c = o && u === n,
-                d = i.useMemo(
+            let { containerOuterWidth: t, containerInnerWidth: r, children: o } = e,
+                { isParentWidthLimited: c, parentContainerInnerWidth: s } = a(),
+                u = c && s === t,
+                d = l.useMemo(
                     () => ({
-                        isParentWidthLimited: c,
-                        parentContainerInnerWidth: l
+                        isParentWidthLimited: u,
+                        parentContainerInnerWidth: r
                     }),
-                    [c, l]
+                    [u, r]
                 );
-            return (0, t.jsx)(r.Provider, {
+            return (0, n.jsx)(i.Provider, {
                 value: d,
-                children: a
+                children: o
             });
         },
         AutoMeasuredNestedContainer(e) {
-            let { children: n } = e,
-                [l, i, r] = u(!0);
-            return (0, t.jsx)(a.NestedContainer, {
-                containerOuterWidth: i,
-                containerInnerWidth: r,
-                children: n(l)
+            let { children: t } = e,
+                [r, l, i] = s(!0);
+            return (0, n.jsx)(o.NestedContainer, {
+                containerOuterWidth: l,
+                containerInnerWidth: i,
+                children: t(r)
             });
         }
     };
-function s() {
-    let e = i.useContext(r);
+function a() {
+    let e = l.useContext(i);
     if (null == e) throw Error('Cannot use the ComponentLayoutLimitContext system when not within the context');
     return e;
 }
-function o(e) {
-    let { isParentWidthLimited: n, parentContainerInnerWidth: l } = s();
-    return n && l === e;
+function c(e) {
+    let { isParentWidthLimited: t, parentContainerInnerWidth: r } = a();
+    return t && r === e;
 }
-function u() {
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = i.useRef(null),
-        [l, t] = i.useState(0),
-        [r, a] = i.useState(0);
+        t = l.useRef(null),
+        [r, n] = l.useState(0),
+        [i, o] = l.useState(0);
     return (
-        i.useLayoutEffect(() => {
-            if (null == n.current) return;
-            let l = new ResizeObserver(() => {
-                let l = n.current.getBoundingClientRect().width,
-                    i = getComputedStyle(n.current);
-                t(l + (parseFloat(i.marginLeft) + parseFloat(i.marginRight))), e && a(l - (parseFloat(i.paddingLeft) + parseFloat(i.paddingRight) + parseFloat(i.borderLeftWidth) + parseFloat(i.borderRightWidth)));
+        l.useLayoutEffect(() => {
+            if (null == t.current) return;
+            let r = new ResizeObserver(() => {
+                let r = t.current.getBoundingClientRect().width,
+                    l = getComputedStyle(t.current);
+                n(r + (parseFloat(l.marginLeft) + parseFloat(l.marginRight))), e && o(r - (parseFloat(l.paddingLeft) + parseFloat(l.paddingRight) + parseFloat(l.borderLeftWidth) + parseFloat(l.borderRightWidth)));
             });
-            return l.observe(n.current), () => l.disconnect();
+            return r.observe(t.current), () => r.disconnect();
         }, [e]),
-        [n, l, r]
+        [t, r, i]
     );
 }

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => r });
-var i = n(570140);
-let r = {
+n.d(t, { Z: () => i });
+var r = n(570140);
+let i = {
     setSection(e) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'FRIENDS_SET_SECTION',
             section: e
         });
     },
     setInitialSection(e) {
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'FRIENDS_SET_INITIAL_SECTION',
             section: e
         });

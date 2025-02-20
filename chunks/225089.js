@@ -1,47 +1,47 @@
 n.d(t, { Z: () => f });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(222062),
-    s = n(867176),
-    o = n(654904),
+var i = n(481060),
+    o = n(222062),
+    a = n(867176),
+    s = n(654904),
     l = n(486324),
-    u = n(228168),
-    c = n(388032),
-    d = n(318387);
+    c = n(228168),
+    u = n(388032),
+    d = n(921700);
 function f(e) {
-    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: _, pendingBanner: p, isTryItOutFlow: h, disabledInputs: m, onUpsellClick: g } = e,
-        E = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        v = E ? r.vdY : r.SrA,
-        y = (0, a.M)(E),
-        I = () => {
-            if (!E && !y) {
+    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: p, pendingBanner: _, isTryItOutFlow: h, disabledInputs: m, onUpsellClick: g } = e,
+        E = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
+        v = E ? i.vdY : i.SrA,
+        b = (0, o.M)(E),
+        y = () => {
+            if (!E && !b) {
                 null == g || g();
                 return;
             }
-            (0, o.$r)(l.pC.BANNER, f, h);
+            (0, s.$r)(l.pC.BANNER, f, h);
         };
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         user: t,
         displayProfile: n,
         guildId: f,
-        profileType: u.y0.BITE_SIZE,
-        pendingBanner: p,
-        canUsePremiumProfileCustomization: _,
+        profileType: c.y0.BITE_SIZE,
+        pendingBanner: _,
+        canUsePremiumProfileCustomization: p,
         children:
             !m &&
-            (0, i.jsxs)(r.P3F, {
-                onClick: I,
+            (0, r.jsxs)(i.P3F, {
+                onClick: y,
                 className: d.clickable,
                 children: [
-                    (0, i.jsx)(v, {
+                    (0, r.jsx)(v, {
                         size: 'xs',
                         color: 'white'
                     }),
-                    (0, i.jsx)(r.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: E || y ? c.intl.string(c.t.N0bC3N) : c.intl.string(c.t.O1sT5u)
+                        children: E || b ? u.NW.string(u.t.N0bC3N) : u.NW.string(u.t.O1sT5u)
                     })
                 ]
             })

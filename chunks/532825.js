@@ -1,10 +1,10 @@
 function t(e, t) {
     if (null == e) return {};
     var n = {};
-    for (var i in e)
-        if ({}.hasOwnProperty.call(e, i)) {
-            if (t.includes(i)) continue;
-            n[i] = e[i];
+    for (var r in e)
+        if ({}.hasOwnProperty.call(e, r)) {
+            if (t.includes(r)) continue;
+            n[r] = e[r];
         }
     return n;
 }

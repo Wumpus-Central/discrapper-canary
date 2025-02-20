@@ -1,57 +1,57 @@
-t.d(i, { default: () => h });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    l = t(230711),
-    s = t(181211),
-    o = t(188879),
-    r = t(981631),
-    c = t(726985),
-    d = t(388032),
-    m = t(293927),
-    u = t(170143);
-let h = (e) => {
-    let { transitionState: i, onClose: t, classificationId: h, source: p } = e,
-        x = (0, s.Z)(),
-        f = () => {
-            t(), l.Z.open(r.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
+n.d(t, { default: () => p });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    l = n(230711),
+    r = n(181211),
+    o = n(188879),
+    s = n(981631),
+    c = n(726985),
+    d = n(388032),
+    u = n(949862),
+    m = n(170143);
+let p = (e) => {
+    let { transitionState: t, onClose: n, classificationId: p, source: h } = e,
+        f = (0, r.Z)(),
+        g = () => {
+            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
-    return (0, n.jsxs)(a.Y0X, {
-        className: m.modalRoot,
-        transitionState: i,
+    return (0, i.jsxs)(a.Y0X, {
+        className: u.modalRoot,
+        transitionState: t,
         children: [
-            (0, n.jsxs)('div', {
-                className: m.modalHeader,
+            (0, i.jsxs)('div', {
+                className: u.modalHeader,
                 children: [
-                    (0, n.jsx)('img', {
-                        className: m.image,
-                        src: u,
+                    (0, i.jsx)('img', {
+                        className: u.image,
+                        src: m,
                         alt: ''
                     }),
-                    (0, n.jsx)(a.olH, {
-                        className: m.modalClose,
-                        onClick: t
+                    (0, i.jsx)(a.olH, {
+                        className: u.modalClose,
+                        onClick: n
                     })
                 ]
             }),
-            (0, n.jsx)(a.hzk, {
-                className: m.modalContent,
-                children: x
-                    ? (0, n.jsx)(a.$jN, {})
-                    : (0, n.jsx)(o.Z, {
-                          classificationId: h,
-                          source: p,
-                          onError: f,
-                          onClose: f
+            (0, i.jsx)(a.hzk, {
+                className: u.modalContent,
+                children: f
+                    ? (0, i.jsx)(a.$jN, {})
+                    : (0, i.jsx)(o.Z, {
+                          classificationId: p,
+                          source: h,
+                          onError: g,
+                          onClose: g
                       })
             }),
-            (0, n.jsx)(a.mzw, {
-                children: (0, n.jsx)(a.zxk, {
-                    className: m.__invalid_button,
+            (0, i.jsx)(a.mzw, {
+                children: (0, i.jsx)(a.zxk, {
+                    className: u.__invalid_button,
                     type: 'button',
                     color: a.zxk.Colors.BRAND,
-                    onClick: f,
-                    children: d.intl.string(d.t.elrEjI)
+                    onClick: g,
+                    children: d.NW.string(d.t.elrEjI)
                 })
             })
         ]

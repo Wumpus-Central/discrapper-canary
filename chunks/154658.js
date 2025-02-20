@@ -6,31 +6,31 @@ var a = c(120356),
     n = c(381338),
     o = c(442837),
     f = c(481060),
-    i = c(206295),
-    p = c(594174),
+    p = c(206295),
+    i = c(594174),
     r = c(5192),
     b = c(528567),
     u = c(371583),
     l = c(388032),
-    m = c(958915);
+    m = c(268828);
 function g(t) {
     var e, c, a, g;
-    let { guildId: h, leaderboard: j, className: _ } = t,
-        v = null == j ? void 0 : null === (e = j.users) || void 0 === e ? void 0 : e[0],
-        { sort_by_statistic_id: x } = j.guild_settings,
-        N = null !== (g = null == v ? void 0 : null === (a = v.statistics) || void 0 === a ? void 0 : null === (c = a[x]) || void 0 === c ? void 0 : c.value) && void 0 !== g ? g : 0,
-        Z = l.intl.formatToPlainString(l.t.yhdo8v, {
-            value: N,
+    let { guildId: j, leaderboard: h, className: _ } = t,
+        v = null == h ? void 0 : null === (e = h.users) || void 0 === e ? void 0 : e[0],
+        { sort_by_statistic_id: x } = h.guild_settings,
+        O = null !== (g = null == v ? void 0 : null === (a = v.statistics) || void 0 === a ? void 0 : null === (c = a[x]) || void 0 === c ? void 0 : c.value) && void 0 !== g ? g : 0,
+        y = l.NW.formatToPlainString(l.t.yhdo8v, {
+            value: O,
             statisticName: (0, b.C)(x)
         }),
-        T = (0, u.j)(j),
-        { primaryColor: E, secondaryColor: I } = (0, i.Z)(''.concat(T, '?forColors')),
-        S = (0, o.e7)([p.default], () => p.default.getUser(null == v ? void 0 : v.user_id));
-    if (null == S) return null;
-    let R = r.ZP.getName(h, void 0, S);
+        N = (0, u.j)(h),
+        { primaryColor: S, secondaryColor: Z } = (0, p.Z)(''.concat(N, '?forColors')),
+        P = (0, o.e7)([i.default], () => i.default.getUser(null == v ? void 0 : v.user_id));
+    if (null == P) return null;
+    let E = r.ZP.getName(j, void 0, P);
     return (0, d.jsxs)('div', {
         className: s()(m.container, _),
-        style: { backgroundImage: 'linear-gradient(90deg, '.concat(I, ' 0%, ').concat(E, ' 100%)') },
+        style: { backgroundImage: 'linear-gradient(90deg, '.concat(Z, ' 0%, ').concat(S, ' 100%)') },
         children: [
             (0, d.jsx)(f.Text, {
                 variant: 'text-xs/medium',
@@ -38,18 +38,18 @@ function g(t) {
                 children: (function (t) {
                     switch (t) {
                         case n.q.DAILY:
-                            return l.intl.string(l.t.UfbhDA);
+                            return l.NW.string(l.t.UfbhDA);
                         case n.q.WEEKLY:
-                            return l.intl.string(l.t['9x5Nam']);
+                            return l.NW.string(l.t['9x5Nam']);
                         case n.q.MONTHLY:
-                            return l.intl.string(l.t.xB2Co6);
+                            return l.NW.string(l.t.xB2Co6);
                         default:
-                            return l.intl.string(l.t['4N67JS']);
+                            return l.NW.string(l.t['4N67JS']);
                     }
-                })(j.settings.interval_type)
+                })(h.settings.interval_type)
             }),
             (0, d.jsx)(f.qEK, {
-                src: S.getAvatarURL(h, 16),
+                src: P.getAvatarURL(j, 16),
                 size: f.EFr.SIZE_16,
                 'aria-label': 'avatar'
             }),
@@ -64,22 +64,22 @@ function g(t) {
                         className: m.username,
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
-                        children: R
+                        children: E
                     }),
                     (0, d.jsx)(f.Text, {
                         className: m.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: Z
+                        children: y
                     })
                 ]
             }),
-            null != T &&
+            null != N &&
                 (0, d.jsx)('div', {
                     className: m.heroArtContainer,
                     children: (0, d.jsx)('img', {
                         className: m.heroArt,
-                        src: T,
+                        src: N,
                         alt: ''
                     })
                 })

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
-var i = n(192379),
-    r = n(388032);
-function l() {
-    return i.useMemo(
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(388032);
+function s() {
+    return r.useMemo(
         () => [
             {
                 value: null,
-                label: r.intl.string(r.t.zHfL6u)
+                label: i.NW.string(i.t.zHfL6u)
             },
             {
                 value: 10,

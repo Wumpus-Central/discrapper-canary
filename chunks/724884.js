@@ -1,73 +1,73 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(388032),
-    l = n(482195),
-    u = n(247844);
-function c(e) {
-    let { className: t, icon: n, children: r } = e;
-    return (0, i.jsxs)('li', {
-        className: a()(l.card, t),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(388032),
+    l = n(677847),
+    c = n(247844);
+function u(e) {
+    let { className: t, icon: n, children: i } = e;
+    return (0, r.jsxs)('li', {
+        className: o()(l.card, t),
         children: [
-            (0, i.jsx)(n, { className: l.icon }),
-            (0, i.jsx)(s.Text, {
+            (0, r.jsx)(n, { className: l.icon }),
+            (0, r.jsx)(a.Text, {
                 className: l.__invalid_description,
                 variant: 'text-sm/medium',
-                children: r
+                children: i
             })
         ]
     });
 }
 let d = function (e) {
     let { cardClassName: t } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: l.wrapper,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: l.content,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         className: l.heading,
                         color: 'always-white',
                         variant: 'heading-xxl/bold',
-                        children: o.intl.string(o.t.IzKs3t)
+                        children: s.NW.string(s.t.IzKs3t)
                     }),
-                    (0, i.jsxs)('ul', {
+                    (0, r.jsxs)('ul', {
                         className: l.cards,
                         children: [
-                            (0, i.jsx)(c, {
+                            (0, r.jsx)(u, {
                                 className: t,
-                                icon: s.$zw,
-                                children: o.intl.string(o.t.TZigSE)
+                                icon: a.$zw,
+                                children: s.NW.string(s.t.TZigSE)
                             }),
-                            (0, i.jsx)(c, {
+                            (0, r.jsx)(u, {
                                 className: t,
                                 icon: (e) =>
-                                    (0, i.jsx)('img', {
-                                        className: a()(e.className, l.iconImage),
-                                        src: u,
+                                    (0, r.jsx)('img', {
+                                        className: o()(e.className, l.iconImage),
+                                        src: c,
                                         alt: ''
                                     }),
-                                children: o.intl.string(o.t.hjQuV1)
+                                children: s.NW.string(s.t.hjQuV1)
                             }),
-                            (0, i.jsx)(c, {
+                            (0, r.jsx)(u, {
                                 className: t,
-                                icon: s.lZ8,
-                                children: o.intl.string(o.t['2RUcaG'])
+                                icon: a.lZ8,
+                                children: s.NW.string(s.t['2RUcaG'])
                             }),
-                            (0, i.jsx)(c, {
+                            (0, r.jsx)(u, {
                                 className: t,
-                                icon: s.h_8,
-                                children: o.intl.string(o.t.bJoZKS)
+                                icon: a.h_8,
+                                children: s.NW.string(s.t.bJoZKS)
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: l.backgroundImages })
+            (0, r.jsx)('div', { className: l.backgroundImages })
         ]
     });
 };

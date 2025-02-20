@@ -1,18 +1,18 @@
-var i = n(256098),
-    r = n(436091),
-    a = n(438330);
-function s(e) {
-    return function (t, n, s) {
-        var o = Object(t);
-        if (!r(t)) {
-            var l = i(n, 3);
-            (t = a(t)),
+var r = n(256098),
+    i = n(436091),
+    o = n(438330);
+function a(e) {
+    return function (t, n, a) {
+        var s = Object(t);
+        if (!i(t)) {
+            var l = r(n, 3);
+            (t = o(t)),
                 (n = function (e) {
-                    return l(o[e], e, o);
+                    return l(s[e], e, s);
                 });
         }
-        var u = e(t, n, s);
-        return u > -1 ? o[l ? t[u] : u] : void 0;
+        var c = e(t, n, a);
+        return c > -1 ? s[l ? t[c] : c] : void 0;
     };
 }
-e.exports = s;
+e.exports = a;

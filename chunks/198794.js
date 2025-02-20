@@ -1,9 +1,9 @@
-var i = n(67867),
-    r = n(548828),
-    a = n(228042),
-    s = n(292137),
-    o = TypeError;
-i(
+var r = n(67867),
+    i = n(548828),
+    o = n(228042),
+    a = n(292137),
+    s = TypeError;
+r(
     {
         target: 'Map',
         proto: !0,
@@ -12,18 +12,18 @@ i(
     },
     {
         reduce: function (e) {
-            var t = a(this),
+            var t = o(this),
                 n = arguments.length < 2,
-                i = n ? void 0 : arguments[1];
+                r = n ? void 0 : arguments[1];
             if (
-                (r(e),
-                s(t, function (r, a) {
-                    n ? ((n = !1), (i = r)) : (i = e(i, r, a, t));
+                (i(e),
+                a(t, function (i, o) {
+                    n ? ((n = !1), (r = i)) : (r = e(r, i, o, t));
                 }),
                 n)
             )
-                throw new o('Reduce of empty map with no initial value');
-            return i;
+                throw new s('Reduce of empty map with no initial value');
+            return r;
         }
     }
 );

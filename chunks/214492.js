@@ -1,39 +1,39 @@
-n.d(t, { fq: () => m }), n(47120);
-var i = n(913527),
-    l = n.n(i),
-    r = n(442837),
+n.d(t, { fq: () => f }), n(47120);
+var r = n(913527),
+    i = n.n(r),
+    l = n(442837),
     o = n(780384),
     a = n(410030),
     s = n(726542),
     c = n(835473),
-    d = n(594190),
-    u = n(553795),
-    h = n(823379),
-    p = n(701488);
-function m() {
+    u = n(594190),
+    d = n(553795),
+    p = n(823379),
+    h = n(701488);
+function f() {
     let { assets: e, count: t } = (function () {
-            let e = (0, r.Wu)([d.ZP], () =>
-                    d.ZP.getGamesSeen(!1)
-                        .filter((e) => null != e.lastLaunched && 30 >= l()().diff(e.lastLaunched, 'days'))
+            let e = (0, l.Wu)([u.ZP], () =>
+                    u.ZP.getGamesSeen(!1)
+                        .filter((e) => null != e.lastLaunched && 30 >= i()().diff(e.lastLaunched, 'days'))
                         .map((e) => e.id)
                 ),
                 t = e.length,
-                n = e.filter(h.lm).slice(0, t > 4 ? 3 : 4);
+                n = e.filter(p.lm).slice(0, t > 4 ? 3 : 4);
             return {
                 assets: (0, c.Z)(n)
-                    .filter(h.lm)
+                    .filter(p.lm)
                     .map((e) => {
                         var t;
                         return {
-                            src: null !== (t = e.getIconURL(p.Si.LARGE)) && void 0 !== t ? t : '',
+                            src: null !== (t = e.getIconURL(h.Si.LARGE)) && void 0 !== t ? t : '',
                             alt: e.name
                         };
                     }),
                 count: t
             };
         })(),
-        { assets: n, count: i } = (function () {
-            let e = (0, r.e7)([u.Z], () => u.Z.getAccounts()),
+        { assets: n, count: r } = (function () {
+            let e = (0, l.e7)([d.Z], () => d.Z.getAccounts()),
                 t = (0, a.ZP)(),
                 n = e.length;
             return {
@@ -47,9 +47,9 @@ function m() {
                 count: n
             };
         })(),
-        m = t + i;
+        f = t + r;
     return {
-        assets: [...e, ...n].slice(0, m > 4 ? 3 : 4),
-        count: m
+        assets: [...e, ...n].slice(0, f > 4 ? 3 : 4),
+        count: f
     };
 }

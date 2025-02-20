@@ -1,13 +1,13 @@
-n.d(t, { A: () => r });
-var i = n(388032);
-function r(e) {
+n.d(t, { A: () => i });
+var r = n(388032);
+function i(e) {
     switch (e.length) {
         case 0:
             return;
         case 1:
             return e[0].name;
         case 2:
-            return i.intl.formatToPlainString(i.t['G/lpQU'], {
+            return r.NW.formatToPlainString(r.t['G/lpQU'], {
                 item1: e[0].name,
                 item2: e[1].name
             });
@@ -20,7 +20,7 @@ function r(e) {
                     })
                     .join(', '),
                 n = e[e.length - 1];
-            return i.intl.formatToPlainString(i.t.PIMwen, {
+            return r.NW.formatToPlainString(r.t.PIMwen, {
                 items: t,
                 last: n.name
             });

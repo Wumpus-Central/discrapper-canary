@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,9 +11,9 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => r });
-class r {
+n.d(t, { Z: () => i });
+class i {
     constructor(e, t) {
-        i(this, 'skuId', void 0), i(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = t);
+        r(this, 'skuId', void 0), r(this, 'skuFeatures', void 0), (this.skuId = e), (this.skuFeatures = t);
     }
 }

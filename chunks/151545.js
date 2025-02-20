@@ -1,76 +1,76 @@
 n.d(t, { Z: () => E });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(442837),
-    a = n(841784),
-    s = n(503438),
-    o = n(812206),
+var i = n(442837),
+    o = n(841784),
+    a = n(503438),
+    s = n(812206),
     l = n(835473),
-    u = n(592125),
-    c = n(430824),
+    c = n(592125),
+    u = n(430824),
     d = n(979651),
     f = n(456644),
-    _ = n(409057),
-    p = n(443375),
+    p = n(409057),
+    _ = n(443375),
     h = n(128277),
     m = n(263059),
     g = n(981631);
 function E(e) {
-    let { user: t, currentUser: n, activity: E, className: v, onClose: y, profileGuildId: I } = e,
-        { recentActivityEnabled: T } = (0, f.i)({ location: 'UserProfileActivityCardWrapper' }),
-        b = t.id === n.id,
-        S = T && !b && !t.bot,
-        { voiceGuild: A, voiceChannel: N } = (0, r.cj)([c.Z, d.Z, u.Z], () => {
+    let { user: t, currentUser: n, activity: E, className: v, onClose: b, profileGuildId: y } = e,
+        { recentActivityEnabled: O } = (0, f.i)({ location: 'UserProfileActivityCardWrapper' }),
+        S = t.id === n.id,
+        I = O && !S && !t.bot,
+        { voiceGuild: T, voiceChannel: N } = (0, i.cj)([u.Z, d.Z, c.Z], () => {
             var e;
-            if (!(0, a.Z)(E)) return {};
+            if (!(0, o.Z)(E)) return {};
             let n = null === (e = d.Z.getVoiceStateForSession(t.id, null == E ? void 0 : E.session_id)) || void 0 === e ? void 0 : e.channelId,
-                i = u.Z.getChannel(n);
+                r = c.Z.getChannel(n);
             return {
-                voiceGuild: c.Z.getGuild(null == i ? void 0 : i.getGuildId()),
-                voiceChannel: i
+                voiceGuild: u.Z.getGuild(null == r ? void 0 : r.getGuildId()),
+                voiceChannel: r
             };
         });
     (0, l.q)(null == E ? void 0 : E.application_id);
-    let C = (0, r.e7)([o.Z], () => ((null == E ? void 0 : E.application_id) != null ? o.Z.getApplication(E.application_id) : (null == E ? void 0 : E.name) != null ? o.Z.getApplicationByName(E.name) : null));
+    let A = (0, i.e7)([s.Z], () => ((null == E ? void 0 : E.application_id) != null ? s.Z.getApplication(E.application_id) : (null == E ? void 0 : E.name) != null ? s.Z.getApplicationByName(E.name) : null));
     return (null == E ? void 0 : E.type) === g.IIU.CUSTOM_STATUS || (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS
         ? null
-        : (0, s.Z)(E)
-          ? S
-              ? (0, i.jsx)(m.Z, {
+        : (0, a.Z)(E)
+          ? I
+              ? (0, r.jsx)(m.Z, {
                     user: t,
                     currentUser: n,
                     activity: E,
-                    profileGuildId: I,
+                    profileGuildId: y,
                     className: v,
-                    onClose: y
+                    onClose: b
                 })
-              : (0, i.jsx)(h.Z, {
+              : (0, r.jsx)(h.Z, {
                     user: t,
                     currentUser: n,
                     activity: E,
                     className: v,
-                    onClose: y
+                    onClose: b
                 })
-          : S
-            ? (0, i.jsx)(p.Z, {
+          : I
+            ? (0, r.jsx)(_.Z, {
                   user: t,
                   currentUser: n,
                   activity: E,
-                  application: C,
-                  voiceGuild: A,
+                  application: A,
+                  voiceGuild: T,
                   voiceChannel: N,
-                  profileGuildId: I,
+                  profileGuildId: y,
                   className: v,
-                  onClose: y
+                  onClose: b
               })
-            : (0, i.jsx)(_.Z, {
+            : (0, r.jsx)(p.Z, {
                   user: t,
                   currentUser: n,
                   activity: E,
-                  application: C,
-                  voiceGuild: A,
+                  application: A,
+                  voiceGuild: T,
                   voiceChannel: N,
                   className: v,
-                  onClose: y
+                  onClose: b
               });
 }

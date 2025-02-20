@@ -1,69 +1,69 @@
-t.d(e, { default: () => h });
-var l = t(200651);
+t.d(n, { default: () => v });
+var i = t(200651);
 t(192379);
-var i = t(481060),
+var l = t(481060),
     r = t(239091),
-    a = t(883385),
-    u = t(108843),
-    d = t(100527),
-    o = t(299206),
-    s = t(819403),
-    c = t(286694),
-    E = t(314897),
-    _ = t(238296),
-    g = t(933409),
-    f = t(981631),
-    v = t(388032);
-let h = (0, u.Z)(
-    (0, a.Z)(
-        function (n) {
-            let { user: e, channel: t, guildId: a, onSelect: u, context: d } = n,
-                f = t.id,
-                h = e.isNonUserBot(),
-                A = e.id === E.default.getId(),
-                T = (0, s.Z)(e),
-                S = (0, c.Z)(e, a, f),
-                I = (0, _.Y)({
-                    isOwnSettings: A,
-                    userId: e.id,
-                    channelId: f,
-                    guildId: a,
-                    context: d
+    u = t(883385),
+    a = t(108843),
+    o = t(100527),
+    d = t(299206),
+    c = t(819403),
+    s = t(286694),
+    _ = t(314897),
+    E = t(238296),
+    f = t(933409),
+    g = t(981631),
+    A = t(388032);
+let v = (0, a.Z)(
+    (0, u.Z)(
+        function (e) {
+            let { user: n, channel: t, guildId: u, onSelect: a, context: o } = e,
+                g = t.id,
+                v = n.isNonUserBot(),
+                h = n.id === _.default.getId(),
+                T = (0, c.Z)(n),
+                b = (0, s.Z)(n, u, g),
+                O = (0, E.Y)({
+                    isOwnSettings: h,
+                    userId: n.id,
+                    channelId: g,
+                    guildId: u,
+                    context: o
                 }),
-                Z = (0, _.E)(e, f, a),
-                M = (0, g.Z)(e, a, f),
-                C = (0, o.Z)({
-                    id: e.id,
-                    label: v.intl.string(v.t['/AXYnJ'])
+                S = (0, E.E)(n, g, u),
+                y = (0, f.Z)(n, u, g),
+                N = (0, d.Z)({
+                    id: n.id,
+                    label: A.NW.string(A.t['/AXYnJ'])
                 });
-            return (0, l.jsx)(i.v2r, {
+            return (0, i.jsx)(l.v2r, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': v.intl.string(v.t.liqwPD),
-                onSelect: u,
+                'aria-label': A.NW.string(A.t.liqwPD),
+                onSelect: a,
                 variant: 'fixed',
                 children:
-                    !h &&
-                    (0, l.jsxs)(l.Fragment, {
+                    !v &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, l.jsxs)(i.kSQ, {
-                                children: [T, S]
+                            (0, i.jsxs)(l.kSQ, {
+                                children: [T, b]
                             }),
-                            I,
-                            !A &&
-                                (0, l.jsx)(i.kSQ, {
-                                    children: (0, l.jsxs)(i.sNh, {
+                            O,
+                            !h &&
+                                (0, i.jsx)(l.kSQ, {
+                                    children: (0, i.jsxs)(l.sNh, {
                                         id: 'more-options',
-                                        label: v.intl.string(v.t.PdRCRk),
-                                        children: [Z, (0, l.jsx)(i.kSQ, { children: M })]
+                                        label: A.NW.string(A.t.PdRCRk),
+                                        children: [S, (0, i.jsx)(l.kSQ, { children: y })]
                                     })
                                 }),
-                            A && (0, l.jsx)(i.kSQ, { children: C })
+                            h && (0, i.jsx)(l.kSQ, { children: N })
                         ]
                     })
             });
         },
-        { object: f.qAy.CONTEXT_MENU }
+        { object: g.qAy.CONTEXT_MENU }
     ),
-    [d.Z.VOICE_USER]
+    [o.Z.VOICE_USER]
 );

@@ -1,61 +1,61 @@
-n.d(t, { Z: () => p }), n(47120), n(653041);
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(812206),
-    s = n(324262),
-    o = n(434404),
-    d = n(106976),
-    c = n(270144),
-    u = n(981631),
-    h = n(388032),
-    m = n(466389);
-function p(e) {
+n.d(t, { Z: () => g }), n(47120), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(812206),
+    a = n(324262),
+    s = n(434404),
+    c = n(106976),
+    u = n(270144),
+    d = n(981631),
+    p = n(388032),
+    h = n(466389);
+function g(e) {
     let t,
         { guild: n } = e,
-        p = (0, c.h6)(n),
-        g = () => (0, d.sB)(n.id),
-        _ = l.useMemo(() => new Set(p.map((e) => e.applicationId)), [p]),
-        f = (0, r.Wu)(
-            [a.Z],
+        g = (0, u.h6)(n),
+        f = () => (0, c.sB)(n.id),
+        m = i.useMemo(() => new Set(g.map((e) => e.applicationId)), [g]),
+        b = (0, l.Wu)(
+            [o.Z],
             () => {
                 let e = [];
-                for (let t of _) {
-                    let n = a.Z.getApplication(t);
+                for (let t of m) {
+                    let n = o.Z.getApplication(t);
                     null != n && e.push(n);
                 }
                 return e;
             },
-            [_]
+            [m]
         );
-    return 0 === f.length
+    return 0 === b.length
         ? null
         : ((t =
-              1 === f.length
-                  ? h.intl.formatToPlainString(h.t['Egq+Gx'], { a: f[0].name })
-                  : 2 === f.length
-                    ? h.intl.formatToPlainString(h.t.LxU9R0, {
-                          a: f[0].name,
-                          b: f[1].name
+              1 === b.length
+                  ? p.NW.formatToPlainString(p.t['Egq+Gx'], { a: b[0].name })
+                  : 2 === b.length
+                    ? p.NW.formatToPlainString(p.t.LxU9R0, {
+                          a: b[0].name,
+                          b: b[1].name
                       })
-                    : 3 === f.length
-                      ? h.intl.formatToPlainString(h.t.crKXMD, {
-                            a: f[0].name,
-                            b: f[1].name,
-                            c: f[2].name
+                    : 3 === b.length
+                      ? p.NW.formatToPlainString(p.t.crKXMD, {
+                            a: b[0].name,
+                            b: b[1].name,
+                            c: b[2].name
                         })
-                      : h.intl.string(h.t.MvfowM)),
-          (0, i.jsx)(s.Z, {
+                      : p.NW.string(p.t.MvfowM)),
+          (0, r.jsx)(a.Z, {
               guild: n,
-              onDismissed: g,
+              onDismissed: f,
               message: t,
-              type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-              image: m,
+              type: d.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
+              image: h,
               onClick: () => {
-                  g(), o.Z.open(n.id, u.pNK.INTEGRATIONS);
+                  f(), s.Z.open(n.id, d.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,
-              cta: h.intl.string(h.t.Rr3MAQ)
+              cta: p.NW.string(p.t.Rr3MAQ)
           }));
 }

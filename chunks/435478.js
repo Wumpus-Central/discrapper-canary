@@ -1,7 +1,7 @@
 n.d(t, {
     Mv: () => h,
     PB: () => f,
-    eq: () => N
+    eq: () => b
 }),
     n(47120);
 var r = n(200651),
@@ -77,10 +77,10 @@ function p(e, t) {
 }
 function h(e) {
     var { id: t, label: n, icon: c, hint: h, renderSubmenu: f } = e,
-        N = p(e, ['id', 'label', 'icon', 'hint', 'renderSubmenu']);
-    let x = (0, a.JA)(t),
-        { onFocus: b } = x,
-        _ = p(x, ['onFocus']),
+        b = p(e, ['id', 'label', 'icon', 'hint', 'renderSubmenu']);
+    let N = (0, a.JA)(t),
+        { onFocus: x } = N,
+        _ = p(N, ['onFocus']),
         { id: E } = (0, a.f$)(),
         [j, C] = i.useState(!1),
         O = null != f;
@@ -93,7 +93,7 @@ function h(e) {
     let v = (e) =>
         (0, r.jsxs)(
             d.kF,
-            g(m({}, e, _, N), {
+            g(m({}, e, _, b), {
                 role: 'button',
                 look: o.zxk.Looks.BLANK,
                 innerClassName: u.menuItemInner,
@@ -102,7 +102,7 @@ function h(e) {
                 fullWidth: !0,
                 onMouseEnter: () => {
                     var t;
-                    null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e), b();
+                    null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e), x();
                 },
                 children: [
                     (0, r.jsx)(c, {
@@ -152,7 +152,7 @@ function f(e) {
         })
     });
 }
-function N(e) {
+function b(e) {
     return (0, r.jsx)('div', {
         className: u.submenuPaddingContainer,
         children: (0, r.jsx)(

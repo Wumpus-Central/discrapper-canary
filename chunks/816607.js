@@ -1,51 +1,51 @@
-n.d(t, { default: () => h }), n(47120);
-var a = n(200651);
-n(192379);
-var i = n(512722),
-    r = n.n(i),
-    s = n(481060),
-    c = n(584825),
-    l = n(353254),
-    o = n(866104),
-    d = n(388032),
-    m = n(731156);
+t.d(a, { default: () => h }), t(47120), t(266796);
+var n = t(200651);
+t(192379);
+var i = t(512722),
+    r = t.n(i),
+    s = t(481060),
+    c = t(584825),
+    o = t(353254),
+    d = t(866104),
+    l = t(388032),
+    m = t(182902);
 function h(e) {
-    let { onClose: t, guildId: n, transitionState: i } = e,
-        h = (0, c.YB)(n);
+    let { onClose: a, guildId: t, transitionState: i } = e,
+        h = (0, c.YB)(t);
     r()(null != h, 'subscriptionsSettings cannot be null');
     let u = h.cover_image_asset,
-        [x] = (0, l.Z)(null != u ? u : void 0);
-    return (0, a.jsxs)(s.Y0X, {
+        [x] = (0, o.Z)(null != u ? u : void 0);
+    return (0, n.jsxs)(s.Y0X, {
         className: m.modal,
         size: s.CgR.MEDIUM,
         transitionState: i,
-        'aria-label': d.intl.string(d.t.D98gR0),
+        'aria-label': l.NW.string(l.t.D98gR0),
         children: [
-            (0, a.jsx)('div', {
+            (0, n.jsx)('div', {
                 ref: x,
                 className: m.coverImageContainer,
-                children: null != u && (0, a.jsx)(o.Z, { coverImageAsset: u })
+                children: null != u && (0, n.jsx)(d.Z, { coverImageAsset: u })
             }),
-            (0, a.jsx)(s.X6q, {
+            (0, n.jsx)(s.X6q, {
                 variant: 'text-lg/medium',
                 color: 'header-primary',
                 className: m.header,
-                children: d.intl.string(d.t.xPum5e)
+                children: l.NW.string(l.t.xPum5e)
             }),
-            (0, a.jsx)(s.hzk, {
+            (0, n.jsx)(s.hzk, {
                 className: m.content,
-                children: (0, a.jsx)(s.Text, {
+                children: (0, n.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     color: 'text-muted',
                     className: m.description,
                     children: h.description
                 })
             }),
-            (0, a.jsx)(s.mzw, {
+            (0, n.jsx)(s.mzw, {
                 className: m.__invalid_footer,
-                children: (0, a.jsx)(s.zxk, {
-                    onClick: t,
-                    children: d.intl.string(d.t.wdo1oK)
+                children: (0, n.jsx)(s.zxk, {
+                    onClick: a,
+                    children: l.NW.string(l.t.wdo1oK)
                 })
             })
         ]

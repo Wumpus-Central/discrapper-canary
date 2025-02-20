@@ -1,7 +1,7 @@
-var i = n(959318),
-    r = RangeError;
+var r = n(959318),
+    i = RangeError;
 e.exports = function (e) {
-    var t = i(e);
-    if (t < 0) throw r("The argument can't be less than 0");
+    var t = r(e);
+    if (t < 0) throw i("The argument can't be less than 0");
     return t;
 };

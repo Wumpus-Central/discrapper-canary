@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = {
+n.d(t, { Z: () => i });
+var r = {
     lessThanXSeconds: {
         one: 'less than a second',
         other: 'less than {{count}} seconds'
@@ -62,8 +62,8 @@ var i = {
         other: 'almost {{count}} years'
     }
 };
-let r = function (e, t, n) {
-    var r,
-        a = i[e];
-    return ((r = 'string' == typeof a ? a : 1 === t ? a.one : a.other.replace('{{count}}', t.toString())), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? 'in ' + r : r + ' ago') : r;
+let i = function (e, t, n) {
+    var i,
+        o = r[e];
+    return ((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', t.toString())), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? 'in ' + i : i + ' ago') : i;
 };

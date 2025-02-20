@@ -1,67 +1,67 @@
-n.d(t, { GU: () => c });
-var i = n(200651);
+n.d(t, { GU: () => u }), n(266796);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(596454),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(596454),
     l = n(889989),
-    u = n(980460);
-function c(e) {
+    c = n(501481);
+function u(e) {
     let t,
-        { applicationId: n, storeListingBenefits: r, skuBenefits: s, className: o } = e;
+        { applicationId: n, storeListingBenefits: i, skuBenefits: a, className: s } = e;
     return (
-        null != r
-            ? (t = r.map((e) =>
-                  (0, i.jsx)(
+        null != i
+            ? (t = i.map((e) =>
+                  (0, r.jsx)(
                       f,
                       {
                           applicationId: n,
                           benefit: e,
-                          className: a()(u.__invalid_benefit, o)
+                          className: o()(c.__invalid_benefit, s)
                       },
                       e.id
                   )
               ))
-            : null != s &&
-              (t = s.map((e, t) =>
-                  (0, i.jsx)(
+            : null != a &&
+              (t = a.map((e, t) =>
+                  (0, r.jsx)(
                       d,
                       {
                           benefit: e,
-                          className: a()(u.__invalid_benefit, o)
+                          className: o()(c.__invalid_benefit, s)
                       },
                       t
                   )
               )),
-        (0, i.jsx)(i.Fragment, { children: t })
+        (0, r.jsx)(r.Fragment, { children: t })
     );
 }
 function d(e) {
-    let { benefit: t, className: n, emojiContainerClassName: r, showsDescription: l = !0, nameTextVariant: c = 'text-md/medium', nameTextColor: d = 'header-primary' } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(u.container, n),
+    let { benefit: t, className: n, emojiContainerClassName: i, showsDescription: l = !0, nameTextVariant: u = 'text-md/medium', nameTextColor: d = 'header-primary' } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(c.container, n),
         children: [
             null != t.emoji &&
-                (0, i.jsx)('div', {
-                    className: a()(u.emojiContainer, r),
-                    children: (0, i.jsx)(o.Z, {
+                (0, r.jsx)('div', {
+                    className: o()(c.emojiContainer, i),
+                    children: (0, r.jsx)(s.Z, {
                         emojiId: t.emoji.id,
                         emojiName: t.emoji.name,
                         animated: t.emoji.animated
                     })
                 }),
-            (0, i.jsxs)('div', {
-                className: u.infoContainer,
+            (0, r.jsxs)('div', {
+                className: c.infoContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
-                        variant: c,
+                    (0, r.jsx)(a.Text, {
+                        variant: u,
                         color: d,
-                        className: u.name,
+                        className: c.name,
                         children: t.name
                     }),
                     l &&
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-sm/normal',
                             children: t.description
@@ -72,25 +72,25 @@ function d(e) {
     });
 }
 function f(e) {
-    let { applicationId: t, benefit: n, className: r, emojiContainerClassName: o, showsDescription: c = !0, nameTextVariant: d = 'text-md/medium', nameTextColor: f = 'header-primary' } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(u.container, r),
+    let { applicationId: t, benefit: n, className: i, emojiContainerClassName: s, showsDescription: u = !0, nameTextVariant: d = 'text-md/medium', nameTextColor: f = 'header-primary' } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(c.container, i),
         children: [
-            (0, i.jsx)('div', {
-                className: a()(u.emojiContainer, o),
+            (0, r.jsx)('div', {
+                className: o()(c.emojiContainer, s),
                 children: (0, l.n)(t, n.icon)
             }),
-            (0, i.jsxs)('div', {
-                className: u.infoContainer,
+            (0, r.jsxs)('div', {
+                className: c.infoContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: d,
                         color: f,
-                        className: u.name,
+                        className: c.name,
                         children: n.name
                     }),
-                    c &&
-                        (0, i.jsx)(s.Text, {
+                    u &&
+                        (0, r.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-sm/normal',
                             children: n.description

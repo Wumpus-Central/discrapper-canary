@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(388032),
-    s = n(40605);
-function a(e) {
+var i = n(481060),
+    s = n(388032),
+    a = n(749691);
+function l(e) {
     let { onClick: t } = e;
-    return (0, i.jsxs)(r.zxk, {
-        className: s.randomizeButton,
-        innerClassName: s.randomizeButtonInner,
-        look: r.zxk.Looks.OUTLINED,
-        size: r.zxk.Sizes.MEDIUM,
-        color: r.zxk.Colors.PRIMARY,
+    return (0, r.jsxs)(i.zxk, {
+        className: a.randomizeButton,
+        innerClassName: a.randomizeButtonInner,
+        look: i.zxk.Looks.OUTLINED,
+        size: i.zxk.Sizes.MEDIUM,
+        color: i.zxk.Colors.PRIMARY,
         onClick: t,
         grow: !1,
-        children: [(0, i.jsx)(r.Oe7, { size: 'xs' }), l.intl.string(l.t.jn5UYG)]
+        children: [(0, r.jsx)(i.Oe7, { size: 'xs' }), s.NW.string(s.t.jn5UYG)]
     });
 }

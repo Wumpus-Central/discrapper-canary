@@ -1,28 +1,28 @@
-var i,
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    s = n(570140),
-    o = n(353926),
-    d = n(160462);
-function c() {
-    d.W.trigger();
+    o = n(442837),
+    a = n(570140),
+    s = n(353926),
+    c = n(160462);
+function u() {
+    c.W.trigger();
 }
-class u extends (r = a.ZP.Store) {
+class d extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z);
+        this.waitFor(s.Z);
     }
     constructor() {
-        super(s.Z, { CONNECTION_OPEN: c }, s.c.Early);
+        super(a.Z, { CONNECTION_OPEN: u }, a.c.Early);
     }
 }
-(l = 'ExperimentTriggerPointStore'),
-    (i = 'displayName') in u
-        ? Object.defineProperty(u, i, {
-              value: l,
+(i = 'ExperimentTriggerPointStore'),
+    (r = 'displayName') in d
+        ? Object.defineProperty(d, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[i] = l),
-    new u();
+        : (d[r] = i),
+    new d();

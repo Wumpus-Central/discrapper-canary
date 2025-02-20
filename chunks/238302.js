@@ -1,29 +1,29 @@
 n.d(t, {
-    Kq: () => s,
-    Mo: () => o,
+    Kq: () => a,
+    Mo: () => s,
     kj: () => l,
-    xs: () => a,
-    zO: () => r
+    xs: () => o,
+    zO: () => i
 });
-var i = n(570140);
-let r = (e) => {
-        i.Z.dispatch({
+var r = n(570140);
+let i = (e) => {
+        r.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: e
         });
     },
-    a = () => {
-        i.Z.dispatch({
+    o = () => {
+        r.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
         });
     },
-    s = () => {
-        i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
+    a = () => {
+        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
-    o = () => {
-        i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
+    s = () => {
+        r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
     },
     l = () => {
-        i.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
+        r.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
     };

@@ -1,43 +1,43 @@
-e.d(t, {
-    M: () => u,
+t.d(n, {
+    M: () => r,
     t: () => d
 });
-var i = e(381499),
-    l = e(675478),
-    r = e(592125),
-    a = e(626135),
-    s = e(981631);
-function d(n, t, e, r) {
-    t !== e &&
-        ((0, l.PS)(
-            n,
-            (n) => {
-                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: e }) };
+var i = t(381499),
+    a = t(675478),
+    o = t(592125),
+    c = t(626135),
+    _ = t(981631);
+function d(e, n, t, o) {
+    n !== t &&
+        ((0, a.PS)(
+            e,
+            (e) => {
+                e.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: t }) };
             },
-            l.fy.INFREQUENT_USER_ACTION
+            a.fy.INFREQUENT_USER_ACTION
         ),
-        a.default.track(s.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
-            guild_id: n,
-            location: r,
-            soundpack: e
+        c.default.track(_.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
+            guild_id: e,
+            location: o,
+            soundpack: t
         }));
 }
-function u(n, t, e, d, u) {
-    var o;
-    e !== d &&
-        ((0, l.BU)(
+function r(e, n, t, d, r) {
+    var l;
+    t !== d &&
+        ((0, a.BU)(
+            e,
             n,
-            t,
-            (n) => {
-                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: d }) };
+            (e) => {
+                e.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: d }) };
             },
-            l.fy.INFREQUENT_USER_ACTION
+            a.fy.INFREQUENT_USER_ACTION
         ),
-        a.default.track(s.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
-            guild_id: n,
-            channel_id: t,
-            channel_type: null === (o = r.Z.getChannel(t)) || void 0 === o ? void 0 : o.type,
-            location: u,
+        c.default.track(_.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
+            guild_id: e,
+            channel_id: n,
+            channel_type: null === (l = o.Z.getChannel(n)) || void 0 === l ? void 0 : l.type,
+            location: r,
             soundpack: d
         }));
 }

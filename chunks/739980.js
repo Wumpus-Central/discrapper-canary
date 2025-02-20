@@ -1,14 +1,14 @@
 n.d(t, { z: () => c });
-var l = n(200651),
-    s = n(192379),
-    i = n(954654),
-    a = n(937889),
-    r = n(930282),
+var r = n(200651),
+    l = n(192379),
+    a = n(954654),
+    i = n(937889),
+    s = n(930282),
     o = n(524444),
-    u = n(45086);
+    u = n(790423);
 function c(e) {
     let { previewMessage: t } = e,
-        { content: n } = (0, a.ZP)(t, {
+        { content: n } = (0, i.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0
         }),
@@ -23,22 +23,22 @@ function c(e) {
                 maxWidth: 225,
                 analyticsSource: 'ApplicationCommandSharePreview'
             });
-            return (0, l.jsx)(s.Fragment, { children: n }, t);
+            return (0, r.jsx)(l.Fragment, { children: n }, t);
         });
-    return (0, l.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: u.previewContainer,
         children: [
-            (0, l.jsx)('div', { className: u.quote }),
-            (0, l.jsxs)('div', {
+            (0, r.jsx)('div', { className: u.quote }),
+            (0, r.jsxs)('div', {
                 className: u.content,
                 children: [
-                    (0, l.jsx)(r.ZP, {
+                    (0, r.jsx)(s.ZP, {
                         message: t,
                         content: n
                     }),
                     c,
                     t.components.length > 0
-                        ? (0, l.jsx)(i.ZP, {
+                        ? (0, r.jsx)(a.ZP, {
                               message: t,
                               shouldDisableInteractiveComponents: !0
                           })

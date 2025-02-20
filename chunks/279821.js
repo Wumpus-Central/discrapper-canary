@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { d: () => a }), n(411104);
-class r {
+n.d(t, { d: () => o }), n(411104);
+class i {
     raise(e) {
         throw e;
     }
@@ -20,13 +20,13 @@ class r {
         this.callback = e.response;
     }
     databaseOpen(e, t, n) {
-        let i = 'kv_storage: platform "web" is not supported at this time.';
-        if (null == n ? void 0 : n.synchronous) throw Error(i);
+        let r = 'kv_storage: platform "web" is not supported at this time.';
+        if (null == n ? void 0 : n.synchronous) throw Error(r);
         return this.reply({
             requestId: e,
             synchronous: !1,
             ok: !1,
-            data: i
+            data: r
         });
     }
     databaseList(e, t) {
@@ -57,7 +57,7 @@ class r {
         if (e.synchronous) return e.data;
         if (null != e.requestId) {
             var t, n;
-            let i = 0;
+            let r = 0;
             null === (t = (n = this).callback) ||
                 void 0 === t ||
                 t.call(
@@ -73,12 +73,12 @@ class r {
                             totalTimeNanoseconds: 0
                         }
                     },
-                    i
+                    r
                 );
         }
     }
     constructor() {
-        i(this, 'callback', null);
+        r(this, 'callback', null);
     }
 }
-let a = new r();
+let o = new i();

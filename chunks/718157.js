@@ -1,44 +1,44 @@
 n.d(t, { E: () => u });
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    a = n(456268),
+var r = n(200651),
+    i = n(192379),
+    s = n(442837),
+    a = n(481060),
+    l = n(456268),
     o = n(526429),
     c = n(128449),
     d = n(388032);
 function u(e) {
     let { guildId: t, guildMetadata: n, isDisabled: u, clearable: m = !0 } = e,
-        h = (0, l.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
-        g = r.useCallback(
+        p = (0, s.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
+        g = i.useCallback(
             (e) => {
-                (0, a.TA)(t, null != e ? e : c.o3);
+                (0, l.TA)(t, null != e ? e : c.o3);
             },
             [t]
         ),
-        x = r.useMemo(
+        h = i.useMemo(
             () =>
-                h.map((e) => {
+                p.map((e) => {
                     let { categoryId: t, name: n } = e;
                     return {
                         value: t,
                         label: n
                     };
                 }),
-            [h]
+            [p]
         );
-    return 0 === h.length
-        ? (0, i.jsx)(s.$jN, {})
-        : (0, i.jsx)(
-              s.VcW,
+    return 0 === p.length
+        ? (0, r.jsx)(a.$jN, {})
+        : (0, r.jsx)(
+              a.VcW,
               {
                   value: n.primaryCategoryId === c.o3 ? null : n.primaryCategoryId,
-                  placeholder: d.intl.string(d.t.XqMe3N),
-                  options: x,
+                  placeholder: d.NW.string(d.t.XqMe3N),
+                  options: h,
                   onChange: g,
                   isDisabled: u,
                   clearable: m
               },
-              x.length
+              h.length
           );
 }

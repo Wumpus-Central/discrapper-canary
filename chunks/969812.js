@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o });
-var i = n(544891),
-    r = n(904245),
-    a = n(981631),
-    s = n(388032);
-let o = {
-    changeNickname: (e, t, n, o) =>
-        i.tn
+n.d(t, { Z: () => s });
+var r = n(544891),
+    i = n(904245),
+    o = n(981631),
+    a = n(388032);
+let s = {
+    changeNickname: (e, t, n, s) =>
+        r.tn
             .patch({
-                url: a.ANM.GUILD_MEMBER_NICK(e, n),
-                body: { nick: o },
+                url: o.ANM.GUILD_MEMBER_NICK(e, n),
+                body: { nick: s },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
                 (e) => {
-                    (o = e.body.nick), r.Z.sendBotMessage(t, null != o && '' !== o ? s.intl.formatToMarkdownString(s.t['gz+HRk'], { nick: o }) : s.intl.string(s.t.Vhpd9P));
+                    (s = e.body.nick), i.Z.sendBotMessage(t, null != s && '' !== s ? a.NW.formatToMarkdownString(a.t['gz+HRk'], { nick: s }) : a.NW.string(a.t.Vhpd9P));
                 },
                 (e) => {
-                    403 === e.status ? r.Z.sendBotMessage(t, s.intl.formatToMarkdownString(s.t.Izf9jI, {})) : r.Z.sendBotMessage(t, s.intl.string(s.t['5LO/Sk']));
+                    403 === e.status ? i.Z.sendBotMessage(t, a.NW.formatToMarkdownString(a.t.Izf9jI, {})) : i.Z.sendBotMessage(t, a.NW.string(a.t['5LO/Sk']));
                 }
             )
 };

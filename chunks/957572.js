@@ -1,36 +1,36 @@
-n.d(t, { Z: () => c });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    s = n(847033),
-    l = n(544978),
-    o = n(388032),
-    a = n(840735);
-function c() {
-    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: n } = (0, s.m)();
+r.d(t, { Z: () => a });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(847033),
+    s = r(544978),
+    c = r(388032),
+    l = r(676130);
+function a() {
+    let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: r } = (0, o.m)();
     return t
-        ? (0, i.jsxs)(i.Fragment, {
+        ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, i.jsxs)('div', {
-                      className: a.previewNotice,
+                  (0, n.jsxs)('div', {
+                      className: l.previewNotice,
                       children: [
-                          (0, i.jsx)(r.kZF, {
+                          (0, n.jsx)(i.kZF, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, n.jsx)(i.Text, {
                               variant: 'text-sm/normal',
-                              className: a.previewNoticeText,
-                              children: e === l.y.GUILD_PRODUCTS_PREVIEW ? o.intl.string(o.t.F4Z0nZ) : o.intl.string(o.t.pzTFpK)
+                              className: l.previewNoticeText,
+                              children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.NW.string(c.t.F4Z0nZ) : c.NW.string(c.t.pzTFpK)
                           })
                       ]
                   }),
-                  (0, i.jsx)(r.zxk, {
-                      size: r.zxk.Sizes.MIN,
-                      color: r.zxk.Colors.PRIMARY,
-                      className: a.removePreviewButton,
-                      onClick: n,
-                      children: e === l.y.GUILD_PRODUCTS_PREVIEW ? o.intl.string(o.t.YF35pa) : o.intl.string(o.t.r30bk5)
+                  (0, n.jsx)(i.zxk, {
+                      size: i.zxk.Sizes.MIN,
+                      color: i.zxk.Colors.PRIMARY,
+                      className: l.removePreviewButton,
+                      onClick: r,
+                      children: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.NW.string(c.t.YF35pa) : c.NW.string(c.t.r30bk5)
                   })
               ]
           })

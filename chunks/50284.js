@@ -1,37 +1,37 @@
-n.d(t, { Z: () => h });
-var i = n(544891),
-    l = n(710845),
+n.d(t, { Z: () => f }), n(230036), n(978209);
+var r = n(544891),
+    i = n(710845),
     a = n(569471),
-    r = n(346479),
-    s = n(592125),
-    o = n(375954),
+    o = n(346479),
+    l = n(592125),
+    s = n(375954),
     c = n(306680),
     d = n(594174),
     u = n(709054),
-    m = n(981631);
-let _ = new l.Z('markUnread');
-async function h(e, t) {
+    p = n(981631);
+let m = new i.Z('markUnread');
+async function f(e, t) {
     let n = d.default.getCurrentUser();
     if (null == n) return;
-    let l = o.Z.getMessages(e),
-        h = l
+    let i = s.Z.getMessages(e),
+        f = i
             .toArray()
             .filter((e) => 0 > u.default.compare(e.id, t))
             .sort((e, t) => u.default.compare(e.id, t.id))
             .reverse()[0],
-        p = null == h ? u.default.atPreviousMillisecond(t) : h.id,
+        h = null == f ? u.default.atPreviousMillisecond(t) : f.id,
         g = 0;
-    l.forAll((e) => {
-        u.default.compare(e.id, p) > 0 && (0, c.Ex)(e, n) && g++;
+    i.forAll((e) => {
+        u.default.compare(e.id, h) > 0 && (0, c.Ex)(e, n) && g++;
     });
-    let f = s.Z.getChannel(e);
-    null != f && f.isThread() && (f.isArchivedThread() && (await r.Z.unarchiveThread(f, !1)), a.Z.hasJoined(e) || (await r.Z.joinThread(f, 'Mark Unread'))),
-        _.log('Marking unread', {
+    let _ = l.Z.getChannel(e);
+    null != _ && _.isThread() && (_.isArchivedThread() && (await o.Z.unarchiveThread(_, !1)), a.Z.hasJoined(e) || (await o.Z.joinThread(_, 'Mark Unread'))),
+        m.log('Marking unread', {
             channelId: e,
             messageId: t
         }),
-        i.tn.post({
-            url: m.ANM.MESSAGE_ACK(e, p),
+        r.tn.post({
+            url: p.ANM.MESSAGE_ACK(e, h),
             body: {
                 manual: !0,
                 mention_count: g

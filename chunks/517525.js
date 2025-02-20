@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
     o = n(642128),
     s = n(468194),
     c = n(442837),
@@ -86,7 +86,7 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     D = (e) => {
         let t,
-            l,
+            i,
             { participant: o, isUpsellEnabled: s, shape: d, size: v, didTrackUpsellViewed: P, setDidTrackUpsellViewed: N, className: I, premiumIndicator: R } = e,
             _ = (0, E.Wc)(o),
             { analyticsLocations: k } = (0, p.ZP)(),
@@ -97,15 +97,15 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             t = !1;
         }
         try {
-            l = (0, E.tR)(_);
+            i = (0, E.tR)(_);
         } catch (e) {
-            l = !1;
+            i = !1;
         }
-        let T = t || l,
+        let T = t || i,
             { location: D } = (0, m.O)(),
             M = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
             L = s && !y.ZP.isPremium(M, j.p9.TIER_1) && !y.ZP.canStreamQuality(y.ZP.StreamQuality.MID, M),
-            F = i.useCallback(() => {
+            F = l.useCallback(() => {
                 L &&
                     T &&
                     (0, f.ZDy)(async () => {
@@ -114,17 +114,17 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     });
             }, [L, T, D]);
         if (
-            (i.useEffect(() => {
+            (l.useEffect(() => {
                 !P &&
                     T &&
                     (b.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: j.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
-                        has_premium_stream_resolution: l,
+                        has_premium_stream_resolution: i,
                         location_stack: k
                     }),
                     N(!0));
-            }, [t, l, T, P, N, k]),
+            }, [t, i, T, P, N, k]),
             null == _)
         )
             return null;
@@ -163,12 +163,12 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
     },
     M = (e) => {
-        let { participant: t, showQuality: n, isUpsellEnabled: l = !0, size: s, className: c, premiumIndicator: u } = e,
-            [d, m] = i.useState(!1),
+        let { participant: t, showQuality: n, isUpsellEnabled: i = !0, size: s, className: c, premiumIndicator: u } = e,
+            [d, m] = l.useState(!1),
             p = (0, E.Wc)(t),
-            { reducedMotion: g } = i.useContext(f.Sfi),
+            { reducedMotion: g } = l.useContext(f.Sfi),
             b = n && null != p;
-        i.useEffect(() => {
+        l.useEffect(() => {
             (0, v.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
         let y = (0, f.Yzy)(
@@ -191,10 +191,10 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 'animate-always'
             );
         return ((e) => {
-            let { className: n, popoutProps: i } = e;
+            let { className: n, popoutProps: l } = e;
             return (0, r.jsxs)(
                 'div',
-                C(w({ className: a()(Z.streamQualityIndicator, n) }, i), {
+                C(w({ className: a()(Z.streamQualityIndicator, n) }, l), {
                     children: [
                         y((e, n) =>
                             n
@@ -205,7 +205,7 @@ let P = (0, s.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                           participant: t,
                                           size: s,
                                           shape: f.Dv2.ROUND_LEFT,
-                                          isUpsellEnabled: l,
+                                          isUpsellEnabled: i,
                                           didTrackUpsellViewed: d,
                                           setDidTrackUpsellViewed: m,
                                           premiumIndicator: u

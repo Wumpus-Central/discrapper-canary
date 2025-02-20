@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s });
-var i = n(571846),
-    r = n(708605),
-    a = n(896416);
-function s(e) {
-    if ((void 0 !== i && null != r(e)) || null != e['@@iterator']) return a(e);
+n.d(t, { Z: () => a });
+var r = n(571846),
+    i = n(708605),
+    o = n(896416);
+function a(e) {
+    if ((void 0 !== r && null != i(e)) || null != e['@@iterator']) return o(e);
 }

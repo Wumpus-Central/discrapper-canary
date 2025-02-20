@@ -1,8 +1,8 @@
-i.d(t, { W: () => d });
-var e = i(442837),
-    l = i(314897),
-    a = i(979651);
-function d(n) {
+n.d(t, { W: () => o });
+var r = n(442837),
+    i = n(314897),
+    l = n(979651);
+function o(e) {
     var t;
-    return (t = null == n ? void 0 : n.id), (0, e.e7)([a.Z, l.default], () => a.Z.isInChannel(t, l.default.getId()));
+    return (t = null == e ? void 0 : e.id), (0, r.e7)([l.Z, i.default], () => l.Z.isInChannel(t, i.default.getId()));
 }

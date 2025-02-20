@@ -1,8 +1,8 @@
 n.d(t, {
-    mG: () => r,
-    y0: () => a
+    mG: () => i,
+    y0: () => o
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-01_inappropriate_conversation_warning',
     label: 'Inappropriate Conversation Warning',
@@ -15,13 +15,13 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: r } = i.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return r;
+        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return i;
 }
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r;
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }

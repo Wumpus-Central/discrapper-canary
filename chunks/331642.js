@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(409673),
     h = n(603074),
     f = n(388032),
-    N = n(553767);
-function x(e) {
+    b = n(553767);
+function N(e) {
     let { onSelect: t } = e,
         [n, a] = i.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
@@ -79,7 +79,7 @@ function x(e) {
                         children: (0, r.jsx)(l.vdY, {
                             size: 'md',
                             color: 'currentColor',
-                            className: N.secondaryIcon
+                            className: b.secondaryIcon
                         })
                     }),
                 Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ function x(e) {
         }
     });
 }
-function b(e) {
+function x(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, m.Z)(t, null),
         i =
@@ -115,7 +115,7 @@ function b(e) {
         children: (0, r.jsx)(l.gj8, {
             size: 'md',
             color: 'currentColor',
-            className: N.secondaryIconActive
+            className: b.secondaryIconActive
         })
     });
 }
@@ -126,21 +126,21 @@ function _(e) {
         d = null == t ? void 0 : t.emojiName,
         u = s && (null != d || null != c);
     return (0, r.jsxs)('div', {
-        className: N.soundButtonSettingContainer,
+        className: b.soundButtonSettingContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: N.container,
+                className: b.container,
                 children: [
                     u &&
                         (0, r.jsx)(o.Z, {
                             emojiId: c,
                             emojiName: d,
-                            className: N.emoji
+                            className: b.emoji
                         }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-primary',
-                        className: N.soundText,
+                        className: b.soundText,
                         children:
                             null == t
                                 ? f.NW.string(f.t.PoWNfX)
@@ -158,18 +158,18 @@ function _(e) {
                                   : t.name
                     }),
                     s
-                        ? (0, r.jsx)(b, { sound: t })
+                        ? (0, r.jsx)(x, { sound: t })
                         : (0, r.jsx)(l.gj8, {
                               size: 'md',
                               color: 'currentColor',
-                              className: N.secondaryIconDisabled
+                              className: b.secondaryIconDisabled
                           })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: N.container,
+                className: b.container,
                 children: [
-                    (0, r.jsx)(x, { onSelect: i }),
+                    (0, r.jsx)(N, { onSelect: i }),
                     s &&
                         !n &&
                         (0, r.jsx)(p.hU, {
@@ -178,7 +178,7 @@ function _(e) {
                             children: (0, r.jsx)(l.XHJ, {
                                 size: 'md',
                                 color: a.Z.unsafe_rawColors.RED_400.css,
-                                className: N.secondaryIcon
+                                className: b.secondaryIcon
                             })
                         })
                 ]

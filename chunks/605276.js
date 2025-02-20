@@ -1,62 +1,62 @@
-l.d(n, { Z: () => y });
-var a = l(200651),
-    i = l(192379),
-    t = l(399606),
-    r = l(481060),
+l.d(n, { Z: () => w }), l(266796);
+var t = l(200651),
+    r = l(192379),
+    a = l(399606),
+    i = l(481060),
     s = l(904245),
-    d = l(368844),
-    o = l(249842),
-    c = l(838367),
+    o = l(368844),
+    c = l(249842),
+    d = l(838367),
     u = l(576306),
-    h = l(65361),
-    m = l(910200),
+    m = l(65361),
+    h = l(910200),
     g = l(6025),
-    x = l(592125),
-    f = l(375954),
-    C = l(496675),
-    _ = l(768581),
-    v = l(526120),
-    I = l(825334),
-    Z = l(981631),
-    j = l(388032),
-    p = l(959454);
-function N(e) {
+    f = l(592125),
+    x = l(375954),
+    p = l(496675),
+    j = l(768581),
+    b = l(526120),
+    C = l(825334),
+    v = l(981631),
+    _ = l(388032),
+    I = l(883920);
+function Z(e) {
     let { guild: n } = e,
-        l = (0, t.e7)([c.Z], () => c.Z.getGuild(n.id), [n]);
+        l = (0, a.e7)([d.Z], () => d.Z.getGuild(n.id), [n]);
     return (
-        i.useEffect(() => {
-            null == l && (0, o.P)(n.id);
+        r.useEffect(() => {
+            null == l && (0, c.P)(n.id);
         }, [n.id, l]),
-        (0, a.jsx)(r.Zbd, {
-            className: p.sidebarCardWrapper,
-            children: (0, a.jsxs)('div', {
-                className: p.sidebarCard,
+        (0, t.jsx)(i.Zbd, {
+            className: I.sidebarCardWrapper,
+            children: (0, t.jsxs)('div', {
+                className: I.sidebarCard,
                 children: [
-                    (0, a.jsx)(r.X6q, {
-                        className: p.sidebarCardHeader,
+                    (0, t.jsx)(i.X6q, {
+                        className: I.sidebarCardHeader,
                         variant: 'heading-md/bold',
                         color: 'header-primary',
-                        children: j.intl.string(j.t['6YriCA'])
+                        children: _.NW.string(_.t['6YriCA'])
                     }),
-                    (0, a.jsx)(r.Text, {
-                        className: p.guildDescription,
+                    (0, t.jsx)(i.Text, {
+                        className: I.guildDescription,
                         variant: 'text-md/normal',
                         color: 'text-normal',
                         children: n.description
                     }),
-                    (0, a.jsx)('div', {
-                        className: p.guildInfo,
+                    (0, t.jsx)('div', {
+                        className: I.guildInfo,
                         children:
                             (null == l ? void 0 : l.memberCount) != null &&
                             (null == l ? void 0 : l.presenceCount) != null &&
-                            (0, a.jsxs)(a.Fragment, {
+                            (0, t.jsxs)(t.Fragment, {
                                 children: [
-                                    (0, a.jsx)('div', { className: p.dotOnline }),
-                                    (0, a.jsx)(r.Text, {
-                                        className: p.guildInfoText,
+                                    (0, t.jsx)('div', { className: I.dotOnline }),
+                                    (0, t.jsx)(i.Text, {
+                                        className: I.guildInfoText,
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        children: j.intl.format(j.t.QAdRCw, {
+                                        children: _.NW.format(_.t.QAdRCw, {
                                             online: null == l ? void 0 : l.presenceCount,
                                             total: null == l ? void 0 : l.memberCount
                                         })
@@ -69,81 +69,81 @@ function N(e) {
         })
     );
 }
-function b(e) {
+function N(e) {
     let { guild: n } = e,
-        { guildProfile: l, fetchGuildProfile: t } = (0, h.u)(n.id);
-    return (i.useEffect(() => {
-        t();
-    }, [t]),
+        { guildProfile: l, fetchGuildProfile: a } = (0, m.u)(n.id);
+    return (r.useEffect(() => {
+        a();
+    }, [a]),
     null == l)
         ? null
-        : (0, a.jsx)(m.Z, { profile: l });
+        : (0, t.jsx)(h.Z, { profile: l });
 }
-let E = i.memo(function (e) {
+let y = r.memo(function (e) {
         let { guild: n } = e;
-        return (0, u.h)() ? (0, a.jsx)(b, { guild: n }) : (0, a.jsx)(N, { guild: n });
+        return (0, u.h)() ? (0, t.jsx)(N, { guild: n }) : (0, t.jsx)(Z, { guild: n });
     }),
-    A = (e) => {
-        let { channelId: n, title: l, icon: o } = e,
-            c = (0, t.e7)([x.Z], () => x.Z.getChannel(n)),
-            u = (0, t.e7)([f.Z], () => f.Z.getMessages(n)),
-            h = (0, t.e7)([C.Z], () => C.Z.can(Z.Plq.VIEW_CHANNEL, c)),
-            m = u.first(),
-            I = (0, d.zy)(m, !1),
-            j = (null == I ? void 0 : I.length) > 0 ? I[0] : null,
-            N = null != c && null == m && !u.loadingMore && !u.ready && !u.hasFetched && h;
-        i.useEffect(() => {
-            N &&
+    O = (e) => {
+        let { channelId: n, title: l, icon: c } = e,
+            d = (0, a.e7)([f.Z], () => f.Z.getChannel(n)),
+            u = (0, a.e7)([x.Z], () => x.Z.getMessages(n)),
+            m = (0, a.e7)([p.Z], () => p.Z.can(v.Plq.VIEW_CHANNEL, d)),
+            h = u.first(),
+            C = (0, o.zy)(h, !1),
+            _ = (null == C ? void 0 : C.length) > 0 ? C[0] : null,
+            Z = null != d && null == h && !u.loadingMore && !u.ready && !u.hasFetched && m;
+        r.useEffect(() => {
+            Z &&
                 s.Z.fetchMessages({
                     channelId: n,
                     after: n,
                     limit: 5
                 });
-        }, [n, N]);
-        let b = (e) => {
-            null != c &&
+        }, [n, Z]);
+        let N = (e) => {
+            null != d &&
                 (e.shiftKey
-                    ? (0, v.C3)(c.guild_id, c.id)
+                    ? (0, b.C3)(d.guild_id, d.id)
                     : g.Z.openResourceChannelAsSidebar({
-                          guildId: c.guild_id,
-                          channelId: c.id
+                          guildId: d.guild_id,
+                          channelId: d.id
                       }));
         };
-        return (0, a.jsx)(
-            r.P3F,
+        return (0, t.jsx)(
+            i.P3F,
             {
-                className: p.resourceChannel,
-                onClick: (e) => b(e),
-                children: (0, a.jsxs)(a.Fragment, {
+                className: I.resourceChannel,
+                onClick: (e) => N(e),
+                children: (0, t.jsxs)(t.Fragment, {
                     children: [
                         (() => {
-                            let e = _.ZP.getResourceChannelIconURL({
+                            let e = j.ZP.getResourceChannelIconURL({
                                 channelId: n,
-                                icon: o
+                                icon: c
                             });
-                            return null != o && null != e
-                                ? (0, a.jsx)('img', {
+                            return null != c && null != e
+                                ? (0, t.jsx)('img', {
                                       src: e,
-                                      className: p.resourceImage,
+                                      className: I.resourceImage,
                                       alt: '',
                                       'aria-hidden': !0
                                   })
-                                : null != j
-                                  ? (0, a.jsx)('img', {
-                                        className: p.resourceImage,
-                                        src: j.src,
-                                        alt: j.alt
+                                : null != _
+                                  ? (0, t.jsx)('img', {
+                                        className: I.resourceImage,
+                                        src: _.src,
+                                        alt: _.alt
                                     })
-                                  : (0, a.jsx)('div', {
-                                        className: p.placeholderImage,
-                                        children: (0, a.jsx)(r.hH0, {
+                                  : (0, t.jsx)('div', {
+                                        className: I.placeholderImage,
+                                        children: (0, t.jsx)(i.hH0, {
                                             size: 'xs',
                                             color: 'currentColor'
                                         })
                                     });
                         })(),
-                        (0, a.jsx)(r.Text, {
-                            className: p.guildInfoText,
+                        (0, t.jsx)(i.Text, {
+                            className: I.guildInfoText,
                             variant: 'text-sm/semibold',
                             color: 'none',
                             children: l
@@ -154,27 +154,27 @@ let E = i.memo(function (e) {
             n
         );
     },
-    M = i.memo(function (e) {
+    P = r.memo(function (e) {
         let { guild: n } = e,
-            l = (0, I.Z)(n.id);
+            l = (0, C.Z)(n.id);
         return 0 === l.length
             ? null
-            : (0, a.jsx)(r.Zbd, {
-                  className: p.sidebarCardWrapper,
-                  children: (0, a.jsxs)('div', {
-                      className: p.sidebarCard,
+            : (0, t.jsx)(i.Zbd, {
+                  className: I.sidebarCardWrapper,
+                  children: (0, t.jsxs)('div', {
+                      className: I.sidebarCard,
                       children: [
-                          (0, a.jsx)(r.X6q, {
-                              className: p.sidebarCardHeader,
+                          (0, t.jsx)(i.X6q, {
+                              className: I.sidebarCardHeader,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
-                              children: j.intl.string(j.t.xwY4LS)
+                              children: _.NW.string(_.t.xwY4LS)
                           }),
-                          (0, a.jsx)('div', {
-                              className: p.resourceChannelsList,
+                          (0, t.jsx)('div', {
+                              className: I.resourceChannelsList,
                               children: l.map((e) =>
-                                  (0, a.jsx)(
-                                      A,
+                                  (0, t.jsx)(
+                                      O,
                                       {
                                           channelId: e.channelId,
                                           title: e.title,
@@ -188,10 +188,10 @@ let E = i.memo(function (e) {
                   })
               });
     }),
-    y = i.memo(function (e) {
+    w = r.memo(function (e) {
         let { guild: n, isNewMember: l } = e;
-        return (0, a.jsxs)('aside', {
-            className: p.sidebar,
-            children: [(0, a.jsx)(E, { guild: n }), l && (0, a.jsx)(M, { guild: n })]
+        return (0, t.jsxs)('aside', {
+            className: I.sidebar,
+            children: [(0, t.jsx)(y, { guild: n }), l && (0, t.jsx)(P, { guild: n })]
         });
     });

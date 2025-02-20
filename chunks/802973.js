@@ -3,7 +3,7 @@ e.exports = function (e, t) {
         ? function (t, n) {
               return t[e](n);
           }
-        : function (t, n, i) {
-              return t[e](n, i);
+        : function (t, n, r) {
+              return t[e](n, r);
           };
 };

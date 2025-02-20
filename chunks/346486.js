@@ -1,12 +1,12 @@
 n.d(t, { Z: () => p }), n(47120);
 var s,
-    i = n(200651),
-    r = n(192379),
+    r = n(200651),
+    i = n(192379),
     a = n(392711),
-    l = n.n(a),
-    o = n(55935),
-    d = n(388032);
-function c(e, t, n) {
+    o = n.n(a),
+    l = n(55935),
+    c = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,8 +19,8 @@ function c(e, t, n) {
         e
     );
 }
-let h = () => [d.intl.string(d.t['6m/6nJ']), d.intl.string(d.t.n7dksL), d.intl.string(d.t['1LyF1t']), d.intl.string(d.t.QJyuxc)];
-class u extends (s = r.PureComponent) {
+let u = () => [c.NW.string(c.t['6m/6nJ']), c.NW.string(c.t.n7dksL), c.NW.string(c.t['1LyF1t']), c.NW.string(c.t.QJyuxc)];
+class h extends (s = i.PureComponent) {
     componentDidMount() {
         let { intervalDuration: e, onInterval: t } = this.props;
         this._interval = setInterval(() => {
@@ -32,51 +32,51 @@ class u extends (s = r.PureComponent) {
     }
     defaultRender(e) {
         let { showDays: t, showUnits: n, className: s } = this.props,
-            r = [e.days, e.hours, e.minutes, e.seconds],
-            a = h();
-        if (0 === e.days) r.shift();
+            i = [e.days, e.hours, e.minutes, e.seconds],
+            a = u();
+        if (0 === e.days) i.shift();
         else if (!t) {
-            let e = r.shift();
-            r[0] += 24 * e;
+            let e = i.shift();
+            i[0] += 24 * e;
         }
-        let o = l()(r)
+        let l = o()(i)
             .map((e) => (e < 10 ? '0'.concat(e) : e))
             .map((e, t) => [
                 t > 0 && !n ? ':' : ' ',
-                (0, i.jsxs)(
+                (0, r.jsxs)(
                     'span',
                     {
-                        children: [e, n ? a[r.length - t - 1] : null]
+                        children: [e, n ? a[i.length - t - 1] : null]
                     },
                     t
                 )
             ])
             .flatten()
             .value();
-        return (0, i.jsx)('span', {
+        return (0, r.jsx)('span', {
             className: s,
-            children: o
+            children: l
         });
     }
     render() {
         let { deadline: e, children: t, className: n, stopAtOneSec: s } = this.props;
         if (e === 1 / 0)
-            return (0, i.jsx)('span', {
+            return (0, r.jsx)('span', {
                 className: n,
-                'aria-label': d.intl.string(d.t.PqEzn5),
+                'aria-label': c.NW.string(c.t.PqEzn5),
                 children: '\u221E'
             });
-        let r = (0, o.TD)(Date.now(), e, s);
-        return null != t ? t(r, this.defaultRender.bind(this, r)) : this.defaultRender(r);
+        let i = (0, l.TD)(Date.now(), e, s);
+        return null != t ? t(i, this.defaultRender.bind(this, i)) : this.defaultRender(i);
     }
     constructor(...e) {
-        super(...e), c(this, '_interval', void 0);
+        super(...e), d(this, '_interval', void 0);
     }
 }
-c(u, 'defaultProps', {
+d(h, 'defaultProps', {
     showDays: !0,
     showUnits: !1,
     stopAtOneSec: !1,
     intervalDuration: 1000
 });
-let p = u;
+let p = h;

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => p });
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => _ });
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(314897);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-let c = Object.freeze([]),
+let u = Object.freeze([]),
     d = {};
 function f(e) {
     (d = {}),
@@ -26,7 +26,7 @@ function f(e) {
             d[e.sessionId] = e;
         });
 }
-class _ extends (i = s.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
@@ -39,21 +39,21 @@ class _ extends (i = s.ZP.Store) {
     }
     getRemoteActivities() {
         let e = l.default.getSessionId(),
-            t = a().find(d, (t) => t.active && t.sessionId !== e);
-        return null != t ? t.activities : c;
+            t = o().find(d, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : u;
     }
     getSessionById(e) {
         return d[e];
     }
     getActiveSession() {
-        return a().find(d, (e) => {
+        return o().find(d, (e) => {
             let { active: t } = e;
             return t;
         });
     }
 }
-u(_, 'displayName', 'SessionsStore');
-let p = new _(o.Z, {
+c(p, 'displayName', 'SessionsStore');
+let _ = new p(s.Z, {
     CONNECTION_OPEN: f,
     SESSIONS_REPLACE: f
 });

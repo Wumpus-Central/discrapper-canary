@@ -3,8 +3,8 @@ function t(e, n = {}) {
 }
 function n(e) {
     let n = e.regex,
-        i = '[A-Za-z0-9_$]+',
-        r = t([
+        r = '[A-Za-z0-9_$]+',
+        i = t([
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT('/\\*\\*', '\\*/', {
@@ -21,13 +21,13 @@ function n(e) {
                 ]
             })
         ]),
-        a = {
+        o = {
             className: 'regexp',
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        s = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
-        o = t(
+        a = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        s = t(
             [
                 {
                     begin: /"""/,
@@ -67,10 +67,10 @@ function n(e) {
                 binary: 'groovy',
                 relevance: 10
             }),
-            r,
+            i,
+            s,
             o,
             a,
-            s,
             l,
             {
                 className: 'meta',
@@ -79,20 +79,20 @@ function n(e) {
             },
             {
                 className: 'attr',
-                begin: i + '[ \t]*:',
+                begin: r + '[ \t]*:',
                 relevance: 0
             },
             {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [r, o, a, s, 'self']
+                contains: [i, s, o, a, 'self']
             },
             {
                 className: 'symbol',
-                begin: '^[ \t]*' + n.lookahead(i + ':'),
+                begin: '^[ \t]*' + n.lookahead(r + ':'),
                 excludeBegin: !0,
-                end: i + ':',
+                end: r + ':',
                 relevance: 0
             }
         ],

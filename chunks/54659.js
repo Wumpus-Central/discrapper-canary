@@ -1,9 +1,9 @@
-var i = n(821819);
+var r = n(821819);
 e.exports = function (e, t) {
     var n = [][e];
     return (
         !!n &&
-        i(function () {
+        r(function () {
             n.call(
                 null,
                 t ||

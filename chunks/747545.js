@@ -20,9 +20,9 @@ var r = n(200651),
     p = n(906732),
     h = n(920321),
     f = n(921801),
-    N = n(695346),
-    x = n(716161),
-    b = n(938117),
+    b = n(695346),
+    N = n(716161),
+    x = n(938117),
     _ = n(131951),
     E = n(626135),
     j = n(358085),
@@ -60,7 +60,7 @@ function y(e) {
             isVideoAvailable: _.Z.isVideoAvailable()
         })),
         k = (0, h.Z)(),
-        W = N.qF.useSetting(),
+        W = b.qF.useSetting(),
         L = Object.values(k).map((e) => {
             let { id: t, name: n } = e;
             return {
@@ -70,7 +70,7 @@ function y(e) {
         });
     return (
         i.useEffect(() => {
-            (0, x.XV)();
+            (0, N.XV)();
         }, []),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -89,7 +89,7 @@ function y(e) {
                           className: S.previewToggle,
                           note: v.NW.string(v.t.WNbX4O),
                           onChange: (e) => {
-                              N.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                              b.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                           },
                           value: W,
                           hideBorder: !0,
@@ -131,7 +131,7 @@ function y(e) {
                     }),
                 (0, r.jsx)(f.F, {
                     setting: O.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(x.Z, {
                         className: S.spacingTop24,
                         onLearnMore: l,
                         selectedBackgroundOption: d,

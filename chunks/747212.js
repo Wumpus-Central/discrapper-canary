@@ -1,22 +1,22 @@
 n.d(t, { Z: () => o });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    s = n(968437),
-    a = n(388032),
-    r = n(436030);
+var i = n(481060),
+    l = n(968437),
+    s = n(388032),
+    a = n(939801);
 let o = (e) => {
     let { autoArchiveDuration: t, onChange: n, isDisabled: o } = e,
-        d = (0, s.nt)();
-    return (0, i.jsx)(l.hjN, {
-        title: a.intl.string(a.t.FGjMZW),
-        className: r.formSection,
-        children: (0, i.jsx)(l.VcW, {
+        c = (0, l.nt)();
+    return (0, r.jsx)(i.hjN, {
+        title: s.NW.string(s.t.FGjMZW),
+        className: a.formSection,
+        children: (0, r.jsx)(i.VcW, {
             isDisabled: o,
-            options: d,
+            options: c,
             value: t,
             onChange: n,
-            optionClassName: r.dropdownOption
+            optionClassName: a.dropdownOption
         })
     });
 };

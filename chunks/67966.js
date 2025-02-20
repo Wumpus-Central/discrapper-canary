@@ -1,14 +1,14 @@
-n.d(t, { Z: () => r });
-var i = n(882159);
-function r(e, t) {
+n.d(t, { Z: () => i });
+var r = n(882159);
+function i(e, t) {
     var n = t.getRootNode && t.getRootNode();
     if (e.contains(t)) return !0;
-    if (n && (0, i.Zq)(n)) {
-        var r = t;
+    if (n && (0, r.Zq)(n)) {
+        var i = t;
         do {
-            if (r && e.isSameNode(r)) return !0;
-            r = r.parentNode || r.host;
-        } while (r);
+            if (i && e.isSameNode(i)) return !0;
+            i = i.parentNode || i.host;
+        } while (i);
     }
     return !1;
 }

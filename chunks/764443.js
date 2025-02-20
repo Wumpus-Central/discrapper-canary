@@ -1,137 +1,137 @@
-n.d(t, { I: () => I });
-var i = n(200651);
+n.d(t, { I: () => x }), n(266796);
+var r = n(200651);
 n(192379);
-var l = n(722770),
-    r = n(481060),
+var i = n(722770),
+    s = n(481060),
     a = n(440051),
-    s = n(734934),
+    l = n(734934),
     o = n(158238),
-    d = n(695346),
-    c = n(70956),
+    c = n(695346),
+    d = n(70956),
     u = n(51144),
-    h = n(246133),
-    m = n(981631),
+    m = n(246133),
+    g = n(981631),
     p = n(388032),
-    g = n(907553);
-let _ = [
+    h = n(307525);
+let f = [
     {
-        duration: 30 * c.Z.Millis.MINUTE,
-        label: () => p.intl.string(p.t.RxJGbG)
+        duration: 30 * d.Z.Millis.MINUTE,
+        label: () => p.NW.string(p.t.RxJGbG)
     },
     {
-        duration: c.Z.Millis.HOUR,
-        label: () => p.intl.string(p.t.UMWBZm)
+        duration: d.Z.Millis.HOUR,
+        label: () => p.NW.string(p.t.UMWBZm)
     },
     {
-        duration: 3 * c.Z.Millis.HOUR,
-        label: () => p.intl.string(p.t.QmYWtr)
+        duration: 3 * d.Z.Millis.HOUR,
+        label: () => p.NW.string(p.t.QmYWtr)
     },
     {
-        duration: 8 * c.Z.Millis.HOUR,
-        label: () => p.intl.string(p.t.EpAXPD)
+        duration: 8 * d.Z.Millis.HOUR,
+        label: () => p.NW.string(p.t.EpAXPD)
     },
     {
-        duration: c.Z.Millis.DAY,
-        label: () => p.intl.string(p.t['755t4u'])
+        duration: d.Z.Millis.DAY,
+        label: () => p.NW.string(p.t['755t4u'])
     },
     {
         duration: void 0,
-        label: () => p.intl.string(p.t['46dqJS'])
+        label: () => p.NW.string(p.t['46dqJS'])
     }
 ];
-function f(e) {
-    let { status: t, currentStatus: n, description: l, defaultClickExpire: a } = e,
-        s = (0, i.jsx)(i.Fragment, {
-            children: _.map((e) => {
-                let { duration: l, label: a } = e;
-                return (0, i.jsx)(
-                    r.sNh,
+function b(e) {
+    let { status: t, currentStatus: n, description: i, defaultClickExpire: a } = e,
+        l = (0, r.jsx)(r.Fragment, {
+            children: f.map((e) => {
+                let { duration: i, label: a } = e;
+                return (0, r.jsx)(
+                    s.sNh,
                     {
-                        id: ''.concat(t, '-').concat(l),
+                        id: ''.concat(t, '-').concat(i),
                         label: a(),
-                        action: () => (0, h.Z)(t, n, void 0, l),
+                        action: () => (0, m.Z)(t, n, void 0, i),
                         dontCloseOnAction: !0
                     },
-                    l
+                    i
                 );
             })
         });
-    return (0, i.jsx)(r.sNh, {
+    return (0, r.jsx)(s.sNh, {
         id: t,
-        className: g.expiringStatusMenuItem,
+        className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: !0,
         label: (e) => {
             let { isFocused: n } = e;
-            return (0, i.jsxs)('div', {
-                className: g.statusItem,
+            return (0, r.jsxs)('div', {
+                className: h.statusItem,
                 children: [
-                    (0, i.jsx)(r.qbd, {
+                    (0, r.jsx)(s.qbd, {
                         status: t,
-                        className: g.icon,
+                        className: h.icon,
                         size: 10,
                         color: n ? 'currentColor' : void 0
                     }),
-                    (0, i.jsx)('div', {
-                        className: g.status,
+                    (0, r.jsx)('div', {
+                        className: h.status,
                         children: (0, u.u5)(t)
                     }),
-                    null != l &&
-                        (0, i.jsx)('div', {
-                            className: g.description,
-                            children: l
+                    null != i &&
+                        (0, r.jsx)('div', {
+                            className: h.description,
+                            children: i
                         })
                 ]
             });
         },
-        action: () => (0, h.Z)(t, n, void 0, a ? c.Z.Millis.DAY : void 0),
+        action: () => (0, m.Z)(t, n, void 0, a ? d.Z.Millis.DAY : void 0),
         dontCloseOnAction: !0,
-        children: t !== m.Skl.ONLINE ? s : void 0
+        children: t !== g.Skl.ONLINE ? l : void 0
     });
 }
-function E(e, t, n) {
-    return (0, i.jsx)(r.sNh, {
+function N(e, t, n) {
+    return (0, r.jsx)(s.sNh, {
         id: e,
         keepItemStyles: !0,
         render: (t) => {
-            let { isFocused: l } = t;
-            return (0, i.jsxs)('div', {
-                className: g.statusItem,
+            let { isFocused: i } = t;
+            return (0, r.jsxs)('div', {
+                className: h.statusItem,
                 children: [
-                    (0, i.jsx)(r.qbd, {
+                    (0, r.jsx)(s.qbd, {
                         status: e,
-                        className: g.icon,
+                        className: h.icon,
                         size: 10,
-                        color: l ? 'currentColor' : void 0
+                        color: i ? 'currentColor' : void 0
                     }),
-                    (0, i.jsx)('div', {
-                        className: g.status,
+                    (0, r.jsx)('div', {
+                        className: h.status,
                         children: (0, u.u5)(e)
                     }),
                     null != n &&
-                        (0, i.jsx)('div', {
-                            className: g.description,
+                        (0, r.jsx)('div', {
+                            className: h.description,
                             children: n
                         })
                 ]
             });
         },
-        action: () => (0, h.Z)(e, t),
+        action: () => (0, m.Z)(e, t),
         dontCloseOnAction: !0
     });
 }
-function I(e) {
+function x(e) {
     let { expiringStatus: t, defaultClickExpire: n } = a.i.useExperiment({ location: 'AccountProfilePopout' }),
-        c = d.Cr.useSetting(),
-        u = (0, s.p)(),
-        h = o.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || u,
-        I = d.fv.useSetting(),
-        C = e === m.Skl.DND,
-        N = (t) => {
+        d = c.Cr.useSetting(),
+        u = (0, l.p)(),
+        m = o.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || u,
+        x = c.fv.useSetting(),
+        _ = e === g.Skl.DND,
+        E = (t) => {
             let n =
-                null != c && '0' !== c
-                    ? p.intl.formatToPlainString(p.t.BWD8fn, {
-                          endTime: new Date(Number(c)).toLocaleString(p.intl.currentLocale, {
+                null != d && '0' !== d
+                    ? p.NW.formatToPlainString(p.t.BWD8fn, {
+                          endTime: new Date(Number(d)).toLocaleString(p.NW.currentLocale, {
                               month: 'numeric',
                               day: 'numeric',
                               hour: 'numeric',
@@ -141,24 +141,24 @@ function I(e) {
                     : void 0;
             if (e === t && null != n) return n;
             switch (t) {
-                case m.Skl.DND:
-                    return h ? p.intl.string(p.t.day5Aw) : p.intl.string(p.t.U9Vv19);
-                case m.Skl.INVISIBLE:
-                    return p.intl.string(p.t.MqanVF);
+                case g.Skl.DND:
+                    return m ? p.NW.string(p.t.day5Aw) : p.NW.string(p.t.U9Vv19);
+                case g.Skl.INVISIBLE:
+                    return p.NW.string(p.t.MqanVF);
                 default:
                     return;
             }
         },
-        v = (0, i.jsx)(i.Fragment, {
-            children: _.map((t) => {
-                let { duration: n, label: l } = t;
-                return (0, i.jsx)(
-                    r.sNh,
+        j = (0, r.jsx)(r.Fragment, {
+            children: f.map((t) => {
+                let { duration: n, label: i } = t;
+                return (0, r.jsx)(
+                    s.sNh,
                     {
                         id: ''.concat(e, '-').concat(n),
-                        label: l(),
+                        label: i(),
                         action: () => {
-                            (0, s.oW)(!0, n);
+                            (0, l.oW)(!0, n);
                         },
                         dontCloseOnAction: !0
                     },
@@ -166,85 +166,85 @@ function I(e) {
                 );
             })
         });
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            E(m.Skl.ONLINE, e),
-            (0, i.jsx)(r.Clw, {}, 'menu-separator-statuses'),
+            N(g.Skl.ONLINE, e),
+            (0, r.jsx)(s.Clw, {}, 'menu-separator-statuses'),
             t
-                ? f({
-                      status: m.Skl.IDLE,
+                ? b({
+                      status: g.Skl.IDLE,
                       currentStatus: e,
-                      description: N(m.Skl.IDLE),
+                      description: E(g.Skl.IDLE),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.IDLE, e, N(m.Skl.IDLE)),
+                : N(g.Skl.IDLE, e, E(g.Skl.IDLE)),
             t
-                ? f({
-                      status: m.Skl.DND,
+                ? b({
+                      status: g.Skl.DND,
                       currentStatus: e,
-                      description: N(m.Skl.DND),
+                      description: E(g.Skl.DND),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.DND, e, N(m.Skl.DND)),
+                : N(g.Skl.DND, e, E(g.Skl.DND)),
             t
-                ? f({
-                      status: m.Skl.INVISIBLE,
+                ? b({
+                      status: g.Skl.INVISIBLE,
                       currentStatus: e,
-                      description: N(m.Skl.INVISIBLE),
+                      description: E(g.Skl.INVISIBLE),
                       defaultClickExpire: n
                   })
-                : E(m.Skl.INVISIBLE, e, N(m.Skl.INVISIBLE)),
-            h || u
-                ? (0, i.jsxs)(i.Fragment, {
+                : N(g.Skl.INVISIBLE, e, E(g.Skl.INVISIBLE)),
+            m || u
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsx)(r.Clw, {}, 'menu-separator-statuses'),
-                          (0, i.jsx)(
-                              r.sNh,
+                          (0, r.jsx)(s.Clw, {}, 'menu-separator-statuses'),
+                          (0, r.jsx)(
+                              s.sNh,
                               {
                                   id: 'quiet-mode',
                                   'aria-label': 'focus mode',
-                                  className: g.expiringStatusMenuItem,
+                                  className: h.expiringStatusMenuItem,
                                   keepItemStyles: !0,
                                   hasSubmenu: !0,
                                   label: () =>
-                                      (0, i.jsxs)('div', {
-                                          className: g.statusItem,
+                                      (0, r.jsxs)('div', {
+                                          className: h.statusItem,
                                           children: [
-                                              (0, i.jsx)(r.owu, {
+                                              (0, r.jsx)(s.owu, {
                                                   size: 'xxs',
-                                                  className: g.icon
+                                                  className: h.icon
                                               }),
-                                              (0, i.jsxs)('div', {
-                                                  className: g.focusModeTitle,
+                                              (0, r.jsxs)('div', {
+                                                  className: h.focusModeTitle,
                                                   children: [
-                                                      p.intl.string(p.t.gJRnwM),
-                                                      (0, i.jsx)(r.IGR, {
-                                                          text: u ? p.intl.string(p.t.ApAu9f) : C ? p.intl.string(p.t.gH3Fra) : p.intl.string(p.t['64pl8/']),
-                                                          color: u ? l.Z.BRAND_500 : C ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                      p.NW.string(p.t.gJRnwM),
+                                                      (0, r.jsx)(s.IGR, {
+                                                          text: u ? p.NW.string(p.t.ApAu9f) : _ ? p.NW.string(p.t.gH3Fra) : p.NW.string(p.t['64pl8/']),
+                                                          color: u ? i.Z.BRAND_500 : _ ? i.Z.RED_400 : i.Z.PRIMARY_500
                                                       })
                                                   ]
                                               }),
-                                              (0, i.jsx)('div', {
-                                                  className: g.description,
+                                              (0, r.jsx)('div', {
+                                                  className: h.description,
                                                   children:
-                                                      u && null != I && '0' !== I
-                                                          ? p.intl.formatToPlainString(p.t.BWD8fn, {
-                                                                endTime: new Date(Number(I)).toLocaleString(p.intl.currentLocale, {
+                                                      u && null != x && '0' !== x
+                                                          ? p.NW.formatToPlainString(p.t.BWD8fn, {
+                                                                endTime: new Date(Number(x)).toLocaleString(p.NW.currentLocale, {
                                                                     month: 'numeric',
                                                                     day: 'numeric',
                                                                     hour: 'numeric',
                                                                     minute: '2-digit'
                                                                 })
                                                             })
-                                                          : p.intl.string(p.t['Br1q+/'])
+                                                          : p.NW.string(p.t['Br1q+/'])
                                               })
                                           ]
                                       }),
                                   action: () => {
-                                      (0, s.oW)(!u);
+                                      (0, l.oW)(!u);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: v
+                                  children: j
                               },
                               'quiet-mode'
                           )

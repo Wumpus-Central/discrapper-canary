@@ -1,13 +1,13 @@
-n.d(t, { Z: () => h });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(358085),
     c = n(998502),
     d = n(388032),
-    u = n(483938);
+    u = n(455812);
 function m(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends s.PureComponent {
+class g extends i.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -31,39 +31,39 @@ class g extends s.PureComponent {
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            s = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
-        return (0, i.jsxs)(a.hjN, {
-            tag: a.RB0.H1,
-            title: s,
+            i = (0, o.isLinux)() ? d.NW.string(d.t['7pPjTU']) : d.NW.string(d.t.ZkDZoq);
+        return (0, r.jsxs)(l.hjN, {
+            tag: l.RB0.H1,
+            title: i,
             children: [
-                (0, i.jsx)(a.vwX, { children: d.intl.string(d.t['w/vU5u']) }),
-                (0, i.jsx)(a.j7V, {
+                (0, r.jsx)(l.vwX, { children: d.NW.string(d.t['w/vU5u']) }),
+                (0, r.jsx)(l.j7V, {
                     className: u.marginBottom20,
                     value: e,
-                    note: d.intl.string(d.t['s/cQra']),
+                    note: d.NW.string(d.t['s/cQra']),
                     onChange: this.handleToggleOpenOnStartup,
-                    children: d.intl.string(d.t.WQm4p6)
+                    children: d.NW.string(d.t.WQm4p6)
                 }),
                 (0, o.isWindows)()
-                    ? (0, i.jsx)(a.j7V, {
+                    ? (0, r.jsx)(l.j7V, {
                           disabled: !e,
-                          className: l()(u.marginTop8, u.marginBottom20),
+                          className: a()(u.marginTop8, u.marginBottom20),
                           value: !!e && t,
-                          note: d.intl.string(d.t.o2FSjI),
+                          note: d.NW.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
-                          children: d.intl.string(d.t.n7Yjen)
+                          children: d.NW.string(d.t.n7Yjen)
                       })
                     : null,
-                (0, i.jsx)(a.vwX, {
-                    className: l()(u.marginTop20, u.marginBottom8),
-                    children: d.intl.string(d.t.h0hFx8)
+                (0, r.jsx)(l.vwX, {
+                    className: a()(u.marginTop20, u.marginBottom8),
+                    children: d.NW.string(d.t.h0hFx8)
                 }),
-                (0, i.jsx)(a.j7V, {
+                (0, r.jsx)(l.j7V, {
                     className: u.marginBottom20,
                     value: n,
-                    note: d.intl.string(d.t['mVuX+v']),
+                    note: d.NW.string(d.t['mVuX+v']),
                     onChange: this.handleToggleMinimizeToTray,
-                    children: d.intl.string(d.t.abLFen)
+                    children: d.NW.string(d.t.abLFen)
                 })
             ]
         });
@@ -89,4 +89,4 @@ class g extends s.PureComponent {
             });
     }
 }
-let h = g;
+let p = g;

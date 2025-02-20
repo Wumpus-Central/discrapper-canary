@@ -1,17 +1,17 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(723184),
-    a = n(820611),
-    s = n(877837);
-let o = function (e) {
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(723184),
+    o = n(820611),
+    a = n(877837);
+let s = function (e) {
     var t = e.onChange,
         n = e.rgb,
-        o = e.hsl,
+        s = e.hsl,
         l = e.hex,
-        u = e.hsv,
-        c = function (e, n) {
+        c = e.hsv,
+        u = function (e, n) {
             if (e.hex)
-                a.FX(e.hex) &&
+                o.FX(e.hex) &&
                     t(
                         {
                             hex: e.hex,
@@ -20,53 +20,53 @@ let o = function (e) {
                         n
                     );
             else if (e.rgb) {
-                var i = e.rgb.split(',');
-                a.p7(e.rgb, 'rgb') &&
+                var r = e.rgb.split(',');
+                o.p7(e.rgb, 'rgb') &&
                     t(
                         {
-                            r: i[0],
-                            g: i[1],
-                            b: i[2],
+                            r: r[0],
+                            g: r[1],
+                            b: r[2],
                             a: 1,
                             source: 'rgb'
                         },
                         n
                     );
             } else if (e.hsv) {
-                var r = e.hsv.split(',');
-                a.p7(e.hsv, 'hsv') &&
-                    ((r[2] = r[2].replace('%', '')),
-                    (r[1] = r[1].replace('%', '')),
-                    (r[0] = r[0].replace('\xB0', '')),
-                    1 == r[1] ? (r[1] = 0.01) : 1 == r[2] && (r[2] = 0.01),
+                var i = e.hsv.split(',');
+                o.p7(e.hsv, 'hsv') &&
+                    ((i[2] = i[2].replace('%', '')),
+                    (i[1] = i[1].replace('%', '')),
+                    (i[0] = i[0].replace('\xB0', '')),
+                    1 == i[1] ? (i[1] = 0.01) : 1 == i[2] && (i[2] = 0.01),
                     t(
                         {
-                            h: Number(r[0]),
-                            s: Number(r[1]),
-                            v: Number(r[2]),
+                            h: Number(i[0]),
+                            s: Number(i[1]),
+                            v: Number(i[2]),
                             source: 'hsv'
                         },
                         n
                     ));
             } else if (e.hsl) {
-                var s = e.hsl.split(',');
-                a.p7(e.hsl, 'hsl') &&
-                    ((s[2] = s[2].replace('%', '')),
-                    (s[1] = s[1].replace('%', '')),
-                    (s[0] = s[0].replace('\xB0', '')),
-                    1 == p[1] ? (p[1] = 0.01) : 1 == p[2] && (p[2] = 0.01),
+                var a = e.hsl.split(',');
+                o.p7(e.hsl, 'hsl') &&
+                    ((a[2] = a[2].replace('%', '')),
+                    (a[1] = a[1].replace('%', '')),
+                    (a[0] = a[0].replace('\xB0', '')),
+                    1 == _[1] ? (_[1] = 0.01) : 1 == _[2] && (_[2] = 0.01),
                     t(
                         {
-                            h: Number(s[0]),
-                            s: Number(s[1]),
-                            v: Number(s[2]),
+                            h: Number(a[0]),
+                            s: Number(a[1]),
+                            v: Number(a[2]),
                             source: 'hsl'
                         },
                         n
                     ));
             }
         },
-        d = (0, r.default)({
+        d = (0, i.default)({
             default: {
                 wrap: {
                     display: 'flex',
@@ -142,70 +142,70 @@ let o = function (e) {
             }
         }),
         f = n.r + ', ' + n.g + ', ' + n.b,
-        _ = Math.round(o.h) + '\xB0, ' + Math.round(100 * o.s) + '%, ' + Math.round(100 * o.l) + '%',
-        p = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
-    return i.createElement(
+        p = Math.round(s.h) + '\xB0, ' + Math.round(100 * s.s) + '%, ' + Math.round(100 * s.l) + '%',
+        _ = Math.round(c.h) + '\xB0, ' + Math.round(100 * c.s) + '%, ' + Math.round(100 * c.v) + '%';
+    return r.createElement(
         'div',
         {
             style: d.wrap,
             className: 'flexbox-fix'
         },
-        i.createElement(
+        r.createElement(
             'div',
             { style: d.fields },
-            i.createElement(
+            r.createElement(
                 'div',
                 { style: d.double },
-                i.createElement(s.Vm, {
+                r.createElement(a.Vm, {
                     style: {
                         input: d.input,
                         label: d.label
                     },
                     label: 'hex',
                     value: l,
-                    onChange: c
+                    onChange: u
                 })
             ),
-            i.createElement(
+            r.createElement(
                 'div',
                 { style: d.column },
-                i.createElement(
+                r.createElement(
                     'div',
                     { style: d.single },
-                    i.createElement(s.Vm, {
+                    r.createElement(a.Vm, {
                         style: {
                             input: d.input2,
                             label: d.label2
                         },
                         label: 'rgb',
                         value: f,
-                        onChange: c
+                        onChange: u
                     })
                 ),
-                i.createElement(
+                r.createElement(
                     'div',
                     { style: d.single },
-                    i.createElement(s.Vm, {
+                    r.createElement(a.Vm, {
                         style: {
                             input: d.input2,
                             label: d.label2
                         },
                         label: 'hsv',
-                        value: p,
-                        onChange: c
+                        value: _,
+                        onChange: u
                     })
                 ),
-                i.createElement(
+                r.createElement(
                     'div',
                     { style: d.single },
-                    i.createElement(s.Vm, {
+                    r.createElement(a.Vm, {
                         style: {
                             input: d.input2,
                             label: d.label2
                         },
                         label: 'hsl',
-                        value: _,
-                        onChange: c
+                        value: p,
+                        onChange: u
                     })
                 )
             )

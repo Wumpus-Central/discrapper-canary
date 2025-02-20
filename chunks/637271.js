@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h });
-var i,
-    l = n(442837),
-    a = n(570140),
-    r = n(592125),
-    s = n(176505);
-function o(e, t, n) {
+n.d(t, { Z: () => p });
+var r,
+    i = n(442837),
+    l = n(570140),
+    o = n(592125),
+    a = n(176505);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,8 +18,8 @@ function o(e, t, n) {
     );
 }
 let c = {},
-    d = {};
-class u extends (i = l.ZP.PersistedStore) {
+    u = {};
+class d extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         c = null !== (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) && void 0 !== t ? t : {};
@@ -32,25 +32,25 @@ class u extends (i = l.ZP.PersistedStore) {
     }
     getHomeNavigationChannelId(e) {
         var t;
-        return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : d[e];
+        return null == e ? null : null !== (t = c[e]) && void 0 !== t ? t : u[e];
     }
 }
-o(u, 'displayName', 'GuildOnboardingHomeNavigationStore'), o(u, 'persistKey', 'GuildOnboardingHomeNavigationStore');
-let h = new u(a.Z, {
+s(d, 'displayName', 'GuildOnboardingHomeNavigationStore'), s(d, 'persistKey', 'GuildOnboardingHomeNavigationStore');
+let p = new d(l.Z, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e;
-        if (null == n || t === s.oC.GUILD_HOME) return;
-        let i = r.Z.getChannel(t),
-            l = c[n],
-            a = d[n];
-        !((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [a, l].includes(null == i ? void 0 : i.parent_id)) && (t !== l && delete c[n], t !== a && delete d[n]);
+        if (null == n || t === a.oC.GUILD_HOME) return;
+        let r = o.Z.getChannel(t),
+            i = c[n],
+            l = u[n];
+        !((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [l, i].includes(null == r ? void 0 : r.parent_id)) && (t !== i && delete c[n], t !== l && delete u[n]);
     },
     SELECT_HOME_RESOURCE_CHANNEL: function (e) {
         let { channelId: t, guildId: n } = e;
-        null == t ? delete d[n] : (c[n] = t), delete d[n];
+        null == t ? delete u[n] : (c[n] = t), delete u[n];
     },
     SELECT_NEW_MEMBER_ACTION_CHANNEL: function (e) {
         let { channelId: t, guildId: n } = e;
-        delete c[n], (d[n] = t);
+        delete c[n], (u[n] = t);
     }
 });

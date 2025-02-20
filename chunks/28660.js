@@ -1,27 +1,27 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(192379),
-    r = n(695346),
-    a = n(768581);
-function s(e) {
-    let { displayProfile: t, size: n, canAnimate: s, pendingBanner: o } = e,
-        l = r.QK.getSetting(),
-        u = null == t ? void 0 : t.getPreviewBanner(o, s, n),
-        [c, d] = (0, i.useState)((null == t ? void 0 : t.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
+n.d(t, { Z: () => a }), n(47120);
+var r = n(192379),
+    i = n(695346),
+    o = n(768581);
+function a(e) {
+    let { displayProfile: t, size: n, canAnimate: a, pendingBanner: s } = e,
+        l = i.QK.getSetting(),
+        c = null == t ? void 0 : t.getPreviewBanner(s, a, n),
+        [u, d] = (0, r.useState)((null == t ? void 0 : t.banner) == null ? 'COMPLETE' : 'SHOULD_LOAD');
     return (
-        (0, i.useEffect)(() => {
-            if (null == u || 'SHOULD_LOAD' !== c) return;
+        (0, r.useEffect)(() => {
+            if (null == c || 'SHOULD_LOAD' !== u) return;
             d('LOADING');
             let e = new Image();
-            (e.src = u), (e.onload = () => d('COMPLETE'));
-        }, [u, c]),
-        (0, i.useEffect)(() => {
+            (e.src = c), (e.onload = () => d('COMPLETE'));
+        }, [c, u]),
+        (0, r.useEffect)(() => {
             if (l) return;
-            let e = null == t ? void 0 : t.getPreviewBanner(o, !0, n);
-            null != e && (0, a.F8)(e) && (new Image().src = e);
-        }, [l, t, n, o]),
+            let e = null == t ? void 0 : t.getPreviewBanner(s, !0, n);
+            null != e && (0, o.F8)(e) && (new Image().src = e);
+        }, [l, t, n, s]),
         {
-            bannerSrc: u,
-            status: c
+            bannerSrc: c,
+            status: u
         }
     );
 }

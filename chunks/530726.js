@@ -1,4 +1,4 @@
-r.d(t, { Z: () => W }), r(47120), r(773603);
+r.d(t, { Z: () => B }), r(47120), r(773603);
 var n = r(200651),
     a = r(192379),
     i = r(442837),
@@ -12,8 +12,8 @@ var n = r(200651),
     _ = r(65361),
     f = r(910200),
     x = r(166184),
-    p = r(314897),
-    b = r(650774),
+    b = r(314897),
+    p = r(650774),
     g = r(271383),
     h = r(594174),
     v = r(626135),
@@ -122,7 +122,7 @@ let T = (e) => {
             disableVerification: s
         });
     },
-    A = (e) => {
+    W = (e) => {
         let { guildId: t, headerId: r, formState: a, updateFormState: i, guildName: l, hasManualFormFields: s, disableVerification: c, isPreview: d = !1 } = e;
         return (0, n.jsxs)('div', {
             className: F.content,
@@ -148,13 +148,13 @@ let T = (e) => {
             ]
         });
     },
-    W = (e) => {
+    B = (e) => {
         var t, r, l, O;
-        let { verificationForm: P, headerId: k, guildId: M, onClose: W, onComplete: B, isPreview: q = !1 } = e,
+        let { verificationForm: P, headerId: k, guildId: M, onClose: B, onComplete: A, isPreview: q = !1 } = e,
             L = (0, y.N0)(M, null == P ? void 0 : P.guild, q),
             { guildProfile: G, fetchGuildProfile: D } = (0, _.u)(M),
             z = (0, m.h)(),
-            Z = (0, i.e7)([g.ZP, p.default], () => g.ZP.isMember(M, p.default.getId())),
+            Z = (0, i.e7)([g.ZP, b.default], () => g.ZP.isMember(M, b.default.getId())),
             [J, K] = a.useState(!1);
         a.useEffect(() => {
             z && Z && !J && null == G && D().finally(() => K(!0));
@@ -167,9 +167,9 @@ let T = (e) => {
             [er, en] = a.useState(''),
             [ea, ei] = a.useState(null),
             [eo, el] = a.useState(null),
-            { storeMemberCount: es, storeOnlineCount: ec } = (0, i.cj)([b.Z], () => ({
-                storeMemberCount: b.Z.getMemberCount(M),
-                storeOnlineCount: b.Z.getOnlineCount(M)
+            { storeMemberCount: es, storeOnlineCount: ec } = (0, i.cj)([p.Z], () => ({
+                storeMemberCount: p.Z.getMemberCount(M),
+                storeOnlineCount: p.Z.getOnlineCount(M)
             })),
             ed = null != ec ? ec : null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_presence_count,
             eu = null != es ? es : null == P ? void 0 : null === (r = P.guild) || void 0 === r ? void 0 : r.approximate_member_count,
@@ -187,8 +187,8 @@ let T = (e) => {
         let e_ = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
             { currentStep: ef, setCurrentStep: ex } = (0, y.k3)(e_, em);
         (0, y.lk)(H);
-        let ep = null == e_ ? void 0 : e_.verified,
-            eb = null == e_ ? void 0 : e_.isPhoneVerified(),
+        let eb = null == e_ ? void 0 : e_.verified,
+            ep = null == e_ ? void 0 : e_.isPhoneVerified(),
             { invalidFormFields: eg, hasInvalidTermsFormField: eh } = a.useMemo(
                 () => ({
                     invalidFormFields: H.some((e) => !(0, j.OA)(e)),
@@ -197,20 +197,20 @@ let T = (e) => {
                 [H]
             ),
             ev = a.useMemo(() => {
-                if (null == B || eg) return !0;
+                if (null == A || eg) return !0;
                 if (em || (null == e_ ? void 0 : e_.isStaff())) return !1;
                 switch (null == L ? void 0 : L.verificationLevel) {
                     case w.sFg.VERY_HIGH:
-                        return !eb;
+                        return !ep;
                     case w.sFg.LOW:
                     case w.sFg.MEDIUM:
                     case w.sFg.HIGH:
-                        return !ep && !eb;
+                        return !eb && !ep;
                     case w.sFg.NONE:
                     default:
                         return !1;
                 }
-            }, [B, eg, em, e_, null == L ? void 0 : L.verificationLevel, eb, ep]),
+            }, [A, eg, em, e_, null == L ? void 0 : L.verificationLevel, ep, eb]),
             eC = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
             eI = a.useRef(null),
             eN = (function (e) {
@@ -253,13 +253,13 @@ let T = (e) => {
                 Q(!0), $(null);
                 let a = null != e_ ? g.ZP.getMember(M, e_.id) : null;
                 if (null != a && !a.isPending) {
-                    null == W || W(!0);
+                    null == B || B(!0);
                     return;
                 }
                 try {
-                    await (null == B
+                    await (null == A
                         ? void 0
-                        : B(
+                        : A(
                               ((e = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
@@ -301,7 +301,7 @@ let T = (e) => {
                                     }),
                               e)
                           )),
-                        null == W || W(!0);
+                        null == B || B(!0);
                 } catch (t) {
                     let e = null == t ? void 0 : t.body;
                     (null == e ? void 0 : null === (r = e.errors) || void 0 === r ? void 0 : r.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? $(E.NW.string(E.t.PD09Sk)) : $(null == e ? void 0 : e.message);
@@ -368,7 +368,7 @@ let T = (e) => {
                                                     email: ee
                                                 });
                                             case y.KJ.VERIFICATION_FORM:
-                                                return (0, n.jsx)(A, {
+                                                return (0, n.jsx)(W, {
                                                     headerId: k,
                                                     guildId: M,
                                                     guildName: L.name,

@@ -1,30 +1,30 @@
 n.d(t, {
-    B: () => r,
-    W: () => s
+    B: () => o,
+    W: () => l
 });
-var i = n(544891),
-    l = n(881052),
+var r = n(544891),
+    i = n(881052),
     a = n(981631);
-async function r(e) {
-    let { channelId: t, messageId: n, answerIds: r } = e;
+async function o(e) {
+    let { channelId: t, messageId: n, answerIds: o } = e;
     try {
-        await i.tn.put({
+        await r.tn.put({
             url: a.ANM.POLL_ANSWERS(t, n),
-            body: { answer_ids: r },
+            body: { answer_ids: o },
             rejectWithError: !1
         });
     } catch (e) {
-        throw new l.Hx(e);
+        throw new i.Hx(e);
     }
 }
-async function s(e) {
+async function l(e) {
     let { channelId: t, messageId: n } = e;
     try {
-        await i.tn.post({
+        await r.tn.post({
             url: a.ANM.POLL_EXPIRE(t, n),
             rejectWithError: !1
         });
     } catch (e) {
-        throw new l.Hx(e);
+        throw new i.Hx(e);
     }
 }

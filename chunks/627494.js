@@ -1,26 +1,26 @@
-var i = n(147018),
-    r = n(926515),
-    a = n(581031),
-    s = n(676125),
-    o = n(354848),
+var r = n(147018),
+    i = n(926515),
+    o = n(581031),
+    a = n(676125),
+    s = n(354848),
     l = n(35179),
-    u = n(155763),
-    c = n(714050),
+    c = n(155763),
+    u = n(714050),
     d = n(995739),
     f = n(87046),
-    _ = n(115726),
-    p = n(641236),
+    p = n(115726),
+    _ = n(641236),
     h = n(992051),
-    m = p('replace'),
+    m = _('replace'),
     g = TypeError,
-    E = a(''.indexOf),
-    v = a(''.replace),
-    y = a(''.slice),
-    I = Math.max,
-    T = function (e, t, n) {
+    E = o(''.indexOf),
+    v = o(''.replace),
+    b = o(''.slice),
+    y = Math.max,
+    O = function (e, t, n) {
         return n > e.length ? -1 : '' === t ? n : E(e, t, n);
     };
-i(
+r(
     {
         target: 'String',
         proto: !0
@@ -28,24 +28,24 @@ i(
     {
         replaceAll: function (e, t) {
             var n,
-                i,
-                a,
-                p,
-                b,
+                r,
+                o,
+                _,
                 S,
-                A,
+                I,
+                T,
                 N,
-                C = s(this),
+                A = a(this),
+                C = 0,
                 R = 0,
-                O = 0,
-                D = '';
+                P = '';
             if (!l(e)) {
-                if ((n = u(e)) && !~E(c(s(f(e))), 'g')) throw g('`.replaceAll` does not allow non-global regexes');
-                if ((i = d(e, m))) return r(i, e, C, t);
-                if (h && n) return v(c(C), e, t);
+                if ((n = c(e)) && !~E(u(a(f(e))), 'g')) throw g('`.replaceAll` does not allow non-global regexes');
+                if ((r = d(e, m))) return i(r, e, A, t);
+                if (h && n) return v(u(A), e, t);
             }
-            for (a = c(C), p = c(e), (b = o(t)) || (t = c(t)), A = I(1, (S = p.length)), R = T(a, p, 0); -1 !== R; ) (N = b ? c(t(p, R, a)) : _(p, a, R, [], void 0, t)), (D += y(a, O, R) + N), (O = R + S), (R = T(a, p, R + A));
-            return O < a.length && (D += y(a, O)), D;
+            for (o = u(A), _ = u(e), (S = s(t)) || (t = u(t)), T = y(1, (I = _.length)), C = O(o, _, 0); -1 !== C; ) (N = S ? u(t(_, C, o)) : p(_, o, C, [], void 0, t)), (P += b(o, R, C) + N), (R = C + I), (C = O(o, _, C + T));
+            return R < o.length && (P += b(o, R)), P;
         }
     }
 );

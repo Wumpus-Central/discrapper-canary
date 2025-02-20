@@ -1,10 +1,10 @@
-n.d(t, { e: () => l });
-var i = n(388032);
-function l(e) {
-    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: l, isGuest: a, isStage: r, isStream: s } = e;
+n.d(t, { e: () => i });
+var r = n(388032);
+function i(e) {
+    let { isVoiceChannel: t, isHubGuild: n, isOwnInvite: i, isGuest: a, isStage: o, isStream: l } = e;
     if (t) {
-        if (l) return s ? i.intl.string(i.t.N85DCg) : r ? i.intl.string(i.t.TJQcNj) : a ? i.intl.string(i.t.mJyBio) : i.intl.string(i.t.lxTgPz);
-        return s ? i.intl.string(i.t.Mnvc3N) : r ? i.intl.string(i.t.FdPNr6) : a ? i.intl.string(i.t.f4gmra) : i.intl.string(i.t.H39rER);
+        if (i) return l ? r.NW.string(r.t.N85DCg) : o ? r.NW.string(r.t.TJQcNj) : a ? r.NW.string(r.t.mJyBio) : r.NW.string(r.t.lxTgPz);
+        return l ? r.NW.string(r.t.Mnvc3N) : o ? r.NW.string(r.t.FdPNr6) : a ? r.NW.string(r.t.f4gmra) : r.NW.string(r.t.H39rER);
     }
-    return n ? (l ? i.intl.string(i.t.UxmnHx) : i.intl.string(i.t.sigPER)) : l ? i.intl.string(i.t['oU/lsr']) : i.intl.string(i.t.BoQUFR);
+    return n ? (i ? r.NW.string(r.t.UxmnHx) : r.NW.string(r.t.sigPER)) : i ? r.NW.string(r.t['oU/lsr']) : r.NW.string(r.t.BoQUFR);
 }

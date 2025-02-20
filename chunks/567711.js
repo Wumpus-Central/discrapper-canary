@@ -1,32 +1,32 @@
-n.d(t, { Z: () => g });
-var l = n(200651);
+n.d(t, { Z: () => E });
+var r = n(200651);
 n(192379);
-var i = n(442837),
-    r = n(481060),
+var l = n(442837),
+    i = n(481060),
     a = n(313889),
     o = n(825829),
     u = n(36459),
-    d = n(592125),
-    s = n(375954),
-    c = n(496675),
-    E = n(981631),
-    _ = n(388032);
-function g(e, t) {
-    let n = (0, i.e7)([c.Z], () => null != e && c.Z.canWithPartialContext(E.Plq.MANAGE_MESSAGES, { channelId: e }), [e]),
-        g = (0, i.e7)([d.Z], () => d.Z.getChannel(e), [e]),
-        f = (0, i.e7)([s.Z], () => (null != e && null != t ? s.Z.getMessage(e, t) : null)),
-        M = (0, o.NK)(null != f ? f : null);
-    if (null == g || null == f) return null;
-    let A = null != M && M.actions.hasOwnProperty(a.d.SET_COMPLETED) ? a.d.UNSET_COMPLETED : a.d.SET_COMPLETED,
-        Z = A === a.d.SET_COMPLETED ? _.intl.string(_.t.VWNyUl) : _.intl.string(_.t.l9GqxM);
+    c = n(592125),
+    d = n(375954),
+    s = n(496675),
+    f = n(981631),
+    O = n(388032);
+function E(e, t) {
+    let n = (0, l.e7)([s.Z], () => null != e && s.Z.canWithPartialContext(f.Plq.MANAGE_MESSAGES, { channelId: e }), [e]),
+        E = (0, l.e7)([c.Z], () => c.Z.getChannel(e), [e]),
+        g = (0, l.e7)([d.Z], () => (null != e && null != t ? d.Z.getMessage(e, t) : null)),
+        b = (0, o.NK)(null != g ? g : null);
+    if (null == E || null == g) return null;
+    let y = null != b && b.actions.hasOwnProperty(a.d.SET_COMPLETED) ? a.d.UNSET_COMPLETED : a.d.SET_COMPLETED,
+        _ = y === a.d.SET_COMPLETED ? O.NW.string(O.t.VWNyUl) : O.NW.string(O.t.l9GqxM);
     return n && null != t
-        ? (0, l.jsx)(
-              r.sNh,
+        ? (0, r.jsx)(
+              i.sNh,
               {
                   id: 'mark-automod-alert-completed',
-                  label: Z,
+                  label: _,
                   action: () => {
-                      (0, u.Xx)(t, g, A);
+                      (0, u.Xx)(t, E, y);
                   }
               },
               'mark-automod-alert-completed'

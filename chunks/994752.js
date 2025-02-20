@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(664674);
-function o(e, t, n) {
+n.d(t, { Z: () => p }), n(47120);
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(664674);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,38 +17,38 @@ function o(e, t, n) {
     );
 }
 let l = !1,
-    u = new Map();
-function c(e) {
+    c = new Map();
+function u(e) {
     let { leaderboardResponse: t, intervalOffset: n } = e,
-        { leaderboard: i } = t,
-        { guild_id: r, leaderboard_id: a } = i,
-        s = u.get(n);
-    null == s && ((s = new Map()), u.set(n, s));
-    let o = s.get(r);
-    null == o && ((o = new Map()), s.set(r, o)), o.set(a, t);
+        { leaderboard: r } = t,
+        { guild_id: i, leaderboard_id: o } = r,
+        a = c.get(n);
+    null == a && ((a = new Map()), c.set(n, a));
+    let s = a.get(i);
+    null == s && ((s = new Map()), a.set(i, s)), s.set(o, t);
 }
 function d() {
-    u = new Map();
+    c = new Map();
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getLeaderboards(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return null === (t = u.get(n)) || void 0 === t ? void 0 : t.get(e);
+        return null === (t = c.get(n)) || void 0 === t ? void 0 : t.get(e);
     }
     get(e, t) {
         var n;
-        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return l ? s.Z : null === (n = this.getLeaderboardResponse(e, t, i)) || void 0 === n ? void 0 : n.leaderboard;
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return l ? a.Z : null === (n = this.getLeaderboardResponse(e, t, r)) || void 0 === n ? void 0 : n.leaderboard;
     }
     getLeaderboardResponse(e, t) {
-        var n, i;
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return null === (i = u.get(r)) || void 0 === i ? void 0 : null === (n = i.get(e)) || void 0 === n ? void 0 : n.get(t);
+        var n, r;
+        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return null === (r = c.get(i)) || void 0 === r ? void 0 : null === (n = r.get(e)) || void 0 === n ? void 0 : n.get(t);
     }
 }
-o(f, 'displayName', 'GuildLeaderboardStore');
-let _ = new f(a.Z, {
+s(f, 'displayName', 'GuildLeaderboardStore');
+let p = new f(o.Z, {
     CONNECTION_OPEN: d,
-    SET_GUILD_LEADERBOARD: c
+    SET_GUILD_LEADERBOARD: u
 });

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
-var i = n(374470);
-function l(e, t) {
+n.d(t, { Z: () => i });
+var r = n(374470);
+function i(e, t) {
     let n = e.offsetTop,
-        l = e.offsetParent;
-    for (; null != l; ) {
-        var a;
-        if (l === t || !(0, i.k)(l, HTMLElement)) break;
-        (n += null !== (a = l.offsetTop) && void 0 !== a ? a : 0), (l = l.offsetParent);
+        i = e.offsetParent;
+    for (; null != i; ) {
+        var l;
+        if (i === t || !(0, r.k)(i, HTMLElement)) break;
+        (n += null !== (l = i.offsetTop) && void 0 !== l ? l : 0), (i = i.offsetParent);
     }
     return n;
 }

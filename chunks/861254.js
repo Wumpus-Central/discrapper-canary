@@ -1,14 +1,14 @@
 n.d(t, {
-    BK: () => a,
-    ZP: () => o,
-    kX: () => s
+    BK: () => o,
+    ZP: () => s,
+    kX: () => a
 });
-var i = n(818083),
-    r = n(987338),
-    a = (function (e) {
+var r = n(818083),
+    i = n(987338),
+    o = (function (e) {
         return (e.MicPushToEnable = 'mic-push-to-enable'), (e.MicButtonMovedLeft = 'mic-button-moved-left'), (e.GroupedButtonsControlColors = 'grouped-buttons-control-colors'), (e.GroupedButtonsRedMic = 'grouped-buttons-red-mic'), e;
     })({});
-let s = (0, i.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-12_voice_call_buttons',
     label: 'Voice/Video icon states',
@@ -16,7 +16,7 @@ let s = (0, i.B)({
         mode: 'mic-push-to-enable',
         groupedButtons: !1
     },
-    commonTriggerPoint: r.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -44,6 +44,6 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
-    return s.useExperiment(e, { autoTrackExposure: !1 });
+function s(e) {
+    return a.useExperiment(e, { autoTrackExposure: !1 });
 }

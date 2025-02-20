@@ -56,8 +56,8 @@ var l = s.prototype;
         var o = t.createEmptyMovieClip(e, r);
         this.make();
         for (var n = 0; n < this.modules.length; n++)
-            for (var i = 1 * n, a = 0; a < this.modules[n].length; a++) {
-                var u = 1 * a;
+            for (var i = +n, a = 0; a < this.modules[n].length; a++) {
+                var u = +a;
                 this.modules[n][a] && (o.beginFill(0, 100), o.moveTo(u, i), o.lineTo(u + 1, i), o.lineTo(u + 1, i + 1), o.lineTo(u, i + 1), o.endFill());
             }
         return o;

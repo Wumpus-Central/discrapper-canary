@@ -1,15 +1,15 @@
 n.d(t, { Z: () => g });
-var i,
-    r,
-    l,
-    s = n(442837),
-    a = n(570140),
+var r,
+    i,
+    s,
+    a = n(442837),
+    l = n(570140),
     o = n(40572),
     c = n(914010);
 let d = {},
     u = {},
     m = 0;
-class h extends (l = s.ZP.Store) {
+class p extends (s = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -24,16 +24,16 @@ class h extends (l = s.ZP.Store) {
         return u[e];
     }
 }
-(r = 'GuildSettingsEmojiStore'),
-    (i = 'displayName') in h
-        ? Object.defineProperty(h, i, {
-              value: r,
+(i = 'GuildSettingsEmojiStore'),
+    (r = 'displayName') in p
+        ? Object.defineProperty(p, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[i] = r);
-let g = new h(a.Z, {
+        : (p[r] = i);
+let g = new p(l.Z, {
     EMOJI_DELETE: function (e) {
         let { guildId: t, emojiId: n } = e;
         u[t] = u[t].filter((e) => e.id !== n);

@@ -1,44 +1,44 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(434404),
-    r = n(962086),
-    s = n(303737),
-    o = n(981631),
+var i = n(481060),
+    l = n(434404),
+    o = n(962086),
+    a = n(303737),
+    s = n(981631),
     c = n(388032),
-    d = n(862505),
-    u = n(497224);
-function h(e) {
+    u = n(819386),
+    d = n(497224);
+function p(e) {
     let { guildId: t } = e;
-    return (0, i.jsx)('div', {
-        className: d.upsellPage,
-        children: (0, i.jsxs)('div', {
-            className: d.upsellContainer,
+    return (0, r.jsx)('div', {
+        className: u.upsellPage,
+        children: (0, r.jsxs)('div', {
+            className: u.upsellContainer,
             children: [
-                (0, i.jsx)('img', {
-                    src: u,
+                (0, r.jsx)('img', {
+                    src: d,
                     alt: ''
                 }),
-                (0, i.jsxs)('div', {
-                    className: d.upsellContent,
+                (0, r.jsxs)('div', {
+                    className: u.upsellContent,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, r.jsx)(i.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: c.intl.string(c.t['8gJGPj'])
+                            children: c.NW.string(c.t['8gJGPj'])
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-sm/normal',
-                            className: d.bodyText,
-                            children: c.intl.string(c.t.GpOWIi)
+                            className: u.bodyText,
+                            children: c.NW.string(c.t.GpOWIi)
                         }),
-                        (0, i.jsx)(l.zxk, {
-                            size: l.zxk.Sizes.MEDIUM,
+                        (0, r.jsx)(i.zxk, {
+                            size: i.zxk.Sizes.MEDIUM,
                             onClick: () => {
-                                (0, r.mL)(t), a.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, s.GN)(t);
+                                (0, o.mL)(t), l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t);
                             },
-                            className: d.__invalid_button,
-                            children: c.intl.string(c.t['I/XhUl'])
+                            className: u.__invalid_button,
+                            children: c.NW.string(c.t['I/XhUl'])
                         })
                     ]
                 })

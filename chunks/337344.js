@@ -1,44 +1,44 @@
 n.d(t, { L: () => m });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(962086),
-    s = n(225675),
-    a = n(671533),
+var i = n(481060),
+    s = n(962086),
+    a = n(225675),
+    l = n(671533),
     o = n(434404),
     c = n(981631),
     d = n(388032),
-    u = n(745801);
+    u = n(622605);
 function m(e) {
     let { guildId: t, role: n } = e;
-    return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)(r.xJW, {
-            title: d.intl.string(d.t.arFPfH),
+    return (0, r.jsx)(r.Fragment, {
+        children: (0, r.jsxs)(i.xJW, {
+            title: d.NW.string(d.t.arFPfH),
             className: u.container,
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
-                    children: d.intl.string(d.t['IT/0AA'])
+                    children: d.NW.string(d.t['IT/0AA'])
                 }),
-                (0, i.jsxs)(r.zxk, {
+                (0, r.jsxs)(i.zxk, {
                     className: u.button,
                     innerClassName: u.buttonInner,
-                    size: r.zxk.Sizes.SMALL,
-                    color: r.zxk.Colors.PRIMARY,
+                    size: i.zxk.Sizes.SMALL,
+                    color: i.zxk.Colors.PRIMARY,
                     onClick: () => {
                         o.Z.close(),
-                            (0, l.iD)(t, {
-                                type: s.z.ROLES,
+                            (0, s.iD)(t, {
+                                type: a.z.ROLES,
                                 roles: { [n.id]: n },
                                 returnToSection: c.pNK.ROLES
                             });
                     },
                     children: [
-                        d.intl.string(d.t.arFPfH),
-                        (0, i.jsx)(a.Z, {
+                        d.NW.string(d.t.arFPfH),
+                        (0, r.jsx)(l.Z, {
                             width: 16,
                             height: 16,
-                            direction: a.Z.Directions.RIGHT,
+                            direction: l.Z.Directions.RIGHT,
                             className: u.arrowIcon
                         })
                     ]

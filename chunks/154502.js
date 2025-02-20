@@ -1,39 +1,39 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => l });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(556012),
-    s = n(884081);
-function a(e) {
+var i = n(481060),
+    s = n(556012),
+    a = n(287404);
+function l(e) {
     var t;
-    let { action: n, actionType: a, triggerType: o } = e,
-        c = (0, l.c)(null !== (t = null == n ? void 0 : n.type) && void 0 !== t ? t : a, n, o);
+    let { action: n, actionType: l, triggerType: o } = e,
+        c = (0, s.c)(null !== (t = null == n ? void 0 : n.type) && void 0 !== t ? t : l, n, o);
     if (null == c) return null;
     let { headerText: d, helperText: u, icon: m } = c;
-    return (0, i.jsxs)('div', {
-        className: s.actionContainer,
+    return (0, r.jsxs)('div', {
+        className: a.actionContainer,
         children: [
-            (0, i.jsx)('div', {
-                className: s.actionIconContainer,
-                children: (0, i.jsx)(m, {
+            (0, r.jsx)('div', {
+                className: a.actionIconContainer,
+                children: (0, r.jsx)(m, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 14,
                     height: 14,
-                    className: s.actionIcon
+                    className: a.actionIcon
                 })
             }),
-            (0, i.jsx)('div', {
-                className: s.actionTextContainer,
-                children: (0, i.jsxs)(r.Text, {
-                    className: s.actionTextHeader,
+            (0, r.jsx)('div', {
+                className: a.actionTextContainer,
+                children: (0, r.jsxs)(i.Text, {
+                    className: a.actionTextHeader,
                     variant: 'text-xs/medium',
                     color: 'interactive-normal',
                     children: [
                         d,
                         null != u &&
-                            (0, i.jsx)(r.Text, {
-                                className: s.actionTextHelper,
+                            (0, r.jsx)(i.Text, {
+                                className: a.actionTextHelper,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 tag: 'span',

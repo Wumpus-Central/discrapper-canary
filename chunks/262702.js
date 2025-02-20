@@ -1,15 +1,15 @@
-n.d(t, { Z: () => g }), n(47120);
-var i = n(570140),
-    l = n(846027),
-    r = n(872810),
-    a = n(317770),
-    s = n(569545),
-    o = n(199902),
-    d = n(314897),
-    c = n(592125),
-    u = n(131951),
-    h = n(590415);
-function m(e, t, n) {
+n.d(t, { Z: () => f }), n(47120);
+var r = n(570140),
+    i = n(846027),
+    l = n(872810),
+    o = n(317770),
+    a = n(569545),
+    s = n(199902),
+    c = n(314897),
+    u = n(592125),
+    d = n(131951),
+    p = n(590415);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,30 +22,30 @@ function m(e, t, n) {
         e
     );
 }
-class p extends a.Z {
+class g extends o.Z {
     _initialize() {
-        i.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        r.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     _terminate() {
-        i.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
+        r.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
     constructor(...e) {
         super(...e),
-            m(this, 'handleVoiceStateUpdates', (e) => {
+            h(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e,
-                    n = d.default.getId();
+                    n = c.default.getId();
                 t.forEach((e) => {
                     var t;
-                    e.userId === n && (null === (t = c.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()) && (0, h.gf)(e) !== h.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
+                    e.userId === n && (null === (t = u.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice()) && (0, p.gf)(e) !== p.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
                 });
             }),
-            m(this, 'handleStopStream', (e) => {
-                let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
-                null != t && (0, r.g)((0, s.V9)(t), !1);
+            h(this, 'handleStopStream', (e) => {
+                let t = s.Z.getActiveStreamForUser(e.userId, e.guildId);
+                null != t && (0, l.g)((0, a.V9)(t), !1);
             }),
-            m(this, 'handleStopUserVideo', () => {
-                u.Z.isVideoEnabled() && l.Z.setVideoEnabled(!1);
+            h(this, 'handleStopUserVideo', () => {
+                d.Z.isVideoEnabled() && i.Z.setVideoEnabled(!1);
             });
     }
 }
-let g = new p();
+let f = new g();

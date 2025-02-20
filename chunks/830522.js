@@ -1,7 +1,7 @@
 function t(e) {
     let t = e.regex,
         n = /[a-zA-Z_][a-zA-Z0-9_]*/,
-        i = {
+        r = {
             className: 'number',
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         };
@@ -33,7 +33,7 @@ function t(e) {
                     {
                         begin: '\\$\\{(::)?[a-zA-Z_]((::)?[a-zA-Z0-9_])*',
                         end: '\\}',
-                        contains: [i]
+                        contains: [r]
                     }
                 ]
             },
@@ -42,7 +42,7 @@ function t(e) {
                 contains: [e.BACKSLASH_ESCAPE],
                 variants: [e.inherit(e.QUOTE_STRING_MODE, { illegal: null })]
             },
-            i
+            r
         ]
     };
 }

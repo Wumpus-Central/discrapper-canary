@@ -1,27 +1,27 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(593473),
-    o = n(442837),
-    d = n(481060),
-    c = n(749210),
-    u = n(558381),
-    h = n(666743),
-    m = n(770146),
-    p = n(600164),
-    g = n(565138),
-    _ = n(41776),
-    f = n(703656),
-    E = n(769654),
-    I = n(601964),
-    C = n(430824),
+n.d(t, { Z: () => T }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(593473),
+    s = n(442837),
+    c = n(481060),
+    u = n(749210),
+    d = n(558381),
+    p = n(666743),
+    h = n(770146),
+    g = n(600164),
+    f = n(565138),
+    m = n(41776),
+    b = n(703656),
+    _ = n(769654),
+    E = n(601964),
+    O = n(430824),
     N = n(843445),
     v = n(981631),
-    T = n(388032),
-    S = n(672666);
-function A(e, t, n) {
+    y = n(388032),
+    I = n(234772);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,75 +34,75 @@ function A(e, t, n) {
         e
     );
 }
-class Z extends l.PureComponent {
+class S extends i.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
             ? null
-            : (0, i.jsxs)(p.Z, {
-                  className: S.memberInfo,
-                  align: p.Z.Align.CENTER,
+            : (0, r.jsxs)(g.Z, {
+                  className: I.memberInfo,
+                  align: g.Z.Align.CENTER,
                   children: [
-                      (0, i.jsx)('div', { className: S.dotOnline }),
-                      (0, i.jsx)('span', {
-                          className: S.memberText,
-                          children: T.intl.format(T.t['LC+S+v'], { membersOnline: t })
+                      (0, r.jsx)('div', { className: I.dotOnline }),
+                      (0, r.jsx)('span', {
+                          className: I.memberText,
+                          children: y.NW.format(y.t['LC+S+v'], { membersOnline: t })
                       }),
-                      (0, i.jsx)('div', { className: S.dotOffline }),
-                      (0, i.jsx)('span', {
-                          className: S.memberText,
-                          children: T.intl.format(T.t.zRl6XV, { count: e })
+                      (0, r.jsx)('div', { className: I.dotOffline }),
+                      (0, r.jsx)('span', {
+                          className: I.memberText,
+                          children: y.NW.format(y.t.zRl6XV, { count: e })
                       })
                   ]
               });
     }
     render() {
-        let { guild: e, inChannel: t, isInGuild: n, isLurking: l, isAuthenticated: r, className: s, pageSize: o } = this.props;
+        let { guild: e, inChannel: t, isInGuild: n, isLurking: i, isAuthenticated: l, className: a, pageSize: s } = this.props;
         if (t && n) return null;
-        let c = new I.ZP(e),
-            u = T.intl.string(T.t.pxwdrK),
-            h = this.handleJoinOrView,
-            _ = d.zxk.Looks.FILLED,
-            f = d.zxk.Colors.PRIMARY;
+        let u = new E.ZP(e),
+            d = y.NW.string(y.t.pxwdrK),
+            p = this.handleJoinOrView,
+            m = c.zxk.Looks.FILLED,
+            b = c.zxk.Colors.PRIMARY;
         return (
-            r
+            l
                 ? n
-                    ? ((_ = d.zxk.Looks.OUTLINED),
-                      (f = S.buttonColorInGuild),
-                      (u = (0, i.jsxs)(p.Z, {
-                          align: p.Z.Align.CENTER,
+                    ? ((m = c.zxk.Looks.OUTLINED),
+                      (b = I.buttonColorInGuild),
+                      (d = (0, r.jsxs)(g.Z, {
+                          align: g.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('div', { children: T.intl.string(T.t.cEnaW1) }),
-                              (0, i.jsx)(d.dz2, {
+                              (0, r.jsx)('div', { children: y.NW.string(y.t.cEnaW1) }),
+                              (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: S.joinedCheckmark
+                                  className: I.joinedCheckmark
                               })
                           ]
                       })))
-                    : l && t && (u = T.intl.string(T.t.XpeFYm))
-                : ((u = T.intl.string(T.t.dKhVQE)), (h = this.handleLogin)),
-            (0, i.jsxs)('div', {
-                className: a()(s, o === N.b.SMALL ? S.inviteSmall : S.inviteLarge),
+                    : i && t && (d = y.NW.string(y.t.XpeFYm))
+                : ((d = y.NW.string(y.t.dKhVQE)), (p = this.handleLogin)),
+            (0, r.jsxs)('div', {
+                className: o()(a, s === N.b.SMALL ? I.inviteSmall : I.inviteLarge),
                 children: [
-                    (0, i.jsx)(m.Z, { children: T.intl.string(T.t.s1KcLi) }),
-                    (0, i.jsxs)('div', {
-                        className: S.content,
+                    (0, r.jsx)(h.Z, { children: y.NW.string(y.t.s1KcLi) }),
+                    (0, r.jsxs)('div', {
+                        className: I.content,
                         children: [
-                            (0, i.jsxs)('div', {
-                                className: S.info,
+                            (0, r.jsxs)('div', {
+                                className: I.info,
                                 children: [
-                                    (0, i.jsx)(g.Z, {
-                                        guild: c,
+                                    (0, r.jsx)(f.Z, {
+                                        guild: u,
                                         active: !0,
-                                        size: g.Z.Sizes.LARGE,
-                                        className: S.guildIcon
+                                        size: f.Z.Sizes.LARGE,
+                                        className: I.guildIcon
                                     }),
-                                    (0, i.jsxs)('div', {
-                                        className: S.infoText,
+                                    (0, r.jsxs)('div', {
+                                        className: I.infoText,
                                         children: [
-                                            (0, i.jsx)('div', {
-                                                className: S.name,
+                                            (0, r.jsx)('div', {
+                                                className: I.name,
                                                 children: e.name
                                             }),
                                             this.renderMemberInfo()
@@ -110,14 +110,14 @@ class Z extends l.PureComponent {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(d.zxk, {
-                                size: d.zxk.Sizes.SMALL,
-                                className: S.actionButton,
+                            (0, r.jsx)(c.zxk, {
+                                size: c.zxk.Sizes.SMALL,
+                                className: I.actionButton,
                                 fullWidth: !0,
-                                color: f,
-                                look: _,
-                                onClick: h,
-                                children: u
+                                color: b,
+                                look: m,
+                                onClick: p,
+                                children: d
                             })
                         ]
                     })
@@ -127,33 +127,33 @@ class Z extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'handleJoinOrView', async () => {
-                let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
-                    l = () => (0, E.X)(e.id);
-                if (i) (0, u.Oj)(t).then(l);
-                else if (n) l();
+            C(this, 'handleJoinOrView', async () => {
+                let { guild: e, skuId: t, isInGuild: n, isLurking: r } = this.props,
+                    i = () => (0, _.X)(e.id);
+                if (r) (0, d.Oj)(t).then(i);
+                else if (n) i();
                 else
                     try {
-                        await c.Z.joinGuild(e.id, {
+                        await u.Z.joinGuild(e.id, {
                             lurker: !0,
                             source: v.vtS.APPLICATION_STORE
                         }),
-                            l();
-                    } catch {}
+                            i();
+                    } catch (e) {}
             }),
-            A(this, 'handleLogin', () => {
+            C(this, 'handleLogin', () => {
                 let e = { redirect_to: v.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, f.uL)(v.Z5c.LOGIN, { search: (0, s.stringify)(e) });
+                (0, b.uL)(v.Z5c.LOGIN, { search: (0, a.stringify)(e) });
             });
     }
 }
-let x = (0, h.Z)(
-    o.ZP.connectStores([C.Z, _.Z], (e) => {
+let T = (0, p.Z)(
+    s.ZP.connectStores([O.Z, m.Z], (e) => {
         let { guild: t } = e,
-            n = _.Z.isLurking(t.id);
+            n = m.Z.isLurking(t.id);
         return {
-            isInGuild: null != C.Z.getGuild(t.id) && !n,
+            isInGuild: null != O.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(Z)
+    })(S)
 );

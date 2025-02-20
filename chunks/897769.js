@@ -1,8 +1,8 @@
-t.d(n, { S: () => a });
-var i = t(442837),
-    l = t(359119);
-function a(e, n) {
-    return (0, i.e7)([l.ZP], () => l.ZP.getChannelSafetyWarnings(e), [e])
-        .filter((e) => e.type === n)
+n.d(t, { S: () => l });
+var r = n(442837),
+    i = n(359119);
+function l(e, t) {
+    return (0, r.e7)([i.ZP], () => i.ZP.getChannelSafetyWarnings(e), [e])
+        .filter((e) => e.type === t)
         .find((e) => null == e.dismiss_timestamp && ((null == e ? void 0 : e.expiry) == null || Date.parse(e.expiry) > Date.now()));
 }

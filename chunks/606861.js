@@ -1,7 +1,7 @@
-var i = n(96403),
-    r = n(548828);
+var r = n(96403),
+    i = n(548828);
 e.exports = function (e, t, n) {
     try {
-        return i(r(Object.getOwnPropertyDescriptor(e, t)[n]));
+        return r(i(Object.getOwnPropertyDescriptor(e, t)[n]));
     } catch (e) {}
 };

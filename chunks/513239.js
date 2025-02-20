@@ -1,56 +1,56 @@
 s.d(e, { default: () => h });
-var n = s(200651);
+var c = s(200651);
 s(192379);
-var c = s(780384),
-    i = s(481060),
-    a = s(410030),
-    l = s(313201),
-    o = s(388032),
-    r = s(370407),
+var n = s(780384),
+    a = s(481060),
+    i = s(410030),
+    o = s(313201),
+    l = s(388032),
+    r = s(931241),
     d = s(167969),
     x = s(557256);
 function h(t) {
     let { onClose: e, transitionState: s } = t,
-        h = (0, l.Dt)(),
-        m = (0, c.wj)((0, a.ZP)());
-    return (0, n.jsxs)(i.Y0X, {
+        h = (0, o.Dt)(),
+        m = (0, n.wj)((0, i.ZP)());
+    return (0, c.jsxs)(a.Y0X, {
         transitionState: s,
         'aria-labelledby': h,
-        size: i.CgR.SMALL,
+        size: a.CgR.SMALL,
         children: [
-            (0, n.jsxs)(i.hzk, {
+            (0, c.jsxs)(a.hzk, {
                 className: r.content,
                 children: [
-                    (0, n.jsx)(i.olH, {
+                    (0, c.jsx)(a.olH, {
                         className: r.closeButton,
                         onClick: e
                     }),
-                    (0, n.jsx)('img', {
+                    (0, c.jsx)('img', {
                         className: r.image,
                         src: m ? d : x,
                         alt: ''
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, c.jsx)(a.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
                         className: r.title,
-                        children: o.intl.string(o.t.wLrh09)
+                        children: l.NW.string(l.t.wLrh09)
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, c.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: r.body,
-                        children: o.intl.string(o.t.DW9yJi)
+                        children: l.NW.string(l.t.DW9yJi)
                     })
                 ]
             }),
-            (0, n.jsx)(i.mzw, {
-                children: (0, n.jsx)(i.zxk, {
+            (0, c.jsx)(a.mzw, {
+                children: (0, c.jsx)(a.zxk, {
                     className: r.button,
-                    color: i.zxk.Colors.BRAND,
+                    color: a.zxk.Colors.BRAND,
                     onClick: e,
-                    size: i.zxk.Sizes.LARGE,
-                    children: o.intl.string(o.t.BddRzc)
+                    size: a.zxk.Sizes.LARGE,
+                    children: l.NW.string(l.t.BddRzc)
                 })
             })
         ]

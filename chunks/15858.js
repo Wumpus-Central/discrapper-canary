@@ -1,4 +1,4 @@
-var n, i;
+var n, r;
 (n = { value: !0 }),
     (function (e) {
         (e.Unidentified = 'Unidentified'),
@@ -317,4 +317,4 @@ var n, i;
             (e.Divide = 'Divide'),
             (e.Subtract = 'Subtract'),
             (e.Separator = 'Separator');
-    })((i = t.Key || (t.Key = {})));
+    })((r = t.Key || (t.Key = {})));

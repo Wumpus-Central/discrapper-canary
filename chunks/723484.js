@@ -1,13 +1,13 @@
-n.d(t, { F: () => s });
-var i = n(200651);
+n.d(t, { F: () => a });
+var r = n(200651);
 n(192379), n(512722);
-var r = n(481060);
+var i = n(481060);
 n(563132), n(185139);
-var a = n(388032);
-let s = (e) => {
+var o = n(388032);
+let a = (e) => {
     let { className: t } = e;
-    return (0, i.jsx)(r.hjN, {
+    return (0, r.jsx)(i.hjN, {
         className: t,
-        children: (0, i.jsx)(r.vwX, { children: a.intl.string(a.t.eALkIS) })
+        children: (0, r.jsx)(i.vwX, { children: o.NW.string(o.t.eALkIS) })
     });
 };

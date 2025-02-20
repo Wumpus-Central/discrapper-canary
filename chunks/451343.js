@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './activity_end.mp3': '90152',
     './activity_launch.mp3': '12790',
     './activity_user_join.mp3': '9907',
@@ -80,19 +80,19 @@ var i = {
     './winter_user_join.mp3': '586680',
     './winter_user_leave.mp3': '597453'
 };
-function r(e) {
-    return n(a(e));
+function i(e) {
+    return n(o(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function o(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 451343);
+    (i.resolve = o),
+    (e.exports = i),
+    (i.id = 451343);

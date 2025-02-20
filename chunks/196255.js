@@ -1,30 +1,30 @@
-i.d(t, { Z: () => u });
-var n = i(200651);
-i(192379);
-var a = i(120356),
-    o = i.n(a),
-    s = i(481060),
-    l = i(942951),
-    r = i(456269),
-    c = i(388032),
-    d = i(835494);
-let u = (e) => {
-    var t, i;
-    let { message: a, channel: u, renderColon: h, hasUnreads: m } = e,
-        { user: p, author: g } = (0, r.AJ)(u),
-        f = null !== (i = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== i ? i : '',
-        v = (0, l.l)({
-            user: null == a ? void 0 : a.author,
-            channelId: u.id,
-            guildId: u.guild_id,
-            messageId: null == a ? void 0 : a.id,
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var o = n(120356),
+    r = n.n(o),
+    a = n(481060),
+    s = n(942951),
+    l = n(456269),
+    c = n(388032),
+    u = n(347417);
+let d = (e) => {
+    var t, n;
+    let { message: o, channel: d, renderColon: h, hasUnreads: p } = e,
+        { user: m, author: f } = (0, l.AJ)(d),
+        g = null !== (n = null !== (t = null == f ? void 0 : f.nick) && void 0 !== t ? t : null == m ? void 0 : m.username) && void 0 !== n ? n : '',
+        b = (0, s.l)({
+            user: null == o ? void 0 : o.author,
+            channelId: d.id,
+            guildId: d.guild_id,
+            messageId: null == o ? void 0 : o.id,
             stopPropagation: !0,
-            ariaLabel: c.intl.formatToPlainString(c.t.CSIeU1, { name: f })
-        })(null != g ? g : void 0)((0, n.jsx)(n.Fragment, { children: f }), u.id);
-    return (0, n.jsxs)(s.Text, {
+            ariaLabel: c.NW.formatToPlainString(c.t.CSIeU1, { name: g })
+        })(null != f ? f : void 0)((0, i.jsx)(i.Fragment, { children: g }), d.id);
+    return (0, i.jsxs)(a.Text, {
         tag: 'span',
-        className: o()(d.author, { [d.hasUnreads]: m }),
+        className: r()(u.author, { [u.hasUnreads]: p }),
         variant: 'text-sm/semibold',
-        children: [v, !0 === h ? ': ' : null]
+        children: [b, !0 === h ? ': ' : null]
     });
 };

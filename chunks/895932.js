@@ -1,19 +1,19 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(313361),
-    l = n(683860),
-    a = n(481060),
+var a = n(313361),
+    i = n(683860),
+    l = n(481060),
     s = n(109434),
     o = n(228392),
     c = n(388032),
-    d = n(8332);
+    d = n(617327);
 function u(e) {
     let { channel: t, closePopout: n } = e,
         { sortOrder: u, layoutType: m } = (0, s.H)(t.id),
         h = (0, s.v)(),
         g = t.isMediaChannel(),
-        x = (e) => {
+        f = (e) => {
             (0, o.KR)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -22,7 +22,7 @@ function u(e) {
                 h.getState().setSortOrder(t.id, e),
                 n();
         },
-        f = (e) => {
+        p = (e) => {
             (0, o.Do)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -31,65 +31,65 @@ function u(e) {
                 h.getState().setLayoutType(t.id, e),
                 n();
         };
-    return (0, i.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: d.container,
-        children: (0, i.jsxs)(a.v2r, {
+        children: (0, r.jsxs)(l.v2r, {
             navId: 'sort-and-view',
-            'aria-label': g ? c.intl.string(c.t['kQN/bm']) : c.intl.string(c.t.DJzbkJ),
+            'aria-label': g ? c.NW.string(c.t['kQN/bm']) : c.NW.string(c.t.DJzbkJ),
             hideScroller: !0,
             onClose: n,
             onSelect: n,
             children: [
-                (0, i.jsxs)(a.kSQ, {
-                    label: c.intl.string(c.t.f8wNDg),
+                (0, r.jsxs)(l.kSQ, {
+                    label: c.NW.string(c.t.f8wNDg),
                     children: [
-                        (0, i.jsx)(a.k5B, {
+                        (0, r.jsx)(l.k5B, {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
-                            label: c.intl.string(c.t.jOPmcH),
-                            action: () => x(l.z.LATEST_ACTIVITY),
-                            checked: u === l.z.LATEST_ACTIVITY
+                            label: c.NW.string(c.t.jOPmcH),
+                            action: () => f(i.z.LATEST_ACTIVITY),
+                            checked: u === i.z.LATEST_ACTIVITY
                         }),
-                        (0, i.jsx)(a.k5B, {
+                        (0, r.jsx)(l.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
-                            label: c.intl.string(c.t.UIltXV),
-                            action: () => x(l.z.CREATION_DATE),
-                            checked: u === l.z.CREATION_DATE
+                            label: c.NW.string(c.t.UIltXV),
+                            action: () => f(i.z.CREATION_DATE),
+                            checked: u === i.z.CREATION_DATE
                         })
                     ]
                 }),
                 !t.isMediaChannel() &&
-                    (0, i.jsxs)(a.kSQ, {
-                        label: c.intl.string(c.t.mFMDSk),
+                    (0, r.jsxs)(l.kSQ, {
+                        label: c.NW.string(c.t.mFMDSk),
                         children: [
-                            (0, i.jsx)(a.k5B, {
+                            (0, r.jsx)(l.k5B, {
                                 id: 'view-as-list',
                                 group: 'view-as',
-                                label: c.intl.string(c.t['NJFr+v']),
-                                action: () => f(r.X.LIST),
-                                checked: m === r.X.LIST
+                                label: c.NW.string(c.t['NJFr+v']),
+                                action: () => p(a.X.LIST),
+                                checked: m === a.X.LIST
                             }),
-                            (0, i.jsx)(a.k5B, {
+                            (0, r.jsx)(l.k5B, {
                                 id: 'view-as-grid',
                                 group: 'view-as',
-                                label: c.intl.string(c.t.wKeggY),
-                                action: () => f(r.X.GRID),
-                                checked: m === r.X.GRID
+                                label: c.NW.string(c.t.wKeggY),
+                                action: () => p(a.X.GRID),
+                                checked: m === a.X.GRID
                             })
                         ]
                     }),
-                (0, i.jsx)(a.kSQ, {
-                    children: (0, i.jsx)(a.sNh, {
+                (0, r.jsx)(l.kSQ, {
+                    children: (0, r.jsx)(l.sNh, {
                         id: 'reset-all',
                         className: d.clearText,
-                        label: (0, i.jsx)(a.Text, {
+                        label: (0, r.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'none',
-                            children: c.intl.string(c.t['3b//lJ'])
+                            children: c.NW.string(c.t['3b//lJ'])
                         }),
                         action: () => {
-                            x(t.getDefaultSortOrder()), f(t.getDefaultLayout());
+                            f(t.getDefaultSortOrder()), p(t.getDefaultLayout());
                         }
                     })
                 })

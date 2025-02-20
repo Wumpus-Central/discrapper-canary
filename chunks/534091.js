@@ -1,8 +1,8 @@
 n.d(t, {
-    W: () => i,
-    p: () => l
+    W: () => r,
+    p: () => i
 });
-let i = 'chat-messages';
-function l(e, t) {
-    return ''.concat(i, '-').concat(e, '-').concat(t);
+let r = 'chat-messages';
+function i(e, t) {
+    return ''.concat(r, '-').concat(e, '-').concat(t);
 }

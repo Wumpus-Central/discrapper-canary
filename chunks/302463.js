@@ -1,12 +1,12 @@
 n.d(t, {
-    S5: () => a,
-    Yz: () => i,
-    dD: () => o,
-    pt: () => s,
-    ve: () => r
+    S5: () => o,
+    Yz: () => r,
+    dD: () => s,
+    pt: () => a,
+    ve: () => i
 });
-let i = 'guild-product-edit-modal',
-    r = 1073741824,
-    a = 1073741824,
-    s = 10,
-    o = 30;
+let r = 'guild-product-edit-modal',
+    i = 1073741824,
+    o = 1073741824,
+    a = 10,
+    s = 30;

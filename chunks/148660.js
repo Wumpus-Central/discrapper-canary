@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './icon-file-acrobat.svg': '621680',
     './icon-file-ae.svg': '725345',
     './icon-file-ai.svg': '673762',
@@ -14,19 +14,19 @@ var i = {
     './icon-file-video.svg': '430539',
     './icon-file-webcode.svg': '343305'
 };
-function r(e) {
-    return n(a(e));
+function i(e) {
+    return n(o(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function o(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 148660);
+    (i.resolve = o),
+    (e.exports = i),
+    (i.id = 148660);

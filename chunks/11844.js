@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
@@ -54,11 +54,11 @@ function f(e, t) {
         e
     );
 }
-let N = function () {
+let b = function () {
     let e = i.useRef(null),
         { analyticsLocations: t } = (0, a.ZP)(),
-        { fractionalState: N } = (0, l.Z)();
-    function x(n) {
+        { fractionalState: b } = (0, l.Z)();
+    function N(n) {
         null != e.current && (0, s.Mr3)(e.current),
             (0, c.u)({
                 analyticsLocation: {
@@ -71,11 +71,11 @@ let N = function () {
                 guild: n
             });
     }
-    async function b() {
+    async function x() {
         e.current = await (0, s.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, f(h({}, t), { onSelectGuild: x }));
+                return (t) => (0, r.jsx)(e, f(h({}, t), { onSelectGuild: N }));
             },
             {
                 onCloseRequest: () => {
@@ -84,7 +84,7 @@ let N = function () {
             }
         );
     }
-    let _ = (0, u.aq)({ fractionalState: N });
+    let _ = (0, u.aq)({ fractionalState: b });
     return (0, r.jsxs)('div', {
         className: p.wrapper,
         children: [
@@ -107,7 +107,7 @@ let N = function () {
                                     disabled: n,
                                     color: s.zxk.Colors.LINK,
                                     look: s.zxk.Looks.LINK,
-                                    onClick: n ? void 0 : b,
+                                    onClick: n ? void 0 : x,
                                     children: e
                                 },
                                 t

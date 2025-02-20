@@ -1,27 +1,27 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var l = n(442837),
-    a = n(481060),
-    r = n(434404),
-    s = n(962086),
-    o = n(225675),
-    d = n(496675),
-    c = n(981631),
+var i = n(442837),
+    l = n(481060),
+    o = n(434404),
+    a = n(962086),
+    s = n(225675),
+    c = n(496675),
+    d = n(981631),
     u = n(388032);
-function m(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.pNK.ROLES;
-    return (0, l.e7)([d.Z], () => d.Z.canImpersonateRole(e, t))
-        ? (0, i.jsx)(
-              a.sNh,
+function p(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
+    return (0, i.e7)([c.Z], () => c.Z.canImpersonateRole(e, t))
+        ? (0, r.jsx)(
+              l.sNh,
               {
                   id: 'view-as-role',
-                  label: u.intl.string(u.t.arFPfH),
-                  icon: a.ZSh,
+                  label: u.NW.string(u.t.arFPfH),
+                  icon: l.ZSh,
                   action: () => {
-                      r.Z.close(),
-                          (0, s.iD)(e.id, {
-                              type: o.z.ROLES,
+                      o.Z.close(),
+                          (0, a.iD)(e.id, {
+                              type: s.z.ROLES,
                               roles: { [t.id]: t },
                               returnToSection: n
                           });

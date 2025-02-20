@@ -1,23 +1,23 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(388032);
-let s = (e, t) => {
+var i = n(481060),
+    o = n(388032);
+let a = (e, t) => {
         let n = {
             display: 'flex',
             gap: '4px',
             margin: '8px 0 4px 0',
             alignItems: 'center'
         };
-        return (0, i.jsxs)(
-            r.Text,
+        return (0, r.jsxs)(
+            i.Text,
             {
                 color: 'text-danger',
                 style: n,
                 variant: 'text-sm/normal',
                 children: [
-                    (0, i.jsx)(r.P4T, {
+                    (0, r.jsx)(i.P4T, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 14,
@@ -29,8 +29,8 @@ let s = (e, t) => {
             t
         );
     },
-    o = {
+    s = {
         getForumChannelPermissionText: function () {
-            return a.intl.format(a.t.zlXUVV, { warningHook: s });
+            return o.NW.format(o.t.zlXUVV, { warningHook: a });
         }
     };

@@ -1,18 +1,18 @@
 function t(e) {
     let t = e.regex,
         n = /[a-zA-Z]\w*/,
-        i = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
-        r = ['true', 'false', 'null'],
-        a = ['this', 'super'],
-        s = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
-        o = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
+        r = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
+        i = ['true', 'false', 'null'],
+        o = ['this', 'super'],
+        a = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
+        s = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
         l = {
             relevance: 0,
             match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
             className: 'title.function'
         },
-        u = {
-            match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...o)), /(?=\s*\([^)]+\)\s*\{)/),
+        c = {
+            match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)), /(?=\s*\([^)]+\)\s*\{)/),
             className: 'title.function',
             starts: {
                 contains: [
@@ -30,7 +30,7 @@ function t(e) {
                 ]
             }
         },
-        c = {
+        u = {
             variants: [
                 {
                     match: [/class\s+/, n, /\s+is\s+/, n]
@@ -43,11 +43,11 @@ function t(e) {
                 2: 'title.class',
                 4: 'title.class.inherited'
             },
-            keywords: i
+            keywords: r
         },
         d = {
             relevance: 0,
-            match: t.either(...o),
+            match: t.either(...s),
             className: 'operator'
         },
         f = {
@@ -55,14 +55,14 @@ function t(e) {
             begin: /"""/,
             end: /"""/
         },
-        _ = {
+        p = {
             className: 'property',
             begin: t.concat(/\./, t.lookahead(n)),
             end: n,
             excludeBegin: !0,
             relevance: 0
         },
-        p = {
+        _ = {
             relevance: 0,
             match: t.concat(/\b_/, n),
             scope: 'variable'
@@ -71,7 +71,7 @@ function t(e) {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
-            keywords: { _: s }
+            keywords: { _: a }
         },
         m = e.C_NUMBER_MODE,
         g = {
@@ -95,9 +95,9 @@ function t(e) {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [m, h, l, p, d]
+            contains: [m, h, l, _, d]
         },
-        y = {
+        b = {
             scope: 'string',
             begin: /"/,
             end: /"/,
@@ -109,20 +109,20 @@ function t(e) {
                 }
             ]
         };
-    v.contains.push(y);
-    let I = [...i, ...a, ...r],
-        T = {
+    v.contains.push(b);
+    let y = [...r, ...o, ...i],
+        O = {
             relevance: 0,
-            match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: t.concat('\\b(?!', y.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         },
-        b = {
+        S = {
             scope: 'comment',
             variants: [
                 {
                     begin: [/#!?/, /[A-Za-z_]+(?=\()/],
                     beginScope: {},
-                    keywords: { literal: r },
+                    keywords: { literal: i },
                     contains: [],
                     end: /\)/
                 },
@@ -136,11 +136,11 @@ function t(e) {
     return {
         name: 'Wren',
         keywords: {
-            keyword: i,
-            'variable.language': a,
-            literal: r
+            keyword: r,
+            'variable.language': o,
+            literal: i
         },
-        contains: [b, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, c, g, u, l, d, p, _, T]
+        contains: [S, m, b, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, _, p, O]
     };
 }
 e.exports = t;

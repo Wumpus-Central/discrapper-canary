@@ -1,23 +1,23 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(872810),
-    a = n(569545),
-    s = n(63063),
-    o = n(112560),
+var i = n(872810),
+    o = n(569545),
+    a = n(63063),
+    s = n(112560),
     l = n(981631),
-    u = n(388032);
-let c = n(66737);
+    c = n(388032);
+let u = n(66737);
 function d(e) {
     let { stream: t, width: n, selected: d = !1, noArt: f = !1 } = e;
-    return (0, i.jsx)(o.Z, {
-        artURL: c,
-        header: u.intl.string(u.t.rSlOen),
-        size: (0, o.L)(n),
+    return (0, r.jsx)(s.Z, {
+        artURL: u,
+        header: c.NW.string(c.t.rSlOen),
+        size: (0, s.L)(n),
         noArt: f,
         selected: d,
-        description: u.intl.format(u.t.sXsgsL, { helpUrl: s.Z.getArticleURL(l.BhN.STREAM_FAILED) }),
-        onCTAClick: () => (0, r.aP)((0, a.V9)(t)),
-        callToAction: u.intl.string(u.t['4EGMWF'])
+        description: c.NW.format(c.t.sXsgsL, { helpUrl: a.Z.getArticleURL(l.BhN.STREAM_FAILED) }),
+        onCTAClick: () => (0, i.aP)((0, o.V9)(t)),
+        callToAction: c.NW.string(c.t['4EGMWF'])
     });
 }

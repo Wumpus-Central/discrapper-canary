@@ -1,19 +1,19 @@
-l.d(n, { Z: () => o });
-var t = l(200651);
-l(192379);
-var i = l(481060),
-    s = l(100527),
-    a = l(906732),
-    r = l(313201);
+t.d(n, { Z: () => o });
+var l = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(100527),
+    s = t(906732),
+    a = t(313201);
 function o(e) {
-    let { analyticsLocations: n } = (0, a.ZP)(s.Z.GO_LIVE_MODAL_V2),
-        l = (0, r.Dt)();
-    return (0, t.jsx)(i.Y0X, {
-        'aria-labelledby': l,
+    let { analyticsLocations: n } = (0, s.ZP)(r.Z.GO_LIVE_MODAL_V2),
+        t = (0, a.Dt)();
+    return (0, l.jsx)(i.Y0X, {
+        'aria-labelledby': t,
         transitionState: e.transitionState,
-        children: (0, t.jsx)(i.X6q, {
+        children: (0, l.jsx)(i.X6q, {
             variant: 'heading-lg/normal',
-            id: l,
+            id: t,
             children: 'Go Live Modal V2'
         })
     });

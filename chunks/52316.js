@@ -7,7 +7,7 @@ function t(e) {
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
         },
-        i = {
+        r = {
             begin: '\\(',
             end: '\\)',
             illegal: '"',
@@ -19,12 +19,12 @@ function t(e) {
                 t
             ]
         },
-        r = {
+        i = {
             begin: /\{/,
             end: /\}/,
-            contains: i.contains
+            contains: r.contains
         },
-        a = {
+        o = {
             className: 'string',
             begin: "'\\\\?.",
             end: "'",
@@ -38,21 +38,21 @@ function t(e) {
                 beginKeywords: 'port effect module',
                 end: 'exposing',
                 keywords: 'port effect module where command subscription exposing',
-                contains: [i, t],
+                contains: [r, t],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'import',
                 end: '$',
                 keywords: 'import as exposing',
-                contains: [i, t],
+                contains: [r, t],
                 illegal: '\\W\\.|;'
             },
             {
                 begin: 'type',
                 end: '$',
                 keywords: 'type alias',
-                contains: [n, i, r, t]
+                contains: [n, r, i, t]
             },
             {
                 beginKeywords: 'infix infixl infixr',
@@ -65,7 +65,7 @@ function t(e) {
                 keywords: 'port',
                 contains: [t]
             },
-            a,
+            o,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             n,

@@ -1,46 +1,46 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(111028),
+var i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(111028),
     l = n(652853),
-    u = n(228168),
-    c = n(537208);
+    c = n(228168),
+    u = n(481736);
 function d(e) {
-    let { text: t, tags: n, platformIcon: r, contextMenu: d } = e,
+    let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
         { profileType: f } = (0, l.z)();
     return (null == t || '' === t) && null == d
         ? null
         : null == t || '' === t
-          ? (0, i.jsx)('div', {
-                className: a()(c.headerContextMenu, c.absolute),
+          ? (0, r.jsx)('div', {
+                className: o()(u.headerContextMenu, u.absolute),
                 children: d
             })
-          : (0, i.jsxs)('header', {
-                className: c.header,
+          : (0, r.jsxs)('header', {
+                className: u.header,
                 children: [
-                    (0, i.jsxs)(s.X6q, {
-                        className: c.headerText,
-                        variant: f === u.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
+                    (0, r.jsxs)(a.X6q, {
+                        className: u.headerText,
+                        variant: f === c.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         children: [
-                            (0, i.jsx)(o.Z, { children: t }),
-                            null != r &&
-                                (0, i.jsx)('div', {
-                                    className: c.platformIcon,
+                            (0, r.jsx)(s.Z, { children: t }),
+                            null != i &&
+                                (0, r.jsx)('div', {
+                                    className: u.platformIcon,
                                     style: {
-                                        maskImage: 'url('.concat(r.whiteSVG, ')'),
-                                        WebkitMaskImage: 'url('.concat(r.whiteSVG, ')')
+                                        maskImage: 'url('.concat(i.whiteSVG, ')'),
+                                        WebkitMaskImage: 'url('.concat(i.whiteSVG, ')')
                                     }
                                 }),
                             n
                         ]
                     }),
                     null != d &&
-                        (0, i.jsx)('div', {
-                            className: c.headerContextMenu,
+                        (0, r.jsx)('div', {
+                            className: u.headerContextMenu,
                             children: d
                         })
                 ]

@@ -14,14 +14,14 @@ function t(e) {
                 5: 'string'
             }
         },
-        i = {
+        r = {
             match: [/^\s*/, />/, /[ ]/, /.*$/],
             className: {
                 2: 'punctuation',
                 4: 'string'
             }
         },
-        r = {
+        i = {
             variants: [
                 {
                     match: [/^\s*/, /-/, /[ ]/, /.*$/]
@@ -43,8 +43,8 @@ function t(e) {
                 begin: /^\s*(?=#)/,
                 excludeBegin: !0
             }),
-            r,
             i,
+            r,
             t,
             n
         ]

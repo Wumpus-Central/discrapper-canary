@@ -3,65 +3,65 @@ n.r(t),
         closeUserProfileModal: () => g,
         openUserProfileModal: () => m
     });
-var i = n(259443),
-    r = n(481060),
-    a = n(570140),
-    s = n(232567),
-    o = n(911284),
+var r = n(259443),
+    i = n(481060),
+    o = n(570140),
+    a = n(232567),
+    s = n(911284),
     l = n(314897),
-    u = n(594174),
-    c = n(9161),
+    c = n(594174),
+    u = n(9161),
     d = n(456644),
     f = n(484459);
-let _ = (0, r.pxk)(r.EFr.SIZE_120),
-    p = new i.Yd('UserProfileModalActionCreators'),
+let p = (0, i.pxk)(i.EFr.SIZE_120),
+    _ = new r.Yd('UserProfileModalActionCreators'),
     h = async (e) => {
         let t = l.default.getId() === e,
-            { recentActivityTabEnabled: n } = (0, c.x)({ location: 'UserProfileModalActionCreators' }),
-            { recentActivityEnabled: i } = (0, d.G)({ location: 'UserProfileModalActionCreators' });
-        if (n || i || t)
+            { recentActivityTabEnabled: n } = (0, u.x)({ location: 'UserProfileModalActionCreators' }),
+            { recentActivityEnabled: r } = (0, d.G)({ location: 'UserProfileModalActionCreators' });
+        if (n || r || t)
             try {
-                await (0, o.Z)(e);
+                await (0, s.Z)(e);
             } catch (t) {
-                p.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+                _.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
             }
     };
 async function m(e) {
-    let { userId: t, guildId: n, channelId: i, messageId: r, roleId: o, sessionId: l, joinRequestId: c, section: d, subsection: p, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v, appContext: y } = e,
-        I = u.default.getUser(t);
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: d, subsection: _, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v, appContext: b } = e,
+        y = c.default.getUser(t);
     h(t),
-        null == I
-            ? await (0, s.In)(t, {
+        null == y
+            ? await (0, a.In)(t, {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
                   friendToken: m,
-                  joinRequestId: c
+                  joinRequestId: u
               })
-            : (0, f.Z)(I.id, I.getAvatarURL(void 0, _), {
+            : (0, f.Z)(y.id, y.getAvatarURL(void 0, p), {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
                   friendToken: m,
-                  joinRequestId: c
+                  joinRequestId: u
               }),
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_PROFILE_MODAL_OPEN',
             userId: t,
             guildId: null != n ? n : void 0,
-            channelId: null != i ? i : void 0,
-            messageId: null != r ? r : void 0,
-            roleId: null != o ? o : void 0,
+            channelId: null != r ? r : void 0,
+            messageId: null != i ? i : void 0,
+            roleId: null != s ? s : void 0,
             sessionId: null != l ? l : void 0,
             section: d,
-            subsection: p,
+            subsection: _,
             friendToken: m,
             showGuildProfile: g,
             analyticsLocation: E,
             sourceAnalyticsLocations: v,
-            appContext: y
+            appContext: b
         });
 }
 function g() {
-    a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
+    o.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
 }

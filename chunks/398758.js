@@ -1,35 +1,35 @@
 n.d(t, {
-    DM: () => u,
-    r1: () => c,
+    DM: () => c,
+    r1: () => u,
     te: () => d
 });
-var i = n(442837),
-    r = n(430824),
-    a = n(496675),
-    s = n(9156),
-    o = n(594174),
+var r = n(442837),
+    i = n(430824),
+    o = n(496675),
+    a = n(9156),
+    s = n(594174),
     l = n(981631);
-function u(e) {
-    return (0, i.e7)([s.ZP, r.Z, o.default], () => {
-        var t, n, i, a;
-        let u = s.ZP.isOptInEnabled(e),
-            c = null !== (i = null === (t = r.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && void 0 !== i && i,
-            d = null !== (a = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== a && a;
-        return u && (c || d);
+function c(e) {
+    return (0, r.e7)([a.ZP, i.Z, s.default], () => {
+        var t, n, r, o;
+        let c = a.ZP.isOptInEnabled(e),
+            u = null !== (r = null === (t = i.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && void 0 !== r && r,
+            d = null !== (o = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== o && o;
+        return c && (u || d);
     });
 }
-function c(e) {
-    let t = r.Z.getGuild(e),
-        n = o.default.getCurrentUser();
-    return null != e && null != t && null != n && (t.hasFeature(l.oNc.COMMUNITY) || n.isStaff()) && s.ZP.isOptInEnabled(e);
+function u(e) {
+    let t = i.Z.getGuild(e),
+        n = s.default.getCurrentUser();
+    return null != e && null != t && null != n && (t.hasFeature(l.oNc.COMMUNITY) || n.isStaff()) && a.ZP.isOptInEnabled(e);
 }
 function d(e) {
-    return (0, i.e7)([r.Z, a.Z], () => {
+    return (0, r.e7)([i.Z, o.Z], () => {
         var t;
-        let n = r.Z.getGuild(e),
-            i = a.Z.can(l.Plq.MANAGE_GUILD, n),
-            s = a.Z.can(l.Plq.MANAGE_ROLES, n),
-            o = null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)) && void 0 !== t && t;
-        return null != n && i && s && !o;
+        let n = i.Z.getGuild(e),
+            r = o.Z.can(l.Plq.MANAGE_GUILD, n),
+            a = o.Z.can(l.Plq.MANAGE_ROLES, n),
+            s = null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.GUILD_ONBOARDING_EVER_ENABLED)) && void 0 !== t && t;
+        return null != n && r && a && !s;
     });
 }

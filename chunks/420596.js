@@ -1,5 +1,5 @@
-n.d(t, { c: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { c: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_call_banner_bg',
     label: 'Call Banner Background Experiment',
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e, t) {
-    return i.useExperiment({ location: t }, { autoTrackExposure: e });
+function i(e, t) {
+    return r.useExperiment({ location: t }, { autoTrackExposure: e });
 }

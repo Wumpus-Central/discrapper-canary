@@ -1,145 +1,145 @@
-n.d(t, { default: () => S }), n(47120);
+n.d(t, { default: () => I }), n(47120), n(266796);
 var a = n(200651),
     i = n(192379),
-    l = n(442837),
-    s = n(481060),
+    r = n(442837),
+    l = n(481060),
     o = n(904245),
-    r = n(166459),
+    s = n(166459),
     c = n(680287),
     d = n(313201),
     u = n(247206),
-    m = n(813197),
-    p = n(592125),
+    p = n(813197),
+    m = n(592125),
     g = n(703558),
-    _ = n(430824),
+    f = n(430824),
     h = n(375954),
-    f = n(403182),
-    C = n(709054),
-    E = n(127654),
+    _ = n(403182),
+    b = n(709054),
+    y = n(127654),
     v = n(979956),
-    y = n(228392),
-    x = n(404616),
-    T = n(470623),
-    I = n(981631),
-    b = n(231338),
-    M = n(388032),
-    A = n(322079);
-function S(e) {
+    O = n(228392),
+    C = n(404616),
+    E = n(470623),
+    P = n(981631),
+    x = n(231338),
+    j = n(388032),
+    T = n(55587);
+function I(e) {
     var t;
-    let { threadId: n, attachments: S, sendMessage: P, transitionState: D, onClose: L } = e,
-        Z = (0, d.Dt)(),
-        U = (0, l.e7)([p.Z], () => p.Z.getChannel(n), [n]),
-        R = (0, l.e7)([_.Z], () => _.Z.getGuild(null == U ? void 0 : U.getGuildId()), [U]),
-        w = (0, l.e7)([p.Z], () => p.Z.getChannel(null == U ? void 0 : U.parent_id), [U]),
-        j = null === (t = S[0]) || void 0 === t ? void 0 : t.item,
-        [O, N] = i.useState(null);
+    let { threadId: n, attachments: I, sendMessage: S, transitionState: M, onClose: A } = e,
+        w = (0, d.Dt)(),
+        D = (0, r.e7)([m.Z], () => m.Z.getChannel(n), [n]),
+        L = (0, r.e7)([f.Z], () => f.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]),
+        N = (0, r.e7)([m.Z], () => m.Z.getChannel(null == D ? void 0 : D.parent_id), [D]),
+        Z = null === (t = I[0]) || void 0 === t ? void 0 : t.item,
+        [U, R] = i.useState(null);
     i.useEffect(() => {
-        null != j && (0, m.Fq)(j.file, (e, t) => N(e), b.dG);
-    }, [j]);
-    let z =
-            null != j && null != O
+        null != Z && (0, p.Fq)(Z.file, (e, t) => R(e), x.dG);
+    }, [Z]);
+    let k =
+            null != Z && null != U
                 ? {
-                      src: O,
-                      width: x.TJ,
-                      height: x.Lp,
-                      spoiler: S[0].spoiler,
-                      alt: S[0].description
+                      src: U,
+                      width: C.TJ,
+                      height: C.Lp,
+                      spoiler: I[0].spoiler,
+                      alt: I[0].description
                   }
                 : null,
-        [k, B] = i.useState(!1),
+        [z, B] = i.useState(!1),
         F = i.useCallback(() => {
-            (0, y.xI)({ added: !1 }), P(), L();
-        }, [P, L]),
-        G = i.useCallback(() => {
-            null != U &&
-                null != R &&
-                ((0, y.xI)({ added: !0 }),
+            (0, O.xI)({ added: !1 }), S(), A();
+        }, [S, A]),
+        W = i.useCallback(() => {
+            null != D &&
+                null != L &&
+                ((0, O.xI)({ added: !0 }),
                 (function (e) {
-                    let { thread: t, attachments: n, setIsUploading: a, guild: i, onClose: l } = e,
-                        s = new c.Z(I.ANM.MESSAGE(t.id, C.default.castChannelIdAsMessageId(t.id)), 'PATCH');
-                    s.on('start', () => {
+                    let { thread: t, attachments: n, setIsUploading: a, guild: i, onClose: r } = e,
+                        l = new c.Z(P.ANM.MESSAGE(t.id, b.default.castChannelIdAsMessageId(t.id)), 'PATCH');
+                    l.on('start', () => {
                         a(!0);
                     }),
-                        s.on('progress', (e) => {
-                            let o = (0, f.dg)(i.id);
-                            e.currentSize > o && (s.cancel(), a(!1), l(), (0, E.G)(t, (0, v.KZ)(n)));
+                        l.on('progress', (e) => {
+                            let o = (0, _.dg)(i.id);
+                            e.currentSize > o && (l.cancel(), a(!1), r(), (0, y.G)(t, (0, v.KZ)(n)));
                         }),
-                        s.on('error', (e, n, i) => {
-                            a(!1), n === I.evJ.EXPLICIT_CONTENT && (l(), o.Z.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments, u.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), r.Z.clearAll(t.id, g.d.ChannelMessage));
+                        l.on('error', (e, n, i) => {
+                            a(!1), n === P.evJ.EXPLICIT_CONTENT && (r(), o.Z.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments, u.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), s.Z.clearAll(t.id, g.d.ChannelMessage));
                         }),
-                        s.on('complete', () => {
-                            a(!1), l(), r.Z.clearAll(t.id, g.d.ChannelMessage);
+                        l.on('complete', () => {
+                            a(!1), r(), s.Z.clearAll(t.id, g.d.ChannelMessage);
                         });
-                    let d = h.Z.getMessages(t.id).get(C.default.castChannelIdAsMessageId(t.id)),
-                        m = null != d ? d.attachments : [];
-                    s.uploadFiles(n, { attachments: [...m] }, { addFilesTo: 'attachments' });
+                    let d = h.Z.getMessages(t.id).get(b.default.castChannelIdAsMessageId(t.id)),
+                        p = null != d ? d.attachments : [];
+                    l.uploadFiles(n, { attachments: [...p] }, { addFilesTo: 'attachments' });
                 })({
-                    thread: U,
-                    attachments: S,
+                    thread: D,
+                    attachments: I,
                     setIsUploading: B,
-                    guild: R,
-                    onClose: L
+                    guild: L,
+                    onClose: A
                 }));
-        }, [U, S, B, R, L]);
-    return null == w
+        }, [D, I, B, L, A]);
+    return null == N
         ? null
-        : (0, a.jsxs)(s.Y0X, {
-              transitionState: D,
-              size: s.CgR.SMALL,
-              className: A.modalRoot,
-              'aria-labelledby': Z,
+        : (0, a.jsxs)(l.Y0X, {
+              transitionState: M,
+              size: l.CgR.SMALL,
+              className: T.modalRoot,
+              'aria-labelledby': w,
               children: [
-                  (0, a.jsxs)(s.hzk, {
-                      className: A.modal,
+                  (0, a.jsxs)(l.hzk, {
+                      className: T.modal,
                       children: [
-                          (0, a.jsx)(s.X6q, {
+                          (0, a.jsx)(l.X6q, {
                               variant: 'heading-md/semibold',
-                              className: A.header,
-                              id: Z,
-                              children: M.intl.string(M.t.hMWWMT)
+                              className: T.header,
+                              id: w,
+                              children: j.NW.string(j.t.hMWWMT)
                           }),
-                          (0, a.jsx)(s.Text, {
+                          (0, a.jsx)(l.Text, {
                               variant: 'text-md/normal',
-                              className: A.__invalid_body,
-                              children: M.intl.string(M.t.zMsUsr)
+                              className: T.__invalid_body,
+                              children: j.NW.string(j.t.zMsUsr)
                           }),
                           (0, a.jsx)('div', {
-                              className: A.forumPost,
-                              children: (0, a.jsx)(T.oL, {
-                                  channel: w,
-                                  children: (0, a.jsx)(x.ZP, {
+                              className: T.forumPost,
+                              children: (0, a.jsx)(E.oL, {
+                                  channel: N,
+                                  children: (0, a.jsx)(C.ZP, {
                                       threadId: n,
-                                      goToThread: b.dG,
-                                      overrideMedia: z
+                                      goToThread: x.dG,
+                                      overrideMedia: k
                                   })
                               })
                           })
                       ]
                   }),
-                  (0, a.jsxs)(s.mzw, {
-                      className: A.modalFooter,
+                  (0, a.jsxs)(l.mzw, {
+                      className: T.modalFooter,
                       children: [
-                          (0, a.jsx)(s.zxk, {
-                              look: s.zxk.Looks.BLANK,
-                              className: A.cancelButton,
-                              disabled: k,
-                              onClick: L,
-                              children: M.intl.string(M.t['ETE/oK'])
+                          (0, a.jsx)(l.zxk, {
+                              look: l.zxk.Looks.BLANK,
+                              className: T.cancelButton,
+                              disabled: z,
+                              onClick: A,
+                              children: j.NW.string(j.t['ETE/oK'])
                           }),
-                          (0, a.jsx)(s.zxk, {
-                              color: s.zxk.Colors.PRIMARY,
-                              className: A.dontAddButton,
-                              disabled: k,
+                          (0, a.jsx)(l.zxk, {
+                              color: l.zxk.Colors.PRIMARY,
+                              className: T.dontAddButton,
+                              disabled: z,
                               onClick: F,
-                              children: M.intl.string(M.t['8rKVHB'])
+                              children: j.NW.string(j.t['8rKVHB'])
                           }),
-                          (0, a.jsx)(s.zxk, {
-                              color: s.zxk.Colors.BRAND,
-                              className: A.__invalid_button,
-                              submitting: k,
-                              onClick: G,
+                          (0, a.jsx)(l.zxk, {
+                              color: l.zxk.Colors.BRAND,
+                              className: T.__invalid_button,
+                              submitting: z,
+                              onClick: W,
                               autoFocus: !0,
-                              children: M.intl.string(M.t.d611xM)
+                              children: j.NW.string(j.t.d611xM)
                           })
                       ]
                   })

@@ -1,33 +1,33 @@
-n.d(t, { G: () => o }), n(47120), n(773603);
-var i = n(399606),
-    s = n(570140),
-    a = n(493773),
-    l = n(986197),
-    r = n(135200);
-let o = (e) => {
-    let [t, n] = (0, i.Wu)([r.Z], () => [r.Z.usernameSuggestion(), r.Z.usernameSuggestionLoading()]);
+r.d(t, { G: () => l }), r(47120), r(773603);
+var n = r(399606),
+    i = r(570140),
+    o = r(493773),
+    s = r(986197),
+    a = r(135200);
+let l = (e) => {
+    let [t, r] = (0, n.Wu)([a.Z], () => [a.Z.usernameSuggestion(), a.Z.usernameSuggestionLoading()]);
     return (
-        (0, a.ZP)(
+        (0, o.ZP)(
             () => (
-                r.Z.wasSuggestionsFetched()
-                    ? s.Z.dispatch({
+                a.Z.wasSuggestionsFetched()
+                    ? i.Z.dispatch({
                           type: 'POMELO_SUGGESTIONS_FETCH',
                           usernameSuggestionLoading: !1
                       })
-                    : l.Z.fetchSuggestions(e).finally(() => {
-                          s.Z.dispatch({
+                    : s.Z.fetchSuggestions(e).finally(() => {
+                          i.Z.dispatch({
                               type: 'POMELO_SUGGESTIONS_FETCH',
                               usernameSuggestionLoading: !1
                           });
                       }),
                 () => {
-                    l.Z.resetSuggestions();
+                    s.Z.resetSuggestions();
                 }
             )
         ),
         {
             usernameSuggestion: t,
-            usernameSuggestionLoading: n
+            usernameSuggestionLoading: r
         }
     );
 };

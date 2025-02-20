@@ -1,16 +1,16 @@
-t.d(n, { Z: () => p });
+t.d(n, { Z: () => h });
 var r = t(200651);
 t(192379);
 var i = t(442837),
-    a = t(692547),
+    l = t(692547),
     o = t(481060),
-    l = t(493683),
+    a = t(493683),
     s = t(129861),
-    d = t(700582),
-    c = t(594174),
-    u = t(388032),
-    _ = t(649176);
-function f(e) {
+    c = t(700582),
+    u = t(594174),
+    d = t(388032),
+    f = t(649176);
+function p(e) {
     let { color: n, className: t } = e;
     return (0, r.jsx)('svg', {
         className: t,
@@ -43,20 +43,20 @@ function f(e) {
         })
     });
 }
-function p(e, n) {
-    let t = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+function h(e, n) {
+    let t = (0, i.e7)([u.default], () => u.default.getCurrentUser());
     return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
         : (0, r.jsx)(o.sNh, {
               id: 'make-dm-owner',
               color: 'danger',
-              label: u.NW.string(u.t['6t3CyM']),
+              label: d.NW.string(d.t['6t3CyM']),
               action: () => {
                   (0, o.h7j)((i) => {
-                      var c, p;
+                      var u, h;
                       return (0, r.jsxs)(
                           o.ConfirmModal,
-                          ((c = (function (e) {
+                          ((u = (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
                                       r = Object.keys(t);
@@ -82,31 +82,31 @@ function p(e, n) {
                               return e;
                           })(
                               {
-                                  bodyClassName: _.confirmModal,
-                                  header: u.NW.string(u.t.WZoUsr),
-                                  confirmText: u.NW.string(u.t['cY+Ooa']),
-                                  cancelText: u.NW.string(u.t['ETE/oK']),
-                                  onConfirm: () => l.Z.setDMOwner(n.id, e.id)
+                                  bodyClassName: f.confirmModal,
+                                  header: d.NW.string(d.t.WZoUsr),
+                                  confirmText: d.NW.string(d.t['cY+Ooa']),
+                                  cancelText: d.NW.string(d.t['ETE/oK']),
+                                  onConfirm: () => a.Z.setDMOwner(n.id, e.id)
                               },
                               i
                           )),
-                          (p = p =
+                          (h = h =
                               {
                                   children: [
-                                      (0, r.jsx)(f, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, r.jsx)(p, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, r.jsxs)('div', {
-                                          className: _.fromToWrapper,
+                                          className: f.fromToWrapper,
                                           children: [
                                               (0, r.jsx)('div', {
-                                                  className: _.from,
-                                                  children: (0, r.jsx)(d.Z, {
+                                                  className: f.from,
+                                                  children: (0, r.jsx)(c.Z, {
                                                       user: t,
                                                       size: o.EFr.SIZE_80
                                                   })
                                               }),
                                               (0, r.jsx)('div', {
-                                                  className: _.to,
-                                                  children: (0, r.jsx)(d.Z, {
+                                                  className: f.to,
+                                                  children: (0, r.jsx)(c.Z, {
                                                       user: e,
                                                       size: o.EFr.SIZE_80
                                                   })
@@ -115,20 +115,20 @@ function p(e, n) {
                                       }),
                                       (0, r.jsx)(o.Text, {
                                           variant: 'text-md/normal',
-                                          children: u.NW.format(u.t.gsBb3N, {
+                                          children: d.NW.format(d.t.gsBb3N, {
                                               usernameHook: (n, t) =>
                                                   (0, r.jsx)(
                                                       s.Z,
                                                       {
                                                           usernameIcon: (0, r.jsx)(o.qEK, {
-                                                              className: _.avatarIcon,
+                                                              className: f.avatarIcon,
                                                               src: e.getAvatarURL(void 0, 16),
                                                               size: o.EFr.SIZE_16,
                                                               'aria-hidden': !0
                                                           }),
-                                                          className: _.discordTag,
-                                                          usernameClass: _.username,
-                                                          discriminatorClass: _.discriminator,
+                                                          className: f.discordTag,
+                                                          usernameClass: f.username,
+                                                          discriminatorClass: f.discriminator,
                                                           user: e
                                                       },
                                                       t
@@ -138,7 +138,7 @@ function p(e, n) {
                                   ]
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(p))
+                              ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(h))
                               : (function (e, n) {
                                     var t = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -146,10 +146,10 @@ function p(e, n) {
                                         t.push.apply(t, r);
                                     }
                                     return t;
-                                })(Object(p)).forEach(function (e) {
-                                    Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(p, e));
+                                })(Object(h)).forEach(function (e) {
+                                    Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(h, e));
                                 }),
-                          c)
+                          u)
                       );
                   });
               }

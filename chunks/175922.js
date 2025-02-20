@@ -1,28 +1,28 @@
-n.d(t, { Z: () => o });
-var i = n(882159),
-    r = n(894417),
-    a = n(49691),
-    s = n(436857);
-function o(e, t, n) {
+n.d(t, { Z: () => s });
+var r = n(882159),
+    i = n(894417),
+    o = n(49691),
+    a = n(436857);
+function s(e, t, n) {
     void 0 === t && (t = !1), void 0 === n && (n = !1);
-    var o = e.getBoundingClientRect(),
+    var s = e.getBoundingClientRect(),
         l = 1,
-        u = 1;
-    t && (0, i.Re)(e) && ((l = (e.offsetWidth > 0 && (0, r.NM)(o.width) / e.offsetWidth) || 1), (u = (e.offsetHeight > 0 && (0, r.NM)(o.height) / e.offsetHeight) || 1));
-    var c = ((0, i.kK)(e) ? (0, a.Z)(e) : window).visualViewport,
-        d = !(0, s.Z)() && n,
-        f = (o.left + (d && c ? c.offsetLeft : 0)) / l,
-        _ = (o.top + (d && c ? c.offsetTop : 0)) / u,
-        p = o.width / l,
-        h = o.height / u;
+        c = 1;
+    t && (0, r.Re)(e) && ((l = (e.offsetWidth > 0 && (0, i.NM)(s.width) / e.offsetWidth) || 1), (c = (e.offsetHeight > 0 && (0, i.NM)(s.height) / e.offsetHeight) || 1));
+    var u = ((0, r.kK)(e) ? (0, o.Z)(e) : window).visualViewport,
+        d = !(0, a.Z)() && n,
+        f = (s.left + (d && u ? u.offsetLeft : 0)) / l,
+        p = (s.top + (d && u ? u.offsetTop : 0)) / c,
+        _ = s.width / l,
+        h = s.height / c;
     return {
-        width: p,
+        width: _,
         height: h,
-        top: _,
-        right: f + p,
-        bottom: _ + h,
+        top: p,
+        right: f + _,
+        bottom: p + h,
         left: f,
         x: f,
-        y: _
+        y: p
     };
 }

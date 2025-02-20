@@ -1,26 +1,26 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var r = n(512722),
-    l = n.n(r),
-    s = n(442837),
-    a = n(481060),
+var i = n(512722),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
     o = n(395586),
     c = n(825055),
     d = n(909656),
     u = n(430824),
     m = n(388032);
-function h(e) {
+function p(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([u.Z], () => u.Z.getGuild(t));
+        n = (0, a.e7)([u.Z], () => u.Z.getGuild(t));
     return (
-        l()(null != n, 'Guild not found'),
-        (0, i.jsxs)(o.AL, {
+        s()(null != n, 'Guild not found'),
+        (0, r.jsxs)(o.AL, {
             guildId: t,
             children: [
-                (0, i.jsx)(c.Z, { children: m.intl.string(m.t.WMyX29) }),
-                (0, i.jsx)(a.LZC, { size: 32 }),
-                (0, i.jsx)(d.Z, {
+                (0, r.jsx)(c.Z, { children: m.NW.string(m.t.WMyX29) }),
+                (0, r.jsx)(l.LZC, { size: 32 }),
+                (0, r.jsx)(d.Z, {
                     guild: n,
                     isGuildProducts: !0
                 })

@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,8 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => a }), n(653041);
-class r {
+n.d(t, { Z: () => o }), n(653041);
+class i {
     enqueue(e) {
         this.queue.push(e);
     }
@@ -23,7 +23,7 @@ class r {
         }
     }
     constructor() {
-        i(this, 'queue', []);
+        r(this, 'queue', []);
     }
 }
-let a = new r();
+let o = new i();

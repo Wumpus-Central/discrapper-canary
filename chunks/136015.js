@@ -1,6 +1,6 @@
-function i(e, t) {
+function r(e, t) {
     let [, n] = e,
-        [, i] = t;
-    return n === i;
+        [, r] = t;
+    return n === r;
 }
-n.d(t, { Q: () => i }), n(47120);
+n.d(t, { Q: () => r }), n(47120);

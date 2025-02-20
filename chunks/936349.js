@@ -1,11 +1,11 @@
-n.d(t, { Z: () => h });
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+n.d(t, { Z: () => h }), n(301563);
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(70956);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,19 +18,19 @@ function u(e, t, n) {
         e
     );
 }
-let c = {
+let u = {
         preferredRegions: null,
         lastTestTimestamp: null,
         lastGeoRankedOrder: null
     },
-    d = c,
-    f = 1 * l.Z.Millis.HOUR;
-function _(e) {
+    d = u,
+    f = +l.Z.Millis.HOUR;
+function p(e) {
     e.latencyRankedRegions.length > 0 && ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)), (d.lastTestTimestamp = Date.now());
 }
-class p extends (i = s.ZP.DeviceSettingsStore) {
+class _ extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = null != e ? e : c;
+        d = null != e ? e : u;
     }
     shouldIncludePreferredRegion() {
         return null != d.preferredRegions;
@@ -50,8 +50,8 @@ class p extends (i = s.ZP.DeviceSettingsStore) {
     }
     shouldPerformLatencyTest(e) {
         var t, n;
-        return null === d.preferredRegions || !a().isEqual(e, null !== (t = d.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = d.lastTestTimestamp) && void 0 !== n ? n : 0) >= f;
+        return null === d.preferredRegions || !o().isEqual(e, null !== (t = d.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = d.lastTestTimestamp) && void 0 !== n ? n : 0) >= f;
     }
 }
-u(p, 'displayName', 'RTCRegionStore'), u(p, 'persistKey', 'RTCRegionStore'), u(p, 'migrations', [(e) => (e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null), delete e.preferredRegion, e)]);
-let h = new p(o.Z, { RTC_LATENCY_TEST_COMPLETE: _ });
+c(_, 'displayName', 'RTCRegionStore'), c(_, 'persistKey', 'RTCRegionStore'), c(_, 'migrations', [(e) => (e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null), delete e.preferredRegion, e)]);
+let h = new _(s.Z, { RTC_LATENCY_TEST_COMPLETE: p });

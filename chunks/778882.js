@@ -1,11 +1,11 @@
 n.r(t),
     n.d(t, {
-        FILE: () => i,
-        HTML: () => s,
-        TEXT: () => a,
-        URL: () => r
+        FILE: () => r,
+        HTML: () => a,
+        TEXT: () => o,
+        URL: () => i
     });
-var i = '__NATIVE_FILE__',
-    r = '__NATIVE_URL__',
-    a = '__NATIVE_TEXT__',
-    s = '__NATIVE_HTML__';
+var r = '__NATIVE_FILE__',
+    i = '__NATIVE_URL__',
+    o = '__NATIVE_TEXT__',
+    a = '__NATIVE_HTML__';

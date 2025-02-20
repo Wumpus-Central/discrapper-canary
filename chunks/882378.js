@@ -1,110 +1,110 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(952265),
-    s = n(481060),
-    o = n(493773),
+n.d(t, { Z: () => C }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(952265),
+    a = n(481060),
+    s = n(493773),
     c = n(378298),
-    d = n(444957),
-    u = n(276618),
-    h = n(367408),
-    p = n(473092),
-    m = n(819640),
-    f = n(665149),
+    u = n(444957),
+    d = n(276618),
+    p = n(367408),
+    h = n(473092),
+    f = n(819640),
+    m = n(665149),
     g = n(134612),
-    _ = n(388032),
-    C = n(189092);
-let x = l.memo(function (e) {
+    b = n(388032),
+    _ = n(622353);
+let C = i.memo(function (e) {
     let { channel: t } = e,
-        x = (0, d.h)(t.id),
-        v = (0, u.o)(t.id),
-        E = (0, h.M)(t.id),
-        I = (0, r.f9)(),
-        b = (0, a.e7)([m.Z], () => m.Z.hasLayers()),
-        Z = l.useCallback(() => (v ? _.intl.string(_.t['16QyDg']) : null != E ? _.intl.string(_.t.kCN9i4) : null), [v, E]),
-        N = l.useMemo(() => (v || null != E) && !I && !b, [v, E, I, b]),
-        [T, S] = l.useState(Z());
-    l.useEffect(() => {
-        null != E &&
-            null != x &&
-            (s.uvj.announce(_.intl.string(_.t.acsXuL)),
+        C = (0, u.h)(t.id),
+        v = (0, d.o)(t.id),
+        y = (0, p.M)(t.id),
+        x = (0, o.f9)(),
+        j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
+        O = i.useCallback(() => (v ? b.NW.string(b.t['16QyDg']) : null != y ? b.NW.string(b.t.kCN9i4) : null), [v, y]),
+        N = i.useMemo(() => (v || null != y) && !x && !j, [v, y, x, j]),
+        [E, P] = i.useState(O());
+    i.useEffect(() => {
+        null != y &&
+            null != C &&
+            (a.uvj.announce(b.NW.string(b.t.acsXuL)),
             setTimeout(() => {
-                (0, c.T)(t.id, [E.id]);
+                (0, c.T)(t.id, [y.id]);
             }, 5000),
-            (0, p.KQ)({
+            (0, h.KQ)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: E.id,
-                warningType: E.type,
-                isNudgeWarning: null != E,
-                viewName: p.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
+                warningId: y.id,
+                warningType: y.type,
+                isNudgeWarning: null != y,
+                viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
             })),
             v &&
-                (s.uvj.announce(_.intl.string(_.t['1dxCqK'])),
+                (a.uvj.announce(b.NW.string(b.t['1dxCqK'])),
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
                 }, 5000));
-    }, [t, E, x, v]),
-        (0, o.ZP)(() => {
-            null != x &&
-                (0, p.KQ)({
+    }, [t, y, C, v]),
+        (0, s.ZP)(() => {
+            null != C &&
+                (0, h.KQ)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: x.id,
-                    warningType: x.type,
-                    isNudgeWarning: null != E,
-                    viewName: p.pb.SAFETY_TOOLS_BUTTON
+                    warningId: C.id,
+                    warningType: C.type,
+                    isNudgeWarning: null != y,
+                    viewName: h.pb.SAFETY_TOOLS_BUTTON
                 });
         }),
-        l.useEffect(() => {
-            let e = Z();
-            null != e && S(e);
-        }, [v, E, Z]);
-    let j = l.useCallback(() => {
-        null != E && (0, c.T)(t.id, [E.id]),
-            null != x &&
-                ((0, s.ZDy)(
+        i.useEffect(() => {
+            let e = O();
+            null != e && P(e);
+        }, [v, y, O]);
+    let I = i.useCallback(() => {
+        null != y && (0, c.T)(t.id, [y.id]),
+            null != C &&
+                ((0, a.ZDy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                         return (n) => {
-                            let { onClose: l, transitionState: a } = n;
-                            return (0, i.jsx)(e, {
+                            let { onClose: i, transitionState: l } = n;
+                            return (0, r.jsx)(e, {
                                 otherUserId: t.getRecipientId(),
                                 channelId: t.id,
-                                warningId: x.id,
-                                warningType: x.type,
-                                onClose: l,
-                                transitionState: a
+                                warningId: C.id,
+                                warningType: C.type,
+                                onClose: i,
+                                transitionState: l
                             });
                         };
                     },
                     { modalKey: g.X_ }
                 ),
-                (0, p.qc)({
+                (0, h.qc)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: x.id,
-                    warningType: x.type,
-                    cta: p.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != E
+                    warningId: C.id,
+                    warningType: C.type,
+                    cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                    isNudgeWarning: null != y
                 }));
-    }, [E, x, t]);
-    return null == x
+    }, [y, C, t]);
+    return null == C
         ? null
-        : (0, i.jsx)(s.ua7, {
+        : (0, r.jsx)(a.ua7, {
               forceOpen: N,
-              text: T,
-              color: s.FGA.BRAND,
+              text: E,
+              color: a.FGA.BRAND,
               position: 'bottom',
-              tooltipClassName: C.tooltip,
-              tooltipContentClassName: C.tooltipContent,
+              tooltipClassName: _.tooltip,
+              tooltipContentClassName: _.tooltipContent,
               children: () =>
-                  (0, i.jsx)(f.ZP.Icon, {
-                      icon: s.b7C,
-                      onClick: j,
-                      tooltip: _.intl.string(_.t.rpc2qq),
-                      tooltipDisabled: null != E
+                  (0, r.jsx)(m.ZP.Icon, {
+                      icon: a.b7C,
+                      onClick: I,
+                      tooltip: b.NW.string(b.t.rpc2qq),
+                      tooltipDisabled: null != y
                   })
           });
 });

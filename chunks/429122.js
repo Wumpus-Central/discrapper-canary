@@ -1,104 +1,104 @@
 n.d(t, {
     ZP: () => v,
-    dt: () => f,
-    eo: () => _
+    dt: () => m,
+    eo: () => b
 }),
     n(653041),
     n(47120);
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(884338),
-    o = n(398758),
+var r = n(200651),
+    i = n(192379),
+    l = n(442837),
+    o = n(884338),
+    a = n(398758),
     s = n(9156),
     c = n(934415),
-    d = n(540126),
-    u = n(700026),
-    h = n(301342),
-    p = n(327530),
-    m = n(333265);
-let g = l.memo(function (e) {
+    u = n(540126),
+    d = n(700026),
+    p = n(301342),
+    h = n(327530),
+    f = n(242649);
+let g = i.memo(function (e) {
     let { guildChannels: t, guildChannelsVersion: n } = e,
-        r = l.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-    return null == r ? null : (0, i.jsx)(h.Qo, { category: r });
+        l = i.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
+    return null == l ? null : (0, r.jsx)(p.Qo, { category: l });
 });
-function f(e) {
-    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: a, visualRefreshEnabled: o, density: s } = e;
+function m(e) {
+    let { sectionIndex: t, guildChannels: n, voiceStates: r, selectedChannelId: i, selectedVoiceChannelId: l, optInEnabled: o, visualRefreshEnabled: a, density: s } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: c, canHaveVoiceSummary: h } = (0, u.ie)(n, a, t),
-        m = c ? (o ? 9 : p.QP) : 0;
-    if (!h || t === d.wZ) return m;
+    let { hasDivider: c, canHaveVoiceSummary: p } = (0, d.ie)(n, o, t),
+        f = c ? (a ? 9 : h.QP) : 0;
+    if (!p || t === u.wZ) return f;
     let g = n.getNamedCategoryFromSection(t);
     return null == g
-        ? m
-        : (0, u.V5)({
+        ? f
+        : (0, d.V5)({
                 category: g,
-                selectedChannelId: l,
-                selectedVoiceChannelId: r,
-                voiceStates: i
+                selectedChannelId: i,
+                selectedVoiceChannelId: l,
+                voiceStates: r
             })
-          ? (o ? ('cozy' === s ? 42 : 34) : p.Vf) + m
-          : m;
+          ? (a ? ('cozy' === s ? 42 : 34) : h.Vf) + f
+          : f;
 }
-function _(e, t, n) {
+function b(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
-    let { hasDivider: i, canHaveVoiceSummary: l } = (0, u.ie)(t, n, e);
+    let { hasDivider: r, canHaveVoiceSummary: i } = (0, d.ie)(t, n, e);
     return 'section-footer-'
         .concat(e)
-        .concat(i ? '-divider' : '')
-        .concat(l ? '-voice-summary' : '');
+        .concat(r ? '-divider' : '')
+        .concat(i ? '-voice-summary' : '');
 }
-let v = l.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: f, selectedChannelId: _, selectedVoiceChannelId: v, optInEnabled: C } = e,
-        { hasDivider: x, canHaveVoiceSummary: I } = l.useMemo(() => (0, u.ie)(n, C, t), [n, C, t, h]),
-        Z = l.useMemo(() => (t === d.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
-        b = (0, o.DM)(f),
-        S = (0, r.Wu)(
+let v = i.memo(function (e) {
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: p, voiceStates: h, guildId: m, selectedChannelId: b, selectedVoiceChannelId: v, optInEnabled: y } = e,
+        { hasDivider: _, canHaveVoiceSummary: O } = i.useMemo(() => (0, d.ie)(n, y, t), [n, y, t, p]),
+        j = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, p]),
+        C = (0, a.DM)(m),
+        x = (0, l.Wu)(
             [s.ZP],
             () => {
-                if (null == Z || !Z.isCollapsed || !I) return [];
-                let e = Z.getChannelRecords(),
+                if (null == j || !j.isCollapsed || !O) return [];
+                let e = j.getChannelRecords(),
                     t = [];
                 for (let n of e) {
                     if (!n.isGuildVocal()) continue;
-                    let e = s.ZP.isChannelOrParentOptedIn(f, n.id);
-                    (!b || e) && t.push(n);
+                    let e = s.ZP.isChannelOrParentOptedIn(m, n.id);
+                    (!C || e) && t.push(n);
                 }
                 return t;
             },
-            [Z, I, f, b]
+            [j, O, m, C]
         ),
-        N = l.useMemo(
+        P = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: S,
-                    selectedChannelId: _,
+                    channels: x,
+                    selectedChannelId: b,
                     selectedVoiceChannelId: v,
-                    voiceStates: p
+                    voiceStates: h
                 }),
-            [S, _, v, p]
+            [x, b, v, h]
         );
     if (t === n.voiceChannelsSectionNumber)
-        return (0, i.jsx)(g, {
+        return (0, r.jsx)(g, {
             guildChannels: n,
-            guildChannelsVersion: h
+            guildChannelsVersion: p
         });
-    let E = x ? (0, i.jsx)('div', { className: m.sectionDivider }) : null;
-    return I && 0 !== N.length
-        ? (0, i.jsxs)(i.Fragment, {
+    let S = _ ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
+    return O && 0 !== P.length
+        ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsx)('div', {
-                      className: m.voiceUserSummary,
-                      children: (0, i.jsx)(a.Z, {
+                  (0, r.jsx)('div', {
+                      className: f.voiceUserSummary,
+                      children: (0, r.jsx)(o.Z, {
                           renderIcon: !0,
-                          users: N,
+                          users: P,
                           max: 8,
                           showUserPopout: !0,
-                          guildId: f
+                          guildId: m
                       })
                   }),
-                  E
+                  S
               ]
           })
-        : E;
+        : S;
 });

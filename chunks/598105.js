@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o }), n(411104);
-var i = n(998502);
-function r(e, t, n) {
+n.d(t, { Z: () => s }), n(411104);
+var r = n(998502);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,11 +13,11 @@ function r(e, t, n) {
         e
     );
 }
-let a = 256;
-function s(e, t) {
-    return i.ZP.ensureModule('discord_spellcheck').then(() => {
-        let { cld: n } = i.ZP.requireModule('discord_spellcheck');
-        return new Promise((i, r) => {
+let o = 256;
+function a(e, t) {
+    return r.ZP.ensureModule('discord_spellcheck').then(() => {
+        let { cld: n } = r.ZP.requireModule('discord_spellcheck');
+        return new Promise((r, i) => {
             n.detect(
                 e,
                 {
@@ -25,13 +25,13 @@ function s(e, t) {
                     encodingHint: 'UTF8'
                 },
                 (e, t) => {
-                    null != e ? r(Error(e.message)) : !t.reliable || t.languages[0].percent < 90 || t.languages[0].score < 500 ? r(Error('Not enough reliable text.')) : i(t.languages[0].code);
+                    null != e ? i(Error(e.message)) : !t.reliable || t.languages[0].percent < 90 || t.languages[0].score < 500 ? i(Error('Not enough reliable text.')) : r(t.languages[0].code);
                 }
             );
         });
     });
 }
-class o {
+class s {
     get language() {
         return this._language;
     }
@@ -49,8 +49,8 @@ class o {
                     this._processEnd();
                     return;
                 }
-                e.length > a && (e = e.slice(0, a)),
-                    s(e, this._languageHint).then(
+                e.length > o && (e = e.slice(0, o)),
+                    a(e, this._languageHint).then(
                         (e) => {
                             (this.language = e), this._processEnd(t.didTimeout);
                         },
@@ -65,6 +65,6 @@ class o {
         (this._processing = !1), e && this._minimumTimeRemaining++;
     }
     constructor(e, t) {
-        r(this, '_language', void 0), r(this, '_onChange', void 0), r(this, '_languageHint', void 0), r(this, '_shouldProcess', !1), r(this, '_processing', !1), r(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
+        i(this, '_language', void 0), i(this, '_onChange', void 0), i(this, '_languageHint', void 0), i(this, '_shouldProcess', !1), i(this, '_processing', !1), i(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
     }
 }

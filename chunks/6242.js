@@ -1,12 +1,12 @@
 n.d(t, {
-    TD: () => u,
-    lL: () => c
+    TD: () => c,
+    lL: () => u
 });
-var l = n(818083),
-    i = n(594174),
-    r = n(74538),
+var r = n(818083),
+    l = n(594174),
+    i = n(74538),
     a = n(474936);
-let s = (0, l.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2024-08_hd_streaming_viewer',
     label: 'HD Streaming Viewer Upsell',
@@ -25,28 +25,28 @@ let s = (0, l.B)({
         }
     ]
 });
-function o(e, t) {
-    return (0, r.I5)(e, a.p9.TIER_2) || t;
+function s(e, t) {
+    return (0, i.I5)(e, a.p9.TIER_2) || t;
 }
-function u(e) {
-    let t = i.default.getCurrentUser();
-    return s.getCurrentConfig(
+function c(e) {
+    let t = l.default.getCurrentUser();
+    return o.getCurrentConfig(
         { location: 'get_hd_streaming_viewer_config' },
         {
             autoTrackExposure: !1,
-            disable: o(t, e)
+            disable: s(t, e)
         }
     );
 }
-function c(e) {
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
-        l = arguments.length > 3 ? arguments[3] : void 0;
-    return s.useExperiment(
+        r = arguments.length > 3 ? arguments[3] : void 0;
+    return o.useExperiment(
         { location: e },
         {
             autoTrackExposure: t,
-            disable: o(n, l)
+            disable: s(n, r)
         }
     );
 }

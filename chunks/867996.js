@@ -1,12 +1,12 @@
-var i = n(903425),
-    r = n(661233),
-    a = '[object AsyncFunction]',
-    s = '[object Function]',
-    o = '[object GeneratorFunction]',
+var r = n(903425),
+    i = n(661233),
+    o = '[object AsyncFunction]',
+    a = '[object Function]',
+    s = '[object GeneratorFunction]',
     l = '[object Proxy]';
-function u(e) {
-    if (!r(e)) return !1;
-    var t = i(e);
-    return t == s || t == o || t == a || t == l;
+function c(e) {
+    if (!i(e)) return !1;
+    var t = r(e);
+    return t == a || t == s || t == o || t == l;
 }
-e.exports = u;
+e.exports = c;

@@ -18,9 +18,9 @@ var r = n(200651),
     p = n(131951),
     h = n(19780),
     f = n(626135),
-    N = n(981631),
-    x = n(388032),
-    b = n(847164);
+    b = n(981631),
+    N = n(388032),
+    x = n(847164);
 function _(e, t, n) {
     return (
         t in e
@@ -52,7 +52,7 @@ class E extends i.PureComponent {
                 isDetectingInput: !0,
                 didDeafenUser: d
             }),
-            f.default.track(N.rMx.MIC_TESTING_STARTED, {
+            f.default.track(b.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: r,
@@ -73,13 +73,13 @@ class E extends i.PureComponent {
                     isMicTesting: !1,
                     didDeafenUser: !1
                 }),
-                null != this._micTestStartTime && f.default.track(N.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
+                null != this._micTestStartTime && f.default.track(b.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: i } = this.state;
         return (0, r.jsx)(d.R94, {
-            className: b.micTestCaption,
+            className: x.micTestCaption,
             type: d.R94.Types.DESCRIPTION,
             children: n ? (i ? e : t) : null
         });
@@ -87,28 +87,28 @@ class E extends i.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: i, buttonTest: s, buttonStop: a, buttonClassName: l, buttonColor: o, isDeafened: c, buttonMinWidth: u, measureButtonRef: m } = this.props,
             { isMicTesting: p, volume: h } = this.state,
-            f = e && !p ? x.NW.string(x.t['9viE2N']) : null;
+            f = e && !p ? N.NW.string(N.t['9viE2N']) : null;
         p && e && !c && this._micTestStop();
-        let N = a.length >= s.length ? a : s;
+        let b = a.length >= s.length ? a : s;
         return (0, r.jsxs)('div', {
-            className: b.container,
+            className: x.container,
             children: [
                 (0, r.jsx)(d.vwX, {
                     tag: d.RB0.H5,
-                    className: b.title,
+                    className: x.title,
                     children: t
                 }),
                 null != n &&
                     (0, r.jsx)(d.R94, {
                         type: d.R94.Types.DESCRIPTION,
-                        className: b.description,
+                        className: x.description,
                         children: n
                     }),
                 (0, r.jsxs)('div', {
-                    className: b.micTest,
+                    className: x.micTest,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: b.buttonSizer,
+                            className: x.buttonSizer,
                             'aria-hidden': !0,
                             children: [
                                 (0, r.jsx)(d.zxk, {
@@ -117,9 +117,9 @@ class E extends i.PureComponent {
                                     size: d.zxk.Sizes.SMALL,
                                     className: l,
                                     color: o,
-                                    children: N
+                                    children: b
                                 }),
-                                (0, r.jsx)('div', { className: b.buttonSizerSpacer })
+                                (0, r.jsx)('div', { className: x.buttonSizerSpacer })
                             ]
                         }),
                         (0, r.jsx)(d.ua7, {
@@ -222,7 +222,7 @@ function j(e) {
             };
         }),
         f = (0, l.e7)([h.Z], () => h.Z.isConnected()),
-        { ref: N, width: x } = (0, m.Z)();
+        { ref: b, width: N } = (0, m.Z)();
     return (0, r.jsx)(
         E,
         (function (e) {
@@ -251,8 +251,8 @@ function j(e) {
                 vadAutoThreshold: o.autoThreshold,
                 inputDeviceName: null !== (t = null == i ? void 0 : i.name) && void 0 !== t ? t : '',
                 outputDeviceName: null !== (n = null == s ? void 0 : s.name) && void 0 !== n ? n : '',
-                measureButtonRef: N,
-                buttonMinWidth: x
+                measureButtonRef: b,
+                buttonMinWidth: N
             },
             e
         )

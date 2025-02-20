@@ -1,13 +1,13 @@
 n.d(t, {
-    PR: () => u,
-    Z0: () => c,
-    ZP: () => o,
+    PR: () => c,
+    Z0: () => u,
+    ZP: () => s,
     e1: () => l
 });
-var i = n(818083),
-    r = n(32300),
-    a = n(987338);
-let s = (0, i.B)({
+var r = n(818083),
+    i = n(32300),
+    o = n(987338);
+let a = (0, r.B)({
         kind: 'user',
         id: '2024-11_activity_popout_window',
         label: 'Activity Popout Window Experiment',
@@ -16,7 +16,7 @@ let s = (0, i.B)({
             enableOverlayInActivityPopoutWindow: !1,
             enableGoLiveFromActivityCard: !1
         },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -47,15 +47,15 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = s;
+    s = a;
 function l() {
-    let e = (0, r.Rb)('ActivityPopout').overlayV3UI;
-    return s.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
-}
-function u() {
-    let e = (0, r.o4)('ActivityPopout').overlayV3UI;
-    return s.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
+    let e = (0, i.Rb)('ActivityPopout').overlayV3UI;
+    return a.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function c() {
-    return s.useExperiment({ location: 'useCanGoLiveActivityFromActivityCard' }).enableGoLiveFromActivityCard;
+    let e = (0, i.o4)('ActivityPopout').overlayV3UI;
+    return a.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
+}
+function u() {
+    return a.useExperiment({ location: 'useCanGoLiveActivityFromActivityCard' }).enableGoLiveFromActivityCard;
 }

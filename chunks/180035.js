@@ -1,21 +1,21 @@
-n.d(t, { d: () => o }), n(653041);
-var i = n(399606),
-    r = n(410030),
-    a = n(607070),
-    s = n(540059);
-function o(e, t) {
-    let n = (0, r.ZP)(),
-        o = (0, i.e7)([a.Z], () => a.Z.saturation),
-        l = (0, s.Q3)('useToken'),
-        u = (0, s.R6)('useToken'),
-        c = [];
+n.d(t, { d: () => s }), n(653041);
+var r = n(399606),
+    i = n(410030),
+    o = n(607070),
+    a = n(540059);
+function s(e, t) {
+    let n = (0, i.ZP)(),
+        s = (0, r.e7)([o.Z], () => o.Z.saturation),
+        l = (0, a.Q3)('useToken'),
+        c = (0, a.R6)('useToken'),
+        u = [];
     return (
-        l && c.push('visual-refresh'),
-        u && c.push('visual-refresh-chat-input'),
+        l && u.push('visual-refresh'),
+        c && u.push('visual-refresh-chat-input'),
         e.resolve({
             theme: null != t ? t : n,
-            saturation: o,
-            enabledExperiments: c
+            saturation: s,
+            enabledExperiments: u
         })
     );
 }

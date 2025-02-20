@@ -1,4 +1,4 @@
-var i = n(948634);
-e.exports = function (e, t, n, r) {
-    return r && r.enumerable ? (e[t] = n) : i(e, t, n), e;
+var r = n(948634);
+e.exports = function (e, t, n, i) {
+    return i && i.enumerable ? (e[t] = n) : r(e, t, n), e;
 };

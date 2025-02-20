@@ -1,28 +1,28 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var s = n(630759),
-    r = n(921157),
-    l = n(76793),
-    a = n(838436),
+var i = n(630759),
+    s = n(921157),
+    a = n(76793),
+    l = n(838436),
     o = n(726985),
     c = n(388032),
-    d = n(64552);
+    d = n(433073);
 function u() {
-    let e = (0, r.s)();
-    return (0, i.jsxs)(a.U, {
+    let e = (0, s.s)();
+    return (0, r.jsxs)(l.U, {
         setting: o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
         children: [
-            (0, i.jsx)(a.H, {
-                header: c.intl.string(c.t['5b3FND']),
-                description: c.intl.format(c.t.jrTSWV, { helpArticle: (0, s.pL)() })
+            (0, r.jsx)(l.H, {
+                header: c.NW.string(c.t['5b3FND']),
+                description: c.NW.format(c.t.jrTSWV, { helpArticle: (0, i.pL)() })
             }),
             e.map((e) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     'div',
                     {
                         className: d.item,
-                        children: (0, i.jsx)(l.q, { userId: e })
+                        children: (0, r.jsx)(a.q, { userId: e })
                     },
                     e
                 )

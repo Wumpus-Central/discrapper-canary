@@ -7,15 +7,15 @@ function t(e) {
             className: 'symbol',
             begin: '[a-zA-Z0-9_]+@'
         },
-        i = {
+        r = {
             className: 'keyword',
             begin: '<',
             end: '>',
             contains: [t, n]
         };
     return (
-        (t.contains = [i]),
-        (n.contains = [i]),
+        (t.contains = [r]),
+        (n.contains = [r]),
         {
             name: 'AngelScript',
             aliases: ['asc'],

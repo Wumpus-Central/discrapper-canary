@@ -1,22 +1,22 @@
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(329022),
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(329022),
     l = n(829307),
-    u = n(877837),
-    c = n(444366),
+    c = n(877837),
+    u = n(444366),
     d = function (e) {
         var t = e.width,
             n = e.colors,
-            r = e.onChange,
-            a = e.onSwatchHover,
-            u = e.triangle,
+            i = e.onChange,
+            o = e.onSwatchHover,
+            c = e.triangle,
             d = e.styles,
             f = void 0 === d ? {} : d,
-            _ = e.className,
-            p = void 0 === _ ? '' : _,
-            h = (0, s.default)(
+            p = e.className,
+            _ = void 0 === p ? '' : p,
+            h = (0, a.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -94,15 +94,15 @@ var i = n(192379),
                     f
                 ),
                 {
-                    'hide-triangle': 'hide' === u,
-                    'top-left-triangle': 'top-left' === u,
-                    'top-right-triangle': 'top-right' === u,
-                    'bottom-left-triangle': 'bottom-left' === u,
-                    'bottom-right-triangle': 'bottom-right' === u
+                    'hide-triangle': 'hide' === c,
+                    'top-left-triangle': 'top-left' === c,
+                    'top-right-triangle': 'top-right' === c,
+                    'bottom-left-triangle': 'bottom-left' === c,
+                    'bottom-right-triangle': 'bottom-right' === c
                 }
             ),
             m = function (e, t) {
-                return r(
+                return i(
                     {
                         hex: e,
                         source: 'hex'
@@ -110,29 +110,29 @@ var i = n(192379),
                     t
                 );
             };
-        return i.createElement(
+        return r.createElement(
             'div',
             {
                 style: h.card,
-                className: 'github-picker ' + p
+                className: 'github-picker ' + _
             },
-            i.createElement('div', { style: h.triangleShadow }),
-            i.createElement('div', { style: h.triangle }),
-            (0, o.Z)(n, function (e) {
-                return i.createElement(c.Z, {
+            r.createElement('div', { style: h.triangleShadow }),
+            r.createElement('div', { style: h.triangle }),
+            (0, s.Z)(n, function (e) {
+                return r.createElement(u.Z, {
                     color: e,
                     key: e,
                     onClick: m,
-                    onSwatchHover: a
+                    onSwatchHover: o
                 });
             })
         );
     };
 (d.propTypes = {
-    width: a().oneOfType([a().string, a().number]),
-    colors: a().arrayOf(a().string),
-    triangle: a().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
-    styles: a().object
+    width: o().oneOfType([o().string, o().number]),
+    colors: o().arrayOf(o().string),
+    triangle: o().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
+    styles: o().object
 }),
     (d.defaultProps = {
         width: 200,
@@ -140,4 +140,4 @@ var i = n(192379),
         triangle: 'top-left',
         styles: {}
     }),
-    (0, u.t1)(d);
+    (0, c.t1)(d);

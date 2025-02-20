@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     return ['top', 'bottom'].indexOf(e) >= 0 ? 'x' : 'y';
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

@@ -1,13 +1,13 @@
-n.d(t, { Z: () => o });
-var i = n(192379),
-    r = n(723184),
-    a = n(329022),
-    s = n(877837);
-let o = function (e) {
+n.d(t, { Z: () => s });
+var r = n(192379),
+    i = n(723184),
+    o = n(329022),
+    a = n(877837);
+let s = function (e) {
     var t = e.colors,
         n = e.onClick,
-        o = e.onSwatchHover,
-        l = (0, r.default)({
+        s = e.onSwatchHover,
+        l = (0, i.default)({
             default: {
                 swatches: { marginRight: '-10px' },
                 swatch: {
@@ -21,19 +21,19 @@ let o = function (e) {
                 clear: { clear: 'both' }
             }
         });
-    return i.createElement(
+    return r.createElement(
         'div',
         { style: l.swatches },
-        (0, a.Z)(t, function (e) {
-            return i.createElement(s.m4, {
+        (0, o.Z)(t, function (e) {
+            return r.createElement(a.m4, {
                 key: e,
                 color: e,
                 style: l.swatch,
                 onClick: n,
-                onHover: o,
+                onHover: s,
                 focusStyle: { boxShadow: '0 0 4px ' + e }
             });
         }),
-        i.createElement('div', { style: l.clear })
+        r.createElement('div', { style: l.clear })
     );
 };

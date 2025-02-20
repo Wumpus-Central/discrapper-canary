@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    i = n(91192),
+    i = n.n(a),
+    o = n(91192),
     s = n(442837),
     E = n(481060),
     c = n(43267),
@@ -19,8 +19,8 @@ var r = n(200651),
     I = n(430824),
     O = n(158776),
     g = n(111583),
-    f = n(594174),
-    R = n(998502),
+    R = n(594174),
+    f = n(998502),
     S = n(981631),
     p = n(490897),
     U = n(436804),
@@ -79,7 +79,7 @@ let h = {
 function m(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let M = R.ZP.getEnableHardwareAcceleration() ? E.Xo$ : E.qEK;
+let M = f.ZP.getEnableHardwareAcceleration() ? E.Xo$ : E.qEK;
 function v(e) {
     let { channel: t } = e;
     return (0, r.jsx)(M, {
@@ -90,9 +90,9 @@ function v(e) {
 }
 function b(e) {
     let { channel: t } = e,
-        n = (0, s.e7)([f.default], () => f.default.getUser(null == t ? void 0 : t.recipients[0])),
+        n = (0, s.e7)([R.default], () => R.default.getUser(null == t ? void 0 : t.recipients[0])),
         l = (0, s.e7)([g.Z], () => !(null == n || null == t || t.isMultiUserDM()) && null != g.Z.getTypingUsers(null == t ? void 0 : t.id)[null == n ? void 0 : n.id]),
-        { status: a, isMobile: o } = (0, s.cj)([O.Z], () =>
+        { status: a, isMobile: i } = (0, s.cj)([O.Z], () =>
             null == n || null == t || t.isMultiUserDM()
                 ? {
                       status: null,
@@ -107,18 +107,18 @@ function b(e) {
         size: E.EFr.SIZE_20,
         src: null == n ? void 0 : n.getAvatarURL(void 0, 40),
         status: a,
-        isMobile: o,
+        isMobile: i,
         isTyping: l,
         'aria-label': null == n ? void 0 : n.username,
         statusTooltip: !0
     });
 }
 let P = (e) => {
-    let { className: t, channel: n, locked: l, hasActiveThreads: a, withGuildIcon: i } = e,
+    let { className: t, channel: n, locked: l, hasActiveThreads: a, withGuildIcon: o } = e,
         c = (0, s.e7)([I.Z], () => I.Z.getGuild(n.guild_id), [n.guild_id]),
         u = n.type === S.d4z.DM || n.type === S.d4z.GROUP_DM,
         d = null;
-    if (i && null != c && !u)
+    if (o && null != c && !u)
         d = (0, r.jsx)(T.Z, {
             size: T.E.SMALL_32,
             className: D.iconContainerWithGuildIcon,
@@ -149,11 +149,11 @@ let P = (e) => {
         if (null == e) return null;
         d = (0, r.jsx)(e, {
             color: 'currentColor',
-            className: o()(D.icon, t)
+            className: i()(D.icon, t)
         });
     }
-    let A = i ? (null == c ? void 0 : c.name) : (0, _.bT)(n, c, l, a),
-        N = i && null != c ? ''.concat(c.name, ' - ').concat(A, ' icon') : ''.concat(A, ' icon');
+    let A = o ? (null == c ? void 0 : c.name) : (0, _.bT)(n, c, l, a),
+        N = o && null != c ? ''.concat(c.name, ' - ').concat(A, ' icon') : ''.concat(A, ' icon');
     return (0, r.jsx)(E.ua7, {
         text: A,
         delay: 500,
@@ -163,7 +163,7 @@ let P = (e) => {
                 L(C({}, e), {
                     role: 'img',
                     'aria-label': N,
-                    className: o()(D.iconContainer),
+                    className: i()(D.iconContainer),
                     children: d
                 })
             )
@@ -181,8 +181,8 @@ function x(e) {
             locked: I,
             hasActiveThreads: O,
             onClick: g,
-            onMouseDown: f,
-            onMouseUp: R,
+            onMouseDown: R,
+            onMouseUp: f,
             onContextMenu: M,
             connectDragPreview: v,
             className: b,
@@ -204,7 +204,7 @@ function x(e) {
             hasActiveEvent: Y = !1
         } = e,
         X = K === p.i.ALL_MESSAGES || (null != H && H > 0),
-        J = (0, i.JA)(n.id),
+        J = (0, o.JA)(n.id),
         { role: Q } = J,
         $ = (function (e, t) {
             if (null == e) return {};
@@ -231,8 +231,8 @@ function x(e) {
         er = S.Z5c.CHANNEL(en, n.id),
         el = (0, u.ZP)(n),
         ea = n.isGuildVocal(),
-        eo = (0, r.jsx)('div', {
-            className: o()({ [D.favoritesSuggestion]: Z }),
+        ei = (0, r.jsx)('div', {
+            className: i()({ [D.favoritesSuggestion]: Z }),
             ref: et,
             children: (0, r.jsxs)(
                 N.Z,
@@ -264,7 +264,7 @@ function x(e) {
                                         withGuildIcon: q
                                     }),
                                     (0, r.jsx)(d.Z, {
-                                        className: o()(D.name, { [D.activeEvent]: Y }),
+                                        className: i()(D.name, { [D.activeEvent]: Y }),
                                         'aria-hidden': !0,
                                         children: null == a ? el : a
                                     }),
@@ -279,7 +279,7 @@ function x(e) {
                             }),
                             null != y
                                 ? (0, r.jsx)('div', {
-                                      className: o()(D.linkBottom, { [D.withGuildIcon]: q }),
+                                      className: i()(D.linkBottom, { [D.withGuildIcon]: q }),
                                       children: (0, r.jsx)(E.Text, {
                                           color: null != j ? j : 'text-muted',
                                           variant: 'text-xs/medium',
@@ -302,10 +302,10 @@ function x(e) {
             right: 4
         },
         children: (0, r.jsxs)('div', {
-            className: o()(
+            className: i()(
                 b,
-                null != g || null != R || null != f || V ? D.wrapper : D.notInteractive,
-                c ? o()(U.selectedChannel, h.SELECTED) : _ ? o()(U.selectedChannel, h.CONNECTED) : I ? h.LOCKED : s ? h.MUTED : T ? (X ? h.UNREAD_IMPORTANT : h.UNREAD_LESS_IMPORTANT) : null,
+                null != g || null != f || null != R || V ? D.wrapper : D.notInteractive,
+                c ? i()(U.selectedChannel, h.SELECTED) : _ ? i()(U.selectedChannel, h.CONNECTED) : I ? h.LOCKED : s ? h.MUTED : T ? (X ? h.UNREAD_IMPORTANT : h.UNREAD_LESS_IMPORTANT) : null,
                 (function (e) {
                     switch (e) {
                         case S.d4z.GUILD_STAGE_VOICE:
@@ -325,12 +325,12 @@ function x(e) {
                     }
                 })(null != k ? k : G)
             ),
-            onMouseUp: (e) => (null == R ? void 0 : R(e, n)),
-            onMouseDown: (e) => (null == f ? void 0 : f(e, n)),
+            onMouseUp: (e) => (null == f ? void 0 : f(e, n)),
+            onMouseDown: (e) => (null == R ? void 0 : R(e, n)),
             onContextMenu: (e) => (null == M ? void 0 : M(e, n)),
             onMouseEnter: F,
             onMouseLeave: W,
-            children: [s || !T ? null : (0, r.jsx)('div', { className: o()(D.unread, X ? D.unreadImportant : void 0) }), null !== (t = null == v ? void 0 : v(eo)) && void 0 !== t ? t : eo]
+            children: [s || !T ? null : (0, r.jsx)('div', { className: i()(D.unread, X ? D.unreadImportant : void 0) }), null !== (t = null == v ? void 0 : v(ei)) && void 0 !== t ? t : ei]
         })
     });
 }

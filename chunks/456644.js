@@ -1,8 +1,8 @@
 n.d(t, {
-    G: () => r,
-    i: () => a
+    G: () => i,
+    i: () => o
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-11_user_profile_recent_activity',
         label: 'User Profile Recent Activity',
@@ -29,11 +29,11 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => {
+    i = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;
-        return i.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
     },
-    a = (e) => {
+    o = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;
-        return i.useExperiment({ location: t }, { autoTrackExposure: n });
+        return r.useExperiment({ location: t }, { autoTrackExposure: n });
     };

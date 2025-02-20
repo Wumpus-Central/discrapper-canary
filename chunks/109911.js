@@ -1,16 +1,16 @@
 n.d(t, {
-    Ji: () => u,
+    Ji: () => c,
     XN: () => l
 });
-var i = n(818083),
-    r = n(638395);
+var r = n(818083),
+    i = n(638395);
 n(171393);
-var a = n(987338);
-let s = (0, i.B)({
+var o = n(987338);
+let a = (0, r.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
-        commonTriggerPoint: a.$P.CONNECTION_OPEN_MOBILE,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -39,8 +39,8 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o =
-        ((0, i.B)({
+    s =
+        ((0, r.B)({
             kind: 'user',
             id: '2024-12_icymi_status_with_media',
             label: 'Shows media with custom status in ICYMI',
@@ -53,7 +53,7 @@ let s = (0, i.B)({
                 }
             ]
         }),
-        (0, i.B)({
+        (0, r.B)({
             kind: 'user',
             id: '2024-10_merge_notifications_tab',
             label: 'Merge notifications tab',
@@ -103,13 +103,13 @@ let s = (0, i.B)({
         }));
 function l(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        i = r.Z.get('hide_icymi_tab'),
-        a = u(t, !1),
+        r = i.Z.get('hide_icymi_tab'),
+        o = c(t, !1),
         {
-            enabled: s,
+            enabled: a,
             tabBadgeVariant: l,
-            removeHomeMentionBadges: c
-        } = o.getCurrentConfig(
+            removeHomeMentionBadges: u
+        } = s.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -117,14 +117,14 @@ function l(e) {
             }
         );
     return {
-        enabled: s && !i && a,
+        enabled: a && !r && o,
         tabBadgeVariant: l,
-        removeHomeMentionBadges: c
+        removeHomeMentionBadges: u
     };
 }
-function u(e) {
+function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return s.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: e },
         {
             disable: !0,
@@ -132,7 +132,7 @@ function u(e) {
         }
     ).enabled;
 }
-(0, i.B)({
+(0, r.B)({
     kind: 'user',
     id: '2024-07_icymi_negative_items',
     label: 'icymi negative content (debugging only)',

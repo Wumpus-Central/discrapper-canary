@@ -13,27 +13,27 @@ var r = n(200651),
     p = n(477734),
     h = n(626135),
     f = n(881100),
-    N = n(981631),
-    x = n(388032),
-    b = n(597520);
-let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
+    b = n(981631),
+    N = n(388032),
+    x = n(597520);
+let _ = (e) => (e ? N.NW.string(N.t.QX14gI) : N.NW.string(N.t.RGadQU)),
     E = (e) => {
         let { isShowingAll: t, onClick: n } = e;
         return (0, r.jsxs)(o.P3F, {
             onClick: n,
-            className: b.customButton,
+            className: x.customButton,
             children: [
-                t ? x.NW.string(x.t.maZaNz) : x.NW.string(x.t['37C26e']),
+                t ? N.NW.string(N.t.maZaNz) : N.NW.string(N.t['37C26e']),
                 t
                     ? (0, r.jsx)(o.u04, {
                           size: 'md',
                           color: 'currentColor',
-                          className: b.arrow
+                          className: x.arrow
                       })
                     : (0, r.jsx)(o.CJ0, {
                           size: 'md',
                           color: 'currentColor',
-                          className: b.arrow
+                          className: x.arrow
                       })
             ]
         });
@@ -44,31 +44,31 @@ let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
         return (0, r.jsx)(u.Gt, {
             value: f,
             children: (0, r.jsxs)('div', {
-                className: a()(b.perkCard, i),
+                className: a()(x.perkCard, i),
                 children: [
                     p
                         ? (0, r.jsx)(g.Z, {
-                              className: b.perkCardNewBadge,
+                              className: x.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    h ? (0, r.jsx)(m.Z, { className: b.perkCardEarlyAccessBadge }) : null,
+                    h ? (0, r.jsx)(m.Z, { className: x.perkCardEarlyAccessBadge }) : null,
                     (0, r.jsx)('img', {
                         src: s,
                         alt: '',
-                        className: a()(l, b.perksCardArt)
+                        className: a()(l, x.perksCardArt)
                     }),
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsxs)(o.X6q, {
                                 variant: 'heading-lg/extrabold',
-                                className: b.perkCardHeading,
+                                className: x.perkCardHeading,
                                 children: [t, ' ', c]
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
-                                className: b.perkCardDescription,
+                                className: x.perkCardDescription,
                                 children: 'function' == typeof n ? n(f) : n
                             })
                         ]
@@ -80,25 +80,25 @@ let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
     C = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [s, d] = i.useState(!1),
-            m = (0, f.N)({ styles: b }),
+            m = (0, f.N)({ styles: x }),
             g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-            { analyticsLocations: x } = (0, u.ZP)(),
+            { analyticsLocations: N } = (0, u.ZP)(),
             C = (0, p._f)(),
             O = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, C ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
         return (0, r.jsxs)('div', {
-            className: a()(b.perksContainer, t, {
-                [b.partiallyHidden]: n && !s,
-                [b.subscriberNitroHome]: n,
-                [b.reducedMotion]: g
+            className: a()(x.perksContainer, t, {
+                [x.partiallyHidden]: n && !s,
+                [x.subscriberNitroHome]: n,
+                [x.reducedMotion]: g
             }),
             children: [
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-xxl/extrabold',
-                    className: a()(b.perksTitle),
+                    className: a()(x.perksTitle),
                     children: _(n)
                 }),
                 (0, r.jsx)('div', {
-                    className: a()(b.perkCardContainer, { [b.perkCardContainerExpanded]: s }),
+                    className: a()(x.perkCardContainer, { [x.perkCardContainerExpanded]: s }),
                     children: O.map(
                         (e) =>
                             null != e &&
@@ -138,13 +138,13 @@ let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
                         children: [
                             (0, r.jsx)('div', {
                                 className: a()({
-                                    [b.sizeGizmo]: !s,
-                                    [b.sizeGizmoExpanded]: s
+                                    [x.sizeGizmo]: !s,
+                                    [x.sizeGizmoExpanded]: s
                                 }),
                                 children: (0, r.jsx)(E, {
                                     onClick: () => {
-                                        h.default.track(N.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-                                            location_stack: x,
+                                        h.default.track(b.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+                                            location_stack: N,
                                             was_expanded: s
                                         }),
                                             d(!s);
@@ -152,7 +152,7 @@ let _ = (e) => (e ? x.NW.string(x.t.QX14gI) : x.NW.string(x.t.RGadQU)),
                                     isShowingAll: s
                                 })
                             }),
-                            (0, r.jsx)('div', { className: a()(b.cover, { [b.hidden]: s }) })
+                            (0, r.jsx)('div', { className: a()(x.cover, { [x.hidden]: s }) })
                         ]
                     })
             ]

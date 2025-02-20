@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(600164),
     h = n(144114),
     f = n(921801),
-    N = n(607018),
-    x = n(778764),
-    b = n(314897),
+    b = n(607018),
+    N = n(778764),
+    x = n(314897),
     _ = n(325067),
     E = n(594174),
     j = n(572004),
@@ -290,7 +290,7 @@ class k extends i.PureComponent {
                 this.renderMFASMS(),
                 (0, r.jsx)(f.F, {
                     setting: S.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, r.jsx)(x.Z, {})
+                    children: (0, r.jsx)(N.Z, {})
                 })
             ]
         });
@@ -311,7 +311,7 @@ class k extends i.PureComponent {
                         children: y.NW.string(y.t.cDgKtb)
                     })
                 }),
-                (0, r.jsx)(x.Z, {})
+                (0, r.jsx)(N.Z, {})
             ]
         });
     }
@@ -339,7 +339,7 @@ class k extends i.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, o.h7j)((t) => (0, r.jsx)(N.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
+        (0, o.h7j)((t) => (0, r.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
     }
     constructor(...e) {
         super(...e),
@@ -444,9 +444,9 @@ class k extends i.PureComponent {
 function W(e) {
     let t = (0, l.e7)([E.default], () => E.default.getCurrentUser());
     a()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-    let n = (0, l.cj)([_.Z, b.default], () => ({
+    let n = (0, l.cj)([_.Z, x.default], () => ({
         togglingSMS: _.Z.togglingSMS,
-        hasTOTPEnabled: b.default.hasTOTPEnabled()
+        hasTOTPEnabled: x.default.hasTOTPEnabled()
     }));
     return (0, r.jsx)(k, D({ currentUser: t }, n, e));
 }

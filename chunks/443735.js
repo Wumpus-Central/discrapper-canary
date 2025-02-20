@@ -1,8 +1,8 @@
 var r = a(475227),
     n = a(389109),
-    _ = Object.prototype,
-    o = _.hasOwnProperty,
-    i = _.propertyIsEnumerable,
+    o = Object.prototype,
+    _ = o.hasOwnProperty,
+    i = o.propertyIsEnumerable,
     c = r(
         (function () {
             return arguments;
@@ -10,6 +10,6 @@ var r = a(475227),
     )
         ? r
         : function (t) {
-              return n(t) && o.call(t, 'callee') && !i.call(t, 'callee');
+              return n(t) && _.call(t, 'callee') && !i.call(t, 'callee');
           };
 t.exports = c;

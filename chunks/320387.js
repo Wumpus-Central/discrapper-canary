@@ -1,8 +1,8 @@
 var t,
     n,
-    i = Function.prototype.toString,
-    r = 'object' == typeof Reflect && null !== Reflect && Reflect.apply;
-if ('function' == typeof r && 'function' == typeof Object.defineProperty)
+    r = Function.prototype.toString,
+    i = 'object' == typeof Reflect && null !== Reflect && Reflect.apply;
+if ('function' == typeof i && 'function' == typeof Object.defineProperty)
     try {
         (t = Object.defineProperty({}, 'length', {
             get: function () {
@@ -10,7 +10,7 @@ if ('function' == typeof r && 'function' == typeof Object.defineProperty)
             }
         })),
             (n = {}),
-            r(
+            i(
                 function () {
                     throw 42;
                 },
@@ -18,33 +18,33 @@ if ('function' == typeof r && 'function' == typeof Object.defineProperty)
                 t
             );
     } catch (e) {
-        e !== n && (r = null);
+        e !== n && (i = null);
     }
-else r = null;
-var a = /^\s*class\b/,
-    s = function (e) {
+else i = null;
+var o = /^\s*class\b/,
+    a = function (e) {
         try {
-            var t = i.call(e);
-            return a.test(t);
+            var t = r.call(e);
+            return o.test(t);
         } catch (e) {
             return !1;
         }
     },
-    o = function (e) {
+    s = function (e) {
         try {
-            if (s(e)) return !1;
-            return i.call(e), !0;
+            if (a(e)) return !1;
+            return r.call(e), !0;
         } catch (e) {
             return !1;
         }
     },
     l = Object.prototype.toString,
-    u = '[object Object]',
-    c = '[object Function]',
+    c = '[object Object]',
+    u = '[object Function]',
     d = '[object GeneratorFunction]',
     f = '[object HTMLAllCollection]',
-    _ = '[object HTML document.all class]',
-    p = '[object HTMLCollection]',
+    p = '[object HTML document.all class]',
+    _ = '[object HTMLCollection]',
     h = 'function' == typeof Symbol && !!Symbol.toStringTag,
     m = !(0 in [,]),
     g = function () {
@@ -57,27 +57,27 @@ if ('object' == typeof document) {
             if ((m || !e) && (void 0 === e || 'object' == typeof e))
                 try {
                     var t = l.call(e);
-                    return (t === f || t === _ || t === p || t === u) && null == e('');
+                    return (t === f || t === p || t === _ || t === c) && null == e('');
                 } catch (e) {}
             return !1;
         });
 }
-e.exports = r
+e.exports = i
     ? function (e) {
           if (g(e)) return !0;
           if (!e || ('function' != typeof e && 'object' != typeof e)) return !1;
           try {
-              r(e, null, t);
+              i(e, null, t);
           } catch (e) {
               if (e !== n) return !1;
           }
-          return !s(e) && o(e);
+          return !a(e) && s(e);
       }
     : function (e) {
           if (g(e)) return !0;
           if (!e || ('function' != typeof e && 'object' != typeof e)) return !1;
-          if (h) return o(e);
-          if (s(e)) return !1;
+          if (h) return s(e);
+          if (a(e)) return !1;
           var t = l.call(e);
-          return !!(t === c || t === d || /^\[object HTML/.test(t)) && o(e);
+          return !!(t === u || t === d || /^\[object HTML/.test(t)) && s(e);
       };

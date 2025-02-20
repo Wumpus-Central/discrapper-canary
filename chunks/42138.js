@@ -1,3 +1,3 @@
 n(104021);
-var i = n(974802);
-e.exports = i.Array.isArray;
+var r = n(974802);
+e.exports = r.Array.isArray;

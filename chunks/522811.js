@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-08_soundboard_refresh',
         label: 'Soundboard UI Refresh',
@@ -12,13 +12,13 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => {
-        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: r = {} } = e;
-        return i.useExperiment(
+    i = (e) => {
+        let { location: t, autoTrackExposure: n = !0, trackExposureOptions: i = {} } = e;
+        return r.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
-                trackExposureOptions: r
+                trackExposureOptions: i
             }
         );
     };

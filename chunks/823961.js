@@ -1,11 +1,11 @@
-let i;
-n.d(t, { Z: () => L }), n(47120);
-var r,
-    a = n(442837),
-    s = n(570140),
-    o = n(959546),
+let r;
+n.d(t, { Z: () => w }), n(47120);
+var i,
+    o = n(442837),
+    a = n(570140),
+    s = n(959546),
     l = n(317951);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,11 +18,11 @@ function u(e, t, n) {
         e
     );
 }
-let c = new Map(),
+let u = new Map(),
     d = new Set(),
     f = new Set(),
-    _ = new Set(),
-    p = new Map(),
+    p = new Set(),
+    _ = new Map(),
     h = new Map(),
     m = null,
     g = !1,
@@ -30,69 +30,69 @@ let c = new Map(),
         d.add(e.skuId);
     },
     v = (e) => {
-        c.set(e.skuId, e.price), d.delete(e.skuId);
-    },
-    y = (e) => {
-        d.delete(e.skuId), _.add(e.skuId);
-    },
-    I = (e) => {
-        _.delete(e.skuId);
-    },
-    T = (e) => {
-        if (1 !== e.entitlements.length) return;
-        let t = e.entitlements[0];
-        l.Rm.has(t.sku_id) && p.set(e.skuId, o.Z.createFromServer(t));
+        u.set(e.skuId, e.price), d.delete(e.skuId);
     },
     b = (e) => {
-        f.delete(e.skuId), p.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
+        d.delete(e.skuId), p.add(e.skuId);
+    },
+    y = (e) => {
+        p.delete(e.skuId);
+    },
+    O = (e) => {
+        if (1 !== e.entitlements.length) return;
+        let t = e.entitlements[0];
+        l.Rm.has(t.sku_id) && _.set(e.skuId, s.Z.createFromServer(t));
     },
     S = (e) => {
-        _.add(e.skuId), f.delete(e.skuId);
+        f.delete(e.skuId), _.set(e.skuId, e.entitlement), null != e.numPotions && h.set(e.skuId, e.numPotions);
     },
-    A = (e) => {
+    I = (e) => {
+        p.add(e.skuId), f.delete(e.skuId);
+    },
+    T = (e) => {
         f.add(e.skuId);
     },
     N = (e) => {
         m = e.previousGoLiveSettings;
     },
-    C = (e) => {
-        p.delete(e.skuId);
+    A = (e) => {
+        _.delete(e.skuId);
     },
-    R = (e) => {
+    C = (e) => {
         let { emoji: t, boundingRect: n } = e;
-        i = {
+        r = {
             emoji: t,
             boundingRect: n,
             triggerTime: Date.now()
         };
     },
-    O = (e) => {
+    R = (e) => {
         g = e.enabled;
     };
-class D extends (r = a.ZP.Store) {
+class P extends (i = o.ZP.Store) {
     get lastConfetti() {
-        return i;
+        return r;
     }
     get confettiMode() {
         return g;
     }
     getPrice(e) {
-        return c.get(e);
+        return u.get(e);
     }
     isFetchingPrice(e) {
         return d.has(e);
     }
     getErrored(e) {
-        return _.has(e);
+        return p.has(e);
     }
     getEntitlement(e) {
-        return p.get(e);
+        return _.get(e);
     }
     fetchPotionCount(e) {
         return h.get(e);
     }
     isEntitlementFetched(e) {
-        return p.has(e);
+        return _.has(e);
     }
     isEntitlementFetching(e) {
         return f.has(e);
@@ -101,18 +101,18 @@ class D extends (r = a.ZP.Store) {
         return m;
     }
 }
-u(D, 'displayName', 'ConsumablesStore');
-let L = new D(s.Z, {
+c(P, 'displayName', 'ConsumablesStore');
+let w = new P(a.Z, {
     CONSUMABLES_PRICE_FETCH_STARTED: E,
     CONSUMABLES_PRICE_FETCH_SUCCEEDED: v,
-    CONSUMABLES_PRICE_FETCH_FAILED: y,
-    CONSUMABLES_CLEAR_ERROR: I,
-    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: b,
-    SKU_PURCHASE_SUCCESS: T,
-    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: S,
-    CONSUMABLES_ENTITLEMENT_FETCH_STARTED: A,
+    CONSUMABLES_PRICE_FETCH_FAILED: b,
+    CONSUMABLES_CLEAR_ERROR: y,
+    CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: S,
+    SKU_PURCHASE_SUCCESS: O,
+    CONSUMABLES_ENTITLEMENT_FETCH_FAILED: I,
+    CONSUMABLES_ENTITLEMENT_FETCH_STARTED: T,
     SET_PREVIOUS_GO_LIVE_SETTINGS: N,
-    CLEAR_CONSUMED_ENTITLEMENT: C,
-    POTIONS_TRIGGER_MESSAGE_CONFETTI: R,
-    POTIONS_SET_CONFETTI_MODE: O
+    CLEAR_CONSUMED_ENTITLEMENT: A,
+    POTIONS_TRIGGER_MESSAGE_CONFETTI: C,
+    POTIONS_SET_CONFETTI_MODE: R
 });

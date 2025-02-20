@@ -11,7 +11,7 @@ function l(e) {
     let t = (0, s.e7)([c.ZP], () => c.ZP.hasUnread(e, a.W.GUILD_EVENT), [e]);
     return (0, i.jsx)(d.sNh, {
         id: 'mark-events-read',
-        label: u.intl.string(u.t.e6RscX),
+        label: u.NW.string(u.t.e6RscX),
         action: function () {
             (0, r.Ju)(e, a.W.GUILD_EVENT);
         },

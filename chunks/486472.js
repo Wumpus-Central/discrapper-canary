@@ -1,12 +1,12 @@
 n.d(t, { Z: () => v }), n(47120);
-var i,
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140),
+var r,
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140),
     l = n(710845),
-    u = n(430824);
-function c(e, t, n) {
+    c = n(430824);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,16 +21,16 @@ function c(e, t, n) {
 }
 let d = new l.Z('GuildAvailabilityStore'),
     f = new Set();
-function _(e) {
+function p(e) {
     (f = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && d.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds));
 }
-function p(e) {
+function _(e) {
     if (!f.has(e.guildId)) return !1;
     f.delete(e.guildId);
 }
 function h(e) {
     if (f.has(e.guildId)) return !1;
-    let t = u.Z.getGuild(e.guildId),
+    let t = c.Z.getGuild(e.guildId),
         n = '???';
     null != t && null != t.name && (n = t.name), d.warn('Guild has gone unavailable: '.concat(e.guildId, ' (').concat(n, ')')), f.add(e.guildId);
 }
@@ -41,15 +41,15 @@ function m(e) {
 function g(e) {
     !0 !== e.guild.unavailable && f.delete(e.guild.id);
 }
-class E extends (i = s.ZP.Store) {
+class E extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z);
+        this.waitFor(c.Z);
     }
     isUnavailable(e) {
         return null != e && f.has(e);
     }
     get totalGuilds() {
-        return a().size(u.Z.getGuilds()) + f.size;
+        return o().size(c.Z.getGuilds()) + f.size;
     }
     get totalUnavailableGuilds() {
         return f.size;
@@ -58,13 +58,13 @@ class E extends (i = s.ZP.Store) {
         return Array.from(f);
     }
 }
-c(E, 'displayName', 'GuildAvailabilityStore');
-let v = new E(o.Z, {
-    CONNECTION_OPEN: _,
-    OVERLAY_INITIALIZE: _,
+u(E, 'displayName', 'GuildAvailabilityStore');
+let v = new E(s.Z, {
+    CONNECTION_OPEN: p,
+    OVERLAY_INITIALIZE: p,
     GUILD_UNAVAILABLE: h,
     GUILD_DELETE: g,
     GUILD_CREATE: m,
     GUILD_UPDATE: m,
-    GUILD_GEO_RESTRICTED: p
+    GUILD_GEO_RESTRICTED: _
 });

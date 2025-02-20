@@ -1,20 +1,20 @@
 n.d(t, {
-    EB: () => b,
-    cl: () => I
+    EB: () => S,
+    cl: () => y
 }),
     n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(442837),
-    s = n(544891),
-    o = n(570140),
+var r = n(392711),
+    i = n.n(r),
+    o = n(442837),
+    a = n(544891),
+    s = n(570140),
     l = n(592125),
-    u = n(709054),
-    c = n(238349),
+    c = n(709054),
+    u = n(238349),
     d = n(660189);
 n(682474);
 var f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-let p = 10,
+let _ = 10,
     h = 5;
 class m {
     get(e) {
@@ -37,13 +37,13 @@ class m {
         delete this._set[e];
     }
     hasNext() {
-        return !r().isEmpty(this._set);
+        return !i().isEmpty(this._set);
     }
     next() {
-        return u.default.keys(this._set)[0];
+        return c.default.keys(this._set)[0];
     }
     constructor(e) {
-        _(this, '_set', void 0), _(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
+        p(this, '_set', void 0), p(this, '_defaultValueFunc', void 0), (this._set = {}), (this._defaultValueFunc = e);
     }
 }
 class g {
@@ -73,44 +73,44 @@ class g {
         0 === this.requested.get(e).size && this.requested.delete(e);
     }
     constructor() {
-        _(this, 'requested', void 0), (this.requested = new m(() => new Set()));
+        p(this, 'requested', void 0), (this.requested = new m(() => new Set()));
     }
 }
 let E = new g(),
     v = null;
-function y(e, t) {
+function b(e, t) {
     return !e && null == t;
 }
-function I(e) {
-    let { loaded: t, firstMessage: n } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)),
-        i = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
+function y(e) {
+    let { loaded: t, firstMessage: n } = (0, o.cj)([d.Z], () => d.Z.getMessage(e.id)),
+        r = (0, o.e7)([l.Z], () => l.Z.getChannel(e.parent_id));
     return (
-        null != i && y(t, n) && S(i, e.id),
+        null != r && b(t, n) && I(r, e.id),
         {
             loaded: t,
             firstMessage: n
         }
     );
 }
-function T(e, t) {
+function O(e, t) {
     let n = !1;
     t.forEach((t) => {
-        let { loaded: i, firstMessage: r } = d.Z.getMessage(t);
-        y(i, r) && (E.request(e.id, t), (n = !0));
+        let { loaded: r, firstMessage: i } = d.Z.getMessage(t);
+        b(r, i) && (E.request(e.id, t), (n = !0));
     }),
-        n && null == v && (v = setTimeout(A, 0));
+        n && null == v && (v = setTimeout(T, 0));
 }
-function b(e) {
-    T(e, (0, c.U)(e.id).slice(0, p));
+function S(e) {
+    O(e, (0, u.U)(e.id).slice(0, _));
 }
-function S(e, t) {
+function I(e, t) {
     if (E.hasRequested(e.id, t)) return;
-    let n = (0, c.U)(e.id),
-        i = n.findIndex((e) => e === t),
-        r = n.slice(i, i + h).filter((t) => !E.hasRequested(e.id, t));
-    T(e, r);
+    let n = (0, u.U)(e.id),
+        r = n.findIndex((e) => e === t),
+        i = n.slice(r, r + h).filter((t) => !E.hasRequested(e.id, t));
+    O(e, i);
 }
-async function A() {
+async function T() {
     try {
         for (; E.hasNext(); ) await N(E.next());
     } finally {
@@ -118,23 +118,23 @@ async function A() {
     }
 }
 async function N(e) {
-    let t = E.getNextBatch(e, p);
+    let t = E.getNextBatch(e, _);
     try {
         var n;
         if (0 === t.length) return;
-        let i = null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
-        if (null == i) return;
+        let r = null === (n = l.Z.getChannel(e)) || void 0 === n ? void 0 : n.guild_id;
+        if (null == r) return;
         let {
-            body: { threads: r }
-        } = await s.tn.post({
+            body: { threads: i }
+        } = await a.tn.post({
             url: f.ANM.FORUM_POSTS(e),
             body: { thread_ids: t },
             rejectWithError: !0
         });
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: 'LOAD_FORUM_POSTS',
-            guildId: i,
-            threads: r
+            guildId: r,
+            threads: i
         });
     } catch (e) {
     } finally {

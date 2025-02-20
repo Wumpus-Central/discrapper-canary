@@ -1,120 +1,120 @@
-n.d(t, { Z: () => h }), n(47120), n(773603);
-var l = n(200651),
-    i = n(192379),
-    s = n(658550),
-    r = n(544891),
-    o = n(481060),
-    a = n(507453),
-    d = n(981631),
-    u = n(388032),
-    c = n(668216);
-function h(e) {
-    let { mfaChallenge: t, finish: n, setSlide: h, onClose: m, isSlideReady: f } = e,
-        [x, g] = i.useState(!1),
-        [S, v] = i.useState(null),
-        [p, j] = i.useState(!1),
-        [b, C] = i.useState(null),
-        [y, Z] = i.useState(''),
-        k = i.useRef(null);
-    i.useEffect(() => {
+r.d(t, { Z: () => f }), r(47120), r(773603);
+var n = r(200651),
+    l = r(192379),
+    i = r(658550),
+    s = r(544891),
+    o = r(481060),
+    a = r(507453),
+    c = r(981631),
+    d = r(388032),
+    u = r(595165);
+function f(e) {
+    let { mfaChallenge: t, finish: r, setSlide: f, onClose: h, isSlideReady: m } = e,
+        [p, g] = l.useState(!1),
+        [b, j] = l.useState(null),
+        [y, x] = l.useState(!1),
+        [v, S] = l.useState(null),
+        [O, C] = l.useState(''),
+        w = l.useRef(null);
+    l.useEffect(() => {
         g(!0),
-            r.tn
+            s.tn
                 .post({
-                    url: d.ANM.LOGIN_SMS_SEND,
+                    url: c.ANM.LOGIN_SMS_SEND,
                     body: { ticket: t.ticket },
                     oldFormErrors: !0,
                     rejectWithError: !1
                 })
                 .then((e) => {
-                    v(e.body.phone);
+                    j(e.body.phone);
                 })
                 .catch((e) => {
-                    var t, n;
-                    C(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
+                    var t, r;
+                    S(null !== (r = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== r ? r : e.message);
                 })
                 .finally(() => {
                     g(!1);
                 });
     }, [t.ticket]),
-        i.useEffect(() => {
-            if (f) {
+        l.useEffect(() => {
+            if (m) {
                 var e;
-                null === (e = k.current) || void 0 === e || e.focus();
+                null === (e = w.current) || void 0 === e || e.focus();
             }
-        }, [f]);
-    let E = null == S ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t['8r6h7+'], { phoneNumber: S });
-    return (0, l.jsxs)('form', {
+        }, [m]);
+    let Z = null == b ? d.NW.string(d.t.LQdCQE) : d.NW.formatToPlainString(d.t['8r6h7+'], { phoneNumber: b });
+    return (0, n.jsxs)('form', {
         onSubmit: (e) => {
             e.preventDefault(),
-                j(!0),
-                n({
+                x(!0),
+                r({
                     mfaType: 'sms',
-                    data: y
+                    data: O
                 })
                     .catch((e) => {
-                        var t, n;
-                        C(null !== (n = e.message) && void 0 !== n ? n : null === (t = e.body) || void 0 === t ? void 0 : t.message);
+                        var t, r;
+                        S(null !== (r = e.message) && void 0 !== r ? r : null === (t = e.body) || void 0 === t ? void 0 : t.message);
                     })
                     .finally(() => {
-                        j(!1);
+                        x(!1);
                     });
         },
         children: [
-            (0, l.jsx)(a.Z.SlideHeader, {
-                subtitle: E,
-                onClose: m
+            (0, n.jsx)(a.Z.SlideHeader, {
+                subtitle: Z,
+                onClose: h
             }),
-            (0, l.jsx)(a.Z.SlideContent, {
-                children: (0, l.jsxs)(o.xJW, {
-                    title: u.intl.string(u.t.HZPBOT),
+            (0, n.jsx)(a.Z.SlideContent, {
+                children: (0, n.jsxs)(o.xJW, {
+                    title: d.NW.string(d.t.HZPBOT),
                     children: [
-                        (0, l.jsxs)('div', {
-                            className: c.smsInputContainer,
+                        (0, n.jsxs)('div', {
+                            className: u.smsInputContainer,
                             children: [
-                                (0, l.jsx)(o.oil, {
-                                    className: c.smsInput,
-                                    inputRef: k,
-                                    onChange: Z,
-                                    placeholder: u.intl.string(u.t.tARzgo),
+                                (0, n.jsx)(o.oil, {
+                                    className: u.smsInput,
+                                    inputRef: w,
+                                    onChange: C,
+                                    placeholder: d.NW.string(d.t.tARzgo),
                                     maxLength: 10,
-                                    value: y,
+                                    value: O,
                                     autoComplete: 'one-time-code',
                                     spellCheck: 'false',
-                                    disabled: p
+                                    disabled: y
                                 }),
-                                (0, l.jsx)(o.zxk, {
+                                (0, n.jsx)(o.zxk, {
                                     size: o.zxk.Sizes.MEDIUM,
-                                    submitting: x,
+                                    submitting: p,
                                     onClick: () => {
-                                        r.tn
+                                        s.tn
                                             .post({
-                                                url: d.ANM.LOGIN_SMS_SEND,
+                                                url: c.ANM.LOGIN_SMS_SEND,
                                                 body: { ticket: t.ticket },
                                                 oldFormErrors: !0,
                                                 rejectWithError: !1
                                             })
                                             .then((e) => {
-                                                v(e.body.phone);
+                                                j(e.body.phone);
                                             })
                                             .catch((e) => {
                                                 var t;
-                                                C(e.message || (null === (t = e.body) || void 0 === t ? void 0 : t.message));
+                                                S(e.message || (null === (t = e.body) || void 0 === t ? void 0 : t.message));
                                             });
                                     },
-                                    children: u.intl.string(u.t.ZF29Ly)
+                                    children: d.NW.string(d.t.ZF29Ly)
                                 })
                             ]
                         }),
-                        (0, l.jsx)(a.Z.SlideError, { error: b })
+                        (0, n.jsx)(a.Z.SlideError, { error: v })
                     ]
                 })
             }),
-            (0, l.jsx)(a.Z.SlideFooter, {
+            (0, n.jsx)(a.Z.SlideFooter, {
                 mfaChallenge: t,
-                setSlide: h,
+                setSlide: f,
                 showConfirm: !0,
-                disabled: y.length !== s.Gz,
-                submitting: p
+                disabled: O.length !== i.Gz,
+                submitting: y
             })
         ]
     });

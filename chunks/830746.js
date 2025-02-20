@@ -1,60 +1,60 @@
-n.d(t, { Z: () => E });
-var i = n(200651);
+n.d(t, { Z: () => N });
+var r = n(200651);
 n(192379);
-var s = n(399606),
-    r = n(481060),
-    l = n(594174),
-    a = n(785681),
+var i = n(399606),
+    s = n(481060),
+    a = n(594174),
+    l = n(785681),
     o = n(780985),
     c = n(631885),
     d = n(552045),
     u = n(87792),
     m = n(302289),
     g = n(946690),
-    h = n(456771),
-    x = n(292352),
-    _ = n(388032),
-    p = n(860392);
-let E = () => {
-    let e = (0, c.mq)(x.ne.ACTIVE),
+    p = n(456771),
+    h = n(292352),
+    f = n(388032),
+    b = n(488371);
+let N = () => {
+    let e = (0, c.mq)(h.ne.ACTIVE),
         t = (0, o.c)(),
-        n = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
-        E = (0, a.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
-        C = (0, a.o)(_.intl.string(_.t.XKnFFh), _.intl.string(_.t['68zfxM'])),
-        f = (0, a.o)(_.intl.string(_.t['Rm/6a2']), _.intl.string(_.t['1xPTwM'])),
-        T = (0, r.bWb)().enabled;
+        n = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
+        N = (0, l.o)(f.NW.string(f.t['5RZ8Tk']), f.NW.string(f.t.bmhCnJ)),
+        x = (0, l.o)(f.NW.string(f.t.XKnFFh), f.NW.string(f.t['68zfxM'])),
+        _ = (0, l.o)(f.NW.string(f.t['Rm/6a2']), f.NW.string(f.t['1xPTwM'])),
+        E = (0, s.bWb)().enabled;
     return void 0 === n
         ? null
-        : (0, i.jsxs)('div', {
-              className: p.container,
+        : (0, r.jsxs)('div', {
+              className: b.container,
               children: [
-                  (0, i.jsx)('div', {
-                      className: p.banner,
-                      children: (0, i.jsx)(d.Z, {})
+                  (0, r.jsx)('div', {
+                      className: b.banner,
+                      children: (0, r.jsx)(d.Z, {})
                   }),
-                  (0, i.jsxs)('div', {
-                      className: p.featureCards,
+                  (0, r.jsxs)('div', {
+                      className: b.featureCards,
                       children: [
-                          (0, i.jsx)(g.Z, {
-                              iconClassName: p.chatCheckIcon,
-                              icon: r.eQA,
-                              header: _.intl.string(_.t['001l3t']),
-                              description: E
+                          (0, r.jsx)(g.Z, {
+                              iconClassName: b.chatCheckIcon,
+                              icon: s.eQA,
+                              header: f.NW.string(f.t['001l3t']),
+                              description: N
                           }),
-                          (0, i.jsx)(g.Z, {
-                              icon: r.tEF,
-                              header: _.intl.string(_.t.yipAeH),
-                              description: C
+                          (0, r.jsx)(g.Z, {
+                              icon: s.tEF,
+                              header: f.NW.string(f.t.yipAeH),
+                              description: x
                           }),
-                          (0, i.jsx)(g.Z, {
-                              icon: T ? r.IkH : (0, r.GSL)(h.Z),
-                              header: _.intl.string(_.t.hhOuMT),
-                              description: f
+                          (0, r.jsx)(g.Z, {
+                              icon: E ? s.IkH : (0, s.GSL)(p.Z),
+                              header: f.NW.string(f.t.hhOuMT),
+                              description: _
                           })
                       ]
                   }),
-                  0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
-                  void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
+                  0 === e.length ? (0, r.jsx)(m.Z, {}) : null,
+                  void 0 !== t && e.length > 0 ? (0, r.jsx)(u.Z, { user: t }) : null
               ]
           });
 };

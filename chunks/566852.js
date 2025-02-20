@@ -1,14 +1,14 @@
 n.d(e, { default: () => k }), n(47120);
-var l = n(200651),
-    i = n(192379),
-    s = n(481060),
+var s = n(200651),
+    l = n(192379),
+    i = n(481060),
     r = n(923928),
     o = n(600164),
     a = n(594190),
     d = n(626135),
     u = n(981631),
     h = n(388032),
-    c = n(483938);
+    c = n(455812);
 function p(t, e, n) {
     return (
         e in t
@@ -22,7 +22,7 @@ function p(t, e, n) {
         t
     );
 }
-class x extends i.Component {
+class x extends l.Component {
     componentDidMount() {
         let { pid: t } = this.props,
             e = null != t ? a.ZP.getGameForPID(t) : null;
@@ -34,40 +34,40 @@ class x extends i.Component {
         });
     }
     render() {
-        return (0, l.jsxs)(s.Y0X, {
+        return (0, s.jsxs)(i.Y0X, {
             transitionState: this.props.transitionState,
-            'aria-label': h.intl.string(h.t['4xSkEB']),
+            'aria-label': h.NW.string(h.t['4xSkEB']),
             children: [
-                (0, l.jsxs)(s.xBx, {
+                (0, s.jsxs)(i.xBx, {
                     justify: o.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
-                        (0, l.jsx)(s.X6q, {
+                        (0, s.jsx)(i.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: h.intl.string(h.t['4xSkEB'])
+                            children: h.NW.string(h.t['4xSkEB'])
                         }),
-                        (0, l.jsx)(s.olH, { onClick: this.handleClose })
+                        (0, s.jsx)(i.olH, { onClick: this.handleClose })
                     ]
                 }),
-                (0, l.jsx)(s.hzk, {
-                    children: (0, l.jsx)(s.Text, {
+                (0, s.jsx)(i.hzk, {
+                    children: (0, s.jsx)(i.Text, {
                         tag: 'strong',
                         variant: 'text-md/normal',
                         className: c.marginBottom20,
-                        children: h.intl.string(h.t.UCEXPj)
+                        children: h.NW.string(h.t.UCEXPj)
                     })
                 }),
-                (0, l.jsxs)(s.mzw, {
+                (0, s.jsxs)(i.mzw, {
                     children: [
-                        (0, l.jsx)(s.zxk, {
+                        (0, s.jsx)(i.zxk, {
                             onClick: this.handleRequestElevated,
-                            children: h.intl.string(h.t.taPRcH)
+                            children: h.NW.string(h.t.taPRcH)
                         }),
-                        (0, l.jsx)(s.zxk, {
-                            look: s.zxk.Looks.LINK,
-                            color: s.zxk.Colors.PRIMARY,
+                        (0, s.jsx)(i.zxk, {
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.PRIMARY,
                             onClick: this.handleStreamWithoutSound,
-                            children: h.intl.string(h.t.of0VoK)
+                            children: h.NW.string(h.t.of0VoK)
                         })
                     ]
                 })

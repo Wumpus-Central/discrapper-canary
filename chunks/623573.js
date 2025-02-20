@@ -14,9 +14,9 @@ var i = n(120356),
     p = n(968693);
 function h(e) {
     let { transitionState: t, analyticsLocation: n, onClose: i, onAddPaymentSource: a, toastContent: c, initialStep: h = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: f = !1 } = e,
-        N = (0, u.fL)(),
-        x = (0, u.vP)({
-            paymentModalArgs: N,
+        b = (0, u.fL)(),
+        N = (0, u.vP)({
+            paymentModalArgs: b,
             initialStep: h,
             prependSteps: [],
             appendSteps: [],
@@ -52,7 +52,7 @@ function h(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: x
+            children: N
         })
     });
 }

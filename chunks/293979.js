@@ -61,7 +61,7 @@ function R(e) {
         return {
             applicationIconURL: l,
             applicationName: null != n && null != e.bot ? e.bot.username : e.name,
-            applicationBaseUrl: (0, E.Z)(e.id)
+            applicationBaseUrl: (0, E.ZP)(e.id)
         };
     }, [e.id, e.icon, e.name, e.bot]);
 }
@@ -125,7 +125,7 @@ function Z(e, t) {
                 customId: i
             }),
             t()),
-            L === N.i.ERRORED && f(O.intl.string(O.t.uJgdEh));
+            L === N.i.ERRORED && f(O.NW.string(O.t.uJgdEh));
     }, [g, L, t, i]);
     let { applicationIconURL: b, applicationName: P } = R(n);
     return {

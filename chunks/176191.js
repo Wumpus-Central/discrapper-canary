@@ -1,7 +1,7 @@
-let i = n(40231),
-    r = (e, t, n) => {
-        let r = new i(e, n),
-            a = new i(t, n);
-        return r.compare(a) || r.compareBuild(a);
+let r = n(40231),
+    i = (e, t, n) => {
+        let i = new r(e, n),
+            o = new r(t, n);
+        return i.compare(o) || i.compareBuild(o);
     };
-e.exports = r;
+e.exports = i;

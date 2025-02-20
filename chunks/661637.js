@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r }), n(653041);
-var i = n(633302);
-function r(e) {
+n.d(t, { Z: () => i }), n(653041);
+var r = n(633302);
+function i(e) {
     let t = [];
     return (
         e.forEach((e) => {
-            let n = i.ZP.getByName(e);
+            let n = r.ZP.getByName(e);
             if (
                 null != n &&
                 (t.push({
@@ -14,9 +14,9 @@ function r(e) {
                 n.hasDiversity)
             )
                 for (let e in n.diversityChildren) {
-                    let i = n.diversityChildren[e];
+                    let r = n.diversityChildren[e];
                     t.push({
-                        src: i.url,
+                        src: r.url,
                         colorize: !1
                     });
                 }

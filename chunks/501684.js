@@ -1,4 +1,4 @@
-let r, n, _, o, i;
+let r, n, o, _, i;
 a.d(e, {
     $A: () => N,
     PR: () => T,
@@ -23,13 +23,13 @@ function T(t, e = !1) {
     return S('cls', t, m, r, e);
 }
 function N(t, e = !1) {
-    return S('lcp', t, P, _, e);
+    return S('lcp', t, P, o, e);
 }
 function L(t) {
     return S('fid', t, y, n);
 }
 function h(t) {
-    return S('ttfb', t, v, o);
+    return S('ttfb', t, v, _);
 }
 function O(t) {
     return S('inp', t, C, i);
@@ -86,14 +86,14 @@ function y() {
 function P() {
     return (0, R.N)(
         (t) => {
-            g('lcp', { metric: t }), (_ = t);
+            g('lcp', { metric: t }), (o = t);
         },
         { reportAllChanges: !0 }
     );
 }
 function v() {
     return (0, A.m)((t) => {
-        g('ttfb', { metric: t }), (o = t);
+        g('ttfb', { metric: t }), (_ = t);
     });
 }
 function C() {
@@ -102,8 +102,8 @@ function C() {
     });
 }
 function S(t, e, a, r, n = !1) {
-    let _;
-    return G(t, e), p[t] || ((_ = a()), (p[t] = !0)), r && e({ metric: r }), b(t, e, n ? _ : void 0);
+    let o;
+    return G(t, e), p[t] || ((o = a()), (p[t] = !0)), r && e({ metric: r }), b(t, e, n ? o : void 0);
 }
 function G(t, e) {
     (f[t] = f[t] || []), f[t].push(e);

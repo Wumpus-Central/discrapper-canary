@@ -1,46 +1,46 @@
-var i = n(546299),
-    r = n(261638),
-    a = n(411108),
-    s = n(21841),
-    o = i.sum32,
-    l = i.sum32_4,
-    u = i.sum32_5,
-    c = a.ch32,
-    d = a.maj32,
-    f = a.s0_256,
-    _ = a.s1_256,
-    p = a.g0_256,
-    h = a.g1_256,
-    m = r.BlockHash,
+var r = n(546299),
+    i = n(261638),
+    o = n(411108),
+    a = n(21841),
+    s = r.sum32,
+    l = r.sum32_4,
+    c = r.sum32_5,
+    u = o.ch32,
+    d = o.maj32,
+    f = o.s0_256,
+    p = o.s1_256,
+    _ = o.g0_256,
+    h = o.g1_256,
+    m = i.BlockHash,
     g = [1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298];
 function E() {
     if (!(this instanceof E)) return new E();
     m.call(this), (this.h = [1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225]), (this.k = g), (this.W = Array(64));
 }
-i.inherits(E, m),
+r.inherits(E, m),
     (e.exports = E),
     (E.blockSize = 512),
     (E.outSize = 256),
     (E.hmacStrength = 192),
     (E.padLength = 64),
     (E.prototype._update = function (e, t) {
-        for (var n = this.W, i = 0; i < 16; i++) n[i] = e[t + i];
-        for (; i < n.length; i++) n[i] = l(h(n[i - 2]), n[i - 7], p(n[i - 15]), n[i - 16]);
-        var r = this.h[0],
-            a = this.h[1],
+        for (var n = this.W, r = 0; r < 16; r++) n[r] = e[t + r];
+        for (; r < n.length; r++) n[r] = l(h(n[r - 2]), n[r - 7], _(n[r - 15]), n[r - 16]);
+        var i = this.h[0],
+            o = this.h[1],
             m = this.h[2],
             g = this.h[3],
             E = this.h[4],
             v = this.h[5],
-            y = this.h[6],
-            I = this.h[7];
-        for (s(this.k.length === n.length), i = 0; i < n.length; i++) {
-            var T = u(I, _(E), c(E, v, y), this.k[i], n[i]),
-                b = o(f(r), d(r, a, m));
-            (I = y), (y = v), (v = E), (E = o(g, T)), (g = m), (m = a), (a = r), (r = o(T, b));
+            b = this.h[6],
+            y = this.h[7];
+        for (a(this.k.length === n.length), r = 0; r < n.length; r++) {
+            var O = c(y, p(E), u(E, v, b), this.k[r], n[r]),
+                S = s(f(i), d(i, o, m));
+            (y = b), (b = v), (v = E), (E = s(g, O)), (g = m), (m = o), (o = i), (i = s(O, S));
         }
-        (this.h[0] = o(this.h[0], r)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], m)), (this.h[3] = o(this.h[3], g)), (this.h[4] = o(this.h[4], E)), (this.h[5] = o(this.h[5], v)), (this.h[6] = o(this.h[6], y)), (this.h[7] = o(this.h[7], I));
+        (this.h[0] = s(this.h[0], i)), (this.h[1] = s(this.h[1], o)), (this.h[2] = s(this.h[2], m)), (this.h[3] = s(this.h[3], g)), (this.h[4] = s(this.h[4], E)), (this.h[5] = s(this.h[5], v)), (this.h[6] = s(this.h[6], b)), (this.h[7] = s(this.h[7], y));
     }),
     (E.prototype._digest = function (e) {
-        return 'hex' === e ? i.toHex32(this.h, 'big') : i.split32(this.h, 'big');
+        return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');
     });

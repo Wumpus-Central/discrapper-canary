@@ -1,184 +1,184 @@
-n.d(t, { Z: () => w }), n(627494), n(757143), n(653041);
-var a = n(200651),
-    l = n(192379),
-    i = n(423875),
-    r = n(442837),
+n.d(t, { Z: () => _ }), n(627494), n(757143), n(301563), n(653041);
+var r = n(200651),
+    a = n(192379),
+    l = n(423875),
+    i = n(442837),
     o = n(902704),
     s = n(481060),
     c = n(952164),
-    d = n(768419),
-    u = n(424678),
+    u = n(768419),
+    d = n(424678),
     m = n(239470),
-    x = n(894344),
+    p = n(894344),
     h = n(314897),
-    p = n(908841),
+    x = n(908841),
     g = n(5192),
     v = n(379357),
-    C = n(561308),
-    N = n(319604),
+    f = n(561308),
+    y = n(319604),
     j = n(31074),
-    I = n(206295),
-    f = n(551228),
-    P = n(591853),
-    y = n(371991),
-    Z = n(410441),
-    T = n(981631),
-    A = n(616922),
-    E = n(388032),
-    _ = n(967437),
-    S = n(687765);
-let R = (e, t, n) => {
-    let { artist: a, media: l } = e,
-        i = E.t['6iNxrq'],
-        r = g.ZP.getName(t.guild_id, t.id, n);
-    return E.NW.formatToMarkdownString(i, {
-        artist: a,
-        userName: r,
-        media: l
+    P = n(206295),
+    O = n(551228),
+    b = n(591853),
+    C = n(371991),
+    N = n(410441),
+    I = n(981631),
+    w = n(616922),
+    T = n(388032),
+    Z = n(762635),
+    S = n(742595);
+let E = (e, t, n) => {
+    let { artist: r, media: a } = e,
+        l = T.t['6iNxrq'],
+        i = g.ZP.getName(t.guild_id, t.id, n);
+    return T.NW.formatToMarkdownString(l, {
+        artist: r,
+        userName: i,
+        media: a
     }).replaceAll('*', '');
 };
-function k(e) {
+function A(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: i } = (0, y.tS)(),
-        { durationTimestamp: r, seekBarStyles: o } = l.useMemo(() => {
+        { now: l } = (0, C.tS)(),
+        { durationTimestamp: i, seekBarStyles: o } = a.useMemo(() => {
             var e;
-            let { start: n, end: a } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
-            if (null == n || null == a) return {};
-            let l = Math.min(a, i),
-                r = a - n,
-                o = Math.floor((Math.max(l - n, 0) / r) * 100);
+            let { start: n, end: r } = null !== (e = t.timestamps) && void 0 !== e ? e : {};
+            if (null == n || null == r) return {};
+            let a = Math.min(r, l),
+                i = r - n,
+                o = Math.floor((Math.max(a - n, 0) / i) * 100);
             return {
                 seekBarStyles: { width: ''.concat(o, '%') },
-                durationTimestamp: (0, C.T_)({ start: 0 }, r)
+                durationTimestamp: (0, f.T_)({ start: 0 }, i)
             };
-        }, [t, i]);
+        }, [t, l]);
     return null == o
         ? null
-        : (0, a.jsxs)('div', {
-              className: _.listeningTimeline,
+        : (0, r.jsxs)('div', {
+              className: Z.listeningTimeline,
               children: [
-                  (0, a.jsx)(y.x3, { entry: n }),
-                  (0, a.jsx)('div', {
-                      className: _.seekBarContainer,
-                      children: (0, a.jsx)('div', {
-                          className: _.seekBarFill,
+                  (0, r.jsx)(C.x3, { entry: n }),
+                  (0, r.jsx)('div', {
+                      className: Z.seekBarContainer,
+                      children: (0, r.jsx)('div', {
+                          className: Z.seekBarFill,
                           style: o
                       })
                   }),
-                  (0, a.jsx)(s.Text, {
-                      className: _.timestamp,
+                  (0, r.jsx)(s.Text, {
+                      className: Z.timestamp,
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
-                      children: r
+                      children: i
                   })
               ]
           });
 }
-function w(e) {
+function _(e) {
     var t;
     let n,
         g,
-        y,
-        { channel: _, entry: w, closePopout: O, onReaction: b, onVoiceChannelPreview: M } = e,
-        { largeImage: W } = (0, v.rv)({ entry: w }),
-        { activity: L, currentEntry: z, artist: B, title: H, user: U } = (0, f.pi)(w),
-        { primaryColor: D, secondaryColor: G } = (0, I.Z)(null == W ? void 0 : W.src),
-        F = (0, j.Z)(T.ABu.SPOTIFY),
-        V = (0, r.e7)([d.Z, h.default], () => ((null == L ? void 0 : L.type) === T.IIU.LISTENING && null != U ? (0, m.Z)(d.Z, h.default, U, L) : void 0), [L, U], o.Z),
-        Y = l.useCallback(() => {
+        C,
+        { channel: Z, entry: _, closePopout: k, onReaction: R, onVoiceChannelPreview: M } = e,
+        { largeImage: L } = (0, v.rv)({ entry: _ }),
+        { activity: W, currentEntry: D, artist: z, title: B, user: U } = (0, O.pi)(_),
+        { primaryColor: H, secondaryColor: G } = (0, P.Z)(null == L ? void 0 : L.src),
+        F = (0, j.Z)(I.ABu.SPOTIFY),
+        V = (0, i.e7)([u.Z, h.default], () => ((null == W ? void 0 : W.type) === I.IIU.LISTENING && null != U ? (0, m.Z)(u.Z, h.default, U, W) : void 0), [W, U], o.Z),
+        Y = a.useCallback(() => {
             var e;
-            if (null == _ || null == U) return;
-            let t = null === (e = L.timestamps) || void 0 === e ? void 0 : e.start,
-                n = (0, C.T_)(null != t ? { start: t } : w, Date.now());
-            return (0, N.CR)({
+            if (null == Z || null == U) return;
+            let t = null === (e = W.timestamps) || void 0 === e ? void 0 : e.start,
+                n = (0, f.T_)(null != t ? { start: t } : _, Date.now());
+            return (0, y.CR)({
                 user: U,
-                channel: _,
-                mediaImageSrc: null == W ? void 0 : W.src,
-                artist: B,
-                description: R(
+                channel: Z,
+                mediaImageSrc: null == L ? void 0 : L.src,
+                artist: z,
+                description: E(
                     {
-                        artist: B,
-                        media: H
+                        artist: z,
+                        media: B
                     },
-                    _,
+                    Z,
                     U
                 ),
-                colors: [D, G],
-                badges: (0, N.jE)({ timestamp: n })
+                colors: [H, G],
+                badges: (0, y.jE)({ timestamp: n })
             });
-        }, [L, B, _, w, null == W ? void 0 : W.src, D, G, H, U]);
-    if (null == L || null == z) return null;
-    let q = B,
+        }, [W, z, Z, _, null == L ? void 0 : L.src, H, G, B, U]);
+    if (null == W || null == D) return null;
+    let q = z,
         J = [];
-    z.media.provider === i.p.SPOTIFY &&
+    D.media.provider === l.p.SPOTIFY &&
         ((g = () => {
-            (0, c.aG)(L);
+            (0, c.aG)(W);
         }),
-        (y = () => {
-            (0, c.Z5)(L, U.id);
+        (C = () => {
+            (0, c.Z5)(W, U.id);
         }),
         (n = () => {
             var e;
-            (null !== (e = null == F ? void 0 : F()) && void 0 !== e) || (0, c.aG)(L);
+            (null !== (e = null == F ? void 0 : F()) && void 0 !== e) || (0, c.aG)(W);
         }),
-        (q = (0, a.jsx)(u.Z, {
-            artists: B,
-            canOpen: null != L.sync_id,
+        (q = (0, r.jsx)(d.Z, {
+            artists: z,
+            canOpen: null != W.sync_id,
             linkClassName: S.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, c.d$)(L, U.id, e);
+                (0, c.d$)(W, U.id, e);
             }
         })),
         (null == V ? void 0 : V.syncDisabled) === !1 &&
             J.push(
-                (0, a.jsx)(
-                    P.Ll,
+                (0, r.jsx)(
+                    b.Ll,
                     {
                         onClick: () => {
-                            (0, x.Z)(V, A.kG.USER_ACTIVITY_SYNC), O();
+                            (0, p.Z)(V, w.kG.USER_ACTIVITY_SYNC), k();
                         },
                         IconComponent: s.iOO,
-                        children: E.NW.string(E.t.eU3inJ)
+                        children: T.NW.string(T.t.eU3inJ)
                     },
                     'listen-along'
                 )
             ));
-    let X = (0, a.jsx)(P.wG, {
-        onClickThumbnail: y,
-        channel: _,
-        entry: w,
+    let X = (0, r.jsx)(b.wG, {
+        onClickThumbnail: C,
+        channel: Z,
+        entry: _,
         headerIcons:
-            z.media.provider === i.p.SPOTIFY
-                ? (0, a.jsx)(Z.Z, {
+            D.media.provider === l.p.SPOTIFY
+                ? (0, r.jsx)(N.Z, {
                       onClick: n,
-                      'aria-label': E.NW.string(E.t.rRffNz),
-                      Icon: p.Z
+                      'aria-label': T.NW.string(T.t.rRffNz),
+                      Icon: x.Z
                   })
                 : null,
-        userDescription: (0, C.kr)(w) ? E.t.Tzx5Dw : E.t.CcVI1d,
-        title: H,
+        userDescription: (0, f.kr)(_) ? T.t.Tzx5Dw : T.t.CcVI1d,
+        title: B,
         onClickTitle: g,
         subtitle: q,
         badges: null,
-        children: (null === (t = L.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, a.jsx)(k, { activity: L })
+        children: (null === (t = W.timestamps) || void 0 === t ? void 0 : t.start) != null && (0, r.jsx)(A, { activity: W })
     });
-    return (0, a.jsxs)(P.yR, {
+    return (0, r.jsxs)(b.yR, {
         children: [
             X,
-            (0, a.jsx)(P.St, {
-                children: (0, a.jsx)(P.WT, {
-                    onReaction: b,
+            (0, r.jsx)(b.St, {
+                children: (0, r.jsx)(b.WT, {
+                    onReaction: R,
                     onVoiceChannelPreview: M,
                     user: U,
-                    channel: _,
+                    channel: Z,
                     generateReactionImage: Y,
-                    reactionImageAltText: E.NW.formatToPlainString(E.t.h2yWWV, {
+                    reactionImageAltText: T.NW.formatToPlainString(T.t.h2yWWV, {
                         username: U.username,
-                        activity: B
+                        activity: z
                     }),
-                    entry: w,
+                    entry: _,
                     buttons: J
                 })
             })

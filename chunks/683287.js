@@ -10,13 +10,13 @@ function t(e) {
             end: '"""',
             relevance: 10
         },
-        i = {
+        r = {
             className: 'string',
             begin: '"',
             end: '"',
             contains: [e.BACKSLASH_ESCAPE]
         },
-        r = {
+        i = {
             className: 'string',
             begin: "'",
             end: "'",
@@ -33,8 +33,8 @@ function t(e) {
                 relevance: 0
             },
             n,
-            i,
             r,
+            i,
             {
                 begin: e.IDENT_RE + "'",
                 relevance: 0

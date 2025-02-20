@@ -1,4 +1,4 @@
-function a(e) {
+function t(e) {
     var n, l;
     if (null == e) return null;
     if ((null === (n = e.content) || void 0 === n ? void 0 : n.length) > 0) return e.content;
@@ -7,4 +7,4 @@ function a(e) {
     }
     return null;
 }
-l.d(n, { Z: () => a }), l(47120);
+l.d(n, { Z: () => t }), l(47120);

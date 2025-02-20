@@ -1,35 +1,35 @@
-n.d(t, { Z: () => d });
-var l = n(200651);
-n(192379);
-var i = n(481060),
-    s = n(507453),
-    r = n(48550),
-    o = n(388032),
-    a = n(668216);
-function d(e) {
-    let { mfaChallenge: t, setSlide: n, onClose: d } = e;
-    return (0, l.jsxs)(l.Fragment, {
+r.d(t, { Z: () => c });
+var n = r(200651);
+r(192379);
+var l = r(481060),
+    i = r(507453),
+    s = r(48550),
+    o = r(388032),
+    a = r(595165);
+function c(e) {
+    let { mfaChallenge: t, setSlide: r, onClose: c } = e;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, l.jsx)(s.Z.SlideHeader, {
-                subtitle: o.intl.string(o.t['XQaT+/']),
-                onClose: d
+            (0, n.jsx)(i.Z.SlideHeader, {
+                subtitle: o.NW.string(o.t['XQaT+/']),
+                onClose: c
             }),
-            (0, l.jsx)(s.Z.SlideContent, {
+            (0, n.jsx)(i.Z.SlideContent, {
                 children: t.methods.map((e) =>
-                    (0, l.jsxs)(
-                        i.P3F,
+                    (0, n.jsxs)(
+                        l.P3F,
                         {
                             className: a.listItemContainer,
                             onClick: () => {
-                                n(e.type);
+                                r(e.type);
                             },
                             children: [
-                                (0, l.jsx)(i.Text, {
+                                (0, n.jsx)(l.Text, {
                                     className: a.listItemText,
                                     variant: 'text-md/semibold',
-                                    children: r.P[e.type]
+                                    children: s.P[e.type]
                                 }),
-                                (0, l.jsx)(i.Fbu, {
+                                (0, n.jsx)(l.Fbu, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,

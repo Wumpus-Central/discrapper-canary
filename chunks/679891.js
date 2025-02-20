@@ -1,14 +1,14 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(570140),
-    l = n(846027),
-    r = n(317770),
-    a = n(594190),
-    s = n(928518),
-    o = n(131951),
-    d = n(451478),
-    c = n(981631),
-    u = n(65154);
-function h(e, t, n) {
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(570140),
+    i = n(846027),
+    l = n(317770),
+    o = n(594190),
+    a = n(928518),
+    s = n(131951),
+    c = n(451478),
+    u = n(981631),
+    d = n(65154);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,47 +21,47 @@ function h(e, t, n) {
         e
     );
 }
-let m = new Set(),
-    p = new Set(),
-    g = null;
-function _() {
-    for (let e of m) l.Z.setDisableLocalVideo(e, c.ZUi.MANUAL_ENABLED, u.Yn.DEFAULT, !1);
-    p.clear(), m.clear();
+let h = new Set(),
+    g = new Set(),
+    f = null;
+function m() {
+    for (let e of h) i.Z.setDisableLocalVideo(e, u.ZUi.MANUAL_ENABLED, d.Yn.DEFAULT, !1);
+    g.clear(), h.clear();
 }
-class f extends r.Z {
+class b extends l.Z {
     _initialize() {
-        i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), s.Z.addChangeListener(this.handlePopoutChange);
+        r.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), a.Z.addChangeListener(this.handlePopoutChange);
     }
     _terminate() {
-        i.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), s.Z.removeChangeListener(this.handlePopoutChange), _(), (g = null);
+        r.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), r.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), r.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), a.Z.removeChangeListener(this.handlePopoutChange), m(), (f = null);
     }
     handleIncomingVideo(e) {
-        let { userId: t, context: n, streamId: i } = e;
-        if (n !== u.Yn.DEFAULT || null == i) return;
-        let r = null != a.ZP.getVisibleGame(),
-            h = d.Z.isVisible(),
-            g = s.Z.getWindowVisible(c.KJ3.CHANNEL_CALL_POPOUT),
-            _ = o.Z.isLocalVideoDisabled(t, n),
-            f = p.has(t);
-        !r || h || g || _ || f || (m.add(t), l.Z.setDisableLocalVideo(t, c.ZUi.DISABLED, n, !1));
+        let { userId: t, context: n, streamId: r } = e;
+        if (n !== d.Yn.DEFAULT || null == r) return;
+        let l = null != o.ZP.getVisibleGame(),
+            p = c.Z.isVisible(),
+            f = a.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT),
+            m = s.Z.isLocalVideoDisabled(t, n),
+            b = g.has(t);
+        !l || p || f || m || b || (h.add(t), i.Z.setDisableLocalVideo(t, u.ZUi.DISABLED, n, !1));
     }
     handleManualLocalVideoToggle(e) {
         let { userId: t, persist: n } = e;
-        n && (p.add(t), m.delete(t));
+        n && (g.add(t), h.delete(t));
     }
     constructor(...e) {
         super(...e),
-            h(this, 'handleWindowVisibilityChange', (e) => {
+            p(this, 'handleWindowVisibilityChange', (e) => {
                 let { visible: t } = e;
-                t && _();
+                t && m();
             }),
-            h(this, 'handleVoiceChannelSelect', (e) => {
+            p(this, 'handleVoiceChannelSelect', (e) => {
                 let { channelId: t } = e;
-                t !== g && (_(), (g = t));
+                t !== f && (m(), (f = t));
             }),
-            h(this, 'handlePopoutChange', () => {
-                s.Z.getWindowVisible(c.KJ3.CHANNEL_CALL_POPOUT) && _();
+            p(this, 'handlePopoutChange', () => {
+                a.Z.getWindowVisible(u.KJ3.CHANNEL_CALL_POPOUT) && m();
             });
     }
 }
-let E = new f();
+let _ = new b();

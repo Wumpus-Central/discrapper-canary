@@ -16,15 +16,15 @@ var t = {
         arguments: !0,
         arity: !0
     },
-    i = 'function' == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, r, a) {
-    if ('string' != typeof r) {
-        var s = Object.getOwnPropertyNames(r);
-        i && (s = s.concat(Object.getOwnPropertySymbols(r)));
-        for (var o = 0; o < s.length; ++o)
-            if (!t[s[o]] && !n[s[o]] && (!a || !a[s[o]]))
+    r = 'function' == typeof Object.getOwnPropertySymbols;
+e.exports = function (e, i, o) {
+    if ('string' != typeof i) {
+        var a = Object.getOwnPropertyNames(i);
+        r && (a = a.concat(Object.getOwnPropertySymbols(i)));
+        for (var s = 0; s < a.length; ++s)
+            if (!t[a[s]] && !n[a[s]] && (!o || !o[a[s]]))
                 try {
-                    e[s[o]] = r[s[o]];
+                    e[a[s]] = i[a[s]];
                 } catch (e) {}
     }
     return e;

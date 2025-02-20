@@ -1,28 +1,28 @@
 n.d(t, {
     Gy: () => o,
-    H7: () => a,
+    H7: () => l,
     en: () => c,
-    xv: () => s
+    xv: () => a
 });
-var i = n(544891),
-    r = n(570140),
-    l = n(981631);
-function s() {
-    r.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_CLOSE' });
-}
+var r = n(544891),
+    i = n(570140),
+    s = n(981631);
 function a() {
-    r.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_RESET' });
+    i.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_CLOSE' });
+}
+function l() {
+    i.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_RESET' });
 }
 function o(e) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: 'GUILD_SETTINGS_VANITY_URL_SET',
         code: e
     });
 }
 function c(e, t) {
-    return i.tn
+    return r.tn
         .patch({
-            url: l.ANM.GUILD_VANITY_URL(e),
+            url: s.ANM.GUILD_VANITY_URL(e),
             body: { code: t },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -32,14 +32,14 @@ function c(e, t) {
                 let {
                     body: { code: t, uses: n }
                 } = e;
-                r.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GUILD_SETTINGS_SET_VANITY_URL',
                     code: t,
                     uses: n
                 });
             },
             (e) => (
-                r.Z.dispatch({
+                i.Z.dispatch({
                     type: 'GUILD_SETTINGS_VANITY_URL_ERROR',
                     error: e.body
                 }),

@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
-var i = n(835449),
-    r = n(571516);
-let a = function (e) {
-    return (0, i.Z)(function (t, n) {
-        var i = -1,
-            a = n.length,
-            s = a > 1 ? n[a - 1] : void 0,
-            o = a > 2 ? n[2] : void 0;
-        for (s = e.length > 3 && 'function' == typeof s ? (a--, s) : void 0, o && (0, r.Z)(n[0], n[1], o) && ((s = a < 3 ? void 0 : s), (a = 1)), t = Object(t); ++i < a; ) {
-            var l = n[i];
-            l && e(t, l, i, s);
+n.d(t, { Z: () => o });
+var r = n(835449),
+    i = n(571516);
+let o = function (e) {
+    return (0, r.Z)(function (t, n) {
+        var r = -1,
+            o = n.length,
+            a = o > 1 ? n[o - 1] : void 0,
+            s = o > 2 ? n[2] : void 0;
+        for (a = e.length > 3 && 'function' == typeof a ? (o--, a) : void 0, s && (0, i.Z)(n[0], n[1], s) && ((a = o < 3 ? void 0 : a), (o = 1)), t = Object(t); ++r < o; ) {
+            var l = n[r];
+            l && e(t, l, r, a);
         }
         return t;
     });

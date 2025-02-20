@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,12 +11,12 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => o }), n(733860), n(653041);
-let r = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-    a = 'undefined' != typeof performance;
-class s {
+n.d(t, { Z: () => s }), n(733860), n(653041);
+let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
+    o = 'undefined' != typeof performance;
+class a {
     get isTracing() {
-        return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
+        return !!o && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
     }
     get endTime() {
         return this.endTime_;
@@ -46,20 +46,20 @@ class s {
             }),
             this.addImportLogDetail());
     }
-    markAndLog(e, t, n, i) {
+    markAndLog(e, t, n, r) {
         e.log(n),
             this.isTracing &&
                 (this.logs.push({
                     emoji: t,
                     prefix: this.prefix,
                     log: n,
-                    delta: i,
+                    delta: r,
                     timestamp: Date.now()
                 }),
                 this.addImportLogDetail());
     }
     addImportLogDetail() {
-        let e = r();
+        let e = i();
         e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
     }
     markWithDelta(e, t) {
@@ -67,18 +67,18 @@ class s {
         this.mark(e, t, null != n && null != n.timestamp ? Date.now() - n.timestamp : void 0);
     }
     markAt(e, t, n) {
-        var i, r;
+        var r, i;
         if (!this.isTracing) return;
-        let a = 0;
-        for (; a < this.logs.length; a++) {
-            let { timestamp: e } = this.logs[a];
+        let o = 0;
+        for (; o < this.logs.length; o++) {
+            let { timestamp: e } = this.logs[o];
             if (null != e && e > n) break;
         }
-        this.logs.splice(a, 0, {
+        this.logs.splice(o, 0, {
             emoji: e,
             log: t,
             timestamp: n,
-            prefix: null !== (r = null === (i = this.logs[a]) || void 0 === i ? void 0 : i.prefix) && void 0 !== r ? r : ''
+            prefix: null !== (i = null === (r = this.logs[o]) || void 0 === r ? void 0 : r.prefix) && void 0 !== i ? i : ''
         });
     }
     addDetail(e, t) {
@@ -91,29 +91,29 @@ class s {
     }
     time(e, t, n) {
         if (!this.isTracing) return n();
-        let i = this.prefix;
+        let r = this.prefix;
         this.mark(e, 'Start '.concat(t)), (this.prefix += '| ');
-        let r = Date.now(),
-            a = n(),
-            s = Date.now() - r;
-        return (this.prefix = i), this.mark(e, 'Finish '.concat(t), s), a;
+        let i = Date.now(),
+            o = n(),
+            a = Date.now() - i;
+        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), a), o;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
         this.mark(e, 'Start '.concat(t));
-        let i = Date.now(),
-            r = await n(),
-            a = Date.now() - i;
-        return this.mark(e, 'Finish '.concat(t), a), r;
+        let r = Date.now(),
+            i = await n(),
+            o = Date.now() - r;
+        return this.mark(e, 'Finish '.concat(t), o), i;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        i(this, 'isTracing_', !0),
-            i(this, 'endTime_', Date.now() + 15000),
-            i(this, 'lastImportDuration', 0),
-            i(this, 'logGroups', [
+        r(this, 'isTracing_', !0),
+            r(this, 'endTime_', Date.now() + 15000),
+            r(this, 'lastImportDuration', 0),
+            r(this, 'logGroups', [
                 {
                     index: 0,
                     timestamp: Date.now(),
@@ -121,8 +121,8 @@ class s {
                     nativeLogs: []
                 }
             ]),
-            i(this, 'logs', this.logGroups[0].logs),
-            i(this, 'prefix', '');
+            r(this, 'logs', this.logGroups[0].logs),
+            r(this, 'prefix', '');
     }
 }
-let o = new s();
+let s = new a();

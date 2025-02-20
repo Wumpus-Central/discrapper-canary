@@ -1,14 +1,14 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => p }), n(301563);
 var i = n(200651),
-    s = n(192379),
-    l = n(512969),
-    a = n(749210),
-    o = n(287734),
-    r = n(765717),
-    d = n(893607),
-    c = n(703656),
+    r = n(192379),
+    s = n(512969),
+    o = n(749210),
+    l = n(287734),
+    a = n(765717),
+    c = n(893607),
+    d = n(703656),
     u = n(981631);
-class h extends s.Component {
+class h extends r.Component {
     componentDidUpdate(e) {
         let { location: t } = this.props;
         t.pathname + t.search !== e.location.pathname + e.location.search && this.checkGuildAndChannel();
@@ -28,26 +28,26 @@ class h extends s.Component {
                 messageId: i
             };
         })(e);
-        (0, d.Ss)(t) && (0, d.cq)(n)
-            ? (a.Z.selectGuild(t),
-              o.default.selectChannel({
+        (0, c.Ss)(t) && (0, c.cq)(n)
+            ? (o.Z.selectGuild(t),
+              l.default.selectChannel({
                   guildId: t,
                   channelId: n,
                   messageId: i
               }))
-            : (0, c.dL)(u.Z5c.ME);
+            : (0, d.dL)(u.Z5c.ME);
     }
     render() {
         return null;
     }
 }
 let p = () =>
-    (0, i.jsxs)(l.rs, {
+    (0, i.jsxs)(s.rs, {
         children: [
-            (0, i.jsx)(r.Z, {
-                path: u.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId({ optional: !0 }), ':messageId?'),
+            (0, i.jsx)(a.Z, {
+                path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),
                 component: h
             }),
-            (0, i.jsx)(r.Z, { component: h })
+            (0, i.jsx)(a.Z, { component: h })
         ]
     });

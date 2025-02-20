@@ -14,13 +14,13 @@ function o(n) {
     null != c && p.push(c);
     let h = (0, a.Z)({
         id: t.id,
-        label: d.intl.string(d.t.sMsaLi)
+        label: d.NW.string(d.t.sMsaLi)
     });
     return (null != h && p.push(h), 0 === p.length)
         ? null
         : (0, l.jsx)(e.v2r, {
               navId: 'guild-integrations-permission-role-context',
-              'aria-label': d.intl.string(d.t['337Ja2']),
+              'aria-label': d.NW.string(d.t['337Ja2']),
               onClose: s.Zy,
               onSelect: o,
               children: p

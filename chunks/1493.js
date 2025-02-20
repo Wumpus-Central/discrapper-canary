@@ -1,20 +1,20 @@
-r.d(n, { default: () => o }), r(47120);
+r.d(n, { default: () => i }), r(47120);
 var t = r(200651),
     a = r(192379),
     s = r(481060),
     l = r(388032),
-    i = r(972820);
-function o(e) {
-    let { onConfirm: n, onClose: r, validationText: o, errorText: c, header: x, className: d, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: g } = e,
+    o = r(808415);
+function i(e) {
+    let { onConfirm: n, onClose: r, validationText: i, errorText: c, header: x, className: d, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: g } = e,
         [j, k] = a.useState(''),
         [b, f] = a.useState(null),
         C =
             a.Children.count(g) > 0
                 ? (0, t.jsx)(s.Zbd, {
                       type: s.Zbd.Types.WARNING,
-                      className: i.card,
+                      className: o.card,
                       children: (0, t.jsx)(s.Text, {
-                          className: i.warning,
+                          className: o.warning,
                           variant: 'text-md/normal',
                           children: g
                       })
@@ -25,7 +25,7 @@ function o(e) {
         className: d,
         children: (0, t.jsxs)('form', {
             onSubmit: function (e) {
-                if ((e.preventDefault(), j.toLowerCase() !== o.toLowerCase())) {
+                if ((e.preventDefault(), j.toLowerCase() !== i.toLowerCase())) {
                     f(c);
                     return;
                 }
@@ -44,7 +44,7 @@ function o(e) {
                         C,
                         (0, t.jsxs)(s.xJW, {
                             title: p,
-                            className: i.spacing,
+                            className: o.spacing,
                             children: [
                                 (0, t.jsx)(s.oil, {
                                     id: 'text-entry-confirm',
@@ -58,7 +58,7 @@ function o(e) {
                                     ? (0, t.jsx)(s.Text, {
                                           color: 'text-danger',
                                           variant: 'text-xs/normal',
-                                          className: i.error,
+                                          className: o.error,
                                           children: b
                                       })
                                     : null
@@ -71,13 +71,13 @@ function o(e) {
                         (0, t.jsx)(s.zxk, {
                             type: 'submit',
                             color: s.zxk.Colors.RED,
-                            children: null != h ? h : l.intl.string(l.t['cY+Ooa'])
+                            children: null != h ? h : l.NW.string(l.t['cY+Ooa'])
                         }),
                         (0, t.jsx)(s.zxk, {
                             onClick: r,
                             look: s.zxk.Looks.LINK,
                             color: s.zxk.Colors.PRIMARY,
-                            children: null != u ? u : l.intl.string(l.t['ETE/oK'])
+                            children: null != u ? u : l.NW.string(l.t['ETE/oK'])
                         })
                     ]
                 })

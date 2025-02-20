@@ -1,11 +1,11 @@
-i.d(t, { D: () => n });
-function n(e) {
+r.d(t, { D: () => i });
+function i(e) {
     return e.map((e, t) => {
-        var i, n;
+        var r, i;
         return {
             file: e.file,
-            name: null !== (n = e.id) && void 0 !== n ? n : 'attachment_'.concat(t),
-            filename: null === (i = e.file) || void 0 === i ? void 0 : i.name
+            name: null !== (i = e.id) && void 0 !== i ? i : 'attachment_'.concat(t),
+            filename: null === (r = e.file) || void 0 === r ? void 0 : r.name
         };
     });
 }

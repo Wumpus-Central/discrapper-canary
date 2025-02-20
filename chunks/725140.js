@@ -1,8 +1,8 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(147913),
-    r = n(579806),
-    a = n(246946);
-function s(e, t, n) {
+n.d(t, { Z: () => u }), n(47120);
+var r = n(147913),
+    i = n(579806),
+    o = n(246946);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,17 +15,17 @@ function s(e, t, n) {
         e
     );
 }
-let o = !1;
+let s = !1;
 function l() {
     var e;
-    let t = null === r.Z || void 0 === r.Z ? void 0 : null === (e = r.Z.window) || void 0 === e ? void 0 : e.setContentProtection;
+    let t = null === i.Z || void 0 === i.Z ? void 0 : null === (e = i.Z.window) || void 0 === e ? void 0 : e.setContentProtection;
     if (null == t) return;
-    let n = a.Z.enableContentProtection;
-    n !== o && (t(n), (o = n));
+    let n = o.Z.enableContentProtection;
+    n !== s && (t(n), (s = n));
 }
-class u extends i.Z {
+class c extends r.Z {
     constructor() {
-        l(), super(), s(this, 'stores', new Map().set(a.Z, l));
+        l(), super(), a(this, 'stores', new Map().set(o.Z, l));
     }
 }
-let c = new u();
+let u = new c();

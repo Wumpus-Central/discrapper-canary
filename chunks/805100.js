@@ -1,8 +1,8 @@
-var i = n(580897),
-    r = n(703284),
-    a = Object.prototype.hasOwnProperty;
-function s(e, t, n) {
-    var s = e[t];
-    (a.call(e, t) && r(s, n) && (void 0 !== n || t in e)) || i(e, t, n);
+var r = n(580897),
+    i = n(703284),
+    o = Object.prototype.hasOwnProperty;
+function a(e, t, n) {
+    var a = e[t];
+    (o.call(e, t) && i(a, n) && (void 0 !== n || t in e)) || r(e, t, n);
 }
-e.exports = s;
+e.exports = a;

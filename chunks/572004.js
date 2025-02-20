@@ -1,19 +1,19 @@
 n.d(t, {
-    JG: () => o,
-    wS: () => s
+    JG: () => s,
+    wS: () => a
 }),
     n(411104);
-var i = n(852229),
-    r = n(358085),
-    a = n(998502);
-let s = (() => {
-    if (r.isPlatformEmbedded) return null != a.ZP.copy;
+var r = n(852229),
+    i = n(358085),
+    o = n(998502);
+let a = (() => {
+    if (i.isPlatformEmbedded) return null != o.ZP.copy;
     try {
         return document.queryCommandEnabled('copy') || document.queryCommandSupported('copy');
     } catch (e) {
         return !1;
     }
 })();
-function o(e) {
-    return !!s && (r.isPlatformEmbedded ? (a.ZP.copy(e), !0) : i.J(e));
+function s(e) {
+    return !!a && (i.isPlatformEmbedded ? (o.ZP.copy(e), !0) : r.J(e));
 }

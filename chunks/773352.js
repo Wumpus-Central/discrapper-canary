@@ -1,6 +1,6 @@
-n.d(t, { r: () => a });
-var i = n(25209),
-    r = n(49012);
-function a(e) {
-    return null != e.target && (0, r.r)(e.target, null != e.title && '' !== e.title ? e.title : (0, i.Rp)(e.content));
+n.d(t, { r: () => o });
+var r = n(25209),
+    i = n(49012);
+function o(e) {
+    return null != e.target && (0, i.r)(e.target, null != e.title && '' !== e.title ? e.title : (0, r.Rp)(e.content));
 }

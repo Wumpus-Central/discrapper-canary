@@ -1,3 +1,3 @@
-var i = n(630979),
-    r = n(925983);
-(t.write = r), (t.parse = i.parse), (t.parseFmtpConfig = i.parseFmtpConfig), (t.parseParams = i.parseParams), (t.parsePayloads = i.parsePayloads), (t.parseRemoteCandidates = i.parseRemoteCandidates), (t.parseImageAttributes = i.parseImageAttributes), (t.parseSimulcastStreamList = i.parseSimulcastStreamList);
+var r = n(630979),
+    i = n(925983);
+(t.write = i), (t.parse = r.parse), (t.parseFmtpConfig = r.parseFmtpConfig), (t.parseParams = r.parseParams), (t.parsePayloads = r.parsePayloads), (t.parseRemoteCandidates = r.parseRemoteCandidates), (t.parseImageAttributes = r.parseImageAttributes), (t.parseSimulcastStreamList = r.parseSimulcastStreamList);

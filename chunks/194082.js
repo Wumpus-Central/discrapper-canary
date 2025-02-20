@@ -1,47 +1,47 @@
 n.d(t, {
     OH: () => d,
-    ZP: () => p,
+    ZP: () => _,
     eE: () => f,
-    jZ: () => c
+    jZ: () => u
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(692547),
-    o = n(481060),
+var i = n(120356),
+    o = n.n(i),
+    a = n(692547),
+    s = n(481060),
     l = n(388032),
-    u = n(19939),
-    c = (function (e) {
+    c = n(707550),
+    u = (function (e) {
         return (e.RED = 'RED'), (e.GRAY = 'GRAY'), e;
     })({});
 let d = {
-        LARGE: u.liveLarge,
-        SMALL: u.liveSmall
+        LARGE: c.liveLarge,
+        SMALL: c.liveSmall
     },
     f = {
-        [o.Dv2.ROUND]: u.liveShapeRound,
-        [o.Dv2.ROUND_LEFT]: u.liveShapeRoundLeft,
-        [o.Dv2.ROUND_RIGHT]: u.liveShapeRoundRight,
-        [o.Dv2.SQUARE]: ''
+        [s.Dv2.ROUND]: c.liveShapeRound,
+        [s.Dv2.ROUND_LEFT]: c.liveShapeRoundLeft,
+        [s.Dv2.ROUND_RIGHT]: c.liveShapeRoundRight,
+        [s.Dv2.SQUARE]: ''
     };
-function _(e) {
-    let { className: t, style: n, shape: r = o.Dv2.ROUND, look: c = 'RED', size: _ = d.LARGE } = e;
-    return 'RED' === c
-        ? (0, i.jsx)(o.IGR, {
-              text: l.intl.string(l.t.dI3q4u),
-              className: a()(t, u.live, _),
-              color: s.Z.unsafe_rawColors.RED_400.css,
-              shape: f[r],
+function p(e) {
+    let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = 'RED', size: p = d.LARGE } = e;
+    return 'RED' === u
+        ? (0, r.jsx)(s.IGR, {
+              text: l.NW.string(l.t.dI3q4u),
+              className: o()(t, c.live, p),
+              color: a.Z.unsafe_rawColors.RED_400.css,
+              shape: f[i],
               style: n
           })
-        : (0, i.jsx)(o.IGR, {
-              text: l.intl.string(l.t.dI3q4u),
-              className: a()(t, u.live, _, u.grey),
+        : (0, r.jsx)(s.IGR, {
+              text: l.NW.string(l.t.dI3q4u),
+              className: o()(t, c.live, p, c.grey),
               disableColor: !0,
-              shape: f[r],
+              shape: f[i],
               style: n
           });
 }
-(_.Looks = c), (_.Sizes = d);
-let p = _;
+(p.Looks = u), (p.Sizes = d);
+let _ = p;

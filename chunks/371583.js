@@ -13,7 +13,7 @@ function n(t) {
                   s = null == a ? void 0 : null === (e = a.statistics[d.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === e ? void 0 : e.value;
               try {
                   return null != s ? c(624119)('./champion_'.concat(s, '.jpg')).default : c(721191).Z;
-              } catch {
+              } catch (t) {
                   return c(721191).Z;
               }
           })(t)
@@ -29,7 +29,7 @@ function o(t) {
                   n = null == s ? void 0 : null === (a = s.statistics[d.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === a ? void 0 : a.value;
               try {
                   return null != n ? c(692425)('./champion_'.concat(n, '.jpg')).default : null;
-              } catch {
+              } catch (t) {
                   return null;
               }
           })(t)

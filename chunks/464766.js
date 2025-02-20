@@ -1,40 +1,40 @@
 t.d(n, { Z: () => u }), t(653041);
 var i = t(200651),
-    l = t(192379),
-    a = t(120356),
-    r = t.n(a),
+    r = t(192379),
+    l = t(120356),
+    a = t.n(l),
     d = t(481060),
-    s = t(765305),
-    o = t(388032),
-    c = t(849402);
+    o = t(765305),
+    s = t(388032),
+    c = t(112116);
 function u(e) {
-    let { onClose: n, selectedTab: t, onTabSelected: a, userCount: u, hasBanner: _, isHub: m = !1 } = e,
-        g = l.useRef(null);
-    l.useEffect(() => {
+    let { onClose: n, selectedTab: t, onTabSelected: l, userCount: u, hasBanner: _, isHub: g = !1 } = e,
+        p = r.useRef(null);
+    r.useEffect(() => {
         var e, n, t;
-        return null === (t = g.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
+        return null === (t = p.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
     }, []);
-    let p = o.intl.formatToPlainString(o.t['ZrTT/P'], { userCount: u }),
+    let m = s.NW.formatToPlainString(s.t['ZrTT/P'], { userCount: u }),
         v = [
             (0, i.jsx)(
                 d.njP.Item,
                 {
                     className: c.tabBarItem,
-                    id: s.fL.EVENT_INFO,
-                    children: o.intl.string(o.t.iW6Xur)
+                    id: o.fL.EVENT_INFO,
+                    children: s.NW.string(s.t.iW6Xur)
                 },
                 'event-details'
             )
         ];
     return (
-        m ||
+        g ||
             v.push(
                 (0, i.jsx)(
                     d.njP.Item,
                     {
                         className: c.tabBarItem,
-                        id: s.fL.RSVP_LIST,
-                        children: p
+                        id: o.fL.RSVP_LIST,
+                        children: m
                     },
                     'is-hub'
                 )
@@ -43,22 +43,22 @@ function u(e) {
             className: c.container,
             children: [
                 (0, i.jsx)(d.P3F, {
-                    ref: g,
+                    ref: p,
                     onClick: n,
                     className: c.closeButton,
-                    'aria-label': o.intl.string(o.t.cpT0Cg),
+                    'aria-label': s.NW.string(s.t.cpT0Cg),
                     children: (0, i.jsx)(d.Dio, {
                         size: 'md',
                         color: 'currentColor',
-                        className: r()(c.closeIcon, _ && c.closeIconBanner)
+                        className: a()(c.closeIcon, _ && c.closeIconBanner)
                     })
                 }),
                 (0, i.jsx)(d.njP, {
                     className: c.tabBar,
-                    'aria-label': o.intl.string(o.t['+1H47u']),
+                    'aria-label': s.NW.string(s.t['+1H47u']),
                     selectedItem: t,
                     type: 'top',
-                    onItemSelect: a,
+                    onItemSelect: l,
                     children: v
                 })
             ]

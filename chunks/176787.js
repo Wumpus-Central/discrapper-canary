@@ -1,16 +1,16 @@
 n.d(t, {
-    bG: () => a,
-    bY: () => s
+    bG: () => o,
+    bY: () => a
 });
-var i,
-    l = n(358085),
-    r = n(75060),
-    a = (((i = {})[(i.UNHANDLED = -1)] = 'UNHANDLED'), (i[(i.NOMINAL = 0)] = 'NOMINAL'), (i[(i.FAIR = 1)] = 'FAIR'), (i[(i.SERIOUS = 2)] = 'SERIOUS'), (i[(i.CRITICAL = 3)] = 'CRITICAL'), i);
-function s() {
+var r,
+    i = n(358085),
+    l = n(75060),
+    o = (((r = {})[(r.UNHANDLED = -1)] = 'UNHANDLED'), (r[(r.NOMINAL = 0)] = 'NOMINAL'), (r[(r.FAIR = 1)] = 'FAIR'), (r[(r.SERIOUS = 2)] = 'SERIOUS'), (r[(r.CRITICAL = 3)] = 'CRITICAL'), r);
+function a() {
     return (function (e) {
         if (null == e) return -1;
-        if ((0, l.isIOS)()) return e;
-        if (!(0, l.isAndroid)()) return -1;
+        if ((0, i.isIOS)()) return e;
+        if (!(0, i.isAndroid)()) return -1;
         switch (e) {
             case 0:
                 return 0;
@@ -26,5 +26,5 @@ function s() {
             default:
                 return -1;
         }
-    })(r.Z.getRawThermalState());
+    })(l.Z.getRawThermalState());
 }

@@ -1,34 +1,34 @@
-let i = n(40231),
-    r = n(721919),
-    { ANY: a } = r,
-    s = n(889658),
-    o = n(839525),
+let r = n(40231),
+    i = n(721919),
+    { ANY: o } = i,
+    a = n(889658),
+    s = n(839525),
     l = n(393808),
-    u = n(690217),
-    c = n(689478),
+    c = n(690217),
+    u = n(689478),
     d = n(725616),
     f = (e, t, n, f) => {
-        let _, p, h, m, g;
-        switch (((e = new i(e, f)), (t = new s(t, f)), n)) {
+        let p, _, h, m, g;
+        switch (((e = new r(e, f)), (t = new a(t, f)), n)) {
             case '>':
-                (_ = l), (p = c), (h = u), (m = '>'), (g = '>=');
+                (p = l), (_ = u), (h = c), (m = '>'), (g = '>=');
                 break;
             case '<':
-                (_ = u), (p = d), (h = l), (m = '<'), (g = '<=');
+                (p = c), (_ = d), (h = l), (m = '<'), (g = '<=');
                 break;
             default:
                 throw TypeError('Must provide a hilo val of "<" or ">"');
         }
-        if (o(e, t, f)) return !1;
+        if (s(e, t, f)) return !1;
         for (let n = 0; n < t.set.length; ++n) {
-            let i = t.set[n],
-                s = null,
-                o = null;
+            let r = t.set[n],
+                a = null,
+                s = null;
             if (
-                (i.forEach((e) => {
-                    e.semver === a && (e = new r('>=0.0.0')), (s = s || e), (o = o || e), _(e.semver, s.semver, f) ? (s = e) : h(e.semver, o.semver, f) && (o = e);
+                (r.forEach((e) => {
+                    e.semver === o && (e = new i('>=0.0.0')), (a = a || e), (s = s || e), p(e.semver, a.semver, f) ? (a = e) : h(e.semver, s.semver, f) && (s = e);
                 }),
-                s.operator === m || s.operator === g || ((!o.operator || o.operator === m) && p(e, o.semver)) || (o.operator === g && h(e, o.semver)))
+                a.operator === m || a.operator === g || ((!s.operator || s.operator === m) && _(e, s.semver)) || (s.operator === g && h(e, s.semver)))
             )
                 return !1;
         }

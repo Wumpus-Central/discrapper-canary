@@ -1,17 +1,17 @@
 t.d(n, { Z: () => m }), t(47120);
-var l,
+var r,
+    l,
     u,
-    i,
-    r = t(512722),
-    a = t.n(r),
-    d = t(442837),
-    o = t(570140),
+    i = t(512722),
+    o = t.n(i),
+    a = t(442837),
+    d = t(570140),
     s = t(344185),
     c = t(592125),
     f = t(306680);
 let g = {},
-    Z = new Set();
-class v extends (l = d.ZP.Store) {
+    v = new Set();
+class Z extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, c.Z, f.ZP);
     }
@@ -19,21 +19,21 @@ class v extends (l = d.ZP.Store) {
         return g[e];
     }
     getThreadIdsMissingCounts(e, n) {
-        return a()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in g) && !Z.has(e));
+        return o()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in g) && !v.has(e));
     }
 }
-(i = 'ForumPostUnreadCountStore'),
-    (u = 'displayName') in v
-        ? Object.defineProperty(v, u, {
-              value: i,
+(u = 'ForumPostUnreadCountStore'),
+    (l = 'displayName') in Z
+        ? Object.defineProperty(Z, l, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (v[u] = i);
-let m = new v(o.Z, {
+        : (Z[l] = u);
+let m = new Z(d.Z, {
     CONNECTION_OPEN: function () {
-        (g = {}), (Z = new Set());
+        (g = {}), (v = new Set());
     },
     THREAD_CREATE: function (e) {
         let { channel: n, isNewlyCreated: t } = e;
@@ -41,8 +41,8 @@ let m = new v(o.Z, {
         g[n.id] = 0;
     },
     MESSAGE_CREATE: function (e) {
-        let { channelId: n, optimistic: t, isPushNotification: l } = e;
-        if (t || l || !(n in g)) return !1;
+        let { channelId: n, optimistic: t, isPushNotification: r } = e;
+        if (t || r || !(n in g)) return !1;
         g[n]++;
     },
     FORUM_UNREADS: function (e) {
@@ -64,7 +64,7 @@ let m = new v(o.Z, {
         let { threads: n } = e;
         n.forEach((e) => {
             let { threadId: n } = e;
-            return Z.add(n);
+            return v.add(n);
         });
     }
 });

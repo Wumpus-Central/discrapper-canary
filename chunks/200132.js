@@ -3,42 +3,42 @@
 })(0, function (e) {
     var t = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' '),
         n = ['nolla', 'yhden', 'kahden', 'kolmen', 'neljän', 'viiden', 'kuuden', t[7], t[8], t[9]];
-    function i(e, t, n, i) {
-        var a = '';
+    function r(e, t, n, r) {
+        var o = '';
         switch (n) {
             case 's':
-                return i ? 'muutaman sekunnin' : 'muutama sekunti';
+                return r ? 'muutaman sekunnin' : 'muutama sekunti';
             case 'ss':
-                return i ? 'sekunnin' : 'sekuntia';
+                return r ? 'sekunnin' : 'sekuntia';
             case 'm':
-                return i ? 'minuutin' : 'minuutti';
+                return r ? 'minuutin' : 'minuutti';
             case 'mm':
-                a = i ? 'minuutin' : 'minuuttia';
+                o = r ? 'minuutin' : 'minuuttia';
                 break;
             case 'h':
-                return i ? 'tunnin' : 'tunti';
+                return r ? 'tunnin' : 'tunti';
             case 'hh':
-                a = i ? 'tunnin' : 'tuntia';
+                o = r ? 'tunnin' : 'tuntia';
                 break;
             case 'd':
-                return i ? 'päivän' : 'päivä';
+                return r ? 'päivän' : 'päivä';
             case 'dd':
-                a = i ? 'päivän' : 'päivää';
+                o = r ? 'päivän' : 'päivää';
                 break;
             case 'M':
-                return i ? 'kuukauden' : 'kuukausi';
+                return r ? 'kuukauden' : 'kuukausi';
             case 'MM':
-                a = i ? 'kuukauden' : 'kuukautta';
+                o = r ? 'kuukauden' : 'kuukautta';
                 break;
             case 'y':
-                return i ? 'vuoden' : 'vuosi';
+                return r ? 'vuoden' : 'vuosi';
             case 'yy':
-                a = i ? 'vuoden' : 'vuotta';
+                o = r ? 'vuoden' : 'vuotta';
         }
-        return r(e, i) + ' ' + a;
+        return i(e, r) + ' ' + o;
     }
-    function r(e, i) {
-        return e < 10 ? (i ? n[e] : t[e]) : e;
+    function i(e, r) {
+        return e < 10 ? (r ? n[e] : t[e]) : e;
     }
     return e.defineLocale('fi', {
         months: 'tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu'.split('_'),
@@ -69,18 +69,18 @@
         relativeTime: {
             future: '%s päästä',
             past: '%s sitten',
-            s: i,
-            ss: i,
-            m: i,
-            mm: i,
-            h: i,
-            hh: i,
-            d: i,
-            dd: i,
-            M: i,
-            MM: i,
-            y: i,
-            yy: i
+            s: r,
+            ss: r,
+            m: r,
+            mm: r,
+            h: r,
+            hh: r,
+            d: r,
+            dd: r,
+            M: r,
+            MM: r,
+            y: r,
+            yy: r
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

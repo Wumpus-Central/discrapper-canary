@@ -1,20 +1,20 @@
-n.d(t, { Z: () => l });
-var i = n(198139),
-    r = n(388032);
-let l = {
+n.d(t, { Z: () => s });
+var r = n(198139),
+    i = n(388032);
+let s = {
     getStatusErrorText: function (e) {
         switch (e) {
-            case i.jw.CANCELED:
-            case i.jw.DEFERRED:
-                return r.intl.string(r.t['0SrNPz']);
-            case i.jw.DEFERRED_INTERNAL:
-                return r.intl.string(r.t.OtZ5k5);
-            case i.jw.ERROR:
-                return r.intl.string(r.t.ninjcX);
-            case i.jw.REJECTED:
-                return r.intl.string(r.t.TSC809);
-            case i.jw.RISK_REVIEW:
-                return r.intl.string(r.t.rppxMj);
+            case r.jw.CANCELED:
+            case r.jw.DEFERRED:
+                return i.NW.string(i.t['0SrNPz']);
+            case r.jw.DEFERRED_INTERNAL:
+                return i.NW.string(i.t.OtZ5k5);
+            case r.jw.ERROR:
+                return i.NW.string(i.t.ninjcX);
+            case r.jw.REJECTED:
+                return i.NW.string(i.t.TSC809);
+            case r.jw.RISK_REVIEW:
+                return i.NW.string(i.t.rppxMj);
         }
     }
 };

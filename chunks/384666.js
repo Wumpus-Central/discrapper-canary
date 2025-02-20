@@ -1,43 +1,43 @@
-n.d(t, { Z: () => h }), n(47120);
-var s = n(200651),
-    i = n(192379),
-    l = n(593473),
-    r = n(512969),
-    o = n(489863),
-    a = n(787025),
-    c = n(397394),
-    d = n(388032);
-function h() {
+n.d(t, { Z: () => d }), n(47120), n(301563);
+var r = n(200651),
+    o = n(192379),
+    i = n(593473),
+    c = n(512969),
+    l = n(489863),
+    s = n(787025),
+    a = n(397394),
+    u = n(388032);
+function d() {
     let e;
-    let t = (0, r.TH)(),
-        [n, h] = i.useState(!1),
-        [u, _] = i.useState(!1);
+    let t = (0, c.TH)(),
+        [n, d] = o.useState(!1),
+        [h, p] = o.useState(!1);
     return (
-        i.useEffect(() => {
+        o.useEffect(() => {
             (async function () {
-                let e = (0, l.parse)(t.search);
+                let e = (0, i.parse)(t.search);
                 try {
                     var n;
-                    await (0, o.g)(null !== (n = e.token) && void 0 !== n ? n : ''), h(!0);
-                } catch {
-                    _(!0);
+                    await (0, l.g)(null !== (n = e.token) && void 0 !== n ? n : ''), d(!0);
+                } catch (e) {
+                    p(!0);
                 }
             })();
         }, [t.search]),
         (e = n
-            ? (0, s.jsx)(c.c7, {
-                  message: d.intl.string(d.t.Tqu3OT),
+            ? (0, r.jsx)(a.c7, {
+                  message: u.NW.string(u.t.Tqu3OT),
                   showsCloseWindowText: !0
               })
-            : u
-              ? (0, s.jsx)(c.Lk, {
-                    message: d.intl.string(d.t.J8LsCg),
+            : h
+              ? (0, r.jsx)(a.Lk, {
+                    message: u.NW.string(u.t.J8LsCg),
                     showsCloseWindowText: !0
                 })
-              : (0, s.jsx)(c.ZP, {
-                    message: d.intl.string(d.t.BAcf6e),
+              : (0, r.jsx)(a.ZP, {
+                    message: u.NW.string(u.t.BAcf6e),
                     spinner: !0
                 })),
-        (0, s.jsx)(a.G, { children: e })
+        (0, r.jsx)(s.G, { children: e })
     );
 }

@@ -1,39 +1,39 @@
-i.d(l, { Z: () => u });
-var t = i(200651),
-    n = i(192379),
-    s = i(120356),
-    a = i.n(s),
-    o = i(481060),
-    r = i(53281),
-    d = i(453356);
-function u(e) {
-    let { filename: l, className: i, filters: s, buttonText: u, placeholder: c, onFileSelect: m } = e,
-        f = n.useRef(null);
-    return (0, t.jsxs)('div', {
-        className: a()(i, d.fileUpload),
+l.d(t, { Z: () => c });
+var n = l(200651),
+    i = l(192379),
+    r = l(120356),
+    s = l.n(r),
+    a = l(481060),
+    o = l(53281),
+    u = l(759127);
+function c(e) {
+    let { filename: t, className: l, filters: r, buttonText: c, placeholder: d, onFileSelect: m } = e,
+        f = i.useRef(null);
+    return (0, n.jsxs)('div', {
+        className: s()(l, u.fileUpload),
         children: [
-            (0, t.jsx)('input', {
-                className: d.fileUploadInput,
+            (0, n.jsx)('input', {
+                className: u.fileUploadInput,
                 tabIndex: -1,
                 readOnly: !0,
-                placeholder: c,
+                placeholder: d,
                 type: 'text',
-                value: l
+                value: t
             }),
-            (0, t.jsxs)(o.zxk, {
-                size: o.zxk.Sizes.MIN,
-                className: d.fileUploadButton,
+            (0, n.jsxs)(a.zxk, {
+                size: a.zxk.Sizes.MIN,
+                className: u.fileUploadButton,
                 children: [
-                    u,
-                    (0, t.jsx)(r.Z, {
+                    c,
+                    (0, n.jsx)(o.Z, {
                         ref: f,
                         tabIndex: -1,
                         onChange: (e) => {
-                            var l;
-                            m(null === (l = e.currentTarget.files) || void 0 === l ? void 0 : l[0]);
+                            var t;
+                            m(null === (t = e.currentTarget.files) || void 0 === t ? void 0 : t[0]);
                         },
                         multiple: !1,
-                        filters: s
+                        filters: r
                     })
                 ]
             })

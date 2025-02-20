@@ -1,9 +1,9 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(392711),
-    r = n.n(i),
-    a = n(46973),
-    s = n(909766);
-function o(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    o = n(46973),
+    a = n(909766);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,12 +17,12 @@ function o(e, t, n) {
     );
 }
 let l = 1000;
-class u {
+class c {
     start() {
-        this.connection.on(a.Sh.Stats, this.sampleStats);
+        this.connection.on(o.Sh.Stats, this.sampleStats);
     }
     stop() {
-        this.connection.off(a.Sh.Stats, this.sampleStats);
+        this.connection.off(o.Sh.Stats, this.sampleStats);
     }
     getPttQueueLatencyStats() {
         let e = this.pttQueueLatencyHistogram.getReport([50, 95]);
@@ -35,13 +35,13 @@ class u {
         };
     }
     constructor(e) {
-        o(this, 'connection', void 0),
-            o(this, 'pttQueueLatencyHistogram', void 0),
-            o(this, 'sampleStats', void 0),
+        s(this, 'connection', void 0),
+            s(this, 'pttQueueLatencyHistogram', void 0),
+            s(this, 'sampleStats', void 0),
             (this.connection = e),
             (this.sampleStats = (e) => {
                 null != e &&
-                    r().forEach(e.rtp.outbound, (e) => {
+                    i().forEach(e.rtp.outbound, (e) => {
                         if ('audio' === e.type) {
                             var t;
                             for (let n of null !== (t = e.pttQueueLatencyMicrosSamples) && void 0 !== t ? t : []) {
@@ -51,6 +51,6 @@ class u {
                         }
                     });
             }),
-            (this.pttQueueLatencyHistogram = new s.b());
+            (this.pttQueueLatencyHistogram = new a.b());
     }
 }

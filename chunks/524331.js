@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(570140);
-function r() {
-    i.Z.dispatch({ type: 'ACTIVITY_SYNC_STOP' });
+n.d(t, { Z: () => i });
+var r = n(570140);
+function i() {
+    r.Z.dispatch({ type: 'ACTIVITY_SYNC_STOP' });
 }

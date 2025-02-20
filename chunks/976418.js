@@ -1,19 +1,19 @@
-var i = n(175440),
-    r = Math.floor,
-    a = function (e, t) {
+var r = n(175440),
+    i = Math.floor,
+    o = function (e, t) {
         var n = e.length,
-            l = r(n / 2);
-        return n < 8 ? s(e, t) : o(e, a(i(e, 0, l), t), a(i(e, l), t), t);
+            l = i(n / 2);
+        return n < 8 ? a(e, t) : s(e, o(r(e, 0, l), t), o(r(e, l), t), t);
     },
-    s = function (e, t) {
-        for (var n, i, r = e.length, a = 1; a < r; ) {
-            for (i = a, n = e[a]; i && t(e[i - 1], n) > 0; ) e[i] = e[--i];
-            i !== a++ && (e[i] = n);
+    a = function (e, t) {
+        for (var n, r, i = e.length, o = 1; o < i; ) {
+            for (r = o, n = e[o]; r && t(e[r - 1], n) > 0; ) e[r] = e[--r];
+            r !== o++ && (e[r] = n);
         }
         return e;
     },
-    o = function (e, t, n, i) {
-        for (var r = t.length, a = n.length, s = 0, o = 0; s < r || o < a; ) e[s + o] = s < r && o < a ? (0 >= i(t[s], n[o]) ? t[s++] : n[o++]) : s < r ? t[s++] : n[o++];
+    s = function (e, t, n, r) {
+        for (var i = t.length, o = n.length, a = 0, s = 0; a < i || s < o; ) e[a + s] = a < i && s < o ? (0 >= r(t[a], n[s]) ? t[a++] : n[s++]) : a < i ? t[a++] : n[s++];
         return e;
     };
-e.exports = a;
+e.exports = o;

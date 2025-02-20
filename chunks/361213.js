@@ -1,13 +1,13 @@
-n.d(t, { Z: () => l });
-var i = n(981631);
-function l(e, t) {
-    let n;
-    let l = window.GLOBAL_ENV.CDN_HOST,
-        a = window.GLOBAL_ENV.API_ENDPOINT;
-    return null != l
-        ? ''.concat(location.protocol, '//').concat(l, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
+t.d(n, { Z: () => r });
+var o = t(981631);
+function r(e, n) {
+    let t;
+    let r = window.GLOBAL_ENV.CDN_HOST,
+        c = window.GLOBAL_ENV.API_ENDPOINT;
+    return null != r
+        ? ''.concat(location.protocol, '//').concat(r, '/app-assets/').concat(e, '/store/').concat(n, '.mp4')
         : ''
               .concat(location.protocol)
-              .concat(a)
-              .concat(i.ANM.STORE_ASSET(e, t, 'mp4'));
+              .concat(c)
+              .concat(o.ANM.STORE_ASSET(e, n, 'mp4'));
 }

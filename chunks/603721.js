@@ -1,59 +1,59 @@
 n.d(t, {
-    B0: () => s,
-    OG: () => u,
-    kz: () => o,
+    B0: () => a,
+    OG: () => c,
+    kz: () => s,
     yr: () => l
 });
-var i = n(544891),
-    r = n(570140),
-    a = n(981631);
-function s(e, t, n, i) {
-    r.Z.dispatch({
+var r = n(544891),
+    i = n(570140),
+    o = n(981631);
+function a(e, t, n, r) {
+    i.Z.dispatch({
         type: 'QUEUE_INTERACTION_COMPONENT_STATE',
         messageId: e,
         nonce: t,
         state: n,
-        componentId: i
+        componentId: r
     });
 }
-function o(e, t) {
-    let { data: n, messageId: i, onCreate: a, onSuccess: s, onFailure: o } = t;
-    r.Z.dispatch({
+function s(e, t) {
+    let { data: n, messageId: r, onCreate: o, onSuccess: a, onFailure: s } = t;
+    i.Z.dispatch({
         type: 'INTERACTION_QUEUE',
         data: n,
         nonce: e,
-        messageId: i,
-        onCreate: a,
-        onSuccess: s,
-        onFailure: o
+        messageId: r,
+        onCreate: o,
+        onSuccess: a,
+        onFailure: s
     });
 }
-function l(e, t, n, i) {
-    r.Z.dispatch({
+function l(e, t, n, r) {
+    i.Z.dispatch({
         type: 'INTERACTION_FAILURE',
         nonce: e,
         errorMessage: n,
         errorCode: t,
-        status: i
+        status: r
     });
 }
-async function u(e, t) {
-    let n = await i.tn.get({
-        url: a.ANM.MESSAGE_INTERACTION_DATA(e, t),
+async function c(e, t) {
+    let n = await r.tn.get({
+        url: o.ANM.MESSAGE_INTERACTION_DATA(e, t),
         oldFormErrors: !0,
         rejectWithError: !1
     });
     if (!n.ok) return null;
     {
-        let i = n.body;
+        let r = n.body;
         return (
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'LOAD_MESSAGE_INTERACTION_DATA_SUCCESS',
                 channelId: e,
                 messageId: t,
-                interactionData: i
+                interactionData: r
             }),
-            i
+            r
         );
     }
 }

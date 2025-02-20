@@ -1,103 +1,103 @@
-e.d(n, { default: () => u }), e(47120), e(773603);
-var i = e(200651),
-    s = e(192379),
-    l = e(544891),
-    o = e(481060),
-    r = e(600164),
-    a = e(572004),
-    c = e(472305),
-    d = e(981631),
-    x = e(388032),
-    h = e(27156);
-function m(t) {
-    let { name: n, value: e } = t,
-        [l, r] = s.useState(o.uA3.DEFAULT);
-    return (0, i.jsxs)('div', {
+t.d(s, { default: () => m }), t(47120), t(773603), t(266796);
+var n = t(200651),
+    o = t(192379),
+    i = t(544891),
+    l = t(481060),
+    r = t(600164),
+    a = t(572004),
+    c = t(472305),
+    d = t(981631),
+    x = t(388032),
+    h = t(227968);
+function N(e) {
+    let { name: s, value: t } = e,
+        [i, r] = o.useState(l.uA3.DEFAULT);
+    return (0, n.jsxs)('div', {
         className: h.infoRow,
         children: [
-            (0, i.jsx)(o.vwX, { children: n }),
-            (0, i.jsx)(o.kO8, {
-                value: e,
-                mode: l,
+            (0, n.jsx)(l.vwX, { children: s }),
+            (0, n.jsx)(l.kO8, {
+                value: t,
+                mode: i,
                 supportsCopy: a.wS,
                 onCopy: () => {
-                    (0, a.JG)(e), r(o.uA3.SUCCESS);
+                    (0, a.JG)(t), r(l.uA3.SUCCESS);
                 }
             })
         ]
     });
 }
-function u(t) {
-    let { onClose: n, transitionState: e } = t,
-        [a, u] = s.useState(''),
-        [j, k] = s.useState(''),
-        [N, v] = s.useState(null),
-        [_, g] = s.useState(!1),
-        [p, C] = s.useState('DOMAIN'),
+function m(e) {
+    let { onClose: s, transitionState: t } = e,
+        [a, m] = o.useState(''),
+        [u, j] = o.useState(''),
+        [k, v] = o.useState(null),
+        [_, g] = o.useState(!1),
+        [p, C] = o.useState('DOMAIN'),
         b = () => {
             g(!0),
                 v(null),
-                l.tn
+                i.tn
                     .post({
                         url: d.ANM.CONNECTION(d.ABu.DOMAIN, a),
                         body: {},
                         rejectWithError: !1
                     })
                     .then(() => {
-                        n();
+                        s();
                     })
-                    .catch((t) => {
-                        var n, e, i, s, l, o, r;
-                        (null === (n = t.body) || void 0 === n ? void 0 : n.proof) && 'DOMAIN' === p ? (k(t.body.proof), C('PROOF_DNS')) : v((null === (o = t.body) || void 0 === o ? void 0 : null === (l = o.errors) || void 0 === l ? void 0 : null === (s = l.domain) || void 0 === s ? void 0 : null === (i = s._errors) || void 0 === i ? void 0 : null === (e = i[0]) || void 0 === e ? void 0 : e.message) || (null === (r = t.body) || void 0 === r ? void 0 : r.message) || t.message);
+                    .catch((e) => {
+                        var s, t, n, o, i, l, r;
+                        (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && 'DOMAIN' === p ? (j(e.body.proof), C('PROOF_DNS')) : v((null === (l = e.body) || void 0 === l ? void 0 : null === (i = l.errors) || void 0 === i ? void 0 : null === (o = i.domain) || void 0 === o ? void 0 : null === (n = o._errors) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.message) || (null === (r = e.body) || void 0 === r ? void 0 : r.message) || e.message);
                     })
                     .finally(() => {
                         g(!1);
                     });
         };
-    return (0, i.jsxs)(o.Y0X, {
-        transitionState: e,
+    return (0, n.jsxs)(l.Y0X, {
+        transitionState: t,
         className: h.__invalid_modal,
         children: [
-            (0, i.jsxs)(o.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 direction: r.Z.Direction.VERTICAL,
                 className: h.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(o.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: x.intl.string(x.t['7lo8+f'])
+                        children: x.NW.string(x.t['7lo8+f'])
                     }),
-                    (0, i.jsx)(o.olH, {
+                    (0, n.jsx)(l.olH, {
                         className: h.closeButton,
-                        onClick: n
+                        onClick: s
                     })
                 ]
             }),
-            (0, i.jsxs)(o.MyZ, {
+            (0, n.jsxs)(l.MyZ, {
                 activeSlide: p,
                 width: 440,
                 children: [
-                    (0, i.jsx)(o.Mi4, {
+                    (0, n.jsx)(l.Mi4, {
                         id: 'DOMAIN',
-                        children: (0, i.jsxs)('form', {
-                            onSubmit: (t) => {
-                                t.preventDefault(), b();
+                        children: (0, n.jsxs)('form', {
+                            onSubmit: (e) => {
+                                e.preventDefault(), b();
                             },
                             children: [
-                                (0, i.jsxs)(o.hzk, {
+                                (0, n.jsxs)(l.hzk, {
                                     className: h.content,
                                     children: [
-                                        (0, i.jsx)(o.Text, {
+                                        (0, n.jsx)(l.Text, {
                                             variant: 'text-md/normal',
                                             color: 'header-secondary',
                                             className: h.description,
-                                            children: x.intl.string(x.t.NxPUqa)
+                                            children: x.NW.string(x.t.NxPUqa)
                                         }),
-                                        (0, i.jsx)(o.xJW, {
-                                            title: x.intl.string(x.t['4jIAa2']),
-                                            error: N,
-                                            children: (0, i.jsx)(o.oil, {
-                                                onChange: u,
+                                        (0, n.jsx)(l.xJW, {
+                                            title: x.NW.string(x.t['4jIAa2']),
+                                            error: k,
+                                            children: (0, n.jsx)(l.oil, {
+                                                onChange: m,
                                                 placeholder: c.pL,
                                                 maxLength: 253,
                                                 value: a,
@@ -107,63 +107,63 @@ function u(t) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(o.mzw, {
+                                (0, n.jsxs)(l.mzw, {
                                     className: h.footer,
                                     children: [
-                                        (0, i.jsx)(o.zxk, {
+                                        (0, n.jsx)(l.zxk, {
                                             type: 'submit',
                                             submitting: _,
                                             disabled: '' === a,
-                                            children: x.intl.string(x.t.PDTjLC)
+                                            children: x.NW.string(x.t.PDTjLC)
                                         }),
-                                        (0, i.jsx)(o.zxk, {
-                                            look: o.zxk.Looks.LINK,
-                                            color: o.zxk.Colors.PRIMARY,
-                                            onClick: n,
-                                            children: x.intl.string(x.t['ETE/oK'])
+                                        (0, n.jsx)(l.zxk, {
+                                            look: l.zxk.Looks.LINK,
+                                            color: l.zxk.Colors.PRIMARY,
+                                            onClick: s,
+                                            children: x.NW.string(x.t['ETE/oK'])
                                         })
                                     ]
                                 })
                             ]
                         })
                     }),
-                    (0, i.jsxs)(o.Mi4, {
+                    (0, n.jsxs)(l.Mi4, {
                         id: 'PROOF_DNS',
                         children: [
-                            (0, i.jsxs)(o.hzk, {
+                            (0, n.jsxs)(l.hzk, {
                                 className: h.content,
                                 children: [
-                                    (0, i.jsxs)('ol', {
+                                    (0, n.jsxs)('ol', {
                                         className: h.list,
                                         children: [
-                                            (0, i.jsx)('li', {
-                                                children: (0, i.jsx)(o.Text, {
+                                            (0, n.jsx)('li', {
+                                                children: (0, n.jsx)(l.Text, {
                                                     tag: 'span',
                                                     variant: 'text-md/normal',
-                                                    children: x.intl.string(x.t.yOxxAw)
+                                                    children: x.NW.string(x.t.yOxxAw)
                                                 })
                                             }),
-                                            (0, i.jsxs)('li', {
+                                            (0, n.jsxs)('li', {
                                                 children: [
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, n.jsx)(l.Text, {
                                                         tag: 'span',
                                                         variant: 'text-md/normal',
-                                                        children: x.intl.string(x.t.cSURbm)
+                                                        children: x.NW.string(x.t.cSURbm)
                                                     }),
-                                                    (0, i.jsxs)('div', {
+                                                    (0, n.jsxs)('div', {
                                                         className: h.dnsRecordContainer,
                                                         children: [
-                                                            (0, i.jsx)(m, {
-                                                                name: x.intl.string(x.t.GL3q7u),
+                                                            (0, n.jsx)(N, {
+                                                                name: x.NW.string(x.t.GL3q7u),
                                                                 value: (0, c.Qv)(a)
                                                             }),
-                                                            (0, i.jsx)(m, {
-                                                                name: x.intl.string(x.t.Ccmixs),
+                                                            (0, n.jsx)(N, {
+                                                                name: x.NW.string(x.t.Ccmixs),
                                                                 value: 'TXT'
                                                             }),
-                                                            (0, i.jsx)(m, {
-                                                                name: x.intl.string(x.t.PVLriY),
-                                                                value: j
+                                                            (0, n.jsx)(N, {
+                                                                name: x.NW.string(x.t.PVLriY),
+                                                                value: u
                                                             })
                                                         ]
                                                     })
@@ -171,48 +171,48 @@ function u(t) {
                                             })
                                         ]
                                     }),
-                                    (0, i.jsx)(o.Wn, {
-                                        messageType: o.QYI.INFO,
+                                    (0, n.jsx)(l.Wn, {
+                                        messageType: l.QYI.INFO,
                                         className: h.text,
-                                        children: x.intl.string(x.t.CUBxDA)
+                                        children: x.NW.string(x.t.CUBxDA)
                                     }),
-                                    null != N &&
-                                        (0, i.jsx)(o.Text, {
+                                    null != k &&
+                                        (0, n.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-danger',
                                             className: h.text,
-                                            children: N
+                                            children: k
                                         })
                                 ]
                             }),
-                            (0, i.jsxs)(o.mzw, {
+                            (0, n.jsxs)(l.mzw, {
                                 className: h.footer,
                                 direction: r.Z.Direction.HORIZONTAL,
                                 children: [
-                                    (0, i.jsx)(o.zxk, {
-                                        look: o.zxk.Looks.LINK,
-                                        color: o.zxk.Colors.PRIMARY,
+                                    (0, n.jsx)(l.zxk, {
+                                        look: l.zxk.Looks.LINK,
+                                        color: l.zxk.Colors.PRIMARY,
                                         onClick: () => {
                                             C('DOMAIN'), v(null);
                                         },
-                                        children: x.intl.string(x.t['13/7kZ'])
+                                        children: x.NW.string(x.t['13/7kZ'])
                                     }),
-                                    (0, i.jsxs)('div', {
+                                    (0, n.jsxs)('div', {
                                         className: h.footerInner,
                                         children: [
-                                            (0, i.jsx)(o.zxk, {
-                                                look: o.zxk.Looks.LINK,
-                                                color: o.zxk.Colors.PRIMARY,
+                                            (0, n.jsx)(l.zxk, {
+                                                look: l.zxk.Looks.LINK,
+                                                color: l.zxk.Colors.PRIMARY,
                                                 onClick: () => {
                                                     C('PROOF_HTTP'), v(null);
                                                 },
                                                 className: h.__invalid_switchButton,
-                                                children: x.intl.string(x.t.CkfdNz)
+                                                children: x.NW.string(x.t.CkfdNz)
                                             }),
-                                            (0, i.jsx)(o.zxk, {
+                                            (0, n.jsx)(l.zxk, {
                                                 submitting: _,
                                                 onClick: b,
-                                                children: x.intl.string(x.t['13ofGh'])
+                                                children: x.NW.string(x.t['13ofGh'])
                                             })
                                         ]
                                     })
@@ -220,67 +220,67 @@ function u(t) {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(o.Mi4, {
+                    (0, n.jsxs)(l.Mi4, {
                         id: 'PROOF_HTTP',
                         children: [
-                            (0, i.jsxs)(o.hzk, {
+                            (0, n.jsxs)(l.hzk, {
                                 className: h.content,
                                 children: [
-                                    (0, i.jsx)(o.Text, {
+                                    (0, n.jsx)(l.Text, {
                                         tag: 'span',
                                         variant: 'text-md/normal',
-                                        children: x.intl.string(x.t['p4ql7+'])
+                                        children: x.NW.string(x.t['p4ql7+'])
                                     }),
-                                    (0, i.jsxs)('div', {
+                                    (0, n.jsxs)('div', {
                                         className: h.httpFileContainer,
                                         children: [
-                                            (0, i.jsx)(m, {
-                                                name: x.intl.string(x.t.GL3q7u),
+                                            (0, n.jsx)(N, {
+                                                name: x.NW.string(x.t.GL3q7u),
                                                 value: (0, c.F9)(a)
                                             }),
-                                            (0, i.jsx)(m, {
-                                                name: x.intl.string(x.t.PVLriY),
-                                                value: j
+                                            (0, n.jsx)(N, {
+                                                name: x.NW.string(x.t.PVLriY),
+                                                value: u
                                             })
                                         ]
                                     }),
-                                    null != N &&
-                                        (0, i.jsx)(o.Text, {
+                                    null != k &&
+                                        (0, n.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-danger',
                                             className: h.text,
-                                            children: N
+                                            children: k
                                         })
                                 ]
                             }),
-                            (0, i.jsxs)(o.mzw, {
+                            (0, n.jsxs)(l.mzw, {
                                 className: h.footer,
                                 direction: r.Z.Direction.HORIZONTAL,
                                 children: [
-                                    (0, i.jsx)(o.zxk, {
-                                        look: o.zxk.Looks.LINK,
-                                        color: o.zxk.Colors.PRIMARY,
+                                    (0, n.jsx)(l.zxk, {
+                                        look: l.zxk.Looks.LINK,
+                                        color: l.zxk.Colors.PRIMARY,
                                         onClick: () => {
                                             C('DOMAIN'), v(null);
                                         },
-                                        children: x.intl.string(x.t['13/7kZ'])
+                                        children: x.NW.string(x.t['13/7kZ'])
                                     }),
-                                    (0, i.jsxs)('div', {
+                                    (0, n.jsxs)('div', {
                                         className: h.footerInner,
                                         children: [
-                                            (0, i.jsx)(o.zxk, {
-                                                look: o.zxk.Looks.LINK,
-                                                color: o.zxk.Colors.PRIMARY,
+                                            (0, n.jsx)(l.zxk, {
+                                                look: l.zxk.Looks.LINK,
+                                                color: l.zxk.Colors.PRIMARY,
                                                 onClick: () => {
                                                     C('PROOF_DNS'), v(null);
                                                 },
                                                 className: h.__invalid_switchButton,
-                                                children: x.intl.string(x.t.RhJMVV)
+                                                children: x.NW.string(x.t.RhJMVV)
                                             }),
-                                            (0, i.jsx)(o.zxk, {
+                                            (0, n.jsx)(l.zxk, {
                                                 submitting: _,
                                                 onClick: b,
-                                                children: x.intl.string(x.t['13ofGh'])
+                                                children: x.NW.string(x.t['13ofGh'])
                                             })
                                         ]
                                     })

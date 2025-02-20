@@ -1,7 +1,7 @@
-var i = n(591794),
-    r = n(349446),
-    a = n(241777);
+var r = n(591794),
+    i = n(349446),
+    o = n(241777);
 e.exports = function (e, t, n) {
-    var s = i(t);
-    s in e ? r.f(e, s, a(0, n)) : (e[s] = n);
+    var a = r(t);
+    a in e ? i.f(e, a, o(0, n)) : (e[a] = n);
 };

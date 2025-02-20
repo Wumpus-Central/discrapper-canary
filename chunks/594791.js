@@ -1,26 +1,26 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(626135),
-    a = n(695346),
-    s = n(981631),
-    c = n(388032);
-function o() {
-    let e = a.dN.useSetting(),
-        t = a.R$.useSetting();
+r.d(t, { Z: () => s });
+var n = r(200651);
+r(192379);
+var i = r(481060),
+    o = r(626135),
+    c = r(695346),
+    a = r(981631),
+    l = r(388032);
+function s() {
+    let e = c.dN.useSetting(),
+        t = c.R$.useSetting();
     return e
         ? null
-        : (0, i.jsx)(r.S89, {
+        : (0, n.jsx)(i.S89, {
               id: 'preview-markdown-toggle',
-              label: c.intl.string(c.t.sHJ9wc),
+              label: l.NW.string(l.t.sHJ9wc),
               action: () => {
                   let e = !t;
-                  l.default.track(s.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                  o.default.track(a.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
-                      location: { section: s.jXE.SETTINGS_CONTEXT_MENU }
+                      location: { section: a.jXE.SETTINGS_CONTEXT_MENU }
                   }),
-                      a.R$.updateSetting(e);
+                      c.R$.updateSetting(e);
               },
               checked: t
           });

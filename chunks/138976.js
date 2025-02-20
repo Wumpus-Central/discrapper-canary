@@ -1,17 +1,17 @@
-n.d(t, { O: () => l });
-var i = n(904245),
-    s = n(306680),
-    r = n(944486);
-let l = {
+n.d(t, { O: () => a });
+var r = n(904245),
+    i = n(306680),
+    s = n(944486);
+let a = {
     binds: ['shift+pageup'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = r.Z.getChannelId();
+        let e = s.Z.getChannelId();
         if (null != e) {
-            let t = s.ZP.ackMessageId(e);
+            let t = i.ZP.ackMessageId(e);
             null != t &&
-                s.ZP.getOldestUnreadTimestamp(e) > 0 &&
-                i.Z.jumpToMessage({
+                i.ZP.getOldestUnreadTimestamp(e) > 0 &&
+                r.Z.jumpToMessage({
                     channelId: e,
                     messageId: t,
                     offset: 1,

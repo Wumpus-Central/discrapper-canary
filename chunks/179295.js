@@ -1,44 +1,44 @@
-n.d(t, { Z: () => c });
-var l = n(192379),
-    i = n(442837),
-    r = n(569545),
+n.d(t, { Z: () => u });
+var r = n(192379),
+    l = n(442837),
+    i = n(569545),
     a = n(959457),
-    s = n(626135),
-    o = n(981631),
-    u = n(474936);
-function c(e, t) {
-    let { handleMouseDown: n, handleMouseMove: c, handleMouseUp: d, handleMouseEnter: m } = e,
-        f = l.useRef(null),
-        h = (0, i.e7)([a.Z], () => a.Z.getRTCConnection((0, r.V9)(t))),
-        p = l.useCallback(
-            (e, t, l) => {
-                (f.current = Date.now()), n(e, t, l);
+    o = n(626135),
+    s = n(981631),
+    c = n(474936);
+function u(e, t) {
+    let { handleMouseDown: n, handleMouseMove: u, handleMouseUp: d, handleMouseEnter: f } = e,
+        m = r.useRef(null),
+        p = (0, l.e7)([a.Z], () => a.Z.getRTCConnection((0, i.V9)(t))),
+        h = r.useCallback(
+            (e, t, r) => {
+                (m.current = Date.now()), n(e, t, r);
             },
             [n]
         );
     return {
-        handleMouseUp: l.useCallback(
+        handleMouseUp: r.useCallback(
             (e, t, n) => {
-                if ((d(e, t, n), null != f.current)) {
-                    if (null != h) {
-                        var l;
-                        (l = Date.now() - f.current),
-                            s.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
-                                feature_name: ''.concat(u.QP.SHARED_CANVAS, '_').concat(e.type),
-                                feature_tier: u.h1.FREE,
-                                media_session_id: h.getMediaSessionId(),
-                                parent_media_session_id: h.parentMediaSessionId,
-                                guild_id: h.guildId,
-                                duration: l
+                if ((d(e, t, n), null != m.current)) {
+                    if (null != p) {
+                        var r;
+                        (r = Date.now() - m.current),
+                            o.default.track(s.rMx.PREMIUM_FEATURE_USAGE, {
+                                feature_name: ''.concat(c.QP.SHARED_CANVAS, '_').concat(e.type),
+                                feature_tier: c.h1.FREE,
+                                media_session_id: p.getMediaSessionId(),
+                                parent_media_session_id: p.parentMediaSessionId,
+                                guild_id: p.guildId,
+                                duration: r
                             });
                     }
-                    f.current = null;
+                    m.current = null;
                 }
             },
-            [d, h]
+            [d, p]
         ),
-        handleMouseDown: p,
-        handleMouseMove: c,
-        handleMouseEnter: m
+        handleMouseDown: h,
+        handleMouseMove: u,
+        handleMouseEnter: f
     };
 }

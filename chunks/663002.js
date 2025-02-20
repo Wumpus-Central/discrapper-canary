@@ -1,24 +1,24 @@
 n.d(t, {
-    Qe: () => s,
-    ap: () => r,
-    wj: () => a
+    Qe: () => a,
+    ap: () => i,
+    wj: () => o
 });
-var i = n(231338);
-function r(e) {
-    return e === i.BR.LIGHT;
+var r = n(231338);
+function i(e) {
+    return e === r.BR.LIGHT;
 }
-function a(e) {
+function o(e) {
     switch (e) {
-        case i.BR.DARK:
-        case i.BR.MIDNIGHT:
-        case i.BR.DARKER:
+        case r.BR.DARK:
+        case r.BR.MIDNIGHT:
+        case r.BR.DARKER:
             return !0;
         default:
             return !1;
     }
 }
-function s(e) {
+function a(e) {
     if (null == e) return;
-    let t = i.Al.get(e);
+    let t = r.Al.get(e);
     return null != t ? 'theme-'.concat(t, ' theme-').concat(e, ' images-').concat(t) : 'theme-'.concat(e, ' images-').concat(e);
 }

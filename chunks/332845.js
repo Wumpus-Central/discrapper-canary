@@ -1,27 +1,27 @@
-t.d(i, { Z: () => o });
-var l = t(200651);
-t(192379);
-var a = t(442837),
-    e = t(481060),
-    r = t(417363),
-    d = t(877481),
-    c = t(358085),
-    s = t(388032);
-function o(n, i) {
-    let t = n.getBranchedName(i),
-        o = (0, a.e7)(
-            [r.Z],
+n.d(t, { Z: () => s });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(417363),
+    c = n(877481),
+    o = n(358085),
+    u = n(388032);
+function s(e, t) {
+    let n = e.getBranchedName(t),
+        s = (0, i.e7)(
+            [a.Z],
             () => {
-                let i = r.Z.getState(n.id, n.branchId);
-                return null == i ? void 0 : i.installPath;
+                let t = a.Z.getState(e.id, e.branchId);
+                return null == t ? void 0 : t.installPath;
             },
-            [n.branchId, n.id]
+            [e.branchId, e.id]
         );
-    return null != o && (0, c.isDesktop)()
-        ? (0, l.jsx)(e.sNh, {
+    return null != s && (0, o.isDesktop)()
+        ? (0, r.jsx)(l.sNh, {
               id: 'create-shortcut',
-              label: s.intl.string(s.t.T4tecH),
-              action: () => d.Z.createShortcuts(!0, !1, t, n.id, o)
+              label: u.NW.string(u.t.T4tecH),
+              action: () => c.Z.createShortcuts(!0, !1, n, e.id, s)
           })
         : null;
 }

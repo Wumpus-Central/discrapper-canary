@@ -1,15 +1,15 @@
 let r;
 a.d(e, { a: () => c });
 var n = a(578346),
-    _ = a(987886),
-    o = a(370336),
+    o = a(987886),
+    _ = a(370336),
     i = a(395848);
 function c(t) {
     let e = 'history';
     (0, n.Hj)(e, t), (0, n.D2)(e, s);
 }
 function s() {
-    if (!(0, _.B)()) return;
+    if (!(0, o.B)()) return;
     let t = i.m.onpopstate;
     function e(t) {
         return function (...e) {
@@ -28,11 +28,11 @@ function s() {
     }
     (i.m.onpopstate = function (...e) {
         let a = i.m.location.href,
-            _ = r;
+            o = r;
         if (
             ((r = a),
             (0, n.rK)('history', {
-                from: _,
+                from: o,
                 to: a
             }),
             t)
@@ -41,6 +41,6 @@ function s() {
                 return t.apply(this, e);
             } catch (t) {}
     }),
-        (0, o.hl)(i.m.history, 'pushState', e),
-        (0, o.hl)(i.m.history, 'replaceState', e);
+        (0, _.hl)(i.m.history, 'pushState', e),
+        (0, _.hl)(i.m.history, 'replaceState', e);
 }

@@ -1,80 +1,80 @@
-n.d(t, { Z: () => x }), n(47120);
-var i,
+n.d(t, { Z: () => _ }), n(47120);
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(131704),
     c = n(251625),
-    d = n(592125),
-    u = n(306680),
-    h = n(944486),
-    p = n(55589);
-let m = [],
+    u = n(592125),
+    d = n(306680),
+    p = n(944486),
+    h = n(55589);
+let f = [],
     g = new Set();
-function f() {
-    let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && ((m = e), (g = new Set(e)), !0);
+function m() {
+    let e = h.Z.getPrivateChannelIds().filter((e) => d.ZP.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, f) && ((f = e), (g = new Set(e)), !0);
 }
-function _() {
-    return f();
+function b() {
+    return m();
 }
 function v(e) {
     let { channelId: t } = e,
-        n = d.Z.getChannel(t);
-    return !!(null != n && (0, s.hv)(n.type)) && f();
+        n = u.Z.getChannel(t);
+    return !!(null != n && (0, s.hv)(n.type)) && m();
 }
-class C extends (i = a.ZP.Store) {
+class y extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, d.Z, h.Z, u.ZP);
+        this.waitFor(h.Z, u.Z, p.Z, d.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return m;
+        return f;
     }
 }
-(r = 'PrivateChannelReadStateStore'),
-    (l = 'displayName') in C
-        ? Object.defineProperty(C, l, {
-              value: r,
+(l = 'PrivateChannelReadStateStore'),
+    (i = 'displayName') in y
+        ? Object.defineProperty(y, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[l] = r);
-let x = new C(o.Z, {
-    CONNECTION_OPEN: _,
-    OVERLAY_INITIALIZE: _,
+        : (y[i] = l);
+let _ = new y(a.Z, {
+    CONNECTION_OPEN: b,
+    OVERLAY_INITIALIZE: b,
     MESSAGE_CREATE: v,
     MESSAGE_ACK: v,
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
-            n = d.Z.getChannel(t);
-        return !!(null != n && (0, s.hv)(n.type)) && f();
+            n = u.Z.getChannel(t);
+        return !!(null != n && (0, s.hv)(n.type)) && m();
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: t }
         } = e;
-        return !!g.has(t) && f();
+        return !!g.has(t) && m();
     },
     WINDOW_FOCUS: function () {
-        let e = d.Z.getChannel(h.Z.getChannelId());
-        return !!(null != e && (0, s.hv)(e.type)) && f();
+        let e = u.Z.getChannel(p.Z.getChannelId());
+        return !!(null != e && (0, s.hv)(e.type)) && m();
     },
     CHANNEL_CREATE: function (e) {
         let {
                 channel: { id: t }
             } = e,
-            n = d.Z.getChannel(t);
-        return !!(null != n && (0, s.hv)(n.type)) && f();
+            n = u.Z.getChannel(t);
+        return !!(null != n && (0, s.hv)(n.type)) && m();
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
         for (let { id: e } of t) {
-            let t = d.Z.getChannel(e);
+            let t = u.Z.getChannel(e);
             null != t && (0, s.hv)(t.type) && (n = !0);
         }
-        return !!n && f();
+        return !!n && m();
     }
 });

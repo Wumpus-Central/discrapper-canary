@@ -1,11 +1,11 @@
 n.d(t, { Z: () => a }), n(47120);
-var i = n(192379),
-    l = n(393238);
+var r = n(192379),
+    i = n(393238);
 function a() {
-    let { ref: e, width: t } = (0, l.Z)(),
-        [n, a] = i.useState();
+    let { ref: e, width: t } = (0, i.Z)(),
+        [n, a] = r.useState();
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             null == n && null != t && a(t);
         }, [n, t]),
         [e, n]

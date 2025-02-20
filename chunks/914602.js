@@ -1,20 +1,20 @@
-n.d(t, { Z: () => E }), n(47120);
-var i,
-    l = n(200651),
+n.d(t, { Z: () => y }), n(47120);
+var r,
+    i = n(200651),
     a = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    o = n(86357),
+    o = n(120356),
+    l = n.n(o),
+    s = n(86357),
     c = n(54936),
     d = n(687755),
     u = n(351465),
-    m = n(669021),
-    _ = n(73346),
-    h = n(568836),
-    p = n(345898),
+    p = n(669021),
+    m = n(73346),
+    f = n(568836),
+    h = n(345898),
     g = n(981631),
-    f = n(12128);
-function x(e, t, n) {
+    _ = n(840154);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,14 +27,14 @@ function x(e, t, n) {
         e
     );
 }
-class C extends (i = a.PureComponent) {
+class v extends (r = a.PureComponent) {
     render() {
-        let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: a, renderCustomTitle: r, renderCustomMedia: s, isEmbed: o } = this.props,
-            c = o ? h.$G : p.Z;
-        return (0, l.jsx)(c, {
-            className: i,
-            renderMedia: null != s ? s : this.renderMedia,
-            renderTitle: null != r ? r : () => e.name,
+        let { sku: e, storeListing: t, isHorizontal: n, className: r, renderCustomTagline: a, renderCustomTitle: o, renderCustomMedia: l, isEmbed: s } = this.props,
+            c = s ? f.$G : h.Z;
+        return (0, i.jsx)(c, {
+            className: r,
+            renderMedia: null != l ? l : this.renderMedia,
+            renderTitle: null != o ? o : () => e.name,
             renderTagline: null != a ? a : () => t.tagline,
             renderActions: this.renderActions,
             isHorizontal: n
@@ -42,55 +42,55 @@ class C extends (i = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'renderActions', () => {
-                let { inLibrary: e, sku: t, renderCustomActions: n, isMouseOver: i, showBuyInline: a } = this.props,
-                    r = (a || !t.requiresPayment) && !e;
+            b(this, 'renderActions', () => {
+                let { inLibrary: e, sku: t, renderCustomActions: n, isMouseOver: r, showBuyInline: a } = this.props,
+                    o = (a || !t.requiresPayment) && !e;
                 return null != n
                     ? n()
-                    : (0, l.jsxs)('div', {
-                          className: f.priceOs,
+                    : (0, i.jsxs)('div', {
+                          className: _.priceOs,
                           children: [
-                              (0, l.jsx)(o.Z, {
-                                  type: o.Z.Types.DIRECTORY_TILE,
+                              (0, i.jsx)(s.Z, {
+                                  type: s.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: r && i ? f.tilePriceWithVisibleBuyButton : f.tilePrice
+                                  className: o && r ? _.tilePriceWithVisibleBuyButton : _.tilePrice
                               }),
-                              (0, l.jsx)(c.n, {
+                              (0, i.jsx)(c.n, {
                                   systems: [g.TaA.WINDOWS],
-                                  className: f.platform
+                                  className: _.platform
                               }),
-                              r ? (0, l.jsx)('div', { children: 'deprecated!' }) : null
+                              o ? (0, i.jsx)('div', { children: 'deprecated!' }) : null
                           ]
                       });
             }),
-            x(this, 'renderMedia', () => {
-                let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: i, sku: r, isHorizontal: o, storeListing: c } = this.props;
-                return (0, l.jsxs)(a.Fragment, {
+            b(this, 'renderMedia', () => {
+                let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: r, sku: o, isHorizontal: s, storeListing: c } = this.props;
+                return (0, i.jsxs)(a.Fragment, {
                     children: [
-                        (0, l.jsx)(m.Z, {
-                            className: s()(f.splashContainer, { [f.splashContainerHorizontal]: o }),
-                            video: null != c.previewVideo ? (0, _._W)(r.applicationId, c.previewVideo) : void 0,
-                            image: null != c.thumbnail ? (0, _._W)(r.applicationId, c.thumbnail, 600) : null,
-                            title: r.name,
+                        (0, i.jsx)(p.Z, {
+                            className: l()(_.splashContainer, { [_.splashContainerHorizontal]: s }),
+                            video: null != c.previewVideo ? (0, m._W)(o.applicationId, c.previewVideo) : void 0,
+                            image: null != c.thumbnail ? (0, m._W)(o.applicationId, c.thumbnail, 600) : null,
+                            title: o.name,
                             playing: e,
                             muted: t,
                             placeholder: n,
-                            onToggleMute: i,
-                            splashClassName: f.splashVideo,
-                            splashPlaceholderClassName: f.splashPlaceholder
+                            onToggleMute: r,
+                            splashClassName: _.splashVideo,
+                            splashPlaceholderClassName: _.splashPlaceholder
                         }),
-                        r.exclusive ? (0, l.jsx)(u.Z, { className: s()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, l.jsx)(d.Z, { className: s()(f.exclusiveRegular, { [f.exclusivePlaying]: e }) }) : null
+                        o.exclusive ? (0, i.jsx)(u.Z, { className: l()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : o.isTheGameAwardsWinner ? (0, i.jsx)(d.Z, { className: l()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });
     }
 }
-x(C, 'defaultProps', {
+b(v, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 });
-let E = C;
+let y = v;

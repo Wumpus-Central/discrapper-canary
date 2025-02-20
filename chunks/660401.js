@@ -1,32 +1,32 @@
-n.d(t, { Z: () => D });
-var i = n(176338),
-    r = n(725180),
-    a = n(370873),
-    s = '[object Arguments]',
-    o = '[object Array]',
+n.d(t, { Z: () => P });
+var r = n(176338),
+    i = n(725180),
+    o = n(370873),
+    a = '[object Arguments]',
+    s = '[object Array]',
     l = '[object Boolean]',
-    u = '[object Date]',
-    c = '[object Error]',
+    c = '[object Date]',
+    u = '[object Error]',
     d = '[object Function]',
     f = '[object Map]',
-    _ = '[object Number]',
-    p = '[object Object]',
+    p = '[object Number]',
+    _ = '[object Object]',
     h = '[object RegExp]',
     m = '[object Set]',
     g = '[object String]',
     E = '[object WeakMap]',
     v = '[object ArrayBuffer]',
-    y = '[object DataView]',
-    I = '[object Float64Array]',
-    T = '[object Int8Array]',
-    b = '[object Int16Array]',
-    S = '[object Int32Array]',
-    A = '[object Uint8Array]',
+    b = '[object DataView]',
+    y = '[object Float64Array]',
+    O = '[object Int8Array]',
+    S = '[object Int16Array]',
+    I = '[object Int32Array]',
+    T = '[object Uint8Array]',
     N = '[object Uint8ClampedArray]',
-    C = '[object Uint16Array]',
-    R = '[object Uint32Array]',
-    O = {};
-(O['[object Float32Array]'] = O[I] = O[T] = O[b] = O[S] = O[A] = O[N] = O[C] = O[R] = !0), (O[s] = O[o] = O[v] = O[l] = O[y] = O[u] = O[c] = O[d] = O[f] = O[_] = O[p] = O[h] = O[m] = O[g] = O[E] = !1);
-let D = function (e) {
-    return (0, a.Z)(e) && (0, r.Z)(e.length) && !!O[(0, i.Z)(e)];
+    A = '[object Uint16Array]',
+    C = '[object Uint32Array]',
+    R = {};
+(R['[object Float32Array]'] = R[y] = R[O] = R[S] = R[I] = R[T] = R[N] = R[A] = R[C] = !0), (R[a] = R[s] = R[v] = R[l] = R[b] = R[c] = R[u] = R[d] = R[f] = R[p] = R[_] = R[h] = R[m] = R[g] = R[E] = !1);
+let P = function (e) {
+    return (0, o.Z)(e) && (0, i.Z)(e.length) && !!R[(0, r.Z)(e)];
 };

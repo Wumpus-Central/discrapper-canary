@@ -1,42 +1,42 @@
 n.d(t, {
-    S: () => h,
-    m: () => _
+    S: () => f,
+    m: () => m
 }),
     n(47120);
-var i = n(200651),
-    l = n(192379),
+var r = n(200651),
+    i = n(192379),
     a = n(442837),
-    r = n(481060),
-    s = n(607070),
-    o = n(426563),
+    o = n(481060),
+    l = n(607070),
+    s = n(426563),
     c = n(998502),
     d = n(388032),
-    u = n(523792);
-let m = c.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
-function _() {
+    u = n(237166);
+let p = c.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        [t, n] = l.useState(!1),
-        i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        r = l.useMemo(() => {
-            let n = t || (!i && !e);
-            return (0, o.j)(n);
-        }, [t, i, e]);
+        [t, n] = i.useState(!1),
+        r = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        o = i.useMemo(() => {
+            let n = t || (!r && !e);
+            return (0, s.j)(n);
+        }, [t, r, e]);
     return {
-        avatarSrc: r,
+        avatarSrc: o,
         eventHandlers: {
-            onMouseEnter: l.useCallback(() => n(!0), []),
-            onMouseLeave: l.useCallback(() => n(!1), [])
+            onMouseEnter: i.useCallback(() => n(!0), []),
+            onMouseLeave: i.useCallback(() => n(!1), [])
         }
     };
 }
-function h(e) {
+function f(e) {
     let { src: t } = e;
-    return (0, i.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: u.avatarContainer,
-        children: (0, i.jsx)(m, {
+        children: (0, r.jsx)(p, {
             src: t,
-            size: r.EFr.SIZE_40,
-            'aria-label': d.intl.string(d.t.hG1StL)
+            size: o.EFr.SIZE_40,
+            'aria-label': d.NW.string(d.t.hG1StL)
         })
     });
 }

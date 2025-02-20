@@ -3,9 +3,9 @@ n.d(t, {
     Z: () => R
 });
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
     o = n(442837),
     s = n(481060),
     c = n(475179),
@@ -89,7 +89,7 @@ function I(e) {
         : null;
 }
 function R(e) {
-    let { participant: t, channel: n, inCall: l, width: s, paused: g, selected: I, fit: R, onVideoResize: _, blocked: k, ignored: A, noVideoRender: T = !1, pulseSpeakingIndicator: D = !1, inOverlayPopout: M = !1 } = e,
+    let { participant: t, channel: n, inCall: i, width: s, paused: g, selected: I, fit: R, onVideoResize: _, blocked: k, ignored: A, noVideoRender: T = !1, pulseSpeakingIndicator: D = !1, inOverlayPopout: M = !1 } = e,
         L = E.Z.getVideoComponent(),
         F = (0, o.e7)([b.default], () => b.default.getId()),
         { user: W, streamId: U, speaking: z } = t,
@@ -114,15 +114,15 @@ function R(e) {
             selectedParticipant: ee,
             user: W
         },
-        en = i.useRef(et);
-    return (i.useEffect(() => {
+        en = l.useRef(et);
+    return (l.useEffect(() => {
         en.current = et;
     }),
-    i.useEffect(() => {
+    l.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
         e.isGuildStageVoice() && !H && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
     }, [H]),
-    l && !K && !T && H && !I && null != L && E.Z.supports(Z.AN.VIDEO))
+    i && !K && !T && H && !I && null != L && E.Z.supports(Z.AN.VIDEO))
         ? (0, r.jsx)(
               p.Z,
               {

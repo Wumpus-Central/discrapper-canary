@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = (function (e) {
+n.d(t, { Z: () => i });
+var r = (function (e) {
     return (
         (e.CHANNEL_CHAT_RESIZABLE_SIDEBAR_RESIZE_HANDLE_WIDTH = '8px'),
         (e.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE = '485px'),
@@ -101,5 +101,5 @@ var i = (function (e) {
         (e.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE = '122px'),
         e
     );
-})(i || {});
-let r = i;
+})(r || {});
+let i = r;

@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var i = n(192379),
-    r = n(723184);
-let a = function (e) {
+n.d(t, { Z: () => o });
+var r = n(192379),
+    i = n(723184);
+let o = function (e) {
     var t = e.rgb,
         n = e.currentColor,
-        a = (0, r.default)({
+        o = (0, i.default)({
             default: {
                 swatches: {
                     border: '1px solid #B3B3B3',
@@ -29,5 +29,5 @@ let a = function (e) {
                 }
             }
         });
-    return i.createElement('div', null, i.createElement('div', { style: a.label }, 'new'), i.createElement('div', { style: a.swatches }, i.createElement('div', { style: a.new }), i.createElement('div', { style: a.current })), i.createElement('div', { style: a.label }, 'current'));
+    return r.createElement('div', null, r.createElement('div', { style: o.label }, 'new'), r.createElement('div', { style: o.swatches }, r.createElement('div', { style: o.new }), r.createElement('div', { style: o.current })), r.createElement('div', { style: o.label }, 'current'));
 };

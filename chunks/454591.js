@@ -7,11 +7,11 @@ function t(e) {
             className: 'number',
             begin: /\b\d+/
         },
-        i = {
+        r = {
             className: 'number',
             begin: /\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(:\d{1,5})?/
         },
-        r = {
+        i = {
             className: 'number',
             begin: /:\d{1,5}/
         };
@@ -25,7 +25,7 @@ function t(e) {
                 className: 'section',
                 begin: /<\/?/,
                 end: />/,
-                contains: [i, r, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
+                contains: [r, i, e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 })]
             },
             {
                 className: 'attribute',
@@ -54,7 +54,7 @@ function t(e) {
                             end: /\}/,
                             contains: ['self', t]
                         },
-                        i,
+                        r,
                         n,
                         e.QUOTE_STRING_MODE
                     ]

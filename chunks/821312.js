@@ -1,122 +1,122 @@
-n.d(t, { Z: () => x }), n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    s = n(831209),
-    o = n(481060),
-    d = n(367907),
-    c = n(177862),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(831209),
+    s = n(481060),
+    c = n(367907),
+    d = n(177862),
     u = n(981631),
-    m = n(388032),
-    h = n(20078);
-function x(e) {
-    let { guildId: t, transitionState: n, onClose: a } = e,
-        [x, g] = l.useState([]),
-        [p, f] = l.useState(),
-        b = [
+    p = n(388032),
+    m = n(468094);
+function b(e) {
+    let { guildId: t, transitionState: n, onClose: l } = e,
+        [b, g] = i.useState([]),
+        [f, h] = i.useState(),
+        x = [
             {
-                text: m.intl.string(m.t['//3pvr']),
-                value: c.C2.DM_SPAM
+                text: p.NW.string(p.t['//3pvr']),
+                value: d.C2.DM_SPAM
             },
             {
-                text: m.intl.string(m.t.SdVsio),
-                value: c.C2.MENTION_SPAM
+                text: p.NW.string(p.t.SdVsio),
+                value: d.C2.MENTION_SPAM
             },
             {
-                text: m.intl.string(m.t.uTiSVF),
-                value: c.C2.CHANNEL_SPAM
+                text: p.NW.string(p.t.uTiSVF),
+                value: d.C2.CHANNEL_SPAM
             },
             {
-                text: m.intl.string(m.t.GQczU1),
-                value: c.C2.SUS_NEW_MEMBERS
+                text: p.NW.string(p.t.GQczU1),
+                value: d.C2.SUS_NEW_MEMBERS
             },
             {
-                text: m.intl.string(m.t.AAgqy8),
-                value: c.C2.CHANGING_SETTINGS
+                text: p.NW.string(p.t.AAgqy8),
+                value: d.C2.CHANGING_SETTINGS
             },
             {
-                text: m.intl.string(m.t.ryPKb2),
-                value: c.C2.OTHER
+                text: p.NW.string(p.t.ryPKb2),
+                value: d.C2.OTHER
             }
         ];
-    function v(e) {
-        x.includes(e) ? g((t) => t.filter((t) => t !== e)) : g((t) => [...t, e]);
+    function j(e) {
+        b.includes(e) ? g((t) => t.filter((t) => t !== e)) : g((t) => [...t, e]);
     }
     return null == t
-        ? (a(), null)
-        : (0, i.jsxs)(o.Y0X, {
+        ? (l(), null)
+        : (0, r.jsxs)(s.Y0X, {
               transitionState: n,
-              size: o.CgR.MEDIUM,
+              size: s.CgR.MEDIUM,
               children: [
-                  (0, i.jsx)(o.xBx, {
+                  (0, r.jsx)(s.xBx, {
                       separator: !0,
-                      children: (0, i.jsxs)('div', {
-                          className: h.headerContainer,
+                      children: (0, r.jsxs)('div', {
+                          className: m.headerContainer,
                           children: [
-                              (0, i.jsxs)('div', {
-                                  className: h.headerText,
+                              (0, r.jsxs)('div', {
+                                  className: m.headerText,
                                   children: [
-                                      (0, i.jsx)(o.mBM, {
+                                      (0, r.jsx)(s.mBM, {
                                           size: 'xs',
-                                          color: s.Z.INTERACTIVE_NORMAL
+                                          color: a.Z.INTERACTIVE_NORMAL
                                       }),
-                                      (0, i.jsx)(o.X6q, {
+                                      (0, r.jsx)(s.X6q, {
                                           color: 'header-primary',
                                           variant: 'heading-md/semibold',
-                                          children: m.intl.string(m.t.f5hd9P)
+                                          children: p.NW.string(p.t.f5hd9P)
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(o.P3F, {
-                                  onClick: a,
-                                  children: (0, i.jsx)(o.Dio, {
+                              (0, r.jsx)(s.P3F, {
+                                  onClick: l,
+                                  children: (0, r.jsx)(s.Dio, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: h.closeIcon
+                                      className: m.closeIcon
                                   })
                               })
                           ]
                       })
                   }),
-                  (0, i.jsx)(o.hzk, {
-                      children: (0, i.jsx)('div', {
-                          className: h.options,
-                          children: b.map((e) => {
+                  (0, r.jsx)(s.hzk, {
+                      children: (0, r.jsx)('div', {
+                          className: m.options,
+                          children: x.map((e) => {
                               let { text: t, value: n } = e;
-                              return (0, i.jsxs)(
+                              return (0, r.jsxs)(
                                   'div',
                                   {
-                                      className: r()(h.optionContainer, { [h.optionContainerOther]: n === c.C2.OTHER }),
+                                      className: o()(m.optionContainer, { [m.optionContainerOther]: n === d.C2.OTHER }),
                                       children: [
-                                          (0, i.jsxs)(o.P3F, {
-                                              className: h.optionText,
-                                              onClick: () => v(n),
+                                          (0, r.jsxs)(s.P3F, {
+                                              className: m.optionText,
+                                              onClick: () => j(n),
                                               children: [
-                                                  (0, i.jsx)('div', {
-                                                      children: (0, i.jsx)(o.XZJ, {
-                                                          type: o.XZJ.Types.INVERTED,
+                                                  (0, r.jsx)('div', {
+                                                      children: (0, r.jsx)(s.XZJ, {
+                                                          type: s.XZJ.Types.INVERTED,
                                                           size: 20,
-                                                          value: x.includes(n),
-                                                          onChange: () => v(n)
+                                                          value: b.includes(n),
+                                                          onChange: () => j(n)
                                                       })
                                                   }),
-                                                  (0, i.jsx)(o.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: 'text-md/medium',
-                                                      color: x.includes(n) ? 'interactive-active' : 'interactive-normal',
+                                                      color: b.includes(n) ? 'interactive-active' : 'interactive-normal',
                                                       children: t
                                                   })
                                               ]
                                           }),
-                                          n === c.C2.OTHER &&
-                                              x.includes(c.C2.OTHER) &&
-                                              (0, i.jsx)('div', {
-                                                  className: h.textboxContainer,
-                                                  children: (0, i.jsx)(o.Kx8, {
-                                                      className: h.serverLockdownReasonText,
-                                                      placeholder: m.intl.string(m.t['PAM+JS']),
-                                                      onChange: (e) => f(e),
-                                                      value: p,
+                                          n === d.C2.OTHER &&
+                                              b.includes(d.C2.OTHER) &&
+                                              (0, r.jsx)('div', {
+                                                  className: m.textboxContainer,
+                                                  children: (0, r.jsx)(s.Kx8, {
+                                                      className: m.serverLockdownReasonText,
+                                                      placeholder: p.NW.string(p.t['PAM+JS']),
+                                                      onChange: (e) => h(e),
+                                                      value: f,
                                                       rows: 2,
                                                       autoFocus: !0,
                                                       flex: !0
@@ -129,20 +129,20 @@ function x(e) {
                           })
                       })
                   }),
-                  (0, i.jsx)(o.mzw, {
-                      children: (0, i.jsx)(o.zxk, {
+                  (0, r.jsx)(s.mzw, {
+                      children: (0, r.jsx)(s.zxk, {
                           onClick: function () {
-                              (0, d.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                                  raid_lockdown_feedback_type: x,
-                                  raid_lockdown_feedback_other_reason: p,
+                              (0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                                  raid_lockdown_feedback_type: b,
+                                  raid_lockdown_feedback_other_reason: f,
                                   guild_id: t
                               }),
-                                  a();
+                                  l();
                           },
-                          color: o.zxk.Colors.BRAND,
-                          look: o.zxk.Looks.FILLED,
+                          color: s.zxk.Colors.BRAND,
+                          look: s.zxk.Looks.FILLED,
                           submitting: !1,
-                          children: m.intl.string(m.t.nAt0rK)
+                          children: p.NW.string(p.t.nAt0rK)
                       })
                   })
               ]

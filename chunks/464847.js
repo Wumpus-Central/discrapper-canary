@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     var t;
     null === (t = window.DiscordSentry) ||
         void 0 === t ||
@@ -11,4 +11,4 @@ function i(e) {
             timestamp: Date.now()
         });
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

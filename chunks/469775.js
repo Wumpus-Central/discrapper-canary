@@ -1,16 +1,16 @@
-e.d(n, { E: () => i });
-var r = e(388032);
-let i = [
+n.d(t, { E: () => o });
+var r = n(388032);
+let o = [
     {
-        title: r.intl.string(r.t.HphYKi),
-        description: r.intl.string(r.t['GCZC+/'])
+        title: r.NW.string(r.t.HphYKi),
+        description: r.NW.string(r.t['GCZC+/'])
     },
     {
-        title: r.intl.string(r.t.nkO4Ly),
-        description: r.intl.string(r.t.rHZFsL)
+        title: r.NW.string(r.t.nkO4Ly),
+        description: r.NW.string(r.t.rHZFsL)
     },
     {
-        title: r.intl.string(r.t.aVwLfn),
-        description: r.intl.string(r.t.n5vd1N)
+        title: r.NW.string(r.t.aVwLfn),
+        description: r.NW.string(r.t.n5vd1N)
     }
 ];

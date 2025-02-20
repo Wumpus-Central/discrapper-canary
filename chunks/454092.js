@@ -1,22 +1,22 @@
 n.d(t, {
-    _: () => d,
-    s: () => o
+    _: () => c,
+    s: () => s
 });
-var i,
-    l = n(668781),
-    a = n(63063),
-    r = n(981631),
-    s = n(388032),
-    o = (((i = {})[(i.REMOVE_SELF = 0)] = 'REMOVE_SELF'), (i[(i.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'), (i[(i.DENY_ROLE = 2)] = 'DENY_ROLE'), i);
-function d(e, t) {
+var r,
+    i = n(668781),
+    l = n(63063),
+    o = n(981631),
+    a = n(388032),
+    s = (((r = {})[(r.REMOVE_SELF = 0)] = 'REMOVE_SELF'), (r[(r.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'), (r[(r.DENY_ROLE = 2)] = 'DENY_ROLE'), r);
+function c(e, t) {
     let n;
-    0 === e ? (n = s.intl.format(s.t['/S6f5+'], {})) : 1 === e ? (n = s.intl.format(s.t.EBhv4e, { name: t })) : 2 === e && (n = s.intl.format(s.t['59Dbw8'], { name: t })),
-        l.Z.show({
-            title: s.intl.string(s.t.vElC9f),
+    0 === e ? (n = a.NW.format(a.t['/S6f5+'], {})) : 1 === e ? (n = a.NW.format(a.t.EBhv4e, { name: t })) : 2 === e && (n = a.NW.format(a.t['59Dbw8'], { name: t })),
+        i.Z.show({
+            title: a.NW.string(a.t.vElC9f),
             body: n,
-            cancelText: s.intl.string(s.t.psXQHB),
+            cancelText: a.NW.string(a.t.psXQHB),
             onCancel() {
-                window.open(a.Z.getArticleURL(r.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));
+                window.open(l.Z.getArticleURL(o.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));
             }
         });
 }

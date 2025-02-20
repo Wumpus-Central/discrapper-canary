@@ -1,76 +1,76 @@
-i.d(n, { Z: () => v });
-var t = i(200651);
-i(192379);
-var l = i(442837),
-    a = i(481060),
-    r = i(434404),
-    o = i(147754),
-    s = i(939863),
-    c = i(430824),
-    d = i(496675),
-    u = i(981631),
-    g = i(388032),
-    h = i(675222);
+t.d(n, { Z: () => v });
+var r = t(200651);
+t(192379);
+var i = t(442837),
+    l = t(481060),
+    o = t(434404),
+    c = t(147754),
+    a = t(939863),
+    s = t(430824),
+    u = t(496675),
+    d = t(981631),
+    g = t(388032),
+    p = t(411355);
 function v(e) {
-    let { guildId: n, onClose: i } = e,
-        { showHubEventsList: v } = o.Z.useExperiment(
+    let { guildId: n, onClose: t } = e,
+        { showHubEventsList: v } = c.Z.useExperiment(
             {
                 guildId: n,
                 location: '6597ca_1'
             },
             { autoTrackExposure: !1 }
         ),
-        x = (0, l.e7)(
-            [c.Z, d.Z],
+        h = (0, i.e7)(
+            [s.Z, u.Z],
             () => {
-                let e = c.Z.getGuild(n);
-                return d.Z.can(u.Plq.MANAGE_ROLES, e);
+                let e = s.Z.getGuild(n);
+                return u.Z.can(d.Plq.MANAGE_ROLES, e);
             },
             [n]
         ),
-        Z = (0, l.e7)(
-            [c.Z],
+        f = (0, i.e7)(
+            [s.Z],
             () => {
-                let e = c.Z.getGuild(n);
-                return v && (null == e ? void 0 : e.hasFeature(u.oNc.HUB));
+                let e = s.Z.getGuild(n);
+                return v && (null == e ? void 0 : e.hasFeature(d.oNc.HUB));
             },
             [n, v]
         );
-    return (0, t.jsxs)('div', {
-        className: h.container,
+    return (0, r.jsxs)('div', {
+        className: p.container,
         children: [
-            (0, t.jsx)(s.Z, {
-                children: (0, t.jsx)('div', {
-                    className: h.circle,
-                    children: (0, t.jsx)(a.Que, {
+            (0, r.jsx)(a.Z, {
+                children: (0, r.jsx)('div', {
+                    className: p.circle,
+                    children: (0, r.jsx)(l.Que, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
                         width: 40,
-                        className: h.icon
+                        className: p.icon
                     })
                 })
             }),
-            (0, t.jsx)(a.X6q, {
+            (0, r.jsx)(l.X6q, {
                 color: 'header-primary',
                 variant: 'heading-xl/semibold',
-                className: h.title,
-                children: Z ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t['WgZ+3N'])
+                className: p.title,
+                children: f ? g.NW.string(g.t.RhXVpa) : g.NW.string(g.t['WgZ+3N'])
             }),
-            (0, t.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: h.subtitle,
-                children: Z ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
+                className: p.subtitle,
+                children: f ? g.NW.string(g.t['6hktHB']) : g.NW.string(g.t['v/S/PD'])
             }),
-            x &&
-                (0, t.jsx)(a.Text, {
+            h &&
+                (0, r.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: h.roleTip,
-                    children: g.intl.format(g.t['K+DH2t'], {
+                    className: p.roleTip,
+                    children: g.NW.format(g.t['K+DH2t'], {
                         onClick: () => {
-                            r.Z.open(n, u.pNK.ROLES), i();
+                            o.Z.open(n, d.pNK.ROLES), t();
                         }
                     })
                 })

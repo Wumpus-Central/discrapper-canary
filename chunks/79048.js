@@ -1,26 +1,26 @@
 function t(e) {
     let t = e.regex,
         n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
-        i = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
-        r = {
+        r = ['and', 'as', 'assert', 'async', 'await', 'break', 'case', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'match', 'nonlocal|10', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'],
+        i = {
             $pattern: /[A-Za-z]\w+|__\w+__/,
-            keyword: i,
+            keyword: r,
             built_in: ['__import__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip'],
             literal: ['__debug__', 'Ellipsis', 'False', 'None', 'NotImplemented', 'True'],
             type: ['Any', 'Callable', 'Coroutine', 'Dict', 'List', 'Literal', 'Generic', 'Optional', 'Sequence', 'Set', 'Tuple', 'Type', 'Union']
         },
-        a = {
+        o = {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
-        s = {
+        a = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
-            keywords: r,
+            keywords: i,
             illegal: /#/
         },
-        o = {
+        s = {
             begin: /\{\{/,
             relevance: 0
         },
@@ -31,24 +31,24 @@ function t(e) {
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, a],
+                    contains: [e.BACKSLASH_ESCAPE, o],
                     relevance: 10
                 },
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, a],
+                    contains: [e.BACKSLASH_ESCAPE, o],
                     relevance: 10
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, o, s, a]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, a, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, o, s, a]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,30 +71,30 @@ function t(e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, s, a]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, s, a]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
             ]
         },
-        u = '[0-9](_?[0-9])*',
-        c = `(\\b(${u}))?\\.(${u})|\\b(${u})\\.`,
-        d = `\\b|${i.join('|')}`,
+        c = '[0-9](_?[0-9])*',
+        u = `(\\b(${c}))?\\.(${c})|\\b(${c})\\.`,
+        d = `\\b|${r.join('|')}`,
         f = {
             className: 'number',
             relevance: 0,
-            variants: [{ begin: `(\\b(${u})|(${c}))[eE][+-]?(${u})[jJ]?(?=${d})` }, { begin: `(${c})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${u})[jJ](?=${d})` }]
+            variants: [{ begin: `(\\b(${c})|(${u}))[eE][+-]?(${c})[jJ]?(?=${d})` }, { begin: `(${u})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${c})[jJ](?=${d})` }]
         },
-        _ = {
+        p = {
             className: 'comment',
             begin: t.lookahead(/# type:/),
             end: /$/,
-            keywords: r,
+            keywords: i,
             contains: [
                 { begin: /# type:/ },
                 {
@@ -104,7 +104,7 @@ function t(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             className: 'params',
             variants: [
                 {
@@ -117,21 +117,21 @@ function t(e) {
                     end: /\)/,
                     excludeBegin: !0,
                     excludeEnd: !0,
-                    keywords: r,
-                    contains: ['self', a, f, l, e.HASH_COMMENT_MODE]
+                    keywords: i,
+                    contains: ['self', o, f, l, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (s.contains = [l, f, a]),
+        (a.contains = [l, f, o]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
             unicodeRegex: !0,
-            keywords: r,
+            keywords: i,
             illegal: /(<\/|\?)|=>/,
             contains: [
-                a,
+                o,
                 f,
                 {
                     scope: 'variable.language',
@@ -146,7 +146,7 @@ function t(e) {
                     scope: 'keyword'
                 },
                 l,
-                _,
+                p,
                 e.HASH_COMMENT_MODE,
                 {
                     match: [/\bdef/, /\s+/, n],
@@ -154,7 +154,7 @@ function t(e) {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [p]
+                    contains: [_]
                 },
                 {
                     variants: [
@@ -175,7 +175,7 @@ function t(e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [f, p, l]
+                    contains: [f, _, l]
                 }
             ]
         }

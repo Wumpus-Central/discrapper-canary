@@ -11,7 +11,7 @@ var r = n(120356),
     s = n(454585),
     l = n(476770),
     c = n(388032),
-    d = n(35761);
+    d = n(513903);
 function u(e) {
     let { terms: t, channelId: n, className: r } = e;
     return (0, o.jsx)('div', {
@@ -51,7 +51,7 @@ function m(e) {
         className: d.checkbox,
         children: (0, o.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: c.intl.string(c.t['2EXfGB'])
+            children: c.NW.string(c.t['2EXfGB'])
         })
     });
 }
@@ -59,14 +59,14 @@ function _(e) {
     let { formField: t } = e;
     return (0, o.jsx)(l.Ih, {
         icon: a.snC,
-        text: c.intl.string(c.t['2xbmoK']),
+        text: c.NW.string(c.t['2xbmoK']),
         meetsRequirement: !!t.response
     });
 }
 let h = (e) => {
     let { channelId: t, formField: n, onChange: r } = e;
     return (0, o.jsxs)(l.hK, {
-        title: c.intl.string(c.t.Q8OFNz),
+        title: c.NW.string(c.t.Q8OFNz),
         children: [
             (0, o.jsx)(u, {
                 className: d.disabledFieldBackground,

@@ -1,36 +1,36 @@
 n.d(t, { Z: () => d }), n(47120);
-var i = n(192379),
-    r = n(442837),
-    l = n(479531),
-    s = n(430824),
-    a = n(594174),
+var r = n(192379),
+    i = n(442837),
+    s = n(479531),
+    a = n(430824),
+    l = n(594174),
     o = n(53365),
     c = n(223892);
 function d(e, t) {
-    let n = (0, r.e7)([s.Z], () => s.Z.getGuild(e)),
-        [d, u] = i.useState(),
-        [m, h] = i.useState(!1),
+    let n = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
+        [d, u] = r.useState(),
+        [m, p] = r.useState(!1),
         g = (0, c.Ob)(n);
     return {
-        canSubmitAcceptance: (0, r.e7)(
-            [a.default],
+        canSubmitAcceptance: (0, i.e7)(
+            [l.default],
             () => {
-                let e = a.default.getCurrentUser();
+                let e = l.default.getCurrentUser();
                 return (null == n ? void 0 : n.isOwner(e)) === !0;
             },
             [n]
         ),
         error: d,
         loading: m,
-        submitAcceptTermsRequest: i.useCallback(async () => {
+        submitAcceptTermsRequest: r.useCallback(async () => {
             if (null != e && (g || null != t)) {
-                h(!0), u(void 0);
+                p(!0), u(void 0);
                 try {
                     null != t ? await o.wE(e, t) : await o.zo(e);
                 } catch (e) {
-                    u(new l.Z(e));
+                    u(new s.Z(e));
                 } finally {
-                    h(!1);
+                    p(!1);
                 }
             }
         }, [e, t, g])

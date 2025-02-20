@@ -6,20 +6,20 @@ function t(e) {
             literal: 'false null true'
         },
         n = '(0|[1-9][\\d_]*)',
-        i = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)',
-        r = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)',
-        a = '([eE][+-]?' + i + ')',
-        s = '(' + i + '(\\.\\d*|' + a + ')|\\d+\\.' + i + '|\\.' + n + a + '?)',
-        o = '(' + n + '|0[bB][01_]+|0[xX]' + r + ')',
+        r = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)',
+        i = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)',
+        o = '([eE][+-]?' + r + ')',
+        a = '(' + r + '(\\.\\d*|' + o + ')|\\d+\\.' + r + '|\\.' + n + o + '?)',
+        s = '(' + n + '|0[bB][01_]+|0[xX]' + i + ')',
         l = '\\\\([\'"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};',
-        u = {
-            className: 'number',
-            begin: '\\b' + o + '(L|u|U|Lu|LU|uL|UL)?',
-            relevance: 0
-        },
         c = {
             className: 'number',
-            begin: '\\b(' + ('(' + ('(0[xX](' + r + '\\.' + r + '|\\.?' + r + ')[pP][+-]?' + i) + ')|' + s) + ')([fF]|L|i|[fF]i|Li)?|' + o + '(i|[fF]i|Li))',
+            begin: '\\b' + s + '(L|u|U|Lu|LU|uL|UL)?',
+            relevance: 0
+        },
+        u = {
+            className: 'number',
+            begin: '\\b(' + ('(' + ('(0[xX](' + i + '\\.' + i + '|\\.?' + i + ')[pP][+-]?' + r) + ')|' + a) + ')([fF]|L|i|[fF]i|Li)?|' + s + '(i|[fF]i|Li))',
             relevance: 0
         },
         d = {
@@ -39,13 +39,13 @@ function t(e) {
             ],
             end: '"[cwd]?'
         },
-        _ = {
+        p = {
             className: 'string',
             begin: '[rq]"',
             end: '"[cwd]?',
             relevance: 5
         },
-        p = {
+        _ = {
             className: 'string',
             begin: '`',
             end: '`[cwd]?'
@@ -76,14 +76,14 @@ function t(e) {
             className: 'keyword',
             begin: '@[a-zA-Z_][a-zA-Z_\\d]*'
         },
-        y = e.COMMENT('\\/\\+', '\\+\\/', {
+        b = e.COMMENT('\\/\\+', '\\+\\/', {
             contains: ['self'],
             relevance: 10
         });
     return {
         name: 'D',
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, y, h, f, _, p, m, c, u, d, g, E, v]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, b, h, f, p, _, m, u, c, d, g, E, v]
     };
 }
 e.exports = t;

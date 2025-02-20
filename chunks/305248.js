@@ -1,26 +1,26 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => v }), n(47120), n(230036);
+var r = n(200651),
+    i = n(192379),
     a = n(392711),
-    r = n.n(a),
-    s = n(442837),
-    o = n(570140),
+    o = n.n(a),
+    l = n(442837),
+    s = n(570140),
     c = n(45114),
     d = n(404616),
     u = n(470623),
-    m = n(344185),
-    _ = n(488131),
-    h = n(592125),
-    p = n(823379),
+    p = n(344185),
+    m = n(488131),
+    f = n(592125),
+    h = n(823379),
     g = n(709054),
-    f = n(124368),
-    x = n(917415);
-function C(e) {
+    _ = n(124368),
+    b = n(230109);
+function v(e) {
     let { channel: t, channelRecord: n, deleteChannel: a } = e,
-        C = (0, s.Wu)(
-            [m.Z, h.Z],
+        v = (0, l.Wu)(
+            [p.Z, f.Z],
             () =>
-                r()(m.Z.getThreadsForParent(n.guild_id, n.id))
+                o()(p.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -28,38 +28,38 @@ function C(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return h.Z.getChannel(t);
+                        return f.Z.getChannel(t);
                     })
-                    .filter(p.lm)
+                    .filter(h.lm)
                     .sort((e, t) => g.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        E = l.useCallback((e, t) => {
-            (0, _.ok)(e, t, f.on.INBOX);
+        y = i.useCallback((e, t) => {
+            (0, m.ok)(e, t, _.on.INBOX);
         }, []);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             null == n ||
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== C.length ||
-                o.Z.wait(() => {
+                0 !== v.length ||
+                s.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), a(t.channelId);
                 });
         }),
-        (0, i.jsx)('div', {
-            className: x.container,
-            children: C.map((e) =>
-                (0, i.jsx)(
+        (0, r.jsx)('div', {
+            className: b.container,
+            children: v.map((e) =>
+                (0, r.jsx)(
                     u.oL,
                     {
                         channel: n,
-                        children: (0, i.jsx)(d.ZP, {
-                            className: x.forumPost,
+                        children: (0, r.jsx)(d.ZP, {
+                            className: b.forumPost,
                             threadId: e.id,
-                            goToThread: E
+                            goToThread: y
                         })
                     },
                     e.id

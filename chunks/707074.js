@@ -1,26 +1,26 @@
-var i = n(548828),
-    r = n(611345),
-    a = n(186973),
-    s = n(474883),
-    o = TypeError,
+var r = n(548828),
+    i = n(611345),
+    o = n(186973),
+    a = n(474883),
+    s = TypeError,
     l = function (e) {
-        return function (t, n, l, u) {
-            var c = r(t),
-                d = a(c),
-                f = s(c);
-            i(n);
-            var _ = e ? f - 1 : 0,
-                p = e ? -1 : 1;
+        return function (t, n, l, c) {
+            var u = i(t),
+                d = o(u),
+                f = a(u);
+            r(n);
+            var p = e ? f - 1 : 0,
+                _ = e ? -1 : 1;
             if (l < 2)
                 for (;;) {
-                    if (_ in d) {
-                        (u = d[_]), (_ += p);
+                    if (p in d) {
+                        (c = d[p]), (p += _);
                         break;
                     }
-                    if (((_ += p), e ? _ < 0 : f <= _)) throw new o('Reduce of empty array with no initial value');
+                    if (((p += _), e ? p < 0 : f <= p)) throw new s('Reduce of empty array with no initial value');
                 }
-            for (; e ? _ >= 0 : f > _; _ += p) _ in d && (u = n(u, d[_], _, c));
-            return u;
+            for (; e ? p >= 0 : f > p; p += _) p in d && (c = n(c, d[p], p, u));
+            return c;
         };
     };
 e.exports = {

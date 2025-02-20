@@ -1,22 +1,22 @@
-var i = (function () {
+var r = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
-function r(e, t) {
+function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, t) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function s(e, t) {
+function a(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -28,20 +28,20 @@ function s(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var o = n(129629),
+var s = n(129629),
     l = (function (e) {
         function t(e, n) {
-            r(this, t);
-            var i = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-            return (i._strings = e), (i._values = n), i;
+            i(this, t);
+            var r = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+            return (r._strings = e), (r._values = n), r;
         }
         return (
-            s(t, e),
-            i(t, [
+            a(t, e),
+            r(t, [
                 {
                     key: '__transformValue',
                     value: function (e) {
-                        return e instanceof o ? e.__getValue() : e;
+                        return e instanceof s ? e.__getValue() : e;
                     }
                 },
                 {
@@ -54,13 +54,13 @@ var o = n(129629),
                 {
                     key: '__attach',
                     value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof o && this._values[e].__addChild(this);
+                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__addChild(this);
                     }
                 },
                 {
                     key: '__detach',
                     value: function () {
-                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof o && this._values[e].__removeChild(this);
+                        for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof s && this._values[e].__removeChild(this);
                     }
                 }
             ]),

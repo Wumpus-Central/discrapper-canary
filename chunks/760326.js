@@ -1,29 +1,29 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
+n.d(t, { Z: () => p }), n(301563);
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    r = n(561716),
-    a = n(51596),
-    s = n(324262),
-    o = n(981631),
-    d = n(921944),
-    c = n(388032),
-    u = n(932478);
-let h = (e) => {
-    let t = r.$.binds['0']
+var i = n(481060),
+    l = n(561716),
+    o = n(51596),
+    a = n(324262),
+    s = n(981631),
+    c = n(921944),
+    u = n(388032),
+    d = n(932478);
+let p = (e) => {
+    let t = l.$.binds['0']
         .split('+')
-        .map((e) => (null != l.cXz[e] ? l.cXz[e]() : e))
+        .map((e) => (null != i.cXz[e] ? i.cXz[e]() : e))
         .join(' + ')
         .toUpperCase();
-    return (0, i.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         guild: e.guild,
-        onDismissed: () => e.markAsDismissed(d.L.UNKNOWN),
-        onClick: () => (0, a.$Z)('CHANNEL_NOTICE'),
-        message: c.intl.string(c.t.Qhk8cn),
+        onDismissed: () => e.markAsDismissed(c.L.UNKNOWN),
+        onClick: () => (0, o.$Z)('CHANNEL_NOTICE'),
+        message: u.NW.string(u.t.Qhk8cn),
         cta: t,
-        trackingSource: o.PsQ.QUICK_SWITCHER_NOTICE,
-        type: o.vID.QUICKSWITCHER,
-        image: u,
+        trackingSource: s.PsQ.QUICK_SWITCHER_NOTICE,
+        type: s.vID.QUICKSWITCHER,
+        image: d,
         imageMarginX: 50
     });
 };

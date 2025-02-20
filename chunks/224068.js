@@ -1,27 +1,27 @@
-n.d(t, { Z: () => u }), n(627341);
+n.d(t, { Z: () => d }), n(627341);
 var i = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(278074),
+var r = n(120356),
+    l = n.n(r),
+    o = n(278074),
     s = n(979554),
-    o = n(481060),
+    a = n(481060),
     c = n(388032),
-    d = n(505423);
-function u(e) {
+    u = n(548100);
+function d(e) {
     var t;
-    let { product: n, isDarkText: l = !1 } = e,
-        u =
+    let { product: n, isDarkText: r = !1 } = e,
+        d =
             ((t = n.type),
-            (0, a.EQ)(t)
-                .with(s.Z.AVATAR_DECORATION, () => c.intl.string(c.t['7v0T9P']))
-                .with(s.Z.PROFILE_EFFECT, () => c.intl.string(c.t.wR5wOj))
+            (0, o.EQ)(t)
+                .with(s.Z.AVATAR_DECORATION, () => c.NW.string(c.t['7v0T9P']))
+                .with(s.Z.PROFILE_EFFECT, () => c.NW.string(c.t.wR5wOj))
                 .otherwise(() => null));
-    return null === u
+    return null === d
         ? null
-        : (0, i.jsx)(o.Text, {
+        : (0, i.jsx)(a.Text, {
               variant: 'text-xxs/normal',
-              className: r()([d.container, l ? d.darkText : d.lightText]),
-              children: u
+              className: l()([u.container, r ? u.darkText : u.lightText]),
+              children: d
           });
 }

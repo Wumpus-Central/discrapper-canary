@@ -5,13 +5,13 @@ function t(e) {
             built_in: '_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table'
         },
         n = '[A-Za-z$_][0-9A-Za-z$_]*',
-        i = {
+        r = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
             keywords: t
         },
-        r = [
+        i = [
             e.inherit(e.C_NUMBER_MODE, {
                 starts: {
                     end: '(\\s*/)?',
@@ -29,7 +29,7 @@ function t(e) {
                     {
                         begin: /"/,
                         end: /"/,
-                        contains: [e.BACKSLASH_ESCAPE, i]
+                        contains: [e.BACKSLASH_ESCAPE, r]
                     }
                 ]
             },
@@ -40,10 +40,10 @@ function t(e) {
             { begin: '@' + e.IDENT_RE },
             { begin: e.IDENT_RE + '\\\\' + e.IDENT_RE }
         ];
-    i.contains = r;
-    let a = e.inherit(e.TITLE_MODE, { begin: n }),
-        s = '(\\(.*\\)\\s*)?\\B[-=]>',
-        o = {
+    r.contains = i;
+    let o = e.inherit(e.TITLE_MODE, { begin: n }),
+        a = '(\\(.*\\)\\s*)?\\B[-=]>',
+        s = {
             className: 'params',
             begin: '\\([^\\(]',
             returnBegin: !0,
@@ -52,7 +52,7 @@ function t(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: t,
-                    contains: ['self'].concat(r)
+                    contains: ['self'].concat(i)
                 }
             ]
         };
@@ -61,14 +61,14 @@ function t(e) {
         aliases: ['moon'],
         keywords: t,
         illegal: /\/\*/,
-        contains: r.concat([
+        contains: i.concat([
             e.COMMENT('--', '$'),
             {
                 className: 'function',
-                begin: '^\\s*' + n + '\\s*=\\s*' + s,
+                begin: '^\\s*' + n + '\\s*=\\s*' + a,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [a, o]
+                contains: [o, s]
             },
             {
                 begin: /[\(,:=]\s*/,
@@ -76,10 +76,10 @@ function t(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: s,
+                        begin: a,
                         end: '[-=]>',
                         returnBegin: !0,
-                        contains: [o]
+                        contains: [s]
                     }
                 ]
             },
@@ -93,9 +93,9 @@ function t(e) {
                         beginKeywords: 'extends',
                         endsWithParent: !0,
                         illegal: /[:="\[\]]/,
-                        contains: [a]
+                        contains: [o]
                     },
-                    a
+                    o
                 ]
             },
             {

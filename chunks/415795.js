@@ -24,9 +24,9 @@ var r,
     p = n(565138),
     h = n(754688),
     f = n(237583),
-    N = n(430824),
-    x = n(699516),
-    b = n(594174),
+    b = n(430824),
+    N = n(699516),
+    x = n(594174),
     _ = n(51144),
     E = n(388032),
     j = n(425707);
@@ -186,14 +186,14 @@ class S extends (r = s.Component) {
             null != r &&
                 (t = (0, i.jsx)('span', {
                     className: j.note,
-                    children: (0, c.F6)(r, b.default, x.Z)
+                    children: (0, c.F6)(r, x.default, N.Z)
                 })),
             (0, i.jsxs)('div', {
                 className: j.name,
                 children: [
                     (0, i.jsx)('span', {
                         className: j.match,
-                        children: (0, c.F6)(s, b.default, x.Z)
+                        children: (0, c.F6)(s, x.default, N.Z)
                     }),
                     e,
                     this.renderVoiceStates(),
@@ -234,8 +234,8 @@ class S extends (r = s.Component) {
     getAccessibilityLabel() {
         var e;
         let { channel: t } = this.props,
-            n = null === (e = N.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name,
-            r = (0, c.F6)(t, b.default, x.Z),
+            n = null === (e = b.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name,
+            r = (0, c.F6)(t, x.default, N.Z),
             i = (0, u.Z)(t);
         return E.NW.formatToPlainString(E.t['Vw/da2'], {
             name: r,
@@ -286,7 +286,7 @@ class T extends s.Component {
                 children: [
                     (0, i.jsx)('span', {
                         className: j.match,
-                        children: (0, c.F6)(n, b.default, x.Z)
+                        children: (0, c.F6)(n, x.default, N.Z)
                     }),
                     e
                 ]
@@ -309,7 +309,7 @@ class T extends s.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, c.F6)(e, b.default, x.Z);
+            n = (0, c.F6)(e, x.default, N.Z);
         return null != t && t > 0
             ? E.NW.formatToPlainString(E.t.LYdVfH, {
                   name: n,
@@ -347,7 +347,7 @@ class I extends s.Component {
     getDisplayNickname() {
         let e;
         let { user: t, comparator: n } = this.props,
-            r = x.Z.getNickname(t.id);
+            r = N.Z.getNickname(t.id);
         return ((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != r ? r : _.ZP.getName(t)), e;
     }
     renderName() {

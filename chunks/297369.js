@@ -1,7 +1,7 @@
-n.d(t, { Z: () => r });
-var i = n(231338);
-function r(e) {
+n.d(t, { Z: () => i });
+var r = n(231338);
+function i(e) {
     var t;
-    let { activities: n, status: r, applicationStream: a, voiceChannel: s } = e;
-    return r !== i.Sk.OFFLINE && r !== i.Sk.INVISIBLE && (null != a || null != s || (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0);
+    let { activities: n, status: i, applicationStream: o, voiceChannel: a } = e;
+    return i !== r.Sk.OFFLINE && i !== r.Sk.INVISIBLE && (null != o || null != a || (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0);
 }

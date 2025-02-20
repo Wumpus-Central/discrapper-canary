@@ -20,9 +20,9 @@ var i = n(200651),
     y = n(839662),
     E = n(199902),
     x = n(314897),
-    S = n(131951),
-    C = n(594174),
-    I = n(5192),
+    I = n(131951),
+    S = n(594174),
+    C = n(5192),
     j = n(444295),
     w = n(1226),
     Z = n(981631),
@@ -94,10 +94,10 @@ function D(e) {
     let { participant: t } = e,
         n = t.user.id,
         o = (0, a.e7)(
-            [S.Z],
+            [I.Z],
             () => {
                 let e = (0, g.Z)(t.type);
-                return S.Z.isLocalMute(t.user.id, e);
+                return I.Z.isLocalMute(t.user.id, e);
             },
             [t]
         ),
@@ -168,10 +168,10 @@ function L(e) {
         o = (0, h.bp)(),
         s = n.user,
         u = (0, a.e7)(
-            [C.default],
+            [S.default],
             () => {
                 var e;
-                return null !== (e = C.default.getUser(s.id)) && void 0 !== e ? e : s;
+                return null !== (e = S.default.getUser(s.id)) && void 0 !== e ? e : s;
             },
             [s]
         ),
@@ -233,7 +233,7 @@ function L(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    children: I.ZP.getName(n.stream.guildId, n.stream.channelId, s)
+                                    children: C.ZP.getName(n.stream.guildId, n.stream.channelId, s)
                                 }),
                                 (0, i.jsx)(m.ZP, {
                                     primaryGuild: u.primaryGuild,

@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(653041);
 var r,
-    i = n(200651),
-    a = n(192379),
+    a = n(200651),
+    i = n(192379),
     l = n(120356),
     o = n.n(l),
     s = n(442837),
@@ -16,8 +16,8 @@ var r,
     m = n(768581),
     h = n(624138),
     g = n(388032),
-    f = n(966893);
-function _(e) {
+    _ = n(966893);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,12 +62,12 @@ function v(e, t) {
 }
 var b = (((r = {})[(r.SMALL = (0, h.Mg)(c.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (r[(r.LARGE = (0, h.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE'), r);
 let x = {
-        [b.SMALL]: f.moreGuildsSmall,
-        [b.LARGE]: f.moreGuildsLarge
+        [b.SMALL]: _.moreGuildsSmall,
+        [b.LARGE]: _.moreGuildsLarge
     },
     C = {
-        [b.SMALL]: f.iconSmall,
-        [b.LARGE]: f.iconLarge
+        [b.SMALL]: _.iconSmall,
+        [b.LARGE]: _.iconLarge
     };
 function j(e) {
     var t, n, r;
@@ -75,9 +75,9 @@ function j(e) {
         P = (0, s.e7)([p.default], () => p.default.locale),
         S = new Intl.ListFormat(P),
         E = null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        A = null !== (r = null == c ? void 0 : c.length) && void 0 !== r ? r : 0,
-        T = Math.max(0, E - A),
-        { shownMutualGuilds: L, hiddenMutualGuilds: w } = a.useMemo(() => {
+        T = null !== (r = null == c ? void 0 : c.length) && void 0 !== r ? r : 0,
+        A = Math.max(0, E - T),
+        { shownMutualGuilds: L, hiddenMutualGuilds: R } = i.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -92,59 +92,59 @@ function j(e) {
                 }
             );
         }, [c, h]),
-        R = w.length,
-        Z = (function (e, t, n, r, i) {
+        Z = R.length,
+        w = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return g.NW.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
-            let a = t > 0 ? g.t.YR8PSE : g.t.GQjq6e,
+            let i = t > 0 ? g.t.YR8PSE : g.t.GQjq6e,
                 l = new Intl.NumberFormat(r, {
-                    notation: i ? 'compact' : 'standard',
+                    notation: a ? 'compact' : 'standard',
                     compactDisplay: 'short'
                 });
-            return g.NW.formatToPlainString(a, {
+            return g.NW.formatToPlainString(i, {
                 guildCount: l.format(e),
                 mutualGuildCount: t,
                 nonMutualGuildCount: l.format(n)
             });
-        })(E, A, T, P, O);
-    return 0 === L.length && null == Z
+        })(E, T, A, P, O);
+    return 0 === L.length && null == w
         ? null
-        : (0, i.jsxs)('div', {
-              className: o()(j, f.wrapper),
+        : (0, a.jsxs)('div', {
+              className: o()(j, _.wrapper),
               children: [
-                  (0, i.jsx)('div', {
-                      className: o()(f.icons, N),
+                  (0, a.jsx)('div', {
+                      className: o()(_.icons, N),
                       children:
                           L.length > 0
-                              ? (0, i.jsxs)(i.Fragment, {
+                              ? (0, a.jsxs)(a.Fragment, {
                                     children: [
                                         L.map((e, t) => {
-                                            let n = t === L.length - 1 && 0 === R,
+                                            let n = t === L.length - 1 && 0 === Z,
                                                 r = m.ZP.getGuildIconURL({
                                                     id: e.id,
                                                     icon: e.icon,
                                                     size: I,
                                                     canAnimate: !1
                                                 }),
-                                                l = (0, i.jsx)(d.ua7, {
+                                                l = (0, a.jsx)(d.ua7, {
                                                     text: e.name,
                                                     position: 'top',
                                                     children: (e) =>
-                                                        (0, i.jsx)(
+                                                        (0, a.jsx)(
                                                             'img',
-                                                            v(_({}, e), {
-                                                                className: o()(f.icon, C[I]),
+                                                            v(f({}, e), {
+                                                                className: o()(_.icon, C[I]),
                                                                 src: r,
                                                                 alt: ''
                                                             })
                                                         )
                                                 });
                                             return n
-                                                ? (0, i.jsx)(a.Fragment, { children: l }, e.id)
-                                                : (0, i.jsx)(
+                                                ? (0, a.jsx)(i.Fragment, { children: l }, e.id)
+                                                : (0, a.jsx)(
                                                       u.ZP,
                                                       {
-                                                          className: f.iconMask,
+                                                          className: _.iconMask,
                                                           height: I,
                                                           width: I,
                                                           mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -153,35 +153,35 @@ function j(e) {
                                                       e.id
                                                   );
                                         }),
-                                        R > 0
-                                            ? (0, i.jsx)(d.ua7, {
-                                                  text: g.NW.formatToPlainString(g.t.m6oRrK, { appNames: S.format(w.map((e) => e.name)) }),
+                                        Z > 0
+                                            ? (0, a.jsx)(d.ua7, {
+                                                  text: g.NW.formatToPlainString(g.t.m6oRrK, { appNames: S.format(R.map((e) => e.name)) }),
                                                   position: 'top',
                                                   children: (e) =>
-                                                      (0, i.jsxs)(
+                                                      (0, a.jsxs)(
                                                           'div',
-                                                          v(_({}, e), {
-                                                              className: o()(f.moreGuilds, x[I]),
-                                                              children: ['+', R]
+                                                          v(f({}, e), {
+                                                              className: o()(_.moreGuilds, x[I]),
+                                                              children: ['+', Z]
                                                           })
                                                       )
                                               })
                                             : null
                                     ]
                                 })
-                              : (0, i.jsx)(d.QTo, {
+                              : (0, a.jsx)(d.QTo, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: I,
                                     height: I,
-                                    className: f.defaultIcon
+                                    className: _.defaultIcon
                                 })
                   }),
-                  null != Z
-                      ? (0, i.jsx)(d.Text, {
+                  null != w
+                      ? (0, a.jsx)(d.Text, {
                             variant: y,
                             color: 'header-secondary',
-                            children: Z
+                            children: w
                         })
                       : null
               ]

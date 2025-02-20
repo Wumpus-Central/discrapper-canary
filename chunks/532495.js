@@ -14,9 +14,9 @@ var i = n(512722),
     p = n(433411),
     h = n(532432),
     f = n(349177),
-    N = n(872736),
-    x = n(134795),
-    b = n(610966),
+    b = n(872736),
+    N = n(134795),
+    x = n(610966),
     _ = n(513901),
     E = n(451392),
     j = n(906364),
@@ -160,7 +160,7 @@ function P() {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(
-                              x.Z,
+                              N.Z,
                               {
                                   showRemoveBannerButton: K,
                                   errors: F.banner,
@@ -179,7 +179,7 @@ function P() {
                       ]
                   })
                 : (0, r.jsx)(
-                      b.Z,
+                      x.Z,
                       {
                           user: w,
                           savedUserColor: null == k ? void 0 : k.accentColor,
@@ -200,7 +200,7 @@ function P() {
                 'bio'
             ),
             ee.length > 0 && (0, r.jsx)(d.Z, { availableClans: ee }),
-            null != J && (0, r.jsx)(N.Z, { legacyUsername: J }, 'legacy_username')
+            null != J && (0, r.jsx)(b.Z, { legacyUsername: J }, 'legacy_username')
         ]
     });
 }

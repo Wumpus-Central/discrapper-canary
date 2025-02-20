@@ -1,13 +1,13 @@
-n.d(t, { y: () => a });
-var i = n(927923),
-    r = n(981631);
-function a(e) {
+n.d(t, { y: () => o });
+var r = n(927923),
+    i = n(981631);
+function o(e) {
     switch (e) {
-        case r.ABu.XBOX:
-            return i.YE.XBOX;
-        case r.ABu.PLAYSTATION:
-        case r.ABu.PLAYSTATION_STAGING:
-            return i.YE.PLAYSTATION;
+        case i.ABu.XBOX:
+            return r.YE.XBOX;
+        case i.ABu.PLAYSTATION:
+        case i.ABu.PLAYSTATION_STAGING:
+            return r.YE.PLAYSTATION;
         default:
             return null;
     }

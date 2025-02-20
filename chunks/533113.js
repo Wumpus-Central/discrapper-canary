@@ -1,37 +1,37 @@
-var i = n(67867),
-    r = n(96403),
-    a = n(548828),
-    s = n(611345),
-    o = n(474883),
-    l = n(474505),
-    u = n(342545),
-    c = n(821819),
+var r = n(67867),
+    i = n(96403),
+    o = n(548828),
+    a = n(611345),
+    s = n(474883),
+    l = n(591782),
+    c = n(342545),
+    u = n(821819),
     d = n(409851),
     f = n(54659),
-    _ = n(949999),
-    p = n(301338),
+    p = n(949999),
+    _ = n(301338),
     h = n(882708),
     m = n(407747),
     g = [],
-    E = r(g.sort),
-    v = r(g.push),
-    y = c(function () {
+    E = i(g.sort),
+    v = i(g.push),
+    b = u(function () {
         g.sort(void 0);
     }),
-    I = c(function () {
+    y = u(function () {
         g.sort(null);
     }),
-    T = f('sort'),
-    b = !c(function () {
+    O = f('sort'),
+    S = !u(function () {
         if (h) return h < 70;
-        if (!_ || !(_ > 3)) {
-            if (p) return !0;
+        if (!p || !(p > 3)) {
+            if (_) return !0;
             if (m) return m < 603;
             var e,
                 t,
                 n,
-                i,
-                r = '';
+                r,
+                i = '';
             for (e = 65; e < 76; e++) {
                 switch (((t = String.fromCharCode(e)), e)) {
                     case 66:
@@ -47,9 +47,9 @@ var i = n(67867),
                     default:
                         n = 2;
                 }
-                for (i = 0; i < 47; i++)
+                for (r = 0; r < 47; r++)
                     g.push({
-                        k: t + i,
+                        k: t + r,
                         v: n
                     });
             }
@@ -57,38 +57,38 @@ var i = n(67867),
                 g.sort(function (e, t) {
                     return t.v - e.v;
                 }),
-                    i = 0;
-                i < g.length;
-                i++
+                    r = 0;
+                r < g.length;
+                r++
             )
-                (t = g[i].k.charAt(0)), r.charAt(r.length - 1) !== t && (r += t);
-            return 'DGBEFHACIJK' !== r;
+                (t = g[r].k.charAt(0)), i.charAt(i.length - 1) !== t && (i += t);
+            return 'DGBEFHACIJK' !== i;
         }
     }),
-    S = function (e) {
+    I = function (e) {
         return function (t, n) {
-            return void 0 === n ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, n) || 0 : u(t) > u(n) ? 1 : -1;
+            return void 0 === n ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, n) || 0 : c(t) > c(n) ? 1 : -1;
         };
     };
-i(
+r(
     {
         target: 'Array',
         proto: !0,
-        forced: y || !I || !T || !b
+        forced: b || !y || !O || !S
     },
     {
         sort: function (e) {
-            void 0 !== e && a(e);
+            void 0 !== e && o(e);
             var t,
                 n,
-                i = s(this);
-            if (b) return void 0 === e ? E(i) : E(i, e);
-            var r = [],
-                u = o(i);
-            for (n = 0; n < u; n++) n in i && v(r, i[n]);
-            for (d(r, S(e)), t = o(r), n = 0; n < t; ) i[n] = r[n++];
-            for (; n < u; ) l(i, n++);
-            return i;
+                r = a(this);
+            if (S) return void 0 === e ? E(r) : E(r, e);
+            var i = [],
+                c = s(r);
+            for (n = 0; n < c; n++) n in r && v(i, r[n]);
+            for (d(i, I(e)), t = s(i), n = 0; n < t; ) r[n] = i[n++];
+            for (; n < c; ) l(r, n++);
+            return r;
         }
     }
 );

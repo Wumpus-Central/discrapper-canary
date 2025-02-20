@@ -1,6 +1,6 @@
-n.d(t, { W: () => r });
-var i = n(726074);
-class r {
+n.d(t, { W: () => i });
+var r = n(726074);
+class i {
     enqueueTask(e) {
         let { queue: t, requestFlush: n } = this;
         t.length || (n(), (this.flushing = !0)), (t[t.length] = e);
@@ -25,8 +25,8 @@ class r {
             (this.registerPendingError = (e) => {
                 this.pendingErrors.push(e), this.requestErrorThrow();
             }),
-            (this.requestFlush = (0, i.tX)(this.flush)),
-            (this.requestErrorThrow = (0, i.as)(() => {
+            (this.requestFlush = (0, r.tX)(this.flush)),
+            (this.requestErrorThrow = (0, r.as)(() => {
                 if (this.pendingErrors.length) throw this.pendingErrors.shift();
             }));
     }

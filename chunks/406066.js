@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ }), n(653041), n(47120);
-var i,
-    r = n(348327),
-    a = n.n(r),
-    s = n(442837),
-    o = n(570140);
+n.d(t, { Z: () => p }), n(653041), n(47120);
+var r,
+    i = n(348327),
+    o = n.n(i),
+    a = n(442837),
+    s = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -17,23 +17,23 @@ function l(e, t, n) {
         e
     );
 }
-let u = [n(742738).Z],
-    c = [];
+let c = [n(742738).Z],
+    u = [];
 function d() {
     let e = [];
-    for (let t of u) {
+    for (let t of c) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !a()(e, c) && ((c = e), !0);
+    return !o()(e, u) && ((u = e), !0);
 }
-class f extends (i = s.ZP.Store) {
+class f extends (r = a.ZP.Store) {
     initialize() {
-        this.syncWith(u, d);
+        this.syncWith(c, d);
     }
     getActivities() {
-        return c;
+        return u;
     }
 }
 l(f, 'displayName', 'FirstPartyRichPresenceStore');
-let _ = new f(o.Z);
+let p = new f(s.Z);

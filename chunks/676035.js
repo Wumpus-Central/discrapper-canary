@@ -1,14 +1,14 @@
 n.d(t, {
-    I: () => c,
+    I: () => u,
     a: () => d
 });
-var i = n(192379),
-    r = n(442837),
-    a = n(339085),
-    s = n(633302),
-    o = n(695346),
+var r = n(192379),
+    i = n(442837),
+    o = n(339085),
+    a = n(633302),
+    s = n(695346),
     l = n(981631);
-function u(e, t) {
+function c(e, t) {
     let n = null;
     if (null != t)
         n = {
@@ -17,7 +17,7 @@ function u(e, t) {
             animated: t.animated
         };
     else if (null != e.emojiName && '' !== e.emojiName) {
-        let t = s.ZP.getByName(s.ZP.convertSurrogateToName(e.emojiName, !1));
+        let t = a.ZP.getByName(a.ZP.convertSurrogateToName(e.emojiName, !1));
         n =
             null != t
                 ? {
@@ -27,22 +27,22 @@ function u(e, t) {
                   }
                 : null;
     }
-    let i = Number(e.expiresAtMs);
+    let r = Number(e.expiresAtMs);
     return {
         name: 'Custom Status',
         type: l.IIU.CUSTOM_STATUS,
         state: e.text.length > 0 ? e.text : void 0,
-        timestamps: i > 0 ? { end: i } : void 0,
+        timestamps: r > 0 ? { end: r } : void 0,
         emoji: n
     };
 }
-function c(e) {
+function u(e) {
     let { emojiId: t } = e;
-    return u(e, null != t && '0' !== t ? a.ZP.getUsableCustomEmojiById(t) : null);
+    return c(e, null != t && '0' !== t ? o.ZP.getUsableCustomEmojiById(t) : null);
 }
 function d() {
-    let e = o.Ok.useSetting(),
+    let e = s.Ok.useSetting(),
         t = null == e ? void 0 : e.emojiId,
-        n = (0, r.e7)([a.ZP], () => (null != t && '0' !== t ? a.ZP.getUsableCustomEmojiById(t) : null), [t]);
-    return (0, i.useMemo)(() => (null != e ? u(e, n) : null), [e, n]);
+        n = (0, i.e7)([o.ZP], () => (null != t && '0' !== t ? o.ZP.getUsableCustomEmojiById(t) : null), [t]);
+    return (0, r.useMemo)(() => (null != e ? c(e, n) : null), [e, n]);
 }

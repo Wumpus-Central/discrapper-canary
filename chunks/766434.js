@@ -1,42 +1,42 @@
 n.d(t, {
-    Br: () => l,
-    Uj: () => s,
-    j0: () => r
+    Br: () => s,
+    Uj: () => a,
+    j0: () => i
 }),
     n(47120);
-var i = n(198139);
-let r = (e) => {
+var r = n(198139);
+let i = (e) => {
     var t, n;
-    let i = Object.values(null !== (n = null == e ? void 0 : e.ppgs) && void 0 !== n ? n : {})[0],
-        r = null == i ? void 0 : i.status,
-        l = null == i ? void 0 : null === (t = i.payout) || void 0 === t ? void 0 : t.status;
+    let r = Object.values(null !== (n = null == e ? void 0 : e.ppgs) && void 0 !== n ? n : {})[0],
+        i = null == r ? void 0 : r.status,
+        s = null == r ? void 0 : null === (t = r.payout) || void 0 === t ? void 0 : t.status;
     return {
-        ppgStatus: r,
-        payoutStatus: l,
-        ppgDeferralReasons: null == i ? void 0 : i.deferral_reasons,
-        periodEndDate: null == i ? void 0 : i.period_ending_at
+        ppgStatus: i,
+        payoutStatus: s,
+        ppgDeferralReasons: null == r ? void 0 : r.deferral_reasons,
+        periodEndDate: null == r ? void 0 : r.period_ending_at
     };
 };
-function l(e) {
+function s(e) {
     let t, n;
-    let { ppgStatus: l } = r(e[0]);
+    let { ppgStatus: s } = i(e[0]);
     return (
-        l === i.x_.OPEN ? ([t, ...n] = e) : (n = e),
+        s === r.x_.OPEN ? ([t, ...n] = e) : (n = e),
         {
             currentPeriod: t,
             previousPeriods: n
         }
     );
 }
-function s(e, t) {
-    let n, i, r, l;
+function a(e, t) {
+    let n, r, i, s;
     return (
-        null != e && ((n = e.amount), (r = e.paymentsCount), null != t && ((i = e.amount / t.amount - 1), (l = e.paymentsCount - t.paymentsCount))),
+        null != e && ((n = e.amount), (i = e.paymentsCount), null != t && ((r = e.amount / t.amount - 1), (s = e.paymentsCount - t.paymentsCount))),
         {
             revenue: n,
-            revenuePctChange: i,
-            paymentsCount: r,
-            paymentsCountChange: l
+            revenuePctChange: r,
+            paymentsCount: i,
+            paymentsCountChange: s
         }
     );
 }

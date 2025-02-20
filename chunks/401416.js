@@ -1,13 +1,13 @@
 n.d(t, {
-    Y: () => u,
-    Z: () => c
+    Y: () => c,
+    Z: () => u
 }),
     n(47120);
-var i = n(544891),
-    r = n(147913),
-    a = n(25733),
-    s = n(981631);
-function o(e, t, n) {
+var r = n(544891),
+    i = n(147913),
+    o = n(25733),
+    a = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,18 +20,18 @@ function o(e, t, n) {
         e
     );
 }
-class l extends r.Z {
+class l extends i.Z {
     handleDmSettingsUpsellShow(e) {
-        a.Z.openDmSettingsUpsellModal(e.guildId);
+        o.Z.openDmSettingsUpsellModal(e.guildId);
     }
     constructor(...e) {
-        super(...e), o(this, 'actions', { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow });
+        super(...e), s(this, 'actions', { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow });
     }
 }
-function u(e) {
-    return i.tn.post({
-        url: s.ANM.DM_SETTINGS_UPSELL_ACK(e),
+function c(e) {
+    return r.tn.post({
+        url: a.ANM.DM_SETTINGS_UPSELL_ACK(e),
         rejectWithError: !1
     });
 }
-let c = new l();
+let u = new l();

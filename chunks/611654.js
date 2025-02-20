@@ -1,47 +1,47 @@
-var i = n(67867),
-    r = n(570596),
-    a = n(548828),
-    s = n(294377),
-    o = n(653457),
+var r = n(67867),
+    i = n(570596),
+    o = n(548828),
+    a = n(294377),
+    s = n(653457),
     l = n(139545),
-    u = n(730427),
-    c = n(871785),
+    c = n(730427),
+    u = n(871785),
     d = 'No one promise resolved';
-i(
+r(
     {
         target: 'Promise',
         stat: !0,
-        forced: c
+        forced: u
     },
     {
         any: function (e) {
             var t = this,
-                n = s('AggregateError'),
-                i = o.f(t),
-                c = i.resolve,
-                f = i.reject,
-                _ = l(function () {
-                    var i = a(t.resolve),
-                        s = [],
-                        o = 0,
+                n = a('AggregateError'),
+                r = s.f(t),
+                u = r.resolve,
+                f = r.reject,
+                p = l(function () {
+                    var r = o(t.resolve),
+                        a = [],
+                        s = 0,
                         l = 1,
-                        _ = !1;
-                    u(e, function (e) {
-                        var a = o++,
-                            u = !1;
+                        p = !1;
+                    c(e, function (e) {
+                        var o = s++,
+                            c = !1;
                         l++,
-                            r(i, t, e).then(
+                            i(r, t, e).then(
                                 function (e) {
-                                    u || _ || ((_ = !0), c(e));
+                                    c || p || ((p = !0), u(e));
                                 },
                                 function (e) {
-                                    !u && !_ && ((u = !0), (s[a] = e), --l || f(new n(s, d)));
+                                    !c && !p && ((c = !0), (a[o] = e), --l || f(new n(a, d)));
                                 }
                             );
                     }),
-                        --l || f(new n(s, d));
+                        --l || f(new n(a, d));
                 });
-            return _.error && f(_.value), i.promise;
+            return p.error && f(p.value), r.promise;
         }
     }
 );

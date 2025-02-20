@@ -1,18 +1,18 @@
-n.d(t, { Z: () => r }), n(47120);
-var i = n(192379);
-function r(e) {
+n.d(t, { Z: () => i }), n(47120), n(230036);
+var r = n(192379);
+function i(e) {
     var t;
-    let { stepConfigs: n, breadcrumbs: r } = e,
-        [a, s] = i.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
-        o = i.useRef(null);
+    let { stepConfigs: n, breadcrumbs: i } = e,
+        [o, a] = r.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
+        s = r.useRef(null);
     return (
-        i.useEffect(() => {
-            o.current = a;
-        }, [o, a]),
+        r.useEffect(() => {
+            s.current = o;
+        }, [s, o]),
         {
             steps: n.map((e) => e.key).filter((e) => null != e),
-            step: a,
-            setStep: s,
+            step: o,
+            setStep: a,
             breadcrumbsData: n
                 .filter((e) => {
                     var t;
@@ -22,8 +22,8 @@ function r(e) {
                     id: e.key,
                     useBreadcrumbLabel: e.options.useBreadcrumbLabel
                 }))
-                .sort((e, t) => (null != r ? r.indexOf(e.id) - r.indexOf(t.id) : 0)),
-            previousStepRef: o
+                .sort((e, t) => (null != i ? i.indexOf(e.id) - i.indexOf(t.id) : 0)),
+            previousStepRef: s
         }
     );
 }

@@ -1,14 +1,14 @@
-var i = n(443980),
-    r = n(704446),
-    a = n(118666),
-    s = r
+var r = n(443980),
+    i = n(704446),
+    o = n(118666),
+    a = i
         ? function (e, t) {
-              return r(e, 'toString', {
+              return i(e, 'toString', {
                   configurable: !0,
                   enumerable: !1,
-                  value: i(t),
+                  value: r(t),
                   writable: !0
               });
           }
-        : a;
-e.exports = s;
+        : o;
+e.exports = a;

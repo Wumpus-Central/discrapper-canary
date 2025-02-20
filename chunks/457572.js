@@ -1,9 +1,9 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(570140),
-    r = n(147913),
-    a = n(70956),
-    s = n(2818),
-    o = n(768943);
+n.d(t, { Z: () => p }), n(47120);
+var r = n(570140),
+    i = n(147913),
+    o = n(70956),
+    a = n(2818),
+    s = n(768943);
 function l(e, t, n) {
     return (
         t in e
@@ -17,11 +17,11 @@ function l(e, t, n) {
         e
     );
 }
-let u = null;
-function c(e) {
-    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+let c = null;
+function u(e) {
+    let { enabled: t } = a.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     t &&
-        (i.Z.dispatch({
+        (r.Z.dispatch({
             type: 'MESSAGE_REMINDER_DUE',
             savedMessage: e
         }),
@@ -29,18 +29,18 @@ function c(e) {
 }
 function d() {
     var e;
-    let { enabled: t } = s.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
+    let { enabled: t } = a.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     if (!t) return;
-    null != u && clearTimeout(u);
-    let n = o.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
+    null != c && clearTimeout(c);
+    let n = s.Z.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
     if ((null == n ? void 0 : null === (e = n.saveData) || void 0 === e ? void 0 : e.dueAt) == null) {
-        u = null;
+        c = null;
         return;
     }
-    let i = Date.now() + a.Z.Millis.WEEK;
-    !(n.saveData.dueAt.getTime() > i) && (u = setTimeout(() => c(n), n.saveData.dueAt.getTime() - Date.now()));
+    let r = Date.now() + o.Z.Millis.WEEK;
+    !(n.saveData.dueAt.getTime() > r) && (c = setTimeout(() => u(n), n.saveData.dueAt.getTime() - Date.now()));
 }
-class f extends r.Z {
+class f extends i.Z {
     constructor(...e) {
         super(...e),
             l(this, 'actions', {
@@ -53,4 +53,4 @@ class f extends r.Z {
             });
     }
 }
-let _ = new f();
+let p = new f();

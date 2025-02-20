@@ -1,28 +1,28 @@
 n.d(t, { Z: () => l });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(170187),
-    s = n(937008),
-    o = n(388032);
+var i = n(481060),
+    o = n(170187),
+    a = n(937008),
+    s = n(388032);
 function l(e) {
-    let { game: t, textVariant: n, textClassName: l, hideIcon: u = !1, hideText: c = !1, hideTooltip: d = !1 } = e;
-    if (u && c) return null;
+    let { game: t, textVariant: n, textClassName: l, hideIcon: c = !1, hideText: u = !1, hideTooltip: d = !1 } = e;
+    if (c && u) return null;
     let f = (null == t ? void 0 : t.name) === '' ? null : null == t ? void 0 : t.name,
-        _ = null != f ? o.intl.format(o.t['0wJXSk'], { name: f }) : o.intl.string(o.t.eXan7O),
-        p = null != f ? o.intl.formatToPlainString(o.t['0wJXSk'], { name: f }) : o.intl.string(o.t.eXan7O);
-    return (0, i.jsxs)(i.Fragment, {
+        p = null != f ? s.NW.format(s.t['0wJXSk'], { name: f }) : s.NW.string(s.t.eXan7O),
+        _ = null != f ? s.NW.formatToPlainString(s.t['0wJXSk'], { name: f }) : s.NW.string(s.t.eXan7O);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            !u &&
-                (0, i.jsx)(s.Z, {
-                    icon: r.m3e,
-                    tooltip: c && !d ? p : void 0
-                }),
             !c &&
-                (0, i.jsx)(a.Z, {
+                (0, r.jsx)(a.Z, {
+                    icon: i.ARS,
+                    tooltip: u && !d ? _ : void 0
+                }),
+            !u &&
+                (0, r.jsx)(o.Z, {
                     variant: n,
                     className: l,
-                    children: _
+                    children: p
                 })
         ]
     });

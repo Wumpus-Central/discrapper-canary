@@ -1,60 +1,60 @@
-s.d(t, { Z: () => m }), s(47120);
-var n = s(200651),
-    r = s(192379),
-    i = s(120356),
-    l = s.n(i),
-    a = s(481060),
-    o = s(313201),
-    c = s(742458),
-    d = s(766650),
-    u = s(488981),
-    h = s(223952);
-function m(e) {
-    let { alpha2: t, countryCode: s, forceMode: i, label: m, error: p, className: x, required: g, value: f, setRef: j, placeholder: C, autoFocus: v, maxLength: N, spellCheck: E, autoComplete: k, autoCapitalize: S, autoCorrect: T, onChange: A, inputClassName: Z } = e,
-        w = (0, o.Dt)(),
-        [I, M] = r.useState(!1),
-        P = (0, c.o9)(i, f);
-    return (0, n.jsx)(a.xJW, {
-        title: m,
-        error: p,
-        className: x,
-        required: g,
+r.d(t, { Z: () => p }), r(47120);
+var n = r(200651),
+    s = r(192379),
+    i = r(120356),
+    a = r.n(i),
+    l = r(481060),
+    o = r(313201),
+    c = r(742458),
+    u = r(766650),
+    d = r(613304),
+    h = r(630824);
+function p(e) {
+    let { alpha2: t, countryCode: r, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: N, placeholder: j, autoFocus: v, maxLength: C, spellCheck: O, autoComplete: b, autoCapitalize: y, autoCorrect: E, onChange: S, inputClassName: P } = e,
+        T = (0, o.Dt)(),
+        [k, w] = s.useState(!1),
+        A = (0, c.o9)(i, g);
+    return (0, n.jsx)(l.xJW, {
+        title: p,
+        error: m,
+        className: f,
+        required: x,
         tag: 'label',
-        htmlFor: w,
+        htmlFor: T,
         children: (0, n.jsxs)('div', {
-            className: l()(h.input, u.input, Z, {
-                [h.error]: null != p,
-                [h.focused]: I
+            className: a()(h.input, d.input, P, {
+                [h.error]: null != m,
+                [h.focused]: k
             }),
             children: [
-                (0, n.jsx)(d.Z, {
-                    show: P,
+                (0, n.jsx)(u.Z, {
+                    show: A,
                     alpha2: t,
-                    countryCode: s
+                    countryCode: r
                 }),
-                (0, n.jsx)(a.oil, {
-                    id: w,
+                (0, n.jsx)(l.oil, {
+                    id: T,
                     name: 'email',
                     type: i === c.Nz.EMAIL ? 'email' : 'text',
-                    value: f,
-                    inputRef: j,
-                    placeholder: C,
-                    'aria-label': m,
-                    required: g,
+                    value: g,
+                    inputRef: N,
+                    placeholder: j,
+                    'aria-label': p,
+                    required: x,
                     onChange: function (e) {
-                        let t = (0, c.o9)(i, e) ? s : '';
-                        A(e, t);
+                        let t = (0, c.o9)(i, e) ? r : '';
+                        S(e, t);
                     },
-                    autoComplete: k,
-                    autoCapitalize: S,
-                    autoCorrect: T,
+                    autoComplete: b,
+                    autoCapitalize: y,
+                    autoCorrect: E,
                     autoFocus: v,
-                    maxLength: N,
-                    spellCheck: E,
-                    className: u.inputWrapper,
-                    inputClassName: u.inputField,
-                    onFocus: () => M(!0),
-                    onBlur: () => M(!1)
+                    maxLength: C,
+                    spellCheck: O,
+                    className: d.inputWrapper,
+                    inputClassName: d.inputField,
+                    onFocus: () => w(!0),
+                    onBlur: () => w(!1)
                 })
             ]
         })

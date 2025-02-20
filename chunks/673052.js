@@ -1,49 +1,49 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(835473),
-    r = n(739566),
-    s = n(942951),
-    o = n(834129),
+    o = n(739566),
+    l = n(942951),
+    s = n(834129),
     c = n(388032),
-    d = n(155554);
+    d = n(453392);
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
-        m = (0, r.ZP)(t),
-        _ = (0, s.l)({
+        p = (0, o.ZP)(t),
+        m = (0, l.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
-        })(m),
-        h = (0, a.q)(t.applicationId);
-    if (null == h) return null;
-    let p = c.intl.format(c.t.mAtJTE, {
+        })(p),
+        f = (0, a.q)(t.applicationId);
+    if (null == f) return null;
+    let h = c.NW.format(c.t.mAtJTE, {
         username: t.author.username,
-        usernameHook: _,
-        applicationName: h.name,
+        usernameHook: m,
+        applicationName: f.name,
         applicationNameHook: () =>
-            (0, i.jsx)(
-                l.Text,
+            (0, r.jsx)(
+                i.Text,
                 {
                     className: d.applicationName,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
-                    children: h.name
+                    children: f.name
                 },
-                h.name
+                f.name
             ),
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(l.DuK, {
+    return (0, r.jsx)(s.Z, {
+        iconNode: (0, r.jsx)(i.DuK, {
             size: 'sm',
-            color: l.TVs.colors.STATUS_POSITIVE
+            color: i.TVs.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
         compact: u,
         contentClassName: d.systemMessage,
-        children: p
+        children: h
     });
 }

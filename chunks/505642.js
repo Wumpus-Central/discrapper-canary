@@ -1,6 +1,6 @@
-var i = n(375044),
-    r = TypeError;
+var r = n(375044),
+    i = TypeError;
 e.exports = function (e) {
-    if (i(e)) throw new r("The method doesn't accept regular expressions");
+    if (r(e)) throw new i("The method doesn't accept regular expressions");
     return e;
 };

@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(634894),
     h = n(100527),
     f = n(906732),
-    N = n(475977),
-    x = n(957730),
-    b = n(53691),
+    b = n(475977),
+    N = n(957730),
+    x = n(53691),
     _ = n(267717),
     E = n(296810),
     j = n(921813),
@@ -64,7 +64,7 @@ function W() {
             return i;
         })(n, ['pendingBio']),
         L = (0, l.e7)([S.Z], () => S.Z.showNotice()),
-        B = P.dN.useSetting() && null != s ? x.ZP.parse(void 0, s).content : s,
+        B = P.dN.useSetting() && null != s ? N.ZP.parse(void 0, s).content : s,
         M = y.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: U } = (0, f.ZP)(h.Z.PROFILE);
     i.useEffect(() => () => d.Z.wait(m.W3), []);
@@ -86,7 +86,7 @@ function W() {
         : (0, r.jsxs)(f.Gt, {
               value: U,
               children: [
-                  (0, r.jsx)(N.Z, {}),
+                  (0, r.jsx)(b.Z, {}),
                   (0, r.jsx)(E.Z, {
                       profilePreview: (0, r.jsx)(
                           j.Z,
@@ -142,7 +142,7 @@ function W() {
                   }),
                   z &&
                       !L &&
-                      (0, r.jsx)(b.p, {
+                      (0, r.jsx)(x.p, {
                           className: k.floatingNitroUpsell,
                           showUpsell: z && !G,
                           text: w.NW.format(w.t.TmfgIy, { onClick: () => (0, _.y)() }),

@@ -1,16 +1,16 @@
-n.d(t, { Z: () => g }), n(411104);
-var i = n(570140),
-    r = n(846027),
-    a = n(872810),
-    s = n(710845),
-    o = n(77014),
+n.d(t, { Z: () => g }), n(411104), n(301563);
+var r = n(570140),
+    i = n(846027),
+    o = n(872810),
+    a = n(710845),
+    s = n(77014),
     l = n(361291),
-    u = n(199902),
-    c = n(314897),
+    c = n(199902),
+    u = n(314897),
     d = n(569545),
     f = n(803647),
-    _ = n(981631),
-    p = n(65154);
+    p = n(981631),
+    _ = n(65154);
 function h(e, t, n) {
     return (
         t in e
@@ -41,14 +41,14 @@ class m {
     _onStreamApplication(e, t) {
         (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t);
     }
-    _onStreamDirectSource(e, t, n, i) {
+    _onStreamDirectSource(e, t, n, r) {
         (this.mode = 'verbatim-source'),
             (this.streamKey = e),
             this._onDirectorAction({
-                type: o.A.STREAM,
+                type: s.A.STREAM,
                 sourceId: t,
                 audioSourceId: n,
-                sound: i
+                sound: r
             });
     }
     _onStreamEnd(e) {
@@ -58,7 +58,7 @@ class m {
                     this.director.onStreamEnd();
                     break;
                 case 'verbatim-source':
-                    this._onDirectorAction({ type: o.A.STOP });
+                    this._onDirectorAction({ type: s.A.STOP });
                     break;
                 default:
                     var t;
@@ -79,13 +79,13 @@ class m {
             }
     }
     _onDirectorAction(e) {
-        let t = u.Z.getCurrentUserActiveStream(),
+        let t = c.Z.getCurrentUserActiveStream(),
             n = l.Z.getState();
         switch (e.type) {
-            case o.A.STREAM:
-                if ((null != t && (0, a.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
+            case s.A.STREAM:
+                if ((null != t && (0, o.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
                     let t = e.sourceId.split(':')[1];
-                    r.Z.setGoLiveSource({
+                    i.Z.setGoLiveSource({
                         cameraSettings: {
                             videoDeviceGuid: t,
                             audioDeviceGuid: e.audioSourceId
@@ -95,28 +95,28 @@ class m {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: p.Yn.STREAM
+                        context: _.Yn.STREAM
                     });
                 } else {
-                    var i;
-                    r.Z.setGoLiveSource({
+                    var r;
+                    i.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
-                            sound: null === (i = e.sound) || void 0 === i || i
+                            sound: null === (r = e.sound) || void 0 === r || r
                         },
                         qualityOptions: {
                             preset: n.preset,
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: p.Yn.STREAM
+                        context: _.Yn.STREAM
                     });
                 }
                 break;
-            case o.A.PAUSE:
-                null != t && (0, a.tK)(t, !0);
+            case s.A.PAUSE:
+                null != t && (0, o.tK)(t, !0);
                 break;
-            case o.A.STOP:
+            case s.A.STOP:
                 null != t && (0, f.Z)(t);
                 break;
             default:
@@ -124,8 +124,8 @@ class m {
         }
     }
     _onCapturePaused(e) {
-        let t = u.Z.getCurrentUserActiveStream();
-        null != t && (0, a.tK)(t, e);
+        let t = c.Z.getCurrentUserActiveStream();
+        null != t && (0, o.tK)(t, e);
     }
     _onCaptureEnded() {
         switch (this.mode) {
@@ -147,37 +147,37 @@ class m {
             h(this, 'mode', void 0),
             (this.mode = null),
             (this.applications = []),
-            (this.director = new o.a((e) => this._onDirectorAction(e))),
-            i.Z.subscribe('STREAM_START', (e) => {
-                let { streamType: t, guildId: n, channelId: i, pid: r, sourceId: a, audioSourceId: o, sound: l } = e,
-                    u = c.default.getId(),
+            (this.director = new s.a((e) => this._onDirectorAction(e))),
+            r.Z.subscribe('STREAM_START', (e) => {
+                let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: o, audioSourceId: s, sound: l } = e,
+                    c = u.default.getId(),
                     f = (0, d.V9)({
                         streamType: t,
                         guildId: n,
-                        channelId: i,
-                        ownerId: u
+                        channelId: r,
+                        ownerId: c
                     });
-                (null == r) != (null == a) ? (null != r && this._onStreamApplication(f, r), null != a && this._onStreamDirectSource(f, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(r, ', source-id: ').concat(a, ')'));
+                (null == i) != (null == o) ? (null != i && this._onStreamApplication(f, i), null != o && this._onStreamDirectSource(f, o, s, l)) : new a.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(o, ')'));
             }),
-            i.Z.subscribe('STREAM_DELETE', (e) => {
+            r.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: t } = e;
                 this._onStreamKilled(t);
             }),
-            i.Z.subscribe('STREAM_STOP', (e) => {
+            r.Z.subscribe('STREAM_STOP', (e) => {
                 let { streamKey: t } = e;
                 this._onStreamEnd(t);
             }),
-            i.Z.subscribe('RUNNING_GAMES_CHANGE', (e) => {
+            r.Z.subscribe('RUNNING_GAMES_CHANGE', (e) => {
                 let { games: t } = e;
                 this._onGameDetectionUpdate(t);
             }),
-            i.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+            r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t, context: n } = e;
-                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
+                n === _.Yn.STREAM && this._onCapturePaused(t === p.FQ1.PAUSED);
             }),
-            i.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
+            r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 let { settings: t } = e;
-                (null == t ? void 0 : t.context) === p.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
+                (null == t ? void 0 : t.context) === _.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
             });
     }
 }

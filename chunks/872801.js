@@ -1,4 +1,4 @@
-function i(e, t) {
+function r(e, t) {
     let n = e.parentElement;
     for (; null != n; ) {
         if (n.classList.contains(t)) return n;
@@ -6,4 +6,4 @@ function i(e, t) {
     }
     return null;
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

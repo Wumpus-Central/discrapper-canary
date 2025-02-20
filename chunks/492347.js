@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var l = n(82295),
-    r = n(762202);
-function a(e) {
+var i = n(82295),
+    l = n(158597);
+function o(e) {
     let { title: t, id: n } = e;
-    return (0, i.jsx)(l.Z, {
-        className: r.title,
+    return (0, r.jsx)(i.Z, {
+        className: l.title,
         id: n,
         children: t
     });

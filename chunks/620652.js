@@ -1,59 +1,59 @@
-i.d(t, {
-    M: () => f,
-    Z: () => x
+n.d(t, {
+    M: () => g,
+    Z: () => v
 });
-var n,
-    a = i(200651),
-    o = i(192379),
-    s = i(120356),
-    l = i.n(s),
-    r = i(500923),
-    c = i.n(r),
-    d = i(570140),
-    u = i(960020),
-    h = i(831244),
-    m = i(815605),
-    p = i(981631),
-    g = i(15417),
-    f = (((n = {})[(n.NORMAL = 16)] = 'NORMAL'), (n[(n.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (n[(n.LARGE = 32)] = 'LARGE'), n);
-let v = async (e) => {
+var i,
+    o = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    l = n(500923),
+    c = n.n(l),
+    u = n(570140),
+    d = n(960020),
+    h = n(831244),
+    p = n(815605),
+    m = n(981631),
+    f = n(405037),
+    g = (((i = {})[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE'), i);
+let b = async (e) => {
     var t;
-    let { effect: i } = e,
-        n = await (0, h.T)(i.channelId, null !== (t = i.messageId) && void 0 !== t ? t : p.lds, i.emoji.name),
-        a = await (0, m.aB)(''.concat(i.channelId, ':').concat(i.messageId, ':').concat(i.emoji.name), i.url, n, i.color);
-    return (a.assets[0].p = i.url), a;
+    let { effect: n } = e,
+        i = await (0, h.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : m.lds, n.emoji.name),
+        o = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
+    return (o.assets[0].p = n.url), o;
 };
-function x(e) {
-    let { className: t, effect: i, onComplete: n, emojiSize: s = 16 } = e,
-        r = o.useRef(null),
-        h = s * m.Vz,
-        p = (h + s) / 2;
+function v(e) {
+    let { className: t, effect: n, onComplete: i, emojiSize: a = 16 } = e,
+        l = r.useRef(null),
+        h = a * p.Vz,
+        m = (h + a) / 2;
     return (
-        o.useEffect(() => {
+        r.useEffect(() => {
             let e;
-            if (null != i)
+            if (null != n)
                 return (
                     (async function () {
-                        if (null != r.current) {
-                            let t = await v({ effect: i });
+                        if (null != l.current) {
+                            let t = await b({ effect: n });
                             (e = c().loadAnimation({
-                                container: r.current,
+                                container: l.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
                                 animationData: t
                             })).addEventListener('complete', () => {
-                                null == n || n(), e.destroy();
+                                null == i || i(), e.destroy();
                             }),
-                                null != i.channelId &&
-                                    null != i.messageId &&
-                                    null != i.emoji &&
-                                    i.key === u.I.HOVER &&
-                                    d.Z.dispatch({
+                                null != n.channelId &&
+                                    null != n.messageId &&
+                                    null != n.emoji &&
+                                    n.key === d.I.HOVER &&
+                                    u.Z.dispatch({
                                         type: 'BURST_REACTION_ANIMATION_ADD',
-                                        channelId: i.channelId,
-                                        messageId: i.messageId,
-                                        emoji: i.emoji,
+                                        channelId: n.channelId,
+                                        messageId: n.messageId,
+                                        emoji: n.emoji,
                                         animation: e
                                     });
                         }
@@ -62,17 +62,17 @@ function x(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [n, i, s]),
-        (0, a.jsx)('div', {
-            className: g.effectsWrapper,
-            children: (0, a.jsx)('div', {
-                className: l()(g.effect, t),
+        }, [i, n, a]),
+        (0, o.jsx)('div', {
+            className: f.effectsWrapper,
+            children: (0, o.jsx)('div', {
+                className: s()(f.effect, t),
                 style: {
-                    transform: 'translateY('.concat(p, 'px)'),
+                    transform: 'translateY('.concat(m, 'px)'),
                     height: h,
                     width: h
                 },
-                ref: r
+                ref: l
             })
         })
     );

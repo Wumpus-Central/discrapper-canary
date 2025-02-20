@@ -1,18 +1,18 @@
 var t = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var i = t[n];
-            (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+            var r = t[n];
+            (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
         }
     }
-    return function (t, n, i) {
-        return n && e(t.prototype, n), i && e(t, i), t;
+    return function (t, n, r) {
+        return n && e(t.prototype, n), r && e(t, r), t;
     };
 })();
 function n(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-var i = (function () {
+var r = (function () {
     function e() {
         n(this, e);
     }
@@ -54,4 +54,4 @@ var i = (function () {
         e
     );
 })();
-e.exports = i;
+e.exports = r;

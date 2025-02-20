@@ -1,8 +1,8 @@
-n.d(t, { Z: () => l }), n(653041), n(47120), n(724458);
-var i = n(392711),
-    r = n.n(i),
-    a = n(846519);
-function s(e, t, n) {
+n.d(t, { Z: () => l }), n(653041), n(47120);
+var r = n(392711),
+    i = n.n(r),
+    o = n(846519);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-class o {
+class s {
     acknowledge(e) {
         this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e);
     }
@@ -42,7 +42,7 @@ class o {
         this._pendingRequests.add(e);
     }
     constructor(e, t) {
-        s(this, '_guildId', void 0), s(this, '_pendingRequests', new Set()), s(this, '_sentRequests', new Set()), s(this, '_unacknowledgedRequests', new Set()), s(this, '_guildMemberExists', void 0), (this._guildId = e), (this._guildMemberExists = (n) => t(e, n));
+        a(this, '_guildId', void 0), a(this, '_pendingRequests', new Set()), a(this, '_sentRequests', new Set()), a(this, '_unacknowledgedRequests', new Set()), a(this, '_guildMemberExists', void 0), (this._guildId = e), (this._guildMemberExists = (n) => t(e, n));
     }
 }
 class l {
@@ -56,16 +56,16 @@ class l {
         this._getGuildState(e).acknowledge(t);
     }
     flushRequests() {
-        r().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
+        i().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
     }
     requestUnacknowledged() {
-        r().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || t, !1) && this._flush.delay();
+        i().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || t, !1) && this._flush.delay();
     }
     _getGuildState(e) {
         let t = this._guildStates[e];
-        return null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t;
+        return null == t && (t = this._guildStates[e] = new s(e, this._guildMemberExists)), t;
     }
     constructor(e, t) {
-        s(this, '_onChange', void 0), s(this, '_guildMemberExists', void 0), s(this, '_guildStates', {}), s(this, '_flush', new a.sW(0, () => this.flushRequests())), (this._guildMemberExists = e), (this._onChange = t);
+        a(this, '_onChange', void 0), a(this, '_guildMemberExists', void 0), a(this, '_guildStates', {}), a(this, '_flush', new o.sW(0, () => this.flushRequests())), (this._guildMemberExists = e), (this._onChange = t);
     }
 }

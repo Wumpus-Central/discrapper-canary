@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
     o = n(120356),
@@ -61,8 +61,8 @@ function x(e, t) {
         e
     );
 }
-let S = r.memo(function (e) {
-    let { widget: t, renderWidget: n, renderTitle: o, renderButtons: S, resizeValidation: C, className: I, dragContainerClassName: j } = e,
+let I = r.memo(function (e) {
+    let { widget: t, renderWidget: n, renderTitle: o, renderButtons: I, resizeValidation: S, className: C, dragContainerClassName: j } = e,
         w = u.Z.getWidgetConfig(t.type),
         Z = (0, a.e7)([d.Z], () => d.Z.isLocked((0, h.QF)())),
         N = (0, O.Z)(),
@@ -114,25 +114,25 @@ let S = r.memo(function (e) {
                     x(E({}, e), {
                         widget: t,
                         dragging: null != e.dragOperation,
-                        className: I
+                        className: C
                     })
                 ),
-            [t, n, I]
+            [t, n, C]
         ),
         Q = r.useCallback(
             (e) =>
-                null != o || null != S
+                null != o || null != I
                     ? (0, i.jsxs)('div', {
                           className: y.extrasContainer,
-                          children: [null == o ? void 0 : o(t), null == S ? void 0 : S(t, e)]
+                          children: [null == o ? void 0 : o(t), null == I ? void 0 : I(t, e)]
                       })
                     : null,
-            [t, o, S]
+            [t, o, I]
         ),
         K = (0, a.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(m.G.WidgetAreas)),
         X = r.useMemo(() => {
-            if (null != C) return (e) => C(x(E({}, e), { widget: t }));
-        }, [C, t]);
+            if (null != S) return (e) => S(x(E({}, e), { widget: t }));
+        }, [S, t]);
     return (0, i.jsx)(_.Z, {
         className: l()(
             {

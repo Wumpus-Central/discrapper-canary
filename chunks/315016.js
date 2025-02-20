@@ -1,6 +1,6 @@
-var i = n(824289),
-    r = '\u200B',
-    a = '\u180E';
+var r = n(824289),
+    i = '\u200B',
+    o = '\u180E';
 e.exports = function () {
-    return String.prototype.trim && r.trim() === r && a.trim() === a && ('_' + a).trim() === '_' + a && (a + '_').trim() === a + '_' ? String.prototype.trim : i;
+    return String.prototype.trim && i.trim() === i && o.trim() === o && ('_' + o).trim() === '_' + o && (o + '_').trim() === o + '_' ? String.prototype.trim : r;
 };

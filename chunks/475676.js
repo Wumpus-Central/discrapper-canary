@@ -18,7 +18,7 @@ var i = t(200651),
     h = t(981631),
     v = t(701488),
     _ = t(388032),
-    f = t(425384);
+    f = t(498322);
 function m(e) {
     let { application: l } = e,
         t = l.getIconURL(v.Si.LARGE),
@@ -48,25 +48,25 @@ function j(e) {
     let j,
         { selected: p, channel: I, entry: b } = e,
         E = I.guild_id,
-        R = (0, H.Z)({
+        N = (0, H.Z)({
             guildId: E,
             leaderboardId: b.extra.leaderboard_id,
             intervalOffset: 0
         }),
-        { rankChanges: k } = (0, Z.Z)({
+        { rankChanges: R } = (0, Z.Z)({
             guildId: E,
             leaderboardId: b.extra.leaderboard_id,
-            intervalStart: null !== (v = null == R ? void 0 : R.interval_start) && void 0 !== v ? v : ''
+            intervalStart: null !== (v = null == N ? void 0 : N.interval_start) && void 0 !== v ? v : ''
         }),
-        A = (0, L.e7)([C.default], () => C.default.getId()),
-        [N, D] = n.useMemo(() => {
-            let e = k.find((e) => e.userId === A),
-                l = k[0],
+        k = (0, L.e7)([C.default], () => C.default.getId()),
+        [A, D] = n.useMemo(() => {
+            let e = R.find((e) => e.userId === k),
+                l = R[0],
                 t = null != e ? e : l,
-                i = null == R ? void 0 : R.users.find((e) => e.user_id === (null == t ? void 0 : t.userId));
+                i = null == N ? void 0 : N.users.find((e) => e.user_id === (null == t ? void 0 : t.userId));
             return [t, i];
-        }, [R, k, A]),
-        y = (0, L.e7)([c.default], () => c.default.getUser(null == N ? void 0 : N.userId)),
+        }, [N, R, k]),
+        y = (0, L.e7)([c.default], () => c.default.getUser(null == A ? void 0 : A.userId)),
         S = o.ZP.getName(E, void 0, y);
     !(function (e) {
         let { leaderboard: l, guildId: t } = e,
@@ -79,24 +79,24 @@ function j(e) {
                 });
         }, [i, t]);
     })({
-        leaderboard: R,
+        leaderboard: N,
         guildId: E
     });
-    let T = (0, s.q)(null == R ? void 0 : null === (l = R.settings) || void 0 === l ? void 0 : l.application_id);
-    if (null == R || null == T) return null;
-    if (0 === R.users.length || null == N || null == y)
+    let T = (0, s.q)(null == N ? void 0 : null === (l = N.settings) || void 0 === l ? void 0 : l.application_id);
+    if (null == N || null == T) return null;
+    if (0 === N.users.length || null == A || null == y)
         return (0, i.jsx)(g, {
             application: T,
             selected: p
         });
-    let { sort_by_statistic_id: G } = R.guild_settings,
+    let { sort_by_statistic_id: G } = N.guild_settings,
         w = null !== (f = null == D ? void 0 : null === (x = D.statistics) || void 0 === x ? void 0 : null === (t = x[G]) || void 0 === t ? void 0 : t.value) && void 0 !== f ? f : 0,
-        { currentRank: P } = N;
+        { currentRank: P } = A;
     return (
         (j =
-            N.userId === A
-                ? _.intl.formatToPlainString(_.t['eU+JxM'], { rank: P })
-                : _.intl.formatToPlainString(_.t['8BLSQ0'], {
+            A.userId === k
+                ? _.NW.formatToPlainString(_.t['eU+JxM'], { rank: P })
+                : _.NW.formatToPlainString(_.t['8BLSQ0'], {
                       rank: P,
                       username: S
                   })),
@@ -134,10 +134,10 @@ function g(e) {
                 children: [
                     (0, i.jsx)(m, { application: t }),
                     (0, i.jsx)(d.LZC, { size: 2 }),
-                    (0, i.jsx)(a.ll, { children: _.intl.string(_.t['t+b0DA']) }),
+                    (0, i.jsx)(a.ll, { children: _.NW.string(_.t['t+b0DA']) }),
                     (0, i.jsx)(r.Gk, {
                         location: r.Gt.CARD,
-                        children: (0, i.jsx)(V.ZR, { text: _.intl.string(_.t.zX8HUl) })
+                        children: (0, i.jsx)(V.ZR, { text: _.NW.string(_.t.zX8HUl) })
                     })
                 ]
             }),

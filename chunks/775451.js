@@ -17,9 +17,9 @@ var r = n(200651),
     p = n(23547),
     h = n(790542),
     f = n(317257),
-    N = n(120786),
-    x = n(970815),
-    b = n(981631),
+    b = n(120786),
+    N = n(970815),
+    x = n(981631),
     _ = n(215023),
     E = n(388032),
     j = n(192926);
@@ -44,13 +44,13 @@ let C = {
                         earnedOrbsQuantity: i,
                         backgroundElementRef: B,
                         isCoachmarkEnabled: v,
-                        onCloseCallback: b.dG4,
-                        onClickPill: b.dG4,
+                        onCloseCallback: x.dG4,
+                        onClickPill: x.dG4,
                         linkOnClick: () => {
                             (0, g.navigateToQuestHome)();
                         },
                         ctaOnClick: () => {
-                            W.pathname !== b.Z5c.COLLECTIBLES_SHOP &&
+                            W.pathname !== x.Z5c.COLLECTIBLES_SHOP &&
                                 (0, m.mK)({
                                     openInLayer: !1,
                                     tab: _.AW.ORBS,
@@ -110,7 +110,7 @@ let C = {
                 [j.visible]: !w
             }),
             children: [
-                (0, r.jsx)(x.A4, {
+                (0, r.jsx)(N.A4, {
                     ref: B,
                     balance: A,
                     balanceWidgetMode: P,
@@ -124,7 +124,7 @@ let C = {
                     (0, r.jsx)('div', {
                         className: a()(j.cardContainer, I),
                         ref: G,
-                        children: (0, r.jsx)(N.L, {
+                        children: (0, r.jsx)(b.L, {
                             ctaText: s,
                             ctaOnClick: () => {
                                 U(), O();

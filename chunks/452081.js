@@ -1,24 +1,24 @@
-n.d(t, { z: () => o });
-var i = n(192379),
-    l = n(703656),
-    r = n(113434),
-    a = n(220068),
-    s = n(388032);
-function o() {
-    let e = a.Z.useField('tab'),
-        t = i.useCallback((e) => {
-            (0, l.dL)('#'), a.Z.setState({ tab: e });
+n.d(t, { z: () => s });
+var r = n(192379),
+    i = n(703656),
+    l = n(113434),
+    o = n(220068),
+    a = n(388032);
+function s() {
+    let e = o.Z.useField('tab'),
+        t = r.useCallback((e) => {
+            (0, i.dL)('#'), o.Z.setState({ tab: e });
         }, []);
     return {
-        tabs: i.useMemo(
+        tabs: r.useMemo(
             () => [
                 {
-                    id: r.e5.ALL,
-                    label: s.intl.string(s.t['0SzXmp'])
+                    id: l.e5.ALL,
+                    label: a.NW.string(a.t['0SzXmp'])
                 },
                 {
-                    id: r.e5.CLAIMED,
-                    label: s.intl.string(s.t.zyNYND)
+                    id: l.e5.CLAIMED,
+                    label: a.NW.string(a.t.zyNYND)
                 }
             ],
             []

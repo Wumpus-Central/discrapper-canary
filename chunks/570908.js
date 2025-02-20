@@ -1,39 +1,39 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var l = n(200651);
 n(192379);
-var i = n(120356),
-    a = n.n(i),
-    r = n(458216);
-function s(e) {
-    let { selected: t, muted: n = !1, highlighted: i = !1, wrapContent: s = !1, avatar: o, decorators: u, name: d, subText: c, avatarClassName: E, innerClassName: _ } = e;
+var r = n(120356),
+    i = n.n(r),
+    a = n(501401);
+function o(e) {
+    let { selected: t, muted: n = !1, highlighted: r = !1, wrapContent: o = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: E, innerClassName: h } = e;
     return (0, l.jsxs)('div', {
-        className: a()(_, r.layout, {
-            [r.muted]: !t && n,
-            [r.highlighted]: i,
-            [r.wrappedLayout]: s
+        className: i()(h, a.layout, {
+            [a.muted]: !t && n,
+            [a.highlighted]: r,
+            [a.wrappedLayout]: o
         }),
         children: [
             (0, l.jsx)('div', {
-                className: a()(r.avatar, E),
-                children: o
+                className: i()(a.avatar, E),
+                children: s
             }),
             (0, l.jsxs)('div', {
-                className: r.content,
+                className: a.content,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: r.nameAndDecorators,
+                        className: a.nameAndDecorators,
                         children: [
                             (0, l.jsx)('div', {
-                                className: a()(r.name, { [r.wrappedName]: s }),
-                                children: d
+                                className: i()(a.name, { [a.wrappedName]: o }),
+                                children: u
                             }),
-                            u
+                            c
                         ]
                     }),
-                    null != c
+                    null != d
                         ? (0, l.jsx)('div', {
-                              className: r.subText,
-                              children: c
+                              className: a.subText,
+                              children: d
                           })
                         : null
                 ]

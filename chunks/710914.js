@@ -1,28 +1,28 @@
-n.d(t, { Z: () => h }), n(47120), n(733860), n(653041);
-var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(497505),
-    d = n(415104),
-    c = n(642145),
-    u = n(176418);
-function h(e) {
+n.d(t, { Z: () => p }), n(47120), n(733860), n(653041);
+var r = n(200651),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    a = n(481060),
+    s = n(497505),
+    c = n(415104),
+    u = n(642145),
+    d = n(372083);
+function p(e) {
     let { quests: t, isFetching: n } = e,
-        r = null;
+        l = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
         for (let n of t)
             if (n.id === e) {
-                r = e;
+                l = e;
                 break;
             }
     }
-    l.useEffect(() => {
+    i.useEffect(() => {
         for (let e of t)
-            if (e.id === r) {
-                let e = document.getElementById('quest-tile-'.concat(r));
+            if (e.id === l) {
+                let e = document.getElementById('quest-tile-'.concat(l));
                 null == e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
@@ -30,12 +30,12 @@ function h(e) {
                     });
                 break;
             }
-    }, [t, r]);
-    let h = null != r,
-        [m, p] = l.useState(window.innerWidth);
-    l.useEffect(() => {
+    }, [t, l]);
+    let p = null != l,
+        [h, g] = i.useState(window.innerWidth);
+    i.useEffect(() => {
         let e = () => {
-            p(window.innerWidth);
+            g(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -44,39 +44,39 @@ function h(e) {
             }
         );
     }, []);
-    let g = m >= 1610 ? 3 : m >= 1340 ? 2 : 1,
-        _ = l.useMemo(() => {
+    let f = h >= 1610 ? 3 : h >= 1340 ? 2 : 1,
+        m = i.useMemo(() => {
             let e = [];
-            for (let i of t) {
+            for (let r of t) {
                 var n;
-                i.id === c.V && (null === (n = i.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null ? e.unshift(i) : e.push(i);
+                r.id === u.V && (null === (n = r.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null ? e.unshift(r) : e.push(r);
             }
             return e;
         }, [t]);
     return n && 0 === t.length
-        ? (0, i.jsx)(s.$jN, { className: u.spinner })
-        : (0, i.jsx)(
+        ? (0, r.jsx)(a.$jN, { className: d.spinner })
+        : (0, r.jsx)(
               'div',
               {
-                  className: u.container,
-                  children: _.map((e, t) => {
-                      let n = Math.floor(t / g);
-                      return (0, i.jsx)(
-                          d.Z,
+                  className: d.container,
+                  children: m.map((e, t) => {
+                      let n = Math.floor(t / f);
+                      return (0, r.jsx)(
+                          c.Z,
                           {
                               quest: e,
-                              questContent: o.jn.QUEST_HOME_DESKTOP,
+                              questContent: s.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
-                              className: a()(u.questTile, {
-                                  [u.selected]: h && e.id === r,
-                                  [u.unselected]: h && e.id !== r
+                              className: o()(d.questTile, {
+                                  [d.selected]: p && e.id === l,
+                                  [d.unselected]: p && e.id !== l
                               })
                           },
                           e.id
                       );
                   })
               },
-              null != r ? r : ''
+              null != l ? l : ''
           );
 }

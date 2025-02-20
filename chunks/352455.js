@@ -1,48 +1,48 @@
-n.d(t, { Z: () => p });
-var i = n(200651);
+n.d(t, { Z: () => g });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    s = n(924628),
-    o = n(230711),
-    d = n(548816),
-    c = n(981631),
-    u = n(921944),
-    h = n(388032),
-    m = n(947349);
-function p(e) {
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(924628),
+    s = n(230711),
+    c = n(548816),
+    u = n(981631),
+    d = n(921944),
+    p = n(388032),
+    h = n(894204);
+function g(e) {
     let { className: t, markAsDismissed: n } = e;
-    return (0, i.jsxs)(d.Z, {
-        className: r()(m.card, t),
+    return (0, r.jsxs)(c.Z, {
+        className: l()(h.card, t),
         children: [
-            (0, i.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: 'heading-md/semibold',
-                className: m.header,
-                children: h.intl.string(h.t.HcbnMD)
+                className: h.header,
+                children: p.NW.string(p.t.HcbnMD)
             }),
-            (0, i.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: h.intl.format(h.t.NkFrzM, {
+                children: p.NW.format(p.t.NkFrzM, {
                     onPrivacyClick: () => {
-                        o.Z.open(c.oAB.DATA_AND_PRIVACY);
+                        s.Z.open(u.oAB.DATA_AND_PRIVACY);
                     }
                 })
             }),
-            (0, i.jsxs)('div', {
-                className: m.buttonContainer,
+            (0, r.jsxs)('div', {
+                className: h.buttonContainer,
                 children: [
-                    (0, i.jsx)(a.zxk, {
-                        size: a.zxk.Sizes.SMALL,
-                        onClick: () => (0, s.g)([c.pjP.PERSONALIZATION], []),
-                        children: h.intl.string(h.t.ebojgI)
+                    (0, r.jsx)(o.zxk, {
+                        size: o.zxk.Sizes.SMALL,
+                        onClick: () => (0, a.g)([u.pjP.PERSONALIZATION], []),
+                        children: p.NW.string(p.t.ebojgI)
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        color: a.zxk.Colors.PRIMARY,
-                        size: a.zxk.Sizes.SMALL,
-                        onClick: () => n(u.L.DISMISS),
-                        look: a.zxk.Looks.LINK,
-                        children: h.intl.string(h.t.f3Pet7)
+                    (0, r.jsx)(o.zxk, {
+                        color: o.zxk.Colors.PRIMARY,
+                        size: o.zxk.Sizes.SMALL,
+                        onClick: () => n(d.L.DISMISS),
+                        look: o.zxk.Looks.LINK,
+                        children: p.NW.string(p.t.f3Pet7)
                     })
                 ]
             })

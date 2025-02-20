@@ -1,14 +1,14 @@
-n.d(t, { Z: () => r });
-var i = n(812206);
-function r(e) {
+n.d(t, { Z: () => i });
+var r = n(812206);
+function i(e) {
     var t;
-    let { applicationId: n, activityConfigs: r, applications: a } = e,
-        s = null !== (t = null == a ? void 0 : a.find((e) => e.id === n)) && void 0 !== t ? t : i.Z.getApplication(n),
-        o = r.find((e) => e.application_id === n);
-    return null == o || null == s
+    let { applicationId: n, activityConfigs: i, applications: o } = e,
+        a = null !== (t = null == o ? void 0 : o.find((e) => e.id === n)) && void 0 !== t ? t : r.Z.getApplication(n),
+        s = i.find((e) => e.application_id === n);
+    return null == s || null == a
         ? null
         : {
-              activity: o,
-              application: s
+              activity: s,
+              application: a
           };
 }

@@ -1,26 +1,26 @@
-n.d(t, { Z: () => o });
-var i = n(200651),
-    r = n(192379),
-    a = n(403182),
-    s = n(640108);
-class o extends r.PureComponent {
+n.d(t, { Z: () => s });
+var r = n(200651),
+    i = n(192379),
+    o = n(403182),
+    a = n(640108);
+class s extends i.PureComponent {
     render() {
-        let { src: e, fileSize: t, fileName: n, className: r, playable: o, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: f, autoMute: _, onMute: p, mimeType: h, onPlay: m } = this.props;
-        return (0, i.jsx)(s.ZP, {
+        let { src: e, fileSize: t, fileName: n, className: i, playable: s, volume: l, renderLinkComponent: c, onVolumeChange: u, onVolumeShow: d, onVolumeHide: f, autoMute: p, onMute: _, mimeType: h, onPlay: m } = this.props;
+        return (0, r.jsx)(a.ZP, {
             src: e,
             fileName: n,
-            fileSize: (0, a.Ng)(t),
+            fileSize: (0, o.Ng)(t),
             fileSizeBytes: t,
-            type: s.ZP.Types.AUDIO,
-            className: r,
-            playable: o,
+            type: a.ZP.Types.AUDIO,
+            className: i,
+            playable: s,
             volume: l,
-            onMute: p,
-            autoMute: _,
-            onVolumeChange: c,
+            onMute: _,
+            autoMute: p,
+            onVolumeChange: u,
             onVolumeShow: d,
             onVolumeHide: f,
-            renderLinkComponent: u,
+            renderLinkComponent: c,
             mimeType: h,
             onPlay: m
         });

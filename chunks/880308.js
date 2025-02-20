@@ -1,18 +1,18 @@
-i.d(t, { g: () => u });
-var l = i(192379),
-    n = i(442837),
-    a = i(695346),
-    r = i(115130),
-    d = i(566620),
-    o = i(782769);
+n.d(t, { g: () => u });
+var i = n(192379),
+    r = n(442837),
+    l = n(695346),
+    o = n(115130),
+    c = n(566620),
+    a = n(782769);
 function u() {
-    let e = (0, o.z)(),
-        t = a.Sb.getSetting(),
-        i = (0, n.e7)([r.Z], () => r.Z.getFetchState(), []);
+    let e = (0, a.z)(),
+        t = l.Sb.getSetting(),
+        n = (0, r.e7)([o.Z], () => o.Z.getFetchState(), []);
     return (
-        l.useEffect(() => {
-            e && t && i === r.O.INITIALIZED && (0, d.$h)();
-        }, [e, i, t]),
+        i.useEffect(() => {
+            e && t && n === o.O.INITIALIZED && (0, c.$h)();
+        }, [e, n, t]),
         null
     );
 }

@@ -1,10 +1,10 @@
 n.d(t, {
-    h2: () => s,
-    xV: () => a,
-    yW: () => o
+    h2: () => a,
+    xV: () => o,
+    yW: () => s
 });
-var i = n(49402),
-    r = n(626526);
-let a = (0, i.I)(r.none, r.fade, r.customTheme),
-    s = (0, i.I)(r.thin, r.fade, r.customTheme),
-    o = (0, i.I)(r.auto, r.fade, r.customTheme);
+var r = n(49402),
+    i = n(76349);
+let o = (0, r.I)(i.none, i.fade, i.customTheme),
+    a = (0, r.I)(i.thin, i.fade, i.customTheme),
+    s = (0, r.I)(i.auto, i.fade, i.customTheme);

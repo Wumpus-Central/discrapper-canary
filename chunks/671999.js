@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return new MouseEvent(e, {
         screenX: t,
         screenY: n,
@@ -8,13 +8,13 @@ function i(e, t, n) {
         view: window
     });
 }
-function r(e, t, n) {
-    let i = document.elementFromPoint(t, n);
-    if (null == i) throw Error();
-    i.dispatchEvent(e);
+function i(e, t, n) {
+    let r = document.elementFromPoint(t, n);
+    if (null == r) throw Error();
+    r.dispatchEvent(e);
 }
 n.d(t, {
-    B: () => i,
-    J: () => r
+    B: () => r,
+    J: () => i
 }),
     n(411104);

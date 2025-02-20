@@ -1,46 +1,46 @@
-n.d(t, { Z: () => c });
-var l = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    r = n(565138),
+var l = n(481060),
+    i = n(565138),
     a = n(592125),
-    s = n(430824),
-    o = n(388032),
-    d = n(951670);
-let c = (e) => {
+    o = n(430824),
+    s = n(388032),
+    c = n(637858);
+let d = (e) => {
     let { entry: t } = e,
         n = a.Z.getChannel(t.channelId);
     if (null == n) return null;
-    let c = s.Z.getGuild(n.guild_id);
-    return null == c
+    let d = o.Z.getGuild(n.guild_id);
+    return null == d
         ? null
-        : (0, l.jsxs)('div', {
-              className: d.container,
+        : (0, r.jsxs)('div', {
+              className: c.container,
               children: [
-                  (0, l.jsx)(i.X6q, {
-                      className: d.header,
+                  (0, r.jsx)(l.X6q, {
+                      className: c.header,
                       variant: 'heading-sm/semibold',
-                      children: o.intl.string(o.t.nTe4HB)
+                      children: s.NW.string(s.t.nTe4HB)
                   }),
-                  (0, l.jsxs)('div', {
-                      className: d.guildContainer,
+                  (0, r.jsxs)('div', {
+                      className: c.guildContainer,
                       children: [
-                          (0, l.jsxs)('div', {
-                              className: d.hubInfo,
+                          (0, r.jsxs)('div', {
+                              className: c.hubInfo,
                               children: [
-                                  (0, l.jsx)(r.Z, {
-                                      guild: c,
-                                      size: r.Z.Sizes.MINI,
-                                      className: d.hubIcon
+                                  (0, r.jsx)(i.Z, {
+                                      guild: d,
+                                      size: i.Z.Sizes.MINI,
+                                      className: c.hubIcon
                                   }),
-                                  (0, l.jsx)(i.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
-                                      children: c.name
+                                      children: d.name
                                   })
                               ]
                           }),
-                          (0, l.jsx)(i.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
                               children: t.name

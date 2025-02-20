@@ -1,27 +1,27 @@
 n.d(t, {
-    C: () => i,
+    C: () => l,
     s: () => o
 });
-var a = n(939639),
-    r = n(99815),
-    l = n(388032);
-function i(e) {
+var r = n(939639),
+    a = n(99815),
+    i = n(388032);
+function l(e) {
     var t;
     return null !==
         (t = {
-            [r.E.LOL_TOTAL_KILLS]: l.intl.string(l.t.aIbY2N),
-            [r.E.LOL_TOTAL_DEATHS]: l.intl.string(l.t.Jec90d),
-            [r.E.LOL_TOTAL_ASSISTS]: l.intl.string(l.t['8+lHWV']),
-            [r.E.LOL_TOTAL_DAMAGE_DEALT]: l.intl.string(l.t['XEmO+P']),
-            [r.E.LOL_TOTAL_DAMAGE_TAKEN]: l.intl.string(l.t['TcQ7//']),
-            [r.E.LOL_TOTAL_WINS]: l.intl.string(l.t['/QfLjI']),
-            [r.E.LOL_MAX_CREEP_SCORE]: l.intl.string(l.t.M5pp7e)
+            [a.E.LOL_TOTAL_KILLS]: i.NW.string(i.t.aIbY2N),
+            [a.E.LOL_TOTAL_DEATHS]: i.NW.string(i.t.Jec90d),
+            [a.E.LOL_TOTAL_ASSISTS]: i.NW.string(i.t['8+lHWV']),
+            [a.E.LOL_TOTAL_DAMAGE_DEALT]: i.NW.string(i.t['XEmO+P']),
+            [a.E.LOL_TOTAL_DAMAGE_TAKEN]: i.NW.string(i.t['TcQ7//']),
+            [a.E.LOL_TOTAL_WINS]: i.NW.string(i.t['/QfLjI']),
+            [a.E.LOL_MAX_CREEP_SCORE]: i.NW.string(i.t.M5pp7e)
         }[e]) && void 0 !== t
         ? t
-        : l.intl.string(l.t['IraB/v']);
+        : i.NW.string(i.t['IraB/v']);
 }
 function o(e) {
-    let { statisticId: t, sortDesc: n, aggregationType: r } = e,
-        o = i(t);
-    return r === a.k.MAX ? (n ? l.intl.formatToPlainString(l.t.nJYOFx, { statisticName: o }) : l.intl.formatToPlainString(l.t.SYKIbW, { statisticName: o })) : n ? l.intl.formatToPlainString(l.t.M9sOp6, { statisticName: o }) : l.intl.formatToPlainString(l.t.USfwd3, { statisticName: o });
+    let { statisticId: t, sortDesc: n, aggregationType: a } = e,
+        o = l(t);
+    return a === r.k.MAX ? (n ? i.NW.formatToPlainString(i.t.nJYOFx, { statisticName: o }) : i.NW.formatToPlainString(i.t.SYKIbW, { statisticName: o })) : n ? i.NW.formatToPlainString(i.t.M9sOp6, { statisticName: o }) : i.NW.formatToPlainString(i.t.USfwd3, { statisticName: o });
 }

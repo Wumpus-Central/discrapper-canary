@@ -1,7 +1,7 @@
-var i = n(67867),
-    r = n(653457),
-    a = n(139545);
-i(
+var r = n(67867),
+    i = n(653457),
+    o = n(139545);
+r(
     {
         target: 'Promise',
         stat: !0,
@@ -9,8 +9,8 @@ i(
     },
     {
         try: function (e) {
-            var t = r.f(this),
-                n = a(e);
+            var t = i.f(this),
+                n = o(e);
             return (n.error ? t.reject : t.resolve)(n.value), t.promise;
         }
     }

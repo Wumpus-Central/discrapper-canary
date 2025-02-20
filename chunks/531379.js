@@ -1,3 +1,3 @@
-var i = n(42024),
-    r = n(391673);
-e.exports = !i && !r && 'object' == typeof window && 'object' == typeof document;
+var r = n(42024),
+    i = n(391673);
+e.exports = !r && !i && 'object' == typeof window && 'object' == typeof document;

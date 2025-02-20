@@ -1,25 +1,25 @@
-i.d(n, { default: () => c });
-var r = i(200651);
-i(192379);
-var e = i(481060),
-    a = i(239091),
-    s = i(716161),
-    l = i(647177),
-    o = i(388032);
-function c(t) {
-    let { onSelect: n, backgroundOption: i, optionIsInUse: c } = t;
-    return (0, r.jsx)(e.v2r, {
+n.d(r, { default: () => d });
+var e = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(239091),
+    s = n(716161),
+    o = n(647177),
+    c = n(388032);
+function d(t) {
+    let { onSelect: r, backgroundOption: n, optionIsInUse: d } = t;
+    return (0, e.jsx)(i.v2r, {
         navId: 'video-background-context',
         onClose: a.Zy,
-        onSelect: n,
-        'aria-label': o.intl.string(o.t.ptxALC),
-        children: (0, r.jsx)(e.sNh, {
+        onSelect: r,
+        'aria-label': c.NW.string(c.t.ptxALC),
+        children: (0, e.jsx)(i.sNh, {
             id: 'remove',
             action: () => {
-                (0, l.rD)(i) && ((0, s.KH)(i), (0, l.$w)(i));
+                (0, o.rD)(n) && ((0, s.KH)(n), (0, o.$w)(n));
             },
-            label: (0, l.rD)(i) ? (c ? o.intl.string(o.t['xh/P//']) : o.intl.string(o.t.oKuPwc)) : o.intl.string(o.t.hFYUDA),
-            disabled: !(0, l.rD)(i) || c,
+            label: (0, o.rD)(n) ? (d ? c.NW.string(c.t['xh/P//']) : c.NW.string(c.t.oKuPwc)) : c.NW.string(c.t.hFYUDA),
+            disabled: !(0, o.rD)(n) || d,
             color: 'danger'
         })
     });

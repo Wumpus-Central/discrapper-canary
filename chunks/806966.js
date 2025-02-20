@@ -1,15 +1,15 @@
 n.d(t, {
     Wq: () => d,
     Xn: () => f,
-    ZN: () => c,
-    c: () => s,
-    kJ: () => u
+    ZN: () => u,
+    c: () => a,
+    kJ: () => c
 });
-var i = n(877124),
-    r = n(65400),
-    a = n(731965);
-let s = -1,
-    o = Object.freeze({
+var r = n(877124),
+    i = n(65400),
+    o = n(731965);
+let a = -1,
+    s = Object.freeze({
         inspectedExpressionPosition: {
             rowIndex: 0,
             columnIndex: 0
@@ -19,30 +19,30 @@ let s = -1,
         bottomPosition: null
     });
 function l() {
-    let e = (0, r.F)()((0, i.XR)((e) => o)),
+    let e = (0, i.F)()((0, r.XR)((e) => s)),
         t = () => e.getState(),
-        n = (t, n, i) => {
-            (0, a.j)(() =>
+        n = (t, n, r) => {
+            (0, o.j)(() =>
                 e.setState({
                     inspectedExpressionPosition: {
                         rowIndex: n,
                         columnIndex: t,
-                        source: i
+                        source: r
                     }
                 })
             );
         },
-        s = (t) => {
-            (0, a.j)(() => e.setState({ activeCategoryIndex: t }));
+        a = (t) => {
+            (0, o.j)(() => e.setState({ activeCategoryIndex: t }));
         },
         l = (t) => {
-            (0, a.j)(() => e.setState({ searchPlaceholder: t }));
+            (0, o.j)(() => e.setState({ searchPlaceholder: t }));
         },
-        u = (t) => {
-            (0, a.j)(() => e.setState({ bottomPosition: t }));
+        c = (t) => {
+            (0, o.j)(() => e.setState({ bottomPosition: t }));
         },
-        c = () => {
-            (0, a.j)(() => e.setState(o));
+        u = () => {
+            (0, o.j)(() => e.setState(s));
         },
         d = (t, n) => e.subscribe(t, n);
     return {
@@ -50,13 +50,13 @@ function l() {
         getState: t,
         subscribe: d,
         setInspectedExpressionPosition: n,
-        setActiveCategoryIndex: s,
+        setActiveCategoryIndex: a,
         setSearchPlaceholder: l,
-        resetStoreState: c,
-        setBottomPosition: u
+        resetStoreState: u,
+        setBottomPosition: c
     };
 }
-let u = l(),
-    c = l(),
+let c = l(),
+    u = l(),
     d = l(),
     f = l();

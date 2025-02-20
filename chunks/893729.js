@@ -16,10 +16,10 @@ var i = n(200651),
     C = n(739292);
 function E(e) {
     var t;
-    let { guildId: n, role: l, theme: E, content: m = v.NW.string(v.t['6OSasb']), className: O } = e,
+    let { guildId: n, role: l, theme: E, content: O = v.NW.string(v.t['6OSasb']), className: m } = e,
         S = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-        b = p.ZP.useName(n, null, S),
-        _ = (0, u.Kz)(l),
+        _ = p.ZP.useName(n, null, S),
+        b = (0, u.Kz)(l),
         I = r.useMemo(() => {
             var e, t;
             return (0, d.e5)(
@@ -51,7 +51,7 @@ function E(e) {
                     {},
                     (0, c.ZP)({
                         channelId: '0',
-                        content: m,
+                        content: O,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
@@ -78,20 +78,20 @@ function E(e) {
                       }),
                 e)
             );
-        }, [S, m]),
+        }, [S, O]),
         y = {
-            nick: b,
+            nick: _,
             colorString: null !== (t = l.colorString) && void 0 !== t ? t : void 0
         };
     return (0, i.jsx)(a.f6W, {
         theme: E,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, C.container, O),
+                className: o()(e, C.container, m),
                 children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
                     author: y,
-                    roleIcon: _,
+                    roleIcon: b,
                     message: I,
                     isGroupStart: !0,
                     disableInteraction: !0

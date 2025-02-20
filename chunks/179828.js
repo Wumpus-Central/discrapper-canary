@@ -11,22 +11,22 @@ var r = t(200651),
     f = t(430824),
     p = t(496675),
     m = t(700785),
-    b = t(785717),
-    I = t(256226),
+    I = t(785717),
+    b = t(256226),
     g = t(678738),
-    y = t(314172),
-    v = t(981631),
+    v = t(314172),
+    y = t(981631),
     j = t(388032),
     h = t(894660);
 function x(e) {
-    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: p, onRemoveRole: b } = e,
+    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: p, onRemoveRole: I } = e,
         g = f && null != a,
         x = o.useMemo(() => 'roles-'.concat((0, i.Z)()), []),
         O = (0, l.ZP)({
             id: x,
             isEnabled: !0,
-            scrollToStart: v.Cyb,
-            scrollToEnd: v.Cyb,
+            scrollToStart: y.Cyb,
+            scrollToEnd: y.Cyb,
             wrap: !0
         }),
         _ = d.length,
@@ -34,12 +34,12 @@ function x(e) {
         N = d.map((e) => {
             var o;
             return (0, r.jsx)(
-                I.Z,
+                b.Z,
                 {
                     role: e,
                     guildId: c.id,
                     disableBorderColor: !0,
-                    onRemove: () => b(e),
+                    onRemove: () => I(e),
                     canRemove: f ? m.r6(c, t.id, u, e) : (null === (o = e.tags) || void 0 === o ? void 0 : o.guild_connections) === null && n.id === t.id
                 },
                 e.id
@@ -110,7 +110,7 @@ function x(e) {
                             children: [
                                 N,
                                 g &&
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(v.Z, {
                                         guild: c,
                                         guildMember: a,
                                         numRoles: _,
@@ -139,15 +139,15 @@ function x(e) {
 }
 function O(e) {
     let { user: n, currentUser: t, guild: i, scrollIntoView: l } = e,
-        { trackUserProfileAction: s } = (0, b.KZ)(),
-        I = (0, c.e7)([u.ZP], () => u.ZP.getMember(i.id, n.id)),
-        y = (0, c.e7)([f.Z], () => f.Z.getRoles(i.id)),
-        h = null == I ? void 0 : I.roles,
+        { trackUserProfileAction: s } = (0, I.KZ)(),
+        b = (0, c.e7)([u.ZP], () => u.ZP.getMember(i.id, n.id)),
+        v = (0, c.e7)([f.Z], () => f.Z.getRoles(i.id)),
+        h = null == b ? void 0 : b.roles,
         O = o.useMemo(
             () =>
                 null == h || 0 === h.length
                     ? []
-                    : Object.values(y)
+                    : Object.values(v)
                           .filter((e) => h.includes(e.id))
                           .sort((e, n) => {
                               var t, r;
@@ -155,10 +155,10 @@ function O(e) {
                                   i = (null === (r = n.tags) || void 0 === r ? void 0 : r.guild_connections) !== null;
                               return o && !i ? 1 : !o && i ? -1 : 0;
                           }),
-            [y, h]
+            [v, h]
         ),
         _ = m.e9(i, t.id),
-        [Z] = (0, c.Wu)([p.Z], () => [p.Z.can(v.Plq.MANAGE_ROLES, i), null != i ? p.Z.getGuildVersion(i.id) : null]),
+        [Z] = (0, c.Wu)([p.Z], () => [p.Z.can(y.Plq.MANAGE_ROLES, i), null != i ? p.Z.getGuildVersion(i.id) : null]),
         N = o.useCallback(
             (e) => {
                 var t, r;
@@ -176,7 +176,7 @@ function O(e) {
             },
             [h, i.id, n.id, s]
         ),
-        E = Z && null != I;
+        E = Z && null != b;
     return 0 !== O.length || E
         ? (0, r.jsx)(g.Z, {
               heading: j.NW.string(j.t.LPJmLy),
@@ -185,7 +185,7 @@ function O(e) {
                   user: n,
                   currentUser: t,
                   guild: i,
-                  guildMember: I,
+                  guildMember: b,
                   roles: O,
                   highestRole: _,
                   canManageRoles: Z,

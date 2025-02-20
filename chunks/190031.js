@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-var i = n(144232);
-function r(e, t) {
-    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (0, i.Z)(e, t);
+n.d(t, { Z: () => i });
+var r = n(144232);
+function i(e, t) {
+    (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (0, r.Z)(e, t);
 }

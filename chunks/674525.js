@@ -1,27 +1,27 @@
 n.d(t, { Z: () => u });
-var i,
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    s = n(570140);
-let o = [];
-class c extends (r = a.ZP.Store) {
+    o = n(442837),
+    a = n(570140);
+let s = [];
+class c extends (l = o.ZP.Store) {
     getEligibleGuildsForNagActivate() {
-        return o;
+        return s;
     }
 }
-(l = 'CreatorMonetizationMarketingStore'),
-    (i = 'displayName') in c
-        ? Object.defineProperty(c, i, {
-              value: l,
+(i = 'CreatorMonetizationMarketingStore'),
+    (r = 'displayName') in c
+        ? Object.defineProperty(c, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[i] = l);
-let u = new c(s.Z, {
+        : (c[r] = i);
+let u = new c(a.Z, {
     CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
         let { eligibleGuilds: t } = e;
-        o = t;
+        s = t;
     }
 });

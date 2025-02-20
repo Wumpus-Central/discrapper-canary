@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(296810),
     h = n(921813),
     f = n(621853),
-    N = n(246946),
-    x = n(594174),
-    b = n(63063),
+    b = n(246946),
+    N = n(594174),
+    x = n(63063),
     _ = n(74538),
     E = n(18438),
     j = n(778825),
@@ -76,12 +76,12 @@ function A(e) {
 function P(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
-        s = (0, l.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        s = (0, l.e7)([N.default], () => {
+            let e = N.default.getCurrentUser();
             return a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         P = (0, l.e7)([f.Z], () => !f.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
-        R = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        R = (0, l.e7)([b.Z], () => b.Z.hidePersonalInformation),
         D = (0, l.cj)([j.Z], () => y(I({}, j.Z.getAllPending()), { source: j.Z.getSource() })),
         { source: Z } = D,
         w = (function (e, t) {
@@ -120,7 +120,7 @@ function P(e) {
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: T.NW.format(T.t['/PTB2N'], { helpCenterLink: b.Z.getArticleURL(S.BhN.GUILD_PROFILES) })
+                        children: T.NW.format(T.t['/PTB2N'], { helpCenterLink: x.Z.getArticleURL(S.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, r.jsxs)(r.Fragment, {

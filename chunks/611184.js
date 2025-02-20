@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(147913),
-    r = n(594190),
-    a = n(77498),
-    s = n(454293);
-function o(e, t, n) {
+n.d(t, { Z: () => u }), n(47120);
+var r = n(147913),
+    i = n(594190),
+    o = n(77498),
+    a = n(454293);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,18 +18,18 @@ function o(e, t, n) {
 }
 function l(e) {
     var t, n;
-    let { game: i } = e,
-        o = r.ZP.isDetectionEnabled(i),
-        l = null !== (n = i.id) && void 0 !== n ? n : null === (t = a.Z.getGameByName(i.name)) || void 0 === t ? void 0 : t.id;
-    null != l && (0, s.M)(l, o);
+    let { game: r } = e,
+        s = i.ZP.isDetectionEnabled(r),
+        l = null !== (n = r.id) && void 0 !== n ? n : null === (t = o.Z.getGameByName(r.name)) || void 0 === t ? void 0 : t.id;
+    null != l && (0, a.M)(l, s);
 }
-class u extends i.Z {
+class c extends r.Z {
     constructor(...e) {
         super(...e),
-            o(this, 'actions', {
+            s(this, 'actions', {
                 RUNNING_GAME_TOGGLE_DETECTION: l,
                 RUNNING_GAME_DELETE_ENTRY: l
             });
     }
 }
-let c = new u();
+let u = new c();

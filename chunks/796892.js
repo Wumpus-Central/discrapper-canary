@@ -1,24 +1,24 @@
-n.d(t, { Z: () => c });
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(877837),
+n.d(t, { Z: () => u });
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(877837),
     l =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
             return e;
         },
-    u = function (e) {
+    c = function (e) {
         var t = e.colors,
             n = e.onClick,
-            r = void 0 === n ? function () {} : n,
-            a = e.onSwatchHover,
-            u = (0, s.default)(
+            i = void 0 === n ? function () {} : n,
+            o = e.onSwatchHover,
+            c = (0, a.default)(
                 {
                     default: {
                         colors: {
@@ -43,8 +43,8 @@ var i = n(192379),
                 },
                 { 'no-presets': !t || !t.length }
             ),
-            c = function (e, t) {
-                r(
+            u = function (e, t) {
+                i(
                     {
                         hex: e,
                         source: 'hex'
@@ -52,27 +52,27 @@ var i = n(192379),
                     t
                 );
             };
-        return i.createElement(
+        return r.createElement(
             'div',
             {
-                style: u.colors,
+                style: c.colors,
                 className: 'flexbox-fix'
             },
             t.map(function (e) {
                 var t = 'string' == typeof e ? { color: e } : e,
                     n = '' + t.color + (t.title || '');
-                return i.createElement(
+                return r.createElement(
                     'div',
                     {
                         key: n,
-                        style: u.swatchWrap
+                        style: c.swatchWrap
                     },
-                    i.createElement(
-                        o.m4,
+                    r.createElement(
+                        s.m4,
                         l({}, t, {
-                            style: u.swatch,
-                            onClick: c,
-                            onHover: a,
+                            style: c.swatch,
+                            onClick: u,
+                            onHover: o,
                             focusStyle: { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + t.color }
                         })
                     )
@@ -80,15 +80,15 @@ var i = n(192379),
             })
         );
     };
-u.propTypes = {
-    colors: a().arrayOf(
-        a().oneOfType([
-            a().string,
-            a().shape({
-                color: a().string,
-                title: a().string
+c.propTypes = {
+    colors: o().arrayOf(
+        o().oneOfType([
+            o().string,
+            o().shape({
+                color: o().string,
+                title: o().string
             })
         ])
     ).isRequired
 };
-let c = u;
+let u = c;

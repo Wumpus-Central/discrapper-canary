@@ -1,9 +1,9 @@
 n.d(t, {
-    M: () => c,
-    p: () => u
+    M: () => u,
+    p: () => c
 });
-var i = n(825842);
-let r = (function () {
+var r = n(825842);
+let i = (function () {
     let e = new DataView(new ArrayBuffer(8));
     return void 0 !== globalThis.BigInt && 'function' == typeof e.getBigInt64 && 'function' == typeof e.getBigUint64 && 'function' == typeof e.setBigInt64 && 'function' == typeof e.setBigUint64
         ? {
@@ -16,11 +16,11 @@ let r = (function () {
           }
         : void 0;
 })();
-function a(e) {
+function o(e) {
     if (!e) throw Error('BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support');
 }
-let s = /^-?[0-9]+$/,
-    o = 4294967296;
+let a = /^-?[0-9]+$/,
+    s = 4294967296;
 class l {
     constructor(e, t) {
         (this.lo = 0 | e), (this.hi = 0 | t);
@@ -29,81 +29,81 @@ class l {
         return 0 == this.lo && 0 == this.hi;
     }
     toNumber() {
-        let e = this.hi * o + (this.lo >>> 0);
+        let e = this.hi * s + (this.lo >>> 0);
         if (!Number.isSafeInteger(e)) throw Error('cannot convert to safe number');
         return e;
     }
 }
-class u extends l {
+class c extends l {
     static from(e) {
-        if (r)
+        if (i)
             switch (typeof e) {
                 case 'string':
                     if ('0' == e) return this.ZERO;
                     if ('' == e) throw Error('string is no integer');
-                    e = r.C(e);
+                    e = i.C(e);
                 case 'number':
                     if (0 === e) return this.ZERO;
-                    e = r.C(e);
+                    e = i.C(e);
                 case 'bigint':
                     if (!e) return this.ZERO;
-                    if (e < r.UMIN) throw Error('signed value for ulong');
-                    if (e > r.UMAX) throw Error('ulong too large');
-                    return r.V.setBigUint64(0, e, !0), new u(r.V.getInt32(0, !0), r.V.getInt32(4, !0));
+                    if (e < i.UMIN) throw Error('signed value for ulong');
+                    if (e > i.UMAX) throw Error('ulong too large');
+                    return i.V.setBigUint64(0, e, !0), new c(i.V.getInt32(0, !0), i.V.getInt32(4, !0));
             }
         else
             switch (typeof e) {
                 case 'string':
                     if ('0' == e) return this.ZERO;
-                    if (((e = e.trim()), !s.test(e))) throw Error('string is no integer');
-                    let [t, n, a] = (0, i.IL)(e);
+                    if (((e = e.trim()), !a.test(e))) throw Error('string is no integer');
+                    let [t, n, o] = (0, r.IL)(e);
                     if (t) throw Error('signed value');
-                    return new u(n, a);
+                    return new c(n, o);
                 case 'number':
                     if (0 == e) return this.ZERO;
                     if (!Number.isSafeInteger(e)) throw Error('number is no integer');
                     if (e < 0) throw Error('signed value for ulong');
-                    return new u(e, e / o);
+                    return new c(e, e / s);
             }
         throw Error('unknown value ' + typeof e);
     }
     toString() {
-        return r ? this.toBigInt().toString() : (0, i.gn)(this.lo, this.hi);
+        return i ? this.toBigInt().toString() : (0, r.gn)(this.lo, this.hi);
     }
     toBigInt() {
-        return a(r), r.V.setInt32(0, this.lo, !0), r.V.setInt32(4, this.hi, !0), r.V.getBigUint64(0, !0);
+        return o(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigUint64(0, !0);
     }
 }
-u.ZERO = new u(0, 0);
-class c extends l {
+c.ZERO = new c(0, 0);
+class u extends l {
     static from(e) {
-        if (r)
+        if (i)
             switch (typeof e) {
                 case 'string':
                     if ('0' == e) return this.ZERO;
                     if ('' == e) throw Error('string is no integer');
-                    e = r.C(e);
+                    e = i.C(e);
                 case 'number':
                     if (0 === e) return this.ZERO;
-                    e = r.C(e);
+                    e = i.C(e);
                 case 'bigint':
                     if (!e) return this.ZERO;
-                    if (e < r.MIN) throw Error('ulong too small');
-                    if (e > r.MAX) throw Error('ulong too large');
-                    return r.V.setBigInt64(0, e, !0), new c(r.V.getInt32(0, !0), r.V.getInt32(4, !0));
+                    if (e < i.MIN) throw Error('ulong too small');
+                    if (e > i.MAX) throw Error('ulong too large');
+                    return i.V.setBigInt64(0, e, !0), new u(i.V.getInt32(0, !0), i.V.getInt32(4, !0));
             }
         else
             switch (typeof e) {
                 case 'string':
                     if ('0' == e) return this.ZERO;
-                    if (((e = e.trim()), !s.test(e))) throw Error('string is no integer');
-                    let [t, n, a] = (0, i.IL)(e),
-                        l = new c(n, a);
+                    if (((e = e.trim()), !a.test(e))) throw Error('string is no integer');
+                    let [t, n, o] = (0, r.IL)(e),
+                        l = new u(n, o);
                     return t ? l.negate() : l;
                 case 'number':
                     if (0 == e) return this.ZERO;
                     if (!Number.isSafeInteger(e)) throw Error('number is no integer');
-                    return e > 0 ? new c(e, e / o) : new c(-e, -e / o).negate();
+                    return e > 0 ? new u(e, e / s) : new u(-e, -e / s).negate();
             }
         throw Error('unknown value ' + typeof e);
     }
@@ -113,18 +113,18 @@ class c extends l {
     negate() {
         let e = ~this.hi,
             t = this.lo;
-        return t ? (t = ~t + 1) : (e += 1), new c(t, e);
+        return t ? (t = ~t + 1) : (e += 1), new u(t, e);
     }
     toString() {
-        if (r) return this.toBigInt().toString();
+        if (i) return this.toBigInt().toString();
         if (this.isNegative()) {
             let e = this.negate();
-            return '-' + (0, i.gn)(e.lo, e.hi);
+            return '-' + (0, r.gn)(e.lo, e.hi);
         }
-        return (0, i.gn)(this.lo, this.hi);
+        return (0, r.gn)(this.lo, this.hi);
     }
     toBigInt() {
-        return a(r), r.V.setInt32(0, this.lo, !0), r.V.setInt32(4, this.hi, !0), r.V.getBigInt64(0, !0);
+        return o(i), i.V.setInt32(0, this.lo, !0), i.V.setInt32(4, this.hi, !0), i.V.getBigInt64(0, !0);
     }
 }
-c.ZERO = new c(0, 0);
+u.ZERO = new u(0, 0);

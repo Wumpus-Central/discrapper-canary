@@ -1,77 +1,77 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    l = n(192379),
+n.d(t, { Z: () => m }), n(47120);
+var r = n(200651),
+    i = n(192379),
     a = n(399606),
-    r = n(846519),
-    s = n(481060),
-    o = n(317632),
+    o = n(846519),
+    l = n(481060),
+    s = n(317632),
     c = n(174767),
     d = n(594174),
     u = n(388032),
-    m = n(23943);
-function _(e) {
+    p = n(99977);
+function m(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
-        [_, h] = l.useState(!1),
-        p = (0, a.e7)([o.Z], () => o.Z.getLastUnseenInvite()),
-        g = (0, a.e7)([d.default], () => (null != p ? d.default.getUser(p.inviter_id) : null));
-    return (l.useEffect(() => {
-        n && h(!1);
+        [m, f] = i.useState(!1),
+        h = (0, a.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
+        g = (0, a.e7)([d.default], () => (null != h ? d.default.getUser(h.inviter_id) : null));
+    return (i.useEffect(() => {
+        n && f(!1);
     }, [n]),
-    l.useEffect(() => {
-        if (null == p) {
-            h(!1);
+    i.useEffect(() => {
+        if (null == h) {
+            f(!1);
             return;
         }
-        (0, c.Br)(p), h(!0);
-        let e = new r.V7();
+        (0, c.Br)(h), f(!0);
+        let e = new o.V7();
         return (
             e.start(5000, () => {
-                h(!1);
+                f(!1);
             }),
             () => {
                 e.stop();
             }
         );
-    }, [p]),
-    _ && null != p && null != g)
-        ? (0, i.jsxs)(s.Cys, {
-              tooltipClassName: m.tooltip,
-              tooltipContentClassName: m.tooltipContent,
+    }, [h]),
+    m && null != h && null != g)
+        ? (0, r.jsxs)(l.Cys, {
+              tooltipClassName: p.tooltip,
+              tooltipContentClassName: p.tooltipContent,
               targetElementRef: t,
               position: 'bottom',
-              color: s.FGA.BLACK,
+              color: l.FGA.BLACK,
               children: [
-                  (0, i.jsxs)('div', {
-                      className: m.iconContainer,
+                  (0, r.jsxs)('div', {
+                      className: p.iconContainer,
                       children: [
-                          (0, i.jsx)('img', {
-                              className: m.inviteImage,
-                              src: p.application_asset,
+                          (0, r.jsx)('img', {
+                              className: p.inviteImage,
+                              src: h.application_asset,
                               alt: 'Game Invite'
                           }),
-                          (0, i.jsx)('div', {
-                              className: m.offsetAvatarContainer,
-                              children: (0, i.jsx)(s.qEK, {
+                          (0, r.jsx)('div', {
+                              className: p.offsetAvatarContainer,
+                              children: (0, r.jsx)(l.qEK, {
                                   'aria-label': 'Inviter',
-                                  className: m.inviterImage,
+                                  className: p.inviterImage,
                                   src: g.getAvatarURL(null, 24),
-                                  size: s.EFr.SIZE_24
+                                  size: l.EFr.SIZE_24
                               })
                           })
                       ]
                   }),
-                  (0, i.jsxs)('div', {
-                      className: m.titleContainer,
+                  (0, r.jsxs)('div', {
+                      className: p.titleContainer,
                       children: [
-                          (0, i.jsx)(s.Text, {
-                              className: m.__invalid_title,
+                          (0, r.jsx)(l.Text, {
+                              className: p.__invalid_title,
                               variant: 'text-xs/semibold',
-                              children: u.intl.format(u.t['8gTZ8v'], { username: g.username })
+                              children: u.NW.format(u.t['8gTZ8v'], { username: g.username })
                           }),
-                          (0, i.jsx)(s.Text, {
-                              className: m.__invalid_subtitle,
+                          (0, r.jsx)(l.Text, {
+                              className: p.__invalid_subtitle,
                               variant: 'text-xxs/medium',
-                              children: p.application_name
+                              children: h.application_name
                           })
                       ]
                   })

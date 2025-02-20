@@ -1,4 +1,4 @@
-a.d(e, { default: () => _ });
+a.d(e, { default: () => _ }), a(266796);
 var i = a(200651);
 a(192379);
 var t = a(120356),
@@ -10,7 +10,7 @@ var t = a(120356),
     p = a(23551),
     d = a(122021),
     u = a(388032),
-    m = a(769182);
+    m = a(685484);
 function h(n) {
     let { onComplete: e, excludedPlatformTypes: a, includedPlatformTypes: t } = n,
         l = (0, d.fq)();
@@ -47,7 +47,7 @@ function x(n) {
                       variant: 'eyebrow',
                       color: 'interactive-normal',
                       className: m.applicationsHeader,
-                      children: u.intl.string(u.t.PHjkRE)
+                      children: u.NW.string(u.t.PHjkRE)
                   }),
                   (0, i.jsx)('div', {
                       className: m.applicationsContainer,
@@ -98,7 +98,7 @@ function x(n) {
 function _(n) {
     let { transitionState: e, onComplete: a, onClose: t, excludedPlatformTypes: c, includedPlatformTypes: o, integrations: r, onCompleteApplication: p } = n;
     return (0, i.jsx)(s.Y0X, {
-        'aria-label': u.intl.string(u.t.syl6HR),
+        'aria-label': u.NW.string(u.t.syl6HR),
         size: s.CgR.SMALL,
         transitionState: e,
         className: l()(m.container),
@@ -111,7 +111,7 @@ function _(n) {
                         (0, i.jsx)(s.X6q, {
                             className: m.title,
                             variant: 'heading-md/bold',
-                            children: u.intl.string(u.t.syl6HR)
+                            children: u.NW.string(u.t.syl6HR)
                         }),
                         (0, i.jsx)(s.olH, { onClick: t })
                     ]

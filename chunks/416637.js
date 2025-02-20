@@ -1,13 +1,13 @@
-n.d(t, { g: () => o });
-var i = n(200651);
+n.d(t, { g: () => a });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    r = n.n(l),
-    a = n(595560);
-function o(e) {
+var i = n(120356),
+    l = n.n(i),
+    o = n(112605);
+function a(e) {
     let { hideGradient: t, children: n } = e;
-    return (0, i.jsxs)('div', {
-        className: a.footer,
-        children: [(0, i.jsx)('div', { className: r()(a.gradient, { [a.gradientHidden]: t }) }), n]
+    return (0, r.jsxs)('div', {
+        className: o.footer,
+        children: [(0, r.jsx)('div', { className: l()(o.gradient, { [o.gradientHidden]: t }) }), n]
     });
 }

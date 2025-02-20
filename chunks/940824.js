@@ -1,48 +1,48 @@
-n.d(t, { Z: () => _ });
-var i = n(200651);
+n.d(t, { Z: () => p });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(37234),
-    s = n(100527),
-    o = n(906732),
+var i = n(481060),
+    o = n(37234),
+    a = n(100527),
+    s = n(906732),
     l = n(703656),
-    u = n(335131),
-    c = n(981631),
+    c = n(335131),
+    u = n(981631),
     d = n(388032),
-    f = n(134348);
-let _ = (e) => {
+    f = n(384256);
+let p = (e) => {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, o.ZP)(),
-        _ = () => {
+        { analyticsLocations: n } = (0, s.ZP)(),
+        p = () => {
             t(),
-                (0, l.uL)(c.Z5c.COLLECTIBLES_SHOP),
-                (0, u.mK)({
+                (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
+                (0, c.mK)({
                     openInLayer: !1,
-                    analyticsSource: s.Z.PREMIUM_PAYMENT_MODAL,
+                    analyticsSource: a.Z.PREMIUM_PAYMENT_MODAL,
                     analyticsLocations: n
                 }),
-                (0, a.xf)();
+                (0, o.xf)();
         };
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: f.container,
         children: [
-            (0, i.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: f.iconBackground,
-                children: (0, i.jsx)(r.EOn, {
+                children: (0, r.jsx)(i.EOn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: r.TVs.colors.WHITE
+                    color: i.TVs.colors.WHITE
                 })
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-primary',
-                children: d.intl.format(d.t.twSHtb, {
+                children: d.NW.format(d.t.twSHtb, {
                     checkItOut: (e) =>
-                        (0, i.jsx)(r.P3F, {
+                        (0, r.jsx)(i.P3F, {
                             className: f.link,
-                            onClick: _,
+                            onClick: p,
                             children: e
                         })
                 })

@@ -1,51 +1,51 @@
-n.d(t, { Z: () => _ });
-var i = n(570140),
-    r = n(232567),
-    a = n(220082),
-    s = n(275759),
-    o = n(365943),
+n.d(t, { Z: () => p });
+var r = n(570140),
+    i = n(232567),
+    o = n(220082),
+    a = n(275759),
+    s = n(365943),
     l = n(592125),
-    u = n(271383),
-    c = n(621853),
+    c = n(271383),
+    u = n(621853),
     d = n(120569);
 let f = 60000;
-async function _(e, t) {
-    var n, _, p, h;
-    let { withMutualGuilds: m = !1, withMutualFriendsCount: g = !1, withMutualFriends: E = !1, friendToken: v, preloadUserBanner: y = !0, dispatchWait: I = !1, guildId: T, channelId: b, joinRequestId: S, abortSignal: A } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if ('' === e || c.Z.isFetchingProfile(e, T)) return;
-    let N = c.Z.getUserProfile(e),
-        C = Date.now() - (null !== (h = null == N ? void 0 : N.lastFetched) && void 0 !== h ? h : 0) >= f;
-    if (((null == N ? void 0 : null === (n = N.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == N ? void 0 : null === (_ = N.fetchError) || void 0 === _ ? void 0 : _.status) === 429) && !C) return;
-    let R = c.Z.getGuildMemberProfile(e, T),
-        O = c.Z.getMutualGuilds(e),
-        D = c.Z.getMutualFriends(e),
-        L = c.Z.getMutualFriendsCount(e);
-    m = m || null != T;
-    let x = null == D && E,
-        P = null == L && g,
-        w = null != T && null == R;
-    if (!(null == O && m) && !x && !P && !w && !C) return;
-    (0, o.z)(), null != t && (0, a.vM)(t);
+async function p(e, t) {
+    var n, p, _, h;
+    let { withMutualGuilds: m = !1, withMutualFriendsCount: g = !1, withMutualFriends: E = !1, friendToken: v, preloadUserBanner: b = !0, dispatchWait: y = !1, guildId: O, channelId: S, joinRequestId: I, abortSignal: T } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if ('' === e || u.Z.isFetchingProfile(e, O)) return;
+    let N = u.Z.getUserProfile(e),
+        A = Date.now() - (null !== (h = null == N ? void 0 : N.lastFetched) && void 0 !== h ? h : 0) >= f;
+    if (((null == N ? void 0 : null === (n = N.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == N ? void 0 : null === (p = N.fetchError) || void 0 === p ? void 0 : p.status) === 429) && !A) return;
+    let C = u.Z.getGuildMemberProfile(e, O),
+        R = u.Z.getMutualGuilds(e),
+        P = u.Z.getMutualFriends(e),
+        w = u.Z.getMutualFriendsCount(e);
+    m = m || null != O;
+    let D = null == P && E,
+        x = null == w && g,
+        L = null != O && null == C;
+    if (!(null == R && m) && !D && !x && !L && !A) return;
+    (0, s.z)(), null != t && (0, o.vM)(t);
     let M = {
             withMutualGuilds: m,
             withMutualFriends: E,
             withMutualFriendsCount: g,
             friendToken: v,
-            guildId: T,
-            joinRequestId: S,
-            abortSignal: A,
+            guildId: O,
+            joinRequestId: I,
+            abortSignal: T,
             connectionsRoleId:
-                null == T
+                null == O
                     ? void 0
                     : null ===
-                            (p = (0, s.Ur)({
-                                guildMember: u.ZP.getMember(T, e),
-                                channel: l.Z.getChannel(b)
-                            })) || void 0 === p
+                            (_ = (0, a.Ur)({
+                                guildMember: c.ZP.getMember(O, e),
+                                channel: l.Z.getChannel(S)
+                            })) || void 0 === _
                       ? void 0
-                      : p.id
+                      : _.id
         },
-        k = y ? d.Z : void 0;
-    if (I) return i.Z.wait(() => (0, r.In)(e, M, k));
-    await (0, r.In)(e, M, k);
+        k = b ? d.Z : void 0;
+    if (y) return r.Z.wait(() => (0, i.In)(e, M, k));
+    await (0, i.In)(e, M, k);
 }

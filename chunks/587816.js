@@ -1,4 +1,4 @@
-function t(n, i) {
+function t(n, r) {
     return (
         (e.exports = t =
             Object.setPrototypeOf
@@ -8,7 +8,7 @@ function t(n, i) {
                   }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
-        t(n, i)
+        t(n, r)
     );
 }
 (e.exports = t), (e.exports.__esModule = !0), (e.exports.default = e.exports);

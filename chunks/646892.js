@@ -1,27 +1,27 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(442837),
-    a = n(481060),
+var i = n(120356),
+    s = n.n(i),
+    a = n(442837),
+    l = n(481060),
     o = n(607070),
     c = n(307537),
-    d = n(366624);
+    d = n(459227);
 function u(e) {
-    let { className: t, shouldShine: n = !0, size: r = 14 } = e,
-        u = (0, s.e7)([o.Z], () => o.Z.useReducedMotion);
-    return (0, i.jsxs)('div', {
-        className: l()([d.guildProductRoleIcon, t]),
+    let { className: t, shouldShine: n = !0, size: i = 14 } = e,
+        u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+    return (0, r.jsxs)('div', {
+        className: s()([d.guildProductRoleIcon, t]),
         children: [
-            (0, i.jsx)(c.Z, {
-                height: r,
-                width: r
+            (0, r.jsx)(c.Z, {
+                height: i,
+                width: i
             }),
-            (0, i.jsx)(a.ZX5, {
+            (0, r.jsx)(l.ZX5, {
                 className: d.shine,
                 shinePaused: u || !n,
-                shineSize: a.gtL.ShineSizes.SMALL
+                shineSize: l.gtL.ShineSizes.SMALL
             })
         ]
     });

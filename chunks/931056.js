@@ -1,32 +1,32 @@
-n.d(t, { Z: () => u }), n(653041), n(47120);
-var i = n(192379),
-    l = n(442837),
-    a = n(417438),
-    r = n(360787),
-    s = n(158776);
-let o = [],
+n.d(t, { Z: () => d }), n(653041), n(47120);
+var r = n(192379),
+    i = n(442837),
+    l = n(417438),
+    o = n(360787),
+    a = n(158776);
+let s = [],
     c = [],
-    d = [c, o];
-function u(e, t) {
-    let [n, u] = (0, l.Wu)(
-        [s.Z],
+    u = [c, s];
+function d(e, t) {
+    let [n, d] = (0, i.Wu)(
+        [a.Z],
         () => {
-            if (!t.isPrivate()) return d;
+            if (!t.isPrivate()) return u;
             let n = [],
-                i = [];
+                r = [];
             return (e.forEach((e) => {
-                var t, l;
-                let a = null === (t = e.application) || void 0 === t ? void 0 : t.id,
-                    r = null === (l = e.activity) || void 0 === l ? void 0 : l.party_id;
-                if (null != a && null != r) {
+                var t, i;
+                let l = null === (t = e.application) || void 0 === t ? void 0 : t.id,
+                    o = null === (i = e.activity) || void 0 === i ? void 0 : i.party_id;
+                if (null != l && null != o) {
                     let t = e.author.id;
                     if (
                         null !=
-                        s.Z.findActivity(
+                        a.Z.findActivity(
                             t,
                             (e) => {
                                 var t;
-                                return e.application_id === a && (null === (t = e.party) || void 0 === t ? void 0 : t.id) === r;
+                                return e.application_id === l && (null === (t = e.party) || void 0 === t ? void 0 : t.id) === o;
                             },
                             null,
                             !0
@@ -35,32 +35,32 @@ function u(e, t) {
                         n.push(e.id);
                         return;
                     }
-                    let l = e.timestamp.getTime(),
-                        o = {
+                    let i = e.timestamp.getTime(),
+                        s = {
                             userId: t,
-                            applicationId: a,
-                            partyId: r,
+                            applicationId: l,
+                            partyId: o,
                             messageId: e.id,
                             channelId: e.channel_id,
-                            inviteTime: l
+                            inviteTime: i
                         };
-                    i.push(o);
+                    r.push(s);
                 }
             }),
-            0 === n.length && 0 === i.length)
-                ? d
+            0 === n.length && 0 === r.length)
+                ? u
                 : 0 === n.length
-                  ? [c, i]
-                  : 0 === i.length
-                    ? [n, o]
-                    : [n, i];
+                  ? [c, r]
+                  : 0 === r.length
+                    ? [n, s]
+                    : [n, r];
         },
         [e, t]
     );
     return (
-        i.useEffect(() => {
-            for (let e of u) r.Z.isSubscribed(e) || (0, a.L)(e);
-        }, [u]),
-        [n, u]
+        r.useEffect(() => {
+            for (let e of d) o.Z.isSubscribed(e) || (0, l.L)(e);
+        }, [d]),
+        [n, d]
     );
 }

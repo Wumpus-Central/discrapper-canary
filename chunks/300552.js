@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
-var i = n(833880),
-    r = n(896416),
-    a = n(15568);
-function s(e, t) {
+n.d(t, { Z: () => a });
+var r = n(833880),
+    i = n(896416),
+    o = n(15568);
+function a(e, t) {
     if (e) {
-        if ('string' == typeof e) return (0, a.Z)(e, t);
+        if ('string' == typeof e) return (0, o.Z)(e, t);
         var n,
-            s = i((n = Object.prototype.toString.call(e))).call(n, 8, -1);
-        if (('Object' === s && e.constructor && (s = e.constructor.name), 'Map' === s || 'Set' === s)) return r(e);
-        if ('Arguments' === s || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(s)) return (0, a.Z)(e, t);
+            a = r((n = Object.prototype.toString.call(e))).call(n, 8, -1);
+        if (('Object' === a && e.constructor && (a = e.constructor.name), 'Map' === a || 'Set' === a)) return i(e);
+        if ('Arguments' === a || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)) return (0, o.Z)(e, t);
     }
 }

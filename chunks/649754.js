@@ -1,6 +1,6 @@
-n.d(t, { Z: () => s }), n(47120);
-var i = n(992774);
-function r(e, t, n) {
+n.d(t, { Z: () => a }), n(47120);
+var r = n(992774);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,27 +13,27 @@ function r(e, t, n) {
         e
     );
 }
-class a {
+class o {
     addSink(e, t, n) {
-        let r = this.streams,
-            a = r[e];
-        if ((null == a && (a = r[e] = new Map()), 0 === a.size)) {
-            let t = (0, i.zS)();
-            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), a), !0);
+        let i = this.streams,
+            o = i[e];
+        if ((null == o && (o = i[e] = new Map()), 0 === o.size)) {
+            let t = (0, r.zS)();
+            t.setVideoOutputSink(e, this.handleImageData.bind(this, t.signalVideoOutputSinkReady.bind(t, e), o), !0);
         }
-        a.set(t, n);
+        o.set(t, n);
     }
     removeSink(e, t) {
         let n = this.streams,
-            r = n[e];
-        null != r && (r.delete(t), 0 === r.size && (delete n[e], (0, i.zS)().setVideoOutputSink(e)));
+            i = n[e];
+        null != i && (i.delete(t), 0 === i.size && (delete n[e], (0, r.zS)().setVideoOutputSink(e)));
     }
     handleImageData(e, t, n) {
         for (let e of t.values()) e(n);
         e();
     }
     constructor() {
-        r(this, 'streams', {});
+        i(this, 'streams', {});
     }
 }
-let s = new a();
+let a = new o();

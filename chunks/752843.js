@@ -1,41 +1,41 @@
-n.d(e, {
+t.d(r, {
     V: () => u,
     Z: () => d
 });
-var i = n(200651);
-n(192379);
-var s = n(628028),
-    t = n(220427),
-    r = n(777207),
-    a = n(692547),
-    o = n(330711),
-    c = n(296760);
-function d(l) {
-    let { type: e } = l;
-    return (0, i.jsx)(u, {
+var n = t(200651);
+t(192379);
+var l = t(628028),
+    s = t(220427),
+    o = t(777207),
+    a = t(692547),
+    i = t(330711),
+    c = t(408717);
+function d(e) {
+    let { type: r } = e;
+    return (0, n.jsx)(u, {
         icon:
-            'user' === e
-                ? (0, i.jsx)(t.t, {
+            'user' === r
+                ? (0, n.jsx)(s.t, {
                       size: 'xxs',
                       color: a.Z.colors.INTERACTIVE_NORMAL
                   })
-                : (0, i.jsx)(s.Q, {
+                : (0, n.jsx)(l.Q, {
                       size: 'xxs',
                       color: a.Z.colors.INTERACTIVE_NORMAL
                   }),
-        text: 'user' === e ? o.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : o.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
+        text: 'user' === r ? i.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : i.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION
     });
 }
-function u(l) {
-    let { icon: e, text: n } = l;
-    return (0, i.jsxs)('div', {
+function u(e) {
+    let { icon: r, text: t } = e;
+    return (0, n.jsxs)('div', {
         className: c.container,
         children: [
-            e,
-            (0, i.jsx)(r.x, {
+            r,
+            (0, n.jsx)(o.x, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
-                children: n
+                children: t
             })
         ]
     });

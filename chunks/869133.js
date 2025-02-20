@@ -1,20 +1,20 @@
-var i = n(257693),
-    r = n(957578).Buffer,
-    a = n(875115);
-function s(e) {
+var r = n(257693),
+    i = n(957578).Buffer,
+    o = n(875115);
+function a(e) {
     var t = e._cipher.encryptBlockRaw(e._prev);
-    return a(e._prev), t;
+    return o(e._prev), t;
 }
-var o = 16;
+var s = 16;
 t.encrypt = function (e, t) {
-    var n = Math.ceil(t.length / o),
-        a = e._cache.length;
-    e._cache = r.concat([e._cache, r.allocUnsafe(n * o)]);
+    var n = Math.ceil(t.length / s),
+        o = e._cache.length;
+    e._cache = i.concat([e._cache, i.allocUnsafe(n * s)]);
     for (var l = 0; l < n; l++) {
-        var u = s(e),
-            c = a + l * o;
-        e._cache.writeUInt32BE(u[0], c + 0), e._cache.writeUInt32BE(u[1], c + 4), e._cache.writeUInt32BE(u[2], c + 8), e._cache.writeUInt32BE(u[3], c + 12);
+        var c = a(e),
+            u = o + l * s;
+        e._cache.writeUInt32BE(c[0], u + 0), e._cache.writeUInt32BE(c[1], u + 4), e._cache.writeUInt32BE(c[2], u + 8), e._cache.writeUInt32BE(c[3], u + 12);
     }
     var d = e._cache.slice(0, t.length);
-    return (e._cache = e._cache.slice(t.length)), i(t, d);
+    return (e._cache = e._cache.slice(t.length)), r(t, d);
 };

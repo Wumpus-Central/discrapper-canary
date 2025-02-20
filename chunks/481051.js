@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
-    s = n(705321);
-function o(e) {
-    let { hasMentions: t, truncatedCount: n, className: l } = e;
-    return (0, i.jsx)(r.Text, {
-        className: a()(s.unreadCount, l, { [s.mention]: t }),
+var i = n(120356),
+    l = n.n(i),
+    o = n(481060),
+    a = n(234478);
+function s(e) {
+    let { hasMentions: t, truncatedCount: n, className: i } = e;
+    return (0, r.jsx)(o.Text, {
+        className: l()(a.unreadCount, i, { [a.mention]: t }),
         variant: 'text-xs/normal',
         children: n
     });

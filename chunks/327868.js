@@ -1,6 +1,6 @@
-var i = n(821819),
-    r = n(241777);
-e.exports = !i(function () {
+var r = n(821819),
+    i = n(241777);
+e.exports = !r(function () {
     var e = Error('a');
-    return !('stack' in e) || (Object.defineProperty(e, 'stack', r(1, 7)), 7 !== e.stack);
+    return !('stack' in e) || (Object.defineProperty(e, 'stack', i(1, 7)), 7 !== e.stack);
 });

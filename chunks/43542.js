@@ -1,58 +1,58 @@
 n.d(t, { Z: () => m });
-var a = n(200651);
+var r = n(200651);
 n(192379);
-var i = n(442837),
-    l = n(481060),
-    r = n(706454),
+var a = n(442837),
+    i = n(481060),
+    l = n(706454),
     s = n(709054),
     o = n(997431),
     c = n(388032),
-    d = n(552304);
+    u = n(62552);
 function m(e) {
     let { profile: t } = e,
-        n = (0, i.e7)([r.default], () => r.default.locale),
+        n = (0, a.e7)([l.default], () => l.default.locale),
         m = (0, o.M)(s.default.extractTimestamp(t.id), n);
-    return (0, a.jsxs)('div', {
-        className: d.header,
+    return (0, r.jsxs)('div', {
+        className: u.header,
         children: [
-            (0, a.jsx)(l.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/medium',
                 color: 'header-primary',
                 children: t.name
             }),
-            (0, a.jsxs)('div', {
-                className: d.members,
+            (0, r.jsxs)('div', {
+                className: u.members,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: d.memberCount,
+                    (0, r.jsxs)('div', {
+                        className: u.memberCount,
                         children: [
-                            (0, a.jsx)('div', { className: d.dot }),
-                            (0, a.jsx)(l.Text, {
+                            (0, r.jsx)('div', { className: u.dot }),
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                children: c.intl.format(c.t.zRl6XV, { count: t.memberCount })
+                                children: c.NW.format(c.t.zRl6XV, { count: t.memberCount })
                             })
                         ]
                     }),
-                    (0, a.jsxs)('div', {
-                        className: d.memberCount,
+                    (0, r.jsxs)('div', {
+                        className: u.memberCount,
                         children: [
-                            (0, a.jsx)('div', { className: d.dotOnline }),
-                            (0, a.jsx)(l.Text, {
+                            (0, r.jsx)('div', { className: u.dotOnline }),
+                            (0, r.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                children: c.intl.format(c.t['LC+S+v'], { membersOnline: t.onlineCount })
+                                children: c.NW.format(c.t['LC+S+v'], { membersOnline: t.onlineCount })
                             })
                         ]
                     })
                 ]
             }),
-            (0, a.jsx)('div', {
-                className: d.established,
-                children: (0, a.jsx)(l.Text, {
+            (0, r.jsx)('div', {
+                className: u.established,
+                children: (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: c.intl.format(c.t['zb2Q5+'], { createdAtDate: m })
+                    children: c.NW.format(c.t['zb2Q5+'], { createdAtDate: m })
                 })
             })
         ]

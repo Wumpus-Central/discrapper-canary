@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o });
-var i = n(217942);
-function r(e, t, n) {
+n.d(t, { Z: () => s });
+var r = n(217942);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,14 +13,14 @@ function r(e, t, n) {
         e
     );
 }
-let a = 500,
-    s = 150;
-class o {
+let o = 500,
+    a = 150;
+class s {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? s : a;
-        return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : i.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
+            t = this.value < this.animationDetails.lastValue ? a : o;
+        return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {
         (this.isReset = !1),
@@ -38,6 +38,6 @@ class o {
         this.animateTo(0), (this.isReset = !0);
     }
     constructor(e) {
-        r(this, 'value', void 0), r(this, 'animationDetails', void 0), r(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1);
+        i(this, 'value', void 0), i(this, 'animationDetails', void 0), i(this, 'isReset', void 0), (this.value = e), (this.animationDetails = null), (this.isReset = !1);
     }
 }

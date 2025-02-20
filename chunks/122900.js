@@ -1,22 +1,22 @@
-n.d(t, { Z: () => p });
-var i = n(192379),
-    r = n(723184),
-    a = n(820611),
-    s = n(176213),
-    o = n(877837),
+n.d(t, { Z: () => _ });
+var r = n(192379),
+    i = n(723184),
+    o = n(820611),
+    a = n(176213),
+    s = n(877837),
     l = n(830429),
-    u = (function () {
+    c = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function c(e, t) {
+function u(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function d(e, t) {
@@ -35,9 +35,9 @@ function f(e, t) {
     })),
         t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var _ = (function (e) {
+var p = (function (e) {
     function t(e) {
-        c(this, t);
+        u(this, t);
         var n = d(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return (
             (n.toggleViews = function () {
@@ -45,7 +45,7 @@ var _ = (function (e) {
             }),
             (n.handleChange = function (e, t) {
                 e.hex
-                    ? a.FX(e.hex) &&
+                    ? o.FX(e.hex) &&
                       n.props.onChange(
                           {
                               hex: e.hex,
@@ -82,8 +82,8 @@ var _ = (function (e) {
                           n.props.onChange(
                               {
                                   h: e.h || n.props.hsl.h,
-                                  s: Number((0, s.Z)(e.s) ? n.props.hsl.s : e.s),
-                                  l: Number((0, s.Z)(e.l) ? n.props.hsl.l : e.l),
+                                  s: Number((0, a.Z)(e.s) ? n.props.hsl.s : e.s),
+                                  l: Number((0, a.Z)(e.l) ? n.props.hsl.l : e.l),
                                   source: 'hsl'
                               },
                               t
@@ -101,14 +101,14 @@ var _ = (function (e) {
     }
     return (
         f(t, e),
-        u(
+        c(
             t,
             [
                 {
                     key: 'render',
                     value: function () {
                         var e = this,
-                            t = (0, r.default)(
+                            t = (0, i.default)(
                                 {
                                     default: {
                                         wrap: {
@@ -184,16 +184,16 @@ var _ = (function (e) {
                             n = void 0;
                         return (
                             'hex' === this.state.view
-                                ? (n = i.createElement(
+                                ? (n = r.createElement(
                                       'div',
                                       {
                                           style: t.fields,
                                           className: 'flexbox-fix'
                                       },
-                                      i.createElement(
+                                      r.createElement(
                                           'div',
                                           { style: t.field },
-                                          i.createElement(o.Vm, {
+                                          r.createElement(s.Vm, {
                                               style: {
                                                   input: t.input,
                                                   label: t.label
@@ -205,16 +205,16 @@ var _ = (function (e) {
                                       )
                                   ))
                                 : 'rgb' === this.state.view
-                                  ? (n = i.createElement(
+                                  ? (n = r.createElement(
                                         'div',
                                         {
                                             style: t.fields,
                                             className: 'flexbox-fix'
                                         },
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -224,10 +224,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -237,10 +237,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -250,10 +250,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.alpha },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -266,16 +266,16 @@ var _ = (function (e) {
                                         )
                                     ))
                                   : 'hsl' === this.state.view &&
-                                    (n = i.createElement(
+                                    (n = r.createElement(
                                         'div',
                                         {
                                             style: t.fields,
                                             className: 'flexbox-fix'
                                         },
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -285,10 +285,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -298,10 +298,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.field },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -311,10 +311,10 @@ var _ = (function (e) {
                                                 onChange: this.handleChange
                                             })
                                         ),
-                                        i.createElement(
+                                        r.createElement(
                                             'div',
                                             { style: t.alpha },
-                                            i.createElement(o.Vm, {
+                                            r.createElement(s.Vm, {
                                                 style: {
                                                     input: t.input,
                                                     label: t.label
@@ -326,17 +326,17 @@ var _ = (function (e) {
                                             })
                                         )
                                     )),
-                            i.createElement(
+                            r.createElement(
                                 'div',
                                 {
                                     style: t.wrap,
                                     className: 'flexbox-fix'
                                 },
                                 n,
-                                i.createElement(
+                                r.createElement(
                                     'div',
                                     { style: t.toggle },
-                                    i.createElement(
+                                    r.createElement(
                                         'div',
                                         {
                                             style: t.icon,
@@ -345,7 +345,7 @@ var _ = (function (e) {
                                                 return (e.icon = t);
                                             }
                                         },
-                                        i.createElement(l.default, {
+                                        r.createElement(l.default, {
                                             style: t.svg,
                                             onMouseOver: this.showHighlight,
                                             onMouseEnter: this.showHighlight,
@@ -369,6 +369,6 @@ var _ = (function (e) {
         ),
         t
     );
-})(i.Component);
-_.defaultProps = { view: 'hex' };
-let p = _;
+})(r.Component);
+p.defaultProps = { view: 'hex' };
+let _ = p;

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
-var i = n(816569),
-    r = 'object' == typeof exports && exports && !exports.nodeType && exports,
-    a = r && 'object' == typeof module && module && !module.nodeType && module,
-    s = a && a.exports === r && i.Z.process;
-let o = (function () {
+n.d(t, { Z: () => s });
+var r = n(816569),
+    i = 'object' == typeof exports && exports && !exports.nodeType && exports,
+    o = i && 'object' == typeof module && module && !module.nodeType && module,
+    a = o && o.exports === i && r.Z.process;
+let s = (function () {
     try {
-        var e = a && a.require && a.require('util').types;
+        var e = o && o.require && o.require('util').types;
         if (e) return e;
-        return s && s.binding && s.binding('util');
+        return a && a.binding && a.binding('util');
     } catch (e) {}
 })();

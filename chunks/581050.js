@@ -1,8 +1,8 @@
 n.d(t, {
-    X: () => l,
-    q: () => s
+    X: () => s,
+    q: () => a
 });
-var i,
-    r,
-    l = (((i = {}).OPEN = 'OPEN'), (i.REJECTED = 'REJECTED'), (i.APPROVED = 'APPROVED'), (i.ACTION_REQUIRED = 'ACTION_REQUIRED'), i),
-    s = (((r = {}).HOW_IT_WORKS = 'HOW_IT_WORKS'), (r.BENEFITS = 'BENEFITS'), (r.OTHER_CREATORS = 'OTHER_CREATORS'), r);
+var r,
+    i,
+    s = (((r = {}).OPEN = 'OPEN'), (r.REJECTED = 'REJECTED'), (r.APPROVED = 'APPROVED'), (r.ACTION_REQUIRED = 'ACTION_REQUIRED'), r),
+    a = (((i = {}).HOW_IT_WORKS = 'HOW_IT_WORKS'), (i.BENEFITS = 'BENEFITS'), (i.OTHER_CREATORS = 'OTHER_CREATORS'), i);

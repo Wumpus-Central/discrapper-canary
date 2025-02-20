@@ -1,4 +1,4 @@
-s.d(n, { default: () => m }), s(47120);
+s.d(n, { default: () => m }), s(47120), s(266796);
 var i = s(200651),
     t = s(192379),
     l = s(442837),
@@ -10,7 +10,7 @@ var i = s(200651),
     x = s(853856),
     u = s(117984),
     h = s(388032),
-    k = s(827860);
+    k = s(348080);
 function m(e) {
     let { channelId: n, onClose: s, transitionState: m, heading: p, formTitle: j, allowReset: f = !1 } = e,
         z = (0, c.Dt)(),
@@ -60,14 +60,14 @@ function m(e) {
                                       (0, u.UT)(n, null), s();
                                   },
                                   className: k.reset,
-                                  children: h.intl.string(h.t.aE02R0)
+                                  children: h.NW.string(h.t.aE02R0)
                               })
                             : null,
                         (0, i.jsx)(o.Text, {
                             className: k.description,
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: h.intl.string(h.t['2vyz+P'])
+                            children: h.NW.string(h.t['2vyz+P'])
                         })
                     ]
                 }),
@@ -81,7 +81,7 @@ function m(e) {
                             onClick: s,
                             look: o.zxk.Looks.LINK,
                             color: o.zxk.Colors.PRIMARY,
-                            children: h.intl.string(h.t['ETE/oK'])
+                            children: h.NW.string(h.t['ETE/oK'])
                         })
                     ]
                 })

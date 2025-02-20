@@ -5,9 +5,9 @@ n.d(t, {
     n(47120);
 var i,
     s = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
     a = n(879443),
     d = n.n(a),
     h = n(392711),
@@ -16,7 +16,7 @@ var i,
     p = n(600164),
     g = n(13140),
     m = n(388032),
-    b = n(509238);
+    b = n(810755);
 function x(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ let C = {
     DEFAULT: b.__invalid_default,
     RECORDING: b.recording
 };
-class _ extends l.PureComponent {
+class _ extends r.PureComponent {
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -51,9 +51,9 @@ class _ extends l.PureComponent {
     render() {
         let e;
         let { mode: t, value: n, disabled: i } = this.props,
-            l = (0, g.BB)(n, !0);
-        e = 'RECORDING' === t ? m.intl.string(m.t.bmOri4) : 0 === n.length ? m.intl.string(m.t.co3wt7) : m.intl.string(m.t.idFMvL);
-        let r = 'DEFAULT' === t && n.length > 0;
+            r = (0, g.BB)(n, !0);
+        e = 'RECORDING' === t ? m.NW.string(m.t.bmOri4) : 0 === n.length ? m.NW.string(m.t.co3wt7) : m.NW.string(m.t.idFMvL);
+        let l = 'DEFAULT' === t && n.length > 0;
         return (0, s.jsx)(c.tEY, {
             focusTarget: this._inputRef,
             ringTarget: this._containerRef,
@@ -62,7 +62,7 @@ class _ extends l.PureComponent {
                 onMouseDown: this.handleMouseDown,
                 ref: this._containerRef,
                 className: o()(b.recorderContainer, C[t], {
-                    [b.hasValue]: r,
+                    [b.hasValue]: l,
                     [b.containerDisabled]: i
                 }),
                 children: (0, s.jsxs)(p.Z, {
@@ -72,11 +72,11 @@ class _ extends l.PureComponent {
                             className: b.keybindInput,
                             children: (0, s.jsx)('input', {
                                 id: this._inputId,
-                                placeholder: m.intl.string(m.t.nWRdnp),
+                                placeholder: m.NW.string(m.t.nWRdnp),
                                 type: 'text',
                                 ref: this.setInputRef,
                                 readOnly: !0,
-                                value: l,
+                                value: r,
                                 disabled: 'RECORDING' !== this.props.mode || i
                             })
                         }),
@@ -111,8 +111,8 @@ class _ extends l.PureComponent {
             x(this, '_inputId', u().uniqueId('key-recorder-')),
             x(this, '_unregisterNativeRecorder', null),
             x(this, '_mousedownMode', null),
-            x(this, '_inputRef', l.createRef()),
-            x(this, '_containerRef', l.createRef()),
+            x(this, '_inputRef', r.createRef()),
+            x(this, '_containerRef', r.createRef()),
             x(this, 'setInputRef', (e) => {
                 var t;
                 let { registerNativeRecorder: n, onChange: i } = this.props;

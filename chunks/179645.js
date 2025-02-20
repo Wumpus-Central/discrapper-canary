@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,29 +15,29 @@ function s(e, t, n) {
         e
     );
 }
-let o = null;
+let s = null;
 function l() {
-    (o = null), d.persist();
+    (s = null), d.persist();
 }
-function u(e) {
+function c(e) {
     let { newUserType: t } = e;
-    (o = t), d.persist();
+    (s = t), d.persist();
 }
-class c extends (i = r.ZP.PersistedStore) {
+class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        o = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null;
+        s = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null;
     }
     getType() {
-        return o;
+        return s;
     }
     getState() {
-        return { type: o };
+        return { type: s };
     }
 }
-s(c, 'displayName', 'NewUserStore'), s(c, 'persistKey', 'nuf');
-let d = new c(a.Z, {
-        NUF_NEW_USER: u,
+a(u, 'displayName', 'NewUserStore'), a(u, 'persistKey', 'nuf');
+let d = new u(o.Z, {
+        NUF_NEW_USER: c,
         NUF_COMPLETE: l
     }),
     f = d;

@@ -40,9 +40,9 @@
             sameElse: 'L'
         },
         calendar: function (e, n) {
-            var i = this._calendarEl[e],
-                r = n && n.hours();
-            return t(i) && (i = i.apply(n)), i.replace('{}', r % 12 == 1 ? 'στη' : 'στις');
+            var r = this._calendarEl[e],
+                i = n && n.hours();
+            return t(r) && (r = r.apply(n)), r.replace('{}', i % 12 == 1 ? 'στη' : 'στις');
         },
         relativeTime: {
             future: 'σε %s',

@@ -1,5 +1,5 @@
-var i = n(132454);
-let r = {
+var r = n(132454);
+let i = {
     AppAnalyticsManager: {
         inlineRequire: () => n(98302).Z,
         hasStoreChangeListeners: !0
@@ -408,4 +408,4 @@ let r = {
         neverLoadBeforeConnectionOpen: !0
     }
 };
-(0, i.j)(r);
+(0, r.j)(i);

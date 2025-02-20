@@ -1,19 +1,19 @@
-n.d(t, { Z: () => r });
-var a = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var i = n(481060),
-    s = n(763283);
-function r(e) {
+var a = n(481060),
+    i = n(862969);
+function s(e) {
     let { children: t, label: n } = e;
-    return (0, a.jsxs)('li', {
+    return (0, r.jsxs)('li', {
         children: [
-            (0, a.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                className: s.benefitLabel,
+                className: i.benefitLabel,
                 children: n
             }),
-            (0, a.jsx)(i.LZC, { size: 12 }),
+            (0, r.jsx)(a.LZC, { size: 12 }),
             t
         ]
     });

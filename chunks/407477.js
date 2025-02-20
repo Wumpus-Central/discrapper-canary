@@ -1,11 +1,11 @@
 n.d(t, {
     E2: () => l,
-    Xb: () => s,
-    ZP: () => a,
-    p3: () => o
+    Xb: () => a,
+    ZP: () => o,
+    p3: () => s
 });
-var i = n(818083);
-let r = (0, i.B)({
+var r = n(818083);
+let i = (0, r.B)({
         kind: 'user',
         id: '2024-08_reaction_frecency_algorithms',
         label: 'Reaction Frecency Algorithms',
@@ -48,21 +48,21 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = r,
-    s = (0, i.B)({
+    o = i,
+    a = (0, r.B)({
         kind: 'user',
         id: '2024-10_retrigger_reaction_frecency_algorithms',
         label: '(Retrigger) Reaction Frecency Algorithms',
         defaultConfig: null,
         treatments: []
     });
-function o(e) {
+function s(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { frecencyAlgorithm: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return 'original' !== i;
+        { frecencyAlgorithm: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return 'original' !== r;
 }
 function l(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { frecencyAlgorithm: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return 'original' !== i;
+        { frecencyAlgorithm: r } = i.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return 'original' !== r;
 }

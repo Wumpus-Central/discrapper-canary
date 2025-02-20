@@ -7,7 +7,7 @@ function t(e) {
             className: 'title',
             begin: /[a-zA-Z][a-zA-Z_0-9]*_fnc_[a-zA-Z_0-9]+/
         },
-        i = {
+        r = {
             className: 'string',
             variants: [
                 {
@@ -32,9 +32,9 @@ function t(e) {
                 }
             ]
         },
-        r = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
-        a = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
-        s = [
+        i = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
+        o = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
+        a = [
             'abs',
             'accTime',
             'acos',
@@ -2493,7 +2493,7 @@ function t(e) {
             'worldToModelVisual',
             'worldToScreen'
         ],
-        o = {
+        s = {
             className: 'meta',
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -2503,7 +2503,7 @@ function t(e) {
                     begin: /\\\n/,
                     relevance: 0
                 },
-                e.inherit(i, { className: 'string' }),
+                e.inherit(r, { className: 'string' }),
                 {
                     begin: /<[^\n>]*>/,
                     end: /$/,
@@ -2517,11 +2517,11 @@ function t(e) {
         name: 'SQF',
         case_insensitive: !0,
         keywords: {
-            keyword: r,
-            built_in: s,
-            literal: a
+            keyword: i,
+            built_in: a,
+            literal: o
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, i, o],
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, t, n, r, s],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/]
     };
 }

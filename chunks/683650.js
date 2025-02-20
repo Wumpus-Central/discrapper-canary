@@ -1,60 +1,60 @@
-n.d(t, { o: () => h });
-var s = n(200651);
+n.d(t, { o: () => x });
+var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
-    r = n(497505),
-    o = n(266843),
-    d = n(341907),
+var s = n(120356),
+    i = n.n(s),
+    o = n(481060),
+    l = n(497505),
+    a = n(266843),
+    c = n(341907),
     u = n(388032),
-    c = n(172576),
+    d = n(74662),
     m = n(87181);
-function x() {
-    return (0, s.jsx)('div', {
-        className: c.buttonContainer,
-        children: (0, s.jsx)(a.zxk, {
-            className: c.button,
-            color: a.Ttl.BRAND,
+function p() {
+    return (0, r.jsx)('div', {
+        className: d.buttonContainer,
+        children: (0, r.jsx)(o.zxk, {
+            className: d.button,
+            color: o.Ttl.BRAND,
             onClick: () => {
-                (0, d.navigateToQuestHome)({ fromContent: r.jn.QUESTS_EMBED });
+                (0, c.navigateToQuestHome)({ fromContent: l.jn.QUESTS_EMBED });
             },
-            children: u.intl.string(u.t.GURBQk)
+            children: u.NW.string(u.t.GURBQk)
         })
     });
 }
-function h() {
-    let { containerRef: e, size: t } = (0, o.h)();
-    return (0, s.jsxs)('div', {
+function x() {
+    let { containerRef: e, size: t } = (0, a.h)();
+    return (0, r.jsxs)('div', {
         ref: (t) => (e.current = t),
-        className: l()(c.container, {
-            [c.wide]: 'lg' === t,
-            [c.tall]: 'lg' !== t
+        className: i()(d.container, {
+            [d.wide]: 'lg' === t,
+            [d.tall]: 'lg' !== t
         }),
         children: [
-            (0, s.jsxs)('div', {
-                className: c.contentContainer,
+            (0, r.jsxs)('div', {
+                className: d.contentContainer,
                 children: [
-                    (0, s.jsx)(a.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
                         color: 'header-primary',
-                        children: u.intl.string(u.t.vnP31d)
+                        children: u.NW.string(u.t.vnP31d)
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
                         color: 'text-normal',
-                        className: c.__invalid_mobileWebCopy,
-                        children: u.intl.string(u.t.CTn0yc)
+                        className: d.__invalid_mobileWebCopy,
+                        children: u.NW.string(u.t.CTn0yc)
                     }),
-                    (0, s.jsx)(x, {})
+                    (0, r.jsx)(p, {})
                 ]
             }),
-            (0, s.jsx)('div', {
-                className: c.imgContainer,
-                children: (0, s.jsx)('img', {
+            (0, r.jsx)('div', {
+                className: d.imgContainer,
+                children: (0, r.jsx)('img', {
                     src: m,
                     alt: '',
-                    className: c.missingQuestImage
+                    className: d.missingQuestImage
                 })
             })
         ]

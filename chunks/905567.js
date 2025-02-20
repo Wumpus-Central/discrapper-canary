@@ -1,5 +1,5 @@
-n.d(t, { C: () => i });
-let i = (0, n(818083).B)({
+n.d(t, { C: () => r });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-05_safety_user_sentiment',
     label: 'Safety User Sentiment Feedback Eligible',

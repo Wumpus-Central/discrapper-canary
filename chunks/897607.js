@@ -1,46 +1,46 @@
-n.d(t, { Z: () => p }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => g }), n(47120);
+var r = n(200651);
 n(192379);
-var l = n(392711),
-    r = n.n(l),
-    a = n(481060),
-    s = n(463395),
-    o = n(820486),
-    d = n(131951),
-    c = n(65154);
-let u = new Set(['DisplayPort']),
-    h = !1;
-function m() {
+var i = n(392711),
+    l = n.n(i),
+    o = n(481060),
+    a = n(463395),
+    s = n(820486),
+    c = n(131951),
+    u = n(65154);
+let d = new Set(['DisplayPort']),
+    p = !1;
+function h() {
     let e;
-    if (h) return;
-    let t = d.Z.getInputDeviceId(),
-        l = d.Z.getOutputDeviceId();
-    if (o.Z.getState().neverShowModal || r().isEmpty(o.Z.lastDeviceConnected)) return;
-    let m = (0, o.X)(d.Z.getInputDevices()[t]),
-        p = (0, o.X)(d.Z.getOutputDevices()[l]);
-    if (r().some(o.Z.lastDeviceConnected, (e) => u.has(e.displayName) || e.displayName === m || e.displayName === p)) return;
-    let g = r().some(o.Z.lastDeviceConnected, (e) => s.Z.isCertified(o.Z.inputDevices[e.displayName]) || s.Z.isCertified(o.Z.outputDevices[e.displayName]));
-    if (((t === c.w5 && o.Z.lastInputSystemDevice.justChanged) || (l === c.w5 && o.Z.lastOutputSystemDevice.justChanged)) && !g) return;
-    let _ = r().first(Object.keys(o.Z.lastDeviceConnected)),
-        f = null != _ && '' !== _ ? o.Z.lastDeviceConnected[_] : null;
-    null != f &&
-        (o.Z.initialized && null != _ && (s.Z.isCertified(o.Z.inputDevices[_]) ? (e = s.Z.getCertifiedDevice(o.Z.inputDevices[_])) : s.Z.isCertified(o.Z.outputDevices[_]) && (e = s.Z.getCertifiedDevice(o.Z.outputDevices[_]))),
-        (h = !0),
-        (0, a.ZDy)(async () => {
+    if (p) return;
+    let t = c.Z.getInputDeviceId(),
+        i = c.Z.getOutputDeviceId();
+    if (s.Z.getState().neverShowModal || l().isEmpty(s.Z.lastDeviceConnected)) return;
+    let h = (0, s.X)(c.Z.getInputDevices()[t]),
+        g = (0, s.X)(c.Z.getOutputDevices()[i]);
+    if (l().some(s.Z.lastDeviceConnected, (e) => d.has(e.displayName) || e.displayName === h || e.displayName === g)) return;
+    let f = l().some(s.Z.lastDeviceConnected, (e) => a.Z.isCertified(s.Z.inputDevices[e.displayName]) || a.Z.isCertified(s.Z.outputDevices[e.displayName]));
+    if (((t === u.w5 && s.Z.lastInputSystemDevice.justChanged) || (i === u.w5 && s.Z.lastOutputSystemDevice.justChanged)) && !f) return;
+    let m = l().first(Object.keys(s.Z.lastDeviceConnected)),
+        b = null != m && '' !== m ? s.Z.lastDeviceConnected[m] : null;
+    null != b &&
+        (s.Z.initialized && null != m && (a.Z.isCertified(s.Z.inputDevices[m]) ? (e = a.Z.getCertifiedDevice(s.Z.inputDevices[m])) : a.Z.isCertified(s.Z.outputDevices[m]) && (e = a.Z.getCertifiedDevice(s.Z.outputDevices[m]))),
+        (p = !0),
+        (0, o.ZDy)(async () => {
             let { default: t } = await n.e('83536').then(n.bind(n, 43991));
             return (n) => {
-                let { transitionState: l, onClose: r } = n;
-                return (0, i.jsx)(t, {
-                    device: f,
+                let { transitionState: i, onClose: l } = n;
+                return (0, r.jsx)(t, {
+                    device: b,
                     certifiedDeviceMetadata: e,
-                    transitionState: l,
-                    onClose: () => ((h = !1), r())
+                    transitionState: i,
+                    onClose: () => ((p = !1), l())
                 });
             };
         }));
 }
-let p = {
+let g = {
     init() {
-        o.Z.addChangeListener(m);
+        s.Z.addChangeListener(h);
     }
 };

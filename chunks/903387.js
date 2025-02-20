@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var i = n(58406);
-class r extends i.g {
+n.d(t, { Z: () => o });
+var r = n(58406);
+class i extends r.g {
     requestPermissionCore(e, t) {
         return Promise.resolve(!0);
     }
@@ -13,4 +13,4 @@ class r extends i.g {
     }
     openAlertModal(e) {}
 }
-let a = new r();
+let o = new i();

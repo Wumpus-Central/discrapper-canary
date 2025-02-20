@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(317257),
     h = n(120786),
     f = n(775451),
-    N = n(970815),
-    x = n(720463),
-    b = n(536703),
+    b = n(970815),
+    N = n(720463),
+    x = n(536703),
     _ = n(450272),
     E = n(981631),
     j = n(388032),
@@ -29,8 +29,8 @@ function v() {
 function S() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = i.useState(150),
-        [g, x] = i.useState(150),
-        [b, O] = i.useState(500),
+        [g, N] = i.useState(150),
+        [x, O] = i.useState(500),
         [v, S] = i.useState(p.b.DEFAULT),
         T = () => {
             switch (v) {
@@ -96,24 +96,24 @@ function S() {
             (0, r.jsxs)(_.E_, {
                 label: 'Balance Widget Pill',
                 children: [
-                    (0, r.jsx)(N.A4, {
+                    (0, r.jsx)(b.A4, {
                         balance: 150,
                         balanceWidgetMode: p.b.DEFAULT
                     }),
-                    (0, r.jsx)(N.A4, {
+                    (0, r.jsx)(b.A4, {
                         balance: 150,
                         balanceWidgetMode: p.b.HIGHLIGHTED
                     }),
-                    (0, r.jsx)(N.A4, {
+                    (0, r.jsx)(b.A4, {
                         balance: 150,
                         balanceWidgetMode: p.b.SELECTED
                     }),
-                    (0, r.jsx)(N.A4, {
+                    (0, r.jsx)(b.A4, {
                         balance: 0,
                         balanceWidgetMode: p.b.DEFAULT,
                         showNotificationBadge: !0
                     }),
-                    (0, r.jsx)(N.A4, {
+                    (0, r.jsx)(b.A4, {
                         balance: null,
                         balanceWidgetMode: p.b.DEFAULT
                     })
@@ -134,7 +134,7 @@ function S() {
                         onChange: (e) => n(e)
                     }),
                     (0, r.jsx)(s.zx, {
-                        onClick: () => x(t),
+                        onClick: () => N(t),
                         children: 'Set Balance'
                     }),
                     (0, r.jsx)(a.Text, {
@@ -144,21 +144,21 @@ function S() {
                     }),
                     (0, r.jsx)(a.FiK, {
                         className: C.numberInput,
-                        value: b,
+                        value: x,
                         onChange: (e) => O(e)
                     }),
                     (0, r.jsx)(s.zx, {
                         onClick: () => {
-                            x(null),
+                            N(null),
                                 setTimeout(() => {
-                                    x(t);
-                                }, b);
+                                    N(t);
+                                }, x);
                         },
                         children: 'Simulate Loading State'
                     }),
                     (0, r.jsx)('div', {
                         className: C.interactivePillContainer,
-                        children: (0, r.jsx)(N.A4, {
+                        children: (0, r.jsx)(b.A4, {
                             balance: g,
                             balanceWidgetMode: v,
                             onClick: () => T()
@@ -286,18 +286,18 @@ function T() {
                 label: 'Onboarding Coachmark',
                 direction: 'vertical',
                 children: [
-                    (0, r.jsx)(b.mG, {
+                    (0, r.jsx)(x.mG, {
                         onClose: E.dG4,
                         renderTail: !1
                     }),
                     (0, r.jsxs)('div', {
                         className: O.horizontalContainer,
                         children: [
-                            (0, r.jsx)(b.mG, {
+                            (0, r.jsx)(x.mG, {
                                 onClose: E.dG4,
                                 renderTail: !0
                             }),
-                            (0, r.jsx)(b.mG, {
+                            (0, r.jsx)(x.mG, {
                                 onClose: E.dG4,
                                 renderTail: !0,
                                 invertTail: !0
@@ -308,7 +308,7 @@ function T() {
             }),
             (0, r.jsx)(_.E_, {
                 label: 'Balance Widget Coachmark',
-                children: (0, r.jsx)(x.E, {
+                children: (0, r.jsx)(N.E, {
                     earnedOrbsQuantity: 200,
                     ctaOnClick: E.dG4,
                     linkOnClick: E.dG4

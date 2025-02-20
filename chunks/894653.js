@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
-var i,
-    r = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+var r,
+    i = n(442837),
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,22 +15,22 @@ function s(e, t, n) {
         e
     );
 }
-let o = [],
+let s = [],
     l = null;
-function u(e) {
+function c(e) {
     let { categories: t } = e;
-    (o = t), (l = Date.now());
+    (s = t), (l = Date.now());
 }
-class c extends (i = r.ZP.Store) {
+class u extends (r = i.ZP.Store) {
     getLastFetchTimeMs() {
         return l;
     }
     getCategories() {
-        return o;
+        return s;
     }
     getCategory(e) {
-        return o.find((t) => t.id === e);
+        return s.find((t) => t.id === e);
     }
 }
-s(c, 'displayName', 'ApplicationDirectoryCategoriesStore');
-let d = new c(a.Z, { APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: u });
+a(u, 'displayName', 'ApplicationDirectoryCategoriesStore');
+let d = new u(o.Z, { APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: c });

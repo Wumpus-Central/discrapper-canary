@@ -5,7 +5,7 @@
         return (
             e +
             ' ' +
-            r(
+            i(
                 {
                     mm: 'munutenn',
                     MM: 'miz',
@@ -16,7 +16,7 @@
         );
     }
     function n(e) {
-        switch (i(e)) {
+        switch (r(e)) {
             case 1:
             case 3:
             case 4:
@@ -27,13 +27,13 @@
                 return e + ' vloaz';
         }
     }
-    function i(e) {
-        return e > 9 ? i(e % 10) : e;
+    function r(e) {
+        return e > 9 ? r(e % 10) : e;
     }
-    function r(e, t) {
-        return 2 === t ? a(e) : e;
+    function i(e, t) {
+        return 2 === t ? o(e) : e;
     }
-    function a(e) {
+    function o(e) {
         var t = {
             m: 'v',
             b: 'v',

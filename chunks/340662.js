@@ -1,13 +1,13 @@
-var i = n(67867),
-    r = n(653457);
-i(
+var r = n(67867),
+    i = n(653457);
+r(
     {
         target: 'Promise',
         stat: !0
     },
     {
         withResolvers: function () {
-            var e = r.f(this);
+            var e = i.f(this);
             return {
                 promise: e.promise,
                 resolve: e.resolve,

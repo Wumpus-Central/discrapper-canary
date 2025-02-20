@@ -18,7 +18,7 @@ function o(e) {
         children: (0, i.jsxs)(s.v2r, {
             navId: 'user-context',
             onClose: d.Zy,
-            'aria-label': l.intl.string(l.t.liqwPD),
+            'aria-label': l.NW.string(l.t.liqwPD),
             onSelect: o,
             children: [(0, i.jsx)(s.kSQ, { children: v }), (0, i.jsx)(s.kSQ, { children: h })]
         })

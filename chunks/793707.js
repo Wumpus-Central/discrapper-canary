@@ -1,19 +1,19 @@
-let i = n(40231),
-    r = n(889658),
-    a = (e, t, n) => {
-        let a = null,
-            s = null,
-            o = null;
+let r = n(40231),
+    i = n(889658),
+    o = (e, t, n) => {
+        let o = null,
+            a = null,
+            s = null;
         try {
-            o = new r(t, n);
+            s = new i(t, n);
         } catch (e) {
             return null;
         }
         return (
             e.forEach((e) => {
-                o.test(e) && (!a || 1 === s.compare(e)) && (s = new i((a = e), n));
+                s.test(e) && (!o || 1 === a.compare(e)) && (a = new r((o = e), n));
             }),
-            a
+            o
         );
     };
-e.exports = a;
+e.exports = o;

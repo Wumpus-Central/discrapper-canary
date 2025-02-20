@@ -1,8 +1,8 @@
-var i = n(657398),
-    r = n(402428),
-    a = n(389109),
-    s = '[object String]';
-function o(e) {
-    return 'string' == typeof e || (!r(e) && a(e) && i(e) == s);
+var r = n(657398),
+    i = n(402428),
+    o = n(389109),
+    a = '[object String]';
+function s(e) {
+    return 'string' == typeof e || (!i(e) && o(e) && r(e) == a);
 }
-e.exports = o;
+e.exports = s;

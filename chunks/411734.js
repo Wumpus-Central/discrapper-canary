@@ -1,18 +1,18 @@
-n.d(t, { R: () => c }), n(47120);
-var i = n(200651),
-    r = n(192379);
-let a = 'data-focus-blocked',
-    s = 0;
-function o() {
-    return s++;
+n.d(t, { R: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379);
+let o = 'data-focus-blocked',
+    a = 0;
+function s() {
+    return a++;
 }
 function l(e) {
     return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
 }
-function u(e, t) {
-    let [n] = r.useState(() => o()),
-        i = ''.concat(a, '-').concat(n);
-    r.useLayoutEffect(() => {
+function c(e, t) {
+    let [n] = i.useState(() => s()),
+        r = ''.concat(o, '-').concat(n);
+    i.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
             if (null != t) {
@@ -20,12 +20,12 @@ function u(e, t) {
                     n = e.currentNode;
                 for (; null !== n; ) {
                     let t = n,
-                        r = t.tabIndex;
-                    (t.tabIndex = -1), t.setAttribute(i, String(r)), (n = e.nextNode());
+                        i = t.tabIndex;
+                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
                 }
                 return () => {
-                    t.querySelectorAll('['.concat(i, ']')).forEach((e) => {
-                        let t = e.getAttribute(i);
+                    t.querySelectorAll('['.concat(r, ']')).forEach((e) => {
+                        let t = e.getAttribute(r);
                         if (null != t) {
                             let n = parseInt(t, 10);
                             e.tabIndex = n;
@@ -34,15 +34,15 @@ function u(e, t) {
                 };
             }
         }
-    }, [t, e, i]);
+    }, [t, e, r]);
 }
-function c(e) {
-    let { children: t, className: n, enabled: a = !0 } = e,
-        s = r.useRef(null);
+function u(e) {
+    let { children: t, className: n, enabled: o = !0 } = e,
+        a = i.useRef(null);
     return (
-        u(s, a),
-        (0, i.jsx)('div', {
-            ref: s,
+        c(a, o),
+        (0, r.jsx)('div', {
+            ref: a,
             className: n,
             children: t
         })

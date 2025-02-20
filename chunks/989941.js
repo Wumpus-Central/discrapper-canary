@@ -1,7 +1,7 @@
 let o;
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => c });
 var r = n(145597);
-function i(e, t) {
+function c(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
             n = (0, r.QF)();

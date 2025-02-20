@@ -1,41 +1,41 @@
 l.d(t, { Z: () => u });
-var i = l(200651);
+var s = l(200651);
 l(192379);
-var s = l(442837),
-    r = l(780384),
+var r = l(442837),
+    i = l(780384),
     n = l(481060),
     a = l(210887),
     c = l(475595),
     o = l(231338),
     d = l(388032),
-    f = l(838521);
+    f = l(490298);
 let u = function (e) {
     let { quest: t } = e,
-        l = (0, s.e7)([a.Z], () => a.Z.getState().theme),
-        u = (0, r.wj)(l) ? o.BR.DARK : o.BR.LIGHT;
-    return (0, i.jsx)('div', {
+        l = (0, r.e7)([a.Z], () => a.Z.getState().theme),
+        u = (0, i.wj)(l) ? o.BR.DARK : o.BR.LIGHT;
+    return (0, s.jsx)('div', {
         className: f.wrapper,
-        children: (0, i.jsxs)('div', {
+        children: (0, s.jsxs)('div', {
             className: f.content,
             children: [
-                (0, i.jsx)('img', {
+                (0, s.jsx)('img', {
                     src: (0, c.fh)(t, c.eC.GAME_TILE, u).url,
                     alt: '',
                     className: f.gameTile
                 }),
-                (0, i.jsxs)('div', {
+                (0, s.jsxs)('div', {
                     className: f.copy,
                     children: [
-                        (0, i.jsx)(n.X6q, {
+                        (0, s.jsx)(n.X6q, {
                             color: 'always-white',
                             variant: 'text-sm/medium',
-                            children: d.intl.format(d.t['5nMfBQ'], { gameTitle: t.config.messages.gameTitle })
+                            children: d.NW.format(d.t['5nMfBQ'], { gameTitle: t.config.messages.gameTitle })
                         }),
-                        (0, i.jsx)(n.Text, {
+                        (0, s.jsx)(n.Text, {
                             className: f.subheading,
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: d.intl.string(d.t.mjbPtb)
+                            children: d.NW.string(d.t.mjbPtb)
                         })
                     ]
                 })

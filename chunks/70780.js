@@ -1,18 +1,18 @@
 n.d(t, {
-    J: () => a,
-    o: () => s
+    J: () => o,
+    o: () => a
 });
-var i = n(544891),
-    r = n(570140);
-function a() {
+var r = n(544891),
+    i = n(570140);
+function o() {
     var e;
-    return i.tn.get({
+    return r.tn.get({
         url: ''.concat(((e = 'https:'), 'https:')).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT),
         rejectWithError: !1
     });
 }
-function s(e, t) {
-    r.Z.dispatch({
+function a(e, t) {
+    i.Z.dispatch({
         type: 'RTC_LATENCY_TEST_COMPLETE',
         latencyRankedRegions: e,
         geoRankedRegions: t

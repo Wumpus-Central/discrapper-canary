@@ -1,37 +1,37 @@
-n.d(t, { Z: () => p });
-var i,
+n.d(t, { Z: () => g });
+var r,
+    i,
     l,
-    r,
-    a = n(442837),
-    s = n(570140),
-    o = n(984933),
-    d = n(594174),
-    c = n(981631);
-let u = null;
-function h() {
-    let e = d.default.getCurrentUser();
-    if (null == e || e.mfaEnabled === u) return !1;
-    u = e.mfaEnabled;
+    o = n(442837),
+    a = n(570140),
+    s = n(984933),
+    c = n(594174),
+    u = n(981631);
+let d = null;
+function p() {
+    let e = c.default.getCurrentUser();
+    if (null == e || e.mfaEnabled === d) return !1;
+    d = e.mfaEnabled;
 }
-class m extends (r = a.ZP.Store) {
+class h extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(d.default, o.ZP), this.syncWith([d.default, o.ZP], h);
+        this.waitFor(c.default, s.ZP), this.syncWith([c.default, s.ZP], p);
     }
     isVisible(e) {
-        return null != e && e.mfaLevel === c.BpS.ELEVATED && !1 === u && o.ZP.hasElevatedPermissions(e.id);
+        return null != e && e.mfaLevel === u.BpS.ELEVATED && !1 === d && s.ZP.hasElevatedPermissions(e.id);
     }
 }
-(l = 'GuildMFAWarningStore'),
-    (i = 'displayName') in m
-        ? Object.defineProperty(m, i, {
-              value: l,
+(i = 'GuildMFAWarningStore'),
+    (r = 'displayName') in h
+        ? Object.defineProperty(h, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[i] = l);
-let p = new m(s.Z, {
-    CONNECTION_OPEN: h,
+        : (h[r] = i);
+let g = new h(a.Z, {
+    CONNECTION_OPEN: p,
     GUILD_UPDATE: function () {
         return !0;
     }

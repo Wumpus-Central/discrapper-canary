@@ -1,52 +1,52 @@
-n.d(t, { Z: () => h });
-var i = n(200651);
-n(192379);
-var s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    r = n(481060),
-    o = n(230711),
-    u = n(706454),
-    d = n(346585),
-    c = n(347649),
-    m = n(981631),
-    g = n(388032),
-    E = n(983928);
-function h(e) {
-    let { onClose: t, handleStartFlow: n } = e,
-        s = (0, c.CC)(),
-        h = (0, l.e7)([u.default], () => u.default.locale);
-    return (0, i.jsxs)('div', {
-        className: E.infoContainer,
+r.d(t, { Z: () => E });
+var n = r(200651);
+r(192379);
+var i = r(120356),
+    o = r.n(i),
+    s = r(442837),
+    a = r(481060),
+    l = r(230711),
+    c = r(706454),
+    u = r(346585),
+    d = r(347649),
+    g = r(981631),
+    m = r(388032),
+    f = r(898215);
+function E(e) {
+    let { onClose: t, handleStartFlow: r } = e,
+        i = (0, d.CC)(),
+        E = (0, s.e7)([c.default], () => c.default.locale);
+    return (0, n.jsxs)('div', {
+        className: f.infoContainer,
         children: [
-            (0, i.jsx)(r.X6q, {
-                className: a()(E.finishTitle, { [E.finishTitlePadding]: s }),
+            (0, n.jsx)(a.X6q, {
+                className: o()(f.finishTitle, { [f.finishTitlePadding]: i }),
                 color: 'header-primary',
                 variant: 'heading-xl/bold',
-                children: s ? g.intl.formatToPlainString(g.t.XOWfNj, { date: (0, d.IE)(h) }) : g.intl.string(g.t['3C+rbG'])
+                children: i ? m.NW.formatToPlainString(m.t.XOWfNj, { date: (0, u.IE)(E) }) : m.NW.string(m.t['3C+rbG'])
             }),
-            (0, i.jsx)(r.Text, {
-                className: E.subtitleFinish,
+            (0, n.jsx)(a.Text, {
+                className: f.subtitleFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: s ? g.intl.formatToPlainString(g.t['g/gkAw'], { date: (0, d.IE)(h) }) : g.intl.string(g.t.TS1L09)
+                children: i ? m.NW.formatToPlainString(m.t['g/gkAw'], { date: (0, u.IE)(E) }) : m.NW.string(m.t.TS1L09)
             }),
-            (0, i.jsx)(r.Text, {
-                className: E.promptFinish,
+            (0, n.jsx)(a.Text, {
+                className: f.promptFinish,
                 color: 'header-secondary',
                 variant: 'text-md/medium',
-                children: g.intl.format(g.t.bWE0ZG, {
+                children: m.NW.format(m.t.bWE0ZG, {
                     onClick: () => {
-                        t(), o.Z.open(m.oAB.ACCOUNT);
+                        t(), l.Z.open(g.oAB.ACCOUNT);
                     }
                 })
             }),
-            (0, i.jsx)(r.zxk, {
-                className: E.button,
+            (0, n.jsx)(a.zxk, {
+                className: f.button,
                 type: 'button',
-                size: r.zxk.Sizes.SMALL,
-                onClick: s ? n : t,
-                children: s ? g.intl.string(g.t['Zpd+Ym']) : g.intl.string(g.t['yD/zkp'])
+                size: a.zxk.Sizes.SMALL,
+                onClick: i ? r : t,
+                children: i ? m.NW.string(m.t['Zpd+Ym']) : m.NW.string(m.t['yD/zkp'])
             })
         ]
     });

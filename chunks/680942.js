@@ -80,8 +80,8 @@ let b = {
             { analyticsLocations: y } = (0, o.ZP)(),
             O = l.useRef(null),
             k = (0, a.Z)(O),
-            S = j ? h.BR.DARK : h.BR.LIGHT,
-            P = (0, u.hv)('CollectiblesShopGiftButton');
+            P = j ? h.BR.DARK : h.BR.LIGHT,
+            S = (0, u.hv)('CollectiblesShopGiftButton');
         return (0, d.x6)(t)
             ? null
             : (0, n.jsx)(i.ua7, {
@@ -136,7 +136,7 @@ let b = {
                                               giftingOrigin: f.Wt.SHOP_PAGE,
                                               analyticsLocations: y,
                                               returnRef: g,
-                                              variantsReturnStyle: P,
+                                              variantsReturnStyle: S,
                                               onClose:
                                                   null != v
                                                       ? (e) => {
@@ -149,7 +149,7 @@ let b = {
                                       ? (0, n.jsx)(c.Z, {
                                             hovered: k,
                                             isContentDismissed: !0,
-                                            themeOverride: S,
+                                            themeOverride: P,
                                             boxColors: b
                                         })
                                       : (0, n.jsx)(i.OgN, {

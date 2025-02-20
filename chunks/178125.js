@@ -13,7 +13,7 @@ var t = l(200651),
     v = l(593214),
     m = l(378337),
     x = l(388032),
-    g = l(253310);
+    g = l(85636);
 function j(e) {
     let { transitionState: n, onClose: l, parentId: a } = e,
         r = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()[0]),
@@ -30,7 +30,7 @@ function j(e) {
                         children: [
                             (0, t.jsx)(o.X6q, {
                                 variant: 'text-lg/semibold',
-                                children: x.intl.string(x.t['4wcdEx'])
+                                children: x.NW.string(x.t['4wcdEx'])
                             }),
                             (0, t.jsx)(o.olH, { onClick: l })
                         ]
@@ -63,7 +63,7 @@ function j(e) {
                         color: o.Ttl.PRIMARY,
                         size: o.PhG.SMALL,
                         onClick: l,
-                        children: x.intl.string(x.t['/g10LC'])
+                        children: x.NW.string(x.t['/g10LC'])
                     }),
                     (0, t.jsx)('div', {
                         children: (0, t.jsx)(o.XZJ, {
@@ -73,7 +73,7 @@ function j(e) {
                             children: (0, t.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: x.intl.string(x.t.UwOLJC)
+                                children: x.NW.string(x.t.UwOLJC)
                             })
                         })
                     })
@@ -151,8 +151,8 @@ function I(e) {
                     ]
                 }),
                 null != a
-                    ? (0, t.jsx)(_, { channelId: n.id })
-                    : (0, t.jsx)(Z, {
+                    ? (0, t.jsx)(Z, { channelId: n.id })
+                    : (0, t.jsx)(N, {
                           channelId: n.id,
                           parentId: i
                       })
@@ -161,7 +161,7 @@ function I(e) {
         n.id
     );
 }
-function Z(e) {
+function N(e) {
     let { channelId: n, parentId: l } = e;
     return (0, t.jsx)(o.zxk, {
         look: o.iLD.OUTLINED,
@@ -170,10 +170,10 @@ function Z(e) {
         onClick: function () {
             (0, f.kj)(n, l);
         },
-        children: x.intl.string(x.t.OYkgVl)
+        children: x.NW.string(x.t.OYkgVl)
     });
 }
-function _(e) {
+function Z(e) {
     let { channelId: n } = e;
     return (0, t.jsx)(o.zxk, {
         look: o.iLD.FILLED,
@@ -182,6 +182,6 @@ function _(e) {
         onClick: function () {
             (0, f.oC)(n);
         },
-        children: x.intl.string(x.t.N86XcH)
+        children: x.NW.string(x.t.N86XcH)
     });
 }

@@ -38,8 +38,8 @@ class h extends i.kb {
                 s = BigInt(4294967295),
                 o = Number((n >> i) & s),
                 h = Number(n & s),
-                a = r ? 4 : 0,
-                f = r ? 0 : 4;
+                a = 4 * !!r,
+                f = 4 * !r;
             t.setUint32(e + a, o, r), t.setUint32(e + f, h, r);
         })(n, s - 8, BigInt(8 * this.length), o),
             this.process(n, 0);

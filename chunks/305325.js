@@ -1,4 +1,4 @@
-let i;
-n.d(t, { hk: () => r });
-let r = (i = n(66511).Z).openMemberVerificationModal;
-i.closeMemberVerificationModal;
+let r;
+n.d(t, { hk: () => i });
+let i = (r = n(66511).Z).openMemberVerificationModal;
+r.closeMemberVerificationModal;

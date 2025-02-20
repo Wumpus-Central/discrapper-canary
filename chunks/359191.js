@@ -1,77 +1,77 @@
-n.d(t, { Z: () => E }), n(47120);
-var i,
-    r,
-    l,
-    s = n(442837),
-    a = n(570140),
+n.d(t, { Z: () => y }), n(47120);
+var r,
+    i,
+    s,
+    a = n(442837),
+    l = n(570140),
     o = n(45966),
     c = n(734893),
     d = n(999382),
     u = n(392885),
     m = n(740903),
-    h = n(889369),
+    p = n(889369),
     g = n(969632),
-    x = n(208665),
-    p = n(84658),
-    _ = n(142961),
-    C = n(981631);
-let f = new Set(),
-    v = p.PG.LANDING,
-    N = null;
-function j(e) {
+    h = n(208665),
+    f = n(84658),
+    b = n(142961),
+    x = n(981631);
+let j = new Set(),
+    N = f.PG.LANDING,
+    v = null;
+function _(e) {
     let { subsection: t } = e;
-    if (d.Z.getGuildId() === N) return !1;
-    (v = t === C.KsC.SERVER_GUIDE ? p.PG.HOME_SETTINGS : p.PG.LANDING), (N = d.Z.getGuildId());
+    if (d.Z.getGuildId() === v) return !1;
+    (N = t === x.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (v = d.Z.getGuildId());
 }
-class I extends (i = s.ZP.Store) {
+class O extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, h.Z, x.Z, g.Z, u.Z), this.syncWith([o.Z, h.Z, x.Z, g.Z, u.Z], () => !0);
+        this.waitFor(o.Z, p.Z, h.Z, g.Z, u.Z), this.syncWith([o.Z, p.Z, h.Z, g.Z, u.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
-        return f.has(e);
+        return j.has(e);
     }
     getCurrentPage() {
-        return v;
+        return N;
     }
     hasChanges() {
-        if (null == N) return !1;
-        let e = o.Z.isAdvancedMode(N);
-        return v === p.PG.DEFAULT_CHANNELS ? (e ? h.Z.hasChanges() || x.Z.hasChanges() : h.Z.hasChanges()) : v === p.PG.CUSTOMIZATION_QUESTIONS ? x.Z.hasChanges() : v === p.PG.HOME_SETTINGS && g.Z.hasChanges();
+        if (null == v) return !1;
+        let e = o.Z.isAdvancedMode(v);
+        return N === f.PG.DEFAULT_CHANNELS ? (e ? p.Z.hasChanges() || h.Z.hasChanges() : p.Z.hasChanges()) : N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.hasChanges() : N === f.PG.HOME_SETTINGS && g.Z.hasChanges();
     }
     hasConfiguredAnythingForCurrentStep() {
-        return null != N && (v === p.PG.SAFETY_CHECK || (v === p.PG.DEFAULT_CHANNELS ? h.Z.editedDefaultChannelIds.size > 0 : v === p.PG.CUSTOMIZATION_QUESTIONS ? x.Z.editedOnboardingPrompts.length > 0 : v === p.PG.HOME_SETTINGS && !(0, c.av)(g.Z.getSettings())));
+        return null != v && (N === f.PG.SAFETY_CHECK || (N === f.PG.DEFAULT_CHANNELS ? p.Z.editedDefaultChannelIds.size > 0 : N === f.PG.CUSTOMIZATION_QUESTIONS ? h.Z.editedOnboardingPrompts.length > 0 : N === f.PG.HOME_SETTINGS && !(0, c.av)(g.Z.getSettings())));
     }
     hasErrors() {
-        return v === p.PG.CUSTOMIZATION_QUESTIONS && null != x.Z.errors.find((e) => null != e);
+        return N === f.PG.CUSTOMIZATION_QUESTIONS && null != h.Z.errors.find((e) => null != e);
     }
     showNotice() {
-        if (null == N) return !1;
-        if ((0, _.C)(N)) return this.hasChanges();
+        if (null == v) return !1;
+        if ((0, b.C)(v)) return this.hasChanges();
         let e = u.Z.getCurrentPage();
-        return (v !== p.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != v && v !== p.PG.LANDING;
+        return (N !== f.PG.SAFETY_CHECK || e === m.u.OVERVIEW) && null != N && N !== f.PG.LANDING;
     }
     canCloseEarly() {
-        return null == N || (!this.hasErrors() && (!(0, _.C)(N) || !this.hasChanges()));
+        return null == v || (!this.hasErrors() && (!(0, b.C)(v) || !this.hasChanges()));
     }
 }
-(l = 'GuildSettingsOnboardingStore'),
-    (r = 'displayName') in I
-        ? Object.defineProperty(I, r, {
-              value: l,
+(s = 'GuildSettingsOnboardingStore'),
+    (i = 'displayName') in O
+        ? Object.defineProperty(O, i, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[r] = l);
-let E = new I(a.Z, {
-    GUILD_SETTINGS_INIT: j,
-    GUILD_SETTINGS_SET_SECTION: j,
+        : (O[i] = s);
+let y = new O(l.Z, {
+    GUILD_SETTINGS_INIT: _,
+    GUILD_SETTINGS_SET_SECTION: _,
     GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
         let { step: t } = e;
-        v = t;
+        N = t;
     },
     GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
         let { upsellType: t } = e;
-        f.add(t);
+        j.add(t);
     }
 });

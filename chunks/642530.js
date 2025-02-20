@@ -1,22 +1,22 @@
 n.d(t, { Z: () => d });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(987209),
-    a = n(563132),
-    s = n(346497),
-    o = n(196567),
+var i = n(987209),
+    o = n(563132),
+    a = n(346497),
+    s = n(196567),
     l = n(474936),
-    u = n(388032),
-    c = n(430597);
+    c = n(388032),
+    u = n(430597);
 let d = () => {
-    let e = (0, s.Vi)(),
-        { selectedSkuId: t } = (0, a.JL)(),
-        { isGift: n } = (0, r.wD)();
+    let e = (0, a.Vi)(),
+        { selectedSkuId: t } = (0, o.JL)(),
+        { isGift: n } = (0, i.wD)();
     return n || t !== l.Si.TIER_2 || !e
         ? null
-        : (0, i.jsx)(o.Z, {
-              copy: u.intl.string(u.t.xk8bIi),
-              bannerImage: c,
+        : (0, r.jsx)(s.Z, {
+              copy: c.NW.string(c.t.xk8bIi),
+              bannerImage: u,
               hideGiftIcon: !0
           });
 };

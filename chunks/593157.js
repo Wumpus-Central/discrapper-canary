@@ -1,12 +1,12 @@
-var i = n(338752),
-    r = n(342545),
-    a = n(463374),
-    s = RangeError;
+var r = n(338752),
+    i = n(342545),
+    o = n(463374),
+    a = RangeError;
 e.exports = function (e) {
-    var t = r(a(this)),
+    var t = i(o(this)),
         n = '',
-        o = i(e);
-    if (o < 0 || o === 1 / 0) throw new s('Wrong number of repetitions');
-    for (; o > 0; (o >>>= 1) && (t += t)) 1 & o && (n += t);
+        s = r(e);
+    if (s < 0 || s === 1 / 0) throw new a('Wrong number of repetitions');
+    for (; s > 0; (s >>>= 1) && (t += t)) 1 & s && (n += t);
     return n;
 };

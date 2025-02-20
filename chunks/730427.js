@@ -1,55 +1,55 @@
-var i = n(476508),
-    r = n(570596),
-    a = n(28886),
-    s = n(858698),
-    o = n(987100),
+var r = n(476508),
+    i = n(570596),
+    o = n(28886),
+    a = n(858698),
+    s = n(987100),
     l = n(474883),
-    u = n(875604),
-    c = n(86930),
+    c = n(875604),
+    u = n(86930),
     d = n(749915),
     f = n(736849),
-    _ = TypeError,
-    p = function (e, t) {
+    p = TypeError,
+    _ = function (e, t) {
         (this.stopped = e), (this.result = t);
     },
-    h = p.prototype;
+    h = _.prototype;
 e.exports = function (e, t, n) {
     var m,
         g,
         E,
         v,
+        b,
         y,
-        I,
-        T,
-        b = n && n.that,
-        S = !!(n && n.AS_ENTRIES),
-        A = !!(n && n.IS_RECORD),
+        O,
+        S = n && n.that,
+        I = !!(n && n.AS_ENTRIES),
+        T = !!(n && n.IS_RECORD),
         N = !!(n && n.IS_ITERATOR),
-        C = !!(n && n.INTERRUPTED),
-        R = i(t, b),
-        O = function (e) {
-            return m && f(m, 'normal', e), new p(!0, e);
+        A = !!(n && n.INTERRUPTED),
+        C = r(t, S),
+        R = function (e) {
+            return m && f(m, 'normal', e), new _(!0, e);
         },
-        D = function (e) {
-            return S ? (a(e), C ? R(e[0], e[1], O) : R(e[0], e[1])) : C ? R(e, O) : R(e);
+        P = function (e) {
+            return I ? (o(e), A ? C(e[0], e[1], R) : C(e[0], e[1])) : A ? C(e, R) : C(e);
         };
-    if (A) m = e.iterator;
+    if (T) m = e.iterator;
     else if (N) m = e;
     else {
-        if (!(g = d(e))) throw new _(s(e) + ' is not iterable');
-        if (o(g)) {
-            for (E = 0, v = l(e); v > E; E++) if ((y = D(e[E])) && u(h, y)) return y;
-            return new p(!1);
+        if (!(g = d(e))) throw new p(a(e) + ' is not iterable');
+        if (s(g)) {
+            for (E = 0, v = l(e); v > E; E++) if ((b = P(e[E])) && c(h, b)) return b;
+            return new _(!1);
         }
-        m = c(e, g);
+        m = u(e, g);
     }
-    for (I = A ? e.next : m.next; !(T = r(I, m)).done; ) {
+    for (y = T ? e.next : m.next; !(O = i(y, m)).done; ) {
         try {
-            y = D(T.value);
+            b = P(O.value);
         } catch (e) {
             f(m, 'throw', e);
         }
-        if ('object' == typeof y && y && u(h, y)) return y;
+        if ('object' == typeof b && b && c(h, b)) return b;
     }
-    return new p(!1);
+    return new _(!1);
 };

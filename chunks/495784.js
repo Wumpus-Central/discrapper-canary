@@ -1,31 +1,31 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => v });
 var l = n(913527),
-    i = n.n(l),
-    s = n(704215),
-    a = n(951716),
-    r = n(605236),
+    r = n.n(l),
+    i = n(704215),
+    s = n(951716),
+    a = n(605236),
     o = n(972830),
     c = n(430824),
     d = n(594174),
     u = n(374023),
     m = n(709054),
-    x = n(645792),
-    h = n(981631),
-    _ = n(921944);
-let N = {
+    N = n(645792),
+    x = n(981631),
+    h = n(921944);
+let v = {
     init(e) {
         let { hasModalOpen: t, openModal: n } = e;
         !u.s.isDisallowPopupsSet() &&
             (0, o.h)(() => {
-                if ((0, a.Z)()) return;
+                if ((0, s.Z)()) return;
                 let e = d.default.getCurrentUser(),
-                    l = null != e && 7 > i()().diff(i()(m.default.extractTimestamp(e.id)), 'days'),
-                    o = null != Object.values(c.Z.getGuilds()).find((e) => e.hasFeature(h.oNc.HUB)),
-                    u = !(0, r.un)(s.z.HUB_BACK_TO_SCHOOL_UPSELL);
-                !(l || t() || o || !u) && (0, x.b)() && (x.Z.trackExposure({ location: '8b792a_1' }), n(), (0, r.kk)(s.z.HUB_BACK_TO_SCHOOL_UPSELL));
+                    l = null != e && 7 > r()().diff(r()(m.default.extractTimestamp(e.id)), 'days'),
+                    o = null != Object.values(c.Z.getGuilds()).find((e) => e.hasFeature(x.oNc.HUB)),
+                    u = !(0, a.un)(i.z.HUB_BACK_TO_SCHOOL_UPSELL);
+                !(l || t() || o || !u) && (0, N.b)() && (N.Z.trackExposure({ location: '8b792a_1' }), n(), (0, a.kk)(i.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {
-        (0, r.EW)(s.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: _.L.AUTO });
+        (0, a.EW)(i.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: h.L.AUTO });
     }
 };

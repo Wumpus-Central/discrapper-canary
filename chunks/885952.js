@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r });
-var i = {
+n.d(t, { Z: () => i });
+var r = {
     start: 'end',
     end: 'start'
 };
-function r(e) {
+function i(e) {
     return e.replace(/start|end/g, function (e) {
-        return i[e];
+        return r[e];
     });
 }

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(49691),
-    r = { passive: !0 };
-let a = {
+n.d(t, { Z: () => o });
+var r = n(49691),
+    i = { passive: !0 };
+let o = {
     name: 'eventListeners',
     enabled: !0,
     phase: 'write',
@@ -9,25 +9,25 @@ let a = {
     effect: function (e) {
         var t = e.state,
             n = e.instance,
-            a = e.options,
-            s = a.scroll,
-            o = void 0 === s || s,
-            l = a.resize,
-            u = void 0 === l || l,
-            c = (0, i.Z)(t.elements.popper),
+            o = e.options,
+            a = o.scroll,
+            s = void 0 === a || a,
+            l = o.resize,
+            c = void 0 === l || l,
+            u = (0, r.Z)(t.elements.popper),
             d = [].concat(t.scrollParents.reference, t.scrollParents.popper);
         return (
-            o &&
+            s &&
                 d.forEach(function (e) {
-                    e.addEventListener('scroll', n.update, r);
+                    e.addEventListener('scroll', n.update, i);
                 }),
-            u && c.addEventListener('resize', n.update, r),
+            c && u.addEventListener('resize', n.update, i),
             function () {
-                o &&
+                s &&
                     d.forEach(function (e) {
-                        e.removeEventListener('scroll', n.update, r);
+                        e.removeEventListener('scroll', n.update, i);
                     }),
-                    u && c.removeEventListener('resize', n.update, r);
+                    c && u.removeEventListener('resize', n.update, i);
             }
         );
     },

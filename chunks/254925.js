@@ -1,4 +1,4 @@
-n.d(t, { Z: () => i });
-let i = function () {
+n.d(t, { Z: () => r });
+let r = function () {
     return null;
 };

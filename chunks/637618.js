@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m }), n(47120);
-var i = n(200651);
+n.d(t, { Z: () => p }), n(47120), n(301563);
+var r = n(200651);
 n(192379);
-var l = n(990547),
+var i = n(990547),
     a = n(399606),
-    r = n(100527),
-    s = n(213609),
-    o = n(914010),
+    o = n(100527),
+    l = n(213609),
+    s = n(914010),
     c = n(267101),
     d = n(675297),
     u = n(20281);
-function m(e) {
+function p(e) {
     let { code: t } = e,
-        [n, m] = t.split('-'),
-        _ = (0, c.hO)(n, m),
-        h = (0, a.e7)([o.Z], () => o.Z.getGuildId());
-    return ((0, s.Z)(
+        [n, p] = t.split('-'),
+        m = (0, c.hO)(n, p),
+        f = (0, a.e7)([s.Z], () => s.Z.getGuildId());
+    return ((0, l.Z)(
         {
             type: u.n.VIEW,
-            name: l.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
+            name: i.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
             properties: {
-                guild_product_listing_id: m,
-                has_entitlement: (null == _ ? void 0 : _.has_entitlement) === !0
+                guild_product_listing_id: p,
+                has_entitlement: (null == m ? void 0 : m.has_entitlement) === !0
             }
         },
-        { disableTrack: null == _ }
+        { disableTrack: null == m }
     ),
-    null == _ || h !== n)
+    null == m || f !== n)
         ? null
-        : (0, i.jsx)(d.H, {
-              guildProductListing: _,
+        : (0, r.jsx)(d.H, {
+              guildProductListing: m,
               guildId: n,
-              location: r.Z.GUILD_PRODUCT_EMBED_CARD,
+              location: o.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,
               thumbnailHeight: 219
           });

@@ -1,65 +1,65 @@
-n.d(t, { Z: () => m });
-var i = n(200651);
+n.d(t, { Z: () => f });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(43267),
-    r = n(933557),
-    s = n(297700),
-    o = n(534091),
+var i = n(481060),
+    l = n(43267),
+    o = n(933557),
+    a = n(297700),
+    s = n(534091),
     c = n(967128),
-    d = n(388032),
-    u = n(705408),
-    h = n(191986);
-let p = () =>
-    (0, i.jsx)('svg', {
+    u = n(388032),
+    d = n(284706),
+    p = n(191986);
+let h = () =>
+    (0, r.jsx)('svg', {
         width: '46',
         height: '34',
         viewBox: '0 0 46 34',
-        className: u.chatBubbleLip,
+        className: d.chatBubbleLip,
         xmlns: 'http://www.w3.org/2000/svg',
-        children: (0, i.jsx)('path', { d: 'M0 33.4637C16.1697 28.954 21.1764 9.59155 19.2146 0L45.681 0.000148089C45.681 0.000148089 44.681 9.14498 40.1914 18.3023C34.4077 30.0996 6.2893 33.1232 0 33.4637Z' })
+        children: (0, r.jsx)('path', { d: 'M0 33.4637C16.1697 28.954 21.1764 9.59155 19.2146 0L45.681 0.000148089C45.681 0.000148089 44.681 9.14498 40.1914 18.3023C34.4077 30.0996 6.2893 33.1232 0 33.4637Z' })
     });
-function m(e) {
+function f(e) {
     var t;
     let { channel: n } = e,
-        m = null !== (t = (0, r.ZP)(n)) && void 0 !== t ? t : '';
-    return (0, i.jsxs)('div', {
-        id: (0, o.p)(n.id, n.id),
-        className: u.headerContainer,
+        f = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '';
+    return (0, r.jsxs)('div', {
+        id: (0, s.p)(n.id, n.id),
+        className: d.headerContainer,
         children: [
-            (0, i.jsx)('img', {
-                src: h,
-                className: u.wumpusImage,
+            (0, r.jsx)('img', {
+                src: p,
+                className: d.wumpusImage,
                 alt: ''
             }),
-            (0, i.jsxs)('div', {
-                className: u.chatBubbleContainer,
+            (0, r.jsxs)('div', {
+                className: d.chatBubbleContainer,
                 children: [
-                    (0, i.jsx)(p, {}),
-                    (0, i.jsxs)('div', {
-                        className: u.chatBubble,
+                    (0, r.jsx)(h, {}),
+                    (0, r.jsxs)('div', {
+                        className: d.chatBubble,
                         children: [
-                            (0, i.jsx)(l.qEK, {
-                                'aria-label': m,
-                                size: l.EFr.SIZE_80,
-                                src: (0, a.x)(n, 80, !1)
+                            (0, r.jsx)(i.qEK, {
+                                'aria-label': f,
+                                size: i.EFr.SIZE_80,
+                                src: (0, l.x)(n, 80, !1)
                             }),
-                            (0, i.jsxs)(c.Ot, {
-                                className: u.emptyMessageHeader,
+                            (0, r.jsxs)(c.Ot, {
+                                className: d.emptyMessageHeader,
                                 children: [
-                                    m,
-                                    (0, i.jsx)(s.Z, {
-                                        className: u.flowerStar,
+                                    f,
+                                    (0, r.jsx)(a.Z, {
+                                        className: d.flowerStar,
                                         size: 24,
-                                        children: (0, i.jsx)(l.kmB, {
+                                        children: (0, r.jsx)(i.kmB, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: u.verified
+                                            className: d.verified
                                         })
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(c.jz, { children: d.intl.string(d.t.Rzvnio) })
+                            (0, r.jsx)(c.jz, { children: u.NW.string(u.t.Rzvnio) })
                         ]
                     })
                 ]

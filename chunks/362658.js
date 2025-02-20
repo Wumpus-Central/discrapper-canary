@@ -1,8 +1,8 @@
 n.d(t, {
-    Z: () => a,
-    z: () => r
+    Z: () => o,
+    z: () => i
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2021-09_favorites_server',
         label: 'Favorites Server',
@@ -55,5 +55,5 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-    a = i;
+    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+    o = r;

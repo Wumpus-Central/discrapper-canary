@@ -1,48 +1,48 @@
 n.d(t, {
-    U2: () => r,
-    jb: () => s
+    U2: () => i,
+    jb: () => a
 });
-var i = n(388032);
-let r = {
-        14: [() => i.intl.string(i.t.D7iWEx), () => i.intl.string(i.t['/L7rGx']), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.pQ3bLi), () => i.intl.string(i.t.GIaXW1), () => i.intl.string(i.t.BXJCGh), () => i.intl.string(i.t.vuVkq6), () => i.intl.string(i.t.bhfaCQ), () => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t.i2qs5u)],
-        1: [() => i.intl.string(i.t.GIaXW1), () => i.intl.string(i.t['/L7rGx']), () => i.intl.string(i.t.pQ3bLi), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.bhfaCQ), () => i.intl.string(i.t.XFmNp6), () => i.intl.string(i.t.i2qs5u), () => i.intl.string(i.t['X/WT19']), () => i.intl.string(i.t.GXGNi4), () => i.intl.string(i.t.Kma1j4)],
-        2: [() => i.intl.string(i.t.bt4I09), () => i.intl.string(i.t.kPJLKi), () => i.intl.string(i.t['AIm/r6']), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t['ge/d+f']), () => i.intl.string(i.t['6IjJBA']), () => i.intl.string(i.t['9o6KiI']), () => i.intl.string(i.t.D7iWEx), () => i.intl.string(i.t['7ztK/P']), () => i.intl.string(i.t['rD/ntb'])],
-        3: [() => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.D7iWEx), () => i.intl.string(i.t.pQ3bLi), () => i.intl.string(i.t.pdWHSU), () => i.intl.string(i.t.QiafXV), () => i.intl.string(i.t.vuVkq6), () => i.intl.string(i.t.UoCpFB), () => i.intl.string(i.t['+1/7Z2'])],
-        4: [() => i.intl.string(i.t.ZtggfH), () => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t['94j5sL']), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.o4tBNz), () => i.intl.string(i.t.IFIoIy), () => i.intl.string(i.t.LbCJkp), () => i.intl.string(i.t.pdWHSU), () => i.intl.string(i.t.IVKcrK), () => i.intl.string(i.t.eyEy1d)],
-        5: [() => i.intl.string(i.t.b7SNGh), () => i.intl.string(i.t['3QIvxc']), () => i.intl.string(i.t.kNNW5u), () => i.intl.string(i.t.N3xsjo), () => i.intl.string(i.t.pHmUCg), () => i.intl.string(i.t.KOKw4e), () => i.intl.string(i.t.QxiuyM), () => i.intl.string(i.t['ID64/f']), () => i.intl.string(i.t['i5+2Fx']), () => i.intl.string(i.t.mJwTU1)],
-        6: [() => i.intl.string(i.t['7F8qdX']), () => i.intl.string(i.t.XmPLhY), () => i.intl.string(i.t['G/c0Q0']), () => i.intl.string(i.t['uQYr4+']), () => i.intl.string(i.t.L2nkMj), () => i.intl.string(i.t.iUSTDQ), () => i.intl.string(i.t.b7SNGh), () => i.intl.string(i.t['T+brl5']), () => i.intl.string(i.t.rAnIoK), () => i.intl.string(i.t.cGIWjY)],
-        7: [() => i.intl.string(i.t.PMk3Oj), () => i.intl.string(i.t.WzM5YG), () => i.intl.string(i.t['+Epq9v']), () => i.intl.string(i.t.y8wELi), () => i.intl.string(i.t['xVrb6+']), () => i.intl.string(i.t.F86j2d), () => i.intl.string(i.t['b3cP4+']), () => i.intl.string(i.t['3KaQOz']), () => i.intl.string(i.t['+1/7Z2']), () => i.intl.string(i.t['6dJGyc'])],
-        8: [() => i.intl.string(i.t['4J2PYG']), () => i.intl.string(i.t.splt1N), () => i.intl.string(i.t['MkNq8/']), () => i.intl.string(i.t.NiqSMj), () => i.intl.string(i.t['+1/7Z2']), () => i.intl.string(i.t.xJ4Qzs), () => i.intl.string(i.t.bNBcQ0), () => i.intl.string(i.t.j5IdUF), () => i.intl.string(i.t['+zpNOD'])],
-        9: [() => i.intl.string(i.t['MR5I+v']), () => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t.UoCpFB), () => i.intl.string(i.t['3EMtxs']), () => i.intl.string(i.t.BXJCGh)],
-        10: [() => i.intl.string(i.t.rOhu7u), () => i.intl.string(i.t.f1Zj09), () => i.intl.string(i.t.Uh0Fx8), () => i.intl.string(i.t.mFRT9P), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.jEfJq6), () => i.intl.string(i.t.YkEzAQ)],
-        11: [() => i.intl.string(i.t['kg/vNz']), () => i.intl.string(i.t['1S1Wfn']), () => i.intl.string(i.t.eR1cPD), () => i.intl.string(i.t.XPWT7O), () => i.intl.string(i.t.vtJDam), () => i.intl.string(i.t['4te8Ag']), () => i.intl.string(i.t.MKokFx), () => i.intl.string(i.t['h1o0//']), () => i.intl.string(i.t.h5IW39), () => i.intl.string(i.t['9reexc'])],
-        12: [() => i.intl.string(i.t.rAnIoK), () => i.intl.string(i.t.f9SRFh), () => i.intl.string(i.t.Z53e3t), () => i.intl.string(i.t['eWY96+']), () => i.intl.string(i.t.QxiuyM), () => i.intl.string(i.t.eNZqqK), () => i.intl.string(i.t.put7Hx), () => i.intl.string(i.t.NtauHh), () => i.intl.string(i.t['DZeh+/'])],
-        13: [() => i.intl.string(i.t.D7iWEx), () => i.intl.string(i.t.cGIWjY), () => i.intl.string(i.t.pQ3bLi), () => i.intl.string(i.t.BXJCGh), () => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t.vmvBDg), () => i.intl.string(i.t.UoCpFB), () => i.intl.string(i.t.QiafXV)],
-        43: [() => i.intl.string(i.t.dl70Ji), () => i.intl.string(i.t.R58PcH), () => i.intl.string(i.t.hDjtaG), () => i.intl.string(i.t.XuOAEB), () => i.intl.string(i.t['/Fgjen']), () => i.intl.string(i.t['FM0+HR']), () => i.intl.string(i.t['OGdz4+']), () => i.intl.string(i.t.ZtggfH), () => i.intl.string(i.t.QiafXV)],
-        49: [() => i.intl.string(i.t.QYvZFh), () => i.intl.string(i.t.C2TrLi), () => i.intl.string(i.t['9AEkCw']), () => i.intl.string(i.t['FM0+HR']), () => i.intl.string(i.t['vwjf//']), () => i.intl.string(i.t['Exwe4+']), () => i.intl.string(i.t.QiafXV)]
+var r = n(388032);
+let i = {
+        14: [() => r.NW.string(r.t.D7iWEx), () => r.NW.string(r.t['/L7rGx']), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.pQ3bLi), () => r.NW.string(r.t.GIaXW1), () => r.NW.string(r.t.BXJCGh), () => r.NW.string(r.t.vuVkq6), () => r.NW.string(r.t.bhfaCQ), () => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t.i2qs5u)],
+        1: [() => r.NW.string(r.t.GIaXW1), () => r.NW.string(r.t['/L7rGx']), () => r.NW.string(r.t.pQ3bLi), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.bhfaCQ), () => r.NW.string(r.t.XFmNp6), () => r.NW.string(r.t.i2qs5u), () => r.NW.string(r.t['X/WT19']), () => r.NW.string(r.t.GXGNi4), () => r.NW.string(r.t.Kma1j4)],
+        2: [() => r.NW.string(r.t.bt4I09), () => r.NW.string(r.t.kPJLKi), () => r.NW.string(r.t['AIm/r6']), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t['ge/d+f']), () => r.NW.string(r.t['6IjJBA']), () => r.NW.string(r.t['9o6KiI']), () => r.NW.string(r.t.D7iWEx), () => r.NW.string(r.t['7ztK/P']), () => r.NW.string(r.t['rD/ntb'])],
+        3: [() => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.D7iWEx), () => r.NW.string(r.t.pQ3bLi), () => r.NW.string(r.t.pdWHSU), () => r.NW.string(r.t.QiafXV), () => r.NW.string(r.t.vuVkq6), () => r.NW.string(r.t.UoCpFB), () => r.NW.string(r.t['+1/7Z2'])],
+        4: [() => r.NW.string(r.t.ZtggfH), () => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t['94j5sL']), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.o4tBNz), () => r.NW.string(r.t.IFIoIy), () => r.NW.string(r.t.LbCJkp), () => r.NW.string(r.t.pdWHSU), () => r.NW.string(r.t.IVKcrK), () => r.NW.string(r.t.eyEy1d)],
+        5: [() => r.NW.string(r.t.b7SNGh), () => r.NW.string(r.t['3QIvxc']), () => r.NW.string(r.t.kNNW5u), () => r.NW.string(r.t.N3xsjo), () => r.NW.string(r.t.pHmUCg), () => r.NW.string(r.t.KOKw4e), () => r.NW.string(r.t.QxiuyM), () => r.NW.string(r.t['ID64/f']), () => r.NW.string(r.t['i5+2Fx']), () => r.NW.string(r.t.mJwTU1)],
+        6: [() => r.NW.string(r.t['7F8qdX']), () => r.NW.string(r.t.XmPLhY), () => r.NW.string(r.t['G/c0Q0']), () => r.NW.string(r.t['uQYr4+']), () => r.NW.string(r.t.L2nkMj), () => r.NW.string(r.t.iUSTDQ), () => r.NW.string(r.t.b7SNGh), () => r.NW.string(r.t['T+brl5']), () => r.NW.string(r.t.rAnIoK), () => r.NW.string(r.t.cGIWjY)],
+        7: [() => r.NW.string(r.t.PMk3Oj), () => r.NW.string(r.t.WzM5YG), () => r.NW.string(r.t['+Epq9v']), () => r.NW.string(r.t.y8wELi), () => r.NW.string(r.t['xVrb6+']), () => r.NW.string(r.t.F86j2d), () => r.NW.string(r.t['b3cP4+']), () => r.NW.string(r.t['3KaQOz']), () => r.NW.string(r.t['+1/7Z2']), () => r.NW.string(r.t['6dJGyc'])],
+        8: [() => r.NW.string(r.t['4J2PYG']), () => r.NW.string(r.t.splt1N), () => r.NW.string(r.t['MkNq8/']), () => r.NW.string(r.t.NiqSMj), () => r.NW.string(r.t['+1/7Z2']), () => r.NW.string(r.t.xJ4Qzs), () => r.NW.string(r.t.bNBcQ0), () => r.NW.string(r.t.j5IdUF), () => r.NW.string(r.t['+zpNOD'])],
+        9: [() => r.NW.string(r.t['MR5I+v']), () => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t.UoCpFB), () => r.NW.string(r.t['3EMtxs']), () => r.NW.string(r.t.BXJCGh)],
+        10: [() => r.NW.string(r.t.rOhu7u), () => r.NW.string(r.t.f1Zj09), () => r.NW.string(r.t.Uh0Fx8), () => r.NW.string(r.t.mFRT9P), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.jEfJq6), () => r.NW.string(r.t.YkEzAQ)],
+        11: [() => r.NW.string(r.t['kg/vNz']), () => r.NW.string(r.t['1S1Wfn']), () => r.NW.string(r.t.eR1cPD), () => r.NW.string(r.t.XPWT7O), () => r.NW.string(r.t.vtJDam), () => r.NW.string(r.t['4te8Ag']), () => r.NW.string(r.t.MKokFx), () => r.NW.string(r.t['h1o0//']), () => r.NW.string(r.t.h5IW39), () => r.NW.string(r.t['9reexc'])],
+        12: [() => r.NW.string(r.t.rAnIoK), () => r.NW.string(r.t.f9SRFh), () => r.NW.string(r.t.Z53e3t), () => r.NW.string(r.t['eWY96+']), () => r.NW.string(r.t.QxiuyM), () => r.NW.string(r.t.eNZqqK), () => r.NW.string(r.t.put7Hx), () => r.NW.string(r.t.NtauHh), () => r.NW.string(r.t['DZeh+/'])],
+        13: [() => r.NW.string(r.t.D7iWEx), () => r.NW.string(r.t.cGIWjY), () => r.NW.string(r.t.pQ3bLi), () => r.NW.string(r.t.BXJCGh), () => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t.vmvBDg), () => r.NW.string(r.t.UoCpFB), () => r.NW.string(r.t.QiafXV)],
+        43: [() => r.NW.string(r.t.dl70Ji), () => r.NW.string(r.t.R58PcH), () => r.NW.string(r.t.hDjtaG), () => r.NW.string(r.t.XuOAEB), () => r.NW.string(r.t['/Fgjen']), () => r.NW.string(r.t['FM0+HR']), () => r.NW.string(r.t['OGdz4+']), () => r.NW.string(r.t.ZtggfH), () => r.NW.string(r.t.QiafXV)],
+        49: [() => r.NW.string(r.t.QYvZFh), () => r.NW.string(r.t.C2TrLi), () => r.NW.string(r.t['9AEkCw']), () => r.NW.string(r.t['FM0+HR']), () => r.NW.string(r.t['vwjf//']), () => r.NW.string(r.t['Exwe4+']), () => r.NW.string(r.t.QiafXV)]
     },
-    l = ['en-GB'];
-function s() {
-    return (0, i.getAvailableLocales)()
+    s = ['en-GB'];
+function a() {
+    return (0, r.u5)()
         .map((e) => {
             let t;
-            let { value: r, name: l } = e;
+            let { value: i, name: s } = e;
             try {
                 t = n(621287)('./'.concat(e.value, '.png'));
             } catch (e) {
                 t = n(1474);
             }
-            return 'en-US' === r
+            return 'en-US' === i
                 ? {
-                      value: r,
-                      label: i.intl.string(i.t.WKEPHR),
+                      value: i,
+                      label: r.NW.string(r.t.WKEPHR),
                       image: t
                   }
                 : {
-                      value: r,
-                      label: l,
+                      value: i,
+                      label: s,
                       image: t
                   };
         })
-        .filter((e) => !l.includes(e.value));
+        .filter((e) => !s.includes(e.value));
 }

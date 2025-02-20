@@ -3,36 +3,36 @@ var a = n(701488),
     i = n(799911),
     l = n(222013),
     s = n(38161),
-    c = n(15259),
-    o = n(517288),
-    r = n(724491),
+    r = n(15259),
+    c = n(517288),
+    o = n(724491),
     d = n(271359),
     u = n(241976),
     p = n(783466),
-    m = n(128584),
+    f = n(128584),
     g = n(469999),
-    f = n(607865),
+    m = n(607865),
     v = n(265661),
     h = n(121517),
-    x = n(295597),
-    _ = n(327510),
-    b = n(465087),
+    b = n(295597),
+    x = n(327510),
+    _ = n(465087),
     C = n(920496),
     I = n(39417),
-    T = n(641322),
-    Z = n(829463),
-    S = n(966310),
-    y = n(710227),
-    N = n(820836),
-    j = n(179603),
-    E = n(838116),
-    A = n(697333),
-    M = n(168191),
-    O = n(499900),
-    L = n(420648),
-    k = n(303865),
-    w = n(993190),
-    P = n(555852);
+    y = n(641322),
+    T = n(829463),
+    j = n(966310),
+    N = n(710227),
+    Z = n(820836),
+    S = n(179603),
+    O = n(838116),
+    E = n(697333),
+    A = n(168191),
+    M = n(499900),
+    P = n(420648),
+    w = n(303865),
+    L = n(993190),
+    k = n(555852);
 let D = {
     [a.MO]: {
         playersSuggestionMin: 1,
@@ -44,7 +44,7 @@ let D = {
         playersSuggestionMin: 4,
         playersSuggestionMax: 12,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [g.Z, f.Z]
+        gameplayImageUrls: [g.Z, m.Z]
     },
     [a.mI]: {
         playersSuggestionMin: 1,
@@ -56,19 +56,19 @@ let D = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [L.Z, k.Z]
+        gameplayImageUrls: [P.Z, w.Z]
     },
     [a.PD]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 5,
-        gameplayImageUrls: [T.Z, Z.Z]
+        gameplayImageUrls: [y.Z, T.Z]
     },
     [a.jT]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 2,
-        gameplayImageUrls: [w.Z, P.Z]
+        gameplayImageUrls: [L.Z, k.Z]
     },
     [a.am]: {
         playersSuggestionMin: 3,
@@ -80,19 +80,19 @@ let D = {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [s.Z, c.Z]
+        gameplayImageUrls: [s.Z, r.Z]
     },
     [a.l4]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [o.Z, r.Z]
+        gameplayImageUrls: [c.Z, o.Z]
     },
     [a.fE]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [p.Z, m.Z]
+        gameplayImageUrls: [p.Z, f.Z]
     },
     [a.IF]: {
         playersSuggestionMin: 2,
@@ -104,19 +104,19 @@ let D = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 7,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [N.Z, j.Z]
+        gameplayImageUrls: [Z.Z, S.Z]
     },
     [a.Gv]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [S.Z, y.Z]
+        gameplayImageUrls: [j.Z, N.Z]
     },
     [a.Cb]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [M.Z, O.Z]
+        gameplayImageUrls: [A.Z, M.Z]
     },
     [a.qG]: {
         playersSuggestionMin: 2,
@@ -128,9 +128,9 @@ let D = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [E.Z, A.Z]
+        gameplayImageUrls: [O.Z, E.Z]
     },
     [a.In]: {
-        gameplayImageUrls: [x.Z, _.Z, b.Z]
+        gameplayImageUrls: [b.Z, x.Z, _.Z]
     }
 };

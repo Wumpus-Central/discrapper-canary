@@ -1,24 +1,24 @@
 n.d(t, {
-    C8: () => r,
-    dK: () => s,
-    mq: () => a
+    C8: () => i,
+    dK: () => a,
+    mq: () => o
 });
-var i = n(192379),
-    r = i.createContext(),
-    a = i.createContext();
-function s(e) {
+var r = n(192379),
+    i = r.createContext(),
+    o = r.createContext();
+function a(e) {
     var t = e.children,
-        n = i.useState(null),
-        s = n[0],
-        o = n[1],
-        l = i.useRef(!1);
-    i.useEffect(function () {
+        n = r.useState(null),
+        a = n[0],
+        s = n[1],
+        l = r.useRef(!1);
+    r.useEffect(function () {
         return function () {
             l.current = !0;
         };
     }, []);
-    var u = i.useCallback(function (e) {
-        l.current || o(e);
+    var c = r.useCallback(function (e) {
+        l.current || s(e);
     }, []);
-    return i.createElement(r.Provider, { value: s }, i.createElement(a.Provider, { value: u }, t));
+    return r.createElement(i.Provider, { value: a }, r.createElement(o.Provider, { value: c }, t));
 }

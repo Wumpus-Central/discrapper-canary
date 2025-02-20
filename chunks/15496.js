@@ -1,3 +1,3 @@
-let i = n(40231),
-    r = (e, t, n) => new i(e, n).compare(new i(t, n));
-e.exports = r;
+let r = n(40231),
+    i = (e, t, n) => new r(e, n).compare(new r(t, n));
+e.exports = i;

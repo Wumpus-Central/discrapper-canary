@@ -25,9 +25,9 @@ var r = n(192379),
     p = n(706140),
     h = n(243778),
     f = n(594174),
-    N = n(314884),
-    x = n(580130),
-    b = n(626135),
+    b = n(314884),
+    N = n(580130),
+    x = n(626135),
     _ = n(823379),
     E = n(111361),
     j = n(595878),
@@ -90,17 +90,17 @@ function P() {
         i = w(),
         l = Z([T.Ft.FREE_AVATAR_DECO_1_MONTH]),
         o = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        c = (0, a.e7)([N.Z], () => N.Z.boostSlots),
+        c = (0, a.e7)([b.Z], () => b.Z.boostSlots),
         d = r.useMemo(() => Object.values(c).some((e) => null == e.premiumGuildSubscription), [c]),
         u = null != i,
         m = u && !1 === d,
         g = null != l,
         p = (function () {
             let e = (0, a.e7)(
-                [x.Z],
+                [N.Z],
                 () => {
                     var e;
-                    return null !== (e = x.Z.getForApplication(I.XAJ)) && void 0 !== e ? e : D;
+                    return null !== (e = N.Z.getForApplication(I.XAJ)) && void 0 !== e ? e : D;
                 },
                 [],
                 _.OL
@@ -108,12 +108,12 @@ function P() {
             return (0, v.Cl)(T.qY, e);
         })(),
         h = g && null != p && (0, v.C3)(p.skuId, o),
-        b = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == i ? void 0 : i.skuId;
+        x = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == i ? void 0 : i.skuId;
     return r.useMemo(() => {
         let e = {
             redeemableAt: null == n ? void 0 : n.redeemable_at,
             tenureRewardStatusId: null == n ? void 0 : n.id,
-            tenureRewardType: (0, v.Xs)(b)
+            tenureRewardType: (0, v.Xs)(x)
         };
         if (m)
             return A(y({}, e), {
@@ -161,7 +161,7 @@ function P() {
                 })
             );
         }
-    }, [u, i, n, m, g, h, l, b]);
+    }, [u, i, n, m, g, h, l, x]);
 }
 function R(e) {
     let { showAnimations: t } = e,
@@ -180,10 +180,10 @@ function R(e) {
 let D = new Set();
 function Z(e) {
     let t = (0, a.e7)(
-            [x.Z],
+            [N.Z],
             () => {
                 var e;
-                return null !== (e = x.Z.getForApplication(S.CL)) && void 0 !== e ? e : D;
+                return null !== (e = N.Z.getForApplication(S.CL)) && void 0 !== e ? e : D;
             },
             [],
             _.OL
@@ -237,7 +237,7 @@ let k = (e) => {
                 ((0, g.EW)(n),
                 n === l.z.TENURE_REWARD_PENDING &&
                     !1 === i.current &&
-                    (b.default.track(I.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+                    (x.default.track(I.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
                         reward_type: null == e ? void 0 : e.tenureRewardType,
@@ -249,7 +249,7 @@ let k = (e) => {
 function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.CL,
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, a.e7)([x.Z], () => x.Z.isFetchingForApplication(e)),
+        n = (0, a.e7)([N.Z], () => N.Z.isFetchingForApplication(e)),
         i = (0, a.e7)([f.default], () => {
             let e = f.default.getCurrentUser();
             return null != e && (0, E.M5)(e, S.p9.TIER_2);

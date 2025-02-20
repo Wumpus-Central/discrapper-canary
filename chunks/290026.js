@@ -1,19 +1,19 @@
-n.d(t, { P: () => d }), n(47120);
-var l = n(192379),
-    r = n(979554),
-    i = n(442837),
-    a = n(597688),
-    s = n(365943),
-    o = n(25251);
-let d = () => {
+r.d(t, { P: () => c }), r(47120);
+var n = r(192379),
+    l = r(979554),
+    i = r(442837),
+    a = r(597688),
+    o = r(365943),
+    s = r(25251);
+let c = () => {
     let e = (0, i.e7)([a.Z], () => a.Z.products);
-    l.useEffect(() => {
+    n.useEffect(() => {
         let t = [...e.values()]
-            .filter((e) => e.type === r.Z.PROFILE_EFFECT)
+            .filter((e) => e.type === l.Z.PROFILE_EFFECT)
             .some((e) => {
                 let t = e.items[0].id;
-                return null != t && null == o.Z.getProfileEffectById(t);
+                return null != t && null == s.Z.getProfileEffectById(t);
             });
-        (0, s.z)(t);
+        (0, o.z)(t);
     }, [e]);
 };

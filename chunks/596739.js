@@ -1,34 +1,34 @@
-n.d(t, { W: () => c });
-var i = n(200651),
-    l = n(192379),
-    a = n(481060),
-    r = n(388032),
-    s = n(495800),
-    o = n(560580);
+n.d(t, { W: () => c }), n(266796);
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(388032),
+    a = n(541),
+    s = n(560580);
 function c(e) {
-    let { header: t, description: n, onDismiss: c, buttons: d, dismissible: u = !0 } = e,
-        h = l.useCallback(() => {
+    let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
+        p = i.useCallback(() => {
             null == c || c();
         }, [c]);
-    return (0, i.jsxs)('div', {
-        className: s.safetyBanner,
+    return (0, r.jsxs)('div', {
+        className: a.safetyBanner,
         children: [
-            (0, i.jsxs)('div', {
-                className: s.shieldAndHeading,
+            (0, r.jsxs)('div', {
+                className: a.shieldAndHeading,
                 children: [
-                    (0, i.jsx)('img', {
-                        className: s.safetyShieldIcon,
-                        src: o,
+                    (0, r.jsx)('img', {
+                        className: a.safetyShieldIcon,
+                        src: s,
                         alt: ''
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(a.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -37,37 +37,37 @@ function c(e) {
                     })
                 ]
             }),
-            (0, i.jsx)('div', {
-                className: s.buttons,
+            (0, r.jsx)('div', {
+                className: a.buttons,
                 children:
-                    null == d
+                    null == u
                         ? void 0
-                        : d.map((e, t) => {
+                        : u.map((e, t) => {
                               var n;
-                              return (0, i.jsx)(
-                                  a.zxk,
+                              return (0, r.jsx)(
+                                  l.zxk,
                                   {
-                                      size: null !== (n = e.size) && void 0 !== n ? n : a.zxk.Sizes.SMALL,
+                                      size: null !== (n = e.size) && void 0 !== n ? n : l.zxk.Sizes.SMALL,
                                       color: e.color,
                                       'aria-label': e.text,
                                       onClick: e.onclick,
-                                      className: s.ctaButton,
+                                      className: a.ctaButton,
                                       children: e.text
                                   },
                                   t
                               );
                           })
             }),
-            u
-                ? (0, i.jsx)(a.P3F, {
-                      className: s.closeButton,
-                      onClick: h,
+            d
+                ? (0, r.jsx)(l.P3F, {
+                      className: a.closeButton,
+                      onClick: p,
                       role: 'button',
-                      'aria-label': r.intl.string(r.t.WAI6xs),
-                      children: (0, i.jsx)(a.Dio, {
+                      'aria-label': o.NW.string(o.t.WAI6xs),
+                      children: (0, r.jsx)(l.Dio, {
                           size: 'md',
                           color: 'currentColor',
-                          className: s.closeButton
+                          className: a.closeButton
                       })
                   })
                 : null

@@ -1,3 +1,3 @@
 n(121298);
-var i = n(974802);
-e.exports = i.setTimeout;
+var r = n(974802);
+e.exports = r.setTimeout;

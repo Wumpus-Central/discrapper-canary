@@ -1,107 +1,107 @@
 n.d(t, { Z: () => g }), n(789020);
-var i = n(200651),
-    r = n(192379),
-    a = n(793030),
-    s = n(974674),
-    o = n(1561),
+var r = n(200651),
+    i = n(192379),
+    o = n(793030),
+    a = n(974674),
+    s = n(1561),
     l = n(993365),
-    u = n(385499),
-    c = n(768581),
+    c = n(385499),
+    u = n(768581),
     d = n(630388),
     f = n(489863),
-    _ = n(981631),
-    p = n(182294),
+    p = n(981631),
+    _ = n(182294),
     h = n(388032),
-    m = n(180223);
+    m = n(193048);
 function g(e) {
-    let { id: t, user: n, application: g, bot: E, accountScopes: v, showLogout: y, location: I } = e,
-        T = c.ZP.getApplicationIconURL({
+    let { id: t, user: n, application: g, bot: E, accountScopes: v, showLogout: b, location: y } = e,
+        O = u.ZP.getApplicationIconURL({
             id: g.id,
             icon: g.icon
         }),
-        b = c.ZP.getUserAvatarURL(n),
-        S = r.useMemo(() => {
+        S = u.ZP.getUserAvatarURL(n),
+        I = i.useMemo(() => {
             var e;
-            return (0, d.yE)(null !== (e = g.flags) && void 0 !== e ? e : 0, _.udG.SOCIAL_LAYER_INTEGRATION)
-                ? (0, i.jsxs)(i.Fragment, {
+            return (0, d.yE)(null !== (e = g.flags) && void 0 !== e ? e : 0, p.udG.SOCIAL_LAYER_INTEGRATION)
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsx)(l.x, {
+                          (0, r.jsx)(l.x, {
                               variant: 'text-lg/normal',
                               color: 'header-secondary',
-                              children: h.intl.string(h.t.uT1CPT)
+                              children: h.NW.string(h.t.uT1CPT)
                           }),
-                          (0, i.jsx)(a.X6, {
+                          (0, r.jsx)(o.X6, {
                               variant: 'heading-xxl/bold',
                               color: 'header-primary',
                               children: g.name
                           })
                       ]
                   })
-                : (0, i.jsxs)(i.Fragment, {
+                : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, i.jsxs)(l.x, {
+                          (0, r.jsxs)(l.x, {
                               variant: 'text-lg/bold',
                               color: 'header-primary',
                               children: [
                                   g.name,
                                   null != E
-                                      ? (0, i.jsx)(u.Z, {
+                                      ? (0, r.jsx)(c.Z, {
                                             className: m.botTag,
-                                            verified: null != E.public_flags && (0, d.yE)(E.public_flags, _.xW$.VERIFIED_BOT)
+                                            verified: null != E.public_flags && (0, d.yE)(E.public_flags, p.xW$.VERIFIED_BOT)
                                         })
                                       : null
                               ]
                           }),
                           v.length > 0
-                              ? (0, i.jsx)(l.x, {
+                              ? (0, r.jsx)(l.x, {
                                     variant: 'text-md/normal',
                                     color: 'header-secondary',
-                                    children: h.intl.string(h.t.jFbDnJ)
+                                    children: h.NW.string(h.t.jFbDnJ)
                                 })
-                              : (0, i.jsx)(l.x, {
+                              : (0, r.jsx)(l.x, {
                                     variant: 'text-md/normal',
                                     color: 'header-secondary',
-                                    children: h.intl.string(h.t['X+Fdpq'])
+                                    children: h.NW.string(h.t['X+Fdpq'])
                                 })
                       ]
                   });
         }, [v.length, g.flags, g.name, E]);
-    return (0, i.jsxs)('header', {
+    return (0, r.jsxs)('header', {
         id: t,
         className: m.header,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: m.headerIcons,
                 children: [
-                    (0, i.jsx)(s.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: m.avatar,
-                        src: T,
-                        size: p.EF.SIZE_80,
+                        src: O,
+                        size: _.EF.SIZE_80,
                         'aria-label': g.name
                     }),
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: m.ellipseGroup,
-                        children: [(0, i.jsx)('div', { className: m.ellipse }), (0, i.jsx)('div', { className: m.ellipse }), (0, i.jsx)('div', { className: m.ellipse })]
+                        children: [(0, r.jsx)('div', { className: m.ellipse }), (0, r.jsx)('div', { className: m.ellipse }), (0, r.jsx)('div', { className: m.ellipse })]
                     }),
-                    (0, i.jsx)(s.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: m.avatar,
-                        src: b,
-                        size: p.EF.SIZE_80,
+                        src: S,
+                        size: _.EF.SIZE_80,
                         'aria-label': n.username
                     })
                 ]
             }),
-            S,
-            y
-                ? (0, i.jsx)('div', {
+            I,
+            b
+                ? (0, r.jsx)('div', {
                       className: m.currentUser,
-                      children: (0, i.jsxs)(l.x, {
+                      children: (0, r.jsxs)(l.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
-                              h.intl.format(h.t.qRvpYW, {
+                              h.NW.format(h.t.qRvpYW, {
                                   userHook: () =>
-                                      (0, i.jsxs)(
+                                      (0, r.jsxs)(
                                           l.x,
                                           {
                                               className: m.currentUserTag,
@@ -109,7 +109,7 @@ function g(e) {
                                               children: [
                                                   n.username,
                                                   !n.isPomelo() &&
-                                                      (0, i.jsx)(l.x, {
+                                                      (0, r.jsx)(l.x, {
                                                           className: m.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
                                                           children: '#'.concat(n.discriminator)
@@ -119,11 +119,11 @@ function g(e) {
                                           n.id
                                       )
                               }),
-                              (0, i.jsx)(o.P, {
+                              (0, r.jsx)(s.P, {
                                   tag: 'a',
                                   className: m.logoutLink,
-                                  onClick: () => (0, f.c$)(I),
-                                  children: h.intl.string(h.t['yV/hjI'])
+                                  onClick: () => (0, f.c$)(y),
+                                  children: h.NW.string(h.t['yV/hjI'])
                               })
                           ]
                       })

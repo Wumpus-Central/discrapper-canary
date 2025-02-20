@@ -1,12 +1,12 @@
-n.d(t, { Z: () => p });
-var i,
-    r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+n.d(t, { Z: () => _ });
+var r,
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
-    u = n(876848);
-function c(e, t, n) {
+    c = n(421813);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,20 +26,20 @@ let d = {
         LEFT: 'left'
     },
     f = {
-        [d.UP]: u.up,
-        [d.RIGHT]: u.right,
-        [d.DOWN]: u.down,
-        [d.LEFT]: u.left
+        [d.UP]: c.up,
+        [d.RIGHT]: c.right,
+        [d.DOWN]: c.down,
+        [d.LEFT]: c.left
     };
-class _ extends (i = a.PureComponent) {
+class p extends (r = o.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
-        return (0, r.jsx)(l.wj7, {
+        return (0, i.jsx)(l.wj7, {
             size: 'md',
             color: 'currentColor',
-            className: o()(u.__invalid_arrow, t, { [f[e]]: !0 })
+            className: s()(c.__invalid_arrow, t, { [f[e]]: !0 })
         });
     }
 }
-c(_, 'Directions', d);
-let p = _;
+u(p, 'Directions', d);
+let _ = p;

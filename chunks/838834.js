@@ -1,18 +1,18 @@
-n.d(t, { Z: () => u });
-var i = n(192379),
-    r = n(476400),
-    a = n.n(r),
-    s = n(723184),
-    o = n(829307),
+n.d(t, { Z: () => c });
+var r = n(192379),
+    i = n(476400),
+    o = n.n(i),
+    a = n(723184),
+    s = n(829307),
     l = function (e) {
         var t = e.zDepth,
             n = e.radius,
-            r = e.background,
-            a = e.children,
+            i = e.background,
+            o = e.children,
             l = e.styles,
-            u = void 0 === l ? {} : l,
-            c = (0, s.default)(
-                (0, o.Z)(
+            c = void 0 === l ? {} : l,
+            u = (0, a.default)(
+                (0, s.Z)(
                     {
                         default: {
                             wrap: {
@@ -24,7 +24,7 @@ var i = n(192379),
                                 absolute: '0px 0px 0px 0px',
                                 boxShadow: '0 ' + t + 'px ' + 4 * t + 'px rgba(0,0,0,.24)',
                                 borderRadius: n,
-                                background: r
+                                background: i
                             }
                         },
                         'zDepth-0': { bg: { boxShadow: 'none' } },
@@ -36,17 +36,17 @@ var i = n(192379),
                         square: { bg: { borderRadius: '0' } },
                         circle: { bg: { borderRadius: '50%' } }
                     },
-                    u
+                    c
                 ),
                 { 'zDepth-1': 1 === t }
             );
-        return i.createElement('div', { style: c.wrap }, i.createElement('div', { style: c.bg }), i.createElement('div', { style: c.content }, a));
+        return r.createElement('div', { style: u.wrap }, r.createElement('div', { style: u.bg }), r.createElement('div', { style: u.content }, o));
     };
 (l.propTypes = {
-    background: a().string,
-    zDepth: a().oneOf([0, 1, 2, 3, 4, 5]),
-    radius: a().number,
-    styles: a().object
+    background: o().string,
+    zDepth: o().oneOf([0, 1, 2, 3, 4, 5]),
+    radius: o().number,
+    styles: o().object
 }),
     (l.defaultProps = {
         background: '#fff',
@@ -54,4 +54,4 @@ var i = n(192379),
         radius: 2,
         styles: {}
     });
-let u = l;
+let c = l;

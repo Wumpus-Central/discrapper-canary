@@ -1,5 +1,5 @@
-function i(e) {
-    return (i =
+function r(e) {
+    return (r =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -8,4 +8,4 @@ function i(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

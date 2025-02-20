@@ -5,27 +5,27 @@ a.d(e, {
 });
 var r = a(176984),
     n = a(622916),
-    _ = a(688838);
-let o = {},
+    o = a(688838);
+let _ = {},
     i = {};
 function c(t, e) {
-    (o[t] = o[t] || []), o[t].push(e);
+    (_[t] = _[t] || []), _[t].push(e);
 }
 function s(t, e) {
     i[t] || (e(), (i[t] = !0));
 }
 function E(t, e) {
-    let a = t && o[t];
+    let a = t && _[t];
     if (a)
-        for (let o of a)
+        for (let _ of a)
             try {
-                o(e);
+                _(e);
             } catch (e) {
                 r.X &&
                     n.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${t}
-Name: ${(0, _.$P)(o)}
+Name: ${(0, o.$P)(_)}
 Error:`,
                         e
                     );

@@ -1,15 +1,15 @@
-n.d(t, { V: () => s }), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
-var i = n(710845),
-    r = n(358085),
-    a = n(998502);
-function s() {
-    if (r.isPlatformEmbedded) {
+n.d(t, { V: () => a }), n(610885), n(126298), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
+var r = n(710845),
+    i = n(358085),
+    o = n(998502);
+function a() {
+    if (i.isPlatformEmbedded) {
         let e;
         try {
-            e = a.ZP.requireModule('discord_erlpack');
+            e = o.ZP.requireModule('discord_erlpack');
         } catch (t) {
             try {
-                e = a.ZP.requireModule('erlpack');
+                e = o.ZP.requireModule('erlpack');
             } catch (e) {}
         }
         if (null != e)
@@ -26,7 +26,7 @@ function s() {
                         return e.unpack(t);
                     } catch (e) {
                         throw (
-                            (new i.Z('GatewayEncodingErlpackEncoding').error('Error unpacking', {
+                            (new r.Z('GatewayEncodingErlpackEncoding').error('Error unpacking', {
                                 erlpackUnpackError: e,
                                 erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                 erlpackDataLength: null != t ? t.length : null

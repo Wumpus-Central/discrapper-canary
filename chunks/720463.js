@@ -1,6 +1,6 @@
 n.d(t, {
     BalanceWidgetEarnedOrbsCoachmarkModal: () => _,
-    E: () => b
+    E: () => x
 });
 var r = n(200651);
 n(192379);
@@ -17,23 +17,23 @@ var i = n(120356),
     p = n(981631),
     h = n(388032),
     f = n(387987),
-    N = n(681461),
-    x = n(232474);
-let b = (e) => {
+    b = n(681461),
+    N = n(232474);
+let x = (e) => {
     let { earnedOrbsQuantity: t, descriptionText: n = h.NW.string(h.t['4YgBe3']), ctaText: i = h.NW.string(h.t.WYchdX), linkText: c = h.NW.string(h.t['H57f4+']), ctaOnClick: d, linkOnClick: u, linkTo: m } = e;
     return (0, r.jsxs)('div', {
-        className: s()(N.container, f.baseCardOutline),
+        className: s()(b.container, f.baseCardOutline),
         children: [
             (0, r.jsx)('div', {
-                className: s()(N.gifContainer, N.centerContent),
+                className: s()(b.gifContainer, b.centerContent),
                 children: (0, r.jsx)('img', {
-                    src: x.Z,
-                    className: N.gif,
+                    src: N.Z,
+                    className: b.gif,
                     alt: 'Orb GIF'
                 })
             }),
             (0, r.jsxs)('div', {
-                className: N.contentContainer,
+                className: b.contentContainer,
                 children: [
                     (0, r.jsx)('h3', {
                         className: f.coachmarkTitle,
@@ -45,7 +45,7 @@ let b = (e) => {
                         children: n
                     }),
                     (0, r.jsx)(l.zx, {
-                        className: N.ctaButton,
+                        className: b.ctaButton,
                         color: l.zx.Colors.BRAND,
                         look: l.zx.Looks.FILLED,
                         onClick: d,
@@ -57,7 +57,7 @@ let b = (e) => {
                         onClick: u,
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/medium',
-                            className: N.link,
+                            className: b.link,
                             children: c
                         })
                     })
@@ -92,7 +92,7 @@ function _(e) {
             await (0, c.j2)(), await l(), o();
         };
     return (0, r.jsxs)(g.X, {
-        className: N.coachmarkModalContainer,
+        className: b.coachmarkModalContainer,
         backgroundElementRef: n,
         onGetBoundingRect: p.dG4,
         getOffsetsRelativeToElement: () => ({
@@ -112,7 +112,7 @@ function _(e) {
                 balance: h,
                 balanceWidgetMode: u.b.DEFAULT
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(x, {
                 earnedOrbsQuantity: t,
                 ctaOnClick: async () => {
                     await f(), s();

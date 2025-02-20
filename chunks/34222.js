@@ -1,5 +1,5 @@
 n.d(t, {
-    QM: () => i.QM,
-    ds: () => i.ds
+    QM: () => r.QM,
+    ds: () => r.ds
 });
-var i = n(536703);
+var r = n(536703);

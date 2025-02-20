@@ -1,122 +1,122 @@
-l.d(t, { Z: () => x }), l(47120);
-var n = l(200651),
-    a = l(192379),
-    i = l(392711),
-    o = l.n(i),
-    s = l(442837),
-    r = l(481060),
-    c = l(48210),
-    d = l(605436),
-    C = l(430824),
-    u = l(496675),
-    m = l(388032),
-    h = l(660662);
-let x = (e) => {
-    let { guild: t, transitionState: l, onClose: i } = e,
-        [x, g] = a.useState(7),
-        [p, _] = a.useState(null),
-        [b, f] = a.useState([]),
-        j = a.useCallback(async () => {
-            _(null), _(await c.Z.updateEstimate(t.id, x, b));
-        }, [x, t.id, b]);
-    a.useEffect(() => {
-        j();
-    }, [j]);
-    let H = (0, s.Wu)(
-        [u.Z, C.Z],
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(392711),
+    a = n.n(o),
+    i = n(442837),
+    s = n(481060),
+    c = n(48210),
+    u = n(605436),
+    d = n(430824),
+    C = n(496675),
+    m = n(388032),
+    b = n(19500);
+let p = (e) => {
+    let { guild: t, transitionState: n, onClose: o } = e,
+        [p, f] = l.useState(7),
+        [h, j] = l.useState(null),
+        [g, x] = l.useState([]),
+        v = l.useCallback(async () => {
+            j(null), j(await c.Z.updateEstimate(t.id, p, g));
+        }, [p, t.id, g]);
+    l.useEffect(() => {
+        v();
+    }, [v]);
+    let y = (0, i.Wu)(
+        [C.Z, d.Z],
         () => {
-            let e = u.Z.getHighestRole(t);
-            return o()(C.Z.getRoles(t.id))
+            let e = C.Z.getHighestRole(t);
+            return a()(d.Z.getRoles(t.id))
                 .sortBy((e) => e.position)
-                .filter((e) => !(0, d.pM)(t.id, e.id))
-                .filter((l) => u.Z.isRoleHigher(t, e, l))
+                .filter((e) => !(0, u.pM)(t.id, e.id))
+                .filter((n) => C.Z.isRoleHigher(t, e, n))
                 .value()
                 .map((e) => {
-                    let { id: t, name: l } = e;
+                    let { id: t, name: n } = e;
                     return {
-                        label: l,
+                        label: n,
                         value: t
                     };
                 });
         },
         [t]
     );
-    return (0, n.jsxs)(r.Y0X, {
-        transitionState: l,
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: n,
         children: [
-            (0, n.jsx)(r.xBx, {
+            (0, r.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, n.jsxs)(r.X6q, {
+                children: (0, r.jsxs)(s.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: [m.intl.string(m.t.zbyz7u), '\u2014', null != t ? t.toString() : '']
+                    children: [m.NW.string(m.t.zbyz7u), '\u2014', null != t ? t.toString() : '']
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: h.content,
+            (0, r.jsxs)('div', {
+                className: b.content,
                 children: [
-                    (0, n.jsx)(r.xJW, {
-                        title: m.intl.string(m.t.YccTvL),
-                        children: (0, n.jsx)(r.FXm, {
-                            value: x,
+                    (0, r.jsx)(s.xJW, {
+                        title: m.NW.string(m.t.YccTvL),
+                        children: (0, r.jsx)(s.FXm, {
+                            value: p,
                             options: [
                                 {
-                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 7 }),
+                                    name: m.NW.formatToPlainString(m.t.FM1dHR, { days: 7 }),
                                     value: 7
                                 },
                                 {
-                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 30 }),
+                                    name: m.NW.formatToPlainString(m.t.FM1dHR, { days: 30 }),
                                     value: 30
                                 }
                             ],
                             onChange: (e) => {
                                 let { value: t } = e;
-                                g(t);
+                                f(t);
                             },
-                            className: h.spacing
+                            className: b.spacing
                         })
                     }),
-                    (0, n.jsx)(r.xJW, {
-                        title: m.intl.string(m.t.buoe19),
-                        children: (0, n.jsx)(r.zJl, {
-                            className: h.scroller,
-                            children: (0, n.jsx)(r.VcW, {
+                    (0, r.jsx)(s.xJW, {
+                        title: m.NW.string(m.t.buoe19),
+                        children: (0, r.jsx)(s.zJl, {
+                            className: b.scroller,
+                            children: (0, r.jsx)(s.VcW, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: b,
-                                onChange: (e) => f(e),
-                                options: H
+                                value: g,
+                                onChange: (e) => x(e),
+                                options: y
                             })
                         })
                     }),
-                    (0, n.jsx)(r.R94, {
-                        type: r.R94.Types.DESCRIPTION,
-                        className: h.spacing,
+                    (0, r.jsx)(s.R94, {
+                        type: s.R94.Types.DESCRIPTION,
+                        className: b.spacing,
                         children:
-                            b.length > 0
-                                ? m.intl.format(m.t['5WxHHh'], {
-                                      members: p,
-                                      days: x
+                            g.length > 0
+                                ? m.NW.format(m.t['5WxHHh'], {
+                                      members: h,
+                                      days: p
                                   })
-                                : m.intl.format(m.t.f13az8, {
-                                      members: p,
-                                      days: x
+                                : m.NW.format(m.t.f13az8, {
+                                      members: h,
+                                      days: p
                                   })
                     })
                 ]
             }),
-            (0, n.jsxs)(r.mzw, {
+            (0, r.jsxs)(s.mzw, {
                 children: [
-                    (0, n.jsx)(r.zxk, {
+                    (0, r.jsx)(s.zxk, {
                         onClick: () => {
-                            c.Z.prune(t.id, x, b), i();
+                            c.Z.prune(t.id, p, g), o();
                         },
-                        children: m.intl.string(m.t['2mIlKS'])
+                        children: m.NW.string(m.t['2mIlKS'])
                     }),
-                    (0, n.jsx)(r.zxk, {
-                        look: r.zxk.Looks.LINK,
-                        color: r.zxk.Colors.PRIMARY,
-                        onClick: i,
-                        children: m.intl.string(m.t['ETE/oK'])
+                    (0, r.jsx)(s.zxk, {
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
+                        onClick: o,
+                        children: m.NW.string(m.t['ETE/oK'])
                     })
                 ]
             })

@@ -1,41 +1,41 @@
-n.d(e, { Z: () => v });
+n.d(e, { Z: () => y });
 var i,
     E,
     l,
     _ = n(979079),
-    a = n.n(_),
-    A = n(442837),
+    A = n.n(_),
+    a = n(442837),
     r = n(570140),
     u = n(531441),
     o = n(800530);
 let S = {},
     s = {},
-    c = { state: u.Sn.ALL_GOOD },
-    T = !1,
+    T = { state: u.Sn.ALL_GOOD },
+    c = !1,
     U = !1,
     d = null,
     p = null,
     f = !1,
     g = !1,
-    F = [],
-    C = !1,
+    C = [],
+    F = !1,
     I = null,
     R = o.bK.DIDNT_VIOLATE_POLICY,
     D = '',
-    L = '',
     H = '',
+    L = '',
     N = 0,
     O = null,
-    b = !1,
-    P = o.oE.NONE,
+    P = !1,
+    h = o.oE.NONE,
     Y = null;
-function B(t) {
+function b(t) {
     let {} = t;
-    (H = ''), (O = null), (b = !1);
+    (L = ''), (O = null), (P = !1);
 }
-class h extends (l = A.ZP.Store) {
+class B extends (l = a.ZP.Store) {
     isFetching() {
-        return T;
+        return c;
     }
     getClassifications() {
         return Object.values(S);
@@ -44,7 +44,7 @@ class h extends (l = A.ZP.Store) {
         return S[t];
     }
     getAccountStanding() {
-        return c;
+        return T;
     }
     getFetchError() {
         return d;
@@ -65,7 +65,7 @@ class h extends (l = A.ZP.Store) {
         return g;
     }
     getAppealEligibility() {
-        return F;
+        return C;
     }
     getAppealSignal() {
         return R;
@@ -74,25 +74,25 @@ class h extends (l = A.ZP.Store) {
         return D;
     }
     getIsSubmitting() {
-        return C;
+        return F;
     }
     getSubmitError() {
         return I;
     }
     getUsername() {
-        return L;
+        return H;
     }
     getAgeVerificationWebviewUrl() {
-        return H;
+        return L;
     }
     getAgeVerificationError() {
         return O;
     }
     getIsLoadingAgeVerification() {
-        return b;
+        return P;
     }
     getAgeCheckStatus() {
-        return P;
+        return h;
     }
     getAgeCheckError() {
         return Y;
@@ -102,36 +102,36 @@ class h extends (l = A.ZP.Store) {
     }
 }
 (E = 'SafetyHubStore'),
-    (i = 'displayName') in h
-        ? Object.defineProperty(h, i, {
+    (i = 'displayName') in B
+        ? Object.defineProperty(B, i, {
               value: E,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[i] = E);
-let v = new h(r.Z, {
+        : (B[i] = E);
+let y = new B(r.Z, {
     SAFETY_HUB_FETCH_START: function (t) {
-        T = !0;
+        c = !0;
     },
     SAFETY_HUB_FETCH_SUCCESS: function (t) {
         let { classifications: e, accountStanding: n, isDsaEligible: i, isAppealEligible: E, username: l, appealEligibility: _ } = t;
-        (S = a()(e, 'id')), (c = n), (f = i), (g = E), (T = !1), (U = !0), (d = null), (L = l), (F = _);
+        (S = A()(e, 'id')), (T = n), (f = i), (g = E), (c = !1), (U = !0), (d = null), (H = l), (C = _);
     },
     SAFETY_HUB_FETCH_FAILURE: function (t) {
         let { error: e } = t;
-        (T = !1), (U = !1), (d = e);
+        (c = !1), (U = !1), (d = e);
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_START: function (t) {
-        (s[t.classificationId] = u.OY.PENDING), (T = !0);
+        (s[t.classificationId] = u.OY.PENDING), (c = !0);
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (t) {
         let { classification: e, accountStanding: n, isDsaEligible: i, username: E, isAppealEligible: l } = t;
-        (S[e.id] = e), (s[e.id] = u.OY.SUCCESS), (c = n), (T = !1), (d = null), (f = i), (g = l), (U = !0), (L = E);
+        (S[e.id] = e), (s[e.id] = u.OY.SUCCESS), (T = n), (c = !1), (d = null), (f = i), (g = l), (U = !0), (H = E);
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (t) {
         let { error: e, classificationId: n } = t;
-        (T = !1), (d = e), (s[n] = u.OY.FAILED), (U = !1);
+        (c = !1), (d = e), (s[n] = u.OY.FAILED), (U = !1);
     },
     SAFETY_HUB_APPEAL_OPEN: function (t) {
         let { classificationId: e } = t;
@@ -150,51 +150,51 @@ let v = new h(r.Z, {
     },
     SAFETY_HUB_REQUEST_REVIEW_START: function (t) {
         let {} = t;
-        (C = !0), (I = null);
+        (F = !0), (I = null);
     },
     SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function (t) {
         let { classificationId: e } = t;
-        (C = !1), (I = null), (S[e].appeal_status = { status: u.hQ.REVIEW_PENDING });
+        (F = !1), (I = null), (S[e].appeal_status = { status: u.hQ.REVIEW_PENDING });
     },
     SAFETY_HUB_REQUEST_REVIEW_FAILURE: function (t) {
         let { error: e } = t;
-        (C = !1), (I = e);
+        (F = !1), (I = e);
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function (t) {
         let {} = t;
-        (H = ''), (O = null), (b = !0);
+        (L = ''), (O = null), (P = !0);
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (t) {
         let { verificationWebviewUrl: e } = t;
-        (H = e), (O = null), (b = !1);
+        (L = e), (O = null), (P = !1);
     },
     SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (t) {
         let { error: e } = t;
-        (H = ''), (O = e), (b = !1);
+        (L = ''), (O = e), (P = !1);
     },
-    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: B,
-    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: B,
+    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: b,
+    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: b,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS: function (t) {
         let {} = t;
-        for (let t in ((P = o.oE.LOADING), S)) S[t].is_coppa && (S[t].appeal_status = { status: u.hQ.REVIEW_PENDING });
+        for (let t in ((h = o.oE.LOADING), S)) S[t].is_coppa && (S[t].appeal_status = { status: u.hQ.REVIEW_PENDING });
     },
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: function (t) {
         let {} = t;
-        (P = o.oE.LOADING), (Y = null);
+        (h = o.oE.LOADING), (Y = null);
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: function (t) {
         let {} = t;
-        (P = o.oE.LOADING), (Y = null), (N += 1);
+        (h = o.oE.LOADING), (Y = null), (N += 1);
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (t) {
         let { success: e } = t;
-        (P = e ? o.oE.SUCCESS : N < o.o6 ? o.oE.LOADING : o.oE.FAILURE), (Y = null);
+        (h = e ? o.oE.SUCCESS : N < o.o6 ? o.oE.LOADING : o.oE.FAILURE), (Y = null);
     },
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (t) {
         let { error: e } = t;
-        (P = o.oE.ERROR), (Y = e);
+        (h = o.oE.ERROR), (Y = e);
     },
     LOGOUT: function () {
-        (T = !1), (S = {}), (c = { state: u.Sn.ALL_GOOD }), (p = null), (R = o.bK.DIDNT_VIOLATE_POLICY), (D = ''), (F = []);
+        (c = !1), (S = {}), (T = { state: u.Sn.ALL_GOOD }), (p = null), (R = o.bK.DIDNT_VIOLATE_POLICY), (D = ''), (C = []);
     }
 });

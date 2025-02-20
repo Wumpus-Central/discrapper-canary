@@ -1,47 +1,47 @@
-let i = n(689118),
-    r = n(988324).Buffer,
-    a = n(206424),
-    s = n(375990);
-function o(e) {
+let r = n(689118),
+    i = n(988324).Buffer,
+    o = n(206424),
+    a = n(375990);
+function s(e) {
     (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new l()), this.tree._init(e.body);
 }
 function l(e) {
-    a.call(this, 'der', e);
+    o.call(this, 'der', e);
 }
-function u(e) {
+function c(e) {
     return e < 10 ? '0' + e : e;
 }
-function c(e, t, n, i) {
-    let r;
-    if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), s.tagByName.hasOwnProperty(e))) r = s.tagByName[e];
+function u(e, t, n, r) {
+    let i;
+    if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), a.tagByName.hasOwnProperty(e))) i = a.tagByName[e];
     else {
-        if ('number' != typeof e || (0 | e) !== e) return i.error('Unknown tag: ' + e);
-        r = e;
+        if ('number' != typeof e || (0 | e) !== e) return r.error('Unknown tag: ' + e);
+        i = e;
     }
-    return r >= 31 ? i.error('Multi-octet tag encoding unsupported') : (t || (r |= 32), (r |= s.tagClassByName[n || 'universal'] << 6));
+    return i >= 31 ? r.error('Multi-octet tag encoding unsupported') : (t || (i |= 32), (i |= a.tagClassByName[n || 'universal'] << 6));
 }
-(e.exports = o),
-    (o.prototype.encode = function (e, t) {
+(e.exports = s),
+    (s.prototype.encode = function (e, t) {
         return this.tree._encode(e, t).join();
     }),
-    i(l, a),
-    (l.prototype._encodeComposite = function (e, t, n, i) {
-        let a = c(e, t, n, this.reporter);
-        if (i.length < 128) {
-            let e = r.alloc(2);
-            return (e[0] = a), (e[1] = i.length), this._createEncoderBuffer([e, i]);
+    r(l, o),
+    (l.prototype._encodeComposite = function (e, t, n, r) {
+        let o = u(e, t, n, this.reporter);
+        if (r.length < 128) {
+            let e = i.alloc(2);
+            return (e[0] = o), (e[1] = r.length), this._createEncoderBuffer([e, r]);
         }
-        let s = 1;
-        for (let e = i.length; e >= 256; e >>= 8) s++;
-        let o = r.alloc(2 + s);
-        (o[0] = a), (o[1] = 128 | s);
-        for (let e = 1 + s, t = i.length; t > 0; e--, t >>= 8) o[e] = 255 & t;
-        return this._createEncoderBuffer([o, i]);
+        let a = 1;
+        for (let e = r.length; e >= 256; e >>= 8) a++;
+        let s = i.alloc(2 + a);
+        (s[0] = o), (s[1] = 128 | a);
+        for (let e = 1 + a, t = r.length; t > 0; e--, t >>= 8) s[e] = 255 & t;
+        return this._createEncoderBuffer([s, r]);
     }),
     (l.prototype._encodeStr = function (e, t) {
         if ('bitstr' === t) return this._createEncoderBuffer([0 | e.unused, e.data]);
         if ('bmpstr' === t) {
-            let t = r.alloc(2 * e.length);
+            let t = i.alloc(2 * e.length);
             for (let n = 0; n < e.length; n++) t.writeUInt16BE(e.charCodeAt(n), 2 * n);
             return this._createEncoderBuffer(t);
         }
@@ -66,23 +66,23 @@ function c(e, t, n, i) {
             if (e[1] >= 40) return this.reporter.error('Second objid identifier OOB');
             e.splice(0, 2, 40 * e[0] + e[1]);
         }
-        let i = 0;
+        let r = 0;
         for (let t = 0; t < e.length; t++) {
             let n = e[t];
-            for (i++; n >= 128; n >>= 7) i++;
+            for (r++; n >= 128; n >>= 7) r++;
         }
-        let a = r.alloc(i),
-            s = a.length - 1;
+        let o = i.alloc(r),
+            a = o.length - 1;
         for (let t = e.length - 1; t >= 0; t--) {
             let n = e[t];
-            for (a[s--] = 127 & n; (n >>= 7) > 0; ) a[s--] = 128 | (127 & n);
+            for (o[a--] = 127 & n; (n >>= 7) > 0; ) o[a--] = 128 | (127 & n);
         }
-        return this._createEncoderBuffer(a);
+        return this._createEncoderBuffer(o);
     }),
     (l.prototype._encodeTime = function (e, t) {
         let n;
-        let i = new Date(e);
-        return 'gentime' === t ? (n = [u(i.getUTCFullYear()), u(i.getUTCMonth() + 1), u(i.getUTCDate()), u(i.getUTCHours()), u(i.getUTCMinutes()), u(i.getUTCSeconds()), 'Z'].join('')) : 'utctime' === t ? (n = [u(i.getUTCFullYear() % 100), u(i.getUTCMonth() + 1), u(i.getUTCDate()), u(i.getUTCHours()), u(i.getUTCMinutes()), u(i.getUTCSeconds()), 'Z'].join('')) : this.reporter.error('Encoding ' + t + ' time is not supported yet'), this._encodeStr(n, 'octstr');
+        let r = new Date(e);
+        return 'gentime' === t ? (n = [c(r.getUTCFullYear()), c(r.getUTCMonth() + 1), c(r.getUTCDate()), c(r.getUTCHours()), c(r.getUTCMinutes()), c(r.getUTCSeconds()), 'Z'].join('')) : 'utctime' === t ? (n = [c(r.getUTCFullYear() % 100), c(r.getUTCMonth() + 1), c(r.getUTCDate()), c(r.getUTCHours()), c(r.getUTCMinutes()), c(r.getUTCSeconds()), 'Z'].join('')) : this.reporter.error('Encoding ' + t + ' time is not supported yet'), this._encodeStr(n, 'octstr');
     }),
     (l.prototype._encodeNull = function () {
         return this._createEncoderBuffer('');
@@ -93,36 +93,36 @@ function c(e, t, n, i) {
             if (!t.hasOwnProperty(e)) return this.reporter.error("Values map doesn't contain: " + JSON.stringify(e));
             e = t[e];
         }
-        if ('number' != typeof e && !r.isBuffer(e)) {
+        if ('number' != typeof e && !i.isBuffer(e)) {
             let t = e.toArray();
-            !e.sign && 128 & t[0] && t.unshift(0), (e = r.from(t));
+            !e.sign && 128 & t[0] && t.unshift(0), (e = i.from(t));
         }
-        if (r.isBuffer(e)) {
+        if (i.isBuffer(e)) {
             let t = e.length;
             0 === e.length && t++;
-            let n = r.alloc(t);
+            let n = i.alloc(t);
             return e.copy(n), 0 === e.length && (n[0] = 0), this._createEncoderBuffer(n);
         }
         if (e < 128) return this._createEncoderBuffer(e);
         if (e < 256) return this._createEncoderBuffer([0, e]);
         let n = 1;
         for (let t = e; t >= 256; t >>= 8) n++;
-        let i = Array(n);
-        for (let t = i.length - 1; t >= 0; t--) (i[t] = 255 & e), (e >>= 8);
-        return 128 & i[0] && i.unshift(0), this._createEncoderBuffer(r.from(i));
+        let r = Array(n);
+        for (let t = r.length - 1; t >= 0; t--) (r[t] = 255 & e), (e >>= 8);
+        return 128 & r[0] && r.unshift(0), this._createEncoderBuffer(i.from(r));
     }),
     (l.prototype._encodeBool = function (e) {
-        return this._createEncoderBuffer(e ? 255 : 0);
+        return this._createEncoderBuffer(255 * !!e);
     }),
     (l.prototype._use = function (e, t) {
         return 'function' == typeof e && (e = e(t)), e._getEncoder('der').tree;
     }),
     (l.prototype._skipDefault = function (e, t, n) {
-        let i;
-        let r = this._baseState;
-        if (null === r.default) return !1;
-        let a = e.join();
-        if ((void 0 === r.defaultBuffer && (r.defaultBuffer = this._encodeValue(r.default, t, n).join()), a.length !== r.defaultBuffer.length)) return !1;
-        for (i = 0; i < a.length; i++) if (a[i] !== r.defaultBuffer[i]) return !1;
+        let r;
+        let i = this._baseState;
+        if (null === i.default) return !1;
+        let o = e.join();
+        if ((void 0 === i.defaultBuffer && (i.defaultBuffer = this._encodeValue(i.default, t, n).join()), o.length !== i.defaultBuffer.length)) return !1;
+        for (r = 0; r < o.length; r++) if (o[r] !== i.defaultBuffer[r]) return !1;
         return !0;
     });

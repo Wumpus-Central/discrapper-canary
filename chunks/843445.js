@@ -1,8 +1,8 @@
 n.d(t, {
     b: () => a,
-    x: () => i
+    x: () => r
 });
-let i = 1000,
+let r = 1000,
     a = Object.freeze({
         SMALL: 'small',
         LARGE: 'large'

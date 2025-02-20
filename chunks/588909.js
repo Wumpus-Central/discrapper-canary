@@ -21,8 +21,8 @@ var r = n(704215),
     y = n(701488),
     E = n(388032),
     x = n(825499),
-    S = n(361777);
-function C(e) {
+    I = n(361777);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +47,7 @@ function C(e) {
     }
     return e;
 }
-function I(e) {
+function C(e) {
     let { game: t } = e,
         n = (0, c.q)(t.id);
     return null == n
@@ -84,7 +84,7 @@ function j(e, t) {
                             a.Z.setInputLocked(!1, (0, f.QF)()),
                             (0, o.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('79477'), n.e('17923')]).then(n.bind(n, 60594));
+                                    let { default: e } = await Promise.all([n.e('79477'), n.e('20591')]).then(n.bind(n, 60594));
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
@@ -105,7 +105,7 @@ function j(e, t) {
                                                           }),
                                                     e
                                                 );
-                                            })(C({}, t), {
+                                            })(S({}, t), {
                                                 selectSource: !1,
                                                 guildId: r.type === v.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
                                                 selectGuild: r.type === v.nc.GO_LIVE_NON_VOICE,
@@ -121,7 +121,7 @@ function j(e, t) {
                 if ((0, h.Rb)('welcomeNotification').allowActivityWidget) {
                     y.renderFooter = () =>
                         (0, i.jsx)('div', {
-                            className: S.container,
+                            className: I.container,
                             children: (0, i.jsx)(g.lX, {
                                 gamingId: null == e ? void 0 : e.id,
                                 maxUserShowCount: 5
@@ -142,11 +142,11 @@ function j(e, t) {
         Z = null != e ? void 0 : E.NW.string(E.t.y7BLbm),
         N = j ? w : E.NW.string(E.t['prl+ra']),
         P = j ? Z : E.NW.string(E.t.R3CpPT);
-    return C(
+    return S(
         {
             icon:
                 null != e
-                    ? (0, i.jsx)(I, { game: e })
+                    ? (0, i.jsx)(C, { game: e })
                     : (0, i.jsx)('img', {
                           src: n(328756),
                           className: x.icon,

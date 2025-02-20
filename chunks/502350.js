@@ -1,16 +1,16 @@
 function t(e) {
     let t = '[^\\(\\)\\[\\]\\{\\}",\'`;#|\\\\\\s]+',
         n = '(-|\\+)?\\d+([./]\\d+)?',
-        i = n + '[+\\-]' + n + 'i',
-        r = {
+        r = n + '[+\\-]' + n + 'i',
+        i = {
             $pattern: t,
             built_in: "case-lambda call/cc class define-class exit-handler field import inherit init-field interface let*-values let-values let/ec mixin opt-lambda override protect provide public rename require require-for-syntax syntax syntax-case syntax-error unit/sig unless when with-syntax and begin call-with-current-continuation call-with-input-file call-with-output-file case cond define define-syntax delay do dynamic-wind else for-each if lambda let let* let-syntax letrec letrec-syntax map or syntax-rules ' * + , ,@ - ... / ; < <= = => > >= ` abs acos angle append apply asin assoc assq assv atan boolean? caar cadr call-with-input-file call-with-output-file call-with-values car cdddar cddddr cdr ceiling char->integer char-alphabetic? char-ci<=? char-ci<? char-ci=? char-ci>=? char-ci>? char-downcase char-lower-case? char-numeric? char-ready? char-upcase char-upper-case? char-whitespace? char<=? char<? char=? char>=? char>? char? close-input-port close-output-port complex? cons cos current-input-port current-output-port denominator display eof-object? eq? equal? eqv? eval even? exact->inexact exact? exp expt floor force gcd imag-part inexact->exact inexact? input-port? integer->char integer? interaction-environment lcm length list list->string list->vector list-ref list-tail list? load log magnitude make-polar make-rectangular make-string make-vector max member memq memv min modulo negative? newline not null-environment null? number->string number? numerator odd? open-input-file open-output-file output-port? pair? peek-char port? positive? procedure? quasiquote quote quotient rational? rationalize read read-char real-part real? remainder reverse round scheme-report-environment set! set-car! set-cdr! sin sqrt string string->list string->number string->symbol string-append string-ci<=? string-ci<? string-ci=? string-ci>=? string-ci>? string-copy string-fill! string-length string-ref string-set! string<=? string<? string=? string>=? string>? string? substring symbol->string symbol? tan transcript-off transcript-on truncate values vector vector->list vector-fill! vector-length vector-ref vector-set! with-input-from-file with-output-to-file write write-char zero?"
         },
-        a = {
+        o = {
             className: 'literal',
             begin: '(#t|#f|#\\\\' + t + '|#\\\\.)'
         },
-        s = {
+        a = {
             className: 'number',
             variants: [
                 {
@@ -18,7 +18,7 @@ function t(e) {
                     relevance: 0
                 },
                 {
-                    begin: i,
+                    begin: r,
                     relevance: 0
                 },
                 { begin: '#b[0-1]+(/[0-1]+)?' },
@@ -26,13 +26,13 @@ function t(e) {
                 { begin: '#x[0-9a-f]+(/[0-9a-f]+)?' }
             ]
         },
-        o = e.QUOTE_STRING_MODE,
+        s = e.QUOTE_STRING_MODE,
         l = [e.COMMENT(';', '$', { relevance: 0 }), e.COMMENT('#\\|', '\\|#')],
-        u = {
+        c = {
             begin: t,
             relevance: 0
         },
-        c = {
+        u = {
             className: 'symbol',
             begin: "'" + t
         },
@@ -46,17 +46,17 @@ function t(e) {
                 {
                     begin: '\\(',
                     end: '\\)',
-                    contains: ['self', a, o, s, u, c]
+                    contains: ['self', o, s, a, c, u]
                 }
             ]
         },
-        _ = {
+        p = {
             className: 'name',
             relevance: 0,
             begin: t,
-            keywords: r
+            keywords: i
         },
-        p = {
+        _ = {
             variants: [
                 {
                     begin: '\\(',
@@ -73,7 +73,7 @@ function t(e) {
                     endsWithParent: !0,
                     returnBegin: !0,
                     contains: [
-                        _,
+                        p,
                         {
                             endsParent: !0,
                             variants: [
@@ -86,21 +86,21 @@ function t(e) {
                                     end: /\]/
                                 }
                             ],
-                            contains: [u]
+                            contains: [c]
                         }
                     ]
                 },
-                _,
+                p,
                 d
             ]
         };
     return (
-        (d.contains = [a, s, o, u, c, f, p].concat(l)),
+        (d.contains = [o, a, s, c, u, f, _].concat(l)),
         {
             name: 'Scheme',
             aliases: ['scm'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), s, o, c, f, p].concat(l)
+            contains: [e.SHEBANG(), a, s, u, f, _].concat(l)
         }
     );
 }

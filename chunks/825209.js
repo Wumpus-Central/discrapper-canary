@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(47120), n(653041);
 var i = n(200651),
     s = n(192379),
-    l = n(921738),
-    r = n.n(l),
+    r = n(921738),
+    l = n.n(r),
     o = n(213005),
     a = n(455279),
     d = n(358085),
@@ -43,11 +43,11 @@ class g extends s.PureComponent {
     render() {
         let e, t;
         let { codes: n, mode: s } = this.state,
-            { disabled: l } = this.props;
+            { disabled: r } = this.props;
         return (
             p ? ((t = h.ZP.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange)) : d.isPlatformEmbedded || (e = this.handleComboKeys),
             (0, i.jsx)(a.Z, {
-                disabled: l,
+                disabled: r,
                 value: n,
                 mode: s,
                 onClick: this.toggleRecordMode,
@@ -73,7 +73,7 @@ class g extends s.PureComponent {
             }),
             c(this, 'handleComboKeys', (e, t, n) => {
                 if ((n.preventDefault(), 'keydown' === n.type)) {
-                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, r()(e), u.CgE.BROWSER]),
+                    let e = t.map((e) => [u.MoX.KEYBOARD_KEY, l()(e), u.CgE.BROWSER]),
                         { keyCode: i } = n;
                     null ==
                         e.find((e) => {

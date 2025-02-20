@@ -1,99 +1,99 @@
-n.d(t, { Z: () => C }), n(724458);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+n.d(t, { Z: () => x });
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(921801),
     d = n(663389),
     u = n(960412),
     m = n(151662),
     g = n(930441),
-    h = n(726985),
-    x = n(388032),
-    _ = n(282088),
-    p = n(483938);
-function E(e) {
-    let { label: t, onChange: n, enabled: s, subLabel: r } = e;
-    return (0, i.jsx)(o.j7V, {
-        value: !!s,
+    p = n(726985),
+    h = n(388032),
+    f = n(101499),
+    b = n(455812);
+function N(e) {
+    let { label: t, onChange: n, enabled: i, subLabel: s } = e;
+    return (0, r.jsx)(o.j7V, {
+        value: !!i,
         onChange: n,
-        note: r,
+        note: s,
         children: t
     });
 }
-function C() {
-    let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
-        t = s.createRef(),
-        { categories: n, initialized: r } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
-    s.useEffect(() => {
-        if (null == r) (0, u.Y7)();
+function x() {
+    let e = (0, l.e7)([d.Z], () => d.Z.getSubsection()),
+        t = i.createRef(),
+        { categories: n, initialized: s } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
+    i.useEffect(() => {
+        if (null == s) (0, u.Y7)();
         else if (e === g.vG.toUpperCase()) {
             var n;
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
-    }, [r, t, e]);
-    let C = g.M0.reduce((e, t) => e || !!n[t], !1),
-        f = {
-            [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+    }, [s, t, e]);
+    let x = g.M0.reduce((e, t) => e || !!n[t], !1),
+        _ = {
+            [g.$Z.COMMUNICATION]: p.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [g.$Z.SOCIAL]: p.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: p.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [g.$Z.TIPS]: p.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: p.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
-    return r
-        ? (0, i.jsxs)(c.F, {
-              setting: h.s6.NOTIFICATIONS_EMAILS,
+    return s
+        ? (0, r.jsxs)(c.F, {
+              setting: p.s6.NOTIFICATIONS_EMAILS,
               children: [
-                  (0, i.jsx)('div', { ref: t }),
-                  (0, i.jsxs)(o.hjN, {
-                      className: l()(p.marginTop40),
+                  (0, r.jsx)('div', { ref: t }),
+                  (0, r.jsxs)(o.hjN, {
+                      className: a()(b.marginTop40),
                       tag: o.RB0.H1,
-                      title: x.intl.string(x.t.TPchzM),
+                      title: h.NW.string(h.t.TPchzM),
                       children: [
                           g.Od.map((e) => {
-                              let { category: t, label: s, subLabel: r } = e,
-                                  l = f[t],
-                                  a = (0, i.jsx)(
-                                      E,
+                              let { category: t, label: i, subLabel: s } = e,
+                                  a = _[t],
+                                  l = (0, r.jsx)(
+                                      N,
                                       {
-                                          label: s(),
-                                          subLabel: r(),
+                                          label: i(),
+                                          subLabel: s(),
                                           enabled: n[t],
                                           onChange: (e) => {
                                               (0, u.pR)(t, e);
                                           }
                                       },
-                                      s()
+                                      i()
                                   );
-                              return null != l
-                                  ? (0, i.jsx)(
+                              return null != a
+                                  ? (0, r.jsx)(
                                         c.F,
                                         {
-                                            setting: l,
-                                            children: a
+                                            setting: a,
+                                            children: l
                                         },
-                                        s()
+                                        i()
                                     )
-                                  : a;
+                                  : l;
                           }),
-                          (0, i.jsxs)(c.F, {
-                              setting: h.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+                          (0, r.jsxs)(c.F, {
+                              setting: p.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
-                                  (0, i.jsx)(o.zxk, {
-                                      className: _.marketingUnsubscribeButton,
-                                      disabled: !C,
+                                  (0, r.jsx)(o.zxk, {
+                                      className: f.marketingUnsubscribeButton,
+                                      disabled: !x,
                                       look: o.iLD.LINK,
                                       color: o.Ttl.LINK,
                                       onClick: u.oc,
-                                      children: x.intl.string(x.t.Ra9Pws)
+                                      children: h.NW.string(h.t.Ra9Pws)
                                   }),
-                                  (0, i.jsx)(o.R94, {
+                                  (0, r.jsx)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: x.intl.string(x.t.iYjQ8f)
+                                      children: h.NW.string(h.t.iYjQ8f)
                                   }),
-                                  (0, i.jsx)(o.$i$, { className: l()(p.marginTop40, p.marginBottom40) })
+                                  (0, r.jsx)(o.$i$, { className: a()(b.marginTop40, b.marginBottom40) })
                               ]
                           })
                       ]

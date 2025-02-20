@@ -1,8 +1,8 @@
-n.d(t, { S: () => u }), n(47120);
-var i,
-    r = n(200651),
-    a = n(192379);
-function s(e, t, n) {
+n.d(t, { S: () => c }), n(47120);
+var r,
+    i = n(200651),
+    o = n(192379);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = 'file-input',
+let s = 'file-input',
     l = (e) => ({
         position: 'absolute',
         top: 0,
@@ -26,39 +26,39 @@ let o = 'file-input',
         cursor: e ? 'not-allowed' : 'pointer',
         fontSize: 0
     });
-class u extends (i = a.Component) {
+class c extends (r = o.Component) {
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: i, 'aria-label': a, 'aria-hidden': s, id: u } = this.props;
+        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': o, 'aria-hidden': a, id: c } = this.props;
         if (this.props.embedded)
-            return (0, r.jsx)('div', {
+            return (0, i.jsx)('div', {
                 role: 'button',
                 style: l(e),
-                className: n || o,
+                className: n || s,
                 tabIndex: t,
                 onKeyDown: e ? void 0 : this.handleNativeKeyDown,
                 onClick: e ? void 0 : this.handleNativeClick,
                 'aria-disabled': e,
-                'aria-label': a,
-                'aria-hidden': s || void 0
+                'aria-label': o,
+                'aria-hidden': a || void 0
             });
         {
-            let c = '';
+            let u = '';
             return (
-                this.props.filters && (c = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
-                (0, r.jsx)('input', {
-                    id: u,
+                this.props.filters && (u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+                (0, i.jsx)('input', {
+                    id: c,
                     style: l(e),
-                    className: n || o,
+                    className: n || s,
                     disabled: e,
                     type: 'file',
                     tabIndex: t,
                     onMouseDown: this.handleBrowserInputMouseDown,
                     onChange: this.props.onChange,
                     multiple: this.props.multiple,
-                    accept: c,
-                    name: i,
-                    'aria-label': a,
-                    'aria-hidden': s || void 0,
+                    accept: u,
+                    name: r,
+                    'aria-label': o,
+                    'aria-hidden': a || void 0,
                     ref: (e) => (this._input = e)
                 })
             );
@@ -66,22 +66,22 @@ class u extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            s(this, '_input', null),
-            s(this, 'activateUploadDialogue', () => {
+            a(this, '_input', null),
+            a(this, 'activateUploadDialogue', () => {
                 this.props.embedded ? this.handleNativeClick() : this._input && this._input.click();
             }),
-            s(this, 'handleNativeClick', () => {
+            a(this, 'handleNativeClick', () => {
                 this.props.handleNativeClick && this.props.handleNativeClick(this.props);
             }),
-            s(this, 'handleNativeKeyDown', (e) => {
+            a(this, 'handleNativeKeyDown', (e) => {
                 (' ' === e.key || 'Enter' === e.key) && this.handleNativeClick();
             }),
-            s(this, 'handleBrowserInputMouseDown', (e) => {
+            a(this, 'handleBrowserInputMouseDown', (e) => {
                 e.currentTarget.value = null;
             });
     }
 }
-s(u, 'defaultProps', {
+a(c, 'defaultProps', {
     multiple: !1,
     disabled: !1,
     tabIndex: 0

@@ -1,5 +1,5 @@
-var i = n(98958);
-function r(e) {
-    return 'function' == typeof e ? e : i;
+var r = n(98958);
+function i(e) {
+    return 'function' == typeof e ? e : r;
 }
-e.exports = r;
+e.exports = i;

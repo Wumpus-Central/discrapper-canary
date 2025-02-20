@@ -1,5 +1,5 @@
-n.d(t, { G: () => s });
-var i = n(74538);
-function s(e, t) {
-    return i.ZP.getNumIncludedPremiumGuildSubscriptionSlots(e.planId) + (null != t ? 1 : 0);
+n.d(t, { G: () => i });
+var r = n(74538);
+function i(e, t) {
+    return r.ZP.getNumIncludedPremiumGuildSubscriptionSlots(e.planId) + +(null != t);
 }

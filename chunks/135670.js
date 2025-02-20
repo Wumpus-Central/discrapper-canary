@@ -1,8 +1,8 @@
-n.d(t, { Z: () => u }), n(411104), n(47120);
-var i = n(47770),
-    r = n(46973),
-    a = n(65154);
-function s(e, t, n) {
+n.d(t, { Z: () => c }), n(411104), n(47120);
+var r = n(47770),
+    i = n(46973),
+    o = n(65154);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,22 +15,22 @@ function s(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     return null;
 }
 function l(e) {
     return null;
 }
-class u extends i.Z {
+class c extends r.Z {
     destroy() {
-        this.emit(r.aB.Destroy), this.removeAllListeners();
+        this.emit(i.aB.Destroy), this.removeAllListeners();
     }
     interact() {}
     supported() {
         return __OVERLAY__;
     }
     supports(e) {
-        return e === a.AN.AUTO_ENABLE && __OVERLAY__;
+        return e === o.AN.AUTO_ENABLE && __OVERLAY__;
     }
     connect(e, t, n) {
         throw Error('NOT_IMPLEMENTED');
@@ -63,7 +63,7 @@ class u extends i.Z {
         return Promise.reject(Error('getCodecSurvey is not implemented for MediaEngineDummy'));
     }
     getAudioSubsystem() {
-        return a.iA.STANDARD;
+        return o.iA.STANDARD;
     }
     getAudioLayer() {
         return '';
@@ -74,7 +74,7 @@ class u extends i.Z {
         return !1;
     }
     setDesktopSource(e) {
-        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Yn.DEFAULT;
+        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Yn.DEFAULT;
     }
     setSoundshareSource(e, t, n) {}
     getDesktopSource() {
@@ -152,6 +152,6 @@ class u extends i.Z {
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}
     constructor(...e) {
-        super(...e), s(this, 'Video', o), s(this, 'Camera', l);
+        super(...e), a(this, 'Video', s), a(this, 'Camera', l);
     }
 }

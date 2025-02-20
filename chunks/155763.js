@@ -1,7 +1,7 @@
-var i = n(622281),
-    r = n(332916),
-    a = n(641236)('match');
-e.exports = function (e) {
-    var t;
-    return i(e) && (void 0 !== (t = e[a]) ? !!t : 'RegExp' === r(e));
+var n = r(622281),
+    i = r(332916),
+    o = r(641236)('match');
+t.exports = function (t) {
+    var e;
+    return n(t) && (void 0 !== (e = t[o]) ? !!e : 'RegExp' === i(t));
 };

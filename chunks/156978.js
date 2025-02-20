@@ -1,20 +1,20 @@
-n.d(t, { Z: () => s });
-var i = n(200651),
-    l = n(192379),
-    r = n(122611),
-    a = n(896441);
-function s(e) {
+n.d(t, { Z: () => a });
+var r = n(200651),
+    i = n(192379),
+    l = n(122611),
+    o = n(221461);
+function a(e) {
     let { guild: t, setHasSubheader: n } = e,
-        s = l.useRef(null);
+        a = i.useRef(null);
     return (
-        l.useLayoutEffect(() => {
-            let e = s.current;
+        i.useLayoutEffect(() => {
+            let e = a.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, i.jsx)('div', {
-            className: a.container,
-            ref: s,
-            children: (0, i.jsx)(r.Z, { guild: t })
+        (0, r.jsx)('div', {
+            className: o.container,
+            ref: a,
+            children: (0, r.jsx)(l.Z, { guild: t })
         })
     );
 }

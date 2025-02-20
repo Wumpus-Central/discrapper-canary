@@ -2,16 +2,16 @@ n.d(t, {
     T: () => d,
     z: () => f
 });
-var i = n(493683),
-    r = n(529103),
-    a = n(292556),
-    s = n(703656),
-    o = n(768581),
+var r = n(493683),
+    i = n(529103),
+    o = n(292556),
+    a = n(703656),
+    s = n(768581),
     l = n(981631),
-    u = n(388032);
-function c(e, t, n) {
-    a.default.showNotification(
-        o.ZP.getUserAvatarURL(e),
+    c = n(388032);
+function u(e, t, n) {
+    o.default.showNotification(
+        s.ZP.getUserAvatarURL(e),
         e.username,
         t,
         {},
@@ -25,16 +25,16 @@ function c(e, t, n) {
     );
 }
 function d(e) {
-    c(e, u.intl.string(u.t['t3+Af3']), () => {
+    u(e, c.NW.string(c.t['t3+Af3']), () => {
         {
             let { openUserProfileModal: t } = n(171368);
             t({ userId: e.id });
         }
-        (0, s.uL)(l.Z5c.FRIENDS), r.Z.setSection(l.pJs.PENDING);
+        (0, a.uL)(l.Z5c.FRIENDS), i.Z.setSection(l.pJs.PENDING);
     });
 }
 function f(e) {
-    c(e, u.intl.string(u.t.MYr3KS), () => {
-        i.Z.openPrivateChannel(e.id);
+    u(e, c.NW.string(c.t.MYr3KS), () => {
+        r.Z.openPrivateChannel(e.id);
     });
 }

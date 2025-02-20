@@ -1,9 +1,9 @@
 function t(e) {
     let t = e.regex,
         n = /(?:(?:[a-zA-Z]|\.[._a-zA-Z])[._a-zA-Z0-9]*)|\.(?!\d)/,
-        i = t.either(/0[xX][0-9a-fA-F]+\.[0-9a-fA-F]*[pP][+-]?\d+i?/, /0[xX][0-9a-fA-F]+(?:[pP][+-]?\d+)?[Li]?/, /(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?[Li]?/),
-        r = /[=!<>:]=|\|\||&&|:::?|<-|<<-|->>|->|\|>|[-+*\/?!$&|:<=>@^~]|\*\*/,
-        a = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
+        r = t.either(/0[xX][0-9a-fA-F]+\.[0-9a-fA-F]*[pP][+-]?\d+i?/, /0[xX][0-9a-fA-F]+(?:[pP][+-]?\d+)?[Li]?/, /(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?[Li]?/),
+        i = /[=!<>:]=|\|\||&&|:::?|<-|<<-|->>|->|\|>|[-+*\/?!$&|:<=>@^~]|\*\*/,
+        o = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
     return {
         name: 'R',
         keywords: {
@@ -94,25 +94,25 @@ function t(e) {
                             1: 'operator',
                             2: 'number'
                         },
-                        match: [r, i]
+                        match: [i, r]
                     },
                     {
                         scope: {
                             1: 'operator',
                             2: 'number'
                         },
-                        match: [/%[^%]*%/, i]
+                        match: [/%[^%]*%/, r]
                     },
                     {
                         scope: {
                             1: 'punctuation',
                             2: 'number'
                         },
-                        match: [a, i]
+                        match: [o, r]
                     },
                     {
                         scope: { 2: 'number' },
-                        match: [/[^a-zA-Z0-9._]|^/, i]
+                        match: [/[^a-zA-Z0-9._]|^/, r]
                     }
                 ]
             },
@@ -123,12 +123,12 @@ function t(e) {
             {
                 scope: 'operator',
                 relevance: 0,
-                variants: [{ match: r }, { match: /%[^%]*%/ }]
+                variants: [{ match: i }, { match: /%[^%]*%/ }]
             },
             {
                 scope: 'punctuation',
                 relevance: 0,
-                match: a
+                match: o
             },
             {
                 begin: '`',

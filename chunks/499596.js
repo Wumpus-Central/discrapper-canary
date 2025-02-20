@@ -1,32 +1,32 @@
-l.d(n, { Z: () => x });
-var t = l(200651);
-l(192379);
-var i = l(120356),
-    s = l.n(i),
-    a = l(481060),
-    r = l(884338),
-    o = l(933557),
-    u = l(471445),
-    c = l(5192),
-    d = l(388032),
-    m = l(484810);
-function x(e) {
-    let { channel: n, users: l, selected: i = !1 } = e,
-        x = (0, o.ZP)(n),
-        g = null;
-    null != l &&
-        l.length > 0 &&
-        (g = (0, t.jsx)(r.Z, {
+t.d(n, { Z: () => g });
+var l = t(200651);
+t(192379);
+var i = t(120356),
+    r = t.n(i),
+    s = t(481060),
+    a = t(884338),
+    o = t(933557),
+    c = t(471445),
+    u = t(5192),
+    d = t(388032),
+    m = t(371232);
+function g(e) {
+    let { channel: n, users: t, selected: i = !1 } = e,
+        g = (0, o.ZP)(n),
+        h = null;
+    null != t &&
+        t.length > 0 &&
+        (h = (0, l.jsx)(a.Z, {
             guildId: n.guild_id,
             className: m.voiceUserList,
-            users: l,
+            users: t,
             renderUser: (e) => {
                 if (null == e) return null;
-                let l = c.ZP.getName(n.guild_id, n.id, e),
+                let t = u.ZP.getName(n.guild_id, n.id, e),
                     i = e.getAvatarURL(n.guild_id, 24);
-                return (0, t.jsx)(a.DY3, {
-                    text: l,
-                    children: (0, t.jsx)('img', {
+                return (0, l.jsx)(s.DY3, {
+                    text: t,
+                    children: (0, l.jsx)('img', {
                         src: null != i ? i : void 0,
                         'aria-label': e.username,
                         alt: '',
@@ -36,31 +36,31 @@ function x(e) {
             },
             renderMoreUsers: (e) => {
                 let i = (function (e, n) {
-                    let l = n.id,
-                        t = n.guild_id;
+                    let t = n.id,
+                        l = n.guild_id;
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? d.intl.formatToPlainString(d.t.MlgLFx, {
-                                nickname0: c.ZP.getName(t, l, e[0]),
-                                nickname1: c.ZP.getName(t, l, e[1])
+                          ? d.NW.formatToPlainString(d.t.MlgLFx, {
+                                nickname0: u.ZP.getName(l, t, e[0]),
+                                nickname1: u.ZP.getName(l, t, e[1])
                             })
                           : 3 === e.length
-                            ? d.intl.formatToPlainString(d.t.sihix8, {
-                                  nickname0: c.ZP.getName(t, l, e[0]),
-                                  nickname1: c.ZP.getName(t, l, e[1]),
-                                  nickname2: c.ZP.getName(t, l, e[2])
+                            ? d.NW.formatToPlainString(d.t.sihix8, {
+                                  nickname0: u.ZP.getName(l, t, e[0]),
+                                  nickname1: u.ZP.getName(l, t, e[1]),
+                                  nickname2: u.ZP.getName(l, t, e[2])
                               })
-                            : d.intl.formatToPlainString(d.t['824IXV'], {
-                                  nickname0: c.ZP.getName(t, l, e[0]),
-                                  nickname1: c.ZP.getName(t, l, e[1]),
+                            : d.NW.formatToPlainString(d.t['824IXV'], {
+                                  nickname0: u.ZP.getName(l, t, e[0]),
+                                  nickname1: u.ZP.getName(l, t, e[1]),
                                   remainingCount: e.length - 2
                               });
-                })(l.slice(4), n);
-                return (0, t.jsx)('div', {
-                    children: (0, t.jsx)(a.DY3, {
+                })(t.slice(4), n);
+                return (0, l.jsx)('div', {
+                    children: (0, l.jsx)(s.DY3, {
                         text: i,
-                        children: (0, t.jsx)('div', {
+                        children: (0, l.jsx)('div', {
                             className: m.userListOverflow,
                             children: e
                         })
@@ -70,16 +70,16 @@ function x(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let h = (0, u.KS)(n);
-    return (0, t.jsxs)('div', {
-        className: s()(m.channelInfo, { [m.selected]: i }),
+    let x = (0, c.KS)(n);
+    return (0, l.jsxs)('div', {
+        className: r()(m.channelInfo, { [m.selected]: i }),
         children: [
-            (0, t.jsx)(h, { className: m.channelIcon }),
-            (0, t.jsx)('div', {
+            (0, l.jsx)(x, { className: m.channelIcon }),
+            (0, l.jsx)('div', {
                 className: m.channelName,
-                children: x
+                children: g
             }),
-            g
+            h
         ]
     });
 }

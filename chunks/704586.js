@@ -1,22 +1,22 @@
-var i = n(67867),
-    r = n(804104).find,
-    a = n(501953),
-    s = 'find',
-    o = !0;
-s in [] &&
-    [,][s](function () {
-        o = !1;
+var r = n(67867),
+    i = n(804104).find,
+    o = n(501953),
+    a = 'find',
+    s = !0;
+a in [] &&
+    [,][a](function () {
+        s = !1;
     }),
-    i(
+    r(
         {
             target: 'Array',
             proto: !0,
-            forced: o
+            forced: s
         },
         {
             find: function (e) {
-                return r(this, e, arguments.length > 1 ? arguments[1] : void 0);
+                return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
             }
         }
     ),
-    a(s);
+    o(a);

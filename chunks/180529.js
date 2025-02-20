@@ -44,7 +44,7 @@ function u(e) {
         }),
         c = (0, s.q_F)({
             from: { opacity: 0 },
-            to: { opacity: t ? 1 : 0 },
+            to: { opacity: +!!t },
             config: {
                 duration: 200,
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e)

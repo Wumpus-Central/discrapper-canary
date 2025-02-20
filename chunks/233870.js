@@ -1,12 +1,12 @@
-n.d(t, { T: () => r }), n(733860);
-var i = n(392711),
-    l = n.n(i),
-    a = n(823379);
-function r(e, t) {
-    return l()(e)
+n.d(t, { T: () => o }), n(733860);
+var r = n(392711),
+    i = n.n(r),
+    l = n(823379);
+function o(e, t) {
+    return i()(e)
         .map(t.getUser)
         .unshift(t.getCurrentUser())
-        .filter(a.lm)
+        .filter(l.lm)
         .sortBy((e) => e.username.toLowerCase())
         .value();
 }

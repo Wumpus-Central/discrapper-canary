@@ -63,11 +63,11 @@ function O(e) {
     (0, u.nU)();
     let y = (0, a.e7)([p.Z], () => p.Z.getWindow(g.$J)),
         [E, x] = (0, u.m8)(O),
-        { currentFPS: S, averageFrameTime: C, timeSinceLastDrop: I, onResetFrameData: j, droppedFramesRef: w, renderedFrameCount: Z, bufferFramecountRef: N, frameCheckerEffect: P } = (0, u.d6)(!0, E, !0),
+        { currentFPS: I, averageFrameTime: S, timeSinceLastDrop: C, onResetFrameData: j, droppedFramesRef: w, renderedFrameCount: Z, bufferFramecountRef: N, frameCheckerEffect: P } = (0, u.d6)(!0, E, !0),
         [T, k, A] = (0, u.ZF)(O),
         [D, R] = (0, u.Y5)(T, P, y),
         L = performance.now() - x.current < u.MC,
-        W = k(C, N.current);
+        W = k(S, N.current);
     (0, c.ZP)(
         () => (
             D(),
@@ -112,8 +112,8 @@ function O(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: S < 30 ? 'text-danger' : S < 45 ? 'text-warning' : 'text-primary',
-                                          children: S.toFixed(2)
+                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-warning' : 'text-primary',
+                                          children: I.toFixed(2)
                                       })
                                   ]
                               })
@@ -142,8 +142,8 @@ function O(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: C > 1.1 * u.tO ? 'text-warning' : 'text-primary',
-                                          children: [C.toFixed(2), 'ms']
+                                          color: S > 1.1 * u.tO ? 'text-warning' : 'text-primary',
+                                          children: [S.toFixed(2), 'ms']
                                       })
                                   ]
                               })
@@ -172,7 +172,7 @@ function O(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: I < 2 ? 'text-danger' : I < 5 ? 'text-warning' : 'text-primary',
+                                          color: C < 2 ? 'text-danger' : C < 5 ? 'text-warning' : 'text-primary',
                                           children: w.current
                                       }),
                                       (0, i.jsxs)(s.Text, {

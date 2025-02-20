@@ -1,12 +1,12 @@
 n(653041);
-var i,
-    l = n(442837),
-    r = n(570140),
-    a = n(695346),
-    s = n(885110),
-    o = n(70956),
-    d = n(981631);
-function c(e, t, n) {
+var r,
+    i = n(442837),
+    l = n(570140),
+    o = n(695346),
+    a = n(885110),
+    s = n(70956),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,39 +19,39 @@ function c(e, t, n) {
         e
     );
 }
-let u = [],
-    h = !1;
-function m() {
-    return u.length >= 4 && u.some((e) => e < Date.now() - 3 * o.Z.Millis.DAY);
+let d = [],
+    p = !1;
+function h() {
+    return d.length >= 4 && d.some((e) => e < Date.now() - 3 * s.Z.Millis.DAY);
 }
-class p extends (i = l.ZP.PersistedStore) {
+class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && Array.isArray(e.sessionStartsWithDND) && (u = e.sessionStartsWithDND);
+        null != e && Array.isArray(e.sessionStartsWithDND) && (d = e.sessionStartsWithDND);
     }
     showNagBar() {
-        return h;
+        return p;
     }
     getState() {
-        return { sessionStartsWithDND: u };
+        return { sessionStartsWithDND: d };
     }
     getTemp() {
-        return { x: a.Cr.getSetting() };
+        return { x: o.Cr.getSetting() };
     }
 }
-c(p, 'displayName', 'HabitualDNDStore'),
-    c(p, 'persistKey', 'habitualDND'),
-    new p(r.Z, {
+u(g, 'displayName', 'HabitualDNDStore'),
+    u(g, 'persistKey', 'habitualDND'),
+    new g(l.Z, {
         POST_CONNECTION_OPEN: function () {
-            s.Z.getStatus() === d.Skl.DND && '0' === a.Cr.getSetting()
-                ? (u.push(Date.now()),
-                  (u = u.filter((e) => e > Date.now() - 5 * o.Z.Millis.DAY)),
-                  m() &&
+            a.Z.getStatus() === c.Skl.DND && '0' === o.Cr.getSetting()
+                ? (d.push(Date.now()),
+                  (d = d.filter((e) => e > Date.now() - 5 * s.Z.Millis.DAY)),
+                  h() &&
                       setTimeout(() => {
-                          r.Z.dispatch({ type: 'HABITUAL_DND_CLEAR' });
-                      }, 15 * o.Z.Millis.SECOND))
-                : (u = []);
+                          l.Z.dispatch({ type: 'HABITUAL_DND_CLEAR' });
+                      }, 15 * s.Z.Millis.SECOND))
+                : (d = []);
         },
         HABITUAL_DND_CLEAR: function () {
-            (h = !!m()), (u = []);
+            (p = !!h()), (d = []);
         }
     });

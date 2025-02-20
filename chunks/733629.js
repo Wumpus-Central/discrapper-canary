@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
-var i = n(200651);
+n.d(t, { Z: () => a });
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(45596);
-function s(e) {
+var i = n(481060),
+    s = n(412856);
+function a(e) {
     let { title: t, settings: n } = e;
-    return (0, i.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: l.header,
+                className: s.header,
                 children: t
             }),
             n.map((e) => e.renderComponent())

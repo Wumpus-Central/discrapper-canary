@@ -1,69 +1,69 @@
-n.d(t, { Z: () => f });
-var i = n(200651);
+n.d(t, { Z: () => _ });
+var r = n(200651);
 n(192379);
-var l = n(512722),
-    a = n.n(l),
-    r = n(442837),
-    s = n(955415),
-    o = n(131704),
+var i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    l = n(955415),
+    s = n(131704),
     c = n(601964),
     d = n(199902),
     u = n(914010),
-    m = n(358595),
-    _ = n(981631),
-    h = n(245335),
-    p = n(388032),
-    g = n(791686);
-function f(e) {
+    p = n(358595),
+    m = n(981631),
+    f = n(245335),
+    h = n(388032),
+    g = n(217480);
+function _(e) {
     let t,
         n,
-        l,
-        { invite: f, currentUserId: x, guild: C, onTransitionToInviteChannel: E, onAcceptInstantInvite: v } = e,
-        I = null == C ? void 0 : C.id,
-        N = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
-        S = (0, r.e7)([d.Z], () => (null != f && null != f.target_user ? d.Z.getActiveStreamForUser(f.target_user.id, I) : null), [f, I]),
-        T = (0, r.e7)([d.Z], () => (null != f && null != f.target_user ? d.Z.getStreamForUser(f.target_user.id, I) : null), [f, I]),
-        b = null != f && f.target_type === h.Iq.STREAM && null != f.target_user && null != S,
-        A = null != f && null != T && null != f.channel && null != f.guild && T.channelId === f.channel.id && T.guildId === f.guild.id;
-    a()(null != f, 'Invite cannot be null');
-    let { target_type: j, target_user: y } = f;
-    a()(j === h.Iq.STREAM && null != y, 'invalid streaming invite');
-    let Z = x === y.id,
-        R = f.state === _.r2o.ACCEPTING,
-        L = null != C;
-    if (null == C) {
-        if (null == f.guild) return (0, i.jsx)(m.Z, {});
-        C = new c.ZP(f.guild);
+        i,
+        { invite: _, currentUserId: b, guild: v, onTransitionToInviteChannel: y, onAcceptInstantInvite: x } = e,
+        O = null == v ? void 0 : v.id,
+        E = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
+        j = (0, o.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getActiveStreamForUser(_.target_user.id, O) : null), [_, O]),
+        N = (0, o.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getStreamForUser(_.target_user.id, O) : null), [_, O]),
+        C = null != _ && _.target_type === f.Iq.STREAM && null != _.target_user && null != j,
+        I = null != _ && null != N && null != _.channel && null != _.guild && N.channelId === _.channel.id && N.guildId === _.guild.id;
+    a()(null != _, 'Invite cannot be null');
+    let { target_type: S, target_user: P } = _;
+    a()(S === f.Iq.STREAM && null != P, 'invalid streaming invite');
+    let T = b === P.id,
+        A = _.state === m.r2o.ACCEPTING,
+        w = null != v;
+    if (null == v) {
+        if (null == _.guild) return (0, r.jsx)(p.Z, {});
+        v = new c.ZP(_.guild);
     }
-    let P = null != f.channel ? (0, o.jD)(f.channel) : null,
-        k = b ? E : v;
-    L && !A ? (l = Z ? p.intl.string(p.t.oBLoZG) : p.intl.formatToPlainString(p.t['0QJmAw'], { name: y.username })) : ((t = p.intl.string(p.t['I6JG4+'])), (n = s.Z.Button.Colors.GREEN), b && ((t = p.intl.string(p.t['Q1W99/'])), (n = s.Z.Button.Colors.PRIMARY)), (l = Z ? p.intl.string(p.t['4hyaHh']) : p.intl.formatToPlainString(p.t.QmlLEh, { name: y.username })));
-    let M = N === C.id && null != P ? (0, i.jsx)(s.Z.Channel, { channel: P }) : p.intl.formatToPlainString(p.t.u0vaDA, { guildName: C.name });
-    return (0, i.jsxs)(s.Z, {
+    let Z = null != _.channel ? (0, s.jD)(_.channel) : null,
+        k = C ? y : x;
+    w && !I ? (i = T ? h.NW.string(h.t.oBLoZG) : h.NW.formatToPlainString(h.t['0QJmAw'], { name: P.username })) : ((t = h.NW.string(h.t['I6JG4+'])), (n = l.Z.Button.Colors.GREEN), C && ((t = h.NW.string(h.t['Q1W99/'])), (n = l.Z.Button.Colors.PRIMARY)), (i = T ? h.NW.string(h.t['4hyaHh']) : h.NW.formatToPlainString(h.t.QmlLEh, { name: P.username })));
+    let R = E === v.id && null != Z ? (0, r.jsx)(l.Z.Channel, { channel: Z }) : h.NW.formatToPlainString(h.t.u0vaDA, { guildName: v.name });
+    return (0, r.jsxs)(l.Z, {
         children: [
-            (0, i.jsx)(s.Z.Header, { text: p.intl.string(p.t['wS+5WV']) }),
-            (0, i.jsxs)(s.Z.Body, {
+            (0, r.jsx)(l.Z.Header, { text: h.NW.string(h.t['wS+5WV']) }),
+            (0, r.jsxs)(l.Z.Body, {
                 children: [
-                    (0, i.jsxs)('div', {
+                    (0, r.jsxs)('div', {
                         className: g.headerLine,
                         children: [
-                            (0, i.jsx)(s.Z.Icon, {
-                                guild: C,
-                                onClick: L && A ? k : void 0
+                            (0, r.jsx)(l.Z.Icon, {
+                                guild: v,
+                                onClick: w && I ? k : void 0
                             }),
-                            (0, i.jsx)(s.Z.Info, {
-                                title: l,
-                                onClick: L && A ? k : void 0,
-                                children: M
+                            (0, r.jsx)(l.Z.Info, {
+                                title: i,
+                                onClick: w && I ? k : void 0,
+                                children: R
                             })
                         ]
                     }),
-                    A
-                        ? (0, i.jsx)(s.Z.Button, {
-                              disabled: L && !A,
+                    I
+                        ? (0, r.jsx)(l.Z.Button, {
+                              disabled: w && !I,
                               onClick: k,
-                              submitting: R,
-                              isDisabled: b && A,
+                              submitting: A,
+                              isDisabled: C && I,
                               color: n,
                               children: t
                           })

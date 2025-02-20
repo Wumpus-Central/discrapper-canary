@@ -1,26 +1,26 @@
-t.d(n, { Z: () => r }), t(627341);
-var i = t(278074),
-    l = t(200634),
-    o = t(228168),
-    s = t(388032);
-function r(e) {
+t.d(n, { Z: () => s }), t(627341);
+var r = t(278074),
+    o = t(200634),
+    i = t(228168),
+    l = t(388032);
+function s(e) {
     var n;
-    let t = null === (n = (0, l.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
+    let t = null === (n = (0, o.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
     return [
         {
-            section: o.oh.BOT_INFO,
-            text: s.intl.string(s.t.jGoPJS)
+            section: i.oh.BOT_INFO,
+            text: l.NW.string(l.t.jGoPJS)
         },
         {
-            section: o.oh.MUTUAL_GUILDS,
-            text: (0, i.EQ)(t)
-                .with(void 0, () => s.intl.string(s.t['4lTDZm']))
-                .with(0, () => s.intl.string(s.t.jpY0X1))
-                .otherwise((e) => s.intl.formatToPlainString(s.t.eE3oen, { count: e }))
+            section: i.oh.MUTUAL_GUILDS,
+            text: (0, r.EQ)(t)
+                .with(void 0, () => l.NW.string(l.t['4lTDZm']))
+                .with(0, () => l.NW.string(l.t.jpY0X1))
+                .otherwise((e) => l.NW.formatToPlainString(l.t.eE3oen, { count: e }))
         },
         {
-            section: o.oh.BOT_DATA_ACCESS,
-            text: s.intl.string(s.t.WstFb2)
+            section: i.oh.BOT_DATA_ACCESS,
+            text: l.NW.string(l.t.WstFb2)
         }
     ];
 }

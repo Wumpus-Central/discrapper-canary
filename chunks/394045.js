@@ -1,29 +1,29 @@
-e.d(n, { default: () => h });
-var i = e(200651),
-    a = e(192379),
-    s = e(481060),
-    c = e(313201),
-    r = e(434404),
-    o = e(703656),
-    l = e(112612),
-    x = e(981631),
-    d = e(176505),
-    u = e(388032),
-    m = e(937413);
+n.d(e, { default: () => h });
+var i = n(200651),
+    a = n(192379),
+    s = n(481060),
+    c = n(313201),
+    r = n(434404),
+    o = n(703656),
+    l = n(112612),
+    x = n(981631),
+    d = n(176505),
+    u = n(388032),
+    m = n(704456);
 let h = function (t) {
-    let { guildId: n, submittedGuildJoinRequestsCount: e, onClose: h, transitionState: f, onConfirm: b } = t,
+    let { guildId: e, submittedGuildJoinRequestsCount: n, onClose: h, transitionState: f, onConfirm: b } = t,
         k = (0, c.Dt)(),
         {
             submitting: p,
-            errorMessage: T,
-            onSubmit: z
+            errorMessage: N,
+            onSubmit: T
         } = (0, l.Z)({
             onSubmit: b,
             onClose: h
         }),
-        j = a.useCallback(() => {
-            h(), r.Z.close(), (0, o.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_APPLICATIONS));
-        }, [n, h]);
+        z = a.useCallback(() => {
+            h(), r.Z.close(), (0, o.uL)(x.Z5c.CHANNEL(e, d.oC.MEMBER_APPLICATIONS));
+        }, [e, h]);
     return (0, i.jsxs)(s.Y0X, {
         className: m.container,
         transitionState: f,
@@ -35,29 +35,29 @@ let h = function (t) {
                     (0, i.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
                         id: k,
-                        children: u.intl.format(u.t.chV4JS, { count: e })
+                        children: u.NW.format(u.t.chV4JS, { count: n })
                     }),
                     (0, i.jsx)(s.Text, {
                         className: m.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: u.intl.string(u.t.uNQIt7)
+                        children: u.NW.string(u.t.uNQIt7)
                     }),
                     (0, i.jsx)(s.P3F, {
                         className: m.actionText,
-                        onClick: j,
+                        onClick: z,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: u.intl.string(u.t.szESVF)
+                            children: u.NW.string(u.t.szESVF)
                         })
                     }),
-                    null != T &&
+                    null != N &&
                         (0, i.jsx)(s.Text, {
                             className: m.__invalid_errorText,
                             variant: 'text-xs/normal',
                             color: 'text-danger',
-                            children: T
+                            children: N
                         })
                 ]
             }),
@@ -67,11 +67,11 @@ let h = function (t) {
                         className: m.actionButton,
                         color: s.zxk.Colors.BRAND,
                         submitting: p,
-                        onClick: z,
+                        onClick: T,
                         size: s.zxk.Sizes.SMALL,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: u.intl.string(u.t.LW0aUF)
+                            children: u.NW.string(u.t.LW0aUF)
                         })
                     }),
                     (0, i.jsx)(s.zxk, {
@@ -80,7 +80,7 @@ let h = function (t) {
                         size: s.zxk.Sizes.SMALL,
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/semibold',
-                            children: u.intl.string(u.t['ETE/oK'])
+                            children: u.NW.string(u.t['ETE/oK'])
                         })
                     })
                 ]

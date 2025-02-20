@@ -1,10 +1,10 @@
-var i = n(436091);
-function r(e, t) {
-    return function (n, r) {
+var r = n(436091);
+function i(e, t) {
+    return function (n, i) {
         if (null == n) return n;
-        if (!i(n)) return e(n, r);
-        for (var a = n.length, s = t ? a : -1, o = Object(n); (t ? s-- : ++s < a) && !1 !== r(o[s], s, o); );
+        if (!r(n)) return e(n, i);
+        for (var o = n.length, a = t ? o : -1, s = Object(n); (t ? a-- : ++a < o) && !1 !== i(s[a], a, s); );
         return n;
     };
 }
-e.exports = r;
+e.exports = i;

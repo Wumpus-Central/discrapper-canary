@@ -1,61 +1,61 @@
-n.d(t, { Z: () => E }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+n.d(t, { Z: () => N }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(921801),
     d = n(131951),
     u = n(962100),
     m = n(445817),
     g = n(726985),
-    h = n(65154),
-    x = n(388032),
-    _ = n(483938);
-function p() {
-    return (0, i.jsx)(o.ToO, {
+    p = n(65154),
+    h = n(388032),
+    f = n(455812);
+function b() {
+    return (0, r.jsx)(o.ToO, {
         type: o.sje.PRIMARY,
-        title: x.intl.string(x.t.XLw6FB),
-        body: x.intl.string(x.t.wVjKGh),
-        button: (0, i.jsx)(o.zxk, {
+        title: h.NW.string(h.t.XLw6FB),
+        body: h.NW.string(h.t.wVjKGh),
+        button: (0, r.jsx)(o.zxk, {
             size: o.zxk.Sizes.SMALL,
-            className: _.marginTop20,
+            className: f.marginTop20,
             onClick: () => (0, u.y)('Video unsupported browser'),
-            children: x.intl.string(x.t.BK8LKy)
+            children: h.NW.string(h.t.BK8LKy)
         })
     });
 }
-function E(e) {
+function N(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, a.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
-        [r, u] = s.useState(!1),
-        E = (0, i.jsxs)(i.Fragment, {
+        n = (0, l.e7)([d.Z], () => d.Z.supports(p.AN.VIDEO)),
+        [s, u] = i.useState(!1),
+        N = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(c.F, {
+                (0, r.jsx)(c.F, {
                     setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                    children: (0, i.jsx)(m.Z, {
-                        previewEnabled: r,
+                    children: (0, r.jsx)(m.Z, {
+                        previewEnabled: s,
                         onEnablePreview: () => u(!0),
                         onCancelPreview: () => u(!1)
                     })
                 }),
-                !n && (0, i.jsx)(p, {})
+                !n && (0, r.jsx)(b, {})
             ]
         });
     return t
-        ? E
-        : (0, i.jsxs)(i.Fragment, {
+        ? N
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsx)(o.y5t, {
-                      component: (0, i.jsx)(o.vwX, {
+                  (0, r.jsx)(o.y5t, {
+                      component: (0, r.jsx)(o.vwX, {
                           tag: o.RB0.H1,
-                          className: _.marginBottom20,
-                          children: x.intl.string(x.t.LKzQSE)
+                          className: f.marginBottom20,
+                          children: h.NW.string(h.t.LKzQSE)
                       }),
-                      children: E
+                      children: N
                   }),
-                  (0, i.jsx)(o.$i$, { className: l()(_.marginBottom40, _.marginTop40) })
+                  (0, r.jsx)(o.$i$, { className: a()(f.marginBottom40, f.marginTop40) })
               ]
           });
 }

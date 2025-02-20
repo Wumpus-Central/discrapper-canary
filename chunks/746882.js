@@ -1,8 +1,8 @@
 n.d(t, { default: () => L }), n(47120);
 var r = n(200651),
-    i = n(192379),
-    l = n(512722),
-    a = n.n(l),
+    a = n(192379),
+    i = n(512722),
+    l = n.n(i),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
@@ -14,95 +14,95 @@ var r = n(200651),
     m = n(944486),
     b = n(594174),
     x = n(626135),
-    E = n(63063),
-    g = n(771308),
-    y = n(758119),
-    k = n(13430),
-    A = n(723359),
-    C = n(981631),
-    N = n(388032),
-    R = n(24034);
+    N = n(63063),
+    E = n(771308),
+    g = n(758119),
+    y = n(13430),
+    k = n(723359),
+    A = n(981631),
+    C = n(388032),
+    R = n(726286);
 function L(e) {
-    let { transitionState: t, source: l } = e,
+    let { transitionState: t, source: i } = e,
         o = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
         L = (0, c.e7)([m.Z, _.Z], () => _.Z.getChannel(m.Z.getChannelId())),
-        [j, v] = i.useState(null),
-        [z, T] = i.useState(null),
-        [p, M] = i.useState(!1),
-        [S, w] = i.useState(0),
-        G = i.createRef(),
-        I = i.createRef(),
-        D = (0, h.Dt)(),
-        Z = null != j ? s()().diff(j, 'years') : null;
-    function Y() {
-        if (l === A.L0.NSFW_SERVER_INVITE_EMBED) {
-            (0, y.qV)(l);
+        [j, v] = a.useState(null),
+        [z, T] = a.useState(null),
+        [p, M] = a.useState(!1),
+        [S, W] = a.useState(0),
+        w = a.createRef(),
+        G = a.createRef(),
+        I = (0, h.Dt)(),
+        D = null != j ? s()().diff(j, 'years') : null;
+    function Z() {
+        if (i === k.L0.NSFW_SERVER_INVITE_EMBED) {
+            (0, g.qV)(i);
             return;
         }
         let e = null == L ? void 0 : L.getGuildId();
-        f.Z.nsfwReturnToSafety(e), (0, y.qV)(l);
+        f.Z.nsfwReturnToSafety(e), (0, g.qV)(i);
     }
-    async function F() {
-        a()(null != j, 'Cannot submit null birthday.');
+    async function Y() {
+        l()(null != j, 'Cannot submit null birthday.');
         try {
-            return T(null), M(!0), await (0, g.Av)(j, l);
+            return T(null), M(!0), await (0, E.Av)(j, i);
         } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, y.C8)(l, t.body.date_of_birth);
+            if (null != t.body && null != t.body.date_of_birth) (0, g.C8)(i, t.body.date_of_birth);
             else {
                 var e;
-                (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? T(N.intl.string(N.t['TGg/2t'])) : T(null == t ? void 0 : t.body.message), M(!1);
+                (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? T(C.NW.string(C.t['TGg/2t'])) : T(null == t ? void 0 : t.body.message), M(!1);
             }
         }
     }
-    async function B() {
-        if ((a()(null != Z, "Cannot submit if we haven't been able to calculate age."), Z < 18)) {
-            w(1);
+    async function F() {
+        if ((l()(null != D, "Cannot submit if we haven't been able to calculate age."), D < 18)) {
+            W(1);
             return;
         }
-        await F();
+        await Y();
     }
-    async function U(e) {
-        e.preventDefault(), p || null == j || (await B());
+    async function B(e) {
+        e.preventDefault(), p || null == j || (await F());
     }
-    async function P() {
-        null == (await F()) && w(0);
+    async function U() {
+        null == (await Y()) && W(0);
     }
-    i.useEffect(() => {
-        null != o && null != o.nsfwAllowed && (0, y.qq)(l);
+    a.useEffect(() => {
+        null != o && null != o.nsfwAllowed && (0, g.qq)(i);
     }),
-        i.useEffect(() => {
-            x.default.track(C.rMx.AGE_GATE_ACTION, {
-                source: l,
-                action: A.Al.AGE_GATE_OPEN
+        a.useEffect(() => {
+            x.default.track(A.rMx.AGE_GATE_ACTION, {
+                source: i,
+                action: k.Al.AGE_GATE_OPEN
             });
-        }, [l]);
-    let q = i.useCallback(
+        }, [i]);
+    let P = a.useCallback(
             (e) => {
                 v(e);
             },
             [v]
         ),
-        K = i.useCallback(() => {
+        q = a.useCallback(() => {
             var e;
-            null === (e = I.current) || void 0 === e || e.focus();
-        }, [I]);
+            null === (e = G.current) || void 0 === e || e.focus();
+        }, [G]);
     return 0 === S
         ? (function () {
-              let e = l === A.L0.FAMILY_CENTER ? N.intl.string(N.t.M7mt7u) : N.intl.string(N.t.F8otRk),
-                  i = (() => {
-                      switch (l) {
-                          case A.L0.FAMILY_CENTER:
-                              return N.intl.string(N.t.mhUrKS);
-                          case A.L0.DEEP_LINK_PROMPT:
-                              return N.intl.format(N.t.iyhg2t, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) });
+              let e = i === k.L0.FAMILY_CENTER ? C.NW.string(C.t.M7mt7u) : C.NW.string(C.t.F8otRk),
+                  a = (() => {
+                      switch (i) {
+                          case k.L0.FAMILY_CENTER:
+                              return C.NW.string(C.t.mhUrKS);
+                          case k.L0.DEEP_LINK_PROMPT:
+                              return C.NW.format(C.t.iyhg2t, { helpURL: N.Z.getArticleURL(A.BhN.AGE_GATE) });
                           default:
-                              return N.intl.format(N.t.n3QjDA, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) });
+                              return C.NW.format(C.t.n3QjDA, { helpURL: N.Z.getArticleURL(A.BhN.AGE_GATE) });
                       }
                   })();
               return (0, r.jsxs)(u.Y0X, {
                   transitionState: t,
                   size: u.CgR.SMALL,
-                  'aria-labelledby': D,
+                  'aria-labelledby': I,
                   children: [
                       (0, r.jsxs)(u.hzk, {
                           children: [
@@ -117,27 +117,27 @@ function L(e) {
                                       (0, r.jsx)(u.X6q, {
                                           variant: 'heading-xl/semibold',
                                           className: R.title,
-                                          id: D,
+                                          id: I,
                                           children: e
                                       }),
                                       (0, r.jsx)(u.Text, {
                                           color: 'header-secondary',
                                           variant: 'text-sm/normal',
-                                          children: i
+                                          children: a
                                       })
                                   ]
                               }),
                               (0, r.jsx)('form', {
-                                  onSubmit: U,
-                                  children: (0, r.jsx)(k.Z, {
-                                      label: N.intl.string(N.t.rhBeKS),
+                                  onSubmit: B,
+                                  children: (0, r.jsx)(y.Z, {
+                                      label: C.NW.string(C.t.rhBeKS),
                                       wrapperClassName: R.birthday,
                                       name: 'date_of_birth',
-                                      onChange: q,
-                                      onPopulated: K,
+                                      onChange: P,
+                                      onPopulated: q,
                                       error: z,
                                       value: j,
-                                      ref: G,
+                                      ref: w,
                                       autoFocus: !0
                                   })
                               })
@@ -147,19 +147,19 @@ function L(e) {
                           justify: d.Z.Justify.BETWEEN,
                           children: [
                               (0, r.jsx)(u.zxk, {
-                                  buttonRef: I,
+                                  buttonRef: G,
                                   submitting: p,
                                   disabled: null == j,
                                   size: u.PhG.SMALL,
-                                  onClick: B,
-                                  children: N.intl.string(N.t.uBFuoq)
+                                  onClick: F,
+                                  children: C.NW.string(C.t.uBFuoq)
                               }),
                               (0, r.jsx)(u.zxk, {
                                   look: u.zxk.Looks.LINK,
                                   size: u.zxk.Sizes.NONE,
                                   color: u.zxk.Colors.PRIMARY,
-                                  onClick: Y,
-                                  children: N.intl.string(N.t['1MrpWF'])
+                                  onClick: Z,
+                                  children: C.NW.string(C.t['1MrpWF'])
                               })
                           ]
                       })
@@ -169,7 +169,7 @@ function L(e) {
         : (0, r.jsxs)(u.Y0X, {
               transitionState: u.Dvm.ENTERED,
               size: u.CgR.SMALL,
-              'aria-labelledby': D,
+              'aria-labelledby': I,
               children: [
                   (0, r.jsx)(u.hzk, {
                       children: (0, r.jsxs)('div', {
@@ -178,13 +178,13 @@ function L(e) {
                               (0, r.jsx)(u.X6q, {
                                   variant: 'heading-xl/semibold',
                                   className: R.confirmTitle,
-                                  id: D,
-                                  children: N.intl.format(N.t.wumolZ, { age: Z })
+                                  id: I,
+                                  children: C.NW.format(C.t.wumolZ, { age: D })
                               }),
                               (0, r.jsx)(u.Text, {
                                   color: 'header-secondary',
                                   variant: 'text-sm/normal',
-                                  children: N.intl.format(N.t.n3QjDA, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) })
+                                  children: C.NW.format(C.t.n3QjDA, { helpURL: N.Z.getArticleURL(A.BhN.AGE_GATE) })
                               })
                           ]
                       })
@@ -196,13 +196,13 @@ function L(e) {
                               look: u.zxk.Looks.LINK,
                               size: u.zxk.Sizes.NONE,
                               color: u.zxk.Colors.PRIMARY,
-                              onClick: () => w(0),
-                              children: N.intl.string(N.t.cfYCra)
+                              onClick: () => W(0),
+                              children: C.NW.string(C.t.cfYCra)
                           }),
                           (0, r.jsx)(u.zxk, {
                               color: u.zxk.Colors.BRAND,
-                              onClick: P,
-                              children: N.intl.string(N.t['6tahio'])
+                              onClick: U,
+                              children: C.NW.string(C.t['6tahio'])
                           })
                       ]
                   })

@@ -1,24 +1,24 @@
-function i(e, t, n, i) {
+function r(e, t, n, r) {
     if (e === t) return !0;
     if (void 0 === e || void 0 === t) return e === t;
-    let r = Object.keys(e),
-        a = Object.keys(t);
-    if (r.length !== a.length) return null != i && i('shallowEqual: unequal key lengths '.concat(r.length, ' !=== ').concat(a.length)), !1;
-    let s = [];
-    for (let a = 0; a < r.length; a++) {
-        let o = r[a];
-        if (e[o] !== t[o] && (null == n || !n.includes(o))) {
-            if (null == i) return !1;
-            s.push(o);
+    let i = Object.keys(e),
+        o = Object.keys(t);
+    if (i.length !== o.length) return null != r && r('shallowEqual: unequal key lengths '.concat(i.length, ' !=== ').concat(o.length)), !1;
+    let a = [];
+    for (let o = 0; o < i.length; o++) {
+        let s = i[o];
+        if (e[s] !== t[s] && (null == n || !n.includes(s))) {
+            if (null == r) return !1;
+            a.push(s);
         }
     }
-    return null != i && s.length > 0 && i('shallowEqual: unequal keys: '.concat(s.join(', '))), 0 === s.length;
+    return null != r && a.length > 0 && r('shallowEqual: unequal keys: '.concat(a.join(', '))), 0 === a.length;
 }
-function r(e, t) {
+function i(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
 n.d(t, {
-    E: () => r,
-    Z: () => i
+    E: () => i,
+    Z: () => r
 }),
     n(653041);

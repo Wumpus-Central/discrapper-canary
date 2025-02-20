@@ -1,57 +1,57 @@
-n.d(t, { Z: () => C }), n(47120);
-var i = n(200651),
+n.d(t, { Z: () => v }), n(266796), n(47120);
+var r = n(200651),
     a = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    s = n(477660),
-    o = n.n(s),
+    i = n(120356),
+    l = n.n(i),
+    o = n(477660),
+    s = n.n(o),
     c = n(481060),
     d = n(939893),
     u = n(241209),
-    m = n(388032),
-    h = n(516381);
-let p = o().parserFor(d.Z),
-    g = o().reactFor(o().ruleOutput(d.Z, 'react'));
+    p = n(388032),
+    m = n(190785);
+let h = s().parserFor(d.Z),
+    g = s().reactFor(s().ruleOutput(d.Z, 'react'));
 function _(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [r, s] = a.useState(!1),
-        o = a.useRef(null);
+        [i, o] = a.useState(!1),
+        s = a.useRef(null);
     a.useEffect(() => {
-        if (null == o.current) return;
+        if (null == s.current) return;
         let e = new ResizeObserver(() => {
-            var e, t, n, i;
-            s((null !== (n = null === (e = o.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== n ? n : 0) - (null !== (i = null === (t = o.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0) > 1);
+            var e, t, n, r;
+            o((null !== (n = null === (e = s.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== n ? n : 0) - (null !== (r = null === (t = s.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== r ? r : 0) > 1);
         });
-        return e.observe(o.current), () => e.disconnect();
+        return e.observe(s.current), () => e.disconnect();
     }, []);
-    let [d, m] = a.useState(!1),
+    let [d, p] = a.useState(!1),
         _ = a.useCallback(() => {
-            m((e) => !e);
+            p((e) => !e);
         }, []);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)('div', {
-                ref: o,
+            (0, r.jsx)('div', {
+                ref: s,
                 className: l()({
-                    [h.descriptionClamp]: !d,
-                    [h.descriptionClampSafari]: !d && 'Safari' === platform.name
+                    [m.descriptionClamp]: !d,
+                    [m.descriptionClampSafari]: !d && 'Safari' === platform.name
                 }),
                 children: n
-                    ? (0, i.jsx)(u.Z, {
-                          className: h.detailedDescription,
-                          parser: p,
+                    ? (0, r.jsx)(u.Z, {
+                          className: m.detailedDescription,
+                          parser: h,
                           output: g,
                           state: { allowLinks: !0 },
                           children: t
                       })
-                    : (0, i.jsx)(c.Text, {
+                    : (0, r.jsx)(c.Text, {
                           variant: 'text-md/normal',
                           color: 'text-normal',
                           children: t
                       })
             }),
-            r || d
-                ? (0, i.jsx)(x, {
+            i || d
+                ? (0, r.jsx)(f, {
                       isShowingMore: d,
                       onToggle: _
                   })
@@ -59,70 +59,70 @@ function _(e) {
         ]
     });
 }
-function x(e) {
+function f(e) {
     let { onToggle: t, isShowingMore: n } = e,
-        r = a.useMemo(
+        i = a.useMemo(
             () =>
-                (0, i.jsxs)('div', {
-                    className: h.showMoreContent,
+                (0, r.jsxs)('div', {
+                    className: m.showMoreContent,
                     children: [
-                        (0, i.jsx)(c.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-md/semibold',
                             color: 'interactive-normal',
-                            children: n ? m.intl.string(m.t['vtfc4+']) : m.intl.string(m.t.ZDRyur)
+                            children: n ? p.NW.string(p.t['vtfc4+']) : p.NW.string(p.t.ZDRyur)
                         }),
                         n
-                            ? (0, i.jsx)(c.u04, {
+                            ? (0, r.jsx)(c.u04, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: h.showMoreButtonIcon
+                                  className: m.showMoreButtonIcon
                               })
-                            : (0, i.jsx)(c.CJ0, {
+                            : (0, r.jsx)(c.CJ0, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: h.showMoreButtonIcon
+                                  className: m.showMoreButtonIcon
                               })
                     ]
                 }),
             [n]
         );
-    return (0, i.jsxs)(c.P3F, {
-        className: h.showMoreButton,
+    return (0, r.jsxs)(c.P3F, {
+        className: m.showMoreButton,
         onClick: t,
-        children: [(0, i.jsx)('div', { className: h.divider }), r, (0, i.jsx)('div', { className: h.divider })]
+        children: [(0, r.jsx)('div', { className: m.divider }), i, (0, r.jsx)('div', { className: m.divider })]
     });
 }
-let C = function (e) {
+let v = function (e) {
     var t, n;
-    let { application: r } = e,
-        l = null === (t = r.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
-        s = null === (n = r.directory_entry) || void 0 === n ? void 0 : n.short_description,
-        o = a.useMemo(
+    let { application: i } = e,
+        l = null === (t = i.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
+        o = null === (n = i.directory_entry) || void 0 === n ? void 0 : n.short_description,
+        s = a.useMemo(
             () =>
                 null != l && l.length > 0
-                    ? (0, i.jsx)(_, {
+                    ? (0, r.jsx)(_, {
                           description: l,
                           supportsMarkdown: !0
                       })
-                    : null != s && s.length > 0
-                      ? (0, i.jsx)(_, {
-                            description: s,
+                    : null != o && o.length > 0
+                      ? (0, r.jsx)(_, {
+                            description: o,
                             supportsMarkdown: !1
                         })
                       : null,
-            [l, s]
+            [l, o]
         );
-    return null == o
+    return null == s
         ? null
-        : (0, i.jsxs)('div', {
-              className: h.overviewContainer,
+        : (0, r.jsxs)('div', {
+              className: m.overviewContainer,
               children: [
-                  (0, i.jsx)(c.X6q, {
+                  (0, r.jsx)(c.X6q, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: m.intl.string(m.t.txraKS)
+                      children: p.NW.string(p.t.txraKS)
                   }),
-                  o
+                  s
               ]
           });
 };

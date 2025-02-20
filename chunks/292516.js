@@ -1,4 +1,4 @@
-var i = {
+var r = {
     './bg': '853343',
     './bg.json': '853343',
     './cs': '820189',
@@ -64,19 +64,19 @@ var i = {
     './zh-TW': '223797',
     './zh-TW.json': '223797'
 };
-function r(e) {
-    return n(a(e));
+function i(e) {
+    return n(o(e));
 }
-function a(e) {
-    if (!n.o(i, e)) {
+function o(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return i[e];
+    return r[e];
 }
-(r.keys = function () {
-    return Object.keys(i);
+(i.keys = function () {
+    return Object.keys(r);
 }),
-    (r.resolve = a),
-    (e.exports = r),
-    (r.id = 292516);
+    (i.resolve = o),
+    (e.exports = i),
+    (i.id = 292516);

@@ -1,10 +1,10 @@
-var i = n(56135),
-    r = n(440693),
-    a = n(766598),
-    s = '[object Null]',
-    o = '[object Undefined]',
-    l = i ? i.toStringTag : void 0;
-function u(e) {
-    return null == e ? (void 0 === e ? o : s) : l && l in Object(e) ? r(e) : a(e);
+var r = n(56135),
+    i = n(440693),
+    o = n(766598),
+    a = '[object Null]',
+    s = '[object Undefined]',
+    l = r ? r.toStringTag : void 0;
+function c(e) {
+    return null == e ? (void 0 === e ? s : a) : l && l in Object(e) ? i(e) : o(e);
 }
-e.exports = u;
+e.exports = c;

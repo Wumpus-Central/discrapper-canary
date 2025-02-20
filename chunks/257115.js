@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
-var i = n(927923),
-    l = n(388032);
-function a(e) {
+n.d(t, { Z: () => l });
+var r = n(927923),
+    i = n(388032);
+function l(e) {
     switch (e) {
-        case i.YE.XBOX:
-            return l.intl.string(l.t.T0uYKy);
-        case i.YE.PLAYSTATION:
-            return l.intl.string(l.t.FWAzS0);
+        case r.YE.XBOX:
+            return i.NW.string(i.t.T0uYKy);
+        case r.YE.PLAYSTATION:
+            return i.NW.string(i.t.FWAzS0);
     }
 }

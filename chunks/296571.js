@@ -1,40 +1,40 @@
 n.d(t, { Z: () => u });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(442837),
+var i = n(442837),
     a = n(481060),
-    r = n(592125),
-    s = n(739566),
-    o = n(834129),
+    o = n(592125),
+    l = n(739566),
+    s = n(834129),
     c = n(388032),
-    d = n(766908);
+    d = n(136215);
 function u(e) {
     var t;
-    let { message: n, compact: u, usernameHook: m, onClickThread: _, onClickViewThreads: h, onContextMenuThread: p } = e,
-        g = (0, s.ZP)(n),
-        f = m(g),
-        x = (0, l.e7)([r.Z], () => {
+    let { message: n, compact: u, usernameHook: p, onClickThread: m, onClickViewThreads: f, onContextMenuThread: h } = e,
+        g = (0, l.ZP)(n),
+        _ = p(g),
+        b = (0, i.e7)([o.Z], () => {
             var e;
-            return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
+            return o.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        C = c.intl.format(c.t.cZ9Uf3, {
+        v = c.NW.format(c.t.cZ9Uf3, {
             actorName: g.nick,
-            actorHook: f,
-            threadName: null !== (t = null == x ? void 0 : x.name) && void 0 !== t ? t : n.content,
+            actorHook: _,
+            threadName: null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
-                onClick: _,
-                onContextMenu: p
+                onClick: m,
+                onContextMenu: h
             },
-            viewThreadsOnClick: h
+            viewThreadsOnClick: f
         });
-    return (0, i.jsx)(o.Z, {
-        iconNode: (0, i.jsx)(a.or_, {
+    return (0, r.jsx)(s.Z, {
+        iconNode: (0, r.jsx)(a.or_, {
             size: 'md',
             color: 'currentColor',
             className: d.icon
         }),
         timestamp: n.timestamp,
         compact: u,
-        children: C
+        children: v
     });
 }

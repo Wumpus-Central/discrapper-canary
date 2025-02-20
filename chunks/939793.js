@@ -1,6 +1,6 @@
-var i = n(888968);
-function r(e) {
+var r = n(888968);
+function i(e) {
     var t = new e.constructor(e.byteLength);
-    return new i(t).set(new i(e)), t;
+    return new r(t).set(new r(e)), t;
 }
-e.exports = r;
+e.exports = i;

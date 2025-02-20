@@ -1,34 +1,34 @@
 n.d(t, { Z: () => c });
-var s = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(153867),
-    o = n(410030),
+var o = n(481060),
+    s = n(153867),
+    a = n(410030),
     i = n(583901),
     l = n(231338);
 let c = function () {
-    let e = (0, o.ZP)();
-    return (0, s.jsxs)(r.xJW, {
+    let e = (0, a.ZP)();
+    return (0, r.jsxs)(o.xJW, {
         children: [
-            (0, s.jsx)(r.vwX, {
-                tag: r.RB0.H5,
+            (0, r.jsx)(o.vwX, {
+                tag: o.RB0.H5,
                 children: 'Theme'
             }),
-            (0, s.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 style: {
                     display: 'flex',
                     justifyContent: 'space-between'
                 },
                 children: [
-                    (0, s.jsx)(i.bD, {
+                    (0, r.jsx)(i.bD, {
                         theme: l.BR.LIGHT,
                         isSelected: e === l.BR.LIGHT,
-                        onSelect: () => (0, a.ZI)({ theme: l.BR.LIGHT })
+                        onSelect: () => (0, s.ZI)({ theme: l.BR.LIGHT })
                     }),
-                    (0, s.jsx)(i.bD, {
+                    (0, r.jsx)(i.bD, {
                         theme: l.BR.DARK,
                         isSelected: e === l.BR.DARK,
-                        onSelect: () => (0, a.ZI)({ theme: l.BR.DARK })
+                        onSelect: () => (0, s.ZI)({ theme: l.BR.DARK })
                     })
                 ]
             })

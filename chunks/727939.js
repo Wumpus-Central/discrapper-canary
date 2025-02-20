@@ -1,28 +1,28 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(112724),
-    s = n(241915),
-    o = n(981631);
+n.d(t, { Z: () => p }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(112724),
+    a = n(241915),
+    s = n(981631);
 let l = 48,
-    u = 32,
     c = 32,
+    u = 32,
     d = 32;
 function f(e) {
-    let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: f, height: _ } = e,
-        [p, h] = r.useState(n);
-    return (0, i.jsx)(s._, {
+    let { className: t, defaultPosition: n = s.VD2.BOTTOM_RIGHT, children: o, width: f, height: p } = e,
+        [_, h] = i.useState(n);
+    return (0, r.jsx)(a._, {
         className: t,
-        position: p,
+        position: _,
         id: 0,
         onMove: (e, t) => h(t),
         maxX: f,
-        maxY: _,
+        maxY: p,
         edgeOffsetTop: l,
-        edgeOffsetBottom: u,
-        edgeOffsetLeft: c,
+        edgeOffsetBottom: c,
+        edgeOffsetLeft: u,
         edgeOffsetRight: d,
-        children: a
+        children: o
     });
 }
-let _ = (0, a.Z)(f);
+let p = (0, o.Z)(f);

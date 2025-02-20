@@ -1,59 +1,59 @@
 n.d(t, {
     CE: () => c,
-    F5: () => o,
-    TL: () => r,
-    YA: () => s
+    F5: () => i,
+    TL: () => o,
+    YA: () => r
 });
-var l,
-    a,
-    i = n(388032),
-    s = (((l = {}).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (l.TEMPORARY_BREAK = 'temporary_break'), (l.ANNOYING = 'annoying'), (l.UNSAFE = 'unsafe'), (l.SPAM = 'spam'), (l.OTHER = 'other'), l);
-function r() {
+var a,
+    l,
+    s = n(388032),
+    r = (((a = {}).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (a.TEMPORARY_BREAK = 'temporary_break'), (a.ANNOYING = 'annoying'), (a.UNSAFE = 'unsafe'), (a.SPAM = 'spam'), (a.OTHER = 'other'), a);
+function o() {
     return [
         {
             value: 'too_many_notifications',
-            label: i.intl.string(i.t.bQHhT0)
+            label: s.NW.string(s.t.bQHhT0)
         },
         {
             value: 'temporary_break',
-            label: i.intl.string(i.t.OuPkvL)
+            label: s.NW.string(s.t.OuPkvL)
         },
         {
             value: 'annoying',
-            label: i.intl.string(i.t['3kmAMD'])
+            label: s.NW.string(s.t['3kmAMD'])
         },
         {
             value: 'unsafe',
-            label: i.intl.string(i.t.nmW7jI)
+            label: s.NW.string(s.t.nmW7jI)
         },
         {
             value: 'spam',
-            label: i.intl.string(i.t.cCPYjo)
+            label: s.NW.string(s.t.cCPYjo)
         },
         {
             value: 'other',
-            label: i.intl.string(i.t['7ZIIJy'])
+            label: s.NW.string(s.t['7ZIIJy'])
         }
     ];
 }
-var o = (((a = {}).CONFUSION = 'confusion'), (a.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (a.HARD_TO_ACCESS = 'hard_to_access'), (a.SOMETHING_ELSE = 'something_else'), a);
+var i = (((l = {}).CONFUSION = 'confusion'), (l.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (l.HARD_TO_ACCESS = 'hard_to_access'), (l.SOMETHING_ELSE = 'something_else'), l);
 function c() {
     return [
         {
             value: 'confusion',
-            label: i.intl.string(i.t['64Oph4'])
+            label: s.NW.string(s.t['64Oph4'])
         },
         {
             value: 'does_not_achieve_wants',
-            label: i.intl.string(i.t['wH5R/v'])
+            label: s.NW.string(s.t['wH5R/v'])
         },
         {
             value: 'hard_to_access',
-            label: i.intl.string(i.t['4uZBRk'])
+            label: s.NW.string(s.t['4uZBRk'])
         },
         {
             value: 'something_else',
-            label: i.intl.string(i.t.YicFbG)
+            label: s.NW.string(s.t.YicFbG)
         }
     ];
 }

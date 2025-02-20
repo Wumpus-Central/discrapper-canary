@@ -1,27 +1,27 @@
 n.d(t, { Z: () => g }), n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(780384),
-    l = n(410030),
-    a = n(119269),
-    o = n(933304);
+var r = n(200651),
+    i = n(192379),
+    s = n(780384),
+    a = n(410030),
+    l = n(119269),
+    o = n(652523);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
             default:
                 return;
         }
     },
     u = (e) => {
         switch (e) {
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
                 return 'var(--background-primary)';
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:
                 return;
@@ -29,83 +29,83 @@ let c = 'url(#gradient)',
     },
     m = (e, t) => {
         switch (t) {
-            case a.Qo.NITRO_GEM:
-            case a.Qo.AVATAR_DECO:
+            case l.Qo.NITRO_GEM:
+            case l.Qo.AVATAR_DECO:
                 return c;
-            case a.Qo.NITRO_LOGO:
+            case l.Qo.NITRO_LOGO:
                 return e ? 'url(#gradient_nitro_logo)' : c;
             default:
                 return;
         }
     },
     g = (e) => {
-        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: x, progressCircleStroke: _ } = e,
-            p = 43 + h / 2,
-            E = 2 * Math.PI * p,
-            [C, f] = s.useState(g);
-        s.useEffect(() => {
+        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: p = 2, progressCircleVariation: h, progressCircleStroke: f } = e,
+            b = 43 + p / 2,
+            N = 2 * Math.PI * b,
+            [x, _] = i.useState(g);
+        i.useEffect(() => {
             let e = setTimeout(() => {
-                f(t);
+                _(t);
             }, 200);
             return () => clearTimeout(e);
         }, [t]);
-        let T = (0, l.ZP)(),
-            N = (0, r.ap)(T),
-            S = u(x),
-            I = d(x, N),
-            b = null != _ ? _ : m(N, x);
-        return (0, i.jsxs)('div', {
+        let E = (0, a.ZP)(),
+            j = (0, s.ap)(E),
+            C = u(h),
+            O = d(h, j),
+            v = null != f ? f : m(j, h);
+        return (0, r.jsxs)('div', {
             className: o.circleContainer,
             children: [
-                (0, i.jsxs)('svg', {
+                (0, r.jsxs)('svg', {
                     viewBox: '0 0 100 100',
                     className: o.circleSVG,
                     children: [
-                        (0, i.jsx)('circle', {
-                            className: x === a.Qo.NITRO_GEM || x === a.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
+                        (0, r.jsx)('circle', {
+                            className: h === l.Qo.NITRO_GEM || h === l.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
                             fill: 'transparent',
-                            strokeWidth: h,
-                            r: ''.concat(p),
+                            strokeWidth: p,
+                            r: ''.concat(b),
                             cx: '50%',
                             cy: '50%',
-                            stroke: S,
-                            strokeOpacity: I
+                            stroke: C,
+                            strokeOpacity: O
                         }),
-                        (0, i.jsx)('circle', {
-                            stroke: b,
-                            strokeWidth: h,
+                        (0, r.jsx)('circle', {
+                            stroke: v,
+                            strokeWidth: p,
                             strokeLinecap: 'round',
-                            strokeDasharray: ''.concat(E, ' ').concat(E),
+                            strokeDasharray: ''.concat(N, ' ').concat(N),
                             className: c,
-                            style: { strokeDashoffset: (1 - C / 100) * E },
-                            r: ''.concat(p),
+                            style: { strokeDashoffset: (1 - x / 100) * N },
+                            r: ''.concat(b),
                             cx: '50%',
                             cy: '50%'
                         })
                     ]
                 }),
-                (0, i.jsxs)('svg', {
+                (0, r.jsxs)('svg', {
                     width: '0',
                     height: '0',
                     children: [
-                        (0, i.jsxs)('linearGradient', {
+                        (0, r.jsxs)('linearGradient', {
                             id: 'gradient',
                             x1: '0%',
                             y1: '0%',
                             x2: '100%',
                             y2: '100%',
                             children: [
-                                (0, i.jsx)('stop', {
+                                (0, r.jsx)('stop', {
                                     offset: '0%',
                                     style: { stopColor: '#FFBDF2' }
                                 }),
-                                (0, i.jsx)('stop', {
+                                (0, r.jsx)('stop', {
                                     offset: '100%',
                                     style: { stopColor: '#E742E1' }
                                 })
                             ]
                         }),
-                        (0, i.jsxs)('linearGradient', {
+                        (0, r.jsxs)('linearGradient', {
                             id: 'gradient_nitro_logo',
                             x1: '2.99995',
                             y1: '67.6298',
@@ -113,28 +113,28 @@ let c = 'url(#gradient)',
                             y2: '67.6298',
                             gradientUnits: 'userSpaceOnUse',
                             children: [
-                                (0, i.jsx)('stop', { stopColor: '#F9A0E8' }),
-                                (0, i.jsx)('stop', {
+                                (0, r.jsx)('stop', { stopColor: '#F9A0E8' }),
+                                (0, r.jsx)('stop', {
                                     offset: '1',
                                     stopColor: '#E742E1'
                                 })
                             ]
                         }),
-                        (0, i.jsxs)('linearGradient', {
+                        (0, r.jsxs)('linearGradient', {
                             id: 'dark-purple-gradient',
                             x1: '0%',
                             y1: '0%',
                             x2: '100%',
                             y2: '0%',
                             children: [
-                                (0, i.jsx)('stop', {
+                                (0, r.jsx)('stop', {
                                     offset: '0%',
                                     style: {
                                         stopColor: '#241731',
                                         stopOpacity: 1
                                     }
                                 }),
-                                (0, i.jsx)('stop', {
+                                (0, r.jsx)('stop', {
                                     offset: '100%',
                                     style: {
                                         stopColor: '#241731',
@@ -145,7 +145,7 @@ let c = 'url(#gradient)',
                         })
                     ]
                 }),
-                (0, i.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: o.childrenContainer,
                     children: n
                 })

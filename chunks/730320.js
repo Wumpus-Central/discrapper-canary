@@ -1,18 +1,18 @@
 n.d(t, { Z: () => l });
-var i = n(192379),
-    r = n(723184),
-    a = n(820611),
-    s = n(877837),
-    o = n(197499);
+var r = n(192379),
+    i = n(723184),
+    o = n(820611),
+    a = n(877837),
+    s = n(197499);
 let l = function (e) {
     var t = e.color,
         n = e.onClick,
         l = void 0 === n ? function () {} : n,
-        u = e.onSwatchHover,
-        c = e.first,
+        c = e.onSwatchHover,
+        u = e.first,
         d = e.last,
         f = e.active,
-        _ = (0, r.default)(
+        p = (0, i.default)(
             {
                 default: {
                     color: {
@@ -23,7 +23,7 @@ let l = function (e) {
                         marginBottom: '1px'
                     },
                     check: {
-                        color: a.Qg(t),
+                        color: o.Qg(t),
                         marginLeft: '8px',
                         display: 'none'
                     }
@@ -48,22 +48,22 @@ let l = function (e) {
                 transparent: { check: { color: '#333' } }
             },
             {
-                first: c,
+                first: u,
                 last: d,
                 active: f,
                 'color-#FFFFFF': '#FFFFFF' === t,
                 transparent: 'transparent' === t
             }
         );
-    return i.createElement(
-        s.m4,
+    return r.createElement(
+        a.m4,
         {
             color: t,
-            style: _.color,
+            style: p.color,
             onClick: l,
-            onHover: u,
+            onHover: c,
             focusStyle: { boxShadow: '0 0 4px ' + t }
         },
-        i.createElement('div', { style: _.check }, i.createElement(o.default, null))
+        r.createElement('div', { style: p.check }, r.createElement(s.default, null))
     );
 };

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => o });
-var i = n(200651);
+n.d(t, { Z: () => s });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(665906),
-    s = n(996861),
-    r = n(388032);
-function o(e, t) {
-    return (0, a.NE)(t, e)
-        ? (0, i.jsx)(l.sNh, {
+var i = n(481060),
+    l = n(665906),
+    a = n(996861),
+    o = n(388032);
+function s(e, t) {
+    return (0, l.NE)(t, e)
+        ? (0, r.jsx)(i.sNh, {
               id: 'thread',
-              label: r.intl.string(r.t.rBIGBA),
-              icon: l.or_,
+              label: o.NW.string(o.t.rBIGBA),
+              icon: i.or_,
               action: () => {
-                  (0, s.gK)(t, e);
+                  (0, a.gK)(t, e);
               }
           })
         : null;

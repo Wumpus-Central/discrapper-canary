@@ -1,12 +1,12 @@
-n.d(t, { $: () => p }), n(653041), n(47120);
-var i = n(192379),
-    r = n(392711),
-    a = n.n(r),
-    s = n(442837),
-    o = n(846519),
+n.d(t, { $: () => _ }), n(653041), n(47120);
+var r = n(192379),
+    i = n(392711),
+    o = n.n(i),
+    a = n(442837),
+    s = n(846519),
     l = n(224706),
-    u = n(669764);
-function c(e, t, n) {
+    c = n(669764);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,22 +29,22 @@ class f {
         this._pending.forEach((t) => {
             this._fetched.add(t), e.push(t);
         }),
-            a()
+            o()
                 .chunk(e, d)
                 .forEach((e) => {
                     l.Z.getDetectableGamesSupplemental(e);
                 });
     }
     constructor() {
-        c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
+        u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(0, () => this._flush()));
     }
 }
-let _ = new f();
-function p(e, t) {
-    i.useEffect(() => {
-        null != e && _.request(e);
+let p = new f();
+function _(e, t) {
+    r.useEffect(() => {
+        null != e && p.request(e);
     }, [e]);
-    let n = i.useMemo(
+    let n = r.useMemo(
         () =>
             null != t
                 ? {
@@ -54,7 +54,7 @@ function p(e, t) {
                 : void 0,
         [t]
     );
-    return (0, s.cj)([u.Z], () =>
+    return (0, a.cj)([c.Z], () =>
         null == e
             ? {
                   isFetching: !1,
@@ -63,10 +63,10 @@ function p(e, t) {
                   coverImageUrl: void 0
               }
             : {
-                  isFetching: u.Z.isFetching(e),
-                  localizedName: u.Z.getLocalizedName(e),
-                  themes: u.Z.getThemes(e),
-                  coverImageUrl: u.Z.getCoverImageUrl(e, n)
+                  isFetching: c.Z.isFetching(e),
+                  localizedName: c.Z.getLocalizedName(e),
+                  themes: c.Z.getThemes(e),
+                  coverImageUrl: c.Z.getCoverImageUrl(e, n)
               }
     );
 }

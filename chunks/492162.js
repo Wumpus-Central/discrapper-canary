@@ -1,19 +1,19 @@
 n.d(t, { Z: () => s });
-var i = n(442837),
-    l = n(592125),
-    r = n(938475),
-    a = n(853856),
-    o = n(981631);
+var r = n(442837),
+    i = n(592125),
+    l = n(938475),
+    o = n(853856),
+    a = n(981631);
 function s(e) {
-    return (0, i.cj)(
-        [r.ZP, l.Z, a.Z],
+    return (0, r.cj)(
+        [l.ZP, i.Z, o.Z],
         () => {
-            if (e !== o.I_8) return r.ZP.getVoiceStates(e);
-            let t = a.Z.getFavoriteChannels(),
+            if (e !== a.I_8) return l.ZP.getVoiceStates(e);
+            let t = o.Z.getFavoriteChannels(),
                 n = {};
             for (let e in t) {
-                let t = l.Z.getChannel(e);
-                null != t && (n[e] = r.ZP.getVoiceStatesForChannel(t));
+                let t = i.Z.getChannel(e);
+                null != t && (n[e] = l.ZP.getVoiceStatesForChannel(t));
             }
             return n;
         },

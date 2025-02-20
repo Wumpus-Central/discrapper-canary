@@ -1,30 +1,30 @@
 n.d(t, { Z: () => P }), n(47120), n(411104);
-var i = n(200651),
-    s = n(192379),
-    r = n(913527),
-    l = n.n(r),
-    a = n(442837),
+var r = n(200651),
+    i = n(192379),
+    s = n(913527),
+    a = n.n(s),
+    l = n(442837),
     o = n(846519),
     c = n(481060),
     d = n(533307),
     u = n(189907),
     m = n(812206),
     g = n(600164),
-    h = n(925329),
-    x = n(981632),
-    _ = n(314897),
-    p = n(82142),
-    E = n(246946),
-    C = n(509545),
-    f = n(55563),
-    T = n(259580),
-    N = n(572004),
-    S = n(669079),
-    I = n(296848),
-    b = n(474936),
-    v = n(388032),
-    j = n(620168);
-function A(e, t, n) {
+    p = n(925329),
+    h = n(981632),
+    f = n(314897),
+    b = n(82142),
+    N = n(246946),
+    x = n(509545),
+    _ = n(55563),
+    E = n(259580),
+    j = n(572004),
+    C = n(669079),
+    O = n(296848),
+    v = n(474936),
+    S = n(388032),
+    T = n(512762);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,18 +37,18 @@ function A(e, t, n) {
         e
     );
 }
-class O extends s.PureComponent {
+class y extends i.PureComponent {
     componentWillUnmount() {
         this._copyModeTimeout.stop();
     }
     get copyButtonText() {
         switch (this.state.copyMode) {
             case c.uA3.SUCCESS:
-                return v.intl.string(v.t.XVvPjY);
+                return S.NW.string(S.t.XVvPjY);
             case c.uA3.ERROR:
-                return v.intl.string(v.t.i4GM3N);
+                return S.NW.string(S.t.i4GM3N);
             default:
-                return v.intl.string(v.t.OpuAlJ);
+                return S.NW.string(S.t.OpuAlJ);
         }
     }
     handleRevoke(e) {
@@ -57,33 +57,33 @@ class O extends s.PureComponent {
     render() {
         let { hideCode: e, giftCode: t } = this.props,
             { copyMode: n } = this.state;
-        return (0, i.jsxs)(g.Z, {
+        return (0, r.jsxs)(g.Z, {
             direction: g.Z.Direction.VERTICAL,
-            className: j.giftCodeRow,
+            className: T.giftCodeRow,
             children: [
-                (0, i.jsx)(c.kO8, {
-                    className: j.codeText,
-                    value: (0, S.Nz)(t.code),
+                (0, r.jsx)(c.kO8, {
+                    className: T.codeText,
+                    value: (0, C.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
-                    supportsCopy: N.wS,
-                    hideMessage: e ? v.intl.string(v.t['0RLn4+']) : null,
+                    supportsCopy: j.wS,
+                    hideMessage: e ? S.NW.string(S.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.Ttl.BRAND,
                     buttonLook: c.iLD.FILLED
                 }),
-                (0, i.jsxs)('div', {
-                    className: j.subTextRow,
+                (0, r.jsxs)('div', {
+                    className: T.subTextRow,
                     children: [
                         null != t.expiresAt
-                            ? (0, i.jsxs)(s.Fragment, {
-                                  children: [v.intl.format(v.t.ltVZcH, { hours: t.expiresAt.diff(l()(), 'h') }), ' \u2014\xA0']
+                            ? (0, r.jsxs)(i.Fragment, {
+                                  children: [S.NW.format(S.t.ltVZcH, { hours: t.expiresAt.diff(a()(), 'h') }), ' \u2014\xA0']
                               })
                             : null,
-                        (0, i.jsx)(c.P3F, {
+                        (0, r.jsx)(c.P3F, {
                             tag: 'a',
                             onClick: () => this.handleRevoke(t.code),
-                            children: v.intl.string(v.t.v6Yaz8)
+                            children: S.NW.string(S.t.v6Yaz8)
                         })
                     ]
                 })
@@ -92,13 +92,13 @@ class O extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, '_copyModeTimeout', new o.V7()),
-            A(this, 'state', { copyMode: c.uA3.DEFAULT }),
-            A(this, 'handleCopy', (e) => {
+            I(this, '_copyModeTimeout', new o.V7()),
+            I(this, 'state', { copyMode: c.uA3.DEFAULT }),
+            I(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, S.dM)(t, n);
+                (0, C.dM)(t, n);
                 try {
-                    (0, N.JG)(e), this.setState({ copyMode: c.uA3.SUCCESS });
+                    (0, j.JG)(e), this.setState({ copyMode: c.uA3.SUCCESS });
                 } catch (e) {
                     this.setState({ copyMode: c.uA3.ERROR });
                 }
@@ -108,50 +108,50 @@ class O extends s.PureComponent {
             });
     }
 }
-class R extends s.PureComponent {
+class A extends i.PureComponent {
     componentDidMount() {
         this._loadedAt = Date.now();
     }
     renderTitle() {
         let e;
-        let { sku: t, subscriptionPlan: n, giftCodeBatchId: s } = this.props;
+        let { sku: t, subscriptionPlan: n, giftCodeBatchId: i } = this.props;
         return (
             (e =
-                s === b.m8
-                    ? v.intl.string(v.t.odsU6e)
-                    : s === b.rX && null != n
-                      ? v.intl.formatToPlainString(n.interval === b.rV.MONTH ? v.t.uZjpiI : v.t.bJW1EB, {
+                i === v.m8
+                    ? S.NW.string(S.t.odsU6e)
+                    : i === v.rX && null != n
+                      ? S.NW.formatToPlainString(n.interval === v.rV.MONTH ? S.t.uZjpiI : S.t.bJW1EB, {
                             skuName: t.name,
                             intervalCount: n.intervalCount
                         })
                       : null == n
                         ? t.name
-                        : v.intl.formatToPlainString(n.interval === b.rV.MONTH ? v.t.rCJvqq : v.t.Vd3Iu7, {
+                        : S.NW.formatToPlainString(n.interval === v.rV.MONTH ? S.t.rCJvqq : S.t.Vd3Iu7, {
                               skuName: t.name,
                               intervalCount: n.intervalCount
                           })),
-            (0, i.jsx)('div', {
-                className: j.gameName,
+            (0, r.jsx)('div', {
+                className: T.gameName,
                 children: e
             })
         );
     }
     renderGenerateGiftCodeRow() {
-        return (0, i.jsxs)(g.Z, {
+        return (0, r.jsxs)(g.Z, {
             justify: g.Z.Justify.BETWEEN,
             align: g.Z.Align.CENTER,
-            className: j.generateCodeRow,
+            className: T.generateCodeRow,
             children: [
-                (0, i.jsx)(c.Text, {
+                (0, r.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    children: v.intl.string(v.t.lELyPj)
+                    children: S.NW.string(S.t.lELyPj)
                 }),
-                (0, i.jsx)(c.zxk, {
+                (0, r.jsx)(c.zxk, {
                     submitting: this.state.isCreating,
                     size: c.zxk.Sizes.SMALL,
                     color: c.zxk.Colors.BRAND,
                     onClick: this.handleGenerateGiftCode,
-                    children: v.intl.string(v.t.Q3Qgur)
+                    children: S.NW.string(S.t.Q3Qgur)
                 })
             ]
         });
@@ -160,68 +160,68 @@ class R extends s.PureComponent {
         this.setState({ isHovered: e });
     }
     render() {
-        let { entitlements: e, application: t, giftCodes: n, className: r, sku: l, isFetching: a, hideCodes: o, giftStyle: d } = this.props,
+        let { entitlements: e, application: t, giftCodes: n, className: s, sku: a, isFetching: l, hideCodes: o, giftStyle: d } = this.props,
             { isOpen: m } = this.state;
-        return (0, i.jsxs)(u.Z, {
-            className: r,
+        return (0, r.jsxs)(u.Z, {
+            className: s,
             children: [
-                (0, i.jsx)(c.P3F, {
+                (0, r.jsx)(c.P3F, {
                     onClick: this.handleToggleOpen,
-                    className: j.card,
+                    className: T.card,
                     onMouseEnter: () => this.setIsHovered(!0),
                     onMouseLeave: () => this.setIsHovered(!1),
-                    children: (0, i.jsx)(u.Z.Header, {
+                    children: (0, r.jsx)(u.Z.Header, {
                         splashArtURL: t.getSplashURL(512),
-                        children: (0, i.jsxs)('div', {
-                            className: j.cardHeader,
+                        children: (0, r.jsxs)('div', {
+                            className: T.cardHeader,
                             children: [
-                                (0, i.jsxs)(g.Z, {
+                                (0, r.jsxs)(g.Z, {
                                     align: g.Z.Align.CENTER,
                                     children: [
                                         null != d
-                                            ? (0, i.jsx)(x.Z, {
+                                            ? (0, r.jsx)(h.Z, {
                                                   giftStyle: d,
-                                                  className: j.seasonalGiftBox,
+                                                  className: T.seasonalGiftBox,
                                                   shouldAnimate: this.state.isHovered
                                               })
-                                            : (0, i.jsx)(h.Z, {
+                                            : (0, r.jsx)(p.Z, {
                                                   game: t,
-                                                  size: h.Z.Sizes.MEDIUM,
-                                                  skuId: l.id
+                                                  size: p.Z.Sizes.MEDIUM,
+                                                  skuId: a.id
                                               }),
-                                        (0, i.jsxs)('div', {
-                                            className: j.headerText,
+                                        (0, r.jsxs)('div', {
+                                            className: T.headerText,
                                             children: [
                                                 this.renderTitle(),
-                                                (0, i.jsx)('div', {
-                                                    className: j.subTextHeader,
-                                                    children: v.intl.format(v.t.zMcvcH, { copies: e.length })
+                                                (0, r.jsx)('div', {
+                                                    className: T.subTextHeader,
+                                                    children: S.NW.format(S.t.zMcvcH, { copies: e.length })
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(T.Z, {
-                                    direction: m ? T.Z.Directions.UP : T.Z.Directions.DOWN,
-                                    className: j.expandIcon
+                                (0, r.jsx)(E.Z, {
+                                    direction: m ? E.Z.Directions.UP : E.Z.Directions.DOWN,
+                                    className: T.expandIcon
                                 })
                             ]
                         })
                     })
                 }),
                 m
-                    ? (0, i.jsx)(u.Z.Body, {
-                          children: a
-                              ? (0, i.jsx)(c.$jN, { className: j.spinner })
-                              : (0, i.jsxs)(s.Fragment, {
+                    ? (0, r.jsx)(u.Z.Body, {
+                          children: l
+                              ? (0, r.jsx)(c.$jN, { className: T.spinner })
+                              : (0, r.jsxs)(i.Fragment, {
                                     children: [
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,
                                         n.map((e) =>
-                                            (0, i.jsx)(
-                                                O,
+                                            (0, r.jsx)(
+                                                y,
                                                 {
                                                     giftCode: e,
-                                                    sku: l,
+                                                    sku: a,
                                                     hideCode: o
                                                 },
                                                 e.code
@@ -236,43 +236,43 @@ class R extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, '_loadedAt', null),
-            A(this, 'state', {
+            I(this, '_loadedAt', null),
+            I(this, 'state', {
                 isOpen: !1,
                 isCreating: !1,
                 isHovered: !1
             }),
-            A(this, 'handleGenerateGiftCode', async (e) => {
+            I(this, 'handleGenerateGiftCode', async (e) => {
                 e.stopPropagation();
-                let { skuId: t, subscriptionPlanId: n, giftStyle: i } = this.props;
+                let { skuId: t, subscriptionPlanId: n, giftStyle: r } = this.props;
                 this.setState({ isCreating: !0 }),
-                    await d.Z.createGiftCode(t, n, i),
+                    await d.Z.createGiftCode(t, n, r),
                     this.setState({
                         isCreating: !1,
                         isOpen: !0
                     });
             }),
-            A(this, 'handleToggleOpen', () => {
+            I(this, 'handleToggleOpen', () => {
                 let { skuId: e, subscriptionPlanId: t, loadedAt: n } = this.props,
-                    i = !this.state.isOpen;
-                (null == n || null == this._loadedAt || n < this._loadedAt) && i && d.Z.fetchUserGiftCodesForSKU(e, t), this.setState({ isOpen: !this.state.isOpen });
+                    r = !this.state.isOpen;
+                (null == n || null == this._loadedAt || n < this._loadedAt) && r && d.Z.fetchUserGiftCodesForSKU(e, t), this.setState({ isOpen: !this.state.isOpen });
             });
     }
 }
-let P = a.ZP.connectStores([f.Z, E.Z, p.Z, m.Z, C.Z, _.default], (e) => {
-    let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
-        s = f.Z.get(t);
-    if (null == s) throw Error('SKU was unavailable while rendering gift.');
-    let r = p.Z.getForGifterSKUAndPlan(_.default.getId(), t, n)
+let P = l.ZP.connectStores([_.Z, N.Z, b.Z, m.Z, x.Z, f.default], (e) => {
+    let { skuId: t, subscriptionPlanId: n, giftStyle: r } = e,
+        i = _.Z.get(t);
+    if (null == i) throw Error('SKU was unavailable while rendering gift.');
+    let s = b.Z.getForGifterSKUAndPlan(f.default.getId(), t, n)
         .filter((e) => !e.isClaimed)
-        .filter((e) => e.giftStyle === i);
+        .filter((e) => e.giftStyle === r);
     return {
-        sku: s,
-        hideCodes: E.Z.enabled,
-        isFetching: p.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
-        loadedAt: p.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
-        application: m.Z.getApplication(s.applicationId),
-        subscriptionPlan: null != n ? (0, I.oE)(n) : null,
-        giftCodes: r
+        sku: i,
+        hideCodes: N.Z.enabled,
+        isFetching: b.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
+        loadedAt: b.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
+        application: m.Z.getApplication(i.applicationId),
+        subscriptionPlan: null != n ? (0, O.oE)(n) : null,
+        giftCodes: s
     };
-})(R);
+})(A);

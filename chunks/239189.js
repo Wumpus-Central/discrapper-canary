@@ -1,26 +1,26 @@
 n.r(t),
     n.d(t, {
-        assign: () => p,
+        assign: () => _,
         batchedUpdates: () => f,
-        colorNames: () => u,
-        createStringInterpolator: () => i,
-        frameLoop: () => o,
+        colorNames: () => c,
+        createStringInterpolator: () => r,
+        frameLoop: () => s,
         now: () => l,
         requestAnimationFrame: () => d,
-        skipAnimation: () => c,
-        to: () => r,
-        willAdvance: () => _
+        skipAnimation: () => u,
+        to: () => i,
+        willAdvance: () => p
     });
-var i,
-    r,
-    a = n(19784),
-    s = n(217348),
-    o = new a.V(),
+var r,
+    i,
+    o = n(19784),
+    a = n(217348),
+    s = new o.V(),
     l = function () {
         return performance.now();
     },
-    u = null,
-    c = !1,
+    c = null,
+    u = !1,
     d =
         'undefined' != typeof window
             ? window.requestAnimationFrame
@@ -30,32 +30,32 @@ var i,
     f = function (e) {
         return e();
     },
-    _ = s.ZT,
-    p = function (e) {
+    p = a.ZT,
+    _ = function (e) {
         var t;
         return (
-            (r = (t = Object.assign(
+            (i = (t = Object.assign(
                 {
-                    to: r,
+                    to: i,
                     now: l,
-                    frameLoop: o,
-                    colorNames: u,
-                    skipAnimation: c,
-                    createStringInterpolator: i,
+                    frameLoop: s,
+                    colorNames: c,
+                    skipAnimation: u,
+                    createStringInterpolator: r,
                     requestAnimationFrame: d,
                     batchedUpdates: f,
-                    willAdvance: _
+                    willAdvance: p
                 },
                 h(e)
             )).to),
             (l = t.now),
-            (o = t.frameLoop),
-            (u = t.colorNames),
-            (c = t.skipAnimation),
-            (i = t.createStringInterpolator),
+            (s = t.frameLoop),
+            (c = t.colorNames),
+            (u = t.skipAnimation),
+            (r = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
             (f = t.batchedUpdates),
-            (_ = t.willAdvance),
+            (p = t.willAdvance),
             t
         );
     };

@@ -1,38 +1,38 @@
 n.d(e, { Z: () => a });
-var i = n(200651);
+var r = n(200651);
 n(192379);
 var s = n(120356),
-    l = n.n(s),
-    r = n(481060),
-    o = n(4167);
+    i = n.n(s),
+    o = n(481060),
+    l = n(848098);
 function a(t) {
     let { tips: e, className: n, headerText: s } = t;
-    return (0, i.jsxs)('div', {
-        className: l()(o.tipsSection, n),
+    return (0, r.jsxs)('div', {
+        className: i()(l.tipsSection, n),
         children: [
-            (0, i.jsx)('div', {
-                className: o.tipsHeader,
-                children: (0, i.jsx)(r.X6q, {
+            (0, r.jsx)('div', {
+                className: l.tipsHeader,
+                children: (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/bold',
-                    className: o.headerText,
+                    className: l.headerText,
                     children: s
                 })
             }),
-            (0, i.jsx)('ul', {
-                className: o.tipsList,
+            (0, r.jsx)('ul', {
+                className: l.tipsList,
                 children: e.map((t, e) =>
-                    (0, i.jsxs)(
+                    (0, r.jsxs)(
                         'li',
                         {
-                            className: o.tipRow,
+                            className: l.tipRow,
                             children: [
-                                (0, i.jsx)(r.X6q, {
+                                (0, r.jsx)(o.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
-                                    className: o.tipNumber,
+                                    className: l.tipNumber,
                                     children: e + 1
                                 }),
-                                (0, i.jsx)(r.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-sm/medium',
                                     children: t
                                 })

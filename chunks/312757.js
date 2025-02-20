@@ -1,71 +1,71 @@
 n.d(e, { default: () => c });
 var i = n(200651);
 n(192379);
-var l = n(481060),
-    d = n(287734),
+var d = n(481060),
+    a = n(287734),
     r = n(313201),
-    a = n(939863),
+    _ = n(939863),
     s = n(482241),
-    _ = n(554747),
-    u = n(388032),
-    E = n(835980);
+    l = n(554747),
+    p = n(388032),
+    I = n(791726);
 function c(t) {
     let { channel: e, transitionState: n, onClose: c } = t,
         o = (0, r.Dt)(),
-        I = (0, _.qY)(e.id);
-    if (null == I) return null;
-    let p = () => {
-        d.default.selectVoiceChannel(null), c();
+        E = (0, l.qY)(e.id);
+    if (null == E) return null;
+    let N = () => {
+        a.default.selectVoiceChannel(null), c();
     };
-    return (0, i.jsxs)(l.Y0X, {
+    return (0, i.jsxs)(d.Y0X, {
         transitionState: n,
         'aria-labelledby': o,
-        size: l.CgR.SMALL,
+        size: d.CgR.SMALL,
         children: [
-            (0, i.jsxs)(l.hzk, {
-                className: E.content,
+            (0, i.jsxs)(d.hzk, {
+                className: I.content,
                 children: [
-                    (0, i.jsx)(a.Z, {
+                    (0, i.jsx)(_.Z, {
                         children: (0, i.jsx)('div', {
-                            className: E.iconBackground,
-                            children: (0, i.jsx)(l.Que, {
+                            className: I.iconBackground,
+                            children: (0, i.jsx)(d.Que, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 40,
                                 width: 40,
-                                className: E.icon
+                                className: I.icon
                             })
                         })
                     }),
-                    (0, i.jsx)(l.X6q, {
+                    (0, i.jsx)(d.X6q, {
                         id: o,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: E.title,
-                        children: u.intl.string(u.t['4Ao8LC'])
+                        className: I.title,
+                        children: p.NW.string(p.t['4Ao8LC'])
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(d.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: E.subtitle,
-                        children: u.intl.string(u.t['0I0B8f'])
+                        className: I.subtitle,
+                        children: p.NW.string(p.t['0I0B8f'])
                     })
                 ]
             }),
-            (0, i.jsxs)(l.mzw, {
+            (0, i.jsxs)(d.mzw, {
                 children: [
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.RED,
+                    (0, i.jsx)(d.zxk, {
+                        color: d.zxk.Colors.RED,
                         onClick: () => {
-                            s.Z.endEvent(I.id, I.guild_id), p();
+                            s.Z.endEvent(E.id, E.guild_id), N();
                         },
-                        children: u.intl.string(u.t.mjB9pa)
+                        children: p.NW.string(p.t.mjB9pa)
                     }),
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.PRIMARY,
-                        className: E.cancelButton,
-                        onClick: p,
-                        children: u.intl.string(u.t.P60OAQ)
+                    (0, i.jsx)(d.zxk, {
+                        color: d.zxk.Colors.PRIMARY,
+                        className: I.cancelButton,
+                        onClick: N,
+                        children: p.NW.string(p.t.P60OAQ)
                     })
                 ]
             })

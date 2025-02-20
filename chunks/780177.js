@@ -1,7 +1,7 @@
-var i = n(40251),
-    r = n(790784),
-    a = n(313739);
-function s() {
-    return Object.keys(a);
+var r = n(40251),
+    i = n(790784),
+    o = n(313739);
+function a() {
+    return Object.keys(o);
 }
-(t.createCipher = t.Cipher = i.createCipher), (t.createCipheriv = t.Cipheriv = i.createCipheriv), (t.createDecipher = t.Decipher = r.createDecipher), (t.createDecipheriv = t.Decipheriv = r.createDecipheriv), (t.listCiphers = t.getCiphers = s);
+(t.createCipher = t.Cipher = r.createCipher), (t.createCipheriv = t.Cipheriv = r.createCipheriv), (t.createDecipher = t.Decipher = i.createDecipher), (t.createDecipheriv = t.Decipheriv = i.createDecipheriv), (t.listCiphers = t.getCiphers = a);

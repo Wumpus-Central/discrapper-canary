@@ -1,5 +1,5 @@
 function t(e, t) {
-    for (var n = -1, i = Array(e); ++n < e; ) i[n] = t(n);
-    return i;
+    for (var n = -1, r = Array(e); ++n < e; ) r[n] = t(n);
+    return r;
 }
 e.exports = t;

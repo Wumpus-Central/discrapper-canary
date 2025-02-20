@@ -1,68 +1,68 @@
 n.d(t, { Z: () => g }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(232713),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(232713),
     l = n(260866),
-    u = n(481060),
-    c = n(806966),
+    c = n(481060),
+    u = n(806966),
     d = n(28546),
     f = n(149203),
-    _ = n(981631),
-    p = n(388032),
-    h = n(754595);
-let m = r.forwardRef(function (e, t) {
-        let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: y, defaultSearchPlaceholder: I } = e,
-            T = r.useRef(null),
-            b = (0, d.Iu)((e) => e.searchQuery),
-            [S, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
-            N = r.useCallback(
+    p = n(981631),
+    _ = n(388032),
+    h = n(82845);
+let m = i.forwardRef(function (e, t) {
+        let { emojiListRef: n, gridNavigatorId: o, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: b, defaultSearchPlaceholder: y } = e,
+            O = i.useRef(null),
+            S = (0, d.Iu)((e) => e.searchQuery),
+            [I, T] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
+            N = i.useCallback(
                 (e) => {
                     var t;
-                    c.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
+                    u.kJ.setActiveCategoryIndex('' === e ? 0 : f.c), u.kJ.setInspectedExpressionPosition(0, 0), u.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
                 },
                 [n]
             ),
-            C = r.useCallback(() => {
+            A = i.useCallback(() => {
                 (0, d.ql)('');
             }, []),
-            R = (e) => {
+            C = (e) => {
                 switch (e.keyCode) {
-                    case _.yXg.ARROW_LEFT:
-                    case _.yXg.ARROW_RIGHT:
-                    case _.yXg.ARROW_UP:
-                    case _.yXg.ARROW_DOWN:
+                    case p.yXg.ARROW_LEFT:
+                    case p.yXg.ARROW_RIGHT:
+                    case p.yXg.ARROW_UP:
+                    case p.yXg.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault();
                 }
                 g(e);
             };
         return (
-            r.useImperativeHandle(t, () => ({
+            i.useImperativeHandle(t, () => ({
                 focus: () => {
                     var e;
-                    return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = O.current) || void 0 === e ? void 0 : e.focus();
                 }
             })),
-            (0, i.jsx)(u.E1j, {
+            (0, r.jsx)(c.E1j, {
                 autoFocus: v,
-                query: b,
-                ref: T,
-                size: u.E1j.Sizes.MEDIUM,
-                placeholder: null != A ? A : I,
-                onClear: C,
-                onKeyDown: R,
+                query: S,
+                ref: O,
+                size: c.E1j.Sizes.MEDIUM,
+                placeholder: null != T ? T : y,
+                onClear: A,
+                onKeyDown: C,
                 onFocus: E,
                 onChange: N,
-                className: s()(y, { [h.searchBarFullRow]: m }),
+                className: a()(b, { [h.searchBarFullRow]: m }),
                 inputProps: {
-                    'aria-label': p.intl.string(p.t.tCauZW),
+                    'aria-label': _.NW.string(_.t.tCauZW),
                     'aria-haspopup': 'grid',
-                    'aria-controls': a,
+                    'aria-controls': o,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, l.NE)(a, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, l.NE)(o, I.columnIndex, I.rowIndex)
                 }
             })
         );
     }),
-    g = r.memo(m);
+    g = i.memo(m);

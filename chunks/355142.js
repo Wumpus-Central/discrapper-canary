@@ -1,3 +1,3 @@
-n.d(t, { EW: () => r });
-var i,
-    r = (((i = {}).IDENTITY = 'identity'), (i.DISPLAY_NAME = 'display_name'), (i.ACCOUNT_INFORMATION = 'account_information'), (i.FULL = 'full'), (i.AGE_GATE = 'age_gate'), (i.INVITE = 'invite'), (i.SMS_VERIFY = 'sms_verify'), i);
+n.d(t, { EW: () => i });
+var r,
+    i = (((r = {}).IDENTITY = 'identity'), (r.DISPLAY_NAME = 'display_name'), (r.ACCOUNT_INFORMATION = 'account_information'), (r.FULL = 'full'), (r.AGE_GATE = 'age_gate'), (r.INVITE = 'invite'), (r.SMS_VERIFY = 'sms_verify'), r);

@@ -1,7 +1,7 @@
-var i = n(569506),
-    r = n(391596);
-function a(e, t) {
-    var n = r(e, t);
-    return i(n) ? n : void 0;
+var r = n(569506),
+    i = n(391596);
+function o(e, t) {
+    var n = i(e, t);
+    return r(n) ? n : void 0;
 }
-e.exports = a;
+e.exports = o;

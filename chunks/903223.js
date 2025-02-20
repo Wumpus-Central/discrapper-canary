@@ -1,17 +1,17 @@
-n.d(t, { Z: () => m });
-var i,
+n.d(t, { Z: () => f });
+var r,
+    i,
     l,
-    a,
-    r = n(392711),
-    s = n.n(r),
-    o = n(442837),
+    o = n(392711),
+    a = n.n(o),
+    s = n(442837),
     c = n(570140),
-    d = n(430824);
-let u = null,
-    h = {};
-class p extends (a = o.ZP.Store) {
+    u = n(430824);
+let d = null,
+    p = {};
+class h extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z);
+        this.waitFor(u.Z);
     }
     getOptimalRegion() {
         var e;
@@ -24,7 +24,7 @@ class p extends (a = o.ZP.Store) {
                       return t;
                   })) && void 0 !== e
                 ? e
-                : s().sample(n)
+                : a().sample(n)
             : null;
     }
     getOptimalRegionId() {
@@ -35,7 +35,7 @@ class p extends (a = o.ZP.Store) {
     getRandomRegion() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = this.getRegions(e);
-        return null != t ? s().sample(t) : null;
+        return null != t ? a().sample(t) : null;
     }
     getRandomRegionId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -43,24 +43,24 @@ class p extends (a = o.ZP.Store) {
         return null != t ? t.id : null;
     }
     getRegions(e) {
-        return null != e ? h[e] : u;
+        return null != e ? p[e] : d;
     }
 }
-(l = 'RegionStore'),
-    (i = 'displayName') in p
-        ? Object.defineProperty(p, i, {
-              value: l,
+(i = 'RegionStore'),
+    (r = 'displayName') in h
+        ? Object.defineProperty(h, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (p[i] = l);
-let m = new p(c.Z, {
+        : (h[r] = i);
+let f = new h(c.Z, {
     LOAD_REGIONS: function (e) {
-        let t = s().sortBy(e.regions, (e) => e.name);
-        null != e.guildId ? (h[e.guildId] = t) : (u = t);
+        let t = a().sortBy(e.regions, (e) => e.name);
+        null != e.guildId ? (p[e.guildId] = t) : (d = t);
     },
     GUILD_DELETE: function (e) {
-        delete h[e.guild.id];
+        delete p[e.guild.id];
     }
 });

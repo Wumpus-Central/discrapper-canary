@@ -1,41 +1,41 @@
 n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    s = n(388032),
-    a = n(577369);
+var r = n(200651),
+    i = n(192379),
+    s = n(481060),
+    a = n(388032),
+    l = n(741162);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
-        d = r.useRef(null);
+        d = i.useRef(null);
     return (
-        (0, l.Tbt)(d),
-        (0, i.jsxs)('div', {
-            className: a.popoutContainer,
+        (0, s.Tbt)(d),
+        (0, r.jsxs)('div', {
+            className: l.popoutContainer,
             children: [
-                (0, i.jsx)(l.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
-                    className: a.customColorsHeader,
-                    children: s.intl.string(s.t.lfYWW1)
+                    className: l.customColorsHeader,
+                    children: a.NW.string(a.t.lfYWW1)
                 }),
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     ref: d,
-                    className: a.colorPickersContainer,
+                    className: l.colorPickersContainer,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: a.colorColumn,
+                        (0, r.jsxs)('div', {
+                            className: l.colorColumn,
                             children: [
-                                (0, i.jsx)('div', {
-                                    className: a.colorSwatch,
+                                (0, r.jsx)('div', {
+                                    className: l.colorSwatch,
                                     style: { backgroundColor: n.primary }
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-normal',
-                                    children: s.intl.string(s.t.C3KTQk)
+                                    children: a.NW.string(a.t.C3KTQk)
                                 }),
-                                (0, i.jsx)(l.Z$W, {
-                                    className: a.colorPicker,
+                                (0, r.jsx)(s.Z$W, {
+                                    className: l.colorPicker,
                                     value: n.primary,
                                     eagerUpdate: !0,
                                     wrapperComponentType: 'div',
@@ -45,20 +45,20 @@ function o(e) {
                             ]
                         }),
                         t &&
-                            (0, i.jsxs)('div', {
-                                className: a.colorColumn,
+                            (0, r.jsxs)('div', {
+                                className: l.colorColumn,
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        className: a.colorSwatch,
+                                    (0, r.jsx)('div', {
+                                        className: l.colorSwatch,
                                         style: { backgroundColor: n.secondary }
                                     }),
-                                    (0, i.jsx)(l.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-normal',
-                                        children: s.intl.string(s.t['8elvy8'])
+                                        children: a.NW.string(a.t['8elvy8'])
                                     }),
-                                    (0, i.jsx)(l.Z$W, {
-                                        className: a.colorPicker,
+                                    (0, r.jsx)(s.Z$W, {
+                                        className: l.colorPicker,
                                         value: n.secondary,
                                         eagerUpdate: !0,
                                         wrapperComponentType: 'div',
@@ -74,20 +74,20 @@ function o(e) {
     );
 }
 function c(e) {
-    let { shouldShow: t, showSecondaryColor: n, onRequestClose: r, children: s, palette: a, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
-    return (0, i.jsx)(l.yRy, {
+    let { shouldShow: t, showSecondaryColor: n, onRequestClose: i, children: a, palette: l, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
+    return (0, r.jsx)(s.yRy, {
         renderPopout: () =>
-            (0, i.jsx)(o, {
+            (0, r.jsx)(o, {
                 showSecondaryColor: n,
-                palette: a,
+                palette: l,
                 onPrimaryColorChange: c,
                 onSecondaryColorChange: d
             }),
         position: 'left',
         shouldShow: t,
-        onRequestClose: r,
-        animation: l.yRy.Animation.TRANSLATE,
+        onRequestClose: i,
+        animation: s.yRy.Animation.TRANSLATE,
         animationPosition: 'right',
-        children: s
+        children: a
     });
 }

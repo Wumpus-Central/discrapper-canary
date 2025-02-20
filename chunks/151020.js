@@ -1,5 +1,5 @@
-var i = n(691244);
+var r = n(691244);
 e.exports = function (e, t, n) {
-    for (var r in t) n && n.unsafe && e[r] ? (e[r] = t[r]) : i(e, r, t[r], n);
+    for (var i in t) n && n.unsafe && e[i] ? (e[i] = t[i]) : r(e, i, t[i], n);
     return e;
 };

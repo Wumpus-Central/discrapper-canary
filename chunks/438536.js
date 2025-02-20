@@ -1,21 +1,21 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var l = n(442837),
+var r = n(442837),
     a = n(481060),
-    r = n(569471),
-    s = n(346479),
-    o = n(388032);
-function c(e, t) {
-    return (0, l.e7)([r.Z], () => r.Z.hasJoined(e.id))
+    l = n(569471),
+    o = n(346479),
+    d = n(388032);
+function u(e, t) {
+    return (0, r.e7)([l.Z], () => l.Z.hasJoined(e.id))
         ? (0, i.jsx)(a.sNh, {
               id: 'leave-thread',
-              label: e.isForumPost() ? o.intl.string(o.t['2LsZdX']) : o.intl.string(o.t['fa/84u']),
-              action: () => s.Z.leaveThread(e, t)
+              label: e.isForumPost() ? d.NW.string(d.t['2LsZdX']) : d.NW.string(d.t['fa/84u']),
+              action: () => o.Z.leaveThread(e, t)
           })
         : (0, i.jsx)(a.sNh, {
               id: 'join-thread',
-              label: e.isForumPost() ? o.intl.string(o.t.ihLPiI) : o.intl.string(o.t['10kukZ']),
-              action: () => s.Z.joinThread(e, t)
+              label: e.isForumPost() ? d.NW.string(d.t.ihLPiI) : d.NW.string(d.t['10kukZ']),
+              action: () => o.Z.joinThread(e, t)
           });
 }

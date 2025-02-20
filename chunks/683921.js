@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var i = n(442837),
-    l = n(317381);
-function a(e) {
+n.d(t, { Z: () => l });
+var r = n(442837),
+    i = n(317381);
+function l(e) {
     let { channelId: t } = e;
-    return (0, i.e7)([l.ZP], () => l.ZP.getEmbeddedActivitiesForChannel(t).some((e) => e.userIds.size > 0));
+    return (0, r.e7)([i.ZP], () => i.ZP.getEmbeddedActivitiesForChannel(t).some((e) => e.userIds.size > 0));
 }

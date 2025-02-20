@@ -1,17 +1,17 @@
-n.d(t, { Z: () => r });
-var i = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(824805);
-function r(e) {
-    let { changePage: t, offset: n, totalResults: r, pageLength: s } = e,
-        o = Math.floor(n / s) + 1;
-    return (0, i.jsx)('div', {
-        className: a.container,
-        children: (0, i.jsx)(l.DsT, {
-            currentPage: o,
-            totalCount: r,
-            pageSize: s,
+var i = n(481060),
+    l = n(139918);
+function o(e) {
+    let { changePage: t, offset: n, totalResults: o, pageLength: a } = e,
+        s = Math.floor(n / a) + 1;
+    return (0, r.jsx)('div', {
+        className: l.container,
+        children: (0, r.jsx)(i.DsT, {
+            currentPage: s,
+            totalCount: o,
+            pageSize: a,
             onPageChange: t,
             maxVisiblePages: 5
         })

@@ -1,27 +1,27 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(200651),
+n.d(t, { Z: () => m }), n(47120), n(230036);
+var r = n(200651),
     a = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    s = n(442837),
-    o = n(481060),
+    i = n(120356),
+    l = n.n(i),
+    o = n(442837),
+    s = n(481060),
     c = n(706454),
     d = n(388032),
-    u = n(922010);
-let m = (0, d.getAvailableLocales)();
-function h(e) {
+    u = n(734831);
+let p = (0, d.u5)();
+function m(e) {
     let { application: t, className: n } = e,
-        r = (0, s.e7)([c.default], () => c.default.locale),
-        { supportedLanguages: h, usersLanguageIsFirst: p } = a.useMemo(() => {
+        i = (0, o.e7)([c.default], () => c.default.locale),
+        { supportedLanguages: m, usersLanguageIsFirst: h } = a.useMemo(() => {
             var e;
             if ((null === (e = t.directory_entry) || void 0 === e ? void 0 : e.supported_locales) != null) {
                 let e = new Set(t.directory_entry.supported_locales),
-                    n = e.has(r),
-                    i = m.filter((t) => e.has(t.value));
+                    n = e.has(i),
+                    r = p.filter((t) => e.has(t.value));
                 return (
-                    n && i.sort((e, t) => (e.value === r ? -1 : t.value === r ? 1 : 0)),
+                    n && r.sort((e, t) => (e.value === i ? -1 : +(t.value === i))),
                     {
-                        supportedLanguages: i.map((e) => d.intl.string(e.localizedName)),
+                        supportedLanguages: r.map((e) => d.NW.string(e.localizedName)),
                         usersLanguageIsFirst: n
                     }
                 );
@@ -30,24 +30,24 @@ function h(e) {
                 supportedLanguages: [],
                 usersLanguageIsFirst: !1
             };
-        }, [t.directory_entry, r]);
-    return (0, i.jsxs)('div', {
+        }, [t.directory_entry, i]);
+    return (0, r.jsxs)('div', {
         className: n,
         children: [
-            (0, i.jsx)(o.X6q, {
+            (0, r.jsx)(s.X6q, {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
-                children: d.intl.string(d.t.Fbjlu7)
+                children: d.NW.string(d.t.Fbjlu7)
             }),
-            (0, i.jsx)('ul', {
+            (0, r.jsx)('ul', {
                 className: u.outerContainer,
-                children: h.map((e, t) =>
-                    (0, i.jsx)(
+                children: m.map((e, t) =>
+                    (0, r.jsx)(
                         'li',
                         {
                             className: l()(u.innerContainer, u.languageItem),
-                            children: (0, i.jsx)(o.Text, {
-                                variant: 0 === t && p ? 'text-sm/bold' : 'text-sm/normal',
+                            children: (0, r.jsx)(s.Text, {
+                                variant: 0 === t && h ? 'text-sm/bold' : 'text-sm/normal',
                                 children: e
                             })
                         },

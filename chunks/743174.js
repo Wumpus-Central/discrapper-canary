@@ -1,11 +1,11 @@
-var i = n(67867),
-    r = n(476508),
-    a = n(228042),
-    s = n(146321),
-    o = n(292137),
-    l = s.Map,
-    u = s.set;
-i(
+var r = n(67867),
+    i = n(476508),
+    o = n(228042),
+    a = n(146321),
+    s = n(292137),
+    l = a.Map,
+    c = a.set;
+r(
     {
         target: 'Map',
         proto: !0,
@@ -14,14 +14,14 @@ i(
     },
     {
         mapValues: function (e) {
-            var t = a(this),
-                n = r(e, arguments.length > 1 ? arguments[1] : void 0),
-                i = new l();
+            var t = o(this),
+                n = i(e, arguments.length > 1 ? arguments[1] : void 0),
+                r = new l();
             return (
-                o(t, function (e, r) {
-                    u(i, r, n(e, r, t));
+                s(t, function (e, i) {
+                    c(r, i, n(e, i, t));
                 }),
-                i
+                r
             );
         }
     }

@@ -1,5 +1,5 @@
-function i(e) {
-    return (i =
+function r(e) {
+    return (r =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -8,7 +8,7 @@ function i(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function r(e, t) {
+function i(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -17,31 +17,31 @@ function r(e, t) {
             configurable: !0
         }
     })),
-        t && a(e, t);
+        t && o(e, t);
 }
-function a(e, t) {
-    return (a =
+function o(e, t) {
+    return (o =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function s(e) {
-    var t = u();
+function a(e) {
+    var t = c();
     return function () {
         var n,
-            i = c(e);
-        return (n = t ? Reflect.construct(i, arguments, c(this).constructor) : i.apply(this, arguments)), o(this, n);
+            r = u(e);
+        return (n = t ? Reflect.construct(r, arguments, u(this).constructor) : r.apply(this, arguments)), s(this, n);
     };
 }
-function o(e, t) {
-    return t && ('object' === i(t) || 'function' == typeof t) ? t : l(e);
+function s(e, t) {
+    return t && ('object' === r(t) || 'function' == typeof t) ? t : l(e);
 }
 function l(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function u() {
+function c() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
@@ -50,8 +50,8 @@ function u() {
         return !1;
     }
 }
-function c(e) {
-    return (c = Object.setPrototypeOf
+function u(e) {
+    return (u = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
@@ -62,14 +62,14 @@ function d(e, t) {
 }
 function f(e, t) {
     for (var n = 0; n < t.length; n++) {
-        var i = t[n];
-        (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+        var r = t[n];
+        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function _(e, t, n) {
+function p(e, t, n) {
     return t && f(e.prototype, t), n && f(e, n), e;
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -89,10 +89,10 @@ n.d(t, {
 var h = 10,
     m = (function () {
         function e() {
-            d(this, e), p(this, 'subPriority', 0);
+            d(this, e), _(this, 'subPriority', 0);
         }
         return (
-            _(e, [
+            p(e, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -104,14 +104,14 @@ var h = 10,
         );
     })(),
     g = (function (e) {
-        r(n, e);
-        var t = s(n);
-        function n(e, i, r, a, s) {
-            var o;
-            return d(this, n), ((o = t.call(this)).value = e), (o.validateValue = i), (o.setValue = r), (o.priority = a), s && (o.subPriority = s), o;
+        i(n, e);
+        var t = a(n);
+        function n(e, r, i, o, a) {
+            var s;
+            return d(this, n), ((s = t.call(this)).value = e), (s.validateValue = r), (s.setValue = i), (s.priority = o), a && (s.subPriority = a), s;
         }
         return (
-            _(n, [
+            p(n, [
                 {
                     key: 'validate',
                     value: function (e, t) {
@@ -129,16 +129,16 @@ var h = 10,
         );
     })(m),
     E = (function (e) {
-        r(n, e);
-        var t = s(n);
+        i(n, e);
+        var t = a(n);
         function n() {
             var e;
             d(this, n);
-            for (var i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
-            return p(l((e = t.call.apply(t, [this].concat(r)))), 'priority', h), p(l(e), 'subPriority', -1), e;
+            for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+            return _(l((e = t.call.apply(t, [this].concat(i)))), 'priority', h), _(l(e), 'subPriority', -1), e;
         }
         return (
-            _(n, [
+            p(n, [
                 {
                     key: 'set',
                     value: function (e, t) {

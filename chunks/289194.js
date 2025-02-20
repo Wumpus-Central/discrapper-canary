@@ -12,7 +12,7 @@ function t(e) {
                 }
             ]
         },
-        i = {
+        r = {
             className: 'function',
             beginKeywords: 'def',
             end: /[:={\[(\n;]/,
@@ -31,7 +31,7 @@ function t(e) {
             keyword: ['case', 'class', 'def', 'else', 'enum', 'if', 'impl', 'import', 'in', 'lat', 'rel', 'index', 'let', 'match', 'namespace', 'switch', 'type', 'yield', 'with'],
             literal: ['true', 'false']
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, t, n, i, e.C_NUMBER_MODE]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, t, n, r, e.C_NUMBER_MODE]
     };
 }
 e.exports = t;

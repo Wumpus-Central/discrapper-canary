@@ -1,4 +1,4 @@
-var i = {
+var r = {
         ECB: n(706584),
         CBC: n(100653),
         CFB: n(836997),
@@ -8,6 +8,6 @@ var i = {
         CTR: n(869133),
         GCM: n(869133)
     },
-    r = n(313739);
-for (var a in r) r[a].module = i[r[a].mode];
-e.exports = r;
+    i = n(313739);
+for (var o in i) i[o].module = r[i[o].mode];
+e.exports = i;

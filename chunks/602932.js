@@ -1,31 +1,31 @@
-var i = n(161581),
-    r = n(197187),
-    a = n(354848),
-    s = n(177448),
-    o = n(626544),
+var r = n(161581),
+    i = n(197187),
+    o = n(354848),
+    a = n(177448),
+    s = n(626544),
     l = n(50754),
-    u = n(202934),
-    c = i.Function,
+    c = n(202934),
+    u = r.Function,
     d =
-        /MSIE .\./.test(o) ||
-        (s &&
+        /MSIE .\./.test(s) ||
+        (a &&
             (function () {
-                var e = i.Bun.version.split('.');
+                var e = r.Bun.version.split('.');
                 return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
             })());
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
     return d
-        ? function (i, s) {
-              var o = u(arguments.length, 1) > n,
-                  d = a(i) ? i : c(i),
-                  f = o ? l(arguments, n) : [],
-                  _ = o
+        ? function (r, a) {
+              var s = c(arguments.length, 1) > n,
+                  d = o(r) ? r : u(r),
+                  f = s ? l(arguments, n) : [],
+                  p = s
                       ? function () {
-                            r(d, this, f);
+                            i(d, this, f);
                         }
                       : d;
-              return t ? e(_, s) : e(_);
+              return t ? e(p, a) : e(p);
           }
         : e;
 };

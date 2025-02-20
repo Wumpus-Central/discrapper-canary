@@ -1,10 +1,10 @@
 n.d(t, {
-    E: () => a,
-    Z: () => s
+    E: () => o,
+    Z: () => a
 });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-08_tiered_tenure_badges',
         label: 'Tiered Tenure Badging',
@@ -12,7 +12,7 @@ let a = (0, i.B)({
             enabled: !1,
             isBadgeVersion2: !1
         },
-        commonTriggerPoint: r.$P.CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -34,4 +34,4 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = a;
+    a = o;

@@ -1,55 +1,55 @@
 n.d(t, { Z: () => d });
-var i = n(200651),
-    r = n(481060),
-    a = n(688465),
-    s = n(328908),
-    o = n(992970),
+var r = n(200651),
+    i = n(481060),
+    o = n(688465),
+    a = n(328908),
+    s = n(992970),
     l = n(921944),
-    u = n(388032),
-    c = n(777814);
+    c = n(388032),
+    u = n(580613);
 function d(e) {
     let { dismissContent: t, channelId: n } = e;
-    return (0, i.jsxs)('div', {
-        className: c.upsell,
+    return (0, r.jsxs)('div', {
+        className: u.upsell,
         children: [
-            (0, i.jsx)(r.P3F, {
+            (0, r.jsx)(i.P3F, {
                 onClick: () => t(l.L.USER_DISMISS),
-                className: c.icon,
-                children: (0, i.jsx)(r.Dio, { name: 'confetti' })
+                className: u.icon,
+                children: (0, r.jsx)(i.Dio, { name: 'confetti' })
             }),
-            (0, i.jsx)(a.Z, { className: c.beta }),
-            (0, i.jsx)(r.X6q, {
+            (0, r.jsx)(o.Z, { className: u.beta }),
+            (0, r.jsx)(i.X6q, {
                 color: 'always-white',
-                className: c.heading,
+                className: u.heading,
                 variant: 'heading-md/semibold',
-                children: u.intl.string(u.t['WsTf4+'])
+                children: c.NW.string(c.t['WsTf4+'])
             }),
-            (0, i.jsx)(r.Text, {
+            (0, r.jsx)(i.Text, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: u.intl.string(u.t['7wH9GB'])
+                children: c.NW.string(c.t['7wH9GB'])
             }),
-            (0, i.jsx)(r.zxk, {
+            (0, r.jsx)(i.zxk, {
                 onClick: () => {
-                    (0, s.Ne)(n, o.MG.ConfettiUpsell), t(l.L.TAKE_ACTION);
+                    (0, a.Ne)(n, s.MG.ConfettiUpsell), t(l.L.TAKE_ACTION);
                 },
-                className: c.cta,
-                children: u.intl.string(u.t['a+udJy'])
+                className: u.cta,
+                children: c.NW.string(c.t['a+udJy'])
             }),
-            (0, i.jsx)(f, { className: c.caret })
+            (0, r.jsx)(f, { className: u.caret })
         ]
     });
 }
 function f(e) {
     let { className: t } = e;
-    return (0, i.jsx)('svg', {
+    return (0, r.jsx)('svg', {
         className: t,
         width: '12',
         height: '9',
         viewBox: '0 0 12 9',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        children: (0, i.jsx)('path', {
+        children: (0, r.jsx)('path', {
             id: 'Caret',
             d: 'M-3.49691e-07 0.790039L12 0.790039L6 8.79004L-3.49691e-07 0.790039Z',
             fill: '#111214'

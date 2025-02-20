@@ -3,31 +3,31 @@
 })(0, function (e) {
     var t = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_'),
         n = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_');
-    function i(e) {
+    function r(e) {
         return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1;
     }
-    function r(e, t, n) {
-        var r = e + ' ';
+    function i(e, t, n) {
+        var i = e + ' ';
         switch (n) {
             case 'ss':
-                return r + (i(e) ? 'sekundy' : 'sekund');
+                return i + (r(e) ? 'sekundy' : 'sekund');
             case 'm':
                 return t ? 'minuta' : 'minutę';
             case 'mm':
-                return r + (i(e) ? 'minuty' : 'minut');
+                return i + (r(e) ? 'minuty' : 'minut');
             case 'h':
                 return t ? 'godzina' : 'godzinę';
             case 'hh':
-                return r + (i(e) ? 'godziny' : 'godzin');
+                return i + (r(e) ? 'godziny' : 'godzin');
             case 'MM':
-                return r + (i(e) ? 'miesiące' : 'miesięcy');
+                return i + (r(e) ? 'miesiące' : 'miesięcy');
             case 'yy':
-                return r + (i(e) ? 'lata' : 'lat');
+                return i + (r(e) ? 'lata' : 'lat');
         }
     }
     return e.defineLocale('pl', {
-        months: function (e, i) {
-            return e ? ('' === i ? '(' + n[e.month()] + '|' + t[e.month()] + ')' : /D MMMM/.test(i) ? n[e.month()] : t[e.month()]) : t;
+        months: function (e, r) {
+            return e ? ('' === r ? '(' + n[e.month()] + '|' + t[e.month()] + ')' : /D MMMM/.test(r) ? n[e.month()] : t[e.month()]) : t;
         },
         monthsShort: 'sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru'.split('_'),
         weekdays: 'niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota'.split('_'),
@@ -77,17 +77,17 @@
             future: 'za %s',
             past: '%s temu',
             s: 'kilka sekund',
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
+            ss: i,
+            m: i,
+            mm: i,
+            h: i,
+            hh: i,
             d: '1 dzień',
             dd: '%d dni',
             M: 'miesiąc',
-            MM: r,
+            MM: i,
             y: 'rok',
-            yy: r
+            yy: i
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

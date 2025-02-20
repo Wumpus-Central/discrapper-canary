@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(921801),
     h = n(857192),
     f = n(131951),
-    N = n(226961),
-    b = n(12647),
+    b = n(226961),
+    N = n(12647),
     x = n(569550),
     _ = n(726985),
     E = n(981631),
@@ -103,12 +103,12 @@ function y(e) {
             supportsConnectionReplay: f.Z.supports(j.AN.CONNECTION_REPLAY)
         })),
         P = (0, s.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
-        R = (0, s.e7)([N.ZP], () => N.ZP.shouldRecordNextConnection());
+        R = (0, s.e7)([b.ZP], () => b.ZP.shouldRecordNextConnection());
     async function D() {
         d(!0);
         try {
             await f.Z.getMediaEngine().writeAudioDebugState(),
-                await b.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
+                await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
                 await (0, m.E)(E.GU0.RTC),
                 (function () {
                     let e = C.NW.string(C.t['fKBB8/']),

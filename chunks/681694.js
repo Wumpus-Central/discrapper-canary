@@ -1,8 +1,8 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(846519),
-    r = n(570140),
-    a = n(147913);
-function s(e, t, n) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(846519),
+    i = n(570140),
+    o = n(147913);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,18 +15,18 @@ function s(e, t, n) {
         e
     );
 }
-let o = 3000;
-class l extends a.Z {
+let s = 3000;
+class l extends o.Z {
     _terminate() {
         this.clearErrorTimeout.stop();
     }
     constructor(...e) {
         super(...e),
-            s(this, 'clearErrorTimeout', new i.V7()),
-            s(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
-            s(this, 'handleNoiseCancellationError', () => {
-                this.clearErrorTimeout.start(o, () => r.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
+            a(this, 'clearErrorTimeout', new r.V7()),
+            a(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
+            a(this, 'handleNoiseCancellationError', () => {
+                this.clearErrorTimeout.start(s, () => i.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
             });
     }
 }
-let u = new l();
+let c = new l();

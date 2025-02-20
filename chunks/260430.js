@@ -1,42 +1,42 @@
-n.d(t, { Z: () => h }), n(536091);
-var i = n(200651);
+n.d(t, { Z: () => h }), n(86693), n(536091);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(373793),
-    o = n(243814),
+var i = n(120356),
+    o = n.n(i),
+    a = n(373793),
+    s = n(243814),
     l = n(993365),
-    u = n(481060),
-    c = n(211266),
+    c = n(481060),
+    u = n(211266),
     d = n(713938),
     f = n(388032),
-    _ = n(843038);
-function p(e) {
-    let { text: t, error: n, isFake: r } = e;
-    return (0, i.jsxs)('div', {
-        className: _.scope,
+    p = n(742990);
+function _(e) {
+    let { text: t, error: n, isFake: i } = e;
+    return (0, r.jsxs)('div', {
+        className: p.scope,
         children: [
-            r
-                ? (0, i.jsx)(u.k$p, {
+            i
+                ? (0, r.jsx)(c.k$p, {
                       size: 'md',
                       color: 'currentColor',
-                      className: a()(_.icon, _.fakeScopeIcon)
+                      className: o()(p.icon, p.fakeScopeIcon)
                   })
-                : (0, i.jsx)(u.owK, {
+                : (0, r.jsx)(c.owK, {
                       size: 'md',
                       color: 'currentColor',
-                      className: a()(_.icon, _.scopeIcon)
+                      className: o()(p.icon, p.scopeIcon)
                   }),
-            (0, i.jsxs)('div', {
-                className: _.scopeInner,
+            (0, r.jsxs)('div', {
+                className: p.scopeInner,
                 children: [
-                    (0, i.jsx)(l.x, {
+                    (0, r.jsx)(l.x, {
                         variant: 'text-md/normal',
-                        color: r ? 'text-muted' : void 0,
+                        color: i ? 'text-muted' : void 0,
                         children: t
                     }),
                     null != n
-                        ? (0, i.jsx)(l.x, {
+                        ? (0, r.jsx)(l.x, {
                               variant: 'text-xs/normal',
                               color: 'text-danger',
                               children: n
@@ -49,37 +49,37 @@ function p(e) {
 }
 function h(e) {
     var t;
-    let { application: n, accountScopes: r, requestedScopes: a, integrationType: l, errors: h, isTrustedName: m = !1 } = e,
-        g = (0, c.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
-    if (0 === r.length) return null;
+    let { application: n, accountScopes: i, requestedScopes: o, integrationType: l, errors: h, isTrustedName: m = !1 } = e,
+        g = (0, u.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
+    if (0 === i.length) return null;
     let E = g(),
         v = m ? f.t.PZpY9f : f.t['1Hz+Sk'],
-        y = l === s.Y.USER_INSTALL && a.includes(o.x.APPLICATIONS_COMMANDS);
-    return (0, i.jsxs)('div', {
-        className: _.scopes,
+        b = l === a.Y.USER_INSTALL && o.includes(s.x.APPLICATIONS_COMMANDS);
+    return (0, r.jsxs)('div', {
+        className: p.scopes,
         children: [
-            (0, i.jsx)(u.X6q, {
+            (0, r.jsx)(c.X6q, {
                 variant: 'heading-sm/normal',
-                className: _.sectionLabel,
-                children: f.intl.format(v, { application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
+                className: p.sectionLabel,
+                children: f.NW.format(v, { application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
             }),
-            r
+            i
                 .map((e) =>
-                    (0, d.CI)(e, r).map((t, n) => {
-                        var r;
-                        return (0, i.jsx)(
-                            p,
+                    (0, d.CI)(e, i).map((t, n) => {
+                        var i;
+                        return (0, r.jsx)(
+                            _,
                             {
                                 text: t,
-                                error: 0 === n ? (null == h ? void 0 : null === (r = h[e]) || void 0 === r ? void 0 : r[0]) : void 0
+                                error: 0 === n ? (null == h ? void 0 : null === (i = h[e]) || void 0 === i ? void 0 : i[0]) : void 0
                             },
                             ''.concat(e, '-').concat(n)
                         );
                     })
                 )
                 .flat(),
-            y && (0, i.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
-            (0, i.jsx)(p, {
+            b && (0, r.jsx)(_, { text: f.NW.string(f.t.Ls2XRk) }),
+            (0, r.jsx)(_, {
                 text: E,
                 isFake: !0
             })

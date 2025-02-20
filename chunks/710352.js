@@ -1,18 +1,18 @@
 n.d(t, {
-    Cn: () => r,
+    Cn: () => i,
     R6: () => l,
-    V8: () => o,
-    Vb: () => a,
-    ZI: () => s,
-    pC: () => i
+    V8: () => s,
+    Vb: () => o,
+    ZI: () => a,
+    pC: () => r
 });
-let i = 20,
-    r = 5,
-    a = 256;
-var s = (function (e) {
+let r = 20,
+    i = 5,
+    o = 256;
+var a = (function (e) {
     return (e.PERMISSIONS = 'Permissions'), (e.GUIDELINES = 'Guidelines'), (e.TAGS = 'Tags'), (e.DEFAULT_REACTION = 'Default Reaction'), (e.CREATE_POST = 'Create Post'), e;
 })({});
-let o = 'https://discord.com/community/creating-value-with-conversation';
+let s = 'https://discord.com/community/creating-value-with-conversation';
 var l = (function (e) {
     return (e[(e.DURATION_AGO = 0)] = 'DURATION_AGO'), (e[(e.POSTED_DURATION_AGO = 1)] = 'POSTED_DURATION_AGO'), e;
 })({});

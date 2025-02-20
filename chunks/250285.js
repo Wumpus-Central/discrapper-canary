@@ -13,15 +13,15 @@ var r = n(200651),
 let p = (e) => {
     let { userId: t, children: n, isLast: s, className: p } = e,
         [h, f] = i.useState(!1),
-        { analyticsLocations: N } = (0, d.ZP)(),
-        x = i.useCallback(() => {
+        { analyticsLocations: b } = (0, d.ZP)(),
+        N = i.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: N,
+                sourceAnalyticsLocations: b,
                 analyticsLocation: { section: m.jXE.FAMILY_CENTER }
             });
-        }, [t, N]),
-        b = () => {
+        }, [t, b]),
+        x = () => {
             f(!0);
         },
         _ = () => {
@@ -69,9 +69,9 @@ let p = (e) => {
                                 [g.last]: s,
                                 [g.active]: h
                             }),
-                            onMouseEnter: b,
+                            onMouseEnter: x,
                             onMouseLeave: _,
-                            onClick: x
+                            onClick: N
                         },
                         e
                     )),

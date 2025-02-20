@@ -1,34 +1,34 @@
-n.d(t, { N: () => s }), n(47120);
-var i = n(192379),
-    l = n(302221),
-    r = n(956664);
-async function a(e) {
+n.d(t, { N: () => a }), n(47120);
+var r = n(192379),
+    i = n(302221),
+    l = n(956664);
+async function o(e) {
     return (
         await new Promise((t, n) => {
-            let i = new Image();
-            (i.crossOrigin = 'Anonymous'),
-                (i.onerror = (e) => {
-                    n(e), null != i && ((i.onerror = null), (i.onload = null)), (i = null);
+            let r = new Image();
+            (r.crossOrigin = 'Anonymous'),
+                (r.onerror = (e) => {
+                    n(e), null != r && ((r.onerror = null), (r.onload = null)), (r = null);
                 }),
-                (i.onload = () => {
-                    null != i ? (t((0, r.XN)(i, 2, 10)), (i.onerror = null), (i.onload = null), (i = null)) : n('image is null');
+                (r.onload = () => {
+                    null != r ? (t((0, l.XN)(r, 2, 10)), (r.onerror = null), (r.onload = null), (r = null)) : n('image is null');
                 }),
-                (i.src = e);
+                (r.src = e);
         })
     ).map((e) => {
-        let [t, n, i] = e;
-        return (0, l.vq)(t, n, i);
+        let [t, n, r] = e;
+        return (0, i.vq)(t, n, r);
     });
 }
-function s(e) {
-    let [t, n] = i.useState(),
-        l = i.useRef(!1);
+function a(e) {
+    let [t, n] = r.useState(),
+        i = r.useRef(!1);
     return (
         null == e ||
             null != t ||
-            l.current ||
-            ((l.current = !0),
-            a(e).then((e) => {
+            i.current ||
+            ((i.current = !0),
+            o(e).then((e) => {
                 n(e[0]);
             })),
         t

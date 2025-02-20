@@ -1,9 +1,9 @@
-var i = n(974802),
-    r = n(668530),
-    a = n(735471),
-    s = function (e) {
-        return a(e) ? e : void 0;
+var r = n(974802),
+    i = n(668530),
+    o = n(735471),
+    a = function (e) {
+        return o(e) ? e : void 0;
     };
 e.exports = function (e, t) {
-    return arguments.length < 2 ? s(i[e]) || s(r[e]) : (i[e] && i[e][t]) || (r[e] && r[e][t]);
+    return arguments.length < 2 ? a(r[e]) || a(i[e]) : (r[e] && r[e][t]) || (i[e] && i[e][t]);
 };

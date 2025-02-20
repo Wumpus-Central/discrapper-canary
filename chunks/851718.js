@@ -55,13 +55,13 @@ function p(e) {
     let { subscriptions: t, updateHeader: n } = e,
         [p, h] = i.useState({ route: c.j.HOME }),
         { route: f } = p,
-        N = () => {
+        b = () => {
             h({ route: c.j.HOME });
         },
-        x = (e) => {
-            h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.NW.string(u.t.VFqtkJ), N);
+        N = (e) => {
+            h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.NW.string(u.t.VFqtkJ), b);
         },
-        [b, _] = i.useState({});
+        [x, _] = i.useState({});
     i.useEffect(() => {
         for (let n of t) {
             var e;
@@ -88,8 +88,8 @@ function p(e) {
                         o.Z,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: x,
-                            loadingState: j ? o.G.LOADING : null !== (t = b[e.id]) && void 0 !== t ? t : o.G.LOADING
+                            navigateToSwitchPlan: N,
+                            loadingState: j ? o.G.LOADING : null !== (t = x[e.id]) && void 0 !== t ? t : o.G.LOADING
                         },
                         e.id
                     );
@@ -116,7 +116,7 @@ function p(e) {
                     }
                     return i;
                 })(p, ['route']);
-            return (0, r.jsx)(d.Z, g(m({}, O), { navigateToHome: N }));
+            return (0, r.jsx)(d.Z, g(m({}, O), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

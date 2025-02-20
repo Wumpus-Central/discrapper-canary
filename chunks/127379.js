@@ -1,3 +1,3 @@
-n.d(t, { D: () => l });
-var i,
-    l = (((i = {}).ACTIVITY = 'ACTIVITY'), (i.SOUNDBOARD = 'SOUNDBOARD'), (i.EMOJI = 'EMOJI'), i);
+n.d(t, { D: () => i });
+var r,
+    i = (((r = {}).ACTIVITY = 'ACTIVITY'), (r.SOUNDBOARD = 'SOUNDBOARD'), (r.EMOJI = 'EMOJI'), r);

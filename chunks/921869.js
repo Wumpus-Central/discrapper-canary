@@ -1,92 +1,92 @@
-a.d(t, { m: () => h });
-var r = a(200651),
-    l = a(192379),
-    s = a(442837),
-    n = a(481060),
-    o = a(600164),
-    c = a(553795),
-    i = a(424071),
-    d = a(239358),
-    x = a(388032),
-    u = a(522137);
+r.d(a, { m: () => h });
+var s = r(200651),
+    t = r(192379),
+    l = r(442837),
+    n = r(481060),
+    o = r(600164),
+    c = r(553795),
+    i = r(424071),
+    d = r(239358),
+    x = r(388032),
+    u = r(144887);
 function h(e) {
-    let { platformType: t, onContinue: a, onClose: h, img: m, headerConnect: N, headerReconnect: C, body: j, learnMoreLink: k, valueProps: v } = e,
-        p = (0, s.e7)([c.Z], () => {
-            let e = c.Z.getAccount(null, t);
+    let { platformType: a, onContinue: r, onClose: h, img: N, headerConnect: m, headerReconnect: C, body: j, learnMoreLink: k, valueProps: v } = e,
+        p = (0, l.e7)([c.Z], () => {
+            let e = c.Z.getAccount(null, a);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
-    return (0, r.jsxs)(i.Z, {
+    return (0, s.jsxs)(i.Z, {
         children: [
-            (0, r.jsxs)(n.xBx, {
+            (0, s.jsxs)(n.xBx, {
                 direction: o.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, s.jsxs)('div', {
                         className: u.illustration,
-                        children: [m, ' ']
+                        children: [N, ' ']
                     }),
-                    (0, r.jsx)(n.X6q, {
+                    (0, s.jsx)(n.X6q, {
                         className: u.title,
                         variant: 'heading-xl/extrabold',
-                        children: p && null != C ? C : N
+                        children: p && null != C ? C : m
                     }),
-                    (0, r.jsx)(n.olH, {
+                    (0, s.jsx)(n.olH, {
                         className: u.closeButton,
                         onClick: h
                     })
                 ]
             }),
-            (0, r.jsxs)(n.hzk, {
+            (0, s.jsxs)(n.hzk, {
                 className: u.body,
                 children: [
-                    (0, r.jsx)(n.Text, {
+                    (0, s.jsx)(n.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: j
                     }),
-                    (0, r.jsx)('div', {
+                    (0, s.jsx)('div', {
                         className: u.valueProps,
-                        children: v.map((e, t) => {
-                            let { label: a, subLabel: s, icon: n } = e;
-                            return (0, r.jsxs)(
-                                l.Fragment,
+                        children: v.map((e, a) => {
+                            let { label: r, subLabel: l, icon: n } = e;
+                            return (0, s.jsxs)(
+                                t.Fragment,
                                 {
                                     children: [
-                                        (0, r.jsx)(
+                                        (0, s.jsx)(
                                             d.Z,
                                             {
-                                                label: a,
-                                                subLabel: s,
+                                                label: r,
+                                                subLabel: l,
                                                 icon: n
                                             },
-                                            a
+                                            r
                                         ),
-                                        t !== v.length - 1 && (0, r.jsx)('div', { className: u.valuePropDivider })
+                                        a !== v.length - 1 && (0, s.jsx)('div', { className: u.valuePropDivider })
                                     ]
                                 },
-                                a
+                                r
                             );
                         })
                     }),
                     null != k
-                        ? (0, r.jsx)(n.Text, {
+                        ? (0, s.jsx)(n.Text, {
                               tag: 'p',
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: x.intl.format(x.t['/l3n+/'], { helpCenterLink: k })
+                              children: x.NW.format(x.t['/l3n+/'], { helpCenterLink: k })
                           })
                         : null
                 ]
             }),
-            (0, r.jsx)(n.mzw, {
+            (0, s.jsx)(n.mzw, {
                 className: u.footer,
-                children: (0, r.jsx)(n.zxk, {
+                children: (0, s.jsx)(n.zxk, {
                     className: u.footerButton,
                     color: n.zxk.Colors.BRAND,
-                    onClick: a,
-                    children: x.intl.string(x.t['3PatS0'])
+                    onClick: r,
+                    children: x.NW.string(x.t['3PatS0'])
                 })
             })
         ]

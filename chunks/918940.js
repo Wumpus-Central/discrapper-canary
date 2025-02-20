@@ -1,34 +1,34 @@
-n.d(t, { Z: () => o }), n(47120);
-var i = n(570140),
-    l = n(996106),
-    r = n(452426),
-    a = n(701488),
-    s = n(231338);
-let o = {
-    [s.Et.SET_ORIENTATION_LOCK_STATE]: {
+n.d(t, { Z: () => s }), n(47120);
+var r = n(570140),
+    i = n(996106),
+    l = n(452426),
+    o = n(701488),
+    a = n(231338);
+let s = {
+    [a.Et.SET_ORIENTATION_LOCK_STATE]: {
         validation: (e) =>
-            (0, r.Z)(e)
+            (0, l.Z)(e)
                 .required()
                 .keys({
-                    lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).required(),
-                    picture_in_picture_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional(),
-                    grid_lock_state: e.number().valid(a.xK.UNLOCKED, a.xK.PORTRAIT, a.xK.LANDSCAPE).allow(null).optional()
+                    lock_state: e.number().valid(o.xK.UNLOCKED, o.xK.PORTRAIT, o.xK.LANDSCAPE).required(),
+                    picture_in_picture_lock_state: e.number().valid(o.xK.UNLOCKED, o.xK.PORTRAIT, o.xK.LANDSCAPE).allow(null).optional(),
+                    grid_lock_state: e.number().valid(o.xK.UNLOCKED, o.xK.PORTRAIT, o.xK.LANDSCAPE).allow(null).optional()
                 }),
         handler(e) {
             let {
                     socket: t,
-                    args: { lock_state: n, picture_in_picture_lock_state: r, grid_lock_state: a }
+                    args: { lock_state: n, picture_in_picture_lock_state: l, grid_lock_state: o }
                 } = e,
-                o = t.application.id;
-            if (null != o)
-                i.Z.dispatch({
+                s = t.application.id;
+            if (null != s)
+                r.Z.dispatch({
                     type: 'EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE',
-                    applicationId: o,
+                    applicationId: s,
                     lockState: n,
-                    pictureInPictureLockState: r,
-                    gridLockState: a
+                    pictureInPictureLockState: l,
+                    gridLockState: o
                 });
-            else throw new l.Z({ errorCode: s.lT.INVALID_COMMAND }, 'No application.');
+            else throw new i.Z({ errorCode: a.lT.INVALID_COMMAND }, 'No application.');
         }
     }
 };

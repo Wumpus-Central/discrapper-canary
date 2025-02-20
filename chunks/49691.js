@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     if (null == e) return window;
     if ('[object Window]' !== e.toString()) {
         var t = e.ownerDocument;
@@ -6,4 +6,4 @@ function i(e) {
     }
     return e;
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

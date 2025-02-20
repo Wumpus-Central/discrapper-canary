@@ -1,14 +1,14 @@
-n.d(t, { Z: () => d }), n(627494), n(757143);
-var i = n(392711),
-    r = n.n(i),
-    a = n(900089),
-    s = n(591759),
-    o = n(981631);
+n.d(t, { Z: () => d }), n(627494), n(757143), n(301563), n(230036);
+var r = n(392711),
+    i = n.n(r),
+    o = n(900089),
+    a = n(591759),
+    s = n(981631);
 let l = [
         {
-            type: o.ABu.TWITCH,
+            type: s.ABu.TWITCH,
             name: 'Twitch',
-            color: (0, a.Fw)('TWITCH'),
+            color: (0, o.Fw)('TWITCH'),
             icon: {
                 lightPNG: n(635643),
                 darkPNG: n(635643),
@@ -25,9 +25,9 @@ let l = [
             domains: ['twitch.tv', 'twitch.com']
         },
         {
-            type: o.ABu.YOUTUBE,
+            type: s.ABu.YOUTUBE,
             name: 'YouTube',
-            color: (0, a.Fw)('YOUTUBE'),
+            color: (0, o.Fw)('YOUTUBE'),
             icon: {
                 lightPNG: n(459862),
                 darkPNG: n(459862),
@@ -44,9 +44,9 @@ let l = [
             domains: ['youtube.com', 'youtu.be']
         },
         {
-            type: o.ABu.BATTLENET,
+            type: s.ABu.BATTLENET,
             name: 'Battle.net',
-            color: (0, a.Fw)('BATTLENET'),
+            color: (0, o.Fw)('BATTLENET'),
             icon: {
                 lightPNG: n(414680),
                 darkPNG: n(414680),
@@ -58,7 +58,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.BLUESKY,
+            type: s.ABu.BLUESKY,
             name: 'Bluesky',
             icon: {
                 lightPNG: n(618780),
@@ -77,9 +77,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.BUNGIE,
+            type: s.ABu.BUNGIE,
             name: 'Bungie.net',
-            color: (0, a.Fw)('BUNGIE'),
+            color: (0, o.Fw)('BUNGIE'),
             icon: {
                 lightPNG: n(953522),
                 darkPNG: n(706264),
@@ -91,9 +91,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.SKYPE,
+            type: s.ABu.SKYPE,
             name: 'Skype',
-            color: (0, a.Fw)('SKYPE'),
+            color: (0, o.Fw)('SKYPE'),
             icon: {
                 lightPNG: n(575439),
                 darkPNG: n(575439),
@@ -109,9 +109,9 @@ let l = [
             }
         },
         {
-            type: o.ABu.LEAGUE_OF_LEGENDS,
+            type: s.ABu.LEAGUE_OF_LEGENDS,
             name: 'League of Legends',
-            color: (0, a.Fw)('LOL'),
+            color: (0, o.Fw)('LOL'),
             icon: {
                 lightPNG: n(275556),
                 darkPNG: n(275556),
@@ -123,9 +123,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.STEAM,
+            type: s.ABu.STEAM,
             name: 'Steam',
-            color: (0, a.Fw)('STEAM'),
+            color: (0, o.Fw)('STEAM'),
             icon: {
                 lightPNG: n(929234),
                 darkPNG: n(170131),
@@ -142,9 +142,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.REDDIT,
+            type: s.ABu.REDDIT,
             name: 'Reddit',
-            color: (0, a.Fw)('REDDIT'),
+            color: (0, o.Fw)('REDDIT'),
             icon: {
                 lightPNG: n(211434),
                 darkPNG: n(211434),
@@ -162,9 +162,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.FACEBOOK,
+            type: s.ABu.FACEBOOK,
             name: 'Facebook',
-            color: (0, a.Fw)('FACEBOOK'),
+            color: (0, o.Fw)('FACEBOOK'),
             icon: {
                 lightPNG: n(762019),
                 darkPNG: n(762019),
@@ -177,9 +177,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.TWITTER_LEGACY,
+            type: s.ABu.TWITTER_LEGACY,
             name: 'Twitter',
-            color: (0, a.Fw)('TWITTER'),
+            color: (0, o.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(954549),
                 darkPNG: n(954549),
@@ -197,9 +197,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.TWITTER,
+            type: s.ABu.TWITTER,
             name: 'X',
-            color: (0, a.Fw)('TWITTER'),
+            color: (0, o.Fw)('TWITTER'),
             icon: {
                 lightPNG: n(327555),
                 darkPNG: n(126776),
@@ -217,9 +217,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.SPOTIFY,
+            type: s.ABu.SPOTIFY,
             name: 'Spotify',
-            color: (0, a.Fw)('SPOTIFY'),
+            color: (0, o.Fw)('SPOTIFY'),
             icon: {
                 lightPNG: n(182553),
                 darkPNG: n(182553),
@@ -235,9 +235,9 @@ let l = [
             }
         },
         {
-            type: o.ABu.XBOX,
+            type: s.ABu.XBOX,
             name: 'Xbox',
-            color: (0, a.Fw)('XBOX'),
+            color: (0, o.Fw)('XBOX'),
             icon: {
                 lightPNG: n(979660),
                 darkPNG: n(157981),
@@ -250,9 +250,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.SAMSUNG,
+            type: s.ABu.SAMSUNG,
             name: 'Samsung Galaxy',
-            color: (0, a.Fw)('SAMSUNG'),
+            color: (0, o.Fw)('SAMSUNG'),
             icon: {
                 lightPNG: n(664982),
                 darkPNG: n(664982),
@@ -264,9 +264,9 @@ let l = [
             enabled: !1
         },
         {
-            type: o.ABu.GITHUB,
+            type: s.ABu.GITHUB,
             name: 'GitHub',
-            color: (0, a.Fw)('GITHUB'),
+            color: (0, o.Fw)('GITHUB'),
             icon: {
                 lightPNG: n(843605),
                 darkPNG: n(789822),
@@ -283,9 +283,9 @@ let l = [
             domains: ['github.com']
         },
         {
-            type: o.ABu.PLAYSTATION,
+            type: s.ABu.PLAYSTATION,
             name: 'PlayStation Network',
-            color: (0, a.Fw)('PLAYSTATION'),
+            color: (0, o.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(385751),
                 darkPNG: n(399592),
@@ -297,9 +297,9 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.PLAYSTATION_STAGING,
+            type: s.ABu.PLAYSTATION_STAGING,
             name: 'PlayStation Network (Staging)',
-            color: (0, a.Fw)('PLAYSTATION'),
+            color: (0, o.Fw)('PLAYSTATION'),
             icon: {
                 lightPNG: n(399592),
                 darkPNG: n(385751),
@@ -311,7 +311,7 @@ let l = [
             enabled: !1
         },
         {
-            type: o.ABu.EPIC_GAMES,
+            type: s.ABu.EPIC_GAMES,
             name: 'Epic Games',
             icon: {
                 lightPNG: n(707873),
@@ -324,7 +324,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.RIOT_GAMES,
+            type: s.ABu.RIOT_GAMES,
             name: 'Riot Games',
             icon: {
                 lightPNG: n(406818),
@@ -337,7 +337,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.ROBLOX,
+            type: s.ABu.ROBLOX,
             name: 'Roblox',
             icon: {
                 lightPNG: n(670423),
@@ -354,7 +354,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.PAYPAL,
+            type: s.ABu.PAYPAL,
             name: 'PayPal',
             icon: {
                 lightPNG: n(501001),
@@ -368,7 +368,7 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.EBAY,
+            type: s.ABu.EBAY,
             name: 'eBay',
             icon: {
                 lightPNG: n(215741),
@@ -386,7 +386,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.TIKTOK,
+            type: s.ABu.TIKTOK,
             name: 'TikTok',
             icon: {
                 lightPNG: n(699308),
@@ -405,7 +405,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.INSTAGRAM,
+            type: s.ABu.INSTAGRAM,
             name: 'Instagram',
             icon: {
                 lightPNG: n(232720),
@@ -423,7 +423,7 @@ let l = [
             }
         },
         {
-            type: o.ABu.MASTODON,
+            type: s.ABu.MASTODON,
             name: 'Mastodon',
             icon: {
                 lightPNG: n(913883),
@@ -442,9 +442,9 @@ let l = [
             hasMetadata: !0
         },
         {
-            type: o.ABu.CRUNCHYROLL,
+            type: s.ABu.CRUNCHYROLL,
             name: 'Crunchyroll',
-            color: (0, a.Fw)('CRUNCHYROLL'),
+            color: (0, o.Fw)('CRUNCHYROLL'),
             icon: {
                 lightPNG: n(469024),
                 darkPNG: n(469024),
@@ -456,7 +456,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.DOMAIN,
+            type: s.ABu.DOMAIN,
             name: 'Domain',
             icon: {
                 lightPNG: n(476735),
@@ -473,7 +473,7 @@ let l = [
             enabled: !0
         },
         {
-            type: o.ABu.AMAZON_MUSIC,
+            type: s.ABu.AMAZON_MUSIC,
             name: 'Amazon Music',
             icon: {
                 lightPNG: n(495036),
@@ -486,36 +486,36 @@ let l = [
             enabled: !0
         }
     ],
-    u = r().keyBy(l, 'type'),
-    c = {};
+    c = i().keyBy(l, 'type'),
+    u = {};
 l.forEach((e) => {
     var t;
     null === (t = e.domains) ||
         void 0 === t ||
         t.forEach((t) => {
-            c[t] = e;
+            u[t] = e;
         });
 });
 let d = {
     get(e) {
         var t;
-        return null !== (t = u[e]) && void 0 !== t ? t : null;
+        return null !== (t = c[e]) && void 0 !== t ? t : null;
     },
     getByUrl(e) {
-        let t = s.Z.toURLSafe(e);
+        let t = a.Z.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return c[n.startsWith('www.') ? n.slice(4) : n];
+        return u[n.startsWith('www.') ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
     map: (e) => l.map(e),
     filter(e) {
         let t = l.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
-                    { name: i } = t;
-                return n.localeCompare(i);
+                    { name: r } = t;
+                return n.localeCompare(r);
             }),
             t
         );

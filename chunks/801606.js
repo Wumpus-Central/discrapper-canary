@@ -1,13 +1,13 @@
-n.d(t, { Z: () => u }), n(47120);
-var i = n(388123),
-    r = n(697426),
-    a = n(375954),
-    s = n(710111);
-function o(e, t) {
+n.d(t, { Z: () => c }), n(47120);
+var r = n(388123),
+    i = n(697426),
+    o = n(375954),
+    a = n(710111);
+function s(e, t) {
     let n;
-    for (let r of e) {
-        var i;
-        let e = l(null === (i = r.message) || void 0 === i ? void 0 : i.soundboardSounds, t);
+    for (let i of e) {
+        var r;
+        let e = l(null === (r = i.message) || void 0 === r ? void 0 : r.soundboardSounds, t);
         if (null != e) {
             n = e;
             break;
@@ -18,10 +18,10 @@ function o(e, t) {
 function l(e, t) {
     return null == e ? void 0 : e.find((e) => String(e.sound_id) === String(t));
 }
-function u(e, t, n, u) {
-    var c, d, f, _;
-    let p = l(u, n);
-    if (null != p) return (0, r.o3)(p, null !== (d = p.guild_id) && void 0 !== d ? d : s.X8);
-    let h = a.Z.getMessage(e, t);
-    if (null != h && null != (p = (null == h ? void 0 : null === (c = h.messageReference) || void 0 === c ? void 0 : c.type) === i.U.FORWARD ? o(null !== (f = null == h ? void 0 : h.messageSnapshots) && void 0 !== f ? f : [], n) : l(null == h ? void 0 : h.soundboardSounds, n))) return (0, r.o3)(p, null !== (_ = p.guild_id) && void 0 !== _ ? _ : s.X8);
+function c(e, t, n, c) {
+    var u, d, f, p;
+    let _ = l(c, n);
+    if (null != _) return (0, i.o3)(_, null !== (d = _.guild_id) && void 0 !== d ? d : a.X8);
+    let h = o.Z.getMessage(e, t);
+    if (null != h && null != (_ = (null == h ? void 0 : null === (u = h.messageReference) || void 0 === u ? void 0 : u.type) === r.U.FORWARD ? s(null !== (f = null == h ? void 0 : h.messageSnapshots) && void 0 !== f ? f : [], n) : l(null == h ? void 0 : h.soundboardSounds, n))) return (0, i.o3)(_, null !== (p = _.guild_id) && void 0 !== p ? p : a.X8);
 }

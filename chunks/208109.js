@@ -1,4 +1,4 @@
-n.d(t, { e: () => l });
+n.d(t, { e: () => o });
 let r = (0, n(818083).B)({
         id: '2025-01_video_quests_end_card_cta_v2',
         kind: 'user',
@@ -17,7 +17,7 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    l = (e) => {
+    o = (e) => {
         let { location: t } = e;
         return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
     };

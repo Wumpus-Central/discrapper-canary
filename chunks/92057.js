@@ -1,24 +1,24 @@
-e.exports = c;
-var i = n(531478).codes,
-    r = i.ERR_METHOD_NOT_IMPLEMENTED,
-    a = i.ERR_MULTIPLE_CALLBACK,
-    s = i.ERR_TRANSFORM_ALREADY_TRANSFORMING,
-    o = i.ERR_TRANSFORM_WITH_LENGTH_0,
+e.exports = u;
+var r = n(531478).codes,
+    i = r.ERR_METHOD_NOT_IMPLEMENTED,
+    o = r.ERR_MULTIPLE_CALLBACK,
+    a = r.ERR_TRANSFORM_ALREADY_TRANSFORMING,
+    s = r.ERR_TRANSFORM_WITH_LENGTH_0,
     l = n(827664);
-function u(e, t) {
+function c(e, t) {
     var n = this._transformState;
     n.transforming = !1;
-    var i = n.writecb;
-    if (null === i) return this.emit('error', new a());
-    (n.writechunk = null), (n.writecb = null), null != t && this.push(t), i(e);
-    var r = this._readableState;
-    (r.reading = !1), (r.needReadable || r.length < r.highWaterMark) && this._read(r.highWaterMark);
+    var r = n.writecb;
+    if (null === r) return this.emit('error', new o());
+    (n.writechunk = null), (n.writecb = null), null != t && this.push(t), r(e);
+    var i = this._readableState;
+    (i.reading = !1), (i.needReadable || i.length < i.highWaterMark) && this._read(i.highWaterMark);
 }
-function c(e) {
-    if (!(this instanceof c)) return new c(e);
+function u(e) {
+    if (!(this instanceof u)) return new u(e);
     l.call(this, e),
         (this._transformState = {
-            afterTransform: u.bind(this),
+            afterTransform: c.bind(this),
             needTransform: !1,
             transforming: !1,
             writecb: null,
@@ -40,29 +40,29 @@ function d() {
 }
 function f(e, t, n) {
     if (t) return e.emit('error', t);
-    if ((null != n && e.push(n), e._writableState.length)) throw new o();
-    if (e._transformState.transforming) throw new s();
+    if ((null != n && e.push(n), e._writableState.length)) throw new s();
+    if (e._transformState.transforming) throw new a();
     return e.push(null);
 }
-n(689118)(c, l),
-    (c.prototype.push = function (e, t) {
+n(689118)(u, l),
+    (u.prototype.push = function (e, t) {
         return (this._transformState.needTransform = !1), l.prototype.push.call(this, e, t);
     }),
-    (c.prototype._transform = function (e, t, n) {
-        n(new r('_transform()'));
+    (u.prototype._transform = function (e, t, n) {
+        n(new i('_transform()'));
     }),
-    (c.prototype._write = function (e, t, n) {
-        var i = this._transformState;
-        if (((i.writecb = n), (i.writechunk = e), (i.writeencoding = t), !i.transforming)) {
-            var r = this._readableState;
-            (i.needTransform || r.needReadable || r.length < r.highWaterMark) && this._read(r.highWaterMark);
+    (u.prototype._write = function (e, t, n) {
+        var r = this._transformState;
+        if (((r.writecb = n), (r.writechunk = e), (r.writeencoding = t), !r.transforming)) {
+            var i = this._readableState;
+            (r.needTransform || i.needReadable || i.length < i.highWaterMark) && this._read(i.highWaterMark);
         }
     }),
-    (c.prototype._read = function (e) {
+    (u.prototype._read = function (e) {
         var t = this._transformState;
         null === t.writechunk || t.transforming ? (t.needTransform = !0) : ((t.transforming = !0), this._transform(t.writechunk, t.writeencoding, t.afterTransform));
     }),
-    (c.prototype._destroy = function (e, t) {
+    (u.prototype._destroy = function (e, t) {
         l.prototype._destroy.call(this, e, function (e) {
             t(e);
         });

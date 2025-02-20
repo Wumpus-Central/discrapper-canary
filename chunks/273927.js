@@ -1,128 +1,128 @@
 n.d(t, {
-    GF: () => I,
-    ZP: () => v,
-    yo: () => b
+    GF: () => O,
+    ZP: () => S,
+    yo: () => v
 }),
     n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
     o = n(481060),
     c = n(194359),
     d = n(99690),
     u = n(100527),
     m = n(699516),
     g = n(594174),
-    h = n(63063),
-    x = n(838436),
-    _ = n(526761),
-    p = n(726985),
-    E = n(981631),
-    C = n(388032),
-    f = n(912888);
-function T(e) {
+    p = n(63063),
+    h = n(838436),
+    f = n(526761),
+    b = n(726985),
+    N = n(981631),
+    x = n(388032),
+    _ = n(280841);
+function E(e) {
     let { listType: t, numberOfUsers: n } = e,
-        s = 'blocked' === t;
-    return (0, i.jsxs)('div', {
-        className: f.header,
+        i = 'blocked' === t;
+    return (0, r.jsxs)('div', {
+        className: _.header,
         children: [
-            (0, i.jsx)('div', {
-                className: f.iconContainer,
-                children: s ? (0, i.jsx)(o.t6m, {}) : (0, i.jsx)(o.kZF, {})
+            (0, r.jsx)('div', {
+                className: _.iconContainer,
+                children: i ? (0, r.jsx)(o.t6m, {}) : (0, r.jsx)(o.kZF, {})
             }),
-            (0, i.jsxs)('div', {
-                className: f.text,
+            (0, r.jsxs)('div', {
+                className: _.text,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'interactive-active',
-                        children: C.intl.string(s ? C.t.PFOUKS : C.t['93ZDWF'])
+                        children: x.NW.string(i ? x.t.PFOUKS : x.t['93ZDWF'])
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: s ? C.intl.format(C.t['r91W/v'], { numberOfBlockedUsers: n }) : C.intl.format(C.t.rXUeOj, { numberOfIgnoredUsers: n })
+                        children: i ? x.NW.format(x.t['r91W/v'], { numberOfBlockedUsers: n }) : x.NW.format(x.t.rXUeOj, { numberOfIgnoredUsers: n })
                     })
                 ]
             })
         ]
     });
 }
-function N(e) {
+function j(e) {
     var t;
-    let { userId: n, last: r } = e,
-        h = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
-        x = (0, a.e7)([g.default], () => g.default.getUser(n)),
-        [_, p] = s.useState(!1),
-        E = s.useCallback(() => {
-            p(!0),
-                h
+    let { userId: n, last: s } = e,
+        p = (0, l.e7)([m.Z], () => m.Z.isBlocked(n)),
+        h = (0, l.e7)([g.default], () => g.default.getUser(n)),
+        [f, b] = i.useState(!1),
+        N = i.useCallback(() => {
+            b(!0),
+                p
                     ? c.Z.unblockUser(n).catch(() => {
-                          p(!1);
+                          b(!1);
                       })
                     : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
-                          p(!1);
+                          b(!1);
                       });
-        }, [h, n]);
-    return null == x
+        }, [p, n]);
+    return null == h
         ? null
-        : (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsxs)('div', {
-                  className: l()(f.row, { [f.lastRow]: r }),
+        : (0, r.jsx)(r.Fragment, {
+              children: (0, r.jsxs)('div', {
+                  className: a()(_.row, { [_.lastRow]: s }),
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: f.userInfo,
+                      (0, r.jsxs)('div', {
+                          className: _.userInfo,
                           children: [
-                              (0, i.jsx)(d.Z, {
-                                  user: x,
+                              (0, r.jsx)(d.Z, {
+                                  user: h,
                                   size: o.EFr.SIZE_40
                               }),
-                              (0, i.jsxs)('div', {
-                                  className: f.text,
+                              (0, r.jsxs)('div', {
+                                  className: _.text,
                                   children: [
-                                      (0, i.jsx)(o.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-md/semibold',
                                           color: 'header-primary',
-                                          children: null !== (t = x.globalName) && void 0 !== t ? t : x.username
+                                          children: null !== (t = h.globalName) && void 0 !== t ? t : h.username
                                       }),
-                                      (0, i.jsx)(o.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'header-secondary',
-                                          children: null != x.globalName ? x.username : null
+                                          children: null != h.globalName ? h.username : null
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, i.jsx)(o.zxk, {
+                      (0, r.jsx)(o.zxk, {
                           color: o.Ttl.PRIMARY,
-                          onClick: E,
-                          submitting: _,
-                          children: C.intl.string(h ? C.t.XyHpKC : C.t['8wXU9P'])
+                          onClick: N,
+                          submitting: f,
+                          children: x.NW.string(p ? x.t.XyHpKC : x.t['8wXU9P'])
                       })
                   ]
               })
           });
 }
-function S(e) {
-    let { setting: t, userIds: n, listType: r } = e,
-        [l, a] = s.useState(5);
-    return (0, i.jsx)(x.U, {
+function C(e) {
+    let { setting: t, userIds: n, listType: s } = e,
+        [a, l] = i.useState(5);
+    return (0, r.jsx)(h.U, {
         setting: t,
-        children: (0, i.jsxs)('div', {
-            className: f.card,
+        children: (0, r.jsxs)('div', {
+            className: _.card,
             children: [
-                (0, i.jsx)(T, {
-                    listType: r,
+                (0, r.jsx)(E, {
+                    listType: s,
                     numberOfUsers: n.length
                 }),
-                (0, i.jsx)('div', {
-                    className: f.usersList,
-                    children: n.slice(0, l).map((e, t) =>
-                        (0, i.jsx)(
-                            N,
+                (0, r.jsx)('div', {
+                    className: _.usersList,
+                    children: n.slice(0, a).map((e, t) =>
+                        (0, r.jsx)(
+                            j,
                             {
                                 userId: e,
                                 last: t === n.length - 1
@@ -131,18 +131,18 @@ function S(e) {
                         )
                     )
                 }),
-                l < n.length
-                    ? (0, i.jsx)('div', {
-                          className: f.loadMoreContainer,
-                          children: (0, i.jsx)(o.P3F, {
+                a < n.length
+                    ? (0, r.jsx)('div', {
+                          className: _.loadMoreContainer,
+                          children: (0, r.jsx)(o.P3F, {
                               onClick: () => {
-                                  a((e) => e + 5);
+                                  l((e) => e + 5);
                               },
-                              className: f.loadMoreButton,
-                              children: (0, i.jsx)(o.Text, {
+                              className: _.loadMoreButton,
+                              children: (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: C.intl.format(C.t.jULEDg, { numberOfUsers: l + 5 < n.length ? 5 : n.length - l })
+                                  children: x.NW.format(x.t.jULEDg, { numberOfUsers: a + 5 < n.length ? 5 : n.length - a })
                               })
                           })
                       })
@@ -151,34 +151,34 @@ function S(e) {
         })
     });
 }
-function I() {
-    let e = (0, a.Wu)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, i.jsx)(S, {
-        setting: p.s6.BLOCKED_USERS,
+function O() {
+    let e = (0, l.Wu)([m.Z], () => m.Z.getBlockedIDs());
+    return (0, r.jsx)(C, {
+        setting: b.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
     });
 }
-function b() {
-    let e = (0, a.Wu)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, i.jsx)(S, {
-        setting: p.s6.IGNORED_USERS,
+function v() {
+    let e = (0, l.Wu)([m.Z], () => m.Z.getIgnoredIDs());
+    return (0, r.jsx)(C, {
+        setting: b.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'
     });
 }
-function v() {
-    return (0, i.jsxs)(x.U, {
-        setting: p.s6.RESTRICTED_USERS,
-        scrollPosition: _.FY.RESTRICTED_ACCOUNTS,
+function S() {
+    return (0, r.jsxs)(h.U, {
+        setting: b.s6.RESTRICTED_USERS,
+        scrollPosition: f.FY.RESTRICTED_ACCOUNTS,
         scrollHighlightDelay: 900,
         children: [
-            (0, i.jsx)(x.H, {
-                header: C.intl.string(C.t['3wRorq']),
-                description: C.intl.format(C.t['0aNQo6'], { helpArticle: h.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+            (0, r.jsx)(h.H, {
+                header: x.NW.string(x.t['3wRorq']),
+                description: x.NW.format(x.t['0aNQo6'], { helpArticle: p.Z.getArticleURL(N.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
             }),
-            (0, i.jsx)(I, {}),
-            (0, i.jsx)(b, {})
+            (0, r.jsx)(O, {}),
+            (0, r.jsx)(v, {})
         ]
     });
 }

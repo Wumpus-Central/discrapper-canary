@@ -1,8 +1,8 @@
 n.d(t, {
-    k: () => a,
-    v: () => r
+    k: () => o,
+    v: () => i
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-11_soundboard_recently_heard_frequently_played',
     label: 'Soundboard Recently Heard & Frequently Played',
@@ -37,11 +37,11 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
 }
-function a(e) {
+function o(e) {
     let { autoTrackExposure: t, location: n } = e;
-    return i.useExperiment({ location: n }, { autoTrackExposure: t });
+    return r.useExperiment({ location: n }, { autoTrackExposure: t });
 }

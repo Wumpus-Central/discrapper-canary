@@ -1,5 +1,5 @@
-let i = t;
-(i._reverse = function (e) {
+let r = t;
+(r._reverse = function (e) {
     let t = {};
     return (
         Object.keys(e).forEach(function (n) {
@@ -8,4 +8,4 @@ let i = t;
         t
     );
 }),
-    (i.der = n(375990));
+    (r.der = n(375990));

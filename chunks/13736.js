@@ -1,21 +1,21 @@
-n.d(t, { Z: () => o });
+n.d(e, { Z: () => o });
 var i = n(200651);
 n(192379);
-var l = n(481060),
+var r = n(481060),
     a = n(787014),
-    r = n(665906),
+    l = n(665906),
     s = n(388032);
-function o(e) {
-    let t = (0, r.C7)(e),
-        n = (0, r.$R)(e),
-        o = (0, r.Gu)(e);
-    return !t || !n || o || __OVERLAY__
+function o(t) {
+    let e = (0, l.C7)(t),
+        n = (0, l.$R)(t),
+        o = (0, l.Gu)(t);
+    return !e || !n || o || __OVERLAY__
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, i.jsx)(r.sNh, {
               id: 'edit-thread',
-              label: e.isForumPost() ? s.intl.string(s.t.NP1yHB) : s.intl.string(s.t['2Mk1TE']),
+              label: t.isForumPost() ? s.NW.string(s.t.NP1yHB) : s.NW.string(s.t['2Mk1TE']),
               action: () => {
-                  (0, l.pTH)(), a.ZP.open(e.id);
+                  (0, r.pTH)(), a.ZP.open(t.id);
               }
           });
 }

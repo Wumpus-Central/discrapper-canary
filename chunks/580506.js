@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c }), n(47120);
-var i = n(147913),
-    r = n(2818),
-    a = n(192720),
-    s = n(742989);
-function o(e, t, n) {
+n.d(t, { Z: () => u }), n(47120);
+var r = n(147913),
+    i = n(2818),
+    o = n(192720),
+    a = n(742989);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,15 +17,15 @@ function o(e, t, n) {
     );
 }
 function l() {
-    (r.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, a.sE)();
+    (i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || a.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, o.sE)();
 }
-class u extends i.Z {
+class c extends r.Z {
     constructor(...e) {
         super(...e),
-            o(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
-            o(this, 'handlePostConnectionOpen', () => {
+            s(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
+            s(this, 'handlePostConnectionOpen', () => {
                 l();
             });
     }
 }
-let c = new u();
+let u = new c();

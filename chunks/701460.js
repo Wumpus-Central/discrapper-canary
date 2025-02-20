@@ -1,96 +1,96 @@
-n.d(e, { default: () => h }), n(47120), n(411104);
-var i = n(200651),
-    o = n(192379),
-    s = n(481060),
-    l = n(726542),
-    r = n(600164),
-    a = n(823985),
-    c = n(202120),
+n.d(e, { default: () => h }), n(47120), n(411104), n(266796);
+var o = n(200651),
+    s = n(192379),
+    i = n(481060),
+    r = n(726542),
+    a = n(600164),
+    c = n(823985),
+    l = n(202120),
     d = n(388032),
-    u = n(482673);
+    u = n(304682);
 function h(t) {
     var e, n;
     let { onClose: h, transitionState: x, location: f, successRedirect: m, platformType: p } = t,
-        [j, k] = o.useState(''),
-        [_, b] = o.useState(null),
-        [g, v] = o.useState(!1),
-        N = null !== (n = null === (e = l.Z.get(p)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : d.intl.string(d.t['bU/GZm']),
+        [N, j] = s.useState(''),
+        [k, _] = s.useState(null),
+        [b, g] = s.useState(!1),
+        v = null !== (n = null === (e = r.Z.get(p)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : d.NW.string(d.t['bU/GZm']),
         S = async () => {
-            v(!0), b(null);
+            g(!0), _(null);
             try {
-                let t = await (0, c.H)(p, {
+                let t = await (0, l.H)(p, {
                     location: f,
                     successRedirect: m,
-                    handle: j
+                    handle: N
                 });
                 if (null == t) throw Error();
                 h();
-            } catch {
-                b(d.intl.string(d.t['7wbPNj'])), v(!1);
+            } catch (t) {
+                _(d.NW.string(d.t['7wbPNj'])), g(!1);
             }
         },
-        B = (0, a.r)(p),
-        T = (0, a.j)(j, p);
-    return (0, i.jsxs)(s.Y0X, {
+        B = (0, c.r)(p),
+        T = (0, c.j)(N, p);
+    return (0, o.jsxs)(i.Y0X, {
         transitionState: x,
         className: u.__invalid_modal,
         children: [
-            (0, i.jsxs)(s.xBx, {
-                direction: r.Z.Direction.VERTICAL,
+            (0, o.jsxs)(i.xBx, {
+                direction: a.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(s.X6q, {
+                    (0, o.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: d.intl.formatToPlainString(d.t.ImMhq6, { serviceName: N })
+                        children: d.NW.formatToPlainString(d.t.ImMhq6, { serviceName: v })
                     }),
-                    (0, i.jsx)(s.olH, {
+                    (0, o.jsx)(i.olH, {
                         className: u.closeButton,
                         onClick: h
                     })
                 ]
             }),
-            (0, i.jsxs)('form', {
+            (0, o.jsxs)('form', {
                 onSubmit: (t) => {
                     t.preventDefault(), S();
                 },
                 children: [
-                    (0, i.jsxs)(s.hzk, {
+                    (0, o.jsxs)(i.hzk, {
                         className: u.content,
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            (0, o.jsx)(i.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
                                 className: u.description,
-                                children: d.intl.formatToPlainString(d.t['7TByKi'], { serviceName: N })
+                                children: d.NW.formatToPlainString(d.t['7TByKi'], { serviceName: v })
                             }),
-                            (0, i.jsx)(s.xJW, {
-                                title: d.intl.string(d.t.tZ9QFR),
-                                error: _,
-                                children: (0, i.jsx)(s.oil, {
-                                    onChange: k,
+                            (0, o.jsx)(i.xJW, {
+                                title: d.NW.string(d.t.tZ9QFR),
+                                error: k,
+                                children: (0, o.jsx)(i.oil, {
+                                    onChange: j,
                                     placeholder: B,
-                                    value: j,
-                                    disabled: g,
+                                    value: N,
+                                    disabled: b,
                                     autoFocus: !0
                                 })
                             })
                         ]
                     }),
-                    (0, i.jsxs)(s.mzw, {
+                    (0, o.jsxs)(i.mzw, {
                         className: u.footer,
                         children: [
-                            (0, i.jsx)(s.zxk, {
+                            (0, o.jsx)(i.zxk, {
                                 type: 'submit',
-                                submitting: g,
+                                submitting: b,
                                 disabled: !T,
-                                children: d.intl.string(d.t.PDTjLC)
+                                children: d.NW.string(d.t.PDTjLC)
                             }),
-                            (0, i.jsx)(s.zxk, {
-                                look: s.zxk.Looks.LINK,
-                                color: s.zxk.Colors.PRIMARY,
+                            (0, o.jsx)(i.zxk, {
+                                look: i.zxk.Looks.LINK,
+                                color: i.zxk.Colors.PRIMARY,
                                 onClick: h,
-                                children: d.intl.string(d.t['ETE/oK'])
+                                children: d.NW.string(d.t['ETE/oK'])
                             })
                         ]
                     })

@@ -1,4 +1,4 @@
-function i(e) {
+function r(e) {
     var t;
     return function () {
         return (
@@ -12,4 +12,4 @@ function i(e) {
         );
     };
 }
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => r });

@@ -1,15 +1,15 @@
-let i;
-n.d(t, { Z: () => D }), n(47120);
-var r,
-    a,
-    s = n(442837),
-    o = n(433517),
+let r;
+n.d(t, { Z: () => P }), n(47120), n(301563);
+var i,
+    o,
+    a = n(442837),
+    s = n(433517),
     l = n(570140),
-    u = n(642047),
-    c = n(695346),
+    c = n(642047),
+    u = n(695346),
     d = n(973616),
     f = n(358085);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,29 +22,29 @@ function _(e, t, n) {
         e
     );
 }
-let p = 'GameStoreReportedGames',
+let _ = 'GameStoreReportedGames',
     h = 2147483648,
-    m = new u.Z(),
+    m = new c.Z(),
     g = {},
     E = {},
-    v = null !== (r = o.K.get(p)) && void 0 !== r ? r : {},
-    y = '',
-    I = null;
-function T(e) {
-    var t, n, i, r, a, s;
+    v = null !== (i = s.K.get(_)) && void 0 !== i ? i : {},
+    b = '',
+    y = null;
+function O(e) {
+    var t, n, r, i, o, a;
     return {
         id: e.id,
         name: e.name,
         executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(d.BA),
         overlay: null !== (n = e.overlay) && void 0 !== n && n,
-        overlayWarn: null !== (i = e.overlay_warn) && void 0 !== i && i,
-        overlayCompatibilityHook: null !== (r = e.overlay_compatibility_hook) && void 0 !== r && r,
-        hook: null === (a = e.hook) || void 0 === a || a,
-        aliases: null !== (s = e.aliases) && void 0 !== s ? s : [],
+        overlayWarn: null !== (r = e.overlay_warn) && void 0 !== r && r,
+        overlayCompatibilityHook: null !== (i = e.overlay_compatibility_hook) && void 0 !== i && i,
+        hook: null === (o = e.hook) || void 0 === o || o,
+        aliases: null !== (a = e.aliases) && void 0 !== a ? a : [],
         supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods)
     };
 }
-function b(e) {
+function S(e) {
     return {
         id: e.id,
         name: e.name,
@@ -57,35 +57,35 @@ function b(e) {
         supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
     };
 }
-function S(e) {
-    let t = e instanceof d.ZP ? b(e) : e;
+function I(e) {
+    let t = e instanceof d.ZP ? S(e) : e;
     for (let n of (m.set(e.id, t), (g[e.name.toLowerCase()] = t), e.aliases)) g[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) E[n.name] = t;
 }
-function A(e) {
+function T(e) {
     let { detectableApplications: t } = e;
-    for (let e of t) S(e);
+    for (let e of t) I(e);
 }
 function N() {
-    i = !0;
+    r = !0;
 }
-function C() {
-    i = !1;
+function A() {
+    r = !1;
 }
-function R(e) {
+function C(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && y !== n && (y = n), t)) S(T(e));
-    (i = void 0), (I = Date.now());
+    for (let e of (null != n && b !== n && (b = n), t)) I(O(e));
+    (r = void 0), (y = Date.now());
 }
-class O extends (a = s.ZP.PersistedStore) {
+class R extends (o = a.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        null != e && (null != e.detectableGamesEtag && (y = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => S(e)));
+        null != e && (null != e.detectableGamesEtag && (b = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => I(e)));
     }
     getState() {
         return (0, f.isDesktop)()
             ? {
-                  detectableGamesEtag: y,
+                  detectableGamesEtag: b,
                   detectableGames: m.values()
               }
             : {
@@ -108,43 +108,43 @@ class O extends (a = s.ZP.PersistedStore) {
         return null != this.getGameByName(e.name) || (void 0 !== e.nativeProcessObserverId && (e.nativeProcessObserverId & h) == 0);
     }
     get fetching() {
-        return !0 === i;
+        return !0 === r;
     }
     get detectableGamesEtag() {
-        return y;
+        return b;
     }
     get lastFetched() {
-        return I;
+        return y;
     }
     getGameByExecutable(e) {
         return E[e];
     }
     getGameByGameData(e) {
         var t, n;
-        let i;
+        let r;
         if (null == e.exePath) return null;
-        let r = e.exePath.split('/').pop(),
-            a = e.exePath.split('/').slice(-2).join('/');
+        let i = e.exePath.split('/').pop(),
+            o = e.exePath.split('/').slice(-2).join('/');
         if (null != e.name) {
-            if (null != (i = this.getGameByName(e.name)) && null != i.executables) {
-                let e = i.executables.map((e) => e.name);
-                if (e.includes(r) || e.includes(a)) return i;
-            } else if (null != i) return null;
+            if (null != (r = this.getGameByName(e.name)) && null != r.executables) {
+                let e = r.executables.map((e) => e.name);
+                if (e.includes(i) || e.includes(o)) return r;
+            } else if (null != r) return null;
         }
-        return null !== (n = null !== (t = this.getGameByExecutable(r)) && void 0 !== t ? t : this.getGameByExecutable(a)) && void 0 !== n ? n : i;
+        return null !== (n = null !== (t = this.getGameByExecutable(i)) && void 0 !== t ? t : this.getGameByExecutable(o)) && void 0 !== n ? n : r;
     }
     shouldReport(e) {
         let t = null != this.getGameByName(e),
             n = null != v[e];
-        return c.G6.getSetting() && !i && !(t || n);
+        return u.G6.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (v[e] = !0), o.K.set(p, v);
+        (v[e] = !0), s.K.set(_, v);
     }
 }
-_(O, 'displayName', 'GameStore'),
-    _(O, 'persistKey', 'GameStore'),
-    _(O, 'migrations', [
+p(R, 'displayName', 'GameStore'),
+    p(R, 'persistKey', 'GameStore'),
+    p(R, 'migrations', [
         (e) => {
             var t, n;
             return null == e
@@ -154,7 +154,7 @@ _(O, 'displayName', 'GameStore'),
                   }
                 : {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => b(new d.ZP(e)))) && void 0 !== n ? n : []
+                      detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => S(new d.ZP(e)))) && void 0 !== n ? n : []
                   };
         },
         (e) =>
@@ -165,9 +165,9 @@ _(O, 'displayName', 'GameStore'),
                       detectableGames: []
                   }
     ]);
-let D = new O(l.Z, {
-    OVERLAY_INITIALIZE: A,
+let P = new R(l.Z, {
+    OVERLAY_INITIALIZE: T,
     GAMES_DATABASE_FETCH: N,
-    GAMES_DATABASE_FETCH_FAIL: C,
-    GAMES_DATABASE_UPDATE: R
+    GAMES_DATABASE_FETCH_FAIL: A,
+    GAMES_DATABASE_UPDATE: C
 });

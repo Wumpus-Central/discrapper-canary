@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o });
-var i = n(772848);
-function r(e, t, n) {
+n.d(t, { Z: () => s });
+var r = n(772848);
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,18 +13,18 @@ function r(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     return {
         channelId: e,
-        sessionId: (0, i.Z)()
+        sessionId: (0, r.Z)()
     };
 }
-class s {
+class a {
     getForumChannelSessionId(e) {
-        return null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId;
+        return null == this.session && (this.session = o(e)), this.session.channelId !== e && (this.session = o(e)), this.session.sessionId;
     }
     constructor() {
-        r(this, 'session', void 0);
+        i(this, 'session', void 0);
     }
 }
-let o = new s();
+let s = new a();

@@ -14,9 +14,9 @@ var i = n(512722),
     p = n(594190),
     h = n(212632),
     f = n(444295),
-    N = n(809357),
-    x = n(371651),
-    b = n(556296),
+    b = n(809357),
+    N = n(371651),
+    x = n(556296),
     _ = n(808506),
     E = n(237997),
     j = n(626135);
@@ -30,8 +30,8 @@ function I(e) {
     var t;
     let n = E.Z.getNotificationPositionMode(),
         r = n !== O._vf.DISABLED,
-        i = b.ZP.getOverlayKeybind(),
-        s = b.ZP.getOverlayChatKeybind();
+        i = x.ZP.getOverlayKeybind(),
+        s = x.ZP.getOverlayChatKeybind();
     return {
         enabled: _.Z.enabled,
         notifications_enabled: r,
@@ -53,7 +53,7 @@ function y(e) {
 }
 function A(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { oopEnabled: i, legacyEnabled: a } = (0, o.cj)([x.default], () => x.default.getGlobalEnabledStatus()),
+        { oopEnabled: i, legacyEnabled: a } = (0, o.cj)([N.default], () => N.default.getGlobalEnabledStatus()),
         {
             avatarSizeMode: _,
             displayNameMode: C,
@@ -69,8 +69,8 @@ function A(e) {
             textChatNotificationMode: E.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: E.Z.showKeybindIndicators
         })),
-        Z = (0, o.e7)([b.ZP], () => b.ZP.getOverlayKeybind()),
-        w = (0, N.Z)({ location: 'overlay_user_settings' }),
+        Z = (0, o.e7)([x.ZP], () => x.ZP.getOverlayKeybind()),
+        w = (0, b.Z)({ location: 'overlay_user_settings' }),
         k = (0, g.$1)();
     return (
         !(function () {

@@ -400,14 +400,14 @@ var t = {
         z̧: 'z'
     },
     n = Object.keys(t).join('|'),
-    i = RegExp(n, 'g'),
-    r = RegExp(n, ''),
-    a = function (e) {
-        return e.replace(i, function (e) {
+    r = RegExp(n, 'g'),
+    i = RegExp(n, ''),
+    o = function (e) {
+        return e.replace(r, function (e) {
             return t[e];
         });
     },
-    s = function (e) {
-        return !!e.match(r);
+    a = function (e) {
+        return !!e.match(i);
     };
-(e.exports = a), (e.exports.has = s), (e.exports.remove = a);
+(e.exports = o), (e.exports.has = a), (e.exports.remove = o);

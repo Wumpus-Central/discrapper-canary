@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(704215),
     h = n(481060),
     f = n(224706),
-    N = n(660216),
-    x = n(13245),
-    b = n(825209),
+    b = n(660216),
+    N = n(13245),
+    x = n(825209),
     _ = n(615287),
     E = n(593472),
     j = n(493773),
@@ -295,29 +295,29 @@ function ep(e) {
             [a, d]
         ),
         p = (0, g.e7)([S.ZP, M.Z, V.Z], () => (null == a ? null : (0, S.FZ)(a, [S.ZP, M.Z, V.Z])), [a], o()),
-        [N, x] = i.useState(m),
-        [b, v] = i.useState(u),
+        [b, N] = i.useState(m),
+        [x, v] = i.useState(u),
         [T, A] = i.useState(!1);
     i.useEffect(() => {
-        x(m), v(u);
+        N(m), v(u);
     }, [m, u]);
     let P = (0, C.$1)(),
         R = !(0, X.VS)(),
         { legacyEnabled: Z, oopEnabled: w } = (0, g.cj)([D.default], () => D.default.getGlobalEnabledStatus()),
         k = (e, t, n) => {
-            eg(n), null != a && (f.Z.toggleOverlay(a, e, t), x(t), v(e));
+            eg(n), null != a && (f.Z.toggleOverlay(a, e, t), N(t), v(e));
         },
         W = P && R,
         L = !Z && !w,
-        U = !N && !Z && b && !P,
-        G = !b && !w && N && !R,
+        U = !b && !Z && x && !P,
+        G = !x && !w && b && !R,
         F = (null == d ? void 0 : d.overlayMethod) === _.gl.Disabled,
         H = (null == d ? void 0 : d.state) === _.mM.OVERLAY_RENDERING && !F,
         z = (null == d ? void 0 : d.state) != null && em.has(d.state) && !F,
         Y = (null == d ? void 0 : d.overlayMethod) === _.gl.OutOfProcess || (null == d ? void 0 : d.overlayMethod) === _.gl.OutOfProcessLimitedInteraction,
         K = (null == d ? void 0 : d.overlayMethod) === _.gl.Hook,
         q = (null == d ? void 0 : d.state) === _.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === _.mM.OVERLAY_CRASHED_DISABLED,
-        J = !N && !b,
+        J = !b && !x,
         [Q, $] = (() => {
             switch (!0) {
                 case H && Y:
@@ -460,7 +460,7 @@ function ep(e) {
               action: (0, r.jsx)(h.P3F, {
                   onClick: (e) => eg(e),
                   children: (0, r.jsx)(h.rsf, {
-                      checked: N || b,
+                      checked: b || x,
                       disabled: W || L || U || G,
                       onChange: (e, t) => k(e, e, t)
                   })
@@ -474,9 +474,9 @@ function ep(e) {
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: N,
+                                  checked: b,
                                   disabled: R || !w,
-                                  onChange: (e, t) => k(b, e, t)
+                                  onChange: (e, t) => k(x, e, t)
                               }),
                               (0, r.jsx)('div', { className: en.emptySpacer })
                           ]
@@ -490,9 +490,9 @@ function ep(e) {
                       action: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(h.rsf, {
-                                  checked: b,
+                                  checked: x,
                                   disabled: P || !Z,
-                                  onChange: (e, t) => k(e, N, t)
+                                  onChange: (e, t) => k(e, b, t)
                               }),
                               (0, r.jsx)('div', { className: en.emptySpacer })
                           ]
@@ -541,7 +541,7 @@ function ef(e) {
         })
     });
 }
-function eN() {
+function eb() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: s } = (0, g.cj)([D.default], () => D.default.getGlobalEnabledStatus()),
         a = (0, g.Wu)([S.ZP], () => S.ZP.getGamesSeen(!0)),
@@ -549,7 +549,7 @@ function eN() {
         o = (0, C.$1)(),
         c = (e, t) => {
             var n, r;
-            eg(t), x.Z.setEnabled(e, s), (0, A.ou)(e, A.AE.LEGACY, null !== (r = null === (n = S.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null);
+            eg(t), N.Z.setEnabled(e, s), (0, A.ou)(e, A.AE.LEGACY, null !== (r = null === (n = S.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null);
         },
         d = (e, t, n) => {
             let { enabledOOP: r } = n;
@@ -619,7 +619,7 @@ function eN() {
               ]
           });
 }
-function ex() {
+function eN() {
     let [e, t] = i.useState(!1),
         { oopEnabled: n, legacyEnabled: s } = (0, g.cj)([D.default], () => D.default.getGlobalEnabledStatus()),
         a = !(0, X.VS)(),
@@ -627,7 +627,7 @@ function ex() {
         o = (0, O.Z)(l.map((e) => e.id)),
         c = (e, t) => {
             var n, r;
-            eg(t), x.Z.setEnabled(s, e), (0, A.ou)(e, A.AE.OOP, null !== (r = null === (n = S.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null);
+            eg(t), N.Z.setEnabled(s, e), (0, A.ou)(e, A.AE.OOP, null !== (r = null === (n = S.ZP.getCurrentGameForAnalytics()) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null);
         },
         d = (e, t, n) => {
             let { enabledLegacy: r } = n;
@@ -697,7 +697,7 @@ function ex() {
               ]
           });
 }
-function eb() {
+function ex() {
     let e = (0, g.e7)([F.ZP], () => F.ZP.getOverlayKeybind()),
         t = (0, C.$1)(),
         n = !(0, X.VS)(),
@@ -720,11 +720,11 @@ function eb() {
                         }),
                         (0, r.jsx)('div', {
                             className: en.keybindRecorderContainer,
-                            children: (0, r.jsx)(b.Z, {
+                            children: (0, r.jsx)(x.Z, {
                                 disabled: t && n,
                                 defaultValue: null != e ? e.shortcut : [],
                                 onChange: function (t) {
-                                    d()(null != e, 'Keybind should never be undefined'), N.Z.setKeybind(ea(es({}, e), { shortcut: t }));
+                                    d()(null != e, 'Keybind should never be undefined'), b.Z.setKeybind(ea(es({}, e), { shortcut: t }));
                                 }
                             })
                         })
@@ -851,8 +851,8 @@ function ej(e) {
             disableClickableRegions: z.Z.disableClickableRegions,
             shouldShowKeybindIndicators: z.Z.showKeybindIndicators
         })),
-        N = (0, P.o4)('user_settings').overlayV3UI,
-        b = (0, g.e7)([G.default], () => G.default.getCurrentUser()),
+        b = (0, P.o4)('user_settings').overlayV3UI,
+        x = (0, g.e7)([G.default], () => G.default.getCurrentUser()),
         _ = (0, R.Z)({ location: 'overlay_user_settings' });
     (0, j.ZP)(() => {
         if (K.isPlatformEmbedded) return (0, T.Ky)(), T.P7;
@@ -863,7 +863,7 @@ function ej(e) {
         })();
     let [E] = i.useState(() => [e_(et.NW.string(et.t.C0ZDvr), !0, !1), e_(et.NW.string(et.t.iOtj8P), !1, !1, !0), e_(et.NW.string(et.t['0oqNgI']), !1, !0)]),
         C = (0, g.e7)([U.Z], () => U.Z.getWidgetsForLayout(ee.OVERLAY_V3_LAYOUT_ID).find((e) => e.type === J.Odu.VOICE_V3));
-    return null == b
+    return null == x
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -871,10 +871,10 @@ function ej(e) {
                       tag: h.RB0.H1,
                       title: et.NW.string(et.t['9cb1U1']),
                       children: [
-                          N ? (0, r.jsx)(eE, {}) : null,
+                          b ? (0, r.jsx)(eE, {}) : null,
                           (0, r.jsxs)('div', {
                               className: en.overlayEnabledSettingsContainer,
-                              children: [(0, r.jsx)(ep, {}), (0, r.jsx)(ex, {}), (0, r.jsx)(eN, {})]
+                              children: [(0, r.jsx)(ep, {}), (0, r.jsx)(eN, {}), (0, r.jsx)(eb, {})]
                           }),
                           (0, r.jsx)('div', { className: en.settingsDivider })
                       ]
@@ -884,12 +884,12 @@ function ej(e) {
                           (0, r.jsxs)('div', {
                               className: en.overlayEnabledSettingsContainer,
                               children: [
-                                  (0, r.jsx)(eb, {}),
+                                  (0, r.jsx)(ex, {}),
                                   _ &&
                                       (0, r.jsx)(ec, {
                                           children: (0, r.jsx)(h.j7V, {
                                               value: f,
-                                              onChange: (e) => x.Z.setShowKeybindIndicators(e),
+                                              onChange: (e) => N.Z.setShowKeybindIndicators(e),
                                               hideBorder: !0,
                                               children: et.NW.string(et.t.XZTl9v)
                                           })
@@ -906,7 +906,7 @@ function ej(e) {
                                               disabled: d === J._vf.DISABLED,
                                               onChange: function () {
                                                   let { ENABLED: e, DISABLED: t } = J.Ypu;
-                                                  x.Z.setTextChatNotificationMode(u === e ? t : e);
+                                                  N.Z.setTextChatNotificationMode(u === e ? t : e);
                                               },
                                               hideBorder: !0
                                           })
@@ -922,7 +922,7 @@ function ej(e) {
                                           (0, r.jsx)(h.j7V, {
                                               value: !p,
                                               onChange: function () {
-                                                  x.Z.setDisableClickableRegions(!p);
+                                                  N.Z.setDisableClickableRegions(!p);
                                               },
                                               hideBorder: !0
                                           })
@@ -952,7 +952,7 @@ function ej(e) {
                                           }
                                       ],
                                       className: en.select,
-                                      onChange: (e) => x.Z.setAvatarSizeMode(e),
+                                      onChange: (e) => N.Z.setAvatarSizeMode(e),
                                       value: l
                                   })
                               }),
@@ -974,14 +974,14 @@ function ej(e) {
                                           }
                                       ],
                                       className: en.select,
-                                      onChange: (e) => x.Z.setDisplayNameMode(e),
+                                      onChange: (e) => N.Z.setDisplayNameMode(e),
                                       value: o
                                   })
                               }),
                               (0, r.jsx)('div', {
                                   className: en.widgetContainer,
                                   children:
-                                      N &&
+                                      b &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', {
@@ -999,7 +999,7 @@ function ej(e) {
                                                           (function (e) {
                                                               let t = e_(e.username);
                                                               return (t.user = e), t;
-                                                          })(b),
+                                                          })(x),
                                                           ...E
                                                       ],
                                                       displayNameMode: o,
@@ -1045,7 +1045,7 @@ function ej(e) {
                                           }
                                       ],
                                       className: en.select,
-                                      onChange: (e) => x.Z.setDisplayUserMode(e),
+                                      onChange: (e) => N.Z.setDisplayUserMode(e),
                                       value: c
                                   })
                               })

@@ -1,5 +1,5 @@
-n.d(t, { oV: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { oV: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-09_iar_user_reporting',
     label: 'Safety Experience IAR User Reporting',
@@ -12,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    return i.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+function i(e) {
+    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

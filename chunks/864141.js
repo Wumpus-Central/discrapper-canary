@@ -1,132 +1,132 @@
-n.d(t, { Z: () => L });
-var i = n(200651);
+n.d(t, { Z: () => w });
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(793030),
-    o = n(442837),
+var i = n(120356),
+    o = n.n(i),
+    a = n(793030),
+    s = n(442837),
     l = n(481060),
-    u = n(287734),
-    c = n(100527),
+    c = n(287734),
+    u = n(100527),
     d = n(906732),
     f = n(933557),
-    _ = n(359110),
-    p = n(769654),
+    p = n(359110),
+    _ = n(769654),
     h = n(922482),
     m = n(430824),
     g = n(323038),
     E = n(960870),
     v = n(139793),
-    y = n(652853),
-    I = n(336383),
-    T = n(194811),
-    b = n(373826),
-    S = n(340266),
-    A = n(788858),
+    b = n(652853),
+    y = n(336383),
+    O = n(194811),
+    S = n(373826),
+    I = n(340266),
+    T = n(788858),
     N = n(599864),
-    C = n(670451),
-    R = n(228168),
-    O = n(388032),
-    D = n(537208);
-function L(e) {
-    let { user: t, voiceChannel: n, className: r, onClose: L } = e,
-        { profileType: x } = (0, y.z)(),
-        P = { [D.fullSize]: x === R.y0.FULL_SIZE },
-        { analyticsLocations: w } = (0, d.ZP)(c.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+    A = n(670451),
+    C = n(228168),
+    R = n(388032),
+    P = n(481736);
+function w(e) {
+    let { user: t, voiceChannel: n, className: i, onClose: w } = e,
+        { profileType: D } = (0, b.z)(),
+        x = { [P.fullSize]: D === C.y0.FULL_SIZE },
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         M = (0, E.Z)({
             display: 'voice',
             activity: { type: 'VOICE' },
             voiceChannelId: n.id,
             user: t,
-            analyticsLocations: w
+            analyticsLocations: L
         }),
         k = (0, v.Z)({
             userId: t.id,
             onAction: M
         }),
-        U = (0, o.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
-        G = (0, g.Z)(n),
-        B = (0, f.ZP)(n),
-        Z = () => (n.isDM() || n.isGroupDM() ? O.intl.string(O.t['9FaEzs']) : n.isGuildStageVoice() ? O.intl.string(O.t.QygGCA) : O.intl.string(O.t.msxteH)),
-        F = () => {
+        j = (0, s.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
+        U = (0, g.Z)(n),
+        G = (0, f.ZP)(n),
+        B = () => (n.isDM() || n.isGroupDM() ? R.NW.string(R.t['9FaEzs']) : n.isGuildStageVoice() ? R.NW.string(R.t.QygGCA) : R.NW.string(R.t.msxteH)),
+        Z = () => {
             let e = (e) => {
-                    e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (u.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == L || L();
+                    e.stopPropagation(), null == M || M({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (c.default.selectVoiceChannel(n.id), (0, p.Kh)(n.id)), null == w || w();
                 },
                 t = (e) => {
-                    e.stopPropagation(), M({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(n.guild_id), null == L || L();
+                    e.stopPropagation(), M({ action: 'OPEN_VOICE_GUILD' }), (0, _.X)(n.guild_id), null == w || w();
                 };
-            return (0, i.jsx)('div', {
-                className: D.details,
-                children: (0, i.jsxs)('div', {
+            return (0, r.jsx)('div', {
+                className: P.details,
+                children: (0, r.jsxs)('div', {
                     children: [
-                        (0, i.jsxs)(s.X6, {
+                        (0, r.jsxs)(a.X6, {
                             variant: 'heading-sm/semibold',
                             color: 'text-normal',
-                            className: D.voiceChannelHeading,
+                            className: P.voiceChannelHeading,
                             children: [
-                                (0, i.jsx)(A.Z, {
+                                (0, r.jsx)(T.Z, {
                                     channel: n,
                                     size: 'xxs',
                                     color: l.TVs.colors.TEXT_NORMAL,
-                                    className: D.voiceIcon
+                                    className: P.voiceIcon
                                 }),
-                                (0, i.jsx)(l.P3F, {
-                                    className: a()(D.clickableText, D.inline),
+                                (0, r.jsx)(l.P3F, {
+                                    className: o()(P.clickableText, P.inline),
                                     onClick: e,
-                                    children: B
+                                    children: G
                                 })
                             ]
                         }),
-                        null != U &&
-                            (0, i.jsx)(b.Z, {
+                        null != j &&
+                            (0, r.jsx)(S.Z, {
                                 variant: 'text-xs/normal',
-                                text: O.intl.formatToPlainString(O.t['hq/Qzc'], { guildName: U.name }),
+                                text: R.NW.formatToPlainString(R.t['hq/Qzc'], { guildName: j.name }),
                                 onClick: t
                             })
                     ]
                 })
             });
         },
-        V = () =>
-            (0, i.jsx)('div', {
-                className: a()(D.actions, P),
-                children: (0, i.jsx)(N.Z, {
+        F = () =>
+            (0, r.jsx)('div', {
+                className: o()(P.actions, x),
+                children: (0, r.jsx)(N.Z, {
                     channel: n,
                     onAction: M,
-                    onClose: L
+                    onClose: w
                 })
             });
-    return (0, i.jsx)(d.Gt, {
-        value: w,
-        children: (0, i.jsxs)(I.Z, {
+    return (0, r.jsx)(d.Gt, {
+        value: L,
+        children: (0, r.jsxs)(y.Z, {
             ref: k,
-            className: a()(D.card, r),
+            className: o()(P.card, i),
             onAction: M,
-            onClose: L,
+            onClose: w,
             children: [
-                (0, i.jsx)(T.Z, {
-                    text: Z(),
-                    contextMenu: (0, i.jsx)(C.Z, {
+                (0, r.jsx)(O.Z, {
+                    text: B(),
+                    contextMenu: (0, r.jsx)(A.Z, {
                         display: 'voice',
                         user: t,
-                        onClose: L
+                        onClose: w
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: D.body,
-                    children: (0, i.jsxs)('div', {
-                        className: a()(D.content, P),
+                (0, r.jsx)('div', {
+                    className: P.body,
+                    children: (0, r.jsxs)('div', {
+                        className: o()(P.content, x),
                         children: [
-                            (0, i.jsx)(S.Z, {
-                                users: G,
+                            (0, r.jsx)(I.Z, {
+                                users: U,
                                 channel: n
                             }),
-                            F(),
-                            x === R.y0.FULL_SIZE && V()
+                            Z(),
+                            D === C.y0.FULL_SIZE && F()
                         ]
                     })
                 }),
-                x !== R.y0.FULL_SIZE && V()
+                D !== C.y0.FULL_SIZE && F()
             ]
         })
     });

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s });
-var i = n(818083),
-    r = n(987338);
-let a = (0, i.B)({
+n.d(t, { Z: () => a });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-12_shop_link_mention',
         label: 'Collectibles Shop Link Mention Experiment',
@@ -13,6 +13,6 @@ let a = (0, i.B)({
                 config: { enabled: !0 }
             }
         ],
-        commonTriggerPoint: r.$P.CONNECTION_OPEN
+        commonTriggerPoint: i.$P.CONNECTION_OPEN
     }),
-    s = (e) => a.getCurrentConfig({ location: e }).enabled;
+    a = (e) => o.getCurrentConfig({ location: e }).enabled;

@@ -1,55 +1,55 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => p,
     hf: () => d
 });
-var i = n(763296),
-    r = n(375954),
-    a = n(768581),
-    s = n(722932),
-    o = n(801606),
+var r = n(763296),
+    i = n(375954),
+    o = n(768581),
+    a = n(722932),
+    s = n(801606),
     l = n(12327),
-    u = n(277078),
-    c = n(981631);
+    c = n(277078),
+    u = n(981631);
 let d = /^<sound:(\d+):(\d+)>/;
-function f(e, t, n, a, l) {
-    if (!s.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-    let d = i.Z.getSoundById(a),
-        f = (0, u.Z)(d, e, t);
+function f(e, t, n, o, l) {
+    if (!a.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
+    let d = r.Z.getSoundById(o),
+        f = (0, c.Z)(d, e, t);
     if (null != n && null != t) {
-        let e = (0, o.Z)(t, n, a, l);
+        let e = (0, s.Z)(t, n, o, l);
         if (f && null == e) {
-            let e = r.Z.getMessage(t, n);
-            if ((null == e ? void 0 : e.state) !== c.yb.SENT) return d;
+            let e = i.Z.getMessage(t, n);
+            if ((null == e ? void 0 : e.state) !== u.yb.SENT) return d;
         }
         return e;
     }
     if (f && null != d) return d;
 }
-function _(e, t) {
+function p(e, t) {
     var n;
-    let i = e[1],
-        r = e[2],
-        { guildId: s, channelId: o, messageId: u } = t,
-        c = f(s, o, u, r, t.soundboardSounds);
-    if (null == c)
+    let r = e[1],
+        i = e[2],
+        { guildId: a, channelId: s, messageId: c } = t,
+        u = f(a, s, c, i, t.soundboardSounds);
+    if (null == u)
         return {
             type: 'text',
-            content: (0, l.Z)(i, r)
+            content: (0, l.Z)(r, i)
         };
-    let d = null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : r;
+    let d = null !== (n = null == u ? void 0 : u.name) && void 0 !== n ? n : i;
     return {
         type: 'soundboard',
-        soundId: r,
-        guildId: i,
+        soundId: i,
+        guildId: r,
         messageId: t.messageId,
         channelId: t.channelId,
         content: d,
-        emojiId: null == c ? void 0 : c.emojiId,
-        emojiName: null == c ? void 0 : c.emojiName,
+        emojiId: null == u ? void 0 : u.emojiId,
+        emojiName: null == u ? void 0 : u.emojiName,
         emojiSrc:
-            (null == c ? void 0 : c.emojiId) != null
-                ? (0, a.gT)({
-                      id: null == c ? void 0 : c.emojiId,
+            (null == u ? void 0 : u.emojiId) != null
+                ? (0, o.gT)({
+                      id: null == u ? void 0 : u.emojiId,
                       animated: !1,
                       size: 16
                   })

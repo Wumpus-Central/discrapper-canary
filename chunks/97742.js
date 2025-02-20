@@ -1,15 +1,15 @@
-var i = n(56135),
-    r = n(886985),
-    a = n(290677),
-    s = n(158698),
-    o = 1 / 0,
-    l = i ? i.prototype : void 0,
-    u = l ? l.toString : void 0;
-function c(e) {
+var r = n(56135),
+    i = n(886985),
+    o = n(290677),
+    a = n(158698),
+    s = 1 / 0,
+    l = r ? r.prototype : void 0,
+    c = l ? l.toString : void 0;
+function u(e) {
     if ('string' == typeof e) return e;
-    if (a(e)) return r(e, c) + '';
-    if (s(e)) return u ? u.call(e) : '';
+    if (o(e)) return i(e, u) + '';
+    if (a(e)) return c ? c.call(e) : '';
     var t = e + '';
-    return '0' == t && 1 / e == -o ? '-0' : t;
+    return '0' == t && 1 / e == -s ? '-0' : t;
 }
-e.exports = c;
+e.exports = u;

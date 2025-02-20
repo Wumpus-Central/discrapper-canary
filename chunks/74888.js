@@ -1,9 +1,9 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => S });
 var i = n(200651),
     s = n(192379),
     l = n(120356),
-    a = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    a = n(481060),
     o = n(493773),
     d = n(11352),
     c = n(610617),
@@ -12,53 +12,53 @@ var i = n(200651),
     g = n(200115),
     m = n(406205),
     x = n(388032),
-    p = n(666401);
-function v(e) {
+    N = n(924632);
+function p(e) {
     return (0, i.jsx)('div', {
-        className: p.sectionHeader,
-        children: (0, i.jsx)(r.X6q, {
+        className: N.sectionHeader,
+        children: (0, i.jsx)(a.X6q, {
             variant: 'text-xs/bold',
-            className: p.sectionHeaderTitle,
+            className: N.sectionHeaderTitle,
             color: 'text-muted',
             children: e.title
         })
     });
 }
-function N(e) {
+function v(e) {
     return (0, i.jsxs)('div', {
         children: [
-            null != e.title && (0, i.jsx)(v, { title: e.title }),
+            null != e.title && (0, i.jsx)(p, { title: e.title }),
             (0, i.jsx)('div', {
-                className: a()(p.sectionContent, { [p.sectionContentPadding]: !0 !== e.noPadding }),
+                className: r()(N.sectionContent, { [N.sectionContentPadding]: !0 !== e.noPadding }),
                 children: e.children
             })
         ]
     });
 }
-function S(e) {
+function j(e) {
     let { onClose: t } = e;
-    return (0, i.jsxs)(r.xBx, {
-        className: p.header,
+    return (0, i.jsxs)(a.xBx, {
+        className: N.header,
         children: [
             (0, i.jsxs)('div', {
-                className: p.headerLeft,
+                className: N.headerLeft,
                 children: [
-                    (0, i.jsx)(r.Dkj, {
+                    (0, i.jsx)(a.Dkj, {
                         size: 'md',
                         color: 'currentColor',
-                        className: p.headerBell
+                        className: N.headerBell
                     }),
-                    (0, i.jsx)(r.X6q, {
+                    (0, i.jsx)(a.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: x.intl.string(x.t.h850Sk)
+                        children: x.NW.string(x.t.h850Sk)
                     })
                 ]
             }),
-            (0, i.jsx)(r.olH, { onClick: t })
+            (0, i.jsx)(a.olH, { onClick: t })
         ]
     });
 }
-function j(e) {
+function S(e) {
     let t = s.useRef(null),
         n = d.Y.useExperiment({ location: 'notification_settings_modal_redesign' }, { autoTrackExposure: !0 }).enabled,
         l = s.useRef(null);
@@ -76,35 +76,35 @@ function j(e) {
             }, 1000);
             return () => clearTimeout(n);
         }),
-        (0, i.jsxs)(r.Y0X, {
-            size: r.CgR.MEDIUM,
+        (0, i.jsxs)(a.Y0X, {
+            size: a.CgR.MEDIUM,
             transitionState: e.transitionState,
-            'aria-label': x.intl.string(x.t.h850Sk),
+            'aria-label': x.NW.string(x.t.h850Sk),
             children: [
-                (0, i.jsx)(S, { onClose: e.onClose }),
-                (0, i.jsxs)(r.hzk, {
-                    className: p.content,
+                (0, i.jsx)(j, { onClose: e.onClose }),
+                (0, i.jsxs)(a.hzk, {
+                    className: N.content,
                     scrollerRef: t,
                     children: [
-                        (0, i.jsx)(N, { children: (0, i.jsx)(g.Z, { guildId: e.guildId }) }),
-                        (0, i.jsx)(N, {
-                            title: x.intl.string(x.t['R9Ej9/']),
+                        (0, i.jsx)(v, { children: (0, i.jsx)(g.Z, { guildId: e.guildId }) }),
+                        (0, i.jsx)(v, {
+                            title: x.NW.string(x.t['R9Ej9/']),
                             noPadding: !0,
                             children: (0, i.jsx)(m.Z, { guildId: e.guildId })
                         }),
                         n &&
-                            (0, i.jsx)(N, {
+                            (0, i.jsx)(v, {
                                 children: (0, i.jsx)(c.Z, {
                                     onClose: e.onClose,
                                     guildId: e.guildId,
                                     isRedesign: !0
                                 })
                             }),
-                        (0, i.jsx)(N, {
-                            title: x.intl.string(x.t['31DySk']),
+                        (0, i.jsx)(v, {
+                            title: x.NW.string(x.t['31DySk']),
                             children: (0, i.jsx)(u.Z, { guildId: e.guildId })
                         }),
-                        (0, i.jsx)(v, { title: x.intl.string(x.t.JrySi4) }),
+                        (0, i.jsx)(p, { title: x.NW.string(x.t.JrySi4) }),
                         (0, i.jsx)(h.Z, {
                             guildId: e.guildId,
                             requestScrollToBottom: () => {

@@ -1,8 +1,8 @@
 !(function (e, t) {
     t(n(913527));
 })(0, function (e) {
-    function t(e, t, n, i) {
-        var r = {
+    function t(e, t, n, r) {
+        var i = {
             s: ['viensas secunds', "'iensas secunds"],
             ss: [e + ' secunds', '' + e + ' secunds'],
             m: ["'n míut", "'iens míut"],
@@ -16,7 +16,7 @@
             y: ["'n ar", "'iens ar"],
             yy: [e + ' ars', '' + e + ' ars']
         };
-        return i ? r[n][0] : t ? r[n][0] : r[n][1];
+        return r ? i[n][0] : t ? i[n][0] : i[n][1];
     }
     return e.defineLocale('tzl', {
         months: 'Januar_Fevraglh_Març_Avrïu_Mai_Gün_Julia_Guscht_Setemvar_Listopäts_Noemvar_Zecemvar'.split('_'),

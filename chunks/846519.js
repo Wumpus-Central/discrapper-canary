@@ -1,4 +1,4 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -12,12 +12,12 @@ function i(e, t, n) {
     );
 }
 n.d(t, {
-    GR: () => o,
-    V7: () => r,
-    Xp: () => s,
-    sW: () => a
+    GR: () => s,
+    V7: () => i,
+    Xp: () => a,
+    sW: () => o
 });
-class r {
+class i {
     start(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         (!this.isStarted() || n) &&
@@ -33,10 +33,10 @@ class r {
         return null != this._ref;
     }
     constructor() {
-        i(this, '_ref', void 0);
+        r(this, '_ref', void 0);
     }
 }
-class a {
+class o {
     set(e) {
         return (this._delay = e), this;
     }
@@ -51,10 +51,10 @@ class a {
         return this._timeout.isStarted();
     }
     constructor(e, t) {
-        i(this, '_timeout', void 0), i(this, '_delay', void 0), i(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new r());
+        r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
     }
 }
-class s {
+class a {
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
     }
@@ -65,10 +65,10 @@ class s {
         return null != this._ref;
     }
     constructor() {
-        i(this, '_ref', void 0);
+        r(this, '_ref', void 0);
     }
 }
-function o(e) {
+function s(e) {
     return new Promise((t) => {
         setTimeout(() => t(), e);
     });

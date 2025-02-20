@@ -1,78 +1,78 @@
-n.d(t, { Z: () => _ }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    o = n(536285),
+n.d(t, { Z: () => p }), n(301563), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    l = n(536285),
     s = n(857458),
     c = n(388905),
-    d = n(703656),
-    u = n(388032),
-    h = n(483938);
-let _ = function (e) {
-    let { match: t, location: n, attemptDeepLink: a } = e,
-        [_, m] = r.useState(0);
-    r.useEffect(() => {
-        o.default.once('connected', () => {
-            m(1);
+    u = n(703656),
+    d = n(388032),
+    h = n(455812);
+let p = function (e) {
+    let { match: t, location: n, attemptDeepLink: o } = e,
+        [p, _] = i.useState(0);
+    i.useEffect(() => {
+        l.default.once('connected', () => {
+            _(1);
         }),
-            o.default.once('disconnected', () => {
-                (0, d.uL)((0, s.M)());
+            l.default.once('disconnected', () => {
+                (0, u.uL)((0, s.M)());
             }),
-            o.default.connect();
+            l.default.connect();
     }, []),
-        r.useEffect(() => {
-            if (0 !== _) return;
-            let e = setTimeout(() => (0, d.uL)((0, s.M)()), 3000);
+        i.useEffect(() => {
+            if (0 !== p) return;
+            let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
-        }, [_]);
-    let g = r.useCallback(
+        }, [p]);
+    let g = i.useCallback(
         async (e, t) => {
             try {
-                m(2), await a(e, t), m(3);
+                _(2), await o(e, t), _(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
         },
-        [a]
+        [o]
     );
-    if ((0, d.DB)()) return null;
-    switch (_) {
+    if ((0, u.DB)()) return null;
+    switch (p) {
         case 1:
-            return (0, i.jsxs)(c.ZP, {
+            return (0, r.jsxs)(c.ZP, {
                 children: [
-                    (0, i.jsx)(c.Dx, {
+                    (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: u.intl.string(u.t.qllnGh)
+                        children: d.NW.string(d.t.qllnGh)
                     }),
-                    (0, i.jsx)(c.DK, { children: u.intl.string(u.t.SXCxyc) }),
-                    (0, i.jsx)(c.zx, {
+                    (0, r.jsx)(c.DK, { children: d.NW.string(d.t.SXCxyc) }),
+                    (0, r.jsx)(c.zx, {
                         className: h.marginTop40,
                         onClick: () => g(t, n),
-                        children: u.intl.string(u.t.UQvCf3)
+                        children: d.NW.string(d.t.UQvCf3)
                     }),
-                    (0, i.jsx)(c.zx, {
-                        className: l()(h.marginTop8, h.marginCenterHorz),
+                    (0, r.jsx)(c.zx, {
+                        className: a()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, d.uL)((0, s.M)()),
-                        children: u.intl.string(u.t['2ixEBg'])
+                        onClick: () => (0, u.uL)((0, s.M)()),
+                        children: d.NW.string(d.t['2ixEBg'])
                     })
                 ]
             });
         case 0:
         case 2:
-            return (0, i.jsxs)(c.ZP, {
-                children: [(0, i.jsx)(c.Dx, { children: u.intl.string(u.t['Z+hCVV']) }), (0, i.jsx)(c.Hh, {})]
+            return (0, r.jsxs)(c.ZP, {
+                children: [(0, r.jsx)(c.Dx, { children: d.NW.string(d.t['Z+hCVV']) }), (0, r.jsx)(c.Hh, {})]
             });
         case 3:
-            return (0, i.jsxs)(c.ZP, {
+            return (0, r.jsxs)(c.ZP, {
                 children: [
-                    (0, i.jsx)(c.Dx, {
+                    (0, r.jsx)(c.Dx, {
                         className: h.marginBottom8,
-                        children: u.intl.string(u.t.csrAMD)
+                        children: d.NW.string(d.t.csrAMD)
                     }),
-                    (0, i.jsx)(c.DK, { children: u.intl.string(u.t.ghBJz8) })
+                    (0, r.jsx)(c.DK, { children: d.NW.string(d.t.ghBJz8) })
                 ]
             });
     }

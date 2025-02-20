@@ -1,20 +1,20 @@
 var t;
 (e.exports.timeout = function (e, n) {
-    var i,
-        r = new t();
+    var r,
+        i = new t();
     return Promise.race([
         e,
         new Promise(function (e, t) {
-            i = setTimeout(function () {
-                t(r);
+            r = setTimeout(function () {
+                t(i);
             }, n);
         })
     ]).then(
         function (e) {
-            return clearTimeout(i), e;
+            return clearTimeout(r), e;
         },
         function (e) {
-            throw (clearTimeout(i), e);
+            throw (clearTimeout(r), e);
         }
     );
 }),

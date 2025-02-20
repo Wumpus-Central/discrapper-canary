@@ -1,75 +1,75 @@
-n.d(r, { default: () => x }), n(47120);
-var t = n(200651),
-    s = n(192379),
-    o = n(512722),
-    i = n.n(o),
-    l = n(481060),
-    c = n(985002),
-    a = n(880257),
-    d = n(957656),
-    h = n(388032),
-    u = n(776590);
-let x = (e) => {
-    let { currentUser: r, otherUser: n, transitionState: o, onClose: x } = e,
-        [j, m] = s.useState(!1),
-        b = s.useCallback(() => {
-            m(!0);
+t.d(r, { default: () => h }), t(47120);
+var n = t(200651),
+    o = t(192379),
+    s = t(512722),
+    c = t.n(s),
+    i = t(481060),
+    l = t(985002),
+    a = t(880257),
+    d = t(957656),
+    u = t(388032),
+    b = t(428279);
+let h = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: s, onClose: h } = e,
+        [f, j] = o.useState(!1),
+        p = o.useCallback(() => {
+            j(!0);
         }, []),
-        k = s.useCallback(() => {
-            m(!1);
+        x = o.useCallback(() => {
+            j(!1);
         }, []),
-        f = s.useCallback(() => {
-            x();
-        }, [x]),
-        _ = (0, a.Z)(),
-        { cancelLinkRequest: z, isCancelLoading: p } = (0, c.G)({
-            onError: b,
-            onSuccess: f
+        y = o.useCallback(() => {
+            h();
+        }, [h]),
+        m = (0, a.Z)(),
+        { cancelLinkRequest: O, isCancelLoading: g } = (0, l.G)({
+            onError: p,
+            onSuccess: y
         });
     return (
-        i()(_, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
-        (0, t.jsx)(d.Z, {
-            transitionState: o,
-            children: (0, t.jsxs)('form', {
+        c()(m, 'FamilyCenterDeclineLinkModal should only be rendered for parents.'),
+        (0, n.jsx)(d.Z, {
+            transitionState: s,
+            children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), z(n);
+                    e.preventDefault(), O(t);
                 },
                 children: [
-                    (0, t.jsx)(d.Z.Error, {
-                        error: j ? h.intl.string(h.t['6gyAQU']) : void 0,
-                        onDismiss: k
+                    (0, n.jsx)(d.Z.Error, {
+                        error: f ? u.NW.string(u.t['6gyAQU']) : void 0,
+                        onDismiss: x
                     }),
-                    (0, t.jsx)(l.hzk, {
-                        children: (0, t.jsx)(d.Z.Header, {
+                    (0, n.jsx)(i.hzk, {
+                        children: (0, n.jsx)(d.Z.Header, {
                             currentUser: r,
-                            otherUser: n,
-                            header: h.intl.string(h.t.HynllZ),
-                            icon: (0, t.jsx)(l.Dio, {
+                            otherUser: t,
+                            header: u.NW.string(u.t.HynllZ),
+                            icon: (0, n.jsx)(i.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: u.closeIcon
+                                className: b.closeIcon
                             })
                         })
                     }),
-                    (0, t.jsx)(l.mzw, {
-                        children: (0, t.jsxs)(d.Z.ButtonFooter, {
+                    (0, n.jsx)(i.mzw, {
+                        children: (0, n.jsxs)(d.Z.ButtonFooter, {
                             children: [
-                                (0, t.jsx)(l.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     type: 'button',
-                                    disabled: p,
-                                    look: l.zxk.Looks.LINK,
-                                    color: l.zxk.Colors.PRIMARY,
-                                    onClick: x,
-                                    size: l.zxk.Sizes.SMALL,
-                                    children: h.intl.string(h.t.czincX)
+                                    disabled: g,
+                                    look: i.zxk.Looks.LINK,
+                                    color: i.zxk.Colors.PRIMARY,
+                                    onClick: h,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: u.NW.string(u.t.czincX)
                                 }),
-                                (0, t.jsx)(l.zxk, {
+                                (0, n.jsx)(i.zxk, {
                                     type: 'submit',
-                                    disabled: p || j,
-                                    submitting: p,
-                                    color: l.Ttl.RED,
-                                    size: l.zxk.Sizes.SMALL,
-                                    children: h.intl.string(h.t.mK40bm)
+                                    disabled: g || f,
+                                    submitting: g,
+                                    color: i.Ttl.RED,
+                                    size: i.zxk.Sizes.SMALL,
+                                    children: u.NW.string(u.t.mK40bm)
                                 })
                             ]
                         })

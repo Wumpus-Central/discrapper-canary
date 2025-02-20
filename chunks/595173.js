@@ -1,4 +1,4 @@
-var a = {
+var r = {
     './2017-11-16.mp4': '221825',
     './channel-following.png': '247815',
     './discovery.jpg': '778608',
@@ -19,18 +19,18 @@ var a = {
     './store.jpg': '926213'
 };
 function o(e) {
-    return n(i(e));
+    return n(a(e));
 }
-function i(e) {
-    if (!n.o(a, e)) {
+function a(e) {
+    if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return a[e];
+    return r[e];
 }
 (o.keys = function () {
-    return Object.keys(a);
+    return Object.keys(r);
 }),
-    (o.resolve = i),
+    (o.resolve = a),
     (e.exports = o),
     (o.id = 595173);

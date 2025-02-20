@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-var i = /\s/;
-let r = function (e) {
-    for (var t = e.length; t-- && i.test(e.charAt(t)); );
+n.d(t, { Z: () => i });
+var r = /\s/;
+let i = function (e) {
+    for (var t = e.length; t-- && r.test(e.charAt(t)); );
     return t;
 };

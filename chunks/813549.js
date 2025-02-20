@@ -1,37 +1,37 @@
 n.d(t, {
-    J: () => o.Hb,
-    Z: () => u
+    J: () => s.Hb,
+    Z: () => c
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(385499),
-    o = n(674563),
-    l = n(986662);
-let u = (e) => {
-    let { name: t, discriminator: n, invertBotTagColor: r, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: f, botClass: _, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
-    return (0, i.jsxs)('div', {
-        className: a()(u, l.nameTag),
+var i = n(120356),
+    o = n.n(i),
+    a = n(385499),
+    s = n(674563),
+    l = n(391580);
+let c = (e) => {
+    let { name: t, discriminator: n, invertBotTagColor: i, nameColor: s, className: c, botType: u, usernameClass: d, discriminatorClass: f, botClass: p, botVerified: _ = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
+    return (0, r.jsxs)('div', {
+        className: o()(c, l.nameTag),
         style: h,
         children: [
-            (0, i.jsxs)('span', {
-                className: a()(l.username, d),
-                style: null != o ? { color: o } : void 0,
+            (0, r.jsxs)('span', {
+                className: o()(l.username, d),
+                style: null != s ? { color: s } : void 0,
                 children: [g, t]
             }),
             null != n
-                ? (0, i.jsxs)('span', {
+                ? (0, r.jsxs)('span', {
                       className: null != f ? f : void 0,
                       children: ['#', n]
                   })
                 : null,
-            null != c
-                ? (0, i.jsx)(s.Z, {
-                      type: c,
-                      invertColor: r,
-                      className: a()(_, l.bot),
-                      verified: p,
+            null != u
+                ? (0, r.jsx)(a.Z, {
+                      type: u,
+                      invertColor: i,
+                      className: o()(p, l.bot),
+                      verified: _,
                       useRemSizes: m
                   })
                 : null

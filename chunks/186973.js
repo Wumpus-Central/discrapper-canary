@@ -1,12 +1,12 @@
-var i = n(96403),
-    r = n(821819),
-    a = n(726433),
-    s = Object,
-    o = i(''.split);
-e.exports = r(function () {
-    return !s('z').propertyIsEnumerable(0);
+var r = n(96403),
+    i = n(821819),
+    o = n(726433),
+    a = Object,
+    s = r(''.split);
+e.exports = i(function () {
+    return !a('z').propertyIsEnumerable(0);
 })
     ? function (e) {
-          return 'String' === a(e) ? o(e, '') : s(e);
+          return 'String' === o(e) ? s(e, '') : a(e);
       }
-    : s;
+    : a;

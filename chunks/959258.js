@@ -1,13 +1,13 @@
 n.d(t, {
-    q: () => c,
+    q: () => u,
     v: () => d
 }),
     n(411104),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(731965);
-function s(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    o = n(731965);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,16 +20,16 @@ function s(e, t, n) {
         e
     );
 }
-let o = 100,
+let s = 100,
     l = 0.7;
-class u {
+class c {
     handleVisible(e, t) {
-        var n, i;
+        var n, r;
         if (this.visibleComponents.has(e.target)) return;
-        let r = Math.abs(e.intersectionRect.bottom - Number(null === (n = e.rootBounds) || void 0 === n ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (i = e.rootBounds) || void 0 === i ? void 0 : i.top));
-        r ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents])) : this.visibleComponents.add(e.target);
-        let a = r || this.animatingComponents.size < o;
-        a ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(a), a && this.visibleComponents.size > o && this.stopNodeFromAnimating();
+        let i = Math.abs(e.intersectionRect.bottom - Number(null === (n = e.rootBounds) || void 0 === n ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.top));
+        i ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents])) : this.visibleComponents.add(e.target);
+        let o = i || this.animatingComponents.size < s;
+        o ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(o), o && this.visibleComponents.size > s && this.stopNodeFromAnimating();
     }
     handleNotVisible(e, t) {
         this.visibleComponents.has(e.target) && (t.updateState(!1), this.visibleComponents.delete(e.target), this.animatingComponents.delete(e.target), this.potentiallyAnimateNewNode());
@@ -46,7 +46,7 @@ class u {
         }
     }
     potentiallyAnimateNewNode() {
-        if (this.animatingComponents.size < o && this.visibleComponents.size > this.animatingComponents.size) {
+        if (this.animatingComponents.size < s && this.visibleComponents.size > this.animatingComponents.size) {
             for (let e of this.visibleComponents)
                 if (!this.animatingComponents.has(e)) {
                     let t = this.registeredNodes.get(e);
@@ -75,10 +75,10 @@ class u {
         null === (e = this.observer) || void 0 === e || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
     constructor(e = !1) {
-        if ((s(this, 'registeredNodes', new Map()), s(this, 'visibleComponents', new Set()), s(this, 'animatingComponents', new Set()), s(this, 'observer', void 0), e)) return;
+        if ((a(this, 'registeredNodes', new Map()), a(this, 'visibleComponents', new Set()), a(this, 'animatingComponents', new Set()), a(this, 'observer', void 0), e)) return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, a.j)(() => {
+                (0, o.j)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null != t && (e.intersectionRatio >= l ? this.handleVisible(e, t) : this.handleNotVisible(e, t));
@@ -89,8 +89,8 @@ class u {
         );
     }
 }
-let c = r.createContext({
-    manager: new u(!0),
+let u = i.createContext({
+    manager: new c(!0),
     useThoughtfullyAnimated: () => ({
         animate: !0,
         registerRef: () => {}
@@ -98,25 +98,25 @@ let c = r.createContext({
 });
 function d(e) {
     let { children: t } = e,
-        [n] = r.useState(() => {
-            let e = new u();
+        [n] = i.useState(() => {
+            let e = new c();
             return {
                 manager: e,
                 useThoughtfullyAnimated() {
-                    let t = r.useRef(null),
-                        [n, i] = r.useState(!1);
+                    let t = i.useRef(null),
+                        [n, r] = i.useState(!1);
                     return {
                         animate: n,
-                        registerRef: r.useCallback((n) => {
-                            null != t.current && e.unregisterNode(t.current), (t.current = n), null != t.current && e.registerNode(t.current, i);
+                        registerRef: i.useCallback((n) => {
+                            null != t.current && e.unregisterNode(t.current), (t.current = n), null != t.current && e.registerNode(t.current, r);
                         }, [])
                     };
                 }
             };
         });
     return (
-        r.useEffect(() => () => n.manager.cleanUp(), [n.manager]),
-        (0, i.jsx)(c.Provider, {
+        i.useEffect(() => () => n.manager.cleanUp(), [n.manager]),
+        (0, r.jsx)(u.Provider, {
             value: n,
             children: t
         })

@@ -1,5 +1,5 @@
-n.d(t, { n: () => l });
+n.d(t, { n: () => r });
 var i = n(506071);
-function l() {
+function r() {
     return (0, i.n)();
 }

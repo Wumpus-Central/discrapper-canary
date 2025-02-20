@@ -1,27 +1,27 @@
 n.d(t, { Z: () => d });
-var i = n(192379),
-    r = n(723184),
-    a = n(786547),
-    s = n(64412),
-    o = (function () {
+var r = n(192379),
+    i = n(723184),
+    o = n(786547),
+    a = n(64412),
+    s = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
             }
         }
-        return function (t, n, i) {
-            return n && e(t.prototype, n), i && e(t, i), t;
+        return function (t, n, r) {
+            return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
 function l(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function u(e, t) {
+function c(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function c(e, t) {
+function u(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -36,10 +36,10 @@ function c(e, t) {
 let d = (function (e) {
     function t(e) {
         l(this, t);
-        var n = u(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+        var n = c(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
         return (
             (n.handleChange = function (e) {
-                'function' == typeof n.props.onChange && n.throttle(n.props.onChange, s.T(e, n.props.hsl, n.container), e);
+                'function' == typeof n.props.onChange && n.throttle(n.props.onChange, a.T(e, n.props.hsl, n.container), e);
             }),
             (n.handleMouseDown = function (e) {
                 n.handleChange(e);
@@ -49,15 +49,15 @@ let d = (function (e) {
             (n.handleMouseUp = function () {
                 n.unbindEventListeners();
             }),
-            (n.throttle = (0, a.Z)(function (e, t, n) {
+            (n.throttle = (0, o.Z)(function (e, t, n) {
                 e(t, n);
             }, 50)),
             n
         );
     }
     return (
-        c(t, e),
-        o(t, [
+        u(t, e),
+        s(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -84,11 +84,11 @@ let d = (function (e) {
                     var e = this,
                         t = this.props.style || {},
                         n = t.color,
-                        a = t.white,
-                        s = t.black,
-                        o = t.pointer,
+                        o = t.white,
+                        a = t.black,
+                        s = t.pointer,
                         l = t.circle,
-                        u = (0, r.default)(
+                        c = (0, i.default)(
                             {
                                 default: {
                                     color: {
@@ -122,18 +122,18 @@ let d = (function (e) {
                                 },
                                 custom: {
                                     color: n,
-                                    white: a,
-                                    black: s,
-                                    pointer: o,
+                                    white: o,
+                                    black: a,
+                                    pointer: s,
                                     circle: l
                                 }
                             },
                             { custom: !!this.props.style }
                         );
-                    return i.createElement(
+                    return r.createElement(
                         'div',
                         {
-                            style: u.color,
+                            style: c.color,
                             ref: function (t) {
                                 return (e.container = t);
                             },
@@ -141,18 +141,18 @@ let d = (function (e) {
                             onTouchMove: this.handleChange,
                             onTouchStart: this.handleChange
                         },
-                        i.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
-                        i.createElement(
+                        r.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
+                        r.createElement(
                             'div',
                             {
-                                style: u.white,
+                                style: c.white,
                                 className: 'saturation-white'
                             },
-                            i.createElement('div', {
-                                style: u.black,
+                            r.createElement('div', {
+                                style: c.black,
                                 className: 'saturation-black'
                             }),
-                            i.createElement('div', { style: u.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: u.circle }))
+                            r.createElement('div', { style: c.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: c.circle }))
                         )
                     );
                 }
@@ -160,4 +160,4 @@ let d = (function (e) {
         ]),
         t
     );
-})(i.PureComponent || i.Component);
+})(r.PureComponent || r.Component);

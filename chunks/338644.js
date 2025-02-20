@@ -1,26 +1,26 @@
 function t(e) {
     let t = e.regex,
         n = /([-a-zA-Z$._][\w$.-]*)/,
-        i = {
+        r = {
             className: 'type',
             begin: /\bi\d+(?=\s|\b)/
         },
-        r = {
+        i = {
             className: 'operator',
             relevance: 0,
             begin: /=/
         },
-        a = {
+        o = {
             className: 'punctuation',
             relevance: 0,
             begin: /,/
         },
-        s = {
+        a = {
             className: 'number',
             variants: [{ begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ }, { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ }],
             relevance: 0
         },
-        o = {
+        s = {
             className: 'symbol',
             variants: [{ begin: /^\s*[a-z]+:/ }],
             relevance: 0
@@ -29,7 +29,7 @@ function t(e) {
             className: 'variable',
             variants: [{ begin: t.concat(/%/, n) }, { begin: /%\d+/ }, { begin: /#\d+/ }]
         },
-        u = {
+        c = {
             className: 'title',
             variants: [{ begin: t.concat(/@/, n) }, { begin: /@\d+/ }, { begin: t.concat(/!/, n) }, { begin: t.concat(/!\d+/, n) }, { begin: /!\d+/ }]
         };
@@ -40,7 +40,7 @@ function t(e) {
             type: 'void half bfloat float double fp128 x86_fp80 ppc_fp128 x86_amx x86_mmx ptr label token metadata opaque'
         },
         contains: [
-            i,
+            r,
             e.COMMENT(/;\s*$/, null, { relevance: 0 }),
             e.COMMENT(/;/, /$/),
             {
@@ -54,12 +54,12 @@ function t(e) {
                     }
                 ]
             },
-            u,
-            a,
-            r,
-            l,
+            c,
             o,
-            s
+            i,
+            l,
+            s,
+            a
         ]
     };
 }

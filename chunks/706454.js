@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { default: () => _ });
-var i,
-    r = n(442837),
-    a = n(570140),
-    s = n(241601),
-    o = n(581883);
+n.r(t), n.d(t, { default: () => p });
+var r,
+    i = n(442837),
+    o = n(570140),
+    a = n(241601),
+    s = n(581883);
 function l(e, t, n) {
     return (
         t in e
@@ -17,28 +17,28 @@ function l(e, t, n) {
         e
     );
 }
-let u = n(388032).intl.currentLocale;
-function c() {
+let c = n(388032).NW.currentLocale;
+function u() {
     var e, t;
-    let n = null === (t = o.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
-    return null != n && '' !== n && n !== u && ((u = n), (0, s._2)(u), !0);
+    let n = null === (t = s.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
+    return null != n && '' !== n && n !== c && ((c = n), (0, a._2)(c), !0);
 }
 function d(e) {
-    (u = e.locale), (0, s._2)(u);
+    (c = e.locale), (0, a._2)(c);
 }
-class f extends (i = r.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z), c(), (0, s._2)(u);
+        this.waitFor(s.Z), u(), (0, a._2)(c);
     }
     get locale() {
-        return u;
+        return c;
     }
 }
 l(f, 'displayName', 'LocaleStore');
-let _ = new f(a.Z, {
-    OVERLAY_INITIALIZE: c,
-    CACHE_LOADED: c,
-    CONNECTION_OPEN: c,
-    USER_SETTINGS_PROTO_UPDATE: c,
+let p = new f(o.Z, {
+    OVERLAY_INITIALIZE: u,
+    CACHE_LOADED: u,
+    CONNECTION_OPEN: u,
+    USER_SETTINGS_PROTO_UPDATE: u,
     USER_SETTINGS_LOCALE_OVERRIDE: d
 });

@@ -1,73 +1,73 @@
-n.d(t, { Z: () => d }), n(757143), n(47120), n(773603);
-var l = n(200651),
-    i = n(192379),
-    s = n(658550),
-    r = n(481060),
-    o = n(507453),
-    a = n(388032);
-function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c } = e,
-        [h, m] = i.useState(!1),
-        [f, x] = i.useState(null),
-        [g, S] = i.useState(''),
-        v = i.useRef(null),
-        p = a.intl.string(a.t['C/ZAw8']),
-        j = a.intl.string(a.t.fZSi1N),
-        b = i.useCallback(
+r.d(t, { Z: () => c }), r(757143), r(301563), r(47120), r(773603);
+var n = r(200651),
+    l = r(192379),
+    i = r(658550),
+    s = r(481060),
+    o = r(507453),
+    a = r(388032);
+function c(e) {
+    let { mfaChallenge: t, finish: r, setSlide: c, onClose: d, isSlideReady: u } = e,
+        [f, h] = l.useState(!1),
+        [m, p] = l.useState(null),
+        [g, b] = l.useState(''),
+        j = l.useRef(null),
+        y = a.NW.string(a.t['C/ZAw8']),
+        x = a.NW.string(a.t.fZSi1N),
+        v = l.useCallback(
             (e) => {
-                S(e), x(null);
+                b(e), p(null);
             },
-            [S, x]
+            [b, p]
         );
     return (
-        i.useEffect(() => {
-            if (c) {
+        l.useEffect(() => {
+            if (u) {
                 var e;
-                null === (e = v.current) || void 0 === e || e.focus();
+                null === (e = j.current) || void 0 === e || e.focus();
             }
-        }, [c]),
-        (0, l.jsxs)('form', {
+        }, [u]),
+        (0, n.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
-                    m(!0),
-                    n({
+                    h(!0),
+                    r({
                         mfaType: 'backup',
                         data: g.replace(/-/g, '')
                     })
                         .catch((e) => {
-                            var t, n;
-                            x(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
+                            var t, r;
+                            p(null !== (r = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== r ? r : e.message);
                         })
                         .finally(() => {
-                            m(!1);
+                            h(!1);
                         });
             },
             children: [
-                (0, l.jsx)(o.Z.SlideHeader, { onClose: u }),
-                (0, l.jsx)(o.Z.SlideContent, {
-                    children: (0, l.jsxs)(r.xJW, {
-                        title: p,
+                (0, n.jsx)(o.Z.SlideHeader, { onClose: d }),
+                (0, n.jsx)(o.Z.SlideContent, {
+                    children: (0, n.jsxs)(s.xJW, {
+                        title: y,
                         children: [
-                            (0, l.jsx)(r.oil, {
-                                inputRef: v,
-                                onChange: b,
-                                placeholder: j,
-                                maxLength: s.tL,
-                                minLength: s.th,
+                            (0, n.jsx)(s.oil, {
+                                inputRef: j,
+                                onChange: v,
+                                placeholder: x,
+                                maxLength: i.tL,
+                                minLength: i.th,
                                 value: g,
                                 spellCheck: 'false',
-                                disabled: h
+                                disabled: f
                             }),
-                            (0, l.jsx)(o.Z.SlideError, { error: f })
+                            (0, n.jsx)(o.Z.SlideError, { error: m })
                         ]
                     })
                 }),
-                (0, l.jsx)(o.Z.SlideFooter, {
+                (0, n.jsx)(o.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: c,
                     showConfirm: !0,
                     disabled: g.length < 8,
-                    submitting: h
+                    submitting: f
                 })
             ]
         })

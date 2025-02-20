@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
-var i = n(570140),
-    l = n(317770),
-    r = n(117984);
-function a(e) {
+n.d(t, { Z: () => s });
+var r = n(570140),
+    i = n(317770),
+    l = n(117984);
+function o(e) {
     let {
         channel: { id: t }
     } = e;
-    (0, r.oC)(t);
+    (0, l.oC)(t);
 }
-class s extends l.Z {
+class a extends i.Z {
     _initialize() {
-        i.Z.subscribe('CHANNEL_DELETE', a);
+        r.Z.subscribe('CHANNEL_DELETE', o);
     }
     _terminate() {
-        i.Z.unsubscribe('CHANNEL_DELETE', a);
+        r.Z.unsubscribe('CHANNEL_DELETE', o);
     }
 }
-let o = new s();
+let s = new a();

@@ -1,61 +1,61 @@
 r(301563);
-var e = r(173850),
+var n = r(173850),
     i = r(859209),
     o = r(213265),
-    u = r(936940),
-    a = r(641236),
-    c = r(251069),
-    s = a('species'),
-    f = RegExp.prototype;
-n.exports = function (n, t, r, l) {
-    var h = a(n),
-        v = !u(function () {
-            var t = {};
+    a = r(936940),
+    c = r(641236),
+    u = r(251069),
+    s = c('species'),
+    l = RegExp.prototype;
+t.exports = function (t, e, r, f) {
+    var p = c(t),
+        v = !a(function () {
+            var e = {};
             return (
-                (t[h] = function () {
+                (e[p] = function () {
                     return 7;
                 }),
-                7 !== ''[n](t)
+                7 !== ''[t](e)
             );
         }),
-        p =
+        g =
             v &&
-            !u(function () {
-                var t = !1,
+            !a(function () {
+                var e = !1,
                     r = /a/;
                 return (
-                    'split' === n &&
+                    'split' === t &&
                         (((r = {}).constructor = {}),
                         (r.constructor[s] = function () {
                             return r;
                         }),
                         (r.flags = ''),
-                        (r[h] = /./[h])),
+                        (r[p] = /./[p])),
                     (r.exec = function () {
-                        return (t = !0), null;
+                        return (e = !0), null;
                     }),
-                    r[h](''),
-                    !t
+                    r[p](''),
+                    !e
                 );
             });
-    if (!v || !p || r) {
-        var d = e(/./[h]),
-            x = t(h, ''[n], function (n, t, r, i, u) {
-                var a = e(n),
-                    c = t.exec;
-                return c === o || c === f.exec
-                    ? v && !u
+    if (!v || !g || r) {
+        var x = n(/./[p]),
+            d = e(p, ''[t], function (t, e, r, i, a) {
+                var c = n(t),
+                    u = e.exec;
+                return u === o || u === l.exec
+                    ? v && !a
                         ? {
                               done: !0,
-                              value: d(t, r, i)
+                              value: x(e, r, i)
                           }
                         : {
                               done: !0,
-                              value: a(r, t, i)
+                              value: c(r, e, i)
                           }
                     : { done: !1 };
             });
-        i(String.prototype, n, x[0]), i(f, h, x[1]);
+        i(String.prototype, t, d[0]), i(l, p, d[1]);
     }
-    l && c(f[h], 'sham', !0);
+    f && u(l[p], 'sham', !0);
 };

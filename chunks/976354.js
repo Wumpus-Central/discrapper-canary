@@ -1,38 +1,38 @@
 function t(e) {
     let t = '[a-zA-Z_\\-+\\*\\/<=>&#][a-zA-Z0-9_\\-+*\\/<=>&#!]*',
         n = '\\|[^]*?\\|',
-        i = '(-|\\+)?\\d+(\\.\\d+|\\/\\d+)?((d|e|f|l|s|D|E|F|L|S)(\\+|-)?\\d+)?',
-        r = {
+        r = '(-|\\+)?\\d+(\\.\\d+|\\/\\d+)?((d|e|f|l|s|D|E|F|L|S)(\\+|-)?\\d+)?',
+        i = {
             className: 'literal',
             begin: '\\b(t{1}|nil)\\b'
         },
-        a = {
+        o = {
             className: 'number',
             variants: [
                 {
-                    begin: i,
+                    begin: r,
                     relevance: 0
                 },
                 { begin: '#(b|B)[0-1]+(/[0-1]+)?' },
                 { begin: '#(o|O)[0-7]+(/[0-7]+)?' },
                 { begin: '#(x|X)[0-9a-fA-F]+(/[0-9a-fA-F]+)?' },
                 {
-                    begin: '#(c|C)\\(' + i + ' +' + i,
+                    begin: '#(c|C)\\(' + r + ' +' + r,
                     end: '\\)'
                 }
             ]
         },
-        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        o = e.COMMENT(';', '$', { relevance: 0 }),
+        a = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        s = e.COMMENT(';', '$', { relevance: 0 }),
         l = {
             begin: '\\*',
             end: '\\*'
         },
-        u = {
+        c = {
             className: 'symbol',
             begin: '[:&]' + t
         },
-        c = {
+        u = {
             begin: t,
             relevance: 0
         },
@@ -40,10 +40,10 @@ function t(e) {
         f = {
             begin: '\\(',
             end: '\\)',
-            contains: ['self', r, s, a, c]
+            contains: ['self', i, a, o, u]
         },
-        _ = {
-            contains: [a, s, l, u, f, c],
+        p = {
+            contains: [o, a, l, c, f, u],
             variants: [
                 {
                     begin: "['`]\\(",
@@ -57,7 +57,7 @@ function t(e) {
                 { begin: "'" + n }
             ]
         },
-        p = {
+        _ = {
             variants: [{ begin: "'" + t }, { begin: "#'" + t + '(::' + t + ')*' }]
         },
         h = {
@@ -82,11 +82,11 @@ function t(e) {
             },
             m
         ]),
-        (m.contains = [_, p, h, r, a, s, o, l, u, d, c]),
+        (m.contains = [p, _, h, i, o, a, s, l, c, d, u]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [a, e.SHEBANG(), r, s, o, _, p, h, c]
+            contains: [o, e.SHEBANG(), i, a, s, p, _, h, u]
         }
     );
 }

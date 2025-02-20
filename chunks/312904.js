@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var i = n(192379);
-let r = (e) => {
+n.d(t, { Z: () => o });
+var r = n(192379);
+let i = (e) => {
         e.effects.forEach((e) => {
             let { src: t } = e,
                 n = document.createElement('link');
@@ -12,11 +12,11 @@ let r = (e) => {
                 document.body.appendChild(n);
         });
     },
-    a = (e) => {
-        i.useEffect(() => {
+    o = (e) => {
+        r.useEffect(() => {
             if ('loading' === document.readyState) {
                 let t = () => {
-                    r(e);
+                    i(e);
                 };
                 return (
                     document.addEventListener('DOMContentLoaded', t),
@@ -25,6 +25,6 @@ let r = (e) => {
                     }
                 );
             }
-            r(e);
+            i(e);
         }, [e]);
     };

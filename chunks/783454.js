@@ -1,40 +1,40 @@
-n.d(t, { Z: () => h }), n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+n.d(t, { Z: () => p }), n(266796), n(47120);
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(313201),
     c = n(259580),
     d = n(404203),
     u = n(388032),
-    m = n(206184);
-function h(e) {
-    let { intiallyExpanded: t = !1, title: n, description: l, children: h } = e,
-        [g, x] = r.useState(t),
-        p = () => x((e) => !e),
-        _ = (0, o.Dt)();
-    return (0, i.jsxs)('div', {
+    m = n(482487);
+function p(e) {
+    let { intiallyExpanded: t = !1, title: n, description: s, children: p } = e,
+        [g, h] = i.useState(t),
+        f = () => h((e) => !e),
+        b = (0, o.Dt)();
+    return (0, r.jsxs)('div', {
         className: m.container,
         children: [
-            (0, i.jsx)(d.Z, {
-                className: s()(m.header, { [m.headerWithDescription]: g && null != l }),
-                onClick: p,
+            (0, r.jsx)(d.Z, {
+                className: a()(m.header, { [m.headerWithDescription]: g && null != s }),
+                onClick: f,
                 children: (e) => {
-                    let { areaRef: t, handleStopPropagation: r } = e;
-                    return (0, i.jsxs)(i.Fragment, {
+                    let { areaRef: t, handleStopPropagation: i } = e;
+                    return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)(a.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, i.jsx)(a.P3F, {
-                                onClick: r(p),
-                                'aria-label': u.intl.string(u.t.e5eQOz),
-                                'aria-controls': _,
+                            (0, r.jsx)(l.P3F, {
+                                onClick: i(f),
+                                'aria-label': u.NW.string(u.t.e5eQOz),
+                                'aria-controls': b,
                                 'aria-expanded': g,
                                 focusProps: { ringTarget: t },
-                                children: (0, i.jsx)(c.Z, {
+                                children: (0, r.jsx)(c.Z, {
                                     className: m.caret,
                                     direction: g ? c.Z.Directions.UP : c.Z.Directions.DOWN
                                 })
@@ -44,19 +44,19 @@ function h(e) {
                 }
             }),
             g &&
-                (0, i.jsxs)('div', {
-                    id: _,
+                (0, r.jsxs)('div', {
+                    id: b,
                     children: [
-                        null != l &&
-                            (0, i.jsx)(a.R94, {
-                                type: a.R94.Types.DESCRIPTION,
+                        null != s &&
+                            (0, r.jsx)(l.R94, {
+                                type: l.R94.Types.DESCRIPTION,
                                 className: m.description,
-                                children: l
+                                children: s
                             }),
-                        (0, i.jsx)('div', { className: m.divider }),
-                        (0, i.jsx)('div', {
+                        (0, r.jsx)('div', { className: m.divider }),
+                        (0, r.jsx)('div', {
                             className: m.content,
-                            children: h
+                            children: p
                         })
                     ]
                 })

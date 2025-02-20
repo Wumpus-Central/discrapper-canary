@@ -1,18 +1,18 @@
-t.d(n, { u: () => r });
-var i = t(481060),
-    l = t(471445),
-    a = t(230900);
-function r(e, n) {
-    let t, r;
+n.d(t, { u: () => a });
+var r = n(481060),
+    l = n(471445),
+    s = n(230900);
+function a(e, t) {
+    let n, a;
     if (null == e) return null;
-    let d = (0, a.cS)(e);
-    if (null != d) (t = i._tJ), (r = d);
+    let i = (0, s.cS)(e);
+    if (null != i) (n = r._tJ), (a = i);
     else {
-        if (null == n) return null;
-        (t = (0, l.Th)(n.type)), (r = n.name);
+        if (null == t) return null;
+        (n = (0, l.Th)(t.type)), (a = t.name);
     }
     return {
-        IconComponent: t,
-        locationName: r
+        IconComponent: n,
+        locationName: a
     };
 }

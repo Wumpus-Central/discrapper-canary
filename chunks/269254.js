@@ -1,56 +1,56 @@
-i.d(n, { default: () => S });
-var e = i(200651);
-i(192379);
-var l = i(828214),
-    a = i(481060),
-    r = i(239091),
-    o = i(299206),
-    s = i(519110),
-    u = i(695346),
-    c = i(572004),
-    d = i(691251),
-    g = i(388032);
-function S(t) {
-    let { target: n, onSelect: i } = t,
-        S = n.getAttribute('data-type'),
-        b = n.getAttribute('data-id'),
-        E = n.getAttribute('data-name'),
-        v = n.getAttribute('data-surrogates'),
-        p = 'true' === n.getAttribute('data-animated'),
-        I = u.Sb.useSetting(),
-        f = (0, s.Z)({
-            type: S,
-            id: b,
-            name: E,
+n.d(e, { default: () => p }), n(301563);
+var r = n(200651);
+n(192379);
+var i = n(828214),
+    o = n(481060),
+    l = n(239091),
+    a = n(299206),
+    c = n(519110),
+    u = n(695346),
+    s = n(572004),
+    b = n(691251),
+    d = n(388032);
+function p(t) {
+    let { target: e, onSelect: n } = t,
+        p = e.getAttribute('data-type'),
+        g = e.getAttribute('data-id'),
+        f = e.getAttribute('data-name'),
+        O = e.getAttribute('data-surrogates'),
+        y = 'true' === e.getAttribute('data-animated'),
+        j = u.Sb.useSetting(),
+        S = (0, c.Z)({
+            type: p,
+            id: g,
+            name: f,
             isInExpressionPicker: !0
         }),
-        h =
-            null != v
-                ? (0, e.jsx)(l.sN, {
+        v =
+            null != O
+                ? (0, r.jsx)(i.sN, {
                       id: 'copy',
-                      label: g.intl.string(g.t.ad58UF),
-                      action: () => (0, c.JG)(v)
+                      label: d.NW.string(d.t.ad58UF),
+                      action: () => (0, s.JG)(O)
                   })
                 : null,
-        j = (0, o.Z)({
-            id: b,
+        E = (0, a.Z)({
+            id: g,
             shiftId:
-                S === d.S.EMOJI
+                p === b.S.EMOJI
                     ? '<'
-                          .concat(p ? 'a' : '', ':')
-                          .concat(null == E ? void 0 : E.split('~')[0], ':')
-                          .concat(b, '>')
+                          .concat(y ? 'a' : '', ':')
+                          .concat(null == f ? void 0 : f.split('~')[0], ':')
+                          .concat(g, '>')
                     : void 0,
-            label: S === d.S.STICKER ? g.intl.string(g.t['SJ324+']) : g.intl.string(g.t.Ap2oV1)
+            label: p === b.S.STICKER ? d.NW.string(d.t['SJ324+']) : d.NW.string(d.t.Ap2oV1)
         });
-    return (0, e.jsx)(a.v2r, {
+    return (0, r.jsx)(o.v2r, {
         navId: 'expression-picker',
-        onClose: r.Zy,
-        'aria-label': g.intl.string(g.t.XoasSE),
-        onSelect: i,
+        onClose: l.Zy,
+        'aria-label': d.NW.string(d.t.XoasSE),
+        onSelect: n,
         className: 'context-menu',
-        children: (0, e.jsxs)(a.kSQ, {
-            children: [f, c.wS && I ? (null != h ? h : j) : null]
+        children: (0, r.jsxs)(o.kSQ, {
+            children: [S, s.wS && j ? (null != v ? v : E) : null]
         })
     });
 }

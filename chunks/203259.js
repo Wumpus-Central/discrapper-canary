@@ -1,37 +1,37 @@
 n.d(t, { Z: () => c });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     a = n(39604),
-    r = n(176127),
-    s = n(388032),
-    o = n(368901);
+    o = n(176127),
+    l = n(388032),
+    s = n(3015);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
-    return (0, i.jsxs)(l.Cys, {
-        tooltipClassName: o.reminderTooltip,
-        tooltipContentClassName: o.tooltipContent,
+    return (0, r.jsxs)(i.Cys, {
+        tooltipClassName: s.reminderTooltip,
+        tooltipContentClassName: s.tooltipContent,
         targetElementRef: { current: n },
         position: 'bottom',
-        color: l.FGA.PRIMARY,
+        color: i.FGA.PRIMARY,
         children: [
-            (0, i.jsx)(r.Z, {}),
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(o.Z, {}),
+            (0, r.jsx)(i.X6q, {
                 variant: 'heading-md/extrabold',
-                children: s.intl.format(s.t['+qxkzM'], { count: c.newClipIds.length })
+                children: l.NW.format(l.t['+qxkzM'], { count: c.newClipIds.length })
             }),
-            (0, i.jsxs)('div', {
-                className: o.buttonContainer,
+            (0, r.jsxs)('div', {
+                className: s.buttonContainer,
                 children: [
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.TRANSPARENT,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.TRANSPARENT,
                         onClick: a.eL,
-                        children: s.intl.string(s.t.WAI6xs)
+                        children: l.NW.string(l.t.WAI6xs)
                     }),
-                    (0, i.jsx)(l.zxk, {
-                        color: l.zxk.Colors.BRAND,
+                    (0, r.jsx)(i.zxk, {
+                        color: i.zxk.Colors.BRAND,
                         onClick: t,
-                        children: s.intl.string(s.t.tQPBmp)
+                        children: l.NW.string(l.t.tQPBmp)
                     })
                 ]
             })

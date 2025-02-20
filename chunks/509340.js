@@ -1,19 +1,19 @@
-n.d(t, { Z: () => l });
-var o = n(200651);
-n(192379);
-var i = n(159277),
-    r = n(585183),
-    s = n(981631),
-    a = n(927923);
-function l(e) {
-    let { authToken: t, onContinue: n, onError: l, onClose: c } = e;
-    return (0, o.jsx)(r.h, {
-        platformType: s.ABu.XBOX,
-        clientId: i.t.XBOX_APPLICATION_ID,
-        scopes: a.tA,
-        authToken: t,
-        onContinue: n,
-        onError: l,
-        onClose: c
-    });
-}
+var r = {
+    container: 'container_d4ced7',
+    hidden: 'hidden_d4ced7',
+    stickerIconOffset: 'stickerIconOffset_d4ced7',
+    submitButtonOffset: 'submitButtonOffset_d4ced7',
+    containerBackground: 'containerBackground_d4ced7',
+    bottomInformationTextContainer: 'bottomInformationTextContainer_d4ced7',
+    bottomInformationLayout: 'bottomInformationLayout_d4ced7',
+    textDivider: 'textDivider_d4ced7',
+    descriptionText: 'descriptionText_d4ced7',
+    stickerResults: 'stickerResults_d4ced7',
+    keybind: 'keybind_d4ced7',
+    closeIcon: 'closeIcon_d4ced7',
+    suggestedExpression: 'suggestedExpression_d4ced7',
+    mask: 'mask_d4ced7',
+    suggestedExpressionFocused: 'suggestedExpressionFocused_d4ced7',
+    maskBackground: 'maskBackground_d4ced7'
+};
+e.exports = r;

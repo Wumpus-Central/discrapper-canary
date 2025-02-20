@@ -1,21 +1,21 @@
-e.d(t, { g: () => o });
-var i = e(200651);
-e(192379);
-var l = e(442837),
-    r = e(481060),
-    a = e(378298),
-    s = e(88101),
-    d = e(594174),
-    u = e(388032);
-function o(n) {
-    let t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        e = (0, s.P)(n.id);
-    return (null == t ? void 0 : t.isStaff()) === !0 && n.isDM() && null == e
-        ? (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsx)(r.sNh, {
+n.d(t, { g: () => u });
+var r = n(200651);
+n(192379);
+var i = n(442837),
+    l = n(481060),
+    a = n(378298),
+    o = n(88101),
+    s = n(594174),
+    c = n(388032);
+function u(e) {
+    let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        n = (0, o.P)(e.id);
+    return (null == t ? void 0 : t.isStaff()) === !0 && e.isDM() && null == n
+        ? (0, r.jsx)(r.Fragment, {
+              children: (0, r.jsx)(l.sNh, {
                   id: 'mark-as-stranger-danger',
-                  label: u.intl.string(u.t.CgWmmZ),
-                  action: () => (0, a.Dl)(n.id)
+                  label: c.NW.string(c.t.CgWmmZ),
+                  action: () => (0, a.Dl)(e.id)
               })
           })
         : null;

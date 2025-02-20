@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(131951),
     h = n(358085),
     f = n(962100),
-    N = n(981631),
-    x = n(388032),
-    b = n(825896),
+    b = n(981631),
+    N = n(388032),
+    x = n(825896),
     _ = n(455812);
 let E = !h.isPlatformEmbedded,
     j = (0, g.hQ)();
@@ -28,27 +28,27 @@ function O(e) {
         { shortcut: i, delay: s } = (0, l.cj)([p.Z], () => p.Z.getModeOptions());
     return (
         (t =
-            h.isPlatformEmbedded || n !== N.pM4.PUSH_TO_TALK
+            h.isPlatformEmbedded || n !== b.pM4.PUSH_TO_TALK
                 ? (0, r.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: a()(b.pttToolsMessage, _.marginBottom8),
-                      children: x.NW.format(x.t.HVvn5e, { onClick: () => d.Z.setSection(N.oAB.KEYBINDS) })
+                      className: a()(x.pttToolsMessage, _.marginBottom8),
+                      children: N.NW.format(N.t.HVvn5e, { onClick: () => d.Z.setSection(b.oAB.KEYBINDS) })
                   })
                 : (0, r.jsx)(o.R94, {
                       type: o.R94.Types.DESCRIPTION,
-                      className: a()(b.pttToolsMessage, b.pttToolsWarning, _.marginBottom8),
-                      children: x.NW.format(x.t.zvMPOT, { onDownloadClick: () => (0, f.y)('Help Text PTT') })
+                      className: a()(x.pttToolsMessage, x.pttToolsWarning, _.marginBottom8),
+                      children: N.NW.format(N.t.zvMPOT, { onDownloadClick: () => (0, f.y)('Help Text PTT') })
                   })),
         (0, r.jsxs)('div', {
-            className: b.pttTools,
+            className: x.pttTools,
             children: [
                 (0, r.jsxs)('div', {
-                    className: b.pttToolsFlex,
+                    className: x.pttToolsFlex,
                     children: [
                         (0, r.jsx)('div', {
-                            className: b.column,
+                            className: x.column,
                             children: (0, r.jsx)(o.xJW, {
-                                title: x.NW.string(x.t.YkDjVF),
+                                title: N.NW.string(N.t.YkDjVF),
                                 children: (0, r.jsx)(u.Z, {
                                     defaultValue: i,
                                     onChange: (e) => c.Z.setMode(n, { shortcut: e })
@@ -56,20 +56,20 @@ function O(e) {
                             })
                         }),
                         (0, r.jsx)('div', {
-                            className: b.column,
+                            className: x.column,
                             children: (0, r.jsxs)(o.xJW, {
                                 children: [
                                     (0, r.jsx)(o.vwX, {
                                         id: j,
                                         tag: o.RB0.H5,
                                         className: _.marginBottom8,
-                                        children: x.NW.string(x.t.y0ShVl)
+                                        children: N.NW.string(N.t.y0ShVl)
                                     }),
                                     (0, r.jsx)(o.iRW, {
                                         initialValue: s,
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: C,
-                                        maxValue: N.qhL,
+                                        maxValue: b.qhL,
                                         'aria-labelledby': j
                                     })
                                 ]
@@ -87,18 +87,18 @@ function v() {
         t = (0, l.e7)([p.Z], () => p.Z.getMode()),
         s = [
             {
-                value: N.pM4.VOICE_ACTIVITY,
-                name: x.NW.string(x.t.cHCEOD)
+                value: b.pM4.VOICE_ACTIVITY,
+                name: N.NW.string(N.t.cHCEOD)
             },
             {
-                value: N.pM4.PUSH_TO_TALK,
-                name: E ? x.NW.string(x.t['1AINrK']) : x.NW.string(x.t.Q8gkVF)
+                value: b.pM4.PUSH_TO_TALK,
+                name: E ? N.NW.string(N.t['1AINrK']) : N.NW.string(N.t.Q8gkVF)
             }
         ],
         a = i.useCallback(
             (t) => {
                 let { value: i } = t;
-                i === N.pM4.PUSH_TO_TALK &&
+                i === b.pM4.PUSH_TO_TALK &&
                     E &&
                     (0, o.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -131,11 +131,11 @@ function v() {
                                     return e;
                                 })(
                                     {
-                                        title: x.NW.string(x.t.Kdt0GR),
-                                        confirmText: x.NW.string(x.t['1WjMbG']),
-                                        cancelText: x.NW.string(x.t.BddRzc),
+                                        title: N.NW.string(N.t.Kdt0GR),
+                                        confirmText: N.NW.string(N.t['1WjMbG']),
+                                        cancelText: N.NW.string(N.t.BddRzc),
                                         onConfirm: () => (0, f.y)('PTT Limited Modal'),
-                                        body: x.NW.string(x.t.NIozvr)
+                                        body: N.NW.string(N.t.NIozvr)
                                     },
                                     t
                                 )
@@ -148,7 +148,7 @@ function v() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.xJW, {
-                title: x.NW.string(x.t['pS+K2N']),
+                title: N.NW.string(N.t['pS+K2N']),
                 className: _.marginBottom20,
                 children: (0, r.jsx)(o.FXm, {
                     onChange: a,
@@ -156,7 +156,7 @@ function v() {
                     value: t
                 })
             }),
-            t === N.pM4.PUSH_TO_TALK && (0, r.jsx)(O, { inputMode: t })
+            t === b.pM4.PUSH_TO_TALK && (0, r.jsx)(O, { inputMode: t })
         ]
     });
 }

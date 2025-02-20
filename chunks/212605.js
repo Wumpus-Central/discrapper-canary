@@ -1,5 +1,5 @@
-n.d(t, { Z: () => i });
-let i = {
+n.d(t, { Z: () => r });
+let r = {
     xxs: 12,
     xs: 16,
     sm: 18,

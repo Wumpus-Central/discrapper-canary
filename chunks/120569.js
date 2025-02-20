@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
-var i = n(695346),
-    r = n(687158);
-function a(e, t) {
+n.d(t, { Z: () => o });
+var r = n(695346),
+    i = n(687158);
+function o(e, t) {
     if ('undefined' == typeof Image) return;
-    let n = (0, r.Of)(e.user.id, t);
+    let n = (0, i.Of)(e.user.id, t);
     if (null == n) return;
-    let a = i.QK.getSetting(),
-        s = n.getBannerURL({
-            canAnimate: a,
+    let o = r.QK.getSetting(),
+        a = n.getBannerURL({
+            canAnimate: o,
             size: 480
         });
-    null != s && (new Image().src = s);
+    null != a && (new Image().src = a);
 }

@@ -1,12 +1,12 @@
-n.d(t, { L: () => r });
-var i = n(987170),
-    l = n(987338);
-let r = (0, i.Z)({
+n.d(t, { L: () => l });
+var r = n(987170),
+    i = n(987338);
+let l = (0, r.Z)({
     kind: 'user',
     id: '2025-02_test_user_auth_apply_filter_install',
     label: 'Test User Auth Apply Filter Install',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: l.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

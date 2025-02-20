@@ -1,14 +1,14 @@
 n.d(t, { Z: () => l });
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(137524);
-let l = r.forwardRef(function (e, t) {
-    let { isActive: n, children: r } = e;
-    return (0, i.jsx)('div', {
-        className: s()(o.wrapper, { [o.wrapperActive]: n }),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(404703);
+let l = i.forwardRef(function (e, t) {
+    let { isActive: n, children: i } = e;
+    return (0, r.jsx)('div', {
+        className: a()(s.wrapper, { [s.wrapperActive]: n }),
         ref: t,
-        children: r
+        children: i
     });
 });

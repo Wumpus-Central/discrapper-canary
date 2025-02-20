@@ -1,56 +1,56 @@
-a.d(l, { Z: () => u });
-var s = a(200651);
-a(192379);
-var n = a(481060),
-    i = a(410030),
-    t = a(114487),
-    r = a(686546),
-    d = a(686369),
-    c = a(388032),
-    o = a(712617);
+n.d(t, { Z: () => u });
+var r = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(410030),
+    s = n(114487),
+    i = n(686546),
+    c = n(686369),
+    o = n(388032),
+    d = n(545495);
 function u(e) {
-    let { guildId: l, name: a } = e,
-        u = (0, i.ZP)(),
-        m = (0, n.dQu)(n.TVs.colors.BG_BASE_TERTIARY),
-        h = (0, d.d)(u, m.hex());
-    return (0, s.jsxs)('div', {
-        className: o.container,
+    let { guildId: t, name: n } = e,
+        u = (0, a.ZP)(),
+        m = (0, l.dQu)(l.TVs.colors.BG_BASE_TERTIARY),
+        h = (0, c.d)(u, m.hex());
+    return (0, r.jsxs)('div', {
+        className: d.container,
         children: [
-            (0, s.jsx)('div', {
-                className: o.banner,
+            (0, r.jsx)('div', {
+                className: d.banner,
                 style: { background: h }
             }),
-            (0, s.jsx)('div', {
-                className: o.avatarContainer,
-                children: (0, s.jsx)(r.ZP, {
-                    mask: r.QS.CLAN_ICON,
+            (0, r.jsx)('div', {
+                className: d.avatarContainer,
+                children: (0, r.jsx)(i.ZP, {
+                    mask: i.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
-                    children: (0, s.jsx)('div', {
-                        className: o.avatarWrapper,
-                        children: (0, s.jsx)(t.b, {
-                            guildId: l,
-                            guildName: null != a ? a : c.intl.string(c.t.DmIUGB),
+                    children: (0, r.jsx)('div', {
+                        className: d.avatarWrapper,
+                        children: (0, r.jsx)(s.b, {
+                            guildId: t,
+                            guildName: null != n ? n : o.NW.string(o.t.DmIUGB),
                             guildIcon: null,
                             iconSize: 64
                         })
                     })
                 })
             }),
-            (0, s.jsx)('div', {
-                className: o.header,
-                children: (0, s.jsx)(n.X6q, {
+            (0, r.jsx)('div', {
+                className: d.header,
+                children: (0, r.jsx)(l.X6q, {
                     variant: 'heading-lg/medium',
                     color: 'header-primary',
-                    children: null != a ? a : c.intl.string(c.t.DmIUGB)
+                    children: null != n ? n : o.NW.string(o.t.DmIUGB)
                 })
             }),
-            (0, s.jsx)('div', {
-                className: o.body,
-                children: (0, s.jsx)(n.Text, {
+            (0, r.jsx)('div', {
+                className: d.body,
+                children: (0, r.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: c.intl.string(c.t['8mfCqa'])
+                    children: o.NW.string(o.t['8mfCqa'])
                 })
             })
         ]

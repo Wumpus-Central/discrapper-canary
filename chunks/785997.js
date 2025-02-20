@@ -1,3 +1,3 @@
-n.d(t, { F: () => l });
-var i,
-    l = (((i = {}).AGE_GATE = 'age-gate'), (i.CHOOSE_TEMPLATE = 'choose-template'), (i.CUSTOMIZE_GUILD = 'customize-server'), (i.CHANNEL_PROMPT = 'channel-prompt'), (i.JOIN_GUILD = 'join-server'), (i.CREATION_INTENT = 'creation-intent'), (i.COMPLETE = 'complete'), i);
+n.d(t, { F: () => i });
+var r,
+    i = (((r = {}).AGE_GATE = 'age-gate'), (r.CHOOSE_TEMPLATE = 'choose-template'), (r.CUSTOMIZE_GUILD = 'customize-server'), (r.CHANNEL_PROMPT = 'channel-prompt'), (r.JOIN_GUILD = 'join-server'), (r.CREATION_INTENT = 'creation-intent'), (r.COMPLETE = 'complete'), r);

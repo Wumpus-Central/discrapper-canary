@@ -1,15 +1,15 @@
-var i = Object.prototype.toString;
+var r = Object.prototype.toString;
 if (n(322499)()) {
-    var r = Symbol.prototype.toString,
-        a = /^Symbol\(.*\)$/,
-        s = function (e) {
-            return 'symbol' == typeof e.valueOf() && a.test(r.call(e));
+    var i = Symbol.prototype.toString,
+        o = /^Symbol\(.*\)$/,
+        a = function (e) {
+            return 'symbol' == typeof e.valueOf() && o.test(i.call(e));
         };
     e.exports = function (e) {
         if ('symbol' == typeof e) return !0;
-        if ('[object Symbol]' !== i.call(e)) return !1;
+        if ('[object Symbol]' !== r.call(e)) return !1;
         try {
-            return s(e);
+            return a(e);
         } catch (e) {
             return !1;
         }

@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let i = (0, n(818083).B)({
+n.d(t, { Z: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-01_auto_disable_video_mobile_v2',
         label: 'Mobile performance: VideoHealthManager (v2)',
@@ -57,10 +57,10 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = {
+    i = {
         isFeatureSupportedOnPlatform: () => !1,
         getConfig(e) {
-            let t = i.getCurrentConfig({ location: '508d6c_1' }, { autoTrackExposure: e });
+            let t = r.getCurrentConfig({ location: '508d6c_1' }, { autoTrackExposure: e });
             return this.isFeatureSupportedOnPlatform() || (t.featureEnabled = !1), t;
         }
     };
