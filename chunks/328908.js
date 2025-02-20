@@ -3,14 +3,12 @@ n.d(t, {
     Hb: () => _,
     Hi: () => E,
     LN: () => g,
-    Ne: () => p,
-    OG: () => N,
-    Qj: () => T,
-    Qy: () => S,
+    OG: () => T,
+    Qj: () => I,
+    Qy: () => O,
     Rg: () => h,
-    b7: () => A,
     q5: () => b,
-    t0: () => I,
+    t0: () => S,
     z8: () => v
 });
 var r = n(15729),
@@ -136,36 +134,27 @@ function b(e) {
     return null === (t = f.getState().messageSendConfetti[e]) || void 0 === t ? void 0 : t.emoji;
 }
 function y(e) {
-    return null != f.getState().messageSendConfetti[e];
-}
-function O(e) {
     return (0, i.j)(() => {
         f.setState(() => ({ messageReactionConfetti: e }));
     });
 }
-function S() {
+function O() {
     return (0, i.j)(() => {
         f.setState(() => ({ messageReactionConfetti: void 0 }));
     });
 }
-function I(e, t, n) {
-    n ? O(e) : E(e, t);
+function S(e, t, n) {
+    n ? y(e) : E(e, t);
 }
-function T(e, t) {
+function I(e, t) {
     return f((n) => {
         var r;
         return t ? n.messageReactionConfetti : null === (r = n.messageSendConfetti[e]) || void 0 === r ? void 0 : r.emoji;
     });
 }
-function N(e) {
+function T(e) {
     return f((t) => {
         let n = t.messageSendConfetti[e];
         if ((null == n ? void 0 : n.state) === 0) return n.hasAutoPopped;
     });
-}
-function A(e, t, n) {
-    if (t) return !1;
-    let r = y(e),
-        i = b(e);
-    return r && (0 === n || null == i);
 }

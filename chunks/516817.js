@@ -1,29 +1,30 @@
-n.d(t, { Z: () => u });
-var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(614185),
-    l = n(4242),
-    c = n(513402);
-function u(e) {
-    let { nameplate: t, hovered: n, selected: o } = e,
-        u = (0, s.D)('Nameplate'),
-        d = i.useMemo(() => ((n || o) && (null == t ? void 0 : t.animatedSrc) != null ? (null == t ? void 0 : t.animatedSrc) : null == t ? void 0 : t.src), [n, o, t]),
-        f = (0, l.p)(t, n, o);
-    return null != t && u && null != d
+n.d(t, { Z: () => c });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    o = n.n(i),
+    a = n(614185),
+    s = n(4242),
+    l = n(513402);
+function c(e) {
+    let { nameplate: t, hovered: n, selected: i } = e,
+        c = (0, a.D)('Nameplate'),
+        u = !!(n || i),
+        d = (0, s.BY)(null == t ? void 0 : t.src, u),
+        f = (0, s.pJ)(t, n, i);
+    return null != t && c && null != d
         ? (0, r.jsx)('div', {
-              className: c.container,
+              className: l.container,
               children: (0, r.jsx)('div', {
-                  className: a()(c.nameplateContainer, { [c.border]: null != f.borderColor }),
+                  className: o()(l.nameplateContainer, { [l.border]: null != f.borderColor }),
                   style: {
                       borderColor: f.borderColor,
                       background: f.background
                   },
                   children: (0, r.jsx)('img', {
-                      className: a()(c.img, {
-                          [c.hover]: n,
-                          [c.selected]: o
+                      className: o()(l.img, {
+                          [l.hover]: n,
+                          [l.selected]: i
                       }),
                       src: d,
                       alt: t.imgAlt,
