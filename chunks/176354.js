@@ -23,7 +23,7 @@ var r = n(738774),
 let h = 2097152,
     m = new Set([_.Z5.PREMIUM_LOCKED, _.Z5.ROLE_SUBSCRIPTION_LOCKED]),
     g = new Set([...m, _.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, _.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-    E = new Set([_.Z5.DISALLOW_EXTERNAL, _.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, _.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
+    E = new Set([_.Z5.DISALLOW_CUSTOM, _.Z5.DISALLOW_EXTERNAL, _.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, _.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
 function v(e) {
     return e.type === i.B.GUILD || null != e.guildId;
 }
@@ -33,6 +33,7 @@ function b(e, t) {
 function y(e) {
     let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: c, forceIncludeExternalGuilds: u } = e;
     if (!v(t)) return null;
+    if (c === _.Hz.GUILD_PROFILE) return _.Z5.DISALLOW_CUSTOM;
     let d = null != n && (0, a.zi)(n.type),
         h = null != n && (0, a.bw)(n.type),
         m = b(t, i),
@@ -87,7 +88,11 @@ let S = {
                 guildId: r,
                 intention: i
             });
-            null != t && (E.has(t) || a.push(e), g.has(t) && (null != e.id && o.add(e.id), m.has(t) && (l || t !== _.Z5.PREMIUM_LOCKED || (l = !0), s++))), a.push(e);
+            if (null == t) {
+                a.push(e);
+                continue;
+            }
+            E.has(t) || a.push(e), g.has(t) && (null != e.id && o.add(e.id), m.has(t) && (l || t !== _.Z5.PREMIUM_LOCKED || (l = !0), s++));
         }
         return {
             emojisDisabled: o,
