@@ -67,40 +67,41 @@ function C(e, t) {
         e
     );
 }
-class I extends i.PureComponent {
-    render() {
-        let { member: e, className: t, guildId: n } = this.props;
-        return (0, r.jsx)(s.yRy, {
-            renderPopout: this.renderUserPopout,
-            position: 'left',
-            preload: () => (0, u.Z)(e.user.id, e.user.getAvatarURL(n, 80), { guildId: n }),
-            children: (i) => {
-                var a;
-                return (0, r.jsx)(s.ua7, {
-                    text: e.unknownUser ? null : null !== (a = e.nick) && void 0 !== a ? a : g.ZP.getName(e.user),
-                    children: (a) =>
-                        (0, r.jsx)(
-                            s.P3F,
-                            C(N({ className: e.unknownUser ? E.partyMember : E.partyMemberKnown }, a, i), {
-                                children: (0, r.jsx)(s.qEK, {
-                                    src: e.user.getAvatarURL(n, 24),
-                                    size: s.EFr.SIZE_24,
-                                    className: o()(E.partyAvatar, t),
-                                    'aria-label': e.user.username
-                                })
-                            })
-                        )
-                });
-            }
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            j(this, 'renderUserPopout', (e) => {
-                let { renderUserPopout: t, member: n } = this.props;
-                return n.unknownUser ? null : t(n.user, e);
-            });
-    }
+function I(e) {
+    let { member: t, className: n, guildId: i, renderUserPopout: a } = e;
+    return t.unknownUser
+        ? (0, r.jsx)('div', {
+              className: E.partyMember,
+              children: (0, r.jsx)(s.qEK, {
+                  src: t.user.getAvatarURL(i, (0, s.pxk)(s.EFr.SIZE_24)),
+                  size: s.EFr.SIZE_24,
+                  className: o()(E.partyAvatar, n),
+                  'aria-label': t.user.username
+              })
+          })
+        : (0, r.jsx)(s.yRy, {
+              position: 'left',
+              renderPopout: (e) => a(t.user, e),
+              preload: () => (0, u.Z)(t.user.id, t.user.getAvatarURL(i, (0, s.pxk)(s.EFr.SIZE_80)), { guildId: i }),
+              children: (e) => {
+                  var a;
+                  return (0, r.jsx)(s.ua7, {
+                      text: null !== (a = t.nick) && void 0 !== a ? a : g.ZP.getName(t.user),
+                      children: (a) =>
+                          (0, r.jsx)(
+                              s.P3F,
+                              C(N({ className: E.partyMemberKnown }, a, e), {
+                                  children: (0, r.jsx)(s.qEK, {
+                                      src: t.user.getAvatarURL(i, (0, s.pxk)(s.EFr.SIZE_24)),
+                                      size: s.EFr.SIZE_24,
+                                      className: o()(E.partyAvatar, n),
+                                      'aria-label': t.user.username
+                                  })
+                              })
+                          )
+                  });
+              }
+          });
 }
 class S extends i.PureComponent {
     isDeadInvite() {
