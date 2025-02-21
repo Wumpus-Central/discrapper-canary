@@ -1,6 +1,5 @@
 var r = {
     container: 'container__4bbc6',
-    nameplateContainer: 'nameplateContainer__4bbc6',
     border: 'border__4bbc6',
     img: 'img__4bbc6',
     hover: 'hover__4bbc6',

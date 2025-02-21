@@ -1,6 +1,7 @@
 n.d(t, {
-    BY: () => f,
-    pJ: () => d
+    BY: () => u,
+    bt: () => l,
+    wE: () => c
 }),
     n(66153),
     n(970173),
@@ -17,48 +18,35 @@ n.d(t, {
 var r = n(192379),
     i = n(605387),
     o = n.n(i),
-    a = n(410030),
-    s = n(396821),
-    l = n(231338);
-function c(e, t, n) {
+    a = n(396821),
+    s = n(231338);
+function l(e, t, n) {
     return null == e ? void 0 : ('#' !== e.charAt(0) && (e = '#' + e), 7 !== e.length) ? void 0 : n ? e + 'FF' : t ? e + '99' : e + '4D';
 }
-function u(e, t, n, r) {
+function c(e, t, n, r) {
     if (null == e) return;
-    let i = t === l.BR.LIGHT ? e.lightBackground : e.darkBackground,
-        o = n || r,
-        a = ''.concat(i).concat(o ? '1A' : '00'),
-        s = ''.concat(i).concat(o ? '80' : '4D');
-    return 'linear-gradient(90deg, '.concat(a, ' 0%, ').concat(s, ' 100%)');
+    let i = t === s.BR.LIGHT ? e.lightBackground : e.darkBackground,
+        o = n || r;
+    return {
+        left: ''.concat(i).concat(o ? '1A' : '00'),
+        right: ''.concat(i).concat(o ? '80' : '4D')
+    };
 }
-function d(e, t, n) {
-    let i = (0, a.ZP)();
-    return (0, r.useMemo)(
-        () =>
-            null == e
-                ? {}
-                : {
-                      borderColor: c(e.borderColor, t, n),
-                      background: u(e.palette, i, t, n)
-                  },
-        [e, t, n, i]
-    );
-}
-function f(e, t) {
-    let { getImgCache: n, setImgCache: i } = (0, s.W_)();
+function u(e, t) {
+    let { getImgCache: n, setImgCache: i } = (0, a.W_)();
     (0, r.useEffect)(() => {
         null != e &&
             (async () => {
-                let t = await p(e);
+                let t = await d(e);
                 i(e, e, t);
             })();
     }, [e, n, i]);
     let o = n(e);
     if (null == o) return null;
-    let { animatedUrl: a, staticUrl: l } = o;
-    return t ? a : l;
+    let { animatedUrl: s, staticUrl: l } = o;
+    return t ? s : l;
 }
-async function p(e) {
+async function d(e) {
     let t = await fetch(e),
         n = await t.arrayBuffer(),
         r = o().decode(n),

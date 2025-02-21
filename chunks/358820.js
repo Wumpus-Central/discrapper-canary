@@ -155,14 +155,18 @@ async function A() {
                 state: h.O.LOADING
             }),
                 await f.ZP.ensureModule('discord_voice_filters');
-            let e = f.ZP.getVoiceFilters();
-            await e.setupResources(),
+            let t = f.ZP.getVoiceFilters();
+            await t.setupResources(),
                 await T(),
-                (0, p.v6)(l.Z.getMostRecentlyRequestedVoiceFilter()),
                 a.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: h.O.LOADED
                 });
+            let n = l.Z.getMostRecentlyRequestedVoiceFilter();
+            if (null != n) {
+                var e;
+                (null === (e = _.Z.getVoiceFilter(n)) || void 0 === e ? void 0 : e.available) !== !0 ? (0, p.v6)(null) : (0, p.v6)(n);
+            }
         } catch (e) {
             b.warn('Failed to load Voice Filters module: '.concat(e.message)),
                 d.Z.captureException(e),

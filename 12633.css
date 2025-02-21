@@ -13805,17 +13805,13 @@ div.cardContainer__88e24 {
     user-select: none
 }
 
-.container__4bbc6,
-.nameplateContainer__4bbc6 {
+.container__4bbc6 {
     position: absolute;
+    pointer-events: none;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border-radius: inherit
-}
-
-.nameplateContainer__4bbc6 {
-    pointer-events: none
+    border-radius: inherit;
+    overflow: hidden
 }
 
 .border__4bbc6 {
