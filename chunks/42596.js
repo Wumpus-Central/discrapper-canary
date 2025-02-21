@@ -26,6 +26,7 @@ var r = {
     externalLinkIcon: 'externalLinkIcon__50a54',
     dmSettingsHeader: 'dmSettingsHeader__50a54',
     dmSettingsSwitch: 'dmSettingsSwitch__50a54',
+    dmSettingsMute: 'dmSettingsMute__50a54',
     divider: 'divider__50a54',
     link: 'link__50a54',
     footer: 'footer__50a54'
