@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => N,
-    d: () => R
+    Z: () => A,
+    d: () => w
 }),
     n(47120);
 var r = n(200651),
@@ -12,14 +12,15 @@ var r = n(200651),
     c = n(131388),
     u = n(686546),
     d = n(70097),
-    f = n(82965),
-    p = n(259580),
-    _ = n(937995),
-    h = n(618158),
-    m = n(362267),
-    g = n(388032),
-    E = n(570105);
-function v(e, t, n) {
+    f = n(221241),
+    p = n(82965),
+    _ = n(259580),
+    h = n(937995),
+    m = n(618158),
+    g = n(362267),
+    E = n(388032),
+    v = n(570105);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,29 +61,29 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function I(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,23 +92,23 @@ function I(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
-function N(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: p, iconColor: _ = 'currentColor', iconComponent: m, themeable: g = !1, disabled: v = !1, isActive: y = !1, tooltipPosition: I = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R } = e;
-    return (0, r.jsx)(h.Z, {
+let N = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
+function A(e) {
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: p, iconColor: _ = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: b = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R } = e;
+    return (0, r.jsx)(m.Z, {
         children: (0, r.jsx)(l.ua7, {
-            position: I,
+            position: O,
             text: t,
             'aria-label': R,
             shouldShow: T,
             forceOpen: N,
             children: (e) => {
-                var { onClick: t, onContextMenu: h, onMouseEnter: I, onMouseLeave: T } = e,
-                    N = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
+                var { onClick: t, onContextMenu: m, onMouseEnter: O, onMouseLeave: T } = e,
+                    N = I(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
                 return (0, r.jsx)(
                     l.zxk,
-                    O(
-                        b(
+                    S(
+                        y(
                             {
                                 look: l.zxk.Looks.BLANK,
                                 size: l.zxk.Sizes.NONE,
@@ -118,23 +119,23 @@ function N(e) {
                                     null == t || t(), null == n || n(e);
                                 },
                                 onMouseEnter: (e) => {
-                                    null == I || I(), null == o || o(e);
+                                    null == O || O(), null == o || o(e);
                                 },
                                 onMouseLeave: (e) => {
                                     null == T || T(), null == c || c(e);
                                 },
                                 onContextMenu: (e) => {
-                                    null == h || h(), null == u || u(e);
+                                    null == m || m(), null == u || u(e);
                                 },
                                 onFocus: (e) => {
-                                    null == I || I(), null == o || o(e);
+                                    null == O || O(), null == o || o(e);
                                 },
                                 onBlur: (e) => {
                                     null == T || T(), null == c || c(e);
                                 },
-                                disabled: v,
-                                innerClassName: E.lineHeightReset,
-                                className: a()({ [E.active]: y }, d),
+                                disabled: E,
+                                innerClassName: v.lineHeightReset,
+                                className: a()({ [v.active]: b }, d),
                                 wrapperClassName: f,
                                 buttonRef: A,
                                 grow: C,
@@ -143,11 +144,11 @@ function N(e) {
                             N
                         ),
                         {
-                            children: (0, r.jsx)(m, {
+                            children: (0, r.jsx)(h, {
                                 size: s.Z.md,
-                                className: a()(E.controlIcon, p, {
-                                    [E.themeable]: g,
-                                    [E.active]: y
+                                className: a()(v.controlIcon, p, {
+                                    [v.themeable]: g,
+                                    [v.active]: b
                                 }),
                                 color: _
                             })
@@ -158,114 +159,128 @@ function N(e) {
         })
     });
 }
-let A = {
-        disconnect: E.disconnect,
-        red: E.red,
-        white: E.white,
-        green: E.green,
-        yellow: E.yellow,
-        primaryDark: E.primaryDark,
-        primaryLight: E.primaryLight,
-        activeLight: E.activeLight,
-        premiumGradient: E.premiumGradient
+let C = {
+        disconnect: v.disconnect,
+        join: v.join,
+        red: v.red,
+        white: v.white,
+        green: v.green,
+        yellow: v.yellow,
+        primaryDark: v.primaryDark,
+        primaryLight: v.primaryLight,
+        activeLight: v.activeLight,
+        premiumGradient: v.premiumGradient
     },
-    C = {
-        disconnect: E.disconnect,
-        red: E.experimentRed,
-        white: E.white,
-        green: E.green,
-        yellow: E.yellow,
-        primaryDark: E.experimentDark,
-        primaryLight: E.experimentDark,
-        activeLight: E.experimentActiveLight,
-        premiumGradient: E.premiumGradient
+    R = {
+        disconnect: v.disconnect,
+        join: v.join,
+        red: v.experimentRed,
+        white: v.white,
+        green: v.green,
+        yellow: v.yellow,
+        primaryDark: v.experimentDark,
+        primaryLight: v.experimentDark,
+        activeLight: v.experimentActiveLight,
+        premiumGradient: v.premiumGradient
+    },
+    P = {
+        disconnect: v.disconnect,
+        join: v.join,
+        red: v.redGlow,
+        white: v.white,
+        green: v.greenGlow,
+        yellow: v.yellow,
+        primaryDark: v.experimentDark,
+        primaryLight: v.experimentDark,
+        activeLight: v.experimentActiveLight,
+        premiumGradient: v.premiumGradient
     };
-function R(e) {
-    var { color: t, ignoreColorForCaret: n = !1, isActive: o = !1, className: s, iconClassName: v, onPopoutClick: y, popoutOpen: I = !1, popoutDisabled: R = !1, premiumGlow: P = !1, fullRegionButton: w = !1, forceGroupedButtons: D = !1 } = e,
-        x = S(e, ['color', 'ignoreColorForCaret', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'premiumGlow', 'fullRegionButton', 'forceGroupedButtons']);
-    let L = (0, m.Z)(t, o),
-        M = (0, m.Z)(n ? void 0 : t, !1),
-        k = (0, c.Z)('(max-width: 456px)'),
-        j = i.useRef(null),
-        U = i.useContext(_.h9);
+function w(e) {
+    var { color: t, caretColor: n, isActive: o = !1, className: s, iconClassName: b, onPopoutClick: O, popoutOpen: T = !1, popoutDisabled: w = !1, premiumGlow: D = !1, fullRegionButton: x = !1, forceGroupedButtons: L = !1 } = e,
+        M = I(e, ['color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'premiumGlow', 'fullRegionButton', 'forceGroupedButtons']);
+    let k = (0, g.Z)(t, o),
+        j = null != n ? n : k,
+        U = (0, c.Z)('(max-width: 456px)'),
+        G = i.useRef(null),
+        B = i.useContext(h.h9),
+        { coloredIcons: Z } = (0, f.Z)({ location: 'CenterControlButton' });
     i.useEffect(() => {
-        null != j.current && (U ? j.current.pause() : j.current.play());
-    }, [U]);
-    let G = (0, f.Z)({ location: 'CenterControlButton' }),
-        B = D || G,
-        Z = B ? [E.experimentButton, C[L], w && null == y && E.fullRegionButton] : [A[L]],
-        F = (0, r.jsx)(
-            N,
-            O(b({}, x), {
+        null != G.current && (B ? G.current.pause() : G.current.play());
+    }, [B]);
+    let F = (0, p.Z)({ location: 'CenterControlButton' }),
+        V = L || F,
+        H = V ? [v.experimentButton, Z ? P[k] : R[k], x && null == O && v.fullRegionButton] : [C[k]],
+        W = (0, r.jsx)(
+            A,
+            S(y({}, M), {
                 grow: !1,
-                onContextMenu: y,
-                iconClassName: a()(v, E.centerIcon, B && E.experimentControlIcon, B && w && null == y && E.fullRegionIcon),
-                className: a()(k ? s : null, E.staticButton, E.centerButton, o && E.active, ...Z)
+                onContextMenu: O,
+                iconClassName: a()(b, v.centerIcon, V && v.experimentControlIcon, V && x && null == O && v.fullRegionIcon),
+                className: a()(U ? s : null, v.staticButton, v.centerButton, o && v.active, ...H)
             })
         );
-    return k
-        ? F
-        : B
+    return U
+        ? W
+        : V
           ? (0, r.jsxs)('div', {
-                className: a()(E.caretButtonContainer, s, w && null != y && [E.fullRegionDropdownButton, C[L]]),
+                className: a()(v.caretButtonContainer, s, x && null != O && [v.fullRegionDropdownButton, R[k]]),
                 children: [
-                    F,
-                    null != y
-                        ? (0, r.jsx)(h.Z, {
+                    W,
+                    null != O
+                        ? (0, r.jsx)(m.Z, {
                               children: (0, r.jsx)(l.P3F, {
-                                  'aria-label': g.NW.string(g.t.PdRCRk),
-                                  onClick: R ? void 0 : y,
-                                  onContextMenu: R ? void 0 : y,
-                                  className: a()(E.contextMenuNubExperiment, C[M], {
-                                      [E.active]: I,
-                                      [E.disabled]: R
+                                  'aria-label': E.NW.string(E.t.PdRCRk),
+                                  onClick: w ? void 0 : O,
+                                  onContextMenu: w ? void 0 : O,
+                                  className: a()(v.contextMenuNubExperiment, R[j], {
+                                      [v.active]: T,
+                                      [v.disabled]: w
                                   }),
-                                  children: (0, r.jsx)(p.Z, { className: a()(E.contextMenuCaretExperiment, { [E.open]: I }, R && E.disabled) })
+                                  children: (0, r.jsx)(_.Z, { className: a()(v.contextMenuCaretExperiment, { [v.open]: T }, w && v.disabled) })
                               })
                           })
                         : null
                 ]
             })
           : (0, r.jsxs)('div', {
-                className: a()(s, E.contextMenuContainer),
+                className: a()(s, v.contextMenuContainer),
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(u.ZP, {
-                                className: a()(E.buttonMask),
-                                mask: null == y ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
+                                className: a()(v.buttonMask),
+                                mask: null == O ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
                                 width: 56,
                                 height: 56,
-                                children: F
+                                children: W
                             }),
-                            P &&
+                            D &&
                                 (0, r.jsx)('div', {
-                                    className: E.glow,
+                                    className: v.glow,
                                     children: (0, r.jsx)(d.Z, {
-                                        ref: j,
+                                        ref: G,
                                         loop: !0,
                                         autoPlay: !0,
-                                        className: E.glowVideo,
+                                        className: v.glowVideo,
                                         children: (0, r.jsx)('source', {
-                                            src: T,
+                                            src: N,
                                             type: 'video/webm'
                                         })
                                     })
                                 })
                         ]
                     }),
-                    null != y
-                        ? (0, r.jsx)(h.Z, {
+                    null != O
+                        ? (0, r.jsx)(m.Z, {
                               children: (0, r.jsx)(l.P3F, {
-                                  'aria-label': g.NW.string(g.t.PdRCRk),
-                                  onClick: y,
-                                  onContextMenu: y,
-                                  className: a()(E.contextMenuNub, A[L], { [E.active]: I }),
-                                  children: (0, r.jsx)(p.Z, { className: a()(E.contextMenuCaret, { [E.open]: I }) })
+                                  'aria-label': E.NW.string(E.t.PdRCRk),
+                                  onClick: O,
+                                  onContextMenu: O,
+                                  className: a()(v.contextMenuNub, C[k], { [v.active]: T }),
+                                  children: (0, r.jsx)(_.Z, { className: a()(v.contextMenuCaret, { [v.open]: T }) })
                               })
                           })
                         : null
                 ]
             });
 }
-E.disconnect, E.redGlow, E.white, E.greenGlow, E.yellow, E.experimentDark, E.experimentDark, E.experimentActiveLight, E.premiumGradient;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(609784),
@@ -10,12 +10,13 @@ var r = n(200651),
     d = n(40851),
     p = n(628581),
     h = n(861254),
-    f = n(378441),
-    m = n(871499),
-    g = n(981631);
-function b(e) {
-    var { selfMute: t, serverMute: n, suppress: b, centerButton: _ = !1, awaitingRemote: C, onMouseEnter: v, onMouseLeave: y } = e,
-        x = (function (e, t) {
+    f = n(221241),
+    m = n(378441),
+    g = n(871499),
+    b = n(981631);
+function _(e) {
+    var { selfMute: t, serverMute: n, suppress: _, centerButton: C = !1, awaitingRemote: v, onMouseEnter: y, onMouseLeave: x } = e,
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -34,23 +35,24 @@ function b(e) {
             }
             return i;
         })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave']);
-    let { mode: j } = (0, h.ZP)({ location: 'MicButton' }),
-        O = t || n || b,
-        N = _ ? m.d : m.Z,
-        E = (0, p.Z)(t, n, b, C, j === h.BK.GroupedButtonsRedMic),
-        P = (0, c.O)(O ? 'unmute' : 'mute'),
-        I = (0, u.P)(O ? 'unmute' : 'mute'),
-        { activeVoice: S } = (0, f.o)(),
-        Z = null != S,
-        T = Z ? I : P,
-        { events: A, play: w } = T;
-    i.useEffect(() => () => w(), [w, O]);
-    let R = T.Component;
-    (0, d.bp)() === g.IlC.POPOUT && (R = Z ? (O ? o.T : l.x) : O ? s.n : a.S);
-    let k = j === h.BK.GroupedButtonsRedMic && O ? 'red' : void 0,
-        M = j !== h.BK.GroupedButtonsRedMic;
+    let { mode: O } = (0, h.ZP)({ location: 'MicButton' }),
+        { squareButtons: N } = (0, f.Z)({ location: 'MuteButton' }),
+        E = t || n || _,
+        P = C ? g.d : g.Z,
+        I = (0, p.Z)(t, n, _, v, O === h.BK.GroupedButtonsRedMic),
+        S = (0, c.O)(E ? 'unmute' : 'mute'),
+        Z = (0, u.P)(E ? 'unmute' : 'mute'),
+        { activeVoice: T } = (0, m.o)(),
+        A = null != T,
+        w = A ? Z : S,
+        { events: R, play: k } = w;
+    i.useEffect(() => () => k(), [k, E]);
+    let M = w.Component;
+    (0, d.bp)() === b.IlC.POPOUT && (M = A ? (E ? o.T : l.x) : E ? s.n : a.S);
+    let L = (N || O === h.BK.GroupedButtonsRedMic) && E ? 'red' : void 0,
+        D = O !== h.BK.GroupedButtonsRedMic && !N;
     return (0, r.jsx)(
-        N,
+        P,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -77,19 +79,19 @@ function b(e) {
             return e;
         })(
             {
-                isActive: !!M && !O,
-                iconComponent: R,
-                ignoreColorForCaret: !0,
-                color: k,
-                label: E,
+                isActive: !!D && !E,
+                iconComponent: M,
+                caretColor: 'primaryDark',
+                color: L,
+                label: I,
                 onMouseEnter: (e) => {
-                    null == v || v(e), A.onMouseEnter();
+                    null == y || y(e), R.onMouseEnter();
                 },
                 onMouseLeave: (e) => {
-                    null == y || y(e), A.onMouseLeave();
+                    null == x || x(e), R.onMouseLeave();
                 }
             },
-            x
+            j
         )
     );
 }

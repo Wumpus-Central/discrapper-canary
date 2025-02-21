@@ -14,6 +14,7 @@ var r = {
     activeLight: 'activeLight_f1ceac',
     white: 'white_f1ceac',
     green: 'green_f1ceac',
+    join: 'join_f1ceac',
     greenGlow: 'greenGlow_f1ceac',
     premiumGradient: 'premiumGradient_f1ceac',
     yellow: 'yellow_f1ceac',

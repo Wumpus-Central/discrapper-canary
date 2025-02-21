@@ -74,26 +74,29 @@ async function N(e, t, n) {
 }
 function v() {
     let e = (0, r.e7)([p.ZP], () => p.ZP.showPlayAgain),
-        t = y();
+        { frecentApps: t } = y();
     return e && t.length > 0;
 }
 function y() {
-    let e = (0, c.f)({
+    let { frecentApps: e, loading: t } = (0, c.f)({
             context: { type: 'contextless' },
             onlyActivityApps: !0,
             allowCommandFetch: !0,
             includeAuthorizedAppsAndFetch: !1
-        }).frecentApps,
-        t = e.map((e) => e.id).sort(),
-        n = new Map(
-            (0, E.Z)(t)
+        }),
+        n = e.map((e) => e.id).sort(),
+        r = new Map(
+            (0, E.Z)(n)
                 .filter(m.lm)
                 .map((e) => [e.id, e])
         );
-    return e
-        .map((e) => n.get(e.id))
-        .filter((e) => {
-            var t;
-            return (0, a.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
-        });
+    return {
+        frecentApps: e
+            .map((e) => r.get(e.id))
+            .filter((e) => {
+                var t;
+                return (0, a.Z)(null == e ? void 0 : null === (t = e.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms);
+            }),
+        loading: t
+    };
 }

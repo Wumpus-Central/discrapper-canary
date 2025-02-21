@@ -1,15 +1,16 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(592471),
     l = n(749280),
     o = n(424602),
     a = n(861254),
-    s = n(871499);
-function c(e) {
-    let t, n, c, u;
-    var { isActivityActive: d, onMouseEnter: p, onMouseLeave: h, onClick: f } = e,
-        m = (function (e, t) {
+    s = n(221241),
+    c = n(871499);
+function u(e) {
+    let t, n, u, d;
+    var { isActivityActive: p, onMouseEnter: h, onMouseLeave: f, onClick: m } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,15 +29,16 @@ function c(e) {
             }
             return i;
         })(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { mode: g } = (0, a.ZP)({ location: 'VideoButton' });
-    g === a.BK.GroupedButtonsRedMic && d && (t = 'green');
-    let { enabled: b } = o.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        { Component: _, events: C, play: v } = (0, i.s)(),
-        { Component: y, events: x, play: j } = (0, l.w)();
+    let { mode: b } = (0, a.ZP)({ location: 'VideoButton' }),
+        { squareButtons: _ } = (0, s.Z)({ location: 'VideoButton' });
+    (_ || b === a.BK.GroupedButtonsRedMic) && p && (t = 'green');
+    let { enabled: C } = o.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
+        { Component: v, events: y, play: x } = (0, i.s)(),
+        { Component: j, events: O, play: N } = (0, l.w)();
     return (
-        b ? ((n = y), (c = x), (u = j)) : ((n = _), (c = C), (u = v)),
+        C ? ((n = j), (u = O), (d = N)) : ((n = v), (u = y), (d = x)),
         (0, r.jsx)(
-            s.d,
+            c.d,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -63,20 +65,20 @@ function c(e) {
                 return e;
             })(
                 {
-                    isActive: d,
+                    isActive: p,
                     color: t,
                     iconComponent: n,
                     onMouseEnter: (e) => {
-                        null == p || p(e), c.onMouseEnter();
+                        null == h || h(e), u.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == h || h(e), c.onMouseLeave();
+                        null == f || f(e), u.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == f || f(e), u();
+                        null == m || m(e), d();
                     }
                 },
-                m
+                g
             )
         )
     );
