@@ -94,40 +94,32 @@ function L(e) {
             var e;
             return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasVerifiedEmailOrPhone();
         }),
-        u = (0, _.O5)();
+        l = (0, _.O5)();
     return i.useCallback(() => {
-        if (null != t) {
-            if (
-                (u({
-                    questId: t.id,
-                    questContent: n,
-                    questContentCTA: _.jZ.CLAIM_REWARD,
-                    questContentPosition: r,
-                    questContentRowIndex: o
-                }),
-                s)
-            ) {
-                if ((0, b.Bg)(t.config)) (0, T.openQuestsNitroRewardModal)(t, n);
-                else if ((0, b.Xv)(t.config)) (0, S.m)(t, n);
-                else if ((0, b.vQ)(t.config)) (0, T.openQuestInGameRewardModal)(t, n);
-                else if ((0, b.xN)(t.config)) {
-                    (0, m.QB)(t.id, v.y$.CROSS_PLATFORM, n),
-                        (0, c.mK)({
-                            openInLayer: !1,
-                            tab: C.AW.ORBS,
-                            analyticsLocations: [],
-                            analyticsSource: l.Z.INTRO_TO_ORBS_QUEST
-                        });
-                    return;
-                } else
-                    (0, T.openQuestsRewardCodeModal)({
-                        questId: t.id,
-                        location: n,
-                        questContentPosition: r
-                    });
-            } else (0, I.B)();
-        }
-    }, [t, u, n, r, o, s]);
+        null != t &&
+            (l({
+                questId: t.id,
+                questContent: n,
+                questContentCTA: _.jZ.CLAIM_REWARD,
+                questContentPosition: r,
+                questContentRowIndex: o
+            }),
+            s
+                ? (0, b.Bg)(t.config)
+                    ? (0, T.openQuestsNitroRewardModal)(t, n)
+                    : (0, b.Xv)(t.config)
+                      ? (0, S.m)(t, n)
+                      : (0, b.vQ)(t.config)
+                        ? (0, T.openQuestInGameRewardModal)(t, n)
+                        : (0, b.xN)(t.config)
+                          ? (0, T.openQuestOrbsRewardModal)(t, n)
+                          : (0, T.openQuestsRewardCodeModal)({
+                                questId: t.id,
+                                location: n,
+                                questContentPosition: r
+                            })
+                : (0, I.B)());
+    }, [t, l, n, r, o, s]);
 }
 function M(e) {
     var t;
