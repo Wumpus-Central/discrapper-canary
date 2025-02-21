@@ -1,59 +1,75 @@
-n.d(t, { Z: () => h });
-var s = n(200651);
-n(192379);
-var r = n(120356),
-    i = n.n(r),
-    o = n(442837),
-    c = n(650032),
-    a = n(104494),
-    l = n(639119),
-    u = n(655525),
-    d = n(52188),
-    p = n(346497),
-    f = n(924540),
-    b = n(351402),
-    g = n(170671),
-    m = n(474936),
-    O = n(118261);
-function h(e) {
+r.d(t, { Z: () => P });
+var n = r(200651);
+r(192379);
+var s = r(120356),
+    i = r.n(s),
+    o = r(442837),
+    l = r(704215),
+    a = r(605236),
+    c = r(650032),
+    u = r(351367),
+    d = r(104494),
+    p = r(639119),
+    f = r(655525),
+    b = r(52188),
+    g = r(346497),
+    O = r(924540),
+    h = r(474486),
+    m = r(227140),
+    x = r(351402),
+    j = r(170671),
+    y = r(474936),
+    C = r(388032),
+    v = r(118261);
+function P(e) {
     let t,
-        { decoration: n, label: r, isSelected: h } = e,
-        v = (0, l.N)(),
-        x = (0, a.Ng)(),
-        j = (0, p.Vi)(),
-        y = (0, o.e7)([b.Z], () => b.Z.isLocalizedPromoEnabled) && null == v && null == n,
-        { enabled: S } = c._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        P = S && (null == v ? void 0 : v.trial_id) === m.a7;
+        { decoration: r, label: s, isSelected: P } = e,
+        _ = (0, p.N)(),
+        S = (0, d.Ng)(),
+        E = (0, g.Vi)(),
+        N = (0, o.e7)([x.Z], () => x.Z.isLocalizedPromoEnabled) && null == _ && null == r,
+        { enabled: w } = c._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        T = w && (null == _ ? void 0 : _.trial_id) === y.a7,
+        R = (0, u.m)({ location: 'UserSettingsPremiumLabel' }),
+        L = (0, a.wE)(l.z.Q1_2025_MARKETING_MOMENT_PROMO_SHEET);
     return (
-        (t = j
-            ? (0, s.jsx)(u.Z, {})
-            : null != x
-              ? (0, s.jsx)(f.GN, {
-                    isTabSelected: h,
-                    userDiscount: x,
-                    includesAmountOff: !1
-                })
-              : null == v || P
-                ? null != n
-                    ? n
-                    : y
-                      ? (0, s.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
-                      : (0, s.jsx)(g.Z, { isSelected: h })
-                : (0, s.jsx)(f.$H, {
-                      isTabSelected: h,
-                      trialOffer: v
-                  })),
-        (0, s.jsxs)(s.Fragment, {
+        (t =
+            !0 === R
+                ? !0 === L
+                    ? (0, n.jsx)(h.Du, {})
+                    : (0, n.jsx)(m.Z, {
+                          copy: C.NW.string(C.t.OS9KPj),
+                          showStars: !1
+                      })
+                : E
+                  ? (0, n.jsx)(f.Z, {})
+                  : null != S
+                    ? (0, n.jsx)(O.GN, {
+                          isTabSelected: P,
+                          userDiscount: S,
+                          includesAmountOff: !1
+                      })
+                    : null == _ || T
+                      ? null != r
+                          ? r
+                          : N
+                            ? (0, n.jsx)(b.k, { entryPoint: b.U.SettingsMenu })
+                            : (0, n.jsx)(j.Z, { isSelected: P })
+                      : (0, n.jsx)(O.$H, {
+                            isTabSelected: P,
+                            trialOffer: _
+                        })),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, s.jsxs)('div', {
-                    className: i()(O.premiumLabel, { [O.selected]: (h || y) && !j }),
-                    children: [r, t]
+                (0, n.jsxs)('div', {
+                    className: i()(v.premiumLabel, { [v.selected]: (P || N) && !E }),
+                    children: [s, t]
                 }),
-                (0, s.jsx)('div', {
-                    className: i()(O.background, {
-                        [O.auPromo]: y && !h,
-                        [O.auPromoSelected]: y && h,
-                        [O.selectedBackground]: !y && !j && h
+                (0, n.jsx)('div', {
+                    className: i()(v.background, {
+                        [v.auPromo]: N && !P,
+                        [v.auPromoSelected]: N && P,
+                        [v.selectedBackground]: !N && !E && P
                     })
                 })
             ]

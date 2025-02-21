@@ -14,5 +14,9 @@ e.exports = {
     incentiveTooltipPointer: 'incentiveTooltipPointer__83ef9',
     incentiveCoachtipContainer: 'incentiveCoachtipContainer__83ef9',
     icon: 'icon__83ef9',
-    incentiveIcon: 'incentiveIcon__83ef9'
+    incentiveIcon: 'incentiveIcon__83ef9',
+    collectibleDecoReminderCoachmarkHeader: 'collectibleDecoReminderCoachmarkHeader__83ef9',
+    collectibleDecoReminderCoachmarkContent: 'collectibleDecoReminderCoachmarkContent__83ef9',
+    collectibleDecoReminderCoachmarkPointer: 'collectibleDecoReminderCoachmarkPointer__83ef9',
+    greyedOut: 'greyedOut__83ef9'
 };
