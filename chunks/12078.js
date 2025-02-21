@@ -1,55 +1,52 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    o = n(950104),
-    c = n(481060),
-    d = n(434404),
-    u = n(999382),
-    m = n(570911),
-    p = n(388032),
-    g = n(39205),
-    h = n(541946);
-function f(e) {
-    let { guild: t } = e,
+    l = n(950104),
+    o = n(481060),
+    c = n(434404),
+    d = n(570911),
+    u = n(388032),
+    m = n(39205),
+    p = n(541946);
+function g(e) {
+    let { profile: t } = e,
         n = t.id,
-        s = (0, l.e7)([u.Z], () => u.Z.getGuildProfile()),
-        f = i.useCallback(
+        s = i.useCallback(
             (e, t) => () => {
-                d.Z.updateGuildProfile(n, { brandColorPrimary: t });
+                c.Z.updateGuildProfile(n, { brandColorPrimary: t });
             },
             [n]
         );
-    return (0, r.jsxs)(c.hjN, {
-        className: h.section,
+    return (0, r.jsxs)(o.hjN, {
+        className: p.section,
         children: [
             (0, r.jsxs)('div', {
-                className: h.sectionHeader,
+                className: p.sectionHeader,
                 children: [
-                    (0, r.jsx)(c.vwX, { children: p.NW.string(p.t.BSVog4) }),
-                    (0, r.jsx)(c.R94, {
-                        type: c.geA.DESCRIPTION,
-                        children: p.NW.string(p.t['93S9Gx'])
+                    (0, r.jsx)(o.vwX, { children: u.NW.string(u.t.BSVog4) }),
+                    (0, r.jsx)(o.R94, {
+                        type: o.geA.DESCRIPTION,
+                        children: u.NW.string(u.t['93S9Gx'])
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: g.grid,
-                children: m.cb.map((e) => {
-                    let { name: t, color: n } = e,
-                        i = (0, o.DT)(n, 1.75),
-                        l = 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(i, ' 20.65%, ').concat(n, ' 85.16%)');
+                className: m.grid,
+                children: d.cb.map((e) => {
+                    let { name: n, color: i } = e,
+                        c = (0, l.DT)(i, 1.75),
+                        d = 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(c, ' 20.65%, ').concat(i, ' 85.16%)');
                     return (0, r.jsx)(
-                        c.ua7,
+                        o.ua7,
                         {
-                            text: t,
+                            text: n,
                             children: (e) => {
-                                var i, o;
+                                var l, c;
                                 return (0, r.jsx)(
-                                    c.P3F,
-                                    ((i = (function (e) {
+                                    o.P3F,
+                                    ((l = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
@@ -74,16 +71,16 @@ function f(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (o = o =
+                                    (c = c =
                                         {
-                                            'aria-label': t,
-                                            onClick: f(t, n),
-                                            style: { background: l },
-                                            className: g.itemContainer,
-                                            children: (0, r.jsx)('div', { className: a()({ [g.itemSelected]: (null == s ? void 0 : s.brandColorPrimary) === n }) })
+                                            'aria-label': n,
+                                            onClick: s(n, i),
+                                            style: { background: d },
+                                            className: m.itemContainer,
+                                            children: (0, r.jsx)('div', { className: a()({ [m.itemSelected]: (null == t ? void 0 : t.brandColorPrimary) === i }) })
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(c))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -91,14 +88,14 @@ function f(e) {
                                                   n.push.apply(n, r);
                                               }
                                               return n;
-                                          })(Object(o)).forEach(function (e) {
-                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                                          })(Object(c)).forEach(function (e) {
+                                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(c, e));
                                           }),
-                                    i)
+                                    l)
                                 );
                             }
                         },
-                        t
+                        n
                     );
                 })
             })

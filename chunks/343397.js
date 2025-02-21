@@ -1,33 +1,30 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
     s = n(442837),
     a = n(481060),
-    l = n(496675),
-    o = n(434404),
-    c = n(999382),
-    d = n(981631),
-    u = n(388032);
-function m(e) {
-    let { guild: t } = e,
-        n = t.id,
-        m = (0, s.e7)([c.Z], () => c.Z.getError('name')),
-        p = (0, s.e7)([l.Z], () => l.Z.can(d.Plq.MANAGE_GUILD, t)),
-        g = i.useCallback(
+    l = n(434404),
+    o = n(999382),
+    c = n(388032);
+function d(e) {
+    let { profile: t, canManageGuild: n } = e,
+        d = t.id,
+        u = (0, s.e7)([o.Z], () => o.Z.getError('name')),
+        m = i.useCallback(
             (e) => {
-                o.Z.updateGuild({ name: e }), o.Z.updateGuildProfile(n, { name: e });
+                l.Z.updateGuild({ name: e }), l.Z.updateGuildProfile(d, { name: e });
             },
-            [n]
+            [d]
         );
     return (0, r.jsx)(a.xJW, {
-        title: u.NW.string(u.t.X56QcH),
+        title: c.NW.string(c.t.X56QcH),
         children: (0, r.jsx)(a.oil, {
             type: 'text',
-            disabled: !p,
+            disabled: !n,
             value: t.name,
             maxLength: 100,
-            onChange: g,
-            error: m
+            onChange: m,
+            error: u
         })
     });
 }

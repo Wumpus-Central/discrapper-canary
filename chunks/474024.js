@@ -1,34 +1,31 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(405222),
-    o = n(434404),
-    c = n(999382),
-    d = n(388032),
-    u = n(985775);
-function m(e) {
-    let { guild: t } = e,
+    s = n(481060),
+    a = n(405222),
+    l = n(434404),
+    o = n(388032),
+    c = n(985775);
+function d(e) {
+    let { profile: t } = e,
         n = t.id,
-        m = (0, s.e7)([c.Z], () => c.Z.getGuildProfile()),
-        p = (null == m ? void 0 : m.visibility) === l.k.PUBLIC,
-        g = i.useCallback(() => {
-            p ? o.Z.updateGuildProfile(n, { visibility: l.k.RESTRICTED }) : o.Z.updateGuildProfile(n, { visibility: l.k.PUBLIC });
-        }, [n, p]);
-    return (0, r.jsx)(a.hjN, {
-        className: u.container,
-        children: (0, r.jsx)(a.tEY, {
-            children: (0, r.jsxs)(a.P3F, {
-                onClick: g,
-                className: u.control,
+        d = t.visibility === a.k.PUBLIC,
+        u = i.useCallback(() => {
+            d ? l.Z.updateGuildProfile(n, { visibility: a.k.RESTRICTED }) : l.Z.updateGuildProfile(n, { visibility: a.k.PUBLIC });
+        }, [n, d]);
+    return (0, r.jsx)(s.hjN, {
+        className: c.container,
+        children: (0, r.jsx)(s.tEY, {
+            children: (0, r.jsxs)(s.P3F, {
+                onClick: u,
+                className: c.control,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        children: d.NW.string(d.t.fjHWen)
+                        children: o.NW.string(o.t.fjHWen)
                     }),
-                    (0, r.jsx)(a.XZJ, {
-                        value: !p,
+                    (0, r.jsx)(s.XZJ, {
+                        value: !d,
                         displayOnly: !0
                     })
                 ]

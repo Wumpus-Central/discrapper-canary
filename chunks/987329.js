@@ -7,14 +7,15 @@ var i = n(481060),
     a = n(871499),
     s = n(388032);
 let c = (e) => {
-    let { channel: t } = e;
+    let { channel: t, remoteMode: n = !1 } = e;
     return (0, r.jsx)(i.yRy, {
         renderPopout: (e) => {
-            let { closePopout: n } = e;
+            let { closePopout: i } = e;
             return (0, r.jsx)(o.Z, {
                 children: (0, r.jsx)(l.Z, {
-                    onClose: n,
-                    channel: t
+                    onClose: i,
+                    channel: t,
+                    remoteMode: n
                 })
             });
         },

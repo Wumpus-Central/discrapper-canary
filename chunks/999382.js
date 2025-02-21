@@ -236,9 +236,8 @@ function eI(e) {
     if (null == c || null == s || s.id !== t) return !1;
     V.forEach((t) => {
         if (null != c && e.hasOwnProperty(t)) {
-            let n = c[t],
-                r = e[t];
-            null != r && (c = B(U({}, c), { [t]: null != r ? r : n }));
+            let n = e[t];
+            void 0 !== n && (c = B(U({}, c), { [t]: n }));
         }
     });
 }

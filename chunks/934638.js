@@ -1,47 +1,42 @@
-n.d(t, { Z: () => p }), n(266796);
+n.d(t, { Z: () => u }), n(266796);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
     a = n(481060),
-    l = n(496675),
-    o = n(434404),
-    c = n(999382),
-    d = n(981631),
-    u = n(388032),
-    m = n(541946);
-function p(e) {
-    var t, n;
-    let { guild: p } = e,
-        g = p.id,
-        h = (0, s.e7)([l.Z], () => l.Z.can(d.Plq.MANAGE_GUILD, p)),
-        f = i.useCallback(
+    l = n(434404),
+    o = n(999382),
+    c = n(388032),
+    d = n(541946);
+function u(e) {
+    let { profile: t, canManageGuild: n } = e,
+        u = t.id,
+        m = i.useCallback(
             (e) => {
-                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(g, { description: e });
+                l.Z.updateGuild({ description: e }), l.Z.updateGuildProfile(u, { description: e });
             },
-            [g]
+            [u]
         ),
-        b = (0, s.e7)([c.Z], () => c.Z.getError('description')),
-        x = (0, s.e7)([c.Z], () => c.Z.getGuildProfile());
+        p = (0, s.e7)([o.Z], () => o.Z.getError('description'));
     return (0, r.jsxs)(a.hjN, {
-        className: m.section,
+        className: d.section,
         children: [
             (0, r.jsxs)('div', {
-                className: m.sectionHeader,
+                className: d.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: u.NW.string(u.t.Z27SCQ) }),
+                    (0, r.jsx)(a.vwX, { children: c.NW.string(c.t.Z27SCQ) }),
                     (0, r.jsx)(a.R94, {
                         type: a.geA.DESCRIPTION,
-                        children: u.NW.string(u.t.pw0MIi)
+                        children: c.NW.string(c.t.pw0MIi)
                     })
                 ]
             }),
             (0, r.jsx)(a.Kx8, {
-                value: null !== (n = null !== (t = null == x ? void 0 : x.description) && void 0 !== t ? t : p.description) && void 0 !== n ? n : '',
-                placeholder: u.NW.string(u.t.Nvfows),
-                onChange: f,
+                value: t.description,
+                placeholder: c.NW.string(c.t.Nvfows),
+                onChange: m,
                 maxLength: 120,
-                disabled: !h,
-                error: b
+                disabled: !n,
+                error: p
             })
         ]
     });

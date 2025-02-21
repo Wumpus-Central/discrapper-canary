@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -6,14 +6,13 @@ var r = n(200651),
     s = n(481060),
     l = n(906732),
     c = n(785717),
-    u = n(456644),
-    d = n(502762),
-    f = n(652853),
-    p = n(171368),
-    _ = n(228168),
-    h = n(388032),
-    m = n(481736);
-function g(e, t, n) {
+    u = n(502762),
+    d = n(652853),
+    f = n(171368),
+    p = n(228168),
+    _ = n(388032),
+    h = n(481736);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,29 +53,29 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,56 +84,55 @@ function O(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = i.forwardRef(function (e, t) {
-    var { children: n, className: i, subsection: o, onAction: g, onClose: v } = e,
-        O = y(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
-    let { profileType: S } = (0, f.z)(),
-        { analyticsLocations: I } = (0, l.ZP)(),
-        { context: T } = (0, c.KZ)(),
-        { recentActivityEnabled: N } = (0, u.i)({ location: 'UserProfileActivityCardContainer' });
-    return S !== _.y0.FULL_SIZE && (null == T ? void 0 : T.userId) != null && N
-        ? (0, r.jsx)(s.P3F, {
-              className: m.clickableContainer,
-              'aria-label': h.NW.string(h.t.pD1L1t),
+let O = i.forwardRef(function (e, t) {
+    var { children: n, className: i, subsection: o, onAction: m, onClose: E } = e,
+        y = b(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
+    let { profileType: O } = (0, d.z)(),
+        { analyticsLocations: S } = (0, l.ZP)(),
+        { context: I } = (0, c.KZ)();
+    return O === p.y0.FULL_SIZE || (null == I ? void 0 : I.userId) == null
+        ? (0, r.jsx)(
+              u.Z.Overlay,
+              v(
+                  g(
+                      {
+                          ref: t,
+                          className: a()(h.card, i)
+                      },
+                      y
+                  ),
+                  { children: n }
+              )
+          )
+        : (0, r.jsx)(s.P3F, {
+              className: h.clickableContainer,
+              'aria-label': _.NW.string(_.t.pD1L1t),
               onClick: () => {
-                  null == g || g({ action: 'PRESS_CARD' }),
-                      (0, p.openUserProfileModal)(
-                          E(
+                  null == m || m({ action: 'PRESS_CARD' }),
+                      (0, f.openUserProfileModal)(
+                          g(
                               {
-                                  section: _.oh.ACTIVITY,
-                                  sourceAnalyticsLocations: I,
+                                  section: p.oh.ACTIVITY,
+                                  sourceAnalyticsLocations: S,
                                   subsection: o
                               },
-                              T
+                              I
                           )
                       ),
-                      null == v || v();
+                      null == E || E();
               },
               children: (0, r.jsx)(
-                  d.Z.Overlay,
-                  b(
-                      E(
+                  u.Z.Overlay,
+                  v(
+                      g(
                           {
                               ref: t,
-                              className: a()(m.card, i)
+                              className: a()(h.card, i)
                           },
-                          O
+                          y
                       ),
                       { children: n }
                   )
               )
-          })
-        : (0, r.jsx)(
-              d.Z.Overlay,
-              b(
-                  E(
-                      {
-                          ref: t,
-                          className: a()(m.card, i)
-                      },
-                      O
-                  ),
-                  { children: n }
-              )
-          );
+          });
 });

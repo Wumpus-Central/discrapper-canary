@@ -19,7 +19,7 @@ var i = n(200651),
     N = n(388032),
     x = n(674619);
 let C = (e) => {
-    let { file: t, imgURI: n, transitionState: C, allowSkip: A = !1, onCrop: w, onClose: R, uploadType: T = f.pC.AVATAR, showUpsellHeader: y = !1, analyticsPage: v } = e,
+    let { file: t, imageUri: n, transitionState: C, allowSkip: A = !1, onCrop: w, onClose: R, uploadType: T = f.pC.AVATAR, showUpsellHeader: y = !1, analyticsPage: v } = e,
         [I, O] = r.useState({
             width: 0,
             height: 0
@@ -149,7 +149,12 @@ let C = (e) => {
                     cropOriginCoordinates: H.current,
                     maxDimensions: i
                 });
-            await w(e, t), W(!1), R();
+            await w({
+                imageUri: e,
+                file: t
+            }),
+                W(!1),
+                R();
         };
     r.useEffect(
         () => (
@@ -323,7 +328,12 @@ let C = (e) => {
                                   color: l.zxk.Colors.PRIMARY,
                                   size: l.PhG.SMALL,
                                   onClick: () => {
-                                      A && (w(n, t), R());
+                                      A &&
+                                          (w({
+                                              imageUri: n,
+                                              file: t
+                                          }),
+                                          R());
                                   },
                                   children: N.NW.string(N.t.B944ys)
                               })

@@ -56,14 +56,16 @@ function _(e, t, i, a) {
                         filters: a,
                         maxFileSizeBytes: c.B,
                         imageSpecifications: e === u.pC.BANNER ? d.NW.string(d.t.IhzZlp) : void 0,
-                        onComplete: (n, r) =>
+                        onComplete: (n) => {
+                            let { imageUri: r, file: o } = n;
                             (0, l.j)({
-                                imageSrc: n,
-                                file: r,
+                                imageSrc: r,
+                                file: o,
                                 uploadType: e,
                                 guildId: t,
                                 isTryItOutFlow: i
-                            }),
+                            });
+                        },
                         uploadType: e,
                         showUpsellHeader: !0
                     },

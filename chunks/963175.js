@@ -18,6 +18,7 @@ e.exports = {
     buttonChevron: 'buttonChevron__37e49',
     micButtonWithMenu: 'micButtonWithMenu__37e49',
     buttonSpace: 'buttonSpace__37e49',
+    voiceFilterWarning: 'voiceFilterWarning__37e49',
     buttons: 'buttons__37e49',
     buttonChevronIcon: 'buttonChevronIcon__37e49'
 };

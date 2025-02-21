@@ -17436,6 +17436,12 @@ span.clanTag__5d473 {
     margin-bottom: 16px
 }
 
+.dmSettingsMute__50a54 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
 .divider__50a54 {
     display: flex;
     width: 1px;

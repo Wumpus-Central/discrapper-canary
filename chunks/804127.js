@@ -11,14 +11,15 @@ var n = r(192379),
 function l(e) {
     let { isClaimingReward: t, isFetchingRewardCode: r, questContent: o, quest: a, requiresPlatformSelection: s, rewardCode: l, selectedPlatformType: d, preview: c } = e,
         [u, p] = n.useState(!1),
-        _ = n.useCallback(async (e, t, r) => {
+        [_, m] = n.useState(!1),
+        f = n.useCallback(async (e, t, r) => {
             try {
-                await (0, i.QB)(e, t, r), p(!1);
+                m(!0), await (0, i.QB)(e, t, r), p(!1), m(!1);
             } catch (e) {
-                p(!0);
+                p(!0), m(!1);
             }
         }, []),
-        m = n.useCallback((e) => {
+        b = n.useCallback((e) => {
             try {
                 (0, i.pf)(e);
             } catch (e) {
@@ -28,11 +29,11 @@ function l(e) {
     return (
         n.useEffect(() => {
             var e, n;
-            !0 !== c && null == l && !u && !t && !r && !s && (p(!1), (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? _(a.id, d, o) : (null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null && m(a.id));
-        }, [_, m, u, t, r, o, a, s, l, d, c]),
+            !0 !== c && null == l && !u && !t && !_ && !r && !s && (p(!1), (null === (e = a.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? f(a.id, d, o) : (null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null && b(a.id));
+        }, [f, b, u, t, _, r, o, a, s, l, d, c]),
         {
-            claimCode: _,
-            fetchCode: m,
+            claimCode: f,
+            fetchCode: b,
             hasError: u,
             setHasError: p
         }

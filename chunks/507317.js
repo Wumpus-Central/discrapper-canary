@@ -26,7 +26,7 @@ let N = function (e) {
                     return;
                 }
                 (0, s.ZDy)(async () => {
-                    let { default: s } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('57433')]).then(n.bind(n, 73620));
+                    let { default: s } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('29166')]).then(n.bind(n, 73620));
                     return (n) =>
                         (0, r.jsx)(
                             s,
@@ -56,9 +56,12 @@ let N = function (e) {
                                 return e;
                             })(
                                 {
-                                    imgURI: e,
+                                    imageUri: e,
                                     file: i,
-                                    onCrop: (e) => p.Z.saveGuild(t.id, { homeHeader: e }),
+                                    onCrop: (e) => {
+                                        let { imageUri: n } = e;
+                                        return p.Z.saveGuild(t.id, { homeHeader: n });
+                                    },
                                     uploadType: f.pC.HOME_HEADER
                                 },
                                 n

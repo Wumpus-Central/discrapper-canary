@@ -47,8 +47,8 @@ var r = n(200651),
     Y = n(740492),
     K = n(793319),
     X = n(3861),
-    J = n(493754),
-    Q = n(937995),
+    Q = n(493754),
+    J = n(937995),
     $ = n(618158),
     ee = n(880831),
     et = n(73563),
@@ -325,7 +325,7 @@ class eq extends i.PureComponent {
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, r.jsx)(Q.ZP, {
+                            children: (0, r.jsx)(J.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e)
                             })
@@ -570,20 +570,20 @@ class eq extends i.PureComponent {
                     : null;
             }),
             eF(this, 'renderBottomLeft', () => {
-                let { layout: e, mentionCount: t, channel: n, appContext: i, useNewInviteButton: l, selectedParticipant: a, shouldUseVoiceEffectsActionBar: s, showGameConsoleCallButton: c, inCall: u, participants: d } = this.props;
+                let { layout: e, mentionCount: t, channel: n, appContext: i, useNewInviteButton: l, selectedParticipant: a, shouldUseVoiceEffectsActionBar: s, showGameConsoleCallButton: c, inCall: u, participants: d, enableSimplifiedCallSettings: p } = this.props;
                 if (!u) return null;
-                let p = e === eW.AEg.NO_CHAT ? en.Z.Directions.UP : en.Z.Directions.DOWN,
-                    h = [eW.AEg.FULL_SCREEN, eW.AEg.NO_CHAT].includes(e),
-                    m = d.some((e) => e.type === eD.fO.STREAM),
-                    g =
+                let h = e === eW.AEg.NO_CHAT ? en.Z.Directions.UP : en.Z.Directions.DOWN,
+                    m = [eW.AEg.FULL_SCREEN, eW.AEg.NO_CHAT].includes(e),
+                    g = d.some((e) => e.type === eD.fO.STREAM),
+                    b =
                         e === eW.AEg.FULL_SCREEN
                             ? () => {
                                   (this._prevLayout = eW.AEg.NORMAL), this.handleFullScreen();
                               }
                             : this.handleToggleLayout,
-                    { canChangeLayout: b, canInvite: _ } = this.viewProperties,
-                    C = l
-                        ? (0, r.jsx)(J.Z, {
+                    { canChangeLayout: _, canInvite: C } = this.viewProperties,
+                    v = l
+                        ? (0, r.jsx)(Q.Z, {
                               channel: n,
                               stream: (null == a ? void 0 : a.type) === eD.fO.STREAM ? (0, B.my)(a.id) : void 0,
                               applicationId: (null == a ? void 0 : a.type) === eD.fO.ACTIVITY ? a.applicationId : void 0,
@@ -601,20 +601,20 @@ class eq extends i.PureComponent {
                           });
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        _ && !s ? C : null,
-                        b
+                        C && !s ? v : null,
+                        _
                             ? (0, r.jsxs)(k.Z, {
                                   className: eB.iconWrapper,
                                   align: k.Z.Align.CENTER,
                                   grow: 0,
                                   children: [
                                       (0, r.jsx)(en.Z, {
-                                          label: h ? eU.NW.string(eU.t.kkKapK) : eU.NW.string(eU.t['5MstTk']),
-                                          direction: p,
+                                          label: m ? eU.NW.string(eU.t.kkKapK) : eU.NW.string(eU.t['5MstTk']),
+                                          direction: h,
                                           className: eB.leftTrayIcon,
-                                          onClick: g
+                                          onClick: b
                                       }),
-                                      h && t > 0
+                                      m && t > 0
                                           ? (0, r.jsx)(f.mAB, {
                                                 className: eB.badge,
                                                 count: t
@@ -639,10 +639,11 @@ class eq extends i.PureComponent {
                             (0, r.jsx)(eL.Z, {
                                 showRightDivider: c,
                                 channel: n,
-                                hasActiveStream: m,
+                                hasActiveStream: g,
                                 themeable: this.viewProperties.useTheme
                             }),
                         c &&
+                            !p &&
                             (0, r.jsx)(U.Z, {
                                 themeable: this.viewProperties.useTheme,
                                 className: eB.leftTrayIcon,
@@ -793,11 +794,11 @@ let eY = function (e) {
         z = (0, u.e7)([ep.Z], () => ep.Z.getCall(n.id), [n.id]),
         q = (0, u.e7)([em.ZP], () => em.ZP.getMentionCount(n.id), [n.id]),
         K = (0, u.e7)([eu.default], () => eu.default.getId()),
-        { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, u.cj)([G.Z], () => ({
+        { popoutWindow: X, popoutWindowAlwaysOnTop: Q } = (0, u.cj)([G.Z], () => ({
             popoutWindow: G.Z.getWindow(eW.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: G.Z.getIsAlwaysOnTop(eW.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        Q = (0, u.e7)([ef.Z], () => ef.Z.can(eW.Plq.CONNECT, n)),
+        J = (0, u.e7)([ef.Z], () => ef.Z.can(eW.Plq.CONNECT, n)),
         $ = (0, u.e7)([ed.Z], () => ed.Z.getToastsEnabled(n.id)),
         ee = (0, u.e7)([D.Z], () => D.Z.getAwaitingRemoteSessionInfo()),
         et = (0, u.e7)([Y.ZP], () => Y.ZP.callHeaderHeight),
@@ -842,7 +843,7 @@ let eY = function (e) {
                         (0, r.jsx)(eq, {
                             channel: n,
                             guild: V,
-                            hasConnectPermission: Q,
+                            hasConnectPermission: J,
                             participantsOpen: R,
                             participantsListOpen: k && e_,
                             enableSimplifiedCallSettings: eC,
@@ -850,7 +851,7 @@ let eY = function (e) {
                             appContext: g,
                             call: z,
                             popoutWindow: X,
-                            popoutWindowAlwaysOnTop: J,
+                            popoutWindowAlwaysOnTop: Q,
                             mentionCount: q,
                             selectedStream: H,
                             mode: Z,

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => eq,
-    m: () => eK
+    Z: () => eJ,
+    m: () => eX
 }),
     n(47120),
     n(653041);
@@ -18,8 +18,8 @@ var r = n(200651),
     p = n(789639),
     h = n(930295),
     f = n(481060),
-    b = n(355467),
-    N = n(239091),
+    N = n(355467),
+    b = n(239091),
     x = n(230711),
     _ = n(410575),
     E = n(941129),
@@ -67,36 +67,37 @@ var r = n(200651),
     ec = n(879815),
     ed = n(294629),
     eu = n(875527),
-    em = n(378441),
-    eg = n(358820),
-    ep = n(469887),
-    eh = n(306609),
-    ef = n(199902),
+    em = n(56848),
+    eg = n(378441),
+    ep = n(358820),
+    eh = n(469887),
+    ef = n(306609),
+    eN = n(199902),
     eb = n(314897),
-    eN = n(592125),
-    ex = n(819640),
-    e_ = n(131951),
-    eE = n(19780),
-    ej = n(885110),
-    eC = n(246946),
-    eO = n(594174),
-    ev = n(78839),
-    eS = n(626135),
-    eT = n(768581),
-    eI = n(572004),
-    ey = n(70956),
-    eA = n(74538),
-    eP = n(374023),
-    eR = n(51144),
-    eD = n(998502),
-    eZ = n(870569),
-    ew = n(345243),
-    ek = n(115530),
-    eW = n(981631),
-    eL = n(215023),
-    eB = n(388032),
-    eM = n(963175);
-function eU(e, t, n) {
+    ex = n(592125),
+    e_ = n(819640),
+    eE = n(131951),
+    ej = n(19780),
+    eC = n(885110),
+    eO = n(246946),
+    ev = n(594174),
+    eS = n(78839),
+    eT = n(626135),
+    eI = n(768581),
+    ey = n(572004),
+    eA = n(70956),
+    eP = n(74538),
+    eR = n(374023),
+    eD = n(51144),
+    eZ = n(998502),
+    ew = n(870569),
+    ek = n(345243),
+    eW = n(115530),
+    eL = n(981631),
+    eB = n(215023),
+    eM = n(388032),
+    eU = n(963175);
+function eV(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -109,7 +110,7 @@ function eU(e, t, n) {
         e
     );
 }
-function eV(e) {
+function eG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -120,12 +121,12 @@ function eV(e) {
                 })
             )),
             r.forEach(function (t) {
-                eU(e, t, n[t]);
+                eV(e, t, n[t]);
             });
     }
     return e;
 }
-function eG(e, t) {
+function eF(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -143,15 +144,16 @@ function eG(e, t) {
         e
     );
 }
-let eF = eD.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
-    eH = 2 * ey.Z.Millis.MINUTE,
-    ez = 30 * ey.Z.Millis.DAY;
-function eY(e) {
+let eH = eZ.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
+    ez = 2 * eA.Z.Millis.MINUTE,
+    eY = 3 * eA.Z.Millis.SECOND,
+    eK = 30 * eA.Z.Millis.DAY;
+function eq(e) {
     let { speaking: t, streaming: n, currentUser: i, status: s, handleMouseLeave: o, renderNameTag: l } = e,
         c = (0, G.Q3)('RTC Avatar'),
         { coloredIcons: d } = (0, el.Z)({ location: 'RTC Avatar' }),
         u = (0, P.Z)(null == i ? void 0 : i.avatarDecoration),
-        m = (0, eT.NZ)({
+        m = (0, eI.NZ)({
             avatarDecoration: u,
             size: (0, R.y9)(f.EFr.SIZE_32)
         }),
@@ -159,13 +161,13 @@ function eY(e) {
     return null == i
         ? null
         : (0, r.jsx)(_.Z, {
-              object: eW.qAy.AVATAR,
+              object: eL.qAy.AVATAR,
               children: (0, r.jsx)(f.yRy, {
                   clickTrap: !0,
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, r.jsx)('div', {
-                          className: eM.accountProfilePopoutWrapper,
+                          className: eU.accountProfilePopoutWrapper,
                           children: (0, r.jsx)(K.Z, {
                               currentUser: i,
                               onClose: () => {
@@ -188,21 +190,21 @@ function eY(e) {
                   children: (e) =>
                       (0, r.jsxs)(
                           f.P3F,
-                          eG(eV({}, e), {
-                              'aria-label': eB.NW.string(eB.t['3Uj+2t']),
-                              className: a()(eM.avatarWrapper, !c && d && eM.experiment),
+                          eF(eG({}, e), {
+                              'aria-label': eM.NW.string(eM.t['3Uj+2t']),
+                              className: a()(eU.avatarWrapper, !c && d && eU.experiment),
                               children: [
-                                  (0, r.jsx)(eF, {
+                                  (0, r.jsx)(eH, {
                                       size: c ? f.EFr['SIZE_'.concat(g)] : f.EFr.SIZE_32,
                                       src: i.getAvatarURL(void 0, c ? g - 4 : 32, !1),
                                       avatarDecoration: m,
                                       'aria-label': i.username,
-                                      status: n ? eW.Skl.STREAMING : s,
+                                      status: n ? eL.Skl.STREAMING : s,
                                       isSpeaking: t,
-                                      className: eM.avatar
+                                      className: eU.avatar
                                   }),
                                   (0, r.jsx)('div', {
-                                      className: a()(eM.nameTag, { [eM.canCopy]: eI.wS }),
+                                      className: a()(eU.nameTag, { [eU.canCopy]: ey.wS }),
                                       children: l()
                                   })
                               ]
@@ -211,7 +213,7 @@ function eY(e) {
               })
           });
 }
-class eK extends i.PureComponent {
+class eX extends i.PureComponent {
     get isCopiedStreakGodlike() {
         let { copiedStreak: e } = this.state;
         return e >= 10;
@@ -226,7 +228,7 @@ class eK extends i.PureComponent {
     }
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
-            t = [eB.NW.string(eB.t.MSaeTU), eB.NW.string(eB.t.UmrCw8), eB.NW.string(eB.t.gKE0Ji), eB.NW.string(eB.t['4DSKbm']), eB.NW.string(eB.t['+8ENdX']), eB.NW.string(eB.t.GlWHv7), eB.NW.string(eB.t.hIzxU1), eB.NW.string(eB.t['26uMPD']), eB.NW.string(eB.t.uFs7R0), eB.NW.string(eB.t.bLXdcX), eB.NW.string(eB.t.gPg9fX)],
+            t = [eM.NW.string(eM.t.MSaeTU), eM.NW.string(eM.t.UmrCw8), eM.NW.string(eM.t.gKE0Ji), eM.NW.string(eM.t['4DSKbm']), eM.NW.string(eM.t['+8ENdX']), eM.NW.string(eM.t.GlWHv7), eM.NW.string(eM.t.hIzxU1), eM.NW.string(eM.t['26uMPD']), eM.NW.string(eM.t.uFs7R0), eM.NW.string(eM.t.bLXdcX), eM.NW.string(eM.t.gPg9fX)],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, r.jsx)(f.UkV, {
             isShaking: this.isCopiedStreakGodlike,
@@ -254,7 +256,7 @@ class eK extends i.PureComponent {
                     activities: t,
                     applicationStream: i,
                     voiceChannel: l ? c : void 0,
-                    textClassName: eM.activityStatusText,
+                    textClassName: eU.activityStatusText,
                     hideTooltip: !0
                 })
             });
@@ -263,7 +265,7 @@ class eK extends i.PureComponent {
                 ? void 0
                 : t.find((e) => {
                       let { type: t } = e;
-                      return t === eW.IIU.CUSTOM_STATUS;
+                      return t === eL.IIU.CUSTOM_STATUS;
                   });
         return null != d
             ? (0, r.jsx)(I.Z, {
@@ -271,22 +273,22 @@ class eK extends i.PureComponent {
                   forceHover: e,
                   children: (0, r.jsx)(V.Z, {
                       activity: d,
-                      emojiClassName: eM.emoji,
-                      className: eM.customStatus
+                      emojiClassName: eU.emoji,
+                      className: eU.customStatus
                   })
               })
-            : null != a && a !== eW.Skl.UNKNOWN && s.isPomelo()
+            : null != a && a !== eL.Skl.UNKNOWN && s.isPomelo()
               ? (0, r.jsx)(I.Z, {
                     hoverText: o,
                     forceHover: e,
-                    children: eR.ZP.humanizeStatus(a)
+                    children: eD.ZP.humanizeStatus(a)
                 })
               : o;
     }
     renderAvatarWithPopout() {
         return (0, r.jsx)(
-            eY,
-            eG(eV({}, this.props), {
+            eq,
+            eF(eG({}, this.props), {
                 handleMouseLeave: this.handleMouseLeave,
                 renderNameTag: this.renderNameTag
             })
@@ -317,7 +319,7 @@ class eK extends i.PureComponent {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)('div', {
-                          className: eM.container,
+                          className: eU.container,
                           onMouseEnter: this.handleMouseEnter,
                           onMouseLeave: this.handleMouseLeave,
                           children: [
@@ -326,19 +328,19 @@ class eK extends i.PureComponent {
                                   hovered: m
                               }),
                               (0, r.jsxs)('div', {
-                                  className: eM.content,
+                                  className: eU.content,
                                   children: [
                                       this.renderNameZone(),
                                       (0, r.jsxs)(U.Z, {
                                           grow: 0,
-                                          className: eM.buttons,
+                                          className: eU.buttons,
                                           children: [
-                                              (0, r.jsx)(eJ, {
+                                              (0, r.jsx)(e$, {
                                                   selfMute: n,
                                                   serverMute: s,
                                                   suppress: o,
                                                   awaitingRemote: i,
-                                                  tooltipText: u ? eB.NW.string(eB.t['29gnR0']) : void 0,
+                                                  tooltipText: u ? eM.NW.string(eM.t['29gnR0']) : void 0,
                                                   tooltipColor: u ? f.FGA.GREEN : void 0,
                                                   tooltipForceOpen: u || void 0,
                                                   onMouseEnter: this.handleMouseEnterMute,
@@ -346,7 +348,7 @@ class eK extends i.PureComponent {
                                                   onClick: this.handleToggleSelfMute,
                                                   onContextMenu: this.handleInputAudioContextMenu
                                               }),
-                                              (0, r.jsx)(eQ, {
+                                              (0, r.jsx)(e0, {
                                                   selfDeaf: t,
                                                   serverDeaf: a,
                                                   onClick: this.handleToggleSelfDeaf,
@@ -415,11 +417,11 @@ class eK extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eU(this, 'copiedTimeout', new d.V7()),
-            eU(this, 'copiedDecayTimeout', new d.V7()),
-            eU(this, 'speakingWhileMutedTooltipTimeout', new d.V7()),
-            eU(this, 'lastSpeakingWhileMutedNotificationTime', void 0),
-            eU(this, 'state', {
+            eV(this, 'copiedTimeout', new d.V7()),
+            eV(this, 'copiedDecayTimeout', new d.V7()),
+            eV(this, 'speakingWhileMutedTooltipTimeout', new d.V7()),
+            eV(this, 'lastSpeakingWhileMutedNotificationTime', void 0),
+            eV(this, 'state', {
                 hovered: !1,
                 copiedStreak: 0,
                 shouldShowNametagTooltip: !1,
@@ -427,32 +429,32 @@ class eK extends i.PureComponent {
                 shouldShowSpeakingWhileMutedTooltip: !1,
                 hoveringOnMute: !1
             }),
-            eU(this, 'handleToggleSelfMute', () => {
+            eV(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
-                (0, B.Z)(e, t, eW.jXE.ACCOUNT_PANEL);
+                (0, B.Z)(e, t, eL.jXE.ACCOUNT_PANEL);
             }),
-            eU(this, 'handleToggleSelfDeaf', () => {
+            eV(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, L.Z)(e, eW.jXE.ACCOUNT_PANEL);
+                (0, L.Z)(e, eL.jXE.ACCOUNT_PANEL);
             }),
-            eU(this, 'handleOpenAccountSettings', () => {
+            eV(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
-            eU(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eW.oAB.ACCOUNT,
+            eV(this, 'handleOpenSettings', function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eL.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 x.Z.open(e, t, n);
             }),
-            eU(this, 'handleOpenSettingsContextMenu', (e) => {
+            eV(this, 'handleOpenSettingsContextMenu', (e) => {
                 let { currentUser: t } = this.props;
                 null != t &&
-                    (0, N.jW)(e, async () => {
+                    (0, b.jW)(e, async () => {
                         let { default: e } = await n.e('2535').then(n.bind(n, 923422));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                eG(eV({}, n), {
+                                eF(eG({}, n), {
                                     user: t,
                                     premiumSubscription: this.props.premiumSubscription,
                                     webBuildOverride: this.props.webBuildOverride
@@ -460,21 +462,21 @@ class eK extends i.PureComponent {
                             );
                     });
             }),
-            eU(this, 'handleInputAudioContextMenu', (e, t) => {
-                (0, N.jW)(e, async () => {
+            eV(this, 'handleInputAudioContextMenu', (e, t) => {
+                (0, b.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
                         (0, r.jsx)(A.Gt, {
                             value: t,
                             children: this.props.simplifiedCallSettingsEnabled
                                 ? (0, r.jsx)(e, {
-                                      onClose: N.Zy,
+                                      onClose: b.Zy,
                                       renderInputDevices: !0,
                                       renderInputVolume: !0,
                                       simplified: !0
                                   })
                                 : (0, r.jsx)(e, {
-                                      onClose: N.Zy,
+                                      onClose: b.Zy,
                                       renderInputDevices: !0,
                                       renderInputModes: !0,
                                       renderInputVolume: !0
@@ -482,54 +484,54 @@ class eK extends i.PureComponent {
                         });
                 });
             }),
-            eU(this, 'handleOutputAudioContextMenu', (e, t) => {
-                (0, N.jW)(e, async () => {
+            eV(this, 'handleOutputAudioContextMenu', (e, t) => {
+                (0, b.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
                         (0, r.jsx)(A.Gt, {
                             value: t,
                             children: this.props.simplifiedCallSettingsEnabled
                                 ? (0, r.jsx)(e, {
-                                      onClose: N.Zy,
+                                      onClose: b.Zy,
                                       renderOutputDevices: !0,
                                       renderOutputVolume: !0,
                                       simplified: !0
                                   })
                                 : (0, r.jsx)(e, {
-                                      onClose: N.Zy,
+                                      onClose: b.Zy,
                                       renderOutputDevices: !0,
                                       renderOutputVolume: !0
                                   })
                         });
                 });
             }),
-            eU(this, 'handleMouseEnter', () => {
+            eV(this, 'handleMouseEnter', () => {
                 this.setState({ hovered: !0 });
             }),
-            eU(this, 'handleMouseLeave', () => {
+            eV(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            eU(this, 'handleMouseEnterMute', () => {
+            eV(this, 'handleMouseEnterMute', () => {
                 this.setState({
                     hoveringOnMute: !0,
                     shouldShowSpeakingWhileMutedTooltip: !1
                 }),
                     this.speakingWhileMutedTooltipTimeout.stop();
             }),
-            eU(this, 'handleMouseLeaveMute', () => {
+            eV(this, 'handleMouseLeaveMute', () => {
                 this.setState({ hoveringOnMute: !1 });
             }),
-            eU(this, 'handleCopyTag', () => {
+            eV(this, 'handleCopyTag', () => {
                 let { currentUser: e } = this.props,
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
-                (0, eI.JG)(
-                    eR.ZP.getUserTag(e, {
+                (0, ey.JG)(
+                    eD.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
                 ),
-                    eS.default.track(eW.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    eT.default.track(eL.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let r = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -539,7 +541,7 @@ class eK extends i.PureComponent {
                         this.copiedTimeout.start(1000, () => this.setState({ shouldShowNametagTooltip: !1 })), this.copiedDecayTimeout.start(2000, () => this.setState({ copiedStreak: 0 }));
                     });
             }),
-            eU(this, 'handleOccludedChanged', () => {
+            eV(this, 'handleOccludedChanged', () => {
                 let { occluded: e } = this.props;
                 e &&
                     this.setState({
@@ -547,10 +549,10 @@ class eK extends i.PureComponent {
                         shouldShowSpeakingWhileMutedTooltip: !1
                     });
             }),
-            eU(this, 'handleSpeakingWhileMutedChanged', () => {
+            eV(this, 'handleSpeakingWhileMutedChanged', () => {
                 let { selfMute: e, serverMute: t, suppress: n, speakingWhileMuted: r, occluded: i } = this.props,
                     { hoveringOnMute: s } = this.state,
-                    a = void 0 === this.lastSpeakingWhileMutedNotificationTime || Date.now() - this.lastSpeakingWhileMutedNotificationTime > eH;
+                    a = void 0 === this.lastSpeakingWhileMutedNotificationTime || Date.now() - this.lastSpeakingWhileMutedNotificationTime > ez;
                 r
                     ? s ||
                       !e ||
@@ -563,25 +565,25 @@ class eK extends i.PureComponent {
                       })
                     : (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
             }),
-            eU(this, 'renderNameTag', () => {
+            eV(this, 'renderNameTag', () => {
                 let { currentUser: e } = this.props;
                 return null == e
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', {
-                                  className: eM.panelTitleContainer,
-                                  children: (0, r.jsx)(ek.Z, { children: eR.ZP.getName(e) })
+                                  className: eU.panelTitleContainer,
+                                  children: (0, r.jsx)(eW.Z, { children: eD.ZP.getName(e) })
                               }),
                               (0, r.jsx)('div', {
-                                  className: eM.panelSubtextContainer,
-                                  children: (0, r.jsx)(ew.Z, { children: this.renderStatus() })
+                                  className: eU.panelSubtextContainer,
+                                  children: (0, r.jsx)(ek.Z, { children: this.renderStatus() })
                               })
                           ]
                       });
             }),
-            eU(this, 'renderSettingsGear', () =>
-                (0, r.jsx)(eX, {
+            eV(this, 'renderSettingsGear', () =>
+                (0, r.jsx)(eQ, {
                     isEligibleForPomelo: this.props.isEligibleForPomelo,
                     webBuildOverride: this.props.webBuildOverride,
                     onClick: this.handleOpenAccountSettings,
@@ -590,51 +592,51 @@ class eK extends i.PureComponent {
             );
     }
 }
-function eq() {
+function eJ() {
     var e;
-    let t = (0, l.e7)([eO.default], () => eO.default.getCurrentUser()),
+    let t = (0, l.e7)([ev.default], () => ev.default.getCurrentUser()),
         n = (0, l.e7)([eb.default], () => eb.default.getId()),
         {
             activities: s,
             streaming: a,
             status: o
-        } = (0, l.cj)([ej.Z], () => {
-            let e = ej.Z.getActivities();
+        } = (0, l.cj)([eC.Z], () => {
+            let e = eC.Z.getActivities();
             return {
                 activities: e,
                 streaming:
                     null !=
                     e.find((e) => {
                         let { type: t } = e;
-                        return t === eW.IIU.STREAMING;
+                        return t === eL.IIU.STREAMING;
                     }),
-                status: ej.Z.getStatus()
+                status: eC.Z.getStatus()
             };
         }),
-        d = (0, l.e7)([ef.Z], () => ef.Z.getAnyStreamForUser(n)),
+        d = (0, l.e7)([eN.Z], () => eN.Z.getAnyStreamForUser(n)),
         u = (0, C.Z)({ userId: n }),
-        m = eR.ZP.useUserTag(t, { decoration: 'never' }),
-        g = (0, l.e7)([eC.Z], () => eC.Z.hidePersonalInformation),
-        p = (0, l.e7)([eE.Z, eN.Z], () => {
-            let e = eE.Z.getChannelId();
-            return null != e ? eN.Z.getChannel(e) : null;
+        m = eD.ZP.useUserTag(t, { decoration: 'never' }),
+        g = (0, l.e7)([eO.Z], () => eO.Z.hidePersonalInformation),
+        p = (0, l.e7)([ej.Z, ex.Z], () => {
+            let e = ej.Z.getChannelId();
+            return null != e ? ex.Z.getChannel(e) : null;
         }),
-        { mute: h, selfMute: N, suppress: x } = (0, ed.Z)(p),
+        { mute: h, selfMute: b, suppress: x } = (0, ed.Z)(p),
         { selfDeaf: _, deaf: S } = (0, ec.Z)(p),
         T = (0, l.e7)([D.C], () => {
             var e;
             return (0, Z.fD)() ? (null === (e = D.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        I = (0, l.e7)([ev.ZP], () => ev.ZP.getPremiumTypeSubscription()),
-        P = (0, l.e7)([e_.Z], () => e_.Z.getSpeakingWhileMuted()),
-        R = (0, l.e7)([ex.Z], () => ex.Z.hasLayers()),
-        k = (0, f.s9z)(f.JQI) || R || eP.s.isDisallowPopupsSet(),
+        I = (0, l.e7)([eS.ZP], () => eS.ZP.getPremiumTypeSubscription()),
+        P = (0, l.e7)([eE.Z], () => eE.Z.getSpeakingWhileMuted()),
+        R = (0, l.e7)([e_.Z], () => e_.Z.hasLayers()),
+        k = (0, f.s9z)(f.JQI) || R || eR.s.isDisallowPopupsSet(),
         W = (0, X.b)(),
         L = (0, l.e7)([z.Z], () => null != z.Z.getAwaitingRemoteSessionInfo()),
         B = (0, ee.D)(),
         M = (0, E.u)(),
-        U = eA.ZP.canUsePremiumGuildMemberProfile(t),
-        V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eL.rL,
+        U = eP.ZP.canUsePremiumGuildMemberProfile(t),
+        V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eB.rL,
         { activityStatusCleanupEnabled: G } = (0, O.w)({ location: 'Account' }),
         { voiceActivityStatusEnabled: H } = (0, v.U)({ location: 'Account' }),
         { enabled: Y } = (0, w.Z)({ location: 'Account' }),
@@ -651,21 +653,21 @@ function eq() {
         $ = (function () {
             let e = (0, F.wE)(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
                 [t, n] = (0, l.Wu)([J.Z], () => [J.Z.hasFetchedRelevance, J.Z.profileThemesRelevanceExceeded]),
-                [r, s] = (0, l.Wu)([ev.ZP], () => [ev.ZP.hasFetchedMostRecentPremiumTypeSubscription(), ev.ZP.getMostRecentPremiumTypeSubscription()]),
+                [r, s] = (0, l.Wu)([eS.ZP], () => [eS.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eS.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: a } = Q.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 o = i.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != s && (s.status === eW.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < ez);
+                    return null != s && (s.status === eL.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < eK);
                 }, [s]);
             return (
                 i.useEffect(() => {
                     (async () => {
                         if (!e && null == n && a) {
                             if (!r) {
-                                await (0, b.ou)();
+                                await (0, N.ou)();
                                 return;
                             }
-                            !o && (t || (await (0, b.l0)()));
+                            !o && (t || (await (0, N.l0)()));
                         }
                     })();
                 }, [a, n, e, r, t, o]),
@@ -681,7 +683,7 @@ function eq() {
         !k && ($ && en.settings.push(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), B && (1 === M ? en.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : en.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && en.settings.push(c.z.SOUNDBOARD_VOLUME_EDUCATION), U && en.settings.push(c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && en.avatar.push(c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, r.jsx)(A.Gt, {
             value: et,
-            children: (0, r.jsx)(eK, {
+            children: (0, r.jsx)(eX, {
                 currentUser: t,
                 activities: s,
                 applicationStream: d,
@@ -692,7 +694,7 @@ function eq() {
                 occluded: k,
                 premiumSubscription: I,
                 selfDeaf: _,
-                selfMute: N,
+                selfMute: b,
                 serverDeaf: S,
                 serverMute: h,
                 speaking: u,
@@ -710,17 +712,17 @@ function eq() {
         })
     );
 }
-function eX(e) {
+function eQ(e) {
     let { webBuildOverride: t, isEligibleForPomelo: n, onClick: i, onContextMenu: s } = e,
         a = f.ewm,
         o = (0, p.i)();
     return (
         (a = null != t ? f.bgT : n ? f.Ncx : o.Component),
         (0, r.jsx)(
-            eZ.Z,
-            eV(
+            ew.Z,
+            eG(
                 {
-                    tooltipText: null != t ? eB.NW.formatToPlainString(eB.t.Gzh6ZG, { webBuildOverride: t.id }) : eB.NW.string(eB.t.cduTBA),
+                    tooltipText: null != t ? eM.NW.formatToPlainString(eM.t.Gzh6ZG, { webBuildOverride: t.id }) : eM.NW.string(eM.t.cduTBA),
                     onClick: i,
                     onContextMenu: s,
                     icon: (0, r.jsx)(a, { size: 'refresh_sm' })
@@ -730,142 +732,179 @@ function eX(e) {
         )
     );
 }
-function eJ(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: l, tooltipText: c, tooltipColor: d, tooltipForceOpen: u, onMouseEnter: p, onMouseLeave: b, onClick: N, onContextMenu: x } = e,
-        _ = t || s || n,
-        E = i.useRef(null),
-        j = (0, m.O)(_ ? 'unmute' : 'mute'),
-        C = (0, g.P)(_ ? 'unmute' : 'mute'),
-        { activeVoice: O } = (0, em.o)(),
-        { Component: v, events: S, play: T } = null != O ? C : j,
-        I = n || s ? f.v0G : v,
-        { mode: P } = (0, eo.ZP)({ location: 'RTC Microphone Button' }),
-        { coloredIcons: R } = (0, el.Z)({ location: 'RTC Microphone Button' }),
-        D = null != c ? c : (0, W.Z)(t, n, s, l, P === eo.BK.GroupedButtonsRedMic),
-        { analyticsLocations: Z } = (0, A.ZP)(y.Z.AUDIO_INPUT_BUTTON),
-        w = (0, eu.Hu)({
+function e$(e) {
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: p, onMouseEnter: N, onMouseLeave: b, onClick: x, onContextMenu: _ } = e,
+        E = t || s || n,
+        j = i.useRef(null),
+        C = (0, m.O)(E ? 'unmute' : 'mute'),
+        O = (0, g.P)(E ? 'unmute' : 'mute'),
+        { activeVoice: v } = (0, eg.o)(),
+        S = null != v,
+        T = (0, em.z)(v),
+        I = (0, l.e7)([ej.Z], () => ej.Z.isConnected()),
+        { Component: P, events: R, play: D } = S ? O : C,
+        Z = n || s ? f.v0G : P,
+        { mode: w } = (0, eo.ZP)({ location: 'RTC Microphone Button' }),
+        { coloredIcons: k } = (0, el.Z)({ location: 'RTC Microphone Button' }),
+        L = null != d ? d : (0, W.Z)(t, n, s, c, w === eo.BK.GroupedButtonsRedMic),
+        { analyticsLocations: B } = (0, A.ZP)(y.Z.AUDIO_INPUT_BUTTON),
+        M = (0, eu.Hu)({
             location: y.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         });
-    i.useEffect(() => () => T(), [_, T]);
-    let k = i.useCallback(
+    i.useEffect(() => () => D(), [E, D]);
+    let U = i.useCallback(
             (e) => {
-                x(e, Z);
+                _(e, B);
             },
-            [x, Z]
+            [_, B]
         ),
-        [L, B] = i.useState(!1),
-        M = i.useCallback((e) => {
+        [V, G] = i.useState(!1),
+        F = i.useCallback((e) => {
             var t;
-            if ((0, o.k)(null == e ? void 0 : e.target, Node) && (null === (t = E.current) || void 0 === t ? void 0 : t.contains(e.target))) return h.F;
-            B(!1);
-        }, []);
-    return (0, r.jsx)(A.Gt, {
-        value: Z,
-        children: (0, r.jsxs)('div', {
-            ref: E,
-            className: a()(eM.micButtonParent, R && eM.buttonSpace),
-            children: [
-                (0, r.jsx)(eZ.Z, {
-                    tooltipText: D,
-                    tooltipColor: d,
-                    tooltipForceOpen: u,
-                    onMouseEnter: () => {
-                        p(), S.onMouseEnter();
-                    },
-                    onMouseLeave: () => {
-                        b(), S.onMouseLeave();
-                    },
-                    icon: (0, r.jsx)(I, {
-                        size: 'custom',
-                        width: 20,
-                        height: 20,
-                        color: _ ? f.TVs.colors.STATUS_DANGER : 'currentColor'
-                    }),
-                    iconForeground: _ ? eM.strikethrough : null,
-                    onClick: N,
-                    onContextMenu: k,
-                    role: 'switch',
-                    className: w ? eM.micButtonWithMenu : void 0,
-                    redGlow: _ && R,
-                    'aria-label': eB.NW.string(eB.t['w4m94+']),
-                    'aria-checked': _,
-                    disabled: l
-                }),
-                w &&
-                    (0, r.jsx)(f.yRy, {
-                        position: 'top',
-                        align: 'center',
-                        animation: f.yRy.Animation.FADE,
-                        useMouseEnter: !0,
-                        onRequestOpen: eg.r5,
-                        onRequestClose: M,
-                        shouldShow: L,
-                        renderPopout: (e) => {
-                            let { closePopout: t } = e;
-                            return (0, r.jsx)(eh.l, { onSettingsButtonClick: t });
+            if ((0, o.k)(null == e ? void 0 : e.target, Node) && (null === (t = j.current) || void 0 === t ? void 0 : t.contains(e.target))) return h.F;
+            G(!1);
+        }, []),
+        [H, z] = i.useState(!1);
+    return (
+        i.useEffect(() => {
+            let e;
+            return (
+                I &&
+                    S &&
+                    !E &&
+                    (e = setTimeout(() => {
+                        z(!0), (e = setTimeout(() => z(!1), eY));
+                    }, 300)),
+                () => {
+                    z(!1), clearTimeout(e);
+                }
+            );
+        }, [I]),
+        (0, r.jsx)(A.Gt, {
+            value: B,
+            children: (0, r.jsxs)('div', {
+                ref: j,
+                className: a()(eU.micButtonParent, k && eU.buttonSpace),
+                children: [
+                    (0, r.jsx)(ew.Z, {
+                        tooltipText: L,
+                        tooltipColor: u,
+                        tooltipForceOpen: p,
+                        onMouseEnter: () => {
+                            N(), R.onMouseEnter();
                         },
-                        children: (e, t) => {
-                            var { onClick: n } = e,
-                                i = (function (e, t) {
-                                    if (null == e) return {};
-                                    var n,
-                                        r,
-                                        i = (function (e, t) {
-                                            if (null == e) return {};
-                                            var n,
-                                                r,
-                                                i = {},
-                                                s = Object.keys(e);
-                                            for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                            return i;
-                                        })(e, t);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var s = Object.getOwnPropertySymbols(e);
-                                        for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                                    }
-                                    return i;
-                                })(e, ['onClick']),
-                                { isShown: s } = t;
-                            let a = s ? f.u04 : f.CJ0;
-                            return (0, r.jsx)('div', {
-                                children: (0, r.jsx)(ep.B, {
-                                    onCTA: () => B(!0),
-                                    canBeShown: !s,
-                                    children: (e, t) =>
-                                        (0, r.jsx)(
-                                            eZ.Z,
-                                            eV(
-                                                {
-                                                    tooltipText: eB.NW.string(eB.t.Hapb4O),
-                                                    icon: (0, r.jsx)(a, {
-                                                        className: eM.buttonChevronIcon,
-                                                        size: 'custom',
-                                                        width: 12,
-                                                        height: 12,
-                                                        color: R && _ ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
-                                                    }),
-                                                    role: 'button',
-                                                    className: eM.buttonChevron,
-                                                    redGlow: _ && R,
-                                                    'aria-label': eB.NW.string(eB.t.Hapb4O),
-                                                    disabled: l,
-                                                    onClick: (e) => {
-                                                        null == t || t(), n(e), B(!L);
-                                                    }
-                                                },
-                                                i
+                        onMouseLeave: () => {
+                            b(), R.onMouseLeave();
+                        },
+                        icon: (0, r.jsx)(Z, {
+                            size: 'custom',
+                            width: 20,
+                            height: 20,
+                            color: E ? f.TVs.colors.STATUS_DANGER : 'currentColor'
+                        }),
+                        iconForeground: E ? eU.strikethrough : null,
+                        onClick: x,
+                        onContextMenu: U,
+                        role: 'switch',
+                        className: M ? eU.micButtonWithMenu : void 0,
+                        redGlow: E && k,
+                        'aria-label': eM.NW.string(eM.t['w4m94+']),
+                        'aria-checked': E,
+                        disabled: c
+                    }),
+                    M &&
+                        (0, r.jsx)(f.yRy, {
+                            position: 'top',
+                            align: 'center',
+                            animation: f.yRy.Animation.FADE,
+                            useMouseEnter: !0,
+                            onRequestOpen: ep.r5,
+                            onRequestClose: F,
+                            shouldShow: V,
+                            renderPopout: (e) => {
+                                let { closePopout: t } = e;
+                                return (0, r.jsx)(ef.l, { onSettingsButtonClick: t });
+                            },
+                            children: (e, t) => {
+                                var { onClick: n } = e,
+                                    i = (function (e, t) {
+                                        if (null == e) return {};
+                                        var n,
+                                            r,
+                                            i = (function (e, t) {
+                                                if (null == e) return {};
+                                                var n,
+                                                    r,
+                                                    i = {},
+                                                    s = Object.keys(e);
+                                                for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                                return i;
+                                            })(e, t);
+                                        if (Object.getOwnPropertySymbols) {
+                                            var s = Object.getOwnPropertySymbols(e);
+                                            for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                        }
+                                        return i;
+                                    })(e, ['onClick']),
+                                    { isShown: s } = t;
+                                let a = s ? f.u04 : f.CJ0;
+                                return (0, r.jsx)('div', {
+                                    children: (0, r.jsx)(eh.B, {
+                                        onCTA: () => G(!0),
+                                        canBeShown: !s,
+                                        children: (e, t) =>
+                                            (0, r.jsx)(
+                                                ew.Z,
+                                                eG(
+                                                    {
+                                                        tooltipForceOpen: H,
+                                                        tooltipColor: H ? f.FGA.GREEN : void 0,
+                                                        tooltipContentClassName: H ? eU.voiceFilterWarning : void 0,
+                                                        tooltipText: H
+                                                            ? (0, r.jsxs)(r.Fragment, {
+                                                                  children: [
+                                                                      (0, r.jsx)('img', {
+                                                                          alt: null == T ? void 0 : T.name,
+                                                                          src: null == T ? void 0 : T.iconURL,
+                                                                          draggable: !1
+                                                                      }),
+                                                                      (0, r.jsx)(f.Text, {
+                                                                          variant: 'text-sm/medium',
+                                                                          children: eM.NW.string(eM.t.VlC1dX)
+                                                                      })
+                                                                  ]
+                                                              })
+                                                            : eM.NW.string(eM.t.Hapb4O),
+                                                        icon: (0, r.jsx)(a, {
+                                                            className: eU.buttonChevronIcon,
+                                                            size: 'custom',
+                                                            width: 12,
+                                                            height: 12,
+                                                            color: k && E ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
+                                                        }),
+                                                        role: 'button',
+                                                        className: eU.buttonChevron,
+                                                        redGlow: E && k,
+                                                        'aria-label': eM.NW.string(eM.t.Hapb4O),
+                                                        disabled: c,
+                                                        onClick: (e) => {
+                                                            null == t || t(), n(e), G(!V);
+                                                        }
+                                                    },
+                                                    i
+                                                )
                                             )
-                                        )
-                                })
-                            });
-                        }
-                    })
-            ]
+                                    })
+                                });
+                            }
+                        })
+                ]
+            })
         })
-    });
+    );
 }
-function eQ(e) {
+function e0(e) {
     let { selfDeaf: t, serverDeaf: n, awaitingRemote: s, onClick: o, onContextMenu: l } = e,
         c = t || n,
         {
@@ -874,18 +913,18 @@ function eQ(e) {
             events: { onMouseEnter: g, onMouseLeave: p }
         } = (0, u.l)(c ? 'undeafen' : 'deafen'),
         h = n ? f.Vm4 : d,
-        { coloredIcons: b } = (0, el.Z)({ location: 'RTC Microphone Button' }),
-        { analyticsLocations: N } = (0, A.ZP)(y.Z.AUDIO_OUTPUT_BUTTON);
+        { coloredIcons: N } = (0, el.Z)({ location: 'RTC Microphone Button' }),
+        { analyticsLocations: b } = (0, A.ZP)(y.Z.AUDIO_OUTPUT_BUTTON);
     i.useEffect(() => () => m(), [c, m]);
     let x = i.useCallback(
         (e) => {
-            l(e, N);
+            l(e, b);
         },
-        [l, N]
+        [l, b]
     );
     return (0, r.jsx)(A.Gt, {
-        value: N,
-        children: (0, r.jsx)(eZ.Z, {
+        value: b,
+        children: (0, r.jsx)(ew.Z, {
             tooltipText: (0, k.Z)(t, n, s),
             onMouseEnter: g,
             onMouseLeave: p,
@@ -897,11 +936,11 @@ function eQ(e) {
             }),
             onClick: o,
             onContextMenu: x,
-            innerClassName: a()({ [eM.redIcon]: n }),
-            iconForeground: c ? eM.strikethrough : null,
+            innerClassName: a()({ [eU.redIcon]: n }),
+            iconForeground: c ? eU.strikethrough : null,
             role: 'switch',
-            redGlow: b && c,
-            'aria-label': eB.NW.string(eB.t.wjcRFR),
+            redGlow: N && c,
+            'aria-label': eM.NW.string(eM.t.wjcRFR),
             'aria-checked': c,
             disabled: s
         })

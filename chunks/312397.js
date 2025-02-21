@@ -488,7 +488,10 @@ class ee extends i.PureComponent {
                     en({
                         uploadType: H.pC.GUILD_BANNER,
                         maxFileSizeBytes: V.B,
-                        onComplete: this.handleBannerChange,
+                        onComplete: (e) => {
+                            let { imageUri: t, file: n } = e;
+                            return this.handleBannerChange(t, n);
+                        },
                         analyticsLocation: {
                             page: F.ZY5.GUILD_SETTINGS,
                             section: F.jXE.GUILD_BANNER
@@ -505,7 +508,10 @@ class ee extends i.PureComponent {
                     en({
                         uploadType: H.pC.GUILD_BANNER,
                         maxFileSizeBytes: V.B,
-                        onComplete: this.handleBannerChange,
+                        onComplete: (e) => {
+                            let { imageUri: t, file: n } = e;
+                            return this.handleBannerChange(t, n);
+                        },
                         analyticsLocation: {
                             page: F.ZY5.GUILD_SETTINGS,
                             section: F.jXE.GUILD_BANNER
@@ -639,14 +645,17 @@ class ee extends i.PureComponent {
             }),
             Q(this, 'handleOpenImageEditingModal', (e, t) => {
                 (0, m.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('57433')]).then(n.bind(n, 73620));
+                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('29166')]).then(n.bind(n, 73620));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             J(
                                 {
-                                    onCrop: this.handleIconChange,
-                                    imgURI: e,
+                                    onCrop: (e) => {
+                                        let { imageUri: t } = e;
+                                        return this.handleIconChange(t);
+                                    },
+                                    imageUri: e,
                                     file: t
                                 },
                                 n
@@ -664,15 +673,18 @@ class ee extends i.PureComponent {
                     return;
                 }
                 (0, m.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('68438')]).then(n.bind(n, 712451));
+                    let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('99786')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
                             i,
                             J(
                                 {
-                                    imgURI: e,
+                                    imageUri: e,
                                     file: t,
-                                    onCrop: (e) => A.Z.updateGuild({ homeHeader: e }),
+                                    onCrop: (e) => {
+                                        let { imageUri: t } = e;
+                                        return A.Z.updateGuild({ homeHeader: t });
+                                    },
                                     uploadType: H.pC.HOME_HEADER
                                 },
                                 n

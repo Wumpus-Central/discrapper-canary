@@ -98,7 +98,8 @@ let x = (0, c.Z)(
                                                   {
                                                       onChange: (n) => {
                                                           var r;
-                                                          l.Z.setIcon(t.id, n), null === (r = e.onClose) || void 0 === r || r.call(e);
+                                                          let { imageUri: i } = n;
+                                                          l.Z.setIcon(t.id, i), null === (r = e.onClose) || void 0 === r || r.call(e);
                                                       },
                                                       multiple: !1,
                                                       'aria-label': m.NW.string(m.t['6yrpFR'])
