@@ -11,41 +11,42 @@ var r = n(570140),
 let f = 60000;
 async function p(e, t) {
     var n, p, _, h;
-    let { withMutualGuilds: m = !1, withMutualFriendsCount: g = !1, withMutualFriends: E = !1, friendToken: v, preloadUserBanner: b = !0, dispatchWait: y = !1, guildId: O, channelId: S, joinRequestId: I, abortSignal: T } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    if ('' === e || u.Z.isFetchingProfile(e, O)) return;
-    let N = u.Z.getUserProfile(e),
-        A = Date.now() - (null !== (h = null == N ? void 0 : N.lastFetched) && void 0 !== h ? h : 0) >= f;
-    if (((null == N ? void 0 : null === (n = N.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == N ? void 0 : null === (p = N.fetchError) || void 0 === p ? void 0 : p.status) === 429) && !A) return;
-    let C = u.Z.getGuildMemberProfile(e, O),
-        R = u.Z.getMutualGuilds(e),
-        P = u.Z.getMutualFriends(e),
-        w = u.Z.getMutualFriendsCount(e);
-    m = m || null != O;
-    let D = null == P && E,
-        x = null == w && g,
-        L = null != O && null == C;
-    if (!(null == R && m) && !D && !x && !L && !A) return;
+    let { type: m, withMutualGuilds: g = !1, withMutualFriendsCount: E = !1, withMutualFriends: v = !1, friendToken: b, preloadUserBanner: y = !0, dispatchWait: O = !1, guildId: S, channelId: I, joinRequestId: T, abortSignal: N } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if ('' === e || u.Z.isFetchingProfile(e, S)) return;
+    let A = u.Z.getUserProfile(e),
+        C = Date.now() - (null !== (h = null == A ? void 0 : A.lastFetched) && void 0 !== h ? h : 0) >= f;
+    if (((null == A ? void 0 : null === (n = A.fetchError) || void 0 === n ? void 0 : n.status) === 404 || (null == A ? void 0 : null === (p = A.fetchError) || void 0 === p ? void 0 : p.status) === 429) && !C) return;
+    let R = u.Z.getGuildMemberProfile(e, S),
+        P = u.Z.getMutualGuilds(e),
+        w = u.Z.getMutualFriends(e),
+        D = u.Z.getMutualFriendsCount(e);
+    g = g || null != S;
+    let x = null == w && v,
+        L = null == D && E,
+        M = null != S && null == R;
+    if (!(null == P && g) && !x && !L && !M && !C) return;
     (0, s.z)(), null != t && (0, o.vM)(t);
-    let M = {
-            withMutualGuilds: m,
-            withMutualFriends: E,
-            withMutualFriendsCount: g,
-            friendToken: v,
-            guildId: O,
-            joinRequestId: I,
-            abortSignal: T,
+    let k = {
+            type: m,
+            withMutualGuilds: g,
+            withMutualFriends: v,
+            withMutualFriendsCount: E,
+            friendToken: b,
+            guildId: S,
+            joinRequestId: T,
+            abortSignal: N,
             connectionsRoleId:
-                null == O
+                null == S
                     ? void 0
                     : null ===
                             (_ = (0, a.Ur)({
-                                guildMember: c.ZP.getMember(O, e),
-                                channel: l.Z.getChannel(S)
+                                guildMember: c.ZP.getMember(S, e),
+                                channel: l.Z.getChannel(I)
                             })) || void 0 === _
                       ? void 0
                       : _.id
         },
-        k = b ? d.Z : void 0;
-    if (y) return r.Z.wait(() => (0, i.In)(e, M, k));
-    await (0, i.In)(e, M, k);
+        j = y ? d.Z : void 0;
+    if (O) return r.Z.wait(() => (0, i.In)(e, k, j));
+    await (0, i.In)(e, k, j);
 }

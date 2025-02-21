@@ -117,40 +117,41 @@ function b(e) {
               );
 }
 async function y(e) {
-    let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: o, connectionsRoleId: a, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        f = arguments.length > 2 ? arguments[2] : void 0;
+    let { type: t, friendToken: n, withMutualGuilds: r, withMutualFriendsCount: i, withMutualFriends: o, guildId: a, connectionsRoleId: u, joinRequestId: d, abortSignal: f } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        _ = arguments.length > 2 ? arguments[2] : void 0;
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
-        guildId: o
+        guildId: a
     });
     try {
         let c = await s.tn.get({
             url: p.ANM.USER_PROFILE(e),
             query: {
-                friend_token: t,
-                with_mutual_guilds: n,
-                with_mutual_friends: i,
-                with_mutual_friends_count: r && (null == i || !i),
-                guild_id: o,
-                connections_role_id: a,
-                join_request_id: u
+                type: t,
+                friend_token: n,
+                with_mutual_guilds: r,
+                with_mutual_friends: o,
+                with_mutual_friends_count: i && (null == o || !o),
+                guild_id: a,
+                connections_role_id: u,
+                join_request_id: d
             },
-            signal: d,
+            signal: f,
             rejectWithError: !0
         });
         return (
-            null == f || f(c.body, o),
+            null == _ || _(c.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
             }),
             l.Z.dispatch(h({ type: 'USER_PROFILE_FETCH_SUCCESS' }, c.body)),
-            null != o &&
+            null != a &&
                 null != c.body.guild_member &&
                 l.Z.dispatch({
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
-                    guildId: o,
+                    guildId: a,
                     guildMember: c.body.guild_member
                 }),
             c.body
@@ -162,7 +163,7 @@ async function y(e) {
                 type: 'USER_PROFILE_FETCH_FAILURE',
                 apiError: new c.Hx(t),
                 userId: e,
-                guildId: o
+                guildId: a
             }),
             t)
         );

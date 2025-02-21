@@ -32,6 +32,7 @@ async function m(e) {
     h(t),
         null == y
             ? await (0, a.In)(t, {
+                  type: 'modal',
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
@@ -39,6 +40,7 @@ async function m(e) {
                   joinRequestId: u
               })
             : (0, f.Z)(y.id, y.getAvatarURL(void 0, p), {
+                  type: 'modal',
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,

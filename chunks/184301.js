@@ -61,6 +61,7 @@ async function _() {
             t,
             u(
                 {
+                    type: 'popout',
                     withMutualFriends: !0,
                     withMutualGuilds: !0
                 },
