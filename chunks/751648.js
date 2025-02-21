@@ -36,40 +36,41 @@ async function s() {
         });
     }
 }
-async function a(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+async function a(e) {
+    let { skuId: t, onRedeemStart: n, onRedeemSucceed: a, onRedeemFail: c, shouldRefetchBalance: u = !0 } = e;
     i.Z.wait(() => {
         i.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
-            skuId: e
+            skuId: t
         });
-    });
+    }),
+        null == n || n();
     try {
-        let l = (
+        let e = (
             await r.tn.post({
-                url: o.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(e),
+                url: o.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(t),
                 rejectWithError: !1
             })
         ).body;
         return (
             i.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
-                skuId: e,
-                entitlements: l
+                skuId: t,
+                entitlements: e
             }),
-            n && s(),
-            null == t || t(!0),
-            l
+            u && s(),
+            null == a || a(e),
+            e
         );
-    } catch (o) {
-        let r = o instanceof l.HF ? o : new l.HF(o);
+    } catch (n) {
+        let e = n instanceof l.HF ? n : new l.HF(n);
         i.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
-            skuId: e,
-            error: r
+            skuId: t,
+            error: e
         }),
-            n && s(),
-            null == t || t(!1);
+            u && s(),
+            null == c || c(e);
     }
 }
 function c(e) {

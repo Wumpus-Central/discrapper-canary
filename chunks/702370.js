@@ -397,9 +397,8 @@ let e_ = (e) => {
                                             disabled: e,
                                             onClick: () => {
                                                 eL
-                                                    ? ey(S.skuId, (e) => {
-                                                          e &&
-                                                              (b(),
+                                                    ? ey(S.skuId, () => {
+                                                          b(),
                                                               (0, B.qg)({
                                                                   variantsReturnStyle: eN,
                                                                   location: 'collectible_checkout_with_orb'
@@ -407,7 +406,7 @@ let e_ = (e) => {
                                                               (0, ef.Z)({
                                                                   product: S,
                                                                   analyticsLocations: I
-                                                              }));
+                                                              });
                                                       })
                                                     : eZ();
                                             },
