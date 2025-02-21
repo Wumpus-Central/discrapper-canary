@@ -11,12 +11,10 @@ function u(e) {
     let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         n = (0, o.P)(e.id);
     return (null == t ? void 0 : t.isStaff()) === !0 && e.isDM() && null == n
-        ? (0, r.jsx)(r.Fragment, {
-              children: (0, r.jsx)(l.sNh, {
-                  id: 'mark-as-stranger-danger',
-                  label: c.NW.string(c.t.CgWmmZ),
-                  action: () => (0, a.Dl)(e.id)
-              })
+        ? (0, r.jsx)(l.sNh, {
+              id: 'mark-as-stranger-danger',
+              label: c.NW.string(c.t.CgWmmZ),
+              action: () => (0, a.Dl)(e.id)
           })
         : null;
 }

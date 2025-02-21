@@ -245,31 +245,27 @@ function w(e) {
           : (0, r.jsxs)('div', {
                 className: a()(s, v.contextMenuContainer),
                 children: [
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(u.ZP, {
-                                className: a()(v.buttonMask),
-                                mask: null == O ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
-                                width: 56,
-                                height: 56,
-                                children: W
-                            }),
-                            D &&
-                                (0, r.jsx)('div', {
-                                    className: v.glow,
-                                    children: (0, r.jsx)(d.Z, {
-                                        ref: G,
-                                        loop: !0,
-                                        autoPlay: !0,
-                                        className: v.glowVideo,
-                                        children: (0, r.jsx)('source', {
-                                            src: N,
-                                            type: 'video/webm'
-                                        })
-                                    })
-                                })
-                        ]
+                    (0, r.jsx)(u.ZP, {
+                        className: a()(v.buttonMask),
+                        mask: null == O ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
+                        width: 56,
+                        height: 56,
+                        children: W
                     }),
+                    D &&
+                        (0, r.jsx)('div', {
+                            className: v.glow,
+                            children: (0, r.jsx)(d.Z, {
+                                ref: G,
+                                loop: !0,
+                                autoPlay: !0,
+                                className: v.glowVideo,
+                                children: (0, r.jsx)('source', {
+                                    src: N,
+                                    type: 'video/webm'
+                                })
+                            })
+                        }),
                     null != O
                         ? (0, r.jsx)(m.Z, {
                               children: (0, r.jsx)(l.P3F, {

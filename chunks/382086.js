@@ -21,14 +21,12 @@ let _ = 0.5 > Math.random();
 function g(e) {
     let { onClose: t, onBack: n, onCreationIntentChosen: s, hasFooter: g = !0 } = e,
         x = (0, d.Q3)('CreationIntentSlide'),
-        T = (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(l.zxk, {
-                className: N.backButton,
-                look: l.zxk.Looks.BLANK,
-                size: l.zxk.Sizes.MIN,
-                onClick: n,
-                children: p.NW.string(p.t['13/7kZ'])
-            })
+        T = (0, i.jsx)(l.zxk, {
+            className: N.backButton,
+            look: l.zxk.Looks.BLANK,
+            size: l.zxk.Sizes.MIN,
+            onClick: n,
+            children: p.NW.string(p.t['13/7kZ'])
         });
     function E(e) {
         o.default.track(m.rMx.GUILD_CREATION_INTENT_SELECTED, {

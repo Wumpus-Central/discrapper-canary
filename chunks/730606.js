@@ -72,11 +72,9 @@ function x(e) {
                       isSingleMosaicItem: !0,
                       onToggleObscurity: c,
                       children: (e) =>
-                          (0, r.jsx)(r.Fragment, {
-                              children: (0, r.jsx)('div', {
-                                  className: a()(R.obscureWrapper, { [R.obscure]: e }),
-                                  children: t(e)
-                              })
+                          (0, r.jsx)('div', {
+                              className: a()(R.obscureWrapper, { [R.obscure]: e }),
+                              children: t(e)
                           })
                   },
                   o
@@ -177,14 +175,12 @@ function M(e) {
                         isObscured: !m && L,
                         src: w.url,
                         children: (n) =>
-                            (0, r.jsx)(r.Fragment, {
-                                children: (0, r.jsx)(N.Z, {
-                                    media: w,
-                                    maxWidth: e,
-                                    maxHeight: t,
-                                    obscured: n,
-                                    onContextMenu: M
-                                })
+                            (0, r.jsx)(N.Z, {
+                                media: w,
+                                maxWidth: e,
+                                maxHeight: t,
+                                obscured: n,
+                                onContextMenu: M
                             })
                     })
             }),

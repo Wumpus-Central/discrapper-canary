@@ -161,54 +161,50 @@ let k = (e) => {
                       onClick: D,
                       children: P.NW.string(P.t.cpT0Cg)
                   }),
-                  (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          z
-                              ? (0, r.jsx)(g.ZP, {
-                                    type: R.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: R.Si.TIER_2,
-                                    onClose: D,
-                                    trialOffer: Y,
-                                    discountOffer: K,
+                  z
+                      ? (0, r.jsx)(g.ZP, {
+                            type: R.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                            subscriptionTier: R.Si.TIER_2,
+                            onClose: D,
+                            trialOffer: Y,
+                            discountOffer: K,
+                            children: P.NW.format(P.t.se13Fh, { onClick: V })
+                        })
+                      : (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)('img', {
+                                    alt: '',
+                                    className: w.premiumPromoImage,
+                                    src: H
+                                }),
+                                (0, r.jsx)('div', {
+                                    className: w.premiumPromoTitle,
+                                    children: P.NW.string(P.t['1SsvhY'])
+                                }),
+                                (0, r.jsx)('div', {
+                                    className: w.premiumPromoDescription,
                                     children: P.NW.format(P.t.se13Fh, { onClick: V })
                                 })
-                              : (0, r.jsxs)(r.Fragment, {
-                                    children: [
-                                        (0, r.jsx)('img', {
-                                            alt: '',
-                                            className: w.premiumPromoImage,
-                                            src: H
-                                        }),
-                                        (0, r.jsx)('div', {
-                                            className: w.premiumPromoTitle,
-                                            children: P.NW.string(P.t['1SsvhY'])
-                                        }),
-                                        (0, r.jsx)('div', {
-                                            className: w.premiumPromoDescription,
-                                            children: P.NW.format(P.t.se13Fh, { onClick: V })
-                                        })
-                                    ]
-                                }),
-                          !z &&
-                              (0, r.jsx)(E.Z, {
-                                  subscriptionTier: R.Si.TIER_2,
-                                  submitting: Z,
-                                  premiumModalAnalyticsLocation: {
-                                      section: A.jXE.EMOJI_PICKER_POPOUT,
-                                      object: A.qAy.BUTTON_CTA
-                                  },
-                                  size: l.zxk.Sizes.SMALL,
-                                  color: l.zxk.Colors.GREEN,
-                                  onClick: () => {
-                                      F(!0);
-                                  },
-                                  onSubscribeModalClose: (e) => {
-                                      F(!1), e && D();
-                                  },
-                                  buttonText: ei()
-                              })
-                      ]
-                  })
+                            ]
+                        }),
+                  !z &&
+                      (0, r.jsx)(E.Z, {
+                          subscriptionTier: R.Si.TIER_2,
+                          submitting: Z,
+                          premiumModalAnalyticsLocation: {
+                              section: A.jXE.EMOJI_PICKER_POPOUT,
+                              object: A.qAy.BUTTON_CTA
+                          },
+                          size: l.zxk.Sizes.SMALL,
+                          color: l.zxk.Colors.GREEN,
+                          onClick: () => {
+                              F(!0);
+                          },
+                          onSubscribeModalClose: (e) => {
+                              F(!1), e && D();
+                          },
+                          buttonText: ei()
+                      })
               ]
           });
 };

@@ -158,30 +158,26 @@ function S(e) {
                                     children: k ? j.NW.string(j.t.rtgp7u) : j.NW.formatToPlainString(j.t.NZeik5, { guildName: a.name })
                                 })
                             }),
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    (0, r.jsx)(s.LZC, { size: 8 }),
-                                    (0, r.jsx)(s.Text, {
-                                        variant: 'text-md/normal',
-                                        color: 'text-normal',
-                                        children: j.NW.format(j.t['7JwrlJ'], {
-                                            username: f,
-                                            usernameHook: function (e, t) {
-                                                return (0, r.jsx)(
-                                                    'span',
-                                                    {
-                                                        style: { color: _ },
-                                                        children: e
-                                                    },
-                                                    t
-                                                );
-                                            }
-                                        })
-                                    }),
-                                    (0, r.jsx)(s.LZC, { size: 9 }),
-                                    L
-                                ]
-                            })
+                            (0, r.jsx)(s.LZC, { size: 8 }),
+                            (0, r.jsx)(s.Text, {
+                                variant: 'text-md/normal',
+                                color: 'text-normal',
+                                children: j.NW.format(j.t['7JwrlJ'], {
+                                    username: f,
+                                    usernameHook: function (e, t) {
+                                        return (0, r.jsx)(
+                                            'span',
+                                            {
+                                                style: { color: _ },
+                                                children: e
+                                            },
+                                            t
+                                        );
+                                    }
+                                })
+                            }),
+                            (0, r.jsx)(s.LZC, { size: 9 }),
+                            L
                         ]
                     })
                 ]

@@ -125,15 +125,13 @@ let T = (0, i.memo)(function (e) {
                       Y
                           ? (0, r.jsx)(v.Z, { className: S.image })
                           : $.isAnimated
-                            ? (0, r.jsx)(r.Fragment, {
-                                  children: (0, r.jsx)(g.Z, {
-                                      className: S.assetBlurred,
-                                      autoPlay: !1,
-                                      children: (0, r.jsx)('source', {
-                                          src: $.url,
-                                          type: null !== (j = $.mimetype) && void 0 !== j ? j : void 0,
-                                          onError: () => er($.url)
-                                      })
+                            ? (0, r.jsx)(g.Z, {
+                                  className: S.assetBlurred,
+                                  autoPlay: !1,
+                                  children: (0, r.jsx)('source', {
+                                      src: $.url,
+                                      type: null !== (j = $.mimetype) && void 0 !== j ? j : void 0,
+                                      onError: () => er($.url)
                                   })
                               })
                             : (0, r.jsx)('img', {

@@ -61,17 +61,15 @@ let b = 'url(#dark-purple-gradient)',
                     onTryFeature: () => {
                         (0, c.uL)(h.Z5c.NITRO_HOME), O();
                     },
-                    art: (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsx)(u.ZP, {
-                            staticPercentage: 100,
-                            iconClassName: m.incentiveIcon,
-                            showAnimations: !1,
-                            progressCircleVariation: u.Qo.NITRO_LOGO,
-                            ellipseOpacity: 1,
-                            circleColor: b,
-                            circleStroke: b,
-                            progressCircleStrokeSize: 4
-                        })
+                    art: (0, r.jsx)(u.ZP, {
+                        staticPercentage: 100,
+                        iconClassName: m.incentiveIcon,
+                        showAnimations: !1,
+                        progressCircleVariation: u.Qo.NITRO_LOGO,
+                        ellipseOpacity: 1,
+                        circleColor: b,
+                        circleStroke: b,
+                        progressCircleStrokeSize: 4
                     }),
                     position: 'right',
                     align: 'top',

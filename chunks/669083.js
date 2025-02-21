@@ -251,40 +251,38 @@ class E extends r.PureComponent {
         });
     }
     renderDeveloperSettings() {
-        return (0, i.jsx)(r.Fragment, {
-            children: (0, i.jsx)(o.xJW, {
-                title: 'Crashes',
-                className: v.marginBottom20,
-                children: (0, i.jsx)(o.q4e, {
-                    value: void 0,
-                    options: [
-                        {
-                            value: void 0,
-                            label: 'Native crash'
-                        },
-                        {
-                            value: 0,
-                            label: 'Abort()'
-                        },
-                        {
-                            value: 1,
-                            label: 'SIGSEGV()'
-                        },
-                        {
-                            value: 2,
-                            label: 'EXCEPTION_ACCESS_VIOLATION'
-                        },
-                        {
-                            value: 3,
-                            label: 'RaiseFailFastException'
-                        },
-                        {
-                            value: 4,
-                            label: 'Out of Memory'
-                        }
-                    ],
-                    onChange: (e) => null != e && p.ZP.crash(e)
-                })
+        return (0, i.jsx)(o.xJW, {
+            title: 'Crashes',
+            className: v.marginBottom20,
+            children: (0, i.jsx)(o.q4e, {
+                value: void 0,
+                options: [
+                    {
+                        value: void 0,
+                        label: 'Native crash'
+                    },
+                    {
+                        value: 0,
+                        label: 'Abort()'
+                    },
+                    {
+                        value: 1,
+                        label: 'SIGSEGV()'
+                    },
+                    {
+                        value: 2,
+                        label: 'EXCEPTION_ACCESS_VIOLATION'
+                    },
+                    {
+                        value: 3,
+                        label: 'RaiseFailFastException'
+                    },
+                    {
+                        value: 4,
+                        label: 'Out of Memory'
+                    }
+                ],
+                onChange: (e) => null != e && p.ZP.crash(e)
             })
         });
     }

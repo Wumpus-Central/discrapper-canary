@@ -46,11 +46,9 @@ function C(e) {
                       height: l
                   }),
                   null != a &&
-                      (0, r.jsx)(r.Fragment, {
-                          children: (0, r.jsx)('div', {
-                              className: I.splashGradient,
-                              style: { background: 'linear-gradient(180deg, '.concat((0, h.aD)(a, 0.16), ' 0%, ').concat((0, h.aD)(a, 1), ' 100%)') }
-                          })
+                      (0, r.jsx)('div', {
+                          className: I.splashGradient,
+                          style: { background: 'linear-gradient(180deg, '.concat((0, h.aD)(a, 0.16), ' 0%, ').concat((0, h.aD)(a, 1), ' 100%)') }
                       }),
                   (0, r.jsx)('div', { className: I.splashGradient })
               ]

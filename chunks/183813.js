@@ -22,12 +22,12 @@ function E(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { selectedPlan: s, selectedSkuId: E, step: S } = (0, h.JL)(),
         { setSelectedGiftingPromotionReward: N, selectedGiftingPromotionReward: y, claimableRewards: I } = (0, f.wD)(),
-        O = (0, a.e7)([p.default], () => p.default.getCurrentUser());
+        v = (0, a.e7)([p.default], () => p.default.getCurrentUser());
     i.useEffect(() => {
         let e = null != I && I.length > 0;
         null == y && e && N(I[0]);
     }, [I, y, N]);
-    let v = (e) => {
+    let O = (e) => {
             let t = e.skuId;
             return (0, l.jsx)(
                 d.Z,
@@ -43,12 +43,12 @@ function E(e) {
         },
         P = (0, c.Q3)('PremiumPaymentFreeSKUSelectStep');
     r()(null != s, 'Expected plan to selected'), r()(null != E, 'Expected selectedSkuId'), r()(null != S, 'Step should be set');
-    let b = null == I ? void 0 : I.map((e) => v(e)),
+    let b = null == I ? void 0 : I.map((e) => O(e)),
         T =
-            null != y && null != O
+            null != y && null != v
                 ? (0, l.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: y.assetId },
-                      user: O,
+                      user: v,
                       guildId: null,
                       avatarSize: o.EFr.SIZE_152
                   })
@@ -58,10 +58,10 @@ function E(e) {
                 className: g.modalFooter,
                 children: (0, l.jsx)(u.y, {
                     onStepChange: (e) => {
-                        null != O &&
+                        null != v &&
                             null != y &&
                             x.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: O.id,
+                                user_id: v.id,
                                 reward_sku_id: y.skuId
                             }),
                             t(e);
@@ -109,30 +109,28 @@ function E(e) {
                   M
               ]
           })
-        : (0, l.jsx)(l.Fragment, {
-              children: (0, l.jsxs)('div', {
-                  className: g.stepBodySkuSelect,
-                  children: [
-                      (0, l.jsxs)('div', {
-                          className: g.bodyColumnLeft,
-                          children: [
-                              (0, l.jsx)('div', {
-                                  className: g.header,
-                                  children: Z
-                              }),
-                              b
-                          ]
-                      }),
-                      (0, l.jsx)(o.olH, {
-                          onClick: n,
-                          className: g.closeButton
-                      }),
-                      (0, l.jsx)('div', {
-                          className: g.bodyColumnRight,
-                          children: T
-                      }),
-                      M
-                  ]
-              })
+        : (0, l.jsxs)('div', {
+              className: g.stepBodySkuSelect,
+              children: [
+                  (0, l.jsxs)('div', {
+                      className: g.bodyColumnLeft,
+                      children: [
+                          (0, l.jsx)('div', {
+                              className: g.header,
+                              children: Z
+                          }),
+                          b
+                      ]
+                  }),
+                  (0, l.jsx)(o.olH, {
+                      onClick: n,
+                      className: g.closeButton
+                  }),
+                  (0, l.jsx)('div', {
+                      className: g.bodyColumnRight,
+                      children: T
+                  }),
+                  M
+              ]
           });
 }

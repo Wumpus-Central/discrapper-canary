@@ -40,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,20 +58,20 @@ function O(e, t) {
         e
     );
 }
-let N = p.fX.KEYWORD;
+let O = p.fX.KEYWORD;
 function E(e, t) {
-    let { perGuildMaxCount: n } = c.I6[N],
-        { isLoading: E, saveRule: j, errorMessage: P } = (0, d.w)(),
-        { createNewEditingRule: S } = (0, d.V)(),
-        [Z, x] = i.useState(!1),
-        [I, _] = (0, s.I2)(t),
-        { rulesByTriggerType: T, updateRule: w } = (0, s.pH)(t),
-        M = i.useMemo(() => {
+    let { perGuildMaxCount: n } = c.I6[O],
+        { isLoading: E, saveRule: j, errorMessage: S } = (0, d.w)(),
+        { createNewEditingRule: P } = (0, d.V)(),
+        [Z, I] = i.useState(!1),
+        [x, _] = (0, s.I2)(t),
+        { rulesByTriggerType: T, updateRule: M } = (0, s.pH)(t),
+        w = i.useMemo(() => {
             var e;
-            return null !== (e = T[N]) && void 0 !== e ? e : [];
+            return null !== (e = T[O]) && void 0 !== e ? e : [];
         }, [T]),
-        A = 0 === M.length,
-        D = n > M.length && !A;
+        A = 0 === w.length,
+        D = n > w.length && !A;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let C = e.split(' '),
         W = C.length;
@@ -85,7 +85,7 @@ function E(e, t) {
                 ((0, a.Zy)(),
                 m.Z.open(t, b.pNK.GUILD_AUTOMOD),
                 setTimeout(() => {
-                    S(t, N, {
+                    P(t, O, {
                         triggerMetadata: {
                             keywordFilter: [e],
                             regexPatterns: [],
@@ -97,21 +97,19 @@ function E(e, t) {
         k = async (t) => {
             var n, r;
             if (((0, a.Zy)(), !(await (0, g.XN)(t.name, e)))) return;
-            let i = O(y({}, t), {
-                triggerMetadata: O(y({}, t.triggerMetadata), {
+            let i = N(y({}, t), {
+                triggerMetadata: N(y({}, t.triggerMetadata), {
                     keywordFilter: [...(null !== (r = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== r ? r : []), e]
                 })
             });
-            await j(i, M), w(i), null != P ? (0, l.showToast)((0, l.createToast)(h.NW.string(h.t.wH6L0t), l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(h.NW.string(h.t['0rdYm5']), l.ToastType.SUCCESS));
+            await j(i, w), M(i), null != S ? (0, l.showToast)((0, l.createToast)(h.NW.string(h.t.wH6L0t), l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(h.NW.string(h.t['0rdYm5']), l.ToastType.SUCCESS));
         },
-        R = (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsx)(l.sNh, {
-                id: 'automod-rules-loading',
-                label: h.NW.string(h.t.ZTNur6)
-            })
+        R = (0, r.jsx)(l.sNh, {
+            id: 'automod-rules-loading',
+            label: h.NW.string(h.t.ZTNur6)
         });
     return (
-        I ||
+        x ||
             (R = (0, r.jsxs)(r.Fragment, {
                 children: [
                     A &&
@@ -121,8 +119,8 @@ function E(e, t) {
                             action: L,
                             disabled: E
                         }),
-                    M.map((e) => {
-                        let t = (0, c.V9)(N).reduce((t, n) => {
+                    w.map((e) => {
+                        let t = (0, c.V9)(O).reduce((t, n) => {
                             let r = e.actions.find((e) => {
                                 let { type: t } = e;
                                 return n === t;
@@ -168,7 +166,7 @@ function E(e, t) {
             id: 'guild-automod-add-selection',
             label: h.NW.formatToPlainString(h.t.Kkjv1t, { keywordCount: W }),
             onFocus: () => {
-                !Z && (x(!0), _());
+                !Z && (I(!0), _());
             },
             children: R
         })

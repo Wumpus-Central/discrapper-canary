@@ -10,14 +10,14 @@ var r = t(120356),
     c = t(939863),
     u = t(184301),
     _ = t(347475),
-    g = t(314897),
-    p = t(158776),
+    p = t(314897),
+    g = t(158776),
     m = t(885110),
     v = t(594174),
     I = t(315416),
     f = t(765305),
-    h = t(388032),
-    N = t(464012);
+    N = t(388032),
+    h = t(464012);
 function E(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -64,17 +64,17 @@ function C(e, n) {
 function b(e) {
     let { children: n } = e;
     return (0, i.jsxs)('div', {
-        className: N.emptyContainer,
+        className: h.emptyContainer,
         children: [
             (0, i.jsx)(c.Z, {
                 children: (0, i.jsx)('div', {
-                    className: N.circle,
+                    className: h.circle,
                     children: (0, i.jsx)(d.BFJ, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
                         width: 40,
-                        className: N.icon
+                        className: h.icon
                     })
                 })
             }),
@@ -87,8 +87,8 @@ function x() {
         children: (0, i.jsx)(d.X6q, {
             color: 'header-primary',
             variant: 'heading-xl/semibold',
-            className: N.title,
-            children: h.NW.string(h.t.hW0mBQ)
+            className: h.title,
+            children: N.NW.string(N.t.hW0mBQ)
         })
     });
 }
@@ -97,40 +97,38 @@ function T() {
         children: (0, i.jsx)(d.X6q, {
             color: 'header-secondary',
             variant: 'heading-md/semibold',
-            className: N.errorTitle,
-            children: h.NW.string(h.t.obChXl)
+            className: h.errorTitle,
+            children: N.NW.string(N.t.obChXl)
         })
     });
 }
 function y(e) {
     let { count: n } = e;
-    return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)('div', {
-            className: N.listRow,
-            children: [
-                (0, i.jsx)('div', {
-                    className: l()(N.listRowCircle, N.listAvatar),
-                    children: (0, i.jsx)(d.BFJ, {
-                        size: 'custom',
-                        color: 'currentColor',
-                        height: 14,
-                        width: 14,
-                        className: N.icon
-                    })
-                }),
-                (0, i.jsx)(d.Text, {
-                    color: 'text-normal',
-                    variant: 'text-md/normal',
-                    children: h.NW.format(h.t.BdQTfX, { userRemainCount: n })
+    return (0, i.jsxs)('div', {
+        className: h.listRow,
+        children: [
+            (0, i.jsx)('div', {
+                className: l()(h.listRowCircle, h.listAvatar),
+                children: (0, i.jsx)(d.BFJ, {
+                    size: 'custom',
+                    color: 'currentColor',
+                    height: 14,
+                    width: 14,
+                    className: h.icon
                 })
-            ]
-        })
+            }),
+            (0, i.jsx)(d.Text, {
+                color: 'text-normal',
+                variant: 'text-md/normal',
+                children: N.NW.format(N.t.BdQTfX, { userRemainCount: n })
+            })
+        ]
     });
 }
 function L(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         o = (0, a.e7)([v.default], () => v.default.getUser(n.user_id)),
-        c = (0, a.e7)([m.Z, p.Z, g.default], () => (n.user_id === g.default.getId() ? m.Z.getStatus() : p.Z.getStatus(n.user_id, t)), [n.user_id, t]);
+        c = (0, a.e7)([m.Z, g.Z, p.default], () => (n.user_id === p.default.getId() ? m.Z.getStatus() : g.Z.getStatus(n.user_id, t)), [n.user_id, t]);
     return null == o
         ? null
         : (0, i.jsx)(d.yRy, {
@@ -153,7 +151,7 @@ function L(e) {
                       C(
                           E(
                               {
-                                  className: l()(N.listRow, N.interactiveRow, { [N.selected]: _ }),
+                                  className: l()(h.listRow, h.interactiveRow, { [h.selected]: _ }),
                                   onContextMenu: (e) => r(e, o)
                               },
                               e
@@ -164,13 +162,13 @@ function L(e) {
                                       src: o.getAvatarURL(t, 24),
                                       'aria-label': o.username,
                                       size: d.EFr.SIZE_24,
-                                      className: N.listAvatar,
+                                      className: h.listAvatar,
                                       status: c
                                   }),
                                   (0, i.jsx)(s.Z, {
                                       user: o,
-                                      className: N.listName,
-                                      discriminatorClass: N.listDiscriminator,
+                                      className: h.listName,
+                                      discriminatorClass: h.listDiscriminator,
                                       nick: null === (u = n.member) || void 0 === u ? void 0 : u.nick
                                   })
                               ]
@@ -183,7 +181,7 @@ function L(e) {
 function j(e) {
     let { eventUsers: n, guildId: t, usersNotShownCount: r = 0, onContextMenu: l } = e;
     return (0, i.jsxs)(d.zJl, {
-        className: N.listScroller,
+        className: h.listScroller,
         children: [
             n.map((e) =>
                 (0, i.jsx)(
@@ -203,7 +201,7 @@ function j(e) {
 function S(e) {
     let { children: n, style: t } = e;
     return (0, i.jsx)('div', {
-        className: N.container,
+        className: h.container,
         style: null != t ? t : {},
         children: n
     });
@@ -223,7 +221,7 @@ function O(e) {
             height: c,
             children: (0, i.jsx)(d.$jN, {
                 type: d.$jN.Type.SPINNING_CIRCLE,
-                className: N.spinner
+                className: h.spinner
             })
         });
     if (null != s && 0 === l.length)

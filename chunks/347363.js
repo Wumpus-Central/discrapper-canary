@@ -14,6 +14,8 @@ e.exports = {
     buttonColor: 'buttonColor_e131a9',
     buttonActive: 'buttonActive_e131a9',
     fauxDisabled: 'fauxDisabled_e131a9',
+    experimentButton: 'experimentButton_e131a9',
+    greyButtonActive: 'greyButtonActive_e131a9',
     buttonContents: 'buttonContents_e131a9',
     buttonIcon: 'buttonIcon_e131a9',
     withText: 'withText_e131a9',

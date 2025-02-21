@@ -383,26 +383,24 @@ function Z(e) {
             }
             return (
                 l()(null != j, 'There must be some upsell context'),
-                (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsxs)('div', {
-                        className: D.contentContainer,
-                        children: [
-                            (0, r.jsx)(_.X6q, {
-                                variant: 'heading-xl/bold',
-                                color: 'header-primary',
-                                children: t
-                            }),
-                            (0, r.jsx)(_.Text, {
-                                variant: 'text-md/normal',
-                                children: i
-                            }),
-                            (0, r.jsx)(M, {
-                                trialOffer: b,
-                                discountOffer: T,
-                                children: j
-                            })
-                        ]
-                    })
+                (0, r.jsxs)('div', {
+                    className: D.contentContainer,
+                    children: [
+                        (0, r.jsx)(_.X6q, {
+                            variant: 'heading-xl/bold',
+                            color: 'header-primary',
+                            children: t
+                        }),
+                        (0, r.jsx)(_.Text, {
+                            variant: 'text-md/normal',
+                            children: i
+                        }),
+                        (0, r.jsx)(M, {
+                            trialOffer: b,
+                            discountOffer: T,
+                            children: j
+                        })
+                    ]
                 })
             );
         case R.cd.BURST_REACTION_QUICK_ACTION_UPSELL:

@@ -288,67 +288,65 @@ function Q(e) {
             ),
         eq = () => eF(eO, eR, eP),
         eQ = () => (ej ? (0, r.jsx)(d.Z, { message: F.NW.formatToPlainString(F.t['9hnZoK'], { kunaPriceWithCurrency: (0, O.T4)(7.5345 * eM.amount, Z.pK.HRK) }) }) : null);
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: a()(eg ? H.stepBodyCustomGift : H.stepBody, { [H.paddingForHalloweenBanner]: ev }),
-            children: [
-                (0, r.jsxs)('div', {
-                    className: eg ? eY : void 0,
-                    children: [
-                        (0, r.jsx)(P.Z, {
-                            fromBoostCancelModal: !1,
-                            className: H.legacyPricingNotice
-                        }),
-                        eW && eq(),
-                        eW ? ez() : eK(),
-                        eW && eQ()
-                    ]
-                }),
-                (0, r.jsxs)('div', {
-                    className: eg ? H.bodyColumnRight : void 0,
-                    children: [
-                        (0, r.jsx)(U.s, {
-                            className: et ? H.compactSendGiftToUser : void 0,
-                            giftRecipient: ec
-                        }),
-                        eW && eK(),
-                        eV(),
-                        null != eb &&
-                            !el &&
-                            (0, r.jsx)('div', {
-                                className: H.bodyText,
-                                children: q(eb, E)
-                            }),
-                        !eW && eq(),
-                        !eW && ez(),
+    return (0, r.jsxs)('div', {
+        className: a()(eg ? H.stepBodyCustomGift : H.stepBody, { [H.paddingForHalloweenBanner]: ev }),
+        children: [
+            (0, r.jsxs)('div', {
+                className: eg ? eY : void 0,
+                children: [
+                    (0, r.jsx)(P.Z, {
+                        fromBoostCancelModal: !1,
+                        className: H.legacyPricingNotice
+                    }),
+                    eW && eq(),
+                    eW ? ez() : eK(),
+                    eW && eQ()
+                ]
+            }),
+            (0, r.jsxs)('div', {
+                className: eg ? H.bodyColumnRight : void 0,
+                children: [
+                    (0, r.jsx)(U.s, {
+                        className: et ? H.compactSendGiftToUser : void 0,
+                        giftRecipient: ec
+                    }),
+                    eW && eK(),
+                    eV(),
+                    null != eb &&
+                        !el &&
                         (0, r.jsx)('div', {
-                            children:
-                                ex && null != eN && null != eM
-                                    ? (0, r.jsxs)('div', {
-                                          children: [
-                                              (0, r.jsx)('div', { className: H.selectPlanDivider }),
-                                              (0, r.jsx)(w.Ji, {
-                                                  label: F.NW.string(F.t.txajQE),
-                                                  value: (0, r.jsx)(D.Z, {
-                                                      price: eM.amount,
-                                                      currency: eM.currency,
-                                                      intervalType: el ? null : eN.interval,
-                                                      intervalCount: eN.intervalCount,
-                                                      isPrepaidPaymentSource: eU
-                                                  }),
-                                                  className: H.selectPlanTotalRow
-                                              })
-                                          ]
-                                      })
-                                    : null
+                            className: H.bodyText,
+                            children: q(eb, E)
                         }),
-                        !eW && eQ(),
-                        !el && !eB && $ && (0, r.jsx)(d.Z, { message: F.NW.format(F.t.Om31w8, { documentationLink: b.Z.getArticleURL(B.BhN.LOCALIZED_PRICING) }) }),
-                        el && !eW && (0, r.jsx)(p.Z, { onClose: en })
-                    ]
-                })
-            ]
-        })
+                    !eW && eq(),
+                    !eW && ez(),
+                    (0, r.jsx)('div', {
+                        children:
+                            ex && null != eN && null != eM
+                                ? (0, r.jsxs)('div', {
+                                      children: [
+                                          (0, r.jsx)('div', { className: H.selectPlanDivider }),
+                                          (0, r.jsx)(w.Ji, {
+                                              label: F.NW.string(F.t.txajQE),
+                                              value: (0, r.jsx)(D.Z, {
+                                                  price: eM.amount,
+                                                  currency: eM.currency,
+                                                  intervalType: el ? null : eN.interval,
+                                                  intervalCount: eN.intervalCount,
+                                                  isPrepaidPaymentSource: eU
+                                              }),
+                                              className: H.selectPlanTotalRow
+                                          })
+                                      ]
+                                  })
+                                : null
+                    }),
+                    !eW && eQ(),
+                    !el && !eB && $ && (0, r.jsx)(d.Z, { message: F.NW.format(F.t.Om31w8, { documentationLink: b.Z.getArticleURL(B.BhN.LOCALIZED_PRICING) }) }),
+                    el && !eW && (0, r.jsx)(p.Z, { onClose: en })
+                ]
+            })
+        ]
     });
 }
 function X(e) {

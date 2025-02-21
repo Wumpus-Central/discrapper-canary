@@ -106,21 +106,19 @@ let m = Object.freeze({
         let { theme: t } = e,
             n = p.NW.string(p.t['oi+B4u']),
             r = m.SECTION_ALL,
-            o = (0, c.Q3)('AddFriendEmpty');
-        return (0, i.jsx)(l.Fragment, {
-            children: (0, i.jsxs)(s.ubH, {
-                theme: t,
-                children: [
-                    !o &&
-                        (0, i.jsx)(s.oxh, {
-                            width: r.width,
-                            height: r.height,
-                            lightSrc: r.lightSrc,
-                            darkSrc: r.darkSrc
-                        }),
-                    (0, i.jsx)(s.OZU, { note: n })
-                ]
-            })
+            l = (0, c.Q3)('AddFriendEmpty');
+        return (0, i.jsxs)(s.ubH, {
+            theme: t,
+            children: [
+                !l &&
+                    (0, i.jsx)(s.oxh, {
+                        width: r.width,
+                        height: r.height,
+                        lightSrc: r.lightSrc,
+                        darkSrc: r.darkSrc
+                    }),
+                (0, i.jsx)(s.OZU, { note: n })
+            ]
         });
     };
 class _ extends l.PureComponent {

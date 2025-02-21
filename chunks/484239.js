@@ -4,8 +4,8 @@ n(192379);
 var i = n(120356),
     s = n.n(i),
     a = n(481060),
-    l = n(314684),
-    o = n(404615),
+    o = n(314684),
+    l = n(404615),
     c = n(743612),
     d = n(735825),
     u = n(596470),
@@ -17,8 +17,8 @@ let h = (e) => {
     let n,
         i,
         { title: h, titleClassName: f, buttonClassName: b, perkImage: N, isCarousel: x, onCtaClick: _, perkComponent: E, subtitle: j = '', descriptionCta: C = '', cardVariant: O, subtitleClassName: v, imageOverlayText: S } = e,
-        T = (0, o._)(O),
-        I = (0, l.yQ)(),
+        T = (0, l._)(O),
+        I = (0, o.yQ)(),
         y = (null == I ? void 0 : I.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == I ? void 0 : I.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
@@ -67,31 +67,29 @@ let h = (e) => {
                     ]
                 }),
             null != E &&
-                (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsxs)('div', {
-                        className: u.cardIllustrationNoHover,
-                        children: [
-                            E,
-                            0 !== C.length &&
-                                null != _ &&
-                                (0, r.jsx)(a.zxk, {
-                                    className: b,
-                                    disabled: !y,
-                                    fullWidth: !0,
-                                    onClick: _,
-                                    children: (0, r.jsxs)('div', {
-                                        className: null == T ? void 0 : null === (t = T.descriptionCta) || void 0 === t ? void 0 : t.className,
-                                        children: [
-                                            (0, r.jsx)('img', {
-                                                alt: i,
-                                                src: n
-                                            }),
-                                            C
-                                        ]
-                                    })
+                (0, r.jsxs)('div', {
+                    className: u.cardIllustrationNoHover,
+                    children: [
+                        E,
+                        0 !== C.length &&
+                            null != _ &&
+                            (0, r.jsx)(a.zxk, {
+                                className: b,
+                                disabled: !y,
+                                fullWidth: !0,
+                                onClick: _,
+                                children: (0, r.jsxs)('div', {
+                                    className: null == T ? void 0 : null === (t = T.descriptionCta) || void 0 === t ? void 0 : t.className,
+                                    children: [
+                                        (0, r.jsx)('img', {
+                                            alt: i,
+                                            src: n
+                                        }),
+                                        C
+                                    ]
                                 })
-                        ]
-                    })
+                            })
+                    ]
                 })
         ]
     });

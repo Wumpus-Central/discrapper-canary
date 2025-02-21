@@ -12,38 +12,36 @@ function s(e) {
         [m, p] = l.useState(),
         h = n.id.split(':').at(-1),
         v = t === h,
-        g = l.useCallback((e, t, n) => {
+        b = l.useCallback((e, t, n) => {
             var r, l, i;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
             u(null !== (r = null == o ? void 0 : o.codec) && void 0 !== r ? r : 'unknown'), f(void 0 === (l = null == o ? void 0 : o.resolution) || (0 === l.width && 0 === l.height) ? 'unknown' : l.width + ' x ' + l.height), p((null == o ? void 0 : o.bitrateEstimate) !== void 0 ? ((i = o.bitrateEstimate), ''.concat((i / 1000).toFixed(2), ' Kbps')) : 'unknown');
         }, []);
     return (
         l.useEffect(() => {
-            let e = () => g(h, s, v);
+            let e = () => b(h, s, v);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [v, h, s, g]),
-        (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)('div', {
-                className: o.streamInfoContainer,
-                children: [
-                    (0, r.jsx)('div', { children: (0, r.jsx)('strong', { children: 'Stream Info' }) }),
+        }, [v, h, s, b]),
+        (0, r.jsxs)('div', {
+            className: o.streamInfoContainer,
+            children: [
+                (0, r.jsx)('div', { children: (0, r.jsx)('strong', { children: 'Stream Info' }) }),
+                (0, r.jsxs)('div', {
+                    className: o.infoRow,
+                    children: [(0, r.jsx)('span', { children: 'Video Codec: ' }), (0, r.jsx)('strong', { children: c })]
+                }),
+                (0, r.jsxs)('div', {
+                    className: o.infoRow,
+                    children: [(0, r.jsx)('span', { children: 'Resolution: ' }), (0, r.jsx)('strong', { children: d })]
+                }),
+                v &&
                     (0, r.jsxs)('div', {
                         className: o.infoRow,
-                        children: [(0, r.jsx)('span', { children: 'Video Codec: ' }), (0, r.jsx)('strong', { children: c })]
-                    }),
-                    (0, r.jsxs)('div', {
-                        className: o.infoRow,
-                        children: [(0, r.jsx)('span', { children: 'Resolution: ' }), (0, r.jsx)('strong', { children: d })]
-                    }),
-                    v &&
-                        (0, r.jsxs)('div', {
-                            className: o.infoRow,
-                            children: [(0, r.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, r.jsx)('strong', { children: m })]
-                        })
-                ]
-            })
+                        children: [(0, r.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, r.jsx)('strong', { children: m })]
+                    })
+            ]
         })
     );
 }

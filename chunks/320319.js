@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(392711),
-    o = n(990547),
+    o = n(392711),
+    l = n(990547),
     c = n(399606),
     d = n(704215),
     u = n(481060),
@@ -104,18 +104,18 @@ let R = {
                 X === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, p.EW)(X);
             }, [X, G]);
         let { easterEggLevel: Q, isEasterEggTriggered: $, onHover: ee, onUnhover: et } = (0, _.Z)(5),
-            en = (0, l.debounce)(() => {
+            en = (0, o.debounce)(() => {
                 f.default.track(S.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
-                    card_type: (0, l.snakeCase)(t),
+                    card_type: (0, o.snakeCase)(t),
                     is_tenure_reward: t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE,
                     reward_status: null == U ? void 0 : U.nitroTenureStatus
                 });
             }, 800),
-            er = (0, l.debounce)(() => {
+            er = (0, o.debounce)(() => {
                 null != w &&
                     f.default.track(S.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
-                        card_type: (0, l.snakeCase)(t),
-                        function_name: (0, l.snakeCase)(w.name)
+                        card_type: (0, o.snakeCase)(t),
+                        function_name: (0, o.snakeCase)(w.name)
                     });
             }, 800),
             ei = i.useRef(null);
@@ -133,8 +133,8 @@ let R = {
         }, [k, W, s, t, J]),
         (0, g.Z)(
             {
-                type: o.ImpressionTypes.VIEW,
-                name: o.ImpressionNames.PREMIUM_MARKETING_TENURE_REWARD_CARD,
+                type: l.ImpressionTypes.VIEW,
+                name: l.ImpressionNames.PREMIUM_MARKETING_TENURE_REWARD_CARD,
                 properties: {
                     user_tenure_reward_id: null == U ? void 0 : U.tenureRewardStatusId,
                     tenure_reward_id: null == U ? void 0 : U.tenureRewardSkuId,
@@ -146,8 +146,8 @@ let R = {
             { disableTrack: (t !== E.u.FREE_BOOST && t !== E.u.TENURE_REWARD_COLLECTIBLE) || null == U }
         ),
         (0, g.Z)({
-            type: o.ImpressionTypes.VIEW,
-            name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+            type: l.ImpressionTypes.VIEW,
+            name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD,
             properties: { name: t }
         }),
         n)
@@ -178,32 +178,30 @@ let R = {
                       })
                   })
                 : es
-                  ? (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsxs)('div', {
-                            className: a()({
-                                [y.noFlipCardContainer]: !K,
-                                [y.noFlipCardContainerCarousel]: K,
-                                [y.forceShadow]: x,
-                                [y.reducedMotion]: k
-                            }),
-                            children: [
-                                (0, r.jsx)(Z, P(A({}, e), { ref: t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE ? ei : void 0 })),
-                                H &&
-                                    (0, r.jsx)(N.Z, {
-                                        speedValues: R,
-                                        numBursts: 3,
-                                        particlesPerBurst: 15,
-                                        confettiTarget: ei.current,
-                                        offsetXPercentageMax: -30,
-                                        offsetXPercentageMin: -70,
-                                        offsetYPercentageMax: 40,
-                                        offsetYPercentageMin: 20,
-                                        customConfettiCanvas: O,
-                                        dragCoefficientValue: 0.0166,
-                                        onAnimationEnd: Y
-                                    })
-                            ]
-                        })
+                  ? (0, r.jsxs)('div', {
+                        className: a()({
+                            [y.noFlipCardContainer]: !K,
+                            [y.noFlipCardContainerCarousel]: K,
+                            [y.forceShadow]: x,
+                            [y.reducedMotion]: k
+                        }),
+                        children: [
+                            (0, r.jsx)(Z, P(A({}, e), { ref: t === E.u.FREE_BOOST || t === E.u.TENURE_REWARD_COLLECTIBLE ? ei : void 0 })),
+                            H &&
+                                (0, r.jsx)(N.Z, {
+                                    speedValues: R,
+                                    numBursts: 3,
+                                    particlesPerBurst: 15,
+                                    confettiTarget: ei.current,
+                                    offsetXPercentageMax: -30,
+                                    offsetXPercentageMin: -70,
+                                    offsetYPercentageMax: 40,
+                                    offsetYPercentageMin: 20,
+                                    customConfettiCanvas: O,
+                                    dragCoefficientValue: 0.0166,
+                                    onAnimationEnd: Y
+                                })
+                        ]
                     })
                   : (0, r.jsx)('div', {
                         className: a()(y.flipCardContainer, { [y.forceShadow]: x }),
@@ -246,9 +244,9 @@ let R = {
 D.displayName = 'PerkDiscoverabilityCard';
 let Z = i.forwardRef((e, t) => {
     var n;
-    let { title: i, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: b, onClick: N, backgroundImage: _, pillText: E, perkImage: v, imageOverlayText: S } = e,
+    let { title: i, titleClassName: s = '', subtitle: o = '', description: l = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: b, onClick: N, backgroundImage: _, pillText: E, perkImage: v, imageOverlayText: S } = e,
         T = b === j.R0.CARD_CAROUSEL_FIRST_ROW || b === j.R0.CARD_CAROUSEL_SECOND_ROW || b === j.R0.CARD_CAROUSEL_THIRD_ROW,
-        I = '' !== o || '' !== c || ('' !== l && f === j.zW.REWARD),
+        I = '' !== l || '' !== c || ('' !== o && f === j.zW.REWARD),
         A = (0, x._)(f);
     return (0, r.jsxs)(u.P3F, {
         className: a()(y.card, p, null === (n = A.cardContainer) || void 0 === n ? void 0 : n.className, {
@@ -269,7 +267,7 @@ let Z = i.forwardRef((e, t) => {
             (0, r.jsx)(C.Z, {
                 title: i,
                 titleClassName: s,
-                subtitle: l,
+                subtitle: o,
                 perkImage: v,
                 isCarousel: T,
                 descriptionCta: c,
@@ -283,8 +281,8 @@ let Z = i.forwardRef((e, t) => {
                 (0, r.jsx)(O.Z, {
                     title: i,
                     titleClassName: s,
-                    subtitle: l,
-                    description: o,
+                    subtitle: o,
+                    description: l,
                     descriptionCta: c,
                     isPremiumGetCta: d,
                     onCtaClick: m,

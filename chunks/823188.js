@@ -216,13 +216,11 @@ function Q(e) {
                             numMonths: null !== (i = null == v ? void 0 : v.duration) && void 0 !== i ? i : j.rt
                         });
             };
-        return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsx)(d.X6q, {
-                variant: 'heading-md/normal',
-                color: 'always-white',
-                className: B.trialHeader,
-                children: i()
-            })
+        return (0, r.jsx)(d.X6q, {
+            variant: 'heading-md/normal',
+            color: 'always-white',
+            className: B.trialHeader,
+            children: i()
         });
     }
     if (!p && !t && i) {

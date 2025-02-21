@@ -33,9 +33,9 @@ var r = n(200651),
     Z = n(496675),
     M = n(300429),
     A = n(117530),
-    F = n(594174),
-    L = n(459273),
-    W = n(838440),
+    L = n(594174),
+    W = n(459273),
+    F = n(838440),
     D = n(127654),
     z = n(681154),
     B = n(883429),
@@ -112,7 +112,7 @@ function el(e) {
             };
         }, c.X),
         [f, p] = a.useState(null),
-        x = a.useContext(L.oo),
+        x = a.useContext(W.oo),
         b = a.useCallback(() => {
             x.bumpDispatchPriority();
         }, [x]),
@@ -199,7 +199,7 @@ function el(e) {
                         };
                     try {
                         c(!0);
-                        let { valid: t } = await (0, W.v)({
+                        let { valid: t } = await (0, F.v)({
                             content: x,
                             stickers: b,
                             uploads: v,
@@ -413,9 +413,9 @@ let es = a.memo(function (e) {
             x = null != t.topic && 0 !== t.topic.length,
             b = H.Z.hasSeen(t.id),
             v = (0, U.ql)(t),
-            j = (0, h.e7)([F.default], () => F.default.getCurrentUser());
+            j = (0, h.e7)([L.default], () => L.default.getCurrentUser());
         o()(null != j, 'current user cannot be null'),
-            (0, L.yp)({
+            (0, W.yp)({
                 event: $.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
                     var e;
@@ -576,7 +576,7 @@ let ed = a.memo(function (e) {
     }),
     eu = a.memo(function (e) {
         let { parentChannel: t, submit: n, disabled: i = !1, editorRef: s, setEditorRef: d } = e,
-            u = (0, h.e7)([F.default], () => F.default.getCurrentUser());
+            u = (0, h.e7)([L.default], () => L.default.getCurrentUser());
         o()(null != u, 'current user cannot be null');
         let {
                 messageError: m,
@@ -626,11 +626,11 @@ let ed = a.memo(function (e) {
                 },
                 [n]
             );
-        (0, L.yp)({
+        (0, W.yp)({
             event: $.CkL.TEXTAREA_FOCUS,
             handler: _
         }),
-            (0, L.yp)({
+            (0, W.yp)({
                 event: $.CkL.TEXTAREA_BLUR,
                 handler: y
             });
@@ -924,129 +924,127 @@ function ex(e) {
     }, [j, b, f, p]),
     0 === j.length)
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: (0, r.jsxs)('div', {
-                  className: en.tagsContainer,
-                  ref: f,
-                  children: [
-                      (0, r.jsx)(g.lO_, {
-                          size: 'xs',
-                          color: 'currentColor',
-                          className: en.tagsIcon
-                      }),
-                      (0, r.jsx)('div', {
-                          className: en.tagList,
-                          ref: x,
-                          children: (0, r.jsx)(u.bG, {
-                              navigator: h,
-                              children: (0, r.jsx)(u.SJ, {
-                                  children: (e) => {
-                                      var { ref: t } = e,
-                                          a = (function (e, t) {
-                                              if (null == e) return {};
-                                              var n,
-                                                  r,
-                                                  a = (function (e, t) {
-                                                      if (null == e) return {};
-                                                      var n,
-                                                          r,
-                                                          a = {},
-                                                          i = Object.keys(e);
-                                                      for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                                                      return a;
-                                                  })(e, t);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var i = Object.getOwnPropertySymbols(e);
-                                                  for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
-                                              }
-                                              return a;
-                                          })(e, ['ref']);
-                                      return (0, r.jsx)(
-                                          'div',
-                                          ea(
-                                              er(
-                                                  {
-                                                      className: en.tagListInner,
-                                                      ref: t
-                                                  },
-                                                  a
-                                              ),
+        : (0, r.jsxs)('div', {
+              className: en.tagsContainer,
+              ref: f,
+              children: [
+                  (0, r.jsx)(g.lO_, {
+                      size: 'xs',
+                      color: 'currentColor',
+                      className: en.tagsIcon
+                  }),
+                  (0, r.jsx)('div', {
+                      className: en.tagList,
+                      ref: x,
+                      children: (0, r.jsx)(u.bG, {
+                          navigator: h,
+                          children: (0, r.jsx)(u.SJ, {
+                              children: (e) => {
+                                  var { ref: t } = e,
+                                      a = (function (e, t) {
+                                          if (null == e) return {};
+                                          var n,
+                                              r,
+                                              a = (function (e, t) {
+                                                  if (null == e) return {};
+                                                  var n,
+                                                      r,
+                                                      a = {},
+                                                      i = Object.keys(e);
+                                                  for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                                                  return a;
+                                              })(e, t);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var i = Object.getOwnPropertySymbols(e);
+                                              for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                                          }
+                                          return a;
+                                      })(e, ['ref']);
+                                  return (0, r.jsx)(
+                                      'div',
+                                      ea(
+                                          er(
                                               {
-                                                  children: j.map((e) =>
-                                                      (0, r.jsx)(
-                                                          K.Z,
-                                                          {
-                                                              ariaLabel: et.NW.formatToPlainString(et.t.FSZVIS, { tagName: e.name }),
-                                                              tag: e,
-                                                              onClick: o && !n.has(e.id) ? void 0 : () => i(e.id),
-                                                              disabled: !n.has(e.id) && n.size >= Q.Cn,
-                                                              selected: n.has(e.id),
-                                                              size: K.Z.Sizes.SMALL
-                                                          },
-                                                          e.id
-                                                      )
+                                                  className: en.tagListInner,
+                                                  ref: t
+                                              },
+                                              a
+                                          ),
+                                          {
+                                              children: j.map((e) =>
+                                                  (0, r.jsx)(
+                                                      K.Z,
+                                                      {
+                                                          ariaLabel: et.NW.formatToPlainString(et.t.FSZVIS, { tagName: e.name }),
+                                                          tag: e,
+                                                          onClick: o && !n.has(e.id) ? void 0 : () => i(e.id),
+                                                          disabled: !n.has(e.id) && n.size >= Q.Cn,
+                                                          selected: n.has(e.id),
+                                                          size: K.Z.Sizes.SMALL
+                                                      },
+                                                      e.id
                                                   )
-                                              }
-                                          )
-                                      );
-                                  }
-                              })
+                                              )
+                                          }
+                                      )
+                                  );
+                              }
                           })
-                      }),
-                      b &&
-                          (0, r.jsx)(g.yRy, {
-                              onRequestOpen: () => s(!0),
-                              onRequestClose: () => s(!1),
-                              renderPopout: (e) => {
-                                  let { closePopout: a } = e;
-                                  return (0, r.jsx)(G.Z, {
-                                      parentChannel: t,
-                                      appliedTags: n,
-                                      maxTagsApplied: o,
-                                      onSelectTag: i,
-                                      onClose: a
-                                  });
-                              },
-                              position: 'bottom',
-                              align: 'center',
-                              children: (e) =>
-                                  (0, r.jsxs)(
-                                      g.zxk,
-                                      ea(er({}, e), {
-                                          size: g.zxk.Sizes.TINY,
-                                          className: en.tagsButton,
-                                          innerClassName: en.tagsButtonInner,
-                                          style: { left: C },
-                                          look: g.zxk.Looks.LINK,
-                                          'aria-label': et.NW.string(et.t.N5vP9P),
-                                          children: [
-                                              et.NW.string(et.t.IkpM1d),
-                                              (0, r.jsx)(g.CJ0, {
-                                                  size: 'custom',
-                                                  color: 'currentColor',
-                                                  width: 16
-                                              })
-                                          ]
-                                      })
-                                  )
-                          }),
-                      (0, r.jsxs)(g.zxk, {
-                          size: g.zxk.Sizes.TINY,
-                          className: l()(en.tagsButton, en.tagsButtonPlaceholder),
-                          innerClassName: en.tagsButtonInner,
-                          look: g.zxk.Looks.LINK,
-                          'aria-label': et.NW.string(et.t.N5vP9P),
-                          children: [
-                              et.NW.string(et.t.IkpM1d),
-                              (0, r.jsx)(g.CJ0, {
-                                  size: 'custom',
-                                  color: 'currentColor',
-                                  width: 16
-                              })
-                          ]
                       })
-                  ]
-              })
+                  }),
+                  b &&
+                      (0, r.jsx)(g.yRy, {
+                          onRequestOpen: () => s(!0),
+                          onRequestClose: () => s(!1),
+                          renderPopout: (e) => {
+                              let { closePopout: a } = e;
+                              return (0, r.jsx)(G.Z, {
+                                  parentChannel: t,
+                                  appliedTags: n,
+                                  maxTagsApplied: o,
+                                  onSelectTag: i,
+                                  onClose: a
+                              });
+                          },
+                          position: 'bottom',
+                          align: 'center',
+                          children: (e) =>
+                              (0, r.jsxs)(
+                                  g.zxk,
+                                  ea(er({}, e), {
+                                      size: g.zxk.Sizes.TINY,
+                                      className: en.tagsButton,
+                                      innerClassName: en.tagsButtonInner,
+                                      style: { left: C },
+                                      look: g.zxk.Looks.LINK,
+                                      'aria-label': et.NW.string(et.t.N5vP9P),
+                                      children: [
+                                          et.NW.string(et.t.IkpM1d),
+                                          (0, r.jsx)(g.CJ0, {
+                                              size: 'custom',
+                                              color: 'currentColor',
+                                              width: 16
+                                          })
+                                      ]
+                                  })
+                              )
+                      }),
+                  (0, r.jsxs)(g.zxk, {
+                      size: g.zxk.Sizes.TINY,
+                      className: l()(en.tagsButton, en.tagsButtonPlaceholder),
+                      innerClassName: en.tagsButtonInner,
+                      look: g.zxk.Looks.LINK,
+                      'aria-label': et.NW.string(et.t.N5vP9P),
+                      children: [
+                          et.NW.string(et.t.IkpM1d),
+                          (0, r.jsx)(g.CJ0, {
+                              size: 'custom',
+                              color: 'currentColor',
+                              width: 16
+                          })
+                      ]
+                  })
+              ]
           });
 }
 function eb(e) {

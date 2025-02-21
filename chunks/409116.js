@@ -33,11 +33,9 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                           ]
                       })
                     : m;
-        return (0, n.jsx)(n.Fragment, {
-            children: (0, n.jsxs)(a.X6q, {
-                variant: C,
-                className: i()(c.container, f),
-                children: [p, null !== (t = null == u ? void 0 : u(b)) && void 0 !== t ? t : b]
-            })
+        return (0, n.jsxs)(a.X6q, {
+            variant: C,
+            className: i()(c.container, f),
+            children: [p, null !== (t = null == u ? void 0 : u(b)) && void 0 !== t ? t : b]
         });
     };

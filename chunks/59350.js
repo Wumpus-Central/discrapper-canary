@@ -1,6 +1,6 @@
-t.d(n, { Z: () => er }), t(47120);
-var r = t(200651),
-    l = t(192379),
+t.d(n, { Z: () => el }), t(47120);
+var l = t(200651),
+    r = t(192379),
     a = t(120356),
     i = t.n(a),
     o = t(392711),
@@ -50,24 +50,24 @@ var r = t(200651),
 function K(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+            l = Object.keys(t);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 })
             )),
-            r.forEach(function (n) {
-                var r;
-                (r = t[n]),
+            l.forEach(function (n) {
+                var l;
+                (l = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = r);
+                        : (e[n] = l);
             });
     }
     return e;
@@ -75,7 +75,7 @@ function K(e) {
 let Q = m.EFr.SIZE_80,
     $ = 'required';
 function ee(e) {
-    var n, t, l;
+    var n, t, r;
     let { guild: a, user: o } = e,
         {
             avatarSrc: u,
@@ -105,28 +105,28 @@ function ee(e) {
     });
     let E = (0, b.parseBioReact)(null == P ? void 0 : P.bio),
         B = T.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
-    return (0, r.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         className: V.profile,
         children: [
-            (0, r.jsx)(m.X6q, {
+            (0, l.jsx)(m.X6q, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
                 children: X.NW.string(X.t.diTbFx)
             }),
-            (0, r.jsx)(m.Text, {
+            (0, l.jsx)(m.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
                 children: X.NW.string(X.t['+8um3N'])
             }),
-            (0, r.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: V.profileCard,
                 children: [
-                    (0, r.jsx)(
+                    (0, l.jsx)(
                         'div',
                         ((t = K({}, h)),
-                        (l = l =
+                        (r = r =
                             {
-                                children: (0, r.jsx)(B, {
+                                children: (0, l.jsx)(B, {
                                     src: u,
                                     avatarDecoration: g,
                                     size: Q,
@@ -134,26 +134,26 @@ function ee(e) {
                                 })
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                             : (function (e, n) {
                                   var t = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      t.push.apply(t, r);
+                                      var l = Object.getOwnPropertySymbols(e);
+                                      t.push.apply(t, l);
                                   }
                                   return t;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(r)).forEach(function (e) {
+                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                               }),
                         t)
                     ),
-                    (0, r.jsx)(m.Text, {
+                    (0, l.jsx)(m.Text, {
                         variant: 'text-lg/medium',
                         color: 'header-primary',
                         className: V.username,
                         children: null !== (n = null == C ? void 0 : C.nick) && void 0 !== n ? n : S.ZP.getName(o)
                     }),
-                    (0, r.jsx)(m.Text, {
+                    (0, l.jsx)(m.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: i()(Y.markup, V.bio),
@@ -161,32 +161,32 @@ function ee(e) {
                     }),
                     null != w &&
                         w.length > 0 &&
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, r.jsx)('hr', { className: V.separator }),
-                                (0, r.jsx)(m.Text, {
+                                (0, l.jsx)('hr', { className: V.separator }),
+                                (0, l.jsx)(m.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'text-muted',
                                     className: V.title,
                                     children: X.NW.string(X.t.LPJmLy)
                                 }),
-                                (0, r.jsx)('div', {
+                                (0, l.jsx)('div', {
                                     className: V.roles,
                                     children:
                                         null == w
                                             ? void 0
                                             : w.map((e) => {
                                                   var n;
-                                                  return (0, r.jsxs)(
+                                                  return (0, l.jsxs)(
                                                       'div',
                                                       {
                                                           className: V.role,
                                                           children: [
-                                                              (0, r.jsx)(m.xko, {
+                                                              (0, l.jsx)(m.xko, {
                                                                   color: null !== (n = e.colorString) && void 0 !== n ? n : (0, c.Rf)(F.p6O),
                                                                   className: V.roleDot
                                                               }),
-                                                              (0, r.jsx)(m.Text, {
+                                                              (0, l.jsx)(m.Text, {
                                                                   variant: 'text-xs/medium',
                                                                   color: 'header-primary',
                                                                   children: e.name
@@ -207,8 +207,8 @@ function ee(e) {
 function en(e) {
     var n;
     let { prompt: t, guild: a } = e,
-        [o, s] = l.useState(null),
-        [c, u] = l.useState(new Set()),
+        [o, s] = r.useState(null),
+        [c, u] = r.useState(new Set()),
         h = null == t ? void 0 : null === (n = t.options) || void 0 === n ? void 0 : n.filter((e) => c.has(e.id)),
         p = (0, R.L6)(h),
         f = (0, R.dX)(h),
@@ -219,7 +219,7 @@ function en(e) {
             selectedRoleIds: p,
             selectedChannelIds: f,
             itemHook: (e, n) =>
-                (0, r.jsx)(
+                (0, l.jsx)(
                     m.Text,
                     {
                         variant: 'text-xs/medium',
@@ -232,68 +232,66 @@ function en(e) {
         { handleSelectOption: j } = (0, D.Z)(a.id),
         b = t.options.map((e) => K({ value: e.id }, e)),
         v = t.options.filter((e) => g.includes(e.id)).map((e) => e.id);
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: V.prompt,
-            'data-new': t.isNew,
-            children: [
-                t.isNew &&
-                    (0, r.jsx)(m.IGR, {
-                        color: (0, C.Lq)(F.Ilk.BRAND_260),
-                        text: X.NW.string(X.t.y2b7CA),
-                        className: V.newBadge
-                    }),
-                (0, r.jsxs)(m.X6q, {
-                    className: V.promptTitle,
-                    variant: 'heading-md/semibold',
-                    color: 'header-primary',
-                    children: [
-                        t.title,
-                        t.required
-                            ? (0, r.jsx)('span', {
-                                  className: i()(V.required, { [V.error]: (null == o ? void 0 : o.type) === $ }),
-                                  children: '*'
-                              })
-                            : null
-                    ]
+    return (0, l.jsxs)('div', {
+        className: V.prompt,
+        'data-new': t.isNew,
+        children: [
+            t.isNew &&
+                (0, l.jsx)(m.IGR, {
+                    color: (0, C.Lq)(F.Ilk.BRAND_260),
+                    text: X.NW.string(X.t.y2b7CA),
+                    className: V.newBadge
                 }),
-                (0, r.jsx)(U.Z, {
-                    options: b,
-                    value: v,
-                    onChange: (e) => {
-                        let n = e.find((e) => !g.includes(e.id)),
-                            r = e.map((e) => e.id);
-                        if (null != n) j(t, n, !0), t.singleSelect && t.options.forEach((e) => c.delete(e.id)), c.add(n.id);
-                        else {
-                            let e = g.filter((e) => !r.includes(e)),
-                                n = t.options.filter((n) => e.includes(n.id));
-                            if (g.length <= n.length && t.required) {
-                                s({ type: $ });
-                                return;
-                            }
-                            n.forEach((e) => {
-                                j(t, e, !1), c.delete(e.id);
-                            });
+            (0, l.jsxs)(m.X6q, {
+                className: V.promptTitle,
+                variant: 'heading-md/semibold',
+                color: 'header-primary',
+                children: [
+                    t.title,
+                    t.required
+                        ? (0, l.jsx)('span', {
+                              className: i()(V.required, { [V.error]: (null == o ? void 0 : o.type) === $ }),
+                              children: '*'
+                          })
+                        : null
+                ]
+            }),
+            (0, l.jsx)(U.Z, {
+                options: b,
+                value: v,
+                onChange: (e) => {
+                    let n = e.find((e) => !g.includes(e.id)),
+                        l = e.map((e) => e.id);
+                    if (null != n) j(t, n, !0), t.singleSelect && t.options.forEach((e) => c.delete(e.id)), c.add(n.id);
+                    else {
+                        let e = g.filter((e) => !l.includes(e)),
+                            n = t.options.filter((n) => e.includes(n.id));
+                        if (g.length <= n.length && t.required) {
+                            s({ type: $ });
+                            return;
                         }
-                        u(new Set(c)), s(null);
-                    },
-                    canBeNew: !t.isNew
-                }),
-                (0, r.jsxs)(m.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-muted',
-                    className: V.helpText,
-                    children: [x, ' ', _]
-                })
-            ]
-        })
+                        n.forEach((e) => {
+                            j(t, e, !1), c.delete(e.id);
+                        });
+                    }
+                    u(new Set(c)), s(null);
+                },
+                canBeNew: !t.isNew
+            }),
+            (0, l.jsxs)(m.Text, {
+                variant: 'text-xs/normal',
+                color: 'text-muted',
+                className: V.helpText,
+                children: [x, ' ', _]
+            })
+        ]
     });
 }
 function et(e) {
     var n;
     let { prompt: t, guild: a } = e,
-        [o, s] = l.useState(null),
-        [c, u] = l.useState(new Set()),
+        [o, s] = r.useState(null),
+        [c, u] = r.useState(new Set()),
         h = null == t ? void 0 : null === (n = t.options) || void 0 === n ? void 0 : n.filter((e) => c.has(e.id)),
         p = (0, R.L6)(h),
         f = (0, R.dX)(h),
@@ -304,7 +302,7 @@ function et(e) {
             selectedRoleIds: p,
             selectedChannelIds: f,
             itemHook: (e, n) =>
-                (0, r.jsx)(
+                (0, l.jsx)(
                     m.Text,
                     {
                         variant: 'text-xs/medium',
@@ -322,84 +320,82 @@ function et(e) {
             }
             j(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => c.delete(e.id)), n ? c.add(e.id) : c.delete(e.id), u(new Set(c)), s(null);
         };
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: V.prompt,
-            'data-new': t.isNew,
-            children: [
-                t.isNew &&
-                    (0, r.jsx)(m.IGR, {
-                        color: (0, C.Lq)(F.Ilk.BRAND_260),
-                        text: X.NW.string(X.t.y2b7CA),
-                        className: V.newBadge
-                    }),
-                (0, r.jsxs)(m.X6q, {
-                    className: V.promptTitle,
-                    variant: 'heading-md/semibold',
-                    color: 'header-primary',
-                    children: [
-                        t.title,
-                        t.required
-                            ? (0, r.jsx)('span', {
-                                  className: i()(V.required, { [V.error]: (null == o ? void 0 : o.type) === $ }),
-                                  children: '*'
-                              })
-                            : null
-                    ]
+    return (0, l.jsxs)('div', {
+        className: V.prompt,
+        'data-new': t.isNew,
+        children: [
+            t.isNew &&
+                (0, l.jsx)(m.IGR, {
+                    color: (0, C.Lq)(F.Ilk.BRAND_260),
+                    text: X.NW.string(X.t.y2b7CA),
+                    className: V.newBadge
                 }),
-                (0, r.jsx)('div', {
-                    className: V.promptOptions,
-                    children: t.options.map((e) =>
-                        (0, r.jsx)(
-                            H.Z,
-                            {
-                                hideMemberCount: !0,
-                                guildId: a.id,
-                                option: e,
-                                onSelect: (n) => b(e, n),
-                                selected: g.includes(e.id),
-                                canBeNew: !t.isNew
-                            },
-                            e.id
-                        )
+            (0, l.jsxs)(m.X6q, {
+                className: V.promptTitle,
+                variant: 'heading-md/semibold',
+                color: 'header-primary',
+                children: [
+                    t.title,
+                    t.required
+                        ? (0, l.jsx)('span', {
+                              className: i()(V.required, { [V.error]: (null == o ? void 0 : o.type) === $ }),
+                              children: '*'
+                          })
+                        : null
+                ]
+            }),
+            (0, l.jsx)('div', {
+                className: V.promptOptions,
+                children: t.options.map((e) =>
+                    (0, l.jsx)(
+                        H.Z,
+                        {
+                            hideMemberCount: !0,
+                            guildId: a.id,
+                            option: e,
+                            onSelect: (n) => b(e, n),
+                            selected: g.includes(e.id),
+                            canBeNew: !t.isNew
+                        },
+                        e.id
                     )
-                }),
-                (0, r.jsxs)(m.Text, {
-                    variant: 'text-xs/normal',
-                    color: 'text-muted',
-                    className: V.helpText,
-                    children: [x, ' ', _]
-                })
-            ]
-        })
+                )
+            }),
+            (0, l.jsxs)(m.Text, {
+                variant: 'text-xs/normal',
+                color: 'text-muted',
+                className: V.helpText,
+                children: [x, ' ', _]
+            })
+        ]
     });
 }
-function er(e) {
+function el(e) {
     let { guildId: n, onBrowseChannels: t } = e,
         a = (0, u.wj)((0, g.ZP)()),
         o = (0, d.e7)([Z.Z], () => Z.Z.getGuild(n)),
         s = (0, d.e7)([P.default], () => P.default.getCurrentUser()),
         c = (0, p.Z)('(min-width: 1344px)') && null != s,
-        f = l.useCallback(() => {
+        f = r.useCallback(() => {
             (0, v.uL)(F.Z5c.CHANNEL(n, z.oC.CHANNEL_BROWSER)), null == t || t();
         }, [n, t]),
         x = (0, d.e7)([w.ZP], () => w.ZP.hasUnread(n, q.W.GUILD_ONBOARDING_QUESTION)),
         { onboardingPromptsRaw: _, newOnboardingPrompts: b, onboardingPromptsWithNewAnswers: N, newAnswersCount: y, onboardingPrompts: O } = (0, L.Z)(n);
-    l.useEffect(() => {
+    r.useEffect(() => {
         (null == o ? void 0 : o.id) != null && !j.Z.isFullServerPreview(o.id) && (A.Z.shouldFetchPrompts(o.id) || x) && (0, k.eM)(o.id);
     }, [null == o ? void 0 : o.id, x]),
-        l.useEffect(() => {
+        r.useEffect(() => {
             if ((null == o ? void 0 : o.id) != null && !j.Z.isFullServerPreview(o.id))
                 return () => {
                     (0, h.Ju)(o.id, q.W.GUILD_ONBOARDING_QUESTION, A.Z.ackIdForGuild(o.id)), B.Z.updateOnboardingResponses(o.id);
                 };
         }, [null == o ? void 0 : o.id]);
-    let I = l.useCallback(
+    let I = r.useCallback(
         (e) => {
             if (null == o) return null;
             switch (e.type) {
                 case G.FN.MULTIPLE_CHOICE:
-                    return (0, r.jsx)(
+                    return (0, l.jsx)(
                         et,
                         {
                             prompt: e,
@@ -408,7 +404,7 @@ function er(e) {
                         e.id
                     );
                 case G.FN.DROPDOWN:
-                    return (0, r.jsx)(
+                    return (0, l.jsx)(
                         en,
                         {
                             prompt: e,
@@ -426,22 +422,22 @@ function er(e) {
     if (0 === _.length) {
         let e = (0, C.Lq)(a ? F.Ilk.PRIMARY_300 : F.Ilk.PRIMARY_500),
             n = (0, C.Lq)(a ? F.Ilk.PRIMARY_700 : F.Ilk.PRIMARY_230);
-        return (0, r.jsx)('div', {
+        return (0, l.jsx)('div', {
             className: i()(J.content, V.emptyPage),
-            children: (0, r.jsxs)('div', {
+            children: (0, l.jsxs)('div', {
                 className: V.emptyContainer,
                 children: [
-                    (0, r.jsx)(M.Z, {
+                    (0, l.jsx)(M.Z, {
                         className: V.emptyIcon,
                         foregroundColor: e,
                         backgroundColor: n
                     }),
-                    (0, r.jsx)(m.X6q, {
+                    (0, l.jsx)(m.X6q, {
                         className: V.emptyHeader,
                         variant: 'heading-md/semibold',
                         children: X.NW.string(X.t.leKHQ0)
                     }),
-                    (0, r.jsx)(m.Text, {
+                    (0, l.jsx)(m.Text, {
                         variant: 'text-sm/medium',
                         children: X.NW.format(X.t['jH+ktL'], { onBrowseChannels: f })
                     })
@@ -449,18 +445,18 @@ function er(e) {
             })
         });
     }
-    return (0, r.jsxs)(m.Den, {
+    return (0, l.jsxs)(m.Den, {
         className: V.scroller,
         fade: !0,
         children: [
-            (0, r.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: V.pageBody,
                 children: [
                     (b.length > 0 || N.length > 0) &&
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(m.X6q, {
+                                (0, l.jsx)('div', {
+                                    children: (0, l.jsx)(m.X6q, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
                                         children: X.NW.format(X.t.iB5Gqa, { count: b.length + y })
@@ -468,20 +464,20 @@ function er(e) {
                                 }),
                                 b.map(I),
                                 N.map(I),
-                                (0, r.jsx)('div', { className: V.sectionSeparator })
+                                (0, l.jsx)('div', { className: V.sectionSeparator })
                             ]
                         }),
                     O.length > 0 &&
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, l.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(m.X6q, {
+                                        (0, l.jsx)(m.X6q, {
                                             variant: 'heading-md/semibold',
                                             color: 'header-primary',
                                             children: X.NW.format(X.t['8IV8Ky'], { count: O.length })
                                         }),
-                                        (0, r.jsx)(m.Text, {
+                                        (0, l.jsx)(m.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
                                             children: X.NW.string(X.t.Ecz7T0)
@@ -494,7 +490,7 @@ function er(e) {
                 ]
             }),
             c &&
-                (0, r.jsx)(ee, {
+                (0, l.jsx)(ee, {
                     guild: o,
                     user: s
                 })

@@ -27,8 +27,8 @@ var r,
     j = n(915885),
     C = n(258871),
     x = n(216306),
-    P = n(398758),
-    S = n(486311),
+    S = n(398758),
+    P = n(486311),
     I = n(220444),
     N = n(31022),
     Z = n(10401),
@@ -39,8 +39,8 @@ var r,
     D = n(914010),
     R = n(540126),
     L = n(734307),
-    M = n(854444),
-    k = n(761091),
+    k = n(854444),
+    M = n(761091),
     G = n(301342),
     B = n(906817),
     U = n(429122),
@@ -292,44 +292,42 @@ class ef extends (r = l.PureComponent) {
     }
     render() {
         let { guildChannels: e, guildChannelsVersion: t, showNewUnreadsBar: n } = this.props;
-        return (0, i.jsx)(l.Fragment, {
-            children: (0, i.jsx)(v.FG, {
-                children: (r) =>
-                    (0, i.jsx)(d.y5t, {
-                        component: (0, i.jsx)(d.nn4, {
-                            children: (0, i.jsx)(d.H, {
-                                id: r,
-                                children: ea.NW.string(ea.t.OGiMXF)
-                            })
-                        }),
-                        children: n
-                            ? (0, i.jsxs)(l.Fragment, {
-                                  children: [
-                                      (0, i.jsx)('div', {
-                                          className: es.positionedContainer,
-                                          children: (0, i.jsx)($.Z, {
-                                              position: 'top',
-                                              guildChannels: e,
-                                              guildChannelsVersion: t,
-                                              jumpToVoiceChannels: this.jumpToVoiceChannels,
-                                              jumpToChannel: this.jumpToChannel
-                                          })
-                                      }),
-                                      this.renderList(),
-                                      (0, i.jsx)($.Z, {
-                                          position: 'bottom',
+        return (0, i.jsx)(v.FG, {
+            children: (r) =>
+                (0, i.jsx)(d.y5t, {
+                    component: (0, i.jsx)(d.nn4, {
+                        children: (0, i.jsx)(d.H, {
+                            id: r,
+                            children: ea.NW.string(ea.t.OGiMXF)
+                        })
+                    }),
+                    children: n
+                        ? (0, i.jsxs)(l.Fragment, {
+                              children: [
+                                  (0, i.jsx)('div', {
+                                      className: es.positionedContainer,
+                                      children: (0, i.jsx)($.Z, {
+                                          position: 'top',
                                           guildChannels: e,
                                           guildChannelsVersion: t,
                                           jumpToVoiceChannels: this.jumpToVoiceChannels,
                                           jumpToChannel: this.jumpToChannel
                                       })
-                                  ]
-                              })
-                            : (0, i.jsxs)(l.Fragment, {
-                                  children: [this.renderTopUnread(), this.renderList(), this.renderBottomUnread()]
-                              })
-                    })
-            })
+                                  }),
+                                  this.renderList(),
+                                  (0, i.jsx)($.Z, {
+                                      position: 'bottom',
+                                      guildChannels: e,
+                                      guildChannelsVersion: t,
+                                      jumpToVoiceChannels: this.jumpToVoiceChannels,
+                                      jumpToChannel: this.jumpToChannel
+                                  })
+                              ]
+                          })
+                        : (0, i.jsxs)(l.Fragment, {
+                              children: [this.renderTopUnread(), this.renderList(), this.renderBottomUnread()]
+                          })
+                })
         });
     }
     constructor(...e) {
@@ -624,7 +622,7 @@ class ef extends (r = l.PureComponent) {
                             );
                         case er.z.GUILD_BOOSTS:
                             return (0, i.jsx)(
-                                S.Z,
+                                P.Z,
                                 {
                                     guild: r,
                                     selected: a === eo.oC.GUILD_BOOSTS
@@ -679,7 +677,7 @@ class ef extends (r = l.PureComponent) {
                             x
                         );
                     case el.d4z.GUILD_STAGE_VOICE:
-                        var P, I;
+                        var S, I;
                         return (0, i.jsx)(
                             K.Z,
                             {
@@ -689,7 +687,7 @@ class ef extends (r = l.PureComponent) {
                                 selected: a === v.id,
                                 connected: c === v.id,
                                 collapsed: v.isCollapsed || b.isCollapsed,
-                                voiceStates: null !== (P = d[v.id]) && void 0 !== P ? P : [],
+                                voiceStates: null !== (S = d[v.id]) && void 0 !== S ? S : [],
                                 speakerVoiceStates: null !== (I = h[v.id]) && void 0 !== I ? I : [],
                                 disableManageChannels: p,
                                 isFavoriteCategory: y
@@ -798,7 +796,7 @@ let eg = (e) => {
         d = (0, u.e7)([E.Z], () => E.Z.getChannel(n)),
         p = (0, u.e7)([E.Z], () => E.Z.getChannel(r)),
         h = (0, u.e7)([D.Z], () => D.Z.getGuildId()),
-        v = (0, P.DM)(t),
+        v = (0, S.DM)(t),
         _ = l.useRef(null),
         O = l.useCallback((e, t) => {
             let n = _.current;
@@ -842,10 +840,10 @@ let eg = (e) => {
             scrollToStart: j,
             scrollToEnd: C
         }),
-        S = x.setFocus;
+        P = x.setFocus;
     l.useEffect(() => {
-        null != n && S(n);
-    }, [n, S]);
+        null != n && P(n);
+    }, [n, P]);
     let I = (0, N.Z)(t),
         Z = (0, y.Q3)('NavigableChannels');
     return (0, i.jsx)(b.Gt, {
@@ -872,7 +870,7 @@ let eg = (e) => {
     });
 };
 function em(e) {
-    let t = (0, M.o)(),
+    let t = (0, k.o)(),
         { isFavoritesPerk: n } = (0, _.z)('favorites-channel-list'),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(
@@ -886,7 +884,7 @@ function em(e) {
     );
 }
 function eb(e) {
-    let t = (0, k.Z)(e.guild),
+    let t = (0, M.Z)(e.guild),
         n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
         r = (0, y.Q3)('GuildChannelList'),
         { density: l } = (0, d.TCT)();

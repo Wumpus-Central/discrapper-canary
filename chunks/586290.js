@@ -31,49 +31,47 @@ function j(e) {
         );
     return (
         null != Z && r(Z),
-        (0, l.jsx)(i.Fragment, {
-            children: (0, l.jsxs)(u.xJW, {
-                title: 'Capture Device',
-                className: v.modalContent,
-                children: [
-                    (0, l.jsx)(u.xJW, {
-                        className: f.marginTop8,
-                        children: (0, l.jsxs)(m.Z, {
-                            children: [
-                                (0, l.jsx)('span', {
-                                    className: x.ellipsisText,
-                                    children: n.name
-                                }),
-                                (0, l.jsx)(u.zxk, {
-                                    className: x.changeButton,
-                                    color: u.zxk.Colors.PRIMARY,
-                                    size: u.zxk.Sizes.SMALL,
-                                    onClick: t,
-                                    children: h.NW.string(h.t.GEgsAw)
-                                })
-                            ]
-                        })
-                    }),
-                    (0, l.jsx)(u.xJW, {
-                        className: f.marginTop8,
-                        title: h.NW.string(h.t.y4ooen),
-                        children: (0, l.jsx)(u.q4e, {
-                            value: Z,
-                            className: f.__invalid_marginaTop8,
-                            onChange: (e) => {
-                                N(e), r(e);
-                            },
-                            options: o().map(j, (e) => {
-                                let { id: n, name: t } = e;
-                                return {
-                                    value: n,
-                                    label: t
-                                };
+        (0, l.jsxs)(u.xJW, {
+            title: 'Capture Device',
+            className: v.modalContent,
+            children: [
+                (0, l.jsx)(u.xJW, {
+                    className: f.marginTop8,
+                    children: (0, l.jsxs)(m.Z, {
+                        children: [
+                            (0, l.jsx)('span', {
+                                className: x.ellipsisText,
+                                children: n.name
+                            }),
+                            (0, l.jsx)(u.zxk, {
+                                className: x.changeButton,
+                                color: u.zxk.Colors.PRIMARY,
+                                size: u.zxk.Sizes.SMALL,
+                                onClick: t,
+                                children: h.NW.string(h.t.GEgsAw)
                             })
+                        ]
+                    })
+                }),
+                (0, l.jsx)(u.xJW, {
+                    className: f.marginTop8,
+                    title: h.NW.string(h.t.y4ooen),
+                    children: (0, l.jsx)(u.q4e, {
+                        value: Z,
+                        className: f.__invalid_marginaTop8,
+                        onChange: (e) => {
+                            N(e), r(e);
+                        },
+                        options: o().map(j, (e) => {
+                            let { id: n, name: t } = e;
+                            return {
+                                value: n,
+                                label: t
+                            };
                         })
                     })
-                ]
-            })
+                })
+            ]
         })
     );
 }

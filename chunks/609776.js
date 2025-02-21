@@ -30,28 +30,26 @@ function P(e) {
     let { stageChannelsInGuild: t, channel: n, onSelectChannel: a } = e;
     return null == a
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children: (0, r.jsx)(c.xJW, {
-                  title: E.NW.string(E.t.S7GjDw) + ' asdf',
-                  className: T.channelSelectionFormItem,
-                  required: !0,
-                  children: (0, r.jsx)(c.VcW, {
-                      value: n.id,
-                      options: t.map((e) => ({
-                          value: e.id,
-                          label: (0, d.F6)(e, f.default, p.Z, !0)
-                      })),
-                      onChange: (e) => {
-                          let n = t.find((t) => t.id === e);
-                          null != n && a(n);
-                      },
-                      renderOptionPrefix: () =>
-                          (0, r.jsx)(c.ewx, {
-                              size: 'custom',
-                              color: 'currentColor',
-                              height: 24
-                          })
-                  })
+        : (0, r.jsx)(c.xJW, {
+              title: E.NW.string(E.t.S7GjDw) + ' asdf',
+              className: T.channelSelectionFormItem,
+              required: !0,
+              children: (0, r.jsx)(c.VcW, {
+                  value: n.id,
+                  options: t.map((e) => ({
+                      value: e.id,
+                      label: (0, d.F6)(e, f.default, p.Z, !0)
+                  })),
+                  onChange: (e) => {
+                      let n = t.find((t) => t.id === e);
+                      null != n && a(n);
+                  },
+                  renderOptionPrefix: () =>
+                      (0, r.jsx)(c.ewx, {
+                          size: 'custom',
+                          color: 'currentColor',
+                          height: 24
+                      })
               })
           });
 }

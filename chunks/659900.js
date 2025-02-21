@@ -95,12 +95,10 @@ function E(e) {
                     ]
                 }),
                 E.length > 0
-                    ? (0, s.jsx)(s.Fragment, {
-                          children: (0, s.jsx)(o.xJW, {
-                              className: W.previewSection,
-                              title: H.NW.string(H.t['RJ1e/v']),
-                              children: (0, s.jsx)(M, { roles: E })
-                          })
+                    ? (0, s.jsx)(o.xJW, {
+                          className: W.previewSection,
+                          title: H.NW.string(H.t['RJ1e/v']),
+                          children: (0, s.jsx)(M, { roles: E })
                       })
                     : null
             ]

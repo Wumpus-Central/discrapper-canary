@@ -45,11 +45,9 @@ function L(e) {
                           e.stopPropagation(), e.nativeEvent.stopPropagation(), c((e) => !e);
                       },
                       children: (e) =>
-                          (0, r.jsx)(r.Fragment, {
-                              children: (0, r.jsx)('div', {
-                                  className: a()(P.obscureWrapper, { [P.obscure]: e }),
-                                  children: t(e)
-                              })
+                          (0, r.jsx)('div', {
+                              className: a()(P.obscureWrapper, { [P.obscure]: e }),
+                              children: t(e)
                           })
                   },
                   l

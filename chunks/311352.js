@@ -85,19 +85,17 @@ let O = (e) => {
                         })
                     }),
                     headerClassName: v.clipsEducationHeader,
-                    body: (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsx)(o.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'always-white',
-                            className: v.bodyText,
-                            children: b.NW.format(b.t.DWeRm5, {
-                                keybindHook: () =>
-                                    (0, r.jsx)('div', {
-                                        className: v.keyCombo,
-                                        children: t
-                                    }),
-                                keybind: t
-                            })
+                    body: (0, r.jsx)(o.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'always-white',
+                        className: v.bodyText,
+                        children: b.NW.format(b.t.DWeRm5, {
+                            keybindHook: () =>
+                                (0, r.jsx)('div', {
+                                    className: v.keyCombo,
+                                    children: t
+                                }),
+                            keybind: t
                         })
                     }),
                     onClose: (e) => {

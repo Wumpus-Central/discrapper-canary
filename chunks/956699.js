@@ -1,10 +1,10 @@
-n.d(t, { Z: () => el }), n(47120), n(26686), n(301563), n(566702), n(411104);
+n.d(t, { Z: () => eo }), n(47120), n(26686), n(301563), n(566702), n(411104);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+    o = n(392711),
+    l = n.n(o),
     c = n(268146),
     d = n(442837),
     u = n(692547),
@@ -186,13 +186,13 @@ class Q extends i.Component {
         this.setState({
             loading: !1,
             buildOverrides: e,
-            loadedBuildOverrides: o().cloneDeep(e),
+            loadedBuildOverrides: l().cloneDeep(e),
             errors: {}
         });
     }
     isDirty() {
         let { buildOverrides: e, loadedBuildOverrides: t } = this.state;
-        return !o().isEqual(e, t);
+        return !l().isEqual(e, t);
     }
     componentDidMount() {
         this.refreshBuildOverrides();
@@ -201,7 +201,7 @@ class Q extends i.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return o().without(K, ...t);
+        return l().without(K, ...t);
     }
     renderEmpty() {
         return (0, r.jsxs)(m.ubH, {
@@ -222,7 +222,7 @@ class Q extends i.Component {
         let { buildOverrides: e, saving: t, errors: n } = this.state;
         return null == e
             ? null
-            : o().map(e, (e, i) =>
+            : l().map(e, (e, i) =>
                   (0, r.jsx)(
                       J,
                       {
@@ -436,7 +436,7 @@ class Q extends i.Component {
             }),
             H(this, 'handleDiscardChanges', () => {
                 this.setState({
-                    buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
+                    buildOverrides: l().cloneDeep(this.state.loadedBuildOverrides),
                     errors: {},
                     didSave: !1
                 });
@@ -450,7 +450,7 @@ class Q extends i.Component {
                     let e = t.body;
                     this.setState({
                         buildOverrides: e,
-                        loadedBuildOverrides: o().cloneDeep(e),
+                        loadedBuildOverrides: l().cloneDeep(e),
                         errors: {},
                         didSave: !0,
                         saving: !1
@@ -480,7 +480,7 @@ class $ extends i.Component {
         return X(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
-        let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: i, allowedVersions: s, allowedVersionEntry: a, allowedVersionEntryError: l, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
+        let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: i, allowedVersions: s, allowedVersionEntry: a, allowedVersionEntryError: o, allowLoggedOut: l, experiments: c, experimentsError: d } = this.state,
             u = M.S6.find((t) => t.value === e),
             g = s.map((e) => ({
                 label: e,
@@ -525,7 +525,7 @@ class $ extends i.Component {
                                                   autoFocus: !0,
                                                   value: a,
                                                   onKeyPress: this.handleAllowedVersionEnter,
-                                                  error: l,
+                                                  error: o,
                                                   onChange: this.handleAllowedVersionEntry,
                                                   placeholder: 'Example: 34'
                                               })
@@ -552,32 +552,30 @@ class $ extends i.Component {
                     : null,
                 this.isMobile()
                     ? null
-                    : (0, r.jsx)(r.Fragment, {
-                          children: (0, r.jsxs)(m.xJW, {
-                              title: 'Limit to User IDs (optional)',
-                              className: G.marginBottom20,
-                              children: [
-                                  (0, r.jsx)(O.Z, {
-                                      direction: O.Z.Direction.HORIZONTAL,
-                                      children: (0, r.jsx)(O.Z.Child, {
-                                          wrap: !0,
-                                          basis: '90%',
-                                          children: (0, r.jsx)(m.Kx8, {
-                                              value: n,
-                                              error: i,
-                                              onBlur: () => this.setUserEntryError(''),
-                                              onChange: this.handleUserIDEntry
-                                          })
+                    : (0, r.jsxs)(m.xJW, {
+                          title: 'Limit to User IDs (optional)',
+                          className: G.marginBottom20,
+                          children: [
+                              (0, r.jsx)(O.Z, {
+                                  direction: O.Z.Direction.HORIZONTAL,
+                                  children: (0, r.jsx)(O.Z.Child, {
+                                      wrap: !0,
+                                      basis: '90%',
+                                      children: (0, r.jsx)(m.Kx8, {
+                                          value: n,
+                                          error: i,
+                                          onBlur: () => this.setUserEntryError(''),
+                                          onChange: this.handleUserIDEntry
                                       })
-                                  }),
-                                  (0, r.jsx)(m.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'text-muted',
-                                      className: G.marginTop8,
-                                      children: 'User IDs can be separated by whitespace or commas.'
                                   })
-                              ]
-                          })
+                              }),
+                              (0, r.jsx)(m.Text, {
+                                  variant: 'text-sm/normal',
+                                  color: 'text-muted',
+                                  className: G.marginTop8,
+                                  children: 'User IDs can be separated by whitespace or commas.'
+                              })
+                          ]
                       }),
                 (0, r.jsxs)(m.xJW, {
                     title: 'Client Experiment Override',
@@ -606,7 +604,7 @@ class $ extends i.Component {
                 }),
                 (0, r.jsx)(m.j7V, {
                     onChange: this.handleAllowLoggedOut,
-                    value: o,
+                    value: l,
                     children: 'Allow logged out users'
                 })
             ]
@@ -806,9 +804,9 @@ class $ extends i.Component {
 }
 function ee(e) {
     let { layoutDebuggingEnabled: t, cssDebuggingEnabled: n } = e,
-        { horizontalSpacing: s, verticalSpacing: a, maxHorizontalSpacing: l, maxVerticalSpacing: o } = (0, S.i)(),
-        c = i.useMemo(() => Array.from({ length: l + 1 }, (e, t) => t), [l]),
-        d = i.useMemo(() => Array.from({ length: o + 1 }, (e, t) => t), [o]);
+        { horizontalSpacing: s, verticalSpacing: a, maxHorizontalSpacing: o, maxVerticalSpacing: l } = (0, S.i)(),
+        c = i.useMemo(() => Array.from({ length: o + 1 }, (e, t) => t), [o]),
+        d = i.useMemo(() => Array.from({ length: l + 1 }, (e, t) => t), [l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m.vwX, {
@@ -852,7 +850,7 @@ function ee(e) {
                             (0, r.jsx)(m.iRW, {
                                 initialValue: s,
                                 minValue: 0,
-                                maxValue: l,
+                                maxValue: o,
                                 markers: c,
                                 onValueChange: (e) => S.i.getState().setHorizontalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
@@ -873,7 +871,7 @@ function ee(e) {
                             (0, r.jsx)(m.iRW, {
                                 initialValue: a,
                                 minValue: 0,
-                                maxValue: o,
+                                maxValue: l,
                                 markers: d,
                                 onValueChange: (e) => S.i.getState().setVerticalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
@@ -894,11 +892,11 @@ function en() {
     let e = (0, I.XE)('developer_settings'),
         t = (0, d.e7)([y.default], () => y.default.getForcedRenderMode()),
         [n, s] = i.useState(!1),
-        [a, l] = i.useState(''),
-        o = e || t === x.R5.OUT_OF_PROCESS_V2 || t === x.R5.OUT_OF_PROCESS_V3 || t === x.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
+        [a, o] = i.useState(''),
+        l = e || t === x.R5.OUT_OF_PROCESS_V2 || t === x.R5.OUT_OF_PROCESS_V3 || t === x.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (i.useEffect(() => {
         (async () => {
-            l(await (0, Z.Y)());
+            o(await (0, Z.Y)());
         })();
     }, []),
     n)
@@ -910,7 +908,7 @@ function en() {
                       children: [
                           (0, r.jsx)(P.F, {
                               setting: L.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
-                              children: o
+                              children: l
                                   ? (0, r.jsx)(m.zxk, {
                                         onClick: () => (0, A.fK)(),
                                         children: 'Open Overlay'
@@ -1037,7 +1035,7 @@ let er = d.ZP.connectStores([R.default], () => ({
     disableAppCollectionsCache: R.default.disableAppCollectionsCache,
     preventPopoutClose: R.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: f, preventPopoutClose: b } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: i, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: o, cssDebuggingEnabled: l, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: p, disableAppCollectionsCache: f, preventPopoutClose: b } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(P.F, {
@@ -1121,7 +1119,7 @@ let er = d.ZP.connectStores([R.default], () => ({
                         (0, r.jsx)(P.F, {
                             setting: L.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                             children: (0, r.jsx)(m.j7V, {
-                                value: l,
+                                value: o,
                                 note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
                                 onChange: (e) => (0, h.y)({ axeEnabled: e }),
                                 children: 'Enable Accessibility Auditing'
@@ -1169,7 +1167,7 @@ let er = d.ZP.connectStores([R.default], () => ({
             }),
             (0, r.jsx)(ee, {
                 layoutDebuggingEnabled: c,
-                cssDebuggingEnabled: o
+                cssDebuggingEnabled: l
             })
         ]
     });
@@ -1246,4 +1244,4 @@ class ea extends i.PureComponent {
         });
     }
 }
-let el = ea;
+let eo = ea;

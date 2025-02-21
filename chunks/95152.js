@@ -184,53 +184,51 @@ class R extends i.Component {
                                 })
                             ]
                         }),
-                        (0, r.jsx)('div', {
+                        (0, r.jsxs)('div', {
                             className: v.comment,
-                            children: (0, r.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, r.jsx)('div', {
-                                        className: v.label,
-                                        children: (0, r.jsx)('span', { children: E.NW.string(E.t.ILJuBg) })
-                                    }),
-                                    (0, r.jsx)(s.oil, {
-                                        className: a()(v.channelTextAreaUpload, b.marginTop8),
-                                        value: this.state.filename,
-                                        onChange: (e) => this.setState({ filename: e }),
-                                        onKeyDown: (e) => {
-                                            if (e.which === g.yXg.ENTER) return this.handleSubmit();
-                                        }
-                                    }),
-                                    e.isImage
-                                        ? (0, r.jsxs)(i.Fragment, {
-                                              children: [
-                                                  (0, r.jsx)('div', {
-                                                      className: v.label,
-                                                      children: (0, r.jsx)('span', { children: E.NW.string(E.t.eOB2eX) })
-                                                  }),
-                                                  (0, r.jsx)(s.oil, {
-                                                      className: a()(v.channelTextAreaUpload, b.marginTop8),
-                                                      placeholder: E.NW.string(E.t.RNH1jo),
-                                                      value: this.state.description,
-                                                      onChange: (e) => this.setState({ description: e }),
-                                                      onKeyDown: (e) => {
-                                                          if (e.which === g.yXg.ENTER) return this.handleSubmit();
-                                                      }
-                                                  })
-                                              ]
-                                          })
-                                        : null,
-                                    !0 !== o &&
-                                        (0, r.jsx)(s.XZJ, {
-                                            className: b.marginBottom20,
-                                            value: l,
-                                            onChange: (e, t) => this.setState({ hasSpoiler: t }),
-                                            children: (0, r.jsx)(s.Text, {
-                                                variant: 'text-sm/normal',
-                                                children: E.NW.string(E.t['gsI+xM'])
-                                            })
+                            children: [
+                                (0, r.jsx)('div', {
+                                    className: v.label,
+                                    children: (0, r.jsx)('span', { children: E.NW.string(E.t.ILJuBg) })
+                                }),
+                                (0, r.jsx)(s.oil, {
+                                    className: a()(v.channelTextAreaUpload, b.marginTop8),
+                                    value: this.state.filename,
+                                    onChange: (e) => this.setState({ filename: e }),
+                                    onKeyDown: (e) => {
+                                        if (e.which === g.yXg.ENTER) return this.handleSubmit();
+                                    }
+                                }),
+                                e.isImage
+                                    ? (0, r.jsxs)(i.Fragment, {
+                                          children: [
+                                              (0, r.jsx)('div', {
+                                                  className: v.label,
+                                                  children: (0, r.jsx)('span', { children: E.NW.string(E.t.eOB2eX) })
+                                              }),
+                                              (0, r.jsx)(s.oil, {
+                                                  className: a()(v.channelTextAreaUpload, b.marginTop8),
+                                                  placeholder: E.NW.string(E.t.RNH1jo),
+                                                  value: this.state.description,
+                                                  onChange: (e) => this.setState({ description: e }),
+                                                  onKeyDown: (e) => {
+                                                      if (e.which === g.yXg.ENTER) return this.handleSubmit();
+                                                  }
+                                              })
+                                          ]
+                                      })
+                                    : null,
+                                !0 !== o &&
+                                    (0, r.jsx)(s.XZJ, {
+                                        className: b.marginBottom20,
+                                        value: l,
+                                        onChange: (e, t) => this.setState({ hasSpoiler: t }),
+                                        children: (0, r.jsx)(s.Text, {
+                                            variant: 'text-sm/normal',
+                                            children: E.NW.string(E.t['gsI+xM'])
                                         })
-                                ]
-                            })
+                                    })
+                            ]
                         })
                     ]
                 }),

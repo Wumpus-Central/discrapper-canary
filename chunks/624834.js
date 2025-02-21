@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(100527),
     h = n(906732),
     v = n(835473),
-    g = n(314897),
-    b = n(592125),
+    b = n(314897),
+    g = n(592125),
     y = n(594174),
     E = n(849171),
     O = n(388032),
@@ -39,27 +39,25 @@ function j(e) {
         );
     return (0, r.jsx)(h.Gt, {
         value: a,
-        children: (0, r.jsx)('div', {
+        children: (0, r.jsxs)('div', {
             className: S.container,
-            children: (0, r.jsxs)(r.Fragment, {
-                children: [
-                    null != c && null != s && null != u && '' !== u
-                        ? (0, r.jsx)('img', {
-                              className: S.splashImage,
-                              alt: c.name,
-                              src: u
-                          })
-                        : null,
-                    null != c && null != s
-                        ? (0, r.jsx)(x, {
-                              width: n,
-                              channelId: i,
-                              participant: d,
-                              applicationId: s
-                          })
-                        : null
-                ]
-            })
+            children: [
+                null != c && null != s && null != u && '' !== u
+                    ? (0, r.jsx)('img', {
+                          className: S.splashImage,
+                          alt: c.name,
+                          src: u
+                      })
+                    : null,
+                null != c && null != s
+                    ? (0, r.jsx)(x, {
+                          width: n,
+                          channelId: i,
+                          participant: d,
+                          applicationId: s
+                      })
+                    : null
+            ]
         })
     });
 }
@@ -67,8 +65,8 @@ function x(e) {
     let { width: t, channelId: n, participant: i, applicationId: m } = e,
         p = (0, E.V_)(t),
         [j] = (0, E.Ym)(t),
-        x = (0, o.e7)([b.Z], () => b.Z.getChannel(n)),
-        Z = (0, o.e7)([y.default, g.default], () => ((0, f.J)(i, g.default) ? null : y.default.getUser(i.userId))),
+        x = (0, o.e7)([g.Z], () => g.Z.getChannel(n)),
+        Z = (0, o.e7)([y.default, b.default], () => ((0, f.J)(i, b.default) ? null : y.default.getUser(i.userId))),
         w = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
         C = (0, v.q)(m),
         { analyticsLocations: P } = (0, h.ZP)(),

@@ -123,16 +123,14 @@ function f(e) {
                         : null,
                     b
                         ? null
-                        : (0, r.jsx)(r.Fragment, {
-                              children: (0, r.jsx)(l.sNh, {
-                                  id: 'report-server-listing',
-                                  label: d.NW.string(d.t.Aen9en),
-                                  action: function () {
-                                      null != t && ((0, s.sq)(t), x());
-                                  },
-                                  icon: l.U65,
-                                  color: 'danger'
-                              })
+                        : (0, r.jsx)(l.sNh, {
+                              id: 'report-server-listing',
+                              label: d.NW.string(d.t.Aen9en),
+                              action: function () {
+                                  null != t && ((0, s.sq)(t), x());
+                              },
+                              icon: l.U65,
+                              color: 'danger'
                           })
                 ]
             }),

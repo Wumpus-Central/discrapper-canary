@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    o = n(704215),
+    o = n(442837),
+    l = n(704215),
     c = n(524437),
     d = n(780384),
     u = n(481060),
@@ -177,7 +177,7 @@ let Y = {
     },
     $ = () => {
         let e = (0, j.Q3)('ThemeTitle'),
-            t = (0, l.e7)([x.Z], () => x.Z.isPreview),
+            t = (0, o.e7)([x.Z], () => x.Z.isPreview),
             { enabled: n } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -369,21 +369,19 @@ class ee extends i.Component {
                   })
               })
             : s
-              ? (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsxs)(u.Kqy, {
-                        gap: 24,
-                        children: [
-                            (0, r.jsx)(u.Text, {
-                                variant: 'text-lg/medium',
-                                className: V.title,
-                                children: U.NW.string(U.t.Ksh3io)
-                            }),
-                            (0, r.jsx)(u.xJW, {
-                                title: (0, r.jsx)($, {}),
-                                children: (0, r.jsx)(w.i, {})
-                            })
-                        ]
-                    })
+              ? (0, r.jsxs)(u.Kqy, {
+                    gap: 24,
+                    children: [
+                        (0, r.jsx)(u.Text, {
+                            variant: 'text-lg/medium',
+                            className: V.title,
+                            children: U.NW.string(U.t.Ksh3io)
+                        }),
+                        (0, r.jsx)(u.xJW, {
+                            title: (0, r.jsx)($, {}),
+                            children: (0, r.jsx)(w.i, {})
+                        })
+                    ]
                 })
               : (0, r.jsxs)(u.xJW, {
                     className: G.marginTop8,
@@ -729,11 +727,11 @@ class et extends ee {
                     (0, r.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            l = (0, r.jsx)(y.F, {
+            o = (0, r.jsx)(y.F, {
                 setting: W.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                 children: this.renderTimestampHourCycle()
             }),
-            o = (0, r.jsx)(u.Text, {
+            l = (0, r.jsx)(u.Text, {
                 variant: 'text-md/normal',
                 className: V.a11yCallout,
                 children: U.NW.format(U.t['5LEQdX'], {
@@ -745,7 +743,7 @@ class et extends ee {
         return (0, r.jsxs)(u.hjN, {
             tag: u.RB0.H1,
             title: U.NW.string(U.t['iHH+k5']),
-            children: [this.renderVisualRefreshOverride(), t, n, i, s, a, l, o]
+            children: [this.renderVisualRefreshOverride(), t, n, i, s, a, o, l]
         });
     }
 }
@@ -764,9 +762,9 @@ function er() {
         s = Z.hg.useSetting(),
         a = Z.YC.useSetting();
     (0, p.ZP)(() => {
-        en(o.z.CLIENT_THEMES_SETTINGS_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        en(l.z.CLIENT_THEMES_SETTINGS_BADGE), en(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), en(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, l.cj)([R.Z, D.ZP, b.Z, A.default, x.Z], () => {
+    let c = (0, o.cj)([R.Z, D.ZP, b.Z, A.default, x.Z], () => {
             var e, t;
             return {
                 theme: R.Z.theme,

@@ -258,24 +258,22 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             (() => {
                                                 if (!D.isPublished || null == Z) return;
                                                 let e = T + Z;
-                                                return (0, r.jsx)(r.Fragment, {
-                                                    children: (0, r.jsxs)(l.hjN, {
-                                                        className: S.noDividerFormSection,
-                                                        children: [
-                                                            (0, r.jsx)(l.vwX, {
-                                                                className: S.formTitle,
-                                                                children: E.NW.string(E.t.safBZ2)
-                                                            }),
-                                                            (0, r.jsx)(c.Z, { value: e }),
-                                                            (0, r.jsx)(l.zxk, {
-                                                                className: S.viewPageButton,
-                                                                size: l.zxk.Sizes.SMALL,
-                                                                color: l.zxk.Colors.BRAND,
-                                                                onClick: () => window.open(e),
-                                                                children: E.NW.string(E.t.NI8iGB)
-                                                            })
-                                                        ]
-                                                    })
+                                                return (0, r.jsxs)(l.hjN, {
+                                                    className: S.noDividerFormSection,
+                                                    children: [
+                                                        (0, r.jsx)(l.vwX, {
+                                                            className: S.formTitle,
+                                                            children: E.NW.string(E.t.safBZ2)
+                                                        }),
+                                                        (0, r.jsx)(c.Z, { value: e }),
+                                                        (0, r.jsx)(l.zxk, {
+                                                            className: S.viewPageButton,
+                                                            size: l.zxk.Sizes.SMALL,
+                                                            color: l.zxk.Colors.BRAND,
+                                                            onClick: () => window.open(e),
+                                                            children: E.NW.string(E.t.NI8iGB)
+                                                        })
+                                                    ]
                                                 });
                                             })(),
                                             (0, r.jsx)(l.$i$, { className: S.divider }),
@@ -491,110 +489,108 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 ]
                                             }),
                                             (0, r.jsx)(l.$i$, { className: S.divider }),
-                                            (0, r.jsx)(r.Fragment, {
-                                                children: (0, r.jsxs)(l.hjN, {
-                                                    children: [
-                                                        (0, r.jsx)(l.vwX, {
-                                                            className: S.formTitle,
-                                                            children: E.NW.string(E.t.V5mNyc)
-                                                        }),
-                                                        (0, r.jsx)(l.R94, {
-                                                            className: S.description,
-                                                            type: l.geA.DESCRIPTION,
-                                                            children: E.NW.string(E.t.d3kA9f)
-                                                        }),
-                                                        D.socialLinks.map((e, t) =>
-                                                            (0, r.jsxs)(
-                                                                'div',
-                                                                {
-                                                                    className: S.socialLinksContainer,
-                                                                    onMouseOver: () => ee(t, !0),
-                                                                    onFocus: () => ee(t, !0),
-                                                                    onMouseOut: () => ee(t, !1),
-                                                                    onBlur: () => ee(t, !1),
-                                                                    children: [
+                                            (0, r.jsxs)(l.hjN, {
+                                                children: [
+                                                    (0, r.jsx)(l.vwX, {
+                                                        className: S.formTitle,
+                                                        children: E.NW.string(E.t.V5mNyc)
+                                                    }),
+                                                    (0, r.jsx)(l.R94, {
+                                                        className: S.description,
+                                                        type: l.geA.DESCRIPTION,
+                                                        children: E.NW.string(E.t.d3kA9f)
+                                                    }),
+                                                    D.socialLinks.map((e, t) =>
+                                                        (0, r.jsxs)(
+                                                            'div',
+                                                            {
+                                                                className: S.socialLinksContainer,
+                                                                onMouseOver: () => ee(t, !0),
+                                                                onFocus: () => ee(t, !0),
+                                                                onMouseOut: () => ee(t, !1),
+                                                                onBlur: () => ee(t, !1),
+                                                                children: [
+                                                                    (0, r.jsx)(
+                                                                        l.q4e,
+                                                                        {
+                                                                            className: D.isPublished ? S.socialLinksDropdownMax : S.socialLinksDropdownMin,
+                                                                            options: F(G[t]),
+                                                                            placeholder: E.NW.string(E.t.xSALIC),
+                                                                            value: G[t],
+                                                                            onChange: (e) => K(e, t),
+                                                                            isDisabled: !w
+                                                                        },
+                                                                        'dropdown-' + t
+                                                                    ),
+                                                                    (0, r.jsx)(
+                                                                        l.oil,
+                                                                        {
+                                                                            value: e,
+                                                                            className: D.isPublished ? S.socialLinksMax : S.socialLinksMin,
+                                                                            onChange: (e) => q(e, t),
+                                                                            placeholder: E.NW.string(E.t.Q6o4pK),
+                                                                            maxLength: 150,
+                                                                            disabled: !w
+                                                                        },
+                                                                        'link-' + t
+                                                                    ),
+                                                                    A[t]
+                                                                        ? (0, r.jsx)(
+                                                                              l.owK,
+                                                                              {
+                                                                                  size: 'custom',
+                                                                                  className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
+                                                                                  color: a.Z.unsafe_rawColors.GREEN_230.css,
+                                                                                  width: 20,
+                                                                                  height: 20
+                                                                              },
+                                                                              'validation-passed-' + t
+                                                                          )
+                                                                        : (0, r.jsx)(
+                                                                              l.k$p,
+                                                                              {
+                                                                                  size: 'custom',
+                                                                                  className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
+                                                                                  color: a.Z.unsafe_rawColors.RED_400.css,
+                                                                                  width: 20,
+                                                                                  height: 20
+                                                                              },
+                                                                              'validation-failed-' + t
+                                                                          ),
+                                                                    w &&
                                                                         (0, r.jsx)(
-                                                                            l.q4e,
+                                                                            o.Z,
                                                                             {
-                                                                                className: D.isPublished ? S.socialLinksDropdownMax : S.socialLinksDropdownMin,
-                                                                                options: F(G[t]),
-                                                                                placeholder: E.NW.string(E.t.xSALIC),
-                                                                                value: G[t],
-                                                                                onChange: (e) => K(e, t),
-                                                                                isDisabled: !w
+                                                                                className: M[t] ? (D.isPublished ? S.deleteButtonMax : S.deleteButtonMin) : D.isPublished ? S.deleteButtonHiddenMax : S.deleteButtonHiddenMin,
+                                                                                onClick: () => X(t)
                                                                             },
-                                                                            'dropdown-' + t
-                                                                        ),
-                                                                        (0, r.jsx)(
-                                                                            l.oil,
-                                                                            {
-                                                                                value: e,
-                                                                                className: D.isPublished ? S.socialLinksMax : S.socialLinksMin,
-                                                                                onChange: (e) => q(e, t),
-                                                                                placeholder: E.NW.string(E.t.Q6o4pK),
-                                                                                maxLength: 150,
-                                                                                disabled: !w
-                                                                            },
-                                                                            'link-' + t
-                                                                        ),
-                                                                        A[t]
-                                                                            ? (0, r.jsx)(
-                                                                                  l.owK,
-                                                                                  {
-                                                                                      size: 'custom',
-                                                                                      className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
-                                                                                      color: a.Z.unsafe_rawColors.GREEN_230.css,
-                                                                                      width: 20,
-                                                                                      height: 20
-                                                                                  },
-                                                                                  'validation-passed-' + t
-                                                                              )
-                                                                            : (0, r.jsx)(
-                                                                                  l.k$p,
-                                                                                  {
-                                                                                      size: 'custom',
-                                                                                      className: D.isPublished ? S.validationButtonMax : S.validationButtonMin,
-                                                                                      color: a.Z.unsafe_rawColors.RED_400.css,
-                                                                                      width: 20,
-                                                                                      height: 20
-                                                                                  },
-                                                                                  'validation-failed-' + t
-                                                                              ),
-                                                                        w &&
-                                                                            (0, r.jsx)(
-                                                                                o.Z,
-                                                                                {
-                                                                                    className: M[t] ? (D.isPublished ? S.deleteButtonMax : S.deleteButtonMin) : D.isPublished ? S.deleteButtonHiddenMax : S.deleteButtonHiddenMin,
-                                                                                    onClick: () => X(t)
-                                                                                },
-                                                                                'delete-button-' + t
-                                                                            )
-                                                                    ]
-                                                                },
-                                                                'social-container-' + t
-                                                            )
-                                                        ),
-                                                        (null == H ? void 0 : H.social_links) != null
-                                                            ? (0, r.jsx)(l.Text, {
-                                                                  color: 'text-danger',
-                                                                  variant: 'text-sm/normal',
-                                                                  children: H.social_links
-                                                              })
-                                                            : null,
-                                                        (0, r.jsx)(l.zxk, {
-                                                            size: l.zxk.Sizes.SMALL,
-                                                            color: l.zxk.Colors.PRIMARY,
-                                                            onClick: () => {
-                                                                if (D.socialLinks.length < 9) {
-                                                                    let e = [...D.socialLinks];
-                                                                    (0, p.t$)(n.id, e.concat('')), B(G.concat(''));
-                                                                }
+                                                                            'delete-button-' + t
+                                                                        )
+                                                                ]
                                                             },
-                                                            disabled: !w || D.socialLinks.length >= 9,
-                                                            children: E.NW.string(E.t.QvovjY)
-                                                        })
-                                                    ]
-                                                })
+                                                            'social-container-' + t
+                                                        )
+                                                    ),
+                                                    (null == H ? void 0 : H.social_links) != null
+                                                        ? (0, r.jsx)(l.Text, {
+                                                              color: 'text-danger',
+                                                              variant: 'text-sm/normal',
+                                                              children: H.social_links
+                                                          })
+                                                        : null,
+                                                    (0, r.jsx)(l.zxk, {
+                                                        size: l.zxk.Sizes.SMALL,
+                                                        color: l.zxk.Colors.PRIMARY,
+                                                        onClick: () => {
+                                                            if (D.socialLinks.length < 9) {
+                                                                let e = [...D.socialLinks];
+                                                                (0, p.t$)(n.id, e.concat('')), B(G.concat(''));
+                                                            }
+                                                        },
+                                                        disabled: !w || D.socialLinks.length >= 9,
+                                                        children: E.NW.string(E.t.QvovjY)
+                                                    })
+                                                ]
                                             }),
                                             D.isPublished &&
                                                 (0, r.jsxs)(r.Fragment, {

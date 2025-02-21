@@ -43,8 +43,8 @@ var i,
     L = n(914010),
     D = n(594174),
     B = n(451478),
-    F = n(626135),
-    U = n(74538),
+    U = n(626135),
+    F = n(74538),
     W = n(960020),
     V = n(566006),
     G = n(886132),
@@ -169,97 +169,95 @@ class ec extends (i = r.PureComponent) {
         let k = null == P ? void 0 : P.getBoundingClientRect(),
             L = null != S && null != k,
             D = null == S;
-        return (0, o.jsx)(o.Fragment, {
-            children: (0, o.jsx)(p.yRy, {
-                shouldShow: N,
-                'aria-label': null != C && C,
-                renderPopout: this.renderTooltip,
-                nudgeAlignIntoViewport: !0,
-                position: 'top',
-                align: 'center',
-                positionKey: E,
-                children: () =>
-                    (0, o.jsx)('div', {
-                        onMouseEnter: this.handleEnter,
-                        onMouseLeave: this.handleLeave,
-                        ref: this.handleSetReactionRef,
-                        children: (0, o.jsx)(c.Z.div, {
-                            className: s()(I.reaction, j, {
-                                [I.reactionMe]: this.isMe(),
-                                [I.reactionReadOnly]: h && !f && !v && !g,
-                                [I.shakeReaction]: T && null == S
-                            }),
-                            style: Z,
-                            children: (0, o.jsx)(p.yRy, {
-                                renderPopout: this.renderLurkerModeUpsellPopout,
-                                position: 'top',
-                                children: (n) =>
-                                    (0, o.jsxs)(
-                                        p.P3F,
-                                        er(eo({}, n), {
-                                            className: I.reactionInner,
-                                            onClick: this.handleClick,
-                                            'aria-disabled': h,
-                                            'aria-label': (0, w.iD)(this.isMe(), A, d, a),
-                                            'aria-pressed': this.isMe(),
-                                            children: [
-                                                (0, o.jsx)('div', {
-                                                    className: s()({ [I.burstGlow]: a }),
-                                                    style: { boxShadow: '0 0 16px '.concat(t) }
-                                                }),
-                                                (0, o.jsxs)('div', {
-                                                    children: [
-                                                        a
-                                                            ? (0, o.jsxs)(o.Fragment, {
-                                                                  children: [
-                                                                      L &&
-                                                                          (0, o.jsx)(O.Z, {
-                                                                              messageId: x.id,
-                                                                              emoji: d,
-                                                                              startPosition: S,
-                                                                              targetPosition: k
-                                                                          }),
-                                                                      D &&
-                                                                          (0, o.jsx)(X.Z, {
-                                                                              count: i,
-                                                                              emoji: d,
-                                                                              channelId: x.getChannelId(),
-                                                                              messageId: x.id,
-                                                                              useChatFontScaling: y,
-                                                                              color: t,
-                                                                              emojiSize: 'reactionLarge' === _ ? J.M.NORMAL_NEW : J.M.NORMAL
-                                                                          })
-                                                                  ]
-                                                              })
-                                                            : null,
-                                                        (0, o.jsx)(m.Z, {
-                                                            className: s()({ [I.hideEmoji]: T }),
-                                                            emojiId: d.id,
-                                                            emojiName: d.name,
-                                                            size: _,
-                                                            animated: d.animated
-                                                        })
-                                                    ]
-                                                }),
-                                                l
-                                                    ? null
-                                                    : (0, o.jsx)(b.Z, {
-                                                          className: I.reactionCount,
-                                                          value: A,
-                                                          color: e,
-                                                          digitWidth: ea
-                                                      }),
-                                                (0, o.jsx)(R.Z, {
-                                                    count: A,
-                                                    reactionRef: P
-                                                })
-                                            ]
-                                        })
-                                    )
-                            })
+        return (0, o.jsx)(p.yRy, {
+            shouldShow: N,
+            'aria-label': null != C && C,
+            renderPopout: this.renderTooltip,
+            nudgeAlignIntoViewport: !0,
+            position: 'top',
+            align: 'center',
+            positionKey: E,
+            children: () =>
+                (0, o.jsx)('div', {
+                    onMouseEnter: this.handleEnter,
+                    onMouseLeave: this.handleLeave,
+                    ref: this.handleSetReactionRef,
+                    children: (0, o.jsx)(c.Z.div, {
+                        className: s()(I.reaction, j, {
+                            [I.reactionMe]: this.isMe(),
+                            [I.reactionReadOnly]: h && !f && !v && !g,
+                            [I.shakeReaction]: T && null == S
+                        }),
+                        style: Z,
+                        children: (0, o.jsx)(p.yRy, {
+                            renderPopout: this.renderLurkerModeUpsellPopout,
+                            position: 'top',
+                            children: (n) =>
+                                (0, o.jsxs)(
+                                    p.P3F,
+                                    er(eo({}, n), {
+                                        className: I.reactionInner,
+                                        onClick: this.handleClick,
+                                        'aria-disabled': h,
+                                        'aria-label': (0, w.iD)(this.isMe(), A, d, a),
+                                        'aria-pressed': this.isMe(),
+                                        children: [
+                                            (0, o.jsx)('div', {
+                                                className: s()({ [I.burstGlow]: a }),
+                                                style: { boxShadow: '0 0 16px '.concat(t) }
+                                            }),
+                                            (0, o.jsxs)('div', {
+                                                children: [
+                                                    a
+                                                        ? (0, o.jsxs)(o.Fragment, {
+                                                              children: [
+                                                                  L &&
+                                                                      (0, o.jsx)(O.Z, {
+                                                                          messageId: x.id,
+                                                                          emoji: d,
+                                                                          startPosition: S,
+                                                                          targetPosition: k
+                                                                      }),
+                                                                  D &&
+                                                                      (0, o.jsx)(X.Z, {
+                                                                          count: i,
+                                                                          emoji: d,
+                                                                          channelId: x.getChannelId(),
+                                                                          messageId: x.id,
+                                                                          useChatFontScaling: y,
+                                                                          color: t,
+                                                                          emojiSize: 'reactionLarge' === _ ? J.M.NORMAL_NEW : J.M.NORMAL
+                                                                      })
+                                                              ]
+                                                          })
+                                                        : null,
+                                                    (0, o.jsx)(m.Z, {
+                                                        className: s()({ [I.hideEmoji]: T }),
+                                                        emojiId: d.id,
+                                                        emojiName: d.name,
+                                                        size: _,
+                                                        animated: d.animated
+                                                    })
+                                                ]
+                                            }),
+                                            l
+                                                ? null
+                                                : (0, o.jsx)(b.Z, {
+                                                      className: I.reactionCount,
+                                                      value: A,
+                                                      color: e,
+                                                      digitWidth: ea
+                                                  }),
+                                            (0, o.jsx)(R.Z, {
+                                                count: A,
+                                                reactionRef: P
+                                            })
+                                        ]
+                                    })
+                                )
                         })
                     })
-            })
+                })
         });
     }
     constructor(...e) {
@@ -352,7 +350,7 @@ class ec extends (i = r.PureComponent) {
                 (this.isReactionEventActive = !1), (this.isKeyboardNavigation = !1), this.timeout.stop(), k.Z.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1);
             }),
             ei(this, 'hideTooltip', () => {
-                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && F.default.track(Y.rMx.CLOSE_POPOUT, { nonce: this.nonce });
+                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && U.default.track(Y.rMx.CLOSE_POPOUT, { nonce: this.nonce });
             }),
             ei(this, 'isMe', () => {
                 let { me: e, me_burst: t, type: n } = this.props;
@@ -445,7 +443,7 @@ class ec extends (i = r.PureComponent) {
                                       ? (0, o.jsxs)('div', {
                                             className: s()(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer),
                                             children: [
-                                                (0, U.I5)(e) &&
+                                                (0, F.I5)(e) &&
                                                     (0, o.jsx)(p.SrA, {
                                                         size: 'md',
                                                         className: en.burstReactionTooltipNitroIcon,
@@ -546,7 +544,7 @@ class ec extends (i = r.PureComponent) {
                     i = D.default.getCurrentUser(),
                     o = A.Z.getChannel(t.getChannelId()),
                     r = n === V.O.BURST,
-                    a = (0, U.I5)(i),
+                    a = (0, F.I5)(i),
                     s = r ? q.cd.EMOJI_IN_BURST_REACTION_HOVER : q.cd.EMOJI_IN_REACTION_HOVER;
                 !r || this.userCanBurstReact() || a || (s = q.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
                     v.ZP.trackWithMetadata(Y.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -561,7 +559,7 @@ class ec extends (i = r.PureComponent) {
                         null == o ||
                         a ||
                         this.userCanBurstReact() ||
-                        F.default.track(Y.rMx.PREMIUM_UPSELL_VIEWED, {
+                        U.default.track(Y.rMx.PREMIUM_UPSELL_VIEWED, {
                             type: q.cd.BURST_REACTION_UPSELL,
                             location: {
                                 page: (null == o ? void 0 : o.getGuildId()) != null ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL,
@@ -581,7 +579,7 @@ let eu = r.memo((e) => {
             c = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
             u = Z.Yk.useSetting(),
             h = D.default.getCurrentUser(),
-            p = (0, U.I5)(h),
+            p = (0, F.I5)(h),
             m = (0, d.e7)([W.Z], () => W.Z.getReactionPickerAnimation(i.id, r.name, r.id)),
             f = a && (l || null != m);
         return (0, o.jsx)(
@@ -663,7 +661,7 @@ let eu = r.memo((e) => {
             w = (0, G.a)({
                 sourceType: g,
                 expressionSourceApplication: null != m ? m : null,
-                isPremium: U.ZP.isPremium(I),
+                isPremium: F.ZP.isPremium(I),
                 hasJoinedEmojiSourceGuild: C,
                 isDiscoverable: R,
                 emojiComesFromCurrentGuild: E,

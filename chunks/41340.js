@@ -65,8 +65,8 @@ let b = {
 function g(e) {
     var t, n, i;
     let { subscription: g, onUpdated: v } = e,
-        [j, C] = a.useState(!1),
-        [y, O] = a.useState(!1),
+        [j, y] = a.useState(!1),
+        [C, O] = a.useState(!1),
         [N, T] = a.useState(null),
         E = (e) => ((null == e && (e = g.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         S = (e) => {
@@ -107,7 +107,7 @@ function g(e) {
             }),
                 v();
         },
-        I = async () => {
+        w = async () => {
             try {
                 await o.tn.post({
                     url: '/debug/subscriptions/'.concat(g.id, '/transition'),
@@ -124,159 +124,157 @@ function g(e) {
             }
             v();
         },
-        w = (null === (t = x.GP[g.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
+        I = (null === (t = x.GP[g.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
         R = null === (n = g.metadata) || void 0 === n ? void 0 : n.ended_at,
         Z = null != R ? new Date(R).toISOString().substring(0, 10) : '';
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: l()(f.card, w ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
-            children: [
+    return (0, r.jsxs)('div', {
+        className: l()(f.card, I ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
+        children: [
+            (0, r.jsxs)(s.Text, {
+                variant: 'text-md/normal',
+                children: [
+                    'Type: ',
+                    (() => {
+                        let e = g.planIdFromItems;
+                        return null == e ? 'No plan id' : e in x.GP ? x.GP[e].name : 'Unknown plan id '.concat(e);
+                    })(),
+                    ' '
+                ]
+            }),
+            (0, r.jsxs)(s.Text, {
+                variant: 'text-md/normal',
+                children: ['ID: ', g.id, ' ']
+            }),
+            g.status !== m.O0b.ACTIVE &&
                 (0, r.jsxs)(s.Text, {
                     variant: 'text-md/normal',
-                    children: [
-                        'Type: ',
-                        (() => {
-                            let e = g.planIdFromItems;
-                            return null == e ? 'No plan id' : e in x.GP ? x.GP[e].name : 'Unknown plan id '.concat(e);
-                        })(),
-                        ' '
-                    ]
+                    children: ['Dates: ', (0, d.vc)(g.createdAt, 'LL'), ' - ', (0, d.vc)(g.currentPeriodEnd, 'LL')]
                 }),
-                (0, r.jsxs)(s.Text, {
-                    variant: 'text-md/normal',
-                    children: ['ID: ', g.id, ' ']
-                }),
-                g.status !== m.O0b.ACTIVE &&
-                    (0, r.jsxs)(s.Text, {
-                        variant: 'text-md/normal',
-                        children: ['Dates: ', (0, d.vc)(g.createdAt, 'LL'), ' - ', (0, d.vc)(g.currentPeriodEnd, 'LL')]
-                    }),
-                (0, r.jsxs)(s.Text, {
-                    style: { marginBottom: '15px' },
-                    variant: 'text-md/normal',
-                    children: ['Status: ', E()]
-                }),
-                null != g.metadata &&
-                    (0, r.jsxs)('div', {
-                        className: p.collapsablePane,
-                        children: [
-                            (0, r.jsxs)(s.P3F, {
-                                onClick: () => {
-                                    C(!j);
-                                },
-                                className: p.collapsablePaneHeader,
-                                children: [
-                                    (0, r.jsx)('div', {
-                                        children: (0, r.jsx)(s.Text, {
-                                            variant: 'text-md/bold',
-                                            children: 'Metadata'
-                                        })
-                                    }),
-                                    (0, r.jsx)(c.Z, { direction: j ? c.Z.Directions.UP : c.Z.Directions.DOWN })
-                                ]
-                            }),
-                            j &&
-                                (0, r.jsx)('ul', {
-                                    style: { marginBottom: '15px' },
-                                    children: Object.entries(g.metadata).map((e) => {
-                                        let [t, n] = e;
-                                        return (0, r.jsxs)(
-                                            'li',
-                                            {
-                                                style: { margin: '8px 0' },
-                                                children: [
-                                                    (0, r.jsx)(s.Text, {
-                                                        variant: 'text-md/bold',
-                                                        children: t
-                                                    }),
-                                                    (0, r.jsx)(s.Text, {
-                                                        variant: 'text-sm/normal',
-                                                        children: n
-                                                    })
-                                                ]
-                                            },
-                                            t
-                                        );
-                                    })
-                                })
-                        ]
-                    }),
+            (0, r.jsxs)(s.Text, {
+                style: { marginBottom: '15px' },
+                variant: 'text-md/normal',
+                children: ['Status: ', E()]
+            }),
+            null != g.metadata &&
                 (0, r.jsxs)('div', {
                     className: p.collapsablePane,
                     children: [
                         (0, r.jsxs)(s.P3F, {
                             onClick: () => {
-                                O(!y);
+                                y(!j);
                             },
                             className: p.collapsablePaneHeader,
                             children: [
                                 (0, r.jsx)('div', {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-md/bold',
-                                        children: 'Modifications'
+                                        children: 'Metadata'
                                     })
                                 }),
-                                (0, r.jsx)(c.Z, { direction: y ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, r.jsx)(c.Z, { direction: j ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        y &&
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    (0, r.jsx)(s.hjN, {
-                                        title: 'Status',
-                                        tag: s.RB0.H3,
-                                        className: p.formSection,
-                                        children: (0, r.jsx)(s.PhF, {
-                                            serialize: (e) => E(e),
-                                            isSelected: (e) => e === g.status,
-                                            options: _,
-                                            select: (e) => k({ status: e }),
-                                            popoutLayerContext: h.O$
-                                        })
-                                    }),
-                                    (0, r.jsxs)(s.hjN, {
-                                        title: 'Renew',
-                                        tag: s.RB0.H3,
-                                        className: p.formSection,
-                                        children: [
-                                            (0, r.jsx)(s.zxk, {
-                                                size: s.zxk.Sizes.SMALL,
-                                                onClick: (e) => I(),
-                                                children: 'Renew Subscription'
-                                            }),
-                                            null !== N &&
-                                                (0, r.jsx)(s.kzN, {
-                                                    className: p.error,
-                                                    onDismiss: () => T(null),
-                                                    children: N
+                        j &&
+                            (0, r.jsx)('ul', {
+                                style: { marginBottom: '15px' },
+                                children: Object.entries(g.metadata).map((e) => {
+                                    let [t, n] = e;
+                                    return (0, r.jsxs)(
+                                        'li',
+                                        {
+                                            style: { margin: '8px 0' },
+                                            children: [
+                                                (0, r.jsx)(s.Text, {
+                                                    variant: 'text-md/bold',
+                                                    children: t
+                                                }),
+                                                (0, r.jsx)(s.Text, {
+                                                    variant: 'text-sm/normal',
+                                                    children: n
                                                 })
-                                        ]
-                                    }),
-                                    (0, r.jsx)(s.hjN, {
-                                        title: 'Override Premium Streak Start Date',
-                                        tag: s.RB0.H3,
-                                        className: p.formSection,
-                                        children: (0, r.jsx)('input', {
-                                            type: 'date',
-                                            value: null === (i = g.premiumSince) || void 0 === i ? void 0 : i.toISOString().substring(0, 10),
-                                            onChange: (e) => k({ premiumStreakStart: e.target.value })
-                                        })
-                                    }),
-                                    (0, r.jsx)(s.hjN, {
-                                        title: 'Override Metadata Ended At Date',
-                                        tag: s.RB0.H3,
-                                        className: p.formSection,
-                                        children: (0, r.jsx)('input', {
-                                            type: 'date',
-                                            value: Z,
-                                            onChange: (e) => k({ endedAt: e.target.value })
-                                        })
-                                    })
-                                ]
+                                            ]
+                                        },
+                                        t
+                                    );
+                                })
                             })
                     ]
-                })
-            ]
-        })
+                }),
+            (0, r.jsxs)('div', {
+                className: p.collapsablePane,
+                children: [
+                    (0, r.jsxs)(s.P3F, {
+                        onClick: () => {
+                            O(!C);
+                        },
+                        className: p.collapsablePaneHeader,
+                        children: [
+                            (0, r.jsx)('div', {
+                                children: (0, r.jsx)(s.Text, {
+                                    variant: 'text-md/bold',
+                                    children: 'Modifications'
+                                })
+                            }),
+                            (0, r.jsx)(c.Z, { direction: C ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                        ]
+                    }),
+                    C &&
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)(s.hjN, {
+                                    title: 'Status',
+                                    tag: s.RB0.H3,
+                                    className: p.formSection,
+                                    children: (0, r.jsx)(s.PhF, {
+                                        serialize: (e) => E(e),
+                                        isSelected: (e) => e === g.status,
+                                        options: _,
+                                        select: (e) => k({ status: e }),
+                                        popoutLayerContext: h.O$
+                                    })
+                                }),
+                                (0, r.jsxs)(s.hjN, {
+                                    title: 'Renew',
+                                    tag: s.RB0.H3,
+                                    className: p.formSection,
+                                    children: [
+                                        (0, r.jsx)(s.zxk, {
+                                            size: s.zxk.Sizes.SMALL,
+                                            onClick: (e) => w(),
+                                            children: 'Renew Subscription'
+                                        }),
+                                        null !== N &&
+                                            (0, r.jsx)(s.kzN, {
+                                                className: p.error,
+                                                onDismiss: () => T(null),
+                                                children: N
+                                            })
+                                    ]
+                                }),
+                                (0, r.jsx)(s.hjN, {
+                                    title: 'Override Premium Streak Start Date',
+                                    tag: s.RB0.H3,
+                                    className: p.formSection,
+                                    children: (0, r.jsx)('input', {
+                                        type: 'date',
+                                        value: null === (i = g.premiumSince) || void 0 === i ? void 0 : i.toISOString().substring(0, 10),
+                                        onChange: (e) => k({ premiumStreakStart: e.target.value })
+                                    })
+                                }),
+                                (0, r.jsx)(s.hjN, {
+                                    title: 'Override Metadata Ended At Date',
+                                    tag: s.RB0.H3,
+                                    className: p.formSection,
+                                    children: (0, r.jsx)('input', {
+                                        type: 'date',
+                                        value: Z,
+                                        onChange: (e) => k({ endedAt: e.target.value })
+                                    })
+                                })
+                            ]
+                        })
+                ]
+            })
+        ]
     });
 }

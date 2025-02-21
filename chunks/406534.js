@@ -330,12 +330,10 @@ function er(e) {
                                       })
                                   ]
                               })
-                            : (0, r.jsx)(r.Fragment, {
-                                  children: (0, r.jsx)(o.Text, {
-                                      variant: 'text-sm/medium',
-                                      color: 'currentColor',
-                                      children: n
-                                  })
+                            : (0, r.jsx)(o.Text, {
+                                  variant: 'text-sm/medium',
+                                  color: 'currentColor',
+                                  children: n
                               });
                     f = (0, r.jsx)(V.G5, {
                         scrollManager: eu,

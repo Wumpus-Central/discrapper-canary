@@ -317,11 +317,9 @@ class A extends (o = l.PureComponent) {
             className: u()(_.tier2Animation, e),
             children: [
                 n
-                    ? (0, s.jsx)(s.Fragment, {
-                          children: (0, s.jsxs)('div', {
-                              className: _.panningAnimation,
-                              children: [(0, s.jsx)('div', { className: _.tier2Background }), (0, s.jsx)('div', { className: _.tier2Foreground })]
-                          })
+                    ? (0, s.jsxs)('div', {
+                          className: _.panningAnimation,
+                          children: [(0, s.jsx)('div', { className: _.tier2Background }), (0, s.jsx)('div', { className: _.tier2Foreground })]
                       })
                     : (0, s.jsxs)(s.Fragment, {
                           children: [

@@ -88,30 +88,28 @@ function w(e) {
             }),
         [!0, t, a, c]
     );
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(u.ZP, {
-            className: o()(P.recentMentionsPopout, { [P.widerInbox]: w }),
-            scrollerClassName: P.scroller,
-            onFetch: () => null,
-            onJump: n,
-            onCloseMessage: function (e) {
-                d.Z.deleteRecentMention(e.id);
-            },
-            channel: h,
-            messages: _,
-            loading: O,
-            hasMore: v,
-            analyticsName: 'Recent Mentions',
-            loadMore: function () {
-                A(h, !0, null != _ && _.length > 0 ? _[_.length - 1].id : null);
-            },
-            canCloseAllMessages: !0,
-            renderHeader: M,
-            renderEmptyState: R,
-            renderMessage: Z,
-            'aria-label': S.NW.string(S.t.jbV6MD),
-            listName: 'recents'
-        })
+    return (0, r.jsx)(u.ZP, {
+        className: o()(P.recentMentionsPopout, { [P.widerInbox]: w }),
+        scrollerClassName: P.scroller,
+        onFetch: () => null,
+        onJump: n,
+        onCloseMessage: function (e) {
+            d.Z.deleteRecentMention(e.id);
+        },
+        channel: h,
+        messages: _,
+        loading: O,
+        hasMore: v,
+        analyticsName: 'Recent Mentions',
+        loadMore: function () {
+            A(h, !0, null != _ && _.length > 0 ? _[_.length - 1].id : null);
+        },
+        canCloseAllMessages: !0,
+        renderHeader: M,
+        renderEmptyState: R,
+        renderMessage: Z,
+        'aria-label': S.NW.string(S.t.jbV6MD),
+        listName: 'recents'
     });
 }
 function Z(e, t) {

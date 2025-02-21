@@ -443,48 +443,46 @@ let k = function (e) {
                 })
             );
         };
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: l()(A.mosaicItem, {
-                [A.mosaicItemNoJustify]: C,
-                [A.mosaicItemFullWidth]: a,
-                [A.mosaicItemMediaMosaic]: b,
-                [A.hideOverflow]: b && M,
-                [A.mosaicItemWithFooter]: null != d
-            }),
-            children: [
-                null != j
-                    ? (0, r.jsx)(h.Z, {
-                          type: h.Z.Types.ATTACHMENT,
-                          inline: v,
-                          reason: j,
-                          isSingleMosaicItem: c,
-                          obscured: I,
-                          containerStyles: (function (e, t, n) {
-                              if (!t) return;
-                              let r = e.width;
-                              if (void 0 !== e.width && void 0 !== e.height) {
-                                  let { width: t } = (0, w.Tj)({
-                                      width: e.width,
-                                      height: e.height,
-                                      maxWidth: 400,
-                                      maxHeight: 300
-                                  });
-                                  r = t;
-                              }
-                              return D(L({}, n !== N.hV.MOSAIC && { maxWidth: null != r ? r : '400px' }), {
-                                  width: '100%',
-                                  height: '100%',
-                                  justifySelf: 'auto'
+    return (0, r.jsxs)('div', {
+        className: l()(A.mosaicItem, {
+            [A.mosaicItemNoJustify]: C,
+            [A.mosaicItemFullWidth]: a,
+            [A.mosaicItemMediaMosaic]: b,
+            [A.hideOverflow]: b && M,
+            [A.mosaicItemWithFooter]: null != d
+        }),
+        children: [
+            null != j
+                ? (0, r.jsx)(h.Z, {
+                      type: h.Z.Types.ATTACHMENT,
+                      inline: v,
+                      reason: j,
+                      isSingleMosaicItem: c,
+                      obscured: I,
+                      containerStyles: (function (e, t, n) {
+                          if (!t) return;
+                          let r = e.width;
+                          if (void 0 !== e.width && void 0 !== e.height) {
+                              let { width: t } = (0, w.Tj)({
+                                  width: e.width,
+                                  height: e.height,
+                                  maxWidth: 400,
+                                  maxHeight: 300
                               });
-                          })(n, C, u),
-                          obscurityControlClassName: l()({ [A.obscureVideoSpacing]: 'VIDEO' === O && c && !I && S }),
-                          onToggleObscurity: () => x((e) => !e),
-                          children: (e) => H(e)
-                      })
-                    : H(),
-                d
-            ]
-        })
+                              r = t;
+                          }
+                          return D(L({}, n !== N.hV.MOSAIC && { maxWidth: null != r ? r : '400px' }), {
+                              width: '100%',
+                              height: '100%',
+                              justifySelf: 'auto'
+                          });
+                      })(n, C, u),
+                      obscurityControlClassName: l()({ [A.obscureVideoSpacing]: 'VIDEO' === O && c && !I && S }),
+                      onToggleObscurity: () => x((e) => !e),
+                      children: (e) => H(e)
+                  })
+                : H(),
+            d
+        ]
     });
 };

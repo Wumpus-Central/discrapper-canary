@@ -299,51 +299,49 @@ function v() {
                                   })
                               ]
                           }),
-                          (0, l.jsx)(l.Fragment, {
-                              children: (0, l.jsxs)('div', {
-                                  className: x.valueContainer,
-                                  children: [
-                                      (0, l.jsxs)('div', {
-                                          className: x.valueText,
-                                          children: [
-                                              (0, l.jsx)(a.X6q, {
-                                                  variant: 'heading-md/semibold',
-                                                  children: S.NW.string(S.t.O4jYEh)
-                                              }),
-                                              (0, l.jsx)(a.Text, {
-                                                  variant: 'text-sm/normal',
-                                                  children: S.NW.string(S.t['l/l/Gx'])
-                                              })
-                                          ]
-                                      }),
-                                      (0, l.jsxs)('div', {
-                                          className: i()(x.upsellPreview, x.spacingLarge),
-                                          children: [
-                                              (0, l.jsx)(m.Z, {
-                                                  guildId: e,
-                                                  welcomeMessage: {
-                                                      authorIds: [n.id],
-                                                      message: S.NW.string(S.t.hIWAfn)
-                                                  }
-                                              }),
-                                              (0, l.jsx)(u.k, {
-                                                  title: S.NW.string(S.t['47zu7O']),
-                                                  subtitle: S.NW.string(S.t.amoSNz),
-                                                  completed: !0,
-                                                  Icon: a.VL1,
-                                                  variant: 'static'
-                                              }),
-                                              (0, l.jsx)(u.k, {
-                                                  title: S.NW.string(S.t.EZfTKC),
-                                                  subtitle: S.NW.string(S.t['/sYelZ']),
-                                                  completed: !0,
-                                                  Icon: a.VL1,
-                                                  variant: 'static'
-                                              })
-                                          ]
-                                      })
-                                  ]
-                              })
+                          (0, l.jsxs)('div', {
+                              className: x.valueContainer,
+                              children: [
+                                  (0, l.jsxs)('div', {
+                                      className: x.valueText,
+                                      children: [
+                                          (0, l.jsx)(a.X6q, {
+                                              variant: 'heading-md/semibold',
+                                              children: S.NW.string(S.t.O4jYEh)
+                                          }),
+                                          (0, l.jsx)(a.Text, {
+                                              variant: 'text-sm/normal',
+                                              children: S.NW.string(S.t['l/l/Gx'])
+                                          })
+                                      ]
+                                  }),
+                                  (0, l.jsxs)('div', {
+                                      className: i()(x.upsellPreview, x.spacingLarge),
+                                      children: [
+                                          (0, l.jsx)(m.Z, {
+                                              guildId: e,
+                                              welcomeMessage: {
+                                                  authorIds: [n.id],
+                                                  message: S.NW.string(S.t.hIWAfn)
+                                              }
+                                          }),
+                                          (0, l.jsx)(u.k, {
+                                              title: S.NW.string(S.t['47zu7O']),
+                                              subtitle: S.NW.string(S.t.amoSNz),
+                                              completed: !0,
+                                              Icon: a.VL1,
+                                              variant: 'static'
+                                          }),
+                                          (0, l.jsx)(u.k, {
+                                              title: S.NW.string(S.t.EZfTKC),
+                                              subtitle: S.NW.string(S.t['/sYelZ']),
+                                              completed: !0,
+                                              Icon: a.VL1,
+                                              variant: 'static'
+                                          })
+                                      ]
+                                  })
+                              ]
                           }),
                           (0, l.jsxs)('div', {
                               className: x.valueContainer,

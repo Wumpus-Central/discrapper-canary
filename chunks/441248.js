@@ -55,11 +55,9 @@ function g(e) {
                 className: h.info,
                 children: [
                     null != c
-                        ? (0, r.jsx)(r.Fragment, {
-                              children: (0, r.jsx)(f, {
-                                  name: c,
-                                  applicationId: null == n ? void 0 : n.id
-                              })
+                        ? (0, r.jsx)(f, {
+                              name: c,
+                              applicationId: null == n ? void 0 : n.id
                           })
                         : null,
                     (0, r.jsx)(a.V, { onClick: l })

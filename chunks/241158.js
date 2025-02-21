@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(392711),
-    o = n(780384),
+    o = n(392711),
+    l = n(780384),
     c = n(481060),
     d = n(410030),
     u = n(70097),
@@ -72,10 +72,10 @@ let _ = (e) => {
                 return t;
             })(t),
             A = (0, d.ZP)(),
-            P = (0, o.wj)(A),
+            P = (0, l.wj)(A),
             R = P ? c.Ttl.WHITE : c.Ttl.BRAND,
-            D = (0, l.debounce)(() => {
-                m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+            D = (0, o.debounce)(() => {
+                m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(t) });
             }, 800),
             Z = () => {
                 null == T.current || O || ((T.current.currentTime = I.current), T.current.play());
@@ -169,54 +169,52 @@ let _ = (e) => {
     },
     E = i.memo(function (e) {
         let { className: t, shouldLoadVideo: n, isBestOfNitro: i = !1, isReducedMotion: s } = e,
-            l = Object.values((0, p.ZP)(i)),
-            o = i ? Object.values((0, p.__)()) : null;
-        return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)('div', {
-                className: a()(N.boxBackdrop, t),
-                children: [
-                    (0, r.jsx)(c.X6q, {
-                        className: N.whatsNewHeader,
-                        variant: 'display-md',
-                        color: 'header-primary',
-                        children: i ? b.NW.string(b.t.EnzW2N) : b.NW.string(b.t.LRmNAg)
-                    }),
-                    l.map((e, t) =>
-                        (0, r.jsx)(
-                            _,
-                            x(
-                                {
-                                    shouldLoadVideo: n,
-                                    isReducedMotion: s,
-                                    index: t
-                                },
-                                e
+            o = Object.values((0, p.ZP)(i)),
+            l = i ? Object.values((0, p.__)()) : null;
+        return (0, r.jsxs)('div', {
+            className: a()(N.boxBackdrop, t),
+            children: [
+                (0, r.jsx)(c.X6q, {
+                    className: N.whatsNewHeader,
+                    variant: 'display-md',
+                    color: 'header-primary',
+                    children: i ? b.NW.string(b.t.EnzW2N) : b.NW.string(b.t.LRmNAg)
+                }),
+                o.map((e, t) =>
+                    (0, r.jsx)(
+                        _,
+                        x(
+                            {
+                                shouldLoadVideo: n,
+                                isReducedMotion: s,
+                                index: t
+                            },
+                            e
+                        ),
+                        e.name
+                    )
+                ),
+                null != l &&
+                    (0, r.jsxs)('div', {
+                        className: N.compactBoxOuterContainer,
+                        children: [
+                            l.map((e, t) =>
+                                (0, r.jsx)(
+                                    _,
+                                    x(
+                                        {
+                                            shouldLoadVideo: n,
+                                            isReducedMotion: s,
+                                            index: t
+                                        },
+                                        e
+                                    ),
+                                    e.name
+                                )
                             ),
-                            e.name
-                        )
-                    ),
-                    null != o &&
-                        (0, r.jsxs)('div', {
-                            className: N.compactBoxOuterContainer,
-                            children: [
-                                o.map((e, t) =>
-                                    (0, r.jsx)(
-                                        _,
-                                        x(
-                                            {
-                                                shouldLoadVideo: n,
-                                                isReducedMotion: s,
-                                                index: t
-                                            },
-                                            e
-                                        ),
-                                        e.name
-                                    )
-                                ),
-                                (0, r.jsx)('div', { className: N.whatsNewSideGradient })
-                            ]
-                        })
-                ]
-            })
+                            (0, r.jsx)('div', { className: N.whatsNewSideGradient })
+                        ]
+                    })
+            ]
         });
     });

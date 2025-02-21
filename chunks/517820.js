@@ -452,37 +452,35 @@ function H(e) {
 }
 function V(e) {
     let { compact: t, header: n, subheader: i, content: a, footerButtons: l } = e;
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: o()(R.embedCard, { [R.compact]: t }),
-            children: [
-                (0, r.jsxs)('div', {
-                    className: R.cardContent,
-                    children: [
-                        (0, r.jsxs)('div', {
-                            className: R.cardHeaderContianer,
-                            children: [
+    return (0, r.jsxs)('div', {
+        className: o()(R.embedCard, { [R.compact]: t }),
+        children: [
+            (0, r.jsxs)('div', {
+                className: R.cardContent,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: R.cardHeaderContianer,
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: R.cardHeader,
+                                children: n
+                            }),
+                            null != i &&
                                 (0, r.jsx)('div', {
-                                    className: R.cardHeader,
-                                    children: n
-                                }),
-                                null != i &&
-                                    (0, r.jsx)('div', {
-                                        className: R.subheader,
-                                        children: i
-                                    })
-                            ]
-                        }),
-                        a
-                    ]
-                }),
-                null != l &&
-                    (0, r.jsx)('div', {
-                        className: o()(R.centeredRowContainer, R.cardFooter, { [R.compact]: t }),
-                        children: l
-                    })
-            ]
-        })
+                                    className: R.subheader,
+                                    children: i
+                                })
+                        ]
+                    }),
+                    a
+                ]
+            }),
+            null != l &&
+                (0, r.jsx)('div', {
+                    className: o()(R.centeredRowContainer, R.cardFooter, { [R.compact]: t }),
+                    children: l
+                })
+        ]
     });
 }
 function z(e) {

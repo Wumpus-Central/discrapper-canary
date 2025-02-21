@@ -544,16 +544,14 @@ function _(e) {
                                       },
                                       children: B.NW.string(B.t.XYBEaW)
                                   })
-                                : (0, A.jsx)(A.Fragment, {
-                                      children: (0, A.jsx)(u.zxk, {
-                                          color: u.zxk.Colors.PRIMARY,
-                                          disabled: !eJ,
-                                          submitting: eS,
-                                          onClick: () => {
-                                              i()(eJ, 'cannot save changes without name or price tier'), eY('draft'), e9(eH);
-                                          },
-                                          children: B.NW.string(B.t.ZCjwoa)
-                                      })
+                                : (0, A.jsx)(u.zxk, {
+                                      color: u.zxk.Colors.PRIMARY,
+                                      disabled: !eJ,
+                                      submitting: eS,
+                                      onClick: () => {
+                                          i()(eJ, 'cannot save changes without name or price tier'), eY('draft'), e9(eH);
+                                      },
+                                      children: B.NW.string(B.t.ZCjwoa)
                                   })
                         })
                     ]

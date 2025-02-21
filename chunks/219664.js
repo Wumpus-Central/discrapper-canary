@@ -33,9 +33,9 @@ var r = n(200651),
     Z = n(883728),
     M = n(710352),
     A = n(981631),
-    F = n(388032),
-    L = n(796312);
-function W(e) {
+    L = n(388032),
+    W = n(796312);
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -160,33 +160,33 @@ function B(e) {
         onClick: J,
         onFocus: ec,
         onContextMenu: Y,
-        className: l()(L.container, m, { [L.isOpen]: I }),
-        style: W({}, h),
+        className: l()(W.container, m, { [W.isOpen]: I }),
+        style: F({}, h),
         children: [
             (0, r.jsx)(
                 d.P3F,
-                W(
+                F(
                     {
                         onClick: J,
                         focusProps: { ringTarget: S },
                         onContextMenu: Y,
-                        'aria-label': F.NW.formatToPlainString(F.t.pgYN6e, {
+                        'aria-label': L.NW.formatToPlainString(L.t.pgYN6e, {
                             title: n.name,
                             count: U
                         }),
-                        className: L.focusTarget
+                        className: W.focusTarget
                     },
                     ed
                 )
             ),
             (0, r.jsxs)('div', {
-                className: L.header,
+                className: W.header,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: L.authorRow,
+                        className: W.authorRow,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: L.rowGroup,
+                                className: W.rowGroup,
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         channel: n,
@@ -195,16 +195,16 @@ function B(e) {
                                     (0, r.jsx)(d.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        className: L.postCreationTimestamp,
+                                        className: W.postCreationTimestamp,
                                         children: ei
                                     })
                                 ]
                             }),
                             V
                                 ? (0, r.jsx)(d.IGR, {
-                                      className: l()(L.newBadge),
+                                      className: l()(W.newBadge),
                                       color: c.Z.unsafe_rawColors.BRAND_260.css,
-                                      text: F.NW.string(F.t.y2b7CA)
+                                      text: L.NW.string(L.t.y2b7CA)
                                   })
                                 : null
                         ]
@@ -212,7 +212,7 @@ function B(e) {
                     (0, r.jsx)(d.y5t, {
                         children: (0, r.jsx)(d.X6q, {
                             variant: 'heading-md/extrabold',
-                            className: L.title,
+                            className: W.title,
                             color: q ? 'header-primary' : 'text-muted',
                             style: { width: ''.concat(h.width - 2 * T.I8, 'px') },
                             children: el
@@ -221,7 +221,7 @@ function B(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: L.postBody,
+                className: W.postBody,
                 children: (0, r.jsx)(d.Rny, {
                     children: es
                         ? (0, r.jsx)(X, {
@@ -242,10 +242,10 @@ function B(e) {
                                       shouldMaintainAspectRatio: eu
                                   }),
                                   (0, r.jsx)('div', {
-                                      className: L.tagsRow,
+                                      className: W.tagsRow,
                                       children: (0, r.jsx)(k.ZP, {
                                           channel: n,
-                                          tagsClassName: L.tagPill
+                                          tagsClassName: W.tagPill
                                       })
                                   })
                               ]
@@ -253,7 +253,7 @@ function B(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: L.footer,
+                className: W.footer,
                 children: (0, r.jsx)(d.Rny, {
                     children: (0, r.jsx)(H, {
                         channel: n,
@@ -270,13 +270,13 @@ function H(e) {
         i = (0, m.Q)(t.id),
         l = (null == a ? void 0 : a.reactions) != null && a.reactions.length > 0;
     return (0, r.jsxs)('div', {
-        className: L.forumPostControls,
+        className: W.forumPostControls,
         children: [
             (0, r.jsxs)('div', {
-                className: L.controlsGroup,
+                className: W.controlsGroup,
                 children: [
                     (0, r.jsx)('div', {
-                        className: L.messageCountContainer,
+                        className: W.messageCountContainer,
                         children: (0, r.jsx)(P.m9, {
                             channel: t,
                             iconSize: 16,
@@ -287,11 +287,11 @@ function H(e) {
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)('span', {
-                                      className: L.bullet,
+                                      className: W.bullet,
                                       children: '\u2022'
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: L.typing,
+                                      className: W.typing,
                                       children: [
                                           (0, r.jsx)(P.og, {
                                               channel: t,
@@ -299,7 +299,7 @@ function H(e) {
                                               facepileRef: n
                                           }),
                                           (0, r.jsx)('div', {
-                                              className: L.dots,
+                                              className: W.dots,
                                               children: (0, r.jsx)(d.bbz, {
                                                   themed: !0,
                                                   dotRadius: 2
@@ -307,7 +307,7 @@ function H(e) {
                                           }),
                                           (0, r.jsx)(u.Z, {
                                               channel: t,
-                                              className: L.typingUsers,
+                                              className: W.typingUsers,
                                               renderDots: !1
                                           })
                                       ]
@@ -318,7 +318,7 @@ function H(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: L.controlsGroup,
+                className: W.controlsGroup,
                 children: [
                     l || null == a
                         ? null
@@ -339,7 +339,7 @@ function H(e) {
 }
 let U = (e) => e.preventDefault(),
     V = a.memo(function (e) {
-        return (0, r.jsx)(r.Fragment, { children: (0, v.Yi)(D(W({}, e), { analyticsSource: 'ForumPostMediaPreviewImage' })) });
+        return (0, r.jsx)(r.Fragment, { children: (0, v.Yi)(D(F({}, e), { analyticsSource: 'ForumPostMediaPreviewImage' })) });
     }),
     G = a.memo(function (e) {
         let { mediaAttachments: t, globalSpoilerRenderSetting: n, containerWidth: i, containerHeight: s, canAutoPlay: o, shouldMaintainAspectRatio: c = !1 } = e,
@@ -362,7 +362,7 @@ let U = (e) => e.preventDefault(),
                         var a;
                         let [i, s] = (0, p.As)(e, !n, j),
                             g = (0, p.MC)(s),
-                            x = D(W({}, v[t]), {
+                            x = D(F({}, v[t]), {
                                 src: e.src,
                                 width: e.width,
                                 height: e.height,
@@ -375,44 +375,44 @@ let U = (e) => e.preventDefault(),
                         return (0, r.jsxs)(
                             'div',
                             {
-                                className: L.bodyMediaFrame,
+                                className: W.bodyMediaFrame,
                                 style: b[t],
                                 children: [
                                     c
                                         ? (0, r.jsx)(
                                               h.Z,
-                                              D(W({}, x), {
+                                              D(F({}, x), {
                                                   src: _,
                                                   backgroundSrc: C,
                                                   aspectRatio: x.maxWidth / x.maxHeight,
                                                   alt: null !== (a = x.alt) && void 0 !== a ? a : '',
-                                                  className: l()(L.mediaPostContainer, { [L.obscured]: i }),
-                                                  imageChildClassName: L.mediaPostThumbnail
+                                                  className: l()(W.mediaPostContainer, { [W.obscured]: i }),
+                                                  imageChildClassName: W.mediaPostThumbnail
                                               })
                                           )
                                         : e.src.startsWith('data:')
                                           ? (0, r.jsx)(
                                                 d.Eep,
-                                                D(W({}, x), {
-                                                    className: L.mediaContainer,
-                                                    imageClassName: l()(L.thumbnailOverride, { [L.obscured]: i })
+                                                D(F({}, x), {
+                                                    className: W.mediaContainer,
+                                                    imageClassName: l()(W.thumbnailOverride, { [W.obscured]: i })
                                                 })
                                             )
                                           : (0, r.jsx)(
                                                 V,
-                                                D(W({}, x), {
+                                                D(F({}, x), {
                                                     autoPlay: o && !i,
-                                                    containerClassName: L.mosaicMediaContainer,
-                                                    imageClassName: l()(L.imageCover, { [L.obscured]: i }),
+                                                    containerClassName: W.mosaicMediaContainer,
+                                                    imageClassName: l()(W.imageCover, { [W.obscured]: i }),
                                                     responsive: !0
                                                 })
                                             ),
                                     i &&
                                         (0, r.jsx)('div', {
-                                            className: L.obscuredTagContainer,
+                                            className: W.obscuredTagContainer,
                                             children: (0, r.jsx)(S.Z, {
                                                 obscureReason: s,
-                                                iconClassname: L.obscuredTag
+                                                iconClassname: W.obscuredTag
                                             })
                                         })
                                 ]
@@ -423,16 +423,16 @@ let U = (e) => e.preventDefault(),
                 [o, m, u, n, b, v, x, c, j]
             );
         return (0, r.jsxs)('div', {
-            className: L.bodyMedia,
+            className: W.bodyMedia,
             style: {
                 width: i,
                 height: s
             },
             children: [
-                (0, r.jsx)(r.Fragment, { children: C }),
+                C,
                 (m || u) &&
                     (0, r.jsxs)('div', {
-                        className: L.mediaIconsRow,
+                        className: W.mediaIconsRow,
                         children: [
                             u &&
                                 (0, r.jsx)(d.o1U, {
@@ -440,7 +440,7 @@ let U = (e) => e.preventDefault(),
                                     size: 'custom',
                                     width: 22,
                                     height: 22,
-                                    className: L.mediaIcon
+                                    className: W.mediaIcon
                                 }),
                             m &&
                                 (0, r.jsx)(d.OUq, {
@@ -448,7 +448,7 @@ let U = (e) => e.preventDefault(),
                                     width: 29,
                                     height: 29,
                                     color: 'currentColor',
-                                    className: L.mediaIcon
+                                    className: W.mediaIcon
                                 })
                         ]
                     }),
@@ -456,9 +456,9 @@ let U = (e) => e.preventDefault(),
                     (0, r.jsx)(q, {
                         text: (t.length - I.Vn).toString(),
                         icon: d.XBm,
-                        pillClassName: L.moreImagesPill,
-                        iconClassName: L.moreImagesPillIcon,
-                        textClassName: L.moreImagesPillText
+                        pillClassName: W.moreImagesPill,
+                        iconClassName: W.moreImagesPillIcon,
+                        textClassName: W.moreImagesPillText
                     })
             ]
         });
@@ -499,42 +499,40 @@ function X(e) {
             }),
             [c, u]
         ),
-        f = o ? L.textContentUnread : L.textContentRead;
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: L.contentPreview,
-            style: g,
-            children: [
-                (0, r.jsxs)('div', {
-                    className: L.content,
-                    children: [
-                        i &&
-                            null == n &&
-                            (0, r.jsx)(d.Text, {
-                                variant: 'text-sm/normal',
-                                color: o ? 'header-secondary' : 'text-muted',
-                                children: F.NW.string(F.t.mE3KJC)
-                            }),
-                        i &&
-                            null != n &&
-                            (0, r.jsx)(b.ZP, {
-                                message: n,
-                                content: m,
-                                className: f
-                            })
-                    ]
-                }),
-                (0, r.jsx)('div', {
-                    className: l()(L.textContentFooter, { [L.noTags]: !h }),
-                    children: h
-                        ? (0, r.jsx)(k.ZP, {
-                              channel: t,
-                              tagsClassName: L.tagPill,
-                              className: L.__invalid_row
-                          })
-                        : null
-                })
-            ]
-        })
+        f = o ? W.textContentUnread : W.textContentRead;
+    return (0, r.jsxs)('div', {
+        className: W.contentPreview,
+        style: g,
+        children: [
+            (0, r.jsxs)('div', {
+                className: W.content,
+                children: [
+                    i &&
+                        null == n &&
+                        (0, r.jsx)(d.Text, {
+                            variant: 'text-sm/normal',
+                            color: o ? 'header-secondary' : 'text-muted',
+                            children: L.NW.string(L.t.mE3KJC)
+                        }),
+                    i &&
+                        null != n &&
+                        (0, r.jsx)(b.ZP, {
+                            message: n,
+                            content: m,
+                            className: f
+                        })
+                ]
+            }),
+            (0, r.jsx)('div', {
+                className: l()(W.textContentFooter, { [W.noTags]: !h }),
+                children: h
+                    ? (0, r.jsx)(k.ZP, {
+                          channel: t,
+                          tagsClassName: W.tagPill,
+                          className: W.__invalid_row
+                      })
+                    : null
+            })
+        ]
     });
 }

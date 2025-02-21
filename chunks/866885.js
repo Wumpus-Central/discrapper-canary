@@ -143,20 +143,18 @@ function F(e) {
                       embeddedActivity: B
                   })
                 : i
-                  ? (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsx)(P.q5, {
-                            idle: n,
-                            onMouseMove: e,
-                            onMouseDown: e,
-                            onMouseLeave: t,
-                            onJumpToChannel: () => {
-                                ei(), (0, O.tg)(D.Ez.PANEL);
-                            },
-                            channel: T,
-                            applicationId: B.applicationId,
-                            users: o,
-                            embeddedActivity: B
-                        })
+                  ? (0, r.jsx)(P.q5, {
+                        idle: n,
+                        onMouseMove: e,
+                        onMouseDown: e,
+                        onMouseLeave: t,
+                        onJumpToChannel: () => {
+                            ei(), (0, O.tg)(D.Ez.PANEL);
+                        },
+                        channel: T,
+                        applicationId: B.applicationId,
+                        users: o,
+                        embeddedActivity: B
                     })
                   : null == z
                     ? null

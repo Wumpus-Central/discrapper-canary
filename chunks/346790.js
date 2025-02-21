@@ -64,21 +64,19 @@ let f = {
 };
 function p(e) {
     let { isGift: t } = (0, o.wD)();
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(
-            s.J,
-            d(c({}, e), {
-                breadcrumbSteps: [a.h8.ADD_PAYMENT_STEPS, a.h8.REVIEW, a.h8.CONFIRM],
-                onReturn: () => {
-                    if (0 === Object.keys(i.Z.paymentSources).length) {
-                        if (t) {
-                            e.handleStepChange(a.h8.GIFT_CUSTOMIZATION);
-                            return;
-                        }
-                        e.handleClose();
-                    } else e.handleStepChange(a.h8.REVIEW, { trackedFromStep: a.h8.ADD_PAYMENT_STEPS });
-                }
-            })
-        )
-    });
+    return (0, r.jsx)(
+        s.J,
+        d(c({}, e), {
+            breadcrumbSteps: [a.h8.ADD_PAYMENT_STEPS, a.h8.REVIEW, a.h8.CONFIRM],
+            onReturn: () => {
+                if (0 === Object.keys(i.Z.paymentSources).length) {
+                    if (t) {
+                        e.handleStepChange(a.h8.GIFT_CUSTOMIZATION);
+                        return;
+                    }
+                    e.handleClose();
+                } else e.handleStepChange(a.h8.REVIEW, { trackedFromStep: a.h8.ADD_PAYMENT_STEPS });
+            }
+        })
+    );
 }

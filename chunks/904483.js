@@ -55,16 +55,14 @@ function b(e) {
     return __OVERLAY__
         ? null
         : e.id === o._
-          ? (0, r.jsx)(r.Fragment, {
-                children: (0, r.jsx)(i.sNh, {
-                    id: 'create-category',
-                    label: s.NW.string(s.t['ISN+ND']),
-                    action: () =>
-                        (0, i.ZDy)(async () => {
-                            let { default: e } = await n.e('1812').then(n.bind(n, 477782));
-                            return (t) => (0, r.jsx)(e, u({}, t));
-                        })
-                })
+          ? (0, r.jsx)(i.sNh, {
+                id: 'create-category',
+                label: s.NW.string(s.t['ISN+ND']),
+                action: () =>
+                    (0, i.ZDy)(async () => {
+                        let { default: e } = await n.e('1812').then(n.bind(n, 477782));
+                        return (t) => (0, r.jsx)(e, u({}, t));
+                    })
             })
           : t
             ? [
@@ -75,7 +73,7 @@ function b(e) {
                           label: s.NW.string(s.t['fUYU+v']),
                           action: () =>
                               (0, i.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('21856')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('36915')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, r.jsx)(
                                           t,
@@ -95,7 +93,7 @@ function b(e) {
                           label: s.NW.string(s.t['ISN+ND']),
                           action: () =>
                               (0, i.ZDy)(async () => {
-                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('21856')]).then(n.bind(n, 218613));
+                                  let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('36915')]).then(n.bind(n, 218613));
                                   return (n) =>
                                       (0, r.jsx)(
                                           t,

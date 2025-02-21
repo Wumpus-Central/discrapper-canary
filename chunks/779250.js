@@ -189,108 +189,106 @@ function M(e) {
         Q = _.NW.string(_.t.PDTjLC);
     return (
         2 === X && (Q = u ? _.NW.string(_.t.e5VEcH) : _.NW.string(_.t['60lJ0N'])),
-        (0, l.jsx)(l.Fragment, {
-            children: (0, l.jsxs)(o.Y0X, {
-                transitionState: h,
-                'aria-labelledby': O,
-                size: o.CgR.DYNAMIC,
-                children: [
-                    !B && F ? (0, l.jsx)(U, { modal: Y.current }) : null,
-                    (0, l.jsxs)(o.hzk, {
-                        className: D.content,
-                        scrollerRef: Y,
-                        children: [
-                            !F &&
-                                (0, l.jsx)(m.Z, {
-                                    steps: w.map((e) => e.label),
-                                    stepIndex: A,
-                                    onClick: (e) => {
-                                        e < A ? K() : e > A && J();
-                                    }
-                                }),
-                            (0, l.jsxs)(o.MyZ, {
-                                activeSlide: X,
-                                width: 440,
-                                onSlideReady: (e) => {
-                                    G(e === X);
-                                },
-                                children: [
-                                    (0, l.jsx)(o.Mi4, {
-                                        id: 0,
-                                        children: (0, l.jsx)(S.Z, {
-                                            guildId: t,
-                                            guildEvent: n,
-                                            validationErrorMessage: g.entity,
-                                            isSlideReady: M,
-                                            onChange: p
-                                        })
-                                    }),
-                                    (0, l.jsx)(o.Mi4, {
-                                        id: 1,
-                                        children: (0, l.jsx)(P.Z, {
-                                            guildEvent: n,
-                                            guildEventId: r,
-                                            guildId: t,
-                                            editBroadcastInfoData: c,
-                                            onChange: p,
-                                            error: f,
-                                            validationErrorMessage: g.schedule,
-                                            isSlideReady: M
-                                        })
-                                    }),
-                                    (0, l.jsx)(o.Mi4, {
-                                        id: 2,
-                                        children: (0, l.jsx)(T.Z, {
-                                            guildId: t,
-                                            guildEvent: n,
-                                            guildEventId: r,
-                                            error: f
-                                        })
-                                    }),
-                                    (0, l.jsx)(o.Mi4, {
-                                        id: 3,
-                                        children: (0, l.jsx)(W.Z, {
-                                            onClose: b,
-                                            event: y
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    !F &&
-                        (0, l.jsxs)(o.mzw, {
-                            className: D.footer,
+        (0, l.jsxs)(o.Y0X, {
+            transitionState: h,
+            'aria-labelledby': O,
+            size: o.CgR.DYNAMIC,
+            children: [
+                !B && F ? (0, l.jsx)(U, { modal: Y.current }) : null,
+                (0, l.jsxs)(o.hzk, {
+                    className: D.content,
+                    scrollerRef: Y,
+                    children: [
+                        !F &&
+                            (0, l.jsx)(m.Z, {
+                                steps: w.map((e) => e.label),
+                                stepIndex: A,
+                                onClick: (e) => {
+                                    e < A ? K() : e > A && J();
+                                }
+                            }),
+                        (0, l.jsxs)(o.MyZ, {
+                            activeSlide: X,
+                            width: 440,
+                            onSlideReady: (e) => {
+                                G(e === X);
+                            },
                             children: [
-                                (0, l.jsxs)('div', {
-                                    className: D.inline,
-                                    children: [
-                                        (0, l.jsx)(o.zxk, {
-                                            color: o.zxk.Colors.PRIMARY,
-                                            onClick: b,
-                                            children: _.NW.string(_.t['ETE/oK'])
-                                        }),
-                                        (0, l.jsx)(o.zxk, {
-                                            onClick: J,
-                                            disabled: !V,
-                                            className: D.button,
-                                            submitting: v,
-                                            children: Q
-                                        })
-                                    ]
-                                }),
-                                0 !== X &&
-                                    (0, l.jsx)(o.zxk, {
-                                        look: o.zxk.Looks.LINK,
-                                        size: o.zxk.Sizes.MIN,
-                                        onClick: K,
-                                        color: o.zxk.Colors.LINK,
-                                        children: _.NW.string(_.t['13/7kZ'])
+                                (0, l.jsx)(o.Mi4, {
+                                    id: 0,
+                                    children: (0, l.jsx)(S.Z, {
+                                        guildId: t,
+                                        guildEvent: n,
+                                        validationErrorMessage: g.entity,
+                                        isSlideReady: M,
+                                        onChange: p
                                     })
+                                }),
+                                (0, l.jsx)(o.Mi4, {
+                                    id: 1,
+                                    children: (0, l.jsx)(P.Z, {
+                                        guildEvent: n,
+                                        guildEventId: r,
+                                        guildId: t,
+                                        editBroadcastInfoData: c,
+                                        onChange: p,
+                                        error: f,
+                                        validationErrorMessage: g.schedule,
+                                        isSlideReady: M
+                                    })
+                                }),
+                                (0, l.jsx)(o.Mi4, {
+                                    id: 2,
+                                    children: (0, l.jsx)(T.Z, {
+                                        guildId: t,
+                                        guildEvent: n,
+                                        guildEventId: r,
+                                        error: f
+                                    })
+                                }),
+                                (0, l.jsx)(o.Mi4, {
+                                    id: 3,
+                                    children: (0, l.jsx)(W.Z, {
+                                        onClose: b,
+                                        event: y
+                                    })
+                                })
                             ]
                         })
-                ]
-            })
+                    ]
+                }),
+                !F &&
+                    (0, l.jsxs)(o.mzw, {
+                        className: D.footer,
+                        children: [
+                            (0, l.jsxs)('div', {
+                                className: D.inline,
+                                children: [
+                                    (0, l.jsx)(o.zxk, {
+                                        color: o.zxk.Colors.PRIMARY,
+                                        onClick: b,
+                                        children: _.NW.string(_.t['ETE/oK'])
+                                    }),
+                                    (0, l.jsx)(o.zxk, {
+                                        onClick: J,
+                                        disabled: !V,
+                                        className: D.button,
+                                        submitting: v,
+                                        children: Q
+                                    })
+                                ]
+                            }),
+                            0 !== X &&
+                                (0, l.jsx)(o.zxk, {
+                                    look: o.zxk.Looks.LINK,
+                                    size: o.zxk.Sizes.MIN,
+                                    onClick: K,
+                                    color: o.zxk.Colors.LINK,
+                                    children: _.NW.string(_.t['13/7kZ'])
+                                })
+                        ]
+                    })
+            ]
         })
     );
 }

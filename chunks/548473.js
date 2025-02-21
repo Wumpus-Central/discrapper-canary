@@ -204,42 +204,40 @@ function j(a) {
                 c();
             }, 3000);
         }),
-        (0, k.jsx)(k.Fragment, {
-            children: (0, k.jsx)('div', {
-                className: F.coverContainer,
-                children: (0, k.jsxs)('div', {
-                    className: F.centerContent,
-                    children: [
-                        (0, k.jsx)(w, { guild: i }),
-                        (0, k.jsxs)('div', {
-                            className: F.coverContent,
-                            children: [
-                                (0, k.jsx)(e.Text, {
-                                    className: F.coverTitle,
-                                    variant: 'text-md/medium',
-                                    color: 'always-white',
-                                    id: s,
-                                    children: b.NW.format(b.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
-                                }),
-                                n
-                                    ? (0, k.jsx)(e.$jN, { className: F.__invalid_subtitle })
-                                    : t === u.uX.NOT_APPLICABLE
-                                      ? (0, k.jsx)(e.X6q, {
-                                            className: F.__invalid_subtitle,
-                                            variant: 'heading-xl/semibold',
-                                            color: 'always-white',
-                                            children: b.NW.string(b.t.Q5ibtb)
-                                        })
-                                      : (0, k.jsx)(e.X6q, {
-                                            className: F.__invalid_subtitle,
-                                            variant: 'heading-xl/semibold',
-                                            color: 'always-white',
-                                            children: b.NW.string(b.t['Alcl/f'])
-                                        })
-                            ]
-                        })
-                    ]
-                })
+        (0, k.jsx)('div', {
+            className: F.coverContainer,
+            children: (0, k.jsxs)('div', {
+                className: F.centerContent,
+                children: [
+                    (0, k.jsx)(w, { guild: i }),
+                    (0, k.jsxs)('div', {
+                        className: F.coverContent,
+                        children: [
+                            (0, k.jsx)(e.Text, {
+                                className: F.coverTitle,
+                                variant: 'text-md/medium',
+                                color: 'always-white',
+                                id: s,
+                                children: b.NW.format(b.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
+                            }),
+                            n
+                                ? (0, k.jsx)(e.$jN, { className: F.__invalid_subtitle })
+                                : t === u.uX.NOT_APPLICABLE
+                                  ? (0, k.jsx)(e.X6q, {
+                                        className: F.__invalid_subtitle,
+                                        variant: 'heading-xl/semibold',
+                                        color: 'always-white',
+                                        children: b.NW.string(b.t.Q5ibtb)
+                                    })
+                                  : (0, k.jsx)(e.X6q, {
+                                        className: F.__invalid_subtitle,
+                                        variant: 'heading-xl/semibold',
+                                        color: 'always-white',
+                                        children: b.NW.string(b.t['Alcl/f'])
+                                    })
+                        ]
+                    })
+                ]
             })
         })
     );

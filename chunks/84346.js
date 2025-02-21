@@ -196,11 +196,9 @@ let E = {
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: 'Overlay Performance' }),
         renderButtons: (e) =>
-            (0, i.jsx)(i.Fragment, {
-                children: (0, i.jsx)(g.RT, {
-                    id: e.id,
-                    pinned: e.pinned
-                })
+            (0, i.jsx)(g.RT, {
+                id: e.id,
+                pinned: e.pinned
             })
     },
     [v.Odu.GO_LIVE]: {

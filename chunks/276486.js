@@ -35,66 +35,62 @@ function u(e) {
     return e;
 }
 function a() {
-    return (0, n.jsx)(n.Fragment, {
-        children: (0, n.jsx)(l.PU, {
-            icon: i.AtH,
-            text: c.NW.string(c.t.woMjLS),
-            footnote: c.NW.string(c.t['jMh+TU']),
-            meetsRequirement: !1,
-            children: (0, n.jsx)(i.ua7, {
-                text: c.NW.string(c.t.mGlP39),
-                children: (e) => {
-                    var t, r;
-                    return (0, n.jsx)(
-                        i.zxk,
-                        ((t = u({}, e)),
-                        (r = r =
-                            {
-                                size: i.zxk.Sizes.SMALL,
-                                disabled: !0,
-                                children: c.NW.string(c.t['13ofGh'])
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                            : (function (e, t) {
-                                  var r = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var n = Object.getOwnPropertySymbols(e);
-                                      r.push.apply(r, n);
-                                  }
-                                  return r;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-                              }),
-                        t)
-                    );
-                }
-            })
+    return (0, n.jsx)(l.PU, {
+        icon: i.AtH,
+        text: c.NW.string(c.t.woMjLS),
+        footnote: c.NW.string(c.t['jMh+TU']),
+        meetsRequirement: !1,
+        children: (0, n.jsx)(i.ua7, {
+            text: c.NW.string(c.t.mGlP39),
+            children: (e) => {
+                var t, r;
+                return (0, n.jsx)(
+                    i.zxk,
+                    ((t = u({}, e)),
+                    (r = r =
+                        {
+                            size: i.zxk.Sizes.SMALL,
+                            disabled: !0,
+                            children: c.NW.string(c.t['13ofGh'])
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                        : (function (e, t) {
+                              var r = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var n = Object.getOwnPropertySymbols(e);
+                                  r.push.apply(r, n);
+                              }
+                              return r;
+                          })(Object(r)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          }),
+                    t)
+                );
+            }
         })
     });
 }
 function f(e) {
     let { isUserVerified: t } = e,
         a = t ? c.NW.string(c.t.WWzQtb) : c.NW.string(c.t.woMjLS);
-    return (0, n.jsx)(n.Fragment, {
-        children: (0, n.jsx)(l.PU, {
-            icon: i.AtH,
-            text: a,
-            footnote: c.NW.string(c.t['jMh+TU']),
-            meetsRequirement: t,
-            children: (0, n.jsx)(i.zxk, {
-                size: i.zxk.Sizes.SMALL,
-                onClick: () => {
-                    (0, i.ZDy)(
-                        async () => {
-                            let { default: e } = await Promise.all([r.e('76540'), r.e('5727')]).then(r.bind(r, 607018));
-                            return (t) => (0, n.jsx)(e, u({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
-                        },
-                        { modalKey: s.M }
-                    );
-                },
-                children: c.NW.string(c.t['13ofGh'])
-            })
+    return (0, n.jsx)(l.PU, {
+        icon: i.AtH,
+        text: a,
+        footnote: c.NW.string(c.t['jMh+TU']),
+        meetsRequirement: t,
+        children: (0, n.jsx)(i.zxk, {
+            size: i.zxk.Sizes.SMALL,
+            onClick: () => {
+                (0, i.ZDy)(
+                    async () => {
+                        let { default: e } = await Promise.all([r.e('76540'), r.e('5727')]).then(r.bind(r, 607018));
+                        return (t) => (0, n.jsx)(e, u({ reason: o.L.GUILD_PHONE_REQUIRED }, t));
+                    },
+                    { modalKey: s.M }
+                );
+            },
+            children: c.NW.string(c.t['13ofGh'])
         })
     });
 }

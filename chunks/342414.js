@@ -4,8 +4,8 @@ n(192379);
 var i = n(120356),
     s = n.n(i),
     a = n(481060),
-    l = n(100527),
-    o = n(906732),
+    o = n(100527),
+    l = n(906732),
     c = n(927359),
     d = n(975298),
     u = n(125529),
@@ -54,47 +54,45 @@ function A(e) {
 }
 let P = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: i, headingBottom: l } = w();
-        return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)('div', {
-                className: s()(T.container, t),
-                'data-testid': 'subscriber-nitro-home-hero-header',
-                children: [
-                    (0, r.jsx)('img', {
-                        src: I,
-                        alt: '',
-                        className: T.headerArt
-                    }),
-                    (0, r.jsxs)('div', {
-                        className: T.content,
-                        children: [
-                            i,
-                            (0, r.jsx)(a.X6q, {
-                                variant: 'display-lg',
-                                color: 'always-white',
-                                children: n
-                            }),
-                            l,
-                            (0, r.jsx)('div', {
-                                className: T.buttonContainer,
-                                children: (0, r.jsx)(x.Z, {
-                                    color: a.Ttl.BRAND,
-                                    buttonText: S.NW.string(S.t['3KomGR']),
-                                    className: T.button,
-                                    isGift: !0
-                                })
+            { headingText: n, headingTop: i, headingBottom: o } = w();
+        return (0, r.jsxs)('div', {
+            className: s()(T.container, t),
+            'data-testid': 'subscriber-nitro-home-hero-header',
+            children: [
+                (0, r.jsx)('img', {
+                    src: I,
+                    alt: '',
+                    className: T.headerArt
+                }),
+                (0, r.jsxs)('div', {
+                    className: T.content,
+                    children: [
+                        i,
+                        (0, r.jsx)(a.X6q, {
+                            variant: 'display-lg',
+                            color: 'always-white',
+                            children: n
+                        }),
+                        o,
+                        (0, r.jsx)('div', {
+                            className: T.buttonContainer,
+                            children: (0, r.jsx)(x.Z, {
+                                color: a.Ttl.BRAND,
+                                buttonText: S.NW.string(S.t['3KomGR']),
+                                className: T.button,
+                                isGift: !0
                             })
-                        ]
-                    })
-                ]
-            })
+                        })
+                    ]
+                })
+            ]
         });
     },
     R = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = f.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             i = n === f.p.VARIANT_2,
-            { headingText: s, headingTop: l, headingBottom: o } = w();
+            { headingText: s, headingTop: o, headingBottom: l } = w();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('img', {
@@ -108,13 +106,13 @@ let P = (e) => {
                     children: (0, r.jsxs)('div', {
                         className: T.contentV2,
                         children: [
-                            l,
+                            o,
                             (0, r.jsx)(a.X6q, {
                                 variant: 'display-lg',
                                 color: 'always-white',
                                 children: s
                             }),
-                            o,
+                            l,
                             i &&
                                 (0, r.jsx)('div', {
                                     className: T.buttonContainer,
@@ -165,7 +163,7 @@ let P = (e) => {
     [Z, w] = (0, m.Z)(),
     k = (e) => {
         let { className: t, location: n } = e,
-            { analyticsLocations: i } = (0, o.ZP)(l.Z.PREMIUM_MARKETING_HERO_CTA),
+            { analyticsLocations: i } = (0, l.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
             a = (0, h.W)(),
             m = (0, p._O)(),
             f = S.NW.string(S.t.qYKftb),
@@ -227,7 +225,7 @@ let P = (e) => {
                       children: (0, r.jsx)(_.mn, A({}, B))
                   })
                 : (0, r.jsx)(_.Cy, A({}, B));
-        return (0, r.jsx)(o.Gt, {
+        return (0, r.jsx)(l.Gt, {
             value: i,
             children: (0, r.jsx)(Z.Provider, {
                 value: {

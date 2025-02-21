@@ -328,26 +328,24 @@ let A = function (e) {
                                 profileViewedAnalytics: { source: d ? N.jXE.OVERLAY : N.Sbl.VOICE_PANEL }
                             };
                         return !D || d
-                            ? (0, r.jsx)(r.Fragment, {
-                                  children: (0, r.jsx)(
-                                      m.Z,
-                                      ((e = w({}, i)),
-                                      (t = t = { children: l }),
-                                      Object.getOwnPropertyDescriptors
-                                          ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                                          : (function (e, t) {
-                                                var n = Object.keys(e);
-                                                if (Object.getOwnPropertySymbols) {
-                                                    var r = Object.getOwnPropertySymbols(e);
-                                                    n.push.apply(n, r);
-                                                }
-                                                return n;
-                                            })(Object(t)).forEach(function (n) {
-                                                Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-                                            }),
-                                      e)
-                                  )
-                              })
+                            ? (0, r.jsx)(
+                                  m.Z,
+                                  ((e = w({}, i)),
+                                  (t = t = { children: l }),
+                                  Object.getOwnPropertyDescriptors
+                                      ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                      : (function (e, t) {
+                                            var n = Object.keys(e);
+                                            if (Object.getOwnPropertySymbols) {
+                                                var r = Object.getOwnPropertySymbols(e);
+                                                n.push.apply(n, r);
+                                            }
+                                            return n;
+                                        })(Object(t)).forEach(function (n) {
+                                            Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                        }),
+                                  e)
+                              )
                             : null;
                     })(),
                     (0, r.jsx)(T, w({ disabled: u }, p)),

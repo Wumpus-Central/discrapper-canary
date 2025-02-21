@@ -1,8 +1,10 @@
 e.exports = {
     container: 'container__37e49',
+    content: 'content__37e49',
     avatar: 'avatar__37e49',
     redIcon: 'redIcon__37e49',
     avatarWrapper: 'avatarWrapper__37e49',
+    experiment: 'experiment__37e49',
     nameTag: 'nameTag__37e49',
     canCopy: 'canCopy__37e49',
     panelTitleContainer: 'panelTitleContainer__37e49',
@@ -15,7 +17,7 @@ e.exports = {
     micButtonParent: 'micButtonParent__37e49',
     buttonChevron: 'buttonChevron__37e49',
     micButtonWithMenu: 'micButtonWithMenu__37e49',
-    nameplated: 'nameplated__37e49',
+    buttonSpace: 'buttonSpace__37e49',
     buttons: 'buttons__37e49',
     buttonChevronIcon: 'buttonChevronIcon__37e49'
 };

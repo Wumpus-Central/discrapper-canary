@@ -207,49 +207,47 @@ function N(e) {
         d = !0 === t.didSelfVote,
         p = !0 === t.isVictor,
         m = t.shouldAnimateTransition;
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: o()(y.answerInner, {
-                [y.currentlyVoting]: i !== g.Y7.LIST,
-                [y.selected]: c
-            }),
-            children: [
-                a
-                    ? (0, r.jsx)(E, {
-                          percentage: t.votesPercentage,
-                          shouldAnimate: m
-                      })
-                    : null,
-                null != t.pollMedia.emoji &&
-                    (0, r.jsx)(_.sc, {
-                        className: y.emoji,
-                        emoji: t.pollMedia.emoji
-                    }),
-                (0, r.jsx)(u.Text, {
-                    className: y.label,
-                    variant: 'text-sm/semibold',
-                    color: 'none',
-                    scaleFontToUserSetting: !0,
-                    children: t.pollMedia.text
+    return (0, r.jsxs)('div', {
+        className: o()(y.answerInner, {
+            [y.currentlyVoting]: i !== g.Y7.LIST,
+            [y.selected]: c
+        }),
+        children: [
+            a
+                ? (0, r.jsx)(E, {
+                      percentage: t.votesPercentage,
+                      shouldAnimate: m
+                  })
+                : null,
+            null != t.pollMedia.emoji &&
+                (0, r.jsx)(_.sc, {
+                    className: y.emoji,
+                    emoji: t.pollMedia.emoji
                 }),
-                t.didSelfVote && (0, r.jsx)(l.T, { children: v.NW.string(v.t['8DAM+/']) }),
-                a &&
-                    (0, r.jsx)(O, {
-                        percentage: t.votesPercentage,
-                        label: t.votes,
-                        canShowVoterDetails: s,
-                        answerId: t.answerId
-                    }),
-                (0, r.jsx)(j, {
-                    answersInteraction: i,
-                    isSelected: c,
-                    didSelfVote: d,
-                    isVictor: p,
-                    isExpired: n,
-                    className: y.answerSelectionIcon
-                })
-            ]
-        })
+            (0, r.jsx)(u.Text, {
+                className: y.label,
+                variant: 'text-sm/semibold',
+                color: 'none',
+                scaleFontToUserSetting: !0,
+                children: t.pollMedia.text
+            }),
+            t.didSelfVote && (0, r.jsx)(l.T, { children: v.NW.string(v.t['8DAM+/']) }),
+            a &&
+                (0, r.jsx)(O, {
+                    percentage: t.votesPercentage,
+                    label: t.votes,
+                    canShowVoterDetails: s,
+                    answerId: t.answerId
+                }),
+            (0, r.jsx)(j, {
+                answersInteraction: i,
+                isSelected: c,
+                didSelfVote: d,
+                isVictor: p,
+                isExpired: n,
+                className: y.answerSelectionIcon
+            })
+        ]
     });
 }
 function C(e) {

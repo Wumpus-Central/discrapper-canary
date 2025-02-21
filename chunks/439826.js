@@ -108,42 +108,40 @@ function R(e) {
         y = 0 === x ? d.P4T : d.d3s,
         C = (0, m.Lq)(N.Ilk.RED_345),
         O = 0 === x ? C : l ? d.TVs.colors.TEXT_NORMAL : d.TVs.colors.WHITE;
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(i.animated.div, {
-            style: v,
-            children: (0, r.jsxs)('div', {
-                ref: c,
-                className: T.hints,
-                children: [
-                    (0, r.jsxs)('div', {
-                        className: T.hintsContainer,
-                        children: [
-                            (0, r.jsx)(y, {
-                                size: 'xs',
-                                color: O
-                            }),
-                            (0, r.jsx)(d.Text, {
-                                variant: 'text-xs/medium',
-                                color: l ? 'text-muted' : 'always-white',
-                                children: b.at(0)
-                            })
-                        ]
-                    }),
-                    0 === x &&
-                        (0, r.jsx)(d.zxk, {
-                            onClick: () =>
-                                (0, _.y)({
-                                    questId: n.id,
-                                    errorHints: s
-                                }),
-                            size: d.PhG.MIN,
-                            look: d.iLD.LINK,
-                            color: d.Ttl.CUSTOM,
-                            style: { color: (0, m.Lq)(N.Ilk.BLUE_345) },
-                            children: 'See Details'
+    return (0, r.jsx)(i.animated.div, {
+        style: v,
+        children: (0, r.jsxs)('div', {
+            ref: c,
+            className: T.hints,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: T.hintsContainer,
+                    children: [
+                        (0, r.jsx)(y, {
+                            size: 'xs',
+                            color: O
+                        }),
+                        (0, r.jsx)(d.Text, {
+                            variant: 'text-xs/medium',
+                            color: l ? 'text-muted' : 'always-white',
+                            children: b.at(0)
                         })
-                ]
-            })
+                    ]
+                }),
+                0 === x &&
+                    (0, r.jsx)(d.zxk, {
+                        onClick: () =>
+                            (0, _.y)({
+                                questId: n.id,
+                                errorHints: s
+                            }),
+                        size: d.PhG.MIN,
+                        look: d.iLD.LINK,
+                        color: d.Ttl.CUSTOM,
+                        style: { color: (0, m.Lq)(N.Ilk.BLUE_345) },
+                        children: 'See Details'
+                    })
+            ]
         })
     });
 }

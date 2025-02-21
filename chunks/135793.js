@@ -231,51 +231,49 @@ let Z = (e) => {
     },
     F = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
-        return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)('div', {
-                className: R.body,
-                children: [
-                    (0, r.jsxs)('div', {
-                        className: R.header,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: R.heading,
-                                children: [
-                                    (0, r.jsx)(l.X6q, {
-                                        variant: 'heading-lg/bold',
-                                        children: C.NW.string(C.t['5/knv7'])
-                                    }),
-                                    (0, r.jsx)(p.Z, {})
-                                ]
-                            }),
-                            (0, r.jsx)(l.Text, {
-                                variant: 'text-sm/normal',
-                                children: C.NW.string(C.t.NFTQoa)
-                            }),
-                            (0, r.jsx)(l.Text, {
-                                color: 'text-link',
-                                variant: 'text-sm/normal',
-                                children: C.NW.format(C.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(N.BhN.CONFETTI_POTION) })
-                            })
-                        ]
-                    }),
-                    (0, r.jsx)('div', { className: R.divider }),
-                    (0, r.jsxs)('div', {
-                        className: R.selectContainer,
-                        children: [
-                            (0, r.jsx)(l.Text, {
-                                variant: 'eyebrow',
-                                children: C.NW.string(C.t.o8XwoK)
-                            }),
-                            (0, r.jsx)(V, {
-                                channel: t,
-                                selectedEmoji: n,
-                                isReaction: i
-                            })
-                        ]
-                    })
-                ]
-            })
+        return (0, r.jsxs)('div', {
+            className: R.body,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: R.header,
+                    children: [
+                        (0, r.jsxs)('div', {
+                            className: R.heading,
+                            children: [
+                                (0, r.jsx)(l.X6q, {
+                                    variant: 'heading-lg/bold',
+                                    children: C.NW.string(C.t['5/knv7'])
+                                }),
+                                (0, r.jsx)(p.Z, {})
+                            ]
+                        }),
+                        (0, r.jsx)(l.Text, {
+                            variant: 'text-sm/normal',
+                            children: C.NW.string(C.t.NFTQoa)
+                        }),
+                        (0, r.jsx)(l.Text, {
+                            color: 'text-link',
+                            variant: 'text-sm/normal',
+                            children: C.NW.format(C.t['jerM9/'], { helpCenterLink: m.Z.getArticleURL(N.BhN.CONFETTI_POTION) })
+                        })
+                    ]
+                }),
+                (0, r.jsx)('div', { className: R.divider }),
+                (0, r.jsxs)('div', {
+                    className: R.selectContainer,
+                    children: [
+                        (0, r.jsx)(l.Text, {
+                            variant: 'eyebrow',
+                            children: C.NW.string(C.t.o8XwoK)
+                        }),
+                        (0, r.jsx)(V, {
+                            channel: t,
+                            selectedEmoji: n,
+                            isReaction: i
+                        })
+                    ]
+                })
+            ]
         });
     },
     V = (e) => {

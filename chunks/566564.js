@@ -147,42 +147,40 @@ let O = (e) => {
                   errorOrigin: C.i.SHOP_PAGE,
                   errorMessage: g.message
               })
-            : (0, n.jsx)(n.Fragment, {
-                  children: (0, n.jsx)('div', {
-                      className: a()(y.shop, { [y.shopFullscreen]: r }),
-                      children: (0, n.jsxs)('div', {
-                          className: a()(y.content, y.mainContent),
-                          children: [
-                              (0, n.jsx)(O, {
-                                  handleTransition: i,
-                                  numVisibleItems: o,
-                                  isFetchingCategories: b,
-                                  tab: h
-                              }),
-                              h === _.AW.HOME &&
-                                  o >= _.iA &&
-                                  (0, n.jsxs)('div', {
-                                      className: y.endOfFeed,
-                                      children: [
-                                          (0, n.jsx)(c.X6q, {
-                                              variant: 'heading-md/semibold',
-                                              children: j.NW.string(j.t.Yr70c3)
-                                          }),
-                                          (0, n.jsx)(c.zxk, {
-                                              className: y.endOfFeedButton,
-                                              onClick: () => {
-                                                  i('shop all bottom', void 0, !0);
-                                              },
-                                              children: (0, n.jsx)(c.Text, {
-                                                  variant: 'text-md/medium',
-                                                  color: 'always-white',
-                                                  children: j.NW.string(j.t.AfrvRE)
-                                              })
+            : (0, n.jsx)('div', {
+                  className: a()(y.shop, { [y.shopFullscreen]: r }),
+                  children: (0, n.jsxs)('div', {
+                      className: a()(y.content, y.mainContent),
+                      children: [
+                          (0, n.jsx)(O, {
+                              handleTransition: i,
+                              numVisibleItems: o,
+                              isFetchingCategories: b,
+                              tab: h
+                          }),
+                          h === _.AW.HOME &&
+                              o >= _.iA &&
+                              (0, n.jsxs)('div', {
+                                  className: y.endOfFeed,
+                                  children: [
+                                      (0, n.jsx)(c.X6q, {
+                                          variant: 'heading-md/semibold',
+                                          children: j.NW.string(j.t.Yr70c3)
+                                      }),
+                                      (0, n.jsx)(c.zxk, {
+                                          className: y.endOfFeedButton,
+                                          onClick: () => {
+                                              i('shop all bottom', void 0, !0);
+                                          },
+                                          children: (0, n.jsx)(c.Text, {
+                                              variant: 'text-md/medium',
+                                              color: 'always-white',
+                                              children: j.NW.string(j.t.AfrvRE)
                                           })
-                                      ]
-                                  })
-                          ]
-                      })
+                                      })
+                                  ]
+                              })
+                      ]
                   })
               });
     };

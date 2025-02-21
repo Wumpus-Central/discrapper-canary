@@ -236,66 +236,64 @@ let w = (e, t) => {
             O = l.useRef(null);
         return (
             w(() => f(!1), O),
-            (0, r.jsx)(r.Fragment, {
-                children: (0, r.jsxs)('div', {
-                    className: g.reactions,
-                    children: [
-                        n &&
-                            (0, r.jsx)(S, {
-                                onSelectEmoji: (e) => {
-                                    null != e &&
-                                        t({
-                                            interactionType: y.L.ReactSubmit,
-                                            emoji: e,
-                                            reply: null
-                                        });
-                                },
-                                onClick: () => {
+            (0, r.jsxs)('div', {
+                className: g.reactions,
+                children: [
+                    n &&
+                        (0, r.jsx)(S, {
+                            onSelectEmoji: (e) => {
+                                null != e &&
                                     t({
-                                        interactionType: y.L.ReactBegin,
-                                        emoji: null,
+                                        interactionType: y.L.ReactSubmit,
+                                        emoji: e,
                                         reply: null
-                                    }),
-                                        f(!1);
-                                }
-                            }),
-                        o &&
-                            (0, r.jsx)(j, {
-                                hide: () => f(!1),
-                                ref: O,
-                                headerText: c,
-                                placeholder: u,
-                                showPopout: p,
-                                body: d,
-                                onEnter: (e) => {
-                                    t({
-                                        interactionType: y.L.ReplySubmit,
-                                        emoji: null,
-                                        reply: e
                                     });
-                                },
-                                children: (0, r.jsx)(a.ua7, {
-                                    text: m.NW.string(m.t['5IEsGx']),
-                                    children: (e) =>
-                                        (0, r.jsx)(
-                                            'button',
-                                            h(v({}, e), {
-                                                className: i()(g.reaction, g.emojiButton),
-                                                onClick: () => {
-                                                    t({
-                                                        interactionType: y.L.ReplyBegin,
-                                                        emoji: null,
-                                                        reply: null
-                                                    }),
-                                                        f(!0);
-                                                },
-                                                children: (0, r.jsx)(a.n$P, {})
-                                            })
-                                        )
-                                })
+                            },
+                            onClick: () => {
+                                t({
+                                    interactionType: y.L.ReactBegin,
+                                    emoji: null,
+                                    reply: null
+                                }),
+                                    f(!1);
+                            }
+                        }),
+                    o &&
+                        (0, r.jsx)(j, {
+                            hide: () => f(!1),
+                            ref: O,
+                            headerText: c,
+                            placeholder: u,
+                            showPopout: p,
+                            body: d,
+                            onEnter: (e) => {
+                                t({
+                                    interactionType: y.L.ReplySubmit,
+                                    emoji: null,
+                                    reply: e
+                                });
+                            },
+                            children: (0, r.jsx)(a.ua7, {
+                                text: m.NW.string(m.t['5IEsGx']),
+                                children: (e) =>
+                                    (0, r.jsx)(
+                                        'button',
+                                        h(v({}, e), {
+                                            className: i()(g.reaction, g.emojiButton),
+                                            onClick: () => {
+                                                t({
+                                                    interactionType: y.L.ReplyBegin,
+                                                    emoji: null,
+                                                    reply: null
+                                                }),
+                                                    f(!0);
+                                            },
+                                            children: (0, r.jsx)(a.n$P, {})
+                                        })
+                                    )
                             })
-                    ]
-                })
+                        })
+                ]
             })
         );
     };

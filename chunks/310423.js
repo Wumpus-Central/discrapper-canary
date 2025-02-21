@@ -69,15 +69,13 @@ let N = {
     },
     C = { className: o()('mention', O.mention) };
 function I(e) {
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsx)(
-            s.Text,
-            j(E({}, N), {
-                color: 'header-primary',
-                children: e
-            })
-        )
-    });
+    return (0, r.jsx)(
+        s.Text,
+        j(E({}, N), {
+            color: 'header-primary',
+            children: e
+        })
+    );
 }
 let S = i.memo(function (e) {
     var t, n, a, o, S, P;

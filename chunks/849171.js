@@ -1,8 +1,8 @@
 n.d(t, {
     Ix: () => L,
     OV: () => U,
-    V_: () => F,
-    Ym: () => W,
+    V_: () => W,
+    Ym: () => F,
     ZP: () => H,
     ac: () => z,
     bn: () => M,
@@ -23,8 +23,8 @@ var r,
     p = n(413458),
     h = n(16609),
     v = n(527805),
-    g = n(716600),
-    b = n(778569),
+    b = n(716600),
+    g = n(778569),
     y = n(563218),
     E = n(318891),
     O = n(884338),
@@ -45,10 +45,10 @@ var r,
     D = (((r = {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.LARGE = 2)] = 'LARGE'), r);
 let M = 1024,
     L = ['embedded_background'];
-function F(e) {
+function W(e) {
     return e > 400 ? 2 : +(e > 300);
 }
-function W(e) {
+function F(e) {
     return e > 400 ? [u.EFr.SIZE_56, 56] : e > 300 ? [u.EFr.SIZE_32, 32] : [u.EFr.SIZE_24, 24];
 }
 function U(e) {
@@ -95,9 +95,9 @@ function z(e) {
 }
 function V(e) {
     var t, n;
-    let { participants: r, application: a, channel: h, width: g } = e,
-        b = F(g),
-        [y] = W(g),
+    let { participants: r, application: a, channel: h, width: b } = e,
+        g = W(b),
+        [y] = F(b),
         E = (0, c.Wu)([R.default, N.default], () =>
             Array.from(r)
                 .map((e) => ((0, p.J)(e, N.default) ? null : R.default.getUser(e.userId)))
@@ -142,8 +142,8 @@ function V(e) {
             }),
             (0, l.jsx)(u.Text, {
                 className: o()(T.subheader, {
-                    [T.small]: 0 === b,
-                    [T.medium]: 1 === b
+                    [T.small]: 0 === g,
+                    [T.medium]: 1 === g
                 }),
                 variant: 'text-sm/normal',
                 children:
@@ -156,8 +156,8 @@ function V(e) {
             }),
             (0, l.jsx)(u.Text, {
                 className: o()(T.header, {
-                    [T.small]: 0 === b,
-                    [T.medium]: 1 === b
+                    [T.small]: 0 === g,
+                    [T.medium]: 1 === g
                 }),
                 variant: 'text-sm/normal',
                 children: a.name
@@ -180,7 +180,7 @@ function V(e) {
                               });
                           },
                           submitting: L,
-                          size: z(b),
+                          size: z(g),
                           className: T.button,
                           look: u.iLD.FILLED,
                           color: u.zxk.Colors.WHITE,
@@ -195,10 +195,10 @@ function H(e) {
     let { participant: t, width: n, selected: r, interactible: a, channel: o } = e,
         { analyticsLocations: s } = (0, Z.ZP)(x.Z.ACTIVITY_TILE),
         { applicationId: u } = t,
-        d = (0, g.Z)(),
+        d = (0, b.Z)(),
         f = null != d && (0, h.pY)(d.location) === o.id && d.applicationId === u,
         [m] = (0, C.Z)([u]),
-        { url: p } = (0, b.Z)({
+        { url: p } = (0, g.Z)({
             applicationId: u,
             names: L,
             size: M
@@ -221,34 +221,32 @@ function H(e) {
         }, [v, d, N]),
         (0, l.jsx)(Z.Gt, {
             value: s,
-            children: (0, l.jsx)('div', {
+            children: (0, l.jsxs)('div', {
                 className: T.container,
-                children: (0, l.jsxs)(l.Fragment, {
-                    children: [
-                        v &&
-                            null != d &&
-                            (0, l.jsx)(y.Z, {
-                                className: T.iframe,
-                                embedId: (0, S.Z)(d.location.id, u)
-                            }),
-                        O && null != m && null != p && '' !== p
-                            ? (0, l.jsx)('img', {
-                                  className: T.splashImage,
-                                  alt: m.name,
-                                  src: p
-                              })
-                            : null,
-                        w &&
-                            null != m &&
-                            (0, l.jsx)(V, {
-                                width: n,
-                                channel: o,
-                                participants: t.participants,
-                                application: m
-                            }),
-                        a || O ? null : (0, l.jsx)('div', { className: T.clickShield })
-                    ]
-                })
+                children: [
+                    v &&
+                        null != d &&
+                        (0, l.jsx)(y.Z, {
+                            className: T.iframe,
+                            embedId: (0, S.Z)(d.location.id, u)
+                        }),
+                    O && null != m && null != p && '' !== p
+                        ? (0, l.jsx)('img', {
+                              className: T.splashImage,
+                              alt: m.name,
+                              src: p
+                          })
+                        : null,
+                    w &&
+                        null != m &&
+                        (0, l.jsx)(V, {
+                            width: n,
+                            channel: o,
+                            participants: t.participants,
+                            application: m
+                        }),
+                    a || O ? null : (0, l.jsx)('div', { className: T.clickShield })
+                ]
             })
         })
     );

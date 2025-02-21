@@ -122,54 +122,52 @@ function w(t) {
             }),
             c
                 ? null
-                : (0, d.jsx)(d.Fragment, {
-                      children: (0, d.jsxs)('div', {
-                          className: T.table,
-                          children: [
-                              (0, d.jsxs)('div', {
-                                  className: T.headerRow,
-                                  children: [
-                                      (0, d.jsx)(n.Text, {
-                                          variant: 'text-xxs/medium',
-                                          className: T.headerRank,
-                                          children: '#'
-                                      }),
-                                      (0, d.jsx)(n.Text, {
-                                          variant: 'text-xxs/medium',
-                                          className: T.headerPlayer,
-                                          children: E.NW.string(E.t['6ii1+/'])
-                                      }),
-                                      (0, d.jsx)(n.Text, {
-                                          variant: 'text-xxs/medium',
-                                          className: T.headerValue,
-                                          children: (0, h.s)({
-                                              statisticId: Z,
-                                              sortDesc: P,
-                                              aggregationType: null == w ? void 0 : w.aggregation_type
-                                          })
+                : (0, d.jsxs)('div', {
+                      className: T.table,
+                      children: [
+                          (0, d.jsxs)('div', {
+                              className: T.headerRow,
+                              children: [
+                                  (0, d.jsx)(n.Text, {
+                                      variant: 'text-xxs/medium',
+                                      className: T.headerRank,
+                                      children: '#'
+                                  }),
+                                  (0, d.jsx)(n.Text, {
+                                      variant: 'text-xxs/medium',
+                                      className: T.headerPlayer,
+                                      children: E.NW.string(E.t['6ii1+/'])
+                                  }),
+                                  (0, d.jsx)(n.Text, {
+                                      variant: 'text-xxs/medium',
+                                      className: T.headerValue,
+                                      children: (0, h.s)({
+                                          statisticId: Z,
+                                          sortDesc: P,
+                                          aggregationType: null == w ? void 0 : w.aggregation_type
                                       })
-                                  ]
-                              }),
-                              (0, d.jsxs)(n.u2D, {
-                                  className: T.rows,
-                                  children: [
-                                      g.map((t) =>
-                                          (0, a.createElement)(
-                                              k,
-                                              R(I({}, t), {
-                                                  key: t.userId,
-                                                  guildId: e.guild_id,
-                                                  locale: u,
-                                                  leaderboard: e,
-                                                  trackRankingItemInteraction: o
-                                              })
-                                          )
-                                      ),
-                                      S ? (0, d.jsx)(L, { leaderboard: e }) : null
-                                  ]
-                              })
-                          ]
-                      })
+                                  })
+                              ]
+                          }),
+                          (0, d.jsxs)(n.u2D, {
+                              className: T.rows,
+                              children: [
+                                  g.map((t) =>
+                                      (0, a.createElement)(
+                                          k,
+                                          R(I({}, t), {
+                                              key: t.userId,
+                                              guildId: e.guild_id,
+                                              locale: u,
+                                              leaderboard: e,
+                                              trackRankingItemInteraction: o
+                                          })
+                                      )
+                                  ),
+                                  S ? (0, d.jsx)(L, { leaderboard: e }) : null
+                              ]
+                          })
+                      ]
                   })
         ]
     });

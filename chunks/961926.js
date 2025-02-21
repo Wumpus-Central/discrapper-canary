@@ -62,45 +62,43 @@ function f(e) {
             },
             [x, b]
         );
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)('div', {
-            className: p.cardContentsContainer,
-            children: [
-                (0, r.jsxs)(c.Z, {
-                    step: 1,
-                    header: m.NW.string(m.t.CX5YfX),
-                    children: [
-                        (0, r.jsx)(a.Z, {
-                            rule: b,
-                            onChangeRule: x
-                        }),
-                        (0, r.jsx)(s.Z, {
-                            onChange: j,
-                            initialValue: null === (t = b.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
-                            maxWordCount: u.I3,
-                            collapsed: (null === (n = b.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (f = b.triggerMetadata) || void 0 === f ? void 0 : f.allowList.length) === 0
-                        })
-                    ]
-                }),
-                (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
-                (0, r.jsx)(c.Z, {
-                    step: 2,
-                    header: m.NW.string(m.t['18TOiY']),
-                    children: (0, r.jsx)(l.Z, {
+    return (0, r.jsxs)('div', {
+        className: p.cardContentsContainer,
+        children: [
+            (0, r.jsxs)(c.Z, {
+                step: 1,
+                header: m.NW.string(m.t.CX5YfX),
+                children: [
+                    (0, r.jsx)(a.Z, {
                         rule: b,
                         onChangeRule: x
+                    }),
+                    (0, r.jsx)(s.Z, {
+                        onChange: j,
+                        initialValue: null === (t = b.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
+                        maxWordCount: u.I3,
+                        collapsed: (null === (n = b.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (f = b.triggerMetadata) || void 0 === f ? void 0 : f.allowList.length) === 0
                     })
-                }),
-                (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
-                (0, r.jsx)(c.Z, {
-                    step: 3,
-                    header: m.NW.string(m.t.eq3gjo),
-                    children: (0, r.jsx)(o.Z, {
-                        rule: b,
-                        onChangeRule: x
-                    })
+                ]
+            }),
+            (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(c.Z, {
+                step: 2,
+                header: m.NW.string(m.t['18TOiY']),
+                children: (0, r.jsx)(l.Z, {
+                    rule: b,
+                    onChangeRule: x
                 })
-            ]
-        })
+            }),
+            (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
+            (0, r.jsx)(c.Z, {
+                step: 3,
+                header: m.NW.string(m.t.eq3gjo),
+                children: (0, r.jsx)(o.Z, {
+                    rule: b,
+                    onChangeRule: x
+                })
+            })
+        ]
     });
 }

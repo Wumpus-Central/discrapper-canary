@@ -60,29 +60,27 @@ function f(e) {
             key: i.h8.ADD_PAYMENT_STEPS,
             renderStep: (e) => {
                 var t, n;
-                return (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsx)(
-                        l.J,
-                        ((t = m({}, e)),
-                        (n = n =
-                            {
-                                breadcrumbSteps: [i.h8.ADD_PAYMENT_STEPS, i.h8.REVIEW, i.h8.CONFIRM]
-                            }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t)
-                    )
-                });
+                return (0, r.jsx)(
+                    l.J,
+                    ((t = m({}, e)),
+                    (n = n =
+                        {
+                            breadcrumbSteps: [i.h8.ADD_PAYMENT_STEPS, i.h8.REVIEW, i.h8.CONFIRM]
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          }),
+                    t)
+                );
             },
             options: { renderHeader: !0 }
         },

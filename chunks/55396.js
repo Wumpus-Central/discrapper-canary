@@ -38,30 +38,28 @@ function I(e) {
                 value: 3
             }
         ];
-    return (0, n.jsx)(n.Fragment, {
-        children: (0, n.jsxs)(c.hzk, {
-            className: _.content,
-            children: [
-                (0, n.jsx)(c.X6q, {
-                    variant: 'heading-xl/bold',
-                    className: _.header,
-                    children: j.NW.string(j.t['8itBsL'])
-                }),
-                (0, n.jsx)(c.Text, {
-                    className: _.tip,
-                    variant: 'text-md/normal',
-                    children: j.NW.string(j.t.X7ab09)
-                }),
-                (0, n.jsx)(c.FXm, {
-                    className: _.radioGroup,
-                    options: l,
-                    onChange: (e) => {
-                        let { value: a } = e;
-                        return t(a);
-                    }
-                })
-            ]
-        })
+    return (0, n.jsxs)(c.hzk, {
+        className: _.content,
+        children: [
+            (0, n.jsx)(c.X6q, {
+                variant: 'heading-xl/bold',
+                className: _.header,
+                children: j.NW.string(j.t['8itBsL'])
+            }),
+            (0, n.jsx)(c.Text, {
+                className: _.tip,
+                variant: 'text-md/normal',
+                children: j.NW.string(j.t.X7ab09)
+            }),
+            (0, n.jsx)(c.FXm, {
+                className: _.radioGroup,
+                options: l,
+                onChange: (e) => {
+                    let { value: a } = e;
+                    return t(a);
+                }
+            })
+        ]
     });
 }
 function k(e) {
@@ -153,8 +151,8 @@ function W(e) {
             },
             [x, w, G, k]
         ),
-        F = (0, u.Z)(B.map((e) => e.id)),
-        T = (0, r.chain)(F).compact().keyBy('id').value(),
+        T = (0, u.Z)(B.map((e) => e.id)),
+        F = (0, r.chain)(T).compact().keyBy('id').value(),
         X = k.length > 0 && !B.map((e) => e.name.toLowerCase()).includes(k.toLowerCase()),
         q = w === x || (null === w && 0 === k.length),
         y = B.map((e) => {
@@ -163,7 +161,7 @@ function W(e) {
                 name: (0, n.jsx)(C, {
                     name: a,
                     id: t,
-                    applicationRecord: T[t]
+                    applicationRecord: F[t]
                 }),
                 value: t
             };

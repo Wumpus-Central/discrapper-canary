@@ -10,8 +10,8 @@ var n,
     c = r(873546),
     s = r(442837),
     u = r(481060),
-    m = r(607070),
-    p = r(100527),
+    p = r(607070),
+    m = r(100527),
     d = r(906732),
     f = r(385499),
     b = r(979264),
@@ -80,10 +80,10 @@ function T(e) {
         { author: n, message: l, channel: f, userOverride: w, compact: T = !1, withMentionPrefix: R = !1, showPopout: I = !1, className: A, onClick: E, onContextMenu: k, onPopoutRequestClose: C, renderPopout: Z, renderRemixTag: F = !1, decorations: D } = e,
         L = a.useContext(y.Z),
         _ = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : L,
-        { analyticsLocations: M } = (0, d.ZP)(p.Z.USERNAME),
+        { analyticsLocations: M } = (0, d.ZP)(m.Z.USERNAME),
         { nick: G, colorString: B, colorRoleName: z } = n,
         U = null != l.messageReference && null != l.webhookId && l.hasFlag(x.iLy.IS_CROSSPOST),
-        V = (0, s.e7)([m.Z], () => m.Z.roleStyle),
+        V = (0, s.e7)([p.Z], () => p.Z.roleStyle),
         W = (0, g.X$)(),
         H = a.useMemo(
             () => ({
@@ -188,14 +188,12 @@ function T(e) {
                 : null,
             r,
             !T &&
-                (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(b.ZP, {
-                        primaryGuild: n.primaryGuild,
-                        userId: l.author.id,
-                        contextGuildId: _,
-                        className: v.clanTagChiplet,
-                        profileViewedAnalytics: H
-                    })
+                (0, i.jsx)(b.ZP, {
+                    primaryGuild: n.primaryGuild,
+                    userId: l.author.id,
+                    contextGuildId: _,
+                    className: v.clanTagChiplet,
+                    profileViewedAnalytics: H
                 }),
             null != $ ? (0, i.jsx)(i.Fragment, { children: $ }) : null,
             null == Y || T ? null : Y,

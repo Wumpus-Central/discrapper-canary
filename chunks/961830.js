@@ -75,17 +75,15 @@ let g = {
     E = {
         key: o.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(r.Fragment, {
-                children: (0, r.jsx)(
-                    a.J,
-                    m(_({}, e), {
-                        breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
-                        onReturn: () => {
-                            0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
-                        }
-                    })
-                )
-            }),
+            (0, r.jsx)(
+                a.J,
+                m(_({}, e), {
+                    breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
+                    onReturn: () => {
+                        0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
+                    }
+                })
+            ),
         options: { renderHeader: !0 }
     },
     v = {

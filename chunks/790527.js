@@ -157,18 +157,16 @@ function R(e) {
                         ? (0, r.jsx)(l.$jN, {})
                         : (0, r.jsx)(r.Fragment, {
                               children: ep
-                                  ? (0, r.jsx)(r.Fragment, {
-                                        children: (0, r.jsx)(E.ZP, {
-                                            onClose: F,
-                                            type: R,
-                                            subscriptionTier: null !== (o = null == ed ? void 0 : null === (n = ed.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== o ? o : O.Si.TIER_2,
-                                            headingText: C,
-                                            context: L,
-                                            analyticsLocationObject: D,
-                                            discountOffer: ef,
-                                            trialOffer: ed,
-                                            children: M
-                                        })
+                                  ? (0, r.jsx)(E.ZP, {
+                                        onClose: F,
+                                        type: R,
+                                        subscriptionTier: null !== (o = null == ed ? void 0 : null === (n = ed.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== o ? o : O.Si.TIER_2,
+                                        headingText: C,
+                                        context: L,
+                                        analyticsLocationObject: D,
+                                        discountOffer: ef,
+                                        trialOffer: ed,
+                                        children: M
                                     })
                                   : (0, r.jsxs)('div', {
                                         className: T.contentContainer,

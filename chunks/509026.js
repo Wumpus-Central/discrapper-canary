@@ -58,63 +58,61 @@ function g(e) {
         h = (0, d.Z)(t.id),
         f = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
         b = (0, c.mY)();
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)(s.hjN, {
-            title: u.NW.string(u.t.LDT0Q0),
-            disabled: b,
-            children: [
-                (0, r.jsx)(s.R94, {
-                    type: s.R94.Types.DESCRIPTION,
-                    disabled: b,
-                    children: u.NW.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
-                }),
-                (0, r.jsx)(s.LZC, { size: 16 }),
-                (0, r.jsx)(o.Z, {
-                    onChange: (e, i) => {
-                        null != e &&
-                            null != i &&
-                            (0, s.ZDy)(async () => {
-                                let { CreateEmojiWithRolesModal: s } = await n.e('9007').then(n.bind(n, 142774));
-                                return (n) =>
-                                    (0, r.jsx)(
-                                        s,
-                                        p(m({}, n), {
-                                            data: e,
-                                            file: i,
-                                            guildId: t.id
-                                        })
-                                    );
-                            });
-                    },
-                    buttonCTA: u.NW.string(u.t.AuPtoq),
-                    submitting: g,
-                    disabled: b || g || 0 === f
-                }),
-                (0, r.jsx)(s.LZC, { size: 24 }),
-                (0, r.jsx)(l.L3, {
-                    title: u.NW.string(u.t.lu1ZQ0),
-                    maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
-                    emojiCount: h.length
-                }),
-                (0, r.jsx)(l.FT, {
-                    guild: t,
-                    emojis: h,
-                    onEdit: (e, t) => {
+    return (0, r.jsxs)(s.hjN, {
+        title: u.NW.string(u.t.LDT0Q0),
+        disabled: b,
+        children: [
+            (0, r.jsx)(s.R94, {
+                type: s.R94.Types.DESCRIPTION,
+                disabled: b,
+                children: u.NW.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
+            }),
+            (0, r.jsx)(s.LZC, { size: 16 }),
+            (0, r.jsx)(o.Z, {
+                onChange: (e, i) => {
+                    null != e &&
+                        null != i &&
                         (0, s.ZDy)(async () => {
-                            let { UpdateEmojiRolesModal: i } = await n.e('9007').then(n.bind(n, 142774));
+                            let { CreateEmojiWithRolesModal: s } = await n.e('9007').then(n.bind(n, 142774));
                             return (n) =>
                                 (0, r.jsx)(
-                                    i,
+                                    s,
                                     p(m({}, n), {
-                                        emoji: e,
-                                        guildId: t
+                                        data: e,
+                                        file: i,
+                                        guildId: t.id
                                     })
                                 );
                         });
-                    },
-                    editingDisabled: b
-                })
-            ]
-        })
+                },
+                buttonCTA: u.NW.string(u.t.AuPtoq),
+                submitting: g,
+                disabled: b || g || 0 === f
+            }),
+            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(l.L3, {
+                title: u.NW.string(u.t.lu1ZQ0),
+                maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
+                emojiCount: h.length
+            }),
+            (0, r.jsx)(l.FT, {
+                guild: t,
+                emojis: h,
+                onEdit: (e, t) => {
+                    (0, s.ZDy)(async () => {
+                        let { UpdateEmojiRolesModal: i } = await n.e('9007').then(n.bind(n, 142774));
+                        return (n) =>
+                            (0, r.jsx)(
+                                i,
+                                p(m({}, n), {
+                                    emoji: e,
+                                    guildId: t
+                                })
+                            );
+                    });
+                },
+                editingDisabled: b
+            })
+        ]
     });
 }

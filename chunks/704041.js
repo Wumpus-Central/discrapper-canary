@@ -180,16 +180,14 @@ let O = (t) => {
                           ]
                       }),
                       j
-                          ? (0, d.jsx)(d.Fragment, {
-                                children: (0, d.jsx)(s.P3F, {
-                                    onClick: () => O(!1),
-                                    children: (0, d.jsx)('div', {
-                                        className: _.exitPreviewModeButton,
-                                        children: (0, d.jsx)(s.Text, {
-                                            variant: 'text-sm/medium',
-                                            className: _.exitPreviewModeText,
-                                            children: h.NW.string(h.t.GLeQe3)
-                                        })
+                          ? (0, d.jsx)(s.P3F, {
+                                onClick: () => O(!1),
+                                children: (0, d.jsx)('div', {
+                                    className: _.exitPreviewModeButton,
+                                    children: (0, d.jsx)(s.Text, {
+                                        variant: 'text-sm/medium',
+                                        className: _.exitPreviewModeText,
+                                        children: h.NW.string(h.t.GLeQe3)
                                     })
                                 })
                             })
