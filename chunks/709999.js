@@ -130,7 +130,7 @@ let ec = (e) => {
                         look: m.zxk.Looks.FILLED,
                         innerClassName: el.cardButtonInner,
                         onClick: (e) => {
-                            e.stopPropagation(), r();
+                            e.stopPropagation(), r(e);
                         }
                     },
                     l
@@ -479,32 +479,37 @@ let ec = (e) => {
                                               (0, n.jsx)('div', {
                                                   className: el.innerHover,
                                                   children: (() => {
+                                                      var e;
                                                       if (ey && !e_ && !eO) return eJ();
-                                                      let e = ey
-                                                          ? {
-                                                                submitting: ek,
-                                                                submittingStartedLabel: en.NW.string(en.t['TYw+9v']),
-                                                                submittingFinishedLabel: en.NW.string(en.t.Pg1UPz),
-                                                                onClick: async () => {
-                                                                    await (0, L.fK)(t.skuId),
-                                                                        (0, ee.Z)({
-                                                                            product: t,
-                                                                            analyticsLocations: q
-                                                                        });
+                                                      let r = eM && (null === (e = eY[0]) || void 0 === e ? void 0 : e.currency) === er.pK.DISCORD_ORB,
+                                                          l = ey
+                                                              ? {
+                                                                    submitting: ek,
+                                                                    submittingStartedLabel: en.NW.string(en.t['TYw+9v']),
+                                                                    submittingFinishedLabel: en.NW.string(en.t.Pg1UPz),
+                                                                    onClick: async () => {
+                                                                        await (0, L.fK)(t.skuId),
+                                                                            (0, ee.Z)({
+                                                                                product: t,
+                                                                                analyticsLocations: q
+                                                                            });
+                                                                    }
                                                                 }
-                                                            }
-                                                          : {
-                                                                onClick: () =>
-                                                                    (0, y.Z)({
-                                                                        skuId: (0, $.S)({
-                                                                            product: t,
-                                                                            selectedVariantIndex: eB
-                                                                        }),
-                                                                        analyticsLocations: q,
-                                                                        returnRef: ei,
-                                                                        variantsReturnStyle: eN
-                                                                    })
-                                                            };
+                                                              : {
+                                                                    onClick: (e) => {
+                                                                        r
+                                                                            ? e$(e)
+                                                                            : (0, y.Z)({
+                                                                                  skuId: (0, $.S)({
+                                                                                      product: t,
+                                                                                      selectedVariantIndex: eB
+                                                                                  }),
+                                                                                  analyticsLocations: q,
+                                                                                  returnRef: ei,
+                                                                                  variantsReturnStyle: eN
+                                                                              });
+                                                                    }
+                                                                };
                                                       return (0, n.jsxs)('div', {
                                                           className: el.buttonsContainer,
                                                           children: [
@@ -519,10 +524,10 @@ let ec = (e) => {
                                                                       })
                                                                     : (0, n.jsx)(
                                                                           ec,
-                                                                          eo(ea({ disabled: eP }, e), {
+                                                                          eo(ea({ disabled: eP }, l), {
                                                                               children: ey
                                                                                   ? en.NW.string(en.t.zp6caG)
-                                                                                  : eM && eY.length > 0 && eY[0].currency === er.pK.DISCORD_ORB
+                                                                                  : r
                                                                                     ? en.NW.format(en.t.kAgx5O, {
                                                                                           orbPrice: eY[0].amount,
                                                                                           orbIconHook: () => (0, n.jsx)(E.Z, {})
