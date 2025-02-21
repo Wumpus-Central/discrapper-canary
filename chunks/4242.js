@@ -1,7 +1,8 @@
 n.d(t, {
     BY: () => u,
     bt: () => l,
-    wE: () => c
+    wE: () => c,
+    xh: () => d
 }),
     n(66153),
     n(970173),
@@ -36,9 +37,11 @@ function u(e, t) {
     let { getImgCache: n, setImgCache: i } = (0, a.W_)();
     (0, r.useEffect)(() => {
         null != e &&
+            null == n(e) &&
             (async () => {
-                let t = await d(e);
-                i(e, e, t);
+                let t = await fetch(e),
+                    n = await t.arrayBuffer();
+                i(e, e, await d(n));
             })();
     }, [e, n, i]);
     let o = n(e);
@@ -46,14 +49,12 @@ function u(e, t) {
     let { animatedUrl: s, staticUrl: l } = o;
     return t ? s : l;
 }
-async function d(e) {
-    let t = await fetch(e),
-        n = await t.arrayBuffer(),
-        r = o().decode(n),
-        i = o().toRGBA8(r)[0],
-        a = document.createElement('canvas');
-    (a.width = r.width), (a.height = r.height);
-    let s = a.getContext('2d'),
-        l = new ImageData(new Uint8ClampedArray(i), r.width, r.height);
-    return s.putImageData(l, 0, 0), a.toDataURL('image/png');
+function d(e) {
+    let t = o().decode(e),
+        n = o().toRGBA8(t)[0],
+        r = document.createElement('canvas');
+    (r.width = t.width), (r.height = t.height);
+    let i = r.getContext('2d'),
+        a = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
+    return i.putImageData(a, 0, 0), r.toDataURL('image/png');
 }
