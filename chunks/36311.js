@@ -1,80 +1,86 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => _ }), n(627341);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(481060),
-    c = n(749210),
-    u = n(986035),
-    d = n(594174),
-    p = n(63063),
-    h = n(981631),
-    f = n(388032),
-    m = n(975743);
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class b extends i.PureComponent {
-    componentDidMount() {
-        let { current: e } = this.scroller;
+    a = n(278074),
+    s = n(442837),
+    c = n(481060),
+    u = n(749210),
+    d = n(191237),
+    p = n(986035),
+    h = n(594174),
+    f = n(63063),
+    m = n(981631),
+    g = n(388032),
+    b = n(975743);
+let _ = function (e) {
+    let { guild: t, className: n } = e,
+        l = (0, s.e7)([h.default], () => {
+            var e;
+            return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
+        }),
+        _ = i.useRef(null),
+        C = d.Z.useShouldShowTiggerPawtect(),
+        v = i.useCallback(() => {
+            null != t && u.Z.nsfwReturnToSafety(t.id);
+        }, [t]),
+        y = i.useCallback(() => {
+            null != t && u.Z.nsfwAgree(t.id);
+        }, [t]),
+        x = i.useCallback(() => {}, []);
+    i.useEffect(() => {
+        let { current: e } = _;
         null == e || e.scrollToBottom();
-    }
-    render() {
-        let { nsfwDisallowed: e } = this.props,
-            t = f.NW.string(f.t.peE8aW);
-        t = e ? f.NW.format(f.t['2kHZen'], { helpURL: p.Z.getArticleURL(h.BhN.NSFW_AGE_GATING) }) : f.NW.string(f.t.E4Cd5O);
-        let n = e
-            ? (0, r.jsx)(u.Z, {
-                  onAgree: this.handleAgree,
-                  onDisagree: this.handleDisagree,
-                  title: f.NW.string(f.t.NEabBQ),
-                  description: t,
-                  agreement: null,
-                  disagreement: f.NW.string(f.t['13/7kZ']),
-                  imageClassName: m.ageGatedImage
-              })
-            : (0, r.jsx)(u.Z, {
-                  onAgree: this.handleAgree,
-                  onDisagree: this.handleDisagree,
-                  title: f.NW.string(f.t.ZmwvDQ),
-                  description: t,
-                  agreement: f.NW.string(f.t.wVq7ur),
-                  disagreement: f.NW.string(f.t.hg1uxs)
-              });
-        return (0, r.jsx)(s.Den, {
-            ref: this.scroller,
-            className: m.scroller,
-            children: (0, r.jsx)('div', {
-                className: o()(this.props.className, m.wrapper),
-                children: n
+    }, []);
+    let j = (0, a.EQ)({
+        nsfwDisallowed: l,
+        shouldPawtect: C
+    })
+        .with({ shouldPawtect: !0 }, () =>
+            (0, r.jsx)(p.Z, {
+                onAgree: x,
+                onDisagree: v,
+                title: g.NW.string(g.t.ZmwvDQ),
+                description: g.NW.string(g.t['u/xqhY']),
+                agreement: g.NW.string(g.t['5B+npK']),
+                agreementButtonColor: c.zxk.Colors.BRAND,
+                disagreement: g.NW.string(g.t.f3Pet7),
+                imageClassName: b.ageGatedImage
             })
-        });
-    }
-    constructor(...e) {
-        super(...e),
-            g(this, 'scroller', i.createRef()),
-            g(this, 'handleDisagree', () => {
-                let { guild: e } = this.props;
-                null != e && c.Z.nsfwReturnToSafety(e.id);
-            }),
-            g(this, 'handleAgree', () => {
-                let { guild: e } = this.props;
-                null != e && c.Z.nsfwAgree(e.id);
-            });
-    }
-}
-let _ = a.ZP.connectStores([d.default], () => {
-    var e;
-    return { nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1 };
-})(b);
+        )
+        .with(
+            {
+                nsfwDisallowed: !0,
+                shouldPawtect: !1
+            },
+            () =>
+                (0, r.jsx)(p.Z, {
+                    onAgree: y,
+                    onDisagree: v,
+                    title: g.NW.string(g.t.NEabBQ),
+                    description: g.NW.format(g.t['2kHZen'], { helpURL: f.Z.getArticleURL(m.BhN.NSFW_AGE_GATING) }),
+                    agreement: null,
+                    disagreement: g.NW.string(g.t['13/7kZ']),
+                    imageClassName: b.ageGatedImage
+                })
+        )
+        .otherwise(() =>
+            (0, r.jsx)(p.Z, {
+                onAgree: y,
+                onDisagree: v,
+                title: g.NW.string(g.t.ZmwvDQ),
+                description: g.NW.string(g.t.E4Cd5O),
+                agreement: g.NW.string(g.t.wVq7ur),
+                disagreement: g.NW.string(g.t.hg1uxs)
+            })
+        );
+    return (0, r.jsx)(c.Den, {
+        ref: _,
+        className: b.scroller,
+        children: (0, r.jsx)('div', {
+            className: o()(n, b.wrapper),
+            children: j
+        })
+    });
+};
