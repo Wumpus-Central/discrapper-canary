@@ -121,19 +121,21 @@ function I(e) {
         R.current = L;
     }, [L]);
     let D = null != n,
-        M = null == n && null != a,
-        W = (0, c.q_F)(
+        M = !D,
+        W = D && null != a,
+        F = null == n && null != a,
+        U = (0, c.q_F)(
             {
                 opacity: +!!D,
                 height: 72 * !!D,
                 pointerEvents: D ? 'auto' : 'none',
                 backgroundColor: null !== (t = null == I ? void 0 : I.baseColor) && void 0 !== t ? t : w,
                 config: E,
-                delay: D && null != a ? 150 : 100 * !!M
+                delay: W ? 150 : 100 * !!F
             },
             'respect-motion-settings'
         ),
-        F = (0, c.Yzy)(
+        B = (0, c.Yzy)(
             null == I ? void 0 : I.id,
             {
                 key: L,
@@ -153,7 +155,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        [U] = (0, c.bYB)(
+        [G] = (0, c.bYB)(
             3,
             (e) => ({
                 from:
@@ -188,12 +190,12 @@ function I(e) {
                                 }
                             ],
                 config: N,
-                delay: M ? 100 - 50 * e : 150 + 50 * e
+                delay: F ? 100 - 50 * e : 150 + 50 * e
             }),
             'respect-motion-settings',
             [n]
         ),
-        B = (0, c.Yzy)(
+        H = (0, c.Yzy)(
             null == I ? void 0 : I.iconURL,
             {
                 key: L,
@@ -218,7 +220,7 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        G = (0, c.Yzy)(
+        V = (0, c.Yzy)(
             null == I ? void 0 : I.name,
             {
                 key: L,
@@ -239,22 +241,23 @@ function I(e) {
                     opacity: 0,
                     translateX: 40 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: M ? 200 : 150,
+                    delay: F ? 200 : 150,
                     config: null == a ? N : j
                 },
                 config: N
             },
             'respect-motion-settings'
         ),
-        H = v.NW.string(P ? v.t.esVyo6 : v.t.UQqFCA);
+        z = v.NW.string(P ? v.t.esVyo6 : v.t.UQqFCA);
     return (0, r.jsxs)(l.animated.div, {
         className: y.voiceFilterHero,
-        style: W,
+        'aria-hidden': M,
+        style: U,
         children: [
             (0, r.jsx)('div', {
                 className: o()([y.bgGradient, y.bgGradientHighlight])
             }),
-            F((e) =>
+            B((e) =>
                 (0, r.jsx)(l.animated.div, {
                     className: y.bgGradient,
                     style: e
@@ -262,7 +265,7 @@ function I(e) {
             ),
             (0, r.jsx)('div', {
                 className: y.iconWrapper,
-                children: B((e, t) =>
+                children: H((e, t) =>
                     (0, r.jsx)(
                         l.animated.img,
                         {
@@ -277,7 +280,7 @@ function I(e) {
             }),
             (0, r.jsx)('div', {
                 className: y.descriptionWrapper,
-                children: G((e, t) =>
+                children: V((e, t) =>
                     (0, r.jsxs)(l.animated.div, {
                         className: y.description,
                         style: e,
@@ -303,17 +306,17 @@ function I(e) {
                     (0, r.jsx)(b.b, {
                         children: (e, t) =>
                             (0, r.jsx)(c.ua7, {
-                                'aria-label': H,
+                                'aria-label': z,
                                 tooltipClassName: y.tooltip,
                                 tooltipContentClassName: y.tooltipContent,
-                                shouldShow: !e,
+                                shouldShow: D && !e,
                                 text: (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(c.X6q, {
                                             variant: 'heading-sm/normal',
                                             color: 'header-primary',
                                             className: y.tooltipHeader,
-                                            children: H
+                                            children: z
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
@@ -332,41 +335,64 @@ function I(e) {
                                 children: (e) =>
                                     (0, r.jsx)(l.animated.div, {
                                         className: y.buttonWrapper,
-                                        style: U[0],
+                                        style: G[0],
                                         children: (0, r.jsx)(
                                             c.P3F,
-                                            O(x({ className: y.button }, e), {
-                                                onClick: () => {
-                                                    null == t || t(), S();
-                                                },
-                                                children: (0, r.jsx)(T, {
-                                                    size: 'custom',
-                                                    width: 20,
-                                                    height: 20,
-                                                    color: Z
-                                                })
-                                            })
+                                            O(
+                                                x(
+                                                    {
+                                                        className: y.button,
+                                                        'aria-hidden': M,
+                                                        focusProps: { enabled: D },
+                                                        tabIndex: D ? 0 : -1
+                                                    },
+                                                    e
+                                                ),
+                                                {
+                                                    onClick: () => {
+                                                        null == t || t(), S();
+                                                    },
+                                                    children: (0, r.jsx)(T, {
+                                                        size: 'custom',
+                                                        width: 20,
+                                                        height: 20,
+                                                        color: Z
+                                                    })
+                                                }
+                                            )
                                         )
                                     })
                             })
                     }),
                     (0, r.jsx)(c.ua7, {
+                        shouldShow: D,
                         text: v.NW.string(v.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
                                 className: y.buttonWrapper,
-                                style: U[1],
+                                style: G[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
-                                    O(x({ className: y.button }, e), {
-                                        onClick: A,
-                                        children: (0, r.jsx)(c.k$p, {
-                                            size: 'custom',
-                                            width: 20,
-                                            height: 20,
-                                            color: Z
-                                        })
-                                    })
+                                    O(
+                                        x(
+                                            {
+                                                className: y.button,
+                                                'aria-hidden': M,
+                                                focusProps: { enabled: D },
+                                                tabIndex: D ? 0 : -1
+                                            },
+                                            e
+                                        ),
+                                        {
+                                            onClick: A,
+                                            children: (0, r.jsx)(c.k$p, {
+                                                size: 'custom',
+                                                width: 20,
+                                                height: 20,
+                                                color: Z
+                                            })
+                                        }
+                                    )
                                 )
                             })
                     })

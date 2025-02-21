@@ -44,48 +44,47 @@ let N = [51],
         });
 function S(e) {
     var t;
-    let { columns: n, handleScroll: a, voiceListRef: l, showSectionHeaders: S = !1, query: P } = e,
-        T = (0, y.S)(),
-        A = (0, u.e7)([g.default], () => (0, b.I5)(g.default.getCurrentUser())),
+    let { columns: n, handleScroll: a, voiceListRef: l, showSectionHeaders: S = !1, query: T } = e,
+        A = (0, y.S)(),
+        w = (0, u.e7)([g.default], () => (0, b.I5)(g.default.getCurrentUser())),
         {
-            voicesById: w,
-            isNativeModuleLoading: Z,
-            hasNativeModuleFailed: k
+            voicesById: Z,
+            isNativeModuleLoading: k,
+            hasNativeModuleFailed: R
         } = (0, u.cj)([v.Z], () => ({
             voicesById: v.Z.getVoiceFilters(),
             isNativeModuleLoading: v.Z.isNativeModuleLoading(),
             hasNativeModuleFailed: v.Z.hasNativeModuleFailed()
         })),
-        R = (0, u.cj)([v.Z], () => v.Z.getSortedVoiceFilters()),
-        L = A ? Object.values(w) : R,
-        D = i.useMemo(() => {
-            let e = (0, d._I)(P.toLowerCase());
+        L = (0, u.cj)([v.Z], () => v.Z.getSortedVoiceFilters()),
+        D = w ? Object.values(Z) : L,
+        M = i.useMemo(() => {
+            let e = (0, d._I)(T.toLowerCase());
             return [
                 '' === e
-                    ? L
-                    : L.filter((t) => {
+                    ? D
+                    : D.filter((t) => {
                           let { id: n } = t;
-                          return s()(e, (0, d._I)(T[n].name.toLowerCase()));
+                          return s()(e, (0, d._I)(A[n].name.toLowerCase()));
                       })
             ];
-        }, [L, P, T]),
-        M = (e) => Math.ceil(e / n),
-        W = i.useCallback(
+        }, [D, T, A]),
+        W = (e) => Math.ceil(e / n),
+        F = i.useCallback(
             (e) => {
                 let { sectionIndex: t, sectionRowIndex: i } = e;
                 return (0, r.jsx)(
-                    'div',
+                    P,
                     {
-                        className: j.row,
                         children: (0, c.range)(0, n)
-                            .map((e) => D[t][i * n + e])
+                            .map((e) => M[t][i * n + e])
                             .filter(_.lm)
                             .map((e) =>
                                 (0, r.jsx)(
                                     O.J,
                                     {
                                         voiceFilter: e,
-                                        hasNitro: A
+                                        hasNitro: w
                                     },
                                     null == e ? void 0 : e.id
                                 )
@@ -94,9 +93,9 @@ function S(e) {
                     i
                 );
             },
-            [n, D, A]
+            [n, M, w]
         );
-    return P && (null == D ? void 0 : null === (t = D[0]) || void 0 === t ? void 0 : t.length) === 0
+    return T && (null == M ? void 0 : null === (t = M[0]) || void 0 === t ? void 0 : t.length) === 0
         ? (0, r.jsxs)('div', {
               className: o()(j.iconMessage),
               children: [
@@ -113,7 +112,7 @@ function S(e) {
                   })
               ]
           })
-        : k
+        : R
           ? (0, r.jsxs)('div', {
                 className: o()(j.iconMessage),
                 children: [
@@ -130,7 +129,7 @@ function S(e) {
                     })
                 ]
             })
-          : Z
+          : k
             ? (0, r.jsx)('div', {
                   className: o()(j.loading),
                   children: (0, r.jsx)(f.$jN, {
@@ -141,7 +140,7 @@ function S(e) {
             : (0, r.jsx)(h.Z, {
                   fade: !0,
                   className: o()(j.container, { [j.hasHeaders]: S }),
-                  renderRow: (e, t) => W(t),
+                  renderRow: (e, t) => F(t),
                   renderSectionHeader:
                       !1 === S
                           ? void 0
@@ -153,11 +152,23 @@ function S(e) {
                                     children: E.NW.string(C[e])
                                 }),
                   sectionHeaderHeight: !1 === S ? void 0 : (e) => N[e],
-                  rowCountBySection: D.map((e) => M(e.length)),
-                  rowCount: M((0, c.sumBy)(D, (e) => e.length)),
+                  rowCountBySection: M.map((e) => W(e.length)),
+                  rowCount: W((0, c.sumBy)(M, (e) => e.length)),
                   rowHeight: 130,
                   onScroll: a,
                   ref: l,
-                  sectionFooterHeight: 40 * !A
+                  sectionFooterHeight: 40 * !w
               });
+}
+function P(e) {
+    let { children: t } = e,
+        n = i.useRef(null);
+    return (0, r.jsx)('div', {
+        ref: n,
+        className: j.row,
+        children: (0, r.jsx)(f.JcV, {
+            containerRef: n,
+            children: t
+        })
+    });
 }
