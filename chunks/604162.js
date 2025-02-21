@@ -8,10 +8,7 @@ n.d(t, {
 var r = n(192379),
     i = n(918701),
     o = n(388032);
-let a = (e) => {
-        let t = (0, i.si)(e);
-        return e.percentComplete > 0 ? o.NW.formatToPlainString(o.t['c59/Tk'], { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) }) : o.NW.formatToPlainString(o.t.GNsKiY, { remainTime: ''.concat(String(t.minutes).padStart(2, '0'), ':').concat(String(t.seconds).padStart(2, '0')) });
-    },
+let a = (e) => (e.percentComplete > 0 ? o.NW.formatToPlainString(o.t['c59/Tk'], { remainTime: (0, i.Ah)(e) }) : o.NW.formatToPlainString(o.t.GNsKiY, { remainTime: (0, i.Ah)(e) })),
     s = (e) => null != e.text;
 function l(e) {
     let t = 0 | Math.round(e),
