@@ -3,5 +3,6 @@ e.exports = {
     spinner: 'spinner_dbba93',
     leftColumn: 'leftColumn_dbba93',
     rightColumn: 'rightColumn_dbba93',
-    divider: 'divider_dbba93'
+    divider: 'divider_dbba93',
+    profilePreview: 'profilePreview_dbba93'
 };

@@ -20,9 +20,9 @@ var o = (function (e) {
     return (e.STREAM = 'stream'), (e.PAUSE = 'pause'), (e.STOP = 'stop'), e;
 })({});
 class a {
-    onStreamBegin(e, t) {
-        let n = (0, r.e)(e, t);
-        null == n || null == n.windowHandle ? this.callback({ type: 'stop' }) : this._stream(n);
+    onStreamBegin(e, t, n) {
+        let i = (0, r.e)(e, t);
+        (this.sound = n), null == i || null == i.windowHandle ? this.callback({ type: 'stop' }) : this._stream(i);
     }
     onStreamKilled() {
         this._kill();
@@ -54,7 +54,8 @@ class a {
             n &&
                 this.callback({
                     type: 'stream',
-                    sourceId: 'window:'.concat(this.application.windowHandle)
+                    sourceId: 'window:'.concat(this.application.windowHandle),
+                    sound: this.sound
                 });
     }
     _kill() {
@@ -67,6 +68,6 @@ class a {
         this.active && ((this.application.windowHandle = null), this.callback({ type: 'pause' }));
     }
     constructor(e) {
-        i(this, 'callback', void 0), i(this, 'active', void 0), i(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
+        i(this, 'callback', void 0), i(this, 'active', void 0), i(this, 'application', void 0), i(this, 'sound', void 0), (this.callback = e), (this.active = !1), (this.application = null), (this.sound = !0);
     }
 }

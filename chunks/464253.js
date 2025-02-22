@@ -38,12 +38,13 @@ class m {
         })),
             'verbatim-source' !== this.mode && this.director.onDetectionUpdate(this.applications);
     }
-    _onStreamApplication(e, t) {
-        (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t);
+    _onStreamApplication(e, t, n) {
+        (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t, n);
     }
     _onStreamDirectSource(e, t, n, r) {
         (this.mode = 'verbatim-source'),
             (this.streamKey = e),
+            (this.director.sound = null == r || r),
             this._onDirectorAction({
                 type: s.A.STREAM,
                 sourceId: t,
@@ -157,7 +158,7 @@ class m {
                         channelId: r,
                         ownerId: c
                     });
-                (null == i) != (null == o) ? (null != i && this._onStreamApplication(f, i), null != o && this._onStreamDirectSource(f, o, s, l)) : new a.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(o, ')'));
+                (null == i) != (null == o) ? (null != i && this._onStreamApplication(f, i, null == l || l), null != o && this._onStreamDirectSource(f, o, s, l)) : new a.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(o, ')'));
             }),
             r.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: t } = e;
@@ -176,8 +177,9 @@ class m {
                 n === _.Yn.STREAM && this._onCapturePaused(t === p.FQ1.PAUSED);
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
-                let { settings: t } = e;
-                (null == t ? void 0 : t.context) === _.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
+                var t;
+                let { settings: n } = e;
+                (null == n ? void 0 : n.context) === _.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n ? void 0 : null === (t = n.desktopSettings) || void 0 === t ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound);
             });
     }
 }

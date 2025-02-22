@@ -1,36 +1,34 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(410030),
-    s = n(114487),
-    i = n(686546),
-    c = n(686369),
-    o = n(388032),
-    d = n(545495);
-function u(e) {
+    a = n(114487),
+    s = n(686546),
+    i = n(686369),
+    c = n(388032),
+    o = n(545495);
+function d(e) {
     let { guildId: t, name: n } = e,
-        u = (0, a.ZP)(),
-        m = (0, l.dQu)(l.TVs.colors.BG_BASE_TERTIARY),
-        h = (0, c.d)(u, m.hex());
+        d = (0, l.dQu)(l.TVs.colors.BG_BASE_TERTIARY),
+        u = (0, i.d)(d.hex());
     return (0, r.jsxs)('div', {
-        className: d.container,
+        className: o.container,
         children: [
             (0, r.jsx)('div', {
-                className: d.banner,
-                style: { background: h }
+                className: o.banner,
+                style: { background: u }
             }),
             (0, r.jsx)('div', {
-                className: d.avatarContainer,
-                children: (0, r.jsx)(i.ZP, {
-                    mask: i.QS.CLAN_ICON,
+                className: o.avatarContainer,
+                children: (0, r.jsx)(s.ZP, {
+                    mask: s.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, r.jsx)('div', {
-                        className: d.avatarWrapper,
-                        children: (0, r.jsx)(s.b, {
+                        className: o.avatarWrapper,
+                        children: (0, r.jsx)(a.b, {
                             guildId: t,
-                            guildName: null != n ? n : o.NW.string(o.t.DmIUGB),
+                            guildName: null != n ? n : c.NW.string(c.t.DmIUGB),
                             guildIcon: null,
                             iconSize: 64
                         })
@@ -38,19 +36,19 @@ function u(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: d.header,
+                className: o.header,
                 children: (0, r.jsx)(l.X6q, {
                     variant: 'heading-lg/medium',
                     color: 'header-primary',
-                    children: null != n ? n : o.NW.string(o.t.DmIUGB)
+                    children: null != n ? n : c.NW.string(c.t.DmIUGB)
                 })
             }),
             (0, r.jsx)('div', {
-                className: d.body,
+                className: o.body,
                 children: (0, r.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: o.NW.string(o.t['8mfCqa'])
+                    children: c.NW.string(c.t['8mfCqa'])
                 })
             })
         ]

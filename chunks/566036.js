@@ -1,11 +1,11 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => j }), n(47120);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(510231),
-    o = n(434404),
-    c = n(999382),
+    s = n(392711),
+    a = n.n(s),
+    l = n(481060),
+    o = n(510231),
+    c = n(434404),
     d = n(383124),
     u = n(795691),
     m = n(388032),
@@ -14,8 +14,8 @@ var r = n(200651),
 let h = () => null;
 function f(e) {
     let { gameApplicationIds: t, handleChange: n } = e,
-        { options: i, matchSorterOptions: s } = (0, l.h)();
-    return (0, r.jsx)(a.VcW, {
+        { options: i, matchSorterOptions: s } = (0, o.h)();
+    return (0, r.jsx)(l.VcW, {
         multi: !0,
         hidePills: !0,
         wrapperClassName: p.selectWrapper,
@@ -52,61 +52,55 @@ function b(e) {
 let x = [];
 function j(e) {
     var t;
-    let { guild: n } = e,
-        l = n.id,
-        d = (0, s.e7)([c.Z], () => c.Z.getGuildProfile()),
-        h = null !== (t = null == d ? void 0 : d.gameApplicationIds) && void 0 !== t ? t : x,
-        j = i.useCallback(
+    let { profile: n } = e,
+        s = n.id,
+        o = null !== (t = null == n ? void 0 : n.gameApplicationIds) && void 0 !== t ? t : x,
+        d = i.useCallback(
             (e) => {
-                o.Z.updateGuildProfile(l, { gameApplicationIds: e });
+                c.Z.updateGuildProfile(s, { gameApplicationIds: e });
             },
-            [l]
+            [s]
         ),
-        N = i.useCallback(
+        h = i.useCallback(
             (e) => {
-                let t = h.filter((t) => t !== e);
-                o.Z.updateGuildProfile(l, { gameApplicationIds: t });
+                let t = o.filter((t) => t !== e);
+                c.Z.updateGuildProfile(s, { gameApplicationIds: t });
             },
-            [l, h]
-        );
-    return null == d
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsx)('div', { className: p.separator }),
-                  (0, r.jsxs)(a.hjN, {
-                      className: g.section,
-                      children: [
-                          (0, r.jsxs)('div', {
-                              className: g.sectionHeader,
-                              children: [
-                                  (0, r.jsx)(a.vwX, { children: m.NW.string(m.t.BR68vL) }),
-                                  (0, r.jsx)(a.R94, {
-                                      type: a.geA.DESCRIPTION,
-                                      children: m.NW.string(m.t.MobxiI)
-                                  })
-                              ]
-                          }),
-                          (0, r.jsxs)('div', {
-                              className: p.sectionBody,
-                              children: [
-                                  (0, r.jsx)(f, {
-                                      gameApplicationIds: h,
-                                      handleChange: j
-                                  }),
-                                  (0, r.jsx)(b, {
-                                      gameApplicationIds: h,
-                                      onRemoveGame: N
-                                  }),
-                                  (0, r.jsx)(u.Z, {
-                                      guildId: l,
-                                      selectedGameApplicationIds: h,
-                                      onUpdateGames: j
-                                  })
-                              ]
-                          })
-                      ]
-                  })
-              ]
-          });
+            [s, o]
+        ),
+        j = i.useRef(o),
+        N = i.useMemo(() => (a().isEqual(new Set(o), new Set(j.current)) || (j.current = [...o]), j.current), [o]);
+    return (0, r.jsxs)(l.hjN, {
+        className: g.section,
+        children: [
+            (0, r.jsxs)('div', {
+                className: g.sectionHeader,
+                children: [
+                    (0, r.jsx)(l.vwX, { children: m.NW.string(m.t.BR68vL) }),
+                    (0, r.jsx)(l.R94, {
+                        type: l.geA.DESCRIPTION,
+                        children: m.NW.string(m.t.MobxiI)
+                    })
+                ]
+            }),
+            (0, r.jsxs)('div', {
+                className: p.sectionBody,
+                children: [
+                    (0, r.jsx)(f, {
+                        gameApplicationIds: o,
+                        handleChange: d
+                    }),
+                    (0, r.jsx)(b, {
+                        gameApplicationIds: N,
+                        onRemoveGame: h
+                    }),
+                    (0, r.jsx)(u.Z, {
+                        guildId: s,
+                        selectedGameApplicationIds: o,
+                        onUpdateGames: d
+                    })
+                ]
+            })
+        ]
+    });
 }

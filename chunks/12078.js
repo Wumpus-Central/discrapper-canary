@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(950104),
-    o = n(481060),
+    l = n(481060),
+    o = n(686369),
     c = n(434404),
     d = n(570911),
     u = n(388032),
@@ -19,15 +19,15 @@ function g(e) {
             },
             [n]
         );
-    return (0, r.jsxs)(o.hjN, {
+    return (0, r.jsxs)(l.hjN, {
         className: p.section,
         children: [
             (0, r.jsxs)('div', {
                 className: p.sectionHeader,
                 children: [
-                    (0, r.jsx)(o.vwX, { children: u.NW.string(u.t.BSVog4) }),
-                    (0, r.jsx)(o.R94, {
-                        type: o.geA.DESCRIPTION,
+                    (0, r.jsx)(l.vwX, { children: u.NW.string(u.t.BSVog4) }),
+                    (0, r.jsx)(l.R94, {
+                        type: l.geA.DESCRIPTION,
                         children: u.NW.string(u.t['93S9Gx'])
                     })
                 ]
@@ -35,18 +35,16 @@ function g(e) {
             (0, r.jsx)('div', {
                 className: m.grid,
                 children: d.cb.map((e) => {
-                    let { name: n, color: i } = e,
-                        c = (0, l.DT)(i, 1.75),
-                        d = 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(c, ' 20.65%, ').concat(i, ' 85.16%)');
+                    let { name: n, color: i } = e;
                     return (0, r.jsx)(
-                        o.ua7,
+                        l.ua7,
                         {
                             text: n,
                             children: (e) => {
-                                var l, c;
+                                var c, d;
                                 return (0, r.jsx)(
-                                    o.P3F,
-                                    ((l = (function (e) {
+                                    l.P3F,
+                                    ((c = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
@@ -71,16 +69,16 @@ function g(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (c = c =
+                                    (d = d =
                                         {
                                             'aria-label': n,
                                             onClick: s(n, i),
-                                            style: { background: d },
+                                            style: { background: (0, o.d)(i) },
                                             className: m.itemContainer,
                                             children: (0, r.jsx)('div', { className: a()({ [m.itemSelected]: (null == t ? void 0 : t.brandColorPrimary) === i }) })
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(c))
+                                        ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(d))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -88,10 +86,10 @@ function g(e) {
                                                   n.push.apply(n, r);
                                               }
                                               return n;
-                                          })(Object(c)).forEach(function (e) {
-                                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(c, e));
+                                          })(Object(d)).forEach(function (e) {
+                                              Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(d, e));
                                           }),
-                                    l)
+                                    c)
                                 );
                             }
                         },

@@ -86,13 +86,15 @@ let E = function () {
                                       profile: T,
                                       canManageGuild: P
                                   }),
-                                  (0, r.jsx)(x.Z, { guild: t })
+                                  (0, r.jsx)('div', { className: I.divider }),
+                                  (0, r.jsx)(x.Z, { profile: T })
                               ]
                           }),
                           (0, r.jsxs)('div', {
                               className: I.rightColumn,
                               children: [
                                   (0, r.jsx)(m.Z, {
+                                      className: I.profilePreview,
                                       profile: T,
                                       disableCTA: !0,
                                       onIconChange: P ? w : void 0

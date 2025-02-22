@@ -7,7 +7,6 @@ n.d(t, {
     TC: () => a.TC,
     ap: () => s.ap,
     bg: () => a.bg,
-    r5: () => l.r5,
     uv: () => r.u,
     wM: () => a.wM,
     wj: () => s.wj

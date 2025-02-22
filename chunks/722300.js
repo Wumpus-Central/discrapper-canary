@@ -1,52 +1,50 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var l = n(692547),
     a = n(481060),
-    s = n(410030),
-    i = n(686546),
-    c = n(60034),
-    o = n(686369),
-    d = n(388032),
-    u = n(545495);
-function m(e) {
+    s = n(686546),
+    i = n(60034),
+    c = n(686369),
+    o = n(388032),
+    d = n(545495);
+function u(e) {
     let { name: t, onRetry: n } = e,
-        m = (0, s.ZP)(),
-        h = (0, a.dQu)(l.Z.colors.BG_BASE_TERTIARY),
-        j = (0, o.d)(m, h.hex()),
-        f = null != t ? t : d.NW.string(d.t.DmIUGB);
+        u = (0, a.dQu)(l.Z.colors.BG_BASE_TERTIARY),
+        m = (0, c.d)(u.hex()),
+        h = null != t ? t : o.NW.string(o.t.DmIUGB);
     return (0, r.jsxs)('div', {
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsx)('div', {
-                className: u.banner,
-                style: { background: j }
+                className: d.banner,
+                style: { background: m }
             }),
             (0, r.jsx)('div', {
-                className: u.avatarContainer,
-                children: (0, r.jsx)(i.ZP, {
-                    mask: i.QS.CLAN_ICON,
+                className: d.avatarContainer,
+                children: (0, r.jsx)(s.ZP, {
+                    mask: s.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, r.jsx)('div', {
-                        className: u.avatarWrapper,
-                        children: (0, r.jsx)(c.R, {
-                            guildName: f,
+                        className: d.avatarWrapper,
+                        children: (0, r.jsx)(i.R, {
+                            guildName: h,
                             iconSize: 64
                         })
                     })
                 })
             }),
             (0, r.jsxs)('div', {
-                className: u.header,
+                className: d.header,
                 children: [
                     (0, r.jsx)(a.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
-                        children: f
+                        children: h
                     }),
                     (0, r.jsxs)(a.P3F, {
-                        className: u.error,
+                        className: d.error,
                         onClick: n,
                         children: [
                             (0, r.jsx)(a.P4T, {
@@ -56,7 +54,7 @@ function m(e) {
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-warning',
-                                children: d.NW.string(d.t.tmGHjY)
+                                children: o.NW.string(o.t.tmGHjY)
                             })
                         ]
                     })

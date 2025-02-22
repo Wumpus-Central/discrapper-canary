@@ -1,8 +1,6 @@
-n.d(t, { d: () => a });
-var r = n(950104),
-    l = n(780384),
-    i = n(981631);
-function a(e, t) {
-    let n = e === i.BRd.DARK ? (0, r.DT)(t, 0.8) : (0, l.r5)(t, 0.8);
-    return 'linear-gradient(45deg, '.concat(t, ' 0%, ').concat(n, ' 100%)');
+n.d(t, { d: () => i });
+var r = n(950104);
+function i(e) {
+    let t = (0, r.DT)(e, 1.75);
+    return 'radial-gradient(105.43% 127.05% at 50.1% 127.05%, '.concat(t, ' 20.65%, ').concat(e, ' 85.16%)');
 }
