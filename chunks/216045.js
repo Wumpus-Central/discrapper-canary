@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(512722),
@@ -7,44 +7,40 @@ var r = n(200651),
     o = n(622535),
     c = n(481060),
     d = n(570140),
-    u = n(232567),
-    m = n(809206),
-    g = n(497321),
-    p = n(634894),
-    h = n(100527),
-    f = n(906732),
-    b = n(475977),
-    N = n(957730),
-    x = n(53691),
-    _ = n(267717),
-    E = n(296810),
-    j = n(921813),
-    C = n(610794),
-    O = n(935147),
-    v = n(246946),
-    S = n(25990),
-    T = n(594174),
-    I = n(626135),
-    y = n(74538),
-    A = n(413182),
-    P = n(695346),
-    R = n(265159),
-    D = n(532495),
-    Z = n(981631),
-    w = n(388032),
-    k = n(338881);
-function W() {
-    let e = (0, l.e7)([T.default], () => {
-        let e = T.default.getCurrentUser();
-        return a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
-    });
-    i.useEffect(() => {
-        (0, u.In)(e.id);
-    }, [e.id]);
-    let t = (0, l.e7)([v.Z], () => v.Z.hidePersonalInformation),
-        n = (0, l.cj)([S.Z], () => S.Z.getAllPending()),
+    u = n(809206),
+    m = n(497321),
+    g = n(634894),
+    p = n(100527),
+    h = n(906732),
+    f = n(475977),
+    b = n(957730),
+    N = n(53691),
+    x = n(267717),
+    _ = n(296810),
+    E = n(921813),
+    j = n(610794),
+    C = n(935147),
+    O = n(246946),
+    v = n(25990),
+    S = n(594174),
+    T = n(626135),
+    I = n(74538),
+    y = n(413182),
+    A = n(695346),
+    P = n(265159),
+    R = n(532495),
+    D = n(981631),
+    Z = n(388032),
+    w = n(338881);
+function k() {
+    let e = (0, l.e7)([S.default], () => {
+            let e = S.default.getCurrentUser();
+            return a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
+        }),
+        t = (0, l.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        n = (0, l.cj)([v.Z], () => v.Z.getAllPending()),
         { pendingBio: s } = n,
-        W = (function (e, t) {
+        k = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -63,33 +59,33 @@ function W() {
             }
             return i;
         })(n, ['pendingBio']),
-        L = (0, l.e7)([S.Z], () => S.Z.showNotice()),
-        B = P.dN.useSetting() && null != s ? N.ZP.parse(void 0, s).content : s,
-        M = y.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: U } = (0, f.ZP)(h.Z.PROFILE);
-    i.useEffect(() => () => d.Z.wait(m.W3), []);
-    let V = 'UserSettingsProfileCustomization';
-    (0, p.j)({
-        location: V + ' auto on',
+        W = (0, l.e7)([v.Z], () => v.Z.showNotice()),
+        L = A.dN.useSetting() && null != s ? b.ZP.parse(void 0, s).content : s,
+        B = I.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: M } = (0, h.ZP)(p.Z.PROFILE);
+    i.useEffect(() => () => d.Z.wait(u.W3), []);
+    let U = 'UserSettingsProfileCustomization';
+    (0, g.j)({
+        location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, p.j)({
-            location: V + ' auto off',
+        (0, g.j)({
+            location: U + ' auto off',
             autoTrackExposure: !1
         });
-    let [G, F] = i.useState(!1),
-        { showRedesign: H } = A.b.useExperiment({ location: 'profile customization' }),
-        z = !M,
-        Y = i.useRef(null);
+    let [V, G] = i.useState(!1),
+        { showRedesign: F } = y.b.useExperiment({ location: 'profile customization' }),
+        H = !B,
+        z = i.useRef(null);
     return t
-        ? (0, r.jsx)(g.Z, {})
-        : (0, r.jsxs)(f.Gt, {
-              value: U,
+        ? (0, r.jsx)(m.Z, {})
+        : (0, r.jsxs)(h.Gt, {
+              value: M,
               children: [
-                  (0, r.jsx)(b.Z, {}),
-                  (0, r.jsx)(E.Z, {
+                  (0, r.jsx)(f.Z, {}),
+                  (0, r.jsx)(_.Z, {
                       profilePreview: (0, r.jsx)(
-                          j.Z,
+                          E.Z,
                           (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -117,42 +113,42 @@ function W() {
                           })(
                               {
                                   user: e,
-                                  canUsePremiumCustomization: M,
-                                  onUpsellClick: R.Z,
-                                  pendingBio: B
+                                  canUsePremiumCustomization: B,
+                                  onUpsellClick: P.Z,
+                                  pendingBio: L
                               },
-                              W
+                              k
                           )
                       ),
-                      children: (0, r.jsx)(D.Z, {})
+                      children: (0, r.jsx)(R.Z, {})
                   }),
-                  H && (0, r.jsx)(C.Z, {}),
+                  F && (0, r.jsx)(j.Z, {}),
                   (0, r.jsx)(o.$, {
-                      onChange: (e) => F(e),
+                      onChange: (e) => G(e),
                       threshold: 0.25,
-                      active: z,
+                      active: H,
                       children: (0, r.jsx)('div', {
-                          ref: Y,
-                          children: (0, r.jsx)(O.Z, {
+                          ref: z,
+                          children: (0, r.jsx)(C.Z, {
                               user: e,
-                              shouldShow: z,
-                              isVisible: G
+                              shouldShow: H,
+                              isVisible: V
                           })
                       })
                   }),
-                  z &&
-                      !L &&
-                      (0, r.jsx)(x.p, {
-                          className: k.floatingNitroUpsell,
-                          showUpsell: z && !G,
-                          text: w.NW.format(w.t.TmfgIy, { onClick: () => (0, _.y)() }),
+                  H &&
+                      !W &&
+                      (0, r.jsx)(N.p, {
+                          className: w.floatingNitroUpsell,
+                          showUpsell: H && !V,
+                          text: Z.NW.format(Z.t.TmfgIy, { onClick: () => (0, x.y)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, r.jsxs)(c.gtL, {
-                              className: k.floatingNitroButton,
-                              innerClassName: k.floatingNitroButtonInner,
+                              className: w.floatingNitroButton,
+                              innerClassName: w.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  I.default.track(Z.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == Y || null === (e = Y.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  T.default.track(D.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == z || null === (e = z.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: c.zxk.Colors.GREEN,
                               size: c.PhG.MEDIUM,
@@ -164,7 +160,7 @@ function W() {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: w.NW.string(w.t.uw9zIy)
+                                      children: Z.NW.string(Z.t.uw9zIy)
                                   })
                               ]
                           })
