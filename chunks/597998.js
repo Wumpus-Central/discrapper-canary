@@ -238,7 +238,7 @@ let A = function (e) {
             }
             return l;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: g, onKeyDown: v, onDoubleClick: O, onContextMenu: j, onMouseEnter: P, onMouseLeave: I, onMouseDown: Z, priority: A, speaking: C, collapsed: D, mute: _, serverMute: k, guildId: W, nick: R, isGuest: M, flipped: L, className: U, overlap: G, 'aria-label': V, tabIndex: F, ringing: B, user: Y, channelId: z } = p,
+    let { onClick: g, onKeyDown: v, onDoubleClick: O, onContextMenu: j, onMouseEnter: P, onMouseLeave: I, onMouseDown: Z, priority: A, speaking: C, collapsed: D, mute: _, serverMute: k, guildId: W, nick: R, isGuest: M, flipped: L, className: U, overlap: G, 'aria-label': V, tabIndex: F, ringing: Y, user: B, channelId: z } = p,
         H = (0, c.bp)(),
         J = null != z ? b.Z.getChannel(z) : null,
         { enabled: X } = (0, f.Z)({ location: 'VoiceUser' }),
@@ -261,25 +261,25 @@ let A = function (e) {
                 [E.userSmall]: i === N.ipw.SMALL,
                 [E.userLarge]: i === N.ipw.LARGE,
                 [E.disabled]: !s && u,
-                [E.ringing]: B
+                [E.ringing]: Y
             }),
             onClick: (e) => {
-                null == g || g(e, Y);
+                null == g || g(e, B);
             },
             onDoubleClick: (e) => {
-                null == O || O(e, Y);
+                null == O || O(e, B);
             },
             onContextMenu: (e) => {
-                null == j || j(e, Y);
+                null == j || j(e, B);
             },
             onMouseEnter: (e) => {
-                q(!0), null == P || P(e, Y);
+                q(!0), null == P || P(e, B);
             },
             onMouseLeave: (e) => {
-                q(!1), null == I || I(e, Y);
+                q(!1), null == I || I(e, B);
             },
             onMouseDown: (e) => {
-                null == Z || Z(e, Y);
+                null == Z || Z(e, B);
             },
             onKeyDown: v,
             'aria-label': V,
@@ -299,7 +299,7 @@ let A = function (e) {
                             [E.avatarSmall]: i === N.ipw.SMALL,
                             [E.avatarSpeaking]: C
                         }),
-                        style: { backgroundImage: 'url('.concat(Y.getAvatarURL(W, i === N.ipw.LARGE ? 38 : 24), ')') }
+                        style: { backgroundImage: 'url('.concat(B.getAvatarURL(W, i === N.ipw.LARGE ? 38 : 24), ')') }
                     }),
                     (function () {
                         var e, t;
@@ -309,7 +309,7 @@ let A = function (e) {
                                     [E.usernameSpeaking]: !_ && !k && C
                                 }),
                                 children: [
-                                    null != R ? R : S.ZP.getName(Y),
+                                    null != R ? R : S.ZP.getName(B),
                                     M
                                         ? (0, r.jsxs)('span', {
                                               className: E.guestSuffix,
@@ -319,8 +319,8 @@ let A = function (e) {
                                 ]
                             }),
                             i = {
-                                primaryGuild: Y.primaryGuild,
-                                userId: Y.id,
+                                primaryGuild: B.primaryGuild,
+                                userId: B.id,
                                 contextGuildId: W,
                                 isOverlay: d,
                                 disableTooltip: !0,
@@ -351,14 +351,17 @@ let A = function (e) {
                     (0, r.jsx)(T, w({ disabled: u }, p)),
                     X &&
                         ((K || Q) && !D
-                            ? (0, r.jsx)(o.P3F, {
-                                  className: a()(E.moreClickable, Q && E.moreActive),
-                                  onClick: function (e) {
-                                      null != W && null != J && ($(!0), (0, y.D)(e, Y, J, { context: H }));
-                                  },
-                                  children: (0, r.jsx)(o.xhG, {
-                                      size: 'md',
-                                      className: a()(E.icon)
+                            ? (0, r.jsx)(o.DY3, {
+                                  text: x.NW.string(x.t['+1H47u']),
+                                  children: (0, r.jsx)(o.P3F, {
+                                      className: a()(E.moreClickable, Q && E.moreActive),
+                                      onClick: function (e) {
+                                          null != W && null != J && ($(!0), (0, y.D)(e, B, J, { context: H }));
+                                      },
+                                      children: (0, r.jsx)(o.xhG, {
+                                          size: 'md',
+                                          className: a()(E.icon)
+                                      })
                                   })
                               })
                             : null)
