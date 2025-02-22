@@ -22,13 +22,16 @@ function o() {
 function a() {
     if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
     try {
-        return r.ZP.requireModule('discord_zstd'), !0;
+        let e = r.ZP.requireModule('discord_zstd');
+        if (null == e) return !1;
+        return !0;
     } catch (e) {
         if (e.message.includes('Cannot find')) return r.ZP.ensureModule('discord_zstd').catch((e) => {}), !1;
         throw e;
     }
 }
 function s() {
+    if (!o()) return;
     let { createContext: e } = r.ZP.requireModule('discord_zstd');
     return e();
 }

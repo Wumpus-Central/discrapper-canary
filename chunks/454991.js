@@ -1,8 +1,7 @@
-n.d(t, { v: () => s });
+n.d(t, { v: () => s }), n(47120);
 var r = n(433517),
-    i = n(32300),
-    o = n(987650);
-function a(e, t, n) {
+    i = n(987650);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,12 +14,23 @@ function a(e, t, n) {
         e
     );
 }
+var a = (function (e) {
+    return (e.Version1 = 'OverlayStore'), (e.Version2 = 'overlayEnabled'), (e.Version3 = 'OverlayStore3'), (e.Version4 = 'OverlayStore4'), (e.Version5 = 'OverlayStore5'), (e.Version6 = 'OverlayStore6'), e;
+})({});
 class s {
     static get legacyEnabled() {
         return s.load().legacyEnabled;
     }
     static get oopEnabled() {
         return s.load().oopEnabled;
+    }
+    static DEV_clearAllSavedSettings() {
+        for (let e of Object.values(a)) r.K.remove(e);
+        this._loaded = null;
+    }
+    static DEV_saveSettingsForVersion(e) {
+        for (let [t, n] of Object.entries(e)) r.K.set(t, n);
+        this._loaded = null;
     }
     static update(e) {
         let t = s.load();
@@ -37,40 +47,39 @@ class s {
         return null == s._loaded && (s._loaded = s.loadInternal()), s._loaded;
     }
     static loadInternal() {
-        var e, t, n, a, l;
-        let c = (0, i.NW)('OverlayStoredSettings', !1),
-            u = r.K.get('OverlayStore');
-        if (null != u) {
-            let e = new s('boolean' == typeof u.enabled ? u.enabled : o.iP, c);
+        var e, t, n, o, a;
+        let l = r.K.get('OverlayStore');
+        if (null != l) {
+            let e = new s('boolean' == typeof l.enabled ? l.enabled : i.iP, i.iP);
             return e.save(), r.K.remove('OverlayStore'), e;
         }
-        let d = r.K.get('overlayEnabled');
-        if (null != d) {
-            let e = new s('boolean' == typeof d ? d : o.iP, c);
+        let c = r.K.get('overlayEnabled');
+        if (null != c) {
+            let e = new s('boolean' == typeof c ? c : i.iP, i.iP);
             return e.save(), r.K.remove('overlayEnabled'), e;
         }
-        let f = r.K.get('OverlayStore3');
-        if (null != f) {
-            let t = new s(null !== (e = f.enabled || f.legacyEnabled) && void 0 !== e ? e : o.iP, o.iP && c);
+        let u = r.K.get('OverlayStore3');
+        if (null != u) {
+            let t = new s(null !== (e = u.enabled || u.legacyEnabled) && void 0 !== e ? e : i.iP, i.iP);
             return t.save(), r.K.remove('OverlayStore3'), t;
         }
-        let p = r.K.get('OverlayStore4');
-        if (null != p) {
-            let e = new s(p.legacyEnabled || o.iP, null !== (t = p.oopEnabled) && void 0 !== t ? t : o.iP && c);
+        let d = r.K.get('OverlayStore4');
+        if (null != d) {
+            let e = new s(d.legacyEnabled || i.iP, null !== (t = d.oopEnabled) && void 0 !== t ? t : i.iP);
             return e.save(), r.K.remove('OverlayStore4'), e;
         }
-        let _ = r.K.get('OverlayStore5');
-        if (null != _) {
-            let e = new s(null !== (n = _.legacyEnabled) && void 0 !== n ? n : o.iP, _.oopEnabled || o.iP);
+        let f = r.K.get('OverlayStore5');
+        if (null != f) {
+            let e = new s(null !== (n = f.legacyEnabled) && void 0 !== n ? n : i.iP, f.oopEnabled || i.iP);
             return e.save(), r.K.remove('OverlayStore5'), e;
         }
-        let h = r.K.get('OverlayStore6');
-        if (null != h) return new s(null !== (a = h.legacyEnabled) && void 0 !== a ? a : o.iP, null !== (l = h.oopEnabled) && void 0 !== l ? l : o.iP);
-        let m = new s(o.iP, c);
-        return m.save(), m;
+        let p = r.K.get('OverlayStore6');
+        if (null != p) return new s(null !== (o = p.legacyEnabled) && void 0 !== o ? o : i.iP, null !== (a = p.oopEnabled) && void 0 !== a ? a : i.iP);
+        let _ = new s(i.iP, i.iP);
+        return _.save(), _;
     }
     constructor(e, t) {
-        a(this, 'legacyEnabled', void 0), a(this, 'oopEnabled', void 0), (this.legacyEnabled = e), (this.oopEnabled = t);
+        o(this, 'legacyEnabled', void 0), o(this, 'oopEnabled', void 0), (this.legacyEnabled = e), (this.oopEnabled = t);
     }
 }
-a(s, '_loaded', null);
+o(s, '_loaded', null);
