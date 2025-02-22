@@ -1,71 +1,69 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var i = n(410030),
     l = n(906732),
     o = n(769654),
     a = n(785717),
-    s = n(697927),
-    c = n(200634),
-    u = n(483517),
-    d = n(502762),
-    p = n(171368),
-    h = n(389190),
-    f = n(428927),
-    m = n(638785),
-    g = n(388032),
-    b = n(589834);
-function _(e) {
+    s = n(806729),
+    c = n(483517),
+    u = n(502762),
+    d = n(171368),
+    p = n(389190),
+    h = n(428927),
+    f = n(638785),
+    m = n(388032),
+    g = n(589834);
+function b(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(),
-        { context: _ } = (0, a.KZ)(),
-        C = (0, i.ZP)(),
-        { mutualFriends: v, isFetching: y } = (0, s.Z)(t.id, !t.bot),
-        { mutualGuilds: x, isFetching: j } = (0, c.Z)(t.id, !0),
-        O = !t.bot && null != v && v.length > 0,
-        N = null != x && x.length > 0;
-    return O || N
-        ? (0, r.jsxs)(d.Z.Overlay, {
-              className: b.overlay,
+        { context: b } = (0, a.KZ)(),
+        _ = (0, i.ZP)(),
+        { mutualFriends: C, mutualGuilds: v, isFetching: y } = (0, s.Z)(t, !0),
+        x = !t.bot && null != C && C.length > 0,
+        j = null != v && v.length > 0;
+    return x || j
+        ? (0, r.jsxs)(u.Z.Overlay, {
+              className: g.overlay,
               children: [
-                  N &&
-                      (0, r.jsx)(m.Z, {
+                  j &&
+                      (0, r.jsx)(f.Z, {
                           section: 'MUTUAL_GUILDS',
-                          header: g.NW.string(g.t['4lTDZm']),
-                          isLoading: j,
-                          listClassName: b.list,
-                          items: x.map((e) => {
+                          header: m.NW.string(m.t['4lTDZm']),
+                          isLoading: y,
+                          listClassName: g.list,
+                          items: v.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
-                                  f.D,
+                                  h.D,
                                   {
                                       user: t,
                                       guild: n,
                                       nick: i,
-                                      theme: C,
+                                      theme: _,
                                       onSelect: () => (0, o.X)(n.id)
                                   },
                                   n.id
                               );
                           })
                       }),
-                  N && O && (0, r.jsx)(u.Z, { className: b.divider }),
-                  O &&
-                      (0, r.jsx)(m.Z, {
+                  j && x && (0, r.jsx)(c.Z, { className: g.divider }),
+                  x &&
+                      (0, r.jsx)(f.Z, {
                           section: 'MUTUAL_FRIENDS',
-                          header: g.NW.string(g.t['0mTJ3t']),
+                          header: m.NW.string(m.t['0mTJ3t']),
                           isLoading: y,
-                          listClassName: b.list,
-                          items: v.map((e) => {
+                          listClassName: g.list,
+                          items: C.map((e) => {
                               let { key: t, user: i, status: l } = e;
                               return (0, r.jsx)(
-                                  h.T,
+                                  p.T,
                                   {
                                       user: i,
                                       status: l,
                                       onSelect: () => {
                                           var e, t;
-                                          (0, p.openUserProfileModal)(
+                                          (0, d.openUserProfileModal)(
                                               ((e = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
                                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +88,7 @@ function _(e) {
                                                           });
                                                   }
                                                   return e;
-                                              })({}, _)),
+                                              })({}, b)),
                                               (t = t =
                                                   {
                                                       userId: i.id,
