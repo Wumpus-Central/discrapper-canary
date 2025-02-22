@@ -1196,6 +1196,7 @@ var T =
     (r.NOTIFICATION_MIGRATION_GUILD_CHANGED = 'notification_migration_guild_changed'),
     (r.NOTIFICATION_MIGRATION_OPTOUT = 'notification_migration_optout'),
     (r.CALLKIT_CLICKED = 'callkit_clicked'),
+    (r.OVERLAY_DISABLED_SURVEY = 'overlay_disabled_survey'),
     (r.NOTIFICATION_REPORT_SUBMITTED = 'notification_report_submitted'),
     (r.NOTIFICATION_PERMISSION_PREPROMPT_ACKED = 'notification_permission_preprompt_acked'),
     (r.MOBILE_APP_DOWNLOAD_MODAL_ACKED = 'mobile_app_download_modal_acked'),

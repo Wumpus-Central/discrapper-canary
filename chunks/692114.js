@@ -1,26 +1,38 @@
-n.d(t, { Z: () => i }), n(47120);
-var r = n(298444);
-function a(e, t, n) {
+s.d(t, { Z: () => l }), s(47120);
+var i = s(298444);
+function r(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-class i {
+class l {
     _load() {
-        let e = r.x.get(this._key);
+        let e = i.x.get(this._key);
         null != e && (this._set = new Set(e));
+    }
+    values() {
+        return this._set;
+    }
+    size() {
+        return this._set.size;
+    }
+    clear() {
+        this._set.clear(),
+            requestIdleCallback(() => {
+                this._persist();
+            });
     }
     _persist() {
         let e = Array.from(this._set.values());
-        r.x.set(this._key, e);
+        i.x.set(this._key, e);
     }
     add(e) {
         this._set.add(e),
@@ -32,6 +44,6 @@ class i {
         return this._set.has(e);
     }
     constructor(e) {
-        a(this, '_key', void 0), a(this, '_set', void 0), (this._key = '$persisted-set-'.concat(e)), (this._set = new Set()), this._load();
+        r(this, '_key', void 0), r(this, '_set', void 0), (this._key = '$persisted-set-'.concat(e)), (this._set = new Set()), this._load();
     }
 }
