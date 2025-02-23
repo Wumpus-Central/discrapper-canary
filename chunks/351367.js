@@ -1,51 +1,56 @@
-n.d(t, { m: () => b }), n(47120);
-var r = n(192379),
-    i = n(442837),
-    s = n(355467),
-    a = n(493773),
-    l = n(594174),
-    o = n(78839),
-    c = n(431),
-    d = n(111361),
-    u = n(74538),
-    m = n(937579),
-    g = n(557017),
-    p = n(474936);
+r.d(t, { m: () => x }), r(47120);
+var n = r(192379),
+    s = r(442837),
+    i = r(355467),
+    o = r(493773),
+    l = r(594174),
+    a = r(78839),
+    c = r(431),
+    u = r(358085),
+    d = r(111361),
+    p = r(74538),
+    f = r(937579),
+    b = r(557017),
+    g = r(474936),
+    O = r(231338);
 let h = (e) => {
         let t = new Date();
         return t.setDate(t.getDate() - 10), e.currentPeriodEnd >= t;
     },
-    f = (e) => {
+    m = (e) => {
         var t;
-        let n = null === (t = (0, u.Af)(e)) || void 0 === t ? void 0 : t.planId;
-        return void 0 === n || u.ZP.getPremiumType(n) !== p.p9.TIER_2;
+        let r = null === (t = (0, p.Af)(e)) || void 0 === t ? void 0 : t.planId;
+        return void 0 === r || p.ZP.getPremiumType(r) !== g.p9.TIER_2;
     };
-function b(e) {
+function x(e) {
     let { location: t } = e,
-        [n, u] = r.useState(null),
-        p = g.t.useExperiment({ location: t }),
-        b = (0, i.e7)([o.ZP], () => o.ZP.getMostRecentPremiumTypeSubscription()),
-        N = (0, i.e7)([c.Z], () => !c.Z.shouldFetchOffer()),
-        x = (0, i.e7)([o.ZP], () => o.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
-        _ = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        E = (0, d.I5)(_);
+        [r, p] = n.useState(null),
+        g = b.t.useExperiment({ location: t }),
+        x = (0, s.e7)([a.ZP], () => a.ZP.getMostRecentPremiumTypeSubscription()),
+        j = (0, s.e7)([c.Z], () => !c.Z.shouldFetchOffer()),
+        y = (0, s.e7)([a.ZP], () => a.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
+        C = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
+        v = (0, d.I5)(C);
     return (
-        (0, a.ZP)(() => {
-            x || (0, s.ou)(), c.Z.shouldFetchOffer() && (0, m.T)('useCollectibleDecoIsEligible');
+        (0, o.ZP)(() => {
+            if ((y || (0, i.ou)(), c.Z.shouldFetchOffer())) {
+                let e;
+                (0, u.isAndroid)() ? (e = O.gg.GOOGLE) : (0, u.isIOS)() && (e = O.gg.APPLE), (0, f.T)('useCollectibleDecoIsEligible', e);
+            }
         }),
-        r.useEffect(() => {
-            if (!1 === p.enabled) {
-                u(!1);
+        n.useEffect(() => {
+            if (!1 === g.enabled) {
+                p(!1);
                 return;
             }
-            if (x && N) {
-                if (null === b) {
-                    E ? u(!1) : u(!0);
+            if (y && j) {
+                if (null === x) {
+                    v ? p(!1) : p(!0);
                     return;
                 }
-                b.isPaused ? u(!0) : b.isEnded ? (c.Z.hasAnyUnexpiredOffer() || c.Z.hasAnyUnexpiredDiscountOffer() || h(b) ? u(!1) : u(!0)) : b.isActive ? u(f(b)) : u(!1);
+                x.isPaused ? p(!0) : x.isEnded ? (c.Z.hasAnyUnexpiredOffer() || c.Z.hasAnyUnexpiredDiscountOffer() || h(x) ? p(!1) : p(!0)) : x.isActive ? p(m(x)) : p(!1);
             }
-        }, [p.enabled, x, b, N, E]),
-        n
+        }, [g.enabled, y, x, j, v]),
+        r
     );
 }
