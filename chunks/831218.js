@@ -23,8 +23,8 @@ var r,
     x = n(355298),
     P = n(869404),
     S = n(333984),
-    I = n(210887),
-    N = n(592125),
+    N = n(210887),
+    I = n(592125),
     Z = n(158776),
     w = n(55589),
     E = n(515753),
@@ -60,7 +60,7 @@ function L(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function M(e, t) {
         e
     );
 }
-let k = l.memo(function () {
+let M = l.memo(function () {
     return (0, i.jsxs)('svg', {
         width: '184',
         height: '428',
@@ -357,7 +357,7 @@ class G extends (r = l.Component) {
                 (this.hasReportedAnalytics = !0),
                     g.ZP.trackWithMetadata(
                         T.rMx.DM_LIST_VIEWED,
-                        M(L({}, u, (0, m.X)()), {
+                        k(L({}, u, (0, m.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c
                         })
@@ -375,6 +375,7 @@ class G extends (r = l.Component) {
                         let e = this._list.getScrollerNode();
                         null != e && h.Z.updateChannelListScroll(T.ME, e.scrollTop);
                     }
+                    void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
                 }, 100)
             ),
             R(this, 'renderDM', (e, t) => {
@@ -407,7 +408,7 @@ class G extends (r = l.Component) {
             R(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: r } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === r.length ? (0, i.jsx)(k, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === r.length ? (0, i.jsx)(M, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
             R(this, 'renderSection', (e) => {
                 let { section: t } = e,
@@ -458,13 +459,14 @@ class G extends (r = l.Component) {
 }
 R(G, 'defaultProps', { padding: 8 });
 let B = (e) => {
-    let t = (0, _.Q3)('ConnectedPrivateChannelsList'),
-        { density: n } = (0, p.TCT)(),
-        { version: r, theme: o, children: a, showDMHeader: d } = e,
-        h = l.Children.count(a),
-        g = N.Z.getMutablePrivateChannels(),
-        m = (0, P.k1)(g),
-        b = (0, u.Wu)(
+    var t;
+    let n = (0, _.Q3)('ConnectedPrivateChannelsList'),
+        { density: r } = (0, p.TCT)(),
+        { version: o, theme: a, children: d, showDMHeader: h } = e,
+        g = l.Children.count(d),
+        m = I.Z.getMutablePrivateChannels(),
+        b = (0, P.k1)(m),
+        v = (0, u.Wu)(
             [w.Z, x.Z, S.Z],
             () => {
                 let e = w.Z.getPrivateChannelIds();
@@ -473,40 +475,44 @@ let B = (e) => {
             []
         );
     (0, j.z)(O.R);
-    let v = (0, u.cj)([f.Z, I.Z, N.Z], () => ({
-            theme: I.Z.darkSidebar ? T.BRd.DARK : o,
+    let C = (0, u.cj)([f.Z, N.Z, I.Z], () => ({
+            theme: N.Z.darkSidebar ? T.BRd.DARK : a,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
-            version: null != r ? ''.concat(r, ':').concat(N.Z.getPrivateChannelsVersion()) : N.Z.getPrivateChannelsVersion()
+            version: null != o ? ''.concat(o, ':').concat(I.Z.getPrivateChannelsVersion()) : I.Z.getPrivateChannelsVersion()
         })),
-        C = l.useRef(null),
-        Z = l.useCallback((e) => {
-            let t = C.current,
-                n = document.querySelector(e);
-            null != t &&
-                null != n &&
-                t.scrollIntoViewNode({
-                    node: n,
-                    callback: () => {
-                        requestAnimationFrame(() => {
-                            var t;
-                            return null === (t = document.querySelector(e)) || void 0 === t ? void 0 : t.focus({ preventScroll: !0 });
-                        });
-                    }
-                });
-        }, []),
-        E = l.useCallback(
+        Z = l.useRef(null),
+        E = null !== (t = e.listScrollerRef) && void 0 !== t ? t : Z,
+        A = l.useCallback(
+            (e) => {
+                let t = E.current,
+                    n = document.querySelector(e);
+                null != t &&
+                    null != n &&
+                    t.scrollIntoViewNode({
+                        node: n,
+                        callback: () => {
+                            requestAnimationFrame(() => {
+                                var t;
+                                return null === (t = document.querySelector(e)) || void 0 === t ? void 0 : t.focus({ preventScroll: !0 });
+                            });
+                        }
+                    });
+            },
+            [E]
+        ),
+        D = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = C.current;
+                    let t = E.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            []
+            [E]
         ),
-        A = l.useCallback(
+        R = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = C.current;
+                    let t = E.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -514,38 +520,38 @@ let B = (e) => {
                         }
                     });
                 }),
-            []
+            [E]
         ),
-        D = (0, y.Dt)(),
-        R = (0, c.ZP)({
-            id: 'private-channels-'.concat(D),
-            isEnabled: v.keyboardModeEnabled,
-            scrollToStart: E,
-            scrollToEnd: A,
-            defaultFocused: (h + +!!d).toString(),
-            setFocus: Z
+        M = (0, y.Dt)(),
+        B = (0, c.ZP)({
+            id: 'private-channels-'.concat(M),
+            isEnabled: C.keyboardModeEnabled,
+            scrollToStart: D,
+            scrollToEnd: R,
+            defaultFocused: (g + +!!h).toString(),
+            setFocus: A
         });
     return (0, i.jsx)(s.bG, {
-        navigator: R,
+        navigator: B,
         children: (0, i.jsx)(
             G,
             L(
-                M(
+                k(
                     L(
                         {
-                            density: n,
-                            isVisualRefreshEnabled: t,
-                            channels: m,
-                            privateChannelIds: b,
-                            listRef: C,
-                            theme: o,
-                            version: r
+                            density: r,
+                            isVisualRefreshEnabled: n,
+                            channels: b,
+                            privateChannelIds: v,
+                            listRef: E,
+                            theme: a,
+                            version: o
                         },
                         e
                     ),
-                    { children: a }
+                    { children: d }
                 ),
-                v
+                C
             )
         )
     });
