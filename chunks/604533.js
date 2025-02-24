@@ -1,16 +1,15 @@
-n.d(t, { Z: () => d });
-var r = n(176338),
-    i = n(754401),
-    o = n(370873),
-    a = '[object Object]',
-    s = Object.prototype,
+r.d(t, { Z: () => c });
+var n = r(176338),
+    o = r(754401),
+    a = r(370873),
+    i = Object.prototype,
     l = Function.prototype.toString,
-    c = s.hasOwnProperty,
+    s = i.hasOwnProperty,
     u = l.call(Object);
-let d = function (e) {
-    if (!(0, o.Z)(e) || (0, r.Z)(e) != a) return !1;
-    var t = (0, i.Z)(e);
+let c = function (e) {
+    if (!(0, a.Z)(e) || '[object Object]' != (0, n.Z)(e)) return !1;
+    var t = (0, o.Z)(e);
     if (null === t) return !0;
-    var n = c.call(t, 'constructor') && t.constructor;
-    return 'function' == typeof n && n instanceof n && l.call(n) == u;
+    var r = s.call(t, 'constructor') && t.constructor;
+    return 'function' == typeof r && r instanceof r && l.call(r) == u;
 };

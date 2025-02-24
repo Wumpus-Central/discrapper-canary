@@ -1,32 +1,9 @@
-n.d(t, { Z: () => P });
-var r = n(176338),
-    i = n(725180),
-    o = n(370873),
-    a = '[object Arguments]',
-    s = '[object Array]',
-    l = '[object Boolean]',
-    c = '[object Date]',
-    u = '[object Error]',
-    d = '[object Function]',
-    f = '[object Map]',
-    p = '[object Number]',
-    _ = '[object Object]',
-    h = '[object RegExp]',
-    m = '[object Set]',
-    g = '[object String]',
-    E = '[object WeakMap]',
-    v = '[object ArrayBuffer]',
-    b = '[object DataView]',
-    y = '[object Float64Array]',
-    O = '[object Int8Array]',
-    S = '[object Int16Array]',
-    I = '[object Int32Array]',
-    T = '[object Uint8Array]',
-    N = '[object Uint8ClampedArray]',
-    A = '[object Uint16Array]',
-    C = '[object Uint32Array]',
-    R = {};
-(R['[object Float32Array]'] = R[y] = R[O] = R[S] = R[I] = R[T] = R[N] = R[A] = R[C] = !0), (R[a] = R[s] = R[v] = R[l] = R[b] = R[c] = R[u] = R[d] = R[f] = R[p] = R[_] = R[h] = R[m] = R[g] = R[E] = !1);
-let P = function (e) {
-    return (0, o.Z)(e) && (0, i.Z)(e.length) && !!R[(0, r.Z)(e)];
+r.d(t, { Z: () => l });
+var n = r(176338),
+    o = r(725180),
+    a = r(370873),
+    i = {};
+(i['[object Float32Array]'] = i['[object Float64Array]'] = i['[object Int8Array]'] = i['[object Int16Array]'] = i['[object Int32Array]'] = i['[object Uint8Array]'] = i['[object Uint8ClampedArray]'] = i['[object Uint16Array]'] = i['[object Uint32Array]'] = !0), (i['[object Arguments]'] = i['[object Array]'] = i['[object ArrayBuffer]'] = i['[object Boolean]'] = i['[object DataView]'] = i['[object Date]'] = i['[object Error]'] = i['[object Function]'] = i['[object Map]'] = i['[object Number]'] = i['[object Object]'] = i['[object RegExp]'] = i['[object Set]'] = i['[object String]'] = i['[object WeakMap]'] = !1);
+let l = function (e) {
+    return (0, a.Z)(e) && (0, o.Z)(e.length) && !!i[(0, n.Z)(e)];
 };

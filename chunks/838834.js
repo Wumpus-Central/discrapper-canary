@@ -1,18 +1,17 @@
-n.d(t, { Z: () => c });
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(829307),
-    l = function (e) {
+r.d(t, { Z: () => u });
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(829307),
+    s = function (e) {
         var t = e.zDepth,
-            n = e.radius,
-            i = e.background,
-            o = e.children,
-            l = e.styles,
-            c = void 0 === l ? {} : l,
-            u = (0, a.default)(
-                (0, s.Z)(
+            r = e.radius,
+            o = e.background,
+            a = e.children,
+            s = e.styles,
+            u = (0, i.default)(
+                (0, l.Z)(
                     {
                         default: {
                             wrap: {
@@ -23,8 +22,8 @@ var r = n(192379),
                             bg: {
                                 absolute: '0px 0px 0px 0px',
                                 boxShadow: '0 ' + t + 'px ' + 4 * t + 'px rgba(0,0,0,.24)',
-                                borderRadius: n,
-                                background: i
+                                borderRadius: r,
+                                background: o
                             }
                         },
                         'zDepth-0': { bg: { boxShadow: 'none' } },
@@ -36,22 +35,22 @@ var r = n(192379),
                         square: { bg: { borderRadius: '0' } },
                         circle: { bg: { borderRadius: '50%' } }
                     },
-                    c
+                    void 0 === s ? {} : s
                 ),
                 { 'zDepth-1': 1 === t }
             );
-        return r.createElement('div', { style: u.wrap }, r.createElement('div', { style: u.bg }), r.createElement('div', { style: u.content }, o));
+        return n.createElement('div', { style: u.wrap }, n.createElement('div', { style: u.bg }), n.createElement('div', { style: u.content }, a));
     };
-(l.propTypes = {
-    background: o().string,
-    zDepth: o().oneOf([0, 1, 2, 3, 4, 5]),
-    radius: o().number,
-    styles: o().object
+(s.propTypes = {
+    background: a().string,
+    zDepth: a().oneOf([0, 1, 2, 3, 4, 5]),
+    radius: a().number,
+    styles: a().object
 }),
-    (l.defaultProps = {
+    (s.defaultProps = {
         background: '#fff',
         zDepth: 1,
         radius: 2,
         styles: {}
     });
-let c = l;
+let u = s;

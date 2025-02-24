@@ -1,2 +1,2 @@
-n.d(t, { Z: () => r });
-let r = n(195168).Z.Symbol;
+r.d(t, { Z: () => n });
+let n = r(195168).Z.Symbol;

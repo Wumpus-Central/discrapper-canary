@@ -1,28 +1,26 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(329022),
-    l = n(829307),
-    c = n(820611),
-    u = n(877837),
-    d = function (e) {
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(329022),
+    s = r(829307),
+    u = r(820611),
+    c = r(877837),
+    p = function (e) {
         var t = e.onChange,
-            n = e.onSwatchHover,
-            i = e.hex,
-            o = e.colors,
-            d = e.width,
+            r = e.onSwatchHover,
+            o = e.hex,
+            a = e.colors,
+            p = e.width,
             f = e.triangle,
-            p = e.styles,
-            _ = void 0 === p ? {} : p,
+            d = e.styles,
             h = e.className,
-            m = void 0 === h ? '' : h,
-            g = (0, a.default)(
-                (0, l.Z)(
+            b = (0, i.default)(
+                (0, s.Z)(
                     {
                         default: {
                             card: {
-                                width: d,
+                                width: p,
                                 background: '#fff',
                                 border: '0 solid rgba(0,0,0,0.25)',
                                 boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
@@ -108,7 +106,7 @@ var r = n(192379),
                             }
                         }
                     },
-                    _
+                    void 0 === d ? {} : d
                 ),
                 {
                     'hide-triangle': 'hide' === f,
@@ -116,59 +114,59 @@ var r = n(192379),
                     'top-right-triangle': 'top-right' === f
                 }
             ),
-            E = function (e, n) {
-                c.FX(e) &&
+            v = function (e, r) {
+                u.FX(e) &&
                     t(
                         {
                             hex: e,
                             source: 'hex'
                         },
-                        n
+                        r
                     );
             };
-        return r.createElement(
+        return n.createElement(
             'div',
             {
-                style: g.card,
-                className: 'twitter-picker ' + m
+                style: b.card,
+                className: 'twitter-picker ' + (void 0 === h ? '' : h)
             },
-            r.createElement('div', { style: g.triangleShadow }),
-            r.createElement('div', { style: g.triangle }),
-            r.createElement(
+            n.createElement('div', { style: b.triangleShadow }),
+            n.createElement('div', { style: b.triangle }),
+            n.createElement(
                 'div',
-                { style: g.body },
-                (0, s.Z)(o, function (e, t) {
-                    return r.createElement(u.m4, {
+                { style: b.body },
+                (0, l.Z)(a, function (e, t) {
+                    return n.createElement(c.m4, {
                         key: t,
                         color: e,
                         hex: e,
-                        style: g.swatch,
-                        onClick: E,
-                        onHover: n,
+                        style: b.swatch,
+                        onClick: v,
+                        onHover: r,
                         focusStyle: { boxShadow: '0 0 4px ' + e }
                     });
                 }),
-                r.createElement('div', { style: g.hash }, '#'),
-                r.createElement(u.Vm, {
+                n.createElement('div', { style: b.hash }, '#'),
+                n.createElement(c.Vm, {
                     label: null,
-                    style: { input: g.input },
-                    value: i.replace('#', ''),
-                    onChange: E
+                    style: { input: b.input },
+                    value: o.replace('#', ''),
+                    onChange: v
                 }),
-                r.createElement('div', { style: g.clear })
+                n.createElement('div', { style: b.clear })
             )
         );
     };
-(d.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    triangle: o().oneOf(['hide', 'top-left', 'top-right']),
-    colors: o().arrayOf(o().string),
-    styles: o().object
+(p.propTypes = {
+    width: a().oneOfType([a().string, a().number]),
+    triangle: a().oneOf(['hide', 'top-left', 'top-right']),
+    colors: a().arrayOf(a().string),
+    styles: a().object
 }),
-    (d.defaultProps = {
+    (p.defaultProps = {
         width: 276,
         colors: ['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3', '#ABB8C3', '#EB144C', '#F78DA7', '#9900EF'],
         triangle: 'top-left',
         styles: {}
     }),
-    (0, u.t1)(d);
+    (0, c.t1)(p);

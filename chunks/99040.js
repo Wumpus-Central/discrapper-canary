@@ -1,25 +1,24 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(329022),
-    l = n(829307),
-    c = n(820611),
-    u = n(877837),
-    d = n(279796),
-    f = n(3024),
-    p = function (e) {
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(329022),
+    s = r(829307),
+    u = r(820611),
+    c = r(877837),
+    p = r(279796),
+    f = r(3024),
+    d = function (e) {
         var t = e.onChange,
-            n = e.onSwatchHover,
-            i = e.colors,
-            o = e.hex,
-            p = e.rgb,
-            _ = e.styles,
-            h = void 0 === _ ? {} : _,
-            m = e.className,
-            g = void 0 === m ? '' : m,
-            E = (0, a.default)(
-                (0, l.Z)(
+            r = e.onSwatchHover,
+            o = e.colors,
+            a = e.hex,
+            d = e.rgb,
+            h = e.styles,
+            b = void 0 === h ? {} : h,
+            v = e.className,
+            g = (0, i.default)(
+                (0, s.Z)(
                     {
                         default: {
                             Compact: {
@@ -35,61 +34,61 @@ var r = n(192379),
                             clear: { clear: 'both' }
                         }
                     },
-                    h
+                    b
                 )
             ),
-            v = function (e, n) {
+            x = function (e, r) {
                 e.hex
-                    ? c.FX(e.hex) &&
+                    ? u.FX(e.hex) &&
                       t(
                           {
                               hex: e.hex,
                               source: 'hex'
                           },
-                          n
+                          r
                       )
-                    : t(e, n);
+                    : t(e, r);
             };
-        return r.createElement(
-            u.xZ,
+        return n.createElement(
+            c.xZ,
             {
-                style: E.Compact,
-                styles: h
+                style: g.Compact,
+                styles: b
             },
-            r.createElement(
+            n.createElement(
                 'div',
                 {
-                    style: E.compact,
-                    className: 'compact-picker ' + g
+                    style: g.compact,
+                    className: 'compact-picker ' + (void 0 === v ? '' : v)
                 },
-                r.createElement(
+                n.createElement(
                     'div',
                     null,
-                    (0, s.Z)(i, function (e) {
-                        return r.createElement(d.Z, {
+                    (0, l.Z)(o, function (e) {
+                        return n.createElement(p.Z, {
                             key: e,
                             color: e,
-                            active: e.toLowerCase() === o,
-                            onClick: v,
-                            onSwatchHover: n
+                            active: e.toLowerCase() === a,
+                            onClick: x,
+                            onSwatchHover: r
                         });
                     }),
-                    r.createElement('div', { style: E.clear })
+                    n.createElement('div', { style: g.clear })
                 ),
-                r.createElement(f.Z, {
-                    hex: o,
-                    rgb: p,
-                    onChange: v
+                n.createElement(f.Z, {
+                    hex: a,
+                    rgb: d,
+                    onChange: x
                 })
             )
         );
     };
-(p.propTypes = {
-    colors: o().arrayOf(o().string),
-    styles: o().object
+(d.propTypes = {
+    colors: a().arrayOf(a().string),
+    styles: a().object
 }),
-    (p.defaultProps = {
+    (d.defaultProps = {
         colors: ['#4D4D4D', '#999999', '#FFFFFF', '#F44E3B', '#FE9200', '#FCDC00', '#DBDF00', '#A4DD00', '#68CCCA', '#73D8FF', '#AEA1FF', '#FDA1FF', '#333333', '#808080', '#cccccc', '#D33115', '#E27300', '#FCC400', '#B0BC00', '#68BC00', '#16A5A5', '#009CE0', '#7B64FF', '#FA28FF', '#000000', '#666666', '#B3B3B3', '#9F0500', '#C45100', '#FB9E00', '#808900', '#194D33', '#0C797D', '#0062B1', '#653294', '#AB149E'],
         styles: {}
     }),
-    (0, u.t1)(p);
+    (0, c.t1)(d);

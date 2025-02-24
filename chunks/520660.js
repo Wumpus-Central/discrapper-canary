@@ -1,83 +1,73 @@
 var r = n(96403),
-    i = 2147483647,
-    o = 36,
-    a = 1,
-    s = 26,
-    l = 38,
-    c = 700,
-    u = 72,
-    d = 128,
-    f = '-',
-    p = /[^\0-\u007E]/,
-    _ = /[.\u3002\uFF0E\uFF61]/g,
-    h = 'Overflow: input needs wider integers to process',
-    m = 35,
-    g = RangeError,
-    E = r(_.exec),
-    v = Math.floor,
-    b = String.fromCharCode,
-    y = r(''.charCodeAt),
-    O = r([].join),
-    S = r([].push),
-    I = r(''.replace),
-    T = r(''.split),
-    N = r(''.toLowerCase),
-    A = function (e) {
+    o = /[^\0-\u007E]/,
+    a = /[.\u3002\uFF0E\uFF61]/g,
+    i = 'Overflow: input needs wider integers to process',
+    s = RangeError,
+    c = r(a.exec),
+    l = Math.floor,
+    u = String.fromCharCode,
+    d = r(''.charCodeAt),
+    p = r([].join),
+    h = r([].push),
+    f = r(''.replace),
+    m = r(''.split),
+    y = r(''.toLowerCase),
+    v = function (e) {
         for (var t = [], n = 0, r = e.length; n < r; ) {
-            var i = y(e, n++);
-            if (i >= 55296 && i <= 56319 && n < r) {
-                var o = y(e, n++);
-                (64512 & o) == 56320 ? S(t, ((1023 & i) << 10) + (1023 & o) + 65536) : (S(t, i), n--);
-            } else S(t, i);
+            var o = d(e, n++);
+            if (o >= 55296 && o <= 56319 && n < r) {
+                var a = d(e, n++);
+                (64512 & a) == 56320 ? h(t, ((1023 & o) << 10) + (1023 & a) + 65536) : (h(t, o), n--);
+            } else h(t, o);
         }
         return t;
     },
-    C = function (e) {
+    g = function (e) {
         return e + 22 + 75 * (e < 26);
     },
-    R = function (e, t, n) {
+    b = function (e, t, n) {
         var r = 0;
-        for (e = n ? v(e / c) : e >> 1, e += v(e / t); e > (m * s) >> 1; ) (e = v(e / m)), (r += o);
-        return v(r + ((m + 1) * e) / (e + l));
+        for (e = n ? l(e / 700) : e >> 1, e += l(e / t); e > 455; ) (e = l(e / 35)), (r += 36);
+        return l(r + (36 * e) / (e + 38));
     },
-    P = function (e) {
+    _ = function (e) {
         var t,
             n,
             r = [],
-            l = (e = A(e)).length,
-            c = d,
-            p = 0,
-            _ = u;
-        for (t = 0; t < e.length; t++) (n = e[t]) < 128 && S(r, b(n));
-        var m = r.length,
-            E = m;
-        for (m && S(r, f); E < l; ) {
-            var y = i;
-            for (t = 0; t < e.length; t++) (n = e[t]) >= c && n < y && (y = n);
-            var I = E + 1;
-            if (y - c > v((i - p) / I)) throw new g(h);
-            for (p += (y - c) * I, c = y, t = 0; t < e.length; t++) {
-                if ((n = e[t]) < c && ++p > i) throw new g(h);
-                if (n === c) {
-                    for (var T = p, N = o; ; ) {
-                        var P = N <= _ ? a : N >= _ + s ? s : N - _;
-                        if (T < P) break;
-                        var w = T - P,
-                            D = o - P;
-                        S(r, b(C(P + (w % D)))), (T = v(w / D)), (N += o);
+            o = (e = v(e)).length,
+            a = 128,
+            c = 0,
+            d = 72;
+        for (t = 0; t < e.length; t++) (n = e[t]) < 128 && h(r, u(n));
+        var f = r.length,
+            m = f;
+        for (f && h(r, '-'); m < o; ) {
+            var y = 2147483647;
+            for (t = 0; t < e.length; t++) (n = e[t]) >= a && n < y && (y = n);
+            var _ = m + 1;
+            if (y - a > l((2147483647 - c) / _)) throw new s(i);
+            for (c += (y - a) * _, a = y, t = 0; t < e.length; t++) {
+                if ((n = e[t]) < a && ++c > 2147483647) throw new s(i);
+                if (n === a) {
+                    for (var k = c, C = 36; ; ) {
+                        var Z = C <= d ? 1 : C >= d + 26 ? 26 : C - d;
+                        if (k < Z) break;
+                        var w = k - Z,
+                            S = 36 - Z;
+                        h(r, u(g(Z + (w % S)))), (k = l(w / S)), (C += 36);
                     }
-                    S(r, b(C(T))), (_ = R(p, I, E === m)), (p = 0), E++;
+                    h(r, u(g(k))), (d = b(c, _, m === f)), (c = 0), m++;
                 }
             }
-            p++, c++;
+            c++, a++;
         }
-        return O(r, '');
+        return p(r, '');
     };
 e.exports = function (e) {
     var t,
         n,
         r = [],
-        i = T(I(N(e), _, '.'), '.');
-    for (t = 0; t < i.length; t++) S(r, E(p, (n = i[t])) ? 'xn--' + P(n) : n);
-    return O(r, '.');
+        i = m(f(y(e), a, '.'), '.');
+    for (t = 0; t < i.length; t++) h(r, c(o, (n = i[t])) ? 'xn--' + _(n) : n);
+    return p(r, '.');
 };

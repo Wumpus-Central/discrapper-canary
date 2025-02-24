@@ -1,43 +1,40 @@
-var r,
-    i = n(28886),
-    o = n(930134),
-    a = n(459535),
+var e,
+    o = n(28886),
+    i = n(930134),
+    u = n(459535),
     s = n(511364),
-    l = n(439230),
-    c = n(535538),
-    u = n(964653),
-    d = '>',
-    f = '<',
+    c = n(439230),
+    f = n(535538),
+    a = n(964653),
     p = 'prototype',
-    _ = 'script',
-    h = u('IE_PROTO'),
-    m = function () {},
-    g = function (e) {
-        return f + _ + d + e + f + '/' + _ + d;
+    v = 'script',
+    l = a('IE_PROTO'),
+    y = function () {},
+    h = function (t) {
+        return '<' + v + '>' + t + '</' + v + '>';
     },
-    E = function (e) {
-        e.write(g('')), e.close();
-        var t = e.parentWindow.Object;
-        return (e = null), t;
+    x = function (t) {
+        t.write(h('')), t.close();
+        var r = t.parentWindow.Object;
+        return (t = null), r;
     },
-    v = function () {
-        var e,
-            t = c('iframe'),
-            n = 'java' + _ + ':';
-        return (t.style.display = 'none'), l.appendChild(t), (t.src = String(n)), (e = t.contentWindow.document).open(), e.write(g('document.F=Object')), e.close(), e.F;
+    d = function () {
+        var t,
+            r = f('iframe');
+        return (r.style.display = 'none'), c.appendChild(r), (r.src = String('java' + v + ':')), (t = r.contentWindow.document).open(), t.write(h('document.F=Object')), t.close(), t.F;
     },
-    b = function () {
+    g = function () {
         try {
-            r = new ActiveXObject('htmlfile');
-        } catch (e) {}
-        b = 'undefined' != typeof document ? (document.domain && r ? E(r) : v()) : E(r);
-        for (var e = a.length; e--; ) delete b[p][a[e]];
-        return b();
+            e = new ActiveXObject('htmlfile');
+        } catch (t) {}
+        g = 'undefined' != typeof document ? (document.domain && e ? x(e) : d()) : x(e);
+        for (var t = u.length; t--; ) delete g[p][u[t]];
+        return g();
     };
-(s[h] = !0),
-    (e.exports =
+(s[l] = !0),
+    (t.exports =
         Object.create ||
-        function (e, t) {
+        function (t, r) {
             var n;
-            return null !== e ? ((m[p] = i(e)), (n = new m()), (m[p] = null), (n[h] = e)) : (n = b()), void 0 === t ? n : o.f(n, t);
+            return null !== t ? ((y[p] = o(t)), (n = new y()), (y[p] = null), (n[l] = t)) : (n = g()), void 0 === r ? n : i.f(n, r);
         });

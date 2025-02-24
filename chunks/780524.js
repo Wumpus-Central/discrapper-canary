@@ -1,2 +1,2 @@
-var r = n(96403);
-e.exports = r([].slice);
+var e = n(96403);
+t.exports = e([].slice);

@@ -1,42 +1,40 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(329022),
-    l = n(829307),
-    c = n(705513),
-    u = n(877837),
-    d = n(272991),
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(329022),
+    s = r(829307),
+    u = r(705513),
+    c = r(877837),
+    p = r(272991),
     f = function (e) {
         var t = e.width,
-            n = e.onChange,
-            i = e.onSwatchHover,
-            o = e.colors,
-            c = e.hex,
-            u = e.circleSize,
+            r = e.onChange,
+            o = e.onSwatchHover,
+            a = e.colors,
+            u = e.hex,
+            c = e.circleSize,
             f = e.styles,
-            p = void 0 === f ? {} : f,
-            _ = e.circleSpacing,
+            d = e.circleSpacing,
             h = e.className,
-            m = void 0 === h ? '' : h,
-            g = (0, a.default)(
-                (0, l.Z)(
+            b = (0, i.default)(
+                (0, s.Z)(
                     {
                         default: {
                             card: {
                                 width: t,
                                 display: 'flex',
                                 flexWrap: 'wrap',
-                                marginRight: -_,
-                                marginBottom: -_
+                                marginRight: -d,
+                                marginBottom: -d
                             }
                         }
                     },
-                    p
+                    void 0 === f ? {} : f
                 )
             ),
-            E = function (e, t) {
-                return n(
+            v = function (e, t) {
+                return r(
                     {
                         hex: e,
                         source: 'hex'
@@ -44,36 +42,36 @@ var r = n(192379),
                     t
                 );
             };
-        return r.createElement(
+        return n.createElement(
             'div',
             {
-                style: g.card,
-                className: 'circle-picker ' + m
+                style: b.card,
+                className: 'circle-picker ' + (void 0 === h ? '' : h)
             },
-            (0, s.Z)(o, function (e) {
-                return r.createElement(d.Z, {
+            (0, l.Z)(a, function (e) {
+                return n.createElement(p.Z, {
                     key: e,
                     color: e,
-                    onClick: E,
-                    onSwatchHover: i,
-                    active: c === e.toLowerCase(),
-                    circleSize: u,
-                    circleSpacing: _
+                    onClick: v,
+                    onSwatchHover: o,
+                    active: u === e.toLowerCase(),
+                    circleSize: c,
+                    circleSpacing: d
                 });
             })
         );
     };
 (f.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    circleSize: o().number,
-    circleSpacing: o().number,
-    styles: o().object
+    width: a().oneOfType([a().string, a().number]),
+    circleSize: a().number,
+    circleSpacing: a().number,
+    styles: a().object
 }),
     (f.defaultProps = {
         width: 252,
         circleSize: 28,
         circleSpacing: 14,
-        colors: [c.Q6['500'], c.iQ['500'], c.jk['500'], c.vq['500'], c.QN['500'], c.iN['500'], c.f7['500'], c.sl['500'], c.$C['500'], c.ek['500'], c.ZE['500'], c.LR['500'], c.er['500'], c.Dz['500'], c.$y['500'], c.bK['500'], c.P_['500'], c.BU['500']],
+        colors: [u.Q6['500'], u.iQ['500'], u.jk['500'], u.vq['500'], u.QN['500'], u.iN['500'], u.f7['500'], u.sl['500'], u.$C['500'], u.ek['500'], u.ZE['500'], u.LR['500'], u.er['500'], u.Dz['500'], u.$y['500'], u.bK['500'], u.P_['500'], u.BU['500']],
         styles: {}
     }),
-    (0, u.t1)(f);
+    (0, c.t1)(f);

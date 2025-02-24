@@ -1,27 +1,18 @@
-var r = n(67867),
-    i = n(414629),
-    o = n(732116).CONSTRUCTOR,
-    a = n(197859),
-    s = n(294377),
-    l = n(735471),
-    c = n(691244),
-    u = a && a.prototype;
-if (
-    (r(
+n.d(t, { s8: () => i });
+let r = (0, n(818083).B)({
+    kind: 'user',
+    id: '2025-02_tigger_pawtect',
+    label: 'Tigger pawtect',
+    defaultConfig: { enabled: !1 },
+    treatments: [
         {
-            target: 'Promise',
-            proto: !0,
-            forced: o,
-            real: !0
-        },
-        {
-            catch: function (e) {
-                return this.then(void 0, e);
-            }
+            id: 1,
+            label: 'Tigger pawtect',
+            config: { enabled: !0 }
         }
-    ),
-    !i && l(a))
-) {
-    var d = s('Promise').prototype.catch;
-    u.catch !== d && c(u, 'catch', d, { unsafe: !0 });
+    ]
+});
+function i(e) {
+    let { location: t } = e;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

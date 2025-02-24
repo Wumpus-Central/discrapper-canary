@@ -1,72 +1,70 @@
-n.d(t, { Z: () => f });
-var r = n(192379),
-    i = n(723184),
-    o = n(88758),
-    a = n(716708),
-    s =
+r.d(t, { Z: () => c });
+var n = r(192379),
+    o = r(723184),
+    a = r(88758),
+    i = r(716708),
+    l =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    l = (function () {
+    s = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-function c(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
 function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function d(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-let f = (function (e) {
+let c = (function (e) {
     function t() {
-        c(this, t);
-        for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+        !(function (e, t) {
+            if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+        })(this, t);
+        for (var e, r, n, o = arguments.length, i = Array(o), l = 0; l < o; l++) i[l] = arguments[l];
         return (
-            (n = r = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
-            (r.handleChange = function (e) {
-                var t = o.T(e, r.props.hsl, r.props.direction, r.props.a, r.container);
-                t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
+            (r = n = u(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(i)))),
+            (n.handleChange = function (e) {
+                var t = a.T(e, n.props.hsl, n.props.direction, n.props.a, n.container);
+                t && 'function' == typeof n.props.onChange && n.props.onChange(t, e);
             }),
-            (r.handleMouseDown = function (e) {
-                r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
+            (n.handleMouseDown = function (e) {
+                n.handleChange(e), window.addEventListener('mousemove', n.handleChange), window.addEventListener('mouseup', n.handleMouseUp);
             }),
-            (r.handleMouseUp = function () {
-                r.unbindEventListeners();
+            (n.handleMouseUp = function () {
+                n.unbindEventListeners();
             }),
-            (r.unbindEventListeners = function () {
-                window.removeEventListener('mousemove', r.handleChange), window.removeEventListener('mouseup', r.handleMouseUp);
+            (n.unbindEventListeners = function () {
+                window.removeEventListener('mousemove', n.handleChange), window.removeEventListener('mouseup', n.handleMouseUp);
             }),
-            u(r, n)
+            u(n, r)
         );
     }
     return (
-        d(t, e),
-        l(t, [
+        !(function (e, t) {
+            if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+            (e.prototype = Object.create(t && t.prototype, {
+                constructor: {
+                    value: e,
+                    enumerable: !1,
+                    writable: !0,
+                    configurable: !0
+                }
+            })),
+                t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+        })(t, e),
+        s(t, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -78,7 +76,7 @@ let f = (function (e) {
                 value: function () {
                     var e = this,
                         t = this.props.rgb,
-                        n = (0, i.default)(
+                        r = (0, o.default)(
                             {
                                 default: {
                                     alpha: {
@@ -122,22 +120,22 @@ let f = (function (e) {
                                         top: 100 * t.a + '%'
                                     }
                                 },
-                                overwrite: s({}, this.props.style)
+                                overwrite: l({}, this.props.style)
                             },
                             {
                                 vertical: 'vertical' === this.props.direction,
                                 overwrite: !0
                             }
                         );
-                    return r.createElement(
+                    return n.createElement(
                         'div',
-                        { style: n.alpha },
-                        r.createElement('div', { style: n.checkboard }, r.createElement(a.Z, { renderers: this.props.renderers })),
-                        r.createElement('div', { style: n.gradient }),
-                        r.createElement(
+                        { style: r.alpha },
+                        n.createElement('div', { style: r.checkboard }, n.createElement(i.Z, { renderers: this.props.renderers })),
+                        n.createElement('div', { style: r.gradient }),
+                        n.createElement(
                             'div',
                             {
-                                style: n.container,
+                                style: r.container,
                                 ref: function (t) {
                                     return (e.container = t);
                                 },
@@ -145,7 +143,7 @@ let f = (function (e) {
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            r.createElement('div', { style: n.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: n.slider }))
+                            n.createElement('div', { style: r.pointer }, this.props.pointer ? n.createElement(this.props.pointer, this.props) : n.createElement('div', { style: r.slider }))
                         )
                     );
                 }
@@ -153,4 +151,4 @@ let f = (function (e) {
         ]),
         t
     );
-})(r.PureComponent || r.Component);
+})(n.PureComponent || n.Component);

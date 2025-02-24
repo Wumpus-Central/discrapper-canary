@@ -1,65 +1,64 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.hover = void 0);
-var r =
+var n,
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    i = o(n(192379));
-function o(e) {
-    return e && e.__esModule ? e : { default: e };
-}
-function a(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function s(e, t) {
+    a = (n = r(192379)) && n.__esModule ? n : { default: n };
+function i(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function l(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var c = (t.hover = function (e) {
+var l = (t.hover = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
-    return (function (n) {
-        function o() {
-            a(this, o);
-            for (var n, l, c, u = arguments.length, d = Array(u), f = 0; f < u; f++) d[f] = arguments[f];
+    return (function (r) {
+        function n() {
+            !(function (e, t) {
+                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+            })(this, n);
+            for (var r, l, s, u = arguments.length, c = Array(u), p = 0; p < u; p++) c[p] = arguments[p];
             return (
-                (l = c = s(this, (n = o.__proto__ || Object.getPrototypeOf(o)).call.apply(n, [this].concat(d)))),
-                (c.state = { hover: !1 }),
-                (c.handleMouseOver = function () {
-                    return c.setState({ hover: !0 });
+                (l = s = i(this, (r = n.__proto__ || Object.getPrototypeOf(n)).call.apply(r, [this].concat(c)))),
+                (s.state = { hover: !1 }),
+                (s.handleMouseOver = function () {
+                    return s.setState({ hover: !0 });
                 }),
-                (c.handleMouseOut = function () {
-                    return c.setState({ hover: !1 });
+                (s.handleMouseOut = function () {
+                    return s.setState({ hover: !1 });
                 }),
-                (c.render = function () {
-                    return i.default.createElement(
+                (s.render = function () {
+                    return a.default.createElement(
                         t,
                         {
-                            onMouseOver: c.handleMouseOver,
-                            onMouseOut: c.handleMouseOut
+                            onMouseOver: s.handleMouseOver,
+                            onMouseOut: s.handleMouseOut
                         },
-                        i.default.createElement(e, r({}, c.props, c.state))
+                        a.default.createElement(e, o({}, s.props, s.state))
                     );
                 }),
-                s(c, l)
+                i(s, l)
             );
         }
-        return l(o, n), o;
-    })(i.default.Component);
+        return (
+            !(function (e, t) {
+                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+                (e.prototype = Object.create(t && t.prototype, {
+                    constructor: {
+                        value: e,
+                        enumerable: !1,
+                        writable: !0,
+                        configurable: !0
+                    }
+                })),
+                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+            })(n, r),
+            n
+        );
+    })(a.default.Component);
 });
-t.default = c;
+t.default = l;

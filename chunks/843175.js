@@ -1,21 +1,19 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(829307),
-    l = n(877837),
-    c = n(871810),
-    u = n(913727),
-    d = function (e) {
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(829307),
+    s = r(877837),
+    u = r(871810),
+    c = r(913727),
+    p = function (e) {
         var t = e.hsl,
-            n = e.onChange,
-            i = e.pointer,
-            o = e.styles,
-            u = void 0 === o ? {} : o,
-            d = e.className,
-            f = void 0 === d ? '' : d,
-            p = (0, a.default)(
-                (0, s.Z)(
+            r = e.onChange,
+            o = e.pointer,
+            a = e.styles,
+            c = e.className,
+            p = (0, i.default)(
+                (0, l.Z)(
                     {
                         default: {
                             hue: {
@@ -25,38 +23,38 @@ var r = n(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    u
+                    void 0 === a ? {} : a
                 )
             );
-        return r.createElement(
+        return n.createElement(
             'div',
             {
                 style: p.wrap || {},
-                className: 'slider-picker ' + f
+                className: 'slider-picker ' + (void 0 === c ? '' : c)
             },
-            r.createElement(
+            n.createElement(
                 'div',
                 { style: p.hue },
-                r.createElement(l.PS, {
+                n.createElement(s.PS, {
                     style: p.Hue,
                     hsl: t,
-                    pointer: i,
-                    onChange: n
+                    pointer: o,
+                    onChange: r
                 })
             ),
-            r.createElement(
+            n.createElement(
                 'div',
                 { style: p.swatches },
-                r.createElement(c.Z, {
+                n.createElement(u.Z, {
                     hsl: t,
-                    onClick: n
+                    onClick: r
                 })
             )
         );
     };
-(d.propTypes = { styles: o().object }),
-    (d.defaultProps = {
-        pointer: u.Z,
+(p.propTypes = { styles: a().object }),
+    (p.defaultProps = {
+        pointer: c.Z,
         styles: {}
     }),
-    (0, l.t1)(d);
+    (0, s.t1)(p);

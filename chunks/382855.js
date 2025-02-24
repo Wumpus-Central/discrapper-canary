@@ -1,9 +1,7 @@
-n.d(t, { Z: () => o });
-var r = n(451530),
-    i = (function () {
-        var e = /[^.]+$/.exec((r.Z && r.Z.keys && r.Z.keys.IE_PROTO) || '');
-        return e ? 'Symbol(src)_1.' + e : '';
-    })();
-let o = function (e) {
-    return !!i && i in e;
+r.d(t, { Z: () => i });
+var n,
+    o = r(451530),
+    a = (n = /[^.]+$/.exec((o.Z && o.Z.keys && o.Z.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + n : '';
+let i = function (e) {
+    return !!a && a in e;
 };

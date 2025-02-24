@@ -1,80 +1,78 @@
-n.d(t, { I: () => c });
-var r = n(192379),
-    i =
+r.d(t, { I: () => l });
+var n = r(192379),
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    o = (function () {
+    a = (function () {
         function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, r, n) {
+            return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-function a(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-}
-function s(e, t) {
+function i(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function l(e, t) {
-    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
-    (e.prototype = Object.create(t && t.prototype, {
-        constructor: {
-            value: e,
-            enumerable: !1,
-            writable: !0,
-            configurable: !0
-        }
-    })),
-        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
-}
-var c = function (e) {
+var l = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
-    return (function (n) {
-        function c() {
-            a(this, c);
-            for (var e, t, n, r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+    return (function (r) {
+        function l() {
+            !(function (e, t) {
+                if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+            })(this, l);
+            for (var e, t, r, n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
             return (
-                (t = n = s(this, (e = c.__proto__ || Object.getPrototypeOf(c)).call.apply(e, [this].concat(i)))),
-                (n.state = { focus: !1 }),
-                (n.handleFocus = function () {
-                    return n.setState({ focus: !0 });
+                (t = r = i(this, (e = l.__proto__ || Object.getPrototypeOf(l)).call.apply(e, [this].concat(o)))),
+                (r.state = { focus: !1 }),
+                (r.handleFocus = function () {
+                    return r.setState({ focus: !0 });
                 }),
-                (n.handleBlur = function () {
-                    return n.setState({ focus: !1 });
+                (r.handleBlur = function () {
+                    return r.setState({ focus: !1 });
                 }),
-                s(n, t)
+                i(r, t)
             );
         }
         return (
-            l(c, n),
-            o(c, [
+            !(function (e, t) {
+                if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+                (e.prototype = Object.create(t && t.prototype, {
+                    constructor: {
+                        value: e,
+                        enumerable: !1,
+                        writable: !0,
+                        configurable: !0
+                    }
+                })),
+                    t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
+            })(l, r),
+            a(l, [
                 {
                     key: 'render',
                     value: function () {
-                        return r.createElement(
+                        return n.createElement(
                             t,
                             {
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
                             },
-                            r.createElement(e, i({}, this.props, this.state))
+                            n.createElement(e, o({}, this.props, this.state))
                         );
                     }
                 }
             ]),
-            c
+            l
         );
-    })(r.Component);
+    })(n.Component);
 };

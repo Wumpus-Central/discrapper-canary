@@ -1,7 +1,2 @@
-var r = n(875604),
-    i = n(780618),
-    o = String.prototype;
-e.exports = function (e) {
-    var t = e.trim;
-    return 'string' == typeof e || e === o || (r(o, e) && t === o.trim) ? i : t;
-};
+c.r(e), c.d(e, { default: () => d });
+let d = 'https://cdn.discordapp.com/assets/content/af0bdfab88b9bcd0d63b2ec858b89d1a78afbb1400085b7fe23014ab95df6043.jpg';

@@ -1,50 +1,40 @@
-r = { value: !0 };
-var r,
-    i =
+var n,
+    o =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    o = a(n(192379));
-function a(e) {
-    return e && e.__esModule ? e : { default: e };
-}
-function s(e, t) {
-    var n = {};
-    for (var r in e) !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-    return n;
-}
-var l = 24;
+    a = (n = r(192379)) && n.__esModule ? n : { default: n };
 t.default = function (e) {
     var t = e.fill,
-        n = void 0 === t ? 'currentColor' : t,
         r = e.width,
-        a = void 0 === r ? l : r,
-        c = e.height,
-        u = void 0 === c ? l : c,
-        d = e.style,
-        f = void 0 === d ? {} : d,
-        p = s(e, ['fill', 'width', 'height', 'style']);
-    return o.default.createElement(
+        n = e.height,
+        i = e.style,
+        l = (function (e, t) {
+            var r = {};
+            for (var n in e) !(t.indexOf(n) >= 0) && Object.prototype.hasOwnProperty.call(e, n) && (r[n] = e[n]);
+            return r;
+        })(e, ['fill', 'width', 'height', 'style']);
+    return a.default.createElement(
         'svg',
-        i(
+        o(
             {
-                viewBox: '0 0 ' + l + ' ' + l,
-                style: i(
+                viewBox: '0 0 24 24',
+                style: o(
                     {
-                        fill: n,
-                        width: a,
-                        height: u
+                        fill: void 0 === t ? 'currentColor' : t,
+                        width: void 0 === r ? 24 : r,
+                        height: void 0 === n ? 24 : n
                     },
-                    f
+                    void 0 === i ? {} : i
                 )
             },
-            p
+            l
         ),
-        o.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
+        a.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
     );
 };

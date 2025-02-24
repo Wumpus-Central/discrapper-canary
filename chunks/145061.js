@@ -1,76 +1,73 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(829307),
-    l = n(877837),
-    c = n(361016),
-    u =
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(829307),
+    s = r(877837),
+    u = r(361016),
+    c =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    d = function (e) {
+    p = function (e) {
         var t = e.width,
-            n = e.height,
-            i = e.onChange,
-            o = e.hsl,
-            c = e.direction,
-            d = e.pointer,
+            r = e.height,
+            o = e.onChange,
+            a = e.hsl,
+            u = e.direction,
+            p = e.pointer,
             f = e.styles,
-            p = void 0 === f ? {} : f,
-            _ = e.className,
-            h = void 0 === _ ? '' : _,
-            m = (0, a.default)(
-                (0, s.Z)(
+            d = e.className,
+            h = (0, i.default)(
+                (0, l.Z)(
                     {
                         default: {
                             picker: {
                                 position: 'relative',
                                 width: t,
-                                height: n
+                                height: r
                             },
                             hue: { radius: '2px' }
                         }
                     },
-                    p
+                    void 0 === f ? {} : f
                 )
-            ),
-            g = function (e) {
-                return i({
-                    a: 1,
-                    h: e.h,
-                    l: 0.5,
-                    s: 1
-                });
-            };
-        return r.createElement(
+            );
+        return n.createElement(
             'div',
             {
-                style: m.picker,
-                className: 'hue-picker ' + h
+                style: h.picker,
+                className: 'hue-picker ' + (void 0 === d ? '' : d)
             },
-            r.createElement(
-                l.PS,
-                u({}, m.hue, {
-                    hsl: o,
-                    pointer: d,
-                    onChange: g,
-                    direction: c
+            n.createElement(
+                s.PS,
+                c({}, h.hue, {
+                    hsl: a,
+                    pointer: p,
+                    onChange: function (e) {
+                        return o({
+                            a: 1,
+                            h: e.h,
+                            l: 0.5,
+                            s: 1
+                        });
+                    },
+                    direction: u
                 })
             )
         );
     };
-(d.propTypes = { styles: o().object }),
-    (d.defaultProps = {
+(p.propTypes = { styles: a().object }),
+    (p.defaultProps = {
         width: '316px',
         height: '16px',
         direction: 'horizontal',
-        pointer: c.Z,
+        pointer: u.Z,
         styles: {}
     }),
-    (0, l.t1)(d);
+    (0, s.t1)(p);

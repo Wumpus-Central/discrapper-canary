@@ -1,17 +1,16 @@
-n.d(t, { Z: () => a });
-var r = n(334389),
-    i = 'Expected a function';
+r.d(t, { Z: () => a });
+var n = r(334389);
 function o(e, t) {
-    if ('function' != typeof e || (null != t && 'function' != typeof t)) throw TypeError(i);
-    var n = function () {
-        var r = arguments,
-            i = t ? t.apply(this, r) : r[0],
-            o = n.cache;
-        if (o.has(i)) return o.get(i);
-        var a = e.apply(this, r);
-        return (n.cache = o.set(i, a) || o), a;
+    if ('function' != typeof e || (null != t && 'function' != typeof t)) throw TypeError('Expected a function');
+    var r = function () {
+        var n = arguments,
+            o = t ? t.apply(this, n) : n[0],
+            a = r.cache;
+        if (a.has(o)) return a.get(o);
+        var i = e.apply(this, n);
+        return (r.cache = a.set(o, i) || a), i;
     };
-    return (n.cache = new (o.Cache || r.Z)()), n;
+    return (r.cache = new (o.Cache || n.Z)()), r;
 }
-o.Cache = r.Z;
+o.Cache = n.Z;
 let a = o;

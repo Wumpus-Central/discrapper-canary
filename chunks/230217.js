@@ -1,18 +1,16 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.autoprefix = void 0);
-var r = o(n(320403)),
-    i =
+var n,
+    o = (n = r(320403)) && n.__esModule ? n : { default: n },
+    a =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
-        };
-function o(e) {
-    return e && e.__esModule ? e : { default: e };
-}
-var a = {
+        },
+    i = {
         borderRadius: function (e) {
             return {
                 msBorderRadius: e,
@@ -91,22 +89,22 @@ var a = {
             };
         },
         extend: function (e, t) {
-            var n = t[e];
-            return n || { extend: e };
+            var r = t[e];
+            return r || { extend: e };
         }
     },
-    s = (t.autoprefix = function (e) {
+    l = (t.autoprefix = function (e) {
         var t = {};
         return (
-            (0, r.default)(e, function (e, n) {
-                var o = {};
-                (0, r.default)(e, function (e, t) {
-                    var n = a[t];
-                    n ? (o = i({}, o, n(e))) : (o[t] = e);
+            (0, o.default)(e, function (e, r) {
+                var n = {};
+                (0, o.default)(e, function (e, t) {
+                    var r = i[t];
+                    r ? (n = a({}, n, r(e))) : (n[t] = e);
                 }),
-                    (t[n] = o);
+                    (t[r] = n);
             }),
             t
         );
     });
-t.default = s;
+t.default = l;

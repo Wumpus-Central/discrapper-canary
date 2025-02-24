@@ -1,44 +1,42 @@
-var r = n(192379),
-    i = n(476400),
-    o = n.n(i),
-    a = n(723184),
-    s = n(329022),
-    l = n(829307),
-    c = n(705513),
-    u = n(877837),
-    d = n(214811),
+var n = r(192379),
+    o = r(476400),
+    a = r.n(o),
+    i = r(723184),
+    l = r(329022),
+    s = r(829307),
+    u = r(705513),
+    c = r(877837),
+    p = r(214811),
     f = function (e) {
         var t = e.width,
-            n = e.height,
-            i = e.onChange,
-            o = e.onSwatchHover,
-            c = e.colors,
+            r = e.height,
+            o = e.onChange,
+            a = e.onSwatchHover,
+            u = e.colors,
             f = e.hex,
-            p = e.styles,
-            _ = void 0 === p ? {} : p,
+            d = e.styles,
             h = e.className,
-            m = void 0 === h ? '' : h,
-            g = (0, a.default)(
-                (0, l.Z)(
+            b = (0, i.default)(
+                (0, s.Z)(
                     {
                         default: {
                             picker: {
                                 width: t,
-                                height: n
+                                height: r
                             },
                             overflow: {
-                                height: n,
+                                height: r,
                                 overflowY: 'scroll'
                             },
                             body: { padding: '16px 0 6px 16px' },
                             clear: { clear: 'both' }
                         }
                     },
-                    _
+                    void 0 === d ? {} : d
                 )
             ),
-            E = function (e, t) {
-                return i(
+            v = function (e, t) {
+                return o(
                     {
                         hex: e,
                         source: 'hex'
@@ -46,66 +44,66 @@ var r = n(192379),
                     t
                 );
             };
-        return r.createElement(
+        return n.createElement(
             'div',
             {
-                style: g.picker,
-                className: 'swatches-picker ' + m
+                style: b.picker,
+                className: 'swatches-picker ' + (void 0 === h ? '' : h)
             },
-            r.createElement(
-                u.xZ,
+            n.createElement(
+                c.xZ,
                 null,
-                r.createElement(
+                n.createElement(
                     'div',
-                    { style: g.overflow },
-                    r.createElement(
+                    { style: b.overflow },
+                    n.createElement(
                         'div',
-                        { style: g.body },
-                        (0, s.Z)(c, function (e) {
-                            return r.createElement(d.Z, {
+                        { style: b.body },
+                        (0, l.Z)(u, function (e) {
+                            return n.createElement(p.Z, {
                                 key: e.toString(),
                                 group: e,
                                 active: f,
-                                onClick: E,
-                                onSwatchHover: o
+                                onClick: v,
+                                onSwatchHover: a
                             });
                         }),
-                        r.createElement('div', { style: g.clear })
+                        n.createElement('div', { style: b.clear })
                     )
                 )
             )
         );
     };
 (f.propTypes = {
-    width: o().oneOfType([o().string, o().number]),
-    height: o().oneOfType([o().string, o().number]),
-    colors: o().arrayOf(o().arrayOf(o().string)),
-    styles: o().object
+    width: a().oneOfType([a().string, a().number]),
+    height: a().oneOfType([a().string, a().number]),
+    colors: a().arrayOf(a().arrayOf(a().string)),
+    styles: a().object
 }),
     (f.defaultProps = {
         width: 320,
         height: 240,
         colors: [
-            [c.Q6['900'], c.Q6['700'], c.Q6['500'], c.Q6['300'], c.Q6['100']],
-            [c.iQ['900'], c.iQ['700'], c.iQ['500'], c.iQ['300'], c.iQ['100']],
-            [c.jk['900'], c.jk['700'], c.jk['500'], c.jk['300'], c.jk['100']],
-            [c.vq['900'], c.vq['700'], c.vq['500'], c.vq['300'], c.vq['100']],
-            [c.QN['900'], c.QN['700'], c.QN['500'], c.QN['300'], c.QN['100']],
-            [c.iN['900'], c.iN['700'], c.iN['500'], c.iN['300'], c.iN['100']],
-            [c.f7['900'], c.f7['700'], c.f7['500'], c.f7['300'], c.f7['100']],
-            [c.sl['900'], c.sl['700'], c.sl['500'], c.sl['300'], c.sl['100']],
-            [c.$C['900'], c.$C['700'], c.$C['500'], c.$C['300'], c.$C['100']],
-            ['#194D33', c.ek['700'], c.ek['500'], c.ek['300'], c.ek['100']],
-            [c.ZE['900'], c.ZE['700'], c.ZE['500'], c.ZE['300'], c.ZE['100']],
-            [c.LR['900'], c.LR['700'], c.LR['500'], c.LR['300'], c.LR['100']],
-            [c.er['900'], c.er['700'], c.er['500'], c.er['300'], c.er['100']],
-            [c.Dz['900'], c.Dz['700'], c.Dz['500'], c.Dz['300'], c.Dz['100']],
-            [c.$y['900'], c.$y['700'], c.$y['500'], c.$y['300'], c.$y['100']],
-            [c.bK['900'], c.bK['700'], c.bK['500'], c.bK['300'], c.bK['100']],
-            [c.P_['900'], c.P_['700'], c.P_['500'], c.P_['300'], c.P_['100']],
-            [c.BU['900'], c.BU['700'], c.BU['500'], c.BU['300'], c.BU['100']],
+            [u.Q6['900'], u.Q6['700'], u.Q6['500'], u.Q6['300'], u.Q6['100']],
+            [u.iQ['900'], u.iQ['700'], u.iQ['500'], u.iQ['300'], u.iQ['100']],
+            [u.jk['900'], u.jk['700'], u.jk['500'], u.jk['300'], u.jk['100']],
+            [u.vq['900'], u.vq['700'], u.vq['500'], u.vq['300'], u.vq['100']],
+            [u.QN['900'], u.QN['700'], u.QN['500'], u.QN['300'], u.QN['100']],
+            [u.iN['900'], u.iN['700'], u.iN['500'], u.iN['300'], u.iN['100']],
+            [u.f7['900'], u.f7['700'], u.f7['500'], u.f7['300'], u.f7['100']],
+            [u.sl['900'], u.sl['700'], u.sl['500'], u.sl['300'], u.sl['100']],
+            [u.$C['900'], u.$C['700'], u.$C['500'], u.$C['300'], u.$C['100']],
+            ['#194D33', u.ek['700'], u.ek['500'], u.ek['300'], u.ek['100']],
+            [u.ZE['900'], u.ZE['700'], u.ZE['500'], u.ZE['300'], u.ZE['100']],
+            [u.LR['900'], u.LR['700'], u.LR['500'], u.LR['300'], u.LR['100']],
+            [u.er['900'], u.er['700'], u.er['500'], u.er['300'], u.er['100']],
+            [u.Dz['900'], u.Dz['700'], u.Dz['500'], u.Dz['300'], u.Dz['100']],
+            [u.$y['900'], u.$y['700'], u.$y['500'], u.$y['300'], u.$y['100']],
+            [u.bK['900'], u.bK['700'], u.bK['500'], u.bK['300'], u.bK['100']],
+            [u.P_['900'], u.P_['700'], u.P_['500'], u.P_['300'], u.P_['100']],
+            [u.BU['900'], u.BU['700'], u.BU['500'], u.BU['300'], u.BU['100']],
             ['#000000', '#525252', '#969696', '#D9D9D9', '#FFFFFF']
         ],
         styles: {}
     }),
-    (0, u.t1)(f);
+    (0, c.t1)(f);

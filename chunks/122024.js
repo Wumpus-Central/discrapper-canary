@@ -1,45 +1,44 @@
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.Checkboard = void 0);
-var r =
+var n =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         },
-    i = n(192379),
-    o = c(i),
-    a = c(n(723184)),
-    s = l(n(292346));
-function l(e) {
-    if (e && e.__esModule) return e;
-    var t = {};
-    if (null != e) for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-    return (t.default = e), t;
-}
-function c(e) {
+    o = r(192379),
+    a = s(o),
+    i = s(r(723184)),
+    l = (function (e) {
+        if (e && e.__esModule) return e;
+        var t = {};
+        if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
+        return (t.default = e), t;
+    })(r(292346));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var u = (t.Checkboard = function (e) {
     var t = e.white,
-        n = e.grey,
-        l = e.size,
-        c = e.renderers,
-        u = e.borderRadius,
-        d = e.boxShadow,
+        r = e.grey,
+        s = e.size,
+        u = e.renderers,
+        c = e.borderRadius,
+        p = e.boxShadow,
         f = e.children,
-        p = (0, a.default)({
+        d = (0, i.default)({
             default: {
                 grid: {
-                    borderRadius: u,
-                    boxShadow: d,
+                    borderRadius: c,
+                    boxShadow: p,
                     absolute: '0px 0px 0px 0px',
-                    background: 'url(' + s.get(t, n, l, c.canvas) + ') center left'
+                    background: 'url(' + l.get(t, r, s, u.canvas) + ') center left'
                 }
             }
         });
-    return (0, i.isValidElement)(f) ? o.default.cloneElement(f, r({}, f.props, { style: r({}, f.props.style, p.grid) })) : o.default.createElement('div', { style: p.grid });
+    return (0, o.isValidElement)(f) ? a.default.cloneElement(f, n({}, f.props, { style: n({}, f.props.style, d.grid) })) : a.default.createElement('div', { style: d.grid });
 });
 (u.defaultProps = {
     size: 8,

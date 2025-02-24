@@ -1,16 +1,15 @@
-var r = n(317063),
-    i = n(757209);
-function o(e) {
-    return r(function (t, n) {
-        var r = -1,
-            o = n.length,
-            a = o > 1 ? n[o - 1] : void 0,
-            s = o > 2 ? n[2] : void 0;
-        for (a = e.length > 3 && 'function' == typeof a ? (o--, a) : void 0, s && i(n[0], n[1], s) && ((a = o < 3 ? void 0 : a), (o = 1)), t = Object(t); ++r < o; ) {
-            var l = n[r];
-            l && e(t, l, r, a);
+var n = r(317063),
+    o = r(757209);
+e.exports = function (e) {
+    return n(function (t, r) {
+        var n = -1,
+            a = r.length,
+            i = a > 1 ? r[a - 1] : void 0,
+            l = a > 2 ? r[2] : void 0;
+        for (i = e.length > 3 && 'function' == typeof i ? (a--, i) : void 0, l && o(r[0], r[1], l) && ((i = a < 3 ? void 0 : i), (a = 1)), t = Object(t); ++n < a; ) {
+            var s = r[n];
+            s && e(t, s, n, i);
         }
         return t;
     });
-}
-e.exports = o;
+};

@@ -1,54 +1,41 @@
-n.d(t, { Z: () => I });
-var r = n(548015),
-    i = n(74748),
-    o = n(572657),
-    a = n(318670),
-    s = n(252798),
-    l = n(396379),
-    c = 1,
-    u = 2,
-    d = '[object Boolean]',
-    f = '[object Date]',
-    p = '[object Error]',
-    _ = '[object Map]',
-    h = '[object Number]',
-    m = '[object RegExp]',
-    g = '[object Set]',
-    E = '[object String]',
-    v = '[object Symbol]',
-    b = '[object ArrayBuffer]',
-    y = '[object DataView]',
-    O = r.Z ? r.Z.prototype : void 0,
-    S = O ? O.valueOf : void 0;
-let I = function (e, t, n, r, O, I, T) {
-    switch (n) {
-        case y:
+r.d(t, { Z: () => p });
+var n = r(548015),
+    o = r(74748),
+    a = r(572657),
+    i = r(318670),
+    l = r(252798),
+    s = r(396379),
+    u = n.Z ? n.Z.prototype : void 0,
+    c = u ? u.valueOf : void 0;
+let p = function (e, t, r, n, u, p, f) {
+    switch (r) {
+        case '[object DataView]':
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
             (e = e.buffer), (t = t.buffer);
-        case b:
-            if (e.byteLength != t.byteLength || !I(new i.Z(e), new i.Z(t))) break;
+        case '[object ArrayBuffer]':
+            if (e.byteLength != t.byteLength || !p(new o.Z(e), new o.Z(t))) break;
             return !0;
-        case d:
-        case f:
-        case h:
-            return (0, o.Z)(+e, +t);
-        case p:
+        case '[object Boolean]':
+        case '[object Date]':
+        case '[object Number]':
+            return (0, a.Z)(+e, +t);
+        case '[object Error]':
             return e.name == t.name && e.message == t.message;
-        case m:
-        case E:
+        case '[object RegExp]':
+        case '[object String]':
             return e == t + '';
-        case _:
-            var N = s.Z;
-        case g:
-            var A = r & c;
-            if ((N || (N = l.Z), e.size != t.size && !A)) break;
-            var C = T.get(e);
-            if (C) return C == t;
-            (r |= u), T.set(e, t);
-            var R = (0, a.Z)(N(e), N(t), r, O, I, T);
-            return T.delete(e), R;
-        case v:
-            if (S) return S.call(e) == S.call(t);
+        case '[object Map]':
+            var d = l.Z;
+        case '[object Set]':
+            var h = 1 & n;
+            if ((d || (d = s.Z), e.size != t.size && !h)) break;
+            var b = f.get(e);
+            if (b) return b == t;
+            (n |= 2), f.set(e, t);
+            var v = (0, i.Z)(d(e), d(t), n, u, p, f);
+            return f.delete(e), v;
+        case '[object Symbol]':
+            if (c) return c.call(e) == c.call(t);
     }
     return !1;
 };
