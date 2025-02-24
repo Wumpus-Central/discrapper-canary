@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -8,32 +8,43 @@ var i = n(120356),
     l = n(692547),
     c = n(481060),
     u = n(607070),
-    d = n(504134);
-function f(e) {
-    let t,
-        { color: n, size: i, forcedIconColor: f, className: p, iconClassName: _ } = e,
-        [h, m] = (0, s.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.saturation]),
-        g = (0, c.dQu)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        E = (0, a._i)(null != n ? n : g),
-        v = (0, a.ho)(E, !1, h ? m : null);
-    t = null != f ? f : 0.3 > (0, a.Bd)(E) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-    let b = i / 8;
+    d = n(393951),
+    f = n(504134);
+let p = l.Z.unsafe_rawColors.PRIMARY_300,
+    _ = l.Z.unsafe_rawColors.WHITE_500,
+    h = l.Z.unsafe_rawColors.PRIMARY_630;
+function m(e) {
+    let { color: t, size: n, forcedIconColor: i, className: l, iconClassName: m } = e,
+        [g, E] = (0, s.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.saturation]),
+        v = (0, c.dQu)(p).hex(),
+        b = null != t ? t : v,
+        y = (0, a.ho)((0, a._i)(b), !1, g ? E : null),
+        O = (0, c.dQu)(_).hex(),
+        S = (0, c.dQu)(h).hex(),
+        I =
+            null != i
+                ? i
+                : (0, d.B)({
+                      backgroundColor: b,
+                      colors: [O, S]
+                  }),
+        T = n / 8;
     return (0, r.jsx)('div', {
         style: {
-            background: v,
-            width: i,
-            height: i,
-            borderRadius: i,
-            lineHeight: ''.concat(i, 'px')
+            background: y,
+            width: n,
+            height: n,
+            borderRadius: n,
+            lineHeight: ''.concat(n, 'px')
         },
-        className: p,
+        className: l,
         children: (0, r.jsx)(c.xPt, {
             size: 'custom',
-            color: t,
-            className: o()(d.linkIcon, _),
-            width: i - 2 * b,
-            height: i - 2 * b,
-            style: { margin: b }
+            color: I,
+            className: o()(f.linkIcon, m),
+            width: n - 2 * T,
+            height: n - 2 * T,
+            style: { margin: T }
         })
     });
 }
