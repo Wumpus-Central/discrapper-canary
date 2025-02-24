@@ -1,12 +1,12 @@
 n.d(t, {
-    En: () => D,
-    dY: () => A,
-    eC: () => w,
-    jz: () => R,
-    kC: () => I,
-    l3: () => C,
-    o3: () => N,
-    vP: () => P
+    En: () => P,
+    dY: () => T,
+    eC: () => R,
+    jz: () => A,
+    kC: () => O,
+    l3: () => N,
+    o3: () => I,
+    vP: () => C
 }),
     n(474991),
     n(398202),
@@ -26,31 +26,28 @@ var r = n(392711),
     o = n(913527),
     a = n.n(o),
     s = n(866442),
-    l = n(849727),
-    c = n(948141),
-    u = n(630388),
-    d = n(709054),
-    f = n(981631),
-    p = n(817384);
-let _ = /sketchfab/i,
-    h = /^https:\/\/sketchfab\.com/i,
-    m = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    g = 1492472454139,
-    E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    v = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    b = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop');
-function y(e) {
+    l = n(630388),
+    c = n(709054),
+    u = n(981631),
+    d = n(817384);
+let f = /sketchfab/i,
+    p = /^https:\/\/sketchfab\.com/i,
+    _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    h = 1492472454139,
+    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    E = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop');
+function v(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function O(e, t, n) {
-    if ((null != t && _.test(t.name)) || h.test(n.url)) return !1;
+function b(e, t, n) {
+    if ((null != t && f.test(t.name)) || p.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
-    return null != e && d.default.extractTimestamp(e) < g && (r = r && null != t && m.test(t.name)), r;
+    return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && _.test(t.name)), r;
 }
-function S(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, flags: s } = e,
-        d = l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled || c.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled;
+function y(e) {
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, flags: s } = e;
     return {
         url: t,
         proxyURL: n,
@@ -58,11 +55,11 @@ function S(e) {
         height: i,
         placeholder: o,
         placeholderVersion: a,
-        srcIsAnimated: d && (0, u.yE)(null != s ? s : 0, f.FoC.IS_ANIMATED),
-        flags: d ? (null != s ? s : 0) : (0, u.Ge)(null != s ? s : 0, f.FoC.IS_ANIMATED)
+        srcIsAnimated: (0, l.yE)(null != s ? s : 0, u.FoC.IS_ANIMATED),
+        flags: null != s ? s : 0
     };
 }
-function I(e, t, n) {
+function O(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -96,29 +93,29 @@ function I(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, s.ho)(n.color, !0)),
-        null != n.thumbnail && y(n.thumbnail))
+        null != n.thumbnail && v(n.thumbnail))
     )
         switch (r.type) {
-            case f.hBH.ARTICLE:
-            case f.hBH.IMAGE:
-                r.image = S(n.thumbnail);
+            case u.hBH.ARTICLE:
+            case u.hBH.IMAGE:
+                r.image = y(n.thumbnail);
                 break;
             default:
-                r.thumbnail = S(n.thumbnail);
+                r.thumbnail = y(n.thumbnail);
         }
     if (
-        (null != n.image && y(n.image) && (r.image = S(n.image)),
+        (null != n.image && v(n.image) && (r.image = y(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                y(n.video) &&
+                v(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
-                    url: T(n.video.proxy_url, { format: 'webp' })
+                    url: S(n.video.proxy_url, { format: 'webp' })
                 }),
-            null != r.thumbnail && y(n.video) && O(t, n.provider, n.video) && (r.video = S(n.video))),
-        p.k.has(r.type))
+            null != r.thumbnail && v(n.video) && b(t, n.provider, n.video) && (r.video = y(n.video))),
+        d.k.has(r.type))
     ) {
         var o;
         let e = null !== (o = n.fields) && void 0 !== o ? o : [];
@@ -133,7 +130,7 @@ function I(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function T(e, t) {
+function S(e, t) {
     let n = new URL(e);
     return (
         Object.keys(t).forEach((e) => {
@@ -142,7 +139,7 @@ function T(e, t) {
         n.toString()
     );
 }
-function N(e) {
+function I(e) {
     let t = new Map(),
         n = [];
     return (
@@ -161,17 +158,17 @@ function N(e) {
         n
     );
 }
-function A(e) {
+function T(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: o } = e;
-    return (null != t || null != n) && (r === f.hBH.GIFV || (r !== f.hBH.RICH && null == i && null == o));
+    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == o));
 }
-function C(e) {
-    return e.type === f.hBH.ARTICLE && null != e.url && (v.test(e.url) || E.test(e.url));
+function N(e) {
+    return e.type === u.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
-function R(e) {
-    return e.type === f.hBH.ARTICLE && null != e.url && b.test(e.url);
+function A(e) {
+    return e.type === u.hBH.ARTICLE && null != e.url && E.test(e.url);
 }
-function P(e, t, n) {
+function C(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -188,9 +185,9 @@ function P(e, t, n) {
                 maxMediaHeight: 300
             };
 }
-function w(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(f.Plq.EMBED_LINKS, e);
+function R(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
 }
-function D(e) {
+function P(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

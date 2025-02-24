@@ -1,7 +1,4 @@
-n.d(t, {
-    H1: () => a,
-    s8: () => i
-});
+n.d(t, { s8: () => i });
 let r = (0, n(818083).B)({
     kind: 'user',
     id: '2025-02_tigger_pawtect',
@@ -15,10 +12,6 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
-    let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
-}
 function i(e) {
     let { location: t } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
