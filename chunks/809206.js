@@ -111,7 +111,7 @@ async function b(e) {
     );
 }
 function y(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDecoration: h, newPassword: g, globalName: E } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: g, avatarDecoration: E, newPassword: v, globalName: y } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, u.Z)(
@@ -123,13 +123,15 @@ function y(e) {
                         email_token: o,
                         password: s,
                         avatar: d,
+                        avatar_description: h,
+                        avatar_id: g,
                         discriminator: n,
-                        global_name: E,
-                        new_password: g
+                        global_name: y,
+                        new_password: v
                     },
                     e
                 );
-                null === h && (a.avatar_decoration_id = null), null != h && ((a.avatar_decoration_id = h.id), (a.avatar_decoration_sku_id = h.skuId));
+                null === E && (a.avatar_decoration_id = null), null != E && ((a.avatar_decoration_id = E.id), (a.avatar_decoration_sku_id = E.skuId));
                 let l = i.K.get(f.JkL),
                     c = (0, p.xJ)();
                 null != c && null != l && ((a.push_provider = c), (a.push_token = l));
