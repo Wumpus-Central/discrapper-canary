@@ -12,5 +12,6 @@ e.exports = {
     avControls: 'avControls_fcb27c',
     experimentWrapper: 'experimentWrapper_fcb27c',
     buttonSection: 'buttonSection_fcb27c',
+    experimentButtonSection: 'experimentButtonSection_fcb27c',
     avSpacing: 'avSpacing_fcb27c'
 };

@@ -209,7 +209,7 @@ function w(e) {
     }, [B]);
     let F = (0, p.Z)({ location: 'CenterControlButton' }),
         V = L || F,
-        H = V ? [v.experimentButton, Z ? P[k] : R[k], x && null == O && v.fullRegionButton] : [C[k]],
+        H = V ? [v.experimentButton, Z ? P[k] : R[k], x && null == O && v.fullRegionButton, Z && !x && null != O && v.attachedButton] : [C[k]],
         W = (0, r.jsx)(
             A,
             S(y({}, M), {
@@ -223,7 +223,7 @@ function w(e) {
         ? W
         : V
           ? (0, r.jsxs)('div', {
-                className: a()(v.caretButtonContainer, s, x && null != O && [v.fullRegionDropdownButton, R[k]]),
+                className: a()(Z ? v.attachedCaretButtonContainer : v.caretButtonContainer, Z && T && v.popoutOpen, s, x && null != O && [v.fullRegionDropdownButton, R[k]]),
                 children: [
                     W,
                     null != O
@@ -232,7 +232,8 @@ function w(e) {
                                   'aria-label': E.NW.string(E.t.PdRCRk),
                                   onClick: w ? void 0 : O,
                                   onContextMenu: w ? void 0 : O,
-                                  className: a()(v.contextMenuNubExperiment, R[j], {
+                                  className: a()(v.contextMenuNubExperiment, Z && !x && v.attachedCaret, Z ? P[j] : R[j], {
+                                      [v.popoutOpen]: T && Z,
                                       [v.active]: T,
                                       [v.disabled]: w
                                   }),
