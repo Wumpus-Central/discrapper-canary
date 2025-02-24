@@ -23,62 +23,63 @@ var n = r(200651),
     x = r(388032);
 let Z = (0, s.Z)(
     function (e) {
-        let { webBuildOverride: t, onSelect: r } = e,
-            [s, u] = i.useState(!1),
-            Z = (0, y.Z)(),
-            w = (0, h.Z)(),
-            k = (0, j.Z)(),
-            E = (0, f.Z)(),
-            N = (0, S.Z)(),
-            D = (0, m.Z)(),
-            C = (0, O.Z)(),
-            W = (0, v.Z)(),
-            { analyticsLocations: I } = (0, d.ZP)(),
-            B = i.useMemo(() => (0, b.j)(), []);
-        async function R() {
+        let { webBuildOverride: t, onSelect: r, onInteraction: s } = e,
+            [u, Z] = i.useState(!1),
+            w = (0, y.Z)(),
+            k = (0, h.Z)(),
+            E = (0, j.Z)(),
+            N = (0, f.Z)(),
+            D = (0, S.Z)(),
+            C = (0, m.Z)(),
+            W = (0, O.Z)(),
+            I = (0, v.Z)(),
+            { analyticsLocations: B } = (0, d.ZP)(),
+            R = i.useMemo(() => (0, b.j)(), []);
+        async function T() {
             try {
-                u(!0), await (0, p.bF)(), window.location.reload(!0);
+                Z(!0), await (0, p.bF)(), window.location.reload(!0);
             } catch (e) {
-                u(!1);
+                Z(!1);
             }
         }
-        let T = (e) => {
+        let _ = (e) => {
                 switch (e) {
                     case P.oAB.GAMES:
-                        return Z;
-                    case P.oAB.STREAMER_MODE:
                         return w;
-                    case P.oAB.APPEARANCE:
+                    case P.oAB.STREAMER_MODE:
                         return k;
-                    case P.oAB.ACCESSIBILITY:
+                    case P.oAB.APPEARANCE:
                         return E;
-                    case P.oAB.VOICE:
+                    case P.oAB.ACCESSIBILITY:
                         return N;
-                    case P.oAB.TEXT:
+                    case P.oAB.VOICE:
                         return D;
-                    case P.oAB.EXPERIMENTS:
+                    case P.oAB.TEXT:
                         return C;
-                    case P.oAB.DEVELOPER_OPTIONS:
+                    case P.oAB.EXPERIMENTS:
                         return W;
+                    case P.oAB.DEVELOPER_OPTIONS:
+                        return I;
                     default:
                         return null;
                 }
             },
-            _ = (0, g.VO)()
+            M = (0, g.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== l.ID.HEADER && t !== l.ID.CUSTOM && t !== l.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, n.jsx)(d.Gt, {
-            value: I,
+            value: B,
             children: (0, n.jsxs)(o.v2r, {
                 navId: 'user-settings-cog',
                 onClose: c.Zy,
                 'aria-label': x.NW.string(x.t.opYYHh),
                 onSelect: r,
+                onInteraction: s,
                 children: [
-                    _.map((e) => {
+                    M.map((e) => {
                         var t, r;
                         let { section: i, label: c, onClick: l } = e,
                             s = i.replace(/\W/gi, '_');
@@ -118,10 +119,10 @@ let Z = (0, s.Z)(
                                             : (function (e, t) {
                                                   let r = Object.values(P.oAB).filter((t) => t === e)[0];
                                                   null != r && a.Z.open(r, void 0, { analyticsLocations: t });
-                                              })(i, I)
+                                              })(i, B)
                                 }
                             )),
-                            (r = r = { children: T(i) }),
+                            (r = r = { children: _(i) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
@@ -138,12 +139,12 @@ let Z = (0, s.Z)(
                             s
                         );
                     }),
-                    e.user.isStaff() && B.length > 0
+                    e.user.isStaff() && R.length > 0
                         ? (0, n.jsx)(o.sNh, {
                               label: 'Build overrides',
                               id: 'build_overrides',
                               children: (0, n.jsx)(o.kSQ, {
-                                  children: B.map((e) =>
+                                  children: R.map((e) =>
                                       (0, n.jsx)(
                                           o.k5B,
                                           {
@@ -165,9 +166,9 @@ let Z = (0, s.Z)(
                         ? (0, n.jsx)(o.kSQ, {
                               children: (0, n.jsx)(o.sNh, {
                                   id: 'clear-build-override',
-                                  disabled: s,
+                                  disabled: u,
                                   label: x.NW.string(x.t['/Nz9ra']),
-                                  action: R,
+                                  action: T,
                                   color: 'danger'
                               })
                           })

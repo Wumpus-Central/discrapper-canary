@@ -1858,6 +1858,7 @@ var T =
     (r.VOICE_SETTINGS_CHANGED = 'voice_settings_changed'),
     (r.SYSTEM_CAMERA_SETTINGS_OPENED = 'system_camera_settings_opened'),
     (r.VOICE_AND_VIDEO_SETTINGS_UPDATED = 'voice_and_video_settings_updated'),
+    (r.CALL_SETTINGS_MENU_ITEM_INTERACTED = 'call_settings_menu_item_interacted'),
     (r.CLIP_SAVE_KEYBIND_PRESSED = 'clip_save_keybind_pressed'),
     (r.CLIP_SAVED = 'clip_saved'),
     (r.CLIP_SAVE_FAILURE = 'clip_save_failure'),

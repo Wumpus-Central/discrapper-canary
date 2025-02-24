@@ -85,18 +85,18 @@ function x(e, t, n) {
 let E = (0, c.Z)(
     (0, l.Z)(
         function (e) {
-            let { user: t, channel: n, onSelect: l, context: c } = e,
-                a = n.id,
-                u = t.isNonUserBot(),
-                s = t.id === g.default.getId(),
-                d = h({
-                    isOwnSettings: s,
+            let { user: t, channel: n, onSelect: l, onInteraction: c, context: a } = e,
+                u = n.id,
+                s = t.isNonUserBot(),
+                d = t.id === g.default.getId(),
+                f = h({
+                    isOwnSettings: d,
                     userId: t.id,
-                    channelId: a,
-                    context: c
+                    channelId: u,
+                    context: a
                 }),
-                f = x(t, a),
-                O = (0, b.Z)({
+                O = x(t, u),
+                p = (0, b.Z)({
                     id: t.id,
                     label: S.NW.string(S.t['/AXYnJ'])
                 });
@@ -105,21 +105,22 @@ let E = (0, c.Z)(
                 onClose: o.Zy,
                 'aria-label': S.NW.string(S.t.liqwPD),
                 onSelect: l,
+                onInteraction: c,
                 variant: 'fixed',
                 children:
-                    !u &&
+                    !s &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            d,
-                            !s &&
+                            f,
+                            !d &&
                                 (0, r.jsx)(i.kSQ, {
                                     children: (0, r.jsx)(i.sNh, {
                                         id: 'more-options',
                                         label: S.NW.string(S.t.PdRCRk),
-                                        children: f
+                                        children: O
                                     })
                                 }),
-                            s && (0, r.jsx)(i.kSQ, { children: O })
+                            d && (0, r.jsx)(i.kSQ, { children: p })
                         ]
                     })
             });

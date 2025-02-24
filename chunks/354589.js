@@ -40,96 +40,97 @@ let R = (0, a.Z)(
     (0, o.Z)(
         function (e) {
             var n;
-            let { user: t, channel: o, context: a, showChatItems: u = !0, showMediaItems: k = !1, showChannelCallItems: R = !1, showModalItems: L = !0, onSelect: V, onHeightUpdate: G } = e,
-                B = (0, M.Z)({
+            let { user: t, channel: o, context: a, showChatItems: u = !0, showMediaItems: k = !1, showChannelCallItems: R = !1, showModalItems: L = !0, onSelect: V, onHeightUpdate: G, onInteraction: B } = e,
+                H = (0, M.Z)({
                     userId: t.id,
                     guildId: null
                 }),
-                H = (0, x.Z)(t, null, a),
-                K = (0, A.Z)(t, o.id),
-                Q = (0, P.Z)(t.id, a),
-                q = (0, Z.Z)({
+                K = (0, x.Z)(t, null, a),
+                Q = (0, A.Z)(t, o.id),
+                q = (0, P.Z)(t.id, a),
+                F = (0, Z.Z)({
                     user: t,
                     context: a
                 }),
-                F = (0, v.Z)({
+                Y = (0, v.Z)({
                     user: t,
                     channelId: o.id,
                     context: a
                 }),
-                Y = (0, O.Z)({ user: t }),
-                z = (0, W.Z)(t.id),
-                X = (0, w.Z)(t.id, o.id),
-                J = (0, C.Z)(t.id),
-                $ = (0, h.B)({
+                z = (0, O.Z)({ user: t }),
+                X = (0, W.Z)(t.id),
+                J = (0, w.Z)(t.id, o.id),
+                $ = (0, C.Z)(t.id),
+                ee = (0, h.B)({
                     userId: t.id,
                     channelId: o.id,
                     guildId: o.getGuildId(),
                     location: 'GroupDMUserContextMenu'
                 }),
-                ee = (0, T.Z)(t.id, o.id),
-                en = (0, N.Z)({ user: t }),
-                et = (0, c.Z)(null, t),
-                er = (0, m.Z)({ user: t }),
-                ei = (0, E.Z)({ user: t }),
-                el = (0, I.Z)({ user: t }),
-                eo = (0, _.Z)({
+                en = (0, T.Z)(t.id, o.id),
+                et = (0, N.Z)({ user: t }),
+                er = (0, c.Z)(null, t),
+                ei = (0, m.Z)({ user: t }),
+                el = (0, E.Z)({ user: t }),
+                eo = (0, I.Z)({ user: t }),
+                ea = (0, _.Z)({
                     user: t,
                     location: 'GroupDMUserContextMenu'
                 }),
-                ea = (0, S.Z)({
+                es = (0, S.Z)({
                     user: t,
                     location: 'GroupDMUserContextMenu'
                 }),
-                es = (0, g.Z)({
+                ec = (0, g.Z)({
                     id: t.id,
                     label: U.NW.string(U.t['/AXYnJ'])
                 }),
-                ec = (0, D.Z)(t.id),
-                eu = (0, f.Z)(t.id),
-                ed = (0, d.Z)(o.id),
-                ef = (0, b.Z)(t),
-                ep = (0, p.Z)(t.id),
-                eh = (0, y.Z)({
+                eu = (0, D.Z)(t.id),
+                ed = (0, f.Z)(t.id),
+                ef = (0, d.Z)(o.id),
+                ep = (0, b.Z)(t),
+                eh = (0, p.Z)(t.id),
+                eg = (0, y.Z)({
                     commandType: s.yU.USER,
                     commandTargetId: t.id,
                     channel: o,
                     guildId: void 0,
                     onHeightUpdate: G
                 }),
-                eg = (0, j.Z)(t, o),
-                eb = t.isNonUserBot(),
-                em = o.isManaged(),
-                eO = null === (n = o.recipients) || void 0 === n ? void 0 : n.includes(t.id);
+                eb = (0, j.Z)(t, o),
+                em = t.isNonUserBot(),
+                eO = o.isManaged(),
+                eE = null === (n = o.recipients) || void 0 === n ? void 0 : n.includes(t.id);
             return (0, r.jsxs)(i.v2r, {
                 navId: 'user-context',
                 onClose: l.Zy,
                 'aria-label': U.NW.string(U.t.liqwPD),
                 onSelect: V,
+                onInteraction: B,
                 children: [
-                    !eb &&
+                    !em &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(i.kSQ, { children: ef }),
+                                (0, r.jsx)(i.kSQ, { children: ep }),
                                 (0, r.jsxs)(i.kSQ, {
-                                    children: [L && B, u && H, Q, q, !em && K, L && F, L && Y, ec]
+                                    children: [L && H, u && K, q, F, !eO && Q, L && Y, L && z, eu]
                                 }),
-                                k && (0, r.jsx)(i.kSQ, { children: z }),
-                                eO &&
+                                k && (0, r.jsx)(i.kSQ, { children: X }),
+                                eE &&
                                     (0, r.jsxs)(i.kSQ, {
-                                        children: [!em && X, eg]
+                                        children: [!eO && J, eb]
                                     }),
-                                (0, r.jsx)(i.kSQ, { children: L && et }),
+                                (0, r.jsx)(i.kSQ, { children: L && er }),
                                 (0, r.jsxs)(i.kSQ, {
-                                    children: [k && J, k && $, k && ee, eh, L && en, er, ei, el, L && ea, L && eo, k && ep]
+                                    children: [k && $, k && ee, k && en, eg, L && et, ei, el, eo, L && es, L && ea, k && eh]
                                 }),
                                 R &&
                                     (0, r.jsxs)(i.kSQ, {
-                                        children: [ed, eu]
+                                        children: [ef, ed]
                                     })
                             ]
                         }),
-                    (0, r.jsx)(i.kSQ, { children: es })
+                    (0, r.jsx)(i.kSQ, { children: ec })
                 ]
             });
         },

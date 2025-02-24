@@ -21,44 +21,45 @@ var l = n(990547),
     j = n(388032),
     S = n(694189);
 function N(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: N = !1, renderInputModes: P = !1, renderInputVolume: I = !1, renderOutputVolume: x = !1, renderDeafen: E = !1, simplified: w = !1, onSelect: Z, appContext: T } = e,
-        { analyticsLocations: A } = (0, u.ZP)();
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: N = !1, renderInputModes: P = !1, renderInputVolume: I = !1, renderOutputVolume: x = !1, renderDeafen: E = !1, simplified: w = !1, onSelect: Z, appContext: T, onInteraction: A } = e,
+        { analyticsLocations: C } = (0, u.ZP)();
     (0, d.Z)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: A }
+        properties: { location_stack: C }
     });
-    let C = (0, v.Z)(T),
-        D = (0, b.Z)(A, w),
-        _ = (0, h.Z)(A, w),
-        k = (0, f.Z)(A),
-        W = (0, p.Z)(A),
-        R = (0, m.Z)(A),
-        M = a.Yn.DEFAULT,
-        L = g.Z.isSelfDeaf(M),
-        U = (0, i.e7)([g.Z], () => g.Z.getMode()),
-        G = U === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
+    let D = (0, v.Z)(T),
+        _ = (0, b.Z)(C, w),
+        k = (0, h.Z)(C, w),
+        W = (0, f.Z)(C),
+        R = (0, p.Z)(C),
+        M = (0, m.Z)(C),
+        L = a.Yn.DEFAULT,
+        U = g.Z.isSelfDeaf(L),
+        V = (0, i.e7)([g.Z], () => g.Z.getMode()),
+        G = V === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: O.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(o.v2r, {
             onSelect: Z,
+            onInteraction: A,
             className: S.menu,
             onClose: t,
             navId: 'audio-device-context',
             'aria-label': j.NW.string(j.t.ZR1Ss7),
             children: [
-                N ? D : null,
-                n ? _ : null,
+                N ? _ : null,
+                n ? k : null,
                 !w && P
                     ? (0, r.jsx)(o.kSQ, {
                           label: j.NW.string(j.t['pS+K2N']),
-                          children: k
+                          children: W
                       })
                     : null,
                 (0, r.jsxs)(o.kSQ, {
                     children: [
-                        I ? W : null,
-                        x ? R : null,
+                        I ? R : null,
+                        x ? M : null,
                         w ? (0, r.jsx)(o.Clw, {}) : null,
                         w && E
                             ? (0, r.jsx)(
@@ -68,23 +69,23 @@ function N(e) {
                                       label: j.NW.string(j.t.wjcRFR),
                                       action: () =>
                                           s.Z.toggleSelfDeaf({
-                                              context: M,
+                                              context: L,
                                               location: 'AudioDeviceMenu'
                                           }),
-                                      checked: L
+                                      checked: U
                                   },
                                   'self-deafen'
                               )
                             : null,
                         w && N && y.isPlatformEmbedded
                             ? (0, r.jsx)(o.S89, {
-                                  checked: U === O.pM4.PUSH_TO_TALK,
+                                  checked: V === O.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
                                   label: j.NW.string(j.t.Q8gkVF),
-                                  action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: A })
+                                  action: () => s.Z.setMode(G, void 0, void 0, { analyticsLocations: C })
                               })
                             : null,
-                        C
+                        D
                     ]
                 })
             ]

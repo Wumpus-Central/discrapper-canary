@@ -45,9 +45,9 @@ function a(e, t) {
         e
     );
 }
-function o(e, t, o, s) {
-    let c = o.getGuildId();
-    return null != c
+function o(e, t, o, s, c) {
+    let u = o.getGuildId();
+    return null != u
         ? (0, l.jW)(
               e,
               async () => {
@@ -58,7 +58,8 @@ function o(e, t, o, s) {
                           a(i({}, n), {
                               user: t,
                               channel: o,
-                              guildId: c
+                              guildId: u,
+                              onInteraction: (e) => c('GuildVoiceUserContextMenu', e)
                           })
                       );
               },
@@ -73,7 +74,8 @@ function o(e, t, o, s) {
                           e,
                           a(i({}, n), {
                               user: t,
-                              channel: o
+                              channel: o,
+                              onInteraction: (e) => c('BaseVoiceUserContextMenu', e)
                           })
                       );
               },

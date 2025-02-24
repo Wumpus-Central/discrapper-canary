@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -7,12 +7,13 @@ var r = n(200651),
     s = n(239091),
     c = n(586902),
     u = n(40851),
-    d = n(184301),
-    p = n(347475),
-    h = n(237583),
-    f = n(768581),
-    m = n(112471);
-function g(e) {
+    d = n(795318),
+    p = n(184301),
+    h = n(347475),
+    f = n(237583),
+    m = n(768581),
+    g = n(112471);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function g(e) {
     }
     return e;
 }
-function b(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,13 +56,13 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { channel: t, speaker: l, className: h } = e,
-        _ = (0, u.bp)(),
-        { reducedMotion: C } = i.useContext(a.Sfi),
-        v = (0, c.Z)({ userId: l.id }),
-        y = null != l.member ? (0, f.CA)(l.member) : null,
-        x = (e) => {
+function C(e) {
+    let { channel: t, speaker: l, className: f } = e,
+        C = (0, u.bp)(),
+        { reducedMotion: v } = i.useContext(a.Sfi),
+        y = (0, c.Z)({ userId: l.id }),
+        x = null != l.member ? (0, m.CA)(l.member) : null,
+        j = (e) => {
             (0, s.jW)(
                 e,
                 async () => {
@@ -69,29 +70,30 @@ function _(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            b(g({}, n), {
+                            _(b({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
-                                showChatItems: !1
+                                showChatItems: !1,
+                                onInteraction: (0, d.u)('GuildChannelUserContextMenu', 'StageSpeakerSummary')
                             })
                         );
                 },
-                { context: _ }
+                { context: C }
             );
         };
     return (0, r.jsx)(a.yRy, {
         preload: () =>
-            (0, d.Z)(l.user, {
+            (0, p.Z)(l.user, {
                 guildId: t.guild_id,
                 channelId: t.id
             }),
         renderPopout: (e) =>
             (0, r.jsx)(
-                p.Z,
-                b(g({}, e), {
+                h.Z,
+                _(b({}, e), {
                     guildId: t.guild_id,
                     channelId: t.id,
                     userId: l.id
@@ -106,33 +108,33 @@ function _(e) {
                 children: (n) =>
                     (0, r.jsx)(
                         a.P3F,
-                        b(g({}, n, e), {
+                        _(b({}, n, e), {
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
-                            onContextMenu: x,
+                            onContextMenu: j,
                             children: (0, r.jsx)(a.qEK, {
-                                src: null != y ? y : l.user.getAvatarURL(t.guild_id, 24),
+                                src: null != x ? x : l.user.getAvatarURL(t.guild_id, 24),
                                 size: a.EFr.SIZE_24,
-                                className: o()(m.avatar, h),
+                                className: o()(g.avatar, f),
                                 'aria-label': l.userNick,
-                                isSpeaking: v && !C.enabled
+                                isSpeaking: y && !v.enabled
                             })
                         })
                     )
             })
     });
 }
-function C(e) {
+function v(e) {
     let { speakers: t, channel: n } = e;
-    return (0, r.jsx)(h.Z, {
-        className: m.summary,
+    return (0, r.jsx)(f.Z, {
+        className: g.summary,
         guildId: n.guild_id,
         users: t,
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                _,
+                C,
                 {
                     channel: n,
                     speaker: e,
@@ -144,7 +146,7 @@ function C(e) {
             (0, r.jsx)(
                 'div',
                 {
-                    className: o()(m.speakers, t),
+                    className: o()(g.speakers, t),
                     children: e
                 },
                 n

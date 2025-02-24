@@ -17,21 +17,21 @@ var l = t(481060),
 let v = (0, a.Z)(
     (0, u.Z)(
         function (e) {
-            let { user: n, channel: t, guildId: u, onSelect: a, context: o } = e,
-                g = t.id,
-                v = n.isNonUserBot(),
-                h = n.id === _.default.getId(),
-                T = (0, c.Z)(n),
-                b = (0, s.Z)(n, u, g),
-                O = (0, E.Y)({
-                    isOwnSettings: h,
+            let { user: n, channel: t, guildId: u, onSelect: a, onInteraction: o, context: g } = e,
+                v = t.id,
+                h = n.isNonUserBot(),
+                T = n.id === _.default.getId(),
+                b = (0, c.Z)(n),
+                O = (0, s.Z)(n, u, v),
+                S = (0, E.Y)({
+                    isOwnSettings: T,
                     userId: n.id,
-                    channelId: g,
+                    channelId: v,
                     guildId: u,
-                    context: o
+                    context: g
                 }),
-                S = (0, E.E)(n, g, u),
-                y = (0, f.Z)(n, u, g),
+                y = (0, E.E)(n, v, u),
+                I = (0, f.Z)(n, u, v),
                 N = (0, d.Z)({
                     id: n.id,
                     label: A.NW.string(A.t['/AXYnJ'])
@@ -41,24 +41,25 @@ let v = (0, a.Z)(
                 onClose: r.Zy,
                 'aria-label': A.NW.string(A.t.liqwPD),
                 onSelect: a,
+                onInteraction: o,
                 variant: 'fixed',
                 children:
-                    !v &&
+                    !h &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)(l.kSQ, {
-                                children: [T, b]
+                                children: [b, O]
                             }),
-                            O,
-                            !h &&
+                            S,
+                            !T &&
                                 (0, i.jsx)(l.kSQ, {
                                     children: (0, i.jsxs)(l.sNh, {
                                         id: 'more-options',
                                         label: A.NW.string(A.t.PdRCRk),
-                                        children: [S, (0, i.jsx)(l.kSQ, { children: y })]
+                                        children: [y, (0, i.jsx)(l.kSQ, { children: I })]
                                     })
                                 }),
-                            h && (0, i.jsx)(l.kSQ, { children: N })
+                            T && (0, i.jsx)(l.kSQ, { children: N })
                         ]
                     })
             });
