@@ -19,8 +19,8 @@ var i = n(200651),
     A = n(197712),
     w = n(511004),
     O = n(486324),
-    y = n(981631),
-    D = n(678916),
+    D = n(981631),
+    y = n(678916),
     b = n(388032),
     N = n(488629);
 function T(e) {
@@ -88,14 +88,14 @@ function v(e) {
             height: O.f,
             width: O.L0
         }))
-        .with(O.pC.VIDEO_BACKGROUND, () => D.HE)
+        .with(O.pC.VIDEO_BACKGROUND, () => y.HE)
         .with(O.pC.AVATAR, () => ({
-            height: y.dGM,
-            width: y.dGM
+            height: D.dGM,
+            width: D.dGM
         }))
         .with(O.pC.AVATAR_DECORATION, () => ({
-            height: y.dGM,
-            width: y.dGM
+            height: D.dGM,
+            width: D.dGM
         }))
         .with(O.pC.GUILD_BANNER, () => ({
             height: O._T,
@@ -198,7 +198,7 @@ function G(e, t) {
     }
 }
 function S(e) {
-    let { file: t, imageUri: n, originalAsset: a, transitionState: l, onCrop: R, onClose: D, uploadType: M = O.pC.AVATAR, showUpsellHeader: S = !1, analyticsPage: j } = e,
+    let { file: t, imageUri: n, originalAsset: a, transitionState: l, onCrop: R, onClose: y, uploadType: M = O.pC.AVATAR, showUpsellHeader: S = !1, analyticsPage: j } = e,
         B = r.useRef(x),
         P = r.useRef(null),
         z = r.useRef(null),
@@ -215,8 +215,8 @@ function S(e) {
         r.useEffect(() => {
             en &&
                 S &&
-                C.default.track(y.rMx.OPEN_MODAL, {
-                    type: y.jXE.CROP_GIF_MODAL,
+                C.default.track(D.rMx.OPEN_MODAL, {
+                    type: D.jXE.CROP_GIF_MODAL,
                     location: { page: j },
                     location_stack: ee
                 });
@@ -407,15 +407,15 @@ function S(e) {
                 originalAsset: a
             }),
                 $(!1),
-                D();
-        }, [H, t, Y, W, en, D, R, a, M]),
+                y();
+        }, [H, t, Y, W, en, y, R, a, M]),
         ep = r.useCallback(() => {
             if (null != z.current) {
                 z.current(), (z.current = null), $(!1);
                 return;
             }
-            D();
-        }, [D]);
+            y();
+        }, [y]);
     r.useEffect(
         () => (
             window.addEventListener('mouseup', es),
@@ -450,7 +450,7 @@ function S(e) {
                     (0, i.jsx)(h.Z, {
                         type: M,
                         analyticsPage: j,
-                        analyticsSection: y.jXE.CROP_GIF_MODAL,
+                        analyticsSection: D.jXE.CROP_GIF_MODAL,
                         isGIF: en,
                         banner: n
                     }),
@@ -463,7 +463,7 @@ function S(e) {
                             children: b.NW.string(b.t.DxAYCA)
                         }),
                         (0, i.jsx)(u.olH, {
-                            onClick: D,
+                            onClick: y,
                             className: N.modalCloseButton
                         })
                     ]
@@ -487,8 +487,7 @@ function S(e) {
                                     alt: 'avatar',
                                     ref: P,
                                     onMouseDown: ea,
-                                    draggable: !1,
-                                    crossOrigin: 'anonymous'
+                                    draggable: !1
                                 }),
                                 (0, i.jsx)('div', {
                                     className: M === O.pC.AVATAR ? N.overlayAvatar : N.overlayBanner,
