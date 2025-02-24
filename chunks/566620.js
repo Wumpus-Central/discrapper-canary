@@ -407,9 +407,14 @@ function ei(e) {
     if (null != a) {
         var s;
         let e = b.Z.getSelectedParticipantId(a),
-            t = null === (s = w.default.getCurrentUser()) || void 0 === s ? void 0 : s.id;
-        if (null == B.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n) || null == t || '' === t) return;
-        e === (0, v.oW)(n) && c.Z.selectParticipant(a, null);
+            t = null === (s = w.default.getCurrentUser()) || void 0 === s ? void 0 : s.id,
+            r = B.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
+        if (null == r || null == t || '' === t) return;
+        e ===
+            (0, v.gN)({
+                applicationId: n,
+                instanceId: null == r ? void 0 : r.compositeInstanceId
+            }) && c.Z.selectParticipant(a, null);
     }
 }
 async function eo() {

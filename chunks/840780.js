@@ -19,12 +19,12 @@ var r = n(200651),
     _ = n(317381),
     O = n(736409),
     j = n(835473),
-    C = n(413523),
-    x = n(933557),
-    P = n(194082),
-    S = n(550532),
-    I = n(436774),
-    N = n(594190),
+    x = n(413523),
+    C = n(933557),
+    S = n(194082),
+    P = n(550532),
+    N = n(436774),
+    I = n(594190),
     Z = n(925329),
     w = n(102172),
     E = n(74299),
@@ -33,8 +33,8 @@ var r = n(200651),
     D = n(989941),
     R = n(690221),
     L = n(231664),
-    M = n(759198),
-    k = n(131704),
+    k = n(759198),
+    M = n(131704),
     G = n(199902),
     B = n(314897),
     U = n(592125),
@@ -46,8 +46,8 @@ var r = n(200651),
     q = n(699516),
     Y = n(944486),
     Q = n(594174),
-    K = n(449224),
-    J = n(358085),
+    J = n(449224),
+    K = n(358085),
     X = n(345243),
     $ = n(115530),
     ee = n(339144),
@@ -124,9 +124,9 @@ class es extends i.PureComponent {
             children: [
                 e
                     ? (0, r.jsx)(A.Z, { title: l })
-                    : (0, r.jsx)(P.ZP, {
-                          look: P.ZP.Looks.GRAY,
-                          size: P.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(S.ZP, {
+                          look: S.ZP.Looks.GRAY,
+                          size: S.ZP.Sizes.SMALL,
                           className: ei.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -139,9 +139,9 @@ class es extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(u.SrA, {
                                         size: 'xxs',
-                                        color: I.JX.PREMIUM_TIER_2
+                                        color: N.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, r.jsx)(M.Z, {
+                                    (0, r.jsx)(k.Z, {
                                         className: ei.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
@@ -187,7 +187,7 @@ class es extends i.PureComponent {
                 }),
                 (0, r.jsxs)('div', {
                     className: ei.info,
-                    children: [t, (0, k.Qm)(l.type) ? h : (0, r.jsx)(ea, { timestamps: c })]
+                    children: [t, (0, M.Qm)(l.type) ? h : (0, r.jsx)(ea, { timestamps: c })]
                 })
             ]
         });
@@ -225,7 +225,19 @@ class es extends i.PureComponent {
             el(this, 'handleApplicationOrChannelLinkClick', () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id), !(0, b.R)() && ((0, k.vd)(t.type) && p.Z.selectParticipant(t.id, (0, C.oW)(n.applicationId)), (0, k.Qm)(t.type) && (0, y.tg)(er.Ez.PANEL));
+                s()(null != t, 'Channel is null during navigation click'),
+                    s()(null != n, 'Activity null during navigation click'),
+                    h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : en.ME, t.id),
+                    !(0, b.R)() &&
+                        ((0, M.vd)(t.type) &&
+                            p.Z.selectParticipant(
+                                t.id,
+                                (0, x.gN)({
+                                    applicationId: n.applicationId,
+                                    instanceId: n.compositeInstanceId
+                                })
+                            ),
+                        (0, M.Qm)(t.type) && (0, y.tg)(er.Ez.PANEL));
             });
     }
 }
@@ -254,23 +266,23 @@ let ec = (0, g.Z)(function (e) {
             return i;
         })(e, ['guildId']);
     let s = (0, c.e7)([B.default], () => B.default.getId()),
-        u = (0, c.e7)([N.ZP, K.Z], () => (0, D.Z)(N.ZP, K.Z)),
+        u = (0, c.e7)([I.ZP, J.Z], () => (0, D.Z)(I.ZP, J.Z)),
         d = (0, c.e7)([Y.Z, U.Z], () => U.Z.getChannel(Y.Z.getVoiceChannelId())),
         p = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
         h = (0, c.e7)([U.Z], () => U.Z.getChannel(p)),
         f = (0, c.e7)([V.Z], () => V.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [g, y] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
         O = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        C = (0, c.e7)([_.ZP], () => (null != h ? _.ZP.getSelfEmbeddedActivityForChannel(h.id) : null)),
-        P = (0, c.e7)([V.Z, H.Z, W.ZP], () => (null != d ? w.JL(d, V.Z, H.Z, !1) : null != o && w.h_(W.ZP.getChannels(o), V.Z, H.Z).length > 0)),
-        [I] = (0, j.Z)([null !== (l = null != y && null != y.id ? y.id : null != u && null != u.id ? u.id : null != C ? C.applicationId : void 0) && void 0 !== l ? l : '']),
-        Z = (0, c.e7)([S.Z], () => S.Z.getFakeGameData()),
+        x = (0, c.e7)([_.ZP], () => (null != h ? _.ZP.getSelfEmbeddedActivityForChannel(h.id) : null)),
+        S = (0, c.e7)([V.Z, H.Z, W.ZP], () => (null != d ? w.JL(d, V.Z, H.Z, !1) : null != o && w.h_(W.ZP.getChannels(o), V.Z, H.Z).length > 0)),
+        [N] = (0, j.Z)([null !== (l = null != y && null != y.id ? y.id : null != u && null != u.id ? u.id : null != x ? x.applicationId : void 0) && void 0 !== l ? l : '']),
+        Z = (0, c.e7)([P.Z], () => P.Z.getFakeGameData()),
         T = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         A = (0, v.Z0)() && null != T && (0, b.R)(),
-        R = (0, c.e7)([F.Z], () => (0, E.Z)(F.Z) && (0, J.isWindows)()),
-        M = (0, c.e7)([z.Z], () => (null != s ? z.Z.findActivity(s, (e) => e.type === en.IIU.PLAYING) : null)),
-        k = null != g && g.ownerId === s && g.state !== en.jm8.ENDED,
-        X = (0, c.e7)([Q.default, q.Z], () => (null != h ? (0, x.F6)(h, Q.default, q.Z) : void 0)),
+        R = (0, c.e7)([F.Z], () => (0, E.Z)(F.Z) && (0, K.isWindows)()),
+        k = (0, c.e7)([z.Z], () => (null != s ? z.Z.findActivity(s, (e) => e.type === en.IIU.PLAYING) : null)),
+        M = null != g && g.ownerId === s && g.state !== en.jm8.ENDED,
+        X = (0, c.e7)([Q.default, q.Z], () => (null != h ? (0, C.F6)(h, Q.default, q.Z) : void 0)),
         $ = (0, L.Z)(),
         [ee, et] = i.useState(!1);
     return (0, r.jsx)(
@@ -280,15 +292,15 @@ let ec = (0, g.Z)(function (e) {
             {
                 guildId: o,
                 canGoLive: R || A || void 0 !== Z,
-                activity: M,
-                embeddedActivity: C,
+                activity: k,
+                embeddedActivity: x,
                 userId: s,
                 runningGame: null != Z ? Z : u,
-                application: I,
+                application: N,
                 useReducedMotion: O,
-                isStreaming: k,
+                isStreaming: M,
                 channel: h,
-                canStream: P,
+                canStream: S,
                 stream: g,
                 streamMetadata: y,
                 channelName: X,

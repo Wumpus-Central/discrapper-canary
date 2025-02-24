@@ -17,5 +17,16 @@ function p(e, t) {
             application: p,
             channelId: _
         });
-    null == h && null != _ ? (0, s.uL)(f.Z5c.CHANNEL(e, _)) : null != h && (0, a.Z)(h), null != _ && null != n && (0, d.Z)(_) && (r.Z.selectParticipant(_, (0, o.oW)(n.applicationId)), r.Z.updateLayout(_, f.AEg.NO_CHAT));
+    null == h && null != _ ? (0, s.uL)(f.Z5c.CHANNEL(e, _)) : null != h && (0, a.Z)(h),
+        null != _ &&
+            null != n &&
+            (0, d.Z)(_) &&
+            (r.Z.selectParticipant(
+                _,
+                (0, o.gN)({
+                    applicationId: n.applicationId,
+                    instanceId: null == n ? void 0 : n.compositeInstanceId
+                })
+            ),
+            r.Z.updateLayout(_, f.AEg.NO_CHAT));
 }

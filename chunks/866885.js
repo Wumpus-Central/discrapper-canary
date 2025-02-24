@@ -105,7 +105,16 @@ function F(e) {
             selectedParticipant: q,
             participantsOpen: Q
         } = (0, s.cj)([h.Z], () => ({
-            activityParticipant: null != B ? h.Z.getParticipant(T.id, (0, _.oW)(B.applicationId)) : null,
+            activityParticipant:
+                null != B
+                    ? h.Z.getParticipant(
+                          T.id,
+                          (0, _.gN)({
+                              applicationId: B.applicationId,
+                              instanceId: B.compositeInstanceId
+                          })
+                      )
+                    : null,
             selectedParticipant: h.Z.getSelectedParticipant(T.id),
             participantsOpen: h.Z.getParticipantsOpen(T.id)
         })),
@@ -118,7 +127,14 @@ function F(e) {
         er = en && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
     function ei() {
         var e;
-        null != B && u.Z.selectParticipant(T.id, (0, _.oW)(B.applicationId));
+        null != B &&
+            u.Z.selectParticipant(
+                T.id,
+                (0, _.gN)({
+                    applicationId: B.applicationId,
+                    instanceId: B.compositeInstanceId
+                })
+            );
         let t = null !== (e = T.getGuildId()) && void 0 !== e ? e : x.ME;
         d.Z.channelListScrollTo(t, T.id), (0, m.XU)(t, T.id), null == K && (0, f.Ou)();
     }
