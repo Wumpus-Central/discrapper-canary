@@ -33,6 +33,10 @@ function x(e) {
         v = (0, d.I5)(C);
     return (
         (0, o.ZP)(() => {
+            if (!1 === g.enabled) {
+                p(!1);
+                return;
+            }
             if ((y || (0, i.ou)(), c.Z.shouldFetchOffer())) {
                 let e;
                 (0, u.isAndroid)() ? (e = O.gg.GOOGLE) : (0, u.isIOS)() && (e = O.gg.APPLE), (0, f.T)('useCollectibleDecoIsEligible', e);

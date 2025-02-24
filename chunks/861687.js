@@ -297,7 +297,9 @@ class ev extends f.Z {
         null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.setVideoSize(e, t * n), null === (i = this._goLiveQualityManager) || void 0 === i || i.setVideoSize(e, t, n);
     }
     set channelId(e) {
-        (this._channelId = e), this.channelIds.add(e);
+        let t = x.Z.getChannel(this.channelId),
+            n = null == t ? void 0 : t.type;
+        this.logger.info('Updating channel: '.concat(e, '(').concat(n, ')')), (this._channelId = e), this.channelIds.add(e);
     }
     get channelId() {
         return this._channelId;
@@ -328,7 +330,12 @@ class ev extends f.Z {
         this._selectedExperiments = t;
     }
     _handleConnecting(e) {
-        null != this.endpoint && this.logger.info('Connecting to RTC server '.concat(this.endpoint, ', rtc-connection-id: ').concat(this.getRTCConnectionId())), this.setState(er.hes.CONNECTING);
+        if (null != this.endpoint) {
+            let e = x.Z.getChannel(this.channelId),
+                t = null == e ? void 0 : e.type;
+            this.logger.info('Connecting to RTC server '.concat(this.endpoint, ', rtc-connection-id: ').concat(this.getRTCConnectionId(), ', channel: ').concat(this.channelId, '(').concat(t, ')'));
+        }
+        this.setState(er.hes.CONNECTING);
     }
     _handleConnect(e) {
         var t, n;
@@ -856,7 +863,7 @@ class ev extends f.Z {
     }
     _getAnalyticsProperties() {
         let e = x.Z.getChannel(this.channelId),
-            t = null != e ? e.type : null;
+            t = null == e ? void 0 : e.type;
         return {
             guild_id: this.guildId,
             channel_id: this.channelId,
@@ -1255,7 +1262,7 @@ class ev extends f.Z {
             })),
             eo(this, '_trackVoiceConnectionConnecting', () => {
                 let e = x.Z.getChannel(this.channelId),
-                    t = null != e ? e.type : null;
+                    t = null == e ? void 0 : e.type;
                 G.default.track(
                     er.rMx.VOICE_CONNECTION_CONNECTING,
                     el(ea({}, this.getAudioDeviceStates(), this.getVideoDeviceStates()), {
