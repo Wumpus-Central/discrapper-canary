@@ -732,7 +732,14 @@ function h(e, t) {
 o: try {
     if ((a = e.exports)) {
         try {
-            s = n(444982);
+            s = n(
+                Object(
+                    (function () {
+                        var e = Error("Cannot find module 'crypto'");
+                        throw ((e.code = 'MODULE_NOT_FOUND'), e);
+                    })()
+                )
+            );
         } catch (e) {
             s = null;
         }
