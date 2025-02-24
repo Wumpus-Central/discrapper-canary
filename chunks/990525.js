@@ -38,7 +38,8 @@ let b = (e) => {
         }, [a, t.id, x, n, O]),
         R = i.useCallback(() => {
             u.default.track(h.rMx.VOICE_FILTER_PREVIEW_PLAYED, { voice_filter_id: t.id }), T({ volume: 0.5 }), (0.25 > Math.random() || I > 0) && null != C && S((e) => (e + 1) % C.length);
-        }, [T, I, C, t.id]);
+        }, [T, I, C, t.id]),
+        L = null != v ? g.NW.string(v.name) : '';
     return (0, r.jsxs)('div', {
         className: o()(_.filter, Z, {
             [_.selected]: y,
@@ -112,11 +113,11 @@ let b = (e) => {
                                 })
                         ]
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsxs)(s.Text, {
                         className: _.filterName,
                         variant: 'text-xs/medium',
                         color: t.underDevelopment ? 'header-muted' : 'header-primary',
-                        children: null == v ? void 0 : v.name
+                        children: [t.underDevelopment ? '\uD83D\uDEA7 ' : '', L]
                     })
                 ]
             }),
@@ -124,10 +125,10 @@ let b = (e) => {
                 (0, r.jsx)(s.ua7, {
                     text: g.NW.string(P ? g.t.ItuPbm : g.t['0gtbEx']),
                     children: (e) => {
-                        var t, n, i;
+                        var t, n;
                         return (0, r.jsx)(
                             s.P3F,
-                            ((n = (function (e) {
+                            ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
@@ -152,11 +153,11 @@ let b = (e) => {
                                 }
                                 return e;
                             })({}, e)),
-                            (i = i =
+                            (n = n =
                                 {
                                     className: o()([_.hoverButtonCircle, _.previewButton], { [_.visible]: P }),
                                     onClick: P ? A : R,
-                                    'aria-label': g.NW.formatToPlainString(g.t.gDzvjY, { voiceFilterName: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' }),
+                                    'aria-label': g.NW.formatToPlainString(g.t.gDzvjY, { voiceFilterName: L }),
                                     children: P
                                         ? (0, r.jsx)(s.wNq, {
                                               size: 'custom',
@@ -172,7 +173,7 @@ let b = (e) => {
                                           })
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -180,10 +181,10 @@ let b = (e) => {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                  })(Object(n)).forEach(function (e) {
+                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
-                            n)
+                            t)
                         );
                     }
                 })
