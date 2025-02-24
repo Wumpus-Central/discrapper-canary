@@ -1,7 +1,6 @@
 n.d(t, {
-    Do: () => s,
-    JX: () => a,
-    S2: () => o
+    D: () => a,
+    S: () => o
 });
 var r = n(818083),
     i = n(987338);
@@ -20,10 +19,6 @@ let o = (0, r.B)({
     ]
 });
 function a(e) {
-    let { location: t } = e;
-    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
-}
-function s(e) {
     let { location: t } = e;
     return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
