@@ -8640,7 +8640,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     color: var(--status-danger-text)
 }
 
-.colorable_f1ceac.disconnect_f1ceac.active_f1ceac,
 .colorable_f1ceac.disconnect_f1ceac:hover {
     background: var(--red-500)
 }

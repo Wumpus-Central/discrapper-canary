@@ -5,12 +5,13 @@ n.d(t, {
     IC: () => j,
     OT: () => G,
     Vw: () => g,
+    WW: () => Z,
     XM: () => E,
     XS: () => x,
     Yq: () => B,
     aj: () => D,
     bl: () => L,
-    eu: () => F,
+    eu: () => V,
     f_: () => y,
     iC: () => P,
     mO: () => M,
@@ -18,8 +19,8 @@ n.d(t, {
     ql: () => b,
     rN: () => S,
     uV: () => w,
-    x0: () => V,
-    x6: () => Z
+    x0: () => H,
+    x6: () => F
 }),
     n(653041),
     n(47120);
@@ -201,25 +202,29 @@ let h = (e) => (null == e ? void 0 : e.premiumType) != null,
         let t = c.yf[e];
         return null != t && new Date().getTime() < t;
     },
-    Z = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
-    F = (e, t, n) => {
-        if (Z(e)) return v(e);
+    Z = (e) => {
+        let t = c.i0[e];
+        return null != t && new Date().getTime() < t;
+    },
+    F = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
+    V = (e, t, n) => {
+        if (F(e)) return v(e);
         let r = b(e, t ? (n ? u.tuJ.MOBILE : u.tuJ.DEFAULT) : n ? u.tuJ.MOBILE_PREMIUM_TIER_2 : u.tuJ.PREMIUM_TIER_2);
         return null == r ? void 0 : r.amount;
     },
-    V = (e, t) => {
+    H = (e, t) => {
         let n = [];
         for (let r of e) {
             let e = r.heroRanking;
             if (null != e)
                 for (let r of e) {
                     let e = t.get(r);
-                    if (null != e && !Z(e) && (n.push(r), n.length >= c.K8)) return n;
+                    if (null != e && !F(e) && (n.push(r), n.length >= c.K8)) return n;
                 }
         }
-        return H(n);
+        return W(n);
     },
-    H = (e) => {
+    W = (e) => {
         if (e.length < c.K8) {
             let t = c.HU.slice(0, c.K8 - e.length);
             return e.concat(t);
