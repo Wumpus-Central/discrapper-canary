@@ -1,4 +1,4 @@
-n.d(t, { c: () => m }), n(301563), n(47120);
+n.d(t, { c: () => v }), n(301563), n(47120);
 var r = n(200651),
     a = n(192379),
     o = n(481060),
@@ -19,32 +19,29 @@ function x(e) {
             let e = new Image();
             (e.src = f), (e.onload = () => i(!0)), (e.onerror = () => i(!0));
         }, [f]),
-        (0, r.jsx)(r.Fragment, {
-            children:
-                '' !== t && n
-                    ? (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(l.ZP, {
-                                  size: 288,
-                                  text: t
-                              }),
-                              (0, r.jsx)('div', {
-                                  className: d.qrcodeOverlay,
-                                  children: (0, r.jsx)('img', {
-                                      src: f,
-                                      alt: ''
-                                  })
-                              })
-                          ]
+        '' !== t && n
+            ? (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(l.ZP, {
+                          size: 288,
+                          text: t
+                      }),
+                      (0, r.jsx)('div', {
+                          className: d.qrcodeOverlay,
+                          children: (0, r.jsx)('img', {
+                              src: f,
+                              alt: ''
+                          })
                       })
-                    : (0, r.jsx)('div', {
-                          className: d.qrcodeSpinner,
-                          children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES })
-                      })
-        })
+                  ]
+              })
+            : (0, r.jsx)('div', {
+                  className: d.qrcodeSpinner,
+                  children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES })
+              })
     );
 }
-let m = (e) => {
+let v = (e) => {
     var t;
     let { code: n } = e,
         { width: a, height: l } = (0, i.Z)();

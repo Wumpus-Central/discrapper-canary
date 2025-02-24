@@ -1,31 +1,31 @@
-r.d(t, { Z: () => eC }), r(47120), r(627341);
+r.d(t, { Z: () => eb }), r(47120), r(627341);
 var n = r(200651),
-    l = r(192379),
-    i = r(120356),
-    a = r.n(i),
-    o = r(512722),
-    s = r.n(o),
+    i = r(192379),
+    l = r(120356),
+    o = r.n(l),
+    a = r(512722),
+    s = r.n(a),
     c = r(278074),
     d = r(873546),
     u = r(180650),
     p = r(979554),
     f = r(399606),
     h = r(622535),
-    C = r(663002),
-    m = r(481060),
-    b = r(276264),
+    b = r(663002),
+    C = r(481060),
+    m = r(276264),
     g = r(727637),
     v = r(607070),
     x = r(100527),
-    _ = r(906732),
-    j = r(693728),
+    j = r(906732),
+    _ = r(693728),
     y = r(333867),
     O = r(197115),
     k = r(876917),
     P = r(210887),
     S = r(822857),
-    E = r(960919),
-    w = r(74538),
+    w = r(960919),
+    E = r(74538),
     L = r(335131),
     I = r(1870),
     T = r(429368),
@@ -36,8 +36,8 @@ var n = r(200651),
     A = r(905357),
     R = r(724994),
     W = r(297651),
-    H = r(390698),
-    D = r(813083),
+    D = r(390698),
+    H = r(813083),
     M = r(680942),
     V = r(558060),
     U = r(237031),
@@ -54,9 +54,9 @@ var n = r(200651),
     et = r(474936),
     er = r(231338),
     en = r(388032),
-    el = r(864544),
-    ei = r(748241);
-function ea(e) {
+    ei = r(864544),
+    el = r(748241);
+function eo(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -81,7 +81,7 @@ function ea(e) {
     }
     return e;
 }
-function eo(e, t) {
+function ea(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -103,37 +103,37 @@ function es(e, t) {
     if (null == e) return {};
     var r,
         n,
-        l = (function (e, t) {
+        i = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                l = {},
-                i = Object.keys(e);
-            for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-            return l;
+                i = {},
+                l = Object.keys(e);
+            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+            return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
-    return l;
+    return i;
 }
 let ec = (e) => {
         var { children: t, onClick: r } = e,
-            l = es(e, ['children', 'onClick']);
+            i = es(e, ['children', 'onClick']);
         return (0, n.jsx)(
-            m.zxk,
-            eo(
-                ea(
+            C.zxk,
+            ea(
+                eo(
                     {
                         fullWidth: !0,
-                        look: m.zxk.Looks.FILLED,
-                        innerClassName: el.cardButtonInner,
+                        look: C.zxk.Looks.FILLED,
+                        innerClassName: ei.cardButtonInner,
                         onClick: (e) => {
                             e.stopPropagation(), r(e);
                         }
                     },
-                    l
+                    i
                 ),
                 { children: t }
             )
@@ -143,21 +143,21 @@ let ec = (e) => {
         var { className: t } = e,
             r = es(e, ['className']);
         return (0, n.jsx)(
-            m.zxk,
-            eo(
-                ea(
+            C.zxk,
+            ea(
+                eo(
                     {
-                        color: m.Ttl.BRAND,
-                        look: m.zxk.Looks.FILLED,
-                        size: m.PhG.ICON,
-                        className: a()(el.previewButton, t),
-                        innerClassName: el.previewButtonInner,
+                        color: C.Ttl.BRAND,
+                        look: C.zxk.Looks.FILLED,
+                        size: C.PhG.ICON,
+                        className: o()(ei.previewButton, t),
+                        innerClassName: ei.previewButtonInner,
                         'aria-label': en.NW.string(en.t.SKNnqq)
                     },
                     r
                 ),
                 {
-                    children: (0, n.jsx)(m.tEF, {
+                    children: (0, n.jsx)(C.tEF, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -166,50 +166,50 @@ let ec = (e) => {
         );
     },
     eu = (e) => {
-        let { profileEffectId: t, isHighlighted: r, isPurchased: l } = e;
+        let { profileEffectId: t, isHighlighted: r, isPurchased: i } = e;
         return (0, n.jsx)('div', {
-            className: el.profileEffectShopPreview,
+            className: ei.profileEffectShopPreview,
             children: (0, n.jsx)(k.Z, {
                 profileEffectId: t,
                 isHovering: r,
-                isPurchased: l && !r,
+                isPurchased: i && !r,
                 removeSetHeight: !0
             })
         });
     },
     ep = (e) => {
-        let { isStormMysteryItem: t, isHighlighted: r, isPurchased: l, user: i, item: o } = e;
+        let { isStormMysteryItem: t, isHighlighted: r, isPurchased: i, user: l, item: a } = e;
         return (0, n.jsx)('div', {
-            className: a()(el.avatarContainer, t && el.mysteryAvatarContainer),
+            className: o()(ei.avatarContainer, t && ei.mysteryAvatarContainer),
             children: (0, n.jsx)(q.R, {
-                item: o,
-                user: i,
-                isPurchased: l,
+                item: a,
+                user: l,
+                isPurchased: i,
                 isHighlighted: r
             })
         });
     },
     ef = (e) => {
         let { isDarkTheme: t } = e;
-        return (0, n.jsx)(j.Z, {
-            avatarSize: m.EFr.SIZE_32,
-            className: a()(ei.placeholder, el.nameplatePreviewSampleItem),
-            childrenClassName: t ? el.placeholderItemChildrenDark : el.placeholderItemChildrenLight,
+        return (0, n.jsx)(_.Z, {
+            avatarSize: C.EFr.SIZE_32,
+            className: o()(el.placeholder, ei.nameplatePreviewSampleItem),
+            childrenClassName: t ? ei.placeholderItemChildrenDark : ei.placeholderItemChildrenLight,
             doNotAnimate: !0
         });
     },
     eh = (e) => {
         let { user: t, isDarkTheme: r } = e;
         return (0, n.jsx)('div', {
-            className: el.nameplatePreviewRootContainer,
+            className: ei.nameplatePreviewRootContainer,
             children: (0, n.jsxs)('div', {
-                className: el.nameplatePreviewList,
+                className: ei.nameplatePreviewList,
                 children: [
                     (0, n.jsx)(ef, { isDarkTheme: r }),
                     (0, n.jsx)(ef, { isDarkTheme: r }),
-                    (0, n.jsx)(b.Z, {
+                    (0, n.jsx)(m.Z, {
                         user: t,
-                        className: el.nameplatePreviewSampleItem,
+                        className: ei.nameplatePreviewSampleItem,
                         hideClanTag: !0,
                         hideSubtext: !0
                     }),
@@ -219,42 +219,42 @@ let ec = (e) => {
             })
         });
     },
-    eC = function (e) {
-        let { product: t, user: r, category: i, onMount: o, isGiftEasterEggEnabled: b, isInFeedView: j, tab: k } = e,
-            { analyticsLocations: q } = (0, _.ZP)([...(j ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
-            ei = l.useRef(null),
-            es = (0, g.Z)(ei),
-            [ef, eC] = l.useState(!1),
-            em = es || ef,
-            eb = (0, Y.f)(t),
-            { previewingVariantIndex: eg } = eb,
+    eb = function (e) {
+        let { product: t, user: r, category: l, onMount: a, isGiftEasterEggEnabled: m, isInFeedView: _, tab: k } = e,
+            { analyticsLocations: q } = (0, j.ZP)([...(_ ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
+            el = i.useRef(null),
+            es = (0, g.Z)(el),
+            [ef, eb] = i.useState(!1),
+            eC = es || ef,
+            em = (0, Y.f)(t),
+            { previewingVariantIndex: eg } = em,
             ev = (0, A.T)(t),
             ex = (0, f.e7)([v.Z], () => v.Z.useReducedMotion),
-            e_ = w.ZP.canUseCollectibles(r),
-            ej = l.useMemo(() => (0, N.BH)(t, e_), [t, e_]),
+            ej = E.ZP.canUseCollectibles(r),
+            e_ = i.useMemo(() => (0, N.BH)(t, ej), [t, ej]),
             ey = (0, N.G1)(t),
             eO = (0, N.rN)(t),
             [ek, eP, eS] = (0, f.Wu)([I.Z], () => [I.Z.isClaiming === t.skuId, null != I.Z.isClaiming && I.Z.isClaiming !== t.skuId, I.Z.purchases]),
-            eE = (0, X.o)(t, eS, eg),
-            ew = (0, f.e7)([P.Z], () => (0, C.wj)(P.Z.theme)),
+            ew = (0, X.o)(t, eS, eg),
+            eE = (0, f.e7)([P.Z], () => (0, b.wj)(P.Z.theme)),
             eL = (0, N.Yq)(t.skuId),
             { hoverVariant: eI } = (0, B.E)('CollectiblesShopTallCard'),
-            eT = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
+            eT = l.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
             eN = (0, Z.hv)('CollectiblesShopTallCard'),
             eB = (0, T.o)(t, eS),
             eZ = (0, J.W)(t, eB),
-            eF = (0, N.XM)(eZ, e_, !1),
+            eF = (0, N.XM)(eZ, ej, !1),
             { isPurchased: eA, isPartiallyOwnedBundle: eR } = (0, R.L)(eZ),
             eW = null !== eg ? eg : eB,
-            [eH, eD] = l.useState(!1),
+            [eD, eH] = i.useState(!1),
             { enabled: eM } = (0, S.W)({ location: 'collectibles_shop_tall_card' }),
-            { handleCardVisibilityChange: eV } = (0, W.E)(eZ.skuId, j ? 'home' : 'full');
-        l.useEffect(() => {
-            let { current: e } = ei;
+            { handleCardVisibilityChange: eV } = (0, W.E)(eZ.skuId, _ ? 'home' : 'full');
+        i.useEffect(() => {
+            let { current: e } = el;
             if (null == e) return;
-            let t = () => eC(!0),
+            let t = () => eb(!0),
                 r = (t) => {
-                    e.contains(t.relatedTarget) || eC(!1);
+                    e.contains(t.relatedTarget) || eb(!1);
                 };
             return (
                 e.addEventListener('focusin', t),
@@ -265,16 +265,16 @@ let ec = (e) => {
                 }
             );
         }, []),
-            l.useEffect(() => {
-                null == o || o(ei);
-            }, [o]);
-        let eU = l.useRef(null),
+            i.useEffect(() => {
+                null == a || a(el);
+            }, [a]);
+        let eU = i.useRef(null),
             { handleUseNow: eG, isApplying: ez } = (0, F.W)({ product: eZ }),
             eq = (e) => (r) => {
                 (eU.current = r.currentTarget),
                     (0, U.T)({
                         product: t,
-                        category: i,
+                        category: l,
                         analyticsLocations: q,
                         analyticsSource: e,
                         returnRef: eU,
@@ -285,23 +285,27 @@ let ec = (e) => {
             e$ = eq(x.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
             eJ = () =>
                 (0, n.jsx)('div', {
-                    className: el.hoverUpsellContainer,
+                    className: ei.hoverUpsellContainer,
                     children: (0, n.jsx)(O.Z, {
                         fullWidth: !0,
-                        className: el.__invalid_premiumSubscribeButton,
+                        className: ei.__invalid_premiumSubscribeButton,
                         disabled: eP,
                         onClick: (e) => e.stopPropagation(),
                         buttonText: en.NW.string(en.t.sEAnVF),
                         subscriptionTier: et.Si.TIER_2
                     })
                 }),
-            { displayPrices: eX, checkoutEligiblePrices: eY } = (0, Q.I)({
+            {
+                displayPrices: eX,
+                checkoutEligiblePrices: eY,
+                isOrbExclusive: eQ
+            } = (0, Q.I)({
                 product: t,
-                isPremiumUser: e_,
+                isPremiumUser: ej,
                 tab: k
             });
         if (0 === eX.length) return null;
-        let eQ = () =>
+        let e1 = () =>
             ey || d.tq
                 ? null
                 : eO
@@ -309,65 +313,65 @@ let ec = (e) => {
                   : (0, n.jsx)(M.Z, {
                         product: t,
                         selectedVariantIndex: eB,
-                        returnRef: ei,
-                        isGiftEasterEggEnabled: b,
+                        returnRef: el,
+                        isGiftEasterEggEnabled: m,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     });
-        return (0, N.x6)(t) && null != ej && ej.discountPercentage < 0
+        return (0, N.x6)(t) && null != e_ && e_.discountPercentage < 0
             ? null
             : (0, n.jsx)(h.$, {
                   onChange: eV,
                   threshold: 0,
-                  children: (0, n.jsx)(m.tEY, {
-                      children: (0, n.jsxs)(m.kL8, {
-                          className: a()(ew ? el.shopCardDark : el.shopCard, {
-                              [el.partiallyOwned]: eR && !em,
-                              [el.shopCardAnimation]: !ex && eI !== B.D.NO_MOVEMENT,
-                              [ew ? el.shopCardDarkHighlighted : el.shopCardHighlighted]: em,
-                              [el.mysteryShopCard]: eT
+                  children: (0, n.jsx)(C.tEY, {
+                      children: (0, n.jsxs)(C.kL8, {
+                          className: o()(eE ? ei.shopCardDark : ei.shopCard, {
+                              [ei.partiallyOwned]: eR && !eC,
+                              [ei.shopCardAnimation]: !ex && eI !== B.D.NO_MOVEMENT,
+                              [eE ? ei.shopCardDarkHighlighted : ei.shopCardHighlighted]: eC,
+                              [ei.mysteryShopCard]: eT
                           }),
-                          ref: ei,
+                          ref: el,
                           onClick: eK,
                           'aria-label': t.name,
                           children: [
                               ey &&
-                                  (0, n.jsx)(m.ua7, {
-                                      tooltipContentClassName: el.premiumWheelTooltipContent,
-                                      color: m.ua7.Colors.PRIMARY,
+                                  (0, n.jsx)(C.ua7, {
+                                      tooltipContentClassName: ei.premiumWheelTooltipContent,
+                                      color: C.ua7.Colors.PRIMARY,
                                       text: en.NW.string(en.t.O2K0xM),
                                       children: (e) =>
                                           (0, n.jsx)(
-                                              m.IGR,
-                                              eo(ea({}, e), {
-                                                  className: el.premiumWheelBadge,
-                                                  text: (0, n.jsx)(m.SrA, {
+                                              C.IGR,
+                                              ea(eo({}, e), {
+                                                  className: ei.premiumWheelBadge,
+                                                  text: (0, n.jsx)(C.SrA, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: el.premiumWheel
+                                                      className: ei.premiumWheel
                                                   })
                                               })
                                           )
                                   }),
                               (0, n.jsx)('div', {
-                                  className: el.preview,
+                                  className: ei.preview,
                                   children: (0, c.EQ)(t.type)
                                       .with(p.Z.PROFILE_EFFECT, () =>
                                           (0, n.jsx)(eu, {
-                                              isHighlighted: em,
-                                              profileEffectId: eE.id,
+                                              isHighlighted: eC,
+                                              profileEffectId: ew.id,
                                               isPurchased: eA
                                           })
                                       )
                                       .with(
                                           p.Z.AVATAR_DECORATION,
                                           () => (
-                                              s()(eE.type === p.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
+                                              s()(ew.type === p.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
                                               (0, n.jsx)(ep, {
-                                                  item: eE,
+                                                  item: ew,
                                                   user: r,
                                                   isStormMysteryItem: eT,
-                                                  isHighlighted: em,
+                                                  isHighlighted: eC,
                                                   isPurchased: eA
                                               })
                                           )
@@ -375,7 +379,7 @@ let ec = (e) => {
                                       .with(p.Z.NAMEPLATE, () =>
                                           (0, n.jsx)(eh, {
                                               user: r,
-                                              isDarkTheme: ew
+                                              isDarkTheme: eE
                                           })
                                       )
                                       .with(p.Z.BUNDLE, () =>
@@ -383,7 +387,7 @@ let ec = (e) => {
                                               product: t,
                                               user: r,
                                               isPurchased: eA,
-                                              isHighlighted: em
+                                              isHighlighted: eC
                                           })
                                       )
                                       .with(p.Z.VARIANTS_GROUP, () => {
@@ -395,9 +399,9 @@ let ec = (e) => {
                                                     .with(p.Z.PROFILE_EFFECT, () => {
                                                         let [t] = e.items;
                                                         return (0, n.jsx)(eu, {
-                                                            isHighlighted: em,
+                                                            isHighlighted: eC,
                                                             profileEffectId: t.id,
-                                                            isPurchased: eA && !eH
+                                                            isPurchased: eA && !eD
                                                         });
                                                     })
                                                     .with(p.Z.AVATAR_DECORATION, () => {
@@ -408,7 +412,7 @@ let ec = (e) => {
                                                                 item: t,
                                                                 user: r,
                                                                 isStormMysteryItem: eT,
-                                                                isHighlighted: em,
+                                                                isHighlighted: eC,
                                                                 isPurchased: eA
                                                             })
                                                         );
@@ -419,70 +423,70 @@ let ec = (e) => {
                               }),
                               eA
                                   ? (0, n.jsx)('div', {
-                                        className: el.checkmarkWrapper,
-                                        children: (0, n.jsx)(m.sV5, {
+                                        className: ei.checkmarkWrapper,
+                                        children: (0, n.jsx)(C.sV5, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 38,
                                             height: 38,
-                                            className: el.checkmark
+                                            className: ei.checkmark
                                         })
                                     })
                                   : null,
                               (0, n.jsxs)('div', {
-                                  className: a()(el.cardText, ew ? el.darkCardBackground : el.lightCardBackground, { [el.variantsGroup]: t.type === p.Z.VARIANTS_GROUP }),
+                                  className: o()(ei.cardText, eE ? ei.darkCardBackground : ei.lightCardBackground, { [ei.variantsGroup]: t.type === p.Z.VARIANTS_GROUP }),
                                   children: [
-                                      (0, n.jsx)(m.Text, {
+                                      (0, n.jsx)(C.Text, {
                                           variant: 'text-lg/bold',
-                                          className: el.productName,
+                                          className: ei.productName,
                                           children: ev
                                       }),
                                       t.type === p.Z.VARIANTS_GROUP
                                           ? (0, n.jsx)(z.P, {
                                                 variantGroupProduct: t,
-                                                previewingVariantIndexProps: eb,
-                                                setIsHoveringOnSwitch: eD,
+                                                previewingVariantIndexProps: em,
+                                                setIsHoveringOnSwitch: eH,
                                                 purchases: eS,
-                                                minimal: !em,
-                                                alternativeBackgroundColor: (null == eE ? void 0 : eE.type) === p.Z.PROFILE_EFFECT
+                                                minimal: !eC,
+                                                alternativeBackgroundColor: (null == ew ? void 0 : ew.type) === p.Z.PROFILE_EFFECT
                                             })
                                           : null,
                                       (0, n.jsxs)('div', {
-                                          className: el.detailsWrapper,
+                                          className: ei.detailsWrapper,
                                           children: [
                                               (0, n.jsx)('div', {
-                                                  className: eR ? void 0 : el.innerBlur,
+                                                  className: eR ? void 0 : ei.innerBlur,
                                                   children:
                                                       eA || eR
-                                                          ? (0, n.jsx)(H.U, {
-                                                                className: el.priceTag,
+                                                          ? (0, n.jsx)(D.U, {
+                                                                className: ei.priceTag,
                                                                 isPartiallyPurchased: eR
                                                             })
                                                           : ey
-                                                            ? (0, n.jsx)(m.Text, {
+                                                            ? (0, n.jsx)(C.Text, {
                                                                   variant: 'text-md/semibold',
-                                                                  className: el.priceTag,
+                                                                  className: ei.priceTag,
                                                                   children: en.NW.string(en.t.rt69oq)
                                                               })
                                                             : eM
                                                               ? (0, n.jsx)(G.Z, {
                                                                     displayPrices: eX,
-                                                                    isPremiumUser: e_
+                                                                    isPremiumUser: ej
                                                                 })
                                                               : (0, n.jsx)(V.Z, {
                                                                     product: eZ,
-                                                                    discount: ej,
-                                                                    isPremiumUser: e_,
-                                                                    className: el.priceTag
+                                                                    discount: e_,
+                                                                    isPremiumUser: ej,
+                                                                    className: ei.priceTag
                                                                 })
                                               }),
                                               (0, n.jsx)('div', {
-                                                  className: el.innerHover,
+                                                  className: ei.innerHover,
                                                   children: (() => {
                                                       var e;
-                                                      if (ey && !e_ && !eO) return eJ();
+                                                      if (ey && !ej && !eO) return eJ();
                                                       let r = eM && (null === (e = eY[0]) || void 0 === e ? void 0 : e.currency) === er.pK.DISCORD_ORB,
-                                                          l = ey
+                                                          i = ey
                                                               ? {
                                                                     submitting: ek,
                                                                     submittingStartedLabel: en.NW.string(en.t['TYw+9v']),
@@ -505,13 +509,13 @@ let ec = (e) => {
                                                                                       selectedVariantIndex: eB
                                                                                   }),
                                                                                   analyticsLocations: q,
-                                                                                  returnRef: ei,
+                                                                                  returnRef: el,
                                                                                   variantsReturnStyle: eN
                                                                               });
                                                                     }
                                                                 };
                                                       return (0, n.jsxs)('div', {
-                                                          className: el.buttonsContainer,
+                                                          className: ei.buttonsContainer,
                                                           children: [
                                                               eR
                                                                   ? null
@@ -524,18 +528,18 @@ let ec = (e) => {
                                                                       })
                                                                     : (0, n.jsx)(
                                                                           ec,
-                                                                          eo(ea({ disabled: eP }, l), {
+                                                                          ea(eo({ disabled: eP }, i), {
                                                                               children: ey
                                                                                   ? en.NW.string(en.t.zp6caG)
                                                                                   : r
                                                                                     ? en.NW.format(en.t.kAgx5O, {
                                                                                           orbPrice: eY[0].amount,
-                                                                                          orbIconHook: () => (0, n.jsx)(E.Z, {})
+                                                                                          orbIconHook: () => (0, n.jsx)(w.Z, {})
                                                                                       })
                                                                                     : en.NW.formatToPlainString(en.t['cNSL/v'], { price: eF })
                                                                           })
                                                                       ),
-                                                              eQ()
+                                                              e1()
                                                           ]
                                                       });
                                                   })()
@@ -544,19 +548,25 @@ let ec = (e) => {
                                       })
                                   ]
                               }),
-                              (0, n.jsx)(D.Z, {
-                                  category: i,
-                                  className: el.limitedTimeBadge,
+                              (0, n.jsx)(H.Z, {
+                                  category: l,
+                                  className: ei.limitedTimeBadge,
                                   display: 'card'
                               }),
                               eL &&
                                   !eR &&
                                   !eA &&
-                                  i.skuId !== u.T.ROBERT &&
-                                  (0, n.jsx)(m.IGR, {
+                                  l.skuId !== u.T.ROBERT &&
+                                  (0, n.jsx)(C.IGR, {
                                       text: en.NW.string(en.t.y2b7CA),
                                       disableColor: !0,
-                                      className: el.newBadge
+                                      className: ei.badge
+                                  }),
+                              eQ &&
+                                  (0, n.jsx)(C.IGR, {
+                                      text: en.NW.string(en.t.Q2K5pa),
+                                      disableColor: !0,
+                                      className: ei.badge
                                   })
                           ]
                       })

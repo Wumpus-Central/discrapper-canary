@@ -1,22 +1,24 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var o = n(642128),
     s = n(481060),
     a = n(497505),
     i = n(467628),
-    l = n(644646),
-    c = n(46140),
-    d = n(388032),
-    u = n(528515);
-let p = (e) => {
-    let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: f } = e,
-        g = (0, i.j)({ location: c.dr.QUESTS_BAR });
+    l = n(713124),
+    c = n(644646),
+    d = n(46140),
+    u = n(388032),
+    p = n(528515);
+let m = (e) => {
+    let { quest: t, expansionSpring: n, isFullyExpanded: m, partnerBranding: f, useReducedMotion: g } = e,
+        x = (0, i.j)({ location: d.dr.QUESTS_BAR }),
+        h = (0, l.S)({ location: d.dr.QUESTS_BAR });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', { className: u.rewardTileSpacer }),
+            (0, r.jsx)('div', { className: p.rewardTileSpacer }),
             (0, r.jsx)(o.animated.div, {
-                className: u.rewardTileContainer,
+                className: p.rewardTileContainer,
                 style: {
                     transform: (0, o.to)(
                         [
@@ -26,7 +28,7 @@ let p = (e) => {
                             }),
                             n.to({
                                 range: [0, 1],
-                                output: [0, g ? 116 : 92]
+                                output: [0, x ? 116 : 92]
                             }),
                             n.to({
                                 range: [1, 0],
@@ -36,16 +38,16 @@ let p = (e) => {
                         (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
                     )
                 },
-                children: (0, r.jsx)(l.Z, {
+                children: (0, r.jsx)(c.Z, {
                     learnMoreStyle: 'text',
                     quest: t,
                     questContent: a.jn.QUEST_BAR_V2,
-                    location: c.dr.QUESTS_BAR,
-                    autoplay: p && !f
+                    location: d.dr.QUESTS_BAR,
+                    autoplay: m && !g
                 })
             }),
             (0, r.jsxs)(o.animated.div, {
-                className: u.rewardHighlightLogoCTA,
+                className: p.rewardHighlightLogoCTA,
                 style: {
                     transform: (0, o.to)(
                         [
@@ -63,11 +65,11 @@ let p = (e) => {
                 },
                 children: [
                     (0, r.jsx)('div', {
-                        className: u.partnerBranding,
-                        children: m
+                        className: p.partnerBranding,
+                        children: f
                     }),
                     (0, r.jsx)(o.animated.div, {
-                        className: u.rewardHighlightCTA,
+                        className: p.rewardHighlightCTA,
                         style: {
                             opacity: n.to({
                                 range: [0, 1],
@@ -77,7 +79,7 @@ let p = (e) => {
                         children: (0, r.jsx)(s.Text, {
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: d.NW.string(d.t['2BD0CQ'])
+                            children: h ? u.NW.string(u.t['1Wvve3']) : u.NW.string(u.t['2BD0CQ'])
                         })
                     })
                 ]

@@ -20,7 +20,10 @@ function c(e) {
                     (0, i.jsx)(a.Z, {})
                 ]
             }),
-            (0, i.jsx)(l.Z, { orbAmount: t.amount })
+            (0, i.jsx)(l.Z, {
+                orbAmount: t.amount,
+                showInsufficientOrbBalanceTooltip: !0
+            })
         ]
     });
 }
