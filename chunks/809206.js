@@ -2,17 +2,18 @@ n.d(t, {
     FD: () => g,
     I5: () => S,
     Mn: () => y,
-    P6: () => P,
+    P6: () => D,
+    Re: () => I,
     S2: () => b,
-    UZ: () => I,
+    UZ: () => T,
     V3: () => O,
-    W3: () => R,
+    W3: () => P,
     Zy: () => E,
-    b9: () => A,
-    cV: () => T,
-    si: () => C,
+    b9: () => C,
+    cV: () => N,
+    si: () => R,
     ss: () => v,
-    xn: () => N
+    xn: () => A
 });
 var r = n(544891),
     i = n(433517),
@@ -178,31 +179,38 @@ function S(e) {
 }
 function I(e) {
     a.Z.dispatch({
+        type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_V2',
+        avatar: e
+    }),
+        null == e ? o.uv.announce(_.NW.string(_.t['f1+oNj'])) : o.uv.announce(_.NW.string(_.t.NstziY));
+}
+function T(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function T(e) {
+function N(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function N(e) {
+function A(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function A() {
+function C() {
     a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function C() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function R() {
+function P() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function P() {
+function D() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }
