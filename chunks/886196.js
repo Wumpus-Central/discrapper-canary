@@ -33,7 +33,7 @@ class d extends i.Z {
         let {} = e;
         this._scheduleNextRollover(), this._scheduleRefresh();
     }
-    handleCurrentUserUpdate() {
+    handlePostConnectionOpen() {
         u() && (0, l.wV)();
     }
     _scheduleNextRollover() {
@@ -62,8 +62,7 @@ class d extends i.Z {
             c(this, 'actions', {
                 VOICE_FILTER_CATALOG_FETCH_SUCCESS: (e) => this.handleVoiceFilterCatalogUpdate(e),
                 VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: (e) => this.handleVoiceFilterCatalogUpdate(e),
-                CURRENT_USER_UPDATE: () => this.handleCurrentUserUpdate(),
-                LOGIN_SUCCESS: () => this.handleCurrentUserUpdate()
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }),
             c(this, 'rolloverTimeout', null),
             c(this, 'refreshTimeout', null);
