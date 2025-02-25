@@ -6,7 +6,7 @@ n.d(t, {
     f3: () => b,
     iL: () => C,
     nA: () => I,
-    qF: () => m,
+    qF: () => g,
     uV: () => y,
     vY: () => N
 }),
@@ -23,15 +23,20 @@ var r = n(200651),
     u = n(424218),
     d = n(74538),
     f = n(981631),
-    _ = n(474936),
-    p = n(388032);
+    p = n(474936),
+    _ = n(388032);
 let h = 524288000,
-    g = 524288000;
-function m(e, t) {
-    return e instanceof File ? e : E(e.data.buffer, e.filename, null != t ? t : 'text/plain');
+    m = 524288000;
+function g(e, t) {
+    return e instanceof File ? e : E(e.data.buffer, e.filename, t);
 }
-function E(e, t, n) {
-    return new File([e], t, { type: n });
+function E(e, t, r) {
+    let i = n(230318);
+    if (null == t && ((t = 'unknown'), 'type' in e)) {
+        let n = i.extension(e.type);
+        n && (t += '.'.concat(n));
+    }
+    return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
 }
 let v = [
     {
@@ -108,7 +113,7 @@ function S(e) {
         n = d.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = l.Z.getGuild(e);
-    return Math.max(null != r ? _.HO[r.premiumTier].limits.fileSize : f.mBz, n);
+    return Math.max(null != r ? p.HO[r.premiumTier].limits.fileSize : f.mBz, n);
 }
 function I(e, t) {
     let n = S(t);
@@ -124,15 +129,15 @@ function N(e) {
 }
 function A() {
     let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? g : h;
+    return null != e && e.isStaff() ? m : h;
 }
 function C(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, u.BU)(S(t) / 1024, { useKibibytes: !0 }),
-        o = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
-        a = p.NW.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
-        s = p.NW.formatToPlainString(p.t.htbuIS, { premiumMaxSize: o }),
-        l = p.NW.format(p.t.fjSvsL, { onClick: n });
+        o = (0, u.BU)(p.Uq / 1024, { useKibibytes: !0 }),
+        a = _.NW.formatToPlainString(_.t.q5fTZm, { maxSize: i }),
+        s = _.NW.formatToPlainString(_.t.htbuIS, { premiumMaxSize: o }),
+        l = _.NW.format(_.t.fjSvsL, { onClick: n });
     return (0, r.jsxs)(r.Fragment, {
         children: [a, ' ', s.replace('\n', ' '), '. ', l]
     });

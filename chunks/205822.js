@@ -1,14 +1,15 @@
-n.d(t, { Z: () => v }), n(266796), n(47120);
+n.d(t, { Z: () => E }), n(266796), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     o = n.n(l),
     s = n(481060),
-    a = n(310752),
-    u = n(531643),
-    d = n(388032),
-    c = n(371100),
-    h = n(198023);
+    a = n(710845),
+    u = n(310752),
+    d = n(531643),
+    c = n(388032),
+    h = n(371100),
+    p = n(198023);
 function f(e, t, n) {
     return (
         t in e
@@ -22,12 +23,13 @@ function f(e, t, n) {
         e
     );
 }
-function p() {
+let g = new a.Z('UploadArea');
+function v() {
     return (0, i.jsxs)('div', {
-        children: [(0, i.jsx)('div', { className: o()(h.sparkleWhite, c.sparkleOne) }), (0, i.jsx)('div', { className: o()(h.sparkleWhite, c.sparkleTwo) }), (0, i.jsx)('div', { className: o()(h.lightWhite, c.lightOne) }), (0, i.jsx)('div', { className: o()(h.lightWhite, c.lightTwo) }), (0, i.jsx)('div', { className: o()(h.crossWhite, c.crossOne) }), (0, i.jsx)('div', { className: o()(h.crossWhite, c.crossTwo) }), (0, i.jsx)('div', { className: o()(h.popWhite, c.popOne) })]
+        children: [(0, i.jsx)('div', { className: o()(p.sparkleWhite, h.sparkleOne) }), (0, i.jsx)('div', { className: o()(p.sparkleWhite, h.sparkleTwo) }), (0, i.jsx)('div', { className: o()(p.lightWhite, h.lightOne) }), (0, i.jsx)('div', { className: o()(p.lightWhite, h.lightTwo) }), (0, i.jsx)('div', { className: o()(p.crossWhite, h.crossOne) }), (0, i.jsx)('div', { className: o()(p.crossWhite, h.crossTwo) }), (0, i.jsx)('div', { className: o()(p.popWhite, h.popOne) })]
     });
 }
-class g extends r.Component {
+class C extends r.Component {
     componentDidMount() {
         let e = this.elementDOMRef.current;
         null != e && (e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1), e.addEventListener('dragover', this.handleDragOverZone, !1), e.addEventListener('dragleave', this.handleDragLeaveZone, !1), e.addEventListener('drop', this.handleDrop, !1));
@@ -40,26 +42,26 @@ class g extends r.Component {
         let { title: e, description: t, icons: n, style: r, className: l } = this.props;
         return (0, i.jsx)('div', {
             ref: this.elementDOMRef,
-            className: o()(l, c.uploadArea, {
-                [c.droppable]: this.state.isDragging,
-                [c.uploadModalIn]: this.state.isOverZone
+            className: o()(l, h.uploadArea, {
+                [h.droppable]: this.state.isDragging,
+                [h.uploadModalIn]: this.state.isOverZone
             }),
             style: r,
             children: (0, i.jsxs)('div', {
-                className: c.uploadDropModal,
+                className: h.uploadDropModal,
                 children: [
-                    this.state.isDragging && (0, i.jsx)(p, {}),
-                    (0, i.jsx)('div', { className: c.bgScale }),
+                    this.state.isDragging && (0, i.jsx)(v, {}),
+                    (0, i.jsx)('div', { className: h.bgScale }),
                     (0, i.jsxs)('div', {
-                        className: c.inner,
+                        className: h.inner,
                         children: [
-                            (0, i.jsx)(a.Z, { icons: n }),
+                            (0, i.jsx)(u.Z, { icons: n }),
                             (0, i.jsx)('div', {
-                                className: c.title,
+                                className: h.title,
                                 children: e
                             }),
                             (0, i.jsx)('div', {
-                                className: c.instructions,
+                                className: h.instructions,
                                 children: (0, i.jsx)('pre', { children: t })
                             })
                         ]
@@ -83,9 +85,10 @@ class g extends r.Component {
                     try {
                         var t;
                         let i = null !== (t = e[n].webkitGetAsEntry()) && void 0 !== t ? t : e[n].getAsEntry();
-                        if (i && !i.isFile) return !1;
+                        if (null == i) return g.warn('Dropped item is null or undefined'), !1;
+                        return i.isFile || (this.props.canUploadDirectory && i.isDirectory);
                     } catch (e) {
-                        continue;
+                        g.error('Error validating dropped item', e);
                     }
                 return !0;
             }),
@@ -103,9 +106,9 @@ class g extends r.Component {
                     (i.dropEffect = 'none'),
                     n &&
                         (t.setState({ isDragging: !1 }),
-                        (0, u.openUploadError)({
-                            title: d.NW.string(d.t.azO1PT),
-                            help: d.NW.string(d.t.Koklr6),
+                        (0, d.openUploadError)({
+                            title: c.NW.string(c.t.azO1PT),
+                            help: c.NW.string(c.t.Koklr6),
                             icons: t.props.icons
                         })),
                     !1)
@@ -116,7 +119,7 @@ class g extends r.Component {
                 if (!this.preventUnwantedDrop(e)) return !1;
                 let r = e.dataTransfer;
                 if (null != r) {
-                    if (((r.dropEffect = 'copy'), (0, s.nfh)(u.A) && (0, s.Mr3)(u.A), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging)) {
+                    if (((r.dropEffect = 'copy'), (0, s.nfh)(d.A) && (0, s.Mr3)(d.A), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging)) {
                         let e = null === (i = this.elementDOMRef.current) || void 0 === i ? void 0 : i.ownerDocument.defaultView;
                         ((null != e && r.types instanceof e.DOMStringList && r.types.contains('application/x-moz-file')) || -1 !== r.types.indexOf('Files')) && this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
                     }
@@ -152,4 +155,4 @@ class g extends r.Component {
             });
     }
 }
-let v = g;
+let E = C;
