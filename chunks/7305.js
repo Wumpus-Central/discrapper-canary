@@ -28,10 +28,10 @@ var l = n(200651),
     N = n(92594),
     y = n(293858),
     I = n(183813),
-    v = n(614223),
-    O = n(174827),
-    P = n(846464),
-    b = n(184160),
+    O = n(614223),
+    v = n(174827),
+    b = n(846464),
+    P = n(184160),
     T = n(48175),
     M = n(981631),
     Z = n(474936),
@@ -64,7 +64,7 @@ function U(e) {
 }
 let A = [h.h8.PLAN_SELECT, h.h8.ADD_PAYMENT_STEPS, h.h8.REVIEW, h.h8.CONFIRM];
 function R(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: _, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: N, renderPurchaseConfirmation: y, postSuccessGuild: I, followupSKUInfo: v, renderHeader: O, applicationId: P, guildId: b, referralTrialOfferId: T, skuId: w, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: A } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: u, subscriptionTier: _, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: N, renderPurchaseConfirmation: y, postSuccessGuild: I, followupSKUInfo: O, renderHeader: v, applicationId: b, guildId: P, referralTrialOfferId: T, skuId: w, returnRef: k, skipConfirm: U = !1, continueSessionToInitialStep: A } = e,
         { analyticsLocations: R } = (0, C.ZP)();
     i.useEffect(() => {
         c.Z.isLoadedForPremiumSKUs() || r.Z.wait(() => (0, a.Y2)());
@@ -93,10 +93,10 @@ function R(e) {
         onSubscriptionConfirmation: N,
         renderPurchaseConfirmation: y,
         postSuccessGuild: I,
-        followupSKUInfo: v,
-        renderHeader: O,
-        applicationId: P,
-        guildId: b,
+        followupSKUInfo: O,
+        renderHeader: v,
+        applicationId: b,
+        guildId: P,
         referralTrialOfferId: T,
         skuId: w,
         shakeWhilePurchasing: !0,
@@ -109,7 +109,7 @@ function R(e) {
 function H(e) {
     let { startedPaymentFlowWithPaymentSourcesRef: t, selectedSkuId: n } = (0, f.JL)(),
         { isGift: l } = (0, x.wD)();
-    return (0, v.Kp)({
+    return (0, O.Kp)({
         isTrial: null != e && e,
         isGift: l,
         selectedSkuId: n,
@@ -163,7 +163,7 @@ let B = [
     },
     {
         key: h.h8.SKU_SELECT,
-        renderStep: (e) => (0, l.jsx)(P.q, U({}, e)),
+        renderStep: (e) => (0, l.jsx)(b.q, U({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0,
@@ -172,7 +172,7 @@ let B = [
     },
     {
         key: h.h8.WHAT_YOU_LOSE,
-        renderStep: (e) => (0, l.jsx)(b.x, U({}, e)),
+        renderStep: (e) => (0, l.jsx)(P.x, U({}, e)),
         options: {
             renderHeader: !1,
             hideSlider: !0
@@ -180,7 +180,7 @@ let B = [
     },
     {
         key: h.h8.PLAN_SELECT,
-        renderStep: (e) => (0, l.jsx)(O.x, U({}, e)),
+        renderStep: (e) => (0, l.jsx)(v.x, U({}, e)),
         options: {
             renderHeader: !0,
             useBreadcrumbLabel: (e) => (H(e) ? null : w.NW.string(w.t['r+SebW']))
@@ -227,8 +227,8 @@ function F(e) {
     let t = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: n } = (0, C.ZP)(e.analyticsLocations, o.Z.PREMIUM_PAYMENT_MODAL),
         i = (0, S.s)('premiumPaymentModal'),
-        { confirmationFooter: r, defaultPlanId: a, giftingOrigin: d, giftMessage: c, giftRecipient: p, giftStyle: h, isGift: j, loadId: m, referralCode: L, repeatPurchase: g, subscriptionTier: E } = e;
-    if (null != E && !Object.values(Z.Si).includes(E)) throw Error('subscriptionTier must be a premium subscription');
+        { confirmationFooter: r, defaultPlanId: a, giftingOrigin: d, giftMessage: c, giftRecipient: p, giftStyle: h, isGift: j, loadId: m, planSelectBanner: L, referralCode: g, repeatPurchase: E, subscriptionTier: y } = e;
+    if (null != y && !Object.values(Z.Si).includes(y)) throw Error('subscriptionTier must be a premium subscription');
     return (0, l.jsx)(C.Gt, {
         value: n,
         children: (0, l.jsx)(f.PaymentContextProvider, {
@@ -238,10 +238,11 @@ function F(e) {
             skuIDs: [...Z.YQ],
             isGift: j,
             defaultPlanId: a,
-            referralCode: L,
-            repeatPurchase: g,
+            referralCode: g,
+            repeatPurchase: E,
             children: (0, l.jsx)(_.c1, {
                 confirmationFooter: r,
+                planSelectBanner: L,
                 children: (0, l.jsxs)(x.KB, {
                     isGift: j,
                     giftRecipient: null == p ? void 0 : p,
