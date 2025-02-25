@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => T,
+    O: () => A,
     U: () => C.Un
 }),
     n(653041),
@@ -31,66 +31,67 @@ var r = n(200651),
     j = n(135431),
     N = n(758199),
     C = n(914498),
-    I = n(981631),
-    S = n(388032),
-    P = n(405796);
-function T(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: b, activityReferrerId: P } = e,
-        { name: T, bot: Z, isDiscoverable: k } = t,
-        R = null == Z ? void 0 : Z.id,
-        L = (0, j.Eb)({
+    I = n(172109),
+    S = n(981631),
+    P = n(388032),
+    T = n(405796);
+function A(e) {
+    let { app: t, embedUrl: n, linkType: l, activityCustomId: b, activityReferrerId: T } = e,
+        { name: A, bot: k, isDiscoverable: R } = (t = (0, I.O)(t)),
+        L = null == k ? void 0 : k.id,
+        D = (0, j.Eb)({
             customInstallUrl: t.customInstallUrl,
             installParams: t.installParams,
             integrationTypesConfig: t.integrationTypesConfig
         }),
-        D = L && null != t.integrationTypesConfig && a.Y.GUILD_INSTALL in t.integrationTypesConfig,
-        M = L && null != t.integrationTypesConfig && a.Y.USER_INSTALL in t.integrationTypesConfig,
-        W = (0, o.e7)([O.Z], () => {
+        M = D && null != t.integrationTypesConfig && a.Y.GUILD_INSTALL in t.integrationTypesConfig,
+        W = D && null != t.integrationTypesConfig && a.Y.USER_INSTALL in t.integrationTypesConfig,
+        F = (0, o.e7)([O.Z], () => {
             var e;
             return null !== (e = O.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        F = (0, f.PL)(!0, !1),
-        U = (0, f.LD)(W, !1),
-        B = (0, j.TK)(t.id, F),
+        U = (0, f.PL)(!0, !1),
+        B = (0, f.LD)(F, !1),
         G = (0, j.TK)(t.id, U),
-        H = (0, p.ye)(t),
-        V = E.ZP.getApplicationIconURL({
+        H = (0, j.TK)(t.id, B),
+        V = (0, p.ye)(t),
+        z = E.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
-            bot: Z
+            bot: k
         }),
-        { url: z } = (0, c.Z)({
-            applicationId: H ? t.id : void 0,
+        { url: K } = (0, c.Z)({
+            applicationId: V ? t.id : void 0,
             size: 600,
             names: ['embedded_cover']
         }),
         {
-            staticBannerSrc: K,
-            videoBannerSrc: Y,
-            bannerAspectRatio: X
+            staticBannerSrc: Y,
+            videoBannerSrc: X,
+            bannerAspectRatio: q
         } = i.useMemo(() => {
             let e, n;
             let r = N.u.BOT;
-            if (null != Z) {
-                let { banner: t } = Z;
+            if (null != k) {
+                let { banner: t } = k;
                 (e = (0, E.aN)({
-                    id: Z.id,
+                    id: k.id,
                     banner: t,
                     size: 512,
                     canAnimate: !1
                 })),
                     (0, E.xR)(t) &&
-                        null == z &&
+                        null == K &&
                         (n = (0, E.aN)({
-                            id: Z.id,
+                            id: k.id,
                             banner: t,
                             size: 512,
                             canAnimate: !0
                         }));
             }
-            if (H) {
+            if (V) {
                 let i = (0, p.yJ)(t);
-                null != z && ((e = z), (r = N.u.ACTIVITY));
+                null != K && ((e = K), (r = N.u.ACTIVITY));
                 let a = null == i ? void 0 : i.activity_preview_video_asset_id;
                 null != a && ((n = (0, s.Z)(t.id, a)), (r = N.u.ACTIVITY));
             }
@@ -99,32 +100,32 @@ function T(e) {
                 videoBannerSrc: n,
                 bannerAspectRatio: r
             };
-        }, [z, Z, H, t]),
-        { analyticsLocations: q } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
-        Q = i.useCallback(
+        }, [K, k, V, t]),
+        { analyticsLocations: Q } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
+        J = i.useCallback(
             (e) => {
-                (0, C.KX)(t.id, l, e, P, b);
+                (0, C.KX)(t.id, l, e, T, b);
             },
-            [b, P, t.id, l]
+            [b, T, t.id, l]
         ),
-        J = i.useCallback(() => {
-            (0, C.GF)(t.id, l, P, b);
-        }, [b, P, t.id, l]),
         $ = i.useCallback(() => {
+            (0, C.GF)(t.id, l, T, b);
+        }, [b, T, t.id, l]),
+        ee = i.useCallback(() => {
             (0, C.Yu)(t.id, l);
         }, [t.id, l]),
-        ee = (0, o.e7)(
+        et = (0, o.e7)(
             [v.Z, y.Z, x.Z],
             () => {
                 let e = v.Z.getChannel(x.Z.getChannelId());
-                return null != e && (e.isPrivate() || y.Z.can(I.Plq.SEND_MESSAGES, e));
+                return null != e && (e.isPrivate() || y.Z.can(S.Plq.SEND_MESSAGES, e));
             },
             []
         ),
-        et = (B || G || M) && ee,
-        en = k || et,
-        er = i.useCallback(() => {
-            if ((Q(C.j_.VIEW), et)) {
+        en = (G || H || W) && et,
+        er = R || en,
+        ei = i.useCallback(() => {
+            if ((J(C.j_.VIEW), en)) {
                 (0, p.X)(t.id);
                 return;
             }
@@ -132,73 +133,73 @@ function T(e) {
                 applicationId: t.id,
                 entrypoint: { name: g.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
-        }, [t.id, et, Q]),
-        ei = i.useCallback(() => {
+        }, [t.id, en, J]),
+        ea = i.useCallback(() => {
             (0, j.LO)({
                 applicationId: t.id,
                 customInstallUrl: t.customInstallUrl,
                 installParams: t.installParams,
                 integrationTypesConfig: t.integrationTypesConfig,
-                guildId: W,
+                guildId: F,
                 source: 'app_message_embed'
             }),
-                Q(C.j_.ADD_APP);
-        }, [t.customInstallUrl, t.id, t.installParams, t.integrationTypesConfig, W, Q]),
-        ea = (0, h.ms)({
+                J(C.j_.ADD_APP);
+        }, [t.customInstallUrl, t.id, t.installParams, t.integrationTypesConfig, F, J]),
+        eo = (0, h.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
-            botUserId: null == Z ? void 0 : Z.id
+            botUserId: null == k ? void 0 : k.id
         }),
-        eo = null != R && H && ea,
-        el = i.useMemo(() => {
+        el = null != L && V && eo,
+        es = i.useMemo(() => {
             let e = [];
             return (
-                eo &&
+                el &&
                     e.push({
-                        label: S.NW.string(S.t.RscU7O),
+                        label: P.NW.string(P.t.RscU7O),
                         onClick() {
                             (0, m.W)({
                                 appId: t.id,
-                                botId: R,
-                                analyticsLocations: q,
+                                botId: L,
+                                analyticsLocations: Q,
                                 customId: b,
-                                referrerId: P
+                                referrerId: T
                             }),
-                                Q(C.j_.PLAY);
+                                J(C.j_.PLAY);
                         }
                     }),
-                en
+                er
                     ? e.push({
-                          label: S.NW.string(S.t['HO/oXl']),
-                          onClick: er
-                      })
-                    : L &&
-                      e.push({
-                          label: S.NW.string(S.t.NgXl3N),
+                          label: P.NW.string(P.t['HO/oXl']),
                           onClick: ei
+                      })
+                    : D &&
+                      e.push({
+                          label: P.NW.string(P.t.NgXl3N),
+                          onClick: ea
                       }),
                 e
             );
-        }, [b, P, q, t.id, R, eo, en, ei, er, L, Q]);
+        }, [b, T, Q, t.id, L, el, er, ea, ei, D, J]);
     return (0, r.jsx)(N.W, {
-        title: T,
-        staticBannerSrc: K,
-        videoBannerSrc: Y,
-        bannerAspectRatio: X,
-        iconSrc: V,
+        title: A,
+        staticBannerSrc: Y,
+        videoBannerSrc: X,
+        bannerAspectRatio: q,
+        iconSrc: z,
         embedUrl: n,
-        info: H
-            ? (0, r.jsx)(w, { app: t })
-            : (0, r.jsx)(A, {
+        info: V
+            ? (0, r.jsx)(Z, { app: t })
+            : (0, r.jsx)(w, {
                   app: t,
-                  isGuildInstallable: D
+                  isGuildInstallable: M
               }),
-        actions: el,
-        onView: J,
-        onLinkCopied: $
+        actions: es,
+        onView: $,
+        onLinkCopied: ee
     });
 }
-function A(e) {
+function w(e) {
     var t, n, a;
     let { app: s, isGuildInstallable: c } = e,
         d = (0, o.e7)([b.default], () => b.default.locale, []),
@@ -210,7 +211,7 @@ function A(e) {
                     compactDisplay: 'short'
                 }),
                 r = null !== (t = null === (e = s.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 === r ? null : S.NW.format(S.t['6IW6Wl'], { guildCount: n.format(r) });
+            return 0 === r ? null : P.NW.format(P.t['6IW6Wl'], { guildCount: n.format(r) });
         }, [null === (t = s.directoryEntry) || void 0 === t ? void 0 : t.guild_count, c, d]),
         p = null === (a = s.categories) || void 0 === a ? void 0 : null === (n = a.at(0)) || void 0 === n ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
@@ -218,14 +219,14 @@ function A(e) {
             null != p &&
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: P.description,
+                    className: T.description,
                     color: 'none',
                     children: p
                 }),
             null != u &&
                 (0, r.jsxs)(l.Text, {
                     variant: 'text-xs/normal',
-                    className: P.tagline,
+                    className: T.tagline,
                     color: 'none',
                     lineClamp: 1,
                     children: [
@@ -239,22 +240,22 @@ function A(e) {
         ]
     });
 }
-function w(e) {
+function Z(e) {
     let { app: t } = e,
-        n = [null != t.maxParticipants ? S.NW.format(S.t.z8EAJS, { count: t.maxParticipants }) : S.NW.string(S.t.RjceQU), ...t.tags];
+        n = [null != t.maxParticipants ? P.NW.format(P.t.z8EAJS, { count: t.maxParticipants }) : P.NW.string(P.t.RjceQU), ...t.tags];
     return (0, r.jsx)(r.Fragment, {
         children:
             n.length > 0 &&
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',
-                className: P.description,
+                className: T.description,
                 color: 'none',
                 lineClamp: 1,
                 children: n.map((e, t) =>
                     (0, r.jsx)(
                         'span',
                         {
-                            className: P.tag,
+                            className: T.tag,
                             children: e
                         },
                         t
