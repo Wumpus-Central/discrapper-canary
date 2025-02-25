@@ -1,6 +1,5 @@
 e.exports = {
     container: 'container__37e49',
-    content: 'content__37e49',
     avatar: 'avatar__37e49',
     redIcon: 'redIcon__37e49',
     avatarWrapper: 'avatarWrapper__37e49',

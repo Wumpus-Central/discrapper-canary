@@ -88,7 +88,8 @@ let g = i.forwardRef(function (e, t) {
         [u.highlighted]: A,
         [u.active]: b,
         [null != I ? I : '']: b,
-        [u.clickable]: !b && (null != O || null != E)
+        [u.clickable]: !b && (null != O || null != E),
+        [u.wrapperPlated]: null != d
     })),
         (R['aria-selected'] = null !== (n = R['aria-selected']) && void 0 !== n ? n : b);
     let P = (0, r.jsxs)('div', {
@@ -102,7 +103,8 @@ let g = i.forwardRef(function (e, t) {
             (0, r.jsxs)('div', {
                 className: a()(T, u.layout, {
                     [u.muted]: !b && y,
-                    [u.wrappedLayout]: N
+                    [u.wrappedLayout]: N,
+                    [u.plated]: null != d
                 }),
                 children: [
                     (0, r.jsx)('div', {

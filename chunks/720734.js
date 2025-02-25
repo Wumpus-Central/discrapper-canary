@@ -150,15 +150,15 @@ let ez = ew.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     eK = 3 * eP.Z.Millis.SECOND,
     eq = 30 * eP.Z.Millis.DAY;
 function eX(e) {
-    let { speaking: t, streaming: n, currentUser: i, status: s, handleMouseLeave: l, renderNameTag: o } = e,
-        c = (0, F.Q3)('RTC Avatar'),
-        { coloredIcons: d } = (0, ec.Z)({ location: 'RTC Avatar' }),
-        u = (0, P.Z)(null == i ? void 0 : i.avatarDecoration),
-        m = (0, ey.NZ)({
-            avatarDecoration: u,
+    let { speaking: t, streaming: n, currentUser: i, status: s, handleMouseLeave: l, renderNameTag: o, nameplate: c, hovered: d } = e,
+        u = (0, F.Q3)('RTC Avatar'),
+        { coloredIcons: m } = (0, ec.Z)({ location: 'RTC Avatar' }),
+        g = (0, P.Z)(null == i ? void 0 : i.avatarDecoration),
+        p = (0, ey.NZ)({
+            avatarDecoration: g,
             size: (0, R.y9)(f.EFr.SIZE_32)
         }),
-        g = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE);
+        h = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE);
     return null == i
         ? null
         : (0, r.jsx)(_.Z, {
@@ -193,12 +193,17 @@ function eX(e) {
                           f.P3F,
                           eH(eF({}, e), {
                               'aria-label': eU.NW.string(eU.t['3Uj+2t']),
-                              className: a()(eV.avatarWrapper, !c && d && eV.experiment),
+                              className: a()(eV.avatarWrapper, !u && m && eV.experiment),
                               children: [
+                                  (0, r.jsx)(X.Z, {
+                                      nameplate: c,
+                                      hovered: d,
+                                      reverse: !0
+                                  }),
                                   (0, r.jsx)(ez, {
-                                      size: c ? f.EFr['SIZE_'.concat(g)] : f.EFr.SIZE_32,
-                                      src: i.getAvatarURL(void 0, c ? g - 4 : 32, !1),
-                                      avatarDecoration: m,
+                                      size: u ? f.EFr['SIZE_'.concat(h)] : f.EFr.SIZE_32,
+                                      src: i.getAvatarURL(void 0, u ? h - 4 : 32, !1),
+                                      avatarDecoration: p,
                                       'aria-label': i.username,
                                       status: n ? eB.Skl.STREAMING : s,
                                       isSpeaking: t,
@@ -287,9 +292,11 @@ class eJ extends i.PureComponent {
               : l;
     }
     renderAvatarWithPopout() {
+        let { hovered: e } = this.state;
         return (0, r.jsx)(
             eX,
             eH(eF({}, this.props), {
+                hovered: e,
                 handleMouseLeave: this.handleMouseLeave,
                 renderNameTag: this.renderNameTag
             })
@@ -313,8 +320,8 @@ class eJ extends i.PureComponent {
               });
     }
     render() {
-        let { currentUser: e, selfDeaf: t, selfMute: n, awaitingRemote: i, serverMute: s, serverDeaf: a, suppress: l, dismissibleContents: o, nameplate: d } = this.props,
-            { shouldShowSpeakingWhileMutedTooltip: u, hovered: m } = this.state;
+        let { currentUser: e, selfDeaf: t, selfMute: n, awaitingRemote: i, serverMute: s, serverDeaf: a, suppress: l, dismissibleContents: o } = this.props,
+            { shouldShowSpeakingWhileMutedTooltip: d } = this.state;
         return null == e
             ? null
             : (0, r.jsxs)(r.Fragment, {
@@ -324,89 +331,80 @@ class eJ extends i.PureComponent {
                           onMouseEnter: this.handleMouseEnter,
                           onMouseLeave: this.handleMouseLeave,
                           children: [
-                              (0, r.jsx)(X.Z, {
-                                  nameplate: d,
-                                  hovered: m
-                              }),
-                              (0, r.jsxs)('div', {
-                                  className: eV.content,
+                              this.renderNameZone(),
+                              (0, r.jsxs)(V.Z, {
+                                  grow: 0,
+                                  className: eV.buttons,
                                   children: [
-                                      this.renderNameZone(),
-                                      (0, r.jsxs)(V.Z, {
-                                          grow: 0,
-                                          className: eV.buttons,
-                                          children: [
-                                              (0, r.jsx)(e0, {
-                                                  selfMute: n,
-                                                  serverMute: s,
-                                                  suppress: l,
-                                                  awaitingRemote: i,
-                                                  tooltipText: u ? eU.NW.string(eU.t['29gnR0']) : void 0,
-                                                  tooltipColor: u ? f.FGA.GREEN : void 0,
-                                                  tooltipForceOpen: u || void 0,
-                                                  onMouseEnter: this.handleMouseEnterMute,
-                                                  onMouseLeave: this.handleMouseLeaveMute,
-                                                  onClick: this.handleToggleSelfMute,
-                                                  onContextMenu: this.handleInputAudioContextMenu
-                                              }),
-                                              (0, r.jsx)(e1, {
-                                                  selfDeaf: t,
-                                                  serverDeaf: a,
-                                                  onClick: this.handleToggleSelfDeaf,
-                                                  onContextMenu: this.handleOutputAudioContextMenu,
-                                                  awaitingRemote: i
-                                              }),
-                                              (0, r.jsx)(z.ZP, {
-                                                  contentTypes: o.settings,
-                                                  children: (e) => {
-                                                      let { visibleContent: t, markAsDismissed: n } = e;
-                                                      switch (t) {
-                                                          case c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
-                                                              return (0, r.jsx)(f.yRy, {
-                                                                  position: 'top',
-                                                                  align: 'center',
-                                                                  shouldShow: !0,
-                                                                  renderPopout: () => (0, r.jsx)(ee.Z, {}),
-                                                                  children: this.renderSettingsGear
-                                                              });
-                                                          case c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
-                                                              return (0, r.jsx)(f.yRy, {
-                                                                  position: 'top',
-                                                                  align: 'center',
-                                                                  shouldShow: !0,
-                                                                  renderPopout: () => (0, r.jsx)(en.Z, { markAsDismissed: n }),
-                                                                  children: this.renderSettingsGear
-                                                              });
-                                                          case c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
-                                                              return (0, r.jsx)(f.yRy, {
-                                                                  position: 'top',
-                                                                  align: 'center',
-                                                                  shouldShow: !0,
-                                                                  renderPopout: () => (0, r.jsx)(er.Z, { markAsDismissed: n }),
-                                                                  children: this.renderSettingsGear
-                                                              });
-                                                          case c.z.SOUNDBOARD_VOLUME_EDUCATION:
-                                                              return (0, r.jsx)(f.yRy, {
-                                                                  position: 'top',
-                                                                  align: 'center',
-                                                                  shouldShow: !0,
-                                                                  renderPopout: () => (0, r.jsx)(es.Z, { markAsDismissed: n }),
-                                                                  children: this.renderSettingsGear
-                                                              });
-                                                          case c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
-                                                              return (0, r.jsx)(f.yRy, {
-                                                                  position: 'top',
-                                                                  align: 'center',
-                                                                  shouldShow: !0,
-                                                                  renderPopout: () => (0, r.jsx)(el.Z, {}),
-                                                                  children: this.renderSettingsGear
-                                                              });
-                                                          default:
-                                                              return this.renderSettingsGear();
-                                                      }
-                                                  }
-                                              })
-                                          ]
+                                      (0, r.jsx)(e0, {
+                                          selfMute: n,
+                                          serverMute: s,
+                                          suppress: l,
+                                          awaitingRemote: i,
+                                          tooltipText: d ? eU.NW.string(eU.t['29gnR0']) : void 0,
+                                          tooltipColor: d ? f.FGA.GREEN : void 0,
+                                          tooltipForceOpen: d || void 0,
+                                          onMouseEnter: this.handleMouseEnterMute,
+                                          onMouseLeave: this.handleMouseLeaveMute,
+                                          onClick: this.handleToggleSelfMute,
+                                          onContextMenu: this.handleInputAudioContextMenu
+                                      }),
+                                      (0, r.jsx)(e1, {
+                                          selfDeaf: t,
+                                          serverDeaf: a,
+                                          onClick: this.handleToggleSelfDeaf,
+                                          onContextMenu: this.handleOutputAudioContextMenu,
+                                          awaitingRemote: i
+                                      }),
+                                      (0, r.jsx)(z.ZP, {
+                                          contentTypes: o.settings,
+                                          children: (e) => {
+                                              let { visibleContent: t, markAsDismissed: n } = e;
+                                              switch (t) {
+                                                  case c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
+                                                      return (0, r.jsx)(f.yRy, {
+                                                          position: 'top',
+                                                          align: 'center',
+                                                          shouldShow: !0,
+                                                          renderPopout: () => (0, r.jsx)(ee.Z, {}),
+                                                          children: this.renderSettingsGear
+                                                      });
+                                                  case c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
+                                                      return (0, r.jsx)(f.yRy, {
+                                                          position: 'top',
+                                                          align: 'center',
+                                                          shouldShow: !0,
+                                                          renderPopout: () => (0, r.jsx)(en.Z, { markAsDismissed: n }),
+                                                          children: this.renderSettingsGear
+                                                      });
+                                                  case c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
+                                                      return (0, r.jsx)(f.yRy, {
+                                                          position: 'top',
+                                                          align: 'center',
+                                                          shouldShow: !0,
+                                                          renderPopout: () => (0, r.jsx)(er.Z, { markAsDismissed: n }),
+                                                          children: this.renderSettingsGear
+                                                      });
+                                                  case c.z.SOUNDBOARD_VOLUME_EDUCATION:
+                                                      return (0, r.jsx)(f.yRy, {
+                                                          position: 'top',
+                                                          align: 'center',
+                                                          shouldShow: !0,
+                                                          renderPopout: () => (0, r.jsx)(es.Z, { markAsDismissed: n }),
+                                                          children: this.renderSettingsGear
+                                                      });
+                                                  case c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
+                                                      return (0, r.jsx)(f.yRy, {
+                                                          position: 'top',
+                                                          align: 'center',
+                                                          shouldShow: !0,
+                                                          renderPopout: () => (0, r.jsx)(el.Z, {}),
+                                                          children: this.renderSettingsGear
+                                                      });
+                                                  default:
+                                                      return this.renderSettingsGear();
+                                              }
+                                          }
                                       })
                                   ]
                               })
@@ -872,7 +870,7 @@ function e0(e) {
                                                             ? (0, r.jsxs)(r.Fragment, {
                                                                   children: [
                                                                       (0, r.jsx)('img', {
-                                                                          alt: null == T ? void 0 : T.name,
+                                                                          alt: null != T ? eU.NW.string(T.name) : '',
                                                                           src: null == T ? void 0 : T.iconURL,
                                                                           draggable: !1
                                                                       }),

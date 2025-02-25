@@ -8,6 +8,7 @@ e.exports = {
     interactiveSystemDM: 'interactiveSystemDM__972a0',
     avatarWithText: 'avatarWithText__972a0',
     link: 'link__972a0',
+    plated: 'plated__972a0',
     linkButton: 'linkButton__972a0',
     linkButtonIcon: 'linkButtonIcon__972a0',
     closeButton: 'closeButton__972a0',
@@ -16,5 +17,6 @@ e.exports = {
     subtext: 'subtext__972a0',
     mutedEmoji: 'mutedEmoji__972a0',
     decorator: 'decorator__972a0',
+    platedWrapper: 'platedWrapper__972a0',
     dm: 'dm__972a0'
 };

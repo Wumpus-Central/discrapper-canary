@@ -418,7 +418,8 @@ function eo(e) {
                 children: (0, l.jsxs)(f.vjx, {
                     className: a()(q.interactive, {
                         [q.interactiveSystemDM]: eR && eL,
-                        [q.interactiveSelected]: d
+                        [q.interactiveSelected]: d,
+                        [q.platedWrapper]: null != W
                     }),
                     as: 'div',
                     onClick: eA,
@@ -437,7 +438,7 @@ function eo(e) {
                                     {
                                         innerRef: es,
                                         to: z.Z5c.CHANNEL(z.ME, i.id),
-                                        className: q.link,
+                                        className: a()(q.link, { [q.plated]: null != W }),
                                         'aria-label': (0, v.ZP)({
                                             channel: i,
                                             unread: eh
