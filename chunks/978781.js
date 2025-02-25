@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => k,
-    _: () => D
+    Z: () => U,
+    _: () => x
 }),
     n(627341),
     n(47120);
@@ -11,27 +11,29 @@ var r = n(200651),
     s = n(278074),
     l = n(442837),
     c = n(481060),
-    u = n(230711),
-    d = n(351773),
-    f = n(100527),
+    u = n(153867),
+    d = n(230711),
+    f = n(351773),
+    _ = n(100527),
     p = n(94795),
-    _ = n(327943),
-    h = n(539873),
+    h = n(327943),
+    g = n(539873),
     m = n(207164),
-    g = n(238302),
-    E = n(514361),
-    v = n(572397),
-    b = n(705262),
-    y = n(436774),
-    O = n(768762),
-    S = n(197115),
-    I = n(727939),
-    T = n(981631),
-    N = n(921944),
-    A = n(474936),
-    C = n(388032),
-    R = n(937804);
-function P(e, t, n) {
+    E = n(238302),
+    v = n(514361),
+    b = n(572397),
+    y = n(705262),
+    O = n(436774),
+    S = n(768762),
+    I = n(197115),
+    T = n(210887),
+    N = n(727939),
+    A = n(981631),
+    C = n(921944),
+    R = n(474936),
+    P = n(388032),
+    D = n(937804);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +46,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,49 +57,49 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
 }
-var D = (function (e) {
+var x = (function (e) {
     return (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS'), e;
 })({});
-function x(e) {
+function M(e) {
     let { isCoachmark: t } = e,
-        n = (0, v.q)();
+        n = (0, b.q)();
     return (
-        i.useEffect(() => ((0, g.Kq)(), n(T.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => n(T.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [n]),
-        (0, r.jsx)(b.ZP, {
-            type: b.yH.EDITOR,
-            children: (0, r.jsx)(b.ZP.BasicAndGradient, {
+        i.useEffect(() => ((0, E.Kq)(), n(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => n(A.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [n]),
+        (0, r.jsx)(y.ZP, {
+            type: y.yH.EDITOR,
+            children: (0, r.jsx)(y.ZP.BasicAndGradient, {
                 isEditor: !0,
                 isCoachmark: t
             })
         })
     );
 }
-function L() {
+function j() {
     let e = (0, m.Z)();
     return (
         i.useEffect(() => {
             (0, p.nJ)(), e();
         }, [e]),
-        (0, r.jsx)(h.Z, { isEditor: !0 })
+        (0, r.jsx)(g.Z, { isEditor: !0 })
     );
 }
-function M(e) {
-    let { tab: t, isPreview: o, isCoachmark: l, onClose: d } = e,
-        p = i.useCallback(() => {
-            d(), l || u.Z.open();
-        }, [d, l]),
-        _ = (0, s.EQ)({
+function k(e) {
+    let { tab: t, isPreview: o, isCoachmark: l, onClose: u } = e,
+        f = i.useCallback(() => {
+            u(), l || d.Z.open();
+        }, [u, l]),
+        p = (0, s.EQ)({
             isPreview: o,
             isCoachmark: l
         })
-            .with({ isCoachmark: !0 }, () => C.NW.string(C.t.cpT0Cg))
-            .with({ isPreview: !0 }, () => C.NW.string(C.t['dqH+qq']))
-            .otherwise(() => C.NW.string(C.t.Olc2Ky)),
+            .with({ isCoachmark: !0 }, () => P.NW.string(P.t.cpT0Cg))
+            .with({ isPreview: !0 }, () => P.NW.string(P.t['dqH+qq']))
+            .otherwise(() => P.NW.string(P.t.Olc2Ky)),
         h = i.useCallback(() => {
             if (1 === t) {
                 (0, c.ZDy)(async () => {
@@ -105,10 +107,10 @@ function M(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            w(
+                            L(
                                 {
-                                    analyticsSource: f.Z.APP_ICON_EDITOR,
-                                    analyticsLocation: { section: T.jXE.SETTINGS_APP_ICONS }
+                                    analyticsSource: _.Z.APP_ICON_EDITOR,
+                                    analyticsLocation: { section: A.jXE.SETTINGS_APP_ICONS }
                                 },
                                 t
                             )
@@ -122,10 +124,10 @@ function M(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            w(
+                            L(
                                 {
-                                    analyticsSource: f.Z.CLIENT_THEMES_EDITOR,
-                                    analyticsLocation: { section: T.jXE.SETTINGS_CLIENT_THEMES }
+                                    analyticsSource: _.Z.CLIENT_THEMES_EDITOR,
+                                    analyticsLocation: { section: A.jXE.SETTINGS_CLIENT_THEMES }
                                 },
                                 t
                             )
@@ -135,103 +137,104 @@ function M(e) {
             }
         }, [t]);
     return (0, r.jsxs)('div', {
-        className: R.footerContainer,
+        className: D.footerContainer,
         children: [
             o &&
                 (0, r.jsxs)('div', {
-                    className: R.footerLabelContainer,
+                    className: D.footerLabelContainer,
                     children: [
                         (0, r.jsx)(c.SrA, {
-                            className: R.footerNitro,
+                            className: D.footerNitro,
                             size: 'xs',
-                            color: y.JX.PREMIUM_TIER_2
+                            color: O.JX.PREMIUM_TIER_2
                         }),
                         (0, r.jsx)(c.Text, {
-                            className: R.footerText,
+                            className: D.footerText,
                             variant: 'text-sm/medium',
-                            children: C.NW.format(C.t.x2dQxM, { onClick: h })
+                            children: P.NW.format(P.t.x2dQxM, { onClick: h })
                         })
                     ]
                 }),
             (0, r.jsxs)('div', {
-                className: R.footerButtonContainer,
+                className: D.footerButtonContainer,
                 children: [
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(c.zxk, {
-                            className: a()(R.footerButton, R.footerButtonBack),
+                            className: a()(D.footerButton, D.footerButtonBack),
                             color: c.Ttl.PRIMARY,
                             size: c.zxk.Sizes.NONE,
-                            onClick: p,
-                            'aria-label': _,
-                            children: (0, r.jsx)(O.Z, { direction: O.Z.Directions.LEFT })
+                            onClick: f,
+                            'aria-label': p,
+                            children: (0, r.jsx)(S.Z, { direction: S.Z.Directions.LEFT })
                         })
                     }),
                     o &&
-                        (0, r.jsx)(S.Z, {
-                            className: R.footerButton,
-                            subscriptionTier: A.Si.TIER_2,
+                        (0, r.jsx)(I.Z, {
+                            className: D.footerButton,
+                            subscriptionTier: R.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: C.NW.string(C.t.pj0XBA)
+                            buttonText: P.NW.string(P.t.pj0XBA)
                         })
                 ]
             })
         ]
     });
 }
-function k(e) {
+function U(e) {
     let { initialTab: t, markAsDismissed: n, isCoachmark: o } = e,
         [a, s] = i.useState(t),
-        u = i.useMemo(
+        d = i.useMemo(
             () => [
                 {
-                    name: C.NW.string(C.t.Ksh3io),
+                    name: P.NW.string(P.t.Ksh3io),
                     value: 0
                 },
                 {
-                    name: C.NW.string(C.t.RPh2oq),
+                    name: P.NW.string(P.t.RPh2oq),
                     value: 1
                 }
             ],
             []
         ),
-        f = (0, l.e7)([E.Z], () => E.Z.isPreview),
-        h = (0, l.e7)([_.Z], () => _.Z.isUpsellPreview),
-        m = f || h,
-        b = (0, v.J)(),
-        y = i.useCallback(() => {
-            f && b(), h && (0, p.O7)();
-        }, [f, h, b]),
-        O = (0, d.Z)(null, m ? y : T.dG4),
+        _ = (0, l.e7)([v.Z], () => v.Z.isPreview),
+        g = (0, l.e7)([h.Z], () => h.Z.isUpsellPreview),
+        m = _ || g,
+        y = i.useMemo(() => T.Z.theme, []),
+        O = (0, b.J)(),
         S = i.useCallback(() => {
-            (0, p.G8)(), (0, g.Mo)(), y(), null == n || n(N.L.DISMISS);
-        }, [y, n]);
-    return (0, r.jsx)(I.Z, {
-        className: R.draggableContainer,
+            _ && O(), g && (0, p.O7)();
+        }, [_, g, O]),
+        I = (0, f.Z)(null, m ? S : A.dG4),
+        R = i.useCallback(() => {
+            m && (0, u.ZI)({ theme: y }), (0, p.G8)(), (0, E.Mo)(), S(), null == n || n(C.L.DISMISS);
+        }, [S, n, m, y]);
+    return (0, r.jsx)(N.Z, {
+        className: D.draggableContainer,
         children: (0, r.jsxs)('div', {
-            ref: O,
-            className: R.container,
+            ref: I,
+            className: D.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: R.headerParentContainer,
+                    className: D.headerParentContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: R.headerContainer,
+                            className: D.headerContainer,
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-lg/extrabold',
-                                    children: C.NW.string(C.t.viGN6e)
+                                    children: P.NW.string(P.t.viGN6e)
                                 }),
                                 (0, r.jsx)(c.olH, {
-                                    className: R.closeContainer,
-                                    innerClassName: R.closeInner,
+                                    className: D.closeContainer,
+                                    innerClassName: D.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: S
+                                    onClick: R
                                 })
                             ]
                         }),
                         (0, r.jsx)(c.sY7, {
-                            options: u,
+                            options: d,
                             value: a,
                             onChange: (e) => {
                                 let { value: t } = e;
@@ -242,13 +245,13 @@ function k(e) {
                     ]
                 }),
                 (0, r.jsxs)(c.Ttm, {
-                    className: R.scrollContainer,
-                    children: [0 === a && (0, r.jsx)(x, { isCoachmark: o }), 1 === a && (0, r.jsx)(L, {})]
+                    className: D.scrollContainer,
+                    children: [0 === a && (0, r.jsx)(M, { isCoachmark: o }), 1 === a && (0, r.jsx)(j, {})]
                 }),
-                (0, r.jsx)(M, {
+                (0, r.jsx)(k, {
                     tab: a,
                     isPreview: m,
-                    onClose: S,
+                    onClose: R,
                     isCoachmark: !1
                 })
             ]
