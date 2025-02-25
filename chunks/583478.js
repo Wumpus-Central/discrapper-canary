@@ -1,14 +1,27 @@
-n.d(t, { Z: () => E }), n(230036), n(47120);
+n.d(t, { Z: () => S }), n(230036), n(47120);
 var r = n(200651),
     i = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
-    o = n(710845),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(710845),
     c = n(168232),
-    d = n(48541),
-    u = n(522954);
-function m(e) {
+    u = n(48541),
+    d = n(522954);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -19,57 +32,49 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-let g = new o.Z('BalanceCounter'),
-    p = (0, c.dU)(void 0) === d.C.PRODUCTION,
-    h = {
+let _ = new l.Z('BalanceCounter'),
+    h = (0, c.dU)(void 0) === u.C.PRODUCTION,
+    m = {
         jump: 1,
         duration: 1
     },
-    f = {
+    g = 3000,
+    E = {
         POSITIVE: [
             {
                 delta: 200,
                 duration: 1000,
-                tickConfig: m({}, h)
+                tickConfig: p({}, m)
             },
             {
                 delta: 500,
                 duration: 2000,
-                tickConfig: m({}, h)
+                tickConfig: p({}, m)
             }
         ].sort((e, t) => e.delta - t.delta),
         NEGATIVE: [
             {
                 delta: 1000,
                 duration: 1000,
-                tickConfig: m({}, h)
+                tickConfig: p({}, m)
             },
             {
                 delta: 4000,
                 duration: 2000,
-                tickConfig: m({}, h)
+                tickConfig: p({}, m)
             }
         ].sort((e, t) => e.delta - t.delta)
     },
-    b = {
-        POSITIVE: f.POSITIVE[f.POSITIVE.length - 1],
-        NEGATIVE: f.NEGATIVE[f.NEGATIVE.length - 1]
+    v = {
+        POSITIVE: E.POSITIVE[E.POSITIVE.length - 1],
+        NEGATIVE: E.NEGATIVE[E.NEGATIVE.length - 1]
     };
-function N(e, t) {
+function b(e, t) {
     return e > t
         ? {
               jump: Math.ceil((2 * e) / t),
@@ -80,44 +85,44 @@ function N(e, t) {
               duration: Math.floor(t / e)
           };
 }
-!(function () {
-    for (let e of Object.keys(f)) {
+(function () {
+    for (let e of Object.keys(E)) {
         let t = 0,
             n = 0;
-        for (let r of f[e]) {
+        for (let r of E[e]) {
             let e = Math.abs(r.delta - n),
                 i = Math.abs(r.duration - t);
-            (r.tickConfig = N(e, i)), (t = r.duration), (n = r.delta);
+            (r.tickConfig = b(e, i)), (t = r.duration), (n = r.delta);
         }
     }
 })(),
-    p ||
-        g.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
-            MAX_ANIMATION_DURATION_MS: 3000,
-            ANIMATION_THRESHOLDS: f
+    h ||
+        _.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
+            MAX_ANIMATION_DURATION_MS: g,
+            ANIMATION_THRESHOLDS: E
         });
-let x = (e, t, n, r) => {
+let y = (e, t, n, r) => {
         let i = Math.abs(r - n),
-            s = f[t],
-            a = b[t];
-        if (i > a.delta) return N(i, 3000 - a.duration);
-        for (let e of s) if (i <= e.delta) return e.tickConfig;
+            o = E[t],
+            a = v[t];
+        if (i > a.delta) return b(i, g - a.duration);
+        for (let e of o) if (i <= e.delta) return e.tickConfig;
         return {
             jump: 1,
             duration: 1
         };
     },
-    _ = (e) => (null === e ? 0 : ''.concat(e).length),
-    E = (e) => {
+    O = (e) => (null === e ? 0 : ''.concat(e).length),
+    S = (e) => {
         let { value: t, className: n } = e,
-            [s, o] = (0, i.useState)(null),
+            [o, l] = (0, i.useState)(null),
             c = (0, i.useRef)(null),
-            d = (0, i.useRef)(null),
-            m = (0, i.useRef)(null);
+            u = (0, i.useRef)(null),
+            f = (0, i.useRef)(null);
         (0, i.useEffect)(() => {
             if (null === t) return;
-            let e = null !== d.current ? t - d.current : t;
-            m.current = {
+            let e = null !== u.current ? t - u.current : t;
+            f.current = {
                 lastChangedAt: Date.now(),
                 totalDelta: Math.abs(e),
                 changeType: e > 0 ? 'POSITIVE' : 'NEGATIVE'
@@ -126,46 +131,47 @@ let x = (e, t, n, r) => {
             (0, i.useEffect)(() => {
                 var e;
                 if (null === t) {
-                    null !== s && o(null);
+                    null !== o && l(null);
                     return;
                 }
-                if (null === s || null === d.current) {
-                    o(t), (d.current = t);
+                if (null === o || null === u.current) {
+                    l(t), (u.current = t);
                     return;
                 }
-                if (s === t) {
-                    if (!p && null !== m.current) {
+                if (o === t) {
+                    if (!h && null !== f.current) {
                         let e = Date.now();
-                        g.log('Balance Counter finished updating: ', {
-                            time: e - m.current.lastChangedAt,
-                            delta: s - d.current
+                        _.log('Balance Counter finished updating: ', {
+                            time: e - f.current.lastChangedAt,
+                            delta: o - u.current
                         });
                     }
-                    d.current = t;
+                    u.current = t;
                     return;
                 }
                 if (null !== c.current) return;
                 let { totalDelta: n, changeType: r } =
-                        null !== (e = m.current) && void 0 !== e
+                        null !== (e = f.current) && void 0 !== e
                             ? e
                             : {
-                                  totalDelta: Math.abs(t - d.current),
-                                  changeType: t > d.current ? 'POSITIVE' : 'NEGATIVE'
+                                  totalDelta: Math.abs(t - u.current),
+                                  changeType: t > u.current ? 'POSITIVE' : 'NEGATIVE'
                               },
-                    { jump: i, duration: a } = x(n, r, t, s);
+                    { jump: i, duration: a } = y(n, r, t, o);
                 c.current = setTimeout(() => {
-                    (c.current = null), s < t ? o(s + i) : s > t && o(s - i);
+                    (c.current = null), o < t ? l(o + i) : o > t && l(o - i);
                 }, a);
-            }, [s, t, o]);
-        let h = null === t,
-            f = null === s ? _(t) : _(s);
-        return (0, r.jsx)(l.Text, {
+            }, [o, t, l]);
+        let p = null === t,
+            m = null === o ? O(t) : O(o),
+            g = p ? 0 : m;
+        return (0, r.jsx)(s.Text, {
             variant: 'text-md/semibold',
-            className: a()([u.balanceCounterText, n]),
+            className: a()([d.balanceCounterText, n]),
             style: {
-                width: 'calc('.concat(h ? 0 : f, 'ch + ').concat(h ? '0px' : '8px', ')'),
-                opacity: +!h
+                width: 'calc('.concat(g, 'ch + ').concat(p ? '0px' : '8px', ')'),
+                opacity: +!p
             },
-            children: s
+            children: o
         });
     };

@@ -1,1 +1,2 @@
-e.exports = { wrapper: 'wrapper__87c70' };
+var r = { wrapper: 'wrapper__87c70' };
+e.exports = r;

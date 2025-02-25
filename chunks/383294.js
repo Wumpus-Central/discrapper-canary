@@ -1,225 +1,232 @@
-n.d(t, { default: () => p }), n(47120);
-var r = n(200651),
-    a = n(192379),
-    i = n(481060),
-    s = n(110924),
-    c = n(100527),
-    l = n(335131),
-    o = n(43747),
-    d = n(272008),
-    u = n(497505),
-    h = n(918701),
-    C = n(642145),
-    _ = n(215023),
-    R = n(388032),
-    m = n(262143),
-    O = n(232474);
-function E(e) {
-    let { transitionState: t, rewardAmount: n, balance: a, onSubmit: s, onClose: c, state: l } = e;
-    return (0, r.jsxs)(i.Y0X, {
+r.d(t, { default: () => C }), r(47120);
+var n = r(200651),
+    a = r(192379),
+    o = r(481060),
+    c = r(110924),
+    l = r(100527),
+    i = r(335131),
+    s = r(43747),
+    u = r(511050),
+    d = r(82856),
+    f = r(272008),
+    b = r(497505),
+    m = r(918701),
+    p = r(642145),
+    y = r(215023),
+    O = r(388032),
+    j = r(262143),
+    g = r(232474);
+function h(e) {
+    let { transitionState: t, rewardAmount: r, balance: a, onSubmit: c, onClose: l, state: i } = e;
+    return (0, n.jsxs)(o.Y0X, {
         transitionState: t,
-        size: i.CgR.DYNAMIC,
-        className: m.modal,
+        size: o.CgR.DYNAMIC,
+        className: j.modal,
         children: [
-            (0, r.jsxs)('div', {
-                className: m.header,
+            (0, n.jsxs)('div', {
+                className: j.header,
                 children: [
-                    null != n &&
-                        (0, r.jsxs)(i.Text, {
+                    null != r &&
+                        (0, n.jsxs)(o.Text, {
                             variant: 'text-sm/bold',
                             color: 'always-white',
-                            className: m.amountLabel,
-                            children: ['+', n]
+                            className: j.amountLabel,
+                            children: ['+', r]
                         }),
-                    (0, r.jsx)(i.olH, {
-                        className: m.closeBtn,
-                        onClick: c
+                    (0, n.jsx)(o.olH, {
+                        className: j.closeBtn,
+                        onClick: l
                     })
                 ]
             }),
-            'loading' === l
-                ? (0, r.jsx)('div', {
-                      className: m.spinnerContainer,
-                      children: (0, r.jsx)(i.$jN, { type: i.RAz.SPINNING_CIRCLE })
+            'loading' === i
+                ? (0, n.jsx)('div', {
+                      className: j.spinnerContainer,
+                      children: (0, n.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
                   })
-                : 'success' === l || 'optimistic-success' === l
-                  ? (0, r.jsxs)(r.Fragment, {
+                : 'success' === i || 'optimistic-success' === i
+                  ? (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, r.jsx)('img', {
-                                src: O.Z,
-                                className: m.img,
+                            (0, n.jsx)('img', {
+                                src: g.Z,
+                                className: j.img,
                                 alt: ''
                             }),
-                            (0, r.jsx)(i.X6q, {
+                            (0, n.jsx)(o.X6q, {
                                 variant: 'heading-lg/medium',
                                 color: 'always-white',
-                                className: m.title,
-                                children: R.NW.formatToPlainString(R.t.rtV7xM, { balance: 'optimistic-success' === l && null != a && null != n ? a + n : a })
+                                className: j.title,
+                                children: O.NW.formatToPlainString(O.t.rtV7xM, { balance: 'optimistic-success' === i && null != a && null != r ? a + r : a })
                             }),
-                            (0, r.jsx)(i.Text, {
+                            (0, n.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
-                                className: m.subtext,
-                                children: R.NW.string(R.t.EDUOIC)
+                                className: j.subtext,
+                                children: O.NW.string(O.t.EDUOIC)
                             }),
-                            (0, r.jsx)(i.zxk, {
-                                className: m.ctaBtn,
-                                onClick: s,
-                                children: R.NW.string(R.t.iEw2Nz)
+                            (0, n.jsx)(o.zxk, {
+                                className: j.ctaBtn,
+                                onClick: c,
+                                children: O.NW.string(O.t.iEw2Nz)
                             })
                         ]
                     })
-                  : (0, r.jsxs)('div', {
-                        className: m.errorContainer,
+                  : (0, n.jsxs)('div', {
+                        className: j.errorContainer,
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: m.errorContentContainer,
+                            (0, n.jsxs)('div', {
+                                className: j.errorContentContainer,
                                 children: [
-                                    (0, r.jsx)(i.X6q, {
+                                    (0, n.jsx)(o.X6q, {
                                         variant: 'heading-xl/medium',
                                         color: 'always-white',
-                                        className: m.errorHeader,
-                                        children: R.NW.string(R.t.tWYWJy)
+                                        className: j.errorHeader,
+                                        children: O.NW.string(O.t.tWYWJy)
                                     }),
-                                    (0, r.jsx)(i.Text, {
+                                    (0, n.jsx)(o.Text, {
                                         variant: 'text-md/normal',
-                                        children: R.NW.string(R.t.JNQRU1)
+                                        children: O.NW.string(O.t.JNQRU1)
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(i.zxk, {
-                                className: m.ctaBtn,
-                                onClick: c,
-                                children: R.NW.string(R.t.cpT0Cg)
+                            (0, n.jsx)(o.zxk, {
+                                className: j.ctaBtn,
+                                onClick: l,
+                                children: O.NW.string(O.t.cpT0Cg)
                             })
                         ]
                     })
         ]
     });
 }
-function p(e) {
+function C(e) {
     var t,
-        n,
-        { quest: i, onClose: R } = e,
-        m = (function (e, t) {
+        r,
+        { quest: o, onClose: O } = e,
+        j = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 a = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         a = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
                     return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
             }
             return a;
         })(e, ['quest', 'onClose']);
-    let O = (0, h.LM)(i.config),
-        { balance: p } = (0, o.A)(),
-        b = (function (e, t) {
-            let [n, r] = a.useState('loading'),
-                [i, c] = a.useState(!1),
-                { balance: l } = (0, o.A)(),
-                h = (0, s.Z)(l),
-                [C, _] = a.useState(!1);
+    let g = (0, m.LM)(o.config),
+        { balance: C } = (0, s.A)(),
+        w = (function (e, t) {
+            let [r, n] = a.useState('loading'),
+                [o, l] = a.useState(!1),
+                { balance: i } = (0, s.A)(),
+                u = (0, c.Z)(i),
+                [d, m] = a.useState(!1);
             if (
                 (a.useEffect(() => {
                     let e = null;
                     return (
-                        'success' === n &&
+                        'success' === r &&
                             (e = setTimeout(() => {
-                                _(!0);
+                                m(!0);
                             }, 1000)),
                         () => {
                             null != e && clearTimeout(e);
                         }
                     );
-                }, [n]),
+                }, [r]),
                 a.useEffect(() => {
-                    !i && null != l && null != h && l > h && c(!0);
-                }, [l, h, i]),
+                    !o && null != i && null != u && i > u && l(!0);
+                }, [i, u, o]),
                 a.useEffect(() => {
-                    (0, d.QB)(e, u.y$.CROSS_PLATFORM, t)
+                    (0, f.QB)(e, b.y$.CROSS_PLATFORM, t)
                         .then((e) => {
                             if ((null == e ? void 0 : e.claimedAt) != null) {
-                                r('success');
+                                n('success');
                                 return;
                             }
-                            r('error');
+                            n('error');
                         })
                         .catch(() => {
-                            r('error');
+                            n('error');
                         });
                 }, [e, t]),
-                'error' === n)
+                'error' === r)
             )
-                return n;
-            if ('success' === n) {
-                if (i) return 'success';
-                if (C) return 'optimistic-success';
+                return r;
+            if ('success' === r) {
+                if (o) return 'success';
+                if (d) return 'optimistic-success';
             }
             return 'loading';
-        })(i.id, m.location),
-        f = a.useCallback(() => {
-            R(),
-                (0, l.mK)({
+        })(o.id, j.location),
+        { openIntroToOrbsClaimedCoachmark: v } = (0, u.Z)({ location: 'QuestsOrbsRewardModal' }),
+        x = a.useCallback(async () => {
+            O(), await (0, d.c9)();
+        }, [O]),
+        S = a.useCallback(() => {
+            x(),
+                (0, i.mK)({
                     openInLayer: !1,
-                    tab: _.AW.ORBS,
+                    tab: y.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: i.id === C.V ? c.Z.INTRO_TO_ORBS_QUEST : c.Z.QUEST_HOME_PAGE
-                });
-        }, [i.id, R]);
-    return (0, r.jsx)(
-        E,
+                    analyticsSource: o.id === p.V ? l.Z.INTRO_TO_ORBS_QUEST : l.Z.QUEST_HOME_PAGE
+                }),
+                v({ delayMS: 300 });
+        }, [x, v, o.id]);
+    return (0, n.jsx)(
+        h,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                         })
                     )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: r,
+                                      value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = r);
+                                : (e[t] = n);
                     });
             }
             return e;
-        })({}, m)),
-        (n = n =
+        })({}, j)),
+        (r = r =
             {
-                rewardAmount: O,
-                balance: p,
-                onClose: R,
-                onSubmit: f,
-                state: b
+                rewardAmount: g,
+                balance: C,
+                onClose: x,
+                onSubmit: S,
+                state: w
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
               }),
         t)
     );

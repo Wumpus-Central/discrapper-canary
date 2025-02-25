@@ -27,17 +27,25 @@ let g = new s.Z('VirtualCurrency'),
             ),
             p = (0, r.useCallback)(
                 (e) => {
-                    if (null == s && !e) {
+                    let { forceOpen: t, delayMS: n = 500 } = e;
+                    if (null == s && !t) {
                         g.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(m.V));
                         return;
                     }
-                    (0, c.wH)() ||
-                        setTimeout(() => {
+                    if (!(0, c.wH)()) {
+                        let e = () =>
                             (0, o.hF)({
                                 earnedOrbsQuantity: null != s ? s : 200,
-                                dedupeKey: e ? void 0 : m.V
+                                dedupeKey: t ? void 0 : m.V
                             });
-                        }, 500);
+                        if (void 0 === n || 0 === n) {
+                            e();
+                            return;
+                        }
+                        setTimeout(() => {
+                            e();
+                        }, n);
+                    }
                 },
                 [s]
             ),
@@ -56,4 +64,4 @@ let g = new s.Z('VirtualCurrency'),
                   closeIntroToOrbsClaimedCoachmark: u.dG4
               };
     },
-    h = 12633 == n.j ? p : null;
+    h = p;

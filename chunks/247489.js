@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     clickable: 'clickable_a3e8db',
     container: 'container_a3e8db',
     containerLoading: 'containerLoading_a3e8db',
@@ -8,3 +8,4 @@ e.exports = {
     selected: 'selected_a3e8db',
     notificationBadge: 'notificationBadge_a3e8db'
 };
+e.exports = r;
