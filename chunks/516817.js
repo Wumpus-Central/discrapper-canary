@@ -8,25 +8,26 @@ var i = n(120356),
     l = n(318110),
     c = n(513402);
 function u(e) {
-    let { nameplate: t, hovered: n, selected: i, reverse: u } = e,
-        d = (0, a.D)('Nameplate'),
-        f = !!(n || i),
-        p = (0, s.BY)(null == t ? void 0 : t.src, f),
-        _ = (0, l.p)(t, n, i);
-    return null != t && d && null != p
+    let { nameplate: t, hovered: n, selected: i, reverse: u, content: d } = e,
+        f = (0, a.D)('Nameplate'),
+        p = !!(n || i),
+        _ = (0, s.BY)(null == t ? void 0 : t.src, p),
+        h = (0, l.p)(t, n, i, d);
+    return null != t && f && null != _
         ? (0, r.jsx)('div', {
               className: o()(c.container),
-              style: _,
+              style: { background: h.background },
               children: (0, r.jsx)('img', {
                   className: o()(c.img, {
                       [c.hover]: n,
                       [c.selected]: i,
                       [c.reverse]: u
                   }),
-                  src: p,
+                  src: _,
                   alt: t.imgAlt,
                   height: '100%',
-                  width: 'auto'
+                  width: 'auto',
+                  style: { maskImage: h.maskImage }
               })
           })
         : null;

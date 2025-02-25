@@ -8,7 +8,6 @@ var r = {
     active: 'active__91a9d',
     highlighted: 'highlighted__91a9d',
     layout: 'layout__91a9d',
-    plated: 'plated__91a9d',
     wrappedLayout: 'wrappedLayout__91a9d',
     selected: 'selected__91a9d',
     wrapperPlated: 'wrapperPlated__91a9d',

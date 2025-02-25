@@ -81,117 +81,119 @@ function m(e, t) {
 }
 let g = i.forwardRef(function (e, t) {
     var n,
-        { avatar: i, name: o, nameplate: d, children: p, subText: m, decorators: g, onClick: E, hovered: v, selected: b, muted: y, to: O, avatarClassName: S, selectedClassName: I, innerClassName: T, wrapContent: N, highlighted: A, focusProps: C } = e,
-        R = h(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
-    (R.className = a()(R.className, u.container, {
-        [u.selected]: b,
-        [u.highlighted]: A,
-        [u.active]: b,
-        [null != I ? I : '']: b,
-        [u.clickable]: !b && (null != O || null != E),
-        [u.wrapperPlated]: null != d
+        { avatar: o, name: d, nameplate: p, children: m, subText: g, decorators: E, onClick: v, hovered: b, selected: y, muted: O, to: S, avatarClassName: I, selectedClassName: T, innerClassName: N, wrapContent: A, highlighted: C, focusProps: R } = e,
+        P = h(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
+    (P.className = a()(P.className, u.container, {
+        [u.selected]: y,
+        [u.highlighted]: C,
+        [u.active]: y,
+        [null != T ? T : '']: y,
+        [u.clickable]: !y && (null != S || null != v),
+        [u.wrapperPlated]: null != p
     })),
-        (R['aria-selected'] = null !== (n = R['aria-selected']) && void 0 !== n ? n : b);
-    let P = (0, r.jsxs)('div', {
-        className: a()(u.childContainer, { [u.nameplated]: null != d }),
-        children: [
-            (0, r.jsx)(c.Z, {
-                nameplate: d,
-                hovered: v,
-                selected: b
-            }),
-            (0, r.jsxs)('div', {
-                className: a()(T, u.layout, {
-                    [u.muted]: !b && y,
-                    [u.wrappedLayout]: N,
-                    [u.plated]: null != d
+        (P['aria-selected'] = null !== (n = P['aria-selected']) && void 0 !== n ? n : y);
+    let D = i.useRef(null),
+        w = (0, r.jsxs)('div', {
+            className: a()(u.childContainer, { [u.nameplated]: null != p }),
+            children: [
+                (0, r.jsx)(c.Z, {
+                    nameplate: p,
+                    hovered: b,
+                    selected: y,
+                    content: D.current
                 }),
-                children: [
-                    (0, r.jsx)('div', {
-                        className: a()(u.avatar, S),
-                        children: i
+                (0, r.jsxs)('div', {
+                    ref: D,
+                    className: a()(N, u.layout, {
+                        [u.muted]: !y && O,
+                        [u.wrappedLayout]: A
                     }),
-                    (0, r.jsxs)('div', {
-                        className: u.content,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: u.nameAndDecorators,
-                                children: [
-                                    (0, r.jsx)('div', {
-                                        className: a()(u.name, { [u.wrappedName]: N }),
-                                        children: o
-                                    }),
-                                    g
-                                ]
-                            }),
-                            null != m
-                                ? (0, r.jsx)('div', {
-                                      className: u.subText,
-                                      children: m
-                                  })
-                                : null
-                        ]
-                    }),
-                    null != p
-                        ? (0, r.jsx)('div', {
-                              className: u.children,
-                              children: p
-                          })
-                        : null
-                ]
-            })
-        ]
-    });
-    return null != O
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: a()(u.avatar, I),
+                            children: o
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: u.content,
+                            children: [
+                                (0, r.jsxs)('div', {
+                                    className: u.nameAndDecorators,
+                                    children: [
+                                        (0, r.jsx)('div', {
+                                            className: a()(u.name, { [u.wrappedName]: A }),
+                                            children: d
+                                        }),
+                                        E
+                                    ]
+                                }),
+                                null != g
+                                    ? (0, r.jsx)('div', {
+                                          className: u.subText,
+                                          children: g
+                                      })
+                                    : null
+                            ]
+                        }),
+                        null != m
+                            ? (0, r.jsx)('div', {
+                                  className: u.children,
+                                  children: m
+                              })
+                            : null
+                    ]
+                })
+            ]
+        });
+    return null != S
         ? (0, r.jsx)(
               l.tEY,
-              _(f({}, C), {
+              _(f({}, R), {
                   children: (0, r.jsx)(
                       s.rU,
                       _(
                           f(
                               {
-                                  to: O,
-                                  onClick: E
+                                  to: S,
+                                  onClick: v
                               },
-                              R
+                              P
                           ),
                           {
                               role: 'listitem',
                               ref: t,
-                              children: P
+                              children: w
                           }
                       )
                   )
               })
           )
-        : null != E
+        : null != v
           ? (0, r.jsx)(
                 l.P3F,
                 _(
                     f(
                         {
-                            onClick: E,
-                            focusProps: C
+                            onClick: v,
+                            focusProps: R
                         },
-                        R
+                        P
                     ),
                     {
                         role: 'listitem',
                         innerRef: t,
-                        children: P
+                        children: w
                     }
                 )
             )
           : (0, r.jsx)(
                 l.tEY,
-                _(f({}, C), {
+                _(f({}, R), {
                     children: (0, r.jsx)(
                         'div',
-                        _(f({}, R), {
+                        _(f({}, P), {
                             role: 'listitem',
                             ref: t,
-                            children: P
+                            children: w
                         })
                     )
                 })

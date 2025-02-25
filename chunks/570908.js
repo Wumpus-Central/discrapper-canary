@@ -1,43 +1,46 @@
-n.d(t, { Z: () => o });
-var l = n(200651);
-n(192379);
-var r = n(120356),
-    i = n.n(r),
-    a = n(501401);
-function o(e) {
-    let { selected: t, muted: n = !1, highlighted: r = !1, wrapContent: o = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: E, innerClassName: h } = e;
+n.d(t, { Z: () => c });
+var l = n(200651),
+    r = n(192379),
+    i = n(120356),
+    a = n.n(i),
+    o = n(501401);
+let s = r.forwardRef((e, t) => {
+    let { selected: n, muted: r = !1, highlighted: i = !1, wrapContent: s = !1, avatar: c, decorators: u, name: d, subText: E, avatarClassName: f, innerClassName: C } = e;
     return (0, l.jsxs)('div', {
-        className: i()(h, a.layout, {
-            [a.muted]: !t && n,
-            [a.highlighted]: r,
-            [a.wrappedLayout]: o
+        ref: t,
+        className: a()(C, o.layout, {
+            [o.muted]: !n && r,
+            [o.highlighted]: i,
+            [o.wrappedLayout]: s
         }),
         children: [
             (0, l.jsx)('div', {
-                className: i()(a.avatar, E),
-                children: s
+                className: a()(o.avatar, f),
+                children: c
             }),
             (0, l.jsxs)('div', {
-                className: a.content,
+                className: o.content,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: a.nameAndDecorators,
+                        className: o.nameAndDecorators,
                         children: [
                             (0, l.jsx)('div', {
-                                className: i()(a.name, { [a.wrappedName]: o }),
-                                children: u
+                                className: a()(o.name, { [o.wrappedName]: s }),
+                                children: d
                             }),
-                            c
+                            u
                         ]
                     }),
-                    null != d
+                    null != E
                         ? (0, l.jsx)('div', {
-                              className: a.subText,
-                              children: d
+                              className: o.subText,
+                              children: E
                           })
                         : null
                 ]
             })
         ]
     });
-}
+});
+s.displayName = 'AvatarWithText';
+let c = s;
