@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(627341);
+n.d(t, { Z: () => C }), n(627341);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -8,45 +8,48 @@ var r = n(200651),
     c = n(481060),
     u = n(749210),
     d = n(191237),
-    p = n(986035),
-    h = n(594174),
-    f = n(63063),
-    m = n(981631),
-    g = n(388032),
-    b = n(975743);
-let _ = function (e) {
+    p = n(622822),
+    h = n(986035),
+    f = n(594174),
+    m = n(63063),
+    g = n(981631),
+    b = n(388032),
+    _ = n(975743);
+let C = function (e) {
     let { guild: t, className: n } = e,
-        l = (0, s.e7)([h.default], () => {
+        l = (0, s.e7)([f.default], () => {
             var e;
-            return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
+            return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
         }),
-        _ = i.useRef(null),
-        C = d.Z.useShouldShowTiggerPawtect(),
-        v = i.useCallback(() => {
+        C = i.useRef(null),
+        v = (0, p.Kt)(),
+        y = i.useCallback(() => {
             null != t && u.Z.nsfwReturnToSafety(t.id);
         }, [t]),
-        y = i.useCallback(() => {
+        x = i.useCallback(() => {
             null != t && u.Z.nsfwAgree(t.id);
         }, [t]),
-        x = i.useCallback(() => {}, []);
+        j = i.useCallback(() => {
+            d.Z.showAgeVerificationGetStartedModal();
+        }, []);
     i.useEffect(() => {
-        let { current: e } = _;
+        let { current: e } = C;
         null == e || e.scrollToBottom();
     }, []);
-    let j = (0, a.EQ)({
+    let O = (0, a.EQ)({
         nsfwDisallowed: l,
-        shouldPawtect: C
+        shouldPawtect: v
     })
         .with({ shouldPawtect: !0 }, () =>
-            (0, r.jsx)(p.Z, {
-                onAgree: x,
-                onDisagree: v,
-                title: g.NW.string(g.t.ZmwvDQ),
-                description: g.NW.string(g.t['u/xqhY']),
-                agreement: g.NW.string(g.t['5B+npK']),
+            (0, r.jsx)(h.Z, {
+                onAgree: j,
+                onDisagree: y,
+                title: b.NW.string(b.t.ZmwvDQ),
+                description: b.NW.string(b.t['u/xqhY']),
+                agreement: b.NW.string(b.t['5B+npK']),
                 agreementButtonColor: c.zxk.Colors.BRAND,
-                disagreement: g.NW.string(g.t.f3Pet7),
-                imageClassName: b.ageGatedImage
+                disagreement: b.NW.string(b.t.f3Pet7),
+                imageClassName: _.ageGatedImage
             })
         )
         .with(
@@ -55,32 +58,32 @@ let _ = function (e) {
                 shouldPawtect: !1
             },
             () =>
-                (0, r.jsx)(p.Z, {
-                    onAgree: y,
-                    onDisagree: v,
-                    title: g.NW.string(g.t.NEabBQ),
-                    description: g.NW.format(g.t['2kHZen'], { helpURL: f.Z.getArticleURL(m.BhN.NSFW_AGE_GATING) }),
+                (0, r.jsx)(h.Z, {
+                    onAgree: x,
+                    onDisagree: y,
+                    title: b.NW.string(b.t.NEabBQ),
+                    description: b.NW.format(b.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                     agreement: null,
-                    disagreement: g.NW.string(g.t['13/7kZ']),
-                    imageClassName: b.ageGatedImage
+                    disagreement: b.NW.string(b.t['13/7kZ']),
+                    imageClassName: _.ageGatedImage
                 })
         )
         .otherwise(() =>
-            (0, r.jsx)(p.Z, {
-                onAgree: y,
-                onDisagree: v,
-                title: g.NW.string(g.t.ZmwvDQ),
-                description: g.NW.string(g.t.E4Cd5O),
-                agreement: g.NW.string(g.t.wVq7ur),
-                disagreement: g.NW.string(g.t.hg1uxs)
+            (0, r.jsx)(h.Z, {
+                onAgree: x,
+                onDisagree: y,
+                title: b.NW.string(b.t.ZmwvDQ),
+                description: b.NW.string(b.t.E4Cd5O),
+                agreement: b.NW.string(b.t.wVq7ur),
+                disagreement: b.NW.string(b.t.hg1uxs)
             })
         );
     return (0, r.jsx)(c.Den, {
-        ref: _,
-        className: b.scroller,
+        ref: C,
+        className: _.scroller,
         children: (0, r.jsx)('div', {
-            className: o()(n, b.wrapper),
-            children: j
+            className: o()(n, _.wrapper),
+            children: O
         })
     });
 };
