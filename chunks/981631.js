@@ -1161,6 +1161,7 @@ var T =
     (r.IOS_METRIC_KIT_PAYLOAD_RECEIVED = 'ios_metric_kit_payload_received'),
     (r.ANDROID_JANK_STATS = 'android_jank_stats'),
     (r.APP_JS_STALLED = 'app_js_stalled'),
+    (r.LIBDISCORE_LOADED = 'libdiscore_loaded'),
     (r.EXTERNAL_FINGERPRINT_DROPPED = 'external_fingerprint_dropped'),
     (r.EXTERNAL_DYNAMIC_LINK_RECEIVED = 'external_dynamic_link_received'),
     (r.DEEP_LINK_CLICKED = 'deep_link_clicked'),
