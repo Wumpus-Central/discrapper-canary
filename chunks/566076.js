@@ -1,6 +1,7 @@
 var r = {
     container: 'container__8061a',
     badge: 'badge__8061a',
+    orbBadge: 'orbBadge__8061a',
     tieredTenureBadgeBronzeGlow: 'tieredTenureBadgeBronzeGlow__8061a',
     tieredTenureBadgeSilverGlow: 'tieredTenureBadgeSilverGlow__8061a',
     tieredTenureBadgeGoldGlow: 'tieredTenureBadgeGoldGlow__8061a',
