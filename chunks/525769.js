@@ -193,6 +193,7 @@ var r = (function (e) {
             (e.USER_ADD_PHONE = 'impression_user_add_phone'),
             (e.USER_AGE_GATE = 'impression_user_age_gate'),
             (e.USER_AGE_GATE_UNDERAGE = 'impression_user_age_gate_underage'),
+            (e.USER_AGE_GATE_VERIFY = 'impression_user_age_gate_verify'),
             (e.USER_AGREEMENTS = 'impression_user_agreements'),
             (e.USER_CLYDE_AI_CONSENT_MODAL = 'impression_user_clyde_ai_consent_modal'),
             (e.USER_LOGIN = 'impression_user_login'),
