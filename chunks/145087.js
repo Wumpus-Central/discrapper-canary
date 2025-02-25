@@ -6,8 +6,6 @@ e.exports = {
     avatarUploaderInner: 'avatarUploaderInner_cd0bbe',
     avatarUploaderInnerEmpty: 'avatarUploaderInnerEmpty_cd0bbe',
     flexFormTitle: 'flexFormTitle_cd0bbe',
-    guildFeatureAvailabilityIndicator: 'guildFeatureAvailabilityIndicator_cd0bbe',
-    upsell: 'upsell_cd0bbe',
     progressBarImage: 'progressBarImage_cd0bbe',
     marginTop16: 'marginTop16_cd0bbe',
     marginTop8: 'marginTop8_cd0bbe',

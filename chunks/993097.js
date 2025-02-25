@@ -11,7 +11,11 @@ function d() {
         d = i.useMemo(() => (0, c.LG)(n), [n]),
         u = i.useCallback(() => {
             if (null == e) return;
-            let t = { premiumProgressBarEnabled: e.premiumProgressBarEnabled };
+            let t = {
+                premiumProgressBarEnabled: e.premiumProgressBarEnabled,
+                banner: e.banner,
+                splash: e.splash
+            };
             l.Z.saveGuild(e.id, t);
         }, [e]),
         m = i.useCallback(() => {
