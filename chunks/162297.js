@@ -108,7 +108,8 @@ function W(e) {
     return $
         ? (0, r.jsx)(w.O, {
               app: n,
-              embedUrl: d
+              embedUrl: d,
+              linkType: w.U.OAUTH
           })
         : (0, r.jsxs)('div', {
               ref: H,

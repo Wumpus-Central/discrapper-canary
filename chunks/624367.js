@@ -64,6 +64,7 @@ function C(e) {
                 children: (0, r.jsx)(g.O, {
                     app: A,
                     embedUrl: P,
+                    linkType: g.U.ACTIVITY,
                     activityCustomId: I,
                     activityReferrerId: S
                 })

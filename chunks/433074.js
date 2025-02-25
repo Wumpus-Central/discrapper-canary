@@ -80,7 +80,8 @@ function C(e) {
     if (T && null != A)
         return (0, r.jsx)(u.O, {
             app: f.ZP.createFromServer(A),
-            embedUrl: P
+            embedUrl: P,
+            linkType: u.U.APP_DISCOVERY
         });
     if (w)
         return (0, r.jsxs)(p.Z, {

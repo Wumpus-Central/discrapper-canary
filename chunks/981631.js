@@ -2342,6 +2342,9 @@ var T =
     (r.VOICE_FILTER_MIC_SELECTOR_OPENED = 'voice_filter_mic_selector_opened'),
     (r.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED = 'voice_filter_mic_selector_input_selected'),
     (r.VOICE_FILTER_VOICE_SETTINGS_CLICKED = 'voice_filter_voice_settings_clicked'),
+    (r.APP_EMBED_VIEWED = 'app_embed_viewed'),
+    (r.APP_EMBED_CLICKED = 'app_embed_clicked'),
+    (r.APP_EMBED_LINK_COPIED = 'app_embed_link_copied'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),
