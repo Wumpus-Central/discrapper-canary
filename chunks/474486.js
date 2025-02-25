@@ -1,29 +1,33 @@
 r.d(t, {
-    A7: () => S,
-    CI: () => E,
-    Du: () => w,
-    lH: () => N,
-    s: () => T
+    A7: () => T,
+    CI: () => R,
+    Du: () => A,
+    lH: () => L,
+    s: () => I
 }),
     r(266796);
 var n = r(200651),
     s = r(192379),
-    i = r(704215),
-    o = r(481060),
-    l = r(605236),
-    a = r(765585),
-    c = r(703656),
-    u = r(821629),
-    d = r(780525),
-    p = r(119269),
-    f = r(938736),
-    b = r(227140),
-    g = r(171346),
-    O = r(981631),
-    h = r(921944),
-    m = r(388032),
-    x = r(904892);
-function j(e) {
+    i = r(442837),
+    o = r(704215),
+    l = r(481060),
+    a = r(607070),
+    c = r(605236),
+    u = r(765585),
+    d = r(703656),
+    p = r(821629),
+    f = r(780525),
+    b = r(119269),
+    g = r(938736),
+    O = r(227140),
+    m = r(171346),
+    h = r(981631),
+    x = r(921944),
+    j = r(388032),
+    y = r(904892),
+    C = r(482668),
+    v = r(21504);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -48,7 +52,7 @@ function j(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,22 +70,22 @@ function y(e, t) {
         e
     );
 }
-let C = 'url(#dark-purple-gradient)',
-    v = () =>
+let S = 'url(#dark-purple-gradient)',
+    E = () =>
         (0, n.jsxs)('div', {
-            className: x.coachtipContent,
+            className: y.coachtipContent,
             children: [
-                (0, n.jsx)(o.X6q, {
+                (0, n.jsx)(l.X6q, {
                     variant: 'heading-sm/bold',
-                    children: m.NW.string(m.t.USo4s7)
+                    children: j.NW.string(j.t.USo4s7)
                 }),
-                (0, n.jsx)(o.Text, {
+                (0, n.jsx)(l.Text, {
                     variant: 'text-xs/normal',
-                    children: m.NW.format(m.t.AGKQq6, { numReferrals: 3 })
+                    children: j.NW.format(j.t.AGKQq6, { numReferrals: 3 })
                 })
             ]
         }),
-    P = () =>
+    N = () =>
         (0, n.jsx)('svg', {
             width: '15',
             height: '15',
@@ -93,136 +97,143 @@ let C = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    _ = () => (0, l.EW)(i.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION }),
-    S = (e) => {
+    w = () => (0, c.EW)(o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: x.L.TAKE_ACTION }),
+    T = (e) => {
         let { children: t } = e;
-        return (0, n.jsx)(o.yRy, {
+        return (0, n.jsx)(l.yRy, {
             shouldShow: !0,
             renderPopout: () =>
-                (0, n.jsx)(a.Z, {
-                    artClassName: x.coachmarkArt,
-                    dismissIconClassName: x.exitIcon,
-                    onDismissIconClick: _,
-                    dismissIcon: (0, n.jsx)(P, {}),
-                    headerClassName: x.incentiveCoachtipContent,
-                    contentClassName: x.incentiveCoachtipContainer,
-                    pointerClassName: x.incentiveTooltipPointer,
+                (0, n.jsx)(u.Z, {
+                    artClassName: y.coachmarkArt,
+                    dismissIconClassName: y.exitIcon,
+                    onDismissIconClick: w,
+                    dismissIcon: (0, n.jsx)(N, {}),
+                    headerClassName: y.incentiveCoachtipContent,
+                    contentClassName: y.incentiveCoachtipContainer,
+                    pointerClassName: y.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(O.Z5c.NITRO_HOME), _();
+                        (0, d.uL)(h.Z5c.NITRO_HOME), w();
                     },
-                    art: (0, n.jsx)(p.ZP, {
+                    art: (0, n.jsx)(b.ZP, {
                         staticPercentage: 100,
-                        iconClassName: x.incentiveIcon,
+                        iconClassName: y.incentiveIcon,
                         showAnimations: !1,
-                        progressCircleVariation: p.Qo.NITRO_LOGO,
+                        progressCircleVariation: b.Qo.NITRO_LOGO,
                         ellipseOpacity: 1,
-                        circleColor: C,
-                        circleStroke: C,
+                        circleColor: S,
+                        circleStroke: S,
                         progressCircleStrokeSize: 4
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: m.NW.string(m.t.RzWDqa),
-                    header: m.NW.formatToPlainString(m.t.md2GU1, { discountRate: f.Nq }),
+                    tryItText: j.NW.string(j.t.RzWDqa),
+                    header: j.NW.formatToPlainString(j.t.md2GU1, { discountRate: g.Nq }),
                     hideDismissButton: !0,
-                    body: m.NW.formatToPlainString(m.t.mxPPxc, { discountRate: f.Nq }),
-                    dismissibleContent: i.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
+                    body: j.NW.formatToPlainString(j.t.mxPPxc, { discountRate: g.Nq }),
+                    dismissibleContent: o.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
             children: t
         });
     },
-    E = (e) => {
+    R = (e) => {
         let { children: t } = e,
             r = (0, n.jsxs)('div', {
-                className: x.coachTipContainer,
+                className: y.coachTipContainer,
                 children: [
                     (0, n.jsx)('div', {
-                        className: x.iconContainer,
-                        children: (0, n.jsx)(p.ZP, {
+                        className: y.iconContainer,
+                        children: (0, n.jsx)(b.ZP, {
                             staticPercentage: 100,
-                            iconClassName: x.icon,
+                            iconClassName: y.icon,
                             showAnimations: !0,
-                            progressCircleVariation: p.Qo.NITRO_LOGO,
+                            progressCircleVariation: b.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            customAnimationClassName: x.customCircleAnimation,
+                            customAnimationClassName: y.customCircleAnimation,
                             circleColor: 'url(#purple-gradient)'
                         })
                     }),
-                    (0, n.jsx)(v, {})
+                    (0, n.jsx)(E, {})
                 ]
             });
-        return (0, n.jsx)(o.ua7, {
+        return (0, n.jsx)(l.ua7, {
             text: r,
             position: 'right',
-            'aria-label': m.NW.string(m.t.USo4s7),
-            tooltipClassName: x.marketingBadgeTooltip,
+            'aria-label': j.NW.string(j.t.USo4s7),
+            tooltipClassName: y.marketingBadgeTooltip,
             allowOverflow: !0,
-            tooltipContentClassName: x.tooltipContent,
-            children: (e) => (0, n.jsx)('div', y(j({}, e), { children: t }))
+            tooltipContentClassName: y.tooltipContent,
+            children: (e) => (0, n.jsx)('div', _(P({}, e), { children: t }))
         });
     },
-    N = (e) => {
+    L = (e) => {
         let { isSelected: t, onSelect: r } = e;
         return (
             s.useEffect(() => {
                 t && r();
             }, [t, r]),
-            (0, n.jsx)(b.Z, { copy: m.NW.string(m.t.y2b7CA) })
+            (0, n.jsx)(O.Z, { copy: j.NW.string(j.t.y2b7CA) })
         );
     },
-    w = () => {
-        let e = (0, n.jsx)(o.Text, {
+    A = () => {
+        let e = (0, n.jsx)(l.Text, {
             variant: 'text-sm/bold',
-            children: (0, n.jsx)(u.Z, { endDate: new Date(d.Lk) })
+            children: (0, n.jsx)(p.Z, { endDate: new Date(f.Lk) })
         });
-        return (0, n.jsx)(o.ua7, {
+        return (0, n.jsx)(l.ua7, {
             text: e,
             position: 'top',
-            'aria-label': m.NW.string(m.t.fzn5eH),
+            'aria-label': j.NW.string(j.t.fzn5eH),
             tooltipClassName: null,
             allowOverflow: !0,
             tooltipContentClassName: null,
             children: (e) =>
                 (0, n.jsx)(
                     'div',
-                    y(j({}, e), {
-                        children: (0, n.jsx)(g.Z, {
-                            copy: m.NW.string(m.t.OS9KPj),
-                            className: x.greyedOut
+                    _(P({}, e), {
+                        children: (0, n.jsx)(m.Z, {
+                            copy: j.NW.string(j.t.OS9KPj),
+                            className: y.greyedOut
                         })
                     })
                 )
         });
     },
-    T = (e) => {
+    I = (e) => {
         let { children: t, description: r } = e,
-            s = () => {
-                (0, l.EW)(i.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK, { dismissAction: h.L.TAKE_ACTION }), (0, c.uL)(O.Z5c.NITRO_HOME);
+            s = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+            p = () => {
+                (0, c.EW)(o.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK, { dismissAction: x.L.TAKE_ACTION }), (0, d.uL)(h.Z5c.NITRO_HOME);
             },
-            u = () => {
-                (0, l.EW)(i.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK, { dismissAction: h.L.TAKE_ACTION });
-            };
-        return (0, n.jsx)(o.yRy, {
+            f = () => {
+                (0, c.EW)(o.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK, { dismissAction: x.L.TAKE_ACTION });
+            },
+            b = s ? v.Z : C.Z;
+        return (0, n.jsx)(l.yRy, {
             shouldShow: !0,
             renderPopout: () =>
-                (0, n.jsx)(a.Z, {
-                    artClassName: x.coachmarkArt,
-                    dismissIconClassName: x.exitIcon,
-                    onDismissIconClick: u,
-                    dismissIcon: (0, n.jsx)(P, {}),
-                    headerClassName: x.collectibleDecoReminderCoachmarkHeader,
-                    contentClassName: x.collectibleDecoReminderCoachmarkContent,
-                    pointerClassName: x.collectibleDecoReminderCoachmarkPointer,
-                    onTryFeature: s,
+                (0, n.jsx)(u.Z, {
+                    dismissIconClassName: y.exitIcon,
+                    onDismissIconClick: f,
+                    dismissIcon: (0, n.jsx)(N, {}),
+                    artClassName: y.collectibleDecoReminderCoachmarkArtContainer,
+                    headerClassName: y.collectibleDecoReminderCoachmarkHeader,
+                    contentClassName: y.collectibleDecoReminderCoachmarkContent,
+                    pointerClassName: y.collectibleDecoReminderCoachmarkPointer,
+                    onTryFeature: p,
                     position: 'right',
                     align: 'top',
                     isPremiumFeature: !0,
-                    tryItText: m.NW.string(m.t.RzWDqa),
-                    header: m.NW.string(m.t['hJ/u+f']),
+                    tryItText: j.NW.string(j.t.RzWDqa),
+                    header: j.NW.string(j.t['hJ/u+f']),
                     hideDismissButton: !0,
+                    art: (0, n.jsx)('img', {
+                        src: b,
+                        alt: '',
+                        className: y.collectibleDecoReminderCoachmarkArt
+                    }),
                     body: r,
-                    dismissibleContent: i.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK,
+                    dismissibleContent: o.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK,
                     maxWidth: 320
                 }),
             children: t

@@ -15,6 +15,8 @@ e.exports = {
     incentiveCoachtipContainer: 'incentiveCoachtipContainer__83ef9',
     icon: 'icon__83ef9',
     incentiveIcon: 'incentiveIcon__83ef9',
+    collectibleDecoReminderCoachmarkArtContainer: 'collectibleDecoReminderCoachmarkArtContainer__83ef9',
+    collectibleDecoReminderCoachmarkArt: 'collectibleDecoReminderCoachmarkArt__83ef9',
     collectibleDecoReminderCoachmarkHeader: 'collectibleDecoReminderCoachmarkHeader__83ef9',
     collectibleDecoReminderCoachmarkContent: 'collectibleDecoReminderCoachmarkContent__83ef9',
     collectibleDecoReminderCoachmarkPointer: 'collectibleDecoReminderCoachmarkPointer__83ef9',
