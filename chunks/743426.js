@@ -145,8 +145,6 @@ class O extends a.Z {
                 return (0, d.eJ)(h.eR.REMOTE_USER_MULTI_STREAM);
             case h.AN.IMAGE_QUALITY_MEASUREMENT:
                 return (0, d.eJ)(h.eR.IMAGE_QUALITY_MEASUREMENT);
-            case h.AN.AMD_EXPERIMENTAL_RATE_CONTROL:
-                return (0, d.eJ)(h.eR.AMD_EXPERIMENTAL_RATE_CONTROL);
             case h.AN.GO_LIVE_HARDWARE:
                 return (0, d.eJ)(h.eR.GO_LIVE_HARDWARE);
             case h.AN.SCREEN_CAPTURE_KIT:
