@@ -50,34 +50,36 @@ function S(e) {
         {
             voicesById: Z,
             isNativeModuleLoading: k,
-            hasNativeModuleFailed: R
+            showFailure: R,
+            catalogLastFetchTime: L
         } = (0, u.cj)([v.Z], () => ({
             voicesById: v.Z.getVoiceFilters(),
             isNativeModuleLoading: v.Z.isNativeModuleLoading(),
-            hasNativeModuleFailed: v.Z.hasNativeModuleFailed()
+            showFailure: v.Z.showFailure(),
+            catalogLastFetchTime: v.Z.getCatalogLastFetchTime()
         })),
-        L = (0, u.cj)([v.Z], () => v.Z.getSortedVoiceFilters()),
-        D = w ? Object.values(Z) : L,
-        M = i.useMemo(() => {
+        D = (0, u.cj)([v.Z], () => v.Z.getSortedVoiceFilters()),
+        M = w ? Object.values(Z) : D,
+        W = i.useMemo(() => {
             let e = (0, d._I)(T.toLowerCase());
             return [
                 '' === e
-                    ? D
-                    : D.filter((t) => {
+                    ? M
+                    : M.filter((t) => {
                           let { id: n } = t;
-                          return s()(e, (0, d._I)(A[n].name.toLowerCase()));
+                          return s()(e, (0, d._I)(E.NW.string(A[n].name).toLowerCase()));
                       })
             ];
-        }, [D, T, A]),
-        W = (e) => Math.ceil(e / n),
-        F = i.useCallback(
+        }, [M, T, A]),
+        F = (e) => Math.ceil(e / n),
+        U = i.useCallback(
             (e) => {
                 let { sectionIndex: t, sectionRowIndex: i } = e;
                 return (0, r.jsx)(
                     P,
                     {
                         children: (0, c.range)(0, n)
-                            .map((e) => M[t][i * n + e])
+                            .map((e) => W[t][i * n + e])
                             .filter(_.lm)
                             .map((e) =>
                                 (0, r.jsx)(
@@ -93,9 +95,9 @@ function S(e) {
                     i
                 );
             },
-            [n, M, w]
+            [n, W, w]
         );
-    return T && (null == M ? void 0 : null === (t = M[0]) || void 0 === t ? void 0 : t.length) === 0
+    return T && (null == W ? void 0 : null === (t = W[0]) || void 0 === t ? void 0 : t.length) === 0
         ? (0, r.jsxs)('div', {
               className: o()(j.iconMessage),
               children: [
@@ -129,7 +131,7 @@ function S(e) {
                     })
                 ]
             })
-          : k
+          : k || null == L
             ? (0, r.jsx)('div', {
                   className: o()(j.loading),
                   children: (0, r.jsx)(f.$jN, {
@@ -140,7 +142,7 @@ function S(e) {
             : (0, r.jsx)(h.Z, {
                   fade: !0,
                   className: o()(j.container, { [j.hasHeaders]: S }),
-                  renderRow: (e, t) => F(t),
+                  renderRow: (e, t) => U(t),
                   renderSectionHeader:
                       !1 === S
                           ? void 0
@@ -152,8 +154,8 @@ function S(e) {
                                     children: E.NW.string(C[e])
                                 }),
                   sectionHeaderHeight: !1 === S ? void 0 : (e) => N[e],
-                  rowCountBySection: M.map((e) => W(e.length)),
-                  rowCount: W((0, c.sumBy)(M, (e) => e.length)),
+                  rowCountBySection: W.map((e) => F(e.length)),
+                  rowCount: F((0, c.sumBy)(W, (e) => e.length)),
                   rowHeight: 130,
                   onScroll: a,
                   ref: l,

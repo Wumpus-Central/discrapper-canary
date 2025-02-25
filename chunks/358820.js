@@ -1,9 +1,9 @@
 n.d(t, {
-    fz: () => S,
-    ge: () => N,
-    r5: () => A,
-    rk: () => I,
-    wV: () => T
+    fz: () => O,
+    ge: () => T,
+    r5: () => N,
+    rk: () => S,
+    wV: () => I
 }),
     n(411104);
 var r = n(512722),
@@ -72,9 +72,8 @@ function v(e, t) {
     );
 }
 let b = new o.Yd('VoiceFilterActionCreators'),
-    y = !1,
-    O = !1;
-function S(e) {
+    y = !1;
+function O(e) {
     let { url: t, modelId: n, fileName: r } = e,
         i = _.Z.getModelState(n);
     (null == i ? void 0 : i.status) !== h.L.DOWNLOADING &&
@@ -95,7 +94,11 @@ function S(e) {
                 (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD) ? b.info('User canceled the download for Voice Filter dependency', e) : b.error('Failed to fetch voice filter model', g({ reason: t }, e)), a.Z.dispatch(v(g({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
             }));
 }
-function I(e) {
+function S(e) {
+    if (!_.Z.isNativeModuleLoaded()) {
+        b.warn('Voice Filter apply ignored, module not loaded.');
+        return;
+    }
     f.ZP.getVoiceFilters()
         .setVoiceFilter({ name: e })
         .then(
@@ -115,8 +118,8 @@ function I(e) {
             }
         );
 }
-async function T() {
-    if (!O) {
+async function I() {
+    if (!_.Z.isNativeModuleLoaded()) {
         b.info('Voice Filter catalog refresh ignored, module not loaded.');
         return;
     }
@@ -140,12 +143,12 @@ async function T() {
         y = !1;
     }
 }
-function N() {
+function T() {
     a.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
-async function A() {
-    if (!(O || __OVERLAY__)) {
-        if (((O = !0), !(0, u.isWindows)() && !(0, u.isMac)())) {
+async function N() {
+    if (!(_.Z.isNativeModuleLoaded() || _.Z.isNativeModuleLoading() || __OVERLAY__)) {
+        if (!(0, u.isWindows)() && !(0, u.isMac)()) {
             a.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                 state: h.O.UNSUPPORTED
@@ -160,11 +163,11 @@ async function A() {
                 await f.ZP.ensureModule('discord_voice_filters');
             let t = f.ZP.getVoiceFilters();
             await t.setupResources(),
-                await T(),
                 a.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: h.O.LOADED
-                });
+                }),
+                await I();
             let n = l.Z.getMostRecentlyRequestedVoiceFilter();
             if (null != n) {
                 var e;
@@ -176,8 +179,7 @@ async function A() {
                 a.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: h.O.FAILED
-                }),
-                (O = !1);
+                });
         }
     }
 }

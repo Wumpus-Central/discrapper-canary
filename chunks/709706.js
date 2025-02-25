@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(230036), n(47120), n(51350);
+n.d(t, { Z: () => D }), n(230036), n(47120), n(51350);
 var r,
     i = n(315008),
     o = n(347715),
@@ -66,6 +66,7 @@ let h = new a.Yd('VoiceFilterStore'),
         voiceFilters: {},
         modelState: {},
         sortedVoiceFilters: [],
+        catalogLastFetchTime: void 0,
         catalogUpdateTime: void 0,
         limitedTimeVoices: void 0,
         catalogFailed: !1
@@ -124,7 +125,7 @@ function y(e) {
                 available: o,
                 temporarilyAvailable: r.currentSet.includes(e)
             }));
-    return (m.voiceFilters = n), (m.sortedVoiceFilters = b(m.voiceFilters)), !0;
+    return (m.voiceFilters = n), (m.sortedVoiceFilters = b(m.voiceFilters)), (m.catalogLastFetchTime = new Date()), !0;
 }
 function O() {
     m.catalogFailed = !0;
@@ -149,11 +150,17 @@ class S extends (r = s.ZP.Store) {
     getSortedVoiceFilters() {
         return m.sortedVoiceFilters.map((e) => m.voiceFilters[e]);
     }
+    getCatalogLastFetchTime() {
+        return m.catalogLastFetchTime;
+    }
     getCatalogUpdateTime() {
         return m.catalogUpdateTime;
     }
     getLimitedTimeVoices() {
         return m.limitedTimeVoices;
+    }
+    isNativeModuleLoaded() {
+        return m.nativeVoiceFilterModuleState === c.O.LOADED;
     }
     isNativeModuleLoading() {
         return m.nativeVoiceFilterModuleState === c.O.LOADING;
@@ -207,7 +214,7 @@ function P(e) {
     m.nativeVoiceFilterModuleState = e.state;
 }
 d(S, 'displayName', 'VoiceFilterStore');
-let w = new S(l.Z, {
+let D = new S(l.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: T,
     VOICE_FILTER_DOWNLOAD_READY: N,
     VOICE_FILTER_DOWNLOAD_PROGRESS: A,
