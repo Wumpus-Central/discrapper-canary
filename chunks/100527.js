@@ -379,6 +379,7 @@ var r = (function (e) {
         (e.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
         (e.CONFETTI_POTION_MODAL = 'confetti potion modal'),
         (e.GO_LIVE_MODAL_V2 = 'go live modal v2'),
+        (e.GO_LIVE_MODAL_SETTINGS_SELECTION = 'go live modal settings selection'),
         (e.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
         (e.USER_SETTINGS_VOICE_AND_VIDEO = 'user settings voice and video'),
         (e.USER_SETTINGS_VIDEO_TAB = 'user settings video tab'),
