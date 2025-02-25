@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => y });
 var r,
     i = n(442837),
     o = n(570140),
@@ -86,7 +86,12 @@ function E(e) {
     if (null == t || null == _[t]) return !1;
     delete _[t], delete h[t];
 }
-class v extends (r = i.ZP.Store) {
+function v(e) {
+    var t;
+    let { channelId: n, id: r } = e;
+    (null === (t = _[n]) || void 0 === t ? void 0 : t.messageId) === r && (delete _[n], delete h[n]);
+}
+class b extends (r = i.ZP.Store) {
     isEditing(e, t) {
         var n;
         return (null === (n = _[e]) || void 0 === n ? void 0 : n.messageId) === t;
@@ -114,9 +119,10 @@ class v extends (r = i.ZP.Store) {
         return h[e];
     }
 }
-u(v, 'displayName', 'EditMessageStore');
-let b = new v(o.Z, {
+u(b, 'displayName', 'EditMessageStore');
+let y = new b(o.Z, {
     MESSAGE_START_EDIT: m,
     MESSAGE_UPDATE_EDIT: g,
-    MESSAGE_END_EDIT: E
+    MESSAGE_END_EDIT: E,
+    MESSAGE_DELETE: v
 });
