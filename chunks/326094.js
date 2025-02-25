@@ -1,13 +1,11 @@
-n.d(t, { Z: () => s });
-var r = n(184242),
-    i = n(349902),
-    o = n(697927),
-    a = n(200634);
+t.d(n, { Z: () => s });
+var r = t(442837),
+    o = t(594174),
+    i = t(184242),
+    l = t(349902);
 function s(e) {
-    var t, n;
-    let { user: s, currentUser: l, location: c } = e,
-        u = null === (t = (0, o.Z)(s.id, s.id !== (null == l ? void 0 : l.id)).mutualFriends) || void 0 === t ? void 0 : t.length,
-        d = null === (n = (0, a.Z)(s.id, s.id !== (null == l ? void 0 : l.id)).mutualGuilds) || void 0 === n ? void 0 : n.length,
-        f = (0, i.Z)(s);
-    return !((0, r.Ac)({ location: c }) && f && (null != u ? u : 0) === 0 && (null != d ? d : 0) === 0);
+    let { user: n, location: t } = e,
+        s = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
+        c = (0, l.Z)(n);
+    return !(0, i.Ac)({ location: t }) || ((null == s ? void 0 : s.id) !== n.id && !c);
 }
