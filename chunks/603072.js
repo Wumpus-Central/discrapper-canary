@@ -16,8 +16,8 @@ var r = t(200651),
     x = t(104155),
     _ = t(22082),
     C = t(703656),
-    j = t(433355),
-    b = t(592125),
+    b = t(433355),
+    j = t(592125),
     v = t(430824),
     N = t(944486),
     y = t(31445),
@@ -68,6 +68,7 @@ function T(e) {
                                                     children: [
                                                         (0, r.jsx)(p._, {
                                                             className: E.returnIcon,
+                                                            containerClassName: E.returnIconContainer,
                                                             guild: n,
                                                             channel: t
                                                         }),
@@ -105,9 +106,9 @@ function B(e) {
         null != t && m(t);
     }, [t]);
     let h = (0, o.e7)([N.Z], () => N.Z.getLastSelectedChannelId(n)),
-        p = (0, o.e7)([j.ZP], () => j.ZP.getCurrentSidebarChannelId(Z.oC.CHANNEL_BROWSER)),
+        p = (0, o.e7)([b.ZP], () => b.ZP.getCurrentSidebarChannelId(Z.oC.CHANNEL_BROWSER)),
         f = null != p && u === I.l7.BROWSE,
-        C = (0, o.e7)([b.Z], () => b.Z.getChannel(h)),
+        C = (0, o.e7)([j.Z], () => j.Z.getChannel(h)),
         w = (0, o.e7)([_.Z], () => _.Z.getNewChannelIds(n).size > 0),
         B = (0, g.fU)(n);
     return null == a

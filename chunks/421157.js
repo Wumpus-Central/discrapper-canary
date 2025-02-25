@@ -7,5 +7,6 @@ e.exports = {
     tabBarItem: 'tabBarItem__0b563',
     newBadge: 'newBadge__0b563',
     header: 'header__0b563',
-    innerHeader: 'innerHeader__0b563'
+    innerHeader: 'innerHeader__0b563',
+    returnIconContainer: 'returnIconContainer__0b563'
 };
