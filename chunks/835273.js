@@ -1,4 +1,6 @@
 var r = {
+    colorBrand: 'colorBrand__675aa',
+    colorPrimary: 'colorPrimary__675aa',
     upsellTooltipWrapper: 'upsellTooltipWrapper__675aa',
     caretTopCenter: 'caretTopCenter__675aa',
     caretTopRight: 'caretTopRight__675aa',

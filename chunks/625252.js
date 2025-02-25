@@ -3,27 +3,28 @@ var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(704215),
-    o = n(780384),
-    c = n(481060),
-    d = n(37234),
-    u = n(410030),
-    m = n(605236),
-    g = n(626135),
-    p = n(617136),
-    h = n(497505),
-    f = n(341907),
+    l = n(780384),
+    o = n(481060),
+    c = n(37234),
+    d = n(410030),
+    u = n(626135),
+    m = n(617136),
+    g = n(497505),
+    p = n(865719),
+    h = n(341907),
+    f = n(46140),
     b = n(981631),
     N = n(388032),
     x = n(788090),
     _ = n(66094);
 function E() {
-    let e = (0, o.wj)((0, u.ZP)()),
-        t = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
-        n = i.useCallback(() => {
-            (0, d.xf)(),
-                (0, f.navigateToQuestHome)({ fromContent: h.jn.QUEST_HOME_MOVE_CALLOUT }),
-                g.default.track(
+    let e = (0, l.wj)((0, d.ZP)()),
+        t = (0, p.y)({ location: f.dr.USER_SETTINGS_GIFT_INVENTORY }),
+        n = i.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        s = i.useCallback(() => {
+            (0, c.xf)(),
+                (0, h.navigateToQuestHome)({ fromContent: g.jn.QUEST_HOME_MOVE_CALLOUT }),
+                u.default.track(
                     b.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -49,57 +50,50 @@ function E() {
                                 });
                         }
                         return e;
-                    })({ cta_name: p.jZ.VIEW_QUESTS }, (0, p.mH)(h.jn.QUEST_HOME_MOVE_CALLOUT))
+                    })({ cta_name: m.jZ.VIEW_QUESTS }, (0, m.mH)(g.jn.QUEST_HOME_MOVE_CALLOUT))
                 );
         }, []);
-    return (
-        i.useCallback(() => {
-            (0, m.EW)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
-        }, []),
-        (0, m.un)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
-        (0, r.jsxs)('div', {
-            className: a()(x.container),
-            style: t,
-            children: [
-                !1,
-                (0, r.jsxs)('div', {
-                    className: x.textContainer,
-                    children: [
-                        (0, r.jsxs)('div', {
-                            className: x.headerContainer,
-                            children: [
-                                (0, r.jsx)('img', {
-                                    alt: '',
-                                    src: _,
-                                    className: x.icon
-                                }),
-                                (0, r.jsx)(c.X6q, {
-                                    variant: 'heading-lg/bold',
-                                    color: 'always-white',
-                                    children: N.NW.string(N.t.z8YP2N)
-                                })
-                            ]
-                        }),
-                        (0, r.jsx)(c.Text, {
-                            variant: 'text-md/medium',
-                            color: 'text-muted',
-                            children: N.NW.string(N.t.IqmRZ2)
-                        }),
-                        (0, r.jsx)(c.zxk, {
-                            size: 'large',
-                            color: e ? c.Ttl.BRAND : c.Ttl.WHITE,
-                            className: x.button,
-                            onClick: n,
-                            innerClassName: x.innerButton,
-                            children: (0, r.jsx)(c.Text, {
-                                variant: 'text-md/medium',
-                                color: e ? 'always-white' : 'text-normal',
-                                children: N.NW.string(N.t.GURBQk)
-                            })
-                        })
-                    ]
-                })
-            ]
-        })
-    );
+    return t === p.$.NEVER_SHOW
+        ? null
+        : (0, r.jsx)('div', {
+              className: a()(x.container),
+              style: n,
+              children: (0, r.jsxs)('div', {
+                  className: x.textContainer,
+                  children: [
+                      (0, r.jsxs)('div', {
+                          className: x.headerContainer,
+                          children: [
+                              (0, r.jsx)('img', {
+                                  alt: '',
+                                  src: _,
+                                  className: x.icon
+                              }),
+                              (0, r.jsx)(o.X6q, {
+                                  variant: 'heading-lg/bold',
+                                  color: 'always-white',
+                                  children: N.NW.string(N.t.z8YP2N)
+                              })
+                          ]
+                      }),
+                      (0, r.jsx)(o.Text, {
+                          variant: 'text-md/medium',
+                          color: 'text-muted',
+                          children: N.NW.string(N.t.IqmRZ2)
+                      }),
+                      (0, r.jsx)(o.zxk, {
+                          size: 'large',
+                          color: e ? o.Ttl.BRAND : o.Ttl.WHITE,
+                          className: x.button,
+                          onClick: s,
+                          innerClassName: x.innerButton,
+                          children: (0, r.jsx)(o.Text, {
+                              variant: 'text-md/medium',
+                              color: e ? 'always-white' : 'text-normal',
+                              children: N.NW.string(N.t.GURBQk)
+                          })
+                      })
+                  ]
+              })
+          });
 }

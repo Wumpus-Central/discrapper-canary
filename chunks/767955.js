@@ -4,6 +4,7 @@ e.exports = {
     gameWrapper: 'gameWrapper__5dec7',
     liveIndicator: 'liveIndicator__5dec7',
     clickableGameWrapper: 'clickableGameWrapper__5dec7',
+    clickableGameWrapperForceHover: 'clickableGameWrapperForceHover__5dec7',
     gameIcon: 'gameIcon__5dec7',
     info: 'info__5dec7',
     sparkleContainer: 'sparkleContainer__5dec7',

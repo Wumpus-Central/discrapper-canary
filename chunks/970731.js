@@ -1,6 +1,7 @@
 n.d(t, {
+    BD: () => m,
     DF: () => _,
-    ZP: () => m,
+    ZP: () => b,
     _F: () => h
 });
 var r = n(200651);
@@ -68,81 +69,98 @@ var _ = (function (e) {
     })({}),
     h = (function (e) {
         return (e[(e.ADJACENT = 0)] = 'ADJACENT'), (e[(e.STACKED = 1)] = 'STACKED'), e;
+    })({}),
+    m = (function (e) {
+        return (e.BRAND = 'brand'), (e.PRIMARY = 'primary'), e;
     })({});
-function m(e) {
+let g = Object.freeze({
+        brand: c.colorBrand,
+        primary: c.colorPrimary
+    }),
+    E = Object.freeze({
+        brand: 'always-white',
+        primary: 'header-primary'
+    }),
+    v = Object.freeze({
+        brand: 'always-white',
+        primary: 'text-normal'
+    });
+function b(e) {
     let {
-        className: t,
-        header: n,
-        headerClassName: i,
-        content: u,
-        contentClassName: f,
-        buttonCTA: _,
-        secondaryButtonCTA: h,
-        onClick: m,
-        onSecondaryClick: g,
-        buttonProps: E = {
+        color: t = 'brand',
+        className: n,
+        header: i,
+        headerClassName: u,
+        content: f,
+        contentClassName: _,
+        buttonCTA: h,
+        secondaryButtonCTA: m,
+        onClick: b,
+        onSecondaryClick: y,
+        buttonProps: O = {
             color: a.zxk.Colors.BRAND,
             look: a.zxk.Looks.FILLED
         },
-        secondaryButtonProps: v = { color: a.zxk.Colors.BRAND_INVERTED },
-        onComponentMount: b,
-        asset: y,
-        markAsDismissed: O,
-        caretPosition: S = 'caretTopCenter',
-        buttonLayout: I = 0
+        secondaryButtonProps: S = { color: a.zxk.Colors.BRAND_INVERTED },
+        onComponentMount: I,
+        asset: T,
+        markAsDismissed: N,
+        caretPosition: A = 'caretTopCenter',
+        buttonLayout: C = 0
     } = e;
     (0, s.ZP)(() => {
-        null == b || b();
+        null == I || I();
     });
-    let T = null != h,
-        N = (e) => {
-            m(e), null == O || O(l.L.PRIMARY);
+    let R = null != m,
+        P = (e) => {
+            b(e), null == N || N(l.L.PRIMARY);
         },
-        A = () => {
-            null == g || g(), null == O || O(l.L.SECONDARY);
+        D = () => {
+            null == y || y(), null == N || N(l.L.SECONDARY);
         };
     return (0, r.jsxs)('div', {
-        className: o()(t, c.upsellTooltipWrapper, c[S]),
+        className: o()(n, g[t], c.upsellTooltipWrapper, c[A]),
         children: [
-            y,
-            null == n
+            T,
+            null == i
                 ? null
                 : (0, r.jsx)(a.X6q, {
-                      className: o()(i, c.upsellTooltipHeader),
+                      color: E[t],
+                      className: o()(u, c.upsellTooltipHeader),
                       variant: 'heading-md/semibold',
-                      children: n
+                      children: i
                   }),
             (0, r.jsx)(a.Text, {
-                color: 'always-white',
-                className: o()(f, c.content),
+                color: v[t],
+                className: o()(_, c.content),
                 variant: 'text-sm/normal',
-                children: u
+                children: f
             }),
-            null != _ || T
+            null != h || R
                 ? (0, r.jsxs)('div', {
                       className: o()(c.upsellButtonsContainer, {
-                          [c.upsellButtonsAdjacent]: 0 === I,
-                          [c.upsellButtonsStacked]: 1 === I
+                          [c.upsellButtonsAdjacent]: 0 === C,
+                          [c.upsellButtonsStacked]: 1 === C
                       }),
                       children: [
-                          T
+                          R
                               ? (0, r.jsx)(
                                     a.zxk,
-                                    p(d({}, v), {
-                                        fullWidth: 1 === I,
-                                        onClick: A,
-                                        children: h
+                                    p(d({}, S), {
+                                        fullWidth: 1 === C,
+                                        onClick: D,
+                                        children: m
                                     })
                                 )
                               : null,
-                          null == _
+                          null == h
                               ? null
                               : (0, r.jsx)(
                                     a.zxk,
-                                    p(d({}, E), {
-                                        fullWidth: !T || 1 === I,
-                                        onClick: N,
-                                        children: _
+                                    p(d({}, O), {
+                                        fullWidth: !R || 1 === C,
+                                        onClick: P,
+                                        children: h
                                     })
                                 )
                       ]
@@ -151,4 +169,4 @@ function m(e) {
         ]
     });
 }
-(m.CaretPosition = _), (m.ButtonLayout = h);
+(b.CaretPosition = _), (b.ButtonLayout = h);
