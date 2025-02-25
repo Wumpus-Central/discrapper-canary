@@ -15,14 +15,9 @@ function d(e) {
             },
             [d]
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)(s.hjN, {
+        title: o.NW.string(o.t['oQ/7BQ']),
         children: [
-            (0, r.jsx)(s.X6q, {
-                variant: 'text-xs/bold',
-                color: 'interactive-normal',
-                className: c.subtitle,
-                children: o.NW.string(o.t['oQ/7BQ'])
-            }),
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',

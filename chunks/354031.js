@@ -16,11 +16,9 @@ function u(e) {
             },
             [t]
         );
-    return (0, r.jsxs)('div', {
+    return (0, r.jsxs)(s.hjN, {
         children: [
-            (0, r.jsxs)(s.X6q, {
-                variant: 'text-xs/bold',
-                color: 'interactive-normal',
+            (0, r.jsxs)(s.vwX, {
                 className: d.subtitle,
                 children: [
                     c.NW.string(c.t.FOYxgo),
