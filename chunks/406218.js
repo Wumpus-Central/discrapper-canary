@@ -57,6 +57,7 @@ function d(e) {
         name: e.name,
         description: e.description,
         icon: e.icon_hash,
+        customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
         memberCount: e.member_count,
         brandColorPrimary: e.brand_color_primary,
@@ -72,7 +73,8 @@ function f(e) {
     return (
         null != e.name && (t.name = e.name),
         null != e.description && (t.description = e.description),
-        null != e.icon && (t.icon = e.icon),
+        void 0 !== e.icon && (t.icon = e.icon),
+        void 0 !== e.customBanner && (t.custom_banner = e.customBanner),
         null != e.visibility && (t.visibility = e.visibility),
         null != e.brandColorPrimary && (t.brand_color_primary = e.brandColorPrimary),
         null != e.traits &&

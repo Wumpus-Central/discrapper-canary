@@ -1,217 +1,220 @@
-n.d(t, { Z: () => W }), n(47120);
+n.d(t, { Z: () => F }), n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(846519),
-    l = n(481060),
-    s = n(2052),
-    c = n(607070),
-    d = n(317381),
-    u = n(638880),
-    p = n(122613),
-    m = n(527805),
-    f = n(884338),
-    h = n(100527),
-    g = n(906732),
-    _ = n(783097),
-    b = n(895924),
-    v = n(311819),
-    y = n(321231),
-    x = n(758199),
-    O = n(429551),
-    E = n(973616),
-    j = n(314897),
-    N = n(592125),
-    C = n(158776),
-    I = n(594174),
-    S = n(626135),
-    P = n(768581),
-    T = n(70956),
-    A = n(823379),
-    w = n(506071),
-    Z = n(226378),
-    k = n(981631),
-    R = n(701488),
-    L = n(388032),
-    D = n(956265);
-let M = i.memo((e) => {
+    a = n(115911),
+    o = n(442837),
+    l = n(846519),
+    s = n(481060),
+    c = n(2052),
+    d = n(607070),
+    u = n(317381),
+    p = n(638880),
+    m = n(122613),
+    f = n(527805),
+    h = n(884338),
+    g = n(100527),
+    _ = n(906732),
+    b = n(783097),
+    v = n(895924),
+    y = n(311819),
+    x = n(321231),
+    O = n(758199),
+    E = n(429551),
+    j = n(973616),
+    N = n(314897),
+    C = n(592125),
+    I = n(158776),
+    S = n(594174),
+    P = n(626135),
+    T = n(768581),
+    A = n(70956),
+    w = n(823379),
+    Z = n(506071),
+    k = n(226378),
+    R = n(981631),
+    L = n(701488),
+    D = n(388032),
+    M = n(956265);
+let W = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
-        l = (0, w.n)(),
-        s = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        d = !1 === l || s;
+        a = (0, Z.n)(),
+        s = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        c = !1 === a || s;
     return (
         i.useEffect(() => {
-            let e = new o.Xp();
+            let e = new l.Xp();
             return (
-                e.start(d ? 15 * T.Z.Millis.SECOND : T.Z.Millis.SECOND, () => {
-                    r((new Date().getTime() - t) / T.Z.Millis.SECOND);
+                e.start(c ? 15 * A.Z.Millis.SECOND : A.Z.Millis.SECOND, () => {
+                    r((new Date().getTime() - t) / A.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );
-        }, [d, t]),
-        (0, O.m)(n)
+        }, [c, t]),
+        (0, E.m)(n)
     );
 });
-M.displayName = 'ActivityRuntimeCounter';
-let W = i.memo(function (e) {
-    var t, n, o, c;
-    let { application: O, channelId: T, guildId: w } = e,
-        { analyticsLocations: W } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
-        F = (0, s.O)(),
-        U = (0, a.e7)([N.Z], () => N.Z.getChannel(T), [T]),
-        B = (null == U ? void 0 : null === (t = U.isThread) || void 0 === t ? void 0 : t.call(U)) ? (null == U ? void 0 : U.parent_id) : T,
-        G = (0, a.e7)([j.default], () => j.default.getId()),
+W.displayName = 'ActivityRuntimeCounter';
+let F = i.memo(function (e) {
+    var t, n, l, d;
+    let { application: E, channelId: A, guildId: Z } = e,
+        { analyticsLocations: F } = (0, _.ZP)(g.Z.ACTIVITY_INSTANCE_EMBED),
+        U = (0, c.O)(),
+        B = (0, o.e7)([C.Z], () => C.Z.getChannel(A), [A]),
+        G = (null == B ? void 0 : null === (t = B.isThread) || void 0 === t ? void 0 : t.call(B)) ? (null == B ? void 0 : B.parent_id) : A,
+        H = (0, o.e7)([N.default], () => N.default.getId()),
         {
-            embeddedActivity: H,
-            currentEmbeddedActivity: V,
-            activityLaunchState: z
-        } = (0, a.cj)(
-            [d.ZP],
+            embeddedActivity: V,
+            currentEmbeddedActivity: z,
+            activityLaunchState: K
+        } = (0, o.cj)(
+            [u.ZP],
             () => ({
-                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != B ? B : '').find((e) => e.applicationId === O.id),
-                currentEmbeddedActivity: d.ZP.getCurrentEmbeddedActivity(),
-                activityLaunchState: d.ZP.getLaunchState(O.id, null != B ? B : void 0)
+                embeddedActivity: u.ZP.getEmbeddedActivitiesForChannel(null != G ? G : '').find((e) => e.applicationId === E.id),
+                currentEmbeddedActivity: u.ZP.getCurrentEmbeddedActivity(),
+                activityLaunchState: u.ZP.getLaunchState(E.id, null != G ? G : void 0)
             }),
-            [B, O.id]
+            [G, E.id]
         ),
-        K = null == H ? void 0 : H.userIds,
-        Y = (0, a.Wu)(
-            [I.default],
+        Y = null == V ? void 0 : V.userIds,
+        X = (0, o.Wu)(
+            [S.default],
             () =>
-                Array.from(null != K ? K : [])
-                    .map((e) => I.default.getUser(e))
-                    .filter(A.lm),
-            [K]
+                Array.from(null != Y ? Y : [])
+                    .map((e) => S.default.getUser(e))
+                    .filter(w.lm),
+            [Y]
         ),
-        X = (0, a.e7)(
-            [C.Z],
+        q = (0, o.e7)(
+            [I.Z],
             () => {
-                if (null == K) return null;
-                for (let e of K) {
-                    let t = C.Z.findActivity(e, (e) => e.application_id === O.id);
+                if (null == Y) return null;
+                for (let e of Y) {
+                    let t = I.Z.findActivity(e, (e) => e.application_id === E.id);
                     if (null != t) return t;
                 }
                 return null;
             },
-            [O.id, K]
+            [E.id, Y]
         ),
-        q = null == X ? void 0 : X.details,
-        Q = i.useMemo(() => {
-            let e = new E.ZP(O);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = R.wT), e;
-        }, [O]),
-        J = (0, m.s5)({
-            userId: G,
-            channelId: T,
-            application: Q
+        Q = null == q ? void 0 : q.details,
+        J = i.useMemo(() => {
+            let e = new j.ZP(E);
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.wT), e;
+        }, [E]),
+        $ = (0, f.s5)({
+            userId: H,
+            channelId: A,
+            application: J
         }),
-        $ = null == H,
-        ee = (0, Z.NL)({
-            embeddedActivity: H,
-            joinability: J,
-            currentEmbeddedActivity: V,
-            channel: U
+        ee = null == V,
+        et = (0, k.NL)({
+            embeddedActivity: V,
+            joinability: $,
+            currentEmbeddedActivity: z,
+            channel: B
         }),
-        et = i.useId(),
-        en = null != z && z.isLaunching && z.componentId === et,
-        er = async () => {
-            S.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: O.id,
-                channel_id: T,
-                channel_type: null == U ? void 0 : U.type,
-                is_activity_start: $,
+        en = i.useId(),
+        er = null != K && K.isLaunching && K.componentId === en,
+        ei = async () => {
+            P.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+                application_id: E.id,
+                channel_id: A,
+                channel_type: null == B ? void 0 : B.type,
+                is_activity_start: ee,
                 cta: 'Play'
             }),
-                $
-                    ? await (0, p.Z)({
-                          targetApplicationId: O.id,
-                          channelId: T,
-                          locationObject: F.location,
-                          analyticsLocations: W,
-                          componentId: et,
-                          commandOrigin: b.bB.ACTIVITY_INSTANCE_EMBED
+                ee
+                    ? await (0, m.Z)({
+                          targetApplicationId: E.id,
+                          channelId: A,
+                          locationObject: U.location,
+                          analyticsLocations: F,
+                          componentId: en,
+                          commandOrigin: v.bB.ACTIVITY_INSTANCE_EMBED
                       })
-                    : await (0, u.Z)({
-                          applicationId: H.applicationId,
-                          activityChannelId: T,
-                          locationObject: F.location,
-                          analyticsLocations: W,
-                          componentId: et
+                    : await (0, p.Z)({
+                          applicationId: V.applicationId,
+                          activityChannelId: A,
+                          locationObject: U.location,
+                          analyticsLocations: F,
+                          componentId: en,
+                          instanceId: null == V ? void 0 : V.compositeInstanceId,
+                          isContextlessActivity: (null == V ? void 0 : V.location.kind) === a.X.CONTEXTLESS
                       });
         },
-        ei = ee.disabled ? L.NW.string(L.t.JBnc7O) : L.NW.string(L.t.cX9uLS),
-        { enabled: ea } = y.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
-    if (ea) {
+        ea = et.disabled ? D.NW.string(D.t.JBnc7O) : D.NW.string(D.t.cX9uLS),
+        { enabled: eo } = x.G.useExperiment({ location: 'EmbeddedActivityInstanceEmbed' });
+    if (eo) {
         let e;
-        let t = P.ZP.getApplicationIconURL({
-            id: O.id,
-            icon: O.icon,
-            bot: O.bot
+        let t = T.ZP.getApplicationIconURL({
+            id: E.id,
+            icon: E.icon,
+            bot: E.bot
         });
-        ee.disabled && (e = null !== (o = ee.tooltip) && void 0 !== o ? o : ee.text);
-        let i = I.default.getCurrentUser(),
-            a = Y.length,
-            s = null !== (c = null == X ? void 0 : null === (n = X.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== c ? c : null == X ? void 0 : X.created_at,
-            d = $ ? ei : null != q ? q : L.NW.string(L.t.oQn0h4),
+        et.disabled && (e = null !== (l = et.tooltip) && void 0 !== l ? l : et.text);
+        let i = S.default.getCurrentUser(),
+            a = X.length,
+            o = null !== (d = null == q ? void 0 : null === (n = q.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== d ? d : null == q ? void 0 : q.created_at,
+            c = ee ? ea : null != Q ? Q : D.NW.string(D.t.oQn0h4),
             u = (function (e) {
                 switch (null == e ? void 0 : e.type) {
-                    case k.IIU.STREAMING:
+                    case R.IIU.STREAMING:
                         return {
-                            text: L.NW.string(L.t['Jpkr/v']),
-                            Icon: l.m3e
+                            text: D.NW.string(D.t['Jpkr/v']),
+                            Icon: s.m3e
                         };
-                    case k.IIU.LISTENING:
+                    case R.IIU.LISTENING:
                         return {
-                            text: L.NW.string(L.t.kUEnxM),
-                            Icon: l.RZG
+                            text: D.NW.string(D.t.kUEnxM),
+                            Icon: s.RZG
                         };
                     default:
                         return {
-                            text: L.NW.string(L.t.BMTj29),
-                            Icon: l.iWm
+                            text: D.NW.string(D.t.BMTj29),
+                            Icon: s.iWm
                         };
                 }
-            })(X);
-        return (0, r.jsx)(x.W, {
-            header: O.name,
-            title: d,
+            })(q);
+        return (0, r.jsx)(O.W, {
+            header: E.name,
+            title: c,
             iconSrc: t,
-            embedUrl: (0, v.H)({
-                applicationId: O.id,
+            embedUrl: (0, y.H)({
+                applicationId: E.id,
                 referrerId: null == i ? void 0 : i.id
             }),
             info: (0, r.jsxs)('div', {
-                className: D.infoWrapper,
+                className: M.infoWrapper,
                 children: [
-                    null != q &&
-                        (0, r.jsx)(l.Text, {
+                    null != Q &&
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-xs/medium',
                             color: 'none',
                             children:
-                                null != s &&
+                                null != o &&
                                 (0, r.jsxs)('div', {
-                                    className: D.activityTimer,
+                                    className: M.activityTimer,
                                     children: [
                                         (0, r.jsx)(u.Icon, {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
-                                        (0, r.jsx)(M, { start: s })
+                                        (0, r.jsx)(W, { start: o })
                                     ]
                                 })
                         }),
                     a > 0 &&
                         (0, r.jsxs)('div', {
-                            className: D.activePlayingWrapper,
+                            className: M.activePlayingWrapper,
                             children: [
-                                (0, r.jsx)(f.Z, {
-                                    guildId: w,
-                                    users: Y,
+                                (0, r.jsx)(h.Z, {
+                                    guildId: Z,
+                                    users: X,
                                     max: 6,
-                                    size: f.u.SIZE_16
+                                    size: h.u.SIZE_16
                                 }),
-                                (0, r.jsxs)(l.Text, {
+                                (0, r.jsxs)(s.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'none',
                                     children: [a, ' ', u.text]
@@ -222,53 +225,53 @@ let W = i.memo(function (e) {
             }),
             actions: [
                 {
-                    label: $ ? L.NW.string(L.t.RscU7O) : L.NW.string(L.t.VJlc0d),
-                    onClick: er,
+                    label: ee ? D.NW.string(D.t.RscU7O) : D.NW.string(D.t.VJlc0d),
+                    onClick: ei,
                     disabledReason: e,
-                    submitting: en
+                    submitting: er
                 },
                 {
                     label: 'View',
                     onClick() {
-                        S.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                            application_id: O.id,
-                            channel_id: T,
-                            channel_type: null == U ? void 0 : U.type,
+                        P.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+                            application_id: E.id,
+                            channel_id: A,
+                            channel_type: null == B ? void 0 : B.type,
                             cta: 'View'
                         }),
-                            (0, _.X)(O.id);
+                            (0, b.X)(E.id);
                     }
                 }
             ]
         });
     }
     return (0, r.jsx)('div', {
-        className: D.container,
+        className: M.container,
         children: (0, r.jsxs)('div', {
-            className: D.contentContainer,
+            className: M.contentContainer,
             children: [
                 (0, r.jsx)('div', {
-                    className: D.headerContainer,
-                    children: $
+                    className: M.headerContainer,
+                    children: ee
                         ? (0, r.jsx)('div', {
-                              children: (0, r.jsx)(l.Text, {
+                              children: (0, r.jsx)(s.Text, {
                                   variant: 'text-md/medium',
-                                  children: ei
+                                  children: ea
                               })
                           })
-                        : (0, r.jsx)(l.Text, {
+                        : (0, r.jsx)(s.Text, {
                               variant: 'text-md/medium',
                               lineClamp: 1,
                               color: 'text-normal',
-                              children: null != q ? q : L.NW.string(L.t.oQn0h4)
+                              children: null != Q ? Q : D.NW.string(D.t.oQn0h4)
                           })
                 }),
                 (0, r.jsxs)('div', {
-                    className: D.footerContainer,
+                    className: M.footerContainer,
                     children: [
-                        (0, r.jsx)(l.ua7, {
-                            text: ee.tooltip,
-                            tooltipContentClassName: D.tooltipContent,
+                        (0, r.jsx)(s.ua7, {
+                            text: et.tooltip,
+                            tooltipContentClassName: M.tooltipContent,
                             children: (e) => {
                                 var t,
                                     n,
@@ -293,7 +296,7 @@ let W = i.memo(function (e) {
                                         return i;
                                     })(e, ['onClick']);
                                 return (0, i.createElement)(
-                                    l.zxk,
+                                    s.zxk,
                                     ((t = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -321,13 +324,13 @@ let W = i.memo(function (e) {
                                     })({}, a)),
                                     (n = n =
                                         {
-                                            key: ''.concat(ee.isJoinAction),
+                                            key: ''.concat(et.isJoinAction),
                                             onClick: () => {
-                                                er(), null == r || r();
+                                                ei(), null == r || r();
                                             },
-                                            color: ee.isJoinAction ? l.Ttl.GREEN : l.Ttl.PRIMARY,
-                                            submitting: en,
-                                            disabled: ee.disabled
+                                            color: et.isJoinAction ? s.Ttl.GREEN : s.Ttl.PRIMARY,
+                                            submitting: er,
+                                            disabled: et.disabled
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -342,16 +345,16 @@ let W = i.memo(function (e) {
                                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                           }),
                                     t),
-                                    ee.text
+                                    et.text
                                 );
                             }
                         }),
-                        !$ &&
-                            (0, r.jsx)(f.Z, {
-                                guildId: w,
-                                users: Y,
+                        !ee &&
+                            (0, r.jsx)(h.Z, {
+                                guildId: Z,
+                                users: X,
                                 max: 4,
-                                size: f.u.SIZE_32
+                                size: h.u.SIZE_32
                             })
                     ]
                 })

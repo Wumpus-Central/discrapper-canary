@@ -134,7 +134,8 @@ class H extends (r = a.PureComponent) {
                         source: M.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
                         partyId: null === (o = e.party) || void 0 === o ? void 0 : o.id,
-                        embedded: (0, m.Z)(e, M.xjy.EMBEDDED)
+                        embedded: (0, m.Z)(e, M.xjy.EMBEDDED),
+                        activity: e
                     }),
                         (0, h.Z)({
                             type: M.q5t.JOIN,

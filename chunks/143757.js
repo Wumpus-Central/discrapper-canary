@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(266796), n(47120);
+n.d(t, { Z: () => Z }), n(266796), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -7,25 +7,22 @@ var r = n(200651),
     s = n(481060),
     c = n(239091),
     u = n(2052),
-    d = n(774226),
-    p = n(317381),
-    h = n(16609),
-    f = n(403404),
-    g = n(100527),
-    m = n(906732),
-    b = n(753972),
-    _ = n(82295),
-    E = n(984370),
-    O = n(592125),
-    N = n(626135),
-    v = n(823379),
-    y = n(415439),
-    I = n(981631),
-    C = n(388032),
-    S = n(444181),
-    T = n(730499);
-function P() {
-    return (P =
+    d = n(317381),
+    p = n(403404),
+    h = n(100527),
+    f = n(906732),
+    g = n(753972),
+    m = n(82295),
+    b = n(984370),
+    _ = n(626135),
+    E = n(823379),
+    O = n(415439),
+    N = n(981631),
+    v = n(388032),
+    y = n(444181),
+    I = n(730499);
+function C() {
+    return (C =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -35,7 +32,7 @@ function P() {
             return e;
         }).apply(this, arguments);
 }
-function j(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,11 +57,11 @@ function j(e) {
     }
     return e;
 }
-function A(e) {
+function T(e) {
     let { analyticsLocations: t, analyticsContext: n } = e;
-    return (0, r.jsx)(E.Z.Icon, {
+    return (0, r.jsx)(b.Z.Icon, {
         onClick: () => {
-            (0, f.Z)({
+            (0, p.Z)({
                 locationObject: n.location,
                 openInPopout: !1,
                 analyticsLocations: t,
@@ -72,34 +69,32 @@ function A(e) {
             });
         },
         icon: s.qJs,
-        className: S.plusIcon,
-        iconClassName: S.plusIcon,
-        tooltip: C.NW.string(C.t.qJvTKS),
+        className: y.plusIcon,
+        iconClassName: y.plusIcon,
+        tooltip: v.NW.string(v.t.qJvTKS),
         tooltipPosition: 'top'
     });
 }
-function Z(e) {
-    let { application: t, loadingAppId: n, setLoadingAppId: i, botUserId: l, analyticsLocations: c } = e,
-        u = (0, a.e7)([O.Z], () => O.Z.getDMFromUserId(l)),
-        f = (0, a.e7)([p.ZP], () => p.ZP.getCurrentEmbeddedActivity()),
-        g = (0, d.GK)(),
-        m = null != f && f.applicationId === t.id && (g || (0, h.pY)(f.location) === u),
-        _ = n === t.id,
-        E = null != n;
+function P(e) {
+    let { application: t, loadingAppId: n, setLoadingAppId: i, analyticsLocations: l } = e,
+        c = (0, a.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
+        u = null != c && c.applicationId === t.id,
+        p = n === t.id,
+        h = null != n;
     return (0, r.jsx)(s.P3F, {
-        className: o()(S.clickable, { [S.disabledClickable]: E }),
-        onClick: () => (m || E ? null : (0, y.Kt)(t, i, c)),
-        'aria-label': C.NW.formatToPlainString(C.t['zLhr9/'], {
+        className: o()(y.clickable, { [y.disabledClickable]: h }),
+        onClick: () => (u || h ? null : (0, O.Kt)(t, i, l)),
+        'aria-label': v.NW.formatToPlainString(v.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, r.jsx)(s.ua7, {
-            tooltipContentClassName: S.tooltipContent,
+            tooltipContentClassName: y.tooltipContent,
             text: t.name,
             children: (e) => {
                 var n,
                     i,
-                    l = P(
+                    l = C(
                         {},
                         (function (e) {
                             if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -108,21 +103,21 @@ function Z(e) {
                     );
                 return (0, r.jsxs)(
                     'div',
-                    ((n = j({ className: S.iconContainer }, l)),
+                    ((n = S({ className: y.iconContainer }, l)),
                     (i = i =
                         {
                             children: [
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(g.Z, {
                                     application: t,
-                                    className: S.iconCard,
+                                    className: y.iconCard,
                                     'aria-hidden': !0,
                                     rendersPlaceholder: !0
                                 }),
-                                _ || m
+                                p || u
                                     ? (0, r.jsx)(s.$jN, {
                                           type: s.$jN.Type.PULSING_ELLIPSIS,
-                                          className: S.spinner,
-                                          itemClassName: m ? S.spinnerInnerRunning : void 0
+                                          className: y.spinner,
+                                          itemClassName: u ? y.spinnerInnerRunning : void 0
                                       })
                                     : null
                             ]
@@ -145,65 +140,63 @@ function Z(e) {
         })
     });
 }
-function x(e) {
+function j(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: i, analyticsLocations: l } = e;
     return (0, r.jsx)('div', {
-        className: S.itemContainer,
-        children: t.map((e) => {
-            var t;
-            return (0, r.jsx)(
-                Z,
+        className: y.itemContainer,
+        children: t.map((e) =>
+            (0, r.jsx)(
+                P,
                 {
                     application: e,
                     loadingAppId: n,
                     setLoadingAppId: i,
-                    botUserId: null === (t = e.bot) || void 0 === t ? void 0 : t.id,
                     analyticsLocations: l
                 },
                 e.id
-            );
-        })
+            )
+        )
     });
 }
-let L = (e) => {
+let A = (e) => {
     (0, c.jW)(e, async () => {
         let { default: e } = await n.e('40706').then(n.bind(n, 610909));
-        return (t) => (0, r.jsx)(e, j({}, t));
+        return (t) => (0, r.jsx)(e, S({}, t));
     });
 };
-function w(e) {
+function Z(e) {
     let { bottomDivider: t } = e,
-        n = (0, y.ZC)(),
+        { frecentApps: n } = (0, O.ZC)(),
         [l, a] = i.useState(void 0),
-        { analyticsLocations: s } = (0, m.ZP)(g.Z.APP_DMS_QUICK_LAUNCHER),
+        { analyticsLocations: s } = (0, f.ZP)(h.Z.APP_DMS_QUICK_LAUNCHER),
         c = i.useRef(!1),
         d = (0, u.O)(),
-        p = i.useMemo(() => n.filter(v.lm).slice(0, 8), [n]);
+        p = i.useMemo(() => n.filter(E.lm).slice(0, 8), [n]);
     return (
         i.useLayoutEffect(() => {
             var e;
-            !c.current && ((c.current = !0), N.default.track(I.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = p.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
+            !c.current && ((c.current = !0), _.default.track(N.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = p.map((e) => Number(e.id))) && void 0 !== e ? e : [] }));
         }, [p]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: S.container,
-                    onContextMenu: L,
+                    className: y.container,
+                    onContextMenu: A,
                     children: [
-                        (0, r.jsxs)(_.Z, {
-                            className: o()(S.headerContainer, T.privateChannelsHeaderContainer),
+                        (0, r.jsxs)(m.Z, {
+                            className: o()(y.headerContainer, I.privateChannelsHeaderContainer),
                             children: [
                                 (0, r.jsx)('span', {
-                                    className: T.headerText,
-                                    children: C.NW.string(C.t.vayAzs)
+                                    className: I.headerText,
+                                    children: v.NW.string(v.t.vayAzs)
                                 }),
-                                (0, r.jsx)(A, {
+                                (0, r.jsx)(T, {
                                     analyticsLocations: s,
                                     analyticsContext: d
                                 })
                             ]
                         }),
-                        (0, r.jsx)(x, {
+                        (0, r.jsx)(j, {
                             frecentApps: p,
                             loadingAppId: l,
                             setLoadingAppId: a,

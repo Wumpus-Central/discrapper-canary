@@ -23,7 +23,7 @@ async function p(e) {
               null != O &&
               null != S &&
               (s.tZ(S.id),
-              await (0, l.af)({
+              await (0, l.G6)({
                   channelId: a,
                   applicationId: S.id,
                   isStart: !0,
@@ -37,6 +37,7 @@ async function p(e) {
                   onExecutedCallback: g,
                   referrerId: E,
                   customId: v,
+                  instanceId: void 0,
                   inviterUserId: b
               }));
 }

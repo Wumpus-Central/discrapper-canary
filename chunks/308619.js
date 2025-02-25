@@ -23,7 +23,8 @@ function u() {
                 brandColorPrimary: u.brandColorPrimary,
                 traits: u.traits,
                 visibility: u.visibility,
-                gameApplicationIds: u.gameApplicationIds
+                gameApplicationIds: u.gameApplicationIds,
+                customBanner: u.customBanner
             };
             (0, l.pV)(e.id, t);
         }, [e, u]),
