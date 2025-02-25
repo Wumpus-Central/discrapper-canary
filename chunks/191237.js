@@ -49,5 +49,11 @@ let s = {
     },
     useShouldShowTiggerPawtect: function () {
         return !1;
+    },
+    canRetryTiggerPawtect: function () {
+        return !1;
+    },
+    useCanRetryTiggerPawtect: function () {
+        return !1;
     }
 };

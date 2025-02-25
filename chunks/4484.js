@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(117530),
     d = n(459273),
     f = n(585483),
-    p = n(91313),
-    _ = n(53529),
+    _ = n(91313),
+    p = n(53529),
     h = n(288897),
-    m = n(925994),
-    g = n(436660),
+    g = n(925994),
+    m = n(436660),
     E = n(887490),
     v = n(194625),
     b = n(77188),
@@ -29,11 +29,11 @@ var r = n(200651),
     P = n(74883);
 let D = i.forwardRef(function (e, t) {
     let { value: n, type: o, channel: D, className: w, id: L, disabled: x, submitting: M, placeholder: j, required: k, textAreaPaddingClassName: U, onChange: G, onPaste: B, onResize: F, onFocus: V, onBlur: Z, onKeyDown: H, onKeyUp: W, onTab: Y, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': eo, 'aria-haspopup': ea, 'aria-activedescendant': es, 'aria-controls': el, 'aria-invalid': ec, 'aria-describedby': eu, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
-        ep = i.useRef(null),
         e_ = i.useRef(null),
+        ep = i.useRef(null),
         eh = i.useRef(!0),
-        em = i.useRef(!0),
-        eg = x || M,
+        eg = i.useRef(!0),
+        em = x || M,
         eE = i.useCallback(
             (e, t, n) => {
                 var r;
@@ -50,7 +50,7 @@ let D = i.forwardRef(function (e, t) {
                         }
                         (0, N.KH)(e, D.guild_id, D.id), (o = void 0);
                     }
-                    'undo' !== t && void 0 !== i && i !== a && _.T.insertEntry(e, 'other', !1, a, s), (l = !0);
+                    'undo' !== t && void 0 !== i && i !== a && p.T.insertEntry(e, 'other', !1, a, s), (l = !0);
                 }
                 if ((null == o || E.Ew.isValid(e, o) || (o = void 0), (l || !E.Ew.isValid(e, s)) && void 0 === o)) {
                     let t = E.bN.end(e, []);
@@ -62,23 +62,23 @@ let D = i.forwardRef(function (e, t) {
                 let u = null != o && !E.Ew.equals(o, s);
                 if ((l && !et && E.bN.focus(e), null != o && u)) {
                     e.selection = o;
-                    let t = _.T.currentEntry(e);
+                    let t = p.T.currentEntry(e);
                     null != t && (t.selection = o), (l = !0);
                 }
-                let d = p.cr(e);
+                let d = _.cr(e);
                 if (
                     (null != d &&
                         d[0].command.id !== (null === (r = c.Z.getActiveCommand(D.id)) || void 0 === r ? void 0 : r.id) &&
-                        _.T.withMergedEntry(e, () => {
+                        p.T.withMergedEntry(e, () => {
                             (0, T.L)(e, D.id, null, !0);
                         }),
                     l)
                 ) {
                     if ('parent' === t)
                         try {
-                            (em.current = !1), e.onChange();
+                            (eg.current = !1), e.onChange();
                         } finally {
-                            em.current = !0;
+                            eg.current = !0;
                         }
                     else e.onChange();
                 }
@@ -102,8 +102,8 @@ let D = i.forwardRef(function (e, t) {
         }),
         eO = i.useCallback(
             (e, t) => {
-                let n = p.tM(ey, e, D.id),
-                    r = p.lk(e, D.guild_id, D.id, n, t);
+                let n = _.tM(ey, e, D.id),
+                    r = _.lk(e, D.guild_id, D.id, n, t);
                 return {
                     values: n,
                     results: r
@@ -117,18 +117,17 @@ let D = i.forwardRef(function (e, t) {
             if (null != t && null != t.options) {
                 let i = eO(t, !1);
                 e = i.values;
-                let o = p
-                    .cu(ey)
+                let o = _.cu(ey)
                     .filter((e) => !i.results[e].success)
                     .map((e) => {
                         var n;
                         return (null !== (n = t.options) && void 0 !== n ? n : []).find((t) => t.name === e);
                     });
-                for (let e of t.options) !e.required || e.name in i.values || (g.Q.insertCommandOption(ey, e), o.push(e));
+                for (let e of t.options) !e.required || e.name in i.values || (m.Q.insertCommandOption(ey, e), o.push(e));
                 if (o.length > 0) {
                     var n, r;
                     let e = o[0];
-                    g.Q.selectCommandOption(ey, e.name),
+                    m.Q.selectCommandOption(ey, e.name),
                         f.S.dispatch(R.CkL.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
@@ -144,7 +143,7 @@ let D = i.forwardRef(function (e, t) {
             }
             null == z ||
                 z(
-                    (0, m.sk)(E.bN.richValue(ey), {
+                    (0, g.sk)(E.bN.richValue(ey), {
                         mode: 'raw',
                         ignoreTrailingEmptyNodes: !0
                     }),
@@ -152,7 +151,7 @@ let D = i.forwardRef(function (e, t) {
                     e
                 );
         }, [D.id, ey, z, eO, $]);
-    (0, y.Z)(t, ey, D, eS), (0, I.Z)(ey, ep, F);
+    (0, y.Z)(t, ey, D, eS), (0, I.Z)(ey, e_, F);
     let { handleKeyDown: eI, handleKeyUp: eT } = (0, O.Z)({
             editor: ey,
             channel: D,
@@ -166,7 +165,7 @@ let D = i.forwardRef(function (e, t) {
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: eN, handleGlobalPaste: eA } = (0, S.Z)(ey, eg, B),
+        { handlePaste: eN, handleGlobalPaste: eA } = (0, S.Z)(ey, em, B),
         eC = i.useCallback(
             (e) => {
                 null == q || q();
@@ -175,12 +174,12 @@ let D = i.forwardRef(function (e, t) {
         ),
         eR = i.useCallback(
             (e) => {
-                e !== e_.current ? em.current && (null == G || G(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
+                e !== ep.current ? eg.current && (null == G || G(null, (0, g.sk)(e, { mode: 'raw' }), e)) : eg.current && q();
             },
             [q, G]
         );
     i.useLayoutEffect(() => {
-        eh.current && ((e_.current = n), eE(ey, 'parent', { value: n }));
+        eh.current && ((ep.current = n), eE(ey, 'parent', { value: n }));
     }, [ey, n, eE]),
         i.useEffect(() => {
             let e = () => {
@@ -200,7 +199,7 @@ let D = i.forwardRef(function (e, t) {
                 handler: eA
             }),
             (0, r.jsx)('div', {
-                ref: ep,
+                ref: e_,
                 className: a()(w, P.slateContainer),
                 children: (0, r.jsx)(h.Z, {
                     id: L,
@@ -209,7 +208,7 @@ let D = i.forwardRef(function (e, t) {
                     guildId: D.guild_id,
                     className: a()(P.slateTextArea, U),
                     placeholder: j,
-                    readOnly: eg,
+                    readOnly: em,
                     spellCheck: J,
                     autoFocus: !et,
                     canFocus: !x,
