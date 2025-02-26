@@ -1,69 +1,76 @@
-n.d(t, { Z: () => _ });
-var r = n(200651);
-n(192379);
-var i = n(512722),
-    a = n.n(i),
-    o = n(442837),
-    l = n(955415),
-    s = n(131704),
-    c = n(601964),
-    d = n(199902),
-    u = n(914010),
-    p = n(358595),
-    m = n(981631),
-    f = n(245335),
-    h = n(388032),
-    g = n(217480);
-function _(e) {
+n.d(t, { Z: () => x });
+var r = n(200651),
+    i = n(192379),
+    a = n(512722),
+    o = n.n(a),
+    l = n(442837),
+    s = n(447543),
+    c = n(100527),
+    d = n(906732),
+    u = n(955415),
+    p = n(131704),
+    m = n(601964),
+    f = n(199902),
+    h = n(914010),
+    g = n(358595),
+    _ = n(981631),
+    b = n(245335),
+    v = n(388032),
+    y = n(217480);
+function x(e) {
     let t,
         n,
-        i,
-        { invite: _, currentUserId: b, guild: v, onTransitionToInviteChannel: y, onAcceptInstantInvite: x } = e,
-        O = null == v ? void 0 : v.id,
-        E = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
-        j = (0, o.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getActiveStreamForUser(_.target_user.id, O) : null), [_, O]),
-        N = (0, o.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getStreamForUser(_.target_user.id, O) : null), [_, O]),
-        C = null != _ && _.target_type === f.Iq.STREAM && null != _.target_user && null != j,
-        I = null != _ && null != N && null != _.channel && null != _.guild && N.channelId === _.channel.id && N.guildId === _.guild.id;
-    a()(null != _, 'Invite cannot be null');
-    let { target_type: S, target_user: P } = _;
-    a()(S === f.Iq.STREAM && null != P, 'invalid streaming invite');
-    let T = b === P.id,
-        A = _.state === m.r2o.ACCEPTING,
-        w = null != v;
-    if (null == v) {
-        if (null == _.guild) return (0, r.jsx)(p.Z, {});
-        v = new c.ZP(_.guild);
+        a,
+        { invite: x, currentUserId: E, guild: O, onTransitionToInviteChannel: j, onAcceptInstantInvite: N } = e,
+        C = null == O ? void 0 : O.id,
+        I = (0, l.e7)([h.Z], () => h.Z.getGuildId()),
+        S = (0, l.e7)([f.Z], () => (null != x && null != x.target_user ? f.Z.getActiveStreamForUser(x.target_user.id, C) : null), [x, C]),
+        P = (0, l.e7)([f.Z], () => (null != x && null != x.target_user ? f.Z.getStreamForUser(x.target_user.id, C) : null), [x, C]),
+        { analyticsLocations: T } = (0, d.ZP)(c.Z.INVITE_EMBED),
+        A = null != x && x.target_type === b.Iq.STREAM && null != x.target_user && null != S,
+        w = null != x && null != P && null != x.channel && null != x.guild && P.channelId === x.channel.id && P.guildId === x.guild.id;
+    o()(null != x, 'Invite cannot be null');
+    let { target_type: Z, target_user: k } = x;
+    o()(Z === b.Iq.STREAM && null != k, 'invalid streaming invite');
+    let R = E === k.id,
+        L = x.state === _.r2o.ACCEPTING,
+        D = i.useCallback(() => {
+            let e = 'noop';
+            A ? (j(), (e = 'transition')) : (N(), (e = 'accept')), (0, s.r$)(x, e, T);
+        }, [x, T, A, j, N]),
+        M = null != O;
+    if (null == O) {
+        if (null == x.guild) return (0, r.jsx)(g.Z, {});
+        O = new m.ZP(x.guild);
     }
-    let Z = null != _.channel ? (0, s.jD)(_.channel) : null,
-        k = C ? y : x;
-    w && !I ? (i = T ? h.NW.string(h.t.oBLoZG) : h.NW.formatToPlainString(h.t['0QJmAw'], { name: P.username })) : ((t = h.NW.string(h.t['I6JG4+'])), (n = l.Z.Button.Colors.GREEN), C && ((t = h.NW.string(h.t['Q1W99/'])), (n = l.Z.Button.Colors.PRIMARY)), (i = T ? h.NW.string(h.t['4hyaHh']) : h.NW.formatToPlainString(h.t.QmlLEh, { name: P.username })));
-    let R = E === v.id && null != Z ? (0, r.jsx)(l.Z.Channel, { channel: Z }) : h.NW.formatToPlainString(h.t.u0vaDA, { guildName: v.name });
-    return (0, r.jsxs)(l.Z, {
+    let W = null != x.channel ? (0, p.jD)(x.channel) : null;
+    M && !w ? (a = R ? v.NW.string(v.t.oBLoZG) : v.NW.formatToPlainString(v.t['0QJmAw'], { name: k.username })) : ((t = v.NW.string(v.t['I6JG4+'])), (n = u.Z.Button.Colors.GREEN), A && ((t = v.NW.string(v.t['Q1W99/'])), (n = u.Z.Button.Colors.PRIMARY)), (a = R ? v.NW.string(v.t['4hyaHh']) : v.NW.formatToPlainString(v.t.QmlLEh, { name: k.username })));
+    let F = I === O.id && null != W ? (0, r.jsx)(u.Z.Channel, { channel: W }) : v.NW.formatToPlainString(v.t.u0vaDA, { guildName: O.name });
+    return (0, r.jsxs)(u.Z, {
         children: [
-            (0, r.jsx)(l.Z.Header, { text: h.NW.string(h.t['wS+5WV']) }),
-            (0, r.jsxs)(l.Z.Body, {
+            (0, r.jsx)(u.Z.Header, { text: v.NW.string(v.t['wS+5WV']) }),
+            (0, r.jsxs)(u.Z.Body, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: g.headerLine,
+                        className: y.headerLine,
                         children: [
-                            (0, r.jsx)(l.Z.Icon, {
-                                guild: v,
-                                onClick: w && I ? k : void 0
+                            (0, r.jsx)(u.Z.Icon, {
+                                guild: O,
+                                onClick: M && w ? D : void 0
                             }),
-                            (0, r.jsx)(l.Z.Info, {
-                                title: i,
-                                onClick: w && I ? k : void 0,
-                                children: R
+                            (0, r.jsx)(u.Z.Info, {
+                                title: a,
+                                onClick: M && w ? D : void 0,
+                                children: F
                             })
                         ]
                     }),
-                    I
-                        ? (0, r.jsx)(l.Z.Button, {
-                              disabled: w && !I,
-                              onClick: k,
-                              submitting: A,
-                              isDisabled: C && I,
+                    w
+                        ? (0, r.jsx)(u.Z.Button, {
+                              disabled: M && !w,
+                              onClick: D,
+                              submitting: L,
+                              isDisabled: A && w,
                               color: n,
                               children: t
                           })

@@ -1,98 +1,112 @@
-n.d(t, {
-    CR: () => s,
-    MA: () => d,
-    pV: () => u
+a.d(t, {
+    CR: () => u,
+    MA: () => b,
+    pV: () => E,
+    vb: () => g
 });
-var r = n(544891),
-    l = n(570140),
-    i = n(881052),
-    a = n(406218),
-    o = n(314852),
-    c = n(981631);
-function s(e, t) {
-    var n;
+var r = a(544891),
+    n = a(570140),
+    o = a(881052),
+    i = a(937111),
+    l = a(271383),
+    c = a(626135),
+    _ = a(406218),
+    d = a(314852),
+    s = a(981631);
+function u(e, t) {
+    var a;
     if (null == e) return Promise.resolve(null);
-    let s = o.Z.getIsFetching(e),
-        u = o.Z.getLastSyncTimestamp(e),
-        d = o.Z.getProfile(e),
-        m = ((n = u), Date.now() - (null != n ? n : 0) > 60000);
-    return s && !t
+    let i = d.Z.getFetchStatus(e) === d.a.FETCHING,
+        l = d.Z.getLastSyncTimestamp(e),
+        c = d.Z.getProfile(e),
+        u = ((a = l), Date.now() - (null != a ? a : 0) > 60000);
+    return i && !t
         ? Promise.resolve(null)
-        : null == d || m || t
-          ? (l.Z.dispatch({
+        : null == c || u || t
+          ? (n.Z.dispatch({
                 type: 'GUILD_PROFILE_FETCH',
                 guildId: e
             }),
             r.tn
                 .get({
-                    url: c.ANM.GUILD_PROFILE(e),
+                    url: s.ANM.GUILD_PROFILE(e),
                     rejectWithError: !1
                 })
                 .then((t) => {
-                    let n = (0, a.xo)(t.body);
+                    let a = (0, _.xo)(t.body);
                     return (
-                        l.Z.dispatch({
+                        n.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_SUCCESS',
                             guildId: e,
-                            profile: n
+                            profile: a
                         }),
-                        n
+                        a
                     );
                 })
                 .catch((t) => {
-                    let n = new i.Hx(t);
+                    let a = new o.Hx(t);
                     return (
-                        l.Z.dispatch({
+                        n.Z.dispatch({
                             type: 'GUILD_PROFILE_FETCH_FAILURE',
                             guildId: e,
-                            error: n
+                            error: a
                         }),
                         null
                     );
                 }))
-          : Promise.resolve(d);
+          : Promise.resolve(c);
 }
-function u(e, t) {
-    return o.Z.getIsUpdating(e)
+function E(e, t) {
+    return d.Z.getIsUpdating(e)
         ? Promise.resolve(null)
-        : (l.Z.dispatch({
+        : (n.Z.dispatch({
               type: 'GUILD_PROFILE_UPDATE',
               guildId: e,
               updates: t
           }),
           r.tn
               .patch({
-                  url: c.ANM.GUILD_PROFILE(e),
-                  body: (0, a.sO)(t),
+                  url: s.ANM.GUILD_PROFILE(e),
+                  body: (0, _.sO)(t),
                   rejectWithError: !1
               })
               .then((t) => {
-                  let n = (0, a.xo)(t.body);
+                  let a = (0, _.xo)(t.body);
                   return (
-                      l.Z.dispatch({
+                      n.Z.dispatch({
                           type: 'GUILD_PROFILE_UPDATE_SUCCESS',
                           guildId: e,
-                          profile: n
+                          profile: a
                       }),
-                      n
+                      a
                   );
               })
               .catch((t) => {
-                  let n = new i.Hx(t);
+                  let a = new o.Hx(t);
                   return (
-                      l.Z.dispatch({
+                      n.Z.dispatch({
                           type: 'GUILD_PROFILE_UPDATE_FAILURE',
                           guildId: e,
-                          error: n
+                          error: a
                       }),
                       null
                   );
               }));
 }
-async function d(e) {
+async function b(e) {
     let t = await r.tn.get({
-        url: c.ANM.GUILD_TOP_GAMES(e),
+        url: s.ANM.GUILD_TOP_GAMES(e),
         rejectWithError: !1
     });
-    return (0, a.o_)(t.body.top_games);
+    return (0, _.o_)(t.body.top_games);
+}
+function g(e, t) {
+    let a = null != l.ZP.getSelfMember(e),
+        r = null != i.Z.getRequest(e);
+    c.default.track(s.rMx.GUILD_PROFILE_VIEWED, {
+        guild_id: e,
+        location_stack: t,
+        is_member: a,
+        has_join_request: r
+    });
 }

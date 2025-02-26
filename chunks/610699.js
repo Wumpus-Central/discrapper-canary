@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(906732),
     y = n(835473),
     x = n(471445),
-    O = n(111028),
-    E = n(955415),
+    E = n(111028),
+    O = n(955415),
     j = n(747127),
     N = n(601964),
     C = n(592125),
@@ -103,7 +103,7 @@ function U(e) {
                           color: 'currentColor'
                       })
                     : null,
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(E.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: R.NW.format(R.t['dc+LW1'], {
@@ -121,7 +121,7 @@ function U(e) {
                   [L.stacked]: i,
                   [L.ended]: a
               }),
-              children: (0, r.jsx)(O.Z, {
+              children: (0, r.jsx)(E.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
                       children: R.NW.format(R.t.u0vaDA, { guildName: n.name })
@@ -134,7 +134,7 @@ function B(e) {
     var t, n, a;
     let l,
         d,
-        { invite: x, getAcceptInviteContext: O } = e,
+        { invite: x, getAcceptInviteContext: E } = e,
         { approximate_member_count: A, approximate_presence_count: B, target_type: G, target_application: H } = x;
     s()(G === k.Iq.EMBEDDED_APPLICATION && null != H, 'invalid application invite');
     let V = i.useRef(null),
@@ -207,21 +207,22 @@ function B(e) {
             [ei, H.id]
         ),
         ec = (0, c.Wu)([P.default], () => es.map((e) => P.default.getUser(e)), [es]),
-        ed = x.state === Z.r2o.ACCEPTING,
-        eu = null != ee;
+        ed = i.useCallback(() => {
+            (0, p.r$)(x, 'accept', eo),
+                p.ZP.acceptInviteAndTransitionToInviteChannel({
+                    inviteKey: x.code,
+                    context: E('Invite Button Embed'),
+                    analyticsLocations: eo
+                });
+        }, [x, eo, E]),
+        eu = x.state === Z.r2o.ACCEPTING,
+        ep = null != ee;
     if (null == ee) {
         if (null == x.guild) return (0, r.jsx)(w.Z, {});
         ee = new N.ZP(x.guild);
     }
-    let ep = (eu && !ea) || (eu && en),
-        em = () => {
-            p.Z.acceptInviteAndTransitionToInviteChannel({
-                inviteKey: x.code,
-                context: O('Invite Button Embed'),
-                analyticsLocations: eo
-            });
-        };
-    return (eu && en && (l = R.NW.string(R.t.wJNK8P)), ea || (l = R.NW.string(R.t.hHGrW1)), (d = en ? R.NW.string(R.t.KC26NT) : er || !eu ? R.NW.string(R.t.VJlc0d) : R.NW.string(R.t.I0v0Qk)), null == x.code || '' === x.code)
+    let em = (ep && !ea) || (ep && en);
+    return (ep && en && (l = R.NW.string(R.t.wJNK8P)), ea || (l = R.NW.string(R.t.hHGrW1)), (d = en ? R.NW.string(R.t.KC26NT) : er || !ep ? R.NW.string(R.t.VJlc0d) : R.NW.string(R.t.I0v0Qk)), null == x.code || '' === x.code)
         ? null
         : (0, r.jsxs)('div', {
               className: L.container,
@@ -245,7 +246,7 @@ function B(e) {
                           })
                       })
                   }),
-                  (0, r.jsxs)(E.Z, {
+                  (0, r.jsxs)(O.Z, {
                       className: o()(L.content, {
                           [L.large]: z,
                           [L.stacked]: Y
@@ -254,7 +255,7 @@ function B(e) {
                           (0, r.jsxs)('div', {
                               className: L.info,
                               children: [
-                                  (0, r.jsx)(u.vwX, { children: eu ? R.NW.string(R.t['1ckx+P']) : R.NW.string(R.t.BoQUFR) }),
+                                  (0, r.jsx)(u.vwX, { children: ep ? R.NW.string(R.t['1ckx+P']) : R.NW.string(R.t.BoQUFR) }),
                                   (0, r.jsx)(u.X6q, {
                                       className: L.heading,
                                       variant: 'heading-xl/semibold',
@@ -274,7 +275,7 @@ function B(e) {
                                   [L.split]: !er && Y
                               }),
                               children: [
-                                  !er && eu
+                                  !er && ep
                                       ? (0, r.jsxs)('div', {
                                             className: o()(L.endedNote, { [L.large]: z }),
                                             children: [
@@ -289,7 +290,7 @@ function B(e) {
                                             ]
                                         })
                                       : null,
-                                  eu
+                                  ep
                                       ? null
                                       : (0, r.jsx)(F, {
                                             members: A,
@@ -365,7 +366,7 @@ function B(e) {
                                                           {
                                                               className: L.actionButton,
                                                               onClick: () => {
-                                                                  em(), null == i || i();
+                                                                  ed(), null == i || i();
                                                               },
                                                               wrapperClassName: L.tooltipButtonWrapper
                                                           },
@@ -373,8 +374,8 @@ function B(e) {
                                                       )),
                                                       (n = n =
                                                           {
-                                                              submitting: ed,
-                                                              disabled: ep,
+                                                              submitting: eu,
+                                                              disabled: em,
                                                               color: u.Ttl.GREEN,
                                                               children: d
                                                           }),

@@ -1,62 +1,69 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(200651),
     l = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     i = n(442837),
     c = n(481060),
-    o = n(314852),
-    d = n(65361),
-    u = n(722300),
-    m = n(910200),
-    h = n(323220),
-    j = n(592642);
-function f(e) {
-    let { guildId: t, name: n, setPopoutRef: a } = e,
-        { guildProfile: f, fetchGuildProfile: x, fetchStatus: g } = (0, d.u)(t),
-        p = (0, i.e7)([o.Z], () => o.Z.getErrorCode(t)),
-        b = l.useRef(null),
-        v = l.useCallback(() => {
-            x(!0);
-        }, [x]);
+    o = n(100527),
+    d = n(906732),
+    u = n(699553),
+    m = n(314852),
+    h = n(65361),
+    j = n(722300),
+    f = n(910200),
+    p = n(323220),
+    b = n(592642);
+function g(e) {
+    let { guildId: t, name: n, setPopoutRef: s } = e,
+        { analyticsLocations: g } = (0, d.ZP)(o.Z.GUILD_PROFILE),
+        { guildProfile: x, fetchGuildProfile: O, fetchStatus: v } = (0, h.u)(t),
+        P = (0, i.e7)([m.Z], () => m.Z.getErrorCode(t)),
+        y = l.useRef(null),
+        N = l.useCallback(() => {
+            O(!0);
+        }, [O]);
     l.useEffect(() => {
-        x();
-    }, [x]),
+        O();
+    }, [O]),
         l.useEffect(() => {
-            null == a || a(null == b ? void 0 : b.current);
-        }, [b, a]);
-    let O = null;
+            (0, u.vb)(t, g);
+        }, [t, g]),
+        l.useEffect(() => {
+            null == s || s(null == y ? void 0 : y.current);
+        }, [y, s]);
+    let w = null;
     return (
-        (O =
-            g === o.a.NOT_FETCHED || g === o.a.FETCHING
+        (w =
+            v === m.a.NOT_FETCHED || v === m.a.FETCHING
                 ? (0, r.jsx)('div', {
-                      className: s()(j.container, j.spinnerContainer),
+                      className: a()(b.container, b.spinnerContainer),
                       children: (0, r.jsx)(c.$jN, {})
                   })
-                : null == f && 50001 === p
+                : null == x && 50001 === P
                   ? (0, r.jsx)('div', {
-                        className: j.container,
-                        children: (0, r.jsx)(h.Z, {
+                        className: b.container,
+                        children: (0, r.jsx)(p.Z, {
                             guildId: t,
                             name: n
                         })
                     })
-                  : null == f
+                  : null == x
                     ? (0, r.jsx)('div', {
-                          className: j.container,
-                          children: (0, r.jsx)(u.Z, {
+                          className: b.container,
+                          children: (0, r.jsx)(j.Z, {
                               name: n,
-                              onRetry: v
+                              onRetry: N
                           })
                       })
                     : (0, r.jsx)('div', {
-                          className: j.container,
-                          children: (0, r.jsx)(m.Z, { profile: f })
+                          className: b.container,
+                          children: (0, r.jsx)(f.Z, { profile: x })
                       })),
         (0, r.jsx)(c.VqE, {
-            ref: b,
-            'aria-label': null == f ? void 0 : f.name,
-            children: O
+            ref: y,
+            'aria-label': null == x ? void 0 : x.name,
+            children: w
         })
     );
 }

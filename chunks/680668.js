@@ -1,148 +1,159 @@
-n.d(t, { Z: () => y }), n(789020), n(47120);
+n.d(t, { Z: () => O }), n(789020), n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(533800),
     o = n(481060),
-    l = n(576306),
-    s = n(857395),
-    c = n(358555),
-    d = n(955415),
-    u = n(131704),
-    p = n(630388),
-    m = n(267642),
-    f = n(411198),
-    h = n(277707),
-    g = n(358595),
-    _ = n(981631),
-    b = n(388032),
-    v = n(217480);
-function y(e) {
-    var t, y;
-    let x,
-        O,
-        E,
-        { onTransitionToInviteChannel: j, onAcceptInstantInvite: N, guild: C, invite: I, author: S, currentUserId: P } = e,
-        T = P === S.id,
-        { channel: A, approximate_member_count: w, approximate_presence_count: Z } = I,
-        k = I.state === _.r2o.ACCEPTING,
-        R = null != A ? (0, u.jD)(A) : null,
-        L = null != C,
-        D = null != R,
-        M = null != R && R.isGuildVocal(),
-        W = null != R && R.isGuildStageVoice(),
-        F = (0, p.yE)(null !== (t = I.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        U = null !== (y = null == C ? void 0 : C.hasFeature(_.oNc.HUB)) && void 0 !== y && y,
-        B = (0, l.h)(),
-        [G, H] = i.useState(!1),
-        V = i.useCallback(() => H(!0), []),
-        z = i.useCallback(() => H(!1), []);
-    if (null == C) {
-        if (null == I.guild) return (0, r.jsx)(g.Z, {});
-        C = f.Qs(I.guild);
-        let e = (0, m.rF)(I.guild.premium_subscription_count, I.guild.id);
-        C.premiumTier = e;
+    l = n(447543),
+    s = n(100527),
+    c = n(906732),
+    d = n(576306),
+    u = n(857395),
+    p = n(358555),
+    m = n(955415),
+    f = n(131704),
+    h = n(630388),
+    g = n(267642),
+    _ = n(411198),
+    b = n(277707),
+    v = n(358595),
+    y = n(981631),
+    x = n(388032),
+    E = n(217480);
+function O(e) {
+    var t, O;
+    let j,
+        N,
+        C,
+        { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: P, invite: T, author: A, currentUserId: w } = e,
+        Z = w === A.id,
+        { channel: k, approximate_member_count: R, approximate_presence_count: L } = T,
+        D = T.state === y.r2o.ACCEPTING,
+        M = null != k ? (0, f.jD)(k) : null,
+        W = null != P,
+        F = null != M,
+        U = null != M && M.isGuildVocal(),
+        B = null != M && M.isGuildStageVoice(),
+        G = (0, h.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
+        H = null !== (O = null == P ? void 0 : P.hasFeature(y.oNc.HUB)) && void 0 !== O && O,
+        V = (0, d.h)(),
+        z = null == P ? void 0 : P.id,
+        { analyticsLocations: K } = (0, c.ZP)(s.Z.INVITE_EMBED),
+        [Y, X] = i.useState(!1),
+        q = i.useCallback(() => X(!1), []),
+        Q = i.useCallback(() => {
+            let e = 'noop';
+            V ? (X(!0), (e = 'show profile')) : W && (I(), (e = 'transition')), (0, l.CB)(z, e, K);
+        }, [z, K, V, W, I]),
+        J = i.useCallback(() => {
+            let e = 'noop';
+            W ? (I(), (e = 'transition')) : (S(), (e = 'accept')), (0, l.r$)(T, e, K);
+        }, [T, K, W, I, S]);
+    if (null == P) {
+        if (null == T.guild) return (0, r.jsx)(v.Z, {});
+        P = _.Qs(T.guild);
+        let e = (0, g.rF)(T.guild.premium_subscription_count, T.guild.id);
+        P.premiumTier = e;
     }
-    let K = L ? j : N,
-        Y = (0, h.e)({
-            isVoiceChannel: M,
-            isOwnInvite: T,
-            isGuest: F,
-            isHubGuild: U,
-            isStage: W,
-            isStream: !1
-        });
+    let $ = (0, b.e)({
+        isVoiceChannel: U,
+        isOwnInvite: Z,
+        isGuest: G,
+        isHubGuild: H,
+        isStage: B,
+        isStream: !1
+    });
     return (
-        (O = (0, r.jsxs)('span', {
-            className: v.infoTitle,
+        (N = (0, r.jsxs)('span', {
+            className: E.infoTitle,
             children: [
-                (0, r.jsx)(s.Z, {
-                    guildId: C.id,
-                    name: C.name,
-                    shouldShow: G,
-                    onRequestClose: z,
-                    children: () => (0, r.jsx)(d.Z.GuildName, { guild: C })
+                (0, r.jsx)(u.Z, {
+                    guildId: P.id,
+                    name: P.name,
+                    shouldShow: Y,
+                    onRequestClose: q,
+                    children: () => (0, r.jsx)(m.Z.GuildName, { guild: P })
                 }),
                 (0, r.jsx)('span', {
-                    className: v.infoBadge,
-                    children: (0, r.jsx)(c.Z, {
-                        guild: C,
+                    className: E.infoBadge,
+                    children: (0, r.jsx)(p.Z, {
+                        guild: P,
                         isBannerVisible: !1,
                         disableBoostClick: !0
                     })
                 })
             ]
         })),
-        F &&
-            (E = (0, r.jsx)(o.DY3, {
-                className: v.tooltipContainer,
-                text: b.NW.string(b.t['/FeTKy']),
+        G &&
+            (C = (0, r.jsx)(o.DY3, {
+                className: E.tooltipContainer,
+                text: x.NW.string(x.t['/FeTKy']),
                 children: (0, r.jsx)(o.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: v.infoIcon
+                    className: E.infoIcon
                 })
             })),
-        M
-            ? ((O = (0, r.jsx)(d.Z.Channel, { channel: R })),
-              (x = (0, r.jsxs)('span', {
-                  className: v.infoTitle,
+        U
+            ? ((N = (0, r.jsx)(m.Z.Channel, { channel: M })),
+              (j = (0, r.jsxs)('span', {
+                  className: E.infoTitle,
                   children: [
-                      b.NW.format(b.t['2wimj4'], { guildName: C.name }),
+                      x.NW.format(x.t['2wimj4'], { guildName: P.name }),
                       (0, r.jsx)('span', {
-                          className: v.infoBadge,
-                          children: (0, r.jsx)(c.Z, {
-                              guild: C,
+                          className: E.infoBadge,
+                          children: (0, r.jsx)(p.Z, {
+                              guild: P,
                               isBannerVisible: !1
                           })
                       })
                   ]
               })))
-            : (null != w && w >= 5) || (null != Z && Z > 0)
-              ? (x = (0, r.jsx)(d.Z.Data, {
-                    members: w,
-                    membersOnline: Z
+            : (null != R && R >= 5) || (null != L && L > 0)
+              ? (j = (0, r.jsx)(m.Z.Data, {
+                    members: R,
+                    membersOnline: L
                 }))
-              : D &&
-                (x = (0, r.jsx)(d.Z.Channel, {
-                    channel: R,
-                    guild: C
+              : F &&
+                (j = (0, r.jsx)(m.Z.Channel, {
+                    channel: M,
+                    guild: P
                 })),
-        (0, r.jsxs)(d.Z, {
+        (0, r.jsxs)(m.Z, {
             children: [
-                (0, r.jsx)(d.Z.GuildSplash, { guild: C }),
-                (0, r.jsx)(d.Z.Header, {
-                    text: Y,
-                    extra: E
+                (0, r.jsx)(m.Z.GuildSplash, { guild: P }),
+                (0, r.jsx)(m.Z.Header, {
+                    text: $,
+                    extra: C
                 }),
-                (0, r.jsxs)(d.Z.Body, {
+                (0, r.jsxs)(m.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: v.headerLine,
+                            className: E.headerLine,
                             children: [
-                                (0, r.jsx)(d.Z.Icon, { guild: C }),
-                                (0, r.jsx)(d.Z.Info, {
-                                    title: O,
-                                    onClick: B ? V : L ? K : null,
-                                    children: x
+                                (0, r.jsx)(m.Z.Icon, { guild: P }),
+                                (0, r.jsx)(m.Z.Info, {
+                                    title: N,
+                                    onClick: Q,
+                                    children: j
                                 })
                             ]
                         }),
-                        (0, r.jsx)(d.Z.Button, {
-                            onClick: K,
-                            submitting: k,
-                            color: d.Z.Button.Colors.GREEN,
-                            children: M ? (W ? b.NW.string(b.t['7vb2cX']) : b.NW.string(b.t.gpqgam)) : L ? b.NW.string(b.t.cEnaW1) : b.NW.string(b.t.XpeFYm)
+                        (0, r.jsx)(m.Z.Button, {
+                            onClick: J,
+                            submitting: D,
+                            color: m.Z.Button.Colors.GREEN,
+                            children: U ? (B ? x.NW.string(x.t['7vb2cX']) : x.NW.string(x.t.gpqgam)) : W ? x.NW.string(x.t.cEnaW1) : x.NW.string(x.t.XpeFYm)
                         })
                     ]
                 }),
-                C.hasFeature(_.oNc.HUB) &&
+                P.hasFeature(y.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: v.separator }),
+                            (0, r.jsx)('div', { className: E.separator }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: b.NW.format(b.t['/o1IfH'], {
+                                children: x.NW.format(x.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, o.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('26812')]).then(n.bind(n, 650233));

@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(411198),
     y = n(610699),
     x = n(313876),
-    O = n(778333),
-    E = n(949981),
+    E = n(778333),
+    O = n(949981),
     j = n(680668),
     N = n(143708),
     C = n(358595),
@@ -39,7 +39,7 @@ function A(e) {
         ),
         k = null == w;
     i.useEffect(() => {
-        k && o.Z.resolveInvite(t);
+        k && o.ZP.resolveInvite(t);
     }, [t, k]);
     let R =
             null != w
@@ -60,12 +60,12 @@ function A(e) {
             [R]
         ),
         F = () => {
-            null != R.channel && o.Z.transitionToInviteSync(R);
+            null != R.channel && o.ZP.transitionToInviteSync(R);
         },
         U = () => {
             if (null == D && (null == w ? void 0 : w.guild) != null) {
                 let e = v.Qs(w.guild);
-                if ((0, c.b)() && (0, c.Y)(e)) {
+                if ((0, c.bN)() && (0, c.Yt)(e)) {
                     (0, s.mN)(T.L0.NSFW_SERVER_INVITE_EMBED);
                     return;
                 }
@@ -79,7 +79,7 @@ function A(e) {
                       },
                       analyticsLocations: L
                   })
-                : o.Z.acceptInviteAndTransitionToInviteChannel({
+                : o.ZP.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
                       context: A('Invite Button Embed')
                   });
@@ -112,7 +112,7 @@ function A(e) {
         default:
             switch ((0, m.VR)(R)) {
                 case m.wx.GROUP_DM:
-                    B = (0, r.jsx)(E.Z, {
+                    B = (0, r.jsx)(O.Z, {
                         onTransitionToInviteChannel: F,
                         onAcceptInstantInvite: U,
                         currentUserId: M,
@@ -121,7 +121,7 @@ function A(e) {
                     });
                     break;
                 case m.wx.FRIEND:
-                    B = (0, r.jsx)(O.Z, {
+                    B = (0, r.jsx)(E.Z, {
                         invite: R,
                         author: n,
                         getAcceptInviteContext: A
@@ -151,6 +151,7 @@ function A(e) {
                     }
                     if ((0, m.$P)(R)) {
                         B = (0, r.jsx)(I.Z, {
+                            invite: R,
                             stageInstance: R.stage_instance,
                             guild: R.guild,
                             isMember: null != D,
