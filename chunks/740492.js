@@ -10,8 +10,8 @@ var c = n(36645),
     u = n(874893),
     d = n(981631),
     f = n(957825),
-    p = n(969943);
-function _(e, t, n) {
+    _ = n(969943);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,13 +35,13 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let m = (window.innerWidth - d.PrS) / 2,
-    g = 'standard',
+let g = (window.innerWidth - d.PrS) / 2,
+    m = 'standard',
     E = null;
 function v() {
     return null == E && (E = Math.max((window.innerWidth - d.PrS) * 0.4, d.$Y6)), E;
@@ -86,7 +86,7 @@ class A extends (r = a.ZP.DeviceSettingsStore) {
     }
     get videoUploadQuality() {
         var e;
-        return null !== (e = b.videoUploadQuality) && void 0 !== e ? e : g;
+        return null !== (e = b.videoUploadQuality) && void 0 !== e ? e : m;
     }
     get dataSavingMode() {
         var e, t;
@@ -106,7 +106,7 @@ class A extends (r = a.ZP.DeviceSettingsStore) {
     }
     get postSidebarWidth() {
         var e;
-        return null !== (e = b.postSidebarWidth) && void 0 !== e ? e : m;
+        return null !== (e = b.postSidebarWidth) && void 0 !== e ? e : g;
     }
     get callChatSidebarWidth() {
         var e;
@@ -178,10 +178,6 @@ class A extends (r = a.ZP.DeviceSettingsStore) {
         var e;
         return null === (e = b.saveCameraUploadsToDevice) || void 0 === e || e;
     }
-    get swipeToReply() {
-        var e;
-        return null !== (e = b.swipeToReply) && void 0 !== e && e;
-    }
     get showPlayAgain() {
         var e;
         return null === (e = b.showPlayAgain) || void 0 === e || e;
@@ -192,12 +188,12 @@ class A extends (r = a.ZP.DeviceSettingsStore) {
     }
     get listDensity() {
         var e;
-        return null !== (e = b.listDensity) && void 0 !== e ? e : p.fx.COZY;
+        return null !== (e = b.listDensity) && void 0 !== e ? e : _.fx.COZY;
     }
 }
-_(A, 'displayName', 'UnsyncedUserSettingsStore'),
-    _(A, 'persistKey', 'UnsyncedUserSettingsStore'),
-    _(A, 'migrations', [
+p(A, 'displayName', 'UnsyncedUserSettingsStore'),
+    p(A, 'persistKey', 'UnsyncedUserSettingsStore'),
+    p(A, 'migrations', [
         () => {
             let e = s.K.get('UserSettingsStore');
             return s.K.remove('UserSettingsStore'), o().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');

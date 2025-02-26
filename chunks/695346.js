@@ -7,7 +7,7 @@ n.d(t, {
     Fg: () => z,
     G6: () => es,
     H1: () => R,
-    I0: () => D,
+    I0: () => w,
     L1: () => ey,
     NA: () => eh,
     OW: () => ei,
@@ -16,13 +16,13 @@ n.d(t, {
     Pe: () => j,
     QK: () => eO,
     QZ: () => S,
-    R$: () => m,
-    RS: () => e_,
-    R_: () => ew,
+    R$: () => g,
+    RS: () => ep,
+    R_: () => eD,
     Rt: () => ej,
     SE: () => eN,
     Sb: () => eb,
-    Sh: () => ex,
+    Sh: () => eL,
     T4: () => C,
     UP: () => eo,
     Wp: () => eI,
@@ -33,7 +33,7 @@ n.d(t, {
     YC: () => eU,
     Yk: () => eS,
     _O: () => A,
-    _j: () => eD,
+    _j: () => ew,
     bh: () => $,
     bm: () => er,
     cC: () => b,
@@ -43,33 +43,33 @@ n.d(t, {
     d4: () => N,
     dN: () => h,
     eR: () => v,
-    eo: () => x,
+    eo: () => L,
     ev: () => q,
     fq: () => E,
     fv: () => I,
     fz: () => O,
     gR: () => W,
-    gw: () => eL,
+    gw: () => ex,
     h2: () => Y,
     hg: () => eM,
     iG: () => H,
     iH: () => eC,
     jU: () => Q,
-    kJ: () => V,
+    kJ: () => Z,
     kU: () => X,
     l4: () => ek,
     mX: () => F,
-    nc: () => em,
-    qF: () => w,
-    rN: () => eg,
+    nc: () => eg,
+    qF: () => D,
+    rN: () => em,
     tU: () => ef,
-    uL: () => L,
-    up: () => g,
+    uL: () => x,
+    up: () => m,
     vF: () => y,
-    x4: () => ep,
+    x4: () => e_,
     xM: () => en,
     xq: () => K,
-    zA: () => Z
+    zA: () => V
 }),
     n(47120);
 var r = n(442837),
@@ -82,8 +82,8 @@ var r = n(442837),
     u = n(263937),
     d = n(973005),
     f = n(981631),
-    p = n(969943),
-    _ = n(611480);
+    _ = n(969943),
+    p = n(611480);
 let h = (0, c.Zc)(
         'textAndImages',
         'useLegacyChatInput',
@@ -93,7 +93,7 @@ let h = (0, c.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    m = (0, c.Zc)(
+    g = (0, c.Zc)(
         'textAndImages',
         'useRichChatInput',
         (e) => {
@@ -102,7 +102,7 @@ let h = (0, c.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    g = (0, c.Zc)(
+    m = (0, c.Zc)(
         'textAndImages',
         'expressionSuggestionsEnabled',
         (e) => {
@@ -214,7 +214,7 @@ let O = (0, c.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    w = (0, c.Zc)(
+    D = (0, c.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -223,23 +223,23 @@ let O = (0, c.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    D = (0, c.Zc)(
+    w = (0, c.Zc)(
         'voiceAndVideo',
         'disableStreamPreviews',
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    x = (0, c.Zc)(
+    L = (0, c.Zc)(
         'notifications',
         'notifyFriendsOnGoLive',
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    L = '0',
+    x = '0',
     M = (0, c.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : L),
+        (e) => (null != e ? e : x),
         (e) => e
     ),
     k = (0, c.Zc)(
@@ -279,7 +279,7 @@ let O = (0, c.Zc)(
         (e) => o.D5.create({ value: e })
     ),
     B = [],
-    Z = (0, c.Zc)(
+    V = (0, c.Zc)(
         'privacy',
         'messageRequestRestrictedGuildIds',
         (e) => (null != e ? e : B),
@@ -291,7 +291,7 @@ let O = (0, c.Zc)(
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    V = (0, c.Zc)(
+    Z = (0, c.Zc)(
         'privacy',
         'nonSpamRetrainingOptIn',
         (e) => (null == e ? void 0 : e.value),
@@ -538,7 +538,7 @@ let el = new Set(Object.values(f.Skl)),
         },
         (e) => o.D5.create({ value: e })
     ),
-    ep = (0, c.KM)(
+    e_ = (0, c.KM)(
         (0, c.Zc)(
             'textAndImages',
             'inlineAttachmentMedia',
@@ -551,7 +551,7 @@ let el = new Set(Object.values(f.Skl)),
         'text',
         'inlineAttachmentMedia'
     ),
-    e_ = (0, c.KM)(
+    ep = (0, c.KM)(
         (0, c.Zc)(
             'textAndImages',
             'inlineEmbedMedia',
@@ -577,7 +577,7 @@ let el = new Set(Object.values(f.Skl)),
         'text',
         'renderEmbeds'
     ),
-    em = (0, c.KM)(
+    eg = (0, c.KM)(
         (0, c.Zc)(
             'textAndImages',
             'renderReactions',
@@ -590,7 +590,7 @@ let el = new Set(Object.values(f.Skl)),
         'text',
         'renderReactions'
     ),
-    eg = (0, c.Zc)(
+    em = (0, c.Zc)(
         'localization',
         'timezoneOffset',
         (e) => {
@@ -599,7 +599,7 @@ let el = new Set(Object.values(f.Skl)),
         },
         (e) => o.T4.create({ value: null != e ? e : 0 })
     ),
-    eE = new Set([p.fx.AUTO, a.l.COZY, a.l.COMPACT]);
+    eE = new Set([_.fx.AUTO, a.l.COZY, a.l.COMPACT]);
 (0, c.Zc)(
     'appearance',
     'channelListLayout',
@@ -689,7 +689,7 @@ let eb = (0, c.KM)(
                 'animateStickers',
                 (e) => {
                     var t;
-                    return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : _.yr.ALWAYS_ANIMATE;
+                    return null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : p.yr.ALWAYS_ANIMATE;
                 },
                 (e) => o.yC.create({ value: e })
             ),
@@ -739,7 +739,7 @@ let eb = (0, c.KM)(
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e })
     ),
-    ew = (0, c.Zc)(
+    eD = (0, c.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {
@@ -748,7 +748,7 @@ let eb = (0, c.KM)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    eD = (0, c.Zc)(
+    ew = (0, c.Zc)(
         'privacy',
         'allowGameFriendDmsInDiscord',
         (e) => {
@@ -757,7 +757,7 @@ let eb = (0, c.KM)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    ex = (0, c.Zc)(
+    eL = (0, c.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
@@ -777,7 +777,7 @@ let eb = (0, c.KM)(
             };
         }
     ),
-    eL = (0, c.Zc)(
+    ex = (0, c.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {
@@ -826,7 +826,13 @@ let eM = (0, c.Zc)(
     'launchPadMode',
     (e) => (null != e ? e : i.l1.LAUNCH_PAD_DISABLED),
     (e) => e
-);
+),
+    (0, c.Zc)(
+        'appearance',
+        'swipeRightToLeftMode',
+        (e) => (null != e ? e : i.n9.SWIPE_RIGHT_TO_LEFT_UNSET),
+        (e) => e
+    );
 let ek = (0, c.Zc)(
         'userContent',
         'lastReceivedChangelogId',
