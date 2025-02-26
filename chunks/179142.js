@@ -19,7 +19,14 @@ function b(e) {
         { analyticsLocations: n } = (0, l.ZP)(),
         { context: b } = (0, a.KZ)(),
         _ = (0, i.ZP)(),
-        { mutualFriends: C, mutualGuilds: v, isFetching: y } = (0, s.Z)(t, !0),
+        {
+            mutualFriends: C,
+            mutualGuilds: v,
+            isFetching: y
+        } = (0, s.Z)(t, {
+            fetch: !0,
+            type: 'panel'
+        }),
         x = !t.bot && null != C && C.length > 0,
         j = null != v && v.length > 0;
     return x || j

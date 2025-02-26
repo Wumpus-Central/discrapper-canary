@@ -15,8 +15,8 @@ var r = t(442837),
     g = t(388032);
 function v(e) {
     let { user: n, currentUser: t, guildId: v, initialSubsection: y } = e,
-        { voiceActivityStatusEnabled: I } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { voiceActivityCardEnabled: h } = (0, s.o)({ location: 'useUserProfileModalTabBarItems' }),
+        { voiceActivityStatusEnabled: h } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
+        { voiceActivityCardEnabled: I } = (0, s.o)({ location: 'useUserProfileModalTabBarItems' }),
         { live: j, recent: x, stream: _, outbox: O } = (0, c.Z)(n.id),
         { voiceChannel: Z, voiceActivity: N } = (0, d.Z)({
             userId: n.id,
@@ -30,7 +30,10 @@ function v(e) {
         }),
         S = null != _ || j.length > 0,
         T = x.length > 0,
-        { mutualFriends: C, mutualGuilds: L } = (0, a.Z)(n, n.id !== (null == t ? void 0 : t.id)),
+        { mutualFriends: C, mutualGuilds: L } = (0, a.Z)(n, {
+            fetch: n.id !== (null == t ? void 0 : t.id),
+            type: 'modal'
+        }),
         A = null == C ? void 0 : C.length,
         w = null == L ? void 0 : L.length,
         M = (0, u.Z)({
@@ -44,7 +47,7 @@ function v(e) {
             }
         ];
     return (
-        !E && (S || ((I || h) && null == _ && null == N && null != Z))
+        !E && (S || ((h || I) && null == _ && null == N && null != Z))
             ? U.push({
                   section: m.oh.ACTIVITY,
                   text: g.NW.string(g.t.chq59f)

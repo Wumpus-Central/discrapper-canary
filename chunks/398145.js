@@ -1,11 +1,14 @@
 t.d(n, { Z: () => s }), t(627341);
 var r = t(278074),
-    o = t(200634),
+    o = t(806729),
     i = t(228168),
     l = t(388032);
 function s(e) {
-    var n;
-    let t = null === (n = (0, o.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
+    let { mutualGuilds: n } = (0, o.Z)(e, {
+            fetch: !0,
+            type: 'modal'
+        }),
+        t = null == n ? void 0 : n.length;
     return [
         {
             section: i.oh.BOT_INFO,
