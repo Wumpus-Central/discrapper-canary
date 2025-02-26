@@ -7866,7 +7866,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     --__spoiler-warning-text-color--hover: var(--white-500);
     --__spoiler-warning-background-color: hsl(var(--black-500-hsl)/0.6);
     --__spoiler-warning-background-color--hover: hsl(var(--black-500-hsl)/0.9);
-    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1)
+    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1);
+    --__obscured-background-blur-radius: 40px;
+    --__obscured-background-brightness: 0.55
 }
 
 .theme-dark,
@@ -7879,7 +7881,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     --__spoiler-warning-text-color--hover: var(--white-500);
     --__spoiler-warning-background-color: hsl(var(--black-500-hsl)/0.6);
     --__spoiler-warning-background-color--hover: hsl(var(--black-500-hsl)/0.9);
-    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1)
+    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1);
+    --__obscured-background-blur-radius: 40px;
+    --__obscured-background-brightness: 0.55
 }
 
 .theme-dark.custom-theme-background {
@@ -7924,6 +7928,11 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     --__current--spoiler-border-color: var(--__spoiler-border-color--hidden--hover);
     --__current--spoiler-warning-text-color: var(--__spoiler-warning-text-color--hover);
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color--hover)
+}
+
+.opaque__54ab5 {
+    --__obscured-background-brightness: 0;
+    --__obscured-background-blur-radius: 500px
 }
 
 .spoilerContainer__54ab5 {
@@ -9938,7 +9947,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .obscureWrapper_b2eddf.obscure_b2eddf {
-    filter: blur(40px) brightness(.55);
+    filter: blur(var(--__obscured-background-blur-radius)) brightness(var(--__obscured-background-brightness));
     pointer-events: none
 }
 
@@ -26992,8 +27001,11 @@ body .headerAnimation_b54a5b {
 
 .body_c6f1a4 {
     height: 100%;
-    border-radius: 0;
     background-color: var(--modal-background)
+}
+
+.body_c6f1a4.noRoundedCorners_c6f1a4 {
+    border-radius: 0
 }
 
 .body_c6f1a4.reviewStep_c6f1a4 {

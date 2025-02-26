@@ -1,16 +1,12 @@
 n.d(t, {
-    BS: () => E,
-    Dp: () => N,
-    Gw: () => j,
-    Op: () => y,
-    gx: () => v,
-    iG: () => O,
-    k3: () => b,
-    mN: () => A,
-    oo: () => _,
-    sP: () => I,
-    t2: () => C,
-    vZ: () => x
+    Dp: () => b,
+    Gw: () => x,
+    Op: () => v,
+    gx: () => E,
+    iG: () => _,
+    mN: () => S,
+    oo: () => N,
+    sP: () => O
 }),
     n(653041),
     n(627341);
@@ -31,18 +27,6 @@ var r = n(278074),
 let b = (e) => {
         switch (e) {
             case h.EB.PENDING:
-                return f.NW.string(f.t.fhK8ho);
-            case h.EB.REDEEMABLE:
-                return f.NW.string(f.t['084A8/']);
-            case h.EB.REDEEMED:
-                return f.NW.string(f.t['5kxiMz']);
-            default:
-                return '';
-        }
-    },
-    N = (e) => {
-        switch (e) {
-            case h.EB.PENDING:
                 return f.NW.string(f.t['9o4F4+']);
             case h.EB.REDEEMABLE:
             case h.EB.REDEEMED:
@@ -51,20 +35,7 @@ let b = (e) => {
                 return '';
         }
     },
-    x = (e, t, n) => {
-        switch (e) {
-            case h.EB.PENDING:
-                return t === h.Ft.FREE_GUILD_BOOST_1_MONTH ? f.NW.string(f.t.hnbagI) : f.NW.string(f.t['73+DnJ']);
-            case h.EB.REDEEMABLE:
-                if (t === h.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? f.NW.string(f.t.RrwI8f) : f.NW.string(f.t.P1Xqqa);
-                return f.NW.string(f.t.K687hI);
-            case h.EB.REDEEMED:
-                return f.NW.string(f.t['QvW/MT']);
-            default:
-                return;
-        }
-    },
-    _ = (e) => {
+    N = (e) => {
         switch (e) {
             case h.EB.PENDING:
                 return f.NW.string(f.t.nlcs6O);
@@ -75,19 +46,7 @@ let b = (e) => {
                 return;
         }
     },
-    E = (e) => {
-        switch (e) {
-            case h.EB.PENDING:
-                return f.NW.string(f.t.tncFsb);
-            case h.EB.REDEEMABLE:
-                return;
-            case h.EB.REDEEMED:
-                return f.NW.string(f.t.OcdQND);
-            default:
-                return;
-        }
-    },
-    j = (e) => {
+    x = (e) => {
         switch (e) {
             case h.EB.PENDING:
                 return f.NW.string(f.t.LAFMBQ);
@@ -98,19 +57,7 @@ let b = (e) => {
                 return;
         }
     };
-function C(e, t) {
-    switch (e) {
-        case h.EB.PENDING:
-            return null != t ? f.NW.formatToPlainString(f.t.FULtam, { days: t }) : '';
-        case h.EB.REDEEMABLE:
-            return f.NW.string(f.t['+zx47e']);
-        case h.EB.REDEEMED:
-            return f.NW.string(f.t['5kxiMz']);
-        default:
-            return '';
-    }
-}
-function O(e, t) {
+function _(e, t) {
     switch (e) {
         case h.EB.PENDING:
             return null != t ? f.NW.formatToPlainString(f.t.a1eKDg, { days: t }) : '';
@@ -122,9 +69,9 @@ function O(e, t) {
             return '';
     }
 }
-let v = (e, t, n) => ((0, s.wj)(e) ? t : n),
-    S = 'getWhatsNewRow',
-    T = (e) => {
+let E = (e, t, n) => ((0, s.wj)(e) ? t : n),
+    j = 'getWhatsNewRow',
+    C = (e) => {
         let { cards: t, perksCards: n, isFullScreen: r, showTenureCard: i, shopMarketingVariation: s } = e,
             l = r ? 3 : 2,
             o = (e) => {
@@ -134,14 +81,14 @@ let v = (e, t, n) => ((0, s.wj)(e) ? t : n),
             c = () => {
                 s !== a.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: g } = m._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            { enabled: p } = u.r.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            { enabled: h } = d.C.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
+            { enabled: g } = m._.getCurrentConfig({ location: j }, { autoTrackExposure: !1 }),
+            { enabled: p } = u.r.getCurrentConfig({ location: j }, { autoTrackExposure: !1 }),
+            { enabled: h } = d.C.getCurrentConfig({ location: j }, { autoTrackExposure: !1 }),
             f = g && !p && !h,
-            b = P();
-        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === i && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === i && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), r && b ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : r && !b && (f || null != n.shyProject ? f && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+            b = T();
+        return null != n.collectibleDeco && o({ card: n.collectibleDeco }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === i && o({ card: n.tenureRewardCollectible }), null != n.shyProject && o({ card: n.shyProject }), r && b ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : r && !b && (f || null != n.shyProject ? f && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    I = (e) => {
+    O = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: i, isFullScreen: s, showTenureCard: a, isPremiumSubscriber: l, fractionalState: o, isInReverseTrial: c } = e,
             d = [];
         switch (n) {
@@ -155,7 +102,7 @@ let v = (e, t, n) => ((0, s.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case g.R0.WHATS_NEW:
-                d = T({
+                d = C({
                     cards: d,
                     perksCards: t,
                     isFullScreen: s,
@@ -184,7 +131,7 @@ let v = (e, t, n) => ((0, s.wj)(e) ? t : n),
         }
         return s || (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
-    y = (e) => {
+    v = (e) => {
         let t = (0, i.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             r = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === p.Si.TIER_2;
@@ -203,11 +150,11 @@ let v = (e, t, n) => ((0, s.wj)(e) ? t : n),
                   subtitle: f.NW.string(f.t['5TFEXl'])
               };
     },
-    A = () => {
+    S = () => {
         let e = (0, i.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    P = () => {
+    T = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, p.p9.TIER_2);
     };

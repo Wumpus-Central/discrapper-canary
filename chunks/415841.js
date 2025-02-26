@@ -1,6 +1,7 @@
 var r = {
     spoilerContent: 'spoilerContent__54ab5',
     hidden: 'hidden__54ab5',
+    opaque: 'opaque__54ab5',
     spoilerContainer: 'spoilerContainer__54ab5',
     embedContainer: 'embedContainer__54ab5',
     attachmentContainer: 'attachmentContainer__54ab5',

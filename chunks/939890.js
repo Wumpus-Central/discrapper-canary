@@ -1,4 +1,5 @@
 e.exports = {
+    modalHeader: 'modalHeader__6d749',
     header: 'header__6d749',
     closeButton: 'closeButton__6d749',
     resultWrapper: 'resultWrapper__6d749',

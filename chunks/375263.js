@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(981631),
     u = n(30513),
     m = n(486324),
-    p = n(200299),
-    g = n(388032),
+    g = n(200299),
+    p = n(388032),
     h = n(765069);
 function f(e) {
     let { guild: t, canManageGuild: n } = e,
@@ -26,7 +26,15 @@ function f(e) {
         ),
         v = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), (0, c.E6)(t, j, d.jXE.GUILD_BANNER, d.qAy.UPLOAD_IMAGE, (0, u.XO)());
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    (0, c.E6)({
+                        guild: t,
+                        analyticsLocations: j,
+                        analyticsSection: d.jXE.GUILD_BANNER,
+                        analyticsObject: d.qAy.UPLOAD_IMAGE,
+                        perks: (0, u.XO)()
+                    });
             },
             [j, t]
         ),
@@ -44,11 +52,11 @@ function f(e) {
                     : null,
             disabled: !x,
             onChange: N,
-            hint: g.NW.string(g.t.uPvxqK),
+            hint: p.NW.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
                     uploadType: m.pC.GUILD_BANNER,
-                    maxFileSizeBytes: p.B,
+                    maxFileSizeBytes: g.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
                         return N(t, n);

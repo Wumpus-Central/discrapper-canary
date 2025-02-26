@@ -271,6 +271,7 @@ function b(e) {
               children: [
                   (0, r.jsxs)(u.xBx, {
                       separator: b,
+                      className: v.modalHeader,
                       children: [
                           (0, r.jsx)(u.olH, {
                               className: v.closeButton,

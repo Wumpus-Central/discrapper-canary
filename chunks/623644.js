@@ -1,10 +1,7 @@
 e.exports = {
     wrapper: 'wrapper__99020',
-    specialHeader: 'specialHeader__99020',
-    pill: 'pill__99020',
     content: 'content__99020',
     headerWithoutSpecialHeader: 'headerWithoutSpecialHeader__99020',
-    headerWithBoost: 'headerWithBoost__99020',
     header: 'header__99020',
     headerHeading: 'headerHeading__99020',
     headerContentPrimary: 'headerContentPrimary__99020',

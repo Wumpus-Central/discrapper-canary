@@ -1,17 +1,17 @@
-n.d(t, { F: () => g });
+n.d(t, { F: () => p });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
     a = n(906732),
-    l = n(157176),
+    l = n(70086),
     o = n(949640),
     c = n(981631),
     d = n(30513),
     u = n(486324),
     m = n(200299),
-    p = n(388032);
-function g(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: g } = e,
+    g = n(388032);
+function p(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: p } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
         f = t.hasFeature(c.oNc.BANNER),
         b = i.useCallback(
@@ -23,7 +23,15 @@ function g(e) {
         ),
         x = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), (0, o.E6)(t, h, c.jXE.GUILD_BANNER, c.qAy.BUTTON_CTA, (0, d.XO)());
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    (0, o.E6)({
+                        guild: t,
+                        analyticsLocations: h,
+                        analyticsSection: c.jXE.GUILD_BANNER,
+                        analyticsObject: c.qAy.BUTTON_CTA,
+                        perks: (0, d.XO)()
+                    });
             },
             [h, t]
         );
@@ -31,7 +39,7 @@ function g(e) {
         ? (0, r.jsx)(s.zxk, {
               disabled: !(f && n),
               color: s.zxk.Colors.BRAND,
-              className: g,
+              className: p,
               onClick: () =>
                   (0, o.mw)({
                       uploadType: u.pC.GUILD_BANNER,
@@ -43,10 +51,10 @@ function g(e) {
                       },
                       analyticsLocations: h
                   }),
-              children: p.NW.string(p.t.yG2pUl)
+              children: g.NW.string(g.t.yG2pUl)
           })
-        : (0, r.jsx)(l.e, {
-              className: g,
+        : (0, r.jsx)(l.P, {
+              className: p,
               onClick: x
           });
 }

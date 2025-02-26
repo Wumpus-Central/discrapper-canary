@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(952265),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,12 +49,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -63,29 +63,30 @@ function _(e, t) {
 let h = () => {
         o.default.track(u.rMx.MODAL_DISMISSED, { type: c.N4 });
     },
-    m = (e) => {
+    g = (e) => {
         o.default.track(u.rMx.OPEN_MODAL, {
             type: c.N4,
             guild_id: e
         });
     },
-    g = {
-        openMemberVerificationModal(e, t) {
+    m = {
+        openMemberVerificationModal(e, t, o) {
             if (__OVERLAY__) return;
-            m(e);
-            let o = async (t) => {
+            g(e);
+            let u = async (t) => {
                     await a.ZP.submitVerificationForm(e, t);
                 },
-                u = (0, s.K2)(e, 'MemberVerificationModalActionCreators');
+                d = (0, s.K2)(e, 'MemberVerificationModalActionCreators');
             (0, i.ZD)(
                 async () => {
-                    let { default: t } = u ? await Promise.all([n.e('84335'), n.e('54408'), n.e('99916'), n.e('10409'), n.e('23303')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('81038'), n.e('95676')]).then(n.bind(n, 645264));
+                    let { default: t } = d ? await Promise.all([n.e('84335'), n.e('54408'), n.e('99916'), n.e('10409'), n.e('23303')]).then(n.bind(n, 309135)) : await Promise.all([n.e('99916'), n.e('81038'), n.e('95676')]).then(n.bind(n, 645264));
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            _(f({}, n), {
+                            p(f({}, n), {
                                 guildId: e,
-                                onComplete: o,
+                                inviteKey: o,
+                                onComplete: u,
                                 onClose: function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                     if (!e) {
@@ -120,7 +121,7 @@ let h = () => {
                 return (t) =>
                     (0, r.jsx)(
                         i,
-                        _(f({}, t), {
+                        p(f({}, t), {
                             guildId: e,
                             isPreview: !0
                         })

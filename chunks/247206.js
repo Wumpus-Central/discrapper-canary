@@ -3,18 +3,19 @@ n.d(t, {
     HH: () => x,
     Hc: () => Y,
     IV: () => K,
-    KP: () => k,
+    KP: () => j,
     Ks: () => $,
     OP: () => W,
     Pq: () => H,
     Sv: () => G,
     Tw: () => U,
-    UU: () => V,
-    Yy: () => F,
+    UU: () => F,
+    Yy: () => V,
     aP: () => Z,
     bR: () => J,
     l4: () => w,
-    lJ: () => j,
+    lJ: () => k,
+    m8: () => ee,
     oh: () => B,
     tG: () => C,
     vx: () => L,
@@ -24,7 +25,7 @@ n.d(t, {
     n(789020);
 var r = n(286379),
     i = n(524437),
-    o = n(191237),
+    o = n(81643),
     a = n(432877),
     s = n(768494),
     l = n(797614),
@@ -32,11 +33,11 @@ var r = n(286379),
     u = n(695346),
     d = n(592125),
     f = n(699516),
-    p = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    p = n(626135),
     h = n(630388),
-    m = n(948561),
-    g = n(704454),
+    g = n(948561),
+    m = n(704454),
     E = n(719548),
     v = n(981631),
     b = n(973005);
@@ -94,13 +95,13 @@ let S = {
     C = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let o = p.default.getCurrentUser();
-        return (0, g.bc)('resolveSettingWithDefaults')
+        let o = _.default.getCurrentUser();
+        return (0, m.bc)('resolveSettingWithDefaults')
             ? D({
                   isDm: n,
                   isFriend: r
               })
-            : (0, g.g2)('resolveSettingWithDefaults')
+            : (0, m.g2)('resolveSettingWithDefaults')
               ? i.Q4.BLUR
               : (null == o ? void 0 : o.nsfwAllowed) === !1
                 ? P({
@@ -148,7 +149,7 @@ function L(e) {
 }
 function x(e) {
     var t;
-    let n = p.default.getCurrentUser();
+    let n = _.default.getCurrentUser();
     if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
     let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: o } = w(),
         a = d.Z.getChannel(e.channel_id);
@@ -158,10 +159,10 @@ let M = (e) => {
     let t = w();
     u.Sh.updateSetting(O({}, t, e));
 };
-var j = (function (e) {
+var k = (function (e) {
     return (e[(e.Attachment = 0)] = 'Attachment'), (e[(e.Embed = 1)] = 'Embed'), (e[(e.GenericMedia = 2)] = 'GenericMedia'), e;
 })({});
-function k(e, t) {
+function j(e, t) {
     var n, r, i, o;
     if (!t) return !1;
     if (a.ZP.get('obscure_blur_effect_enabled')) return !0;
@@ -180,7 +181,7 @@ function U(e) {
     return x(e)
         ? {
               obscuredAttachments: e.attachments.filter((e) =>
-                  k(
+                  j(
                       {
                           type: 0,
                           media: e
@@ -189,7 +190,7 @@ function U(e) {
                   )
               ),
               obscuredEmbeds: e.embeds.filter((e) =>
-                  k(
+                  j(
                       {
                           type: 1,
                           media: e
@@ -209,17 +210,17 @@ function G(e) {
 function B(e) {
     return !a.ZP.get('explicit_media_redaction_ignore_pending_scan') && null == e;
 }
-var F = (function (e) {
+var V = (function (e) {
         return (e.EXPLICIT_MEDIA_LEARN_MORE_VIEWED = 'explicit_media_learn_more_viewed'), (e.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS = 'explicit_media_learn_more_click_settings'), (e.EXPLICIT_MEDIA_LEARN_MORE_CLICK_LEARN_MORE = 'explicit_media_learn_more_click_learn_more'), (e.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS = 'explicit_media_learn_more_click_dismiss'), (e.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE = 'explicit_media_learn_more_click_false_positive'), (e.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED = 'explicit_media_false_positive_viewed'), (e.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM = 'explicit_media_false_positive_click_confirm'), (e.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL = 'explicit_media_false_positive_click_cancel'), (e.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED = 'explicit_media_sender_false_positive_button_clicked'), (e.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT = 'explicit_media_false_positive_clyde_message_sent'), e;
     })({}),
-    V = (function (e) {
+    F = (function (e) {
         return (e.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW = 'explicit_media_obscured_false_positive_flow'), (e.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW = 'explicit_media_sender_false_positive_flow'), (e.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED = 'explicit_media_message_send_blocked'), (e.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED = 'explicit_media_add_media_to_forum_post_blocked'), e;
     })({});
 function Z(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
     let o = d.Z.getChannel(n);
-    _.default.track(v.rMx.EXPLICIT_MEDIA_ACTION, {
+    p.default.track(v.rMx.EXPLICIT_MEDIA_ACTION, {
         action: t,
         guild_id: null == o ? void 0 : o.guild_id,
         channel_id: n,
@@ -242,14 +243,14 @@ function Y(e) {
     var t, n, i, o;
     let { channelId: a, messageId: s, attachmentIds: u, embedIds: f } = e;
     if (null == a || null == s || ((null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == f ? void 0 : f.length) && void 0 !== n ? n : 0) === 0)) return;
-    let p = d.Z.getChannel(a);
-    _.default.track(v.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+    let _ = d.Z.getChannel(a);
+    p.default.track(v.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
         channel_id: a,
-        guild_id: null == p ? void 0 : p.guild_id,
+        guild_id: null == _ ? void 0 : _.guild_id,
         message_id: s,
         embed_ids: f,
         user_is_underage: (0, c.U)(),
-        scan_timeout_duration: m.b2,
+        scan_timeout_duration: g.b2,
         attachment_ids_v2: u
     }),
         l.Z.increment({
@@ -262,7 +263,7 @@ function K(e) {
     let { channelId: t, numOfAttachments: n, numOfAttachmentsPendingScan: i, numOfEmbeds: o, numOfEmbedsPendingScan: a } = e;
     if (null == t) return;
     let s = d.Z.getChannel(t);
-    _.default.track(v.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+    p.default.track(v.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
         channel_id: t,
         guild_id: null == s ? void 0 : s.guild_id,
         num_of_attachments: n,
@@ -277,7 +278,7 @@ function z(e) {
     let { messageId: t, channelId: n, numOfAttachments: r, numOfExplicitAttachments: i, numOfEmbeds: o, numOfExplicitEmbeds: a } = e;
     if (null == n) return;
     let s = d.Z.getChannel(n);
-    _.default.track(v.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+    p.default.track(v.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
         message_id: t,
         channel_id: n,
         channel_type: null == s ? void 0 : s.type,
@@ -321,7 +322,12 @@ function X(e) {
 }
 let J = (e, t) => null != e && null != t && (e <= E.LN || t <= E.iE);
 function $() {
-    let e = (0, g.G7)('explicit_media_redaction_utils'),
-        t = o.Z.shouldShowTiggerPawtect();
+    let e = (0, m.G7)('explicit_media_redaction_utils'),
+        t = (0, o.sf)();
+    return e && t;
+}
+function ee() {
+    let e = (0, m.UQ)('explicit_media_redaction_utils'),
+        t = (0, o.L5)();
     return e && t;
 }

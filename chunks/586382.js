@@ -1,6 +1,7 @@
 n.d(t, {
-    h: () => p,
-    z: () => m
+    hH: () => g,
+    xl: () => p,
+    zA: () => m
 });
 var r = n(200651),
     i = n(192379),
@@ -11,13 +12,22 @@ var r = n(200651),
     c = n(30513),
     d = n(876011);
 function u(e) {
-    let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: u } = e,
-        { analyticsLocations: m } = (0, s.ZP)(),
+    let { guild: t, guildFeature: n, analyticsSection: o, analyticsObject: c, getPerks: u, targetPremiumGuildTier: m } = e,
+        { analyticsLocations: g } = (0, s.ZP)(),
         p = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), (0, l.E6)(t, m, o, c, u());
+                e.preventDefault(),
+                    e.stopPropagation(),
+                    (0, l.E6)({
+                        guild: t,
+                        analyticsLocations: g,
+                        analyticsSection: o,
+                        analyticsObject: c,
+                        perks: u(),
+                        targetPremiumGuildTier: m
+                    });
             },
-            [m, c, o, t, u]
+            [g, c, o, t, u, m]
         );
     return (0, r.jsx)(a.Z, {
         guild: t,
@@ -36,7 +46,7 @@ function m(e) {
         getPerks: c.XO
     });
 }
-function p(e) {
+function g(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u, {
         guild: t,
@@ -44,5 +54,16 @@ function p(e) {
         analyticsSection: o.jXE.GUILD_INVITE_BACKGROUND,
         analyticsObject: o.qAy.BADGE,
         getPerks: c.o9
+    });
+}
+function p(e) {
+    let { guild: t } = e;
+    return (0, r.jsx)(u, {
+        guild: t,
+        guildFeature: o.oNc.VANITY_URL,
+        analyticsSection: o.jXE.GUILD_SETTINGS_VANITY_URL,
+        analyticsObject: o.qAy.BADGE,
+        getPerks: c.WW,
+        targetPremiumGuildTier: o.Eu4.TIER_3
     });
 }

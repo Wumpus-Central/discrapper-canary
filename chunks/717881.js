@@ -1,34 +1,24 @@
 n.d(t, {
-    P: () => A,
-    Z: () => C
+    P: () => j,
+    Z: () => S
 });
 var r = n(200651);
 n(192379);
-var l = n(120356),
-    i = n.n(l),
-    a = n(442837),
-    o = n(481060),
-    s = n(620662),
-    c = n(387903),
-    u = n(850827),
-    d = n(812206),
-    f = n(202458),
-    p = n(220779),
-    m = n(142550),
-    g = n(954017),
-    y = n(314091),
-    b = n(159244),
-    h = n(952164),
-    v = n(199902),
-    O = n(592125),
-    j = n(430824),
-    S = n(979651),
-    N = n(626135),
-    P = n(153066),
-    I = n(981631),
-    x = n(388032),
-    E = n(243982);
-function w(e) {
+var l = n(442837),
+    i = n(481060),
+    o = n(620662),
+    a = n(387903),
+    s = n(850827),
+    c = n(812206),
+    u = n(952164),
+    d = n(199902),
+    f = n(592125),
+    p = n(430824),
+    m = n(979651),
+    g = n(153066),
+    b = n(981631),
+    y = n(243982);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +43,7 @@ function w(e) {
     }
     return e;
 }
-function Z(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,26 +61,26 @@ function Z(e, t) {
         e
     );
 }
-function T(e) {
-    let { type: t, source: n, activity: l, applicationStream: i, user: a, guildId: s, channelId: c, onAction: d, actionColor: f } = e;
-    return (0, r.jsx)(u.Z, {
-        className: (0, P.l)(E, 'actions', t),
+function v(e) {
+    let { type: t, source: n, activity: l, applicationStream: o, user: a, guildId: c, channelId: u, onAction: d, actionColor: f } = e;
+    return (0, r.jsx)(s.Z, {
+        className: (0, g.l)(y, 'actions', t),
         type: t,
         source: n,
         activity: l,
-        applicationStream: i,
+        applicationStream: o,
         user: a,
-        guildId: s,
-        look: o.zxk.Looks.FILLED,
-        color: null != f ? f : o.zxk.Colors.PRIMARY,
-        channelId: c,
+        guildId: c,
+        look: i.zxk.Looks.FILLED,
+        color: null != f ? f : i.zxk.Colors.PRIMARY,
+        channelId: u,
         onAction: d
     });
 }
-let A = c.Z.Types,
-    C = function (e) {
-        var { activity: t, user: n, useStoreStream: l = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: P = !1, analyticsParams: A } = e,
-            C = (function (e, t) {
+let j = a.Z.Types,
+    S = function (e) {
+        var { activity: t, user: n, useStoreStream: i = !0, showActions: s = !0, hideHeader: g = !1, showChannelDetails: y = !1 } = e,
+            j = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -108,95 +98,44 @@ let A = c.Z.Types,
                     for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
                 }
                 return l;
-            })(e, ['activity', 'user', 'useStoreStream', 'showActions', 'hideHeader', 'showChannelDetails', 'analyticsParams']);
-        let D = (0, a.e7)([S.Z, O.Z], () => {
+            })(e, ['activity', 'user', 'useStoreStream', 'showActions', 'hideHeader', 'showChannelDetails']);
+        let S = (0, l.e7)([m.Z, f.Z], () => {
                 var e;
-                return O.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+                return f.Z.getChannel(null === (e = m.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
             }),
-            _ = (0, a.e7)([v.Z], () => (l ? v.Z.getAnyStreamForUser(n.id) : null)),
-            k = (0, a.e7)([j.Z, S.Z, O.Z], () => {
+            P = (0, l.e7)([d.Z], () => (i ? d.Z.getAnyStreamForUser(n.id) : null)),
+            N = (0, l.e7)([p.Z, m.Z, f.Z], () => {
                 var e, r;
-                return (0, s.Z)(t, I.xjy.EMBEDDED) ? j.Z.getGuild(null === (e = O.Z.getChannel(null === (r = S.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null;
+                return (0, o.Z)(t, b.xjy.EMBEDDED) ? p.Z.getGuild(null === (e = f.Z.getChannel(null === (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null;
             }),
-            W = (0, a.e7)([j.Z], () => (null != _ ? j.Z.getGuild(_.guildId) : null)),
-            R = (0, a.e7)([d.Z], () => (null != t ? (null != t.application_id ? d.Z.getApplication(t.application_id) : d.Z.getApplicationByName(t.name)) : null)),
-            M = (0, f.Z)(),
-            L = (0, b.Z)(n),
-            U = M && null != t && L;
-        return (null == t ? void 0 : t.type) === I.IIU.HANG_STATUS
+            x = (0, l.e7)([p.Z], () => (null != P ? p.Z.getGuild(P.guildId) : null)),
+            I = (0, l.e7)([c.Z], () => (null != t ? (null != t.application_id ? c.Z.getApplication(t.application_id) : c.Z.getApplicationByName(t.name)) : null));
+        return (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS
             ? null
             : (0, r.jsx)(
-                  c.Z,
-                  Z(w({}, C), {
+                  a.Z,
+                  h(O({}, j), {
                       activity: t,
                       user: n,
-                      application: R,
-                      hideHeader: u,
-                      activityGuild: null != k ? k : W,
-                      showReactions: U,
-                      showChannelDetails: P,
-                      channel: P ? D : void 0,
-                      renderActions: o
+                      application: I,
+                      hideHeader: g,
+                      activityGuild: null != N ? N : x,
+                      showChannelDetails: y,
+                      channel: y ? S : void 0,
+                      renderActions: s
                           ? () =>
-                                (0, r.jsxs)('div', {
-                                    className: i()(U && E.actionsWrapper),
-                                    children: [
-                                        (0, r.jsx)(
-                                            T,
-                                            Z(w({}, C), {
-                                                applicationStream: _,
-                                                activity: t,
-                                                user: n
-                                            })
-                                        ),
-                                        U &&
-                                            (0, r.jsx)(p.ZP, {
-                                                showReact: !0,
-                                                showReply: !0,
-                                                popoutProps: {
-                                                    replyHeaderText: x.NW.formatToPlainString(x.t['1JSA19'], { activity: t.name }),
-                                                    replyPlaceholder: x.NW.formatToPlainString(x.t['8lzR/f'], { channel: '@'.concat(n.globalName) })
-                                                },
-                                                onInteraction: (e) => {
-                                                    let { interactionType: r, emoji: l, reply: i } = e;
-                                                    N.default.track(
-                                                        I.rMx.ACTIVITY_REACTOR_INTERACTED,
-                                                        w(
-                                                            {
-                                                                application_id: t.application_id,
-                                                                interaction_type: r
-                                                            },
-                                                            A
-                                                        )
-                                                    ),
-                                                        r === m.L.ReactSubmit &&
-                                                            null != l &&
-                                                            (0, g.H)({
-                                                                reaction: l,
-                                                                user: n,
-                                                                activity: t,
-                                                                application: R,
-                                                                altText: (0, y.xC)(n, t),
-                                                                stream: _
-                                                            }),
-                                                        r === m.L.ReplySubmit &&
-                                                            null != i &&
-                                                            (0, g.R)({
-                                                                reply: i,
-                                                                user: n,
-                                                                activity: t,
-                                                                application: R,
-                                                                altText: (0, y.xC)(n, t),
-                                                                stream: _
-                                                            });
-                                                }
-                                            })
-                                    ]
-                                })
+                                (0, r.jsx)(
+                                    v,
+                                    h(O({}, j), {
+                                        applicationStream: P,
+                                        activity: t,
+                                        user: n
+                                    })
+                                )
                           : null,
-                      onOpenSpotifyTrack: h.aG,
-                      onOpenSpotifyArtist: h.d$,
-                      onOpenSpotifyAlbum: h.Z5
+                      onOpenSpotifyTrack: u.aG,
+                      onOpenSpotifyArtist: u.d$,
+                      onOpenSpotifyAlbum: u.Z5
                   })
               );
     };

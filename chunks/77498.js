@@ -9,7 +9,7 @@ var i,
     u = n(695346),
     d = n(973616),
     f = n(358085);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,16 +22,16 @@ function p(e, t, n) {
         e
     );
 }
-let _ = 'GameStoreReportedGames',
+let p = 'GameStoreReportedGames',
     h = 2147483648,
-    m = new c.Z(),
-    g = {},
+    g = new c.Z(),
+    m = {},
     E = {},
-    v = null !== (i = s.K.get(_)) && void 0 !== i ? i : {},
+    v = null !== (i = s.K.get(p)) && void 0 !== i ? i : {},
     b = '',
     y = null;
 function O(e) {
-    var t, n, r, i, o, a;
+    var t, n, r, i, o, a, s;
     return {
         id: e.id,
         name: e.name,
@@ -41,7 +41,8 @@ function O(e) {
         overlayCompatibilityHook: null !== (i = e.overlay_compatibility_hook) && void 0 !== i && i,
         hook: null === (o = e.hook) || void 0 === o || o,
         aliases: null !== (a = e.aliases) && void 0 !== a ? a : [],
-        supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods)
+        supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods),
+        themes: null !== (s = e.themes) && void 0 !== s ? s : []
     };
 }
 function S(e) {
@@ -54,12 +55,13 @@ function S(e) {
         overlay: e.overlay,
         hook: e.hook,
         aliases: e.aliases,
-        supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
+        supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay,
+        themes: []
     };
 }
 function I(e) {
     let t = e instanceof d.ZP ? S(e) : e;
-    for (let n of (m.set(e.id, t), (g[e.name.toLowerCase()] = t), e.aliases)) g[n.toLowerCase()] = t;
+    for (let n of (g.set(e.id, t), (m[e.name.toLowerCase()] = t), e.aliases)) m[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) E[n.name] = t;
 }
 function T(e) {
@@ -86,7 +88,7 @@ class R extends (o = a.ZP.PersistedStore) {
         return (0, f.isDesktop)()
             ? {
                   detectableGamesEtag: b,
-                  detectableGames: m.values()
+                  detectableGames: g.values()
               }
             : {
                   detectableGamesEtag: '',
@@ -94,15 +96,15 @@ class R extends (o = a.ZP.PersistedStore) {
               };
     }
     get games() {
-        return m.values();
+        return g.values();
     }
     getDetectableGame(e) {
-        return m.get(e);
+        return g.get(e);
     }
     getGameByName(e) {
         if (null == e) return null;
         let t = e.toLowerCase();
-        return Object.prototype.hasOwnProperty.call(g, t) ? g[t] : null;
+        return Object.prototype.hasOwnProperty.call(m, t) ? m[t] : null;
     }
     isGameInDatabase(e) {
         return null != this.getGameByName(e.name) || (void 0 !== e.nativeProcessObserverId && (e.nativeProcessObserverId & h) == 0);
@@ -139,12 +141,12 @@ class R extends (o = a.ZP.PersistedStore) {
         return u.G6.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (v[e] = !0), s.K.set(_, v);
+        (v[e] = !0), s.K.set(p, v);
     }
 }
-p(R, 'displayName', 'GameStore'),
-    p(R, 'persistKey', 'GameStore'),
-    p(R, 'migrations', [
+_(R, 'displayName', 'GameStore'),
+    _(R, 'persistKey', 'GameStore'),
+    _(R, 'migrations', [
         (e) => {
             var t, n;
             return null == e
