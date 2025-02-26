@@ -19,10 +19,8 @@ function s(e, t, n) {
 let l = new Map();
 class c extends (r = i.ZP.Store) {
     hasActiveErrorOfType(e) {
-        return l.values().some((t) => {
-            let { error: n } = t;
-            return n === e;
-        });
+        for (let { error: t } of l.values()) if (t === e) return !0;
+        return !1;
     }
     getActiveErrors() {
         return l;

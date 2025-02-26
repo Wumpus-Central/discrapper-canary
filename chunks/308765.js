@@ -161,6 +161,10 @@ let i = {
         inlineRequire: () => n(1627).Z,
         loadAfterConnectionOpen: !0
     },
+    OverlayContentProtectionManager: {
+        actions: ['STREAM_START', 'STREAM_STOP'],
+        inlineRequire: () => n(503522).Z
+    },
     OverlayLockSideEffectManager: {
         actions: ['OVERLAY_SET_INPUT_LOCKED'],
         inlineRequire: () => n(967031).Z
@@ -265,7 +269,7 @@ let i = {
         inlineRequire: () => n(538215).Z
     },
     VoiceFilterLoopbackManager: {
-        actions: ['RTC_CONNECTION_STATE', 'VOICE_FILTER_LOOPBACK_TOGGLE', 'VOICE_FILTER_APPLIED'],
+        actions: ['RTC_CONNECTION_STATE', 'VOICE_FILTER_LOOPBACK_TOGGLE', 'VOICE_FILTER_APPLIED', 'AUDIO_TOGGLE_SELF_MUTE', 'AUDIO_SET_TEMPORARY_SELF_MUTE', 'AUDIO_SET_SELF_MUTE'],
         inlineRequire: () => n(986057).Z,
         hasStoreChangeListeners: !0
     },
