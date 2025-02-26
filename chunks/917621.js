@@ -277,10 +277,15 @@ class S extends i.PureComponent {
                                                   onClick: this.handleInvite,
                                                   disabled: i
                                               }
-                                            : {
-                                                  children: this.isActionType(y.mFx.JOIN_REQUEST) ? O.NW.string(O.t['hC/Ze3']) : O.NW.string(O.t.VJlc0d),
-                                                  disabled: !0
-                                              }
+                                            : this.isInParty()
+                                              ? {
+                                                    children: O.NW.string(O.t.KC26NT),
+                                                    disabled: !0
+                                                }
+                                              : {
+                                                    children: this.isActionType(y.mFx.JOIN_REQUEST) ? O.NW.string(O.t['hC/Ze3']) : O.NW.string(O.t.VJlc0d),
+                                                    disabled: !0
+                                                }
                                     : {
                                           children: O.NW.string(O.t.gUZonZ),
                                           onClick: this.handleDownloadApp
