@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(13245),
-    o = n(593481),
+    o = n(13245),
+    s = n(593481),
     l = n(981631);
 function a(e, t, n) {
     return (
@@ -21,7 +21,7 @@ class c extends r.Component {
     getStyle() {
         let e, t, n, i;
         let {
-            props: { position: r, zIndex: s }
+            props: { position: r, zIndex: o }
         } = this;
         switch (r) {
             case l._vf.TOP_LEFT:
@@ -44,7 +44,7 @@ class c extends r.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: s
+            zIndex: o
         };
     }
     render() {
@@ -53,7 +53,7 @@ class c extends r.Component {
                 props: {
                     locked: n,
                     notification: {
-                        props: { renderFooter: r, onNotificationShow: s, onDismissClick: l, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
+                        props: { renderFooter: r, onNotificationShow: o, onDismissClick: l, onNotificationClick: c, onConfirmClick: d, onCancelClick: u }
                     }
                 }
             } = this,
@@ -66,18 +66,18 @@ class c extends r.Component {
                         var n,
                             i,
                             r = {},
-                            s = Object.keys(e);
-                        for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            o = Object.keys(e);
+                        for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                    var o = Object.getOwnPropertySymbols(e);
+                    for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
             })(this.props.notification.props, ['renderFooter', 'onNotificationShow', 'onDismissClick', 'onNotificationClick', 'onConfirmClick', 'onCancelClick']);
         return (0, i.jsx)(
-            o.ZP,
+            s.ZP,
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -96,6 +96,7 @@ class c extends r.Component {
             })({}, h)),
             (t = t =
                 {
+                    locked: n,
                     onNotificationShow: this.handleNotificationShow,
                     onDismissClick: null != l ? this.handleDismissClick : void 0,
                     onNotificationClick: null != c ? this.handleNotificationClick : null,
@@ -133,7 +134,7 @@ class c extends r.Component {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
-                s.Z.updateNotificationStatus(t), null == n || n(e, t);
+                o.Z.updateNotificationStatus(t), null == n || n(e, t);
             }),
             a(this, 'handleNotificationClick', (e) => {
                 let {
@@ -158,10 +159,11 @@ class c extends r.Component {
             }),
             a(this, 'renderFooter', (e) => {
                 let {
-                    id: t,
-                    props: { renderFooter: n }
-                } = this.props.notification;
-                return null != n ? n(e, t) : null;
+                        id: t,
+                        props: { renderFooter: n }
+                    } = this.props.notification,
+                    i = this.props.locked;
+                return null != n ? n(e, t, i) : null;
             });
     }
 }

@@ -74,7 +74,10 @@ function E(e, t) {
     return u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === i.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
 let v = { '1314682894106497096': (e, t, n) => (E(e, t) ? i.Jx.FULLSCREEN : n) },
-    b = { '762434991303950386': (e) => !0 },
+    b = {
+        '762434991303950386': (e) => !0,
+        367827983903490050: (e) => !0
+    },
     y = 16,
     O = !0;
 async function S(e) {
