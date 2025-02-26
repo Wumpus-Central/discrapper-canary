@@ -1,5 +1,4 @@
 n.d(t, {
-    A7: () => d,
     Hj: () => s,
     Pz: () => u,
     ZH: () => l
@@ -53,7 +52,4 @@ function u(e) {
             return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(' -> ');
         })
         .join('\n');
-}
-function d() {
-    return a.toArray();
 }
