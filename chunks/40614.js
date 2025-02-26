@@ -24,11 +24,7 @@ let c = (e) => {
                           color: 'currentColor',
                           className: s.iconEye
                       }),
-                      a.NW.string(a.t.jfrLLS),
-                      (0, r.jsx)(i.Fbu, {
-                          size: 'xxs',
-                          color: 'currentColor'
-                      })
+                      a.NW.string(a.t.jfrLLS)
                   ]
               })
           });

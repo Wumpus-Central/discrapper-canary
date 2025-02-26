@@ -1,15 +1,16 @@
 n.d(t, {
     CI: () => c,
     Qe: () => a,
-    W3: () => u,
+    W3: () => d,
     ZW: () => o,
     ak: () => s,
+    sg: () => u,
     up: () => l
 });
 var r = n(243814),
     i = n(388032);
 let o = [() => i.NW.string(i.t['6xfSCg']), () => i.NW.string(i.t.ymSk0t), () => i.NW.string(i.t.EnN7c3), () => i.NW.string(i.t['4wMpBg']), () => i.NW.string(i.t.CncpnJ), () => i.NW.string(i.t.X9pGvL), () => i.NW.string(i.t.sGOSGx), () => i.NW.string(i.t.JfibUl)],
-    a = [r.x.BOT, r.x.OPENID, r.x.IDENTIFY, r.x.EMAIL, r.x.CONNECTIONS, r.x.MESSAGES_READ, r.x.GUILDS, r.x.GUILDS_JOIN, r.x.GUILDS_MEMBERS_READ, r.x.GUILDS_CHANNELS_READ, r.x.GDM_JOIN, r.x.RPC, r.x.RPC_NOTIFICATIONS_READ, r.x.RPC_VOICE_READ, r.x.RPC_VOICE_WRITE, r.x.RPC_VIDEO_READ, r.x.RPC_VIDEO_WRITE, r.x.RPC_SCREENSHARE_READ, r.x.RPC_SCREENSHARE_WRITE, r.x.RPC_ACTIVITIES_WRITE, r.x.APPLICATIONS_BUILDS_UPLOAD, r.x.APPLICATIONS_BUILDS_READ, r.x.APPLICATIONS_COMMANDS, r.x.APPLICATIONS_COMMANDS_UPDATE, r.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, r.x.APPLICATIONS_STORE_UPDATE, r.x.APPLICATIONS_ENTITLEMENTS, r.x.ACTIVITIES_INVITES_WRITE, r.x.ACTIVITIES_READ, r.x.ACTIVITIES_WRITE, r.x.RELATIONSHIPS_READ, r.x.RELATIONSHIPS_WRITE, r.x.VOICE, r.x.DM_CHANNELS_READ, r.x.DM_CHANNELS_MESSAGES_READ, r.x.DM_CHANNELS_MESSAGES_WRITE, r.x.ROLE_CONNECTIONS_WRITE, r.x.PRESENCES_READ, r.x.PRESENCES_WRITE, r.x.GATEWAY_CONNECT, r.x.PAYMENT_SOURCES_COUNTRY_CODE, r.x.SDK_SOCIAL_LAYER],
+    a = [r.x.BOT, r.x.OPENID, r.x.IDENTIFY, r.x.EMAIL, r.x.CONNECTIONS, r.x.MESSAGES_READ, r.x.GUILDS, r.x.GUILDS_JOIN, r.x.GUILDS_MEMBERS_READ, r.x.GUILDS_CHANNELS_READ, r.x.GDM_JOIN, r.x.RPC, r.x.RPC_NOTIFICATIONS_READ, r.x.RPC_VOICE_READ, r.x.RPC_VOICE_WRITE, r.x.RPC_VIDEO_READ, r.x.RPC_VIDEO_WRITE, r.x.RPC_SCREENSHARE_READ, r.x.RPC_SCREENSHARE_WRITE, r.x.RPC_ACTIVITIES_WRITE, r.x.APPLICATIONS_BUILDS_UPLOAD, r.x.APPLICATIONS_BUILDS_READ, r.x.APPLICATIONS_COMMANDS, r.x.APPLICATIONS_COMMANDS_UPDATE, r.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, r.x.APPLICATIONS_STORE_UPDATE, r.x.APPLICATIONS_ENTITLEMENTS, r.x.ACTIVITIES_INVITES_WRITE, r.x.ACTIVITIES_READ, r.x.ACTIVITIES_WRITE, r.x.RELATIONSHIPS_READ, r.x.RELATIONSHIPS_WRITE, r.x.VOICE, r.x.DM_CHANNELS_READ, r.x.DM_CHANNELS_MESSAGES_READ, r.x.DM_CHANNELS_MESSAGES_WRITE, r.x.ROLE_CONNECTIONS_WRITE, r.x.PRESENCES_READ, r.x.PRESENCES_WRITE, r.x.GATEWAY_CONNECT, r.x.PAYMENT_SOURCES_COUNTRY_CODE, r.x.SDK_SOCIAL_LAYER_PRESENCE, r.x.SDK_SOCIAL_LAYER],
     s = a.concat([r.x.WEBHOOK_INCOMING, r.x.BOT]),
     l = ['rpc.api'];
 function c(e, t) {
@@ -97,6 +98,7 @@ function c(e, t) {
             return [i.NW.string(i.t.hycwLC)];
         case r.x.ACTIVITIES_INVITES_WRITE:
             return [i.NW.string(i.t.IM4CjY)];
+        case r.x.SDK_SOCIAL_LAYER_PRESENCE:
         case r.x.SDK_SOCIAL_LAYER:
             return [i.NW.string(i.t.Pl1dTU), i.NW.string(i.t['hc/+ys']), i.NW.string(i.t.mPRcyc), i.NW.string(i.t.F7J4ND), i.NW.string(i.t['2wxXX1'])];
         default:
@@ -104,5 +106,8 @@ function c(e, t) {
     }
 }
 function u(e) {
+    return e === r.x.SDK_SOCIAL_LAYER_PRESENCE || e === r.x.SDK_SOCIAL_LAYER;
+}
+function d(e) {
     return e.includes(r.x.DM_CHANNELS_MESSAGES_WRITE) || e.includes(r.x.SDK_SOCIAL_LAYER) ? i.NW.format(i.t.o0GMBA, {}) : e.includes(r.x.MESSAGES_READ) || e.includes(r.x.DM_CHANNELS_MESSAGES_READ) ? i.NW.format(i.t.Soy7jI, {}) : i.NW.format(i.t['TeL+Cg'], {});
 }

@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => u,
-    a: () => d
+    T: () => f,
+    a: () => _
 });
 var r = n(544891),
     i = n(704215),
@@ -8,34 +8,40 @@ var r = n(544891),
     a = n(605236),
     s = n(675478),
     l = n(626135),
-    c = n(981631);
-async function u(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-    if (n) {
+    c = n(358085),
+    u = n(981631);
+let d = () => {
+    let e = null;
+    return (0, c.isAndroid)() ? (e = u.gg$.GOOGLE) : (0, c.isIOS)() && (e = u.gg$.APPLE), e;
+};
+async function f(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    if (t) {
         o.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_START' });
         try {
-            var u, d, f;
-            null != e && l.default.track(c.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
-            let n = await r.tn.post({
-                    url: c.ANM.USER_OFFER,
+            var n, c, f;
+            null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
+            let t = d(),
+                _ = await r.tn.post({
+                    url: u.ANM.USER_OFFER,
                     body: null != t ? { payment_gateway: t } : {},
                     rejectWithError: !0
                 }),
-                p = null !== (u = n.body.user_trial_offer) && void 0 !== u ? u : null,
-                _ = null !== (d = n.body.user_discount) && void 0 !== d ? d : null,
-                h = null !== (f = n.body.user_discount_offer) && void 0 !== f ? f : null;
+                p = null !== (n = _.body.user_trial_offer) && void 0 !== n ? n : null,
+                h = null !== (c = _.body.user_discount) && void 0 !== c ? c : null,
+                g = null !== (f = _.body.user_discount_offer) && void 0 !== f ? f : null;
             return (
                 null == p && (0, a.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, s.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
                 o.Z.dispatch({
                     type: 'BILLING_USER_OFFER_FETCH_SUCCESS',
                     userTrialOffer: p,
-                    userDiscount: _,
-                    userDiscountOffer: h
+                    userDiscount: h,
+                    userDiscountOffer: g
                 }),
                 {
                     userTrialOffer: p,
-                    userDiscount: _,
-                    userDiscountOffer: h
+                    userDiscount: h,
+                    userDiscountOffer: g
                 }
             );
         } catch (e) {
@@ -43,13 +49,13 @@ async function u(e, t) {
         }
     }
 }
-function d(e, t) {
+function _(e, t) {
     let n = null != e && null == e.expires_at ? e.id : void 0,
         i = null != t && null == t.expires_at ? t.id : void 0;
     if (void 0 !== n || void 0 !== i)
         return r.tn
             .post({
-                url: c.ANM.USER_OFFER_ACKNOWLEDGED,
+                url: u.ANM.USER_OFFER_ACKNOWLEDGED,
                 body: {
                     user_trial_offer_id: n,
                     user_discount_offer_id: i
