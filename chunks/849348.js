@@ -16,6 +16,5 @@ e.exports = {
     premiumWheel: 'premiumWheel__54675',
     boostingPill: 'boostingPill__54675',
     imageSpecifications: 'imageSpecifications__54675',
-    premiumUpsell: 'premiumUpsell__54675',
-    recentAvatarsSection: 'recentAvatarsSection__54675'
+    premiumUpsell: 'premiumUpsell__54675'
 };
