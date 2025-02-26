@@ -1,5 +1,9 @@
 e.exports = {
     container: 'container__6e9b4',
+    title: 'title__6e9b4',
+    description: 'description__6e9b4',
+    orbIcon: 'orbIcon__6e9b4',
+    orbIconImg: 'orbIconImg__6e9b4',
     content: 'content__6e9b4',
     closeButton: 'closeButton__6e9b4',
     closeButtonInner: 'closeButtonInner__6e9b4',

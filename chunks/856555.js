@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => m,
-    ZP: () => b
+    EQ: () => h,
+    ZP: () => f
 });
 var r = n(200651),
     i = n(192379),
@@ -8,19 +8,8 @@ var r = n(200651),
     o = n(930153),
     a = n(432792),
     s = n(981631),
-    c = n(388032),
-    u = n(508060),
-    d = n(232474);
-let p = () =>
-        (0, r.jsx)('div', {
-            className: u.assetContainer,
-            children: (0, r.jsx)('img', {
-                src: d.Z,
-                className: u.asset,
-                alt: 'Orb GIF'
-            })
-        }),
-    h = (e) => {
+    c = n(388032);
+let u = (e) => {
         let { onClose: t, renderTail: n, invertCoachmark: i, coachmarkRef: l, tailLeftOffset: o = 41 } = e;
         return (0, r.jsx)(a.tE, {
             titleText: c.NW.string(c.t['9ItSXV']),
@@ -29,11 +18,10 @@ let p = () =>
             renderTail: n,
             invertCoachmark: i,
             tailLeftOffset: o,
-            coachmarkRef: l,
-            children: (0, r.jsx)(p, {})
+            coachmarkRef: l
         });
     },
-    f = () => {
+    d = () => {
         let e = (0, l.Q3)('VirtualCurrency: ShopOnboardingCoachmark');
         return {
             getRequiredSpacingFromTop: i.useCallback(() => {
@@ -45,36 +33,36 @@ let p = () =>
             isVisualRefreshEnabled: e
         };
     },
-    g = (e) => {
+    p = (e) => {
         let { onClose: t, renderTail: n = !1, offsetControlRef: l, backgroundElementRef: o } = e,
-            { getRequiredSpacingFromTop: s, tailLeftOffset: c } = f(),
-            u = i.useRef(null),
-            d = i.useCallback(
+            { getRequiredSpacingFromTop: s, tailLeftOffset: c } = d(),
+            h = i.useRef(null),
+            f = i.useCallback(
                 (e) => {
                     let t = (e.bottom + e.top) / 2;
-                    return !(t <= s() + g.COACHMARK_VERTICAL_OFFSET || t > window.innerHeight - ((0, a.t4)() + g.COACHMARK_VERTICAL_OFFSET));
+                    return !(t <= s() + p.COACHMARK_VERTICAL_OFFSET || t > window.innerHeight - ((0, a.t4)() + p.COACHMARK_VERTICAL_OFFSET));
                 },
                 [s]
             );
         return (0, r.jsx)(a.U_, {
             offsetControlRef: l,
-            coachmarkRef: u,
+            coachmarkRef: h,
             backgroundElementRef: o,
-            calculateVisibility: d,
+            calculateVisibility: f,
             calculateBaseOffsets: () => ({
                 left: 0,
-                verticalOffset: g.COACHMARK_VERTICAL_OFFSET
+                verticalOffset: p.COACHMARK_VERTICAL_OFFSET
             }),
-            children: (0, r.jsx)(h, {
+            children: (0, r.jsx)(u, {
                 onClose: t,
                 renderTail: n,
                 tailLeftOffset: c,
-                coachmarkRef: u
+                coachmarkRef: h
             })
         });
     };
-g.COACHMARK_VERTICAL_OFFSET = 4;
-let m = (e) => {
+p.COACHMARK_VERTICAL_OFFSET = 4;
+let h = (e) => {
         let { isVirtualCurrencyEnabled: t, listScrollerRef: n } = e,
             r = i.useRef(null),
             l = i.useCallback(() => {
@@ -101,4 +89,4 @@ let m = (e) => {
                   offsetControlRef: r
               };
     },
-    b = g;
+    f = p;
