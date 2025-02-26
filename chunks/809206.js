@@ -152,7 +152,14 @@ function y(e) {
         ).then(
             (e) => {
                 let t = e.body;
-                return l.default.track(f.rMx.USER_AVATAR_UPDATED, { animated: (0, c.xR)(t.avatar) }), a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), e;
+                return (
+                    l.default.track(f.rMx.USER_AVATAR_UPDATED, {
+                        animated: (0, c.xR)(t.avatar),
+                        is_guild_profile: !1
+                    }),
+                    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }),
+                    e
+                );
             },
             (e) => (
                 a.Z.dispatch({

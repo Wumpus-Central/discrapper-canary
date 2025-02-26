@@ -185,7 +185,10 @@ let E = {
                 let t = e.body,
                     n = t.token;
                 return (
-                    s.default.track(d.rMx.USER_AVATAR_UPDATED, { animated: (0, l.xR)(t.avatar) }),
+                    s.default.track(d.rMx.USER_AVATAR_UPDATED, {
+                        animated: (0, l.xR)(t.avatar),
+                        is_guild_profile: !1
+                    }),
                     delete t.token,
                     o.Z.dispatch({
                         type: 'UPDATE_TOKEN',
