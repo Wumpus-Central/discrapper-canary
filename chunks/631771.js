@@ -43,6 +43,7 @@ function s(e) {
         case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
         case o.cd.FOR_LATER_MODAL_UPSELL:
         case o.cd.VOICE_FILTERS_UPSELL:
+        case o.cd.RECENT_AVATARS_ROADBLOCK_UPSELL:
             return !0;
         default:
             return !1;

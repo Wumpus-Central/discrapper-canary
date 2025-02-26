@@ -28,11 +28,11 @@ n.d(t, {
     OT: () => es,
     Ph: () => e6,
     QI: () => eY,
-    QP: () => eD,
+    QP: () => ew,
     RQ: () => eK,
     RU: () => ec,
     Rg: () => H,
-    Rr: () => x,
+    Rr: () => L,
     Rt: () => en,
     Se: () => e9,
     Si: () => h,
@@ -47,17 +47,17 @@ n.d(t, {
     Wt: () => e$,
     X2: () => eJ,
     Xh: () => E,
-    Y1: () => ew,
+    Y1: () => eD,
     YQ: () => m,
     Z1: () => y,
     Zh: () => d,
     _k: () => eR,
     a$: () => e8,
-    a1: () => eZ,
+    a1: () => eV,
     a7: () => J,
     b6: () => f,
     bg: () => ek,
-    cb: () => L,
+    cb: () => x,
     cd: () => ev,
     dB: () => ed,
     dJ: () => v,
@@ -65,11 +65,11 @@ n.d(t, {
     dT: () => eu,
     eZ: () => eq,
     ee: () => eg,
-    ff: () => V,
-    fz: () => eV,
+    ff: () => Z,
+    fz: () => eZ,
     gW: () => eh,
     gh: () => B,
-    h1: () => ex,
+    h1: () => eL,
     h8: () => ea,
     hX: () => eX,
     hs: () => el,
@@ -79,11 +79,11 @@ n.d(t, {
     jy: () => eW,
     jz: () => ei,
     kJ: () => ez,
-    m8: () => Z,
+    m8: () => V,
     mn: () => T,
     n5: () => em,
     nG: () => eE,
-    nH: () => eL,
+    nH: () => ex,
     nL: () => eU,
     np: () => e7,
     o4: () => O,
@@ -347,19 +347,19 @@ let C = Object.freeze({
     }),
     R = new Set(['511651880837840896']),
     P = 16,
-    w = 8,
-    D = 5,
-    x = 30,
-    L = 2,
+    D = 8,
+    w = 5,
+    L = 30,
+    x = 2,
     M = 3,
     k = 28,
     j = 30,
     U = 7,
     G = 7,
     B = 30,
-    Z = '775514091874680832',
+    V = '775514091874680832',
     F = '845031178288889946',
-    V = 432000000,
+    Z = 432000000,
     H = 14,
     W = '520373071933079552',
     Y = '902329034132684800',
@@ -521,6 +521,7 @@ var ev = (function (e) {
             (e.PROFILE_EFFECT_MODAL_UPSELL = 'profile_effect_modal_upsell'),
             (e.AVATAR_DECORATION_MODAL_UPSELL = 'avatar_decoration_modal_upsell'),
             (e.VOICE_FILTERS_UPSELL = 'voice_filters_upsell'),
+            (e.RECENT_AVATARS_ROADBLOCK_UPSELL = 'recent_avatars_roadblock_upsell'),
             (e.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
             (e.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
             (e.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),
@@ -623,19 +624,19 @@ let ey = Object.freeze({
             }
         }
     }),
-    ew = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-var eD = (function (e) {
+    eD = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+var ew = (function (e) {
         return (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset'), e;
     })({}),
-    ex = (function (e) {
+    eL = (function (e) {
         return (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e;
     })({});
-let eL = {
+let ex = {
     '1024422698568122368': P,
     '511651876987469824': P,
     '511651885459963904': P,
-    '944037208325619722': w,
-    '642251038925127690': D
+    '944037208325619722': D,
+    '642251038925127690': w
 };
 var eM = (function (e) {
     return (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e;
@@ -658,7 +659,7 @@ let eB = Object.freeze({
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    eZ = Object.freeze({
+    eV = Object.freeze({
         3: { fileSize: eO },
         1: { fileSize: eS },
         2: { fileSize: eI }
@@ -666,7 +667,7 @@ let eB = Object.freeze({
 var eF = (function (e) {
         return (e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e;
     })({}),
-    eV = (function (e) {
+    eZ = (function (e) {
         return (e.BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (e.BADGE_CLICKED = 'share_nitro_badge_clicked'), (e.FLOW_STARTED = 'share_nitro_flow_started'), (e.FLOW_COMPLETED = 'share_nitro_flow_completed'), e;
     })({});
 let eH = new Set(['PL', 'TR']),

@@ -28,47 +28,33 @@ let s = 'file-input',
     });
 class c extends (r = o.Component) {
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': o, 'aria-hidden': a, id: c } = this.props;
-        if (this.props.embedded)
-            return (0, i.jsx)('div', {
-                role: 'button',
+        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': o, 'aria-hidden': a, id: c } = this.props,
+            u = '';
+        return (
+            this.props.filters && (u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+            (0, i.jsx)('input', {
+                id: c,
                 style: l(e),
                 className: n || s,
+                disabled: e,
+                type: 'file',
                 tabIndex: t,
-                onKeyDown: e ? void 0 : this.handleNativeKeyDown,
-                onClick: e ? void 0 : this.handleNativeClick,
-                'aria-disabled': e,
+                onMouseDown: this.handleBrowserInputMouseDown,
+                onChange: this.props.onChange,
+                multiple: this.props.multiple,
+                accept: u,
+                name: r,
                 'aria-label': o,
-                'aria-hidden': a || void 0
-            });
-        {
-            let u = '';
-            return (
-                this.props.filters && (u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
-                (0, i.jsx)('input', {
-                    id: c,
-                    style: l(e),
-                    className: n || s,
-                    disabled: e,
-                    type: 'file',
-                    tabIndex: t,
-                    onMouseDown: this.handleBrowserInputMouseDown,
-                    onChange: this.props.onChange,
-                    multiple: this.props.multiple,
-                    accept: u,
-                    name: r,
-                    'aria-label': o,
-                    'aria-hidden': a || void 0,
-                    ref: (e) => (this._input = e)
-                })
-            );
-        }
+                'aria-hidden': a || void 0,
+                ref: (e) => (this._input = e)
+            })
+        );
     }
     constructor(...e) {
         super(...e),
             a(this, '_input', null),
             a(this, 'activateUploadDialogue', () => {
-                this.props.embedded ? this.handleNativeClick() : this._input && this._input.click();
+                this._input && this._input.click();
             }),
             a(this, 'handleNativeClick', () => {
                 this.props.handleNativeClick && this.props.handleNativeClick(this.props);
