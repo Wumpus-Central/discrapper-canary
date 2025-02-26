@@ -1,10 +1,11 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(907305),
-    o = n(747017),
-    a = n(953372);
-function s(e, t, n) {
+    o = n(468363),
+    a = n(747017),
+    s = n(953372);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,23 +29,23 @@ function l(e) {
                 })
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = u(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -53,9 +54,10 @@ function u(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function d(e) {
+function f(e) {
     var { location: t } = e,
-        n = c(e, ['location']);
-    let { activityStatusCleanupEnabled: s } = (0, i.w)({ location: t });
-    return s ? (0, r.jsx)(a.Z, l({}, n)) : (0, r.jsx)(o.Z, l({}, n));
+        n = u(e, ['location']);
+    let { activityStatusCleanupEnabled: l } = (0, i.w)({ location: t }),
+        { voiceActivityStatusEnabled: d } = (0, o.U)({ location: t });
+    return l || d ? (0, r.jsx)(s.Z, c({}, n)) : (0, r.jsx)(a.Z, c({}, n));
 }
