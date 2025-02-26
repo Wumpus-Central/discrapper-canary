@@ -1,4 +1,4 @@
-n.d(t, { Z: () => l }), n(653041), n(47120);
+n.d(t, { Z: () => l }), n(653041);
 var r,
     i = n(442837),
     o = n(570140);
@@ -23,12 +23,6 @@ class s extends (r = i.ZP.Store) {
         return {
             shouldOpen: this._earnedOrbsCoachmarkOpen,
             earnedOrbsQuantity: this._earnedOrbsCoachmarkQuantity
-        };
-    }
-    get onboardingCoachmark() {
-        return {
-            shouldOpenCoachmarkTypes: this._onboardingCoachmarksOpen,
-            shouldSkip: this._onboardingCoachmarkSkip
         };
     }
     get redeemError() {
@@ -93,7 +87,7 @@ class s extends (r = i.ZP.Store) {
     }
     handleOnboardingModalReset(e) {
         let {} = e;
-        (this._balanceWidgetPillIsOverlaid = !1), (this._onboardingModalOpenedPrior = !1), (this._onboardingCoachmarksOpen = []), (this._onboardingCoachmarkSkip = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0);
+        (this._balanceWidgetPillIsOverlaid = !1), (this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0);
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: n } = e;
@@ -102,18 +96,6 @@ class s extends (r = i.ZP.Store) {
     handleEarnedOrbsCoachmarkClose(e) {
         let {} = e;
         (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0);
-    }
-    handleOnboardingCoachmarkOpen(e) {
-        let { onboardingCoachmarkTypes: t } = e;
-        this._onboardingCoachmarksOpen = [...this._onboardingCoachmarksOpen, ...t];
-    }
-    handleOnboardingCoachmarkClose(e) {
-        let { onboardingCoachmarkTypes: t } = e;
-        this._onboardingCoachmarksOpen = this._onboardingCoachmarksOpen.filter((e) => !t.includes(e));
-    }
-    handleOnboardingCoachmarkSkip(e) {
-        let {} = e;
-        this._onboardingCoachmarkSkip = !0;
     }
     constructor() {
         super(o.Z, {
@@ -128,9 +110,6 @@ class s extends (r = i.ZP.Store) {
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET: (e) => this.handleOnboardingModalReset(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN: (e) => this.handleEarnedOrbsCoachmarkOpen(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE: (e) => this.handleEarnedOrbsCoachmarkClose(e),
-            VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_OPEN: (e) => this.handleOnboardingCoachmarkOpen(e),
-            VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_CLOSE: (e) => this.handleOnboardingCoachmarkClose(e),
-            VIRTUAL_CURRENCY_ONBOARDING_COACHMARK_SKIP: (e) => this.handleOnboardingCoachmarkSkip(e),
             VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN: (e) => this.toggleBalanceWidgetPillOverlay(e),
             VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE: (e) => this.toggleBalanceWidgetPillOverlay(e)
         }),
@@ -143,8 +122,6 @@ class s extends (r = i.ZP.Store) {
             a(this, '_isFetchingBalance', !1),
             a(this, '_balanceWidgetPillIsOverlaid', !1),
             a(this, '_onboardingModalOpenedPrior', !1),
-            a(this, '_onboardingCoachmarksOpen', []),
-            a(this, '_onboardingCoachmarkSkip', !1),
             a(this, '_earnedOrbsCoachmarkOpen', !1),
             a(this, '_earnedOrbsCoachmarkDedupeKeys', []),
             a(this, '_earnedOrbsCoachmarkQuantity', 0);

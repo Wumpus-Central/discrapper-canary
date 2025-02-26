@@ -9,17 +9,17 @@ var r = n(200651),
     d = n(813197),
     u = n(430824),
     m = n(768581),
-    p = n(921948),
-    g = n(434404),
+    g = n(921948),
+    p = n(434404),
     h = n(981631),
     f = n(570911),
     b = n(388032),
     x = n(39205),
     j = n(541946);
 function N(e) {
-    let { isDiscoverable: t, profile: n, onCustomBannerChange: s } = e,
-        l = null != n.customBanner,
-        c = i.useMemo(() => {
+    let { isDiscoverable: t, profile: n, onCustomBannerChange: s, canManageGuild: l } = e,
+        c = null != n.customBanner,
+        u = i.useMemo(() => {
             if (null == n.customBanner) return null;
             let e = n.customBanner;
             return m.ff.test(e)
@@ -27,15 +27,15 @@ function N(e) {
                 : m.ZP.getGuildDiscoverySplashURL({
                       id: n.id,
                       splash: n.customBanner,
-                      size: 300 * (0, p.Z)()
+                      size: 300 * (0, g.Z)()
                   });
         }, [n]);
     if (!t) return null;
-    let u =
-        null != c
+    let p =
+        null != u
             ? (0, r.jsx)('img', {
                   className: x.uploadedImage,
-                  src: c,
+                  src: u,
                   alt: '',
                   'aria-hidden': !0
               })
@@ -45,11 +45,11 @@ function N(e) {
         children: (0, r.jsx)(o.tEY, {
             within: !0,
             children: (0, r.jsx)('div', {
-                className: a()(x.uploadItemWrapper, { [x.uploadItemSelected]: l }),
+                className: a()(x.uploadItemWrapper, { [x.uploadItemSelected]: c }),
                 children: (0, r.jsxs)('div', {
-                    className: x.uploadItem,
+                    className: a()(x.uploadItem, { [x.disabled]: !l }),
                     children: [
-                        u,
+                        p,
                         (0, r.jsx)('div', { className: x.overlay }),
                         (0, r.jsx)(o.vdY, {
                             size: 'custom',
@@ -61,7 +61,8 @@ function N(e) {
                         (0, r.jsx)(d.ZP, {
                             multiple: !1,
                             tabIndex: 0,
-                            onChange: s
+                            onChange: s,
+                            disabled: !l
                         })
                     ]
                 })
@@ -71,20 +72,20 @@ function N(e) {
 }
 function v(e) {
     var t;
-    let { profile: n, onCustomBannerChange: s } = e,
-        d = (0, l.e7)([u.Z], () => u.Z.getGuild(n.id)),
-        m = null !== (t = null == d ? void 0 : d.hasFeature(h.oNc.DISCOVERABLE)) && void 0 !== t && t,
-        p = n.id,
-        v = i.useCallback(
+    let { profile: n, onCustomBannerChange: s, canManageGuild: d } = e,
+        m = (0, l.e7)([u.Z], () => u.Z.getGuild(n.id)),
+        g = null !== (t = null == m ? void 0 : m.hasFeature(h.oNc.DISCOVERABLE)) && void 0 !== t && t,
+        v = n.id,
+        _ = i.useCallback(
             (e, t) => () => {
-                g.Z.updateGuildProfile(p, {
+                p.Z.updateGuildProfile(v, {
                     brandColorPrimary: t,
                     customBanner: null
                 });
             },
-            [p]
+            [v]
         ),
-        _ = i.useCallback((e) => (!m || null == n.customBanner) && e === n.brandColorPrimary, [n, m]);
+        O = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
     return (0, r.jsxs)(o.hjN, {
         className: j.section,
         children: [
@@ -138,11 +139,13 @@ function v(e) {
                                         })({}, e)),
                                         (s = s =
                                             {
+                                                'aria-disabled': !d,
+                                                tabIndex: d ? 0 : -1,
                                                 'aria-label': t,
-                                                onClick: v(t, n),
+                                                onClick: d ? _(t, n) : void 0,
                                                 style: { background: (0, c.d)(n) },
-                                                className: x.itemContainer,
-                                                children: (0, r.jsx)('div', { className: a()({ [x.itemSelected]: _(n) }) })
+                                                className: a()(x.itemContainer, { [x.disabled]: !d }),
+                                                children: (0, r.jsx)('div', { className: a()({ [x.itemSelected]: O(n) }) })
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
@@ -164,7 +167,8 @@ function v(e) {
                         );
                     }),
                     (0, r.jsx)(N, {
-                        isDiscoverable: m,
+                        canManageGuild: d,
+                        isDiscoverable: g,
                         profile: n,
                         onCustomBannerChange: s
                     })

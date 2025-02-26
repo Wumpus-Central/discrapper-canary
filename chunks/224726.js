@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(314852),
     u = n(65361),
     m = n(910200),
-    p = n(496675),
-    g = n(434404),
+    g = n(496675),
+    p = n(434404),
     h = n(999382),
     f = n(12078),
     b = n(934638),
@@ -29,30 +29,30 @@ let E = function () {
         n = null == t ? void 0 : t.id,
         { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
         T = (0, s.e7)([h.Z], () => h.Z.getGuildProfile(), []),
-        P = (0, s.e7)([p.Z], () => p.Z.can(y.Plq.MANAGE_GUILD, t)),
+        P = (0, s.e7)([g.Z], () => g.Z.can(y.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
-                null != n && (g.Z.updateGuild({ icon: e }), g.Z.updateGuildProfile(n, { icon: e }));
+                null != n && (p.Z.updateGuild({ icon: e }), p.Z.updateGuildProfile(n, { icon: e }));
             },
             [n]
         ),
         R = i.useCallback(
             (e) => {
-                null != n && g.Z.updateGuildProfile(n, { customBanner: e });
+                null != n && p.Z.updateGuildProfile(n, { customBanner: e });
             },
             [n]
         );
     i.useEffect(() => {
         null != n && E();
     }, [n, E]);
-    let D = i.useCallback(() => {
+    let Z = i.useCallback(() => {
         E(!0);
     }, [E]);
     return (i.useEffect(() => {
         l.Z.getDetectableGames();
     }, []),
     S === d.a.FETCHED && null == T)
-        ? (0, r.jsx)(v.g, { forceFetchGuildProfile: D })
+        ? (0, r.jsx)(v.g, { forceFetchGuildProfile: Z })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,
@@ -86,19 +86,29 @@ let E = function () {
                                   (0, r.jsx)('div', { className: I.divider }),
                                   (0, r.jsx)(f.Z, {
                                       profile: T,
-                                      onCustomBannerChange: R
+                                      onCustomBannerChange: R,
+                                      canManageGuild: P
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(_.Z, { profile: T }),
+                                  (0, r.jsx)(_.Z, {
+                                      profile: T,
+                                      canManageGuild: P
+                                  }),
                                   (0, r.jsx)('div', { className: I.divider }),
                                   (0, r.jsx)(b.Z, {
                                       profile: T,
                                       canManageGuild: P
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(x.Z, { profile: T }),
+                                  (0, r.jsx)(x.Z, {
+                                      profile: T,
+                                      canManageGuild: P
+                                  }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(O.Z, { profile: T })
+                                  (0, r.jsx)(O.Z, {
+                                      profile: T,
+                                      canManageGuild: P
+                                  })
                               ]
                           }),
                           (0, r.jsx)('div', {

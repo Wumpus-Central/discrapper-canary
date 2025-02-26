@@ -7,34 +7,34 @@ var r = n(200651),
     o = n(388032),
     c = n(430045);
 function d(e) {
-    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d } = e,
-        { topGames: u, tryFetchTopGames: m } = (0, a.I)(),
-        g = u.get(t),
-        [p, h] = i.useState(!1);
+    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
+        { topGames: m, tryFetchTopGames: g } = (0, a.I)(),
+        p = m.get(t),
+        [h, f] = i.useState(!1);
     i.useEffect(() => {
-        h(!0),
-            m(t).finally(() => {
-                h(!1);
+        f(!0),
+            g(t).finally(() => {
+                f(!1);
             });
-    }, [t, m]);
-    let f = i.useMemo(
+    }, [t, g]);
+    let b = i.useMemo(
             () =>
-                null == g
+                null == p
                     ? []
-                    : Object.keys(g)
+                    : Object.keys(p)
                           .filter((e) => !n.includes(e))
-                          .sort((e, t) => g[t].score - g[e].score),
-            [g, n]
+                          .sort((e, t) => p[t].score - p[e].score),
+            [p, n]
         ),
-        b = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 n.includes(e) ? d(n.filter((t) => t !== e)) : d([...n, e]);
             },
             [d, n]
         );
-    return p && null == g
+    return h && null == p
         ? (0, r.jsx)(s.$jN, {})
-        : null == f || 0 === f.length
+        : null == b || 0 === b.length
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -49,13 +49,14 @@ function d(e) {
                             }),
                             (0, r.jsx)('div', {
                                 className: c.gamesList,
-                                children: f.map((e) =>
+                                children: b.map((e) =>
                                     (0, r.jsx)(
                                         l.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,
-                                            onClick: b
+                                            onClick: x,
+                                            disabled: u
                                         },
                                         e
                                     )

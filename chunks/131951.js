@@ -1684,6 +1684,9 @@ class n7 extends (s = h.ZP.Store) {
     getLoopback() {
         return tu.size > 0;
     }
+    getLoopbackReasons() {
+        return tu;
+    }
     getNoiseSuppression() {
         let e = tm();
         return er.Z.hasNoiseSuppression(e.inputDeviceId) || e.noiseSuppression;

@@ -6,47 +6,57 @@ var r = n(200651),
     a = n(952265),
     s = n(481060),
     c = n(570140),
-    u = n(243778),
-    d = n(341907),
-    p = n(819640),
-    h = n(751648),
+    u = n(605236),
+    d = n(243778),
+    p = n(341907),
+    h = n(819640),
     f = n(822857),
     g = n(479766),
-    m = n(921944),
-    b = n(642145);
+    m = n(331663),
+    b = n(921944),
+    y = n(642145);
 function v() {
-    let { hasLayers: e } = (0, l.cj)([p.Z], () => ({ hasLayers: p.Z.hasLayers() })),
+    let { hasLayers: e } = (0, l.cj)([h.Z], () => ({ hasLayers: h.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, l.cj)([g.Z], () => ({ onboardingModalOpenedPrior: g.Z.onboardingModalOpenedPrior })),
-        { enabled: v } = (0, f.W)({ location: 'vc-announcement-modal' }),
-        y = v ? [o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [],
-        [_, O] = (0, u.US)(y, void 0, !0),
-        j = (0, s.s9z)(s.JQI);
+        { enabled: v } = (0, f.W)({ location: 'virtual_currency_announcement_modal' }),
+        [O, j] = (0, d.US)(v ? [o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...m.b.useSelectedDismissibleContent),
+        _ = (0, s.s9z)(s.JQI);
     i.useEffect(() => {
         v &&
             !t &&
-            _ === o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            O === o.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             !e &&
-            !j &&
+            !_ &&
             (c.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
             (0, a.ZD)(
                 async () => {
-                    let { AnnouncementModal: e } = await n.e('3073').then(n.bind(n, 520156));
+                    let { AnnouncementModal: e } = await n.e('54663').then(n.bind(n, 520156));
                     return function (t) {
                         let { onClose: n, transitionState: i } = t;
                         return (0, r.jsx)(e, {
                             transitionState: i,
                             onClose: n,
                             ctaOnClick: () => {
-                                (0, h.jM)(), (0, d.navigateToQuestHome)({ questId: b.V }), n();
+                                j(b.L.USER_DISMISS_ALL),
+                                    (0, u.EW)(o.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
+                                        dismissAction: b.L.USER_DISMISS_ALL,
+                                        groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
+                                    }),
+                                    (0, u.EW)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                                        dismissAction: b.L.USER_DISMISS_ALL,
+                                        groupName: b.R.VIRTUAL_CURRENCY_ONBOARDING
+                                    }),
+                                    (0, p.navigateToQuestHome)({ questId: y.V }),
+                                    n();
                             }
                         });
                     };
                 },
                 {
                     onCloseCallback: () => {
-                        O(m.L.UNKNOWN), (0, h.U9)();
+                        j(b.L.USER_DISMISS);
                     }
                 }
             ));
-    }, [_, v, t, O, e, j]);
+    }, [O, v, t, j, e, _]);
 }
