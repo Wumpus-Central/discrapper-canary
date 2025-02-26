@@ -534,6 +534,7 @@ let eS = () => {
         { enabled: eQ, isBadgeVersion2: e$ } = (0, D.D)();
     return (
         ((!e$ && eQ && null != eJ && eJ.status !== Z.Vq.UPCOMING) || (e$ && eQ)) &&
+            eP &&
             !eU &&
             (eX.tenureBadge = {
                 name: 'tenureBadge',
