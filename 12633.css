@@ -55149,7 +55149,8 @@ html.disable-forced-colors * {
     --font-headline: "ABC Ginto Nord", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root,
@@ -55169,7 +55170,8 @@ html.disable-forced-colors * {
     --font-headline: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-body: Fraunces, "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(ko) {
@@ -55179,7 +55181,8 @@ html.disable-forced-colors * {
     --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Apple SD Gothic Neo", NanumBarunGothic, "맑은 고딕", "Malgun Gothic", Gulim, 굴림, Dotum, 돋움, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(ja) {
@@ -55189,7 +55192,8 @@ html.disable-forced-colors * {
     --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, Osaka, "MS PGothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(zh-CN) {
@@ -55199,7 +55203,8 @@ html.disable-forced-colors * {
     --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Microsoft YaHei New", 微软雅黑, "Microsoft Yahei", "Microsoft JhengHei", 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root:lang(zh-TW) {
@@ -55209,7 +55214,8 @@ html.disable-forced-colors * {
     --font-code: "gg mono", "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
     --font-clan-body: Fraunces, "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-clan-signature: Corinthia, "gg sans", cursive, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    --font-display-marketing: "ABC Ginto Discord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display-marketing-header: "ABC Ginto Nord Discord", "gg sans", serif, "Microsoft JhengHei", 微軟正黑體, "Microsoft JhengHei UI", "Microsoft YaHei", 微軟雅黑, 宋体, SimSun, "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 :root {
