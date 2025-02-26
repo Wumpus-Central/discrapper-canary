@@ -1,11 +1,7 @@
-n.d(t, { Z: () => _ }), n(47120), n(411104);
-var r = n(259443),
-    i = n(911284),
-    o = n(598077),
-    a = n(314897),
-    s = n(456644),
-    l = n(484459);
-function c(e, t, n) {
+n.d(t, { Z: () => s }), n(411104);
+var r = n(598077),
+    i = n(484459);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +14,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,46 +25,31 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-let d = 300,
-    f = new r.Yd('preloadUserProfileForPopout'),
-    p = async (e) => {
-        let t = a.default.getId() === e,
-            { recentActivityEnabled: n } = (0, s.G)({ location: 'preloadUserProfileForPopout' });
-        if (n && t)
-            try {
-                await Promise.race([(0, i.Z)(e), new Promise((e) => setTimeout(e, d))]);
-            } catch (t) {
-                f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
-            }
-    };
-async function _() {
+async function s() {
     let e, t, n;
-    for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
-    let s = i[0],
-        c = i[1];
-    if ('string' == typeof s && ('string' == typeof c || null == c)) (e = s), (t = c), (n = i[2]);
-    else if (s instanceof o.Z && ('object' == typeof c || null == c)) (e = s.id), (t = s.getAvatarURL(void 0, 80)), (n = c);
+    for (var o = arguments.length, s = Array(o), l = 0; l < o; l++) s[l] = arguments[l];
+    let c = s[0],
+        u = s[1];
+    if ('string' == typeof c && ('string' == typeof u || null == u)) (e = c), (t = u), (n = s[2]);
+    else if (c instanceof r.Z && ('object' == typeof u || null == u)) (e = c.id), (t = c.getAvatarURL(void 0, 80)), (n = u);
     else throw Error('Invalid arguments');
-    if (null == e) return Promise.resolve();
-    let [d] = await Promise.all([
-        (0, l.Z)(
-            e,
-            t,
-            u(
-                {
-                    type: 'popout',
-                    withMutualFriends: !0,
-                    withMutualGuilds: !0
-                },
-                n
-            )
-        ),
-        p(e)
-    ]);
-    return d;
+    return null == e
+        ? Promise.resolve()
+        : await (0, i.Z)(
+              e,
+              t,
+              a(
+                  {
+                      type: 'popout',
+                      withMutualFriends: !0,
+                      withMutualGuilds: !0
+                  },
+                  n
+              )
+          );
 }

@@ -1,4 +1,4 @@
-var r = {
+e.exports = {
     container: 'container__0f2e8',
     contentTitle: 'contentTitle__0f2e8',
     additionalParticipantBadge: 'additionalParticipantBadge__0f2e8',
@@ -12,4 +12,3 @@ var r = {
     additionalParticipantBadgeText: 'additionalParticipantBadgeText__0f2e8',
     thumbnail: 'thumbnail__0f2e8'
 };
-e.exports = r;

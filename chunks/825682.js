@@ -1,53 +1,45 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(468363),
     l = n(297369),
     o = n(956221),
     a = n(771173),
-    s = n(372276),
-    c = n(565640),
-    u = n(51144),
-    d = n(388032),
-    p = n(321036);
-let h = function (e) {
-    let { hovered: t, activities: n, applicationStream: h, status: f, user: g, userIgnored: m } = e,
-        b = (0, c.Z)(null == g ? void 0 : g.id, 'StatusText'),
-        { voiceActivityStatusEnabled: _ } = (0, i.U)({ location: 'StatusText' }),
-        { voiceChannel: E } = (0, o.Z)({
-            userId: null == g ? void 0 : g.id,
+    s = n(51144),
+    c = n(388032),
+    u = n(321036);
+let d = function (e) {
+    let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
+        { voiceActivityStatusEnabled: g } = (0, i.U)({ location: 'StatusText' }),
+        { voiceChannel: m } = (0, o.Z)({
+            userId: null == h ? void 0 : h.id,
             surface: 'status-text'
         }),
-        O = _ ? E : void 0;
-    return m
+        b = g ? m : void 0;
+    return f
         ? (0, r.jsx)('div', {
-              className: p.text,
-              children: d.NW.string(d.t.tFY5ZW)
+              className: u.text,
+              children: c.NW.string(c.t.tFY5ZW)
           })
         : (0, l.Z)({
                 activities: n,
-                status: f,
-                applicationStream: h,
-                voiceChannel: O
+                status: p,
+                applicationStream: d,
+                voiceChannel: b
             })
           ? (0, r.jsx)(a.Z, {
                 location: 'StatusText',
-                textClassName: p.text,
-                emojiClassName: p.customStatusEmoji,
+                textClassName: u.text,
+                emojiClassName: u.customStatusEmoji,
                 activities: n,
-                applicationStream: h,
-                voiceChannel: O,
+                applicationStream: d,
+                voiceChannel: b,
                 animate: t,
-                user: g,
+                user: h,
                 textSize: 'sm'
             })
-          : null != b
-            ? (0, r.jsx)(s.Z, {
-                  textClassName: p.text,
-                  entry: b
-              })
-            : (0, r.jsx)('div', {
-                  className: p.text,
-                  children: (0, u.u5)(f)
-              });
+          : (0, r.jsx)('div', {
+                className: u.text,
+                children: (0, s.u5)(p)
+            });
 };

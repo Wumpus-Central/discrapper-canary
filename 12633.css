@@ -18555,36 +18555,108 @@ span.clanTag__5d473 {
 }
 
 .heading__3add8 {
-    margin-bottom: 32px
+    margin-bottom: var(--spacing-32)
 }
 
 .topPerksCards__3add8 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px
+    gap: var(--spacing-16)
 }
 
 .topPerksCard__3add8 {
     background-color: var(--background-secondary-alt);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     box-sizing: border-box;
     flex: 1 1 auto;
     min-width: 340px;
     max-width: 362px;
-    padding: 32px 24px;
+    padding: var(--spacing-32) var(--spacing-24);
     width: 25%;
-    position: relative
+    position: relative;
+    overflow: hidden
+}
+
+.topPerksCardImageWrapper__3add8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.animatedTopPerksCard__3add8 {
+    border-radius: var(--radius-md);
+    background: var(--background-secondary-alt);
+    max-width: 480px;
+    height: 315px
+}
+
+.full-motion .animatedTopPerksCard__3add8 {
+    transition: border .3s ease
+}
+
+.animatedTopPerksCard__3add8:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--background-secondary-alt), var(--background-secondary-alt)) padding-box, linear-gradient(145deg, #3e70dd, #b377f3) border-box
+}
+
+.imageGradientOverlay__3add8 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(180deg, transparent 0, var(--background-secondary-alt) 70%, var(--background-secondary-alt))
+}
+
+.contentContainer__3add8 {
+    position: relative;
+    z-index: 1;
+    margin-top: 148px;
+    overflow: hidden
+}
+
+.buttonsContainer__3add8 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: var(--spacing-24);
+    overflow: hidden
+}
+
+.button__3add8 {
+    flex: 1 1 0
 }
 
 .topPerksCardImage__3add8 {
-    filter: saturate(1);
-    filter: saturate(var(--saturation-factor, 1));
-    border-radius: 4px;
-    display: block;
-    height: 128px;
-    margin: 0 auto 20px;
-    width: auto
+    position: absolute;
+    height: 128px
+}
+
+.borderGlowOverlay__3add8 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--radius-md);
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    box-shadow: inset 0 0 15px rgba(62, 112, 221, .4), inset 0 0 20px rgba(179, 119, 243, .4)
+}
+
+.full-motion .borderGlowOverlay__3add8 {
+    transition: opacity .3s ease
+}
+
+.topPerksCard__3add8:hover .borderGlowOverlay__3add8 {
+    opacity: 1
 }
 
 .topPerksCardHeading__3add8 {
@@ -18599,8 +18671,8 @@ span.clanTag__5d473 {
     position: absolute;
     width: -moz-fit-content;
     width: fit-content;
-    top: var(--spacing-32);
-    right: var(--spacing-24)
+    top: var(--spacing-16);
+    right: var(--spacing-16)
 }
 
 .topPerksCardLabelContainer__3add8 {
@@ -37147,142 +37219,6 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-radius: inherit;
     min-width: 4px;
     background-color: var(--interactive-active)
-}
-
-.container__0f2e8 {
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-    margin-left: 8px;
-    margin-top: 8px;
-    max-width: 224px;
-    height: 64px;
-    padding: 8px;
-    background: var(--bg-overlay-3, var(--background-primary));
-    border-radius: var(--radius-md);
-    gap: 8px;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer
-}
-
-.container__0f2e8:hover {
-    background: var(--bg-overlay-5, var(--background-modifier-hover))
-}
-
-.container__0f2e8:hover .contentTitle__0f2e8 {
-    color: var(--interactive-hover)
-}
-
-.container__0f2e8:hover .reply__0f2e8 {
-    opacity: 1
-}
-
-.container__0f2e8:hover .additionalParticipantBadge__0f2e8 {
-    background: var(--bg-overlay-4, var(--background-accent))
-}
-
-.visual-refresh .container__0f2e8 {
-    background: var(--bg-overlay-4, var(--background-surface-high));
-    border: 1px solid var(--border-faint);
-    max-width: calc(var(--custom-member-list-width) - 16px)
-}
-
-.openOnHover__0f2e8 {
-    cursor: auto
-}
-
-.reply__0f2e8 {
-    position: absolute;
-    top: 4px;
-    right: 8px;
-    margin: auto;
-    opacity: 0;
-    height: 24px;
-    width: 24px;
-    background: var(--background-primary);
-    border: 1px solid var(--background-secondary);
-    border-radius: var(--radius-xs);
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-.reply__0f2e8:hover .icon__0f2e8 {
-    color: var(--interactive-hover)
-}
-
-.icon__0f2e8 {
-    height: 16px;
-    display: block;
-    color: var(--interactive-normal);
-    -o-object-fit: contain;
-    object-fit: contain
-}
-
-.selected__0f2e8,
-.selected__0f2e8:hover {
-    background-color: var(--background-modifier-selected)
-}
-
-.selected__0f2e8 .contentDescription__0f2e8 {
-    color: var(--interactive-hover)
-}
-
-.infoSection__0f2e8 {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 0;
-    margin-bottom: -2px
-}
-
-.userSection__0f2e8 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2px
-}
-
-.userName__0f2e8 {
-    color: var(--channels-default);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 85%;
-    font-family: var(--font-primary);
-    font-size: 14px;
-    line-height: 1.2857142857142858;
-    font-weight: 500
-}
-
-.userName__0f2e8.fontScaling__0f2e8 {
-    font-size: .875rem
-}
-
-.facePile__0f2e8 {
-    display: flex;
-    margin-right: 6px
-}
-
-.facePileItem__0f2e8:not(:first-child) {
-    margin-left: -3px
-}
-
-.additionalParticipantBadge__0f2e8 {
-    padding: 2.25px 4.4px 2.5px 4.2px;
-    background: var(--background-modifier-accent);
-    border-radius: 8px;
-    margin-left: 4px
-}
-
-.additionalParticipantBadgeText__0f2e8 {
-    line-height: 10px
-}
-
-img.thumbnail__0f2e8 {
-    width: 48px;
-    -o-object-fit: cover;
-    object-fit: cover
 }
 
 .heading-sm\/normal_a7acae {
