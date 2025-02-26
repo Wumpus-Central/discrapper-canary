@@ -1,7 +1,13 @@
-function r(e) {
-    return null == e ? null : { nameplate: i(e.nameplate) };
+n.d(t, {
+    EU: () => s,
+    Xm: () => o
+});
+var r = n(357352),
+    i = n(359135);
+function o(e) {
+    return null == e ? null : { nameplate: a(e.nameplate) };
 }
-function i(e) {
+function a(e) {
     return null == e
         ? null
         : {
@@ -12,4 +18,11 @@ function i(e) {
               palette: e.palette
           };
 }
-n.d(t, { X: () => r });
+function s(e) {
+    return {
+        src: (0, r.b)(e.asset + '_playtest/static.png'),
+        animatedSrc: (0, r.b)(e.asset + '_playtest/animated.png'),
+        imgAlt: e.label,
+        palette: i.rY[e.palette]
+    };
+}

@@ -6,6 +6,7 @@ var r = {
     avatarDecoration: 'avatarDecoration__78e61',
     avatarDecorationPairOne: 'avatarDecorationPairOne__78e61',
     avatarDecorationPairTwo: 'avatarDecorationPairTwo__78e61',
+    nameplate: 'nameplate__78e61',
     decorationBanner: 'decorationBanner__78e61',
     bannerContainer: 'bannerContainer__78e61',
     collectedInfoContainer: 'collectedInfoContainer__78e61',

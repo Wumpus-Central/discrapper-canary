@@ -28,12 +28,13 @@ e.exports = {
     variantsGroup: 'variantsGroup_c3d04b',
     profileEffectShopPreview: 'profileEffectShopPreview_c3d04b',
     productName: 'productName_c3d04b',
-    newBadge: 'newBadge_c3d04b',
+    badge: 'badge_c3d04b',
     partiallyOwned: 'partiallyOwned_c3d04b',
     preview: 'preview_c3d04b',
     nameplatePreviewRootContainer: 'nameplatePreviewRootContainer_c3d04b',
     nameplatePreviewList: 'nameplatePreviewList_c3d04b',
     nameplatePreviewSampleItem: 'nameplatePreviewSampleItem_c3d04b',
+    placeholderItem: 'placeholderItem_c3d04b',
     placeholderItemChildrenDark: 'placeholderItemChildrenDark_c3d04b',
     placeholderItemChildrenLight: 'placeholderItemChildrenLight_c3d04b'
 };

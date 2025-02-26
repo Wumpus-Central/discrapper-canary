@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     muted: 'muted__20a53',
     avatar: 'avatar__20a53',
     highlighted: 'highlighted__20a53',
@@ -10,3 +10,4 @@ e.exports = {
     nameAndDecorators: 'nameAndDecorators__20a53',
     subText: 'subText__20a53'
 };
+e.exports = r;
