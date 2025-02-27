@@ -7,5 +7,6 @@ e.exports = {
     description: 'description__8118d',
     footer: 'footer__8118d',
     powerupImage: 'powerupImage__8118d',
-    exampleImage: 'exampleImage__8118d'
+    exampleImage: 'exampleImage__8118d',
+    error: 'error__8118d'
 };

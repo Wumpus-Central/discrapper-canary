@@ -1,109 +1,123 @@
-r.d(t, { default: () => l }), r(266796);
-var n = r(200651),
-    o = r(481060),
-    s = r(11658),
-    a = r(969867),
-    c = r(535396),
-    i = r(217719);
-function l(e) {
-    var t,
-        r,
-        { powerup: l } = e,
-        p = (function (e, t) {
+t.d(r, { default: () => d }), t(47120), t(266796);
+var n = t(200651),
+    o = t(192379),
+    s = t(481060),
+    a = t(27237),
+    c = t(969867),
+    i = t(535396),
+    l = t(217719);
+function d(e) {
+    var r,
+        t,
+        { guildId: d, powerup: p } = e,
+        u = (function (e, r) {
             if (null == e) return {};
-            var r,
+            var t,
                 n,
-                o = (function (e, t) {
+                o = (function (e, r) {
                     if (null == e) return {};
-                    var r,
+                    var t,
                         n,
                         o = {},
                         s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
-                })(e, t);
+                })(e, r);
             if (Object.getOwnPropertySymbols) {
                 var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                for (n = 0; n < s.length; n++) (t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
-        })(e, ['powerup']);
+        })(e, ['guildId', 'powerup']);
+    let [m, b] = o.useState(void 0);
     return (0, n.jsxs)(
-        o.Y0X,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+        s.Y0X,
+        ((r = (function (e) {
+            for (var r = 1; r < arguments.length; r++) {
+                var t = null != arguments[r] ? arguments[r] : {},
+                    n = Object.keys(t);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         })
                     )),
-                    n.forEach(function (t) {
+                    n.forEach(function (r) {
                         var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (n = t[r]),
+                            r in e
+                                ? Object.defineProperty(e, r, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = n);
+                                : (e[r] = n);
                     });
             }
             return e;
         })(
             {
-                className: i.modal,
-                size: o.CgR.DYNAMIC
+                className: l.modal,
+                size: s.CgR.DYNAMIC
             },
-            p
+            u
         )),
-        (r = r =
+        (t = t =
             {
                 children: [
-                    (0, n.jsxs)(o.hzk, {
-                        className: i.modalContentContainer,
+                    (0, n.jsxs)(s.hzk, {
+                        className: l.modalContentContainer,
                         scrollbarType: 'none',
                         children: [
                             (0, n.jsxs)('div', {
-                                className: i.sidebar,
+                                className: l.sidebar,
                                 children: [
                                     (0, n.jsx)('img', {
                                         alt: '',
                                         src: '',
-                                        className: i.powerupImage
+                                        className: l.powerupImage
                                     }),
                                     (0, n.jsxs)('div', {
-                                        className: i.contentContainer,
+                                        className: l.contentContainer,
                                         children: [
-                                            (0, n.jsx)(o.X6q, {
+                                            (0, n.jsx)(s.X6q, {
                                                 variant: 'heading-xl/extrabold',
-                                                children: l.title
+                                                children: p.title
                                             }),
                                             (() => {
-                                                switch (l.type) {
-                                                    case c.U.LEVEL:
-                                                        return (0, n.jsx)(s.KV, { index: 0 });
-                                                    case c.U.PERK:
-                                                        return (0, n.jsx)(o.Text, {
-                                                            className: i.description,
+                                                switch (p.type) {
+                                                    case i.U.LEVEL:
+                                                        return (0, n.jsx)(a.gm, { index: 0 });
+                                                    case i.U.PERK:
+                                                        return (0, n.jsx)(s.Text, {
+                                                            className: l.description,
                                                             variant: 'text-sm/normal',
-                                                            children: l.description
+                                                            children: p.description
                                                         });
                                                 }
                                             })(),
+                                            null != m &&
+                                                (0, n.jsx)(s.Text, {
+                                                    className: l.error,
+                                                    color: 'text-danger',
+                                                    variant: 'text-sm/semibold',
+                                                    children: m
+                                                }),
                                             (() => {
-                                                switch (l.type) {
-                                                    case c.U.LEVEL:
-                                                        return (0, n.jsx)(s._R, { powerup: l });
-                                                    case c.U.PERK:
-                                                        return (0, n.jsx)(a.Z, {
-                                                            className: i.footer,
-                                                            skuId: l.skuId,
-                                                            active: l.active
+                                                switch (p.type) {
+                                                    case i.U.LEVEL:
+                                                        return (0, n.jsx)(a._R, {
+                                                            guildId: d,
+                                                            powerup: p,
+                                                            onError: b
+                                                        });
+                                                    case i.U.PERK:
+                                                        return (0, n.jsx)(c.Z, {
+                                                            className: l.footer,
+                                                            guildId: d,
+                                                            powerup: p,
+                                                            onError: b
                                                         });
                                                 }
                                             })()
@@ -112,7 +126,7 @@ function l(e) {
                                 ]
                             }),
                             (0, n.jsx)('div', {
-                                className: i.exampleImage,
+                                className: l.exampleImage,
                                 children: (0, n.jsx)('img', {
                                     alt: '',
                                     src: ''
@@ -120,24 +134,24 @@ function l(e) {
                             })
                         ]
                     }),
-                    (0, n.jsx)(o.olH, {
-                        className: i.close,
-                        onClick: p.onClose
+                    (0, n.jsx)(s.olH, {
+                        className: l.close,
+                        onClick: u.onClose
                     })
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
+            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
+            : (function (e, r) {
+                  var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      t.push.apply(t, n);
                   }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  return t;
+              })(Object(t)).forEach(function (e) {
+                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(t, e));
               }),
-        t)
+        r)
     );
 }

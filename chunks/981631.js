@@ -390,6 +390,7 @@ let A = Object.freeze({
         USER_GUILD_BOOST_SLOTS: '/users/@me/guilds/premium/subscription-slots',
         USER_GUILD_BOOST_SLOT_CANCEL: (t) => '/users/@me/guilds/premium/subscription-slots/'.concat(t, '/cancel'),
         USER_GUILD_BOOST_SLOT_UNCANCEL: (t) => '/users/@me/guilds/premium/subscription-slots/'.concat(t, '/uncancel'),
+        GUILD_POWERUP_TOGGLE: (t, e) => '/guilds/'.concat(t, '/skus/').concat(e),
         SEARCH_CHANNEL: (t) => '/channels/'.concat(t, '/messages/search'),
         SEARCH_TABS_CHANNEL: (t) => '/channels/'.concat(t, '/messages/search/tabs'),
         BILLING_STRIPE_SETUP_INTENT_SECRET: '/users/@me/billing/stripe/setup-intents',
@@ -2440,7 +2441,8 @@ Object.freeze({
         GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: 200,
         GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: 201,
         GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: 202,
-        GUILD_MEMBER_VERIFICATION_UPDATE: 210
+        GUILD_MEMBER_VERIFICATION_UPDATE: 210,
+        GUILD_PROFILE_UPDATE: 211
     }),
     Object.freeze({
         GIF: {

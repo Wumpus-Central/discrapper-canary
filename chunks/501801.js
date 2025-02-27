@@ -1,7 +1,7 @@
 n.d(t, {
     mp: () => m,
     tP: () => M,
-    xO: () => D
+    xO: () => L
 }),
     n(653041),
     n(266796);
@@ -27,15 +27,15 @@ var r = n(200651),
     S = n(909746),
     p = n(981631),
     U = n(388032),
-    C = n(677811);
-function D(e, t) {
+    D = n(677811);
+function L(e, t) {
     let n = S.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let L = {
-    [p.vB8.CREATE]: C.typeCreate,
-    [p.vB8.UPDATE]: C.typeUpdate,
-    [p.vB8.DELETE]: C.typeDelete
+let C = {
+    [p.vB8.CREATE]: D.typeCreate,
+    [p.vB8.UPDATE]: D.typeUpdate,
+    [p.vB8.DELETE]: D.typeDelete
 };
 function h(e) {
     let { applicationId: t } = e,
@@ -50,39 +50,40 @@ function h(e) {
 class m extends l.PureComponent {
     render() {
         let { actionType: e, targetType: t, action: n, themeOverride: l } = this.props,
-            a = null != l ? C['themeOverride'.concat((0, R.De)(l))] : null,
+            a = null != l ? D['themeOverride'.concat((0, R.De)(l))] : null,
             o = i()(
-                C.icon,
-                L[e],
+                D.icon,
+                C[e],
                 n === p.rsA.MESSAGE_DELETE
-                    ? C.targetMessage
+                    ? D.targetMessage
                     : n === p.rsA.AUTO_MODERATION_BLOCK_MESSAGE || n === p.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || n === p.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n === p.rsA.AUTO_MODERATION_QUARANTINE_USER
-                      ? C.autoModerationBlockMessage
+                      ? D.autoModerationBlockMessage
                       : {
-                            [p.KFR.ALL]: C.targetAll,
-                            [p.KFR.GUILD]: C.targetGuild,
-                            [p.KFR.CHANNEL]: C.targetChannel,
-                            [p.KFR.CHANNEL_OVERWRITE]: C.targetChannel,
-                            [p.KFR.USER]: C.targetMember,
-                            [p.KFR.ROLE]: C.targetRole,
-                            [p.KFR.ONBOARDING_PROMPT]: C.targetOnboarding,
-                            [p.KFR.GUILD_ONBOARDING]: C.targetOnboarding,
-                            [p.KFR.HOME_SETTINGS]: C.targetOnboarding,
-                            [p.KFR.INTEGRATION]: C.targetIntegration,
-                            [p.KFR.INVITE]: C.targetInvite,
-                            [p.KFR.WEBHOOK]: C.targetWebhook,
-                            [p.KFR.EMOJI]: C.targetEmoji,
-                            [p.KFR.STICKER]: C.targetSticker,
-                            [p.KFR.STAGE_INSTANCE]: C.targetStageInstance,
-                            [p.KFR.GUILD_SCHEDULED_EVENT]: C.targetGuildScheduledEvent,
-                            [p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: C.targetGuildScheduledEvent,
-                            [p.KFR.THREAD]: C.thread,
-                            [p.KFR.APPLICATION_COMMAND]: C.applicationCommand,
-                            [p.KFR.AUTO_MODERATION_RULE]: C.autoModerationRule,
-                            [p.KFR.GUILD_HOME]: C.targetGuildHome,
-                            [p.KFR.GUILD_SOUNDBOARD]: C.targetGuildSoundboard,
-                            [p.KFR.VOICE_CHANNEL_STATUS]: C.targetChannel,
-                            [p.KFR.GUILD_MEMBER_VERIFICATION]: C.targetMember
+                            [p.KFR.ALL]: D.targetAll,
+                            [p.KFR.GUILD]: D.targetGuild,
+                            [p.KFR.CHANNEL]: D.targetChannel,
+                            [p.KFR.CHANNEL_OVERWRITE]: D.targetChannel,
+                            [p.KFR.USER]: D.targetMember,
+                            [p.KFR.ROLE]: D.targetRole,
+                            [p.KFR.ONBOARDING_PROMPT]: D.targetOnboarding,
+                            [p.KFR.GUILD_ONBOARDING]: D.targetOnboarding,
+                            [p.KFR.HOME_SETTINGS]: D.targetOnboarding,
+                            [p.KFR.INTEGRATION]: D.targetIntegration,
+                            [p.KFR.INVITE]: D.targetInvite,
+                            [p.KFR.WEBHOOK]: D.targetWebhook,
+                            [p.KFR.EMOJI]: D.targetEmoji,
+                            [p.KFR.STICKER]: D.targetSticker,
+                            [p.KFR.STAGE_INSTANCE]: D.targetStageInstance,
+                            [p.KFR.GUILD_SCHEDULED_EVENT]: D.targetGuildScheduledEvent,
+                            [p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION]: D.targetGuildScheduledEvent,
+                            [p.KFR.THREAD]: D.thread,
+                            [p.KFR.APPLICATION_COMMAND]: D.applicationCommand,
+                            [p.KFR.AUTO_MODERATION_RULE]: D.autoModerationRule,
+                            [p.KFR.GUILD_HOME]: D.targetGuildHome,
+                            [p.KFR.GUILD_SOUNDBOARD]: D.targetGuildSoundboard,
+                            [p.KFR.VOICE_CHANNEL_STATUS]: D.targetChannel,
+                            [p.KFR.GUILD_MEMBER_VERIFICATION]: D.targetMember,
+                            [p.KFR.GUILD_PROFILE]: D.targetGuild
                         }[t],
                 a
             );
@@ -98,7 +99,7 @@ function M(e) {
                     E = s()
                         .flatten(
                             t.changes.map((a) => {
-                                if (D(t, a)) return null;
+                                if (L(t, a)) return null;
                                 let { oldValue: i, newValue: o } = (() => {
                                         if ((t.action === p.rsA.CHANNEL_UPDATE || t.action === p.rsA.CHANNEL_CREATE) && a.key === p.zUn.TYPE) {
                                             var e, n;
@@ -130,7 +131,7 @@ function M(e) {
                                                           (0, r.jsx)(
                                                               'div',
                                                               {
-                                                                  className: C.subListItem,
+                                                                  className: D.subListItem,
                                                                   children: e.name
                                                               },
                                                               e.id
@@ -146,7 +147,7 @@ function M(e) {
                                                           (0, r.jsx)(
                                                               'div',
                                                               {
-                                                                  className: C.subListItem,
+                                                                  className: D.subListItem,
                                                                   children: S.hQ(e, t)
                                                               },
                                                               n
@@ -164,7 +165,7 @@ function M(e) {
                                                             (0, r.jsx)(
                                                                 'div',
                                                                 {
-                                                                    className: C.subListItem,
+                                                                    className: D.subListItem,
                                                                     children: S.cT(e)
                                                                 },
                                                                 e
@@ -177,7 +178,7 @@ function M(e) {
                                                             (0, r.jsx)(
                                                                 'div',
                                                                 {
-                                                                    className: C.subListItem,
+                                                                    className: D.subListItem,
                                                                     children: S.em(e)
                                                                 },
                                                                 e
@@ -219,7 +220,7 @@ function M(e) {
                                                                   {
                                                                       children: [
                                                                           (0, r.jsxs)('div', {
-                                                                              className: C.onboardingChangeLogItemTitle,
+                                                                              className: D.onboardingChangeLogItemTitle,
                                                                               children: [
                                                                                   (0, r.jsx)(m, {
                                                                                       actionType: p.vB8.UPDATE,
@@ -233,7 +234,7 @@ function M(e) {
                                                                               ]
                                                                           }),
                                                                           (0, r.jsxs)('div', {
-                                                                              className: C.onboardingChangeLogItemChanges,
+                                                                              className: D.onboardingChangeLogItemChanges,
                                                                               children: [
                                                                                   A.length > 0 &&
                                                                                       (0, r.jsx)(u.Text, {
@@ -288,7 +289,7 @@ function M(e) {
                                                 return (0, r.jsxs)(
                                                     'ul',
                                                     {
-                                                        className: C.onboardingChangeLogContainer,
+                                                        className: D.onboardingChangeLogContainer,
                                                         children: [
                                                             d.map((e) => {
                                                                 let { role_ids: n, channel_ids: l, title: a, id: s } = e,
@@ -299,7 +300,7 @@ function M(e) {
                                                                     {
                                                                         children: [
                                                                             (0, r.jsxs)('div', {
-                                                                                className: C.onboardingChangeLogItemTitle,
+                                                                                className: D.onboardingChangeLogItemTitle,
                                                                                 children: [
                                                                                     (0, r.jsx)(m, {
                                                                                         actionType: p.vB8.CREATE,
@@ -313,7 +314,7 @@ function M(e) {
                                                                                 ]
                                                                             }),
                                                                             (0, r.jsxs)('div', {
-                                                                                className: C.onboardingChangeLogItemChanges,
+                                                                                className: D.onboardingChangeLogItemChanges,
                                                                                 children: [
                                                                                     E.length > 0 &&
                                                                                         (0, r.jsx)(u.Text, {
@@ -337,7 +338,7 @@ function M(e) {
                                                                     'li',
                                                                     {
                                                                         children: (0, r.jsxs)('div', {
-                                                                            className: C.onboardingChangeLogItemTitle,
+                                                                            className: D.onboardingChangeLogItemTitle,
                                                                             children: [
                                                                                 (0, r.jsx)(m, {
                                                                                     actionType: p.vB8.DELETE,
@@ -374,7 +375,7 @@ function M(e) {
                                                                     (null == s ? void 0 : s.id) !== (null == E ? void 0 : E.id)
                                                                         ? (0, r.jsx)('li', {
                                                                               children: (0, r.jsx)('div', {
-                                                                                  className: C.onboardingChangeLogItemTitle,
+                                                                                  className: D.onboardingChangeLogItemTitle,
                                                                                   children: (0, r.jsx)(u.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: U.NW.format(U.t.PrOzAw, {
@@ -389,7 +390,7 @@ function M(e) {
                                                                     (null == t ? void 0 : t.message) !== e.message
                                                                         ? (0, r.jsx)('li', {
                                                                               children: (0, r.jsx)('div', {
-                                                                                  className: C.onboardingChangeLogItemTitle,
+                                                                                  className: D.onboardingChangeLogItemTitle,
                                                                                   children: (0, r.jsx)(u.Text, {
                                                                                       variant: 'text-md/normal',
                                                                                       children: U.NW.format(U.t.oB7rBQ, {
@@ -419,7 +420,7 @@ function M(e) {
                                                                             'li',
                                                                             {
                                                                                 children: (0, r.jsxs)('div', {
-                                                                                    className: C.onboardingChangeLogItemTitle,
+                                                                                    className: D.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(m, {
                                                                                             actionType: p.vB8.CREATE,
@@ -441,7 +442,7 @@ function M(e) {
                                                                             'li',
                                                                             {
                                                                                 children: (0, r.jsxs)('div', {
-                                                                                    className: C.onboardingChangeLogItemTitle,
+                                                                                    className: D.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(m, {
                                                                                             actionType: p.vB8.DELETE,
@@ -476,7 +477,7 @@ function M(e) {
                                                                             'li',
                                                                             {
                                                                                 children: (0, r.jsxs)('div', {
-                                                                                    className: C.onboardingChangeLogItemTitle,
+                                                                                    className: D.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(m, {
                                                                                             actionType: p.vB8.CREATE,
@@ -498,7 +499,7 @@ function M(e) {
                                                                             'li',
                                                                             {
                                                                                 children: (0, r.jsxs)('div', {
-                                                                                    className: C.onboardingChangeLogItemTitle,
+                                                                                    className: D.onboardingChangeLogItemTitle,
                                                                                     children: [
                                                                                         (0, r.jsx)(m, {
                                                                                             actionType: p.vB8.DELETE,
@@ -538,7 +539,7 @@ function M(e) {
                                             (0, r.jsx)(
                                                 'div',
                                                 {
-                                                    className: C.colorHook,
+                                                    className: D.colorHook,
                                                     style: { backgroundColor: c.newValue }
                                                 },
                                                 t
@@ -547,7 +548,7 @@ function M(e) {
                                             (0, r.jsx)(
                                                 'div',
                                                 {
-                                                    className: C.colorHook,
+                                                    className: D.colorHook,
                                                     style: { backgroundColor: c.oldValue }
                                                 },
                                                 t
@@ -582,14 +583,14 @@ function M(e) {
                                         : (0, r.jsxs)(
                                               'div',
                                               {
-                                                  className: C.detail,
+                                                  className: D.detail,
                                                   style: {
                                                       position: 'relative',
                                                       top: 1
                                                   },
                                                   children: [
                                                       (0, r.jsxs)(u.Text, {
-                                                          className: C.prefix,
+                                                          className: D.prefix,
                                                           variant: 'code',
                                                           color: (function (e) {
                                                               switch (e) {
@@ -604,16 +605,16 @@ function M(e) {
                                                           children: [
                                                               i < 10 ? '0'.concat(i) : i,
                                                               (0, r.jsx)('span', {
-                                                                  className: C.dash,
+                                                                  className: D.dash,
                                                                   children: '\u2014'
                                                               })
                                                           ]
                                                       }),
                                                       (0, r.jsxs)('div', {
-                                                          className: C.change,
+                                                          className: D.change,
                                                           children: [
                                                               (0, r.jsx)('div', {
-                                                                  className: C.changeStr,
+                                                                  className: D.changeStr,
                                                                   children: d
                                                               }),
                                                               null != a ? (0, r.jsx)('div', { children: a }) : null
@@ -637,7 +638,7 @@ function M(e) {
                         .filter(g.lm);
                 return (0, r.jsx)(u.P3F, {
                     onClick: a,
-                    className: i()(C.changeDetails, o),
+                    className: i()(D.changeDetails, o),
                     children: E
                 });
             },
@@ -688,6 +689,8 @@ function M(e) {
                     return E(S.F1());
                 case p.KFR.GUILD_MEMBER_VERIFICATION:
                     return E(S.JA());
+                case p.KFR.GUILD_PROFILE:
+                    return E(S.zT());
             }
         }, [t.targetType, t.changes, E]);
     return (0, r.jsx)(r.Fragment, { children: d });

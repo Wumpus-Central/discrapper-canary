@@ -9,5 +9,6 @@ e.exports = {
     perkText: 'perkText_bc32e9',
     exampleImage: 'exampleImage_bc32e9',
     warningContainer: 'warningContainer_bc32e9',
+    errorText: 'errorText_bc32e9',
     footer: 'footer_bc32e9'
 };
