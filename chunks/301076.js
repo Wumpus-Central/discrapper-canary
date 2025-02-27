@@ -8,9 +8,9 @@ var i = n(592471),
     s = n(221241),
     c = n(871499);
 function u(e) {
-    let t, n, u, d;
-    var { isActivityActive: p, onMouseEnter: h, onMouseLeave: f, onClick: m } = e,
-        g = (function (e, t) {
+    let t, n, u;
+    var { isActivityActive: d, onMouseEnter: p, onMouseLeave: h, onClick: f } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -29,14 +29,13 @@ function u(e) {
             }
             return i;
         })(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { mode: b } = (0, a.ZP)({ location: 'VideoButton' }),
-        { squareButtons: _ } = (0, s.Z)({ location: 'VideoButton' });
-    (_ || b === a.BK.GroupedButtonsRedMic) && p && (t = 'green');
-    let { enabled: C } = o.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        { Component: v, events: y, play: x } = (0, i.s)(),
-        { Component: j, events: O, play: N } = (0, l.w)();
+    let { mode: g } = (0, a.ZP)({ location: 'VideoButton' }),
+        { squareButtonsEnabled: b } = (0, s.Z)({ location: 'VideoButton' }),
+        { enabled: _ } = o.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
+        { Component: C, events: v, play: y } = (0, i.s)(),
+        { Component: x, events: j, play: O } = (0, l.w)();
     return (
-        C ? ((n = j), (u = O), (d = N)) : ((n = v), (u = y), (d = x)),
+        _ ? ((t = x), (n = j), (u = O)) : ((t = C), (n = v), (u = y)),
         (0, r.jsx)(
             c.d,
             (function (e) {
@@ -65,20 +64,20 @@ function u(e) {
                 return e;
             })(
                 {
-                    isActive: p,
-                    color: t,
-                    iconComponent: n,
+                    isActive: d,
+                    color: (b || g === a.BK.GroupedButtonsRedMic) && d ? 'green' : void 0,
+                    iconComponent: t,
                     onMouseEnter: (e) => {
-                        null == h || h(e), u.onMouseEnter();
+                        null == p || p(e), n.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == f || f(e), u.onMouseLeave();
+                        null == h || h(e), n.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == m || m(e), d();
+                        null == f || f(e), u();
                     }
                 },
-                g
+                m
             )
         )
     );

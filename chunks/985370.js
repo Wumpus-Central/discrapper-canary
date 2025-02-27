@@ -19,69 +19,67 @@ var r = n(200651),
 let v = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: v } = e,
         { isHovered: y, setIsHovered: x, onMouseEnter: j, onMouseLeave: O, cancelTimers: N } = (0, u.Z)(200, 300),
-        [E, P] = i.useState(!1),
-        I = (0, a.e7)([p.Z], () => p.Z.effectCooldownEndTime),
-        S = i.useMemo(() => (null != I ? (I.getTime() - Date.now()) / 1000 : 0), [I]),
-        { seconds: Z } = (0, c.Z)(null != I ? I : new Date()),
+        [E, I] = i.useState(!1),
+        P = (0, a.e7)([p.Z], () => p.Z.effectCooldownEndTime),
+        S = i.useMemo(() => (null != P ? (P.getTime() - Date.now()) / 1000 : 0), [P]),
+        { seconds: Z } = (0, c.Z)(null != P ? P : new Date()),
         T = Z > 0,
         { mode: A } = (0, h.ZP)({ location: 'ActionBarSoundboardButton' }),
         w = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
-        { coloredIcons: R, squareButtons: k } = (0, f.Z)({ location: 'ActionBarSoundboardButton' }),
-        M = A === h.BK.GroupedButtonsRedMic || k ? 'green' : void 0;
-    R && (M = 'primaryDark');
-    let L = i.useCallback(
+        { coloredIconsEnabled: R, squareButtonsEnabled: M } = (0, f.Z)({ location: 'ActionBarSoundboardButton' }),
+        k = i.useCallback(
             (e) => {
                 'focus' !== e.type && (E || T || j());
             },
             [E, T, j]
         ),
-        D = i.useCallback(() => {
+        L = i.useCallback(() => {
             E || O();
         }, [O, E]),
-        W = i.useCallback(
+        D = i.useCallback(
             (e, t) => {
-                N(), P(!E), l === b.D.EMOJI ? null == v || v(void 0) : null == v || v(b.D.EMOJI), (!y || E) && (null == t || t(e));
+                N(), I(!E), l === b.D.EMOJI ? null == v || v(void 0) : null == v || v(b.D.EMOJI), (!y || E) && (null == t || t(e));
             },
             [N, E, y, v, l]
         ),
-        U = (y || E) && (l === b.D.EMOJI || null == l);
+        W = (y || E) && (l === b.D.EMOJI || null == l);
     return (0, r.jsx)(s.yRy, {
-        shouldShow: U,
+        shouldShow: W,
         animation: w ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
         animationPosition: w ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            x(!1), P(!1), null == v || v(void 0);
+            x(!1), I(!1), null == v || v(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(g.Z, {
-                isHovered: U,
+                isHovered: W,
                 channel: t,
                 closePopout: n,
                 onMouseEnter: j,
-                onMouseLeave: D,
-                onFocus: () => P(!0)
+                onMouseLeave: L,
+                onFocus: () => I(!0)
             });
         },
         children: (e) => {
             let { onClick: t, onKeyDown: i } = e;
             return (0, r.jsx)(d.Z, {
                 isCenterButton: !0,
-                color: E ? M : void 0,
+                color: E ? (R ? 'primaryDark' : A === h.BK.GroupedButtonsRedMic || M ? 'green' : void 0) : void 0,
                 totalCooldownSeconds: S,
                 remainingCooldownSeconds: Z,
                 className: o()(!w && C.controlButton, n),
                 onKeyDown: (e) => {
-                    e.keyCode === _.yXg.ENTER && e.keyCode === _.yXg.SPACE && W(e, i);
+                    e.keyCode === _.yXg.ENTER && e.keyCode === _.yXg.SPACE && D(e, i);
                 },
                 onClick: (e) => {
-                    W(e, t);
+                    D(e, t);
                 },
-                onMouseEnter: L,
-                onMouseLeave: D,
+                onMouseEnter: k,
+                onMouseLeave: L,
                 isActive: E
             });
         }

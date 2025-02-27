@@ -21,8 +21,8 @@ var r = n(200651),
     x = n(795318),
     j = n(304388),
     O = n(981631),
-    E = n(127379),
-    N = n(388032);
+    N = n(127379),
+    E = n(388032);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -80,34 +80,32 @@ function S(e) {
         [B, F] = (0, u.cv)(U),
         { mode: H } = (0, f.ZP)({ location: 'ActionBarSoundboardButton' }),
         G = (0, g.Z)({ location: 'ActionBarSoundboardButton' }),
-        { coloredIcons: V, squareButtons: z } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
-        q = H === f.BK.GroupedButtonsRedMic || z ? 'green' : void 0;
-    function Y() {
-        return k ? N.NW.string(N.t['Ox4/zc']) : L ? N.NW.string(N.t['+YBKYG']) : D ? N.NW.string(N.t.X1lQlp) : void 0;
+        { coloredIconsEnabled: V, squareButtonsEnabled: z } = (0, m.Z)({ location: 'ActionBarSoundboardButton' });
+    function q() {
+        return k ? E.NW.string(E.t['Ox4/zc']) : L ? E.NW.string(E.t['+YBKYG']) : D ? E.NW.string(E.t.X1lQlp) : void 0;
     }
-    function K(e) {
+    function Y(e) {
         null != M &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) => (0, r.jsx)(e, P(I({ guildId: M }, t), { onInteraction: (0, x.u)('SoundboardContextMenu', 'ActionBarSoundboardButton') }));
             });
     }
-    V && (q = 'primaryDark');
-    let X = i.useRef(null),
-        Q = i.useCallback(() => {
+    let K = i.useRef(null),
+        X = i.useCallback(() => {
             var e;
-            null === (e = X.current) || void 0 === e || e.hidePopout();
+            null === (e = K.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
         (0, y.yp)({
             event: O.CkL.TOGGLE_SOUNDBOARD,
-            handler: Q
+            handler: X
         }),
         (0, r.jsx)(j.Z, {
-            ref: X,
-            isPopoutBlocked: null != Z && Z !== E.D.SOUNDBOARD,
+            ref: K,
+            isPopoutBlocked: null != Z && Z !== N.D.SOUNDBOARD,
             onPopoutClose: () => (null == T ? void 0 : T(void 0)),
-            onPopoutOpen: () => (null == T ? void 0 : T(E.D.SOUNDBOARD)),
+            onPopoutOpen: () => (null == T ? void 0 : T(N.D.SOUNDBOARD)),
             align: G ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
@@ -136,10 +134,10 @@ function S(e) {
                               I(
                                   {
                                       themeable: S,
-                                      label: Y(),
+                                      label: q(),
                                       iconComponent: A,
                                       disabled: W,
-                                      onContextMenu: K
+                                      onContextMenu: Y
                                   },
                                   e
                               ),
@@ -150,7 +148,7 @@ function S(e) {
                                   onMouseLeave: () => {
                                       e.onMouseLeave(), R();
                                   },
-                                  color: e.isActive ? q : void 0,
+                                  color: e.isActive ? (V ? 'primaryDark' : H === f.BK.GroupedButtonsRedMic || z ? 'green' : void 0) : void 0,
                                   className: ''
                               }
                           )
@@ -160,10 +158,10 @@ function S(e) {
                           I(
                               {
                                   themeable: S,
-                                  label: Y(),
+                                  label: q(),
                                   iconComponent: s.KY1,
                                   disabled: W,
-                                  onContextMenu: K
+                                  onContextMenu: Y
                               },
                               e
                           )

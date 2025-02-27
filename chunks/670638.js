@@ -1,4 +1,4 @@
-n.d(t, { r: () => T });
+n.d(t, { r: () => y });
 var r = n(200651),
     s = n(192379),
     i = n(442837),
@@ -12,12 +12,13 @@ var r = n(200651),
     p = n(113434),
     x = n(569984),
     g = n(497505),
-    h = n(918701),
-    f = n(341907),
+    f = n(918701),
+    h = n(341907),
     j = n(46140),
-    v = n(231338),
-    b = n(388032);
-function C(e) {
+    v = n(642145),
+    b = n(231338),
+    C = n(388032);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +43,7 @@ function C(e) {
     }
     return e;
 }
-function N(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,53 +61,54 @@ function N(e, t) {
         e
     );
 }
-function E(e) {
+function T(e) {
     var t;
     let n = (0, i.e7)([x.Z], () => x.Z.questDeliveryOverride, []),
-        c = (0, h.GN)(e.questContent),
-        C = !(0, h.q8)(e.quest) && !(0, h.pO)(e.quest),
-        N = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
-        E = (0, h.zK)(e.quest, j.S7.DISMISSAL_SURVEY),
-        T = (0, u.O5)(),
-        y = (0, d.aM)(),
-        { handleComplete: S, handleProgress: O, handleResetDismissibilityClick: q, handleResetStatusClick: P, handleOverrideDeliveryClick: w } = (0, p.kJ)(e.quest.id),
-        A = s.useCallback(() => {
-            (0, h.FE)(e.quest, {
+        c = (0, f.GN)(e.questContent),
+        N = !(0, f.q8)(e.quest) && !(0, f.pO)(e.quest),
+        E = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
+        T = (0, f.zK)(e.quest, j.S7.DISMISSAL_SURVEY),
+        y = (0, u.O5)(),
+        S = (0, d.aM)(),
+        { handleComplete: O, handleProgress: q, handleResetDismissibilityClick: P, handleResetStatusClick: w, handleOverrideDeliveryClick: A } = (0, p.kJ)(e.quest.id),
+        R = s.useCallback(() => {
+            (0, f.FE)(e.quest, {
                 content: e.questContent,
                 ctaContent: u.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
-                impressionId: y
+                impressionId: S
             });
-        }, [y, e.quest, e.questContent]),
-        R = s.useCallback(() => {
-            (0, h.f2)(e.quest.id, {
+        }, [S, e.quest, e.questContent]),
+        _ = s.useCallback(() => {
+            (0, f.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
                 ctaContent: u.jZ.CONTEXT_MENU_COPY_LINK,
-                impressionId: y
+                impressionId: S
             }),
-                (0, o.showToast)((0, o.createToast)(b.NW.string(b.t['+5kSoa']), o.ToastType.SUCCESS));
-        }, [y, e.quest.id, e.questContent, e.questContentPosition]),
-        _ = (e) => (0, o.showToast)((0, o.createToast)(new a.Z(e, e.status).message, o.ToastType.FAILURE)),
-        Z = () => (0, m.is)(e.quest.id).catch(_),
-        I = s.useMemo(() => (C ? b.t.lwQdjI : b.t.hvVgAQ), [C]),
-        M = s.useMemo(
+                (0, o.showToast)((0, o.createToast)(C.NW.string(C.t['+5kSoa']), o.ToastType.SUCCESS));
+        }, [S, e.quest.id, e.questContent, e.questContentPosition]),
+        Z = (e) => (0, o.showToast)((0, o.createToast)(new a.Z(e, e.status).message, o.ToastType.FAILURE)),
+        I = () => (0, m.is)(e.quest.id).catch(Z),
+        M = s.useMemo(() => (N ? C.t.lwQdjI : C.t.hvVgAQ), [N]),
+        L = s.useMemo(
             () =>
                 (0, r.jsx)(o.S89, {
                     id: 'delivery',
                     label: 'Show in Quest Bar',
                     checked: (null == n ? void 0 : n.id) === e.quest.id,
-                    action: w
+                    action: A
                 }),
-            [w, e.quest.id, null == n ? void 0 : n.id]
-        );
+            [A, e.quest.id, null == n ? void 0 : n.id]
+        ),
+        D = e.shouldShowDisclosure && e.quest.id !== v.V;
     return (0, r.jsxs)(o.v2r, {
         variant: 'fixed',
         onSelect: () => {
             null != e.onSelect ? e.onSelect() : (0, l.Zy)();
         },
         navId: 'quests-entry',
-        'aria-label': b.NW.string(b.t.ogxXGh),
-        onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : v.dG,
+        'aria-label': C.NW.string(C.t.ogxXGh),
+        onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : b.dG,
         children: [
             (0, r.jsxs)(
                 o.kSQ,
@@ -114,15 +116,15 @@ function E(e) {
                     children: [
                         (0, r.jsx)(o.sNh, {
                             id: 'play-game',
-                            label: b.NW.string(I),
-                            action: A,
+                            label: C.NW.string(M),
+                            action: R,
                             icon: o.zFc
                         }),
                         !0 === e.showShareLink &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'share-link',
-                                label: b.NW.string(b.t.RDE0SU),
-                                action: R,
+                                label: C.NW.string(C.t.RDE0SU),
+                                action: _,
                                 icon: o.TIy
                             }),
                         !1
@@ -137,48 +139,48 @@ function E(e) {
                         !e.hideLearnMore &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'learn-more',
-                                label: b.NW.string(b.t.Ws2Bl5),
+                                label: C.NW.string(C.t.Ws2Bl5),
                                 action: () => {
-                                    T({
+                                    y({
                                         questId: e.quest.id,
                                         questContent: e.questContent,
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: u.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
-                                        (0, f.navigateToQuestHome)({
+                                        (0, h.navigateToQuestHome)({
                                             fromContent: e.questContent,
                                             questId: e.quest.id
                                         });
                                 },
                                 icon: o.qDn
                             }),
-                        e.shouldShowDisclosure &&
+                        D &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'display-disclosure',
-                                label: b.NW.string(b.t.GcsZKC),
+                                label: C.NW.string(C.t.GcsZKC),
                                 action: () => {
-                                    (0, f.openDisclosureModal)(e.quest, {
+                                    (0, h.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
                                         position: e.questContentPosition,
                                         ctaContent: u.jZ.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                        impressionId: y
+                                        impressionId: S
                                     });
                                 }
                             }),
                         c &&
                             (0, r.jsx)(o.sNh, {
                                 id: 'hide-entrypoint',
-                                label: b.NW.string(b.t.NN79Ex),
+                                label: C.NW.string(C.t.NN79Ex),
                                 action: () => {
-                                    T({
+                                    y({
                                         questId: e.quest.id,
                                         questContent: e.questContent,
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: u.jZ.CONTEXT_MENU_HIDE_CONTENT
                                     }),
-                                        (0, h.GN)(e.questContent) && ((0, m.gl)(e.quest.id, e.questContent), E && N && (0, f.maybeShowSurveyForQuest)(e.quest));
+                                        (0, f.GN)(e.questContent) && ((0, m.gl)(e.quest.id, e.questContent), T && E && (0, h.maybeShowSurveyForQuest)(e.quest));
                                 },
-                                subtext: b.NW.string(b.t['1u3YPD'])
+                                subtext: C.NW.string(C.t['1u3YPD'])
                             })
                     ]
                 },
@@ -190,32 +192,32 @@ function E(e) {
                     {
                         label: 'Preview Controls',
                         children: [
-                            M,
+                            L,
                             (0, r.jsx)(o.sNh, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
-                                action: q
+                                action: P
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    P(), Z();
+                                    w(), I();
                                 }
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: 'progress',
                                 label: 'Set Random Quest Progress',
                                 action: () => {
-                                    O(0.9 * Math.random() + 0.03);
+                                    q(0.9 * Math.random() + 0.03);
                                 }
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: 'complete',
                                 label: 'Complete Quest',
-                                action: S
+                                action: O
                             }),
-                            (0, h.$J)(e.quest) &&
+                            (0, f.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
                                     id: 'console',
                                     label: 'Console Heartbeat',
@@ -223,17 +225,17 @@ function E(e) {
                                         (0, r.jsx)(o.sNh, {
                                             disabled: !0,
                                             id: 'status',
-                                            label: 'Status: '.concat((0, h.Bz)(e.quest) ? 'alive' : 'dead')
+                                            label: 'Status: '.concat((0, f.Bz)(e.quest) ? 'alive' : 'dead')
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, m.CS)(e.quest.id, !0).catch(_)
+                                            action: () => (0, m.CS)(e.quest.id, !0).catch(Z)
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: Z
+                                            action: I
                                         })
                                     ]
                                 })
@@ -244,7 +246,7 @@ function E(e) {
         ]
     });
 }
-function T(e) {
+function y(e) {
     let { children: t, onOpen: n, onClose: i, preventIdle: l, quest: a, questContent: d, questContentPosition: m } = e,
         p = (function (e, t) {
             if (null == e) return {};
@@ -283,8 +285,8 @@ function T(e) {
             return l
                 ? (0, r.jsx)(c.Z, {
                       children: (0, r.jsx)(
-                          E,
-                          N(C({}, p), {
+                          T,
+                          E(N({}, p), {
                               quest: a,
                               questContent: d,
                               questContentPosition: m,
@@ -293,8 +295,8 @@ function T(e) {
                       )
                   })
                 : (0, r.jsx)(
-                      E,
-                      N(C({}, p), {
+                      T,
+                      E(N({}, p), {
                           quest: a,
                           questContent: d,
                           questContentPosition: m,

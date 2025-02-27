@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eg }), n(47120);
+n.d(t, { Z: () => em }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -8,165 +8,163 @@ var r = n(200651),
     c = n(287734),
     u = n(40851),
     d = n(358221),
-    p = n(682901),
-    h = n(659580),
-    f = n(793865),
-    m = n(575175),
-    g = n(795318),
-    b = n(258609),
-    _ = n(74299),
-    C = n(924301),
-    v = n(459502),
-    y = n(856691),
-    x = n(357156),
-    j = n(221241),
-    O = n(923973),
-    E = n(829750),
+    p = n(659580),
+    h = n(793865),
+    f = n(575175),
+    m = n(795318),
+    g = n(258609),
+    b = n(74299),
+    _ = n(924301),
+    C = n(459502),
+    v = n(856691),
+    y = n(357156),
+    x = n(221241),
+    j = n(923973),
+    O = n(829750),
     N = n(82965),
-    I = n(189771),
-    P = n(294629),
-    S = n(793319),
-    Z = n(987329),
-    T = n(560688),
-    A = n(390322),
-    w = n(871499),
-    R = n(88479),
-    M = n(386000),
-    k = n(25827),
-    L = n(314897),
-    D = n(131951),
-    W = n(496675),
-    U = n(944486),
-    B = n(594174),
-    F = n(881824),
-    H = n(471253),
-    G = n(922482),
-    V = n(200498),
-    z = n(146085),
-    q = n(88751),
-    Y = n(427679),
-    K = n(368442),
-    X = n(600518),
-    Q = n(485287),
-    J = n(754277),
-    $ = n(719100),
-    ee = n(184805),
-    et = n(643632),
-    en = n(270295),
-    er = n(981631),
-    ei = n(354459),
-    el = n(388032),
-    eo = n(164762);
-function ea(e) {
+    E = n(189771),
+    I = n(294629),
+    P = n(793319),
+    S = n(987329),
+    Z = n(560688),
+    T = n(390322),
+    A = n(871499),
+    w = n(88479),
+    R = n(386000),
+    M = n(25827),
+    k = n(314897),
+    L = n(131951),
+    D = n(496675),
+    W = n(944486),
+    U = n(594174),
+    B = n(881824),
+    F = n(471253),
+    H = n(922482),
+    G = n(200498),
+    V = n(146085),
+    z = n(88751),
+    q = n(427679),
+    Y = n(368442),
+    K = n(600518),
+    X = n(485287),
+    Q = n(754277),
+    J = n(719100),
+    $ = n(184805),
+    ee = n(643632),
+    et = n(270295),
+    en = n(981631),
+    er = n(354459),
+    ei = n(388032),
+    el = n(164762);
+function eo(e) {
     let { channel: t, appContext: n } = e;
-    if ((0, $.Z)(t)) {
-        (0, F.Us)(t, n);
+    if ((0, J.Z)(t)) {
+        (0, B.Us)(t, n);
         return;
     }
     c.default.disconnect();
 }
-function es(e) {
+function ea(e) {
     let { channel: t } = e,
-        n = (0, ee.Z)(t.id),
-        [i, l] = (0, en.Z)(t),
-        o = (0, a.e7)([W.Z], () => W.Z.can(er.Plq.REQUEST_TO_SPEAK, t)),
+        n = (0, $.Z)(t.id),
+        [i, l] = (0, et.Z)(t),
+        o = (0, a.e7)([D.Z], () => D.Z.can(en.Plq.REQUEST_TO_SPEAK, t)),
         c = (0, N.Z)({ location: 'AudienceRaiseHandButton' }),
-        { coloredIcons: u } = (0, j.Z)({ location: 'AudienceRaiseHandButton' });
+        { coloredIconsEnabled: u } = (0, x.Z)({ location: 'AudienceRaiseHandButton' });
     return n
         ? null
-        : (0, r.jsx)(w.d, {
+        : (0, r.jsx)(A.d, {
               isActive: i,
-              label: i ? el.NW.string(el.t.GCimTk) : o ? el.NW.string(el.t.hLbG5O) : el.NW.string(el.t.e4WMv7),
+              label: i ? ei.NW.string(ei.t.GCimTk) : o ? ei.NW.string(ei.t.hLbG5O) : ei.NW.string(ei.t.e4WMv7),
               iconComponent: s.V9,
               onClick: l,
-              className: c ? void 0 : eo.buttonSpacing,
+              className: c ? void 0 : el.buttonSpacing,
               color: u && i ? 'green' : void 0,
               disabled: !o && !i
           });
 }
-let ec = i.memo(function (e) {
+let es = i.memo(function (e) {
     let { channel: t } = e,
-        n = (0, a.e7)([U.Z], () => U.Z.getVoiceChannelId() === t.id, [t.id]),
+        n = (0, a.e7)([W.Z], () => W.Z.getVoiceChannelId() === t.id, [t.id]),
         i = (0, N.Z)({ location: 'AudienceControlTray' }),
-        { enabled: l } = (0, p.Z)({ location: 'AudienceControlTray' }),
-        { coloredIcons: s } = (0, j.Z)({ location: 'AudienceControlTray' });
+        { coloredIconsEnabled: l, simplifiedSettingsEnabled: s } = (0, x.Z)({ location: 'AudienceControlTray' });
     return i
         ? (0, r.jsxs)('div', {
-              className: eo.container,
+              className: el.container,
               children: [
                   (0, r.jsxs)('div', {
-                      className: o()(eo.buttonSection, { [eo.experimentButtonSection]: s }),
-                      children: [(0, r.jsx)(eh, { channelId: t.id }), n ? (0, r.jsx)(es, { channel: t }) : null, l ? (0, r.jsx)(Z.Z, { channel: t }) : null]
+                      className: o()(el.buttonSection, { [el.experimentButtonSection]: l }),
+                      children: [(0, r.jsx)(ep, { channelId: t.id }), n ? (0, r.jsx)(ea, { channel: t }) : null, s ? (0, r.jsx)(S.Z, { channel: t }) : null]
                   }),
-                  (0, r.jsx)(ed, { channel: t })
+                  (0, r.jsx)(eu, { channel: t })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: eo.container,
-              children: [(0, r.jsx)(eh, { channelId: t.id }), n ? (0, r.jsx)(es, { channel: t }) : null, (0, r.jsx)(ed, { channel: t })]
+              className: el.container,
+              children: [(0, r.jsx)(ep, { channelId: t.id }), n ? (0, r.jsx)(ea, { channel: t }) : null, (0, r.jsx)(eu, { channel: t })]
           });
 });
-function eu(e) {
+function ec(e) {
     let { onClick: t } = e;
     return (0, N.Z)({ location: 'MakeMeASpeakerButton' })
-        ? (0, r.jsx)(w.d, {
+        ? (0, r.jsx)(A.d, {
               onClick: t,
               iconComponent: s.Lrb,
-              label: el.NW.string(el.t['8Joh+v'])
+              label: ei.NW.string(ei.t['8Joh+v'])
           })
         : (0, r.jsx)(s.zxk, {
               size: s.zxk.Sizes.MEDIUM,
-              color: eo.primaryButtonColor,
-              className: o()(eo.buttonSpacing, eo.buttonWithTextButton),
+              color: el.primaryButtonColor,
+              className: o()(el.buttonSpacing, el.buttonWithTextButton),
               onClick: t,
               children: (0, r.jsxs)('div', {
-                  className: eo.buttonWithTextInnerContainer,
+                  className: el.buttonWithTextInnerContainer,
                   children: [
                       (0, r.jsx)(s.Lrb, {
                           size: 'md',
                           color: 'currentColor',
-                          className: eo.buttonWithTextIcon
+                          className: el.buttonWithTextIcon
                       }),
                       (0, r.jsx)(s.Text, {
                           color: 'none',
                           variant: 'text-sm/medium',
-                          children: el.NW.string(el.t['8Joh+v'])
+                          children: ei.NW.string(ei.t['8Joh+v'])
                       })
                   ]
               })
           });
 }
-function ed(e) {
+function eu(e) {
     let { channel: t, onSelect: n } = e,
         i = (0, u.bp)(),
-        { canManageGuildEvent: l } = (0, x.XJ)(t),
-        c = (0, a.e7)([Y.Z], () => Y.Z.getStageInstanceByChannel(t.id), [t.id]),
-        d = (0, a.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
-        p = (0, a.e7)([U.Z], () => U.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: h } = (0, P.Z)(t),
-        f = L.default.getId(),
-        [m] = (0, en.Z)(t),
-        b = q.ZP.isModerator(f, t.id),
-        _ = (0, V.B)(t.id),
+        { canManageGuildEvent: l } = (0, y.XJ)(t),
+        c = (0, a.e7)([q.Z], () => q.Z.getStageInstanceByChannel(t.id), [t.id]),
+        d = (0, a.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
+        p = (0, a.e7)([W.Z], () => W.Z.getVoiceChannelId() === t.id, [t.id]),
+        { suppress: h } = (0, I.Z)(t),
+        f = k.default.getId(),
+        [g] = (0, et.Z)(t),
+        b = z.ZP.isModerator(f, t.id),
+        C = (0, G.B)(t.id),
         v = l(d),
-        y = (0, N.Z)({ location: 'ExitStageButton' });
+        x = (0, N.Z)({ location: 'ExitStageButton' });
     return p
         ? (b || v) && null != c
             ? (0, r.jsx)(s.yRy, {
                   renderPopout: (e) => {
                       let { closePopout: l } = e;
-                      return (0, r.jsx)(A.Z, {
+                      return (0, r.jsx)(T.Z, {
                           children: (0, r.jsx)(s.v2r, {
                               navId: 'exit-options',
-                              'aria-label': el.NW.string(el.t['3Uj+2t']),
+                              'aria-label': ei.NW.string(ei.t['3Uj+2t']),
                               onClose: l,
                               onSelect: n,
-                              onInteraction: (0, g.u)('End Stage', 'StageChannelControlTray', { entrypoint: ei.A5.CARET }),
+                              onInteraction: (0, m.u)('End Stage', 'StageChannelControlTray', { entrypoint: er.A5.CARET }),
                               children: (0, r.jsx)(s.sNh, {
                                   id: 'end-stage',
                                   color: 'danger',
-                                  action: () => (0, F.Ev)(t, i),
-                                  label: el.NW.string(el.t.Fmx5y8),
+                                  action: () => (0, B.Ev)(t, i),
+                                  label: ei.NW.string(ei.t.Fmx5y8),
                                   icon: s.k$p
                               })
                           })
@@ -174,244 +172,235 @@ function ed(e) {
                   },
                   align: 'center',
                   position: 'top',
-                  spacing: y ? 16 : void 0,
+                  spacing: x ? 16 : void 0,
                   animation: s.yRy.Animation.FADE,
                   children: (e, n) => {
                       let { onClick: l } = e,
                           { isShown: o } = n;
-                      return (0, r.jsx)(R.Z, {
-                          label: el.NW.string(el.t.c6qKws),
+                      return (0, r.jsx)(w.Z, {
+                          label: ei.NW.string(ei.t.c6qKws),
                           onClick: () =>
-                              ea({
+                              eo({
                                   channel: t,
                                   appContext: i
                               }),
                           onPopoutClick: l,
                           popoutOpen: o,
-                          className: y ? void 0 : eo.buttonSpacing
+                          className: x ? void 0 : el.buttonSpacing
                       });
                   }
               })
-            : (h && !_) || m
-              ? y
-                  ? (0, r.jsx)(R.Z, {
-                        label: el.NW.string(el.t.SMKyio),
+            : (h && !C) || g
+              ? x
+                  ? (0, r.jsx)(w.Z, {
+                        label: ei.NW.string(ei.t.SMKyio),
                         onClick: () =>
-                            ea({
+                            eo({
                                 channel: t,
                                 appContext: i
                             }),
-                        className: eo.experimentButtonSpacing
+                        className: el.experimentButtonSpacing
                     })
                   : (0, r.jsx)(s.zxk, {
                         size: s.zxk.Sizes.MEDIUM,
                         color: s.zxk.Colors.RED,
-                        className: o()(eo.buttonSpacing, eo.buttonWithTextButton),
+                        className: o()(el.buttonSpacing, el.buttonWithTextButton),
                         onClick: () =>
-                            ea({
+                            eo({
                                 channel: t,
                                 appContext: i
                             }),
                         children: (0, r.jsxs)('div', {
-                            className: eo.buttonWithTextInnerContainer,
+                            className: el.buttonWithTextInnerContainer,
                             children: [
                                 (0, r.jsx)(s.gkL, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: eo.buttonWithTextIcon
+                                    className: el.buttonWithTextIcon
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     color: 'none',
                                     variant: 'text-sm/medium',
-                                    children: el.NW.string(el.t.SMKyio)
+                                    children: ei.NW.string(ei.t.SMKyio)
                                 })
                             ]
                         })
                     })
-              : (0, r.jsx)(R.Z, {
-                    label: el.NW.string(el.t.c6qKws),
+              : (0, r.jsx)(w.Z, {
+                    label: ei.NW.string(ei.t.c6qKws),
                     onClick: () =>
-                        ea({
+                        eo({
                             channel: t,
                             appContext: i
                         }),
-                    className: y ? void 0 : eo.buttonSpacing
+                    className: x ? void 0 : el.buttonSpacing
                 })
         : (0, r.jsx)(s.zxk, {
               size: s.zxk.Sizes.MEDIUM,
               color: s.zxk.Colors.GREEN,
-              className: o()(eo.buttonSpacing, eo.buttonWithTextButton),
+              className: o()(el.buttonSpacing, el.buttonWithTextButton),
               onClick: () => {
-                  (0, G.TM)(t);
+                  (0, H.TM)(t);
               },
               children: (0, r.jsxs)('div', {
-                  className: eo.buttonWithTextInnerContainer,
+                  className: el.buttonWithTextInnerContainer,
                   children: [
                       (0, r.jsx)(s.Csw, {
                           size: 'md',
                           color: 'currentColor',
-                          className: eo.buttonWithTextIcon
+                          className: el.buttonWithTextIcon
                       }),
                       (0, r.jsx)(s.Text, {
                           color: 'none',
                           variant: 'text-sm/medium',
-                          children: el.NW.string(el.t['7vb2cX'])
+                          children: ei.NW.string(ei.t['7vb2cX'])
+                      })
+                  ]
+              })
+          });
+}
+function ed(e) {
+    let { onClick: t } = e;
+    return (0, N.Z)({ location: 'MoveToAudienceButton' })
+        ? (0, r.jsx)(A.d, {
+              iconComponent: s.zRq,
+              label: ei.NW.string(ei.t.ezLpY2),
+              onClick: t
+          })
+        : (0, r.jsx)(s.zxk, {
+              size: s.zxk.Sizes.MEDIUM,
+              color: el.primaryButtonColor,
+              className: o()(el.buttonSpacing, el.buttonWithTextButton),
+              onClick: t,
+              children: (0, r.jsxs)('div', {
+                  className: el.buttonWithTextInnerContainer,
+                  children: [
+                      (0, r.jsx)(s.zRq, {
+                          size: 'md',
+                          color: 'currentColor',
+                          className: el.buttonWithTextIcon
+                      }),
+                      (0, r.jsx)(s.Text, {
+                          color: 'none',
+                          variant: 'text-sm/medium',
+                          children: ei.NW.string(ei.t.ezLpY2)
                       })
                   ]
               })
           });
 }
 function ep(e) {
-    let { onClick: t } = e;
-    return (0, N.Z)({ location: 'MoveToAudienceButton' })
-        ? (0, r.jsx)(w.d, {
-              iconComponent: s.zRq,
-              label: el.NW.string(el.t.ezLpY2),
-              onClick: t
-          })
-        : (0, r.jsx)(s.zxk, {
-              size: s.zxk.Sizes.MEDIUM,
-              color: eo.primaryButtonColor,
-              className: o()(eo.buttonSpacing, eo.buttonWithTextButton),
-              onClick: t,
-              children: (0, r.jsxs)('div', {
-                  className: eo.buttonWithTextInnerContainer,
-                  children: [
-                      (0, r.jsx)(s.zRq, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: eo.buttonWithTextIcon
-                      }),
-                      (0, r.jsx)(s.Text, {
-                          color: 'none',
-                          variant: 'text-sm/medium',
-                          children: el.NW.string(el.t.ezLpY2)
-                      })
-                  ]
-              })
-          });
-}
-function eh(e) {
     let { channelId: t } = e,
-        n = (0, a.e7)([J.Z], () => J.Z.isMuted()),
-        i = (0, Q.pp)(t),
-        l = (0, a.e7)([J.Z], () => J.Z.shouldPlay()),
-        { coloredIcons: o } = (0, j.Z)({ location: 'MusicButton' });
+        n = (0, a.e7)([Q.Z], () => Q.Z.isMuted()),
+        i = (0, X.pp)(t),
+        l = (0, a.e7)([Q.Z], () => Q.Z.shouldPlay()),
+        { coloredIconsEnabled: o } = (0, x.Z)({ location: 'MusicButton' });
     return i
-        ? (0, r.jsx)(w.d, {
+        ? (0, r.jsx)(A.d, {
               isActive: o ? !n : n,
-              label: n ? el.NW.string(el.t.ScHlfn) : el.NW.string(el.t.zqxfra),
+              label: n ? ei.NW.string(ei.t.ScHlfn) : ei.NW.string(ei.t.zqxfra),
               iconComponent: n ? s.xjP : s.RZG,
               color: o && !n ? 'green' : void 0,
-              onClick: () => (0, X.v)(!n)
+              onClick: () => (0, K.v)(!n)
           })
-        : (0, r.jsx)(w.d, {
+        : (0, r.jsx)(A.d, {
               isActive: o ? l : !l,
-              label: l ? el.NW.string(el.t.zqxfra) : el.NW.string(el.t.ScHlfn),
+              label: l ? ei.NW.string(ei.t.zqxfra) : ei.NW.string(ei.t.ScHlfn),
               iconComponent: l ? s.RZG : s.xjP,
               color: o && l ? 'green' : void 0,
-              onClick: () => (0, X.z)(!l)
+              onClick: () => (0, K.z)(!l)
           });
 }
-let ef = i.memo(function (e) {
+let eh = i.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: i, mute: l } = (0, P.Z)(t),
-        c = (0, V.B)(t.id),
-        u = (0, a.e7)([b.Z], () => null != b.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: C, enabled: v } = (0, O.Z)(),
-        y = (0, I.Z)(t),
-        { limit: x, reachedLimit: w } = (0, E.Z)(t),
-        R = (0, a.e7)([B.default], () => B.default.getCurrentUser()),
-        L = (0, a.e7)([D.Z], () => (0, _.Z)(D.Z)),
-        W = (0, a.e7)([U.Z], () => U.Z.getVoiceChannelId() === t.id, [t.id]),
-        F = (0, a.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
-        G = (0, K.PK)(t.id),
-        z = x > 0,
-        q = (w && !G) || (null != F && F.user.id !== (null == R ? void 0 : R.id)),
-        Y = (0, N.Z)({ location: 'SpeakerControlTray' }),
-        { enabled: X } = (0, p.Z)({ location: 'SpeakerControlTray' }),
-        { coloredIcons: Q } = (0, j.Z)({ location: 'SpeakerControlTray' }),
-        J = (0, g.u)('AudioDeviceMenu', 'StageChannelControlTray', { entrypoint: ei.A5.CARET });
-    if (null == R) return null;
-    let $ = (0, r.jsxs)(r.Fragment, {
+        { suppress: n, selfMute: i, mute: l } = (0, I.Z)(t),
+        c = (0, G.B)(t.id),
+        u = (0, a.e7)([g.Z], () => null != g.Z.getAwaitingRemoteSessionInfo()),
+        { cameraUnavailable: _, enabled: C } = (0, j.Z)(),
+        v = (0, E.Z)(t),
+        { limit: y, reachedLimit: A } = (0, O.Z)(t),
+        w = (0, a.e7)([U.default], () => U.default.getCurrentUser()),
+        k = (0, a.e7)([L.Z], () => (0, b.Z)(L.Z)),
+        D = (0, a.e7)([W.Z], () => W.Z.getVoiceChannelId() === t.id, [t.id]),
+        B = (0, a.e7)([d.Z], () => d.Z.getStreamParticipants(t.id)[0], [t.id]),
+        H = (0, Y.PK)(t.id),
+        V = y > 0,
+        z = (A && !H) || (null != B && B.user.id !== (null == w ? void 0 : w.id)),
+        q = (0, N.Z)({ location: 'SpeakerControlTray' }),
+        { coloredIconsEnabled: K, simplifiedSettingsEnabled: X } = (0, x.Z)({ location: 'SpeakerControlTray' }),
+        Q = (0, m.u)('AudioDeviceMenu', 'StageChannelControlTray', { entrypoint: er.A5.CARET });
+    if (null == w) return null;
+    let J = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, r.jsx)(A.Z, {
-                        children: (0, r.jsx)(f.Z, {
+                    return (0, r.jsx)(T.Z, {
+                        children: (0, r.jsx)(h.Z, {
                             onClose: t,
                             simplified: X,
-                            onInteraction: (0, g.u)('VideoDeviceMenu', 'StageChannelControlTray', { entrypoint: ei.A5.CARET })
+                            onInteraction: (0, m.u)('VideoDeviceMenu', 'StageChannelControlTray', { entrypoint: er.A5.CARET })
                         })
                     });
                 },
                 position: 'top',
-                align: Y ? 'right' : 'center',
-                spacing: Y ? 16 : void 0,
+                align: q ? 'right' : 'center',
+                spacing: q ? 16 : void 0,
                 animation: s.yRy.Animation.FADE,
                 children: (e, t) => {
                     let { onClick: n } = e,
                         { isShown: i } = t;
-                    return (0, r.jsx)(k.C, {
+                    return (0, r.jsx)(M.C, {
                         centerButton: !0,
-                        hasPermission: y,
-                        enabled: v,
-                        cameraUnavailable: C,
-                        onChange: S.r,
-                        onCameraUnavailable: T.Z,
-                        channelLimitReached: w,
-                        channelLimit: x,
+                        hasPermission: v,
+                        enabled: C,
+                        cameraUnavailable: _,
+                        onChange: P.r,
+                        onCameraUnavailable: Z.Z,
+                        channelLimitReached: A,
+                        channelLimit: y,
                         popoutOpen: i,
                         onPopoutClick: n
                     });
                 }
             }),
-            Y
+            q
                 ? null
-                : (0, r.jsx)(S.NZ, {
+                : (0, r.jsx)(P.NZ, {
                       channel: t,
-                      currentUser: R,
+                      currentUser: w,
                       exitFullScreen: () => null,
-                      canGoLive: L,
-                      hasPermission: y,
-                      disabled: q
+                      canGoLive: k,
+                      hasPermission: v,
+                      disabled: z
                   })
         ]
     });
-    return Y
+    return q
         ? (0, r.jsxs)('div', {
-              className: eo.experimentWrapper,
+              className: el.experimentWrapper,
               children: [
-                  W && !n
+                  D && !n
                       ? (0, r.jsx)('div', {
-                            className: o()(eo.buttonSection, { [eo.experimentButtonSection]: Q }),
+                            className: o()(el.buttonSection, { [el.experimentButtonSection]: K }),
                             children: (0, r.jsxs)('div', {
-                                className: o()(eo.avControls),
+                                className: o()(el.avControls),
                                 children: [
                                     (0, r.jsx)(s.yRy, {
                                         renderPopout: (e) => {
                                             let { closePopout: t } = e;
-                                            return (0, r.jsx)(A.Z, {
-                                                children: X
-                                                    ? (0, r.jsx)(h.default, {
-                                                          onClose: t,
-                                                          renderInputDevices: !0,
-                                                          renderInputModes: !0,
-                                                          renderOutputDevices: !0,
-                                                          renderInputVolume: !0,
-                                                          renderOutputVolume: !0,
-                                                          renderDeafen: !0,
-                                                          simplified: !0,
-                                                          onInteraction: J
-                                                      })
-                                                    : (0, r.jsx)(h.default, {
-                                                          onClose: t,
-                                                          renderInputDevices: !0,
-                                                          renderOutputDevices: !0,
-                                                          renderInputModes: !0,
-                                                          onInteraction: J
-                                                      })
+                                            return (0, r.jsx)(T.Z, {
+                                                children: (0, r.jsx)(p.default, {
+                                                    onClose: t,
+                                                    renderInputDevices: !0,
+                                                    renderInputModes: !0,
+                                                    renderOutputDevices: !0,
+                                                    renderInputVolume: X,
+                                                    renderOutputVolume: X,
+                                                    renderDeafen: X,
+                                                    simplified: X,
+                                                    onInteraction: Q
+                                                })
                                             });
                                         },
                                         align: 'right',
@@ -421,71 +410,71 @@ let ef = i.memo(function (e) {
                                         children: (e, t) => {
                                             let { onClick: o } = e,
                                                 { isShown: a } = t;
-                                            return (0, r.jsx)(M.Z, {
+                                            return (0, r.jsx)(R.Z, {
                                                 centerButton: !0,
                                                 onPopoutClick: o,
                                                 selfMute: i,
                                                 serverMute: l,
                                                 suppress: n,
                                                 popoutOpen: a,
-                                                onClick: () => (0, m.Z)(l, n, 'Stage Channel Controls'),
+                                                onClick: () => (0, f.Z)(l, n, 'Stage Channel Controls'),
                                                 awaitingRemote: u
                                             });
                                         }
                                     }),
-                                    z &&
+                                    V &&
                                         (0, r.jsx)('div', {
-                                            className: eo.avSpacing,
+                                            className: el.avSpacing,
                                             'aria-hidden': 'true',
                                             role: 'presentation'
                                         }),
-                                    z && $
+                                    V && J
                                 ]
                             })
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: o()(eo.buttonSection, { [eo.experimentButtonSection]: Q }),
+                      className: o()(el.buttonSection, { [el.experimentButtonSection]: K }),
                       children: [
-                          W && !n && z
-                              ? (0, r.jsx)(S.NZ, {
+                          D && !n && V
+                              ? (0, r.jsx)(P.NZ, {
                                     channel: t,
-                                    currentUser: R,
+                                    currentUser: w,
                                     exitFullScreen: () => null,
-                                    canGoLive: L,
-                                    hasPermission: y,
-                                    disabled: q
+                                    canGoLive: k,
+                                    hasPermission: v,
+                                    disabled: z
                                 })
                               : null,
-                          (0, r.jsx)(eh, { channelId: t.id }),
-                          W && (0, r.jsx)(es, { channel: t }),
-                          W && c && n && (0, r.jsx)(eu, { onClick: () => (0, H.RK)(t, !1) }),
-                          W && !n && (0, r.jsx)(ep, { onClick: () => (0, H.yi)(t) }),
-                          X ? (0, r.jsx)(Z.Z, { channel: t }) : null
+                          (0, r.jsx)(ep, { channelId: t.id }),
+                          D && (0, r.jsx)(ea, { channel: t }),
+                          D && c && n && (0, r.jsx)(ec, { onClick: () => (0, F.RK)(t, !1) }),
+                          D && !n && (0, r.jsx)(ed, { onClick: () => (0, F.yi)(t) }),
+                          X ? (0, r.jsx)(S.Z, { channel: t }) : null
                       ]
                   }),
-                  (0, r.jsx)(ed, { channel: t })
+                  (0, r.jsx)(eu, { channel: t })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: eo.container,
+              className: el.container,
               children: [
-                  (0, r.jsx)(eh, { channelId: t.id }),
-                  W && (0, r.jsx)(es, { channel: t }),
-                  W && !n
+                  (0, r.jsx)(ep, { channelId: t.id }),
+                  D && (0, r.jsx)(ea, { channel: t }),
+                  D && !n
                       ? (0, r.jsxs)('div', {
-                            className: o()(eo.avControls, eo.buttonSpacing),
+                            className: o()(el.avControls, el.buttonSpacing),
                             children: [
-                                z && $,
+                                V && J,
                                 (0, r.jsx)(s.yRy, {
                                     renderPopout: (e) => {
                                         let { closePopout: t } = e;
-                                        return (0, r.jsx)(A.Z, {
-                                            children: (0, r.jsx)(h.default, {
+                                        return (0, r.jsx)(T.Z, {
+                                            children: (0, r.jsx)(p.default, {
                                                 onClose: t,
                                                 renderInputDevices: !0,
                                                 renderOutputDevices: !0,
-                                                onInteraction: J
+                                                onInteraction: Q
                                             })
                                         });
                                     },
@@ -495,14 +484,14 @@ let ef = i.memo(function (e) {
                                     children: (e, t) => {
                                         let { onClick: o } = e,
                                             { isShown: a } = t;
-                                        return (0, r.jsx)(M.Z, {
+                                        return (0, r.jsx)(R.Z, {
                                             centerButton: !0,
                                             onPopoutClick: o,
                                             selfMute: i,
                                             serverMute: l,
                                             suppress: n,
                                             popoutOpen: a,
-                                            onClick: () => (0, m.Z)(l, n, 'Stage Channel Controls'),
+                                            onClick: () => (0, f.Z)(l, n, 'Stage Channel Controls'),
                                             awaitingRemote: u
                                         });
                                     }
@@ -510,62 +499,62 @@ let ef = i.memo(function (e) {
                             ]
                         })
                       : null,
-                  W && c && n && (0, r.jsx)(eu, { onClick: () => (0, H.RK)(t, !1) }),
-                  W && !n && (0, r.jsx)(ep, { onClick: () => (0, H.yi)(t) }),
-                  (0, r.jsx)(ed, { channel: t })
+                  D && c && n && (0, r.jsx)(ec, { onClick: () => (0, F.RK)(t, !1) }),
+                  D && !n && (0, r.jsx)(ed, { onClick: () => (0, F.yi)(t) }),
+                  (0, r.jsx)(eu, { channel: t })
               ]
           });
 });
-function em(e) {
+function ef(e) {
     let { channel: t } = e,
         n = (0, N.Z)({ location: 'StartStageControlTray' }),
-        { coloredIcons: i } = (0, j.Z)({ location: 'StartStageControlTray' });
+        { coloredIconsEnabled: i } = (0, x.Z)({ location: 'StartStageControlTray' });
     return n
         ? (0, r.jsxs)('div', {
-              className: eo.experimentWrapper,
+              className: el.experimentWrapper,
               children: [
                   (0, r.jsx)('div', {
-                      className: o()(eo.buttonSection, { [eo.experimentButtonSection]: i }),
-                      children: (0, r.jsx)(eh, { channelId: t.id })
+                      className: o()(el.buttonSection, { [el.experimentButtonSection]: i }),
+                      children: (0, r.jsx)(ep, { channelId: t.id })
                   }),
-                  (0, r.jsx)(ed, { channel: t })
+                  (0, r.jsx)(eu, { channel: t })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: eo.container,
-              children: [(0, r.jsx)(eh, { channelId: t.id }), (0, r.jsx)(ed, { channel: t })]
+              className: el.container,
+              children: [(0, r.jsx)(ep, { channelId: t.id }), (0, r.jsx)(eu, { channel: t })]
           });
 }
-let eg = i.memo(function (e) {
+let em = i.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
-        i = (0, ee.Z)(t.id),
-        l = (0, V.B)(t.id),
-        o = (0, a.e7)([W.Z], () => W.Z.can(z.yP, t), [t]),
-        s = (0, et.Z)(t.id),
+        i = (0, $.Z)(t.id),
+        l = (0, G.B)(t.id),
+        o = (0, a.e7)([D.Z], () => D.Z.can(V.yP, t), [t]),
+        s = (0, ee.Z)(t.id),
         c = (0, a.e7)([d.Z], () => (null != t ? d.Z.getSelectedParticipant(t.id) : null)),
         u = !s && null == c;
     return n
-        ? (0, r.jsx)(em, { channel: t })
+        ? (0, r.jsx)(ef, { channel: t })
         : i || l
           ? (0, r.jsxs)('div', {
-                className: eo.containerColumn,
+                className: el.containerColumn,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: eo.eventPrompts,
+                        className: el.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(v.Z, { channelId: null == t ? void 0 : t.id }) : null,
-                            (0, r.jsx)('div', { className: eo.separator }),
+                            u ? (0, r.jsx)(C.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            (0, r.jsx)('div', { className: el.separator }),
                             u && o
-                                ? (0, r.jsx)(y.Z, {
+                                ? (0, r.jsx)(v.Z, {
                                       highlight: !0,
                                       channel: t
                                   })
                                 : null,
-                            (0, r.jsx)('div', { className: eo.separator })
+                            (0, r.jsx)('div', { className: el.separator })
                         ]
                     }),
-                    (0, r.jsx)(ef, { channel: t })
+                    (0, r.jsx)(eh, { channel: t })
                 ]
             })
-          : (0, r.jsx)(ec, { channel: t });
+          : (0, r.jsx)(es, { channel: t });
 });

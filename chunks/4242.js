@@ -1,7 +1,9 @@
 n.d(t, {
-    BY: () => s,
-    xh: () => l
+    ic: () => a,
+    t1: () => l,
+    xh: () => c
 }),
+    n(301563),
     n(66153),
     n(970173),
     n(520712),
@@ -13,36 +15,27 @@ n.d(t, {
     n(492257),
     n(873817),
     n(610885),
-    n(126298),
-    n(47120);
-var r = n(192379),
-    i = n(605387),
-    o = n.n(i);
-n(442837), n(158776), n(699516), n(9156);
-var a = n(396821);
-function s(e, t) {
-    let { getImgCache: n, setImgCache: i } = (0, a.W_)();
-    (0, r.useEffect)(() => {
-        null != e &&
-            null == n(e) &&
-            (async () => {
-                let t = await fetch(e),
-                    n = await t.arrayBuffer();
-                i(e, e, await l(n));
-            })();
-    }, [e, n, i]);
-    let o = n(e);
-    if (null == o) return null;
-    let { animatedUrl: s, staticUrl: c } = o;
-    return t ? s : c;
+    n(126298);
+var r = n(605387),
+    i = n.n(r),
+    o = n(780771);
+function a(e) {
+    return e.name !== o.uj && (e.name !== o._j || (s(e.darkBackground) && s(e.lightBackground)));
 }
-function l(e) {
-    let t = o().decode(e),
-        n = o().toRGBA8(t)[0],
+function s(e) {
+    return /^#([0-9a-fA-F]{6})$/.test(e);
+}
+n(231338);
+let l = (e) => {
+    var t;
+    return null !== (t = o.N3[e]) && void 0 !== t ? t : o.jD;
+};
+function c(e) {
+    let t = i().decode(e),
+        n = i().toRGBA8(t)[0],
         r = document.createElement('canvas');
     (r.width = t.width), (r.height = t.height);
-    let i = r.getContext('2d'),
+    let o = r.getContext('2d'),
         a = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
-    return i.putImageData(a, 0, 0), r.toDataURL('image/png');
+    return o.putImageData(a, 0, 0), r.toDataURL('image/png');
 }
-n(614185), n(231338);
