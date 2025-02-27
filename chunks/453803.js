@@ -45,5 +45,6 @@ e.exports = {
     headerButtonContainer: 'headerButtonContainer_c50f62',
     errorMessageLine: 'errorMessageLine_c50f62',
     payWithFiatLink: 'payWithFiatLink_c50f62',
-    payWithFiatLinkText: 'payWithFiatLinkText_c50f62'
+    payWithFiatLinkText: 'payWithFiatLinkText_c50f62',
+    externalProductProfilePreview: 'externalProductProfilePreview_c50f62'
 };
