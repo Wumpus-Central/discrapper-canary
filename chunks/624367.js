@@ -25,52 +25,53 @@ var i = n(373793),
 let N = (0, v.Mg)(o.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function C(e) {
     var t, n, o, v;
-    let { applicationId: C, customId: I, referrerId: S, embedUrl: P } = e,
-        { analyticsLocations: T } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
-        [A] = (0, _.Z)([C]),
-        w = (0, a.e7)([b.Z], () => {
+    let { applicationId: C, customId: I, referrerId: S, embedUrl: T, linkId: P } = e,
+        { analyticsLocations: A } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
+        [w] = (0, _.Z)([C]),
+        Z = (0, a.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        Z = null == A ? void 0 : null === (t = A.bot) || void 0 === t ? void 0 : t.id,
-        k = null != A && (0, d.ye)(A),
-        R = (0, x.ZP)(null !== (o = null == A ? void 0 : A.maxParticipants) && void 0 !== o ? o : 0),
-        L = (0, O.Z)({
+        k = null == w ? void 0 : null === (t = w.bot) || void 0 === t ? void 0 : t.id,
+        R = null != w && (0, d.ye)(w),
+        L = (0, x.ZP)(null !== (o = null == w ? void 0 : w.maxParticipants) && void 0 !== o ? o : 0),
+        D = (0, O.Z)({
             applicationId: C,
             size: N,
             names: ['embedded_cover']
         }),
-        D = null !== (v = null == A ? void 0 : A.id) && void 0 !== v ? v : '0',
-        M = (0, y.TK)(D, (0, p.PL)(!0, !1)),
-        W = (0, y.TK)(D, (0, p.LD)(w, !1)),
-        F = async () => {
-            if (null != Z && (null == A ? void 0 : A.id) != null)
+        M = null !== (v = null == w ? void 0 : w.id) && void 0 !== v ? v : '0',
+        W = (0, y.TK)(M, (0, p.PL)(!0, !1)),
+        F = (0, y.TK)(M, (0, p.LD)(Z, !1)),
+        U = async () => {
+            if (null != k && (null == w ? void 0 : w.id) != null)
                 try {
                     await (0, u.W)({
-                        appId: A.id,
-                        botId: Z,
-                        analyticsLocations: T,
+                        appId: w.id,
+                        botId: k,
+                        analyticsLocations: A,
                         customId: I,
                         referrerId: S
                     });
                 } catch (e) {}
         },
-        { enabled: U } = h.G.useExperiment({ location: 'ActivityBookmarkEmbed' });
-    return null == A || !1 === k
+        { enabled: B } = h.G.useExperiment({ location: 'ActivityBookmarkEmbed' });
+    return null == w || !1 === R
         ? null
-        : U
+        : B
           ? (0, r.jsx)(c.Gt, {
-                value: T,
+                value: A,
                 children: (0, r.jsx)(g.O, {
-                    app: A,
-                    embedUrl: P,
+                    app: w,
+                    embedUrl: T,
                     linkType: g.U.ACTIVITY,
                     activityCustomId: I,
-                    activityReferrerId: S
+                    activityReferrerId: S,
+                    linkId: P
                 })
             })
           : (0, r.jsx)(c.Gt, {
-                value: T,
+                value: A,
                 children: (0, r.jsxs)('div', {
                     className: j.container,
                     children: [
@@ -78,8 +79,8 @@ function C(e) {
                             className: j.imgContainer,
                             children: (0, r.jsx)('img', {
                                 className: j.img,
-                                alt: A.name,
-                                src: L.url
+                                alt: w.name,
+                                src: D.url
                             })
                         }),
                         (0, r.jsxs)('div', {
@@ -88,12 +89,12 @@ function C(e) {
                                 (0, r.jsx)(l.X6q, {
                                     className: j.heading,
                                     variant: 'heading-xl/semibold',
-                                    children: A.name
+                                    children: w.name
                                 }),
                                 (0, r.jsx)(l.X6q, {
                                     className: j.description,
                                     variant: 'heading-sm/medium',
-                                    children: null === (n = A.description) || void 0 === n ? void 0 : n.trim()
+                                    children: null === (n = w.description) || void 0 === n ? void 0 : n.trim()
                                 }),
                                 (0, r.jsxs)('div', {
                                     className: j.cta,
@@ -108,24 +109,24 @@ function C(e) {
                                                 }),
                                                 (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/semibold',
-                                                    children: R
+                                                    children: L
                                                 })
                                             ]
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: j.buttonWrapper,
                                             children: [
-                                                null != A &&
+                                                null != w &&
                                                     (0, r.jsx)(l.zxk, {
                                                         onClick: () => {
                                                             var e;
-                                                            null != A &&
-                                                                (i.Y.USER_INSTALL in (null !== (e = A.integrationTypesConfig) && void 0 !== e ? e : {}) || M || W
-                                                                    ? (0, d.X)(A.id)
+                                                            null != w &&
+                                                                (i.Y.USER_INSTALL in (null !== (e = w.integrationTypesConfig) && void 0 !== e ? e : {}) || W || F
+                                                                    ? (0, d.X)(w.id)
                                                                     : (0, f.dx)({
-                                                                          guildId: w,
+                                                                          guildId: Z,
                                                                           view: m.eN.APPLICATION,
-                                                                          applicationId: A.id,
+                                                                          applicationId: w.id,
                                                                           entrypoint: { name: m.n3.OAUTH2_EMBED }
                                                                       }));
                                                         },
@@ -134,7 +135,7 @@ function C(e) {
                                                         children: E.NW.string(E.t.fbcCzc)
                                                     }),
                                                 (0, r.jsx)(l.zxk, {
-                                                    onClick: F,
+                                                    onClick: U,
                                                     className: j.button,
                                                     color: l.Ttl.GREEN,
                                                     children: E.NW.string(E.t.RscU7O)

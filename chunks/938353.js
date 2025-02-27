@@ -303,17 +303,19 @@ class e9 extends (r = a.Component) {
                           r
                       );
                   else if (n === j.g.ACTIVITY_BOOKMARK) {
-                      var o, l;
+                      var o, l, s;
                       let t = new URL(a),
                           n = null !== (o = t.searchParams.get('referrer_id')) && void 0 !== o ? o : e.author.id,
-                          s = null !== (l = t.searchParams.get('custom_id')) && void 0 !== l ? l : void 0;
+                          c = null !== (l = t.searchParams.get('custom_id')) && void 0 !== l ? l : void 0,
+                          d = null !== (s = t.searchParams.get('link_id')) && void 0 !== s ? s : void 0;
                       return (0, i.jsx)(
                           g.Z,
                           {
                               applicationId: r,
                               message: e,
                               referrerId: n,
-                              customId: s,
+                              customId: c,
+                              linkId: d,
                               embedUrl: a
                           },
                           r
@@ -902,7 +904,7 @@ function e5(e) {
         { hasInlineForwardButton: D } = (0, P.yk)({ location: 'MessageAccessories' }),
         M = (0, A.a)(r) && D,
         W = (0, eC._)(n),
-        F = (0, eO.ro)(r.id);
+        F = (0, eO.ro)(r.id, r.channel_id);
     return (0, i.jsx)(
         e9,
         e$(
@@ -974,7 +976,7 @@ let e6 = (e) => {
         g = (0, V.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         _ = (0, X.Z)(null == r ? void 0 : r.id),
         b = (0, I.V)(r.id, n.author.id),
-        v = (0, eO.ro)(n.id),
+        v = (0, eO.ro)(n.id, n.channel_id),
         y = (0, J.Z)(n);
     return (0, i.jsx)(
         e9,
