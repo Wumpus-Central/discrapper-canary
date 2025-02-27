@@ -10,6 +10,7 @@ e.exports = {
     hasBoostingPill: 'hasBoostingPill__54675',
     optionIconAndLabel: 'optionIconAndLabel__54675',
     optionLabelText: 'optionLabelText__54675',
+    hasPremiumIcon: 'hasPremiumIcon__54675',
     gifGrid: 'gifGrid__54675',
     imageUploadOption: 'imageUploadOption__54675',
     gif: 'gif__54675',

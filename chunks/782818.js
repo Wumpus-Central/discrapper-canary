@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function C(e) {
+function A(e) {
     let { avatar: t, orderNumber: n, onSelectRecentAvatar: l } = e,
         { id: a, storageHash: i, description: o } = t,
         { avatarSrc: s, eventHandlers: u } = (0, j.Z)({
@@ -67,7 +67,7 @@ function C(e) {
         })
     });
 }
-function A(e) {
+function C(e) {
     let { numberOfLockedAvatarSlots: t } = e,
         a = l.useCallback(() => {
             (0, c.ZDy)(async () => {
@@ -190,7 +190,7 @@ function N(e) {
                                       (0, r.jsx)(
                                           'li',
                                           {
-                                              children: (0, r.jsx)(C, {
+                                              children: (0, r.jsx)(A, {
                                                   avatar: e,
                                                   orderNumber: t + 1,
                                                   onSelectRecentAvatar: Z
@@ -205,7 +205,7 @@ function N(e) {
                                   className: O.emptyAvatarSlots,
                                   children: [(0, r.jsx)(c.nn4, { children: y.NW.format(y.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(b.Z, { className: O.avatarPlaceholder }, t))]
                               }),
-                          !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: w })
+                          !t && (0, r.jsx)(C, { numberOfLockedAvatarSlots: w })
                       ]
                   })
               ]
@@ -225,9 +225,8 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: O.text,
                 children: [
-                    (0, r.jsx)(c.X6q, {
-                        variant: 'eyebrow',
-                        color: 'header-secondary',
+                    (0, r.jsx)(c.vwX, {
+                        className: O.recentAvatarsHeading,
                         children: y.NW.string(y.t.Bnq9zM)
                     }),
                     (0, r.jsxs)(c.Text, {
