@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(743236),
     d = n(481060),
     f = n(540059),
-    p = n(186523),
-    _ = n(553826),
+    _ = n(186523),
+    p = n(553826),
     h = n(939350),
-    m = n(253068);
-function g(e, t, n) {
+    g = n(253068);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -66,7 +66,7 @@ function b(e, t) {
     );
 }
 function y(e) {
-    let { color: t = 'default', label: n, checked: o, subtext: g, disabled: v, isFocused: y, menuItemProps: O, action: S } = e,
+    let { color: t = 'default', label: n, checked: o, subtext: m, disabled: v, isFocused: y, menuItemProps: O, action: S } = e,
         { onInteraction: I } = i.useContext(c.p),
         T = i.useRef(null),
         N = (0, f.Q3)('MenuRadioItem');
@@ -75,15 +75,9 @@ function y(e) {
     }, [y]);
     let A = i.useCallback(
         (e) => {
-            S(e),
-                null == I ||
-                    I({
-                        id: O.id,
-                        rootItemId: O.rootItemId,
-                        type: c.U.RADIO
-                    });
+            S(e), null == I || I({ type: c.U.RADIO });
         },
-        [S, I, O]
+        [S, I]
     );
     return (0, r.jsxs)(
         s.P,
@@ -91,9 +85,9 @@ function y(e) {
             E(
                 {
                     innerRef: T,
-                    className: a()(m.item, m.labelContainer, h._[t], {
-                        [m.disabled]: v,
-                        [m.focused]: y
+                    className: a()(g.item, g.labelContainer, h._[t], {
+                        [g.disabled]: v,
+                        [g.focused]: y
                     }),
                     onClick: v ? void 0 : A
                 },
@@ -104,33 +98,33 @@ function y(e) {
                 'aria-disabled': v,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: m.label,
+                        className: g.label,
                         children: [
                             (0, l.I)(n, e),
-                            null != g &&
+                            null != m &&
                                 (0, r.jsx)('div', {
-                                    className: m.subtext,
-                                    children: g
+                                    className: g.subtext,
+                                    children: m
                                 })
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: m.iconContainer,
+                        className: g.iconContainer,
                         children: N
                             ? (0, r.jsx)(d.Fj9, {
                                   checked: o,
                                   disabled: v,
-                                  radioItemIconClassName: m.radioIcon
+                                  radioItemIconClassName: g.radioIcon
                               })
                             : o
-                              ? (0, r.jsx)(_.Z, {
-                                    className: m.icon,
-                                    background: m.__invalid_radio,
-                                    foreground: m.radioSelection
+                              ? (0, r.jsx)(p.Z, {
+                                    className: g.icon,
+                                    background: g.__invalid_radio,
+                                    foreground: g.radioSelection
                                 })
-                              : (0, r.jsx)(p.Z, {
-                                    className: m.icon,
-                                    foreground: m.__invalid_radio
+                              : (0, r.jsx)(_.Z, {
+                                    className: g.icon,
+                                    foreground: g.__invalid_radio
                                 })
                     })
                 ]

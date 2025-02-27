@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,63 +48,58 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function h(e) {
-    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: p, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
+    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: g, onClose: m } = e,
         { onInteraction: E } = i.useContext(s.p),
         v = i.useRef(null),
         b = i.useRef(null);
     i.useLayoutEffect(() => {
         var e, t, n;
-        p ? ((0, l.F)(v), null === (e = b.current) || void 0 === e || e.focus()) : null === (n = b.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
-    }, [p]);
+        _ ? ((0, l.F)(v), null === (e = b.current) || void 0 === e || e.focus()) : null === (n = b.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
+    }, [_]);
     let y = i.useCallback(() => {
             var e, t;
-            (null === (t = b.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && g();
-        }, [g]),
+            (null === (t = b.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && m();
+        }, [m]),
         O = o(
             {
-                onClose: g,
+                onClose: m,
                 disabled: d,
-                isFocused: p,
+                isFocused: _,
                 onInteraction: i.useCallback(
                     (e) => {
-                        null == E ||
-                            E({
-                                id: m.id,
-                                rootItemId: m.rootItemId,
-                                type: null != e ? e : s.U.DEFAULT
-                            });
+                        null == E || E({ type: null != e ? e : s.U.DEFAULT });
                     },
-                    [E, m]
+                    [E]
                 )
             },
             b
         );
     return (0, r.jsxs)(
         'div',
-        _(
+        p(
             f(
                 {
                     onClick: y,
                     className: a()(u.item, c._[t], {
                         [u.disabled]: d,
-                        [u.focused]: h && p,
+                        [u.focused]: h && _,
                         [u.hideInteraction]: !h
                     }),
                     'aria-disabled': d
                 },
-                m
+                g
             ),
             {
                 children: [

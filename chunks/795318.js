@@ -23,27 +23,25 @@ function l(e, t) {
 function c(e) {
     var t;
     let {
-            menuItemProps: { rootItemId: n, id: a, type: l },
-            menuName: c,
-            location: u,
-            entrypoint: d,
-            targetUserId: f,
-            tileType: p
+            menuItemProps: { type: n },
+            menuName: a,
+            location: l,
+            entrypoint: c,
+            targetUserId: u,
+            tileType: d
         } = e,
-        _ = o.Z.getChannelId(),
-        h = o.Z.getGuildId(),
-        m = null === (t = i.Z.getChannel(_)) || void 0 === t ? void 0 : t.type;
+        f = o.Z.getChannelId(),
+        _ = o.Z.getGuildId(),
+        p = null === (t = i.Z.getChannel(f)) || void 0 === t ? void 0 : t.type;
     (0, r.yw)(s.rMx.CALL_SETTINGS_MENU_ITEM_INTERACTED, {
-        location: u,
-        menu_name: c,
-        menu_item_type: l,
-        root_menu_item_id: n,
-        menu_item_id: a,
-        entrypoint: d,
-        target_user_id: f,
-        voice_channel_guild_id: h,
-        voice_channel_id: _,
-        voice_channel_type: m,
-        tile_type: p
+        location: l,
+        menu_name: a,
+        menu_item_type: n,
+        entrypoint: c,
+        target_user_id: u,
+        voice_channel_guild_id: _,
+        voice_channel_id: f,
+        voice_channel_type: p,
+        tile_type: d
     });
 }

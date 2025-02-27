@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(743236),
     d = n(525220),
     f = n(481060),
-    p = n(939350),
-    _ = n(253068);
+    _ = n(939350),
+    p = n(253068);
 function h(e, t, n) {
     return (
         t in e
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,31 +57,22 @@ function E(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function v(e) {
-    let { color: t = 'default', label: n, icon: o, iconLeft: h, iconLeftSize: g = 'md', hint: v, subtext: b, subtextLineClamp: y, hasSubmenu: O, disabled: S, isFocused: I, menuItemProps: T, action: N, onClose: A, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: x, iconProps: L, sparkle: M } = e,
+    let { color: t = 'default', label: n, icon: o, iconLeft: h, iconLeftSize: m = 'md', hint: v, subtext: b, subtextLineClamp: y, hasSubmenu: O, disabled: S, isFocused: I, menuItemProps: T, action: N, onClose: A, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: D, dontCloseOnActionIfHoldingShiftKey: w, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
         { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                if (
-                    (null == j ||
-                        j({
-                            id: T.id,
-                            rootItemId: T.rootItemId,
-                            type: c.U.DEFAULT
-                        }),
-                    null == N)
-                )
-                    return !1;
-                (e.shiftKey && D) || x || A(), e.persist(), null == k || k(), requestAnimationFrame(() => N(e));
+                if ((null == j || j({ type: c.U.DEFAULT }), null == N)) return !1;
+                (e.shiftKey && w) || L || A(), e.persist(), null == k || k(), requestAnimationFrame(() => N(e));
             },
-            [N, A, k, D, x, T, j]
+            [N, A, k, w, L, j]
         );
     return (
         i.useEffect(() => {
@@ -90,12 +81,12 @@ function v(e) {
         (0, r.jsxs)(
             s.P,
             E(
-                m(
+                g(
                     {
                         innerRef: U,
-                        className: a()(_.item, _.labelContainer, p._[t], R, {
-                            [_.disabled]: S,
-                            [_.focused]: I,
+                        className: a()(p.item, p.labelContainer, _._[t], R, {
+                            [p.disabled]: S,
+                            [p.focused]: I,
                             [null != P ? P : '']: I
                         }),
                         onClick: S ? void 0 : G,
@@ -108,23 +99,23 @@ function v(e) {
                     children: [
                         null != h &&
                             (0, r.jsx)('div', {
-                                className: a()(_.iconContainerLeft, { [_.iconContainerLarge]: 'lg' === g }),
+                                className: a()(p.iconContainerLeft, { [p.iconContainerLarge]: 'lg' === m }),
                                 children: (0, r.jsx)(
                                     h,
-                                    E(m({ color: 'currentColor' }, L), {
-                                        className: a()(_.icon, null == L ? void 0 : L.className),
+                                    E(g({ color: 'currentColor' }, x), {
+                                        className: a()(p.icon, null == x ? void 0 : x.className),
                                         isFocused: I
                                     })
                                 )
                             }),
                         (0, r.jsxs)('div', {
-                            className: _.label,
+                            className: p.label,
                             children: [
                                 (0, l.I)(n, e),
                                 null != b &&
                                     (0, r.jsx)(f.Text, {
                                         variant: 'text-xs/normal',
-                                        className: a()(_.subtext, { [_.subtextLineClamp]: null != y }),
+                                        className: a()(p.subtext, { [p.subtextLineClamp]: null != y }),
                                         lineClamp: y,
                                         children: b
                                     })
@@ -132,32 +123,32 @@ function v(e) {
                         }),
                         null != v &&
                             (0, r.jsx)('div', {
-                                className: _.hintContainer,
+                                className: p.hintContainer,
                                 children: (0, l.I)(v, e)
                             }),
                         (0, d.Y)(o)
                             ? o
                             : null != o &&
                               (0, r.jsx)('div', {
-                                  className: a()(_.iconContainer),
+                                  className: a()(p.iconContainer),
                                   children: (0, r.jsx)(
                                       o,
-                                      E(m({ color: 'currentColor' }, L), {
-                                          className: a()(_.icon, null == L ? void 0 : L.className),
+                                      E(g({ color: 'currentColor' }, x), {
+                                          className: a()(p.icon, null == x ? void 0 : x.className),
                                           isFocused: I
                                       })
                                   )
                               }),
                         O &&
                             (0, r.jsxs)('div', {
-                                className: _.iconContainer,
+                                className: p.iconContainer,
                                 children: [
                                     (0, r.jsx)(f.Fbu, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: a()(_.caret, w)
+                                        className: a()(p.caret, D)
                                     }),
-                                    M && (0, r.jsx)(f.K1N, { className: _.sparkles })
+                                    M && (0, r.jsx)(f.K1N, { className: p.sparkles })
                                 ]
                             })
                     ]

@@ -1,37 +1,38 @@
-n.d(t, { j: () => y }), n(47120);
+n.d(t, { j: () => v }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(704215),
     a = n(481060),
-    s = n(243778),
-    c = n(667105),
-    u = n(695346),
-    d = n(819640),
-    p = n(626135),
-    h = n(316496),
-    f = n(55185),
-    g = n(981631),
-    m = n(921944),
-    b = n(46140);
-let y = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: y } = e,
-        { rtcPopoutEnabled: v } = (0, h.S)('SharingPrivacyPopout'),
-        O = (0, c.Ws)({ location: b.dr.CONFLICT_CHECKS }),
-        j = u.G6.useSetting(),
-        [_, C] = (0, i.useState)(!1),
-        x = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(g.S9g.USER_SETTINGS));
+    s = n(605236),
+    c = n(243778),
+    u = n(667105),
+    d = n(695346),
+    p = n(819640),
+    h = n(626135),
+    f = n(316496),
+    g = n(55185),
+    m = n(981631),
+    b = n(921944),
+    y = n(46140);
+let v = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
+        { rtcPopoutEnabled: O } = (0, f.S)('SharingPrivacyPopout'),
+        j = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
+        _ = d.G6.useSetting(),
+        [C, x] = (0, i.useState)(!1),
+        P = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(m.S9g.USER_SETTINGS));
     return ((0, i.useEffect)(() => {
-        n && p.default.track(g.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
+        n && h.default.track(m.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    v && (O || n) && (!j || _) && !x)
-        ? (0, r.jsx)(s.ZP, {
+    O && (j || n) && (!_ || C) && !P)
+        ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
-                  let { visibleContent: i, markAsDismissed: l } = e;
+                  let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          l(m.L.USER_DISMISS), y(!1), C(!1);
+                          (0, s.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: b.L.USER_DISMISS }), v(!1), x(!1);
                       };
                       return (0, r.jsx)(a.yRy, {
                           shouldShow: !0,
@@ -41,13 +42,13 @@ let y = (e) => {
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
                               return n
-                                  ? (0, r.jsx)(f.z, {
+                                  ? (0, r.jsx)(g.z, {
                                         closePopout: t,
-                                        setToggleDefaultState: C
+                                        setToggleDefaultState: x
                                     })
-                                  : (0, r.jsx)(f.r, {
+                                  : (0, r.jsx)(g.r, {
                                         closePopout: t,
-                                        setToggleDefaultState: C
+                                        setToggleDefaultState: x
                                     });
                           },
                           children: () =>
