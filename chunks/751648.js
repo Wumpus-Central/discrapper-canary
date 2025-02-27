@@ -76,7 +76,11 @@ function c() {
     return i.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN' });
 }
 function u() {
-    return i.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE' });
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    return i.Z.dispatch({
+        type: 'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE',
+        hideImmediately: e
+    });
 }
 function d(e) {
     let { earnedOrbsQuantity: t, dedupeKey: n } = e;

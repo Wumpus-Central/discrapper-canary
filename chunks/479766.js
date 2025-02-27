@@ -19,6 +19,9 @@ class s extends (r = i.ZP.Store) {
     get balanceWidgetPillIsOverlaid() {
         return this._balanceWidgetPillIsOverlaid;
     }
+    get hidePillOverlayImmediately() {
+        return this._hidePillOverlayImmediately;
+    }
     get earnedOrbsCoachmark() {
         return {
             shouldOpen: this._earnedOrbsCoachmarkOpen,
@@ -49,6 +52,9 @@ class s extends (r = i.ZP.Store) {
     get onboardingModalOpenedPrior() {
         return this._onboardingModalOpenedPrior;
     }
+    getCurrentBalance() {
+        return this.balance;
+    }
     handleBalanceFetch(e) {
         let {} = e;
         (this._isFetchingBalance = !0), (this._fetchBalanceError = null);
@@ -78,8 +84,8 @@ class s extends (r = i.ZP.Store) {
         (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
     }
     toggleBalanceWidgetPillOverlay(e) {
-        let { type: t } = e;
-        'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN' === t ? (this._balanceWidgetPillIsOverlaid = !0) : (this._balanceWidgetPillIsOverlaid = !1);
+        let { type: t, hideImmediately: n } = e;
+        'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN' === t ? ((this._balanceWidgetPillIsOverlaid = !0), (this._hidePillOverlayImmediately = !1)) : ((this._balanceWidgetPillIsOverlaid = !1), n && (this._hidePillOverlayImmediately = !0));
     }
     handleOnboardingModalOpen(e) {
         let {} = e;
@@ -121,6 +127,7 @@ class s extends (r = i.ZP.Store) {
             a(this, '_fetchBalanceError', null),
             a(this, '_isFetchingBalance', !1),
             a(this, '_balanceWidgetPillIsOverlaid', !1),
+            a(this, '_hidePillOverlayImmediately', !1),
             a(this, '_onboardingModalOpenedPrior', !1),
             a(this, '_earnedOrbsCoachmarkOpen', !1),
             a(this, '_earnedOrbsCoachmarkDedupeKeys', []),

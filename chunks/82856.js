@@ -1,7 +1,8 @@
 n.d(t, {
     Pe: () => b,
-    c9: () => O,
-    lJ: () => T
+    S6: () => s.S6,
+    lJ: () => T,
+    vp: () => O
 });
 var r = n(200651),
     i = n(192379),
@@ -13,7 +14,7 @@ var r = n(200651),
     u = n(970815),
     d = n(622562),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -54,7 +55,7 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +66,7 @@ function m(e, t) {
         e
     );
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,8 +89,9 @@ function E(e, t) {
 let v = 'balance-widget-pill-overlay',
     b = () => (0, a.nfh)(v),
     y = () => (0, a.Mr3)(v),
-    O = () => {
-        (0, s.vp)(), (0, a.Mr3)(v);
+    O = (e) => {
+        let { hideImmediately: t } = null != e ? e : { hideImmediately: !1 };
+        (0, s.vp)(t), y();
     },
     S = {
         modalKey: v,
@@ -99,7 +101,7 @@ let v = 'balance-widget-pill-overlay',
         }
     };
 function I(e) {
-    (0, a.ZDy)(async () => (t) => (0, r.jsx)(A, _({ onClick: f.dG4 }, e, t)), S);
+    (0, a.ZDy)(async () => (t) => (0, r.jsx)(A, p({ onClick: f.dG4 }, e, t)), S);
 }
 function T(e) {
     let { shouldOpen: t } = (0, o.cj)([c.Z], () => ({ shouldOpen: c.Z.balanceWidgetPillIsOverlaid }));
@@ -124,15 +126,16 @@ let N = {
 };
 function A(e) {
     var { backgroundElementRef: t, onClick: n, onClose: i } = e;
-    g(e, ['backgroundElementRef', 'onClick', 'onClose']);
-    let { balance: o } = (0, l.A)(),
-        a = async () => {
+    m(e, ['backgroundElementRef', 'onClick', 'onClose']);
+    let { balance: a } = (0, l.A)(),
+        _ = async () => {
             await (0, s.vp)(), await i();
-        };
+        },
+        { hideImmediately: h } = (0, o.cj)([c.Z], () => ({ hideImmediately: c.Z.hidePillOverlayImmediately }));
     return (0, r.jsx)(
         d.E,
-        m(
-            _(
+        g(
+            p(
                 {
                     backgroundElementRef: t,
                     onGetBoundingRect: f.dG4
@@ -140,13 +143,15 @@ function A(e) {
                 N
             ),
             {
-                children: (0, r.jsx)(u.A4, {
-                    onClick: async (e) => {
-                        void 0 !== n && n(e), await a();
-                    },
-                    balance: o,
-                    balanceWidgetMode: u.b6.DEFAULT
-                })
+                children: h
+                    ? null
+                    : (0, r.jsx)(u.A4, {
+                          onClick: async (e) => {
+                              void 0 !== n && n(e), await _();
+                          },
+                          balance: a,
+                          balanceWidgetMode: u.b6.DEFAULT
+                      })
             }
         )
     );

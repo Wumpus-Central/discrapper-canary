@@ -9,12 +9,12 @@ var n = r(200651),
     u = r(511050),
     d = r(82856),
     f = r(272008),
-    b = r(497505),
-    m = r(918701),
+    m = r(497505),
+    b = r(918701),
     p = r(642145),
     y = r(215023),
     O = r(388032),
-    j = r(262143),
+    j = r(435696),
     g = r(232474);
 function h(e) {
     let { transitionState: t, rewardAmount: r, balance: a, onSubmit: c, onClose: l, state: i } = e;
@@ -121,21 +121,21 @@ function C(e) {
             }
             return a;
         })(e, ['quest', 'onClose']);
-    let g = (0, m.LM)(o.config),
+    let g = (0, b.LM)(o.config),
         { balance: C } = (0, s.A)(),
         w = (function (e, t) {
             let [r, n] = a.useState('loading'),
                 [o, l] = a.useState(!1),
                 { balance: i } = (0, s.A)(),
                 u = (0, c.Z)(i),
-                [d, m] = a.useState(!1);
+                [d, b] = a.useState(!1);
             if (
                 (a.useEffect(() => {
                     let e = null;
                     return (
                         'success' === r &&
                             (e = setTimeout(() => {
-                                m(!0);
+                                b(!0);
                             }, 1000)),
                         () => {
                             null != e && clearTimeout(e);
@@ -146,7 +146,7 @@ function C(e) {
                     !o && null != i && null != u && i > u && l(!0);
                 }, [i, u, o]),
                 a.useEffect(() => {
-                    (0, f.QB)(e, b.y$.CROSS_PLATFORM, t)
+                    (0, f.QB)(e, m.y$.CROSS_PLATFORM, t)
                         .then((e) => {
                             if ((null == e ? void 0 : e.claimedAt) != null) {
                                 n('success');
@@ -168,11 +168,15 @@ function C(e) {
             return 'loading';
         })(o.id, j.location),
         { openIntroToOrbsClaimedCoachmark: v } = (0, u.Z)({ location: 'QuestsOrbsRewardModal' }),
-        x = a.useCallback(async () => {
-            O(), await (0, d.c9)();
-        }, [O]),
+        x = a.useCallback(
+            async function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                await (0, d.vp)({ hideImmediately: e }), O();
+            },
+            [O]
+        ),
         S = a.useCallback(() => {
-            x(),
+            x(!0),
                 (0, i.mK)({
                     openInLayer: !1,
                     tab: y.AW.ORBS,
