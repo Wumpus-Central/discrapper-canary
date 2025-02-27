@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(571269), n(298267);
+n.d(t, { Z: () => W }), n(571269), n(298267);
 var r = n(200651),
     o = n(192379),
     s = n(120356),
@@ -170,9 +170,9 @@ function D(e) {
         })
     );
 }
-function I(e) {
+function W(e) {
     var t, n, s, i, u;
-    let { quest: m, isHovering: C, errorHints: E, warningHints: I, onCtxMenuClose: W, onCtxMenuOpen: M, onCtxMenuSelect: L } = e,
+    let { quest: m, isHovering: C, errorHints: E, warningHints: W, onCtxMenuClose: I, onCtxMenuOpen: M, onCtxMenuSelect: L } = e,
         Z = (0, j.q8)(m),
         V = o.useMemo(() => (0, y.fh)(m, y.eC.HERO), [m]),
         Q = (0, p.ZP)(),
@@ -188,10 +188,7 @@ function I(e) {
         }),
         G = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         J = (null === (s = m.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
-        $ = (0, v.h)({
-            quest: m,
-            location: N.dr.QUEST_HOME_DESKTOP
-        }),
+        $ = (0, v.h)(m, N.dr.QUEST_HOME_DESKTOP),
         ee = o.useCallback(() => {
             Z &&
                 ((0, j.zi)(m) ||
@@ -308,7 +305,7 @@ function I(e) {
                                         }),
                                     (0, r.jsx)(S.r, {
                                         onOpen: M,
-                                        onClose: W,
+                                        onClose: I,
                                         onSelect: L,
                                         questContent: b.jn.QUEST_HOME_DESKTOP,
                                         quest: m,
@@ -360,7 +357,7 @@ function I(e) {
                     (0, r.jsx)(q, {
                         quest: m,
                         errorHints: E,
-                        warningHints: I,
+                        warningHints: W,
                         isDarkTheme: U
                     })
                 ]
