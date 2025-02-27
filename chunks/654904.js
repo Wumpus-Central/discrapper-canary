@@ -1,22 +1,25 @@
 n.d(t, {
-    $r: () => _,
-    DP: () => g,
+    $r: () => h,
+    DP: () => E,
     Ly: () => m,
-    SG: () => h
-});
+    SG: () => g
+}),
+    n(757143),
+    n(301563);
 var r = n(200651);
 n(192379);
 var i = n(866442),
     o = n(481060);
 n(531643);
-var a = n(768581);
+var a = n(643879),
+    s = n(768581);
 n(403182);
-var s = n(51144),
-    l = n(661543),
-    c = n(200299),
-    u = n(486324),
-    d = n(388032);
-function f(e, t, n) {
+var l = n(51144),
+    c = n(661543),
+    u = n(200299),
+    d = n(486324),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,12 +43,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t, i, a) {
+function h(e, t, i, s) {
     (0, o.ZDy)(async () => {
         let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('6812')]).then(n.bind(n, 192277));
         return (n) =>
@@ -53,14 +56,21 @@ function _(e, t, i, a) {
                 o,
                 p(
                     {
-                        filters: a,
-                        maxFileSizeBytes: c.B,
-                        imageSpecifications: e === u.pC.BANNER ? d.NW.string(d.t.IhzZlp) : void 0,
+                        filters: s,
+                        maxFileSizeBytes: u.B,
+                        imageSpecifications: e === d.pC.BANNER ? f.NW.string(f.t.IhzZlp) : void 0,
                         onComplete: (n) => {
-                            let { imageUri: r, file: o } = n;
-                            (0, l.j)({
-                                imageSrc: r,
-                                file: o,
+                            let { assetOrigin: r, imageUri: o, file: s, originalAsset: l } = n,
+                                u = s.name.replace(/\.[^/.]+$/, ''),
+                                d = (0, a.cN)({
+                                    assetOrigin: r,
+                                    imageUri: o,
+                                    description: u,
+                                    originalAsset: l
+                                });
+                            (0, c.j)({
+                                image: d,
+                                file: s,
                                 uploadType: e,
                                 guildId: t,
                                 isTryItOutFlow: i
@@ -74,20 +84,20 @@ function _(e, t, i, a) {
             );
     });
 }
-function h(e, t, n) {
+function g(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
     let { size: i = 80, canAnimate: o = !0 } = r,
-        s = null === e;
-    return s && null == t ? a.ZP.getDefaultAvatarURL(n.id, n.discriminator) : s || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
+        a = null === e;
+    return a && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
 }
 function m(e) {
     var t;
     let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
         a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
-        l = '' === r ? i.username : r;
-    return null !== (t = null != a ? a : l) && void 0 !== t ? t : s.ZP.getName(i);
+        s = '' === r ? i.username : r;
+    return null !== (t = null != a ? a : s) && void 0 !== t ? t : l.ZP.getName(i);
 }
-function g(e) {
+function E(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

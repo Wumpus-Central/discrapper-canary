@@ -20,26 +20,27 @@ let p = (e) => {
 function b(e) {
     let { location: t } = e,
         [r, c] = n.useState(null),
-        d = u.t.useExperiment({ location: t }),
-        b = (0, s.e7)([o.ZP], () => o.ZP.getMostRecentPremiumTypeSubscription()),
-        g = (0, s.e7)([l.Z], () => !l.Z.shouldFetchOffer()),
-        O = (0, s.e7)([o.ZP], () => o.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
-        m = (0, s.e7)([i.default], () => i.default.getCurrentUser()),
-        h = (0, a.I5)(m);
+        b = u.t.useExperiment({ location: t }),
+        g = (0, s.e7)([o.ZP], () => o.ZP.getMostRecentPremiumTypeSubscription()),
+        O = (0, s.e7)([l.Z], () => l.Z.hasFetchedOffer()),
+        m = (0, s.e7)([o.ZP], () => o.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
+        h = (0, s.e7)([i.default], () => i.default.getCurrentUser()),
+        x = (null == h ? void 0 : h.hadPremiumSubscription()) && !m,
+        j = !(0, a.I5)(h) && !O;
     return (
         n.useEffect(() => {
-            if (!1 === d.enabled) {
+            if (!1 === b.enabled) {
                 c(!1);
                 return;
             }
-            if (O && g) {
-                if (null === b) {
-                    h ? c(!1) : c(!0);
+            if (!x && !j) {
+                if (null === g) {
+                    (0, a.I5)(h, d.p9.TIER_2) ? c(!1) : c(!0);
                     return;
                 }
-                b.isPaused ? c(!0) : b.isEnded ? (l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || p(b) ? c(!1) : c(!0)) : b.isActive ? c(f(b)) : c(!1);
+                g.isPaused ? c(!0) : g.isEnded ? (l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || p(g) ? c(!1) : c(!0)) : g.isActive ? c(f(g)) : c(!1);
             }
-        }, [d.enabled, O, b, g, h]),
+        }, [b.enabled, g, x, j, h]),
         r
     );
 }

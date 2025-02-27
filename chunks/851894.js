@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
     s = n(512722),
@@ -12,19 +12,20 @@ var r = n(200651),
     g = n(906732),
     p = n(296810),
     h = n(921813),
-    f = n(621853),
-    b = n(246946),
-    N = n(594174),
-    x = n(63063),
-    _ = n(74538),
-    E = n(18438),
-    j = n(778825),
-    C = n(856607),
-    O = n(594496),
-    v = n(856768),
-    S = n(981631),
-    T = n(388032);
-function I(e) {
+    f = n(643879),
+    b = n(621853),
+    N = n(246946),
+    x = n(594174),
+    _ = n(63063),
+    E = n(74538),
+    j = n(18438),
+    C = n(778825),
+    O = n(856607),
+    v = n(594496),
+    S = n(856768),
+    T = n(981631),
+    I = n(388032);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +50,7 @@ function I(e) {
     }
     return e;
 }
-function y(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,24 +68,24 @@ function y(e, t) {
         e
     );
 }
-function A(e) {
+function P(e) {
     (0, o.ZDy)(async () => {
         let { default: t } = await n.e('84509').then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, I({ source: y(I({}, e), { page: S.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, y({ source: A(y({}, e), { page: T.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
-function P(e) {
+function R(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
-        s = (0, l.e7)([N.default], () => {
-            let e = N.default.getCurrentUser();
+        s = (0, l.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        P = (0, l.e7)([f.Z], () => !f.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
-        R = (0, l.e7)([b.Z], () => b.Z.hidePersonalInformation),
-        D = (0, l.cj)([j.Z], () => y(I({}, j.Z.getAllPending()), { source: j.Z.getSource() })),
-        { source: Z } = D,
-        w = (function (e, t) {
+        R = (0, l.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
+        D = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        Z = (0, l.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        { source: w, pendingAvatarV2: k } = Z,
+        W = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -102,54 +103,56 @@ function P(e) {
                 for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(D, ['source']);
-    return (i.useEffect(() => () => c.Z.wait(E.W3), []),
+        })(Z, ['source', 'pendingAvatarV2']),
+        L = (0, f.SD)({
+            userId: s.id,
+            image: k
+        });
+    return (i.useEffect(() => () => c.Z.wait(j.W3), []),
     i.useEffect(() => {
-        null != Z &&
-            m.ZP.trackWithMetadata(S.rMx.SETTINGS_PANE_VIEWED, {
+        null != w &&
+            m.ZP.trackWithMetadata(T.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: S.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                source: Z
+                destination_pane: T.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                source: w
             });
-    }, [Z]),
-    R)
+    }, [w]),
+    D)
         ? (0, r.jsx)(d.Z, {})
-        : P
+        : R
           ? (0, r.jsxs)(g.Gt, {
                 value: n,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: T.NW.format(T.t['/PTB2N'], { helpCenterLink: x.Z.getArticleURL(S.BhN.GUILD_PROFILES) })
+                        children: I.NW.format(I.t['/PTB2N'], { helpCenterLink: _.Z.getArticleURL(T.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(v.Z, {
+                                  (0, r.jsx)(S.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, E.HP)(e);
+                                          null != e && (0, j.HP)(e);
                                       }
                                   }),
                                   (0, r.jsx)(p.Z, {
-                                      previewTitle: T.NW.formatToPlainString(T.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
+                                      previewTitle: I.NW.formatToPlainString(I.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, r.jsx)(
                                           h.Z,
-                                          I(
-                                              {
-                                                  user: s,
-                                                  guild: t,
-                                                  canUsePremiumCustomization: _.ZP.canUsePremiumProfileCustomization(s),
-                                                  onUpsellClick: A
-                                              },
-                                              w
-                                          )
+                                          A(y({}, W), {
+                                              pendingAvatar: L,
+                                              user: s,
+                                              guild: t,
+                                              canUsePremiumCustomization: E.ZP.canUsePremiumProfileCustomization(s),
+                                              onUpsellClick: P
+                                          })
                                       ),
-                                      children: (0, r.jsx)(O.Z, {})
+                                      children: (0, r.jsx)(v.Z, {})
                                   })
                               ]
                           })
-                        : (0, r.jsx)(C.Z, {})
+                        : (0, r.jsx)(O.Z, {})
                 ]
             })
           : (0, r.jsx)(o.$jN, {});

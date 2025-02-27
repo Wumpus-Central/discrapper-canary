@@ -4,5 +4,6 @@ e.exports = {
     leftColumn: 'leftColumn_dbba93',
     rightColumn: 'rightColumn_dbba93',
     divider: 'divider_dbba93',
+    profilePreviewContainer: 'profilePreviewContainer_dbba93',
     profilePreview: 'profilePreview_dbba93'
 };

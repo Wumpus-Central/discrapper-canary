@@ -113,11 +113,14 @@ let E = function () {
                           }),
                           (0, r.jsx)('div', {
                               className: I.rightColumn,
-                              children: (0, r.jsx)(m.Z, {
-                                  className: I.profilePreview,
-                                  profile: T,
-                                  disableCTA: !0,
-                                  onIconChange: P ? w : void 0
+                              children: (0, r.jsx)(a.Ttm, {
+                                  className: I.profilePreviewContainer,
+                                  children: (0, r.jsx)(m.Z, {
+                                      className: I.profilePreview,
+                                      profile: T,
+                                      disableCTA: !0,
+                                      onIconChange: P ? w : void 0
+                                  })
                               })
                           })
                       ]

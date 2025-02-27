@@ -1,50 +1,57 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(570140),
     i = n(809206),
     l = n(317770),
     o = n(18438),
     a = n(378879),
-    s = n(350327),
-    c = n(594174),
-    u = n(74538),
-    d = n(486324);
-let p = (e) => {
-        let { imageSrc: t, file: n, guildId: r, isTryItOutFlow: l } = e;
+    s = n(643879),
+    c = n(350327),
+    u = n(594174),
+    d = n(74538),
+    p = n(486324);
+let h = (e) => {
+        let { image: t, file: n, guildId: r, isTryItOutFlow: l } = e;
         if (l) {
-            (0, s.c_)(t);
+            (0, c.US)(t);
             return;
         }
-        let p = c.default.getCurrentUser(),
-            h = null != r ? o.I5 : i.I5,
-            f = u.ZP.canUseAnimatedAvatar(p);
-        if (f || 'image/gif' !== n.type) {
-            h(t);
+        let h = u.default.getCurrentUser(),
+            f = null != r ? o.Re : i.Re,
+            g = d.ZP.canUseAnimatedAvatar(h);
+        if (g || 'image/gif' !== n.type) {
+            f(t);
             return;
         }
-        if (null != p && !f) {
-            (0, a.s)(d.pC.AVATAR, t);
+        if (null == h) return;
+        let m = (0, s.SD)({
+            userId: h.id,
+            image: t
+        });
+        if (!g) {
+            (0, a.s)(p.pC.AVATAR, m);
             return;
         }
     },
-    h = (e) => {
-        let { imageSrc: t, guildId: n, isTryItOutFlow: r } = e;
+    f = (e) => {
+        let { image: t, guildId: n, isTryItOutFlow: r } = e,
+            i = t.imageUri;
         if (r) {
-            (0, s.f4)(t);
+            (0, c.f4)(i);
             return;
         }
-        let i = c.default.getCurrentUser(),
-            l = null != n ? o.g_ : s.g_,
-            p = u.ZP.canUsePremiumProfileCustomization(i);
-        if (u.ZP.canUsePremiumProfileCustomization(i)) {
-            l(t);
+        let l = u.default.getCurrentUser(),
+            s = null != n ? o.g_ : c.g_,
+            h = d.ZP.canUsePremiumProfileCustomization(l);
+        if (d.ZP.canUsePremiumProfileCustomization(l)) {
+            s(i);
             return;
         }
-        if (null != i && !p) {
-            (0, a.s)(d.pC.BANNER, t);
+        if (null != l && !h) {
+            (0, a.s)(p.pC.BANNER, i);
             return;
         }
     };
-class f extends l.Z {
+class g extends l.Z {
     _initialize() {
         r.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
@@ -52,7 +59,7 @@ class f extends l.Z {
         r.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === d.pC.AVATAR ? p(e) : e.uploadType === d.pC.BANNER ? h(e) : void 0;
+        return e.uploadType === p.pC.AVATAR ? h(e) : e.uploadType === p.pC.BANNER ? f(e) : void 0;
     }
 }
-let g = new f();
+let m = new g();
