@@ -1,7 +1,6 @@
 t.d(n, {
     ZP: () => f,
-    _R: () => j,
-    gm: () => h
+    _R: () => j
 }),
     t(47120);
 var i = t(200651),
@@ -14,23 +13,23 @@ var i = t(200651),
     d = t(413335),
     u = t(838968),
     x = t(279604),
-    v = t(783684),
+    v = t(730621),
     p = t(388032),
-    _ = t(104109),
-    b = t(623388);
+    b = t(610881),
+    _ = t(709435);
 function m(e) {
     let n,
         { active: t, nextActive: r, position: o } = e;
     return (
         (n = t && !1 !== r ? 'full' : t && !1 === r ? 'half' : 'none'),
         (0, i.jsxs)('div', {
-            className: _.progressContainer,
+            className: b.progressContainer,
             children: [
-                (0, i.jsx)('div', { className: a()(_.progress, _[o], _[n]) }),
+                (0, i.jsx)('div', { className: a()(b.progress, b[o], b[n]) }),
                 (0, i.jsx)('div', {
-                    className: a()(_.boostContainer, { [_.boostContainerActive]: t }),
+                    className: a()(b.boostContainer, { [b.boostContainerActive]: t }),
                     children: (0, i.jsx)(d.Z, {
-                        className: _.boost,
+                        className: b.boost,
                         width: 16,
                         height: 16,
                         fill: 'white'
@@ -44,7 +43,7 @@ function h(e) {
     var n, t;
     let { index: r } = e;
     return (0, i.jsx)('div', {
-        className: _.perkRowContainer,
+        className: b.perkRowContainer,
         children:
             null === (t = l.C[r]) || void 0 === t
                 ? void 0
@@ -54,14 +53,14 @@ function h(e) {
                         (0, i.jsxs)(
                             'div',
                             {
-                                className: _.perkRow,
+                                className: b.perkRow,
                                 children: [
                                     (0, i.jsx)(e.icon, {
                                         color: c.TVs.colors.TEXT_MUTED,
                                         size: 'sm'
                                     }),
                                     (0, i.jsx)(s.xv, {
-                                        className: _.perkText,
+                                        className: b.perkText,
                                         color: 'text-muted',
                                         variant: 'text-sm/medium',
                                         children: e.getCopy()
@@ -74,38 +73,38 @@ function h(e) {
     });
 }
 function j(e) {
-    let { guildId: n, powerup: t, onError: o } = e,
-        { onActivate: a, isLoading: s, error: l, onDeactivate: u } = (0, x.Z)(n, t);
+    let { className: n, guildId: t, powerup: o, onError: s } = e,
+        { onActivate: l, isLoading: u, error: _, onDeactivate: m } = (0, x.Z)(t, o);
     return (
         r.useEffect(() => {
-            null == o || o(l);
-        }, [l, o]),
+            null == s || s(_);
+        }, [_, s]),
         (0, i.jsxs)(c.zxk, {
-            onClick: t.active ? u : a,
+            onClick: o.active ? m : l,
             fullWidth: !0,
-            className: _.button,
-            innerClassName: _.buttonInner,
-            color: t.active ? c.Ttl.PRIMARY : c.Ttl.BRAND,
-            submitting: s,
+            className: a()(b.button, n),
+            innerClassName: b.buttonInner,
+            color: o.active ? c.Ttl.PRIMARY : c.Ttl.BRAND,
+            submitting: u,
             children: [
-                p.NW.string(t.active ? v.Z.PYPdl5 : v.Z.AOQgkp),
-                !t.active &&
+                p.NW.string(o.active ? v.Z.PYPdl5 : v.Z.AOQgkp),
+                !o.active &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('span', {
-                                className: _.dot,
+                                className: b.dot,
                                 children: '\u2022'
                             }),
                             (0, i.jsx)(d.Z, {
-                                className: _.boost,
+                                className: b.boost,
                                 width: 16,
                                 height: 16,
                                 fill: 'white'
                             }),
                             ' ',
                             (0, i.jsx)('span', {
-                                className: _.cost,
-                                children: t.cost
+                                className: b.cost,
+                                children: o.cost
                             })
                         ]
                     })
@@ -125,7 +124,7 @@ function f(e) {
             label: a.title,
             onClick: l,
             active: a.active,
-            className: _.card,
+            className: b.card,
             children: [
                 (0, i.jsx)(m, {
                     position: n,
@@ -133,7 +132,7 @@ function f(e) {
                     nextActive: null == c ? void 0 : c.active
                 }),
                 (0, i.jsxs)('div', {
-                    className: b.contentContainer,
+                    className: _.contentContainer,
                     children: [
                         (0, i.jsx)(s.X6, {
                             variant: 'heading-md/bold',

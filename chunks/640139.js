@@ -1,16 +1,14 @@
-t.d(r, { default: () => d }), t(47120), t(266796);
+t.d(r, { default: () => i }), t(47120), t(266796);
 var n = t(200651),
     o = t(192379),
-    s = t(481060),
-    a = t(27237),
-    c = t(969867),
-    i = t(535396),
-    l = t(217719);
-function d(e) {
+    a = t(481060),
+    s = t(969867),
+    c = t(656659);
+function i(e) {
     var r,
         t,
-        { guildId: d, powerup: p } = e,
-        u = (function (e, r) {
+        { guildId: i, powerup: l } = e,
+        d = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -19,19 +17,19 @@ function d(e) {
                     var t,
                         n,
                         o = {},
-                        s = Object.keys(e);
-                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (t = a[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < s.length; n++) (t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++) (t = a[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let [m, b] = o.useState(void 0);
+    let [p, u] = o.useState(void 0);
     return (0, n.jsxs)(
-        s.Y0X,
+        a.Y0X,
         ((r = (function (e) {
             for (var r = 1; r < arguments.length; r++) {
                 var t = null != arguments[r] ? arguments[r] : {},
@@ -58,75 +56,57 @@ function d(e) {
             return e;
         })(
             {
-                className: l.modal,
-                size: s.CgR.DYNAMIC
+                className: c.modal,
+                size: a.CgR.DYNAMIC
             },
-            u
+            d
         )),
         (t = t =
             {
                 children: [
-                    (0, n.jsxs)(s.hzk, {
-                        className: l.modalContentContainer,
+                    (0, n.jsxs)(a.hzk, {
+                        className: c.modalContentContainer,
                         scrollbarType: 'none',
                         children: [
                             (0, n.jsxs)('div', {
-                                className: l.sidebar,
+                                className: c.sidebar,
                                 children: [
                                     (0, n.jsx)('img', {
                                         alt: '',
                                         src: '',
-                                        className: l.powerupImage
+                                        className: c.powerupImage
                                     }),
                                     (0, n.jsxs)('div', {
-                                        className: l.contentContainer,
+                                        className: c.contentContainer,
                                         children: [
-                                            (0, n.jsx)(s.X6q, {
+                                            (0, n.jsx)(a.X6q, {
                                                 variant: 'heading-xl/extrabold',
-                                                children: p.title
+                                                children: l.title
                                             }),
-                                            (() => {
-                                                switch (p.type) {
-                                                    case i.U.LEVEL:
-                                                        return (0, n.jsx)(a.gm, { index: 0 });
-                                                    case i.U.PERK:
-                                                        return (0, n.jsx)(s.Text, {
-                                                            className: l.description,
-                                                            variant: 'text-sm/normal',
-                                                            children: p.description
-                                                        });
-                                                }
-                                            })(),
-                                            null != m &&
-                                                (0, n.jsx)(s.Text, {
-                                                    className: l.error,
-                                                    color: 'text-danger',
+                                            (0, n.jsx)(a.Text, {
+                                                className: c.description,
+                                                variant: 'text-sm/normal',
+                                                children: l.description
+                                            }),
+                                            null != p &&
+                                                (0, n.jsx)(a.Text, {
+                                                    className: c.error,
+                                                    color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: m
+                                                    children: p
                                                 }),
-                                            (() => {
-                                                switch (p.type) {
-                                                    case i.U.LEVEL:
-                                                        return (0, n.jsx)(a._R, {
-                                                            guildId: d,
-                                                            powerup: p,
-                                                            onError: b
-                                                        });
-                                                    case i.U.PERK:
-                                                        return (0, n.jsx)(c.Z, {
-                                                            className: l.footer,
-                                                            guildId: d,
-                                                            powerup: p,
-                                                            onError: b
-                                                        });
-                                                }
-                                            })()
+                                            (0, n.jsx)(s.Z, {
+                                                className: c.footer,
+                                                guildId: i,
+                                                powerup: l,
+                                                onError: u
+                                            })
                                         ]
                                     })
                                 ]
                             }),
                             (0, n.jsx)('div', {
-                                className: l.exampleImage,
+                                className: c.exampleImage,
                                 children: (0, n.jsx)('img', {
                                     alt: '',
                                     src: ''
@@ -134,9 +114,9 @@ function d(e) {
                             })
                         ]
                     }),
-                    (0, n.jsx)(s.olH, {
-                        className: l.close,
-                        onClick: u.onClose
+                    (0, n.jsx)(a.olH, {
+                        className: c.close,
+                        onClick: d.onClose
                     })
                 ]
             }),

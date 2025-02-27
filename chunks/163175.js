@@ -1,9 +1,7 @@
-e.exports = {
-    root: 'root__52b47',
-    lifted: 'lifted__52b47',
-    stop1: 'stop1__52b47',
-    stop2: 'stop2__52b47',
-    stop3: 'stop3__52b47',
-    stop4: 'stop4__52b47',
-    stop5: 'stop5__52b47'
+n.exports = {
+    container: 'container__270b2',
+    iconButton: 'iconButton__270b2',
+    icon: 'icon__270b2',
+    innerButton: 'innerButton__270b2',
+    tooltips: 'tooltips__270b2'
 };

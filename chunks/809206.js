@@ -1,5 +1,5 @@
 n.d(t, {
-    FD: () => g,
+    FD: () => m,
     I5: () => S,
     Mn: () => y,
     P6: () => D,
@@ -25,8 +25,8 @@ var r = n(544891),
     u = n(546796),
     d = n(893776),
     f = n(981631),
-    p = n(792101),
-    _ = n(388032);
+    _ = n(792101),
+    p = n(388032);
 function h(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,19 +56,19 @@ function m(e) {
     }
     return e;
 }
-function g() {
+function m() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
 function E() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
 function v(e, t) {
-    let n = t ? _.NW.string(_.t['8lQ2ra']) : _.NW.string(_.t.jf5GGR),
+    let n = t ? p.NW.string(p.t['8lQ2ra']) : p.NW.string(p.t.jf5GGR),
         i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT,
         o = (t) =>
             r.tn.post({
                 url: i,
-                body: m({ password: e }, t),
+                body: g({ password: e }, t),
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
@@ -111,12 +111,12 @@ async function b(e) {
     );
 }
 function y(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: g, avatarDecoration: E, newPassword: v, globalName: y } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: m, avatarDecoration: E, newPassword: v, globalName: y } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, u.Z)(
             (e) => {
-                let a = m(
+                let a = g(
                     {
                         username: t,
                         email: r,
@@ -124,7 +124,7 @@ function y(e) {
                         password: s,
                         avatar: d,
                         avatar_description: h,
-                        avatar_id: g,
+                        avatar_id: m,
                         discriminator: n,
                         global_name: y,
                         new_password: v
@@ -133,14 +133,14 @@ function y(e) {
                 );
                 null === E && (a.avatar_decoration_id = null), null != E && ((a.avatar_decoration_id = E.id), (a.avatar_decoration_sku_id = E.skuId));
                 let l = i.K.get(f.JkL),
-                    c = (0, p.xJ)();
+                    c = (0, _.xJ)();
                 null != c && null != l && ((a.push_provider = c), (a.push_token = l));
                 let u = i.K.get(f.scU);
-                return null != p.mv && null != u && ((a.push_voip_provider = p.mv), (a.push_voip_token = u)), b(a);
+                return null != _.mv && null != u && ((a.push_voip_provider = _.mv), (a.push_voip_token = u)), b(a);
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: _.NW.string(_.t.clQc1d) },
+                modalProps: { title: p.NW.string(p.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({
@@ -158,6 +158,7 @@ function y(e) {
                         is_guild_profile: !1
                     }),
                     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }),
+                    (null != d || null != m) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
                     e
                 );
             },
@@ -184,14 +185,14 @@ function S(e) {
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? o.uv.announce(_.NW.string(_.t['f1+oNj'])) : o.uv.announce(_.NW.string(_.t.NstziY));
+        null == e ? o.uv.announce(p.NW.string(p.t['f1+oNj'])) : o.uv.announce(p.NW.string(p.t.NstziY));
 }
 function I(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_V2',
         avatar: e
     }),
-        null == e ? o.uv.announce(_.NW.string(_.t['f1+oNj'])) : o.uv.announce(_.NW.string(_.t.NstziY));
+        null == e ? o.uv.announce(p.NW.string(p.t['f1+oNj'])) : o.uv.announce(p.NW.string(p.t.NstziY));
 }
 function T(e) {
     a.Z.dispatch({

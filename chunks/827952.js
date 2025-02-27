@@ -1,2 +1,1 @@
-var r = n(397435);
-e.exports = r;
+e.exports = { text: 'text__87e56' };

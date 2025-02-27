@@ -1,6 +1,2 @@
-var r = {
-    container: 'container__790b6',
-    iconContainer: 'iconContainer__790b6',
-    textContainer: 'textContainer__790b6'
-};
+var r = { loading: 'loading__6ef4d' };
 e.exports = r;

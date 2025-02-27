@@ -1,9 +1,6 @@
-var r = {
-    clipContainer: 'clipContainer_ba21b4',
-    container: 'container_ba21b4',
-    scheduledMessageBar: 'scheduledMessageBar_ba21b4',
-    text: 'text_ba21b4',
-    scheduledMessageBarLabel: 'scheduledMessageBarLabel_ba21b4',
-    actions: 'actions_ba21b4'
+t.exports = {
+    bugReporterSubmitModalRoot: 'bugReporterSubmitModalRoot__341b5',
+    modalContent: 'modalContent__341b5',
+    closeButton: 'closeButton__341b5',
+    submitText: 'submitText__341b5'
 };
-e.exports = r;
