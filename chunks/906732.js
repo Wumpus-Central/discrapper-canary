@@ -22,19 +22,20 @@ function d(e, t) {
     return 0 === t.length ? e : [...e, ...l().flatten(t)];
 }
 function f() {
-    for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-    let [o, s] = i.useState(n),
-        l = i.useContext(c),
-        u = i.useMemo(() => d(l, o), [o, l]),
-        f = i.useMemo(() => d(l, o.slice(0, o.length - 1)), [o, l]);
+    for (var e, t, n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
+    let [s, l] = i.useState(r),
+        u = i.useContext(c),
+        f = i.useMemo(() => d(u, s), [s, u]),
+        _ = i.useMemo(() => d(u, s.slice(0, s.length - 1)), [s, u]);
     return (
         i.useEffect(() => {
-            a()(n, o) || s(n);
-        }, [n, o]),
+            a()(r, s) || l(r);
+        }, [r, s]),
         {
-            analyticsLocations: u,
-            sourceAnalyticsLocations: f,
-            newestAnalyticsLocation: null !== (e = u[u.length - 1]) && void 0 !== e ? e : null
+            analyticsLocations: f,
+            sourceAnalyticsLocations: _,
+            parentAnalyticsLocation: null !== (e = _[_.length - 1]) && void 0 !== e ? e : null,
+            newestAnalyticsLocation: null !== (t = f[f.length - 1]) && void 0 !== t ? t : null
         }
     );
 }

@@ -9,11 +9,11 @@ var r = n(512722),
     u = n(772096),
     d = n(428595),
     f = n(594199),
-    p = n(364458),
-    _ = n(70956),
+    _ = n(364458),
+    p = n(70956),
     h = n(40786),
-    m = n(362092);
-function g(e, t, n) {
+    g = n(362092);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -225,7 +225,7 @@ let N = {
             order: s.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
             parse: (e) =>
-                null != e[2] && '' !== e[2] && m.i6(e[2])
+                null != e[2] && '' !== e[2] && g.i6(e[2])
                     ? [
                           {
                               type: 'codeBlockSyntax',
@@ -246,26 +246,27 @@ let N = {
         }
     },
     A = /(-# +)/,
-    C = (0, p.Z)([S, N]),
-    R = (0, p.Z)([I, N]),
+    C = (0, _.Z)([S, N]),
+    R = (0, _.Z)([I, N]),
     P = l._p(C),
-    w = l._p(R),
-    D = {
+    D = l._p(R),
+    w = {
         max: 1 / 0,
-        maxAge: +_.Z.Millis.MINUTE,
+        maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    x = new (a())(D),
-    L = new (a())(D);
+    L = new (a())(w),
+    x = new (a())(w);
 function M(e, t, n) {
     let r = [],
         i = {
             returnMentionIds: !0,
             disableAutoBlockNewlines: !0,
-            guildId: t
+            guildId: t,
+            isSlate: !0
         },
-        o = n ? w : P,
-        a = n ? L : x,
+        o = n ? D : P,
+        a = n ? x : L,
         s = a.get(e);
     if (null != s) return s;
     let l =
@@ -288,7 +289,7 @@ function M(e, t, n) {
 function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = m.rN(e);
+        i = g.rN(e);
     if ((i.push(e.length), 1 === i.length && n)) return [];
     let o = 0,
         a = n,
@@ -303,7 +304,7 @@ function k(e, t) {
             });
         else {
             let a = n === i[i.length - 2] ? e.substring(n + 3) : '';
-            n += 3 + (null != a.match(m.Q2) ? a : '').length;
+            n += 3 + (null != a.match(g.Q2) ? a : '').length;
             let l = e.substring(o, n);
             '' !== l &&
                 M(l, t, r).forEach((e) => {
@@ -425,9 +426,9 @@ function U(e, t, n, r, o) {
         case 'url':
         case 'link':
         case 'subtext': {
-            r = V(t, r);
+            r = Z(t, r);
             let { before: n, after: i } = G(t, s, r, l);
-            return (r = Z(e, t, n, r, 'syntaxBefore')), o.push(s), (r = B(e, t, null != a ? a : '', r, o)), o.pop(), (r = Z(e, t, i, r, 'syntaxAfter')), V(t, r);
+            return (r = V(e, t, n, r, 'syntaxBefore')), o.push(s), (r = B(e, t, null != a ? a : '', r, o)), o.pop(), (r = V(e, t, i, r, 'syntaxAfter')), Z(t, r);
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(s));
@@ -468,10 +469,10 @@ function B(e, t, n, r, i) {
               n.forEach((n) => {
                   r = U(e, t, n, r, i);
               })),
-        V(t, r)
+        Z(t, r)
     );
 }
-function Z(e, t, n, r, o) {
+function V(e, t, n, r, o) {
     if (n.length > 0) {
         let a = t.indexOf(n, r),
             s = t.substring(r, a + n.length);
@@ -488,7 +489,7 @@ function Z(e, t, n, r, o) {
 }
 function F(e) {
     let { result: t, sourceText: n, text: r, originalStart: i, attributes: o, data: a } = e,
-        s = V(n, i);
+        s = Z(n, i);
     for (; '\n' === r.charAt(0) || ' ' === r.charAt(0); ) r = r.substring(1);
     let l = n.indexOf(r, s);
     if ((l !== s ? (s = i = H(t, n, s, l)) : '\\' === r && '\\' === n.charAt(l + 1) && (l++, (i = ++s)), l !== s))
@@ -515,13 +516,13 @@ function F(e) {
         u
     );
 }
-function V(e, t) {
+function Z(e, t) {
     for (; '\n' === e.charAt(t) || ' ' === e.charAt(t); ) t++;
     return t;
 }
 function H(e, t, n, r) {
     for (; n < r; )
-        if (O.has(t[n])) (n = Z(e, t, t[n], n, 'syntaxBefore')), (n = V(t, n));
+        if (O.has(t[n])) (n = V(e, t, t[n], n, 'syntaxBefore')), (n = Z(t, n));
         else break;
     return n;
 }
