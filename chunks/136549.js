@@ -8,5 +8,9 @@ e.exports = {
     voiceIcons: 'voiceIcons_adebba',
     voiceIcon: 'voiceIcon_adebba',
     interactive: 'interactive_adebba',
-    speaking: 'speaking_adebba'
+    speaking: 'speaking_adebba',
+    hiddenVoiceStates: 'hiddenVoiceStates_adebba',
+    locked: 'locked_adebba',
+    hiddenVoiceStatesAvatar: 'hiddenVoiceStatesAvatar_adebba',
+    hiddenVoiceStatesText: 'hiddenVoiceStatesText_adebba'
 };

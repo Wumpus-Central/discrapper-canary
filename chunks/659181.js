@@ -21,15 +21,16 @@ function c(e, t, n) {
 let u = ['500428425362931713', '451550535720501248', '471376328319303681', '466696214818193408'];
 class d extends o.Z {
     static createFromServer(e) {
-        var t, n, r, o, a, l;
-        let { price: c } = e;
+        var t, n, r, o, a, l, c;
+        let { price: u } = e;
         return new d({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
             application: null != e.application ? s.ZP.createFromServer(e.application) : null,
+            eligiblePaymentGateways: null !== (t = e.eligible_payment_gateways) && void 0 !== t ? t : null,
             productLine: e.product_line,
-            name: null !== (t = e.name) && void 0 !== t ? t : '',
+            name: null !== (n = e.name) && void 0 !== n ? n : '',
             releaseDate: null != e.release_date ? i()(e.release_date) : null,
             preorderReleaseAt: null != e.preorder_release_at ? i()(e.preorder_release_at) : null,
             preorderApproximateReleaseDate: e.preorder_approximate_release_date,
@@ -45,25 +46,25 @@ class d extends o.Z {
             contentRatingAgency: e.content_rating_agency,
             legalNotice: e.legal_notice,
             price:
-                null != c
+                null != u
                     ? {
-                          amount: c.amount,
-                          currency: c.currency,
-                          saleAmount: c.sale_amount,
-                          salePercentage: c.sale_percentage,
-                          premium: c.premium
+                          amount: u.amount,
+                          currency: u.currency,
+                          saleAmount: u.sale_amount,
+                          salePercentage: u.sale_percentage,
+                          premium: u.premium
                       }
                     : null,
-            premium: null !== (n = e.premium) && void 0 !== n && n,
+            premium: null !== (r = e.premium) && void 0 !== r && r,
             showAgeGate: e.show_age_gate || !1,
             restricted: e.restricted || !1,
-            slug: null !== (r = e.slug) && void 0 !== r ? r : '',
+            slug: null !== (o = e.slug) && void 0 !== o ? o : '',
             exclusive: e.exclusive || !1,
-            locales: null !== (o = e.locales) && void 0 !== o ? o : ['en-US'],
+            locales: null !== (a = e.locales) && void 0 !== a ? a : ['en-US'],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
-            deleted: null !== (a = e.deleted) && void 0 !== a && a,
-            bundledSkuIds: null !== (l = e.bundled_sku_ids) && void 0 !== l ? l : []
+            deleted: null !== (l = e.deleted) && void 0 !== l && l,
+            bundledSkuIds: null !== (c = e.bundled_sku_ids) && void 0 !== c ? c : []
         });
     }
     get supportedOperatingSystems() {
@@ -130,6 +131,6 @@ class d extends o.Z {
         return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
     }
     constructor(e) {
-        super(), c(this, 'id', void 0), c(this, 'type', void 0), c(this, 'applicationId', void 0), c(this, 'application', void 0), c(this, 'productLine', void 0), c(this, 'name', void 0), c(this, 'releaseDate', void 0), c(this, 'preorderReleaseAt', void 0), c(this, 'preorderApproximateReleaseDate', void 0), c(this, 'summary', void 0), c(this, 'features', void 0), c(this, 'genres', void 0), c(this, 'dependentSkuId', void 0), c(this, 'manifests', void 0), c(this, 'availableRegions', void 0), c(this, 'accessType', void 0), c(this, 'systemRequirements', void 0), c(this, 'contentRating', void 0), c(this, 'contentRatingAgency', void 0), c(this, 'legalNotice', void 0), c(this, 'price', void 0), c(this, 'premium', void 0), c(this, 'showAgeGate', void 0), c(this, 'restricted', void 0), c(this, 'slug', void 0), c(this, 'exclusive', void 0), c(this, 'locales', void 0), c(this, 'flags', void 0), c(this, 'externalPurchaseUrl', void 0), c(this, 'deleted', void 0), c(this, 'bundledSkuIds', void 0), (this.id = e.id), (this.type = e.type), (this.applicationId = e.applicationId), (this.application = e.application), (this.productLine = e.productLine), (this.name = e.name), (this.preorderReleaseAt = e.preorderReleaseAt), (this.preorderApproximateReleaseDate = e.preorderApproximateReleaseDate), (this.releaseDate = e.releaseDate), (this.summary = e.summary), (this.features = e.features), (this.genres = e.genres), (this.dependentSkuId = e.dependentSkuId), (this.manifests = e.manifests), (this.availableRegions = e.availableRegions), (this.accessType = e.accessType), (this.systemRequirements = e.systemRequirements), (this.contentRating = e.contentRating), (this.contentRatingAgency = e.contentRatingAgency), (this.legalNotice = e.legalNotice), (this.price = e.price), (this.premium = e.premium), (this.showAgeGate = e.showAgeGate), (this.restricted = e.restricted), (this.slug = e.slug), (this.exclusive = e.exclusive), (this.locales = e.locales), (this.flags = e.flags), (this.externalPurchaseUrl = e.externalPurchaseUrl || null), (this.deleted = e.deleted), (this.bundledSkuIds = e.bundledSkuIds);
+        super(), c(this, 'id', void 0), c(this, 'type', void 0), c(this, 'applicationId', void 0), c(this, 'application', void 0), c(this, 'eligiblePaymentGateways', void 0), c(this, 'productLine', void 0), c(this, 'name', void 0), c(this, 'releaseDate', void 0), c(this, 'preorderReleaseAt', void 0), c(this, 'preorderApproximateReleaseDate', void 0), c(this, 'summary', void 0), c(this, 'features', void 0), c(this, 'genres', void 0), c(this, 'dependentSkuId', void 0), c(this, 'manifests', void 0), c(this, 'availableRegions', void 0), c(this, 'accessType', void 0), c(this, 'systemRequirements', void 0), c(this, 'contentRating', void 0), c(this, 'contentRatingAgency', void 0), c(this, 'legalNotice', void 0), c(this, 'price', void 0), c(this, 'premium', void 0), c(this, 'showAgeGate', void 0), c(this, 'restricted', void 0), c(this, 'slug', void 0), c(this, 'exclusive', void 0), c(this, 'locales', void 0), c(this, 'flags', void 0), c(this, 'externalPurchaseUrl', void 0), c(this, 'deleted', void 0), c(this, 'bundledSkuIds', void 0), (this.id = e.id), (this.type = e.type), (this.applicationId = e.applicationId), (this.application = e.application), (this.eligiblePaymentGateways = e.eligiblePaymentGateways), (this.productLine = e.productLine), (this.name = e.name), (this.preorderReleaseAt = e.preorderReleaseAt), (this.preorderApproximateReleaseDate = e.preorderApproximateReleaseDate), (this.releaseDate = e.releaseDate), (this.summary = e.summary), (this.features = e.features), (this.genres = e.genres), (this.dependentSkuId = e.dependentSkuId), (this.manifests = e.manifests), (this.availableRegions = e.availableRegions), (this.accessType = e.accessType), (this.systemRequirements = e.systemRequirements), (this.contentRating = e.contentRating), (this.contentRatingAgency = e.contentRatingAgency), (this.legalNotice = e.legalNotice), (this.price = e.price), (this.premium = e.premium), (this.showAgeGate = e.showAgeGate), (this.restricted = e.restricted), (this.slug = e.slug), (this.exclusive = e.exclusive), (this.locales = e.locales), (this.flags = e.flags), (this.externalPurchaseUrl = e.externalPurchaseUrl || null), (this.deleted = e.deleted), (this.bundledSkuIds = e.bundledSkuIds);
     }
 }

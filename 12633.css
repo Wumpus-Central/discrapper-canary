@@ -25101,15 +25101,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding: 0 !important
 }
 
+.textAreaForOverlayInlineReply__74017,
 .textAreaForUserProfile__74017 {
-    font-size: 0.875rem
-}
-
-.textAreaForOverlayInlineReply__74017 {
-    padding: 7px 12px !important
-}
-
-.textAreaForOverlayInlineReply__74017 {
     font-size: 0.875rem
 }
 
@@ -33240,9 +33233,14 @@ html:not(.visual-refresh) .root_e5f3a9 {
     object-position: top
 }
 
-.avatarDecoration__0b5ea {
+.avatarDecoration__0b5ea,
+.nameplateContainer__0b5ea {
     width: 42px;
     height: 42px
+}
+
+.nameplateContainer__0b5ea {
+    position: relative
 }
 
 .collectiblePreview_a56a22 {

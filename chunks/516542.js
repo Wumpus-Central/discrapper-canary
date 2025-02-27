@@ -1,63 +1,66 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     r = n(192379),
     o = n(904245),
     l = n(13245),
-    a = n(655687),
-    s = n(541716),
-    c = n(752305),
-    u = n(893718),
+    s = n(655687),
+    a = n(541716),
+    u = n(752305),
+    c = n(893718),
     d = n(957730),
     p = n(849522),
-    f = n(145597),
-    h = n(981631),
-    g = n(365889);
-function _(e) {
-    let { id: t, channel: n, onSend: _ } = e,
-        m = (0, p.Z)(),
-        { placeholder: v, accessibilityLabel: O } = (0, a.Z)({ channel: n }),
-        [b, y] = r.useState(() => (0, c.H2)()),
-        { textValue: E, richValue: x } = b,
-        [I, S] = r.useState(!1),
-        C = r.useCallback(() => S(!0), []),
-        j = r.useCallback(() => S(!1), []),
-        w = r.useCallback((e, t, n) => {
-            y({
+    h = n(145597),
+    f = n(981631),
+    m = n(365889);
+function g(e) {
+    let { id: t, channel: n, onSend: g } = e,
+        O = (0, p.Z)(),
+        { placeholder: v, accessibilityLabel: y } = (0, s.Z)({ channel: n }),
+        [E, b] = r.useState(() => (0, u.H2)()),
+        { textValue: x, richValue: j } = E,
+        [S, I] = r.useState(!1),
+        C = r.useCallback(() => I(!0), []),
+        N = r.useCallback(() => I(!1), []),
+        Z = r.useCallback((e, t, n) => {
+            b({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        Z = r.useCallback(
+        w = r.useCallback(
             (e) => {
-                'Escape' === e.key && l.Z.updateNotificationStatus(t, h._1z.ACTIVE);
+                'Escape' === e.key && l.Z.updateNotificationStatus(t, f._1z.ACTIVE);
             },
             [t]
         ),
-        N = r.useCallback(
+        _ = r.useCallback(
             () => (
-                E.length > m || (o.Z.sendMessage(n.id, d.ZP.parse(n, E), !1), l.Z.setInputLocked(!0, (0, f.QF)()), l.Z.updateNotificationStatus(t, h._1z.DISMISSED), null == _ || _(E)),
+                x.length > O || (o.Z.sendMessage(n.id, d.ZP.parse(n, x), !1), l.Z.setInputLocked(!0, (0, h.getPID)()), l.Z.updateNotificationStatus(t, f._1z.DISMISSED), null == g || g(x)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [E, m, n, t, _]
+            [x, O, n, t, g]
         );
-    return (0, i.jsx)(u.Z, {
-        innerClassName: g.textArea,
-        onChange: w,
-        placeholder: v,
-        accessibilityLabel: O,
-        channel: n,
-        textValue: E,
-        richValue: x,
-        type: s.Ie.OVERLAY_INLINE_REPLY,
-        onBlur: j,
-        onFocus: C,
-        focused: I,
-        onSubmit: N,
-        onKeyDown: Z,
-        autoCompletePosition: 'bottom',
-        disableThemedBackground: !0
+    return (0, i.jsx)('div', {
+        children: (0, i.jsx)(c.Z, {
+            innerClassName: m.textArea,
+            onChange: Z,
+            placeholder: v,
+            accessibilityLabel: y,
+            channel: n,
+            textValue: x,
+            richValue: j,
+            type: a.Ie.OVERLAY_INLINE_REPLY,
+            allowNewLines: !1,
+            onBlur: N,
+            onFocus: C,
+            focused: S,
+            onSubmit: _,
+            onKeyDown: w,
+            autoCompletePosition: 'bottom',
+            disableThemedBackground: !0
+        })
     });
 }

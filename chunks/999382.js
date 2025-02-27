@@ -277,6 +277,7 @@ function ex(e) {
     {
         let e = C.Z.getGuild(s.id);
         if (null == e) return !1;
+        (l = S.Z.getProfile(s.id)), r !== M.pNK.PROFILE && (c = l);
         let t = (a = e),
             n = s.toJS();
         Z.forEach((e) => {

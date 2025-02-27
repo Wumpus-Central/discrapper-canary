@@ -25,8 +25,8 @@ var r = n(200651),
     O = n(501787),
     E = n(388032),
     S = n(333307),
-    k = n(841699);
-function I(e) {
+    I = n(841699);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,7 +72,7 @@ function w(e, t) {
 let Z = {
         [T.Odu.CLICK_ZONE_DEBUG]: (e) =>
             w(
-                I(
+                k(
                     {
                         type: T.Odu.CLICK_ZONE_DEBUG,
                         id: (0, o.Z)(),
@@ -92,7 +92,7 @@ let Z = {
             ),
         [T.Odu.PERFORMANCE_DEBUG]: (e) =>
             w(
-                I(
+                k(
                     {
                         type: T.Odu.PERFORMANCE_DEBUG,
                         id: (0, o.Z)(),
@@ -132,9 +132,11 @@ function R(e) {
         (0, r.jsxs)(c.zxk, {
             look: c.zxk.Looks.LINK,
             color: c.zxk.Colors.LINK,
+            size: c.zxk.Sizes.MIN,
             onClick: function () {
                 (0, j.JG)(t), i(!0);
             },
+            className: S.copyId,
             children: ['Application Id: ', t, ' ', n ? E.NW.string(E.t['t5VZ8/']) : null]
         })
     );
@@ -362,7 +364,7 @@ function B() {
                 label: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 value: m.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION
             }
-        ].map((e) => w(I({}, e), { label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '') })),
+        ].map((e) => w(k({}, e), { label: ''.concat(e.label, ' ').concat(E === e.value ? '(current)' : '') })),
         z = (0, s.cj)([f.default], () => f.default.getTrackedGames()),
         G = (0, s.e7)([v.default], () => v.default.getFocusedPID()),
         W = (0, s.e7)([v.default], () => v.default.isFocusedPidOutOfProcess()),
@@ -376,10 +378,10 @@ function B() {
         });
     }, [z]);
     let [X, Y] = a.useState({}),
-        J = a.useRef();
+        K = a.useRef();
     a.useEffect(
         () => (
-            (J.current = setInterval(async () => {
+            (K.current = setInterval(async () => {
                 let e = h.ZP.getRunningGames(),
                     t = [],
                     n = Date.now();
@@ -405,28 +407,28 @@ function B() {
                                 e
                             );
                         },
-                        I({}, e)
+                        k({}, e)
                     )
                 );
             }, 10 * y.Z.Millis.SECOND)),
-            () => clearInterval(J.current)
+            () => clearInterval(K.current)
         ),
         []
     );
-    let K = (e) => {
+    let J = (e) => {
             u.Z.setRenderDebugMode(!b.ZP.hasRenderDebugMode(e), e);
         },
         q = () => {
-            K(x.G.ClickZones);
+            J(x.G.ClickZones);
         },
         $ = () => {
-            K(x.G.WidgetAreas);
+            J(x.G.WidgetAreas);
         },
         Q = () => {
-            K(x.G.DisabledGPUBoost);
+            J(x.G.DisabledGPUBoost);
         },
         ee = () => {
-            K(x.G.ForceGPUBoost);
+            J(x.G.ForceGPUBoost);
         },
         et = (e) => {
             var t, n;
@@ -439,7 +441,7 @@ function B() {
         er = V.filter((e) => null == z[e.pid]);
     return (0, r.jsx)(c.w0Z, {
         children: (0, r.jsxs)('div', {
-            className: l()(k.panel, S.panel),
+            className: l()(I.panel, S.panel),
             children: [
                 (0, r.jsxs)('div', {
                     className: S.panelGroup,
@@ -450,7 +452,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: _,
                                             onChange: () => q(),
@@ -473,7 +475,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: g,
                                             onChange: () => $(),
@@ -496,7 +498,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: j,
                                             onChange: () => Q(),
@@ -519,7 +521,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: O,
                                             onChange: () => ee(),
@@ -543,7 +545,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: null != n,
                                             onChange: () => i(),
@@ -566,7 +568,7 @@ function B() {
                             children: (e) =>
                                 (0, r.jsx)(
                                     'div',
-                                    w(I({}, e), {
+                                    w(k({}, e), {
                                         children: (0, r.jsx)(c.XZJ, {
                                             value: null != o,
                                             onChange: () => d(),
@@ -591,7 +593,7 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            w(I({}, e), {
+                            w(k({}, e), {
                                 className: S.panelGroup,
                                 children: (0, r.jsx)(c.PhF, {
                                     serialize: (e) => e,
@@ -610,7 +612,7 @@ function B() {
                         children: (e) =>
                             (0, r.jsx)(
                                 'div',
-                                w(I({}, e), {
+                                w(k({}, e), {
                                     children: (0, r.jsxs)('div', {
                                         className: S.panelGroup,
                                         children: [
@@ -641,7 +643,7 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            w(I({}, e), {
+                            w(k({}, e), {
                                 children: (0, r.jsxs)('div', {
                                     className: S.panelGroup,
                                     children: [
@@ -699,7 +701,7 @@ function B() {
                     children: (e) =>
                         (0, r.jsx)(
                             'div',
-                            w(I({}, e), {
+                            w(k({}, e), {
                                 children: (0, r.jsxs)('div', {
                                     className: S.panelGroup,
                                     children: [
