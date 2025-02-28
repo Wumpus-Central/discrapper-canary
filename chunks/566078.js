@@ -67,9 +67,6 @@ class c {
     get defaultReward() {
         return this._defaultRewardV2(this.quest);
     }
-    get defaultRewardAsset() {
-        return this._defaultRewardV2(this.quest).asset;
-    }
     get defaultRewardRedemptionInstructionsByPlatform() {
         return this._defaultRewardV2(this.quest).messages.redemptionInstructionsByPlatform;
     }

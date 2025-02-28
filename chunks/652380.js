@@ -33,8 +33,8 @@ var r = n(200651),
     E = n(916028),
     T = n(749912),
     A = n(815183),
-    B = n(899457),
-    R = n(475526);
+    R = n(899457),
+    B = n(818223);
 function k(e, t, n) {
     return (
         t in e
@@ -184,27 +184,27 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function U() {
-    var e, t, s, c, d, u, k, L, V, U, H, z, F, X;
-    let [K, Y] = o.useState(Q),
-        G = o.useCallback((e) => {
-            Y(D(q({}, e), { preview: !0 }));
+    var e, t, s, d, u, k, L, V, U, H, z, F, X, K;
+    let [Y, G] = o.useState(Q),
+        J = o.useCallback((e) => {
+            G(D(q({}, e), { preview: !0 }));
         }, []),
-        [J, $] = o.useState(B.a.UNENROLLED),
-        [ee, et] = o.useState(!1),
-        [en, er] = o.useState(!1),
-        [eo, es] = o.useState(null),
-        ea =
-            ((X = K.config),
-            (0, i.EQ)(X)
+        [$, ee] = o.useState(R.a.UNENROLLED),
+        [et, en] = o.useState(!1),
+        [er, eo] = o.useState(!1),
+        [es, ea] = o.useState(null),
+        ei =
+            ((K = Y.config),
+            (0, i.EQ)(K)
                 .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
-    function ei(e, t) {
+    function el(e, t) {
         var n, r;
         ('hero' === e || 'questBarHero' === e || 'gameTile' === e || 'logotype' === e || 'heroVideo' === e || 'questBarHeroVideo' === e) &&
-            G(
-                D(q({}, K), {
+            J(
+                D(q({}, Y), {
                     config:
-                        ((n = K.config),
+                        ((n = Y.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
                             .with({ configVersion: 2 }, (e) => D(q({}, e), { assets: q({}, e.assets, r) }))
@@ -212,26 +212,26 @@ function U() {
                 })
             );
     }
-    function el(e, t) {
+    function ec(e, t) {
         var n, r, o;
-        G(
-            D(q({}, K), {
-                config: D(q({}, K.config), {
-                    videoMetadata: D(q({}, K.config.videoMetadata), {
-                        messages: null !== (o = null === (n = K.config.videoMetadata) || void 0 === n ? void 0 : n.messages) && void 0 !== o ? o : {},
-                        assets: D(q({}, null === (r = K.config.videoMetadata) || void 0 === r ? void 0 : r.assets), { [e]: t })
+        J(
+            D(q({}, Y), {
+                config: D(q({}, Y.config), {
+                    videoMetadata: D(q({}, Y.config.videoMetadata), {
+                        messages: null !== (o = null === (n = Y.config.videoMetadata) || void 0 === n ? void 0 : n.messages) && void 0 !== o ? o : {},
+                        assets: D(q({}, null === (r = Y.config.videoMetadata) || void 0 === r ? void 0 : r.assets), { [e]: t })
                     })
                 })
             })
         );
     }
-    function ec(e, t) {
+    function ed(e, t) {
         var n, r;
         ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e) &&
-            G(
-                D(q({}, K), {
+            J(
+                D(q({}, Y), {
                     config:
-                        ((n = K.config),
+                        ((n = Y.config),
                         (r = { [e]: t }),
                         (0, i.EQ)(n)
                             .with({ configVersion: 2 }, (e) => D(q({}, e), { messages: q({}, e.messages, r) }))
@@ -239,26 +239,26 @@ function U() {
                 })
             );
     }
-    function ed(e, t) {
+    function eu(e, t) {
         var n, r, o;
-        G(
-            D(q({}, K), {
-                config: D(q({}, K.config), {
-                    videoMetadata: D(q({}, K.config.videoMetadata), {
-                        assets: null !== (o = null === (n = K.config.videoMetadata) || void 0 === n ? void 0 : n.assets) && void 0 !== o ? o : {},
-                        messages: D(q({}, null === (r = K.config.videoMetadata) || void 0 === r ? void 0 : r.messages), { [e]: t })
+        J(
+            D(q({}, Y), {
+                config: D(q({}, Y.config), {
+                    videoMetadata: D(q({}, Y.config.videoMetadata), {
+                        assets: null !== (o = null === (n = Y.config.videoMetadata) || void 0 === n ? void 0 : n.assets) && void 0 !== o ? o : {},
+                        messages: D(q({}, null === (r = Y.config.videoMetadata) || void 0 === r ? void 0 : r.messages), { [e]: t })
                     })
                 })
             })
         );
     }
-    function eu(e, t, n) {
+    function ep(e, t, n) {
         var r, o;
         ('name' === e || 'nameWithArticle' === e) &&
-            G(
-                D(q({}, K), {
+            J(
+                D(q({}, Y), {
                     config:
-                        ((r = K.config),
+                        ((r = Y.config),
                         (o = { [e]: t }),
                         (0, i.EQ)(r)
                             .with({ configVersion: 2 }, (e) => D(q({}, e), { rewardsConfig: D(q({}, e.rewardsConfig), { rewards: e.rewardsConfig.rewards.map((e, t) => (t === n ? D(q({}, e), { messages: q({}, e.messages, o) }) : e)) }) }))
@@ -266,116 +266,116 @@ function U() {
                 })
             );
     }
-    function ep(e, t) {
-        G(D(q({}, K), { config: D(q({}, K.config), { colors: D(q({}, K.config.colors), { [e]: t }) }) }));
+    function em(e, t) {
+        J(D(q({}, Y), { config: D(q({}, Y.config), { colors: D(q({}, Y.config.colors), { [e]: t }) }) }));
     }
-    function em() {
-        (0, g.Xv)(K.config)
-            ? (0, C.m)(K, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
+    function ef() {
+        (0, g.Xv)(Y.config)
+            ? (0, C.m)(Y, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
             : (0, O.openQuestsRewardCodeModal)({
-                  questId: K.id,
+                  questId: Y.id,
                   location: f.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
-                  previewQuest: K
+                  previewQuest: Y
               });
     }
-    let ef = o.useMemo(() => {
-            for (let [e, t] of Object.entries(K.config.taskConfig.tasks)) if (null != t.target) return t.target;
+    let eg = o.useMemo(() => {
+            for (let [e, t] of Object.entries(Y.config.taskConfig.tasks)) if (null != t.target) return t.target;
             return 10 * m.Z.Seconds.MINUTE;
-        }, [K.config.taskConfig.tasks]),
-        eg = o.useMemo(() => l.X.WATCH_VIDEO in K.config.taskConfig.tasks, [K.config.taskConfig.tasks]);
+        }, [Y.config.taskConfig.tasks]),
+        ex = o.useMemo(() => l.X.WATCH_VIDEO in Y.config.taskConfig.tasks, [Y.config.taskConfig.tasks]);
     return (
-        a()(!1 !== K.preview && null != K.preview, 'Preview config must have property preview: true'),
+        a()(!1 !== Y.preview && null != Y.preview, 'Preview config must have property preview: true'),
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-lg/bold',
-                    className: R.heading,
+                    className: B.heading,
                     children: 'Quest Preview Tool'
                 }),
                 (0, r.jsx)('div', {
-                    className: R.fields,
+                    className: B.fields,
                     children: (0, r.jsx)(E.Z, {
                         onSelect: function (e) {
-                            es(e),
+                            ea(e),
                                 null != e &&
-                                    ($(
+                                    (ee(
                                         (function (e) {
-                                            if (null == e.userStatus) return B.a.UNENROLLED;
-                                            if (null != e.userStatus.claimedAt) return B.a.CLAIMED;
-                                            if (null != e.userStatus.completedAt) return B.a.COMPLETED_100;
+                                            if (null == e.userStatus) return R.a.UNENROLLED;
+                                            if (null != e.userStatus.claimedAt) return R.a.CLAIMED;
+                                            if (null != e.userStatus.completedAt) return R.a.COMPLETED_100;
                                             let t = (0, g.il)(e),
                                                 n = t.progressSeconds,
                                                 r = t.targetSeconds;
-                                            return n / r >= 1 ? B.a.COMPLETED_100 : n / r >= 0.75 ? B.a.COMPLETED_75 : n / r >= 0.5 ? B.a.COMPLETED_50 : n / r >= 0.25 ? B.a.COMPLETED_25 : B.a.ENROLLED;
+                                            return n / r >= 1 ? R.a.COMPLETED_100 : n / r >= 0.75 ? R.a.COMPLETED_75 : n / r >= 0.5 ? R.a.COMPLETED_50 : n / r >= 0.25 ? R.a.COMPLETED_25 : R.a.ENROLLED;
                                         })(e)
                                     ),
-                                    G(e));
+                                    J(e));
                         },
-                        quest: eo
+                        quest: es
                     })
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: R.subheading,
+                    className: B.subheading,
                     children: 'Task Config'
                 }),
                 (0, r.jsx)('div', {
-                    className: R.fields,
+                    className: B.fields,
                     children: (0, r.jsx)(T.Z, {
-                        taskDuration: ef,
-                        taskConfig: K.config.taskConfig,
+                        taskDuration: eg,
+                        taskConfig: Y.config.taskConfig,
                         onSelect: function (e) {
-                            G(D(q({}, K), { config: D(q({}, K.config), { taskConfig: e }) }));
+                            J(D(q({}, Y), { config: D(q({}, Y.config), { taskConfig: e }) }));
                         }
                     })
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: R.subheading,
+                    className: B.subheading,
                     children: 'Messages'
                 }),
                 (0, r.jsxs)('div', {
-                    className: R.fields,
+                    className: B.fields,
                     children: [
                         (0, r.jsx)(N.Z, {
                             title: 'Quest Name',
                             assetKey: 'questName',
-                            onMessageChange: ec,
-                            initialValue: K.config.messages.questName
+                            onMessageChange: ed,
+                            initialValue: Y.config.messages.questName
                         }),
                         (0, r.jsx)(N.Z, {
                             title: 'Game Title',
                             assetKey: 'gameTitle',
-                            onMessageChange: ec,
-                            initialValue: K.config.messages.gameTitle
+                            onMessageChange: ed,
+                            initialValue: Y.config.messages.gameTitle
                         }),
                         (0, r.jsx)(N.Z, {
                             title: 'Game Publisher',
                             assetKey: 'gamePublisher',
-                            onMessageChange: ec,
-                            initialValue: K.config.messages.gamePublisher
+                            onMessageChange: ed,
+                            initialValue: Y.config.messages.gamePublisher
                         }),
-                        eg &&
+                        ex &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(N.Z, {
                                         title: 'Video Title',
                                         assetKey: 'videoTitle',
-                                        onMessageChange: ed,
-                                        initialValue: null === (e = K.config.videoMetadata) || void 0 === e ? void 0 : e.messages.videoTitle
+                                        onMessageChange: eu,
+                                        initialValue: null === (e = Y.config.videoMetadata) || void 0 === e ? void 0 : e.messages.videoTitle
                                     }),
                                     (0, r.jsx)(N.Z, {
                                         title: 'End CTA Title',
                                         assetKey: 'videoEndCtaTitle',
-                                        onMessageChange: ed,
-                                        initialValue: null === (t = K.config.videoMetadata) || void 0 === t ? void 0 : t.messages.videoEndCtaTitle
+                                        onMessageChange: eu,
+                                        initialValue: null === (t = Y.config.videoMetadata) || void 0 === t ? void 0 : t.messages.videoEndCtaTitle
                                     }),
                                     (0, r.jsx)(N.Z, {
                                         title: 'End CTA Subtitle',
                                         assetKey: 'videoEndCtaSubtitle',
-                                        onMessageChange: ed,
-                                        initialValue: null === (s = K.config.videoMetadata) || void 0 === s ? void 0 : s.messages.videoEndCtaSubtitle
+                                        onMessageChange: eu,
+                                        initialValue: null === (s = Y.config.videoMetadata) || void 0 === s ? void 0 : s.messages.videoEndCtaSubtitle
                                     })
                                 ]
                             })
@@ -383,160 +383,161 @@ function U() {
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: R.subheading,
+                    className: B.subheading,
                     children: 'Assets'
                 }),
                 (0, r.jsxs)('div', {
-                    className: R.fields,
+                    className: B.fields,
                     children: [
                         (0, r.jsx)(P.Z, {
                             title: 'Hero',
                             assetKey: 'hero',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: M,
-                            initialValue: K.config.assets.hero
+                            initialValue: Y.config.assets.hero
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Hero Video (optional)',
                             assetKey: 'heroVideo',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: M,
-                            initialValue: null !== (z = K.config.assets.heroVideo) && void 0 !== z ? z : void 0
+                            initialValue: null !== (F = Y.config.assets.heroVideo) && void 0 !== F ? F : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero',
                             assetKey: 'questBarHero',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: M,
-                            initialValue: K.config.assets.questBarHero
+                            initialValue: Y.config.assets.questBarHero
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Quest Bar Hero Video (optional)',
                             assetKey: 'questBarHeroVideo',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: M,
-                            initialValue: null !== (F = K.config.assets.questBarHeroVideo) && void 0 !== F ? F : void 0
+                            initialValue: null !== (X = Y.config.assets.questBarHeroVideo) && void 0 !== X ? X : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Game Tile',
                             assetKey: 'gameTile',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: [...I, 'svg'],
-                            initialValue: K.config.assets.gameTile
+                            initialValue: Y.config.assets.gameTile
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Logotype',
                             assetKey: 'logotype',
-                            onFileChange: ei,
+                            onFileChange: el,
                             filters: [...W, 'svg'],
-                            initialValue: K.config.assets.logotype
+                            initialValue: Y.config.assets.logotype
                         }),
-                        eg &&
+                        ex &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Video',
                                         assetKey: 'videoPlayerVideo',
-                                        onFileChange: el,
+                                        onFileChange: ec,
                                         filters: M,
-                                        initialValue: null === (c = K.config.videoMetadata) || void 0 === c ? void 0 : c.assets.videoPlayerVideo
+                                        initialValue: null === (d = Y.config.videoMetadata) || void 0 === d ? void 0 : d.assets.videoPlayerVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Video (Low Resolution)',
                                         assetKey: 'videoPlayerVideoLowRes',
-                                        onFileChange: el,
+                                        onFileChange: ec,
                                         filters: M,
-                                        initialValue: null === (d = K.config.videoMetadata) || void 0 === d ? void 0 : d.assets.videoPlayerVideoLowRes
+                                        initialValue: null === (u = Y.config.videoMetadata) || void 0 === u ? void 0 : u.assets.videoPlayerVideoLowRes
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Video Player Thumbnail (optional)',
                                         assetKey: 'videoPlayerThumbnail',
-                                        onFileChange: el,
+                                        onFileChange: ec,
                                         filters: I,
-                                        initialValue: null === (k = K.config.videoMetadata) || void 0 === k ? void 0 : null === (u = k.assets) || void 0 === u ? void 0 : u.videoPlayerThumbnail
+                                        initialValue: null === (L = Y.config.videoMetadata) || void 0 === L ? void 0 : null === (k = L.assets) || void 0 === k ? void 0 : k.videoPlayerThumbnail
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Bar Preview Video (optional)',
                                         assetKey: 'questBarPreviewVideo',
-                                        onFileChange: el,
+                                        onFileChange: ec,
                                         filters: M,
-                                        initialValue: null === (L = K.config.videoMetadata) || void 0 === L ? void 0 : L.assets.questBarPreviewVideo
+                                        initialValue: null === (V = Y.config.videoMetadata) || void 0 === V ? void 0 : V.assets.questBarPreviewVideo
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Home Video (optional)',
                                         assetKey: 'questHomeVideo',
-                                        onFileChange: el,
+                                        onFileChange: ec,
                                         filters: M,
-                                        initialValue: null === (V = K.config.videoMetadata) || void 0 === V ? void 0 : V.assets.questHomeVideo
+                                        initialValue: null === (U = Y.config.videoMetadata) || void 0 === U ? void 0 : U.assets.questHomeVideo
                                     })
                                 ]
                             })
                     ]
                 }),
-                ea.map((e, t) =>
+                ei.map((e, t) =>
                     (0, r.jsxs)(
                         'div',
                         {
                             children: [
                                 (0, r.jsxs)(p.X6q, {
                                     variant: 'heading-md/semibold',
-                                    className: R.subheading,
+                                    className: B.subheading,
                                     children: ['Reward #', t + 1]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: R.fields,
+                                    className: B.fields,
                                     children: [
                                         (0, r.jsx)(N.Z, {
                                             title: 'Name',
                                             assetKey: 'name',
-                                            onMessageChange: (e, n) => eu(e, n, t),
+                                            onMessageChange: (e, n) => ep(e, n, t),
                                             initialValue: e.messages.name
                                         }),
                                         (0, r.jsx)(N.Z, {
                                             title: 'Name With Article',
                                             assetKey: 'nameWithArticle',
-                                            onMessageChange: (e, n) => eu(e, n, t),
+                                            onMessageChange: (e, n) => ep(e, n, t),
                                             initialValue: e.messages.nameWithArticle
                                         }),
-                                        (0, r.jsx)(P.Z, {
-                                            title: 'Asset',
-                                            assetKey: 'asset',
-                                            onFileChange: (e, n) =>
-                                                (function (e, t, n) {
-                                                    var r;
-                                                    'asset' === e &&
-                                                        G(
-                                                            D(q({}, K), {
-                                                                config:
-                                                                    ((r = K.config),
-                                                                    (0, i.EQ)(r)
-                                                                        .with({ configVersion: 2 }, (e) =>
-                                                                            D(q({}, e), {
-                                                                                rewardsConfig: D(q({}, e.rewardsConfig), {
-                                                                                    rewards: e.rewardsConfig.rewards.map((e, r) =>
-                                                                                        r === n
-                                                                                            ? D(q({}, e), {
-                                                                                                  asset: t,
-                                                                                                  skuId: ''
-                                                                                              })
-                                                                                            : e
-                                                                                    )
+                                        e.type !== c.w.VIRTUAL_CURRENCY &&
+                                            (0, r.jsx)(P.Z, {
+                                                title: 'Asset',
+                                                assetKey: 'asset',
+                                                onFileChange: (e, n) =>
+                                                    (function (e, t, n) {
+                                                        var r;
+                                                        'asset' === e &&
+                                                            J(
+                                                                D(q({}, Y), {
+                                                                    config:
+                                                                        ((r = Y.config),
+                                                                        (0, i.EQ)(r)
+                                                                            .with({ configVersion: 2 }, (e) =>
+                                                                                D(q({}, e), {
+                                                                                    rewardsConfig: D(q({}, e.rewardsConfig), {
+                                                                                        rewards: e.rewardsConfig.rewards.map((e, r) =>
+                                                                                            r === n
+                                                                                                ? D(q({}, e), {
+                                                                                                      asset: t,
+                                                                                                      skuId: ''
+                                                                                                  })
+                                                                                                : e
+                                                                                        )
+                                                                                    })
                                                                                 })
-                                                                            })
-                                                                        )
-                                                                        .exhaustive())
-                                                            })
-                                                        );
-                                                })(e, n, t),
-                                            filters: M,
-                                            initialValue: e.asset
-                                        }),
+                                                                            )
+                                                                            .exhaustive())
+                                                                })
+                                                            );
+                                                    })(e, n, t),
+                                                filters: M,
+                                                initialValue: e.asset
+                                            }),
                                         (0, r.jsxs)(p.xJW, {
                                             children: [
                                                 (0, r.jsx)(p.vwX, { children: 'Claim Modal' }),
                                                 (0, r.jsx)(p.zxk, {
                                                     color: p.Ttl.BRAND,
-                                                    onClick: em,
+                                                    onClick: ef,
                                                     children: 'Open Reward Modal'
                                                 })
                                             ]
@@ -550,129 +551,129 @@ function U() {
                 ),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: R.subheading,
+                    className: B.subheading,
                     children: 'Colors & Quest States'
                 }),
                 (0, r.jsxs)('div', {
-                    className: R.fields,
+                    className: B.fields,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: R.fields,
+                            className: B.fields,
                             style: { marginBottom: 0 },
                             children: [
                                 (0, r.jsx)(w.Z, {
                                     title: 'Primary',
                                     colorKey: 'primary',
-                                    onChange: ep,
-                                    value: K.config.colors.primary
+                                    onChange: em,
+                                    value: Y.config.colors.primary
                                 }),
                                 (0, r.jsx)(w.Z, {
                                     title: 'Secondary',
                                     colorKey: 'secondary',
-                                    onChange: ep,
-                                    value: K.config.colors.secondary
+                                    onChange: em,
+                                    value: Y.config.colors.secondary
                                 })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: R.fields,
+                            className: B.fields,
                             children: (0, r.jsx)(A.Z, {})
                         }),
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(R.Z, {
                             onChange: function (e) {
-                                switch (($(e), e)) {
-                                    case B.a.UNENROLLED:
-                                        G(D(q({}, K), { userStatus: null }));
+                                switch ((ee(e), e)) {
+                                    case R.a.UNENROLLED:
+                                        J(D(q({}, Y), { userStatus: null }));
                                         break;
-                                    case B.a.ENROLLED:
-                                        G(D(q({}, K), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
+                                    case R.a.ENROLLED:
+                                        J(D(q({}, Y), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
                                         break;
-                                    case B.a.COMPLETED_25:
-                                        G(
-                                            D(q({}, K), {
+                                    case R.a.COMPLETED_25:
+                                        J(
+                                            D(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
-                                                    streamProgressSeconds: 0.25 * ef
+                                                    streamProgressSeconds: 0.25 * eg
                                                 })
                                             })
                                         );
                                         break;
-                                    case B.a.COMPLETED_50:
-                                        G(
-                                            D(q({}, K), {
+                                    case R.a.COMPLETED_50:
+                                        J(
+                                            D(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
-                                                    streamProgressSeconds: 0.5 * ef
+                                                    streamProgressSeconds: 0.5 * eg
                                                 })
                                             })
                                         );
                                         break;
-                                    case B.a.COMPLETED_75:
-                                        G(
-                                            D(q({}, K), {
+                                    case R.a.COMPLETED_75:
+                                        J(
+                                            D(q({}, Y), {
                                                 userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
-                                                    streamProgressSeconds: 0.75 * ef
+                                                    streamProgressSeconds: 0.75 * eg
                                                 })
                                             })
                                         );
                                         break;
-                                    case B.a.COMPLETED_100:
-                                        G(
-                                            D(q({}, K), {
+                                    case R.a.COMPLETED_100:
+                                        J(
+                                            D(q({}, Y), {
                                                 userStatus: Z({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
-                                                    streamProgressSeconds: ef
+                                                    streamProgressSeconds: eg
                                                 })
                                             })
                                         );
                                         break;
-                                    case B.a.CLAIMED:
-                                        G(
-                                            D(q({}, K), {
+                                    case R.a.CLAIMED:
+                                        J(
+                                            D(q({}, Y), {
                                                 userStatus: Z({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
-                                                    streamProgressSeconds: ef
+                                                    streamProgressSeconds: eg
                                                 })
                                             })
                                         );
                                 }
                             },
-                            value: J
+                            value: $
                         })
                     ]
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-lg/bold',
-                    className: R.heading,
+                    className: B.heading,
                     children: 'Component Previews'
                 }),
                 (0, r.jsxs)('div', {
-                    className: R.componentPreviews,
+                    className: B.componentPreviews,
                     children: [
                         (0, r.jsxs)(S.Z, {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Quest Bar' }),
                                 (0, r.jsxs)('div', {
-                                    className: R.questBarPreviewWrapper,
+                                    className: B.questBarPreviewWrapper,
                                     children: [
-                                        (null === (U = K.userStatus) || void 0 === U ? void 0 : U.claimedAt) != null &&
+                                        (null === (H = Y.userStatus) || void 0 === H ? void 0 : H.claimedAt) != null &&
                                             (0, r.jsx)(p.Text, {
                                                 color: 'text-secondary',
                                                 variant: 'text-sm/normal',
                                                 children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                             }),
                                         (0, r.jsx)('div', {
-                                            className: R.questBarPreview,
+                                            className: B.questBarPreview,
                                             children: (0, r.jsx)(j.p, {
                                                 isPreview: !0,
                                                 source: 'preview',
                                                 questId: '0',
-                                                children: (0, r.jsx)(h.Z, { children: (0, r.jsx)(x.P, { quest: K }) })
+                                                children: (0, r.jsx)(h.Z, { children: (0, r.jsx)(x.P, { quest: Y }) })
                                             })
                                         })
                                     ]
@@ -688,8 +689,8 @@ function U() {
                                     source: 'preview',
                                     questId: '0',
                                     children: (0, r.jsx)(b.Z, {
-                                        quest: K,
-                                        className: R.questTile,
+                                        quest: Y,
+                                        className: B.questTile,
                                         questContent: f.jn.QUEST_HOME_DESKTOP,
                                         contentPosition: 0,
                                         rowIndex: 0
@@ -701,24 +702,24 @@ function U() {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Channel Call Header' }),
-                                (null === (H = K.userStatus) || void 0 === H ? void 0 : H.claimedAt) != null &&
+                                (null === (z = Y.userStatus) || void 0 === z ? void 0 : z.claimedAt) != null &&
                                     (0, r.jsx)(p.Text, {
                                         color: 'text-secondary',
                                         variant: 'text-sm/normal',
                                         children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                     }),
                                 (0, r.jsx)('div', {
-                                    className: R.questBarPreviewWrapper,
+                                    className: B.questBarPreviewWrapper,
                                     children: (0, r.jsx)(j.p, {
                                         isPreview: !0,
                                         source: 'preview',
                                         questId: '0',
                                         children: (0, r.jsx)('div', {
-                                            className: R.questChannelCallHeaderPreview,
+                                            className: B.questChannelCallHeaderPreview,
                                             children: (0, r.jsx)(y.Z, {
                                                 channelId: '123',
-                                                previewQuest: K,
-                                                isParticipatingOverride: ee
+                                                previewQuest: Y,
+                                                isParticipatingOverride: et
                                             })
                                         })
                                     })
@@ -726,12 +727,12 @@ function U() {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: R.toggleSwitch,
+                            className: B.toggleSwitch,
                             children: (0, r.jsx)(p.xJW, {
                                 children: (0, r.jsx)(p.j7V, {
-                                    value: ee,
+                                    value: et,
                                     onChange: function (e) {
-                                        et(e);
+                                        en(e);
                                     },
                                     hideBorder: !0,
                                     children: 'Is Participating:'
@@ -742,30 +743,30 @@ function U() {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Quest Card Embed' }),
-                                en
+                                er
                                     ? (0, r.jsx)(_.o, {})
                                     : (0, r.jsx)(
                                           v.Z,
                                           {
-                                              quest: K,
+                                              quest: Y,
                                               location: f.jn.QUESTS_EMBED
                                           },
-                                          K.id
+                                          Y.id
                                       )
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: R.toggleSwitch,
+                            className: B.toggleSwitch,
                             children: (0, r.jsx)(p.xJW, {
                                 children: (0, r.jsx)(p.j7V, {
-                                    value: en,
-                                    onChange: er,
+                                    value: er,
+                                    onChange: eo,
                                     hideBorder: !0,
                                     children: 'Invalid Quests Embed:'
                                 })
                             })
                         }),
-                        eg &&
+                        ex &&
                             (0, r.jsxs)(S.Z, {
                                 withBorder: !0,
                                 allowClicks: !0,
@@ -774,16 +775,16 @@ function U() {
                                     (0, r.jsx)(p.zxk, {
                                         onClick: () => {
                                             (0, p.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([n.e('29976'), n.e('32249'), n.e('44597')]).then(n.bind(n, 536687));
+                                                let { default: e } = await Promise.all([n.e('29976'), n.e('32249'), n.e('73270')]).then(n.bind(n, 536687));
                                                 return (t) => {
                                                     var n;
                                                     return (0, r.jsx)(
                                                         e,
                                                         D(q({}, t), {
-                                                            startTime: 0,
+                                                            openStartClockTime: performance.now(),
                                                             videoSessionId: 'fake-quest-session-id',
-                                                            questId: null !== (n = K.id) && void 0 !== n ? n : 'fake-quest-id',
-                                                            overrideQuest: K,
+                                                            questId: null !== (n = Y.id) && void 0 !== n ? n : 'fake-quest-id',
+                                                            overrideQuest: Y,
                                                             autoplay: !0
                                                         })
                                                     );
@@ -808,9 +809,9 @@ class H extends o.Component {
         let { error: e, renderKey: t } = this.state;
         return null != e
             ? (0, r.jsxs)('div', {
-                  className: R.errorBoundary,
+                  className: B.errorBoundary,
                   children: [
-                      (0, r.jsx)(p.P4T, { className: R.errorBoundaryIcon }),
+                      (0, r.jsx)(p.P4T, { className: B.errorBoundaryIcon }),
                       (0, r.jsx)(p.X6q, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
@@ -822,9 +823,9 @@ class H extends o.Component {
                       }),
                       null != e.message &&
                           (0, r.jsx)(p.Zbd, {
-                              className: R.errorMessageWrapper,
+                              className: B.errorMessageWrapper,
                               children: (0, r.jsx)('code', {
-                                  className: R.errorMessage,
+                                  className: B.errorMessage,
                                   children: e.message
                               })
                           })
