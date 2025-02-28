@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(774078),
     u = n(15640),
     m = n(774380),
-    p = n(404270),
-    g = n(386937),
+    g = n(404270),
+    p = n(386937),
     h = n(316350),
     f = n(899667),
     b = n(626135),
@@ -19,26 +19,23 @@ var r = n(200651),
     N = n(999382),
     v = n(981631),
     _ = n(388032),
-    O = n(360375);
+    O = n(324358);
 function y(e) {
-    let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: i } = e,
-        { days: s, hours: a } = (0, d.Z)(t);
+    let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
+        { days: i, hours: s } = (0, d.Z)(t);
     return n <= 0
         ? null
-        : (0, r.jsx)(r.Fragment, {
-              children:
-                  0 === s && 0 === a
-                      ? _.NW.format(_.t.kF0HER, {
-                            tierName: i,
-                            numPremiumSubscriptions: n
-                        })
-                      : _.NW.format(_.t.neDJho, {
-                            days: s,
-                            hours: a,
-                            tierName: i,
-                            numPremiumSubscriptions: n
-                        })
-          });
+        : 0 === i && 0 === s
+          ? _.NW.format(_.t.kF0HER, {
+                tierName: r,
+                numPremiumSubscriptions: n
+            })
+          : _.NW.format(_.t.neDJho, {
+                days: i,
+                hours: s,
+                tierName: r,
+                numPremiumSubscriptions: n
+            });
 }
 function C(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
@@ -106,12 +103,12 @@ function E() {
                     })
                 ]
             }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(p.Z, {
                 tiers: (0, x.cP)(null != e && e.hasFeature(v.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= v.B9o),
                 renderTier: I
             }),
             (0, r.jsx)('div', { className: O.divider }),
-            n ? (0, r.jsx)(p.Z, {}) : null,
+            n ? (0, r.jsx)(g.Z, {}) : null,
             n
                 ? (0, r.jsx)(m.Z, {
                       onOpenPremiumClick: () =>

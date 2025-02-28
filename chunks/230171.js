@@ -30,7 +30,7 @@ var r = n(200651),
     E = n(172109),
     j = n(208444),
     N = n(388032),
-    C = n(405796);
+    C = n(390101);
 function I(e) {
     let { app: t, embedUrl: n, linkId: a, linkType: o, activityCustomId: l, activityReferrerId: h } = e,
         { name: b, bot: C } = (t = (0, E.O)(t)),
@@ -204,24 +204,23 @@ function S(e) {
 function T(e) {
     let { app: t } = e,
         n = [null != t.maxParticipants ? N.NW.format(N.t.z8EAJS, { count: t.maxParticipants }) : N.NW.string(N.t.RjceQU), ...t.tags];
-    return (0, r.jsx)(r.Fragment, {
-        children:
-            n.length > 0 &&
-            (0, r.jsx)(l.Text, {
-                variant: 'text-xs/medium',
-                className: C.description,
-                color: 'none',
-                lineClamp: 1,
-                children: n.map((e, t) =>
-                    (0, r.jsx)(
-                        'span',
-                        {
-                            className: C.tag,
-                            children: e
-                        },
-                        t
-                    )
+    return (
+        n.length > 0 &&
+        (0, r.jsx)(l.Text, {
+            variant: 'text-xs/medium',
+            className: C.description,
+            color: 'none',
+            lineClamp: 1,
+            children: n.map((e, t) =>
+                (0, r.jsx)(
+                    'span',
+                    {
+                        className: C.tag,
+                        children: e
+                    },
+                    t
                 )
-            })
-    });
+            )
+        })
+    );
 }

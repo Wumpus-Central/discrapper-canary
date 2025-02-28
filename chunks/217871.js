@@ -18,7 +18,7 @@ var r = n(200651),
     C = n(641033),
     v = n(989830),
     y = n(388032),
-    x = n(819831);
+    x = n(744133);
 let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -46,19 +46,18 @@ let j = i.memo(function (e) {
                 },
                 'animate-always'
             );
-        return (0, r.jsx)(r.Fragment, {
-            children:
-                null != o &&
-                (0, r.jsx)(a.animated.div, {
-                    className: x.messageComboScore,
-                    style: f,
-                    children: (0, r.jsx)(c.Text, {
-                        className: x.comboScore,
-                        variant: 'text-sm/bold',
-                        children: (0, C.Eo)(o.combo)
-                    })
+        return (
+            null != o &&
+            (0, r.jsx)(a.animated.div, {
+                className: x.messageComboScore,
+                style: f,
+                children: (0, r.jsx)(c.Text, {
+                    className: x.comboScore,
+                    variant: 'text-sm/bold',
+                    children: (0, C.Eo)(o.combo)
                 })
-        });
+            })
+        );
     }),
     O = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
@@ -145,7 +144,7 @@ let j = i.memo(function (e) {
                 pointerEvents: 'none',
                 config: a.config.stiff
             }),
-            P = i.useMemo(
+            I = i.useMemo(
                 () =>
                     null != y
                         ? y
@@ -155,16 +154,16 @@ let j = i.memo(function (e) {
                           },
                 [y]
             ),
-            I = i.useRef(P);
+            P = i.useRef(I);
         i.useEffect(() => {
-            (P.multiplier > 1 || P.value > 0) && (I.current = P);
-        }, [P]);
+            (I.multiplier > 1 || I.value > 0) && (P.current = I);
+        }, [I]);
         let { multiplier: S, value: Z } = i.useMemo(
             () => ({
-                value: N ? P.value : I.current.value,
-                multiplier: N ? P.multiplier : I.current.multiplier
+                value: N ? I.value : P.current.value,
+                multiplier: N ? I.multiplier : P.current.multiplier
             }),
-            [N, P, I]
+            [N, I, P]
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [

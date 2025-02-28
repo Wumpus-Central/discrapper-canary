@@ -27,7 +27,7 @@ var r = n(200651),
     S = n(909746),
     p = n(981631),
     U = n(388032),
-    D = n(677811);
+    D = n(152041);
 function L(e, t) {
     let n = S.vc[e.targetType];
     return null != n && !0 === n[t.key];
@@ -643,55 +643,54 @@ function M(e) {
                 });
             },
             [t, n, a, o]
-        ),
-        d = l.useMemo(() => {
-            switch (t.targetType) {
-                case p.KFR.GUILD:
-                    return E(S.pY());
-                case p.KFR.CHANNEL:
-                case p.KFR.CHANNEL_OVERWRITE:
-                    return E(S.ML());
-                case p.KFR.USER:
-                    return E(S.lU());
-                case p.KFR.ROLE:
-                    return E(S.HE());
-                case p.KFR.ONBOARDING_PROMPT:
-                    return E(S.oD());
-                case p.KFR.GUILD_ONBOARDING:
-                    return E(S.EN());
-                case p.KFR.HOME_SETTINGS:
-                    return E(S.hx());
-                case p.KFR.INVITE:
-                    return E(S.HN());
-                case p.KFR.WEBHOOK:
-                    return E(S.lR());
-                case p.KFR.EMOJI:
-                    return E(S.N$());
-                case p.KFR.STICKER:
-                    return E(S.Bq());
-                case p.KFR.INTEGRATION:
-                    return E(S.K());
-                case p.KFR.STAGE_INSTANCE:
-                    return E(S.C2());
-                case p.KFR.GUILD_SCHEDULED_EVENT:
-                    return E(S.uB());
-                case p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                    return E(S.pi());
-                case p.KFR.THREAD:
-                    return E(S.pA());
-                case p.KFR.APPLICATION_COMMAND:
-                    return E(S.vm(t.changes));
-                case p.KFR.AUTO_MODERATION_RULE:
-                    return E(S.rK());
-                case p.KFR.GUILD_SOUNDBOARD:
-                    return E(S.C0());
-                case p.KFR.VOICE_CHANNEL_STATUS:
-                    return E(S.F1());
-                case p.KFR.GUILD_MEMBER_VERIFICATION:
-                    return E(S.JA());
-                case p.KFR.GUILD_PROFILE:
-                    return E(S.zT());
-            }
-        }, [t.targetType, t.changes, E]);
-    return (0, r.jsx)(r.Fragment, { children: d });
+        );
+    return l.useMemo(() => {
+        switch (t.targetType) {
+            case p.KFR.GUILD:
+                return E(S.pY());
+            case p.KFR.CHANNEL:
+            case p.KFR.CHANNEL_OVERWRITE:
+                return E(S.ML());
+            case p.KFR.USER:
+                return E(S.lU());
+            case p.KFR.ROLE:
+                return E(S.HE());
+            case p.KFR.ONBOARDING_PROMPT:
+                return E(S.oD());
+            case p.KFR.GUILD_ONBOARDING:
+                return E(S.EN());
+            case p.KFR.HOME_SETTINGS:
+                return E(S.hx());
+            case p.KFR.INVITE:
+                return E(S.HN());
+            case p.KFR.WEBHOOK:
+                return E(S.lR());
+            case p.KFR.EMOJI:
+                return E(S.N$());
+            case p.KFR.STICKER:
+                return E(S.Bq());
+            case p.KFR.INTEGRATION:
+                return E(S.K());
+            case p.KFR.STAGE_INSTANCE:
+                return E(S.C2());
+            case p.KFR.GUILD_SCHEDULED_EVENT:
+                return E(S.uB());
+            case p.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                return E(S.pi());
+            case p.KFR.THREAD:
+                return E(S.pA());
+            case p.KFR.APPLICATION_COMMAND:
+                return E(S.vm(t.changes));
+            case p.KFR.AUTO_MODERATION_RULE:
+                return E(S.rK());
+            case p.KFR.GUILD_SOUNDBOARD:
+                return E(S.C0());
+            case p.KFR.VOICE_CHANNEL_STATUS:
+                return E(S.F1());
+            case p.KFR.GUILD_MEMBER_VERIFICATION:
+                return E(S.JA());
+            case p.KFR.GUILD_PROFILE:
+                return E(S.zT());
+        }
+    }, [t.targetType, t.changes, E]);
 }

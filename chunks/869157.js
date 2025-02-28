@@ -27,7 +27,7 @@ var r = n(200651),
     S = n(617012),
     P = n(981631),
     w = n(388032),
-    Z = n(152128);
+    Z = n(94448);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -153,34 +153,31 @@ function k(e) {
                   })
         ),
         k = (0, c.e7)([f.Z], () => void 0 !== W && f.Z.canShowToggleTooltip(W.id));
-    return (0, r.jsx)(i.Fragment, {
-        children:
-            S.length > 0
-                ? S.map((e) =>
-                      (0, r.jsx)(
-                          A,
-                          {
-                              guild: h,
-                              commandId: t,
-                              onChange: (t) => w(e.id, e.type, t),
-                              onRemove: () => P(e.id, e.type),
-                              overwrite: e,
-                              integration: W,
-                              canShowMigrationTooltip: k,
-                              hasAccessToMutatePermissions: g
-                          },
-                          e.id
-                      )
-                  )
-                : (0, r.jsx)('div', {
-                      className: Z.noItemsSelected,
-                      children: (0, r.jsx)(d.Text, {
-                          color: 'text-muted',
-                          variant: 'text-sm/normal',
-                          children: a
-                      })
-                  })
-    });
+    return S.length > 0
+        ? S.map((e) =>
+              (0, r.jsx)(
+                  A,
+                  {
+                      guild: h,
+                      commandId: t,
+                      onChange: (t) => w(e.id, e.type, t),
+                      onRemove: () => P(e.id, e.type),
+                      overwrite: e,
+                      integration: W,
+                      canShowMigrationTooltip: k,
+                      hasAccessToMutatePermissions: g
+                  },
+                  e.id
+              )
+          )
+        : (0, r.jsx)('div', {
+              className: Z.noItemsSelected,
+              children: (0, r.jsx)(d.Text, {
+                  color: 'text-muted',
+                  variant: 'text-sm/normal',
+                  children: a
+              })
+          });
 }
 function A(e) {
     var t, n, l;

@@ -25,7 +25,7 @@ var r = n(200651),
     S = n(981631),
     T = n(674563),
     P = n(388032),
-    j = n(465577);
+    j = n(866551);
 let A = 15 * E.Z.Millis.MINUTE,
     Z = (0, C.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: o } = e,
@@ -163,7 +163,7 @@ function L() {
         }, [e, a]),
         f = null;
     return t
-        ? ((f =
+        ? (f =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
@@ -191,8 +191,7 @@ function L() {
                                 children: P.NW.string(P.t['99ZWxc'])
                             })
                         ]
-                    })),
-          (0, r.jsx)(r.Fragment, { children: f }))
+                    }))
         : (0, r.jsx)('div', {
               className: j.emptyCard,
               children: (0, r.jsx)(u.$jN, {})

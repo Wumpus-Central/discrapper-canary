@@ -26,7 +26,7 @@ var r = n(200651),
     T = n(78839),
     I = n(981631),
     y = n(474936),
-    A = n(17396);
+    A = n(1556);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,25 +73,22 @@ function R(e, t) {
 function D(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, b.GG)(null == t ? void 0 : t.id)[0];
-    return (0, r.jsx)(r.Fragment, {
-        children:
-            null != t && null != n
-                ? (0, r.jsx)('div', {
-                      className: A.formItem,
-                      children: n.subscription_listings_ids.map((e) =>
-                          (0, r.jsx)(
-                              N.Z,
-                              {
-                                  guildId: t.id,
-                                  groupListingId: e,
-                                  listingId: e
-                              },
-                              e
-                          )
-                      )
-                  })
-                : null
-    });
+    return null != t && null != n
+        ? (0, r.jsx)('div', {
+              className: A.formItem,
+              children: n.subscription_listings_ids.map((e) =>
+                  (0, r.jsx)(
+                      N.Z,
+                      {
+                          guildId: t.id,
+                          groupListingId: e,
+                          listingId: e
+                      },
+                      e
+                  )
+              )
+          })
+        : null;
 }
 let Z = function () {
     let [e, t] = i.useState(y.Si.TIER_2),

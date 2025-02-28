@@ -21,7 +21,7 @@ var r = n(200651),
     b = n(693091),
     g = n(981631),
     y = n(388032),
-    E = n(825499);
+    E = n(563797);
 function O(e, t, n) {
     return (0, r.jsx)(S, {
         keybind: e,
@@ -30,16 +30,13 @@ function O(e, t, n) {
     });
 }
 function S(e) {
-    let { keybind: t, message: n, messageWithoutKeybind: i } = e,
-        l = (0, f.o)();
-    return (0, r.jsx)(r.Fragment, {
-        children: l
-            ? y.NW.format(n, {
-                  keybind: t,
-                  keybindHook: (e) => (0, r.jsx)(p.Z, { keybind: t }, t.join('+'))
-              })
-            : i
-    });
+    let { keybind: t, message: n, messageWithoutKeybind: i } = e;
+    return (0, f.o)()
+        ? y.NW.format(n, {
+              keybind: t,
+              keybindHook: (e) => (0, r.jsx)(p.Z, { keybind: t }, t.join('+'))
+          })
+        : i;
 }
 function j(e) {
     e.currentTarget.scrollTo(0, 0);

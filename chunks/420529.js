@@ -91,30 +91,28 @@ function T(e) {
                       );
               });
     };
-    return (0, i.jsx)(i.Fragment, {
-        children: m
-            ? (0, i.jsx)(a.sNh, {
-                  label: N.NW.string(N.t.PlwgdX),
-                  id: 'handoff',
-                  action: () => {
-                      (0, _.F)(T);
+    return m
+        ? (0, i.jsx)(a.sNh, {
+              label: N.NW.string(N.t.PlwgdX),
+              id: 'handoff',
+              action: () => {
+                  (0, _.F)(T);
+              },
+              icon: (0, p.Z)(void 0),
+              disabled: U
+          })
+        : y.map((e) => {
+              var n, r;
+              return (0, i.jsx)(
+                  a.sNh,
+                  {
+                      id: 'transfer-'.concat(e.type, '-').concat(e.id),
+                      label: ((n = e.type), (r = t), n === g.ABu.XBOX ? (r ? N.NW.string(N.t['f+Aijo']) : N.NW.string(N.t.E8euSk)) : n === g.ABu.PLAYSTATION ? (r ? N.NW.string(N.t.vzfxmZ) : N.NW.string(N.t.QxEYDg)) : n === g.ABu.PLAYSTATION_STAGING ? (r ? N.NW.string(N.t.BDiXtb) : N.NW.string(N.t['bhdB9/'])) : void 0),
+                      action: () => C(e),
+                      icon: (0, p.Z)(e.type),
+                      disabled: U
                   },
-                  icon: (0, p.Z)(void 0),
-                  disabled: U
-              })
-            : y.map((e) => {
-                  var n, r;
-                  return (0, i.jsx)(
-                      a.sNh,
-                      {
-                          id: 'transfer-'.concat(e.type, '-').concat(e.id),
-                          label: ((n = e.type), (r = t), n === g.ABu.XBOX ? (r ? N.NW.string(N.t['f+Aijo']) : N.NW.string(N.t.E8euSk)) : n === g.ABu.PLAYSTATION ? (r ? N.NW.string(N.t.vzfxmZ) : N.NW.string(N.t.QxEYDg)) : n === g.ABu.PLAYSTATION_STAGING ? (r ? N.NW.string(N.t.BDiXtb) : N.NW.string(N.t['bhdB9/'])) : void 0),
-                          action: () => C(e),
-                          icon: (0, p.Z)(e.type),
-                          disabled: U
-                      },
-                      e.id
-                  );
-              })
-    });
+                  e.id
+              );
+          });
 }

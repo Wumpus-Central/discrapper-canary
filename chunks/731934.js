@@ -20,9 +20,9 @@ var r = n(200651),
     E = n(292352),
     j = n(134612),
     C = n(388032),
-    O = n(236837),
-    v = n(65511),
-    S = n(455812),
+    O = n(828859),
+    v = n(635312),
+    S = n(802138),
     T = n(926895);
 function I(e) {
     let { header: t, description: n, stepNumber: i } = e;
@@ -163,7 +163,6 @@ function P(e) {
                 (0, r.jsx)(
                     u.Z,
                     {
-                        className: v.__invalid_sectionTitle,
                         children: (0, r.jsx)(c.Text, {
                             className: S.marginBottom8,
                             variant: 'eyebrow',
@@ -229,7 +228,6 @@ function P(e) {
                             return e;
                         })(
                             {
-                                className: v.__invalid_list,
                                 innerRole: i,
                                 innerAriaLabel: n,
                                 ref: (e) => {
@@ -262,30 +260,27 @@ let R = () => {
                 max: n
             },
             s = (0, m.o)(C.NW.formatToPlainString(C.t['+tnO39'], i), C.NW.formatToPlainString(C.t['pu6/U1'], i));
-        return (0, r.jsx)(r.Fragment, {
-            children:
-                t.length > 0
-                    ? (0, r.jsx)(P, {
-                          sectionType: E.ne.ACTIVE,
-                          sectionTitle: s,
-                          requests: t
+        return t.length > 0
+            ? (0, r.jsx)(P, {
+                  sectionType: E.ne.ACTIVE,
+                  sectionTitle: s,
+                  requests: t
+              })
+            : (0, r.jsxs)('div', {
+                  className: v.section,
+                  children: [
+                      (0, r.jsx)(c.Text, {
+                          className: S.marginBottom8,
+                          variant: 'eyebrow',
+                          color: 'header-secondary',
+                          children: s
+                      }),
+                      (0, r.jsx)('div', {
+                          className: v.box,
+                          children: (0, r.jsx)(f.Z, { text: C.NW.string(C.t.C4ScLC) })
                       })
-                    : (0, r.jsxs)('div', {
-                          className: v.section,
-                          children: [
-                              (0, r.jsx)(c.Text, {
-                                  className: S.marginBottom8,
-                                  variant: 'eyebrow',
-                                  color: 'header-secondary',
-                                  children: s
-                              }),
-                              (0, r.jsx)('div', {
-                                  className: v.box,
-                                  children: (0, r.jsx)(f.Z, { text: C.NW.string(C.t.C4ScLC) })
-                              })
-                          ]
-                      })
-        });
+                  ]
+              });
     },
     D = () => {
         let e = (0, h.VM)(),

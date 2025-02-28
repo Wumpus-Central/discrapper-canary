@@ -19,8 +19,8 @@ var r = n(200651),
     b = n(906411),
     g = n(592125),
     h = n(703558),
-    j = n(117530),
-    O = n(358085),
+    O = n(117530),
+    j = n(358085),
     y = n(79390),
     x = n(885001),
     v = n(35463),
@@ -28,7 +28,7 @@ var r = n(200651),
     _ = n(185923),
     P = n(957825),
     C = n(388032),
-    N = n(577319);
+    N = n(525695);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -96,7 +96,7 @@ function I(e) {
                 emojiName: l.type === b.B.UNICODE ? l.optionallyDiverseSequence : l.name,
                 animated: l.animated
             })
-          : (0, r.jsx)(r.Fragment, { children: s });
+          : s;
 }
 function S(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: o } = e;
@@ -127,9 +127,9 @@ function S(e) {
 }
 function D(e) {
     let { channelId: t, localCreationAnswerId: n, buttonImage: o, layout: u, onEmojiSelect: d, onEmojiRemove: f, answerIndex: m, shouldShowEmojiPicker: b, toggleEmojiPicker: h } = e,
-        j = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
+        O = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         {
-            emoji: O,
+            emoji: j,
             isLoadingMedia: x,
             hasUpload: w,
             mediaUrl: k,
@@ -140,7 +140,7 @@ function D(e) {
             image: o
         }),
         R = u === i.C.DEFAULT,
-        W = w || null != O,
+        W = w || null != j,
         T = a.useCallback(() => {
             f(m);
         }, [f, m]),
@@ -151,13 +151,13 @@ function D(e) {
                           imageName: (0, y.fw)(D),
                           answerNumber: m + 1
                       })
-                    : null != O
+                    : null != j
                       ? C.NW.formatToPlainString(C.t.ncOAhY, {
-                            emojiName: O.name,
+                            emojiName: j.name,
                             answerNumber: m + 1
                         })
                       : C.NW.formatToPlainString(C.t.emdpNj, { answerNumber: m + 1 }),
-            [w, O, m, D]
+            [w, j, m, D]
         ),
         B = a.useCallback(
             (e) => {
@@ -165,7 +165,7 @@ function D(e) {
                 return (0, r.jsx)('div', {
                     className: N.emojiPicker,
                     children: (0, r.jsx)(p.Z, {
-                        channel: j,
+                        channel: O,
                         pickerIntention: _.Hz.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
@@ -175,7 +175,7 @@ function D(e) {
                     })
                 });
             },
-            [j, d, m]
+            [O, d, m]
         ),
         Z = a.useCallback(
             (e) => {
@@ -196,7 +196,7 @@ function D(e) {
                   mediaUrl: k,
                   mediaFilename: D,
                   imageClassName: l()(N.media, R ? N.gifDefault : N.gifJumbo),
-                  emoji: O,
+                  emoji: j,
                   emojiClassName: l()(N.media, R ? N.emojiDefault : N.emojiJumbo),
                   fallback: (0, r.jsx)(c.EO4, {
                       size: 'md',
@@ -293,9 +293,9 @@ let W = a.forwardRef(function (e, t) {
         U = (0, m.Dt)(),
         M = (0, m.Dt)(),
         z = null != L && L.length > 0,
-        H = (0, s.e7)([j.Z], () => j.Z.getUpload(o, d.localCreationAnswerId, h.d.Poll)),
-        [F, Y] = a.useState(!1),
-        K = () => {
+        H = (0, s.e7)([O.Z], () => O.Z.getUpload(o, d.localCreationAnswerId, h.d.Poll)),
+        [Y, K] = a.useState(!1),
+        F = () => {
             function e(e) {
                 u.Z.update(o, d.localCreationAnswerId, h.d.Poll, { description: e });
             }
@@ -316,7 +316,7 @@ let W = a.forwardRef(function (e, t) {
             });
         },
         q = a.useCallback(() => {
-            Y((e) => !e);
+            K((e) => !e);
         }, []),
         X = a.useCallback(
             (e) => {
@@ -325,10 +325,10 @@ let W = a.forwardRef(function (e, t) {
                 switch (e.key.toLowerCase()) {
                     case 'enter':
                         var r;
-                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, O.getOS)() ? t : n) ? (e.stopPropagation(), W()) : S()), null === (r = T.current[p + 1]) || void 0 === r || r.focus();
+                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), W()) : S()), null === (r = T.current[p + 1]) || void 0 === r || r.focus();
                         break;
                     case 'e':
-                        ('macos' === (0, O.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), q());
+                        ('macos' === (0, j.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), q());
                 }
             },
             [S, d, T, p, g, b, W, q]
@@ -341,126 +341,123 @@ let W = a.forwardRef(function (e, t) {
             onEmojiRemove: P,
             localCreationAnswerId: d.localCreationAnswerId,
             answerIndex: p,
-            shouldShowEmojiPicker: F,
+            shouldShowEmojiPicker: Y,
             toggleEmojiPicker: q
         }),
         G = null != H && null != H.description && H.description.length > 0;
-    return (0, r.jsx)(r.Fragment, {
-        children:
-            b === i.C.DEFAULT
-                ? (0, r.jsxs)('div', {
-                      className: l()(N.answerRow, { [N.hasDeleteButton]: E }),
-                      children: [
-                          (0, r.jsxs)('div', {
-                              className: l()(N.defaultTextInputWrapper, { [N.hasError]: z }),
-                              ref: t,
-                              children: [
-                                  J,
-                                  (0, r.jsx)(c.oil, {
-                                      'aria-label': C.NW.formatToPlainString(C.t['3+V8Gx'], { answerNumber: p + 1 }),
-                                      placeholder: C.NW.string(C.t.NNHVlp),
-                                      value: d.text,
-                                      className: N.defaultTextInput,
-                                      inputClassName: N.defaultTextInput,
-                                      onChange: (e) =>
-                                          v({
-                                              text: e,
-                                              index: p,
-                                              localCreationAnswerId: d.localCreationAnswerId
-                                          }),
-                                      onKeyDown: X,
-                                      maxLength: w.WA,
-                                      'aria-invalid': z,
-                                      'aria-describedby': z ? U : M,
-                                      focusProps: k,
-                                      inputRef: B
-                                  }),
-                                  (0, r.jsx)(R, {
-                                      value: d.text,
-                                      id: M
-                                  })
-                              ]
-                          }),
-                          E &&
-                              (0, r.jsx)(c.P3F, {
-                                  onClick: () => I(p),
-                                  className: N.removeAnswerButtonDefault,
-                                  'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
-                                  ref: Z,
-                                  children: (0, r.jsx)(c.XHJ, {
-                                      size: 'md',
-                                      color: 'currentColor',
-                                      className: N.trashIcon,
-                                      'aria-hidden': !0
-                                  })
-                              }),
-                          z &&
-                              (0, r.jsx)(c.Text, {
-                                  id: U,
-                                  variant: 'text-xs/medium',
-                                  color: 'text-danger',
-                                  className: N.__invalid_errorText,
-                                  children: L
-                              })
-                      ]
-                  })
-                : (0, r.jsxs)('div', {
-                      className: N.imageOnlyContainer,
+    return b === i.C.DEFAULT
+        ? (0, r.jsxs)('div', {
+              className: l()(N.answerRow, { [N.hasDeleteButton]: E }),
+              children: [
+                  (0, r.jsxs)('div', {
+                      className: l()(N.defaultTextInputWrapper, { [N.hasError]: z }),
                       ref: t,
                       children: [
-                          (0, r.jsxs)('div', {
-                              className: N.imagePreviewContainer,
-                              children: [
-                                  J,
-                                  G &&
-                                      (0, r.jsxs)(r.Fragment, {
+                          J,
+                          (0, r.jsx)(c.oil, {
+                              'aria-label': C.NW.formatToPlainString(C.t['3+V8Gx'], { answerNumber: p + 1 }),
+                              placeholder: C.NW.string(C.t.NNHVlp),
+                              value: d.text,
+                              className: N.defaultTextInput,
+                              inputClassName: N.defaultTextInput,
+                              onChange: (e) =>
+                                  v({
+                                      text: e,
+                                      index: p,
+                                      localCreationAnswerId: d.localCreationAnswerId
+                                  }),
+                              onKeyDown: X,
+                              maxLength: w.WA,
+                              'aria-invalid': z,
+                              'aria-describedby': z ? U : M,
+                              focusProps: k,
+                              inputRef: B
+                          }),
+                          (0, r.jsx)(R, {
+                              value: d.text,
+                              id: M
+                          })
+                      ]
+                  }),
+                  E &&
+                      (0, r.jsx)(c.P3F, {
+                          onClick: () => I(p),
+                          className: N.removeAnswerButtonDefault,
+                          'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
+                          ref: Z,
+                          children: (0, r.jsx)(c.XHJ, {
+                              size: 'md',
+                              color: 'currentColor',
+                              className: N.trashIcon,
+                              'aria-hidden': !0
+                          })
+                      }),
+                  z &&
+                      (0, r.jsx)(c.Text, {
+                          id: U,
+                          variant: 'text-xs/medium',
+                          color: 'text-danger',
+                          className: N.__invalid_errorText,
+                          children: L
+                      })
+              ]
+          })
+        : (0, r.jsxs)('div', {
+              className: N.imageOnlyContainer,
+              ref: t,
+              children: [
+                  (0, r.jsxs)('div', {
+                      className: N.imagePreviewContainer,
+                      children: [
+                          J,
+                          G &&
+                              (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)(c.Text, {
+                                          variant: 'text-xs/semibold',
+                                          className: N.altBadge,
+                                          'aria-hidden': !0,
+                                          children: C.NW.string(C.t.QEW819)
+                                      }),
+                                      (0, r.jsxs)('div', {
+                                          onClick: F,
                                           children: [
+                                              (0, r.jsx)(c.nn4, { children: C.NW.string(C.t.piH89v) }),
                                               (0, r.jsx)(c.Text, {
-                                                  variant: 'text-xs/semibold',
-                                                  className: N.altBadge,
-                                                  'aria-hidden': !0,
-                                                  children: C.NW.string(C.t.QEW819)
-                                              }),
-                                              (0, r.jsxs)('div', {
-                                                  onClick: K,
-                                                  children: [
-                                                      (0, r.jsx)(c.nn4, { children: C.NW.string(C.t.piH89v) }),
-                                                      (0, r.jsx)(c.Text, {
-                                                          variant: 'text-xxs/medium',
-                                                          className: N.altTextPreview,
-                                                          children: H.description
-                                                      })
-                                                  ]
+                                                  variant: 'text-xxs/medium',
+                                                  className: N.altTextPreview,
+                                                  children: H.description
                                               })
                                           ]
                                       })
-                              ]
-                          }),
-                          (0, r.jsxs)('div', {
-                              className: N.imageOnlyAnswerActionBar,
-                              children: [
-                                  null != H
-                                      ? (0, r.jsx)(f.Z, {
-                                            tooltip: C.NW.string(C.t.QbhHBQ),
-                                            'aria-label': G ? C.NW.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.NW.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
-                                            onClick: K,
-                                            children: (0, r.jsx)(x.N, { 'aria-hidden': !0 })
-                                        })
-                                      : null,
-                                  (0, r.jsx)(f.Z, {
-                                      tooltip: C.NW.string(C.t.x7DOr6),
-                                      'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
-                                      onClick: () => I(p),
-                                      dangerous: !0,
-                                      children: (0, r.jsx)(c.XHJ, {
-                                          size: 'md',
-                                          color: 'currentColor',
-                                          'aria-hidden': !0
-                                      })
-                                  })
-                              ]
+                                  ]
+                              })
+                      ]
+                  }),
+                  (0, r.jsxs)('div', {
+                      className: N.imageOnlyAnswerActionBar,
+                      children: [
+                          null != H
+                              ? (0, r.jsx)(f.Z, {
+                                    tooltip: C.NW.string(C.t.QbhHBQ),
+                                    'aria-label': G ? C.NW.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.NW.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
+                                    onClick: F,
+                                    children: (0, r.jsx)(x.N, { 'aria-hidden': !0 })
+                                })
+                              : null,
+                          (0, r.jsx)(f.Z, {
+                              tooltip: C.NW.string(C.t.x7DOr6),
+                              'aria-label': C.NW.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
+                              onClick: () => I(p),
+                              dangerous: !0,
+                              children: (0, r.jsx)(c.XHJ, {
+                                  size: 'md',
+                                  color: 'currentColor',
+                                  'aria-hidden': !0
+                              })
                           })
                       ]
                   })
-    });
+              ]
+          });
 });

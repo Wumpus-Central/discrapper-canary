@@ -12,7 +12,7 @@ var r,
     h = n(513202),
     f = n(981631),
     m = n(388032),
-    g = n(206950);
+    g = n(129051);
 let b = ['embedded_cover'],
     _ = {
         tension: 800,
@@ -37,13 +37,13 @@ function v(e) {
             assetNames: b,
             commandOrigin: y
         }),
-        [E, P] = l.useState(!1),
-        I = l.useCallback(() => {
-            P(!0);
-        }, [P]),
+        [E, I] = l.useState(!1),
+        P = l.useCallback(() => {
+            I(!0);
+        }, [I]),
         S = l.useCallback(() => {
-            P(!1);
-        }, [P]),
+            I(!1);
+        }, [I]),
         Z = l.useMemo(
             () =>
                 (0, i.jsx)('div', {
@@ -86,7 +86,7 @@ function v(e) {
                     });
                 case u.JS.START:
                 default:
-                    return (0, i.jsx)(i.Fragment, {});
+                    return null;
             }
         }, [O]);
     return (0, i.jsx)(c.zxk, {
@@ -94,9 +94,9 @@ function v(e) {
         color: 'transparent',
         look: c.zxk.Looks.BLANK,
         size: c.zxk.Sizes.NONE,
-        onFocus: I,
+        onFocus: P,
         onBlur: S,
-        onMouseEnter: I,
+        onMouseEnter: P,
         onMouseLeave: S,
         innerClassName: g.activityItemButtonInnerClass,
         children: (0, i.jsx)(c.AMe, {
@@ -108,7 +108,7 @@ function v(e) {
                 return (0, i.jsx)(c.f6W, {
                     theme: f.BRd.DARK,
                     children: (e) =>
-                        (0, i.jsx)(s.animated.div, {
+                        (0, i.jsxs)(s.animated.div, {
                             className: a()(e, g.activityItem, v, {
                                 [g.activityItem_13_11]: 0 === C,
                                 [g.activityItem_16_9]: 1 === C
@@ -116,18 +116,16 @@ function v(e) {
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
                             },
-                            children: (0, i.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, i.jsx)(d.Z, {
-                                        imageBackground: j,
-                                        applicationName: r.application.name,
-                                        imageClassName: g.activitySuggestionImage,
-                                        imageNotFoundClassName: g.brokenImageIconWrapper
-                                    }),
-                                    Z,
-                                    T
-                                ]
-                            })
+                            children: [
+                                (0, i.jsx)(d.Z, {
+                                    imageBackground: j,
+                                    applicationName: r.application.name,
+                                    imageClassName: g.activitySuggestionImage,
+                                    imageNotFoundClassName: g.brokenImageIconWrapper
+                                }),
+                                Z,
+                                T
+                            ]
                         })
                 });
             }

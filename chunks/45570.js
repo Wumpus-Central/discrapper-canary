@@ -5,7 +5,7 @@ var i = r(481060),
     o = r(547972),
     c = r(326528);
 function a() {
-    let e = (0, c.b)().map((e) =>
+    return (0, c.b)().map((e) =>
         (0, n.jsx)(
             i.sNh,
             {
@@ -16,5 +16,4 @@ function a() {
             e.id
         )
     );
-    return (0, n.jsx)(n.Fragment, { children: e });
 }
