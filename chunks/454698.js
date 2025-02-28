@@ -20,6 +20,7 @@ e.exports = {
     overlayButton: 'overlayButton__2f4f7',
     overlayButtonInner: 'overlayButtonInner__2f4f7',
     overlayButtonContainer: 'overlayButtonContainer__2f4f7',
+    hideWhenInactive: 'hideWhenInactive__2f4f7',
     titleIcon: 'titleIcon__2f4f7',
     experimentTitleIcon: 'experimentTitleIcon__2f4f7',
     secureFramesIcon: 'secureFramesIcon__2f4f7',
