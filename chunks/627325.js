@@ -20,7 +20,7 @@ var r = n(200651),
     x = n(358820),
     O = n(990525),
     E = n(388032),
-    j = n(878258);
+    j = n(697993);
 let N = [51],
     C = [E.t.OpqAoq],
     I = () =>
@@ -44,7 +44,7 @@ let N = [51],
         });
 function S(e) {
     var t;
-    let { columns: n, handleScroll: a, voiceListRef: l, showSectionHeaders: S = !1, query: T } = e,
+    let { columns: n, handleScroll: a, voiceListRef: l, showSectionHeaders: S = !1, query: P } = e,
         A = (0, y.S)(),
         w = (0, u.e7)([g.default], () => (0, b.I5)(g.default.getCurrentUser())),
         {
@@ -61,7 +61,7 @@ function S(e) {
         D = (0, u.cj)([v.Z], () => v.Z.getSortedVoiceFilters()),
         M = w ? Object.values(Z) : D,
         W = i.useMemo(() => {
-            let e = (0, d._I)(T.toLowerCase());
+            let e = (0, d._I)(P.toLowerCase());
             return [
                 '' === e
                     ? M
@@ -70,34 +70,47 @@ function S(e) {
                           return s()(e, (0, d._I)(E.NW.string(A[n].name).toLowerCase()));
                       })
             ];
-        }, [M, T, A]),
-        F = (e) => Math.ceil(e / n),
+        }, [M, P, A]),
+        F = i.useCallback((e) => Math.ceil(e / n), [n]),
         U = i.useCallback(
             (e) => {
                 let { sectionIndex: t, sectionRowIndex: i } = e;
                 return (0, r.jsx)(
-                    P,
+                    T,
                     {
                         children: (0, c.range)(0, n)
-                            .map((e) => W[t][i * n + e])
-                            .filter(_.lm)
-                            .map((e) =>
-                                (0, r.jsx)(
+                            .map((e) => ({
+                                column: e,
+                                voice: W[t][i * n + e]
+                            }))
+                            .filter((e) => {
+                                let { voice: t } = e;
+                                return (0, _.lm)(t);
+                            })
+                            .map((e) => {
+                                let { column: a, voice: o } = e;
+                                return (0, r.jsx)(
                                     O.J,
                                     {
-                                        voiceFilter: e,
-                                        hasNitro: w
+                                        voiceFilter: o,
+                                        hasNitro: w,
+                                        analyticsContext: {
+                                            gridRows: F(W[t].length),
+                                            gridColumns: n,
+                                            interactedRow: i,
+                                            interactedColumn: a
+                                        }
                                     },
-                                    null == e ? void 0 : e.id
-                                )
-                            )
+                                    null == o ? void 0 : o.id
+                                );
+                            })
                     },
                     i
                 );
             },
-            [n, W, w]
+            [n, W, w, F]
         );
-    return T && (null == W ? void 0 : null === (t = W[0]) || void 0 === t ? void 0 : t.length) === 0
+    return P && (null == W ? void 0 : null === (t = W[0]) || void 0 === t ? void 0 : t.length) === 0
         ? (0, r.jsxs)('div', {
               className: o()(j.iconMessage),
               children: [
@@ -162,7 +175,7 @@ function S(e) {
                   sectionFooterHeight: 40 * !w
               });
 }
-function P(e) {
+function T(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
