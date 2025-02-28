@@ -1,11 +1,16 @@
 n.d(t, {
-    $j: () => d,
-    Eo: () => s,
-    Kr: () => o,
-    XA: () => a
+    $j: () => g,
+    Eo: () => o,
+    Kj: () => s,
+    Kr: () => u,
+    RF: () => l,
+    XA: () => c,
+    ZK: () => d
 }),
-    n(47120),
     n(653041),
+    n(47120),
+    n(86693),
+    n(536091),
     n(301563),
     n(866573),
     n(642549),
@@ -29,15 +34,36 @@ n.d(t, {
     n(78328),
     n(815648);
 var r = n(481060),
-    i = n(269991);
-i.F.HERO_BANNER, i.F.HERO_LOGO;
-let s = (e) => {
+    i = n(619899);
+let s = {
+        'hero_banner.jpg': i.F.HERO_BANNER,
+        'hero_banner_animated.webm': i.F.HERO_BANNER_ANIMATED,
+        'hero_logo.png': i.F.HERO_LOGO
+    },
+    a = async (e) => {
+        let t = [];
+        if (e.isFile) {
+            let n = await new Promise((t) => e.file(t));
+            '.DS_Store' !== n.name && t.push(n);
+        } else if (e.isDirectory) {
+            let n = e.createReader(),
+                r = await new Promise((e) => n.readEntries(e)),
+                i = await Promise.all(r.map((e) => a(e)));
+            t.push(...i.flat());
+        }
+        return t;
+    },
+    l = async (e) => {
+        let t = e.map((e) => a(e));
+        return (await Promise.all(t)).flat();
+    },
+    o = (e) => {
         (0, r.showToast)((0, r.createToast)(e, r.ToastType.FAILURE));
     },
-    a = (e) => {
+    c = (e) => {
         (0, r.showToast)((0, r.createToast)(e, r.ToastType.SUCCESS));
     },
-    l = (e, t, n) => {
+    d = (e, t, n) => {
         let r = new FileReader();
         (r.onload = (r) => {
             if (null == r.target || 'string' != typeof r.target.result) {
@@ -48,14 +74,14 @@ let s = (e) => {
         }),
             r.readAsDataURL(e);
     },
-    o = (e, t, n) => {
+    u = (e, t, n) => {
         if (0 === e.length) {
             null == n || n('No files found!');
             return;
         }
-        for (let r of e) l(r, t, n);
+        for (let r of e) d(r, t, n);
     },
-    c = (e) => {
+    m = (e) => {
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
@@ -63,7 +89,7 @@ let s = (e) => {
         for (let e = 0; e < r.length; e++) s[e] = r.charCodeAt(e);
         return new Blob([s], { type: i });
     },
-    d = (e) => {
-        let t = c(e);
+    g = (e) => {
+        let t = m(e);
         return URL.createObjectURL(t);
     };
