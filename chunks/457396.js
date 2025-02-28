@@ -42,7 +42,7 @@ var r = n(200651),
     U = n(981631),
     G = n(921944),
     W = n(388032),
-    V = n(761644);
+    V = n(607359);
 let B = 'NitroTabButton',
     H = (e) => {
         let { selected: t } = e,
@@ -110,10 +110,9 @@ let B = 'NitroTabButton',
             eE = e_ && (null == en ? void 0 : en.trial_id) === M.a7,
             [eO, eN] = (0, h.US)(ei ? [a.z.REVERSE_TRIAL_NITRO_TAB_BADGE_V2] : [], void 0, !0),
             ev = (0, I.m)({ location: B }),
-            ey = (0, p.wE)(a.z.Q1_2025_MARKETING_MOMENT_PROMO_SHEET),
+            ey = (0, p.wE)(a.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE),
             eI = (0, C.wQ)({ location: B }),
-            eC = (0, p.wE)(a.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK),
-            eS = () => !0 === ev && !0 === eI && !1 === eC;
+            eC = (0, p.wE)(a.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK);
         if (
             (i.useEffect(() => {
                 !0 === K && eO === a.z.REVERSE_TRIAL_NITRO_TAB_BADGE_V2 && eN(G.L.AUTO_DISMISS);
@@ -132,13 +131,12 @@ let B = 'NitroTabButton',
                 upperCase: !0
             }))),
             !0 === ev
-                ? (O =
-                      !0 === ey
-                          ? (0, r.jsx)(L.Du, {})
-                          : (0, r.jsx)(k.Z, {
-                                copy: W.NW.string(W.t.OS9KPj),
-                                showStars: !1
-                            }))
+                ? (O = ey
+                      ? (0, r.jsx)(L.Du, {})
+                      : (0, r.jsx)(k.Z, {
+                            copy: W.NW.string(W.t.OS9KPj),
+                            showStars: !1
+                        }))
                 : eu
                   ? ((t = V.referralIncentive), (F = 7))
                   : ed
@@ -183,7 +181,7 @@ let B = 'NitroTabButton',
                                       isTabSelected: K
                                   })),
                                   (F = 4));
-        let eT = (0, r.jsx)(
+        let eS = (0, r.jsx)(
             c.Qj,
             ((z = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -222,7 +220,7 @@ let B = 'NitroTabButton',
                                 badge_decorator: F,
                                 has_premium: ee
                             }),
-                            eu || ed ? ((0, p.EW)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: G.L.TAKE_ACTION }), ed && (0, p.EW)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: G.L.TAKE_ACTION })) : null != eO ? eN(G.L.USER_DISMISS) : !0 === ev && !1 === ey ? (0, p.EW)(a.z.Q1_2025_MARKETING_MOMENT_PROMO_SHEET, { dismissAction: G.L.TAKE_ACTION }) : eS() && (0, p.EW)(a.z.Q1_2025_MARKETING_MOMENT_REMINDER_COACHMARK, { dismissAction: G.L.TAKE_ACTION });
+                            eu || ed ? ((0, p.EW)(a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: G.L.TAKE_ACTION }), ed && (0, p.EW)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: G.L.TAKE_ACTION })) : null != eO && eN(G.L.USER_DISMISS);
                     }
                 },
                 X,
@@ -248,12 +246,12 @@ let B = 'NitroTabButton',
                   }),
             z)
         );
-        if (!0 === eS()) {
+        if (!0 == (!0 === ev && !0 === eI && !1 === eC)) {
             let e = E.ZP.isPremiumExactly(J, M.p9.TIER_1) ? W.NW.string(W.t.tI65aW) : W.NW.string(W.t.toA0Ly);
             return (0, r.jsx)(L.s, {
-                children: () => eT,
+                children: () => eS,
                 description: e
             });
         }
-        return ec ? (0, r.jsx)(L.CI, { children: eT }) : eu && !ep ? (0, r.jsx)(L.A7, { children: () => eT }) : eT;
+        return ec ? (0, r.jsx)(L.CI, { children: eS }) : eu && !ep ? (0, r.jsx)(L.A7, { children: () => eS }) : eS;
     };

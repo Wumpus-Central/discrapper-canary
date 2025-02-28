@@ -24,7 +24,7 @@ var n = r(200651),
     h = r(981631),
     x = r(921944),
     j = r(388032),
-    y = r(904892),
+    y = r(924911),
     C = r(482668),
     v = r(21504);
 function P(e) {
@@ -71,7 +71,7 @@ function _(e, t) {
     );
 }
 let S = 'url(#dark-purple-gradient)',
-    E = () =>
+    N = () =>
         (0, n.jsxs)('div', {
             className: y.coachtipContent,
             children: [
@@ -85,7 +85,7 @@ let S = 'url(#dark-purple-gradient)',
                 })
             ]
         }),
-    N = () =>
+    E = () =>
         (0, n.jsx)('svg', {
             width: '15',
             height: '15',
@@ -107,7 +107,7 @@ let S = 'url(#dark-purple-gradient)',
                     artClassName: y.coachmarkArt,
                     dismissIconClassName: y.exitIcon,
                     onDismissIconClick: w,
-                    dismissIcon: (0, n.jsx)(N, {}),
+                    dismissIcon: (0, n.jsx)(E, {}),
                     headerClassName: y.incentiveCoachtipContent,
                     contentClassName: y.incentiveCoachtipContainer,
                     pointerClassName: y.incentiveTooltipPointer,
@@ -153,7 +153,7 @@ let S = 'url(#dark-purple-gradient)',
                             circleColor: 'url(#purple-gradient)'
                         })
                     }),
-                    (0, n.jsx)(E, {})
+                    (0, n.jsx)(N, {})
                 ]
             });
         return (0, n.jsx)(l.ua7, {
@@ -211,11 +211,13 @@ let S = 'url(#dark-purple-gradient)',
             b = s ? v.Z : C.Z;
         return (0, n.jsx)(l.yRy, {
             shouldShow: !0,
+            onRequestClose: f,
             renderPopout: () =>
                 (0, n.jsx)(u.Z, {
+                    onClose: f,
                     dismissIconClassName: y.exitIcon,
                     onDismissIconClick: f,
-                    dismissIcon: (0, n.jsx)(N, {}),
+                    dismissIcon: (0, n.jsx)(E, {}),
                     artClassName: y.collectibleDecoReminderCoachmarkArtContainer,
                     headerClassName: y.collectibleDecoReminderCoachmarkHeader,
                     contentClassName: y.collectibleDecoReminderCoachmarkContent,
