@@ -1,18 +1,7 @@
-n.d(t, {
-    F: () => d,
-    N: () => u
-}),
-    n(315314),
-    n(309749),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r,
-    i = n(15729),
-    s = n(731965);
-function a(e) {
+n.d(t, { N: () => c }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
+var r = n(15729),
+    a = n(731965);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +26,7 @@ function a(e) {
     }
     return e;
 }
-function l(e, t) {
+function i(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,22 +46,21 @@ function l(e, t) {
 }
 function o(e) {
     var t = (function (e, t) {
-        if ('object' !== c(e) || null === e) return e;
+        if ('object' !== s(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== c(r)) return r;
+            if ('object' !== s(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === c(t) ? t : String(t);
+    return 'symbol' === s(t) ? t : String(t);
 }
-function c(e) {
+function s(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-var d = (((r = {}).HERO_BANNER = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), r);
-let u = (0, i.U)((e, t) => ({
+let c = (0, r.U)((e, t) => ({
     assets: {},
     previewEnabled: !1,
     setPreviewEnabled: (t) => e({ previewEnabled: t }),
@@ -82,53 +70,53 @@ let u = (0, i.U)((e, t) => ({
         return r.previewEnabled && null !== (n = r.assets[e]) && void 0 !== n ? n : null;
     },
     upsertAsset: (t, n) =>
-        (0, s.j)(() => {
+        (0, a.j)(() => {
             e((e) => {
                 let r = e.assets[t];
                 null != r && URL.revokeObjectURL(r.src);
-                let i = URL.createObjectURL(n),
-                    s = a({}, e.assets);
+                let a = URL.createObjectURL(n),
+                    o = l({}, e.assets);
                 return (
-                    (s[t] = {
+                    (o[t] = {
                         name: n.name,
-                        src: i
+                        src: a
                     }),
-                    l(a({}, e), { assets: s })
+                    i(l({}, e), { assets: o })
                 );
             });
         }),
     deleteAsset: (t) =>
-        (0, s.j)(() => {
+        (0, a.j)(() => {
             e((e) => {
                 let n = e.assets[t];
                 if (null == n) return e;
                 URL.revokeObjectURL(n.src);
                 let r = e.assets,
-                    { [t]: i } = r,
+                    { [t]: a } = r,
                     s = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
-                            i = (function (e, t) {
+                            a = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
-                                    i = {},
-                                    s = Object.keys(e);
-                                for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                                return i;
+                                    a = {},
+                                    l = Object.keys(e);
+                                for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                                return a;
                             })(e, t);
                         if (Object.getOwnPropertySymbols) {
-                            var s = Object.getOwnPropertySymbols(e);
-                            for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                            var l = Object.getOwnPropertySymbols(e);
+                            for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
                         }
-                        return i;
+                        return a;
                     })(r, [t].map(o));
-                return l(a({}, e), { assets: s });
+                return i(l({}, e), { assets: s });
             });
         }),
     clearAssets: () =>
-        (0, s.j)(() => {
+        (0, a.j)(() => {
             e((e) => (Object.values(e.assets).forEach((e) => URL.revokeObjectURL(e.src)), { assets: {} }));
         })
 }));
