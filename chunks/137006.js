@@ -80,7 +80,8 @@ let l = {
                     e.object({
                         referrer_id: e.string().max(64),
                         custom_id: e.string().max(64),
-                        message: e.string().max(1000).required()
+                        message: e.string().max(1000).required(),
+                        link_id: e.string().max(64)
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })

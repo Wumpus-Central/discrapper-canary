@@ -21,11 +21,11 @@ var r = n(392711),
     u = n(630388),
     d = n(823379),
     f = n(314897),
-    p = n(412788),
-    _ = n(981631),
+    _ = n(412788),
+    p = n(981631),
     h = n(308083),
-    m = n(474936);
-function g(e, t, n) {
+    g = n(474936);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -73,18 +73,20 @@ function I(e) {
     void 0 !== n && ((e.premiumType = n), delete e.premium_type);
     let r = e.nsfw_allowed;
     null != r && ((e.nsfwAllowed = r), delete e.nsfw_allowed);
-    let i = e.public_flags;
-    null != i && ((e.publicFlags = i), delete e.public_flags);
-    let s = e.purchased_flags;
-    void 0 !== s && ((e.purchasedFlags = s), delete e.purchased_flags);
-    let c = e.premium_usage_flags;
-    void 0 !== c && ((e.premiumUsageFlags = c), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
-    let u = e.avatar_decoration_data;
-    void 0 !== u && ((e.avatarDecorationData = (0, o.FG)(u)), delete e.avatar_decoration_data);
-    let d = e.collectibles;
-    void 0 !== d && ((e.collectibles = (0, a.X)(d)), delete e.collectibles);
-    let f = e.global_name;
-    void 0 !== f && ((e.globalName = f), delete e.global_name);
+    let i = e.age_verification_status;
+    null != i && ((e.ageVerificationStatus = i), delete e.age_verification_status);
+    let s = e.public_flags;
+    null != s && ((e.publicFlags = s), delete e.public_flags);
+    let c = e.purchased_flags;
+    void 0 !== c && ((e.purchasedFlags = c), delete e.purchased_flags);
+    let u = e.premium_usage_flags;
+    void 0 !== u && ((e.premiumUsageFlags = u), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
+    let d = e.avatar_decoration_data;
+    void 0 !== d && ((e.avatarDecorationData = (0, o.FG)(d)), delete e.avatar_decoration_data);
+    let f = e.collectibles;
+    void 0 !== f && ((e.collectibles = (0, a.Xm)(f)), delete e.collectibles);
+    let _ = e.global_name;
+    void 0 !== _ && ((e.globalName = _), delete e.global_name);
     let p = e.primary_guild;
     return void 0 !== p && (e.primary_guild = (0, h.lt)(p)), e;
 }
@@ -116,7 +118,7 @@ function C(e, t) {
     if (!e) return t;
     let n = s.Z.getPremiumTypeOverride(),
         r = s.Z.getPremiumTypeActual();
-    return n === m.F_ ? r : n;
+    return n === g.F_ ? r : n;
 }
 function R(e, t) {
     var n, r, i, o, a, s;
@@ -168,7 +170,7 @@ function P(e) {
                 avatar: 'c1f86b313385cb97985f1b118851c28c'
             }));
 }
-function w(e) {
+function D(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
@@ -185,13 +187,13 @@ function w(e) {
                     });
             });
 }
-function D(e) {
+function w(e) {
     return !('incomplete' in e);
 }
-function x(e) {
-    if (null != e.users) for (let t of e.users) !(t.id in E && D(t)) && (E[t.id] = new c.Z(t));
-}
 function L(e) {
+    if (null != e.users) for (let t of e.users) !(t.id in E && w(t)) && (E[t.id] = new c.Z(t));
+}
+function x(e) {
     let { user: t } = e;
     t.id !== f.default.getId() && N(t);
 }
@@ -219,7 +221,7 @@ function B(e) {
     let { firstMessages: t, owners: n } = e;
     null != t && t.forEach((e) => R(e, !0)), null != n && n.forEach((e) => N(e.user, !0));
 }
-function Z(e) {
+function V(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
@@ -233,7 +235,7 @@ function F(e) {
         null != t && R(t, !0);
     });
 }
-function V(e) {
+function Z(e) {
     let { guildScheduledEventUsers: t, guildId: n } = e;
     t.forEach((e) => {
         let { user: t, member: r } = e;
@@ -255,9 +257,9 @@ function W(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    if ((R(t, !0), null != t.flags && u.yE(t.flags, _.iLy.URGENT))) {
+    if ((R(t, !0), null != t.flags && u.yE(t.flags, p.iLy.URGENT))) {
         let e = E[f.default.getId()];
-        return null != e && ((E[f.default.getId()] = e.set('flags', u.mB(e.flags, _.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
+        return null != e && ((E[f.default.getId()] = e.set('flags', u.mB(e.flags, p.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
     return !1;
 }
@@ -393,11 +395,11 @@ function ed(e) {
 function ef(e) {
     return N(e.suggestion.suggested_user);
 }
-function ep(e) {
+function e_(e) {
     let { suggestions: t } = e;
     return t.reduce((e, t) => N(t.suggested_user) || e, !1);
 }
-function e_(e) {
+function ep(e) {
     let { users: t } = e;
     t.forEach((e) => {
         null == E[e.id] && (E[e.id] = new c.Z(e));
@@ -407,14 +409,14 @@ function eh(e) {
     let { giftCode: t } = e;
     return null != t.user && N(t.user);
 }
-function em(e) {
+function eg(e) {
     let { appliedBoosts: t } = e;
     t.forEach((e) => {
         let { user: t } = e;
         null != t && N(t);
     });
 }
-function eg(e) {
+function em(e) {
     let { request: t } = e,
         { user: n, actioned_by_user: r } = t,
         i = !1;
@@ -459,7 +461,7 @@ function eT(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, i.Z)(t) && N(t.member.user)) || e, !1);
 }
-class eN extends p.Z {
+class eN extends _.Z {
     initialize() {
         this.waitFor(f.default, s.Z);
     }
@@ -473,7 +475,7 @@ class eN extends p.Z {
     handleLoadCache(e) {
         let t = this.readSnapshot(eN.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) E[e.id] = new c.Z(e);
-        if (null != e.users) for (let t of e.users) !(t.id in E && D(t)) && (E[t.id] = new c.Z(t));
+        if (null != e.users) for (let t of e.users) !(t.id in E && w(t)) && (E[t.id] = new c.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
                 var n;
@@ -513,11 +515,11 @@ class eN extends p.Z {
     constructor() {
         super({
             CONNECTION_OPEN: P,
-            CONNECTION_OPEN_SUPPLEMENTAL: w,
+            CONNECTION_OPEN_SUPPLEMENTAL: D,
             UPDATE_CLIENT_PREMIUM_TYPE: k,
-            OVERLAY_INITIALIZE: x,
+            OVERLAY_INITIALIZE: L,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: L,
+            USER_UPDATE: x,
             CURRENT_USER_UPDATE: M,
             PRESENCE_UPDATES: Q,
             SEARCH_FINISH: G,
@@ -536,8 +538,8 @@ class eN extends p.Z {
             GUILD_BAN_REMOVE: $,
             CHANNEL_RECIPIENT_ADD: ee,
             CHANNEL_RECIPIENT_REMOVE: ee,
-            GUILD_JOIN_REQUEST_CREATE: eg,
-            GUILD_JOIN_REQUEST_UPDATE: eg,
+            GUILD_JOIN_REQUEST_CREATE: em,
+            GUILD_JOIN_REQUEST_UPDATE: em,
             GUILD_MEMBER_ADD: et,
             GUILD_MEMBER_UPDATE: et,
             GUILD_MEMBERS_CHUNK_BATCH: er,
@@ -550,15 +552,15 @@ class eN extends p.Z {
             GAME_RELATIONSHIP_ADD: eu,
             LOAD_RELATIONSHIPS_SUCCESS: ed,
             FRIEND_SUGGESTION_CREATE: ef,
-            LOAD_FRIEND_SUGGESTIONS_SUCCESS: ep,
-            AUDIT_LOG_FETCH_SUCCESS: e_,
-            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: e_,
+            LOAD_FRIEND_SUGGESTIONS_SUCCESS: e_,
+            AUDIT_LOG_FETCH_SUCCESS: ep,
+            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: ep,
             GIFT_CODE_RESOLVE_SUCCESS: eh,
-            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: em,
+            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eg,
             LOAD_THREADS_SUCCESS: B,
             LOAD_ARCHIVED_THREADS_SUCCESS: B,
-            LOAD_FORUM_POSTS: Z,
-            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: V,
+            LOAD_FORUM_POSTS: V,
+            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Z,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: H,
             NOTIFICATION_CENTER_ITEM_CREATE: W,
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: F,
@@ -575,5 +577,5 @@ class eN extends p.Z {
         });
     }
 }
-g(eN, 'displayName', 'UserStore'), g(eN, 'LATEST_SNAPSHOT_VERSION', 1);
+m(eN, 'displayName', 'UserStore'), m(eN, 'LATEST_SNAPSHOT_VERSION', 1);
 let eA = new eN();

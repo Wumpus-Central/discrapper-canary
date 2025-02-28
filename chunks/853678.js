@@ -111,21 +111,22 @@ let I = new Set([v.Fu, v.JT]),
                 var t;
                 let {
                     socket: n,
-                    args: { referrer_id: r, custom_id: i, message: l }
+                    args: { referrer_id: r, custom_id: i, message: l, link_id: o }
                 } = e;
                 (0, b.bu)(n.transport);
-                let o = (0, b._f)(n.application);
-                if (null == o) throw new m.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
-                let a = (0, E.Z)();
-                if (null == a) throw new m.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No channel found');
+                let a = (0, b._f)(n.application);
+                if (null == a) throw new m.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No application.');
+                let s = (0, E.Z)();
+                if (null == s) throw new m.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'No channel found');
                 if (!(0, h.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, N.udG.EMBEDDED)) throw new m.Z({ errorCode: N.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, c._)({
-                        applicationId: o,
-                        channelId: a.id,
+                        applicationId: a,
+                        channelId: s.id,
                         launchParams: {
                             referrerId: r,
-                            customId: i
+                            customId: i,
+                            linkId: o
                         },
                         message: l,
                         onShare: (t) => {

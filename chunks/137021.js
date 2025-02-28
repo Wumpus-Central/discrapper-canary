@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(823379),
     y = n(207003),
     g = n(388032),
-    j = n(142411),
+    j = n(919702),
     x = n(621054);
 function O(e) {
     var t,
@@ -46,12 +46,13 @@ function O(e) {
         [k, T] = l.useState(''),
         [D, R] = l.useState('');
     l.useEffect(() => {
-        let { referrerId: e, customId: t } = N;
+        let { referrerId: e, customId: t, linkId: n } = N;
         R(
             (0, o.H)({
                 applicationId: h,
                 referrerId: null != e ? e : null == L ? void 0 : L.id,
-                customId: t
+                customId: t,
+                linkId: n
             })
         );
     }, [h, L, N, R]);

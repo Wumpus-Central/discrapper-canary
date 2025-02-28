@@ -128,7 +128,7 @@ class v extends i.Z {
         return (0, l.yE)(this.purchasedFlags, e);
     }
     hasPremiumUsageFlag(e) {
-        return (this.premiumUsageFlags & e) === e;
+        return (0, l.yE)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
         let t = p.vL[e];
@@ -136,9 +136,9 @@ class v extends i.Z {
     }
     hasHadPremium() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = this.hasHadSKU(p.Si.TIER_0),
-            n = this.hasHadSKU(p.Si.TIER_1),
-            r = this.hasHadSKU(p.Si.TIER_2);
+            t = this.hasPurchasedFlag(p.in.PREMIUM_TIER_0),
+            n = this.hasPurchasedFlag(p.in.PREMIUM_TIER_1),
+            r = this.hasPurchasedFlag(p.in.PREMIUM_TIER_2);
         switch (e) {
             case p.p9.TIER_0:
                 return t;
@@ -203,9 +203,9 @@ class v extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, c, u, _, p, g, m, E, v, b, y, O, S, I, T, N, A, C, R, P, D, w, L, x, M;
-        super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
-        let k = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
+        var t, n, i, o, a, s, l, c, u, _, p, g, m, E, v, b, y, O, S, I, T, N, A, C, R, P, D, w, L, x, M, k;
+        super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
+        let j = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null !== (i = e.username) && void 0 !== i ? i : ''),
             (this.discriminator = null !== (o = e.discriminator) && void 0 !== o ? o : d.fo$),
@@ -218,19 +218,20 @@ class v extends i.Z {
             (this.mfaEnabled = null !== (g = null !== (p = e.mfa_enabled) && void 0 !== p ? p : e.mfaEnabled) && void 0 !== g && g),
             (this.mobile = null !== (m = e.mobile) && void 0 !== m && m),
             (this.desktop = null !== (E = e.desktop) && void 0 !== E && E),
-            (this.premiumType = k === d.WND ? null : k),
+            (this.premiumType = j === d.WND ? null : j),
             (this.flags = null !== (v = e.flags) && void 0 !== v ? v : 0),
             (this.publicFlags = null !== (y = null !== (b = e.public_flags) && void 0 !== b ? b : e.publicFlags) && void 0 !== y ? y : 0),
             (this.purchasedFlags = null !== (S = null !== (O = e.purchased_flags) && void 0 !== O ? O : e.purchasedFlags) && void 0 !== S ? S : 0),
             (this.premiumUsageFlags = null !== (T = null !== (I = e.premium_usage_flags) && void 0 !== I ? I : e.premiumUsageFlags) && void 0 !== T ? T : 0),
             (this.phone = null !== (N = e.phone) && void 0 !== N ? N : null),
             (this.nsfwAllowed = null !== (A = e.nsfw_allowed) && void 0 !== A ? A : e.nsfwAllowed),
-            (this.guildMemberAvatars = null !== (C = e.guildMemberAvatars) && void 0 !== C ? C : {}),
-            (this.hasBouncedEmail = null !== (P = null !== (R = e.has_bounced_email) && void 0 !== R ? R : e.hasBouncedEmail) && void 0 !== P && P),
-            (this.personalConnectionId = null !== (w = null !== (D = e.personal_connection_id) && void 0 !== D ? D : e.personalConnectionId) && void 0 !== w ? w : null),
-            (this.globalName = null !== (L = e.global_name) && void 0 !== L ? L : e.globalName),
+            (this.ageVerificationStatus = null !== (C = e.age_verification_status) && void 0 !== C ? C : e.ageVerificationStatus),
+            (this.guildMemberAvatars = null !== (R = e.guildMemberAvatars) && void 0 !== R ? R : {}),
+            (this.hasBouncedEmail = null !== (D = null !== (P = e.has_bounced_email) && void 0 !== P ? P : e.hasBouncedEmail) && void 0 !== D && D),
+            (this.personalConnectionId = null !== (L = null !== (w = e.personal_connection_id) && void 0 !== w ? w : e.personalConnectionId) && void 0 !== L ? L : null),
+            (this.globalName = null !== (x = e.global_name) && void 0 !== x ? x : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, f.lt)(null !== (M = null !== (x = e.primary_guild) && void 0 !== x ? x : e.primaryGuild) && void 0 !== M ? M : null)),
+            (this.primaryGuild = (0, f.lt)(null !== (k = null !== (M = e.primary_guild) && void 0 !== M ? M : e.primaryGuild) && void 0 !== k ? k : null)),
             (this.collectibles = e.collectibles),
             Object.defineProperties(this, {
                 hasFlag: {
