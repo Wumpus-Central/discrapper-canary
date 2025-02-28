@@ -1,14 +1,14 @@
 n.r(t),
     n.d(t, {
-        formatVideoProgressRatio: () => V,
+        formatVideoProgressRatio: () => F,
         loadVideoQuestModal: () => Z,
-        maybeShowSurveyForQuest: () => F,
+        maybeShowSurveyForQuest: () => V,
         navigateToQuestHome: () => B,
         openAppWithQuest: () => Y,
         openDisclosureModal: () => G,
-        openQuestInGameRewardModal: () => k,
+        openQuestInGameRewardModal: () => j,
         openQuestOrbsRewardModal: () => U,
-        openQuestsNitroRewardModal: () => j,
+        openQuestsNitroRewardModal: () => k,
         openQuestsRewardCodeModal: () => M,
         openVideoQuestModal: () => H
     });
@@ -23,11 +23,11 @@ var i = n(772848),
     u = n(751648),
     d = n(82856),
     f = n(314897),
-    p = n(866960),
-    _ = n(626135),
+    _ = n(866960),
+    p = n(626135),
     h = n(954824),
-    m = n(617136),
-    g = n(569984),
+    g = n(617136),
+    m = n(569984),
     E = n(497505),
     v = n(918701),
     b = n(184299),
@@ -96,7 +96,7 @@ let L = 'in-app',
 function M(e) {
     let { questId: t, location: i, questContentPosition: o, preview: a = !1, previewQuest: l = null } = e;
     (0, s.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('99393'), n.e('48923'), n.e('78226')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('99393'), n.e('48923'), n.e('59644')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -110,9 +110,9 @@ function M(e) {
             );
     });
 }
-function j(e, t) {
+function k(e, t) {
     (0, s.ZDy)(async () => {
-        let { default: i } = await Promise.all([n.e('8016'), n.e('85089')]).then(n.bind(n, 824393));
+        let { default: i } = await Promise.all([n.e('8016'), n.e('86620')]).then(n.bind(n, 824393));
         return (n) =>
             (0, r.jsx)(
                 i,
@@ -123,7 +123,7 @@ function j(e, t) {
             );
     });
 }
-function k(e, t) {
+function j(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
@@ -152,13 +152,13 @@ function U(e, t) {
             },
             {
                 onCloseCallback() {
-                    (0, d.c9)();
+                    (0, d.vp)();
                 }
             }
         );
 }
 function G(e, t) {
-    (0, m._3)({
+    (0, g._3)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -188,7 +188,7 @@ function B() {
     let n = null != t ? '#'.concat(t) : '';
     l.Z.setState({ selectedTab: C.GlobalDiscoveryTab.QUESTS }), (0, c.uL)(A.Z5c.QUEST_HOME + n);
 }
-function F(e) {
+function V(e) {
     let t = (0, O.T)({ quest: e }),
         n = { location: N.dr.QUESTS_BAR };
     if (!(0, y.j)(n)) return;
@@ -199,24 +199,23 @@ function F(e) {
             survey: r
         });
 }
-function V(e, t) {
+function F(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
 function Z() {
-    return Promise.all([n.e('29976'), n.e('32249'), n.e('56627')]).then(n.bind(n, 536687));
+    return Promise.all([n.e('29976'), n.e('32249'), n.e('31117')]).then(n.bind(n, 536687));
 }
 function H(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, i.Z)(),
-        o = performance.now();
+        n = (0, i.Z)();
     (0, s.ZDy)(
         async () => {
             let { default: i } = await Z();
-            return (a) =>
+            return (o) =>
                 (0, r.jsx)(
                     i,
-                    w(P({}, a), {
-                        startTime: o,
+                    w(P({}, o), {
+                        openStartClockTime: performance.now(),
                         questId: e.id,
                         autoplay: t,
                         videoSessionId: n
@@ -230,10 +229,10 @@ function H(e) {
                 var t, r;
                 let i = b.ZP.getState().getVideoProgress(e.id);
                 if (null == i) return;
-                let o = g.Z.getQuest(e.id);
+                let o = m.Z.getQuest(e.id);
                 null != o && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null && (null === (r = o.userStatus) || void 0 === r ? void 0 : r.completedAt) == null && (0, v.FI)(o, i.maxTimestampSec);
-                let a = V(i.maxTimestampSec, i.duration);
-                (0, m.dA)({
+                let a = F(i.maxTimestampSec, i.duration);
+                (0, g.dA)({
                     questId: e.id,
                     event: A.rMx.QUEST_VIDEO_PROGRESSED,
                     properties: {
@@ -242,13 +241,13 @@ function H(e) {
                         video_session_id: n
                     }
                 }),
-                    (0, m.dA)({
+                    (0, g.dA)({
                         questId: e.id,
                         event: A.rMx.QUEST_VIDEO_MODAL_CLOSED,
                         properties: {
                             video_progress: a,
                             video_session_id: n,
-                            network_connection_speed: p.Z.getEffectiveConnectionSpeed()
+                            network_connection_speed: _.Z.getEffectiveConnectionSpeed()
                         }
                     });
             }
@@ -275,7 +274,7 @@ function Y(e) {
     let t = W(e),
         n = (0, o.zS)(t);
     null != n &&
-        _.default.track(A.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(A.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
