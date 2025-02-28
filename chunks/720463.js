@@ -1,64 +1,69 @@
 n.d(t, {
-    BalanceWidgetEarnedOrbsCoachmarkModal: () => _,
-    E: () => x
+    BalanceWidgetEarnedOrbsCoachmarkModal: () => j,
+    E: () => C
 });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    s = n.n(i),
+    o = n.n(i),
     a = n(568611),
     l = n(693789),
-    o = n(481060),
-    c = n(751648),
-    d = n(790542),
-    u = n(317257),
-    m = n(970815),
-    g = n(741808),
-    p = n(981631),
-    h = n(388032),
-    f = n(387987),
-    b = n(681461),
-    N = n(232474);
-let x = (e) => {
-    let { earnedOrbsQuantity: t, descriptionText: n = h.NW.string(h.t['4YgBe3']), ctaText: i = h.NW.string(h.t.WYchdX), linkText: c = h.NW.string(h.t['H57f4+']), ctaOnClick: d, linkOnClick: u, linkTo: m } = e;
+    c = n(481060),
+    s = n(751648),
+    u = n(790542),
+    b = n(317257),
+    d = n(970815),
+    f = n(622562),
+    m = n(432792),
+    g = n(981631),
+    O = n(388032),
+    _ = n(803812),
+    p = n(981987),
+    h = n(232474);
+let C = (e) => {
+    let { earnedOrbsQuantity: t, descriptionText: n = O.NW.string(O.t['4YgBe3']), ctaText: i = O.NW.string(O.t.WYchdX), linkText: s = O.NW.string(O.t['H57f4+']), ctaOnClick: u, linkOnClick: b, linkTo: d } = e;
     return (0, r.jsxs)('div', {
-        className: s()(b.container, f.baseCardOutline),
+        className: o()(p.container, _.baseCardOutline),
         children: [
+            (0, r.jsx)(m.VK, {
+                rightOffset: 20,
+                invertTail: !0
+            }),
             (0, r.jsx)('div', {
-                className: s()(b.gifContainer, b.centerContent),
+                className: o()(p.gifContainer, p.centerContent),
                 children: (0, r.jsx)('img', {
-                    src: N.Z,
-                    className: b.gif,
+                    src: h.Z,
+                    className: p.gif,
                     alt: 'Orb GIF'
                 })
             }),
             (0, r.jsxs)('div', {
-                className: b.contentContainer,
+                className: p.contentContainer,
                 children: [
                     (0, r.jsx)('h3', {
-                        className: f.coachmarkTitle,
-                        children: h.NW.format(h.t.lA7CLi, { quantity: t })
+                        className: _.coachmarkTitle,
+                        children: O.NW.format(O.t.lA7CLi, { quantity: t })
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
-                        className: f.coachmarkDescription,
+                        className: _.coachmarkDescription,
                         children: n
                     }),
                     (0, r.jsx)(l.zx, {
-                        className: b.ctaButton,
+                        className: p.ctaButton,
                         color: l.zx.Colors.BRAND,
                         look: l.zx.Looks.FILLED,
-                        onClick: d,
+                        onClick: u,
                         fullWidth: !0,
                         children: i
                     }),
                     (0, r.jsx)(a.rU, {
-                        to: { pathname: m },
-                        onClick: u,
-                        children: (0, r.jsx)(o.Text, {
+                        to: { pathname: d },
+                        onClick: b,
+                        children: (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            className: b.link,
-                            children: c
+                            className: p.link,
+                            children: s
                         })
                     })
                 ]
@@ -66,8 +71,8 @@ let x = (e) => {
         ]
     });
 };
-function _(e) {
-    var { earnedOrbsQuantity: t, backgroundElementRef: n, onClickPill: i, ctaOnClick: s, linkOnClick: a, onClose: l, onCloseCallback: o } = e;
+function j(e) {
+    var { earnedOrbsQuantity: t, backgroundElementRef: n, onClickPill: i, ctaOnClick: o, linkOnClick: a, onClose: l, onCloseCallback: c } = e;
     !(function (e, t) {
         if (null != e) {
             var n,
@@ -77,24 +82,24 @@ function _(e) {
                     var n,
                         r,
                         i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
         }
     })(e, ['earnedOrbsQuantity', 'backgroundElementRef', 'onClickPill', 'ctaOnClick', 'linkOnClick', 'onClose', 'onCloseCallback']);
-    let { balance: h } = (0, d.A)(),
-        f = async () => {
-            await (0, c.j2)(), await l(), o();
+    let { balance: m } = (0, u.A)(),
+        O = async () => {
+            await (0, s.j2)(), await l(), c();
         };
-    return (0, r.jsxs)(g.X, {
-        className: b.coachmarkModalContainer,
+    return (0, r.jsxs)(f.E, {
+        className: p.coachmarkModalContainer,
         backgroundElementRef: n,
-        onGetBoundingRect: p.dG4,
+        onGetBoundingRect: g.dG4,
         getOffsetsRelativeToElement: () => ({
             top: 0,
             right: 0
@@ -105,20 +110,20 @@ function _(e) {
             right: 32
         },
         children: [
-            (0, r.jsx)(m.A4, {
+            (0, r.jsx)(d.A4, {
                 onClick: async () => {
-                    await f(), i();
+                    await O(), i();
                 },
-                balance: h,
-                balanceWidgetMode: u.b.DEFAULT
+                balance: m,
+                balanceWidgetMode: b.b.DEFAULT
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(C, {
                 earnedOrbsQuantity: t,
                 ctaOnClick: async () => {
-                    await f(), s();
+                    await O(), o();
                 },
                 linkOnClick: async () => {
-                    await f(), a();
+                    await O(), a();
                 }
             })
         ]

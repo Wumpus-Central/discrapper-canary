@@ -9,105 +9,103 @@ n.d(t, {
     n(757143),
     n(301563),
     n(865427);
-var i = n(830121),
-    r = n(202131),
-    o = n(454585);
-n(528264);
-var a = n(408433),
-    c = n(981631);
-n(46140);
-let s = new Set([c.hBH.IMAGE, c.hBH.GIFV]),
+var r = n(830121),
+    i = n(202131),
+    o = n(454585),
+    c = n(408433),
+    a = n(981631);
+let s = new Set([a.hBH.IMAGE, a.hBH.GIFV]),
     u = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
 function l(e, t) {
-    var n, i, r;
+    var n, r, i;
     let o = g({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: t
         }),
-        a = null != e.webhookId;
+        c = null != e.webhookId;
     return (
-        (i = (function (e) {
+        (r = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
+                    r = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    i.forEach(function (t) {
-                        var i;
-                        (i = n[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: i,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = i);
+                                : (e[t] = r);
                     });
             }
             return e;
         })({}, o)),
-        (r = r =
+        (i = i =
             {
-                allowLinks: a || o.allowLinks,
-                allowEmojiLinks: a,
+                allowLinks: c || o.allowLinks,
+                allowEmojiLinks: c,
                 mentionChannels: e.mentionChannels,
                 soundboardSounds: null !== (n = e.soundboardSounds) && void 0 !== n ? n : []
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
+              })(Object(i)).forEach(function (e) {
+                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
               }),
-        i
+        r
     );
 }
 function g(e) {
-    let { channelId: t, messageId: n, renderOptions: i } = e;
+    let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
         messageId: n,
-        allowLinks: !!i.allowLinks,
-        allowDevLinks: !!i.allowDevLinks,
-        formatInline: !!i.formatInline,
-        noStyleAndInteraction: !!i.noStyleAndInteraction,
-        allowHeading: !!i.allowHeading,
-        allowList: !!i.allowList,
-        previewLinkTarget: !!i.previewLinkTarget,
-        disableAnimatedEmoji: !!i.disableAnimatedEmoji,
-        isInteracting: !!i.isInteracting,
+        allowLinks: !!r.allowLinks,
+        allowDevLinks: !!r.allowDevLinks,
+        formatInline: !!r.formatInline,
+        noStyleAndInteraction: !!r.noStyleAndInteraction,
+        allowHeading: !!r.allowHeading,
+        allowList: !!r.allowList,
+        previewLinkTarget: !!r.previewLinkTarget,
+        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
+        isInteracting: !!r.isInteracting,
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
         soundboardSounds: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
-        viewingChannelId: i.viewingChannelId,
-        forceWhite: !!i.forceWhite
+        viewingChannelId: r.viewingChannelId,
+        forceWhite: !!r.forceWhite
     };
 }
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (e, t, n) {
         var o;
-        let { toAST: c = !1, hideSimpleEmbedContent: g = !0, formatInline: k = !1, postProcessor: d, shouldFilterKeywords: h, contentMessage: p } = n,
+        let { toAST: a = !1, hideSimpleEmbedContent: g = !0, formatInline: k = !1, postProcessor: d, shouldFilterKeywords: h, contentMessage: p } = n,
             m = !1,
             y = (null != p ? p : t).content,
             w = e(
                 h
-                    ? (0, r.N)(y, {
+                    ? (0, i.N)(y, {
                           escapeReplacement: !0,
                           messageId: t.id,
                           channelId: t.channel_id,
@@ -117,23 +115,23 @@ function k(e) {
                 !0,
                 l(t, n),
                 (e, n) => {
-                    var r, o;
+                    var i, o;
                     return (
                         Array.isArray(e) || (e = [e]),
                         g &&
                             (e = (function (e, t) {
                                 if (1 !== e.length || 1 !== t.length) return e;
                                 let n = e[0],
-                                    i = t[0];
-                                return ('link' === n.type || 'attachmentLink' === n.type) && s.has(i.type) && (0, a.dY)(i) ? [] : e;
+                                    r = t[0];
+                                return ('link' === n.type || 'attachmentLink' === n.type) && s.has(r.type) && (0, c.dY)(r) ? [] : e;
                             })(e, (null != p ? p : t).embeds)),
-                        k || ((r = e), (e = n ? f(r) : ('paragraph' === r[0].type && r[0].content instanceof Array && (r[0].content = f(r[0].content)), r))),
+                        k || ((i = e), (e = n ? f(i) : ('paragraph' === i[0].type && i[0].content instanceof Array && (i[0].content = f(i[0].content)), i))),
                         (e = (function (e) {
                             let t = e.some((e) => 'link' !== e.type);
                             return e.filter((e) => {
                                 let n = 'link' === e.type,
-                                    r = null != e.target ? (0, i.el)(e.target) : null;
-                                return !(n && null != r && !t);
+                                    i = null != e.target ? (0, r.el)(e.target) : null;
+                                return !(n && null != i && !t);
                             });
                         })(e)),
                         t.embeds.length > 0 && ((o = e), (m = n ? b(o) : 'paragraph' === o[0].type && o[0].content instanceof Array && b(o[0].content))),

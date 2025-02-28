@@ -22,7 +22,7 @@ var r = n(200651),
     x = n(981631),
     _ = n(215023),
     E = n(388032),
-    j = n(192926);
+    j = n(577956);
 let C = {
         START: j.alignLeft,
         END: j.alignRight
@@ -70,7 +70,10 @@ let C = {
             }, [R, V]),
             F = (0, o.Z)(null, G);
         return (0, r.jsxs)('div', {
-            className: a()(j.container, I),
+            className: a()(j.container, I, {
+                [j.hidden]: Z,
+                [j.visible]: !Z
+            }),
             children: [
                 (0, r.jsx)(b.A4, {
                     ref: L,
