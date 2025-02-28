@@ -1,4 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, {
+    L: () => o,
+    Z: () => a
+});
 var r = n(818083),
     i = n(987338);
 let o = (0, r.B)({
@@ -10,7 +13,7 @@ let o = (0, r.B)({
         coloredIconsEnabled: !1,
         simplifiedSettingsEnabled: !1
     },
-    commonTriggerPoint: i.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
