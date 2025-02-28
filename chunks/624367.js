@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120), n(266796), n(566702);
+n.d(t, { Z: () => T }), n(47120), n(266796), n(566702);
 var r = n(200651);
 n(192379);
 var i = n(373793),
@@ -18,135 +18,149 @@ var i = n(373793),
     b = n(914010),
     v = n(624138),
     y = n(135431),
-    x = n(147865),
-    O = n(778569),
-    E = n(388032),
-    j = n(739299);
-let N = (0, v.Mg)(o.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function C(e) {
+    x = n(500832),
+    O = n(365415),
+    E = n(147865),
+    j = n(778569),
+    N = n(50523),
+    C = n(388032),
+    I = n(587494);
+let S = (0, v.Mg)(o.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function T(e) {
     var t, n, o, v;
-    let { applicationId: C, customId: I, referrerId: S, embedUrl: T, linkId: P } = e,
-        { analyticsLocations: A } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
-        [w] = (0, _.Z)([C]),
-        Z = (0, a.e7)([b.Z], () => {
+    let { applicationId: T, customId: P, referrerId: A, embedUrl: w, linkId: Z } = e,
+        { analyticsLocations: k } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
+        [R] = (0, _.Z)([T]),
+        L = (0, a.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        k = null == w ? void 0 : null === (t = w.bot) || void 0 === t ? void 0 : t.id,
-        R = null != w && (0, d.ye)(w),
-        L = (0, x.ZP)(null !== (o = null == w ? void 0 : w.maxParticipants) && void 0 !== o ? o : 0),
-        D = (0, O.Z)({
-            applicationId: C,
-            size: N,
+        D = null == R ? void 0 : null === (t = R.bot) || void 0 === t ? void 0 : t.id,
+        M = null != R && (0, d.ye)(R),
+        W = (0, E.ZP)(null !== (o = null == R ? void 0 : R.maxParticipants) && void 0 !== o ? o : 0),
+        F = (0, j.Z)({
+            applicationId: T,
+            size: S,
             names: ['embedded_cover']
         }),
-        M = null !== (v = null == w ? void 0 : w.id) && void 0 !== v ? v : '0',
-        W = (0, y.TK)(M, (0, p.PL)(!0, !1)),
-        F = (0, y.TK)(M, (0, p.LD)(Z, !1)),
-        U = async () => {
-            if (null != k && (null == w ? void 0 : w.id) != null)
+        U = null !== (v = null == R ? void 0 : R.id) && void 0 !== v ? v : '0',
+        B = (0, y.TK)(U, (0, p.PL)(!0, !1)),
+        G = (0, y.TK)(U, (0, p.LD)(L, !1)),
+        H = async () => {
+            if (null != D && (null == R ? void 0 : R.id) != null)
                 try {
                     await (0, u.W)({
-                        appId: w.id,
-                        botId: k,
-                        analyticsLocations: A,
-                        customId: I,
-                        referrerId: S
+                        appId: R.id,
+                        botId: D,
+                        analyticsLocations: k,
+                        customId: P,
+                        referrerId: A
                     });
                 } catch (e) {}
         },
-        { enabled: B } = h.G.useExperiment({ location: 'ActivityBookmarkEmbed' });
-    return null == w || !1 === R
+        { enabled: V } = h.G.useExperiment({ location: 'ActivityBookmarkEmbed' }),
+        z = (0, x._)(Z),
+        { data: K, error: Y } = (0, O.h)(null == R ? void 0 : R.id, z);
+    return null == R || !1 === M
         ? null
-        : B
-          ? (0, r.jsx)(c.Gt, {
-                value: A,
-                children: (0, r.jsx)(g.O, {
-                    app: w,
-                    embedUrl: T,
-                    linkType: g.U.ACTIVITY,
-                    activityCustomId: I,
-                    activityReferrerId: S,
-                    linkId: P
+        : null != Z && null == Y
+          ? null == K
+              ? null
+              : (0, r.jsx)(N.b, {
+                    application: R,
+                    customId: P,
+                    customLink: K,
+                    embedUrl: w,
+                    referrerId: A
                 })
-            })
-          : (0, r.jsx)(c.Gt, {
-                value: A,
-                children: (0, r.jsxs)('div', {
-                    className: j.container,
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: j.imgContainer,
-                            children: (0, r.jsx)('img', {
-                                className: j.img,
-                                alt: w.name,
-                                src: D.url
-                            })
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: j.content,
-                            children: [
-                                (0, r.jsx)(l.X6q, {
-                                    className: j.heading,
-                                    variant: 'heading-xl/semibold',
-                                    children: w.name
-                                }),
-                                (0, r.jsx)(l.X6q, {
-                                    className: j.description,
-                                    variant: 'heading-sm/medium',
-                                    children: null === (n = w.description) || void 0 === n ? void 0 : n.trim()
-                                }),
-                                (0, r.jsxs)('div', {
-                                    className: j.cta,
-                                    children: [
-                                        (0, r.jsxs)('div', {
-                                            className: j.maxParticipants,
-                                            children: [
-                                                (0, r.jsx)(l.BFJ, {
-                                                    size: 'md',
-                                                    color: 'currentColor',
-                                                    className: j.peopleIcon
-                                                }),
-                                                (0, r.jsx)(l.Text, {
-                                                    variant: 'text-xs/semibold',
-                                                    children: L
-                                                })
-                                            ]
-                                        }),
-                                        (0, r.jsxs)('div', {
-                                            className: j.buttonWrapper,
-                                            children: [
-                                                null != w &&
-                                                    (0, r.jsx)(l.zxk, {
-                                                        onClick: () => {
-                                                            var e;
-                                                            null != w &&
-                                                                (i.Y.USER_INSTALL in (null !== (e = w.integrationTypesConfig) && void 0 !== e ? e : {}) || W || F
-                                                                    ? (0, d.X)(w.id)
-                                                                    : (0, f.dx)({
-                                                                          guildId: Z,
-                                                                          view: m.eN.APPLICATION,
-                                                                          applicationId: w.id,
-                                                                          entrypoint: { name: m.n3.OAUTH2_EMBED }
-                                                                      }));
-                                                        },
-                                                        className: j.button,
-                                                        color: l.Ttl.PRIMARY,
-                                                        children: E.NW.string(E.t.fbcCzc)
-                                                    }),
-                                                (0, r.jsx)(l.zxk, {
-                                                    onClick: U,
-                                                    className: j.button,
-                                                    color: l.Ttl.GREEN,
-                                                    children: E.NW.string(E.t.RscU7O)
-                                                })
-                                            ]
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
-            });
+          : V
+            ? (0, r.jsx)(c.Gt, {
+                  value: k,
+                  children: (0, r.jsx)(g.O, {
+                      app: R,
+                      embedUrl: w,
+                      linkType: g.U.ACTIVITY,
+                      activityCustomId: P,
+                      activityReferrerId: A
+                  })
+              })
+            : (0, r.jsx)(c.Gt, {
+                  value: k,
+                  children: (0, r.jsxs)('div', {
+                      className: I.container,
+                      children: [
+                          (0, r.jsx)('div', {
+                              className: I.imgContainer,
+                              children: (0, r.jsx)('img', {
+                                  className: I.img,
+                                  alt: R.name,
+                                  src: F.url
+                              })
+                          }),
+                          (0, r.jsxs)('div', {
+                              className: I.content,
+                              children: [
+                                  (0, r.jsx)(l.X6q, {
+                                      className: I.heading,
+                                      variant: 'heading-xl/semibold',
+                                      children: R.name
+                                  }),
+                                  (0, r.jsx)(l.X6q, {
+                                      className: I.description,
+                                      variant: 'heading-sm/medium',
+                                      children: null === (n = R.description) || void 0 === n ? void 0 : n.trim()
+                                  }),
+                                  (0, r.jsxs)('div', {
+                                      className: I.cta,
+                                      children: [
+                                          (0, r.jsxs)('div', {
+                                              className: I.maxParticipants,
+                                              children: [
+                                                  (0, r.jsx)(l.BFJ, {
+                                                      size: 'md',
+                                                      color: 'currentColor',
+                                                      className: I.peopleIcon
+                                                  }),
+                                                  (0, r.jsx)(l.Text, {
+                                                      variant: 'text-xs/semibold',
+                                                      children: W
+                                                  })
+                                              ]
+                                          }),
+                                          (0, r.jsxs)('div', {
+                                              className: I.buttonWrapper,
+                                              children: [
+                                                  null != R &&
+                                                      (0, r.jsx)(l.zxk, {
+                                                          onClick: () => {
+                                                              var e;
+                                                              null != R &&
+                                                                  (i.Y.USER_INSTALL in (null !== (e = R.integrationTypesConfig) && void 0 !== e ? e : {}) || B || G
+                                                                      ? (0, d.X)(R.id)
+                                                                      : (0, f.dx)({
+                                                                            guildId: L,
+                                                                            view: m.eN.APPLICATION,
+                                                                            applicationId: R.id,
+                                                                            entrypoint: { name: m.n3.OAUTH2_EMBED }
+                                                                        }));
+                                                          },
+                                                          className: I.button,
+                                                          color: l.Ttl.PRIMARY,
+                                                          children: C.NW.string(C.t.fbcCzc)
+                                                      }),
+                                                  (0, r.jsx)(l.zxk, {
+                                                      onClick: H,
+                                                      className: I.button,
+                                                      color: l.Ttl.GREEN,
+                                                      children: C.NW.string(C.t.RscU7O)
+                                                  })
+                                              ]
+                                          })
+                                      ]
+                                  })
+                              ]
+                          })
+                      ]
+                  })
+              });
 }
