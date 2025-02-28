@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var r = n(200651),
     l = n(192379),
     i = n(120356),
@@ -7,7 +7,7 @@ var r = n(200651),
     c = n(481060),
     s = n(686546),
     u = n(562558),
-    d = n(894661);
+    d = n(386962);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,7 +33,7 @@ function m(e) {
     }
     return e;
 }
-function x(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,7 +51,7 @@ function x(e, t) {
         e
     );
 }
-function v(e) {
+function f(e) {
     let { game: t, activityLevel: n, hideTooltip: l } = e,
         i = t.getIconURL(24);
     if (null == i) return null;
@@ -69,7 +69,7 @@ function v(e) {
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                x(m({}, e), {
+                v(m({}, e), {
                     className: d.gameIcon,
                     children: [
                         (0, r.jsx)('img', {
@@ -98,7 +98,7 @@ function v(e) {
             )
     });
 }
-function f(e) {
+function j(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)('div', {
         className: d.extraGamesContainer,
@@ -108,7 +108,7 @@ function f(e) {
                 {
                     className: d.extraGameRow,
                     children: [
-                        (0, r.jsx)(v, {
+                        (0, r.jsx)(f, {
                             game: e,
                             activityLevel: n[e.id]
                         }),
@@ -124,49 +124,49 @@ function f(e) {
         )
     });
 }
-function j(e) {
+function x(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)('div', {
         className: d.favoriteGameContainer,
         children: [
-            (0, r.jsx)(v, {
+            (0, r.jsx)(f, {
                 game: t,
                 activityLevel: n,
                 hideTooltip: !0
             }),
             (0, r.jsx)(c.Text, {
                 variant: 'text-sm/medium',
-                color: 'text-secondary',
+                color: 'text-normal',
                 children: t.name
             })
         ]
     });
 }
-function h(e) {
+function b(e) {
     let { profile: t } = e,
         n = t.gameActivity,
         { gamesToDisplay: i, lastGameToDisplay: o, remainingGames: s } = (0, u.Z)(t),
-        h = l.useMemo(() => {
+        b = l.useMemo(() => {
             if (null == o) return null;
             let e = o.getIconURL(24);
             return null == e
                 ? null
                 : 0 === s.length
-                  ? (0, r.jsx)(v, {
+                  ? (0, r.jsx)(f, {
                         game: o,
                         activityLevel: n[o.id]
                     })
                   : (0, r.jsx)(c.ua7, {
                         'aria-label': '',
                         position: 'bottom',
-                        text: (0, r.jsx)(f, {
+                        text: (0, r.jsx)(j, {
                             games: s,
                             activity: n
                         }),
                         children: (t) =>
                             (0, r.jsxs)(
                                 'div',
-                                x(m({}, t), {
+                                v(m({}, t), {
                                     className: a()(d.gameIcon, d.extraGameItem),
                                     children: [
                                         (0, r.jsx)('img', {
@@ -179,6 +179,7 @@ function h(e) {
                                             className: d.extraGameText,
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: 'text-xs/normal',
+                                                color: 'always-white',
                                                 children: '+'.concat(s.length)
                                             })
                                         })
@@ -192,7 +193,7 @@ function h(e) {
         : 1 === i.length
           ? (0, r.jsx)('div', {
                 className: d.container,
-                children: (0, r.jsx)(j, {
+                children: (0, r.jsx)(x, {
                     game: i[0],
                     activityLevel: n[i[0].id]
                 })
@@ -202,7 +203,7 @@ function h(e) {
                 children: [
                     i.map((e) =>
                         (0, r.jsx)(
-                            v,
+                            f,
                             {
                                 game: e,
                                 activityLevel: n[e.id]
@@ -210,7 +211,7 @@ function h(e) {
                             e.id
                         )
                     ),
-                    h
+                    b
                 ]
             });
 }
