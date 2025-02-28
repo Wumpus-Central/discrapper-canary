@@ -1,57 +1,60 @@
-r.d(t, { q: () => h });
+r.d(t, { q: () => m });
 var n = r(200651);
 r(192379);
 var l = r(120356),
     i = r.n(l),
-    a = r(622535),
-    o = r(481060),
+    o = r(622535),
+    a = r(481060),
     s = r(597688),
     c = r(884697),
     d = r(297651),
-    u = r(215023),
-    p = r(388032),
-    f = r(974492);
-let h = (e) => {
-    var t, r, l, h, C;
-    let m,
-        { category: b, subblock: g, badgeText: v, handleTransition: x } = e;
-    null != g && (m = null === (t = s.Z.getCategoryByStoreListingId(null == g ? void 0 : g.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
-    let _ = null !== (r = null != m ? m : null == b ? void 0 : b.skuId) && void 0 !== r ? r : '',
-        { handleCardVisibilityChange: j } = (0, d.E)(_, 'home', 'marketing featured block'),
-        y =
-            null !== (h = null == g ? void 0 : g.bannerUrl) && void 0 !== h
-                ? h
-                : (0, c.uV)(null !== (l = null == b ? void 0 : b.featuredBlock) && void 0 !== l ? l : '', {
-                      size: u.J0,
+    u = r(619899),
+    p = r(281598),
+    f = r(215023),
+    b = r(388032),
+    h = r(39532);
+let m = (e) => {
+    var t, r, l, m, C, g, v;
+    let x,
+        { category: j, subblock: _, badgeText: y, handleTransition: O } = e;
+    null != _ && (x = null === (r = s.Z.getCategoryByStoreListingId(null == _ ? void 0 : _.categoryStoreListingId)) || void 0 === r ? void 0 : r.skuId);
+    let k = null !== (l = null != x ? x : null == j ? void 0 : j.skuId) && void 0 !== l ? l : '',
+        { handleCardVisibilityChange: P } = (0, d.E)(k, 'home', 'marketing featured block'),
+        { getPreviewableAssetSrc: S } = (0, u.N)(),
+        w =
+            null !== (g = null !== (m = null === (t = S(p.Fr.FEATURED_BLOCK)) || void 0 === t ? void 0 : t.src) && void 0 !== m ? m : null == _ ? void 0 : _.bannerUrl) && void 0 !== g
+                ? g
+                : (0, c.uV)(null !== (C = null == j ? void 0 : j.featuredBlock) && void 0 !== C ? C : '', {
+                      size: f.J0,
                       format: 'png'
                   });
-    return (0, n.jsx)(a.$, {
-        onChange: j,
+    return (0, n.jsx)(o.$, {
+        onChange: P,
         threshold: 0,
-        children: (0, n.jsxs)(o.P3F, {
-            className: i()(f.featuredBlock),
-            style: { backgroundImage: 'url('.concat(y, ')') },
-            onClick: () => x('shop marketing tile', _),
+        children: (0, n.jsxs)(a.P3F, {
+            className: i()(h.featuredBlock),
+            style: { backgroundImage: 'url('.concat(w, ')') },
+            onClick: () => O('shop marketing tile', k),
             children: [
-                null != v &&
-                    (0, n.jsx)(o.IGR, {
+                null != y &&
+                    (0, n.jsx)(a.IGR, {
                         disableColor: !0,
-                        text: v,
-                        className: f.featuredBlockBadge
+                        text: y,
+                        className: h.featuredBlockBadge
                     }),
-                (null == g ? void 0 : g.bodyText) != null &&
-                    (0, n.jsx)(o.X6q, {
+                (null == _ ? void 0 : _.bodyText) != null &&
+                    (0, n.jsx)(a.X6q, {
                         lineClamp: 4,
-                        className: f.featuredBlockBodyText,
-                        style: { color: null !== (C = g.bannerTextColor) && void 0 !== C ? C : 'white' },
+                        className: h.featuredBlockBodyText,
+                        style: { color: null !== (v = _.bannerTextColor) && void 0 !== v ? v : 'white' },
                         variant: 'heading-lg/semibold',
-                        children: g.bodyText
+                        children: _.bodyText
                     }),
-                (0, n.jsx)(o.zxk, {
-                    className: f.featuredBlockButton,
-                    color: o.Ttl.WHITE,
+                (0, n.jsx)(a.zxk, {
+                    className: h.featuredBlockButton,
+                    color: a.Ttl.WHITE,
                     onClick: () => {},
-                    children: p.NW.string(p.t.jVcuVV)
+                    children: b.NW.string(b.t.jVcuVV)
                 })
             ]
         })
