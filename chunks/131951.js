@@ -335,7 +335,7 @@ function tS(e, t, n, r) {
 function tI(e) {
     let t = tm(),
         n = t.inputDeviceId;
-    if ((e.setEchoCancellation(er.Z.hasEchoCancellation(n) || t.echoCancellation), e.setNoiseSuppression(er.Z.hasNoiseSuppression(n) || t.noiseSuppression), e.setAutomaticGainControl(er.Z.hasAutomaticGainControl(n) || t.automaticGainControl), e.setNoiseCancellation(t.noiseCancellation), e.setVoiceFiltersEnabled(null !== e9), (0, Q.isWeb)())) {
+    if ((e.setEchoCancellation(er.Z.hasEchoCancellation(n) || t.echoCancellation), e.setNoiseSuppression(er.Z.hasNoiseSuppression(n) || t.noiseSuppression), e.setAutomaticGainControl(er.Z.hasAutomaticGainControl(n) || t.automaticGainControl), e.setNoiseCancellation(t.noiseCancellation), e.setVoiceFilterId(e9), (0, Q.isWeb)())) {
         let n = t.noiseCancellation ? -150 : -100;
         e.setSilenceThreshold(n);
     }
@@ -1215,9 +1215,7 @@ function nw(e) {
 }
 function nL(e) {
     let { newVoiceFilterId: t } = e;
-    tD({ mostRecentlyRequestedVoiceFilter: t });
-    let n = null != t;
-    ek.eachConnection((e) => e.setVoiceFiltersEnabled(n));
+    tD({ mostRecentlyRequestedVoiceFilter: t }), ek.eachConnection((e) => e.setVoiceFilterId(t));
 }
 function nx() {
     tD({ mostRecentlyRequestedVoiceFilter: null });
