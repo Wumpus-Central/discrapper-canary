@@ -9,6 +9,7 @@ var r = n(544891),
     s = n(960048),
     a = n(981631);
 async function l(e) {
+    i.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START' });
     try {
         let t = await r.tn.get({
             url: a.ANM.Billing_SUBSCRIPTION_REWARD_ELIGIBILITY(e),
