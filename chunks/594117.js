@@ -1,20 +1,23 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(200651);
 n(192379);
 var i = n(685072),
     l = n(287734),
-    o = n(15274),
-    a = n(389303),
-    s = n(881824),
-    c = n(719100),
-    u = n(870569),
-    d = n(388032);
-function p(e) {
+    o = n(906732),
+    a = n(522651),
+    s = n(15274),
+    c = n(389303),
+    u = n(881824),
+    d = n(719100),
+    p = n(870569),
+    h = n(388032);
+function f(e) {
     var t, n;
-    let { tooltipText: l, onClick: o } = e,
-        { events: a, Component: s } = (0, i.K)();
+    let { tooltipText: l, onClick: s } = e,
+        { parentAnalyticsLocation: c } = (0, o.ZP)(),
+        { events: u, Component: d } = (0, i.K)();
     return (0, r.jsx)(
-        u.Z,
+        p.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -42,11 +45,13 @@ function p(e) {
         })(
             {
                 tooltipText: l,
-                onClick: o
+                onClick: () => {
+                    (0, a.v)(c, a.d.DISCONNECT), s();
+                }
             },
-            a
+            u
         )),
-        (n = n = { icon: (0, r.jsx)(s, { size: 'refresh_sm' }) }),
+        (n = n = { icon: (0, r.jsx)(d, { size: 'refresh_sm' }) }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
@@ -62,33 +67,33 @@ function p(e) {
         t)
     );
 }
-function h(e) {
-    let { channel: t } = e;
-    return (0, r.jsx)(p, {
-        tooltipText: d.NW.string(d.t.SMKyio),
-        onClick: () => {
-            if ((0, c.Z)(t)) {
-                (0, s.Us)(t);
-                return;
-            }
-            l.default.disconnect();
-        }
-    });
-}
-function f(e) {
-    let { channel: t } = e;
-    return (0, r.jsx)(p, {
-        tooltipText: d.NW.string(d.t['6vrfgo']),
-        onClick: () => {
-            if ((0, a.Z)(t)) {
-                (0, o.lC)(t);
-                return;
-            }
-            l.default.disconnect();
-        }
-    });
-}
 function g(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, r.jsx)(h, { channel: t }) : (0, r.jsx)(f, { channel: t });
+    return (0, r.jsx)(f, {
+        tooltipText: h.NW.string(h.t.SMKyio),
+        onClick: () => {
+            if ((0, d.Z)(t)) {
+                (0, u.Us)(t);
+                return;
+            }
+            l.default.disconnect();
+        }
+    });
+}
+function m(e) {
+    let { channel: t } = e;
+    return (0, r.jsx)(f, {
+        tooltipText: h.NW.string(h.t['6vrfgo']),
+        onClick: () => {
+            if ((0, c.Z)(t)) {
+                (0, s.lC)(t);
+                return;
+            }
+            l.default.disconnect();
+        }
+    });
+}
+function b(e) {
+    let { channel: t } = e;
+    return t.isGuildStageVoice() ? (0, r.jsx)(g, { channel: t }) : (0, r.jsx)(m, { channel: t });
 }

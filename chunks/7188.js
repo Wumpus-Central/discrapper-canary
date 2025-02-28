@@ -1,24 +1,26 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(200651),
     i = n(192379),
     o = n(442837),
     a = n(481060),
-    s = n(795318),
-    l = n(686546),
-    c = n(544384),
-    u = n(76021),
-    d = n(592125),
-    f = n(594174),
-    p = n(834348),
-    _ = n(74538),
-    h = n(618158),
-    m = n(871499),
-    g = n(981631),
-    E = n(354459),
-    v = n(474936),
-    b = n(388032),
-    y = n(966476);
-function O(e, t, n) {
+    s = n(906732),
+    l = n(522651),
+    c = n(795318),
+    u = n(686546),
+    d = n(544384),
+    f = n(76021),
+    _ = n(592125),
+    p = n(594174),
+    h = n(834348),
+    g = n(74538),
+    m = n(618158),
+    E = n(871499),
+    v = n(981631),
+    b = n(354459),
+    y = n(474936),
+    O = n(388032),
+    S = n(747160);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +33,7 @@ function O(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +44,12 @@ function S(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,29 +61,29 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function A(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,7 +92,7 @@ function A(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function C(e) {
+function P(e) {
     let { className: t } = e;
     return (0, r.jsx)(a.ewm, {
         size: 'md',
@@ -98,58 +100,62 @@ function C(e) {
         className: t
     });
 }
-function R(e) {
+function D(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(l.ZP, {
+            (0, r.jsx)(u.ZP, {
                 className: t,
-                mask: l.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(C, {})
+                mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                children: (0, r.jsx)(P, {})
             }),
-            (0, r.jsx)(p.Z, { className: y.badgeUpgrade })
+            (0, r.jsx)(h.Z, { className: S.badgeUpgrade })
         ]
     });
 }
-function P(e) {
-    var { hideBadges: t = !1, stream: n } = e,
-        l = N(e, ['hideBadges', 'stream']);
-    let p = (0, o.e7)([f.default], () => _.ZP.isPremium(f.default.getCurrentUser(), v.p9.TIER_1)),
-        y = (0, o.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channelId)),
-        O = i.useMemo(() => (null != n ? [n] : []), [n]),
-        I = i.useCallback(() => {
-            null != y && (0, u.Z)(y.getGuildId(), y.id, g.jXE.STREAM_SETTINGS);
-        }, [y]);
-    if (null == n || null == y) return null;
-    let A = C;
+function w(e) {
+    var { hideBadges: t = !1, stream: n, location: u } = e,
+        h = C(e, ['hideBadges', 'stream', 'location']);
+    let { parentAnalyticsLocation: S } = (0, s.ZP)(),
+        I = (0, o.e7)([p.default], () => g.ZP.isPremium(p.default.getCurrentUser(), y.p9.TIER_1)),
+        N = (0, o.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        R = i.useMemo(() => (null != n ? [n] : []), [n]),
+        w = i.useCallback(() => {
+            null != N && (0, f.Z)(N.getGuildId(), N.id, v.jXE.STREAM_SETTINGS);
+        }, [N]);
+    if (null == n || null == N) return null;
+    let L = P;
     return (
-        t || p || (A = R),
+        t || I || (L = D),
         (0, r.jsx)(a.yRy, {
             position: 'top',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(h.Z, {
-                    children: (0, r.jsx)(c.Z, {
-                        channel: y,
-                        currentUser: f.default.getCurrentUser(),
-                        activeStreams: O,
+                return (0, r.jsx)(m.Z, {
+                    children: (0, r.jsx)(d.Z, {
+                        channel: N,
+                        currentUser: p.default.getCurrentUser(),
+                        activeStreams: R,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: I,
-                        onInteraction: (0, s.u)('ManageStreamsButton', 'StreamSettingsButton', { entrypoint: E.A5.OTHER_BUTTON })
+                        handleGoLive: w,
+                        onInteraction: (0, c.u)('ManageStreamsButton', 'StreamSettingsButton', { entrypoint: b.A5.OTHER_BUTTON })
                     })
                 });
             },
             animation: a.yRy.Animation.FADE,
             children: (e) =>
                 (0, r.jsx)(
-                    m.Z,
-                    S(
-                        T(S({}, e), {
-                            label: b.NW.string(b.t.tmiYpK),
-                            iconComponent: A
+                    E.Z,
+                    T(
+                        A(T({}, e), {
+                            label: O.NW.string(O.t.tmiYpK),
+                            iconComponent: L,
+                            onClick: (t) => {
+                                (null != S || null != u) && (0, l.v)(null != S ? S : u, l.d.STREAM_SETTINGS), null == e || e.onClick(t);
+                            }
                         }),
-                        l
+                        h
                     )
                 )
         })

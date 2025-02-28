@@ -1,32 +1,35 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
     o = n(481060),
-    a = n(435064),
-    s = n(39604),
-    c = n(441167),
-    u = n(871499),
-    d = n(199902),
-    p = n(314897),
-    h = n(358221),
-    f = n(354459),
-    m = n(388032),
-    g = n(71178);
-function b(e) {
+    a = n(906732),
+    s = n(435064),
+    c = n(39604),
+    u = n(441167),
+    d = n(871499),
+    p = n(199902),
+    h = n(314897),
+    f = n(358221),
+    m = n(522651),
+    g = n(354459),
+    b = n(388032),
+    _ = n(177124);
+function C(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([h.Z], () => h.Z.getSelectedParticipant(t.id)),
-        b = (null == n ? void 0 : n.type) === f.fO.STREAM,
-        _ = (0, l.e7)([d.Z], () => (b ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
-        { ignoreSenderPreference: C } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
-        { viewerClippingAllowed: v, isAtMaxSavingClipOperations: y } = (0, l.cj)([a.Z], () => ({
-            viewerClippingAllowed: null != _ && (a.Z.isViewerClippingAllowedForUser(_.ownerId) || C),
-            isAtMaxSavingClipOperations: a.Z.getIsAtMaxSaveClipOperations()
+        { parentAnalyticsLocation: n } = (0, a.ZP)(),
+        C = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
+        v = (null == C ? void 0 : C.type) === g.fO.STREAM,
+        y = (0, l.e7)([p.Z], () => (v ? p.Z.getActiveStreamForStreamKey(C.id) : null)),
+        { ignoreSenderPreference: x } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
+        { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
+            viewerClippingAllowed: null != y && (s.Z.isViewerClippingAllowedForUser(y.ownerId) || x),
+            isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
-        x = a.Z.getSettings().clipsEnabled,
-        j = (null == _ ? void 0 : _.ownerId) === p.default.getId(),
-        O = !x || !(j || v) || y || null == n,
-        N = i.useCallback((e) => {
+        E = s.Z.getSettings().clipsEnabled,
+        N = (null == y ? void 0 : y.ownerId) === h.default.getId(),
+        I = !E || !(N || j) || O || null == C,
+        P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
                 o.xmR,
@@ -71,14 +74,14 @@ function b(e) {
                 t)
             );
         }, []);
-    return (0, r.jsx)(u.Z, {
-        className: g.actionBarButton,
+    return (0, r.jsx)(d.Z, {
+        className: _.actionBarButton,
         onClick: () => {
-            O || (j ? (0, s.C1)() : (0, s.C1)(n.id));
+            I || ((0, m.v)(n, m.d.CLIP), N ? (0, c.C1)() : (0, c.C1)(C.id));
         },
-        disabled: O,
-        iconComponent: N,
-        label: null == _ ? m.NW.string(m.t.eg5qtb) : j || v ? (x ? (y ? void 0 : m.NW.string(m.t.U4URzM)) : m.NW.string(m.t.wSS1yM)) : m.NW.string(m.t.aRifJS),
+        disabled: I,
+        iconComponent: P,
+        label: null == y ? b.NW.string(b.t.eg5qtb) : N || j ? (E ? (O ? void 0 : b.NW.string(b.t.U4URzM)) : b.NW.string(b.t.wSS1yM)) : b.NW.string(b.t.aRifJS),
         grow: !1
     });
 }

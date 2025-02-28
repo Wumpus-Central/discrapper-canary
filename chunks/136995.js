@@ -1,14 +1,16 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
     o = n(481060),
     a = n(287734),
-    s = n(82965),
-    l = n(585483),
-    c = n(871499),
-    u = n(981631),
-    d = n(388032);
-function f(e, t, n) {
+    s = n(906732),
+    l = n(522651),
+    c = n(82965),
+    u = n(585483),
+    d = n(871499),
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +34,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,29 +51,29 @@ function _(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function g(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,30 +82,33 @@ function g(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function E(e) {
+function b(e) {
     var { channel: t, centerButton: n = !1 } = e,
-        f = m(e, ['channel', 'centerButton']);
-    let _ = n ? c.d : c.Z,
-        g = t.isManaged() || !t.isPrivate() ? d.NW.string(d.t.S0W8Z2) : d.NW.string(d.t['0D/6R0']),
-        E = (0, s.Z)({ location: 'JoinCallButton' }),
-        v = i.useCallback(() => a.default.selectVoiceChannel(t.id), [t.id]);
+        p = E(e, ['channel', 'centerButton']);
+    let { parentAnalyticsLocation: g } = (0, s.ZP)(),
+        v = n ? d.d : d.Z,
+        b = t.isManaged() || !t.isPrivate() ? _.NW.string(_.t.S0W8Z2) : _.NW.string(_.t['0D/6R0']),
+        y = (0, c.Z)({ location: 'JoinCallButton' }),
+        O = i.useCallback(() => {
+            (0, l.v)(g, l.d.JOIN_CALL), a.default.selectVoiceChannel(t.id);
+        }, [t.id, g]);
     return (
         i.useEffect(
             () => (
-                l.S.subscribe(u.CkL.CALL_ACCEPT, v),
+                u.S.subscribe(f.CkL.CALL_ACCEPT, O),
                 () => {
-                    l.S.unsubscribe(u.CkL.CALL_ACCEPT, v);
+                    u.S.unsubscribe(f.CkL.CALL_ACCEPT, O);
                 }
             ),
-            [v]
+            [O]
         ),
         (0, r.jsx)(
-            _,
-            h(p({}, f), {
+            v,
+            m(h({}, p), {
                 iconComponent: o.Csw,
-                label: g,
-                onClick: v,
-                fullRegionButton: E
+                label: b,
+                onClick: O,
+                fullRegionButton: y
             })
         )
     );

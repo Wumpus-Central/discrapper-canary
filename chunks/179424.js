@@ -1,11 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
     l = n(475179),
-    o = n(871499),
-    a = n(388032);
-function s(e) {
+    o = n(906732),
+    a = n(522651),
+    s = n(871499),
+    c = n(388032);
+function u(e) {
     var { channelId: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -26,8 +28,9 @@ function s(e) {
             }
             return i;
         })(e, ['channelId']);
+    let { parentAnalyticsLocation: u } = (0, o.ZP)();
     return (0, r.jsx)(
-        o.Z,
+        s.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -55,9 +58,9 @@ function s(e) {
         })(
             {
                 onClick: function () {
-                    l.Z.selectParticipant(t, null);
+                    (0, a.v)(u, a.d.GRID), l.Z.selectParticipant(t, null);
                 },
-                label: a.NW.string(a.t['tyhU+P']),
+                label: c.NW.string(c.t['tyhU+P']),
                 iconComponent: i.rqr,
                 tooltipPosition: 'bottom'
             },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(609784),
@@ -8,15 +8,17 @@ var r = n(200651),
     c = n(652844),
     u = n(747906),
     d = n(40851),
-    p = n(628581),
-    h = n(861254),
-    f = n(221241),
-    m = n(378441),
-    g = n(871499),
-    b = n(981631);
-function _(e) {
-    var { selfMute: t, serverMute: n, suppress: _, centerButton: C = !1, awaitingRemote: v, onMouseEnter: y, onMouseLeave: x } = e,
-        j = (function (e, t) {
+    p = n(906732),
+    h = n(628581),
+    f = n(522651),
+    m = n(861254),
+    g = n(221241),
+    b = n(378441),
+    _ = n(871499),
+    C = n(981631);
+function v(e) {
+    var { selfMute: t, serverMute: n, suppress: v, centerButton: y = !1, awaitingRemote: x, onMouseEnter: j, onMouseLeave: O, onClick: E } = e,
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -34,25 +36,26 @@ function _(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave']);
-    let { mode: O } = (0, h.ZP)({ location: 'MicButton' }),
-        { squareButtons: N } = (0, f.Z)({ location: 'MuteButton' }),
-        E = t || n || _,
-        P = C ? g.d : g.Z,
-        I = (0, p.Z)(t, n, _, v, O === h.BK.GroupedButtonsRedMic),
-        S = (0, c.O)(E ? 'unmute' : 'mute'),
-        Z = (0, u.P)(E ? 'unmute' : 'mute'),
-        { activeVoice: T } = (0, m.o)(),
-        A = null != T,
-        w = A ? Z : S,
-        { events: R, play: k } = w;
-    i.useEffect(() => () => k(), [k, E]);
-    let M = w.Component;
-    (0, d.bp)() === b.IlC.POPOUT && (M = A ? (E ? o.T : l.x) : E ? s.n : a.S);
-    let L = (N || O === h.BK.GroupedButtonsRedMic) && E ? 'red' : void 0,
-        D = O !== h.BK.GroupedButtonsRedMic && !N;
+        })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
+    let { parentAnalyticsLocation: I } = (0, p.ZP)(),
+        { mode: P } = (0, m.ZP)({ location: 'MicButton' }),
+        { squareButtonsEnabled: S, coloredIconsEnabled: Z } = (0, g.Z)({ location: 'MuteButton' }),
+        T = t || n || v,
+        A = y ? _.d : _.Z,
+        w = (0, h.Z)(t, n, v, x, P === m.BK.GroupedButtonsRedMic),
+        R = (0, c.O)(T ? 'unmute' : 'mute'),
+        M = (0, u.P)(T ? 'unmute' : 'mute'),
+        { activeVoice: k } = (0, b.o)(),
+        L = null != k,
+        D = L ? M : R,
+        { events: W, play: U } = D;
+    i.useEffect(() => () => U(), [U, T]);
+    let B = D.Component;
+    (0, d.bp)() === C.IlC.POPOUT && (B = L ? (T ? o.T : l.x) : T ? s.n : a.S);
+    let H = (S || P === m.BK.GroupedButtonsRedMic) && T ? 'red' : void 0,
+        F = P !== m.BK.GroupedButtonsRedMic && !S;
     return (0, r.jsx)(
-        P,
+        A,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -79,19 +82,22 @@ function _(e) {
             return e;
         })(
             {
-                isActive: !!D && !E,
-                iconComponent: M,
-                caretColor: 'primaryDark',
-                color: L,
-                label: I,
+                isActive: !!F && !T,
+                iconComponent: B,
+                caretColor: Z && T ? 'red' : 'primaryDark',
+                color: H,
+                label: w,
                 onMouseEnter: (e) => {
-                    null == y || y(e), R.onMouseEnter();
+                    null == j || j(e), W.onMouseEnter();
                 },
                 onMouseLeave: (e) => {
-                    null == x || x(e), R.onMouseLeave();
+                    null == O || O(e), W.onMouseLeave();
+                },
+                onClick: (e) => {
+                    null == E || E(e), (0, f.v)(I, f.d.MIC, t);
                 }
             },
-            j
+            N
         )
     );
 }
