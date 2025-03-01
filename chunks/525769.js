@@ -69,6 +69,7 @@ var r = (function (e) {
             (e.GIFT_INTENT_CARD = 'impression_gift_intent_card'),
             (e.GLOBAL_DISCOVERY = 'impression_global_discovery'),
             (e.GLOBAL_DISCOVERY_APPS = 'impression_global_discovery_apps'),
+            (e.GO_LIVE_MODAL = 'impression_go_live_modal'),
             (e.GUILD_ADD_ACCEPT_INVITE = 'impression_guild_add_accept_invite'),
             (e.GUILD_ADD_CHANNEL_PROMPT = 'impression_guild_add_channel_prompt'),
             (e.GUILD_ADD_CUSTOMIZE = 'impression_guild_add_customize'),
@@ -176,6 +177,7 @@ var r = (function (e) {
             (e.SNOWSGIVING = 'impression_snowsgiving'),
             (e.SOUNDBOARD_POPOUT = 'impression_soundboard_popout'),
             (e.STAGE_DISCOVERY = 'impression_stage_discovery'),
+            (e.STREAM_FEEDBACK_MODAL = 'impression_stream_feedback_modal'),
             (e.TIERED_TENURE_BADGE_MODAL = 'impression_tiered_tenure_badge_modal'),
             (e.TRIAL_FOR_ALL_COACHTIP = 'impression_trial_for_all_coachtip'),
             (e.TRIAL_NOTICE = 'impression_trial_notice'),
@@ -211,6 +213,7 @@ var r = (function (e) {
             (e.USER_YOU_SCREEN = 'impression_user_you_screen'),
             (e.VIEW_PANEL_DEVTOOLS = 'impression_view_panel_devtools'),
             (e.VOICE_CHANNEL_BLOCKED_USER_WARNING = 'impression_voice_channel_blocked_user_warning'),
+            (e.VOICE_FEEDBACK_MODAL = 'impression_voice_feedback_modal'),
             e
         );
     })({}),
