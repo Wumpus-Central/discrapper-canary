@@ -155,7 +155,9 @@ function y(e) {
                 return (
                     l.default.track(f.rMx.USER_AVATAR_UPDATED, {
                         animated: (0, c.xR)(t.avatar),
-                        is_guild_profile: !1
+                        is_guild_profile: !1,
+                        recent_avatar_id: null != m ? Number(m) : void 0,
+                        is_edited_recent_avatar: null != d && null != m
                     }),
                     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }),
                     (null != d || null != m) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),

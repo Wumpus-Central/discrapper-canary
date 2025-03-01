@@ -46,7 +46,9 @@ async function l(e, t) {
         return (
             o.default.track(s.rMx.USER_AVATAR_UPDATED, {
                 animated: (0, a.xR)(n.avatar),
-                is_guild_profile: !0
+                is_guild_profile: !0,
+                recent_avatar_id: null != u ? Number(u) : void 0,
+                is_edited_recent_avatar: null != l && null != u
             }),
             i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS' }),
             i.Z.dispatch({
