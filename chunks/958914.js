@@ -7,6 +7,8 @@ e.exports = {
     controlsWithActiveStream: 'controlsWithActiveStream__8151b',
     controlUser: 'controlUser__8151b',
     controlUserContainer: 'controlUserContainer__8151b',
+    controlUserName: 'controlUserName__8151b',
+    guildTag: 'guildTag__8151b',
     controlAction: 'controlAction__8151b',
     controlActions: 'controlActions__8151b',
     absoluteFill: 'absoluteFill__8151b',
