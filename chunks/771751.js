@@ -1,25 +1,25 @@
-n.d(t, { Z: () => S }), n(47120), n(230036);
+n.d(t, { Z: () => E }), n(47120), n(230036);
 var r = n(200651),
     a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(544891),
     s = n(704215),
     c = n(481060),
     d = n(937579),
     u = n(675478),
-    h = n(431),
-    m = n(572004),
+    m = n(431),
+    h = n(572004),
     x = n(74538),
-    p = n(246992),
-    f = n(981631),
+    f = n(246992),
+    p = n(981631),
     b = n(474936),
-    _ = n(841699),
-    g = n(833154);
+    _ = n(710662),
+    g = n(536465);
 let v = async () => {
         try {
             let { body: e } = await o.tn.get({
-                url: f.ANM.USER_OFFER_IDS,
+                url: p.ANM.USER_OFFER_IDS,
                 rejectWithError: !0
             });
             return e;
@@ -30,18 +30,7 @@ let v = async () => {
     j = async (e, t) => {
         try {
             await o.tn.post({
-                url: f.ANM.CREATE_USER_OFFER(e, t),
-                rejectWithError: !0
-            });
-        } catch (e) {
-        } finally {
-            await (0, d.T)();
-        }
-    },
-    C = async (e, t) => {
-        try {
-            await o.tn.del({
-                url: f.ANM.DELETE_USER_OFFER(e, t),
+                url: p.ANM.CREATE_USER_OFFER(e, t),
                 rejectWithError: !0
             });
         } catch (e) {
@@ -51,8 +40,8 @@ let v = async () => {
     },
     y = async (e, t) => {
         try {
-            await o.tn.post({
-                url: f.ANM.UNACK_USER_OFFER(e, t),
+            await o.tn.del({
+                url: p.ANM.DELETE_USER_OFFER(e, t),
                 rejectWithError: !0
             });
         } catch (e) {
@@ -60,10 +49,21 @@ let v = async () => {
             await (0, d.T)();
         }
     },
-    O = async () => {
+    C = async (e, t) => {
+        try {
+            await o.tn.post({
+                url: p.ANM.UNACK_USER_OFFER(e, t),
+                rejectWithError: !0
+            });
+        } catch (e) {
+        } finally {
+            await (0, d.T)();
+        }
+    },
+    N = async () => {
         try {
             let { body: e } = await o.tn.get({
-                url: f.ANM.USER_OFFERS,
+                url: p.ANM.USER_OFFERS,
                 rejectWithError: !0
             });
             return e;
@@ -74,39 +74,39 @@ let v = async () => {
             };
         }
     },
-    N = async () => {
+    O = async () => {
         try {
             await o.tn.del({
-                url: f.ANM.USER_OFFERS,
+                url: p.ANM.USER_OFFERS,
                 rejectWithError: !0
             });
         } catch (e) {
         } finally {
-            await h.Z.forceReset(), await (0, d.T)();
+            await m.Z.forceReset(), await (0, d.T)();
         }
     };
 function T(e) {
-    var t, n, i, o;
-    let { offer: s, offerOptions: u, forceRefetch: h } = e,
-        [p, f] = a.useState(!1),
-        [_, v] = a.useState(!1),
-        [j, O] = a.useState(!1),
-        [N, T] = a.useState(!1);
+    var t, n, l, s;
+    let { offer: u, offerOptions: m, forceRefetch: f } = e,
+        [p, _] = a.useState(!1),
+        [v, j] = a.useState(!1),
+        [N, O] = a.useState(!1),
+        [T, S] = a.useState(!1);
     a.useEffect(() => {
-        j && T(!0);
+        N && S(!0);
         let e = setTimeout(() => {
-            T(!1);
+            S(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [j]);
-    let { id: E, expires_at: S, redeemed_at: k, trial_id: I, subscription_trial: w, referrer: R } = s,
-        Z =
+    }, [N]);
+    let { id: E, expires_at: k, redeemed_at: w, trial_id: I, subscription_trial: Z, referrer: P } = u,
+        R =
             null !==
                 (n =
                     null ===
-                        (t = u.find((e) => {
+                        (t = m.find((e) => {
                             let { value: t } = e;
                             return t === I;
                         })) || void 0 === t
@@ -114,62 +114,75 @@ function T(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown';
-    null != R && (Z = ''.concat(Z, ' from @').concat(R.username));
-    let P = null != S,
-        A = null != S && new Date(S).getTime() < Date.now(),
-        L = (null == w ? void 0 : w.sku_id) === b.Si.TIER_0,
-        D = async () => {
-            O(!0), P ? await y(E, 'trial') : await (0, d.a)(s), h(), O(!1);
+    null != P && (R = ''.concat(R, ' from @').concat(P.username));
+    let L = null != k,
+        A = null != k && new Date(k).getTime() < Date.now(),
+        D = (null == Z ? void 0 : Z.sku_id) === b.Si.TIER_0,
+        B = async () => {
+            O(!0), L ? await C(E, 'trial') : await (0, d.a)(u), f(), O(!1);
+        },
+        M = async (e) => {
+            let { expiresAt: t } = e;
+            O(!0);
+            try {
+                await o.tn.patch({
+                    url: '/user-offers/trial/'.concat(E),
+                    body: { expires_at: t },
+                    rejectWithError: !0
+                });
+            } finally {
+                f(), O(!1);
+            }
         };
     a.useEffect(() => {
         if (p) {
             let e = setTimeout(() => {
-                f(!1);
+                _(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-        if (_) {
+        if (v) {
             let e = setTimeout(() => {
-                v(!1);
+                j(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [p, _]);
-    let B = 'Active';
+    }, [p, v]);
+    let z = 'Active';
     return (
-        P && (B = 'Acknowledged'),
-        A && (B = 'Expired'),
+        L && (z = 'Acknowledged'),
+        A && (z = 'Expired'),
         (0, r.jsxs)('div', {
-            className: l()(g.card, L ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
+            className: i()(g.card, D ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)('div', {
-                    className: l()(g.row, g.nameRow),
+                    className: i()(g.row, g.nameRow),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'always-white',
-                            children: Z
+                            children: R
                         }),
                         (0, r.jsx)(c.P3F, {
                             onClick: async () => {
-                                O(!0), await C(E, 'trial'), h(), O(!1);
+                                O(!0), await y(E, 'trial'), f(), O(!1);
                             },
                             children: (0, r.jsx)(c.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: l()(g.icon, g.trashIcon)
+                                className: i()(g.icon, g.trashIcon)
                             })
                         })
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: l()(g.row, g.idRow),
+                    className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, m.JG)(E), f(!0);
+                        (0, h.JG)(E), _(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
@@ -181,7 +194,7 @@ function T(e) {
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l()(g.icon, g.noMargin)
+                                  className: i()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -191,9 +204,9 @@ function T(e) {
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: l()(g.row, g.idRow),
+                    className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, m.JG)(I), v(!0);
+                        (0, h.JG)(I), j(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
@@ -201,11 +214,11 @@ function T(e) {
                             color: 'always-white',
                             children: ['Trial: ', I]
                         }),
-                        _
+                        v
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l()(g.icon, g.noMargin)
+                                  className: i()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -215,6 +228,7 @@ function T(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
+                    className: g.row,
                     children: (0, r.jsxs)(c.Text, {
                         variant: 'eyebrow',
                         color: 'always-white',
@@ -222,31 +236,46 @@ function T(e) {
                             'Trial Length:',
                             ' ',
                             (0, x.if)({
-                                intervalType: null !== (i = null == w ? void 0 : w.interval) && void 0 !== i ? i : b.rV.MONTH,
-                                intervalCount: null !== (o = null == w ? void 0 : w.interval_count) && void 0 !== o ? o : 1,
+                                intervalType: null !== (l = null == Z ? void 0 : Z.interval) && void 0 !== l ? l : b.rV.MONTH,
+                                intervalCount: null !== (s = null == Z ? void 0 : Z.interval_count) && void 0 !== s ? s : 1,
                                 capitalize: !1
                             })
                         ]
                     })
                 }),
                 (0, r.jsxs)('div', {
+                    className: g.row,
+                    children: [
+                        (0, r.jsx)(c.Text, {
+                            variant: 'eyebrow',
+                            color: 'always-white',
+                            children: 'Expires:'
+                        }),
+                        (0, r.jsx)('input', {
+                            type: 'date',
+                            value: null != k ? k.substring(0, 10) : '',
+                            onChange: (e) => M({ expiresAt: e.target.value })
+                        })
+                    ]
+                }),
+                (0, r.jsxs)('div', {
                     className: g.badgeContainer,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: D,
-                            className: l()(g.badge, g.clickable, {
-                                [g.acked]: P,
+                            onClick: B,
+                            className: i()(g.badge, g.clickable, {
+                                [g.acked]: L,
                                 [g.expired]: A
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === B ? void 0 : 'always-white',
-                                children: B
+                                color: 'Acknowledged' === z ? void 0 : 'always-white',
+                                children: z
                             })
                         }),
-                        null != k &&
+                        null != w &&
                             (0, r.jsx)('div', {
-                                className: l()(g.badge, g.__invalid_badgeBottom, g.redeemed),
+                                className: i()(g.badge, g.__invalid_badgeBottom, g.redeemed),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -256,57 +285,70 @@ function T(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: l()(g.loadingContainer, { [g.isLoading]: j || N }),
+                    className: i()(g.loadingContainer, { [g.isLoading]: N || T }),
                     children: (0, r.jsx)(c.$jN, {})
                 })
             ]
         })
     );
 }
-function E(e) {
+function S(e) {
     var t, n;
-    let { offer: i, offerOptions: o, forceRefetch: s } = e,
-        [u, h] = a.useState(!1),
-        [x, p] = a.useState(!1),
-        [f, b] = a.useState(!1),
-        [_, v] = a.useState(!1);
+    let { offer: l, offerOptions: s, forceRefetch: u } = e,
+        [m, x] = a.useState(!1),
+        [f, p] = a.useState(!1),
+        [b, _] = a.useState(!1),
+        [v, j] = a.useState(!1);
     a.useEffect(() => {
-        f && v(!0);
+        b && j(!0);
         let e = setTimeout(() => {
-            v(!1);
+            j(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [f]);
-    let { id: j, expires_at: O, applied_at: N, discount_id: T, discount: E } = i,
-        S =
+    }, [b]);
+    let { id: N, expires_at: O, applied_at: T, discount_id: S, discount: E } = l,
+        k =
             null !==
                 (n =
                     null ===
-                        (t = o.find((e) => {
+                        (t = s.find((e) => {
                             let { value: t } = e;
-                            return t === T;
+                            return t === S;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        k = null != O,
+        w = null != O,
         I = null != O && new Date(O).getTime() < Date.now(),
-        w = async () => {
-            b(!0), k ? await y(j, 'discount') : await (0, d.a)(void 0, i), s(), b(!1);
+        Z = async () => {
+            _(!0), w ? await C(N, 'discount') : await (0, d.a)(void 0, l), u(), _(!1);
+        },
+        P = async (e) => {
+            let { expiresAt: t } = e;
+            _(!0);
+            try {
+                await o.tn.patch({
+                    url: '/user-offers/discount/'.concat(N),
+                    body: { expires_at: t },
+                    rejectWithError: !0
+                });
+            } finally {
+                u(), _(!1);
+            }
         };
     a.useEffect(() => {
-        if (u) {
+        if (m) {
             let e = setTimeout(() => {
-                h(!1);
+                x(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-        if (x) {
+        if (f) {
             let e = setTimeout(() => {
                 p(!1);
             }, 3000);
@@ -314,50 +356,50 @@ function E(e) {
                 clearTimeout(e);
             };
         }
-    }, [u, x]);
+    }, [m, f]);
     let R = 'Active';
     return (
         I && (R = 'Expired'),
-        k && (R = 'Acknowledged'),
+        w && (R = 'Acknowledged'),
         (0, r.jsxs)('div', {
-            className: l()(g.card, g.discount),
+            className: i()(g.card, g.discount),
             children: [
                 (0, r.jsxs)('div', {
-                    className: l()(g.row, g.nameRow),
+                    className: i()(g.row, g.nameRow),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
                             color: 'text-normal',
-                            children: S
+                            children: k
                         }),
                         (0, r.jsx)(c.P3F, {
                             onClick: async () => {
-                                b(!0), await C(j, 'discount'), s(), b(!1);
+                                _(!0), await y(N, 'discount'), u(), _(!1);
                             },
                             children: (0, r.jsx)(c.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: l()(g.icon, g.trashIcon)
+                                className: i()(g.icon, g.trashIcon)
                             })
                         })
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: l()(g.row, g.idRow),
+                    className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, m.JG)(j), h(!0);
+                        (0, h.JG)(N), x(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', j]
+                            children: ['Offer: ', N]
                         }),
-                        u
+                        m
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l()(g.icon, g.noMargin)
+                                  className: i()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -367,21 +409,21 @@ function E(e) {
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: l()(g.row, g.idRow),
+                    className: i()(g.row, g.idRow),
                     onClick: () => {
-                        (0, m.JG)(T), p(!0);
+                        (0, h.JG)(S), p(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Discount: ', T]
+                            children: ['Discount: ', S]
                         }),
-                        x
+                        f
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: l()(g.icon, g.noMargin)
+                                  className: i()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -399,12 +441,27 @@ function E(e) {
                         })
                     }),
                 (0, r.jsxs)('div', {
+                    className: g.row,
+                    children: [
+                        (0, r.jsx)(c.Text, {
+                            variant: 'eyebrow',
+                            color: 'always-white',
+                            children: 'Expires:'
+                        }),
+                        (0, r.jsx)('input', {
+                            type: 'date',
+                            value: null != O ? O.substring(0, 10) : '',
+                            onChange: (e) => P({ expiresAt: e.target.value })
+                        })
+                    ]
+                }),
+                (0, r.jsxs)('div', {
                     className: g.badgeContainer,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: w,
-                            className: l()(g.badge, g.clickable, {
-                                [g.acked]: k,
+                            onClick: Z,
+                            className: i()(g.badge, g.clickable, {
+                                [g.acked]: w,
                                 [g.expired]: I
                             }),
                             children: (0, r.jsx)(c.Text, {
@@ -413,9 +470,9 @@ function E(e) {
                                 children: R
                             })
                         }),
-                        null != N &&
+                        null != T &&
                             (0, r.jsx)('div', {
-                                className: l()(g.badge, g.__invalid_badgeBottom, g.redeemed),
+                                className: i()(g.badge, g.__invalid_badgeBottom, g.redeemed),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -425,21 +482,21 @@ function E(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: l()(g.loadingContainer, { [g.isLoading]: f || _ }),
+                    className: i()(g.loadingContainer, { [g.isLoading]: b || v }),
                     children: (0, r.jsx)(c.$jN, {})
                 })
             ]
         })
     );
 }
-function S() {
+function E() {
     let [e, t] = a.useState([]),
-        [n, i] = a.useState([]),
-        [o, m] = a.useState(),
-        [x, f] = a.useState(),
-        [b, C] = a.useState([]),
-        [y, S] = a.useState([]),
-        [k, I] = a.useState(!0);
+        [n, l] = a.useState([]),
+        [o, h] = a.useState(),
+        [x, p] = a.useState(),
+        [b, y] = a.useState([]),
+        [C, E] = a.useState([]),
+        [k, w] = a.useState(!0);
     a.useEffect(() => {
         (0 === e.length || 0 === n.length || k) &&
             v().then((e) => {
@@ -451,29 +508,29 @@ function S() {
                         label: t,
                         value: e.discount[t]
                     }));
-                t(n), i(r), null == o && m(n[0].value), null == x && f(r[0].value);
+                t(n), l(r), null == o && h(n[0].value), null == x && p(r[0].value);
             });
     }, [e, n, o, x, k]),
         a.useEffect(() => {
             k &&
-                (I(!1),
-                h.Z.forceReset(),
+                (w(!1),
+                m.Z.forceReset(),
                 (0, d.T)(),
-                O().then((e) => {
-                    C(e.trial.sort((e, t) => e.id.localeCompare(t.id))), S(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                N().then((e) => {
+                    y(e.trial.sort((e, t) => e.id.localeCompare(t.id))), E(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [k]);
-    let w = async () => {
-            null != o && (await j(o, 'trial'), I(!0));
-        },
-        R = async () => {
-            null != x && (await j(x, 'discount'), I(!0));
+    let I = async () => {
+            null != o && (await j(o, 'trial'), w(!0));
         },
         Z = async () => {
-            await N(), I(!0);
+            null != x && (await j(x, 'discount'), w(!0));
+        },
+        P = async () => {
+            await O(), w(!0);
         };
     return (0, r.jsx)(c.zJl, {
-        className: l()(_.panel),
+        className: i()(_.panel),
         children: (0, r.jsxs)('div', {
             className: g.panelInner,
             children: [
@@ -489,7 +546,7 @@ function S() {
                             children: [
                                 (0, r.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: Z,
+                                    onClick: P,
                                     children: 'Clear all User Offers'
                                 }),
                                 (0, r.jsx)(c.zxk, {
@@ -499,7 +556,7 @@ function S() {
                                 }),
                                 (0, r.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: () => I(!0),
+                                    onClick: () => w(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -522,11 +579,11 @@ function S() {
                                     isSelected: (e) => o === e,
                                     placeholder: 'Trial Type',
                                     serialize: (e) => String(e),
-                                    select: (e) => m(e),
-                                    popoutLayerContext: p.O$
+                                    select: (e) => h(e),
+                                    popoutLayerContext: f.O$
                                 }),
                                 (0, r.jsx)(c.zxk, {
-                                    onClick: w,
+                                    onClick: I,
                                     children: 'Create'
                                 })
                             ]
@@ -549,11 +606,11 @@ function S() {
                                     isSelected: (e) => x === e,
                                     placeholder: 'Discount Type',
                                     serialize: (e) => String(e),
-                                    select: (e) => f(e),
-                                    popoutLayerContext: p.O$
+                                    select: (e) => p(e),
+                                    popoutLayerContext: f.O$
                                 }),
                                 (0, r.jsx)(c.zxk, {
-                                    onClick: R,
+                                    onClick: Z,
                                     children: 'Create'
                                 })
                             ]
@@ -574,14 +631,14 @@ function S() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => I(!0)
+                                        forceRefetch: () => w(!0)
                                     },
                                     t.id
                                 )
                             )
                         ]
                     }),
-                y.length > 0 &&
+                C.length > 0 &&
                     (0, r.jsxs)('section', {
                         className: g.section,
                         children: [
@@ -589,13 +646,13 @@ function S() {
                                 variant: 'heading-md/semibold',
                                 children: 'Existing Discount Offers'
                             }),
-                            y.map((e) =>
+                            C.map((e) =>
                                 (0, r.jsx)(
-                                    E,
+                                    S,
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => I(!0)
+                                        forceRefetch: () => w(!0)
                                     },
                                     e.id
                                 )
