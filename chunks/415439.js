@@ -1,47 +1,49 @@
 n.d(t, {
-    FW: () => O,
-    Kt: () => E,
-    ZC: () => N
+    BV: () => E,
+    FW: () => j,
+    Kt: () => _,
+    ZC: () => C
 });
 var r = n(442837),
     i = n(493683),
-    l = n(636449),
-    o = n(122613),
-    a = n(100527),
-    s = n(87005),
-    c = n(895924),
+    s = n(153867),
+    a = n(636449),
+    l = n(122613),
+    o = n(100527),
+    c = n(87005),
+    d = n(895924),
     u = n(812236),
-    d = n(740492),
-    p = n(973616),
-    h = n(592125),
-    f = n(626135),
-    g = n(823379),
-    m = n(728345),
-    b = n(812206),
-    _ = n(981631);
-async function E(e, t, n) {
+    m = n(740492),
+    g = n(973616),
+    p = n(592125),
+    h = n(626135),
+    f = n(823379),
+    b = n(728345),
+    N = n(812206),
+    x = n(981631);
+async function _(e, t, n) {
     t(e.id);
     let r = e.bot;
     if (null == r)
         try {
-            var s, d, g;
-            r = null !== (g = null === (s = b.Z.getApplication(e.id)) || void 0 === s ? void 0 : s.bot) && void 0 !== g ? g : null === (d = p.ZP.createFromServer(await (0, m.UM)(e.id))) || void 0 === d ? void 0 : d.bot;
+            var s, c, m;
+            r = null !== (m = null === (s = N.Z.getApplication(e.id)) || void 0 === s ? void 0 : s.bot) && void 0 !== m ? m : null === (c = g.ZP.createFromServer(await (0, b.UM)(e.id))) || void 0 === c ? void 0 : c.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != r) {
         let s;
-        let d = null == h.Z.getDMFromUserId(r.id);
+        let c = null == p.Z.getDMFromUserId(r.id);
         try {
-            s = (0, l.R)() ? await i.Z.getOrEnsurePrivateChannel(r.id) : await i.Z.openPrivateChannel([r.id], !1, !1, a.Z.APP_DMS_QUICK_LAUNCHER);
+            s = (0, a.R)() ? await i.Z.getOrEnsurePrivateChannel(r.id) : await i.Z.openPrivateChannel([r.id], !1, !1, o.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (f.default.track(_.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (h.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
-                is_new_dm: d,
+                is_new_dm: c,
                 channel_id: s
             }),
             null == s)
@@ -57,31 +59,34 @@ async function E(e, t, n) {
                 return;
             }
         }
-        await (0, o.Z)({
+        await (0, l.Z)({
             targetApplicationId: e.id,
             channelId: s,
             analyticsLocations: n,
-            commandOrigin: c.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: d.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function O() {
-    let e = (0, r.e7)([d.ZP], () => d.ZP.showPlayAgain),
-        { frecentApps: t } = N();
+function E(e, t) {
+    s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || h.default.track(x.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
+}
+function j() {
+    let e = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        { frecentApps: t } = C();
     return e && t.length > 0;
 }
-function N() {
-    let { frecentApps: e, loading: t } = (0, s.f)({
+function C() {
+    let { frecentApps: e, loading: t } = (0, c.f)({
         context: { type: 'contextless' },
         onlyActivityApps: !0,
         allowCommandFetch: !0,
         includeAuthorizedAppsAndFetch: !1
     });
     return {
-        frecentApps: e.map((e) => e.application).filter(g.lm),
+        frecentApps: e.map((e) => e.application).filter(f.lm),
         loading: t
     };
 }

@@ -6,6 +6,7 @@ var r = {
     pillItemSelected: 'pillItemSelected__9e06a',
     tabItemSelected: 'tabItemSelected__9e06a',
     icon: 'icon__9e06a',
-    controlText: 'controlText__9e06a'
+    controlText: 'controlText__9e06a',
+    pillItemText: 'pillItemText__9e06a'
 };
 e.exports = r;

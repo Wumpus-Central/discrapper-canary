@@ -41248,8 +41248,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 .pillContainer__9e06a {
     justify-content: stretch;
-    background-color: var(--background-secondary-alt);
-    border-radius: 8px
+    padding: var(--spacing-4);
+    background-color: var(--bg-base-tertiary);
+    border-radius: var(--radius-md);
+    gap: var(--spacing-4)
 }
 
 .pillItem__9e06a {
@@ -41258,13 +41260,16 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     justify-content: center;
     cursor: pointer;
     padding: 8px 16px;
-    border-radius: 8px;
-    color: var(--text-muted)
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary)
+}
+
+.pillItem__9e06a:not(.pillItemSelected__9e06a):hover {
+    background-color: var(--bg-mod-subtle)
 }
 
 .pillItemSelected__9e06a {
-    background-color: var(--background-modifier-accent);
-    box-shadow: var(--elevation-high);
+    background-color: var(--bg-surface-raised);
     color: var(--interactive-active)
 }
 
@@ -41289,6 +41294,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 .controlText__9e06a {
     display: flex;
     align-items: center
+}
+
+.pillItemText__9e06a {
+    line-height: 1
 }
 
 .select__3f413 {

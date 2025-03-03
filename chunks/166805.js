@@ -9,24 +9,24 @@ var r = n(200651),
     d = n(484614),
     u = n(314852),
     m = n(65361),
-    p = n(246946),
-    g = n(434404),
-    h = n(330010),
-    f = n(999382),
+    g = n(246946),
+    p = n(330010),
+    h = n(999382),
+    f = n(800223),
     b = n(24318),
     x = n(822693),
     j = n(388032),
-    N = n(915275);
+    N = n(922363);
 function v(e) {
     let { guildId: t } = e,
-        { guildProfile: c, fetchGuildProfile: p, fetchStatus: v } = (0, m.u)(t),
+        { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
         _ = v !== u.a.FETCHED,
         {
             fetchedEmbed: O,
             embedEnabled: y,
             embedChannelId: C
-        } = (0, l.cj)([f.Z], () => {
-            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
+        } = (0, l.cj)([h.Z], () => {
+            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.Z.getProps();
             return {
                 fetchedEmbed: e,
                 embedEnabled: t,
@@ -38,19 +38,14 @@ function v(e) {
         [S, T] = i.useState(!1),
         P = !_ && (null == c ? void 0 : c.visibility) !== s.k.PUBLIC && !y;
     i.useEffect(() => {
-        O || (0, h.R)(t);
+        O || (0, p.R)(t);
     }, [O, t]),
         i.useEffect(() => {
-            p();
-        }, [t, p]);
+            g();
+        }, [t, g]);
     let w = i.useCallback(
         async (e) => {
-            T(!0);
-            try {
-                await g.Z.updateEmbed(t, e, C);
-            } finally {
-                T(!1);
-            }
+            T(!0), await (0, f.c)(t, e, C), T(!1);
         },
         [C, t]
     );
@@ -80,7 +75,8 @@ function v(e) {
                                 (0, r.jsx)(x.m, {
                                     guildId: t,
                                     widgetEnabled: y,
-                                    widgetChannelId: C
+                                    widgetChannelId: C,
+                                    enableLocalUpdate: !0
                                 }),
                                 (0, r.jsx)(a.xv, {
                                     variant: 'text-sm/medium',
@@ -135,7 +131,7 @@ function v(e) {
 }
 function _(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([p.Z], () => p.Z.enabled);
+        n = (0, l.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {
         title: j.NW.string(j.t.qlhNb2),
         children: [

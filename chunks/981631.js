@@ -2326,6 +2326,7 @@ var N =
     (r.GLOBAL_DISCOVERY_WITH_GAME_VIEWED = 'global_discovery_with_game_viewed'),
     (r.APP_DMS_QUICK_LAUNCHER_IMPRESSION = 'app_dms_quick_launcher_impression'),
     (r.APP_DMS_QUICK_LAUNCHER_CLICKED = 'app_dms_quick_launcher_clicked'),
+    (r.APP_DMS_QUICK_LAUNCHER_HIDDEN = 'app_dms_quick_launcher_hidden'),
     (r.MY_ACCOUNT_PAGE_TAB_NAVIGATE = 'my_account_page_tab_navigate'),
     (r.USER_VOICE_ACTIVITY_VIEWED = 'user_voice_activity_viewed'),
     (r.PARTY_VOICE_ACTIVITY_VIEWED = 'party_voice_activity_viewed'),
