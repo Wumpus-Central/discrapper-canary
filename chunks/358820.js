@@ -101,6 +101,7 @@ function S(e) {
         b.warn('Voice Filter apply ignored, module not loaded.');
         return;
     }
+    let n = performance.now();
     f.ZP.getVoiceFilters()
         .setVoiceFilter({ name: e })
         .then(
@@ -108,7 +109,8 @@ function S(e) {
                 a.Z.dispatch({
                     type: 'VOICE_FILTER_APPLIED',
                     voiceFilterId: e,
-                    analyticsContext: t
+                    analyticsContext: t,
+                    activationDurationMs: performance.now() - n
                 });
             },
             (t) => {
@@ -166,7 +168,7 @@ async function N() {
                 await f.ZP.ensureModule('discord_voice_filters');
             let t = f.ZP.getVoiceFilters();
             await t.setupResources(),
-                a.Z.dispatch({
+                await a.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: h.O.LOADED
                 }),
