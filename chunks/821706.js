@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,24 +58,24 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -103,16 +103,16 @@ function E(e) {
 }
 function v(e) {
     var { user: t, analyticsLocation: n } = e,
-        i = m(e, ['user', 'analyticsLocation']);
+        i = g(e, ['user', 'analyticsLocation']);
     let o = (0, l.Y)({
         user: t,
         analyticsLocation: n
     });
     return 0 === o.length
-        ? (0, r.jsx)(s.oY, h(p({}, i), { disabled: !0 }))
+        ? (0, r.jsx)(s.oY, h(_({}, i), { disabled: !0 }))
         : (0, r.jsx)(l.Z, {
               menuItems: o,
-              children: (e) => (0, r.jsx)('div', h(p({}, e), { children: (0, r.jsx)(s.oY, p({}, i)) }))
+              children: (e) => (0, r.jsx)('div', h(_({}, e), { children: (0, r.jsx)(s.oY, _({}, i)) }))
           });
 }
 function b(e) {
@@ -145,25 +145,26 @@ function b(e) {
     });
 }
 function y(e) {
-    let { user: t, gameFriends: n, hasOutgoingPendingGameFriends: i, hasIncomingPendingGameFriends: a, analyticsLocation: s, shouldShowTooltip: l } = e,
+    let { user: t, gameFriends: n, hasOutgoingPendingGameFriends: i, hasIncomingPendingGameFriends: o, analyticsLocation: a, shouldShowTooltip: s } = e,
         {
-            tooltipText: u,
-            onMouseEnter: d,
-            ariaLabel: f
+            tooltipText: l,
+            onMouseEnter: u,
+            ariaLabel: d,
+            icon: f
         } = (0, c.N)({
             gameFriends: n,
             hasOutgoingPendingGameFriends: i,
-            hasIncomingPendingGameFriends: a
+            hasIncomingPendingGameFriends: o
         });
     return (0, r.jsx)(v, {
-        tooltipText: u,
+        tooltipText: l,
         tooltipPosition: 'left',
         tooltipAlign: 'top',
-        ariaLabel: f,
-        shouldShowTooltip: l,
-        icon: o.KED,
-        onMouseEnter: d,
+        ariaLabel: d,
+        shouldShowTooltip: s,
+        icon: f,
+        onMouseEnter: u,
         user: t,
-        analyticsLocation: s
+        analyticsLocation: a
     });
 }

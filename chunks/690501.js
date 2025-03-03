@@ -1,36 +1,43 @@
-n.d(t, { N: () => d }), n(47120), n(411104);
+n.d(t, { N: () => f }), n(47120), n(411104);
 var r = n(200651),
     i = n(192379),
-    o = n(835473),
-    a = n(823379),
-    s = n(254197),
-    l = n(532028),
-    c = n(388032);
-let u = [];
-function d(e) {
-    let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: d } = e,
-        [f, p] = i.useState(!1),
-        _ = i.useCallback(() => p(!0), []),
-        h = i.useMemo(
+    o = n(481060),
+    a = n(835473),
+    s = n(823379),
+    l = n(254197),
+    c = n(532028),
+    u = n(388032);
+let d = [];
+function f(e) {
+    let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: f } = e,
+        [_, p] = i.useState(!1),
+        h = i.useCallback(() => p(!0), []),
+        g = i.useMemo(
             () =>
-                f
+                _
                     ? t.map((e) => {
                           let { applicationId: t } = e;
                           return t;
                       })
-                    : u,
-            [f, t]
+                    : d,
+            [_, t]
         ),
-        m = (0, o.Z)(h, f),
-        g = i.useMemo(() => m.filter(a.lm), [m]);
+        m = (0, a.Z)(g, _),
+        E = i.useMemo(() => m.filter(s.lm), [m]),
+        v = i.useMemo(() => (t.length > 0 ? (0, c.A)(E) : void 0), [E, t.length]);
     return {
-        onMouseEnter: _,
-        ariaLabel: i.useMemo(() => (t.length > 0 ? (0, l.A)(g) : void 0), [g, t.length]),
+        onMouseEnter: h,
+        ariaLabel: v,
         tooltipText: i.useMemo(() => {
-            if (t.length > 0) return (0, r.jsx)(s.k, { applications: g });
-            if (n) return c.NW.string(c.t['0eWeam']);
-            if (d) return c.NW.string(c.t.MCgl9f);
+            if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });
+            if (n) return u.NW.string(u.t['0eWeam']);
+            if (f) return u.NW.string(u.t.MCgl9f);
             throw Error('[GameRelationshipButton] Tooltip text should not be undefined.');
-        }, [g, t.length, n, d])
+        }, [E, t.length, n, f]),
+        icon: i.useMemo(() => {
+            if (t.length > 0) return o.KED;
+            if (n || f) return o.iHX;
+            throw Error('[GameRelationshipButton] Icon should not be undefined.');
+        }, [t.length, n, f])
     };
 }

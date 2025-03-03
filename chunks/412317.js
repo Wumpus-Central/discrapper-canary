@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => h });
 var r = t(200651);
 t(192379);
 var o = t(481060),
@@ -11,9 +11,9 @@ var o = t(481060),
     u = t(690501),
     f = t(562831),
     p = t(981631),
-    m = t(388032),
-    I = t(442806);
-function b(e) {
+    b = t(388032),
+    m = t(309096);
+function v(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -56,7 +56,7 @@ function g(e, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     var { user: n, analyticsLocation: t } = e,
         o = (function (e, n) {
             if (null == e) return {};
@@ -82,108 +82,109 @@ function v(e) {
         analyticsLocation: t
     });
     return 0 === i.length
-        ? (0, r.jsx)(c.ef, g(b({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(c.ef, g(v({}, o), { disabled: !0 }))
         : (0, r.jsx)(d.Z, {
               menuItems: i,
-              children: (e) => (0, r.jsx)('div', g(b({}, e), { children: (0, r.jsx)(c.ef, b({}, o)) }))
+              children: (e) => (0, r.jsx)('div', g(v({}, e), { children: (0, r.jsx)(c.ef, v({}, o)) }))
           });
 }
-function y(e) {
-    let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: i, user: l, analyticsLocation: s } = e,
+function I(e) {
+    let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: o, user: i, analyticsLocation: l } = e,
         {
-            onMouseEnter: c,
-            ariaLabel: a,
-            tooltipText: d
+            onMouseEnter: s,
+            ariaLabel: c,
+            tooltipText: a,
+            icon: d
         } = (0, u.N)({
             gameFriends: n,
             hasIncomingPendingGameFriends: t,
-            hasOutgoingPendingGameFriends: i
+            hasOutgoingPendingGameFriends: o
         });
-    return (0, r.jsx)(v, {
-        tooltipText: d,
-        ariaLabel: a,
-        icon: o.KED,
-        onMouseEnter: c,
-        user: l,
-        analyticsLocation: s
+    return (0, r.jsx)(y, {
+        tooltipText: a,
+        ariaLabel: c,
+        icon: d,
+        onMouseEnter: s,
+        user: i,
+        analyticsLocation: l
     });
 }
-function j(e) {
-    let { isCurrentUser: n, user: t, relationshipType: d, friendToken: u, onClose: b } = e,
+function h(e) {
+    let { isCurrentUser: n, user: t, relationshipType: d, friendToken: u, onClose: v } = e,
         { newestAnalyticsLocation: g } = (0, l.ZP)(),
-        j = (0, s.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
-        { gameFriends: h, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: O } = (0, f.H)({ userId: t.id }),
-        _ = h.length > 0 || x || O;
+        h = (0, s.wn)({ location: 'UserProfileModalHeaderActionButtons' }),
+        { gameFriends: j, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: _ } = (0, f.H)({ userId: t.id }),
+        O = j.length > 0 || x || _;
     return n || d === p.OGo.BLOCKED
         ? null
         : d === p.OGo.FRIEND || t.bot
           ? (0, r.jsx)('div', {
-                className: I.multipleButtons,
+                className: m.multipleButtons,
                 children: (0, r.jsx)(a.c, {
                     userId: t.id,
-                    onClose: b
+                    onClose: v
                 })
             })
-          : d === p.OGo.NONE && j && _
+          : d === p.OGo.NONE && h && O
             ? (0, r.jsxs)('div', {
-                  className: I.multipleButtons,
+                  className: m.multipleButtons,
                   children: [
-                      (0, r.jsx)(y, {
+                      (0, r.jsx)(I, {
                           user: t,
                           analyticsLocation: g,
-                          gameFriends: h,
-                          hasIncomingPendingGameFriends: O,
+                          gameFriends: j,
+                          hasIncomingPendingGameFriends: _,
                           hasOutgoingPendingGameFriends: x
                       }),
                       (0, r.jsx)(a.c, {
                           userId: t.id,
-                          onClose: b
+                          onClose: v
                       })
                   ]
               })
             : d === p.OGo.PENDING_OUTGOING
               ? (0, r.jsxs)('div', {
-                    className: I.multipleButtons,
+                    className: m.multipleButtons,
                     children: [
-                        (0, r.jsx)(v, {
+                        (0, r.jsx)(y, {
                             icon: o.iHX,
-                            tooltipText: m.NW.string(m.t.zz2i8v),
+                            tooltipText: b.NW.string(b.t.zz2i8v),
                             user: t,
                             analyticsLocation: g
                         }),
                         (0, r.jsx)(a.c, {
                             userId: t.id,
-                            onClose: b
+                            onClose: v
                         })
                     ]
                 })
               : d === p.OGo.PENDING_INCOMING
                 ? (0, r.jsxs)('div', {
-                      className: I.multipleButtons,
+                      className: m.multipleButtons,
                       children: [
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(y, {
                               icon: o.iHX,
-                              tooltipText: m.NW.string(m.t.ZOFd1N),
+                              tooltipText: b.NW.string(b.t.ZOFd1N),
                               user: t,
                               analyticsLocation: g
                           }),
                           (0, r.jsx)(a.c, {
                               userId: t.id,
-                              onClose: b
+                              onClose: v
                           })
                       ]
                   })
                 : (0, r.jsxs)('div', {
-                      className: I.multipleButtons,
+                      className: m.multipleButtons,
                       children: [
                           (0, r.jsx)(a.v, {
                               userId: t.id,
-                              onClose: b
+                              onClose: v
                           }),
                           (0, r.jsx)(c.tG, {
                               action: 'SEND_FRIEND_REQUEST',
                               icon: o.oLu,
-                              text: m.NW.string(m.t['7815aW']),
+                              text: b.NW.string(b.t['7815aW']),
                               color: o.zxk.Colors.BRAND,
                               onClick: () => {
                                   i.Z.addRelationship({
