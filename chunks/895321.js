@@ -12,5 +12,6 @@ e.exports = {
     cardHeader: 'cardHeader_aae012',
     checkmark: 'checkmark_aae012',
     animate: 'animate_aae012',
+    staff: 'staff_aae012',
     arrow: 'arrow_aae012'
 };

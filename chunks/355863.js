@@ -8,10 +8,10 @@ var o,
     u = n(433517),
     d = n(570140),
     f = n(131792),
-    p = n(252982),
-    _ = n(434529),
+    _ = n(252982),
+    p = n(434529),
     h = n(981631);
-function m(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
@@ -136,6 +136,29 @@ let b = 'migrated',
                 pinned: !0
             }
         },
+        [h.Odu.GUILDS_TEXT]: {
+            minSize: {
+                height: 300,
+                width: 610
+            },
+            resizeX: !0,
+            resizeY: !0,
+            dragAnywhere: !1,
+            layoutPolicy: 'OPTIONAL_DEFAULT',
+            defaultSettings: {
+                anchor: {
+                    left: void 0,
+                    top: 0.05,
+                    bottom: void 0,
+                    right: 0.25
+                },
+                size: {
+                    width: 0.6,
+                    height: 0.45
+                },
+                pinned: !1
+            }
+        },
         [h.Odu.VOICE_V3]: {
             minSize: {
                 width: 272,
@@ -158,7 +181,7 @@ let b = 'migrated',
                 },
                 pinned: !0
             },
-            version: 1
+            version: 2
         },
         [h.Odu.VIDEO]: {
             minSize: {
@@ -183,30 +206,7 @@ let b = 'migrated',
                 },
                 pinned: !0
             },
-            version: 1
-        },
-        [h.Odu.GUILDS_TEXT]: {
-            minSize: {
-                height: 300,
-                width: 610
-            },
-            resizeX: !0,
-            resizeY: !0,
-            dragAnywhere: !1,
-            layoutPolicy: 'OPTIONAL_DEFAULT',
-            defaultSettings: {
-                anchor: {
-                    left: void 0,
-                    top: 0.05,
-                    bottom: void 0,
-                    right: 0.25
-                },
-                size: {
-                    width: 0.6,
-                    height: 0.45
-                },
-                pinned: !1
-            }
+            version: 2
         },
         [h.Odu.GO_LIVE]: {
             minSize: {
@@ -231,7 +231,7 @@ let b = 'migrated',
                 },
                 pinned: !1
             },
-            version: 1
+            version: 2
         },
         [h.Odu.QUICK_ACTIONS]: {
             minSize: {
@@ -255,7 +255,7 @@ let b = 'migrated',
                 },
                 pinned: !1
             },
-            version: 1
+            version: 2
         },
         [h.Odu.NOTIFICATIONS]: {
             minSize: {
@@ -279,7 +279,7 @@ let b = 'migrated',
                 },
                 pinned: !0
             },
-            version: 1
+            version: 2
         },
         [h.Odu.ACTIVITY]: {
             minSize: {
@@ -303,7 +303,7 @@ let b = 'migrated',
                 },
                 pinned: !1
             },
-            version: 1
+            version: 2
         },
         [h.Odu.CLICK_ZONE_DEBUG]: {
             minSize: {
@@ -327,7 +327,7 @@ let b = 'migrated',
                 },
                 pinned: !0
             },
-            version: 1
+            version: 2
         },
         [h.Odu.PERFORMANCE_DEBUG]: {
             minSize: {
@@ -350,7 +350,8 @@ let b = 'migrated',
                     width: 'auto'
                 },
                 pinned: !0
-            }
+            },
+            version: 2
         }
     };
 function I(e) {
@@ -359,10 +360,10 @@ function I(e) {
     let s = [];
     n.forEach((e, t) => {
         let n = T(e.type),
-            r = v(g({}, e), { zIndex: t });
-        '' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, _.jL)(n.anchor, a)), -1 !== n.size.width && (r.size = (0, _.Ox)(n.size, a))), (i = v(g({}, i), { [r.id]: new p.Z(r) })), s.push(r.id);
+            r = v(m({}, e), { zIndex: t });
+        '' === r.id && (r.id = (0, l.Z)()), null != n && ((r.pinned = n.pinned), -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, a)), -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, a))), (i = v(m({}, i), { [r.id]: new _.Z(r) })), s.push(r.id);
     }),
-        (r = v(g({}, r), {
+        (r = v(m({}, r), {
             [t]: new f.Z({
                 id: t,
                 widgets: s,
@@ -387,7 +388,7 @@ function N(e, t) {
 }
 function A(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i } = e;
-    return N(t, (e, t) => x(e, n, r, i));
+    return N(t, (e, t) => L(e, n, r, i));
 }
 function C(e) {
     let { widgetId: t } = e;
@@ -405,21 +406,21 @@ function R(e, t) {
 function P(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
-        w(e, n);
+        D(e, n);
     });
 }
-function w(e, t) {
+function D(e, t) {
     var n;
-    i = v(g({}, i), { [e.id]: e.merge({ meta: g({}, null !== (n = e.meta) && void 0 !== n ? n : {}, t) }) });
+    i = v(m({}, i), { [e.id]: e.merge({ meta: m({}, null !== (n = e.meta) && void 0 !== n ? n : {}, t) }) });
 }
-function D(e) {
+function w(e) {
     let { widgetId: t } = e;
     return N(t, (e, t) => {
         U(e);
     });
 }
-function x(e, t, n, r) {
-    i = v(g({}, i), {
+function L(e, t, n, r) {
+    i = v(m({}, i), {
         [e.id]: e.merge({
             anchor: null != t ? t : e.anchor,
             size: null != n ? n : e.size,
@@ -427,16 +428,16 @@ function x(e, t, n, r) {
         })
     });
 }
-function L(e) {
+function x(e) {
     let { widgetId: t } = e;
-    (i = g({}, i)),
+    (i = m({}, i)),
         delete i[t],
         s().forEach(r, (e, n) => {
             if (n === b) return;
             let i = e.widgets.indexOf(t);
             if (i >= 0) {
                 let t = [...e.widgets];
-                t.splice(i, 1), (r = v(g({}, r), { [n]: e.set('widgets', t) }));
+                t.splice(i, 1), (r = v(m({}, r), { [n]: e.set('widgets', t) }));
             }
         });
 }
@@ -445,26 +446,26 @@ function M(e) {
         n = r[t];
     if (null == n) return !1;
     n.widgets.forEach((e) => {
-        (i = g({}, i)), delete i[e];
+        (i = m({}, i)), delete i[e];
     }),
-        (r = v(g({}, r), { [n.id]: n.set('widgets', []) }));
+        (r = v(m({}, r), { [n.id]: n.set('widgets', []) }));
 }
 function k(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
-        let t = new p.Z(e),
+        let t = new _.Z(e),
             n = r[t.layoutId];
         if (null == n) throw Error('LayoutStore - handleAddWidget: Invalid layoutId');
-        (t = t.set('zIndex', n.widgets.length)), (i = v(g({}, i), { [t.id]: t }));
+        (t = t.set('zIndex', n.widgets.length)), (i = v(m({}, i), { [t.id]: t }));
         let o = [...n.widgets, t.id];
-        r = v(g({}, r), { [n.id]: n.set('widgets', o) });
+        r = v(m({}, r), { [n.id]: n.set('widgets', o) });
     });
 }
 function j(e, t) {
-    i = v(g({}, i), { [e.id]: e.set('zIndex', t) });
+    i = v(m({}, i), { [e.id]: e.set('zIndex', t) });
 }
 function U(e) {
-    i = v(g({}, i), { [e.id]: e.set('pinned', !e.pinned) });
+    i = v(m({}, i), { [e.id]: e.set('pinned', !e.pinned) });
 }
 function G(e) {
     let t = [];
@@ -485,11 +486,11 @@ function B(e) {
         t
     );
 }
-function Z(e) {
+function V(e) {
     let t = {};
     return (
         s().forEach(e, (e, n) => {
-            t[n] = new p.Z(e);
+            t[n] = new _.Z(e);
         }),
         t
     );
@@ -498,9 +499,9 @@ function F(e) {
     var t;
     return null === (t = S[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
-class V extends (o = c.ZP.PersistedStore) {
+class Z extends (o = c.ZP.PersistedStore) {
     initialize(e) {
-        null != e && null != e.layouts && null != e.widgets ? ((r = B(e.layouts)), (i = Z(e.widgets))) : ((r = {}), (i = {}));
+        null != e && null != e.layouts && null != e.widgets ? ((r = B(e.layouts)), (i = V(e.widgets))) : ((r = {}), (i = {}));
         let t = !1,
             n = [];
         s().forEach(S, (e, t) => {
@@ -514,8 +515,8 @@ class V extends (o = c.ZP.PersistedStore) {
                     if (null != n || S[r].version !== e.version) continue;
                     s = t = !0;
                     let c = (0, l.Z)();
-                    (n = new p.Z(
-                        v(g({}, this.getWidgetDefaultSettings(r)), {
+                    (n = new _.Z(
+                        v(m({}, this.getWidgetDefaultSettings(r)), {
                             type: r,
                             id: c,
                             layoutId: o,
@@ -523,7 +524,7 @@ class V extends (o = c.ZP.PersistedStore) {
                         })
                     )),
                         a.push(n),
-                        (i = v(g({}, i), { [c]: n }));
+                        (i = v(m({}, i), { [c]: n }));
                 }
                 s &&
                     ((e = e.set(
@@ -533,11 +534,11 @@ class V extends (o = c.ZP.PersistedStore) {
                             return t;
                         })
                     )),
-                    (r = v(g({}, r), { [o]: e })));
+                    (r = v(m({}, r), { [o]: e })));
             }),
             s().forEach(i, (e, n) => {
                 let o = r[e.layoutId];
-                (null == o || 0 > o.widgets.indexOf(n)) && ((i = g({}, i)), delete i[n], (t = !0));
+                (null == o || 0 > o.widgets.indexOf(n)) && ((i = m({}, i)), delete i[n], (t = !0));
             }),
             t && (this.persist(), this.emitChange());
     }
@@ -607,7 +608,7 @@ class V extends (o = c.ZP.PersistedStore) {
                         var o;
                         (null !== (o = r.version) && void 0 !== o ? o : 0) === t &&
                             n.push(
-                                v(g({}, r.defaultSettings), {
+                                v(m({}, r.defaultSettings), {
                                     type: i,
                                     id: (0, l.Z)(),
                                     layoutId: e
@@ -619,11 +620,11 @@ class V extends (o = c.ZP.PersistedStore) {
         );
     }
 }
-m(V, 'displayName', 'LayoutStore'),
-    m(V, 'persistKey', 'LayoutStore'),
-    m(V, 'migrations', [
+g(Z, 'displayName', 'LayoutStore'),
+    g(Z, 'persistKey', 'LayoutStore'),
+    g(Z, 'migrations', [
         () => {
-            let { pinnedWidgets: e, positions: t, sizes: n, v: r } = g({}, u.K.get('OverlayStore'));
+            let { pinnedWidgets: e, positions: t, sizes: n, v: r } = m({}, u.K.get('OverlayStore'));
             if (5 === r && e) {
                 let r = b,
                     i = [],
@@ -694,7 +695,7 @@ m(V, 'displayName', 'LayoutStore'),
                     (n.widgets = [o, a]),
                         i.push([
                             a,
-                            v(g({}, F(h.Odu.GUILDS_TEXT)), {
+                            v(m({}, F(h.Odu.GUILDS_TEXT)), {
                                 type: h.Odu.GUILDS_TEXT,
                                 id: a,
                                 layoutId: t,
@@ -726,7 +727,7 @@ m(V, 'displayName', 'LayoutStore'),
                 r = {};
             for (let e in t) {
                 let n = t[e];
-                r[e] = v(g({}, n), { version: 0 });
+                r[e] = v(m({}, n), { version: 0 });
             }
             return {
                 layouts: r,
@@ -734,12 +735,12 @@ m(V, 'displayName', 'LayoutStore'),
             };
         }
     ]);
-let H = new V(d.Z, {
+let H = new Z(d.Z, {
     LAYOUT_CREATE: I,
-    LAYOUT_SET_PINNED: D,
+    LAYOUT_SET_PINNED: w,
     LAYOUT_UPDATE_WIDGET: A,
     LAYOUT_SET_TOP_WIDGET: C,
-    LAYOUT_DELETE_WIDGET: L,
+    LAYOUT_DELETE_WIDGET: x,
     LAYOUT_DELETE_ALL_WIDGETS: M,
     LAYOUT_CREATE_WIDGETS: k,
     LAYOUT_SET_WIDGET_META: P

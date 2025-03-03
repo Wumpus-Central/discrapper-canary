@@ -1,10 +1,12 @@
-n.d(t, { i: () => p });
+n.d(t, { i: () => h });
 var r = n(200651),
     i = n(481060),
     o = n(451478),
-    a = n(40851),
-    s = n(981631);
-function l(e, t, n) {
+    a = n(358085),
+    s = n(998502),
+    l = n(40851),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +30,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,34 +47,34 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.IlC.POPOUT;
-    e !== s.IlC.APP &&
+function p() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.IlC.POPOUT;
+    e !== c.IlC.APP &&
         (0, i.ZDy)(
             async () => {
                 let { default: t } = await n.e('30720').then(n.bind(n, 285171));
-                return (n) => (0, r.jsx)(t, d(c({}, n), { contextKey: e }));
+                return (n) => (0, r.jsx)(t, _(d({}, n), { contextKey: e }));
             },
             { contextKey: (0, i.VnL)(e) }
         );
 }
-function p() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.IlC.APP,
+function h() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.IlC.APP,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = null != e ? e : (0, a.GB)();
-    if ((n !== s.IlC.APP && null != n) || (t && null == n)) {
+        n = null != e ? e : (0, l.GB)();
+    if (n !== c.IlC.APP && null != n) {
         if (o.Z.isFocused()) return;
-        f(e);
+        t ? (a.isPlatformEmbedded ? s.ZP.focus() : window.focus()) : p(e);
     }
 }

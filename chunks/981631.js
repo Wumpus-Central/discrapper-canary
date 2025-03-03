@@ -1,8 +1,8 @@
-a.d(e, { rMx: () => T }), a(47120), a(743606);
+a.d(e, { rMx: () => N }), a(47120), a(743606);
 var r,
     n = a(512722),
-    o = a.n(n),
-    _ = a(674746);
+    _ = a.n(n),
+    o = a(674746);
 a(722770), a(106351), a(470167), a(388123);
 var i = a(275726),
     c = a(866442),
@@ -390,6 +390,7 @@ let A = Object.freeze({
         USER_GUILD_BOOST_SLOTS: '/users/@me/guilds/premium/subscription-slots',
         USER_GUILD_BOOST_SLOT_CANCEL: (t) => '/users/@me/guilds/premium/subscription-slots/'.concat(t, '/cancel'),
         USER_GUILD_BOOST_SLOT_UNCANCEL: (t) => '/users/@me/guilds/premium/subscription-slots/'.concat(t, '/uncancel'),
+        GUILD_POWERUPS: (t) => '/guilds/'.concat(t, '/powerups'),
         GUILD_POWERUP_TOGGLE: (t, e) => '/guilds/'.concat(t, '/skus/').concat(e),
         SEARCH_CHANNEL: (t) => '/channels/'.concat(t, '/messages/search'),
         SEARCH_TABS_CHANNEL: (t) => '/channels/'.concat(t, '/messages/search/tabs'),
@@ -1109,8 +1110,8 @@ let A = Object.freeze({
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     });
-let p = (0, c._i)(_.Z.BRAND_500);
-o()(null != p, 'Brand color could not be parsed'),
+let p = (0, c._i)(o.Z.BRAND_500);
+_()(null != p, 'Brand color could not be parsed'),
     Object.freeze({
         0: 0,
         1: 2,
@@ -1136,7 +1137,7 @@ o()(null != p, 'Brand color could not be parsed'),
         ZOOM_MAX: 200,
         ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200]
     });
-var T =
+var N =
     (((r = {}).APP_OPENED = 'app_opened'),
     (r.APP_CRASHED = 'app_crashed'),
     (r.APP_BACKGROUND = 'app_background'),
@@ -2350,6 +2351,7 @@ var T =
     (r.VOICE_FILTER_MIC_SELECTOR_OPENED = 'voice_filter_mic_selector_opened'),
     (r.VOICE_FILTER_MIC_SELECTOR_INPUT_SELECTED = 'voice_filter_mic_selector_input_selected'),
     (r.VOICE_FILTER_VOICE_SETTINGS_CLICKED = 'voice_filter_voice_settings_clicked'),
+    (r.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED = 'activity_panel_game_card_activity_popout_refocus_clicked'),
     (r.APP_EMBED_VIEWED = 'app_embed_viewed'),
     (r.APP_EMBED_CLICKED = 'app_embed_clicked'),
     (r.APP_EMBED_LINK_COPIED = 'app_embed_link_copied'),

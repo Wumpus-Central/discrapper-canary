@@ -2,6 +2,7 @@ n.d(t, {
     Jm: () => u,
     L5: () => c,
     WN: () => f,
+    l6: () => _,
     sf: () => l
 }),
     n(301563);
@@ -30,4 +31,8 @@ function d(e, t) {
 }
 function f(e, t) {
     return c() && d(e, t);
+}
+function _() {
+    let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) !== i.F$.UNVERIFIED;
 }

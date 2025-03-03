@@ -1,17 +1,25 @@
-n.r(t), n.d(t, { default: () => c });
-var r = n(200651),
+n.r(t), n.d(t, { default: () => p });
+var r = n(200651);
+n(192379);
+var o = n(442837),
+    a = n(522474),
     i = n(238246),
-    o = n(952561),
-    l = n(701011),
-    a = n(388032);
-function c(e) {
+    l = n(358085),
+    c = n(228488),
+    u = n(952561),
+    s = n(701011),
+    d = n(932174),
+    _ = n(388032);
+function p(e) {
     var t;
     let { windowKey: n } = e,
-        c = (0, o.Z)();
+        p = (0, u.Z)(),
+        { currentDocument: b, rootNode: f } = (0, d.Z)(),
+        m = (0, o.e7)([a.Z], () => (0, c.rB)(f, b), [f, b]);
     return (0, r.jsx)(i.Z, {
-        withTitleBar: !0,
+        withTitleBar: l.isPlatformEmbedded && !m,
         windowKey: n,
-        title: null !== (t = null == c ? void 0 : c.name) && void 0 !== t ? t : a.NW.string(a.t.IC5Anp),
-        children: (0, r.jsx)(l.Z, {})
+        title: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : _.NW.string(_.t.IC5Anp),
+        children: (0, r.jsx)(s.Z, {})
     });
 }

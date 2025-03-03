@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(442837),
     i = n(570140);
 function o(e, t, n) {
@@ -55,18 +55,40 @@ function l(e, t) {
 }
 let c = {};
 function u(e) {
-    var t, n;
-    let { guildId: r, powerups: i } = e;
+    var t;
+    return null !== (t = c[e]) && void 0 !== t
+        ? t
+        : {
+              powerups: {},
+              unlocked: {},
+              appliedBoosts: 0
+          };
+}
+function d(e) {
+    let { guildId: t, powerups: n } = e,
+        r = u(t);
+    c = l(a({}, c), { [t]: l(a({}, r), { powerups: n }) });
+}
+function f(e) {
+    let { guildId: t, unlocked: n } = e,
+        r = u(t),
+        i = Object.values(n).reduce((e, t) => {
+            var n, r, i;
+            return e + (null !== (i = null === (r = t.sku) || void 0 === r ? void 0 : null === (n = r.powerup_metadata) || void 0 === n ? void 0 : n.boost_price) && void 0 !== i ? i : 0);
+        }, 0);
     c = l(a({}, c), {
-        [r]: {
-            unlocked: null !== (n = null === (t = c[r]) || void 0 === t ? void 0 : t.unlocked) && void 0 !== n ? n : {},
-            powerups: i
-        }
+        [t]: l(a({}, r), {
+            unlocked: n,
+            appliedBoosts: i
+        })
     });
 }
-class d extends r.ZP.Store {
+class _ extends r.ZP.Store {
     getStateForGuild(e) {
         return c[e];
     }
 }
-let f = new d(i.Z, { GUILD_POWERUPS_FETCH_SUCCESS: u });
+let p = new _(i.Z, {
+    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: d,
+    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: f
+});

@@ -1,16 +1,18 @@
-n.d(t, { E: () => o });
-var r = n(388032);
-let o = [
+n.d(t, { E: () => s });
+var i = n(63063),
+    r = n(981631),
+    o = n(388032);
+let s = [
     {
-        title: r.NW.string(r.t.HphYKi),
-        description: r.NW.string(r.t['GCZC+/'])
+        title: o.NW.string(o.t.K0z0AA),
+        description: o.NW.string(o.t.ldhmmp)
     },
     {
-        title: r.NW.string(r.t.nkO4Ly),
-        description: r.NW.string(r.t.rHZFsL)
+        title: o.NW.string(o.t['60uRDA']),
+        description: o.NW.string(o.t.h90JkZ)
     },
     {
-        title: r.NW.string(r.t.aVwLfn),
-        description: r.NW.string(r.t.n5vd1N)
+        title: o.NW.string(o.t['Jc2+09']),
+        description: o.NW.format(o.t.rw9yFR, { helpUrl: i.Z.getArticleURL(r.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_SYSTEM_DMS) })
     }
 ];

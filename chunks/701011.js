@@ -1,6 +1,6 @@
 n.d(t, { Z: () => I }), n(47120);
-var o = n(200651),
-    r = n(192379),
+var r = n(200651),
+    o = n(192379),
     a = n(442837),
     i = n(704215),
     l = n(481060),
@@ -16,69 +16,70 @@ var o = n(200651),
     v = n(781780),
     h = n(325749),
     C = n(981631),
-    x = n(921944),
-    g = n(859492);
+    g = n(921944),
+    x = n(832969);
 function y(e) {
     let { children: t } = e,
         { showsNewUserExperience: a, openNewUserExperienceModal: c } = (function () {
             let e = [i.z.ACTIVITY_POPOUT_NUX_MODAL],
                 [t, a] = (0, s.US)(e),
                 c = t === i.z.ACTIVITY_POPOUT_NUX_MODAL,
-                u = r.useCallback(() => {
-                    a(x.L.USER_DISMISS);
+                u = o.useRef(!1),
+                d = o.useCallback(() => {
+                    !1 === u.current && (a(g.L.USER_DISMISS), (u.current = !0));
                 }, [a]);
             return {
                 showsNewUserExperience: c,
-                openNewUserExperienceModal: r.useCallback(() => {
+                openNewUserExperienceModal: o.useCallback(() => {
                     (0, l.ZDy)(
                         async () => {
                             let { default: e } = await n.e('49077').then(n.bind(n, 97761));
                             return (t) => {
-                                var n, r;
-                                return (0, o.jsx)(
+                                var n, o;
+                                return (0, r.jsx)(
                                     e,
                                     ((n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
-                                                o = Object.keys(n);
+                                                r = Object.keys(n);
                                             'function' == typeof Object.getOwnPropertySymbols &&
-                                                (o = o.concat(
+                                                (r = r.concat(
                                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                     })
                                                 )),
-                                                o.forEach(function (t) {
-                                                    var o;
-                                                    (o = n[t]),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
                                                         t in e
                                                             ? Object.defineProperty(e, t, {
-                                                                  value: o,
+                                                                  value: r,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0
                                                               })
-                                                            : (e[t] = o);
+                                                            : (e[t] = r);
                                                 });
                                         }
                                         return e;
                                     })({}, t)),
-                                    (r = r =
+                                    (o = o =
                                         {
                                             onClickButton: () => {
-                                                u(), t.onClose();
+                                                d(), t.onClose();
                                             }
                                         }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
-                                                  var o = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, o);
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
                                               }
                                               return n;
-                                          })(Object(r)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                          })(Object(o)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                                           }),
                                     n)
                                 );
@@ -87,21 +88,21 @@ function y(e) {
                         {
                             contextKey: l.u1M,
                             onCloseCallback: () => {
-                                u();
+                                d();
                             },
                             backdropStyle: l.fCB.SUBTLE
                         }
                     );
-                }, [u])
+                }, [d])
             };
         })();
-    return (r.useEffect(() => {
+    return (o.useEffect(() => {
         a && c();
     }, [c, a]),
     a)
-        ? (0, o.jsx)('div', {
-              className: g.nuxBackground,
-              children: (0, o.jsx)(p.Z, {})
+        ? (0, r.jsx)('div', {
+              className: x.nuxBackground,
+              children: (0, r.jsx)(p.Z, {})
           })
         : t;
 }
@@ -120,9 +121,9 @@ function I() {
                 guildId: n
             };
         }),
-        i = r.useRef(null),
+        i = o.useRef(null),
         s = (0, c.Z)(e);
-    r.useEffect(() => {
+    o.useEffect(() => {
         null != e
             ? clearTimeout(i.current)
             : null != s &&
@@ -135,28 +136,28 @@ function I() {
             let t = null == e ? void 0 : e.applicationId;
             return null == t ? void 0 : u.Z.getApplication(t);
         }),
-        x = (0, b.PR)();
-    return (0, o.jsx)('div', {
-        className: g.container,
+        g = (0, b.PR)();
+    return (0, r.jsx)('div', {
+        className: x.container,
         children:
             null == e || null == p
-                ? (0, o.jsx)(l.$jN, { className: g.iframe })
-                : (0, o.jsx)('div', {
-                      className: g.loadedContentContainer,
-                      children: (0, o.jsxs)('div', {
-                          className: g.iframeAndHeaderContainer,
+                ? (0, r.jsx)(l.$jN, { className: x.iframe })
+                : (0, r.jsx)('div', {
+                      className: x.loadedContentContainer,
+                      children: (0, r.jsxs)('div', {
+                          className: x.iframeAndHeaderContainer,
                           children: [
-                              (0, o.jsx)('div', {
-                                  className: g.headerContainer,
-                                  children: (0, o.jsx)(h.Z, {
+                              (0, r.jsx)('div', {
+                                  className: x.headerContainer,
+                                  children: (0, r.jsx)(h.Z, {
                                       applicationId: p.id,
                                       channelId: t
                                   })
                               }),
-                              (0, o.jsx)('div', {
-                                  className: g.iframeContainer,
-                                  children: (0, o.jsx)(y, {
-                                      children: (0, o.jsx)(v.Z, {
+                              (0, r.jsx)('div', {
+                                  className: x.iframeContainer,
+                                  children: (0, r.jsx)(y, {
+                                      children: (0, r.jsx)(v.Z, {
                                           channelId: t,
                                           guildId: n,
                                           embeddedActivity: e,
@@ -164,7 +165,7 @@ function I() {
                                       })
                                   })
                               }),
-                              x ? (0, o.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
+                              g ? (0, r.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })
