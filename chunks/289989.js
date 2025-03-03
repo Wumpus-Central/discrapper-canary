@@ -1,31 +1,32 @@
-n.d(t, { Z: () => c });
-var l = n(200651);
+n.d(t, { Z: () => d });
+var r = n(200651);
 n(192379);
-var r = n(793030),
-    s = n(39540),
-    i = n(152165),
+var l = n(793030),
+    i = n(39540),
+    s = n(152165),
+    o = n(231338),
     a = n(388032),
-    o = n(465408);
-function c(e) {
+    c = n(36846);
+function d(e) {
     let { onSourceSelect: t } = e;
     return (
-        (0, s.Z)(t, () => null),
-        (0, l.jsxs)('div', {
-            className: o.root,
+        (0, i.Z)(t, o.Vq),
+        (0, r.jsxs)('div', {
+            className: c.root,
             children: [
-                (0, l.jsx)(r.X6, {
-                    className: o.header,
+                (0, r.jsx)(l.X6, {
+                    className: c.header,
                     variant: 'heading-lg/semibold',
                     color: 'text-normal',
                     children: a.NW.string(a.t.XyYoFR)
                 }),
-                (0, l.jsx)(r.xv, {
-                    className: o.body,
+                (0, r.jsx)(l.xv, {
+                    className: c.body,
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     children: a.NW.format(a.t.sbbPhY, { buttonName: a.NW.string(a.t.FiBjwc) })
                 }),
-                (0, l.jsx)(i.Z, {})
+                (0, r.jsx)(s.Z, {})
             ]
         })
     );

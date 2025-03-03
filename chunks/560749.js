@@ -1,58 +1,58 @@
-n.d(t, { Z: () => I }), n(47120), n(301563), n(653041), n(308318), n(230036);
+n.d(t, { Z: () => P }), n(47120), n(301563), n(653041), n(308318), n(230036);
 var r = n(200651),
     l = n(192379),
-    s = n(442837),
-    i = n(481060),
-    a = n(835473),
-    o = n(212819),
+    i = n(442837),
+    s = n(481060),
+    o = n(835473),
+    a = n(212819),
     c = n(938078),
-    u = n(318374),
-    d = n(925329),
-    m = n(823385),
-    p = n(601565),
-    h = n(131704),
-    g = n(592125),
+    d = n(318374),
+    u = n(925329),
+    f = n(823385),
+    h = n(601565),
+    m = n(131704),
+    p = n(592125),
     x = n(580005),
-    f = n(984933),
-    v = n(430824),
-    j = n(496675),
-    S = n(914010),
-    N = n(594174),
-    Z = n(938475),
-    b = n(823379),
-    O = n(102172),
+    g = n(984933),
+    _ = n(430824),
+    v = n(496675),
+    j = n(914010),
+    b = n(594174),
+    C = n(938475),
+    S = n(823379),
+    N = n(102172),
     y = n(615161),
-    C = n(981631),
-    P = n(388032),
-    E = n(156202);
-function T(e) {
+    Z = n(981631),
+    w = n(388032),
+    O = n(358476);
+function I(e) {
     let { result: t, onSelectChannel: n } = e,
-        l = (0, s.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        a = (0, s.Wu)([Z.ZP, N.default], () =>
-            Z.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => N.default.getUser(e.user.id))
-                .filter(b.lm)
+        l = (0, i.e7)([_.Z], () => _.Z.getGuild(t.record.guild_id)),
+        o = (0, i.Wu)([C.ZP, b.default], () =>
+            C.ZP.getVoiceStatesForChannel(t.record)
+                .map((e) => b.default.getUser(e.user.id))
+                .filter(S.lm)
         );
-    return (0, r.jsxs)(i.P3F, {
-        className: E.channelResult,
+    return (0, r.jsxs)(s.P3F, {
+        className: O.channelResult,
         onClick: () => n(t.record.id),
         children: [
             (0, r.jsxs)('div', {
-                className: E.channelResultInfo,
+                className: O.channelResultInfo,
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
                         src: null == l ? void 0 : l.getIconURL(32),
-                        className: E.guildIcon
+                        className: O.guildIcon
                     }),
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsxs)(i.Text, {
-                                className: E.channelName,
+                            (0, r.jsxs)(s.Text, {
+                                className: O.channelName,
                                 variant: 'text-md/medium',
                                 color: 'interactive-normal',
                                 children: [
-                                    (0, r.jsx)(i.gj8, {
+                                    (0, r.jsx)(s.gj8, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
@@ -60,7 +60,7 @@ function T(e) {
                                     t.record.name
                                 ]
                             }),
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 children: null == l ? void 0 : l.name
@@ -69,115 +69,116 @@ function T(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(u.Z, {
-                users: a,
+            (0, r.jsx)(d.Z, {
+                users: o,
                 maxUsers: 4
             })
         ]
     });
 }
-function I(e) {
+function P(e) {
     var t, n;
-    let { onSelectChannel: u } = e,
-        [N, Z] = (0, y.E_)(),
-        I = (0, a.q)(null === (t = N.sourceApplication) || void 0 === t ? void 0 : t.id),
-        { search: w, query: _, results: R } = (0, p.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        W = (0, s.Wu)([S.Z, f.ZP, g.Z, v.Z, j.Z], () => {
+    let { onSelectChannel: d } = e,
+        [b, C] = (0, y.E_)(),
+        P = (0, o.q)(null === (t = b.sourceApplication) || void 0 === t ? void 0 : t.id),
+        { search: T, query: E, results: R } = (0, h.Z)({ searchOptions: { frecencyBoosters: !0 } }),
+        W = (0, i.Wu)([j.Z, g.ZP, p.Z, _.Z, v.Z], () => {
             let e = [],
-                t = S.Z.getGuildId();
+                t = j.Z.getGuildId();
             if (null == t) return e;
-            for (let n of f.ZP.getVocalChannelIds(t)) {
-                let t = g.Z.getChannel(n);
-                null != t && (0, O.JL)(t, v.Z, j.Z) && e.push(t);
+            for (let n of g.ZP.getVocalChannelIds(t)) {
+                let t = p.Z.getChannel(n);
+                null != t && (0, N.JL)(t, _.Z, v.Z) && e.push(t);
             }
             return e;
         }),
-        A = (0, s.Wu)([m.Z, g.Z, x.Z, v.Z, j.Z], () => {
+        k = (0, i.Wu)([f.Z, p.Z, x.Z, _.Z, v.Z], () => {
             let e = [],
                 t = new Set();
-            for (let n of m.Z.getChannelHistory()) {
-                let r = g.Z.getChannel(n);
-                (null == r ? void 0 : r.type) === C.d4z.GUILD_VOICE && (0, O.JL)(r, v.Z, j.Z) && (t.add(r.id), e.push(r));
+            for (let n of f.Z.getChannelHistory()) {
+                let r = p.Z.getChannel(n);
+                (null == r ? void 0 : r.type) === Z.d4z.GUILD_VOICE && (0, N.JL)(r, _.Z, v.Z) && (t.add(r.id), e.push(r));
             }
-            for (let n of x.Z.getFrequentlyWithoutFetchingLatest()) n instanceof h.Sf && n.type === C.d4z.GUILD_VOICE && !t.has(n.id) && (0, O.JL)(n, v.Z, j.Z) && (t.add(n.id), e.push(n));
+            for (let n of x.Z.getFrequentlyWithoutFetchingLatest()) n instanceof m.Sf && n.type === Z.d4z.GUILD_VOICE && !t.has(n.id) && (0, N.JL)(n, _.Z, v.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
-        k = l.useMemo(() => {
-            let e = new Set(A.map((e) => e.id)),
+        A = l.useMemo(() => {
+            let e = new Set(k.map((e) => e.id)),
                 t = new Set(W.map((e) => e.id));
             return [
                 ...W.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, c.Z)(e.id))
-                    .filter(b.lm),
-                ...A.filter((e) => !t.has(e.id))
+                    .filter(S.lm),
+                ...k
+                    .filter((e) => !t.has(e.id))
                     .map((e) => (0, c.Z)(e.id))
-                    .filter(b.lm)
+                    .filter(S.lm)
             ];
-        }, [A, W]),
-        L = '' !== _ ? R : k;
+        }, [k, W]),
+        M = '' !== E ? R : A;
     return (0, r.jsxs)('div', {
-        className: E.root,
+        className: O.root,
         children: [
             (0, r.jsxs)('div', {
-                className: E.header,
+                className: O.header,
                 children: [
-                    (0, r.jsx)(d.Z, {
-                        className: E.sourceIcon,
-                        game: I
+                    (0, r.jsx)(u.Z, {
+                        className: O.sourceIcon,
+                        game: P
                     }),
                     (0, r.jsxs)('div', {
-                        className: E.headingGroup,
+                        className: O.headingGroup,
                         children: [
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(s.X6q, {
                                 variant: 'text-lg/semibold',
                                 color: 'header-primary',
-                                children: P.NW.string(P.t.WEYae3)
+                                children: w.NW.string(w.t.WEYae3)
                             }),
-                            (0, r.jsx)(i.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: null === (n = N.sourceApplication) || void 0 === n ? void 0 : n.name
+                                children: null === (n = b.sourceApplication) || void 0 === n ? void 0 : n.name
                             })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(i.E1j, {
-                className: E.searchBar,
-                placeholder: P.NW.string(P.t['3jvv+/']),
-                query: _,
-                size: i.E1j.Sizes.MEDIUM,
+            (0, r.jsx)(s.E1j, {
+                className: O.searchBar,
+                placeholder: w.NW.string(w.t['3jvv+/']),
+                query: E,
+                size: s.E1j.Sizes.MEDIUM,
                 onChange: (e) =>
-                    w({
+                    T({
                         query: e,
-                        resultTypes: [o.h8.VOICE_CHANNEL]
+                        resultTypes: [a.h8.VOICE_CHANNEL]
                     }),
                 onClear: () =>
-                    w({
+                    T({
                         query: '',
-                        resultTypes: [o.h8.VOICE_CHANNEL]
+                        resultTypes: [a.h8.VOICE_CHANNEL]
                     }),
                 autoFocus: !0
             }),
-            (0, r.jsx)(i.aVo, {
+            (0, r.jsx)(s.aVo, {
                 renderListHeader: function () {
-                    return (0, r.jsx)(i.Text, {
+                    return (0, r.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'text-muted',
                         children: 'Recent Channels'
                     });
                 },
-                sections: [L.length],
+                sections: [M.length],
                 sectionHeight: 0,
                 rowHeight: 48,
                 renderRow: function (e) {
                     let { rowIndex: t } = e,
-                        n = L[t];
+                        n = M[t];
                     return (0, r.jsx)(
-                        T,
+                        I,
                         {
                             result: n,
-                            onSelectChannel: u
+                            onSelectChannel: d
                         },
                         n.record.id
                     );

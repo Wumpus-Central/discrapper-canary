@@ -1,18 +1,16 @@
-r.d(t, { g: () => g });
+r.d(t, { g: () => d });
 var n = r(200651);
 r(192379);
-var i = r(120356),
-    o = r.n(i),
-    l = r(704215),
-    c = r(481060),
-    a = r(605236),
-    u = r(434404),
-    s = r(41776),
-    b = r(703656),
-    O = r(981631),
-    f = r(388032),
-    p = r(703934);
-function d(e) {
+var i = r(704215),
+    o = r(481060),
+    l = r(605236),
+    c = r(434404),
+    a = r(41776),
+    u = r(703656),
+    s = r(981631),
+    b = r(388032),
+    O = r(369817);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -37,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function y(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,45 +53,45 @@ function y(e, t) {
         e
     );
 }
-let g = (e) => {
+let d = (e) => {
     let { guild: t } = e,
-        i = t.id,
-        g = async () => {
-            let e = s.Z.isLurking(i);
-            await u.Z.leaveGuild(i),
+        d = t.id,
+        y = async () => {
+            let e = a.Z.isLurking(d);
+            await c.Z.leaveGuild(d),
                 e
-                    ? (0, b.uL)(O.Z5c.GUILD_DISCOVERY)
-                    : (0, a.un)(l.z.GUILD_LEAVE_FEEDBACK) ||
-                      (0, c.ZDy)(async () => {
+                    ? (0, u.uL)(s.Z5c.GUILD_DISCOVERY)
+                    : (0, l.un)(i.z.GUILD_LEAVE_FEEDBACK) ||
+                      (0, o.ZDy)(async () => {
                           let { default: e } = await r.e('74920').then(r.bind(r, 131102));
                           return (r) =>
                               (0, n.jsx)(
                                   e,
-                                  y(d({}, r), {
-                                      guildId: i,
+                                  p(f({}, r), {
+                                      guildId: d,
                                       guildName: t.name
                                   })
                               );
                       });
         };
     return (0, n.jsx)(
-        c.ConfirmModal,
-        y(
-            d(
+        o.ConfirmModal,
+        p(
+            f(
                 {
-                    className: o()(p.__invalid_confirmModal),
-                    bodyClassName: o()(p.__invalid_confirmModalBody),
-                    header: f.NW.formatToPlainString(f.t['1GX6Pz'], { name: t.name }),
-                    confirmText: t.hasFeature(O.oNc.HUB) ? f.NW.string(f.t.Dv8gFR) : f.NW.string(f.t.J2TBi4),
-                    cancelText: f.NW.string(f.t['ETE/oK']),
-                    onConfirm: g
+                    className: O.__invalid_confirmModal,
+                    bodyClassName: O.__invalid_confirmModalBody,
+                    header: b.NW.formatToPlainString(b.t['1GX6Pz'], { name: t.name }),
+                    confirmText: t.hasFeature(s.oNc.HUB) ? b.NW.string(b.t.Dv8gFR) : b.NW.string(b.t.J2TBi4),
+                    cancelText: b.NW.string(b.t['ETE/oK']),
+                    onConfirm: y
                 },
                 e
             ),
             {
-                children: (0, n.jsx)(c.Text, {
+                children: (0, n.jsx)(o.Text, {
                     variant: 'text-md/normal',
-                    children: t.hasFeature(O.oNc.HUB) ? f.NW.format(f.t.ZHTXVF, { name: t.name }) : f.NW.format(f.t.ZEXC0t, { name: t.name })
+                    children: t.hasFeature(s.oNc.HUB) ? b.NW.format(b.t.ZHTXVF, { name: t.name }) : b.NW.format(b.t.ZEXC0t, { name: t.name })
                 })
             }
         )

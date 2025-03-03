@@ -1,120 +1,118 @@
-n.d(t, { Z: () => y }), n(757143), n(301563), n(47120);
+n.d(t, { Z: () => v }), n(757143), n(301563), n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(793030),
-    l = n(481060),
-    c = n(596454),
-    u = n(962293),
-    d = n(328908),
-    f = n(992970),
-    _ = n(317951),
-    p = n(135793),
-    h = n(883998),
-    g = n(576645),
-    m = n(981631),
-    E = n(388032),
-    v = n(646406);
-function b(e) {
+    o = n(793030),
+    a = n(481060),
+    s = n(596454),
+    l = n(962293),
+    c = n(328908),
+    u = n(992970),
+    d = n(317951),
+    f = n(135793),
+    _ = n(883998),
+    p = n(576645),
+    h = n(981631),
+    g = n(388032),
+    m = n(646406);
+function E(e) {
     let { emojiConfetti: t } = e,
         n = i.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);
     return null == t
-        ? (0, r.jsx)(l.EO4, {
+        ? (0, r.jsx)(a.EO4, {
               size: 'sm',
               color: 'currentColor'
           })
-        : (0, r.jsx)(c.Z, {
+        : (0, r.jsx)(s.Z, {
               animated: !1,
               emojiId: t.id,
               emojiName: n
           });
 }
-let y = function (e) {
+let v = function (e) {
     let { channel: t } = e,
-        n = (0, d.z8)(t.id),
-        o = (0, d.OG)(t.id),
-        { entitlement: c, numPotions: y } = (0, g.t6)(_.D1),
-        O = i.useCallback(
+        n = (0, c.z8)(t.id),
+        s = (0, c.OG)(t.id),
+        { entitlement: v, numPotions: b } = (0, p.t6)(d.D1),
+        y = i.useCallback(
             (e) => {
-                (0, d.Hi)(e, t.id);
+                (0, c.Hi)(e, t.id);
             },
             [t.id]
         ),
-        S = i.useCallback(() => {
-            (0, d.GA)(t.id);
+        O = i.useCallback(() => {
+            (0, c.GA)(t.id);
         }, [t.id]),
-        I = i.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
-        T = i.useCallback(() => {
-            (0, d.Hb)(t.id);
+        S = i.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
+        I = i.useCallback(() => {
+            (0, c.Hb)(t.id);
         }, [t.id]),
-        N = i.useMemo(() => (null != y && y > 0 ? ((null == c ? void 0 : c.type) === m.qc2.DEVELOPER_GIFT ? E.NW.format(E.t['b+P6ra'], { numPotions: y }) : E.NW.format(E.t.RiQ4cn, { numPotions: y })) : E.NW.string(E.t.hvVgAQ)), [y, c]),
-        [A, C] = i.useState(!1 === o);
+        T = i.useMemo(() => (null != b && b > 0 ? ((null == v ? void 0 : v.type) === h.qc2.DEVELOPER_GIFT ? g.NW.format(g.t['b+P6ra'], { numPotions: b }) : g.NW.format(g.t.RiQ4cn, { numPotions: b })) : g.NW.string(g.t.hvVgAQ)), [b, v]),
+        [N, A] = i.useState(!1 === s);
     i.useEffect(() => {
-        !1 === o && S();
-    }, [o, S]);
-    let R = i.useCallback(() => {
-            C(!1);
+        !1 === s && O();
+    }, [s, O]);
+    let C = i.useCallback(() => {
+            A(!1);
         }, []),
-        P = i.useCallback(
+        R = i.useCallback(
             (e) => {
-                O(e), C(!1);
+                y(e), A(!1);
             },
-            [O]
+            [y]
         ),
-        D = i.useCallback(() => {
-            (0, p.s)({
+        P = i.useCallback(() => {
+            (0, f.s)({
                 channelId: t.id,
                 onRedeem: () => {},
                 buttonUseState: 'apply',
-                source: f.YD.MessageConfettiBar
+                source: u.YD.MessageConfettiBar
             });
         }, [t.id]);
     return (0, r.jsxs)('div', {
-        className: v.bar,
+        className: m.bar,
         children: [
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(_.Z, {
                 channel: t,
-                shouldShow: A,
-                onRequestClose: R,
-                setEmojiConfetti: P,
+                shouldShow: N,
+                onRequestClose: C,
+                setEmojiConfetti: R,
                 position: 'top',
                 align: 'left',
                 children: () =>
-                    (0, r.jsxs)(l.P3F, {
-                        onClick: () => C(!A),
-                        className: a()(v.emojiSelectContainer),
+                    (0, r.jsxs)(a.P3F, {
+                        onClick: () => A(!N),
+                        className: m.emojiSelectContainer,
                         children: [
                             (0, r.jsx)('div', {
-                                className: v.emojiIconContainer,
-                                children: (0, r.jsx)(b, { emojiConfetti: null != n ? n : void 0 })
+                                className: m.emojiIconContainer,
+                                children: (0, r.jsx)(E, { emojiConfetti: null != n ? n : void 0 })
                             }),
-                            (0, r.jsx)(s.xv, {
+                            (0, r.jsx)(o.xv, {
                                 variant: 'text-sm/medium',
-                                children: null == n ? E.NW.string(E.t.mzfiGR) : E.NW.format(E.t.Hcd9OT, { emojiName: I })
+                                children: null == n ? g.NW.string(g.t.mzfiGR) : g.NW.format(g.t.Hcd9OT, { emojiName: S })
                             })
                         ]
                     })
             }),
             (0, r.jsxs)('div', {
-                className: v.end,
+                className: m.end,
                 children: [
-                    (0, r.jsx)(l.zxk, {
-                        look: l.zxk.Looks.LINK,
-                        size: l.zxk.Sizes.SMALL,
-                        onClick: D,
-                        color: l.zxk.Colors.TRANSPARENT,
-                        className: v.learnMoreButton,
-                        children: (0, r.jsx)(s.xv, {
+                    (0, r.jsx)(a.zxk, {
+                        look: a.zxk.Looks.LINK,
+                        size: a.zxk.Sizes.SMALL,
+                        onClick: P,
+                        color: a.zxk.Colors.TRANSPARENT,
+                        className: m.learnMoreButton,
+                        children: (0, r.jsx)(o.xv, {
                             variant: 'text-sm/medium',
-                            children: N
+                            children: T
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: v.separator,
+                        className: m.separator,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)(u.B, { onClick: T })
+                    (0, r.jsx)(l.B, { onClick: I })
                 ]
             })
         ]

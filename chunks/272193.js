@@ -1,90 +1,88 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    l = n(442837),
-    o = n(481060),
-    s = n(570140),
-    c = n(441623),
-    d = n(246992),
-    u = n(25813),
-    h = n(841699);
-function m() {
-    let e = (0, l.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
+var a = n(442837),
+    l = n(481060),
+    i = n(570140),
+    o = n(441623),
+    s = n(246992),
+    c = n(800373),
+    d = n(710662);
+function u() {
+    let e = (0, a.e7)([o.Z], () => o.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
-            s.Z.dispatch({
+            i.Z.dispatch({
                 type: 'DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT',
                 total: e
             });
         };
-    return (0, r.jsx)(o.zJl, {
-        className: i()(h.panel),
+    return (0, r.jsx)(l.zJl, {
+        className: d.panel,
         children: (0, r.jsxs)('div', {
-            className: u.panelInner,
+            className: c.panelInner,
             children: [
-                (0, r.jsx)(o.Text, {
-                    className: u.panelHeader,
+                (0, r.jsx)(l.Text, {
+                    className: c.panelHeader,
                     variant: 'text-lg/bold',
                     children: 'Friend Anniversary'
                 }),
                 (0, r.jsxs)('div', {
-                    className: u.panelRow,
+                    className: c.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Reset gift message cooldown'
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            size: o.zxk.Sizes.SMALL,
+                        (0, r.jsx)(l.zxk, {
+                            size: l.zxk.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
+                                i.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
                             },
                             children: 'Reset'
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: u.panelRow,
+                    className: c.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Reset badge cooldown'
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            size: o.zxk.Sizes.SMALL,
+                        (0, r.jsx)(l.zxk, {
+                            size: l.zxk.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
+                                i.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
                             },
                             children: 'Reset'
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: u.panelRow,
+                    className: c.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Clear last seen friend anniversaries in All Friends'
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            size: o.zxk.Sizes.SMALL,
+                        (0, r.jsx)(l.zxk, {
+                            size: l.zxk.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
+                                i.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
                             },
                             children: 'Clear'
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: u.panelRow,
+                    className: c.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: 'Select number of friend anniversaries to generate'
                         }),
-                        (0, r.jsx)(o.q4e, {
-                            className: u.anniversaryCountSelect,
+                        (0, r.jsx)(l.q4e, {
+                            className: c.anniversaryCountSelect,
                             options: [
                                 {
                                     label: 'None',
@@ -123,11 +121,11 @@ function m() {
                             onChange: (e) => {
                                 t(e);
                             },
-                            popoutLayerContext: d.O$
+                            popoutLayerContext: s.O$
                         }),
-                        (0, r.jsx)(o.zxk, {
-                            look: o.zxk.Looks.LINK,
-                            className: u.anniversaryCountResetButton,
+                        (0, r.jsx)(l.zxk, {
+                            look: l.zxk.Looks.LINK,
+                            className: c.anniversaryCountResetButton,
                             onClick: () => {
                                 t(null);
                             },

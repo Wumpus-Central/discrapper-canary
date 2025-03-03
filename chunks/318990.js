@@ -1,15 +1,13 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(442837),
-    l = n(481060),
-    c = n(518950),
-    u = n(357355),
-    d = n(388032),
-    f = n(942101);
-function p(e, t, n) {
+    o = n(442837),
+    a = n(481060),
+    s = n(518950),
+    l = n(357355),
+    c = n(388032),
+    u = n(122768);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +20,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,43 +31,43 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function h() {
-    let e = (0, s.e7)([u.Z], () => u.Z.affinities.slice(0, 3)),
+function _() {
+    let e = (0, o.e7)([l.Z], () => l.Z.affinities.slice(0, 3)),
         t = e[0],
-        { avatarSrc: n, eventHandlers: o } = (0, c.Z)({
+        { avatarSrc: n, eventHandlers: d } = (0, s.Z)({
             user: t,
-            size: l.EFr.SIZE_24,
+            size: a.EFr.SIZE_24,
             animateOnHover: !0
         }),
-        p = (e) => (null != e.globalName ? e.globalName : e.username),
-        h = i.useMemo(() => (e.length >= 2 ? d.NW.formatToPlainString(d.t.c7ETJC, { username: p(e[0]) }) : 1 === e.length ? d.NW.formatToPlainString(d.t.dpjXPD, { username: p(e[0]) }) : ''), [e]);
+        _ = (e) => (null != e.globalName ? e.globalName : e.username),
+        p = i.useMemo(() => (e.length >= 2 ? c.NW.formatToPlainString(c.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? c.NW.formatToPlainString(c.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
     return 0 === e.length
         ? null
         : (0, r.jsxs)('div', {
-              className: f.container,
+              className: u.container,
               children: [
                   (0, r.jsx)(
-                      l.qEK,
-                      _(
+                      a.qEK,
+                      f(
                           {
-                              className: f.__invalid_icon,
+                              className: u.__invalid_icon,
                               src: n,
                               'aria-label': t.username,
-                              size: l.EFr.SIZE_24
+                              size: a.EFr.SIZE_24
                           },
-                          o
+                          d
                       )
                   ),
-                  (0, r.jsx)(l.Text, {
-                      className: a()(f.text),
+                  (0, r.jsx)(a.Text, {
+                      className: u.text,
                       variant: 'text-sm/normal',
                       color: 'always-white',
-                      children: h
+                      children: p
                   })
               ]
           });

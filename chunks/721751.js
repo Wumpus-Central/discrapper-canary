@@ -1,49 +1,47 @@
 let r;
-n.d(t, { Z: () => L }), n(47120), n(301563);
+n.d(t, { Z: () => j }), n(47120), n(301563);
 var o = n(200651),
     i = n(192379),
-    c = n(120356),
-    l = n.n(c),
-    s = n(873546),
-    a = n(442837),
-    u = n(481060),
-    d = n(980591),
-    h = n(605782),
-    p = n(133853),
-    f = n(568154),
-    b = n(353926),
-    m = n(703656),
-    _ = n(981631),
-    E = n(856167);
-let O = n(575703),
-    g = n(2984),
-    I = [_.Z5c.LOGIN, _.Z5c.LOGIN_HANDOFF, _.Z5c.REGISTER, _.Z5c.INVITE(''), _.Z5c.GIFT_CODE(''), _.Z5c.GUILD_TEMPLATE_LOGIN(''), _.Z5c.GUILD_TEMPLATE(''), _.Z5c.DISABLE_EMAIL_NOTIFICATIONS, _.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Z5c.BILLING_PREMIUM_SUBSCRIBE, _.Z5c.BILLING_PAYMENT_SOURCES_CREATE, _.Z5c.BILLING_PAYMENTS, _.Z5c.BILLING_PREMIUM_SWITCH_PLAN, _.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Z5c.VERIFY, _.Z5c.VERIFY_HUB_EMAIL, _.Z5c.REJECT_IP, _.Z5c.REJECT_MFA, _.Z5c.AUTHORIZE_IP, _.Z5c.AUTHORIZE_PAYMENT, _.Z5c.RESET, _.Z5c.HANDOFF, _.Z5c.REPORT, _.Z5c.REPORT_SECOND_LOOK, _.Z5c.ACCOUNT_REVERT('')];
-function T(e) {
-    return I.some((t) => e.startsWith(t));
+    c = n(873546),
+    l = n(442837),
+    s = n(481060),
+    a = n(980591),
+    u = n(605782),
+    d = n(133853),
+    h = n(568154),
+    p = n(353926),
+    f = n(703656),
+    b = n(981631),
+    m = n(900917);
+let _ = n(575703),
+    E = n(2984),
+    O = [b.Z5c.LOGIN, b.Z5c.LOGIN_HANDOFF, b.Z5c.REGISTER, b.Z5c.INVITE(''), b.Z5c.GIFT_CODE(''), b.Z5c.GUILD_TEMPLATE_LOGIN(''), b.Z5c.GUILD_TEMPLATE(''), b.Z5c.DISABLE_EMAIL_NOTIFICATIONS, b.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, b.Z5c.BILLING_PREMIUM_SUBSCRIBE, b.Z5c.BILLING_PAYMENT_SOURCES_CREATE, b.Z5c.BILLING_PAYMENTS, b.Z5c.BILLING_PREMIUM_SWITCH_PLAN, b.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, b.Z5c.VERIFY, b.Z5c.VERIFY_HUB_EMAIL, b.Z5c.REJECT_IP, b.Z5c.REJECT_MFA, b.Z5c.AUTHORIZE_IP, b.Z5c.AUTHORIZE_PAYMENT, b.Z5c.RESET, b.Z5c.HANDOFF, b.Z5c.REPORT, b.Z5c.REPORT_SECOND_LOOK, b.Z5c.ACCOUNT_REVERT('')];
+function g(e) {
+    return O.some((t) => e.startsWith(t));
 }
-let Z = (e) => ((r = e), e);
-function j(e) {
+let I = (e) => ((r = e), e);
+function T(e) {
     let { children: t } = e;
     switch (
         (function () {
             var e;
             let [t, n] = i.useState(!1),
                 [o, c] = i.useState(!0),
-                l = (0, a.e7)([b.Z], () => b.Z.hasLoadedExperiments);
-            return ((0, d.Z)(() => {}, 300), void 0 !== r) ? r : !o && l ? (t || n(!0), Z(((e = 0), 'default'))) : o ? Z('default') : 'loading';
+                s = (0, l.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+            return ((0, a.Z)(() => {}, 300), void 0 !== r) ? r : !o && s ? (t || n(!0), I(((e = 0), 'default'))) : o ? I('default') : 'loading';
         })()
     ) {
         case 'default':
             return (0, o.jsxs)(o.Fragment, {
                 children: [
                     (0, o.jsx)('img', {
-                        className: E.artwork,
-                        src: O,
+                        className: m.artwork,
+                        src: _,
                         alt: ''
                     }),
                     (0, o.jsx)('img', {
-                        className: E.logoWithText,
-                        src: g,
+                        className: m.logoWithText,
+                        src: E,
                         alt: ''
                     }),
                     t
@@ -54,7 +52,7 @@ function j(e) {
             return null;
     }
 }
-class x extends i.Component {
+class Z extends i.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -62,50 +60,50 @@ class x extends i.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (T(e)) (0, m.uL)(e, t);
+        if (g(e)) (0, f.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        T(e) ? (0, m.dL)(e) : (window.location = e);
+        g(e) ? (0, f.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
-            t = (0, o.jsx)(h.Z, {
+            t = (0, o.jsx)(u.Z, {
                 component: i.Fragment,
                 children: i.Children.map(this.props.children, (e) =>
                     i.cloneElement(e, {
-                        transitionTo: m.uL,
-                        replaceWith: m.dL
+                        transitionTo: f.uL,
+                        replaceWith: f.dL
                     })
                 )
             });
         return (0, o.jsx)('div', {
-            className: E.characterBackground,
-            children: (0, o.jsx)(u.y5t, {
+            className: m.characterBackground,
+            children: (0, o.jsx)(s.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
                         ? (0, o.jsxs)(o.Fragment, {
                               children: [
-                                  (0, o.jsx)(p.Z, {
+                                  (0, o.jsx)(d.Z, {
                                       show: !0,
-                                      className: l()(E.logo)
+                                      className: m.logo
                                   }),
-                                  (0, o.jsx)(f.h, {
+                                  (0, o.jsx)(h.h, {
                                       splash: e,
                                       children: t
                                   })
                               ]
                           })
-                        : (0, o.jsx)(j, { children: t })
+                        : (0, o.jsx)(T, { children: t })
             })
         });
     }
     renderMobile() {
-        return (0, o.jsx)(h.Z, {
+        return (0, o.jsx)(u.Z, {
             component: i.Fragment,
             children: i.Children.map(this.props.children, (e) =>
                 i.cloneElement(e, {
@@ -118,7 +116,7 @@ class x extends i.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes('GameLauncher');
-        return e || s.tq || s.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || c.tq || c.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         var t, n;
@@ -138,4 +136,4 @@ class x extends i.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let L = x;
+let j = Z;

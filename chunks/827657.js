@@ -1,41 +1,39 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => d });
 var r = n(200651),
     l = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    i = n(481060),
-    s = n(994463),
-    c = n(472596),
-    u = n(918192),
-    d = n(388032),
-    C = n(720769);
-function m(e) {
+    o = n(481060),
+    a = n(994463),
+    i = n(472596),
+    s = n(918192),
+    c = n(388032),
+    u = n(976180);
+function d(e) {
     let { searchState: t } = e,
         n = l.useMemo(
             () => ({
-                [c.po.LOADING]: null,
-                [c.po.SUCCESS_STILL_INDEXING]: {
+                [i.po.LOADING]: null,
+                [i.po.SUCCESS_STILL_INDEXING]: {
+                    icon: (0, r.jsx)(a.Z, {}),
+                    message: c.NW.string(c.t.AXPbZm)
+                },
+                [i.po.SUCCESS_EMPTY]: {
                     icon: (0, r.jsx)(s.Z, {}),
-                    message: d.NW.string(d.t.AXPbZm)
+                    message: c.NW.string(c.t['wdyR5+'])
                 },
-                [c.po.SUCCESS_EMPTY]: {
-                    icon: (0, r.jsx)(u.Z, {}),
-                    message: d.NW.string(d.t['wdyR5+'])
-                },
-                [c.po.SUCCESS_FULL]: null
+                [i.po.SUCCESS_FULL]: null
             }),
             []
         )[t];
     return null == n
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(C.noResultsContainer),
+              className: u.noResultsContainer,
               children: [
                   (0, r.jsx)('div', {
-                      className: a()(C.__invalid_noResultsIconContainer),
+                      className: u.__invalid_noResultsIconContainer,
                       children: n.icon
                   }),
-                  (0, r.jsx)(i.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-md/normal',
                       color: 'text-muted',
                       children: n.message

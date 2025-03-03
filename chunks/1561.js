@@ -1,13 +1,11 @@
-n.d(t, { P: () => g }), n(47120);
+n.d(t, { P: () => h }), n(47120);
 var r,
     i = n(200651),
     o = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    l = n(532712),
-    c = n(84735),
-    u = n(981631);
-function d(e, t, n) {
+    a = n(532712),
+    s = n(84735),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +18,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +29,12 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +46,29 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function m(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,62 +77,62 @@ function m(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class g extends (r = o.Component) {
+class h extends (r = o.Component) {
     renderNonInteractive() {
         let e = this.props,
             { tag: t, focusProps: n, innerRef: r, onClick: i, role: a, tabIndex: s, ignoreKeyPress: l } = e,
-            c = h(e, ['tag', 'focusProps', 'innerRef', 'onClick', 'role', 'tabIndex', 'ignoreKeyPress']);
-        return o.createElement(t, f({ ref: this.setRef }, c));
+            c = _(e, ['tag', 'focusProps', 'innerRef', 'onClick', 'role', 'tabIndex', 'ignoreKeyPress']);
+        return o.createElement(t, u({ ref: this.setRef }, c));
     }
     renderInner() {
         let e = this.props,
-            { tag: t, onClick: n, className: r, children: i, focusProps: a, innerRef: l, ignoreKeyPress: c } = e,
-            u = h(e, ['tag', 'onClick', 'className', 'children', 'focusProps', 'innerRef', 'ignoreKeyPress']);
+            { tag: t, onClick: n, className: r, children: i, focusProps: a, innerRef: s, ignoreKeyPress: l } = e,
+            c = _(e, ['tag', 'onClick', 'className', 'children', 'focusProps', 'innerRef', 'ignoreKeyPress']);
         return null == n
             ? o.createElement(
                   t,
-                  f(
+                  u(
                       {
                           ref: this.setRef,
-                          className: s()(r)
+                          className: r
                       },
-                      u
+                      c
                   ),
                   i
               )
             : o.createElement(
                   t,
-                  f(
+                  u(
                       {
                           onClick: n,
                           ref: this.setRef,
                           onKeyPress: this.handleKeyPress,
-                          className: s()(r)
+                          className: r
                       },
-                      u
+                      c
                   ),
                   i
               );
     }
     render() {
-        return this.context ? this.renderNonInteractive() : (0, i.jsx)(c.t, _(f({}, this.props.focusProps), { children: this.renderInner() }));
+        return this.context ? this.renderNonInteractive() : (0, i.jsx)(s.t, f(u({}, this.props.focusProps), { children: this.renderInner() }));
     }
     constructor(...e) {
         super(...e),
-            d(this, 'ref', void 0),
-            d(this, 'handleKeyPress', (e) => {
+            c(this, 'ref', void 0),
+            c(this, 'handleKeyPress', (e) => {
                 let { onClick: t, href: n, onKeyPress: r, ignoreKeyPress: i } = this.props;
-                e.repeat || (i || null == t || null == this.ref || (e.charCode !== u.yXg.SPACE && e.charCode !== u.yXg.ENTER) || (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != r && r(e));
+                e.repeat || (i || null == t || null == this.ref || (e.charCode !== l.yXg.SPACE && e.charCode !== l.yXg.ENTER) || (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != r && r(e));
             }),
-            d(this, 'setRef', (e) => {
+            c(this, 'setRef', (e) => {
                 this.ref = e;
                 let { innerRef: t } = this.props;
                 null != t && ('function' == typeof t ? t(e) : t.hasOwnProperty('current') && (t.current = e));
             });
     }
 }
-d(g, 'contextType', l.g),
-    d(g, 'defaultProps', {
+c(h, 'contextType', a.g),
+    c(h, 'defaultProps', {
         tag: 'div',
         role: 'button',
         tabIndex: 0

@@ -1,63 +1,62 @@
-l.d(t, {
-    Hu: () => X,
-    oA: () => H,
-    ov: () => D,
-    se: () => J
+n.d(t, {
+    Hu: () => J,
+    oA: () => z,
+    se: () => V
 }),
-    l(47120),
-    l(230036),
-    l(653041);
-var r = l(200651),
-    i = l(192379),
-    s = l(120356),
-    n = l.n(s),
-    a = l(209739),
-    c = l.n(a),
-    o = l(268146),
-    d = l(442837),
-    f = l(846519),
-    u = l(481060),
-    h = l(579806),
-    x = l(600164),
-    p = l(152708),
-    j = l(594190),
-    g = l(751571),
-    m = l(569984),
-    v = l(918701),
-    C = l(977156),
-    y = l(28798),
-    w = l(131951),
-    Z = l(449224),
-    N = l(358085),
-    b = l(463727),
-    O = l(855403),
-    S = l(299570),
-    M = l(960861),
-    R = l(59468),
-    I = l(989941),
-    P = l(39540),
-    _ = l(958707),
-    k = l(152165),
-    G = l(133179),
-    E = l(70722),
-    A = l(761274),
-    W = l(46140),
-    B = l(65154),
-    L = l(388032),
-    T = l(242891);
-function F(e) {
+    n(47120),
+    n(230036),
+    n(653041);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    s = n.n(i),
+    o = n(209739),
+    a = n.n(o),
+    c = n(268146),
+    d = n(442837),
+    u = n(846519),
+    f = n(481060),
+    h = n(579806),
+    m = n(600164),
+    p = n(152708),
+    x = n(594190),
+    g = n(751571),
+    _ = n(569984),
+    v = n(918701),
+    j = n(977156),
+    b = n(28798),
+    C = n(131951),
+    S = n(449224),
+    N = n(358085),
+    y = n(463727),
+    Z = n(855403),
+    w = n(299570),
+    O = n(960861),
+    I = n(59468),
+    P = n(989941),
+    T = n(39540),
+    E = n(958707),
+    R = n(152165),
+    W = n(133179),
+    k = n(70722),
+    A = n(761274),
+    M = n(46140),
+    L = n(65154),
+    D = n(388032),
+    G = n(531244);
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var l = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(l);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(l).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
             r.forEach(function (t) {
                 var r;
-                (r = l[t]),
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: r,
@@ -70,114 +69,114 @@ function F(e) {
     }
     return e;
 }
-function D(e) {
-    let t = (0, N.isWindows)() ? (0, I.Z)(j.ZP, Z.Z) : null,
-        l = j.ZP.getRunningGames();
-    return null != t && (0, O.Z)(e.id, t.windowHandle) ? 2 : +(null != l.find((t) => (0, O.Z)(e.id, t.windowHandle)));
+function U(e) {
+    let t = (0, N.isWindows)() ? (0, P.Z)(x.ZP, S.Z) : null,
+        n = x.ZP.getRunningGames();
+    return null != t && (0, Z.Z)(e.id, t.windowHandle) ? 2 : +(null != n.find((t) => (0, Z.Z)(e.id, t.windowHandle)));
 }
-function H(e) {
-    let { selectedSource: t, onChangeSelectedSource: l } = e,
-        { enableGoLiveCaptureCard: s } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        a = w.Z.supports(B.AN.GO_LIVE_HARDWARE),
-        [c, h] = i.useState(null),
-        [Z, N] = i.useState(null),
-        [S, M] = i.useState(null),
-        I = null != S && S.length > 0,
-        [P, k] = i.useState(o.vA.WINDOW),
-        [E, F] = i.useState(!1),
-        H = i.useRef(null),
-        U = i.useRef(new f.Xp()),
-        V = (0, d.e7)([j.ZP], () => j.ZP.getRunningGames()),
-        J = (function (e, t, l) {
-            let r = (0, C.Zy)({ location: W.dr.STREAM_SOURCE_SELECT });
-            return i.useMemo(() => {
-                if (null == l || !r) return null;
-                for (let r of l) {
-                    var i, s;
-                    let l = t.find((e) => (0, O.Z)(r.id, e.windowHandle));
-                    if ((null == l ? void 0 : l.id) == null) continue;
-                    let n = (0, v.lQ)(e, l.id);
-                    if (null != n && (null === (i = n.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null && (null === (s = n.userStatus) || void 0 === s ? void 0 : s.completedAt) == null)
+function z(e) {
+    let { selectedSource: t, onChangeSelectedSource: n } = e,
+        { enableGoLiveCaptureCard: i } = y.Z.useExperiment({ location: 'GoLive_Source_Select' }),
+        o = C.Z.supports(L.AN.GO_LIVE_HARDWARE),
+        [a, h] = l.useState(null),
+        [S, N] = l.useState(null),
+        [w, O] = l.useState(null),
+        P = null != w && w.length > 0,
+        [T, R] = l.useState(c.vA.WINDOW),
+        [k, B] = l.useState(!1),
+        z = l.useRef(null),
+        F = l.useRef(new u.Xp()),
+        H = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
+        V = (function (e, t, n) {
+            let r = (0, j.Zy)({ location: M.dr.STREAM_SOURCE_SELECT });
+            return l.useMemo(() => {
+                if (null == n || !r) return null;
+                for (let r of n) {
+                    var l, i;
+                    let n = t.find((e) => (0, Z.Z)(r.id, e.windowHandle));
+                    if ((null == n ? void 0 : n.id) == null) continue;
+                    let s = (0, v.lQ)(e, n.id);
+                    if (null != s && (null === (l = s.userStatus) || void 0 === l ? void 0 : l.enrolledAt) != null && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.completedAt) == null)
                         return {
                             source: r,
-                            quest: n
+                            quest: s
                         };
                 }
                 return null;
-            }, [r, e, t, l]);
+            }, [r, e, t, n]);
         })(
-            (0, d.e7)([m.Z], () => m.Z.quests),
-            V,
-            Z
+            (0, d.e7)([_.Z], () => _.Z.quests),
+            H,
+            S
         ),
-        X = i.useMemo(() => (null == Z ? null : [...Z].sort((e, t) => ((null == J ? void 0 : J.source.id) === e.id ? -1 : (null == J ? void 0 : J.source.id) === t.id ? 1 : D(t) - D(e)))), [J, Z]);
-    i.useEffect(() => {
-        let e = U.current;
+        J = l.useMemo(() => (null == S ? null : [...S].sort((e, t) => ((null == V ? void 0 : V.source.id) === e.id ? -1 : (null == V ? void 0 : V.source.id) === t.id ? 1 : U(t) - U(e)))), [V, S]);
+    l.useEffect(() => {
+        let e = F.current;
         return (
-            (0, R.t)({
+            (0, I.t)({
                 width: 176,
                 height: 99
             }).then((e) => {
-                let { screenSources: t, windowSources: l, cameraSources: r } = e;
-                h(t), N(l), M(r);
+                let { screenSources: t, windowSources: n, cameraSources: r } = e;
+                h(t), N(n), O(r);
             }),
             e.start(1000, async () => {
                 let {
                     screenSources: e,
                     windowSources: t,
-                    cameraSources: l
-                } = await (0, R.t)({
+                    cameraSources: n
+                } = await (0, I.t)({
                     width: 176,
                     height: 99
                 });
-                h(e), N(t), M(l);
+                h(e), N(t), O(n);
             }),
             () => {
                 e.stop();
             }
         );
     }, []);
-    let K = i.useCallback((e) => {
-            null !== e && ((H.current = e), F(!e.isScrolledToTop()));
+    let X = l.useCallback((e) => {
+            null !== e && ((z.current = e), B(!e.isScrolledToTop()));
         }, []),
-        [Q, q] = i.useState(void 0);
-    i.useEffect(() => {
-        g.Z.hasPermission(A.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(q);
+        [Y, K] = l.useState(void 0);
+    l.useEffect(() => {
+        g.Z.hasPermission(A.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(K);
     }, []);
-    let Y = (function (e) {
+    let q = (function (e) {
         switch (e) {
-            case o.vA.WINDOW:
-                return X;
-            case o.vA.SCREEN:
-                return c;
-            case o.vA.CAMERA:
-                return S;
+            case c.vA.WINDOW:
+                return J;
+            case c.vA.SCREEN:
+                return a;
+            case c.vA.CAMERA:
+                return w;
         }
-    })(P);
-    if (null == Y)
-        return !1 === Q
-            ? (0, r.jsxs)(u.Text, {
-                  className: T.errorMessage,
+    })(T);
+    if (null == q)
+        return !1 === Y
+            ? (0, r.jsxs)(f.Text, {
+                  className: G.errorMessage,
                   variant: 'text-md/normal',
                   color: 'text-danger',
-                  children: [L.NW.string(L.t['kW5h/f']), (0, r.jsx)('br', {}), L.NW.string(L.t['5Jvu1d'])]
+                  children: [D.NW.string(D.t['kW5h/f']), (0, r.jsx)('br', {}), D.NW.string(D.t['5Jvu1d'])]
               })
-            : (0, r.jsx)(x.Z, {
-                  className: T.spinner,
-                  justify: x.Z.Justify.CENTER,
-                  align: x.Z.Align.CENTER,
-                  children: (0, r.jsx)(u.$jN, {})
+            : (0, r.jsx)(m.Z, {
+                  className: G.spinner,
+                  justify: m.Z.Justify.CENTER,
+                  align: m.Z.Align.CENTER,
+                  children: (0, r.jsx)(f.$jN, {})
               });
-    let z = Y.map((e) => {
-        let { id: i } = e,
-            s = (null == t ? void 0 : t.id) === i;
+    let Q = q.map((e) => {
+        let { id: l } = e,
+            i = (null == t ? void 0 : t.id) === l;
         return (0, r.jsx)(
-            u.P3F,
+            f.P3F,
             {
-                className: n()(T.tile, { [T.selected]: s }),
-                onClick: () => l(e, null),
+                className: s()(G.tile, { [G.selected]: i }),
+                onClick: () => n(e, null),
                 children: (0, r.jsx)(
-                    G.Z,
+                    W.Z,
                     {
                         source: e,
                         selectedSource: t
@@ -185,159 +184,159 @@ function H(e) {
                     e.id
                 )
             },
-            i
+            l
         );
     });
-    return (0, r.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(l.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: T.segmentContainer,
+                className: G.segmentContainer,
                 children: [
-                    (0, r.jsx)(_.Z, { separator: E }),
-                    (0, r.jsx)(u.sY7, {
+                    (0, r.jsx)(E.Z, { separator: k }),
+                    (0, r.jsx)(f.sY7, {
                         options: (function () {
                             let e = [
                                 {
-                                    name: L.NW.string(L.t.tHoi7u),
-                                    value: o.vA.WINDOW
+                                    name: D.NW.string(D.t.tHoi7u),
+                                    value: c.vA.WINDOW
                                 },
                                 {
-                                    name: L.NW.string(L.t['/iX8u7']),
-                                    value: o.vA.SCREEN
+                                    name: D.NW.string(D.t['/iX8u7']),
+                                    value: c.vA.SCREEN
                                 }
                             ];
                             return (
-                                s &&
-                                    a &&
-                                    I &&
+                                i &&
+                                    o &&
+                                    P &&
                                     e.push({
-                                        name: L.NW.string(L.t.cWt5Ul),
-                                        value: o.vA.CAMERA
+                                        name: D.NW.string(D.t.cWt5Ul),
+                                        value: c.vA.CAMERA
                                     }),
                                 e
                             );
                         })(),
-                        value: P,
+                        value: T,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return k(t);
+                            return R(t);
                         },
-                        className: T.segmentControl,
-                        optionClassName: T.segmentControlOption
+                        className: G.segmentControl,
+                        optionClassName: G.segmentControlOption
                     })
                 ]
             }),
-            (0, r.jsxs)(u.Den, {
-                ref: K,
-                className: T.sourceScroller,
+            (0, r.jsxs)(f.Den, {
+                ref: X,
+                className: G.sourceScroller,
                 onScroll: function () {
-                    let e = H.current;
-                    null != e && F(!e.isScrolledToTop());
+                    let e = z.current;
+                    null != e && B(!e.isScrolledToTop());
                 },
                 children: [
-                    P === o.vA.WINDOW && null != J && (0, r.jsx)(y.Z, { quest: J.quest }),
+                    T === c.vA.WINDOW && null != V && (0, r.jsx)(b.Z, { quest: V.quest }),
                     (0, r.jsx)(p.Z, {
                         layout: p.Z.Layout.WRAP,
                         columns: 2,
-                        className: T.sourceContainer,
-                        children: z
+                        className: G.sourceContainer,
+                        children: Q
                     })
                 ]
             })
         ]
     });
 }
-function U(e) {
+function F(e) {
     let { onSelect: t } = e,
-        l = i.useCallback(() => {
+        n = l.useCallback(() => {
             t({
                 id: 'prepicked:',
-                name: L.NW.string(L.t['KKcy9/']),
+                name: D.NW.string(D.t['KKcy9/']),
                 url: ''
             });
         }, [t]);
-    return (0, r.jsx)(u.P3F, {
+    return (0, r.jsx)(f.P3F, {
         role: 'radio',
         'aria-checked': !1,
-        onClick: l,
+        onClick: n,
         tabIndex: 0,
-        className: n()(T.nativeSourceSingleTypeButton, T.nativePickerRadioItem),
+        className: s()(G.nativeSourceSingleTypeButton, G.nativePickerRadioItem),
         children: (0, r.jsxs)('div', {
-            className: T.nativeSourceSingleTypeButtonInner,
+            className: G.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, r.jsx)(k.Z, { className: T.nativeSourceSingleTypeImage }),
-                (0, r.jsx)(u.Text, {
+                (0, r.jsx)(R.Z, { className: G.nativeSourceSingleTypeImage }),
+                (0, r.jsx)(f.Text, {
                     variant: 'text-md/medium',
                     color: 'none',
-                    children: L.NW.string(L.t.Yp6h5e)
+                    children: D.NW.string(D.t.Yp6h5e)
+                })
+            ]
+        })
+    });
+}
+function H(e) {
+    let { id: t, name: n, text: i, icon: o, onSelect: a } = e,
+        c = l.useCallback(() => {
+            a({
+                id: 'prepicked:' + t,
+                name: n,
+                url: ''
+            });
+        }, [t, n, a]);
+    return (0, r.jsx)(f.P3F, {
+        role: 'radio',
+        'aria-checked': !1,
+        onClick: c,
+        tabIndex: 0,
+        className: s()(G.nativeSourceTypeButton, G.nativePickerRadioItem),
+        children: (0, r.jsxs)('div', {
+            className: G.nativeSourceTypeButtonInner,
+            children: [
+                (0, r.jsx)(o, { size: 'lg' }),
+                (0, r.jsx)(f.Text, {
+                    variant: 'text-sm/medium',
+                    color: 'none',
+                    children: i
                 })
             ]
         })
     });
 }
 function V(e) {
-    let { id: t, name: l, text: s, icon: a, onSelect: c } = e,
-        o = i.useCallback(() => {
-            c({
-                id: 'prepicked:' + t,
-                name: l,
-                url: ''
-            });
-        }, [t, l, c]);
-    return (0, r.jsx)(u.P3F, {
-        role: 'radio',
-        'aria-checked': !1,
-        onClick: o,
-        tabIndex: 0,
-        className: n()(T.nativeSourceTypeButton, T.nativePickerRadioItem),
-        children: (0, r.jsxs)('div', {
-            className: T.nativeSourceTypeButtonInner,
-            children: [
-                (0, r.jsx)(a, { size: 'lg' }),
-                (0, r.jsx)(u.Text, {
-                    variant: 'text-sm/medium',
-                    color: 'none',
-                    children: s
-                })
-            ]
-        })
-    });
-}
-function J(e) {
     let { onSourceSelect: t } = e,
-        [l, s] = i.useState([]),
-        [a, o] = i.useState({}),
-        d = i.useRef(new f.Xp());
-    i.useEffect(() => {
+        [n, i] = l.useState([]),
+        [o, c] = l.useState({}),
+        d = l.useRef(new u.Xp());
+    l.useEffect(() => {
         let e = d.current,
             t = () => {
-                let e = Object.entries(w.Z.getVideoDevices()).filter((e) => {
-                    let [t, l] = e;
-                    return !l.disabled;
+                let e = Object.entries(C.Z.getVideoDevices()).filter((e) => {
+                    let [t, n] = e;
+                    return !n.disabled;
                 });
-                s(e),
-                    o(
-                        F(
+                i(e),
+                    c(
+                        B(
                             {},
                             e.reduce((e, t) => {
-                                var l, r;
-                                let [i, s] = t;
+                                var n, r;
+                                let [l, i] = t;
                                 return (
-                                    (l = F({}, e)),
-                                    (r = r = { ['camera:' + i]: s.name }),
+                                    (n = B({}, e)),
+                                    (r = r = { ['camera:' + l]: i.name }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(r))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {
-                                              var l = Object.keys(e);
+                                              var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
                                                   var r = Object.getOwnPropertySymbols(e);
-                                                  l.push.apply(l, r);
+                                                  n.push.apply(n, r);
                                               }
-                                              return l;
+                                              return n;
                                           })(Object(r)).forEach(function (e) {
-                                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(r, e));
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                           }),
-                                    l
+                                    n
                                 );
                             }, {})
                         )
@@ -351,97 +350,97 @@ function J(e) {
             }
         );
     }, []);
-    let x = i.useCallback(
+    let m = l.useCallback(
             (e) => {
-                var l;
+                var n;
                 let { value: r } = e;
                 t({
                     id: r,
-                    name: null !== (l = a[r]) && void 0 !== l ? l : '',
+                    name: null !== (n = o[r]) && void 0 !== n ? n : '',
                     url: ''
                 });
             },
-            [t, a]
+            [t, o]
         ),
-        p = (0, N.isMac)() && c().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, E.jR),
-        j = (0, N.isMac)(),
-        [g, m] = i.useState(!1),
-        v = i.useCallback(() => {
-            m(!g);
+        p = (0, N.isMac)() && a().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, k.jR),
+        x = (0, N.isMac)(),
+        [g, _] = l.useState(!1),
+        v = l.useCallback(() => {
+            _(!g);
         }, [g]),
-        C = p
-            ? (0, r.jsx)(U, { onSelect: t })
+        j = p
+            ? (0, r.jsx)(F, { onSelect: t })
             : (0, r.jsxs)('div', {
-                  className: T.nativePickerTypes,
+                  className: G.nativePickerTypes,
                   children: [
-                      (0, r.jsx)(V, {
+                      (0, r.jsx)(H, {
                           onSelect: t,
                           id: 'screen',
-                          name: L.NW.string(L.t.R4wpLC),
-                          text: L.NW.string(L.t.cVUFXV),
-                          icon: u.pzj
+                          name: D.NW.string(D.t.R4wpLC),
+                          text: D.NW.string(D.t.cVUFXV),
+                          icon: f.pzj
                       }),
-                      (0, r.jsx)(V, {
+                      (0, r.jsx)(H, {
                           onSelect: t,
                           id: 'window',
-                          name: L.NW.string(L.t['+SLJCg']),
-                          text: L.NW.string(L.t.dG2A1N),
-                          icon: u.GON
+                          name: D.NW.string(D.t['+SLJCg']),
+                          text: D.NW.string(D.t.dG2A1N),
+                          icon: f.GON
                       }),
-                      j
-                          ? (0, r.jsx)(V, {
+                      x
+                          ? (0, r.jsx)(H, {
                                 onSelect: t,
                                 id: 'app',
-                                name: L.NW.string(L.t.ct7AKS),
-                                text: L.NW.string(L.t['8lQwf3']),
-                                icon: u.gw7
+                                name: D.NW.string(D.t.ct7AKS),
+                                text: D.NW.string(D.t['8lQwf3']),
+                                icon: f.gw7
                             })
                           : null
                   ]
               });
     return (0, r.jsxs)('div', {
-        className: T.nativePickerScroll,
+        className: G.nativePickerScroll,
         children: [
-            (0, r.jsx)(u.Text, {
-                className: T.nativePickerLabel,
+            (0, r.jsx)(f.Text, {
+                className: G.nativePickerLabel,
                 variant: 'text-md/semibold',
                 color: 'interactive-normal',
-                children: L.NW.string(L.t.XyYoFR)
+                children: D.NW.string(D.t.XyYoFR)
             }),
-            C,
-            0 === l.length
+            j,
+            0 === n.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: n()(T.nativePickerCaptureSection, g ? null : T.nativePickerCollapsed),
+                      className: s()(G.nativePickerCaptureSection, g ? null : G.nativePickerCollapsed),
                       children: [
-                          (0, r.jsxs)(u.P3F, {
+                          (0, r.jsxs)(f.P3F, {
                               onClick: v,
-                              className: n()(T.nativePickerLabel),
+                              className: G.nativePickerLabel,
                               children: [
-                                  (0, r.jsx)(u.Text, {
-                                      className: T.nativeCaptureDevicesText,
+                                  (0, r.jsx)(f.Text, {
+                                      className: G.nativeCaptureDevicesText,
                                       variant: 'text-md/semibold',
                                       color: 'interactive-normal',
-                                      children: L.NW.string(L.t.rO0Vi4)
+                                      children: D.NW.string(D.t.rO0Vi4)
                                   }),
-                                  (0, r.jsx)(u.CJ0, {
+                                  (0, r.jsx)(f.CJ0, {
                                       size: 'sm',
                                       color: 'currentColor',
-                                      className: T.captureDevicesToggleIndicator
+                                      className: G.captureDevicesToggleIndicator
                                   })
                               ]
                           }),
-                          (0, r.jsx)(u.FXm, {
-                              className: T.nativePickerCaptureList,
-                              onChange: x,
-                              radioItemClassName: T.nativePickerRadioItem,
-                              options: l.map((e) => {
-                                  let [t, l] = e;
+                          (0, r.jsx)(f.FXm, {
+                              className: G.nativePickerCaptureList,
+                              onChange: m,
+                              radioItemClassName: G.nativePickerRadioItem,
+                              options: n.map((e) => {
+                                  let [t, n] = e;
                                   return {
-                                      name: l.name,
-                                      value: 'camera:' + l.id,
-                                      icon: u.Odl,
-                                      radioItemIconClassName: T.hideRadioCheckbox
+                                      name: n.name,
+                                      value: 'camera:' + n.id,
+                                      icon: f.Odl,
+                                      radioItemIconClassName: G.hideRadioCheckbox
                                   };
                               })
                           })
@@ -450,23 +449,23 @@ function J(e) {
         ]
     });
 }
-function X(e) {
-    let { onSourceSelect: t, onCancel: l, pickerType: s } = e,
-        { lastPickerAction: n, lastPickerError: a } = (0, P.Z)(t, l);
+function J(e) {
+    let { onSourceSelect: t, onCancel: n, pickerType: i } = e,
+        { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
-        i.useEffect(() => {
-            (0, N.isLinux)() || ((0, N.isMac)() && c().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, E.jR)) ? (0, S.T)(s) : (0, S.t)();
-        }, [s]),
-        n === M.Uc.Error
-            ? (0, r.jsx)(u.Text, {
-                  className: T.errorMessage,
+        l.useEffect(() => {
+            (0, N.isLinux)() || ((0, N.isMac)() && a().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, k.jR)) ? (0, w.T)(i) : (0, w.t)();
+        }, [i]),
+        s === O.Uc.Error
+            ? (0, r.jsx)(f.Text, {
+                  className: G.errorMessage,
                   variant: 'text-md/normal',
                   color: 'text-danger',
-                  children: null != a && a.length > 0 ? a : L.NW.string(L.t.CKsXk5)
+                  children: null != o && o.length > 0 ? o : D.NW.string(D.t.CKsXk5)
               })
-            : (0, r.jsx)(k.Z, {
+            : (0, r.jsx)(R.Z, {
                   animated: !0,
-                  className: T.nativePickerGuide
+                  className: G.nativePickerGuide
               })
     );
 }
