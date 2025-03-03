@@ -5,6 +5,5 @@ e.exports = {
     footerContainer: 'footerContainer_c44293',
     tooltipContent: 'tooltipContent_c44293',
     infoWrapper: 'infoWrapper_c44293',
-    activityTimer: 'activityTimer_c44293',
-    activePlayingWrapper: 'activePlayingWrapper_c44293'
+    activityTimer: 'activityTimer_c44293'
 };
