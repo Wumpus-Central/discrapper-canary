@@ -1,58 +1,50 @@
-n.d(t, { Z: () => g }), n(266796);
+n.d(t, { Z: () => h }), n(266796);
 var r = n(200651),
     i = n(192379),
     o = n(793030),
-    a = n(442837),
-    s = n(245004),
-    l = n(713081),
-    c = n(905128),
-    u = n(50101),
-    d = n(535396),
-    f = n(783684),
-    _ = n(388032),
-    p = n(597282),
-    h = n(952567);
-function g(e) {
+    a = n(245004),
+    s = n(713081),
+    l = n(50101),
+    c = n(111360),
+    u = n(535396),
+    d = n(730621),
+    f = n(388032),
+    _ = n(840987),
+    p = n(952567);
+function h(e) {
     var t;
     let { guild: n } = e,
-        g = (0, u.Ek)(n, 'GuildPowerupsMarketingPowerupCards');
+        h = (0, l.Ek)(n, 'GuildPowerupsMarketingPowerupCards');
     i.useEffect(() => {
-        g && (0, l.T7)(n.id);
-    }, [g, n.id]);
-    let m = (0, a.e7)(
-        [c.Z],
-        () => {
-            var e;
-            return null === (e = c.Z.getStateForGuild(n.id)) || void 0 === e ? void 0 : e.catalog;
-        },
-        [n.id]
-    );
-    return g && null != m
+        h && (0, s.T7)(n.id);
+    }, [h, n.id]);
+    let g = (0, c.Z)(n.id);
+    return h && null != g
         ? (0, r.jsxs)('div', {
-              className: p.container,
+              className: _.container,
               children: [
                   (0, r.jsx)(o.X6, {
                       variant: 'heading-xxl/extrabold',
-                      children: _.NW.string(f.Z.p6HUDQ)
+                      children: f.NW.string(d.Z.p6HUDQ)
                   }),
                   (0, r.jsx)(o.xv, {
                       variant: 'text-lg/medium',
-                      children: _.NW.string(f.Z.MYYPa2)
+                      children: f.NW.string(d.Z.MYYPa2)
                   }),
                   (0, r.jsx)('div', {
-                      className: p.powerupsContainer,
+                      className: _.powerupsContainer,
                       children:
-                          null === (t = m[d.U.PERK]) || void 0 === t
+                          null === (t = g[u.U.PERK]) || void 0 === t
                               ? void 0
                               : t.map((e, t) =>
                                     (0, r.jsx)(
-                                        s.Q,
+                                        a.Q,
                                         {
                                             animatedCard: !0,
                                             heading: e.title,
                                             description: e.description,
-                                            imgSrc: h,
-                                            label: _.NW.formatToPlainString(f.Z.QOacIS, { quantity: e.cost }),
+                                            imgSrc: p,
+                                            label: f.NW.formatToPlainString(d.Z.QOacIS, { quantity: e.cost }),
                                             isNewPerk: !0
                                         },
                                         t

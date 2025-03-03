@@ -1,72 +1,74 @@
-t.d(n, { Z: () => v });
-var i = t(200651),
-    r = t(192379),
+t.d(n, { Z: () => b });
+var r = t(200651),
+    i = t(192379),
     o = t(120356),
     a = t.n(o),
     s = t(481060),
-    c = t(413335),
-    l = t(279604),
-    d = t(783684),
-    u = t(388032),
-    x = t(963158);
-function v(e) {
-    let { className: n, guildId: t, powerup: o, onError: v } = e,
-        { onActivate: p, isLoading: _, error: b, onDeactivate: m } = (0, l.Z)(t, o);
+    l = t(413335),
+    c = t(157353),
+    d = t(279604),
+    u = t(730621),
+    x = t(388032),
+    p = t(423839);
+function b(e) {
+    let { className: n, guildId: t, powerup: o, onError: b } = e,
+        { onActivate: v, isLoading: j, error: m, onDeactivate: h } = (0, d.Z)(t, o),
+        _ = (0, c.Z)(t, o);
     return (
-        r.useEffect(() => {
-            null == v || v(b);
-        }, [b, v]),
-        (0, i.jsxs)('div', {
-            className: a()(x.container, n),
+        i.useEffect(() => {
+            null == b || b(m);
+        }, [m, b]),
+        (0, r.jsxs)('div', {
+            className: a()(p.container, n),
             children: [
-                o.active &&
-                    (0, i.jsx)(s.ua7, {
-                        text: u.NW.string(d.Z.TZsu1d),
+                _ &&
+                    (0, r.jsx)(s.ua7, {
+                        text: x.NW.string(u.Z.TZsu1d),
                         children: (e) => {
                             var n, t;
-                            return (0, i.jsx)(
+                            return (0, r.jsx)(
                                 s.zxk,
                                 ((n = (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
-                                            i = Object.keys(t);
+                                            r = Object.keys(t);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (i = i.concat(
+                                            (r = r.concat(
                                                 Object.getOwnPropertySymbols(t).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                                 })
                                             )),
-                                            i.forEach(function (n) {
-                                                var i;
-                                                (i = t[n]),
+                                            r.forEach(function (n) {
+                                                var r;
+                                                (r = t[n]),
                                                     n in e
                                                         ? Object.defineProperty(e, n, {
-                                                              value: i,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[n] = i);
+                                                        : (e[n] = r);
                                             });
                                     }
                                     return e;
                                 })({}, e)),
                                 (t = t =
                                     {
-                                        className: x.secondaryButton,
+                                        className: p.secondaryButton,
                                         color: s.Ttl.PRIMARY,
-                                        'aria-label': u.NW.string(d.Z.TZsu1d),
+                                        'aria-label': x.NW.string(u.Z.TZsu1d),
                                         grow: !1,
-                                        onClick: m,
-                                        children: (0, i.jsx)(c.Z, {})
+                                        onClick: h,
+                                        children: (0, r.jsx)(l.Z, {})
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
                                     : (function (e, n) {
                                           var t = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var i = Object.getOwnPropertySymbols(e);
-                                              t.push.apply(t, i);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              t.push.apply(t, r);
                                           }
                                           return t;
                                       })(Object(t)).forEach(function (e) {
@@ -76,12 +78,12 @@ function v(e) {
                             );
                         }
                     }),
-                (0, i.jsx)(s.zxk, {
-                    className: x.primaryButton,
+                (0, r.jsx)(s.zxk, {
+                    className: p.primaryButton,
                     grow: !0,
-                    onClick: o.active ? () => {} : p,
-                    submitting: !o.active && _,
-                    children: o.active ? u.NW.string(d.Z['g5Ds6+']) : u.NW.string(d.Z.gSxlHR)
+                    onClick: _ ? () => {} : v,
+                    submitting: !_ && j,
+                    children: _ ? x.NW.string(u.Z['g5Ds6+']) : x.NW.string(u.Z.gSxlHR)
                 })
             ]
         })

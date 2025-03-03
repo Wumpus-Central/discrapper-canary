@@ -39,7 +39,8 @@ function a(e) {
         title: e.summary,
         skuId: e.sku.id,
         active: !1,
-        cost: s.boost_price
+        cost: s.boost_price,
+        dependencies: null != e.sku.dependent_sku_id ? [e.sku.dependent_sku_id] : []
     };
     switch (a) {
         case r.U.LEVEL:
