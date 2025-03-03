@@ -3,7 +3,6 @@ e.exports = {
     modalHeader: 'modalHeader__3297f',
     modalTop: 'modalTop__3297f',
     iconFrame: 'iconFrame__3297f',
-    icon: 'icon__3297f',
     closeBtn: 'closeBtn__3297f',
     modalContent: 'modalContent__3297f',
     upperBodyText: 'upperBodyText__3297f',
