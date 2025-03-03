@@ -1,40 +1,41 @@
-n.d(t, { Z: () => u }), n(266796);
+n.d(t, { Z: () => m }), n(266796);
 var r = n(200651),
     i = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(434404),
-    o = n(999382),
-    c = n(388032),
-    d = n(541946);
-function u(e) {
+    s = n(345074),
+    a = n(442837),
+    l = n(481060),
+    o = n(434404),
+    c = n(999382),
+    d = n(388032),
+    u = n(659116);
+function m(e) {
     let { profile: t, canManageGuild: n } = e,
-        u = t.id,
-        m = i.useCallback(
+        m = t.id,
+        g = i.useCallback(
             (e) => {
-                l.Z.updateGuild({ description: e }), l.Z.updateGuildProfile(u, { description: e });
+                o.Z.updateGuild({ description: e }), o.Z.updateGuildProfile(m, { description: e });
             },
-            [u]
+            [m]
         ),
-        p = (0, s.e7)([o.Z], () => o.Z.getError('description'));
-    return (0, r.jsxs)(a.hjN, {
-        className: d.section,
+        p = (0, a.e7)([c.Z], () => c.Z.getError('description'));
+    return (0, r.jsxs)(l.hjN, {
+        className: u.section,
         children: [
             (0, r.jsxs)('div', {
-                className: d.sectionHeader,
+                className: u.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: c.NW.string(c.t.Z27SCQ) }),
-                    (0, r.jsx)(a.R94, {
-                        type: a.geA.DESCRIPTION,
-                        children: c.NW.string(c.t.pw0MIi)
+                    (0, r.jsx)(l.vwX, { children: d.NW.string(d.t.Z27SCQ) }),
+                    (0, r.jsx)(l.R94, {
+                        type: l.geA.DESCRIPTION,
+                        children: d.NW.string(d.t.pw0MIi)
                     })
                 ]
             }),
-            (0, r.jsx)(a.Kx8, {
+            (0, r.jsx)(l.Kx8, {
                 value: t.description,
-                placeholder: c.NW.string(c.t.Nvfows),
-                onChange: m,
-                maxLength: 120,
+                placeholder: d.NW.string(d.t.Nvfows),
+                onChange: g,
+                maxLength: s.Us,
                 disabled: !n,
                 error: p
             })
