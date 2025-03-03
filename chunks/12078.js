@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(301563);
+n.d(t, { Z: () => N }), n(301563);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -14,9 +14,8 @@ var r = n(200651),
     h = n(981631),
     f = n(570911),
     b = n(388032),
-    x = n(39205),
-    j = n(541946);
-function N(e) {
+    x = n(832306);
+function j(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: s, canManageGuild: l } = e,
         c = null != n.customBanner,
         u = i.useMemo(() => {
@@ -70,110 +69,98 @@ function N(e) {
         })
     });
 }
-function v(e) {
+function N(e) {
     var t;
     let { profile: n, onCustomBannerChange: s, canManageGuild: d } = e,
         m = (0, l.e7)([u.Z], () => u.Z.getGuild(n.id)),
         g = null !== (t = null == m ? void 0 : m.hasFeature(h.oNc.DISCOVERABLE)) && void 0 !== t && t,
-        v = n.id,
-        _ = i.useCallback(
+        N = n.id,
+        v = i.useCallback(
             (e, t) => () => {
-                p.Z.updateGuildProfile(v, {
+                p.Z.updateGuildProfile(N, {
                     brandColorPrimary: t,
                     customBanner: null
                 });
             },
-            [v]
+            [N]
         ),
-        O = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
-    return (0, r.jsxs)(o.hjN, {
-        className: j.section,
-        children: [
-            (0, r.jsxs)('div', {
-                className: j.sectionHeader,
-                children: [
-                    (0, r.jsx)(o.vwX, { children: b.NW.string(b.t.BSVog4) }),
-                    (0, r.jsx)(o.R94, {
-                        type: o.geA.DESCRIPTION,
-                        children: b.NW.string(b.t['93S9Gx'])
-                    })
-                ]
-            }),
-            (0, r.jsxs)('div', {
-                className: x.grid,
-                children: [
-                    f.cb.map((e) => {
-                        let { name: t, color: n } = e;
-                        return (0, r.jsx)(
-                            o.ua7,
-                            {
-                                text: t,
-                                children: (e) => {
-                                    var i, s;
-                                    return (0, r.jsx)(
-                                        o.P3F,
-                                        ((i = (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                    r = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
-                                                    (r = r.concat(
-                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
-                                                    )),
-                                                    r.forEach(function (t) {
-                                                        var r;
-                                                        (r = n[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: r,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0
-                                                                  })
-                                                                : (e[t] = r);
-                                                    });
-                                            }
-                                            return e;
-                                        })({}, e)),
-                                        (s = s =
-                                            {
-                                                'aria-disabled': !d,
-                                                tabIndex: d ? 0 : -1,
-                                                'aria-label': t,
-                                                onClick: d ? _(t, n) : void 0,
-                                                style: { background: (0, c.d)(n) },
-                                                className: a()(x.itemContainer, { [x.disabled]: !d }),
-                                                children: (0, r.jsx)('div', { className: a()({ [x.itemSelected]: O(n) }) })
-                                            }),
-                                        Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                                            : (function (e, t) {
-                                                  var n = Object.keys(e);
-                                                  if (Object.getOwnPropertySymbols) {
-                                                      var r = Object.getOwnPropertySymbols(e);
-                                                      n.push.apply(n, r);
-                                                  }
-                                                  return n;
-                                              })(Object(s)).forEach(function (e) {
-                                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                                              }),
-                                        i)
-                                    );
-                                }
-                            },
-                            t
-                        );
-                    }),
-                    (0, r.jsx)(N, {
-                        canManageGuild: d,
-                        isDiscoverable: g,
-                        profile: n,
-                        onCustomBannerChange: s
-                    })
-                ]
-            })
-        ]
+        _ = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
+    return (0, r.jsx)(o.hjN, {
+        title: b.NW.string(b.t.BSVog4),
+        children: (0, r.jsxs)('div', {
+            className: x.grid,
+            children: [
+                f.cb.map((e) => {
+                    let { name: t, color: n } = e;
+                    return (0, r.jsx)(
+                        o.ua7,
+                        {
+                            text: t,
+                            children: (e) => {
+                                var i, s;
+                                return (0, r.jsx)(
+                                    o.P3F,
+                                    ((i = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({}, e)),
+                                    (s = s =
+                                        {
+                                            'aria-disabled': !d,
+                                            tabIndex: d ? 0 : -1,
+                                            'aria-label': t,
+                                            onClick: d ? v(t, n) : void 0,
+                                            style: { background: (0, c.d)(n) },
+                                            className: a()(x.itemContainer, { [x.disabled]: !d }),
+                                            children: (0, r.jsx)('div', { className: a()({ [x.itemSelected]: _(n) }) })
+                                        }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(s)).forEach(function (e) {
+                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                                          }),
+                                    i)
+                                );
+                            }
+                        },
+                        t
+                    );
+                }),
+                (0, r.jsx)(j, {
+                    canManageGuild: d,
+                    isDiscoverable: g,
+                    profile: n,
+                    onCustomBannerChange: s
+                })
+            ]
+        })
     });
 }

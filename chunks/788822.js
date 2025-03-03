@@ -1,4 +1,4 @@
-r.d(t, { q: () => m });
+r.d(t, { q: () => f });
 var n = r(200651);
 r(192379);
 var l = r(120356),
@@ -6,55 +6,45 @@ var l = r(120356),
     o = r(622535),
     a = r(481060),
     s = r(597688),
-    c = r(884697),
-    d = r(297651),
-    u = r(619899),
-    p = r(281598),
-    f = r(215023),
-    b = r(388032),
-    h = r(39532);
-let m = (e) => {
-    var t, r, l, m, C, g, v;
-    let x,
-        { category: j, subblock: _, badgeText: y, handleTransition: O } = e;
-    null != _ && (x = null === (r = s.Z.getCategoryByStoreListingId(null == _ ? void 0 : _.categoryStoreListingId)) || void 0 === r ? void 0 : r.skuId);
-    let k = null !== (l = null != x ? x : null == j ? void 0 : j.skuId) && void 0 !== l ? l : '',
-        { handleCardVisibilityChange: P } = (0, d.E)(k, 'home', 'marketing featured block'),
-        { getPreviewableAssetSrc: S } = (0, u.N)(),
-        w =
-            null !== (g = null !== (m = null === (t = S(p.Fr.FEATURED_BLOCK)) || void 0 === t ? void 0 : t.src) && void 0 !== m ? m : null == _ ? void 0 : _.bannerUrl) && void 0 !== g
-                ? g
-                : (0, c.uV)(null !== (C = null == j ? void 0 : j.featuredBlock) && void 0 !== C ? C : '', {
-                      size: f.J0,
-                      format: 'png'
-                  });
+    c = r(297651),
+    u = r(794324),
+    d = r(388032),
+    p = r(39532);
+let f = (e) => {
+    var t, r, l;
+    let f,
+        { category: b, subblock: h, badgeText: m, handleTransition: C } = e;
+    null != h && (f = null === (t = s.Z.getCategoryByStoreListingId(null == h ? void 0 : h.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
+    let g = null !== (r = null != f ? f : null == b ? void 0 : b.skuId) && void 0 !== r ? r : '',
+        { handleCardVisibilityChange: v } = (0, c.E)(g, 'home', 'marketing featured block'),
+        { featuredBlockBanner: x } = (0, u.Y)(b, h);
     return (0, n.jsx)(o.$, {
-        onChange: P,
+        onChange: v,
         threshold: 0,
         children: (0, n.jsxs)(a.P3F, {
-            className: i()(h.featuredBlock),
-            style: { backgroundImage: 'url('.concat(w, ')') },
-            onClick: () => O('shop marketing tile', k),
+            className: i()(p.featuredBlock),
+            style: { backgroundImage: 'url('.concat(x, ')') },
+            onClick: () => C('shop marketing tile', g),
             children: [
-                null != y &&
+                null != m &&
                     (0, n.jsx)(a.IGR, {
                         disableColor: !0,
-                        text: y,
-                        className: h.featuredBlockBadge
+                        text: m,
+                        className: p.featuredBlockBadge
                     }),
-                (null == _ ? void 0 : _.bodyText) != null &&
+                (null == h ? void 0 : h.bodyText) != null &&
                     (0, n.jsx)(a.X6q, {
                         lineClamp: 4,
-                        className: h.featuredBlockBodyText,
-                        style: { color: null !== (v = _.bannerTextColor) && void 0 !== v ? v : 'white' },
+                        className: p.featuredBlockBodyText,
+                        style: { color: null !== (l = h.bannerTextColor) && void 0 !== l ? l : 'white' },
                         variant: 'heading-lg/semibold',
-                        children: _.bodyText
+                        children: h.bodyText
                     }),
                 (0, n.jsx)(a.zxk, {
-                    className: h.featuredBlockButton,
+                    className: p.featuredBlockButton,
                     color: a.Ttl.WHITE,
                     onClick: () => {},
-                    children: b.NW.string(b.t.jVcuVV)
+                    children: d.NW.string(d.t.jVcuVV)
                 })
             ]
         })

@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(434404),
     h = n(185923),
     f = n(388032),
-    b = n(565208),
-    x = n(541946);
+    b = n(501968),
+    x = n(659116);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,6 +74,7 @@ function v(e) {
                   })
                 : (0, r.jsx)(m.Z, {
                       className: b.emojiWrapper,
+                      buttonClassName: b.removeButton,
                       look: c.Z.Looks.FILLED,
                       hasSetEmoji: null != e && null != e.name,
                       onClick: x,

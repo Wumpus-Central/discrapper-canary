@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => E }), n(266796);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
@@ -22,7 +22,7 @@ var r = n(200651),
     O = n(474024),
     y = n(981631),
     C = n(388032),
-    I = n(850606);
+    I = n(340616);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, s.e7)([h.Z], () => h.Z.getGuild(), []),
@@ -68,10 +68,20 @@ let E = function () {
                           (0, r.jsxs)('div', {
                               className: I.leftColumn,
                               children: [
-                                  (0, r.jsx)(a.X6q, {
-                                      variant: 'heading-lg/semibold',
-                                      color: 'header-primary',
-                                      children: C.NW.string(C.t.txdaxc)
+                                  (0, r.jsxs)('div', {
+                                      children: [
+                                          (0, r.jsx)(a.X6q, {
+                                              variant: 'heading-lg/semibold',
+                                              color: 'header-primary',
+                                              children: C.NW.string(C.t.txdaxc)
+                                          }),
+                                          (0, r.jsx)(a.Text, {
+                                              variant: 'text-sm/medium',
+                                              color: 'header-secondary',
+                                              className: I.description,
+                                              children: C.NW.string(C.t['5PGZWV'])
+                                          })
+                                      ]
                                   }),
                                   (0, r.jsx)(N.Z, {
                                       profile: T,

@@ -1,69 +1,66 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(192379),
-    s = n(580685),
-    a = n(442837),
-    l = n(481060),
-    o = n(314852),
-    c = n(405222),
-    d = n(323220),
-    u = n(434404),
-    m = n(981631),
-    p = n(388032),
-    g = n(985775);
-function h(e) {
+    s = n(120356),
+    a = n.n(s),
+    l = n(580685),
+    o = n(442837),
+    c = n(481060),
+    d = n(314852),
+    u = n(405222),
+    m = n(323220),
+    g = n(434404),
+    p = n(981631),
+    h = n(388032),
+    f = n(44713);
+function b(e) {
     var t;
-    let { profile: n } = e,
-        h = n.id,
-        f = s.Y.VISIBLE.has(n.visibility),
-        b = (0, a.e7)(
-            [o.Z],
+    let { profile: n, canManageGuild: s } = e,
+        b = n.id,
+        x = l.Y.VISIBLE.has(n.visibility),
+        j = (0, o.e7)(
+            [d.Z],
             () => {
                 var e;
-                return (null === (e = o.Z.getProfile(h)) || void 0 === e ? void 0 : e.visibility) === c.k.PUBLIC_WITH_RECRUITMENT;
+                return (null === (e = d.Z.getProfile(b)) || void 0 === e ? void 0 : e.visibility) === u.k.PUBLIC_WITH_RECRUITMENT;
             },
-            [h]
+            [b]
         ),
-        x = i.useCallback(() => {
-            f ? u.Z.updateGuildProfile(h, { visibility: c.k.RESTRICTED }) : u.Z.updateGuildProfile(h, { visibility: b ? c.k.PUBLIC_WITH_RECRUITMENT : c.k.PUBLIC });
-        }, [h, b, f]),
-        j = i.useCallback(() => {
-            u.Z.setSection(m.pNK.ACCESS, m.KsC.ACCESS_DISCOVERABLE);
+        N = i.useCallback(() => {
+            x ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: j ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
+        }, [b, j, x]),
+        v = i.useCallback(() => {
+            g.Z.setSection(p.pNK.ACCESS, p.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        N = null === (t = n.features) || void 0 === t ? void 0 : t.includes(m.oNc.DISCOVERABLE);
-    return (0, r.jsxs)(l.hjN, {
-        className: g.twoColumnContainer,
+        _ = null === (t = n.features) || void 0 === t ? void 0 : t.includes(p.oNc.DISCOVERABLE);
+    return (0, r.jsxs)(c.hjN, {
+        className: f.twoColumnContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: g.column,
+                className: f.column,
                 children: [
-                    (0, r.jsx)(l.j7V, {
-                        onChange: x,
-                        value: !f,
+                    (0, r.jsx)(c.j7V, {
+                        onChange: N,
+                        value: !x,
                         hideBorder: !0,
-                        disabled: N,
-                        children: p.NW.string(p.t.fjHWen)
+                        disabled: _ || !s,
+                        children: h.NW.string(h.t.fjHWen)
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: p.NW.string(p.t.J1YOV1)
+                        children: h.NW.string(h.t.J1YOV1)
                     }),
-                    (0, r.jsx)(l.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-secondary',
-                        children: p.NW.string(p.t.YtCViY)
-                    }),
-                    N &&
-                        (0, r.jsx)(l.Text, {
+                    _ &&
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: p.NW.format(p.t.R8jY9v, {
+                            children: h.NW.format(h.t.R8jY9v, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
-                                        l.eee,
+                                        c.eee,
                                         {
-                                            onClick: j,
+                                            onClick: v,
                                             children: e
                                         },
                                         t
@@ -73,9 +70,9 @@ function h(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: g.column,
-                children: (0, r.jsx)(d.Z, {
-                    guildId: h,
+                className: a()(f.column, { [f.profileViewDisabled]: x }),
+                children: (0, r.jsx)(m.Z, {
+                    guildId: b,
                     name: n.name
                 })
             })
