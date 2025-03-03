@@ -19,10 +19,10 @@ var i = n(200651),
     A = n(197712),
     w = n(511004),
     O = n(486324),
-    D = n(981631),
-    y = n(678916),
+    y = n(981631),
+    D = n(678916),
     b = n(388032),
-    N = n(488629);
+    N = n(126847);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,14 +88,14 @@ function v(e) {
             height: O.f,
             width: O.L0
         }))
-        .with(O.pC.VIDEO_BACKGROUND, () => y.HE)
+        .with(O.pC.VIDEO_BACKGROUND, () => D.HE)
         .with(O.pC.AVATAR, () => ({
-            height: D.dGM,
-            width: D.dGM
+            height: y.dGM,
+            width: y.dGM
         }))
         .with(O.pC.AVATAR_DECORATION, () => ({
-            height: D.dGM,
-            width: D.dGM
+            height: y.dGM,
+            width: y.dGM
         }))
         .with(O.pC.GUILD_BANNER, () => ({
             height: O._T,
@@ -198,7 +198,7 @@ function G(e, t) {
     }
 }
 function S(e) {
-    let { file: t, imageUri: n, originalAsset: a, transitionState: l, onCrop: R, onClose: y, uploadType: M = O.pC.AVATAR, showUpsellHeader: S = !1, analyticsPage: j } = e,
+    let { file: t, imageUri: n, originalAsset: a, transitionState: l, onCrop: R, onClose: D, uploadType: M = O.pC.AVATAR, showUpsellHeader: S = !1, analyticsPage: j } = e,
         B = r.useRef(x),
         P = r.useRef(null),
         z = r.useRef(null),
@@ -215,12 +215,13 @@ function S(e) {
         r.useEffect(() => {
             en &&
                 S &&
-                C.default.track(D.rMx.OPEN_MODAL, {
-                    type: D.jXE.CROP_GIF_MODAL,
+                C.default.track(y.rMx.OPEN_MODAL, {
+                    type: y.jXE.CROP_GIF_MODAL,
                     location: { page: j },
-                    location_stack: ee
+                    location_stack: ee,
+                    upload_type: M
                 });
-        }, [S, j, en, ee]);
+        }, [S, j, en, ee, M]);
     let ei = r.useCallback(
             (e, t, n, i) => {
                 (B.current = (0, A.U$)(e, t, n)), null != P.current && (P.current.style.transform = 'translate3d('.concat(B.current.x, 'px, ').concat(B.current.y, 'px, 0) rotate(').concat(i, 'deg)'));
@@ -400,22 +401,22 @@ function S(e) {
                     return n ? (t ? f.q.EDITED_ARCHIVED_ASSET : f.q.ARCHIVED_ASSET) : f.q.NEW_ASSET;
                 })({
                     hasImageEdits: Y,
-                    hasOriginalAsset: null == a
+                    hasOriginalAsset: null != a
                 }),
                 imageUri: e,
                 file: t,
                 originalAsset: a
             }),
                 $(!1),
-                y();
-        }, [H, t, Y, W, en, y, R, a, M]),
+                D();
+        }, [H, t, Y, W, en, D, R, a, M]),
         ep = r.useCallback(() => {
             if (null != z.current) {
                 z.current(), (z.current = null), $(!1);
                 return;
             }
-            y();
-        }, [y]);
+            D();
+        }, [D]);
     r.useEffect(
         () => (
             window.addEventListener('mouseup', es),
@@ -450,7 +451,7 @@ function S(e) {
                     (0, i.jsx)(h.Z, {
                         type: M,
                         analyticsPage: j,
-                        analyticsSection: D.jXE.CROP_GIF_MODAL,
+                        analyticsSection: y.jXE.CROP_GIF_MODAL,
                         isGIF: en,
                         banner: n
                     }),
@@ -463,7 +464,7 @@ function S(e) {
                             children: b.NW.string(b.t.DxAYCA)
                         }),
                         (0, i.jsx)(u.olH, {
-                            onClick: y,
+                            onClick: D,
                             className: N.modalCloseButton
                         })
                     ]

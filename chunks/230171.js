@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => j,
-    U: () => v.Un
+    O: () => E,
+    U: () => _.Un
 }),
     n(653041),
     n(571269),
@@ -12,140 +12,99 @@ var r = n(200651),
     a = n(373793),
     o = n(442837),
     l = n(481060),
-    s = n(361213),
-    c = n(778569),
-    d = n(100527),
-    u = n(906732),
-    p = n(783097),
-    m = n(606192),
-    f = n(812236),
-    h = n(706454),
-    g = n(768581),
-    _ = n(135431),
-    b = n(758199),
-    v = n(914498),
-    y = n(172109),
-    x = n(208444),
-    O = n(388032),
-    E = n(390101);
-function j(e) {
+    s = n(100527),
+    c = n(906732),
+    d = n(783097),
+    u = n(606192),
+    p = n(812236),
+    m = n(706454),
+    f = n(768581),
+    h = n(135431),
+    g = n(758199),
+    _ = n(914498),
+    b = n(172109),
+    v = n(880251),
+    y = n(208444),
+    x = n(388032),
+    O = n(390101);
+function E(e) {
     let { app: t, embedUrl: n, linkType: a, activityCustomId: o, activityReferrerId: l } = e,
-        { name: h, bot: _ } = (t = (0, y.O)(t)),
-        E = null == _ ? void 0 : _.id,
-        j = (0, p.ye)(t),
-        I = g.ZP.getApplicationIconURL({
+        { name: m, bot: h } = (t = (0, b.O)(t)),
+        O = null == h ? void 0 : h.id,
+        E = (0, d.ye)(t),
+        C = f.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
-            bot: _
+            bot: h
         }),
-        { url: S } = (0, c.Z)({
-            applicationId: j ? t.id : void 0,
-            size: 600,
-            names: ['embedded_cover']
-        }),
-        {
-            staticBannerSrc: T,
-            videoBannerSrc: P,
-            bannerAspectRatio: A
-        } = i.useMemo(() => {
-            let e, n;
-            let r = b.u.BOT;
-            if (null != _) {
-                let { banner: t } = _;
-                (e = (0, g.aN)({
-                    id: _.id,
-                    banner: t,
-                    size: 512,
-                    canAnimate: !1
-                })),
-                    (0, g.xR)(t) &&
-                        null == S &&
-                        (n = (0, g.aN)({
-                            id: _.id,
-                            banner: t,
-                            size: 512,
-                            canAnimate: !0
-                        }));
-            }
-            if (j) {
-                let i = (0, p.yJ)(t);
-                null != S && ((e = S), (r = b.u.ACTIVITY));
-                let a = null == i ? void 0 : i.activity_preview_video_asset_id;
-                null != a && ((n = (0, s.Z)(t.id, a)), (r = b.u.ACTIVITY));
-            }
-            return {
-                staticBannerSrc: e,
-                videoBannerSrc: n,
-                bannerAspectRatio: r
-            };
-        }, [S, _, j, t]),
-        { analyticsLocations: w } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
-        Z = i.useCallback(
+        { staticBannerSrc: I, videoBannerSrc: S, bannerAspectRatio: T } = (0, v.E)(t),
+        { analyticsLocations: P } = (0, c.ZP)(s.Z.APP_MESSAGE_EMBED),
+        A = i.useCallback(
             (e) => {
-                (0, v.KX)(t.id, a, e, l, o);
+                (0, _.KX)(t.id, a, e, l, o);
             },
             [o, l, t.id, a]
         ),
-        k = i.useCallback(() => {
-            (0, v.GF)(t.id, a, l, o);
+        w = i.useCallback(() => {
+            (0, _.GF)(t.id, a, l, o);
         }, [o, l, t.id, a]),
-        R = i.useCallback(() => {
-            (0, v.Yu)(t.id, a);
+        Z = i.useCallback(() => {
+            (0, _.Yu)(t.id, a);
         }, [t.id, a]),
-        L = (0, f.ms)({
+        k = (0, p.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
-            botUserId: null == _ ? void 0 : _.id
+            botUserId: null == h ? void 0 : h.id
         }),
-        D = null != E && j && L,
-        M = (0, x.z)(t, Z),
-        W = i.useMemo(() => {
+        R = null != O && E && k,
+        L = (0, y.z)(t, A),
+        D = i.useMemo(() => {
             let e = [];
             return (
-                D &&
+                R &&
                     e.push({
-                        label: O.NW.string(O.t.RscU7O),
+                        label: x.NW.string(x.t.RscU7O),
                         onClick() {
-                            (0, m.W)({
+                            (0, u.W)({
                                 appId: t.id,
-                                botId: E,
-                                analyticsLocations: w,
+                                botId: O,
+                                analyticsLocations: P,
                                 customId: o,
                                 referrerId: l
                             }),
-                                Z(v.j_.PLAY);
+                                A(_.j_.PLAY);
                         }
                     }),
-                null != M && e.push(M),
+                null != L && e.push(L),
                 e
             );
-        }, [o, l, w, t.id, E, D, Z, M]),
-        F = j ? (0, r.jsx)(C, { app: t }) : (0, r.jsx)(N, { app: t });
-    return (0, r.jsx)(b.W, {
-        title: h,
-        staticBannerSrc: T,
-        videoBannerSrc: P,
-        bannerAspectRatio: A,
-        iconSrc: I,
+        }, [o, l, P, t.id, O, R, A, L]),
+        M = E ? (0, r.jsx)(N, { app: t }) : (0, r.jsx)(j, { app: t });
+    return (0, r.jsx)(g.W, {
+        title: m,
+        staticBannerSrc: I,
+        videoBannerSrc: S,
+        bannerAspectRatio: T,
+        iconSrc: C,
         embedUrl: n,
-        info: F,
-        actions: W,
-        onView: k,
-        onLinkCopied: R
+        info: M,
+        actions: D,
+        onView: w,
+        onLinkCopied: Z
     });
 }
-function N(e) {
+function j(e) {
     var t, n, s;
     let { app: c } = e,
         d =
-            (0, _.Eb)({
+            (0, h.Eb)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig
             }) &&
             null != c.integrationTypesConfig &&
             a.Y.GUILD_INSTALL in c.integrationTypesConfig,
-        u = (0, o.e7)([h.default], () => h.default.locale, []),
+        u = (0, o.e7)([m.default], () => m.default.locale, []),
         p = i.useMemo(() => {
             var e, t;
             if (!d) return null;
@@ -154,22 +113,22 @@ function N(e) {
                     compactDisplay: 'short'
                 }),
                 r = null !== (t = null === (e = c.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 === r ? null : O.NW.format(O.t['6IW6Wl'], { guildCount: n.format(r) });
+            return 0 === r ? null : x.NW.format(x.t['6IW6Wl'], { guildCount: n.format(r) });
         }, [null === (t = c.directoryEntry) || void 0 === t ? void 0 : t.guild_count, d, u]),
-        m = null === (s = c.categories) || void 0 === s ? void 0 : null === (n = s.at(0)) || void 0 === n ? void 0 : n.name;
+        f = null === (s = c.categories) || void 0 === s ? void 0 : null === (n = s.at(0)) || void 0 === n ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != m &&
+            null != f &&
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: E.description,
+                    className: O.description,
                     color: 'none',
-                    children: m
+                    children: f
                 }),
             null != p &&
                 (0, r.jsxs)(l.Text, {
                     variant: 'text-xs/normal',
-                    className: E.tagline,
+                    className: O.tagline,
                     color: 'none',
                     lineClamp: 1,
                     children: [
@@ -183,21 +142,21 @@ function N(e) {
         ]
     });
 }
-function C(e) {
+function N(e) {
     let { app: t } = e,
-        n = [null != t.maxParticipants ? O.NW.format(O.t.z8EAJS, { count: t.maxParticipants }) : O.NW.string(O.t.RjceQU), ...t.tags];
+        n = [null != t.maxParticipants ? x.NW.format(x.t.z8EAJS, { count: t.maxParticipants }) : x.NW.string(x.t.RjceQU), ...t.tags];
     return (
         n.length > 0 &&
         (0, r.jsx)(l.Text, {
             variant: 'text-xs/medium',
-            className: E.description,
+            className: O.description,
             color: 'none',
             lineClamp: 1,
             children: n.map((e, t) =>
                 (0, r.jsx)(
                     'span',
                     {
-                        className: E.tag,
+                        className: O.tag,
                         children: e
                     },
                     t
