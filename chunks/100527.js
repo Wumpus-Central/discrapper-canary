@@ -401,6 +401,8 @@ var r = (function (e) {
         (e.INCOMING_CALL_MODAL = 'incoming call modal'),
         (e.VOICE_CHANNEL_HEADER = 'voice channel header'),
         (e.ACTIVITY_PANEL = 'activity panel'),
+        (e.AUDIENCE_TILE = 'audience tile'),
+        (e.STAGE_TILE = 'stage tile'),
         e
     );
 })(r || {});

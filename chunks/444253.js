@@ -15,17 +15,17 @@ var i = n(442837),
     m = n(354459),
     g = n(388032);
 function b(e) {
-    let { channelId: t, onClose: n, appContext: b, exitFullScreen: _, onSelect: C } = e,
-        v = (0, i.e7)([s.Z], () => s.Z.getSelectedParticipant(t)),
-        y = (null == v ? void 0 : v.type) === m.fO.STREAM ? v.stream : null,
-        x = (0, i.e7)([o.Z], () => ((null == v ? void 0 : v.type) === m.fO.ACTIVITY ? o.Z.getApplication(v.applicationId) : void 0)),
-        j = (0, c.Z)(t),
-        O = (0, d.Z)(),
+    let { channelId: t, onClose: n, appContext: b, exitFullScreen: _, onSelect: C, onInteraction: v } = e,
+        y = (0, i.e7)([s.Z], () => s.Z.getSelectedParticipant(t)),
+        x = (null == y ? void 0 : y.type) === m.fO.STREAM ? y.stream : null,
+        j = (0, i.e7)([o.Z], () => ((null == y ? void 0 : y.type) === m.fO.ACTIVITY ? o.Z.getApplication(y.applicationId) : void 0)),
+        O = (0, c.Z)(t),
+        E = (0, d.Z)(),
         N = (0, u.Z)(t),
-        E = (0, f.Z)(t),
-        P = (0, p.Z)(x, t),
-        I = (0, a.Z)({
-            id: null == x ? void 0 : x.id,
+        I = (0, f.Z)(t),
+        P = (0, p.Z)(j, t),
+        S = (0, a.Z)({
+            id: null == j ? void 0 : j.id,
             label: g.NW.string(g.t['+NP/b2'])
         });
     return (0, r.jsxs)(l.v2r, {
@@ -33,6 +33,7 @@ function b(e) {
         onClose: n,
         'aria-label': g.NW.string(g.t.pkYeAw),
         onSelect: C,
-        children: [j, O, N, E, (0, h.Z)(y, b, _), P, (0, r.jsx)(l.kSQ, { children: I })]
+        onInteraction: v,
+        children: [O, E, N, I, (0, h.Z)(x, b, _), P, (0, r.jsx)(l.kSQ, { children: S })]
     });
 }
