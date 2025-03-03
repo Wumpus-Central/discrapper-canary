@@ -1,37 +1,33 @@
-n.d(t, { f: () => f }), n(47120);
+n.d(t, { f: () => p }), n(47120), n(789020);
 var r = n(602715),
-    i = n(812206),
-    l = n(870822),
-    o = n(258732),
-    a = n(314897),
-    s = n(630388),
-    c = n(786761),
-    u = n(3148),
-    d = n(981631);
-let p = new Map();
-function h(e, t) {
-    let n = (0, u.ZP)({
+    i = n(258732),
+    l = n(314897),
+    o = n(630388),
+    a = n(786761),
+    s = n(3148),
+    c = n(981631);
+let u = new Map();
+function d(e, t) {
+    let n = (0, s.ZP)({
             channelId: t,
-            type: d.uaV.IN_GAME_MESSAGE_NUX,
+            type: c.uaV.IN_GAME_MESSAGE_NUX,
             content: '',
             author: e.author,
-            flags: d.iLy.EPHEMERAL,
-            state: d.yb.SENT
+            flags: c.iLy.EPHEMERAL,
+            state: c.yb.SENT
         }),
-        r = (0, c.e5)(n);
+        r = (0, a.e5)(n);
     return (r.applicationId = e.applicationId), (r.timestamp = e.timestamp), r;
 }
-function f(e, t) {
+function p(e, t) {
     let n = (function (e, t) {
-        var n, c;
-        if (p.get(t.id) === e.id) return h(e, t.id);
-        if (null == e.applicationId || !t.isDM() || e.author.id === a.default.getId() || (0, s.yE)(null !== (n = t.recipientFlags) && void 0 !== n ? n : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX) || p.has(t.id)) return null;
-        let u = i.Z.getApplication(e.applicationId);
-        if (null == u || !(0, l.Z)(u)) return null;
-        let d = h(e, t.id);
-        p.set(t.id, e.id);
-        let f = (0, s.mB)(null !== (c = t.recipientFlags) && void 0 !== c ? c : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
-        return o.Z.updatePrivateChannelRecipientFlags(t.id, f), d;
+        var n, a;
+        if (u.get(t.id) === e.id) return d(e, t.id);
+        if (null == e.applicationId || !(0, o.yE)(e.flags, c.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) || !t.isDM() || e.author.id === l.default.getId() || (0, o.yE)(null !== (n = t.recipientFlags) && void 0 !== n ? n : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX) || u.has(t.id)) return null;
+        let s = d(e, t.id);
+        u.set(t.id, e.id);
+        let p = (0, o.mB)(null !== (a = t.recipientFlags) && void 0 !== a ? a : 0, r.V.DISMISSED_IN_GAME_MESSAGE_NUX, !0);
+        return i.Z.updatePrivateChannelRecipientFlags(t.id, p), s;
     })(e, t);
     return null != n ? n : null;
 }
