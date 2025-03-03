@@ -1,51 +1,51 @@
 r.d(t, {
     Z: () => I,
-    n: () => w
+    n: () => E
 }),
     r(301563);
 var n = r(200651),
-    i = r(192379),
-    l = r(120356),
-    o = r.n(l),
+    l = r(192379),
+    i = r(120356),
+    o = r.n(i),
     a = r(180650),
     s = r(399606),
     c = r(481060),
-    d = r(607070),
-    u = r(906732),
+    u = r(607070),
+    d = r(906732),
     p = r(70097),
     f = r(963249),
-    h = r(594174),
-    b = r(451478),
-    C = r(754347),
-    m = r(74538),
+    b = r(594174),
+    h = r(451478),
+    m = r(754347),
+    C = r(74538),
     g = r(884697),
     v = r(624377),
     x = r(141011),
     j = r(813083),
-    _ = r(67938),
-    y = r(372654),
+    _ = r(372654),
+    y = r(794324),
     O = r(215023),
     k = r(474936),
     P = r(388032),
-    S = r(697604);
-let w = (0, g.IC)(90),
-    E = (e) => {
+    S = r(134442);
+let E = (0, g.IC)(90),
+    w = (e) => {
         let { category: t } = e,
-            { analyticsLocations: r } = (0, u.ZP)(),
-            l = i.useRef(null),
-            o = (0, s.e7)([h.default], () => h.default.getCurrentUser());
-        return m.ZP.canUseCollectibles(o)
+            { analyticsLocations: r } = (0, d.ZP)(),
+            i = l.useRef(null),
+            o = (0, s.e7)([b.default], () => b.default.getCurrentUser());
+        return C.ZP.canUseCollectibles(o)
             ? t.summary
             : P.NW.format(P.t['9hafRk'], {
                   getPremium: (e) =>
                       (0, n.jsx)(c.P3F, {
-                          innerRef: l,
+                          innerRef: i,
                           className: S.getPremiumHook,
                           onClick: () => {
                               (0, f.Z)({
                                   subscriptionTier: k.Si.TIER_2,
                                   analyticsLocations: r,
-                                  returnRef: l
+                                  returnRef: i
                               });
                           },
                           tag: 'span',
@@ -74,28 +74,27 @@ let w = (0, g.IC)(90),
               });
     };
 function I(e) {
-    var t, r, i, l, u, p, f;
-    let { category: h, className: m, hideLimitedTimeBadge: k = !1 } = e,
-        { backgroundColors: P } = (0, v.Z)(h.styles),
-        I = (0, O.ZS)(h.skuId),
-        T = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        N = (0, s.e7)([b.Z], () => b.Z.isFocused());
-    if (h.skuId === a.T.CHANCE) return (0, n.jsx)(_.O, { category: h });
-    let B = !!(null == I ? void 0 : I.showDarkBannerText),
-        Z = null !== (p = null == I ? void 0 : I.animatedBanner) && void 0 !== p ? p : null === (t = h.bannerAsset) || void 0 === t ? void 0 : t.animated;
+    var t, r, l;
+    let { category: i, className: d, hideLimitedTimeBadge: p = !1 } = e,
+        { backgroundColors: f } = (0, v.Z)(i.styles),
+        b = (0, O.ZS)(i.skuId),
+        C = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        k = (0, s.e7)([h.Z], () => h.Z.isFocused()),
+        { categoryBannerStatic: P, categoryBannerAnimated: I } = (0, y.tK)(i),
+        N = !!(null == b ? void 0 : b.showDarkBannerText);
     return (0, n.jsxs)(x.Z, {
-        asset: null !== (f = null === (r = h.bannerAsset) || void 0 === r ? void 0 : r.static) && void 0 !== f ? f : h.banner,
-        className: o()(S.shopBanner, m),
+        asset: P,
+        className: o()(S.shopBanner, d),
         style:
-            null != P
+            null != f
                 ? {
-                      background: ''.concat((0, y.nH)(P), ' border-box border-box'),
-                      outlineColor: P.border.toHslString()
+                      background: ''.concat((0, _.nH)(f), ' border-box border-box'),
+                      outlineColor: f.border.toHslString()
                   }
                 : void 0,
         children: [
-            !T && void 0 !== Z && N && (0, n.jsx)(L, { src: Z }),
-            (null === (i = O.Ve[h.skuId]) || void 0 === i ? void 0 : i.addAttributionLogo)
+            !C && null != I && k && (0, n.jsx)(L, { src: I }),
+            (null === (t = O.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
                 ? (0, n.jsxs)('div', {
                       className: S.discordLogo,
                       children: [
@@ -106,26 +105,26 @@ function I(e) {
                               color: 'currentColor',
                               className: S.discordIcon
                           }),
-                          (0, n.jsx)(C.Z, { className: S.discordWordmark })
+                          (0, n.jsx)(m.Z, { className: S.discordWordmark })
                       ]
                   })
                 : (0, n.jsx)(c.LZC, { size: 28 }),
-            (null === (l = O.Ve[h.skuId]) || void 0 === l ? void 0 : l.addLogo)
+            (null === (r = O.Ve[i.skuId]) || void 0 === r ? void 0 : r.addLogo)
                 ? (0, n.jsx)('img', {
                       className: S.categoryLogo,
-                      src: (0, g.uV)(h.logo, { size: w }),
-                      alt: h.name,
-                      style: { maxWidth: null === (u = O.Ve[h.skuId]) || void 0 === u ? void 0 : u.logoMaxWidth }
+                      src: (0, g.uV)(i.logo, { size: E }),
+                      alt: i.name,
+                      style: { maxWidth: null === (l = O.Ve[i.skuId]) || void 0 === l ? void 0 : l.logoMaxWidth }
                   })
                 : (0, n.jsx)(c.LZC, { size: 90 }),
             (0, n.jsx)(c.Text, {
-                className: o()(S.summary, { [S.blackSummary]: B }),
+                className: o()(S.summary, { [S.blackSummary]: N }),
                 variant: 'text-md/normal',
-                children: h.skuId === a.T.DISXCORE ? (0, n.jsx)(E, { category: h }) : h.summary
+                children: i.skuId === a.T.DISXCORE ? (0, n.jsx)(w, { category: i }) : i.summary
             }),
-            !k &&
+            !p &&
                 (0, n.jsx)(j.Z, {
-                    category: h,
+                    category: i,
                     className: S.limitedTimeBadge,
                     display: 'banner'
                 })

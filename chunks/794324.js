@@ -1,6 +1,7 @@
 r.d(t, {
-    Y: () => c,
-    h: () => s
+    YG: () => c,
+    hr: () => s,
+    tK: () => u
 });
 var n = r(192379),
     l = r(884697),
@@ -36,4 +37,16 @@ let s = (e) => {
                         : void 0;
             return { featuredBlockBanner: null !== (n = null != r ? r : null == t ? void 0 : t.bannerUrl) && void 0 !== n ? n : o };
         }, [r, e, t]);
+    },
+    u = (e) => {
+        let t = (0, i.z)(o.Fr.CATEGORY_BANNER_STATIC),
+            r = (0, i.z)(o.Fr.CATEGORY_BANNER_ANIMATED);
+        return n.useMemo(() => {
+            var n, l, i, o;
+            let s = (0, a.ZS)(e.skuId);
+            return {
+                categoryBannerStatic: null !== (i = null != t ? t : null === (n = e.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== i ? i : e.banner,
+                categoryBannerAnimated: null !== (o = null != r ? r : null == s ? void 0 : s.animatedBanner) && void 0 !== o ? o : null === (l = e.bannerAsset) || void 0 === l ? void 0 : l.animated
+            };
+        }, [t, r, e]);
     };

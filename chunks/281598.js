@@ -36,12 +36,14 @@ n.d(t, {
     n(815648);
 var r,
     i = n(481060),
-    s = (((r = {}).HERO_BANNER = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), (r.FEATURED_BLOCK = 'featured_block'), r);
+    s = (((r = {}).HERO_BANNER_STATIC = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), (r.FEATURED_BLOCK = 'featured_block'), (r.CATEGORY_BANNER_STATIC = 'category_banner'), (r.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), r);
 let a = {
         'hero_banner.jpg': 'hero_banner',
         'hero_banner_animated.webm': 'hero_banner_animated',
         'hero_logo.png': 'hero_logo',
-        'featured_block.png': 'featured_block'
+        'featured_block.png': 'featured_block',
+        'category_banner.jpg': 'category_banner',
+        'category_banner_animated.webm': 'category_banner_animated'
     },
     l = async (e) => {
         let t = [];
