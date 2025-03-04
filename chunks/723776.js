@@ -1,4 +1,4 @@
-n.d(t, { F: () => v });
+n.d(t, { F: () => f });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -7,7 +7,7 @@ var r = n(200651),
     c = n(727637),
     s = n(607070),
     u = n(176354),
-    d = n(875752);
+    d = n(204690);
 function m(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
@@ -20,7 +20,7 @@ function m(e) {
         shouldAnimate: n
     });
 }
-function x(e) {
+function v(e) {
     let { trait: t } = e,
         n = l.useRef(null),
         o = (0, c.Z)(n),
@@ -45,7 +45,7 @@ function x(e) {
               ]
           });
 }
-function v(e) {
+function f(e) {
     let { profile: t } = e,
         n = l.useMemo(
             () =>
@@ -96,14 +96,16 @@ function v(e) {
                           },
                           'overflow'
                       )
-                    : (0, r.jsx)(x, { trait: e }, e.label),
+                    : (0, r.jsx)(v, { trait: e }, e.key),
             []
         );
-    return (0, r.jsx)(a.Epb, {
-        className: d.container,
-        items: n,
-        renderItem: i,
-        maxLines: 2,
-        itemGapPx: 4
-    });
+    return 0 === n.length
+        ? null
+        : (0, r.jsx)(a.Epb, {
+              className: d.container,
+              items: n,
+              renderItem: i,
+              maxLines: 2,
+              itemGapPx: 4
+          });
 }
