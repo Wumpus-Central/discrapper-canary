@@ -760,7 +760,11 @@ let ey = {
                                         (0, r.jsxs)('div', {
                                             className: e_.headerButtonContainer,
                                             children: [
-                                                k && (0, r.jsx)($.B, { skuId: O.skuId }),
+                                                k &&
+                                                    (0, r.jsx)($.B, {
+                                                        skuId: O.skuId,
+                                                        tab: h
+                                                    }),
                                                 (0, r.jsx)(f.olH, {
                                                     onClick: () => S(),
                                                     className: e_.modalCloseButton,

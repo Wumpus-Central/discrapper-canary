@@ -1,28 +1,38 @@
-n.d(t, { B: () => d });
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    o = n(626135),
-    s = n(572004),
-    a = n(981631),
-    c = n(388032),
-    u = n(191221);
-function d(e) {
-    let { skuId: t } = e,
-        n = r.useCallback(() => {
-            o.default.track(a.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }), (0, s.JG)(''.concat(location.protocol, '//').concat(location.host).concat(a.Z5c.COLLECTIBLES_SHOP, '#itemSkuId=').concat(t)), (0, l.showToast)((0, l.createToast)(c.NW.string(c.t['L/PwZW']), l.ToastType.SUCCESS));
-        }, [t]);
-    return (0, i.jsx)(l.zxk, {
-        'aria-label': c.NW.string(c.t.WqhZsr),
-        look: l.zxk.Looks.BLANK,
-        size: l.zxk.Sizes.NONE,
-        onClick: n,
-        innerClassName: u.buttonContent,
-        className: u.button,
-        children: (0, i.jsx)(l.xPt, {
+n.d(t, { B: () => m });
+var r = n(200651),
+    i = n(192379),
+    a = n(481060),
+    s = n(626135),
+    o = n(572004),
+    l = n(215023),
+    c = n(981631),
+    u = n(388032),
+    d = n(260548);
+function m(e) {
+    let { skuId: t, tab: n } = e,
+        m = i.useCallback(() => {
+            s.default.track(c.rMx.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
+                (0, o.JG)(
+                    ''
+                        .concat(location.protocol, '//')
+                        .concat(location.host)
+                        .concat(c.Z5c.COLLECTIBLES_SHOP)
+                        .concat((0, l.aK)(n) ? '?tab='.concat(n) : '', '#itemSkuId=')
+                        .concat(t)
+                ),
+                (0, a.showToast)((0, a.createToast)(u.NW.string(u.t['L/PwZW']), a.ToastType.SUCCESS));
+        }, [t, n]);
+    return (0, r.jsx)(a.zxk, {
+        'aria-label': u.NW.string(u.t.WqhZsr),
+        look: a.zxk.Looks.BLANK,
+        size: a.zxk.Sizes.NONE,
+        onClick: m,
+        innerClassName: d.buttonContent,
+        className: d.button,
+        children: (0, r.jsx)(a.xPt, {
             size: 'md',
             color: 'currentColor',
-            className: u.shareIcon
+            className: d.shareIcon
         })
     });
 }
