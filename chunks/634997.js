@@ -1,4 +1,4 @@
-n.d(t, { default: () => I }), n(266796);
+n.d(t, { default: () => A }), n(266796);
 var i = n(200651),
     o = n(192379),
     r = n(772848),
@@ -6,41 +6,42 @@ var i = n(200651),
     l = n(600164),
     c = n(138201),
     a = n(63063),
-    _ = n(480916),
-    d = n(469775),
-    E = n(981631),
-    N = n(800530),
-    m = n(388032),
-    u = n(165145);
-let I = function (e) {
+    _ = n(168107),
+    d = n(480916),
+    E = n(469775),
+    N = n(981631),
+    u = n(800530),
+    I = n(388032),
+    m = n(165145);
+let A = function (e) {
     let { transitionState: t, entryPoint: n } = e,
-        I = o.useMemo(() => (0, r.Z)(), []);
+        A = o.useMemo(() => (0, r.Z)(), []);
     return (
         o.useEffect(() => {
-            (0, _.lA)(I, _.d_.PRIMARY, n);
-        }, [I, n]),
+            (0, d.lA)(A, d.d_.PRIMARY, n);
+        }, [A, n]),
         (0, i.jsxs)(s.Y0X, {
             transitionState: t,
-            className: u.root,
+            className: m.root,
             children: [
                 (0, i.jsxs)(s.hzk, {
-                    className: u.content,
+                    className: m.content,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: u.headersContainer,
+                            className: m.headersContainer,
                             children: [
                                 (0, i.jsx)(s.X6q, {
                                     variant: 'heading-xl/bold',
-                                    children: m.NW.string(m.t['FQ+YOD'])
+                                    children: I.NW.string(I.t['FQ+YOD'])
                                 }),
                                 (0, i.jsx)(s.X6q, {
                                     variant: 'heading-md/medium',
                                     color: 'text-normal',
-                                    children: m.NW.string(m.t.Cc41tb)
+                                    children: I.NW.string(I.t.Cc41tb)
                                 })
                             ]
                         }),
-                        d.E.map((e, t) => {
+                        (0, E.u)(A).map((e, t) => {
                             let { title: n, description: o } = e;
                             return (0, i.jsx)(
                                 c.ZP,
@@ -56,8 +57,12 @@ let I = function (e) {
                         (0, i.jsx)(s.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            className: u.requestContainer,
-                            children: m.NW.format(m.t.TYfgw8, { onRequest: () => window.open(N.sQ.APPEALS_LINK, '_blank') })
+                            className: m.requestContainer,
+                            children: I.NW.format(I.t.TYfgw8, {
+                                handleOnRequestHook: () => {
+                                    _.Z.openUrl(u.sQ.APPEALS_LINK), (0, d.x3)(A, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
+                                }
+                            })
                         })
                     ]
                 }),
@@ -66,15 +71,17 @@ let I = function (e) {
                     direction: l.Z.Direction.HORIZONTAL,
                     children: [
                         (0, i.jsxs)(s.zxk, {
-                            innerClassName: u.button,
+                            innerClassName: m.button,
                             color: s.zxk.Colors.TRANSPARENT,
                             look: s.zxk.Looks.BLANK,
-                            onClick: () => window.open(a.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_GET_STARTED), '_blank'),
+                            onClick: () => {
+                                _.Z.openUrl(a.Z.getArticleURL(N.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_LEARN_MORE)), (0, d.x3)(A, d.d_.PRIMARY, d.sU.LEARN_MORE);
+                            },
                             children: [
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-primary',
-                                    children: m.NW.string(m.t.mXpKND)
+                                    children: I.NW.string(I.t.mXpKND)
                                 }),
                                 (0, i.jsx)(s.Gr1, {
                                     size: 'xs',
@@ -83,13 +90,16 @@ let I = function (e) {
                             ]
                         }),
                         (0, i.jsxs)(s.zxk, {
-                            innerClassName: u.button,
+                            innerClassName: m.button,
                             color: s.zxk.Colors.BRAND,
+                            onClick: () => {
+                                (0, d.x3)(A, d.d_.PRIMARY, d.sU.GET_STARTED);
+                            },
                             children: [
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'always-white',
-                                    children: m.NW.string(m.t.VLbVho)
+                                    children: I.NW.string(I.t.VLbVho)
                                 }),
                                 (0, i.jsx)(s.Gr1, {
                                     size: 'xs',

@@ -66,5 +66,8 @@ let c = {
             let { default: t } = await n.e('80144').then(n.bind(n, 634997));
             return (n) => (0, r.jsx)(t, l(a({}, n), { entryPoint: e }));
         });
+    },
+    openUrl: (e) => {
+        window.open(e, '_blank');
     }
 };

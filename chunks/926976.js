@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(47120), n(26686);
+n.d(t, { Z: () => P }), n(47120), n(26686);
 var r = n(200651),
     a = n(192379),
     l = n(120356),
@@ -6,23 +6,24 @@ var r = n(200651),
     o = n(392711),
     s = n(913527),
     c = n.n(s),
-    d = n(442837),
-    u = n(481060),
-    m = n(129861),
-    h = n(665149),
+    d = n(852229),
+    u = n(442837),
+    m = n(481060),
+    h = n(129861),
+    p = n(665149),
     x = n(301801),
     f = n(594174),
-    p = n(55935),
-    b = n(120816),
-    _ = n(31336),
-    g = n(257785),
-    v = n(484036),
-    j = n(681619),
-    y = n(621060),
-    C = n(388032),
+    b = n(55935),
+    _ = n(120816),
+    g = n(31336),
+    v = n(257785),
+    j = n(484036),
+    y = n(681619),
+    C = n(621060),
+    O = n(388032),
     N = n(871133),
-    O = n(710662);
-let T = [
+    T = n(710662);
+let S = [
     {
         key: 'event',
         cellClassName: N.eventColumn,
@@ -40,27 +41,50 @@ let T = [
         }
     }
 ];
-function S(e) {
+function E(e) {
     let { children: t } = e;
-    return (0, r.jsx)(u.zJl, {
+    return (0, r.jsx)(m.zJl, {
         className: N.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function E(e) {
-    let { name: t, children: n } = e;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)('dt', {
-                className: N.customPropertiesName,
-                children: t
-            }),
-            (0, r.jsx)('dd', {
-                className: N.customPropertiesValue,
-                children: n
-            })
-        ]
-    });
+function I(e) {
+    let { name: t, children: n, copyValue: l } = e,
+        [i, o] = a.useState(!1);
+    return (
+        a.useEffect(() => {
+            if (i) {
+                let e = setTimeout(() => o(!1), 1000);
+                return () => clearTimeout(e);
+            }
+        }, [i]),
+        (0, r.jsxs)('div', {
+            className: N.customProperty,
+            children: [
+                (0, r.jsx)('dt', {
+                    className: N.customPropertiesName,
+                    children: t
+                }),
+                (0, r.jsx)('dd', { children: n }),
+                (0, r.jsx)(m.P3F, {
+                    tag: 'span',
+                    className: N.copyPropertyButton,
+                    onClick: () => {
+                        (0, d.J)(JSON.stringify(l)), o(!0);
+                    },
+                    children: i
+                        ? (0, r.jsx)(m.kmB, {
+                              color: 'currentColor',
+                              size: 'sm'
+                          })
+                        : (0, r.jsx)(m.TIy, {
+                              color: 'currentColor',
+                              size: 'sm'
+                          })
+                })
+            ]
+        })
+    );
 }
 let k = [
         {
@@ -72,56 +96,116 @@ let k = [
                         onClose: o
                     } = e,
                     s = f.default.getUser(l),
-                    d = c()(a);
+                    u = c()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(h.ZP, {
-                            className: i()(O.headerBar, N.subPanelHeaderBar),
+                        (0, r.jsxs)(p.ZP, {
+                            className: i()(T.headerBar, N.subPanelHeaderBar),
                             children: [
-                                (0, r.jsx)(h.ZP.Icon, {
-                                    icon: u.IeX,
+                                (0, r.jsx)(p.ZP.Icon, {
+                                    icon: m.IeX,
                                     tooltip: t
                                 }),
-                                (0, r.jsx)(h.ZP.Title, {
-                                    wrapperClassName: O.headerTitle,
-                                    children: t
+                                (0, r.jsxs)(p.ZP.Title, {
+                                    wrapperClassName: N.headerTitle,
+                                    children: [
+                                        t,
+                                        (0, r.jsx)(m.P3F, {
+                                            tag: 'span',
+                                            className: N.copyEventButton,
+                                            onClick: () => (0, d.J)(t),
+                                            children: (0, r.jsx)(m.TIy, {
+                                                color: 'currentColor',
+                                                size: 'sm'
+                                            })
+                                        })
+                                    ]
                                 }),
-                                (0, r.jsx)(h.ZP.Icon, {
-                                    icon: u.k$p,
+                                (0, r.jsx)(p.ZP.Icon, {
+                                    icon: m.TIy,
+                                    tooltip: 'Copy all properties',
+                                    onClick: () => {
+                                        (0, d.J)(
+                                            JSON.stringify(
+                                                (function (e) {
+                                                    for (var t = 1; t < arguments.length; t++) {
+                                                        var n = null != arguments[t] ? arguments[t] : {},
+                                                            r = Object.keys(n);
+                                                        'function' == typeof Object.getOwnPropertySymbols &&
+                                                            (r = r.concat(
+                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                                })
+                                                            )),
+                                                            r.forEach(function (t) {
+                                                                var r;
+                                                                (r = n[t]),
+                                                                    t in e
+                                                                        ? Object.defineProperty(e, t, {
+                                                                              value: r,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0
+                                                                          })
+                                                                        : (e[t] = r);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })(
+                                                    {
+                                                        event: t,
+                                                        timestamp: a,
+                                                        fingerprint: l,
+                                                        user: null == s ? void 0 : s.id
+                                                    },
+                                                    n
+                                                ),
+                                                (e, t) => (void 0 === t ? null : t),
+                                                2
+                                            )
+                                        );
+                                    }
+                                }),
+                                (0, r.jsx)(p.ZP.Icon, {
+                                    icon: m.k$p,
                                     tooltip: 'Close',
                                     onClick: o
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(g.E, {
+                        (0, r.jsxs)(v.E, {
                             className: N.commonProperties,
                             children: [
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
+                                    copyValue: a.toISOString(),
                                     children: (0, r.jsxs)('time', {
                                         dateTime: a.toISOString(),
-                                        title: (0, p.vc)(d, 'LLLL'),
-                                        children: [c().locale(), (0, p.Y4)(d)]
+                                        title: (0, b.vc)(u, 'LLLL'),
+                                        children: ['(', c().locale(), ') ', (0, b.Y4)(u)]
                                     })
                                 }),
                                 null != s &&
-                                    (0, r.jsx)(g.Z9, {
+                                    (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(m.Z, { user: s })
+                                        copyValue: s.id,
+                                        children: (0, r.jsx)(h.Z, { user: s })
                                     }),
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
+                                    copyValue: l,
                                     children: (0, r.jsx)('code', { children: l })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(S, {
+                        (0, r.jsx)(E, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    E,
+                                    I,
                                     {
                                         name: ''.concat(t, ':'),
+                                        copyValue: { [t]: n || null },
                                         children:
                                             null != n
                                                 ? (0, r.jsx)('code', { children: JSON.stringify(n) })
@@ -139,11 +223,11 @@ let k = [
             }
         }
     ],
-    I = {
+    w = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(I)
+                Object.entries(w)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -167,14 +251,14 @@ let k = [
             filter: (e) => e.event.startsWith('network_action')
         }
     };
-function w() {
+function P() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
-        l = (0, d.e7)([b.Z], () => b.Z.loggedEventsVersion),
-        [s, c] = a.useState(() => Object.keys(I)),
-        [m, h] = a.useState(b.Z.loggedEvents),
-        f = a.useRef(null),
-        p = a.useMemo(
+        l = (0, u.e7)([_.Z], () => _.Z.loggedEventsVersion),
+        [s, c] = a.useState(() => Object.keys(w)),
+        [d, h] = a.useState(_.Z.loggedEvents),
+        p = a.useRef(null),
+        f = a.useMemo(
             () =>
                 (0, o.throttle)(
                     async (e, t) => {
@@ -182,7 +266,7 @@ function w() {
                             h(t);
                             return;
                         }
-                        f.current = (0, o.uniqueId)();
+                        p.current = (0, o.uniqueId)();
                         let n = await (0, x.H)(
                             t,
                             (e) => {
@@ -192,51 +276,51 @@ function w() {
                             e,
                             !0
                         );
-                        null != f.current && h(n);
+                        null != p.current && h(n);
                     },
                     300,
                     { leading: !0 }
                 ),
             []
         ),
-        g = m.filter((e) => {
-            for (let t of s) if (I[t].filter(e)) return !0;
+        b = d.filter((e) => {
+            for (let t of s) if (w[t].filter(e)) return !0;
             return !1;
         });
     a.useEffect(() => {
-        p(t, b.Z.loggedEvents);
-    }, [t, p, l]);
-    let [S, E] = a.useState(void 0),
-        w = g.find((e) => e.key === S),
-        { TabBar: Z, renderSelectedTab: P } = (0, y.Z)({ tabs: k }, []);
+        f(t, _.Z.loggedEvents);
+    }, [t, f, l]);
+    let [v, E] = a.useState(void 0),
+        I = b.find((e) => e.key === v),
+        { TabBar: P, renderSelectedTab: Z } = (0, C.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(O.panel, N.panel),
+        className: i()(T.panel, N.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: N.toolbar,
                 children: [
-                    (0, r.jsx)(u.zxk, {
+                    (0, r.jsx)(m.zxk, {
                         className: N.toolbarButton,
-                        look: u.zxk.Looks.BLANK,
-                        size: u.zxk.Sizes.ICON,
-                        onClick: _.Zw,
+                        look: m.zxk.Looks.BLANK,
+                        size: m.zxk.Sizes.ICON,
+                        onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: C.NW.string(C.t.VkKicX),
-                            children: (0, r.jsx)(u.XHJ, {
+                            title: O.NW.string(O.t.VkKicX),
+                            children: (0, r.jsx)(m.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': C.NW.string(C.t.VkKicX)
+                                'aria-label': O.NW.string(O.t.VkKicX)
                             })
                         })
                     }),
                     (0, r.jsx)('div', { className: N.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: N.filters,
-                        children: Object.entries(I).map((e) => {
+                        children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
-                                u.P3F,
+                                m.P3F,
                                 {
                                     className: i()(N.filter, s.includes(t) && N.activeFilter),
                                     onClick: () => {
@@ -252,7 +336,7 @@ function w() {
             }),
             (0, r.jsx)('div', {
                 className: N.toolbar,
-                children: (0, r.jsx)(u.E1j, {
+                children: (0, r.jsx)(m.E1j, {
                     className: N.searchBar,
                     query: t,
                     onChange: n,
@@ -260,21 +344,21 @@ function w() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(j.Z, {
-                columns: T,
-                data: g,
-                selectedRowKey: S,
+            (0, r.jsx)(y.Z, {
+                columns: S,
+                data: b,
+                selectedRowKey: v,
                 onClickRow: (e) => E(e.key)
             }),
-            null != w &&
-                (0, r.jsxs)(v.Z, {
+            null != I &&
+                (0, r.jsxs)(j.Z, {
                     className: N.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(Z, {}),
-                        P({
-                            loggedEvent: w,
+                        (0, r.jsx)(P, {}),
+                        Z({
+                            loggedEvent: I,
                             onClose: () => E(void 0)
                         })
                     ]

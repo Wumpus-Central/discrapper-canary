@@ -1,7 +1,6 @@
 e.exports = {
     panel: 'panel_fe7ab2',
     headerBar: 'headerBar_fe7ab2',
-    headerTitle: 'headerTitle_fe7ab2',
     inspectorWrapper: 'inspectorWrapper_fe7ab2',
     tabBar: 'tabBar_fe7ab2',
     tabItem: 'tabItem_fe7ab2',
@@ -14,6 +13,8 @@ e.exports = {
     selectedTableRow: 'selectedTableRow_fe7ab2',
     properties: 'properties_fe7ab2',
     propertyName: 'propertyName_fe7ab2',
+    propertyValue: 'propertyValue_fe7ab2',
+    copyPropertyButton: 'copyPropertyButton_fe7ab2',
     toolbar: 'toolbar_fe7ab2',
     toolbarGroup: 'toolbarGroup_fe7ab2',
     toolbarButton: 'toolbarButton_fe7ab2'

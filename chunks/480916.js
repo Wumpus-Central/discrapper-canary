@@ -1,7 +1,9 @@
 n.d(t, {
     cU: () => o,
     d_: () => a,
-    lA: () => s
+    lA: () => l,
+    sU: () => s,
+    x3: () => c
 });
 var r = n(626135),
     i = n(981631),
@@ -10,11 +12,21 @@ var r = n(626135),
     })({}),
     a = (function (e) {
         return (e[(e.PRIMARY = 1)] = 'PRIMARY'), e;
+    })({}),
+    s = (function (e) {
+        return (e.MANUAL_REVIEW_REQUEST = 'manual_review_request'), (e.LEARN_MORE = 'learn_more'), (e.GET_STARTED = 'get_started'), (e.SYSTEM_DMS_LEARN_MORE = 'system_dms_learn_more'), e;
     })({});
-function s(e, t, n) {
+function l(e, t, n) {
     r.default.track(i.rMx.AGE_VERIFICATION_MODAL_VIEWED, {
         modal_session_id: e,
         modal_version: t,
         entry_point: n
+    });
+}
+function c(e, t, n) {
+    r.default.track(i.rMx.AGE_VERIFICATION_MODAL_CLICKED, {
+        modal_session_id: e,
+        modal_version: t,
+        cta: n
     });
 }

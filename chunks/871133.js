@@ -12,9 +12,12 @@ e.exports = {
     commonProperties: 'commonProperties_fb48ea',
     subPanelHeaderBar: 'subPanelHeaderBar_fb48ea',
     customPropertiesContainer: 'customPropertiesContainer_fb48ea',
+    customProperty: 'customProperty_fb48ea',
+    copyPropertyButton: 'copyPropertyButton_fb48ea',
     customPropertiesName: 'customPropertiesName_fb48ea',
-    customPropertiesValue: 'customPropertiesValue_fb48ea',
     emptyProperty: 'emptyProperty_fb48ea',
     searchBar: 'searchBar_fb48ea',
-    triggersEnable: 'triggersEnable_fb48ea'
+    triggersEnable: 'triggersEnable_fb48ea',
+    headerTitle: 'headerTitle_fb48ea',
+    copyEventButton: 'copyEventButton_fb48ea'
 };

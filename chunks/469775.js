@@ -1,18 +1,24 @@
-n.d(t, { E: () => s });
+n.d(t, { u: () => c });
 var i = n(63063),
-    r = n(981631),
-    o = n(388032);
-let s = [
+    o = n(168107),
+    r = n(480916),
+    s = n(981631),
+    l = n(388032);
+let c = (e) => [
     {
-        title: o.NW.string(o.t.K0z0AA),
-        description: o.NW.string(o.t.ldhmmp)
+        title: l.NW.string(l.t.K0z0AA),
+        description: l.NW.string(l.t.ldhmmp)
     },
     {
-        title: o.NW.string(o.t['60uRDA']),
-        description: o.NW.string(o.t.h90JkZ)
+        title: l.NW.string(l.t['60uRDA']),
+        description: l.NW.string(l.t.h90JkZ)
     },
     {
-        title: o.NW.string(o.t['Jc2+09']),
-        description: o.NW.format(o.t.rw9yFR, { helpUrl: i.Z.getArticleURL(r.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_SYSTEM_DMS) })
+        title: l.NW.string(l.t['Jc2+09']),
+        description: l.NW.format(l.t.rw9yFR, {
+            handleOnHelpUrlHook: () => {
+                o.Z.openUrl(i.Z.getArticleURL(s.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_SYSTEM_DMS)), (0, r.x3)(e, r.d_.PRIMARY, r.sU.SYSTEM_DMS_LEARN_MORE);
+            }
+        })
     }
 ];
