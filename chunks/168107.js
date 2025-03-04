@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(481060);
@@ -31,17 +31,40 @@ function a(e) {
     }
     return e;
 }
-let s = {
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let c = {
     showAgeVerification: (e) => {
         (0, i.ZDy)(async () => {
             let { default: t } = await n.e('12014').then(n.bind(n, 879367));
             return (n) => (0, r.jsx)(t, a({}, e, n));
         });
     },
-    showAgeVerificationGetStartedModal: () => {
+    showAgeVerificationGetStartedModal: (e) => {
         (0, i.ZDy)(async () => {
-            let { default: e } = await n.e('80144').then(n.bind(n, 634997));
-            return (t) => (0, r.jsx)(e, a({}, t));
+            let { default: t } = await n.e('80144').then(n.bind(n, 634997));
+            return (n) => (0, r.jsx)(t, l(a({}, n), { entryPoint: e }));
         });
     }
 };

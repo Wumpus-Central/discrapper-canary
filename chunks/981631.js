@@ -2124,6 +2124,7 @@ var N =
     (r.FAMILY_CENTER_ACTION = 'family_center_action'),
     (r.SAFETY_HUB_VIEWED = 'safety_hub_viewed'),
     (r.SAFETY_HUB_ACTION = 'safety_hub_action'),
+    (r.AGE_VERIFICATION_MODAL_VIEWED = 'age_verification_modal_viewed'),
     (r.BOOSTING_UPSELL_VIEWED = 'boosting_upsell_viewed'),
     (r.BOOSTING_UPSELL_CLICKED = 'boosting_upsell_clicked'),
     (r.TNS_SKU_REPORT_SUBMITTED = 'tns_sku_report_submitted'),

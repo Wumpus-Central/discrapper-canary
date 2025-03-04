@@ -1,100 +1,101 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(481060),
-    a = n(191237),
-    l = n(430824),
-    o = n(626135),
-    c = n(63063),
-    d = n(709054),
-    u = n(88658),
-    m = n(750832),
-    g = n(976978),
-    p = n(695346),
-    h = n(639814),
-    f = n(838436),
-    b = n(51331),
-    N = n(922628),
-    x = n(703115),
-    _ = n(526761),
-    E = n(726985),
-    j = n(736530),
-    C = n(981631),
-    O = n(388032);
-function v(e) {
+    a = n(168107),
+    l = n(480916),
+    o = n(430824),
+    c = n(626135),
+    d = n(63063),
+    u = n(709054),
+    m = n(88658),
+    g = n(750832),
+    p = n(976978),
+    h = n(695346),
+    f = n(639814),
+    b = n(838436),
+    N = n(51331),
+    x = n(922628),
+    _ = n(703115),
+    E = n(526761),
+    j = n(726985),
+    C = n(736530),
+    O = n(981631),
+    v = n(388032);
+function S(e) {
     let { ingress: t, guildId: n } = e,
-        v = (0, h.c_)(),
-        S = (0, g.q)(),
-        T = p.h2.useSetting().includes(n),
-        I = p.mX.useSetting(),
-        y = p.zA.useSetting().includes(n),
-        A = i.useCallback(
+        S = (0, f.c_)(),
+        T = (0, p.q)(),
+        I = h.h2.useSetting().includes(n),
+        y = h.mX.useSetting(),
+        A = h.zA.useSetting().includes(n),
+        P = i.useCallback(
             (e) => {
-                let r = (0, u.gl)();
+                let r = (0, m.gl)();
                 e ? r.delete(n) : r.add(n),
-                    p.zA.updateSetting(Array.from(r)),
-                    o.default.track(C.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: x.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
+                    h.zA.updateSetting(Array.from(r)),
+                    c.default.track(O.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: _.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: t,
                         guild_id: n
                     });
             },
             [t, n]
         );
-    function P(e, t) {
-        o.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    function R(e, t) {
+        c.default.track(O.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
     }
-    function R(e, t) {
+    function D(e, t) {
         var n;
-        if ((0, m.SI)()) {
-            a.Z.showAgeVerificationGetStartedModal();
+        if ((0, g.SI)()) {
+            a.Z.showAgeVerificationGetStartedModal(l.cU.MESSAGE_REQUESTS_SETTINGS);
             return;
         }
         t
-            ? A(e)
+            ? P(e)
             : ((n = !e),
-              (0, N.V)({
-                  header: O.NW.string(O.t.yAfu1t),
-                  body: O.NW.string(O.t['Ry2z7+']),
-                  confirmText: O.NW.string(O.t.gm1Ven),
-                  cancelText: O.NW.string(O.t.p89ACg),
+              (0, x.V)({
+                  header: v.NW.string(v.t.yAfu1t),
+                  body: v.NW.string(v.t['Ry2z7+']),
+                  confirmText: v.NW.string(v.t.gm1Ven),
+                  cancelText: v.NW.string(v.t.p89ACg),
                   confirmButtonColor: s.zxk.Colors.BRAND,
                   onConfirm: () => {
-                      p.mX.updateSetting(n), P(n, !1);
+                      h.mX.updateSetting(n), R(n, !1);
                   },
                   onCancel: () => {
-                      p.mX.updateSetting(n), p.zA.updateSetting(n ? d.default.keys(l.Z.getGuilds()) : []), P(n, !0);
+                      h.mX.updateSetting(n), h.zA.updateSetting(n ? u.default.keys(o.Z.getGuilds()) : []), R(n, !0);
                   }
               }));
     }
-    return (0, r.jsx)(f.U, {
-        setting: E.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
-        scrollPosition: _.FY.MESSAGE_REQUESTS_V2,
+    return (0, r.jsx)(b.U, {
+        setting: j.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2,
+        scrollPosition: E.FY.MESSAGE_REQUESTS_V2,
         children:
-            n === j.T
-                ? (0, r.jsx)(b.Z, {
-                      title: O.NW.string(O.t['3o2ojo']),
-                      value: !S && !I,
-                      onChange: (e) => R(e, !1),
-                      disabled: S,
-                      note: O.NW.format(O.t.wkm9a2, { helpdeskArticle: c.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
-                  })
-                : (0, r.jsx)(b.Z, {
-                      title: O.NW.string(O.t['3o2ojo']),
-                      value: !y,
-                      onChange: (e) => R(e, !0),
+            n === C.T
+                ? (0, r.jsx)(N.Z, {
+                      title: v.NW.string(v.t['3o2ojo']),
+                      value: !T && !y,
+                      onChange: (e) => D(e, !1),
                       disabled: T,
-                      note: v ? O.NW.format(O.t.WpnWLS, { helpdeskArticle: c.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : O.NW.format(O.t.wkm9a2, { helpdeskArticle: c.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      note: v.NW.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) })
+                  })
+                : (0, r.jsx)(N.Z, {
+                      title: v.NW.string(v.t['3o2ojo']),
+                      value: !A,
+                      onChange: (e) => D(e, !0),
+                      disabled: I,
+                      note: S ? v.NW.format(v.t.WpnWLS, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) }) : v.NW.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(O.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }
-function S(e) {
-    let { ingress: t = _.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        i = (0, h.is)();
-    return (0, r.jsx)(v, {
+function T(e) {
+    let { ingress: t = E.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
+        i = (0, f.is)();
+    return (0, r.jsx)(S, {
         ingress: t,
         guildId: null != n ? n : i
     });
