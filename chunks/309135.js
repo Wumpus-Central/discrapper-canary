@@ -8,10 +8,10 @@ var r = n(200651),
     c = n(944163),
     d = n(266395),
     u = n(187565),
-    m = n(530726),
+    m = n(577809),
     _ = n(592286),
     f = n(388032),
-    b = n(853354);
+    b = n(389853);
 let x = () =>
         (0, r.jsx)(l.Z, {
             submitting: !1,
@@ -27,41 +27,45 @@ let x = () =>
             onSaveButtonColor: o.Ttl.RED
         }),
     g = (e) => {
-        let { transitionState: t, guildId: n, onClose: l, onComplete: _, isPreview: f = !1 } = e,
-            g = (0, d.rb)((e) => e.shouldShowWarning),
-            p = (0, u.ng)(n, f),
-            h = (0, s.Dt)();
+        let { transitionState: t, guildId: n, onClose: l, onComplete: _, inviteKey: f, isPreview: g = !1 } = e,
+            p = (0, d.rb)((e) => e.shouldShowWarning),
+            { verificationForm: v, hasFetched: h } = (0, u.ng)(n, g, f),
+            C = (0, s.Dt)();
         return (a.useEffect(() => {
-            p === c.t && l();
-        }, [l, p]),
-        p === c.t)
+            h && v === c.t && l();
+        }, [h, l, v]),
+        v === c.t)
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)(o.Y0X, {
                           transitionState: t,
-                          'aria-labelledby': h,
+                          'aria-labelledby': C,
                           size: o.CgR.DYNAMIC,
                           className: b.container,
                           hideShadow: !0,
                           children: [
                               (0, r.jsx)('div', {
                                   className: b.closeButton,
-                                  children: (0, r.jsx)(o.olH, { onClick: () => l(!1) })
+                                  children: (0, r.jsx)(o.olH, {
+                                      className: b.closeButtonInner,
+                                      innerClassName: b.closeButtonInner,
+                                      onClick: () => l(!1)
+                                  })
                               }),
                               (0, r.jsx)(m.Z, {
-                                  verificationForm: p,
-                                  headerId: h,
+                                  verificationForm: v,
+                                  headerId: C,
                                   guildId: n,
                                   onClose: l,
                                   onComplete: _,
-                                  isPreview: f
+                                  isPreview: g
                               })
                           ]
                       }),
                       (0, r.jsx)(i.W, {
                           children:
-                              !0 === g &&
+                              !0 === p &&
                               (0, r.jsx)(o.oXn, {
                                   className: b.notice,
                                   children: (0, r.jsx)(x, {})

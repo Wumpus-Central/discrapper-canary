@@ -8,6 +8,7 @@ e.exports = {
     mainContentWrapper: 'mainContentWrapper_f792fa',
     content: 'content_f792fa',
     closeButton: 'closeButton_f792fa',
+    closeButtonInner: 'closeButtonInner_f792fa',
     applicationIconContainer: 'applicationIconContainer_f792fa',
     applicationIcon: 'applicationIcon_f792fa',
     header: 'header_f792fa',
