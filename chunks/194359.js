@@ -9,8 +9,8 @@ var r = n(544891),
     u = n(397550),
     d = n(594174),
     f = n(657682),
-    p = n(51144),
-    _ = n(668781),
+    _ = n(51144),
+    p = n(668781),
     h = n(239091),
     m = n(981631),
     g = n(858380),
@@ -45,7 +45,7 @@ function b(e) {
     return e;
 }
 function y(e) {
-    (0, h.Zy)(), _.Z.show(e);
+    (0, h.Zy)(), p.Z.show(e);
 }
 function O() {
     (0, h.Zy)(), (0, l.default)();
@@ -77,6 +77,7 @@ function S(e, t, n) {
         default:
             if (o === m.evJ.USER_QUARANTINED) O();
             else if ((0, u.b)(r, o)) break;
+            else if (o === m.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
                 let e = null != n ? (0, f.NF)(o || 0, n) : E.NW.string(E.t.paDJBA);
                 y({
@@ -111,9 +112,9 @@ let I = {
                 });
         },
         addRelationship(e, t) {
-            let { userId: n, context: i, type: o, friendToken: a, fromFriendSuggestion: s, captchaPayload: l } = e,
-                c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-                u = d.default.getUser(n);
+            let { userId: n, context: i, type: o, friendToken: a, fromFriendSuggestion: s, confirmStrangerRequest: l, captchaPayload: c } = e,
+                u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+                f = d.default.getUser(n);
             return r.tn
                 .put({
                     url: m.ANM.USER_RELATIONSHIP(n),
@@ -121,9 +122,10 @@ let I = {
                         {
                             type: o,
                             friend_token: a,
-                            from_friend_suggestion: s
+                            from_friend_suggestion: s,
+                            confirm_stranger_request: l
                         },
-                        l
+                        c
                     ),
                     context: i,
                     oldFormErrors: !0,
@@ -133,7 +135,7 @@ let I = {
                     null == t || t();
                 })
                 .catch((e) => {
-                    S(e, c, p.ZP.getUserTag(u));
+                    S(e, u, _.ZP.getUserTag(f));
                 });
         },
         acceptFriendRequest(e) {

@@ -1,13 +1,15 @@
-n.d(t, { Z: () => _ }), n(653041), n(47120);
-var o = n(512722),
-    r = n.n(o),
-    c = n(90757),
-    i = n.n(c),
-    d = n(65154);
-function _(e, t, n) {
-    let o = window.DiscordNative;
-    r()(null != o, "Can't get desktop sources outside of native app"),
-        (t = null != t ? t : [d.vA.WINDOW, d.vA.SCREEN]),
+n.d(t, { Z: () => a }), n(653041), n(47120);
+var r = n(512722),
+    i = n.n(r),
+    l = n(90757),
+    o = n.n(l),
+    u = n(65154);
+let s = [u.vA.WINDOW, u.vA.SCREEN];
+function a(e, t, n) {
+    var r;
+    let l = window.DiscordNative;
+    i()(null != l, "Can't get desktop sources outside of native app"),
+        (t = null !== (r = null == t ? void 0 : t.filter((e) => s.includes(e))) && void 0 !== r ? r : s),
         (n =
             null != n
                 ? n
@@ -15,17 +17,17 @@ function _(e, t, n) {
                       width: 150,
                       height: 150
                   });
-    let c = [];
+    let a = [];
     return (
-        t.includes(d.vA.SCREEN) && e.supports(d.AN.SCREEN_PREVIEWS) && (c.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== d.vA.SCREEN))),
-        t.includes(d.vA.WINDOW) && e.supports(d.AN.WINDOW_PREVIEWS) && (c.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== d.vA.WINDOW))),
+        t.includes(u.vA.SCREEN) && e.supports(u.AN.SCREEN_PREVIEWS) && (a.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== u.vA.SCREEN))),
+        t.includes(u.vA.WINDOW) && e.supports(u.AN.WINDOW_PREVIEWS) && (a.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== u.vA.WINDOW))),
         0 !== t.length &&
-            c.push(
-                o.desktopCapture.getDesktopCaptureSources({
+            a.push(
+                l.desktopCapture.getDesktopCaptureSources({
                     types: t,
                     thumbnailSize: n
                 })
             ),
-        Promise.all(c).then((e) => i()(e))
+        Promise.all(a).then((e) => o()(e))
     );
 }

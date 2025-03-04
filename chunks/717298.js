@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var r = n(200651),
     l = n(192379),
     i = n(209739),
@@ -30,19 +30,21 @@ var r = n(200651),
     T = n(565574),
     E = n(51708),
     R = n(934192),
-    W = n(70722),
+    W = n(577257),
+    A = n(70722),
     k = n(388032),
-    A = n(312253);
-function M(e) {
+    M = n(312253);
+function L(e) {
     var t;
-    let { onClose: n, transitionState: i, sourceApplication: M } = e,
-        L = l.useRef(performance.now()),
-        { state: D, dispatch: G } = (0, O.Ti)(M),
-        B = (0, d.e7)([_.Z], () => _.Z.getUseSystemScreensharePicker() && (0, C.isMac)() && s().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, W.jR)),
-        U = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
-        z = !S.ZP.canStreamQuality(S.ZP.StreamQuality.HIGH, U),
-        { analyticsLocations: F } = (0, x.ZP)(p.Z.GO_LIVE_MODAL_V2),
-        H = l.useMemo(() => {
+    let { onClose: n, transitionState: i, sourceApplication: L } = e,
+        D = l.useRef(performance.now()),
+        { state: G, dispatch: B } = (0, O.Ti)(L),
+        U = (0, d.e7)([_.Z], () => _.Z.getUseSystemScreensharePicker() && (0, C.isMac)() && s().satisfies(null === h.Z || void 0 === h.Z ? void 0 : h.Z.os.release, A.jR)),
+        z = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
+        F = !S.ZP.canStreamQuality(S.ZP.StreamQuality.HIGH, z),
+        { analyticsLocations: H } = (0, x.ZP)(p.Z.GO_LIVE_MODAL_V2);
+    (0, W.Z)(U, B);
+    let V = l.useMemo(() => {
             let e = [
                 {
                     name: k.NW.string(k.t.tHoi7u),
@@ -56,7 +58,7 @@ function M(e) {
                 }
             ];
             return (
-                B ||
+                U ||
                     e.splice(1, 0, {
                         name: k.NW.string(k.t.slM8rK),
                         value: c.vA.SCREEN,
@@ -64,17 +66,17 @@ function M(e) {
                     }),
                 e
             );
-        }, [B]),
-        { sourceType: V } = D,
-        J = l.useCallback(
+        }, [U]),
+        { sourceType: J } = G,
+        X = l.useCallback(
             async (e) => {
                 let [t, r] = await (0, Z.Z)(e.hasOwnProperty('pid') ? e.pid : e, {
-                    preset: D.preset,
-                    fps: D.fps,
-                    resolution: D.resolution,
-                    soundshareEnabled: !D.muteStreamAudio,
-                    previewDisabled: D.hidePreview,
-                    goLiveModalDurationMs: performance.now() - L.current
+                    preset: G.preset,
+                    fps: G.fps,
+                    resolution: G.resolution,
+                    soundshareEnabled: !G.muteStreamAudio,
+                    previewDisabled: G.hidePreview,
+                    goLiveModalDurationMs: performance.now() - D.current
                 });
                 if (t) return n();
                 'no permission' === r &&
@@ -84,64 +86,64 @@ function M(e) {
                     }),
                     n();
             },
-            [n, D]
+            [n, G]
         );
-    async function X(e) {
-        (await (0, m.Z)({ channelId: e })) && null != D.sourceApplication && J(D.sourceApplication);
+    async function Y(e) {
+        (await (0, m.Z)({ channelId: e })) && null != G.sourceApplication && X(G.sourceApplication);
     }
-    let Y = l.useCallback(() => {
-        J({
+    let K = l.useCallback(() => {
+        X({
             id: 'prepicked:',
             name: k.NW.string(k.t['KKcy9/']),
             url: ''
         });
-    }, [J]);
+    }, [X]);
     return (0, r.jsx)(O.Yw, {
-        state: D,
-        dispatch: G,
+        state: G,
+        dispatch: B,
         children: (0, r.jsxs)(u.Y0X, {
             impression: {
                 impressionName: o.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
-                    location_stack: F,
+                    location_stack: H,
                     application_id: (0, C.isWindows)() ? (null === (t = (0, y.Z)(g.ZP, b.Z)) || void 0 === t ? void 0 : t.id) : void 0,
                     parent_media_session_id: v.Z.getMediaSessionId()
                 }
             },
-            className: A.root,
+            className: M.root,
             size: u.CgR.LARGE,
             transitionState: i,
             children: [
-                null != D.sourceApplication
-                    ? (0, r.jsx)(w.Z, { onSelectChannel: X })
+                null != G.sourceApplication
+                    ? (0, r.jsx)(w.Z, { onSelectChannel: Y })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.xBx, {
                                   separator: !1,
-                                  className: A.header,
+                                  className: M.header,
                                   children: (0, r.jsx)(u.sY7, {
-                                      className: A.segmentedControl,
-                                      value: V,
+                                      className: M.segmentedControl,
+                                      value: J,
                                       look: 'pill',
                                       onChange: (e) => {
                                           let { value: t } = e;
-                                          return G({
+                                          return B({
                                               type: 'set_source_type',
                                               sourceType: t
                                           });
                                       },
-                                      options: H
+                                      options: V
                                   })
                               }),
                               (0, r.jsx)(u.hzk, {
-                                  className: A.content,
-                                  children: B && V !== c.vA.CAMERA ? (0, r.jsx)(I.Z, { onSourceSelect: Y }) : (0, r.jsx)(P.Z, { onClick: J })
+                                  className: M.content,
+                                  children: U && J !== c.vA.CAMERA ? (0, r.jsx)(I.Z, { onSourceSelect: K }) : (0, r.jsx)(P.Z, { onClick: X })
                               })
                           ]
                       }),
-                z && (0, r.jsx)(E.Z, { onClose: n }),
+                F && (0, r.jsx)(E.Z, { onClose: n }),
                 (0, r.jsxs)(u.mzw, {
-                    className: A.footer,
+                    className: M.footer,
                     separator: !1,
                     justify: a.k.Justify.BETWEEN,
                     align: a.k.Align.CENTER,
@@ -149,10 +151,10 @@ function M(e) {
                     children: [
                         (0, r.jsx)(R.Z, { onClose: n }),
                         (0, r.jsxs)('div', {
-                            className: A.rightButtonGroup,
+                            className: M.rightButtonGroup,
                             children: [
-                                B &&
-                                    V !== c.vA.CAMERA &&
+                                U &&
+                                    J !== c.vA.CAMERA &&
                                     (0, r.jsx)(u.zxk, {
                                         size: u.zxk.Sizes.LARGE,
                                         onClick: () => {
