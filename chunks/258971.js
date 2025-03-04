@@ -1,91 +1,93 @@
-if (
-    (n.d(t, {
-        Uc: () => T,
-        Xh: () => E,
-        aQ: () => p,
-        m_: () => d,
-        z8: () => O
-    }),
+n.d(t, {
+    Uc: () => p,
+    Xh: () => h,
+    aQ: () => d,
+    m_: () => u,
+    xF: () => f,
+    z8: () => _
+}),
     n(610138),
     n(216116),
     n(78328),
     n(815648),
-    n(47120),
-    12633 == n.j)
-)
-    var r,
-        c = n(512969);
-var l = n(972959),
-    a = n(264043),
-    o = n(34674),
-    i = n(703656),
-    s = n(979007),
-    u = n(981631),
-    d = (((r = {}).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), (r.CATEGORY = 'category'), r);
-let p = (0, l.H)(() => ({})),
-    O = (0, l.H)(() => ({
-        sessionId: null,
-        guildId: null,
-        entrypoint: null,
-        trackedOpenedFromExternalEntrypoint: !1
-    }));
-function T() {
+    n(47120);
+var r = n(512969),
+    i = n(972959),
+    o = n(703656),
+    a = n(370210),
+    s = n(216780),
+    l = n(979007),
+    c = n(981631),
+    u = (function (e) {
+        return (e.HOME = 'home'), (e.SEARCH = 'search'), (e.APPLICATION = 'application'), (e.CATEGORY = 'category'), e;
+    })({});
+let d = (0, i.H)(() => ({}));
+var f = (function (e) {
+    return (e.EXTERNAL = 'External'), (e.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (e.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (e.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'), (e.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (e.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (e.GUILD_SETTINGS = 'Guild Settings'), (e.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (e.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (e.OAUTH2_EMBED = 'OAuth2 Embed'), (e.GLOBAL_DISCOVERY_BUTTON = 'Global Discovery Button'), (e.GLOBAL_DISCOVERY_SIDEBAR = 'Global Discovery Sidebar'), e;
+})({});
+let _ = (0, i.H)(() => ({
+    sessionId: null,
+    guildId: null,
+    entrypoint: null,
+    trackedOpenedFromExternalEntrypoint: !1
+}));
+function p() {
     let {
         location: { state: e }
-    } = (0, i.s1)();
+    } = (0, o.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function E() {
+function h() {
     var e, t, n;
     let {
-        location: { pathname: r, search: l }
-    } = (0, i.s1)();
+        location: { pathname: i, search: u }
+    } = (0, o.s1)();
     if (
         null !=
-        (0, c.LX)(r, {
-            path: u.Z5c.GLOBAL_DISCOVERY_APPS,
+        (0, r.LX)(i, {
+            path: c.Z5c.GLOBAL_DISCOVERY_APPS,
             exact: !0
         })
     )
         return { type: 'home' };
     if (
         null !=
-        (0, c.LX)(r, {
-            path: u.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
+        (0, r.LX)(i, {
+            path: c.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
             exact: !0
         })
     ) {
-        let e = new URLSearchParams(l),
+        let e = new URLSearchParams(u),
             t = { type: 'search' },
             n = e.get('q');
         null != n && '' !== n && (t.query = n);
         let r = Number(e.get('category_id'));
-        Number.isInteger(r) && r !== o.MU && (t.categoryId = r.toString());
-        let c = Number(e.get('page'));
-        return null != c && c > 1 && (t.page = c), t;
+        Number.isInteger(r) && r !== s.MU && (t.categoryId = r.toString());
+        let i = Number(e.get('page'));
+        return null != i && i > 1 && (t.page = i), t;
     }
-    let d = (0, c.LX)(r, {
-            path: [u.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
+    let d = (0, r.LX)(i, {
+            path: [c.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: p } = null !== (e = null == d ? void 0 : d.params) && void 0 !== e ? e : {};
-    if (null != d && null != p)
+        { categoryId: f } = null !== (e = null == d ? void 0 : d.params) && void 0 !== e ? e : {};
+    if (null != d && null != f)
         return {
             type: 'category',
-            categoryId: p
+            categoryId: f
         };
-    let O = (0, c.LX)(r, {
-            path: [u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
+    let _ = (0, r.LX)(i, {
+            path: [c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: T, section: E, skuId: m } = null !== (t = null == O ? void 0 : O.params) && void 0 !== t ? t : {};
-    if (null != O && null != T) {
-        let e = null === (n = a.Z.getApplication(T)) || void 0 === n ? void 0 : n.name;
+        { applicationId: p, section: h, skuId: g } = null !== (t = null == _ ? void 0 : _.params) && void 0 !== t ? t : {};
+    if (null != _ && null != p) {
+        let e = null === (n = a.Z.getApplication(p)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
-            applicationId: T,
+            applicationId: p,
             applicationName: e,
-            section: null != E ? E : null != m ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
+            section: null != h ? h : null != g ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

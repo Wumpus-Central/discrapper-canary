@@ -2,9 +2,9 @@ n.d(t, {
     Jh: () => M,
     Lk: () => j,
     Xg: () => U,
-    ZP: () => x,
+    ZP: () => L,
     _Z: () => k,
-    c7: () => L,
+    c7: () => x,
     j3: () => G
 }),
     n(177593),
@@ -19,11 +19,11 @@ var r = n(200651),
     u = n(922770),
     d = n(993365),
     f = n(481060),
-    p = n(132871),
     _ = n(252618),
+    p = n(258971),
     h = n(703656),
-    m = n(769654),
-    g = n(592125),
+    g = n(769654),
+    m = n(592125),
     E = n(496675),
     v = n(944486),
     b = n(626135),
@@ -32,7 +32,7 @@ var r = n(200651),
     S = n(787025),
     I = n(981631),
     T = n(388032),
-    N = n(327386);
+    N = n(146475);
 function A(e, t, n) {
     return (
         t in e
@@ -85,18 +85,18 @@ function P(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,7 +105,7 @@ function D(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function L(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: o, spinner: s } = e;
     return (
         (0, _.Tt)({ location: T.NW.string(T.t['3S249/']) }),
@@ -132,12 +132,12 @@ function x(e) {
         })
     );
 }
-function L(e) {
-    return (0, r.jsx)(x, P(C({}, e), { headerClassName: N.headerSuccess }));
+function x(e) {
+    return (0, r.jsx)(L, P(C({}, e), { headerClassName: N.headerSuccess }));
 }
 function M(e) {
     var { guild: t, application: n } = e,
-        o = w(e, ['guild', 'application']);
+        o = D(e, ['guild', 'application']);
     let a = T.NW.string(T.t.se5gLi);
     i.useEffect(() => {
         b.default.track(I.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
@@ -162,7 +162,7 @@ function M(e) {
     return (0, r.jsx)('div', {
         className: N.authorizedSuccessWrapper,
         children: (0, r.jsx)(
-            L,
+            x,
             C(
                 {
                     message: a,
@@ -175,31 +175,30 @@ function M(e) {
 }
 function k(e) {
     var { guild: t, application: n } = e;
-    let { onClose: o } = w(e, ['guild', 'application']),
+    let { onClose: o } = D(e, ['guild', 'application']),
         a = i.useCallback(() => {
             (null == t ? void 0 : t.id) != null &&
-                ((0, m.X)(null == t ? void 0 : t.id),
+                ((0, g.X)(null == t ? void 0 : t.id),
                 null == o || o(),
                 b.default.track(I.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                     application_id: null == n ? void 0 : n.id,
                     guild_id: null == t ? void 0 : t.id
                 }));
         }, [o, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
-        s = (0, p.g8)((e) => e.entrypoint),
+        s = p.z8.getField('entrypoint'),
         l = i.useCallback(() => {
             null == o || o(), b.default.track(I.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
         }, [o, null == n ? void 0 : n.id]),
         u = window.location.pathname.startsWith(I.Z5c.APPLICATION_DIRECTORY),
         d = i.useCallback(() => {
-            var e;
             (null == n ? void 0 : n.id) != null &&
                 (null == o || o(),
-                null != s && (0, h.uL)(null !== (e = s.pathname) && void 0 !== e ? e : ''),
+                null != s && (0, h.uL)(''),
                 setImmediate(() => {
                     y.S.dispatchToLastSubscribed(I.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), b.default.track(I.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
         }, [null == n ? void 0 : n.id, o, s]),
-        _ = (0, c.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
+        _ = (0, c.e7)([v.Z, m.Z], () => m.Z.getChannel(v.Z.getChannelId())),
         O = (0, c.e7)([E.Z], () => E.Z.can(I.Plq.SEND_MESSAGES, _)),
         S = null != t,
         A = null == t && O && (!u || null != s);
@@ -240,7 +239,7 @@ function k(e) {
         : null;
 }
 function j(e) {
-    return (0, r.jsx)(x, P(C({}, e), { headerClassName: N.headerFailure }));
+    return (0, r.jsx)(L, P(C({}, e), { headerClassName: N.headerFailure }));
 }
 function U() {
     var e, t;
