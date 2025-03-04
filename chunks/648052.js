@@ -1,28 +1,30 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
-n(192379);
-var i = n(392711),
-    o = n(485341),
-    a = n(184325),
-    s = n(228168);
-let l = {
-    [s.y0.BITE_SIZE]: 12,
-    [s.y0.FULL_SIZE]: 26,
-    [s.y0.PANEL]: 13
+n.d(t, { Z: () => u }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n(485341),
+    s = n(184325),
+    l = n(228168);
+let c = {
+    [l.y0.BITE_SIZE]: 12,
+    [l.y0.FULL_SIZE]: 26,
+    [l.y0.PANEL]: 13
 };
-function c(e) {
-    let { displayProfile: t, profileType: n, onClose: s } = e,
-        c = (0, o.Z)(t);
-    return 0 === c.length
+function u(e) {
+    let { displayProfile: t, profileType: n, onClose: l, pendingBadges: u, shouldOpenBadgeTooltip: d } = e,
+        f = (0, a.Z)(t),
+        _ = i.useMemo(() => (null == u ? f : [...f, ...u]), [f, u]);
+    return 0 === _.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: (0, i.chunk)(c, l[n]).map((e) =>
+              children: (0, o.chunk)(_, c[n]).map((e) =>
                   (0, r.jsx)(
-                      a.Z,
+                      s.Z,
                       {
                           badges: e,
                           displayProfile: t,
-                          onClose: s
+                          onClose: l,
+                          shouldOpenBadgeTooltip: d
                       },
                       e[0].id
                   )

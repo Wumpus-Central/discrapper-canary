@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,50 +10,52 @@ var i = n(442837),
     u = n(246946),
     d = n(654904),
     f = n(228168),
-    p = n(913340);
-function _(e) {
+    _ = n(231930);
+function p(e) {
     var t;
-    let { user: n, displayProfile: _, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: v, pendingPronouns: b, isTryItOutFlow: y, hideBioSection: O } = e,
-        S = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
-        I = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        T = null == _ ? void 0 : null === (t = _.getPreviewBio(v)) || void 0 === t ? void 0 : t.value,
-        N = null != b ? b : null == _ ? void 0 : _.pronouns,
-        A = (0, d.Ly)({
-            pendingNickname: g,
+    let { user: n, displayProfile: p, guild: h, pendingAvatar: g, pendingNickname: m, pendingGlobalName: E, pendingBio: v, pendingPronouns: b, isTryItOutFlow: y, hideBioSection: O, pendingBadges: S, shouldOpenBadgeTooltip: I } = e,
+        T = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
+        N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        A = null == p ? void 0 : null === (t = p.getPreviewBio(v)) || void 0 === t ? void 0 : t.value,
+        C = null != b ? b : null == p ? void 0 : p.pronouns,
+        R = (0, d.Ly)({
+            pendingNickname: m,
             pendingGlobalName: E,
             user: n,
-            guildMember: S
+            guildMember: T
         }),
-        C = () => {
-            if (null != S && null !== m && (null != S.avatar || null != m))
+        P = () => {
+            if (null != T && null !== g && (null != T.avatar || null != g))
                 return (0, r.jsx)(l.Z, {
                     user: n,
-                    nickname: A
+                    nickname: R
                 });
         };
     return (0, r.jsxs)('div', {
         inert: '',
-        className: p.body,
+        className: _.body,
         children: [
             (0, r.jsx)(a.Z, {
                 user: n,
                 profileType: f.y0.BITE_SIZE,
-                usernameIcon: C(),
-                nickname: A,
-                pronouns: N,
+                usernameIcon: P(),
+                nickname: R,
+                pronouns: C,
                 isTryItOut: y,
                 tags: (0, r.jsx)(o.Z, {
-                    displayProfile: _,
-                    profileType: f.y0.BITE_SIZE
+                    displayProfile: p,
+                    profileType: f.y0.BITE_SIZE,
+                    pendingBadges: S,
+                    shouldOpenBadgeTooltip: I
                 })
             }),
             !O &&
-                null != T &&
-                '' !== T &&
+                null != A &&
+                '' !== A &&
                 (0, r.jsx)(s.Z, {
                     user: n,
-                    bio: T,
-                    hidePersonalInformation: I,
+                    bio: A,
+                    hidePersonalInformation: N,
                     viewFullBioDisabled: !0
                 })
         ]

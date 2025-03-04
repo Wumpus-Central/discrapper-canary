@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(266796), n(47120);
+n.d(t, { Z: () => j }), n(266796), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -9,11 +9,11 @@ var r = n(200651),
     u = n(906732),
     d = n(943180),
     f = n(490248),
-    p = n(768865),
-    _ = n(617136),
+    _ = n(768865),
+    p = n(617136),
     h = n(497505),
-    m = n(703656),
-    g = n(317257),
+    g = n(703656),
+    m = n(317257),
     E = n(594174),
     v = n(626135),
     b = n(111361),
@@ -27,7 +27,7 @@ var r = n(200651),
     C = n(474936),
     R = n(681642),
     P = n(388032),
-    D = n(566076),
+    D = n(219041),
     w = n(223640);
 function L(e, t, n) {
     return (
@@ -81,9 +81,9 @@ let M = (e) => {
                     return;
             }
     },
-    j = (e) => {
+    k = (e) => {
         let { badge: t, tieredTenureBadge: n } = e;
-        return t.id === g.l.ORB_PROFILE_BADGE
+        return t.id === m.l.ORB_PROFILE_BADGE
             ? (0, r.jsx)(f.r4, { profileBadge: t })
             : void 0 !== n && t.id !== R.a
               ? (0, r.jsx)(f.L7, {
@@ -92,32 +92,32 @@ let M = (e) => {
                 })
               : t.description;
     };
-function k(e) {
-    let { badges: t, className: n, badgeClassName: o, displayProfile: f, onClose: L } = e,
-        { analyticsLocations: k } = (0, u.ZP)(c.Z.BADGE),
-        { context: U, trackUserProfileAction: G } = (0, O.KZ)(),
-        [B, F] = i.useState(!1),
-        V = E.default.getCurrentUser(),
-        Z = (0, b.yd)(null == V ? void 0 : V.premiumType, C.p9.TIER_2),
-        { isBadgeVersion2: H } = (0, d.D)();
+function j(e) {
+    let { badges: t, className: n, badgeClassName: o, displayProfile: f, onClose: L, shouldOpenBadgeTooltip: j } = e,
+        { analyticsLocations: U } = (0, u.ZP)(c.Z.BADGE),
+        { context: G, trackUserProfileAction: B } = (0, O.KZ)(),
+        [V, F] = i.useState(!1),
+        Z = E.default.getCurrentUser(),
+        H = (0, b.yd)(null == Z ? void 0 : Z.premiumType, C.p9.TIER_2),
+        { isBadgeVersion2: W } = (0, d.D)();
     return (0, r.jsx)('div', {
         className: a()(D.container, n),
         'aria-label': P.NW.string(P.t.VWV0y8),
         role: 'group',
         children: t.map((e) => {
-            let t = e.id === g.l.ORB_PROFILE_BADGE,
+            let t = e.id === m.l.ORB_PROFILE_BADGE,
                 n = (0, y.fv)(e.id),
-                i = H && (null != n || e.id === R.a),
+                i = W && (null != n || e.id === R.a),
                 c = (t) => {
                     if (
-                        (G({ action: 'PRESS_BADGE' }),
+                        (B({ action: 'PRESS_BADGE' }),
                         (0, S.NE)(
                             x(
                                 {
                                     badge: e.id,
-                                    analyticsLocations: k
+                                    analyticsLocations: U
                                 },
-                                U
+                                G
                             )
                         ),
                         i)
@@ -126,52 +126,52 @@ function k(e) {
                             (t.preventDefault(),
                             v.default.track(A.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: Z,
+                                premium_type: H,
                                 viewed_user_id: null == f ? void 0 : f.userId
                             }),
-                            Z)
+                            H)
                         ) {
-                            (null == f ? void 0 : f.userId) === (null == V ? void 0 : V.id)
-                                ? (0, m.uL)(A.Z5c.NITRO_HOME)
-                                : (0, p.k)({
-                                      analyticsLocations: k,
+                            (null == f ? void 0 : f.userId) === (null == Z ? void 0 : Z.id)
+                                ? (0, g.uL)(A.Z5c.NITRO_HOME)
+                                : (0, _.k)({
+                                      analyticsLocations: U,
                                       displayProfile: f
                                   }),
                                 null == L || L();
                             return;
                         }
-                        if ((null == f ? void 0 : f.userId) === (null == V ? void 0 : V.id)) {
-                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: k }) : null;
+                        if ((null == f ? void 0 : f.userId) === (null == Z ? void 0 : Z.id)) {
+                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: U }) : null;
                             if (null == n) return;
                             return null == L || L(), n(t);
                         }
                         return (
-                            (0, p.k)({
-                                analyticsLocations: k,
+                            (0, _.k)({
+                                analyticsLocations: U,
                                 displayProfile: f
                             }),
                             void (null == L || L())
                         );
                     }
-                    let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: k }) : null;
+                    let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: U }) : null;
                     if (null != n) return null == L || L(), n(t);
                 },
                 u = () => {
-                    e.id === I.i && v.default.track(A.rMx.QUEST_CONTENT_VIEWED, x({}, (0, _.mH)(h.jn.QUEST_BADGE))),
-                        G({ action: 'HOVER_BADGE' }),
+                    e.id === I.i && v.default.track(A.rMx.QUEST_CONTENT_VIEWED, x({}, (0, p.mH)(h.jn.QUEST_BADGE))),
+                        B({ action: 'HOVER_BADGE' }),
                         (0, S.Qf)(
                             x(
                                 {
                                     badge: e.id,
-                                    analyticsLocations: k
+                                    analyticsLocations: U
                                 },
-                                U
+                                G
                             )
                         );
                 },
                 d = M(null == n ? void 0 : n.id),
-                E = null != n && B,
-                b = j({
+                E = null != n && V,
+                b = k({
                     badge: e,
                     tieredTenureBadge: i && e.id !== R.a ? n : void 0
                 });
@@ -180,6 +180,7 @@ function k(e) {
                 {
                     text: b,
                     'aria-label': e.description,
+                    forceOpen: null != j && j(e.id),
                     delay: N.vB,
                     tooltipClassName: d,
                     onTooltipShow: () => F(null != n && 1 === n.badgeVersion),
