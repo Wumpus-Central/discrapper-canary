@@ -23,12 +23,14 @@ class c extends (r = i.ZP.Store) {
         return !1;
     }
     getActiveErrors() {
-        return l;
+        return l instanceof Map || (l = new Map()), l;
     }
 }
 function u(e) {
-    let { activeErrors: t } = e,
-        n = new Set(t.keys()),
+    let { activeErrors: t } = e;
+    if (__OVERLAY__ || !(t instanceof Map)) return;
+    l instanceof Map || (l = new Map());
+    let n = new Set(t.keys()),
         r = new Set(l.keys());
     (0, a.OL)(n, r) || (l = t);
 }

@@ -260,6 +260,7 @@ class M extends i.Z {
     }
     updateActiveErrors() {
         var e, t;
+        if (__OVERLAY__) return;
         let n = null !== (e = h.Z.getVoiceChannelId()) && void 0 !== e ? e : null,
             i = null != n && null !== (t = m.Z.getVoiceStateForChannel(n)) && void 0 !== t ? t : null,
             o = D(n),
@@ -278,6 +279,10 @@ class M extends i.Z {
                     });
         }
         let s = y.Z.getActiveErrors();
+        if (!(s instanceof Map)) {
+            N.error('existingErrors is not a Map: '.concat(s, ' type: ').concat(Object.prototype.toString.call(s)));
+            return;
+        }
         if (0 === a.size && 0 === s.size) return;
         let l = new Set(a.keys()),
             c = new Set(s.keys());
