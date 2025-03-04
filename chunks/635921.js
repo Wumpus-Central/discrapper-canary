@@ -1,7 +1,7 @@
 n.d(t, {
-    PK: () => T,
-    ZP: () => A,
-    _O: () => y
+    PK: () => S,
+    ZP: () => y,
+    _O: () => I
 }),
     n(266796);
 var r = n(200651);
@@ -16,126 +16,124 @@ var i = n(120356),
     u = n(357355),
     m = n(140465),
     g = n(775412),
-    p = n(650032),
-    h = n(104494),
-    f = n(639119),
-    b = n(105759),
-    N = n(346497),
-    x = n(422034),
-    _ = n(206127),
-    E = n(710220),
-    j = n(318747),
-    C = n(409100),
-    O = n(474936),
-    v = n(388032),
-    S = n(968813);
-let T = (e) => {
+    p = n(104494),
+    h = n(639119),
+    f = n(105759),
+    b = n(346497),
+    N = n(422034),
+    x = n(206127),
+    _ = n(710220),
+    E = n(318747),
+    j = n(409100),
+    C = n(474936),
+    O = n(388032),
+    v = n(370623);
+let S = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: i, buttonClassName: a, isMarketingPageV2Enabled: l, isDarkMode: o } = e,
-            c = (0, r.jsx)(C.Z, {
+            c = (0, r.jsx)(j.Z, {
                 forceInverted: o || !l,
-                className: s()(S.button, S.subButton, a, {
-                    [S.extendedButton]: t && l,
-                    [S.whiteSubButton]: l && !o
+                className: s()(v.button, v.subButton, a, {
+                    [v.extendedButton]: t && l,
+                    [v.whiteSubButton]: l && !o
                 }),
                 subscriptionTier: n
             }),
             d =
                 t && l
                     ? null
-                    : (0, r.jsx)(j.Z, {
-                          className: s()(S.button, a),
+                    : (0, r.jsx)(E.Z, {
+                          className: s()(v.button, a),
                           forceWhite: !l
                       });
         return (0, r.jsxs)('div', {
-            className: s()(S.buttonContainer, i),
+            className: s()(v.buttonContainer, i),
             children: [c, ' ', d]
         });
     },
-    I = (e) => {
+    T = (e) => {
         let { isFullscreen: t } = e;
         return (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, r.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, r.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, r.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
+            children: [(0, r.jsx)(d.A, { className: t ? v.fullscreenSparkleStar1 : v.settingsSparkleStar1 }), (0, r.jsx)(d.A, { className: t ? v.fullscreenSparkleStar2 : v.settingsSparkleStar2 }), (0, r.jsx)(d.A, { className: t ? v.fullscreenSparkleStar3 : v.settingsSparkleStar3 }), (0, r.jsx)(d.A, { className: t ? v.fullscreenSparkleStar4 : v.settingsSparkleStar4 })]
         });
     };
-function y(e) {
+function I(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isMarketingPageV2Enabled: i } = e,
-        a = (0, _.$)();
+        a = (0, x.$)();
     return (0, r.jsx)(l.Text, {
         variant: t,
         color: i ? 'header-secondary' : 'always-white',
-        className: s()(S.description, {
-            [S.descriptionBottomMargin]: n,
-            [S.descriptionV2]: i
+        className: s()(v.description, {
+            [v.descriptionBottomMargin]: n,
+            [v.descriptionV2]: i
         }),
-        children: v.NW.format(v.t.kt9wxs, { cheapestMonthlyPrice: a })
+        children: O.NW.format(O.t.kt9wxs, { cheapestMonthlyPrice: a })
     });
 }
-let A = (e) => {
+let y = (e) => {
     var t, n;
-    let { isFullscreen: i, className: d, buttonClassName: _, subscriptionTier: C, entrypoint: A, isDarkMode: P } = e,
-        { analyticsLocations: R } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        D = (0, g._O)(),
-        Z = (0, h.Ng)(),
-        w = (0, h.Wp)(Z, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
-        k = (0, f.N)(),
-        W = (0, m.Nx)(),
-        L = (0, N.Vi)(),
-        B = (0, a.e7)([u.Z], () => u.Z.affinities),
-        M = (0, b.Z)(),
-        { enabled: U } = p._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        V = A === O.EZ.ApplicationStoreHome && null != M && U,
-        G = B.length > 0;
+    let { isFullscreen: i, className: d, buttonClassName: x, subscriptionTier: j, entrypoint: y, isDarkMode: A } = e,
+        { analyticsLocations: P } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
+        R = (0, g._O)(),
+        D = (0, p.Ng)(),
+        Z = (0, p.Wp)(D, C.Si.TIER_2) ? C.Si.TIER_2 : void 0,
+        w = (0, h.N)(),
+        k = (0, m.Nx)(),
+        W = (0, b.Vi)(),
+        L = (0, a.e7)([u.Z], () => u.Z.affinities),
+        B = (0, f.Z)(),
+        M = y === C.EZ.ApplicationStoreHome && null != B,
+        U = L.length > 0;
     return (0, r.jsx)(c.Gt, {
-        value: R,
+        value: P,
         children: (0, r.jsxs)('div', {
-            className: s()(S.container, d, {
-                [S.settingsContainer]: !i,
-                [S.affinityHeight]: !i && G
+            className: s()(v.container, d, {
+                [v.settingsContainer]: !i,
+                [v.affinityHeight]: !i && U
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, r.jsxs)('div', {
-                    className: i ? S.fullscreenTextContainer : S.settingsTextContainer,
+                    className: i ? v.fullscreenTextContainer : v.settingsTextContainer,
                     children: [
                         (0, r.jsx)(l.X6q, {
                             variant: i ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: v.NW.string(v.t.YCZldH)
+                            children: O.NW.string(O.t.YCZldH)
                         }),
-                        V
-                            ? (0, r.jsx)(E.Z, { referrer: M })
-                            : G
+                        M
+                            ? (0, r.jsx)(_.Z, { referrer: B })
+                            : U
                               ? (0, r.jsx)('div', {
-                                    className: s()(S.affinityDescription),
-                                    children: (0, r.jsx)(x.Z, {
+                                    className: v.affinityDescription,
+                                    children: (0, r.jsx)(N.Z, {
                                         textColor: 'always-white',
                                         smallerText: !i
                                     })
                                 })
-                              : (0, r.jsx)(y, {}),
-                        L || D
+                              : (0, r.jsx)(I, {}),
+                        W || R
                             ? (0, r.jsx)('div', {
-                                  className: s()(S.buttonContainer),
-                                  children: (0, r.jsx)(j.Z, {
-                                      className: s()(S.button, _),
+                                  className: v.buttonContainer,
+                                  children: (0, r.jsx)(E.Z, {
+                                      className: s()(v.button, x),
                                       forceWhite: !0
                                   })
                               })
-                            : (0, r.jsx)(T, {
-                                  subscriptionTier: null !== (n = null != C ? C : null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : w,
-                                  inOfferExperience: W,
-                                  buttonClassName: _,
-                                  isDarkMode: P
+                            : (0, r.jsx)(S, {
+                                  subscriptionTier: null !== (n = null != j ? j : null == w ? void 0 : null === (t = w.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : Z,
+                                  inOfferExperience: k,
+                                  buttonClassName: x,
+                                  isDarkMode: A
                               }),
-                        G &&
-                            !V &&
-                            (0, r.jsx)(y, {
+                        U &&
+                            !M &&
+                            (0, r.jsx)(I, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !W && (0, r.jsx)(I, { isFullscreen: i })
+                !k && (0, r.jsx)(T, { isFullscreen: i })
             ]
         })
     });
