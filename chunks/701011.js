@@ -15,21 +15,16 @@ var r = n(200651),
     m = n(16609),
     v = n(781780),
     h = n(325749),
-    C = n(981631),
-    g = n(921944),
+    g = n(981631),
+    C = n(921944),
     x = n(832969);
 function y(e) {
     let { children: t } = e,
         { showsNewUserExperience: a, openNewUserExperienceModal: c } = (function () {
             let e = [i.z.ACTIVITY_POPOUT_NUX_MODAL],
-                [t, a] = (0, s.US)(e),
-                c = t === i.z.ACTIVITY_POPOUT_NUX_MODAL,
-                u = o.useRef(!1),
-                d = o.useCallback(() => {
-                    !1 === u.current && (a(g.L.USER_DISMISS), (u.current = !0));
-                }, [a]);
+                [t, a] = (0, s.US)(e);
             return {
-                showsNewUserExperience: c,
+                showsNewUserExperience: t === i.z.ACTIVITY_POPOUT_NUX_MODAL,
                 openNewUserExperienceModal: o.useCallback(() => {
                     (0, l.ZDy)(
                         async () => {
@@ -66,7 +61,7 @@ function y(e) {
                                     (o = o =
                                         {
                                             onClickButton: () => {
-                                                d(), t.onClose();
+                                                a(C.L.USER_DISMISS), t.onClose();
                                             }
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -87,13 +82,11 @@ function y(e) {
                         },
                         {
                             contextKey: l.u1M,
-                            onCloseCallback: () => {
-                                d();
-                            },
+                            onCloseRequest: () => {},
                             backdropStyle: l.fCB.SUBTLE
                         }
                     );
-                }, [d])
+                }, [a])
             };
         })();
     return (o.useEffect(() => {
@@ -129,14 +122,14 @@ function I() {
             : null != s &&
               null == e &&
               (i.current = window.setTimeout(() => {
-                  (0, _.xv)(C.KJ3.ACTIVITY_POPOUT);
+                  (0, _.xv)(g.KJ3.ACTIVITY_POPOUT);
               }, 5000));
     }, [e, s]);
     let p = (0, a.e7)([u.Z], () => {
             let t = null == e ? void 0 : e.applicationId;
             return null == t ? void 0 : u.Z.getApplication(t);
         }),
-        g = (0, b.PR)();
+        C = (0, b.PR)();
     return (0, r.jsx)('div', {
         className: x.container,
         children:
@@ -165,7 +158,7 @@ function I() {
                                       })
                                   })
                               }),
-                              g ? (0, r.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
+                              C ? (0, r.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })
