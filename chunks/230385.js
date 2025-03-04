@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function E(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,37 +86,38 @@ class b extends i.Z {
             for (let e of (v.info('Ensuring we have dependencies for voice filter', r.id, t), t)) (0, f.fz)(e, n);
         } else (0, f.rk)(t, n);
     }
-    handleVoiceFilterDownloadReady(e) {
-        let { modelId: t, voiceFilterId: n, analyticsContext: r } = e,
-            i = s.Z.getMostRecentlyRequestedVoiceFilter(),
-            o = s.Z.getActiveVoiceFilter(),
-            a = i !== o;
+    handleVoiceFilterFileReady(e) {
+        let { modelId: t, voiceFilterId: n, fetchedFromNetwork: r, analyticsContext: i } = e,
+            o = s.Z.getMostRecentlyRequestedVoiceFilter(),
+            a = s.Z.getActiveVoiceFilter(),
+            c = o !== a;
         if (
-            (l.default.track(_.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
-                active_voice_filter_id: null != o ? o : null,
-                success: !0,
-                voice_filter_id: n,
-                model_id: t
-            }),
-            a && null != i)
+            (r &&
+                l.default.track(_.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
+                    active_voice_filter_id: null != a ? a : null,
+                    success: !0,
+                    voice_filter_id: n,
+                    model_id: t
+                }),
+            c && null != o)
         ) {
-            let e = d.Z.getVoiceFilter(i);
+            let e = d.Z.getVoiceFilter(o);
             if (null == e) {
                 v.error('the VF in mostRecentlyRequestedVoiceFilter is missing. Has the store been cleared?');
                 return;
             }
             let n = e.modelIds,
-                o = Object.values(null != n ? n : {})
+                r = Object.values(null != n ? n : {})
                     .filter((e) => !d.Z.isModelDownloaded(e))
                     .filter((e) => e !== t);
-            if (o.length > 0) {
+            if (r.length > 0) {
                 v.info('waiting for more dependencies', {
-                    mostRecentlyRequestedVoiceFilter: i,
-                    missingDependencies: o
+                    mostRecentlyRequestedVoiceFilter: o,
+                    missingDependencies: r
                 });
                 return;
             }
-            (0, f.rk)(i, r);
+            (0, f.rk)(o, i);
         }
     }
     handleVoiceFilterDownloadFailed(e) {
@@ -145,7 +146,7 @@ class b extends i.Z {
             l.default.track(
                 _.rMx.VOICE_FILTER_ENABLED,
                 E(
-                    g(
+                    m(
                         {
                             active_voice_filter_id: t,
                             previous_filter_id: o
@@ -167,9 +168,9 @@ class b extends i.Z {
         super(...e),
             h(this, 'actions', {
                 VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
-                VOICE_FILTER_DOWNLOAD_READY: this.handleVoiceFilterDownloadReady,
                 VOICE_FILTER_DOWNLOAD_FAILED: this.handleVoiceFilterDownloadFailed,
                 VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
+                VOICE_FILTER_FILE_READY: this.handleVoiceFilterFileReady,
                 VOICE_FILTER_LOAD_MODULE: this.loadNativeModule,
                 VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied,
                 VOICE_FILTER_APPLY_FAILED: this.handleVoiceFilterApplyFailed

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => j,
-    jK: () => L,
+    jK: () => x,
     tS: () => M
 }),
     n(301563),
@@ -18,8 +18,8 @@ var r,
     u = n(719711),
     d = n(544891),
     f = n(433517),
-    p = n(593472),
-    _ = n(189451),
+    _ = n(593472),
+    p = n(189451),
     h = n(358085),
     m = n(591759),
     g = n(981631),
@@ -102,10 +102,10 @@ async function D(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, 'Data is null'), r;
 }
-function x(e) {
+function L(e) {
     return D(e);
 }
-var L = (function (e) {
+var x = (function (e) {
         return (e[(e.Camera = 0)] = 'Camera'), (e[(e.Microphone = 1)] = 'Microphone'), (e[(e.Photo = 2)] = 'Photo'), (e[(e.InputMonitoring = 3)] = 'InputMonitoring'), (e[(e.ScreenRecording = 4)] = 'ScreenRecording'), e;
     })({}),
     M = (function (e) {
@@ -130,7 +130,7 @@ function k(e) {
         pid: e.pid,
         pidPath: null !== (a = e.pidPath) && void 0 !== a ? a : [],
         windowHandle: null !== (s = e.windowHandle) && void 0 !== s ? s : null,
-        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : p.Jx.UNKNOWN
+        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : _.Jx.UNKNOWN
     };
 }
 let j = {
@@ -209,7 +209,7 @@ let j = {
         this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
     },
     clearObserverDebugCallback() {
-        this.getDiscordUtils().setObserverDebugCallback(null, _.l.NONE, 0);
+        this.getDiscordUtils().setObserverDebugCallback(null, p.l.NONE, 0);
     },
     shouldDisplayNotifications() {
         return this.getDiscordUtils().shouldDisplayNotifications();
@@ -304,7 +304,7 @@ let j = {
     },
     async copyImage(e) {
         l()(h.isPlatformEmbedded, 'Copy image method called outside native app'), l()('function' == typeof S.clipboard.copyImage, 'Copy image not supported');
-        let t = await x(e);
+        let t = await L(e);
         S.clipboard.copyImage(E.from(t), e);
     },
     async copyImageBlob(e, t) {
@@ -318,7 +318,7 @@ let j = {
         if (null == n) return;
         let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
             i = f.K.get(w),
-            o = await x(e),
+            o = await L(e),
             a = E.from(o),
             s = await S.fileManager.saveWithDialog(a, r, null != i ? i : void 0);
         null != s && f.K.set(w, s);
@@ -334,7 +334,9 @@ let j = {
         return S.fileManager.saveWithDialog(a, i);
     },
     async downloadVoiceFilterFile(e, t, n) {
-        l()(h.isPlatformEmbedded, 'Download voice filter file method called outside native app'), null != m.Z.toURLSafe(e) && (await S.fileManager.maybeDownloadVoiceFilterFile(e, t, n));
+        l()(h.isPlatformEmbedded, 'Download voice filter file method called outside native app');
+        let r = m.Z.toURLSafe(e);
+        return l()(r, 'Could not download voice filter, fileSrc was not a valid path'), await S.fileManager.maybeDownloadVoiceFilterFile(e, t, n);
     },
     stopVoiceFilterDownloads() {
         S.fileManager.stopVoiceFilterDownloads();
@@ -531,16 +533,16 @@ let j = {
         'application/json' === l && (c = JSON.stringify(t));
         let u = (s / 1000) * o,
             f = Math.ceil(c.length / u),
-            p = Array(f);
+            _ = Array(f);
         for (let e = 0; e < f; e++) {
             let t = e * u;
-            p[e] = c.substring(t, t + u);
+            _[e] = c.substring(t, t + u);
         }
         return new Promise((e, t) => {
             null != S.http &&
                 S.http.makeChunkedRequest(
                     r,
-                    p,
+                    _,
                     {
                         method: i,
                         chunkInterval: s,
@@ -593,11 +595,11 @@ let j = {
         var r;
         let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
             o = 0 !== e && null != i && null != t ? i(e, t) : null;
-        return -1 === o && (o = null), null !== (r = null != o ? o : n) && void 0 !== r ? r : p.Jx.UNKNOWN;
+        return -1 === o && (o = null), null !== (r = null != o ? o : n) && void 0 !== r ? r : _.Jx.UNKNOWN;
     },
     GetWindowFullscreenTypeExtraByPid(e, t) {
         let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();
-        return null == n || null == t ? { quns: p.Ng.QUNS_UNKNOWN } : n(e, t);
+        return null == n || null == t ? { quns: _.Ng.QUNS_UNKNOWN } : n(e, t);
     },
     SetGPUBoostEnabledByPid(e, t) {
         let { setGPUBoostEnabledByPid: n } = this.getDiscordUtils();
