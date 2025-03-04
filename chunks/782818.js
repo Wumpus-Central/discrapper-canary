@@ -17,7 +17,7 @@ var r = n(200651),
     x = n(981631),
     h = n(486324),
     y = n(388032),
-    O = n(671254);
+    O = n(170286);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function A(e) {
+function C(e) {
     let { avatar: t, orderNumber: n, onSelectRecentAvatar: l } = e,
         { id: a, storageHash: i, description: o } = t,
         { avatarSrc: s, eventHandlers: u } = (0, j.Z)({
@@ -67,7 +67,7 @@ function A(e) {
         })
     });
 }
-function C(e) {
+function A(e) {
     let { numberOfLockedAvatarSlots: t } = e,
         a = l.useCallback(() => {
             (0, c.ZDy)(async () => {
@@ -111,17 +111,17 @@ function N(e) {
     let { hasIncreasedRecentAvatarsLimit: t, onComplete: a, onClose: s } = e,
         u = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         { avatars: f, loading: j, error: N } = (0, g.S)(),
-        { recentAvatarsLimit: E, numberOfLockedAvatarSlots: w } = (0, p.pC)(t),
-        [P, S] = l.useState(null),
+        { recentAvatarsLimit: E, numberOfLockedAvatarSlots: S } = (0, p.pC)(t),
+        [P, w] = l.useState(null),
         T = null != P ? P : null == N ? void 0 : N.message,
-        _ = f.length > E ? f.slice(0, E) : f,
-        F = _.length,
-        R = Math.max(E - F, 0),
-        L = (0, c.vRw)(),
-        Z = l.useCallback(
+        F = f.length > E ? f.slice(0, E) : f,
+        _ = F.length,
+        R = Math.max(E - _, 0),
+        Z = (0, c.vRw)(),
+        L = l.useCallback(
             async (e) => {
                 if (null == u) return;
-                S(null);
+                w(null);
                 let { id: t, storageHash: l, description: i } = e,
                     o = (0, p.fD)({
                         userId: u.id,
@@ -139,7 +139,7 @@ function N(e) {
                     s(),
                         (0, c.ZDy)(
                             async () => {
-                                let { default: t } = await Promise.all([n.e('59732'), n.e('64642')]).then(n.bind(n, 712451));
+                                let { default: t } = await Promise.all([n.e('59732'), n.e('71741')]).then(n.bind(n, 712451));
                                 return (n) =>
                                     (0, r.jsx)(
                                         t,
@@ -156,13 +156,13 @@ function N(e) {
                                         )
                                     );
                             },
-                            { contextKey: L }
+                            { contextKey: Z }
                         );
                 } catch (e) {
-                    S(y.NW.string(y.t.fZRH9P));
+                    w(y.NW.string(y.t.fZRH9P));
                 }
             },
-            [L, s, a, u]
+            [Z, s, a, u]
         );
     return (l.useEffect(() => {
         (0, m.N)();
@@ -182,18 +182,18 @@ function N(e) {
                   (0, r.jsxs)('div', {
                       className: i()(O.recentAvatarSlots, { [O.withPremiumUpsell]: !t }),
                       children: [
-                          F > 0 &&
+                          _ > 0 &&
                               (0, r.jsx)('ul', {
                                   'aria-label': y.NW.string(y.t.lsU63N),
                                   className: O.recentAvatarList,
-                                  children: _.map((e, t) =>
+                                  children: F.map((e, t) =>
                                       (0, r.jsx)(
                                           'li',
                                           {
-                                              children: (0, r.jsx)(A, {
+                                              children: (0, r.jsx)(C, {
                                                   avatar: e,
                                                   orderNumber: t + 1,
-                                                  onSelectRecentAvatar: Z
+                                                  onSelectRecentAvatar: L
                                               })
                                           },
                                           e.id
@@ -205,7 +205,7 @@ function N(e) {
                                   className: O.emptyAvatarSlots,
                                   children: [(0, r.jsx)(c.nn4, { children: y.NW.format(y.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(b.Z, { className: O.avatarPlaceholder }, t))]
                               }),
-                          !t && (0, r.jsx)(C, { numberOfLockedAvatarSlots: w })
+                          !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: S })
                       ]
                   })
               ]
@@ -223,7 +223,6 @@ function E(e) {
         className: i()(O.container, t),
         children: [
             (0, r.jsxs)('div', {
-                className: O.text,
                 children: [
                     (0, r.jsx)(c.vwX, {
                         className: O.recentAvatarsHeading,

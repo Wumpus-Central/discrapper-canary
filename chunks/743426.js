@@ -9,10 +9,10 @@ var r = n(264344),
     u = n(501950),
     d = n(992774),
     f = n(656795),
-    p = n(650886),
-    _ = n(65154),
+    _ = n(650886),
+    p = n(65154),
     h = n(149396);
-function m(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
@@ -283,7 +283,7 @@ class O extends a.Z {
         let { frameRate: r, resolution: i } = e.quality,
             o = i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
             a = i,
-            { id: l, soundshareId: c, useLoopback: u, useVideoHook: f, useGraphicsCapture: p, useQuartzCapturer: _, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
+            { id: l, soundshareId: c, useLoopback: u, useVideoHook: f, useGraphicsCapture: _, useQuartzCapturer: p, allowScreenCaptureKit: g, hdrCaptureMode: m } = e.desktopDescription;
         n.setOnClipsRecordingEvent((t) => {
             this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(l, ' and sound ').concat(c, '.')), t === h.Pf.GoLiveEnded ? this.emit(s.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(s.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, l, c);
         }),
@@ -291,10 +291,10 @@ class O extends a.Z {
                 void 0 === t ||
                 t.call(n, {
                     useVideoHook: f,
-                    useGraphicsCapture: p,
-                    useQuartzCapturer: _,
-                    allowScreenCaptureKit: m,
-                    hdrCaptureMode: g,
+                    useGraphicsCapture: _,
+                    useQuartzCapturer: p,
+                    allowScreenCaptureKit: g,
+                    hdrCaptureMode: m,
                     soundshareLoopback: u,
                     frameRate: r,
                     width: o,
@@ -322,7 +322,7 @@ class O extends a.Z {
         return new Promise((n) => {
             null != (0, d.zS)().getScreenPreviews
                 ? (0, d.zS)().getScreenPreviews(e, t, (e) => {
-                      n(e.map((e, t) => v(g({}, e), { name: 'Screen ' + (t + 1) })));
+                      n(e.map((e, t) => v(m({}, e), { name: 'Screen ' + (t + 1) })));
                   })
                 : n([]);
         });
@@ -491,10 +491,10 @@ class O extends a.Z {
               n);
     }
     setUseDirectVideo(e) {
-        p.Z.useDirectVideo = e;
+        _.Z.useDirectVideo = e;
     }
     setOnVideoContainerResized(e) {
-        p.Z.onContainerResized = e;
+        _.Z.onContainerResized = e;
     }
     setMaxSyncDelayOverride(e) {
         let { setMaxSyncDelayOverride: t } = (0, d.zS)();
@@ -559,8 +559,8 @@ class O extends a.Z {
     setSidechainCompressionStrength(e) {
         var t, n;
         let r = 100 - e,
-            i = y(r, _.Zq, _.WA),
-            o = y(r, _.QO, _.JA);
+            i = y(r, p.Zq, p.WA),
+            o = y(r, p.QO, p.JA);
         null === (t = (n = (0, d.zS)()).applySidechainCompressionSettings) ||
             void 0 === t ||
             t.call(n, {
@@ -593,37 +593,37 @@ class O extends a.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, a;
+        var e, t, n, r, i, a, c;
         super(),
             (e = this),
-            m(this, 'Video', p.Z),
-            m(this, 'Camera', f.Z),
-            m(this, 'videoInputDeviceId', h.Av),
-            m(this, 'connections', new Set()),
-            m(this, 'lastVoiceActivity', -1),
-            m(this, 'audioSubsystem', 'standard'),
-            m(this, 'audioLayer', ''),
-            m(this, 'deviceChangeGeneration', 0),
-            m(this, 'consecutiveWatchdogFailures', 0),
-            m(this, 'codecSurvey', null),
-            m(this, 'logger', new o.Yd('MediaEngineNative')),
-            m(this, 'handleDeviceChange', function () {
+            g(this, 'Video', _.Z),
+            g(this, 'Camera', f.Z),
+            g(this, 'videoInputDeviceId', h.Av),
+            g(this, 'connections', new Set()),
+            g(this, 'lastVoiceActivity', -1),
+            g(this, 'audioSubsystem', 'standard'),
+            g(this, 'audioLayer', ''),
+            g(this, 'deviceChangeGeneration', 0),
+            g(this, 'consecutiveWatchdogFailures', 0),
+            g(this, 'codecSurvey', null),
+            g(this, 'logger', new o.Yd('MediaEngineNative')),
+            g(this, 'handleDeviceChange', function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
                 e.deviceChangeGeneration++, e.emit(s.aB.DeviceChange, (0, u.C1)(h.h7.AUDIO_INPUT, t), (0, u.C1)(h.h7.AUDIO_OUTPUT, n), (0, u.C1)(h.h7.VIDEO_INPUT, r));
             }),
-            m(this, 'handleVolumeChange', (e, t) => {
+            g(this, 'handleVolumeChange', (e, t) => {
                 this.emit(s.aB.VolumeChange, e * h.Qx, t * h.Qx);
             }),
-            m(this, 'handleVoiceActivity', (e, t) => {
+            g(this, 'handleVoiceActivity', (e, t) => {
                 let n = Date.now();
                 this.listenerCount(s.aB.VoiceActivity) > 0 && (-1 === this.lastVoiceActivity || Date.now() - this.lastVoiceActivity > 20) && ((this.lastVoiceActivity = n), this.emit(s.aB.VoiceActivity, e, t));
             }),
-            m(this, 'handleActiveSinksChange', (e, t) => {
+            g(this, 'handleActiveSinksChange', (e, t) => {
                 this.connections.forEach((n) => n.setHasActiveVideoOutputSink(e, t, 'MediaEngineNative.handleActiveSinksChange'));
             }),
-            m(this, 'handleNewListener', (e) => {
+            g(this, 'handleNewListener', (e) => {
                 switch (e) {
                     case s.aB.VoiceActivity:
                         null != (0, d.zS)().setEmitVADLevel2 ? (0, d.zS)().setEmitVADLevel2(!0) : (0, d.zS)().setEmitVADLevel(!0, !1, {});
@@ -636,39 +636,39 @@ class O extends a.Z {
                         });
                 }
             }),
-            m(this, 'handleRemoveListener', (e) => {
+            g(this, 'handleRemoveListener', (e) => {
                 e === s.aB.VoiceActivity && (null != (0, d.zS)().setEmitVADLevel2 ? (0, d.zS)().setEmitVADLevel2(this.listenerCount(s.aB.VoiceActivity) > 0) : (0, d.zS)().setEmitVADLevel(this.listenerCount(s.aB.VoiceActivity) > 0, !1, {}));
             }),
-            m(this, 'handleVideoInputInitialization', (e) => {
+            g(this, 'handleVideoInputInitialization', (e) => {
                 this.emit(s.aB.VideoInputInitialized, e);
             }),
-            m(this, 'handleAudioInputInitialization', (e) => {
+            g(this, 'handleAudioInputInitialization', (e) => {
                 this.emit(s.aB.AudioInputInitialized, e);
             }),
-            m(this, 'handleNativeScreenSharePickerUpdate', (e) => {
+            g(this, 'handleNativeScreenSharePickerUpdate', (e) => {
                 this.emit(s.aB.NativeScreenSharePickerUpdate, e);
             }),
-            m(this, 'handleNativeScreenSharePickerCancel', (e) => {
+            g(this, 'handleNativeScreenSharePickerCancel', (e) => {
                 this.emit(s.aB.NativeScreenSharePickerCancel, e);
             }),
-            m(this, 'handleNativeScreenSharePickerError', (e) => {
+            g(this, 'handleNativeScreenSharePickerError', (e) => {
                 this.emit(s.aB.NativeScreenSharePickerError, e);
             }),
-            m(this, 'handleAudioDeviceModuleErrorCallback', (e, t) => {
+            g(this, 'handleAudioDeviceModuleErrorCallback', (e, t) => {
                 -100 !== e && this.emit(s.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
-        let c = (0, d.zS)();
-        c.setDeviceChangeCallback(this.handleDeviceChange),
-            c.setVolumeChangeCallback(this.handleVolumeChange),
-            c.setOnVoiceCallback(this.handleVoiceActivity),
-            null === (t = c.setVideoInputInitializationCallback) || void 0 === t || t.call(c, this.handleVideoInputInitialization),
-            null === (n = c.setAudioInputInitializationCallback) || void 0 === n || n.call(c, this.handleAudioInputInitialization),
-            c.setTransportOptions({
+        let p = (0, d.zS)();
+        p.setDeviceChangeCallback(this.handleDeviceChange),
+            p.setVolumeChangeCallback(this.handleVolumeChange),
+            p.setOnVoiceCallback(this.handleVoiceActivity),
+            null === (t = p.setVideoInputInitializationCallback) || void 0 === t || t.call(p, this.handleVideoInputInitialization),
+            null === (n = p.setAudioInputInitializationCallback) || void 0 === n || n.call(p, this.handleAudioInputInitialization),
+            p.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1
             }),
-            null === (r = c.setNativeScreenSharePickerCallbacks) || void 0 === r || r.call(c, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
-            null === (i = c.setAudioDeviceModuleErrorCallback) || void 0 === i || i.call(c, this.handleAudioDeviceModuleErrorCallback),
+            null === (r = p.setNativeScreenSharePickerCallbacks) || void 0 === r || r.call(p, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (i = p.setAudioDeviceModuleErrorCallback) || void 0 === i || i.call(p, this.handleAudioDeviceModuleErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -676,9 +676,10 @@ class O extends a.Z {
                       (this.audioSubsystem = e), (this.audioLayer = t);
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
-            null != c.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            null != c.setActiveSinksChangeCallback && c.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            null === (a = c.setLoopbackPlaybackGainMultiplier) || void 0 === a || a.call(c, h.Jk),
+            null != p.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
+            null != p.setActiveSinksChangeCallback && p.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null === (a = p.setLoopbackPlaybackGainMultiplier) || void 0 === a || a.call(p, h.Jk),
+            null === (c = p.setVoiceFiltersFailedCallback) || void 0 === c || c.call(p, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
             (0, l.Z)(this);
     }
 }
