@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(653041);
+n.d(t, { Z: () => y }), n(653041);
 var r = n(544891),
     i = n(433517),
     a = n(570140),
@@ -7,8 +7,9 @@ var r = n(544891),
     s = n(70956),
     c = n(358085),
     d = n(960048),
-    u = n(998502);
-function p(e, t, n) {
+    u = n(998502),
+    p = n(246947);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,12 +22,13 @@ function p(e, t, n) {
         e
     );
 }
-let m = +s.Z.Millis.HOUR,
-    f = 7 * s.Z.Millis.DAY,
-    h = +s.Z.Millis.DAY,
-    g = i.K.get('lastNonRequiredUpdateShown', Date.now()),
-    _ = new l.Z('AutoUpdateManager');
-class b {
+let f = +s.Z.Millis.HOUR,
+    h = 7 * s.Z.Millis.DAY,
+    g = +s.Z.Millis.DAY,
+    _ = i.K.get('lastNonRequiredUpdateShown', Date.now()),
+    b = (0, p.W)({ location: 'auto_update_manager' }).nativeUpdateCount,
+    v = new l.Z('AutoUpdateManager');
+class y {
     destroy() {
         clearInterval(this._checkInterval);
     }
@@ -35,7 +37,7 @@ class b {
     }
     async _requestNewUpdaterBootstrap() {
         let e;
-        _.log('Bootstrapping new updater host...');
+        v.log('Bootstrapping new updater host...');
         try {
             await u.ZP.ensureModule('discord_updater_bootstrap'), (e = u.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e);
         } catch (e) {
@@ -45,24 +47,24 @@ class b {
         try {
             this._handleCheckingForUpdates(), await e.bootstrap(u.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.hasNativeUpdate = !0), this._handleUpdateDownloaded(!0);
         } catch (e) {
-            _.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), d.Z.captureException(e);
+            v.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), d.Z.captureException(e);
         }
     }
     _emitCallbacks() {
         this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
     }
-    constructor(e = m) {
+    constructor(e = f) {
         var t = this;
-        p(this, 'updateAvailable', !1),
-            p(this, 'hasNativeUpdate', !1),
-            p(this, 'nativeUpdatesDownloaded', 0),
-            p(this, '_checkInterval', void 0),
-            p(this, '_callbacks', []),
-            p(this, '_bootstrapper', null),
-            p(this, 'checkForUpdates', function () {
+        m(this, 'updateAvailable', !1),
+            m(this, 'hasNativeUpdate', !1),
+            m(this, 'nativeUpdatesDownloaded', 0),
+            m(this, '_checkInterval', void 0),
+            m(this, '_callbacks', []),
+            m(this, '_bootstrapper', null),
+            m(this, 'checkForUpdates', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     n = 'win32' === (0, c.getPlatformName)(),
-                    r = n && t.nativeUpdatesDownloaded < 1;
+                    r = n && t.nativeUpdatesDownloaded < b;
                 return (
                     (e || !t.hasNativeUpdate || r) && (c.isPlatformEmbedded ? (n && u.ZP.canBootstrapNewUpdater ? t._requestNewUpdaterBootstrap() : u.ZP.send('CHECK_FOR_UPDATES', { allowMultipleUpdates: !1 })) : t._handleNativeUpdateNotAvailable()),
                     new Promise((e) => {
@@ -70,10 +72,10 @@ class b {
                     })
                 );
             }),
-            p(this, '_handleCheckingForUpdates', () => {
+            m(this, '_handleCheckingForUpdates', () => {
                 a.Z.dispatch({ type: 'CHECKING_FOR_UPDATES' });
             }),
-            p(this, '_handleNativeUpdateNotAvailable', () => {
+            m(this, '_handleNativeUpdateNotAvailable', () => {
                 this._handleCheckingForUpdates(),
                     r.tn
                         .get({
@@ -84,31 +86,31 @@ class b {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '7a9377ff0d2d5723d1645b57caf0963b0b1a4f0e' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '7311589e5b7246bcad776d74533406deb243cb99' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, o.fD)()) return this._handleUpdateDownloaded(!1);
-                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : h;
-                                if (Date.now() - g > t) return i.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
+                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : g;
+                                if (Date.now() - _ > t) return i.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
                             },
                             () => this._handleUpdateError()
                         );
             }),
-            p(this, '_handleUpdateNotAvailable', () => {
+            m(this, '_handleUpdateNotAvailable', () => {
                 a.Z.dispatch({ type: 'UPDATE_NOT_AVAILABLE' }), this._emitCallbacks();
             }),
-            p(this, '_handleUpdateAvailable', (e) => {
+            m(this, '_handleUpdateAvailable', (e) => {
                 (this.updateAvailable = !0), (this.hasNativeUpdate = e), a.Z.dispatch({ type: 'UPDATE_AVAILABLE' });
             }),
-            p(this, '_handleUpdateManually', () => {
+            m(this, '_handleUpdateManually', () => {
                 (this.updateAvailable = !0), (this.hasNativeUpdate = !0), a.Z.dispatch({ type: 'UPDATE_MANUALLY' });
             }),
-            p(this, '_handleUpdateError', (e) => {
+            m(this, '_handleUpdateError', (e) => {
                 (this.updateAvailable = !1),
                     a.Z.dispatch({
                         type: 'UPDATE_ERROR',
                         message: e
                     });
             }),
-            p(this, '_handleUpdateDownloaded', (e, t, n, r, i) => {
+            m(this, '_handleUpdateDownloaded', (e, t, n, r, i) => {
                 e && (this.nativeUpdatesDownloaded += 1),
                     this._handleUpdateAvailable(e),
                     a.Z.dispatch({
