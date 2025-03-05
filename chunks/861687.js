@@ -214,6 +214,9 @@ class em extends f.Z {
         let e = this._connectCompletedTime > 0 ? (0, p.zO)() - this._connectCompletedTime : 0;
         return e > 0 ? e : 0;
     }
+    getDurationSeconds() {
+        return this.getDuration() / 1000;
+    }
     getPacketStats() {
         var e;
         return null === (e = this._voiceQuality) || void 0 === e ? void 0 : e.getPacketStats();

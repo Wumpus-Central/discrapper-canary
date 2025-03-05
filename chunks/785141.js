@@ -1,7 +1,7 @@
 n.d(t, {
-    hp: () => E,
-    kr: () => m,
-    u: () => _
+    hp: () => S,
+    kr: () => O,
+    u: () => E
 }),
     n(47120),
     n(411104),
@@ -9,17 +9,22 @@ n.d(t, {
 var r = n(570140),
     i = n(710845),
     o = n(569545),
-    a = n(592125),
-    s = n(131951),
-    l = n(19780),
-    c = n(944486),
-    u = n(626135),
-    d = n(981631);
-let f = new i.Z('AVError');
-var _ = (function (e) {
+    a = n(361291),
+    s = n(592125),
+    l = n(131951),
+    c = n(19780),
+    u = n(936349),
+    d = n(944486),
+    f = n(959457),
+    _ = n(704806),
+    p = n(626135),
+    h = n(848479),
+    g = n(981631);
+let m = new i.Z('AVError');
+var E = (function (e) {
     return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), e;
 })({});
-let p = {
+let v = {
     'stream-soundshare-failed': {
         errorCode: 1001,
         severity: 'warning',
@@ -71,57 +76,79 @@ let p = {
         category: 'debug'
     }
 };
-var h = (function (e) {
+var b = (function (e) {
     return (e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), e;
 })({});
-function g(e, t) {
-    var n, r, i, f, _, h, g, m, E, v, b, y, O, S, I, T, N, A, C, R, P;
-    let D = null !== (h = t.channelId) && void 0 !== h ? h : c.Z.getVoiceChannelId(),
-        w = a.Z.getChannel(D),
-        L = null != t.streamKey ? (0, o.my)(t.streamKey) : null,
-        x = {
+function y(e, t) {
+    var n;
+    let r = null !== (n = t.channelId) && void 0 !== n ? n : d.Z.getVoiceChannelId(),
+        i = s.Z.getChannel(r),
+        m = null != t.streamKey ? (0, o.my)(t.streamKey) : null,
+        E = null != t.streamKey ? f.Z.getRTCConnection(t.streamKey) : null,
+        { resolution: b, fps: y } = a.Z.getState();
+    (0, _.q)().then((n) => {
+        var o, a, s, d, f, _, O, S, I, T, N, A, C, R, P, D, w, L, x, M, k, j, U, G, B, V, F, Z, H, W, Y, K, z, q, Q, X, J;
+        let $ = {
             error_name: e.valueOf(),
-            error_code: p[e].errorCode,
-            error_severity: p[e].severity,
-            error_category: p[e].category,
-            underlying_error: null !== (g = t.underlyingError) && void 0 !== g ? g : null,
-            error_message: null !== (m = t.errorMessage) && void 0 !== m ? m : null,
-            guild_id: null !== (E = null == w ? void 0 : w.guild_id) && void 0 !== E ? E : null,
-            channel_id: null != D ? D : null,
-            channel_type: null !== (v = null == w ? void 0 : w.type) && void 0 !== v ? v : null,
-            rtc_connection_id: null !== (b = t.rtcConnectionId) && void 0 !== b ? b : null,
-            media_session_id: null !== (O = null !== (y = t.mediaSessionId) && void 0 !== y ? y : l.Z.getMediaSessionId()) && void 0 !== O ? O : null,
-            parent_media_session_id: null !== (S = t.parentMediaSessionId) && void 0 !== S ? S : null,
-            context: null !== (I = t.mediaContext) && void 0 !== I ? I : null,
-            voice_backend_version: null !== (T = null === (n = l.Z.getRTCConnection()) || void 0 === n ? void 0 : n.getVoiceVersion()) && void 0 !== T ? T : null,
-            rtc_worker_backend_version: null !== (N = null === (r = l.Z.getRTCConnection()) || void 0 === r ? void 0 : r.getRtcWorkerVersion()) && void 0 !== N ? N : null,
-            hardware_enabled: s.Z.getHardwareEncoding(),
-            audio_input_device_name: null !== (A = t.audioInputDeviceName) && void 0 !== A ? A : null === (i = s.Z.getInputDevices()[s.Z.getInputDeviceId()]) || void 0 === i ? void 0 : i.name,
-            audio_output_device_name: null !== (C = t.audioOutputDeviceName) && void 0 !== C ? C : null === (f = s.Z.getOutputDevices()[s.Z.getOutputDeviceId()]) || void 0 === f ? void 0 : f.name,
-            video_device_name: null !== (R = t.videoDeviceName) && void 0 !== R ? R : null === (_ = s.Z.getVideoDevices()[s.Z.getVideoDeviceId()]) || void 0 === _ ? void 0 : _.name,
-            audio_subsystem: s.Z.getMediaEngine().getAudioSubsystem(),
-            audio_layer: s.Z.getMediaEngine().getAudioLayer(),
-            audio_input_mode: s.Z.getSettings().mode,
-            automatic_audio_input_sensitivity_enabled: s.Z.getSettings().modeOptions.autoThreshold,
-            audio_input_sensitivity: s.Z.getSettings().modeOptions.threshold,
-            echo_cancellation_enabled: s.Z.getEchoCancellation(),
-            noise_suppression_enabled: s.Z.getNoiseSuppression(),
-            noise_cancellation_enabled: s.Z.getNoiseCancellation(),
-            automatic_gain_control_enabled: s.Z.getAutomaticGainControl(),
-            sidechain_compression_enabled: s.Z.getSidechainCompression(),
-            input_volume: s.Z.getInputVolume(),
-            output_volume: s.Z.getOutputVolume(),
-            sender_user_id: null !== (P = null == L ? void 0 : L.ownerId) && void 0 !== P ? P : null
+            error_code: v[e].errorCode,
+            error_severity: v[e].severity,
+            error_category: v[e].category,
+            underlying_error: null !== (I = t.underlyingError) && void 0 !== I ? I : null,
+            error_message: null !== (T = t.errorMessage) && void 0 !== T ? T : null,
+            guild_id: null !== (N = null == i ? void 0 : i.guild_id) && void 0 !== N ? N : null,
+            channel_id: null != r ? r : null,
+            channel_type: null !== (A = null == i ? void 0 : i.type) && void 0 !== A ? A : null,
+            rtc_connection_id: null !== (C = t.rtcConnectionId) && void 0 !== C ? C : null,
+            media_session_id: null !== (P = null !== (R = t.mediaSessionId) && void 0 !== R ? R : c.Z.getMediaSessionId()) && void 0 !== P ? P : null,
+            parent_media_session_id: null !== (D = t.parentMediaSessionId) && void 0 !== D ? D : null,
+            context: null !== (w = t.mediaContext) && void 0 !== w ? w : null,
+            voice_backend_version: null !== (L = null === (o = c.Z.getRTCConnection()) || void 0 === o ? void 0 : o.getVoiceVersion()) && void 0 !== L ? L : null,
+            rtc_worker_backend_version: null !== (x = null === (a = c.Z.getRTCConnection()) || void 0 === a ? void 0 : a.getRtcWorkerVersion()) && void 0 !== x ? x : null,
+            guild_region: null !== (M = u.Z.getRegion(c.Z.getHostname())) && void 0 !== M ? M : null,
+            hostname: null !== (k = c.Z.getHostname()) && void 0 !== k ? k : null,
+            duration: null !== (j = null != t.streamKey ? (null == E ? void 0 : E.getDurationSeconds()) : null === (s = c.Z.getRTCConnection()) || void 0 === s ? void 0 : s.getDurationSeconds()) && void 0 !== j ? j : null,
+            sender_user_id: null !== (U = null == m ? void 0 : m.ownerId) && void 0 !== U ? U : null,
+            stream_region: null !== (G = null == E ? void 0 : E.getRegion()) && void 0 !== G ? G : null,
+            stream_source_type: null !== (B = null == E ? void 0 : null === (d = E.analyticsContext) || void 0 === d ? void 0 : d.streamSourceType) && void 0 !== B ? B : null,
+            num_stream_viewers: null !== (V = null == E ? void 0 : null === (f = E.analyticsContext) || void 0 === f ? void 0 : f.numViewers) && void 0 !== V ? V : null,
+            video_input_resolution_height: null != b ? b : null,
+            video_input_frame_rate: null != y ? y : null,
+            cpu_brand: null !== (F = null == n ? void 0 : n.cpu_brand) && void 0 !== F ? F : null,
+            cpu_vendor: null !== (Z = null == n ? void 0 : n.cpu_vendor) && void 0 !== Z ? Z : null,
+            cpu_memory: null !== (H = null == n ? void 0 : n.cpu_memory) && void 0 !== H ? H : null,
+            gpu_brand: null !== (W = null == n ? void 0 : n.gpu_brand) && void 0 !== W ? W : null,
+            gpu_count: null !== (Y = null == n ? void 0 : n.gpu_count) && void 0 !== Y ? Y : null,
+            gpu_memory: null !== (K = null == n ? void 0 : n.gpu_memory) && void 0 !== K ? K : null,
+            cpu_usage: null !== (z = h.Z.getCurrentCPUUsagePercent()) && void 0 !== z ? z : null,
+            memory_usage: null !== (q = h.Z.getCurrentMemoryUsageKB()) && void 0 !== q ? q : null,
+            hardware_enabled: l.Z.getHardwareEncoding(),
+            audio_input_device_name: null !== (Q = t.audioInputDeviceName) && void 0 !== Q ? Q : null === (_ = l.Z.getInputDevices()[l.Z.getInputDeviceId()]) || void 0 === _ ? void 0 : _.name,
+            audio_output_device_name: null !== (X = t.audioOutputDeviceName) && void 0 !== X ? X : null === (O = l.Z.getOutputDevices()[l.Z.getOutputDeviceId()]) || void 0 === O ? void 0 : O.name,
+            video_device_name: null !== (J = t.videoDeviceName) && void 0 !== J ? J : null === (S = l.Z.getVideoDevices()[l.Z.getVideoDeviceId()]) || void 0 === S ? void 0 : S.name,
+            audio_subsystem: l.Z.getMediaEngine().getAudioSubsystem(),
+            automatic_audio_subsystem: l.Z.getSettings().automaticAudioSubsystem,
+            audio_layer: l.Z.getMediaEngine().getAudioLayer(),
+            audio_input_mode: l.Z.getSettings().mode,
+            automatic_audio_input_sensitivity_enabled: l.Z.getSettings().modeOptions.autoThreshold,
+            audio_input_sensitivity: l.Z.getSettings().modeOptions.threshold,
+            echo_cancellation_enabled: l.Z.getEchoCancellation(),
+            noise_suppression_enabled: l.Z.getNoiseSuppression(),
+            noise_cancellation_enabled: l.Z.getNoiseCancellation(),
+            automatic_gain_control_enabled: l.Z.getAutomaticGainControl(),
+            sidechain_compression_enabled: l.Z.getSidechainCompression(),
+            input_volume: l.Z.getInputVolume(),
+            output_volume: l.Z.getOutputVolume()
         };
-    u.default.track(d.rMx.AV_ERROR_REPORTED, x);
+        p.default.track(g.rMx.AV_ERROR_REPORTED, $);
+    });
 }
-function m(e, t) {
-    if (null != t.underlyingError && !Object.values(h).includes(t.underlyingError)) {
-        f.error("Invalid underlying error string '".concat(t.underlyingError, "', must be member of AVUnderlyingError"));
+function O(e, t) {
+    if (null != t.underlyingError && !Object.values(b).includes(t.underlyingError)) {
+        m.error("Invalid underlying error string '".concat(t.underlyingError, "', must be member of AVUnderlyingError"));
         return;
     }
-    f.error('AV error reported: '.concat(e, ' ').concat(JSON.stringify(t)));
-    let n = p[e];
+    m.error('AV error reported: '.concat(e, ' ').concat(JSON.stringify(t)));
+    let n = v[e];
     r.Z.dispatch({
         type: 'REPORT_AV_ERROR',
         error: e,
@@ -130,17 +157,17 @@ function m(e, t) {
         category: n.category,
         context: t
     }),
-        g(e, t);
+        y(e, t);
 }
-function E(e) {
-    return p[e];
+function S(e) {
+    return v[e];
 }
 !(function () {
-    let e = Object.values(p).map((e) => e.errorCode),
+    let e = Object.values(v).map((e) => e.errorCode),
         t = new Set(e);
     if (e.length !== t.size) {
         let t = e.filter((t, n) => e.indexOf(t) !== n),
-            n = Object.entries(p)
+            n = Object.entries(v)
                 .filter((e) => {
                     let [n, r] = e;
                     return t.includes(r.errorCode);
