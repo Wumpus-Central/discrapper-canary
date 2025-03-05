@@ -1,19 +1,20 @@
 n.d(t, {
     FD: () => m,
     I5: () => S,
+    KP: () => A,
     Mn: () => y,
-    P6: () => D,
+    P6: () => w,
     Re: () => I,
     S2: () => b,
     UZ: () => T,
     V3: () => O,
-    W3: () => P,
+    W3: () => D,
     Zy: () => E,
-    b9: () => C,
+    b9: () => R,
     cV: () => N,
-    si: () => R,
+    si: () => P,
     ss: () => v,
-    xn: () => A
+    xn: () => C
 });
 var r = n(544891),
     i = n(433517),
@@ -111,7 +112,7 @@ async function b(e) {
     );
 }
 function y(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: m, avatarDecoration: E, newPassword: v, globalName: y } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: m, avatarDecoration: E, newPassword: v, globalName: y, nameplate: O } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, u.Z)(
@@ -131,7 +132,7 @@ function y(e) {
                     },
                     e
                 );
-                null === E && (a.avatar_decoration_id = null), null != E && ((a.avatar_decoration_id = E.id), (a.avatar_decoration_sku_id = E.skuId));
+                null === E && (a.avatar_decoration_id = null), null != E && ((a.avatar_decoration_id = E.id), (a.avatar_decoration_sku_id = E.skuId)), null === O && (a.nameplate_id = null), null != O && ((a.nameplate_id = O.id), (a.nameplate_sku_id = O.skuId));
                 let l = i.K.get(f.JkL),
                     c = (0, _.xJ)();
                 null != c && null != l && ((a.push_provider = c), (a.push_token = l));
@@ -210,19 +211,25 @@ function N(e) {
 }
 function A(e) {
     a.Z.dispatch({
+        type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
+        nameplate: e
+    });
+}
+function C(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function C() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function R() {
+function P() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function P() {
+function D() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function D() {
+function w() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

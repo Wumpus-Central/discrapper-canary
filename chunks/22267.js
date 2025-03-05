@@ -17,18 +17,20 @@ var i = n(120356),
     m = n(862078),
     E = n(660097);
 let v = (e) => {
-    let { user: t, nameplate: n, className: i, isHighlighted: v, showStatus: b, showWumpus: y } = e,
-        O = (0, a.e7)([f.Z], () => (0, s.wj)(f.Z.theme)),
-        S = (0, a.e7)([_.Z], () => _.Z.getStatus(t.id));
+    let { user: t, nameplate: n, nameplateData: i, className: v, isHighlighted: b, showStatus: y, showWumpus: O } = e,
+        S = (0, a.e7)([f.Z], () => (0, s.wj)(f.Z.theme)),
+        I = null != n ? (0, h.EU)(n) : i,
+        T = (0, a.e7)([_.Z], () => _.Z.getStatus(t.id));
     return (0, r.jsxs)('div', {
-        className: o()(i, m.nameplatePreview),
-        style: { color: O ? 'white' : 'black' },
+        className: o()(v, m.nameplatePreview),
+        style: { color: S ? 'white' : 'black' },
         children: [
-            (0, r.jsx)(d.Z, {
-                nameplate: (0, h.EU)(n),
-                hovered: v
-            }),
-            y
+            null != I &&
+                (0, r.jsx)(d.Z, {
+                    nameplate: I,
+                    hovered: b
+                }),
+            O
                 ? (0, r.jsx)(c.Z, {
                       avatar: (0, r.jsx)(l.qEK, {
                           src: E,
@@ -43,7 +45,7 @@ let v = (e) => {
                           user: t,
                           guildId: null,
                           avatarSize: l.EFr.SIZE_32,
-                          status: b ? S : void 0,
+                          status: y ? T : void 0,
                           'aria-hidden': !0
                       }),
                       name: p.ZP.getName(null, null, t),

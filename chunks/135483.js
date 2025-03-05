@@ -1,4 +1,7 @@
-n.d(t, { Z: () => s });
+n.d(t, {
+    Z: () => l,
+    k: () => s
+});
 var r = n(979554),
     i = n(656698);
 function o(e, t, n) {
@@ -30,9 +33,10 @@ function a(e) {
     }
     return e;
 }
-class s extends i.Z {
+let s = (e) => e instanceof l;
+class l extends i.Z {
     static fromServer(e) {
-        return new s(a({}, super.fromServer(e), e));
+        return new l(a({}, super.fromServer(e), e));
     }
     constructor(e) {
         super(e), o(this, 'asset', void 0), o(this, 'label', void 0), o(this, 'palette', void 0), (this.type = r.Z.NAMEPLATE), (this.asset = e.asset), (this.label = e.label), (this.palette = e.palette);
