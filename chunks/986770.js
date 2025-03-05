@@ -45,10 +45,6 @@ class l {
         var t = this;
         r(this, 'name', void 0),
             r(this, 'nativeLoggerEnabled', void 0),
-            r(this, 'verbose', function (e) {
-                for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-                console.info(t.name, e, ...r);
-            }),
             r(this, 'info', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
                 a(t.name, e, ...r), console.info(t.name, e, ...r);
@@ -60,6 +56,9 @@ class l {
             r(this, 'error', function (e) {
                 for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
                 a(t.name, e, ...r), console.error(t.name, 'error', e, ...r);
+            }),
+            r(this, 'verbose', function (e) {
+                for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
             }),
             r(this, 'logDangerously', function (e) {
                 for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
