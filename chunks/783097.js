@@ -1,22 +1,23 @@
 n.d(t, {
-    $d: () => N,
-    BQ: () => T,
-    Cb: () => L,
-    Hu: () => M,
-    L1: () => B,
-    Ow: () => G,
-    Wx: () => I,
-    X: () => Z,
-    XZ: () => j,
-    Y$: () => D,
-    Yn: () => k,
-    jD: () => A,
-    lf: () => P,
-    pF: () => U,
-    sl: () => x,
-    vJ: () => R,
-    yJ: () => w,
-    ye: () => C
+    $d: () => C,
+    BQ: () => A,
+    Cb: () => j,
+    Hu: () => U,
+    L1: () => Z,
+    Ow: () => F,
+    WA: () => L,
+    Wx: () => N,
+    X: () => H,
+    XZ: () => B,
+    Y$: () => M,
+    Yn: () => G,
+    jD: () => R,
+    lf: () => w,
+    pF: () => V,
+    sl: () => k,
+    vJ: () => D,
+    yJ: () => x,
+    ye: () => P
 }),
     n(266796),
     n(789020),
@@ -28,19 +29,21 @@ n.d(t, {
 var r = n(912370),
     i = n(668781),
     o = n(904245),
-    a = n(895924),
-    s = n(667204),
-    l = n(957730),
-    c = n(973616),
-    u = n(768581),
-    d = n(585483),
-    f = n(630388),
-    p = n(541099),
-    _ = n(827498),
-    h = n(981631),
-    m = n(689079),
-    g = n(388032);
-function E(e, t, n) {
+    a = n(761122),
+    s = n(895924),
+    l = n(667204),
+    c = n(957730),
+    u = n(973616),
+    d = n(768581),
+    f = n(585483),
+    _ = n(630388),
+    p = n(358085),
+    h = n(541099),
+    g = n(827498),
+    m = n(981631),
+    E = n(689079),
+    v = n(388032);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +56,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,12 +67,12 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,29 +84,29 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,73 +115,78 @@ function S(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = { id: m.bi.BUILT_IN };
-function T(e) {
-    return e.id !== m.bi.BUILT_IN;
-}
-function N(e) {
-    return T(e) ? e.name : g.NW.string(g.t.UB2gGx);
-}
+let N = { id: E.bi.BUILT_IN };
 function A(e) {
-    return T(e) ? e.description : g.NW.string(g.t.X9fusr);
+    return e.id !== E.bi.BUILT_IN;
 }
 function C(e) {
-    var t;
-    return T(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.EMBEDDED);
+    return A(e) ? e.name : v.NW.string(v.t.UB2gGx);
 }
 function R(e) {
-    var t;
-    return T(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PARTNER);
+    return A(e) ? e.description : v.NW.string(v.t.X9fusr);
 }
 function P(e) {
     var t;
-    return T(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PROMOTED);
-}
-function w(e) {
-    return T(e) && C(e) ? (e instanceof c.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return A(e) && (0, _.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, m.udG.EMBEDDED);
 }
 function D(e) {
-    let { command: t, optionValues: n, context: r, commandTargetId: c, maxSizeCallback: u, sectionName: d, commandOrigin: f = a.bB.APPLICATION_LAUNCHER } = e,
+    var t;
+    return A(e) && (0, _.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, m.udG.PARTNER);
+}
+function w(e) {
+    var t;
+    return A(e) && (0, _.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, m.udG.PROMOTED);
+}
+function L(e) {
+    let t = x(e),
+        n = null == t ? void 0 : t.client_platform_config[(0, a.Z)((0, p.getOS)())];
+    return (null == n ? void 0 : n.label_until) != null && Date.now() < Date.parse(null == n ? void 0 : n.label_until) ? n.label_type : null;
+}
+function x(e) {
+    return A(e) && P(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+}
+function M(e) {
+    let { command: t, optionValues: n, context: r, commandTargetId: a, maxSizeCallback: u, sectionName: d, commandOrigin: f = s.bB.APPLICATION_LAUNCHER } = e,
         { channel: _ } = r,
-        h = async () => {
+        p = async () => {
             try {
-                let i = await (0, s.Z)({
+                let i = await (0, l.Z)({
                     command: t,
                     optionValues: n,
                     context: r,
-                    commandTargetId: c,
+                    commandTargetId: a,
                     maxSizeCallback: u,
                     commandOrigin: f,
                     sectionName: d,
-                    source: p.Z.entrypoint()
+                    source: h.Z.entrypoint()
                 });
-                if (t.inputType === a.iw.BUILT_IN_TEXT && null != i && null != r.channel) {
+                if (t.inputType === s.iw.BUILT_IN_TEXT && null != i && null != r.channel) {
                     var e;
-                    let t = l.ZP.parse(_, i.content);
+                    let t = c.ZP.parse(_, i.content);
                     (t.tts = null !== (e = i.tts) && void 0 !== e && e), o.Z.sendMessage(r.channel.id, t);
                 }
             } catch (e) {
                 throw (
                     (i.Z.show({
-                        title: g.NW.string(g.t['aHO//v']),
-                        body: g.NW.string(g.t.kuzKHB),
-                        confirmText: g.NW.string(g.t['5911LS']),
-                        onConfirm: () => h()
+                        title: v.NW.string(v.t['aHO//v']),
+                        body: v.NW.string(v.t.kuzKHB),
+                        confirmText: v.NW.string(v.t['5911LS']),
+                        onConfirm: () => p()
                     }),
                     e)
                 );
             }
         };
-    return h();
+    return p();
 }
-function x(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
-        r = O(t, ['fakeAppIconURL']);
-    return T(e)
+        r = I(t, ['fakeAppIconURL']);
+    return A(e)
         ? {
-              iconURL: u.ZP.getApplicationIconURL(
-                  y(v({}, r), {
+              iconURL: d.ZP.getApplicationIconURL(
+                  S(y({}, r), {
                       id: e.id,
                       icon: e.icon
                   })
@@ -188,32 +196,32 @@ function x(e) {
           }
         : {
               iconURL: null != n ? n : null,
-              name: g.NW.string(g.t.UB2gGx),
-              description: g.NW.string(g.t.X9fusr)
+              name: v.NW.string(v.t.UB2gGx),
+              description: v.NW.string(v.t.X9fusr)
           };
 }
-function L(e) {
-    return !!T(e) && (e instanceof c.ZP ? e.isMonetized : e.is_monetized);
-}
-function M(e) {
-    let t = w(e);
-    return null != t && t.displays_advertisements;
-}
-function k(e) {
-    return e === _._b.TEXT;
-}
 function j(e) {
-    return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
+    return !!A(e) && (e instanceof u.ZP ? e.isMonetized : e.is_monetized);
 }
 function U(e) {
+    let t = x(e);
+    return null != t && t.displays_advertisements;
+}
+function G(e) {
+    return e === g._b.TEXT;
+}
+function B(e) {
+    return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
+}
+function V(e) {
     let t = [];
     for (let n of e) {
-        let e = n.application_directory_collection_items.filter((e) => e.type === r.C.APPLICATION && C(e.application));
-        0 !== e.length && t.push(y(v({}, n), { application_directory_collection_items: e }));
+        let e = n.application_directory_collection_items.filter((e) => e.type === r.C.APPLICATION && P(e.application));
+        0 !== e.length && t.push(S(y({}, n), { application_directory_collection_items: e }));
     }
     return t;
 }
-function G(e) {
+function F(e) {
     return {
         applicationId: e.id,
         customInstallUrl: e.customInstallUrl,
@@ -221,8 +229,8 @@ function G(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function B(e) {
-    return e instanceof c.ZP
+function Z(e) {
+    return e instanceof u.ZP
         ? {
               applicationId: e.id,
               customInstallUrl: e.customInstallUrl,
@@ -236,6 +244,6 @@ function B(e) {
               integrationTypesConfig: e.integration_types_config
           };
 }
-function Z(e) {
-    d.S.dispatchToLastSubscribed(h.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function H(e) {
+    f.S.dispatchToLastSubscribed(m.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }
