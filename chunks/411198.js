@@ -1,11 +1,11 @@
 n.d(t, {
     EO: () => E,
     Qs: () => h,
-    cL: () => g,
-    di: () => _,
+    cL: () => m,
+    di: () => p,
     rk: () => f,
-    sp: () => p,
-    tK: () => m,
+    sp: () => _,
+    tK: () => g,
     wD: () => d
 }),
     n(266796),
@@ -46,7 +46,7 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n, r, s, c, u, d, f, p, _, h, m, g, E;
+    var n, r, s, c, u, d, f, _, p, h, g, m, E;
     let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
         b = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
     if (null == e.properties) {
@@ -80,9 +80,9 @@ function d(e, t) {
         verificationLevel: null !== (u = e.properties.verification_level) && void 0 !== u ? u : l.sFg.NONE,
         explicitContentFilter: null !== (d = e.properties.explicit_content_filter) && void 0 !== d ? d : l.lxg.DISABLED,
         defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.bL.ALL_MESSAGES,
-        mfaLevel: null !== (p = e.properties.mfa_level) && void 0 !== p ? p : l.BpS.NONE,
+        mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.BpS.NONE,
         vanityURLCode: e.properties.vanity_url_code,
-        premiumTier: null !== (_ = e.properties.premium_tier) && void 0 !== _ ? _ : l.Eu4.NONE,
+        premiumTier: null !== (p = e.properties.premium_tier) && void 0 !== p ? p : l.Eu4.NONE,
         premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
         systemChannelFlags: e.properties.system_channel_flags,
         discoverySplash: e.properties.discovery_splash,
@@ -90,59 +90,60 @@ function d(e, t) {
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
         maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
-        maxVideoChannelUsers: null !== (m = e.properties.max_video_channel_users) && void 0 !== m ? m : -1,
-        maxMembers: null !== (g = e.properties.max_members) && void 0 !== g ? g : -1,
+        maxVideoChannelUsers: null !== (g = e.properties.max_video_channel_users) && void 0 !== g ? g : -1,
+        maxMembers: null !== (m = e.properties.max_members) && void 0 !== m ? m : -1,
         nsfwLevel: null !== (E = e.properties.nsfw_level) && void 0 !== E ? E : l.V_K.DEFAULT,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
-        profile: e.properties.profile
+        profile: e.properties.profile,
+        premiumFeatures: e.properties.premium_features
     };
     return null == t ? (0, o.gh)(y, a.ZP) : t.merge(y);
 }
 function f(e, t) {
     return new a.Bg(u({}, e, t));
 }
-function p(e, t) {
-    var n, r, i, o, a, s, c, u, d, f, p, _, h;
-    let g = null !== (n = e.properties) && void 0 !== n ? n : m(t),
+function _(e, t) {
+    var n, r, i, o, a, s, c, u, d, f, _, p, h;
+    let m = null !== (n = e.properties) && void 0 !== n ? n : g(t),
         E = {
             id: e.id,
-            name: null !== (r = g.name) && void 0 !== r ? r : '',
-            description: g.description,
-            icon: g.icon,
-            splash: g.splash,
-            banner: g.banner,
-            homeHeader: g.home_header,
-            features: new Set(null !== (i = g.features) && void 0 !== i ? i : []),
-            preferredLocale: null !== (o = g.preferred_locale) && void 0 !== o ? o : 'en-us',
-            ownerId: g.owner_id,
-            application_id: g.application_id,
-            afkChannelId: g.afk_channel_id,
-            afkTimeout: g.afk_timeout,
-            systemChannelId: g.system_channel_id,
-            verificationLevel: null !== (a = g.verification_level) && void 0 !== a ? a : l.sFg.NONE,
-            explicitContentFilter: null !== (s = g.explicit_content_filter) && void 0 !== s ? s : l.lxg.DISABLED,
-            defaultMessageNotifications: null !== (c = g.default_message_notifications) && void 0 !== c ? c : l.bL.ALL_MESSAGES,
-            mfaLevel: null !== (u = g.mfa_level) && void 0 !== u ? u : l.BpS.NONE,
-            vanityURLCode: g.vanity_url_code,
-            premiumTier: null !== (d = g.premium_tier) && void 0 !== d ? d : l.Eu4.NONE,
-            premiumProgressBarEnabled: g.premium_progress_bar_enabled || !1,
-            systemChannelFlags: g.system_channel_flags,
-            discoverySplash: g.discovery_splash,
-            rulesChannelId: g.rules_channel_id,
-            safetyAlertsChannelId: g.safety_alerts_channel_id,
-            publicUpdatesChannelId: g.public_updates_channel_id,
-            maxStageVideoChannelUsers: null !== (f = g.max_stage_video_channel_users) && void 0 !== f ? f : -1,
-            maxVideoChannelUsers: null !== (p = g.max_video_channel_users) && void 0 !== p ? p : -1,
-            maxMembers: null !== (_ = g.max_members) && void 0 !== _ ? _ : -1,
-            nsfwLevel: null !== (h = g.nsfw_level) && void 0 !== h ? h : l.V_K.DEFAULT,
-            hubType: g.hub_type,
-            latestOnboardingQuestionId: g.latest_onboarding_question_id,
-            profile: g.profile
+            name: null !== (r = m.name) && void 0 !== r ? r : '',
+            description: m.description,
+            icon: m.icon,
+            splash: m.splash,
+            banner: m.banner,
+            homeHeader: m.home_header,
+            features: new Set(null !== (i = m.features) && void 0 !== i ? i : []),
+            preferredLocale: null !== (o = m.preferred_locale) && void 0 !== o ? o : 'en-us',
+            ownerId: m.owner_id,
+            application_id: m.application_id,
+            afkChannelId: m.afk_channel_id,
+            afkTimeout: m.afk_timeout,
+            systemChannelId: m.system_channel_id,
+            verificationLevel: null !== (a = m.verification_level) && void 0 !== a ? a : l.sFg.NONE,
+            explicitContentFilter: null !== (s = m.explicit_content_filter) && void 0 !== s ? s : l.lxg.DISABLED,
+            defaultMessageNotifications: null !== (c = m.default_message_notifications) && void 0 !== c ? c : l.bL.ALL_MESSAGES,
+            mfaLevel: null !== (u = m.mfa_level) && void 0 !== u ? u : l.BpS.NONE,
+            vanityURLCode: m.vanity_url_code,
+            premiumTier: null !== (d = m.premium_tier) && void 0 !== d ? d : l.Eu4.NONE,
+            premiumProgressBarEnabled: m.premium_progress_bar_enabled || !1,
+            systemChannelFlags: m.system_channel_flags,
+            discoverySplash: m.discovery_splash,
+            rulesChannelId: m.rules_channel_id,
+            safetyAlertsChannelId: m.safety_alerts_channel_id,
+            publicUpdatesChannelId: m.public_updates_channel_id,
+            maxStageVideoChannelUsers: null !== (f = m.max_stage_video_channel_users) && void 0 !== f ? f : -1,
+            maxVideoChannelUsers: null !== (_ = m.max_video_channel_users) && void 0 !== _ ? _ : -1,
+            maxMembers: null !== (p = m.max_members) && void 0 !== p ? p : -1,
+            nsfwLevel: null !== (h = m.nsfw_level) && void 0 !== h ? h : l.V_K.DEFAULT,
+            hubType: m.hub_type,
+            latestOnboardingQuestionId: m.latest_onboarding_question_id,
+            profile: m.profile
         };
     return t.merge(E);
 }
-function _(e, t) {
+function p(e, t) {
     let n = {
         id: e.id,
         name: e.name,
@@ -200,7 +201,7 @@ function h(e) {
     };
     return new a.ZP(t);
 }
-function m(e) {
+function g(e) {
     return {
         id: e.id,
         name: e.name,
@@ -238,7 +239,7 @@ function m(e) {
         profile: e.profile
     };
 }
-function g(e) {
+function m(e) {
     var t;
     for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : [])), e.roles)) (0, s.cf)(e.roles[n]);
     return (0, o.gh)(e, a.ZP);
