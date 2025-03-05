@@ -3,6 +3,7 @@ e.exports = {
     modalCloseButton: 'modalCloseButton__57752',
     modalContent: 'modalContent__57752',
     editingContainer: 'editingContainer__57752',
+    errorContainer: 'errorContainer__57752',
     image: 'image__57752',
     rotationSupported: 'rotationSupported__57752',
     imageEnabled: 'imageEnabled__57752 image__57752',
