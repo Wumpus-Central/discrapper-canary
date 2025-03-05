@@ -15,7 +15,7 @@ var r = n(200651),
     f = n(651390),
     b = n(981631),
     x = n(388032),
-    j = n(870114);
+    j = n(653990);
 let N = {
     id: '0',
     name: '',
@@ -27,7 +27,8 @@ let N = {
     traits: [],
     gameApplicationIds: [],
     gameActivity: {},
-    visibility: s.k.RESTRICTED
+    visibility: s.k.RESTRICTED,
+    brandColorPrimary: null
 };
 function v(e) {
     let { pendingFields: t } = e,
@@ -131,9 +132,9 @@ function v(e) {
                                                   className: j.preview,
                                                   profile: S,
                                                   CTAOverride: (0, r.jsx)(o.zxk, {
+                                                      className: j.previewButton,
                                                       size: o.zxk.Sizes.SMALL,
                                                       fullWidth: !0,
-                                                      disabled: !0,
                                                       children: x.NW.string(x.t['7XdMW1'])
                                                   })
                                               })

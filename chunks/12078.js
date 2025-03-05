@@ -1,63 +1,128 @@
-n.d(t, { Z: () => N }), n(301563);
+n.d(t, { Z: () => y }), n(301563);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
     a = n.n(s),
     l = n(442837),
-    o = n(481060),
-    c = n(686369),
-    d = n(813197),
-    u = n(430824),
-    m = n(768581),
-    g = n(921948),
-    p = n(434404),
-    h = n(981631),
-    f = n(570911),
-    b = n(388032),
-    x = n(832306);
-function j(e) {
+    o = n(692547),
+    c = n(481060),
+    d = n(686369),
+    u = n(813197),
+    m = n(430824),
+    g = n(768581),
+    p = n(921948),
+    h = n(434404),
+    f = n(981631),
+    b = n(570911),
+    x = n(388032),
+    j = n(832306);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e) {
+    let { profile: t, canManageGuild: n, handleClick: i } = e,
+        s = (0, c.dQu)(o.Z.colors.BG_BASE_TERTIARY),
+        l = (0, d.q)(t, s.hex());
+    return (0, r.jsx)(c.ua7, {
+        text: x.NW.string(x.t.W4Nd7e),
+        children: (e) =>
+            (0, r.jsx)(
+                c.P3F,
+                v(N({}, e), {
+                    'aria-disabled': !n,
+                    tabIndex: n ? 0 : -1,
+                    'aria-label': x.NW.string(x.t.W4Nd7e),
+                    onClick: n ? i : void 0,
+                    style: { background: (0, d.d)(l) },
+                    className: a()(j.itemContainer, { [j.disabled]: !n }),
+                    children: (0, r.jsx)('div', { className: a()({ [j.itemSelected]: null == t.brandColorPrimary }) })
+                })
+            )
+    });
+}
+function O(e) {
     let { isDiscoverable: t, profile: n, onCustomBannerChange: s, canManageGuild: l } = e,
-        c = null != n.customBanner,
-        u = i.useMemo(() => {
+        o = null != n.customBanner,
+        d = i.useMemo(() => {
             if (null == n.customBanner) return null;
             let e = n.customBanner;
-            return m.ff.test(e)
+            return g.ff.test(e)
                 ? e
-                : m.ZP.getGuildDiscoverySplashURL({
+                : g.ZP.getGuildDiscoverySplashURL({
                       id: n.id,
                       splash: n.customBanner,
-                      size: 300 * (0, g.Z)()
+                      size: 300 * (0, p.Z)()
                   });
         }, [n]);
     if (!t) return null;
-    let p =
-        null != u
+    let m =
+        null != d
             ? (0, r.jsx)('img', {
-                  className: x.uploadedImage,
-                  src: u,
+                  className: j.uploadedImage,
+                  src: d,
                   alt: '',
                   'aria-hidden': !0
               })
-            : (0, r.jsx)(o.dZu, { size: 'md' });
+            : (0, r.jsx)(c.dZu, { size: 'md' });
     return (0, r.jsx)('div', {
-        className: x.uploadItemContainer,
-        children: (0, r.jsx)(o.tEY, {
+        className: j.uploadItemContainer,
+        children: (0, r.jsx)(c.tEY, {
             within: !0,
             children: (0, r.jsx)('div', {
-                className: a()(x.uploadItemWrapper, { [x.uploadItemSelected]: c }),
+                className: a()(j.uploadItemWrapper, { [j.uploadItemSelected]: o }),
                 children: (0, r.jsxs)('div', {
-                    className: a()(x.uploadItem, { [x.disabled]: !l }),
+                    className: a()(j.uploadItem, { [j.disabled]: !l }),
                     children: [
-                        p,
-                        (0, r.jsx)('div', { className: x.overlay }),
-                        (0, r.jsx)(o.vdY, {
+                        m,
+                        (0, r.jsx)('div', { className: j.overlay }),
+                        (0, r.jsx)(c.vdY, {
                             size: 'custom',
-                            className: x.overlayIcon,
+                            className: j.overlayIcon,
                             width: 20,
                             height: 20,
                             color: 'white'
                         }),
-                        (0, r.jsx)(d.ZP, {
+                        (0, r.jsx)(u.ZP, {
                             multiple: !1,
                             tabIndex: 0,
                             onChange: s,
@@ -69,93 +134,57 @@ function j(e) {
         })
     });
 }
-function N(e) {
+function y(e) {
     var t;
-    let { profile: n, onCustomBannerChange: s, canManageGuild: d } = e,
-        m = (0, l.e7)([u.Z], () => u.Z.getGuild(n.id)),
-        g = null !== (t = null == m ? void 0 : m.hasFeature(h.oNc.DISCOVERABLE)) && void 0 !== t && t,
-        N = n.id,
-        v = i.useCallback(
-            (e, t) => () => {
-                p.Z.updateGuildProfile(N, {
-                    brandColorPrimary: t,
+    let { profile: n, onCustomBannerChange: s, canManageGuild: o } = e,
+        u = (0, l.e7)([m.Z], () => m.Z.getGuild(n.id)),
+        g = null !== (t = null == u ? void 0 : u.hasFeature(f.oNc.DISCOVERABLE)) && void 0 !== t && t,
+        p = n.id,
+        y = i.useCallback(
+            (e) => () => {
+                h.Z.updateGuildProfile(p, {
+                    brandColorPrimary: e,
                     customBanner: null
                 });
             },
-            [N]
+            [p]
         ),
-        _ = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
-    return (0, r.jsx)(o.hjN, {
-        title: b.NW.string(b.t.BSVog4),
+        C = i.useCallback((e) => (!g || null == n.customBanner) && e === n.brandColorPrimary, [n, g]);
+    return (0, r.jsx)(c.hjN, {
+        title: x.NW.string(x.t.BSVog4),
         children: (0, r.jsxs)('div', {
-            className: x.grid,
+            className: j.grid,
             children: [
-                f.cb.map((e) => {
+                (0, r.jsx)(_, {
+                    profile: n,
+                    canManageGuild: o,
+                    handleClick: y(null)
+                }),
+                b.cb.map((e) => {
                     let { name: t, color: n } = e;
                     return (0, r.jsx)(
-                        o.ua7,
+                        c.ua7,
                         {
                             text: t,
-                            children: (e) => {
-                                var i, s;
-                                return (0, r.jsx)(
-                                    o.P3F,
-                                    ((i = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, e)),
-                                    (s = s =
-                                        {
-                                            'aria-disabled': !d,
-                                            tabIndex: d ? 0 : -1,
-                                            'aria-label': t,
-                                            onClick: d ? v(t, n) : void 0,
-                                            style: { background: (0, c.d)(n) },
-                                            className: a()(x.itemContainer, { [x.disabled]: !d }),
-                                            children: (0, r.jsx)('div', { className: a()({ [x.itemSelected]: _(n) }) })
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(s)).forEach(function (e) {
-                                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                                          }),
-                                    i)
-                                );
-                            }
+                            children: (e) =>
+                                (0, r.jsx)(
+                                    c.P3F,
+                                    v(N({}, e), {
+                                        'aria-disabled': !o,
+                                        tabIndex: o ? 0 : -1,
+                                        'aria-label': t,
+                                        onClick: o ? y(n) : void 0,
+                                        style: { background: (0, d.d)(n) },
+                                        className: a()(j.itemContainer, { [j.disabled]: !o }),
+                                        children: (0, r.jsx)('div', { className: a()({ [j.itemSelected]: C(n) }) })
+                                    })
+                                )
                         },
                         t
                     );
                 }),
-                (0, r.jsx)(j, {
-                    canManageGuild: d,
+                (0, r.jsx)(O, {
+                    canManageGuild: o,
                     isDiscoverable: g,
                     profile: n,
                     onCustomBannerChange: s

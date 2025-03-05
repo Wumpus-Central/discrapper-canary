@@ -1,35 +1,28 @@
-n.d(t, { Z: () => p }), n(266796);
+n.d(t, { Z: () => h }), n(266796);
 var r = n(200651);
 n(192379);
 var l = n(120356),
     i = n.n(l),
     a = n(692547),
-    s = n(481060),
-    o = n(220082),
+    o = n(481060),
     c = n(114487),
-    u = n(686546),
-    d = n(813197),
-    m = n(768581),
-    v = n(15210),
-    x = n(464647),
-    f = n(43542),
-    I = n(723776),
-    h = n(686369),
-    j = n(22858);
-function g(e) {
+    s = n(686546),
+    u = n(813197),
+    d = n(15210),
+    m = n(464647),
+    v = n(43542),
+    f = n(723776),
+    j = n(686369),
+    I = n(22858);
+function x(e) {
     let { profile: t } = e,
         n = (function (e, t) {
-            let n = m.ZP.getGuildIconURL({
-                    id: e.id,
-                    icon: e.icon,
-                    size: 64
-                }),
-                r = (0, o.ZP)(n, t);
-            return null != e.brandColorPrimary ? e.brandColorPrimary : r;
-        })(t, (0, s.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
-        l = (0, h.d)(n, t);
+            let n = (0, j.q)(e, t);
+            return null != e.brandColorPrimary ? e.brandColorPrimary : n;
+        })(t, (0, o.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
+        l = (0, j.d)(n, t);
     return (0, r.jsx)('div', {
-        className: j.banner,
+        className: I.banner,
         style: { background: l }
     });
 }
@@ -37,13 +30,13 @@ function b(e) {
     let { profile: t, onIconChange: n } = e;
     return null == n
         ? (0, r.jsx)('div', {
-              className: j.avatarContainer,
-              children: (0, r.jsx)(u.ZP, {
-                  mask: u.QS.CLAN_ICON,
+              className: I.avatarContainer,
+              children: (0, r.jsx)(s.ZP, {
+                  mask: s.QS.CLAN_ICON,
                   width: 70,
                   height: 70,
                   children: (0, r.jsx)('div', {
-                      className: j.avatarWrapper,
+                      className: I.avatarWrapper,
                       children: (0, r.jsx)(c.b, {
                           guildId: t.id,
                           guildName: t.name,
@@ -54,15 +47,15 @@ function b(e) {
               })
           })
         : (0, r.jsx)('div', {
-              className: j.avatarContainer,
-              children: (0, r.jsx)(s.tEY, {
+              className: I.avatarContainer,
+              children: (0, r.jsx)(o.tEY, {
                   within: !0,
-                  children: (0, r.jsx)(u.ZP, {
-                      mask: u.QS.CLAN_ICON,
+                  children: (0, r.jsx)(s.ZP, {
+                      mask: s.QS.CLAN_ICON,
                       width: 70,
                       height: 70,
                       children: (0, r.jsxs)('div', {
-                          className: i()(j.avatarWrapper, j.clickable),
+                          className: i()(I.avatarWrapper, I.clickable),
                           children: [
                               (0, r.jsx)(c.b, {
                                   guildId: t.id,
@@ -70,15 +63,15 @@ function b(e) {
                                   guildIcon: t.icon,
                                   iconSize: 64
                               }),
-                              (0, r.jsx)('div', { className: j.overlay }),
-                              (0, r.jsx)(s.vdY, {
+                              (0, r.jsx)('div', { className: I.overlay }),
+                              (0, r.jsx)(o.vdY, {
                                   size: 'custom',
-                                  className: j.overlayIcon,
+                                  className: I.overlayIcon,
                                   width: 20,
                                   height: 20,
                                   color: 'white'
                               }),
-                              (0, r.jsx)(d.ZP, {
+                              (0, r.jsx)(u.ZP, {
                                   tabIndex: 0,
                                   onChange: n
                               })
@@ -88,36 +81,36 @@ function b(e) {
               })
           });
 }
-function p(e) {
-    let { profile: t, onIconChange: n, className: l, disableCTA: a, CTAOverride: o } = e,
-        c = null;
+function h(e) {
+    let { profile: t, onIconChange: n, className: l, disableCTA: a, CTAOverride: c } = e,
+        s = null;
     return (
-        null != o ? (c = o) : a || (c = (0, r.jsx)(v.Z, { profile: t })),
+        null != c ? (s = c) : a || (s = (0, r.jsx)(d.Z, { profile: t })),
         (0, r.jsxs)('div', {
-            className: i()(j.container, l),
+            className: i()(I.container, l),
             children: [
-                (0, r.jsx)(g, { profile: t }),
+                (0, r.jsx)(x, { profile: t }),
                 (0, r.jsx)(b, {
                     onIconChange: n,
                     profile: t
                 }),
-                (0, r.jsx)(f.Z, { profile: t }),
+                (0, r.jsx)(v.Z, { profile: t }),
                 (0, r.jsxs)('div', {
-                    className: j.body,
+                    className: I.body,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             children: t.description
                         }),
-                        (0, r.jsx)(x.Z, { profile: t }),
-                        (0, r.jsx)(I.F, { profile: t })
+                        (0, r.jsx)(m.Z, { profile: t }),
+                        (0, r.jsx)(f.F, { profile: t })
                     ]
                 }),
-                null != c &&
+                null != s &&
                     (0, r.jsx)('div', {
-                        className: j.buttonContainer,
-                        children: c
+                        className: I.buttonContainer,
+                        children: s
                     })
             ]
         })
