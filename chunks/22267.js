@@ -14,7 +14,7 @@ var i = n(120356),
     p = n(5192),
     h = n(579407),
     g = n(388032),
-    m = n(156836),
+    m = n(862078),
     E = n(660097);
 let v = (e) => {
     let { user: t, nameplate: n, className: i, isHighlighted: v, showStatus: b, showWumpus: y } = e,
@@ -36,8 +36,7 @@ let v = (e) => {
                           'aria-label': g.NW.string(g.t.cqpybG)
                       }),
                       name: g.NW.string(g.t.cqpybG),
-                      selected: !1,
-                      innerClassName: m.avatarWithTextInner
+                      selected: !1
                   })
                 : (0, r.jsx)(c.Z, {
                       avatar: (0, r.jsx)(u.Z, {
@@ -48,8 +47,7 @@ let v = (e) => {
                           'aria-hidden': !0
                       }),
                       name: p.ZP.getName(null, null, t),
-                      selected: !1,
-                      innerClassName: m.avatarWithTextInner
+                      selected: !1
                   })
         ]
     });

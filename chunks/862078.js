@@ -1,5 +1,2 @@
-var r = {
-    nameplatePreview: 'nameplatePreview_fdeafc',
-    avatarWithTextInner: 'avatarWithTextInner_fdeafc'
-};
+var r = { nameplatePreview: 'nameplatePreview_fdeafc' };
 e.exports = r;
