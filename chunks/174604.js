@@ -34,6 +34,8 @@ function f(e) {
               style: f,
               children: [
                   (0, r.jsx)(a.xv, {
+                      className: d.text,
+                      color: 'currentColor',
                       variant: 'text-sm/semibold',
                       children: u.NW.string(c.Z['vkCs5+'])
                   }),
