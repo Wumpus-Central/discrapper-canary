@@ -1,7 +1,8 @@
 n.d(t, {
     Q: () => h,
     Z: () => g
-});
+}),
+    n(47120);
 var r = n(512722),
     i = n.n(r),
     o = n(81825),
@@ -99,6 +100,9 @@ class h extends o.Z {
     }
     get planIdFromItems() {
         return this.getCurrentSubscriptionPlanIdForGroup(Object.values(d.Xh));
+    }
+    get premiumPlanIdFromItems() {
+        return this.getCurrentSubscriptionPlanIdForGroup([...d.dJ]);
     }
     get isPurchasedViaApple() {
         return this.paymentGateway === c.gg$.APPLE;
