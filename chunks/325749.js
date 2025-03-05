@@ -32,8 +32,8 @@ var o = n(200651),
     B = n(884338),
     A = n(473179),
     E = n(932174),
-    W = n(981631),
-    z = n(388032),
+    z = n(981631),
+    W = n(388032),
     U = n(231784);
 let D = B.u.SIZE_24;
 function L(e) {
@@ -42,7 +42,7 @@ function L(e) {
         L = (0, l.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities().get(t)),
         R = (0, l.e7)([I.Z], () => I.Z.getChannel(n)),
         M = m.Sb.useSetting(),
-        G = (0, l.Wu)(
+        Y = (0, l.Wu)(
             [O.ZP],
             () => {
                 var e;
@@ -50,20 +50,20 @@ function L(e) {
             },
             [L, R]
         ),
-        Y = r.useMemo(() => {
+        G = r.useMemo(() => {
             let e = new Map();
             return (
-                G.forEach((t) => {
+                Y.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [G]),
+        }, [Y]),
         V = r.useCallback(
             (e, t) => {
                 var n;
                 if (null == e) return null;
-                let r = Y.get(e.id),
+                let r = G.get(e.id),
                     a = null !== (n = null == r ? void 0 : r.nick) && void 0 !== n ? n : k.ZP.getName(e);
                 return (0, o.jsx)(
                     c.DY3,
@@ -83,7 +83,7 @@ function L(e) {
                     e.id
                 );
             },
-            [Y]
+            [G]
         ),
         F = null == L ? void 0 : L.userIds,
         K = (0, l.Wu)(
@@ -105,12 +105,12 @@ function L(e) {
             popoutWindowAlwaysOnTop: $,
             handleStayOnTop: Q
         } = (function () {
-            let e = (0, l.e7)([b.Z], () => b.Z.getIsAlwaysOnTop(W.KJ3.ACTIVITY_POPOUT)),
+            let e = (0, l.e7)([b.Z], () => b.Z.getIsAlwaysOnTop(z.KJ3.ACTIVITY_POPOUT)),
                 t = r.useCallback((e) => {
-                    f.hY(W.KJ3.ACTIVITY_POPOUT, e);
+                    f.hY(z.KJ3.ACTIVITY_POPOUT, e);
                 }, []);
             return {
-                canStayOnTop: j.isPlatformEmbedded && w.ZP.supportsFeature(W.eRX.POPOUT_WINDOWS),
+                canStayOnTop: j.isPlatformEmbedded && w.ZP.supportsFeature(z.eRX.POPOUT_WINDOWS),
                 popoutWindowAlwaysOnTop: e,
                 handleStayOnTop: t
             };
@@ -162,7 +162,7 @@ function L(e) {
                 children: eo
             })),
         (0, o.jsx)(c.f6W, {
-            theme: W.BRd.DARK,
+            theme: z.BRd.DARK,
             children: (e) =>
                 (0, o.jsxs)('div', {
                     className: i()(U.container, e),
@@ -200,20 +200,21 @@ function L(e) {
                                 className: U.actionButtonsContainer,
                                 children: [
                                     (0, o.jsx)(C.Z, {
-                                        appContext: W.IlC.POPOUT,
+                                        appContext: z.IlC.POPOUT,
                                         applicationId: t,
                                         channel: R,
                                         shouldPrioritizeGroupPlusIcon: !0,
                                         embeddedActivity: L,
                                         iconSize: 'xs',
-                                        look: c.iLD.FILLED,
-                                        buttonText: z.NW.string(z.t['6F9ivr'])
+                                        look: c.zxk.Looks.FILLED,
+                                        size: c.zxk.Sizes.TINY,
+                                        buttonText: W.NW.string(W.t['6F9ivr'])
                                     }),
                                     X
                                         ? (0, o.jsx)(x.Z, {
                                               onClick: J,
                                               iconComponent: c.epB,
-                                              label: z.NW.string(z.t.mseZsL)
+                                              label: W.NW.string(W.t.mseZsL)
                                           })
                                         : null,
                                     q
