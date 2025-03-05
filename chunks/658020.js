@@ -11,5 +11,6 @@ e.exports = {
     altFloat: 'altFloat__2f300',
     centerContent: 'centerContent__2f300',
     coverContent: 'coverContent__2f300',
-    coverTitle: 'coverTitle__2f300'
+    coverTitle: 'coverTitle__2f300',
+    guildImage: 'guildImage__2f300'
 };
