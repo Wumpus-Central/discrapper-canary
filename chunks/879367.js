@@ -3,31 +3,31 @@ var n = e(200651),
     s = e(192379),
     c = e(481060),
     o = e(388032),
-    r = e(642941);
+    r = e(826180);
 let i = function (a) {
-    let { onClose: t, onComplete: e, transitionState: i, webviewUrl: l } = a,
-        d = s.useCallback(() => {
+    let { onClose: t, onComplete: e, transitionState: i, webviewUrl: l, showHeader: d = !0 } = a,
+        u = s.useCallback(() => {
             t(), e();
         }, [e, t]),
-        u = s.useCallback(
+        m = s.useCallback(
             (a) => {
                 if ('' !== l && 'string' == typeof a.data)
                     try {
                         var t = JSON.parse(a.data);
-                        'AGE_CHECK_COMPLETE' === t.status && d();
+                        'AGE_CHECK_COMPLETE' === t.status && u();
                     } catch (a) {}
             },
-            [l, d]
+            [l, u]
         );
     return (
         s.useEffect(
             () => (
-                window.addEventListener('message', u),
+                window.addEventListener('message', m),
                 () => {
-                    window.removeEventListener('message', u);
+                    window.removeEventListener('message', m);
                 }
             ),
-            [u]
+            [m]
         ),
         (0, n.jsx)(c.Y0X, {
             transitionState: i,
@@ -35,10 +35,11 @@ let i = function (a) {
             children: (0, n.jsxs)(c.hzk, {
                 className: r.content,
                 children: [
-                    (0, n.jsx)(c.X6q, {
-                        variant: 'heading-xl/bold',
-                        children: o.NW.string(o.t.tYNaXF)
-                    }),
+                    d &&
+                        (0, n.jsx)(c.X6q, {
+                            variant: 'heading-xl/bold',
+                            children: o.NW.string(o.t.tYNaXF)
+                        }),
                     (0, n.jsx)('iframe', {
                         id: 'frame',
                         src: l,
