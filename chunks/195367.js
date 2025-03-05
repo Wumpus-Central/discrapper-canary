@@ -5,9 +5,9 @@ var r = n(200651),
     a = n.n(i),
     s = n(481060),
     o = n(516129),
-    c = n(813197),
-    d = n(930180),
-    u = n(46920),
+    c = n(345861),
+    u = n(930180),
+    d = n(320596),
     m = n(924301),
     x = n(236373),
     g = n(854698),
@@ -16,7 +16,7 @@ var r = n(200651),
     f = n(765305),
     p = n(486324),
     j = n(388032),
-    N = n(794256);
+    N = n(404280);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -106,8 +106,8 @@ function y(e) {
 function O(e) {
     let { guildEvent: t, guildEventId: i, guildId: O, editBroadcastInfoData: E, error: C, validationErrorMessage: I, onChange: S, canSetFocus: T = !1 } = e,
         { entityType: P, channelId: W, description: w, name: Z, image: k, scheduledEndTime: _, scheduledStartTime: D, recurrenceRule: R } = t,
-        A = (0, d._d)(W),
-        z = (0, d.K3)(W),
+        A = (0, u._d)(W),
+        z = (0, u.K3)(W),
         L = null != t && (0, m.xt)(t),
         U = l.useMemo(() => {
             let e = (0, g.v1)(t);
@@ -130,7 +130,7 @@ function O(e) {
                 return;
             }
             (0, s.ZDy)(async () => {
-                let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('52046')]).then(n.bind(n, 73620));
+                let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('81288')]).then(n.bind(n, 73620));
                 return (n) =>
                     (0, r.jsx)(
                         l,
@@ -154,7 +154,7 @@ function O(e) {
         children: [
             (0, r.jsx)('div', {
                 className: N.blockedUsersContainer,
-                children: null != W && !L && (A > 0 || z > 0) && (0, r.jsx)(u.mv, { channelId: W })
+                children: null != W && !L && (A > 0 || z > 0) && (0, r.jsx)(d.mv, { channelId: W })
             }),
             (0, r.jsxs)('div', {
                 className: N.form,
@@ -264,9 +264,10 @@ function O(e) {
                                           })
                                       ]
                                   })
-                                : (0, r.jsxs)(s.zxk, {
+                                : (0, r.jsx)(c.Z, {
                                       size: s.zxk.Sizes.SMALL,
-                                      children: [j.NW.string(j.t.vKCGYW), (0, r.jsx)(c.ZP, { onChange: F })]
+                                      onChange: F,
+                                      buttonCTA: j.NW.string(j.t.vKCGYW)
                                   })
                         ]
                     }),

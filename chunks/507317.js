@@ -6,27 +6,27 @@ var r = n(200651),
     l = n(807582),
     o = n(26323),
     c = n(516129),
-    d = n(813197),
+    d = n(345861),
     u = n(709586),
     m = n(768581),
-    p = n(434404),
-    g = n(981631),
+    g = n(434404),
+    p = n(981631),
     h = n(30513),
     f = n(486324),
     b = n(200299),
     x = n(388032),
-    j = n(339945);
+    j = n(668813);
 let N = function (e) {
     let { guild: t } = e,
-        N = t.hasFeature(g.oNc.BANNER),
+        N = t.hasFeature(p.oNc.BANNER),
         v = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) {
-                    p.Z.saveGuild(t.id, { homeHeader: null });
+                    g.Z.saveGuild(t.id, { homeHeader: null });
                     return;
                 }
                 (0, s.ZDy)(async () => {
-                    let { default: s } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('29166')]).then(n.bind(n, 73620));
+                    let { default: s } = await Promise.all([n.e('91689'), n.e('59732'), n.e('25005'), n.e('30719')]).then(n.bind(n, 73620));
                     return (n) =>
                         (0, r.jsx)(
                             s,
@@ -60,7 +60,7 @@ let N = function (e) {
                                     file: i,
                                     onCrop: (e) => {
                                         let { imageUri: n } = e;
-                                        return p.Z.saveGuild(t.id, { homeHeader: n });
+                                        return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
                                     uploadType: f.pC.HOME_HEADER
                                 },
@@ -75,10 +75,10 @@ let N = function (e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, a.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
-                            section: g.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: g.qAy.LEARN_MORE
+                            section: p.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: p.qAy.LEARN_MORE
                         },
                         guild_id: null == t ? void 0 : t.id,
                         location_stack: []
@@ -86,9 +86,9 @@ let N = function (e) {
                     (0, o.Z)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
-                            section: g.jXE.GUILD_SETTINGS_ONBOARDING,
-                            object: g.qAy.ONBOARDING_EDIT,
-                            page: g.ZY5.GUILD_SETTINGS
+                            section: p.jXE.GUILD_SETTINGS_ONBOARDING,
+                            object: p.qAy.ONBOARDING_EDIT,
+                            page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
                         perks: (0, h.XO)()
@@ -125,7 +125,7 @@ let N = function (e) {
                           (0, r.jsx)(l.Z, {
                               className: j.boostIndicator,
                               guild: t,
-                              guildFeature: g.oNc.BANNER,
+                              guildFeature: p.oNc.BANNER,
                               onClick: _
                           })
                       ]
@@ -141,16 +141,12 @@ let N = function (e) {
                                       color: 'header-secondary',
                                       children: x.NW.string(x.t.Vwintr)
                                   }),
-                                  (0, r.jsxs)(s.zxk, {
+                                  (0, r.jsx)(d.Z, {
                                       color: s.Ttl.BRAND,
                                       className: j.uploadButton,
-                                      children: [
-                                          x.NW.string(x.t.yG2pUl),
-                                          (0, r.jsx)(d.ZP, {
-                                              onChange: v,
-                                              maxFileSizeBytes: b.B
-                                          })
-                                      ]
+                                      buttonCTA: x.NW.string(x.t.yG2pUl),
+                                      onChange: v,
+                                      maxFileSizeBytes: b.B
                                   })
                               ]
                           }),
@@ -172,7 +168,7 @@ let N = function (e) {
                           (0, r.jsx)(l.Z, {
                               className: j.boostIndicator,
                               guild: t,
-                              guildFeature: g.oNc.BANNER,
+                              guildFeature: p.oNc.BANNER,
                               onClick: _
                           })
                       ]

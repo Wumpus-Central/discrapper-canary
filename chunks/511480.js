@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => B,
-    s: () => U
+    s: () => G
 }),
     n(266796),
     n(47120),
@@ -14,9 +14,9 @@ var r = n(200651),
     c = n(933557),
     d = n(456268),
     u = n(134432),
-    m = n(813197),
-    p = n(208567),
-    g = n(984933),
+    m = n(345861),
+    g = n(208567),
+    p = n(984933),
     h = n(496675),
     f = n(699516),
     b = n(594174),
@@ -35,10 +35,10 @@ var r = n(200651),
     P = n(354051),
     w = n(347604),
     R = n(203377),
-    D = n(929834),
-    Z = n(981631),
+    Z = n(929834),
+    D = n(981631),
     A = n(388032),
-    k = n(529988);
+    k = n(482719);
 function W(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ function M(e) {
     }
     return e;
 }
-let U = s.ZP.connectStores([v.Z], () => {
+let G = s.ZP.connectStores([v.Z], () => {
     let { guild: e, originalGuild: t, submitting: n, guildMetadata: r } = v.Z.getProps();
     return {
         guild: e,
@@ -113,7 +113,7 @@ let U = s.ZP.connectStores([v.Z], () => {
         }
     };
 })(l.Z);
-class G extends i.PureComponent {
+class U extends i.PureComponent {
     async componentDidMount() {
         let { guild: e } = this.props;
         if (null != e) {
@@ -129,7 +129,7 @@ class G extends i.PureComponent {
     renderDiscoverableSection() {
         let { guild: e, isGuildAdmin: t } = this.props;
         if (null == e) return;
-        let n = e.hasFeature(Z.oNc.DISCOVERABLE);
+        let n = e.hasFeature(D.oNc.DISCOVERABLE);
         return (0, r.jsxs)(a.hjN, {
             className: k.twoColumnFormSection,
             children: [
@@ -210,22 +210,18 @@ class G extends i.PureComponent {
                                         className: k.formDescription,
                                         children: A.NW.string(A.t.Ltsutr)
                                     }),
-                                    (0, r.jsxs)(a.zxk, {
+                                    (0, r.jsx)(m.Z, {
+                                        buttonCTA: A.NW.string(A.t.yG2pUl),
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.PRIMARY,
-                                        children: [
-                                            A.NW.string(A.t.yG2pUl),
-                                            (0, r.jsx)(m.ZP, {
-                                                disabled: !n,
-                                                onChange: this.handleSplashChange
-                                            })
-                                        ]
+                                        disabled: !n,
+                                        onChange: this.handleSplashChange
                                     })
                                 ]
                             }),
                             (0, r.jsx)('div', {
                                 className: k.imageUploaderWrapper,
-                                children: (0, r.jsx)(p.Z, {
+                                children: (0, r.jsx)(g.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
                                         x.ZP.getGuildDiscoverySplashURL({
@@ -427,7 +423,7 @@ class G extends i.PureComponent {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(Z.oNc.DISCOVERABLE) ? t.delete(Z.oNc.DISCOVERABLE) : t.add(Z.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
+                e.hasFeature(D.oNc.DISCOVERABLE) ? t.delete(D.oNc.DISCOVERABLE) : t.add(D.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
             }),
             W(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, a.ZDy)(
@@ -475,18 +471,18 @@ class G extends i.PureComponent {
             });
     }
 }
-let B = s.ZP.connectStores([v.Z, h.Z, C.ZP, g.ZP, b.default, f.Z], () => {
+let B = s.ZP.connectStores([v.Z, h.Z, C.ZP, p.ZP, b.default, f.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: r } = v.Z.getProps(),
-        i = h.Z.can(Z.Plq.MANAGE_GUILD, e),
-        s = h.Z.can(Z.Plq.ADMINISTRATOR, e),
+        i = h.Z.can(D.Plq.MANAGE_GUILD, e),
+        s = h.Z.can(D.Plq.ADMINISTRATOR, e),
         a = null != e ? C.ZP.getDiscoveryChecklist(e.id) : null,
-        l = null != e ? g.ZP.getChannels(e.id) : null,
+        l = null != e ? p.ZP.getChannels(e.id) : null,
         o = [];
     return (
         null != l &&
-            l[g.sH].forEach((e) => {
+            l[p.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === Z.d4z.GUILD_TEXT &&
+                t.type === D.d4z.GUILD_TEXT &&
                     o.push({
                         value: t.id,
                         label: (0, c.F6)(t, b.default, f.Z, !0)
@@ -501,7 +497,7 @@ let B = s.ZP.connectStores([v.Z, h.Z, C.ZP, g.ZP, b.default, f.Z], () => {
             canManageGuild: i,
             isGuildAdmin: s,
             guildMetadata: r,
-            localeOptions: (0, D.jb)()
+            localeOptions: (0, Z.jb)()
         }
     );
-})(G);
+})(U);

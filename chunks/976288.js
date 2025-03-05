@@ -6,11 +6,11 @@ var r = n(200651),
     l = n(558324),
     o = n(456268),
     c = n(681460),
-    d = n(813197),
+    d = n(345861),
     u = n(650774),
     m = n(434404),
-    p = n(999382),
-    g = n(718157),
+    g = n(999382),
+    p = n(718157),
     h = n(450474),
     f = n(166184),
     b = n(936735),
@@ -20,7 +20,7 @@ var r = n(200651),
     v = n(203377),
     _ = n(929834),
     O = n(388032),
-    y = n(744432);
+    y = n(422653);
 function C() {
     return (0, r.jsx)(a.Text, {
         tag: 'span',
@@ -39,10 +39,10 @@ function I(e) {
         c = i.useCallback(() => {
             m.Z.updateGuild({ discoverySplash: null });
         }, []),
-        p = i.useCallback((e) => {
+        g = i.useCallback((e) => {
             m.Z.updateGuild({ description: e });
         }, []),
-        { memberCount: g, onlineCount: h } = (0, s.cj)([u.Z], () => ({
+        { memberCount: p, onlineCount: h } = (0, s.cj)([u.Z], () => ({
             memberCount: u.Z.getMemberCount(n.id),
             onlineCount: u.Z.getOnlineCount(n.id)
         }));
@@ -83,11 +83,12 @@ function I(e) {
                             (0, r.jsxs)('div', {
                                 className: y.buttonList,
                                 children: [
-                                    (0, r.jsxs)(a.zxk, {
+                                    (0, r.jsx)(d.Z, {
                                         size: a.zxk.Sizes.SMALL,
                                         color: a.zxk.Colors.PRIMARY,
                                         className: y.editableSection,
-                                        children: [O.NW.string(O.t['3UB9aW']), (0, r.jsx)(d.ZP, { onChange: o })]
+                                        buttonCTA: O.NW.string(O.t['3UB9aW']),
+                                        onChange: o
                                     }),
                                     null != n.discoverySplash
                                         ? (0, r.jsx)(a.zxk, {
@@ -120,7 +121,7 @@ function I(e) {
                                 className: y.editableSection,
                                 value: null !== (t = n.description) && void 0 !== t ? t : '',
                                 placeholder: O.NW.string(O.t.Nvfows),
-                                onChange: p,
+                                onChange: g,
                                 maxLength: 120
                             })
                         ]
@@ -130,7 +131,7 @@ function I(e) {
             (0, r.jsx)(f.Z, {
                 className: y.preview,
                 guild: n,
-                memberCount: g,
+                memberCount: p,
                 presenceCount: h
             })
         ]
@@ -171,7 +172,7 @@ function E(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: y.editableSection,
-                        children: (0, r.jsx)(g.E, {
+                        children: (0, r.jsx)(p.E, {
                             guildId: t.id,
                             guildMetadata: n
                         })
@@ -214,14 +215,14 @@ function E(e) {
 function S(e) {
     let { guildId: t, guildMetadata: n, requireTag: s, error: d } = e,
         [u, m] = i.useState(null),
-        p = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 let r = [...n.keywords];
                 r.splice(e, 1), m(null), (0, o.zH)(t, r);
             },
             [t, n]
         ),
-        g = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 let { keywords: r } = n;
                 r.length >= v.G7 || (m(null), (0, o.zH)(t, [...r, e]));
@@ -236,12 +237,12 @@ function S(e) {
                         let t = n.keywords.length >= v.G7;
                         return {
                             text: e,
-                            onClick: () => g(e),
+                            onClick: () => p(e),
                             disabled: t,
                             tooltipText: t ? O.NW.string(O.t.Xx7XeH) : void 0
                         };
                     }),
-            [n.keywords, n.primaryCategoryId, g]
+            [n.keywords, n.primaryCategoryId, p]
         ),
         f = null != d ? d : u;
     return (0, r.jsxs)('div', {
@@ -263,8 +264,8 @@ function S(e) {
                     (0, r.jsx)(l.Z, {
                         className: y.editableSection,
                         tags: n.keywords,
-                        onRemoveTag: p,
-                        onAddTag: g,
+                        onRemoveTag: g,
+                        onAddTag: p,
                         onAddTagError: m,
                         maxTags: v.G7,
                         maxTaxLength: v._0,
@@ -384,8 +385,8 @@ function R(e) {
             errors: a,
             guildMetadata: l,
             guild: o
-        } = (0, s.cj)([p.Z], () => {
-            let { errors: e, guildMetadata: t, guild: n } = p.Z.getProps();
+        } = (0, s.cj)([g.Z], () => {
+            let { errors: e, guildMetadata: t, guild: n } = g.Z.getProps();
             return {
                 errors: e,
                 guildMetadata: t,
