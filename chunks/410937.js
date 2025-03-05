@@ -1,27 +1,28 @@
 n.d(t, { Z: () => c });
-var i = n(200651),
-    r = n(481060),
+var r = n(200651),
+    i = n(481060),
     a = n(688465),
-    l = n(755007),
-    s = n(388032),
-    o = n(605510);
+    s = n(755007),
+    l = n(388032),
+    o = n(172110);
 function c(e) {
-    let { orbPrice: t } = e;
-    return (0, i.jsxs)('div', {
+    var t;
+    let { orbPrice: n } = e;
+    return (0, r.jsxs)('div', {
         className: o.priceLine,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: o.orbText,
                 children: [
-                    (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-xs/normal',
-                        children: s.NW.string(s.t.eFNRzc)
+                        children: l.NW.string(l.t.eFNRzc)
                     }),
-                    (0, i.jsx)(a.Z, {})
+                    (0, r.jsx)(a.Z, {})
                 ]
             }),
-            (0, i.jsx)(l.Z, {
-                orbAmount: t.amount,
+            (0, r.jsx)(s.Z, {
+                orbAmount: null !== (t = null == n ? void 0 : n.amount) && void 0 !== t ? t : 1 / 0,
                 showInsufficientOrbBalanceTooltip: !0
             })
         ]

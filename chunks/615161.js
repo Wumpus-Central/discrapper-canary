@@ -121,32 +121,34 @@ function _(e) {
     });
 }
 function v(e) {
-    var t;
-    let { preset: n, resolution: r, fps: i, soundshareEnabled: d } = (0, s.cj)([c.Z], () => c.Z.getState()),
-        p = null !== (t = a.I0.useSetting()) && void 0 !== t && t,
-        [x, _] = l.useReducer(
+    var t, n;
+    let { preset: r, resolution: i, fps: d, soundshareEnabled: p } = (0, s.cj)([c.Z], () => c.Z.getState()),
+        x = null !== (t = a.I0.useSetting()) && void 0 !== t && t,
+        _ = null !== (n = a.eo.useSetting()) && void 0 !== n && n,
+        [v, j] = l.useReducer(
             g,
             h(f({}, m), {
-                muteStreamAudio: !d,
-                preset: n,
-                resolution: r,
-                fps: i,
-                hidePreview: p,
+                muteStreamAudio: !p,
+                preset: r,
+                resolution: i,
+                fps: d,
+                hidePreview: x,
+                notifyFriends: _,
                 sourceApplication: e
             })
         );
     return (
         l.useEffect(() => {
             o.Z.hasPermission(u.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
-                _({
+                j({
                     type: 'set_has_permission',
                     value: e
                 })
             );
         }, []),
         {
-            state: x,
-            dispatch: _
+            state: v,
+            dispatch: j
         }
     );
 }

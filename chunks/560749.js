@@ -92,7 +92,7 @@ function P(e) {
             }
             return e;
         }),
-        A = (0, i.Wu)([f.Z, p.Z, x.Z, _.Z, v.Z], () => {
+        k = (0, i.Wu)([f.Z, p.Z, x.Z, _.Z, v.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
@@ -102,19 +102,20 @@ function P(e) {
             for (let n of x.Z.getFrequentlyWithoutFetchingLatest()) n instanceof m.Sf && n.type === Z.d4z.GUILD_VOICE && !t.has(n.id) && (0, N.JL)(n, _.Z, v.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
-        k = l.useMemo(() => {
-            let e = new Set(A.map((e) => e.id)),
+        A = l.useMemo(() => {
+            let e = new Set(k.map((e) => e.id)),
                 t = new Set(W.map((e) => e.id));
             return [
                 ...W.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, c.Z)(e.id))
                     .filter(S.lm),
-                ...A.filter((e) => !t.has(e.id))
+                ...k
+                    .filter((e) => !t.has(e.id))
                     .map((e) => (0, c.Z)(e.id))
                     .filter(S.lm)
             ];
-        }, [A, W]),
-        M = '' !== E ? R : k;
+        }, [k, W]),
+        M = '' !== E ? R : A;
     return (0, r.jsxs)('div', {
         className: O.root,
         children: [
