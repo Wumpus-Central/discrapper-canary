@@ -6,7 +6,7 @@ var n = l(120356),
     s = l(729594),
     o = l(785992),
     a = l(616922),
-    d = l(821879);
+    d = l(552249);
 function u(e) {
     let {
         className: t,
@@ -35,7 +35,9 @@ function u(e) {
             className: i()(d.embedSpotify, t),
             src: a.C7.EMBED(u),
             style: {
-                width: 400,
+                maxWidth: 400,
+                minWidth: 300,
+                width: '100%',
                 height: g
             },
             frameBorder: 0,
