@@ -75,52 +75,52 @@ function I(e, t) {
     );
 }
 function T(e) {
-    let { description: t, heading: n, imgSrc: o, label: l, isNewPerk: d, animatedCard: _ } = e,
-        [h, m] = i.useState(!1),
-        [E, v] = i.useState(!1),
-        b = _ && E,
-        y = {
+    let { description: t, heading: n, imgSrc: o, label: l, isNewPerk: d, animatedCard: _, isEnabled: h } = e,
+        [m, E] = i.useState(!1),
+        [v, b] = i.useState(!1),
+        y = _ && v,
+        S = {
             tension: 400,
             friction: 30
         },
-        S = (0, c.q_F)({
-            transform: b ? 'translateX(-50%) translateY(0px) scale(2.25)' : 'translateX(-50%) translateY(32px) scale(1)',
-            borderRadius: b ? '7px' : '0px',
-            opacity: b ? 0.6 : 1,
-            transformOrigin: 'center 0%',
-            config: y
-        }),
         T = (0, c.q_F)({
-            y: b ? -25 : 0,
-            config: y
+            transform: y ? 'translateX(-50%) translateY(0px) scale(2.25)' : 'translateX(-50%) translateY(32px) scale(1)',
+            borderRadius: y ? '7px' : '0px',
+            opacity: y ? 0.3 : 1,
+            transformOrigin: 'center 0%',
+            config: S
         }),
         N = (0, c.q_F)({
-            opacity: +!!b,
-            transform: b ? 'translateY(0)' : 'translateY(20px)',
-            config: y
+            y: y ? -25 : 0,
+            config: S
         }),
         A = (0, c.q_F)({
-            opacity: +!!b,
-            config: y
+            opacity: +!!y,
+            transform: y ? 'translateY(0)' : 'translateY(20px)',
+            config: S
         }),
-        C = i.useCallback(
+        C = (0, c.q_F)({
+            opacity: +!!y,
+            config: S
+        }),
+        R = i.useCallback(
             (e) => {
-                e && _ && m(!0);
+                e && _ && E(!0);
             },
             [_]
         ),
-        R = (0, u.O)(C);
+        P = (0, u.O)(R);
     return (0, r.jsxs)('div', {
         className: a()(g.topPerksCard, {
             [g.animatedTopPerksCard]: _,
-            [g.animate]: h
+            [g.animate]: m
         }),
-        onMouseEnter: () => v(!0),
-        onMouseLeave: () => v(!1),
+        onMouseEnter: () => b(!0),
+        onMouseLeave: () => b(!1),
         children: [
             (0, r.jsx)('div', {
                 className: g.intObserver,
-                ref: R
+                ref: P
             }),
             (0, r.jsxs)('div', {
                 className: g.topPerksCardImageWrapper,
@@ -129,17 +129,17 @@ function T(e) {
                         className: g.topPerksCardImage,
                         src: o,
                         alt: '',
-                        style: S
+                        style: T
                     }),
                     (0, r.jsx)(s.animated.div, {
                         className: g.imageGradientOverlay,
-                        style: A
+                        style: C
                     })
                 ]
             }),
-            b && (0, r.jsx)('div', { className: g.borderGlowOverlay }),
+            y && (0, r.jsx)('div', { className: g.borderGlowOverlay }),
             (0, r.jsxs)(s.animated.div, {
-                style: I(O({}, T), { transform: T.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: I(O({}, N), { transform: N.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: g.contentContainer,
                 children: [
                     (0, r.jsx)(c.X6q, {
@@ -152,20 +152,42 @@ function T(e) {
                         variant: 'text-sm/normal',
                         children: t
                     }),
-                    null != l &&
-                        (0, r.jsxs)('div', {
-                            className: g.topPerksCardLabelContainer,
-                            children: [
-                                (0, r.jsx)(f.Z, {}),
-                                (0, r.jsx)(c.Text, {
-                                    variant: 'text-sm/semibold',
-                                    children: l
+                    (0, r.jsxs)('div', {
+                        className: g.labelsContainer,
+                        children: [
+                            null != l &&
+                                (0, r.jsxs)('div', {
+                                    className: g.topPerksCardLabelContainer,
+                                    children: [
+                                        (0, r.jsx)(f.Z, {}),
+                                        (0, r.jsx)(c.Text, {
+                                            variant: 'text-sm/semibold',
+                                            children: l
+                                        })
+                                    ]
+                                }),
+                            h &&
+                                (0, r.jsxs)('div', {
+                                    className: g.topPerksCardLabelContainer,
+                                    children: [
+                                        (0, r.jsx)(c.owK, {
+                                            size: 'custom',
+                                            height: 14,
+                                            width: 14,
+                                            color: 'currentColor'
+                                        }),
+                                        (0, r.jsx)(c.Text, {
+                                            variant: 'text-sm/semibold',
+                                            color: 'currentColor',
+                                            children: p.NW.string(p.t.pCMkDQ)
+                                        })
+                                    ]
                                 })
-                            ]
-                        }),
+                        ]
+                    }),
                     _ &&
                         (0, r.jsxs)(s.animated.div, {
-                            style: N,
+                            style: A,
                             className: g.buttonsContainer,
                             children: [
                                 (0, r.jsx)(c.zxk, {
@@ -187,7 +209,7 @@ function T(e) {
                     className: g.topPerksCardNew,
                     text: p.NW.string(p.t.y2b7CA)
                 }),
-            h && (0, r.jsx)('div', { className: g.shineLine })
+            m && (0, r.jsx)('div', { className: g.shineLine })
         ]
     });
 }

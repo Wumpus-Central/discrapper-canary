@@ -17,6 +17,7 @@ var r = {
     topPerksCardDescription: 'topPerksCardDescription__3add8',
     topPerksCardNew: 'topPerksCardNew__3add8',
     topPerksCardLabelContainer: 'topPerksCardLabelContainer__3add8',
+    labelsContainer: 'labelsContainer__3add8',
     intObserver: 'intObserver__3add8',
     shineLine: 'shineLine__3add8',
     shineEffect: 'shineEffect__3add8'
