@@ -302,9 +302,6 @@ class er extends c.Z {
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
                             u = Z.NW.string(Z.t.zxv7EB);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
-                            u = Z.NW.string(Z.t['H+KK6e']);
-                            break;
                         case F.evJ.INVALID_PERMISSIONS:
                             u = Z.NW.string(Z.t.hHGrW1);
                             break;

@@ -579,7 +579,6 @@ let eS = Object.freeze({
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
                 soundboardSounds: eD[i.Eu4.NONE],
-                maxConcurrentActivities: 2,
                 stickers: eP[i.Eu4.NONE],
                 stageVideoUsers: i.B9o
             }
@@ -593,7 +592,6 @@ let eS = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
                 soundboardSounds: eD[i.Eu4.TIER_1],
-                maxConcurrentActivities: 3,
                 stickers: eP[i.Eu4.TIER_1],
                 stageVideoUsers: i.B9o
             }
@@ -607,7 +605,6 @@ let eS = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
                 soundboardSounds: eD[i.Eu4.TIER_2],
-                maxConcurrentActivities: 5,
                 stickers: eP[i.Eu4.TIER_2],
                 stageVideoUsers: i.eez
             }
@@ -621,7 +618,6 @@ let eS = Object.freeze({
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
                 soundboardSounds: eD[i.Eu4.TIER_3],
-                maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
                 stickers: eP[i.Eu4.TIER_3],
                 stageVideoUsers: i.RcX
             }
