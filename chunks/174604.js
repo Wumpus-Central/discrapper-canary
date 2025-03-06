@@ -1,17 +1,23 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => E }), n(47120), n(266796);
 var r = n(200651),
     i = n(192379),
-    o = n(642128),
-    a = n(793030),
-    s = n(481060),
-    l = n(50101),
-    c = n(730621),
-    u = n(388032),
-    d = n(752593);
-function f(e) {
-    let { guild: t } = e,
-        n = (0, l.Ek)(t, 'GuildBoostingMarketing'),
-        [f, _] = (0, s.q_F)(() => ({
+    o = n(120356),
+    a = n.n(o),
+    s = n(642128),
+    l = n(793030),
+    c = n(481060),
+    u = n(37234),
+    d = n(703656),
+    f = n(50101),
+    _ = n(981631),
+    p = n(176505),
+    h = n(730621),
+    g = n(388032),
+    m = n(752593);
+function E(e) {
+    let { guild: t, themeResponsive: n = !0 } = e,
+        o = (0, f.Ek)(t, 'GuildBoostingMarketing'),
+        [E, v] = (0, c.q_F)(() => ({
             scale: 0.8,
             opacity: 0,
             config: {
@@ -19,29 +25,58 @@ function f(e) {
                 friction: 10
             }
         }));
-    return (i.useEffect(() => {
+    i.useEffect(() => {
         let e = setTimeout(() => {
-            _({
+            v({
                 scale: 1,
                 opacity: 1
             });
         }, 300);
         return () => clearTimeout(e);
-    }, [_]),
-    n)
-        ? (0, r.jsxs)(o.animated.div, {
-              className: d.container,
-              style: f,
+    }, [v]);
+    let b = i.useCallback(() => {
+        (0, u.xf)(), (0, d.uL)(_.Z5c.CHANNEL(t.id, p.oC.GUILD_BOOSTS));
+    }, [t.id]);
+    return o
+        ? (0, r.jsxs)(s.animated.div, {
+              className: a()(m.container, { [m.themeResponsiveContainer]: n }),
+              style: E,
               children: [
-                  (0, r.jsx)(a.xv, {
-                      className: d.text,
-                      color: 'currentColor',
-                      variant: 'text-sm/semibold',
-                      children: u.NW.string(c.Z['vkCs5+'])
+                  (0, r.jsxs)('div', {
+                      className: m.description,
+                      children: [
+                          (0, r.jsx)(l.xv, {
+                              variant: 'text-md/semibold',
+                              className: a()({
+                                  [m.text]: !n,
+                                  [m.responsiveText]: n
+                              }),
+                              children: g.NW.string(h.Z.XBP9VV)
+                          }),
+                          (0, r.jsx)(l.xv, {
+                              variant: 'text-md/semibold',
+                              className: m.highlight,
+                              children: g.NW.string(h.Z['l/4T7u'])
+                          }),
+                          (0, r.jsx)(l.xv, {
+                              variant: 'text-md/semibold',
+                              className: a()({
+                                  [m.text]: !n,
+                                  [m.responsiveText]: n
+                              }),
+                              children: g.NW.string(h.Z.wS3GDA)
+                          }),
+                          (0, r.jsx)(l.xv, {
+                              variant: 'text-md/semibold',
+                              className: m.highlight,
+                              children: g.NW.string(h.Z['uFH+vL'])
+                          })
+                      ]
                   }),
-                  (0, r.jsx)(s.zxk, {
-                      className: d.button,
-                      children: u.NW.string(c.Z.E5V5KC)
+                  (0, r.jsx)(c.zxk, {
+                      className: m.button,
+                      onClick: b,
+                      children: g.NW.string(h.Z.E5V5KC)
                   })
               ]
           })

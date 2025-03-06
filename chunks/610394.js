@@ -371,7 +371,7 @@ function eh(e, t, n, r) {
     l.dispatchEvent(s);
 }
 function eg() {
-    if ((null == V ? X.storeClickZones() : X.refreshClickZones(), null != V)) {
+    if ((null == V ? X.storeClickZones() : X.refreshClickZones(), x.info('Flushing focus with pid', V), null != V)) {
         let e = Y[V] === s.gl.OutOfProcessLimitedInteraction;
         if (e !== Z) {
             Z = e;
@@ -385,13 +385,13 @@ function eg() {
     a.Z.setFocusedPID(V);
 }
 function em(e) {
-    (V = e), eg();
+    (V = e), eg(), eZ.emitChange();
 }
 function eE(e) {
-    ev();
+    ev(), eZ.emitChange();
 }
 function ev() {
-    (V = null), eg();
+    (V = null), eg(), eZ.emitChange();
 }
 function eb(e) {
     a.Z.successfullyShown(e), a.Z.updateOverlayState(e, s.mM.OVERLAY_RENDERING);
@@ -399,7 +399,8 @@ function eb(e) {
     ee(e, {
         total_mount_time_ms: null != t ? new Date().getTime() - t : void 0,
         success: !0
-    });
+    }),
+        eZ.emitChange();
 }
 let ey = (() => {
     let e = null;

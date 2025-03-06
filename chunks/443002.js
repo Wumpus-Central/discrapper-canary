@@ -95,7 +95,10 @@ let T = function (e) {
                                 (0, r.jsxs)('div', {
                                     className: I.headerContentWrapper,
                                     children: [
-                                        (0, r.jsx)(u.Z, { guild: e.guild }),
+                                        (0, r.jsx)(u.Z, {
+                                            guild: e.guild,
+                                            themeResponsive: !1
+                                        }),
                                         (0, r.jsx)(a.X6q, {
                                             className: I.heading,
                                             color: 'always-white',

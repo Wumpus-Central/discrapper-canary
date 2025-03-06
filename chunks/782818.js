@@ -6,19 +6,18 @@ var r = n(200651),
     o = n(442837),
     s = n(824385),
     c = n(481060),
-    u = n(98278),
-    d = n(594174),
-    f = n(74538),
-    p = n(643879),
-    m = n(225516),
-    g = n(598989),
-    b = n(898331),
-    j = n(841183),
-    x = n(981631),
-    h = n(486324),
-    y = n(388032),
-    O = n(170286);
-function v(e) {
+    u = n(594174),
+    d = n(74538),
+    f = n(643879),
+    p = n(225516),
+    m = n(598989),
+    g = n(898331),
+    b = n(841183),
+    j = n(981631),
+    x = n(486324),
+    h = n(388032),
+    y = n(170286);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,10 +42,30 @@ function v(e) {
     }
     return e;
 }
+function v() {
+    (0, c.ZDy)(async () => {
+        let { default: e } = await n.e('21907').then(n.bind(n, 53394));
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                O(
+                    {
+                        analyticsSource: j.Sbl.PROFILE_PANEL,
+                        analyticsLocation: {
+                            section: j.jXE.USER_PROFILE,
+                            object: j.qAy.RECENT_AVATARS_UPSELL
+                        },
+                        onSecondaryClick: c.pTH
+                    },
+                    t
+                )
+            );
+    });
+}
 function C(e) {
     let { avatar: t, orderNumber: n, onSelectRecentAvatar: l } = e,
         { id: a, storageHash: i, description: o } = t,
-        { avatarSrc: s, eventHandlers: u } = (0, j.Z)({
+        { avatarSrc: s, eventHandlers: u } = (0, b.Z)({
             avatarId: a,
             storageHash: i
         }),
@@ -55,44 +74,24 @@ function C(e) {
         onClick: () => l(t),
         onMouseEnter: d,
         onMouseLeave: f,
-        className: O.recentAvatarButton,
-        'aria-label': y.NW.formatToPlainString(y.t['tmJ75+'], {
+        className: y.recentAvatarButton,
+        'aria-label': h.NW.formatToPlainString(h.t['tmJ75+'], {
             orderNumber: n,
             description: o
         }),
         children: (0, r.jsx)('img', {
             src: s,
             alt: o,
-            className: O.recentAvatar
+            className: y.recentAvatar
         })
     });
 }
 function A(e) {
-    let { numberOfLockedAvatarSlots: t } = e,
-        a = l.useCallback(() => {
-            (0, c.ZDy)(async () => {
-                let { default: e } = await n.e('21907').then(n.bind(n, 53394));
-                return (t) =>
-                    (0, r.jsx)(
-                        e,
-                        v(
-                            {
-                                analyticsSource: x.Sbl.PROFILE_PANEL,
-                                analyticsLocation: {
-                                    section: x.jXE.USER_PROFILE,
-                                    object: x.qAy.RECENT_AVATARS_UPSELL
-                                },
-                                onSecondaryClick: c.pTH
-                            },
-                            t
-                        )
-                    );
-            });
-        }, []);
+    let { numberOfLockedAvatarSlots: t } = e;
     return (0, r.jsxs)(c.P3F, {
-        className: O.premiumUpsellButton,
-        onClick: a,
-        'aria-label': y.NW.formatToPlainString(y.t.D4829v, { numberOfLockedAvatarSlots: t }),
+        className: y.premiumUpsellButton,
+        onClick: v,
+        'aria-label': h.NW.formatToPlainString(h.t.D4829v, { numberOfLockedAvatarSlots: t }),
         children: [
             (0, r.jsxs)(c.Text, {
                 variant: 'text-lg/normal',
@@ -101,7 +100,7 @@ function A(e) {
                 children: ['+', t]
             }),
             (0, r.jsx)(s.m, {
-                className: O.premiumUpsellLockIcon,
+                className: y.premiumUpsellLockIcon,
                 size: 'xxs'
             })
         ]
@@ -109,25 +108,25 @@ function A(e) {
 }
 function N(e) {
     let { hasIncreasedRecentAvatarsLimit: t, onComplete: a, onClose: s } = e,
-        u = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        { avatars: f, loading: j, error: N } = (0, g.S)(),
-        { recentAvatarsLimit: E, numberOfLockedAvatarSlots: S } = (0, p.pC)(t),
+        d = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        { avatars: b, loading: v, error: N } = (0, m.S)(),
+        { recentAvatarsLimit: E, numberOfLockedAvatarSlots: S } = (0, f.pC)(t),
         [P, w] = l.useState(null),
         T = null != P ? P : null == N ? void 0 : N.message,
-        F = f.length > E ? f.slice(0, E) : f,
+        F = b.length > E ? b.slice(0, E) : b,
         _ = F.length,
         R = Math.max(E - _, 0),
         Z = (0, c.vRw)(),
         L = l.useCallback(
             async (e) => {
-                if (null == u) return;
+                if (null == d) return;
                 w(null);
                 let { id: t, storageHash: l, description: i } = e,
-                    o = (0, p.fD)({
-                        userId: u.id,
+                    o = (0, f.fD)({
+                        userId: d.id,
                         avatarId: t,
                         storageHash: l,
-                        size: x.dGM,
+                        size: j.dGM,
                         canAnimate: !0,
                         allowWebp: !1
                     });
@@ -135,7 +134,7 @@ function N(e) {
                     let t = await fetch(o),
                         u = await t.blob(),
                         d = URL.createObjectURL(u),
-                        { filename: f, type: m } = (0, p.mh)(l, i);
+                        { filename: p, type: m } = (0, f.mh)(l, i);
                     s(),
                         (0, c.ZDy)(
                             async () => {
@@ -143,13 +142,13 @@ function N(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         t,
-                                        v(
+                                        O(
                                             {
                                                 imageUri: d,
-                                                file: new File([u], f, { type: m }),
+                                                file: new File([u], p, { type: m }),
                                                 originalAsset: e,
                                                 onCrop: a,
-                                                uploadType: h.pC.AVATAR,
+                                                uploadType: x.pC.AVATAR,
                                                 showUpsellHeader: !0
                                             },
                                             n
@@ -159,33 +158,33 @@ function N(e) {
                             { contextKey: Z }
                         );
                 } catch (e) {
-                    w(y.NW.string(y.t.fZRH9P));
+                    w(h.NW.string(h.t.fZRH9P));
                 }
             },
-            [Z, s, a, u]
+            [Z, s, a, d]
         );
     return (l.useEffect(() => {
-        (0, m.N)();
+        (0, p.N)();
     }, []),
-    j)
-        ? (0, r.jsx)(c.$jN, { className: O.spinner })
+    v)
+        ? (0, r.jsx)(c.$jN, { className: y.spinner })
         : (0, r.jsxs)('div', {
-              className: O.recentAvatarContainer,
+              className: y.recentAvatarContainer,
               children: [
                   null != T &&
-                      !j &&
+                      !v &&
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
                           children: T
                       }),
                   (0, r.jsxs)('div', {
-                      className: i()(O.recentAvatarSlots, { [O.withPremiumUpsell]: !t }),
+                      className: i()(y.recentAvatarSlots, { [y.withPremiumUpsell]: !t }),
                       children: [
                           _ > 0 &&
                               (0, r.jsx)('ul', {
-                                  'aria-label': y.NW.string(y.t.lsU63N),
-                                  className: O.recentAvatarList,
+                                  'aria-label': h.NW.string(h.t.lsU63N),
+                                  className: y.recentAvatarList,
                                   children: F.map((e, t) =>
                                       (0, r.jsx)(
                                           'li',
@@ -202,8 +201,8 @@ function N(e) {
                               }),
                           R > 0 &&
                               (0, r.jsxs)('div', {
-                                  className: O.emptyAvatarSlots,
-                                  children: [(0, r.jsx)(c.nn4, { children: y.NW.format(y.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(b.Z, { className: O.avatarPlaceholder }, t))]
+                                  className: y.emptyAvatarSlots,
+                                  children: [(0, r.jsx)(c.nn4, { children: h.NW.format(h.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t))]
                               }),
                           !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: S })
                       ]
@@ -212,33 +211,30 @@ function N(e) {
           });
 }
 function E(e) {
-    let { className: t, onComplete: n, onClose: a } = e,
-        s = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        m = f.ZP.canUseIncreasedRecentAvatarsLimit(s),
-        { recentAvatarsLimit: g } = (0, p.pC)(m),
-        b = l.useCallback(() => {
-            (0, u.$)(a);
-        }, [a]);
+    let { className: t, onComplete: n, onClose: l } = e,
+        a = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        s = d.ZP.canUseIncreasedRecentAvatarsLimit(a),
+        { recentAvatarsLimit: p } = (0, f.pC)(s);
     return (0, r.jsxs)('div', {
-        className: i()(O.container, t),
+        className: i()(y.container, t),
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(c.vwX, {
-                        className: O.recentAvatarsHeading,
-                        children: y.NW.string(y.t.Bnq9zM)
+                        className: y.recentAvatarsHeading,
+                        children: h.NW.string(h.t.Bnq9zM)
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: [y.NW.format(y.t['+CyJu7'], { recentAvatarsLimit: g }), ' ', !m && y.NW.format(y.t.Xs2Otb, { onClick: b })]
+                        children: [h.NW.format(h.t['+CyJu7'], { recentAvatarsLimit: p }), ' ', !s && h.NW.format(h.t.Xs2Otb, { onClick: v })]
                     })
                 ]
             }),
             (0, r.jsx)(N, {
-                hasIncreasedRecentAvatarsLimit: m,
+                hasIncreasedRecentAvatarsLimit: s,
                 onComplete: n,
-                onClose: a
+                onClose: l
             })
         ]
     });

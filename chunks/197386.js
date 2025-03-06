@@ -1,32 +1,39 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(475179),
     i = n(812206),
     o = n(413523),
     a = n(776862),
     s = n(703656),
-    l = n(317381),
-    c = n(531826),
-    u = n(16609),
-    d = n(917107),
-    f = n(981631);
-function p(e, t) {
-    let n = l.ZP.getSelfEmbeddedActivityForLocation(t),
-        p = i.Z.getApplication(null == n ? void 0 : n.applicationId),
-        _ = (0, u.pY)(null == n ? void 0 : n.location),
-        h = (0, c.ZP)({
-            application: p,
-            channelId: _
+    l = n(566620),
+    c = n(317381),
+    u = n(531826),
+    d = n(16609),
+    f = n(917107),
+    _ = n(918559),
+    p = n(981631);
+function h(e, t) {
+    let n = c.ZP.getSelfEmbeddedActivityForLocation(t);
+    if (null == n) return;
+    let h = i.Z.getApplication(n.applicationId),
+        g = (0, d.pY)(n.location),
+        m = (0, u.ZP)({
+            application: h,
+            channelId: g
         });
-    null == h && null != _ ? (0, s.uL)(f.Z5c.CHANNEL(e, _)) : null != h && (0, a.Z)(h),
-        null != _ &&
-            null != n &&
-            (0, d.Z)(_) &&
-            (r.Z.selectParticipant(
-                _,
-                (0, o.gN)({
-                    applicationId: n.applicationId,
-                    instanceId: null == n ? void 0 : n.compositeInstanceId
-                })
-            ),
-            r.Z.updateLayout(_, f.AEg.NO_CHAT));
+    if (null != m) {
+        (0, a.Z)(m);
+        return;
+    }
+    null != g &&
+        ((0, s.uL)(p.Z5c.CHANNEL(e, g)),
+        (0, f.Z)(g)
+            ? (r.Z.selectParticipant(
+                  g,
+                  (0, o.gN)({
+                      applicationId: n.applicationId,
+                      instanceId: null == n ? void 0 : n.compositeInstanceId
+                  })
+              ),
+              r.Z.updateLayout(g, p.AEg.NO_CHAT))
+            : (0, l.tg)(_.Ez.PANEL));
 }
