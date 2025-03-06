@@ -1013,6 +1013,7 @@ let A = Object.freeze({
         CONNECTIONS: 'Connections',
         CONNECTIONS_XBOX: 'Connections Xbox',
         AUTHORIZED_APPS: 'Authorized Apps',
+        AUTHORIZED_APP: 'Authorized App',
         TEXT: 'Text & Images',
         VOICE: 'Voice & Video',
         PRIVACY_AND_SAFETY: 'Privacy & Safety',

@@ -99,6 +99,7 @@ function c(e, t) {
         case r.x.ACTIVITIES_INVITES_WRITE:
             return [i.NW.string(i.t.IM4CjY)];
         case r.x.SDK_SOCIAL_LAYER_PRESENCE:
+            return [i.NW.string(i.t.Pl1dTU), i.NW.string(i.t.mPRcyc), i.NW.string(i.t.F7J4ND), i.NW.string(i.t.syJLx8)];
         case r.x.SDK_SOCIAL_LAYER:
             return [i.NW.string(i.t.Pl1dTU), i.NW.string(i.t['hc/+ys']), i.NW.string(i.t.mPRcyc), i.NW.string(i.t.F7J4ND), i.NW.string(i.t['2wxXX1'])];
         default:

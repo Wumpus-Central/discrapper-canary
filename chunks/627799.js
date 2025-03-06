@@ -7,7 +7,7 @@ var i = n(243814),
     s = n(63063),
     l = n(981631),
     c = n(388032),
-    u = n(871125);
+    u = n(770329);
 function d(e) {
     let t,
         { accountScopes: n } = e,
@@ -32,16 +32,12 @@ function d(e) {
                   text: c.NW.string(c.t.YFFVMz)
               }
           ))
-        : n.includes(i.x.SDK_SOCIAL_LAYER) &&
+        : n.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = c.NW.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
           o.push(
               {
                   icon: a.iFz,
                   text: c.NW.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
-              },
-              {
-                  icon: a.mrm,
-                  text: c.NW.string(c.t.j7peBg)
               },
               {
                   icon: a.iWm,
