@@ -241,14 +241,18 @@ function q(e) {
             });
 }
 function Q(e) {
-    return e.map((e) => ({
-        sessionId: e.session_id,
-        lastModified: e.last_modified,
-        status: e.status,
-        activities: e.activities,
-        active: !!e.active,
-        clientInfo: e.client_info
-    }));
+    return e.map((e) => {
+        var t;
+        return {
+            sessionId: e.session_id,
+            lastModified: e.last_modified,
+            status: e.status,
+            activities: e.activities,
+            hiddenActivities: null !== (t = e.hidden_activities) && void 0 !== t ? t : [],
+            active: !!e.active,
+            clientInfo: e.client_info
+        };
+    });
 }
 function X(e) {
     let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a } = e;

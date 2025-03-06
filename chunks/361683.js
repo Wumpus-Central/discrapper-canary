@@ -19,6 +19,7 @@ e.exports = {
     popoutHeroTextSecondary: 'popoutHeroTextSecondary_af3b89',
     popoutHeaderIcons: 'popoutHeaderIcons_af3b89',
     popoutUserContainer: 'popoutUserContainer_af3b89',
+    popoutUsernames: 'popoutUsernames_af3b89',
     popoutUsername: 'popoutUsername_af3b89',
     streamingPopoutHeader: 'streamingPopoutHeader_af3b89',
     streamingPopoutHeaderText: 'streamingPopoutHeaderText_af3b89',

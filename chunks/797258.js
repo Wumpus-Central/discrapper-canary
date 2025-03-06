@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(392711),
     o = n.n(i),
@@ -26,7 +26,7 @@ function f(e) {
             d[e.sessionId] = e;
         });
 }
-class p extends (r = a.ZP.Store) {
+class _ extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
@@ -42,6 +42,11 @@ class p extends (r = a.ZP.Store) {
             t = o().find(d, (t) => t.active && t.sessionId !== e);
         return null != t ? t.activities : u;
     }
+    getHiddenActivities() {
+        let e = l.default.getSessionId(),
+            t = o().find(d, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.hiddenActivities : u;
+    }
     getSessionById(e) {
         return d[e];
     }
@@ -52,8 +57,8 @@ class p extends (r = a.ZP.Store) {
         });
     }
 }
-c(p, 'displayName', 'SessionsStore');
-let _ = new p(s.Z, {
+c(_, 'displayName', 'SessionsStore');
+let p = new _(s.Z, {
     CONNECTION_OPEN: f,
     SESSIONS_REPLACE: f
 });
