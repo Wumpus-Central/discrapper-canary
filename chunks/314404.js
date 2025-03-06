@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => Q,
-    y: () => X
+    O: () => X,
+    y: () => J
 }),
     n(47120);
 var r = n(200651),
@@ -13,39 +13,40 @@ var r = n(200651),
     u = n(481060),
     d = n(490504),
     f = n(911969),
+    _ = n(975298),
     p = n(940824),
-    _ = n(987209),
-    h = n(563132),
+    h = n(987209),
+    g = n(563132),
     m = n(409813),
-    g = n(509545),
-    E = n(78839),
-    v = n(669079),
-    b = n(63063),
-    y = n(74538),
-    O = n(937615),
-    S = n(711459),
-    I = n(109213),
-    T = n(717401),
-    N = n(857039),
-    A = n(847903),
-    C = n(104494),
-    R = n(639119),
-    P = n(55610),
+    E = n(509545),
+    v = n(78839),
+    b = n(669079),
+    y = n(63063),
+    O = n(74538),
+    S = n(937615),
+    I = n(711459),
+    T = n(109213),
+    N = n(717401),
+    A = n(857039),
+    C = n(847903),
+    R = n(104494),
+    P = n(639119),
+    D = n(55610),
     w = n(653798),
-    D = n(553797),
+    L = n(553797),
     x = n(927699),
-    L = n(987716),
-    M = n(311821),
-    k = n(459965),
-    j = n(811616),
-    U = n(251660),
-    G = n(474936),
-    B = n(981631),
-    Z = n(231338),
-    F = n(388032),
-    V = n(572408),
-    H = n(142279);
-function W(e, t, n) {
+    M = n(987716),
+    k = n(311821),
+    j = n(459965),
+    U = n(811616),
+    G = n(251660),
+    B = n(474936),
+    V = n(981631),
+    F = n(231338),
+    Z = n(388032),
+    H = n(220283),
+    W = n(970408);
+function Y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +59,7 @@ function W(e, t, n) {
         e
     );
 }
-function Y(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,12 +70,12 @@ function Y(e) {
                 })
             )),
             r.forEach(function (t) {
-                W(e, t, n[t]);
+                Y(e, t, n[t]);
             });
     }
     return e;
 }
-function K(e, t) {
+function z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,56 +87,56 @@ function K(e, t) {
     }
     return n;
 }
-function z(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : K(Object(t)).forEach(function (n) {
+            : z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function q(e, t) {
-    let n = F.NW.string(F.t.BYa62t),
-        r = F.NW.string(F.t.CDa6Dg),
+function Q(e, t) {
+    let n = Z.NW.string(Z.t.BYa62t),
+        r = Z.NW.string(Z.t.CDa6Dg),
         i = (() => {
             switch (e.interval) {
-                case G.rV.YEAR:
+                case B.rV.YEAR:
                     return n;
-                case G.rV.MONTH:
+                case B.rV.MONTH:
                 default:
                     return r;
             }
         })(),
         o = e.skuId;
     switch (t) {
-        case G.Si.TIER_0:
+        case B.Si.TIER_0:
             switch (o) {
-                case G.Si.TIER_1:
-                    return F.NW.string(F.t.q6mxDQ);
-                case G.Si.TIER_2:
-                    return F.NW.string(F.t.seZVS0);
+                case B.Si.TIER_1:
+                    return Z.NW.string(Z.t.q6mxDQ);
+                case B.Si.TIER_2:
+                    return Z.NW.string(Z.t.seZVS0);
                 default:
                     return i;
             }
-        case G.Si.TIER_1:
+        case B.Si.TIER_1:
             switch (o) {
-                case G.Si.TIER_0:
-                    return F.NW.string(F.t['7+u2zs']);
-                case G.Si.TIER_2:
-                    return F.NW.string(F.t.NG2qcX);
+                case B.Si.TIER_0:
+                    return Z.NW.string(Z.t['7+u2zs']);
+                case B.Si.TIER_2:
+                    return Z.NW.string(Z.t.NG2qcX);
                 default:
                     return i;
             }
-        case G.Si.TIER_2:
+        case B.Si.TIER_2:
             switch (o) {
-                case G.Si.TIER_0:
-                case G.Si.TIER_1:
-                    return F.NW.string(F.t['eB0/w8']);
-                case G.Si.TIER_2:
-                    return e.interval === G.rV.MONTH ? F.NW.formatToPlainString(F.t['RqUv8/'], { numFreeGuildSubscriptions: G.cb }) : i;
+                case B.Si.TIER_0:
+                case B.Si.TIER_1:
+                    return Z.NW.string(Z.t['eB0/w8']);
+                case B.Si.TIER_2:
+                    return e.interval === B.rV.MONTH ? Z.NW.formatToPlainString(Z.t['RqUv8/'], { numFreeGuildSubscriptions: B.cb }) : i;
                 default:
                     return i;
             }
@@ -143,239 +144,271 @@ function q(e, t) {
             return i;
     }
 }
-function Q(e) {
+function X(e) {
     var t, n, o, s;
-    let { premiumSubscription: m, skuId: E, selectedPlanId: M, setSelectedPlanId: k, priceOptions: W, planOptions: K, eligibleForMultiMonthPlans: Q, referralTrialOfferId: X, subscriptionPeriodEnd: J, showTotal: $ = !0, discountInvoiceItems: ee, useCompactGiftComponents: et, handleClose: en } = e,
-        { activeSubscription: er, setSelectedPlanId: ei, selectedSkuId: eo, selectedPlan: ea, priceOptions: es } = (0, h.JL)(),
-        { isGift: el, giftRecipient: ec, selectedGiftStyle: eu, customGiftMessage: ed, setCustomGiftMessage: ef, giftingOrigin: ep, claimableRewards: e_, setSelectedGiftingPromotionReward: eh } = (0, _.wD)(),
-        em = (0, v.MY)(ec),
-        eg = el && (0, v.pO)(ec),
-        eE = (0, T.cF)(ea, eg, e_),
-        ev = (0, N.Z)({ location: 'PremiumPlanSelectStep' });
-    (E = null != E ? E : eo), (m = null != m ? m : er), l()(void 0 !== m, 'should not be undefined');
-    let [eb, ey] = (0, c.Wu)([g.Z], () => [null != m ? g.Z.get(m.planId) : null, null != M ? g.Z.get(M) : null]),
-        eO = (0, R.N)(X),
-        eS = null == eO ? void 0 : eO.subscription_trial,
-        eI = (0, C.Ng)(),
-        eT = null == eI ? void 0 : null === (t = eI.discount) || void 0 === t ? void 0 : t.plan_ids,
-        eN = null != ey ? ey : ea,
-        eA = i.useCallback(
+    let { premiumSubscription: m, skuId: v, selectedPlanId: k, setSelectedPlanId: j, priceOptions: Y, planOptions: z, eligibleForMultiMonthPlans: X, referralTrialOfferId: J, subscriptionPeriodEnd: $, showTotal: ee = !0, discountInvoiceItems: et, useCompactGiftComponents: en, handleClose: er } = e,
+        { activeSubscription: ei, setSelectedPlanId: eo, selectedSkuId: ea, selectedPlan: es, priceOptions: el } = (0, g.JL)(),
+        { isGift: ec, giftRecipient: eu, selectedGiftStyle: ed, customGiftMessage: ef, setCustomGiftMessage: e_, giftingOrigin: ep, claimableRewards: eh, setSelectedGiftingPromotionReward: eg } = (0, h.wD)(),
+        em = (0, b.MY)(eu),
+        eE = ec && (0, b.pO)(eu),
+        ev = (0, N.cF)(es, eE, eh),
+        eb = (0, A.Z)({ location: 'PremiumPlanSelectStep' });
+    (v = null != v ? v : ea), (m = null != m ? m : ei), l()(void 0 !== m, 'should not be undefined');
+    let [ey, eO] = (0, c.Wu)([E.Z], () => [null != m ? E.Z.get(m.planId) : null, null != k ? E.Z.get(k) : null]),
+        eS = (0, P.N)(J),
+        eI = null == eS ? void 0 : eS.subscription_trial,
+        eT = (0, R.Ng)(),
+        eN = null == eT ? void 0 : null === (t = eT.discount) || void 0 === t ? void 0 : t.plan_ids,
+        eA = null != eO ? eO : es,
+        eC = i.useCallback(
             (e) => {
-                null != k ? k(e) : ei(e);
+                null != j ? j(e) : eo(e);
             },
-            [k, ei]
+            [j, eo]
         ),
-        eC = null != W ? W : es;
-    l()(null != eC, 'Price option has to be set');
-    let eR = null != eO && G.nG[eO.trial_id].skus.includes(E),
-        eP = null != eI && K.some((e) => (null == eT ? void 0 : eT.includes(e))) && null != eI.discount,
-        ew = (0, y.aS)(G.Xh.PREMIUM_MONTH_TIER_2, !1, el, eC);
+        eR = null != Y ? Y : el;
+    l()(null != eR, 'Price option has to be set');
+    let eP = (0, _.Z)(),
+        eD = eP.fractionalState !== B.a$.NONE,
+        ew = null != eS && B.nG[eS.trial_id].skus.includes(v);
+    l()(!(eD && ew), 'Cannot redeem trial with active fractional premium');
+    let eL = null != eT && z.some((e) => (null == eN ? void 0 : eN.includes(e))) && null != eT.discount,
+        ex = (0, O.aS)(B.Xh.PREMIUM_MONTH_TIER_2, !1, ec, eR);
     i.useEffect(() => {
-        Q && S.ZP.trackExposure({ location: '5f89bb_1' });
-    }, [Q]);
-    let eD = (null == eN ? void 0 : eN.id) != null && K.includes(eN.id);
+        X && I.ZP.trackExposure({ location: '5f89bb_1' });
+    }, [X]);
+    let eM = (null == eA ? void 0 : eA.id) != null && z.includes(eA.id);
     i.useEffect(() => {
-        if (!eD) {
-            if (null == eb || el) eA(K[0]);
-            else if (null != eb) {
-                let e = K.find((e) => e !== eb.id);
-                null != e && eA(e);
+        if (!eM) {
+            if (null == ey || ec) eC(z[0]);
+            else if (null != ey) {
+                let e = z.find((e) => e !== ey.id);
+                null != e && eC(e);
             }
         }
-    }, [eD, el, K, eb, eA]),
+    }, [eM, ec, z, ey, eC]),
         i.useEffect(() => {
-            eE && null != e_ && e_.length > 0 && eh(e_[0]);
-        }, [e_, eh, eE]);
-    let ex = !eg && (el || (!eR && !eP)) && eD && $,
-        eL = (0, u.arW)(),
-        eM = (null == eN ? void 0 : eN.id) != null ? (0, y.aS)(eN.id, !1, el, eC) : void 0,
-        { ipCountryCode: ek } = (0, A.Z)(),
-        ej = 'HR' === ek && null != eM && eM.currency === Z.pK.EUR,
-        eU = (0, y.Ap)(eC.paymentSourceId),
-        eG = i.useMemo(() => ((null == eS ? void 0 : eS.interval) === G.rV.DAY ? ((null == eS ? void 0 : eS.interval_count) > 7 ? F.NW.string(F.t.Z1V2cn) : F.NW.string(F.t.MI1rHh)) : F.NW.string(F.t['+S5lra'])), [eS]),
-        eB = !el && (eP || (null != eS && eR && null != J)),
-        eZ = null == ee ? void 0 : null === (s = ee.find((e) => e.subscriptionPlanId === G.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === s ? void 0 : null === (o = s.discounts) || void 0 === o ? void 0 : null === (n = o.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
-        eF = (e, t, n) => {
-            if (eg)
+            ev && null != eh && eh.length > 0 && eg(eh[0]);
+        }, [eh, eg, ev]);
+    let ek = !eE && (ec || (!ew && !eL)) && eM && ee,
+        ej = (0, u.arW)(),
+        eU = (null == eA ? void 0 : eA.id) != null ? (0, O.aS)(eA.id, !1, ec, eR) : void 0,
+        { ipCountryCode: eG } = (0, C.Z)(),
+        eB = 'HR' === eG && null != eU && eU.currency === F.pK.EUR,
+        eV = (0, O.Ap)(eR.paymentSourceId),
+        eF = i.useMemo(() => ((null == eI ? void 0 : eI.interval) === B.rV.DAY ? ((null == eI ? void 0 : eI.interval_count) > 7 ? Z.NW.string(Z.t.Z1V2cn) : Z.NW.string(Z.t.MI1rHh)) : Z.NW.string(Z.t['+S5lra'])), [eI]),
+        eZ = !ec && (eL || (null != eI && ew && null != $) || eD),
+        eH = null == et ? void 0 : null === (s = et.find((e) => e.subscriptionPlanId === B.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === s ? void 0 : null === (o = s.discounts) || void 0 === o ? void 0 : null === (n = o.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
+        eW = (e, t, n) => {
+            if (eE)
                 return (0, r.jsx)(u.vwX, {
-                    className: a()(H.selectGiftTitle, { [H.compactSelectGiftTitle]: et }),
-                    children: F.NW.string(F.t['3E5hXl'])
+                    className: a()(W.selectGiftTitle, { [W.compactSelectGiftTitle]: en }),
+                    children: Z.NW.string(Z.t['3E5hXl'])
                 });
-            if (!eB)
+            if (!eZ)
                 return (0, r.jsx)('div', {
-                    className: H.selectPlanChooseTitle,
-                    children: F.NW.string(F.t.a19jpa)
+                    className: W.selectPlanChooseTitle,
+                    children: Z.NW.string(Z.t.a19jpa)
                 });
             if (t) {
-                let t = (null == e ? void 0 : e.trial_id) === G.a7;
+                let t = (null == e ? void 0 : e.trial_id) === B.a7;
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',
-                            className: H.trialPlanSelectHeader,
+                            className: W.trialPlanSelectHeader,
                             children: t
-                                ? F.NW.format(F.t.nG95hI, { endDate: J })
-                                : F.NW.format(F.t.s4E7kZ, {
-                                      trialEnd: J,
-                                      trialPeriod: eG
+                                ? Z.NW.format(Z.t.nG95hI, { endDate: $ })
+                                : Z.NW.format(Z.t.s4E7kZ, {
+                                      trialEnd: $,
+                                      trialPeriod: eF
                                   })
                         }),
-                        (0, r.jsx)('hr', { className: H.planSelectSeparator })
+                        (0, r.jsx)('hr', { className: W.planSelectSeparator })
                     ]
                 });
             }
-            if (n && null != eZ && null != ew && M === G.Xh.PREMIUM_MONTH_TIER_2)
+            if (n && null != eH && null != ex && k === B.Xh.PREMIUM_MONTH_TIER_2)
                 return (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',
-                            className: H.trialPlanSelectHeader,
-                            children: F.NW.format(F.t['nG7g/P'], {
-                                numMonths: null == eI ? void 0 : eI.discount.user_usage_limit,
-                                discountedPrice: (0, O.T4)(ew.amount - eZ, ew.currency),
-                                regularPrice: (0, O.T4)(ew.amount, ew.currency)
+                            className: W.trialPlanSelectHeader,
+                            children: Z.NW.format(Z.t['nG7g/P'], {
+                                numMonths: null == eT ? void 0 : eT.discount.user_usage_limit,
+                                discountedPrice: (0, S.T4)(ex.amount - eH, ex.currency),
+                                regularPrice: (0, S.T4)(ex.amount, ex.currency)
                             })
                         }),
-                        (0, r.jsx)('hr', { className: H.planSelectSeparator })
+                        (0, r.jsx)('hr', { className: W.planSelectSeparator })
                     ]
                 });
         },
-        eV = () => {
-            if (em === v.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != ef)
+        eY = () => {
+            if (em === b.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != e_)
                 return (0, r.jsx)(x.Z, {
-                    sectionTitle: F.NW.string(F.t.B3miEx),
-                    className: a()(H.customGiftMessageWrapper, { [H.compactCustomGiftMessageWrapper]: et }),
-                    innerClassName: H.customGiftMessage,
-                    onTextChange: (e) => ef(e),
-                    pendingText: ed,
-                    currentText: ed
+                    sectionTitle: Z.NW.string(Z.t.B3miEx),
+                    className: a()(W.customGiftMessageWrapper, { [W.compactCustomGiftMessageWrapper]: en }),
+                    innerClassName: W.customGiftMessage,
+                    onTextChange: (e) => e_(e),
+                    pendingText: ef,
+                    currentText: ef
                 });
         },
-        { enabled: eH } = I.G.useExperiment({ location: 'PremiumPlanSelectStep' }, { autoTrackExposure: !1 }),
-        eW = ep === G.Wt.DM_CHANNEL && eH,
-        eY = eW ? H.bodyColumnLeft : H.bodyColumnMiddle,
-        eK = () =>
-            eg && null != eu
-                ? eW
-                    ? (0, r.jsx)(L.q, {
-                          className: V.adjustedGiftMainAnimation,
-                          optionsContainerClassName: V.adjustedGiftBoxOptionContainer
+        eK = (e) => {
+            let t = e.endsAt.toDate();
+            return (0, r.jsxs)('div', {
+                className: W.activeFractionalPremiumBannerContainer,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: W.nitroIconContainer,
+                        children: [
+                            (0, r.jsx)(u.SrA, {
+                                size: 'md',
+                                color: 'white',
+                                className: W.iconFractional
+                            }),
+                            (0, r.jsx)(u.SrA, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: W.iconFractionalDark
+                            })
+                        ]
+                    }),
+                    (0, r.jsx)(u.Text, {
+                        variant: 'text-sm/normal',
+                        children: Z.NW.format(Z.t.SAJ5Ag, { expirationDate: t })
+                    }),
+                    (0, r.jsx)('div', { className: W.activeFractionalPremiumBannerBackgroundImage })
+                ]
+            });
+        },
+        { enabled: ez } = T.G.useExperiment({ location: 'PremiumPlanSelectStep' }, { autoTrackExposure: !1 }),
+        eq = ep === B.Wt.DM_CHANNEL && ez,
+        eQ = eq ? W.bodyColumnLeft : W.bodyColumnMiddle,
+        eX = () =>
+            eE && null != ed
+                ? eq
+                    ? (0, r.jsx)(M.q, {
+                          className: H.adjustedGiftMainAnimation,
+                          optionsContainerClassName: H.adjustedGiftBoxOptionContainer
                       })
-                    : (0, r.jsx)(L.q, {})
+                    : (0, r.jsx)(M.q, {})
                 : null,
-        ez = () =>
+        eJ = () =>
             (0, r.jsx)(
                 'div',
-                z(Y({}, eL), {
-                    children: K.map((e) =>
+                q(K({}, ej), {
+                    children: z.map((e) =>
                         (0, r.jsx)(
-                            j.Z,
+                            U.Z,
                             {
                                 planId: e,
-                                premiumSubscription: el ? null : null != m ? m : null,
-                                selectPlan: eA,
-                                selected: (null == eN ? void 0 : eN.id) === e,
-                                priceOptions: eC,
-                                shouldShowUpdatedPaymentModal: eB,
-                                isEligibleForDiscount: eP,
-                                discountAmountOff: eZ,
-                                isEligibleForTrial: eR
+                                premiumSubscription: ec ? null : null != m ? m : null,
+                                selectPlan: eC,
+                                selected: (null == eA ? void 0 : eA.id) === e,
+                                priceOptions: eR,
+                                shouldShowUpdatedPaymentModal: eZ,
+                                isEligibleForDiscount: eL,
+                                discountAmountOff: eH,
+                                isEligibleForTrial: ew
                             },
                             e
                         )
                     )
                 })
             ),
-        eq = () => eF(eO, eR, eP),
-        eQ = () => (ej ? (0, r.jsx)(d.Z, { message: F.NW.formatToPlainString(F.t['9hnZoK'], { kunaPriceWithCurrency: (0, O.T4)(7.5345 * eM.amount, Z.pK.HRK) }) }) : null);
+        e$ = () => eW(eS, ew, eL),
+        e0 = () => (eB ? (0, r.jsx)(d.Z, { message: Z.NW.formatToPlainString(Z.t['9hnZoK'], { kunaPriceWithCurrency: (0, S.T4)(7.5345 * eU.amount, F.pK.HRK) }) }) : null);
     return (0, r.jsxs)('div', {
-        className: a()(eg ? H.stepBodyCustomGift : H.stepBody, { [H.paddingForHalloweenBanner]: ev }),
+        className: a()(eE ? W.stepBodyCustomGift : W.stepBody, { [W.paddingForHalloweenBanner]: eb }),
         children: [
+            eP.fractionalState !== B.a$.NONE && eK(eP),
             (0, r.jsxs)('div', {
-                className: eg ? eY : void 0,
+                className: eE ? eQ : void 0,
                 children: [
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(D.Z, {
                         fromBoostCancelModal: !1,
-                        className: H.legacyPricingNotice
+                        className: W.legacyPricingNotice
                     }),
-                    eW && eq(),
-                    eW ? ez() : eK(),
-                    eW && eQ()
+                    eq && e$(),
+                    eq ? eJ() : eX(),
+                    eq && e0()
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: eg ? H.bodyColumnRight : void 0,
+                className: eE ? W.bodyColumnRight : void 0,
                 children: [
-                    (0, r.jsx)(U.s, {
-                        className: et ? H.compactSendGiftToUser : void 0,
-                        giftRecipient: ec
+                    (0, r.jsx)(G.s, {
+                        className: en ? W.compactSendGiftToUser : void 0,
+                        giftRecipient: eu
                     }),
-                    eW && eK(),
-                    eV(),
-                    null != eb &&
-                        !el &&
+                    eq && eX(),
+                    eY(),
+                    null != ey &&
+                        !ec &&
                         (0, r.jsx)('div', {
-                            className: H.bodyText,
-                            children: q(eb, E)
+                            className: W.bodyText,
+                            children: Q(ey, v)
                         }),
-                    !eW && eq(),
-                    !eW && ez(),
+                    !eq && e$(),
+                    !eq && eJ(),
                     (0, r.jsx)('div', {
                         children:
-                            ex && null != eN && null != eM
+                            ek && null != eA && null != eU
                                 ? (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)('div', { className: H.selectPlanDivider }),
+                                          (0, r.jsx)('div', { className: W.selectPlanDivider }),
                                           (0, r.jsx)(w.Ji, {
-                                              label: F.NW.string(F.t.txajQE),
-                                              value: (0, r.jsx)(D.Z, {
-                                                  price: eM.amount,
-                                                  currency: eM.currency,
-                                                  intervalType: el ? null : eN.interval,
-                                                  intervalCount: eN.intervalCount,
-                                                  isPrepaidPaymentSource: eU
+                                              label: Z.NW.string(Z.t.txajQE),
+                                              value: (0, r.jsx)(L.Z, {
+                                                  price: eU.amount,
+                                                  currency: eU.currency,
+                                                  intervalType: ec ? null : eA.interval,
+                                                  intervalCount: eA.intervalCount,
+                                                  isPrepaidPaymentSource: eV
                                               }),
-                                              className: H.selectPlanTotalRow
+                                              className: W.selectPlanTotalRow
                                           })
                                       ]
                                   })
                                 : null
                     }),
-                    !eW && eQ(),
-                    !el && !eB && $ && (0, r.jsx)(d.Z, { message: F.NW.format(F.t.Om31w8, { documentationLink: b.Z.getArticleURL(B.BhN.LOCALIZED_PRICING) }) }),
-                    el && !eW && (0, r.jsx)(p.Z, { onClose: en })
+                    !eq && e0(),
+                    !ec && !eZ && ee && (0, r.jsx)(d.Z, { message: Z.NW.format(Z.t.Om31w8, { documentationLink: y.Z.getArticleURL(V.BhN.LOCALIZED_PRICING) }) }),
+                    ec && !eq && (0, r.jsx)(p.Z, { onClose: er })
                 ]
             })
         ]
     });
 }
-function X(e) {
+function J(e) {
     let { onStepChange: t, selectedPlanId: n, paymentSources: i, onBackClick: o, showBackButton: a, planOptions: s, shouldRenderUpdatedPaymentModal: l = !1, isTrial: c } = e,
-        { paymentSources: d, selectedPlan: f } = (0, h.JL)(),
-        { isGift: p, claimableRewards: m, giftRecipient: g } = (0, _.wD)(),
-        E = (0, v.pO)(g);
+        { paymentSources: d, selectedPlan: f } = (0, g.JL)(),
+        { isGift: _, claimableRewards: p, giftRecipient: m } = (0, h.wD)(),
+        E = (0, b.pO)(m);
     return (
         (i = null != i ? i : d),
         (n = null != n ? n : null == f ? void 0 : f.id),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != n && s.includes(n)
-                    ? (0, r.jsx)(J, {
+                    ? (0, r.jsx)($, {
                           paymentSources: i,
                           onStepChange: t,
                           selectedPlanId: n,
-                          isGift: p,
-                          claimableRewards: m,
+                          isGift: _,
+                          claimableRewards: p,
                           shouldRenderUpdatedPaymentModal: l,
                           isTrial: c
                       })
                     : (0, r.jsx)(u.zxk, {
                           disabled: !0,
-                          children: F.NW.string(F.t.XqMe3N)
+                          children: Z.NW.string(Z.t.XqMe3N)
                       }),
                 a
-                    ? (0, r.jsx)(M.Z, {
-                          className: p && E ? H.equalDistantBackButton : void 0,
+                    ? (0, r.jsx)(k.Z, {
+                          className: _ && E ? W.equalDistantBackButton : void 0,
                           onClick: o
                       })
                     : null
@@ -383,20 +416,20 @@ function X(e) {
         })
     );
 }
-function J(e) {
+function $(e) {
     let { onStepChange: t, selectedPlanId: n, isGift: i, claimableRewards: o, paymentSources: a, shouldRenderUpdatedPaymentModal: s, isTrial: l } = e,
-        d = (0, c.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-        { step: f, selectedPlan: p } = (0, h.JL)(),
-        { hasEntitlements: _ } = (0, k.H)(n, i),
-        g = (null != d && null != d.paymentSourceId) || Object.keys(a).length > 0 || (_ && !l);
-    var v = s ? F.NW.string(F.t.PDTjLC) : F.NW.string(F.t.XqMe3N),
+        d = (0, c.e7)([v.ZP], () => v.ZP.getPremiumTypeSubscription()),
+        { step: f, selectedPlan: _ } = (0, g.JL)(),
+        { hasEntitlements: p } = (0, j.H)(n, i),
+        h = (null != d && null != d.paymentSourceId) || Object.keys(a).length > 0 || (p && !l);
+    var E = s ? Z.NW.string(Z.t.PDTjLC) : Z.NW.string(Z.t.XqMe3N),
         b = m.h8.ADD_PAYMENT_STEPS;
     return (
-        g && (b = m.h8.REVIEW),
-        (0, T.id)(p, i, o) && f !== m.h8.SELECT_FREE_SKU && (b = m.h8.SELECT_FREE_SKU),
+        h && (b = m.h8.REVIEW),
+        (0, N.id)(_, i, o) && f !== m.h8.SELECT_FREE_SKU && (b = m.h8.SELECT_FREE_SKU),
         (0, r.jsx)(u.zxk, {
             onClick: () => t(b),
-            children: v
+            children: E
         })
     );
 }
