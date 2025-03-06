@@ -1,8 +1,8 @@
-n.d(t, { Z: () => E }), n(47120), n(230036);
+n.d(t, { Z: () => S }), n(47120), n(230036);
 var r = n(200651),
     a = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     o = n(544891),
     s = n(704215),
     c = n(481060),
@@ -10,16 +10,16 @@ var r = n(200651),
     u = n(675478),
     m = n(431),
     h = n(572004),
-    x = n(74538),
+    p = n(74538),
     f = n(246992),
-    p = n(981631),
+    x = n(981631),
     b = n(474936),
     _ = n(710662),
     g = n(536465);
 let v = async () => {
         try {
             let { body: e } = await o.tn.get({
-                url: p.ANM.USER_OFFER_IDS,
+                url: x.ANM.USER_OFFER_IDS,
                 rejectWithError: !0
             });
             return e;
@@ -30,7 +30,7 @@ let v = async () => {
     j = async (e, t) => {
         try {
             await o.tn.post({
-                url: p.ANM.CREATE_USER_OFFER(e, t),
+                url: x.ANM.CREATE_USER_OFFER(e, t),
                 rejectWithError: !0
             });
         } catch (e) {
@@ -41,7 +41,7 @@ let v = async () => {
     y = async (e, t) => {
         try {
             await o.tn.del({
-                url: p.ANM.DELETE_USER_OFFER(e, t),
+                url: x.ANM.UPDATE_USER_OFFER(e, t),
                 rejectWithError: !0
             });
         } catch (e) {
@@ -49,21 +49,10 @@ let v = async () => {
             await (0, d.T)();
         }
     },
-    C = async (e, t) => {
-        try {
-            await o.tn.post({
-                url: p.ANM.UNACK_USER_OFFER(e, t),
-                rejectWithError: !0
-            });
-        } catch (e) {
-        } finally {
-            await (0, d.T)();
-        }
-    },
-    N = async () => {
+    C = async () => {
         try {
             let { body: e } = await o.tn.get({
-                url: p.ANM.USER_OFFERS,
+                url: x.ANM.USER_OFFERS,
                 rejectWithError: !0
             });
             return e;
@@ -77,7 +66,7 @@ let v = async () => {
     O = async () => {
         try {
             await o.tn.del({
-                url: p.ANM.USER_OFFERS,
+                url: x.ANM.USER_OFFERS,
                 rejectWithError: !0
             });
         } catch (e) {
@@ -85,82 +74,82 @@ let v = async () => {
             await m.Z.forceReset(), await (0, d.T)();
         }
     };
-function T(e) {
-    var t, n, l, s;
+function N(e) {
+    var t, n, i, s;
     let { offer: u, offerOptions: m, forceRefetch: f } = e,
-        [p, _] = a.useState(!1),
-        [v, j] = a.useState(!1),
-        [N, O] = a.useState(!1),
+        [_, v] = a.useState(!1),
+        [j, C] = a.useState(!1),
+        [O, N] = a.useState(!1),
         [T, S] = a.useState(!1);
     a.useEffect(() => {
-        N && S(!0);
+        O && S(!0);
         let e = setTimeout(() => {
             S(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [N]);
-    let { id: E, expires_at: k, redeemed_at: w, trial_id: I, subscription_trial: Z, referrer: P } = u,
+    }, [O]);
+    let { id: E, expires_at: k, redeemed_at: I, trial_id: w, subscription_trial: P, referrer: Z } = u,
         R =
             null !==
                 (n =
                     null ===
                         (t = m.find((e) => {
                             let { value: t } = e;
-                            return t === I;
+                            return t === w;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown';
-    null != P && (R = ''.concat(R, ' from @').concat(P.username));
+    null != Z && (R = ''.concat(R, ' from @').concat(Z.username));
     let L = null != k,
         A = null != k && new Date(k).getTime() < Date.now(),
-        D = (null == Z ? void 0 : Z.sku_id) === b.Si.TIER_0,
+        D = (null == P ? void 0 : P.sku_id) === b.Si.TIER_0,
         B = async () => {
-            O(!0), L ? await C(E, 'trial') : await (0, d.a)(u), f(), O(!1);
+            N(!0), L ? await M({ expiresAt: null }) : await (0, d.a)(u), f(), N(!1);
         },
         M = async (e) => {
             let { expiresAt: t } = e;
-            O(!0);
+            N(!0);
             try {
                 await o.tn.patch({
-                    url: '/user-offers/trial/'.concat(E),
+                    url: x.ANM.UPDATE_USER_OFFER(E, 'trial'),
                     body: { expires_at: t },
                     rejectWithError: !0
                 });
             } finally {
-                f(), O(!1);
+                f(), N(!1);
             }
         };
     a.useEffect(() => {
-        if (p) {
+        if (_) {
             let e = setTimeout(() => {
-                _(!1);
+                v(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-        if (v) {
+        if (j) {
             let e = setTimeout(() => {
-                j(!1);
+                C(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [p, v]);
+    }, [_, j]);
     let z = 'Active';
     return (
         L && (z = 'Acknowledged'),
         A && (z = 'Expired'),
         (0, r.jsxs)('div', {
-            className: i()(g.card, D ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
+            className: l()(g.card, D ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)('div', {
-                    className: i()(g.row, g.nameRow),
+                    className: l()(g.row, g.nameRow),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
@@ -169,20 +158,20 @@ function T(e) {
                         }),
                         (0, r.jsx)(c.P3F, {
                             onClick: async () => {
-                                O(!0), await y(E, 'trial'), f(), O(!1);
+                                N(!0), await y(E, 'trial'), f(), N(!1);
                             },
                             children: (0, r.jsx)(c.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: i()(g.icon, g.trashIcon)
+                                className: l()(g.icon, g.trashIcon)
                             })
                         })
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: i()(g.row, g.idRow),
+                    className: l()(g.row, g.idRow),
                     onClick: () => {
-                        (0, h.JG)(E), _(!0);
+                        (0, h.JG)(E), v(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
@@ -190,11 +179,11 @@ function T(e) {
                             color: 'always-white',
                             children: ['Offer: ', E]
                         }),
-                        p
+                        _
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(g.icon, g.noMargin)
+                                  className: l()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -204,21 +193,21 @@ function T(e) {
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: i()(g.row, g.idRow),
+                    className: l()(g.row, g.idRow),
                     onClick: () => {
-                        (0, h.JG)(I), j(!0);
+                        (0, h.JG)(w), C(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'always-white',
-                            children: ['Trial: ', I]
+                            children: ['Trial: ', w]
                         }),
-                        v
+                        j
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(g.icon, g.noMargin)
+                                  className: l()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -235,9 +224,9 @@ function T(e) {
                         children: [
                             'Trial Length:',
                             ' ',
-                            (0, x.if)({
-                                intervalType: null !== (l = null == Z ? void 0 : Z.interval) && void 0 !== l ? l : b.rV.MONTH,
-                                intervalCount: null !== (s = null == Z ? void 0 : Z.interval_count) && void 0 !== s ? s : 1,
+                            (0, p.if)({
+                                intervalType: null !== (i = null == P ? void 0 : P.interval) && void 0 !== i ? i : b.rV.MONTH,
+                                intervalCount: null !== (s = null == P ? void 0 : P.interval_count) && void 0 !== s ? s : 1,
                                 capitalize: !1
                             })
                         ]
@@ -263,7 +252,7 @@ function T(e) {
                     children: [
                         (0, r.jsx)(c.P3F, {
                             onClick: B,
-                            className: i()(g.badge, g.clickable, {
+                            className: l()(g.badge, g.clickable, {
                                 [g.acked]: L,
                                 [g.expired]: A
                             }),
@@ -273,9 +262,9 @@ function T(e) {
                                 children: z
                             })
                         }),
-                        null != w &&
+                        null != I &&
                             (0, r.jsx)('div', {
-                                className: i()(g.badge, g.__invalid_badgeBottom, g.redeemed),
+                                className: l()(g.badge, g.__invalid_badgeBottom, g.redeemed),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -285,30 +274,30 @@ function T(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: i()(g.loadingContainer, { [g.isLoading]: N || T }),
+                    className: l()(g.loadingContainer, { [g.isLoading]: O || T }),
                     children: (0, r.jsx)(c.$jN, {})
                 })
             ]
         })
     );
 }
-function S(e) {
+function T(e) {
     var t, n;
-    let { offer: l, offerOptions: s, forceRefetch: u } = e,
-        [m, x] = a.useState(!1),
-        [f, p] = a.useState(!1),
-        [b, _] = a.useState(!1),
-        [v, j] = a.useState(!1);
+    let { offer: i, offerOptions: s, forceRefetch: u } = e,
+        [m, p] = a.useState(!1),
+        [f, b] = a.useState(!1),
+        [_, v] = a.useState(!1),
+        [j, C] = a.useState(!1);
     a.useEffect(() => {
-        b && j(!0);
+        _ && C(!0);
         let e = setTimeout(() => {
-            j(!1);
+            C(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [b]);
-    let { id: N, expires_at: O, applied_at: T, discount_id: S, discount: E } = l,
+    }, [_]);
+    let { id: O, expires_at: N, applied_at: T, discount_id: S, discount: E } = i,
         k =
             null !==
                 (n =
@@ -321,28 +310,28 @@ function S(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        w = null != O,
-        I = null != O && new Date(O).getTime() < Date.now(),
-        Z = async () => {
-            _(!0), w ? await C(N, 'discount') : await (0, d.a)(void 0, l), u(), _(!1);
+        I = null != N,
+        w = null != N && new Date(N).getTime() < Date.now(),
+        P = async () => {
+            v(!0), I ? await Z({ expiresAt: null }) : await (0, d.a)(void 0, i), u(), v(!1);
         },
-        P = async (e) => {
+        Z = async (e) => {
             let { expiresAt: t } = e;
-            _(!0);
+            v(!0);
             try {
                 await o.tn.patch({
-                    url: '/user-offers/discount/'.concat(N),
+                    url: x.ANM.UPDATE_USER_OFFER(O, 'discount'),
                     body: { expires_at: t },
                     rejectWithError: !0
                 });
             } finally {
-                u(), _(!1);
+                u(), v(!1);
             }
         };
     a.useEffect(() => {
         if (m) {
             let e = setTimeout(() => {
-                x(!1);
+                p(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
@@ -350,7 +339,7 @@ function S(e) {
         }
         if (f) {
             let e = setTimeout(() => {
-                p(!1);
+                b(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
@@ -359,13 +348,13 @@ function S(e) {
     }, [m, f]);
     let R = 'Active';
     return (
-        I && (R = 'Expired'),
-        w && (R = 'Acknowledged'),
+        w && (R = 'Expired'),
+        I && (R = 'Acknowledged'),
         (0, r.jsxs)('div', {
-            className: i()(g.card, g.discount),
+            className: l()(g.card, g.discount),
             children: [
                 (0, r.jsxs)('div', {
-                    className: i()(g.row, g.nameRow),
+                    className: l()(g.row, g.nameRow),
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
@@ -374,32 +363,32 @@ function S(e) {
                         }),
                         (0, r.jsx)(c.P3F, {
                             onClick: async () => {
-                                _(!0), await y(N, 'discount'), u(), _(!1);
+                                v(!0), await y(O, 'discount'), u(), v(!1);
                             },
                             children: (0, r.jsx)(c.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: i()(g.icon, g.trashIcon)
+                                className: l()(g.icon, g.trashIcon)
                             })
                         })
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: i()(g.row, g.idRow),
+                    className: l()(g.row, g.idRow),
                     onClick: () => {
-                        (0, h.JG)(N), x(!0);
+                        (0, h.JG)(O), p(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', N]
+                            children: ['Offer: ', O]
                         }),
                         m
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(g.icon, g.noMargin)
+                                  className: l()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -409,9 +398,9 @@ function S(e) {
                     ]
                 }),
                 (0, r.jsxs)(c.P3F, {
-                    className: i()(g.row, g.idRow),
+                    className: l()(g.row, g.idRow),
                     onClick: () => {
-                        (0, h.JG)(S), p(!0);
+                        (0, h.JG)(S), b(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
@@ -423,7 +412,7 @@ function S(e) {
                             ? (0, r.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(g.icon, g.noMargin)
+                                  className: l()(g.icon, g.noMargin)
                               })
                             : (0, r.jsx)(c.TIy, {
                                   size: 'xs',
@@ -450,8 +439,8 @@ function S(e) {
                         }),
                         (0, r.jsx)('input', {
                             type: 'date',
-                            value: null != O ? O.substring(0, 10) : '',
-                            onChange: (e) => P({ expiresAt: e.target.value })
+                            value: null != N ? N.substring(0, 10) : '',
+                            onChange: (e) => Z({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -459,10 +448,10 @@ function S(e) {
                     className: g.badgeContainer,
                     children: [
                         (0, r.jsx)(c.P3F, {
-                            onClick: Z,
-                            className: i()(g.badge, g.clickable, {
-                                [g.acked]: w,
-                                [g.expired]: I
+                            onClick: P,
+                            className: l()(g.badge, g.clickable, {
+                                [g.acked]: I,
+                                [g.expired]: w
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
@@ -472,7 +461,7 @@ function S(e) {
                         }),
                         null != T &&
                             (0, r.jsx)('div', {
-                                className: i()(g.badge, g.__invalid_badgeBottom, g.redeemed),
+                                className: l()(g.badge, g.__invalid_badgeBottom, g.redeemed),
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -482,23 +471,23 @@ function S(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: i()(g.loadingContainer, { [g.isLoading]: b || v }),
+                    className: l()(g.loadingContainer, { [g.isLoading]: _ || j }),
                     children: (0, r.jsx)(c.$jN, {})
                 })
             ]
         })
     );
 }
-function E() {
+function S() {
     let [e, t] = a.useState([]),
-        [n, l] = a.useState([]),
-        [o, h] = a.useState(),
-        [x, p] = a.useState(),
-        [b, y] = a.useState([]),
-        [C, E] = a.useState([]),
-        [k, w] = a.useState(!0);
+        [n, i] = a.useState([]),
+        [l, o] = a.useState(),
+        [h, p] = a.useState(),
+        [x, b] = a.useState([]),
+        [y, S] = a.useState([]),
+        [E, k] = a.useState(!0);
     a.useEffect(() => {
-        (0 === e.length || 0 === n.length || k) &&
+        (0 === e.length || 0 === n.length || E) &&
             v().then((e) => {
                 let n = Object.keys(e.trial).map((t) => ({
                         label: t,
@@ -508,29 +497,29 @@ function E() {
                         label: t,
                         value: e.discount[t]
                     }));
-                t(n), l(r), null == o && h(n[0].value), null == x && p(r[0].value);
+                t(n), i(r), null == l && o(n[0].value), null == h && p(r[0].value);
             });
-    }, [e, n, o, x, k]),
+    }, [e, n, l, h, E]),
         a.useEffect(() => {
-            k &&
-                (w(!1),
+            E &&
+                (k(!1),
                 m.Z.forceReset(),
                 (0, d.T)(),
-                N().then((e) => {
-                    y(e.trial.sort((e, t) => e.id.localeCompare(t.id))), E(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                C().then((e) => {
+                    b(e.trial.sort((e, t) => e.id.localeCompare(t.id))), S(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
-        }, [k]);
+        }, [E]);
     let I = async () => {
-            null != o && (await j(o, 'trial'), w(!0));
+            null != l && (await j(l, 'trial'), k(!0));
         },
-        Z = async () => {
-            null != x && (await j(x, 'discount'), w(!0));
+        w = async () => {
+            null != h && (await j(h, 'discount'), k(!0));
         },
         P = async () => {
-            await O(), w(!0);
+            await O(), k(!0);
         };
     return (0, r.jsx)(c.zJl, {
-        className: i()(_.panel),
+        className: _.panel,
         children: (0, r.jsxs)('div', {
             className: g.panelInner,
             children: [
@@ -556,7 +545,7 @@ function E() {
                                 }),
                                 (0, r.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: () => w(!0),
+                                    onClick: () => k(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -576,10 +565,10 @@ function E() {
                                 (0, r.jsx)(c.PhF, {
                                     className: g.input,
                                     options: e,
-                                    isSelected: (e) => o === e,
+                                    isSelected: (e) => l === e,
                                     placeholder: 'Trial Type',
                                     serialize: (e) => String(e),
-                                    select: (e) => h(e),
+                                    select: (e) => o(e),
                                     popoutLayerContext: f.O$
                                 }),
                                 (0, r.jsx)(c.zxk, {
@@ -603,21 +592,21 @@ function E() {
                                 (0, r.jsx)(c.PhF, {
                                     className: g.input,
                                     options: n,
-                                    isSelected: (e) => x === e,
+                                    isSelected: (e) => h === e,
                                     placeholder: 'Discount Type',
                                     serialize: (e) => String(e),
                                     select: (e) => p(e),
                                     popoutLayerContext: f.O$
                                 }),
                                 (0, r.jsx)(c.zxk, {
-                                    onClick: Z,
+                                    onClick: w,
                                     children: 'Create'
                                 })
                             ]
                         })
                     ]
                 }),
-                b.length > 0 &&
+                x.length > 0 &&
                     (0, r.jsxs)('section', {
                         className: g.section,
                         children: [
@@ -625,20 +614,20 @@ function E() {
                                 variant: 'heading-md/semibold',
                                 children: 'Existing Trial Offers'
                             }),
-                            b.map((t) =>
+                            x.map((t) =>
                                 (0, r.jsx)(
-                                    T,
+                                    N,
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     t.id
                                 )
                             )
                         ]
                     }),
-                C.length > 0 &&
+                y.length > 0 &&
                     (0, r.jsxs)('section', {
                         className: g.section,
                         children: [
@@ -646,13 +635,13 @@ function E() {
                                 variant: 'heading-md/semibold',
                                 children: 'Existing Discount Offers'
                             }),
-                            C.map((e) =>
+                            y.map((e) =>
                                 (0, r.jsx)(
-                                    S,
+                                    T,
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     e.id
                                 )
