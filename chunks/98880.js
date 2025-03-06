@@ -264,11 +264,7 @@ function q(e) {
                                                 })
                                             }),
                                         S && (0, l.jsx)(X, {}),
-                                        L &&
-                                            (0, l.jsx)(y.Z, {
-                                                name: (0, O.$d)(t),
-                                                labelType: L
-                                            })
+                                        L && (0, l.jsx)(y.Z, { labelType: L })
                                     ]
                                 })
                               : null,

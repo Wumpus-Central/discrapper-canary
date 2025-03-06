@@ -6,10 +6,11 @@ var i = n(120356),
     o = n(481060),
     a = n(540059),
     s = n(388032),
-    c = n(898416);
+    c = n(436501);
 function u(e) {
     let { className: t, iconContainerClassName: n, icon: i, color: u, title: d, description: p, userCount: h, onClick: f, highlight: m } = e,
-        g = (0, a.Q3)('GuildEventPrompt');
+        g = (0, a.Q3)('GuildEventPrompt'),
+        b = (0, o._q$)('GuildEventPrompt');
     return (0, r.jsxs)(o.P3F, {
         className: l()(c.container, t, null != m && { [c.pulse]: m }),
         onClick: f,
@@ -24,11 +25,12 @@ function u(e) {
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-md/semibold',
+                        color: b ? 'text-primary' : 'header-secondary',
                         children: d
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
-                        color: 'header-secondary',
+                        color: b ? 'text-primary' : 'header-secondary',
                         className: c.inline,
                         children: p
                     }),
@@ -37,13 +39,13 @@ function u(e) {
                               children: [
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
-                                      color: 'header-secondary',
+                                      color: b ? 'text-primary' : 'header-secondary',
                                       className: c.dot,
                                       children: '\u2022'
                                   }),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
-                                      color: 'header-secondary',
+                                      color: b ? 'text-primary' : 'header-secondary',
                                       className: c.inline,
                                       children: s.NW.format(s.t.NywdIi, { count: h })
                                   })

@@ -10,8 +10,8 @@ var a = n(200651),
     u = n(895924),
     p = n(70097),
     f = n(695346),
-    g = n(594174),
-    m = n(695103),
+    m = n(594174),
+    g = n(695103),
     v = n(880448),
     h = n(823379),
     b = n(5192),
@@ -22,11 +22,11 @@ var a = n(200651),
     y = n(665811),
     T = n(182906),
     j = n(556505),
-    N = n(513202),
-    Z = n(884338),
-    S = n(823531),
+    Z = n(513202),
+    S = n(884338),
+    N = n(823531),
     O = n(388032),
-    E = n(715614),
+    E = n(858597),
     A = n(969728);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -65,12 +65,12 @@ function P(e) {
 function w(e) {
     let { activity: t, application: n, context: i, guildId: l, large: s = !1 } = e,
         o = 'channel' === i.type ? i.channel : void 0,
-        d = (0, r.Wu)([g.default], () => {
+        d = (0, r.Wu)([m.default], () => {
             var e;
             return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : [])
                 .map((e) => {
                     let [t] = e;
-                    return g.default.getUser(t);
+                    return m.default.getUser(t);
                 })
                 .filter(h.lm);
         }),
@@ -102,8 +102,8 @@ function w(e) {
                           })
                         : O.NW.formatToPlainString(O.t['7Uuia2'], { username: u })
             }),
-            (0, a.jsx)(Z.Z, {
-                size: s ? Z.u.SIZE_24 : Z.u.SIZE_16,
+            (0, a.jsx)(S.Z, {
+                size: s ? S.u.SIZE_24 : S.u.SIZE_16,
                 guildId: l,
                 users: d,
                 max: 6
@@ -113,26 +113,26 @@ function w(e) {
 }
 function L(e) {
     var t;
-    let { activityItem: n, context: l, guildId: g, locationObject: h, onActivityItemVisible: b, onActivityItemSelected: x, large: Z = !1 } = e,
+    let { activityItem: n, context: l, guildId: m, locationObject: h, onActivityItemVisible: b, onActivityItemSelected: x, large: S = !1 } = e,
         {
             imageBackground: L,
             videoUrl: k,
             activityAction: D,
-            joinableEmbeddedApp: W,
-            onActivityItemSelected: R,
-            labelType: F,
+            joinableEmbeddedApp: R,
+            onActivityItemSelected: F,
+            labelType: W,
             staffReleasePhase: B
         } = (0, I.ZP)({
             activityItem: n,
             context: l,
-            guildId: g,
+            guildId: m,
             locationObject: h,
             onActivityItemVisible: b,
             onActivityItemSelected: x,
-            embeddedActivitiesManager: N.Z,
+            embeddedActivitiesManager: Z.Z,
             commandOrigin: u.bB.APPLICATION_LAUNCHER
         }),
-        V = (0, r.e7)([_.Z, m.Z], () => _.Z.inDevModeForApplication(n.application.id) || m.Z.inTestModeForApplication(n.application.id), [n.application.id]),
+        V = (0, r.e7)([_.Z, g.Z], () => _.Z.inDevModeForApplication(n.application.id) || g.Z.inTestModeForApplication(n.application.id), [n.application.id]),
         { application: H } = n,
         U = i.useCallback((e) => e && (null == b ? void 0 : b({ applicationId: n.application.id })), [n.application.id, b]),
         Y = (0, d.O)(U, 0.8, !0),
@@ -145,23 +145,23 @@ function L(e) {
         $ = () => z(!1),
         Q = f.Sb.useSetting(),
         K = i.useCallback(() => {
-            null == R || R();
-        }, [R]);
+            null == F || F();
+        }, [F]);
     return (0, a.jsxs)(c.P3F, {
         onClick: D === I.JS.START ? K : void 0,
         onContextMenu: Q
             ? (e) => {
-                  (0, o.vq)(e, (e) => (0, a.jsx)(S.Z, M({ application: H }, e)));
+                  (0, o.vq)(e, (e) => (0, a.jsx)(N.Z, M({ application: H }, e)));
               }
             : void 0,
         className: s()(E.activityItem, {
-            [E.large]: !0 === Z,
+            [E.large]: !0 === S,
             [E.disabled]: D !== I.JS.START
         }),
         children: [
             (0, a.jsxs)('div', {
                 ref: Y,
-                className: s()(E.activityImageContainer, { [E.large]: !0 === Z }),
+                className: s()(E.activityImageContainer, { [E.large]: !0 === S }),
                 onMouseEnter: X,
                 onFocus: X,
                 onMouseLeave: $,
@@ -170,7 +170,7 @@ function L(e) {
                     (0, a.jsx)(T.Z, {
                         imageBackground: L,
                         applicationName: H.name,
-                        imageClassName: s()(E.activityImage, { [E.large]: !0 === Z }),
+                        imageClassName: s()(E.activityImage, { [E.large]: !0 === S }),
                         imageNotFoundClassName: E.brokenImageIconWrapper
                     }),
                     null != k && q && D === I.JS.START
@@ -196,10 +196,7 @@ function L(e) {
                         className: E.overlayBadge,
                         children: (0, a.jsx)('div', {
                             className: E.badgeContainer,
-                            children: (0, a.jsx)(j.Z, {
-                                name: H.name,
-                                labelType: F
-                            })
+                            children: (0, a.jsx)(j.Z, { labelType: W })
                         })
                     }),
                     V
@@ -231,9 +228,9 @@ function L(e) {
                 ]
             }),
             (0, a.jsxs)('div', {
-                className: s()(E.activityTextContainer, { [E.large]: Z }),
+                className: s()(E.activityTextContainer, { [E.large]: S }),
                 children: [
-                    Z
+                    S
                         ? (0, a.jsx)(c.Text, {
                               className: E.activityMaxParticipantsLarge,
                               variant: 'text-xs/normal',
@@ -270,11 +267,11 @@ function L(e) {
                         ]
                     }),
                     (0, a.jsx)(w, {
-                        activity: null == W ? void 0 : W.embeddedActivity,
+                        activity: null == R ? void 0 : R.embeddedActivity,
                         application: H,
                         context: l,
-                        guildId: g,
-                        large: Z
+                        guildId: m,
+                        large: S
                     }),
                     (0, a.jsx)('div', {
                         className: E.activityTagsContainer,

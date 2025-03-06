@@ -26,7 +26,7 @@ function v(e) {
             onActivityItemSelected: x,
             imageBackground: j,
             activityAction: O,
-            labelType: N
+            labelType: E
         } = (0, u.ZP)({
             context: n,
             activityItem: r,
@@ -37,7 +37,7 @@ function v(e) {
             assetNames: b,
             commandOrigin: y
         }),
-        [E, I] = l.useState(!1),
+        [N, I] = l.useState(!1),
         P = l.useCallback(() => {
             I(!0);
         }, [I]),
@@ -50,13 +50,10 @@ function v(e) {
                     className: g.overlayBadge,
                     children: (0, i.jsx)('div', {
                         className: g.badgeContainer,
-                        children: (0, i.jsx)(p.Z, {
-                            name: r.application.name,
-                            labelType: N
-                        })
+                        children: (0, i.jsx)(p.Z, { labelType: E })
                     })
                 }),
-            [r.application.name, N]
+            [E]
         ),
         T = l.useMemo(() => {
             switch (O) {
@@ -102,7 +99,7 @@ function v(e) {
         children: (0, i.jsx)(c.AMe, {
             config: _,
             from: { value: 0 },
-            to: { value: +!!E },
+            to: { value: +!!N },
             children: (e) => {
                 let { value: t } = e;
                 return (0, i.jsx)(c.f6W, {
