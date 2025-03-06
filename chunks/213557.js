@@ -16,8 +16,8 @@ var r = t(200651),
     x = t(442336),
     _ = t(910611),
     C = t(41776),
-    j = t(703656),
-    b = t(6025),
+    b = t(703656),
+    j = t(6025),
     v = t(592125),
     N = t(703558),
     y = t(731290),
@@ -28,7 +28,7 @@ var r = t(200651),
     P = t(287746),
     E = t(981631),
     S = t(388032),
-    T = t(567692);
+    T = t(565886);
 function B(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -102,7 +102,7 @@ function A(e) {
             {
                 icon: i.Dio,
                 tooltip: S.NW.string(S.t.cpT0Cg),
-                onClick: () => b.Z.closeChannelSidebar(A)
+                onClick: () => j.Z.closeChannelSidebar(A)
             },
             'close'
         )
@@ -138,10 +138,10 @@ function A(e) {
                           handleClick: () => {
                               let e = I.Z.getMessages(W.id);
                               if (D) {
-                                  (0, j.uL)(E.Z5c.CHANNEL(W.guild_id, W.id)), (0, h.C3)(W.guild_id, null);
+                                  (0, b.uL)(E.Z5c.CHANNEL(W.guild_id, W.id)), (0, h.C3)(W.guild_id, null);
                                   return;
                               }
-                              (0, j.XU)(W.guild_id, W.id, e.jumpTargetId);
+                              (0, b.XU)(W.guild_id, W.id, e.jumpTargetId);
                           }
                       })
                   }),
@@ -159,5 +159,8 @@ function A(e) {
                   })
               ]
           })
-        : (0, r.jsx)(c.Z, { guild: L });
+        : (0, r.jsx)(c.Z, {
+              guild: L,
+              channelId: W.id
+          });
 }

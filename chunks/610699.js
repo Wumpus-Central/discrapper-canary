@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(906732),
     y = n(321231),
     x = n(758199),
-    O = n(943762),
-    E = n(880251),
+    E = n(943762),
+    O = n(880251),
     j = n(208444),
     N = n(835473),
     C = n(471445),
@@ -32,8 +32,8 @@ var r = n(200651),
     Z = n(496675),
     k = n(594174),
     R = n(626135),
-    L = n(768581),
-    D = n(624138),
+    D = n(768581),
+    L = n(624138),
     M = n(358595),
     W = n(981631),
     F = n(245335),
@@ -82,9 +82,9 @@ function H(e, t) {
         e
     );
 }
-let V = (0, D.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    z = (0, D.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    K = (0, D.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let V = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    z = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    K = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function Y(e) {
     let { members: t, membersOnline: n, isLarge: i, isStacked: a } = e,
         l = [];
@@ -183,11 +183,11 @@ function q(e) {
     var t, n, a;
     let l,
         d,
-        { invite: x, getAcceptInviteContext: O } = e,
-        { approximate_member_count: E, approximate_presence_count: j, target_type: C, target_application: I } = x;
+        { invite: x, getAcceptInviteContext: E } = e,
+        { approximate_member_count: O, approximate_presence_count: j, target_type: C, target_application: I } = x;
     s()(C === F.Iq.EMBEDDED_APPLICATION && null != I, 'invalid application invite');
-    let L = i.useRef(null),
-        [D, q] = i.useState(!1),
+    let D = i.useRef(null),
+        [L, q] = i.useState(!1),
         [J, $] = i.useState(!1),
         [, ee] = i.useState(!1),
         et = i.useCallback(
@@ -207,23 +207,23 @@ function q(e) {
             [null === (t = x.inviter) || void 0 === t ? void 0 : t.id, I.id]
         ),
         en = (0, m.O)(et),
-        er = (0, T.Z)(L, en);
+        er = (0, T.Z)(D, en);
     i.useEffect(() => {
         let e = new ResizeObserver(() =>
                 (function () {
                     var e;
-                    let t = null === (e = L.current) || void 0 === e ? void 0 : e.offsetWidth;
+                    let t = null === (e = D.current) || void 0 === e ? void 0 : e.offsetWidth;
                     null != t && (q(t < K + z), $(t <= 2 * V));
                 })()
             ),
-            t = L.current;
+            t = D.current;
         return (
             null != t && e.observe(t),
             () => {
                 e.disconnect();
             }
         );
-    }, [L, q, $]);
+    }, [D, q, $]);
     let ei = (0, c.e7)([w.Z], () => (null != x.guild ? w.Z.getGuild(x.guild.id) : null), [x]),
         ea = (0, N.Z)([I.id])[0],
         eo = (0, c.e7)([f.ZP], () => {
@@ -260,10 +260,10 @@ function q(e) {
             (0, p.r$)(x, 'accept', ed),
                 p.ZP.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: x.code,
-                    context: O('Invite Button Embed'),
+                    context: E('Invite Button Embed'),
                     analyticsLocations: ed
                 });
-        }, [x, ed, O]),
+        }, [x, ed, E]),
         eh = x.state === W.r2o.ACCEPTING,
         eg = null != ei;
     if (null == ei) {
@@ -278,6 +278,7 @@ function q(e) {
         : eb && null != ea
           ? (0, r.jsx)('div', {
                 ref: en,
+                className: B.inviteContainer,
                 children: (0, r.jsx)(Q, {
                     app: ea,
                     invite: x,
@@ -285,7 +286,7 @@ function q(e) {
                     isMember: eg,
                     channel: es,
                     guild: ei,
-                    members: E,
+                    members: O,
                     membersOnline: j,
                     isActivityActive: el,
                     submitting: eh,
@@ -300,25 +301,25 @@ function q(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: o()(B.imgContainer, {
-                            [B.large]: D,
+                            [B.large]: L,
                             [B.stacked]: J
                         }),
                         children: (0, r.jsx)(g.Z, {
                             imageBackground: eu,
                             applicationName: null !== (a = null == ea ? void 0 : ea.name) && void 0 !== a ? a : '',
                             imageClassName: o()(B.img, {
-                                [B.large]: D,
+                                [B.large]: L,
                                 [B.stacked]: J
                             }),
                             imageNotFoundClassName: o()(B.brokenImg, {
-                                [B.large]: D,
+                                [B.large]: L,
                                 [B.stacked]: J
                             })
                         })
                     }),
                     (0, r.jsxs)(S.Z, {
                         className: o()(B.content, {
-                            [B.large]: D,
+                            [B.large]: L,
                             [B.stacked]: J
                         }),
                         children: [
@@ -341,13 +342,13 @@ function q(e) {
                             }),
                             (0, r.jsxs)('div', {
                                 className: o()(B.currentState, {
-                                    [B.large]: D,
+                                    [B.large]: L,
                                     [B.split]: !el && J
                                 }),
                                 children: [
                                     !el && eg
                                         ? (0, r.jsxs)('div', {
-                                              className: o()(B.endedNote, { [B.large]: D }),
+                                              className: o()(B.endedNote, { [B.large]: L }),
                                               children: [
                                                   (0, r.jsx)(u.Text, {
                                                       variant: 'text-xs/medium',
@@ -363,9 +364,9 @@ function q(e) {
                                     eg
                                         ? null
                                         : (0, r.jsx)(Y, {
-                                              members: E,
+                                              members: O,
                                               membersOnline: j,
-                                              isLarge: D,
+                                              isLarge: L,
                                               isStacked: J
                                           }),
                                     (0, r.jsxs)('div', {
@@ -440,13 +441,13 @@ function Q(e) {
     let { app: t, invite: n, activityUsers: a, isMember: o, channel: l, guild: s, members: c, membersOnline: d, isActivityActive: u, submitting: p, isDisabled: m, tooltip: f, handleAcceptInvite: h } = e,
         g = new URL(n.code, 'https://discord.gg').toString(),
         { bot: _, icon: b } = t,
-        v = L.ZP.getApplicationIconURL({
+        v = D.ZP.getApplicationIconURL({
             id: t.id,
             icon: b,
             bot: _
         }),
         y = (0, j.z)(t),
-        N = (0, E.E)(t),
+        N = (0, O.E)(t),
         C = a.length,
         I = i.useMemo(() => {
             let e = [
@@ -473,6 +474,7 @@ function Q(e) {
             ),
             {
                 info: (0, r.jsxs)('div', {
+                    className: B.infoWrapper,
                     children: [
                         (0, r.jsx)(X, {
                             channel: l,
@@ -482,7 +484,7 @@ function Q(e) {
                         }),
                         o
                             ? C > 0 &&
-                              (0, r.jsx)(O.K, {
+                              (0, r.jsx)(E.K, {
                                   activityUsers: a,
                                   guildId: s.id,
                                   activityText: U.NW.string(U.t.BMTj29)

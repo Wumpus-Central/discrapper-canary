@@ -23,5 +23,7 @@ e.exports = {
     statusWrapper: 'statusWrapper_a4b24e',
     statusOnline: 'statusOnline_a4b24e status_a4b24e',
     statusOffline: 'statusOffline_a4b24e status_a4b24e',
-    count: 'count_a4b24e'
+    count: 'count_a4b24e',
+    inviteContainer: 'inviteContainer_a4b24e',
+    infoWrapper: 'infoWrapper_a4b24e'
 };

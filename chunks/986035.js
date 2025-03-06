@@ -1,57 +1,60 @@
 n.d(t, { Z: () => p }), n(266796);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    a = n(481060),
-    s = n(600164),
-    c = n(460729),
-    u = n(455812);
-class d extends i.PureComponent {
-    render() {
-        let { title: e, description: t, agreement: n, disagreement: i, onAgree: l, onDisagree: d, imageClassName: p } = this.props;
-        return (0, r.jsxs)(s.Z, {
-            className: c.gatedContent,
-            justify: s.Z.Justify.CENTER,
-            align: s.Z.Align.CENTER,
-            direction: s.Z.Direction.VERTICAL,
+    o = n(120356),
+    c = n.n(o),
+    s = n(481060),
+    a = n(480916),
+    l = n(600164),
+    u = n(258083),
+    g = n(802138);
+let p = function (e) {
+    let { title: t, description: n, agreement: o, disagreement: p, onAgree: f, onDisagree: d, imageClassName: b, agreementButtonColor: m = s.zxk.Colors.RED, modalType: O, channelId: y, guildId: j } = e;
+    return (
+        i.useEffect(() => {
+            (0, a.YT)(O, y, j);
+        }, [O, y, j]),
+        (0, r.jsxs)(l.Z, {
+            className: u.gatedContent,
+            justify: l.Z.Justify.CENTER,
+            align: l.Z.Align.CENTER,
+            direction: l.Z.Direction.VERTICAL,
             children: [
-                (0, r.jsx)('div', { className: o()(c.image, p) }),
+                (0, r.jsx)('div', { className: c()(u.image, b) }),
                 (0, r.jsx)('div', {
-                    className: o()(c.title, u.marginBottom8),
-                    children: e
-                }),
-                (0, r.jsx)('div', {
-                    className: o()(c.description, u.marginBottom20),
+                    className: c()(u.title, g.marginBottom8),
                     children: t
                 }),
-                (0, r.jsxs)(s.Z, {
-                    justify: s.Z.Justify.CENTER,
-                    align: s.Z.Align.CENTER,
+                (0, r.jsx)('div', {
+                    className: c()(u.description, g.marginBottom20),
+                    children: n
+                }),
+                (0, r.jsxs)(l.Z, {
+                    justify: l.Z.Justify.CENTER,
+                    align: l.Z.Align.CENTER,
                     grow: 0,
                     children: [
-                        null != i
-                            ? (0, r.jsx)(a.zxk, {
-                                  className: c.action,
-                                  size: a.PhG.LARGE,
-                                  color: a.Ttl.PRIMARY,
+                        null != p && null != d
+                            ? (0, r.jsx)(s.zxk, {
+                                  className: u.action,
+                                  size: s.PhG.LARGE,
+                                  color: s.Ttl.PRIMARY,
                                   onClick: d,
-                                  children: i
+                                  children: p
                               })
                             : null,
-                        null != n
-                            ? (0, r.jsx)(a.zxk, {
-                                  className: c.action,
-                                  color: a.zxk.Colors.RED,
-                                  size: a.PhG.LARGE,
-                                  onClick: l,
-                                  children: n
+                        null != o && null != f
+                            ? (0, r.jsx)(s.zxk, {
+                                  className: u.action,
+                                  color: m,
+                                  size: s.PhG.LARGE,
+                                  onClick: f,
+                                  children: o
                               })
                             : null
                     ]
                 })
             ]
-        });
-    }
-}
-let p = d;
+        })
+    );
+};

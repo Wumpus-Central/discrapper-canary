@@ -74,6 +74,7 @@ function d(e) {
                     (0, r.jsx)(
                         e,
                         c(s({}, n), {
+                            channelId: a,
                             application: t,
                             onAgree: l,
                             onDisagree: d

@@ -1,11 +1,12 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(558381),
-    o = n(986035),
-    a = n(388032),
-    s = n(233914);
-function c(e, t, n) {
+    o = n(480916),
+    a = n(986035),
+    s = n(388032),
+    c = n(44135);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,31 +19,32 @@ function c(e, t, n) {
         e
     );
 }
-class u extends i.PureComponent {
+class d extends i.PureComponent {
     render() {
         let {
             game: { name: e }
         } = this.props;
         return (0, r.jsx)('div', {
-            className: s.matureListing,
-            children: (0, r.jsx)(o.Z, {
+            className: c.matureListing,
+            children: (0, r.jsx)(a.Z, {
+                modalType: o.it.NSFW_APP_LISTING,
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
-                title: a.NW.formatToPlainString(a.t.n5PGER, { name: e }),
-                description: a.NW.string(a.t['bJx/aG']),
-                agreement: a.NW.string(a.t.odZq8f),
-                disagreement: a.NW.string(a.t.hieTsL)
+                title: s.NW.formatToPlainString(s.t.n5PGER, { name: e }),
+                description: s.NW.string(s.t['bJx/aG']),
+                agreement: s.NW.string(s.t.odZq8f),
+                disagreement: s.NW.string(s.t.hieTsL)
             })
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, 'handleDisagree', () => {
+            u(this, 'handleDisagree', () => {
                 (0, l.M9)();
             }),
-            c(this, 'handleAgree', () => {
+            u(this, 'handleAgree', () => {
                 (0, l.cj)();
             });
     }
 }
-let d = u;
+let p = d;

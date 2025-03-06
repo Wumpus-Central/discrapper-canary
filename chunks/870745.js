@@ -1,28 +1,29 @@
-n.d(t, { Z: () => u });
-var r = n(200651),
-    i = n(442837),
-    o = n(481060),
-    l = n(726721),
-    a = n(726521),
+n.d(t, { Z: () => s });
+var o = n(200651),
+    r = n(442837),
+    a = n(481060),
+    i = n(726721),
+    l = n(726521),
     c = n(592125),
-    d = n(388032);
-function u(e, t) {
-    let n = l.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
-        u = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
-        s = null == u ? void 0 : u.getGuildId();
-    return !1 === n
+    u = n(388032);
+function s(e, t, n) {
+    let s = i.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
+        d = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
+        _ = null == d ? void 0 : d.getGuildId();
+    return !1 === s
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, o.jsx)(a.sNh, {
               id: 'report-app',
               color: 'danger',
-              label: d.NW.string(d.t.NgA5vr),
+              label: u.NW.string(u.t.NgA5vr),
               action: () =>
-                  (0, a.uu)({
+                  (0, l.uu)({
                       application: e,
                       entrypoint: 'activity_ui_popout',
-                      contextualGuildId: null != s ? s : void 0,
-                      contextualChannelId: null == u ? void 0 : u.id
+                      contextualGuildId: null != _ ? _ : void 0,
+                      contextualChannelId: null == d ? void 0 : d.id,
+                      appContext: n
                   }),
-              icon: o.U65
+              icon: a.U65
           });
 }
