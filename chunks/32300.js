@@ -3,8 +3,10 @@ n.d(t, {
     OV: () => o,
     Rb: () => s,
     XE: () => f,
+    Yo: () => p,
     b4: () => c,
     o4: () => a,
+    w0: () => _,
     zu: () => l
 });
 var r = n(818083),
@@ -87,4 +89,21 @@ function f(e) {
     let t = a(e),
         n = u(e);
     return t.overlayV3tech || n;
+}
+let _ = (0, r.B)({
+    kind: 'user',
+    id: '2025-03_overlay_v3_now_playing',
+    label: 'Overlay V3 Now Playing Experiment',
+    defaultConfig: { useOverlayNowPlaying: !1 },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    treatments: [
+        {
+            id: 1,
+            label: 'Overlay Now Playing',
+            config: { useOverlayNowPlaying: !0 }
+        }
+    ]
+});
+function p(e) {
+    return _.getCurrentConfig({ location: e }).useOverlayNowPlaying;
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(565138),
     c = n(474936),
     u = n(388032),
-    d = n(70000);
+    d = n(955509);
 let f = {
     XXSMALL: d.xxsmall,
     XSMALL: d.xsmall,
@@ -16,7 +16,7 @@ let f = {
     MEDIUM: d.medium,
     LARGE: d.large
 };
-function p(e) {
+function _(e) {
     switch (e) {
         case f.XXSMALL:
             return 16;
@@ -32,7 +32,7 @@ function p(e) {
             return 80;
     }
 }
-function _(e) {
+function p(e) {
     if (null == e) return null;
     switch (e) {
         case c.Si.GUILD:
@@ -61,30 +61,32 @@ function h(e) {
             return l.Z.Sizes.MEDIUM;
     }
 }
-let m = (e) => {
+let g = (e) => {
     let t,
-        { game: n, guild: i, skuId: c, pid: m, className: g, guildClassName: E, size: v = f.MEDIUM } = e;
-    if ((null != c && (t = _(c)), null != n && null == t && (t = n.getIconURL(p(v))), null == (t = (0, s.Z)(m, t)) && null != i)) {
+        { game: n, guild: i, skuId: c, pid: g, className: m, guildClassName: E, size: v = f.MEDIUM, allowUnknownGameIcon: b = !0 } = e;
+    if ((null != c && (t = p(c)), null != n && null == t && (t = n.getIconURL(_(v))), null == (t = (0, s.Z)(g, t)) && null != i)) {
         let e = h(v);
         return (0, r.jsx)(l.Z, {
-            className: o()(d.gameIcon, E, g),
+            className: o()(d.gameIcon, E, m),
             guild: i,
             size: e
         });
     }
     if (null == t)
-        return (0, r.jsx)(a.IMN, {
-            size: 'md',
-            color: 'currentColor',
-            className: o()(d.gameIcon, v, g)
-        });
-    let b = null == n ? void 0 : n.name,
-        y = null != b && '' !== b ? u.NW.formatToPlainString(u.t.tiKyYm, { applicationName: b }) : u.NW.string(u.t['2B/phI']);
+        return b
+            ? (0, r.jsx)(a.IMN, {
+                  size: 'md',
+                  color: 'currentColor',
+                  className: o()(d.gameIcon, v, m)
+              })
+            : null;
+    let y = null == n ? void 0 : n.name,
+        O = null != y && '' !== y ? u.NW.formatToPlainString(u.t.tiKyYm, { applicationName: y }) : u.NW.string(u.t['2B/phI']);
     return (0, r.jsx)('img', {
-        alt: y,
+        alt: O,
         src: t,
-        className: o()(d.gameIcon, v, g)
+        className: o()(d.gameIcon, v, m)
     });
 };
-m.Sizes = f;
-let g = m;
+g.Sizes = f;
+let m = g;
