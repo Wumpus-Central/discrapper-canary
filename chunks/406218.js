@@ -1,22 +1,24 @@
 n.d(t, {
+    PC: () => h,
     o_: () => p,
-    sO: () => f,
-    xo: () => d
+    sO: () => _,
+    xo: () => f
 }),
     n(47120),
     n(266796);
 var r = n(345074),
     i = n(339085),
     o = n(633302),
-    a = n(823379);
-function s(e) {
+    a = n(823379),
+    s = n(405222);
+function l(e) {
     let { guildId: t, emojiId: n, emojiName: r } = e,
         a = i.De.get(t);
     return null == n && null == r ? null : null != n ? (null != a ? a.getById(n) : null) : null != r ? o.ZP.getByName(r) : null;
 }
-let l = { label: '' };
-function c(e, t) {
-    let n = Array(r.Sn).fill(l);
+let c = { label: '' };
+function u(e, t) {
+    let n = Array(r.Sn).fill(c);
     for (let o of t) {
         var i;
         !(o.position < 0) &&
@@ -25,7 +27,7 @@ function c(e, t) {
                 label: o.label,
                 emoji:
                     null !==
-                        (i = s({
+                        (i = l({
                             guildId: e,
                             emojiId: o.emoji_id,
                             emojiName: o.emoji_name
@@ -36,7 +38,7 @@ function c(e, t) {
     }
     return n;
 }
-function u(e) {
+function d(e) {
     return null == e
         ? {}
         : Object.entries(e).reduce((e, t) => {
@@ -50,25 +52,25 @@ function u(e) {
               );
           }, {});
 }
-function d(e) {
-    var t, n, r;
+function f(e) {
+    var t, n, r, i, o;
     return {
         id: e.id,
         name: e.name,
-        description: e.description,
+        description: null !== (t = e.description) && void 0 !== t ? t : '',
         icon: e.icon_hash,
         customBanner: e.custom_banner_hash,
         onlineCount: e.online_count,
         memberCount: e.member_count,
-        brandColorPrimary: e.brand_color_primary,
+        brandColorPrimary: null !== (n = e.brand_color_primary) && void 0 !== n ? n : null,
         visibility: e.visibility,
-        traits: c(e.id, null !== (t = e.traits) && void 0 !== t ? t : []),
-        gameApplicationIds: null !== (n = e.game_application_ids) && void 0 !== n ? n : [],
-        gameActivity: u(e.game_activity),
-        features: null !== (r = e.features) && void 0 !== r ? r : []
+        traits: u(e.id, null !== (r = e.traits) && void 0 !== r ? r : []),
+        gameApplicationIds: null !== (i = e.game_application_ids) && void 0 !== i ? i : [],
+        gameActivity: d(e.game_activity),
+        features: null !== (o = e.features) && void 0 !== o ? o : []
     };
 }
-function f(e) {
+function _(e) {
     let t = {};
     return (
         null != e.name && (t.name = e.name),
@@ -76,7 +78,7 @@ function f(e) {
         void 0 !== e.icon && (t.icon = e.icon),
         void 0 !== e.customBanner && (t.custom_banner = e.customBanner),
         null != e.visibility && (t.visibility = e.visibility),
-        null != e.brandColorPrimary && (t.brand_color_primary = e.brandColorPrimary),
+        void 0 !== e.brandColorPrimary && (t.brand_color_primary = e.brandColorPrimary),
         null != e.traits &&
             (t.traits = e.traits
                 .map((e, t) => {
@@ -107,4 +109,28 @@ function p(e) {
         ),
         {}
     );
+}
+function h(e) {
+    var t, n, r, i, o, a;
+    let { guild: l, profile: c } = e,
+        u = null != c ? f(c) : null;
+    return null != u
+        ? u
+        : null == l
+          ? null
+          : {
+                id: l.id,
+                name: l.name,
+                description: null !== (t = l.description) && void 0 !== t ? t : '',
+                icon: l.icon,
+                customBanner: l.banner,
+                onlineCount: null !== (r = null !== (n = l.approximate_presence_count) && void 0 !== n ? n : e.approximate_presence_count) && void 0 !== r ? r : 0,
+                memberCount: null !== (o = null !== (i = l.approximate_member_count) && void 0 !== i ? i : e.approximate_member_count) && void 0 !== o ? o : 0,
+                visibility: s.k.NOT_SPECIFIED,
+                traits: [],
+                gameApplicationIds: [],
+                gameActivity: {},
+                features: null !== (a = l.features) && void 0 !== a ? a : [],
+                brandColorPrimary: null
+            };
 }

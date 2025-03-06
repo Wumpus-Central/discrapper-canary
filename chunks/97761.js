@@ -1,57 +1,51 @@
-n.d(e, { default: () => b });
-var r = n(200651),
-    o = n(192379),
-    l = n(834345),
+n.d(e, { default: () => f });
+var r = n(200651);
+n(192379);
+var o = n(834345),
     i = n(115850),
-    c = n(480743),
-    a = n(481060),
+    l = n(480743),
+    c = n(481060),
     s = n(388032),
-    u = n(111929);
-function f() {
-    let t = [
+    a = n(111929);
+function u() {
+    return [
         {
             icon: i.e,
             text: s.NW.string(s.t.OYu45e)
         },
         {
-            icon: c.k,
+            icon: l.k,
             text: s.NW.string(s.t['5a8g/f'])
         },
         {
-            icon: l.N,
+            icon: o.N,
             text: s.NW.string(s.t.k6sOl5)
         }
-    ];
-    return t.map((e, n) => {
-        let { icon: l, text: i } = e;
+    ].map((t, e) => {
+        let { icon: n, text: o } = t;
         return (0, r.jsxs)(
-            o.Fragment,
+            'div',
             {
+                className: a.bulletPointRow,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: u.bulletPointRow,
-                        children: [
-                            (0, r.jsx)(l, {}),
-                            (0, r.jsx)(a.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-primary',
-                                className: u.bulletPointText,
-                                children: i
-                            })
-                        ]
-                    }),
-                    n !== t.length - 1 && (0, r.jsx)('div', { className: u.bulletPointSeparator })
+                    (0, r.jsx)(n, {}),
+                    (0, r.jsx)(c.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'text-primary',
+                        className: a.bulletPointText,
+                        children: o
+                    })
                 ]
             },
-            n
+            e
         );
     });
 }
-let b = function (t) {
+let f = function (t) {
     var e,
         n,
         { onClickButton: o } = t,
-        l = (function (t, e) {
+        i = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -60,18 +54,18 @@ let b = function (t) {
                     var n,
                         r,
                         o = {},
-                        l = Object.keys(t);
-                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                        i = Object.keys(t);
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
                     return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
+                var i = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
         })(t, ['onClickButton']);
     return (0, r.jsxs)(
-        a.Y0X,
+        c.Y0X,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},
@@ -96,36 +90,36 @@ let b = function (t) {
                     });
             }
             return t;
-        })({ size: a.CgR.SMALL }, l)),
+        })({ size: c.CgR.SMALL }, i)),
         (n = n =
             {
-                className: u.modalRoot,
+                className: a.modalRoot,
                 children: [
-                    (0, r.jsx)(a.xBx, {
-                        children: (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(c.xBx, {
+                        children: (0, r.jsx)(c.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: u.heading,
+                            className: a.heading,
                             children: s.NW.string(s.t.WkhDVF)
                         })
                     }),
-                    (0, r.jsxs)(a.hzk, {
+                    (0, r.jsxs)(c.hzk, {
                         scrollbarType: 'none',
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
-                                className: u.contentText,
+                                className: a.contentText,
                                 children: s.NW.string(s.t.wN9nIC)
                             }),
                             (0, r.jsx)('div', {
-                                className: u.bulletPointsContainer,
-                                children: (0, r.jsx)(f, {})
+                                className: a.bulletPointsContainer,
+                                children: (0, r.jsx)(u, {})
                             })
                         ]
                     }),
-                    (0, r.jsx)(a.mzw, {
-                        className: u.modalFooter,
-                        children: (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(c.mzw, {
+                        className: a.modalFooter,
+                        children: (0, r.jsx)(c.zxk, {
                             fullWidth: !0,
                             onClick: o,
                             children: s.NW.string(s.t.RscU7O)
