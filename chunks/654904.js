@@ -50,7 +50,7 @@ function p(e) {
 }
 function h(e, t, i, s) {
     (0, o.ZDy)(async () => {
-        let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('6812')]).then(n.bind(n, 192277));
+        let { default: o } = await Promise.all([n.e('91689'), n.e('55849'), n.e('77032')]).then(n.bind(n, 192277));
         return (n) =>
             (0, r.jsx)(
                 o,
@@ -62,14 +62,18 @@ function h(e, t, i, s) {
                         onComplete: (n) => {
                             let { assetOrigin: r, imageUri: o, file: s, originalAsset: l } = n,
                                 u = s.name.replace(/\.[^/.]+$/, ''),
-                                d = (0, a.cN)({
+                                d = (0, a.Z1)({
+                                    filename: u,
+                                    assetOrigin: r
+                                }),
+                                f = (0, a.cN)({
                                     assetOrigin: r,
                                     imageUri: o,
-                                    description: u,
+                                    description: d,
                                     originalAsset: l
                                 });
                             (0, c.j)({
-                                image: d,
+                                image: f,
                                 file: s,
                                 uploadType: e,
                                 guildId: t,
