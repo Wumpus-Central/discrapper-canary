@@ -1,10 +1,10 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(442837),
     a = n(481060),
     s = n(194359),
-    l = n(320582),
+    l = n(276506),
     c = n(699516),
     u = n(594174),
     d = n(388032);
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,14 +54,14 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
-    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: _, onFriendRemove: m, appContext: g } = e,
+function g(e) {
+    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: g, appContext: m } = e,
         { id: E, username: v, bot: b } = t,
         y = (0, o.e7)(
             [u.default],
@@ -71,7 +71,7 @@ function m(e) {
             },
             [E]
         ),
-        O = (0, l.VQ)(E),
+        O = (0, l.n)({ userId: E }),
         [S, I] = (0, o.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
         [T, N] = i.useState(!1);
     if (b || y) return null;
@@ -83,13 +83,13 @@ function m(e) {
                     (0, r.jsx)(
                         e,
                         h(
-                            p(
+                            _(
                                 {
                                     header: d.NW.formatToPlainString(d.t.fPLvZW, { name: v }),
                                     confirmText: d.NW.string(d.t.cvSt1N),
                                     cancelText: d.NW.string(d.t['ETE/oK']),
                                     onConfirm: () => {
-                                        s.Z.removeFriend(E, { location: f }), N(!1), null == m || m();
+                                        s.Z.removeFriend(E, { location: f }), N(!1), null == g || g();
                                     }
                                 },
                                 t
@@ -103,30 +103,27 @@ function m(e) {
                         )
                     );
             },
-            { contextKey: null != g ? (0, a.VnL)(g) : void 0 }
+            { contextKey: null != m ? (0, a.VnL)(m) : void 0 }
         );
     }
-    if (S)
-        return (0, r.jsx)(a.sNh, {
-            id: 'remove-friend',
-            label: d.NW.string(d.t.cvSt1N),
-            action: A
-        });
-    {
-        let e = O ? d.t.tfnAkJ : d.t.w5uwoK;
-        return (0, r.jsx)(a.sNh, {
-            id: 'add-friend',
-            label: T ? d.NW.string(d.t.xMH6vL) : d.NW.string(e),
-            action: () => {
-                T ||
-                    (s.Z.addRelationship({
-                        userId: E,
-                        context: { location: f }
-                    }),
-                    N(!0),
-                    null == _ || _());
-            },
-            disabled: I || (T && !S)
-        });
-    }
+    return S
+        ? (0, r.jsx)(a.sNh, {
+              id: 'remove-friend',
+              label: d.NW.string(d.t.cvSt1N),
+              action: A
+          })
+        : (0, r.jsx)(a.sNh, {
+              id: 'add-friend',
+              label: T ? d.NW.string(d.t.xMH6vL) : O,
+              action: () => {
+                  T ||
+                      (s.Z.addRelationship({
+                          userId: E,
+                          context: { location: f }
+                      }),
+                      N(!0),
+                      null == p || p());
+              },
+              disabled: I || (T && !S)
+          });
 }

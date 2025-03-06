@@ -1,7 +1,6 @@
 n.d(t, {
     ML: () => l,
-    N8: () => d,
-    VQ: () => u,
+    N8: () => u,
     vh: () => c
 }),
     n(47120);
@@ -19,20 +18,7 @@ function l(e) {
 function c(e) {
     return s(e, a.OGo.PENDING_INCOMING);
 }
-function u(e) {
-    let [t] = (0, r.e7)(
-        [o.Z],
-        () => {
-            let t = o.Z.getGameRelationshipsForUser(e),
-                n = o.Z.getGameRelationshipsVersion();
-            return [t.length > 0, n];
-        },
-        [e],
-        i.Q
-    );
-    return t;
-}
-function d(e, t) {
+function u(e, t) {
     let [n] = (0, r.e7)(
         [o.Z],
         () => {
