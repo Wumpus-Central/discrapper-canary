@@ -1,51 +1,52 @@
-n.d(t, { Z: () => s });
-var l = n(200651);
+n.d(t, { Z: () => o });
+var r = n(200651);
 n(192379);
 var i = n(481060);
-let s = (e) => {
-    let { product: t, analyticsLocations: s, overrideTitle: r, overrideDescription: a, shouldShowPromotionalExperience: o, onCloseCallback: C } = e;
+let o = (e) => {
+    let { product: t, analyticsLocations: o, overrideTitle: l, overrideDescription: a, shouldShowPromotionalExperience: s, onCloseCallback: c, itemConsumed: u } = e;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
             return (n) =>
-                (0, l.jsx)(
+                (0, r.jsx)(
                     e,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                l = Object.keys(n);
+                                r = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (l = l.concat(
+                                (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                l.forEach(function (t) {
-                                    var l;
-                                    (l = n[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: l,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = l);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })(
                         {
                             product: t,
-                            analyticsLocations: s,
-                            overrideTitle: r,
+                            analyticsLocations: o,
+                            overrideTitle: l,
                             overrideDescription: a,
-                            shouldShowPromotionalExperience: o
+                            shouldShowPromotionalExperience: s,
+                            itemConsumed: u
                         },
                         n
                     )
                 );
         },
-        { onCloseCallback: C }
+        { onCloseCallback: c }
     );
 };

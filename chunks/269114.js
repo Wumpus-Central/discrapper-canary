@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     rootContainer: 'rootContainer__5ce63',
     rootContainerLoading: 'rootContainerLoading__5ce63',
     claimedRootContainer: 'claimedRootContainer__5ce63',
@@ -28,3 +28,4 @@ e.exports = {
     iconBackgroundFractional: 'iconBackgroundFractional__5ce63',
     iconFractional: 'iconFractional__5ce63'
 };
+e.exports = r;
