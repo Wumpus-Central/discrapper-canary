@@ -13,39 +13,38 @@ var i = n(442837),
     _ = n(864141),
     p = n(231338);
 function h(e) {
-    let { user: t, currentUser: n, displayProfile: h, guildId: g, className: m, onClose: E } = e,
+    let { user: t, currentUser: n, displayProfile: h, guildId: m, className: g, onClose: E } = e,
         { live: v, stream: b } = (0, c.Z)(t.id),
         [y] = v,
-        { voiceChannel: O, voiceActivity: S } = (0, u.Z)({
+        { voiceChannel: O } = (0, u.Z)({
             userId: t.id,
-            guildId: g,
+            guildId: m,
             surface: 'user-profile-featured-activity'
         }),
-        I = null != y && y === S,
-        T = t.id === n.id,
-        N = (0, i.e7)([s.Z, a.Z], () => {
-            let e = T ? s.Z.getStatus() : a.Z.getStatus(t.id, g);
+        I = t.id === n.id,
+        S = (0, i.e7)([s.Z, a.Z], () => {
+            let e = I ? s.Z.getStatus() : a.Z.getStatus(t.id, m);
             return e === p.Sk.OFFLINE || e === p.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: A } = (0, o.U)({ location: 'UserProfileFeaturedActivity' }),
-        { voiceActivityCardEnabled: C } = (0, l.o)({ location: 'UserProfileFeaturedActivity' }),
-        R = A || C;
-    return N || null == b
-        ? !R || N || null == O || I
-            ? N || null == y
-                ? null
-                : (0, r.jsx)(d.Z, {
+        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: 'UserProfileFeaturedActivity' }),
+        { voiceActivityCardEnabled: N } = (0, l.o)({ location: 'UserProfileFeaturedActivity' }),
+        A = T || N;
+    return S || null == b
+        ? S || null == y
+            ? A && !S && null != O
+                ? (0, r.jsx)(_.Z, {
                       user: t,
-                      currentUser: n,
-                      activity: y,
-                      profileGuildId: null == h ? void 0 : h.guildId,
-                      className: m,
+                      voiceChannel: O,
+                      className: g,
                       onClose: E
                   })
-            : (0, r.jsx)(_.Z, {
+                : null
+            : (0, r.jsx)(d.Z, {
                   user: t,
-                  voiceChannel: O,
-                  className: m,
+                  currentUser: n,
+                  activity: y,
+                  profileGuildId: null == h ? void 0 : h.guildId,
+                  className: g,
                   onClose: E
               })
         : (0, r.jsx)(f.Z, {
@@ -54,7 +53,7 @@ function h(e) {
               currentUser: n,
               stream: b,
               profileGuildId: null == h ? void 0 : h.guildId,
-              className: m,
+              className: g,
               onClose: E
           });
 }
