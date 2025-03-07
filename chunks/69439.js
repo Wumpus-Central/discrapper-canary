@@ -17,7 +17,7 @@ var r = n(200651),
     b = n(284851),
     j = n(46140),
     v = n(388032),
-    y = n(662305);
+    y = n(516302);
 let _ = [
     {
         value: j.cd.DESKTOP,
@@ -76,23 +76,18 @@ function O(e) {
         U = (0, p._Q)(w),
         H = (0, g.Xv)(w.config),
         z = (0, g.q8)(w),
-        F = (0, p.GU)(w),
-        X = (0, p.Rf)(w),
-        [K, Y, G] = (0, p.me)(w, X),
-        J = Q && U === p.OH.ACCEPTED,
-        $ = J && K === f.LI.SELECT,
-        ee = J && !$ && Y.length > 1,
-        et = o.useCallback(
+        F = (0, p.Rf)(w),
+        [X, K, Y] = (0, p.me)(w, F),
+        G = Q && U === p.OH.ACCEPTED,
+        J = G && X === f.LI.SELECT,
+        $ = G && !J && K.length > 1,
+        ee = o.useCallback(
             (e) => {
-                G(e), e === j.cd.DESKTOP && P([]);
+                Y(e), e === j.cd.DESKTOP && P([]);
             },
-            [G, P]
+            [Y, P]
         ),
-        {
-            text: en,
-            onClick: er,
-            tooltipText: eo
-        } = (0, x.Ks)({
+        { text: et, onClick: en } = (0, x.Ks)({
             progressState: U,
             quest: w,
             location: S,
@@ -102,7 +97,7 @@ function O(e) {
             inGiftInventory: !0,
             isVideoQuest: z
         }),
-        { startingConsoleQuest: es, startConsoleQuest: ea } = (0, p.GI)({
+        { startingConsoleQuest: er, startConsoleQuest: eo } = (0, p.GI)({
             questId: w.id,
             beforeRequest: () => {
                 B.startAnimation(),
@@ -118,18 +113,18 @@ function O(e) {
                 B.stopAnimation(), P(e);
             }
         }),
-        ei = (null === (O = w.userStatus) || void 0 === O ? void 0 : O.claimedAt) != null,
-        el = null;
+        es = (null === (O = w.userStatus) || void 0 === O ? void 0 : O.claimedAt) != null,
+        ea = null;
     return (V && Z
-        ? (el = (0, r.jsx)(l.zxk, {
+        ? (ea = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
               submitting: W,
-              onClick: null != er ? er : void 0,
+              onClick: null != en ? en : void 0,
               className: y.button,
-              children: en
+              children: et
           }))
         : L
-          ? (el = z
+          ? (ea = z
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.zxk, {
@@ -153,114 +148,99 @@ function O(e) {
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.BRAND,
                               className: y.button,
-                              onClick: null != er ? er : void 0,
-                              children: en
+                              onClick: null != en ? en : void 0,
+                              children: et
                           })
                       ]
                   })
                 : (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
                       className: y.button,
-                      onClick: null != er ? er : void 0,
-                      children: en
+                      onClick: null != en ? en : void 0,
+                      children: et
                   }))
           : Q
-            ? F.length > 0
-                ? (el = (0, r.jsx)(
-                      l.DY3,
-                      {
-                          text: eo,
-                          className: y.buttonTooltip,
-                          children: (0, r.jsx)(l.zxk, {
-                              color: l.Ttl.PRIMARY,
-                              disabled: !0,
-                              className: y.button,
-                              children: en
+            ? Q && Z
+                ? (ea = (0, r.jsx)(l.zxk, {
+                      color: l.Ttl.BRAND,
+                      submitting: W,
+                      onClick: null != en ? en : void 0,
+                      className: y.button,
+                      children: et
+                  }))
+                : Q && M && !es
+                  ? (ea = J
+                        ? (0, r.jsx)(l.PhF, {
+                              className: y.platformSelectorPrimary,
+                              isSelected: () => !1,
+                              options: _,
+                              placeholder: v.NW.string(v.t.drVw4e),
+                              renderOptionLabel: C,
+                              select: ee,
+                              serialize: (e) => {
+                                  switch (e) {
+                                      case j.cd.DESKTOP:
+                                          return v.NW.string(v.t.QXc019);
+                                      case j.cd.CONSOLE:
+                                          return v.NW.string(v.t['8lAfuL']);
+                                  }
+                              }
                           })
-                      },
-                      eo
-                  ))
-                : Q && Z
-                  ? (el = (0, r.jsx)(l.zxk, {
-                        color: l.Ttl.BRAND,
-                        submitting: W,
-                        onClick: null != er ? er : void 0,
-                        className: y.button,
-                        children: en
-                    }))
-                  : Q && M && !ei
-                    ? (el = $
-                          ? (0, r.jsx)(l.PhF, {
-                                className: y.platformSelectorPrimary,
-                                isSelected: () => !1,
-                                options: _,
-                                placeholder: v.NW.string(v.t.drVw4e),
-                                renderOptionLabel: C,
-                                select: et,
-                                serialize: (e) => {
-                                    switch (e) {
-                                        case j.cd.DESKTOP:
-                                            return v.NW.string(v.t.QXc019);
-                                        case j.cd.CONSOLE:
-                                            return v.NW.string(v.t['8lAfuL']);
-                                    }
-                                }
-                            })
-                          : (0, g.$J)(w) && !q && K !== f.LI.DESKTOP
-                            ? k
-                                ? (0, r.jsx)(l.zxk, {
-                                      color: l.Ttl.PRIMARY,
-                                      className: y.button,
-                                      onClick: null != er ? er : void 0,
-                                      children: en
-                                  })
-                                : (0, r.jsx)(l.zxk, {
-                                      color: l.Ttl.PRIMARY,
-                                      onClick: ea,
-                                      disabled: es,
-                                      className: y.button,
-                                      children: (0, r.jsxs)('div', {
-                                          className: y.ctaInner,
-                                          children: [B.render(), v.NW.string(v.t.nPThNT)]
-                                      })
-                                  })
-                            : z
+                        : (0, g.$J)(w) && !q && X !== f.LI.DESKTOP
+                          ? k
                               ? (0, r.jsx)(l.zxk, {
-                                    color: l.Ttl.BRAND,
-                                    onClick: null != er ? er : void 0,
+                                    color: l.Ttl.PRIMARY,
                                     className: y.button,
-                                    children: en
+                                    onClick: null != en ? en : void 0,
+                                    children: et
                                 })
                               : (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.PRIMARY,
-                                    disabled: !0,
+                                    onClick: eo,
+                                    disabled: er,
                                     className: y.button,
-                                    children: v.NW.string(v.t['9KoPyM'])
-                                }))
-                    : Q &&
-                      !M &&
-                      (el = (0, r.jsx)(l.zxk, {
-                          submitting: I,
-                          color: l.Ttl.BRAND,
-                          onClick: null != er ? er : void 0,
-                          className: y.button,
-                          children: en
-                      }))
-            : (el = (0, r.jsx)(l.zxk, {
+                                    children: (0, r.jsxs)('div', {
+                                        className: y.ctaInner,
+                                        children: [B.render(), v.NW.string(v.t.nPThNT)]
+                                    })
+                                })
+                          : z
+                            ? (0, r.jsx)(l.zxk, {
+                                  color: l.Ttl.BRAND,
+                                  onClick: null != en ? en : void 0,
+                                  className: y.button,
+                                  children: et
+                              })
+                            : (0, r.jsx)(l.zxk, {
+                                  color: l.Ttl.PRIMARY,
+                                  disabled: !0,
+                                  className: y.button,
+                                  children: v.NW.string(v.t['9KoPyM'])
+                              }))
+                  : Q &&
+                    !M &&
+                    (ea = (0, r.jsx)(l.zxk, {
+                        submitting: I,
+                        color: l.Ttl.BRAND,
+                        onClick: null != en ? en : void 0,
+                        className: y.button,
+                        children: et
+                    }))
+            : (ea = (0, r.jsx)(l.zxk, {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
                   className: y.button,
                   children: v.NW.format(v.t['14o6QU'], { expiryDate: D })
               })),
-    null == el)
+    null == ea)
         ? null
         : (0, r.jsxs)('div', {
               className: y.container,
               children: [
-                  el,
-                  ee &&
+                  ea,
+                  $ &&
                       (0, r.jsx)(b.U, {
-                          onSelect: et,
+                          onSelect: ee,
                           quest: w,
                           questContent: f.jn.ACTIVITY_PANEL,
                           children: (e) => {
@@ -312,7 +292,7 @@ function O(e) {
                                                           default:
                                                               return null;
                                                       }
-                                                  })(K),
+                                                  })(X),
                                                   (0, r.jsx)(l.CJ0, {
                                                       className: y.platformSelectorSecondaryChevron,
                                                       color: 'currentColor'
