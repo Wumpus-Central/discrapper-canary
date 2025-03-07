@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eg }), n(653041), n(47120), n(230036), n(733860);
+n.d(t, { Z: () => em }), n(653041), n(47120), n(230036), n(733860);
 var i,
     r = n(512722),
     l = n.n(r),
@@ -134,15 +134,10 @@ function eu(e) {
     t === G._1z.DISMISSED ? ee.splice(n, 1) : (ee[n] = K(B({}, i), { status: t })), ea();
 }
 function ec(e) {
-    let t = ee.length,
-        n = (ee = ee.filter((t) => t.type !== k.kL.TEXT || t.channelId !== e)).length !== t;
-    return n && ea(), n;
-}
-function ed(e) {
     let t = ee.find((t) => t.type === k.kL.INCOMING_CALL && t.channelId === e);
     return null != t ? t.id : null;
 }
-function ep(e, t) {
+function ed(e, t) {
     let n = B(K(B({}, $), { timestamp: Date.now() }), t),
         i = (0, o.Z)(),
         r = !1,
@@ -182,7 +177,7 @@ function ep(e, t) {
     }
     return et || ((ee = a), l.timer.start()), i;
 }
-function eh() {
+function ep() {
     let e = v.Z.usersPlaying,
         t = new Set(),
         n = (function () {
@@ -227,7 +222,7 @@ function eh() {
                                       gameId: e,
                                       lastSentTimestamp: Date.now()
                                   }),
-                                  ep(i, {
+                                  ed(i, {
                                       type: k.kL.GENERIC,
                                       priority: k.Tu.NORMAL
                                   }));
@@ -256,9 +251,9 @@ function eh() {
             (i = !0));
     return i;
 }
-function ef(e) {
+function eh(e) {
     let { channelId: t, ringing: n } = e,
-        i = ed(t);
+        i = ec(t);
     if (!n.includes(f.default.getId())) return eu(i);
     if (null != i) return !1;
     let r = m.Z.getChannel(t);
@@ -276,23 +271,23 @@ function ef(e) {
         return !1;
     let l = ee.find((e) => e.type === k.kL.TEXT && e.channelId === t && e.messageType === G.uaV.CALL);
     null != l && eu(l.id),
-        ep((0, W.Z)(r), {
+        ed((0, W.Z)(r), {
             priority: k.Tu.HIGH,
             expirationExternallyManaged: !0,
             type: k.kL.INCOMING_CALL,
             channelId: r.id
         });
 }
-class em extends (i = a.ZP.Store) {
+class ef extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, I.default, v.Z), this.syncWith([v.Z], eh);
+        this.waitFor(m.Z, I.default, v.Z), this.syncWith([v.Z], ep);
     }
     getNotifications() {
         return ee;
     }
 }
-H(em, 'displayName', 'OverlayNotificationsStore');
-let eg = new em(s.Z, {
+H(ef, 'displayName', 'OverlayNotificationsStore');
+let em = new ef(s.Z, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
         let { notificationId: t, status: n } = e;
         eu(t, n);
@@ -305,7 +300,7 @@ let eg = new em(s.Z, {
         if (T.default.hasChangedRenderMode(i)) return;
         let r = (0, F.Z)((0, A.pL)(), n);
         null != r &&
-            ep(r, {
+            ed(r, {
                 priority: k.Tu.URGENT,
                 type: k.kL.NUDGE,
                 duration: X
@@ -349,7 +344,7 @@ let eg = new em(s.Z, {
                 }
                 return (
                     null != o &&
-                    (ep(o, {
+                    (ed(o, {
                         priority: k.Tu.URGENT,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
@@ -363,7 +358,7 @@ let eg = new em(s.Z, {
         if (N.default.getTextChatNotificationMode() === G.Ypu.DISABLED || x.Z.disableNotifications || !(0, w.eF)(a, o)) return !1;
         let c = !O.Z.isSoundDisabled(C.Ay),
             p = null !== (r = g.Z.getMessage(o, a.id)) && void 0 !== r ? r : (0, d.e5)(a);
-        ep((0, U.Z)(s, p, u, c), {
+        ed((0, U.Z)(s, p, u, c), {
             type: k.kL.TEXT,
             channelId: s.id,
             expirationExternallyManaged: !0,
@@ -373,19 +368,23 @@ let eg = new em(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return null != t && ec(t);
+        return (
+            null != t &&
+            (function (e) {
+                let t = ee.length,
+                    n = (ee = ee.filter((t) => t.type !== k.kL.TEXT || t.channelId !== e)).length !== t;
+                return n && ea(), n;
+            })(t)
+        );
     },
-    MESSAGE_ACK: function (e) {
-        let { channelId: t } = e;
-        return ec(t);
-    },
-    CALL_CREATE: ef,
-    CALL_UPDATE: ef,
+    MESSAGE_ACK: function () {},
+    CALL_CREATE: eh,
+    CALL_UPDATE: eh,
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        eu(ed(t));
+        eu(ec(t));
     },
-    GUILD_RING_START: ef,
+    GUILD_RING_START: eh,
     GUILD_RING_STOP: function (e) {
         let { channelId: t, guildId: n, ringing: i } = e;
         if (
@@ -395,7 +394,7 @@ let eg = new em(s.Z, {
             }).enabled
         )
             return !1;
-        i.includes(f.default.getId()) && eu(ed(t));
+        i.includes(f.default.getId()) && eu(ec(t));
     },
     ACTIVITY_USER_ACTION: function (e) {
         let t,
@@ -407,23 +406,23 @@ let eg = new em(s.Z, {
             (l.id === r || l.altId === r) &&
             (n === G.mFx.JOIN && (t = (0, R.Z)(i, l)),
             null != t &&
-                void ep(t, {
+                void ed(t, {
                     priority: k.Tu.URGENT,
                     type: k.kL.GENERIC
                 }))
         );
     },
     CLIPS_SAVE_CLIP_START: function () {
-        ep((0, M.f)(Y.NW.string(Y.t.NBMK9v)));
+        ed((0, M.f)(Y.NW.string(Y.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        ep((0, M.f)(Y.NW.format(Y.t.KLhk6u, { duration: (0, P.A)(c.Z.getSettings().clipsLength / 1000, !0) })));
+        ed((0, M.f)(Y.NW.format(Y.t.KLhk6u, { duration: (0, P.A)(c.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        ep((0, M.f)(Y.NW.string(Y.t['1ZbZur'])));
+        ed((0, M.f)(Y.NW.string(Y.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
         let t = (0, M.y)();
-        null != t && ep(t);
+        null != t && ed(t);
     }
 });

@@ -1,64 +1,69 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(904245),
-    l = n(13245),
-    s = n(655687),
-    a = n(541716),
-    u = n(752305),
-    c = n(893718),
-    d = n(957730),
-    p = n(849522),
-    h = n(145597),
-    f = n(981631),
-    m = n(365889);
-function g(e) {
-    let { id: t, channel: n, onSend: g } = e,
-        O = (0, p.Z)(),
-        { placeholder: v, accessibilityLabel: y } = (0, s.Z)({ channel: n }),
-        [E, b] = r.useState(() => (0, u.H2)()),
-        { textValue: x, richValue: j } = E,
-        [S, I] = r.useState(!1),
-        C = r.useCallback(() => I(!0), []),
-        N = r.useCallback(() => I(!1), []),
-        Z = r.useCallback((e, t, n) => {
-            b({
+    l = n(904245),
+    o = n(13245),
+    a = n(45114),
+    s = n(493773),
+    u = n(655687),
+    c = n(541716),
+    d = n(752305),
+    p = n(893718),
+    h = n(957730),
+    f = n(849522),
+    m = n(145597),
+    g = n(981631),
+    O = n(880679);
+function v(e) {
+    let { id: t, replyToMessageId: n, channel: v, onSend: y } = e,
+        E = (0, f.Z)(),
+        { placeholder: b, accessibilityLabel: j } = (0, u.Z)({ channel: v }),
+        [x, I] = r.useState(() => (0, d.H2)()),
+        { textValue: S, richValue: C } = x,
+        [N, Z] = r.useState(!1),
+        w = r.useCallback(() => Z(!0), []),
+        P = r.useCallback(() => Z(!1), []);
+    (0, s.ZP)(() => {
+        (0, a.In)(v.id, !0, !0, n, { section: g.jXE.OVERLAY });
+    });
+    let _ = r.useCallback((e, t, n) => {
+            I({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        w = r.useCallback(
+        T = r.useCallback(
             (e) => {
-                'Escape' === e.key && l.Z.updateNotificationStatus(t, f._1z.ACTIVE);
+                'Escape' === e.key && o.Z.updateNotificationStatus(t, g._1z.ACTIVE);
             },
             [t]
         ),
-        _ = r.useCallback(
+        D = r.useCallback(
             () => (
-                x.length > O || (o.Z.sendMessage(n.id, d.ZP.parse(n, x), !1), l.Z.setInputLocked(!0, (0, h.getPID)()), l.Z.updateNotificationStatus(t, f._1z.DISMISSED), null == g || g(x)),
+                S.length > E || (l.Z.sendMessage(v.id, h.ZP.parse(v, S), !1), o.Z.setInputLocked(!0, (0, m.getPID)()), o.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == y || y(S)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [x, O, n, t, g]
+            [S, E, v, t, y]
         );
     return (0, i.jsx)('div', {
-        children: (0, i.jsx)(c.Z, {
-            innerClassName: m.textArea,
-            onChange: Z,
-            placeholder: v,
-            accessibilityLabel: y,
-            channel: n,
-            textValue: x,
-            richValue: j,
-            type: a.Ie.OVERLAY_INLINE_REPLY,
+        children: (0, i.jsx)(p.Z, {
+            innerClassName: O.textArea,
+            onChange: _,
+            placeholder: b,
+            accessibilityLabel: j,
+            channel: v,
+            textValue: S,
+            richValue: C,
+            type: c.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
-            onBlur: N,
-            onFocus: C,
-            focused: S,
-            onSubmit: _,
-            onKeyDown: w,
+            onBlur: P,
+            onFocus: w,
+            focused: N,
+            onSubmit: D,
+            onKeyDown: T,
             autoCompletePosition: 'bottom',
             disableThemedBackground: !0
         })
