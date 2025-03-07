@@ -1,12 +1,12 @@
 n.d(t, {
     $j: () => p,
     Eo: () => c,
-    Fr: () => s,
-    Kj: () => a,
-    Kr: () => m,
-    RF: () => o,
-    XA: () => d,
-    ZK: () => u
+    Fr: () => o,
+    Kj: () => l,
+    Kr: () => b,
+    RF: () => s,
+    XA: () => u,
+    ZK: () => d
 }),
     n(653041),
     n(47120),
@@ -36,16 +36,18 @@ n.d(t, {
     n(815648);
 var r,
     i = n(481060),
-    s = (((r = {}).HERO_BANNER_STATIC = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), (r.FEATURED_BLOCK = 'featured_block'), (r.CATEGORY_BANNER_STATIC = 'category_banner'), (r.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), r);
-let a = {
+    o = (((r = {}).HERO_BANNER_STATIC = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), (r.FEATURED_BLOCK = 'featured_block'), (r.CATEGORY_BANNER_STATIC = 'category_banner'), (r.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), (r.UPSELL_BANNER = 'upsell_banner'), (r.UPSELL_BANNER_POPOUT = 'upsell_popout'), r);
+let l = {
         'hero_banner.jpg': 'hero_banner',
         'hero_banner_animated.webm': 'hero_banner_animated',
         'hero_logo.png': 'hero_logo',
         'featured_block.png': 'featured_block',
         'category_banner.jpg': 'category_banner',
-        'category_banner_animated.webm': 'category_banner_animated'
+        'category_banner_animated.webm': 'category_banner_animated',
+        'upsell_banner.png': 'upsell_banner',
+        'upsell_banner_popout.png': 'upsell_popout'
     },
-    l = async (e) => {
+    a = async (e) => {
         let t = [];
         if (e.isFile) {
             let n = await new Promise((t) => e.file(t));
@@ -53,22 +55,22 @@ let a = {
         } else if (e.isDirectory) {
             let n = e.createReader(),
                 r = await new Promise((e) => n.readEntries(e)),
-                i = await Promise.all(r.map((e) => l(e)));
+                i = await Promise.all(r.map((e) => a(e)));
             t.push(...i.flat());
         }
         return t;
     },
-    o = async (e) => {
-        let t = e.map((e) => l(e));
+    s = async (e) => {
+        let t = e.map((e) => a(e));
         return (await Promise.all(t)).flat();
     },
     c = (e) => {
         (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
     },
-    d = (e) => {
+    u = (e) => {
         (0, i.showToast)((0, i.createToast)(e, i.ToastType.SUCCESS));
     },
-    u = (e, t, n) => {
+    d = (e, t, n) => {
         let r = new FileReader();
         (r.onload = (r) => {
             if (null == r.target || 'string' != typeof r.target.result) {
@@ -79,22 +81,22 @@ let a = {
         }),
             r.readAsDataURL(e);
     },
-    m = (e, t, n) => {
+    b = (e, t, n) => {
         if (0 === e.length) {
             null == n || n('No files found!');
             return;
         }
-        for (let r of e) u(r, t, n);
+        for (let r of e) d(r, t, n);
     },
-    g = (e) => {
+    h = (e) => {
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
-            s = new Uint8Array(r.length);
-        for (let e = 0; e < r.length; e++) s[e] = r.charCodeAt(e);
-        return new Blob([s], { type: i });
+            o = new Uint8Array(r.length);
+        for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
+        return new Blob([o], { type: i });
     },
     p = (e) => {
-        let t = g(e);
+        let t = h(e);
         return URL.createObjectURL(t);
     };
