@@ -1,9 +1,10 @@
 n.d(t, {
-    Tq: () => i,
-    i3: () => r
+    Tq: () => r,
+    cy: () => i,
+    i3: () => a
 });
 var o = n(818083);
-let a = (0, o.B)({
+let i = (0, o.B)({
     kind: 'user',
     id: '2025-01_recent_avatars',
     label: 'Recent Avatars',
@@ -16,12 +17,12 @@ let a = (0, o.B)({
         }
     ]
 });
-function i(e) {
+function r(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: o } = a.useExperiment({ location: t }, { autoTrackExposure: n });
+        { enabled: o } = i.useExperiment({ location: t }, { autoTrackExposure: n });
     return o;
 }
-let r = (0, o.B)({
+let a = (0, o.B)({
     kind: 'user',
     id: '2025-02_improved_image_upload_flow',
     label: 'Improved Image Upload Flow',
