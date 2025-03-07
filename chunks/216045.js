@@ -13,13 +13,13 @@ var r = n(200651),
     g = n(634894),
     h = n(100527),
     f = n(906732),
-    x = n(475977),
-    b = n(605236),
-    N = n(957730),
+    b = n(475977),
+    N = n(605236),
+    x = n(957730),
     _ = n(53691),
     E = n(267717),
-    C = n(296810),
-    j = n(921813),
+    j = n(296810),
+    C = n(921813),
     O = n(610794),
     v = n(935147),
     S = n(643879),
@@ -69,15 +69,15 @@ function M() {
             image: V
         }),
         H = (0, l.e7)([y.Z], () => y.Z.showNotice()),
-        z = Z.dN.useSetting() && null != U ? N.ZP.parse(void 0, U).content : U,
+        z = Z.dN.useSetting() && null != U ? x.ZP.parse(void 0, U).content : U,
         Y = R.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: K } = (0, f.ZP)(h.Z.PROFILE);
     !(function () {
         let e = (0, T.Tq)({ location: 'UserSettingsProfileCustomization' }),
-            t = (0, b.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
+            t = (0, N.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
             n = e && !t;
         i.useEffect(() => {
-            n && (0, b.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
+            n && (0, N.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
         }, [n]);
     })(),
         i.useEffect(() => () => u.Z.wait(m.W3), []);
@@ -99,10 +99,10 @@ function M() {
         : (0, r.jsxs)(f.Gt, {
               value: K,
               children: [
-                  (0, r.jsx)(x.Z, {}),
-                  (0, r.jsx)(C.Z, {
+                  (0, r.jsx)(b.Z, {}),
+                  (0, r.jsx)(j.Z, {
                       profilePreview: (0, r.jsx)(
-                          j.Z,
+                          C.Z,
                           ((e = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -136,7 +136,11 @@ function M() {
                               },
                               G
                           )),
-                          (t = t = { pendingAvatar: F }),
+                          (t = t =
+                              {
+                                  pendingAvatar: F,
+                                  showNameplatePreview: !0
+                              }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                               : (function (e, t) {
