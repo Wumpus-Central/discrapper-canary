@@ -3,10 +3,9 @@ n.d(t, {
     OV: () => o,
     Rb: () => s,
     XE: () => f,
-    Yo: () => p,
+    Yo: () => _,
     b4: () => c,
     o4: () => a,
-    w0: () => _,
     zu: () => l
 });
 var r = n(818083),
@@ -19,7 +18,8 @@ let o = (0, r.B)({
     defaultConfig: {
         overlayV3tech: !1,
         overlayV3UI: !1,
-        allowActivityWidget: !1
+        allowActivityWidget: !1,
+        allowNowPlaying: !1
     },
     treatments: [
         {
@@ -28,25 +28,38 @@ let o = (0, r.B)({
             config: {
                 overlayV3tech: !0,
                 overlayV3UI: !0,
-                allowActivityWidget: !0
+                allowActivityWidget: !0,
+                allowNowPlaying: !0
             }
         },
         {
             id: 2,
-            label: 'Use Overlay V3, Minus The Activity Widget.',
+            label: 'Use Overlay V3, Minus "Now Playing" Nofi.',
             config: {
                 overlayV3tech: !0,
                 overlayV3UI: !0,
-                allowActivityWidget: !1
+                allowActivityWidget: !0,
+                allowNowPlaying: !1
             }
         },
         {
             id: 3,
+            label: 'Use Overlay V3 minus any activity',
+            config: {
+                overlayV3tech: !0,
+                overlayV3UI: !1,
+                allowActivityWidget: !1,
+                allowNowPlaying: !1
+            }
+        },
+        {
+            id: 4,
             label: 'Use Overlay V3 tech with Overlay 2 UI',
             config: {
                 overlayV3tech: !0,
                 overlayV3UI: !1,
-                allowActivityWidget: !1
+                allowActivityWidget: !1,
+                allowNowPlaying: !1
             }
         }
     ]
@@ -90,20 +103,6 @@ function f(e) {
         n = u(e);
     return t.overlayV3tech || n;
 }
-let _ = (0, r.B)({
-    kind: 'user',
-    id: '2025-03_overlay_v3_now_playing',
-    label: 'Overlay V3 Now Playing Experiment',
-    defaultConfig: { useOverlayNowPlaying: !1 },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
-    treatments: [
-        {
-            id: 1,
-            label: 'Overlay Now Playing',
-            config: { useOverlayNowPlaying: !0 }
-        }
-    ]
-});
-function p(e) {
-    return _.getCurrentConfig({ location: e }).useOverlayNowPlaying;
+function _(e) {
+    return s(e).allowNowPlaying;
 }
