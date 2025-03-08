@@ -1,65 +1,75 @@
 n.d(t, {
-    OR: () => m,
-    YG: () => c,
-    hr: () => d,
-    tK: () => u
+    Ac: () => p,
+    OR: () => _,
+    YG: () => d,
+    hr: () => u,
+    tK: () => f
 });
 var r = n(192379),
-    l = n(884697),
+    i = n(884697),
+    o = n(318028),
     a = n(823941),
     s = n(619899),
-    o = n(281598),
-    i = n(215023);
-let d = (e) => {
-        let t = (0, s.z)(o.Fr.HERO_LOGO),
-            n = (0, s.z)(o.Fr.HERO_BANNER_STATIC),
-            l = (0, s.z)(o.Fr.HERO_BANNER_ANIMATED);
+    l = n(281598),
+    c = n(215023);
+let u = (e) => {
+        let t = (0, s.z)(l.Fr.HERO_LOGO),
+            n = (0, s.z)(l.Fr.HERO_BANNER_STATIC),
+            i = (0, s.z)(l.Fr.HERO_BANNER_ANIMATED);
         return r.useMemo(() => {
-            var r, a, s, o, d;
-            let c = (0, i.ZS)(e.categorySkuId);
+            var r, o, a, s, l;
+            let u = (0, c.ZS)(e.categorySkuId);
             return {
-                bannerOverride: c,
+                bannerOverride: u,
                 heroLogo: null != t ? t : e.logoUrl,
-                heroBannerStatic: null !== (o = null != n ? n : null === (r = e.bannerAsset) || void 0 === r ? void 0 : r.static) && void 0 !== o ? o : e.fallbackBannerUrl,
-                heroBannerAnimated: null !== (d = null != l ? l : null == c ? void 0 : null === (a = c.heroBanner) || void 0 === a ? void 0 : a.animationSource) && void 0 !== d ? d : null === (s = e.bannerAsset) || void 0 === s ? void 0 : s.animated
+                heroBannerStatic: null !== (s = null != n ? n : null === (r = e.bannerAsset) || void 0 === r ? void 0 : r.static) && void 0 !== s ? s : e.fallbackBannerUrl,
+                heroBannerAnimated: null !== (l = null != i ? i : null == u ? void 0 : null === (o = u.heroBanner) || void 0 === o ? void 0 : o.animationSource) && void 0 !== l ? l : null === (a = e.bannerAsset) || void 0 === a ? void 0 : a.animated
             };
-        }, [t, n, l, e]);
+        }, [t, n, i, e]);
     },
-    c = (e, t) => {
-        let n = (0, s.z)(o.Fr.FEATURED_BLOCK);
+    d = (e, t) => {
+        let n = (0, s.z)(l.Fr.FEATURED_BLOCK);
         return r.useMemo(() => {
             var r;
-            let a = null == e ? void 0 : e.featuredBlock,
-                s =
-                    null != a
-                        ? (0, l.uV)(a, {
-                              size: i.J0,
+            let o = null == e ? void 0 : e.featuredBlock,
+                a =
+                    null != o
+                        ? (0, i.uV)(o, {
+                              size: c.J0,
                               format: 'png'
                           })
                         : void 0;
-            return { featuredBlockBanner: null !== (r = null != n ? n : null == t ? void 0 : t.bannerUrl) && void 0 !== r ? r : s };
+            return { featuredBlockBanner: null !== (r = null != n ? n : null == t ? void 0 : t.bannerUrl) && void 0 !== r ? r : a };
         }, [n, e, t]);
     },
-    u = (e) => {
-        let t = (0, s.z)(o.Fr.CATEGORY_BANNER_STATIC),
-            n = (0, s.z)(o.Fr.CATEGORY_BANNER_ANIMATED);
+    f = (e) => {
+        let t = (0, s.z)(l.Fr.CATEGORY_BANNER_STATIC),
+            n = (0, s.z)(l.Fr.CATEGORY_BANNER_ANIMATED);
         return r.useMemo(() => {
-            var r, l, a, s;
-            let o = (0, i.ZS)(e.skuId);
+            var r, i, o, a;
+            let s = (0, c.ZS)(e.skuId);
             return {
-                categoryBannerStatic: null !== (a = null != t ? t : null === (r = e.bannerAsset) || void 0 === r ? void 0 : r.static) && void 0 !== a ? a : e.banner,
-                categoryBannerAnimated: null !== (s = null != n ? n : null == o ? void 0 : o.animatedBanner) && void 0 !== s ? s : null === (l = e.bannerAsset) || void 0 === l ? void 0 : l.animated
+                categoryBannerStatic: null !== (o = null != t ? t : null === (r = e.bannerAsset) || void 0 === r ? void 0 : r.static) && void 0 !== o ? o : e.banner,
+                categoryBannerAnimated: null !== (a = null != n ? n : null == s ? void 0 : s.animatedBanner) && void 0 !== a ? a : null === (i = e.bannerAsset) || void 0 === i ? void 0 : i.animated
             };
         }, [t, n, e]);
     },
-    m = (e, t) => {
-        let n = (0, s.z)(o.Fr.PDP_BACKGROUND),
-            i = (0, s.z)(o.Fr.PDP_LOGO);
+    _ = (e, t) => {
+        let n = (0, s.z)(l.Fr.PDP_BACKGROUND),
+            o = (0, s.z)(l.Fr.PDP_LOGO);
         return r.useMemo(() => {
             var r;
             return {
                 pdpBackground: null !== (r = null != n ? n : e.pdpBg) && void 0 !== r ? r : t.banner,
-                logo: null != i ? i : (0, l.uV)(e.logo, { size: a.n })
+                logo: null != o ? o : (0, i.uV)(e.logo, { size: a.n })
             };
-        }, [n, i, e, t]);
+        }, [n, o, e, t]);
+    },
+    p = (e) => {
+        let { category: t } = (0, o.l)(e.skuId),
+            n = (0, s.z)(l.Fr.COLLECTED_MODAL_BG);
+        return r.useMemo(() => {
+            var r;
+            return { collectedModalBackground: null !== (r = null != n ? n : null == t ? void 0 : t.successModalBg) && void 0 !== r ? r : e.banner };
+        }, [n, t, e]);
     };

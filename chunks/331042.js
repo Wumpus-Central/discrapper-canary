@@ -33,18 +33,18 @@ var r = n(200651),
     R = n(884697),
     P = n(587792),
     w = n(228624),
-    D = n(318028),
-    L = n(635552),
-    x = n(905357),
-    M = n(328456),
-    k = n(624377),
-    j = n(530618),
-    U = n(141011),
-    G = n(372654),
-    B = n(616066),
-    V = n(216541),
-    F = n(22267),
-    Z = n(58201),
+    D = n(635552),
+    L = n(905357),
+    x = n(328456),
+    M = n(624377),
+    k = n(530618),
+    j = n(141011),
+    U = n(372654),
+    G = n(616066),
+    B = n(216541),
+    V = n(22267),
+    F = n(58201),
+    Z = n(794324),
     H = n(302800),
     W = n(215023),
     Y = n(474936),
@@ -127,7 +127,7 @@ let $ = 880,
                           children: [
                               (0, r.jsx)('div', {
                                   className: z.avatarDecorationPairOne,
-                                  children: (0, r.jsx)(B.R, {
+                                  children: (0, r.jsx)(G.R, {
                                       item: i,
                                       user: a,
                                       avatarSize: _.EFr.SIZE_120,
@@ -137,7 +137,7 @@ let $ = 880,
                               }),
                               (0, r.jsx)('div', {
                                   className: z.avatarDecorationPairTwo,
-                                  children: (0, r.jsx)(B.R, {
+                                  children: (0, r.jsx)(G.R, {
                                       item: o,
                                       avatarSize: _.EFr.SIZE_120,
                                       isPurchased: !1
@@ -147,7 +147,7 @@ let $ = 880,
                       })
                     : (0, r.jsx)('div', {
                           className: z.avatarDecoration,
-                          children: (0, r.jsx)(B.R, {
+                          children: (0, r.jsx)(G.R, {
                               item: i,
                               user: a,
                               avatarSize: _.EFr.SIZE_120,
@@ -159,7 +159,7 @@ let $ = 880,
             .with(u.Z.NAMEPLATE, () =>
                 (0, r.jsx)('div', {
                     className: z.nameplate,
-                    children: (0, r.jsx)(F.Z, {
+                    children: (0, r.jsx)(V.Z, {
                         nameplate: i,
                         user: a,
                         isHighlighted: !0
@@ -169,7 +169,7 @@ let $ = 880,
             .with(u.Z.BUNDLE, () =>
                 (0, r.jsx)('div', {
                     className: z.bundlePreview,
-                    children: (0, r.jsx)(V.d, {
+                    children: (0, r.jsx)(B.d, {
                         product: t,
                         user: a,
                         isPurchased: !1,
@@ -249,37 +249,34 @@ let $ = 880,
         return null != t ? (0, r.jsx)(et, J(Q({}, e), { displayOptions: t })) : (0, r.jsx)(ee, Q({}, e));
     },
     er = (e) => {
-        var t;
-        let { product: n, onClose: o, confettiTarget: a, confettiCanvas: s, hideConfetti: l = !1, analyticsLocations: c, overrideTitle: p, overrideDescription: E, selectedVariantIndex: v, shouldShowPromotionalExperience: b, itemConsumed: y = !0 } = e,
-            O = (0, P.o)('CollectiblesCollectedModal'),
-            I = (0, Z.W)(n, v),
-            A = (0, f.e7)([T.default], () => {
+        let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: v, itemConsumed: b = !0 } = e,
+            y = (0, P.o)('CollectiblesCollectedModal'),
+            O = (0, F.W)(t, E),
+            I = (0, f.e7)([T.default], () => {
                 var e, t;
                 return null !== (t = null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
             }),
-            C = i.useMemo(() => {
-                if (!O) return;
-                let e = I.type === u.Z.AVATAR_DECORATION ? (0, H.R9)(I.skuId, A) : null;
+            A = i.useMemo(() => {
+                if (!y) return;
+                let e = O.type === u.Z.AVATAR_DECORATION ? (0, H.R9)(O.skuId, I) : null;
                 return null != e ? N.Z.getProduct(e) : void 0;
-            }, [O, I.skuId, I.type, A]),
-            { confettiColors: R } = (0, k.Z)(I.styles),
-            w = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
-            L = i.useRef(null),
-            { analyticsLocations: x } = (0, g.ZP)([...c, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            { category: M, isFetching: B } = (0, D.l)(I.skuId),
-            V = null !== (t = null == M ? void 0 : M.successModalBg) && void 0 !== t ? t : I.banner,
-            F = B ? void 0 : V;
-        function Y() {
-            if (I.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
+            }, [y, O.skuId, O.type, I]),
+            { confettiColors: C } = (0, M.Z)(O.styles),
+            R = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
+            w = i.useRef(null),
+            { analyticsLocations: D } = (0, g.ZP)([...l, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            { collectedModalBackground: L } = (0, Z.Ac)(O);
+        function x() {
+            if (O.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
                 let e = K.NW.formatToPlainString(K.t.fYmir6, { days: 3 });
-                return y
+                return b
                     ? (0, r.jsx)(S.j, {
                           duration: e,
-                          onClose: o
+                          onClose: n
                       })
                     : (0, r.jsx)(S.h, {
                           duration: e,
-                          onClose: o
+                          onClose: n
                       });
             }
             return (0, r.jsxs)(r.Fragment, {
@@ -287,33 +284,33 @@ let $ = 880,
                     (0, r.jsxs)('div', {
                         className: z.bannerContainer,
                         children: [
-                            b
+                            v
                                 ? (0, r.jsx)('div', { className: z.promotionalBanner })
-                                : (0, r.jsx)(U.Z, {
-                                      asset: F,
-                                      size: (0, G.ML)($),
+                                : (0, r.jsx)(j.Z, {
+                                      asset: L,
+                                      size: (0, U.ML)($),
                                       className: z.decorationBanner,
-                                      categoryBannerOverride: (0, W.ZS)(I.categorySkuId)
+                                      categoryBannerOverride: (0, W.ZS)(O.categorySkuId)
                                   }),
                             (0, r.jsx)(en, {
-                                product: I,
-                                pairedProduct: C,
-                                reducedMotion: w
+                                product: O,
+                                pairedProduct: A,
+                                reducedMotion: R
                             })
                         ]
                     }),
                     (0, r.jsx)(ei, {
-                        product: I,
-                        pairedProduct: C,
-                        onClose: o,
-                        analyticsLocations: x,
-                        overrideTitle: p,
-                        overrideDescription: E,
-                        selectedVariantIndex: v,
-                        shouldShowPromotionalExperience: b
+                        product: O,
+                        pairedProduct: A,
+                        onClose: n,
+                        analyticsLocations: D,
+                        overrideTitle: c,
+                        overrideDescription: p,
+                        selectedVariantIndex: E,
+                        shouldShowPromotionalExperience: v
                     }),
                     (0, r.jsx)(_.olH, {
-                        onClick: o,
+                        onClick: n,
                         className: z.modalCloseButton,
                         withCircleBackground: !0
                     })
@@ -321,20 +318,20 @@ let $ = 880,
             });
         }
         return (0, r.jsxs)(g.Gt, {
-            value: x,
+            value: D,
             children: [
                 (0, r.jsx)('div', {
                     className: z.modalInner,
-                    ref: L,
-                    children: Y()
+                    ref: w,
+                    children: x()
                 }),
-                !l &&
-                    !w &&
-                    (0, r.jsx)(j.Z, {
-                        confettiTarget: null != a ? a : L.current,
-                        confettiCanvas: s,
-                        sprites: (0, G.vK)(I.categorySkuId),
-                        colors: null == R ? void 0 : R.map((e) => e.toHexString())
+                !s &&
+                    !R &&
+                    (0, r.jsx)(k.Z, {
+                        confettiTarget: null != o ? o : w.current,
+                        confettiCanvas: a,
+                        sprites: (0, U.vK)(O.categorySkuId),
+                        colors: null == C ? void 0 : C.map((e) => e.toHexString())
                     })
             ]
         });
@@ -343,17 +340,17 @@ let $ = 880,
         var t;
         let { product: n, pairedProduct: o, onClose: a, analyticsLocations: s, overrideTitle: l, overrideDescription: d, shouldShowPromotionalExperience: f } = e,
             p = (0, w.ed)('CollectiblesCollectedModal'),
-            h = (0, x.k)(n),
-            m = (0, x.k)(o),
+            h = (0, L.k)(n),
+            m = (0, L.k)(o),
             g = null != o,
             E = (0, b.Z)(),
             v = null == E ? void 0 : null === (t = E.giftPurchaseConfirmation) || void 0 === t ? void 0 : t.rewardCollectedText(),
-            { handleUseNow: y, isApplying: O } = (0, L.W)({
+            { handleUseNow: y, isApplying: O } = (0, D.W)({
                 product: n,
                 onSuccess: a,
                 onError: a
             }),
-            { firstAvatarDecoration: I, firstProfileEffect: S } = (0, M.R)(n),
+            { firstAvatarDecoration: I, firstProfileEffect: S } = (0, x.R)(n),
             T = (0, R.x6)(n) ? null != I && null != S : null != I || null != S,
             N = i.useMemo(
                 () =>
@@ -488,7 +485,7 @@ let $ = 880,
         let { transitionState: t, product: n, onClose: a, analyticsLocations: s, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, itemConsumed: d } = e,
             p = (0, f.e7)([A.Z], () => A.Z.purchases),
             h = (0, C.o)(n, p),
-            m = (0, Z.W)(n, h),
+            m = (0, F.W)(n, h),
             g = i.useRef(new o.qA()),
             [E, v] = i.useState(null),
             b = (0, H.UY)(m.skuId);

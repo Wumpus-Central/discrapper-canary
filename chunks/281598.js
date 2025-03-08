@@ -1,12 +1,12 @@
 n.d(t, {
-    $j: () => g,
+    $j: () => p,
     Eo: () => c,
-    Fr: () => s,
+    Fr: () => i,
     Kj: () => a,
-    Kr: () => m,
-    RF: () => o,
-    XA: () => d,
-    ZK: () => u
+    Kr: () => f,
+    RF: () => l,
+    XA: () => u,
+    ZK: () => d
 }),
     n(653041),
     n(47120),
@@ -34,10 +34,12 @@ n.d(t, {
     n(216116),
     n(78328),
     n(815648);
-var r,
-    i = n(481060),
-    s = (((r = {}).HERO_BANNER_STATIC = 'hero_banner'), (r.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (r.HERO_LOGO = 'hero_logo'), (r.FEATURED_BLOCK = 'featured_block'), (r.CATEGORY_BANNER_STATIC = 'category_banner'), (r.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), (r.UPSELL_BANNER = 'upsell_banner'), (r.UPSELL_BANNER_POPOUT = 'upsell_popout'), (r.PDP_BACKGROUND = 'pdp_bg'), (r.PDP_LOGO = 'pdp_logo'), r);
-let a = {
+var r = n(481060),
+    i = (function (e) {
+        return (e.HERO_BANNER_STATIC = 'hero_banner'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated'), (e.HERO_LOGO = 'hero_logo'), (e.FEATURED_BLOCK = 'featured_block'), (e.CATEGORY_BANNER_STATIC = 'category_banner'), (e.CATEGORY_BANNER_ANIMATED = 'category_banner_animated'), (e.UPSELL_BANNER = 'upsell_banner'), (e.UPSELL_BANNER_POPOUT = 'upsell_popout'), (e.PDP_BACKGROUND = 'pdp_bg'), (e.PDP_LOGO = 'pdp_logo'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg'), e;
+    })({});
+let o = '.DS_Store',
+    a = {
         'hero_banner.jpg': 'hero_banner',
         'hero_banner_animated.webm': 'hero_banner_animated',
         'hero_logo.png': 'hero_logo',
@@ -47,32 +49,34 @@ let a = {
         'upsell_banner.png': 'upsell_banner',
         'upsell_banner_popout.png': 'upsell_popout',
         'pdp_bg.jpg': 'pdp_bg',
-        'pdp_logo.png': 'pdp_logo'
+        'pdp_logo.png': 'pdp_logo',
+        'collected_modal_bg.jpg': 'collected_modal_bg'
     },
-    l = async (e) => {
+    s = async (e) => {
         let t = [];
         if (e.isFile) {
-            let n = await new Promise((t) => e.file(t));
-            '.DS_Store' !== n.name && t.push(n);
+            let n = e,
+                r = await new Promise((e) => n.file(e));
+            r.name !== o && t.push(r);
         } else if (e.isDirectory) {
             let n = e.createReader(),
                 r = await new Promise((e) => n.readEntries(e)),
-                i = await Promise.all(r.map((e) => l(e)));
+                i = await Promise.all(r.map((e) => s(e)));
             t.push(...i.flat());
         }
         return t;
     },
-    o = async (e) => {
-        let t = e.map((e) => l(e));
+    l = async (e) => {
+        let t = e.map((e) => s(e));
         return (await Promise.all(t)).flat();
     },
     c = (e) => {
-        (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
+        (0, r.showToast)((0, r.createToast)(e, r.ToastType.FAILURE));
     },
-    d = (e) => {
-        (0, i.showToast)((0, i.createToast)(e, i.ToastType.SUCCESS));
+    u = (e) => {
+        (0, r.showToast)((0, r.createToast)(e, r.ToastType.SUCCESS));
     },
-    u = (e, t, n) => {
+    d = (e, t, n) => {
         let r = new FileReader();
         (r.onload = (r) => {
             if (null == r.target || 'string' != typeof r.target.result) {
@@ -83,22 +87,22 @@ let a = {
         }),
             r.readAsDataURL(e);
     },
-    m = (e, t, n) => {
+    f = (e, t, n) => {
         if (0 === e.length) {
             null == n || n('No files found!');
             return;
         }
-        for (let r of e) u(r, t, n);
+        for (let r of e) d(r, t, n);
     },
-    p = (e) => {
+    _ = (e) => {
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
-            s = new Uint8Array(r.length);
-        for (let e = 0; e < r.length; e++) s[e] = r.charCodeAt(e);
-        return new Blob([s], { type: i });
+            o = new Uint8Array(r.length);
+        for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
+        return new Blob([o], { type: i });
     },
-    g = (e) => {
-        let t = p(e);
+    p = (e) => {
+        let t = _(e);
         return URL.createObjectURL(t);
     };
