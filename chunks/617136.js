@@ -1,12 +1,13 @@
 n.d(t, {
     Ic: () => C,
     O5: () => P,
+    Zk: () => w,
     _3: () => A,
     _F: () => R,
     _b: () => y,
     dA: () => T,
     jZ: () => N,
-    mH: () => I,
+    mH: () => S,
     uk: () => O
 }),
     n(47120);
@@ -20,8 +21,8 @@ var r = n(192379),
     u = n(497505),
     d = n(977156),
     f = n(566078),
-    p = n(46140),
-    _ = n(981631);
+    _ = n(46140),
+    p = n(981631);
 function h(e, t, n) {
     return (
         t in e
@@ -75,7 +76,7 @@ function E(e, t) {
     );
 }
 let v = Object.keys(u.jn),
-    b = new Set([_.rMx.QUEST_CONTENT_VIEWED, _.rMx.QUEST_CONTENT_CLICKED]);
+    b = new Set([p.rMx.QUEST_CONTENT_VIEWED, p.rMx.QUEST_CONTENT_CLICKED]);
 function y(e) {
     var t;
     return null !== (t = v.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
@@ -84,7 +85,7 @@ function O(e) {
     var t, n, r;
     return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? 'COMPLETED_CLAIMED' : (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? 'COMPLETED' : (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null ? 'ENROLLED' : 'NONE';
 }
-function S(e) {
+function I(e) {
     let t = f.r.build(e.config);
     return {
         quest_id: e.id,
@@ -93,7 +94,7 @@ function S(e) {
         game_name: t.application.name
     };
 }
-function I(e, t, n) {
+function S(e, t, n) {
     return {
         content_id: e,
         content_name: y(e),
@@ -104,8 +105,8 @@ function I(e, t, n) {
 function T(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: l = !1 } = e,
         u = c.Z.quests.get(t);
-    if (null == u || ((0, d.X7)({ location: p.dr.QUEST_PREVIEW_TOOL }) && a.Z.getLayers().includes(_.S9g.USER_SETTINGS))) return;
-    let f = m({}, S(u), r);
+    if (null == u || ((0, d.X7)({ location: _.dr.QUEST_PREVIEW_TOOL }) && a.Z.getLayers().includes(p.S9g.USER_SETTINGS))) return;
+    let f = m({}, I(u), r);
     if ((o.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, f), u.preview)) return;
     let h = b.has(n);
     if (l) return i.ZP.trackWithMetadata(n, f, h);
@@ -118,8 +119,8 @@ function A(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: i, questContentRowIndex: o, impressionId: a, trackGuildAndChannelMetadata: s = !1 } = e;
     T({
         questId: t,
-        event: _.rMx.QUEST_CONTENT_CLICKED,
-        properties: E(m({}, I(n, i, o)), {
+        event: p.rMx.QUEST_CONTENT_CLICKED,
+        properties: E(m({}, S(n, i, o)), {
             cta_name: r,
             impression_id: a
         }),
@@ -130,8 +131,8 @@ function C(e) {
     let { questContent: t, questId: n, mode: r, prevMode: i } = e;
     T({
         questId: n,
-        event: _.rMx.QUEST_BAR_MODE_CHANGED,
-        properties: E(m({}, I(t)), {
+        event: p.rMx.QUEST_BAR_MODE_CHANGED,
+        properties: E(m({}, S(t)), {
             mode: r,
             previous_mode: i
         })
@@ -157,11 +158,19 @@ function P() {
             let { questId: n, questContent: r, questContentCTA: i, questContentPosition: o, questContentRowIndex: a, trackGuildAndChannelMetadata: s = !1 } = t;
             e({
                 questId: n,
-                event: _.rMx.QUEST_CONTENT_CLICKED,
-                properties: E(m({}, I(r, o, a)), { cta_name: i }),
+                event: p.rMx.QUEST_CONTENT_CLICKED,
+                properties: E(m({}, S(r, o, a)), { cta_name: i }),
                 trackGuildAndChannelMetadata: s
             });
         },
         [e]
     );
+}
+function w(e, t) {
+    r.useEffect(() => {
+        i.ZP.trackWithMetadata(p.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+            quest_id: t,
+            reason: e
+        });
+    }, [e, t]);
 }
