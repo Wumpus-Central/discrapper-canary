@@ -23,15 +23,18 @@ function v(e, t, n) {
         b = u.Z.getChannel(E),
         j = o.Z.getApplication(t),
         x = a.ZP.getRunningGames().find((e) => e.id === t),
-        I = null !== (v = null == j ? void 0 : j.name) && void 0 !== v ? v : null == x ? void 0 : x.name,
+        I = null !== (v = null == x ? void 0 : x.name) && void 0 !== v ? v : null == j ? void 0 : j.name,
         S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, y),
         C = (0, i.jsxs)('div', {
             className: O.nowPlayingNotification,
             children: [
-                (0, i.jsx)(l.Z, {
-                    user: y,
-                    'aria-hidden': !0,
-                    size: r.EFr.SIZE_24
+                (0, i.jsx)('div', {
+                    className: O.nowPlayingNotificationIcon,
+                    children: (0, i.jsx)(l.Z, {
+                        user: y,
+                        'aria-hidden': !0,
+                        size: r.EFr.SIZE_24
+                    })
                 }),
                 (0, i.jsx)('div', {
                     className: O.body,
@@ -47,7 +50,8 @@ function v(e, t, n) {
                                     ? (0, i.jsx)(s.Z, {
                                           game: j,
                                           pid: null == x ? void 0 : x.pid,
-                                          size: s.Z.Sizes.XXSMALL
+                                          size: s.Z.Sizes.XXSMALL,
+                                          className: O.gameIcon
                                       })
                                     : null
                         })
