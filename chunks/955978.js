@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var i = n(200651),
     r = n(481060),
     l = n(700582),
@@ -9,49 +9,47 @@ var i = n(200651),
     c = n(944486),
     d = n(594174),
     p = n(5192),
-    h = n(32300),
-    f = n(620954),
-    m = n(987650),
-    g = n(388032),
-    O = n(182106);
-function v(e, t, n) {
-    var v;
-    if (!(0, h.Yo)('NowPlayingNotification')) return null;
-    let y = d.default.getUser(e);
-    if (null == y) return null;
-    let E = c.Z.getCurrentlySelectedChannelId(),
-        b = u.Z.getChannel(E),
-        j = o.Z.getApplication(t),
-        x = a.ZP.getRunningGames().find((e) => e.id === t),
-        I = null !== (v = null == x ? void 0 : x.name) && void 0 !== v ? v : null == j ? void 0 : j.name,
-        S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, y),
-        C = (0, i.jsxs)('div', {
-            className: O.nowPlayingNotification,
+    h = n(620954),
+    f = n(987650),
+    m = n(388032),
+    g = n(182106);
+function O(e, t, n) {
+    var O;
+    let v = d.default.getUser(e);
+    if (null == v) return null;
+    let y = c.Z.getCurrentlySelectedChannelId(),
+        E = u.Z.getChannel(y),
+        b = o.Z.getApplication(t),
+        j = a.ZP.getRunningGames().find((e) => e.id === t),
+        x = null !== (O = null == j ? void 0 : j.name) && void 0 !== O ? O : null == b ? void 0 : b.name,
+        I = (0, p.oY)(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, v),
+        S = (0, i.jsxs)('div', {
+            className: g.nowPlayingNotification,
             children: [
                 (0, i.jsx)('div', {
-                    className: O.nowPlayingNotificationIcon,
+                    className: g.nowPlayingNotificationIcon,
                     children: (0, i.jsx)(l.Z, {
-                        user: y,
+                        user: v,
                         'aria-hidden': !0,
                         size: r.EFr.SIZE_24
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: O.body,
+                    className: g.body,
                     children: (0, i.jsx)(r.Text, {
                         variant: 'text-sm/medium',
                         color: 'interactive-normal',
-                        className: O.bodyText,
-                        children: g.NW.format(g.t['q7/rgo'], {
-                            username: null != S ? S : y.username,
-                            gameName: I,
+                        className: g.bodyText,
+                        children: m.NW.format(m.t['q7/rgo'], {
+                            username: null != I ? I : v.username,
+                            gameName: x,
                             gameIcon: () =>
-                                null != j || null != x
+                                null != b || null != j
                                     ? (0, i.jsx)(s.Z, {
-                                          game: j,
-                                          pid: null == x ? void 0 : x.pid,
-                                          size: s.Z.Sizes.XXSMALL,
-                                          className: O.gameIcon
+                                          game: b,
+                                          pid: null == j ? void 0 : j.pid,
+                                          size: s.Z.Sizes.XSMALL,
+                                          className: g.gameIcon
                                       })
                                     : null
                         })
@@ -59,21 +57,24 @@ function v(e, t, n) {
                 })
             ]
         }),
-        { trackView: N, trackClick: Z } = (0, f.R)(m.n0.NowPlayingNotification, {
-            notif_type: m.n0.NowPlayingNotification,
-            notif_user_id: y.id,
+        { trackView: C, trackClick: N } = (0, h.R)(f.n0.NowPlayingNotification, {
+            notif_type: f.n0.NowPlayingNotification,
+            notif_user_id: v.id,
             activity_type: n.type,
-            activity_name: null != I ? I : n.name
+            activity_name: null != x ? x : n.name
         });
     return {
-        body: C,
+        body: S,
+        className: g.nowPlayingNotificationContainer,
+        wrapperClassName: g.nowPlayingNotificationWrapper,
+        animationWrapperClassName: g.nowPlayingNotificationAnimationWrapper,
         maxBodyLines: 1,
         disableClickableRegions: !0,
         onNotificationShow: () => {
-            N();
+            C();
         },
         onDismissClick: () => {
-            Z('dismiss');
+            N('dismiss');
         }
     };
 }
