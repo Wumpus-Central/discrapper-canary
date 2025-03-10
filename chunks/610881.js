@@ -18,7 +18,6 @@ t.r(
         perkText: 'perkText__823e1',
         button: 'button__823e1',
         buttonInner: 'buttonInner__823e1',
-        dot: 'dot__823e1',
-        cost: 'cost__823e1'
+        dot: 'dot__823e1'
     })
 );

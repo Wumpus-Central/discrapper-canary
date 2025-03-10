@@ -1,6 +1,9 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f });
 var r = n(200651);
-function i(e, t, n) {
+n(192379);
+var i = n(331595),
+    o = n(267843);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -13,7 +16,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -24,12 +27,12 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                i(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function a(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -41,29 +44,29 @@ function a(e, t) {
     }
     return n;
 }
-function s(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function l(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function c(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,20 +75,25 @@ function c(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
-    var { fill: t } = e,
-        n = l(e, ['fill']);
+function f(e) {
+    var t,
+        n,
+        { size: a = 'sm', fill: l, width: d, height: f } = e,
+        _ = u(e, ['size', 'fill', 'width', 'height']);
+    let p = (0, o.m)(a),
+        h = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : d,
+        m = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : f;
     return (0, r.jsxs)(
         'svg',
-        s(
-            o(
+        c(
+            s(
                 {
-                    width: '10',
-                    height: '16',
+                    width: h,
+                    height: m,
                     viewBox: '0 0 10 16',
-                    fill: null != t ? t : '#FF73FA'
+                    fill: null != l ? l : '#FF73FA'
                 },
-                n
+                (0, i.Z)(_)
             ),
             {
                 xmlns: 'http://www.w3.org/2000/svg',
@@ -94,4 +102,3 @@ function u(e) {
         )
     );
 }
-n(192379);

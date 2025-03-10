@@ -25,7 +25,11 @@ function _(e) {
         O = (null == o ? void 0 : o.type) === h.o.UNREAD;
     return (0, r.jsx)(u.m, {
         id: 'skill-trees-'.concat(t.id),
-        renderIcon: (e) => (0, r.jsx)(c.Z, { className: e }),
+        renderIcon: (e) =>
+            (0, r.jsx)(c.Z, {
+                size: 'md',
+                className: e
+            }),
         text: (0, r.jsx)('span', {
             className: l()({ [y.textImportant]: O }),
             children: v.NW.string(b.Z.yv3DJC)
