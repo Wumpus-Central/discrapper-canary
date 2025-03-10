@@ -1,118 +1,120 @@
-n.d(t, { default: () => v }), n(47120);
+n.d(t, { default: () => S }), n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(512722),
-    l = n.n(a),
-    s = n(913527),
-    o = n.n(s),
-    c = n(442837),
-    d = n(481060),
-    u = n(749210),
-    f = n(168107),
-    h = n(480916),
-    m = n(600164),
-    x = n(313201),
-    _ = n(592125),
-    N = n(944486),
+    s = n(512722),
+    a = n.n(s),
+    l = n(913527),
+    o = n.n(l),
+    c = n(990547),
+    d = n(442837),
+    u = n(481060),
+    f = n(749210),
+    h = n(168107),
+    m = n(480916),
+    x = n(600164),
+    _ = n(313201),
+    N = n(592125),
+    E = n(944486),
     b = n(594174),
     g = n(626135),
-    E = n(63063),
-    k = n(771308),
-    A = n(758119),
-    y = n(622822),
-    j = n(13430),
-    z = n(723359),
-    C = n(981631),
+    k = n(63063),
+    A = n(771308),
+    y = n(758119),
+    j = n(622822),
+    z = n(13430),
+    C = n(723359),
+    R = n(981631),
     L = n(388032),
-    R = n(326610);
-function v(e) {
-    let { transitionState: t, source: a } = e,
-        s = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
-        v = (0, c.e7)([N.Z, _.Z], () => _.Z.getChannel(N.Z.getChannelId())),
-        [S, T] = i.useState(null),
+    v = n(326610);
+function S(e) {
+    let { transitionState: t, source: s } = e,
+        l = (0, d.e7)([b.default], () => b.default.getCurrentUser()),
+        S = (0, d.e7)([E.Z, N.Z], () => N.Z.getChannel(E.Z.getChannelId())),
+        [T, p] = i.useState(null),
         [W, M] = i.useState(null),
-        [p, G] = i.useState(!1),
-        [w, I] = i.useState(0),
-        Z = i.createRef(),
+        [G, w] = i.useState(!1),
+        [I, Z] = i.useState(0),
+        Y = i.createRef(),
         D = i.createRef(),
-        Y = (0, x.Dt)(),
-        F = (0, y.Kt)(),
-        P = null != S ? o()().diff(S, 'years') : null;
+        F = (0, _.Dt)(),
+        P = (0, j.Kt)(),
+        U = null != T ? o()().diff(T, 'years') : null;
     function B() {
-        if (a === z.L0.NSFW_SERVER_INVITE_EMBED) {
-            (0, A.qV)(a);
+        if (s === C.L0.NSFW_SERVER_INVITE_EMBED) {
+            (0, y.qV)(s);
             return;
         }
-        let e = null == v ? void 0 : v.getGuildId();
-        u.Z.nsfwReturnToSafety(e), (0, A.qV)(a);
+        let e = null == S ? void 0 : S.getGuildId();
+        f.Z.nsfwReturnToSafety(e), (0, y.qV)(s);
     }
-    async function U() {
-        l()(null != S, 'Cannot submit null birthday.');
+    async function q() {
+        a()(null != T, 'Cannot submit null birthday.');
         try {
-            return M(null), G(!0), await (0, k.Av)(S, a);
+            return M(null), w(!0), await (0, A.Av)(T, s);
         } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, A.C8)(a, t.body.date_of_birth);
+            if (null != t.body && null != t.body.date_of_birth) (0, y.C8)(s, t.body.date_of_birth);
             else {
                 var e;
-                (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? M(L.NW.string(L.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), G(!1);
+                (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? M(L.NW.string(L.t['TGg/2t'])) : M(null == t ? void 0 : t.body.message), w(!1);
             }
         }
     }
-    async function q() {
-        if ((l()(null != P, "Cannot submit if we haven't been able to calculate age."), P < 18)) {
-            I(1);
+    async function K() {
+        if ((a()(null != U, "Cannot submit if we haven't been able to calculate age."), U < 18)) {
+            Z(1);
             return;
         }
-        await U();
+        await q();
     }
-    async function K(e) {
-        e.preventDefault(), p || null == S || (await q());
+    async function O(e) {
+        e.preventDefault(), G || null == T || (await K());
     }
-    async function O() {
-        null == (await U()) && I(0);
+    async function V() {
+        null == (await q()) && Z(0);
     }
     i.useEffect(() => {
-        null != s && null != s.nsfwAllowed && (0, A.qq)(a);
+        null != l && null != l.nsfwAllowed && (0, y.qq)(s);
     }),
         i.useEffect(() => {
-            g.default.track(C.rMx.AGE_GATE_ACTION, {
-                source: a,
-                action: z.Al.AGE_GATE_OPEN
+            g.default.track(R.rMx.AGE_GATE_ACTION, {
+                source: s,
+                action: C.Al.AGE_GATE_OPEN
             });
-        }, [a]);
-    let V = i.useCallback(
+        }, [s]);
+    let X = i.useCallback(
             (e) => {
-                T(e);
+                p(e);
             },
-            [T]
+            [p]
         ),
-        X = i.useCallback(() => {
+        Q = i.useCallback(() => {
             var e;
             null === (e = D.current) || void 0 === e || e.focus();
         }, [D]),
-        Q = i.useCallback(() => {
-            f.Z.showAgeVerificationGetStartedModal(h.cU.NSFW_AGE_GATE);
+        J = i.useCallback(() => {
+            h.Z.showAgeVerificationGetStartedModal(m.cU.NSFW_AGE_GATE);
         }, []);
-    return F
-        ? (0, r.jsxs)(d.Y0X, {
+    return P
+        ? (0, r.jsxs)(u.Y0X, {
+              impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
               transitionState: t,
-              size: d.CgR.SMALL,
+              size: u.CgR.SMALL,
               children: [
-                  (0, r.jsx)(d.hzk, {
+                  (0, r.jsx)(u.hzk, {
                       children: (0, r.jsxs)('div', {
-                          className: R.container,
+                          className: v.container,
                           children: [
                               (0, r.jsx)('img', {
                                   alt: '',
                                   src: n(462991),
-                                  className: R.img
+                                  className: v.img
                               }),
-                              (0, r.jsx)(d.X6q, {
+                              (0, r.jsx)(u.X6q, {
                                   variant: 'heading-xl/semibold',
-                                  className: R.title,
+                                  className: v.title,
                                   children: L.NW.string(L.t.ZmwvDQ)
                               }),
-                              (0, r.jsx)(d.Text, {
+                              (0, r.jsx)(u.Text, {
                                   color: 'header-secondary',
                                   variant: 'text-sm/normal',
                                   children: L.NW.string(L.t['NjO/s7'])
@@ -120,18 +122,18 @@ function v(e) {
                           ]
                       })
                   }),
-                  (0, r.jsxs)(d.mzw, {
-                      justify: m.Z.Justify.BETWEEN,
+                  (0, r.jsxs)(u.mzw, {
+                      justify: x.Z.Justify.BETWEEN,
                       children: [
-                          (0, r.jsx)(d.zxk, {
-                              size: d.PhG.SMALL,
-                              onClick: Q,
+                          (0, r.jsx)(u.zxk, {
+                              size: u.PhG.SMALL,
+                              onClick: J,
                               children: L.NW.string(L.t.SFWVER)
                           }),
-                          (0, r.jsx)(d.zxk, {
-                              look: d.zxk.Looks.LINK,
-                              size: d.zxk.Sizes.NONE,
-                              color: d.zxk.Colors.PRIMARY,
+                          (0, r.jsx)(u.zxk, {
+                              look: u.zxk.Looks.LINK,
+                              size: u.zxk.Sizes.NONE,
+                              color: u.zxk.Colors.PRIMARY,
                               onClick: B,
                               children: L.NW.string(L.t.f3Pet7)
                           })
@@ -139,41 +141,41 @@ function v(e) {
                   })
               ]
           })
-        : 0 === w
+        : 0 === I
           ? (function () {
-                let e = a === z.L0.FAMILY_CENTER ? L.NW.string(L.t.M7mt7u) : L.NW.string(L.t.F8otRk),
+                let e = s === C.L0.FAMILY_CENTER ? L.NW.string(L.t.M7mt7u) : L.NW.string(L.t.F8otRk),
                     i = (() => {
-                        switch (a) {
-                            case z.L0.FAMILY_CENTER:
+                        switch (s) {
+                            case C.L0.FAMILY_CENTER:
                                 return L.NW.string(L.t.mhUrKS);
-                            case z.L0.DEEP_LINK_PROMPT:
-                                return L.NW.format(L.t.iyhg2t, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) });
+                            case C.L0.DEEP_LINK_PROMPT:
+                                return L.NW.format(L.t.iyhg2t, { helpURL: k.Z.getArticleURL(R.BhN.AGE_GATE) });
                             default:
-                                return L.NW.format(L.t.n3QjDA, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) });
+                                return L.NW.format(L.t.n3QjDA, { helpURL: k.Z.getArticleURL(R.BhN.AGE_GATE) });
                         }
                     })();
-                return (0, r.jsxs)(d.Y0X, {
+                return (0, r.jsxs)(u.Y0X, {
                     transitionState: t,
-                    size: d.CgR.SMALL,
-                    'aria-labelledby': Y,
+                    size: u.CgR.SMALL,
+                    'aria-labelledby': F,
                     children: [
-                        (0, r.jsxs)(d.hzk, {
+                        (0, r.jsxs)(u.hzk, {
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: R.container,
+                                    className: v.container,
                                     children: [
                                         (0, r.jsx)('img', {
                                             alt: '',
                                             src: n(462991),
-                                            className: R.img
+                                            className: v.img
                                         }),
-                                        (0, r.jsx)(d.X6q, {
+                                        (0, r.jsx)(u.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            className: R.title,
-                                            id: Y,
+                                            className: v.title,
+                                            id: F,
                                             children: e
                                         }),
-                                        (0, r.jsx)(d.Text, {
+                                        (0, r.jsx)(u.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-sm/normal',
                                             children: i
@@ -181,36 +183,36 @@ function v(e) {
                                     ]
                                 }),
                                 (0, r.jsx)('form', {
-                                    onSubmit: K,
-                                    children: (0, r.jsx)(j.Z, {
+                                    onSubmit: O,
+                                    children: (0, r.jsx)(z.Z, {
                                         label: L.NW.string(L.t.rhBeKS),
-                                        wrapperClassName: R.birthday,
+                                        wrapperClassName: v.birthday,
                                         name: 'date_of_birth',
-                                        onChange: V,
-                                        onPopulated: X,
+                                        onChange: X,
+                                        onPopulated: Q,
                                         error: W,
-                                        value: S,
-                                        ref: Z,
+                                        value: T,
+                                        ref: Y,
                                         autoFocus: !0
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(d.mzw, {
-                            justify: m.Z.Justify.BETWEEN,
+                        (0, r.jsxs)(u.mzw, {
+                            justify: x.Z.Justify.BETWEEN,
                             children: [
-                                (0, r.jsx)(d.zxk, {
+                                (0, r.jsx)(u.zxk, {
                                     buttonRef: D,
-                                    submitting: p,
-                                    disabled: null == S,
-                                    size: d.PhG.SMALL,
-                                    onClick: q,
+                                    submitting: G,
+                                    disabled: null == T,
+                                    size: u.PhG.SMALL,
+                                    onClick: K,
                                     children: L.NW.string(L.t.uBFuoq)
                                 }),
-                                (0, r.jsx)(d.zxk, {
-                                    look: d.zxk.Looks.LINK,
-                                    size: d.zxk.Sizes.NONE,
-                                    color: d.zxk.Colors.PRIMARY,
+                                (0, r.jsx)(u.zxk, {
+                                    look: u.zxk.Looks.LINK,
+                                    size: u.zxk.Sizes.NONE,
+                                    color: u.zxk.Colors.PRIMARY,
                                     onClick: B,
                                     children: L.NW.string(L.t['1MrpWF'])
                                 })
@@ -219,42 +221,42 @@ function v(e) {
                     ]
                 });
             })()
-          : (0, r.jsxs)(d.Y0X, {
-                transitionState: d.Dvm.ENTERED,
-                size: d.CgR.SMALL,
-                'aria-labelledby': Y,
+          : (0, r.jsxs)(u.Y0X, {
+                transitionState: u.Dvm.ENTERED,
+                size: u.CgR.SMALL,
+                'aria-labelledby': F,
                 children: [
-                    (0, r.jsx)(d.hzk, {
+                    (0, r.jsx)(u.hzk, {
                         children: (0, r.jsxs)('div', {
-                            className: R.confirmContainer,
+                            className: v.confirmContainer,
                             children: [
-                                (0, r.jsx)(d.X6q, {
+                                (0, r.jsx)(u.X6q, {
                                     variant: 'heading-xl/semibold',
-                                    className: R.confirmTitle,
-                                    id: Y,
-                                    children: L.NW.format(L.t.wumolZ, { age: P })
+                                    className: v.confirmTitle,
+                                    id: F,
+                                    children: L.NW.format(L.t.wumolZ, { age: U })
                                 }),
-                                (0, r.jsx)(d.Text, {
+                                (0, r.jsx)(u.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: L.NW.format(L.t.n3QjDA, { helpURL: E.Z.getArticleURL(C.BhN.AGE_GATE) })
+                                    children: L.NW.format(L.t.n3QjDA, { helpURL: k.Z.getArticleURL(R.BhN.AGE_GATE) })
                                 })
                             ]
                         })
                     }),
-                    (0, r.jsxs)(d.mzw, {
-                        className: R.confirmFooter,
+                    (0, r.jsxs)(u.mzw, {
+                        className: v.confirmFooter,
                         children: [
-                            (0, r.jsx)(d.zxk, {
-                                look: d.zxk.Looks.LINK,
-                                size: d.zxk.Sizes.NONE,
-                                color: d.zxk.Colors.PRIMARY,
-                                onClick: () => I(0),
+                            (0, r.jsx)(u.zxk, {
+                                look: u.zxk.Looks.LINK,
+                                size: u.zxk.Sizes.NONE,
+                                color: u.zxk.Colors.PRIMARY,
+                                onClick: () => Z(0),
                                 children: L.NW.string(L.t.cfYCra)
                             }),
-                            (0, r.jsx)(d.zxk, {
-                                color: d.zxk.Colors.BRAND,
-                                onClick: O,
+                            (0, r.jsx)(u.zxk, {
+                                color: u.zxk.Colors.BRAND,
+                                onClick: V,
                                 children: L.NW.string(L.t['6tahio'])
                             })
                         ]
