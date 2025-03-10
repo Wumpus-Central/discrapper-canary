@@ -644,6 +644,7 @@ let A = Object.freeze({
         GUILD_CONVERT_TO_CLAN: (t) => '/clan/'.concat(t),
         GUILD_CLAN_DISCOVERY_INFO: (t) => '/discovery/'.concat(t, '/clan'),
         GUILD_PROFILE: (t) => '/guilds/'.concat(t, '/profile'),
+        GUILD_PROFILE_VISIBILITY: (t) => '/guilds/'.concat(t, '/profile/visibility'),
         USER_SET_CLAN_IDENTITY: '/users/@me/clan',
         CLAN_SETTINGS: (t) => '/clan/'.concat(t, '/settings'),
         DISABLE_CLAN: (t) => '/clan/'.concat(t, '/disable'),

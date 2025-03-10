@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => C,
     a: () => f
 }),
     n(47120),
@@ -77,7 +77,7 @@ function h(e) {
         n = _.get(t);
     null == n ? _.set(t, d(c({}, p), { fetchStatus: 'FETCHING' })) : _.set(t, d(c({}, n), { fetchStatus: 'FETCHING' }));
 }
-function g(e) {
+function m(e) {
     let { guildId: t, profile: n } = e,
         r = _.get(t);
     null == r
@@ -98,7 +98,7 @@ function g(e) {
               })
           );
 }
-function m(e) {
+function g(e) {
     let { guildId: t, error: n } = e,
         r = _.get(t);
     null == r
@@ -149,6 +149,20 @@ function b(e) {
           );
 }
 function y(e) {
+    let { guildId: t, visibility: n } = e,
+        r = _.get(t),
+        i = null == r ? void 0 : r.profile;
+    null != r &&
+        null != i &&
+        _.set(
+            t,
+            d(c({}, r), {
+                isUpdating: !1,
+                profile: d(c({}, i), { visibility: n })
+            })
+        );
+}
+function O(e) {
     let { form: t, guildId: n } = e,
         r = null == t ? void 0 : t.profile;
     if (null == r) return;
@@ -171,7 +185,7 @@ function y(e) {
               })
           );
 }
-function O(e) {
+function I(e) {
     let { invite: t } = e,
         { profile: n } = t;
     if (null == n) return;
@@ -199,11 +213,11 @@ function S(e) {
     let { guildId: t, channelType: n } = e;
     n === s.d4z.GUILD_ANNOUNCEMENT && _.delete(t);
 }
-function I(e) {
+function T(e) {
     let { guildId: t, enabled: n } = e;
     null != t && n && _.delete(t);
 }
-function T(e) {
+function N(e) {
     var t, n, r;
     let { guild: i } = e,
         o = _.get(i.id);
@@ -216,7 +230,7 @@ function T(e) {
     });
     _.set(i.id, d(c({}, o), { profile: a }));
 }
-class N extends (r = i.ZP.Store) {
+class A extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null !== (n = null === (t = _.get(e)) || void 0 === t ? void 0 : t.profile) && void 0 !== n ? n : null;
@@ -238,17 +252,20 @@ class N extends (r = i.ZP.Store) {
         return null == e ? null : null !== (r = null === (n = _.get(e)) || void 0 === n ? void 0 : null === (t = n.error) || void 0 === t ? void 0 : t.code) && void 0 !== r ? r : null;
     }
 }
-l(N, 'displayName', 'GuildProfileStore');
-let A = new N(o.Z, {
+l(A, 'displayName', 'GuildProfileStore');
+let C = new A(o.Z, {
     GUILD_PROFILE_FETCH: h,
-    GUILD_PROFILE_FETCH_SUCCESS: g,
-    GUILD_PROFILE_FETCH_FAILURE: m,
+    GUILD_PROFILE_FETCH_SUCCESS: m,
+    GUILD_PROFILE_FETCH_FAILURE: g,
     GUILD_PROFILE_UPDATE: E,
     GUILD_PROFILE_UPDATE_SUCCESS: v,
     GUILD_PROFILE_UPDATE_FAILURE: b,
-    MEMBER_VERIFICATION_FORM_UPDATE: y,
-    INVITE_RESOLVE_SUCCESS: O,
+    MEMBER_VERIFICATION_FORM_UPDATE: O,
+    INVITE_RESOLVE_SUCCESS: I,
     CREATE_CHANNEL_MODAL_SUBMIT: S,
-    GUILD_SETTINGS_SET_WIDGET: I,
-    GUILD_UPDATE: T
+    GUILD_SETTINGS_SET_WIDGET: T,
+    GUILD_UPDATE: N,
+    GUILD_PROFILE_UPDATE_VISIBILITY: E,
+    GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: y,
+    GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: b
 });
