@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
-        VerifyAccountDeekLink: () => y,
-        VerifyAccountLoading: () => m,
-        default: () => S
+        VerifyAccountDeekLink: () => m,
+        VerifyAccountLoading: () => S,
+        default: () => y
     }),
     n(47120),
     n(757143),
@@ -16,23 +16,23 @@ var r = n(200651),
     a = n(481060),
     s = n(457330),
     u = n(733427),
-    f = n(169382),
-    d = n(726542),
+    d = n(169382),
+    f = n(726542),
     p = n(536285),
     O = n(591759),
     N = n(656649),
     g = n(981631),
     v = n(388032),
-    C = n(88057);
+    C = n(411299);
 let b = null != window.opener;
-function S() {
+function y() {
     var e, t;
     let n = (0, c.k6)(),
-        a = (0, f.l)(),
+        a = (0, d.l)(),
         p = a.get('code'),
         v = a.get('oauth_verifier'),
         C = null !== (e = a.get('state')) && void 0 !== e ? e : '',
-        S = a.get('loading'),
+        y = a.get('loading'),
         j = null !== (t = a.get('iss')) && void 0 !== t ? t : void 0,
         { type: w } = (0, c.UO)(),
         R = (0, N.vJ)(w),
@@ -42,11 +42,11 @@ function S() {
         Z = null == v ? (null != p ? p : '') : v;
     o.useEffect(() => {
         let e;
-        if (null != S) return;
+        if (null != y) return;
         for (let t of a.keys()) t.startsWith('openid.') && (null == e && (e = {}), (e[t] = a.get(t)));
         let t = (0, N.vJ)(w);
         (async function () {
-            if (null == t || !d.Z.isSupported(t)) return;
+            if (null == t || !f.Z.isSupported(t)) return;
             function r(e) {
                 let { status: r, body: o } = e;
                 if (null != t) {
@@ -93,15 +93,16 @@ function S() {
                 platformType: t,
                 state: C,
                 handleCallbackResponse: r,
-                handleCallbackError: () => {
-                    n.replace(''.concat(g.Z5c.CONNECTIONS_ERROR(t), '?').concat(a.toString()));
+                handleCallbackError: (e) => {
+                    var r;
+                    (null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : r.code) != null && a.append('error-code', e.body.code), n.replace(''.concat(g.Z5c.CONNECTIONS_ERROR(t), '?').concat(a.toString()));
                 },
                 openidParams: e,
                 code: Z,
                 iss: j
             });
         })();
-    }, [Z, n, S, w, a, C, j]),
+    }, [Z, n, y, w, a, C, j]),
         o.useEffect(() => {
             let e;
             if (!A) return;
@@ -125,21 +126,21 @@ function S() {
     let I = o.useMemo(() => {
         if (null != R) return 'discord://'.concat(g.Z5c.CONNECTIONS(R), '/?').concat(a.toString());
     }, [R, a]);
-    return null != R && d.Z.isSupported(R)
+    return null != R && f.Z.isSupported(R)
         ? x
-            ? (0, r.jsx)(y, {
+            ? (0, r.jsx)(m, {
                   platformType: R,
                   deeplink: I,
                   onClick: () => {
                       D(!1), T(!0);
                   }
               })
-            : (0, r.jsx)(m, { platformType: R })
+            : (0, r.jsx)(S, { platformType: R })
         : null;
 }
-function m(e) {
+function S(e) {
     let { platformType: t } = e,
-        n = d.Z.get(t);
+        n = f.Z.get(t);
     return (0, r.jsxs)(N.UV, {
         platformType: t,
         children: [
@@ -158,9 +159,9 @@ function m(e) {
         ]
     });
 }
-function y(e) {
+function m(e) {
     let { deeplink: t, onClick: n, platformType: o } = e,
-        c = d.Z.get(o);
+        c = f.Z.get(o);
     return (0, r.jsx)(N.UV, {
         platformType: o,
         children: (0, r.jsxs)('div', {
@@ -274,6 +275,6 @@ async function h(e) {
         );
         return r(e), !0;
     } catch (e) {
-        return o(), !0;
+        return o(e), !0;
     }
 }
