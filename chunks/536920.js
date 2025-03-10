@@ -5,33 +5,33 @@ var a = r(200651),
     i = r(379649),
     o = r(481060),
     l = r(615287),
-    d = r(493773),
-    c = r(594190),
+    c = r(493773),
+    d = r(594190),
     u = r(77498),
     m = r(626135),
     _ = r(371651),
     x = r(981631),
     h = r(388032),
-    g = r(813214);
+    g = r(165457);
 function p(e) {
     let { onClose: t, transitionState: r, clientSettingType: p, gameId: v } = e,
         [N, k] = n.useState('unreported'),
         [j, C] = n.useState(''),
-        [b, R] = n.useState(!1),
-        [f, y] = n.useState(!1),
+        [b, f] = n.useState(!1),
+        [y, R] = n.useState(!1),
         [S, z] = n.useState(!1),
         [I, w] = n.useState(!1),
-        M = (0, s.e7)([u.Z, c.ZP], () => {
+        A = (0, s.e7)([u.Z, d.ZP], () => {
             var e;
-            let t = null != v ? v : null === (e = c.ZP.getCurrentGameForAnalytics()) || void 0 === e ? void 0 : e.id;
+            let t = null != v ? v : null === (e = d.ZP.getCurrentGameForAnalytics()) || void 0 === e ? void 0 : e.id;
             return null == t ? null : u.Z.getDetectableGame(t);
         }),
-        P = (0, s.e7)([_.default], () => {
+        M = (0, s.e7)([_.default], () => {
             var e;
             let t = null !== (e = null === _.default || void 0 === _.default ? void 0 : _.default.getMostRecentOverlayRenderMethod()) && void 0 !== e ? e : void 0;
             return null != t ? l.gl[t] : void 0;
         }),
-        W = n.useMemo(() => {
+        P = n.useMemo(() => {
             let e = {
                 not_working: h.t.CHXHFR,
                 not_useful: h.t.a95skZ,
@@ -39,6 +39,7 @@ function p(e) {
                 game_crashes_occurred: h.t.IFZ0SU,
                 poor_performance: h.t.exRczs,
                 bad_experience: h.t.qOm5R0,
+                too_many_notifications: h.t.XuBFBA,
                 other: h.t['YP/Ttr']
             };
             return Object.keys(e).map((t) => ({
@@ -46,28 +47,28 @@ function p(e) {
                 value: t
             }));
         }, []),
-        A = async () => {
+        W = async () => {
             if ('unreported' === N && 0 === j.length) {
                 z(!0), await (0, i._v)(100), z(!1), w(!0);
                 return;
             }
-            R(!0),
+            f(!0),
                 await m.default.track(x.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: N,
                     comment: j,
                     client_setting_type: p,
-                    application_id: null == M ? void 0 : M.id,
-                    application_name: null == M ? void 0 : M.name,
-                    most_recent_overlay_render_method: P
+                    application_id: null == A ? void 0 : A.id,
+                    application_name: null == A ? void 0 : A.name,
+                    most_recent_overlay_render_method: M
                 }),
                 await (0, i._v)(1000),
-                R(!1),
-                y(!0),
+                f(!1),
+                R(!0),
                 await (0, i._v)(1500),
                 t();
         };
     return (
-        (0, d.ZP)(() => {
+        (0, c.ZP)(() => {
             m.default.track(x.rMx.OPEN_MODAL, { type: 'overlay_disabled_questionnaire_modal' });
         }),
         (0, a.jsxs)(o.Y0X, {
@@ -121,7 +122,7 @@ function p(e) {
                                         radioItemClassName: g.radioItem,
                                         className: g.radioGroup,
                                         radioPosition: 'right',
-                                        options: W,
+                                        options: P,
                                         onChange: (e) => {
                                             let { value: t } = e;
                                             k(t), w(!1), z(!1);
@@ -168,10 +169,10 @@ function p(e) {
                             children: (0, a.jsx)(o.zxk, {
                                 disabled: b,
                                 submitting: b,
-                                onClick: A,
+                                onClick: W,
                                 color: (() => {
                                     switch (!0) {
-                                        case f:
+                                        case y:
                                             return o.zxk.Colors.GREEN;
                                         case S:
                                             return o.zxk.Colors.PRIMARY;
@@ -181,7 +182,7 @@ function p(e) {
                                 })(),
                                 children: (() => {
                                     switch (!0) {
-                                        case f:
+                                        case y:
                                             return (0, a.jsx)(o.kmB, {});
                                         case b:
                                             return (0, a.jsx)(o.$jN, { type: o.RAz.PULSING_ELLIPSIS });

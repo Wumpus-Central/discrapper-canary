@@ -13895,26 +13895,52 @@ div.cardContainer__88e24 {
 }
 
 .container__4bbc6 {
+    position: absolute;
+    pointer-events: none;
     width: 100%;
+    height: 100%;
     border-radius: inherit;
     overflow: hidden;
     left: 0;
-    top: 0
+    top: 0;
+    opacity: 0;
+    animation: fadeIn__4bbc6 .3s forwards
 }
 
-.container__4bbc6,
+@keyframes fadeIn__4bbc6 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.containerExit__4bbc6 {
+    animation: fadeOut__4bbc6 .4s forwards
+}
+
+@keyframes fadeOut__4bbc6 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
 .img__4bbc6 {
     position: absolute;
     pointer-events: none;
-    height: 100%
-}
-
-.img__4bbc6 {
     -o-object-position: right;
     object-position: right;
     right: 0;
     opacity: .5;
-    width: auto
+    height: 100%;
+    width: auto;
+    transition: opacity .3s ease, transform .3s ease
 }
 
 .img__4bbc6.hover__4bbc6 {
