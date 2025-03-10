@@ -24,6 +24,8 @@ var r = {
     playPausePop: 'playPausePop_cf09d8',
     playPausePopIcon: 'playPausePopIcon_cf09d8',
     videoButton: 'videoButton_cf09d8',
-    overlayContentHidden: 'overlayContentHidden_cf09d8'
+    overlayContentHidden: 'overlayContentHidden_cf09d8',
+    errorOverlay: 'errorOverlay_cf09d8',
+    errorMessage: 'errorMessage_cf09d8'
 };
 e.exports = r;
