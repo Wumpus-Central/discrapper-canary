@@ -11,11 +11,17 @@ var r = n(570140),
     o = n(38055);
 let a = new i.Z('AVError');
 var s = (function (e) {
-    return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), e;
+    return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), (e.NOISE_CANCELLER_ERROR = 'noise-canceller-error'), (e.SCREENSHARE_OS_NOT_SUPPORTED = 'screenshare-min-os-requirement'), e;
 })({});
 let l = {
     'stream-soundshare-failed': {
         errorCode: 1001,
+        severity: 'warning',
+        category: 'audio',
+        isErrorOutbound: !0
+    },
+    'noise-canceller-error': {
+        errorCode: 1002,
         severity: 'warning',
         category: 'audio',
         isErrorOutbound: !0
@@ -68,6 +74,12 @@ let l = {
         category: 'devices',
         isErrorOutbound: !0
     },
+    'screenshare-min-os-requirement': {
+        errorCode: 3003,
+        severity: 'critical',
+        category: 'devices',
+        isErrorOutbound: !0
+    },
     'debug-log-upload-failed': {
         errorCode: 4001,
         severity: 'info',
@@ -76,7 +88,7 @@ let l = {
     }
 };
 var c = (function (e) {
-    return (e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), e;
+    return (e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), (e.NoiseCancellerCpuOveruse = 'NoiseCancellerError.CPU_OVERUSE'), (e.NoiseCancellerFailed = 'NoiseCancellerError.FAILED'), (e.NoiseCancellerVadCpuOveruse = 'NoiseCancellerError.VAD_CPU_OVERUSE'), e;
 })({});
 function u(e, t) {
     if (null != t.underlyingError && !Object.values(c).includes(t.underlyingError)) {
