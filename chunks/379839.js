@@ -1,22 +1,44 @@
-n.d(t, { p: () => s }), n(47120);
+n.d(t, {
+    A: () => s,
+    p: () => l
+}),
+    n(47120);
 var r = n(192379),
     i = n(410030),
     o = n(4242),
     a = n(231338);
-function s(e, t, n, o) {
-    let a = (0, i.ZP)(),
-        [s, c] = (0, r.useState)({});
+function s(e) {
+    let t = (0, i.ZP)(),
+        [n, o] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
             if (null == e) return;
-            let r = l(e.palette, a, t, n);
+            let n = (t === a.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + '80';
+            o({
+                '--background-modifier-selected': n,
+                '--button-secondary-background-hover': n,
+                '--bg-mod-faint': n,
+                '--bg-mod-normal': n,
+                '--background-mod-normal': n
+            });
+        }, [e, t]),
+        n
+    );
+}
+function l(e, t, n, o) {
+    let a = (0, i.ZP)(),
+        [s, l] = (0, r.useState)({});
+    return (
+        (0, r.useEffect)(() => {
+            if (null == e) return;
+            let r = c(e.palette, a, t, n);
             if (null == o) {
-                c({ background: r });
+                l({ background: r });
                 return;
             }
             let i = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width;
-                c({
+                l({
                     background: r,
                     maskImage: 'linear-gradient(to right, transparent '.concat(0.9 * t, 'px, black ').concat(1.1 * t, 'px)')
                 });
@@ -26,7 +48,7 @@ function s(e, t, n, o) {
         s
     );
 }
-function l(e, t, n, r) {
+function c(e, t, n, r) {
     if (!(0, o.ic)(e)) return;
     let i = t === a.BR.LIGHT ? e.lightBackground : e.darkBackground,
         s = n || r,

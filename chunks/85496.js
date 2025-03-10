@@ -12,6 +12,8 @@ e.exports = {
     linkButton: 'linkButton__972a0',
     linkButtonIcon: 'linkButtonIcon__972a0',
     closeButton: 'closeButton__972a0',
+    closeIconPlated: 'closeIconPlated__972a0',
+    closeButtonBackgroundPlated: 'closeButtonBackgroundPlated__972a0',
     favoriteIcon: 'favoriteIcon__972a0',
     closeIcon: 'closeIcon__972a0',
     subtext: 'subtext__972a0',
