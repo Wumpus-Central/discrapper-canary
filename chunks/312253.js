@@ -6,5 +6,6 @@ e.exports = {
     segmentedControl: 'segmentedControl__7f727',
     segmentedControlOption: 'segmentedControlOption__7f727',
     content: 'content__7f727',
-    rightButtonGroup: 'rightButtonGroup__7f727'
+    rightButtonGroup: 'rightButtonGroup__7f727',
+    streamButton: 'streamButton__7f727'
 };

@@ -70,13 +70,13 @@ let m = {
         fps: d.ws.FPS_30,
         sourceType: i.vA.WINDOW,
         fetchingSources: !0,
-        sourceApplication: void 0
+        selectedSource: void 0
     },
-    p = l.createContext(m),
-    x = l.createContext(() => {
+    x = l.createContext(m),
+    g = l.createContext(() => {
         throw Error('Using uninitialized GoLiveModalContextDispatch');
     });
-function g(e, t) {
+function p(e, t) {
     switch (t.type) {
         case 'set_mute_audio':
             return h(f({}, e), { muteStreamAudio: t.value });
@@ -106,15 +106,17 @@ function g(e, t) {
             return h(f({}, e), { fps: t.fps });
         case 'set_hide_preview':
             return h(f({}, e), { hidePreview: t.hidePreview });
+        case 'set_selected_source':
+            return h(f({}, e), { selectedSource: t.source });
         default:
             return e;
     }
 }
 function _(e) {
     let { dispatch: t, state: n, children: l } = e;
-    return (0, r.jsx)(x.Provider, {
+    return (0, r.jsx)(g.Provider, {
         value: t,
-        children: (0, r.jsx)(p.Provider, {
+        children: (0, r.jsx)(x.Provider, {
             value: n,
             children: l
         })
@@ -122,19 +124,19 @@ function _(e) {
 }
 function v(e) {
     var t, n;
-    let { preset: r, resolution: i, fps: d, soundshareEnabled: p } = (0, s.cj)([c.Z], () => c.Z.getState()),
-        x = null !== (t = a.I0.useSetting()) && void 0 !== t && t,
+    let { preset: r, resolution: i, fps: d, soundshareEnabled: x } = (0, s.cj)([c.Z], () => c.Z.getState()),
+        g = null !== (t = a.I0.useSetting()) && void 0 !== t && t,
         _ = null !== (n = a.eo.useSetting()) && void 0 !== n && n,
         [v, j] = l.useReducer(
-            g,
+            p,
             h(f({}, m), {
-                muteStreamAudio: !p,
+                muteStreamAudio: !x,
                 preset: r,
                 resolution: i,
                 fps: d,
-                hidePreview: x,
+                hidePreview: g,
                 notifyFriends: _,
-                sourceApplication: e
+                selectedSource: e
             })
         );
     return (
@@ -153,5 +155,5 @@ function v(e) {
     );
 }
 function j() {
-    return [l.useContext(p), l.useContext(x)];
+    return [l.useContext(x), l.useContext(g)];
 }

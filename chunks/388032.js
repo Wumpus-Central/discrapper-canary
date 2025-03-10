@@ -1,8 +1,9 @@
 n.d(t, {
-    Kj: () => _,
+    Kj: () => p,
     NW: () => m,
     St: () => h,
     Vb: () => c.Vb,
+    j1: () => g,
     t: () => l.k,
     u5: () => c.u5
 }),
@@ -55,7 +56,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,11 +67,11 @@ function p(e, t) {
         e
     );
 }
-n(938474);
-let _ = (function (e) {
+n(887034);
+let p = (function (e) {
         return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
     })('en-US'),
-    h = (0, c.YI)(_, 'en-US'),
+    h = (0, c.YI)(p, 'en-US'),
     m = new o.IntlManager({
         initialLocale: h,
         defaultLocale: 'en-US'
@@ -98,10 +99,11 @@ let _ = (function (e) {
                         if (null == o) break;
                         (l.onClick = null !== (c = o.onClick) && void 0 !== c ? c : o), (l.onContextMenu = o.onContextMenu);
                 }
-                return (0, i.createElement)(a, p(d({}, l), { key: t }), e);
+                return (0, i.createElement)(a, _(d({}, l), { key: t }), e);
             }
         }),
         formatToPlainString: o.stringFormatter,
         formatToMarkdownString: o.markdownFormatter,
         formatToParts: o.astFormatter
-    });
+    }),
+    g = (e) => (0, c.j1)(e, m);

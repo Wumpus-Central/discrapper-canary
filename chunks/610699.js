@@ -86,12 +86,12 @@ let V = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     z = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
     K = (0, L.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function Y(e) {
-    let { members: t, membersOnline: n, isLarge: i, isStacked: a } = e,
-        l = [];
+    let { members: t, membersOnline: n, isLarge: i, isStacked: a, textColor: l } = e,
+        s = [];
     return (
         null != n &&
             n > 0 &&
-            l.push(
+            s.push(
                 (0, r.jsxs)(
                     'div',
                     {
@@ -101,6 +101,7 @@ function Y(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
                                 className: B.count,
+                                color: l,
                                 children: U.NW.format(U.t['LC+S+v'], { membersOnline: n })
                             })
                         ]
@@ -109,7 +110,7 @@ function Y(e) {
                 )
             ),
         null != t &&
-            l.push(
+            s.push(
                 (0, r.jsxs)(
                     'div',
                     {
@@ -119,6 +120,7 @@ function Y(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
                                 className: B.count,
+                                color: l,
                                 children: U.NW.format(U.t.zRl6XV, { count: t })
                             })
                         ]
@@ -131,12 +133,12 @@ function Y(e) {
                 [B.large]: i,
                 [B.stacked]: a
             }),
-            children: l
+            children: s
         })
     );
 }
 function X(e) {
-    let { channel: t, guild: n, isStacked: i, hasEnded: a } = e;
+    let { channel: t, guild: n, isStacked: i, hasEnded: a, textColor: l } = e;
     if (null != t && null != n) {
         let e = (0, C.KS)(t, n);
         return (0, r.jsxs)('div', {
@@ -155,6 +157,7 @@ function X(e) {
                 (0, r.jsx)(I.Z, {
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
+                        color: l,
                         children: U.NW.format(U.t['dc+LW1'], {
                             channelName: t.name,
                             serverName: n.name
@@ -173,6 +176,7 @@ function X(e) {
               children: (0, r.jsx)(I.Z, {
                   children: (0, r.jsx)(u.Text, {
                       variant: 'text-xs/normal',
+                      color: l,
                       children: U.NW.format(U.t.u0vaDA, { guildName: n.name })
                   })
               })
@@ -480,7 +484,8 @@ function Q(e) {
                             channel: l,
                             guild: s,
                             isStacked: !1,
-                            hasEnded: !u
+                            hasEnded: !u,
+                            textColor: 'none'
                         }),
                         o
                             ? C > 0 &&
@@ -493,7 +498,8 @@ function Q(e) {
                                   members: c,
                                   membersOnline: d,
                                   isLarge: !1,
-                                  isStacked: !1
+                                  isStacked: !1,
+                                  textColor: 'none'
                               })
                     ]
                 }),

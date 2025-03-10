@@ -3,6 +3,7 @@ e.exports = {
     loading: 'loading_febe19',
     source: 'source_febe19',
     sourceOverlay: 'sourceOverlay_febe19',
+    selectedSource: 'selectedSource_febe19',
     sourcePreviewContainer: 'sourcePreviewContainer_febe19',
     sourcePreviewImage: 'sourcePreviewImage_febe19',
     sourcePreview: 'sourcePreview_febe19',
