@@ -9,10 +9,10 @@ var n = r(200651),
     u = r(511050),
     d = r(82856),
     f = r(272008),
-    m = r(497505),
-    b = r(918701),
-    p = r(642145),
-    y = r(215023),
+    b = r(497505),
+    m = r(918701),
+    y = r(642145),
+    p = r(215023),
     O = r(388032),
     j = r(435696),
     g = r(232474);
@@ -44,7 +44,7 @@ function h(e) {
                       className: j.spinnerContainer,
                       children: (0, n.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
                   })
-                : 'success' === i || 'optimistic-success' === i
+                : 'success' === i
                   ? (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsx)('img', {
@@ -56,7 +56,7 @@ function h(e) {
                                 variant: 'heading-lg/medium',
                                 color: 'always-white',
                                 className: j.title,
-                                children: O.NW.formatToPlainString(O.t.rtV7xM, { balance: 'optimistic-success' === i && null != a && null != r ? a + r : a })
+                                children: O.NW.formatToPlainString(O.t.rtV7xM, { balance: a })
                             }),
                             (0, n.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
@@ -121,52 +121,49 @@ function C(e) {
             }
             return a;
         })(e, ['quest', 'onClose']);
-    let g = (0, b.LM)(o.config),
+    let g = (0, m.LM)(o.config),
         { balance: C } = (0, s.A)(),
-        w = (function (e, t) {
-            let [r, n] = a.useState('loading'),
-                [o, l] = a.useState(!1),
-                { balance: i } = (0, s.A)(),
-                u = (0, c.Z)(i),
-                [d, b] = a.useState(!1);
-            if (
-                (a.useEffect(() => {
-                    let e = null;
-                    return (
-                        'success' === r &&
-                            (e = setTimeout(() => {
-                                b(!0);
-                            }, 1000)),
-                        () => {
-                            null != e && clearTimeout(e);
+        w = (function (e, t, r) {
+            let [n, o] = a.useState('loading'),
+                [l, i] = a.useState(!1),
+                { balance: u } = (0, s.A)(),
+                d = (0, c.Z)(u),
+                [m, y] = a.useState(!1);
+            return (a.useEffect(() => {
+                let e = null;
+                return (
+                    'success' === n &&
+                        t &&
+                        (e = setTimeout(() => {
+                            y(!0);
+                        }, 1000)),
+                    () => {
+                        null != e && clearTimeout(e);
+                    }
+                );
+            }, [n, t]),
+            a.useEffect(() => {
+                !l && null != u && null != d && u > d && i(!0);
+            }, [u, d, l]),
+            a.useEffect(() => {
+                (0, f.QB)(e, b.y$.CROSS_PLATFORM, r)
+                    .then((e) => {
+                        if ((null == e ? void 0 : e.claimedAt) != null) {
+                            o('success');
+                            return;
                         }
-                    );
-                }, [r]),
-                a.useEffect(() => {
-                    !o && null != i && null != u && i > u && l(!0);
-                }, [i, u, o]),
-                a.useEffect(() => {
-                    (0, f.QB)(e, m.y$.CROSS_PLATFORM, t)
-                        .then((e) => {
-                            if ((null == e ? void 0 : e.claimedAt) != null) {
-                                n('success');
-                                return;
-                            }
-                            n('error');
-                        })
-                        .catch(() => {
-                            n('error');
-                        });
-                }, [e, t]),
-                'error' === r)
-            )
-                return r;
-            if ('success' === r) {
-                if (o) return 'success';
-                if (d) return 'optimistic-success';
-            }
-            return 'loading';
-        })(o.id, j.location),
+                        o('error');
+                    })
+                    .catch(() => {
+                        o('error');
+                    });
+            }, [e, r]),
+            'error' === n)
+                ? n
+                : 'success' === n && (l || m)
+                  ? 'success'
+                  : 'loading';
+        })(o.id, o.preview, j.location),
         { openIntroToOrbsClaimedCoachmark: v } = (0, u.Z)({ location: 'QuestsOrbsRewardModal' }),
         x = a.useCallback(
             async function () {
@@ -179,9 +176,9 @@ function C(e) {
             x(!0),
                 (0, i.mK)({
                     openInLayer: !1,
-                    tab: y.AW.ORBS,
+                    tab: p.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: o.id === p.V ? l.Z.INTRO_TO_ORBS_QUEST : l.Z.QUEST_HOME_PAGE
+                    analyticsSource: o.id === y.V ? l.Z.INTRO_TO_ORBS_QUEST : l.Z.QUEST_HOME_PAGE
                 }),
                 v({ delayMS: 300 });
         }, [x, v, o.id]);
