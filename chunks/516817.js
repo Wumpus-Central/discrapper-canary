@@ -12,32 +12,30 @@ function f(e) {
     let { nameplate: t, hovered: n, selected: o, reverse: s, content: c } = e,
         f = (0, u.p)(t, n, o, c),
         p = (0, l.C)(n, o),
-        [h, m] = (0, i.useState)(!1),
-        [g, E] = (0, i.useState)(t),
-        [v, b] = (0, i.useState)(!1),
-        y = (0, i.useCallback)(() => m(!0), []);
+        [h, m] = (0, i.useState)(t),
+        [g, E] = (0, i.useState)(!1);
     if (
         ((0, i.useEffect)(() => {
-            if (null == g || null != t || v) null != t && (E(t), b(!1));
+            if (null == h || null != t || g) null != t && (m(t), E(!1));
             else {
-                b(!0);
+                E(!0);
                 let e = setTimeout(() => {
-                    b(!1), E(null);
+                    E(!1), m(null);
                 }, 400);
                 return () => clearTimeout(e);
             }
-        }, [t, g, v]),
-        (null == t && !v) || h)
+        }, [t, h, g]),
+        null == t)
     )
         return null;
-    let O = null != t ? t : g;
-    return null == O
+    let v = null != t ? t : h;
+    return null == v
         ? null
         : (0, r.jsx)('div', {
-              className: a()(d.container, { [d.containerExit]: v }),
+              className: a()(d.container, { [d.containerExit]: g }),
               style: { background: f.background },
               children: (0, r.jsx)(_, {
-                  nameplate: O,
+                  nameplate: v,
                   className: a()(d.img, {
                       [d.hover]: n,
                       [d.selected]: o,
@@ -45,15 +43,15 @@ function f(e) {
                   }),
                   style: f,
                   animate: p,
-                  setVideoErrored: y
+                  hover: null != n && n
               })
           });
 }
 function _(e) {
-    let { nameplate: t, className: n, style: o, animate: a, setVideoErrored: l } = e,
+    let { nameplate: t, className: n, style: o, animate: a, hover: l } = e,
         u = (0, i.useRef)(null);
     i.useEffect(() => {
-        null != u.current && (a ? u.current.play().catch(() => l(!0)) : u.current.pause());
+        null != u.current && (a || l ? u.current.play() : u.current.pause());
     }, [a, l]);
     let d = (0, c._)(t, a);
     return d.endsWith('.png')
@@ -64,10 +62,10 @@ function _(e) {
               alt: t.imgAlt
           })
         : (0, r.jsx)(s.Z, {
-              onError: () => l(!0),
               src: d,
               ref: u,
               playsInline: !0,
+              loop: l,
               controls: !1,
               className: n,
               style: o
