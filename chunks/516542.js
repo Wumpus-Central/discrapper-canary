@@ -19,8 +19,8 @@ function v(e) {
         E = (0, f.Z)(),
         { placeholder: b, accessibilityLabel: j } = (0, u.Z)({ channel: v }),
         [x, I] = r.useState(() => (0, d.H2)()),
-        { textValue: S, richValue: C } = x,
-        [N, Z] = r.useState(!1),
+        { textValue: S, richValue: N } = x,
+        [C, Z] = r.useState(!1),
         w = r.useCallback(() => Z(!0), []),
         P = r.useCallback(() => Z(!1), []);
     (0, s.ZP)(() => {
@@ -49,6 +49,7 @@ function v(e) {
             [S, E, v, t, y]
         );
     return (0, i.jsx)('div', {
+        className: O.container,
         children: (0, i.jsx)(p.Z, {
             innerClassName: O.textArea,
             onChange: _,
@@ -56,12 +57,12 @@ function v(e) {
             accessibilityLabel: j,
             channel: v,
             textValue: S,
-            richValue: C,
+            richValue: N,
             type: c.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
             onBlur: P,
             onFocus: w,
-            focused: N,
+            focused: C,
             onSubmit: D,
             onKeyDown: T,
             autoCompletePosition: 'bottom',

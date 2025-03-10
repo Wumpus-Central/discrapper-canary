@@ -417,7 +417,6 @@ W(
                             experiments: e.experiments,
                             connectedAccounts: e.connected_accounts,
                             guildExperiments: e.guild_experiments,
-                            apexExperiments: e.apex_experiments,
                             requiredAction: e.required_action,
                             consents: e.consents,
                             sessions: Q(e.sessions || []),
