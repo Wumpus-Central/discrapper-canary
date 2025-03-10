@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(653041), n(411104), n(26686), n(47120), n(566702), n(733860), n(301563);
+n.d(t, { Z: () => O }), n(653041), n(411104), n(47120), n(26686), n(733860), n(301563);
 var r,
     i = n(74514),
     o = n.n(i),
@@ -6,14 +6,14 @@ var r,
     s = n.n(a),
     l = n(264344),
     c = n.n(l),
-    u = n(46973),
-    d = n(912095),
-    f = n(886848),
-    _ = n(986770),
+    u = n(259443),
+    d = n(46973),
+    f = n(912095),
+    _ = n(886848),
     p = n(649318),
     h = n(65154),
-    g = n(436620);
-function m(e, t, n) {
+    m = n(436620);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ let E = 10,
 function y(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? 'sendrecv' : 'recvonly');
 }
-class O extends d.Z {
+class O extends f.Z {
     destroy() {
         super.destroy(), 'closed' !== this.signalingState && this.pc.close();
     }
@@ -104,7 +104,7 @@ class O extends d.Z {
             (super.setBitRate(e),
             this.setAudioEncoderParameters([
                 {
-                    parameter: d.p.AUDIO_BITRATE,
+                    parameter: f.p.AUDIO_BITRATE,
                     value: e
                 }
             ]));
@@ -113,7 +113,7 @@ class O extends d.Z {
         if (!(0, p.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
         if ('have-local-offer' !== this.signalingState) throw Error('Invalid signaling state '.concat(this.signalingState));
         let { outboundStreams: t } = this.parseLocalDescription();
-        (this.sdp = e), this.logger.info('Set sdp: '.concat(e, ', unassigned streams: ').concat(JSON.stringify(this.unassignedStreams))), this.setRemoteAnswer(t, [], [], new Map());
+        (this.sdp = e), this.setRemoteAnswer(t, [], [], new Map());
     }
     get peerConnectionState() {
         return this.pc.connectionState;
@@ -149,7 +149,7 @@ class O extends d.Z {
             .catch((e) => o(e));
     }
     setAudioEncoderParameters(e) {
-        let t = { [d.p.AUDIO_BITRATE]: 'maxBitrate' },
+        let t = { [f.p.AUDIO_BITRATE]: 'maxBitrate' },
             n = [];
         for (let { parameter: r, value: i } of e) {
             let e = t[r];
@@ -166,9 +166,9 @@ class O extends d.Z {
     }
     setVideoEncoderParameters(e) {
         let t = {
-                [d.p.VIDEO_BITRATE]: 'maxBitrate',
-                [d.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
-                [d.p.VIDEO_FRAMERATE]: 'maxFramerate'
+                [f.p.VIDEO_BITRATE]: 'maxBitrate',
+                [f.p.VIDEO_RESOLUTION_SCALE]: 'scaleResolutionDownBy',
+                [f.p.VIDEO_FRAMERATE]: 'maxFramerate'
             },
             n = [];
         for (let { parameter: r, value: i } of e) {
@@ -271,11 +271,10 @@ class O extends d.Z {
                     .concat(null == d ? 'null' : d, ', sdp: ')
                     .concat(null == f ? 'null' : f)
             );
-        let { ssrcs: _, remainingAudioStreams: h, remainingVideoStreams: g } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
+        let { ssrcs: _, remainingAudioStreams: h, remainingVideoStreams: m } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
         return {
-            ssrcs: _,
             remainingAudioStreams: h,
-            remainingVideoStreams: g,
+            remainingVideoStreams: m,
             answer: (0, p.Rx)({
                 type: 'answer',
                 baseSDP: f,
@@ -293,26 +292,17 @@ class O extends d.Z {
         };
     }
     async setRemoteAnswer(e, t, n, r) {
-        let i = JSON.stringify(this.assignedStreams),
-            o = JSON.stringify(t),
-            a = JSON.stringify(n),
-            s = JSON.stringify(r);
-        this.logger.info('setRemoteDescription: available audio streams: '.concat(o, ', available video streams: ').concat(a, ', users: ').concat(s, ', assigned streams: ').concat(i, ', outbound streams: ').concat(e.length));
-        let l = this.pc,
-            { ssrcs: c, answer: d, remainingAudioStreams: f, remainingVideoStreams: p } = this.generateSDPAnswer(e, t, n, r),
-            h = l.localDescription;
+        let i = this.pc,
+            { answer: o, remainingAudioStreams: a, remainingVideoStreams: s } = this.generateSDPAnswer(e, t, n, r);
         try {
-            await l.setRemoteDescription(d);
-        } catch (n) {
-            this.logger.warn('Failed to set remote answer: '.concat(n, ', type: ').concat(d.type)), this.emit(u.Sh.SdpError, 'setRemoteDescription', n.message, d.type, d.sdp), null != h && this.emit(u.Sh.SdpError, 'setLocalDescription', n.message, h.type, h.sdp);
-            let e = JSON.stringify((0, _.y)().map((e) => ''.concat(e.time, ': ').concat(e.message).trim())),
-                t = 'availableAudioStreams: '.concat(o, ', availableVideoStreams: ').concat(a, ', users: ').concat(s, ', assignedStreams: ').concat(i, ', ssrcs: ').concat(JSON.stringify(c), ', logs: ').concat(e);
-            this.emit(u.Sh.SdpError, 'generateSDPAnswer', n.message, 'streams20250305', t);
+            await i.setRemoteDescription(o);
+        } catch (e) {
+            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(o.type)), this.emit(d.Sh.SdpError, 'setRemoteDescription', e.message, o.type);
         }
-        this.logger.info('setRemoteDescription succeeded: remainingAudioStreams: '.concat(JSON.stringify(f), ', remainingVideoStreams: ').concat(JSON.stringify(p), ', unassignedStreams: ').concat(JSON.stringify(this.unassignedStreams), ', assignedStreams: ').concat(JSON.stringify(this.assignedStreams))), this.unassignedStreams.audio.unshift(...f), this.unassignedStreams.video.unshift(...p), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
+        this.unassignedStreams.audio.unshift(...a), this.unassignedStreams.video.unshift(...s), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
     setConnected() {
-        this.input.reset(), this.setConnectionState(h.$j.CONNECTED), this.on(u.Sh.Stats, this.handleStats), this.input.on(f.G.VoiceActivity, this.handleVoiceActivity);
+        this.input.reset(), this.setConnectionState(h.$j.CONNECTED), this.on(d.Sh.Stats, this.handleStats), this.input.on(_.G.VoiceActivity, this.handleVoiceActivity);
     }
     async handleNegotiationNeeded() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -320,7 +310,7 @@ class O extends d.Z {
             this.negotiationNeeded = !0;
             return;
         }
-        this.logger.info('Negotiation started, available streams: '.concat(JSON.stringify(this.unassignedStreams), ', assigned streams: ').concat(JSON.stringify(this.assignedStreams), ', users: ').concat(JSON.stringify(this.users))), (this.negotiating = !0), (this.negotiationNeeded = !1);
+        (this.negotiating = !0), (this.negotiationNeeded = !1);
         let t = o()(this.unassignedStreams.audio),
             n = o()(this.unassignedStreams.video),
             r = s()(this.users);
@@ -330,41 +320,41 @@ class O extends d.Z {
         try {
             await i.setLocalDescription(a);
         } catch (e) {
-            this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(a.type, ', sdp: ').concat(a.sdp)), this.emit(u.Sh.SdpError, 'setLocalDescription', e.message, a.type, a.sdp);
+            this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(a.type, ', sdp: ').concat(a.sdp)), this.emit(d.Sh.SdpError, 'setLocalDescription', e.message, a.type);
         }
-        let { sdp: l, outboundStreams: c, codecs: d, audioSSRC: f, videoSSRC: _, rtxSSRC: h, extensions: g } = this.parseLocalDescription();
-        (this.codecs = d), (this.extensions = g), (this.audioSSRC = f), (this.videoReady = _ > 0 && h > 0), (this.videoStreamParameters[0].ssrc !== _ || this.videoStreamParameters[0].rtxSsrc !== h || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === _ ? this.videoStreamParameters[0].ssrc : _), (this.videoStreamParameters[0].rtxSsrc = 0 === h ? this.videoStreamParameters[0].rtxSsrc : h), (this.videoStreamParameters[0].active = this.videoReady), this.emit(u.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, _, h, this.videoStreamParameters)), null == this.sdp ? this.emit(u.Sh.Connected, 'webrtc', (0, p.sc)(l)) : this.setRemoteAnswer(c, t, n, r);
+        let { sdp: l, outboundStreams: c, codecs: u, audioSSRC: f, videoSSRC: _, rtxSSRC: h, extensions: m } = this.parseLocalDescription();
+        (this.codecs = u), (this.extensions = m), (this.audioSSRC = f), (this.videoReady = _ > 0 && h > 0), (this.videoStreamParameters[0].ssrc !== _ || this.videoStreamParameters[0].rtxSsrc !== h || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === _ ? this.videoStreamParameters[0].ssrc : _), (this.videoStreamParameters[0].rtxSsrc = 0 === h ? this.videoStreamParameters[0].rtxSsrc : h), (this.videoStreamParameters[0].active = this.videoReady), this.emit(d.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, _, h, this.videoStreamParameters)), null == this.sdp ? this.emit(d.Sh.Connected, 'webrtc', (0, p.sc)(l)) : this.setRemoteAnswer(c, t, n, r);
     }
     constructor(e, t, n, r) {
         super(e, t, n, r),
-            m(this, 'pc', void 0),
-            m(this, 'sdp', null),
-            m(this, 'negotiating', !1),
-            m(this, 'negotiationNeeded', !1),
-            m(this, 'audioTransceiver', void 0),
-            m(this, 'videoTransceiver', void 0),
-            m(this, 'users', new Map()),
-            m(this, 'userIdsBySsrc', new Map()),
-            m(this, 'assignedStreams', new Map()),
-            m(this, 'unassignedStreams', {
+            g(this, 'pc', void 0),
+            g(this, 'sdp', null),
+            g(this, 'negotiating', !1),
+            g(this, 'negotiationNeeded', !1),
+            g(this, 'audioTransceiver', void 0),
+            g(this, 'videoTransceiver', void 0),
+            g(this, 'users', new Map()),
+            g(this, 'userIdsBySsrc', new Map()),
+            g(this, 'assignedStreams', new Map()),
+            g(this, 'unassignedStreams', {
                 audio: [],
                 video: []
             }),
-            m(this, 'inactiveTransceivers', {
+            g(this, 'inactiveTransceivers', {
                 audio: [],
                 video: []
             }),
-            m(this, 'trackUserIds', {}),
-            m(this, 'audioCodec', null),
-            m(this, 'audioPayloadType', null),
-            m(this, 'videoCodec', null),
-            m(this, 'videoPayloadType', null),
-            m(this, 'rtxPayloadType', null),
-            m(this, 'extensions', []),
-            m(this, 'codecs', []),
-            m(this, 'logger', void 0),
-            m(this, 'getUserIdBySsrc', (e) => this.userIdsBySsrc.get(e)),
-            m(this, 'handlePeerConnectionStateChange', () => {
+            g(this, 'trackUserIds', {}),
+            g(this, 'audioCodec', null),
+            g(this, 'audioPayloadType', null),
+            g(this, 'videoCodec', null),
+            g(this, 'videoPayloadType', null),
+            g(this, 'rtxPayloadType', null),
+            g(this, 'extensions', []),
+            g(this, 'codecs', []),
+            g(this, 'logger', void 0),
+            g(this, 'getUserIdBySsrc', (e) => this.userIdsBySsrc.get(e)),
+            g(this, 'handlePeerConnectionStateChange', () => {
                 let e = this.peerConnectionState;
                 switch ((this.logger.info('peerConnectionState =>', e), e)) {
                     case 'connected':
@@ -381,7 +371,7 @@ class O extends d.Z {
                         this.setConnectionState(h.$j.DISCONNECTED);
                 }
             }),
-            m(this, 'handleIceConnectionStateChange', () => {
+            g(this, 'handleIceConnectionStateChange', () => {
                 let e = this.iceConnectionState;
                 switch ((this.logger.info('iceConnectionState =>', e), e)) {
                     case 'connected':
@@ -398,14 +388,14 @@ class O extends d.Z {
                         this.setConnectionState(h.$j.DISCONNECTED);
                 }
             }),
-            m(this, 'handleSignalingStateChange', () => {
+            g(this, 'handleSignalingStateChange', () => {
                 let e = this.signalingState;
                 this.logger.info('signalingState => '.concat(e));
             }),
-            m(this, 'handleIceGatheringStateChange', () => {
+            g(this, 'handleIceGatheringStateChange', () => {
                 this.logger.info('iceGatheringState =>', this.iceGatheringState);
             }),
-            m(this, 'handleTrack', (e) => {
+            g(this, 'handleTrack', (e) => {
                 let t = e.streams[0].id,
                     n = e.track;
                 if (!/^default/.test(n.id)) {
@@ -425,13 +415,13 @@ class O extends d.Z {
                         });
                 }
             }),
-            (this.logger = new _.Y('UnifiedConnection('.concat(e, ')'))),
-            (this.videoSupported = g.U8);
+            (this.logger = new u.Yd('UnifiedConnection('.concat(e, ')'))),
+            (this.videoSupported = m.U8);
         let i = (this.pc = new RTCPeerConnection({
             bundlePolicy: 'max-bundle',
             sdpSemantics: 'unified-plan'
         }));
-        g.X6 ? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange), (i.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
+        m.X6 ? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange), (i.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
             (i.onsignalingstatechange = this.handleSignalingStateChange),
             (i.onicegatheringstatechange = this.handleIceGatheringStateChange),
             (i.ontrack = this.handleTrack),
