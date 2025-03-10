@@ -3,7 +3,7 @@ n.d(t, {
     H6: () => h,
     Qh: () => f,
     Sn: () => _,
-    Th: () => g,
+    Th: () => m,
     jd: () => d
 }),
     n(230036),
@@ -16,10 +16,11 @@ var r = n(544891),
     l = n(377154),
     c = n(535396),
     u = n(981631);
-function d(e) {
+function d(e, t) {
     i.Z.dispatch({
         type: 'GUILD_POWERUPS_ACK_NOTIFICATION',
-        guildId: e
+        guildId: e,
+        notification: t
     });
 }
 function f() {
@@ -35,7 +36,7 @@ function _(e, t) {
         });
         return;
     }
-    let n = { application_id: c.N };
+    let n = { application_id: c.NO };
     return (0, a.Kb)({
         url: u.ANM.STORE_PUBLISHED_LISTINGS_SKUS,
         query: n,
@@ -43,7 +44,7 @@ function _(e, t) {
         rejectWithError: !1
     }).then((t) => {
         let n = t.body
-            .map((e) => (0, l.Z)(e))
+            .map((e) => (0, l.Z)(t.body, e))
             .filter(o.lm)
             .sort((e, t) => (e.skuId >= t.skuId ? 1 : -1))
             .reduce((e, t) => (e.set(t.skuId, t), e), new Map());
@@ -82,7 +83,7 @@ function h(e, t) {
         rejectWithError: !0
     });
 }
-function g(e, t) {
+function m(e, t) {
     return r.tn.del({
         url: u.ANM.GUILD_POWERUP_TOGGLE(e, t),
         rejectWithError: !0

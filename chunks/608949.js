@@ -1,9 +1,10 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r,
     i = n(442837),
-    l = n(570140),
-    o = n(430824);
-function a(e, t, n) {
+    o = n(570140),
+    l = n(430824),
+    a = n(326660);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,24 +17,24 @@ function a(e, t, n) {
         e
     );
 }
-let s = {};
-class c extends (r = i.ZP.PersistedStore) {
+let c = {};
+class u extends (r = i.ZP.PersistedStore) {
     getState() {
-        return s;
+        return c;
     }
     initialize(e) {
-        null != e && (s = e);
+        null != e && (c = e);
     }
     getNotificationStateForGuild(e) {
-        return s[e];
+        return c[e];
     }
 }
-a(c, 'displayName', 'GuildPowerupsNotificationStore'), a(c, 'persistKey', 'GuildPowerupsNotificationStore');
-let u = new c(l.Z, {
+s(u, 'displayName', 'GuildPowerupsNotificationStore'), s(u, 'persistKey', 'GuildPowerupsNotificationStore');
+let d = new u(o.Z, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
         var t, n, r, i;
-        let { guildId: l } = e,
-            c = null !== (n = null === (t = o.Z.getGuild(l)) || void 0 === t ? void 0 : t.premiumSubscriberCount) && void 0 !== n ? n : 0;
+        let { guildId: o, notification: u } = e,
+            d = null !== (n = null === (t = l.Z.getGuild(o)) || void 0 === t ? void 0 : t.premiumSubscriberCount) && void 0 !== n ? n : 0;
         (r = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -45,16 +46,16 @@ let u = new c(l.Z, {
                         })
                     )),
                     r.forEach(function (t) {
-                        a(e, t, n[t]);
+                        s(e, t, n[t]);
                     });
             }
             return e;
-        })({}, s)),
+        })({}, c)),
             (i = i =
                 {
-                    [l]: {
-                        lastSeenNotification: Date.now(),
-                        lastBoostCount: c
+                    [o]: {
+                        lastSeenWarningNotification: u.type === a.o.WARNING ? u.endsAt : Date.now(),
+                        lastBoostCount: d
                     }
                 }),
             Object.getOwnPropertyDescriptors
@@ -69,9 +70,9 @@ let u = new c(l.Z, {
                   })(Object(i)).forEach(function (e) {
                       Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
-            (s = r);
+            (c = r);
     },
     GUILD_POWERUPS_RESET_NOTIFICATIONS: function () {
-        s = {};
+        c = {};
     }
 });
