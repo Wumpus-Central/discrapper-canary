@@ -1,4 +1,4 @@
-r.d(t, { default: () => C }), r(47120);
+r.d(t, { default: () => w }), r(47120);
 var n = r(200651),
     a = r(192379),
     o = r(481060),
@@ -9,87 +9,94 @@ var n = r(200651),
     u = r(511050),
     d = r(82856),
     f = r(272008),
-    b = r(497505),
-    m = r(918701),
+    m = r(497505),
+    b = r(918701),
     y = r(642145),
     p = r(215023),
     O = r(388032),
-    j = r(435696),
-    g = r(232474);
-function h(e) {
+    g = r(435696),
+    j = r(557256),
+    h = r(232474);
+function C(e) {
     let { transitionState: t, rewardAmount: r, balance: a, onSubmit: c, onClose: l, state: i } = e;
     return (0, n.jsxs)(o.Y0X, {
         transitionState: t,
         size: o.CgR.DYNAMIC,
-        className: j.modal,
+        className: g.modal,
         children: [
             (0, n.jsxs)('div', {
-                className: j.header,
+                className: g.header,
                 children: [
                     null != r &&
                         (0, n.jsxs)(o.Text, {
                             variant: 'text-sm/bold',
                             color: 'always-white',
-                            className: j.amountLabel,
+                            className: g.amountLabel,
                             children: ['+', r]
                         }),
                     (0, n.jsx)(o.olH, {
-                        className: j.closeBtn,
+                        className: g.closeBtn,
                         onClick: l
                     })
                 ]
             }),
             'loading' === i
                 ? (0, n.jsx)('div', {
-                      className: j.spinnerContainer,
+                      className: g.spinnerContainer,
                       children: (0, n.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
                   })
                 : 'success' === i
                   ? (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsx)('img', {
-                                src: g.Z,
-                                className: j.img,
+                                src: h.Z,
+                                className: g.img,
                                 alt: ''
                             }),
                             (0, n.jsx)(o.X6q, {
                                 variant: 'heading-lg/medium',
                                 color: 'always-white',
-                                className: j.title,
+                                className: g.title,
                                 children: O.NW.formatToPlainString(O.t.rtV7xM, { balance: a })
                             }),
                             (0, n.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
-                                className: j.subtext,
+                                className: g.subtext,
                                 children: O.NW.string(O.t.EDUOIC)
                             }),
                             (0, n.jsx)(o.zxk, {
-                                className: j.ctaBtn,
+                                className: g.ctaBtn,
                                 onClick: c,
                                 children: O.NW.string(O.t.iEw2Nz)
                             })
                         ]
                     })
                   : (0, n.jsxs)('div', {
-                        className: j.errorContainer,
+                        className: g.errorContainer,
                         children: [
+                            (0, n.jsx)('img', {
+                                alt: '',
+                                className: g.errorImage,
+                                src: j
+                            }),
                             (0, n.jsxs)('div', {
-                                className: j.errorContentContainer,
+                                className: g.errorContentContainer,
                                 children: [
                                     (0, n.jsx)(o.X6q, {
                                         variant: 'heading-xl/medium',
                                         color: 'always-white',
-                                        className: j.errorHeader,
+                                        className: g.errorHeader,
                                         children: O.NW.string(O.t.tWYWJy)
                                     }),
                                     (0, n.jsx)(o.Text, {
                                         variant: 'text-md/normal',
+                                        color: 'text-muted',
                                         children: O.NW.string(O.t.JNQRU1)
                                     })
                                 ]
                             }),
                             (0, n.jsx)(o.zxk, {
-                                className: j.ctaBtn,
+                                className: g.ctaBtn,
                                 onClick: l,
                                 children: O.NW.string(O.t.cpT0Cg)
                             })
@@ -98,11 +105,11 @@ function h(e) {
         ]
     });
 }
-function C(e) {
+function w(e) {
     var t,
         r,
         { quest: o, onClose: O } = e,
-        j = (function (e, t) {
+        g = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -121,14 +128,14 @@ function C(e) {
             }
             return a;
         })(e, ['quest', 'onClose']);
-    let g = (0, m.LM)(o.config),
-        { balance: C } = (0, s.A)(),
+    let j = (0, b.LM)(o.config),
+        { balance: h } = (0, s.A)(),
         w = (function (e, t, r) {
             let [n, o] = a.useState('loading'),
                 [l, i] = a.useState(!1),
                 { balance: u } = (0, s.A)(),
                 d = (0, c.Z)(u),
-                [m, y] = a.useState(!1);
+                [b, y] = a.useState(!1);
             return (a.useEffect(() => {
                 let e = null;
                 return (
@@ -146,7 +153,7 @@ function C(e) {
                 !l && null != u && null != d && u > d && i(!0);
             }, [u, d, l]),
             a.useEffect(() => {
-                (0, f.QB)(e, b.y$.CROSS_PLATFORM, r)
+                (0, f.QB)(e, m.y$.CROSS_PLATFORM, r)
                     .then((e) => {
                         if ((null == e ? void 0 : e.claimedAt) != null) {
                             o('success');
@@ -160,10 +167,10 @@ function C(e) {
             }, [e, r]),
             'error' === n)
                 ? n
-                : 'success' === n && (l || m)
+                : 'success' === n && (l || b)
                   ? 'success'
                   : 'loading';
-        })(o.id, o.preview, j.location),
+        })(o.id, o.preview, g.location),
         { openIntroToOrbsClaimedCoachmark: v } = (0, u.Z)({ location: 'QuestsOrbsRewardModal' }),
         x = a.useCallback(
             async function () {
@@ -183,7 +190,7 @@ function C(e) {
                 v({ delayMS: 300 });
         }, [x, v, o.id]);
     return (0, n.jsx)(
-        h,
+        C,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -208,11 +215,11 @@ function C(e) {
                     });
             }
             return e;
-        })({}, j)),
+        })({}, g)),
         (r = r =
             {
-                rewardAmount: g,
-                balance: C,
+                rewardAmount: j,
+                balance: h,
                 onClose: x,
                 onSubmit: S,
                 state: w

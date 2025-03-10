@@ -2,6 +2,7 @@ e.exports = {
     modal: 'modal_cf1d1c',
     spinnerContainer: 'spinnerContainer_cf1d1c',
     errorContainer: 'errorContainer_cf1d1c',
+    errorImage: 'errorImage_cf1d1c',
     errorContentContainer: 'errorContentContainer_cf1d1c',
     errorHeader: 'errorHeader_cf1d1c',
     header: 'header_cf1d1c',
