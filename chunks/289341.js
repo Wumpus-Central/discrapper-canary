@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => g }), n(301563), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
 var r = n(192379),
     i = n(442837),
     l = n(668781),
@@ -9,49 +9,48 @@ var r = n(192379),
     u = n(703656),
     d = n(594174),
     p = n(122613),
-    h = n(388032);
-function f(e) {
+    h = n(508686),
+    f = n(388032);
+function g(e) {
     var t, n;
-    let { match: f } = e,
-        g = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [],
-        { analyticsLocations: m } = (0, s.ZP)([...g, a.Z.ACTIVITY_DETAIL_PAGE]),
-        { applicationId: b } = f.params,
-        [_] = (0, c.Z)([b]),
-        E = null == _ ? void 0 : null === (t = _.bot) || void 0 === t ? void 0 : t.id,
-        O = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+    let { match: g } = e,
+        m = null !== (n = (0, u.DR)()) && void 0 !== n ? n : [],
+        { analyticsLocations: b } = (0, s.ZP)([...m, a.Z.ACTIVITY_DETAIL_PAGE]),
+        { applicationId: _ } = g.params,
+        [E] = (0, c.Z)([_]),
+        O = null == E ? void 0 : null === (t = E.bot) || void 0 === t ? void 0 : t.id,
+        N = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (
         r.useEffect(() => {
-            null != E &&
-                null != O &&
+            null != O &&
+                null != N &&
                 (async () => {
                     try {
-                        var e, t;
-                        let n = new URL(location.href),
-                            r = null !== (e = n.searchParams.get('custom_id')) && void 0 !== e ? e : void 0,
-                            i = null !== (t = n.searchParams.get('referrer_id')) && void 0 !== t ? t : void 0,
-                            l = await o.Z.openPrivateChannel(E);
+                        let e = new URL(location.href),
+                            t = await o.Z.openPrivateChannel(O),
+                            { customId: n, referrerId: r } = await (0, h.u)(_, e.searchParams.get('link_id'), e.searchParams.get('custom_id'), e.searchParams.get('referrer_id'));
                         await (0, p.Z)({
-                            targetApplicationId: b,
-                            channelId: l,
-                            analyticsLocations: m,
-                            customId: r,
-                            referrerId: i
+                            targetApplicationId: _,
+                            channelId: t,
+                            analyticsLocations: b,
+                            customId: n,
+                            referrerId: r
                         });
                     } catch (e) {}
                 })();
-        }, [m, b, E, O]),
+        }, [b, _, O, N]),
         r.useEffect(() => {
             let e = setTimeout(() => {
-                null == E &&
+                null == O &&
                     l.Z.show({
-                        title: h.NW.string(h.t.PtobXV),
-                        body: h.NW.string(h.t['IOy+Iy'])
+                        title: f.NW.string(f.t.PtobXV),
+                        body: f.NW.string(f.t['IOy+Iy'])
                     });
             }, 5000);
             return () => {
                 clearTimeout(e);
             };
-        }, [E]),
+        }, [O]),
         null
     );
 }

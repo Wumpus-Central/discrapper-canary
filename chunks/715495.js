@@ -9,14 +9,14 @@ var r = n(200651),
     d = n(205822),
     u = n(329013),
     m = n(594174),
-    g = n(396821),
-    p = n(780771),
+    p = n(396821),
+    g = n(780771),
     h = n(4242),
     f = n(996746),
     b = n(711325),
     N = n(852630),
     x = n(731994),
-    _ = n(178389);
+    _ = n(276107);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,30 +65,42 @@ function C() {
     let [t, n] = (0, i.useState)(!1),
         [s, a] = (0, i.useState)(!1),
         [l, c] = (0, i.useState)(null),
-        m = (0, g.ZP)((e) => e.toolsCache),
-        { setToolsCache: f, removeToolsCache: N } = (0, g.L3)(),
-        { setImgCache: C } = (0, g.W_)(),
+        m = (0, p.ZP)((e) => e.toolsCache),
+        { setToolsCache: f, removeToolsCache: N } = (0, p.L3)(),
+        { setImgCache: C } = (0, p.W_)(),
         A = (0, i.useCallback)(
             (e) => {
                 let t = m[e];
                 null != t &&
                     c({
                         src: t.url,
-                        palette: t.palette
+                        palette: t.palette,
+                        preview: !0
                     }),
                     c((t) =>
                         null == t
                             ? {
                                   src: e,
-                                  palette: p.jD
+                                  palette: g.jD,
+                                  preview: !0
                               }
-                            : j(E({}, t), { src: e })
+                            : j(E({}, t), {
+                                  src: e,
+                                  preview: !0
+                              })
                     );
             },
             [m]
         ),
         P = (0, i.useCallback)((e) => {
-            c((t) => (null == t ? null : j(E({}, t), { palette: e })));
+            c((t) =>
+                null == t
+                    ? null
+                    : j(E({}, t), {
+                          palette: e,
+                          preview: !0
+                      })
+            );
         }, []),
         R = (0, i.useCallback)(
             (e) => {
@@ -178,7 +190,7 @@ function C() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         r = await n.arrayBuffer();
-                                    C(t, t, (0, h.xh)(r)), f(t, t, p.jD);
+                                    C(t, t, (0, h.xh)(r)), f(t, t, g.jD);
                                 }
                             }),
                             (0, r.jsx)('div', {
@@ -200,7 +212,7 @@ function C() {
                                 label: 'gradient override',
                                 onChange: (e) =>
                                     P({
-                                        name: p._j,
+                                        name: g._j,
                                         darkBackground: e,
                                         lightBackground: e
                                     })

@@ -1,24 +1,26 @@
 n.d(t, {
-    _: () => a,
-    e: () => i
+    _: () => o,
+    e: () => r
 }),
     n(47120),
     n(301563);
-var r,
-    i = (((r = {})[(r.MANAGED = 0)] = 'MANAGED'), (r[(r.QUICK = 1)] = 'QUICK'), r);
-function a(e) {
+var r = (function (e) {
+    return (e[(e.MANAGED = 0)] = 'MANAGED'), (e[(e.QUICK = 1)] = 'QUICK'), e;
+})({});
+function i(e) {
+    switch (e) {
+        case '0':
+            return 0;
+        case '1':
+            return 1;
+        default:
+            return null;
+    }
+}
+function o(e) {
     if (null == e) return null;
     let [t, n] = e.split('-'),
-        r = (function (e) {
-            switch (e) {
-                case '0':
-                    return 0;
-                case '1':
-                    return 1;
-                default:
-                    return null;
-            }
-        })(t);
+        r = i(t);
     return null == r
         ? null
         : {

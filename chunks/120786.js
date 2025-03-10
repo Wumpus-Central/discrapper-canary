@@ -1,39 +1,62 @@
-n.d(t, { L: () => m });
+n.d(t, { L: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     s = n.n(i),
     a = n(568611),
-    l = n(693789),
-    o = n(564566),
-    c = n(387987),
-    d = n(232474);
-let u = () =>
-        (0, r.jsx)('div', {
-            className: o.gifContainer,
-            children: (0, r.jsx)('img', {
-                src: d.Z,
-                className: o.gif,
-                alt: 'Orb GIF'
-            })
-        }),
-    m = (e) => {
-        let { ctaText: t, ctaOnClick: n, linkText: i, linkTo: d } = e;
+    l = n(442837),
+    o = n(693789),
+    c = n(607070),
+    d = n(70097),
+    u = n(198758),
+    m = n(803812),
+    p = n(477154),
+    g = n(230114);
+let h = () => {
+        let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+        return (0, r.jsx)('div', {
+            className: u.assetContainer,
+            children: e
+                ? (0, r.jsx)('img', {
+                      src: p.Z,
+                      className: u.orbAsset,
+                      alt: 'Orb'
+                  })
+                : (0, r.jsxs)(d.Z, {
+                      autoPlay: !0,
+                      loop: !0,
+                      className: u.orbAsset,
+                      children: [
+                          (0, r.jsx)('source', {
+                              src: g.Z,
+                              type: 'video/webm'
+                          }),
+                          (0, r.jsx)('img', {
+                              src: p.Z,
+                              className: u.orbAsset,
+                              alt: 'Orb'
+                          })
+                      ]
+                  })
+        });
+    },
+    f = (e) => {
+        let { ctaText: t, ctaOnClick: n, linkText: i, linkTo: l } = e;
         return (0, r.jsxs)('div', {
-            className: s()(o.container, c.baseCardOutline),
+            className: s()(u.container, m.baseCardOutline),
             children: [
-                (0, r.jsx)(u, {}),
-                (0, r.jsx)(l.zx, {
-                    className: o.ctaButton,
-                    color: l.zx.Colors.BRAND,
-                    look: l.zx.Looks.FILLED,
+                (0, r.jsx)(h, {}),
+                (0, r.jsx)(o.zx, {
+                    className: u.ctaButton,
+                    color: o.zx.Colors.BRAND,
+                    look: o.zx.Looks.FILLED,
                     onClick: n,
                     fullWidth: !0,
                     children: t
                 }),
                 (0, r.jsx)(a.rU, {
-                    to: { pathname: d },
-                    className: o.learnMoreLink,
+                    to: { pathname: l },
+                    className: u.learnMoreLink,
                     children: i
                 })
             ]
