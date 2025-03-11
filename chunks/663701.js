@@ -1,4 +1,4 @@
-n.d(t, { Z: () => em }), n(47120);
+n.d(t, { Z: () => eb }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(377171),
     y = n(540059),
     I = n(243778),
-    C = n(922409),
+    C = n(488634),
     S = n(899740),
     T = n(28476),
     P = n(880257),
@@ -46,14 +46,15 @@ var r = n(200651),
     Y = n(626135),
     K = n(814225),
     q = n(515753),
-    Q = n(831218),
-    X = n(339149),
+    X = n(831218),
+    Q = n(339149),
     J = n(981631),
     $ = n(675654),
     ee = n(474936),
     et = n(388032),
-    en = n(248729);
-function er(e) {
+    en = n(635357),
+    er = n(93453);
+function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -78,7 +79,7 @@ function er(e) {
     }
     return e;
 }
-function ei(e, t) {
+function el(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -96,7 +97,7 @@ function ei(e, t) {
         e
     );
 }
-function el(e, t) {
+function eo(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,9 +116,9 @@ function el(e, t) {
     }
     return i;
 }
-let eo = (e) => {
+let ea = (e) => {
         var { selected: t } = e,
-            n = el(e, ['selected']);
+            n = eo(e, ['selected']);
         let l = (0, c.JA)('friends'),
             o = (0, A.If)(),
             a = (0, d.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
@@ -134,17 +135,17 @@ let eo = (e) => {
         }, [h]);
         let [g, E] = i.useState(!1);
         return (0, r.jsxs)('div', {
-            className: en.friendsButtonContainer,
+            className: er.friendsButtonContainer,
             children: [
                 (0, r.jsx)(
                     q.Qj,
-                    ei(
-                        er(
+                    el(
+                        ei(
                             {
                                 onClick: () => {
                                     h && (Y.default.track(J.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: ee.hX.FRIEND_ANNIVERSARY }), m.Z.setSection(J.pJs.ALL), (0, x.Gk)());
                                 },
-                                interactiveClassName: h ? en.friendsBadge : void 0,
+                                interactiveClassName: h ? er.friendsBadge : void 0,
                                 selected: t,
                                 route: J.Z5c.FRIENDS,
                                 icon: f.iFz,
@@ -165,7 +166,7 @@ let eo = (e) => {
                 h &&
                     !u &&
                     (0, r.jsx)(R.Z, {
-                        className: en.confetti,
+                        className: er.confetti,
                         wind: 0,
                         sprites: $.CA,
                         spriteColors: $.Br,
@@ -187,14 +188,14 @@ let eo = (e) => {
             ]
         });
     },
-    ea = (e) => {
+    es = (e) => {
         var { selected: t, hideGameUpdateProgressIndicator: n } = e,
-            i = el(e, ['selected', 'hideGameUpdateProgressIndicator']);
+            i = eo(e, ['selected', 'hideGameUpdateProgressIndicator']);
         let l = (0, c.JA)('library');
         return (0, r.jsx)(
             q.Qj,
-            ei(
-                er(
+            el(
+                ei(
                     {
                         selected: t,
                         route: J.Z5c.APPLICATION_LIBRARY,
@@ -204,15 +205,15 @@ let eo = (e) => {
                     i,
                     l
                 ),
-                { children: (0, r.jsx)(X.Z, { className: o()(en.downloadProgressCircle, { [en.hideGameUpdateProgressIndicator]: n }) }) }
+                { children: (0, r.jsx)(Q.Z, { className: o()(er.downloadProgressCircle, { [er.hideGameUpdateProgressIndicator]: n }) }) }
             )
         );
     },
-    es = () => {
+    ec = () => {
         let e = (0, S.q)();
         return e > 0 ? (0, r.jsx)(f.mAB, { count: e }) : null;
     },
-    ec = (e) => {
+    eu = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: i } = (0, C._)();
@@ -220,8 +221,8 @@ let eo = (e) => {
         let l = null == i ? void 0 : () => g.Z.preload(J.ME, i);
         return (0, r.jsx)(
             q.Qj,
-            ei(
-                er(
+            el(
+                ei(
                     {
                         selected: t,
                         route: J.Z5c.MESSAGE_REQUESTS,
@@ -231,19 +232,19 @@ let eo = (e) => {
                     },
                     n
                 ),
-                { children: (0, r.jsx)(es, {}) }
+                { children: (0, r.jsx)(ec, {}) }
             )
         );
     },
-    eu = (e) => {
+    ed = (e) => {
         let { selected: t } = e,
-            n = et.NW.string(et.t.Rkdixs),
+            n = et.NW.string(en.Z.Rkdixs),
             l = (0, c.JA)('family-center'),
             [o, a] = i.useState(!0);
         return (0, r.jsx)(
             q.Qj,
-            ei(
-                er(
+            el(
+                ei(
                     {
                         selected: t,
                         route: J.Z5c.FAMILY_CENTER,
@@ -255,15 +256,15 @@ let eo = (e) => {
                         onMouseLeave: () => {
                             a(!1);
                         },
-                        interactiveClassName: en.familyCenterLinkButton
+                        interactiveClassName: er.familyCenterLinkButton
                     },
                     l
                 ),
-                { children: (0, r.jsx)(ed, { isParentHovered: o }) }
+                { children: (0, r.jsx)(ep, { isParentHovered: o }) }
             )
         );
     },
-    ed = (e) => {
+    ep = (e) => {
         let { isParentHovered: t } = e,
             i = (0, j.gU)();
         return t
@@ -271,14 +272,14 @@ let eo = (e) => {
                   onClick: () => {
                       (0, h.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
-                          return (t) => (0, r.jsx)(e, er({}, t));
+                          return (t) => (0, r.jsx)(e, ei({}, t));
                       });
                   },
                   'aria-label': et.NW.string(et.t.cpT0Cg)
               })
             : i > 0
               ? (0, r.jsx)('div', {
-                    className: en.familyCenterPendingBadge,
+                    className: er.familyCenterPendingBadge,
                     children: (0, r.jsx)(f.mAB, { count: i })
                 })
               : (0, r.jsx)(I.ZP, {
@@ -294,8 +295,8 @@ let eo = (e) => {
                     }
                 });
     },
-    ep = () => (0, D.$Z)('DM_SEARCH');
-function eh(e) {
+    eh = () => (0, D.$Z)('DM_SEARCH');
+function ef(e) {
     switch (e) {
         case J.Z5c.APPLICATION_LIBRARY:
             return J.ZY5.LIBRARY;
@@ -306,7 +307,7 @@ function eh(e) {
     }
     return e.startsWith(J.Z5c.APPLICATION_STORE) ? (e === J.Z5c.APPLICATION_STORE ? J.ZY5.STORE_DIRECTORY_HOME : e.startsWith(J.Z5c.APPLICATION_STORE) ? J.ZY5.STORE_DIRECTORY_BROWSE : J.ZY5.STORE_LISTING) : J.ZY5.DM_CHANNEL;
 }
-let ef = i.memo(function (e) {
+let eg = i.memo(function (e) {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: l, premiumTabSelected: a, isVisualRefreshEnabled: s, shouldShowNitroTab: c, shouldShowMessageRequestsRow: d, shouldShowFamilyCenterRow: p, shouldShowQuickLauncherRow: h, selectedChannelId: g, path: m } = e,
         { enabled: b } = (0, W.W)({ location: 'PrivateChannels' }),
         _ = i.useRef(null),
@@ -321,7 +322,7 @@ let ef = i.memo(function (e) {
             listScrollerRef: E
         });
     return (0, r.jsxs)('nav', {
-        className: en.privateChannels,
+        className: er.privateChannels,
         'aria-label': et.NW.string(et.t.ZH9aPz),
         children: [
             (0, r.jsx)(M.Z, {
@@ -329,37 +330,37 @@ let ef = i.memo(function (e) {
                 position: 'right',
                 offsetX: -52,
                 children: (0, r.jsx)('div', {
-                    className: o()(en.searchBar, { [en.themedHeaderMobile]: u.tq }),
+                    className: o()(er.searchBar, { [er.themedHeaderMobile]: u.tq }),
                     children: s
                         ? (0, r.jsx)(f.zxk, {
                               grow: !0,
                               color: f.zxk.Colors.PRIMARY,
                               size: f.zxk.Sizes.SMALL,
                               fullWidth: !0,
-                              onClick: ep,
+                              onClick: eh,
                               children: et.NW.string(et.t.LzcpeX)
                           })
                         : (0, r.jsx)('button', {
                               type: 'button',
-                              className: o()(en.searchBarComponent, { [en.themedSearchBarMobile]: u.tq }),
-                              onClick: ep,
+                              className: o()(er.searchBarComponent, { [er.themedSearchBarMobile]: u.tq }),
+                              onClick: eh,
                               children: et.NW.string(et.t.LzcpeX)
                           })
                 })
             }),
             (0, r.jsxs)(
-                Q.Z,
-                ei(er({}, e), {
+                X.Z,
+                el(ei({}, e), {
                     version: m,
                     selectedChannelId: g,
                     showDMHeader: !0,
                     listScrollerRef: E,
                     onHandleScroll: v ? I : void 0,
                     children: [
-                        (0, r.jsx)(eo, { selected: null != m ? m === J.Z5c.FRIENDS : l === J.Z5c.FRIENDS }, 'friends'),
+                        (0, r.jsx)(ea, { selected: null != m ? m === J.Z5c.FRIENDS : l === J.Z5c.FRIENDS }, 'friends'),
                         n && t
                             ? (0, r.jsx)(
-                                  ea,
+                                  es,
                                   {
                                       selected: null == m ? null != l && l.startsWith(J.Z5c.APPLICATION_LIBRARY) : m.startsWith(J.Z5c.APPLICATION_LIBRARY),
                                       hideGameUpdateProgressIndicator: l === J.Z5c.APPLICATION_LIBRARY
@@ -367,7 +368,7 @@ let ef = i.memo(function (e) {
                                   'library'
                               )
                             : null,
-                        d ? (0, r.jsx)(ec, { selected: null == m ? null != l && l.startsWith(J.Z5c.MESSAGE_REQUESTS) : m === J.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
+                        d ? (0, r.jsx)(eu, { selected: null == m ? null != l && l.startsWith(J.Z5c.MESSAGE_REQUESTS) : m === J.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                         c
                             ? (0, r.jsx)(
                                   w.g,
@@ -376,7 +377,7 @@ let ef = i.memo(function (e) {
                                       route: J.Z5c.APPLICATION_STORE,
                                       locationState: {
                                           analyticsSource: {
-                                              page: eh(l),
+                                              page: ef(l),
                                               section: J.jXE.NAVIGATION,
                                               object: J.qAy.NAVIGATION_LINK
                                           }
@@ -393,7 +394,7 @@ let ef = i.memo(function (e) {
                                 onClick: y,
                                 locationState: {
                                     analyticsSource: {
-                                        page: eh(l),
+                                        page: ef(l),
                                         section: J.jXE.NAVIGATION,
                                         object: J.qAy.NAVIGATION_LINK
                                     }
@@ -409,19 +410,19 @@ let ef = i.memo(function (e) {
                                   renderTail: !0
                               })
                             : null,
-                        p ? (0, r.jsx)(eu, { selected: (null != l && l.startsWith(J.Z5c.FAMILY_CENTER)) || (null != m && m.startsWith(J.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
-                        s ? (0, r.jsx)(eg, {}, 'section-divider-top') : null,
-                        h ? (0, r.jsx)(O.Z, { bottomDivider: s ? (0, r.jsx)(eg, {}) : null }, 'dm-quick-launcher') : null
+                        p ? (0, r.jsx)(ed, { selected: (null != l && l.startsWith(J.Z5c.FAMILY_CENTER)) || (null != m && m.startsWith(J.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
+                        s ? (0, r.jsx)(em, {}, 'section-divider-top') : null,
+                        h ? (0, r.jsx)(O.Z, { bottomDivider: s ? (0, r.jsx)(em, {}) : null }, 'dm-quick-launcher') : null
                     ]
                 })
             )
         ]
     });
 });
-function eg() {
-    return (0, r.jsx)('div', { className: en.sectionDivider });
-}
 function em() {
+    return (0, r.jsx)('div', { className: er.sectionDivider });
+}
+function eb() {
     let e = (0, d.e7)([z.Z], () => z.Z.getHomeLink()),
         t = (0, d.e7)(
             [F.Z],
@@ -453,7 +454,7 @@ function em() {
             return !0 === e && !0 === t;
         })(),
         g = (0, E.FW)();
-    return (0, r.jsx)(ef, {
+    return (0, r.jsx)(eg, {
         theme: i,
         showLibrary: n,
         hasLibraryApplication: l,

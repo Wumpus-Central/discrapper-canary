@@ -1,58 +1,59 @@
-t.d(r, { default: () => u }), t(47120);
+t.d(r, { default: () => b }), t(47120);
 var n = t(200651),
     o = t(192379),
     s = t(481060),
     c = t(985002),
     i = t(880257),
     l = t(957656),
-    a = t(388032),
-    d = t(792360);
-let u = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: u, onClose: b } = e,
-        h = o.useCallback(() => {
-            b();
-        }, [b]),
-        x = (0, i.Z)(),
-        [f, j] = o.useState(!1),
-        [p, g] = o.useState(!1),
-        m = o.useCallback(() => {
-            g(!0), j(!1);
+    a = t(635357),
+    d = t(388032),
+    u = t(500013);
+let b = (e) => {
+    let { currentUser: r, otherUser: t, transitionState: b, onClose: h } = e,
+        x = o.useCallback(() => {
+            h();
+        }, [h]),
+        f = (0, i.Z)(),
+        [j, p] = o.useState(!1),
+        [g, m] = o.useState(!1),
+        y = o.useCallback(() => {
+            m(!0), p(!1);
         }, []),
-        { disconnectLinkRequest: y, isDisconnectLoading: O } = (0, c.G)({
-            onSuccess: h,
-            onError: m
+        { disconnectLinkRequest: O, isDisconnectLoading: k } = (0, c.G)({
+            onSuccess: x,
+            onError: y
         });
     return (0, n.jsx)(l.Z, {
-        transitionState: u,
+        transitionState: b,
         children: (0, n.jsxs)('form', {
             onSubmit: (e) => {
-                e.preventDefault(), y(t);
+                e.preventDefault(), O(t);
             },
             children: [
-                (0, n.jsx)(l.Z.Error, { error: p ? a.NW.string(a.t.krIDd3) : void 0 }),
+                (0, n.jsx)(l.Z.Error, { error: g ? d.NW.string(a.Z.krIDd3) : void 0 }),
                 (0, n.jsxs)(s.hzk, {
                     children: [
                         (0, n.jsx)(l.Z.Header, {
                             currentUser: r,
                             otherUser: t,
-                            header: a.NW.formatToPlainString(a.t.NMSTb2, { isAdult: String(x) }),
+                            header: d.NW.formatToPlainString(a.Z.NMSTb2, { isAdult: String(f) }),
                             icon: (0, n.jsx)(s.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: d.closeIcon
+                                className: u.closeIcon
                             })
                         }),
-                        (0, n.jsx)(l.Z.Notice, { notice: x ? a.NW.string(a.t.EvMGLS) : a.NW.string(a.t.f1SUeX) }),
+                        (0, n.jsx)(l.Z.Notice, { notice: f ? d.NW.string(a.Z.EvMGLS) : d.NW.string(a.Z.f1SUeX) }),
                         (0, n.jsx)(s.XZJ, {
-                            className: d.acknowledgementCheckbox,
+                            className: u.acknowledgementCheckbox,
                             type: s.XZJ.Types.INVERTED,
-                            value: f,
+                            value: j,
                             onChange: (e, r) => {
-                                j(r), g(!1);
+                                p(r), m(!1);
                             },
                             children: (0, n.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',
-                                children: x ? a.NW.string(a.t['/MYCeX']) : a.NW.string(a.t.VJaHUV)
+                                children: f ? d.NW.string(a.Z['/MYCeX']) : d.NW.string(a.Z.VJaHUV)
                             })
                         })
                     ]
@@ -64,18 +65,18 @@ let u = (e) => {
                                 type: 'button',
                                 look: s.zxk.Looks.LINK,
                                 color: s.zxk.Colors.PRIMARY,
-                                onClick: b,
+                                onClick: h,
                                 size: s.zxk.Sizes.SMALL,
-                                disabled: O,
-                                children: a.NW.string(a.t['ETE/oK'])
+                                disabled: k,
+                                children: d.NW.string(d.t['ETE/oK'])
                             }),
                             (0, n.jsx)(s.zxk, {
                                 type: 'submit',
-                                disabled: !f || O,
-                                submitting: O,
+                                disabled: !j || k,
+                                submitting: k,
                                 color: s.Ttl.RED,
                                 size: s.zxk.Sizes.SMALL,
-                                children: a.NW.string(a.t['c5L+sr'])
+                                children: d.NW.string(a.Z['c5L+sr'])
                             })
                         ]
                     })

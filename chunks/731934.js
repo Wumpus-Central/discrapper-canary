@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(266796), n(627341);
+n.d(t, { Z: () => W }), n(266796), n(627341);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(209613),
     u = n(82295),
     m = n(785681),
-    g = n(485664),
-    p = n(880257),
+    p = n(485664),
+    g = n(880257),
     h = n(631885),
     f = n(895328),
     b = n(568671),
@@ -19,18 +19,19 @@ var r = n(200651),
     _ = n(250285),
     E = n(292352),
     j = n(134612),
-    C = n(388032),
-    O = n(828859),
-    v = n(635312),
-    S = n(802138),
-    T = n(926895);
-function I(e) {
+    C = n(635357),
+    O = n(388032),
+    v = n(828859),
+    S = n(635312),
+    T = n(802138),
+    I = n(926895);
+function y(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, r.jsxs)('div', {
-        className: v.step,
+        className: S.step,
         children: [
             (0, r.jsx)('div', {
-                className: v.stepNumber,
+                className: S.stepNumber,
                 children: (0, r.jsx)(c.X6q, {
                     variant: 'heading-md/semibold',
                     color: 'text-brand',
@@ -53,51 +54,51 @@ function I(e) {
         ]
     });
 }
-function y() {
+function A() {
     return (0, r.jsxs)('div', {
-        className: a()(v.box, O.box, v.linkingBanner, v.linkingBannerParent),
+        className: a()(S.box, v.box, S.linkingBanner, S.linkingBannerParent),
         children: [
             (0, r.jsxs)('div', {
-                className: a()(v.linkingBannerUpper),
+                className: S.linkingBannerUpper,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)(c.X6q, {
-                                className: S.marginBottom8,
+                                className: T.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, r.jsx)(c.y5t, { children: C.NW.string(C.t.pHEnV1) })
+                                children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.pHEnV1) })
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                className: S.marginBottom20,
-                                children: C.NW.string(C.t['1J/gZ2'])
+                                className: T.marginBottom20,
+                                children: O.NW.string(C.Z['1J/gZ2'])
                             })
                         ]
                     }),
                     (0, r.jsx)('img', {
-                        className: v.bannerArt,
-                        src: T,
-                        alt: C.NW.string(C.t['r+PDmp'])
+                        className: S.bannerArt,
+                        src: I,
+                        alt: O.NW.string(C.Z['r+PDmp'])
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: v.steps,
+                className: S.steps,
                 children: [
-                    (0, r.jsx)(I, {
-                        header: C.NW.string(C.t['7xxAnp']),
-                        description: C.NW.string(C.t['1M9So6']),
+                    (0, r.jsx)(y, {
+                        header: O.NW.string(C.Z['7xxAnp']),
+                        description: O.NW.string(C.Z['1M9So6']),
                         stepNumber: 1
                     }),
-                    (0, r.jsx)(I, {
-                        header: C.NW.string(C.t['AXgx+f']),
-                        description: C.NW.string(C.t.GzMFnZ),
+                    (0, r.jsx)(y, {
+                        header: O.NW.string(C.Z['AXgx+f']),
+                        description: O.NW.string(C.Z.GzMFnZ),
                         stepNumber: 2
                     }),
-                    (0, r.jsx)(I, {
-                        header: C.NW.string(C.t.MZn1tL),
-                        description: C.NW.string(C.t['8rLBxM']),
+                    (0, r.jsx)(y, {
+                        header: O.NW.string(C.Z.MZn1tL),
+                        description: O.NW.string(C.Z['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -105,41 +106,41 @@ function y() {
         ]
     });
 }
-function A() {
+function P() {
     let e = (0, h.VM)();
     return (0, r.jsxs)('div', {
-        className: a()(v.box, O.box, v.linkingBanner),
+        className: a()(S.box, v.box, S.linkingBanner),
         children: [
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(c.X6q, {
-                        className: S.marginBottom8,
+                        className: T.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, r.jsx)(c.y5t, { children: C.NW.string(C.t.zUCWEB) })
+                        children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z.zUCWEB) })
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        className: S.marginBottom20,
-                        children: C.NW.format(C.t.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        className: T.marginBottom20,
+                        children: O.NW.format(C.Z.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     e ? null : (0, r.jsx)(b.Z, {})
                 ]
             }),
             (0, r.jsx)('img', {
-                className: v.bannerArt,
-                src: T,
-                alt: C.NW.string(C.t['r+PDmp'])
+                className: S.bannerArt,
+                src: I,
+                alt: O.NW.string(C.Z['r+PDmp'])
             })
         ]
     });
 }
-function P(e) {
+function R(e) {
     let { sectionType: t, sectionTitle: n, requests: s } = e,
         a = i.useRef(null),
         l = ''.concat(t, '-list'),
         m = (0, d.Z)(l),
-        g = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 let { row: n, listIndex: i } = e,
                     a = s[n],
@@ -158,13 +159,13 @@ function P(e) {
             },
             [s, t]
         ),
-        p = i.useCallback(
+        g = i.useCallback(
             () =>
                 (0, r.jsx)(
                     u.Z,
                     {
                         children: (0, r.jsx)(c.Text, {
-                            className: S.marginBottom8,
+                            className: T.marginBottom8,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: n
@@ -175,7 +176,7 @@ function P(e) {
             [n]
         );
     return (0, r.jsx)('div', {
-        className: v.section,
+        className: S.section,
         children: (0, r.jsx)(o.bG, {
             navigator: m,
             children: (0, r.jsx)(o.SJ, {
@@ -236,8 +237,8 @@ function P(e) {
                                 },
                                 sectionHeight: E.zE,
                                 rowHeight: E.ip,
-                                renderSection: p,
-                                renderRow: g,
+                                renderSection: g,
+                                renderRow: p,
                                 sections: [s.length],
                                 chunkSize: 30,
                                 fade: !0
@@ -251,44 +252,44 @@ function P(e) {
         })
     });
 }
-let R = () => {
-        let e = (0, p.Z)(),
+let D = () => {
+        let e = (0, g.Z)(),
             t = (0, h.mq)(E.ne.ACTIVE),
             n = e ? E.AG : E.i0,
             i = {
                 count: t.length,
                 max: n
             },
-            s = (0, m.o)(C.NW.formatToPlainString(C.t['+tnO39'], i), C.NW.formatToPlainString(C.t['pu6/U1'], i));
+            s = (0, m.o)(O.NW.formatToPlainString(C.Z['+tnO39'], i), O.NW.formatToPlainString(C.Z['pu6/U1'], i));
         return t.length > 0
-            ? (0, r.jsx)(P, {
+            ? (0, r.jsx)(R, {
                   sectionType: E.ne.ACTIVE,
                   sectionTitle: s,
                   requests: t
               })
             : (0, r.jsxs)('div', {
-                  className: v.section,
+                  className: S.section,
                   children: [
                       (0, r.jsx)(c.Text, {
-                          className: S.marginBottom8,
+                          className: T.marginBottom8,
                           variant: 'eyebrow',
                           color: 'header-secondary',
                           children: s
                       }),
                       (0, r.jsx)('div', {
-                          className: v.box,
-                          children: (0, r.jsx)(f.Z, { text: C.NW.string(C.t.C4ScLC) })
+                          className: S.box,
+                          children: (0, r.jsx)(f.Z, { text: O.NW.string(C.Z.C4ScLC) })
                       })
                   ]
               });
     },
-    D = () => {
+    Z = () => {
         let e = (0, h.VM)(),
-            t = (0, p.Z)() ? E.AG : E.i0,
-            n = (0, m.o)(C.NW.formatToPlainString(C.t['1/PzIi'], { maxConnections: t }), C.NW.formatToPlainString(C.t.RcTgiI, { maxConnections: t }));
+            t = (0, g.Z)() ? E.AG : E.i0,
+            n = (0, m.o)(O.NW.formatToPlainString(C.Z['1/PzIi'], { maxConnections: t }), O.NW.formatToPlainString(C.Z.RcTgiI, { maxConnections: t }));
         return e
             ? (0, r.jsx)('div', {
-                  className: v.maxConnectionInfo,
+                  className: S.maxConnectionInfo,
                   children: (0, r.jsx)(c.Text, {
                       variant: 'text-xxs/medium',
                       color: 'text-muted',
@@ -297,25 +298,25 @@ let R = () => {
               })
             : null;
     },
-    Z = () => {
-        let e = (0, g.o)(),
-            t = (0, g.Q)(),
+    w = () => {
+        let e = (0, p.o)(),
+            t = (0, p.Q)(),
             n = (0, l.EQ)({
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => C.NW.format(C.t.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => C.NW.format(C.t['6tsC8v'], { helpLink: j.$l }))
+                .with({ helpline: !0 }, () => O.NW.format(C.Z.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => O.NW.format(C.Z['6tsC8v'], { helpLink: j.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
             : (0, r.jsxs)('div', {
-                  className: a()(v.__invalid_helpLineInfo, S.marginTop20),
+                  className: a()(S.__invalid_helpLineInfo, T.marginTop20),
                   children: [
                       (0, r.jsx)(c.X6q, {
-                          className: v.supportHeader,
+                          className: S.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, r.jsx)(c.y5t, { children: C.NW.string(C.t['7/tVho']) })
+                          children: (0, r.jsx)(c.y5t, { children: O.NW.string(C.Z['7/tVho']) })
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: 'text-xs/medium',
@@ -325,21 +326,21 @@ let R = () => {
                   ]
               });
     },
-    w = () => {
+    k = () => {
         let e = (0, h.mq)(E.ne.PENDING),
-            t = (0, m.o)(C.NW.formatToPlainString(C.t.IkAgkJ, { count: e.length }), C.NW.formatToPlainString(C.t.Q8XnAQ, { count: e.length }));
+            t = (0, m.o)(O.NW.formatToPlainString(C.Z.IkAgkJ, { count: e.length }), O.NW.formatToPlainString(C.Z.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
-            : (0, r.jsx)(P, {
+            : (0, r.jsx)(R, {
                   sectionType: E.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });
     },
-    k = () => {
-        let e = (0, p.Z)();
+    W = () => {
+        let e = (0, g.Z)();
         return (0, r.jsxs)('div', {
-            className: v.container,
-            children: [e ? (0, r.jsx)(y, {}) : (0, r.jsx)(A, {}), (0, r.jsx)(R, {}), (0, r.jsx)(w, {}), (0, r.jsx)(D, {}), (0, r.jsx)(Z, {})]
+            className: S.container,
+            children: [e ? (0, r.jsx)(A, {}) : (0, r.jsx)(P, {}), (0, r.jsx)(D, {}), (0, r.jsx)(k, {}), (0, r.jsx)(Z, {}), (0, r.jsx)(w, {})]
         });
     };

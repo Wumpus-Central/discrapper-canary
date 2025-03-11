@@ -1,4 +1,4 @@
-n.d(e, { default: () => g }), n(47120);
+n.d(e, { default: () => k }), n(47120);
 var s = n(200651),
     r = n(192379),
     a = n(120356),
@@ -9,48 +9,49 @@ var s = n(200651),
     d = n(703656),
     x = n(695346),
     u = n(981631),
-    h = n(388032),
-    b = n(520532),
-    m = n(455812);
-function g(t) {
+    h = n(635357),
+    b = n(388032),
+    m = n(565863),
+    g = n(802138);
+function k(t) {
     let { transitionState: e, onClose: n } = t,
-        [a, g] = r.useState(!1),
-        [k, p] = r.useState(null),
-        N = async () => {
-            p(null), g(!0);
+        [a, k] = r.useState(!1),
+        [p, N] = r.useState(null),
+        C = async () => {
+            N(null), k(!0);
             try {
                 await x.Ex.updateSetting(!1), (0, d.uL)(u.Z5c.FRIENDS), (0, l.xf)(), n();
             } catch (t) {
-                p(new c.Z(t).getAnyErrorMessage());
+                N(new c.Z(t).getAnyErrorMessage());
             } finally {
-                g(!1);
+                k(!1);
             }
         },
-        C = () => {
+        j = () => {
             (0, d.uL)(u.Z5c.SETTINGS('family-center')), n();
         };
     return (0, s.jsxs)(o.Y0X, {
-        className: b.root,
+        className: m.root,
         transitionState: e,
         children: [
             (0, s.jsxs)(o.xBx, {
                 separator: !1,
-                className: b.header,
+                className: m.header,
                 children: [
                     (0, s.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        className: b.title,
-                        children: h.NW.string(h.t.VGB30N)
+                        className: m.title,
+                        children: b.NW.string(h.Z.VGB30N)
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        className: b.subtitle,
-                        children: h.NW.format(h.t['CrZZ+v'], {
+                        className: m.subtitle,
+                        children: b.NW.format(h.Z['CrZZ+v'], {
                             openSettingsHook: (t, e) =>
                                 (0, s.jsx)(
                                     o.eee,
                                     {
-                                        onClick: C,
+                                        onClick: j,
                                         children: t
                                     },
                                     e
@@ -62,29 +63,29 @@ function g(t) {
             (0, s.jsxs)(o.hzk, {
                 children: [
                     (0, s.jsxs)('div', {
-                        className: i()(b.buttonContainer, m.marginTop20),
+                        className: i()(m.buttonContainer, g.marginTop20),
                         children: [
                             (0, s.jsx)(o.zxk, {
                                 type: 'submit',
-                                className: m.marginBottom8,
+                                className: g.marginBottom8,
                                 grow: !0,
                                 color: o.zxk.Colors.RED,
-                                onClick: N,
+                                onClick: C,
                                 submitting: a,
-                                children: h.NW.string(h.t.cSb7U1)
+                                children: b.NW.string(h.Z.cSb7U1)
                             }),
                             (0, s.jsx)(o.zxk, {
                                 grow: !0,
                                 color: o.zxk.Colors.PRIMARY,
                                 onClick: n,
-                                children: h.NW.string(h.t['ETE/oK'])
+                                children: b.NW.string(b.t['ETE/oK'])
                             })
                         ]
                     }),
                     (0, s.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-danger',
-                        children: k
+                        children: p
                     })
                 ]
             })

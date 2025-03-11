@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -9,36 +9,37 @@ var i = n(120356),
     c = n(372769),
     d = n(914788),
     u = n(981631),
-    m = n(388032),
-    g = n(931806);
-let p = [18, 18, 16, 16, 14, 12, 10],
-    h = (e) => {
+    m = n(635357),
+    p = n(388032),
+    g = n(295210);
+let h = [18, 18, 16, 16, 14, 12, 10],
+    f = (e) => {
         let { guildId: t } = e,
             n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
         if (void 0 === n) return null;
         let i = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-            h = n.toString(),
-            f = n.getIconURL(40, !0),
-            b = null,
-            N = p[p.length - 1];
-        if (null == n.icon && null != h) {
-            var x;
-            N = null !== (x = p[(b = (0, a.Zg)(h)).length - 1]) && void 0 !== x ? x : p[p.length - 1];
+            f = n.toString(),
+            b = n.getIconURL(40, !0),
+            N = null,
+            x = h[h.length - 1];
+        if (null == n.icon && null != f) {
+            var _;
+            x = null !== (_ = h[(N = (0, a.Zg)(f)).length - 1]) && void 0 !== _ ? _ : h[h.length - 1];
         }
         return (0, r.jsxs)('div', {
             className: g.container,
             children: [
                 (0, r.jsxs)('div', {
-                    style: { fontSize: N },
+                    style: { fontSize: x },
                     children: [
-                        null != b
+                        null != N
                             ? (0, r.jsx)('div', {
                                   className: s()(g.childWrapper, g.acronym),
                                   'aria-hidden': !0,
-                                  children: b
+                                  children: N
                               })
                             : null,
-                        null != f
+                        null != b
                             ? (0, r.jsx)(o.qEK, {
                                   src: n.getIconURL(40, !0),
                                   size: o.EFr.SIZE_40,
@@ -71,7 +72,7 @@ let p = [18, 18, 16, 16, 14, 12, 10],
                             ? (0, r.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: m.NW.format(m.t['5JmNgo'], { members: n.approximateMemberCount })
+                                  children: p.NW.format(m.Z['5JmNgo'], { members: n.approximateMemberCount })
                               })
                             : null
                     ]

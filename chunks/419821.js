@@ -1,4 +1,4 @@
-n.d(t, { u: () => h });
+n.d(t, { u: () => f });
 var r = n(200651),
     i = n(192379),
     s = n(512722),
@@ -9,12 +9,13 @@ var r = n(200651),
     d = n(933970),
     u = n(340453),
     m = n(292352),
+    p = n(635357),
     g = n(388032),
-    p = n(563840);
-function h(e) {
+    h = n(944921);
+function f(e) {
     let { user: t } = e,
         s = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             a()(void 0 !== s, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
@@ -70,21 +71,21 @@ function h(e) {
                 });
         }, [s, t]);
     return (0, r.jsxs)('div', {
-        className: p.container,
+        className: h.container,
         children: [
             (0, r.jsx)('div', {
-                className: p.details,
+                className: h.details,
                 children: (0, r.jsx)(u.Z, {
                     otherUser: t,
                     status: m.ne.ACTIVE
                 })
             }),
             (0, r.jsx)('div', {
-                className: p.actions,
+                className: h.actions,
                 children: (0, r.jsx)(d.Z, {
                     icon: o.Dio,
-                    tooltip: g.NW.string(g.t.l20ZZm),
-                    onClick: h
+                    tooltip: g.NW.string(p.Z.l20ZZm),
+                    onClick: f
                 })
             })
         ]

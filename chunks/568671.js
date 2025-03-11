@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(481060),
@@ -6,11 +6,12 @@ var i = n(481060),
     a = n(503899),
     l = n(292352),
     o = n(981631),
-    c = n(388032),
-    d = n(613696);
-function u() {
+    c = n(635357),
+    d = n(388032),
+    u = n(825307);
+function m() {
     return (0, r.jsxs)(i.zxk, {
-        innerClassName: d.qrCodeButtonContent,
+        innerClassName: u.qrCodeButtonContent,
         size: i.zxk.Sizes.LARGE,
         onClick: () => {
             (0, i.ZDy)(async () => {
@@ -47,6 +48,6 @@ function u() {
             }),
                 s.default.track(o.rMx.FAMILY_CENTER_ACTION, { action: l.YC.ShowQRCodeModal });
         },
-        children: [(0, r.jsx)(a.Z, {}), c.NW.string(c.t.Ta9byc)]
+        children: [(0, r.jsx)(a.Z, {}), d.NW.string(c.Z.Ta9byc)]
     });
 }
