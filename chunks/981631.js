@@ -277,6 +277,7 @@ let A = Object.freeze({
         VERIFY_PHONE_FOR_TICKET: '/phone-verifications/validate-support-ticket',
         RESEND_PHONE: '/phone-verifications/resend',
         RECENT_AVATARS: '/users/@me/avatars',
+        RECENT_AVATARS_DELETE: (t) => '/users/@me/avatars/'.concat(t),
         CONNECTIONS: '/users/@me/connections',
         CONNECTIONS_AUTHORIZE: (t) => '/connections/'.concat(t, '/authorize'),
         CONNECTIONS_SESSION_HANDOFF: (t) => '/connections/'.concat(t, '/callback/session-handoff'),
