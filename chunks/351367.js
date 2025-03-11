@@ -9,8 +9,9 @@ var n = r(192379),
     u = r(557017),
     d = r(474936);
 let p = (e) => {
-        let t = new Date();
-        return t.setDate(t.getDate() - 10), e.currentPeriodEnd >= t;
+        var t;
+        let r = new Date();
+        return (r.setDate(r.getDate() - 10), (null === (t = e.metadata) || void 0 === t ? void 0 : t.ended_at) != null) ? new Date(e.metadata.ended_at) >= r : e.currentPeriodEnd >= r;
     },
     f = (e) => {
         var t;
@@ -22,11 +23,11 @@ function b(e) {
         [r, c] = n.useState(null),
         b = u.t.useExperiment({ location: t }),
         g = (0, s.e7)([o.ZP], () => o.ZP.getMostRecentPremiumTypeSubscription()),
-        O = (0, s.e7)([l.Z], () => l.Z.hasFetchedOffer()),
-        m = (0, s.e7)([o.ZP], () => o.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
+        m = (0, s.e7)([l.Z], () => l.Z.hasFetchedOffer()),
+        O = (0, s.e7)([o.ZP], () => o.ZP.hasFetchedMostRecentPremiumTypeSubscription()),
         h = (0, s.e7)([i.default], () => i.default.getCurrentUser()),
-        x = (null == h ? void 0 : h.hadPremiumSubscription()) && !m,
-        j = !(0, a.I5)(h) && !O;
+        x = (null == h ? void 0 : h.hadPremiumSubscription()) && !O,
+        j = !(0, a.I5)(h) && !m;
     return (
         n.useEffect(() => {
             if (!1 === b.enabled) {
