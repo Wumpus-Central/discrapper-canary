@@ -18,6 +18,7 @@ var r = {
     artContainerBoxShadow: 'artContainerBoxShadow__3ec70',
     art: 'art__3ec70',
     sparkleBadge: 'sparkleBadge__3ec70',
-    newBadge: 'newBadge__3ec70'
+    newBadge: 'newBadge__3ec70',
+    betaTag: 'betaTag__3ec70'
 };
 e.exports = r;

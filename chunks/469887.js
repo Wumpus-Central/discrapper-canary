@@ -1,54 +1,55 @@
-n.d(t, { B: () => d });
+n.d(t, { B: () => u });
 var r = n(200651);
 n(192379);
 var i = n(704215),
     s = n(481060),
     a = n(243778),
-    l = n(921944),
-    o = n(388032),
-    c = n(726797);
-function d(e) {
-    let { children: t, canBeShown: d, onCTA: u } = e;
+    l = n(688465),
+    o = n(921944),
+    c = n(388032),
+    d = n(726797);
+function u(e) {
+    let { children: t, canBeShown: u, onCTA: m } = e;
     return (0, r.jsx)(a.ZP, {
         bypassAutoDismiss: !0,
-        contentTypes: d ? [i.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
+        contentTypes: u ? [i.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
         children: (e) => {
-            let { visibleContent: a, markAsDismissed: d } = e;
+            let { visibleContent: a, markAsDismissed: u } = e;
             return a === i.z.VOICE_FILTER_LAUNCH_COACHMARK
                 ? (0, r.jsx)(s.yRy, {
                       renderPopout: () =>
                           (0, r.jsxs)('div', {
-                              className: c.popup,
+                              className: d.popup,
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: c.background,
-                                      children: [(0, r.jsx)('div', { className: c.blur0 }), (0, r.jsx)('div', { className: c.blur1 }), (0, r.jsx)('div', { className: c.blur2 })]
+                                      className: d.background,
+                                      children: [(0, r.jsx)('div', { className: d.blur0 }), (0, r.jsx)('div', { className: d.blur1 }), (0, r.jsx)('div', { className: d.blur2 })]
                                   }),
                                   (0, r.jsxs)('div', {
-                                      className: c.content,
+                                      className: d.content,
                                       children: [
                                           (0, r.jsx)(s.P3F, {
-                                              className: c.closeIcon,
-                                              onClick: () => d(l.L.USER_DISMISS),
+                                              className: d.closeIcon,
+                                              onClick: () => u(o.L.USER_DISMISS),
                                               children: (0, r.jsx)(s.Dio, {})
                                           }),
                                           (0, r.jsx)('img', {
                                               src: n(414190),
-                                              className: c.art,
+                                              className: d.art,
                                               alt: ''
                                           }),
                                           (0, r.jsxs)('div', {
                                               children: [
-                                                  (0, r.jsx)(s.X6q, {
+                                                  (0, r.jsxs)(s.X6q, {
                                                       variant: 'heading-md/semibold',
                                                       color: 'header-primary',
-                                                      className: c.heading,
-                                                      children: o.NW.string(o.t.MLt8Hx)
+                                                      className: d.heading,
+                                                      children: [c.NW.string(c.t.MLt8Hx), (0, r.jsx)(l.Z, { className: d.betaTag })]
                                                   }),
                                                   (0, r.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'header-secondary',
-                                                      children: o.NW.string(o.t['l+lSLi'])
+                                                      children: c.NW.string(c.t['l+lSLi'])
                                                   })
                                               ]
                                           }),
@@ -57,9 +58,9 @@ function d(e) {
                                               look: s.zxk.Looks.FILLED,
                                               fullWidth: !0,
                                               onClick: () => {
-                                                  d(l.L.TAKE_ACTION), u();
+                                                  u(o.L.TAKE_ACTION), m();
                                               },
-                                              children: o.NW.string(o.t['9WdoBw'])
+                                              children: c.NW.string(c.t['9WdoBw'])
                                           })
                                       ]
                                   })
@@ -72,7 +73,7 @@ function d(e) {
                       shouldShow: !0,
                       children: (e, n) => {
                           let { isShown: r } = n;
-                          return t(r, () => d(l.L.INDIRECT_ACTION));
+                          return t(r, () => u(o.L.INDIRECT_ACTION));
                       }
                   })
                 : t(!1);

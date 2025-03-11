@@ -12,7 +12,7 @@ var i = n(481060),
     c = n(474936),
     d = n(981631),
     u = n(388032),
-    p = n(771309);
+    p = n(593064);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -115,7 +115,8 @@ function h(e) {
                 backgroundElements: h,
                 smallText: !0,
                 footerClassName: p.footer,
-                subscribeButtonClassname: p.subscribeButton
+                subscribeButtonClassname: p.subscribeButton,
+                showBetaBadge: !0
             },
             i
         )
