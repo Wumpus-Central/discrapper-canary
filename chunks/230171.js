@@ -26,8 +26,8 @@ var r = n(200651),
     y = n(758199),
     x = n(914498),
     O = n(172109),
-    E = n(880251),
-    j = n(208444),
+    j = n(880251),
+    E = n(208444),
     N = n(388032),
     C = n(390101);
 function I(e) {
@@ -40,7 +40,7 @@ function I(e) {
             icon: t.icon,
             bot: I
         }),
-        { staticBannerSrc: Z, videoBannerSrc: k, bannerAspectRatio: R } = (0, E.E)(t),
+        { staticBannerSrc: Z, videoBannerSrc: k, bannerAspectRatio: R } = (0, j.E)(t),
         D = (0, o.e7)([g.default], () => (null != h ? h : g.default.getId()), [h]),
         { analyticsLocations: L } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
         { currentChannelId: M, instanceId: W, isCurrentlyInInstance: F, canLaunchInChannel: U } = (0, v.c)(t.id),
@@ -51,11 +51,12 @@ function I(e) {
             botUserId: null == I ? void 0 : I.id
         }),
         H = null != P && A && G,
-        V = (0, j.z)(t),
-        z = i.useMemo(() => {
+        V = U && A && G,
+        z = (0, E.z)(t),
+        K = i.useMemo(() => {
             let e = [];
             return (
-                U &&
+                V &&
                     e.push({
                         label: null == W ? N.NW.string(N.t.cnBQPD) : N.NW.string(N.t.VJlc0d),
                         trackingArea: x.j_.PLAY,
@@ -73,7 +74,7 @@ function I(e) {
                         },
                         disabledReason: F ? N.NW.string(N.t.wJNK8P) : void 0
                     }),
-                !U &&
+                !V &&
                     H &&
                     e.push({
                         label: N.NW.string(N.t.JeK1Wl),
@@ -88,11 +89,11 @@ function I(e) {
                             });
                         }
                     }),
-                null != V && e.push(V),
+                null != z && e.push(z),
                 e
             );
-        }, [U, H, V, W, F, M, t.id, B, l, D, L, P]),
-        K = A ? (0, r.jsx)(T, { app: t }) : (0, r.jsx)(S, { app: t });
+        }, [V, H, z, W, F, M, t.id, B, l, D, L, P]),
+        Y = A ? (0, r.jsx)(T, { app: t }) : (0, r.jsx)(S, { app: t });
     return (0, r.jsx)(y.W, {
         title: C,
         staticBannerSrc: Z,
@@ -100,8 +101,8 @@ function I(e) {
         bannerAspectRatio: R,
         iconSrc: w,
         embedUrl: n,
-        info: K,
-        actions: z,
+        info: Y,
+        actions: K,
         trackingConfig: {
             id: t.id,
             linkType: a,
