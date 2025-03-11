@@ -1,6 +1,6 @@
 n.d(t, {
-    O: () => j,
-    U: () => b.Un
+    O: () => I,
+    U: () => x.Un
 }),
     n(653041),
     n(571269),
@@ -11,101 +11,125 @@ var r = n(200651),
     a = n(373793),
     o = n(442837),
     l = n(481060),
-    s = n(100527),
-    c = n(906732),
-    d = n(783097),
-    u = n(606192),
-    p = n(812236),
-    m = n(706454),
-    f = n(314897),
-    h = n(768581),
-    g = n(135431),
-    _ = n(758199),
-    b = n(914498),
-    v = n(172109),
-    y = n(880251),
-    x = n(208444),
-    E = n(388032),
-    O = n(390101);
-function j(e) {
-    let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: m } = e,
-        { name: g, bot: O } = (t = (0, v.O)(t)),
-        j = null == O ? void 0 : O.id,
-        I = (0, d.ye)(t),
-        S = h.ZP.getApplicationIconURL({
+    s = n(566620),
+    c = n(574952),
+    d = n(100527),
+    u = n(906732),
+    p = n(783097),
+    m = n(606192),
+    f = n(812236),
+    h = n(706454),
+    g = n(314897),
+    _ = n(768581),
+    b = n(135431),
+    v = n(506895),
+    y = n(758199),
+    x = n(914498),
+    O = n(172109),
+    E = n(880251),
+    j = n(208444),
+    N = n(388032),
+    C = n(390101);
+function I(e) {
+    let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: h } = e,
+        { name: b, bot: C } = (t = (0, O.O)(t)),
+        I = null == C ? void 0 : C.id,
+        P = (0, p.ye)(t),
+        A = _.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
-            bot: O
+            bot: C
         }),
-        { staticBannerSrc: T, videoBannerSrc: P, bannerAspectRatio: A } = (0, y.E)(t),
-        w = (0, o.e7)([f.default], () => (null != m ? m : f.default.getId()), [m]),
-        { analyticsLocations: Z } = (0, c.ZP)(s.Z.APP_MESSAGE_EMBED),
-        k = i.useCallback(
+        { staticBannerSrc: w, videoBannerSrc: Z, bannerAspectRatio: k } = (0, E.E)(t),
+        R = (0, o.e7)([g.default], () => (null != h ? h : g.default.getId()), [h]),
+        { analyticsLocations: D } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
+        L = i.useCallback(
             (e) => {
-                (0, b.KX)(t.id, a, e, w, l);
+                (0, x.KX)(t.id, a, e, R, l);
             },
-            [l, w, t.id, a]
+            [l, R, t.id, a]
         ),
-        R = i.useCallback(() => {
-            (0, b.GF)(t.id, a, w, l);
-        }, [l, w, t.id, a]),
-        D = i.useCallback(() => {
-            (0, b.Yu)(t.id, a);
+        M = i.useCallback(() => {
+            (0, x.GF)(t.id, a, R, l);
+        }, [l, R, t.id, a]),
+        W = i.useCallback(() => {
+            (0, x.Yu)(t.id, a);
         }, [t.id, a]),
-        L = (0, p.ms)({
+        { currentChannelId: F, instanceId: U, isCurrentlyInInstance: B, canLaunchInChannel: G } = (0, v.c)(t.id),
+        H = (0, c.Z)(),
+        V = (0, f.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
-            botUserId: null == O ? void 0 : O.id
+            botUserId: null == C ? void 0 : C.id
         }),
-        M = null != j && I && L,
-        W = (0, x.z)(t, k),
-        F = i.useMemo(() => {
+        z = null != I && P && V,
+        K = (0, j.z)(t, L),
+        Y = i.useMemo(() => {
             let e = [];
             return (
-                M &&
+                G &&
                     e.push({
-                        label: E.NW.string(E.t.RscU7O),
+                        label: null == U ? N.NW.string(N.t.cnBQPD) : N.NW.string(N.t.VJlc0d),
                         onClick() {
-                            (0, u.W)({
-                                appId: t.id,
-                                botId: j,
-                                analyticsLocations: Z,
+                            (0, s.G6)({
+                                channelId: null != F ? F : void 0,
+                                applicationId: t.id,
+                                isStart: null == U,
+                                instanceId: null != U ? U : void 0,
+                                embeddedActivitiesManager: H,
                                 customId: l,
-                                referrerId: w
+                                referrerId: R,
+                                analyticsLocations: D
                             }),
-                                k(b.j_.PLAY);
+                                L(x.j_.PLAY);
+                        },
+                        disabledReason: B ? N.NW.string(N.t.wJNK8P) : void 0
+                    }),
+                !G &&
+                    z &&
+                    e.push({
+                        label: N.NW.string(N.t.JeK1Wl),
+                        onClick() {
+                            (0, m.W)({
+                                appId: t.id,
+                                botId: I,
+                                analyticsLocations: D,
+                                customId: l,
+                                referrerId: R
+                            }),
+                                L(x.j_.PLAY);
                         }
                     }),
-                null != W && e.push(W),
+                null != K && e.push(K),
                 e
             );
-        }, [l, w, Z, t.id, j, M, k, W]),
-        U = I ? (0, r.jsx)(C, { app: t }) : (0, r.jsx)(N, { app: t });
-    return (0, r.jsx)(_.W, {
-        title: g,
-        staticBannerSrc: T,
-        videoBannerSrc: P,
-        bannerAspectRatio: A,
-        iconSrc: S,
+        }, [l, D, t.id, I, z, G, F, H, U, B, R, L, K]),
+        X = P ? (0, r.jsx)(T, { app: t }) : (0, r.jsx)(S, { app: t });
+    return (0, r.jsx)(y.W, {
+        title: b,
+        staticBannerSrc: w,
+        videoBannerSrc: Z,
+        bannerAspectRatio: k,
+        iconSrc: A,
         embedUrl: n,
-        info: U,
-        actions: F,
-        onView: R,
-        onLinkCopied: D
+        info: X,
+        actions: Y,
+        onView: M,
+        onLinkCopied: W
     });
 }
-function N(e) {
+function S(e) {
     var t, n, s;
     let { app: c } = e,
         d =
-            (0, g.Eb)({
+            (0, b.Eb)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig
             }) &&
             null != c.integrationTypesConfig &&
             a.Y.GUILD_INSTALL in c.integrationTypesConfig,
-        u = (0, o.e7)([m.default], () => m.default.locale, []),
+        u = (0, o.e7)([h.default], () => h.default.locale, []),
         p = i.useMemo(() => {
             var e, t;
             if (!d) return null;
@@ -114,22 +138,22 @@ function N(e) {
                     compactDisplay: 'short'
                 }),
                 r = null !== (t = null === (e = c.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 === r ? null : E.NW.format(E.t['6IW6Wl'], { guildCount: n.format(r) });
+            return 0 === r ? null : N.NW.format(N.t['6IW6Wl'], { guildCount: n.format(r) });
         }, [null === (t = c.directoryEntry) || void 0 === t ? void 0 : t.guild_count, d, u]),
-        f = null === (s = c.categories) || void 0 === s ? void 0 : null === (n = s.at(0)) || void 0 === n ? void 0 : n.name;
+        m = null === (s = c.categories) || void 0 === s ? void 0 : null === (n = s.at(0)) || void 0 === n ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != f &&
+            null != m &&
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: O.description,
+                    className: C.description,
                     color: 'none',
-                    children: f
+                    children: m
                 }),
             null != p &&
                 (0, r.jsxs)(l.Text, {
                     variant: 'text-xs/normal',
-                    className: O.tagline,
+                    className: C.tagline,
                     color: 'none',
                     lineClamp: 1,
                     children: [
@@ -143,23 +167,23 @@ function N(e) {
         ]
     });
 }
-function C(e) {
+function T(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: i } = t,
-        a = null != i ? E.NW.format(E.t.z8EAJS, { count: i }) : E.NW.string(E.t.RjceQU);
+        a = null != i ? N.NW.format(N.t.z8EAJS, { count: i }) : N.NW.string(N.t.RjceQU);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n.length > 0 &&
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: O.description,
+                    className: C.description,
                     color: 'none',
                     lineClamp: 1,
                     children: n.map((e, t) =>
                         (0, r.jsx)(
                             'span',
                             {
-                                className: O.tag,
+                                className: C.tag,
                                 children: e
                             },
                             t
@@ -168,7 +192,7 @@ function C(e) {
                 }),
             (0, r.jsxs)(l.Text, {
                 variant: 'text-xs/normal',
-                className: O.tagline,
+                className: C.tagline,
                 color: 'none',
                 lineClamp: 1,
                 children: [

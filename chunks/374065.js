@@ -1,7 +1,8 @@
 n.d(t, {
-    KF: () => _,
-    e4: () => p,
-    g5: () => h,
+    Hn: () => p,
+    KF: () => h,
+    e4: () => _,
+    g5: () => m,
     jy: () => f
 });
 var r = n(442837),
@@ -16,7 +17,7 @@ var r = n(442837),
     f = (function (e) {
         return (e[(e.CAN_LAUNCH = 0)] = 'CAN_LAUNCH'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.NO_CHANNEL = 3)] = 'NO_CHANNEL'), (e[(e.NO_GUILD = 4)] = 'NO_GUILD'), (e[(e.IS_AFK_CHANNEL = 5)] = 'IS_AFK_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), e;
     })({});
-function p(e) {
+function _(e) {
     let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: o } = e,
         a = n.getChannel(t);
     if (!(0, l.sq)() && null == a) return 3;
@@ -33,11 +34,20 @@ function p(e) {
     }
     return 0;
 }
-function _(e) {
+function p(e) {
+    return _({
+        channelId: e,
+        ChannelStore: i.Z,
+        GuildStore: o.Z,
+        PermissionStore: a.Z,
+        VoiceStateStore: s.Z
+    });
+}
+function h(e) {
     return (0, r.e7)(
         [i.Z, o.Z, a.Z, s.Z],
         () =>
-            p({
+            _({
                 channelId: e,
                 ChannelStore: i.Z,
                 GuildStore: o.Z,
@@ -47,7 +57,7 @@ function _(e) {
         [e]
     );
 }
-function h(e) {
+function m(e) {
     switch (e) {
         case 0:
             return d.NW.string(d.t.qJvTKS);
