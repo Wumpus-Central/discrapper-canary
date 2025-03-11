@@ -13,7 +13,7 @@ function s(e) {
     return (
         (0, r.useEffect)(() => {
             if (null == e) return;
-            let n = (t === a.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + '80';
+            let n = (t === a.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + (t === a.BR.LIGHT ? '33' : '80');
             o({
                 '--background-modifier-selected': n,
                 '--button-secondary-background-hover': n,
@@ -25,37 +25,35 @@ function s(e) {
         n
     );
 }
-function l(e, t, n, o) {
-    let a = (0, i.ZP)(),
-        [s, l] = (0, r.useState)({});
+function l(e, t, n, o, a) {
+    let s = (0, i.ZP)(),
+        [l, u] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
             if (null == e) return;
-            let r = c(e.palette, a, t, n);
+            let r = c(e.palette, s, t, n, a);
             if (null == o) {
-                l({ background: r });
+                u({ background: r });
                 return;
             }
             let i = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width;
-                l({
+                u({
                     background: r,
-                    maskImage: 'linear-gradient(to right, transparent '.concat(0.9 * t, 'px, black ').concat(1.1 * t, 'px)')
+                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(0.9 * t, 'px, rgba(0, 0, 0, 1) ').concat(1.5 * t, 'px)')
                 });
             });
             return i.observe(o), () => i.disconnect();
-        }, [e, t, n, a, o]),
-        s
+        }, [e, t, n, s, o, a]),
+        l
     );
 }
-function c(e, t, n, r) {
+function c(e, t, n, r, i) {
     if (!(0, o.ic)(e)) return;
-    let i = t === a.BR.LIGHT ? e.lightBackground : e.darkBackground,
-        s = n || r,
-        l = n ? 'var(--background-modifier-hover)' : r ? 'var(--background-modifier-selected)' : ''.concat(i, '00'),
-        c = ''.concat(i).concat(s ? '80' : '4D');
-    if (t !== a.BR.LIGHT) return 'linear-gradient(90deg, '.concat(l, ' 0%, ').concat(c, ' 100%)');
-    let u = 'linear-gradient(90deg, transparent, white)',
-        d = 'linear-gradient(90deg, '.concat(l, ' 0%, ').concat(c, ' 100%)');
-    return ''.concat(u, ', ').concat(d);
+    let s = t === a.BR.LIGHT ? e.lightBackground : e.darkBackground,
+        l = n || r;
+    if (i) return t === a.BR.LIGHT ? 'linear-gradient(90deg, '.concat(s, '1A 0%, ').concat(s, '4D 100%)') : 'linear-gradient(90deg, '.concat(s, '1A 0%, ').concat(s, '66 100%)');
+    let c = n ? 'var(--background-modifier-hover)' : r ? 'var(--background-modifier-selected)' : ''.concat(s, '00'),
+        u = ''.concat(s).concat(l ? '80' : '33');
+    return 'linear-gradient(90deg, '.concat(c, ' 0%, ').concat(u, ' 100%)');
 }

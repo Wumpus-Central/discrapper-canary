@@ -5,10 +5,10 @@ var r = n(120356),
     i = n.n(r),
     o = n(481060),
     a = n(686546),
-    s = n(119536);
+    s = n(796171);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: r, onClick: c, disabled: u, icon: d, iconForeground: E, innerClassName: f, className: h, redGlow: C, tooltipClassName: _, onMouseEnter: p, onMouseLeave: g, 'aria-label': O, 'aria-checked': T, role: I, tooltipColor: N, tooltipForceOpen: S, tooltipContentClassName: A } = e,
-        m =
+    let { tooltipText: t, children: n, onContextMenu: r, onClick: c, disabled: u, icon: d, iconForeground: E, innerClassName: f, className: h, redGlow: _, tooltipClassName: p, onMouseEnter: C, onMouseLeave: O, 'aria-label': g, 'aria-checked': T, role: I, tooltipColor: S, tooltipForceOpen: N, tooltipContentClassName: A, blurOnHover: b } = e,
+        v =
             'function' == typeof d
                 ? (0, l.jsx)(d, {
                       width: 20,
@@ -19,17 +19,17 @@ function c(e) {
                   })
                 : d;
     return (0, l.jsx)(o.ua7, {
-        tooltipClassName: _,
+        tooltipClassName: p,
         text: t,
-        'aria-label': O,
-        color: N,
+        'aria-label': g,
+        color: S,
         tooltipContentClassName: A,
-        forceOpen: S,
+        forceOpen: N,
         children: (e) => {
             var t,
                 d,
-                { onClick: E, onMouseEnter: _, onMouseLeave: O } = e,
-                N = (function (e, t) {
+                { onClick: E, onMouseEnter: p, onMouseLeave: g } = e,
+                S = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         l,
@@ -74,7 +74,7 @@ function c(e) {
                             });
                     }
                     return e;
-                })({}, N)),
+                })({}, S)),
                 (d = d =
                     {
                         look: o.zxk.Looks.BLANK,
@@ -83,18 +83,19 @@ function c(e) {
                         innerClassName: f,
                         wrapperClassName: i()(s.button, h),
                         className: i()(s.button, h, {
-                            [s.redGlow]: C,
+                            [s.redGlow]: _,
                             [s.disabled]: u,
-                            [s.enabled]: !u
+                            [s.enabled]: !u,
+                            [s.blur]: b
                         }),
                         onClick: (e) => {
                             null != E && E(), null != c && c(e);
                         },
                         onMouseEnter: () => {
-                            null == _ || _(), null == p || p();
+                            null == p || p(), null == C || C();
                         },
                         onMouseLeave: () => {
-                            null == O || O(), null == g || g();
+                            null == g || g(), null == O || O();
                         },
                         onContextMenu: r,
                         role: I,
@@ -105,9 +106,9 @@ function c(e) {
                                       width: 20,
                                       height: 20,
                                       mask: a.ZP.Masks.PANEL_BUTTON,
-                                      children: m
+                                      children: v
                                   })
-                                : m,
+                                : v,
                             n
                         ]
                     }),

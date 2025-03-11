@@ -151,16 +151,16 @@ let eY = ek.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     eq = 3 * eR.Z.Millis.SECOND,
     eX = 30 * eR.Z.Millis.DAY;
 function eJ(e) {
-    let { speaking: t, streaming: n, currentUser: i, status: s, handleMouseLeave: l, renderNameTag: o, nameplate: c, hovered: d } = e,
-        u = (0, G.Q3)('RTC Avatar'),
-        { coloredIconsEnabled: m } = (0, ed.Z)({ location: 'RTC Avatar' }),
-        p = (0, P.Z)(null == i ? void 0 : i.avatarDecoration),
-        g = (0, eA.NZ)({
-            avatarDecoration: p,
+    let { speaking: t, streaming: n, currentUser: i, status: s, handleMouseLeave: l, renderNameTag: o, nameplate: c, hovered: d, isSpeaking: u } = e,
+        m = (0, G.Q3)('RTC Avatar'),
+        { coloredIconsEnabled: p } = (0, ed.Z)({ location: 'RTC Avatar' }),
+        g = (0, P.Z)(null == i ? void 0 : i.avatarDecoration),
+        h = (0, eA.NZ)({
+            avatarDecoration: g,
             size: (0, R.y9)(f.EFr.SIZE_32)
         }),
-        h = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
-        b = (0, X.A)(c);
+        b = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
+        N = (0, X.A)(c);
     return null == i
         ? null
         : (0, r.jsx)(_.Z, {
@@ -193,19 +193,20 @@ function eJ(e) {
                   children: (e) =>
                       (0, r.jsxs)(
                           f.P3F,
-                          ez(eH({ style: b }, e), {
+                          ez(eH({ style: N }, e), {
                               'aria-label': eV.NW.string(eV.t['3Uj+2t']),
-                              className: a()(eG.avatarWrapper, !u && m && eG.experiment),
+                              className: a()(eG.avatarWrapper, !m && p && eG.experiment),
                               children: [
                                   (0, r.jsx)(J.Z, {
                                       nameplate: c,
                                       hovered: d,
-                                      reverse: !0
+                                      isSpeaking: u,
+                                      account: !0
                                   }),
                                   (0, r.jsx)(eY, {
-                                      size: u ? f.EFr['SIZE_'.concat(h)] : f.EFr.SIZE_32,
-                                      src: i.getAvatarURL(void 0, u ? h - 4 : 32, !1),
-                                      avatarDecoration: g,
+                                      size: m ? f.EFr['SIZE_'.concat(b)] : f.EFr.SIZE_32,
+                                      src: i.getAvatarURL(void 0, m ? b - 4 : 32, !1),
+                                      avatarDecoration: h,
                                       'aria-label': i.username,
                                       status: n ? eM.Skl.STREAMING : s,
                                       isSpeaking: t,
@@ -294,13 +295,15 @@ class eQ extends i.PureComponent {
               : l;
     }
     renderAvatarWithPopout() {
-        let { hovered: e } = this.state;
+        let { hovered: e } = this.state,
+            { speaking: t } = this.props;
         return (0, r.jsx)(
             eJ,
             ez(eH({}, this.props), {
                 hovered: e,
                 handleMouseLeave: this.handleMouseLeave,
-                renderNameTag: this.renderNameTag
+                renderNameTag: this.renderNameTag,
+                isSpeaking: t
             })
         );
     }
@@ -706,19 +709,21 @@ function e1(e) {
         children: () =>
             (0, r.jsx)(
                 eW.Z,
-                eH(
-                    {
-                        tooltipText: null != t ? eV.NW.formatToPlainString(eV.t.Gzh6ZG, { webBuildOverride: t.id }) : eV.NW.string(eV.t.cduTBA),
-                        onClick: i,
-                        onContextMenu: s,
-                        iconForeground: l,
-                        icon: (0, r.jsx)(o, {
-                            size: 'refresh_sm',
-                            color: 'currentColor',
-                            className: l
-                        })
-                    },
-                    d.events
+                ez(
+                    eH(
+                        {
+                            tooltipText: null != t ? eV.NW.formatToPlainString(eV.t.Gzh6ZG, { webBuildOverride: t.id }) : eV.NW.string(eV.t.cduTBA),
+                            onClick: i,
+                            onContextMenu: s,
+                            icon: (0, r.jsx)(o, {
+                                size: 'refresh_sm',
+                                color: 'currentColor',
+                                className: l
+                            })
+                        },
+                        d.events
+                    ),
+                    { blurOnHover: !0 }
                 )
             )
     });
@@ -797,7 +802,7 @@ function e2(e) {
                         onClick: _,
                         onContextMenu: V,
                         role: 'switch',
-                        className: U ? eG.micButtonWithMenu : void 0,
+                        className: a()({ [eG.micButtonWithMenu]: U }),
                         redGlow: j && L,
                         'aria-label': eV.NW.string(eV.t['w4m94+']),
                         'aria-checked': j,
@@ -846,43 +851,46 @@ function e2(e) {
                                         children: (e, t) =>
                                             (0, r.jsx)(
                                                 eW.Z,
-                                                eH(
-                                                    {
-                                                        tooltipForceOpen: z,
-                                                        tooltipColor: z ? f.FGA.GREEN : void 0,
-                                                        tooltipContentClassName: z ? eG.voiceFilterWarning : void 0,
-                                                        tooltipText: z
-                                                            ? (0, r.jsxs)(r.Fragment, {
-                                                                  children: [
-                                                                      (0, r.jsx)('img', {
-                                                                          alt: null != I ? eV.NW.string(I.name) : '',
-                                                                          src: null == I ? void 0 : I.iconURL,
-                                                                          draggable: !1
-                                                                      }),
-                                                                      (0, r.jsx)(f.Text, {
-                                                                          variant: 'text-sm/medium',
-                                                                          children: eV.NW.string(eV.t.VlC1dX)
-                                                                      })
-                                                                  ]
-                                                              })
-                                                            : eV.NW.string(eV.t.Hapb4O),
-                                                        icon: (0, r.jsx)(a, {
-                                                            className: eG.buttonChevronIcon,
-                                                            size: 'custom',
-                                                            width: 12,
-                                                            height: 12,
-                                                            color: L && j ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
-                                                        }),
-                                                        role: 'button',
-                                                        className: eG.buttonChevron,
-                                                        redGlow: j && L,
-                                                        'aria-label': eV.NW.string(eV.t.Hapb4O),
-                                                        disabled: c,
-                                                        onClick: (e) => {
-                                                            null == t || t(), n(e), F(!G);
-                                                        }
-                                                    },
-                                                    i
+                                                ez(
+                                                    eH(
+                                                        {
+                                                            tooltipForceOpen: z,
+                                                            tooltipColor: z ? f.FGA.GREEN : void 0,
+                                                            tooltipContentClassName: z ? eG.voiceFilterWarning : void 0,
+                                                            tooltipText: z
+                                                                ? (0, r.jsxs)(r.Fragment, {
+                                                                      children: [
+                                                                          (0, r.jsx)('img', {
+                                                                              alt: null != I ? eV.NW.string(I.name) : '',
+                                                                              src: null == I ? void 0 : I.iconURL,
+                                                                              draggable: !1
+                                                                          }),
+                                                                          (0, r.jsx)(f.Text, {
+                                                                              variant: 'text-sm/medium',
+                                                                              children: eV.NW.string(eV.t.VlC1dX)
+                                                                          })
+                                                                      ]
+                                                                  })
+                                                                : eV.NW.string(eV.t.Hapb4O),
+                                                            icon: (0, r.jsx)(a, {
+                                                                className: eG.buttonChevronIcon,
+                                                                size: 'custom',
+                                                                width: 12,
+                                                                height: 12,
+                                                                color: L && j ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
+                                                            }),
+                                                            role: 'button',
+                                                            className: eG.buttonChevron,
+                                                            redGlow: j && L,
+                                                            'aria-label': eV.NW.string(eV.t.Hapb4O),
+                                                            disabled: c,
+                                                            onClick: (e) => {
+                                                                null == t || t(), n(e), F(!G);
+                                                            }
+                                                        },
+                                                        i
+                                                    ),
+                                                    { blurOnHover: !0 }
                                                 )
                                             )
                                     })
@@ -933,7 +941,8 @@ function e6(e) {
             redGlow: N && d,
             'aria-label': eV.NW.string(eV.t.wjcRFR),
             'aria-checked': d,
-            disabled: s
+            disabled: s,
+            blurOnHover: !0
         })
     });
 }
