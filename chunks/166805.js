@@ -22,8 +22,8 @@ function v(e) {
         { guildProfile: c, fetchGuildProfile: g, fetchStatus: v } = (0, m.u)(t),
         _ = v !== u.a.FETCHED,
         {
-            fetchedEmbed: O,
-            embedEnabled: y,
+            fetchedEmbed: y,
+            embedEnabled: O,
             embedChannelId: C
         } = (0, l.cj)([h.Z], () => {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.Z.getProps();
@@ -36,30 +36,31 @@ function v(e) {
         I = i.useMemo(() => (0, b.S)(t), [t]),
         E = i.useMemo(() => (0, b.a)(t), [t]),
         [S, T] = i.useState(!1),
-        P = !_ && (null == c ? void 0 : c.visibility) !== s.k.PUBLIC && !y;
+        P = null != c && s.Y.VISIBLE.has(c.visibility),
+        w = !_ && !P && !O;
     i.useEffect(() => {
-        O || (0, p.R)(t);
-    }, [O, t]),
+        y || (0, p.R)(t);
+    }, [y, t]),
         i.useEffect(() => {
             g();
         }, [t, g]);
-    let w = i.useCallback(
+    let R = i.useCallback(
         async (e) => {
             T(!0), await (0, f.c)(t, e, C), T(!1);
         },
         [C, t]
     );
-    return O
+    return y
         ? (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)(o.j7V, {
                       disabled: S,
-                      value: y,
+                      value: O,
                       hideBorder: !0,
-                      onChange: w,
+                      onChange: R,
                       children: j.NW.string(j.t.NR6hub)
                   }),
-                  P
+                  w
                       ? (0, r.jsx)(a.xv, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
@@ -67,14 +68,14 @@ function v(e) {
                             children: j.NW.string(j.t.zCGuJy)
                         })
                       : null,
-                  y
+                  O
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', { className: N.divider }),
                                 (0, r.jsx)(o.vwX, { children: j.NW.string(j.t.LUo0Q0) }),
                                 (0, r.jsx)(x.m, {
                                     guildId: t,
-                                    widgetEnabled: y,
+                                    widgetEnabled: O,
                                     widgetChannelId: C,
                                     enableLocalUpdate: !0
                                 }),
