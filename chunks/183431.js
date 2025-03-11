@@ -9,13 +9,15 @@ var r = n(200651),
 function d(e) {
     let { channelId: t } = e,
         n = (0, s.l6)(),
-        d = i.useCallback(() => {
+        d = (0, s.L5)(),
+        u = i.useCallback(() => {
             o.Z.showAgeVerificationGetStartedModal(l.cU.SYSTEM_DM_RETRY_BUTTON), (0, l.Z7)(l.io.RETRY, t);
         }, [t]);
     return (0, r.jsx)(a.zxk, {
         size: a.zxk.Sizes.MEDIUM,
         color: a.zxk.Colors.BRAND,
-        onClick: d,
+        onClick: u,
+        disabled: !d,
         children: n ? c.NW.string(c.t['+2/AhI']) : c.NW.string(c.t.WiSJBA)
     });
 }

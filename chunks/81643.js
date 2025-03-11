@@ -2,8 +2,8 @@ n.d(t, {
     Jm: () => _,
     L5: () => f,
     WD: () => m,
-    WN: () => h,
-    l6: () => g,
+    l6: () => h,
+    pY: () => p,
     sf: () => d
 }),
     n(301563),
@@ -34,10 +34,7 @@ function p(e, t) {
     let r = n.embeds[0].fields.find((e) => 'ctas' === e.rawName);
     return null == r ? void 0 : r.rawValue.split(',').includes('retry');
 }
-function h(e, t) {
-    return f() && p(e, t);
-}
-function g() {
+function h() {
     let e = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED;
 }
