@@ -2,7 +2,7 @@ n.d(t, { k: () => d });
 var r = n(200651),
     i = n(192379),
     o = n(1561),
-    a = n(736271);
+    a = n(461925);
 function s(e, t, n) {
     return (
         t in e
@@ -56,28 +56,29 @@ function u(e, t) {
     );
 }
 let d = i.forwardRef(function (e, t) {
-    let { tag: n = 'div', children: s, className: c, style: d, focusProps: f, onClick: p, onDoubleClick: _, onContextMenu: h, onKeyDown: m, onFocus: g, onBlur: E, onMouseOver: v, onMouseDown: b, onMouseLeave: y, buttonProps: O, 'aria-label': S } = e,
-        I = i.useRef(null);
+    let { tag: n = 'div', children: s, className: c, style: d, focusProps: f, onClick: _, onDoubleClick: p, onContextMenu: h, onKeyDown: m, onFocus: g, onBlur: E, onMouseOver: v, onMouseDown: b, onMouseLeave: y, buttonProps: O, 'aria-label': I } = e,
+        S = i.useRef(null);
     return (
-        i.useImperativeHandle(t, () => I.current),
+        i.useImperativeHandle(t, () => S.current),
         (0, r.jsxs)(n, {
-            ref: I,
+            ref: S,
             className: c,
             style: d,
-            onClick: p,
+            onClick: _,
             onMouseOver: v,
             onMouseLeave: y,
-            onDoubleClick: _,
+            onDoubleClick: p,
+            onMouseDown: b,
             onContextMenu: h,
             children: [
                 (0, r.jsx)(
                     o.P,
                     u(l({}, O), {
-                        focusProps: l({ ringTarget: I }, f),
+                        focusProps: l({ ringTarget: S }, f),
                         className: a.focusTarget,
-                        'aria-label': S,
+                        'aria-label': I,
                         onClick: (e) => {
-                            e.stopPropagation(), null == p || p(e);
+                            e.stopPropagation(), null == _ || _(e);
                         },
                         onKeyDown: m,
                         onFocus: g,
