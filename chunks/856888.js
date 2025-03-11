@@ -1,22 +1,19 @@
-n.d(t, { Z: () => p }), n(230036), n(47120);
+n.d(t, { Z: () => u }), n(230036), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(442837),
     a = n(481060),
-    l = n(325997),
-    o = n(78839),
-    c = n(270144),
-    d = n(851718),
-    u = n(238847),
-    m = n(388032),
-    g = n(860461);
-function p(e) {
+    l = n(78839),
+    o = n(851718),
+    c = n(388032),
+    d = n(250076);
+function u(e) {
     let { onGoBack: t } = e,
-        n = (0, s.Wu)([o.ZP], () => {
+        n = (0, s.Wu)([l.ZP], () => {
             var e, t;
             return null !==
                 (t =
-                    null === (e = o.ZP.getActiveApplicationSubscriptions()) || void 0 === e
+                    null === (e = l.ZP.getActiveApplicationSubscriptions()) || void 0 === e
                         ? void 0
                         : e.slice().sort((e, t) => {
                               var n, r, i, s;
@@ -25,43 +22,40 @@ function p(e) {
                 ? t
                 : [];
         }),
-        { enabled: a } = l.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
-        [c, u] = i.useState();
+        [a, u] = i.useState();
     return (
-        null == c &&
-            (c = (0, r.jsx)(h, {
+        null == a &&
+            (a = (0, r.jsx)(m, {
                 onBack: t,
-                title: m.NW.string(m.t['DB/m9f'])
+                title: c.NW.string(c.t['DB/m9f'])
             })),
         (0, r.jsxs)('div', {
             children: [
-                c,
+                a,
                 (0, r.jsx)('div', {
-                    className: g.subscriptionsContainer,
-                    children: a
-                        ? (0, r.jsx)(d.Z, {
-                              subscriptions: n,
-                              updateHeader: (e, t) => {
-                                  u(
-                                      (0, r.jsx)(h, {
-                                          title: e,
-                                          onBack: () => {
-                                              t(), u(void 0);
-                                          }
-                                      })
-                                  );
-                              }
-                          })
-                        : (0, r.jsx)(f, { subscriptions: n })
+                    className: d.subscriptionsContainer,
+                    children: (0, r.jsx)(o.Z, {
+                        subscriptions: n,
+                        updateHeader: (e, t) => {
+                            u(
+                                (0, r.jsx)(m, {
+                                    title: e,
+                                    onBack: () => {
+                                        t(), u(void 0);
+                                    }
+                                })
+                            );
+                        }
+                    })
                 })
             ]
         })
     );
 }
-function h(e) {
+function m(e) {
     let { onBack: t, title: n } = e;
     return (0, r.jsxs)('div', {
-        className: g.title,
+        className: d.title,
         children: [
             (0, r.jsx)(a.zxk, {
                 look: a.zxk.Looks.BLANK,
@@ -75,10 +69,4 @@ function h(e) {
             })
         ]
     });
-}
-function f(e) {
-    let { subscriptions: t } = e,
-        { loading: n } = (0, c.sp)(t),
-        { loadState: i } = (0, c.qz)();
-    return n || i !== c.jd.LOADED ? (0, r.jsx)(a.$jN, {}) : t.map((e) => (0, r.jsx)(u.Z, { subscription: e }, e.id));
 }
