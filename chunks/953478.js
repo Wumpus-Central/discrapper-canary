@@ -1,4 +1,4 @@
-t.d(n, { Z: () => h });
+t.d(n, { Z: () => _ });
 var r = t(200651);
 t(192379);
 var i = t(793030),
@@ -6,8 +6,8 @@ var i = t(793030),
     a = t(481060),
     s = t(678558),
     l = t(413335),
-    c = t(690221),
-    d = t(430824),
+    c = t(430824),
+    d = t(63063),
     u = t(317169),
     v = t(639660),
     p = t(767218),
@@ -15,10 +15,10 @@ var i = t(793030),
     b = t(730621),
     m = t(388032),
     j = t(785947);
-function h(e) {
+function _(e) {
     let { guildId: n } = e,
-        t = (0, o.e7)([d.Z], () => d.Z.getGuild(n)),
-        { available: h, spent: _, total: f } = (0, u.Z)(n);
+        t = (0, o.e7)([c.Z], () => c.Z.getGuild(n)),
+        { available: _, spent: h, total: f } = (0, u.Z)(n);
     if (null != t)
         return (0, r.jsxs)('div', {
             className: j.container,
@@ -30,13 +30,10 @@ function h(e) {
                             variant: 'eyebrow',
                             children: m.NW.string(b.Z.hjvcLC)
                         }),
-                        (0, r.jsx)(c.Z, {
-                            onClick: () => {},
-                            children: (0, r.jsx)(i.xv, {
-                                variant: 'text-xs/semibold',
-                                color: 'currentColor',
-                                children: m.NW.string(m.t.hvVgAQ)
-                            })
+                        (0, r.jsx)(i.xv, {
+                            className: j.learnMore,
+                            variant: 'text-xs/semibold',
+                            children: m.NW.format(b.Z.fXE30d, { helpDeskArticle: d.Z.getArticleURL(x.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
@@ -44,11 +41,11 @@ function h(e) {
                     className: j.contentContainer,
                     children: [
                         (0, r.jsx)(p.Z, {
-                            count: h,
+                            count: _,
                             type: p.b.AVAILABLE
                         }),
                         (0, r.jsx)(p.Z, {
-                            count: _,
+                            count: h,
                             type: p.b.SPENT
                         }),
                         (0, r.jsx)(p.Z, {
@@ -62,8 +59,8 @@ function h(e) {
                     className: j.boostButton,
                     guild: t,
                     analyticsLocation: {
-                        page: x.ZY5.POWERUPS_OVERVIEW,
-                        section: x.jXE.POWERUPS_OVERVIEW_SIDEABAR
+                        page: x.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: x.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                     },
                     color: a.Ttl.CUSTOM,
                     size: a.PhG.LARGE,
