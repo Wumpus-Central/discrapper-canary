@@ -109,6 +109,9 @@ class O extends f.Z {
                 }
             ]));
     }
+    setRemoteAudioHistory(e) {
+        this.enableAudioNack = e > 0;
+    }
     setSDP(e) {
         if (!(0, p.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
         if ('have-local-offer' !== this.signalingState) throw Error('Invalid signaling state '.concat(this.signalingState));
@@ -287,7 +290,8 @@ class O extends f.Z {
                 sendingVideo: u,
                 rtxPayloadType: d,
                 ssrcs: _,
-                extensions: this.extensions
+                extensions: this.extensions,
+                enableAudioNack: this.enableAudioNack
             })
         };
     }
@@ -350,6 +354,7 @@ class O extends f.Z {
             g(this, 'videoCodec', null),
             g(this, 'videoPayloadType', null),
             g(this, 'rtxPayloadType', null),
+            g(this, 'enableAudioNack', !1),
             g(this, 'extensions', []),
             g(this, 'codecs', []),
             g(this, 'logger', void 0),
