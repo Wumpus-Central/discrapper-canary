@@ -75,7 +75,6 @@ n.r(
         marketingButtonBackground: 'marketingButtonBackground__4ed1a',
         marketingButtonBackgroundImage: 'marketingButtonBackgroundImage__4ed1a',
         marketingButtonImage: 'marketingButtonImage__4ed1a',
-        marketingButtonImageHovered: 'marketingButtonImageHovered__4ed1a',
-        tideButton: 'tideButton__4ed1a'
+        marketingButtonImageHovered: 'marketingButtonImageHovered__4ed1a'
     })
 );
