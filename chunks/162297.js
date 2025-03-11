@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(220082),
     y = n(749681),
     x = n(258971),
-    E = n(240991),
-    O = n(592125),
+    O = n(240991),
+    E = n(592125),
     j = n(496675),
     N = n(944486),
     C = n(914010),
@@ -74,43 +74,46 @@ function F(e) {
                 }),
             [n]
         ),
-        F = i.useMemo(() => (null != W ? (0, E.parseBioReact)(W) : null), [W]),
+        F = i.useMemo(() => (null != W ? (0, O.parseBioReact)(W) : null), [W]),
         [B, G] = i.useState(!1),
         H = i.useCallback((e) => {
             e && G(!0);
         }, []),
-        V = (0, c.O)(H);
-    i.useEffect(() => {
-        B &&
+        V = (0, c.O)(H),
+        z = i.useCallback(() => {
             (0, h.h)({
                 type: a.ImpressionTypes.VIEW,
                 name: a.ImpressionNames.APP_OAUTH2_LINK_EMBED,
                 properties: { application_id: n.id }
             });
-    }, [B, n]);
-    let z = (0, S.TK)(n.id, (0, b.PL)(!0, !1)),
-        K = (0, S.TK)(n.id, (0, b.LD)(I, !1)),
-        Y = z || K,
-        X = n.isVerified && n.isDiscoverable,
-        q = (0, l.e7)([N.Z, O.Z], () => O.Z.getChannel(N.Z.getChannelId())),
-        Q = (0, l.e7)([j.Z], () => (null == q ? void 0 : q.isPrivate()) || j.Z.can(Z.Plq.SEND_MESSAGES, q)),
-        { analyticsLocations: J } = (0, f.ZP)(p.Z.APP_OAUTH2_LINK_EMBED),
-        $ = async () => {
+        }, [n.id]);
+    i.useEffect(() => {
+        B && z();
+    }, [B, z]);
+    let K = (0, S.TK)(n.id, (0, b.PL)(!0, !1)),
+        Y = (0, S.TK)(n.id, (0, b.LD)(I, !1)),
+        X = K || Y,
+        q = n.isVerified && n.isDiscoverable,
+        Q = (0, l.e7)([N.Z, E.Z], () => E.Z.getChannel(N.Z.getChannelId())),
+        J = (0, l.e7)([j.Z], () => (null == Q ? void 0 : Q.isPrivate()) || j.Z.can(Z.Plq.SEND_MESSAGES, Q)),
+        { analyticsLocations: $ } = (0, f.ZP)(p.Z.APP_OAUTH2_LINK_EMBED),
+        ee = async () => {
             if (null != u)
                 try {
                     await (0, _.W)({
                         appId: n.id,
                         botId: u,
-                        analyticsLocations: J
+                        analyticsLocations: $
                     });
                 } catch (e) {}
         },
-        { enabled: ee } = A.G.useExperiment({ location: 'ApplicationOAuth2Embed' });
-    return ee
+        { enabled: et } = A.G.useExperiment({ location: 'ApplicationOAuth2Embed' });
+    return et
         ? (0, r.jsx)(w.O, {
               app: n,
               embedUrl: d,
-              linkType: w.U.OAUTH
+              linkType: w.U.OAUTH,
+              onView: z
           })
         : (0, r.jsxs)('div', {
               ref: V,
@@ -154,18 +157,18 @@ function F(e) {
                                           color: s.zxk.Colors.BRAND,
                                           type: 'button',
                                           size: s.zxk.Sizes.MEDIUM,
-                                          onClick: $,
+                                          onClick: ee,
                                           children: R.NW.string(R.t.RscU7O)
                                       }),
-                                  (Y || X) &&
-                                      Q &&
+                                  (X || q) &&
+                                      J &&
                                       (0, r.jsx)(s.zxk, {
                                           color: v ? s.zxk.Colors.PRIMARY : s.zxk.Colors.BRAND,
                                           type: 'button',
                                           size: s.zxk.Sizes.MEDIUM,
                                           onClick: () => {
                                               var e;
-                                              o.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || Y
+                                              o.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || X
                                                   ? (0, g.X)(n.id)
                                                   : (0, y.transitionToGlobalDiscovery)({
                                                         tab: k.GlobalDiscoveryTab.APPS,
@@ -179,7 +182,7 @@ function F(e) {
                                           children: R.NW.string(R.t.fbcCzc)
                                       }),
                                   !v &&
-                                      !Y &&
+                                      !X &&
                                       (0, r.jsx)(s.zxk, {
                                           color: s.zxk.Colors.PRIMARY,
                                           type: 'button',

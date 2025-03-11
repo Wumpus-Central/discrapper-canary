@@ -94,27 +94,25 @@ function k(e) {
         en = (0, i._)(M),
         { data: er, error: ei } = (0, j.h)(null == F ? void 0 : F.id, en);
     if (null == F || !1 === G) return null;
-    if (null != M && null == ei)
-        return null == er
-            ? null
-            : (0, r.jsx)(S.b, {
+    if (et)
+        return null != M && null == ei && null != er
+            ? (0, r.jsx)(S.b, {
                   application: F,
                   customId: R,
                   customLink: er,
                   embedUrl: L,
                   referrerId: D
+              })
+            : (0, r.jsx)(d.Gt, {
+                  value: W,
+                  children: (0, r.jsx)(g.O, {
+                      app: F,
+                      embedUrl: L,
+                      linkType: g.U.ACTIVITY,
+                      activityCustomId: R,
+                      activityReferrerId: D
+                  })
               });
-    if (et)
-        return (0, r.jsx)(d.Gt, {
-            value: W,
-            children: (0, r.jsx)(g.O, {
-                app: F,
-                embedUrl: L,
-                linkType: g.U.ACTIVITY,
-                activityCustomId: R,
-                activityReferrerId: D
-            })
-        });
     let ea = K ? (null == V ? P.NW.string(P.t.cnBQPD) : P.NW.string(P.t.VJlc0d)) : P.NW.string(P.t.JeK1Wl),
         eo = z ? P.NW.string(P.t.wJNK8P) : void 0,
         el = (e) => {

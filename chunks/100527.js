@@ -274,6 +274,7 @@ var r = (function (e) {
         (e.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL = 'premium marketing announcement modal'),
         (e.PREMIUM_MARKETING_PAGE_BANNER = 'premium marketing page banner'),
         (e.ACTIVITY_BOOKMARK = 'activity bookmark'),
+        (e.ACTIVITY_CUSTOM_LINK = 'activity custom link'),
         (e.ACTIVITY_BOOKMARK_LAUNCHER = 'activity bookmark launcher'),
         (e.ACTIVITY_INSTANCE_EMBED = 'activity instance embed'),
         (e.ACTIVITY_DETAIL_PAGE = 'activity detail page'),

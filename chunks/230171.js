@@ -31,91 +31,84 @@ var r = n(200651),
     N = n(388032),
     C = n(390101);
 function I(e) {
-    let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: h } = e,
-        { name: b, bot: C } = (t = (0, O.O)(t)),
-        I = null == C ? void 0 : C.id,
-        P = (0, p.ye)(t),
-        A = _.ZP.getApplicationIconURL({
+    let { app: t, embedUrl: n, linkType: a, activityCustomId: l, activityReferrerId: h, onView: b } = e,
+        { name: C, bot: I } = (t = (0, O.O)(t)),
+        P = null == I ? void 0 : I.id,
+        A = (0, p.ye)(t),
+        w = _.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
-            bot: C
+            bot: I
         }),
-        { staticBannerSrc: w, videoBannerSrc: Z, bannerAspectRatio: k } = (0, E.E)(t),
-        R = (0, o.e7)([g.default], () => (null != h ? h : g.default.getId()), [h]),
-        { analyticsLocations: D } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
-        L = i.useCallback(
-            (e) => {
-                (0, x.KX)(t.id, a, e, R, l);
-            },
-            [l, R, t.id, a]
-        ),
-        M = i.useCallback(() => {
-            (0, x.GF)(t.id, a, R, l);
-        }, [l, R, t.id, a]),
-        W = i.useCallback(() => {
-            (0, x.Yu)(t.id, a);
-        }, [t.id, a]),
-        { currentChannelId: F, instanceId: U, isCurrentlyInInstance: B, canLaunchInChannel: G } = (0, v.c)(t.id),
-        H = (0, c.Z)(),
-        V = (0, f.ms)({
+        { staticBannerSrc: Z, videoBannerSrc: k, bannerAspectRatio: R } = (0, E.E)(t),
+        D = (0, o.e7)([g.default], () => (null != h ? h : g.default.getId()), [h]),
+        { analyticsLocations: L } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { currentChannelId: M, instanceId: W, isCurrentlyInInstance: F, canLaunchInChannel: U } = (0, v.c)(t.id),
+        B = (0, c.Z)(),
+        G = (0, f.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
-            botUserId: null == C ? void 0 : C.id
+            botUserId: null == I ? void 0 : I.id
         }),
-        z = null != I && P && V,
-        K = (0, j.z)(t, L),
-        Y = i.useMemo(() => {
+        H = null != P && A && G,
+        V = (0, j.z)(t),
+        z = i.useMemo(() => {
             let e = [];
             return (
-                G &&
+                U &&
                     e.push({
-                        label: null == U ? N.NW.string(N.t.cnBQPD) : N.NW.string(N.t.VJlc0d),
+                        label: null == W ? N.NW.string(N.t.cnBQPD) : N.NW.string(N.t.VJlc0d),
+                        trackingArea: x.j_.PLAY,
                         onClick() {
                             (0, s.G6)({
-                                channelId: null != F ? F : void 0,
+                                channelId: null != M ? M : void 0,
                                 applicationId: t.id,
-                                isStart: null == U,
-                                instanceId: null != U ? U : void 0,
-                                embeddedActivitiesManager: H,
+                                isStart: null == W,
+                                instanceId: null != W ? W : void 0,
+                                embeddedActivitiesManager: B,
                                 customId: l,
-                                referrerId: R,
-                                analyticsLocations: D
-                            }),
-                                L(x.j_.PLAY);
+                                referrerId: D,
+                                analyticsLocations: L
+                            });
                         },
-                        disabledReason: B ? N.NW.string(N.t.wJNK8P) : void 0
+                        disabledReason: F ? N.NW.string(N.t.wJNK8P) : void 0
                     }),
-                !G &&
-                    z &&
+                !U &&
+                    H &&
                     e.push({
                         label: N.NW.string(N.t.JeK1Wl),
+                        trackingArea: x.j_.PLAY,
                         onClick() {
                             (0, m.W)({
                                 appId: t.id,
-                                botId: I,
-                                analyticsLocations: D,
+                                botId: P,
+                                analyticsLocations: L,
                                 customId: l,
-                                referrerId: R
-                            }),
-                                L(x.j_.PLAY);
+                                referrerId: D
+                            });
                         }
                     }),
-                null != K && e.push(K),
+                null != V && e.push(V),
                 e
             );
-        }, [l, D, t.id, I, z, G, F, H, U, B, R, L, K]),
-        X = P ? (0, r.jsx)(T, { app: t }) : (0, r.jsx)(S, { app: t });
+        }, [U, H, V, W, F, M, t.id, B, l, D, L, P]),
+        K = A ? (0, r.jsx)(T, { app: t }) : (0, r.jsx)(S, { app: t });
     return (0, r.jsx)(y.W, {
-        title: b,
-        staticBannerSrc: w,
-        videoBannerSrc: Z,
-        bannerAspectRatio: k,
-        iconSrc: A,
+        title: C,
+        staticBannerSrc: Z,
+        videoBannerSrc: k,
+        bannerAspectRatio: R,
+        iconSrc: w,
         embedUrl: n,
-        info: X,
-        actions: Y,
-        onView: M,
-        onLinkCopied: W
+        info: K,
+        actions: z,
+        trackingConfig: {
+            id: t.id,
+            linkType: a,
+            referrerId: D,
+            activityCustomId: l,
+            onView: b
+        }
     });
 }
 function S(e) {
