@@ -2365,6 +2365,7 @@ var N =
     (r.APP_EMBED_VIEWED = 'app_embed_viewed'),
     (r.APP_EMBED_CLICKED = 'app_embed_clicked'),
     (r.APP_EMBED_LINK_COPIED = 'app_embed_link_copied'),
+    (r.APP_EMBED_LINK_SENT = 'app_embed_link_sent'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),
