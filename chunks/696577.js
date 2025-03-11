@@ -91,32 +91,34 @@ function I(e) {
     });
 }
 function C(e) {
-    let { isGameRelationship: t, applicationId: n, userTag: o } = e,
-        s = i.useMemo(() => (t ? N.NW.string(N.t['Uv/eT0']) : o), [t, o]),
-        p = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
+    let { isGameRelationship: t, applicationId: n, userTag: o, isProvisional: s } = e,
+        p = i.useMemo(() => (t ? N.NW.string(N.t['Uv/eT0']) : o), [t, o]),
+        h = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)('div', {
         className: v.applicationSublabel,
         children: [
-            (0, r.jsx)(a.Text, {
-                variant: 'text-sm/medium',
-                color: 'text-secondary',
-                children: s
-            }),
-            null != p &&
+            !s &&
+                (0, r.jsx)(a.Text, {
+                    variant: 'text-sm/medium',
+                    color: 'text-secondary',
+                    children: p
+                }),
+            null != h &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(d.Z, {
-                            height: 2,
-                            width: 2
-                        }),
+                        !s &&
+                            (0, r.jsx)(d.Z, {
+                                height: 2,
+                                width: 2
+                            }),
                         (0, r.jsx)(u.Z, {
-                            game: p,
+                            game: h,
                             size: u.Z.Sizes.XXSMALL
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-secondary',
-                            children: p.name
+                            children: h.name
                         })
                     ]
                 })
@@ -130,9 +132,10 @@ function S(e) {
         user: t,
         hovered: n,
         status: i,
-        showAccountIdentifier: !l,
+        showAccountIdentifier: !l && !t.isProvisional,
         subText: (0, r.jsx)(C, {
             isGameRelationship: l,
+            isProvisional: t.isProvisional,
             applicationId: o,
             userTag: a
         })
