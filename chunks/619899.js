@@ -113,6 +113,7 @@ let p = (0, r.U)((e) => ({
                         o = a({}, e.assets);
                     return (
                         (o[t] = {
+                            type: t,
                             name: n.name,
                             src: i
                         }),

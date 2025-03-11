@@ -1,4 +1,4 @@
-n.d(t, { k: () => I }), n(47120);
+n.d(t, { k: () => S }), n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(274312),
@@ -14,36 +14,39 @@ var r = n(200651),
     h = n(675478),
     g = n(581883),
     _ = n(585483),
-    b = n(400445),
-    v = n(153209),
-    y = n(956961),
-    x = n(903672),
+    b = n(932232),
+    v = n(400445),
+    y = n(153209),
+    x = n(956961),
+    E = n(903672),
     O = n(711165),
-    E = n(946443),
-    j = n(264233),
-    N = n(981631),
-    C = n(388032);
-function I(e) {
-    let { onOpen: t, onClose: n, children: I, badgeState: S, popoutPosition: P, popoutAlign: T } = e,
-        { analyticsLocations: A } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
-        [w, Z] = i.useState(!1),
-        [k, R] = [
-            (0, o.e7)([g.Z], () => {
-                var e, t;
-                return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
-            }),
-            i.useCallback((e) => {
-                h.hW.updateAsync(
-                    'inbox',
-                    (t) => {
-                        if (t.currentTab === e) return !1;
-                        t.currentTab = e;
-                    },
-                    h.fy.FREQUENT_USER_ACTION
-                );
-            }, [])
-        ],
-        { showTutorial: L, setSeenTutorial: D } = (function (e) {
+    j = n(946443),
+    N = n(264233),
+    C = n(981631),
+    I = n(388032);
+function S(e) {
+    let { onOpen: t, onClose: n, children: S, badgeState: T, popoutPosition: P, popoutAlign: A } = e,
+        { analyticsLocations: w } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+        [Z, k] = i.useState(!1),
+        [R, D] = (function () {
+            let { showForYouTab: e } = b.V.useExperiment({ location: 'RecentsPopout' }),
+                t = (0, o.e7)([g.Z], () => {
+                    var e, t;
+                    return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
+                }),
+                n = i.useCallback((e) => {
+                    h.hW.updateAsync(
+                        'inbox',
+                        (t) => {
+                            if (t.currentTab === e) return !1;
+                            t.currentTab = e;
+                        },
+                        h.fy.FREQUENT_USER_ACTION
+                    );
+                }, []);
+            return e || t !== l.X.FOR_YOU || ((t = l.X.UNREADS), n(l.X.UNREADS)), [t, n];
+        })(),
+        { showTutorial: L, setSeenTutorial: M } = (function (e) {
             let t = (0, o.e7)([g.Z], () => {
                     var e, t;
                     return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
@@ -61,89 +64,89 @@ function I(e) {
                 showTutorial: !t && e === l.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(k),
-        M = i.useCallback(() => {
-            Z(!1), w && (null == n || n());
-        }, [n, w]),
+        })(R),
         W = i.useCallback(() => {
-            Z(!w), w ? null == n || n() : null == t || t();
-        }, [n, t, w]);
-    i.useEffect(() => (_.S.subscribe(N.CkL.TOGGLE_INBOX, W), () => void _.S.unsubscribe(N.CkL.TOGGLE_INBOX, W)), [W]);
-    let { showReminders: F } = f.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: U, inInbox: B } = p.Z.useExperiment({ location: 'RecentsPopout' }),
-        G = (0, o.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && U && B,
-        { enabled: H } = u.Z.useExperiment({ location: 'RecentsPopout' });
+            k(!1), Z && (null == n || n());
+        }, [n, Z]),
+        F = i.useCallback(() => {
+            k(!Z), Z ? null == n || n() : null == t || t();
+        }, [n, t, Z]);
+    i.useEffect(() => (_.S.subscribe(C.CkL.TOGGLE_INBOX, F), () => void _.S.unsubscribe(C.CkL.TOGGLE_INBOX, F)), [F]);
+    let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: B, inInbox: G } = p.Z.useExperiment({ location: 'RecentsPopout' }),
+        H = (0, o.e7)([m.Z], () => m.Z.hasOverdueReminder(), []) && B && G,
+        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
-        (((!F || (U && B)) && k === l.X.TODOS) || (k === l.X.BOOKMARKS && !(U || B))) && R(l.X.MENTIONS);
+        (((!U || (B && G)) && R === l.X.TODOS) || (R === l.X.BOOKMARKS && !(B || G))) && D(l.X.MENTIONS);
     });
-    let V = i.useCallback(
+    let z = i.useCallback(
         (e) => {
-            e.shiftKey || M();
+            e.shiftKey || W();
         },
-        [M]
+        [W]
     );
     return (0, r.jsx)(d.Gt, {
-        value: A,
+        value: w,
         children: (0, r.jsx)(s.yRy, {
             animation: s.yRy.Animation.NONE,
             position: P,
-            align: T,
+            align: A,
             autoInvert: !1,
-            shouldShow: w,
-            onRequestClose: M,
+            shouldShow: Z,
+            onRequestClose: W,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': C.NW.string(C.t.GSmTKC),
+                    'aria-label': I.NW.string(I.t.GSmTKC),
                     children:
-                        k === l.X.FOR_YOU
-                            ? (0, r.jsx)(v.Z, {
-                                  setTab: R,
-                                  badgeState: S,
-                                  closePopout: M
+                        R === l.X.FOR_YOU
+                            ? (0, r.jsx)(y.Z, {
+                                  setTab: D,
+                                  badgeState: T,
+                                  closePopout: W
                               })
-                            : k === l.X.MENTIONS
-                              ? (0, r.jsx)(x.Z, {
-                                    setTab: R,
-                                    onJump: V,
-                                    badgeState: S,
-                                    closePopout: M
+                            : R === l.X.MENTIONS
+                              ? (0, r.jsx)(E.Z, {
+                                    setTab: D,
+                                    onJump: z,
+                                    badgeState: T,
+                                    closePopout: W
                                 })
-                              : H && k === l.X.GAME_INVITES
-                                ? (0, r.jsx)(j.Z, {
-                                      setTab: R,
-                                      badgeState: S,
-                                      closePopout: M
+                              : V && R === l.X.GAME_INVITES
+                                ? (0, r.jsx)(N.Z, {
+                                      setTab: D,
+                                      badgeState: T,
+                                      closePopout: W
                                   })
-                                : F && k === l.X.TODOS
-                                  ? (0, r.jsx)(y.Z, {
-                                        setTab: R,
-                                        onJump: V,
-                                        closePopout: M
+                                : U && R === l.X.TODOS
+                                  ? (0, r.jsx)(x.Z, {
+                                        setTab: D,
+                                        onJump: z,
+                                        closePopout: W
                                     })
-                                  : U && B && k === l.X.BOOKMARKS
-                                    ? (0, r.jsx)(b.Z, {
-                                          setTab: R,
-                                          badgeState: S,
-                                          closePopout: M
+                                  : B && G && R === l.X.BOOKMARKS
+                                    ? (0, r.jsx)(v.Z, {
+                                          setTab: D,
+                                          badgeState: T,
+                                          closePopout: W
                                       })
-                                    : k === l.X.SCHEDULED
+                                    : R === l.X.SCHEDULED
                                       ? (0, r.jsx)(O._, {
-                                            setTab: R,
-                                            closePopout: M
+                                            setTab: D,
+                                            closePopout: W
                                         })
                                       : (0, r.jsx)(a.SV, {
-                                            fallback: (0, r.jsx)(E.h, {
-                                                setTab: R,
-                                                closePopout: M,
-                                                badgeState: S
+                                            fallback: (0, r.jsx)(j.h, {
+                                                setTab: D,
+                                                closePopout: W,
+                                                badgeState: T
                                             }),
-                                            children: (0, r.jsx)(E.Z, {
-                                                setTab: R,
-                                                onJump: V,
+                                            children: (0, r.jsx)(j.Z, {
+                                                setTab: D,
+                                                onJump: z,
                                                 showTutorial: L,
-                                                setSeenTutorial: D,
-                                                closePopout: M,
-                                                badgeState: S
+                                                setSeenTutorial: M,
+                                                closePopout: W,
+                                                badgeState: T
                                             })
                                         })
                 });
@@ -152,7 +155,7 @@ function I(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return I(W, n, e, G);
+                return S(F, n, e, H);
             }
         })
     });
