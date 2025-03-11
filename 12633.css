@@ -13969,16 +13969,32 @@ div.cardContainer__88e24 {
     opacity: 1
 }
 
-.reverse__4bbc6 {
-    opacity: .5
-}
-
-.reverse__4bbc6.hover__4bbc6 {
-    opacity: .2
-}
-
 .plate__4bbc6 {
     position: relative
+}
+
+.theme-light .img__4bbc6 {
+    opacity: .8
+}
+
+.theme-light .img__4bbc6.hover__4bbc6 {
+    opacity: .9
+}
+
+.theme-light .img__4bbc6.selected__4bbc6 {
+    opacity: 1
+}
+
+.account__4bbc6 {
+    opacity: .4
+}
+
+.visual-refresh .accountContainer__4bbc6 {
+    border-radius: 4px
+}
+
+.account__4bbc6.hover__4bbc6 {
+    opacity: .4
 }
 
 .container__91a9d {
