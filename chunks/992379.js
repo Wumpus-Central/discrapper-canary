@@ -1,1 +1,2 @@
-e.exports = { externalProductWrapper: 'externalProductWrapper__320c6' };
+var r = { externalProductWrapper: 'externalProductWrapper__320c6' };
+e.exports = r;

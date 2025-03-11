@@ -17,6 +17,7 @@ var r = {
     bundlePreview: 'bundlePreview__78e61',
     bundleProfileEffectCard: 'bundleProfileEffectCard__78e61',
     buttons: 'buttons__78e61',
+    buttonRows: 'buttonRows__78e61',
     buyButton: 'buyButton__78e61',
     easterEggContainer: 'easterEggContainer__78e61',
     promotionalBanner: 'promotionalBanner__78e61'
