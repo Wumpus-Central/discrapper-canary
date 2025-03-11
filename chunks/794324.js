@@ -3,6 +3,7 @@ n.d(t, {
     OR: () => _,
     YG: () => d,
     hr: () => u,
+    mB: () => h,
     tK: () => f
 });
 var r = n(192379),
@@ -72,4 +73,28 @@ let u = (e) => {
             var r;
             return { collectedModalBackground: null !== (r = null != n ? n : null == t ? void 0 : t.successModalBg) && void 0 !== r ? r : e.banner };
         }, [n, t, e]);
+    },
+    h = (e) => {
+        let t = (0, s.z)(l.Fr.SHOP_BUTTON_BG_HOVER),
+            n = (0, s.z)(l.Fr.SHOP_BUTTON_BG_HOVER_DARK),
+            i = (0, s.z)(l.Fr.SHOP_BUTTON_BG_HOVER_LIGHT),
+            o = (0, s.z)(l.Fr.SHOP_BUTTON_BG_RESTING),
+            a = (0, s.z)(l.Fr.SHOP_BUTTON_BG_RESTING_DARK),
+            c = (0, s.z)(l.Fr.SHOP_BUTTON_BG_RESTING_LIGHT),
+            u = (0, s.z)(l.Fr.COACHTIP_AVATAR);
+        return r.useMemo(() => {
+            var r, s, l, d, f;
+            let _ = [t, n, i, o, a, c, u].some((e) => null != e),
+                p = null == e ? void 0 : null === (r = e.refTargetBackground) || void 0 === r ? void 0 : r.asset,
+                h = null == p ? void 0 : p.resting,
+                m = null == p ? void 0 : p.hovered;
+            return {
+                hasPreviewAssets: _,
+                buttonBGHoverDark: null !== (s = null != n ? n : t) && void 0 !== s ? s : null == m ? void 0 : m.dark,
+                buttonBGHoverLight: null !== (l = null != i ? i : t) && void 0 !== l ? l : null == m ? void 0 : m.light,
+                buttonBGRestingDark: null !== (d = null != a ? a : o) && void 0 !== d ? d : null == h ? void 0 : h.dark,
+                buttonBGRestingLight: null !== (f = null != c ? c : o) && void 0 !== f ? f : null == h ? void 0 : h.light,
+                coachtipAvatar: null != u ? u : null == e ? void 0 : e.avatar
+            };
+        }, [t, n, i, o, a, c, u, e]);
     };
