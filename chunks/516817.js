@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,59 +8,60 @@ var r = n(200651),
     c = n(881474),
     u = n(168352),
     d = n(379839),
-    f = n(873841);
-function _(e) {
-    let { nameplate: t, hovered: n, selected: o, content: s, isSpeaking: u, account: _ } = e,
-        h = (0, d.p)(t, n, o, s, _),
-        m = (0, l.i)(u, 2000),
-        g = (0, c.C)(n, o, m),
-        [E, v] = (0, i.useState)(t),
-        [b, y] = (0, i.useState)(!1),
-        [O, I] = (0, i.useState)(!1);
+    f = n(359135),
+    _ = n(873841);
+function p(e) {
+    let { nameplate: t, hovered: n, selected: o, content: s, isSpeaking: u, placement: p } = e,
+        m = (0, d.p)(t, n, o, s, p),
+        g = (0, l.i)(u, 2000),
+        E = (0, c.C)(n, o, g),
+        [v, b] = (0, i.useState)(t),
+        [y, O] = (0, i.useState)(!1),
+        [I, S] = (0, i.useState)(!1);
     if (
         ((0, i.useEffect)(() => {
-            if (null == E || null != t || b) null != t && (v(t), y(!1));
+            if (null == v || null != t || y) null != t && (b(t), O(!1));
             else {
-                y(!0);
+                O(!0);
                 let e = setTimeout(() => {
-                    y(!1), v(null);
+                    O(!1), b(null);
                 }, 400);
                 return () => clearTimeout(e);
             }
-        }, [t, E, b]),
+        }, [t, v, y]),
         null == t)
     )
         return null;
-    let S = null != t ? t : E;
-    return null == S
+    let T = null != t ? t : v;
+    return null == T
         ? null
         : (0, r.jsx)('div', {
-              className: a()(f.container, {
-                  [f.containerExit]: b,
-                  [f.accountContainer]: _,
-                  [f.fadeIn]: O && !b
+              className: a()(_.container, {
+                  [_.containerExit]: y,
+                  [_.accountContainer]: p === f.i.ACCOUNT,
+                  [_.fadeIn]: I && !y
               }),
-              style: O ? { background: h.background } : void 0,
-              children: (0, r.jsx)(p, {
-                  nameplate: S,
-                  className: a()(f.img, {
-                      [f.hover]: n,
-                      [f.selected]: o,
-                      [f.account]: _
+              style: I ? { background: m.background } : void 0,
+              children: (0, r.jsx)(h, {
+                  nameplate: T,
+                  className: a()(_.img, {
+                      [_.hover]: n,
+                      [_.selected]: o,
+                      [_.account]: p === f.i.ACCOUNT
                   }),
-                  style: h,
-                  animate: g,
+                  style: m,
+                  animate: E,
                   loop: !!(n || u),
-                  onLoad: () => I(!0)
+                  onLoad: () => S(!0)
               })
           });
 }
-function p(e) {
+function h(e) {
     let { nameplate: t, className: n, style: o, animate: a, loop: l, onLoad: c } = e,
         d = (0, i.useRef)(null);
     i.useEffect(() => {
-        null != d.current && (a ? d.current.play() : d.current.pause());
-    }, [a]);
+        null != d.current && (a || l ? d.current.play() : d.current.pause());
+    }, [a, l]);
     let f = (0, u._)(t, a);
     return (null == f ? void 0 : f.endsWith('.png')) || t.preview
         ? (0, r.jsx)('img', {
