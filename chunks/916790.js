@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120), n(566702);
+n.d(t, { Z: () => w }), n(47120), n(566702);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(665149),
     h = n(886118),
     p = n(301801),
-    f = n(4912),
-    x = n(55935),
+    x = n(4912),
+    f = n(55935),
     b = n(428530),
     _ = n(257785),
     g = n(484036),
@@ -20,10 +20,10 @@ var r = n(200651),
     j = n(621060),
     y = n(159185),
     C = n(710662);
-function O(e) {
+function N(e) {
     return parseFloat(e.toFixed(3));
 }
-let N = [
+let T = [
     {
         key: 'store',
         cellClassName: y.actionColumn,
@@ -37,11 +37,11 @@ let N = [
         cellClassName: y.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return ''.concat(O(t.time), ' ms');
+            return ''.concat(N(t.time), ' ms');
         }
     }
 ];
-function T(e) {
+function O(e) {
     let { actionLog: t } = e,
         n = a.useMemo(
             () =>
@@ -53,7 +53,7 @@ function T(e) {
         );
     return (0, r.jsx)(d.zJl, {
         children: (0, r.jsx)(v.Z, {
-            columns: N,
+            columns: T,
             data: n
         })
     });
@@ -75,13 +75,13 @@ let S = [
                                 name: 'Created at',
                                 children: (0, r.jsx)('time', {
                                     dateTime: null === (t = n.createdAt) || void 0 === t ? void 0 : t.toISOString(),
-                                    title: (0, x.vc)(a, 'LLLL'),
-                                    children: (0, x.Y4)(a)
+                                    title: (0, f.vc)(a, 'LLLL'),
+                                    children: (0, f.Y4)(a)
                                 })
                             }),
                             (0, r.jsxs)(_.Z9, {
                                 name: 'Total Time',
-                                children: [O(n.totalTime), ' ms']
+                                children: [N(n.totalTime), ' ms']
                             })
                         ]
                     }),
@@ -98,7 +98,7 @@ let S = [
         name: 'Store Handlers',
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(T, { actionLog: t });
+            return (0, r.jsx)(O, { actionLog: t });
         }
     }
 ];
@@ -112,7 +112,7 @@ function E(e) {
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
-                                  children: [(0, r.jsx)(f.Z, { className: y.errorIcon }), 'Error']
+                                  children: [(0, r.jsx)(x.Z, { className: y.errorIcon }), 'Error']
                               }),
                               render(e) {
                                   let { actionLog: t } = e;
@@ -163,14 +163,14 @@ function E(e) {
         ]
     });
 }
-let k = [
+let I = [
         {
             key: 'action',
             cellClassName: y.actionColumn,
             render(e) {
                 let { actionLog: t } = e;
                 return (0, r.jsxs)(r.Fragment, {
-                    children: [t.error && (0, r.jsx)(f.Z, { className: y.errorIcon }), t.name]
+                    children: [t.error && (0, r.jsx)(x.Z, { className: y.errorIcon }), t.name]
                 });
             }
         },
@@ -179,16 +179,18 @@ let k = [
             cellClassName: y.totalTimeColumn,
             render(e) {
                 let { actionLog: t } = e;
-                return ''.concat(O(t.totalTime), ' ms');
+                return ''.concat(N(t.totalTime), ' ms');
             }
         }
     ],
-    I = (e) => {
-        let { actionLog: t } = e;
-        return t.name;
-    },
-    w = { searchType: h.S.REGEX };
-function P() {
+    k = {
+        searchType: h.S.REGEX,
+        searchStringGenerator: (e) => {
+            let { actionLog: t } = e;
+            return t.name;
+        }
+    };
+function w() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         i = (function (e) {
@@ -220,28 +222,21 @@ function P() {
             [i]
         ),
         [c, m] = a.useState(s),
-        [h, f] = a.useState(s),
-        [x, b] = a.useState(!1),
+        [h, x] = a.useState(s),
+        [f, b] = a.useState(!1),
         [_, g] = a.useState(),
         j = a.useCallback((e) => {
-            f(e);
-        }, []),
-        O = (0, p.c)(I, j, w),
-        N = a.useCallback(
+            x(e);
+        }, []);
+    (0, p.BO)(t, f ? c : s, j, k);
+    let N = a.useCallback(
             (e) => {
                 m(s), b(e);
             },
             [s]
-        );
-    a.useEffect(() => {
-        if (x) {
-            O(t, null != c ? c : s);
-            return;
-        }
-        O(t, s);
-    }, [x, t, O, s, c]);
-    let T = t.trim().length > 0,
-        S = a.useMemo(() => (T ? h : x ? c : s), [s, h, T, x, c]);
+        ),
+        T = t.trim().length > 0,
+        O = a.useMemo(() => (T ? h : f ? c : s), [s, h, T, f, c]);
     return (0, r.jsxs)('div', {
         ref: e,
         className: l()(C.panel, y.panel),
@@ -253,7 +248,7 @@ function P() {
                         title: 'Toggles the flow of Actions',
                         className: y.pausedEvents,
                         children: (0, r.jsx)(d.rsf, {
-                            checked: !x,
+                            checked: !f,
                             onChange: (e) => N(!e)
                         })
                     }),
@@ -267,8 +262,8 @@ function P() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: k,
-                data: S,
+                columns: I,
+                data: O,
                 selectedRowKey: null == _ ? void 0 : _.id.toString(),
                 onClickRow: (e) => g(e.actionLog)
             }),

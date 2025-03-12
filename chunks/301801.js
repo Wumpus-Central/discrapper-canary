@@ -1,85 +1,117 @@
-n.d(t, { c: () => s }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
-var r = n(192379),
-    a = n(392711),
-    i = n(823379),
-    l = n(886118);
-let o = new Worker(new URL('/assets/' + n.u('56558'), n.b));
-function s(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        s = r.useRef(null),
-        c = r.useRef(null),
-        d = r.useRef(e),
-        u = r.useRef(t);
-    r.useEffect(() => {
-        d.current = e;
-    }, [e]),
-        r.useEffect(() => {
-            u.current = t;
-        }, [t]);
-    let m = r.useMemo(() => {
-        let { throttleMs: e = 300, throttleLeading: t = !0, throttleTrailing: r = !0 } = n;
+r.d(t, { BO: () => o }), r(315314), r(309749), r(610138), r(216116), r(78328), r(815648), r(47120), r(566702);
+var n = r(192379),
+    a = r(348327),
+    c = r.n(a),
+    l = r(392711),
+    s = r(823379),
+    u = r(886118);
+let i = new Worker(new URL('/assets/' + r.u('56558'), r.b));
+function o(e, t, r, a) {
+    let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        d = n.useRef(null),
+        m = n.useRef(null),
+        x = n.useRef(r),
+        { searchStringGenerator: h } = a,
+        f = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                [r, a] = n.useState(e),
+                l = n.useRef(e);
+            return (
+                n.useEffect(() => {
+                    l.current = e;
+                }, [e]),
+                n.useEffect(() => {
+                    a((e) => {
+                        let t = l.current;
+                        return c()(e, t) ? e : t;
+                    });
+                }, t),
+                r
+            );
+        })(t.map(h), [t, h]),
+        p = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                [r, a] = n.useState(e),
+                l = n.useRef(e);
+            return (
+                n.useEffect(() => {
+                    l.current = e;
+                }, [e]),
+                n.useEffect(() => {
+                    a((e) => {
+                        let t = l.current;
+                        return c()(e, t) ? e : t;
+                    });
+                }, t),
+                r
+            );
+        })(t, [t]);
+    n.useEffect(() => {
+        x.current = r;
+    }, [r]);
+    let g = n.useMemo(() => {
+        let { throttleMs: e = 300, throttleLeading: t = !0, throttleTrailing: r = !0 } = a;
         return (
-            (c.current = (0, a.throttle)(
-                async (e, t) => {
+            (m.current = (0, l.throttle)(
+                async (e, t, r) => {
                     if ('' === e) {
-                        u.current(t);
+                        x.current(t);
                         return;
                     }
-                    s.current = (0, a.uniqueId)();
-                    let r = await (function (e, t, n) {
-                        var r;
-                        let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                            c = null !== (r = s.promiseUuid) && void 0 !== r ? r : (0, a.uniqueId)(),
-                            { searchType: d = l.S.FUZZY, sortType: u = l.E.NONE, jaroWinklerSearchThreshold: m = 0.85 } = s;
-                        return new Promise((r) => {
+                    d.current = (0, l.uniqueId)();
+                    let n = await (function (e, t, r, n) {
+                        var a;
+                        let c = null !== (a = n.promiseUuid) && void 0 !== a ? a : (0, l.uniqueId)(),
+                            { searchType: o = u.S.FUZZY, sortType: d = u.E.NONE, jaroWinklerSearchThreshold: m = 0.85 } = n;
+                        return new Promise((n) => {
                             let a = (t) => {
                                 let {
-                                    data: { id: n, foundItemIndexes: l }
+                                    data: { id: r, foundItemIndexes: l }
                                 } = t;
-                                c === n && (r(l.map((t) => e[t]).filter(i.lm)), null == o || o.removeEventListener('message', a));
+                                c === r && (n(l.map((t) => e[t]).filter(s.lm)), null == i || i.removeEventListener('message', a));
                             };
-                            null == o || o.addEventListener('message', a);
-                            let l = {
-                                id: c,
-                                searchTerm: t,
-                                searchStrings: e.map(n),
-                                searchType: d,
-                                sortType: u,
-                                jaroWinklerSearchThreshold: m
-                            };
-                            null == o || o.postMessage(l);
+                            null == i || i.addEventListener('message', a),
+                                null == i ||
+                                    i.postMessage({
+                                        id: c,
+                                        searchTerm: t,
+                                        searchStrings: r,
+                                        searchType: o,
+                                        sortType: d,
+                                        jaroWinklerSearchThreshold: m
+                                    });
                         });
                     })(
                         t,
                         e,
-                        d.current,
+                        r,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                var r = null != arguments[t] ? arguments[t] : {},
+                                    n = Object.keys(r);
                                 'function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    (n = n.concat(
+                                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                         })
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    n.forEach(function (t) {
+                                        var n;
+                                        (n = r[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: n,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = n);
                                     });
                             }
                             return e;
-                        })({ promiseUuid: s.current }, n)
+                        })({ promiseUuid: d.current }, a)
                     );
-                    null != s.current && u.current(r);
+                    null != d.current && x.current(n);
                 },
                 e,
                 {
@@ -87,16 +119,19 @@ function s(e, t) {
                     trailing: r
                 }
             )),
-            c.current
+            m.current
         );
-    }, [n]);
+    }, [a]);
     return (
-        r.useEffect(
+        n.useEffect(() => {
+            '' !== e.trim() && g(e, p, f);
+        }, [g, e, p, f, ...o]),
+        n.useEffect(
             () => () => {
-                null != c.current && c.current.cancel(), (c.current = null), (s.current = null);
+                null != m.current && m.current.cancel(), (m.current = null), (d.current = null);
             },
-            [e, t, n]
+            [f, r, a]
         ),
-        m
+        g
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(47120), n(26686);
+n.d(t, { Z: () => Z }), n(47120), n(26686);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(129861),
     h = n(665149),
     p = n(886118),
-    f = n(301801),
-    x = n(594174),
+    x = n(301801),
+    f = n(594174),
     b = n(55935),
     _ = n(120816),
     g = n(31336),
@@ -20,13 +20,13 @@ var r = n(200651),
     j = n(484036),
     y = n(681619),
     C = n(621060),
-    O = n(388032),
-    N = n(871133),
-    T = n(710662);
+    N = n(388032),
+    T = n(871133),
+    O = n(710662);
 let S = [
     {
         key: 'event',
-        cellClassName: N.eventColumn,
+        cellClassName: T.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -34,7 +34,7 @@ let S = [
     },
     {
         key: 'location',
-        cellClassName: N.locationColumn,
+        cellClassName: T.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -44,11 +44,11 @@ let S = [
 function E(e) {
     let { children: t } = e;
     return (0, r.jsx)(u.zJl, {
-        className: N.customPropertiesContainer,
+        className: T.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function k(e) {
+function I(e) {
     let { name: t, children: n, copyValue: i } = e,
         [l, o] = a.useState(!1);
     return (
@@ -59,16 +59,16 @@ function k(e) {
             }
         }, [l]),
         (0, r.jsxs)('div', {
-            className: N.customProperty,
+            className: T.customProperty,
             children: [
                 (0, r.jsx)('dt', {
-                    className: N.customPropertiesName,
+                    className: T.customPropertiesName,
                     children: t
                 }),
                 (0, r.jsx)('dd', { children: n }),
                 (0, r.jsx)(u.P3F, {
                     tag: 'span',
-                    className: N.copyPropertyButton,
+                    className: T.copyPropertyButton,
                     onClick: () => {
                         (0, c.J)(JSON.stringify(i)), o(!0);
                     },
@@ -86,7 +86,7 @@ function k(e) {
         })
     );
 }
-let I = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -95,24 +95,24 @@ let I = [
                         loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: i },
                         onClose: o
                     } = e,
-                    d = x.default.getUser(i),
+                    d = f.default.getUser(i),
                     p = s()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
-                            className: l()(T.headerBar, N.subPanelHeaderBar),
+                            className: l()(O.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(h.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t
                                 }),
                                 (0, r.jsxs)(h.ZP.Title, {
-                                    wrapperClassName: N.headerTitle,
+                                    wrapperClassName: T.headerTitle,
                                     children: [
                                         t,
                                         (0, r.jsx)(u.P3F, {
                                             tag: 'span',
-                                            className: N.copyEventButton,
+                                            className: T.copyEventButton,
                                             onClick: () => (0, c.J)(t),
                                             children: (0, r.jsx)(u.TIy, {
                                                 color: 'currentColor',
@@ -174,7 +174,7 @@ let I = [
                             ]
                         }),
                         (0, r.jsxs)(v.E, {
-                            className: N.commonProperties,
+                            className: T.commonProperties,
                             children: [
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
@@ -202,7 +202,7 @@ let I = [
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    k,
+                                    I,
                                     {
                                         name: ''.concat(t, ':'),
                                         copyValue: { [t]: n || null },
@@ -210,7 +210,7 @@ let I = [
                                             null != n
                                                 ? (0, r.jsx)('code', { children: JSON.stringify(n) })
                                                 : (0, r.jsx)('code', {
-                                                      className: N.emptyProperty,
+                                                      className: T.emptyProperty,
                                                       children: 'null'
                                                   })
                                     },
@@ -251,12 +251,14 @@ let I = [
             filter: (e) => e.event.startsWith('network_action')
         }
     },
-    P = (e) => {
-        let { event: t, properties: n } = e;
-        return null != n.location ? [t, n.location] : t;
-    },
-    Z = { searchType: p.S.REGEX };
-function R() {
+    P = {
+        searchType: p.S.REGEX,
+        searchStringGenerator: (e) => {
+            let { event: t, properties: n } = e;
+            return null != n.location ? [t, n.location] : t;
+        }
+    };
+function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         i = (0, d.e7)([_.Z], () => _.Z.loggedEventsVersion),
@@ -264,48 +266,45 @@ function R() {
         [c, m] = a.useState(_.Z.loggedEvents),
         h = a.useCallback((e) => {
             m(e);
-        }, []),
-        p = (0, f.c)(P, h, Z),
-        x = c.filter((e) => {
+        }, []);
+    (0, x.BO)(t, _.Z.loggedEvents, h, P, [i]);
+    let p = c.filter((e) => {
             for (let t of o) if (w[t].filter(e)) return !0;
             return !1;
-        });
-    a.useEffect(() => {
-        p(t, _.Z.loggedEvents);
-    }, [t, p, i]);
-    let [b, v] = a.useState(void 0),
-        E = x.find((e) => e.key === b),
-        { TabBar: k, renderSelectedTab: R } = (0, C.Z)({ tabs: I }, []);
+        }),
+        [f, b] = a.useState(void 0),
+        v = p.find((e) => e.key === f),
+        { TabBar: E, renderSelectedTab: I } = (0, C.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: l()(T.panel, N.panel),
+        className: l()(O.panel, T.panel),
         children: [
             (0, r.jsxs)('div', {
-                className: N.toolbar,
+                className: T.toolbar,
                 children: [
                     (0, r.jsx)(u.zxk, {
-                        className: N.toolbarButton,
+                        className: T.toolbarButton,
                         look: u.zxk.Looks.BLANK,
                         size: u.zxk.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: O.NW.string(O.t.VkKicX),
+                            title: N.NW.string(N.t.VkKicX),
                             children: (0, r.jsx)(u.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': O.NW.string(O.t.VkKicX)
+                                'aria-label': N.NW.string(N.t.VkKicX)
                             })
                         })
                     }),
-                    (0, r.jsx)('div', { className: N.toolbarDivider }),
+                    (0, r.jsx)('div', { className: T.toolbarDivider }),
                     (0, r.jsx)('div', {
-                        className: N.filters,
+                        className: T.filters,
                         children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.P3F,
                                 {
-                                    className: l()(N.filter, o.includes(t) && N.activeFilter),
+                                    className: l()(T.filter, o.includes(t) && T.activeFilter),
                                     onClick: () => {
                                         s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -318,9 +317,9 @@ function R() {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: N.toolbar,
+                className: T.toolbar,
                 children: (0, r.jsx)(u.E1j, {
-                    className: N.searchBar,
+                    className: T.searchBar,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -329,20 +328,20 @@ function R() {
             }),
             (0, r.jsx)(y.Z, {
                 columns: S,
-                data: x,
-                selectedRowKey: b,
-                onClickRow: (e) => v(e.key)
+                data: p,
+                selectedRowKey: f,
+                onClickRow: (e) => b(e.key)
             }),
-            null != E &&
+            null != v &&
                 (0, r.jsxs)(j.Z, {
-                    className: N.subPanel,
+                    className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(k, {}),
-                        R({
-                            loggedEvent: E,
-                            onClose: () => v(void 0)
+                        (0, r.jsx)(E, {}),
+                        I({
+                            loggedEvent: v,
+                            onClose: () => b(void 0)
                         })
                     ]
                 })

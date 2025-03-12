@@ -15,5 +15,6 @@ e.exports = {
     channelIcon: 'channelIcon__711d3',
     channelItemNameText: 'channelItemNameText__711d3',
     channelItemAvatars: 'channelItemAvatars__711d3',
-    channelList: 'channelList__711d3'
+    channelList: 'channelList__711d3',
+    channelListWrapper: 'channelListWrapper__711d3'
 };
