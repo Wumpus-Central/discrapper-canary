@@ -1,33 +1,46 @@
-t.d(n, { Z: () => b });
+t.d(n, { Z: () => x });
 var r = t(200651),
     i = t(192379),
     o = t(120356),
-    a = t.n(o),
-    s = t(481060),
+    s = t.n(o),
+    a = t(481060),
     l = t(413335),
     c = t(157353),
     d = t(279604),
     u = t(730621),
-    x = t(388032),
-    p = t(423839);
-function b(e) {
-    let { className: n, guildId: t, powerup: o, onError: b } = e,
-        { onActivate: v, isLoading: j, error: m, onDeactivate: h } = (0, d.Z)(t, o),
-        _ = (0, c.Z)(t, o);
+    p = t(388032),
+    v = t(423839);
+function x(e) {
+    let { className: n, guildId: t, powerup: o, onError: x } = e,
+        { onActivate: m, isLoading: b, error: j, onShowDeactivate: _ } = (0, d.ZP)(t, o),
+        f = (0, c.Z)(t, o);
     return (
         i.useEffect(() => {
-            null == b || b(m);
-        }, [m, b]),
+            null == x || x(j);
+        }, [j, x]),
         (0, r.jsxs)('div', {
-            className: a()(p.container, n),
+            className: s()(v.container, n),
             children: [
-                _ &&
-                    (0, r.jsx)(s.ua7, {
-                        text: x.NW.string(u.Z.TZsu1d),
+                f &&
+                    (0, r.jsx)(a.ua7, {
+                        'aria-label': p.NW.string(u.Z.TZsu1d),
+                        text: (0, r.jsxs)('div', {
+                            className: v.tooltipContainer,
+                            children: [
+                                (0, r.jsx)(a.Text, {
+                                    variant: 'text-xs/semibold',
+                                    children: p.NW.string(u.Z.TZsu1d)
+                                }),
+                                (0, r.jsx)(a.Text, {
+                                    variant: 'text-xs/medium',
+                                    children: p.NW.formatToPlainString(u.Z['5HQUzM'], { boostCount: o.cost })
+                                })
+                            ]
+                        }),
                         children: (e) => {
                             var n, t;
                             return (0, r.jsx)(
-                                s.zxk,
+                                a.zxk,
                                 ((n = (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -55,11 +68,11 @@ function b(e) {
                                 })({}, e)),
                                 (t = t =
                                     {
-                                        className: p.secondaryButton,
-                                        color: s.Ttl.PRIMARY,
-                                        'aria-label': x.NW.string(u.Z.TZsu1d),
+                                        className: v.secondaryButton,
+                                        color: a.Ttl.PRIMARY,
+                                        'aria-label': p.NW.string(u.Z.TZsu1d),
                                         grow: !1,
-                                        onClick: h,
+                                        onClick: _,
                                         children: (0, r.jsx)(l.Z, {})
                                     }),
                                 Object.getOwnPropertyDescriptors
@@ -78,12 +91,12 @@ function b(e) {
                             );
                         }
                     }),
-                (0, r.jsx)(s.zxk, {
-                    className: p.primaryButton,
+                (0, r.jsx)(a.zxk, {
+                    className: v.primaryButton,
                     grow: !0,
-                    onClick: _ ? () => {} : v,
-                    submitting: !_ && j,
-                    children: _ ? x.NW.string(u.Z['g5Ds6+']) : x.NW.string(u.Z.gSxlHR)
+                    onClick: f ? () => {} : m,
+                    submitting: !f && b,
+                    children: f ? p.NW.string(u.Z['g5Ds6+']) : p.NW.string(u.Z.gSxlHR)
                 })
             ]
         })
