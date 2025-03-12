@@ -16,5 +16,6 @@ e.exports = {
     footer: 'footer__7fd1c',
     clearAfterSelectContainer: 'clearAfterSelectContainer__7fd1c',
     profilePreview: 'profilePreview__7fd1c',
-    invisibleStatusNotice: 'invisibleStatusNotice__7fd1c'
+    invisibleStatusNotice: 'invisibleStatusNotice__7fd1c',
+    needInspiration: 'needInspiration__7fd1c'
 };
