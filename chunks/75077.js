@@ -81,9 +81,8 @@ let x = (e, t, n) => ((0, s.wj)(e) ? t : n),
             },
             { enabled: o } = d.r.getCurrentConfig({ location: _ }, { autoTrackExposure: !1 }),
             { enabled: u } = c.C.getCurrentConfig({ location: _ }, { autoTrackExposure: !1 }),
-            m = !o && !u,
-            p = v();
-        return null != n.collectibleDeco && a({ card: n.collectibleDeco }), null != n.tenureBadge && a({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === i && a({ card: n.tenureRewardCollectible }), null != n.shyProject && a({ card: n.shyProject }), r && p ? (0 === t.length && l(), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })) : r && !p && (m || null != n.shyProject ? m && a({ card: n.referralProgram }) : l(), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })), a({ card: n.earlyAccess }), l(), a({ card: n.unlimitedSuperReactions }), t;
+            m = v();
+        return null != n.collectibleDeco && a({ card: n.collectibleDeco }), null != n.tenureBadge && a({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === i && a({ card: n.tenureRewardCollectible }), r && m ? (0 === t.length && l(), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })) : r && !m && (o || u || a({ card: n.referralProgram }), a({ card: n.newAppStylesUpdateJune2024 }), a({ card: n.serverProfiles })), a({ card: n.earlyAccess }), l(), a({ card: n.unlimitedSuperReactions }), t;
     },
     j = (e) => {
         let { perksCards: t, variant: n, isFullScreen: i, showTenureCard: s, isPremiumSubscriber: a, fractionalState: l, isInReverseTrial: o } = e,
