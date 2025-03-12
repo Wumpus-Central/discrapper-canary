@@ -158,23 +158,23 @@ function A(e) {
     });
 }
 function C(e) {
-    let { hasIncreasedRecentAvatarsLimit: t, onComplete: l, onClose: s } = e,
-        d = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        { avatars: j, loading: v, error: C } = (0, m.S)(),
-        { recentAvatarsLimit: E, numberOfLockedAvatarSlots: P } = (0, p.pC)(t),
-        [S, w] = a.useState(null),
-        T = null != S ? S : null == C ? void 0 : C.message,
-        F = j.length > E ? j.slice(0, E) : j,
-        R = F.length,
-        _ = Math.max(E - R, 0),
-        Z = (0, c.vRw)(),
-        L = a.useCallback(
+    let { hasIncreasedRecentAvatarsLimit: t, onComplete: l } = e,
+        s = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        { avatars: d, loading: j, error: v } = (0, m.S)(),
+        { recentAvatarsLimit: C, numberOfLockedAvatarSlots: E } = (0, p.pC)(t),
+        [P, S] = a.useState(null),
+        w = null != P ? P : null == v ? void 0 : v.message,
+        T = d.length > C ? d.slice(0, C) : d,
+        F = T.length,
+        R = Math.max(C - F, 0),
+        _ = (0, c.vRw)(),
+        Z = a.useCallback(
             async (e) => {
-                if (null == d) return;
-                w(null);
+                if (null == s) return;
+                S(null);
                 let { id: t, storageHash: a, description: i } = e,
                     o = (0, p.fD)({
-                        userId: d.id,
+                        userId: s.id,
                         avatarId: t,
                         storageHash: a,
                         size: b.dGM,
@@ -183,38 +183,37 @@ function C(e) {
                     });
                 try {
                     let t = await fetch(o),
-                        u = await t.blob(),
-                        d = URL.createObjectURL(u),
-                        { filename: f, type: m } = (0, p.mh)(a, i);
-                    s(),
-                        (0, c.ZDy)(
-                            async () => {
-                                let { default: t } = await Promise.all([n.e('59732'), n.e('71741')]).then(n.bind(n, 712451));
-                                return (n) =>
-                                    (0, r.jsx)(
-                                        t,
-                                        O(
-                                            {
-                                                imageUri: d,
-                                                file: new File([u], f, { type: m }),
-                                                originalAsset: e,
-                                                onCrop: l,
-                                                uploadType: x.pC.AVATAR,
-                                                showUpsellHeader: !0
-                                            },
-                                            n
-                                        )
-                                    );
-                            },
-                            { contextKey: Z }
-                        );
+                        s = await t.blob(),
+                        u = URL.createObjectURL(s),
+                        { filename: d, type: f } = (0, p.mh)(a, i);
+                    (0, c.ZDy)(
+                        async () => {
+                            let { default: t } = await Promise.all([n.e('59732'), n.e('71741')]).then(n.bind(n, 712451));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    t,
+                                    O(
+                                        {
+                                            imageUri: u,
+                                            file: new File([s], d, { type: f }),
+                                            originalAsset: e,
+                                            onCrop: l,
+                                            uploadType: x.pC.AVATAR,
+                                            showUpsellHeader: !0
+                                        },
+                                        n
+                                    )
+                                );
+                        },
+                        { contextKey: _ }
+                    );
                 } catch (e) {
-                    w(h.NW.string(h.t.fZRH9P));
+                    S(h.NW.string(h.t.fZRH9P));
                 }
             },
-            [Z, s, l, d]
+            [_, l, s]
         ),
-        D = a.useCallback((e, t, a, l) => {
+        L = a.useCallback((e, t, a, l) => {
             e.shiftKey
                 ? (0, f.B)(t)
                 : (0, c.ZDy)(async () => {
@@ -237,26 +236,26 @@ function C(e) {
     return (a.useEffect(() => {
         (0, f.N)();
     }, []),
-    v)
+    j)
         ? (0, r.jsx)(c.$jN, { className: y.spinner })
         : (0, r.jsxs)('div', {
               className: y.recentAvatarContainer,
               children: [
-                  null != T &&
-                      !v &&
+                  null != w &&
+                      !j &&
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: T
+                          children: w
                       }),
                   (0, r.jsxs)('div', {
                       className: i()(y.recentAvatarSlots, { [y.withPremiumUpsell]: !t }),
                       children: [
-                          R > 0 &&
+                          F > 0 &&
                               (0, r.jsx)('ul', {
                                   'aria-label': h.NW.string(h.t.lsU63N),
                                   className: y.recentAvatarList,
-                                  children: F.map((e, n) =>
+                                  children: T.map((e, n) =>
                                       (0, r.jsx)(
                                           'li',
                                           {
@@ -264,30 +263,30 @@ function C(e) {
                                                   avatar: e,
                                                   orderNumber: n + 1,
                                                   allowDelete: t,
-                                                  onSelectRecentAvatar: L,
-                                                  onDeleteRecentAvatar: t ? D : void 0
+                                                  onSelectRecentAvatar: Z,
+                                                  onDeleteRecentAvatar: t ? L : void 0
                                               })
                                           },
                                           e.id
                                       )
                                   )
                               }),
-                          _ > 0 &&
+                          R > 0 &&
                               (0, r.jsxs)('div', {
                                   className: y.emptyAvatarSlots,
-                                  children: [(0, r.jsx)(c.nn4, { children: h.NW.format(h.t['8W2HOz'], { numberOfEmptyAvatarSlots: _ }) }), [...Array(_)].map((e, t) => (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t))]
+                                  children: [(0, r.jsx)(c.nn4, { children: h.NW.format(h.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t))]
                               }),
-                          !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: P })
+                          !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: E })
                       ]
                   })
               ]
           });
 }
 function E(e) {
-    let { className: t, onComplete: n, onClose: a } = e,
-        l = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        s = d.ZP.canUseIncreasedRecentAvatarsLimit(l),
-        { recentAvatarsLimit: f } = (0, p.pC)(s);
+    let { className: t, onComplete: n } = e,
+        a = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        l = d.ZP.canUseIncreasedRecentAvatarsLimit(a),
+        { recentAvatarsLimit: s } = (0, p.pC)(l);
     return (0, r.jsxs)('div', {
         className: i()(y.container, t),
         children: [
@@ -300,14 +299,13 @@ function E(e) {
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: [h.NW.format(h.t['+CyJu7'], { recentAvatarsLimit: f }), ' ', !s && h.NW.format(h.t.Xs2Otb, { onClick: v })]
+                        children: [h.NW.format(h.t['+CyJu7'], { recentAvatarsLimit: s }), ' ', !l && h.NW.format(h.t.Xs2Otb, { onClick: v })]
                     })
                 ]
             }),
             (0, r.jsx)(C, {
-                hasIncreasedRecentAvatarsLimit: s,
-                onComplete: n,
-                onClose: a
+                hasIncreasedRecentAvatarsLimit: l,
+                onComplete: n
             })
         ]
     });
