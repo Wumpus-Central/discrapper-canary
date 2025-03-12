@@ -5,7 +5,8 @@ e.exports = {
     headerSectionRight: 'headerSectionRight_c8f358',
     appIcon: 'appIcon_c8f358',
     avatar: 'avatar_c8f358',
-    userAvatars: 'userAvatars_c8f358',
     dotSpacer: 'dotSpacer_c8f358',
-    actionButtonsContainer: 'actionButtonsContainer_c8f358'
+    actionButtonsContainer: 'actionButtonsContainer_c8f358',
+    applicationName: 'applicationName_c8f358',
+    fade: 'fade_c8f358'
 };
