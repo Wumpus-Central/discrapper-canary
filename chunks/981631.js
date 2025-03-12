@@ -610,6 +610,7 @@ let A = Object.freeze({
         CLAIM_OUTBOUND_PROMOTION_CODE: (t) => '/outbound-promotions/'.concat(t, '/claim'),
         HUB_EMAIL_VERIFY_SEND: '/guilds/automations/email-domain-lookup',
         GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD: (t) => '/guilds/'.concat(t, '/products/attachments'),
+        CHAT_WALLPAPERS: '/chat-wallpapers',
         GUILD_ROLE_SUBSCRIPTIONS_SETTINGS: (t) => '/guilds/'.concat(t, '/role-subscriptions/settings'),
         GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS: (t, e) => '/guilds/'.concat(t, '/role-subscriptions/group-listings').concat(null != e ? '/'.concat(e) : ''),
         GUILD_ROLE_SUBSCRIPTION_LISTINGS: (t, e, a) =>
