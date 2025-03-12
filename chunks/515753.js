@@ -458,6 +458,7 @@ function es(e) {
                                 ),
                                 {
                                     children: (0, l.jsx)(S.Z, {
+                                        nameplated: null != k,
                                         ref: ew,
                                         avatar: em(),
                                         selected: d,

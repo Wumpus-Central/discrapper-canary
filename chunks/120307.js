@@ -8,6 +8,7 @@ var r = {
     wrappedLayout: 'wrappedLayout__20a53',
     wrappedName: 'wrappedName__20a53',
     nameAndDecorators: 'nameAndDecorators__20a53',
-    subText: 'subText__20a53'
+    subText: 'subText__20a53',
+    plated: 'plated__20a53'
 };
 e.exports = r;
