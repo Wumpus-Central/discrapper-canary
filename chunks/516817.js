@@ -48,30 +48,29 @@ function _(e) {
                   }),
                   style: h,
                   animate: g,
-                  hover: null != n && n,
-                  isSpeaking: m
+                  loop: !!(n || u)
               })
           });
 }
 function p(e) {
-    let { nameplate: t, className: n, style: o, animate: a, hover: l, isSpeaking: c } = e,
-        d = (0, i.useRef)(null);
+    let { nameplate: t, className: n, style: o, animate: a, loop: l } = e,
+        c = (0, i.useRef)(null);
     i.useEffect(() => {
-        null != d.current && (a || l || c ? d.current.play() : d.current.pause());
-    }, [a, l, c]);
-    let f = (0, u._)(t, a);
-    return (null == f ? void 0 : f.endsWith('.png')) || t.preview
+        null != c.current && (a ? c.current.play() : c.current.pause());
+    }, [a]);
+    let d = (0, u._)(t, a);
+    return (null == d ? void 0 : d.endsWith('.png')) || t.preview
         ? (0, r.jsx)('img', {
-              src: f,
+              src: d,
               className: n,
               style: o,
               alt: t.imgAlt
           })
         : (0, r.jsx)(s.Z, {
-              src: f,
-              ref: d,
+              src: d,
+              ref: c,
               playsInline: !0,
-              loop: l || c,
+              loop: l,
               controls: !1,
               className: n,
               style: o
