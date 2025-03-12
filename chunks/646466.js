@@ -46,28 +46,43 @@ let u = () =>
                 onCloseRequest: () => (0, i.Mr3)(l.c)
             }
         ),
-    m = () => {
-        let { assets: e, deleteAsset: t } = (0, o.N)(),
-            n = a.useMemo(
+    m = (e) => {
+        let { handleClearIgnoredFiles: t } = e,
+            { assets: n, deleteAsset: l, clearAssets: s } = (0, o.N)(),
+            c = a.useMemo(
                 () =>
-                    Object.values(e).map((e) => ({
+                    Object.values(n).map((e) => ({
                         label: e.name,
                         value: e.type
                     })),
-                [e]
+                [n]
             ),
-            l = a.useCallback((e) => t(e), [t]);
-        return 0 === n.length
+            u = a.useCallback((e) => l(e), [l]),
+            m = a.useCallback(() => {
+                s(), t();
+            }, [s, t]);
+        return 0 === c.length
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(i.LZC, { size: 16 }),
-                      (0, r.jsx)(i.X6q, {
-                          variant: 'heading-lg/bold',
-                          children: 'Uploaded Assets'
+                      (0, r.jsxs)('div', {
+                          className: d.headingContainer,
+                          children: [
+                              (0, r.jsx)(i.X6q, {
+                                  variant: 'heading-lg/bold',
+                                  children: 'Uploaded Assets'
+                              }),
+                              (0, r.jsx)(i.zxk, {
+                                  look: i.zxk.Looks.FILLED,
+                                  size: i.zxk.Sizes.TINY,
+                                  onClick: m,
+                                  children: 'Clear'
+                              })
+                          ]
                       }),
                       (0, r.jsx)('ul', {
-                          children: n.map((e) =>
+                          children: c.map((e) =>
                               (0, r.jsxs)(
                                   'li',
                                   {
@@ -77,7 +92,7 @@ let u = () =>
                                               innerClassName: d.removeFileButtonInnerContents,
                                               look: i.zxk.Looks.BLANK,
                                               size: i.zxk.Sizes.ICON,
-                                              onClick: () => l(e.value),
+                                              onClick: () => u(e.value),
                                               children: (0, r.jsx)(i.Dio, { color: i.TVs.colors.TEXT_DANGER })
                                           }),
                                           (0, r.jsx)(i.Text, {
@@ -186,7 +201,7 @@ let u = () =>
                         })
                     ]
                 }),
-                (0, r.jsx)(m, {}),
+                (0, r.jsx)(m, { handleClearIgnoredFiles: b }),
                 (0, r.jsx)(h, {
                     ignoredFiles: e,
                     handleClearIgnoredFiles: b

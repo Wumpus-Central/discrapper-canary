@@ -130,12 +130,23 @@ let p = (0, r.U)((e) => ({
                     let r = e.assets,
                         { [t]: i } = r,
                         o = c(r, [t].map(f));
-                    return l(a({}, e), { assets: o });
+                    return l(a({}, e), {
+                        assets: o,
+                        previewEnabled: Object.keys(o).length > 0
+                    });
                 });
             }),
         clearAssets: () =>
             (0, i.j)(() => {
-                e((e) => (Object.values(e.assets).forEach((e) => URL.revokeObjectURL(e.src)), { assets: {} }));
+                e(
+                    (e) => (
+                        Object.values(e.assets).forEach((e) => URL.revokeObjectURL(e.src)),
+                        {
+                            assets: {},
+                            previewEnabled: !1
+                        }
+                    )
+                );
             })
     })),
     h = (e) =>

@@ -22,6 +22,7 @@ var r = {
     experimentDark: 'experimentDark_f1ceac',
     disabled: 'disabled_f1ceac',
     experimentActiveLight: 'experimentActiveLight_f1ceac',
+    buttonInnerWithText: 'buttonInnerWithText_f1ceac',
     centerButton: 'centerButton_f1ceac colorable_f1ceac',
     experimentButton: 'experimentButton_f1ceac colorable_f1ceac',
     attachedButton: 'attachedButton_f1ceac',

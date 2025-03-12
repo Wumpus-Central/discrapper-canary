@@ -205,5 +205,13 @@ let b = [
         cleanup() {
             a.K.remove('lastChangeLogId');
         }
+    },
+    {
+        version: 21,
+        run(e) {
+            var t;
+            return (null === (t = e.appearance) || void 0 === t ? void 0 : t.uiDensity) === l.Pi.COMPACT && ((e.appearance.uiDensity = l.Pi.DEFAULT), !0);
+        },
+        cleanup() {}
     }
 ];

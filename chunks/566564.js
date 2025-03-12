@@ -1,113 +1,114 @@
-r.d(t, { Z: () => k }), r(653041);
-var n = r(200651),
-    l = r(192379),
-    i = r(120356),
-    a = r.n(i),
-    o = r(685816),
-    s = r(442837),
-    c = r(481060),
-    d = r(594174),
-    u = r(960048),
-    p = r(744112),
-    f = r(223143),
-    h = r(364111),
-    C = r(752053),
-    m = r(81136),
-    b = r(953655),
-    g = r(548685),
-    v = r(580914),
-    x = r(384067),
-    _ = r(215023),
-    j = r(388032),
-    y = r(974492);
-let O = (e) => {
-        let { handleTransition: t, numVisibleItems: r, isFetchingCategories: i, tab: a } = e,
-            { noCache: s, includeUnpublished: c } = (0, m.Z)(),
+n.d(t, { Z: () => O }), n(653041);
+var r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(685816),
+    i = n(442837),
+    d = n(481060),
+    c = n(594174),
+    u = n(960048),
+    g = n(744112),
+    f = n(139668),
+    h = n(223143),
+    m = n(364111),
+    p = n(752053),
+    b = n(81136),
+    C = n(953655),
+    _ = n(548685),
+    v = n(580914),
+    x = n(384067),
+    k = n(215023),
+    j = n(388032),
+    S = n(39532);
+let y = (e) => {
+        let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: s } = e,
+            { noCache: i, includeUnpublished: d } = (0, b.Z)(),
             {
-                isFetchingShopHome: d,
+                isFetchingShopHome: c,
                 fetchShopHomeError: u,
-                shopBlocks: p,
+                shopBlocks: g,
                 refreshShopHome: f
-            } = (0, h.E)(a, {
-                noCache: s,
-                includeUnpublished: c,
+            } = (0, m.E)(s, {
+                noCache: i,
+                includeUnpublished: d,
                 includeBundles: !0
             }),
-            _ = l.useCallback(() => {
+            h = l.useCallback(() => {
                 f();
             }, [f]);
         return null != u
-            ? (0, n.jsx)(C.Z, {
-                  onRetry: _,
-                  errorOrigin: C.i.SHOP_PAGE,
+            ? (0, r.jsx)(p.Z, {
+                  onRetry: h,
+                  errorOrigin: p.i.SHOP_PAGE,
                   errorMessage: u.message
               })
-            : d || 0 === p.length
-              ? (0, n.jsxs)(n.Fragment, {
+            : c || 0 === g.length
+              ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, n.jsx)(v.Z, {
-                            isLoading: d,
+                        (0, r.jsx)(v.Z, {
+                            isLoading: c,
                             handleTransition: t,
-                            tab: a
+                            tab: s
                         }),
-                        (0, n.jsx)(b.Z, {
-                            isLoading: d,
+                        (0, r.jsx)(C.Z, {
+                            isLoading: c,
                             handleTransition: t,
                             categories: []
                         }),
-                        (0, n.jsx)(g.Z, {
-                            isLoading: d,
+                        (0, r.jsx)(_.Z, {
+                            isLoading: c,
                             handleTransition: t,
-                            numVisibleItems: r,
+                            numVisibleItems: n,
                             rankedSkuIds: [],
-                            tab: a
+                            tab: s
                         })
                     ]
                 })
-              : (0, n.jsx)(n.Fragment, {
-                    children: p.map((e, l) => {
+              : (0, r.jsx)(r.Fragment, {
+                    children: g.map((e, l) => {
                         if (null == e) return null;
                         switch (e.type) {
                             case o.z.HERO:
-                                return (0, n.jsx)(
+                                return (0, r.jsx)(
                                     v.Z,
                                     {
-                                        isLoading: d,
+                                        isLoading: c,
                                         handleTransition: t,
                                         heroBlock: e,
-                                        tab: a
+                                        tab: s
                                     },
                                     l
                                 );
                             case o.z.FEATURED:
-                                return (0, n.jsx)(
-                                    b.Z,
+                                return (0, r.jsx)(
+                                    C.Z,
                                     {
-                                        isLoading: d,
+                                        isLoading: c,
                                         handleTransition: t,
                                         featuredBlockRecord: e
                                     },
                                     l
                                 );
                             case o.z.FEED:
-                                return (0, n.jsx)(
-                                    g.Z,
+                                return (0, r.jsx)(
+                                    _.Z,
                                     {
-                                        isLoading: d || i,
+                                        isLoading: c || a,
                                         handleTransition: t,
-                                        numVisibleItems: r,
+                                        numVisibleItems: n,
                                         rankedSkuIds: e.rankedSkuIds,
-                                        tab: a
+                                        tab: s
                                     },
                                     l
                                 );
                             case o.z.WIDE_BANNER:
-                                return (0, n.jsx)(
+                                return (0, r.jsx)(
                                     x.Z,
                                     {
                                         handleTransition: t,
                                         wideBannerBlock: e,
-                                        tab: a
+                                        tab: s
                                     },
                                     l
                                 );
@@ -117,62 +118,63 @@ let O = (e) => {
                     })
                 });
     },
-    k = (e) => {
+    O = (e) => {
         var t;
-        let { isFullScreen: r, handleTransition: i, numVisibleItems: o, tab: h } = e,
-            { isFetchingCategories: b, fetchCategoriesError: g, fetchPurchasesError: v, claimError: x, refreshCategories: k } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
-            P = null !== (t = null != g ? g : v) && void 0 !== t ? t : x,
-            S = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-            E = (0, p.b)('Collectibles Shop Button'),
-            { noCache: w, includeUnpublished: L } = (0, m.Z)(),
-            I = l.useCallback(() => {
-                k();
-            }, [k]);
-        if (null == S) return null;
-        if (null != P) {
+        let { isFullScreen: n, handleTransition: a, numVisibleItems: o, tab: m } = e,
+            { isFetchingCategories: C, fetchCategoriesError: _, fetchPurchasesError: v, claimError: x, refreshCategories: O } = (0, h.ZP)({ location: 'CollectiblesFeedShop' }),
+            E = null !== (t = null != _ ? _ : v) && void 0 !== t ? t : x,
+            I = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+            B = (0, g.b)('Collectibles Shop Button'),
+            T = (0, f.R)('CollectiblesFeedShop'),
+            { noCache: w, includeUnpublished: L } = (0, b.Z)(),
+            P = l.useCallback(() => {
+                O();
+            }, [O]);
+        if (null == I) return null;
+        if (null != E) {
             let e = [];
-            null != g ? e.push('shop load fetch categories error: '.concat(P.message)) : null != v ? e.push('shop load fetch purchase error: '.concat(P.message)) : e.push('shop load claim error: '.concat(P.message)),
+            null != _ ? e.push('shop load fetch categories error: '.concat(E.message)) : null != v ? e.push('shop load fetch purchase error: '.concat(E.message)) : e.push('shop load claim error: '.concat(E.message)),
                 u.Z.captureMessage(e.join('\n'), {
                     tags: {
-                        isStaff: S.isStaff().toString(),
-                        preloadEnabled: E.toString(),
+                        isStaff: I.isStaff().toString(),
+                        preloadEnabled: B.toString(),
                         disableCache: w.toString(),
                         includeUnpublished: L.toString()
                     }
                 });
         }
-        return null != g
-            ? (0, n.jsx)(C.Z, {
-                  onRetry: I,
-                  errorOrigin: C.i.SHOP_PAGE,
-                  errorMessage: g.message
+        return null != _
+            ? (0, r.jsx)(p.Z, {
+                  onRetry: P,
+                  errorOrigin: p.i.SHOP_PAGE,
+                  errorMessage: _.message
               })
-            : (0, n.jsx)('div', {
-                  className: a()(y.shop, { [y.shopFullscreen]: r }),
-                  children: (0, n.jsxs)('div', {
-                      className: a()(y.content, y.mainContent),
+            : (0, r.jsx)('div', {
+                  className: s()(S.shop, { [S.shopFullscreen]: n }),
+                  children: (0, r.jsxs)('div', {
+                      className: s()(S.content, S.mainContent),
                       children: [
-                          (0, n.jsx)(O, {
-                              handleTransition: i,
+                          (0, r.jsx)(y, {
+                              handleTransition: a,
                               numVisibleItems: o,
-                              isFetchingCategories: b,
-                              tab: h
+                              isFetchingCategories: C,
+                              tab: m
                           }),
-                          h === _.AW.HOME &&
-                              o >= _.iA &&
-                              (0, n.jsxs)('div', {
-                                  className: y.endOfFeed,
+                          m === k.AW.HOME &&
+                              o >= T &&
+                              (0, r.jsxs)('div', {
+                                  className: S.endOfFeed,
                                   children: [
-                                      (0, n.jsx)(c.X6q, {
+                                      (0, r.jsx)(d.X6q, {
                                           variant: 'heading-md/semibold',
                                           children: j.NW.string(j.t.Yr70c3)
                                       }),
-                                      (0, n.jsx)(c.zxk, {
-                                          className: y.endOfFeedButton,
+                                      (0, r.jsx)(d.zxk, {
+                                          className: S.endOfFeedButton,
                                           onClick: () => {
-                                              i('shop all bottom', void 0, !0);
+                                              a('shop all bottom', void 0, !0);
                                           },
-                                          children: (0, n.jsx)(c.Text, {
+                                          children: (0, r.jsx)(d.Text, {
                                               variant: 'text-md/medium',
                                               color: 'always-white',
                                               children: j.NW.string(j.t.AfrvRE)

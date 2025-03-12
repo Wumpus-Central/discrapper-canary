@@ -1,14 +1,19 @@
-n.d(t, { V: () => r });
+n.d(t, { VV: () => r });
 let r = {
     Layout: {
         SPACE_0: 0,
         SPACE_4: 4,
+        SPACE_6: 6,
         SPACE_8: 8,
+        SPACE_10: 10,
         SPACE_12: 12,
         SPACE_16: 16,
         SPACE_20: 20,
         SPACE_24: 24,
+        SPACE_26: 26,
+        SPACE_30: 30,
         SPACE_32: 32,
+        SPACE_40: 40,
         SPACE_48: 48,
         SPACE_64: 64,
         SPACE_80: 80,
@@ -61,5 +66,176 @@ let r = {
         BREAKPOINT_XL: 'var(--breakpoint-xl)',
         BREAKPOINT_XXL: 'var(--breakpoint-xxl)',
         BREAKPOINT_MAX: 'var(--breakpoint-max)'
+    },
+    Space: {
+        SPACE_0: {
+            css: '0px',
+            resolve: () => 0
+        },
+        SPACE_4: {
+            css: '4px',
+            resolve: () => 4
+        },
+        SPACE_6: {
+            css: '6px',
+            resolve: () => 6
+        },
+        SPACE_8: {
+            css: '8px',
+            resolve: () => 8
+        },
+        SPACE_10: {
+            css: '10px',
+            resolve: () => 10
+        },
+        SPACE_12: {
+            css: '12px',
+            resolve: () => 12
+        },
+        SPACE_16: {
+            css: '16px',
+            resolve: () => 16
+        },
+        SPACE_20: {
+            css: '20px',
+            resolve: () => 20
+        },
+        SPACE_24: {
+            css: '24px',
+            resolve: () => 24
+        },
+        SPACE_26: {
+            css: '26px',
+            resolve: () => 26
+        },
+        SPACE_30: {
+            css: '30px',
+            resolve: () => 30
+        },
+        SPACE_32: {
+            css: '32px',
+            resolve: () => 32
+        },
+        SPACE_40: {
+            css: '40px',
+            resolve: () => 40
+        },
+        SPACE_48: {
+            css: '48px',
+            resolve: () => 48
+        },
+        SPACE_64: {
+            css: '64px',
+            resolve: () => 64
+        },
+        SPACE_80: {
+            css: '80px',
+            resolve: () => 80
+        },
+        SPACE_96: {
+            css: '96px',
+            resolve: () => 96
+        },
+        SPACE_128: {
+            css: '128px',
+            resolve: () => 128
+        },
+        SPACE_160: {
+            css: '160px',
+            resolve: () => 160
+        },
+        SPACE_192: {
+            css: '192px',
+            resolve: () => 192
+        },
+        SPACE_XXS: {
+            css: 'var(--space-xxs)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                    case 'cozy':
+                    case 'default':
+                        return 4;
+                }
+            }
+        },
+        SPACE_XS: {
+            css: 'var(--space-xs)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 6;
+                    case 'cozy':
+                        return 10;
+                    case 'default':
+                        return 8;
+                }
+            }
+        },
+        SPACE_SM: {
+            css: 'var(--space-sm)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 10;
+                    case 'cozy':
+                        return 16;
+                    case 'default':
+                        return 12;
+                }
+            }
+        },
+        SPACE_MD: {
+            css: 'var(--space-md)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 12;
+                    case 'cozy':
+                        return 20;
+                    case 'default':
+                        return 16;
+                }
+            }
+        },
+        SPACE_LG: {
+            css: 'var(--space-lg)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 16;
+                    case 'cozy':
+                        return 24;
+                    case 'default':
+                        return 20;
+                }
+            }
+        },
+        SPACE_XL: {
+            css: 'var(--space-xl)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 20;
+                    case 'cozy':
+                        return 30;
+                    case 'default':
+                        return 24;
+                }
+            }
+        },
+        SPACE_XXL: {
+            css: 'var(--space-xxl)',
+            resolve: (e) => {
+                switch (e) {
+                    case 'compact':
+                        return 26;
+                    case 'cozy':
+                        return 40;
+                    case 'default':
+                        return 32;
+                }
+            }
+        }
     }
 };

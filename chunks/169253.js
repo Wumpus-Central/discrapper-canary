@@ -5,6 +5,5 @@ e.exports = {
     disableColor: 'disableColor__85d16',
     tierTooltipTitle: 'tierTooltipTitle__85d16',
     boostedGuildTierMutedIconWithVisibleBanner: 'boostedGuildTierMutedIconWithVisibleBanner__85d16',
-    boostedGuildTierIconBackgroundWithVisibleBanner: 'boostedGuildTierIconBackgroundWithVisibleBanner__85d16',
-    guildBadgeIcon: 'guildBadgeIcon__85d16'
+    boostedGuildTierIconBackgroundWithVisibleBanner: 'boostedGuildTierIconBackgroundWithVisibleBanner__85d16'
 };

@@ -1,18 +1,66 @@
 n.d(t, { V: () => r }), n(47120);
 let r = {
     Modules: {
-        form: {
-            INPUT_HEIGHT: {
+        channels: {
+            NAME_LINE_HEIGHT: {
                 resolve(e) {
-                    let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 48;
-                    for (let e of t) if ('visual-refresh' === e) return 44;
-                    return 48;
+                    let { enabledExperiments: t, density: n } = e;
+                    if (0 === t.length) return 20;
+                    for (let e of t)
+                        if ('visual-refresh' === e)
+                            switch (n) {
+                                case 'compact':
+                                default:
+                                    return 20;
+                                case 'default':
+                                    return 24;
+                                case 'cozy':
+                                    return 28;
+                            }
+                    return 20;
+                }
+            },
+            SPINE_INVERTED_OFFSET_TOP: {
+                resolve(e) {
+                    let { enabledExperiments: t, density: n } = e;
+                    if (0 === t.length) return 8;
+                    for (let e of t)
+                        if ('visual-refresh' === e)
+                            switch (n) {
+                                case 'compact':
+                                    return 2;
+                                case 'default':
+                                    return 6;
+                                case 'cozy':
+                                    return 9;
+                                default:
+                                    return 8;
+                            }
+                    return 8;
+                }
+            },
+            SPINE_OFFSET_LEFT: {
+                resolve(e) {
+                    let { enabledExperiments: t, density: n } = e;
+                    if (0 === t.length) return 22;
+                    for (let e of t)
+                        if ('visual-refresh' === e)
+                            switch (n) {
+                                case 'compact':
+                                    return 20;
+                                case 'default':
+                                    return 24;
+                                case 'cozy':
+                                    return 28;
+                                default:
+                                    return 22;
+                            }
+                    return 22;
                 }
             }
         },
         chat: {
-            RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
+            AVATAR_SIZE: { resolve: () => 40 },
             INPUT_ICON_SIZE: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -23,10 +71,31 @@ let r = {
             },
             MARKUP_LINE_HEIGHT: {
                 resolve(e) {
-                    let { enabledExperiments: t } = e;
+                    let { enabledExperiments: t, density: n } = e;
                     if (0 === t.length) return '1.375rem';
-                    for (let e of t) if ('visual-refresh' === e) return '1.5rem';
+                    for (let e of t)
+                        if ('visual-refresh' === e)
+                            switch (n) {
+                                case 'compact':
+                                    return '1.35rem';
+                                case 'default':
+                                default:
+                                    return '1.375rem';
+                                case 'cozy':
+                                    return '1.4rem';
+                            }
                     return '1.375rem';
+                }
+            },
+            RESIZE_HANDLE_WIDTH: { resolve: () => 8 }
+        },
+        form: {
+            INPUT_HEIGHT: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 48;
+                    for (let e of t) if ('visual-refresh' === e) return 44;
+                    return 48;
                 }
             }
         },
@@ -51,14 +120,7 @@ let r = {
                 }
             },
             VERTICAL_PADDING: { resolve: () => 16 },
-            WIDTH_SMALL: {
-                resolve(e) {
-                    let { enabledExperiments: t } = e;
-                    if (0 === t.length) return 440;
-                    for (let e of t) if ('visual-refresh' === e) return 442;
-                    return 440;
-                }
-            },
+            WIDTH_LARGE: { resolve: () => 800 },
             WIDTH_MEDIUM: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -67,7 +129,14 @@ let r = {
                     return 600;
                 }
             },
-            WIDTH_LARGE: { resolve: () => 800 }
+            WIDTH_SMALL: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 440;
+                    for (let e of t) if ('visual-refresh' === e) return 442;
+                    return 440;
+                }
+            }
         }
     }
 };

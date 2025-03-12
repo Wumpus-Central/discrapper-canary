@@ -94,7 +94,7 @@ function T(e, t) {
 }
 let N = 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm';
 function A(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: b = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: c, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: _, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: b = !1, tooltipPosition: O = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: N = !1, buttonRef: A, grow: C, 'aria-label': R, look: P, buttonText: w, size: D } = e;
     return (0, r.jsx)(m.Z, {
         children: (0, r.jsx)(l.ua7, {
             position: O,
@@ -105,13 +105,13 @@ function A(e) {
             children: (e) => {
                 var { onClick: t, onContextMenu: m, onMouseEnter: O, onMouseLeave: T } = e,
                     N = S(e, ['onClick', 'onContextMenu', 'onMouseEnter', 'onMouseLeave']);
-                return (0, r.jsx)(
+                return (0, r.jsxs)(
                     l.zxk,
                     I(
                         y(
                             {
-                                look: l.zxk.Looks.BLANK,
-                                size: l.zxk.Sizes.NONE,
+                                look: null != P ? P : l.zxk.Looks.BLANK,
+                                size: null != D ? D : l.zxk.Sizes.NONE,
                                 onKeyDown: (e) => {
                                     null == i || i(e);
                                 },
@@ -134,7 +134,7 @@ function A(e) {
                                     null == T || T(), null == c || c(e);
                                 },
                                 disabled: E,
-                                innerClassName: v.lineHeightReset,
+                                innerClassName: a()(v.lineHeightReset, { [v.buttonInnerWithText]: null != w }),
                                 className: a()({ [v.active]: b }, d),
                                 wrapperClassName: f,
                                 buttonRef: A,
@@ -144,14 +144,18 @@ function A(e) {
                             N
                         ),
                         {
-                            children: (0, r.jsx)(h, {
-                                size: s.Z.md,
-                                className: a()(v.controlIcon, _, {
-                                    [v.themeable]: g,
-                                    [v.active]: b
+                            children: [
+                                (0, r.jsx)(h, {
+                                    size: s.Z.md,
+                                    className: a()(_, {
+                                        [v.controlIcon]: null == w,
+                                        [v.themeable]: g,
+                                        [v.active]: b
+                                    }),
+                                    color: p
                                 }),
-                                color: p
-                            })
+                                w
+                            ]
                         }
                     )
                 );

@@ -1,8 +1,8 @@
-n.d(t, { L: () => p }), n(47120);
+n.d(t, { L: () => b }), n(47120);
 var r = n(200651),
     a = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     o = n(481060),
     s = n(310752),
     c = n(710845),
@@ -10,7 +10,7 @@ var r = n(200651),
     u = n(731994),
     m = n(223692);
 let h = new c.Z('ShopAssetsPreviewUploadArea'),
-    x = (e) => {
+    p = (e) => {
         (0, o.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 897842));
@@ -47,17 +47,20 @@ let h = new c.Z('ShopAssetsPreviewUploadArea'),
             { modalKey: d.A }
         );
     },
-    f = () => {
-        x({
+    x = () => {
+        p({
             title: 'Invalid file type!',
             help: 'Please drop only image files or a directory containing image files.'
         });
     },
-    p = (e) => {
+    f = (e) => {
+        e.stopPropagation(), e.preventDefault();
+    },
+    b = (e) => {
         let { className: t, onDrop: n } = e,
-            [l, c] = a.useState(!1),
-            x = a.useRef(null),
-            p = a.useCallback((e) => {
+            [i, c] = a.useState(!1),
+            p = a.useRef(null),
+            b = a.useCallback((e) => {
                 for (let t of e)
                     try {
                         if (null == t || (!t.isFile && !t.isDirectory)) return h.warn('Dropped item is not a file or directory'), !1;
@@ -66,20 +69,21 @@ let h = new c.Z('ShopAssetsPreviewUploadArea'),
                     }
                 return !0;
             }, []),
-            b = a.useCallback((e) => {
-                e.stopPropagation(), e.preventDefault(), c(!0);
-                let t = e.dataTransfer;
-                null != t && ((t.dropEffect = 'copy'), (0, o.nfh)(d.A) && (0, o.Mr3)(d.A));
+            _ = a.useCallback((e) => {
+                f(e), (0, o.Mr3)(d.A), null != e.dataTransfer && (e.dataTransfer.dropEffect = 'copy');
             }, []),
-            _ = a.useCallback(() => {
-                c(!1);
+            g = a.useCallback((e) => {
+                f(e), c(!0);
             }, []),
-            g = a.useCallback(
+            v = a.useCallback((e) => {
+                f(e), c(!1);
+            }, []),
+            j = a.useCallback(
                 async (e) => {
-                    e.preventDefault(), e.stopPropagation(), c(!1);
+                    f(e), c(!1);
                     let t = e.dataTransfer;
                     if (null == t) {
-                        f();
+                        x();
                         return;
                     }
                     let r = await Promise.all(
@@ -88,46 +92,37 @@ let h = new c.Z('ShopAssetsPreviewUploadArea'),
                             return null !== (t = e.webkitGetAsEntry()) && void 0 !== t ? t : e.getAsEntry();
                         })
                     ).then((e) => e.filter((e) => null != e));
-                    if (0 === r.length || !p(r)) {
-                        f();
+                    if (0 === r.length || !b(r)) {
+                        x();
                         return;
                     }
                     h.info('[DEBUG] file system entries: '.concat(r.length)), n(r);
                 },
-                [n, p]
+                [n, b]
             );
-        return (
-            a.useEffect(() => {
-                var e;
-                let t = null === (e = x.current) || void 0 === e ? void 0 : e.ownerDocument.body;
-                if (null != t) return t.addEventListener('dragover', b, !1), () => t.removeEventListener('dragover', b, !1);
-            }, [b]),
-            (0, r.jsx)('div', {
-                ref: x,
-                className: i()(t, m.uploadArea, { [m.droppable]: l }),
-                onDragLeave: _,
-                onDragEnd: _,
-                onDrop: g,
+        return (0, r.jsx)('div', {
+            ref: p,
+            className: l()(t, m.uploadArea),
+            onDragEnter: g,
+            onDragOver: _,
+            onDragLeave: v,
+            onDrop: j,
+            children: (0, r.jsx)('div', {
+                className: l()(m.uploadModal, { [m.droppable]: i }),
                 children: (0, r.jsxs)('div', {
-                    className: m.uploadModal,
+                    className: m.inner,
                     children: [
-                        (0, r.jsx)('div', { className: m.bgScale }),
-                        (0, r.jsxs)('div', {
-                            className: m.inner,
-                            children: [
-                                (0, r.jsx)(s.Z, { icons: u.J6 }),
-                                (0, r.jsx)('div', {
-                                    className: m.title,
-                                    children: 'Upload Shop Assets'
-                                }),
-                                (0, r.jsx)('div', {
-                                    className: m.instructions,
-                                    children: (0, r.jsx)('pre', { children: 'Upload files' })
-                                })
-                            ]
+                        (0, r.jsx)(s.Z, { icons: u.J6 }),
+                        (0, r.jsx)('div', {
+                            className: m.title,
+                            children: 'Upload Shop Assets'
+                        }),
+                        (0, r.jsx)('div', {
+                            className: m.instructions,
+                            children: (0, r.jsx)('pre', { children: 'Upload files' })
                         })
                     ]
                 })
             })
-        );
+        });
     };
