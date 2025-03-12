@@ -1,23 +1,27 @@
-n.d(t, { _: () => a });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    l = n(812206),
-    o = n(531826);
-function a(e) {
-    let { applicationId: t, channelId: a, launchParams: s, message: c, onShare: u } = e,
-        d = l.Z.getApplication(t),
-        p =
+n.d(t, { _: () => s });
+var r = n(200651),
+    i = n(192379),
+    l = n(481060),
+    o = n(812206),
+    a = n(531826);
+function s(e) {
+    let { applicationId: t, channelId: s, launchParams: c, message: u, onShare: d } = e,
+        p = o.Z.getApplication(t),
+        h =
             null !=
-            (0, o.ZP)({
-                application: d,
-                channelId: a
+            (0, a.ZP)({
+                application: p,
+                channelId: s
             })
-                ? i.u1M
-                : i.z1l;
-    (0, i.ZDy)(
+                ? l.u1M
+                : l.z1l,
+        f = !1;
+    (0, l.ZDy)(
         async () => {
-            let { default: e } = await n.e('83098').then(n.bind(n, 137021));
+            let { default: e } = await n.e('83098').then(n.bind(n, 137021)),
+                l = i.useCallback((e) => {
+                    d(e, f);
+                }, []);
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -48,10 +52,13 @@ function a(e) {
                     })(
                         {
                             applicationId: t,
-                            channelId: a,
-                            launchParams: s,
-                            message: c,
-                            onShare: u
+                            channelId: s,
+                            launchParams: c,
+                            message: u,
+                            onCopyLink: () => {
+                                f = !0;
+                            },
+                            onShare: l
                         },
                         n
                     )
@@ -59,9 +66,9 @@ function a(e) {
         },
         {
             modalKey: 'activity-share-moment-modal',
-            contextKey: p,
+            contextKey: h,
             onCloseCallback: () => {
-                u(!1);
+                d(!1, f);
             }
         }
     );

@@ -129,8 +129,11 @@ let I = new Set([v.Fu, v.JT]),
                             linkId: o
                         },
                         message: l,
-                        onShare: (t) => {
-                            e({ success: t });
+                        onShare: (t, n) => {
+                            e({
+                                success: t,
+                                didCopyLink: n
+                            });
                         }
                     });
                 });
