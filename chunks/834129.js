@@ -5,14 +5,14 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     l = n(318713),
-    s = n(939448);
+    s = n(394387);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: i, className: o, children: c, contentClassName: d, iconClassName: u, iconContainerClassName: p, compact: m = !1 } = e;
+    let { icon: t, iconNode: n, timestamp: i, className: o, children: c, contentClassName: d, iconClassName: u, iconContainerClassName: p, timestampClassName: m, compact: f = !1 } = e;
     return (0, r.jsxs)('div', {
         className: a()(o, {
             [s.container]: !0,
-            [s.compact]: m,
-            [s.cozy]: !m
+            [s.compact]: f,
+            [s.cozy]: !f
         }),
         children: [
             null != n &&
@@ -31,7 +31,14 @@ function c(e) {
                 }),
             (0, r.jsxs)('div', {
                 className: a()(d, s.content),
-                children: [c, null != i && (0, r.jsx)(l.Z, { timestamp: i })]
+                children: [
+                    c,
+                    null != i &&
+                        (0, r.jsx)(l.Z, {
+                            timestamp: i,
+                            className: m
+                        })
+                ]
             })
         ]
     });

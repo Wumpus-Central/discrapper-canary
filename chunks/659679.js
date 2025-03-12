@@ -1,52 +1,57 @@
-t.d(n, { Z: () => v });
-var i = t(200651),
-    r = t(192379),
-    a = t(793030),
+t.d(n, { Z: () => m });
+var r = t(200651);
+t(192379);
+var i = t(793030),
     o = t(442837),
     s = t(481060),
-    c = t(834129),
+    a = t(834129),
     l = t(271383),
-    d = t(709586),
-    u = t(388032),
-    x = t(212590);
-function v(e) {
-    var n;
-    let { boost: t } = e,
-        { username: v, roleColor: m } = (0, o.cj)(
+    c = t(709586),
+    d = t(709054),
+    u = t(730621),
+    p = t(388032),
+    v = t(652754);
+function m(e) {
+    let { boost: n } = e,
+        t = new Date(d.default.extractTimestamp(n.id)),
+        { username: m, roleColor: x } = (0, o.cj)(
             [l.ZP],
             () => {
-                var e, n, i;
+                var e, t, r;
                 return {
-                    username: null !== (i = l.ZP.getNick(t.guildId, t.userId)) && void 0 !== i ? i : null === (e = t.user) || void 0 === e ? void 0 : e.username,
-                    roleColor: null === (n = l.ZP.getMember(t.guildId, t.userId)) || void 0 === n ? void 0 : n.colorString
+                    username: null !== (r = l.ZP.getNick(n.guildId, n.userId)) && void 0 !== r ? r : null === (e = n.user) || void 0 === e ? void 0 : e.username,
+                    roleColor: null === (t = l.ZP.getMember(n.guildId, n.userId)) || void 0 === t ? void 0 : t.colorString
                 };
             },
-            [t]
-        ),
-        p = r.useCallback(
-            () =>
-                (0, i.jsx)(s.PUh, {
-                    name: v,
-                    color: null != m ? m : void 0
-                }),
-            [v, m]
+            [n]
         );
-    return (0, i.jsx)(c.Z, {
-        className: x.textContainer,
-        iconNode: (0, i.jsx)(d.Z, {
-            className: x.icon,
+    return (0, r.jsx)(a.Z, {
+        className: v.systemMessageContainer,
+        contentClassName: v.systemMessageContent,
+        iconNode: (0, r.jsx)(c.Z, {
+            className: v.icon,
             width: 16,
             height: 16
         }),
-        iconContainerClassName: x.iconContainer,
-        timestamp: null !== (n = t.endsAt) && void 0 !== n ? n : void 0,
+        iconContainerClassName: v.iconContainer,
+        timestampClassName: v.timestamp,
+        timestamp: t,
         compact: !0,
-        children: (0, i.jsx)(a.xv, {
-            variant: 'text-md/semibold',
-            children: u.NW.format(u.t['57St//'], {
-                username: v,
-                usernameHook: p
-            })
+        children: (0, r.jsxs)('span', {
+            className: v.boostMessage,
+            children: [
+                (0, r.jsx)(i.xv, {
+                    variant: 'text-md/semibold',
+                    children: (0, r.jsx)(s.PUh, {
+                        name: m,
+                        color: null != x ? x : void 0
+                    })
+                }),
+                (0, r.jsx)(i.xv, {
+                    variant: 'text-md/medium',
+                    children: p.NW.string(u.Z.plwH8f)
+                })
+            ]
         })
     });
 }
