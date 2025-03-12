@@ -94,15 +94,26 @@ let u = () =>
               });
     },
     h = (e) => {
-        let { ignoredFiles: t } = e;
+        let { ignoredFiles: t, handleClearIgnoredFiles: n } = e;
         return 0 === t.length
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(i.LZC, { size: 16 }),
-                      (0, r.jsx)(i.X6q, {
-                          variant: 'heading-lg/bold',
-                          children: 'Ignored Files'
+                      (0, r.jsxs)('div', {
+                          className: d.headingContainer,
+                          children: [
+                              (0, r.jsx)(i.X6q, {
+                                  variant: 'heading-lg/bold',
+                                  children: 'Ignored Files'
+                              }),
+                              (0, r.jsx)(i.zxk, {
+                                  look: i.zxk.Looks.FILLED,
+                                  size: i.zxk.Sizes.TINY,
+                                  onClick: n,
+                                  children: 'Clear'
+                              })
+                          ]
                       }),
                       (0, r.jsx)('ul', {
                           children: t.map((e, t) =>
@@ -138,10 +149,11 @@ let u = () =>
             ),
             f = a.useCallback(
                 async (e) => {
-                    (await (0, c.RF)(e)).forEach((e) => (0, c.ZK)(e, x, c.Eo)), p(!0);
+                    t([]), (await (0, c.RF)(e)).forEach((e) => (0, c.ZK)(e, x, c.Eo)), p(!0);
                 },
                 [x, p]
-            );
+            ),
+            b = a.useCallback(() => t([]), []);
         return (0, r.jsxs)('div', {
             className: d.container,
             children: [
@@ -175,7 +187,10 @@ let u = () =>
                     ]
                 }),
                 (0, r.jsx)(m, {}),
-                (0, r.jsx)(h, { ignoredFiles: e })
+                (0, r.jsx)(h, {
+                    ignoredFiles: e,
+                    handleClearIgnoredFiles: b
+                })
             ]
         });
     };
