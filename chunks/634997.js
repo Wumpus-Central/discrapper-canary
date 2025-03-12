@@ -1,8 +1,8 @@
-n.d(t, { default: () => S }), n(266796);
-var i = n(200651),
-    o = n(192379),
-    s = n(772848),
-    r = n(481060),
+n.d(t, { default: () => L }), n(266796);
+var o = n(200651),
+    i = n(192379),
+    r = n(772848),
+    s = n(481060),
     l = n(600164),
     a = n(138201),
     c = n(63063),
@@ -14,101 +14,103 @@ var i = n(200651),
     u = n(800530),
     I = n(388032),
     A = n(165145);
-let S = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: S } = e,
-        { loading: L, initiateAgeVerification: T } = (0, E.WD)(S),
-        x = o.useMemo(() => (0, s.Z)(), []);
+let L = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: L } = e,
+        { loading: S, initiateAgeVerification: T } = (0, E.WD)(L),
+        C = i.useMemo(() => (0, r.Z)(), []);
     return (
-        o.useEffect(() => {
-            (0, d.lA)(x, d.d_.PRIMARY, n);
-        }, [x, n]),
-        (0, i.jsxs)(r.Y0X, {
+        i.useEffect(() => {
+            (0, d.lA)(C, d.d_.PRIMARY, n);
+        }, [C, n]),
+        (0, o.jsxs)(s.Y0X, {
             transitionState: t,
             className: A.root,
             children: [
-                (0, i.jsxs)(r.hzk, {
+                (0, o.jsxs)(s.hzk, {
                     className: A.content,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, o.jsxs)('div', {
                             className: A.headersContainer,
                             children: [
-                                (0, i.jsx)(r.X6q, {
+                                (0, o.jsx)(s.X6q, {
                                     variant: 'heading-xl/bold',
                                     children: I.NW.string(I.t['FQ+YOD'])
                                 }),
-                                (0, i.jsx)(r.X6q, {
+                                (0, o.jsx)(s.X6q, {
                                     variant: 'heading-md/medium',
                                     color: 'text-normal',
                                     children: I.NW.string(I.t.Cc41tb)
                                 }),
-                                (0, i.jsx)(r.olH, {
+                                (0, o.jsx)(s.olH, {
                                     className: A.modalClose,
-                                    onClick: S
+                                    onClick: L
                                 })
                             ]
                         }),
-                        (0, N.u)(x).map((e, t) => {
-                            let { title: n, description: o } = e;
-                            return (0, i.jsx)(
+                        (0, N.u)(C).map((e, t) => {
+                            let { title: n, description: i } = e;
+                            return (0, o.jsx)(
                                 a.ZP,
                                 {
                                     title: n,
-                                    description: o,
+                                    description: i,
                                     listType: 'numbered',
                                     index: t
                                 },
                                 t
                             );
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, o.jsx)(s.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
                             className: A.requestContainer,
                             children: I.NW.format(I.t.TYfgw8, {
                                 handleOnRequestHook: () => {
-                                    _.Z.openUrl(u.sQ.APPEALS_LINK), (0, d.x3)(x, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
+                                    _.Z.openUrl(u.sQ.APPEALS_LINK), (0, d.x3)(C, d.d_.PRIMARY, d.sU.MANUAL_REVIEW_REQUEST);
                                 }
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(r.mzw, {
+                (0, o.jsxs)(s.mzw, {
                     justify: l.Z.Justify.BETWEEN,
                     direction: l.Z.Direction.HORIZONTAL,
+                    className: A.modalFooter,
                     children: [
-                        (0, i.jsxs)(r.zxk, {
+                        (0, o.jsxs)(s.zxk, {
                             innerClassName: A.button,
-                            color: r.zxk.Colors.TRANSPARENT,
-                            look: r.zxk.Looks.BLANK,
+                            color: s.zxk.Colors.LINK,
+                            look: s.zxk.Looks.LINK,
+                            className: A.learnMoreButton,
                             onClick: () => {
-                                _.Z.openUrl(c.Z.getArticleURL(m.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_LEARN_MORE)), (0, d.x3)(x, d.d_.PRIMARY, d.sU.LEARN_MORE);
+                                _.Z.openUrl(c.Z.getArticleURL(m.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_LEARN_MORE)), (0, d.x3)(C, d.d_.PRIMARY, d.sU.LEARN_MORE);
                             },
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, o.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
-                                    color: 'header-primary',
+                                    color: 'currentColor',
                                     children: I.NW.string(I.t.mXpKND)
                                 }),
-                                (0, i.jsx)(r.Gr1, {
+                                (0, o.jsx)(s.Gr1, {
                                     size: 'xs',
-                                    color: r.TVs.colors.HEADER_PRIMARY
+                                    color: 'currentColor'
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(r.zxk, {
+                        (0, o.jsxs)(s.zxk, {
                             innerClassName: A.button,
-                            color: r.zxk.Colors.BRAND,
+                            color: s.zxk.Colors.BRAND,
                             onClick: () => {
-                                (0, d.x3)(x, d.d_.PRIMARY, d.sU.GET_STARTED), T();
+                                (0, d.x3)(C, d.d_.PRIMARY, d.sU.GET_STARTED), T();
                             },
-                            submitting: L,
+                            submitting: S,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, o.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'always-white',
                                     children: I.NW.string(I.t.VLbVho)
                                 }),
-                                (0, i.jsx)(r.Gr1, {
+                                (0, o.jsx)(s.Gr1, {
                                     size: 'xs',
                                     color: 'currentColor'
                                 })
