@@ -1,124 +1,100 @@
-n.d(t, {
-    default: () => h,
-    i: () => f
-});
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(174609),
-    o = n(703656),
-    l = n(626135),
-    s = n(790527),
-    c = n(474936),
-    d = n(981631),
-    u = n(388032),
-    p = n(593064);
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function f() {
-    (0, i.ZDy)(async () => {
-        let { default: e } = await Promise.resolve().then(n.bind(n, 166335));
-        return (t) =>
-            (0, r.jsx)(
-                e,
-                m(
-                    {
-                        analyticsSource: d.Sbl.VOICE_FILTERS,
-                        analyticsLocation: {
-                            section: d.jXE.VOICE_FILTERS_UPSELL_MODAL,
-                            object: d.qAy.BUTTON_CTA
-                        }
-                    },
-                    t
-                )
-            );
-    });
-}
-function h(e) {
+r.d(t, { default: () => d });
+var n = r(200651);
+r(192379);
+var a = r(174609),
+    o = r(703656),
+    s = r(626135),
+    c = r(790527),
+    l = r(474936),
+    b = r(981631),
+    i = r(388032),
+    u = r(593064);
+function d(e) {
     var { onClose: t } = e,
-        i = (function (e, t) {
+        d = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
+            var r,
+                n,
+                a = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    var r,
+                        n,
+                        a = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
             }
-            return i;
+            return a;
         })(e, ['onClose']);
-    let f = (0, r.jsx)('img', {
-            src: n(414190),
-            className: p.art,
+    let f = (0, n.jsx)('img', {
+            src: r(414190),
+            className: u.art,
             alt: ''
         }),
-        h = (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)('div', { className: p.blur0 }), (0, r.jsx)('div', { className: p.blur1 }), (0, r.jsx)('div', { className: p.blur2 })]
+        O = (0, n.jsxs)(n.Fragment, {
+            children: [(0, n.jsx)('div', { className: u.blur0 }), (0, n.jsx)('div', { className: u.blur1 }), (0, n.jsx)('div', { className: u.blur2 })]
         });
-    return (0, r.jsx)(
-        s.Z,
-        m(
+    return (0, n.jsx)(
+        c.Z,
+        (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var r = null != arguments[t] ? arguments[t] : {},
+                    n = Object.keys(r);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(r).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        })
+                    )),
+                    n.forEach(function (t) {
+                        var n;
+                        (n = r[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = n);
+                    });
+            }
+            return e;
+        })(
             {
-                title: u.NW.string(u.t.YqknLi),
-                glowUp: u.NW.string(u.t['3hj4kZ']),
-                body: u.NW.string(u.t['3hj4kZ']),
+                title: i.NW.string(i.t.YqknLi),
+                glowUp: i.NW.string(i.t['3hj4kZ']),
+                body: i.NW.string(i.t['3hj4kZ']),
                 artElement: f,
-                artContainerClassName: p.artContainer,
-                type: c.cd.VOICE_FILTERS_UPSELL,
+                artContainerClassName: u.artContainer,
+                type: l.cd.VOICE_FILTERS_UPSELL,
                 onClose: t,
                 onSubscribeClick: a.Z,
-                secondaryCTA: u.NW.string(u.t.ZnqyZ2),
+                secondaryCTA: i.NW.string(i.t.ZnqyZ2),
                 onSecondaryClick: function () {
                     (0, a.Z)(),
                         t(),
-                        l.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
-                            location_section: d.jXE.VOICE_FILTERS_UPSELL_MODAL,
-                            location_object: d.qAy.NAVIGATION_LINK
+                        s.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+                            location_section: b.jXE.VOICE_FILTERS_UPSELL_MODAL,
+                            location_object: b.qAy.NAVIGATION_LINK
                         }),
-                        (0, o.uL)(d.Z5c.APPLICATION_STORE);
+                        (0, o.uL)(b.Z5c.APPLICATION_STORE);
                 },
                 showEnhancedUpsell: !0,
                 enableArtBoxShadow: !1,
-                headerClassName: p.header,
-                modalClassName: p.modal,
-                backgroundElements: h,
+                headerClassName: u.header,
+                modalClassName: u.modal,
+                backgroundElements: O,
                 smallText: !0,
-                footerClassName: p.footer,
-                subscribeButtonClassname: p.subscribeButton,
+                footerClassName: u.footer,
+                subscribeButtonClassname: u.subscribeButton,
                 showBetaBadge: !0
             },
-            i
+            d
         )
     );
 }

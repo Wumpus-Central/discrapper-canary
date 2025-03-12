@@ -814,6 +814,7 @@ function e2(e) {
                             align: 'center',
                             animation: f.yRy.Animation.FADE,
                             useMouseEnter: !0,
+                            ignoreModalClicks: !0,
                             onRequestOpen: ef.r5,
                             onRequestClose: H,
                             shouldShow: G,
@@ -867,6 +868,7 @@ function e2(e) {
                                                                           }),
                                                                           (0, r.jsx)(f.Text, {
                                                                               variant: 'text-sm/medium',
+                                                                              color: 'always-white',
                                                                               children: eV.NW.string(eV.t.VlC1dX)
                                                                           })
                                                                       ]

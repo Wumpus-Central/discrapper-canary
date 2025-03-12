@@ -472,7 +472,7 @@ function eA(e) {
     });
 }
 function ew(e) {
-    return (0, P.u)(e, 'CenterControlTray', { entrypoint: ex.A5.CARET });
+    return (0, P.u)(e, v.Z.VOICE_CONTROL_TRAY, { entrypoint: ex.A5.CARET });
 }
 let eR = function (e) {
     var t, n;
@@ -556,6 +556,7 @@ let eR = function (e) {
                                                         })
                                               });
                                           },
+                                          ignoreModalClicks: eg,
                                           align: 'center',
                                           position: 'top',
                                           animation: p.yRy.Animation.FADE,
@@ -700,6 +701,7 @@ let eR = function (e) {
                                                       })
                                             });
                                         },
+                                        ignoreModalClicks: eg,
                                         align: 'center',
                                         position: 'top',
                                         animation: p.yRy.Animation.FADE,
@@ -785,6 +787,7 @@ let eR = function (e) {
                                                       })
                                             });
                                         },
+                                        ignoreModalClicks: eg,
                                         align: 'center',
                                         position: 'top',
                                         animation: p.yRy.Animation.FADE,
