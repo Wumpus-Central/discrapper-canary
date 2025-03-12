@@ -15,7 +15,8 @@ function _(e) {
         m = (0, l.i)(u, 2000),
         g = (0, c.C)(n, o, m),
         [E, v] = (0, i.useState)(t),
-        [b, y] = (0, i.useState)(!1);
+        [b, y] = (0, i.useState)(!1),
+        [O, I] = (0, i.useState)(!1);
     if (
         ((0, i.useEffect)(() => {
             if (null == E || null != t || b) null != t && (v(t), y(!1));
@@ -30,17 +31,18 @@ function _(e) {
         null == t)
     )
         return null;
-    let O = null != t ? t : E;
-    return null == O
+    let S = null != t ? t : E;
+    return null == S
         ? null
         : (0, r.jsx)('div', {
               className: a()(f.container, {
                   [f.containerExit]: b,
-                  [f.accountContainer]: _
+                  [f.accountContainer]: _,
+                  [f.fadeIn]: O && !b
               }),
-              style: { background: h.background },
+              style: O ? { background: h.background } : void 0,
               children: (0, r.jsx)(p, {
-                  nameplate: O,
+                  nameplate: S,
                   className: a()(f.img, {
                       [f.hover]: n,
                       [f.selected]: o,
@@ -48,27 +50,30 @@ function _(e) {
                   }),
                   style: h,
                   animate: g,
-                  loop: !!(n || u)
+                  loop: !!(n || u),
+                  onLoad: () => I(!0)
               })
           });
 }
 function p(e) {
-    let { nameplate: t, className: n, style: o, animate: a, loop: l } = e,
-        c = (0, i.useRef)(null);
+    let { nameplate: t, className: n, style: o, animate: a, loop: l, onLoad: c } = e,
+        d = (0, i.useRef)(null);
     i.useEffect(() => {
-        null != c.current && (a ? c.current.play() : c.current.pause());
+        null != d.current && (a ? d.current.play() : d.current.pause());
     }, [a]);
-    let d = (0, u._)(t, a);
-    return (null == d ? void 0 : d.endsWith('.png')) || t.preview
+    let f = (0, u._)(t, a);
+    return (null == f ? void 0 : f.endsWith('.png')) || t.preview
         ? (0, r.jsx)('img', {
-              src: d,
+              src: f,
               className: n,
               style: o,
-              alt: t.imgAlt
+              alt: t.imgAlt,
+              onLoad: c
           })
         : (0, r.jsx)(s.Z, {
-              src: d,
-              ref: c,
+              onLoadedData: c,
+              src: f,
+              ref: d,
               playsInline: !0,
               loop: l,
               controls: !1,

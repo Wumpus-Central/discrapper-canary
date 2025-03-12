@@ -13921,7 +13921,10 @@ div.cardContainer__88e24 {
     overflow: hidden;
     left: 0;
     top: 0;
-    opacity: 0;
+    opacity: 0
+}
+
+.fadeIn__4bbc6 {
     animation: fadeIn__4bbc6 .3s forwards
 }
 
