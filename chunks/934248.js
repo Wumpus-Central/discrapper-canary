@@ -69,29 +69,30 @@ let u = {
     d = (e) => {
         let t = i.useRef(null),
             a = i.useRef(e);
-        return (
-            (a.current = e),
-            {
-                events: {},
-                play: i.useMemo(
-                    () => () => {
-                        null != t.current && t.current.play(e);
-                    },
-                    [e]
-                ),
-                Component: i.useCallback(
-                    (e) =>
-                        (0, r.jsx)(
-                            o.L,
-                            c(s({}, e), {
-                                src: () => n.e('75535').then(n.t.bind(n, 405115, 19)),
-                                ref: t,
-                                initialAnimation: a.current,
-                                markers: u
-                            })
-                        ),
-                    []
-                )
-            }
-        );
+        a.current = e;
+        let l = i.useMemo(
+                () => () => {
+                    null != t.current && t.current.play(e);
+                },
+                [e]
+            ),
+            d = i.useCallback(
+                (e) =>
+                    (0, r.jsx)(
+                        o.L,
+                        c(s({}, e), {
+                            src: () => n.e('75535').then(n.t.bind(n, 405115, 19)),
+                            ref: t,
+                            initialAnimation: a.current,
+                            markers: u
+                        })
+                    ),
+                []
+            );
+        return {
+            events: {},
+            play: l,
+            internalLottieRef: t,
+            Component: d
+        };
     };

@@ -1,5 +1,5 @@
 n.d(t, {
-    A4: () => v,
+    A4: () => b,
     b6: () => c.b
 }),
     n(47120);
@@ -75,59 +75,66 @@ let m = () =>
         width: 60,
         height: 60
     },
-    v = (0, i.forwardRef)(function (e, t) {
-        let { balance: n, balanceWidgetMode: o = c.b.DEFAULT, showNotificationBadge: f, onClick: p, onMouseEnter: v, onMouseLeave: b, onMouseDown: y, className: O } = e,
-            I = d.default;
+    v = 3000,
+    b = (0, i.forwardRef)(function (e, t) {
+        let { balance: n, balanceWidgetMode: o = c.b.DEFAULT, showNotificationBadge: f, onClick: p, onMouseEnter: b, onMouseLeave: y, onMouseDown: O, className: I } = e,
+            S = d.default;
         switch (o) {
             case c.b.HIGHLIGHTED:
-                I = d.highlighted;
+                S = d.highlighted;
                 break;
             case c.b.SELECTED:
-                I = d.selected;
+                S = d.selected;
         }
-        let [S, T] = (0, i.useState)(!1),
-            N = null === n;
+        let [T, N] = (0, i.useState)(!1),
+            [A, C] = (0, i.useState)(!1),
+            R = null === n;
         (0, i.useEffect)(() => {
-            N &&
-                !S &&
-                (T(!0),
+            R &&
+                !T &&
+                (N(!0),
                 setTimeout(() => {
-                    T(!1);
+                    C(!0);
                 }, 500));
-        }, [N, T, S]);
-        let A = N || S,
-            C = S ? null : n,
-            [R, P] = (0, i.useState)(null),
-            w = (0, i.useRef)(null),
-            { Component: D, play: L } = (0, s.D)(null != R ? R : 'earn');
+        }, [R, N, T]),
+            (0, i.useEffect)(() => {
+                A && !R && N(!1);
+            }, [R, A]);
+        let P = R || T,
+            w = T ? null : n,
+            [D, L] = (0, i.useState)(null),
+            x = (0, i.useRef)(null),
+            { Component: M, play: k, internalLottieRef: j } = (0, s.D)(null != D ? D : 'earn'),
+            U = null !== j.current ? j.current.getDuration() : null,
+            G = (null !== U ? 1000 * U : v) * 0.9;
         (0, i.useEffect)(() => {
-            null !== R && R !== w.current && ((w.current = R), L());
-        }, [R, L]);
-        let x = (0, i.useCallback)(() => {
-                (w.current = null), P(null);
+            null !== D && D !== x.current && ((x.current = D), k());
+        }, [D, k]);
+        let B = (0, i.useCallback)(() => {
+                (x.current = null), L(null);
             }, []),
-            M = (0, i.useCallback)(
+            V = (0, i.useCallback)(
                 (e) => {
-                    let t = R === w.current;
-                    e > 0 && ('earn' !== R || !t) ? P('earn') : e < 0 && ('spend' !== R || !t) && P('spend');
+                    let t = D === x.current;
+                    e > 0 && ('earn' !== D || !t) ? L('earn') : e < 0 && ('spend' !== D || !t) && L('spend');
                 },
-                [P, R]
+                [L, D]
             );
         return (0, r.jsx)(l.P3F, {
-            onClick: A ? void 0 : p,
+            onClick: P ? void 0 : p,
             className: d.clickable,
             children: (0, r.jsxs)('span', {
-                onMouseEnter: v,
-                onMouseLeave: b,
-                onMouseDown: y,
+                onMouseEnter: b,
+                onMouseLeave: y,
+                onMouseDown: O,
                 id: g,
                 ref: t,
-                className: a()(d.container, I, O, { [d.containerLoading]: A }),
+                className: a()(d.container, S, I, { [d.containerLoading]: P }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(d.orbsLottieContainer, A ? d.orbIconloading : void 0),
+                        className: a()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),
                         children: (0, r.jsx)(
-                            D,
+                            M,
                             h(_({}, E), {
                                 size: 'custom',
                                 className: d.orbsLottie,
@@ -136,10 +143,11 @@ let m = () =>
                         )
                     }),
                     (0, r.jsx)(u.Z, {
-                        value: C,
-                        onValueChange: M,
-                        onValueReached: x,
-                        className: A ? d.counterLoading : void 0
+                        value: w,
+                        onValueChange: V,
+                        onValueReached: B,
+                        targetTotalCounterTime: G,
+                        className: P ? d.counterLoading : void 0
                     }),
                     f && (0, r.jsx)(m, {})
                 ]

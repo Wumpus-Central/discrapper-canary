@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(335131),
     u = n(703656),
     m = n(751648),
-    g = n(511050),
-    p = n(52647),
+    p = n(511050),
+    g = n(52647),
     h = n(317257),
     f = n(120786),
     b = n(775451),
@@ -20,17 +20,17 @@ var r = n(200651),
     E = n(450272),
     j = n(981631),
     C = n(388032),
-    O = n(368186),
-    v = n(449762);
+    O = n(747431),
+    v = n(701905);
 function S() {
     return (0, r.jsxs)('div', {
         children: [(0, r.jsx)(T, {}), (0, r.jsx)(I, {})]
     });
 }
 function T() {
-    let { openIntroToOrbsClaimedCoachmark: e } = (0, g.l)({ location: 'VirtualCurrencyComponents' }),
+    let { openIntroToOrbsClaimedCoachmark: e } = (0, p.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = i.useState(150),
-        [p, x] = i.useState(150),
+        [g, x] = i.useState(150),
         [_, v] = i.useState(500),
         [S, T] = i.useState(h.b.DEFAULT),
         I = () => {
@@ -169,6 +169,14 @@ function T() {
                         onClick: () => x(t),
                         children: 'Set Balance'
                     }),
+                    (0, r.jsx)('div', {
+                        className: O.interactivePillContainer,
+                        children: (0, r.jsx)(N.A4, {
+                            balance: g,
+                            balanceWidgetMode: S,
+                            onClick: () => I()
+                        })
+                    }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         style: { marginBottom: '4px' },
@@ -191,7 +199,7 @@ function T() {
                     (0, r.jsx)('div', {
                         className: O.interactivePillContainer,
                         children: (0, r.jsx)(N.A4, {
-                            balance: p,
+                            balance: g,
                             balanceWidgetMode: S,
                             onClick: () => I()
                         })
@@ -210,7 +218,7 @@ function T() {
     });
 }
 function I() {
-    let { resetOnboardingAnnouncementModal: e } = (0, p.Z)();
+    let { resetOnboardingAnnouncementModal: e } = (0, g.Z)();
     return (0, r.jsxs)(E.$0, {
         children: [
             (0, r.jsx)(a.X6q, {

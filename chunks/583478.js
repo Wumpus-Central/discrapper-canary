@@ -1,14 +1,16 @@
-n.d(t, { Z: () => I }), n(230036), n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(481060),
-    l = n(710845),
-    c = n(168232),
-    u = n(48541),
-    d = n(677344);
-function f(e, t, n) {
+    s = n(642128),
+    l = n(481060),
+    c = n(110924),
+    u = n(710845),
+    d = n(168232),
+    f = n(48541),
+    _ = n(677344);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,147 +34,131 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let p = new l.Z('BalanceCounter'),
-    h = (0, c.dU)(void 0) === u.C.PRODUCTION,
-    m = {
-        jump: 1,
-        duration: 1
-    },
-    g = 3000,
-    E = {
-        POSITIVE: [
-            {
-                delta: 200,
-                duration: 1000,
-                tickConfig: _({}, m)
-            },
-            {
-                delta: 500,
-                duration: 2000,
-                tickConfig: _({}, m)
-            }
-        ].sort((e, t) => e.delta - t.delta),
-        NEGATIVE: [
-            {
-                delta: 1000,
-                duration: 1000,
-                tickConfig: _({}, m)
-            },
-            {
-                delta: 4000,
-                duration: 2000,
-                tickConfig: _({}, m)
-            }
-        ].sort((e, t) => e.delta - t.delta)
-    },
-    v = {
-        POSITIVE: E.POSITIVE[E.POSITIVE.length - 1],
-        NEGATIVE: E.NEGATIVE[E.NEGATIVE.length - 1]
-    };
-function b(e, t) {
-    return e > t
-        ? {
-              jump: Math.ceil((2 * e) / t),
-              duration: 1
-          }
-        : {
-              jump: 1,
-              duration: Math.floor(t / e)
-          };
-}
-(function () {
-    for (let e of Object.keys(E)) {
-        let t = 0,
-            n = 0;
-        for (let r of E[e]) {
-            let e = Math.abs(r.delta - n),
-                i = Math.abs(r.duration - t);
-            (r.tickConfig = b(e, i)), (t = r.duration), (n = r.delta);
-        }
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = g(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
-})(),
-    h ||
-        p.log('Initializing data structures for BalanceCounter speed and tick configurations: ', {
-            MAX_ANIMATION_DURATION_MS: g,
-            ANIMATION_THRESHOLDS: E
-        });
-let y = (e, t, n, r) => {
-        let i = Math.abs(r - n),
-            o = E[t],
-            a = v[t];
-        if (i > a.delta) return b(i, g - a.duration);
-        for (let e of o) if (i <= e.delta) return e.tickConfig;
-        return {
-            jump: 1,
-            duration: 1
-        };
+    return i;
+}
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let E = new u.Z('BalanceCounter'),
+    v = (0, d.dU)(void 0) === f.C.PRODUCTION,
+    b = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
+    y = 33,
+    O = 30,
+    I = 100,
+    S = 1000,
+    T = (e, t) => {
+        let n = t;
+        return (
+            e <= y ? (n = e * O) : e < I && (n = Math.min(S, t)),
+            {
+                duration: n,
+                delay: t > n ? t - n : 0
+            }
+        );
     },
-    O = (e) => (null === e ? 0 : ''.concat(e).length),
-    I = (e) => {
-        let { value: t, onValueChange: n, onValueReached: o, className: l } = e,
-            [c, u] = (0, i.useState)(t),
-            f = (0, i.useRef)(null),
-            _ = (0, i.useRef)(null),
-            m = (0, i.useRef)(null);
+    N = (e, t, n) => (null === n ? Math.max(e, t) : Math.max(t, n)),
+    A = (e) => {
+        var t, n;
+        let { value: o, onSetDigitCount: a, onValueChange: c, onValueReached: u, targetTotalCounterTime: d = 3000 } = e,
+            [f, _] = (0, i.useState)(0),
+            p = (0, i.useRef)(null),
+            h = (0, i.useRef)(null);
         (0, i.useEffect)(() => {
-            if (null === t) return;
-            let e = null !== _.current ? t - _.current : t;
-            0 !== e && null !== _.current && n(e),
-                (m.current = {
+            if (null === o) return;
+            if (null === p.current) {
+                p.current = o;
+                return;
+            }
+            let e = null !== p.current ? o - p.current : o;
+            0 !== e && null !== p.current && c(e),
+                (h.current = {
                     lastChangedAt: Date.now(),
-                    totalDelta: Math.abs(e),
-                    changeType: e > 0 ? 'POSITIVE' : 'NEGATIVE'
+                    totalDelta: Math.abs(e)
                 });
-        }, [t, n]),
-            (0, i.useEffect)(() => {
-                var e;
-                if (null === t) {
-                    null !== c && u(null);
-                    return;
-                }
-                if (null === c || null === _.current) {
-                    u(t), (_.current = t);
-                    return;
-                }
-                if (c === t) {
-                    if (!h && null !== m.current) {
+        }, [o, c]);
+        let m = null != o ? o : 0,
+            g = null !== (t = p.current) && void 0 !== t ? t : m,
+            { duration: y, delay: O } = T(Math.abs(m - g), d),
+            { number: I } = (0, l.q_F)({
+                from: { number: null !== (n = p.current) && void 0 !== n ? n : m },
+                number: m,
+                config: {
+                    mass: 1,
+                    tension: 20,
+                    friction: 10,
+                    duration: y
+                },
+                delay: O,
+                onStart: () => {
+                    a(b(g));
+                },
+                onRest: () => {
+                    if ((_(f + 1), u(), !v && null !== h.current && null !== p.current)) {
                         let e = Date.now();
-                        p.log('Balance Counter finished updating: ', {
-                            time: e - m.current.lastChangedAt,
-                            delta: c - _.current
+                        E.log('Balance Counter finished updating: ', {
+                            time: e - h.current.lastChangedAt,
+                            delta: m - p.current
                         });
                     }
-                    o(), (_.current = t);
-                    return;
+                    a(b(m)), (p.current = m);
                 }
-                if (null !== f.current) return;
-                let { totalDelta: n, changeType: r } =
-                        null !== (e = m.current) && void 0 !== e
-                            ? e
-                            : {
-                                  totalDelta: Math.abs(t - _.current),
-                                  changeType: t > _.current ? 'POSITIVE' : 'NEGATIVE'
-                              },
-                    { jump: i, duration: a } = y(n, r, t, c);
-                f.current = setTimeout(() => {
-                    (f.current = null), c < t ? u(c + i) : c > t && u(c - i);
-                }, a);
-            }, [c, t, u, o]);
-        let g = null === t,
-            E = null === c ? O(t) : O(c),
-            v = g ? 0 : E;
-        return (0, r.jsx)(s.Text, {
+            }),
+            S = b(Math.max(null != o ? o : 0, I.get()));
+        return (0, r.jsx)(s.animated.div, {
+            style: { width: 'calc('.concat(S, 'ch)') },
+            children: I.to((e) => ''.concat(e.toFixed(0)))
+        });
+    },
+    C = (e) => {
+        var t,
+            { value: n, className: o } = e,
+            s = m(e, ['value', 'className']);
+        let u = null === n,
+            [d, f] = (0, i.useState)(null),
+            p = (0, i.useMemo)(() => b(n), [n]),
+            g = null !== (t = (0, c.Z)(p)) && void 0 !== t ? t : 0,
+            E = (0, i.useMemo)(() => N(g, p, d), [g, p, d]),
+            v = ''.concat(u ? 0 : E, 'ch');
+        return (0, r.jsx)(l.Text, {
             variant: 'text-md/semibold',
-            className: a()(d.balanceCounterText, g ? void 0 : d.balanceCounterMargin, l),
+            className: a()(_.balanceCounterText, u ? void 0 : _.balanceCounterMargin, o),
             style: {
-                width: 'calc('.concat(v, 'ch)'),
-                opacity: +!g
+                width: v,
+                opacity: u ? '0' : 1
             },
-            children: c
+            children: u
+                ? null
+                : (0, r.jsx)(
+                      A,
+                      h(
+                          {
+                              onSetDigitCount: (e) => {
+                                  e !== d && f(e);
+                              },
+                              value: n
+                          },
+                          s
+                      )
+                  )
         });
     };
