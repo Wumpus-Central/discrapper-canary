@@ -17,11 +17,11 @@ var r = n(192379),
     u = n(695349),
     d = n(464900),
     f = n(104494),
-    p = n(639119),
-    _ = n(474936),
+    _ = n(639119),
+    p = n(474936),
     h = n(981631);
 function m() {
-    let e = (0, p.N)(),
+    let e = (0, _.N)(),
         t = (0, c._O)(),
         n = (0, f.Ng)(),
         r = g();
@@ -37,38 +37,33 @@ let g = () => {
         var e;
         let t = (0, a.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
         switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
-            case _.dT:
-            case _.rB:
+            case p.dT:
+            case p.rB:
                 return {
                     duration: 1,
                     percentage: 30
                 };
-            case _.dB:
-            case _.hs:
-            case _.RU:
+            case p.dB:
+            case p.hs:
+            case p.RU:
                 return {
                     duration: 3,
                     percentage: 30
                 };
-            case _.ih:
+            case p.ih:
                 return {
                     duration: 1,
                     percentage: 40
                 };
-            case _.gW:
+            case p.gW:
                 return {
                     duration: 1,
                     percentage: 20
                 };
-            case _.Nl:
+            case p.Nl:
                 return {
                     duration: 1,
                     percentage: 25
-                };
-            case _.n5:
-                return {
-                    duration: 1,
-                    percentage: 40
                 };
             default:
                 return;
@@ -126,7 +121,7 @@ let g = () => {
         let { location: t } = e,
             n = (0, a.e7)([l.ZP], () => {
                 let e = l.ZP.getPremiumTypeSubscription();
-                return (null == e ? void 0 : e.trialId) === _.i_;
+                return (null == e ? void 0 : e.trialId) === p.i_;
             }),
             r = (0, u.W)(),
             i = d.L.useExperiment(

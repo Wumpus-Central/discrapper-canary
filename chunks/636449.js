@@ -7,22 +7,23 @@ var r = n(570140),
     o = n(214629),
     a = n(422483),
     s = n(981631);
-function l() {
-    var e;
-    let t = o.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || a.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
-    return (null === (e = platform) || void 0 === e ? void 0 : e.name) !== 'Firefox' && t;
+function l(e) {
+    var t;
+    let { isContextless: n } = e;
+    if (n) return !0;
+    let r = o.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || a.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    return (null === (t = platform) || void 0 === t ? void 0 : t.name) !== 'Firefox' && r;
 }
-async function c(e) {
-    let t;
-    let n = l();
-    n &&
+async function c(e, t) {
+    let n;
+    e &&
         r.Z.wait(() => {
             r.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
         });
     try {
-        t = await e();
+        n = await t();
     } catch (e) {
-        t = !1;
+        n = !1;
     }
-    return !t && n && i.xv(s.KJ3.ACTIVITY_POPOUT), t;
+    return !n && e && i.xv(s.KJ3.ACTIVITY_POPOUT), n;
 }
