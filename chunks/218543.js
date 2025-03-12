@@ -119,12 +119,13 @@ class f {
         o(this, 'emoji', void 0), o(this, 'name', void 0), o(this, 'start_', void 0), o(this, 'startNumImports', void 0), o(this, 'startImportTime', void 0), o(this, 'end_', void 0), o(this, 'endNumImports', void 0), o(this, 'endImportTime', void 0), (this.emoji = e), (this.name = t), (this.start_ = 0), (this.startNumImports = 0), (this.startImportTime = 0), (this.end_ = 0), (this.endNumImports = 0), (this.endImportTime = 0);
     }
 }
-class p {
+class _ {
     get time() {
         return this.time_;
     }
     record() {
-        0 === this.time_ ? ((this.time_ = Date.now()), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name)) : this.onlyOnce || r.Z.mark(this.emoji, this.name), c();
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
+        0 === this.time_ ? ((this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name)) : this.onlyOnce || r.Z.mark(this.emoji, this.name), c();
     }
     hasData() {
         return this.time_ > 0;
@@ -136,7 +137,7 @@ class p {
         o(this, 'emoji', void 0), o(this, 'name', void 0), o(this, 'onlyOnce', void 0), o(this, 'time_', void 0), o(this, 'numImports', void 0), o(this, 'importTime', void 0), (this.emoji = e), (this.name = t), (this.onlyOnce = n), (this.time_ = 0), (this.numImports = null), (this.importTime = 0);
     }
 }
-class _ {
+class p {
     get time() {
         return this.time_;
     }
@@ -160,12 +161,14 @@ class h {
             o(this, 'fetchGuildCache', new f('\uD83D\uDCBE', 'Fetch Guild Cache')),
             o(this, 'fetchGuildChannelsCache', new f('\uD83D\uDCBE', 'Fetch Initial Guild Channels Cache')),
             o(this, 'loadCachedMessages', new f('\uD83D\uDCBE', 'Load Cached Messages')),
-            o(this, 'renderApp', new p('\uD83C\uDFA8', 'First React Render')),
-            o(this, 'renderAppEffect', new p('\uD83C\uDFA8', 'First React Render useEffect')),
-            o(this, 'renderMessages', new p('\uD83C\uDFA8', 'React Render Messages', !0)),
-            o(this, 'renderMessagesWithCache', new p('\uD83C\uDFA8', 'React Render Cached Messages', !0)),
+            o(this, 'renderApp', new _('\uD83C\uDFA8', 'First React Render')),
+            o(this, 'renderAppEffect', new _('\uD83C\uDFA8', 'First React Render useEffect')),
+            o(this, 'renderMessages', new _('\uD83C\uDFA8', 'React Render Messages', !0)),
+            o(this, 'renderMessagesWithCache', new _('\uD83C\uDFA8', 'React Render Cached Messages', !0)),
             o(this, 'firstRowGenerator', new f('\uD83C\uDFA8', 'RowGenerator.generate()')),
-            o(this, 'renderLatestMessages', new p('\uD83C\uDFA8', 'React Render Latest Messages')),
+            o(this, 'displayMessagesWithCache', new _('\uD83D\uDDA5️', 'Display Cached Messages')),
+            o(this, 'renderLatestMessages', new _('\uD83C\uDFA8', 'React Render Latest Messages')),
+            o(this, 'displayLatestMessages', new _('\uD83D\uDDA5️', 'Display Latest Messages')),
             o(this, 'initialGuild', new f('\uD83C\uDF10', 'Initial Guild')),
             o(this, 'loadLazyCache', new f('\uD83D\uDCBE', 'Load Lazy Cache')),
             o(this, 'fetchLazyCache', new f('\uD83D\uDCBE', 'Fetch Lazy Cache')),
@@ -184,13 +187,13 @@ class h {
             o(this, 'fetchMessages', new f('\uD83C\uDF10', 'Fetch messages')),
             o(this, 'dispatchMessages', new f('\uD83C\uDF10', 'Dispatch messages')),
             o(this, 'imports', {
-                polyfillsEnd: new _(),
-                sentryEnd: new _(),
-                appStateChangeStart: new _(),
-                appStateChangeEnd: new _(),
-                loadMiniCacheStart: new _(),
-                loadStorageStart: new _(),
-                loadStorageEnd: new _()
+                polyfillsEnd: new p(),
+                sentryEnd: new p(),
+                appStateChangeStart: new p(),
+                appStateChangeEnd: new p(),
+                loadMiniCacheStart: new p(),
+                loadStorageStart: new p(),
+                loadStorageEnd: new p()
             });
     }
 }
@@ -344,6 +347,8 @@ class m extends h {
             time_render_messages_end: this.renderMessages.serialize(d),
             time_render_messages_with_cache_end: this.renderMessagesWithCache.serialize(d),
             time_render_latest_messages_end: this.renderLatestMessages.serialize(d),
+            time_display_messages_with_cache_end: this.displayMessagesWithCache.serialize(d),
+            time_display_latest_messages_end: this.displayLatestMessages.serialize(d),
             time_first_row_generator_start: this.firstRowGenerator.serializeStart(d),
             time_first_row_generator_end: this.firstRowGenerator.serializeEnd(d),
             time_initial_guild_start: this.initialGuild.serializeStart(d),
