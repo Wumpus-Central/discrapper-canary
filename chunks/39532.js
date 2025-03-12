@@ -9,6 +9,7 @@ e.exports = {
     banner: 'banner__08415',
     shopFullscreen: 'shopFullscreen__08415',
     bannerImage: 'bannerImage__08415',
+    responsiveHero: 'responsiveHero__08415',
     bannerVideoBackground: 'bannerVideoBackground__08415',
     bannerShadow: 'bannerShadow__08415',
     left: 'left__08415',

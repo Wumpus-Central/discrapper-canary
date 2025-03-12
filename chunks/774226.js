@@ -12,21 +12,35 @@ let s = (0, r.B)({
     kind: 'user',
     id: '2024-11_activities_contextless',
     label: 'Contextless Activities Experiment',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabledOnDesktop: !1,
+        enabledOnMobile: !1
+    },
     commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
-            label: 'Enable contextless activities',
-            config: { enabled: !0 }
+            label: 'Enable contextless activities on desktop only',
+            config: {
+                enabledOnDesktop: !0,
+                enabledOnMobile: !1
+            }
+        },
+        {
+            id: 2,
+            label: 'Enable contextless activities on desktop and mobile',
+            config: {
+                enabledOnDesktop: !0,
+                enabledOnMobile: !0
+            }
         }
     ]
 });
 function l() {
-    return s.getCurrentConfig({ location: 'getIsContextlessActivitiesExperimentEnabled' }).enabled;
+    return s.getCurrentConfig({ location: 'getIsContextlessActivitiesExperimentEnabled' }).enabledOnDesktop;
 }
-function c() {
-    return s.useExperiment({ location: 'useIsContextlessActivitiesExperimentEnabled' }).enabled;
+function c(e) {
+    return l() && null != e && (0, i.yE)(e.flags, o.udG.CONTEXTLESS_ACTIVITY);
 }
 function u(e) {
     return (0, i.yE)(e.flags, o.udG.CONTEXTLESS_ACTIVITY) && l();
