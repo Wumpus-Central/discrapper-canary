@@ -213,7 +213,9 @@ function T(e) {
               onInteraction: D,
               children: [
                   (0, r.jsx)(l.kSQ, { children: J ? $ : G }),
-                  (0, r.jsx)(l.kSQ, { children: _ }),
+                  (0, r.jsxs)(l.kSQ, {
+                      children: [L, _]
+                  }),
                   Y,
                   R
                       ? (0, r.jsxs)(r.Fragment, {
