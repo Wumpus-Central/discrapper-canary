@@ -2,8 +2,8 @@ n.d(t, {
     fz: () => O,
     ge: () => T,
     r5: () => N,
-    rk: () => S,
-    wV: () => I
+    rk: () => I,
+    wV: () => S
 }),
     n(411104);
 var r = n(512722),
@@ -97,10 +97,17 @@ function O(e) {
                 );
             })
             .catch((t) => {
-                (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD) ? b.info('User canceled the download for Voice Filter dependency', e) : b.error('Failed to fetch voice filter model', g({ reason: t }, e)), a.Z.dispatch(v(g({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
+                (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
+                    ? b.info('User canceled the download for Voice Filter dependency', e)
+                    : (b.error('Failed to fetch voice filter model', g({ reason: t }, e)),
+                      d.Z.captureMessage('Failed to fetch voice filter model', {
+                          tags: { modelId: r },
+                          extra: { reason: t }
+                      })),
+                    a.Z.dispatch(v(g({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
             }));
 }
-function S(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if (!p.Z.isNativeModuleLoaded()) {
         b.warn('Voice Filter apply ignored, module not loaded.');
@@ -128,7 +135,7 @@ function S(e) {
             }
         );
 }
-async function I() {
+async function S() {
     if (!p.Z.isNativeModuleLoaded()) {
         b.info('Voice Filter catalog refresh ignored, module not loaded.');
         return;
@@ -177,7 +184,7 @@ async function N() {
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: h.O.LOADED
                 }),
-                await I();
+                await S();
             let n = l.Z.getMostRecentlyRequestedVoiceFilter();
             if (null != n) {
                 var e;
