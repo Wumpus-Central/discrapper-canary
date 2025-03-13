@@ -9,24 +9,24 @@ var i = n(120356),
     o = n.n(i),
     a = n(481060),
     s = n(600164),
-    l = n(20607);
+    l = n(739072);
 function c(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
 function u(e) {
-    let { onCTAClick: t, callToAction: n, header: i, description: c, size: u, className: d, artURL: f, noArt: p = !1, selected: _ = !1 } = e;
+    let { onCTAClick: t, callToAction: n, header: i, description: c, errorCodeMessage: u, size: d, className: f, artURL: _, noArt: p = !1, selected: h = !1 } = e;
     return (0, r.jsxs)(s.Z, {
-        className: d,
+        className: f,
         justify: s.Z.Justify.CENTER,
         align: s.Z.Align.CENTER,
         direction: s.Z.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
             !p &&
-                null != f &&
+                null != _ &&
                 (0, r.jsx)('div', {
-                    className: o()(l.art, l[u]),
-                    style: { backgroundImage: 'url('.concat(f, ')') }
+                    className: o()(l.art, l[d]),
+                    style: { backgroundImage: 'url('.concat(_, ')') }
                 }),
             null != i
                 ? (0, r.jsx)(a.Text, {
@@ -34,6 +34,14 @@ function u(e) {
                       variant: 'text-md/semibold',
                       className: l.header,
                       children: i
+                  })
+                : null,
+            null != u
+                ? (0, r.jsx)(a.Text, {
+                      variant: 'text-sm/semibold',
+                      color: 'text-muted',
+                      selectable: !0,
+                      children: u
                   })
                 : null,
             null != c
@@ -44,7 +52,7 @@ function u(e) {
                       children: c
                   })
                 : null,
-            _ || null == n
+            h || null == n
                 ? null
                 : (0, r.jsx)(a.zxk, {
                       className: l.outerButton,

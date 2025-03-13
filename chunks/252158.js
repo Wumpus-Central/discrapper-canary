@@ -168,14 +168,18 @@ let C = new Map([
     [
         v.u.STREAM_FAILED_TO_START,
         {
-            getActiveErrors: () => {
-                let e = [];
-                for (let t of c.Z.getAllActiveStreams())
-                    if (t.state === O.jm8.FAILED) {
-                        let n = (0, s.V9)(t);
-                        e.push(L(n));
-                    }
-                return e;
+            getActiveErrors: (e) => {
+                let { activeStreams: t } = e;
+                return t.filter((e) => e.state === O.jm8.FAILED).map((e) => L((0, s.V9)(e)));
+            }
+        }
+    ],
+    [
+        v.u.STREAM_RECONNECTING,
+        {
+            getActiveErrors: (e) => {
+                let { activeStreams: t } = e;
+                return t.filter((e) => e.state === O.jm8.RECONNECTING).map((e) => L((0, s.V9)(e)));
             }
         }
     ]
@@ -199,6 +203,8 @@ function R(e, t) {
         case v.u.NOISE_CANCELLER_ERROR:
         case v.u.SCREENSHARE_OS_NOT_SUPPORTED:
             return ''.concat(t.mediaSessionId);
+        case v.u.STREAM_RECONNECTING:
+            return ''.concat(t.streamKey, ':').concat(t.mediaSessionId);
         default:
             return e;
     }
@@ -259,7 +265,7 @@ function x() {
 }
 class M extends i.Z {
     _initialize() {
-        (0, b.H)('AVErrorManager');
+        (0, b.H3)('AVErrorManager');
     }
     updateActiveErrors() {
         var e, t;
@@ -267,41 +273,43 @@ class M extends i.Z {
         let n = null !== (e = h.Z.getVoiceChannelId()) && void 0 !== e ? e : null,
             i = null != n && null !== (t = g.Z.getVoiceStateForChannel(n)) && void 0 !== t ? t : null,
             o = w(n),
-            a = new Map();
+            a = c.Z.getAllActiveStreams(),
+            s = new Map();
         for (let [e, t] of C) {
             let r = t.getActiveErrors({
                 voiceChannelId: n,
                 voiceState: i,
-                streamErrors: o
+                streamErrors: o,
+                activeStreams: a
             });
             if (null != r)
                 for (let t of r)
-                    a.set(P(e, t), {
+                    s.set(P(e, t), {
                         error: e,
                         context: t
                     });
         }
-        let s = y.Z.getActiveErrors();
-        if (!(s instanceof Map)) {
-            N.error('existingErrors is not a Map: '.concat(s, ' type: ').concat(Object.prototype.toString.call(s)));
+        let l = y.Z.getActiveErrors();
+        if (!(l instanceof Map)) {
+            N.error('existingErrors is not a Map: '.concat(l, ' type: ').concat(Object.prototype.toString.call(l)));
             return;
         }
-        if (0 === a.size && 0 === s.size) return;
-        let l = new Set(a.keys()),
-            c = new Set(s.keys());
-        if (l.size > c.size)
-            for (let e of A(l, c)) {
-                let t = a.get(e);
+        if (0 === s.size && 0 === l.size) return;
+        let u = new Set(s.keys()),
+            d = new Set(l.keys());
+        if (u.size > d.size)
+            for (let e of A(u, d)) {
+                let t = s.get(e);
                 null != t && (0, v.kr)(t.error, t.context);
             }
-        if (c.size > l.size)
-            for (let e of A(c, l)) {
-                let t = s.get(e);
+        if (d.size > u.size)
+            for (let e of A(d, u)) {
+                let t = l.get(e);
                 null != t && N.info('Error resolved: '.concat(t.error, ' ').concat(JSON.stringify(t.context)));
             }
         r.Z.dispatch({
             type: 'ACTIVE_AV_ERRORS_CHANGED',
-            activeErrors: a
+            activeErrors: s
         });
     }
     constructor(...e) {

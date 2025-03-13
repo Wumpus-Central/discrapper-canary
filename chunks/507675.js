@@ -3,9 +3,9 @@ var r = n(200651);
 n(192379);
 var i = n(600164),
     o = n(112560),
-    a = n(715329);
+    a = n(353814);
 function s(e) {
-    let { mainText: t, supportingText: n, children: s, size: l } = e;
+    let { mainText: t, supportingText: n, errorCodeText: s, children: l, size: c } = e;
     return (0, r.jsxs)(i.Z, {
         className: a.root,
         justify: i.Z.Justify.CENTER,
@@ -15,9 +15,10 @@ function s(e) {
             (0, r.jsx)(o.Z, {
                 header: t,
                 description: n,
-                size: l
+                errorCodeMessage: s,
+                size: c
             }),
-            s
+            l
         ]
     });
 }
