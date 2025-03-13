@@ -1,24 +1,23 @@
-n.d(t, { Z: () => S }), n(47120), n(26686), n(266796), n(773603);
+n.d(t, { Z: () => v }), n(47120), n(26686), n(266796), n(773603);
 var r = n(200651),
     i = n(192379),
     s = n(849055),
     a = n(442837),
     l = n(481060),
     o = n(239091),
-    c = n(554300),
-    d = n(313201),
-    u = n(202858),
-    m = n(287880),
-    g = n(358085),
-    p = n(960048),
-    h = n(998502),
-    f = n(365007),
-    b = n(15980),
-    N = n(755733),
+    c = n(313201),
+    d = n(202858),
+    u = n(287880),
+    m = n(358085),
+    g = n(960048),
+    p = n(998502),
+    h = n(365007),
+    f = n(15980),
+    b = n(755733),
     x = n(981631),
-    _ = n(388032),
-    E = n(372811);
-function j(e) {
+    N = n(388032),
+    _ = n(902255);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,42 +60,42 @@ function C(e, t) {
         e
     );
 }
-function O(e) {
-    let { transitionState: t, onClose: a, ticket: o, challenge: c } = e,
-        m = (0, d.Dt)(),
-        [b, j] = i.useState(''),
+function C(e) {
+    let { transitionState: t, onClose: a, ticket: o, challenge: u } = e,
+        f = (0, c.Dt)(),
+        [E, j] = i.useState(''),
         [C, O] = i.useState(!0),
-        [v, S] = i.useState(N.x.INIT),
+        [v, S] = i.useState(b.x.INIT),
         [T, I] = i.useState(''),
         [y, A] = i.useState(null),
         P = async () => {
             let e;
-            S(N.x.REGISTER);
-            let t = g.isPlatformEmbedded && h.ZP.supportsFeature(x.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            S(b.x.REGISTER);
+            let t = m.isPlatformEmbedded && p.ZP.supportsFeature(x.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(u) : s.Ue(JSON.parse(u)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                p.Z.captureException(e), A(_.NW.string(_.t.xSCvBQ)), S(N.x.INIT);
+                g.Z.captureException(e), A(N.NW.string(N.t.xSCvBQ)), S(b.x.INIT);
                 return;
             }
-            I(e), S(N.x.NAME);
+            I(e), S(b.x.NAME);
         };
     return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        'aria-labelledby': m,
+        'aria-labelledby': f,
         children: [
             (0, r.jsxs)(l.xBx, {
-                className: E.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, r.jsxs)(l.X6q, {
-                        id: m,
+                        id: f,
                         variant: 'heading-lg/semibold',
-                        children: [v === N.x.INIT && _.NW.string(_.t.vrOCCg), v === N.x.REGISTER && _.NW.string(_.t.wePEBA), v === N.x.NAME && _.NW.string(_.t['cY/IOj'])]
+                        children: [v === b.x.INIT && N.NW.string(N.t.vrOCCg), v === b.x.REGISTER && N.NW.string(N.t.wePEBA), v === b.x.NAME && N.NW.string(N.t['cY/IOj'])]
                     }),
                     (0, r.jsx)(l.olH, {
                         onClick: a,
-                        className: E.modalCloseButton
+                        className: _.modalCloseButton
                     })
                 ]
             }),
@@ -105,13 +104,13 @@ function O(e) {
                 width: 440,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
-                        id: N.x.INIT,
+                        id: b.x.INIT,
                         children: [
                             (0, r.jsxs)(l.hzk, {
-                                className: E.content,
+                                className: _.content,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: E.icon,
+                                        className: _.icon,
                                         children: (0, r.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -129,7 +128,7 @@ function O(e) {
                                     (0, r.jsx)('div', {
                                         children: (0, r.jsx)(l.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.NW.string(_.t.Lh5vTU)
+                                            children: N.NW.string(N.t.Lh5vTU)
                                         })
                                     })
                                 ]
@@ -137,19 +136,19 @@ function O(e) {
                             (0, r.jsx)(l.mzw, {
                                 children: (0, r.jsx)(l.zxk, {
                                     onClick: P,
-                                    children: _.NW.string(_.t.oibaQU)
+                                    children: N.NW.string(N.t.oibaQU)
                                 })
                             })
                         ]
                     }),
                     (0, r.jsxs)(l.Mi4, {
-                        id: N.x.REGISTER,
+                        id: b.x.REGISTER,
                         children: [
                             (0, r.jsxs)(l.hzk, {
-                                className: E.content,
+                                className: _.content,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: E.icon,
+                                        className: _.icon,
                                         children: (0, r.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -158,7 +157,7 @@ function O(e) {
                                     (0, r.jsx)('div', {
                                         children: (0, r.jsx)(l.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.NW.string(_.t.aVMiX1)
+                                            children: N.NW.string(N.t.aVMiX1)
                                         })
                                     })
                                 ]
@@ -167,25 +166,25 @@ function O(e) {
                         ]
                     }),
                     (0, r.jsx)(l.Mi4, {
-                        id: N.x.NAME,
+                        id: b.x.NAME,
                         children: (0, r.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, f.Sr)(b, o, T)
+                                    (0, h.Sr)(E, o, T)
                                         .then(async () => {
-                                            await (0, u.Yn)(!1);
+                                            await (0, d.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            A(_.NW.string(_.t.fEptJC)), S(N.x.INIT);
+                                            A(N.NW.string(N.t.fEptJC)), S(b.x.INIT);
                                         });
                             },
                             children: [
                                 (0, r.jsxs)(l.hzk, {
-                                    className: E.content,
+                                    className: _.content,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: E.icon,
+                                            className: _.icon,
                                             children: (0, r.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -195,11 +194,11 @@ function O(e) {
                                             children: [
                                                 (0, r.jsx)(l.Text, {
                                                     variant: 'text-md/normal',
-                                                    children: _.NW.string(_.t['Jzd+z8'])
+                                                    children: N.NW.string(N.t['Jzd+z8'])
                                                 }),
                                                 (0, r.jsx)(l.oil, {
-                                                    className: E.input,
-                                                    value: b,
+                                                    className: _.input,
+                                                    value: E,
                                                     onChange: (e) => {
                                                         j(e), O(0 === e.length);
                                                     },
@@ -211,20 +210,20 @@ function O(e) {
                                     ]
                                 }),
                                 (0, r.jsxs)(l.mzw, {
-                                    className: E.footer,
+                                    className: _.footer,
                                     children: [
                                         (0, r.jsx)(l.zxk, {
                                             type: 'submit',
                                             disabled: C,
-                                            children: _.NW.string(_.t['5dyZ1d'])
+                                            children: N.NW.string(N.t['5dyZ1d'])
                                         }),
                                         (0, r.jsx)(l.zxk, {
                                             look: l.zxk.Looks.LINK,
                                             color: l.zxk.Colors.PRIMARY,
                                             onClick: () => {
-                                                S(N.x.INIT);
+                                                S(b.x.INIT);
                                             },
-                                            children: _.NW.string(_.t['13/7kZ'])
+                                            children: N.NW.string(N.t['13/7kZ'])
                                         })
                                     ]
                                 })
@@ -236,83 +235,83 @@ function O(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { onSelect: t, credential: i } = e;
     return (0, r.jsxs)(l.v2r, {
         navId: 'webauthn-credential-actions',
         onClose: o.Zy,
-        'aria-label': _.NW.string(_.t['+nrTbG']),
+        'aria-label': N.NW.string(N.t['+nrTbG']),
         onSelect: t,
         children: [
             (0, r.jsx)(l.sNh, {
                 id: 'webauthn-edit-credential-'.concat(i.id),
-                label: _.NW.string(_.t.bt75u7),
+                label: N.NW.string(N.t.bt75u7),
                 action: () => {
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, r.jsx)(e, j({ credential: i }, t));
+                        return (t) => (0, r.jsx)(e, E({ credential: i }, t));
                     });
                 }
             }),
             (0, r.jsx)(l.sNh, {
                 id: 'webauthn-delete-credential-'.concat(i.id),
-                label: _.NW.string(_.t['+xgS+P']),
+                label: N.NW.string(N.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
-                    (0, f.cT)(i);
+                    (0, h.cT)(i);
                 }
             })
         ]
     });
 }
-function S() {
-    let { credentials: e, hasFetchedCredentials: t } = (0, a.cj)([b.Z], () => ({
-        hasFetchedCredentials: b.Z.hasFetchedCredentials(),
-        credentials: b.Z.getCredentials()
+function v() {
+    let { credentials: e, hasFetchedCredentials: t } = (0, a.cj)([f.Z], () => ({
+        hasFetchedCredentials: f.Z.hasFetchedCredentials(),
+        credentials: f.Z.getCredentials()
     }));
     i.useEffect(() => {
-        t || (0, f.hL)();
+        t || (0, h.hL)();
     }, [t]);
     let [n, s] = i.useState(!1);
     return (0, r.jsxs)(l.hjN, {
-        title: _.NW.string(_.t.y7SXYW),
-        className: E.settings,
+        title: N.NW.string(N.t.y7SXYW),
+        className: _.settings,
         children: [
             (0, r.jsx)(l.R94, {
                 type: l.R94.Types.DESCRIPTION,
-                className: E.description,
-                children: _.NW.string(_.t.TMukAA)
+                className: _.description,
+                children: N.NW.string(N.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, r.jsx)('div', {
-                    className: E.credentialList,
+                    className: _.credentialList,
                     children: e.map((e) =>
-                        (0, r.jsx)(
-                            c.Z,
+                        (0, r.jsxs)(
+                            'div',
                             {
-                                avatar: null,
-                                name: e.name,
-                                className: E.credentialItem,
-                                onContextMenu: (t) => {
-                                    (0, o.vq)(t, (t) => (0, r.jsx)(v, C(j({}, t), { credential: e })));
-                                },
-                                children: (0, r.jsx)(l.zxk, {
-                                    look: l.zxk.Looks.BLANK,
-                                    color: l.zxk.Colors.TRANSPARENT,
-                                    size: l.zxk.Sizes.ICON,
-                                    onClick: (t) => {
-                                        (0, o.vq)(t, (t) => (0, r.jsx)(v, C(j({}, t), { credential: e })));
-                                    },
-                                    'aria-label': _.NW.string(_.t['+nrTbG']),
-                                    innerClassName: E.credentialOptions,
-                                    children: (0, r.jsx)(l.Huf, {
-                                        size: 'md',
-                                        color: 'currentColor',
-                                        className: E.__invalid_overflowIcon,
-                                        colorClass: E.__invalid_overflowIconFg,
-                                        'aria-hidden': !0
+                                className: _.credentialItem,
+                                children: [
+                                    (0, r.jsx)(l.Text, {
+                                        variant: 'text-md/semibold',
+                                        children: e.name
+                                    }),
+                                    (0, r.jsx)(l.zxk, {
+                                        look: l.zxk.Looks.BLANK,
+                                        color: l.zxk.Colors.TRANSPARENT,
+                                        size: l.zxk.Sizes.ICON,
+                                        onClick: (t) => {
+                                            (0, o.vq)(t, (t) => (0, r.jsx)(O, j(E({}, t), { credential: e })));
+                                        },
+                                        'aria-label': N.NW.string(N.t['+nrTbG']),
+                                        innerClassName: _.credentialOptions,
+                                        children: (0, r.jsx)(l.Huf, {
+                                            size: 'md',
+                                            className: _.__invalid_overflowIcon,
+                                            colorClass: _.__invalid_overflowIconFg,
+                                            'aria-hidden': !0
+                                        })
                                     })
-                                })
+                                ]
                             },
                             e.id
                         )
@@ -322,13 +321,13 @@ function S() {
                 children: (0, r.jsx)(l.zxk, {
                     onClick: () => {
                         s(!0),
-                            (0, f.L$)()
+                            (0, h.L$)()
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, l.h7j)((e) =>
                                         (0, r.jsx)(
-                                            O,
-                                            C(j({}, e), {
+                                            C,
+                                            j(E({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })
@@ -336,16 +335,16 @@ function S() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== _.NW.string(_.t.N2yb9f) && p.Z.captureException(e);
+                                    e.message !== N.NW.string(N.t.N2yb9f) && g.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     s(!1);
                                 });
                     },
                     submitting: n,
-                    disabled: !m.Ae,
+                    disabled: !u.Ae,
                     size: l.zxk.Sizes.SMALL,
-                    children: _.NW.string(_.t.vrOCCg)
+                    children: N.NW.string(N.t.vrOCCg)
                 })
             })
         ]
