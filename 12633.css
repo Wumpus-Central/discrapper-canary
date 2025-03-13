@@ -34242,6 +34242,27 @@ html:not(.visual-refresh) .root_e5f3a9 {
     border-radius: var(--radius-sm)
 }
 
+.overlayContainer_fdeafc {
+    position: relative;
+    min-height: 40px;
+    width: 100%
+}
+
+.avatarContainer_fdeafc {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .4s ease
+}
+
+.avatarVisible_fdeafc {
+    opacity: 1
+}
+
+.avatarWithTextInnerClassName_fdeafc {
+    padding: 0 8px !important
+}
+
 .badgeDark_dd79c2 {
     background-color: var(--white-500);
     color: var(--black-500)
@@ -34386,7 +34407,9 @@ html:not(.visual-refresh) .root_e5f3a9 {
     top: 55%;
     transform: translate(-50%, -50%) scale(1.2);
     width: 224px;
-    height: 42px
+    height: 40px;
+    background-color: var(--background-floating);
+    border-radius: var(--radius-sm)
 }
 
 .decorationBanner__78e61 {
