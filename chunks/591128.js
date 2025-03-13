@@ -11,5 +11,6 @@ e.exports = {
     descriptionWrapper: 'descriptionWrapper_cb3698',
     description: 'description_cb3698',
     button: 'button_cb3698',
-    offWhiteText: 'offWhiteText_cb3698'
+    offWhiteText: 'offWhiteText_cb3698',
+    loopbackEnabled: 'loopbackEnabled_cb3698'
 };

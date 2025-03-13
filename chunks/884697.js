@@ -15,8 +15,9 @@ n.d(t, {
     f_: () => T,
     iC: () => x,
     mO: () => G,
+    ne: () => X,
     qS: () => v,
-    ql: () => I,
+    ql: () => S,
     rN: () => A,
     uV: () => M,
     x0: () => z,
@@ -65,7 +66,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,12 +78,12 @@ function g(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -92,24 +93,24 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     v = (e) => (null == e ? void 0 : e.purchaseType) === _.qc2.PREMIUM_PURCHASE,
     b = (e, t, n) => {
         let r;
-        return I(e, (r = n ? (t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT));
+        return S(e, (r = n ? (t ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : t ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT));
     },
     y = (e, t, n) => {
         let r = b(e, t, n);
         return null == r ? '' : (0, s.T4)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
     },
     O = (e) => ((0, a.isAndroid)() || (0, a.isIOS)() ? (e ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.MOBILE) : e ? _.tuJ.PREMIUM_TIER_2 : _.tuJ.DEFAULT),
-    S = (e) => {
+    I = (e) => {
         let t = e.bundledProducts;
         if (null == t) return 0;
         let n = O(!1);
         return t.reduce((e, t) => {
             var r;
-            let i = I(t, n);
+            let i = S(t, n);
             return e + (null !== (r = null == i ? void 0 : i.amount) && void 0 !== r ? r : 0);
         }, 0);
     },
-    I = (e, t) => {
+    S = (e, t) => {
         var n, r, i;
         let o = null !== (i = e.prices[t]) && void 0 !== i ? i : null;
         return null != o ? (null === (r = o.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0]) : null;
@@ -119,9 +120,9 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         discountPercentage: -1
     },
     N = (e, t) => {
-        let n = S(e);
+        let n = I(e);
         if (n <= 0) return T;
-        let r = I(e, O(t));
+        let r = S(e, O(t));
         return null == r
             ? T
             : {
@@ -131,7 +132,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     A = (e) => {
         var t;
-        return (null === (t = I(e, _.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
+        return (null === (t = S(e, _.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
     },
     C = (e) =>
         e.reduce(
@@ -139,7 +140,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
                 null != t && t.type === i.Z.VARIANTS_GROUP && null != t.variants
                     ? (0, r.concat)(
                           e,
-                          t.variants.map((e) => m(h({}, e), { variantGroupStoreListingId: t.storeListingId }))
+                          t.variants.map((e) => g(h({}, e), { variantGroupStoreListingId: t.storeListingId }))
                       )
                     : (e.push(t), e),
             []
@@ -163,7 +164,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return [];
     },
-    D = (e, t) => {
+    w = (e, t) => {
         let n = R(e, !0);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, 'items').filter(c.M);
@@ -179,9 +180,9 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return [];
     },
-    w = (e) => P(e, i.Z.AVATAR_DECORATION),
-    L = (e) => D(e, i.Z.AVATAR_DECORATION),
-    x = (e, t) => (0, r.uniqBy)([...w(e), ...L(t)], 'id'),
+    D = (e) => P(e, i.Z.AVATAR_DECORATION),
+    L = (e) => w(e, i.Z.AVATAR_DECORATION),
+    x = (e, t) => (0, r.uniqBy)([...D(e), ...L(t)], 'id'),
     M = (e, t) => {
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
@@ -192,7 +193,7 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(a);
     },
     k = (e) => P(e, i.Z.PROFILE_EFFECT),
-    j = (e) => D(e, i.Z.PROFILE_EFFECT),
+    j = (e) => w(e, i.Z.PROFILE_EFFECT),
     U = (e, t) => {
         let n = k(t),
             r = j(e).filter((e) => {
@@ -223,8 +224,8 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     Y = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
     K = (e, t, n) => {
-        if (Y(e)) return S(e);
-        let r = I(e, t ? (n ? _.tuJ.MOBILE : _.tuJ.DEFAULT) : n ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.PREMIUM_TIER_2);
+        if (Y(e)) return I(e);
+        let r = S(e, t ? (n ? _.tuJ.MOBILE : _.tuJ.DEFAULT) : n ? _.tuJ.MOBILE_PREMIUM_TIER_2 : _.tuJ.PREMIUM_TIER_2);
         return null == r ? void 0 : r.amount;
     },
     z = (e, t) => {
@@ -248,11 +249,15 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     Q = () => {
         let { categories: e, purchases: t } = (0, l.ZP)({ location: 'NameplateModal' }),
-            n = D(e, i.Z.NAMEPLATE),
+            n = w(e, i.Z.NAMEPLATE),
             r = P(t, i.Z.NAMEPLATE),
             o = new Set(r.map((e) => e.id));
         return {
             available: n.filter((e) => !o.has(e.id)),
             purchased: r
         };
+    },
+    X = (e) => {
+        let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
+        return !n && !(f.xJ === (null == t ? void 0 : t.skuId) && r);
     };

@@ -1,21 +1,19 @@
-r.d(t, {
+n.d(t, {
     KO: () => s,
-    X2: () => u,
-    o0: () => c,
-    xJ: () => a
+    X2: () => c,
+    o0: () => l
 });
-var n = r(317257),
-    l = r(388032),
-    i = r(223640),
-    o = r(406449);
-let a = '1342211853484429445',
-    s = {
-        '1333912750274904064': { asset: o.Z },
-        [a]: { asset: i }
+var r = n(317257),
+    i = n(215023),
+    o = n(388032),
+    a = n(223640);
+let s = {
+        '1333912750274904064': { asset: n(406449).Z },
+        [i.xJ]: { asset: a }
     },
-    c = (e) => e in s,
-    u = () => ({
-        id: n.l.ORB_PROFILE_BADGE,
-        icon: i,
-        description: l.NW.string(l.t['o/NCfn'])
+    l = (e) => e in s,
+    c = () => ({
+        id: r.l.ORB_PROFILE_BADGE,
+        icon: a,
+        description: o.NW.string(o.t['o/NCfn'])
     });
