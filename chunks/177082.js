@@ -6,7 +6,7 @@ var r = n(355467),
     s = n(351402),
     l = n(78839),
     c = n(580130),
-    u = n(74538),
+    u = n(111361),
     d = n(474936);
 function f(e, t, n) {
     return (
@@ -31,19 +31,21 @@ class _ extends o.Z {
             }),
             f(this, 'maybeFetchSubscriptions', async () => {
                 let e = a.default.getCurrentUser();
-                if (u.ZP.isPremium(e)) {
+                if ((0, u.I5)(e)) {
                     l.ZP.hasFetchedSubscriptions() || (await (0, r.jg)());
                     let e = l.ZP.getPremiumSubscription();
                     (null == e ? void 0 : e.paymentSourceId) != null || c.Z.applicationIdsFetched.has(d.CL) || (await (0, i.yD)(d.CL));
                 }
             }),
             f(this, 'maybeFetchMostRecentSubscription', () => {
-                let e = a.default.getCurrentUser();
-                (null == e ? void 0 : e.hadPremiumSubscription()) && (0, r.ou)();
+                var e;
+                let t = a.default.getCurrentUser(),
+                    n = (0, u.xI)(null !== (e = null == t ? void 0 : t.premiumType) && void 0 !== e ? e : null, d.p9.TIER_1);
+                null != t && n && t.hasHadPremium() && (0, r.ou)();
             }),
             f(this, 'maybeFetchCountryCode', async () => {
                 let e = a.default.getCurrentUser();
-                u.ZP.isPremium(e) && !s.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
+                (0, u.I5)(e) && !s.Z.ipCountryCodeLoaded && (await this.fetchCountryCode());
             }),
             f(this, 'fetchCountryCode', async () => {
                 await (0, r.GE)(), null != s.Z.ipCountryCode && (await (0, r.tZ)());

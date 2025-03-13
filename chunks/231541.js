@@ -19,10 +19,18 @@ let u = (e) => {
 function p(e) {
     let { location: t } = e;
     if (!1 === s.t.getCurrentConfig({ location: t }).enabled) return !1;
-    let n = i.ZP.getMostRecentPremiumTypeSubscription();
+    let n = i.ZP.getMostRecentPremiumTypeSubscription(),
+        a = i.ZP.getPreviousPremiumTypeSubscription();
     if (null === n) {
         let e = r.default.getCurrentUser();
         return !(0, o.I5)(e);
     }
-    return !!n.isPaused || (n.isEnded ? !(l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || u(n)) : !!n.isActive && d(n));
+    if (n.isPaused) return !0;
+    if (n.isEnded) return !(l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || u(n));
+    if (!n.isActive) return !1;
+    {
+        let e = d(n),
+            t = null == a || !u(a);
+        return e && t;
+    }
 }
