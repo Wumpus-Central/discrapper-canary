@@ -1,5 +1,9 @@
 e.exports = {
-    section: 'section__08415',
+    backgroundSecondary: 'backgroundSecondary__08415',
+    loadingContainer: 'loadingContainer__08415',
+    blockContainer: 'blockContainer__08415',
+    topBlockContainer: 'topBlockContainer__08415',
+    centeredSection: 'centeredSection__08415',
     content: 'content__08415',
     col2: 'col2__08415',
     row: 'row__08415',
@@ -15,7 +19,6 @@ e.exports = {
     left: 'left__08415',
     right: 'right__08415',
     darker: 'darker__08415',
-    featuredBlocksContainer: 'featuredBlocksContainer__08415',
     featuredBlock: 'featuredBlock__08415',
     featuredBlockBodyText: 'featuredBlockBodyText__08415',
     featuredBlockBadge: 'featuredBlockBadge__08415',
@@ -28,7 +31,7 @@ e.exports = {
     heroLogoNameContainer: 'heroLogoNameContainer__08415',
     heroHeaderLogo: 'heroHeaderLogo__08415',
     popularPicksSection: 'popularPicksSection__08415',
-    popularPicksHeader: 'popularPicksHeader__08415',
+    blockHeader: 'blockHeader__08415',
     title: 'title__08415',
     subHeaderText: 'subHeaderText__08415',
     subHeaderTextDark: 'subHeaderTextDark__08415',
@@ -36,7 +39,6 @@ e.exports = {
     heroHeaderButtonContainer: 'heroHeaderButtonContainer__08415',
     heroHeaderButton: 'heroHeaderButton__08415',
     limitedTimeBadge: 'limitedTimeBadge__08415',
-    shopAll: 'shopAll__08415',
     feed: 'feed__08415',
     feedSingleRow: 'feedSingleRow__08415',
     endOfFeed: 'endOfFeed__08415',
@@ -47,5 +49,6 @@ e.exports = {
     wideBannerBackgroundImg: 'wideBannerBackgroundImg__08415',
     wideBannerBlockButton: 'wideBannerBlockButton__08415',
     wideBannerTextContainer: 'wideBannerTextContainer__08415',
-    wideBannerContentContainer: 'wideBannerContentContainer__08415'
+    wideBannerContentContainer: 'wideBannerContentContainer__08415',
+    shelfBlockContainer: 'shelfBlockContainer__08415'
 };

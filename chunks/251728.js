@@ -1,11 +1,12 @@
-n.d(t, { Y: () => u });
+n.d(t, { Y: () => d });
 var r = n(685816),
     i = n(549616),
     o = n(794934),
     a = n(885577),
     s = n(198647),
-    l = n(608413);
-function c(e, t, n) {
+    l = n(690913),
+    c = n(608413);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,13 +19,13 @@ function c(e, t, n) {
         e
     );
 }
-class u {
+class d {
     static fromServer(e) {
-        return new u(e);
+        return new d(e);
     }
     constructor(e) {
-        c(this, 'shopBlocks', void 0),
-            c(this, 'categories', void 0),
+        u(this, 'shopBlocks', void 0),
+            u(this, 'categories', void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
@@ -35,7 +36,9 @@ class u {
                         case r.z.FEED:
                             return a.K.fromServer(e);
                         case r.z.WIDE_BANNER:
-                            return l.j.fromServer(e);
+                            return c.j.fromServer(e);
+                        case r.z.SHELF:
+                            return l.O.fromServer(e);
                         default:
                             return;
                     }

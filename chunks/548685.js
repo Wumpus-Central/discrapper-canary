@@ -1,64 +1,59 @@
-r.d(t, { Z: () => v }), r(47120);
-var n = r(200651),
-    l = r(192379),
-    i = r(120356),
-    a = r.n(i),
-    o = r(442837),
-    s = r(481060),
-    c = r(594174),
-    d = r(381585),
-    u = r(597688),
-    p = r(937510),
-    f = r(38900),
-    h = r(709999),
-    C = r(957058),
-    m = r(215023),
-    b = r(388032),
-    g = r(974492);
-let v = (e) => {
-    let { isLoading: t, rankedSkuIds: r, handleTransition: i, numVisibleItems: v, tab: x } = e,
-        _ = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        j = l.createRef(),
-        y = (0, C.u)(),
-        O = l.useMemo(() => y(r), [t, y, r]),
-        k = (0, p.l)(O);
-    return null == _
+n.d(t, { Z: () => _ }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    i = n(481060),
+    c = n(594174),
+    d = n(381585),
+    u = n(597688),
+    g = n(937510),
+    h = n(38900),
+    f = n(709999),
+    m = n(957058),
+    p = n(215023),
+    b = n(388032),
+    C = n(39532);
+let _ = (e) => {
+    let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: _, tab: v } = e,
+        k = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        x = l.createRef(),
+        j = (0, m.u)(),
+        S = l.useMemo(() => j(n), [t, j, n]),
+        y = (0, g.l)(S);
+    return null == k
         ? null
-        : (0, n.jsxs)('div', {
-              className: a()(g.row, g.between, g.section, g.popularPicksSection),
+        : (0, r.jsxs)('div', {
+              className: o()(C.popularPicksSection, C.centeredSection),
               children: [
-                  (0, n.jsxs)('div', {
-                      className: g.popularPicksHeader,
+                  (0, r.jsxs)('div', {
+                      className: C.blockHeader,
                       children: [
-                          (0, n.jsx)(s.X6q, {
+                          (0, r.jsx)(i.X6q, {
                               variant: 'heading-lg/semibold',
                               children: b.NW.string(b.t.ivaAAw)
                           }),
-                          x === m.AW.HOME &&
-                              (0, n.jsxs)(s.P3F, {
-                                  className: g.shopAll,
-                                  onClick: () => i('shop all top'),
-                                  children: [
-                                      (0, n.jsx)(s.dRF, {}),
-                                      (0, n.jsx)(s.Text, {
-                                          variant: 'text-sm/medium',
-                                          children: b.NW.string(b.t.xFcotb)
-                                      })
-                                  ]
+                          v === p.AW.HOME &&
+                              (0, r.jsx)(i.zxk, {
+                                  color: i.Ttl.PRIMARY,
+                                  look: i.iLD.FILLED,
+                                  onClick: () => a('shop all top'),
+                                  children: b.NW.string(b.t.xFcotb)
                               })
                       ]
                   }),
-                  (0, n.jsx)('div', {
-                      className: g.feed,
-                      ref: j,
+                  (0, r.jsx)('div', {
+                      className: C.feed,
+                      ref: x,
                       children: t
-                          ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(f.K, {}, t + 1)) })
-                          : (0, n.jsx)(n.Fragment, {
-                                children: k.slice(0, v).map((e, t) => {
-                                    let r = u.Z.getCategoryForProduct(e.skuId);
-                                    return null == e || null == r
+                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
+                          : (0, r.jsx)(r.Fragment, {
+                                children: y.slice(0, _).map((e, t) => {
+                                    let n = u.Z.getCategoryForProduct(e.skuId);
+                                    return null == e || null == n
                                         ? null
-                                        : (0, n.jsx)(
+                                        : (0, r.jsx)(
                                               d.k0,
                                               {
                                                   newValue: {
@@ -66,13 +61,13 @@ let v = (e) => {
                                                       pageSection: 'popular picks',
                                                       categoryPosition: 2
                                                   },
-                                                  children: (0, n.jsx)(
-                                                      h.Z,
+                                                  children: (0, r.jsx)(
+                                                      f.Z,
                                                       {
                                                           product: e,
-                                                          category: r,
-                                                          user: _,
-                                                          tab: x,
+                                                          category: n,
+                                                          user: k,
+                                                          tab: v,
                                                           isInFeedView: !0
                                                       },
                                                       e.skuId
