@@ -594,11 +594,12 @@ function tA() {
             var n, r;
             (null == a ? void 0 : null === (n = a.desktopSource) || void 0 === n ? void 0 : n.id) === e && (null != t && (null == o ? void 0 : null === (r = o.desktopSource) || void 0 === r ? void 0 : r.soundshareId) !== t && y.pn(t), (a = null));
         }),
-        eU.on(m.aB.NativeScreenSharePickerUpdate, (e) => {
+        eU.on(m.aB.NativeScreenSharePickerUpdate, (e, t) => {
             U.Z.trackExposure({ location: 'MediaEngineStore_NativeScreenSharePickerUpdate' }),
                 v.Z.dispatch({
                     type: 'NATIVE_SCREEN_SHARE_PICKER_UPDATE',
-                    existing: e
+                    existing: e,
+                    content: t
                 });
         }),
         eU.on(m.aB.NativeScreenSharePickerCancel, (e) => {
