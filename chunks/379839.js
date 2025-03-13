@@ -1,26 +1,27 @@
 n.d(t, {
-    A: () => p,
-    p: () => h
+    A: () => h,
+    p: () => m
 }),
     n(47120);
 var r = n(192379),
     i = n(410030),
     o = n(540059),
-    a = n(359135),
-    s = n(4242),
-    l = n(231338);
-let c = '1A',
-    u = '33',
-    d = '4D',
-    f = '66',
-    _ = '80';
-function p(e) {
+    a = n(614185),
+    s = n(359135),
+    l = n(4242),
+    c = n(231338);
+let u = '1A',
+    d = '33',
+    f = '4D',
+    _ = '66',
+    p = '80';
+function h(e) {
     let t = (0, i.ZP)(),
         [n, o] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
             if (null == e) return;
-            let n = (t === l.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + u;
+            let n = (t === c.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + d;
             o({
                 '--background-modifier-selected': n,
                 '--button-secondary-background-hover': n,
@@ -32,45 +33,47 @@ function p(e) {
         n
     );
 }
-function h(e, t, n, a, s) {
-    let l = (0, i.ZP)(),
-        [c, u] = (0, r.useState)({}),
-        d = (0, o.Q3)('useNameplateStyle');
+function m(e, t, n, s, l) {
+    let c = (0, i.ZP)(),
+        [u, d] = (0, r.useState)({}),
+        f = (0, o.Q3)('useNameplateStyle'),
+        _ = (0, a.C7)('useNameplateStyle');
     return (
         (0, r.useEffect)(() => {
             if (null == e) return;
-            let r = m({
+            let r = g({
                 palette: e.palette,
-                theme: l,
+                theme: c,
                 hover: t,
                 selected: n,
-                placement: s,
-                isVisualRefreshEnabled: d
+                placement: l,
+                isVisualRefreshEnabled: f,
+                defaultPaletteOpacity: _
             });
-            if (null == a) {
-                u({ background: r });
+            if (null == s) {
+                d({ background: r });
                 return;
             }
             let i = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width;
-                u({
+                d({
                     background: r,
                     maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(0.9 * t, 'px, rgba(0, 0, 0, 1) ').concat(1.5 * t, 'px)')
                 });
             });
-            return i.observe(a), () => i.disconnect();
-        }, [e, t, n, l, a, s, d]),
-        c
+            return i.observe(s), () => i.disconnect();
+        }, [e, t, n, c, s, l, f, _]),
+        u
     );
 }
-function m(e) {
-    let { palette: t, theme: n, hover: r, selected: i, placement: o, isVisualRefreshEnabled: u } = e;
-    if (!(0, s.ic)(t)) return;
-    let p = n === l.BR.LIGHT ? t.lightBackground : t.darkBackground,
-        h = r || i;
-    if (o === a.i.ACCOUNT) return n === l.BR.LIGHT ? 'linear-gradient(90deg, '.concat(p).concat(c, ' 0%, ').concat(p).concat(d, ' 100%)') : 'linear-gradient(90deg, '.concat(p).concat(c, ' 0%, ').concat(p).concat(f, ' 100%)');
-    let m = u && o === a.i.CHANNEL ? 'var(--bg-overlay-selected, var(--background-mod-subtle))' : 'var(--background-modifier-selected)',
-        g = r ? 'var(--background-modifier-hover)' : i ? m : ''.concat(p, '00'),
-        E = ''.concat(p).concat(h ? (n !== l.BR.LIGHT ? _ : d) : c);
-    return 'linear-gradient(90deg, '.concat(g, ' 0%, ').concat(E, ' 100%)');
+function g(e) {
+    let { palette: t, theme: n, hover: r, selected: i, placement: o, isVisualRefreshEnabled: a, defaultPaletteOpacity: d } = e;
+    if (!(0, l.ic)(t)) return;
+    let h = n === c.BR.LIGHT ? t.lightBackground : t.darkBackground,
+        m = r || i;
+    if (o === s.i.ACCOUNT) return n === c.BR.LIGHT ? 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)') : 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(_, ' 100%)');
+    let g = a && o === s.i.CHANNEL ? 'var(--bg-overlay-selected, var(--background-mod-subtle))' : 'var(--background-modifier-selected)',
+        E = r ? 'var(--background-modifier-hover)' : i ? g : ''.concat(h, '00'),
+        v = ''.concat(h).concat(m ? (n !== c.BR.LIGHT ? p : f) : d);
+    return 'linear-gradient(90deg, '.concat(E, ' 0%, ').concat(v, ' 100%)');
 }
