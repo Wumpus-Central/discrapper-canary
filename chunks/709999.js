@@ -18,9 +18,9 @@ var r = n(200651),
     g = n(622535),
     h = n(481060),
     f = n(727637),
-    x = n(607070),
-    b = n(100527),
-    N = n(906732),
+    b = n(607070),
+    N = n(100527),
+    x = n(906732),
     _ = n(693728),
     E = n(333867),
     j = n(197115),
@@ -216,7 +216,8 @@ let eo = (e) => {
                         nameplate: i,
                         className: ei.nameplatePreviewSampleItem,
                         isHighlighted: s,
-                        showWumpus: !s
+                        showWumpus: !s,
+                        showStatus: !0
                     }),
                     (0, r.jsx)(em, { isDarkTheme: n }),
                     (0, r.jsx)(em, { isDarkTheme: n })
@@ -228,21 +229,21 @@ let eo = (e) => {
         12633 == n.j
             ? function (e) {
                   let { product: t, user: n, category: s, onMount: l, isGiftEasterEggEnabled: _, isInFeedView: C, tab: z } = e,
-                      { analyticsLocations: K } = (0, N.ZP)([...(C ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
+                      { analyticsLocations: K } = (0, x.ZP)([...(C ? [N.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), N.Z.COLLECTIBLES_SHOP_CARD]),
                       el = i.useRef(null),
                       em = (0, f.Z)(el),
                       [eg, eh] = i.useState(!1),
                       ef = em || eg,
-                      ex = (0, Q.f)(t),
-                      { previewingVariantIndex: eb } = ex,
-                      eN = (0, w.T)(t),
-                      e_ = (0, p.e7)([x.Z], () => x.Z.useReducedMotion),
+                      eb = (0, Q.f)(t),
+                      { previewingVariantIndex: eN } = eb,
+                      ex = (0, w.T)(t),
+                      e_ = (0, p.e7)([b.Z], () => b.Z.useReducedMotion),
                       eE = T.ZP.canUseCollectibles(n),
                       ej = i.useMemo(() => (0, P.BH)(t, eE), [t, eE]),
                       eC = (0, P.G1)(t),
                       eO = (0, P.rN)(t),
                       [ev, eS, eT] = (0, p.Wu)([y.Z], () => [y.Z.isClaiming === t.skuId, null != y.Z.isClaiming && y.Z.isClaiming !== t.skuId, y.Z.purchases]),
-                      eI = (0, J.o)(t, eT, eb),
+                      eI = (0, J.o)(t, eT, eN),
                       ey = (0, p.e7)([O.Z], () => (0, h.wjy)(O.Z.theme)),
                       eA = (0, P.Yq)(t.skuId),
                       eP = s.skuId === u.T.ANIME_V3 && (0, P.WW)(t.skuId),
@@ -253,7 +254,7 @@ let eo = (e) => {
                       ek = (0, X.W)(t, ew),
                       eW = (0, P.XM)(ek, eE, !1),
                       { isPurchased: eL, isPartiallyOwnedBundle: eB } = (0, k.L)(ek),
-                      eM = null !== eb ? eb : ew,
+                      eM = null !== eN ? eN : ew,
                       [eU, eV] = i.useState(!1),
                       { enabled: eG } = (0, v.W)({ location: 'collectibles_shop_tall_card' }),
                       { handleCardVisibilityChange: eF } = (0, W.E)(ek.skuId, C ? 'home' : 'full');
@@ -300,8 +301,8 @@ let eo = (e) => {
                                   tab: z
                               });
                       },
-                      e$ = eQ(b.Z.COLLECTIBLES_SHOP_CARD),
-                      e0 = eQ(b.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+                      e$ = eQ(N.Z.COLLECTIBLES_SHOP_CARD),
+                      e0 = eQ(N.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
                       e1 = () =>
                           (0, r.jsx)('div', {
                               className: ei.hoverUpsellContainer,
@@ -316,7 +317,7 @@ let eo = (e) => {
                           });
                   if (0 === eK.length) return null;
                   let e2 = () =>
-                      eC || d.tq
+                      eC || d.tq || eX || t.type === m.Z.NAMEPLATE
                           ? null
                           : eO
                             ? (0, r.jsx)(ec, { onClick: e0 })
@@ -452,12 +453,12 @@ let eo = (e) => {
                                                 (0, r.jsx)(h.Text, {
                                                     variant: 'text-lg/bold',
                                                     className: ei.productName,
-                                                    children: eN
+                                                    children: ex
                                                 }),
                                                 t.type === m.Z.VARIANTS_GROUP
                                                     ? (0, r.jsx)(H.P, {
                                                           variantGroupProduct: t,
-                                                          previewingVariantIndexProps: ex,
+                                                          previewingVariantIndexProps: eb,
                                                           setIsHoveringOnSwitch: eV,
                                                           purchases: eT,
                                                           minimal: !ef,
