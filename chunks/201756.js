@@ -21,8 +21,8 @@ var r = n(200651),
     y = n(42551),
     O = n(981631),
     N = n(388032),
-    _ = n(784974),
-    H = n(188360);
+    _ = n(214438),
+    H = n(351641);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -186,6 +186,7 @@ function I(e) {
                                           guildId: t,
                                           onClose: O.dG4
                                       }),
+                                  closeOnScroll: !0,
                                   children: (e) => {
                                       var { onClick: t } = e,
                                           n = D(e, ['onClick']);
@@ -214,6 +215,7 @@ function I(e) {
                                           guildId: t,
                                           onClose: O.dG4
                                       }),
+                                  closeOnScroll: !0,
                                   children: (e) => {
                                       var { onClick: t } = e,
                                           n = D(e, ['onClick']);
@@ -257,6 +259,7 @@ function I(e) {
                                   guildId: t,
                                   onClose: O.dG4
                               }),
+                          closeOnScroll: !0,
                           children: (e) => {
                               var { onClick: t } = e,
                                   n = D(e, ['onClick']);
@@ -301,7 +304,7 @@ function I(e) {
                                     label: N.NW.string(N.t['2SZsWV']),
                                     onFilter: t,
                                     isFiltered: V,
-                                    className: a()(H.mediumCol)
+                                    className: H.mediumCol
                                 },
                                 n
                             )
@@ -328,6 +331,7 @@ function I(e) {
                                     onClose: n
                                 });
                             },
+                            closeOnScroll: !0,
                             children: (t) =>
                                 (0, r.jsx)(Z, {
                                     label: N.NW.string(N.t['7V375+']),
@@ -337,7 +341,7 @@ function I(e) {
                                         q(), null === (r = t.onClick) || void 0 === r || r.call(t, n), null === (l = e.onClick) || void 0 === l || l.call(e);
                                     },
                                     isFiltered: M,
-                                    className: a()(H.smallCol),
+                                    className: H.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
                                         q(), null === (n = e.onMouseEnter) || void 0 === n || n.call(e), null === (r = t.onMouseEnter) || void 0 === r || r.call(t);

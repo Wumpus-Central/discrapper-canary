@@ -1,63 +1,84 @@
-n.d(t, { L: () => f });
+n.d(t, { L: () => x });
 var r = n(200651);
 n(192379);
 var i = n(120356),
     s = n.n(i),
-    a = n(568611),
-    l = n(442837),
-    o = n(693789),
+    a = n(442837),
+    l = n(693789),
+    o = n(481060),
     c = n(607070),
     d = n(70097),
-    u = n(198758),
-    m = n(803812),
-    p = n(477154),
-    g = n(230114);
-let h = () => {
-        let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
+    u = n(981631),
+    m = n(388032),
+    g = n(198758),
+    p = n(803812),
+    h = n(477154),
+    f = n(230114);
+let b = () => {
+        let e = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
         return (0, r.jsx)('div', {
-            className: u.assetContainer,
+            className: g.assetContainer,
             children: e
                 ? (0, r.jsx)('img', {
-                      src: p.Z,
-                      className: u.orbAsset,
+                      src: h.Z,
+                      className: g.orbAsset,
                       alt: 'Orb'
                   })
                 : (0, r.jsxs)(d.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: u.orbAsset,
+                      className: g.orbAsset,
                       children: [
                           (0, r.jsx)('source', {
-                              src: g.Z,
+                              src: f.Z,
                               type: 'video/webm'
                           }),
                           (0, r.jsx)('img', {
-                              src: p.Z,
-                              className: u.orbAsset,
+                              src: h.Z,
+                              className: g.orbAsset,
                               alt: 'Orb'
                           })
                       ]
                   })
         });
     },
-    f = (e) => {
-        let { ctaText: t, ctaOnClick: n, linkText: i, linkTo: l } = e;
+    x = (e) => {
+        let { ctaText: t, ctaOnClick: n, linkPreText: i = m.NW.string(m.t['5qZv9P']), linkText: a = m.NW.string(m.t.XRdyj4) } = e;
         return (0, r.jsxs)('div', {
-            className: s()(u.container, m.baseCardOutline),
+            className: s()(g.container, p.baseCardOutline),
             children: [
-                (0, r.jsx)(h, {}),
-                (0, r.jsx)(o.zx, {
-                    className: u.ctaButton,
-                    color: o.zx.Colors.BRAND,
-                    look: o.zx.Looks.FILLED,
+                (0, r.jsx)(b, {}),
+                (0, r.jsx)(l.zx, {
+                    className: g.ctaButton,
+                    color: l.zx.Colors.BRAND,
+                    look: l.zx.Looks.FILLED,
+                    size: l.zx.Sizes.SMALL,
                     onClick: n,
                     fullWidth: !0,
                     children: t
                 }),
-                (0, r.jsx)(a.rU, {
-                    to: { pathname: l },
-                    className: u.learnMoreLink,
-                    children: i
+                (0, r.jsxs)('div', {
+                    className: g.linkContainer,
+                    children: [
+                        void 0 !== i &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsxs)(o.Text, {
+                                        variant: 'text-xs/normal',
+                                        className: g.linkPreText,
+                                        children: [i, '\xA0']
+                                    }),
+                                    ' '
+                                ]
+                            }),
+                        (0, r.jsx)(o.eee, {
+                            target: '_blank',
+                            rel: 'author',
+                            href: u.yXt.HELP_ARTICLE_ORBS_FAQ,
+                            className: g.learnMoreLink,
+                            children: a
+                        })
+                    ]
                 })
             ]
         });

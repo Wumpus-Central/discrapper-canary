@@ -18,8 +18,8 @@ var r = n(200651),
     h = n(317257),
     f = n(120786),
     b = n(970815),
-    N = n(82856),
-    x = n(981631),
+    x = n(82856),
+    N = n(981631),
     _ = n(215023),
     E = n(388032),
     j = n(577956);
@@ -28,77 +28,76 @@ let C = {
         END: j.alignRight
     },
     O = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, isCoachmarkEnabled: O = !0, linkText: v = E.NW.string(E.t['7f4H7O']), linkTo: S, cardAlignment: T = C.START, className: I } = e,
-            { balance: y } = (0, p.A)(),
-            [A, P] = i.useState(h.b.DEFAULT),
-            [R, D] = i.useState(!1),
-            [Z, w] = i.useState(!1),
-            k = (0, l.TH)(),
-            { analyticsLocations: W } = (0, d.ZP)(c.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
-            L = i.useRef(null),
-            { shouldOpen: B } = (0, N.lJ)({ backgroundElementRef: L }),
-            { shouldOpen: M } = (0, g.Mm)({
-                backgroundElementRef: L,
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, isCoachmarkEnabled: O = !0, linkText: v = E.NW.string(E.t.XRdyj4), cardAlignment: S = C.START, className: T } = e,
+            { balance: I } = (0, p.A)(),
+            [y, A] = i.useState(h.b.DEFAULT),
+            [P, R] = i.useState(!1),
+            [D, Z] = i.useState(!1),
+            w = (0, l.TH)(),
+            { analyticsLocations: k } = (0, d.ZP)(c.Z.VIRTUAL_CURRENCY_BALANCE_WIDGET),
+            W = i.useRef(null),
+            { shouldOpen: L } = (0, x.lJ)({ backgroundElementRef: W }),
+            { shouldOpen: B } = (0, g.Mm)({
+                backgroundElementRef: W,
                 isCoachmarkEnabled: O,
-                onCloseCallback: x.dG4,
-                onClickPill: x.dG4,
+                onCloseCallback: N.dG4,
+                onClickPill: N.dG4,
                 linkOnClick: () => {
                     (0, m.navigateToQuestHome)();
                 },
                 ctaOnClick: () => {
-                    k.pathname !== x.Z5c.COLLECTIBLES_SHOP &&
+                    w.pathname !== N.Z5c.COLLECTIBLES_SHOP &&
                         (0, u.mK)({
                             openInLayer: !1,
                             tab: _.AW.ORBS,
-                            analyticsLocations: W,
+                            analyticsLocations: k,
                             analyticsSource: c.Z.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK
                         });
                 }
             }),
-            U = M || B;
+            M = B || L;
         i.useEffect(() => {
             if (!O) return;
             let e = (0, g.wH)();
-            (0, N.Pe)() || e || U ? (w(!0), D(!1)) : w(!1);
-        }, [O, U]);
-        let V = i.useCallback(() => {
-                let e = !R;
-                P(e ? h.b.SELECTED : h.b.DEFAULT), D(e);
-            }, [R]),
-            G = i.useCallback(() => {
-                R && V();
-            }, [R, V]),
-            F = (0, o.Z)(null, G);
+            (0, x.Pe)() || e || M ? (Z(!0), R(!1)) : Z(!1);
+        }, [O, M]);
+        let U = i.useCallback(() => {
+                let e = !P;
+                A(e ? h.b.SELECTED : h.b.DEFAULT), R(e);
+            }, [P]),
+            V = i.useCallback(() => {
+                P && U();
+            }, [P, U]),
+            G = (0, o.Z)(null, V);
         return (0, r.jsxs)('div', {
-            className: a()(j.container, I, {
-                [j.hidden]: Z,
-                [j.visible]: !Z
+            className: a()(j.container, T, {
+                [j.hidden]: D,
+                [j.visible]: !D
             }),
             children: [
                 (0, r.jsx)(b.A4, {
-                    ref: L,
-                    balance: y,
-                    balanceWidgetMode: U ? h.b.DEFAULT : A,
+                    ref: W,
+                    balance: I,
+                    balanceWidgetMode: M ? h.b.DEFAULT : y,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: V,
+                    onClick: U,
                     showNotificationBadge: t
                 }),
-                R &&
+                P &&
                     (0, r.jsx)('div', {
-                        className: a()(j.cardContainer, T, {
-                            [j.hidden]: Z,
-                            [j.visible]: !Z
+                        className: a()(j.cardContainer, S, {
+                            [j.hidden]: D,
+                            [j.visible]: !D
                         }),
-                        ref: F,
+                        ref: G,
                         children: (0, r.jsx)(f.L, {
                             ctaText: n,
                             ctaOnClick: () => {
-                                V(), s();
+                                U(), s();
                             },
-                            linkText: v,
-                            linkTo: S
+                            linkText: v
                         })
                     })
             ]
