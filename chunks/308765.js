@@ -412,6 +412,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     GuildPowerupsManager: {
+        actions: ['LOGOUT'],
         inlineRequire: () => n(909123).Z,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0
