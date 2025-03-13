@@ -1,6 +1,5 @@
 n.d(t, {
-    Hu: () => p,
-    m3: () => f,
+    Hu: () => f,
     wt: () => d
 }),
     n(47120);
@@ -60,11 +59,6 @@ function d(e) {
     return r && u();
 }
 function f(e) {
-    let { location: t, guildId: n } = e,
-        { isTester: r } = c.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
-    return r && (null == n || !l.has(n));
-}
-function p(e) {
     let { location: t, autoTrackExposure: n } = e,
         { enabled: i, isTester: s } = c.useExperiment({ location: t }, { autoTrackExposure: n }),
         d = (0, r.e7)([a.Z, o.Z], () => o.Z.getChannel(a.Z.getVoiceChannelId())),
