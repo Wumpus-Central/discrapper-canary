@@ -8,14 +8,11 @@ e.exports = {
     clearButtonWrapper: 'clearButtonWrapper__7fd1c',
     clearButton: 'clearButton__7fd1c',
     clearIcon: 'clearIcon__7fd1c',
-    statusOptionItem: 'statusOptionItem__7fd1c',
-    statusIcon: 'statusIcon__7fd1c',
     header: 'header__7fd1c',
     headerTitle: 'headerTitle__7fd1c',
     headerCloseButton: 'headerCloseButton__7fd1c',
     footer: 'footer__7fd1c',
     clearAfterSelectContainer: 'clearAfterSelectContainer__7fd1c',
     profilePreview: 'profilePreview__7fd1c',
-    invisibleStatusNotice: 'invisibleStatusNotice__7fd1c',
     needInspiration: 'needInspiration__7fd1c'
 };
