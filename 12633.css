@@ -34263,6 +34263,11 @@ html:not(.visual-refresh) .root_e5f3a9 {
     padding: 0 8px !important
 }
 
+.nameplatePurchased_fdeafc {
+    opacity: .4;
+    transition: opacity .5s
+}
+
 .badgeDark_dd79c2 {
     background-color: var(--white-500);
     color: var(--black-500)

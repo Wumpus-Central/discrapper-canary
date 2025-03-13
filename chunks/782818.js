@@ -162,16 +162,17 @@ function C(e) {
         s = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         { avatars: d, loading: j, error: v } = (0, m.S)(),
         { recentAvatarsLimit: C, numberOfLockedAvatarSlots: E } = (0, p.pC)(t),
-        [P, S] = a.useState(null),
-        w = null != P ? P : null == v ? void 0 : v.message,
-        T = d.length > C ? d.slice(0, C) : d,
-        F = T.length,
-        R = Math.max(C - F, 0),
-        _ = (0, c.vRw)(),
-        Z = a.useCallback(
+        [P, S] = a.useState(!1),
+        [w, T] = a.useState(null),
+        F = null != w ? w : null == v ? void 0 : v.message,
+        R = d.length > C ? d.slice(0, C) : d,
+        _ = R.length,
+        Z = Math.max(C - _, 0),
+        L = (0, c.vRw)(),
+        D = a.useCallback(
             async (e) => {
-                if (null == s) return;
-                S(null);
+                if (null == s || P) return;
+                S(!0), T(null);
                 let { id: t, storageHash: a, description: i } = e,
                     o = (0, p.fD)({
                         userId: s.id,
@@ -205,15 +206,17 @@ function C(e) {
                                     )
                                 );
                         },
-                        { contextKey: _ }
+                        { contextKey: L }
                     );
                 } catch (e) {
-                    S(h.NW.string(h.t.fZRH9P));
+                    T(h.NW.string(h.t.fZRH9P));
+                } finally {
+                    S(!1);
                 }
             },
-            [_, l, s]
+            [L, P, l, s]
         ),
-        L = a.useCallback((e, t, a, l) => {
+        I = a.useCallback((e, t, a, l) => {
             e.shiftKey
                 ? (0, f.B)(t)
                 : (0, c.ZDy)(async () => {
@@ -241,21 +244,21 @@ function C(e) {
         : (0, r.jsxs)('div', {
               className: y.recentAvatarContainer,
               children: [
-                  null != w &&
+                  null != F &&
                       !j &&
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: w
+                          children: F
                       }),
                   (0, r.jsxs)('div', {
                       className: i()(y.recentAvatarSlots, { [y.withPremiumUpsell]: !t }),
                       children: [
-                          F > 0 &&
+                          _ > 0 &&
                               (0, r.jsx)('ul', {
                                   'aria-label': h.NW.string(h.t.lsU63N),
                                   className: y.recentAvatarList,
-                                  children: T.map((e, n) =>
+                                  children: R.map((e, n) =>
                                       (0, r.jsx)(
                                           'li',
                                           {
@@ -263,18 +266,18 @@ function C(e) {
                                                   avatar: e,
                                                   orderNumber: n + 1,
                                                   allowDelete: t,
-                                                  onSelectRecentAvatar: Z,
-                                                  onDeleteRecentAvatar: t ? L : void 0
+                                                  onSelectRecentAvatar: D,
+                                                  onDeleteRecentAvatar: t ? I : void 0
                                               })
                                           },
                                           e.id
                                       )
                                   )
                               }),
-                          R > 0 &&
+                          Z > 0 &&
                               (0, r.jsxs)('div', {
                                   className: y.emptyAvatarSlots,
-                                  children: [(0, r.jsx)(c.nn4, { children: h.NW.format(h.t['8W2HOz'], { numberOfEmptyAvatarSlots: R }) }), [...Array(R)].map((e, t) => (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t))]
+                                  children: [(0, r.jsx)(c.nn4, { children: h.NW.format(h.t['8W2HOz'], { numberOfEmptyAvatarSlots: Z }) }), [...Array(Z)].map((e, t) => (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t))]
                               }),
                           !t && (0, r.jsx)(A, { numberOfLockedAvatarSlots: E })
                       ]

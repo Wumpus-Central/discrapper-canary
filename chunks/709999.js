@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => eg,
+    Z: () => ep,
     d: () => em
 }),
     n(47120),
@@ -14,13 +14,13 @@ var r = n(200651),
     d = n(873546),
     u = n(180650),
     m = n(979554),
-    p = n(399606),
-    g = n(622535),
+    g = n(399606),
+    p = n(622535),
     h = n(481060),
     f = n(727637),
     b = n(607070),
-    N = n(100527),
-    x = n(906732),
+    x = n(100527),
+    N = n(906732),
     _ = n(693728),
     E = n(333867),
     j = n(197115),
@@ -202,8 +202,8 @@ let eo = (e) => {
             doNotAnimate: !0
         });
     },
-    ep = (e) => {
-        let { user: t, isDarkTheme: n, nameplate: i, isHighlighted: s } = e;
+    eg = (e) => {
+        let { user: t, isDarkTheme: n, nameplate: i, isHighlighted: s, isPurchased: a } = e;
         return (0, r.jsx)('div', {
             className: ei.nameplatePreviewRootContainer,
             children: (0, r.jsxs)('div', {
@@ -217,7 +217,8 @@ let eo = (e) => {
                         className: ei.nameplatePreviewSampleItem,
                         isHighlighted: s,
                         showWumpus: !s,
-                        showStatus: !0
+                        showStatus: !0,
+                        isPurchased: a
                     }),
                     (0, r.jsx)(em, { isDarkTheme: n }),
                     (0, r.jsx)(em, { isDarkTheme: n })
@@ -225,26 +226,26 @@ let eo = (e) => {
             })
         });
     },
-    eg =
+    ep =
         12633 == n.j
             ? function (e) {
                   let { product: t, user: n, category: s, onMount: l, isGiftEasterEggEnabled: _, isInFeedView: C, tab: z } = e,
-                      { analyticsLocations: K } = (0, x.ZP)([...(C ? [N.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), N.Z.COLLECTIBLES_SHOP_CARD]),
+                      { analyticsLocations: K } = (0, N.ZP)([...(C ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
                       el = i.useRef(null),
                       em = (0, f.Z)(el),
-                      [eg, eh] = i.useState(!1),
-                      ef = em || eg,
+                      [ep, eh] = i.useState(!1),
+                      ef = em || ep,
                       eb = (0, Q.f)(t),
-                      { previewingVariantIndex: eN } = eb,
-                      ex = (0, w.T)(t),
-                      e_ = (0, p.e7)([b.Z], () => b.Z.useReducedMotion),
+                      { previewingVariantIndex: ex } = eb,
+                      eN = (0, w.T)(t),
+                      e_ = (0, g.e7)([b.Z], () => b.Z.useReducedMotion),
                       eE = T.ZP.canUseCollectibles(n),
                       ej = i.useMemo(() => (0, P.BH)(t, eE), [t, eE]),
                       eC = (0, P.G1)(t),
                       eO = (0, P.rN)(t),
-                      [ev, eS, eT] = (0, p.Wu)([y.Z], () => [y.Z.isClaiming === t.skuId, null != y.Z.isClaiming && y.Z.isClaiming !== t.skuId, y.Z.purchases]),
-                      eI = (0, J.o)(t, eT, eN),
-                      ey = (0, p.e7)([O.Z], () => (0, h.wjy)(O.Z.theme)),
+                      [ev, eS, eT] = (0, g.Wu)([y.Z], () => [y.Z.isClaiming === t.skuId, null != y.Z.isClaiming && y.Z.isClaiming !== t.skuId, y.Z.purchases]),
+                      eI = (0, J.o)(t, eT, ex),
+                      ey = (0, g.e7)([O.Z], () => (0, h.wjy)(O.Z.theme)),
                       eA = (0, P.Yq)(t.skuId),
                       eP = s.skuId === u.T.ANIME_V3 && (0, P.WW)(t.skuId),
                       { hoverVariant: eR } = (0, R.E)('CollectiblesShopTallCard'),
@@ -259,7 +260,7 @@ let eo = (e) => {
                           isPartiallyOwnedBundle: eB,
                           isPurchased: eL
                       }),
-                      eU = null !== eN ? eN : ew,
+                      eU = null !== ex ? ex : ew,
                       [eV, eG] = i.useState(!1),
                       { enabled: eF } = (0, v.W)({ location: 'collectibles_shop_tall_card' }),
                       { handleCardVisibilityChange: eH } = (0, W.E)(ek.skuId, C ? 'home' : 'full');
@@ -306,8 +307,8 @@ let eo = (e) => {
                                   tab: z
                               });
                       },
-                      e0 = e$(N.Z.COLLECTIBLES_SHOP_CARD),
-                      e1 = e$(N.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+                      e0 = e$(x.Z.COLLECTIBLES_SHOP_CARD),
+                      e1 = e$(x.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
                       e2 = () =>
                           (0, r.jsx)('div', {
                               className: ei.hoverUpsellContainer,
@@ -336,7 +337,7 @@ let eo = (e) => {
                               });
                   return (0, P.x6)(t) && null != ej && ej.discountPercentage < 0
                       ? null
-                      : (0, r.jsx)(g.$, {
+                      : (0, r.jsx)(p.$, {
                             onChange: eH,
                             threshold: 0,
                             children: (0, r.jsx)(h.tEY, {
@@ -393,11 +394,12 @@ let eo = (e) => {
                                                     )
                                                 )
                                                 .with(m.Z.NAMEPLATE, () =>
-                                                    (0, r.jsx)(ep, {
+                                                    (0, r.jsx)(eg, {
                                                         user: n,
                                                         isDarkTheme: ey,
                                                         nameplate: eI,
-                                                        isHighlighted: ef
+                                                        isHighlighted: ef,
+                                                        isPurchased: eL
                                                     })
                                                 )
                                                 .with(m.Z.BUNDLE, () =>
@@ -458,7 +460,7 @@ let eo = (e) => {
                                                 (0, r.jsx)(h.Text, {
                                                     variant: 'text-lg/bold',
                                                     className: ei.productName,
-                                                    children: ex
+                                                    children: eN
                                                 }),
                                                 t.type === m.Z.VARIANTS_GROUP
                                                     ? (0, r.jsx)(H.P, {
