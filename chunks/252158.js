@@ -205,6 +205,9 @@ function R(e, t) {
             return ''.concat(t.mediaSessionId);
         case v.u.STREAM_RECONNECTING:
             return ''.concat(t.streamKey, ':').concat(t.mediaSessionId);
+        case v.u.VIDEO_ENCODE_ERROR:
+        case v.u.VIDEO_DECODE_ERROR:
+            return '';
         default:
             return e;
     }
