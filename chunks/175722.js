@@ -7,6 +7,7 @@ e.exports = {
     closeButton: 'closeButton__6e9b4',
     closeButtonInner: 'closeButtonInner__6e9b4',
     closeButtonIcon: 'closeButtonIcon__6e9b4',
+    ctaButton: 'ctaButton__6e9b4',
     tail: 'tail__6e9b4',
     tailPositionNormal: 'tailPositionNormal__6e9b4',
     tailPositionInverted: 'tailPositionInverted__6e9b4',

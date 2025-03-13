@@ -46,8 +46,8 @@ var r = n(200651),
     Y = n(626135),
     K = n(814225),
     q = n(515753),
-    X = n(831218),
-    Q = n(339149),
+    Q = n(831218),
+    X = n(339149),
     J = n(981631),
     $ = n(675654),
     ee = n(474936),
@@ -205,7 +205,7 @@ let ea = (e) => {
                     i,
                     l
                 ),
-                { children: (0, r.jsx)(Q.Z, { className: o()(er.downloadProgressCircle, { [er.hideGameUpdateProgressIndicator]: n }) }) }
+                { children: (0, r.jsx)(X.Z, { className: o()(er.downloadProgressCircle, { [er.hideGameUpdateProgressIndicator]: n }) }) }
             )
         );
     },
@@ -312,15 +312,12 @@ let eg = i.memo(function (e) {
         { enabled: b } = (0, W.W)({ location: 'PrivateChannels' }),
         _ = i.useRef(null),
         E = i.useRef(null),
-        {
-            shouldShow: v,
-            closeCoachmarkIfOpen: y,
-            onHandleScroll: I,
-            offsetControlRef: C
-        } = (0, V.EQ)({
+        v = (0, V.EQ)({
             isVirtualCurrencyEnabled: b,
             listScrollerRef: E
-        });
+        }),
+        { shouldShow: y, closeCoachmarkIfOpen: I, onHandleScroll: C, offsetControlRef: S } = v,
+        T = eo(v, ['shouldShow', 'closeCoachmarkIfOpen', 'onHandleScroll', 'offsetControlRef']);
     return (0, r.jsxs)('nav', {
         className: er.privateChannels,
         'aria-label': et.NW.string(et.t.ZH9aPz),
@@ -349,13 +346,13 @@ let eg = i.memo(function (e) {
                 })
             }),
             (0, r.jsxs)(
-                X.Z,
+                Q.Z,
                 el(ei({}, e), {
                     version: m,
                     selectedChannelId: g,
                     showDMHeader: !0,
                     listScrollerRef: E,
-                    onHandleScroll: v ? I : void 0,
+                    onHandleScroll: y ? C : void 0,
                     children: [
                         (0, r.jsx)(ea, { selected: null != m ? m === J.Z5c.FRIENDS : l === J.Z5c.FRIENDS }, 'friends'),
                         n && t
@@ -391,7 +388,7 @@ let eg = i.memo(function (e) {
                             {
                                 selected: m === J.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(J.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: _,
-                                onClick: y,
+                                onClick: I,
                                 locationState: {
                                     analyticsSource: {
                                         page: ef(l),
@@ -402,13 +399,17 @@ let eg = i.memo(function (e) {
                             },
                             'discord-shop'
                         ),
-                        v
-                            ? (0, r.jsx)(V.ZP, {
-                                  backgroundElementRef: _,
-                                  onClose: y,
-                                  offsetControlRef: C,
-                                  renderTail: !0
-                              })
+                        y
+                            ? (0, r.jsx)(
+                                  V.ZP,
+                                  ei(
+                                      {
+                                          backgroundElementRef: _,
+                                          offsetControlRef: S
+                                      },
+                                      T
+                                  )
+                              )
                             : null,
                         p ? (0, r.jsx)(ed, { selected: (null != l && l.startsWith(J.Z5c.FAMILY_CENTER)) || (null != m && m.startsWith(J.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
                         s ? (0, r.jsx)(em, {}, 'section-divider-top') : null,
