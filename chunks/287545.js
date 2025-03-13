@@ -16,23 +16,23 @@ var i = n(772848),
     _ = n(358221),
     p = n(75060),
     h = n(233764),
-    g = n(375824),
-    m = n(188597),
+    m = n(375824),
+    g = n(188597),
     E = n(695346),
     v = n(131704),
     b = n(314897),
     y = n(592125),
     O = n(19780),
-    S = n(944486),
-    I = n(594174),
+    I = n(944486),
+    S = n(594174),
     T = n(626135),
     N = n(585483),
     A = n(358085),
     C = n(624138),
     R = n(24933),
     P = n(115130),
-    D = n(566620),
-    w = n(317381),
+    w = n(566620),
+    D = n(317381),
     L = n(969345),
     x = n(155268),
     M = n(148720),
@@ -96,7 +96,7 @@ function $(e) {
 async function ee(e) {
     var t;
     let { applicationId: n, location: r, instanceId: i } = e,
-        a = w.ZP.getEmbeddedActivityDurationMs(r.id, n),
+        a = D.ZP.getEmbeddedActivityDurationMs(r.id, n),
         s = b.default.getSessionId();
     null != i &&
         null != s &&
@@ -108,16 +108,16 @@ async function ee(e) {
         }));
     let l = Y[n],
         c = y.Z.getChannel((0, U.pY)(r)),
-        u = I.default.getCurrentUser();
+        u = S.default.getCurrentUser();
     if (null == l || null == c || null == u) return;
     let d = c.getGuildId(),
-        f = w.ZP.getShelfActivities(d),
+        f = D.ZP.getShelfActivities(d),
         _ = (0, L.Z)({
             applicationId: n,
             activityConfigs: f
         }),
         { releasePhase: h } = q(_),
-        g = p.Z.getRawThermalState();
+        m = p.Z.getRawThermalState();
     T.default.track(F.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: c.id,
         guild_id: d,
@@ -126,7 +126,7 @@ async function ee(e) {
         application_id: n,
         duration_ms: a,
         user_premium_tier: u.premiumType,
-        raw_thermal_state: g,
+        raw_thermal_state: m,
         release_phase: h,
         shelf_rank: null == _ ? void 0 : null === (t = _.activity) || void 0 === t ? void 0 : t.shelf_rank,
         activity_user_session_id: l.activityUserSessionId,
@@ -140,7 +140,7 @@ async function ee(e) {
             instance_ids: null != l.launchId ? [l.launchId] : void 0,
             media_session_ids: l.mediaSessionIds,
             activity_user_session_id: l.activityUserSessionId,
-            raw_thermal_state: g,
+            raw_thermal_state: m,
             duration_ms: a
         }),
         delete Y[n];
@@ -149,20 +149,20 @@ function et(e) {
     var t, n;
     let { applicationId: r, isFirstActivityInChannel: o, isStart: a, participants: l, embeddedActivity: c, location: u, inviterUserId: f } = e,
         h = b.default.getId(),
-        g = l.find((e) => e.userId === h),
-        m = (0, U.pY)(u),
-        E = y.Z.getChannel(m);
-    if ((a && null != E && E.isPrivate() && o && null == g && s.Z.selectParticipant(E.id, null), null == g)) return;
+        m = l.find((e) => e.userId === h),
+        g = (0, U.pY)(u),
+        E = y.Z.getChannel(g);
+    if ((a && null != E && E.isPrivate() && o && null == m && s.Z.selectParticipant(E.id, null), null == m)) return;
     let v = O.Z.getMediaSessionId(),
-        S = c.compositeInstanceId,
+        I = c.compositeInstanceId,
         N = null == v && (null == E ? void 0 : E.isVocal()) === !0 && (null == E ? void 0 : E.isPrivate()) === !1;
-    if (null == S || N) return;
+    if (null == I || N) return;
     let A = (0, i.Z)(),
         P = 'location' in c ? 2 : 1,
-        D = null == E ? void 0 : E.getGuildId(),
-        x = I.default.getCurrentUser();
+        w = null == E ? void 0 : E.getGuildId(),
+        x = S.default.getCurrentUser();
     if (null == E || null == x) return;
-    let M = w.ZP.getShelfActivities(D),
+    let M = D.ZP.getShelfActivities(w),
         k = R.Z.getState().shelfOrder,
         j = (0, L.Z)({
             applicationId: r,
@@ -173,7 +173,7 @@ function et(e) {
         V = p.Z.getRawThermalState(),
         Z = null != v ? [v] : [],
         H = {
-            activitySessionId: S,
+            activitySessionId: I,
             activityUserSessionId: A,
             launchId: c.launchId,
             mediaSessionIds: Z,
@@ -181,12 +181,12 @@ function et(e) {
         };
     Y[r] = H;
     let W = K[r];
-    (0, C.Ew)(g.nonce) || g.nonce === (null == W ? void 0 : W.nonce) || (W = void 0),
+    (0, C.Ew)(m.nonce) || m.nonce === (null == W ? void 0 : W.nonce) || (W = void 0),
         T.default.track(F.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: E.id,
             guild_id: E.getGuildId(),
             media_session_id: Z[0],
-            activity_session_id: S,
+            activity_session_id: I,
             application_id: r,
             location_stack: null == W ? void 0 : W.locations,
             user_premium_tier: x.premiumType,
@@ -200,7 +200,8 @@ function et(e) {
             channel_type: E.type,
             source: null == W ? void 0 : W.source,
             command_context_type: (0, d.Vh)(E, r),
-            invite_inviter_id: f
+            invite_inviter_id: f,
+            interaction_id: null == W ? void 0 : W.interactionId
         }),
         T.default.track(F.rMx.ACTIVITY_IFRAME_MOUNT, {
             location_stack: null == W ? void 0 : W.locations,
@@ -223,16 +224,16 @@ function en(e) {
 }
 class er extends c.Z {
     _initialize() {
-        S.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.subscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), a.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', ee), a.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), a.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), a.Z.subscribe('CALL_DELETE', this.handleCallDelete), a.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), a.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), a.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete), a.Z.subscribe('INTERACTION_QUEUE', this.handleInteractionQueue), a.Z.subscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), a.Z.subscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
+        I.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.subscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), a.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), a.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', ee), a.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), a.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), a.Z.subscribe('CALL_DELETE', this.handleCallDelete), a.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), a.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), a.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete), a.Z.subscribe('INTERACTION_QUEUE', this.handleInteractionQueue), a.Z.subscribe('INTERACTION_CREATE', this.handleInteractionCreate), a.Z.subscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), a.Z.subscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
     }
     _terminate() {
-        S.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.unsubscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), a.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', ee), a.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), a.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), a.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), a.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), a.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), a.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete), a.Z.unsubscribe('INTERACTION_QUEUE', this.handleInteractionQueue), a.Z.unsubscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), a.Z.unsubscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
+        I.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.unsubscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, et), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', $), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), a.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), a.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', ee), a.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), a.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), a.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), a.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), a.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), a.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete), a.Z.unsubscribe('INTERACTION_QUEUE', this.handleInteractionQueue), a.Z.unsubscribe('INTERACTION_CREATE', this.handleInteractionCreate), a.Z.unsubscribe('INTERACTION_SUCCESS', this.handleInteractionSuccess), a.Z.unsubscribe('INTERACTION_FAILURE', this.handleInteractionFailure);
     }
     constructor(...e) {
         super(...e),
             H(this, 'handleSelectedChannelUpdate', () => {
-                let e = S.Z.getVoiceChannelId();
-                for (let { location: t, applicationId: n } of w.ZP.getSelfEmbeddedActivities().values()) {
+                let e = I.Z.getVoiceChannelId();
+                for (let { location: t, applicationId: n } of D.ZP.getSelfEmbeddedActivities().values()) {
                     let r = (0, U.pY)(t);
                     null != r &&
                         (0, V.Z)(r) &&
@@ -243,12 +244,12 @@ class er extends c.Z {
                         });
                 }
                 if (null != e) {
-                    let t = w.ZP.getEmbeddedActivitiesForChannel(e),
+                    let t = D.ZP.getEmbeddedActivitiesForChannel(e),
                         n = b.default.getId();
                     t.forEach((e) => {
                         if (e.userIds.has(n)) {
                             let t = (0, U.pY)(e.location),
-                                n = w.ZP.getSelfEmbeddedActivityForChannel(t);
+                                n = D.ZP.getSelfEmbeddedActivityForChannel(t);
                             null == n
                                 ? this.leaveActivity({
                                       location: e.location,
@@ -281,7 +282,7 @@ class er extends c.Z {
                 if (i instanceof h.Z) {
                     (t = 0), (r = i.reason);
                     let e = P.Z.getFetchState();
-                    switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, D.$h)()), i.reason)) {
+                    switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, w.$h)()), i.reason)) {
                         case h.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
                             P.Z.inDevModeForApplication(s) && (u = Z.NW.string(Z.t.hXRXf3));
                             break;
@@ -291,9 +292,9 @@ class er extends c.Z {
                         case h.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
                             n = i.detailCode;
                     }
-                } else if (i instanceof g.Z) {
+                } else if (i instanceof m.Z) {
                     var d;
-                    (t = 1), (r = i.reason), (u = null !== (d = (0, m.A0)(i.reason, s)) && void 0 !== d ? d : u);
+                    (t = 1), (r = i.reason), (u = null !== (d = (0, g.A0)(i.reason, s)) && void 0 !== d ? d : u);
                 } else
                     switch (((t = 2), (n = i.status), (r = i.code), i.code)) {
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
@@ -340,7 +341,7 @@ class er extends c.Z {
                 let { reason: t, application: n } = e,
                     r = n.id;
                 if (null != r && null != t) {
-                    for (let { applicationId: e, location: t } of w.ZP.getSelfEmbeddedActivities().values())
+                    for (let { applicationId: e, location: t } of D.ZP.getSelfEmbeddedActivities().values())
                         e === r &&
                             this.leaveActivity({
                                 location: t,
@@ -357,7 +358,7 @@ class er extends c.Z {
             }),
             H(this, 'handleCallDelete', (e) => {
                 let { channelId: t } = e,
-                    n = S.Z.getVoiceChannelId();
+                    n = I.Z.getVoiceChannelId();
                 null != n && n === t && this.handleCallEnded(t);
             }),
             H(this, 'handleRTCConnectionState', (e) => {
@@ -366,7 +367,7 @@ class er extends c.Z {
                 this.handleCallEnded(t);
             }),
             H(this, 'handleCallEnded', (e) => {
-                let t = w.ZP.getSelfEmbeddedActivityForChannel(e);
+                let t = D.ZP.getSelfEmbeddedActivityForChannel(e);
                 null != t &&
                     this.leaveActivity({
                         location: t.location,
@@ -377,8 +378,8 @@ class er extends c.Z {
                 var t, n, r;
                 let { channelId: i, applicationId: o, analyticsLocations: a, commandOrigin: s, inviterUserId: l } = e,
                     c = y.Z.getChannel(i);
-                if (void 0 === c || (v.tx.has(null == c ? void 0 : c.type) && S.Z.getVoiceChannelId() !== i)) return;
-                let u = w.ZP.getSelfEmbeddedActivityForChannel(i);
+                if (void 0 === c || (v.tx.has(null == c ? void 0 : c.type) && I.Z.getVoiceChannelId() !== i)) return;
+                let u = D.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === o) return;
                 let d = await f.ZP.fetchApplication(o);
                 if (!(0, j.a)(c)) {
@@ -390,7 +391,7 @@ class er extends c.Z {
                     return;
                 }
                 let _ = null !== (n = null == c ? void 0 : c.getGuildId()) && void 0 !== n ? n : void 0,
-                    { activityConfigs: p, applications: h } = await (0, D.w1)({ guildId: _ });
+                    { activityConfigs: p, applications: h } = await (0, w.w1)({ guildId: _ });
                 if (
                     null ==
                     (0, L.Z)({
@@ -399,7 +400,7 @@ class er extends c.Z {
                         applications: h
                     })
                 ) {
-                    let e = await (0, D.w1)({
+                    let e = await (0, w.w1)({
                         guildId: _,
                         force: !0
                     });
@@ -409,12 +410,12 @@ class er extends c.Z {
                         applications: e.applications
                     });
                 }
-                let g = w.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === o);
-                (null !== (r = null == g ? void 0 : g.userIds.size) && void 0 !== r ? r : 0) > 0
+                let m = D.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === o);
+                (null !== (r = null == m ? void 0 : m.userIds.size) && void 0 !== r ? r : 0) > 0
                     ? await (0, M.k)({
                           channelId: i,
                           applicationId: o,
-                          launchId: null == g ? void 0 : g.launchId,
+                          launchId: null == m ? void 0 : m.launchId,
                           inputApplication: null,
                           analyticsLocations: a,
                           inviterUserId: l
@@ -429,7 +430,7 @@ class er extends c.Z {
             }),
             H(this, 'handleGuildDelete', (e) => {
                 let { guild: t } = e;
-                w.ZP.getSelfEmbeddedActivities().forEach((e) => {
+                D.ZP.getSelfEmbeddedActivities().forEach((e) => {
                     let { location: n, applicationId: r } = e,
                         i = (0, U.jS)(n);
                     t.id === i &&
@@ -441,7 +442,7 @@ class er extends c.Z {
             }),
             H(this, 'handleChannelDelete', (e) => {
                 let { channel: t } = e,
-                    n = w.ZP.getSelfEmbeddedActivityForChannel(t.id);
+                    n = D.ZP.getSelfEmbeddedActivityForChannel(t.id);
                 null != n &&
                     this.leaveActivity({
                         location: n.location,
@@ -459,6 +460,14 @@ class er extends c.Z {
                             locations: e
                         }) && (z[t] = n.applicationId);
                 }
+            }),
+            H(this, 'handleInteractionCreate', (e) => {
+                let { nonce: t, interactionId: n } = e;
+                if (null == t) return;
+                let r = z[t];
+                if (null == r) return;
+                let i = K[r];
+                null != i && (i.interactionId = n);
             }),
             H(this, 'handleInteractionSuccess', (e) => {
                 let { nonce: t } = e;
