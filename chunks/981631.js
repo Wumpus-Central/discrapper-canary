@@ -1404,6 +1404,7 @@ var N =
     (r.EXPLICIT_MEDIA_ACTION = 'explicit_media_action'),
     (r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT = 'explicit_media_scan_client_timed_out'),
     (r.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED = 'explicit_media_redactable_messages_loaded'),
+    (r.REDACTABLE_MESSAGE_LOADED = 'redactable_message_loaded'),
     (r.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE = 'explicit_media_retroactive_scan_complete'),
     (r.SAFETY_WARNING_VIEWED = 'safety_warning_viewed'),
     (r.SAFETY_WARNING_MODAL_VIEWED = 'safety_warning_modal_viewed'),

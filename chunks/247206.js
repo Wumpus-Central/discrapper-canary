@@ -1,25 +1,26 @@
 n.d(t, {
-    Cm: () => q,
+    Cm: () => Q,
     HH: () => x,
     Hc: () => Y,
     IV: () => K,
     KP: () => j,
-    Ks: () => $,
+    Ks: () => ee,
     OP: () => W,
     Pq: () => H,
+    QN: () => z,
     Sv: () => G,
     Tw: () => U,
     UU: () => F,
     Yy: () => V,
     aP: () => Z,
-    bR: () => J,
-    l4: () => w,
+    bR: () => $,
+    l4: () => D,
     lJ: () => k,
-    m8: () => ee,
+    m8: () => et,
     oh: () => B,
     tG: () => C,
     vx: () => L,
-    xx: () => z,
+    xx: () => q,
     zj: () => M
 }),
     n(789020);
@@ -36,8 +37,8 @@ var r = n(286379),
     _ = n(594174),
     p = n(626135),
     h = n(630388),
-    g = n(948561),
-    m = n(704454),
+    m = n(948561),
+    g = n(704454),
     E = n(719548),
     v = n(981631),
     b = n(973005);
@@ -71,12 +72,12 @@ function O(e) {
     return e;
 }
 n(388032);
-let S = {
+let I = {
         [b.TI.DISABLED.valueOf()]: i.Q4.SHOW,
         [b.TI.NON_FRIENDS.valueOf()]: i.Q4.SHOW,
         [b.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: i.Q4.BLOCK
     },
-    I = {
+    S = {
         [b.TI.DISABLED.valueOf()]: i.Q4.SHOW,
         [b.TI.NON_FRIENDS.valueOf()]: i.Q4.BLOCK,
         [b.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: i.Q4.BLOCK
@@ -96,12 +97,12 @@ let S = {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let o = _.default.getCurrentUser();
-        return (0, m.bc)('resolveSettingWithDefaults')
-            ? D({
+        return (0, g.bc)('resolveSettingWithDefaults')
+            ? w({
                   isDm: n,
                   isFriend: r
               })
-            : (0, m.g2)('resolveSettingWithDefaults')
+            : (0, g.g2)('resolveSettingWithDefaults')
               ? i.Q4.BLUR
               : (null == o ? void 0 : o.nsfwAllowed) === !1
                 ? P({
@@ -117,7 +118,7 @@ let S = {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return i.Q4.SHOW;
         let r = u.UP.getSetting();
-        return n ? S[r] : I[r];
+        return n ? I[r] : S[r];
     },
     P = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
@@ -125,11 +126,11 @@ let S = {
         let r = u.UP.getSetting();
         return n ? T[r] : N[r];
     },
-    D = (e) => {
+    w = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && !n ? i.Q4.BLOCK : i.Q4.BLUR;
     },
-    w = () => {
+    D = () => {
         let e = u.Sh.getSetting();
         return {
             explicitContentGuilds: C({ setting: null == e ? void 0 : e.explicitContentGuilds }),
@@ -151,12 +152,12 @@ function x(e) {
     var t;
     let n = _.default.getCurrentUser();
     if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
-    let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: o } = w(),
+    let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: o } = D(),
         a = d.Z.getChannel(e.channel_id);
     return null != a && (a.isDM() || a.isGroupDM() ? (null != e.author && f.Z.getFriendIDs().includes(e.author.id) ? L(i) : L(o)) : L(r));
 }
 let M = (e) => {
-    let t = w();
+    let t = D();
     u.Sh.updateSetting(O({}, t, e));
 };
 var k = (function (e) {
@@ -250,7 +251,7 @@ function Y(e) {
         message_id: s,
         embed_ids: f,
         user_is_underage: (0, c.U)(),
-        scan_timeout_duration: g.b2,
+        scan_timeout_duration: m.b2,
         attachment_ids_v2: u
     }),
         l.Z.increment({
@@ -275,6 +276,27 @@ function K(e) {
     c > 0 && l.Z.distribution({ name: r.V.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, c);
 }
 function z(e) {
+    let { messageId: t, channelId: n, numOfAttachments: r, numOfEmbeds: i, numOfGoreAttachments: o, numOfExplicitAttachments: a, numOfGoreEmbeds: s, numOfExplicitEmbeds: l } = e,
+        c = a > 0 || l > 0,
+        u = o > 0 || s > 0;
+    if (null == n || null == t || (!c && !u)) return;
+    let f = d.Z.getChannel(n);
+    p.default.track(v.rMx.REDACTABLE_MESSAGE_LOADED, {
+        message_id: t,
+        channel_id: n,
+        channel_type: null == f ? void 0 : f.type,
+        guild_id: null == f ? void 0 : f.guild_id,
+        num_of_attachments: r,
+        num_of_gore_attachments: o,
+        num_of_explicit_attachments: a,
+        num_of_embeds: i,
+        num_of_gore_embeds: s,
+        num_of_explicit_embeds: l,
+        has_redactable_explicit: c,
+        has_redactable_gore: u
+    });
+}
+function q(e) {
     let { messageId: t, channelId: n, numOfAttachments: r, numOfExplicitAttachments: i, numOfEmbeds: o, numOfExplicitEmbeds: a } = e;
     if (null == n) return;
     let s = d.Z.getChannel(n);
@@ -289,28 +311,28 @@ function z(e) {
         num_of_explicit_embeds: a
     });
 }
-function q(e) {
-    let { attachments: t, embeds: n } = Q(e),
-        r = X(e);
+function Q(e) {
+    let { attachments: t, embeds: n } = X(e),
+        r = J(e);
     return (e = e.merge({
         attachments: t,
         embeds: n,
         messageSnapshots: r
     }));
 }
-function Q(e) {
+function X(e) {
     return {
         attachments: e.attachments.map((e) => (null == e.content_scan_version && (e.content_scan_version = -1), e)),
         embeds: e.embeds.map((e) => (null == e.contentScanVersion && (e.contentScanVersion = -1), e))
     };
 }
-function X(e) {
+function J(e) {
     let { messageSnapshots: t } = e;
     return null == t || 0 === t.length
         ? t
         : t.map((e) => {
               let { message: t } = e,
-                  { attachments: n, embeds: r } = Q(t);
+                  { attachments: n, embeds: r } = X(t);
               return (
                   (t = t.merge({
                       attachments: n,
@@ -320,14 +342,14 @@ function X(e) {
               );
           });
 }
-let J = (e, t) => null != e && null != t && (e <= E.LN || t <= E.iE);
-function $() {
-    let e = (0, m.G7)('explicit_media_redaction_utils'),
+let $ = (e, t) => null != e && null != t && (e <= E.LN || t <= E.iE);
+function ee() {
+    let e = (0, g.G7)('explicit_media_redaction_utils'),
         t = (0, o.sf)();
     return e && t;
 }
-function ee() {
-    let e = (0, m.UQ)('explicit_media_redaction_utils'),
+function et() {
+    let e = (0, g.UQ)('explicit_media_redaction_utils'),
         t = (0, o.L5)();
     return e && t;
 }
