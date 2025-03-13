@@ -18,7 +18,8 @@ let l = function (e) {
                 let e = await (0, a.Q)();
                 s.Z.showAgeVerification({
                     webviewUrl: e.verification_webview_url,
-                    onComplete: f
+                    onComplete: f,
+                    onClose: t
                 });
             } catch (e) {
                 d(e.message);

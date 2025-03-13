@@ -1,24 +1,28 @@
-n.d(t, { u: () => c });
-var i = n(63063),
-    o = n(168107),
-    r = n(480916),
-    s = n(981631),
-    l = n(388032);
-let c = (e) => [
-    {
-        title: l.NW.string(l.t.K0z0AA),
-        description: l.NW.string(l.t.ldhmmp)
-    },
-    {
-        title: l.NW.string(l.t['60uRDA']),
-        description: l.NW.string(l.t.h90JkZ)
-    },
-    {
-        title: l.NW.string(l.t['Jc2+09']),
-        description: l.NW.format(l.t.rw9yFR, {
-            handleOnHelpUrlHook: () => {
-                o.Z.openUrl(i.Z.getArticleURL(s.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_SYSTEM_DMS)), (0, r.x3)(e, r.d_.PRIMARY, r.sU.SYSTEM_DMS_LEARN_MORE);
-            }
-        })
-    }
-];
+n.d(t, {
+    u: () => l,
+    z: () => c
+});
+var r = n(63063),
+    i = n(168107),
+    o = n(480916),
+    a = n(981631),
+    s = n(388032);
+let l = (e) => [
+        {
+            title: s.NW.string(s.t.K0z0AA),
+            description: s.NW.string(s.t.ldhmmp)
+        },
+        {
+            title: s.NW.string(s.t['60uRDA']),
+            description: s.NW.string(s.t.h90JkZ)
+        },
+        {
+            title: s.NW.string(s.t['Jc2+09']),
+            description: s.NW.format(s.t.rw9yFR, {
+                handleOnHelpUrlHook: () => {
+                    i.Z.openUrl(r.Z.getArticleURL(a.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_SYSTEM_DMS)), (0, o.x3)(e, o.d_.PRIMARY, o.sU.SYSTEM_DMS_LEARN_MORE);
+                }
+            })
+        }
+    ],
+    c = 'AGE_VERIFICATION_MODAL_KEY';

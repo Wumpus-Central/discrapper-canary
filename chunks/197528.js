@@ -1,26 +1,30 @@
-n.r(t), n.d(t, { default: () => N }), n(47120), n(301563);
-var r = n(200651),
-    a = n(192379),
+n.r(t), n.d(t, { default: () => E }), n(47120), n(301563);
+var a = n(200651),
+    r = n(192379),
     o = n(593473),
     l = n(512969),
-    i = n(702493),
-    s = n(77987),
-    c = n(133853),
-    d = n(703656),
-    u = n(643366),
-    f = n(94628),
-    p = n(659154),
-    h = n(581690),
-    x = n(902928),
-    m = n(521937),
-    v = n(981631),
-    b = n(597977);
-let C = n(575703);
-function _() {
+    i = n(399606),
+    s = n(893776),
+    c = n(702493),
+    d = n(77987),
+    u = n(133853),
+    f = n(353926),
+    p = n(703656),
+    h = n(314897),
+    x = n(643366),
+    m = n(94628),
+    v = n(659154),
+    b = n(581690),
+    C = n(902928),
+    _ = n(521937),
+    g = n(981631),
+    N = n(147736);
+let y = n(575703);
+function j() {
     let e;
     let t = (0, l.TH)(),
-        [n, s] = a.useState(() => {
-            if (t.pathname === v.Z5c.ACTIVATE_HANDOFF) {
+        [n, d] = r.useState(() => {
+            if (t.pathname === g.Z5c.ACTIVATE_HANDOFF) {
                 let { user_code: e } = o.parse(window.location.search);
                 return {
                     type: 'handoff',
@@ -31,92 +35,97 @@ function _() {
                 type: 'user-code-input',
                 usePrefilledCode: !0
             };
-        });
-    (0, i.Z)(), (0, u.Y)(n);
-    let _ = a.useCallback(() => {
-            s({ type: 'user-code-input' });
-        }, [s]),
-        g = a.useCallback(
+        }),
+        j = (0, i.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+    r.useEffect(() => {
+        h.default.isAuthenticated() && !j && s.Z.getExperiments();
+    }, [j]),
+        (0, c.Z)(),
+        (0, x.Y)(n);
+    let w = r.useCallback(() => {
+            d({ type: 'user-code-input' });
+        }, [d]),
+        E = r.useCallback(
             (e) => {
-                s({
+                d({
                     type: 'authorization',
                     userCodeData: e
                 });
             },
-            [s]
+            [d]
         ),
-        N = a.useCallback(
+        k = r.useCallback(
             (e) => {
-                s({
+                d({
                     type: 'success',
                     userCodeData: e
                 });
             },
-            [s]
+            [d]
         ),
-        y = a.useCallback(
+        T = r.useCallback(
             (e) => {
-                s({
+                d({
                     type: 'error',
                     userCodeData: e
                 });
             },
-            [s]
+            [d]
         ),
-        j = !0;
+        I = !0;
     switch (n.type) {
         case 'handoff':
-            (e = (0, r.jsx)(h.c, { code: n.code })), (j = !1);
+            (e = (0, a.jsx)(b.c, { code: n.code })), (I = !1);
             break;
         case 'user-code-input':
-            e = (0, r.jsx)(m.v, {
+            e = (0, a.jsx)(_.v, {
                 usePrefilledCode: n.usePrefilledCode || !1,
-                onUserCodeAccepted: g
+                onUserCodeAccepted: E
             });
             break;
         case 'authorization':
-            (e = (0, r.jsx)(f.B, {
+            (e = (0, a.jsx)(m.B, {
                 data: n.userCodeData,
-                onDenied: _,
-                onError: y,
-                onSuccess: N
+                onDenied: w,
+                onError: T,
+                onSuccess: k
             })),
-                (j = !1);
+                (I = !1);
             break;
         case 'success':
-            e = (0, r.jsx)(x.u, {
-                onComplete: () => (0, d.uL)(v.Z5c.ME),
+            e = (0, a.jsx)(C.u, {
+                onComplete: () => (0, p.uL)(g.Z5c.ME),
                 data: n.userCodeData
             });
             break;
         case 'error':
-            e = (0, r.jsx)(p.c, { onTryAgain: _ });
+            e = (0, a.jsx)(v.c, { onTryAgain: w });
             break;
         default:
             e = null;
     }
-    return (0, r.jsxs)('div', {
-        className: b.activatePage,
+    return (0, a.jsxs)('div', {
+        className: N.activatePage,
         children: [
-            (0, r.jsx)('img', {
-                className: b.artwork,
-                src: C,
+            (0, a.jsx)('img', {
+                className: N.artwork,
+                src: y,
                 alt: ''
             }),
-            (0, r.jsx)(c.Z, {
+            (0, a.jsx)(u.Z, {
                 show: !0,
-                className: b.logo
+                className: N.logo
             }),
-            j
-                ? (0, r.jsx)('div', {
-                      className: b.content,
+            I
+                ? (0, a.jsx)('div', {
+                      className: N.content,
                       children: e
                   })
                 : e
         ]
     });
 }
-let g = (0, s.e)(_),
-    N = function () {
-        return (0, l.TH)().pathname !== v.Z5c.ACTIVATE_HANDOFF ? (0, r.jsx)(g, {}) : (0, r.jsx)(_, {});
+let w = (0, d.e)(j),
+    E = function () {
+        return (0, l.TH)().pathname !== g.Z5c.ACTIVATE_HANDOFF ? (0, a.jsx)(w, {}) : (0, a.jsx)(j, {});
     };

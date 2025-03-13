@@ -3,7 +3,7 @@ n.d(t, {
     Z1: () => h,
     cN: () => E,
     fD: () => f,
-    mh: () => m,
+    mh: () => g,
     pC: () => _
 }),
     n(301563),
@@ -59,9 +59,12 @@ function h(e) {
             hour: 'numeric',
             minute: 'numeric'
         });
-    return ''.concat(r, ', ').concat(i);
+    return u.NW.formatToPlainString(n === s.q.EDITED_ARCHIVED_ASSET ? u.t.eC2sZm : u.t['DYil9/'], {
+        name: r,
+        dateTime: i
+    });
 }
-function g(e) {
+function m(e) {
     switch (e) {
         case 'gif':
             return 'image/gif';
@@ -73,7 +76,7 @@ function g(e) {
             (0, a.vE)(e);
     }
 }
-function m(e, t) {
+function g(e, t) {
     let n = d({
             storageHash: e,
             canAnimate: !0,
@@ -82,7 +85,7 @@ function m(e, t) {
         r = p(t);
     return {
         filename: ''.concat(r, '.').concat(n),
-        type: g(n)
+        type: m(n)
     };
 }
 function E(e) {

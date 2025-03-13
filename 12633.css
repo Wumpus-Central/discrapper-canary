@@ -14189,7 +14189,7 @@ div.cardContainer__88e24 {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    color: var(--white);
+    color: var(--header-primary);
     text-align: right
 }
 
@@ -14201,18 +14201,20 @@ div.cardContainer__88e24 {
 .container_a3e8db {
     pointer-events: all;
     cursor: pointer;
-    height: 30px
+    height: 36px;
+    box-sizing: border-box
 }
 
 .container_a3e8db {
-    position: relative;
     display: inline-flex;
-    padding: 0 16px;
     justify-content: flex-end;
     align-items: center;
     flex-shrink: 0;
-    border-radius: 21px;
-    background: var(--primary-700)
+    position: relative;
+    padding: 8px 12px;
+    border: 1px solid rgba(151, 151, 159, .04);
+    border: 1px solid var(--border-faint, rgba(151, 151, 159, .04));
+    border-radius: var(--radius-sm)
 }
 
 .orbsLottieContainer_a3e8db {
@@ -14252,17 +14254,37 @@ div.cardContainer__88e24 {
     visibility: hidden
 }
 
-.container_a3e8db.default_a3e8db,
-.container_a3e8db.highlighted_a3e8db {
+.visual-refresh .container_a3e8db.default_a3e8db {
+    background-color: var(--background-mod-subtle)
+}
+
+.visual-refresh .container_a3e8db.highlighted_a3e8db,
+.visual-refresh .container_a3e8db.selected_a3e8db {
+    background-color: var(--background-mod-normal)
+}
+
+html:not(.visual-refresh).theme-light .container_a3e8db.default_a3e8db {
+    background-color: var(--primary-100)
+}
+
+html:not(.visual-refresh).theme-light .container_a3e8db.highlighted_a3e8db {
+    background-color: var(--primary-130)
+}
+
+html:not(.visual-refresh).theme-light .container_a3e8db.selected_a3e8db {
+    background-color: var(--primary-130)
+}
+
+html:not(.visual-refresh).theme-dark .container_a3e8db.default_a3e8db {
     background: var(--primary-700)
 }
 
-.container_a3e8db.highlighted_a3e8db {
-    box-shadow: 0 0 24.6px 0 var(--brand-500)
+html:not(.visual-refresh).theme-dark .container_a3e8db.highlighted_a3e8db {
+    background: var(--primary-630)
 }
 
-.container_a3e8db.selected_a3e8db {
-    background: var(--brand-500)
+html:not(.visual-refresh).theme-dark .container_a3e8db.selected_a3e8db {
+    background: var(--primary-630)
 }
 
 .notificationBadge_a3e8db {
