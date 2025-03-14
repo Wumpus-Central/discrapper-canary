@@ -94,7 +94,17 @@ function q(e) {
         ed = (0, g.p)({ location: 'AccountProfilePopout' }),
         eu = i.useMemo(() => (0, p.Z)(), []),
         em = (e) => {
-            null == n || n(), (0, A.openUserProfileModal)(K({ sourceAnalyticsLocations: Q }, $, e));
+            null == n || n(),
+                (0, A.openUserProfileModal)(
+                    K(
+                        {
+                            customStatusPrompt: eu,
+                            sourceAnalyticsLocations: Q
+                        },
+                        $,
+                        e
+                    )
+                );
         };
     return (0, r.jsx)(m.Gt, {
         value: Q,

@@ -114,7 +114,20 @@ function V(e) {
     let ei = (0, f.p)({ location: 'UserProfilePopout' }),
         eo = i.useMemo(() => (0, _.Z)(), []),
         ea = (e) => {
-            null == Z || Z(), (0, P.openUserProfileModal)(B(U({ sourceAnalyticsLocations: z }, q, e), { appContext: K }));
+            null == Z || Z(),
+                (0, P.openUserProfileModal)(
+                    B(
+                        U(
+                            {
+                                customStatusPrompt: eo,
+                                sourceAnalyticsLocations: z
+                            },
+                            q,
+                            e
+                        ),
+                        { appContext: K }
+                    )
+                );
         },
         es = () =>
             W
