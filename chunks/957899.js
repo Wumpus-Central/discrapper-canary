@@ -1,37 +1,20 @@
-n.d(t, { Z: () => l }), n(47120);
-var r = n(147913),
-    i = n(604375),
-    o = n(268004);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-class s extends r.Z {
-    handleVoiceChannelSelect() {
-        o.M.trigger();
-    }
-    handleCallCreate() {
-        o.M.trigger();
-    }
-    handleUserSettingsModalOpen() {
-        i.X.trigger();
-    }
-    constructor(...e) {
-        super(...e),
-            a(this, 'actions', {
-                VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
-                CALL_CREATE: this.handleCallCreate,
-                USER_SETTINGS_MODAL_OPEN: this.handleUserSettingsModalOpen
-            });
-    }
-}
-let l = new s();
+var r = {
+    emojiButton: 'emojiButton__04eed',
+    emojiButtonHovered: 'emojiButtonHovered__04eed emojiButton__04eed',
+    emojiButtonNormal: 'emojiButtonNormal__04eed emojiButton__04eed',
+    spriteContainer: 'spriteContainer__04eed',
+    sprite: 'sprite__04eed',
+    spriteColored: 'spriteColored__04eed',
+    spriteGreyscale: 'spriteGreyscale__04eed',
+    spritePremiumColored: 'spritePremiumColored__04eed',
+    reducedMotion: 'reducedMotion__04eed',
+    spritePremiumPulsing: 'spritePremiumPulsing__04eed',
+    inactive: 'inactive__04eed',
+    active: 'active__04eed',
+    premiumTooltip: 'premiumTooltip__04eed',
+    premiumTooltipContainer: 'premiumTooltipContainer__04eed',
+    premiumUnlockAnimation: 'premiumUnlockAnimation__04eed',
+    shrink: 'shrink__04eed',
+    premiumTooltipText: 'premiumTooltipText__04eed'
+};
+n.r((e.exports = r));

@@ -1,8 +1,1 @@
-var r = {
-    howItWorksContainer: 'howItWorksContainer_dd30dc',
-    howItWorksCard: 'howItWorksCard_dd30dc ' + n(121973).card,
-    howItWorksImageContainer: 'howItWorksImageContainer_dd30dc',
-    howItWorksImage: 'howItWorksImage_dd30dc',
-    howItWorksDescription: 'howItWorksDescription_dd30dc'
-};
-e.exports = r;
+e.exports = JSON.parse('{"HMvECw":"All of this is managed locally and has not yet replaced the French i18n system.","JJ0wpK":"This page uses the new intl system in French!","swfLzc":"The translation for this file came from the same as the first file!"}');
