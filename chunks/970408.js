@@ -18,11 +18,6 @@ var r = {
     equalDistantBackButton: 'equalDistantBackButton_d947e6',
     compactSendGiftToUser: 'compactSendGiftToUser_d947e6',
     compactCustomGiftMessageWrapper: 'compactCustomGiftMessageWrapper_d947e6',
-    compactSelectGiftTitle: 'compactSelectGiftTitle_d947e6',
-    activeFractionalPremiumBannerContainer: 'activeFractionalPremiumBannerContainer_d947e6',
-    activeFractionalPremiumBannerBackgroundImage: 'activeFractionalPremiumBannerBackgroundImage_d947e6',
-    nitroIconContainer: 'nitroIconContainer_d947e6',
-    iconFractional: 'iconFractional_d947e6',
-    iconFractionalDark: 'iconFractionalDark_d947e6'
+    compactSelectGiftTitle: 'compactSelectGiftTitle_d947e6'
 };
 e.exports = r;
