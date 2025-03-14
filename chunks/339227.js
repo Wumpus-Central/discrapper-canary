@@ -12,8 +12,8 @@ var r = n(512722),
     _ = n(364458),
     p = n(70956),
     h = n(40786),
-    g = n(362092);
-function m(e, t, n) {
+    m = n(362092);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
@@ -175,12 +175,12 @@ let y = {
         }
     },
     O = new Set(['*', '_', '\\']),
-    S = {},
-    I = {};
+    I = {},
+    S = {};
 for (let e in d.Z.RULES) {
     if (!(e in y)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = y[e];
-    'skip' !== t.type && (S[e] = T(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (I[e] = T('text' === e ? f.ZP : d.Z.RULES[e]));
+    'skip' !== t.type && (I[e] = T(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (S[e] = T('text' === e ? f.ZP : d.Z.RULES[e]));
 }
 function T(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
@@ -225,7 +225,7 @@ let N = {
             order: s.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
             parse: (e) =>
-                null != e[2] && '' !== e[2] && g.i6(e[2])
+                null != e[2] && '' !== e[2] && m.i6(e[2])
                     ? [
                           {
                               type: 'codeBlockSyntax',
@@ -246,26 +246,25 @@ let N = {
         }
     },
     A = /(-# +)/,
-    C = (0, _.Z)([S, N]),
-    R = (0, _.Z)([I, N]),
+    C = (0, _.Z)([I, N]),
+    R = (0, _.Z)([S, N]),
     P = l._p(C),
-    D = l._p(R),
-    w = {
+    w = l._p(R),
+    D = {
         max: 1 / 0,
         maxAge: +p.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    L = new (a())(w),
-    x = new (a())(w);
+    L = new (a())(D),
+    x = new (a())(D);
 function M(e, t, n) {
     let r = [],
         i = {
             returnMentionIds: !0,
             disableAutoBlockNewlines: !0,
-            guildId: t,
-            isSlate: !0
+            guildId: t
         },
-        o = n ? D : P,
+        o = n ? w : P,
         a = n ? x : L,
         s = a.get(e);
     if (null != s) return s;
@@ -289,7 +288,7 @@ function M(e, t, n) {
 function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = g.rN(e);
+        i = m.rN(e);
     if ((i.push(e.length), 1 === i.length && n)) return [];
     let o = 0,
         a = n,
@@ -304,7 +303,7 @@ function k(e, t) {
             });
         else {
             let a = n === i[i.length - 2] ? e.substring(n + 3) : '';
-            n += 3 + (null != a.match(g.Q2) ? a : '').length;
+            n += 3 + (null != a.match(m.Q2) ? a : '').length;
             let l = e.substring(o, n);
             '' !== l &&
                 M(l, t, r).forEach((e) => {
