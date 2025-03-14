@@ -1,16 +1,58 @@
-t.d(n, { Z: () => c });
-var i = t(200651);
+t.d(n, {
+    Y: () => x,
+    Z: () => p
+});
+var r = t(200651);
 t(192379);
-var r = t(120356),
-    a = t.n(r),
-    o = t(481060),
-    s = t(355135);
-function c(e) {
-    let { onClick: n, active: t, className: r, label: c, children: l } = e;
-    return (0, i.jsx)(o.kL8, {
-        'aria-label': c,
+var i = t(120356),
+    o = t.n(i),
+    s = t(481060),
+    a = t(413335),
+    l = t(157353),
+    c = t(730621),
+    d = t(388032),
+    u = t(709435);
+function x(e) {
+    let { guildId: n, powerup: t, className: i } = e,
+        x = (0, l.Z)(n, t);
+    return (0, r.jsxs)('div', {
+        className: o()(u.labelContainer, i),
+        children: [
+            (0, r.jsxs)('div', {
+                className: u.inline,
+                children: [
+                    (0, r.jsx)(a.Z, {}),
+                    (0, r.jsx)(s.Text, {
+                        tag: 'div',
+                        variant: 'heading-md/bold',
+                        children: t.cost
+                    })
+                ]
+            }),
+            x &&
+                (0, r.jsxs)('div', {
+                    className: u.inline,
+                    children: [
+                        (0, r.jsx)(s.owK, {
+                            size: 'xs',
+                            color: s.TVs.colors.TEXT_POSITIVE
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            color: 'text-positive',
+                            variant: 'text-sm/bold',
+                            children: d.NW.string(c.Z.FFLkm5)
+                        })
+                    ]
+                })
+        ]
+    });
+}
+function p(e) {
+    let { onClick: n, active: t, className: i, label: a, children: l } = e;
+    return (0, r.jsx)(s.kL8, {
+        'aria-label': a,
         onClick: n,
-        className: a()(s.container, { [s.active]: t }, r),
+        className: o()(u.container, { [u.active]: t }, i),
         children: l
     });
 }

@@ -20,15 +20,12 @@ function h(e) {
         [n, o] = (0, r.useState)({});
     return (
         (0, r.useEffect)(() => {
-            if (null == e) return;
-            let n = (t === c.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + d;
-            o({
-                '--background-modifier-selected': n,
-                '--button-secondary-background-hover': n,
-                '--bg-mod-faint': n,
-                '--bg-mod-normal': n,
-                '--background-mod-normal': n
-            });
+            null != e &&
+                o({
+                    '--custom-nameplate': (t === c.BR.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + d,
+                    '--custom-nameplate-neutral': t !== c.BR.LIGHT ? 'rgba(0, 0, 0, 0.22)' : 'rgba(255, 255, 255  , 0.22)',
+                    '--custom-nameplate-neutral-hovered': t !== c.BR.LIGHT ? 'rgba(0, 0, 0, 0.33)' : 'rgba(255, 255, 255  , 0.33)'
+                });
         }, [e, t]),
         n
     );
