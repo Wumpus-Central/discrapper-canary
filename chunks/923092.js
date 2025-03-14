@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     guildPopout: 'guildPopout__51eb2',
     iconMask: 'iconMask__51eb2',
     unavailableIcon: 'unavailableIcon__51eb2',
@@ -32,3 +32,4 @@ e.exports = {
     viewButtonPlaceholder: 'viewButtonPlaceholder__51eb2',
     unavailableHeader: 'unavailableHeader__51eb2'
 };
+e.exports = r;

@@ -1,142 +1,134 @@
-n.d(t, {
-    Cc: () => g,
-    E8: () => E,
-    L_: () => v
+l.d(n, {
+    Cc: () => v,
+    E8: () => f,
+    L_: () => h
 });
-var r = n(192379),
-    i = n(232713),
-    o = n(65400),
-    a = n(731965),
-    s = n(881052),
-    l = n(931240);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+var t = l(192379),
+    r = l(232713),
+    i = l(65400),
+    a = l(731965),
+    o = l(881052),
+    s = l(931240);
+function c(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var l = null != arguments[n] ? arguments[n] : {},
+            t = Object.keys(l);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (t = t.concat(
+                Object.getOwnPropertySymbols(l).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(l, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                c(e, t, n[t]);
+            t.forEach(function (n) {
+                var t;
+                (t = l[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
+                              value: t,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[n] = t);
             });
     }
     return e;
 }
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
+function u(e, n) {
     return (
-        (t = null != t ? t : {}),
+        (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+            : (function (e, n) {
+                  var l = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var t = Object.getOwnPropertySymbols(e);
+                      l.push.apply(l, t);
+                  }
+                  return l;
+              })(Object(n)).forEach(function (l) {
+                  Object.defineProperty(e, l, Object.getOwnPropertyDescriptor(n, l));
               }),
         e
     );
 }
-let p = {},
-    _ = 60000;
-function h(e) {
-    var t;
-    return Date.now() - (null !== (t = p[e]) && void 0 !== t ? t : 0) > _;
-}
-let m = (0, o.F)((e, t) => ({
-    clans: {},
-    isFetchingGuild: (e) => null != t().fetchPromises[e],
-    error: null,
-    fetchPromises: {},
-    fetchClanInfo: async (n) => {
-        let r = t().fetchPromises[n];
-        if (!h(n)) {
-            var i;
-            return null != r ? await r : Promise.resolve(null !== (i = t().clans[n]) && void 0 !== i ? i : null);
-        }
-        p[n] = Date.now();
-        try {
-            if (null != r) return await r;
-            {
-                let r = (async () => {
-                    let r = await (0, l.WJ)(n),
-                        i = t().clans,
-                        o = t().fetchPromises;
-                    return (
-                        null == o[n] ||
-                            (delete o[n],
-                            (0, a.j)(() => {
-                                e({
-                                    clans: f(u({}, i), { [n]: r }),
-                                    error: null,
-                                    fetchPromises: o
-                                });
-                            })),
-                        r
-                    );
-                })();
-                return (
-                    (0, a.j)(() => {
-                        e({ fetchPromises: f(u({}, t().fetchPromises), { [n]: r }) });
-                    }),
-                    await r
-                );
+let d = {},
+    m = (0, i.F)((e, n) => ({
+        clans: {},
+        isFetchingGuild: (e) => null != n().fetchPromises[e],
+        error: null,
+        fetchPromises: {},
+        fetchClanInfo: async (l) => {
+            let t = n().fetchPromises[l];
+            if (
+                !(function (e) {
+                    var n;
+                    let l = Date.now();
+                    return l - (null !== (n = d[e]) && void 0 !== n ? n : 0) > 60000;
+                })(l)
+            ) {
+                var r;
+                return null != t ? await t : Promise.resolve(null !== (r = n().clans[l]) && void 0 !== r ? r : null);
             }
-        } catch (o) {
-            let r = new s.Hx(o),
-                i = t().fetchPromises;
-            null != i[n] && delete i[n],
-                (0, a.j)(() => {
-                    e({
-                        error: r,
-                        fetchPromises: i
+            d[l] = Date.now();
+            try {
+                if (null != t) return await t;
+                {
+                    let t = (async () => {
+                        let t = await (0, s.WJ)(l),
+                            r = n().clans,
+                            i = n().fetchPromises;
+                        return (
+                            null == i[l] ||
+                                (delete i[l],
+                                (0, a.j)(() => {
+                                    e({
+                                        clans: u(c({}, r), { [l]: t }),
+                                        error: null,
+                                        fetchPromises: i
+                                    });
+                                })),
+                            t
+                        );
+                    })();
+                    return (
+                        (0, a.j)(() => {
+                            e({ fetchPromises: u(c({}, n().fetchPromises), { [l]: t }) });
+                        }),
+                        await t
+                    );
+                }
+            } catch (i) {
+                let t = new o.Hx(i),
+                    r = n().fetchPromises;
+                null != r[l] && delete r[l],
+                    (0, a.j)(() => {
+                        e({
+                            error: t,
+                            fetchPromises: r
+                        });
                     });
-                });
+            }
+            return null;
         }
-        return null;
-    }
-}));
-function g(e) {
-    return m((t) => (null != e ? t.clans[e] : null));
-}
-function E(e) {
-    return m((t) => null != e && t.isFetchingGuild(e));
-}
+    }));
 function v(e) {
-    let t = m((e) => e.fetchClanInfo, i.X);
+    return m((n) => (null != e ? n.clans[e] : null));
+}
+function f(e) {
+    return m((n) => null != e && n.isFetchingGuild(e));
+}
+function h(e) {
+    let n = m((e) => e.fetchClanInfo, r.X);
     return [
-        E(e),
-        r.useCallback(async () => {
+        f(e),
+        t.useCallback(async () => {
             if (null == e) return null;
             try {
-                return await t(e);
+                return await n(e);
             } catch (e) {
                 return null;
             }
-        }, [e, t])
+        }, [e, n])
     ];
 }

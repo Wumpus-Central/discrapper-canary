@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     header: 'header__99f53',
     members: 'members__99f53',
     memberCount: 'memberCount__99f53',
@@ -9,3 +9,4 @@ e.exports = {
     guildName: 'guildName__99f53',
     guildBadge: 'guildBadge__99f53'
 };
+e.exports = r;

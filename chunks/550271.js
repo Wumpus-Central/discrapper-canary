@@ -1,247 +1,241 @@
-n.d(t, { A: () => P });
-var r = n(200651);
-n(192379);
-var i = n(496532),
-    o = n(514904),
-    a = n(72977),
-    s = n(746479),
-    l = n(419643),
-    c = n(561015),
-    u = n(775259),
-    d = n(283107),
-    f = n(907120),
-    p = n(533122),
-    _ = n(874706),
-    h = n(137411),
-    m = n(775101),
-    g = n(933632),
-    E = n(158188),
-    v = n(66334),
-    b = n(215635),
-    y = n(718572),
-    O = n(496223),
-    S = n(846262),
-    I = n(926372),
-    T = n(116175);
-function N(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function A(e) {
+r.d(t, { A: () => y });
+var n = r(200651);
+r(192379);
+var l = r(496532),
+    i = r(514904),
+    a = r(72977),
+    o = r(746479),
+    s = r(419643),
+    h = r(561015),
+    c = r(775259),
+    v = r(283107),
+    u = r(907120),
+    d = r(533122),
+    E = r(874706),
+    f = r(137411),
+    p = r(775101),
+    M = r(933632),
+    _ = r(158188),
+    O = r(66334),
+    g = r(215635),
+    b = r(718572),
+    A = r(496223),
+    T = r(846262),
+    Z = r(926372),
+    N = r(116175);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                N(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function C(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = R(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let P = (e) => {
-    var { badge: t, primaryTintColor: n, secondaryTintColor: N } = e,
-        R = C(e, ['badge', 'primaryTintColor', 'secondaryTintColor']);
+let y = (e) => {
+    var { badge: t, primaryTintColor: r, secondaryTintColor: y } = e,
+        j = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                l = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++) (r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+            }
+            return l;
+        })(e, ['badge', 'primaryTintColor', 'secondaryTintColor']);
     switch (t) {
-        case T.ZD.SWORD:
-            return (0, r.jsx)(
-                y.o,
-                A(
+        case N.ZD.SWORD:
+            return (0, n.jsx)(
+                b.o,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.WATER_DROP:
-            return (0, r.jsx)(S.l, A({ primaryTintColor: n }, R));
-        case T.ZD.SKULL:
-            return (0, r.jsx)(m.F, A({ primaryTintColor: n }, R));
-        case T.ZD.TOADSTOOL:
-            return (0, r.jsx)(
-                O.j,
-                A(
+        case N.ZD.WATER_DROP:
+            return (0, n.jsx)(T.l, H({ primaryTintColor: r }, j));
+        case N.ZD.SKULL:
+            return (0, n.jsx)(p.F, H({ primaryTintColor: r }, j));
+        case N.ZD.TOADSTOOL:
+            return (0, n.jsx)(
+                A.j,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.MOON:
-            return (0, r.jsx)(_.V, A({ primaryTintColor: n }, R));
-        case T.ZD.LIGHTNING:
-            return (0, r.jsx)(p.$, A({ primaryTintColor: n }, R));
-        case T.ZD.LEAF:
-            return (0, r.jsx)(f.N, A({ primaryTintColor: n }, R));
-        case T.ZD.HEART:
-            return (0, r.jsx)(u.K, A({ primaryTintColor: n }, R));
-        case T.ZD.FIRE:
-            return (0, r.jsx)(a.e, A({ primaryTintColor: n }, R));
-        case T.ZD.COMPASS:
-            return (0, r.jsx)(
-                i._,
-                A(
+        case N.ZD.MOON:
+            return (0, n.jsx)(E.V, H({ primaryTintColor: r }, j));
+        case N.ZD.LIGHTNING:
+            return (0, n.jsx)(d.$, H({ primaryTintColor: r }, j));
+        case N.ZD.LEAF:
+            return (0, n.jsx)(u.N, H({ primaryTintColor: r }, j));
+        case N.ZD.HEART:
+            return (0, n.jsx)(c.K, H({ primaryTintColor: r }, j));
+        case N.ZD.FIRE:
+            return (0, n.jsx)(a.e, H({ primaryTintColor: r }, j));
+        case N.ZD.COMPASS:
+            return (0, n.jsx)(
+                l._,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.CROSSHAIRS:
-            return (0, r.jsx)(
-                o.U,
-                A(
+        case N.ZD.CROSSHAIRS:
+            return (0, n.jsx)(
+                i.U,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.FLOWER:
-            return (0, r.jsx)(
-                s.P,
-                A(
+        case N.ZD.FLOWER:
+            return (0, n.jsx)(
+                o.P,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.FORCE:
-            return (0, r.jsx)(
-                l.S,
-                A(
+        case N.ZD.FORCE:
+            return (0, n.jsx)(
+                s.S,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.GEM:
-            return (0, r.jsx)(
-                c.j,
-                A(
+        case N.ZD.GEM:
+            return (0, n.jsx)(
+                h.j,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.LAVA:
-            return (0, r.jsx)(
-                d.x,
-                A(
+        case N.ZD.LAVA:
+            return (0, n.jsx)(
+                v.x,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.PSYCHIC:
-            return (0, r.jsx)(
-                h.y,
-                A(
+        case N.ZD.PSYCHIC:
+            return (0, n.jsx)(
+                f.y,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.SMOKE:
-            return (0, r.jsx)(
-                g.l,
-                A(
+        case N.ZD.SMOKE:
+            return (0, n.jsx)(
+                M.l,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.SNOW:
-            return (0, r.jsx)(
-                E.W,
-                A(
+        case N.ZD.SNOW:
+            return (0, n.jsx)(
+                _.W,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.SOUND:
-            return (0, r.jsx)(
-                v.J,
-                A(
+        case N.ZD.SOUND:
+            return (0, n.jsx)(
+                O.J,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.SUN:
-            return (0, r.jsx)(
-                b.O,
-                A(
+        case N.ZD.SUN:
+            return (0, n.jsx)(
+                g.O,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
-        case T.ZD.WIND:
-            return (0, r.jsx)(
-                I.z,
-                A(
+        case N.ZD.WIND:
+            return (0, n.jsx)(
+                Z.z,
+                H(
                     {
-                        primaryTintColor: n,
-                        secondaryTintColor: N
+                        primaryTintColor: r,
+                        secondaryTintColor: y
                     },
-                    R
+                    j
                 )
             );
     }

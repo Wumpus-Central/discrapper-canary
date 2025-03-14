@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     container: 'container__86ab2',
     banner: 'banner__86ab2',
     avatarContainer: 'avatarContainer__86ab2',
@@ -11,3 +11,4 @@ e.exports = {
     header: 'header__86ab2',
     buttonContainer: 'buttonContainer__86ab2'
 };
+e.exports = r;
