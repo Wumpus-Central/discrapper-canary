@@ -1,10 +1,10 @@
-t.d(e, { default: () => L });
+t.d(e, { default: () => J });
 var i = t(200651);
 t(192379);
-var r = t(399606),
-    l = t(481060),
-    s = t(239091),
-    d = t(883385),
+var l = t(399606),
+    r = t(481060),
+    d = t(239091),
+    s = t(883385),
     a = t(108843),
     u = t(911969),
     o = t(947440),
@@ -12,8 +12,8 @@ var r = t(399606),
     f = t(441061),
     h = t(167675),
     g = t(737013),
-    N = t(607783),
-    Z = t(702321),
+    Z = t(607783),
+    N = t(702321),
     S = t(461535),
     x = t(776568),
     j = t(658138),
@@ -24,158 +24,162 @@ var r = t(399606),
     E = t(122074),
     k = t(819403),
     A = t(163612),
+    C = t(592125),
     U = t(944486),
-    C = t(777658),
-    M = t(858488),
-    T = t(44652),
-    m = t(185457),
-    W = t(570870),
-    P = t(389052),
-    R = t(24311),
-    y = t(794973),
-    b = t(165855),
-    D = t(332576),
-    Q = t(158508),
-    O = t(710631),
-    V = t(47091),
-    w = t(558924),
-    F = t(991307),
-    K = t(37258),
-    G = t(700994),
-    Y = t(332031),
-    q = t(981631),
-    B = t(388032);
-let L = (0, a.Z)(
-    (0, d.Z)(
+    M = t(777658),
+    T = t(858488),
+    m = t(44652),
+    W = t(185457),
+    P = t(570870),
+    R = t(389052),
+    y = t(24311),
+    b = t(794973),
+    D = t(165855),
+    Q = t(332576),
+    O = t(158508),
+    V = t(710631),
+    w = t(47091),
+    F = t(558924),
+    K = t(991307),
+    G = t(37258),
+    Y = t(700994),
+    q = t(332031),
+    B = t(981631),
+    L = t(388032);
+let J = (0, a.Z)(
+    (0, s.Z)(
         function (n) {
-            let { user: e, channel: t, channelSelected: d = !1, showMute: a = !0, showMediaItems: c = !1, showChannelCallItems: L = !1, showModalItems: J = !0, targetIsUser: X = !1, context: z, onSelect: H, onHeightUpdate: $, onInteraction: nn } = n,
-                ne = (0, K.Z)({
+            let { user: e, channel: t, channelSelected: s = !1, showMute: a = !0, showMediaItems: c = !1, showChannelCallItems: J = !1, showModalItems: X = !0, targetIsUser: z = !1, context: H, onSelect: $, onHeightUpdate: nn, onInteraction: ne } = n,
+                nt = (0, G.Z)({
                     userId: e.id,
                     guildId: null
                 }),
-                nt = (0, R.Z)({
+                ni = (0, y.Z)({
                     user: e,
-                    context: z
+                    context: H
                 }),
-                ni = (0, m.Z)({
+                nl = (0, W.Z)({
                     user: e,
                     channelId: t.id,
-                    context: z
+                    context: H
                 }),
-                nr = (0, M.Z)({ user: e }),
-                nl = (0, Y.Z)(e.id),
-                ns = (0, y.Z)(t.id, d),
-                nd = (0, O.Z)({ user: e }),
-                na = (0, o.Z)(null, e),
-                nu = (0, G.Z)(e.id),
-                { enabled: no } = A.Z.useExperiment({
-                    guildId: null == t ? void 0 : t.guild_id,
+                nr = (0, T.Z)({ user: e }),
+                nd = (0, q.Z)(e.id),
+                ns = (0, b.Z)(t.id, s),
+                na = (0, V.Z)({ user: e }),
+                nu = (0, o.Z)(null, e),
+                no = (0, Y.Z)(e.id),
+                nc = (0, l.e7)([U.Z, C.Z], () => {
+                    let n = U.Z.getVoiceChannelId();
+                    return C.Z.getChannel(n);
+                }),
+                { enabled: nf } = A.Z.useExperiment({
+                    guildId: null == nc ? void 0 : nc.guild_id,
                     location: 'DMUserContextMenu'
                 }),
-                nc = (0, r.e7)([U.Z], () => U.Z.getVoiceChannelId()),
-                nf = no ? nc : t.id,
-                nh = (0, w.Z)(e, nf),
-                ng = (0, C.Z)({ user: e }),
-                nN = (0, T.Z)({ user: e }),
-                nZ = (0, V.Z)({ user: e }),
-                nS = (0, F.Z)(e.id),
-                nx = (0, N.B)({
+                nh = nf ? (null == nc ? void 0 : nc.id) : t.id,
+                ng = (0, F.Z)(e, nh),
+                nZ = (0, M.Z)({ user: e }),
+                nN = (0, m.Z)({ user: e }),
+                nS = (0, w.Z)({ user: e }),
+                nx = (0, K.Z)(e.id),
+                nj = (0, Z.B)({
                     userId: e.id,
                     channelId: t.id,
                     guildId: t.getGuildId(),
                     location: 'DMUserContextMenu'
                 }),
-                nj = (0, D.Z)(e.id, t.id),
-                nI = (0, P.Z)({
+                nI = (0, Q.Z)(e.id, t.id),
+                n_ = (0, R.Z)({
                     user: e,
                     location: 'DMUserContextMenu'
                 }),
-                n_ = (0, Q.Z)({
+                nv = (0, O.Z)({
                     user: e,
                     location: 'DMUserContextMenu'
                 }),
-                nv = (0, x.ZP)(t),
-                np = (0, E.Uf)(q.aIL, t.id, 'trailing'),
-                nE = (0, I.Z)({
-                    id: e.id,
-                    label: B.NW.string(B.t['/AXYnJ'])
-                }),
+                np = (0, x.ZP)(t),
+                nE = (0, E.Uf)(B.aIL, t.id, 'trailing'),
                 nk = (0, I.Z)({
-                    id: t.id,
-                    label: B.NW.string(B.t.gFHI3t)
+                    id: e.id,
+                    label: L.NW.string(L.t['/AXYnJ'])
                 }),
-                nA = (0, S.Z)(t),
+                nA = (0, I.Z)({
+                    id: t.id,
+                    label: L.NW.string(L.t.gFHI3t)
+                }),
+                nC = (0, S.Z)(t),
                 nU = (0, h.Z)(e.id),
-                nC = (0, f.Z)(t.id),
-                nM = (0, k.Z)(e),
-                nT = (0, g.Z)(e.id),
-                nm = (0, W.Z)({
+                nM = (0, f.Z)(t.id),
+                nT = (0, k.Z)(e),
+                nm = (0, g.Z)(e.id),
+                nW = (0, P.Z)({
                     commandType: u.yU.USER,
                     commandTargetId: e.id,
                     channel: t,
                     guildId: void 0,
-                    onHeightUpdate: $
+                    onHeightUpdate: nn
                 }),
-                nW = (0, _.l)(t),
-                nP = (0, _.P)(t),
-                nR = (0, v.Z)(t),
-                ny = (0, p.Z)(t),
-                nb = (0, b.Z)({ channel: t }),
-                nD = (0, j.D)(t),
-                nQ = t.isManaged(),
-                nO = e.isNonUserBot();
-            return (0, i.jsxs)(l.v2r, {
+                nP = (0, _.l)(t),
+                nR = (0, _.P)(t),
+                ny = (0, v.Z)(t),
+                nb = (0, p.Z)(t),
+                nD = (0, D.Z)({ channel: t }),
+                nQ = (0, j.D)(t),
+                nO = t.isManaged(),
+                nV = e.isNonUserBot();
+            return (0, i.jsxs)(r.v2r, {
                 navId: 'user-context',
-                onClose: s.Zy,
-                'aria-label': B.NW.string(B.t.liqwPD),
-                onSelect: H,
-                onInteraction: nn,
+                onClose: d.Zy,
+                'aria-label': L.NW.string(L.t.liqwPD),
+                onSelect: $,
+                onInteraction: ne,
                 children: [
-                    (0, i.jsx)(l.kSQ, { children: !(nO && !(0, Z.Z)(t.id)) && nA }),
-                    (0, i.jsxs)(l.kSQ, {
-                        children: [nW, nR, ny, nD]
+                    (0, i.jsx)(r.kSQ, { children: !(nV && !(0, N.Z)(t.id)) && nC }),
+                    (0, i.jsxs)(r.kSQ, {
+                        children: [nP, ny, nb, nQ]
                     }),
-                    (0, i.jsx)(l.kSQ, { children: !nO && nM }),
-                    (0, i.jsxs)(l.kSQ, {
+                    (0, i.jsx)(r.kSQ, { children: !nV && nT }),
+                    (0, i.jsxs)(r.kSQ, {
                         children: [
-                            !nO &&
+                            !nV &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: [J && ne, nt, !nQ && nh, J && ni, J && nr, nl]
+                                    children: [X && nt, ni, !nO && ng, X && nl, X && nr, nd]
                                 }),
-                            (0, Z.Z)(t.id) && ne,
+                            (0, N.Z)(t.id) && nt,
                             ns
                         ]
                     }),
-                    !nO &&
+                    !nV &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(l.kSQ, { children: c && nu }),
-                                (0, i.jsx)(l.kSQ, { children: J && na }),
-                                (0, i.jsxs)(l.kSQ, {
-                                    children: [c && nS, J && nx, c && nj, nm, J && nd, ng, nN, nZ, J && n_, J && nI, c && nT]
+                                (0, i.jsx)(r.kSQ, { children: c && no }),
+                                (0, i.jsx)(r.kSQ, { children: X && nu }),
+                                (0, i.jsxs)(r.kSQ, {
+                                    children: [c && nx, X && nj, c && nI, nW, X && na, nZ, nN, nS, X && nv, X && n_, c && nm]
                                 }),
-                                (0, i.jsxs)(l.kSQ, {
-                                    children: [a && nv, np]
+                                (0, i.jsxs)(r.kSQ, {
+                                    children: [a && np, nE]
                                 }),
-                                L &&
-                                    (0, i.jsxs)(l.kSQ, {
-                                        children: [nC, nU]
+                                J &&
+                                    (0, i.jsxs)(r.kSQ, {
+                                        children: [nM, nU]
                                     })
                             ]
                         }),
-                    (0, Z.Z)(t.id) &&
-                        (0, i.jsxs)(l.kSQ, {
-                            children: [a && nv, np]
+                    (0, N.Z)(t.id) &&
+                        (0, i.jsxs)(r.kSQ, {
+                            children: [a && np, nE]
                         }),
-                    (0, i.jsx)(l.kSQ, { children: nP }),
-                    (0, i.jsx)(l.kSQ, { children: nb }),
-                    (0, i.jsxs)(l.kSQ, {
-                        children: [nE, !X && nk]
+                    (0, i.jsx)(r.kSQ, { children: nR }),
+                    (0, i.jsx)(r.kSQ, { children: nD }),
+                    (0, i.jsxs)(r.kSQ, {
+                        children: [nk, !z && nA]
                     })
                 ]
             });
         },
-        { object: q.qAy.CONTEXT_MENU }
+        { object: B.qAy.CONTEXT_MENU }
     ),
     [c.Z.CONTEXT_MENU, c.Z.DM_USER_MENU]
 );

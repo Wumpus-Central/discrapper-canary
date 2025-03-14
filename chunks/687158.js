@@ -15,8 +15,9 @@ function l(e, t) {
 n(484459);
 let c = (0, o.oH)((e, t) => new a.Z(e, t));
 function u(e, t) {
-    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.default, s.Z],
-        o = n.getUser(e),
+    let [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.default, s.Z];
+    if (null === e) return null;
+    let o = n.getUser(e),
         a = r.getUserProfile(e),
         l = r.getGuildMemberProfile(e, t);
     return null == o || null == a ? null : c(a, l);

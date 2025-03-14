@@ -14146,22 +14146,6 @@ div.cardContainer__88e24 {
     margin-right: 10%
 }
 
-.balanceCounterMargin__98f64 {
-    margin-left: 4px
-}
-
-.balanceCounterText__98f64 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: var(--header-primary);
-    text-align: right
-}
-
-.full-motion .balanceCounterText__98f64 {
-    transition: all .4s ease-out, opacity .4s ease-in
-}
-
 .lottieIconColors__5eb9b :not(defs *)[fill][fill-opacity] {
     fill: var(--__lottieIconColor, var(--interactive-normal))
 }
@@ -14269,6 +14253,22 @@ html:not(.visual-refresh).theme-dark .container_a3e8db.selected_a3e8db {
 .notificationBadge_a3e8db {
     position: absolute;
     right: -4.5px
+}
+
+.balanceCounterMargin__98f64 {
+    margin-left: 4px
+}
+
+.balanceCounterText__98f64 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: var(--header-primary);
+    text-align: right
+}
+
+.full-motion .balanceCounterText__98f64 {
+    transition: all .4s ease-out, opacity .4s ease-in
 }
 
 .wrapper__87c70 {
@@ -34013,6 +34013,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     object-fit: contain
 }
 
+.orbProfileBadgeAsset__320c6 {
+    height: 152px
+}
+
 .fadeInAvatarImg_d71c71 {
     animation: fadeIn_d71c71 1.5s
 }
@@ -34741,8 +34745,11 @@ html:not(.visual-refresh) .root_e5f3a9 {
     margin-bottom: 4px
 }
 
-.orbBadgeImage_f240e3 {
-    width: 66px;
+.orbBadgeAsset_f240e3 {
+    width: 64px
+}
+
+.orbHeaderWithSpacing_f240e3 {
     margin-bottom: 12px
 }
 

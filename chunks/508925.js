@@ -1,21 +1,28 @@
-r.d(t, { b: () => s });
-var n = r(200651),
-    l = r(120356),
-    i = r.n(l),
-    a = r(755419),
-    o = r(151108);
-let s = (e) => {
-    let { product: t, className: r } = e,
-        l = t.skuId,
-        s = a.K[l];
-    return null != s
-        ? (0, n.jsx)('div', {
-              className: i()(o.externalProductWrapper, r),
-              children: (0, n.jsx)('img', {
-                  src: s.asset,
-                  alt: t.name,
-                  height: 152
-              })
-          })
-        : null;
+n.d(t, { b: () => c });
+var r = n(200651),
+    i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(755419),
+    l = n(992379);
+let c = (e) => {
+    let { product: t, className: n } = e,
+        i = t.skuId,
+        c = s.KO[i];
+    if (null != c) {
+        let { size: e } = a.ny6[a.EFr.SIZE_152];
+        return (0, r.jsxs)('div', {
+            className: o()(l.externalProductWrapper, n),
+            children: [
+                void 0 !== c.asset &&
+                    (0, r.jsx)('img', {
+                        src: c.asset,
+                        alt: t.name,
+                        height: e
+                    }),
+                void 0 !== c.renderAsset && c.renderAsset()
+            ]
+        });
+    }
+    return null;
 };

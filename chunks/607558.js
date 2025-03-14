@@ -4,7 +4,8 @@ var r = {
     tooltipWordmarkContainer: 'tooltipWordmarkContainer_f240e3',
     tooltipWordmark: 'tooltipWordmark_f240e3',
     orbBadge: 'orbBadge_f240e3',
-    orbBadgeImage: 'orbBadgeImage_f240e3',
+    orbBadgeAsset: 'orbBadgeAsset_f240e3',
+    orbHeaderWithSpacing: 'orbHeaderWithSpacing_f240e3',
     orbLink: 'orbLink_f240e3'
 };
 e.exports = r;
