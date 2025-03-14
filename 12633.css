@@ -34229,6 +34229,28 @@ html:not(.visual-refresh) .root_e5f3a9 {
     transition: opacity .5s
 }
 
+@keyframes placeholderPulse_fdeafc {
+    0% {
+        opacity: .6
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: .6
+    }
+}
+
+.placeholderUsername_fdeafc {
+    border-radius: 8px;
+    height: 14px;
+    width: 100px;
+    background-color: var(--background-secondary);
+    animation: placeholderPulse_fdeafc 2s ease-in-out infinite
+}
+
 .badgeDark_dd79c2 {
     background-color: var(--white-500);
     color: var(--black-500)
@@ -40815,6 +40837,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 
 :where(.visual-refresh) .colorDefault_c1e9c4.focused_c1e9c4:not(.checkboxContainer_c1e9c4) path {
     fill: var(--interactive-active)
+}
+
+:where(.visual-refresh) .colorDefault_c1e9c4.focused_c1e9c4 .subtext_c1e9c4 {
+    color: var(--text-secondary)
 }
 
 :where(.visual-refresh) .colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4) {
