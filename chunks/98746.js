@@ -1,173 +1,183 @@
-t.d(s, { default: () => g }), t(47120), t(566702);
-var l = t(200651),
-    n = t(192379),
-    a = t(481060),
-    r = t(749210),
-    o = t(70097),
-    i = t(910693),
-    c = t(70956),
-    u = t(5192),
-    d = t(981631),
-    x = t(388032),
-    m = t(495566);
-function p() {
+n.d(t, { default: () => g }), n(47120), n(566702);
+var s = n(200651),
+    l = n(192379),
+    a = n(481060),
+    r = n(749210),
+    o = n(70097),
+    i = n(931142),
+    c = n(910693),
+    u = n(70956),
+    d = n(5192),
+    x = n(981631),
+    m = n(388032),
+    b = n(466771);
+function h() {
     return [
         {
             value: 0,
-            label: x.NW.string(x.t['4obaMT'])
+            label: m.NW.string(m.t['4obaMT'])
         },
         {
-            value: +c.Z.Seconds.HOUR,
-            label: x.NW.string(x.t.RKpitb)
+            value: +u.Z.Seconds.HOUR,
+            label: m.NW.string(m.t.RKpitb)
         },
         {
-            value: 6 * c.Z.Seconds.HOUR,
-            label: x.NW.string(x.t['8WfJZ2'])
+            value: 6 * u.Z.Seconds.HOUR,
+            label: m.NW.string(m.t['8WfJZ2'])
         },
         {
-            value: 12 * c.Z.Seconds.HOUR,
-            label: x.NW.string(x.t.p1up7u)
+            value: 12 * u.Z.Seconds.HOUR,
+            label: m.NW.string(m.t.p1up7u)
         },
         {
-            value: +c.Z.Seconds.DAY,
-            label: x.NW.string(x.t.XuVkkJ)
+            value: +u.Z.Seconds.DAY,
+            label: m.NW.string(m.t.XuVkkJ)
         },
         {
-            value: 3 * c.Z.Seconds.DAY,
-            label: x.NW.string(x.t.gMcDS0)
+            value: 3 * u.Z.Seconds.DAY,
+            label: m.NW.string(m.t.gMcDS0)
         },
         {
-            value: 7 * c.Z.Seconds.DAY,
-            label: x.NW.string(x.t.FA7IUl)
+            value: 7 * u.Z.Seconds.DAY,
+            label: m.NW.string(m.t.FA7IUl)
         }
     ];
 }
-let b = p()[1].value;
+let k = h()[1].value;
 function g(e) {
-    let { guildId: s, user: c, location: g, userIds: k, onBanMultiple: N, transitionState: h, onClose: j, canBulkBan: C = !1 } = e,
-        [W, f] = n.useState(b),
-        [z, S] = n.useState(''),
-        [v, _] = n.useState(0),
-        [L, R] = n.useState(!1),
-        Z = (0, i.sE)(s, {
+    let { guildId: t, user: u, location: g, userIds: p, onBanMultiple: N, transitionState: f, onClose: j, canBulkBan: C = !1 } = e,
+        [W, v] = l.useState(k),
+        [S, z] = l.useState(''),
+        [_, I] = l.useState(0),
+        [R, L] = l.useState(!1),
+        Z = (0, c.sE)(t, {
             location: g,
-            targetUserId: null == c ? void 0 : c.id,
-            targets: k
+            targetUserId: null == u ? void 0 : u.id,
+            targets: p
         }),
-        w = n.useCallback(() => {
+        w = i.I.useExperiment({ location: 'ban_confirm' }).enabled,
+        M = l.useCallback(() => {
             if (null != N) {
-                if (!(null != k && (null == k ? void 0 : k.size) > 0 && C) || L) return;
-                if ('' === z.trim() && !L) {
-                    R(!0);
+                if (!(null != p && (null == p ? void 0 : p.size) > 0 && C) || R) return;
+                if ('' === S.trim() && !R) {
+                    L(!0);
                     return;
                 }
-                N(s, [...k], W, z);
+                N(t, [...p], W, S);
             } else {
-                if (null == c) return;
-                r.Z.banUser(s, null == c ? void 0 : c.id, W, z);
+                if (null == u) return;
+                r.Z.banUser(t, null == u ? void 0 : u.id, W, S);
             }
-            Z(i.jQ.BAN), j();
-        }, [N, Z, j, k, C, L, z, s, W, c]),
-        I = n.useCallback((e) => {
-            f(e);
+            Z(c.jQ.BAN), j();
+        }, [N, Z, j, p, C, R, S, t, W, u]),
+        y = l.useCallback((e) => {
+            v(e);
         }, []),
-        y = n.useCallback((e) => {
-            let { value: s } = e;
-            S(s), R(!1);
+        Y = l.useCallback((e) => {
+            let { value: t } = e;
+            z(t), L(!1);
         }, []),
-        M = n.useCallback(
+        A = l.useCallback(
             (e) => {
-                S(e), L && R(!1);
+                z(e), R && L(!1);
             },
-            [L]
+            [R]
         ),
-        Y = n.useCallback(() => {
-            S(''), _(1);
+        E = l.useCallback(() => {
+            z(''), I(1);
         }, []),
-        A = n.useCallback(() => {
-            _(0);
+        P = l.useCallback(() => {
+            I(0);
         }, []),
-        E = [
+        T = [
             {
-                name: x.NW.string(x.t.tamLhY),
-                value: x.NW.string(x.t.tamLhY)
+                name: m.NW.string(m.t.tamLhY),
+                value: m.NW.string(m.t.tamLhY)
             },
             {
-                name: x.NW.string(x.t.UmxjMj),
-                value: x.NW.string(x.t.UmxjMj)
+                name: m.NW.string(m.t.UmxjMj),
+                value: m.NW.string(m.t.UmxjMj)
             },
             {
-                name: x.NW.string(x.t.EXY1d3),
-                value: x.NW.string(x.t.EXY1d3)
+                name: m.NW.string(m.t.EXY1d3),
+                value: m.NW.string(m.t.EXY1d3)
             }
         ],
-        O = null != N && null != k ? x.NW.formatToPlainString(x.t.Ka68TE, { count: null == k ? void 0 : k.size }) : null == c ? '' : x.NW.formatToPlainString(x.t.Qd6w7e, { username: '@'.concat(u.ZP.getName(s, null, c)) });
-    return (0, l.jsxs)(a.Y0X, {
-        transitionState: h,
+        B = (() => {
+            if (null != N && null != p) return w ? m.NW.formatToPlainString(m.t.HVJexc, { count: null == p ? void 0 : p.size }) : m.NW.formatToPlainString(m.t.Ka68TE, { count: null == p ? void 0 : p.size });
+            if (null == u) return '';
+            let e = d.ZP.getName(t, null, u);
+            return w ? m.NW.formatToPlainString(m.t.jeKpoq, { username: '@'.concat(e) }) : m.NW.formatToPlainString(m.t.Qd6w7e, { username: '@'.concat(e) });
+        })();
+    return (0, s.jsxs)(a.Y0X, {
+        transitionState: f,
         children: [
-            (0, l.jsx)(a.xBx, {
+            (0, s.jsx)(a.xBx, {
                 separator: !1,
-                children: (0, l.jsx)(a.X6q, {
-                    variant: 'heading-md/semibold',
-                    children: O
-                })
+                children: w
+                    ? (0, s.jsx)(a.X6q, {
+                          variant: 'heading-xl/semibold',
+                          children: B
+                      })
+                    : (0, s.jsx)(a.X6q, {
+                          variant: 'heading-md/semibold',
+                          children: B
+                      })
             }),
-            (0, l.jsxs)(a.hzk, {
-                className: m.modalContent,
+            (0, s.jsxs)(a.hzk, {
+                className: b.modalContent,
                 children: [
-                    (0, l.jsxs)(o.Z, {
+                    (0, s.jsxs)(o.Z, {
                         autoPlay: !0,
                         loop: !0,
-                        className: m.spacing,
                         width: 400,
                         children: [
-                            (0, l.jsx)('source', {
-                                src: t(942314),
+                            (0, s.jsx)('source', {
+                                src: n(942314),
                                 type: 'video/webm'
                             }),
-                            (0, l.jsx)('source', {
-                                src: t(888322),
+                            (0, s.jsx)('source', {
+                                src: n(888322),
                                 type: 'video/mp4'
                             }),
-                            (0, l.jsx)('img', {
+                            (0, s.jsx)('img', {
                                 alt: '',
-                                src: t(860724)
+                                src: n(860724)
                             })
                         ]
                     }),
-                    (0, l.jsxs)(a.xJW, {
-                        title: x.NW.string(x.t.w4Ivys),
-                        className: m.spacing,
+                    (0, s.jsxs)(a.xJW, {
+                        title: m.NW.string(m.t.w4Ivys),
                         children: [
-                            L &&
-                                (0, l.jsx)(a.kzN, {
-                                    className: m.error,
-                                    children: x.NW.string(x.t.IrYX19)
+                            R &&
+                                (0, s.jsx)(a.kzN, {
+                                    className: b.error,
+                                    children: m.NW.string(m.t.IrYX19)
                                 }),
-                            (0, l.jsx)(a.qBt, {
+                            (0, s.jsx)(a.qBt, {
                                 steps: [0, 1],
-                                step: v,
+                                step: _,
                                 children: ((e) => {
-                                    switch (v) {
+                                    switch (_) {
                                         case 0:
-                                            return (0, l.jsxs)(l.Fragment, {
+                                            return (0, s.jsxs)(s.Fragment, {
                                                 children: [
-                                                    (0, l.jsx)(a.FXm, {
-                                                        value: z,
+                                                    (0, s.jsx)(a.FXm, {
+                                                        value: S,
                                                         options: e,
-                                                        onChange: y,
-                                                        radioItemClassName: m.radioItemStyles
+                                                        onChange: Y,
+                                                        radioItemClassName: b.radioItemStyles
                                                     }),
-                                                    (0, l.jsxs)(a.P3F, {
-                                                        onClick: Y,
-                                                        className: m.banReasonOtherClickable,
+                                                    (0, s.jsxs)(a.P3F, {
+                                                        onClick: E,
+                                                        className: b.banReasonOtherClickable,
                                                         children: [
-                                                            (0, l.jsx)(a.Text, {
+                                                            (0, s.jsx)(a.Text, {
                                                                 variant: 'text-md/medium',
                                                                 color: 'none',
-                                                                children: x.NW.string(x.t.BcZTKi)
+                                                                children: m.NW.string(m.t.BcZTKi)
                                                             }),
-                                                            (0, l.jsx)(a.Fbu, {
+                                                            (0, s.jsx)(a.Fbu, {
                                                                 color: 'currentColor',
                                                                 size: 'xs'
                                                             })
@@ -176,71 +186,70 @@ function g(e) {
                                                 ]
                                             });
                                         case 1:
-                                            return (0, l.jsx)(a.Kx8, {
-                                                maxLength: d.GNZ,
-                                                onChange: M,
-                                                value: z,
+                                            return (0, s.jsx)(a.Kx8, {
+                                                maxLength: x.GNZ,
+                                                onChange: A,
+                                                value: S,
                                                 rows: 5,
                                                 autoFocus: !0
                                             });
                                     }
-                                })(E)
+                                })(T)
                             })
                         ]
                     }),
-                    (0, l.jsx)(a.xJW, {
-                        title: x.NW.string(x.t['8l3W09']),
-                        className: m.spacing,
-                        children: (0, l.jsx)(a.q4e, {
-                            options: p(),
+                    (0, s.jsx)(a.xJW, {
+                        title: m.NW.string(m.t['8l3W09']),
+                        children: (0, s.jsx)(a.q4e, {
+                            options: h(),
                             value: W,
-                            onChange: I
+                            onChange: y
                         })
                     })
                 ]
             }),
             (() => {
-                switch (v) {
+                switch (_) {
                     case 0:
-                        return (0, l.jsxs)(a.mzw, {
-                            className: m.footer,
+                        return (0, s.jsxs)(a.mzw, {
+                            className: b.footer,
                             children: [
-                                (0, l.jsx)(a.zxk, {
+                                (0, s.jsx)(a.zxk, {
                                     type: 'button',
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.PRIMARY,
                                     onClick: j,
-                                    children: x.NW.string(x.t['ETE/oK'])
+                                    children: m.NW.string(m.t['ETE/oK'])
                                 }),
-                                (0, l.jsx)(a.zxk, {
+                                (0, s.jsx)(a.zxk, {
                                     type: 'submit',
                                     color: a.zxk.Colors.RED,
                                     size: a.zxk.Sizes.SMALL,
-                                    onClick: w,
-                                    children: x.NW.string(x.t['5MBJ5O'])
+                                    onClick: M,
+                                    children: m.NW.string(m.t['5MBJ5O'])
                                 })
                             ]
                         });
                     case 1:
-                        return (0, l.jsxs)(a.mzw, {
-                            className: m.footerStepped,
+                        return (0, s.jsxs)(a.mzw, {
+                            className: b.footerStepped,
                             children: [
-                                (0, l.jsx)(a.zxk, {
-                                    className: m.cancel,
-                                    innerClassName: m.cancel,
+                                (0, s.jsx)(a.zxk, {
+                                    className: b.cancel,
+                                    innerClassName: b.cancel,
                                     type: 'button',
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.PRIMARY,
                                     size: a.zxk.Sizes.SMALL,
-                                    onClick: A,
-                                    children: x.NW.string(x.t['13/7kZ'])
+                                    onClick: P,
+                                    children: m.NW.string(m.t['13/7kZ'])
                                 }),
-                                (0, l.jsx)(a.zxk, {
+                                (0, s.jsx)(a.zxk, {
                                     type: 'submit',
                                     color: a.zxk.Colors.RED,
                                     size: a.zxk.Sizes.SMALL,
-                                    onClick: w,
-                                    children: x.NW.string(x.t['5MBJ5O'])
+                                    onClick: M,
+                                    children: m.NW.string(m.t['5MBJ5O'])
                                 })
                             ]
                         });
