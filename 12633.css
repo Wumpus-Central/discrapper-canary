@@ -13944,8 +13944,9 @@ div.cardContainer__88e24 {
     right: 0;
     opacity: .5;
     height: 100%;
-    width: auto;
-    transition: opacity .3s ease, transform .3s ease
+    transition: opacity .3s ease, transform .3s ease;
+    min-width: 320px;
+    width: 100%
 }
 
 .img__4bbc6.hover__4bbc6 {
@@ -34192,8 +34193,20 @@ html:not(.visual-refresh) .root_e5f3a9 {
 
 .overlayContainer_fdeafc {
     position: relative;
-    min-height: 40px;
+    height: 40px;
     width: 100%
+}
+
+.visual-refresh.density-cozy .overlayContainer_fdeafc {
+    height: 48px
+}
+
+.visual-refresh.density-default .overlayContainer_fdeafc {
+    height: 42px
+}
+
+.visual-refresh.density-compact .overlayContainer_fdeafc {
+    height: 38px
 }
 
 .avatarContainer_fdeafc {
@@ -34363,6 +34376,18 @@ html:not(.visual-refresh) .root_e5f3a9 {
     height: 40px;
     background-color: var(--background-floating);
     border-radius: var(--radius-sm)
+}
+
+.visual-refresh.density-cozy .nameplate__78e61 {
+    height: 48px
+}
+
+.visual-refresh.density-default .nameplate__78e61 {
+    height: 42px
+}
+
+.visual-refresh.density-compact .overlayContainer__78e61 {
+    height: 38px
 }
 
 .decorationBanner__78e61 {
