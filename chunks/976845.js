@@ -1,6 +1,7 @@
 n.d(t, {
     D2: () => g,
-    ZP: () => y
+    ZP: () => O,
+    eg: () => E
 });
 var r = n(200651),
     i = n(192379),
@@ -86,10 +87,14 @@ let m = {
         height: 60
     },
     g = 3000,
-    E = (e) => {
+    E = {
+        EARN: 0.25,
+        SPEND: 0.3
+    },
+    v = (e) => {
         let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: o, internalLottieRef: a } = e,
             s = null !== a.current ? a.current.getDuration() : null,
-            l = (null !== s ? 1000 * s : g) * 0.9;
+            l = null !== s ? 1000 * s : g;
         (0, i.useEffect)(() => {
             null !== t && t !== n.current && ((n.current = t), o());
         }, [t, o, n]),
@@ -97,13 +102,13 @@ let m = {
                 r(l);
             }, [r, l]);
     },
-    v = (e) => {
+    b = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ['currentAnimationType']);
         let i = (0, a.D)(null != t ? t : 'earn'),
             { Component: o } = i;
         return (
-            E(d({ currentAnimationType: t }, n, p(i, ['Component']))),
+            v(d({ currentAnimationType: t }, n, p(i, ['Component']))),
             (0, r.jsx)(
                 o,
                 _(d({}, m), {
@@ -114,13 +119,13 @@ let m = {
             )
         );
     },
-    b = (e) => {
+    y = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ['currentAnimationType']);
         let i = (0, o.v)(null != t ? t : 'earn'),
             { Component: a } = i;
         return (
-            E(d({ currentAnimationType: t }, n, p(i, ['Component']))),
+            v(d({ currentAnimationType: t }, n, p(i, ['Component']))),
             (0, r.jsx)(
                 a,
                 _(d({}, m), {
@@ -131,7 +136,7 @@ let m = {
             )
         );
     },
-    y = (e) => {
+    O = (e) => {
         let t = (0, l.ZP)();
-        return (0, s.ap)(t) ? (0, r.jsx)(b, d({}, e)) : (0, r.jsx)(v, d({}, e));
+        return (0, s.ap)(t) ? (0, r.jsx)(y, d({}, e)) : (0, r.jsx)(b, d({}, e));
     };

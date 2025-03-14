@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -8,9 +8,10 @@ var r = n(200651),
     c = n(110924),
     u = n(710845),
     d = n(168232),
-    f = n(48541),
-    _ = n(677344);
-function p(e, t, n) {
+    f = n(976845),
+    _ = n(48541),
+    p = n(677344);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,23 +35,23 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,25 +60,20 @@ function g(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let E = new u.Z('BalanceCounter'),
-    v = (0, d.dU)(void 0) === f.C.PRODUCTION,
-    b = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
-    y = 33,
-    O = 30,
-    I = 100,
-    S = 1000,
-    T = (e, t) => {
-        let n = t;
-        return (
-            e <= y ? (n = e * O) : e < I && (n = Math.min(S, t)),
-            {
-                duration: n,
-                delay: t > n ? t - n : 0
-            }
-        );
+let v = new u.Z('BalanceCounter'),
+    b = (0, d.dU)(void 0) === _.C.PRODUCTION,
+    y = (e) => (null === e ? 0 : ''.concat(e.toFixed(0)).length),
+    O = (e, t) => {
+        let n = e > 0,
+            r = t * f.eg[n ? 'EARN' : 'SPEND'],
+            i = n ? t - r : 0;
+        return {
+            duration: r,
+            delay: i
+        };
     },
-    N = (e, t, n) => (null === n ? Math.max(e, t) : Math.max(t, n)),
-    A = (e) => {
+    I = (e, t, n) => (null === n ? Math.max(e, t) : Math.max(t, n)),
+    S = (e) => {
         var t, n;
         let { value: o, onSetDigitCount: a, onValueChange: c, onValueReached: u, targetTotalCounterTime: d = 3000 } = e,
             [f, _] = (0, i.useState)(0),
@@ -98,50 +94,50 @@ let E = new u.Z('BalanceCounter'),
         }, [o, c]);
         let m = null != o ? o : 0,
             g = null !== (t = p.current) && void 0 !== t ? t : m,
-            { duration: y, delay: O } = T(Math.abs(m - g), d),
-            { number: I } = (0, l.q_F)({
+            { duration: E, delay: I } = O(m - g, d),
+            { number: S } = (0, l.q_F)({
                 from: { number: null !== (n = p.current) && void 0 !== n ? n : m },
                 number: m,
                 config: {
                     mass: 1,
                     tension: 20,
                     friction: 10,
-                    duration: y
+                    duration: E
                 },
-                delay: O,
+                delay: I,
                 onStart: () => {
-                    a(b(g));
+                    a(y(g));
                 },
                 onRest: () => {
-                    if ((_(f + 1), u(), !v && null !== h.current && null !== p.current)) {
+                    if ((_(f + 1), u(), !b && null !== h.current && null !== p.current)) {
                         let e = Date.now();
-                        E.log('Balance Counter finished updating: ', {
+                        v.log('Balance Counter finished updating: ', {
                             time: e - h.current.lastChangedAt,
                             delta: m - p.current
                         });
                     }
-                    a(b(m)), (p.current = m);
+                    a(y(m)), (p.current = m);
                 }
             }),
-            S = b(Math.max(null != o ? o : 0, I.get()));
+            T = y(Math.max(null != o ? o : 0, S.get()));
         return (0, r.jsx)(s.animated.div, {
-            style: { width: 'calc('.concat(S, 'ch)') },
-            children: I.to((e) => ''.concat(e.toFixed(0)))
+            style: { width: 'calc('.concat(T, 'ch)') },
+            children: S.to((e) => ''.concat(e.toFixed(0)))
         });
     },
-    C = (e) => {
+    T = (e) => {
         var t,
             { value: n, className: o } = e,
-            s = m(e, ['value', 'className']);
+            s = g(e, ['value', 'className']);
         let u = null === n,
             [d, f] = (0, i.useState)(null),
-            p = (0, i.useMemo)(() => b(n), [n]),
-            g = null !== (t = (0, c.Z)(p)) && void 0 !== t ? t : 0,
-            E = (0, i.useMemo)(() => N(g, p, d), [g, p, d]),
+            _ = (0, i.useMemo)(() => y(n), [n]),
+            h = null !== (t = (0, c.Z)(_)) && void 0 !== t ? t : 0,
+            E = (0, i.useMemo)(() => I(h, _, d), [h, _, d]),
             v = ''.concat(u ? 0 : E, 'ch');
         return (0, r.jsx)(l.Text, {
             variant: 'text-md/semibold',
-            className: a()(_.balanceCounterText, u ? void 0 : _.balanceCounterMargin, o),
+            className: a()(p.balanceCounterText, u ? void 0 : p.balanceCounterMargin, o),
             style: {
                 width: v,
                 opacity: u ? '0' : 1
@@ -149,8 +145,8 @@ let E = new u.Z('BalanceCounter'),
             children: u
                 ? null
                 : (0, r.jsx)(
-                      A,
-                      h(
+                      S,
+                      m(
                           {
                               onSetDigitCount: (e) => {
                                   e !== d && f(e);
