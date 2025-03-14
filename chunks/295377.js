@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(47120), n(266796);
+n.d(t, { Z: () => R }), n(47120), n(266796);
 var r = n(200651),
     i = n(192379),
     s = n(91192),
@@ -45,34 +45,51 @@ function O(e) {
     }
     return e;
 }
-function v(e) {
-    var t, n;
-    let { guildId: l } = e,
-        g = (0, c.Q3)('GuildItem'),
-        h = (0, a.e7)([m.Z], () => m.Z.getGuild(l)),
-        b = (0, a.e7)([u.Z], () => u.Z.getMemberCount(l)),
-        v = !d.SE.useSetting().includes(l),
-        S = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE),
-        T = (0, s.Ie)(null != l ? l : x.lds),
-        I = i.useCallback(
+function v(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function S(e) {
+    let { guildId: t } = e,
+        n = (0, c.Q3)('GuildItem'),
+        l = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
+        g = (0, a.e7)([u.Z], () => u.Z.getMemberCount(t)),
+        h = !d.SE.useSetting().includes(t),
+        b = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE),
+        S = (0, s.Ie)(null != t ? t : x.lds),
+        T = i.useCallback(
             (e) => {
-                let t = (0, f._o)();
-                e ? t.delete(l) : t.add(l),
-                    d.SE.updateSetting([...t]),
+                let n = (0, f._o)();
+                e ? n.delete(t) : n.add(t),
+                    d.SE.updateSetting([...n]),
                     p.default.track(x.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: N.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: _.f4.USER_SETTINGS_ACTIVITY_PRIVACY,
-                        guild_id: l
+                        guild_id: t
                     });
             },
-            [l]
+            [t]
         );
-    return null == h
+    return null == l
         ? null
         : (0, r.jsxs)(o.P3F, {
               className: C.guildRow,
               onClick: () => {
-                  I(!v);
+                  T(!h);
               },
               children: [
                   (0, r.jsxs)('div', {
@@ -82,28 +99,17 @@ function v(e) {
                               className: C.guildIcon,
                               children: (0, r.jsx)(
                                   o.LYs,
-                                  ((t = O(
-                                      {
-                                          ariaLabel: h.toString(),
-                                          name: h.toString(),
-                                          icon: h.getIconURL(2 * S, !1, g)
-                                      },
-                                      T
-                                  )),
-                                  (n = n = { role: 'treeitem' }),
-                                  Object.getOwnPropertyDescriptors
-                                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                      : (function (e, t) {
-                                            var n = Object.keys(e);
-                                            if (Object.getOwnPropertySymbols) {
-                                                var r = Object.getOwnPropertySymbols(e);
-                                                n.push.apply(n, r);
-                                            }
-                                            return n;
-                                        })(Object(n)).forEach(function (e) {
-                                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                        }),
-                                  t)
+                                  v(
+                                      O(
+                                          {
+                                              ariaLabel: l.toString(),
+                                              name: l.toString(),
+                                              icon: l.getIconURL(2 * b, !1, n)
+                                          },
+                                          S
+                                      ),
+                                      { role: 'treeitem' }
+                                  )
                               )
                           }),
                           (0, r.jsx)(o.Text, {
@@ -111,19 +117,19 @@ function v(e) {
                               variant: 'text-md/medium',
                               lineClamp: 1,
                               color: 'text-normal',
-                              children: h.toString()
+                              children: l.toString()
                           }),
                           (0, r.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               className: C.guildSubtitle,
-                              children: j.NW.formatToPlainString(E.Z.obBqMj, { count: null != b ? b : 0 })
+                              children: j.NW.formatToPlainString(E.Z.obBqMj, { count: null != g ? g : 0 })
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
                       children: (0, r.jsx)(o.XZJ, {
-                          'aria-checked': v,
-                          value: v,
+                          'aria-checked': h,
+                          value: h,
                           type: o.XZJ.Types.INVERTED,
                           innerClassName: C.checkboxInner,
                           displayOnly: !0
@@ -132,7 +138,7 @@ function v(e) {
               ]
           });
 }
-function S() {
+function T() {
     let e = d.G6.useSetting(),
         t = d.Wz.useSetting(),
         n = (e) => {
@@ -198,7 +204,7 @@ function S() {
                         (0, r.jsx)(o.zJl, {
                             fade: !0,
                             className: C.scroller,
-                            children: c.map((e) => (0, r.jsx)(v, { guildId: e }, e))
+                            children: c.map((e) => (0, r.jsx)(S, { guildId: e }, e))
                         }),
                         (0, r.jsx)('div', {
                             className: C.toggleAll,
@@ -214,14 +220,14 @@ function S() {
         ]
     });
 }
-function T() {
+function I() {
     return (0, r.jsx)(o.hjN, {
         tag: o.RB0.H5,
         title: j.NW.string(E.Z['+RndDg']),
         children: (0, r.jsx)(b.r, {})
     });
 }
-function I() {
+function y() {
     let e = !d.G6.useSetting(),
         t = d.cP.useSetting(),
         n = d.Ou.useSetting();
@@ -249,30 +255,31 @@ function I() {
         ]
     });
 }
-function y() {
-    let e = d.G6.useSetting(),
-        t = () => {
+function A(e) {
+    let { onScrollToGuildsSection: t } = e,
+        i = d.G6.useSetting(),
+        s = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('83909').then(n.bind(n, 932374));
-                return (t) => (0, r.jsx)(e, O({}, t));
+                return (n) => (0, r.jsx)(e, v(O({}, n), { onScrollToGuildsSection: t }));
             });
         },
-        i = h.isPlatformEmbedded ? j.NW.string(j.t.MznbeH) : j.NW.string(j.t.oKqC4u);
+        a = h.isPlatformEmbedded ? j.NW.string(j.t.MznbeH) : j.NW.string(j.t.oKqC4u);
     return (0, r.jsx)(o.hjN, {
         tag: o.RB0.H5,
         title: j.NW.string(j.t.Wspazs),
         className: C.allActivitySharingTitle,
         children: (0, r.jsx)(o.j7V, {
-            value: e,
+            value: i,
             onChange: (e) => {
-                e ? d.G6.updateSetting(e) : t();
+                e ? d.G6.updateSetting(e) : s();
             },
-            note: i,
+            note: a,
             children: j.NW.string(j.t['4q/Ewc'])
         })
     });
 }
-function A() {
+function P() {
     return (0, r.jsx)(o.hjN, {
         className: C.privacyAndTerms,
         children: (0, r.jsx)(o.ToO, {
@@ -284,12 +291,26 @@ function A() {
         })
     });
 }
-let P = function (e) {
-    let { className: t } = e;
+let R = function (e) {
+    let { className: t } = e,
+        n = (0, i.useRef)(null);
     return (0, r.jsxs)(o.hjN, {
         className: t,
         tag: o.RB0.H1,
         title: j.NW.string(j.t['6x5uWV']),
-        children: [(0, r.jsx)(y, {}), (0, r.jsx)(T, {}), (0, r.jsx)(o.$i$, { className: C.divider }), (0, r.jsx)(S, {}), (0, r.jsx)(o.$i$, { className: C.divider }), (0, r.jsx)(I, {}), (0, r.jsx)(A, {})]
+        children: [
+            (0, r.jsx)(A, {
+                onScrollToGuildsSection: () => {
+                    null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }),
+            (0, r.jsx)(I, {}),
+            (0, r.jsx)(o.$i$, { className: C.divider }),
+            (0, r.jsx)('div', { ref: n }),
+            (0, r.jsx)(T, {}),
+            (0, r.jsx)(o.$i$, { className: C.divider }),
+            (0, r.jsx)(y, {}),
+            (0, r.jsx)(P, {})
+        ]
     });
 };

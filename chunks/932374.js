@@ -1,138 +1,107 @@
-n.d(i, { default: () => h }), n(266796);
-var e = n(200651),
-    s = n(192379),
-    r = n(481060),
-    a = n(230711),
-    l = n(695346),
-    c = n(626135),
-    d = n(981631),
-    o = n(388032),
-    x = n(890905);
-let h = (t) => {
-    let { transitionState: i, onClose: n } = t;
-    s.useEffect(() => {
-        c.default.track(d.rMx.OPEN_MODAL, { type: 'Confirm Disable Activity Sharing' });
-    }, []);
-    let h = [
-        {
-            title: o.NW.string(o.t['wnt8/P']),
-            description: o.NW.string(o.t.VupM1t)
-        },
-        {
-            title: o.NW.string(o.t.Arohq6),
-            description: o.NW.string(o.t.nYLud3)
-        },
-        {
-            title: o.NW.string(o.t.MDXRKi),
-            description: o.NW.string(o.t.EG31Wl)
-        }
-    ];
-    return (0, e.jsx)(r.Y0X, {
-        transitionState: i,
-        'aria-label': '',
-        children: (0, e.jsxs)(r.hzk, {
-            className: x.content,
+e.d(s, { default: () => m });
+var n = e(200651),
+    t = e(192379),
+    r = e(481060),
+    a = e(230711),
+    l = e(695346),
+    c = e(626135),
+    o = e(981631),
+    x = e(329720),
+    d = e(388032),
+    h = e(890905);
+let m = (i) => {
+    let { transitionState: s, onClose: e, onScrollToGuildsSection: m } = i;
+    return (
+        t.useEffect(() => {
+            c.default.track(o.rMx.OPEN_MODAL, { type: 'Confirm Disable Activity Sharing' });
+        }, []),
+        (0, n.jsxs)(r.Y0X, {
+            transitionState: s,
+            'aria-label': '',
             children: [
-                (0, e.jsxs)('div', {
-                    className: x.header,
-                    children: [
-                        (0, e.jsx)(r.X6q, {
-                            variant: 'heading-xl/bold',
-                            children: o.NW.string(o.t['3k4hTU'])
-                        }),
-                        (0, e.jsx)(r.Text, {
-                            variant: 'text-md/normal',
-                            children: o.NW.string(o.t.IR0Bf3)
-                        })
-                    ]
-                }),
-                (0, e.jsx)('div', {
-                    className: x.notes,
-                    children: h.map((t, i) => {
-                        let { title: n, description: s } = t;
-                        return (0, e.jsxs)(e.Fragment, {
-                            children: [
-                                (0, e.jsxs)(
-                                    'div',
-                                    {
-                                        className: x.note,
-                                        children: [
-                                            (0, e.jsx)(r.k$p, {}),
-                                            (0, e.jsxs)('div', {
-                                                children: [
-                                                    (0, e.jsx)(r.X6q, {
-                                                        variant: 'heading-md/semibold',
-                                                        children: n
-                                                    }),
-                                                    (0, e.jsx)(r.Text, {
-                                                        variant: 'text-xs/normal',
-                                                        children: s
-                                                    })
-                                                ]
-                                            })
-                                        ]
-                                    },
-                                    i
-                                ),
-                                i !== h.length - 1 && (0, e.jsx)(r.$i$, { className: x.noteDivider })
-                            ]
-                        });
+                (0, n.jsx)(r.xBx, {
+                    children: (0, n.jsx)(r.X6q, {
+                        variant: 'heading-lg/bold',
+                        children: d.NW.string(d.t['3k4hTU'])
                     })
                 }),
-                (0, e.jsx)(r.Text, {
-                    variant: 'text-md/normal',
-                    children: o.NW.string(o.t.cEjHRk)
-                }),
-                (0, e.jsxs)('div', {
-                    className: x.linksContainer,
+                (0, n.jsxs)(r.hzk, {
                     children: [
-                        (0, e.jsxs)(r.P3F, {
-                            onClick: () => {
-                                n(), a.Z.open(d.oAB.REGISTERED_GAMES);
-                            },
-                            className: x.link,
-                            children: [
-                                (0, e.jsx)(r.Text, {
-                                    variant: 'text-md/medium',
-                                    children: o.NW.string(o.t['8uoLf3'])
-                                }),
-                                (0, e.jsx)(r.LJT, { size: 'md' })
-                            ]
+                        (0, n.jsx)(r.Text, {
+                            variant: 'text-sm/normal',
+                            children: d.NW.string(x.Z.IR0Bf3)
                         }),
-                        (0, e.jsx)(r.$i$, { className: x.linkDivider }),
-                        (0, e.jsxs)(r.P3F, {
-                            onClick: () => {
-                                n(), a.Z.open(d.oAB.CONNECTIONS);
-                            },
-                            className: x.link,
+                        (0, n.jsx)(r.Text, {
+                            className: h.otherOptions,
+                            variant: 'text-md/normal',
+                            children: d.NW.string(d.t.TpDXm5)
+                        }),
+                        (0, n.jsxs)('div', {
+                            className: h.linksContainer,
                             children: [
-                                (0, e.jsx)(r.Text, {
-                                    variant: 'text-md/medium',
-                                    children: o.NW.string(o.t.Q42xe3)
+                                (0, n.jsxs)(r.P3F, {
+                                    onClick: () => {
+                                        e(), m();
+                                    },
+                                    className: h.link,
+                                    children: [
+                                        (0, n.jsx)(r.Text, {
+                                            variant: 'text-sm/medium',
+                                            children: d.NW.string(x.Z['4I+VjI'])
+                                        }),
+                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                    ]
                                 }),
-                                (0, e.jsx)(r.LJT, { size: 'md' })
+                                (0, n.jsx)(r.$i$, { className: h.linkDivider }),
+                                (0, n.jsxs)(r.P3F, {
+                                    onClick: () => {
+                                        e(), a.Z.open(o.oAB.REGISTERED_GAMES);
+                                    },
+                                    className: h.link,
+                                    children: [
+                                        (0, n.jsx)(r.Text, {
+                                            variant: 'text-sm/medium',
+                                            children: d.NW.string(x.Z.sbwbEB)
+                                        }),
+                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                    ]
+                                }),
+                                (0, n.jsx)(r.$i$, { className: h.linkDivider }),
+                                (0, n.jsxs)(r.P3F, {
+                                    onClick: () => {
+                                        e(), a.Z.open(o.oAB.CONNECTIONS);
+                                    },
+                                    className: h.link,
+                                    children: [
+                                        (0, n.jsx)(r.Text, {
+                                            variant: 'text-sm/medium',
+                                            children: d.NW.string(x.Z.QPiPpa)
+                                        }),
+                                        (0, n.jsx)(r.LJT, { size: 'sm' })
+                                    ]
+                                })
                             ]
                         })
                     ]
                 }),
-                (0, e.jsxs)('div', {
-                    className: x.buttonsContainer,
+                (0, n.jsxs)(r.mzw, {
+                    className: h.footer,
                     children: [
-                        (0, e.jsx)(r.zxk, {
-                            onClick: n,
-                            color: r.Ttl.PRIMARY,
-                            children: o.NW.string(o.t['ETE/oK'])
-                        }),
-                        (0, e.jsx)(r.zxk, {
+                        (0, n.jsx)(r.zxk, {
                             onClick: () => {
-                                l.G6.updateSetting(!1), n();
+                                l.G6.updateSetting(!1), e();
                             },
                             color: r.Ttl.RED,
-                            children: o.NW.string(o.t.R9GHyc)
+                            children: d.NW.string(d.t.R9GHyc)
+                        }),
+                        (0, n.jsx)(r.zxk, {
+                            onClick: e,
+                            color: r.Ttl.PRIMARY,
+                            children: d.NW.string(d.t['ETE/oK'])
                         })
                     ]
                 })
             ]
         })
-    });
+    );
 };
