@@ -1,44 +1,51 @@
-n.d(t, { Z: () => d });
-var l = n(200651);
+n.d(t, { Z: () => m });
+var r = n(200651);
 n(192379);
-var r = n(481060),
+var l = n(442837),
+    i = n(481060),
     s = n(100527),
-    i = n(906732),
+    o = n(906732),
     a = n(436774),
-    o = n(156582),
-    c = n(388032),
-    u = n(528473);
-function d(e) {
+    c = n(451478),
+    d = n(156582),
+    u = n(388032),
+    f = n(199569);
+function m(e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, i.ZP)(s.Z.GO_LIVE_MODAL_V2);
-    return (0, l.jsxs)('div', {
-        className: u.root,
+        { analyticsLocations: n } = (0, o.ZP)(s.Z.GO_LIVE_MODAL_V2),
+        m = (0, l.e7)([c.Z], () => c.Z.isFocused());
+    return (0, r.jsxs)('div', {
+        className: f.root,
         children: [
-            (0, l.jsxs)(r.Text, {
-                className: u.infoText,
+            (0, r.jsxs)(i.Text, {
+                className: f.infoText,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
-                children: [(0, l.jsx)(r.SrA, { color: a.JX.PREMIUM_TIER_2 }), c.NW.string(c.t.ZVevCg)]
+                children: [(0, r.jsx)(i.SrA, { color: a.JX.PREMIUM_TIER_2 }), u.NW.string(u.t.ZVevCg)]
             }),
-            (0, l.jsx)(r.zxk, {
-                look: r.zxk.Looks.BLANK,
+            (0, r.jsxs)(i.gtL, {
                 onClick: () =>
-                    (0, o.E)({
+                    (0, d.E)({
                         analyticsLocation: n[0],
                         onClose: t
                     }),
-                children: (0, l.jsxs)(r.Text, {
-                    className: u.ctaButton,
-                    variant: 'text-sm/medium',
-                    color: 'premium-nitro-pink-text',
-                    children: [
-                        c.NW.string(c.t.pj0XBA),
-                        (0, l.jsx)(r.Fbu, {
-                            color: 'currentColor',
-                            size: 'xs'
-                        })
-                    ]
-                })
+                color: i.zxk.Colors.GREEN,
+                size: i.zxk.Sizes.SMALL,
+                className: f.ctaButton,
+                innerClassName: f.premiumSubscribeButton,
+                wrapperClassName: f.tier2Gradient,
+                pauseAnimation: !m,
+                children: [
+                    (0, r.jsx)(i.SrA, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: f.premiumIcon
+                    }),
+                    (0, r.jsx)('span', {
+                        className: f.buttonText,
+                        children: 'Get Nitro'
+                    })
+                ]
             })
         ]
     });

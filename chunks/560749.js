@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(301563), n(653041), n(47120), n(308318), n(230036);
+n.d(t, { Z: () => I }), n(301563), n(653041), n(47120), n(308318), n(230036);
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(823385),
     u = n(601565),
     f = n(131704),
-    h = n(592125),
-    m = n(580005),
+    m = n(592125),
+    h = n(580005),
     x = n(984933),
     p = n(430824),
     g = n(496675),
@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(594174),
     j = n(938475),
     b = n(823379),
-    C = n(102172),
-    S = n(981631),
+    S = n(102172),
+    C = n(981631),
     N = n(889150),
     y = n(388032),
     Z = n(358476);
@@ -74,43 +74,43 @@ function w(e) {
         ]
     });
 }
-function O(e) {
+function I(e) {
     let { onSelectChannel: t } = e,
         { search: n, query: c, results: v } = (0, u.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        j = (0, i.Wu)([_.Z, x.ZP, h.Z, p.Z, g.Z], () => {
+        j = (0, i.Wu)([_.Z, x.ZP, m.Z, p.Z, g.Z], () => {
             let e = [],
                 t = _.Z.getGuildId();
             if (null == t) return e;
             for (let n of x.ZP.getVocalChannelIds(t)) {
-                let t = h.Z.getChannel(n);
-                null != t && (0, C.JL)(t, p.Z, g.Z) && e.push(t);
+                let t = m.Z.getChannel(n);
+                null != t && (0, S.JL)(t, p.Z, g.Z) && e.push(t);
             }
             return e;
         }),
-        O = (0, i.Wu)([d.Z, h.Z, m.Z, p.Z, g.Z], () => {
+        I = (0, i.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of d.Z.getChannelHistory()) {
-                let r = h.Z.getChannel(n);
-                (null == r ? void 0 : r.type) === S.d4z.GUILD_VOICE && (0, C.JL)(r, p.Z, g.Z) && (t.add(r.id), e.push(r));
+                let r = m.Z.getChannel(n);
+                (null == r ? void 0 : r.type) === C.d4z.GUILD_VOICE && (0, S.JL)(r, p.Z, g.Z) && (t.add(r.id), e.push(r));
             }
-            for (let n of m.Z.getFrequentlyWithoutFetchingLatest()) n instanceof f.Sf && n.type === S.d4z.GUILD_VOICE && !t.has(n.id) && (0, C.JL)(n, p.Z, g.Z) && (t.add(n.id), e.push(n));
+            for (let n of h.Z.getFrequentlyWithoutFetchingLatest()) n instanceof f.Sf && n.type === C.d4z.GUILD_VOICE && !t.has(n.id) && (0, S.JL)(n, p.Z, g.Z) && (t.add(n.id), e.push(n));
             return e;
         }),
-        I = l.useMemo(() => {
-            let e = new Set(O.map((e) => e.id)),
+        T = l.useMemo(() => {
+            let e = new Set(I.map((e) => e.id)),
                 t = new Set(j.map((e) => e.id));
             return [
                 ...j
                     .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, a.Z)(e.id))
                     .filter(b.lm),
-                ...O.filter((e) => !t.has(e.id))
+                ...I.filter((e) => !t.has(e.id))
                     .map((e) => (0, a.Z)(e.id))
                     .filter(b.lm)
             ];
-        }, [O, j]),
-        P = '' !== c ? v : I;
+        }, [I, j]),
+        E = '' !== c ? v : T;
     return (0, r.jsxs)('div', {
         className: Z.root,
         children: [
@@ -131,29 +131,54 @@ function O(e) {
                     }),
                 autoFocus: !0
             }),
-            (0, r.jsx)(s.aVo, {
-                renderListHeader: function () {
-                    return (0, r.jsx)(s.Text, {
-                        variant: 'text-xs/semibold',
-                        color: 'text-muted',
-                        children: y.NW.string(N.Z.FZ9Fl5)
-                    });
-                },
-                sections: [P.length],
-                sectionHeight: 0,
-                rowHeight: 48,
-                renderRow: function (e) {
-                    let { rowIndex: n } = e,
-                        l = P[n];
-                    return (0, r.jsx)(
-                        w,
-                        {
-                            result: l,
-                            onSelectChannel: t
-                        },
-                        l.record.id
-                    );
-                }
+            E.length > 0
+                ? (0, r.jsx)(s.aVo, {
+                      renderListHeader: function () {
+                          return (0, r.jsx)(s.Text, {
+                              variant: 'text-xs/semibold',
+                              color: 'text-muted',
+                              children: y.NW.string(N.Z.FZ9Fl5)
+                          });
+                      },
+                      sections: [E.length],
+                      sectionHeight: 0,
+                      rowHeight: 48,
+                      renderRow: function (e) {
+                          let { rowIndex: n } = e,
+                              l = E[n];
+                          return (0, r.jsx)(
+                              w,
+                              {
+                                  result: l,
+                                  onSelectChannel: t
+                              },
+                              l.record.id
+                          );
+                      }
+                  })
+                : (0, r.jsx)(O, {})
+        ]
+    });
+}
+function O() {
+    return (0, r.jsxs)('div', {
+        className: Z.emptyState,
+        children: [
+            (0, r.jsx)(s._Ve, {
+                className: Z.emptyIcon,
+                size: 'md',
+                color: s.TVs.colors.ICON_MUTED
+            }),
+            (0, r.jsx)(s.Text, {
+                className: Z.emptyHeader,
+                variant: 'text-lg/medium',
+                color: 'header-primary',
+                children: y.NW.string(N.Z.sWGfr6)
+            }),
+            (0, r.jsx)(s.Text, {
+                variant: 'text-sm/medium',
+                color: 'text-secondary',
+                children: y.NW.string(N.Z.nBRtt7)
             })
         ]
     });

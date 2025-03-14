@@ -10,5 +10,9 @@ e.exports = {
     sourceOverlayCTA: 'sourceOverlayCTA_febe19',
     sourceNameContainer: 'sourceNameContainer_febe19',
     sourceIcon: 'sourceIcon_febe19',
-    sourceName: 'sourceName_febe19'
+    sourceName: 'sourceName_febe19',
+    emptyState: 'emptyState_febe19',
+    emptyIcon: 'emptyIcon_febe19',
+    emptyHeader: 'emptyHeader_febe19',
+    emptyBody: 'emptyBody_febe19'
 };
