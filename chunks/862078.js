@@ -4,6 +4,8 @@ var r = {
     avatarContainer: 'avatarContainer_fdeafc',
     avatarVisible: 'avatarVisible_fdeafc',
     avatarWithTextInnerClassName: 'avatarWithTextInnerClassName_fdeafc',
-    nameplatePurchased: 'nameplatePurchased_fdeafc'
+    nameplatePurchased: 'nameplatePurchased_fdeafc',
+    placeholderPulse: 'placeholderPulse_fdeafc',
+    placeholderUsername: 'placeholderUsername_fdeafc'
 };
 e.exports = r;

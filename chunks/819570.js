@@ -1,5 +1,7 @@
-n.d(t, { E: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { E: () => l });
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2025-03_shop_hide_strikethrough_price',
         label: 'Shop Hide Strikethrough Price Experiment',
@@ -10,6 +12,7 @@ let r = (0, n(818083).B)({
                 label: 'Hide strikethrough prices',
                 config: { hideStrikethroughPrice: !0 }
             }
-        ]
+        ],
+        commonTriggerPoint: i.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    i = (e) => r.useExperiment({ location: e }).hideStrikethroughPrice;
+    l = (e) => o.useExperiment({ location: e }).hideStrikethroughPrice;
