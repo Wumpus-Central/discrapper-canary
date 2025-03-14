@@ -13905,7 +13905,8 @@ div.cardContainer__88e24 {
     overflow: hidden;
     left: 0;
     top: 0;
-    opacity: 0
+    opacity: 0;
+    container-type: inline-size
 }
 
 .fadeIn__4bbc6 {
