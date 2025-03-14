@@ -21,7 +21,10 @@ function b() {
     let e = (0, s.Wu)([d.ZP, m.Z, g.Z], () =>
             d.ZP.getGamesSeen(!1)
                 .filter((e) => !!(0, d.FZ)(e, [d.ZP, m.Z, g.Z]).detectable && null != e.lastLaunched && 30 >= i()().diff(e.lastLaunched, 'days'))
-                .map((e) => e.id)
+                .map((e) => {
+                    var t, n;
+                    return null !== (n = e.id) && void 0 !== n ? n : null === (t = m.Z.getGameByGameData(e)) || void 0 === t ? void 0 : t.id;
+                })
         ),
         t = e.length,
         n = e.filter(p.lm).slice(0, t > 4 ? 3 : 4);

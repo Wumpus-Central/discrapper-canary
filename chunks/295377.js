@@ -86,13 +86,16 @@ function S(e) {
         );
     return null == l
         ? null
-        : (0, r.jsxs)(o.P3F, {
+        : (0, r.jsx)('div', {
               className: C.guildRow,
-              onClick: () => {
-                  T(!h);
-              },
-              children: [
-                  (0, r.jsxs)('div', {
+              children: (0, r.jsx)(o.j7V, {
+                  className: C.serverOptionSwitchContainer,
+                  value: h,
+                  onChange: () => {
+                      T(!h);
+                  },
+                  hideBorder: !0,
+                  children: (0, r.jsxs)('div', {
                       className: C.guildInfo,
                       children: [
                           (0, r.jsx)(o.aRk, {
@@ -125,17 +128,8 @@ function S(e) {
                               children: j.NW.formatToPlainString(E.Z.obBqMj, { count: null != g ? g : 0 })
                           })
                       ]
-                  }),
-                  (0, r.jsx)('div', {
-                      children: (0, r.jsx)(o.XZJ, {
-                          'aria-checked': h,
-                          value: h,
-                          type: o.XZJ.Types.INVERTED,
-                          innerClassName: C.checkboxInner,
-                          displayOnly: !0
-                      })
                   })
-              ]
+              })
           });
 }
 function T() {
