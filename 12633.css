@@ -13945,8 +13945,13 @@ div.cardContainer__88e24 {
     opacity: .5;
     height: 100%;
     transition: opacity .3s ease, transform .3s ease;
-    min-width: 320px;
     width: 100%
+}
+
+@container (max-width: 320px) {
+    .img__4bbc6 {
+        width: auto
+    }
 }
 
 .img__4bbc6.hover__4bbc6 {

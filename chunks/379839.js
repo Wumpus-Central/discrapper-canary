@@ -55,10 +55,11 @@ function m(e, t, n, s, l) {
                 return;
             }
             let i = new ResizeObserver((e) => {
-                let t = e[0].contentRect.width;
+                let t = e[0].contentRect.width,
+                    n = Math.max(t - 50, 0);
                 d({
                     background: r,
-                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(0.9 * t, 'px, rgba(0, 0, 0, 1) ').concat(1.5 * t, 'px)')
+                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(t, 'px)')
                 });
             });
             return i.observe(s), () => i.disconnect();
