@@ -11,7 +11,15 @@ var r = n(200651),
     l = n(266850);
 let c = {
         '1333912750274904064': { asset: n(406449).Z },
-        [a.xJ]: { renderAsset: () => (0, r.jsx)(o.Z, { className: s.orbProfileBadgeAsset }) }
+        [a.xJ]: {
+            renderAsset: (e) => {
+                let { animationState: t = 'always' } = e;
+                return (0, r.jsx)(o.Z, {
+                    animationState: t,
+                    className: s.orbProfileBadgeAsset
+                });
+            }
+        }
     },
     u = (e) => e in c,
     d = () => ({
