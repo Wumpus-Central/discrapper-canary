@@ -150,16 +150,19 @@ async function T(t, e, n) {
                 );
             });
 }
-async function c() {
+async function c(t) {
     E.Z.dispatch({ type: 'SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START' });
-    let t = _.default.getSuspendedUserToken(),
-        e = u.ANM.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
-        n = i.tn.post({
-            url: e,
-            body: { token: t },
+    let e = _.default.getSuspendedUserToken(),
+        n = u.ANM.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
+        l = i.tn.post({
+            url: n,
+            body: {
+                token: e,
+                fromClassificationId: t
+            },
             rejectWithError: !1
         });
-    await n
+    await l
         .then((t) => {
             let { body: e } = t,
                 { verification_request_id: n, verification_webview_url: i } = e;

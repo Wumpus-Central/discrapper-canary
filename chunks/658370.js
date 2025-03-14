@@ -13,11 +13,11 @@ var i = n(120356),
     g = n(409100),
     p = n(474936),
     h = n(388032),
-    f = n(596470);
+    f = n(194511);
 let b = (e) => {
     var t;
     let n;
-    let { title: i, titleClassName: b = '', buttonClassName: N = '', subtitle: x = '', description: _ = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
+    let { title: i, titleClassName: b = '', buttonClassName: x = '', subtitle: N = '', description: _ = '', descriptionCta: E = '', isPremiumGetCta: j, onCtaClick: C, cardVariant: O } = e,
         v = (0, d.N)(),
         S = null == v ? void 0 : v.subscription_trial,
         T = (0, c.Ng)(),
@@ -40,22 +40,23 @@ let b = (e) => {
                 title: i,
                 cardVariantStyleInfo: A,
                 titleClassName: b,
-                subtitle: x,
+                subtitle: N,
                 description: _
             }),
             j &&
                 (0, r.jsx)(g.Z, {
-                    className: N,
+                    className: x,
+                    look: a.zxk.Looks.BLANK,
+                    color: a.zxk.Colors.CUSTOM,
                     subscriptionTier: p.Si.TIER_2,
                     buttonText: y,
-                    color: a.zxk.Colors.GREEN,
-                    look: a.zxk.Looks.FILLED
+                    showGradient: !0
                 }),
             0 !== E.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != C &&
                 (0, r.jsx)(a.zxk, {
-                    className: N,
+                    className: x,
                     onClick: C,
                     children: E
                 })
