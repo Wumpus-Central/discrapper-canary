@@ -2,12 +2,11 @@ n.d(t, {
     EJ: () => h,
     Pb: () => p,
     XV: () => _,
-    Z4: () => g,
     Zp: () => m,
-    f6: () => E,
+    f6: () => g,
     ky: () => b,
-    p0: () => O,
-    pY: () => y
+    p0: () => y,
+    pY: () => v
 }),
     n(230036);
 var r = n(108131),
@@ -40,10 +39,7 @@ function m(e, t) {
     var n, r;
     return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.profile) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.profile) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
-function g(e, t) {
-    return null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled;
-}
-let E = (e, t) => {
+let g = (e, t) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[0];
         if (2 === e.length)
@@ -68,7 +64,7 @@ let E = (e, t) => {
             });
         }
     },
-    v = {
+    E = {
         [u.NC.SIZE_12]: 16,
         [u.NC.SIZE_16]: 16,
         [u.NC.SIZE_24]: 24,
@@ -80,15 +76,15 @@ function b(e, t) {
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
-    let i = v[n];
+    let i = E[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function y(e, t) {
+function v(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function O(e, t) {
+function y(e, t) {
     let n = (0, o.e7)([a.Z], () => a.Z.hideTags),
         r = (0, o.e7)([c.default], () => c.default.getUser(e), [e]),
         i = (0, o.e7)(

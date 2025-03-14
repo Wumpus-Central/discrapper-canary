@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     container: 'container__80da8',
     gameIcon: 'gameIcon__80da8',
     gameIconImage: 'gameIconImage__80da8',
@@ -12,3 +12,4 @@ e.exports = {
     gameActivityLevelInner: 'gameActivityLevelInner__80da8',
     favoriteGameContainer: 'favoriteGameContainer__80da8'
 };
+e.exports = r;
