@@ -1,43 +1,40 @@
 r.d(t, { default: () => d });
 var n = r(200651);
 r(192379);
-var a = r(174609),
-    o = r(703656),
+var o = r(174609),
+    a = r(703656),
     s = r(626135),
     c = r(790527),
     l = r(474936),
-    b = r(981631),
-    i = r(388032),
-    u = r(593064);
+    i = r(981631),
+    u = r(388032),
+    b = r(593064);
 function d(e) {
     var { onClose: t } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                a = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        a = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
-                    return a;
+                        o = {},
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
-            return a;
+            return o;
         })(e, ['onClose']);
     let f = (0, n.jsx)('img', {
-            src: r(414190),
-            className: u.art,
-            alt: ''
-        }),
-        O = (0, n.jsxs)(n.Fragment, {
-            children: [(0, n.jsx)('div', { className: u.blur0 }), (0, n.jsx)('div', { className: u.blur1 }), (0, n.jsx)('div', { className: u.blur2 })]
-        });
+        src: r(414190),
+        className: b.art,
+        alt: ''
+    });
     return (0, n.jsx)(
         c.Z,
         (function (e) {
@@ -66,32 +63,31 @@ function d(e) {
             return e;
         })(
             {
-                title: i.NW.string(i.t.YqknLi),
-                glowUp: i.NW.string(i.t['3hj4kZ']),
-                body: i.NW.string(i.t['3hj4kZ']),
+                title: u.NW.string(u.t.YqknLi),
+                glowUp: u.NW.string(u.t['3hj4kZ']),
+                body: u.NW.string(u.t['3hj4kZ']),
                 artElement: f,
-                artContainerClassName: u.artContainer,
+                artContainerClassName: b.artContainer,
                 type: l.cd.VOICE_FILTERS_UPSELL,
                 onClose: t,
-                onSubscribeClick: a.Z,
-                secondaryCTA: i.NW.string(i.t.ZnqyZ2),
+                onSubscribeClick: o.Z,
+                secondaryCTA: u.NW.string(u.t.ZnqyZ2),
                 onSecondaryClick: function () {
-                    (0, a.Z)(),
+                    (0, o.Z)(),
                         t(),
-                        s.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
-                            location_section: b.jXE.VOICE_FILTERS_UPSELL_MODAL,
-                            location_object: b.qAy.NAVIGATION_LINK
+                        s.default.track(i.rMx.PREMIUM_PROMOTION_OPENED, {
+                            location_section: i.jXE.VOICE_FILTERS_UPSELL_MODAL,
+                            location_object: i.qAy.NAVIGATION_LINK
                         }),
-                        (0, o.uL)(b.Z5c.APPLICATION_STORE);
+                        (0, a.uL)(i.Z5c.APPLICATION_STORE);
                 },
                 showEnhancedUpsell: !0,
                 enableArtBoxShadow: !1,
-                headerClassName: u.header,
-                modalClassName: u.modal,
-                backgroundElements: O,
+                headerClassName: b.header,
+                modalClassName: b.modal,
                 smallText: !0,
-                footerClassName: u.footer,
-                subscribeButtonClassname: u.subscribeButton,
+                footerClassName: b.footer,
+                subscribeButtonClassname: b.subscribeButton,
                 showBetaBadge: !0
             },
             d
