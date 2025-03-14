@@ -1,128 +1,137 @@
-i.d(t, {
-    c: () => b,
-    x: () => T
+n.d(t, {
+    c: () => S,
+    x: () => C
 }),
-    i(47120),
-    i(266796);
-var n = i(200651),
-    r = i(192379),
-    l = i(120356),
-    a = i.n(l),
-    s = i(481060),
-    o = i(835473),
-    c = i(686546),
-    u = i(970606),
-    d = i(603368),
-    m = i(353093),
-    f = i(449480),
-    g = i(114487),
-    h = i(214715),
-    x = i(550271),
-    v = i(308083),
-    E = i(388032),
-    I = i(730335);
-function p(e) {
+    n(47120),
+    n(266796);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(835473),
+    c = n(686546),
+    u = n(970606),
+    d = n(603368),
+    f = n(353093),
+    _ = n(449480),
+    p = n(114487),
+    h = n(214715),
+    m = n(550271),
+    g = n(308083),
+    E = n(388032),
+    v = n(730335);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var i = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(i);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(i).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(i, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = i[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = n);
+            r.forEach(function (t) {
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var i = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      i.push.apply(i, n);
-                  }
-                  return i;
-              })(Object(t)).forEach(function (i) {
-                  Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
+            : O(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
-    let { wildcardDescriptors: t, primaryColor: i } = e,
-        l = t.filter((e) => e !== v.U6).join(', '),
+function S(e) {
+    let { wildcardDescriptors: t, primaryColor: n } = e,
+        o = t.filter((e) => e !== g.U6).join(', '),
         a = (0, s.dQu)(s.TVs.colors.BACKGROUND_FLOATING),
-        o = (0, d.pX)(i, a.hex()),
-        c = r.useRef(null),
-        [u, m] = r.useState(!1);
+        l = (0, d.pX)(n, a.hex()),
+        c = i.useRef(null),
+        [u, f] = i.useState(!1);
     if (
-        (r.useEffect(() => {
+        (i.useEffect(() => {
             let e = c.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && m(e.offsetWidth < e.scrollWidth);
+            null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth);
         }, []),
-        0 === l.length)
+        0 === o.length)
     )
         return null;
-    let f = null != o ? { color: o.css() } : void 0;
-    return (0, n.jsxs)(n.Fragment, {
+    let _ = null != l ? { color: l.css() } : void 0;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(s.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: I.clanInfoItem,
+                className: v.clanInfoItem,
                 children: '\xB7'
             }),
-            (0, n.jsx)(s.ua7, {
-                text: l,
+            (0, r.jsx)(s.ua7, {
+                text: o,
                 color: s.ua7.Colors.PRIMARY,
                 shouldShow: u,
                 children: (e) =>
-                    (0, n.jsx)(
+                    (0, r.jsx)(
                         'span',
-                        j(p({}, e), {
-                            style: f,
-                            className: I.wildCardText,
+                        I(y({}, e), {
+                            style: _,
+                            className: v.wildCardText,
                             ref: c,
-                            children: l
+                            children: o
                         })
                     )
             })
         ]
     });
 }
-function N(e) {
-    let { description: t, expanded: i } = e;
+function T(e) {
+    let { description: t, expanded: n } = e;
     return null == t
         ? null
-        : i
-          ? (0, n.jsx)('div', {
-                className: I.cardContentDescriptionSection,
-                children: (0, n.jsx)(s.Text, {
+        : n
+          ? (0, r.jsx)('div', {
+                className: v.cardContentDescriptionSection,
+                children: (0, r.jsx)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     children: t
                 })
             })
-          : (0, n.jsx)('div', {
-                className: I.cardContentDescriptionSection,
-                children: (0, n.jsx)(s.Text, {
-                    className: I.cardContentDescriptionCollapsed,
+          : (0, r.jsx)('div', {
+                className: v.cardContentDescriptionSection,
+                children: (0, r.jsx)(s.Text, {
+                    className: v.cardContentDescriptionCollapsed,
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     lineClamp: 4,
@@ -130,33 +139,33 @@ function N(e) {
                 })
             });
 }
-function y(e) {
-    let { traits: t, traitsToHighlight: i, onInteraction: l } = e,
-        o = r.useMemo(() => (null == i ? new Set() : new Set(i)), [i]),
-        c = r.useCallback(
+function N(e) {
+    let { traits: t, traitsToHighlight: n, onInteraction: o } = e,
+        l = i.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
+        c = i.useCallback(
             (e) =>
-                (0, n.jsx)(
+                (0, r.jsx)(
                     h.Z,
                     {
-                        className: a()(I.thinTrait, { [I.selectedTrait]: o.has(e) }),
+                        className: a()(v.thinTrait, { [v.selectedTrait]: l.has(e) }),
                         text: e,
-                        selected: o.has(e)
+                        selected: l.has(e)
                     },
                     e
                 ),
-            [o]
+            [l]
         ),
-        u = r.useCallback(
+        u = i.useCallback(
             (e) =>
-                (0, n.jsx)(s.te1, {
+                (0, r.jsx)(s.te1, {
                     items: e,
                     renderItem: c,
-                    onTooltipShow: l
+                    onTooltipShow: o
                 }),
-            [c, l]
+            [c, o]
         );
-    return (0, n.jsx)(s.Epb, {
-        className: I.traitsContainer,
+    return (0, r.jsx)(s.Epb, {
+        className: v.traitsContainer,
         items: t,
         renderItem: c,
         renderOverflow: u,
@@ -164,41 +173,41 @@ function y(e) {
         itemGapPx: 4
     });
 }
-function _(e) {
-    let { hasPendingJoinRequest: t, atMaxMemberCapacity: i, isGuildMember: r } = e;
+function A(e) {
+    let { hasPendingJoinRequest: t, atMaxMemberCapacity: n, isGuildMember: i } = e;
     return t
-        ? (0, n.jsxs)('div', {
-              className: I.headerBadge,
+        ? (0, r.jsxs)('div', {
+              className: v.headerBadge,
               children: [
-                  (0, n.jsx)(s.wGF, { size: 'xxs' }),
-                  (0, n.jsx)(s.Text, {
+                  (0, r.jsx)(s.wGF, { size: 'xxs' }),
+                  (0, r.jsx)(s.Text, {
                       variant: 'text-xs/medium',
                       color: 'text-normal',
                       children: E.NW.string(E.t['J+MVEx'])
                   })
               ]
           })
-        : r
-          ? (0, n.jsxs)('div', {
-                className: I.headerBadge,
+        : i
+          ? (0, r.jsxs)('div', {
+                className: v.headerBadge,
                 children: [
-                    (0, n.jsx)(s.owK, {
+                    (0, r.jsx)(s.owK, {
                         size: 'xxs',
                         color: s.TVs.colors.STATUS_POSITIVE
                     }),
-                    (0, n.jsx)(s.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-normal',
                         children: E.NW.string(E.t.cEnaW1)
                     })
                 ]
             })
-          : i
-            ? (0, n.jsxs)('div', {
-                  className: I.headerBadge,
+          : n
+            ? (0, r.jsxs)('div', {
+                  className: v.headerBadge,
                   children: [
-                      (0, n.jsx)(s.mBM, { size: 'xxs' }),
-                      (0, n.jsx)(s.Text, {
+                      (0, r.jsx)(s.mBM, { size: 'xxs' }),
+                      (0, r.jsx)(s.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
                           children: E.NW.string(E.t['76GQ2t'])
@@ -207,205 +216,205 @@ function _(e) {
               })
             : null;
 }
-function T(e) {
+function C(e) {
     var t;
-    let { clan: i, bannerComponent: l, expanded: d, isMember: h = !1, traitsToHighlight: T, prioritizedGameIds: O, className: S, position: C, showBrandingFooter: A = !1, bannerUrl: P, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: L = !1, atMaxMemberCapacity: R = !1, footer: w = null } = e,
+    let { clan: n, bannerComponent: o, expanded: d, isMember: h = !1, traitsToHighlight: b, prioritizedGameIds: O, className: C, position: R, showBrandingFooter: P = !1, bannerUrl: w, onlyAnimateIconOnHover: D = !1, hasPendingJoinRequest: L = !1, atMaxMemberCapacity: x = !1, footer: M = null } = e,
         {
-            tag: G,
-            badge: F,
-            branding: { primaryColor: V, secondaryColor: M },
+            tag: k,
+            badge: j,
+            branding: { primaryColor: U, secondaryColor: G },
             bannerHash: B,
-            gameActivity: U
-        } = i,
-        Z = (0, o.Z)(i.games),
-        [k, W] = r.useState(!1),
-        H = r.useRef(null),
-        [Y, z] = r.useState(!1),
-        J = r.useCallback(() => {
-            W(!0);
+            gameActivity: V
+        } = n,
+        F = (0, l.Z)(n.games),
+        [Z, H] = i.useState(!1),
+        W = i.useRef(null),
+        [Y, K] = i.useState(!1),
+        z = i.useCallback(() => {
+            H(!0);
         }, []),
-        q = r.useCallback(() => {
-            W(!1);
+        q = i.useCallback(() => {
+            H(!1);
         }, []),
-        K = E.NW.formatToPlainString(E.t['0WHArK'], { count: i.memberCount }),
-        Q = null != P ? P : (0, m.pY)(i.id, B),
-        X = null == l && null == Q ? { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(M, ')') } : void 0,
+        Q = E.NW.formatToPlainString(E.t['0WHArK'], { count: n.memberCount }),
+        X = null != w ? w : (0, f.pY)(n.id, B),
+        J = null == o && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') } : void 0,
         $ =
-            null != l
-                ? l
-                : null != Q
-                  ? (0, n.jsx)('img', {
+            null != o
+                ? o
+                : null != X
+                  ? (0, r.jsx)('img', {
                         alt: E.NW.string(E.t.nH6S2d),
-                        src: Q,
-                        className: I.bannerImage
+                        src: X,
+                        className: v.bannerImage
                     })
                   : null,
-        ee = r.useMemo(() => (0, v.HR)(i.traits, T), [i.traits, T]);
-    r.useEffect(() => {
-        let e = H.current;
-        null != e && null != e.offsetWidth && null != e.scrollWidth && z(e.offsetWidth < e.scrollWidth);
+        ee = i.useMemo(() => (0, g.HR)(n.traits, b), [n.traits, b]);
+    i.useEffect(() => {
+        let e = W.current;
+        null != e && null != e.offsetWidth && null != e.scrollWidth && K(e.offsetWidth < e.scrollWidth);
     }, []);
-    let et = r.useCallback(
+    let et = i.useCallback(
         (e) => () => {
             (0, u.Gh)({
-                position: C,
-                guildId: i.id,
+                position: R,
+                guildId: n.id,
                 feature: e
             });
         },
-        [C, i.id]
+        [R, n.id]
     );
-    return (0, n.jsxs)('div', {
-        className: a()(I.card, { [I.cardStaticHeight]: !d }, S),
-        onMouseEnter: J,
+    return (0, r.jsxs)('div', {
+        className: a()(v.card, { [v.cardStaticHeight]: !d }, C),
+        onMouseEnter: z,
         onMouseLeave: q,
         children: [
-            (0, n.jsxs)('div', {
-                className: I.cardBrandingHeader,
-                style: X,
+            (0, r.jsxs)('div', {
+                className: v.cardBrandingHeader,
+                style: J,
                 children: [
                     $,
-                    (0, n.jsx)(_, {
+                    (0, r.jsx)(A, {
                         hasPendingJoinRequest: L,
-                        atMaxMemberCapacity: R,
+                        atMaxMemberCapacity: x,
                         isGuildMember: h
                     })
                 ]
             }),
-            (0, n.jsxs)('div', {
-                className: I.cardContent,
+            (0, r.jsxs)('div', {
+                className: v.cardContent,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: I.cardContentTitleSection,
+                    (0, r.jsxs)('div', {
+                        className: v.cardContentTitleSection,
                         children: [
-                            (0, n.jsxs)('div', {
-                                className: I.cardNameAndTagWrapper,
+                            (0, r.jsxs)('div', {
+                                className: v.cardNameAndTagWrapper,
                                 children: [
-                                    (0, n.jsx)(c.ZP, {
+                                    (0, r.jsx)(c.ZP, {
                                         mask: c.QS.CLAN_ICON,
                                         width: 70,
                                         height: 70,
-                                        className: I.clanIconMask,
-                                        children: (0, n.jsx)('div', {
-                                            className: I.clanIconInner,
-                                            children: (0, n.jsx)(g.b, {
-                                                guildId: i.id,
-                                                guildName: i.name,
-                                                guildIcon: i.icon,
+                                        className: v.clanIconMask,
+                                        children: (0, r.jsx)('div', {
+                                            className: v.clanIconInner,
+                                            children: (0, r.jsx)(p.b, {
+                                                guildId: n.id,
+                                                guildName: n.name,
+                                                guildIcon: n.icon,
                                                 iconSize: 64,
-                                                animate: !D || k
+                                                animate: !D || Z
                                             })
                                         })
                                     }),
-                                    (0, n.jsx)('div', {
-                                        className: I.clanTagChipletWrapper,
-                                        children: (0, n.jsxs)('div', {
-                                            className: I.clanTagChiplet,
+                                    (0, r.jsx)('div', {
+                                        className: v.clanTagChipletWrapper,
+                                        children: (0, r.jsxs)('div', {
+                                            className: v.clanTagChiplet,
                                             children: [
-                                                (0, n.jsx)(x.A, {
+                                                (0, r.jsx)(m.A, {
                                                     width: 16,
                                                     height: 16,
-                                                    badge: F.badgeKind,
-                                                    primaryTintColor: F.primaryColor,
-                                                    secondaryTintColor: F.secondaryColor
+                                                    badge: j.badgeKind,
+                                                    primaryTintColor: j.primaryColor,
+                                                    secondaryTintColor: j.secondaryColor
                                                 }),
-                                                (0, n.jsx)(s.Text, {
+                                                (0, r.jsx)(s.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-primary',
-                                                    children: G
+                                                    children: k
                                                 })
                                             ]
                                         })
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(s.X6q, {
+                            (0, r.jsx)(s.X6q, {
                                 variant: 'heading-md/medium',
                                 color: 'header-primary',
                                 lineClamp: 1,
-                                children: (0, n.jsx)(s.ua7, {
-                                    text: i.name,
+                                children: (0, r.jsx)(s.ua7, {
+                                    text: n.name,
                                     color: s.ua7.Colors.PRIMARY,
                                     shouldShow: Y,
                                     children: (e) =>
-                                        (0, n.jsx)(
+                                        (0, r.jsx)(
                                             'span',
-                                            j(p({}, e), {
-                                                ref: H,
-                                                className: I.nameText,
-                                                children: i.name
+                                            I(y({}, e), {
+                                                ref: W,
+                                                className: v.nameText,
+                                                children: n.name
                                             })
                                         )
                                 })
                             }),
-                            (0, n.jsxs)('div', {
-                                className: I.clanInfoRow,
+                            (0, r.jsxs)('div', {
+                                className: v.clanInfoRow,
                                 children: [
-                                    (0, n.jsx)(s.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         variant: 'text-xxs/normal',
-                                        className: I.clanInfoItem,
-                                        children: (0, n.jsx)('span', {
+                                        className: v.clanInfoItem,
+                                        children: (0, r.jsx)('span', {
                                             role: 'img',
                                             'aria-label': E.NW.string(E.t.eMSBIC),
                                             children: '\uD83C\uDFAE'
                                         })
                                     }),
-                                    (0, n.jsx)(s.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-secondary',
-                                        className: I.clanInfoItem,
-                                        children: null !== (t = (0, v.mv)(i.playstyle)) && void 0 !== t ? t : E.NW.string(E.t.JijC4O)
+                                        className: v.clanInfoItem,
+                                        children: null !== (t = (0, g.mv)(n.playstyle)) && void 0 !== t ? t : E.NW.string(E.t.JijC4O)
                                     }),
-                                    (0, n.jsx)(b, {
-                                        wildcardDescriptors: i.wildcardDescriptors,
-                                        primaryColor: i.branding.primaryColor
+                                    (0, r.jsx)(S, {
+                                        wildcardDescriptors: n.wildcardDescriptors,
+                                        primaryColor: n.branding.primaryColor
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, n.jsx)(N, {
-                        description: i.description,
+                    (0, r.jsx)(T, {
+                        description: n.description,
                         expanded: d
                     }),
-                    (0, n.jsx)(y, {
+                    (0, r.jsx)(N, {
                         traits: ee,
-                        traitsToHighlight: T,
+                        traitsToHighlight: b,
                         onInteraction: et('traits')
                     })
                 ]
             }),
-            (0, n.jsxs)('div', {
-                className: I.cardFooter,
+            (0, r.jsxs)('div', {
+                className: v.cardFooter,
                 children: [
-                    (0, n.jsx)('div', {
-                        className: I.cardFooterInfo,
-                        children: (0, n.jsx)('div', {
-                            className: I.cardFooterMembers,
-                            children: (0, n.jsx)(s.Text, {
+                    (0, r.jsx)('div', {
+                        className: v.cardFooterInfo,
+                        children: (0, r.jsx)('div', {
+                            className: v.cardFooterMembers,
+                            children: (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
-                                children: K
+                                children: Q
                             })
                         })
                     }),
-                    (0, n.jsx)('div', {
-                        className: I.cardFooterGames,
-                        children: (0, n.jsx)(f.Z, {
-                            games: Z,
+                    (0, r.jsx)('div', {
+                        className: v.cardFooterGames,
+                        children: (0, r.jsx)(_.Z, {
+                            games: F,
                             prioritizedGameIds: O,
-                            gameActivity: U,
+                            gameActivity: V,
                             onInteraction: et('games')
                         })
                     })
                 ]
             }),
-            A &&
-                (0, n.jsx)('div', {
-                    className: I.cardBrandingFooter,
-                    style: { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(M, ')') }
+            P &&
+                (0, r.jsx)('div', {
+                    className: v.cardBrandingFooter,
+                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') }
                 }),
-            w
+            M
         ]
     });
 }

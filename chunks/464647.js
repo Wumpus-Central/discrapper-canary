@@ -1,27 +1,14 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => h });
 var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(97028),
-    l = n(481060),
-    c = n(686546),
+    l = n(192379),
+    i = n(120356),
+    a = n.n(i),
+    o = n(97028),
+    c = n(481060),
+    s = n(686546),
     u = n(562558),
     d = n(386962);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,75 +19,76 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function h(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = 10,
-    g = 2;
-function E(e) {
-    let { game: t, activityLevel: n, hideTooltip: i } = e,
-        o = t.getIconURL(24);
-    if (null == o) return null;
-    let a = !i,
-        u = (null == n ? void 0 : n.level) === s.m.HIGH,
-        f = (0, r.jsx)(l.Text, {
+function f(e) {
+    let { game: t, activityLevel: n, hideTooltip: l } = e,
+        i = t.getIconURL(24);
+    if (null == i) return null;
+    let a = (null == n ? void 0 : n.level) === o.m.HIGH,
+        u = (0, r.jsx)(c.Text, {
             variant: 'text-sm/medium',
             color: 'interactive-active',
             children: t.name
         });
-    return (0, r.jsx)(l.ua7, {
-        text: f,
+    return (0, r.jsx)(c.ua7, {
+        text: u,
         position: 'bottom',
         'aria-label': t.name,
-        shouldShow: a,
+        shouldShow: !l,
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                h(_({}, e), {
+                v(m({}, e), {
                     className: d.gameIcon,
                     children: [
                         (0, r.jsx)('img', {
                             className: d.gameIconImage,
-                            src: o,
+                            src: i,
                             alt: t.name
                         }),
-                        u &&
-                            (0, r.jsx)(c.ZP, {
-                                mask: c.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
-                                width: m + 2 * g,
-                                height: m + 2 * g,
+                        a &&
+                            (0, r.jsx)(s.ZP, {
+                                mask: s.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
+                                width: 14,
+                                height: 14,
                                 className: d.gameActivityLevel,
                                 children: (0, r.jsx)('div', {
                                     className: d.gameActivityLevelInner,
-                                    children: (0, r.jsx)(l.YqE, {
-                                        color: l.TVs.unsafe_rawColors.ORANGE_330.css,
-                                        width: m,
-                                        height: m,
+                                    children: (0, r.jsx)(c.YqE, {
+                                        color: c.TVs.unsafe_rawColors.ORANGE_330.css,
+                                        width: 10,
+                                        height: 10,
                                         size: 'custom'
                                     })
                                 })
@@ -110,7 +98,7 @@ function E(e) {
             )
     });
 }
-function b(e) {
+function I(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)('div', {
         className: d.extraGamesContainer,
@@ -120,11 +108,11 @@ function b(e) {
                 {
                     className: d.extraGameRow,
                     children: [
-                        (0, r.jsx)(E, {
+                        (0, r.jsx)(f, {
                             game: e,
                             activityLevel: n[e.id]
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/medium',
                             color: 'interactive-active',
                             children: e.name
@@ -136,17 +124,17 @@ function b(e) {
         )
     });
 }
-function v(e) {
+function j(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)('div', {
         className: d.favoriteGameContainer,
         children: [
-            (0, r.jsx)(E, {
+            (0, r.jsx)(f, {
                 game: t,
                 activityLevel: n,
                 hideTooltip: !0
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-normal',
                 children: t.name
@@ -154,68 +142,68 @@ function v(e) {
         ]
     });
 }
-function y(e) {
+function h(e) {
     let { profile: t } = e,
         n = t.gameActivity,
-        { gamesToDisplay: o, lastGameToDisplay: s, remainingGames: c } = (0, u.Z)(t),
-        f = i.useMemo(() => {
-            if (null == s) return null;
-            let e = s.getIconURL(24);
-            if (null == e) return null;
-            if (0 === c.length)
-                return (0, r.jsx)(E, {
-                    game: s,
-                    activityLevel: n[s.id]
-                });
-            let t = c;
-            return (0, r.jsx)(l.ua7, {
-                'aria-label': '',
-                position: 'bottom',
-                text: (0, r.jsx)(b, {
-                    games: t,
-                    activity: n
-                }),
-                children: (n) =>
-                    (0, r.jsxs)(
-                        'div',
-                        h(_({}, n), {
-                            className: a()(d.gameIcon, d.extraGameItem),
-                            children: [
-                                (0, r.jsx)('img', {
-                                    className: a()(d.gameIconImage, d.extraGameIconImage),
-                                    src: e,
-                                    alt: s.name
-                                }),
-                                (0, r.jsx)('div', { className: d.extraGameOverlay }),
-                                (0, r.jsx)('div', {
-                                    className: d.extraGameText,
-                                    children: (0, r.jsx)(l.Text, {
-                                        variant: 'text-xs/normal',
-                                        color: 'always-white',
-                                        children: '+'.concat(t.length)
-                                    })
+        { gamesToDisplay: i, lastGameToDisplay: o, remainingGames: s } = (0, u.Z)(t),
+        h = l.useMemo(() => {
+            if (null == o) return null;
+            let e = o.getIconURL(24);
+            return null == e
+                ? null
+                : 0 === s.length
+                  ? (0, r.jsx)(f, {
+                        game: o,
+                        activityLevel: n[o.id]
+                    })
+                  : (0, r.jsx)(c.ua7, {
+                        'aria-label': '',
+                        position: 'bottom',
+                        text: (0, r.jsx)(I, {
+                            games: s,
+                            activity: n
+                        }),
+                        children: (t) =>
+                            (0, r.jsxs)(
+                                'div',
+                                v(m({}, t), {
+                                    className: a()(d.gameIcon, d.extraGameItem),
+                                    children: [
+                                        (0, r.jsx)('img', {
+                                            className: a()(d.gameIconImage, d.extraGameIconImage),
+                                            src: e,
+                                            alt: o.name
+                                        }),
+                                        (0, r.jsx)('div', { className: d.extraGameOverlay }),
+                                        (0, r.jsx)('div', {
+                                            className: d.extraGameText,
+                                            children: (0, r.jsx)(c.Text, {
+                                                variant: 'text-xs/normal',
+                                                color: 'always-white',
+                                                children: '+'.concat(s.length)
+                                            })
+                                        })
+                                    ]
                                 })
-                            ]
-                        })
-                    )
-            });
-        }, [s, c, n]);
-    return null == o || 0 === o.length
+                            )
+                    });
+        }, [o, s, n]);
+    return null == i || 0 === i.length
         ? null
-        : 1 === o.length
+        : 1 === i.length
           ? (0, r.jsx)('div', {
                 className: d.container,
-                children: (0, r.jsx)(v, {
-                    game: o[0],
-                    activityLevel: n[o[0].id]
+                children: (0, r.jsx)(j, {
+                    game: i[0],
+                    activityLevel: n[i[0].id]
                 })
             })
           : (0, r.jsxs)('div', {
                 className: d.container,
                 children: [
-                    o.map((e) =>
+                    i.map((e) =>
                         (0, r.jsx)(
-                            E,
+                            f,
                             {
                                 game: e,
                                 activityLevel: n[e.id]
@@ -223,7 +211,7 @@ function y(e) {
                             e.id
                         )
                     ),
-                    f
+                    h
                 ]
             });
 }

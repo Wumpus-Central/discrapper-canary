@@ -1,1 +1,2 @@
-e.exports = { customButton: 'customButton__70335' };
+var r = { customButton: 'customButton__70335' };
+e.exports = r;

@@ -1,70 +1,69 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(442837),
-    l = n(481060),
-    c = n(100527),
-    u = n(906732),
-    d = n(699553),
-    f = n(314852),
-    _ = n(65361),
-    p = n(722300),
-    h = n(910200),
-    m = n(323220),
-    g = n(535960);
-let E = 50001;
-function b(e) {
-    let { guildId: t, name: n, setPopoutRef: o } = e,
-        { analyticsLocations: b } = (0, u.ZP)(c.Z.GUILD_PROFILE),
-        { guildProfile: v, fetchGuildProfile: y, fetchStatus: O } = (0, _.u)(t),
-        I = (0, s.e7)([f.Z], () => f.Z.getErrorCode(t)),
-        S = i.useRef(null),
-        T = i.useCallback(() => {
-            y(!0);
-        }, [y]);
-    i.useEffect(() => {
-        y();
-    }, [y]),
-        i.useEffect(() => {
-            (0, d.vb)(t, b);
-        }, [t, b]),
-        i.useEffect(() => {
-            null == o || o(null == S ? void 0 : S.current);
-        }, [S, o]);
-    let N = i.useMemo(
+    l = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    i = n(442837),
+    c = n(481060),
+    o = n(100527),
+    d = n(906732),
+    u = n(699553),
+    m = n(314852),
+    h = n(65361),
+    j = n(722300),
+    f = n(910200),
+    p = n(323220),
+    b = n(535960);
+function g(e) {
+    let { guildId: t, name: n, setPopoutRef: s } = e,
+        { analyticsLocations: g } = (0, d.ZP)(o.Z.GUILD_PROFILE),
+        { guildProfile: x, fetchGuildProfile: O, fetchStatus: P } = (0, h.u)(t),
+        v = (0, i.e7)([m.Z], () => m.Z.getErrorCode(t)),
+        y = l.useRef(null),
+        N = l.useCallback(() => {
+            O(!0);
+        }, [O]);
+    l.useEffect(() => {
+        O();
+    }, [O]),
+        l.useEffect(() => {
+            (0, u.vb)(t, g);
+        }, [t, g]),
+        l.useEffect(() => {
+            null == s || s(null == y ? void 0 : y.current);
+        }, [y, s]);
+    let w = l.useMemo(
         () =>
-            O === f.a.NOT_FETCHED || O === f.a.FETCHING
+            P === m.a.NOT_FETCHED || P === m.a.FETCHING
                 ? (0, r.jsx)('div', {
-                      className: a()(g.container, g.spinnerContainer),
-                      children: (0, r.jsx)(l.$jN, {})
+                      className: a()(b.container, b.spinnerContainer),
+                      children: (0, r.jsx)(c.$jN, {})
                   })
-                : null == v && I === E
+                : null == x && 50001 === v
                   ? (0, r.jsx)('div', {
-                        className: g.container,
-                        children: (0, r.jsx)(m.Z, {
+                        className: b.container,
+                        children: (0, r.jsx)(p.Z, {
                             guildId: t,
                             name: n
                         })
                     })
-                  : null == v
+                  : null == x
                     ? (0, r.jsx)('div', {
-                          className: g.container,
-                          children: (0, r.jsx)(p.Z, {
+                          className: b.container,
+                          children: (0, r.jsx)(j.Z, {
                               name: n,
-                              onRetry: T
+                              onRetry: N
                           })
                       })
                     : (0, r.jsx)('div', {
-                          className: g.container,
-                          children: (0, r.jsx)(h.ZP, { profile: v })
+                          className: b.container,
+                          children: (0, r.jsx)(f.ZP, { profile: x })
                       }),
-        [O, v, I, t, n, T]
+        [P, x, v, t, n, N]
     );
-    return (0, r.jsx)(l.VqE, {
-        ref: S,
-        'aria-label': null == v ? void 0 : v.name,
-        children: N
+    return (0, r.jsx)(c.VqE, {
+        ref: y,
+        'aria-label': null == x ? void 0 : x.name,
+        children: w
     });
 }

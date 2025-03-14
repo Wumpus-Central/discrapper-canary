@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     card: 'card__5bdf8',
     cardStaticHeight: 'cardStaticHeight__5bdf8',
     clanIconMask: 'clanIconMask__5bdf8',
@@ -28,3 +28,4 @@ e.exports = {
     pulseIn: 'pulseIn__5bdf8',
     pulseOut: 'pulseOut__5bdf8'
 };
+e.exports = r;

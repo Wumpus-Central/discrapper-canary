@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     gameImageContainer: 'gameImageContainer_ed15e7',
     highlighted: 'highlighted_ed15e7',
     extraGameCount: 'extraGameCount_ed15e7',
@@ -12,3 +12,4 @@ e.exports = {
     tooltipGames: 'tooltipGames_ed15e7',
     tooltipGame: 'tooltipGame_ed15e7'
 };
+e.exports = r;

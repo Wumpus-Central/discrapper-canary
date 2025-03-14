@@ -1,34 +1,32 @@
-n.d(t, { Z: () => c }), n(230036);
+n.d(t, { Z: () => a }), n(230036);
 var r = n(192379),
-    i = n(835473),
-    o = n(823379);
-let a = 5;
-function s(e) {
-    return (t, n) => {
-        var r, i, o, a;
-        let s = null !== (o = null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== o ? o : 0,
-            l = null !== (a = null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== a ? a : 0;
-        return s !== l ? l - s : 0;
-    };
-}
-function l(e) {
-    let t = (0, i.Z)(e.gameApplicationIds);
-    return r.useMemo(() => t.filter(o.lm), [t]);
-}
-function c(e) {
+    l = n(835473),
+    i = n(823379);
+function a(e) {
     let t = e.gameActivity,
-        n = l(e),
-        i = r.useMemo(() => {
-            let e = s(t);
-            return n.sort(e), n;
-        }, [n, t]),
-        o = r.useMemo(() => i.slice(0, a), [i]);
+        n = (function (e) {
+            let t = (0, l.Z)(e.gameApplicationIds);
+            return r.useMemo(() => t.filter(i.lm), [t]);
+        })(e),
+        a = r.useMemo(
+            () => (
+                n.sort((e, n) => {
+                    var r, l, i, a;
+                    let o = null !== (i = null === (r = t[e.id]) || void 0 === r ? void 0 : r.score) && void 0 !== i ? i : 0,
+                        c = null !== (a = null === (l = t[n.id]) || void 0 === l ? void 0 : l.score) && void 0 !== a ? a : 0;
+                    return o !== c ? c - o : 0;
+                }),
+                n
+            ),
+            [n, t]
+        ),
+        o = r.useMemo(() => a.slice(0, 5), [a]);
     return {
         gamesToDisplay: o,
         lastGameToDisplay: r.useMemo(() => {
             var e;
-            return null !== (e = i[a]) && void 0 !== e ? e : null;
-        }, [i]),
-        remainingGames: r.useMemo(() => i.slice(a), [i])
+            return null !== (e = a[5]) && void 0 !== e ? e : null;
+        }, [a]),
+        remainingGames: r.useMemo(() => a.slice(5), [a])
     };
 }

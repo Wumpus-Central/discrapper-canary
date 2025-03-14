@@ -19,8 +19,8 @@ var r = n(200651),
     m = n(979264),
     g = n(554300),
     E = n(558602),
-    b = n(736144),
-    v = n(113434),
+    v = n(736144),
+    b = n(113434),
     y = n(553393),
     O = n(518950),
     I = n(594174),
@@ -88,20 +88,20 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     j = 3,
     U = function (e) {
         var t;
-        let { selected: n = !1, colorString: o, colorRoleName: s, isOwner: T, ownerTooltipText: D, lostPermissionTooltipText: x, isTyping: k = !1, nick: U, user: G, currentUser: B, activities: F, applicationStream: V, status: Z, shouldAnimateStatus: H = !1, isMobile: W, premiumSince: Y, channel: K, guildId: z, className: q, nameplate: Q, hideClanTag: X = !1, hideSubtext: J = !1, onMouseDown: $, onKeyDown: ee, onClick: et, onContextMenu: en, onClickPremiumGuildIcon: er, onFocus: ei, 'aria-controls': eo, 'aria-expanded': ea, 'aria-posinset': es, 'aria-setsize': el, id: ec, tabIndex: eu, itemProps: ed } = e,
+        let { selected: n = !1, colorString: o, colorRoleName: s, isOwner: T, ownerTooltipText: D, lostPermissionTooltipText: x, isTyping: k = !1, nick: U, user: G, currentUser: B, activities: V, applicationStream: F, status: Z, shouldAnimateStatus: H = !1, isMobile: W, premiumSince: Y, channel: K, guildId: z, className: q, nameplate: Q, hideClanTag: X = !1, hideSubtext: J = !1, onMouseDown: $, onKeyDown: ee, onClick: et, onContextMenu: en, onClickPremiumGuildIcon: er, onFocus: ei, 'aria-controls': eo, 'aria-expanded': ea, 'aria-posinset': es, 'aria-setsize': el, id: ec, tabIndex: eu, itemProps: ed } = e,
             ef = null == G ? void 0 : G.id,
             e_ = N.ZP.useName(G),
             ep = (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ef,
             eh = i.useRef(null),
             [em, eg] = i.useState(!1),
-            [eE, eb] = i.useState(null),
-            { voiceChannel: ev } = (0, f.Z)({
+            [eE, ev] = i.useState(null),
+            { voiceChannel: eb } = (0, f.Z)({
                 userId: ef,
                 guildId: z,
                 surface: 'member-list-item'
             }),
             { voiceActivityStatusEnabled: ey } = (0, u.U)({ location: 'MemberListItem' }),
-            eO = ey ? ev : void 0,
+            eO = ey ? eb : void 0,
             {
                 avatarDecorationSrc: eI,
                 avatarSrc: eS,
@@ -116,7 +116,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         i.useEffect(() => {
             n && eA(!1);
         }, [n]);
-        let eC = (0, v.Fr)(F),
+        let eC = (0, b.Fr)(V),
             eR = null != eC && !ep && n && !eN,
             eP = () => {
                 eg(!0);
@@ -125,23 +125,23 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 eg(!1);
             },
             eD = (e) => {
-                eb(e);
+                ev(e);
             },
             eL = () => {
                 if (J) return null;
                 if (
                     (0, d.Z)({
-                        activities: F,
+                        activities: V,
                         status: Z,
-                        applicationStream: V,
+                        applicationStream: F,
                         voiceChannel: eO
                     })
                 ) {
                     let e = !(0, E.Z)({
                         activity:
-                            null == F
+                            null == V
                                 ? void 0
-                                : F.find((e) => {
+                                : V.find((e) => {
                                       let { type: t } = e;
                                       return t === A.IIU.CUSTOM_STATUS;
                                   }),
@@ -151,8 +151,8 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     return (0, r.jsx)(_.Z, {
                         location: 'MemberListItem',
                         user: G,
-                        activities: F,
-                        applicationStream: V,
+                        activities: V,
+                        applicationStream: F,
                         voiceChannel: eO,
                         animate: em,
                         hideEmoji: e,
@@ -210,7 +210,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 }),
             eU = (e, t) => {
                 let n = H ? l.Xo$ : l.qEK,
-                    i = (0, c.Z)(F) ? A.Skl.STREAMING : Z;
+                    i = (0, c.Z)(V) ? A.Skl.STREAMING : Z;
                 return (
                     (i = t ? void 0 : i),
                     (0, r.jsxs)(r.Fragment, {
@@ -229,7 +229,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                     typingIndicatorRef: eD
                                 })
                             ),
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(v.Z, {
                                 confettiSpawnRef: eE,
                                 shouldFire: k && null != B && e.id !== B.id,
                                 confettiLocation: R.Hn.MEMBER_USER
@@ -238,7 +238,8 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     })
                 );
             },
-            eG = () =>
+            eG = i.useMemo(() => ({ source: A.jXE.MEMBER_LIST }), []),
+            eB = () =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.PUh, {
@@ -253,11 +254,12 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                 userId: null == G ? void 0 : G.id,
                                 contextGuildId: z,
                                 disableGuildProfile: !0,
-                                className: w.clanTag
+                                className: w.clanTag,
+                                profileViewedAnalytics: eG
                             })
                     ]
                 }),
-            eB = (e) =>
+            eV = (e) =>
                 (0, r.jsx)(
                     y.Z,
                     M(
@@ -265,7 +267,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             {
                                 quest: eC,
                                 memberListItemRef: eh,
-                                applicationStream: V
+                                applicationStream: F
                             },
                             e
                         ),
@@ -279,7 +281,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   className: w.placeholder
               })
             : (0, r.jsx)(l.yRy, {
-                  renderPopout: eB,
+                  renderPopout: eV,
                   position: 'bottom',
                   shouldShow: eR,
                   nudgeAlignIntoViewport: !1,
@@ -306,7 +308,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       null == x
                                           ? (0, r.jsx)('span', {
                                                 className: w.username,
-                                                children: eG()
+                                                children: eB()
                                             })
                                           : (0, r.jsx)(l.ua7, {
                                                 text: x,
@@ -315,7 +317,7 @@ let k = (0, T.Mg)(s.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                         'span',
                                                         M(L({}, e), {
                                                             className: a()(w.username, w.lostPermission),
-                                                            children: eG()
+                                                            children: eB()
                                                         })
                                                     )
                                             }),
