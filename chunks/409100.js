@@ -1,112 +1,113 @@
-n.d(t, { Z: () => f });
-var r = n(200651);
-n(192379);
-var i = n(780384),
-    s = n(481060),
-    a = n(410030),
-    l = n(74538),
-    o = n(104494),
-    c = n(639119),
-    d = n(197115),
-    u = n(474936),
-    m = n(388032),
-    g = n(459411);
-let p = (e) => {
-        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: s, subscriptionTrial: a } = e;
-        return t && s
-            ? m.NW.string(m.t.bXTClZ)
-            : t && (n === u.Si.TIER_2 || i)
+a.d(t, { Z: () => b });
+var n = a(200651);
+a(192379);
+var r = a(780384),
+    i = a(481060),
+    s = a(410030),
+    l = a(74538),
+    d = a(104494),
+    o = a(639119),
+    c = a(197115),
+    u = a(474936),
+    N = a(388032),
+    _ = a(459411);
+let m = (e) => {
+        let { showTrialCTA: t, subscriptionTier: a, trialDurationCopy: n, isPersistentCTA: r, shouldShowReferralTrialCopy: i, subscriptionTrial: s } = e;
+        return t && i
+            ? N.NW.string(N.t.bXTClZ)
+            : t && (a === u.Si.TIER_2 || r)
               ? (0, l.Rt)({
-                    intervalType: null == a ? void 0 : a.interval,
-                    intervalCount: null == a ? void 0 : a.interval_count
+                    intervalType: null == s ? void 0 : s.interval,
+                    intervalCount: null == s ? void 0 : s.interval_count
                 })
               : t
-                ? m.NW.formatToPlainString(m.t.nTmm2t, { freeTrialText: r })
+                ? N.NW.formatToPlainString(N.t.nTmm2t, { freeTrialText: n })
                 : void 0;
     },
-    h = (e, t, n, r) => (t || n ? m.NW.string(m.t.fkPGam) : e === u.Si.TIER_2 ? m.NW.formatToPlainString(m.t.bkQ4bG, { percent: r }) : void 0),
-    f = (e) => {
-        var { forceInverted: t, subscriptionTier: n, hasActivePromotion: f = !1, isPersistentCTA: b = !1, useShorterCTA: N = !1, confirmationFooter: x, planSelectBanner: _ } = e,
-            E = (function (e, t) {
+    T = (e, t, a, n) => (t || a ? N.NW.string(N.t.fkPGam) : e === u.Si.TIER_2 ? N.NW.formatToPlainString(N.t.bkQ4bG, { percent: n }) : void 0),
+    b = (e) => {
+        var { forceInverted: t, subscriptionTier: a, hasActivePromotion: b = !1, isPersistentCTA: E = !1, useShorterCTA: v = !1, showGradient: g, confirmationFooter: x, planSelectBanner: M } = e,
+            h = (function (e, t) {
                 if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
+                var a,
+                    n,
+                    r = (function (e, t) {
                         if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            s = Object.keys(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
+                        var a,
+                            n,
+                            r = {},
+                            i = Object.keys(e);
+                        for (n = 0; n < i.length; n++) (a = i[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+                        return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < i.length; n++) (a = i[n]), !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]);
                 }
-                return i;
-            })(e, ['forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'confirmationFooter', 'planSelectBanner']);
-        let j = (0, a.ZP)(),
-            C = (0, i.wj)(j) || t,
-            O = (0, c.N)(),
-            v = null == O ? void 0 : O.subscription_trial,
+                return r;
+            })(e, ['forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'planSelectBanner']);
+        let R = (0, s.ZP)(),
+            f = !g && ((0, r.wj)(R) || t),
+            I = (0, o.N)(),
+            O = null == I ? void 0 : I.subscription_trial,
             S = (0, l.a5)({
-                intervalType: null == v ? void 0 : v.interval,
-                intervalCount: null == v ? void 0 : v.interval_count
+                intervalType: null == O ? void 0 : O.interval,
+                intervalCount: null == O ? void 0 : O.interval_count
             }),
-            T = (0, o.Ng)(),
-            I = null != v && n === v.sku_id,
-            y = (null == O ? void 0 : O.trial_id) === u.a7,
-            A = f
-                ? m.NW.string(m.t.J61px8)
-                : null != T
-                  ? h(n, N, b, T.discount.amount)
-                  : p({
-                        showTrialCTA: I,
-                        subscriptionTier: n,
+            p = (0, d.Ng)(),
+            P = null != O && a === O.sku_id,
+            j = (null == I ? void 0 : I.trial_id) === u.a7,
+            U = b
+                ? N.NW.string(N.t.J61px8)
+                : null != p
+                  ? T(a, v, E, p.discount.amount)
+                  : m({
+                        showTrialCTA: P,
+                        subscriptionTier: a,
                         trialDurationCopy: S,
-                        isPersistentCTA: b,
-                        shouldShowReferralTrialCopy: y,
-                        subscriptionTrial: v
+                        isPersistentCTA: E,
+                        shouldShowReferralTrialCopy: j,
+                        subscriptionTrial: O
                     });
-        return (0, r.jsx)(
-            d.Z,
+        return (0, n.jsx)(
+            c.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                    var a = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(a);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(a).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(a, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = a[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: n,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = n);
                         });
                 }
                 return e;
             })(
                 {
-                    color: C ? s.Ttl.BRAND_INVERTED : s.Ttl.BRAND,
-                    buttonShineClassName: 'buttonShineClassName' in E ? E.buttonShineClassName : C ? g.brandShine : void 0,
-                    buttonText: A,
-                    buttonTextClassName: I ? g.freeTrialText : void 0,
+                    color: f ? i.Ttl.BRAND_INVERTED : i.Ttl.BRAND,
+                    buttonShineClassName: 'buttonShineClassName' in h ? h.buttonShineClassName : f ? _.brandShine : void 0,
+                    buttonText: U,
+                    buttonTextClassName: P ? _.freeTrialText : void 0,
                     onlyShineOnHover: !0,
-                    subscriptionTier: n,
+                    subscriptionTier: a,
+                    showGradient: g,
                     confirmationFooter: x,
-                    planSelectBanner: _
+                    planSelectBanner: M
                 },
-                E
+                h
             )
         );
     };
