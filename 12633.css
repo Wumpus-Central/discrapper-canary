@@ -15550,7 +15550,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: 1
 }
 
-.account__4bbc6 {
+.account__4bbc6,
+.theme-light .account__4bbc6,
+.theme-light .account__4bbc6.hover__4bbc6 {
     opacity: .4
 }
 

@@ -17,6 +17,7 @@ e.exports = {
     scroller: 'scroller__9d98d',
     groupAction: 'groupAction__9d98d',
     overlayEnabledSettingsContainer: 'overlayEnabledSettingsContainer__9d98d',
+    limitedInteractionOverrideContainer: 'limitedInteractionOverrideContainer__9d98d',
     settingsDivider: 'settingsDivider__9d98d',
     rowContainer: 'rowContainer__9d98d',
     keybindHeaderContainer: 'keybindHeaderContainer__9d98d',

@@ -9,8 +9,8 @@ var r = n(772848),
     u = n(451478),
     d = n(434529),
     f = n(145597),
-    p = n(765250),
-    _ = n(981631);
+    _ = n(765250),
+    p = n(981631);
 function h(e, t, n) {
     return (
         t in e
@@ -63,8 +63,8 @@ function E(e, t) {
         e
     );
 }
-let v = new i.Yd('OverlayActionCreators'),
-    b = {
+let b = new i.Yd('OverlayActionCreators'),
+    v = {
         track(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -118,10 +118,10 @@ let v = new i.Yd('OverlayActionCreators'),
         },
         setInstanceLocked(e) {
             if (!__OVERLAY__) {
-                v.error('Attempting to start an overlay session outside of the overlay context');
+                b.error('Attempting to start an overlay session outside of the overlay context');
                 return;
             }
-            b.setInputLocked(e, (0, f.QF)());
+            v.setInputLocked(e, (0, f.getPID)());
         },
         setEnabled(e, t) {
             o.Z.dispatch({
@@ -179,7 +179,7 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         },
         setShowGameInviteNotification(e) {
-            this.track(_.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: !e }),
+            this.track(p.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: !e }),
                 o.Z.dispatch({
                     type: 'OVERLAY_SET_GAME_INVITE_NOTIFICATION',
                     shouldShow: e
@@ -209,7 +209,7 @@ let v = new i.Yd('OverlayActionCreators'),
         },
         startSession() {
             if (!__OVERLAY__) {
-                v.error('Attempting to start an overlay session outside of the overlay context');
+                b.error('Attempting to start an overlay session outside of the overlay context');
                 return;
             }
             o.Z.dispatch({ type: 'OVERLAY_START_SESSION' });
@@ -230,7 +230,7 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         },
         updateNotificationStatus(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _._1z.DISMISSED;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p._1z.DISMISSED;
             o.Z.dispatch({
                 type: 'OVERLAY_UPDATE_NOTIFICATION_STATUS',
                 notificationId: e,
@@ -249,12 +249,12 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         },
         setPinChat(e) {
-            let t = f.qU,
+            let t = f.OVERLAY_LAYOUT_ID,
                 n = l.Z.getWidgetsForLayout(t),
-                i = l.Z.getWidgetConfig(_.Odu.GUILDS),
-                o = l.Z.getWidgetConfig(_.Odu.TEXT),
-                a = l.Z.getWidgetConfig(_.Odu.GUILDS_TEXT);
-            if (((0, s.JS)(_.Odu.TEXT, { pinned: e }), 0 === n.length || null == i || null == o || null == a)) return;
+                i = l.Z.getWidgetConfig(p.Odu.GUILDS),
+                o = l.Z.getWidgetConfig(p.Odu.TEXT),
+                a = l.Z.getWidgetConfig(p.Odu.GUILDS_TEXT);
+            if (((0, s.JS)(p.Odu.TEXT, { pinned: e }), 0 === n.length || null == i || null == o || null == a)) return;
             let c = u.Z.windowSize(),
                 h = {
                     width: 0,
@@ -266,11 +266,11 @@ let v = new i.Yd('OverlayActionCreators'),
                     right: 0,
                     bottom: 0
                 },
-                v = {
+                b = {
                     width: 312,
                     height: 0
                 },
-                b = {
+                v = {
                     top: 0,
                     left: 0,
                     right: 0,
@@ -284,41 +284,41 @@ let v = new i.Yd('OverlayActionCreators'),
                 (n.forEach((e) => {
                     let { type: t, id: n, anchor: r, size: i } = e;
                     switch (t) {
-                        case _.Odu.TEXT:
-                            (h = (0, d.w_)(i, c)), (0, p.E9)(n);
+                        case p.Odu.TEXT:
+                            (h = (0, d.w_)(i, c)), (0, _.E9)(n);
                             break;
-                        case _.Odu.GUILDS:
-                            (g = (0, d.vS)(r, i, c)), (v = (0, d.w_)(i, c)), (0, p.E9)(n);
+                        case p.Odu.GUILDS:
+                            (g = (0, d.vS)(r, i, c)), (b = (0, d.w_)(i, c)), (0, _.E9)(n);
                             break;
-                        case _.Odu.GUILDS_TEXT:
-                            (b = (0, d.vS)(r, i, c)), (y = (0, d.w_)(i, c)), (0, p.E9)(n);
+                        case p.Odu.GUILDS_TEXT:
+                            (v = (0, d.vS)(r, i, c)), (y = (0, d.w_)(i, c)), (0, _.E9)(n);
                     }
                 }),
                 e)
             ) {
                 let e = 'auto' === y.width ? a.minSize.width : y.width;
                 e -= i.minSize.width;
-                let [n, o] = (0, d.o4)(b, E(m({}, y), { width: i.minSize.width }), c),
-                    [s, u] = (0, d.uq)(b, E(m({}, y), { width: e }), c, {
+                let [n, o] = (0, d.o4)(v, E(m({}, y), { width: i.minSize.width }), c),
+                    [s, u] = (0, d.uq)(v, E(m({}, y), { width: e }), c, {
                         x: 10,
                         y: 10
                     }),
-                    f = l.Z.getWidgetDefaultSettings(_.Odu.TEXT);
+                    f = l.Z.getWidgetDefaultSettings(p.Odu.TEXT);
                 if (null == f) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
-                (0, p.A4)(
+                (0, _.A4)(
                     E(m({}, f), {
-                        type: _.Odu.TEXT,
+                        type: p.Odu.TEXT,
                         id: (0, r.Z)(),
                         size: u,
                         anchor: s,
                         layoutId: t
                     })
                 );
-                let h = l.Z.getWidgetDefaultSettings(_.Odu.GUILDS);
+                let h = l.Z.getWidgetDefaultSettings(p.Odu.GUILDS);
                 if (null == h) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
-                (0, p.A4)(
+                (0, _.A4)(
                     E(m({}, h), {
-                        type: _.Odu.GUILDS,
+                        type: p.Odu.GUILDS,
                         id: (0, r.Z)(),
                         size: o,
                         anchor: n,
@@ -331,16 +331,16 @@ let v = new i.Yd('OverlayActionCreators'),
                 let [n, a] = (0, d.o4)(
                         g,
                         {
-                            height: v.height,
+                            height: b.height,
                             width: e
                         },
                         c
                     ),
-                    s = l.Z.getWidgetDefaultSettings(_.Odu.GUILDS_TEXT);
+                    s = l.Z.getWidgetDefaultSettings(p.Odu.GUILDS_TEXT);
                 if (null == s) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists');
-                (0, p.A4)(
+                (0, _.A4)(
                     E(m({}, s), {
-                        type: _.Odu.GUILDS_TEXT,
+                        type: p.Odu.GUILDS_TEXT,
                         id: (0, r.Z)(),
                         layoutId: t,
                         anchor: n,
@@ -351,7 +351,7 @@ let v = new i.Yd('OverlayActionCreators'),
         },
         resetDefaultLayout(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-            null != l.Z.getLayout(e) && ((0, p.sz)(e), (0, p.jx)(l.Z.getDefaultLayout(e, t)));
+            null != l.Z.getLayout(e) && ((0, _.sz)(e), (0, _.jx)(l.Z.getDefaultLayout(e, t)));
         },
         setClickZones(e) {
             o.Z.dispatch({
@@ -394,6 +394,13 @@ let v = new i.Yd('OverlayActionCreators'),
                 overlayState: t
             });
         },
+        setLimitedInteractionOverride(e, t) {
+            o.Z.dispatch({
+                type: 'OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE',
+                applicationId: e,
+                enabled: t
+            });
+        },
         successfullyShown(e) {
             o.Z.dispatch({
                 type: 'OVERLAY_SUCCESSFULLY_SHOWN',
@@ -414,4 +421,4 @@ let v = new i.Yd('OverlayActionCreators'),
             });
         }
     },
-    y = b;
+    y = v;
