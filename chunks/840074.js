@@ -1,27 +1,30 @@
-n.d(t, { _: () => s });
-var r = n(200651),
-    i = n(192379),
-    l = n(481060),
-    o = n(812206),
-    a = n(531826);
-function s(e) {
-    let { applicationId: t, channelId: s, launchParams: c, message: u, onShare: d } = e,
-        p = o.Z.getApplication(t),
-        h =
+n.d(t, { _: () => a });
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(812206),
+    o = n(531826);
+function a(e) {
+    let { applicationId: t, channelId: a, launchParams: s, message: c, onShare: u } = e,
+        d = l.Z.getApplication(t),
+        p =
             null !=
-            (0, a.ZP)({
-                application: p,
-                channelId: s
+            (0, o.ZP)({
+                application: d,
+                channelId: a
             })
-                ? l.u1M
-                : l.z1l,
-        f = !1;
-    (0, l.ZDy)(
+                ? i.u1M
+                : i.z1l,
+        h = !1;
+    function f(e) {
+        u(e, h);
+    }
+    function g() {
+        h = !0;
+    }
+    (0, i.ZDy)(
         async () => {
-            let { default: e } = await n.e('83098').then(n.bind(n, 137021)),
-                l = i.useCallback((e) => {
-                    d(e, f);
-                }, []);
+            let { default: e } = await n.e('83098').then(n.bind(n, 137021));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -52,13 +55,11 @@ function s(e) {
                     })(
                         {
                             applicationId: t,
-                            channelId: s,
-                            launchParams: c,
-                            message: u,
-                            onCopyLink: () => {
-                                f = !0;
-                            },
-                            onShare: l
+                            channelId: a,
+                            launchParams: s,
+                            message: c,
+                            onCopyLink: g,
+                            onShare: f
                         },
                         n
                     )
@@ -66,9 +67,9 @@ function s(e) {
         },
         {
             modalKey: 'activity-share-moment-modal',
-            contextKey: h,
+            contextKey: p,
             onCloseCallback: () => {
-                d(!1, f);
+                u(!1, h);
             }
         }
     );
