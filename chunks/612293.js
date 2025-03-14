@@ -13,12 +13,12 @@ var r = n(200651),
     d = n(410030),
     u = n(100527),
     m = n(335131),
-    p = n(597688),
-    g = n(884697),
+    g = n(597688),
+    p = n(884697),
     h = n(709999),
     f = n(22267),
-    x = n(594174),
-    b = n(981631),
+    b = n(594174),
+    x = n(981631),
     N = n(388032),
     _ = n(964021);
 let E = () => {
@@ -65,22 +65,22 @@ function j(e) {
 }
 function C(e) {
     let { onClose: t } = e,
-        n = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        { available: s, purchased: a } = (0, g.yV)(),
+        n = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        { available: s, purchased: a } = (0, p.yV)(),
         d = a.find((e) => {
             var t, r;
             return e.skuId === (null == n ? void 0 : null === (r = n.collectibles) || void 0 === r ? void 0 : null === (t = r.nameplate) || void 0 === t ? void 0 : t.skuId);
         }),
-        [p, h] = (0, i.useState)(null != d ? d : null),
-        [f, b] = (0, i.useState)(null != d),
+        [g, h] = (0, i.useState)(null != d ? d : void 0),
+        [f, x] = (0, i.useState)(null != d),
         E = (0, i.useCallback)(() => {
             t(),
                 (0, m.mK)({
                     analyticsLocations: [u.Z.USER_SETTINGS_NAMEPLATE_MODAL],
                     analyticsSource: u.Z.USER_SETTINGS_NAMEPLATE_MODAL,
-                    initialProductSkuId: null == p ? void 0 : p.skuId
+                    initialProductSkuId: null == g ? void 0 : g.skuId
                 });
-        }, [t, p]);
+        }, [t, g]);
     return (0, r.jsxs)('div', {
         className: _.content,
         children: [
@@ -102,16 +102,16 @@ function C(e) {
                 className: _.body,
                 children: [
                     (0, r.jsx)(O, {
-                        selected: p,
+                        selected: g,
                         onSelect: (e, t) => {
-                            h(e), b(null != t && t);
+                            h(e), x(null != t && t);
                         },
                         available: s,
                         purchased: a,
                         onShop: E
                     }),
                     (0, r.jsx)(S, {
-                        selectedNameplate: p,
+                        selectedNameplate: g,
                         purchased: f
                     })
                 ]
@@ -128,7 +128,7 @@ function C(e) {
                             children: N.NW.string(N.t.y1MYys)
                         })
                     }),
-                    !1 === f && null != p
+                    !1 === f && null != g
                         ? (0, r.jsx)(o.zxk, {
                               className: _.goToShopButton,
                               color: o.Ttl.CUSTOM,
@@ -140,9 +140,9 @@ function C(e) {
                               })
                           })
                         : (0, r.jsx)(o.zxk, {
-                              disabled: null == p,
+                              disabled: void 0 === g,
                               onClick: () => {
-                                  (0, c.KP)(p), t();
+                                  (0, c.KP)(g), t();
                               },
                               children: N.NW.string(N.t.daaiqK)
                           })
@@ -152,8 +152,9 @@ function C(e) {
     });
 }
 function O(e) {
-    let { selected: t, onSelect: n, available: i, purchased: s, onShop: a } = e;
-    return null == (0, l.e7)([x.default], () => x.default.getCurrentUser())
+    let { selected: t, onSelect: n, available: i, purchased: s, onShop: a } = e,
+        c = (0, l.e7)([b.default], () => b.default.getCurrentUser());
+    return null == c
         ? null
         : (0, r.jsxs)(o.u2D, {
               className: _.inventory,
@@ -169,7 +170,7 @@ function O(e) {
                       children: [
                           (0, r.jsxs)(o.P3F, {
                               className: _.inventoryControlsButton,
-                              onClick: () => n(null),
+                              onClick: () => n(null == c.nameplate ? void 0 : null),
                               children: [
                                   (0, r.jsx)(o.t6m, {}),
                                   (0, r.jsx)(o.Text, {
@@ -235,7 +236,7 @@ function O(e) {
 }
 function v(e) {
     let { nameplate: t, isPurchased: n = !1, isSelected: s = !1, onClick: c } = e,
-        d = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
+        d = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         [u, m] = (0, i.useState)(!1);
     return null == d
         ? null
@@ -261,9 +262,9 @@ function v(e) {
 }
 function S(e) {
     let { selectedNameplate: t, purchased: n } = e,
-        i = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        s = (0, l.e7)([p.Z], () => p.Z.getProduct(null == t ? void 0 : t.skuId)),
-        a = (0, d.ZP)() !== b.BRd.LIGHT;
+        i = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        s = (0, l.e7)([g.Z], () => g.Z.getProduct(null == t ? void 0 : t.skuId)),
+        a = (0, d.ZP)() !== x.BRd.LIGHT;
     return null == i
         ? null
         : (0, r.jsx)('div', {
