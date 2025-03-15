@@ -1,1 +1,2 @@
-n(411885);
+var r = { banner: 'banner__9ed41' };
+e.exports = r;
