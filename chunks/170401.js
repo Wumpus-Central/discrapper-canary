@@ -1,17 +1,45 @@
-var r = {
-    assetWrapper: 'assetWrapper__31fc2',
-    assetWrapperMasked: 'assetWrapperMasked__31fc2',
-    stickerAsset: 'stickerAsset__31fc2',
-    lottieCanvas: 'lottieCanvas__31fc2 stickerAsset__31fc2',
-    pngImage: 'pngImage__31fc2 stickerAsset__31fc2',
-    loadingIndicator: 'loadingIndicator__31fc2',
-    error: 'error__31fc2',
-    errorIcon: 'errorIcon__31fc2',
-    errorText: 'errorText__31fc2',
-    overlayWrapper: 'overlayWrapper__31fc2',
-    overlayStickerWrapper: 'overlayStickerWrapper__31fc2',
-    overlayLabelWrapper: 'overlayLabelWrapper__31fc2',
-    overlayLabel: 'overlayLabel__31fc2',
-    positionedLayer: 'positionedLayer__31fc2'
-};
-e.exports = r;
+n.d(t, { Z: () => a }), n(47120), n(653041);
+var r = n(658722),
+    i = n.n(r);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class a {
+    search(e) {
+        return new Promise((t) => {
+            t(this.getMatchingSettings(e));
+        });
+    }
+    getMatchingSettings(e) {
+        let t = this.cache[e];
+        if (null != t) return t;
+        {
+            let t = [];
+            return (
+                this.terms.forEach((n) => {
+                    let [r, s] = n;
+                    for (let n of s)
+                        if (i()(e.toLowerCase(), n.toLowerCase())) {
+                            t.push(r);
+                            break;
+                        }
+                }),
+                (this.cache[e] = t),
+                t
+            );
+        }
+    }
+    constructor(e) {
+        s(this, 'terms', void 0), s(this, 'cache', void 0), (this.terms = e), (this.cache = {});
+    }
+}
