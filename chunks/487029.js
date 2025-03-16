@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(47120), n(230036), n(653041);
 var r = n(200651),
     l = n(192379),
-    i = n(990547),
-    o = n(442837),
+    o = n(990547),
+    i = n(442837),
     a = n(100527),
     s = n(906732),
     c = n(213609),
@@ -12,95 +12,95 @@ var r = n(200651),
     f = n(208049),
     p = n(763296),
     g = n(242291),
-    N = n(174470),
+    y = n(174470),
     v = n(549771),
     O = n(964398),
-    y = n(409673),
-    m = n(710111),
-    b = n(8305);
+    b = n(409673),
+    N = n(710111),
+    m = n(619129);
 function x(e) {
-    let { guildId: t, channel: n, width: x, height: C, keepOpen: I, interactive: E = !0, analyticsSource: T, onClose: j } = e,
-        w = (function (e) {
-            let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
+    let { guildId: t, channel: n, width: x, height: C, keepOpen: E, interactive: j = !0, analyticsSource: P, onClose: I } = e,
+        S = (function (e) {
+            let [t, n] = (0, i.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
-                    l = [...e, m.X8],
-                    i = (e, l) => {
-                        var i, o;
-                        for (let a of null !== (o = null === (i = t.get(e)) || void 0 === i ? void 0 : i.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== o ? o : []) {
+                    l = [...e, N.X8],
+                    o = (e, l) => {
+                        var o, i;
+                        for (let a of null !== (i = null === (o = t.get(e)) || void 0 === o ? void 0 : o.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
                             let e = n.has(a.soundId);
                             ((e && l) || (!e && !l)) && a.available && r.push(a);
                         }
                     };
-                return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
+                return l.forEach((e) => o(e, !0)), l.forEach((e) => o(e, !1)), r;
             }, [t, n, e]);
         })((0, v.h)(n, !0)),
-        P = (0, N.j)(),
-        S = l.useRef(null),
+        w = (0, y.j)(),
+        T = l.useRef(null),
         [Z, _] = l.useState(void 0),
-        A = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: R } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
-        k = l.useCallback(
+        R = (0, i.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: A } = (0, s.ZP)(a.Z.SOUNDBOARD_WHEEL),
+        D = l.useCallback(
             (e) => {
-                (0, g.GN)(e, n.id, R), j();
+                (0, g.GN)(e, n.id, A), I();
             },
-            [R, n.id, j]
+            [A, n.id, I]
         );
     l.useEffect(() => {
         f.w(), u.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
-            0 === w.length && 0 === P.length && j();
-        }, [w.length, P, j]),
+            0 === S.length && 0 === w.length && I();
+        }, [S.length, w, I]),
         l.useEffect(
             () => () => {
-                let e = S.current;
-                I || null == e || k(e);
+                let e = T.current;
+                E || null == e || D(e);
             },
-            [I, k]
+            [E, D]
         ),
         (0, c.Z)(
             {
-                type: i.ImpressionTypes.POPOUT,
-                name: i.ImpressionNames.SOUNDBOARD_POPOUT,
+                type: o.ImpressionTypes.POPOUT,
+                name: o.ImpressionNames.SOUNDBOARD_POPOUT,
                 properties: {
-                    source: T,
+                    source: P,
                     guild_id: t,
-                    media_session_id: A
+                    media_session_id: R
                 }
             },
-            { disableTrack: !E }
+            { disableTrack: !j }
         );
-    let D = l.useCallback((e) => {
-            (S.current = e), _(null == e ? void 0 : e.soundId);
+    let W = l.useCallback((e) => {
+            (T.current = e), _(null == e ? void 0 : e.soundId);
         }, []),
-        W = l.useCallback(
+        k = l.useCallback(
             (e) => {
                 if (null == e) {
-                    D(null);
+                    W(null);
                     return;
                 }
-                let t = w[e];
-                null != t && D(t);
+                let t = S[e];
+                null != t && W(t);
             },
-            [D, w]
+            [W, S]
         ),
-        F = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = w[e];
-                null != t && k(t);
+                let t = S[e];
+                null != t && D(t);
             },
-            [w, k]
+            [S, D]
         ),
-        M = l.useMemo(
+        B = l.useMemo(
             () =>
-                w.map((e) =>
+                S.map((e) =>
                     (0, r.jsx)(
-                        y.ZP,
+                        b.ZP,
                         {
-                            interactive: E,
-                            className: b.soundButton,
+                            interactive: j,
+                            className: m.soundButton,
                             sound: e,
                             focused: Z === e.soundId,
                             channel: n
@@ -108,23 +108,24 @@ function x(e) {
                         e.soundId
                     )
                 ),
-            [Z, n, E, w]
+            [Z, n, j, S]
         );
-    return 0 === w.length
+    return 0 === S.length
         ? null
         : (0, r.jsx)(s.Gt, {
-              value: R,
+              value: A,
               children: (0, r.jsx)(O.Z, {
                   wheelWidth: x,
                   wheelHeight: C,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !I,
+                  showDeadZoneIndicator: !E,
                   activeItem: Z,
-                  onItemSelect: W,
-                  onItemAction: F,
-                  interactive: E,
-                  children: M
+                  onItemSelect: k,
+                  onItemAction: M,
+                  onClose: I,
+                  interactive: j,
+                  children: B
               })
           });
 }
