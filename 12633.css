@@ -13692,10 +13692,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .description__83f66 {
-    display: flex;
     align-items: center;
     flex-direction: row;
-    gap: var(--spacing-4)
+    display: inline-block
 }
 
 .responsiveText__83f66 {
