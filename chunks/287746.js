@@ -841,8 +841,7 @@ let e7 = i.memo(function (e) {
         _ = (0, ee.Z)(t.id),
         C = (0, Z.R)({
             channel: t,
-            chatInputType: l,
-            location: 'ChannelChatMemo'
+            chatInputType: l
         }),
         v = (0, D.h9)(t.id),
         y = (0, eg.k)(t.id),

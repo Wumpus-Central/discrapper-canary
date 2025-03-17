@@ -181,8 +181,7 @@ let R = i.memo(function (e) {
         s = i.useRef(null),
         c = (0, _.R)({
             channel: t,
-            chatInputType: n,
-            location: 'chat_input'
+            chatInputType: n
         }),
         u = (0, E.Z)({ type: n }),
         d = (0, C.h9)(t.id),

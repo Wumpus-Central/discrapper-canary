@@ -1,27 +1,13 @@
 n.d(t, {
-    T: () => o,
-    _f: () => c,
-    aq: () => l,
-    m1: () => a,
-    nS: () => s,
-    xN: () => u
+    _f: () => l,
+    aq: () => s,
+    m1: () => o,
+    nS: () => a,
+    xN: () => c
 });
 var r = n(818083),
     i = n(987338);
 let o = (0, r.B)({
-        kind: 'user',
-        id: '2023-11_app_launcher_desktop',
-        label: 'App Launcher - Desktop',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable the app launcher feature on desktop',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    a = (0, r.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',
@@ -48,7 +34,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
@@ -61,7 +47,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    l = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
@@ -80,7 +66,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    c = (0, r.B)({
+    l = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -108,7 +94,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    u = (0, r.B)({
+    c = (0, r.B)({
         kind: 'user',
         id: '2024-10_weighted_sample_activity_shelf',
         label: 'Weighted Sample Activity Shelf',
