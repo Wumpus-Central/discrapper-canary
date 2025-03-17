@@ -1,5 +1,6 @@
-n.d(t, { S: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { SN: () => l });
+var r = n(818083);
+let i = (0, r.B)({
     kind: 'user',
     id: '2025-02_activity_sharing_popout',
     label: 'Enables the rtc popout',
@@ -12,6 +13,19 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function l(e) {
+    return i.useExperiment({ location: e }, { autoTrackExposure: !0 });
 }
+(0, r.B)({
+    kind: 'user',
+    id: '2025-03_activity_sharing_popout_with_invisibility',
+    label: 'Activity Sharing Popout with Invisibility',
+    defaultConfig: { rtcPopoutEnabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable the RTC popout when the user is not sharing activity or is invisible',
+            config: { rtcPopoutEnabled: !0 }
+        }
+    ]
+});
