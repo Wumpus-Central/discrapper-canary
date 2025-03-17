@@ -53,10 +53,11 @@ function m(e, t, n, s, l) {
             }
             let i = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width,
-                    n = Math.max(t - 50, 0);
+                    n = 0.8 * t,
+                    i = 1.1 * t;
                 d({
                     background: r,
-                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(t, 'px)')
+                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(i, 'px)')
                 });
             });
             return i.observe(s), () => i.disconnect();
@@ -72,6 +73,6 @@ function g(e) {
     if (o === s.i.ACCOUNT) return n === c.BR.LIGHT ? 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)') : 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(_, ' 100%)');
     let g = a && o === s.i.CHANNEL ? 'var(--bg-overlay-selected, var(--background-mod-subtle))' : 'var(--background-modifier-selected)',
         E = r ? 'var(--background-modifier-hover)' : i ? g : ''.concat(h, '00'),
-        v = ''.concat(h).concat(m ? (n !== c.BR.LIGHT ? p : f) : d);
-    return 'linear-gradient(90deg, '.concat(E, ' 0%, ').concat(v, ' 100%)');
+        b = ''.concat(h).concat(m ? (n !== c.BR.LIGHT ? p : f) : d);
+    return 'linear-gradient(90deg, '.concat(E, ' 0%, ').concat(b, ' 100%)');
 }

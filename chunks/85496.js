@@ -9,6 +9,7 @@ e.exports = {
     avatarWithText: 'avatarWithText__972a0',
     link: 'link__972a0',
     plated: 'plated__972a0',
+    platedHover: 'platedHover__972a0',
     linkButton: 'linkButton__972a0',
     linkButtonIcon: 'linkButtonIcon__972a0',
     closeButton: 'closeButton__972a0',

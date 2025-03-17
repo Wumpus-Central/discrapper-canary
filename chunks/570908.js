@@ -5,7 +5,7 @@ var r = n(200651),
     a = n.n(o),
     s = n(120307);
 let l = i.forwardRef((e, t) => {
-    let { selected: n, muted: i = !1, highlighted: o = !1, wrapContent: l = !1, avatar: c, decorators: u, name: d, subText: f, avatarClassName: _, innerClassName: p, nameplated: h = !1 } = e;
+    let { selected: n, muted: i = !1, highlighted: o = !1, wrapContent: l = !1, avatar: c, decorators: u, name: d, subText: f, avatarClassName: _, innerClassName: p } = e;
     return (0, r.jsxs)('div', {
         ref: t,
         className: a()(p, s.layout, {
@@ -31,16 +31,12 @@ let l = i.forwardRef((e, t) => {
                             u
                         ]
                     }),
-                    (0, r.jsx)('div', {
-                        className: a()({ [s.plated]: h }),
-                        children:
-                            null != f
-                                ? (0, r.jsx)('div', {
-                                      className: s.subText,
-                                      children: f
-                                  })
-                                : null
-                    })
+                    null != f
+                        ? (0, r.jsx)('div', {
+                              className: s.subText,
+                              children: f
+                          })
+                        : null
                 ]
             })
         ]

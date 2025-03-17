@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Z,
+    ZP: () => F,
     dz: () => j
 }),
     n(47120);
@@ -13,18 +13,18 @@ var r = n(200651),
     u = n.n(c),
     d = n(442837),
     f = n(952265),
-    p = n(780384),
-    _ = n(481060),
+    _ = n(780384),
+    p = n(481060),
     h = n(410030),
     m = n(607070),
     g = n(238302),
     E = n(703656),
-    v = n(483444),
-    b = n(599250),
+    b = n(483444),
+    v = n(599250),
     y = n(424218),
     O = n(74538),
-    S = n(960048),
-    I = n(861990),
+    I = n(960048),
+    S = n(861990),
     T = n(98278),
     N = n(639119),
     A = n(197115),
@@ -32,9 +32,9 @@ var r = n(200651),
     R = n(474936),
     P = n(981631),
     w = n(388032),
-    D = n(182666),
-    x = n(867250);
-function L(e) {
+    D = n(402756),
+    L = n(867250);
+function x(e) {
     if (null == e) return null;
     let t = u()(e),
         n = t.diff(u()(), 'h');
@@ -51,27 +51,27 @@ function M(e) {
     let { className: o, children: s, withBottomMargin: l, discountOffer: c, trialOffer: u } = e,
         d = null !== (t = null == u ? void 0 : u.expires_at) && void 0 !== t ? t : null == c ? void 0 : c.expires_at,
         f = null == u ? void 0 : u.subscription_trial,
-        p = null !== (i = null !== (n = e.subscriptionTier) && void 0 !== n ? n : null == f ? void 0 : f.sku_id) && void 0 !== i ? i : R.Si.TIER_2;
+        _ = null !== (i = null !== (n = e.subscriptionTier) && void 0 !== n ? n : null == f ? void 0 : f.sku_id) && void 0 !== i ? i : R.Si.TIER_2;
     return (0, r.jsxs)('div', {
         className: a()(o, D.gradientUpsellWrapper, {
-            [D.gradientUpsellWrapperTier0]: p === R.Si.TIER_0,
-            [D.gradientUpsellWrapperTier2]: p === R.Si.TIER_2,
+            [D.gradientUpsellWrapperTier0]: _ === R.Si.TIER_0,
+            [D.gradientUpsellWrapperTier2]: _ === R.Si.TIER_2,
             [D.gradientUpsellWrapperWithBottomMargin]: l
         }),
         children: [
             (0, r.jsxs)('div', {
                 className: D.logo,
                 children: [
-                    (0, r.jsx)(_.SrA, {
+                    (0, r.jsx)(p.SrA, {
                         size: 'md',
                         color: 'currentColor',
                         className: D.logoIcon
                     }),
-                    p === R.Si.TIER_0 && (0, r.jsx)(b.Z, { className: D.logoWordmark }),
-                    p === R.Si.TIER_2 && (0, r.jsx)(v.Z, { className: D.logoWordmark })
+                    _ === R.Si.TIER_0 && (0, r.jsx)(v.Z, { className: D.logoWordmark }),
+                    _ === R.Si.TIER_2 && (0, r.jsx)(b.Z, { className: D.logoWordmark })
                 ]
             }),
-            (0, r.jsx)(_.Text, {
+            (0, r.jsx)(p.Text, {
                 variant: 'text-md/medium',
                 className: D.copy,
                 color: 'none',
@@ -79,12 +79,12 @@ function M(e) {
             }),
             (0, r.jsx)(C.Cy, {
                 text: null != c ? w.NW.formatToPlainString(w.t.iiLbvr, { percent: c.discount.amount }) : w.NW.string(w.t.IBYG5e),
-                colorOptions: p === R.Si.TIER_0 ? C.VE.PREMIUM_TIER_0_WHITE_FILL : C.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: _ === R.Si.TIER_0 ? C.VE.PREMIUM_TIER_0_WHITE_FILL : C.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
-            (0, r.jsx)(_.Text, {
+            (0, r.jsx)(p.Text, {
                 variant: 'eyebrow',
                 className: D.countdownText,
-                children: L(d)
+                children: x(d)
             })
         ]
     });
@@ -93,7 +93,7 @@ function k(e) {
     var t, n;
     let { className: o, onClose: a, subscriptionTier: s, analyticsLocationObject: l, trialOffer: c, discountOffer: u } = e,
         [d, f] = i.useState(!1),
-        p =
+        _ =
             null != u
                 ? w.NW.formatToPlainString(w.t.bkQ4bG, { percent: u.discount.amount })
                 : (0, O.Rt)({
@@ -105,22 +105,22 @@ function k(e) {
         subscriptionTier: s,
         submitting: d,
         premiumModalAnalyticsLocation: l,
-        size: _.zxk.Sizes.MEDIUM,
-        color: _.zxk.Colors.GREEN,
+        size: p.zxk.Sizes.MEDIUM,
+        color: p.zxk.Colors.GREEN,
         onClick: () => {
             f(!0);
         },
         onSubscribeModalClose: (e) => {
             f(!1), e && (null == a || a());
         },
-        buttonText: p
+        buttonText: _
     });
 }
 function j(e) {
     var t, n;
     let i = null === (t = (0, N.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         o = null !== (n = null == i ? void 0 : i.sku_id) && void 0 !== n ? n : R.Si.TIER_2;
-    return (0, r.jsx)(_.Text, {
+    return (0, r.jsx)(p.Text, {
         variant: 'text-xs/bold',
         className: a()(D.trialBadge, e.className, {
             [D.trialBadgeGradientTier0]: o === R.Si.TIER_0,
@@ -138,10 +138,10 @@ function U(e) {
     return (0, r.jsxs)('div', {
         className: D.footer,
         children: [
-            (0, r.jsx)(_.zxk, {
+            (0, r.jsx)(p.zxk, {
                 onClick: n,
-                size: _.zxk.Sizes.SMALL,
-                look: _.iLD.BLANK,
+                size: p.zxk.Sizes.SMALL,
+                look: p.iLD.BLANK,
                 className: D.cancelButton,
                 children: w.NW.string(w.t.cpT0Cg)
             }),
@@ -167,7 +167,7 @@ function G(e) {
                 text: w.NW.string(w.t['8CVUra']),
                 colorOptions: C.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
             }),
-            (0, r.jsx)(_.X6q, {
+            (0, r.jsx)(p.X6q, {
                 variant: 'heading-md/semibold',
                 color: 'text-normal',
                 children: w.NW.format(w.t['fF+cgY'], { onClick: () => (0, T.z)() })
@@ -179,10 +179,10 @@ function G(e) {
                 analyticsLocationObject: n,
                 onClose: t
             }),
-            (0, r.jsx)(_.Text, {
+            (0, r.jsx)(p.Text, {
                 variant: 'eyebrow',
                 className: D.countdownTextInSetting,
-                children: L(null == i ? void 0 : i.expires_at)
+                children: x(null == i ? void 0 : i.expires_at)
             })
         ]
     });
@@ -192,12 +192,12 @@ function B(e) {
     return (0, r.jsxs)('div', {
         className: D.contentContainer,
         children: [
-            (0, r.jsx)(_.X6q, {
+            (0, r.jsx)(p.X6q, {
                 variant: 'heading-xl/semibold',
                 children: t
             }),
             null != n &&
-                (0, r.jsx)(_.Text, {
+                (0, r.jsx)(p.Text, {
                     className: D.context,
                     variant: 'text-md/normal',
                     children: n
@@ -210,19 +210,19 @@ function B(e) {
         ]
     });
 }
-function Z(e) {
-    let { headingText: t, context: i, children: o, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: v, trialOffer: b, discountOffer: T } = e,
+function F(e) {
+    let { headingText: t, context: i, children: o, onClose: s, type: c, subscriptionTier: u, analyticsLocationObject: b, trialOffer: v, discountOffer: T } = e,
         N = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         A = (0, h.ZP)(),
-        C = (0, y.BU)(I.zz / y.XD, { useKibibytes: !0 });
+        C = (0, y.BU)(S.zz / y.XD, { useKibibytes: !0 });
     switch (c) {
         case R.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(_.P3F, {
+                    (0, r.jsx)(p.P3F, {
                         className: D.upsellClose,
                         onClick: s,
-                        children: (0, r.jsx)(_.Dio, {
+                        children: (0, r.jsx)(p.Dio, {
                             size: 'md',
                             color: 'currentColor'
                         })
@@ -232,16 +232,16 @@ function Z(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 className: D.upsellImage,
-                                src: x,
+                                src: L,
                                 alt: w.NW.string(w.t.do7AoK)
                             }),
-                            (0, r.jsx)(_.X6q, {
+                            (0, r.jsx)(p.X6q, {
                                 variant: 'heading-xl/bold',
                                 color: 'header-primary',
                                 children: w.NW.string(w.t.HEm04O)
                             }),
                             (0, r.jsx)(M, {
-                                trialOffer: b,
+                                trialOffer: v,
                                 discountOffer: T,
                                 children: w.NW.format(w.t['2HoFKC'], {
                                     planName: (0, O.jP)(u),
@@ -257,7 +257,7 @@ function Z(e) {
                             section: P.jXE.EXPRESSION_PICKER,
                             object: P.qAy.BUTTON_CTA
                         },
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T
                     })
                 ]
@@ -272,16 +272,16 @@ function Z(e) {
                             children: [
                                 (0, r.jsx)('img', {
                                     className: D.upsellImage,
-                                    src: x,
+                                    src: L,
                                     alt: w.NW.string(w.t.do7AoK)
                                 }),
-                                (0, r.jsx)(_.X6q, {
+                                (0, r.jsx)(p.X6q, {
                                     variant: 'heading-xl/bold',
                                     color: 'header-primary',
                                     children: w.NW.string(w.t.jJG1pq)
                                 }),
                                 (0, r.jsx)(M, {
-                                    trialOffer: b,
+                                    trialOffer: v,
                                     discountOffer: T,
                                     children: w.NW.format(w.t['2HoFKC'], {
                                         planName: (0, O.jP)(u),
@@ -297,7 +297,7 @@ function Z(e) {
                                 section: P.jXE.EXPRESSION_PICKER,
                                 object: P.qAy.BUTTON_CTA
                             },
-                            trialOffer: b,
+                            trialOffer: v,
                             discountOffer: T
                         })
                     ]
@@ -305,7 +305,7 @@ function Z(e) {
             );
         case R.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             l()(null != o, 'You must specify children for this upsell type');
-            let L = (0, p.ap)(A) ? n(537381) : n(341048);
+            let x = (0, _.ap)(A) ? n(537381) : n(341048);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
@@ -314,15 +314,15 @@ function Z(e) {
                             (0, r.jsx)('img', {
                                 alt: '',
                                 className: D.upsellImage,
-                                src: L
+                                src: x
                             }),
-                            (0, r.jsx)(_.X6q, {
+                            (0, r.jsx)(p.X6q, {
                                 variant: 'heading-xl/bold',
                                 color: 'header-primary',
                                 children: w.NW.string(w.t['1SsvhY'])
                             }),
                             (0, r.jsx)(M, {
-                                trialOffer: b,
+                                trialOffer: v,
                                 discountOffer: T,
                                 children: w.NW.format(w.t.md4nPz, {
                                     planName: (0, O.jP)(u),
@@ -338,7 +338,7 @@ function Z(e) {
                             section: P.jXE.EMOJI_PICKER_POPOUT,
                             object: P.qAy.BUTTON_CTA
                         },
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T
                     })
                 ]
@@ -386,17 +386,17 @@ function Z(e) {
                 (0, r.jsxs)('div', {
                     className: D.contentContainer,
                     children: [
-                        (0, r.jsx)(_.X6q, {
+                        (0, r.jsx)(p.X6q, {
                             variant: 'heading-xl/bold',
                             color: 'header-primary',
                             children: t
                         }),
-                        (0, r.jsx)(_.Text, {
+                        (0, r.jsx)(p.Text, {
                             variant: 'text-md/normal',
                             children: i
                         }),
                         (0, r.jsx)(M, {
-                            trialOffer: b,
+                            trialOffer: v,
                             discountOffer: T,
                             children: j
                         })
@@ -407,17 +407,17 @@ function Z(e) {
             return (0, r.jsxs)('div', {
                 className: D.contentContainer,
                 children: [
-                    (0, r.jsx)(_.X6q, {
+                    (0, r.jsx)(p.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         children: t
                     }),
-                    (0, r.jsx)(_.Text, {
+                    (0, r.jsx)(p.Text, {
                         variant: 'text-md/normal',
                         children: i
                     }),
                     (0, r.jsx)(M, {
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T,
                         children: w.NW.format(w.t.poib9P, {
                             planName: (0, O.jP)(u),
@@ -427,9 +427,9 @@ function Z(e) {
                     (0, r.jsx)(k, {
                         className: D.upsellButton,
                         subscriptionTier: u,
-                        analyticsLocationObject: v,
+                        analyticsLocationObject: b,
                         onClose: s,
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T
                     })
                 ]
@@ -438,7 +438,7 @@ function Z(e) {
             return (
                 l()(null != o, 'You must specify children for this upsell type'),
                 (0, r.jsx)(M, {
-                    trialOffer: b,
+                    trialOffer: v,
                     discountOffer: T,
                     children: w.NW.format(w.t['5KMAnJ'], {
                         onClick: () => {
@@ -451,12 +451,12 @@ function Z(e) {
             return (0, r.jsxs)('div', {
                 className: a()(D.messageLengthUpsellContainer, { [D.messageLengthUpsellAppearAnimation]: !N }),
                 children: [
-                    (0, r.jsx)(_.Text, {
+                    (0, r.jsx)(p.Text, {
                         variant: 'text-lg/bold',
                         color: 'status-danger',
                         children: i
                     }),
-                    (0, r.jsx)(_.X6q, {
+                    (0, r.jsx)(p.X6q, {
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
                         className: D.messageLengthUpsellHeader,
@@ -464,7 +464,7 @@ function Z(e) {
                     }),
                     (0, r.jsx)('div', { className: D.divider }),
                     (0, r.jsx)(M, {
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T,
                         className: D.messageLengthBrandedContainer,
                         subscriptionTier: u,
@@ -477,9 +477,9 @@ function Z(e) {
                     }),
                     (0, r.jsx)(k, {
                         subscriptionTier: u,
-                        analyticsLocationObject: v,
+                        analyticsLocationObject: b,
                         onClose: s,
-                        trialOffer: b,
+                        trialOffer: v,
                         discountOffer: T
                     })
                 ]
@@ -498,8 +498,9 @@ function Z(e) {
         case R.cd.APP_ICON_UPSELL:
         case R.cd.CLIENT_THEMES_UPSELL:
         case R.cd.TRY_IT_OUT_MODAL_UPSELL:
+        case R.cd.VOICE_FILTERS_UPSELL:
             return (0, r.jsx)(B, {
-                trialOffer: b,
+                trialOffer: v,
                 discountOffer: T,
                 headingText: t,
                 context: i,
@@ -507,12 +508,12 @@ function Z(e) {
             });
         default:
             return (
-                S.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(c)),
+                I.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(c)),
                 (0, r.jsx)(B, {
                     headingText: t,
                     context: i,
                     children: o,
-                    trialOffer: b,
+                    trialOffer: v,
                     discountOffer: T
                 })
             );
