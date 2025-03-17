@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => X,
-    yv: () => F
+    yv: () => V
 }),
     n(653041),
     n(47120),
@@ -21,8 +21,8 @@ var r,
     m = n(268353),
     g = n(866960),
     E = n(181058),
-    v = n(626135),
-    b = n(70956),
+    b = n(626135),
+    v = n(70956),
     y = n(36703),
     O = n(228488),
     I = n(540026),
@@ -97,12 +97,12 @@ let k = 3000,
         VIDEO: 'VIDEO',
         AUDIO: 'AUDIO'
     },
-    V = {
+    F = {
         width: '100%',
         height: '100%',
         backgroundColor: 'black'
     };
-function F(e) {
+function V(e) {
     let t = 0 | e,
         n = t % 60;
     return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
@@ -122,8 +122,8 @@ function Z(e) {
 }
 let H = (e) => {
     let { current: t, duration: n } = e,
-        r = null != t ? F(t) : U,
-        i = null != n ? F(n) : U;
+        r = null != t ? V(t) : U,
+        i = null != n ? V(n) : U;
     return (
         (r = r.padStart(i.length, '0')),
         (0, o.jsxs)('div', {
@@ -395,7 +395,7 @@ class q {
     }
     sendEvent() {
         this.analyticsEnabled &&
-            v.default.track(A.rMx.MEDIA_PLAY_FINISHED, {
+            b.default.track(A.rMx.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -522,6 +522,9 @@ class q {
                         this.assertUnreachable(this.currentState);
                 }
             }),
+            D(this, 'onError', (e) => {
+                this.moveToState('paused'), this.sendEvent();
+            }),
             D(this, 'onPlaying', (e) => {
                 switch (this.currentState) {
                     case 'playing':
@@ -619,7 +622,7 @@ class Q extends (i = a.PureComponent) {
                 let e = r();
                 e !== this.state.muted && ((i.muted = e), (o.muted = e));
             }
-            this.setState(o), i.play(), null == t || t(e, i.currentTime * b.Z.Millis.SECOND, i.duration * b.Z.Millis.SECOND);
+            this.setState(o), i.play(), null == t || t(e, i.currentTime * v.Z.Millis.SECOND, i.duration * v.Z.Millis.SECOND);
         }
     }
     getWidth() {
@@ -722,9 +725,9 @@ class Q extends (i = a.PureComponent) {
         let { current: e } = this.mediaRef,
             {
                 props: { type: t, autoPlay: n, playable: r = !0, onVolumeShow: i, onVolumeHide: a, onControlsHide: s, onControlsShow: l },
-                state: { buffers: c, currentTime: u, duration: d, hasClickedPlay: f, hideControls: _, muted: p, playing: h, fullscreen: g, volume: E, dragging: v }
+                state: { buffers: c, currentTime: u, duration: d, hasClickedPlay: f, hideControls: _, muted: p, playing: h, fullscreen: g, volume: E, dragging: b }
             } = this,
-            b = this.getWidth();
+            v = this.getWidth();
         return f || n || t === B.AUDIO
             ? (0, o.jsx)(W, {
                   buffers: c,
@@ -745,10 +748,10 @@ class Q extends (i = a.PureComponent) {
                   onControlsShow: l,
                   onControlsHide: s,
                   playing: h,
-                  dragging: v,
+                  dragging: b,
                   type: t,
                   ref: this.controlsRef,
-                  width: g ? window.screen.width : b,
+                  width: g ? window.screen.width : v,
                   disabled: !r,
                   children:
                       t === B.VIDEO
@@ -790,7 +793,7 @@ class Q extends (i = a.PureComponent) {
             { fullscreen: r } = this.state,
             i = this.getWidth();
         return r
-            ? V
+            ? F
             : t === B.AUDIO
               ? {
                     width: void 0,
@@ -1007,7 +1010,7 @@ class Q extends (i = a.PureComponent) {
                 var t, n, r, i, o;
                 let a = e.currentTarget,
                     s = null;
-                (this._analytics.errorCode = null !== (i = null === (t = a.error) || void 0 === t ? void 0 : t.code) && void 0 !== i ? i : null), (this._analytics.errorMessage = null !== (o = null === (n = a.error) || void 0 === n ? void 0 : n.message) && void 0 !== o ? o : null), (s = (null === (r = a.error) || void 0 === r ? void 0 : r.code) === 4 ? R.NW.string(R.t.l2TVDA) : R.NW.string(R.t.VO4o6O)), this.setState({ error: s });
+                (this._analytics.errorCode = null !== (i = null === (t = a.error) || void 0 === t ? void 0 : t.code) && void 0 !== i ? i : null), (this._analytics.errorMessage = null !== (o = null === (n = a.error) || void 0 === n ? void 0 : n.message) && void 0 !== o ? o : null), (s = (null === (r = a.error) || void 0 === r ? void 0 : r.code) === 4 ? R.NW.string(R.t.l2TVDA) : R.NW.string(R.t.VO4o6O)), this.setState({ error: s }), this._analytics.onError(e);
             }),
             (this._analytics = new q({
                 src: e.src,
