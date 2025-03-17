@@ -2,27 +2,28 @@ n.d(t, {
     $0: () => P,
     AN: () => j,
     Ct: () => A,
-    EQ: () => Z,
-    Ej: () => I,
+    DU: () => V,
+    EQ: () => F,
+    Ej: () => S,
     ME: () => m,
     O1: () => O,
     O8: () => D,
-    Pl: () => S,
+    Pl: () => I,
     Ry: () => N,
-    Uw: () => L,
+    Uw: () => x,
     ZE: () => k,
     _G: () => y,
     _O: () => T,
     _y: () => g,
     do: () => U,
     g7: () => w,
-    g_: () => _,
-    hs: () => v,
+    g_: () => p,
+    hs: () => b,
     j4: () => R,
-    ks: () => V,
-    lX: () => b,
+    ks: () => H,
+    lX: () => v,
     m_: () => h,
-    qH: () => x,
+    qH: () => L,
     tj: () => E,
     uw: () => C,
     wN: () => B,
@@ -48,7 +49,7 @@ function f(e, t) {
     try {
         let n = d[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = F[n];
+        let r = Z[n];
         if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
         return r.skuFeatures.includes(e);
     } catch (e) {
@@ -57,45 +58,46 @@ function f(e, t) {
     }
     return !1;
 }
-class p extends a.Z {
+class _ extends a.Z {
     constructor(e, t) {
         super(e, (e) => f(this, e), t);
     }
 }
-let _ = new p(r.q.ANIMATED_EMOJIS),
-    h = new p(r.q.EMOJIS_EVERYWHERE),
-    m = new p(r.q.STICKERS_EVERYWHERE),
-    g = new p(r.q.SOUNDBOARD_EVERYWHERE),
-    E = new p(r.q.CUSTOM_CALL_SOUNDS),
-    v = new p(r.q.PREMIUM_VOICE_FILTERS),
-    b = new p(r.q.ANIMATED_AVATAR),
-    y = new p(r.q.CUSTOM_DISCRIMINATOR),
-    O = new p(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    S = new p('profileBadges'),
-    I = new p(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    T = new p('collectibles'),
-    N = new p(r.q.INCREASED_RECENT_AVATARS_LIMIT),
-    A = new p('appIcons'),
-    C = new p(r.q.CLIENT_THEMES),
-    R = new p('boostDiscount'),
-    P = new p('freeBoosts'),
-    w = new p(r.q.STREAM_MID_QUALITY),
-    D = new p(r.q.STREAM_HIGH_QUALITY),
-    x = new p(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    L = new p('fancyVoiceChannelReactions'),
-    M = new p('installPremiumApplications'),
-    k = new p('redeemPremiumPerks'),
-    j = new p(r.q.VIDEO_FILTER_ASSETS);
+let p = new _(r.q.ANIMATED_EMOJIS),
+    h = new _(r.q.EMOJIS_EVERYWHERE),
+    m = new _(r.q.STICKERS_EVERYWHERE),
+    g = new _(r.q.SOUNDBOARD_EVERYWHERE),
+    E = new _(r.q.CUSTOM_CALL_SOUNDS),
+    b = new _(r.q.PREMIUM_VOICE_FILTERS),
+    v = new _(r.q.ANIMATED_AVATAR),
+    y = new _(r.q.CUSTOM_DISCRIMINATOR),
+    O = new _(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
+    I = new _('profileBadges'),
+    S = new _(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    T = new _('collectibles'),
+    N = new _(r.q.INCREASED_RECENT_AVATARS_LIMIT),
+    A = new _('appIcons'),
+    C = new _(r.q.CLIENT_THEMES),
+    R = new _('boostDiscount'),
+    P = new _('freeBoosts'),
+    w = new _(r.q.STREAM_MID_QUALITY),
+    D = new _(r.q.STREAM_HIGH_QUALITY),
+    L = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    x = new _('fancyVoiceChannelReactions'),
+    M = new _('installPremiumApplications'),
+    k = new _('redeemPremiumPerks'),
+    j = new _(r.q.VIDEO_FILTER_ASSETS);
 new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
-let U = new p(r.q.INCREASED_GUILD_LIMIT),
-    G = new p(r.q.INCREASED_MESSAGE_LENGTH),
-    B = new p('increasedVideoUploadQuality'),
-    Z = new p('uploadLargeFiles'),
-    F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [_, h, m, S, j, B, Z, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [_, h, b, y, S, R, w, L, B, Z, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [_, h, m, g, E, b, y, O, S, I, C, R, P, w, D, L, M, k, j, U, G, B, Z, A, T, x, v, N])
+let U = new _(r.q.INCREASED_GUILD_LIMIT),
+    G = new _(r.q.INCREASED_MESSAGE_LENGTH),
+    B = new _('increasedVideoUploadQuality'),
+    F = new _('uploadLargeFiles'),
+    V = new _(r.q.CHAT_WALLPAPERS),
+    Z = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, F, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, v, y, I, R, w, x, B, F, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, v, y, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, A, T, L, b, N, V])
     });
-function V(e, t) {
+function H(e, t) {
     return !(0, s.U)('canUserUse', t) && e.getFeatureValue(t);
 }
