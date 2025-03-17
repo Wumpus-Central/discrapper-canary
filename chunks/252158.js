@@ -1,4 +1,10 @@
-n.d(t, { Z: () => M }), n(47120), n(653041), n(26686);
+n.d(t, {
+    J: () => D,
+    Z: () => M
+}),
+    n(47120),
+    n(653041),
+    n(26686);
 var r = n(570140),
     i = n(147913),
     o = n(358221),
@@ -233,7 +239,6 @@ function D(e) {
         {
             channelId: t,
             mediaSessionId: null == n ? void 0 : n.getMediaSessionId(),
-            parentMediaSessionId: null == n ? void 0 : n.parentMediaSessionId,
             rtcConnectionId: null == n ? void 0 : n.getRTCConnectionId(),
             mediaContext: I.Yn.STREAM,
             streamKey: e
