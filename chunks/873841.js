@@ -7,6 +7,7 @@ var r = {
     hover: 'hover__4bbc6',
     selected: 'selected__4bbc6',
     account: 'account__4bbc6',
+    shopPreview: 'shopPreview__4bbc6',
     accountContainer: 'accountContainer__4bbc6',
     videoContainer: 'videoContainer__4bbc6'
 };

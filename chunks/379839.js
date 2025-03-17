@@ -71,6 +71,7 @@ function g(e) {
     let h = n === c.BR.LIGHT ? t.lightBackground : t.darkBackground,
         m = r || i;
     if (o === s.i.ACCOUNT) return n === c.BR.LIGHT ? 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)') : 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(_, ' 100%)');
+    if (o === s.i.SHOP_PREVIEW) return 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)');
     let g = a && o === s.i.CHANNEL ? 'var(--bg-overlay-selected, var(--background-mod-subtle))' : 'var(--background-modifier-selected)',
         E = r ? 'var(--background-modifier-hover)' : i ? g : ''.concat(h, '00'),
         b = ''.concat(h).concat(m ? (n !== c.BR.LIGHT ? p : f) : d);

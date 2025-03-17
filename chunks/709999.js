@@ -221,15 +221,20 @@ let ec = (e) => {
             children: (0, r.jsxs)('div', {
                 className: es.nameplatePreviewList,
                 children: [
-                    (0, r.jsx)(eg, {
-                        showStatus: !0,
-                        width: 94,
-                        opacity: 0.7
-                    }),
-                    (0, r.jsx)(eg, {
-                        showStatus: !0,
-                        width: 110,
-                        opacity: 0.85
+                    (0, r.jsxs)('div', {
+                        className: es.fadeIn,
+                        children: [
+                            (0, r.jsx)(eg, {
+                                showStatus: !0,
+                                width: 94,
+                                opacity: 0.7
+                            }),
+                            (0, r.jsx)(eg, {
+                                showStatus: !0,
+                                width: 110,
+                                opacity: 0.85
+                            })
+                        ]
                     }),
                     (0, r.jsx)(K.Z, {
                         user: t,
@@ -240,15 +245,20 @@ let ec = (e) => {
                         showStatus: !0,
                         isPurchased: s
                     }),
-                    (0, r.jsx)(eg, {
-                        showStatus: !0,
-                        width: 110,
-                        opacity: 0.85
-                    }),
-                    (0, r.jsx)(eg, {
-                        showStatus: !0,
-                        width: 94,
-                        opacity: 0.7
+                    (0, r.jsxs)('div', {
+                        className: es.fadeOut,
+                        children: [
+                            (0, r.jsx)(eg, {
+                                showStatus: !0,
+                                width: 110,
+                                opacity: 0.85
+                            }),
+                            (0, r.jsx)(eg, {
+                                showStatus: !0,
+                                width: 94,
+                                opacity: 0.7
+                            })
+                        ]
                     })
                 ]
             })

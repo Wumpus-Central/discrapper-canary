@@ -15576,6 +15576,14 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: .4
 }
 
+.shopPreview__4bbc6 {
+    opacity: .8
+}
+
+.shopPreview__4bbc6.hover__4bbc6 {
+    opacity: 1
+}
+
 .visual-refresh .accountContainer__4bbc6 {
     border-radius: 4px
 }
@@ -34255,7 +34263,7 @@ html:not(.visual-refresh) .root_e5f3a9 {
     border-radius: 8px;
     height: 14px;
     width: 124px;
-    opacity: .8
+    opacity: .5
 }
 
 .theme-light .placeholderUsernameColor_fdeafc {

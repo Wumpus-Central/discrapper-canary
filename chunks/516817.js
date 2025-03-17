@@ -45,7 +45,8 @@ function _(e) {
                   className: a()(f.img, {
                       [f.hover]: n,
                       [f.selected]: o,
-                      [f.account]: c === d.i.ACCOUNT
+                      [f.account]: c === d.i.ACCOUNT,
+                      [f.shopPreview]: c === d.i.SHOP_PREVIEW
                   }),
                   style: { maskImage: _.maskImage },
                   animate: h,

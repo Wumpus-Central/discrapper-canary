@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -8,60 +8,62 @@ var i = n(120356),
     l = n(481060),
     c = n(570908),
     u = n(204418),
-    d = n(516817),
-    f = n(210887),
-    _ = n(158776),
-    p = n(5192),
-    h = n(579407),
-    m = n(388032),
-    g = n(862078),
-    E = n(460400),
-    b = n(943549);
-let v = (e) => {
-    let { user: t, nameplate: n, nameplateData: i, className: v, isHighlighted: y, showStatus: O, showWumpus: I, isPurchased: S = !1 } = e,
-        T = (0, a.e7)([f.Z], () => (0, s.wj)(f.Z.theme)),
-        N = null != n ? (0, h.EU)(n) : i,
-        A = (0, a.e7)([_.Z], () => _.Z.getStatus(t.id)),
-        C = T ? '#706F74' : '#aaaab2';
+    d = n(359135),
+    f = n(516817),
+    _ = n(210887),
+    p = n(158776),
+    h = n(5192),
+    m = n(579407),
+    g = n(388032),
+    E = n(862078),
+    b = n(460400),
+    v = n(943549);
+let y = (e) => {
+    let { user: t, nameplate: n, nameplateData: i, className: y, isHighlighted: O, showStatus: I, showWumpus: S, isPurchased: T = !1 } = e,
+        N = (0, a.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
+        A = null != n ? (0, m.EU)(n) : i,
+        C = (0, a.e7)([p.Z], () => p.Z.getStatus(t.id)),
+        R = N ? '#706F74' : '#aaaab2';
     return (0, r.jsxs)('div', {
-        className: o()(v, g.nameplatePreview, { [g.nameplatePurchased]: S && !y }),
-        style: { color: T ? 'white' : 'black' },
+        className: o()(y, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
+        style: { color: N ? 'white' : 'black' },
         children: [
-            null != N &&
-                (0, r.jsx)(d.Z, {
-                    nameplate: N,
-                    hovered: y
+            null != A &&
+                (0, r.jsx)(f.Z, {
+                    nameplate: A,
+                    hovered: O,
+                    placement: d.i.SHOP_PREVIEW
                 }),
             (0, r.jsxs)('div', {
-                className: g.overlayContainer,
+                className: E.overlayContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(g.avatarContainer, !I && g.avatarVisible),
+                        className: o()(E.avatarContainer, !S && E.avatarVisible),
                         children: (0, r.jsx)(c.Z, {
                             avatar: (0, r.jsx)(u.Z, {
                                 user: t,
                                 guildId: null,
                                 avatarSize: l.EFr.SIZE_32,
-                                status: O ? A : void 0,
+                                status: I ? C : void 0,
                                 'aria-hidden': !0
                             }),
-                            name: p.ZP.getName(null, null, t),
-                            innerClassName: g.avatarWithTextInnerClassName,
+                            name: h.ZP.getName(null, null, t),
+                            innerClassName: E.avatarWithTextInnerClassName,
                             selected: !1
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: o()(g.avatarContainer, I && g.avatarVisible),
+                        className: o()(E.avatarContainer, S && E.avatarVisible),
                         children: (0, r.jsx)(c.Z, {
                             avatar: (0, r.jsx)(l.qEK, {
-                                src: T ? E : b,
+                                src: N ? b : v,
                                 size: l.EFr.SIZE_32,
-                                'aria-label': m.NW.string(m.t.cqpybG),
+                                'aria-label': g.NW.string(g.t.cqpybG),
                                 status: l.Skl.ONLINE,
-                                statusColor: C
+                                statusColor: R
                             }),
-                            name: (0, r.jsx)('div', { className: o()(g.placeholderUsername, g.placeholderUsernameColor) }),
-                            innerClassName: g.avatarWithTextInnerClassName,
+                            name: (0, r.jsx)('div', { className: o()(E.placeholderUsername, E.placeholderUsernameColor) }),
+                            innerClassName: E.avatarWithTextInnerClassName,
                             selected: !1
                         })
                     })
