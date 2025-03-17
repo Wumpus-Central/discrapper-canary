@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    f: () => _
+    f: () => p
 });
 var r = n(200651),
     i = n(192379),
@@ -9,7 +9,7 @@ var r = n(200651),
     s = n(642128),
     l = n(481060),
     c = n(110924),
-    u = n(565725);
+    u = n(682427);
 function d(e, t, n) {
     return (
         t in e
@@ -39,9 +39,9 @@ function f(e) {
     }
     return e;
 }
-let p = 8;
-var _ = (function (e) {
-    return (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE'), (e.LIGHTBOX = 'LIGHTBOX'), e;
+let _ = 8;
+var p = (function (e) {
+    return (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE'), (e.LIGHTBOX = 'LIGHTBOX'), (e.TOP_RADIAL = 'TOP_RADIAL'), e;
 })({});
 function h() {
     let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
@@ -51,37 +51,38 @@ function h() {
         DARK: t,
         BLUR: t,
         IMMERSIVE: (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
-        LIGHTBOX: (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring()
+        LIGHTBOX: (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring(),
+        TOP_RADIAL: t
     };
 }
 let m = i.forwardRef(function (e, t) {
-    let { backdropStyle: n = 'SUBTLE', backdropInstant: i = !1, zIndexBoost: o = 0, LayerComponent: d, isVisible: _, onClose: m } = e,
+    let { backdropStyle: n = 'SUBTLE', backdropInstant: i = !1, zIndexBoost: o = 0, LayerComponent: d, isVisible: p, onClose: m } = e,
         g = h()[n],
         E = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        v = 'BLUR' === n ? p : 0,
-        b = {
+        b = 'BLUR' === n ? _ : 0,
+        v = {
             background: E,
             backdropFilter: 'blur(0px)'
         },
         y = {
             background: g,
-            backdropFilter: 'blur('.concat(v, 'px)')
+            backdropFilter: 'blur('.concat(b, 'px)')
         },
         O = (0, c.Z)(i),
-        S = (0, l.Yzy)(
-            _,
+        I = (0, l.Yzy)(
+            p,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
                 config: { duration: i || O ? 0 : 200 },
-                from: b,
+                from: v,
                 enter: y,
-                leave: b
+                leave: v
             },
             'animate-always'
         );
     if (null == d) {
         let e = { zIndex: 1000 + o };
-        return S((t, n) =>
+        return I((t, n) =>
             n
                 ? (0, r.jsx)(s.animated.div, {
                       className: u.backdrop,
@@ -92,11 +93,11 @@ let m = i.forwardRef(function (e, t) {
         );
     }
     return (0, r.jsx)(d, {
-        children: S((e, t) =>
+        children: I((e, t) =>
             t
                 ? (0, r.jsx)(s.animated.div, {
                       className: a()(u.backdrop, u.withLayer),
-                      style: e,
+                      style: 'TOP_RADIAL' === n ? { background: 'radial-gradient(96.68% 96.68% at 50.04% 3.32%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%)' } : e,
                       onClick: m
                   })
                 : null

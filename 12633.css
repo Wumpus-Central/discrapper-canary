@@ -41299,6 +41299,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     padding-bottom: 40px
 }
 
+.layer_bc663c:has([data-modal-align=top]) {
+    bottom: auto;
+    padding-top: 0
+}
+
 .hidden_bc663c * {
     pointer-events: none !important
 }
@@ -45200,6 +45205,18 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-radius: 0 8px 8px 0
 }
 
+.visual-refresh .baseShapeRound__2b1f5 {
+    border-radius: var(--radius-round)
+}
+
+.visual-refresh .baseShapeRoundLeft__2b1f5 {
+    border-radius: var(--radius-xs) 0 0 var(--radius-xs)
+}
+
+.visual-refresh .baseShapeRoundRight__2b1f5 {
+    border-radius: 0 var(--radius-xs) var(--radius-xs) 0
+}
+
 .numberBadge__2b1f5 {
     display: flex;
     align-items: center;
@@ -45211,6 +45228,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
+}
+
+.visual-refresh .textBadge__2b1f5 {
+    border-radius: var(--radius-sm)
 }
 
 .iconBadge__2b1f5 {
