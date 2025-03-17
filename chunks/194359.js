@@ -15,7 +15,7 @@ var r = n(544891),
     m = n(981631),
     g = n(858380),
     E = n(388032);
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -50,7 +50,7 @@ function y(e) {
 function O() {
     (0, h.Zy)(), (0, l.default)();
 }
-function S(e, t, n) {
+function I(e, t, n) {
     let { status: r, body: i } = e,
         o = i && i.code;
     switch (r) {
@@ -89,14 +89,14 @@ function S(e, t, n) {
     }
     throw e;
 }
-let I = {
+let S = {
         sendRequest(e) {
             let { discordTag: t, context: n, captchaPayload: i, errorUxConfig: o = 0 } = e,
                 [a, s] = t.split('#');
             return r.tn
                 .post({
                     url: m.ANM.USER_RELATIONSHIPS(),
-                    body: b(
+                    body: v(
                         {
                             username: a,
                             discriminator: parseInt(s)
@@ -108,7 +108,7 @@ let I = {
                     rejectWithError: !1
                 })
                 .catch((e) => {
-                    S(e, o, t);
+                    I(e, o, t);
                 });
         },
         addRelationship(e, t) {
@@ -118,7 +118,7 @@ let I = {
             return r.tn
                 .put({
                     url: m.ANM.USER_RELATIONSHIP(n),
-                    body: b(
+                    body: v(
                         {
                             type: o,
                             friend_token: a,
@@ -135,32 +135,45 @@ let I = {
                     null == t || t();
                 })
                 .catch((e) => {
-                    S(e, u, _.ZP.getUserTag(f));
+                    I(e, u, _.ZP.getUserTag(f));
                 });
         },
         acceptFriendRequest(e) {
             function t() {
                 i.uv.announce(E.NW.string(E.t['3goNa2']));
             }
-            return I.addRelationship(e, t);
+            return S.addRelationship(e, t);
         },
         cancelFriendRequest(e, t) {
             function n() {
                 i.uv.announce(E.NW.string(E.t.pLUaxc));
             }
-            return I.removeRelationship(e, t, n);
+            return S.removeRelationship(e, t, n);
         },
         removeFriend(e, t) {
             function n() {
                 i.uv.announce(E.NW.string(E.t.vGSLa2));
             }
-            I.removeRelationship(e, t, n);
+            S.removeRelationship(e, t, n);
+        },
+        blockUser(e, t) {
+            function n() {
+                i.uv.announce(E.NW.string(E.t.mU0Vrq));
+            }
+            return S.addRelationship(
+                {
+                    userId: e,
+                    context: t,
+                    type: m.OGo.BLOCKED
+                },
+                n
+            );
         },
         unblockUser(e, t) {
             function n() {
                 i.uv.announce(E.NW.string(E.t['9t1au7']));
             }
-            return I.removeRelationship(e, t, n);
+            return S.removeRelationship(e, t, n);
         },
         removeRelationship: (e, t, n) =>
             r.tn
@@ -257,4 +270,4 @@ let I = {
                     c.Z.showFailedToast(), i.uv.announce(E.NW.string(E.t.n6Jo3N));
                 })
     },
-    T = I;
+    T = S;

@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(276506),
     d = n(333984),
     p = n(486622),
-    h = n(488634),
+    h = n(922409),
     f = n(86203),
     m = n(6025),
     g = n(621853),
@@ -116,11 +116,7 @@ let P = (e) => {
                 size: a.zxk.Sizes.TINY,
                 color: a.zxk.Colors.PRIMARY,
                 onClick: () => {
-                    s.Z.addRelationship({
-                        userId: i,
-                        context: { location: j.ZY5.DM_CHANNEL },
-                        type: j.OGo.BLOCKED
-                    });
+                    s.Z.blockUser(i, { location: j.ZY5.DM_CHANNEL });
                 },
                 children: N.NW.string(N.t.l4EmaW)
             }),

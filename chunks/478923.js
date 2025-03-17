@@ -4,20 +4,20 @@ var n = r(200651),
     o = r(990547),
     c = r(442837),
     s = r(481060),
-    a = r(194359),
-    l = r(1596),
+    l = r(194359),
+    a = r(1596),
     d = r(681678),
     u = r(138201),
     f = r(699516),
     O = r(626135),
     m = r(63063),
     N = r(5192),
-    p = r(922611),
-    j = r(240515),
+    j = r(922611),
+    p = r(240515),
     x = r(858380),
     g = r(981631),
     b = r(388032),
-    I = r(863702);
+    I = r(894200);
 function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
@@ -62,8 +62,8 @@ function E(t, e) {
     );
 }
 function y(t) {
-    let { user: e, onBlock: r, onIgnore: i, location: o, disallowIgnore: a, guildId: d, channelId: y } = t,
-        v = (0, p.Do)({ location: 'confirm_block_modal_body' }),
+    let { user: e, onBlock: r, onIgnore: i, location: o, disallowIgnore: l, guildId: d, channelId: y } = t,
+        v = (0, j.D)({ location: 'confirm_block_modal_body' }),
         T = (0, c.e7)([f.Z], () => f.Z.isIgnored(e.id));
     return v
         ? (0, n.jsxs)('div', {
@@ -102,8 +102,8 @@ function y(t) {
                           })
                       ]
                   }),
-                  (0, n.jsx)(l.Z, {}),
-                  a || T
+                  (0, n.jsx)(a.Z, {}),
+                  l || T
                       ? null
                       : (0, n.jsxs)('div', {
                             className: I.otherOptions,
@@ -125,7 +125,7 @@ function y(t) {
                                                 (0, s.pTH)(),
                                                 (0, s.h7j)((t) =>
                                                     (0, n.jsx)(
-                                                        j.default,
+                                                        p.default,
                                                         E(h({}, t), {
                                                             user: e,
                                                             guildId: d,
@@ -148,11 +148,11 @@ function y(t) {
                         })
               ]
           })
-        : (0, n.jsx)(l.Z, {});
+        : (0, n.jsx)(a.Z, {});
 }
 function v(t) {
-    var { user: e, onBlock: r, onCancel: c, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: N } = t,
-        j = (function (t, e) {
+    var { user: e, onBlock: r, onCancel: c, onIgnore: a, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: N } = t,
+        p = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -171,7 +171,7 @@ function v(t) {
             }
             return i;
         })(t, ['user', 'onBlock', 'onCancel', 'onIgnore', 'location', 'disallowIgnore', 'guildId', 'channelId']);
-    let I = (0, p.Do)({ location: 'block-confirm-modal' });
+    let I = (0, j.D)({ location: 'block-confirm-modal' });
     return (
         i.useLayoutEffect(
             () => () => {
@@ -199,17 +199,13 @@ function v(t) {
                         },
                         onConfirm: () => {
                             null == r || r(),
-                                a.Z.addRelationship({
-                                    userId: e.id,
-                                    context: { location: u },
-                                    type: g.OGo.BLOCKED
-                                }),
-                                O.default.track(g.rMx.BLOCK_USER_CONFIRMED),
-                                d.Z.showBlockSuccessToast(e.id, null != N ? N : void 0);
+                                l.Z.blockUser(e.id, { location: u }).then(() => {
+                                    O.default.track(g.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != N ? N : void 0);
+                                });
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION }
                     },
-                    j
+                    p
                 ),
                 {
                     children: (0, n.jsx)(y, {
@@ -217,7 +213,7 @@ function v(t) {
                         guildId: m,
                         channelId: N,
                         onBlock: r,
-                        onIgnore: l,
+                        onIgnore: a,
                         disallowIgnore: f
                     })
                 }

@@ -1,4 +1,4 @@
-n.d(t, { M: () => E }), n(47120);
+n.d(t, { M: () => N }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(286379),
@@ -21,10 +21,10 @@ var r = n(200651),
     x = n(134612),
     j = n(981631),
     O = n(388032);
-function N(e) {
+function E(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: a } = (0, o.cj)([m.Z], () => ({ isIgnored: m.Z.isIgnored(t) }), [t]),
-        u = (0, d.Do)({ location: 'web_stranger_danger_more' }),
+        u = (0, d.D)({ location: 'web_stranger_danger_more' }),
         h = (0, o.e7)([g.ZP], () => g.ZP.isChannelMuted(null, n)),
         _ = i.useCallback(() => {
             (0, v.qc)({
@@ -82,21 +82,18 @@ function N(e) {
                     }
           });
 }
-function E(e) {
+function N(e) {
     let { channelId: t, warningId: s, senderId: d } = e,
         { isBlocked: p } = (0, o.cj)([m.Z], () => ({ isBlocked: m.Z.isBlocked(d) }), [d]),
         g = i.useCallback(() => {
             (0, _.T)(t, [s]);
         }, [t, s]),
         b = (0, x.C2)(),
-        E = i.useCallback(
+        N = i.useCallback(
             (e) => () => {
-                c.Z.addRelationship({
-                    userId: d,
-                    context: { location: x.zr },
-                    type: j.OGo.BLOCKED
+                c.Z.blockUser(d, { location: x.zr }).then(() => {
+                    g();
                 }),
-                    g(),
                     (0, v.qc)({
                         channelId: t,
                         warningId: s,
@@ -116,7 +113,7 @@ function E(e) {
         }),
             u.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [t, s, d]);
-    let P = () => {
+    let I = () => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -142,7 +139,7 @@ function E(e) {
                         actionRows: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(
-                                    N,
+                                    E,
                                     {
                                         senderId: d,
                                         channelId: t,
@@ -158,7 +155,7 @@ function E(e) {
                                         buttonText: O.NW.string(O.t['5QYPOz']),
                                         buttonColor: a.zxk.Colors.RED,
                                         onButtonPress: () => {
-                                            l(), I(v.NM.USER_MODAL_BLOCK_CONFIRM, v.NM.USER_MODAL_BLOCK_CANCEL, P);
+                                            l(), P(v.NM.USER_MODAL_BLOCK_CONFIRM, v.NM.USER_MODAL_BLOCK_CANCEL, I);
                                         }
                                     },
                                     'block-button'
@@ -169,9 +166,9 @@ function E(e) {
                 };
             });
         },
-        I = (e, i, l) => {
+        P = (e, i, l) => {
             (0, a.ZDy)(async () => {
-                let { default: o } = await Promise.all([n.e('97652'), n.e('51092')]).then(n.bind(n, 744373));
+                let { default: o } = await Promise.all([n.e('97652'), n.e('26237')]).then(n.bind(n, 744373));
                 return (n) => {
                     var a, c;
                     return (0, r.jsx)(
@@ -204,7 +201,7 @@ function E(e) {
                         (c = c =
                             {
                                 userId: d,
-                                confirmBlock: E(e),
+                                confirmBlock: N(e),
                                 onCancel: () => {
                                     null == l || l(),
                                         (0, v.qc)({
@@ -246,7 +243,7 @@ function E(e) {
                 text: O.NW.string(O.t['Qk/c4+']),
                 color: a.zxk.Colors.BRAND,
                 onclick: () => {
-                    P(),
+                    I(),
                         (0, v.qc)({
                             channelId: t,
                             warningId: s,
@@ -262,7 +259,7 @@ function E(e) {
                       {
                           text: O.NW.string(O.t.ie0QdH),
                           color: a.zxk.Colors.RED,
-                          onclick: () => I(v.NM.USER_BANNER_BLOCK_CONFIRM, v.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => P(v.NM.USER_BANNER_BLOCK_CONFIRM, v.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]
