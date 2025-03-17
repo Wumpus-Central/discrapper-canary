@@ -1,17 +1,17 @@
 t.d(n, { Z: () => _ });
 var r = t(200651),
     i = t(192379),
-    o = t(120356),
-    s = t.n(o),
+    s = t(120356),
+    o = t.n(s),
     a = t(481060),
     l = t(413335),
     c = t(762762),
     d = t(157353),
     u = t(279604),
     x = t(730621),
-    p = t(388032),
-    v = t(423839);
-function m(e) {
+    m = t(388032),
+    p = t(423839);
+function v(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -55,74 +55,83 @@ function b(e, n) {
     );
 }
 function _(e) {
-    let { className: n, guildId: t, powerup: o, onError: _ } = e,
-        { onActivate: j, isLoading: h, error: f, onShowDeactivate: g } = (0, u.ZP)(t, o),
-        Z = (0, d.Z)(t, o);
+    let { className: n, guildId: t, powerup: s, onError: _ } = e,
+        { onActivate: j, isLoading: h, error: f, onShowDeactivate: g } = (0, u.ZP)(t, s),
+        Z = (0, d.Z)(t, s);
     i.useEffect(() => {
         null == _ || _(f);
     }, [f, _]);
-    let { disabled: C, reason: N } = (0, c.Z)(t, o, Z);
+    let { disabled: C, reason: N } = (0, c.Z)(t, s, Z);
     return (0, r.jsxs)('div', {
-        className: s()(v.container, n),
+        className: o()(p.container, n),
         children: [
             Z &&
                 (0, r.jsx)(a.ua7, {
-                    'aria-label': p.NW.string(x.Z.TZsu1d),
+                    delay: 100,
+                    'aria-label': m.NW.string(x.Z.TZsu1d),
                     text: (0, r.jsxs)('div', {
-                        className: v.tooltipContainer,
+                        className: p.tooltipContainer,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/semibold',
-                                children: p.NW.string(x.Z.TZsu1d)
+                                children: m.NW.string(x.Z.TZsu1d)
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
-                                children: p.NW.formatToPlainString(x.Z['5HQUzM'], { boostCount: o.cost })
+                                children: m.NW.formatToPlainString(x.Z['5HQUzM'], { boostCount: s.cost })
                             })
                         ]
                     }),
                     children: (e) =>
-                        (0, r.jsx)(
+                        (0, r.jsxs)(
                             a.zxk,
-                            b(m({}, e), {
-                                className: v.secondaryButton,
+                            b(v({}, e), {
+                                className: p.secondaryButton,
+                                innerClassName: o()(p.buttonInner, p.secondaryButtonInner),
                                 color: a.Ttl.PRIMARY,
-                                'aria-label': p.NW.string(x.Z.TZsu1d),
+                                'aria-label': m.NW.string(x.Z.TZsu1d),
                                 grow: !1,
                                 onClick: g,
-                                children: (0, r.jsx)(l.Z, {})
+                                children: [
+                                    (0, r.jsx)(a.mTd, { size: 'sm' }),
+                                    (0, r.jsx)(a.Text, {
+                                        variant: 'text-sm/semibold',
+                                        children: s.cost
+                                    })
+                                ]
                             })
                         )
                 }),
             (0, r.jsx)(a.ua7, {
+                delay: 100,
                 text: N,
                 shouldShow: null != N,
                 children: (e) =>
                     (0, r.jsxs)(
                         a.zxk,
-                        b(m({}, e), {
+                        b(v({}, e), {
                             disabled: C,
-                            className: v.primaryButton,
-                            innerClassName: v.buttonInner,
-                            wrapperClassName: v.buttonWrapper,
+                            className: p.primaryButton,
+                            innerClassName: p.buttonInner,
+                            wrapperClassName: p.buttonWrapper,
                             grow: !0,
                             onClick: Z ? () => {} : j,
                             submitting: !Z && h,
                             children: [
-                                Z ? p.NW.string(x.Z['g5Ds6+']) : p.NW.string(x.Z.gSxlHR),
+                                Z ? m.NW.string(x.Z['g5Ds6+']) : m.NW.string(x.Z.gSxlHR),
                                 !Z &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)('span', {
-                                                className: v.dot,
+                                                className: p.dot,
                                                 children: '\u2022'
                                             }),
                                             (0, r.jsx)(l.Z, {
                                                 size: 'sm',
-                                                className: v.boost,
+                                                className: p.boost,
                                                 fill: 'white'
                                             }),
-                                            (0, r.jsx)('span', { children: o.cost })
+                                            (0, r.jsx)('span', { children: s.cost })
                                         ]
                                     })
                             ]

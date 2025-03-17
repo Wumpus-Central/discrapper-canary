@@ -2,11 +2,12 @@ n.d(t, {
     EJ: () => h,
     Pb: () => p,
     XV: () => _,
-    Zp: () => m,
-    f6: () => g,
-    ky: () => b,
-    p0: () => y,
-    pY: () => v
+    Zp: () => g,
+    f6: () => E,
+    ky: () => v,
+    p0: () => O,
+    pY: () => y,
+    up: () => m
 }),
     n(230036);
 var r = n(108131),
@@ -35,11 +36,14 @@ function p(e) {
 function h(e) {
     return null != e && e.hasFeature(d.oNc.CLAN);
 }
-function m(e, t) {
+function m(e) {
+    return e.hasFeature(d.oNc.CLAN) || e.hasFeature(d.oNc.GUILD_TAGS);
+}
+function g(e, t) {
     var n, r;
     return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.profile) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.profile) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
-let g = (e, t) => {
+let E = (e, t) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[0];
         if (2 === e.length)
@@ -64,27 +68,27 @@ let g = (e, t) => {
             });
         }
     },
-    E = {
+    b = {
         [u.NC.SIZE_12]: 16,
         [u.NC.SIZE_16]: 16,
         [u.NC.SIZE_24]: 24,
         [u.NC.SIZE_32]: 32,
         [u.NC.SIZE_36]: 40
     };
-function b(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
-    let i = E[n];
+    let i = b[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function v(e, t) {
+function y(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function y(e, t) {
+function O(e, t) {
     let n = (0, o.e7)([a.Z], () => a.Z.hideTags),
         r = (0, o.e7)([c.default], () => c.default.getUser(e), [e]),
         i = (0, o.e7)(

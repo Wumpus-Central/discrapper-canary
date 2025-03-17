@@ -1,5 +1,5 @@
 n.d(t, {
-    AW: () => v,
+    AW: () => b,
     Cm: () => O,
     HU: () => R,
     IV: () => I,
@@ -8,7 +8,7 @@ n.d(t, {
     Ve: () => u,
     ZS: () => d,
     a$: () => A,
-    aK: () => b,
+    aK: () => v,
     f7: () => E,
     gJ: () => N,
     i0: () => g,
@@ -125,7 +125,8 @@ let u = {
         [c.T.LOFI_GIRL]: {
             heroBanner: { animationSource: 'https://cdn.discordapp.com/assets/collectibles/drops/lofi_girl/hero_banner.webm' },
             animatedBanner: 'https://cdn.discordapp.com/assets/collectibles/drops/lofi_girl/banner_animated.webm'
-        }
+        },
+        [c.T.NAMEPLATE]: { animatedBanner: 'https://cdn.discordapp.com/assets/content/6f72be1e45f627e6b43894ca7dcda02c2851a3120a643a85c5132e87af6b50c4.webm' }
     },
     d = (e) => u[e],
     f = '1225876188074082374',
@@ -137,10 +138,10 @@ let u = {
 var E = (function (e) {
         return (e[(e.VISIBLE = 0)] = 'VISIBLE'), (e[(e.HIDDEN = 1)] = 'HIDDEN'), (e[(e.IN = 2)] = 'IN'), (e[(e.OUT = 3)] = 'OUT'), e;
     })({}),
-    v = (function (e) {
+    b = (function (e) {
         return (e.HOME = 'home'), (e.CATALOG = 'catalog'), (e.ORBS = 'orbs'), e;
     })({});
-let b = (e) => null != e && 'home' !== e && 'catalog' !== e,
+let v = (e) => null != e && 'home' !== e && 'catalog' !== e,
     y = 800,
     O = 604800000,
     I = 12,

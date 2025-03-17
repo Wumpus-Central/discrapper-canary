@@ -4,6 +4,7 @@ e.exports = {
     primaryButton: 'primaryButton__2b26c',
     secondaryButton: 'secondaryButton__2b26c',
     buttonInner: 'buttonInner__2b26c',
+    secondaryButtonInner: 'secondaryButtonInner__2b26c',
     buttonWrapper: 'buttonWrapper__2b26c',
     dot: 'dot__2b26c',
     boost: 'boost__2b26c'

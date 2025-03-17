@@ -6,4 +6,15 @@ function r(e) {
           }
         : void 0;
 }
-n.d(t, { L: () => r });
+function i(e) {
+    return {
+        id: e.id,
+        label: e.label,
+        default: e.default,
+        isBlurred: e.is_blurred
+    };
+}
+n.d(t, {
+    L: () => r,
+    w: () => i
+});

@@ -37,6 +37,9 @@ class _ extends (r = i.ZP.Store) {
     get isFetchingWallpapers() {
         return 1 === l;
     }
+    get shouldFetchWallpapers() {
+        return 0 === l;
+    }
     get wallpapers() {
         return Object.values(s);
     }
