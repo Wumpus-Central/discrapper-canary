@@ -15,6 +15,7 @@ e.exports = {
     lock: 'lock__2aeb5',
     preview: 'preview__2aeb5',
     previewBox: 'previewBox__2aeb5',
+    upsellPreviewContents: 'upsellPreviewContents__2aeb5',
     label: 'label__2aeb5',
     upsellPreviewBox: 'upsellPreviewBox__2aeb5',
     upsellPreviewDescription: 'upsellPreviewDescription__2aeb5',

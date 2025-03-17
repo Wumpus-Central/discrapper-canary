@@ -21,42 +21,42 @@ var r = n(200651),
     x = n(607070),
     b = n(100527),
     N = n(906732),
-    _ = n(693728),
-    E = n(333867),
-    j = n(197115),
-    C = n(876917),
-    O = n(210887),
-    v = n(822857),
-    S = n(960919),
-    T = n(74538),
-    I = n(335131),
-    y = n(1870),
-    A = n(429368),
-    P = n(884697),
-    R = n(664018),
-    D = n(819570),
-    Z = n(228624),
-    w = n(635552),
-    k = n(905357),
-    W = n(724994),
-    L = n(297651),
-    B = n(390698),
-    M = n(813083),
-    U = n(680942),
-    V = n(558060),
-    G = n(237031),
-    F = n(508925),
-    H = n(385797),
-    z = n(453713),
-    Y = n(616066),
-    K = n(216541),
-    q = n(22267),
-    X = n(67409),
-    J = n(58201),
-    Q = n(201964),
-    $ = n(361110),
-    ee = n(956472),
-    et = n(832149),
+    _ = n(333867),
+    E = n(197115),
+    j = n(876917),
+    C = n(210887),
+    O = n(822857),
+    v = n(960919),
+    S = n(74538),
+    T = n(335131),
+    I = n(1870),
+    y = n(429368),
+    A = n(884697),
+    P = n(664018),
+    R = n(819570),
+    D = n(228624),
+    Z = n(635552),
+    w = n(905357),
+    k = n(724994),
+    W = n(297651),
+    L = n(390698),
+    B = n(813083),
+    M = n(680942),
+    U = n(558060),
+    V = n(237031),
+    G = n(508925),
+    F = n(385797),
+    H = n(453713),
+    z = n(616066),
+    Y = n(216541),
+    K = n(22267),
+    q = n(67409),
+    X = n(58201),
+    J = n(201964),
+    Q = n(361110),
+    $ = n(956472),
+    ee = n(832149),
+    et = n(981631),
     en = n(474936),
     er = n(231338),
     ei = n(388032),
@@ -174,7 +174,7 @@ let ec = (e) => {
         let { profileEffectId: t, isHighlighted: n, isPurchased: i } = e;
         return (0, r.jsx)('div', {
             className: es.profileEffectShopPreview,
-            children: (0, r.jsx)(C.Z, {
+            children: (0, r.jsx)(j.Z, {
                 profileEffectId: t,
                 isHovering: n,
                 isPurchased: i && !n,
@@ -186,7 +186,7 @@ let ec = (e) => {
         let { isStormMysteryItem: t, isHighlighted: n, isPurchased: i, user: s, item: l } = e;
         return (0, r.jsx)('div', {
             className: a()(es.avatarContainer, t && es.mysteryAvatarContainer),
-            children: (0, r.jsx)(Y.R, {
+            children: (0, r.jsx)(z.R, {
                 item: l,
                 user: s,
                 isPurchased: i,
@@ -195,34 +195,61 @@ let ec = (e) => {
         });
     },
     eg = (e) => {
-        let { isDarkTheme: t } = e;
-        return (0, r.jsx)(_.Z, {
-            avatarSize: h.EFr.SIZE_32,
+        let { showStatus: t, width: n, opacity: i } = e;
+        return (0, r.jsxs)('div', {
             className: a()(es.nameplatePreviewSampleItem, es.placeholderItem),
-            childrenClassName: t ? es.placeholderItemChildrenDark : es.placeholderItemChildrenLight,
-            doNotAnimate: !0
+            style: { opacity: i },
+            children: [
+                (0, r.jsx)(h.qEK, {
+                    src: null,
+                    size: h.EFr.SIZE_32,
+                    status: t ? et.Skl.ONLINE : void 0,
+                    statusColor: 'var(--background-modifier-accent)',
+                    'aria-hidden': !0
+                }),
+                (0, r.jsx)('div', {
+                    className: es.placeholderBar,
+                    style: { maxWidth: null != n ? n : '100px' }
+                })
+            ]
         });
     },
     ep = (e) => {
-        let { user: t, isDarkTheme: n, nameplate: i, isHighlighted: s, isPurchased: a } = e;
+        let { user: t, nameplate: n, isHighlighted: i, isPurchased: s } = e;
         return (0, r.jsx)('div', {
             className: es.nameplatePreviewRootContainer,
             children: (0, r.jsxs)('div', {
                 className: es.nameplatePreviewList,
                 children: [
-                    (0, r.jsx)(eg, { isDarkTheme: n }),
-                    (0, r.jsx)(eg, { isDarkTheme: n }),
-                    (0, r.jsx)(q.Z, {
-                        user: t,
-                        nameplate: i,
-                        className: es.nameplatePreviewSampleItem,
-                        isHighlighted: s,
-                        showWumpus: !s,
+                    (0, r.jsx)(eg, {
                         showStatus: !0,
-                        isPurchased: a
+                        width: 94,
+                        opacity: 0.7
                     }),
-                    (0, r.jsx)(eg, { isDarkTheme: n }),
-                    (0, r.jsx)(eg, { isDarkTheme: n })
+                    (0, r.jsx)(eg, {
+                        showStatus: !0,
+                        width: 110,
+                        opacity: 0.85
+                    }),
+                    (0, r.jsx)(K.Z, {
+                        user: t,
+                        nameplate: n,
+                        className: es.nameplatePreviewSampleItem,
+                        isHighlighted: i,
+                        showWumpus: !i,
+                        showStatus: !0,
+                        isPurchased: s
+                    }),
+                    (0, r.jsx)(eg, {
+                        showStatus: !0,
+                        width: 110,
+                        opacity: 0.85
+                    }),
+                    (0, r.jsx)(eg, {
+                        showStatus: !0,
+                        width: 94,
+                        opacity: 0.7
+                    })
                 ]
             })
         });
@@ -230,42 +257,42 @@ let ec = (e) => {
     eh =
         12633 == n.j
             ? function (e) {
-                  let { product: t, user: n, category: s, onMount: l, isGiftEasterEggEnabled: _, isInFeedView: C, tab: Y } = e,
-                      { analyticsLocations: q } = (0, N.ZP)([...(C ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
+                  let { product: t, user: n, category: s, onMount: l, isGiftEasterEggEnabled: j, isInFeedView: z, tab: K } = e,
+                      { analyticsLocations: et } = (0, N.ZP)([...(z ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
                       eo = i.useRef(null),
                       eg = (0, f.Z)(eo),
                       [eh, ef] = i.useState(!1),
                       ex = eg || eh,
-                      eb = (0, $.f)(t),
+                      eb = (0, Q.f)(t),
                       { previewingVariantIndex: eN } = eb,
-                      e_ = (0, k.T)(t),
+                      e_ = (0, w.T)(t),
                       eE = (0, g.e7)([x.Z], () => x.Z.useReducedMotion),
-                      ej = T.ZP.canUseCollectibles(n),
-                      eC = i.useMemo(() => (0, P.BH)(t, ej), [t, ej]),
-                      eO = (0, P.G1)(t),
-                      ev = (0, P.rN)(t),
-                      [eS, eT, eI] = (0, g.Wu)([y.Z], () => [y.Z.isClaiming === t.skuId, null != y.Z.isClaiming && y.Z.isClaiming !== t.skuId, y.Z.purchases]),
-                      ey = (0, Q.o)(t, eI, eN),
-                      eA = (0, g.e7)([O.Z], () => (0, h.wjy)(O.Z.theme)),
-                      eP = (0, P.Yq)(t.skuId),
-                      eR = s.skuId === u.T.ANIME_V3 && (0, P.WW)(t.skuId),
-                      { hoverVariant: eD } = (0, R.E)('CollectiblesShopTallCard'),
+                      ej = S.ZP.canUseCollectibles(n),
+                      eC = i.useMemo(() => (0, A.BH)(t, ej), [t, ej]),
+                      eO = (0, A.G1)(t),
+                      ev = (0, A.rN)(t),
+                      [eS, eT, eI] = (0, g.Wu)([I.Z], () => [I.Z.isClaiming === t.skuId, null != I.Z.isClaiming && I.Z.isClaiming !== t.skuId, I.Z.purchases]),
+                      ey = (0, J.o)(t, eI, eN),
+                      eA = (0, g.e7)([C.Z], () => (0, h.wjy)(C.Z.theme)),
+                      eP = (0, A.Yq)(t.skuId),
+                      eR = s.skuId === u.T.ANIME_V3 && (0, A.WW)(t.skuId),
+                      { hoverVariant: eD } = (0, P.E)('CollectiblesShopTallCard'),
                       eZ = s.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
-                      ew = (0, Z.hv)('CollectiblesShopTallCard'),
-                      ek = (0, A.o)(t, eI),
-                      eW = (0, J.W)(t, ek),
-                      eL = (0, P.XM)(eW, ej, !1),
-                      { isPurchased: eB, isPartiallyOwnedBundle: eM } = (0, W.L)(eW),
-                      eU = (0, P.ne)({
+                      ew = (0, D.hv)('CollectiblesShopTallCard'),
+                      ek = (0, y.o)(t, eI),
+                      eW = (0, X.W)(t, ek),
+                      eL = (0, A.XM)(eW, ej, !1),
+                      { isPurchased: eB, isPartiallyOwnedBundle: eM } = (0, k.L)(eW),
+                      eU = (0, A.ne)({
                           product: eW,
                           isPartiallyOwnedBundle: eM,
                           isPurchased: eB
                       }),
                       eV = null !== eN ? eN : ek,
                       [eG, eF] = i.useState(!1),
-                      { enabled: eH } = (0, v.W)({ location: 'collectibles_shop_tall_card' }),
-                      { handleCardVisibilityChange: ez } = (0, L.E)(eW.skuId, C ? 'home' : 'full'),
-                      eY = (0, D.E)('shop_tall_card');
+                      { enabled: eH } = (0, O.W)({ location: 'collectibles_shop_tall_card' }),
+                      { handleCardVisibilityChange: ez } = (0, W.E)(eW.skuId, z ? 'home' : 'full'),
+                      eY = (0, R.E)('shop_tall_card');
                   i.useEffect(() => {
                       let { current: e } = eo;
                       if (null == e) return;
@@ -286,27 +313,27 @@ let ec = (e) => {
                           null == l || l(eo);
                       }, [l]);
                   let eK = i.useRef(null),
-                      { handleUseNow: eq, isApplying: eX } = (0, w.W)({ product: eW }),
+                      { handleUseNow: eq, isApplying: eX } = (0, Z.W)({ product: eW }),
                       {
                           displayPrices: eJ,
                           checkoutEligiblePrices: eQ,
                           isOrbExclusive: e$,
                           shouldCheckoutWithOrbs: e0
-                      } = (0, ee.Ip)({
+                      } = (0, $.Ip)({
                           product: t,
                           isPremiumUser: ej,
-                          tab: Y
+                          tab: K
                       }),
                       e1 = (e) => (n) => {
                           (eK.current = n.currentTarget),
-                              (0, G.T)({
+                              (0, V.T)({
                                   product: t,
                                   category: s,
                                   shouldCheckoutWithOrbs: e0,
-                                  analyticsLocations: q,
+                                  analyticsLocations: et,
                                   analyticsSource: e,
                                   returnRef: eK,
-                                  tab: Y
+                                  tab: K
                               });
                       },
                       e2 = e1(b.Z.COLLECTIBLES_SHOP_CARD),
@@ -314,7 +341,7 @@ let ec = (e) => {
                       e3 = () =>
                           (0, r.jsx)('div', {
                               className: es.hoverUpsellContainer,
-                              children: (0, r.jsx)(j.Z, {
+                              children: (0, r.jsx)(E.Z, {
                                   fullWidth: !0,
                                   className: es.__invalid_premiumSubscribeButton,
                                   disabled: eT,
@@ -329,15 +356,15 @@ let ec = (e) => {
                           ? null
                           : ev
                             ? (0, r.jsx)(ed, { onClick: e6 })
-                            : (0, r.jsx)(U.Z, {
+                            : (0, r.jsx)(M.Z, {
                                   product: t,
                                   selectedVariantIndex: ek,
                                   returnRef: eo,
-                                  isGiftEasterEggEnabled: _,
+                                  isGiftEasterEggEnabled: j,
                                   disableCustomColor: !0,
                                   tooltipDelay: 250
                               });
-                  return (0, P.x6)(t) && null != eC && eC.discountPercentage < 0
+                  return (0, A.x6)(t) && null != eC && eC.discountPercentage < 0
                       ? null
                       : (0, r.jsx)(p.$, {
                             onChange: ez,
@@ -346,7 +373,7 @@ let ec = (e) => {
                                 children: (0, r.jsxs)(h.kL8, {
                                     className: a()(eA ? es.shopCardDark : es.shopCard, {
                                         [es.partiallyOwned]: eM && !ex,
-                                        [es.shopCardAnimation]: !eE && eD !== R.D.NO_MOVEMENT,
+                                        [es.shopCardAnimation]: !eE && eD !== P.D.NO_MOVEMENT,
                                         [eA ? es.shopCardDarkHighlighted : es.shopCardHighlighted]: ex,
                                         [es.mysteryShopCard]: eZ
                                     }),
@@ -398,14 +425,13 @@ let ec = (e) => {
                                                 .with(m.Z.NAMEPLATE, () =>
                                                     (0, r.jsx)(ep, {
                                                         user: n,
-                                                        isDarkTheme: eA,
                                                         nameplate: ey,
                                                         isHighlighted: ex,
                                                         isPurchased: eB
                                                     })
                                                 )
                                                 .with(m.Z.BUNDLE, () =>
-                                                    (0, r.jsx)(K.d, {
+                                                    (0, r.jsx)(Y.d, {
                                                         product: t,
                                                         user: n,
                                                         isPurchased: eB,
@@ -442,7 +468,7 @@ let ec = (e) => {
                                                               .otherwise(() => null);
                                                 })
                                                 .with(m.Z.EXTERNAL_SKU, () =>
-                                                    (0, r.jsx)(F.b, {
+                                                    (0, r.jsx)(G.b, {
                                                         product: t,
                                                         animationState: ex ? 'on' : 'off'
                                                     })
@@ -470,7 +496,7 @@ let ec = (e) => {
                                                     children: e_
                                                 }),
                                                 t.type === m.Z.VARIANTS_GROUP
-                                                    ? (0, r.jsx)(z.P, {
+                                                    ? (0, r.jsx)(H.P, {
                                                           variantGroupProduct: t,
                                                           previewingVariantIndexProps: eb,
                                                           setIsHoveringOnSwitch: eF,
@@ -486,7 +512,7 @@ let ec = (e) => {
                                                             className: eU ? es.innerBlur : void 0,
                                                             children:
                                                                 eB || eM
-                                                                    ? (0, r.jsx)(B.U, {
+                                                                    ? (0, r.jsx)(L.U, {
                                                                           className: es.priceTag,
                                                                           isPartiallyPurchased: eM
                                                                       })
@@ -497,11 +523,11 @@ let ec = (e) => {
                                                                             children: ei.NW.string(ei.t.rt69oq)
                                                                         })
                                                                       : eH
-                                                                        ? (0, r.jsx)(H.Z, {
+                                                                        ? (0, r.jsx)(F.Z, {
                                                                               displayPrices: eJ,
                                                                               isPremiumUser: ej
                                                                           })
-                                                                        : (0, r.jsx)(V.Z, {
+                                                                        : (0, r.jsx)(U.Z, {
                                                                               product: eW,
                                                                               discount: eC,
                                                                               isPremiumUser: ej,
@@ -521,10 +547,10 @@ let ec = (e) => {
                                                                               submittingStartedLabel: ei.NW.string(ei.t['TYw+9v']),
                                                                               submittingFinishedLabel: ei.NW.string(ei.t.Pg1UPz),
                                                                               onClick: async () => {
-                                                                                  await (0, I.fK)(t.skuId),
-                                                                                      (0, et.Z)({
+                                                                                  await (0, T.fK)(t.skuId),
+                                                                                      (0, ee.Z)({
                                                                                           product: t,
-                                                                                          analyticsLocations: q
+                                                                                          analyticsLocations: et
                                                                                       });
                                                                               }
                                                                           }
@@ -532,12 +558,12 @@ let ec = (e) => {
                                                                               onClick: (e) => {
                                                                                   n
                                                                                       ? e6(e)
-                                                                                      : (0, E.Z)({
-                                                                                            skuId: (0, X.S)({
+                                                                                      : (0, _.Z)({
+                                                                                            skuId: (0, q.S)({
                                                                                                 product: t,
                                                                                                 selectedVariantIndex: ek
                                                                                             }),
-                                                                                            analyticsLocations: q,
+                                                                                            analyticsLocations: et,
                                                                                             returnRef: eo,
                                                                                             variantsReturnStyle: ew
                                                                                         });
@@ -562,7 +588,7 @@ let ec = (e) => {
                                                                                               : n
                                                                                                 ? ei.NW.format(ei.t.kAgx5O, {
                                                                                                       orbPrice: eQ[0].amount,
-                                                                                                      orbIconHook: () => (0, r.jsx)(S.Z, {})
+                                                                                                      orbIconHook: () => (0, r.jsx)(v.Z, {})
                                                                                                   })
                                                                                                 : ei.NW.formatToPlainString(ei.t['cNSL/v'], { price: eL })
                                                                                       })
@@ -577,7 +603,7 @@ let ec = (e) => {
                                                 })
                                             ]
                                         }),
-                                        (0, r.jsx)(M.Z, {
+                                        (0, r.jsx)(B.Z, {
                                             category: s,
                                             className: es.limitedTimeBadge,
                                             display: 'card'

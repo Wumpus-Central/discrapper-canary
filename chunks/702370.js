@@ -237,7 +237,7 @@ let eS = {
               })
             : (0, ec.o0)(t.skuId)
               ? (0, r.jsx)(es.b, {
-                    animationState: 'hover',
+                    animationState: 'on_hover',
                     product: t
                 })
               : t.items.length > 0
@@ -531,9 +531,7 @@ let eS = {
         });
     },
     eA = (e) => {
-        let { user: t, nameplate: n } = e,
-            a = i.useRef(null),
-            l = (0, h.Z)(a);
+        let { user: t, nameplate: n } = e;
         return (0, r.jsxs)('div', {
             className: eN.nameplateRightPanePreviewContainer,
             children: [
@@ -545,14 +543,13 @@ let eS = {
                 }),
                 (0, r.jsx)(eZ, { user: eS.phibi }),
                 (0, r.jsx)('div', {
-                    ref: a,
                     className: eN.nameplateRightPanePreviewAvatarContainer,
                     children: (0, r.jsx)(ef.Z, {
                         className: eN.nameplatePreview,
                         user: t,
                         nameplate: n,
                         showStatus: !0,
-                        isHighlighted: l
+                        isHighlighted: !0
                     })
                 }),
                 (0, r.jsx)(eZ, { user: eS.locke }),

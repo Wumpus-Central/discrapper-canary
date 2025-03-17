@@ -35,6 +35,5 @@ e.exports = {
     nameplatePreviewList: 'nameplatePreviewList_c3d04b',
     nameplatePreviewSampleItem: 'nameplatePreviewSampleItem_c3d04b',
     placeholderItem: 'placeholderItem_c3d04b',
-    placeholderItemChildrenDark: 'placeholderItemChildrenDark_c3d04b',
-    placeholderItemChildrenLight: 'placeholderItemChildrenLight_c3d04b'
+    placeholderBar: 'placeholderBar_c3d04b'
 };

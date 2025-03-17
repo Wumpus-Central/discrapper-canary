@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => j,
-    f: () => E
+    default: () => _,
+    f: () => N
 }),
     n(47120);
 var r = n(200651),
@@ -10,18 +10,16 @@ var r = n(200651),
     l = n(442837),
     o = n(481060),
     c = n(809206),
-    d = n(410030),
-    u = n(100527),
-    m = n(335131),
-    g = n(597688),
-    p = n(884697),
-    h = n(709999),
-    f = n(22267),
-    b = n(594174),
-    x = n(981631),
-    N = n(388032),
-    _ = n(964021);
-let E = () => {
+    d = n(100527),
+    u = n(335131),
+    m = n(597688),
+    g = n(884697),
+    p = n(709999),
+    h = n(22267),
+    f = n(594174),
+    x = n(388032),
+    b = n(964021);
+let N = () => {
     (0, o.ZDy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 612293));
         return (t) =>
@@ -55,69 +53,69 @@ let E = () => {
             );
     });
 };
-function j(e) {
+function _(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, r.jsx)(o.Y0X, {
         transitionState: t,
         size: o.CgR.DYNAMIC,
-        children: (0, r.jsx)(C, { onClose: n })
+        children: (0, r.jsx)(E, { onClose: n })
     });
 }
-function C(e) {
+function E(e) {
     let { onClose: t } = e,
-        n = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        { available: s, purchased: a } = (0, p.yV)(),
-        d = a.find((e) => {
+        n = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        { available: s, purchased: a } = (0, g.yV)(),
+        m = a.find((e) => {
             var t, r;
             return e.skuId === (null == n ? void 0 : null === (r = n.collectibles) || void 0 === r ? void 0 : null === (t = r.nameplate) || void 0 === t ? void 0 : t.skuId);
         }),
-        [g, h] = (0, i.useState)(null != d ? d : void 0),
-        [f, x] = (0, i.useState)(null != d),
+        [p, h] = (0, i.useState)(null != m ? m : void 0),
+        [N, _] = (0, i.useState)(null != m),
         E = (0, i.useCallback)(() => {
             t(),
-                (0, m.mK)({
-                    analyticsLocations: [u.Z.USER_SETTINGS_NAMEPLATE_MODAL],
-                    analyticsSource: u.Z.USER_SETTINGS_NAMEPLATE_MODAL,
-                    initialProductSkuId: null == g ? void 0 : g.skuId
+                (0, u.mK)({
+                    analyticsLocations: [d.Z.USER_SETTINGS_NAMEPLATE_MODAL],
+                    analyticsSource: d.Z.USER_SETTINGS_NAMEPLATE_MODAL,
+                    initialProductSkuId: null == p ? void 0 : p.skuId
                 });
-        }, [t, g]);
+        }, [t, p]);
     return (0, r.jsxs)('div', {
-        className: _.content,
+        className: b.content,
         children: [
             (0, r.jsxs)('div', {
-                className: _.header,
+                className: b.header,
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: N.NW.string(N.t.NzNLv7)
+                        children: x.NW.string(x.t.NzNLv7)
                     }),
                     (0, r.jsx)(o.P3F, {
                         onClick: t,
-                        className: _.close,
+                        className: b.close,
                         children: (0, r.jsx)(o.Dio, {})
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: _.body,
+                className: b.body,
                 children: [
-                    (0, r.jsx)(O, {
-                        selected: g,
+                    (0, r.jsx)(j, {
+                        selected: p,
                         onSelect: (e, t) => {
-                            h(e), x(null != t && t);
+                            h(e), _(null != t && t);
                         },
                         available: s,
                         purchased: a,
                         onShop: E
                     }),
-                    (0, r.jsx)(S, {
-                        selectedNameplate: g,
-                        purchased: f
+                    (0, r.jsx)(O, {
+                        selectedNameplate: p,
+                        purchased: N
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: _.footer,
+                className: b.footer,
                 children: [
                     (0, r.jsx)(o.zxk, {
                         size: o.PhG.MIN,
@@ -125,90 +123,90 @@ function C(e) {
                         onClick: t,
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/medium',
-                            children: N.NW.string(N.t.y1MYys)
+                            children: x.NW.string(x.t.y1MYys)
                         })
                     }),
-                    !1 === f && null != g
+                    !1 === N && null != p
                         ? (0, r.jsx)(o.zxk, {
-                              className: _.goToShopButton,
+                              className: b.goToShopButton,
                               color: o.Ttl.CUSTOM,
                               onClick: E,
                               children: (0, r.jsx)(o.Text, {
                                   color: 'always-white',
                                   variant: 'text-sm/medium',
-                                  children: N.NW.string(N.t.ABkyQk)
+                                  children: x.NW.string(x.t.ABkyQk)
                               })
                           })
                         : (0, r.jsx)(o.zxk, {
-                              disabled: void 0 === g,
+                              disabled: void 0 === p,
                               onClick: () => {
-                                  (0, c.KP)(g), t();
+                                  (0, c.KP)(p), t();
                               },
-                              children: N.NW.string(N.t.daaiqK)
+                              children: x.NW.string(x.t.daaiqK)
                           })
                 ]
             })
         ]
     });
 }
-function O(e) {
+function j(e) {
     let { selected: t, onSelect: n, available: i, purchased: s, onShop: a } = e,
-        c = (0, l.e7)([b.default], () => b.default.getCurrentUser());
+        c = (0, l.e7)([f.default], () => f.default.getCurrentUser());
     return null == c
         ? null
         : (0, r.jsxs)(o.u2D, {
-              className: _.inventory,
+              className: b.inventory,
               children: [
                   (0, r.jsx)(o.Text, {
-                      className: _.inventoryTitle,
+                      className: b.inventoryTitle,
                       color: 'text-secondary',
                       variant: 'text-xs/semibold',
-                      children: N.NW.string(N.t['6wbgS0']).toLocaleUpperCase()
+                      children: x.NW.string(x.t['6wbgS0']).toLocaleUpperCase()
                   }),
                   (0, r.jsxs)('div', {
-                      className: _.inventoryControls,
+                      className: b.inventoryControls,
                       children: [
                           (0, r.jsxs)(o.P3F, {
-                              className: _.inventoryControlsButton,
+                              className: b.inventoryControlsButton,
                               onClick: () => n(null == c.nameplate ? void 0 : null),
                               children: [
                                   (0, r.jsx)(o.t6m, {}),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/semibold',
-                                      children: N.NW.string(N.t['3i+W8/'])
+                                      children: x.NW.string(x.t['3i+W8/'])
                                   })
                               ]
                           }),
                           (0, r.jsxs)(o.P3F, {
-                              className: _.inventoryControlsButton,
+                              className: b.inventoryControlsButton,
                               onClick: a,
                               children: [
                                   (0, r.jsx)(o.EOn, {}),
                                   (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/semibold',
-                                      children: N.NW.string(N.t.cFfWg4)
+                                      children: x.NW.string(x.t.cFfWg4)
                                   })
                               ]
                           })
                       ]
                   }),
                   (0, r.jsx)(o.Text, {
-                      className: _.inventoryDescriptionTitle,
+                      className: b.inventoryDescriptionTitle,
                       color: 'text-secondary',
                       variant: 'text-xs/semibold',
-                      children: N.NW.string(N.t.SNAtBg)
+                      children: x.NW.string(x.t.SNAtBg)
                   }),
                   (0, r.jsx)(o.Text, {
-                      className: _.inventoryDescription,
+                      className: b.inventoryDescription,
                       variant: 'text-sm/normal',
-                      children: N.NW.string(N.t['3gaDLS'])
+                      children: x.NW.string(x.t['3gaDLS'])
                   }),
                   (0, r.jsxs)('div', {
-                      className: _.list,
+                      className: b.list,
                       children: [
                           s.map((e) =>
                               (0, r.jsx)(
-                                  v,
+                                  C,
                                   {
                                       nameplate: e,
                                       isPurchased: !0,
@@ -220,7 +218,7 @@ function O(e) {
                           ),
                           i.map((e) =>
                               (0, r.jsx)(
-                                  v,
+                                  C,
                                   {
                                       nameplate: e,
                                       isSelected: (null == t ? void 0 : t.id) === e.id,
@@ -234,19 +232,19 @@ function O(e) {
               ]
           });
 }
-function v(e) {
+function C(e) {
     let { nameplate: t, isPurchased: n = !1, isSelected: s = !1, onClick: c } = e,
-        d = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        d = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         [u, m] = (0, i.useState)(!1);
     return null == d
         ? null
         : (0, r.jsxs)(o.P3F, {
-              className: a()(_.nameplateItem, { [_.selected]: s }),
+              className: a()(b.nameplateItem, { [b.selected]: s }),
               onClick: c,
               onMouseEnter: () => m(!0),
               onMouseLeave: () => m(!1),
               children: [
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(h.Z, {
                       nameplate: t,
                       user: d,
                       showWumpus: !0,
@@ -254,58 +252,70 @@ function v(e) {
                   }),
                   !n &&
                       (0, r.jsx)('div', {
-                          className: _.lock,
+                          className: b.lock,
                           children: (0, r.jsx)(o.mBM, { size: 'xs' })
                       })
               ]
           });
 }
-function S(e) {
+function O(e) {
     let { selectedNameplate: t, purchased: n } = e,
-        i = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        s = (0, l.e7)([g.Z], () => g.Z.getProduct(null == t ? void 0 : t.skuId)),
-        a = (0, d.ZP)() !== x.BRd.LIGHT;
+        i = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+        s = (0, l.e7)([m.Z], () => m.Z.getProduct(null == t ? void 0 : t.skuId));
     return null == i
         ? null
         : (0, r.jsx)('div', {
-              className: _.preview,
+              className: b.preview,
               children:
                   n || null == t
-                      ? (0, r.jsx)(T, {
+                      ? (0, r.jsx)(v, {
                             selectedNameplate: t,
                             currentUser: i,
-                            product: s,
-                            isDarkTheme: a
+                            product: s
                         })
-                      : (0, r.jsx)(I, {
+                      : (0, r.jsx)(S, {
                             selectedNameplate: t,
                             currentUser: i,
-                            isDarkTheme: a,
                             product: s
                         })
           });
 }
-function T(e) {
-    let { selectedNameplate: t, currentUser: n, product: i, isDarkTheme: s } = e;
+function v(e) {
+    let { selectedNameplate: t, currentUser: n, product: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
-                className: _.previewBox,
-                children: [
-                    (0, r.jsx)(h.d, { isDarkTheme: s }),
-                    (0, r.jsx)(h.d, { isDarkTheme: s }),
-                    (0, r.jsx)(f.Z, {
-                        user: n,
-                        nameplate: t,
-                        isHighlighted: !0
-                    }),
-                    (0, r.jsx)(h.d, { isDarkTheme: s }),
-                    (0, r.jsx)(h.d, { isDarkTheme: s })
-                ]
+            (0, r.jsx)('div', {
+                className: b.previewBox,
+                children: (0, r.jsxs)('div', {
+                    className: b.upsellPreviewContents,
+                    children: [
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(h.Z, {
+                            user: n,
+                            nameplate: t,
+                            isHighlighted: !0
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        })
+                    ]
+                })
             }),
             null != i &&
                 (0, r.jsx)('div', {
-                    className: _.label,
+                    className: b.label,
                     children: (0, r.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
                         children: null == i ? void 0 : i.name
@@ -314,35 +324,50 @@ function T(e) {
         ]
     });
 }
-function I(e) {
-    let { selectedNameplate: t, isDarkTheme: n, currentUser: i, product: s } = e;
+function S(e) {
+    let { selectedNameplate: t, currentUser: n, product: i } = e;
     return (0, r.jsxs)('div', {
-        className: _.upsellPreview,
+        className: b.upsellPreview,
         children: [
-            (0, r.jsxs)('div', {
-                className: _.upsellPreviewBox,
-                children: [
-                    (0, r.jsx)(h.d, { isDarkTheme: n }),
-                    (0, r.jsx)(h.d, { isDarkTheme: n }),
-                    (0, r.jsx)(f.Z, {
-                        user: i,
-                        nameplate: t,
-                        isHighlighted: !0
-                    }),
-                    (0, r.jsx)(h.d, { isDarkTheme: n }),
-                    (0, r.jsx)(h.d, { isDarkTheme: n })
-                ]
+            (0, r.jsx)('div', {
+                className: b.upsellPreviewBox,
+                children: (0, r.jsxs)('div', {
+                    className: b.upsellPreviewContents,
+                    children: [
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(h.Z, {
+                            user: n,
+                            nameplate: t,
+                            isHighlighted: !0
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        }),
+                        (0, r.jsx)(p.d, {
+                            width: 124,
+                            opacity: 0.9
+                        })
+                    ]
+                })
             }),
             (0, r.jsxs)('div', {
-                className: _.upsellPreviewDescription,
+                className: b.upsellPreviewDescription,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
-                        children: null == s ? void 0 : s.name
+                        children: null == i ? void 0 : i.name
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: N.NW.string(N.t.my5jxM)
+                        children: x.NW.string(x.t.my5jxM)
                     })
                 ]
             })
