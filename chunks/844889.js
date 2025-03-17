@@ -1,12 +1,11 @@
 n.d(t, {
-    Gg: () => f,
-    Hg: () => h,
-    fr: () => d
+    G: () => f,
+    f: () => d
 });
 var r = n(772848),
-    i = n(433517);
-let o = 30,
-    a = 'LATEST_SESSION_TIMESTAMP',
+    i = n(433517),
+    o = n(686325);
+let a = 'LATEST_SESSION_TIMESTAMP',
     s = 'LATEST_SESSION_UUID',
     l = 'LATEST_SESSION_INITIALIZED_TIMESTAMP',
     c = Promise.resolve(),
@@ -16,8 +15,8 @@ function d(e) {
 }
 function f() {
     return (c = c.then(async () => {
-        let e = await p();
-        if (null == e || _(e)) {
+        let e = await _();
+        if (null == e || (0, o.qK)(e)) {
             if (!u) return null;
             let t = {
                 uuid: (0, r.Z)(),
@@ -29,10 +28,10 @@ function f() {
         return e;
     }));
 }
-async function p() {
+async function _() {
     let e = await i.K.getAfterRefresh(s),
-        t = await i.K.getAfterRefresh(l).then(h),
-        n = await i.K.getAfterRefresh(a).then(h);
+        t = await i.K.getAfterRefresh(l).then(o.Hg),
+        n = await i.K.getAfterRefresh(a).then(o.Hg);
     return null != e && null != t
         ? {
               uuid: e,
@@ -40,10 +39,4 @@ async function p() {
               lastUsed: n
           }
         : null;
-}
-function _(e) {
-    return 60000 * o + e.lastUsed - Date.now() <= 0;
-}
-function h(e) {
-    return null != e ? Number(e) : 0;
 }
