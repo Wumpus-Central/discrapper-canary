@@ -12,7 +12,7 @@ var r = n(200651),
     m = n(439826),
     f = n(43779),
     g = n(981631),
-    x = n(255522);
+    x = n(324924);
 function h(e) {
     let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: u, impressionRef: h } = e,
         [b, j] = o.useState(!1),
@@ -45,6 +45,8 @@ function h(e) {
         className: a()(x.container, n),
         onMouseEnter: w,
         onMouseLeave: S,
+        onFocus: w,
+        onBlur: S,
         children: [
             (0, r.jsx)(m.Z, {
                 quest: t,
