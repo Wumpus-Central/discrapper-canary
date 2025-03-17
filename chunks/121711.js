@@ -32,7 +32,7 @@ var r = n(200651),
     L = n(981631),
     w = n(215023),
     R = n(388032),
-    D = n(941338);
+    D = n(642601);
 let k = function () {
     var e;
     let { selectedTab: t, onSelectTab: n, tabs: k } = (0, A.z)(),
@@ -61,7 +61,11 @@ let k = function () {
         H = null !== (e = (0, o.e7)([I.Z], () => I.Z.getQuest(x.V), [])) && void 0 !== e ? e : null,
         F = null !== H && !(0, S.zi)(H),
         z = i.useCallback(() => {
-            !F && window.open(v.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE));
+            if (F) {
+                window.open(v.Z.getArticleURL(L.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+                return;
+            }
+            window.open(v.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE));
         }, [F]);
     (0, d.Tt)({ location: R.NW.string(R.t.JALI2N) });
     let Y = F ? R.NW.format(R.t.BCBIlp, {}) : R.NW.format(R.t.lmMBf3, {}),
@@ -86,7 +90,7 @@ let k = function () {
                                 }),
                                 (0, r.jsx)(N.V9, {
                                     cardAlignment: N.ek.END,
-                                    ctaText: R.NW.string(R.t.iEw2Nz),
+                                    ctaText: R.NW.string(R.t['J+vlIS']),
                                     ctaOnClick: () => {
                                         (0, u.mK)({
                                             openInLayer: !1,
