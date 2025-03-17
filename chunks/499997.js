@@ -7,25 +7,29 @@ var r = n(200651),
     l = n(92190),
     c = n(106376);
 let u = (e) => {
-    let { className: t, animationState: n = 'always' } = e,
+    let { className: t, animationState: n = 'on' } = e,
         u = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
-        d = 'hover' === n,
-        [f, _] = (0, i.useState)(!1),
-        p = u || 'none' === n || (d && !f);
-    return (0, r.jsx)('div', {
-        onMouseEnter: d ? () => _(!0) : void 0,
-        onMouseLeave: d ? () => _(!1) : void 0,
-        children: p
-            ? (0, r.jsx)('img', {
-                  src: l.Z,
-                  className: t,
-                  alt: 'Orb'
-              })
-            : (0, r.jsx)('div', {
-                  children: (0, r.jsxs)(s.Z, {
+        [d, f] = (0, i.useState)(!1),
+        _ = (0, i.useRef)(null),
+        p = 'on' === n || ('on_hover' === n && d);
+    return (
+        (0, i.useEffect)(() => {
+            null !== _.current && (p ? _.current.play() : ((_.current.currentTime = 0), _.current.pause()));
+        }, [p]),
+        (0, r.jsx)('div', {
+            onMouseEnter: 'on_hover' === n ? () => f(!0) : void 0,
+            onMouseLeave: 'on_hover' === n ? () => f(!1) : void 0,
+            children: u
+                ? (0, r.jsx)('img', {
+                      src: l.Z,
+                      className: t,
+                      alt: 'Orb'
+                  })
+                : (0, r.jsxs)(s.Z, {
                       className: t,
                       autoPlay: !0,
                       loop: !0,
+                      ref: _,
                       children: [
                           (0, r.jsx)('source', {
                               src: c.Z,
@@ -38,6 +42,6 @@ let u = (e) => {
                           })
                       ]
                   })
-              })
-    });
+        })
+    );
 };

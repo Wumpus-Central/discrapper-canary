@@ -18,8 +18,8 @@ var r = n(200651),
     p = n(622535),
     h = n(481060),
     f = n(727637),
-    b = n(607070),
-    x = n(100527),
+    x = n(607070),
+    b = n(100527),
     N = n(906732),
     _ = n(693728),
     E = n(333867),
@@ -231,15 +231,15 @@ let ec = (e) => {
         12633 == n.j
             ? function (e) {
                   let { product: t, user: n, category: s, onMount: l, isGiftEasterEggEnabled: _, isInFeedView: C, tab: Y } = e,
-                      { analyticsLocations: q } = (0, N.ZP)([...(C ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
+                      { analyticsLocations: q } = (0, N.ZP)([...(C ? [b.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
                       eo = i.useRef(null),
                       eg = (0, f.Z)(eo),
                       [eh, ef] = i.useState(!1),
-                      eb = eg || eh,
-                      ex = (0, $.f)(t),
-                      { previewingVariantIndex: eN } = ex,
+                      ex = eg || eh,
+                      eb = (0, $.f)(t),
+                      { previewingVariantIndex: eN } = eb,
                       e_ = (0, k.T)(t),
-                      eE = (0, g.e7)([b.Z], () => b.Z.useReducedMotion),
+                      eE = (0, g.e7)([x.Z], () => x.Z.useReducedMotion),
                       ej = T.ZP.canUseCollectibles(n),
                       eC = i.useMemo(() => (0, P.BH)(t, ej), [t, ej]),
                       eO = (0, P.G1)(t),
@@ -309,8 +309,8 @@ let ec = (e) => {
                                   tab: Y
                               });
                       },
-                      e2 = e1(x.Z.COLLECTIBLES_SHOP_CARD),
-                      e6 = e1(x.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+                      e2 = e1(b.Z.COLLECTIBLES_SHOP_CARD),
+                      e6 = e1(b.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
                       e3 = () =>
                           (0, r.jsx)('div', {
                               className: es.hoverUpsellContainer,
@@ -345,9 +345,9 @@ let ec = (e) => {
                             children: (0, r.jsx)(h.tEY, {
                                 children: (0, r.jsxs)(h.kL8, {
                                     className: a()(eA ? es.shopCardDark : es.shopCard, {
-                                        [es.partiallyOwned]: eM && !eb,
+                                        [es.partiallyOwned]: eM && !ex,
                                         [es.shopCardAnimation]: !eE && eD !== R.D.NO_MOVEMENT,
-                                        [eA ? es.shopCardDarkHighlighted : es.shopCardHighlighted]: eb,
+                                        [eA ? es.shopCardDarkHighlighted : es.shopCardHighlighted]: ex,
                                         [es.mysteryShopCard]: eZ
                                     }),
                                     ref: eo,
@@ -377,7 +377,7 @@ let ec = (e) => {
                                             children: (0, c.EQ)(t.type)
                                                 .with(m.Z.PROFILE_EFFECT, () =>
                                                     (0, r.jsx)(eu, {
-                                                        isHighlighted: eb,
+                                                        isHighlighted: ex,
                                                         profileEffectId: ey.id,
                                                         isPurchased: eB
                                                     })
@@ -390,7 +390,7 @@ let ec = (e) => {
                                                             item: ey,
                                                             user: n,
                                                             isStormMysteryItem: eZ,
-                                                            isHighlighted: eb,
+                                                            isHighlighted: ex,
                                                             isPurchased: eB
                                                         })
                                                     )
@@ -400,7 +400,7 @@ let ec = (e) => {
                                                         user: n,
                                                         isDarkTheme: eA,
                                                         nameplate: ey,
-                                                        isHighlighted: eb,
+                                                        isHighlighted: ex,
                                                         isPurchased: eB
                                                     })
                                                 )
@@ -409,7 +409,7 @@ let ec = (e) => {
                                                         product: t,
                                                         user: n,
                                                         isPurchased: eB,
-                                                        isHighlighted: eb
+                                                        isHighlighted: ex
                                                     })
                                                 )
                                                 .with(m.Z.VARIANTS_GROUP, () => {
@@ -421,7 +421,7 @@ let ec = (e) => {
                                                               .with(m.Z.PROFILE_EFFECT, () => {
                                                                   let [t] = e.items;
                                                                   return (0, r.jsx)(eu, {
-                                                                      isHighlighted: eb,
+                                                                      isHighlighted: ex,
                                                                       profileEffectId: t.id,
                                                                       isPurchased: eB && !eG
                                                                   });
@@ -434,14 +434,19 @@ let ec = (e) => {
                                                                           item: t,
                                                                           user: n,
                                                                           isStormMysteryItem: eZ,
-                                                                          isHighlighted: eb,
+                                                                          isHighlighted: ex,
                                                                           isPurchased: eB
                                                                       })
                                                                   );
                                                               })
                                                               .otherwise(() => null);
                                                 })
-                                                .with(m.Z.EXTERNAL_SKU, () => (0, r.jsx)(F.b, { product: t }))
+                                                .with(m.Z.EXTERNAL_SKU, () =>
+                                                    (0, r.jsx)(F.b, {
+                                                        product: t,
+                                                        animationState: ex ? 'on' : 'off'
+                                                    })
+                                                )
                                                 .otherwise(() => null)
                                         }),
                                         eB
@@ -467,10 +472,10 @@ let ec = (e) => {
                                                 t.type === m.Z.VARIANTS_GROUP
                                                     ? (0, r.jsx)(z.P, {
                                                           variantGroupProduct: t,
-                                                          previewingVariantIndexProps: ex,
+                                                          previewingVariantIndexProps: eb,
                                                           setIsHoveringOnSwitch: eF,
                                                           purchases: eI,
-                                                          minimal: !eb,
+                                                          minimal: !ex,
                                                           alternativeBackgroundColor: (null == ey ? void 0 : ey.type) === m.Z.PROFILE_EFFECT
                                                       })
                                                     : null,

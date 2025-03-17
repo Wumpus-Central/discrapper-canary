@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(47120), n(653041), n(26686);
+n.d(t, { Z: () => M }), n(47120), n(653041), n(26686);
 var r = n(570140),
     i = n(147913),
     o = n(358221),
@@ -15,8 +15,8 @@ var r = n(570140),
     m = n(959457),
     g = n(979651),
     E = n(557457),
-    v = n(785141),
-    b = n(272395),
+    b = n(785141),
+    v = n(272395),
     y = n(674503),
     O = n(981631),
     I = n(65154);
@@ -57,19 +57,20 @@ function A(e, t) {
 }
 let C = new Map([
     [
-        v.u.NO_AUDIO_INPUT_DETECTED,
+        b.u.NO_AUDIO_INPUT_DETECTED,
         {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
                     r = d.Z.getChannel(t),
                     i = (null == r ? void 0 : r.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
                     o = p.Z.getMediaSessionId();
-                if (null != r && null != o && !1 === _.Z.getInputDetected() && !i) return [D()];
-            }
+                if (null != r && null != o && !1 === _.Z.getInputDetected() && !i) return [w()];
+            },
+            makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.NO_INPUT_DEVICES,
+        b.u.NO_INPUT_DEVICES,
         {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
@@ -77,12 +78,13 @@ let C = new Map([
                     i = (null == r ? void 0 : r.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
                     o = 0 === Object.keys(_.Z.getInputDevices()).length,
                     a = p.Z.getMediaSessionId();
-                if (o && null != r && null != a && !i) return [D()];
-            }
+                if (o && null != r && null != a && !i) return [w()];
+            },
+            makeErrorContextKey: (e) => ''.concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_VIEW_LOW_FPS,
+        b.u.STREAM_VIEW_LOW_FPS,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -90,13 +92,14 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_VIEW_LOW_FPS;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_VIEW_LOW_FPS;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_VIEW_HIGH_PACKET_LOSS,
+        b.u.STREAM_VIEW_HIGH_PACKET_LOSS,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -104,13 +107,14 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_VIEW_HIGH_PACKET_LOSS;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_VIEW_HIGH_PACKET_LOSS;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_SEND_HIGH_PACKET_LOSS,
+        b.u.STREAM_SEND_HIGH_PACKET_LOSS,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -118,13 +122,14 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_SEND_HIGH_PACKET_LOSS;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_SEND_HIGH_PACKET_LOSS;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_SEND_LOW_FPS,
+        b.u.STREAM_SEND_LOW_FPS,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -132,13 +137,14 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_SEND_LOW_FPS;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_SEND_LOW_FPS;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_BAD_NETWORK_QUALITY,
+        b.u.STREAM_BAD_NETWORK_QUALITY,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -146,13 +152,14 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_BAD_NETWORK_QUALITY;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_BAD_NETWORK_QUALITY;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_SOUNDSHARE_FAILED,
+        b.u.STREAM_SOUNDSHARE_FAILED,
         {
             getActiveErrors: (e) => {
                 let { streamErrors: t } = e;
@@ -160,62 +167,38 @@ let C = new Map([
                     ? void 0
                     : t.filter((e) => {
                           let { streamError: t } = e;
-                          return (null == t ? void 0 : t.avError) === v.u.STREAM_SOUNDSHARE_FAILED;
+                          return (null == t ? void 0 : t.avError) === b.u.STREAM_SOUNDSHARE_FAILED;
                       });
-            }
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_FAILED_TO_START,
+        b.u.STREAM_FAILED_TO_START,
         {
             getActiveErrors: (e) => {
                 let { activeStreams: t } = e;
-                return t.filter((e) => e.state === O.jm8.FAILED).map((e) => L((0, s.V9)(e)));
-            }
+                return t.filter((e) => e.state === O.jm8.FAILED).map((e) => D((0, s.V9)(e)));
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ],
     [
-        v.u.STREAM_RECONNECTING,
+        b.u.STREAM_RECONNECTING,
         {
             getActiveErrors: (e) => {
                 let { activeStreams: t } = e;
-                return t.filter((e) => e.state === O.jm8.RECONNECTING).map((e) => L((0, s.V9)(e)));
-            }
+                return t.filter((e) => e.state === O.jm8.RECONNECTING).map((e) => D((0, s.V9)(e)));
+            },
+            makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
         }
     ]
 ]);
 function R(e, t) {
-    switch (e) {
-        case v.u.STREAM_FAILED_TO_START:
-            return ''.concat(t.streamKey, ':').concat(t.mediaSessionId);
-        case v.u.NO_INPUT_DEVICES:
-        case v.u.NO_AUDIO_INPUT_DETECTED:
-            return ''.concat(t.mediaSessionId);
-        case v.u.DEBUG_LOG_UPLOAD_FAILED:
-            return '';
-        case v.u.STREAM_VIEW_LOW_FPS:
-        case v.u.STREAM_VIEW_HIGH_PACKET_LOSS:
-        case v.u.STREAM_SEND_LOW_FPS:
-        case v.u.STREAM_SEND_HIGH_PACKET_LOSS:
-        case v.u.STREAM_BAD_NETWORK_QUALITY:
-        case v.u.STREAM_SOUNDSHARE_FAILED:
-            return ''.concat(t.streamKey, ':').concat(t.mediaSessionId);
-        case v.u.NOISE_CANCELLER_ERROR:
-        case v.u.SCREENSHARE_OS_NOT_SUPPORTED:
-            return ''.concat(t.mediaSessionId);
-        case v.u.STREAM_RECONNECTING:
-            return ''.concat(t.streamKey, ':').concat(t.mediaSessionId);
-        case v.u.VIDEO_ENCODE_ERROR:
-        case v.u.VIDEO_DECODE_ERROR:
-            return '';
-        default:
-            return e;
-    }
+    let n = C.get(e);
+    return ''.concat(e, ':').concat(null == n ? void 0 : n.makeErrorContextKey(t));
 }
-function P(e, t) {
-    return ''.concat(e, ':').concat(R(e, t));
-}
-function w(e) {
+function P(e) {
     if (null == e) return null;
     let t = [];
     for (let n of o.Z.getStreamParticipants(e)) {
@@ -228,11 +211,11 @@ function w(e) {
             s = (0, l.Z)(m.Z.getQuality(), m.Z.getStatsHistory(r, i, o), a, e),
             d = n.id,
             _ = m.Z.getMediaSessionId(d);
-        null != s && null != _ && t.push(T({ streamError: s }, L(d)));
+        null != s && null != _ && t.push(T({ streamError: s }, D(d)));
     }
     return t;
 }
-function D() {
+function w() {
     return T(
         {
             channelId: h.Z.getVoiceChannelId(),
@@ -240,10 +223,10 @@ function D() {
             rtcConnectionId: p.Z.getRTCConnectionId(),
             mediaContext: I.Yn.DEFAULT
         },
-        x()
+        L()
     );
 }
-function L(e) {
+function D(e) {
     let { channelId: t } = (0, s.my)(e),
         n = m.Z.getRTCConnection(e);
     return T(
@@ -255,10 +238,10 @@ function L(e) {
             mediaContext: I.Yn.STREAM,
             streamKey: e
         },
-        x()
+        L()
     );
 }
-function x() {
+function L() {
     var e, t, n;
     return {
         videoDeviceName: null === (e = _.Z.getVideoDevices()[_.Z.getVideoDeviceId()]) || void 0 === e ? void 0 : e.name,
@@ -266,16 +249,16 @@ function x() {
         audioOutputDeviceName: null === (n = _.Z.getOutputDevices()[_.Z.getOutputDeviceId()]) || void 0 === n ? void 0 : n.name
     };
 }
-class M extends i.Z {
+class x extends i.Z {
     _initialize() {
-        (0, b.H3)('AVErrorManager');
+        (0, v.H3)('AVErrorManager');
     }
     updateActiveErrors() {
         var e, t;
         if (__OVERLAY__) return;
         let n = null !== (e = h.Z.getVoiceChannelId()) && void 0 !== e ? e : null,
             i = null != n && null !== (t = g.Z.getVoiceStateForChannel(n)) && void 0 !== t ? t : null,
-            o = w(n),
+            o = P(n),
             a = c.Z.getAllActiveStreams(),
             s = new Map();
         for (let [e, t] of C) {
@@ -287,7 +270,7 @@ class M extends i.Z {
             });
             if (null != r)
                 for (let t of r)
-                    s.set(P(e, t), {
+                    s.set(R(e, t), {
                         error: e,
                         context: t
                     });
@@ -303,7 +286,7 @@ class M extends i.Z {
         if (u.size > d.size)
             for (let e of A(u, d)) {
                 let t = s.get(e);
-                null != t && (0, v.kr)(t.error, t.context);
+                null != t && (0, b.kr)(t.error, t.context);
             }
         if (d.size > u.size)
             for (let e of A(d, u)) {
@@ -340,4 +323,4 @@ class M extends i.Z {
             });
     }
 }
-let k = new M();
+let M = new x();
