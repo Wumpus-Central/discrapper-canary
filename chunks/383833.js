@@ -4,7 +4,6 @@ e.exports = {
     bannedUser: 'bannedUser_cdb2b0',
     bannedUserAvatar: 'bannedUserAvatar_cdb2b0',
     username: 'username_cdb2b0',
-    discrim: 'discrim_cdb2b0',
     description: 'description_cdb2b0',
     emptyState: 'emptyState_cdb2b0',
     spinner: 'spinner_cdb2b0',

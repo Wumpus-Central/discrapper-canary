@@ -19,8 +19,8 @@ var r = n(200651),
     N = n(594174),
     v = n(626135),
     _ = n(136015),
-    O = n(51144),
-    y = n(434404),
+    y = n(51144),
+    O = n(434404),
     C = n(999382),
     I = n(84613),
     E = n(740903),
@@ -81,7 +81,7 @@ function D(e) {
         [x, j] = i.useState(null),
         { analyticsLocations: N } = (0, h.ZP)(),
         _ = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : null;
-    async function y() {
+    async function O() {
         if (null != s) {
             j(null), b(!0);
             try {
@@ -111,7 +111,7 @@ function D(e) {
                     (0, r.jsx)(f.Z, {
                         size: f.Z.Sizes.SIZE_24,
                         className: P.userUsername,
-                        children: O.ZP.getUserTag(a, {
+                        children: y.ZP.getUserTag(a, {
                             mode: 'username',
                             identifiable: c ? 'never' : 'always'
                         })
@@ -156,7 +156,7 @@ function D(e) {
                         children: T.NW.string(T.t.i4jeWV)
                     }),
                     (0, r.jsx)(o.zxk, {
-                        onClick: y,
+                        onClick: O,
                         look: o.zxk.Looks.LINK,
                         color: o.zxk.Colors.RED,
                         submitting: g,
@@ -169,37 +169,32 @@ function D(e) {
 }
 class k extends i.PureComponent {
     render() {
-        let { user: e, hideDiscriminator: t, guild: n } = this.props,
-            i = O.ZP.getGlobalName(e);
+        var e;
+        let { user: t, guild: n } = this.props;
         return (0, r.jsxs)(o.P3F, {
             className: P.bannedUser,
             onClick: this.handleShowModal,
             onContextMenu: this.handleContextMenu,
             children: [
                 (0, r.jsx)(o.qEK, {
-                    src: e.getAvatarURL(null == n ? void 0 : n.id, 40),
-                    'aria-label': e.username,
+                    src: t.getAvatarURL(null == n ? void 0 : n.id, 40),
+                    'aria-label': t.username,
                     size: o.EFr.SIZE_40,
                     className: P.bannedUserAvatar
                 }),
                 (0, r.jsxs)('div', {
                     className: P.username,
                     children: [
-                        O.ZP.getUserTag(e, {
-                            mode: 'username',
-                            identifiable: t ? 'never' : 'always'
+                        (0, r.jsx)(o.Text, {
+                            variant: 'text-md/semibold',
+                            color: 'header-primary',
+                            children: null !== (e = t.globalName) && void 0 !== e ? e : t.username
                         }),
-                        !t &&
-                            !e.isPomelo() &&
-                            (0, r.jsxs)('span', {
-                                className: P.discrim,
-                                children: ['#', e.discriminator]
-                            }),
-                        e.isPomelo() &&
-                            (0, r.jsxs)('span', {
-                                className: P.discrim,
-                                children: ['(', i, ')']
-                            })
+                        (0, r.jsx)(o.Text, {
+                            variant: 'text-sm/medium',
+                            color: 'header-secondary',
+                            children: null != t.globalName ? t.username : null
+                        })
                     ]
                 })
             ]
@@ -284,17 +279,17 @@ function W(e) {
         [s, a] = i.useState(null != n ? n : ''),
         [l, c] = i.useState(!1),
         u = i.useCallback(() => {
-            y.Z.setSection(S.pNK.SAFETY), (0, I.K)(E.u.DM_AND_SPAM_PROTECTION);
+            O.Z.setSection(S.pNK.SAFETY), (0, I.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         m = i.useCallback((e) => {
-            a(e), 0 === e.trim().length && y.Z.setSearchQuery(e);
+            a(e), 0 === e.trim().length && O.Z.setSearchQuery(e);
         }, []),
         g = i.useCallback(() => {
-            a(''), y.Z.setSearchQuery('');
+            a(''), O.Z.setSearchQuery('');
         }, []),
         p = i.useCallback(async () => {
             if (0 === s.trim().length) {
-                y.Z.setSearchQuery(s), c(!1);
+                O.Z.setSearchQuery(s), c(!1);
                 return;
             }
             if (!l)
@@ -302,7 +297,7 @@ function W(e) {
                     c(!0);
                     let [e, n] = (0, x.C)(s),
                         r = e[0];
-                    y.Z.setSearchQuery(s), await d.Z.searchGuildBans(t, r, n), c(!1);
+                    O.Z.setSearchQuery(s), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
@@ -366,8 +361,8 @@ function L() {
         [b] = (0, l.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
         j = null !== (e = null == b ? void 0 : b.size) && void 0 !== e ? e : 0,
         v = (0, g.ZP)(),
-        O = null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : S.lds,
-        y = i.useRef(null),
+        y = null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : S.lds,
+        O = i.useRef(null),
         I = i.useCallback(
             (e) =>
                 null == e || 0 === e.length
@@ -404,15 +399,15 @@ function L() {
     }, [f, M.currentPage]);
     let U = i.useCallback(
             (e) => {
-                d.Z.fetchGuildBansBatch(O, 1000, e);
+                d.Z.fetchGuildBansBatch(y, 1000, e);
             },
-            [O]
+            [y]
         ),
         B = i.useMemo(() => a().chunk(w, M.pageSize), [M.pageSize, w]),
         F = i.useCallback(
             (e) => {
                 var t, n, r;
-                null === (t = y.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && k && !p && ((z.current = null !== (r = null === (n = w[w.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null), U(z.current)), (null != B[e - 1] || k) && G((t) => Z(R({}, t), { currentPage: e }));
+                null === (t = O.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * M.pageSize > w.length && k && !p && ((z.current = null !== (r = null === (n = w[w.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null), U(z.current)), (null != B[e - 1] || k) && G((t) => Z(R({}, t), { currentPage: e }));
             },
             [M.pageSize, w, k, B, U, p]
         ),
@@ -430,7 +425,7 @@ function L() {
               className: P.container,
               children: [
                   (0, r.jsx)(W, {
-                      guildId: O,
+                      guildId: y,
                       storedSearchQuery: u
                   }),
                   (0, r.jsxs)('div', {
@@ -441,7 +436,7 @@ function L() {
                                   guild: c,
                                   bans: b,
                                   sortedBans: H,
-                                  ref: y
+                                  ref: O
                               }),
                           !k &&
                               L &&
