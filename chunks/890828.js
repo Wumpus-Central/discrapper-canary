@@ -1,12 +1,12 @@
-n.d(t, { Z: () => U }), n(13667), n(390547), n(47120), n(230036), n(566702), n(653041), n(86693), n(536091);
+n.d(t, { Z: () => G }), n(13667), n(390547), n(47120), n(230036), n(566702), n(653041), n(86693), n(536091);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
     s = n(481060),
-    u = n(933557),
-    c = n(471445),
+    c = n(933557),
+    u = n(471445),
     d = n(114487),
     p = n(686546),
     h = n(318374),
@@ -22,8 +22,8 @@ var i = n(200651),
     x = n(430824),
     I = n(496675),
     S = n(699516),
-    N = n(594174),
-    C = n(979651),
+    C = n(594174),
+    N = n(979651),
     Z = n(823379),
     w = n(136015),
     P = n(981631),
@@ -32,7 +32,7 @@ var i = n(200651),
 let D = (e) => [
         e.userId,
         ...(function (e) {
-            let t = N.default.getUser(e.userId);
+            let t = C.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 i = (0, m.e3)(t);
@@ -56,14 +56,14 @@ let D = (e) => [
     },
     L = r.memo(function (e) {
         let { channel: t, query: n } = e,
-            [l] = (0, a.e7)([C.Z], () => [C.Z.getVoiceStatesForChannel(t.id), C.Z.getVoiceStateVersion()], [t.id], w.Q),
-            [o, u] = r.useState([]);
-        (0, v.BO)(n, Object.values(l), u, A);
-        let c = (0, a.Wu)(
-                [C.Z, N.default, E.Z, S.Z],
+            [l] = (0, a.e7)([N.Z], () => [N.Z.getVoiceStatesForChannel(t.id), N.Z.getVoiceStateVersion()], [t.id], w.Q),
+            [o, c] = r.useState([]);
+        (0, v.BO)(n, Object.values(l), c, A);
+        let u = (0, a.Wu)(
+                [N.Z, C.default, E.Z, S.Z],
                 () =>
-                    Object.values(C.Z.getVoiceStatesForChannel(t.id))
-                        .map((e) => N.default.getUser(e.userId))
+                    Object.values(N.Z.getVoiceStatesForChannel(t.id))
+                        .map((e) => C.default.getUser(e.userId))
                         .filter(Z.lm)
                         .sort((e, t) => {
                             var i, r, l, a;
@@ -79,7 +79,7 @@ let D = (e) => [
         return null == d
             ? null
             : (0, i.jsx)(h.Z, {
-                  users: c,
+                  users: u,
                   guildId: d,
                   maxUsers: Math.max(o.length, 3),
                   size: s.EFr.SIZE_24,
@@ -129,7 +129,7 @@ let D = (e) => [
             m = (0, a.e7)([b.Z], () => b.Z.getChannel(n), [n]),
             g = null == m ? void 0 : m.getGuildId(),
             O = (0, a.e7)([x.Z], () => x.Z.getGuild(g), [g]),
-            v = (0, c.KS)(m, O),
+            v = (0, u.KS)(m, O),
             y = r ? 'interactive-active' : 'text-muted',
             E = r ? s.TVs.colors.INTERACTIVE_ACTIVE : s.TVs.colors.ICON_MUTED,
             j = (null == l ? void 0 : l.id) === n;
@@ -163,7 +163,7 @@ let D = (e) => [
                                           variant: 'text-sm/medium',
                                           color: y,
                                           className: T.channelItemNameText,
-                                          children: (0, u.F6)(m, N.default, S.Z)
+                                          children: (0, c.F6)(m, C.default, S.Z)
                                       })
                                   ]
                               }),
@@ -197,7 +197,7 @@ let D = (e) => [
         });
     }),
     V = r.memo(function (e) {
-        let { sectionHeader: t, channelIds: n, currentVoiceChannel: l, onSelect: o, hasQuery: a, query: u, scrollable: c = !0 } = e,
+        let { sectionHeader: t, channelIds: n, currentVoiceChannel: l, onSelect: o, hasQuery: a, query: c, scrollable: u = !0 } = e,
             [d, p] = r.useState(null),
             h = (e) => {
                 p(e);
@@ -208,7 +208,7 @@ let D = (e) => [
             m = (e) => () => {
                 o(e);
             },
-            g = c ? s.zJl : 'div';
+            g = u ? s.zJl : 'div';
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)('div', {
@@ -233,7 +233,7 @@ let D = (e) => [
                                     onClick: m(e),
                                     onMouseOver: h,
                                     onMouseLeave: f,
-                                    query: u
+                                    query: c
                                 },
                                 e
                             )
@@ -245,10 +245,10 @@ let D = (e) => [
     });
 function z(e) {
     let { searchQuery: t, currentVoiceChannel: n, onSelect: r } = e,
-        { recentVoiceChannelIds: l, friendVoiceChannelIds: u } = (function () {
+        { recentVoiceChannelIds: l, friendVoiceChannelIds: c } = (function () {
             let e = (function () {
                     let e = (0, a.Wu)(
-                        [N.default, S.Z, y.Z],
+                        [C.default, S.Z, y.Z],
                         () =>
                             S.Z.getFriendIDs()
                                 .sort((e, t) => {
@@ -256,17 +256,17 @@ function z(e) {
                                     return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (r = null === (n = y.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (l = null === (i = y.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0);
                                 })
                                 .reduce((e, t) => {
-                                    let n = N.default.getUser(t);
+                                    let n = C.default.getUser(t);
                                     return null != n && e.push(n), e;
                                 }, []),
                         []
                     );
                     return (0, a.Wu)(
-                        [C.Z, b.Z, I.Z],
+                        [N.Z, b.Z, I.Z],
                         () =>
                             Array.from(
                                 e
-                                    .map((e) => C.Z.getDiscoverableVoiceStateForUser(e.id))
+                                    .map((e) => N.Z.getDiscoverableVoiceStateForUser(e.id))
                                     .reduce((e, t) => {
                                         let n = null == t ? void 0 : t.channelId;
                                         if (null == n) return e;
@@ -298,7 +298,7 @@ function z(e) {
                 recentVoiceChannelIds: t
             };
         })();
-    return l.length > 0 || u.length > 0
+    return l.length > 0 || c.length > 0
         ? (0, i.jsxs)(s.zJl, {
               className: o()(T.channelList, T.channelListWrapper),
               children: [
@@ -312,10 +312,10 @@ function z(e) {
                           onSelect: r,
                           scrollable: !1
                       }),
-                  u.length > 0 &&
+                  c.length > 0 &&
                       (0, i.jsx)(V, {
                           sectionHeader: _.NW.string(_.t['0lvb9P']),
-                          channelIds: u.slice(0, 8),
+                          channelIds: c.slice(0, 8),
                           hasQuery: !1,
                           query: t,
                           currentVoiceChannel: n,
@@ -327,9 +327,13 @@ function z(e) {
         : (0, i.jsx)(W, { emptyText: _.NW.string(_.t['3ET7Aw']) });
 }
 function U(e) {
-    let { currentVoiceChannel: t, onClose: n, onSelect: l } = e,
-        o = (0, a.Wu)(
-            [x.Z, j.ZP, C.Z, S.Z, I.Z],
+    e.stopPropagation();
+}
+function G(e) {
+    var t, n;
+    let { currentVoiceChannel: l, onClose: o, onSelect: c } = e,
+        u = (0, a.Wu)(
+            [x.Z, j.ZP, N.Z, S.Z, I.Z],
             () =>
                 Object.values(x.Z.getGuilds())
                     .reduce(
@@ -346,77 +350,128 @@ function U(e) {
                     )
                     .map((e) => ({
                         channel: e,
-                        voiceStates: Object.values(C.Z.getVoiceStatesForChannel(e.id)).filter((e) => S.Z.isFriend(e.userId))
+                        voiceStates: Object.values(N.Z.getVoiceStatesForChannel(e.id)).filter((e) => S.Z.isFriend(e.userId))
                     })),
             []
         ),
-        [u, c] = r.useState(''),
-        [d, p] = r.useState([]);
-    (0, v.BO)(u, o, p, k);
-    let h = r.useCallback(
+        [d, p] = r.useState(''),
+        [h, f] = r.useState([]);
+    (0, v.BO)(d, u, f, k);
+    let m = r.useCallback(
             (e) => {
-                'Escape' === e.key && n();
+                'Escape' === e.key && o();
             },
-            [n]
+            [o]
         ),
-        f = r.useCallback(
+        g = r.useCallback(
             (e) => {
-                l(e), n();
+                c(e), o();
             },
-            [l, n]
+            [c, o]
         );
     r.useEffect(
         () => (
-            document.addEventListener('keydown', h, !0),
+            document.addEventListener('keydown', m, !0),
             () => {
-                document.removeEventListener('keydown', h, !0);
+                document.removeEventListener('keydown', m, !0);
             }
         ),
-        [n, h]
+        [o, m]
     );
-    let m = '' !== u.trim(),
-        g = d.length > 20,
-        O = { count: g ? 20 : d.length };
-    return (0, i.jsxs)('div', {
-        className: T.recentChannelsMenu,
-        children: [
-            (0, i.jsx)('div', {
-                className: T.searchBarContainer,
-                children: (0, i.jsx)(s.E1j, {
-                    autoFocus: !0,
-                    query: u,
-                    size: s.E1j.Sizes.MEDIUM,
-                    placeholder: _.NW.string(_.t.UyA6SU),
-                    onClear: () => {
-                        c('');
-                    },
-                    onKeyDown: h,
-                    onChange: (e) => {
-                        c(e);
-                    },
-                    className: T.searchBar,
-                    inputProps: { 'aria-label': _.NW.string(_.t.UyA6SU) }
-                })
+    let O = '' !== d.trim(),
+        y = h.length > 20,
+        E = { count: y ? 20 : h.length },
+        b = r.useMemo(
+            () => ({
+                onMouseDown: U,
+                onMouseMove: U,
+                onMouseUp: U,
+                onMouseEnter: U,
+                onMouseLeave: U
             }),
-            m
-                ? (0, i.jsx)(V, {
-                      sectionHeader: g ? _.NW.format(_.t.qdXiQ0, O) : _.NW.format(_.t['Aq+8wM'], O),
-                      channelIds: d
-                          .map((e) => {
-                              let { channel: t } = e;
-                              return t.id;
+            []
+        );
+    return (0, i.jsxs)(
+        'div',
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    i = Object.keys(n);
+                'function' == typeof Object.getOwnPropertySymbols &&
+                    (i = i.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        })
+                    )),
+                    i.forEach(function (t) {
+                        var i;
+                        (i = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: i,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0
+                                  })
+                                : (e[t] = i);
+                    });
+            }
+            return e;
+        })({ className: T.recentChannelsMenu }, b)),
+        (n = n =
+            {
+                children: [
+                    (0, i.jsx)('div', {
+                        className: T.searchBarContainer,
+                        children: (0, i.jsx)(s.E1j, {
+                            autoFocus: !0,
+                            query: d,
+                            size: s.E1j.Sizes.MEDIUM,
+                            placeholder: _.NW.string(_.t.UyA6SU),
+                            onClear: () => {
+                                p('');
+                            },
+                            onKeyDown: m,
+                            onChange: (e) => {
+                                p(e);
+                            },
+                            className: T.searchBar,
+                            inputProps: { 'aria-label': _.NW.string(_.t.UyA6SU) }
+                        })
+                    }),
+                    O
+                        ? (0, i.jsx)(V, {
+                              sectionHeader: y ? _.NW.format(_.t.qdXiQ0, E) : _.NW.format(_.t['Aq+8wM'], E),
+                              channelIds: h
+                                  .map((e) => {
+                                      let { channel: t } = e;
+                                      return t.id;
+                                  })
+                                  .slice(0, 20),
+                              hasQuery: O,
+                              query: d,
+                              currentVoiceChannel: l,
+                              onSelect: g
                           })
-                          .slice(0, 20),
-                      hasQuery: m,
-                      query: u,
-                      currentVoiceChannel: t,
-                      onSelect: f
-                  })
-                : (0, i.jsx)(z, {
-                      searchQuery: u,
-                      currentVoiceChannel: t,
-                      onSelect: f
-                  })
-        ]
-    });
+                        : (0, i.jsx)(z, {
+                              searchQuery: d,
+                              currentVoiceChannel: l,
+                              onSelect: g
+                          })
+                ]
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, i);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t)
+    );
 }
