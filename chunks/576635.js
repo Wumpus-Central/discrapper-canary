@@ -1,32 +1,39 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(866442),
     i = n(442837),
-    o = n(410030),
-    a = n(607070),
-    s = n(220082),
-    l = n(44315),
-    c = n(168631),
-    u = n(981631);
-function d(e) {
-    var t, n, d;
-    let { user: f, displayProfile: p, pendingThemeColors: _, pendingAvatar: h, isPreview: m } = e,
-        g = (0, o.ZP)(),
-        E = (0, i.e7)([a.Z], () => a.Z.syncProfileThemeWithUserTheme),
-        v = null != h ? h : null == f ? void 0 : f.getAvatarURL(null == p ? void 0 : p.guildId, 80),
-        b = (0, l.Sl)(u.Ilk.PRIMARY_530).hex,
-        [y, O] = (0, s.Cf)(v, b, !1);
-    if (!(null == p ? void 0 : p.canEditThemes) && !m)
+    o = n(780384),
+    a = n(410030),
+    s = n(607070),
+    l = n(220082),
+    c = n(44315),
+    u = n(540059),
+    d = n(168631),
+    f = n(981631);
+function _(e) {
+    var t, n, _;
+    let { user: p, displayProfile: h, pendingThemeColors: m, pendingAvatarSrc: g, isPreview: E } = e,
+        b = (0, a.ZP)(),
+        v = (0, i.e7)([s.Z], () => s.Z.syncProfileThemeWithUserTheme),
+        y = null != g ? g : null == p ? void 0 : p.getAvatarURL(null == h ? void 0 : h.guildId, 80),
+        O = (0, c.Sl)(f.Ilk.PRIMARY_530).hex,
+        [I, S] = (0, l.Cf)(y, O, !1),
+        T = (0, u.Q3)('useProfileTheme');
+    if (!(null == h ? void 0 : h.canEditThemes) && !E)
         return {
-            theme: g,
+            theme: b,
             primaryColor: null,
             secondaryColor: null
         };
-    let S = null == p ? void 0 : p.getPreviewThemeColors(_),
-        I = null !== (t = null == S ? void 0 : S[0]) && void 0 !== t ? t : (0, r._i)(y),
-        T = null !== (n = null == S ? void 0 : S[1]) && void 0 !== n ? n : (0, r._i)(O);
-    return {
-        theme: E ? g : null !== (d = (0, c.V3)(I)) && void 0 !== d ? d : g,
-        primaryColor: I,
-        secondaryColor: T
-    };
+    let N = null == h ? void 0 : h.getPreviewThemeColors(m),
+        A = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : (0, r._i)(I),
+        C = null !== (n = null == N ? void 0 : N[1]) && void 0 !== n ? n : (0, r._i)(S),
+        R = v ? b : null !== (_ = (0, d.V3)(A)) && void 0 !== _ ? _ : b;
+    return (
+        T && (R === f.BRd.DARK && (0, o.wj)(b) ? (R = b) : R === f.BRd.DARK && (0, o.ap)(b) && (R = f.BRd.DARKER)),
+        {
+            theme: R,
+            primaryColor: A,
+            secondaryColor: C
+        }
+    );
 }

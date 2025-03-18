@@ -32,7 +32,7 @@ var i,
     I = n(553300),
     b = n(949772),
     S = n(981631),
-    g = n(723529),
+    g = n(605798),
     P = n(426401),
     Z = n(926734),
     y = n(601046),
@@ -182,6 +182,7 @@ function H() {
     });
 }
 let R = function () {
-    let { enabled: e } = I.Z.useExperiment({ location: 'PremiumSubscriptionWowMoment' });
-    return e ? (0, o.jsx)(H, {}) : null;
+    let { enabled: e } = I.Z.useExperiment({ location: 'PremiumSubscriptionWowMoment' }),
+        t = (0, l.e7)([T.Z], () => T.Z.canPlayWowMoment);
+    return e && t ? (0, o.jsx)(H, {}) : null;
 };

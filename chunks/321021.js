@@ -5,7 +5,6 @@ e.exports = {
     overflowCount: 'overflowCount__711d3',
     channelItemContainer: 'channelItemContainer__711d3',
     channelItemHighlighted: 'channelItemHighlighted__711d3',
-    channelItemConnected: 'channelItemConnected__711d3',
     searchBarContainer: 'searchBarContainer__711d3',
     searchBar: 'searchBar__711d3',
     emptyChannelItem: 'emptyChannelItem__711d3',

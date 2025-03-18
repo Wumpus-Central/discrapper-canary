@@ -12,6 +12,5 @@ e.exports = {
     channelIcon: 'channelIcon__5c799',
     channelText: 'channelText__5c799',
     role: 'role__5c799',
-    roleCircle: 'roleCircle__5c799',
-    roleName: 'roleName__5c799'
+    roleCircle: 'roleCircle__5c799'
 };
