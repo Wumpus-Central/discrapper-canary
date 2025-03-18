@@ -19,8 +19,8 @@ var r = n(200651),
     y = n(581364),
     x = n(592180),
     E = n(347475),
-    O = n(598077),
-    j = n(768581),
+    j = n(598077),
+    O = n(768581),
     N = n(585483),
     C = n(55935),
     I = n(739566),
@@ -98,9 +98,9 @@ function L(e, t, n, i, a) {
             className: Z.replyBadge,
             children: (0, r.jsx)(D, { className: Z.commandIcon })
         });
-    let O =
+    let j =
             null !==
-                (c = j.ZP.getGuildMemberAvatarURL({
+                (c = O.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (l = i.guildMemberAvatar) && void 0 !== l ? l : void 0,
                     userId: t.id,
                     guildId: null !== (s = null == m ? void 0 : m.guild_id) && void 0 !== s ? s : ''
@@ -124,7 +124,7 @@ function L(e, t, n, i, a) {
             })({
                 user: t,
                 guildId: m.guild_id,
-                guildAvatar: O,
+                guildAvatar: j,
                 onClick: 1 === n ? y : b,
                 onContextMenu: 1 === n ? x : v
             }),
@@ -187,7 +187,7 @@ function U(e) {
             ),
             [l, a.id]
         ),
-        j = i.useMemo(
+        O = i.useMemo(
             () => (e) => (
                 s()(null != l, 'ExecutedCommand: channel cannot be null'),
                 (0, r.jsx)(
@@ -202,7 +202,7 @@ function U(e) {
             [l, a.id, a.interactionData]
         ),
         S = (0, y.t0)(a),
-        D = (null == S ? void 0 : S.type) === p.B8.APPLICATION_COMMAND && null != S.target_user ? new O.Z(S.target_user) : null,
+        D = (null == S ? void 0 : S.type) === p.B8.APPLICATION_COMMAND && null != S.target_user ? new j.Z(S.target_user) : null,
         U = (null == S ? void 0 : S.type) === p.B8.APPLICATION_COMMAND && null != a.messageReference && null != e.renderTargetMessage,
         B = (0, I.Sw)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, l),
         G = (0, I.Sw)(D, l),
@@ -310,7 +310,7 @@ function U(e) {
                             }
                         }
                     });
-                })(e, j);
+                })(e, O);
                 return (0, r.jsx)(i.Fragment, { children: t }, 'command');
             }
         })),
@@ -341,15 +341,7 @@ function U(e) {
         let e = () => {
             (0, g.Z)({
                 channel: l,
-                guildId: l.guild_id,
-                locationObject: {
-                    page: l.isPrivate() ? A.ZY5.DM_CHANNEL : A.ZY5.GUILD_CHANNEL,
-                    section: A.jXE.CHANNEL_TEXT_AREA,
-                    object: A.qAy.APP_COMMAND,
-                    objectType: A.Qqv.ACTIVITY
-                },
                 openInPopout: !1,
-                enableSelectedTextChannelInvite: !0,
                 analyticsLocations: c
             }),
                 (0, h.w1)({ guildId: l.guild_id });

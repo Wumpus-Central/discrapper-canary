@@ -1,42 +1,14 @@
 n.d(t, {
-    _f: () => l,
-    aZ: () => f,
-    aq: () => s,
-    gu: () => u,
-    m1: () => o,
-    nS: () => a,
-    xN: () => c
+    _f: () => s,
+    aZ: () => d,
+    aq: () => a,
+    gu: () => c,
+    nS: () => o,
+    xN: () => l
 });
 var r = n(818083),
     i = n(987338);
 let o = (0, r.B)({
-        kind: 'user',
-        id: '2024-06_desktop_app_launcher_in_activities_shelf',
-        label: 'Desktop App Launcher In Activities Shelf',
-        defaultConfig: {
-            enabled: !1,
-            clickOnHomeActivityOpensAppDetail: !1
-        },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> performs activity action (i.e. launch)',
-                config: {
-                    enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !1
-                }
-            },
-            {
-                id: 2,
-                label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> activity detail page',
-                config: {
-                    enabled: !0,
-                    clickOnHomeActivityOpensAppDetail: !0
-                }
-            }
-        ]
-    }),
-    a = (0, r.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
@@ -49,7 +21,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    s = (0, r.B)({
+    a = (0, r.B)({
         kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
@@ -68,7 +40,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    l = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -96,7 +68,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    c = (0, r.B)({
+    l = (0, r.B)({
         kind: 'user',
         id: '2024-10_weighted_sample_activity_shelf',
         label: 'Weighted Sample Activity Shelf',
@@ -110,8 +82,8 @@ let o = (0, r.B)({
             }
         ]
     }),
-    u = '1211781489931452447',
-    d = (0, r.B)({
+    c = '1211781489931452447',
+    u = (0, r.B)({
         kind: 'guild',
         id: '2025-02_filter_wordle_from_voice_channel_launcher',
         label: 'Filter Wordle From Voice Channel Launcher',
@@ -124,6 +96,6 @@ let o = (0, r.B)({
             }
         ]
     });
-function f(e, t) {
-    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && d.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+function d(e, t) {
+    return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && u.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

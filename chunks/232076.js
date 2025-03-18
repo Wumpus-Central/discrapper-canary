@@ -1,21 +1,23 @@
-n.d(t, { B: () => m });
+n.d(t, { B: () => g });
 var r = n(192379),
     i = n(442837),
-    s = n(594174),
-    a = n(111361),
-    l = n(140465),
-    o = n(775412),
-    c = n(276444),
-    d = n(912244),
-    u = n(474936);
-let m = function (e) {
+    s = n(975298),
+    a = n(594174),
+    l = n(111361),
+    o = n(140465),
+    c = n(775412),
+    d = n(276444),
+    u = n(912244),
+    m = n(474936);
+let g = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        m = (0, l.t7)(),
-        g = (0, o._O)(),
-        { eligibleToFetch: p } = (0, d.N)(e),
-        h = p && (null == n ? void 0 : n.verified) === !0 && (0, a.M5)(n, u.p9.TIER_2) && !m && !g;
+        n = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
+        g = (0, o.t7)(),
+        p = (0, c._O)(),
+        { eligibleToFetch: h } = (0, u.N)(e),
+        f = (0, s.Z)(),
+        x = h && (null == n ? void 0 : n.verified) === !0 && (0, l.M5)(n, m.p9.TIER_2) && f.fetched && f.fractionalState !== m.a$.FP_ONLY && !g && !p;
     r.useEffect(() => {
-        h && !t && c.Z.checkAndFetchReferralsRemaining();
-    }, [h, t]);
+        x && !t && d.Z.checkAndFetchReferralsRemaining();
+    }, [x, t]);
 };
