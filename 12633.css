@@ -37513,18 +37513,20 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .addStatusPrompt_ab8609 {
-    color: var(--text-muted)
-}
-
-.addStatusIcon_ab8609,
-.addStatusPrompt_ab8609 {
     display: inline;
+    color: var(--text-muted);
     vertical-align: middle
 }
 
+.italicPrompt_ab8609 {
+    font-style: italic
+}
+
 .addStatusIcon_ab8609 {
+    display: inline;
     margin-right: 4px;
-    fill: var(--text-muted)
+    fill: var(--text-muted);
+    vertical-align: middle
 }
 
 .outer_ab8609:hover .addStatusPrompt_ab8609 {

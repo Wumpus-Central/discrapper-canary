@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var r = n(442837),
     i = n(570140);
 function o(e, t, n) {
@@ -66,16 +66,24 @@ function d(e) {
             c.set(e, {
                 powerups: new Map(),
                 unlocked: new Map(),
+                catalog: new Map(),
                 appliedBoosts: 0
             }),
         c.get(e)
     );
 }
 function f(e) {
-    let { guildId: t, powerups: n } = e,
-        r = d(t),
-        i = new Map(c);
-    i.set(t, l(a({}, r), { powerups: n })), (c = i);
+    let { guildId: t, powerups: n, catalog: r } = e,
+        i = d(t),
+        o = new Map(c);
+    o.set(
+        t,
+        l(a({}, i), {
+            powerups: n,
+            catalog: r
+        })
+    ),
+        (c = o);
 }
 function _(e) {
     let { guildId: t, unlocked: n } = e,
@@ -111,12 +119,12 @@ function h(e) {
         o = new Map(c);
     o.set(t, l(a({}, r), { appliedBoosts: i })), (c = o);
 }
-class g extends r.ZP.Store {
+class m extends r.ZP.Store {
     getStateForGuild(e) {
         return c.get(e);
     }
 }
-let m = new g(i.Z, {
+let g = new m(i.Z, {
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: f,
     GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: _,
     GUILD_POWERUP_ENTITLEMENTS_CREATE: p,

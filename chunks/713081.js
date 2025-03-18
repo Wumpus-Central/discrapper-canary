@@ -6,8 +6,9 @@ n.d(t, {
     Th: () => m,
     jd: () => d
 }),
+    n(47120),
     n(230036),
-    n(47120);
+    n(653041);
 var r = n(544891),
     i = n(570140),
     o = n(823379),
@@ -28,12 +29,16 @@ function f() {
 }
 function _(e, t) {
     if (!0 === t) {
-        let t = s.G.concat(s.W);
-        i.Z.dispatch({
-            type: 'GUILD_POWERUP_CATALOG_FETCH_SUCCESS',
-            guildId: e,
-            powerups: t.sort((e, t) => (e.skuId >= t.skuId ? 1 : -1)).reduce((e, t) => (e.set(t.skuId, t), e), new Map())
-        });
+        let t = s.G.concat(s.W),
+            n = new Map();
+        n.set(c.Us.LEVEL, s.G),
+            n.set(c.Us.PERK, s.W),
+            i.Z.dispatch({
+                type: 'GUILD_POWERUP_CATALOG_FETCH_SUCCESS',
+                guildId: e,
+                powerups: t.sort((e, t) => (e.skuId >= t.skuId ? 1 : -1)).reduce((e, t) => (e.set(t.skuId, t), e), new Map()),
+                catalog: n
+            });
         return;
     }
     let n = { application_id: c.NO };
@@ -43,16 +48,27 @@ function _(e, t) {
         oldFormErrors: !0,
         rejectWithError: !1
     }).then((t) => {
-        let n = t.body
+        let { powerups: n, catalog: r } = t.body
             .map((e) => (0, l.Z)(t.body, e))
             .filter(o.lm)
             .sort((e, t) => (e.skuId >= t.skuId ? 1 : -1))
-            .reduce((e, t) => (e.set(t.skuId, t), e), new Map());
+            .reduce(
+                (e, t) => {
+                    var n, r;
+                    let { powerups: i, catalog: o } = e;
+                    return i.set(t.skuId, t), null == o.get(t.type) && o.set(t.type, []), null === (r = o.get(t.type)) || void 0 === r || null === (n = r.push) || void 0 === n || n.call(r, t), e;
+                },
+                {
+                    powerups: new Map(),
+                    catalog: new Map()
+                }
+            );
         return (
             i.Z.dispatch({
                 type: 'GUILD_POWERUP_CATALOG_FETCH_SUCCESS',
                 guildId: e,
-                powerups: n
+                powerups: n,
+                catalog: r
             }),
             t.body
         );

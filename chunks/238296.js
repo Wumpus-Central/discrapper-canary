@@ -72,14 +72,15 @@ function x(e, t, n) {
             guildId: n,
             channelId: t,
             location: 'GuildVoiceUserContextMenu'
+        }),
+        u = (0, r.jsxs)(i.kSQ, {
+            children: [o, l]
         });
     return [
         (0, r.jsxs)(i.kSQ, {
-            children: [o, l]
-        }),
-        (0, r.jsxs)(i.kSQ, {
             children: [c, a]
-        })
+        }),
+        u
     ];
 }
 let E = (0, c.Z)(

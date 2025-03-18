@@ -1,18 +1,19 @@
-n.d(t, { Z: () => y }), n(47120), n(978209), n(266796);
+n.d(t, { Z: () => O }), n(47120), n(978209), n(266796);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(642128),
     l = n(793030),
-    c = n(481060),
-    u = n(50101),
-    d = n(111360),
-    f = n(535396),
-    _ = n(730621),
-    p = n(388032),
-    h = n(752593);
-function m(e, t, n) {
+    c = n(442837),
+    u = n(481060),
+    d = n(905128),
+    f = n(50101),
+    _ = n(535396),
+    p = n(730621),
+    h = n(388032),
+    m = n(752593);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,33 +54,35 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e) {
+function y(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.xv, {
         tag: 'span',
         variant: 'text-md/semibold',
-        className: h.highlight,
+        className: m.highlight,
         children: t.title
     });
 }
-function y(e) {
-    var t;
-    let { guild: n, themeResponsive: o = !0, onButtonClick: m } = e,
-        E = (0, u.Ek)(n, 'GuildBoostingMarketing'),
-        y = null === (t = (0, d.Z)(n.id)) || void 0 === t ? void 0 : t.get(f.Us.PERK),
+function O(e) {
+    let { guild: t, themeResponsive: n = !0, onButtonClick: o } = e,
+        g = (0, f.Ek)(t, 'GuildBoostingMarketing'),
+        b = (0, c.e7)([d.Z], () => {
+            var e, n;
+            return null === (n = d.Z.getStateForGuild(t.id)) || void 0 === n ? void 0 : null === (e = n.catalog) || void 0 === e ? void 0 : e.get(_.Us.PERK);
+        }),
         [O, I] = i.useState(!1),
-        [S, T] = (0, c.q_F)(() => ({
+        [S, T] = (0, u.q_F)(() => ({
             scale: 0.8,
             config: {
                 tension: 500,
@@ -93,44 +96,44 @@ function y(e) {
         return () => clearTimeout(e);
     }, [T]);
     let N = i.useCallback(() => {
-            m();
-        }, [m]),
+            o();
+        }, [o]),
         A = i.useMemo(() => {
             let e;
-            if (null == y || 0 === y.length) return '';
-            if (1 === y.length) e = (0, r.jsx)(v, { powerup: y[0] });
-            else if (2 === y.length)
-                e = p.NW.format(_.Z.MNO3sL, {
-                    perk1: (0, r.jsx)(v, { powerup: y[0] }),
-                    perk2: (0, r.jsx)(v, { powerup: y[1] })
+            if (null == b || 0 === b.length) return '';
+            if (1 === b.length) e = (0, r.jsx)(y, { powerup: b[0] });
+            else if (2 === b.length)
+                e = h.NW.format(p.Z.MNO3sL, {
+                    perk1: (0, r.jsx)(y, { powerup: b[0] }),
+                    perk2: (0, r.jsx)(y, { powerup: b[1] })
                 });
             else {
-                let t = y.reverse();
-                e = p.NW.format(_.Z.GmN3VV, {
-                    perk1: (0, r.jsx)(v, { powerup: t[0] }),
-                    perk2: (0, r.jsx)(v, { powerup: t[1] })
+                let t = b.reverse();
+                e = h.NW.format(p.Z.GmN3VV, {
+                    perk1: (0, r.jsx)(y, { powerup: t[0] }),
+                    perk2: (0, r.jsx)(y, { powerup: t[1] })
                 });
             }
-            return p.NW.format(_.Z['/6GgQk'], { perks: e });
-        }, [y]);
-    return E && null != y && 0 !== y.length
+            return h.NW.format(p.Z['/6GgQk'], { perks: e });
+        }, [b]);
+    return g && null != b && 0 !== b.length
         ? (0, r.jsxs)(s.animated.div, {
-              className: a()(h.container, { [h.themeResponsiveContainer]: o }),
-              style: b(g({}, S), { opacity: +!!O }),
+              className: a()(m.container, { [m.themeResponsiveContainer]: n }),
+              style: v(E({}, S), { opacity: +!!O }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: 'span',
                       variant: 'text-md/semibold',
-                      className: a()(h.description, {
-                          [h.text]: !o,
-                          [h.responsiveText]: o
+                      className: a()(m.description, {
+                          [m.text]: !n,
+                          [m.responsiveText]: n
                       }),
                       children: A
                   }),
-                  (0, r.jsx)(c.zxk, {
-                      className: h.button,
+                  (0, r.jsx)(u.zxk, {
+                      className: m.button,
                       onClick: N,
-                      children: p.NW.string(_.Z.E5V5KC)
+                      children: h.NW.string(p.Z.E5V5KC)
                   })
               ]
           })

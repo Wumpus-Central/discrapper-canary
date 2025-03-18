@@ -28,6 +28,8 @@ e.exports = {
     selected: 'selected__07f91',
     optionsButton: 'optionsButton__07f91',
     optionsActive: 'optionsActive__07f91',
+    optionsButtonContainer: 'optionsButtonContainer__07f91',
+    optionsContainerActive: 'optionsContainerActive__07f91',
     clanTag: 'clanTag__07f91',
     isOverlay: 'isOverlay__07f91',
     usernameSpeaking: 'usernameSpeaking__07f91',

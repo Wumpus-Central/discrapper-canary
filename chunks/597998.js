@@ -357,6 +357,7 @@ let L = function (e) {
                             ? null
                             : (0, r.jsx)(a.DY3, {
                                   text: T.NW.string(T.t['+1H47u']),
+                                  className: o()(w.optionsButtonContainer, { [w.optionsContainerActive]: ee }),
                                   children: (0, r.jsx)(a.P3F, {
                                       className: o()(w.optionsButton, { [w.optionsActive]: ee }),
                                       onClick: function (e) {
