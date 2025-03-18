@@ -1,12 +1,13 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var r = n(846519),
     i = n(570140),
     l = n(317770),
-    a = n(70956),
-    o = n(960048),
-    s = n(930446),
-    c = n(981631);
-function u(e, t, n) {
+    a = n(626135),
+    o = n(70956),
+    s = n(960048),
+    c = n(930446),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-class d extends l.Z {
+class p extends l.Z {
     _initialize() {
         i.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), i.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), i.Z.subscribe('QUESTS_ENROLL_SUCCESS', this.handleEnrollmentSuccess), this.scheduleHeartbeatTracking();
     }
@@ -28,59 +29,64 @@ class d extends l.Z {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'focusedOrForegrounded', !0),
-            u(this, 'heartbeatInterval', new r.Xp()),
-            u(this, 'schedulerStarted', !1),
-            u(this, 'maybeStartHeartbeat', () => {
-                this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(5 * a.Z.Millis.MINUTE, this.trackHeartbeat);
+            d(this, 'focusedOrForegrounded', !0),
+            d(this, 'heartbeatInterval', new r.Xp()),
+            d(this, 'schedulerStarted', !1),
+            d(this, 'maybeStartHeartbeat', () => {
+                this.heartbeatInterval.isStarted() || this.heartbeatInterval.start(5 * o.Z.Millis.MINUTE, this.trackHeartbeat);
             }),
-            u(this, 'startAnalyticHeartbeat', () => {
+            d(this, 'startAnalyticHeartbeat', () => {
                 !this.schedulerStarted &&
                     ((this.schedulerStarted = !0),
-                    o.Z.addBreadcrumb({
+                    s.Z.addBreadcrumb({
                         category: 'ad',
                         message: 'Starting ad session heartbeat'
                     }),
                     this.maybeStartHeartbeat());
             }),
-            u(this, 'trackHeartbeat', () => {
+            d(this, 'trackHeartbeat', () => {
                 if (!this.schedulerStarted) {
-                    o.Z.addBreadcrumb({
+                    s.Z.addBreadcrumb({
                         category: 'ad',
                         message: 'Ad heartbeat called but scheduler not started'
                     }),
                         this.heartbeatInterval.stop();
                     return;
                 }
-                (0, s.G)();
+                let e = (0, c.G)();
+                a.default.track(u.rMx.CLIENT_AD_HEARTBEAT, {
+                    client_ad_session_id: e.uuid,
+                    client_heartbeat_initialization_timestamp: e.initialized,
+                    client_heartbeat_version: 1
+                });
             }),
-            u(this, 'stopAnalyticHeartbeat', () => {
+            d(this, 'stopAnalyticHeartbeat', () => {
                 this.schedulerStarted &&
                     ((this.schedulerStarted = !1),
-                    o.Z.addBreadcrumb({
+                    s.Z.addBreadcrumb({
                         category: 'ad',
                         message: 'Stopping ad session heartbeat'
                     }),
                     this.heartbeatInterval.stop());
             }),
-            u(this, 'scheduleHeartbeatTracking', () => {
+            d(this, 'scheduleHeartbeatTracking', () => {
                 if (this.focusedOrForegrounded)
                     try {
                         this.startAnalyticHeartbeat();
                     } catch (e) {
-                        o.Z.captureException(e);
+                        s.Z.captureException(e);
                     }
                 else this.stopAnalyticHeartbeat();
             }),
-            u(this, 'handleEnrollmentSuccess', () => {}),
-            u(this, 'handleWindowFocus', (e) => {
+            d(this, 'handleEnrollmentSuccess', () => {}),
+            d(this, 'handleWindowFocus', (e) => {
                 let { focused: t } = e;
                 (this.focusedOrForegrounded = t), this.scheduleHeartbeatTracking();
             }),
-            u(this, 'handleAppStateUpdate', (e) => {
+            d(this, 'handleAppStateUpdate', (e) => {
                 let { state: t } = e;
-                (this.focusedOrForegrounded = t === c.$7l.ACTIVE), this.scheduleHeartbeatTracking();
+                (this.focusedOrForegrounded = t === u.$7l.ACTIVE), this.scheduleHeartbeatTracking();
             });
     }
 }
-let p = new d();
+let h = new p();
