@@ -80,26 +80,26 @@ function N() {
     });
 }
 function v(e) {
-    let { avatar: t, index: n, allowDelete: l, onSelectRecentAvatar: a, onDeleteRecentAvatar: i, avatarButtonRef: o } = e,
-        { id: s, storageHash: u, description: d = x.NW.string(x.t.lqaIxM) } = t,
-        { avatarSrc: p, eventHandlers: f } = (0, g.Z)({
-            avatarId: s,
-            storageHash: u
+    let { avatar: t, index: n, onSelectRecentAvatar: l, onDeleteRecentAvatar: a, avatarButtonRef: i } = e,
+        { id: o, storageHash: s, description: u = x.NW.string(x.t.lqaIxM) } = t,
+        { avatarSrc: d, eventHandlers: p } = (0, g.Z)({
+            avatarId: o,
+            storageHash: s
         }),
-        { onMouseEnter: m, onMouseLeave: j } = f,
-        b = 'en-US' === x.NW.currentLocale || 'en-GB' === x.NW.currentLocale,
-        N = null != d ? d : u.substring(0, 6).toUpperCase(),
-        v = x.NW.formatToPlainString(x.t['tmJ75+'], {
+        { onMouseEnter: f, onMouseLeave: m } = p,
+        j = 'en-US' === x.NW.currentLocale || 'en-GB' === x.NW.currentLocale,
+        b = null != u ? u : s.substring(0, 6).toUpperCase(),
+        N = x.NW.formatToPlainString(x.t['tmJ75+'], {
             orderNumber: n + 1,
-            description: N
+            description: b
         }),
-        C = b
+        v = j
             ? x.NW.formatToPlainString(x.t.pBzwhY, {
                   orderNumber: n + 1,
-                  description: N
+                  description: b
               })
             : x.NW.string(x.t.N86XcH),
-        A = {
+        C = {
             look: c.zxk.Looks.BLANK,
             size: c.zxk.Sizes.NONE,
             color: c.zxk.Colors.TRANSPARENT
@@ -112,52 +112,50 @@ function v(e) {
                 O(
                     y(
                         {
-                            onClick: () => a(t),
-                            onMouseEnter: m,
-                            onMouseLeave: j,
+                            onClick: () => l(t),
+                            onMouseEnter: f,
+                            onMouseLeave: m,
                             className: h.recentAvatarButton,
-                            'aria-label': v,
-                            buttonRef: o
+                            'aria-label': N,
+                            buttonRef: i
                         },
-                        A
+                        C
                     ),
                     {
                         children: (0, r.jsx)('img', {
-                            src: p,
-                            alt: d,
+                            src: d,
+                            alt: u,
                             className: h.recentAvatar
                         })
                     }
                 )
             ),
-            l &&
-                null != i &&
-                (0, r.jsx)(c.ua7, {
-                    text: x.NW.string(x.t.N86XcH),
-                    delay: 340,
-                    children: (e) =>
-                        (0, r.jsx)(
-                            c.zxk,
-                            O(
-                                y(
-                                    O(y({}, e), {
-                                        'aria-label': C,
-                                        onClick: (e) => i(e, n, s, u, C),
-                                        className: h.deleteButton,
-                                        innerClassName: h.deleteButtonInner
-                                    }),
-                                    A
-                                ),
-                                {
-                                    children: (0, r.jsx)(c.XHJ, {
-                                        size: 'xs',
-                                        color: 'currentColor',
-                                        className: h.deleteIcon
-                                    })
-                                }
-                            )
+            (0, r.jsx)(c.ua7, {
+                text: x.NW.string(x.t.N86XcH),
+                delay: 340,
+                children: (e) =>
+                    (0, r.jsx)(
+                        c.zxk,
+                        O(
+                            y(
+                                O(y({}, e), {
+                                    'aria-label': v,
+                                    onClick: (e) => a(e, n, o, s, v),
+                                    className: h.deleteButton,
+                                    innerClassName: h.deleteButtonInner
+                                }),
+                                C
+                            ),
+                            {
+                                children: (0, r.jsx)(c.XHJ, {
+                                    size: 'xs',
+                                    color: 'currentColor',
+                                    className: h.deleteIcon
+                                })
+                            }
                         )
-                })
+                    )
+            })
         ]
     });
 }
@@ -193,9 +191,9 @@ function A(e) {
         [R, _] = l.useState(!1),
         [k, L] = l.useState(!1),
         [F, Z] = l.useState(null),
-        D = null != F ? F : null == N ? void 0 : N.message,
-        I = g.length > A ? g.slice(0, A) : g,
-        W = I.length,
+        I = null != F ? F : null == N ? void 0 : N.message,
+        D = g.length > A ? g.slice(0, A) : g,
+        W = D.length,
         U = Math.max(A - W, 0),
         M = (0, c.vRw)(),
         B = l.useCallback(
@@ -316,12 +314,12 @@ function A(e) {
         : (0, r.jsxs)('div', {
               className: h.recentAvatarContainer,
               children: [
-                  null != D &&
+                  null != I &&
                       !O &&
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: D
+                          children: I
                       }),
                   (0, r.jsxs)('div', {
                       className: i()(h.recentAvatarSlots, { [h.withPremiumUpsell]: !t }),
@@ -330,18 +328,17 @@ function A(e) {
                               (0, r.jsx)('ul', {
                                   'aria-label': x.NW.string(x.t.lsU63N),
                                   className: h.recentAvatarList,
-                                  children: I.map((e, n) =>
+                                  children: D.map((e, t) =>
                                       (0, r.jsx)(
                                           'li',
                                           {
                                               children: (0, r.jsx)(v, {
                                                   avatar: e,
-                                                  index: n,
-                                                  allowDelete: t,
+                                                  index: t,
                                                   onSelectRecentAvatar: B,
                                                   onDeleteRecentAvatar: z,
                                                   avatarButtonRef: (e) => {
-                                                      P.current[n] = e;
+                                                      P.current[t] = e;
                                                   }
                                               })
                                           },
@@ -357,7 +354,7 @@ function A(e) {
                                   children: [
                                       (0, r.jsxs)(c.nn4, {
                                           children: [
-                                              0 === I.length &&
+                                              0 === D.length &&
                                                   (0, r.jsxs)(r.Fragment, {
                                                       children: [x.NW.string(x.t.x0DsRU), ' ']
                                                   }),

@@ -1,19 +1,29 @@
 n.d(t, {
-    KO: () => c,
-    X2: () => d,
-    o0: () => u
+    KO: () => u,
+    X2: () => f,
+    o0: () => d
 });
 var r = n(200651),
     i = n(317257),
     o = n(499997),
     a = n(215023),
     s = n(992379),
-    l = n(266850);
-let c = {
-        '1333912750274904064': { asset: n(406449).Z },
+    l = n(593639),
+    c = n(266850);
+let u = {
+        '1333912750274904064': {
+            render: (e) => {
+                let { alt: t } = e;
+                return (0, r.jsx)('img', {
+                    src: l,
+                    alt: t,
+                    height: 148
+                });
+            }
+        },
         [a.xJ]: {
-            renderAsset: (e) => {
-                let { animationState: t = 'always' } = e;
+            render: (e) => {
+                let { animationState: t = 'on' } = e;
                 return (0, r.jsx)(o.Z, {
                     animationState: t,
                     className: s.orbProfileBadgeAsset
@@ -21,10 +31,10 @@ let c = {
             }
         }
     },
-    u = (e) => e in c,
-    d = () => ({
+    d = (e) => e in u,
+    f = () => ({
         id: i.l.ORB_PROFILE_BADGE,
-        icon: l,
+        icon: c,
         description: '',
         isPreviewMode: !0
     });
