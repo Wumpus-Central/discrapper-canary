@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => x,
-    Y: () => h,
+    Y: () => S,
     default: () => E
 });
 var r = n(200651);
@@ -23,8 +23,8 @@ var i = n(481060),
     v = n(37258),
     m = n(700994),
     Z = n(981631),
-    S = n(388032);
-function h(e) {
+    h = n(388032);
+function S(e) {
     let { isOwnSettings: t, userId: n, channelId: o, guildId: l, context: c } = e,
         a = (0, v.Z)({
             userId: n,
@@ -32,7 +32,7 @@ function h(e) {
             channelId: o,
             showGuildProfile: !0,
             icon: (0, r.jsx)(i.tBG, { size: 'sm' }),
-            label: S.NW.string(S.t.iXAna2)
+            label: h.NW.string(h.t.iXAna2)
         }),
         d = (0, j.Z)(n, c, i.kBi),
         b = (0, m.Z)(n),
@@ -54,12 +54,11 @@ function x(e, t, n) {
             userId: e.id,
             channelId: t,
             guildId: n,
-            location: 'GuildVoiceUserContextMenu',
             simplified: !0
         }),
         l = (0, b.Z)({
             id: e.id,
-            label: S.NW.string(S.t['/AXYnJ'])
+            label: h.NW.string(h.t['/AXYnJ'])
         }),
         c = (0, p.Z)({
             user: e,
@@ -90,7 +89,7 @@ let E = (0, c.Z)(
                 u = n.id,
                 s = t.isNonUserBot(),
                 d = t.id === g.default.getId(),
-                f = h({
+                f = S({
                     isOwnSettings: d,
                     userId: t.id,
                     channelId: u,
@@ -99,12 +98,12 @@ let E = (0, c.Z)(
                 O = x(t, u),
                 p = (0, b.Z)({
                     id: t.id,
-                    label: S.NW.string(S.t['/AXYnJ'])
+                    label: h.NW.string(h.t['/AXYnJ'])
                 });
             return (0, r.jsx)(i.v2r, {
                 navId: 'user-context',
                 onClose: o.Zy,
-                'aria-label': S.NW.string(S.t.liqwPD),
+                'aria-label': h.NW.string(h.t.liqwPD),
                 onSelect: l,
                 onInteraction: c,
                 variant: 'fixed',
@@ -117,7 +116,7 @@ let E = (0, c.Z)(
                                 (0, r.jsx)(i.kSQ, {
                                     children: (0, r.jsx)(i.sNh, {
                                         id: 'more-options',
-                                        label: S.NW.string(S.t.PdRCRk),
+                                        label: h.NW.string(h.t.PdRCRk),
                                         children: O
                                     })
                                 }),

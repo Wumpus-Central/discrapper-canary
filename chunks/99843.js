@@ -8,14 +8,11 @@ var i = n(481060),
     s = n(210975),
     c = n(981631),
     u = n(388032),
-    d = n(993719);
+    d = n(335867);
 let p = (e) => {
     let { channel: t } = e,
         n = (0, a.ZP)(t),
-        p = (0, s.m$)({
-            channelId: t.id,
-            location: 'ChannelName'
-        });
+        p = (0, s.m$)({ channelId: t.id });
     return (0, r.jsxs)('div', {
         className: d.container,
         onDoubleClick: (e) => e.stopPropagation(),

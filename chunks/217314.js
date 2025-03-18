@@ -10,7 +10,7 @@ var i = n(399606),
     u = n(51144),
     d = n(984370),
     p = n(388032),
-    h = n(527194);
+    h = n(678431);
 function f(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
@@ -19,10 +19,7 @@ function f(e) {
         g = (0, i.e7)([a.Z], () => a.Z.isMobileOnline(t)),
         b = (0, i.e7)([s.Z], () => s.Z.getNickname(t)),
         _ = u.ZP.useUserTag(f),
-        C = (0, o.m$)({
-            channelId: e.channel.id,
-            location: 'HeaderBarDirectMessageV2'
-        });
+        C = (0, o.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.nn4, { children: p.NW.string(p.t.EJRzg4) }),

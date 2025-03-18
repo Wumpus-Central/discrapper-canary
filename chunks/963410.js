@@ -13,15 +13,15 @@ var n = r(200651),
     g = r(802063),
     _ = r(210975),
     y = r(301107),
-    S = r(65692),
-    m = r(540247),
+    m = r(65692),
+    S = r(540247),
     h = r(785792),
     N = r(190054),
     v = r(245581),
     p = r(760373),
     b = r(981631),
     R = r(388032),
-    I = r(54097);
+    I = r(161786);
 function T(e) {
     let { badgeText: t, badgeColor: r } = e,
         i = l.useRef(t),
@@ -39,7 +39,7 @@ function C(e) {
             return null === (e = a.Z.getChannel(C)) || void 0 === e ? void 0 : e.getGuildId();
         }),
         A = c.ZP.useName(j, null, O),
-        { fingerprint: x, userKey: w } = (0, S.q)({ userId: r }),
+        { fingerprint: x, userKey: w } = (0, m.q)({ userId: r }),
         M = (0, y.W)({
             fingerprintBase64: x,
             chunkSize: p.iQ,
@@ -53,8 +53,7 @@ function C(e) {
         }, [C, r]),
         k = (0, _.wV)({
             userId: r,
-            channelId: C,
-            location: 'WebSecureFramesUserVerificationModal'
+            channelId: C
         });
     (0, g.i)({
         channelId: C,
@@ -79,7 +78,7 @@ function C(e) {
                 }),
             [P, D, A]
         ),
-        z = (0, m.P)({
+        z = (0, S.P)({
             userId: r,
             keyToOmit: w
         });

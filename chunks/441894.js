@@ -1,24 +1,22 @@
-n.d(t, { J: () => u }), n(47120);
+n.d(t, { J: () => o }), n(47120);
 var r = n(442837),
     i = n(592125),
     l = n(19780),
-    a = n(977059),
-    o = n(760373);
-function u(e) {
-    let { channelId: t, location: n } = e,
-        { enabled: u } = (0, a.S)({ location: n });
+    a = n(760373);
+function o(e) {
+    let { channelId: t } = e;
     return (0, r.e7)(
         [l.Z, i.Z],
         () =>
-            (function (e, t) {
-                var n;
-                let [r, a] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.Z, i.Z];
-                if (!t || null == e || r.getChannelId() !== e) return !1;
-                let u = a.getChannel(e);
-                if (null == u || u.isGuildStageVoice()) return !1;
-                let d = null === (n = r.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
-                return null != d && d !== o.Eg;
-            })(t, u, [l.Z, i.Z]),
-        [t, u]
+            (function (e) {
+                var t;
+                let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z, i.Z];
+                if (null == e || n.getChannelId() !== e) return !1;
+                let o = r.getChannel(e);
+                if (null == o || o.isGuildStageVoice()) return !1;
+                let u = null === (t = n.getSecureFramesState()) || void 0 === t ? void 0 : t.version;
+                return null != u && u !== a.Eg;
+            })(t, [l.Z, i.Z]),
+        [t]
     );
 }
