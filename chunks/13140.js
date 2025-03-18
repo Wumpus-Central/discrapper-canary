@@ -1,10 +1,10 @@
 n.d(t, {
-    BB: () => j,
-    C$: () => A,
-    H9: () => N,
-    Kd: () => k,
-    d2: () => M,
-    dU: () => S
+    BB: () => R,
+    C$: () => O,
+    H9: () => y,
+    Kd: () => C,
+    d2: () => A,
+    dU: () => v
 }),
     n(47120),
     n(757143),
@@ -19,9 +19,8 @@ var r = n(921738),
     s = n(714338),
     l = n(823379),
     c = n(358085),
-    u = n(378799),
-    d = n(981631);
-function f(e, t, n) {
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +33,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,12 +44,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,112 +61,70 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = (0, c.isLinux)() ? d.HsE : (0, c.isMac)() ? d.REU : (0, c.isWindows)() ? d.iC$ : {},
-    g = a().invert(d.HsE);
-(g['223'] = '`'), Object.freeze(g);
-let E = Object.freeze(a().invert(d.REU)),
-    b = a().invert(d.iC$);
-(b['223'] = '`'), Object.freeze(b);
-let v = a().invert(null != m ? m : {});
-(0, c.isMac)() || (v['223'] = '`'), Object.freeze(v);
-let y = new Set([192, 220, 222, 223, 229]);
+let h = (0, c.isLinux)() ? u.HsE : (0, c.isMac)() ? u.REU : (0, c.isWindows)() ? u.iC$ : void 0,
+    m = a().invert(u.HsE);
+(m['223'] = '`'), Object.freeze(m);
+let g = Object.freeze(a().invert(u.REU)),
+    E = a().invert(u.iC$);
+(E['223'] = '`'), Object.freeze(E);
+let b = a().invert(null != h ? h : {});
+function v() {
+    return (0, c.isLinux)() ? u.CgE.LINUX : (0, c.isMac)() ? u.CgE.MACOS : (0, c.isWindows)() ? u.CgE.WINDOWS : u.CgE.BROWSER;
+}
+function y(e) {
+    let [, t, n] = e;
+    switch (n) {
+        case u.CgE.LINUX:
+            return m['' + t];
+        case u.CgE.MACOS:
+            return g['' + t];
+        case u.CgE.WINDOWS:
+            return E['' + t];
+        case u.CgE.BROWSER:
+            return i()(t);
+        default:
+            return b['' + t];
+    }
+}
 function O(e) {
-    return '+' === e ? 'plus' : e;
-}
-function I(e, t) {
-    if (!y.has(e)) return t;
-    let n = (0, u.pz)().get('Backquote');
-    if (t === n) return O(t);
-    let r = (0, u.I7)({
-        key: n,
-        code: 'Backquote',
-        keyCode: e
-    });
-    return '\\' === t && '`' === n ? t : null == r ? O(null != n ? n : t) : O(r.key);
-}
-function S() {
-    return (0, c.isLinux)() ? d.CgE.LINUX : (0, c.isMac)() ? d.CgE.MACOS : (0, c.isWindows)() ? d.CgE.WINDOWS : d.CgE.BROWSER;
-}
-function T(e) {
-    let t,
-        [, n, r] = e;
-    switch (r) {
-        case d.CgE.LINUX:
-            t = g['' + n];
-            break;
-        case d.CgE.MACOS:
-            t = E['' + n];
-            break;
-        case d.CgE.WINDOWS:
-            t = b['' + n];
-            break;
-        case d.CgE.BROWSER:
-            t = i()(n);
-            break;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v(),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.MoX.KEYBOARD_KEY;
+    switch (n) {
+        case u.MoX.KEYBOARD_KEY:
+        case u.MoX.KEYBOARD_MODIFIER_KEY:
+            switch (t) {
+                case u.CgE.LINUX:
+                    return u.HsE[e];
+                case u.CgE.MACOS:
+                    return u.REU[e];
+                case u.CgE.WINDOWS:
+                    return u.iC$[e];
+                case u.CgE.BROWSER:
+                    return i()(e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, '$2').replace('meta', 'command'));
+                default:
+                    return h[e];
+            }
+        case u.MoX.MOUSE_BUTTON:
+            return parseInt(e.replace('MOUSE', ''), 10);
+        case u.MoX.GAMEPAD_BUTTON:
+            return parseInt(e.replace('GAMEPAD', ''), 10);
         default:
-            t = v['' + n];
+            throw Error('Unrecognized DeviceType '.concat(n, '.'));
     }
-    return null != t ? t : null;
 }
-function N(e) {
-    let [, t] = e,
-        n = T(e);
-    if (null != n) return I(t, n);
-    let r = (0, u._v)(t);
-    return null != r ? I(r.keyCode, r.key) : null;
-}
-function A(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
-        r = C(e, t, n);
-    if (null != r) return r;
-    let i = (0, u.T_)(e);
-    return null != i ? i.keyCode : null;
-}
-function C(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
-        o = r === d.MoX.KEYBOARD_KEY || r === d.MoX.KEYBOARD_MODIFIER_KEY;
-    switch (!0) {
-        case o && n === d.CgE.LINUX:
-            t = d.HsE[e];
-            break;
-        case o && n === d.CgE.MACOS:
-            t = d.REU[e];
-            break;
-        case o && n === d.CgE.WINDOWS:
-            t = '+' === e ? d.iC$.plus : d.iC$[e];
-            break;
-        case o && n === d.CgE.BROWSER:
-            t = i()(e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, '$2').replace('meta', 'command'));
-            break;
-        case o:
-            t = m[e];
-            break;
-        case r === d.MoX.MOUSE_BUTTON:
-            t = parseInt(e.replace('MOUSE', ''), 10);
-            break;
-        case r === d.MoX.GAMEPAD_BUTTON:
-            t = parseInt(e.replace('GAMEPAD', ''), 10);
-            break;
-        default:
-            throw Error('Unrecognized DeviceType '.concat(r, '.'));
-    }
-    return null != t ? t : null;
-}
-let R = [
+(0, c.isMac)() || (b['223'] = '`'), Object.freeze(b);
+let I = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
         ['SHIFT', '\u21E7'],
@@ -191,26 +148,18 @@ let R = [
         ['TAB', '\u21E5'],
         ['SPACE', '\u2423']
     ],
-    P = (e) => {
-        for (let [t, n] of R) if (t === e.toUpperCase()) return n;
+    S = (e) => {
+        for (let [t, n] of I) if (t === e.toUpperCase()) return n;
         return e;
     },
-    w = (e) => {
-        for (let [t, n] of R) if (n === e.toUpperCase()) return t.toLowerCase();
+    T = (e) => {
+        for (let [t, n] of I) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    D = /shift|meta|ctrl|alt$/;
-function L(e) {
-    return 'meta' === e || 'shift' === e || 'alt' === e || 'ctrl' === e;
-}
-function x(e) {
-    return e + 'Key';
-}
-function M(e) {
+    N = /shift|meta|ctrl|alt$/;
+function A(e) {
     let t = {
         keyCode: 0,
-        key: '',
-        code: '',
         metaKey: !1,
         shiftKey: !1,
         altKey: !1,
@@ -219,19 +168,19 @@ function M(e) {
     return null == e
         ? []
         : e.reduce((e, n) => {
-              let r = N(n),
-                  i = _({}, t);
-              if (null == r) return e.push(h(_({}, i), { combo: n })), e;
-              if (D.test(r) && L(r)) return (t[x(r)] = !0), e.map((e) => ((e[x(r)] = !0), e));
+              let r = y(n),
+                  i = f({}, t);
+              if (null == r) return e.push(p(f({}, i), { combo: n })), e;
+              if (N.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
               {
-                  let t = A(r, d.CgE.BROWSER);
+                  let t = O(r, u.CgE.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
 }
-function k(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
+function C(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v(),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.MoX.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, '')
         .replace(/NUMPAD \+/i, 'numpad plus')
@@ -239,21 +188,21 @@ function k(e) {
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
-            let i = A(w(r), t, n);
+            let i = O(T(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
-function j(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .map((e) => {
                 let [t, n, r] = e;
-                if (t === d.MoX.KEYBOARD_KEY || t === d.MoX.KEYBOARD_MODIFIER_KEY) {
+                if (t === u.MoX.KEYBOARD_KEY || t === u.MoX.KEYBOARD_MODIFIER_KEY) {
                     var i;
-                    return null !== (i = N(null != r ? [t, n, r] : [t, n])) && void 0 !== i ? i : 'UNK'.concat(n);
+                    return null !== (i = y(null != r ? [t, n, r] : [t, n])) && void 0 !== i ? i : 'UNK'.concat(n);
                 }
-                return t === d.MoX.MOUSE_BUTTON ? 'mouse'.concat(n) : t === d.MoX.GAMEPAD_BUTTON ? 'gamepad'.concat(n) : 'dev'.concat(t, ',').concat(n);
+                return t === u.MoX.MOUSE_BUTTON ? 'mouse'.concat(n) : t === u.MoX.GAMEPAD_BUTTON ? 'gamepad'.concat(n) : 'dev'.concat(t, ',').concat(n);
             })
             .filter(l.lm);
-    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(P) : r).join(' + ').toUpperCase() : r.join('+');
+    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(S) : r).join(' + ').toUpperCase() : r.join('+');
 }
