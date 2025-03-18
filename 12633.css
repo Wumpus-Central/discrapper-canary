@@ -7703,15 +7703,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     background-color: var(--interactive-muted)
 }
 
-.visual-refresh .blockquoteContainer__75297 {
-    margin-bottom: var(--space-4);
-    margin-top: var(--space-4)
-}
-
-.visual-refresh .blockquoteDivider__75297 {
-    background-color: var(--spine-default)
-}
-
 .slateBlockquoteContainer__75297 {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -7728,6 +7719,20 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
+}
+
+.visual-refresh .blockquoteContainer__75297 {
+    margin-bottom: var(--space-4);
+    margin-top: var(--space-4)
+}
+
+.visual-refresh .blockquoteDivider__75297 {
+    background-color: var(--spine-default)
+}
+
+.visual-refresh .slateBlockquoteContainer__75297 {
+    margin-top: 0;
+    margin-bottom: 0
 }
 
 .background-opacity-low .markup__75297,
