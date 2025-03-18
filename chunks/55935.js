@@ -1,10 +1,10 @@
 n.d(t, {
-    Hg: () => S,
+    Hg: () => I,
     KC: () => m,
     QX: () => N,
     TD: () => T,
-    Xf: () => b,
-    Y4: () => v,
+    Xf: () => v,
+    Y4: () => b,
     _w: () => g,
     vc: () => E,
     wY: () => h
@@ -19,8 +19,8 @@ var r = n(913527),
 let u = new a.Z('DateUtils'),
     d = 60000,
     f = 86400000,
-    p = Object.create(null);
-function _(e) {
+    _ = Object.create(null);
+function p(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = e;
     'string' == typeof e || 'number' == typeof e || e instanceof Date || (u.error('Invalid date given to startOfDay', { d: e }), (n = new Date()));
@@ -29,7 +29,7 @@ function _(e) {
     return t || (i -= r.getTimezoneOffset() * d), Math.floor(i / f) * f;
 }
 function h(e, t) {
-    return Math.floor((_(e, !1) - _(t, !1)) / f);
+    return Math.floor((p(e, !1) - p(t, !1)) / f);
 }
 function m(e, t) {
     return Math.abs(+e - +t) <= f && e.getDate() === t.getDate();
@@ -41,17 +41,24 @@ function E(e, t) {
     let n = y(e).locale(),
         r = l.hg.getSetting(),
         i = ''.concat(n, ':').concat(t, ':').concat(r),
-        a = p[i];
-    return null == a && (a = p[i] = (0, o.Z)(t)), a(O(e));
-}
-function v(e) {
-    let t;
-    let n = i().localeData(),
-        r = i()(),
-        o = h(O(e), r.toDate());
-    return o < -1 ? E(e, 'L LT') : ((t = o < 0 ? 'lastDay' : o < 1 ? 'sameDay' : o < 2 ? 'nextDay' : 'sameElse'), E(e, n.calendar(t, y(e), r)));
+        a = _[i];
+    return null == a && (a = _[i] = (0, o.Z)(t)), a(O(e));
 }
 function b(e) {
+    let t,
+        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        r = i().localeData(),
+        o = i()(),
+        a = h(O(e), o.toDate());
+    if (a < -1) return E(e, 'L LT');
+    if (a < 0) t = 'lastDay';
+    else if (a < 1) {
+        if (n) return E(e, 'LT');
+        t = 'sameDay';
+    } else t = a < 2 ? 'nextDay' : 'sameElse';
+    return E(e, r.calendar(t, y(e), o));
+}
+function v(e) {
     let t = i().localeData(),
         n = i()(),
         r = h(O(e), n.toDate());
@@ -63,7 +70,7 @@ function y(e) {
 function O(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
-function S(e) {
+function I(e) {
     let t;
     let n = i().localeData(),
         r = new Date(),
@@ -71,9 +78,9 @@ function S(e) {
     return 'sameElse' == (t = o < -1 ? 'sameElse' : o < 0 ? 'lastDay' : o < 1 ? 'sameDay' : o < 2 ? 'nextDay' : 'sameElse') ? E(e, 'LLL') : E(e, n.calendar(t, i()(e), i()(r)));
 }
 s.default.addChangeListener(() => {
-    p = Object.create(null);
+    _ = Object.create(null);
 });
-let I = [
+let S = [
     {
         key: 'days',
         millisecondsInUnit: 86400000
@@ -102,7 +109,7 @@ function T(e, t) {
     if (e > t || (n && Number(e) + 1200 > Number(t))) return r;
     let i = Number(t) - Number(e);
     return (
-        I.forEach((e) => {
+        S.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
             (r[t] = Math.floor(i / n)), (i -= r[t] * n);
         }),

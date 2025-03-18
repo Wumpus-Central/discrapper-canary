@@ -73,20 +73,20 @@ async function g(e) {
     return (0, a.C)(n, () => E(m(p({}, e), { targetApplication: t })));
 }
 async function E(e) {
-    let { targetApplication: t, locationObject: n, channelId: a, analyticsLocations: s, componentId: u, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: v } = e,
-        b = (0, d.Z)(),
-        y = i.default.getCurrentUser();
+    let { targetApplication: t, locationObject: n, channelId: a, analyticsLocations: s, componentId: u, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: v } = e,
+        y = (0, d.Z)(),
+        O = i.default.getCurrentUser();
     return null == a
         ? (o.S.dispatch(f.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t.id }), !1)
         : null != r.Z.getChannel(a) &&
-              null != y &&
+              null != O &&
               null != t &&
               (l.tZ(t.id),
               await (0, c.G6)({
                   channelId: a,
                   applicationId: t.id,
                   isStart: !0,
-                  embeddedActivitiesManager: b,
+                  embeddedActivitiesManager: y,
                   componentId: u,
                   commandOrigin: _,
                   sectionName: p,
@@ -97,6 +97,7 @@ async function E(e) {
                   referrerId: g,
                   customId: E,
                   instanceId: void 0,
-                  inviterUserId: v
+                  inviterUserId: b,
+                  onConfirmActivityLaunchChecksAlertOpen: v
               }));
 }

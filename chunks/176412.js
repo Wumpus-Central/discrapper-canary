@@ -12,21 +12,21 @@ var i,
     c = n(25209),
     u = n(481060),
     d = n(2052),
-    m = n(542094),
-    p = n(513202),
-    h = n(367907),
-    f = n(213459),
+    p = n(542094),
+    m = n(513202),
+    f = n(367907),
+    h = n(213459),
     v = n(895924),
-    N = n(691424),
-    x = n(428595),
-    y = n(364458),
-    b = n(499254),
-    E = n(541099),
-    C = n(827498),
-    j = n(346683),
-    g = n(981631),
-    P = n(388032);
-let A =
+    y = n(691424),
+    b = n(428595),
+    N = n(364458),
+    g = n(499254),
+    x = n(541099),
+    j = n(827498),
+    E = n(346683),
+    P = n(981631),
+    C = n(388032);
+let O =
         ((i = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -51,8 +51,8 @@ let A =
                     });
             }
             return e;
-        })({}, x.Z.RULES.commandMention)),
-        (l = l = { parse: (e, t, n) => ({ content: x.Z.RULES.commandMention.parse(e, t, n).content }) }),
+        })({}, b.Z.RULES.commandMention)),
+        (l = l = { parse: (e, t, n) => ({ content: b.Z.RULES.commandMention.parse(e, t, n).content }) }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
             : (function (e, t) {
@@ -66,74 +66,75 @@ let A =
                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
               }),
         i),
-    O = a().pick(
-        (0, y.Z)([
-            x.Z.RULES,
-            { commandMention: A },
-            (0, N.Z)({
+    A = a().pick(
+        (0, N.Z)([
+            b.Z.RULES,
+            { commandMention: O },
+            (0, y.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    I = c.w4(O);
+    I = c.w4(A);
 function _(e) {
-    let { context: t, application: n, location: i, sectionName: l, commandName: o, autoDismissOnClick: a = !0, launchingComponentId: c, submitting: N = !1, fetchesApplication: x = !0 } = e,
-        y = (0, d.O)(),
-        A = (0, m.Qv)({
+    let { context: t, application: n, location: i, sectionName: l, commandName: o, autoDismissOnClick: a = !0, launchingComponentId: c, submitting: y = !1, fetchesApplication: b = !0, onConfirmActivityLaunchChecksAlertOpen: N } = e,
+        O = (0, d.O)(),
+        A = (0, p.Qv)({
             context: t,
             applicationId: n.id,
-            fetchesApplication: x
+            fetchesApplication: b
         }),
-        O = (0, j.Q)(A),
-        I = (0, s.e7)([E.Z], () => E.Z.entrypoint()),
-        _ = r.useMemo(() => {
+        I = (0, E.Q)(A),
+        _ = (0, s.e7)([x.Z], () => x.Z.entrypoint()),
+        S = r.useMemo(() => {
             var e, i, l;
-            if ('channel' !== t.type) return null !== (l = null === (e = n.bot) || void 0 === e ? void 0 : e.id) && void 0 !== l ? l : null === (i = (0, f.If)(t, n.id).descriptor) || void 0 === i ? void 0 : i.botId;
+            if ('channel' !== t.type) return null !== (l = null === (e = n.bot) || void 0 === e ? void 0 : e.id) && void 0 !== l ? l : null === (i = (0, h.If)(t, n.id).descriptor) || void 0 === i ? void 0 : i.botId;
         }, [t, n.id, n.bot]),
-        S = (0, m.w1)({
+        T = (0, p.w1)({
             applicationId: n.id,
-            botUserIdForAppDM: _,
-            embeddedActivitiesManager: p.Z,
+            botUserIdForAppDM: S,
+            embeddedActivitiesManager: m.Z,
             context: t,
-            locationObject: y.location,
+            locationObject: O.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                a && b.yT(C.ti.ACTIVITY),
-                    (0, h.yw)(g.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                a && g.yT(j.ti.ACTIVITY),
+                    (0, f.yw)(P.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: l,
-                        action: O,
-                        source: I
+                        action: I,
+                        source: _
                     });
             },
             launchingComponentId: c,
             commandOrigin: v.bB.APPLICATION_LAUNCHER,
             sectionName: l,
-            source: I,
-            fetchesApplication: x
+            source: _,
+            fetchesApplication: b,
+            onConfirmActivityLaunchChecksAlertOpen: N
         }),
-        T = u.Ttl.BRAND,
-        L = null != o ? o : P.NW.string(P.t.zKX8Nj);
+        L = u.Ttl.BRAND,
+        Z = null != o ? o : C.NW.string(C.t.zKX8Nj);
     return (
-        O === m.JS.JOIN ? ((T = u.Ttl.GREEN), (L = P.NW.string(P.t.d9PsMj))) : O !== m.JS.LEAVE || N || ((T = u.Ttl.RED), (L = P.NW.string(P.t['Hi1/aW']))),
+        I === p.JS.JOIN ? ((L = u.Ttl.GREEN), (Z = C.NW.string(C.t.d9PsMj))) : I !== p.JS.LEAVE || y || ((L = u.Ttl.RED), (Z = C.NW.string(C.t['Hi1/aW']))),
         {
-            onActivityItemSelected: S,
-            activityAction: O,
-            buttonColor: T,
-            buttonText: L
+            onActivityItemSelected: T,
+            activityAction: I,
+            buttonColor: L,
+            buttonText: Z
         }
     );
 }
 function S(e, t) {
-    let n = E.Z.entrypoint(),
+    let n = x.Z.entrypoint(),
         i = r.useMemo(
             () =>
                 (0, o.debounce)(
                     (e, t) => {
-                        (0, h.yw)(g.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, f.yw)(P.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: t
                         });

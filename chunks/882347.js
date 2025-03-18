@@ -1,4 +1,4 @@
-n.d(t, { p: () => b }), n(789020);
+n.d(t, { p: () => v }), n(789020);
 var r = n(252258),
     i = n(570140),
     o = n(881052),
@@ -29,87 +29,99 @@ async function m(e) {
     }
 }
 async function g(e) {
-    let { currentEmbeddedApplication: t } = e;
+    let { currentEmbeddedApplication: t, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: n, onConfirmActivityLaunchChecksAlertOpen: r } = e;
     return !!(
         null == t ||
         (await new Promise((e) => {
-            let n = l.ZP.getSelfEmbeddedActivities().get(t.id),
-                r = (0, f.pY)(null == n ? void 0 : n.location),
-                i = a.Z.getChannel(r);
-            if (null == n || null == i) {
+            let i = l.ZP.getSelfEmbeddedActivities().get(t.id),
+                o = (0, f.pY)(null == i ? void 0 : i.location),
+                s = a.Z.getChannel(o);
+            if (null == i || null == s) {
                 e(!0);
                 return;
             }
-            (0, u.Z)(
-                t,
-                i,
-                () => {
-                    (0, p.Z)().leaveActivity({
-                        location: n.location,
-                        applicationId: t.id
-                    }),
-                        e(!0);
-                },
-                () => e(!1)
-            );
+            null == r || r(),
+                (0, u.Z)(
+                    t,
+                    s,
+                    () => {
+                        (0, p.Z)().leaveActivity({
+                            location: i.location,
+                            applicationId: t.id,
+                            shouldClosePopout: n
+                        }),
+                            e(!0);
+                    },
+                    () => e(!1)
+                );
         }))
     );
 }
 async function E(e) {
-    let { application: t, applicationId: n, channel: r, user: i, isContextless: o } = e;
+    let { application: t, applicationId: n, channel: r, user: i, onConfirmActivityLaunchChecksAlertOpen: o, isContextless: a } = e;
     if (null == i.nsfwAllowed) {
-        var a, s, l;
+        var s, l, u;
         let e =
             null != t
                 ? t
                 : await m({
                       applicationId: n,
                       channelId: null == r ? void 0 : r.id,
-                      guildId: null !== (s = null == r ? void 0 : r.getGuildId()) && void 0 !== s ? s : void 0,
-                      isContextless: o
+                      guildId: null !== (l = null == r ? void 0 : r.getGuildId()) && void 0 !== l ? l : void 0,
+                      isContextless: a
                   });
         if (
             null == e ||
-            (null !== (l = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) &&
-                void 0 !== l &&
-                l &&
+            (null !== (u = null === (s = e.embeddedActivityConfig) || void 0 === s ? void 0 : s.requires_age_gate) &&
+                void 0 !== u &&
+                u &&
                 !(await new Promise((t) => {
-                    (0, c.V)({
-                        application: e,
-                        channelId: null == r ? void 0 : r.id,
-                        onAgree: () => t(!0),
-                        onDisagree: () => t(!1)
-                    });
+                    null == o || o(),
+                        (0, c.V)({
+                            application: e,
+                            channelId: null == r ? void 0 : r.id,
+                            onAgree: () => t(!0),
+                            onDisagree: () => t(!1)
+                        });
                 })))
         )
             return !1;
     }
     return !0;
 }
-async function v(e) {
+async function b(e) {
     var t;
-    let { application: n, applicationId: r, channel: i, isContextless: o } = e,
-        a =
+    let { application: n, applicationId: r, channel: i, onConfirmActivityLaunchChecksAlertOpen: o, isContextless: a } = e,
+        c =
             null != n
                 ? n
                 : await m({
                       applicationId: r,
                       channelId: null == i ? void 0 : i.id,
                       guildId: null !== (t = null == i ? void 0 : i.getGuildId()) && void 0 !== t ? t : void 0,
-                      isContextless: o
+                      isContextless: a
                   });
     return (
-        null != a &&
-        (!!((0, s.yE)(a.flags, h.udG.EMBEDDED_RELEASED) || a.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
+        null != c &&
+        (!!((0, s.yE)(c.flags, h.udG.EMBEDDED_RELEASED) || c.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
             new Promise((e) => {
-                (0, d.j)({
-                    application: a,
-                    onConfirm: () => e(!0),
-                    onCancel: () => e(!1)
-                });
+                null == o || o(),
+                    (0, d.j)({
+                        application: c,
+                        onConfirm: () => e(!0),
+                        onCancel: () => e(!1)
+                    });
             }))
     );
 }
-async function b(e) {
-    return !!((await g({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await E(e)) && (await v(e)));
+async function v(e) {
+    return !!(
+        (await g({
+            currentEmbeddedApplication: e.currentEmbeddedApplication,
+            shouldClosePopoutOnLeaveCurrentEmbeddedApplication: e.shouldClosePopoutOnLeaveCurrentEmbeddedApplication,
+            onConfirmActivityLaunchChecksAlertOpen: e.onConfirmActivityLaunchChecksAlertOpen
+        })) &&
+        (await E(e)) &&
+        (await b(e))
+    );
 }

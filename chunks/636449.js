@@ -1,22 +1,25 @@
 n.d(t, {
-    C: () => c,
-    R: () => l
+    C: () => u,
+    R: () => c
 });
 var r = n(570140),
-    i = n(788983),
-    o = n(214629),
-    a = n(422483),
-    s = n(981631);
-function l(e) {
+    i = n(522474),
+    o = n(788983),
+    a = n(214629),
+    s = n(422483),
+    l = n(981631);
+function c(e) {
     var t;
     let { isContextless: n } = e;
     if (n) return !0;
-    let r = o.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || a.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    let r = a.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled || s.Z.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
     return (null === (t = platform) || void 0 === t ? void 0 : t.name) !== 'Firefox' && r;
 }
-async function c(e, t) {
+async function u(e, t) {
     let n;
+    let a = i.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT);
     e &&
+        !a &&
         r.Z.wait(() => {
             r.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
         });
@@ -25,5 +28,5 @@ async function c(e, t) {
     } catch (e) {
         n = !1;
     }
-    return !n && e && i.xv(s.KJ3.ACTIVITY_POPOUT), n;
+    return !n && e && o.xv(l.KJ3.ACTIVITY_POPOUT), n;
 }
