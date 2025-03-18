@@ -110,60 +110,69 @@ function D(e) {
           }));
 }
 let W = i.forwardRef(function (e, t) {
-    var n;
-    let { channel: l, isHovered: a, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: _, className: C } = e,
-        y = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
-        { id: x, guild_id: j } = l;
+    var n, l;
+    let { channel: a, isHovered: s, closePopout: c, onMouseEnter: u, onMouseLeave: _, onClick: C, className: y } = e,
+        x = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        { id: j, guild_id: E } = a;
     i.useEffect(() => {
         N.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-            channel_id: x,
-            guild_id: j
+            channel_id: j,
+            guild_id: E
         });
-    }, [x, j]),
+    }, [j, E]),
         i.useEffect(() => {
-            a || s();
-        }, [s, a]);
-    let E = (0, f.bp)(),
-        { analyticsLocations: k } = (0, b.ZP)(g.Z.ACTIVITIES_MINI_SHELF),
-        W = E === w.IlC.POPOUT,
-        U = (0, h.O)(),
-        B = ((n = l.getGuildId()), (0, S.Z)({ guildId: n }).slice(0, 5));
+            s || c();
+        }, [c, s]);
+    let k = (0, f.bp)(),
+        { analyticsLocations: W } = (0, b.ZP)(g.Z.ACTIVITIES_MINI_SHELF),
+        U = k === w.IlC.POPOUT,
+        B = (0, h.O)(),
+        H =
+            ((n = a.getGuildId()),
+            (l = a),
+            (0, S.Z)({
+                guildId: n,
+                context: {
+                    channel: l,
+                    type: 'channel'
+                }
+            }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: H } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
-        F = i.useCallback(() => {
+    let { enabled: F } = I.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+        G = i.useCallback(() => {
             var e;
             (0, A.Z)({
-                channel: l,
-                guildId: null !== (e = l.getGuildId()) && void 0 !== e ? e : void 0,
-                locationObject: U.location,
-                openInPopout: W,
-                analyticsLocations: k,
+                channel: a,
+                guildId: null !== (e = a.getGuildId()) && void 0 !== e ? e : void 0,
+                locationObject: B.location,
+                openInPopout: U,
+                analyticsLocations: W,
                 opensAppLauncherModal: !0
             }),
-                u(),
-                _();
-        }, [U, k, l, _, u, W]),
-        G = i.useCallback(
+                _(),
+                C();
+        }, [B, W, a, C, _, U]),
+        V = i.useCallback(
             (e) => {
-                c(),
+                u(),
                     N.default.track(w.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
-                        channel_id: l.id,
-                        guild_id: l.getGuildId()
+                        channel_id: a.id,
+                        guild_id: a.getGuildId()
                     });
             },
-            [c, l]
+            [u, a]
         ),
-        V = H ? p.iWm : p.nG3;
+        z = F ? p.iWm : p.nG3;
     return (0, r.jsx)(b.Gt, {
-        value: k,
+        value: W,
         children: (0, r.jsx)(O.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
                 'aria-labelledby': L,
-                className: C,
+                className: y,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
@@ -176,8 +185,8 @@ let W = i.forwardRef(function (e, t) {
                     }),
                     (0, r.jsxs)('div', {
                         className: M.container,
-                        onMouseEnter: G,
-                        onMouseLeave: u,
+                        onMouseEnter: V,
+                        onMouseLeave: _,
                         children: [
                             (0, r.jsxs)('div', {
                                 className: M.titleContainer,
@@ -185,7 +194,7 @@ let W = i.forwardRef(function (e, t) {
                                     (0, r.jsxs)('div', {
                                         className: M.titleLeft,
                                         children: [
-                                            (0, r.jsx)(V, {
+                                            (0, r.jsx)(z, {
                                                 size: 'md',
                                                 className: M.titleLeftIcon,
                                                 color: 'var(--interactive-active)'
@@ -198,7 +207,7 @@ let W = i.forwardRef(function (e, t) {
                                     }),
                                     (0, r.jsxs)(p.P3F, {
                                         className: M.titleRight,
-                                        onClick: F,
+                                        onClick: G,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: 'eyebrow',
@@ -216,26 +225,26 @@ let W = i.forwardRef(function (e, t) {
                                 ]
                             }),
                             (0, r.jsx)(D, {
-                                openInPopout: W,
-                                channel: l,
+                                openInPopout: U,
+                                channel: a,
                                 onClick: () => {
-                                    _(), s();
+                                    C(), c();
                                 }
                             }),
                             (0, r.jsxs)('div', {
                                 className: M.activityContainer,
                                 children: [
-                                    B.map((e) =>
+                                    H.map((e) =>
                                         (0, r.jsx)(
                                             Z.Y,
                                             {
                                                 context: {
-                                                    channel: l,
+                                                    channel: a,
                                                     type: 'channel'
                                                 },
                                                 activityItem: e,
                                                 onClick: () => {
-                                                    s(), _();
+                                                    c(), C();
                                                 },
                                                 aspectRatio: Z.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: M.activitySuggestion,
@@ -245,7 +254,7 @@ let W = i.forwardRef(function (e, t) {
                                         )
                                     ),
                                     (0, r.jsx)('div', {
-                                        className: o()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: y }),
+                                        className: o()(M.wumpusRocketOuterContainer, { [M.wumpusReducedMotion]: x }),
                                         children: (0, r.jsx)('div', {
                                             className: M.wumpusRocketInnerContainer,
                                             children: (0, r.jsx)(T.Z, { className: M.wumpusRocket })

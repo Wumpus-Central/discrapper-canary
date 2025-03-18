@@ -1,14 +1,14 @@
 n.d(t, {
     Z: () => j,
-    d: () => N
+    d: () => Z
 }),
     n(47120);
 var a = n(200651),
     i = n(192379),
     l = n(468194),
     s = n(442837),
-    r = n(477690),
-    c = n(481060),
+    c = n(477690),
+    r = n(481060),
     o = n(100527),
     d = n(906732),
     u = n(430824),
@@ -22,21 +22,29 @@ var a = n(200651),
     x = n(701488),
     _ = n(388032),
     C = n(671046);
-let I = (0, l.Mg)(r.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-    y = (0, l.Mg)(r.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-    T = (0, l.Mg)(r.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+let I = (0, l.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+    y = (0, l.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+    T = (0, l.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 function j(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: r, onActivityItemVisible: x, scrollerRef: j } = e,
-        [N, Z] = i.useState(0),
-        S = (0, m.Z)({
+    let { channel: t, guildId: n, locationObject: l, onClose: c, onActivityItemVisible: x, scrollerRef: j } = e,
+        [Z, S] = i.useState(0),
+        N =
+            void 0 !== t
+                ? {
+                      channel: t,
+                      type: 'channel'
+                  }
+                : { type: 'contextless' },
+        O = (0, m.Z)({
             guildId: n,
-            enableFilter: !0
+            enableFilter: !0,
+            context: N
         }),
-        O = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        E = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        { analyticsLocations: A } = (0, d.ZP)(o.Z.ACTIVITY_DIRECTORY),
-        M = (0, h.Z)(null == t ? void 0 : t.id),
-        { isDeveloperActivityShelfEnabled: P, filter: w } = (0, s.cj)([f.Z], () => ({
+        E = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        A = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        { analyticsLocations: M } = (0, d.ZP)(o.Z.ACTIVITY_DIRECTORY),
+        P = (0, h.Z)(null == t ? void 0 : t.id),
+        { isDeveloperActivityShelfEnabled: w, filter: L } = (0, s.cj)([f.Z], () => ({
             filter: f.Z.getFilter(),
             isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
         }));
@@ -52,56 +60,56 @@ function j(e) {
                 );
             function t() {
                 var e, t;
-                Z(null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
+                S(null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0);
             }
         }, [j]),
         i.useEffect(() => {
-            (M || null != n) &&
+            (P || null != n) &&
                 (0, g.w1)({
                     guildId: n,
                     force: !0
                 });
-        }, [n, M]),
+        }, [n, P]),
         (0, v.g)(),
-        (null == E && !M) || null == O)
+        (null == A && !P) || null == E)
     )
         return null;
-    let L = S.length > 0;
+    let k = O.length > 0;
     return (0, a.jsx)(d.Gt, {
-        value: A,
+        value: M,
         children: (0, a.jsxs)('div', {
             className: C.scrollContainer,
             children: [
-                L
+                k
                     ? (0, a.jsx)('div', {
                           className: C.scrollBackgroundContainer,
-                          style: { top: -N },
+                          style: { top: -Z },
                           children: (0, a.jsx)('div', {
                               className: C.scrollTierBackground,
                               style: {
                                   height: ((e) => {
                                       let t = 1 === e.length;
                                       return I + Math.ceil(e.length / 2) * (t ? T : y);
-                                  })(S)
+                                  })(O)
                               }
                           })
                       })
                     : null,
-                (0, a.jsxs)(c.Ttm, {
+                (0, a.jsxs)(r.Ttm, {
                     ref: j,
                     className: C.scroller,
                     children: [
                         null,
-                        L && null != t
+                        k && null != t
                             ? (0, a.jsx)('div', {
                                   className: C.scrollSection,
                                   children: (0, a.jsx)('div', {
                                       className: C.shelf,
-                                      children: S.map((e) =>
+                                      children: O.map((e) =>
                                           (0, a.jsx)(
                                               b.Z,
                                               {
-                                                  large: 1 === S.length,
+                                                  large: 1 === O.length,
                                                   activityItem: e,
                                                   context: {
                                                       channel: t,
@@ -112,7 +120,7 @@ function j(e) {
                                                   onActivityItemVisible: x,
                                                   onActivityItemSelected: () => {
                                                       var t;
-                                                      e.application.id, r();
+                                                      e.application.id, c();
                                                   }
                                               },
                                               'activity-shelf-item-'.concat(e.application.id)
@@ -120,15 +128,15 @@ function j(e) {
                                       )
                                   })
                               })
-                            : P && w.length > 0
-                              ? (0, a.jsx)(c.Text, {
+                            : w && L.length > 0
+                              ? (0, a.jsx)(r.Text, {
                                     variant: 'text-md/normal',
                                     className: C.filterError,
-                                    children: _.NW.format(_.t.p0PRFB, { filter: w })
+                                    children: _.NW.format(_.t.p0PRFB, { filter: L })
                                 })
                               : (0, a.jsx)('div', {
                                     className: C.spinnerContainer,
-                                    children: (0, a.jsx)(c.$jN, {})
+                                    children: (0, a.jsx)(r.$jN, {})
                                 })
                     ]
                 })
@@ -136,8 +144,8 @@ function j(e) {
         })
     });
 }
-function N() {
-    return (0, a.jsx)(c.Text, {
+function Z() {
+    return (0, a.jsx)(r.Text, {
         variant: 'text-sm/normal',
         children: _.NW.format(_.t.fijcEB, { surveyURL: x.Es })
     });

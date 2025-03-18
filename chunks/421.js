@@ -3,8 +3,8 @@ var a = n(200651),
     i = n(192379),
     l = n(399606),
     s = n(481060),
-    r = n(100527),
-    c = n(906732),
+    c = n(100527),
+    r = n(906732),
     o = n(895924),
     d = n(70097),
     u = n(592125),
@@ -20,25 +20,33 @@ var a = n(200651),
     C = n(431136),
     I = n(226799),
     y = n(388032),
-    T = n(470145);
+    T = n(927794);
 function j(e) {
     var t;
-    let { applicationId: n, guildId: l, channelId: o, onActivityLaunch: u } = e,
-        { analyticsLocations: f } = (0, c.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
+    let { applicationId: n, guildId: o, channelId: f, onActivityLaunch: m } = e,
+        { analyticsLocations: v } = (0, r.ZP)(c.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
     i.useEffect(() => {
-        (0, p.w1)({ guildId: l });
-    }, [l]);
-    let m = (0, b.Z)({
+        (0, p.w1)({ guildId: o });
+    }, [o]);
+    let x = (0, b.Z)({
             applicationId: null != n ? n : '',
             size: 2048
         }),
-        v = (0, g.T)(null != l ? l : null, n);
-    if (null == v) return null;
-    let x = null != v.activity.activity_preview_video_asset_id ? (0, h.Z)(n, v.activity.activity_preview_video_asset_id) : null,
-        _ = I.o[n],
-        C = (null == _ ? void 0 : _.playersSuggestionMin) != null && (null == _ ? void 0 : _.playersSuggestionMax) != null ? ''.concat(_.playersSuggestionMin, ' - ').concat(_.playersSuggestionMax) : void 0;
-    return (0, a.jsx)(c.Gt, {
-        value: f,
+        _ = (0, l.e7)([u.Z], () => u.Z.getChannel(f)),
+        C = (0, g.T)(
+            {
+                channel: _,
+                type: 'channel'
+            },
+            null != o ? o : null,
+            n
+        );
+    if (null == C) return null;
+    let j = null != C.activity.activity_preview_video_asset_id ? (0, h.Z)(n, C.activity.activity_preview_video_asset_id) : null,
+        S = I.o[n],
+        N = (null == S ? void 0 : S.playersSuggestionMin) != null && (null == S ? void 0 : S.playersSuggestionMax) != null ? ''.concat(S.playersSuggestionMin, ' - ').concat(S.playersSuggestionMax) : void 0;
+    return (0, a.jsx)(r.Gt, {
+        value: v,
         children: (0, a.jsx)('div', {
             className: T.scrollContainer,
             children: (0, a.jsxs)(s.Ttm, {
@@ -46,10 +54,10 @@ function j(e) {
                 children: [
                     (0, a.jsx)('div', {
                         className: T.launcherOuterContainer,
-                        children: (0, a.jsx)(N, {
-                            activityItem: v,
-                            onLaunch: u,
-                            channelId: o
+                        children: (0, a.jsx)(Z, {
+                            activityItem: C,
+                            onLaunch: m,
+                            channelId: f
                         })
                     }),
                     (0, a.jsxs)('div', {
@@ -57,7 +65,7 @@ function j(e) {
                         children: [
                             (0, a.jsxs)('div', {
                                 children: [
-                                    null != x
+                                    null != j
                                         ? (0, a.jsx)('div', {
                                               className: T.heroVideoContainer,
                                               children: (0, a.jsx)(d.Z, {
@@ -65,8 +73,8 @@ function j(e) {
                                                   autoPlay: !0,
                                                   muted: !0,
                                                   className: T.heroVideo,
-                                                  src: x,
-                                                  poster: m.url
+                                                  src: j,
+                                                  poster: x.url
                                               })
                                           })
                                         : null,
@@ -74,13 +82,13 @@ function j(e) {
                                         className: T.detailsTitle,
                                         children: (0, a.jsx)(s.X6q, {
                                             variant: 'heading-xxl/bold',
-                                            children: v.application.name
+                                            children: C.application.name
                                         })
                                     }),
                                     (0, a.jsxs)('div', {
                                         className: T.detailsDetails,
                                         children: [
-                                            null != C
+                                            null != N
                                                 ? (0, a.jsxs)('div', {
                                                       className: T.detailItem,
                                                       children: [
@@ -91,12 +99,12 @@ function j(e) {
                                                           (0, a.jsx)(s.Text, {
                                                               variant: 'text-xs/semibold',
                                                               className: T.detailItemText,
-                                                              children: y.NW.format(y.t.T3isFB, { nPlayers: C })
+                                                              children: y.NW.format(y.t.T3isFB, { nPlayers: N })
                                                           })
                                                       ]
                                                   })
                                                 : null,
-                                            (null == _ ? void 0 : _.timeSuggestionMinutes) != null
+                                            (null == S ? void 0 : S.timeSuggestionMinutes) != null
                                                 ? (0, a.jsxs)('div', {
                                                       className: T.detailItem,
                                                       children: [
@@ -107,7 +115,7 @@ function j(e) {
                                                           (0, a.jsx)(s.Text, {
                                                               variant: 'text-xs/semibold',
                                                               className: T.detailItemText,
-                                                              children: y.NW.format(y.t.dehcUV, { nMinutes: _.timeSuggestionMinutes })
+                                                              children: y.NW.format(y.t.dehcUV, { nMinutes: S.timeSuggestionMinutes })
                                                           })
                                                       ]
                                                   })
@@ -122,7 +130,7 @@ function j(e) {
                                                     (0, a.jsx)(s.Text, {
                                                         variant: 'text-xs/semibold',
                                                         className: T.detailItemText,
-                                                        children: v.application.tags.slice(0, 3).join(', ')
+                                                        children: C.application.tags.slice(0, 3).join(', ')
                                                     })
                                                 ]
                                             })
@@ -133,17 +141,17 @@ function j(e) {
                             (0, a.jsx)(s.X6q, {
                                 variant: 'heading-lg/medium',
                                 className: T.detailsDescription,
-                                children: v.application.description
+                                children: C.application.description
                             }),
                             (0, a.jsx)('div', { className: T.divider }),
                             (0, a.jsx)('div', {
                                 className: T.imagesContainer,
-                                children: (null !== (t = null == _ ? void 0 : _.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
+                                children: (null !== (t = null == S ? void 0 : S.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
                                     (0, a.jsx)(
                                         'img',
                                         {
                                             src: e,
-                                            alt: y.NW.formatToPlainString(y.t.YOslsL, { activityName: v.application.name }),
+                                            alt: y.NW.formatToPlainString(y.t.YOslsL, { activityName: C.application.name }),
                                             className: T.activityImage
                                         },
                                         e
@@ -157,37 +165,37 @@ function j(e) {
         })
     });
 }
-function N(e) {
-    var t, r;
+function Z(e) {
+    var t, c;
     let { activityItem: d, onLaunch: p, channelId: g } = e,
         h = (0, b.Z)({
             applicationId: d.application.id,
             size: 2048
         }),
-        { analyticsLocations: I } = (0, c.ZP)(),
-        [j, N] = i.useState(null !== (t = (0, m.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
-        [Z, S] = i.useState(
+        { analyticsLocations: I } = (0, r.ZP)(),
+        [j, Z] = i.useState(null !== (t = (0, m.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
+        [S, N] = i.useState(
             null !==
-                (r = (0, v.d)({
+                (c = (0, v.d)({
                     guildId: j,
                     allowGdmActivityChannelSuggestion: !0
-                })) && void 0 !== r
-                ? r
+                })) && void 0 !== c
+                ? c
                 : void 0
         ),
-        O = (0, l.e7)([u.Z], () => u.Z.getChannel(Z), [Z]),
+        O = (0, l.e7)([u.Z], () => u.Z.getChannel(S), [S]),
         E = (0, m.W)(),
         A = (0, v.F)(j),
         M = i.useCallback(async () => {
             var e;
-            null != Z &&
+            null != S &&
                 (await (0, f.Z)({
                     targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
-                    channelId: Z,
+                    channelId: S,
                     analyticsLocations: I,
                     commandOrigin: o.bB.APPLICATION_LAUNCHER
                 }).then(p));
-        }, [d, I, p, Z]),
+        }, [d, I, p, S]),
         P = i.useCallback(() => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('49049'), n.e('60133')]).then(n.bind(n, 827940));
@@ -238,7 +246,7 @@ function N(e) {
                 };
             });
         }, [d, I]),
-        w = null == O || (null != O.guild_id && !(null != j && null != Z && E.some((e) => e.value === j) && A.some((e) => e.value.channel.id === Z)));
+        w = null == O || (null != O.guild_id && !(null != j && null != S && E.some((e) => e.value === j) && A.some((e) => e.value.channel.id === S)));
     return (0, a.jsxs)('div', {
         className: T.launcherInnerContainer,
         children: [
@@ -270,7 +278,7 @@ function N(e) {
                               isSelected: (e) => e === j,
                               select: (e) => {
                                   var t;
-                                  N(e), S(null !== (t = (0, v.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  Z(e), N(null !== (t = (0, v.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),
@@ -280,18 +288,18 @@ function N(e) {
                               options: A,
                               isSelected: (e) => {
                                   let { channel: t } = e;
-                                  return t.id === Z;
+                                  return t.id === S;
                               },
                               select: (e) => {
                                   let { channel: t } = e;
-                                  return S(t.id);
+                                  return N(t.id);
                               },
                               serialize: (e) => {
                                   let { channel: t } = e;
                                   return t.id;
                               },
                               renderOptionValue: () => {
-                                  let e = A.find((e) => e.value.channel.id === Z);
+                                  let e = A.find((e) => e.value.channel.id === S);
                                   return null == e
                                       ? null
                                       : (0, a.jsx)(_.O, {

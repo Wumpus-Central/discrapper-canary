@@ -1,38 +1,40 @@
-n.d(t, { E: () => s }), n(47120);
+n.d(t, { E: () => f }), n(47120);
 var i = n(192379),
     r = n(442837),
-    l = n(835473),
-    o = n(594174),
+    l = n(424602),
+    o = n(835473),
+    a = n(594174),
     c = n(695103),
-    a = n(823379),
-    u = n(358085),
-    d = n(317381),
+    u = n(823379),
+    d = n(358085),
+    s = n(317381),
     p = n(761122);
-function s(e) {
-    let t = (0, r.e7)([o.default], o.default.getCurrentUser),
-        n = (0, r.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
-        s = (0, r.e7)([c.Z], () => c.Z.testModeEmbeddedApplicationId),
-        f = n.map((e) => e.application_id),
-        v = null != s ? [s, ...f] : f,
-        b = (0, l.Z)(v),
-        y = i.useMemo(() => b.filter(a.lm), [b]),
-        g = i.useMemo(
+function f(e, t) {
+    let n = (0, r.e7)([a.default], a.default.getCurrentUser),
+        f = (0, r.Wu)([s.ZP], () => s.ZP.getShelfActivities(e)),
+        v = (0, r.e7)([c.Z], () => c.Z.testModeEmbeddedApplicationId),
+        y = f.map((e) => e.application_id),
+        b = null != v ? [v, ...y] : y,
+        g = (0, o.Z)(b),
+        h = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
+        O = i.useMemo(() => g.filter(u.lm), [g]),
+        m = i.useMemo(
             () =>
-                null != s && y.length > 0 && y[0].id === s && null != y[0].embeddedActivityConfig
+                null != v && O.length > 0 && O[0].id === v && null != O[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: y[0].embeddedActivityConfig,
-                              application: y[0]
+                              activity: O[0].embeddedActivityConfig,
+                              application: O[0]
                           }
                       ]
                     : [],
-            [y, s]
+            [O, v]
         ),
-        O = i.useMemo(
+        w = i.useMemo(
             () =>
-                n
+                f
                     .map((e) => {
-                        let t = y.find((t) => t.id === e.application_id);
+                        let t = O.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -40,21 +42,22 @@ function s(e) {
                                   application: t
                               };
                     })
-                    .filter(a.lm),
-            [n, y]
+                    .filter(u.lm),
+            [f, O]
         );
     return i.useMemo(
         () =>
-            [...g, ...O]
+            [...m, ...w]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
-                    return (null !== (t = n.supported_platforms) && void 0 !== t ? t : []).includes((0, p.Z)((0, u.getOS)()));
+                    return (null !== (t = n.supported_platforms) && void 0 !== t ? t : []).includes((0, p.Z)((0, d.getOS)()));
                 })
                 .filter((e) => {
-                    let { activity: n } = e;
-                    return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
-                }),
-        [null == t ? void 0 : t.nsfwAllowed, O, g]
+                    let { activity: t } = e;
+                    return !t.requires_age_gate || (null == n ? void 0 : n.nsfwAllowed) === !0 || (null == n ? void 0 : n.nsfwAllowed) == null;
+                })
+                .filter((e) => !h || e.application.id !== l.gu),
+        [null == n ? void 0 : n.nsfwAllowed, w, h, m]
     );
 }

@@ -292,7 +292,13 @@ function R(e) {
             n_participants: u
         });
     });
-    let m = (0, h.Z)({ guildId: n.id }).slice(0, 3),
+    let m = (0, h.Z)({
+            guildId: n.id,
+            context: {
+                channel: t,
+                type: 'channel'
+            }
+        }).slice(0, 3),
         { analyticsLocations: I } = (0, b.ZP)(g.Z.VC_TILE_ACTIVITY_SUGGESTION),
         S = i.useMemo(
             () => ({
