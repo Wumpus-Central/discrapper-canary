@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -9,19 +9,21 @@ var i = n(120356),
     c = n(565138),
     d = n(623624),
     u = n(678558),
-    m = n(430824),
-    g = n(709586),
-    p = n(267642),
-    h = n(981631),
-    f = n(474936),
+    m = n(124570),
+    g = n(430824),
+    p = n(594174),
+    h = n(709586),
+    f = n(267642),
+    x = n(981631),
     b = n(388032),
-    N = n(794605);
-let x = function (e) {
+    N = n(935908);
+let _ = function (e) {
     let { className: t, guildId: n, boostingVariant: i } = e,
-        x = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
-        { fractionalState: _ } = (0, o.Z)(),
-        E = _ === f.a$.FP_ONLY;
-    return null == x
+        _ = (0, a.e7)([g.Z], () => g.Z.getGuild(n), [n]),
+        E = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
+        { fractionalState: j } = (0, o.Z)(),
+        C = (0, m.y)('guild_boosting_setting_guild_info_card', E, j);
+    return null == _
         ? (0, r.jsx)('div', {
               className: s()(t, N.guildContainer),
               children: (0, r.jsx)('div', {
@@ -37,7 +39,7 @@ let x = function (e) {
               children: [
                   (0, r.jsx)(c.Z, {
                       className: N.__invalid_guildIcon,
-                      guild: x,
+                      guild: _,
                       size: c.Z.Sizes.LARGER
                   }),
                   (0, r.jsxs)('div', {
@@ -45,12 +47,12 @@ let x = function (e) {
                       children: [
                           (0, r.jsx)(l.Text, {
                               variant: 'text-lg/bold',
-                              children: x.name
+                              children: _.name
                           }),
                           (0, r.jsxs)('div', {
                               className: N.guildBoostStatsContainer,
                               children: [
-                                  (0, r.jsx)(g.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       className: N.guildBoostBadge,
                                       width: 16,
                                       height: 16
@@ -58,13 +60,13 @@ let x = function (e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: b.NW.format(b.t['pob/cH'], { subscriptions: x.premiumSubscriberCount })
+                                      children: b.NW.format(b.t['pob/cH'], { subscriptions: _.premiumSubscriberCount })
                                   }),
                                   (0, r.jsx)('div', { className: N.separator }),
                                   (0, r.jsx)(l.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, p.nW)(x.premiumTier, { useLevels: !1 })
+                                      children: (0, f.nW)(_.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
@@ -72,29 +74,29 @@ let x = function (e) {
                   }),
                   i
                       ? (0, r.jsx)(u.Z, {
-                            guild: x,
+                            guild: _,
                             analyticsLocation: {
-                                page: h.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                                section: h.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                                object: h.qAy.BUTTON_CTA,
-                                objectType: h.Qqv.BUY
+                                page: x.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                                section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                                object: x.qAy.BUTTON_CTA,
+                                objectType: x.Qqv.BUY
                             },
                             pauseAnimation: !0,
                             size: l.zxk.Sizes.MEDIUM,
                             color: l.zxk.Colors.PRIMARY,
                             buttonText: b.NW.string(b.t.aBHecH),
-                            disabled: E
+                            disabled: C
                         })
                       : (0, r.jsx)(l.zxk, {
                             color: l.zxk.Colors.PRIMARY,
                             onClick: () => {
                                 (0, d.f)({
-                                    guildId: x.id,
-                                    location: { section: h.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
+                                    guildId: _.id,
+                                    location: { section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },
                             size: l.zxk.Sizes.MEDIUM,
-                            disabled: E,
+                            disabled: C,
                             children: b.NW.string(b.t.KLOhbG)
                         })
               ]

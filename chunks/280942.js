@@ -1,14 +1,15 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(200651),
     i = n(192379),
     s = n(481060),
     a = n(230711),
-    l = n(267642),
-    o = n(981631),
-    c = n(474936),
-    d = n(388032),
-    u = n(382550);
-function m(e) {
+    l = n(124570),
+    o = n(267642),
+    c = n(981631),
+    d = n(474936),
+    u = n(388032),
+    m = n(724958);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,100 +52,100 @@ function g(e, t) {
         e
     );
 }
-function p(e) {
-    let { guildBoostSlot: t, onClose: p, hasCancelableGuildBoostSlot: h, premiumSubscription: f, onSelect: b, fractionalState: N } = e,
-        x = {
+function h(e) {
+    let { guildBoostSlot: t, onClose: h, hasCancelableGuildBoostSlot: f, premiumSubscription: x, onSelect: b, fractionalState: N, user: _ } = e,
+        E = {
             transfer: {
-                label: null != t.premiumGuildSubscription ? d.NW.string(d.t['PR0n//']) : d.NW.string(d.t['+fmEYG']),
-                subtext: t.isOnCooldown() ? d.NW.string(d.t.XnB8Mz) : null,
+                label: null != t.premiumGuildSubscription ? u.NW.string(u.t['PR0n//']) : u.NW.string(u.t['+fmEYG']),
+                subtext: t.isOnCooldown() ? u.NW.string(u.t.XnB8Mz) : null,
                 disabled: t.isOnCooldown()
             },
             cancel: {
-                label: d.NW.string(d.t.twFU3d),
-                subtext: h ? null : d.NW.string(d.t.oQ9lOj),
-                disabled: !h
+                label: u.NW.string(u.t.twFU3d),
+                subtext: f ? null : u.NW.string(u.t.oQ9lOj),
+                disabled: !f
             },
             uncancel: {
-                label: d.NW.string(d.t['2glQNj']),
+                label: u.NW.string(u.t['2glQNj']),
                 subtext: null,
                 disabled: !1
             }
         };
-    switch (f.status) {
-        case o.O0b.PAST_DUE:
-            (x.cancel.disabled = !0), (x.cancel.subtext = d.NW.string(d.t.WnL6DQ)), (x.uncancel.disabled = !0);
+    switch (x.status) {
+        case c.O0b.PAST_DUE:
+            (E.cancel.disabled = !0), (E.cancel.subtext = u.NW.string(u.t.WnL6DQ)), (E.uncancel.disabled = !0);
             break;
-        case o.O0b.PAUSE_PENDING:
-        case o.O0b.PAUSED:
-            N === c.a$.NONE && ((x.transfer.disabled = !0), (x.transfer.subtext = d.NW.string(d.t.LiLRRU))), (x.cancel.subtext = d.NW.string(d.t['1ywaWF'])), (x.cancel.disabled = !0), (x.uncancel.disabled = !0);
+        case c.O0b.PAUSE_PENDING:
+        case c.O0b.PAUSED:
+            N === d.a$.NONE && ((E.transfer.disabled = !0), (E.transfer.subtext = u.NW.string(u.t.LiLRRU))), (E.cancel.subtext = u.NW.string(u.t['1ywaWF'])), (E.cancel.disabled = !0), (E.uncancel.disabled = !0);
     }
-    N !== c.a$.NONE && ((x.cancel.subtext = d.NW.string(d.t.dq4vq6)), (x.cancel.disabled = !0), (x.uncancel.disabled = !0));
-    let _ = i.useMemo(
+    (0, l.y)('guild_boost_slot_popout', _, N) && ((E.cancel.subtext = u.NW.string(u.t.dq4vq6)), (E.cancel.disabled = !0), (E.uncancel.disabled = !0));
+    let j = i.useMemo(
         () =>
-            f.isPausedOrPausePending && N === c.a$.NONE
+            x.isPausedOrPausePending && N === d.a$.NONE
                 ? (0, r.jsx)(s.sNh, {
                       id: 'manage-subscription',
-                      label: d.NW.string(d.t.obRG6e),
-                      action: () => a.Z.open(o.oAB.SUBSCRIPTIONS),
+                      label: u.NW.string(u.t.obRG6e),
+                      action: () => a.Z.open(c.oAB.SUBSCRIPTIONS),
                       iconLeft: s.WGR,
-                      className: u.manageSubscription
+                      className: m.manageSubscription
                   })
                 : null,
-        [N, f]
+        [N, x]
     );
     return (0, r.jsxs)(s.v2r, {
         onSelect: b,
         navId: 'subscription-context',
         variant: 'fixed',
-        'aria-label': d.NW.string(d.t.ogxXGh),
-        onClose: p,
+        'aria-label': u.NW.string(u.t.ogxXGh),
+        onClose: h,
         children: [
             (0, r.jsx)(s.sNh, {
                 id: 'apply',
-                label: x.transfer.label,
-                subtext: x.transfer.subtext,
+                label: E.transfer.label,
+                subtext: E.transfer.subtext,
                 action: function () {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                g(m({}, n), {
+                                p(g({}, n), {
                                     guildBoostSlots: [t],
-                                    locationSection: o.jXE.SETTINGS_PREMIUM
+                                    locationSection: c.jXE.SETTINGS_PREMIUM
                                 })
                             );
                     });
                 },
-                disabled: x.transfer.disabled
+                disabled: E.transfer.disabled
             }),
-            (0, l.tl)(t)
+            (0, o.tl)(t)
                 ? (0, r.jsx)(s.sNh, {
                       id: 'uncancel',
-                      label: x.uncancel.label,
-                      subtext: x.uncancel.subtext,
+                      label: E.uncancel.label,
+                      subtext: E.uncancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
-                              return (n) => (0, r.jsx)(e, g(m({}, n), { guildBoostSlotId: t.id }));
+                              return (n) => (0, r.jsx)(e, p(g({}, n), { guildBoostSlotId: t.id }));
                           });
                       },
-                      disabled: x.uncancel.disabled
+                      disabled: E.uncancel.disabled
                   })
                 : (0, r.jsx)(s.sNh, {
                       id: 'cancel',
-                      label: x.cancel.label,
-                      subtext: x.cancel.subtext,
+                      label: E.cancel.label,
+                      subtext: E.cancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
-                              return (n) => (0, r.jsx)(e, g(m({}, n), { guildBoostSlot: t }));
+                              return (n) => (0, r.jsx)(e, p(g({}, n), { guildBoostSlot: t }));
                           });
                       },
-                      disabled: x.cancel.disabled,
+                      disabled: E.cancel.disabled,
                       color: 'danger'
                   }),
-            _
+            j
         ]
     });
 }

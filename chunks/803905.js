@@ -20,7 +20,7 @@ n.d(t, {
     g_: () => p,
     hs: () => b,
     j4: () => R,
-    ks: () => H,
+    ks: () => W,
     lX: () => v,
     m_: () => h,
     qH: () => L,
@@ -97,7 +97,8 @@ let U = new _(r.q.INCREASED_GUILD_LIMIT),
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, B, F, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, v, y, I, R, w, x, B, F, A]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, v, y, O, I, S, C, R, P, w, D, x, M, k, j, U, G, B, F, A, T, L, b, N, V])
-    });
-function H(e, t) {
-    return !(0, s.U)('canUserUse', t) && e.getFeatureValue(t);
+    }),
+    H = [R, P];
+function W(e, t, n) {
+    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && H.includes(e))) && e.getFeatureValue(t);
 }
