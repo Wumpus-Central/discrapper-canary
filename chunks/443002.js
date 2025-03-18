@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(290799),
     g = n(394769),
     E = n(555932),
-    v = n(808189),
-    b = n(362948),
+    b = n(808189),
+    v = n(362948),
     y = n(245004),
     O = n(383881),
     I = n(981631),
@@ -28,8 +28,18 @@ let N = function (e) {
         R = i.useRef(!1),
         P = (0, l.Z)(() => Date.now()),
         { analyticsLocations: w } = (0, c.ZP)(),
-        D = (0, u.Ek)(n, 'GuildBoostingMarketing'),
-        L = i.useCallback(() => {
+        D = i.useRef(null),
+        L = i.useRef(null),
+        x = i.useCallback(() => {
+            null != L.current &&
+                null != D.current &&
+                D.current.scrollTo({
+                    to: L.current.offsetTop,
+                    animate: !0
+                });
+        }, []),
+        M = (0, u.Ek)(n, 'GuildBoostingMarketing'),
+        k = i.useCallback(() => {
             null == N || N(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -40,7 +50,7 @@ let N = function (e) {
                     duration_open_ms: Date.now() - P
                 });
         }, [N, t, w, P, n.id]),
-        x = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 e &&
                     !R.current &&
@@ -67,7 +77,7 @@ let N = function (e) {
         }, [n.id, t, w]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && L();
+                'Escape' === e.key && k();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -75,7 +85,7 @@ let N = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [L]),
+        }, [k]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != N &&
@@ -83,12 +93,13 @@ let N = function (e) {
                         className: T.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: T.closeIcon,
-                            closeAction: L,
+                            closeAction: k,
                             keybind: 'ESC',
                             variant: s.Z.Variants.SOLID
                         })
                     }),
                 (0, r.jsxs)(a.yWw, {
+                    ref: D,
                     className: T.scroller,
                     children: [
                         (0, r.jsxs)('div', {
@@ -97,10 +108,11 @@ let N = function (e) {
                                 (0, r.jsxs)('div', {
                                     className: T.headerContentWrapper,
                                     children: [
-                                        D &&
+                                        M &&
                                             (0, r.jsx)(d.Z, {
                                                 guild: e.guild,
-                                                themeResponsive: !1
+                                                themeResponsive: !1,
+                                                onButtonClick: x
                                             }),
                                         (0, r.jsx)(a.X6q, {
                                             className: T.heading,
@@ -110,11 +122,11 @@ let N = function (e) {
                                         }),
                                         (0, r.jsx)(h.Z, {
                                             guild: n,
-                                            closeLayer: L,
+                                            closeLayer: k,
                                             onCtaVisibilityChange: C
                                         }),
                                         (0, r.jsx)(E.Z, { guild: n }),
-                                        (0, r.jsx)(v.Z, { guild: n })
+                                        (0, r.jsx)(b.Z, { guild: n })
                                     ]
                                 }),
                                 (0, r.jsx)(O.O, {})
@@ -122,7 +134,14 @@ let N = function (e) {
                         }),
                         (0, r.jsxs)('div', {
                             className: T.middleBodyContentWrapper,
-                            children: [(0, r.jsx)(y.Z, { guild: e.guild }), D && (0, r.jsx)(f.Z, { guild: e.guild })]
+                            children: [
+                                (0, r.jsx)(y.ZP, { guild: e.guild }),
+                                M &&
+                                    (0, r.jsx)(f.Z, {
+                                        ref: L,
+                                        guild: e.guild
+                                    })
+                            ]
                         }),
                         (0, r.jsxs)('div', {
                             className: T.lowerBody,
@@ -130,7 +149,7 @@ let N = function (e) {
                                 (0, r.jsxs)('div', {
                                     className: T.lowerBodyContentWrapper,
                                     children: [
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             className: T.tierComparisonTable,
                                             guild: n
                                         }),
@@ -143,7 +162,7 @@ let N = function (e) {
                             ]
                         }),
                         (0, r.jsx)(o.$, {
-                            onChange: x,
+                            onChange: j,
                             children: (0, r.jsx)('div', { className: T.persistentCtaSpacer })
                         })
                     ]
@@ -151,7 +170,7 @@ let N = function (e) {
                 (0, r.jsx)(g.Z, {
                     guild: n,
                     isVisible: !A,
-                    closeLayer: L
+                    closeLayer: k
                 })
             ]
         })
