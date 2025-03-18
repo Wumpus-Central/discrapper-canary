@@ -22,5 +22,8 @@ e.exports = {
     hasBanner: 'hasBanner_f37cb1',
     name: 'name_f37cb1',
     favoritesIcon: 'favoritesIcon_f37cb1',
-    themedHeaderMobile: 'themedHeaderMobile_f37cb1'
+    themedHeaderMobile: 'themedHeaderMobile_f37cb1',
+    headerEllipseForeground: 'headerEllipseForeground_f37cb1',
+    headerEllipseBackdrop: 'headerEllipseBackdrop_f37cb1',
+    headerGlass: 'headerGlass_f37cb1'
 };
