@@ -9,6 +9,7 @@ var r = {
     divider: 'divider_f86e69',
     wallpapersContainer: 'wallpapersContainer_f86e69',
     wallpaper: 'wallpaper_f86e69',
+    wallpaperRemoveSelection: 'wallpaperRemoveSelection_f86e69',
     wallpaperSelected: 'wallpaperSelected_f86e69',
     wallpaperImage: 'wallpaperImage_f86e69',
     badgeAndCloseRow: 'badgeAndCloseRow_f86e69',

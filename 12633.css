@@ -48418,13 +48418,21 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     object-fit: cover
 }
 
-.wallpaper_f86e69 {
+.wallpaper_f86e69,
+.wallpaperRemoveSelection_f86e69 {
     width: 88px;
     height: 88px;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
     cursor: pointer
+}
+
+.wallpaperRemoveSelection_f86e69 {
+    background-color: var(--background-tertiary);
+    justify-content: center;
+    align-items: center;
+    display: flex
 }
 
 .wallpaperSelected_f86e69 {
