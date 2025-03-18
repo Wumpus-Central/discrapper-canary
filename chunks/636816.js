@@ -23,7 +23,11 @@ function p(e) {
         m();
     }, [t, m]);
     let E = [];
-    return (n !== h.d4z.GUILD_ANNOUNCEMENT || (E.push(u.NW.format(u.t.tI7KNT, { documentationLink: c.Z.getArticleURL(h.BhN.ANNOUNCEMENT_CHANNELS) })), x || !C || I || E.push(u.NW.string(u.t['2Ab4IS']))), 0 === E.length)
+    if (n === h.d4z.GUILD_ANNOUNCEMENT && (E.push(u.NW.format(u.t.tI7KNT, { documentationLink: c.Z.getArticleURL(h.BhN.ANNOUNCEMENT_CHANNELS) })), !x && !I)) {
+        let e = C ? u.NW.string(u.t['2Ab4IS']) : u.NW.string(u.t['/8VkyM']);
+        E.push(e);
+    }
+    return 0 === E.length
         ? null
         : (0, s.jsx)(s.Fragment, {
               children: E.map((e, t) =>
