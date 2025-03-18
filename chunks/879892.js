@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(509545),
     d = n(626135),
     f = n(267642),
-    p = n(852679),
-    _ = n(981631);
+    _ = n(852679),
+    p = n(981631);
 function h(e, t, n) {
     return (
         t in e
@@ -64,18 +64,18 @@ function E(e, t) {
         e
     );
 }
-function v(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,56 +86,56 @@ function b(e, t) {
 }
 let y = 'apply-guild-boost-modal';
 async function O(e) {
-    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: b, onClose: O, closeLayer: S, onSubscriptionConfirmation: I, guild: T, handleSubscribeModalClose: N, disablePremiumUpsell: A, inPopout: C, applicationId: R } = e,
-        P = C ? i.u1M : i.z1l,
-        w = l.default.getCurrentUser();
-    if (null == w) return;
-    if (!w.verified) {
+    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: v, onClose: O, closeLayer: I, onSubscriptionConfirmation: S, onSubscribeComplete: T, guild: N, handleSubscribeModalClose: A, disablePremiumUpsell: C, inPopout: R, applicationId: P, intent: w } = e,
+        D = R ? i.u1M : i.z1l,
+        L = l.default.getCurrentUser();
+    if (null == L) return;
+    if (!L.verified) {
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('20102').then(n.bind(n, 444688));
                 return (t) => {
                     var { onClose: n } = t,
-                        i = v(t, ['onClose']);
+                        i = b(t, ['onClose']);
                     return (0, r.jsx)(e, E(m({}, i), { onClose: n }));
                 };
             },
-            { contextKey: P }
+            { contextKey: D }
         );
         return;
     }
-    let D = [];
-    u.Z.isLoadedForPremiumSKUs() || D.push((0, s.Y2)()), c.Z.hasFetched || (D.push(o.jg()), D.push((0, a.X8)())), D.length > 0 && (await Promise.allSettled(D));
-    let x = (0, f.vx)(c.Z.boostSlots),
-        L = x.length,
-        M = (e) => {
-            null == O || O(), null == N || N(e);
+    let x = [];
+    u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(o.jg()), x.push((0, a.X8)())), x.length > 0 && (await Promise.allSettled(x));
+    let M = (0, f.vx)(c.Z.boostSlots),
+        k = M.length,
+        j = (e) => {
+            null == O || O(), null == A || A(e);
         },
-        k = () => {
+        U = () => {
             null == O || O(),
-                null == S || S(),
-                d.default.track(_.rMx.MODAL_DISMISSED, {
-                    type: _.ZY5.PREMIUM_GUILD_USER_MODAL,
+                null == I || I(),
+                d.default.track(p.rMx.MODAL_DISMISSED, {
+                    type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: h.section
                 });
         };
-    if (L > 0 && (null == b || L >= b)) {
+    if (k > 0 && (null == v || k >= v)) {
         let e;
-        1 === L ? (e = x.slice(0, 1)) : null != b && (e = x.slice(0, b)),
+        1 === k ? (e = M.slice(0, 1)) : null != v && (e = M.slice(0, v)),
             await (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('8016'), n.e('22646'), n.e('30419'), n.e('66951')]).then(n.bind(n, 760558));
+                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('44640')]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
-                            o = v(n, ['onClose']);
+                            o = b(n, ['onClose']);
                         return (0, r.jsx)(
                             t,
                             E(m({}, o), {
                                 onClose: (e) => {
-                                    i(), M(e);
+                                    i(), j(e);
                                 },
-                                selectedGuild: T,
-                                locationSection: _.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                selectedGuild: N,
+                                locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                                 guildBoostSlots: e
                             })
                         );
@@ -144,23 +144,25 @@ async function O(e) {
                 {
                     modalKey: y,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(y), M(!1);
+                        (0, i.Mr3)(y), j(!1);
                     },
-                    contextKey: P
+                    contextKey: D
                 }
             );
     } else
-        (0, p.Z)({
+        (0, _.Z)({
             analyticsLocations: t,
             analyticsLocation: h,
             analyticsSourceLocation: g,
-            guildId: T.id,
-            closeLayer: k,
-            totalNumberOfSlotsToAssign: null != b ? b : 1,
-            onCloseModal: M,
-            disablePremiumUpsell: A,
-            onSubscriptionConfirmation: I,
-            inPopout: C,
-            applicationId: R
+            guildId: N.id,
+            closeLayer: U,
+            totalNumberOfSlotsToAssign: null != v ? v : 1,
+            onCloseModal: j,
+            disablePremiumUpsell: C,
+            onSubscriptionConfirmation: S,
+            onSubscribeComplete: T,
+            inPopout: R,
+            applicationId: P,
+            intent: w
         });
 }

@@ -1,9 +1,9 @@
 n.d(t, {
     C0: () => u,
-    W3: () => p,
+    W3: () => _,
     X8: () => f,
     bG: () => m,
-    dG: () => _,
+    dG: () => p,
     pD: () => h,
     tH: () => d
 });
@@ -65,23 +65,27 @@ async function f() {
         e
     );
 }
-async function p(e, t) {
+async function _(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     i.Z.dispatch({ type: 'GUILD_APPLY_BOOST_START' });
     try {
-        let n = await r.tn.put({
+        let o = await r.tn.put({
                 url: c.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-                body: { user_premium_guild_subscription_slot_ids: t },
+                body: {
+                    user_premium_guild_subscription_slot_ids: t,
+                    disable_powerup_auto_apply: n
+                },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            o = Array.isArray(n.body) ? n.body.map(a.Z.createFromServer) : [a.Z.createFromServer(n.body)];
+            s = Array.isArray(o.body) ? o.body.map(a.Z.createFromServer) : [a.Z.createFromServer(o.body)];
         return (
             i.Z.dispatch({
                 type: 'GUILD_APPLY_BOOST_SUCCESS',
-                appliedGuildBoost: o
+                appliedGuildBoost: s
             }),
             f(),
-            o
+            s
         );
     } catch (t) {
         let e = new o.zN(t);
@@ -94,7 +98,7 @@ async function p(e, t) {
         );
     }
 }
-async function _(e, t) {
+async function p(e, t) {
     i.Z.dispatch({ type: 'GUILD_UNAPPLY_BOOST_START' });
     try {
         await r.tn.del({
