@@ -20,8 +20,8 @@ var r = n(200651),
     m = n(100527),
     g = n(906732),
     E = n(1585),
-    v = n(333867),
-    b = n(286961),
+    b = n(333867),
+    v = n(286961),
     y = n(300284),
     O = n(876917),
     I = n(642619),
@@ -42,8 +42,8 @@ var r = n(200651),
     U = n(141011),
     G = n(372654),
     B = n(508925),
-    V = n(616066),
-    F = n(216541),
+    F = n(616066),
+    V = n(216541),
     Z = n(22267),
     H = n(58201),
     W = n(794324),
@@ -130,7 +130,7 @@ let en = 880,
                           children: [
                               (0, r.jsx)('div', {
                                   className: X.avatarDecorationPairOne,
-                                  children: (0, r.jsx)(V.R, {
+                                  children: (0, r.jsx)(F.R, {
                                       item: i,
                                       user: a,
                                       avatarSize: _.EFr.SIZE_120,
@@ -140,7 +140,7 @@ let en = 880,
                               }),
                               (0, r.jsx)('div', {
                                   className: X.avatarDecorationPairTwo,
-                                  children: (0, r.jsx)(V.R, {
+                                  children: (0, r.jsx)(F.R, {
                                       item: o,
                                       avatarSize: _.EFr.SIZE_120,
                                       isPurchased: !1
@@ -150,7 +150,7 @@ let en = 880,
                       })
                     : (0, r.jsx)('div', {
                           className: X.avatarDecoration,
-                          children: (0, r.jsx)(V.R, {
+                          children: (0, r.jsx)(F.R, {
                               item: i,
                               user: a,
                               avatarSize: _.EFr.SIZE_120,
@@ -172,7 +172,7 @@ let en = 880,
             .with(u.Z.BUNDLE, () =>
                 (0, r.jsx)('div', {
                     className: X.bundlePreview,
-                    children: (0, r.jsx)(F.d, {
+                    children: (0, r.jsx)(V.d, {
                         product: t,
                         user: a,
                         isPurchased: !1,
@@ -258,7 +258,7 @@ let en = 880,
         return null != t ? (0, r.jsx)(ei, et($({}, e), { displayOptions: t })) : (0, r.jsx)(er, $({}, e));
     },
     ea = (e) => {
-        let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: v, itemConsumed: b = !0 } = e,
+        let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: v = !0 } = e,
             y = (0, w.o)('CollectiblesCollectedModal'),
             O = (0, H.W)(t, E),
             I = (0, f.e7)([N.default], () => {
@@ -278,7 +278,7 @@ let en = 880,
         function x() {
             if (O.skuId === d.a.PREMIUM_TIER_2_3_DAY) {
                 let e = Q.NW.formatToPlainString(Q.t.fYmir6, { days: 3 });
-                return b
+                return v
                     ? (0, r.jsx)(S.j, {
                           duration: e,
                           onClose: n
@@ -293,7 +293,7 @@ let en = 880,
                     (0, r.jsxs)('div', {
                         className: X.bannerContainer,
                         children: [
-                            v
+                            b
                                 ? (0, r.jsx)('div', { className: X.promotionalBanner })
                                 : (0, r.jsx)(U.Z, {
                                       asset: L,
@@ -316,7 +316,7 @@ let en = 880,
                         overrideTitle: c,
                         overrideDescription: p,
                         selectedVariantIndex: E,
-                        shouldShowPromotionalExperience: v
+                        shouldShowPromotionalExperience: b
                     }),
                     (0, r.jsx)(_.olH, {
                         onClick: n,
@@ -352,8 +352,8 @@ let en = 880,
             h = (0, x.k)(n),
             m = (0, x.k)(o),
             g = null != o,
-            E = (0, b.Z)(),
-            v = null == E ? void 0 : null === (t = E.giftPurchaseConfirmation) || void 0 === t ? void 0 : t.rewardCollectedText(),
+            E = (0, v.Z)(),
+            b = null == E ? void 0 : null === (t = E.giftPurchaseConfirmation) || void 0 === t ? void 0 : t.rewardCollectedText(),
             { handleUseNow: y, isApplying: O } = (0, L.W)({
                 product: n,
                 onSuccess: a,
@@ -391,8 +391,9 @@ let en = 880,
                             : (0, c.EQ)(null == n ? void 0 : n.type)
                                   .with(u.Z.BUNDLE, () => Q.NW.string(Q.t.zJPoLy))
                                   .with(u.Z.PROFILE_EFFECT, () => Q.NW.string(Q.t.f9M1YG))
-                                  .otherwise(() => (f && null != v ? v : Q.NW.string(Q.t['44b50t']))),
-                [d, n.skuId, null == n ? void 0 : n.type, g, h, m, f, v]
+                                  .with(u.Z.NAMEPLATE, () => Q.NW.string(Q.t.lvwvIi))
+                                  .otherwise(() => (f && null != b ? b : Q.NW.string(Q.t['44b50t']))),
+                [d, n.skuId, null == n ? void 0 : n.type, g, h, m, f, b]
             ),
             R = i.useMemo(
                 () =>
@@ -470,7 +471,7 @@ let en = 880,
             s = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, v.Z)({
+                        (0, b.Z)({
                             skuId: n.skuId,
                             isGift: !0,
                             giftingOrigin: z.Wt.SHOP_PAGE,
@@ -527,12 +528,12 @@ let en = 880,
             h = (0, R.o)(n, p),
             m = (0, H.W)(n, h),
             g = i.useRef(new o.qA()),
-            [E, v] = i.useState(null),
-            b = (0, Y.UY)(m.skuId);
+            [E, b] = i.useState(null),
+            v = (0, Y.UY)(m.skuId);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.O_, {
-                    ref: v,
+                    ref: b,
                     className: X.confettiCanvas,
                     environment: g.current
                 }),
@@ -542,11 +543,11 @@ let en = 880,
                     size: _.CgR.DYNAMIC,
                     className: X.modalRoot,
                     children: [
-                        null != b &&
+                        null != v &&
                             (0, r.jsx)('img', {
-                                src: b.imageSrc,
+                                src: v.imageSrc,
                                 className: X.customConfetti,
-                                style: b.style,
+                                style: v.style,
                                 alt: '',
                                 'aria-hidden': 'true'
                             }),
@@ -557,7 +558,7 @@ let en = 880,
                                 product: m,
                                 onClose: a,
                                 confettiCanvas: E,
-                                hideConfetti: null != b,
+                                hideConfetti: null != v,
                                 analyticsLocations: s,
                                 overrideTitle: l,
                                 overrideDescription: c,
