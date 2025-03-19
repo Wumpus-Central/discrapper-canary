@@ -89,7 +89,9 @@ let N = function (e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != N &&
-                    (0, r.jsx)('div', {
+                    (0, r.jsx)(a.P3F, {
+                        'aria-label': S.NW.string(S.t.cpT0Cg),
+                        onClick: k,
                         className: T.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: T.closeIcon,
@@ -139,7 +141,8 @@ let N = function (e) {
                                 M &&
                                     (0, r.jsx)(f.Z, {
                                         ref: L,
-                                        guild: e.guild
+                                        guild: e.guild,
+                                        onClose: k
                                     })
                             ]
                         }),

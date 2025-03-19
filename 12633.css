@@ -34807,9 +34807,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     margin-bottom: 12px
 }
 
-.orbLink_f240e3 {
+.orbSubtext_f240e3 {
     margin-top: 10px;
-    color: var(--text-link);
+    margin-bottom: 4px;
+    color: var(--text-muted);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
