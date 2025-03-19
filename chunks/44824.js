@@ -1,4 +1,4 @@
-l.d(t, { Z: () => u });
+l.d(t, { Z: () => u }), l(866573), l(642549), l(787622);
 var r = l(200651),
     n = l(192379),
     i = l(70097),
@@ -10,7 +10,12 @@ function d(e) {
         g = n.useRef(null);
     return (n.useEffect(() => {
         let { current: e } = g;
-        null != e && (c ? e.play() : e.pause());
+        null != e &&
+            (c
+                ? e.play().catch((e) => {
+                      if (!(e instanceof DOMException) || 'NotAllowedError' !== e.name) throw e;
+                  })
+                : e.pause());
     }, [c]),
     (d <= o.N_j && u <= o.XKF) || (d <= o.XKF && u <= o.N_j))
         ? (0, r.jsx)(i.Z, {
@@ -24,6 +29,7 @@ function d(e) {
               muted: !0,
               loop: !0,
               autoPlay: c,
+              playsInline: !0,
               preload: 'none',
               'aria-label': m
           })
