@@ -25,23 +25,25 @@ let f = (0, i.pxk)(i.EFr.SIZE_120),
             }
     };
 async function h(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: _, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v, appContext: b, customStatusPrompt: y = null } = e,
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: s, sessionId: l, joinRequestId: u, section: _, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: b, appContext: v, customStatusPrompt: y = null } = e,
         O = c.default.getUser(t);
     p(t),
         null == O
             ? await (0, a.In)(t, {
                   type: 'modal',
                   guildId: g && null != n ? n : void 0,
+                  withMutualFriendsCount: !0,
+                  withMutualFriends: !1,
                   withMutualGuilds: !0,
-                  withMutualFriends: !0,
                   friendToken: m,
                   joinRequestId: u
               })
             : (0, d.Z)(O.id, O.getAvatarURL(void 0, f), {
                   type: 'modal',
                   guildId: g && null != n ? n : void 0,
+                  withMutualFriendsCount: !O.bot,
+                  withMutualFriends: !1,
                   withMutualGuilds: !0,
-                  withMutualFriends: !0,
                   friendToken: m,
                   joinRequestId: u
               }),
@@ -59,8 +61,8 @@ async function h(e) {
             friendToken: m,
             showGuildProfile: g,
             analyticsLocation: E,
-            sourceAnalyticsLocations: v,
-            appContext: b
+            sourceAnalyticsLocations: b,
+            appContext: v
         });
 }
 function m() {

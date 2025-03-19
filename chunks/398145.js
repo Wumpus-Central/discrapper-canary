@@ -4,10 +4,7 @@ var r = t(278074),
     i = t(228168),
     l = t(388032);
 function s(e) {
-    let { mutualGuilds: n } = (0, o.Z)(e, {
-            fetch: !0,
-            type: 'modal'
-        }),
+    let { mutualGuilds: n } = (0, o.Z)(e),
         t = null == n ? void 0 : n.length;
     return [
         {

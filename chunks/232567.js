@@ -1,9 +1,10 @@
 n.d(t, {
     In: () => y,
     Lr: () => E,
-    PR: () => b,
+    PR: () => v,
+    Sr: () => O,
     k: () => g,
-    mB: () => v
+    mB: () => b
 }),
     n(789020);
 var r = n(512722),
@@ -16,8 +17,8 @@ var r = n(512722),
     u = n(598077),
     d = n(594174),
     f = n(573261),
-    p = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +42,7 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -52,7 +53,7 @@ function g() {
         { withAnalyticsToken: t = !1 } = e;
     return s.tn
         .get({
-            url: p.ANM.ME,
+            url: _.ANM.ME,
             query: { with_analytics_token: t },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -72,7 +73,7 @@ function E() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.Z.patch({
-        url: p.ANM.USER_AGREEMENTS,
+        url: _.ANM.USER_AGREEMENTS,
         trackedActionData: { event: o.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
@@ -85,24 +86,24 @@ function E() {
         () => !1
     );
 }
-function v(e, t) {
+function b(e, t) {
     let n = d.default.getCurrentUser();
     i()(null != n, 'setFlag: user cannot be undefined');
     let r = t ? n.flags | e : n.flags & ~e;
     return s.tn.patch({
-        url: p.ANM.ME,
+        url: _.ANM.ME,
         oldFormErrors: !0,
         body: { flags: r },
         rejectWithError: !1
     });
 }
-function b(e) {
+function v(e) {
     let t = d.default.getUser(e);
     return null != t
         ? Promise.resolve(t)
         : s.tn
               .get({
-                  url: p.ANM.USER(e),
+                  url: _.ANM.USER(e),
                   oldFormErrors: !0,
                   rejectWithError: !1
               })
@@ -118,15 +119,16 @@ function b(e) {
 }
 async function y(e) {
     let { type: t, friendToken: n, withMutualGuilds: r, withMutualFriendsCount: i, withMutualFriends: o, guildId: a, connectionsRoleId: u, joinRequestId: d, abortSignal: f } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        _ = arguments.length > 2 ? arguments[2] : void 0;
+        p = arguments.length > 2 ? arguments[2] : void 0;
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
-        guildId: a
+        guildId: a,
+        withMutualFriends: o
     });
     try {
         let c = await s.tn.get({
-            url: p.ANM.USER_PROFILE(e),
+            url: _.ANM.USER_PROFILE(e),
             query: {
                 type: t,
                 friend_token: n,
@@ -141,7 +143,7 @@ async function y(e) {
             rejectWithError: !0
         });
         return (
-            null == _ || _(c.body, a),
+            null == p || p(c.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
@@ -164,6 +166,34 @@ async function y(e) {
                 apiError: new c.Hx(t),
                 userId: e,
                 guildId: a
+            }),
+            t)
+        );
+    }
+}
+async function O(e, t) {
+    l.Z.dispatch({
+        type: 'MUTUAL_FRIENDS_FETCH_START',
+        userId: e
+    });
+    try {
+        let n = await s.tn.get({
+            url: _.ANM.USER_RELATIONSHIPS(e),
+            oldFormErrors: !0,
+            signal: t,
+            rejectWithError: !1
+        });
+        l.Z.dispatch({
+            type: 'MUTUAL_FRIENDS_FETCH_SUCCESS',
+            userId: e,
+            mutualFriends: n.body
+        });
+    } catch (t) {
+        throw (
+            ((null == t ? void 0 : t.body) != null && m.warn('fetchMutualFriends error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            l.Z.dispatch({
+                type: 'MUTUAL_FRIENDS_FETCH_FAILURE',
+                userId: e
             }),
             t)
         );

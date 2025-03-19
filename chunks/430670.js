@@ -71,7 +71,8 @@ function v(e) {
         i.useEffect(() => {
             (0, m.Z)(y, {
                 type: 'panel',
-                withMutualFriends: !y.bot,
+                withMutualFriendsCount: !y.bot,
+                withMutualFriends: !1,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
@@ -80,16 +81,16 @@ function v(e) {
             isBlocked: d.Z.isBlocked(y.id),
             isIgnored: d.Z.isIgnored(y.id)
         })),
-        N = (0, c.Do)({ location: 'UserProfilePanelWrapper' }),
-        [E, P] = i.useState(j || (N && (O || j))),
-        I = (0, h.sS)({ location: 'UserProfilePopoutWrapper' });
+        E = (0, c.D)({ location: 'UserProfilePanelWrapper' }),
+        [N, I] = i.useState(j || (E && (O || j))),
+        P = (0, h.sS)({ location: 'UserProfilePopoutWrapper' });
     i.useEffect(() => {
-        P(j || (N && (O || j)));
-    }, [j, O, N]);
+        I(j || (E && (O || j)));
+    }, [j, O, E]);
     let S = u.Rt.useSetting();
     return l
         ? null
-        : E && I && !N
+        : N && P && !E
           ? (0, r.jsx)(
                 g.Z,
                 C(
@@ -97,12 +98,12 @@ function v(e) {
                         user: y,
                         currentUser: x,
                         channel: t,
-                        onViewBlockedProfileClick: () => P(!1)
+                        onViewBlockedProfileClick: () => I(!1)
                     },
                     n
                 )
             )
-          : N && E && !(O && S)
+          : E && N && !(O && S)
             ? (0, r.jsx)(
                   g.A,
                   C(
@@ -110,7 +111,7 @@ function v(e) {
                           user: y,
                           currentUser: x,
                           channel: t,
-                          onViewBlockedProfileClick: () => P(!1)
+                          onViewBlockedProfileClick: () => I(!1)
                       },
                       n
                   )

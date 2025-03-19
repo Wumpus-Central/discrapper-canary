@@ -1,22 +1,24 @@
 r.d(t, {
-    T: () => y,
-    Z: () => h
+    T: () => O,
+    Z: () => N
 });
-var n = r(200651);
-r(192379);
-var l = r(442837),
-    s = r(481060),
-    i = r(239091),
-    a = r(129861),
-    o = r(906732),
-    c = r(158776),
-    u = r(785717),
-    d = r(697927),
-    m = r(171368),
-    p = r(981631),
-    j = r(388032),
-    f = r(865152);
-function x(e) {
+var n = r(200651),
+    l = r(192379),
+    s = r(442837),
+    i = r(481060),
+    a = r(239091),
+    c = r(129861),
+    o = r(81897),
+    u = r(906732),
+    d = r(158776),
+    m = r(785717),
+    p = r(806729),
+    f = r(857302),
+    j = r(171368),
+    x = r(981631),
+    b = r(388032),
+    v = r(658266);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -41,7 +43,7 @@ function x(e) {
     }
     return e;
 }
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,87 +61,89 @@ function b(e, t) {
         e
     );
 }
-let v = (0, s.pxk)(s.EFr.SIZE_40);
-function y(e) {
-    let { user: t, status: o, onSelect: u } = e,
-        d = (0, l.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
-    return (0, n.jsxs)(s.P3F, {
+let y = (0, i.pxk)(i.EFr.SIZE_40);
+function O(e) {
+    let { user: t, status: l, onSelect: o } = e,
+        u = (0, s.e7)([d.Z], () => d.Z.isMobileOnline(t.id));
+    return (0, n.jsxs)(i.P3F, {
         focusProps: { offset: { right: 8 } },
-        className: f.listRow,
-        onClick: u,
+        className: v.listRow,
+        onClick: o,
         onContextMenu: (e) => {
-            (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('31327')]).then(r.bind(r, 881351));
-                return (r) => (0, n.jsx)(e, b(x({}, r), { user: t }));
+            (0, a.jW)(e, async () => {
+                let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('65593')]).then(r.bind(r, 881351));
+                return (r) => (0, n.jsx)(e, h(g({}, r), { user: t }));
             });
         },
         children: [
-            (0, n.jsx)(s.qEK, {
-                src: t.getAvatarURL(void 0, v),
+            (0, n.jsx)(i.qEK, {
+                src: t.getAvatarURL(void 0, y),
                 'aria-label': t.username,
-                size: s.EFr.SIZE_40,
-                status: o,
-                isMobile: d,
-                className: f.listAvatar
+                size: i.EFr.SIZE_40,
+                status: l,
+                isMobile: u,
+                className: v.listAvatar
             }),
-            (0, n.jsx)(a.Z, {
+            (0, n.jsx)(c.Z, {
                 user: t,
-                className: f.listName,
-                discriminatorClass: f.listDiscriminator
+                className: v.listName,
+                discriminatorClass: v.listDiscriminator
             })
         ]
     });
 }
-function h(e) {
+function N(e) {
     let { user: t, onClose: r } = e,
-        { mutualFriends: l, isFetching: i } = (0, d.Z)(t.id),
-        { analyticsLocations: a } = (0, o.ZP)(),
-        { context: c, trackUserProfileAction: v } = (0, u.KZ)(),
-        h = (e) => {
-            r(),
-                (0, m.openUserProfileModal)(
-                    b(x({}, c), {
-                        userId: e,
-                        sourceAnalyticsLocations: a,
-                        analyticsLocation: { section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS }
-                    })
-                );
-        };
-    return (0, n.jsx)(s.zJl, {
-        className: f.listScroller,
+        { mutualFriends: s } = (0, p.Z)(t),
+        { analyticsLocations: a } = (0, u.ZP)(),
+        { context: c, trackUserProfileAction: d } = (0, m.KZ)(),
+        y = (0, o.Z)();
+    l.useEffect(() => {
+        (0, f.Z)(t.id, y);
+    }, [t.id, y]);
+    let N = (e) => {
+        r(),
+            (0, j.openUserProfileModal)(
+                h(g({}, c), {
+                    userId: e,
+                    sourceAnalyticsLocations: a,
+                    analyticsLocation: { section: x.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                })
+            );
+    };
+    return (0, n.jsx)(i.zJl, {
+        className: v.listScroller,
         fade: !0,
         children:
-            null == l && i
+            null == s
                 ? (0, n.jsx)('div', {
-                      className: f.empty,
-                      children: (0, n.jsx)(s.$jN, {})
+                      className: v.empty,
+                      children: (0, n.jsx)(i.$jN, {})
                   })
-                : (null != l || i) && (null == l ? void 0 : l.length) !== 0
-                  ? null == l
-                      ? void 0
-                      : l.map((e) => {
-                            let { key: t, user: r, status: l } = e;
-                            return (0, n.jsx)(
-                                y,
-                                {
-                                    user: r,
-                                    status: l,
-                                    onSelect: () => {
-                                        v({ action: 'PRESS_MUTUAL_FRIEND' }), h(r.id);
-                                    }
-                                },
-                                t
-                            );
-                        })
-                  : (0, n.jsxs)('div', {
-                        className: f.empty,
+                : 0 === s.length
+                  ? (0, n.jsxs)('div', {
+                        className: v.empty,
                         children: [
-                            (0, n.jsx)('div', { className: f.emptyIconFriends }),
+                            (0, n.jsx)('div', { className: v.emptyIconFriends }),
                             (0, n.jsx)('div', {
-                                className: f.emptyText,
-                                children: j.NW.string(j.t['/5p4g4'])
+                                className: v.emptyText,
+                                children: b.NW.string(b.t['/5p4g4'])
                             })
                         ]
+                    })
+                  : s.map((e) => {
+                        let { key: t, user: r, status: l } = e;
+                        return (0, n.jsx)(
+                            O,
+                            {
+                                user: r,
+                                status: l,
+                                onSelect: () => {
+                                    d({ action: 'PRESS_MUTUAL_FRIEND' }), N(r.id);
+                                }
+                            },
+                            t
+                        );
                     })
     });
 }
