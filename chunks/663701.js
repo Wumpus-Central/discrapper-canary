@@ -21,7 +21,7 @@ var r = n(200651),
     v = n(377171),
     y = n(540059),
     I = n(243778),
-    C = n(488634),
+    C = n(922409),
     S = n(899740),
     T = n(28476),
     P = n(880257),
@@ -312,21 +312,24 @@ let eg = i.memo(function (e) {
         { enabled: b } = (0, W.W)({ location: 'PrivateChannels' }),
         _ = i.useRef(null),
         E = i.useRef(null),
-        v = (0, V.EQ)({
+        v = i.useRef(null),
+        y = (0, V.EQ)({
             isVirtualCurrencyEnabled: b,
-            listScrollerRef: E
+            listScrollerRef: v
         }),
-        { shouldShow: y, closeCoachmarkIfOpen: I, onHandleScroll: C, offsetControlRef: S } = v,
-        T = eo(v, ['shouldShow', 'closeCoachmarkIfOpen', 'onHandleScroll', 'offsetControlRef']);
+        { shouldShow: I, closeCoachmarkIfOpen: C, onHandleScroll: S, offsetControlRef: T } = y,
+        P = eo(y, ['shouldShow', 'closeCoachmarkIfOpen', 'onHandleScroll', 'offsetControlRef']);
     return (0, r.jsxs)('nav', {
         className: er.privateChannels,
         'aria-label': et.NW.string(et.t.ZH9aPz),
         children: [
             (0, r.jsx)(M.Z, {
+                childRef: _,
                 tutorialId: 'direct-messages',
                 position: 'right',
                 offsetX: -52,
                 children: (0, r.jsx)('div', {
+                    ref: _,
                     className: o()(er.searchBar, { [er.themedHeaderMobile]: u.tq }),
                     children: s
                         ? (0, r.jsx)(f.zxk, {
@@ -351,8 +354,8 @@ let eg = i.memo(function (e) {
                     version: m,
                     selectedChannelId: g,
                     showDMHeader: !0,
-                    listScrollerRef: E,
-                    onHandleScroll: y ? C : void 0,
+                    listScrollerRef: v,
+                    onHandleScroll: I ? S : void 0,
                     children: [
                         (0, r.jsx)(ea, { selected: null != m ? m === J.Z5c.FRIENDS : l === J.Z5c.FRIENDS }, 'friends'),
                         n && t
@@ -387,8 +390,8 @@ let eg = i.memo(function (e) {
                             N.i,
                             {
                                 selected: m === J.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(J.Z5c.COLLECTIBLES_SHOP)),
-                                listItemRef: _,
-                                onClick: I,
+                                listItemRef: E,
+                                onClick: C,
                                 locationState: {
                                     analyticsSource: {
                                         page: ef(l),
@@ -399,15 +402,15 @@ let eg = i.memo(function (e) {
                             },
                             'discord-shop'
                         ),
-                        y
+                        I
                             ? (0, r.jsx)(
                                   V.ZP,
                                   ei(
                                       {
-                                          backgroundElementRef: _,
-                                          offsetControlRef: S
+                                          backgroundElementRef: E,
+                                          offsetControlRef: T
                                       },
-                                      T
+                                      P
                                   )
                               )
                             : null,

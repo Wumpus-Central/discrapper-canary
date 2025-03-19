@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e7 }), n(47120), n(301563), n(566702), n(789020);
+n.d(t, { Z: () => e4 }), n(47120), n(301563), n(566702), n(789020);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -174,7 +174,9 @@ function e1(e) {
         })(e, ['isSidebar']);
     return t ? (0, r.jsx)('section', eJ(eQ({}, n), { role: 'complementary' })) : (0, r.jsx)('main', eQ({}, n));
 }
-class e2 extends i.PureComponent {
+let e2 = i.forwardRef((e, t) => (0, r.jsx)(e3, eJ(eQ({}, e), { refInstance: t })));
+e2.displayName = 'ChannelTextAreaForm';
+class e3 extends i.PureComponent {
     componentDidMount() {
         ex.Z.addChangeListener(this.draftDidChange);
     }
@@ -234,6 +236,7 @@ class e2 extends i.PureComponent {
         let { channel: e, focused: t, onBlur: n, onFocus: i, onResize: l, highlighted: o, pendingReply: a, chatInputType: c, placeholder: u, accessibilityLabel: d, shakeIntensity: h, poggermodeEnabled: f, onCommandSentinelTyped: m, renderAppLauncherButton: g, renderAppCommandButton: b, pendingScheduledMessage: _ } = this.props,
             { contentWarningProps: C } = this.state,
             y = (0, r.jsx)(F.Z, {
+                ref: this.props.refInstance,
                 textValue: this.state.textValue,
                 richValue: this.state.richValue,
                 focused: t,
@@ -554,7 +557,7 @@ class e2 extends i.PureComponent {
             );
     }
 }
-class e3 extends i.PureComponent {
+class e7 extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { channel: n } = e,
             { currentChannelId: r } = t;
@@ -589,10 +592,12 @@ class e3 extends i.PureComponent {
                 className: eq.channelBottomBarArea,
                 children: [
                     (0, r.jsx)(eC.Z, {
+                        childRef: this.channelTextAreaFormRef,
                         tutorialId: 'writing-messages',
                         position: 'left',
                         offsetX: 75,
                         children: (0, r.jsx)(e2, {
+                            ref: this.channelTextAreaFormRef,
                             focused: S,
                             highlighted: Z,
                             channel: n,
@@ -723,6 +728,7 @@ class e3 extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            eX(this, 'channelTextAreaFormRef', i.createRef()),
             eX(this, 'inputFormRef', i.createRef()),
             eX(this, 'state', {
                 textAreaFocused: !1,
@@ -825,7 +831,7 @@ class e3 extends i.PureComponent {
             });
     }
 }
-let e7 = i.memo(function (e) {
+let e4 = i.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: o } = e,
         { placeholder: a, accessibilityLabel: s } = (0, eD.Z)({ channel: t }),
         c = (0, ep.S)(eS.default.getCurrentUser(), t),
@@ -870,7 +876,7 @@ let e7 = i.memo(function (e) {
         M = (0, d.e7)([I.Z], () => I.Z.appDMChannelsWithFailedLoads().has(t.id)),
         k = (0, Y.R6)('ChannelChat'),
         L = (0, Y.Q3)('ChannelChat');
-    return (0, r.jsx)(e3, {
+    return (0, r.jsx)(e7, {
         channel: t,
         isEditing: null != (0, d.e7)([ej.Z], () => ej.Z.getEditingMessageId(t.id)),
         hasModalOpen: (0, p.s9z)(p.JQI),

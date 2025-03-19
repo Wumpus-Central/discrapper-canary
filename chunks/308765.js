@@ -230,9 +230,9 @@ let i = {
         actions: ['VOICE_CHANNEL_SELECT', 'LOGOUT', 'STAGE_MUSIC_MUTE', 'STAGE_MUSIC_PLAY', 'VOICE_STATE_UPDATES', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_SELF_DEAF'],
         inlineRequire: () => n(485287).ZP
     },
-    SubscriptionRemindersManager: {
+    SubscriptionManager: {
         actions: ['POST_CONNECTION_OPEN'],
-        inlineRequire: () => n(177082).Z
+        inlineRequire: () => n(892264).Z
     },
     VoiceFiltersCatalogManager: {
         actions: ['POST_CONNECTION_OPEN', 'VOICE_FILTER_CATALOG_FETCH_SUCCESS', 'VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME'],
@@ -415,6 +415,11 @@ let i = {
     AVErrorManager: {
         actions: ['MEDIA_ENGINE_SET_AUDIO_ENABLED', 'AUDIO_INPUT_DETECTED', 'AUDIO_SET_DISPLAY_SILENCE_WARNING', 'CERTIFIED_DEVICES_SET', 'AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_OUTPUT_DEVICE', 'MEDIA_ENGINE_DEVICES', 'RTC_CONNECTION_STATE', 'VOICE_STATE_UPDATES', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'MEDIA_ENGINE_SOUNDSHARE_FAILED', 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR', 'MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR', 'MEDIA_ENGINE_VIDEO_STATE_CHANGED', 'NATIVE_SCREEN_SHARE_PICKER_UPDATE', 'NATIVE_SCREEN_SHARE_PICKER_ERROR', 'MEDIA_SESSION_JOINED', 'RTC_CONNECTION_UPDATE_ID', 'RTC_CONNECTION_USER_CREATE'],
         inlineRequire: () => n(252158).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
+    ChatWallpaperPickerManager: {
+        actions: ['CHANNEL_SELECT'],
+        inlineRequire: () => n(153799).Z,
         neverLoadBeforeConnectionOpen: !0
     }
 };
