@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -6,42 +6,39 @@ var r = n(200651),
     l = n(866442),
     o = n(481060),
     c = n(550271),
-    d = n(688298),
-    u = n(434404),
-    m = n(254925),
+    A = n(688298),
+    d = n(434404),
+    u = n(254925),
     g = n(116175),
-    p = n(502936),
-    h = n(388032),
-    f = n(935921);
-let b = function (e) {
-    var t, n;
-    let { className: s, guildId: b, guildProfile: x } = e,
-        [j, N] = i.useState(!1),
-        v = null !== (t = x.badgeColorPrimary) && void 0 !== t ? t : m.go['0'].primary,
-        _ = null !== (n = x.badgeColorSecondary) && void 0 !== n ? n : m.go['0'].secondary,
-        y = i.useMemo(() => m.go.every((e) => e.primary !== v || e.secondary !== _), [v, _]);
-    function O(e) {
+    f = n(502936),
+    m = n(388032),
+    p = n(935921);
+let h = function (e) {
+    let { className: t, guildId: n, badge: s, primaryColor: h, secondaryColor: C } = e,
+        [b, v] = i.useState(!1),
+        x = i.useMemo(() => u.go.every((e) => e.primary !== h || e.secondary !== C), [h, C]);
+    function N(e) {
         let t = {};
-        void 0 !== e.primary && (t.badgeColorPrimary = e.primary), void 0 !== e.secondary && (t.badgeColorSecondary = e.secondary), u.Z.updateGuildProfile(b, t);
+        void 0 !== e.primary && (t.badgeColorPrimary = e.primary), void 0 !== e.secondary && (t.badgeColorSecondary = e.secondary), d.Z.updateGuildProfile(n, t);
     }
     return (0, r.jsxs)('div', {
-        className: s,
+        className: t,
         children: [
             (0, r.jsx)(o.vwX, {
-                className: f.sectionTitle,
-                children: h.NW.string(p.Z.zSbMdX)
+                className: p.sectionTitle,
+                children: m.NW.string(f.Z.zSbMdX)
             }),
             (0, r.jsxs)('div', {
-                className: f.pickerGrid,
+                className: p.pickerGrid,
                 children: [
-                    m.go.map((e) =>
+                    u.go.map((e) =>
                         (0, r.jsx)(
                             o.P3F,
                             {
-                                className: a()(f.pickerItem, { [f.pickerItemSelected]: e.primary === v && e.secondary === _ }),
-                                onClick: () => O(e),
+                                className: a()(p.pickerItem, { [p.pickerItemSelected]: e.primary === h && e.secondary === C }),
+                                onClick: () => N(e),
                                 children: (0, r.jsx)(c.A, {
-                                    badge: m.QV['0'],
+                                    badge: u.QV['0'],
                                     width: 32,
                                     height: 32,
                                     primaryTintColor: e.primary,
@@ -51,20 +48,20 @@ let b = function (e) {
                             ''.concat(e.primary).concat(e.secondary)
                         )
                     ),
-                    (0, r.jsx)(d.Z, {
-                        showSecondaryColor: null !== x.badge && g.ME[x.badge] >= 2,
+                    (0, r.jsx)(A.Z, {
+                        showSecondaryColor: g.ME[s] >= 2,
                         palette: {
-                            primary: v,
-                            secondary: _
+                            primary: h,
+                            secondary: C
                         },
                         onPrimaryColorChange: (e) => {
-                            O({ primary: (0, l.Rf)(e) });
+                            N({ primary: (0, l.Rf)(e) });
                         },
                         onSecondaryColorChange: (e) => {
-                            O({ secondary: (0, l.Rf)(e) });
+                            N({ secondary: (0, l.Rf)(e) });
                         },
-                        shouldShow: j,
-                        onRequestClose: () => N(!1),
+                        shouldShow: b,
+                        onRequestClose: () => v(!1),
                         children: (e) => {
                             var t, n;
                             return (0, r.jsx)(
@@ -97,9 +94,9 @@ let b = function (e) {
                                 (n = n =
                                     {
                                         onClick: () => {
-                                            N((e) => !e);
+                                            v((e) => !e);
                                         },
-                                        className: a()(f.pickerItem, { [f.pickerItemSelected]: y }),
+                                        className: a()(p.pickerItem, { [p.pickerItemSelected]: x }),
                                         children: (0, r.jsx)(o.ilE, {
                                             size: 'custom',
                                             width: 20,

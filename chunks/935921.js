@@ -1,5 +1,6 @@
 e.exports = {
     spinnerContainer: 'spinnerContainer__69ef9',
+    container: 'container__69ef9',
     leftContent: 'leftContent__69ef9',
     description: 'description__69ef9',
     title: 'title__69ef9',
