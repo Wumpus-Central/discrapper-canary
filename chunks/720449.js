@@ -1,36 +1,38 @@
 n.d(t, { Z: () => c }), n(566702);
 var r = n(913527),
-    a = n.n(r),
-    l = n(695346),
-    i = n(626135),
-    o = n(337953),
+    i = n.n(r),
+    a = n(695346),
+    o = n(626135),
+    l = n(337953),
     s = n(875425),
     u = n(981631);
-function c(e, t, n, r, c) {
-    let d = e.trim();
-    if (!(d.length > 0) && null == t) return l.Ok.updateSetting(void 0);
+function c(e) {
+    let { text: t, emojiInfo: n, clearAfter: r, analyticsContext: c, createdAtMs: d, prompt: m } = e,
+        p = t.trim();
+    if (!(p.length > 0) && null == n) return a.Ok.updateSetting(void 0);
     {
-        let e = l.Ok.updateSetting({
-            text: d.length > 0 ? d : '',
+        let e = a.Ok.updateSetting({
+            text: p.length > 0 ? p : '',
             expiresAtMs:
-                null != n && n !== s.FO.DONT_CLEAR
+                null != r && r !== s.FO.DONT_CLEAR
                     ? String(
-                          a()()
-                              .add((0, o.Z)(n), 'ms')
+                          i()()
+                              .add((0, l.Z)(r), 'ms')
                               .toDate()
                               .getTime()
                       )
                     : '0',
-            emojiId: null != t && null != t.id ? t.id : '0',
-            emojiName: null != t ? t.name : '',
-            createdAtMs: String(null != c ? c : a()().toDate().getTime())
+            emojiId: null != n && null != n.id ? n.id : '0',
+            emojiName: null != n ? n.name : '',
+            createdAtMs: String(null != d ? d : i()().toDate().getTime())
         });
         return (
-            i.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
-                location: null != r ? r.location : null,
-                emoji_type: null == t ? null : null != t.id ? 'custom' : 'unicode',
-                text_len: d.length,
-                clear_after: null != n ? ''.concat(n) : null
+            o.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
+                location: null != c ? c.location : null,
+                emoji_type: null == n ? null : null != n.id ? 'custom' : 'unicode',
+                text_len: p.length,
+                clear_after: null != r ? ''.concat(r) : null,
+                prompt_type: null == m ? void 0 : m.value
             }),
             e
         );

@@ -17,11 +17,10 @@ var r = n(544891),
     l = n(377154),
     c = n(535396),
     u = n(981631);
-function d(e, t) {
+function d(e) {
     i.Z.dispatch({
         type: 'GUILD_POWERUPS_ACK_NOTIFICATION',
-        guildId: e,
-        notification: t
+        guildId: e
     });
 }
 function f() {
