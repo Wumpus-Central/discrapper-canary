@@ -63,8 +63,8 @@ function E(e, t) {
         e
     );
 }
-let v = new o.Z('VoiceFilterManager');
-class b extends i.Z {
+let b = new o.Z('VoiceFilterManager');
+class v extends i.Z {
     loadNativeModule() {
         (0, f.r5)();
     }
@@ -72,7 +72,7 @@ class b extends i.Z {
         let { newVoiceFilterId: t, analyticsContext: n } = e,
             r = null != t ? d.Z.getVoiceFilter(t) : void 0;
         if (null == r && null != t) {
-            v.error('requested Voice Filter is missing in VoiceFilterStore');
+            b.error('requested Voice Filter is missing in VoiceFilterStore');
             return;
         }
         if ((null == r ? void 0 : r.modelIds) != null) {
@@ -83,7 +83,7 @@ class b extends i.Z {
                     url: e[t].url,
                     fileName: ''.concat(t, '.onnx')
                 }));
-            for (let e of (v.info('Ensuring we have dependencies for voice filter', r.id, t), t)) (0, f.fz)(e, n);
+            for (let e of (b.info('Ensuring we have dependencies for voice filter', r.id, t), t)) (0, f.fz)(e, n);
         } else (0, f.rk)(t, n);
     }
     handleVoiceFilterFileReady(e) {
@@ -103,7 +103,7 @@ class b extends i.Z {
         ) {
             let e = d.Z.getVoiceFilter(o);
             if (null == e) {
-                v.error('the VF in mostRecentlyRequestedVoiceFilter is missing. Has the store been cleared?');
+                b.error('the VF in mostRecentlyRequestedVoiceFilter is missing. Has the store been cleared?');
                 return;
             }
             let n = e.modelIds,
@@ -111,7 +111,7 @@ class b extends i.Z {
                     .filter((e) => !d.Z.isModelDownloaded(e))
                     .filter((e) => e !== t);
             if (r.length > 0) {
-                v.info('waiting for more dependencies', {
+                b.info('waiting for more dependencies', {
                     mostRecentlyRequestedVoiceFilter: o,
                     missingDependencies: r
                 });
@@ -121,14 +121,16 @@ class b extends i.Z {
         }
     }
     handleVoiceFilterDownloadFailed(e) {
-        var t;
-        let { modelId: n, voiceFilterId: r, error: i } = e;
+        var t, n;
+        let { modelId: r, voiceFilterId: i, error: o } = e,
+            a = (null !== (t = null == o ? void 0 : o.message) && void 0 !== t ? t : String(o)).substring(0, 200);
         l.default.track(_.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
-            active_voice_filter_id: null !== (t = s.Z.getActiveVoiceFilter()) && void 0 !== t ? t : null,
+            active_voice_filter_id: null !== (n = s.Z.getActiveVoiceFilter()) && void 0 !== n ? n : null,
             success: !1,
-            canceled: null != i && 'USER_CANCELED_DOWNLOAD' in i,
-            voice_filter_id: r,
-            model_id: n
+            canceled: null != o && 'USER_CANCELED_DOWNLOAD' in o,
+            voice_filter_id: i,
+            model_id: r,
+            error_message: a
         });
     }
     handleVoiceFilterApplied(e) {
@@ -178,4 +180,4 @@ class b extends i.Z {
             });
     }
 }
-let y = new b();
+let y = new v();
