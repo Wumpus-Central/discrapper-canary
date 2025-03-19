@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => R });
 var r,
     i = n(442837),
     o = n(46973),
@@ -95,7 +95,10 @@ function T(e) {
 function N() {
     g !== c.Z.getVoiceChannelId() && (E = !1), I() && (E = !0), (g = c.Z.getVoiceChannelId());
 }
-class A extends (r = i.ZP.Store) {
+function A() {
+    (m = !1), (E = !1), (g = null), (b = {});
+}
+class C extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, c.Z, l.Z), this.syncWith([c.Z, l.Z], N);
     }
@@ -109,11 +112,12 @@ class A extends (r = i.ZP.Store) {
         return E;
     }
 }
-f(A, 'displayName', 'VideoBackgroundStore');
-let C = new A(a.Z, {
+f(C, 'displayName', 'VideoBackgroundStore');
+let R = new C(a.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: v,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: y,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: O,
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: S,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T,
+    LOGOUT: A
 });
