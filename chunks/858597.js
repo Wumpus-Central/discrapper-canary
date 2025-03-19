@@ -1,4 +1,4 @@
-n.d(e, { Z: () => L }), n(47120);
+n.d(e, { Z: () => C });
 var r = n(200651),
     s = n(192379),
     i = n(120356),
@@ -10,32 +10,31 @@ var r = n(200651),
     d = n(782568),
     T = n(726521),
     S = n(485664),
-    _ = n(922611),
-    b = n(681678),
-    N = n(699516),
-    x = n(991981),
-    p = n(367408),
-    O = n(423932),
-    h = n(473092),
-    A = n(611446),
-    E = n(993750),
-    f = n(134612),
-    g = n(388032),
-    R = n(51978);
-function m(t) {
+    _ = n(681678),
+    b = n(699516),
+    N = n(991981),
+    x = n(367408),
+    p = n(423932),
+    O = n(473092),
+    h = n(611446),
+    A = n(993750),
+    E = n(134612),
+    f = n(388032),
+    g = n(51978);
+function R(t) {
     let { children: e } = t;
     return (0, r.jsx)('div', {
-        className: R.actionGroup,
+        className: g.actionGroup,
         children: e
     });
 }
-function j(t) {
+function m(t) {
     let { title: e, subTitle: n, buttonText: s, buttonColor: i, onPress: o, disabled: l } = t;
     return (0, r.jsxs)('div', {
-        className: R.actionRow,
+        className: g.actionRow,
         children: [
             (0, r.jsxs)('div', {
-                className: R.actionButtonDetails,
+                className: g.actionButtonDetails,
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/semibold',
@@ -59,14 +58,14 @@ function j(t) {
         ]
     });
 }
-function C(t) {
+function j(t) {
     let { title: e, subTitle: n, onPress: s } = t;
     return (0, r.jsxs)(c.P3F, {
-        className: o()(R.actionRow, R.clickableActionRow),
+        className: o()(g.actionRow, g.clickableActionRow),
         onClick: s,
         children: [
             (0, r.jsxs)('div', {
-                className: R.actionButtonDetails,
+                className: g.actionButtonDetails,
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-md/semibold',
@@ -89,73 +88,68 @@ function C(t) {
         ]
     });
 }
-let L = function (t) {
-    let { otherUserId: e, channelId: i, warningId: o, warningType: a, transitionToSlide: R } = t,
-        L = (0, S.o)(),
-        y = (0, S.Q)(),
-        k = (0, x.q)(i),
-        I = null != (0, p.M)(i),
-        M = (0, _.D)({ location: f.cH }),
-        v = (0, l.e7)([N.Z], () => N.Z.isIgnored(e), [e]),
-        F = (0, l.e7)([N.Z], () => N.Z.isBlocked(e), [e]),
-        P = s.useCallback(
+let C = function (t) {
+    let { otherUserId: e, channelId: i, warningId: o, warningType: a, transitionToSlide: g } = t,
+        C = (0, S.o)(),
+        L = (0, S.Q)(),
+        y = (0, N.q)(i),
+        k = null != (0, x.M)(i),
+        I = (0, l.e7)([b.Z], () => b.Z.isIgnored(e), [e]),
+        M = (0, l.e7)([b.Z], () => b.Z.isBlocked(e), [e]),
+        v = s.useCallback(
             (t) => {
-                (0, h.qc)({
+                (0, O.qc)({
                     channelId: i,
                     warningId: o,
                     senderId: e,
                     warningType: a,
                     cta: t,
-                    isNudgeWarning: I
+                    isNudgeWarning: k
                 });
             },
-            [i, o, e, a, I]
+            [i, o, e, a, k]
         ),
+        F = s.useCallback(() => {
+            (0, c.Mr3)(E.X_), v(O.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
+        }, [v]),
+        P = s.useCallback(() => {
+            u.Z.unblockUser(e, { location: E.DL }), v(O.NM.USER_SAFETY_TOOLS_UNBLOCK);
+        }, [e, v]),
         W = s.useCallback(() => {
-            (0, c.Mr3)(f.X_), P(h.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
-        }, [P]),
-        Z = s.useCallback(() => {
-            u.Z.unblockUser(e, { location: f.DL }), P(h.NM.USER_SAFETY_TOOLS_UNBLOCK);
-        }, [e, P]),
-        Y = s.useCallback(() => {
-            (0, c.Mr3)(f.X_), P(h.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
-        }, [P]),
-        U = s.useMemo(
+            (0, c.Mr3)(E.X_), v(O.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
+        }, [v]),
+        Z = s.useMemo(
             () => [
-                ...(M
-                    ? [
-                          {
-                              type: 0,
-                              title: g.NW.string(g.t.B7ZT09),
-                              subTitle: g.NW.string(g.t['fCfp4+']),
-                              buttonText: v ? g.NW.string(g.t['9e0wLi']) : g.NW.string(g.t.B7ZT09),
-                              buttonColor: c.Ttl.PRIMARY,
-                              disabled: F,
-                              onPress: () => {
-                                  v ? (u.Z.unignoreUser(e, f.cH, i), P(h.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (u.Z.ignoreUser(e, f.cH, i), P(h.NM.USER_SAFETY_TOOLS_IGNORE));
-                              }
-                          }
-                      ]
-                    : []),
                 {
                     type: 0,
-                    title: g.NW.string(g.t.oDxaKy),
-                    subTitle: g.NW.string(g.t.Lj37a2),
-                    buttonText: F ? g.NW.string(g.t.Hro409) : g.NW.string(g.t.oDxaKy),
+                    title: f.NW.string(f.t.B7ZT09),
+                    subTitle: f.NW.string(f.t['fCfp4+']),
+                    buttonText: I ? f.NW.string(f.t['9e0wLi']) : f.NW.string(f.t.B7ZT09),
+                    buttonColor: c.Ttl.PRIMARY,
+                    disabled: M,
+                    onPress: () => {
+                        I ? (u.Z.unignoreUser(e, E.cH, i), v(O.NM.USER_SAFETY_TOOLS_UNIGNORE)) : (u.Z.ignoreUser(e, E.cH, i), v(O.NM.USER_SAFETY_TOOLS_IGNORE));
+                    }
+                },
+                {
+                    type: 0,
+                    title: f.NW.string(f.t.oDxaKy),
+                    subTitle: f.NW.string(f.t.Lj37a2),
+                    buttonText: M ? f.NW.string(f.t.Hro409) : f.NW.string(f.t.oDxaKy),
                     buttonColor: c.Ttl.BRAND,
                     onPress: () => {
-                        F
-                            ? (Z(), b.Z.showUnblockSuccessToast(e, i))
+                        M
+                            ? (P(), _.Z.showUnblockSuccessToast(e, i))
                             : (0, c.ZDy)(async () => {
                                   let { default: t } = await n.e('41128').then(n.bind(n, 699783));
                                   return (n) => {
                                       let { transitionState: s, onClose: o } = n;
                                       return (0, r.jsx)(t, {
                                           transitionState: s,
-                                          onBlock: W,
-                                          onBlockAndReport: Y,
+                                          onBlock: F,
+                                          onBlockAndReport: W,
                                           onCancel: () => {
-                                              null == o || o(), P(h.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL);
+                                              null == o || o(), v(O.NM.USER_SAFETY_TOOLS_BLOCK_CANCEL);
                                           },
                                           onClose: o,
                                           userId: e,
@@ -167,62 +161,62 @@ let L = function (t) {
                 },
                 {
                     type: 0,
-                    title: g.NW.string(g.t.X27yhI),
-                    subTitle: g.NW.string(g.t['0tydOT']),
-                    buttonText: g.NW.string(g.t.X27yhI),
+                    title: f.NW.string(f.t.X27yhI),
+                    subTitle: f.NW.string(f.t['0tydOT']),
+                    buttonText: f.NW.string(f.t.X27yhI),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, c.Mr3)(f.X_), (0, T.wk)(k), P(h.NM.USER_SAFETY_TOOLS_REPORT);
+                        (0, c.Mr3)(E.X_), (0, T.wk)(y), v(O.NM.USER_SAFETY_TOOLS_REPORT);
                     }
                 }
             ],
-            [v, M, F, P, Z, W, Y, e, i, k]
+            [I, M, v, P, F, W, e, i, y]
         ),
-        w = s.useMemo(() => {
+        Y = s.useMemo(() => {
             let t = {
-                    title: g.NW.string(g.t.ZSbbMD),
-                    subTitle: g.NW.string(g.t.iNcsra),
-                    buttonText: g.NW.string(g.t.rK4Gqq),
+                    title: f.NW.string(f.t.ZSbbMD),
+                    subTitle: f.NW.string(f.t.iNcsra),
+                    buttonText: f.NW.string(f.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.EI), P(h.NM.USER_SAFETY_TOOLS_CTL);
+                        (0, d.Z)(E.EI), v(O.NM.USER_SAFETY_TOOLS_CTL);
                     }
                 },
                 e = {
-                    title: g.NW.string(g.t.ZSbbMD),
-                    subTitle: g.NW.string(g.t.g5uwCw),
-                    buttonText: g.NW.string(g.t.rK4Gqq),
+                    title: f.NW.string(f.t.ZSbbMD),
+                    subTitle: f.NW.string(f.t.g5uwCw),
+                    buttonText: f.NW.string(f.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.n4), P(h.NM.USER_SAFETY_TOOLS_NO_FILTR);
+                        (0, d.Z)(E.n4), v(O.NM.USER_SAFETY_TOOLS_NO_FILTR);
                     }
                 },
                 n = {
-                    title: g.NW.string(g.t.ZSbbMD),
-                    subTitle: g.NW.string(g.t.S9O1ZW),
-                    buttonText: g.NW.string(g.t.rK4Gqq),
+                    title: f.NW.string(f.t.ZSbbMD),
+                    subTitle: f.NW.string(f.t.S9O1ZW),
+                    buttonText: f.NW.string(f.t.rK4Gqq),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, d.Z)(f.$l), P(h.NM.USER_SAFETY_TOOLS_THROUGHLINE);
+                        (0, d.Z)(E.$l), v(O.NM.USER_SAFETY_TOOLS_THROUGHLINE);
                     }
                 };
             return [
                 {
                     type: 0,
-                    title: g.NW.string(g.t.syuaPD),
-                    subTitle: g.NW.string(g.t.LLBnNj),
-                    buttonText: g.NW.string(g.t.rzvzyc),
+                    title: f.NW.string(f.t.syuaPD),
+                    subTitle: f.NW.string(f.t.LLBnNj),
+                    buttonText: f.NW.string(f.t.rzvzyc),
                     buttonColor: c.Ttl.PRIMARY,
                     onPress: () => {
-                        (0, O.Z)(c.pTH), P(h.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS);
+                        (0, p.Z)(c.pTH), v(O.NM.USER_SAFETY_TOOLS_VIBING_WUMPUS);
                     }
                 },
                 {
                     type: 1,
-                    title: g.NW.string(g.t['7LgVmp']),
-                    subTitle: g.NW.string(g.t.pwoRjY),
+                    title: f.NW.string(f.t['7LgVmp']),
+                    subTitle: f.NW.string(f.t.pwoRjY),
                     onPress: () => {
-                        R(A.O.SAFETY_TIPS), P(h.NM.USER_SAFETY_TOOLS_SAFETY_TIPS);
+                        g(h.O.SAFETY_TIPS), v(O.NM.USER_SAFETY_TOOLS_SAFETY_TIPS);
                     }
                 },
                 (function (t) {
@@ -249,26 +243,26 @@ let L = function (t) {
                             });
                     }
                     return t;
-                })({ type: 0 }, L ? t : y ? n : e)
+                })({ type: 0 }, C ? t : L ? n : e)
             ];
-        }, [L, y, R, P]),
-        B = s.useMemo(
+        }, [C, L, g, v]),
+        U = s.useMemo(
             () => [
                 {
                     type: 1,
-                    title: g.NW.string(g.t.otdt29),
+                    title: f.NW.string(f.t.otdt29),
                     onPress: () => {
-                        R(A.O.ABOUT_SAFETY_ALERTS), P(h.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
+                        g(h.O.ABOUT_SAFETY_ALERTS), v(O.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
                     }
                 }
             ],
-            [R, P]
+            [g, v]
         ),
-        z = (t) => {
+        w = (t) => {
             if (0 === t.type) {
                 let { type: e, title: n, subTitle: s, buttonText: i, buttonColor: o, onPress: l, disabled: a } = t;
                 return (0, r.jsx)(
-                    j,
+                    m,
                     {
                         type: e,
                         title: n,
@@ -284,7 +278,7 @@ let L = function (t) {
             if (1 === t.type) {
                 let { type: e, title: n, subTitle: s, onPress: i } = t;
                 return (0, r.jsx)(
-                    C,
+                    j,
                     {
                         type: e,
                         title: n,
@@ -296,7 +290,7 @@ let L = function (t) {
             }
             return null;
         };
-    return (0, r.jsxs)(E.Z, {
-        children: [(0, r.jsx)(m, { children: U.map((t) => z(t)) }), (0, r.jsx)(m, { children: w.map((t) => z(t)) }), (0, r.jsx)(m, { children: B.map((t) => z(t)) })]
+    return (0, r.jsxs)(A.Z, {
+        children: [(0, r.jsx)(R, { children: Z.map((t) => w(t)) }), (0, r.jsx)(R, { children: Y.map((t) => w(t)) }), (0, r.jsx)(R, { children: U.map((t) => w(t)) })]
     });
 };

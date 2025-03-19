@@ -1,20 +1,19 @@
 n.d(t, {
-    FD: () => m,
-    I5: () => S,
-    KP: () => A,
+    FD: () => g,
+    I5: () => I,
+    KP: () => N,
     Mn: () => y,
     P6: () => w,
-    Re: () => I,
-    S2: () => b,
-    UZ: () => T,
+    S2: () => v,
+    UZ: () => S,
     V3: () => O,
-    W3: () => D,
+    W3: () => P,
     Zy: () => E,
-    b9: () => R,
-    cV: () => N,
-    si: () => P,
-    ss: () => v,
-    xn: () => C
+    b9: () => C,
+    cV: () => T,
+    si: () => R,
+    ss: () => b,
+    xn: () => A
 });
 var r = n(544891),
     i = n(433517),
@@ -41,7 +40,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,19 +56,19 @@ function g(e) {
     }
     return e;
 }
-function m() {
+function g() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
 function E() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
-function v(e, t) {
+function b(e, t) {
     let n = t ? p.NW.string(p.t['8lQ2ra']) : p.NW.string(p.t.jf5GGR),
         i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT,
         o = (t) =>
             r.tn.post({
                 url: i,
-                body: g({ password: e }, t),
+                body: m({ password: e }, t),
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
@@ -80,7 +79,7 @@ function v(e, t) {
         d.Z.logoutInternal(), (0, s.uL)(f.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function b(e) {
+async function v(e) {
     let t = await r.tn.patch({
             url: f.ANM.ME,
             oldFormErrors: !0,
@@ -112,12 +111,12 @@ async function b(e) {
     );
 }
 function y(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: m, avatarDecoration: E, newPassword: v, globalName: y, nameplate: O } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: g, avatarDecoration: E, newPassword: b, globalName: y, nameplate: O } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, u.Z)(
             (e) => {
-                let a = g(
+                let a = m(
                     {
                         username: t,
                         email: r,
@@ -125,10 +124,10 @@ function y(e) {
                         password: s,
                         avatar: d,
                         avatar_description: h,
-                        avatar_id: m,
+                        avatar_id: g,
                         discriminator: n,
                         global_name: y,
-                        new_password: v
+                        new_password: b
                     },
                     e
                 );
@@ -137,7 +136,7 @@ function y(e) {
                     c = (0, _.xJ)();
                 null != c && null != l && ((a.push_provider = c), (a.push_token = l));
                 let u = i.K.get(f.scU);
-                return null != _.mv && null != u && ((a.push_voip_provider = _.mv), (a.push_voip_token = u)), b(a);
+                return null != _.mv && null != u && ((a.push_voip_provider = _.mv), (a.push_voip_token = u)), v(a);
             },
             {
                 checkEnabled: !1,
@@ -157,11 +156,11 @@ function y(e) {
                     l.default.track(f.rMx.USER_AVATAR_UPDATED, {
                         animated: (0, c.xR)(t.avatar),
                         is_guild_profile: !1,
-                        recent_avatar_id: null != m ? Number(m) : void 0,
-                        is_edited_recent_avatar: null != d && null != m
+                        recent_avatar_id: null != g ? Number(g) : void 0,
+                        is_edited_recent_avatar: null != d && null != g
                     }),
                     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }),
-                    (null != d || null != m) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
+                    (null != d || null != g) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
                     e
                 );
             },
@@ -183,51 +182,44 @@ function O(e) {
         rejectWithError: !1
     });
 }
-function S(e) {
+function I(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
         null == e ? o.uv.announce(p.NW.string(p.t['f1+oNj'])) : o.uv.announce(p.NW.string(p.t.NstziY));
 }
-function I(e) {
-    a.Z.dispatch({
-        type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_V2',
-        avatar: e
-    }),
-        null == e ? o.uv.announce(p.NW.string(p.t['f1+oNj'])) : o.uv.announce(p.NW.string(p.t.NstziY));
-}
-function T(e) {
+function S(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function N(e) {
+function T(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function A(e) {
+function N(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
         nameplate: e
     });
 }
-function C(e) {
+function A(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function R() {
+function C() {
     a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function P() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function D() {
+function P() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
 function w() {

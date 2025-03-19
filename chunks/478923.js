@@ -1,24 +1,23 @@
-r.d(e, { default: () => v });
+r.d(e, { default: () => y });
 var n = r(200651),
     i = r(192379),
     o = r(990547),
     c = r(442837),
     s = r(481060),
-    l = r(194359),
-    a = r(1596),
+    a = r(194359),
+    l = r(1596),
     d = r(681678),
     u = r(138201),
     f = r(699516),
     O = r(626135),
     m = r(63063),
-    N = r(5192),
-    j = r(922611),
-    p = r(240515),
-    x = r(858380),
-    g = r(981631),
-    b = r(388032),
-    I = r(894200);
-function h(t) {
+    j = r(5192),
+    N = r(240515),
+    p = r(858380),
+    x = r(981631),
+    g = r(388032),
+    b = r(894200);
+function I(t) {
     for (var e = 1; e < arguments.length; e++) {
         var r = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(r);
@@ -43,7 +42,7 @@ function h(t) {
     }
     return t;
 }
-function E(t, e) {
+function h(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -61,98 +60,95 @@ function E(t, e) {
         t
     );
 }
-function y(t) {
-    let { user: e, onBlock: r, onIgnore: i, location: o, disallowIgnore: l, guildId: d, channelId: y } = t,
-        v = (0, j.D)({ location: 'confirm_block_modal_body' }),
-        T = (0, c.e7)([f.Z], () => f.Z.isIgnored(e.id));
-    return v
-        ? (0, n.jsxs)('div', {
-              className: I.container,
-              children: [
-                  (0, n.jsxs)('div', {
-                      className: I.confirmationHeader,
+function E(t) {
+    let { user: e, onBlock: r, onIgnore: i, location: o, disallowIgnore: a, guildId: d, channelId: E } = t,
+        y = (0, c.e7)([f.Z], () => f.Z.isIgnored(e.id));
+    return (0, n.jsxs)('div', {
+        className: b.container,
+        children: [
+            (0, n.jsxs)('div', {
+                className: b.confirmationHeader,
+                children: [
+                    (0, n.jsxs)('div', {
+                        className: b.iconContainer,
+                        children: [
+                            (0, n.jsx)(s.qEK, {
+                                size: s.EFr.SIZE_56,
+                                src: e.getAvatarURL(void 0, 64),
+                                'aria-hidden': !0
+                            }),
+                            (0, n.jsx)('div', {
+                                className: b.icon,
+                                children: (0, n.jsx)(s.t6m, {})
+                            })
+                        ]
+                    }),
+                    (0, n.jsxs)('div', {
+                        children: [
+                            (0, n.jsx)(s.X6q, {
+                                variant: 'heading-xl/bold',
+                                color: 'header-primary',
+                                children: g.NW.format(g.t.CIbzHR, { username: j.ZP.getName(d, E, e) })
+                            }),
+                            (0, n.jsx)(s.Text, {
+                                variant: 'text-md/medium',
+                                color: 'header-secondary',
+                                children: g.NW.string(g.t.S70joq)
+                            })
+                        ]
+                    })
+                ]
+            }),
+            (0, n.jsx)(l.Z, {}),
+            a || y
+                ? null
+                : (0, n.jsxs)('div', {
+                      className: b.otherOptions,
                       children: [
-                          (0, n.jsxs)('div', {
-                              className: I.iconContainer,
-                              children: [
-                                  (0, n.jsx)(s.qEK, {
-                                      size: s.EFr.SIZE_56,
-                                      src: e.getAvatarURL(void 0, 64),
-                                      'aria-hidden': !0
-                                  }),
-                                  (0, n.jsx)('div', {
-                                      className: I.icon,
-                                      children: (0, n.jsx)(s.t6m, {})
-                                  })
-                              ]
+                          (0, n.jsx)(u.rT, {
+                              title: g.NW.string(g.t['+BJTcH']),
+                              children: (0, n.jsx)(u.ZP, {
+                                  title: g.NW.string(g.t.hC8tcX),
+                                  description: g.NW.string(g.t.If89rK),
+                                  titleVariant: 'text-md/medium',
+                                  descriptionVariant: 'text-xs/medium',
+                                  buttonText: g.NW.string(g.t.mxJOd3),
+                                  buttonColor: s.Ttl.PRIMARY,
+                                  onButtonPress: () => {
+                                      O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                                          action: p.l.GOTO_IGNORE,
+                                          location: o
+                                      }),
+                                          (0, s.pTH)(),
+                                          (0, s.h7j)((t) =>
+                                              (0, n.jsx)(
+                                                  N.default,
+                                                  h(I({}, t), {
+                                                      user: e,
+                                                      guildId: d,
+                                                      channelId: E,
+                                                      onIgnore: i,
+                                                      onBlock: r,
+                                                      location: o
+                                                  })
+                                              )
+                                          );
+                                  }
+                              })
                           }),
-                          (0, n.jsxs)('div', {
-                              children: [
-                                  (0, n.jsx)(s.X6q, {
-                                      variant: 'heading-xl/bold',
-                                      color: 'header-primary',
-                                      children: b.NW.format(b.t.CIbzHR, { username: N.ZP.getName(d, y, e) })
-                                  }),
-                                  (0, n.jsx)(s.Text, {
-                                      variant: 'text-md/medium',
-                                      color: 'header-secondary',
-                                      children: b.NW.string(b.t.S70joq)
-                                  })
-                              ]
+                          (0, n.jsx)(s.Text, {
+                              variant: 'text-sm/medium',
+                              className: b.featureGuide,
+                              children: g.NW.format(g.t.DJN6eX, { articleLink: m.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                           })
                       ]
-                  }),
-                  (0, n.jsx)(a.Z, {}),
-                  l || T
-                      ? null
-                      : (0, n.jsxs)('div', {
-                            className: I.otherOptions,
-                            children: [
-                                (0, n.jsx)(u.rT, {
-                                    title: b.NW.string(b.t['+BJTcH']),
-                                    children: (0, n.jsx)(u.ZP, {
-                                        title: b.NW.string(b.t.hC8tcX),
-                                        description: b.NW.string(b.t.If89rK),
-                                        titleVariant: 'text-md/medium',
-                                        descriptionVariant: 'text-xs/medium',
-                                        buttonText: b.NW.string(b.t.mxJOd3),
-                                        buttonColor: s.Ttl.PRIMARY,
-                                        onButtonPress: () => {
-                                            O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                                                action: x.l.GOTO_IGNORE,
-                                                location: o
-                                            }),
-                                                (0, s.pTH)(),
-                                                (0, s.h7j)((t) =>
-                                                    (0, n.jsx)(
-                                                        p.default,
-                                                        E(h({}, t), {
-                                                            user: e,
-                                                            guildId: d,
-                                                            channelId: y,
-                                                            onIgnore: i,
-                                                            onBlock: r,
-                                                            location: o
-                                                        })
-                                                    )
-                                                );
-                                        }
-                                    })
-                                }),
-                                (0, n.jsx)(s.Text, {
-                                    variant: 'text-sm/medium',
-                                    className: I.featureGuide,
-                                    children: b.NW.format(b.t.DJN6eX, { articleLink: m.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
-                                })
-                            ]
-                        })
-              ]
-          })
-        : (0, n.jsx)(a.Z, {});
+                  })
+        ]
+    });
 }
-function v(t) {
-    var { user: e, onBlock: r, onCancel: c, onIgnore: a, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: N } = t,
-        p = (function (t, e) {
+function y(t) {
+    var { user: e, onBlock: r, onCancel: c, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: f, guildId: m, channelId: j } = t,
+        N = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -171,12 +167,11 @@ function v(t) {
             }
             return i;
         })(t, ['user', 'onBlock', 'onCancel', 'onIgnore', 'location', 'disallowIgnore', 'guildId', 'channelId']);
-    let I = (0, j.D)({ location: 'block-confirm-modal' });
     return (
         i.useLayoutEffect(
             () => () => {
-                O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                    action: x.l.DISMISS_BLOCK,
+                O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                    action: p.l.DISMISS_BLOCK,
                     location: u
                 });
             },
@@ -184,36 +179,35 @@ function v(t) {
         ),
         (0, n.jsx)(
             s.ConfirmModal,
-            E(
-                h(
+            h(
+                I(
                     {
-                        header: I ? null : b.NW.formatToPlainString(b.t.x5pOn5, { name: e.username }),
-                        confirmText: b.NW.string(b.t.l4EmaW),
-                        cancelText: I ? b.NW.string(b.t['ETE/oK']) : b.NW.string(b.t['eN6+rK']),
+                        confirmText: g.NW.string(g.t.l4EmaW),
+                        cancelText: g.NW.string(g.t['ETE/oK']),
                         onCancel: () => {
-                            O.default.track(g.rMx.USER_REMEDIATION_ACTION, {
-                                action: x.l.CANCEL_BLOCK,
+                            O.default.track(x.rMx.USER_REMEDIATION_ACTION, {
+                                action: p.l.CANCEL_BLOCK,
                                 location: u
                             }),
                                 null == c || c();
                         },
                         onConfirm: () => {
                             null == r || r(),
-                                l.Z.blockUser(e.id, { location: u }).then(() => {
-                                    O.default.track(g.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != N ? N : void 0);
+                                a.Z.blockUser(e.id, { location: u }).then(() => {
+                                    O.default.track(x.rMx.BLOCK_USER_CONFIRMED), d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
                                 });
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION }
                     },
-                    p
+                    N
                 ),
                 {
-                    children: (0, n.jsx)(y, {
+                    children: (0, n.jsx)(E, {
                         user: e,
                         guildId: m,
-                        channelId: N,
+                        channelId: j,
                         onBlock: r,
-                        onIgnore: a,
+                        onIgnore: l,
                         disallowIgnore: f
                     })
                 }

@@ -1,18 +1,17 @@
 n.d(t, {
     CM: () => O,
-    Cf: () => b,
+    Cf: () => v,
     ID: () => y,
-    US: () => T,
-    Xz: () => N,
+    Xz: () => T,
     Z: () => m,
-    c_: () => I,
-    f4: () => A,
-    g_: () => v,
+    c_: () => S,
+    f4: () => N,
+    g_: () => b,
     ho: () => E,
     pG: () => g,
-    rf: () => C,
-    x3: () => R,
-    z5: () => S
+    rf: () => A,
+    x3: () => C,
+    z5: () => I
 });
 var r = n(544891),
     i = n(570140),
@@ -24,7 +23,7 @@ var r = n(544891),
     u = n(956664),
     d = n(981631),
     f = n(474936);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +36,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +47,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -63,8 +62,8 @@ async function m(e, t) {
     var n, c, u;
     let f = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
     if (null == f) return;
-    let p = s.dN.getSetting();
-    null != e.bio && p && (e.bio = a.ZP.parse(void 0, e.bio).content);
+    let _ = s.dN.getSetting();
+    null != e.bio && _ && (e.bio = a.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
@@ -79,7 +78,7 @@ async function m(e, t) {
             let e = null === (c = n.body.profile_effect) || void 0 === c ? void 0 : c.id,
                 t = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.expires_at;
             i.Z.dispatch(
-                _(
+                p(
                     {
                         type: 'USER_PROFILE_UPDATE_SUCCESS',
                         userId: f,
@@ -118,16 +117,16 @@ function E(e) {
         ? fetch(e)
               .then((e) => e.blob())
               .then((e) => (0, u.fD)(e))
-              .then((e) => v(e))
-        : null != e && v(e);
+              .then((e) => b(e))
+        : null != e && b(e);
 }
-function v(e) {
+function b(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function b(e) {
+function v(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
@@ -145,13 +144,13 @@ function O(e) {
         color: e
     });
 }
-function S(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
     });
 }
-function I(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
@@ -160,33 +159,26 @@ function I(e) {
 }
 function T(e) {
     i.Z.dispatch({
-        type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_V2',
-        avatar: e
-    }),
-        h(f.QP.ANIMATED_AVATAR);
-}
-function N(e) {
-    i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
         h(f.QP.AVATAR_DECORATION);
 }
-function A(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
         h(f.QP.PROFILE_BANNER);
 }
-function C(e) {
+function A(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
         h(f.QP.PROFILE_THEME_COLOR);
 }
-function R(e) {
+function C(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
         preset: e
