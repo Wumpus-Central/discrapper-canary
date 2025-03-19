@@ -14,7 +14,8 @@ var i = n(120356),
     f = n(388032),
     h = n(330966),
     g = n(87181);
-function _() {
+function _(e) {
+    let { questId: t } = e;
     return (0, r.jsx)('div', {
         className: h.buttonContainer,
         children: (0, r.jsx)(o.zxk, {
@@ -48,7 +49,13 @@ function _() {
                                     });
                             }
                             return e;
-                        })({ cta_name: s.jZ.VIEW_QUESTS }, (0, s.mH)(c.jn.EXCLUDED_QUEST_EMBED))
+                        })(
+                            {
+                                quest_id: t,
+                                cta_name: s.jZ.VIEW_QUESTS
+                            },
+                            (0, s.mH)(c.jn.EXCLUDED_QUEST_EMBED)
+                        )
                     );
             },
             children: f.NW.string(f.t.GURBQk)
@@ -81,7 +88,7 @@ function b(e) {
                             className: h.__invalid_mobileWebCopy,
                             children: f.NW.string(f.t.nuWSYW)
                         }),
-                        (0, r.jsx)(_, {})
+                        (0, r.jsx)(_, { questId: t })
                     ]
                 }),
                 (0, r.jsx)('div', {

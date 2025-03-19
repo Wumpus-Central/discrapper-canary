@@ -7,8 +7,8 @@ var l = n(120356),
     a = n(686546),
     s = n(796171);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: E, innerClassName: f, className: p, redGlow: h, tooltipClassName: C, onMouseEnter: _, onMouseLeave: O, 'aria-label': g, 'aria-checked': T, role: I, tooltipColor: S, tooltipForceOpen: N, tooltipContentClassName: b, plated: A } = e,
-        v =
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: E, innerClassName: f, className: p, redGlow: h, tooltipClassName: C, onMouseEnter: _, onMouseLeave: O, 'aria-label': g, 'aria-checked': T, role: I, tooltipColor: S, tooltipForceOpen: N, tooltipContentClassName: b, plated: v } = e,
+        A =
             'function' == typeof d
                 ? (0, r.jsx)(d, {
                       width: 20,
@@ -86,8 +86,8 @@ function c(e) {
                             [s.redGlow]: h,
                             [s.disabled]: u,
                             [s.enabled]: !u,
-                            [s.plated]: A,
-                            [s.plateMuted]: h && A
+                            [s.plated]: v,
+                            [s.plateMuted]: h && v
                         }),
                         onClick: (e) => {
                             null != E && E(), null != c && c(e);
@@ -101,15 +101,23 @@ function c(e) {
                         onContextMenu: l,
                         role: I,
                         'aria-checked': T,
+                        focusProps: {
+                            offset: {
+                                left: -1,
+                                top: -1,
+                                right: 1,
+                                bottom: 1
+                            }
+                        },
                         children: [
                             null != n
                                 ? (0, r.jsx)(a.ZP, {
                                       width: 20,
                                       height: 20,
                                       mask: a.ZP.Masks.PANEL_BUTTON,
-                                      children: v
+                                      children: A
                                   })
-                                : v,
+                                : A,
                             n
                         ]
                     }),

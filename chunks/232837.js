@@ -1,110 +1,85 @@
-n.d(t, { default: () => b }), n(627341);
-var s = n(200651);
-n(192379);
-var i = n(278074),
-    o = n(990547),
-    _ = n(442837),
-    a = n(481060),
-    r = n(287734),
-    c = n(922611),
-    d = n(592125),
-    u = n(699516),
-    l = n(594174),
-    g = n(626135),
-    p = n(33194),
-    f = n(343544),
-    h = n(14251),
-    m = n(110223),
-    N = n(981631),
-    x = n(388032),
-    I = n(584937);
-function b(e) {
-    let { channelId: t, userId: n, transitionState: b, onClose: C } = e,
-        E = (0, _.e7)([u.Z], () => u.Z.isBlocked(n)),
-        M = (0, c.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
-        O = (0, _.e7)([d.Z], () => d.Z.getChannel(t)),
-        w = l.default.getUser(n);
-    if (null == w) return null;
-    let A = [
+t.d(n, { default: () => I });
+var s = t(200651);
+t(192379);
+var _ = t(990547),
+    o = t(442837),
+    i = t(481060),
+    r = t(287734),
+    a = t(592125),
+    c = t(699516),
+    d = t(594174),
+    u = t(626135),
+    g = t(33194),
+    l = t(343544),
+    f = t(14251),
+    p = t(110223),
+    m = t(981631),
+    N = t(388032),
+    h = t(202076);
+function I(e) {
+    let { channelId: n, userId: t, transitionState: I, onClose: x } = e,
+        C = (0, o.e7)([c.Z], () => c.Z.isBlocked(t)),
+        b = (0, o.e7)([a.Z], () => a.Z.getChannel(n));
+    if (null == d.default.getUser(t)) return null;
+    let E = [
             {
-                icon: M ? (0, h.r)([n], null == O ? void 0 : O.guild_id) : (0, s.jsx)(a.tBG, {}),
-                text: M ? (0, h.a)([n], 1, null == O ? void 0 : O.guild_id, t) : x.NW.formatToPlainString(x.t.w0YvUl, { userName: null == w ? void 0 : w.username }),
-                className: M ? I.row : void 0
+                icon: (0, f.r)([t], null == b ? void 0 : b.guild_id),
+                text: (0, f.a)([t], 1, null == b ? void 0 : b.guild_id, n),
+                className: h.row
             },
             {
-                icon: M
-                    ? (0, s.jsx)('div', {
-                          className: I.icon,
-                          children: (0, s.jsx)(a.aNP, {})
-                      })
-                    : (0, s.jsx)(a.S6n, {}),
-                text: x.NW.string(x.t['+4O9nZ']),
-                className: M ? I.row : void 0
+                icon: (0, s.jsx)('div', {
+                    className: h.icon,
+                    children: (0, s.jsx)(i.aNP, {})
+                }),
+                text: N.NW.string(N.t['+4O9nZ']),
+                className: h.row
             }
         ],
-        v = (0, i.EQ)({
-            stealthRemediationEnabled: M,
-            isBlocked: E
-        })
-            .with(
-                {
-                    stealthRemediationEnabled: !0,
-                    isBlocked: !0
-                },
-                () =>
-                    (0, s.jsxs)(s.Fragment, {
-                        children: [x.NW.string(x.t.cpgfFh), (0, s.jsx)('br', {}), x.NW.string(x.t.UKQ4Cg)]
-                    })
-            )
-            .with(
-                {
-                    stealthRemediationEnabled: !0,
-                    isBlocked: !1
-                },
-                () =>
-                    (0, s.jsxs)(s.Fragment, {
-                        children: [x.NW.string(x.t['xj3j4+']), (0, s.jsx)('br', {}), x.NW.string(x.t.wWueRU)]
-                    })
-            )
-            .otherwise(() => x.NW.string(x.t.K8YIgY));
-    return (0, s.jsx)(f.Z, {
-        headerText: M ? x.NW.string(x.t['1/gpFh']) : x.NW.string(x.t.LGnmpa),
-        secondaryHeaderText: M ? void 0 : x.NW.string(x.t['1/gpFh']),
-        descriptionText: v,
-        infoRows: A,
+        O = C
+            ? (0, s.jsxs)(s.Fragment, {
+                  children: [N.NW.string(N.t.cpgfFh), (0, s.jsx)('br', {}), N.NW.string(N.t.UKQ4Cg)]
+              })
+            : (0, s.jsxs)(s.Fragment, {
+                  children: [N.NW.string(N.t['xj3j4+']), (0, s.jsx)('br', {}), N.NW.string(N.t.wWueRU)]
+              });
+    return (0, s.jsx)(l.Z, {
+        headerText: N.NW.string(N.t['1/gpFh']),
+        descriptionText: O,
+        infoRows: E,
         onDismissAndStay: () => {
-            C(),
-                (0, p.g6)(t),
-                g.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: m.q.CLICK_TO_STAY,
-                    channel_id: t,
-                    blocked_user_ids: E ? [n] : [],
-                    ignored_user_ids: E ? [] : [n],
-                    warning_surface: m.fz.POST_JOIN_MODAL
+            x(),
+                (0, g.g6)(n),
+                u.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: p.q.CLICK_TO_STAY,
+                    channel_id: n,
+                    blocked_user_ids: C ? [t] : [],
+                    ignored_user_ids: C ? [] : [t],
+                    warning_surface: p.fz.POST_JOIN_MODAL
                 });
         },
         onDismissAndLeave: () => {
-            C(),
+            x(),
                 r.default.disconnect(),
-                g.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: m.q.CLICK_TO_LEAVE,
-                    channel_id: t,
-                    blocked_user_ids: E ? [n] : [],
-                    ignored_user_ids: E ? [] : [n],
-                    warning_surface: m.fz.POST_JOIN_MODAL
+                u.default.track(m.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: p.q.CLICK_TO_LEAVE,
+                    channel_id: n,
+                    blocked_user_ids: C ? [t] : [],
+                    ignored_user_ids: C ? [] : [t],
+                    warning_surface: p.fz.POST_JOIN_MODAL
                 });
         },
-        leaveButtonText: x.NW.string(x.t['Y56/oK']),
-        stayButtonText: x.NW.string(x.t['Z+/hfX']),
-        transitionState: b,
-        onClose: C,
+        leaveButtonText: N.NW.string(N.t['Y56/oK']),
+        stayButtonText: N.NW.string(N.t['Z+/hfX']),
+        transitionState: I,
+        onClose: x,
         impression: {
-            impressionName: o.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: _.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
-                channel_id: t,
-                blocked_user_ids: E ? [n] : [],
-                ignored_user_ids: E ? [] : [n],
-                warning_surface: m.fz.POST_JOIN_MODAL
+                channel_id: n,
+                blocked_user_ids: C ? [t] : [],
+                ignored_user_ids: C ? [] : [t],
+                warning_surface: p.fz.POST_JOIN_MODAL
             }
         }
     });

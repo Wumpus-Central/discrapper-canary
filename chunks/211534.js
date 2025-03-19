@@ -5,7 +5,6 @@ e.exports = {
     declineButton: 'declineButton__477aa',
     declineText: 'declineText__477aa',
     blocked: 'blocked__477aa',
-    blockedIcon: 'blockedIcon__477aa',
     blockedText: 'blockedText__477aa',
     noIcon: 'noIcon__477aa'
 };

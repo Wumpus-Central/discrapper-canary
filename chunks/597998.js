@@ -287,6 +287,7 @@ let L = function (e) {
             },
             onKeyDown: P,
             'aria-label': null !== (t = null != z ? z : F) && void 0 !== t ? t : J.username,
+            focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: o()(w.content, { [w.flipped]: Y }),
                 children: [

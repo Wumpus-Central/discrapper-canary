@@ -75,11 +75,11 @@ function E(e, t) {
         e
     );
 }
-let v = Object.keys(u.jn),
-    b = new Set([p.rMx.QUEST_CONTENT_VIEWED, p.rMx.QUEST_CONTENT_CLICKED]);
+let b = Object.keys(u.jn),
+    v = new Set([p.rMx.QUEST_CONTENT_VIEWED, p.rMx.QUEST_CONTENT_CLICKED]);
 function y(e) {
     var t;
-    return null !== (t = v.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
+    return null !== (t = b.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
 }
 function O(e) {
     var t, n, r;
@@ -108,7 +108,7 @@ function T(e) {
     if (null == u || ((0, d.X7)({ location: _.dr.QUEST_PREVIEW_TOOL }) && a.Z.getLayers().includes(p.S9g.USER_SETTINGS))) return;
     let f = m({}, I(u), r);
     if ((o.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, f), u.preview)) return;
-    let h = b.has(n);
+    let h = v.has(n);
     if (l) return i.ZP.trackWithMetadata(n, f, h);
     s.default.track(n, f, { flush: h });
 }
@@ -168,9 +168,12 @@ function P() {
 }
 function w(e, t) {
     r.useEffect(() => {
-        i.ZP.trackWithMetadata(p.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
-            quest_id: t,
-            reason: e
-        });
+        D(t, e);
     }, [e, t]);
+}
+function D(e, t) {
+    i.ZP.trackWithMetadata(p.rMx.QUEST_EMBED_FALLBACK_VIEWED, {
+        quest_id: e,
+        reason: t
+    });
 }
