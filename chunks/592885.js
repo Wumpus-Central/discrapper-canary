@@ -13,6 +13,7 @@ var r = {
     confettiCanvas: 'confettiCanvas_b0ba57',
     additionalRedemptionInstructions: 'additionalRedemptionInstructions_b0ba57',
     sponsorLogo: 'sponsorLogo_b0ba57',
-    loadingIndicatorWrapper: 'loadingIndicatorWrapper_b0ba57'
+    loadingIndicatorWrapper: 'loadingIndicatorWrapper_b0ba57',
+    upsell: 'upsell_b0ba57'
 };
 e.exports = r;
