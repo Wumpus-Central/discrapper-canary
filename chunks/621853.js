@@ -357,32 +357,26 @@ function q(e) {
 }
 function Q(e) {
     var t, n;
-    let r = e.user.id,
-        i = A.get(r);
-    if (null == i || (null !== (n = null === (t = O.get(r)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0) return !1;
-    et(i);
+    let r = e.user.id;
+    return !((null !== (n = null === (t = O.get(r)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0) && et(r);
 }
 function X(e) {
-    if (L.size < 1 && A.size < 1) return !1;
-    for (let e of (L.clear(), A.values())) et(e);
+    return A.keys().reduce((e, t) => et(t) || e, !1);
 }
 function J(e) {
-    let t = e.user.id,
-        n = A.get(t);
-    if (null == L.get(t) && null == n) return !1;
-    L.delete(t), et(n);
+    return et(e.user.id);
 }
 function $(e) {
-    let t = e.relationship.id,
-        n = A.get(t);
-    if (!w.has(t) && !D.has(t) && null == n) return !1;
-    w.delete(t), D.delete(t), et(n);
+    return et(e.relationship.id);
 }
 function ee() {
     O.clear(), I.clear(), A.clear(), C.clear();
 }
 function et(e) {
-    null != e && ((e.lastFetched = 0), (e.fetchError = void 0));
+    if (null == e) return !1;
+    let t = A.get(e);
+    if (null == t) return !1;
+    (t.lastFetched = 0), (t.fetchError = void 0);
 }
 class en extends f.Z {
     initialize() {
