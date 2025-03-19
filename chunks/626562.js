@@ -1,5 +1,7 @@
-n.d(t, { Vm: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { V: () => a });
+var r = n(818083),
+    i = n(355820);
+let s = (0, r.B)({
     kind: 'user',
     id: '2025-01_custom_status_edit_preview_mobile',
     label: 'Custom Status Edit Preview (Mobile)',
@@ -12,8 +14,18 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+        r = (0, i.A)({
+            location: t,
+            autoTrackExposure: n
+        }),
+        { enabled: a } = s.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r
+            }
+        );
+    return a;
 }

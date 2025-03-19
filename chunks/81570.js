@@ -1,5 +1,7 @@
-n.d(t, { T: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { T: () => a });
+var r = n(818083),
+    i = n(772209);
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-02_reaction_reply',
     label: 'Reaction Reply Experiment',
@@ -12,8 +14,18 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
+        r = (0, i.q)({
+            location: t,
+            autoTrackExposure: n
+        }),
+        { enabled: a } = o.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r
+            }
+        );
+    return a;
 }
