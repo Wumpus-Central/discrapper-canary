@@ -1,177 +1,172 @@
-let a;
-n.r(t),
-    n.d(t, {
-        WowMomentTypes: () => O,
-        default: () => R
+let n;
+a.r(t),
+    a.d(t, {
+        WowMomentTypes: () => U,
+        default: () => O
     }),
-    n(315314),
-    n(309749),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
+    a(315314),
+    a(309749),
+    a(610138),
+    a(216116),
+    a(78328),
+    a(815648),
+    a(47120);
 var i,
-    o = n(200651),
-    c = n(192379),
-    d = n(120356),
-    s = n.n(d),
-    r = n(642128),
-    l = n(442837),
-    m = n(544891),
-    u = n(481060),
-    _ = n(570140),
-    M = n(607070),
-    p = n(70097),
-    w = n(626135),
-    E = n(526167),
-    f = n(585483),
-    h = n(960048),
-    W = n(138464),
-    T = n(438820),
-    I = n(553300),
-    b = n(949772),
-    S = n(981631),
-    g = n(605798),
-    P = n(426401),
-    Z = n(926734),
-    y = n(601046),
-    C = n(421391),
-    F = n(153911),
-    U = n(588369),
-    O = (((i = {}).WUMPUS_FLIGHT = 'wumpus_flight'), (i.GRADIENT_HIGHLIGHT = 'gradient_highlight'), i);
-async function x(e, t) {
+    c = a(200651),
+    o = a(192379),
+    s = a(120356),
+    d = a.n(s),
+    r = a(642128),
+    p = a(442837),
+    M = a(544891),
+    u = a(481060),
+    l = a(570140),
+    _ = a(607070),
+    m = a(70097),
+    w = a(626135),
+    E = a(526167),
+    h = a(585483),
+    f = a(960048),
+    W = a(138464),
+    T = a(438820),
+    I = a(981631),
+    S = a(605798),
+    g = a(426401),
+    b = a(926734),
+    P = a(601046),
+    Z = a(421391),
+    y = a(153911),
+    F = a(588369),
+    U = (((i = {}).WUMPUS_FLIGHT = 'wumpus_flight'), (i.GRADIENT_HIGHLIGHT = 'gradient_highlight'), i);
+async function C(e, t) {
     try {
-        _.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
-        let n = 1012,
-            a = e ? P.Z : Z.Z;
-        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? ((n = 1980), (a = e ? y.Z : C.Z)) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && ((n = 2880), (a = e ? F.Z : U.Z));
-        let { enabled: i } = b.Z.getCurrentConfig({ location: 'PremiumSubscriptionWowMoment.prefetch' }, { autoTrackExposure: !1 });
-        i && w.default.track(S.rMx.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER, { client_width: n });
-        let o = await m.tn.get({
+        l.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
+        let a = e ? g.Z : b.Z;
+        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (a = e ? P.Z : Z.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (a = e ? y.Z : F.Z);
+        let n = await M.tn.get({
                 url: a,
                 binary: !0,
                 rejectWithError: !0
             }),
-            c = window.URL.createObjectURL(o.body);
-        t(c),
-            _.Z.dispatch({
+            i = window.URL.createObjectURL(n.body);
+        t(i),
+            l.Z.dispatch({
                 type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS',
-                wumpusMedia: c
+                wumpusMedia: i
             });
     } catch (e) {
-        h.Z.captureException(e), _.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
+        f.Z.captureException(e), l.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
     }
 }
 function H() {
-    let e = (0, l.e7)([M.Z], () => M.Z.useReducedMotion),
-        [t, n] = c.useState(null),
-        { isFetchingMedia: i, canPlayWowMoment: d } = (0, l.cj)([T.Z], () => ({
+    let e = (0, p.e7)([_.Z], () => _.Z.useReducedMotion),
+        [t, a] = o.useState(null),
+        { isFetchingMedia: i, canPlayWowMoment: s } = (0, p.cj)([T.Z], () => ({
             isFetchingMedia: T.Z.isFetchingWowMomentMedia,
             canPlayWowMoment: T.Z.canPlayWowMoment
         })),
-        [m, _] = c.useState(!1),
-        h = (0, E.vu)(),
-        I = (0, E.rO)(),
-        b = h > 52 || -1 === h || I,
-        P = I ? 'video/mp4' : 'video/webm',
-        Z = b && !e && d && null === t && !1 === i;
-    c.useEffect(() => {
-        Z && x(I, n);
-    }, [Z, I, n]),
-        c.useEffect(() => {
+        [M, l] = o.useState(!1),
+        f = (0, E.vu)(),
+        g = (0, E.rO)(),
+        b = f > 52 || -1 === f || g,
+        P = g ? 'video/mp4' : 'video/webm',
+        Z = b && !e && s && null === t && !1 === i;
+    o.useEffect(() => {
+        Z && C(g, a);
+    }, [Z, g, a]),
+        o.useEffect(() => {
             function t() {
                 !e &&
                     T.Z.canPlayWowMoment &&
-                    (_(!0),
-                    (a = setTimeout(() => {
-                        _(!1), C(!0), w.default.track(S.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
+                    (l(!0),
+                    (n = setTimeout(() => {
+                        l(!1), F(!0), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
                     }, 2000)));
             }
             return (
-                f.S.subscribe(S.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
+                h.S.subscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
                 () => {
-                    f.S.unsubscribe(S.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
+                    h.S.unsubscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
         }, [e, b]);
-    let [y, C] = c.useState(!1),
-        [F, U] = c.useState(!1),
+    let [y, F] = o.useState(!1),
+        [U, H] = o.useState(!1),
         O = (0, u.q_F)({
             opacity: 0.2 * !!y,
             config: { duration: 100 }
         }),
-        H = (0, u.q_F)(
+        x = (0, u.q_F)(
             {
-                x: F ? '100%' : '-100%',
+                x: U ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            F ? 'respect-motion-settings' : 'animate-never'
+            U ? 'respect-motion-settings' : 'animate-never'
         );
-    c.useEffect(() => {
+    o.useEffect(() => {
         let e = -1;
         return (
             y &&
                 (e = window.setTimeout(() => {
-                    U(!0);
+                    H(!0);
                 }, 1000)),
             () => {
                 window.clearTimeout(e);
             }
         );
     }, [y]),
-        c.useEffect(() => {
+        o.useEffect(() => {
             let e = -1;
             return (
-                F &&
+                U &&
                     (e = window.setTimeout(() => {
-                        U(!1), C(!1);
+                        H(!1), F(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [F]);
-    let R = m && null !== t,
-        v = R || y;
-    return (0, o.jsxs)('div', {
-        className: s()({
-            [g.wrapper]: !v,
-            [g.activeWrapper]: v
+        }, [U]);
+    let v = M && null !== t,
+        R = v || y;
+    return (0, c.jsxs)('div', {
+        className: d()({
+            [S.wrapper]: !R,
+            [S.activeWrapper]: R
         }),
         children: [
-            R &&
-                (0, o.jsx)(p.Z, {
+            v &&
+                (0, c.jsx)(m.Z, {
                     autoPlay: !0,
-                    className: g.videoWrapper,
+                    className: S.videoWrapper,
                     onPlay: () => {
-                        clearTimeout(a), w.default.track(S.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
+                        clearTimeout(n), w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
                     },
                     onEnded: () => {
-                        _(!1), (0, W.H)(!1), window.URL.revokeObjectURL(t), n(null);
+                        l(!1), (0, W.H)(!1), window.URL.revokeObjectURL(t), a(null);
                     },
-                    children: (0, o.jsx)('source', {
+                    children: (0, c.jsx)('source', {
                         src: t,
                         type: P
                     })
                 }),
-            (0, o.jsx)(r.animated.div, {
-                className: g.gadientHighlight,
+            (0, c.jsx)(r.animated.div, {
+                className: S.gadientHighlight,
                 style: O
             }),
-            (0, o.jsx)(r.animated.div, {
-                className: g.swipeWrapper,
-                style: H,
-                children: (0, o.jsxs)('svg', {
-                    className: g.swipe,
+            (0, c.jsx)(r.animated.div, {
+                className: S.swipeWrapper,
+                style: x,
+                children: (0, c.jsxs)('svg', {
+                    className: S.swipe,
                     viewBox: '0 0 848 1024',
                     fill: 'none',
                     children: [
-                        (0, o.jsx)('path', {
+                        (0, c.jsx)('path', {
                             d: 'M257.206 1024L0 0H341.333L598.539 1024H257.206Z',
                             fill: 'white'
                         }),
-                        (0, o.jsx)('path', {
+                        (0, c.jsx)('path', {
                             d: 'M847.975 1024H690.436L433.231 0H590.769L847.975 1024Z',
                             fill: 'white'
                         })
@@ -181,8 +176,6 @@ function H() {
         ]
     });
 }
-let R = function () {
-    let { enabled: e } = I.Z.useExperiment({ location: 'PremiumSubscriptionWowMoment' }),
-        t = (0, l.e7)([T.Z], () => T.Z.canPlayWowMoment);
-    return e && t ? (0, o.jsx)(H, {}) : null;
+let O = function () {
+    return (0, p.e7)([T.Z], () => T.Z.canPlayWowMoment) ? (0, c.jsx)(H, {}) : null;
 };
