@@ -9,15 +9,15 @@ var i = n(525654),
     c = n(320161),
     d = n(998502),
     u = n(388032),
-    m = n(262382);
+    m = n(532111);
 function g() {
     var e, t, n, i, g;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '370217',
-        f = '7a9377ff0d2d5723d1645b57caf0963b0b1a4f0e'.substring(0, 7),
-        b = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
-        N = null === l.Z || void 0 === l.Z ? void 0 : null === (e = (t = l.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
-        x = null === l.Z || void 0 === l.Z ? void 0 : null === (n = (i = l.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(i),
+        h = '379878',
+        f = 'acb0471ed3b125f84059c4293b46841bc7bb4279'.substring(0, 7),
+        x = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
+        b = null === l.Z || void 0 === l.Z ? void 0 : null === (e = (t = l.Z.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t),
+        N = null === l.Z || void 0 === l.Z ? void 0 : null === (n = (i = l.Z.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(i),
         _ = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
         E = (function () {
             var e;
@@ -29,7 +29,7 @@ function g() {
         })(),
         j = [p, h, '('.concat(f, ')')];
     return (
-        null != b && (j.push('Host '.concat(b)), null != x && j.push(x.toLowerCase()), null != N && j.push('('.concat(N, ')'))),
+        null != x && (j.push('Host '.concat(x)), null != N && j.push(N.toLowerCase()), null != b && j.push('('.concat(b, ')'))),
         j.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
         null != E && j.push(E),
         (0, r.jsx)(c.Z, {
@@ -71,6 +71,7 @@ function g() {
                             className: m.clickable,
                             children: (0, r.jsxs)('div', {
                                 className: m.info,
+                                'data-mtctest-ignore': 'true',
                                 children: [
                                     (0, r.jsxs)(a.Text, {
                                         tag: 'span',
@@ -100,7 +101,7 @@ function g() {
                                                 children: ['Build Override: ', _.id]
                                             })
                                         }),
-                                    null != b
+                                    null != x
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsxs)(a.Text, {
@@ -110,17 +111,17 @@ function g() {
                                                       color: 'text-muted',
                                                       children: [
                                                           'Host ',
-                                                          b,
+                                                          x,
                                                           ' ',
-                                                          null != x
-                                                              ? (0, r.jsxs)('span', {
-                                                                    className: m.appArch,
-                                                                    children: [x.toLowerCase(), ' ']
-                                                                })
-                                                              : null,
                                                           null != N
                                                               ? (0, r.jsxs)('span', {
-                                                                    children: ['(', N, ')']
+                                                                    className: m.appArch,
+                                                                    children: [N.toLowerCase(), ' ']
+                                                                })
+                                                              : null,
+                                                          null != b
+                                                              ? (0, r.jsxs)('span', {
+                                                                    children: ['(', b, ')']
                                                                 })
                                                               : null
                                                       ]

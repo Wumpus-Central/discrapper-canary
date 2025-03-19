@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(789020);
+n.d(t, { Z: () => G }), n(789020);
 var r = n(200651),
     i = n(192379),
     o = n(512722),
@@ -9,81 +9,32 @@ var r = n(200651),
     u = n(16084),
     d = n(224550),
     f = n(609194),
-    p = n(275850),
-    _ = n(672971),
+    _ = n(275850),
+    p = n(672971),
     h = n(115130),
     m = n(228624),
     g = n(925329),
     E = n(215148),
-    v = n(653798),
-    b = n(314182),
+    b = n(653798),
+    v = n(314182),
     y = n(251660),
     O = n(246946),
-    S = n(351402),
-    I = n(853872),
+    I = n(351402),
+    S = n(853872),
     T = n(855775),
     N = n(695103),
     A = n(4912),
     C = n(630388),
     R = n(669079),
-    P = n(937615),
-    w = n(987209),
-    D = n(563132),
-    x = n(45572),
+    P = n(987209),
+    w = n(563132),
+    D = n(45572),
     L = n(119226),
+    x = n(982204),
     M = n(981631),
     k = n(388032),
-    j = n(772228);
+    j = n(664279);
 function U(e) {
-    let { sku: t, skuPricePreview: n } = e;
-    a()(null != n.amount, 'SKU must have a price set.');
-    let i = n.amount - n.tax,
-        o = (0, m.ed)('SKUInvoice'),
-        s = t.productLine === M.POd.COLLECTIBLES && o;
-    return !n.tax_inclusive && n.tax > 0
-        ? (0, r.jsxs)(v.PO, {
-              className: j.invoice,
-              children: [
-                  s
-                      ? (0, r.jsx)(E.C, {
-                            sku: t,
-                            value: (0, P.T4)(i, n.currency),
-                            className: j.subscriptionCostRow
-                        })
-                      : (0, r.jsx)(v.R$, {
-                            label: t.name,
-                            value: (0, P.T4)(i, n.currency),
-                            className: j.subscriptionCostRow
-                        }),
-                  (0, r.jsx)(v.R$, {
-                      label: k.NW.string(k.t['/I8zmJ']),
-                      value: (0, P.T4)(n.tax, n.currency),
-                      className: j.subscriptionCostRow
-                  }),
-                  (0, r.jsx)(v.KU, {}),
-                  (0, r.jsx)(v.Ji, {
-                      label: k.NW.format(k.t['+B5KfH'], {}),
-                      value: (0, P.T4)(n.amount, n.currency),
-                      className: j.subscriptionCostRow
-                  })
-              ]
-          })
-        : (0, r.jsx)(v.PO, {
-              className: j.invoice,
-              children: s
-                  ? (0, r.jsx)(E.C, {
-                        sku: t,
-                        value: (0, P.T4)(n.amount, n.currency),
-                        className: j.subscriptionCostRow
-                    })
-                  : (0, r.jsx)(v.R$, {
-                        label: t.name,
-                        value: (0, P.T4)(n.amount, n.currency),
-                        className: j.subscriptionCostRow
-                    })
-          });
-}
-function G(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
@@ -99,32 +50,32 @@ function G(e) {
               ]
           });
 }
-function B(e) {
+function G(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: o, handlePaymentSourceAdd: g } = e,
-        { application: P, purchaseState: B, paymentSources: Z, paymentSourceId: F, setHasAcceptedTerms: V, skusById: H, skuPricePreviewsById: W, selectedSkuId: Y, isEmbeddedIAP: K, purchaseType: z, purchasePreviewError: q, devShelfFetchState: Q, setPurchasePreviewError: X } = (0, D.JL)(),
-        { isGift: J, giftRecipient: $ } = (0, w.wD)(),
+        { application: G, purchaseState: B, paymentSources: F, paymentSourceId: V, setHasAcceptedTerms: Z, skusById: H, skuPricePreviewsById: W, selectedSkuId: Y, isEmbeddedIAP: K, purchaseType: z, purchasePreviewError: q, devShelfFetchState: Q, setPurchasePreviewError: X } = (0, w.JL)(),
+        { isGift: J, giftRecipient: $ } = (0, P.wD)(),
         ee = J && (0, R.pO)($),
-        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([I.Z], () => ({
-            defaultPaymentSourceId: I.Z.defaultPaymentSourceId,
-            hasFetchedPaymentSources: I.Z.hasFetchedPaymentSources
+        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([S.Z], () => ({
+            defaultPaymentSourceId: S.Z.defaultPaymentSourceId,
+            hasFetchedPaymentSources: S.Z.hasFetchedPaymentSources
         }));
     a()(null != Y, 'Expected selectedSkuId');
     let er = H[Y],
         ei = W[Y],
-        eo = null != F ? F : T.c,
+        eo = null != V ? V : T.c,
         ea = null != ei ? ei[eo] : null;
-    a()(null != er, 'SKU must exist and be fetched.'), a()(null != P, 'Application must exist.');
-    let es = (0, l.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(P.id) || h.Z.inDevModeForApplication(P.id), [P.id]),
+    a()(null != er, 'SKU must exist and be fetched.'), a()(null != G, 'Application must exist.');
+    let es = (0, l.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(G.id) || h.Z.inDevModeForApplication(G.id), [G.id]),
         el = (0, l.e7)([O.Z], () => O.Z.enabled),
-        ec = s.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
-        eu = B === x.A.PURCHASING || B === x.A.COMPLETED,
-        ed = null != F ? Z[F].type : null,
-        ef = (0, m.ed)('SKUInvoice'),
-        ep = er.productLine === M.POd.COLLECTIBLES && ef;
+        ec = s.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
+        eu = B === D.A.PURCHASING || B === D.A.COMPLETED,
+        ed = null != V ? F[V].type : null,
+        ef = (0, m.ed)('SKUInvoicePreview'),
+        e_ = er.productLine === M.POd.COLLECTIBLES && ef;
     return (
         i.useEffect(() => {
             en &&
-                F === et &&
+                V === et &&
                 et !== T.c &&
                 null == ea &&
                 (0, u.x2)(er.applicationId, er.id, et, { isGift: J })
@@ -134,7 +85,7 @@ function B(e) {
                     .catch((e) => {
                         X(e);
                     });
-        }, [et, en, F, er.applicationId, er.id, ea, X, J]),
+        }, [et, en, V, er.applicationId, er.id, ea, X, J]),
         (0, r.jsxs)('div', {
             className: j.stepBody,
             children: [
@@ -151,7 +102,7 @@ function B(e) {
                           'TEST_MODE'
                       )
                     : null,
-                (0, C.yE)(P.flags, M.udG.EMBEDDED) && Q === h.O.ERROR
+                (0, C.yE)(G.flags, M.udG.EMBEDDED) && Q === h.O.ERROR
                     ? (0, r.jsx)(
                           f.Z,
                           {
@@ -164,8 +115,8 @@ function B(e) {
                           'DEV_SHELF_ERROR'
                       )
                     : null,
-                (0, r.jsx)(G, {
-                    application: P,
+                (0, r.jsx)(U, {
+                    application: G,
                     sku: er,
                     isEmbeddedIAP: K
                 }),
@@ -176,7 +127,7 @@ function B(e) {
                     children: J ? k.NW.string(k.t.PEjaCw) : k.NW.string(k.t.sail9P)
                 }),
                 null != ea
-                    ? (0, r.jsx)(U, {
+                    ? (0, r.jsx)(x.B, {
                           sku: er,
                           skuPricePreview: ea
                       })
@@ -185,15 +136,15 @@ function B(e) {
                             type: c.$jN.Type.WANDERING_CUBES,
                             className: j.invoiceSpinner
                         })
-                      : (0, r.jsx)(v.PO, {
+                      : (0, r.jsx)(b.PO, {
                             className: j.invoice,
-                            children: ep
+                            children: e_
                                 ? (0, r.jsx)(E.C, {
                                       sku: er,
                                       value: null,
                                       className: j.subscriptionCostRow
                                   })
-                                : (0, r.jsx)(v.R$, {
+                                : (0, r.jsx)(b.R$, {
                                       label: er.name,
                                       value: null,
                                       className: j.subscriptionCostRow
@@ -206,20 +157,20 @@ function B(e) {
                             tag: c.RB0.H5,
                             children: k.NW.string(k.t.mmDvV1)
                         }),
-                        (0, r.jsx)(p.Z, {
-                            paymentSources: Object.values(Z),
-                            selectedPaymentSourceId: F,
+                        (0, r.jsx)(_.Z, {
+                            paymentSources: Object.values(F),
+                            selectedPaymentSourceId: V,
                             onChange: o,
                             onPaymentSourceAdd: g,
                             hidePersonalInformation: el
                         })
                     ]
                 }),
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(v.Z, {
                     isActive: t,
                     ref: n,
-                    children: (0, r.jsx)(_.Z, {
-                        onChange: V,
+                    children: (0, r.jsx)(p.Z, {
+                        onChange: Z,
                         forceShow: !0,
                         showWithdrawalWaiver: ec,
                         disabled: eu,

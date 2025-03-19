@@ -8,16 +8,14 @@ var r = n(200651),
 let c = n(17702),
     u = n(647894),
     d = (e) => {
-        let { shouldUseThemeColor: t = !1, loading: n, className: i, imgClassName: d } = e,
+        let { customSize: t, shouldUseThemeColor: n = !1, loading: i, className: d } = e,
             f = (0, s.ZP)(),
-            _ = t && (0, a.ap)(f) ? u : c;
-        return (0, r.jsx)('div', {
-            role: 'img',
-            className: o()(l.orbIconContainer, i, { [l.loading]: n }),
-            children: (0, r.jsx)('img', {
-                className: o()(l.orbIconSVG, d),
-                src: _,
-                alt: 'Orb Icon'
-            })
+            _ = n && (0, a.ap)(f) ? u : c,
+            p = void 0 !== t ? { height: t } : void 0;
+        return (0, r.jsx)('img', {
+            className: o()(l.orbIconSVG, d, { [l.loading]: i }),
+            src: _,
+            alt: 'Orb Icon',
+            style: p
         });
     };
