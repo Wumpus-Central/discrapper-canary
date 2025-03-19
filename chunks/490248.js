@@ -1,79 +1,76 @@
 n.d(t, {
-    L7: () => m,
-    r4: () => g
+    L7: () => _,
+    r4: () => p
 }),
     n(266796);
 var r = n(200651),
     i = n(120356),
     o = n.n(i),
-    a = n(568611),
-    s = n(793030),
-    l = n(499997),
-    c = n(483444),
-    u = n(787528),
-    d = n(981631),
-    f = n(215023),
-    _ = n(388032),
-    p = n(607558);
-let h = (e) => {
+    a = n(793030),
+    s = n(499997),
+    l = n(483444),
+    c = n(787528),
+    u = n(388032),
+    d = n(607558);
+let f = (e) => {
         let { assetComponent: t, tooltipWordmarkComponent: n, children: i } = e;
         return (0, r.jsxs)('div', {
-            className: p.tooltipContainer,
+            className: d.tooltipContainer,
             children: [
                 t,
                 (0, r.jsx)('div', {
-                    className: p.tooltipWordmarkContainer,
+                    className: d.tooltipWordmarkContainer,
                     children: n
                 }),
                 i
             ]
         });
     },
-    m = (e) => {
+    _ = (e) => {
         let { profileBadge: t, tenureBadge: n } = e;
-        return (0, r.jsxs)(h, {
+        return (0, r.jsxs)(f, {
             assetComponent: (0, r.jsx)('img', {
-                src: (0, u.J)(n.id),
+                src: (0, c.J)(n.id),
                 alt: ''
             }),
-            tooltipWordmarkComponent: (0, r.jsx)(c.Z, {
+            tooltipWordmarkComponent: (0, r.jsx)(l.Z, {
                 width: 56,
-                className: p.tooltipWordmark
+                className: d.tooltipWordmark
             }),
             children: [
-                (0, r.jsx)(s.X6, {
+                (0, r.jsx)(a.X6, {
                     variant: 'heading-xl/extrabold',
-                    children: _.NW.string(n.nameUnformatted)
+                    children: u.NW.string(n.nameUnformatted)
                 }),
-                (0, r.jsx)(s.xv, {
+                (0, r.jsx)(a.xv, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
-                    className: p.tooltipDescription,
+                    className: d.tooltipDescription,
                     children: t.description
                 })
             ]
         });
     },
-    g = (e) => {
-        let { showLinkCta: t = !1 } = e;
-        return (0, r.jsxs)(h, {
-            assetComponent: (0, r.jsx)(l.Z, { className: p.orbBadgeAsset }),
-            tooltipWordmarkComponent: (0, r.jsx)(s.X6, {
+    p = (e) => {
+        let { showSubtext: t = !1 } = e;
+        return (0, r.jsxs)(f, {
+            assetComponent: (0, r.jsx)(s.Z, { className: d.orbBadgeAsset }),
+            tooltipWordmarkComponent: (0, r.jsx)(a.X6, {
                 variant: 'heading-md/extrabold',
-                className: o()(p.tooltipWordmark, p.orbBadge),
-                children: _.NW.string(_.t.ElYQFR)
+                className: o()(d.tooltipWordmark, d.orbBadge),
+                children: u.NW.string(u.t.ElYQFR)
             }),
             children: [
-                (0, r.jsx)(s.X6, {
+                (0, r.jsx)(a.X6, {
                     variant: 'heading-xl/extrabold',
-                    className: t ? void 0 : p.orbHeaderWithSpacing,
-                    children: _.NW.string(_.t.lTHkqa)
+                    className: t ? void 0 : d.orbHeaderWithSpacing,
+                    children: u.NW.string(u.t.lTHkqa)
                 }),
                 t
-                    ? (0, r.jsx)(a.rU, {
-                          to: { pathname: d.Z5c.COLLECTIBLES_SHOP_WITH_TAB(f.AW.ORBS) },
-                          className: p.orbLink,
-                          children: _.NW.string(_.t['o/NCfn'])
+                    ? (0, r.jsx)(a.xv, {
+                          variant: 'text-xs/normal',
+                          className: d.orbSubtext,
+                          children: u.NW.string(u.t.MEV0GB)
                       })
                     : void 0
             ]
