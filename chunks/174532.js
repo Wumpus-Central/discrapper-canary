@@ -62,6 +62,14 @@ class a {
     stop() {
         this.speaking.stop(), this.listening.stop(), this.participation.stop(), this.connected.stop(), this.muted.stop(), this.voiceFilterSpeaking.forEach((e) => e.stop());
     }
+    getVoiceFilterSpeakingDurationMs() {
+        return new Map(
+            [...this.voiceFilterSpeaking.entries()].map((e) => {
+                let [t, n] = e;
+                return [t, n.elapsed().asMilliseconds()];
+            })
+        );
+    }
     getDurationStats() {
         return {
             duration_listening_ms: this.listening.elapsed().asMilliseconds(),

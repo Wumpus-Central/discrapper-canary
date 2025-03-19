@@ -217,6 +217,9 @@ class eg extends f.Z {
     getDurationSeconds() {
         return this.getDuration() / 1000;
     }
+    getVoiceFilterSpeakingDurationMs() {
+        return null == this._voiceDuration ? null : this._voiceDuration.getVoiceFilterSpeakingDurationMs();
+    }
     getPacketStats() {
         var e;
         return null === (e = this._voiceQuality) || void 0 === e ? void 0 : e.getPacketStats();

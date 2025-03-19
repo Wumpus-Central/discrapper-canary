@@ -32,7 +32,9 @@ let c = {
         [i.z.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0,
         [i.z.Q1_2025_REVERSE_TRIAL]: 0,
         [i.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER]: 0,
-        [i.z.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0
+        [i.z.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0,
+        [i.z.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0,
+        [i.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0
     },
     u = a.Z.Millis.DAY;
 function d(e) {

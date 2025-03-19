@@ -24,7 +24,7 @@ var r,
     m = n(591759),
     g = n(981631),
     E = n(413135).Buffer;
-function v(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -112,7 +112,7 @@ var x = (function (e) {
         return (e.VIDEO = 'VIDEO'), (e.MUTE = 'MUTE'), (e.DEAFEN = 'DEAFEN'), (e.DISCONNECT = 'DISCONNECT'), e;
     })({});
 function k(e) {
-    var t, n, r, i, o, a, s, l;
+    var t, n, r, i, o, a, s, l, c;
     return {
         id: C[null !== (t = e.id) && void 0 !== t ? t : ''],
         nativeProcessObserverId: parseInt(null !== (n = e.id) && void 0 !== n ? n : '', 10),
@@ -130,7 +130,8 @@ function k(e) {
         pid: e.pid,
         pidPath: null !== (a = e.pidPath) && void 0 !== a ? a : [],
         windowHandle: null !== (s = e.windowHandle) && void 0 !== s ? s : null,
-        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : _.Jx.UNKNOWN
+        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : _.Jx.UNKNOWN,
+        isLauncher: null !== (c = e.isLauncher) && void 0 !== c && c
     };
 }
 let j = {
@@ -179,7 +180,7 @@ let j = {
                     let t = ++n;
                     return (
                         null != e.id && (C[t] = e.id),
-                        O(b({}, e), {
+                        O(v({}, e), {
                             cmdline: e.cmdLine,
                             id: t
                         })
@@ -198,7 +199,7 @@ let j = {
     setGameCandidateOverrides(e) {
         this.getDiscordUtils().setGameCandidateOverrides(
             e.map((e) =>
-                O(b({}, e), {
+                O(v({}, e), {
                     gameId: e.id,
                     gameName: e.name
                 })
@@ -521,7 +522,7 @@ let j = {
                 token: a,
                 chunkInterval: s,
                 contentType: l
-            } = b(
+            } = v(
                 {
                     maxBps: 8000,
                     chunkInterval: 50,
@@ -558,7 +559,7 @@ let j = {
         let t = this.getCrashReporterMetadata(),
             n = I.app.getReleaseChannel(),
             r = null == t ? void 0 : t.sentry;
-        return this.getDiscordUtils().submitLiveCrashReport(n, b({}, r, e));
+        return this.getDiscordUtils().submitLiveCrashReport(n, v({}, r, e));
     },
     crash(e) {
         let t = this.getDiscordUtils().crash;
