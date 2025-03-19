@@ -1,7 +1,7 @@
 n.d(t, {
-    Ff: () => p,
+    Ff: () => _,
     GS: () => g,
-    KH: () => _,
+    KH: () => p,
     Nm: () => E,
     RI: () => m,
     Up: () => h,
@@ -17,19 +17,29 @@ var r = n(544891),
     u = n(901757),
     d = n(981631);
 async function f() {
-    let e = await r.tn.get({
-        url: d.ANM.VIDEO_FILTER_ASSETS,
-        rejectWithError: !1
-    });
-    return (
-        i.Z.dispatch({
-            type: 'VIDEO_FILTER_ASSETS_FETCH_SUCCESS',
-            assets: e.body
-        }),
-        e
-    );
+    try {
+        let e = await r.tn.get({
+            url: d.ANM.VIDEO_FILTER_ASSETS,
+            rejectWithError: !1
+        });
+        return (
+            i.Z.dispatch({
+                type: 'VIDEO_FILTER_ASSETS_FETCH_SUCCESS',
+                assets: e.body
+            }),
+            e
+        );
+    } catch (e) {
+        throw (
+            (i.Z.dispatch({
+                type: 'VIDEO_FILTER_ASSETS_FETCH_FAILURE',
+                error: e
+            }),
+            e)
+        );
+    }
 }
-async function p(e, t, n) {
+async function _(e, t, n) {
     try {
         let o = await r.tn.post({
             url: d.ANM.VIDEO_FILTER_ASSETS,
@@ -51,7 +61,7 @@ async function p(e, t, n) {
         throw new u.Z(e);
     }
 }
-async function _(e) {
+async function p(e) {
     await r.tn.del({
         url: d.ANM.VIDEO_FILTER_ASSET(e.id),
         rejectWithError: !1

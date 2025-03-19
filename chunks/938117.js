@@ -13,10 +13,10 @@ var r = n(200651),
     p = n(898531),
     h = n(636188),
     f = n(678916),
-    b = n(981631),
-    N = n(869783),
-    x = n(388032),
-    _ = n(736395);
+    x = n(981631),
+    b = n(869783),
+    N = n(388032),
+    _ = n(215232);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,8 +65,11 @@ function C(e) {
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = i.useState(null),
         P = (0, p.Z)(),
-        R = c.ZP.canUseCustomBackgrounds(I),
-        D = (0, s.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
+        R = c.ZP.canUseCustomBackgrounds(I);
+    i.useEffect(() => {
+        (0, d.XV)();
+    }, []);
+    let D = (0, s.cj)([u.Z], () => (R ? u.Z.videoFilterAssets : {})),
         Z = i.useMemo(() => Object.values(D).filter((e) => e.type === f.xV.BACKGROUND), [D]),
         w = (0, l.O)(),
         k = {
@@ -87,12 +90,12 @@ function C(e) {
             (0, g.FU)(e, v, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(x.NW.string(x.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location });
+                    A(N.NW.string(N.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location });
                 });
     };
     return P
         ? (0, r.jsxs)(a.xJW, {
-              title: x.NW.string(x.t.lZTUPj),
+              title: N.NW.string(N.t.lZTUPj),
               className: T,
               children: [
                   null != y
@@ -114,7 +117,7 @@ function C(e) {
                                       e,
                                       j(E({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: j(E({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: j(E({}, w.location), { object: x.qAy.BUTTON_CTA })
                                       })
                                   );
                           });
@@ -124,7 +127,7 @@ function C(e) {
                           return new Promise(async (r) => {
                               try {
                                   let r = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  L(r), (0, m.g5)(r, t.type === N.m.MP4, n), A(null);
+                                  L(r), (0, m.g5)(r, t.type === b.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }
