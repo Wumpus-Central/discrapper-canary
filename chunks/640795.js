@@ -1,4 +1,4 @@
-n.d(t, { q: () => h }), n(411104);
+n.d(t, { q: () => p }), n(411104);
 var r = n(956067),
     i = n(544891),
     o = n(570140),
@@ -9,12 +9,11 @@ let c = 'https://cdn.discordapp.com/bad-domains/updated_hashes.json',
     u = 'https://cdn.discordapp.com/bad-domains/current_revision.txt',
     { WEBAPP_ENDPOINT: d } = window.GLOBAL_ENV,
     f = 'https:'.concat(d, '/bad-hash-delta'),
-    p = 15,
     _ = new a.Z('FetchBlockedDomain');
-function h() {
-    return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', m);
+function p() {
+    return r.Z.timeAsync('\uD83D\uDCBE', 'fetchBlockedDomainList', h);
 }
-async function m() {
+async function h() {
     _.verbose('Fetching blocked domain list');
     try {
         let e;
@@ -26,11 +25,13 @@ async function m() {
                     let e = null === n ? 'null' : 'greater than server revision number';
                     throw Error('Client revision number is ' + e);
                 }
-                if (t - n > p) throw Error('Client revision number is more than '.concat(p, ' behind the server revision number'));
                 let o = (
                     await i.tn.get({
                         url: f,
-                        query: { revision: n },
+                        query: {
+                            revision: n,
+                            targetRevision: t
+                        },
                         rejectWithError: !1
                     })
                 ).body;
