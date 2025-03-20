@@ -14,31 +14,31 @@ var r = n(200651),
     h = n(222940),
     g = n(490897),
     _ = n(388032),
-    b = n(575219);
+    b = n(806252);
 function v(e) {
-    let { onOpen: t, onClose: n, className: v } = e,
-        y = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
-        x = (0, l.Q3)('RecentsButton'),
-        O = i.useRef(null),
-        E = (0, a.e7)([p.ZP], () => (null == y ? void 0 : y.id) != null && p.ZP.getMentionCount(y.id, g.W.NOTIFICATION_CENTER) > 0),
-        { enabled: j } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        N = (0, a.e7)([s.Z], () => j && s.Z.getUnseenInviteCount() > 0),
-        C = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE);
+    let { onOpen: t, onClose: n, className: v, 'data-jump-section': y } = e,
+        x = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        E = (0, l.Q3)('RecentsButton'),
+        j = i.useRef(null),
+        O = (0, a.e7)([p.ZP], () => (null == x ? void 0 : x.id) != null && p.ZP.getMentionCount(x.id, g.W.NOTIFICATION_CENTER) > 0),
+        { enabled: N } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        C = (0, a.e7)([s.Z], () => N && s.Z.getUnseenInviteCount() > 0),
+        I = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE);
     return (0, r.jsx)(f.k, {
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: E },
+        badgeState: { badgeForYou: O },
         popoutPosition: 'bottom',
         popoutAlign: 'right',
         children: (e, t, n, i) => {
             var a, l;
             return (0, r.jsxs)('div', {
-                ref: O,
+                ref: j,
                 className: b.recentsIcon,
                 children: [
-                    j &&
+                    N &&
                         (0, r.jsx)(h.Z, {
-                            inboxIconRef: O,
+                            inboxIconRef: j,
                             recentsPopoutShown: t
                         }),
                     (0, r.jsx)(u.U, {
@@ -75,11 +75,12 @@ function v(e) {
                                     className: v,
                                     onClick: e,
                                     icon: o.xx7,
-                                    iconSize: x ? C : void 0,
+                                    iconSize: E ? I : void 0,
                                     'aria-label': _.NW.string(_.t.GSmTKC),
                                     tooltip: t ? null : _.NW.string(_.t.GSmTKC),
                                     selected: t,
-                                    showBadge: E || N || i
+                                    showBadge: O || C || i,
+                                    'data-jump-section': y
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))

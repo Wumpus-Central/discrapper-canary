@@ -154,19 +154,19 @@ let eX = eB.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     eQ = 3 * ew.Z.Millis.SECOND,
     e$ = 30 * ew.Z.Millis.DAY;
 function e0(e) {
-    let { speaking: t, streaming: n, currentUser: s, status: l, handleMouseLeave: o, renderNameTag: c, nameplate: d, hovered: u } = e,
-        m = (0, F.Q3)('RTC Avatar'),
-        { coloredIconsEnabled: g } = (0, em.Z)({ location: 'RTC Avatar' }),
-        p = (0, R.Z)(null == s ? void 0 : s.avatarDecoration),
-        h = (0, eR.NZ)({
-            avatarDecoration: p,
+    let { speaking: t, streaming: n, currentUser: s, status: l, handleMouseLeave: o, renderNameTag: c, nameplate: d, hovered: u, 'data-jump-section': m } = e,
+        g = (0, F.Q3)('RTC Avatar'),
+        { coloredIconsEnabled: p } = (0, em.Z)({ location: 'RTC Avatar' }),
+        h = (0, R.Z)(null == s ? void 0 : s.avatarDecoration),
+        x = (0, eR.NZ)({
+            avatarDecoration: h,
             size: (0, D.y9)(f.EFr.SIZE_32)
         }),
-        x = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
+        N = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
         {
-            updateOpenPopoutRef: N,
-            highlightBadge: b,
-            setHighlightBadge: E
+            updateOpenPopoutRef: b,
+            highlightBadge: E,
+            setHighlightBadge: j
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -198,7 +198,7 @@ function e0(e) {
                 }
             );
         })(),
-        j = (0, J.A)(d);
+        C = (0, J.A)(d);
     return null == s
         ? null
         : (0, r.jsx)(_.Z, {
@@ -211,7 +211,7 @@ function e0(e) {
                           className: ez.accountProfilePopoutWrapper,
                           children: (0, r.jsx)(q.Z, {
                               currentUser: s,
-                              highlightBadge: b,
+                              highlightBadge: E,
                               onClose: () => {
                                   null == t || t();
                               },
@@ -225,7 +225,7 @@ function e0(e) {
                   spacing: 14,
                   fixed: !0,
                   onRequestClose: () => {
-                      o(), E(void 0);
+                      o(), j(void 0);
                   },
                   preload: () =>
                       (0, ec.Z)(s, void 0, {
@@ -233,12 +233,13 @@ function e0(e) {
                           withMutualFriends: !1
                       }),
                   children: (e) => (
-                      N(e),
+                      b(e),
                       (0, r.jsxs)(
                           f.P3F,
-                          eq(eK({ style: j }, e), {
+                          eq(eK({ style: C }, e), {
                               'aria-label': eH.NW.string(eH.t['3Uj+2t']),
-                              className: a()(ez.avatarWrapper, !m && g && ez.experiment, { [ez.plated]: null != d }),
+                              'data-jump-section': g ? m : void 0,
+                              className: a()(ez.avatarWrapper, !g && p && ez.experiment, { [ez.plated]: null != d }),
                               children: [
                                   (0, r.jsx)($.Z, {
                                       nameplate: d,
@@ -246,9 +247,9 @@ function e0(e) {
                                       placement: Q.i.ACCOUNT
                                   }),
                                   (0, r.jsx)(eX, {
-                                      size: m ? f.EFr['SIZE_'.concat(x)] : f.EFr.SIZE_32,
-                                      src: s.getAvatarURL(void 0, m ? x - 4 : 32, !1),
-                                      avatarDecoration: h,
+                                      size: g ? f.EFr['SIZE_'.concat(N)] : f.EFr.SIZE_32,
+                                      src: s.getAvatarURL(void 0, g ? N - 4 : 32, !1),
+                                      avatarDecoration: x,
                                       'aria-label': s.username,
                                       status: n ? eG.Skl.STREAMING : l,
                                       isSpeaking: t,
@@ -337,31 +338,33 @@ class e1 extends i.PureComponent {
                 })
               : l;
     }
-    renderAvatarWithPopout() {
-        let { hovered: e } = this.state;
+    renderAvatarWithPopout(e) {
+        let { 'data-jump-section': t } = e,
+            { hovered: n } = this.state;
         return (0, r.jsx)(
             e0,
             eq(eK({}, this.props), {
-                hovered: e,
+                hovered: n,
                 handleMouseLeave: this.handleMouseLeave,
-                renderNameTag: this.renderNameTag
+                renderNameTag: this.renderNameTag,
+                'data-jump-section': t
             })
         );
     }
-    renderNameZone() {
-        let { currentUser: e, dismissibleContents: t } = this.props;
-        return null == e
+    renderNameZone(e) {
+        let { currentUser: t, dismissibleContents: n } = this.props;
+        return null == t
             ? null
             : (0, r.jsx)(z.ZP, {
-                  contentTypes: t.avatar,
-                  children: (e) => {
-                      let { visibleContent: t, markAsDismissed: n } = e;
-                      return t === c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP
+                  contentTypes: n.avatar,
+                  children: (t) => {
+                      let { visibleContent: n, markAsDismissed: i } = t;
+                      return n === c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP
                           ? (0, r.jsx)(V.Z, {
-                                markAsDismissed: n,
-                                children: () => this.renderAvatarWithPopout()
+                                markAsDismissed: i,
+                                children: () => this.renderAvatarWithPopout(e)
                             })
-                          : this.renderAvatarWithPopout();
+                          : this.renderAvatarWithPopout(e);
                   }
               });
     }
@@ -369,31 +372,34 @@ class e1 extends i.PureComponent {
         let { currentUser: e } = this.props;
         return null == e
             ? null
-            : (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      (0, r.jsxs)('div', {
-                          className: ez.container,
-                          onMouseEnter: this.handleMouseEnter,
-                          onMouseLeave: this.handleMouseLeave,
+            : (0, r.jsx)(f.Wdt, {
+                  children: (e) =>
+                      (0, r.jsxs)(r.Fragment, {
                           children: [
-                              this.renderNameZone(),
-                              (0, r.jsx)(
-                                  e2,
-                                  eq(eK({}, this.props, this.state), {
-                                      handleMouseEnterMute: this.handleMouseEnterMute,
-                                      handleMouseLeaveMute: this.handleMouseLeaveMute,
-                                      handleToggleSelfMute: this.handleToggleSelfMute,
-                                      handleToggleSelfDeaf: this.handleToggleSelfDeaf,
-                                      handleInputAudioContextMenu: this.handleInputAudioContextMenu,
-                                      handleOutputAudioContextMenu: this.handleOutputAudioContextMenu,
-                                      handleOpenAccountSettings: this.handleOpenAccountSettings,
-                                      handleOpenSettingsContextMenu: this.handleOpenSettingsContextMenu
-                                  })
-                              )
+                              (0, r.jsxs)('div', {
+                                  className: ez.container,
+                                  onMouseEnter: this.handleMouseEnter,
+                                  onMouseLeave: this.handleMouseLeave,
+                                  children: [
+                                      this.renderNameZone(e),
+                                      (0, r.jsx)(
+                                          e2,
+                                          eq(eK({}, this.props, this.state), {
+                                              handleMouseEnterMute: this.handleMouseEnterMute,
+                                              handleMouseLeaveMute: this.handleMouseLeaveMute,
+                                              handleToggleSelfMute: this.handleToggleSelfMute,
+                                              handleToggleSelfDeaf: this.handleToggleSelfDeaf,
+                                              handleInputAudioContextMenu: this.handleInputAudioContextMenu,
+                                              handleOutputAudioContextMenu: this.handleOutputAudioContextMenu,
+                                              handleOpenAccountSettings: this.handleOpenAccountSettings,
+                                              handleOpenSettingsContextMenu: this.handleOpenSettingsContextMenu
+                                          })
+                                      )
+                                  ]
+                              }),
+                              (0, r.jsx)(K.Z, {})
                           ]
-                      }),
-                      (0, r.jsx)(K.Z, {})
-                  ]
+                      })
               });
     }
     constructor(...e) {

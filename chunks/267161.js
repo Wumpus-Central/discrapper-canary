@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
-        default: () => k,
-        useAppSidebarState: () => R
+        default: () => U,
+        useAppSidebarState: () => k
     });
 var r = n(200651),
     i = n(192379),
     l = n(512969),
-    a = n(15729),
-    o = n(442837),
+    o = n(15729),
+    a = n(442837),
     s = n(481060),
     c = n(230711),
     u = n(174556),
@@ -35,13 +35,56 @@ var r = n(200651),
     x = n(388032),
     w = n(917566),
     L = n(963981);
-let R = (0, a.U)(() => ({ isOpen: !0 }));
-function D() {
+function R(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function D(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let k = (0, o.U)(() => ({ isOpen: !0 }));
+function M() {
     let e;
     let t = (0, l.TH)(),
-        n = (0, o.e7)([I.Z], () => I.Z.getChannelId()),
-        i = (0, o.e7)([C.Z], () => C.Z.getGuildId()),
-        a = (0, o.e7)([v.Z], () => v.Z.getChannel(n), [n]),
+        n = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
+        i = (0, a.e7)([C.Z], () => C.Z.getGuildId()),
+        o = (0, a.e7)([v.Z], () => v.Z.getChannel(n), [n]),
         c = y.Z.getGuild(i),
         u = (0, h.Z)(),
         d = null;
@@ -56,7 +99,7 @@ function D() {
                         className: L.guildIcon
                     })),
               (e = c.name))
-            : null != a && (a.isDM() || a.isGroupDM())
+            : null != o && (o.isDM() || o.isGroupDM())
               ? ((e = x.NW.string(x.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
               : t.pathname.startsWith(A.Z5c.GLOBAL_DISCOVERY)
                 ? ((e = x.NW.string(x.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
@@ -82,64 +125,70 @@ function D() {
             })
     );
 }
-let k = i.memo(function () {
+let U = i.memo(function () {
     i.useLayoutEffect(() => {
         T.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
     let e = (0, p.TH)('AppTitleBar'),
-        t = !R((e) => e.isOpen) && e,
+        t = !k((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
         T.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
-    let l = (0, o.e7)([N.Z], () => (N.Z.darkSidebar ? A.BRd.DARK : void 0));
-    return (0, o.e7)([S.Z, E.Z], () => (0, P.rB)())
+    let l = (0, a.e7)([N.Z], () => (N.Z.darkSidebar ? A.BRd.DARK : void 0));
+    return (0, a.e7)([S.Z, E.Z], () => (0, P.rB)())
         ? null
-        : (0, r.jsx)(s.f6W, {
-              theme: l,
+        : (0, r.jsx)(s.Wdt, {
               children: (e) =>
-                  (0, r.jsx)(j.T, {
-                      className: e,
-                      leading:
-                          t &&
-                          (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  (0, r.jsx)(s.P3F, {
-                                      className: L.button,
-                                      onClick: () => {
-                                          R.setState({ isOpen: !R.getState().isOpen });
-                                      },
-                                      children: (0, r.jsx)(M, {})
+                  (0, r.jsx)(s.f6W, {
+                      theme: l,
+                      children: (i) =>
+                          (0, r.jsx)(j.T, {
+                              className: i,
+                              leading:
+                                  t &&
+                                  (0, r.jsxs)(r.Fragment, {
+                                      children: [
+                                          (0, r.jsx)(
+                                              s.P3F,
+                                              D(R({}, e), {
+                                                  className: L.button,
+                                                  onClick: () => {
+                                                      k.setState({ isOpen: !k.getState().isOpen });
+                                                  },
+                                                  children: (0, r.jsx)(G, {})
+                                              })
+                                          ),
+                                          (0, r.jsx)(s.P3F, {
+                                              className: L.button,
+                                              onClick: () => {
+                                                  c.Z.open(A.oAB.ACCOUNT);
+                                              },
+                                              children: (0, r.jsx)(s.ewm, {
+                                                  size: 'xs',
+                                                  color: 'currentColor'
+                                              })
+                                          })
+                                      ]
                                   }),
-                                  (0, r.jsx)(s.P3F, {
-                                      className: L.button,
-                                      onClick: () => {
-                                          c.Z.open(A.oAB.ACCOUNT);
-                                      },
-                                      children: (0, r.jsx)(s.ewm, {
-                                          size: 'xs',
-                                          color: 'currentColor'
-                                      })
-                                  })
-                              ]
-                          }),
-                      title: (0, r.jsx)(D, {}),
-                      trailing: (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(f.Z, { className: L.button }),
-                              (0, r.jsx)(d.Z, {
-                                  canShowReminder: !0,
-                                  className: L.button
-                              }),
-                              (0, r.jsx)(O.Z, { className: L.button }),
-                              n ? (0, r.jsx)(b.Z, { className: L.button }) : (0, r.jsx)(m.Z, { className: L.button }),
-                              (0, r.jsx)(_.Z, { className: L.button })
-                          ]
-                      })
+                              title: (0, r.jsx)(M, {}),
+                              trailing: (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)(f.Z, { className: L.button }),
+                                      (0, r.jsx)(d.Z, {
+                                          canShowReminder: !0,
+                                          className: L.button
+                                      }),
+                                      (0, r.jsx)(O.Z, D(R({}, t ? {} : e), { className: L.button })),
+                                      n ? (0, r.jsx)(b.Z, { className: L.button }) : (0, r.jsx)(m.Z, { className: L.button }),
+                                      (0, r.jsx)(_.Z, { className: L.button })
+                                  ]
+                              })
+                          })
                   })
           });
 });
-function M() {
+function G() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: L.icon,
