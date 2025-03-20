@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => T });
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -6,25 +6,25 @@ var r = n(200651),
     l = n(91192),
     o = n(442837),
     c = n(780384),
-    d = n(481060),
-    u = n(726542),
-    m = n(100527),
-    p = n(933557),
-    g = n(184301),
-    h = n(347475),
-    f = n(210887),
-    b = n(598077),
-    x = n(699516),
-    j = n(594174),
-    N = n(259580),
-    v = n(51144),
-    _ = n(426563),
-    O = n(909746),
-    y = n(501801),
-    C = n(981631),
-    I = n(388032),
-    E = n(677811);
-function S(e) {
+    A = n(481060),
+    d = n(726542),
+    u = n(100527),
+    g = n(933557),
+    f = n(184301),
+    m = n(347475),
+    p = n(210887),
+    h = n(598077),
+    C = n(699516),
+    b = n(594174),
+    v = n(259580),
+    x = n(51144),
+    N = n(426563),
+    j = n(909746),
+    E = n(501801),
+    I = n(981631),
+    O = n(388032),
+    y = n(152041);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,228 +67,216 @@ function T(e, t) {
         e
     );
 }
-class P extends i.PureComponent {
+class B extends i.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
         return (0, r.jsxs)('span', {
             onContextMenu: t,
-            className: E.userHook,
+            className: y.userHook,
             children: [
-                (0, r.jsx)(d.Text, {
+                (0, r.jsx)(A.Text, {
                     variant: 'text-md/normal',
-                    children: v.ZP.getUserTag(e, { mode: 'username' })
+                    children: x.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
-                    (0, r.jsxs)(d.Text, {
+                    (0, r.jsxs)(A.Text, {
                         variant: 'text-xs/normal',
-                        className: E.discrim,
+                        className: y.discrim,
                         children: ['#', e.discriminator]
                     })
             ]
         });
     }
 }
-class w extends i.PureComponent {
-    hasChangesToRender() {
-        let { log: e } = this.props,
-            { changes: t } = e;
-        return (e.actionType !== C.vB8.DELETE || e.action === C.rsA.MEMBER_BAN_ADD || e.action === C.rsA.MEMBER_KICK || e.action === C.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, y.xO)(e, t));
-    }
-    renderTitle() {
-        let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: i } = this.props,
-            { user: s, target: a, options: l } = e,
-            o = O.N5(e);
-        return null != o
-            ? (0, r.jsx)('div', {
-                  className: E.overflowEllipsis,
-                  children: I.NW.format(o, {
-                      user: s,
-                      target: a.toString(),
-                      userHook: (n, i) => {
-                          if (null != e.user)
-                              return (0, r.jsx)(
-                                  P,
-                                  {
-                                      user: e.user,
-                                      onContextMenu: t
-                                  },
-                                  i
-                              );
-                          if (null != e.options.integration_type) {
-                              var s;
-                              let t = u.Z.get(e.options.integration_type);
-                              return null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : I.NW.string(I.t['n+olu7']);
-                          }
-                          return I.NW.string(I.t['30mdIy']);
-                      },
-                      targetHook: (t, i) =>
-                          e.targetType === C.KFR.USER && e.target instanceof b.Z
-                              ? (0, r.jsx)(
-                                    P,
-                                    {
-                                        user: e.target,
-                                        onContextMenu: n
-                                    },
-                                    i
-                                )
-                              : (0, r.jsx)(
-                                    'span',
-                                    {
-                                        onContextMenu: n,
-                                        children: t
-                                    },
-                                    i
-                                ),
-                      count: l.count,
-                      channel: null == l.channel || 'string' == typeof l.channel ? l.channel : (0, p.F6)(l.channel, j.default, x.Z, !0),
-                      channelHook: (e, t) =>
-                          (0, r.jsx)(
-                              'span',
-                              {
-                                  onContextMenu: i,
-                                  children: e
-                              },
-                              t
-                          ),
-                      subtarget: l.subtarget
-                  })
+let D = i.forwardRef((e, t) => {
+    let n;
+    let { log: i, className: s, expanded: o, guildId: p, guild: x, onChannelContextMenu: D, onContentClick: T, onHeaderClick: S, onTargetContextMenu: L, onUserContextMenu: R, theme: Q } = e,
+        Z = (function () {
+            let { changes: e } = i;
+            return (i.actionType !== I.vB8.DELETE || i.action === I.rsA.MEMBER_BAN_ADD || i.action === I.rsA.MEMBER_KICK || i.action === I.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, E.xO)(i, e));
+        })(),
+        W = y.headerDefault;
+    o ? (W = y.headerExpanded) : Z && (W = y.headerClickable);
+    let k = i.timestampStart.calendar(),
+        M = i.timestampEnd.calendar();
+    n =
+        k === M
+            ? (0, r.jsx)(A.Text, {
+                  className: y.timestamp,
+                  variant: 'text-sm/normal',
+                  children: k
               })
-            : null;
-    }
-    renderChangeSummary() {
-        let { expanded: e, log: t, guild: n, onContentClick: i } = this.props;
-        return e && null != n
-            ? (0, r.jsx)(y.tP, {
-                  log: t,
-                  guild: n,
-                  onContentClick: i
-              })
-            : null;
-    }
-    renderEntryAvatar() {
-        let {
-                props: { log: e, guildId: t, theme: n }
-            } = this,
-            {
-                user: i,
-                userId: s,
-                options: { integration_type: a }
-            } = e;
-        if (null != i && null != s)
-            return (0, r.jsx)(d.yRy, {
-                preload: () => (0, g.Z)(s, i.getAvatarURL(t, 80), { guildId: t }),
-                renderPopout: (e) =>
-                    (0, r.jsx)(
-                        h.Z,
-                        T(S({}, e), {
-                            userId: s,
-                            guildId: t,
-                            newAnalyticsLocations: [m.Z.AVATAR]
-                        })
-                    ),
-                children: (n) => {
-                    var i;
-                    return (0, r.jsx)(
-                        d.qEK,
-                        T(S({}, n), {
-                            onClick: (e) => {
-                                e.stopPropagation(), n.onClick(e);
-                            },
-                            className: E.avatar,
-                            src: e.action === C.rsA.AUTO_MODERATION_BLOCK_MESSAGE || e.action === C.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || e.action === C.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || e.action === C.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null === (i = e.user) || void 0 === i ? void 0 : i.getAvatarURL(t, 40),
-                            'aria-hidden': !0,
-                            size: d.EFr.SIZE_40
-                        })
-                    );
-                }
-            });
-        if (null != a) {
-            let e = u.Z.get(a);
-            if (null != e) {
-                let t = (0, c.wj)(n) ? e.icon.darkSVG : e.icon.lightSVG;
-                return (0, r.jsx)(d.qEK, {
-                    className: E.avatar,
-                    src: t,
-                    'aria-hidden': !0,
-                    size: d.EFr.SIZE_40
-                });
-            }
-        }
-        return null;
-    }
-    render() {
-        let e;
-        let { log: t, className: n, expanded: i, onHeaderClick: s } = this.props,
-            o = this.hasChangesToRender(),
-            c = E.headerDefault;
-        i ? (c = E.headerExpanded) : o && (c = E.headerClickable);
-        let u = t.timestampStart.calendar(),
-            m = t.timestampEnd.calendar();
-        e =
-            u === m
-                ? (0, r.jsx)(d.Text, {
-                      className: E.timestamp,
-                      variant: 'text-sm/normal',
-                      children: u
-                  })
-                : (0, r.jsxs)(d.Text, {
-                      className: E.timestamp,
-                      variant: 'text-sm/normal',
-                      children: [u, '\u2014', m]
-                  });
-        let p = o ? s : C.dG4;
-        return (0, r.jsx)(l.mh, {
-            id: t.id,
-            children: (s) =>
-                (0, r.jsxs)('div', {
-                    className: a()(E.auditLog, n),
-                    children: [
-                        (0, r.jsxs)(
-                            d.P3F,
-                            T(
-                                S(
-                                    {
-                                        className: c,
-                                        'aria-expanded': i,
-                                        onClick: p
-                                    },
-                                    s
-                                ),
+            : (0, r.jsxs)(A.Text, {
+                  className: y.timestamp,
+                  variant: 'text-sm/normal',
+                  children: [k, '\u2014', M]
+              });
+    let _ = Z ? S : I.dG4;
+    return (0, r.jsx)(l.mh, {
+        id: i.id,
+        children: (e) =>
+            (0, r.jsxs)('div', {
+                ref: t,
+                className: a()(y.auditLog, s),
+                children: [
+                    (0, r.jsxs)(
+                        A.P3F,
+                        P(
+                            w(
                                 {
-                                    children: [
-                                        (0, r.jsx)(y.mp, {
-                                            action: t.action,
-                                            actionType: t.actionType,
-                                            targetType: t.targetType
-                                        }),
-                                        this.renderEntryAvatar(),
-                                        (0, r.jsxs)('div', {
-                                            className: E.timeWrap,
-                                            children: [
-                                                (0, r.jsx)('div', {
-                                                    className: E.title,
-                                                    children: this.renderTitle()
-                                                }),
-                                                e
-                                            ]
-                                        }),
-                                        o
-                                            ? (0, r.jsx)(N.Z, {
-                                                  className: E.expand,
-                                                  foreground: E.expandForeground,
-                                                  expanded: i,
-                                                  'aria-hidden': !0
-                                              })
-                                            : null
-                                    ]
-                                }
-                            )
-                        ),
-                        i ? (0, r.jsx)('div', { className: E.divider }) : null,
-                        this.renderChangeSummary()
-                    ]
-                })
-        });
-    }
-}
-let R = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(w);
+                                    className: W,
+                                    'aria-expanded': o,
+                                    onClick: _
+                                },
+                                e
+                            ),
+                            {
+                                children: [
+                                    (0, r.jsx)(E.mp, {
+                                        action: i.action,
+                                        actionType: i.actionType,
+                                        targetType: i.targetType
+                                    }),
+                                    (function () {
+                                        let {
+                                            user: e,
+                                            userId: t,
+                                            options: { integration_type: n }
+                                        } = i;
+                                        if (null != e && null != t)
+                                            return (0, r.jsx)(A.yRy, {
+                                                preload: () => (0, f.Z)(t, e.getAvatarURL(p, 80), { guildId: p }),
+                                                renderPopout: (e) =>
+                                                    (0, r.jsx)(
+                                                        m.Z,
+                                                        P(w({}, e), {
+                                                            userId: t,
+                                                            guildId: p,
+                                                            newAnalyticsLocations: [u.Z.AVATAR]
+                                                        })
+                                                    ),
+                                                children: (e) => {
+                                                    var t;
+                                                    return (0, r.jsx)(
+                                                        A.qEK,
+                                                        P(w({}, e), {
+                                                            onClick: (t) => {
+                                                                t.stopPropagation(), e.onClick(t);
+                                                            },
+                                                            className: y.avatar,
+                                                            src: i.action === I.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === I.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === I.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === I.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, N.j)() : null === (t = i.user) || void 0 === t ? void 0 : t.getAvatarURL(p, 40),
+                                                            'aria-hidden': !0,
+                                                            size: A.EFr.SIZE_40
+                                                        })
+                                                    );
+                                                }
+                                            });
+                                        if (null != n) {
+                                            let e = d.Z.get(n);
+                                            if (null != e) {
+                                                let t = (0, c.wj)(Q) ? e.icon.darkSVG : e.icon.lightSVG;
+                                                return (0, r.jsx)(A.qEK, {
+                                                    className: y.avatar,
+                                                    src: t,
+                                                    'aria-hidden': !0,
+                                                    size: A.EFr.SIZE_40
+                                                });
+                                            }
+                                        }
+                                        return null;
+                                    })(),
+                                    (0, r.jsxs)('div', {
+                                        className: y.timeWrap,
+                                        children: [
+                                            (0, r.jsx)('div', {
+                                                className: y.title,
+                                                children: (function () {
+                                                    let { user: e, target: t, options: n } = i,
+                                                        s = j.N5(i);
+                                                    return null != s
+                                                        ? (0, r.jsx)('div', {
+                                                              className: y.overflowEllipsis,
+                                                              children: O.NW.format(s, {
+                                                                  user: e,
+                                                                  target: t.toString(),
+                                                                  userHook: (e, t) => {
+                                                                      if (null != i.user)
+                                                                          return (0, r.jsx)(
+                                                                              B,
+                                                                              {
+                                                                                  user: i.user,
+                                                                                  onContextMenu: R
+                                                                              },
+                                                                              t
+                                                                          );
+                                                                      if (null != i.options.integration_type) {
+                                                                          var n;
+                                                                          let e = d.Z.get(i.options.integration_type);
+                                                                          return null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : O.NW.string(O.t['n+olu7']);
+                                                                      }
+                                                                      return O.NW.string(O.t['30mdIy']);
+                                                                  },
+                                                                  targetHook: (e, t) =>
+                                                                      i.targetType === I.KFR.USER && i.target instanceof h.Z
+                                                                          ? (0, r.jsx)(
+                                                                                B,
+                                                                                {
+                                                                                    user: i.target,
+                                                                                    onContextMenu: L
+                                                                                },
+                                                                                t
+                                                                            )
+                                                                          : (0, r.jsx)(
+                                                                                'span',
+                                                                                {
+                                                                                    onContextMenu: L,
+                                                                                    children: e
+                                                                                },
+                                                                                t
+                                                                            ),
+                                                                  count: n.count,
+                                                                  channel: null == n.channel || 'string' == typeof n.channel ? n.channel : (0, g.F6)(n.channel, b.default, C.Z, !0),
+                                                                  channelHook: (e, t) =>
+                                                                      (0, r.jsx)(
+                                                                          'span',
+                                                                          {
+                                                                              onContextMenu: D,
+                                                                              children: e
+                                                                          },
+                                                                          t
+                                                                      ),
+                                                                  subtarget: n.subtarget
+                                                              })
+                                                          })
+                                                        : null;
+                                                })()
+                                            }),
+                                            n
+                                        ]
+                                    }),
+                                    Z
+                                        ? (0, r.jsx)(v.Z, {
+                                              className: y.expand,
+                                              foreground: y.expandForeground,
+                                              expanded: o,
+                                              'aria-hidden': !0
+                                          })
+                                        : null
+                                ]
+                            }
+                        )
+                    ),
+                    o ? (0, r.jsx)('div', { className: y.divider }) : null,
+                    o && null != x
+                        ? (0, r.jsx)(E.tP, {
+                              log: i,
+                              guild: x,
+                              onContentClick: T
+                          })
+                        : null
+                ]
+            })
+    });
+});
+D.displayName = 'GuildSettingsAuditLogEntry';
+let T = o.ZP.connectStores([p.Z], () => ({ theme: p.Z.theme }), { forwardRef: !0 })(D);
