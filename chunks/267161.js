@@ -1,71 +1,72 @@
 n.r(t),
     n.d(t, {
-        default: () => D,
-        useAppSidebarState: () => w
+        default: () => k,
+        useAppSidebarState: () => R
     });
 var r = n(200651),
     i = n(192379),
     l = n(512969),
-    o = n(15729),
-    a = n(442837),
+    a = n(15729),
+    o = n(442837),
     s = n(481060),
     c = n(230711),
     u = n(174556),
     d = n(320007),
     p = n(540059),
     h = n(916069),
-    f = n(565138),
-    g = n(300986),
-    m = n(314451),
-    b = n(35583),
-    _ = n(522474),
-    E = n(141321),
-    O = n(210887),
-    N = n(592125),
-    v = n(430824),
-    y = n(944486),
-    I = n(914010),
-    C = n(451478),
-    S = n(998502),
-    T = n(228488),
-    P = n(950796),
-    j = n(981631),
-    A = n(741764),
-    Z = n(388032),
-    x = n(635357),
+    f = n(111666),
+    g = n(565138),
+    m = n(300986),
+    b = n(314451),
+    _ = n(35583),
+    E = n(522474),
+    O = n(141321),
+    N = n(210887),
+    v = n(592125),
+    y = n(430824),
+    I = n(944486),
+    C = n(914010),
+    S = n(451478),
+    T = n(998502),
+    P = n(228488),
+    j = n(950796),
+    A = n(981631),
+    Z = n(741764),
+    x = n(388032),
+    w = n(917566),
     L = n(963981);
-let w = (0, o.U)(() => ({ isOpen: !0 }));
-function R() {
+let R = (0, a.U)(() => ({ isOpen: !0 }));
+function D() {
     let e;
     let t = (0, l.TH)(),
-        n = (0, a.e7)([y.Z], () => y.Z.getChannelId()),
-        i = (0, a.e7)([I.Z], () => I.Z.getGuildId()),
-        o = (0, a.e7)([N.Z], () => N.Z.getChannel(n), [n]),
-        c = v.Z.getGuild(i),
+        n = (0, o.e7)([I.Z], () => I.Z.getChannelId()),
+        i = (0, o.e7)([C.Z], () => C.Z.getGuildId()),
+        a = (0, o.e7)([v.Z], () => v.Z.getChannel(n), [n]),
+        c = y.Z.getGuild(i),
         u = (0, h.Z)(),
         d = null;
     return (
         null != c
             ? ((d = u
                   ? (0, r.jsx)(s.r7p, { size: 'xs' })
-                  : (0, r.jsx)(f.Z, {
+                  : (0, r.jsx)(g.Z, {
                         guild: c,
-                        size: f.Z.Sizes.MINI,
+                        size: g.Z.Sizes.MINI,
                         active: !0,
                         className: L.guildIcon
                     })),
               (e = c.name))
-            : null != o && (o.isDM() || o.isGroupDM())
-              ? ((e = Z.NW.string(Z.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
-              : t.pathname.startsWith(j.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = Z.NW.string(Z.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
-                : t.pathname.startsWith(j.Z5c.NITRO_HOME)
-                  ? ((e = Z.NW.string(Z.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
-                  : t.pathname.startsWith(j.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = Z.NW.string(Z.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
-                    : t.pathname.startsWith(j.Z5c.FRIENDS)
-                      ? ((e = Z.NW.string(Z.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(j.Z5c.FAMILY_CENTER) && ((e = Z.NW.string(x.Z.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+            : null != a && (a.isDM() || a.isGroupDM())
+              ? ((e = x.NW.string(x.t.YUU0RE)), (d = (0, r.jsx)(s.gw7, { size: 'xs' })))
+              : t.pathname.startsWith(A.Z5c.GLOBAL_DISCOVERY)
+                ? ((e = x.NW.string(x.t['4nEZLi'])), (d = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                : t.pathname.startsWith(A.Z5c.NITRO_HOME)
+                  ? ((e = x.NW.string(x.t.Ipxkoq)), (d = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                  : t.pathname.startsWith(A.Z5c.COLLECTIBLES_SHOP)
+                    ? ((e = x.NW.string(x.t.pWG4zc)), (d = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                    : t.pathname.startsWith(A.Z5c.FRIENDS)
+                      ? ((e = x.NW.string(x.t.TdEu5e)), (d = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                      : t.pathname.startsWith(A.Z5c.FAMILY_CENTER) && ((e = x.NW.string(w.Z.RZqaJi)), (d = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
@@ -81,23 +82,23 @@ function R() {
             })
     );
 }
-let D = i.memo(function () {
+let k = i.memo(function () {
     i.useLayoutEffect(() => {
-        S.ZP.setMinimumSize(A.J, A.N);
+        T.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
     let e = (0, p.TH)('AppTitleBar'),
-        t = !w((e) => e.isOpen) && e,
+        t = !R((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        S.ZP.setMinimumSize(A.J, A.N);
+        T.ZP.setMinimumSize(Z.J, Z.N);
     }, []);
-    let l = (0, a.e7)([O.Z], () => (O.Z.darkSidebar ? j.BRd.DARK : void 0));
-    return (0, a.e7)([C.Z, _.Z], () => (0, T.rB)())
+    let l = (0, o.e7)([N.Z], () => (N.Z.darkSidebar ? A.BRd.DARK : void 0));
+    return (0, o.e7)([S.Z, E.Z], () => (0, P.rB)())
         ? null
         : (0, r.jsx)(s.f6W, {
               theme: l,
               children: (e) =>
-                  (0, r.jsx)(P.T, {
+                  (0, r.jsx)(j.T, {
                       className: e,
                       leading:
                           t &&
@@ -106,14 +107,14 @@ let D = i.memo(function () {
                                   (0, r.jsx)(s.P3F, {
                                       className: L.button,
                                       onClick: () => {
-                                          w.setState({ isOpen: !w.getState().isOpen });
+                                          R.setState({ isOpen: !R.getState().isOpen });
                                       },
-                                      children: (0, r.jsx)(k, {})
+                                      children: (0, r.jsx)(M, {})
                                   }),
                                   (0, r.jsx)(s.P3F, {
                                       className: L.button,
                                       onClick: () => {
-                                          c.Z.open(j.oAB.ACCOUNT);
+                                          c.Z.open(A.oAB.ACCOUNT);
                                       },
                                       children: (0, r.jsx)(s.ewm, {
                                           size: 'xs',
@@ -122,22 +123,23 @@ let D = i.memo(function () {
                                   })
                               ]
                           }),
-                      title: (0, r.jsx)(R, {}),
+                      title: (0, r.jsx)(D, {}),
                       trailing: (0, r.jsxs)(r.Fragment, {
                           children: [
+                              (0, r.jsx)(f.Z, { className: L.button }),
                               (0, r.jsx)(d.Z, {
                                   canShowReminder: !0,
                                   className: L.button
                               }),
-                              (0, r.jsx)(E.Z, { className: L.button }),
-                              n ? (0, r.jsx)(m.Z, { className: L.button }) : (0, r.jsx)(g.Z, { className: L.button }),
-                              (0, r.jsx)(b.Z, { className: L.button })
+                              (0, r.jsx)(O.Z, { className: L.button }),
+                              n ? (0, r.jsx)(b.Z, { className: L.button }) : (0, r.jsx)(m.Z, { className: L.button }),
+                              (0, r.jsx)(_.Z, { className: L.button })
                           ]
                       })
                   })
           });
 });
-function k() {
+function M() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: L.icon,
