@@ -42,6 +42,5 @@ e.exports = {
     checkoutButtonsRow: 'checkoutButtonsRow_c50f62',
     variantsSwitch: 'variantsSwitch_c50f62',
     headerButtonContainer: 'headerButtonContainer_c50f62',
-    errorMessageLine: 'errorMessageLine_c50f62',
     externalProductProfilePreview: 'externalProductProfilePreview_c50f62'
 };
