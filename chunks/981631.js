@@ -1017,6 +1017,7 @@ let A = Object.freeze({
         CONNECTIONS_XBOX: 'Connections Xbox',
         AUTHORIZED_APPS: 'Authorized Apps',
         AUTHORIZED_APP: 'Authorized App',
+        AUTHORIZED_APP_PERMISSIONS: 'Authorized App Permissions',
         TEXT: 'Text & Images',
         VOICE: 'Voice & Video',
         PRIVACY_AND_SAFETY: 'Privacy & Safety',
