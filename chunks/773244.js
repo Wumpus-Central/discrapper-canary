@@ -1,27 +1,41 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(192379),
     i = n(873546),
     l = n(442837),
-    o = n(625128),
-    a = n(362762),
+    a = n(625128),
+    o = n(362762),
     s = n(531517),
-    c = n(981631);
-let u = i.tq || i.Em;
-function d(e) {
-    let { children: t, deepLinkType: n, path: i, paramsBuilder: d } = e,
-        p = (0, s.L)(),
-        h = (0, l.e7)([a.Z], () => a.Z.getState(i), [i]),
-        f = r.useMemo(() => (null == d ? { path: i } : d(i)), [i, d]);
+    c = n(314897),
+    u = n(981631);
+let d = i.tq || i.Em;
+function p(e) {
+    let { children: t, deepLinkType: n, path: i, paramsBuilder: p } = e,
+        h = (0, s.L)(),
+        f = (0, l.e7)([c.default], () => {
+            var e;
+            return null !== (e = c.default.getFingerprint()) && void 0 !== e ? e : c.default.getId();
+        }),
+        g = (0, l.e7)([o.Z], () => o.Z.getState(i), [i]),
+        m = r.useMemo(
+            () =>
+                null == p
+                    ? {
+                          path: i,
+                          fingerprint: f
+                      }
+                    : p(i, f),
+            [i, p, f]
+        );
     return (
         r.useEffect(() => {
-            !u &&
-                p &&
-                null == h &&
-                o.Z.openNativeAppModal(i, c.Etm.DEEP_LINK, {
+            !d &&
+                h &&
+                null == g &&
+                a.Z.openNativeAppModal(i, u.Etm.DEEP_LINK, {
                     type: n,
-                    params: f
+                    params: m
                 });
-        }, [h, i, f, n, p]),
+        }, [g, i, m, n, h]),
         t
     );
 }

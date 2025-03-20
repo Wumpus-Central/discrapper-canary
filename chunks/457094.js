@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(954709),
     Z = n(644679),
     x = n(314533),
-    L = n(9029),
-    w = n(935347),
+    w = n(9029),
+    L = n(935347),
     R = n(560067),
     D = n(823169),
     k = n(845767),
@@ -83,8 +83,8 @@ var r = n(200651),
     eA = n(703016),
     eZ = n(171368),
     ex = n(429974),
-    eL = n(332754),
-    ew = n(507468),
+    ew = n(332754),
+    eL = n(507468),
     eR = n(722589),
     eD = n(282506),
     ek = n(444961),
@@ -109,7 +109,7 @@ var r = n(200651),
     e2 = n(176505),
     e3 = n(701476),
     e4 = n(186901);
-function e5(e, t, n) {
+function e7(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -122,7 +122,7 @@ function e5(e, t, n) {
         e
     );
 }
-function e7(e) {
+function e5(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -133,7 +133,7 @@ function e7(e) {
                 })
             )),
             r.forEach(function (t) {
-                e5(e, t, n[t]);
+                e7(e, t, n[t]);
             });
     }
     return e;
@@ -172,12 +172,13 @@ let e6 = (0, m.l)((e) => {
             (0, r.jsxs)(g.Z, {
                 deepLinkType: e4.jE.USER_SETTINGS,
                 path: t.pathname,
-                paramsBuilder: function (e) {
-                    let [, , t, n] = e.split('/');
+                paramsBuilder: function (e, t) {
+                    let [, , n, r] = e.split('/');
                     return {
                         path: e,
-                        section: t,
-                        subsection: n
+                        section: n,
+                        subsection: r,
+                        fingerprint: t
                     };
                 },
                 children: [(0, r.jsx)(a.l_, { to: eW.Z.defaultRoute }), ';']
@@ -331,7 +332,7 @@ let ti = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = e7({}, t)),
+                                ((n = e5({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -458,11 +459,11 @@ class to extends i.PureComponent {
             O.Z.initialize(),
             eA.Z.init(),
             eK.Z.init(),
-            eL.Z.init(),
+            ew.Z.init(),
             eS.Z.initialize(),
             eT.Z.initialize(),
             ex.Z.initialize(),
-            ew.Z.init(),
+            eL.Z.init(),
             U.Z.initialize(),
             E.Z.initialize(),
             ev.Z.initialize(),
@@ -471,13 +472,13 @@ class to extends i.PureComponent {
             ec.Z.initialize(),
             ed.Z.initialize(),
             x.Z.initialize(),
-            L.Z.initialize(),
+            w.Z.initialize(),
             en.Z.init({
                 hasModalOpen: s.$sL,
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, e7({}, t));
+                        return (t) => (0, r.jsx)(e, e5({}, t));
                     })
             }),
             M.Z.init(),
@@ -492,7 +493,7 @@ class to extends i.PureComponent {
             (this.historyUnlisten = e_.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eN.Z.terminate(), ek.Z.terminate(), eg.Z.terminate(), eh.Z.terminate(), P.Z.terminate(), v.ZP.terminate(), eD.Z.terminate(), N.Z.terminate(), em.Z.terminate(), ep.Z.terminate(), ex.Z.terminate(), O.Z.terminate(), U.Z.terminate(), ei.Z.terminate(), E.Z.terminate(), eb.Z.terminate(), ev.Z.terminate(), eC.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), ed.Z.terminate(), x.Z.terminate(), L.Z.terminate(), ef.Z.terminate(), D.Z.terminate(), W.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), I.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eN.Z.terminate(), ek.Z.terminate(), eg.Z.terminate(), eh.Z.terminate(), P.Z.terminate(), v.ZP.terminate(), eD.Z.terminate(), N.Z.terminate(), em.Z.terminate(), ep.Z.terminate(), ex.Z.terminate(), O.Z.terminate(), U.Z.terminate(), ei.Z.terminate(), E.Z.terminate(), eb.Z.terminate(), ev.Z.terminate(), eC.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), ed.Z.terminate(), x.Z.terminate(), w.Z.terminate(), ef.Z.terminate(), D.Z.terminate(), W.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), I.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -633,12 +634,12 @@ class to extends i.PureComponent {
                         (0, r.jsx)(a.l_, { to: '/' })
                     ]
                 }),
-                (0, r.jsx)(w.Z, {})
+                (0, r.jsx)(L.Z, {})
             ]
         });
     }
     constructor(...e) {
-        super(...e), e5(this, 'historyUnlisten', () => {}), e5(this, 'rewriterUnlisten', () => {});
+        super(...e), e7(this, 'historyUnlisten', () => {}), e7(this, 'rewriterUnlisten', () => {});
     }
 }
 let ts = to;

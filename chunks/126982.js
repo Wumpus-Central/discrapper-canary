@@ -1,34 +1,66 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
-var i = n(481060),
-    o = n(131388),
-    a = n(409813),
-    s = n(750143),
-    l = n(564237),
-    c = n(60314);
-function u(e) {
-    let { step: t, onClose: n } = e,
-        u = (0, o.Z)(s.X);
-    return t === a.h8.BENEFITS || t === a.h8.CONFIRM
+var i = n(442837),
+    o = n(481060),
+    a = n(131388),
+    s = n(607070),
+    l = n(70097),
+    c = n(409813),
+    u = n(750143),
+    d = n(606509),
+    f = n(315853),
+    _ = n(420602),
+    p = n(197099);
+let h = (e) => {
+    let { className: t } = e;
+    return (0, i.e7)([s.Z], () => s.Z.useReducedMotion)
+        ? (0, r.jsx)('img', {
+              src: _.Z,
+              className: t,
+              alt: ''
+          })
+        : (0, r.jsxs)(l.Z, {
+              className: t,
+              autoPlay: !0,
+              loop: !0,
+              children: [
+                  (0, r.jsx)('source', {
+                      src: p.Z,
+                      type: 'video/webm'
+                  }),
+                  (0, r.jsx)('img', {
+                      src: _.Z,
+                      className: t,
+                      alt: ''
+                  })
+              ]
+          });
+};
+function m(e) {
+    let { step: t, onClose: n, isOrbCheckout: i } = e,
+        s = (0, a.Z)(u.X);
+    return t === c.h8.BENEFITS || t === c.h8.CONFIRM
         ? null
         : (0, r.jsxs)('div', {
-              className: l.headerContainer,
+              className: d.headerContainer,
               children: [
-                  !u &&
+                  !s &&
                       (0, r.jsx)('div', {
-                          className: l.headerImageContainer,
+                          className: d.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
-                          children: (0, r.jsx)('img', {
-                              src: c,
-                              alt: '',
-                              className: l.headerImage
-                          })
+                          children: i
+                              ? (0, r.jsx)(h, { className: d.headerImage })
+                              : (0, r.jsx)('img', {
+                                    src: f,
+                                    alt: '',
+                                    className: d.headerImage
+                                })
                       }),
-                  (0, r.jsx)(i.olH, {
+                  (0, r.jsx)(o.olH, {
                       withCircleBackground: !0,
-                      className: l.closeButton,
+                      className: d.closeButton,
                       onClick: n
                   })
               ]
