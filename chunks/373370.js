@@ -69,10 +69,10 @@ function g(e, t) {
     );
 }
 let E = (0, u.T)({});
-function v(e, t, n) {
+function b(e, t, n) {
     return n ? _.NW.formatToParts(e, t) : _.NW.formatToPlainString(e, t);
 }
-function b(e) {
+function v(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: o, collectibleRewardDuration: a } = e,
         s = d.r.build(n.config).defaultReward.messages.nameWithArticle,
@@ -80,7 +80,7 @@ function b(e) {
         u = n.config.messages.gameTitle,
         f = (0, l.f$)(n.config),
         p = (0, l._p)(n.config);
-    return v(
+    return b(
         (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: u,
@@ -100,7 +100,7 @@ function y(e) {
         u = n.config.messages.gameTitle,
         f = (0, l.f$)(n.config),
         p = (0, l._p)(n.config);
-    return v(
+    return b(
         (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: u,
@@ -120,7 +120,7 @@ function O(e) {
         u = n.config.messages.gameTitle,
         f = (0, l.f$)(n.config),
         p = (0, l._p)(n.config);
-    return v(
+    return b(
         (t = o && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != a ? _.t.AwuMRU : _.t.FZL5Q0),
         {
             gameTitle: u,
@@ -136,7 +136,7 @@ function I(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         o = t.config.messages.gameTitle;
-    return v(
+    return b(
         _.t['a/ia7O'],
         {
             gameTitle: o,
@@ -152,7 +152,7 @@ function S(e, t, n, r) {
         c = d.r.build(e.config).defaultReward.messages.nameWithArticle,
         u = (0, l.f$)(e.config),
         f = (0, l._p)(e.config);
-    return v(
+    return b(
         (a = u && n ? (f ? _.t['xqX+r6'] : _.t['vs/xBg']) : u ? _.t['W/HkLC'] : _.t.yMsQ7e),
         {
             videoTitle: s,
@@ -166,7 +166,7 @@ function T(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
         o = d.r.build(t.config).defaultReward.messages.nameWithArticle;
-    return v(
+    return b(
         _.t.VYwSSk,
         {
             streamingDurationRequirement: i,
@@ -183,7 +183,7 @@ function N(e) {
         u = n.config.messages.gameTitle,
         f = (0, l.f$)(n.config),
         p = (0, l._p)(n.config);
-    return v(
+    return b(
         (t = o && f ? (p ? _.t['X8Yt//'] : _.t.smG9qq) : f || null != a ? _.t.BLyDvL : _.t['hkJ+Gh']),
         {
             gameTitle: u,
@@ -199,7 +199,7 @@ function A(e) {
     if (o)
         switch (w(t)) {
             case 0:
-                return v(
+                return b(
                     _.t.goA6o6,
                     {
                         targetMinutes: n.targetMinutes,
@@ -208,7 +208,7 @@ function A(e) {
                     i
                 );
             case 1:
-                return v(
+                return b(
                     _.t.NmzoDg,
                     {
                         targetMinutes: n.targetMinutes,
@@ -218,7 +218,7 @@ function A(e) {
                 );
             case 2:
                 var c, u;
-                return v(
+                return b(
                     _.t.zus71N,
                     {
                         targetMinutes: n.targetMinutes,
@@ -230,7 +230,7 @@ function A(e) {
     let d = (0, a.I5)(s, f.p9.TIER_2),
         p = (0, l.Kr)(t.config);
     if ((0, l.$J)(t) && (0, l.$H)(t))
-        return b({
+        return v({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
@@ -290,8 +290,9 @@ let C = (e) => {
     }
 };
 function R(e) {
-    let t = A(e);
-    return e.withoutMarkdown ? C(t) : t;
+    var t;
+    let n = A(g(h({}, e), { currentUser: null !== (t = e.currentUser) && void 0 !== t ? t : o.default.getCurrentUser() }));
+    return e.withoutMarkdown ? C(n) : n;
 }
 function P(e) {
     let { quest: t, location: n, questContent: r } = e,
