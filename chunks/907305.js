@@ -1,7 +1,5 @@
-n.d(t, { w: () => a });
-var r = n(818083),
-    i = n(772209);
-let o = (0, r.B)({
+n.d(t, { w: () => i });
+let r = (0, n(818083).B)({
         kind: 'user',
         id: '2025-01_activity_status_cleanup',
         label: 'Activity Status Cleanup',
@@ -14,17 +12,7 @@ let o = (0, r.B)({
             }
         ]
     }),
-    a = (e) => {
-        let { location: t, autoTrackExposure: n = !0 } = e,
-            r = (0, i.q)({
-                location: t,
-                autoTrackExposure: n
-            });
-        return o.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                disable: r
-            }
-        );
+    i = (e) => {
+        let { location: t, autoTrackExposure: n = !0 } = e;
+        return r.useExperiment({ location: t }, { autoTrackExposure: n });
     };
