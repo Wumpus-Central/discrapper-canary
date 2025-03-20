@@ -18,11 +18,11 @@ var r,
     y = n(899663),
     E = n(636449),
     O = n(317381),
-    x = n(496616),
-    S = n(100527),
+    S = n(496616),
+    x = n(100527),
     j = n(906732),
-    Z = n(168551),
-    w = n(260035),
+    w = n(168551),
+    Z = n(260035),
     C = n(628123),
     P = n(686546),
     N = n(950796),
@@ -116,13 +116,13 @@ class X extends (r = l.Component) {
             n = t.document,
             r = n.head;
         c()(null != r, 'Window document '.concat('head', ' was null'));
-        let i = r.querySelector('style['.concat(Z.PQ, ']'));
+        let i = r.querySelector('style['.concat(w.PQ, ']'));
         if (null != i) {
             i.textContent = e;
             return;
         }
         let l = n.createElement('style');
-        l.setAttribute(Z.PQ, 'true'), (l.textContent = e), r.appendChild(l);
+        l.setAttribute(w.PQ, 'true'), (l.textContent = e), r.appendChild(l);
     }
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e } = this.props,
@@ -133,9 +133,10 @@ class X extends (r = l.Component) {
         null != this._combokeys && this._combokeys.reset();
     }
     render() {
-        let { focused: e, forcedColors: t, children: n, windowKey: r, isRefreshEnabled: l, withTitleBar: o, guestWindow: s, clientThemesClassName: c, contentClassName: d } = this.props,
-            f = (0, W.getPlatform)(),
-            m = r === H.$J ? D.Z : C.Z;
+        let { focused: e, forcedColors: t, children: n, windowKey: r, isFullScreen: l, isRefreshEnabled: o, withTitleBar: s, guestWindow: c, clientThemesClassName: d, contentClassName: f } = this.props,
+            m = (0, W.getPlatform)(),
+            v = s && !l,
+            g = r === H.$J ? D.Z : C.Z;
         return (0, i.jsx)(u.VK, {
             children: (0, i.jsx)(
                 k.w,
@@ -144,38 +145,38 @@ class X extends (r = l.Component) {
                     children: (0, i.jsx)(y.Z, {
                         children: (0, i.jsx)(p.vWI, {
                             children: (0, i.jsx)(Q, {
-                                guestWindow: s,
-                                className: c,
+                                guestWindow: c,
+                                className: d,
                                 children: (0, i.jsx)(p.JcV, {
                                     containerRef: this.rootRef,
-                                    children: (0, i.jsxs)(m, {
+                                    children: (0, i.jsxs)(g, {
                                         children: [
                                             (0, i.jsx)(P.Co, {}),
                                             (0, i.jsx)(b.Wu, {
                                                 appContext: Y.IlC.POPOUT,
-                                                renderWindow: s,
-                                                children: (0, i.jsx)(w.m, {
+                                                renderWindow: c,
+                                                children: (0, i.jsx)(Z.m, {
                                                     children: (0, i.jsxs)(A.yP, {
                                                         children: [
                                                             (0, i.jsxs)('div', {
                                                                 className: G.popout,
                                                                 children: [
-                                                                    l &&
-                                                                        o &&
+                                                                    o &&
+                                                                        v &&
                                                                         (0, i.jsx)(N.T, {
                                                                             windowKey: r,
                                                                             short: !0
                                                                         }),
-                                                                    !l && o && null != f
+                                                                    !o && v && null != m
                                                                         ? (0, i.jsx)(I.Z, {
                                                                               focused: e,
-                                                                              type: f,
+                                                                              type: m,
                                                                               windowKey: r,
                                                                               macOSFrame: !0
                                                                           })
                                                                         : null,
                                                                     (0, i.jsx)('div', {
-                                                                        className: a()(G.content, d),
+                                                                        className: a()(G.content, f),
                                                                         children: n
                                                                     })
                                                                 ]
@@ -213,7 +214,7 @@ class X extends (r = l.Component) {
                     (0, E.R)({ isContextless: this.props.connectedEmbeddedActivity.location.kind === d.E.CONTEXTLESS })
                         ? t()
                         : ((e.returnValue = K.NW.string(K.t['bST/Y2'])),
-                          (0, x.Z)(() => {
+                          (0, S.Z)(() => {
                               t();
                           }));
                 }
@@ -246,34 +247,40 @@ let Q = l.forwardRef(function (e, t) {
         );
     }),
     $ = l.forwardRef(function (e, t) {
-        let { guestWindow: n, focused: r } = (0, m.cj)([V.Z], () => ({
+        let {
+            guestWindow: n,
+            focused: r,
+            isFullScreen: l
+        } = (0, m.cj)([V.Z], () => ({
             guestWindow: V.Z.getWindow(e.windowKey),
-            focused: V.Z.getWindowFocused(e.windowKey)
+            focused: V.Z.getWindowFocused(e.windowKey),
+            isFullScreen: V.Z.isWindowFullScreen(e.windowKey)
         }));
         c()(null != n, 'Missing guestWindow reference');
-        let l = (0, R.Q3)('PopoutWindow'),
-            { forcedColors: o, connectedEmbeddedActivity: a } = (0, m.cj)([g.Z, O.ZP], () => ({
+        let o = (0, R.Q3)('PopoutWindow'),
+            { forcedColors: a, connectedEmbeddedActivity: s } = (0, m.cj)([g.Z, O.ZP], () => ({
                 forcedColors: g.Z.useForcedColors ? 'yes' : 'no',
                 connectedEmbeddedActivity: O.ZP.getCurrentEmbeddedActivity()
             }));
         (0, _.Z)(n, !1);
-        let { analyticsLocations: s } = (0, j.ZP)(S.Z.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: d } = (0, Z.ZP)();
+        let { analyticsLocations: u } = (0, j.ZP)(x.Z.POPOUT_WINDOW),
+            { clientThemesClassName: d, clientThemesCSS: f } = (0, w.ZP)();
         return null == n
             ? null
             : (0, i.jsx)(p.Sle, {
                   children: (0, i.jsx)(j.Gt, {
-                      value: s,
+                      value: u,
                       children: (0, i.jsx)(
                           X,
                           J(q({ ref: t }, e), {
                               guestWindow: n,
                               focused: r,
-                              forcedColors: o,
-                              connectedEmbeddedActivity: a,
-                              clientThemesClassName: u,
-                              clientThemesCSS: d,
-                              isRefreshEnabled: l
+                              isFullScreen: l,
+                              forcedColors: a,
+                              connectedEmbeddedActivity: s,
+                              clientThemesClassName: d,
+                              clientThemesCSS: f,
+                              isRefreshEnabled: o
                           })
                       )
                   })
