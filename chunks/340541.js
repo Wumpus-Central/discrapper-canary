@@ -1,5 +1,8 @@
-n.d(t, { _k: () => i });
-let l = (0, n(818083).B)({
+n.d(t, {
+    _k: () => r,
+    jW: () => o
+});
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-03_invites_refresh',
     label: 'Invites Refresh',
@@ -12,7 +15,13 @@ let l = (0, n(818083).B)({
         }
     ]
 });
-function i() {
-    let { enabled: e } = l.useExperiment({ location: 'instant_invite_modal' });
-    return { enabled: e };
+function o(e) {
+    let { location: t } = e,
+        { enabled: n } = i.getCurrentConfig({ location: t });
+    return n;
+}
+function r(e) {
+    let { location: t } = e,
+        { enabled: n } = i.useExperiment({ location: t });
+    return { enabled: n };
 }

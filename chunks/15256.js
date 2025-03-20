@@ -25,5 +25,8 @@ e.exports = {
     themedHeaderMobile: 'themedHeaderMobile_f37cb1',
     headerEllipseForeground: 'headerEllipseForeground_f37cb1',
     headerEllipseBackdrop: 'headerEllipseBackdrop_f37cb1',
-    headerGlass: 'headerGlass_f37cb1'
+    headerGlass: 'headerGlass_f37cb1',
+    invitesRefresh: 'invitesRefresh_f37cb1',
+    guildDropdown: 'guildDropdown_f37cb1',
+    inviteButton: 'inviteButton_f37cb1'
 };
