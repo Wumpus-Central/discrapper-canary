@@ -1,10 +1,12 @@
 n.d(t, {
-    F5: () => y,
+    F5: () => I,
     Jm: () => g,
+    L0: () => b,
     L5: () => m,
-    WD: () => b,
-    l6: () => v,
-    pY: () => E,
+    WD: () => O,
+    g0: () => E,
+    l6: () => y,
+    pY: () => v,
     sf: () => h
 }),
     n(301563),
@@ -33,17 +35,23 @@ function g() {
     let e = (0, i.e7)([u.default], () => u.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === a.F$.VERIFIED_TEEN;
 }
-function E(e, t) {
+var E = (function (e) {
+        return (e.CTAS = 'ctas'), (e.CONTENT_TYPE = 'content_type'), e;
+    })({}),
+    b = (function (e) {
+        return (e.VERIFIED_ADULT = 'verified_adult'), (e.VERIFIED_TEEN = 'verified_teen'), (e.ERROR = 'error'), e;
+    })({});
+function v(e, t) {
     let n = c.Z.getMessage(e, t);
     if (null == n || null == n.embeds || 0 === n.embeds.length || null == n.embeds[0].fields || n.embeds[0].type !== _.hBH.AGE_VERIFICATION_SYSTEM_NOTIFICATION) return !1;
     let r = n.embeds[0].fields.find((e) => 'ctas' === e.rawName);
     return null == r ? void 0 : r.rawValue.split(',').includes('retry');
 }
-function v() {
+function y() {
     let e = (0, i.e7)([u.default], () => u.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED;
 }
-function b(e) {
+function O(e) {
     let [t, n] = r.useState(!1),
         a = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         { current: s } = r.useRef(null == a ? void 0 : a.ageVerificationStatus),
@@ -58,22 +66,22 @@ function b(e) {
         initiateAgeVerification: r.useCallback(async () => {
             n(!0);
             try {
+                o.Z.dispatch({ type: 'INITIATE_AGE_VERIFICATION' });
                 let t = await (0, f.K)();
-                o.Z.dispatch({ type: 'INITIATE_AGE_VERIFICATION' }),
-                    d.Z.showAgeVerification({
-                        webviewUrl: t.verification_webview_url,
-                        onComplete: e,
-                        onClose: c
-                    });
+                d.Z.showAgeVerification({
+                    webviewUrl: t.verification_webview_url,
+                    onComplete: e,
+                    onClose: c
+                });
             } catch (e) {
-                l.Z.showFailedToast(p.w.TIGGER_PAWTECT_ERROR);
+                l.Z.showFailedToast(p.w.TIGGER_PAWTECT_ERROR), c();
             } finally {
                 n(!1);
             }
         }, [e, c])
     };
 }
-function y(e) {
+function I(e) {
     let t = (0, i.e7)([u.default], () => {
             var e;
             return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.ageVerificationStatus;

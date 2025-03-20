@@ -8,6 +8,11 @@ let i = {
         actions: ['POST_CONNECTION_OPEN', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE'],
         inlineRequire: () => n(345953).Z
     },
+    AgeVerificationManager: {
+        actions: ['MESSAGE_CREATE'],
+        inlineRequire: () => n(225415).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
     BlockedDomainManager: {
         inlineRequire: () => n(399907).Z,
         loadAfterConnectionOpen: !0
