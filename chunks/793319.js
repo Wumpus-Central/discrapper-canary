@@ -577,12 +577,6 @@ let eR = function (e) {
                                           }
                                       }),
                                       !V &&
-                                          (0, r.jsx)('div', {
-                                              className: eO.avSpacing,
-                                              'aria-hidden': 'true',
-                                              role: 'presentation'
-                                          }),
-                                      !V &&
                                           (0, r.jsx)(p.yRy, {
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;

@@ -392,56 +392,47 @@ let em = i.memo(function (e) {
               className: es.experimentWrapper,
               children: [
                   W && !i
-                      ? (0, r.jsx)('div', {
+                      ? (0, r.jsxs)('div', {
                             className: o()(es.buttonSection, { [es.experimentButtonSection]: K }),
-                            children: (0, r.jsxs)('div', {
-                                className: o()(es.avControls),
-                                children: [
-                                    (0, r.jsx)(s.yRy, {
-                                        renderPopout: (e) => {
-                                            let { closePopout: t } = e;
-                                            return (0, r.jsx)(R.Z, {
-                                                children: (0, r.jsx)(f.default, {
-                                                    onClose: t,
-                                                    renderInputDevices: !0,
-                                                    renderInputModes: !0,
-                                                    renderOutputDevices: !0,
-                                                    renderInputVolume: X,
-                                                    renderOutputVolume: X,
-                                                    renderDeafen: X,
-                                                    simplified: X,
-                                                    onInteraction: J
-                                                })
-                                            });
-                                        },
-                                        align: 'right',
-                                        position: 'top',
-                                        spacing: 16,
-                                        animation: s.yRy.Animation.FADE,
-                                        children: (e, t) => {
-                                            let { onClick: n } = e,
-                                                { isShown: o } = t;
-                                            return (0, r.jsx)(L.Z, {
-                                                centerButton: !0,
-                                                onPopoutClick: n,
-                                                selfMute: l,
-                                                serverMute: c,
-                                                suppress: i,
-                                                popoutOpen: o,
-                                                onClick: () => (0, g.Z)(c, i, 'Stage Channel Controls'),
-                                                awaitingRemote: d
-                                            });
-                                        }
-                                    }),
-                                    V &&
-                                        (0, r.jsx)('div', {
-                                            className: es.avSpacing,
-                                            'aria-hidden': 'true',
-                                            role: 'presentation'
-                                        }),
-                                    V && $
-                                ]
-                            })
+                            children: [
+                                (0, r.jsx)(s.yRy, {
+                                    renderPopout: (e) => {
+                                        let { closePopout: t } = e;
+                                        return (0, r.jsx)(R.Z, {
+                                            children: (0, r.jsx)(f.default, {
+                                                onClose: t,
+                                                renderInputDevices: !0,
+                                                renderInputModes: !0,
+                                                renderOutputDevices: !0,
+                                                renderInputVolume: X,
+                                                renderOutputVolume: X,
+                                                renderDeafen: X,
+                                                simplified: X,
+                                                onInteraction: J
+                                            })
+                                        });
+                                    },
+                                    align: 'right',
+                                    position: 'top',
+                                    spacing: 16,
+                                    animation: s.yRy.Animation.FADE,
+                                    children: (e, t) => {
+                                        let { onClick: n } = e,
+                                            { isShown: o } = t;
+                                        return (0, r.jsx)(L.Z, {
+                                            centerButton: !0,
+                                            onPopoutClick: n,
+                                            selfMute: l,
+                                            serverMute: c,
+                                            suppress: i,
+                                            popoutOpen: o,
+                                            onClick: () => (0, g.Z)(c, i, 'Stage Channel Controls'),
+                                            awaitingRemote: d
+                                        });
+                                    }
+                                }),
+                                V && $
+                            ]
                         })
                       : null,
                   (0, r.jsxs)('div', {
