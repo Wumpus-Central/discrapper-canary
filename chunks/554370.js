@@ -34,13 +34,13 @@ var i = n(200651),
     A = n(333031),
     L = n(371651),
     R = n(610394),
-    W = n(388627),
-    M = n(319414),
+    M = n(388627),
+    W = n(319414),
     V = n(561064),
     z = n(987650),
     U = n(757744),
     G = n(981631),
-    F = n(913422);
+    F = n(734811);
 let Y = !C.isPlatformEmbedded && !1,
     H = Y
         ? (0, i.jsx)(f.Z, {
@@ -215,7 +215,7 @@ function en(e) {
         ),
         !(function () {
             let e = r.useRef(!1),
-                t = (0, W.pL)(),
+                t = (0, M.pL)(),
                 n = E.Z.getVoiceChannelId(),
                 i = O.Z.getChannel(n),
                 l = null != i ? v.Z.getGuild(i.guild_id) : null,
@@ -265,43 +265,41 @@ function en(e) {
         }, [l, n]),
         (0, i.jsx)(h.Gt, {
             value: A,
-            children: (0, i.jsx)(c.vWI, {
-                children:
-                    C || f
-                        ? null
-                        : (0, i.jsx)(c.f6W, {
-                              theme: G.BRd.MIDNIGHT,
-                              children: (e) =>
-                                  (0, i.jsxs)('div', {
-                                      id: 'overlay-container',
-                                      className: o()(F.overlay, e),
-                                      children: [
-                                          !t && H,
-                                          (0, i.jsx)(X, {
+            children:
+                C || f
+                    ? null
+                    : (0, i.jsx)(c.f6W, {
+                          theme: G.BRd.MIDNIGHT,
+                          children: (e) =>
+                              (0, i.jsxs)('div', {
+                                  id: 'overlay-container',
+                                  className: o()(F.overlay, e),
+                                  children: [
+                                      !t && H,
+                                      (0, i.jsx)(X, {
+                                          locked: l,
+                                          keybind: T,
+                                          onClick: q
+                                      }),
+                                      (0, i.jsx)(k.Z, {
+                                          className: o()({
+                                              [F.layoutLocked]: l,
+                                              [F.layoutUnlocked]: !l
+                                          })
+                                      }),
+                                      (0, i.jsx)(W.Z, {}),
+                                      !t &&
+                                          Y &&
+                                          (0, i.jsx)(J, {
                                               locked: l,
-                                              keybind: T,
-                                              onClick: q
+                                              focused: u
                                           }),
-                                          (0, i.jsx)(k.Z, {
-                                              className: o()({
-                                                  [F.layoutLocked]: l,
-                                                  [F.layoutUnlocked]: !l
-                                              })
-                                          }),
-                                          (0, i.jsx)(M.Z, {}),
-                                          !t &&
-                                              Y &&
-                                              (0, i.jsx)(J, {
-                                                  locked: l,
-                                                  focused: u
-                                              }),
-                                          (0, i.jsx)(_.Z, {}),
-                                          (0, i.jsx)(D.Z, { locked: l }),
-                                          (0, i.jsx)(c.Ixi, {})
-                                      ]
-                                  })
-                          })
-            })
+                                      (0, i.jsx)(_.Z, {}),
+                                      (0, i.jsx)(D.Z, { locked: l }),
+                                      (0, i.jsx)(c.Ixi, {})
+                                  ]
+                              })
+                      })
         })
     );
 }

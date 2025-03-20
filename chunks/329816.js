@@ -201,107 +201,105 @@ let em = (0, et.Un)({
         return (0, r.jsx)(
             Y.w,
             {
-                children: (0, r.jsx)(I.Z, {
-                    children: (0, r.jsxs)(p.vWI, {
-                        children: [
-                            (0, r.jsx)(er.Z, { skipsSettingDefaultPageTitle: n }),
-                            (0, r.jsx)(b.T, {
-                                children: (0, r.jsx)(ei.Z, {
-                                    children: (0, r.jsxs)(p.JcV, {
-                                        containerRef: eA,
-                                        children: [
-                                            (0, r.jsx)(ea.Co, {}),
-                                            (0, r.jsx)(eo.ZP, {}),
-                                            (0, r.jsx)(s.OU, {}),
-                                            (0, r.jsx)(y.Wu, {
-                                                appContext: ec.IlC.APP,
-                                                renderWindow: window,
-                                                children: (0, r.jsxs)(F.yP, {
-                                                    children: [
-                                                        null != _
-                                                            ? (0, r.jsx)(eE, {
-                                                                  type: _,
-                                                                  themeOverride: q
-                                                              })
-                                                            : null,
-                                                        (0, r.jsxs)('div', {
-                                                            className: a()(ed.appAsidePanelWrapper, v && ed.mobileAppAsidePanelWrapper),
-                                                            children: [
-                                                                (0, r.jsx)(k.K, {}),
-                                                                (0, r.jsx)('div', {
-                                                                    className: ed.notAppAsidePanel,
-                                                                    'data-app-not-dev-tools': !0,
-                                                                    children: (0, r.jsx)(M.m, {
-                                                                        children: (0, r.jsx)(Z.OR, {
-                                                                            children: (0, r.jsx)(S.Z.Provider, {
-                                                                                value: T.Z,
-                                                                                children: (0, r.jsxs)(x.p, {
-                                                                                    children: [
-                                                                                        (0, r.jsx)('div', {
-                                                                                            className: a()(v ? ed.mobileApp : ed.app),
-                                                                                            children: t
-                                                                                        }),
-                                                                                        (0, r.jsx)(P.Z, {}),
-                                                                                        (0, r.jsx)(g.Z, {}),
-                                                                                        (0, r.jsx)(p.nKe, {}),
-                                                                                        (0, r.jsx)(E.Z, {}),
-                                                                                        (0, r.jsx)(V.Ox, {}),
-                                                                                        (0, r.jsx)(F.Un, {}),
-                                                                                        (0, r.jsx)(Z.ot, {}),
-                                                                                        (0, r.jsx)(p.Ixi, {}),
-                                                                                        (0, r.jsx)(N.Z, {}),
-                                                                                        (0, r.jsx)(H.Z, {}),
-                                                                                        (0, r.jsx)(em, {}),
-                                                                                        (0, r.jsx)(eg, {})
-                                                                                    ]
-                                                                                })
+                children: (0, r.jsxs)(I.Z, {
+                    children: [
+                        (0, r.jsx)(er.Z, { skipsSettingDefaultPageTitle: n }),
+                        (0, r.jsx)(b.T, {
+                            children: (0, r.jsx)(ei.Z, {
+                                children: (0, r.jsxs)(p.JcV, {
+                                    containerRef: eA,
+                                    children: [
+                                        (0, r.jsx)(ea.Co, {}),
+                                        (0, r.jsx)(eo.ZP, {}),
+                                        (0, r.jsx)(s.OU, {}),
+                                        (0, r.jsx)(y.Wu, {
+                                            appContext: ec.IlC.APP,
+                                            renderWindow: window,
+                                            children: (0, r.jsxs)(F.yP, {
+                                                children: [
+                                                    null != _
+                                                        ? (0, r.jsx)(eE, {
+                                                              type: _,
+                                                              themeOverride: q
+                                                          })
+                                                        : null,
+                                                    (0, r.jsxs)('div', {
+                                                        className: a()(ed.appAsidePanelWrapper, v && ed.mobileAppAsidePanelWrapper),
+                                                        children: [
+                                                            (0, r.jsx)(k.K, {}),
+                                                            (0, r.jsx)('div', {
+                                                                className: ed.notAppAsidePanel,
+                                                                'data-app-not-dev-tools': !0,
+                                                                children: (0, r.jsx)(M.m, {
+                                                                    children: (0, r.jsx)(Z.OR, {
+                                                                        children: (0, r.jsx)(S.Z.Provider, {
+                                                                            value: T.Z,
+                                                                            children: (0, r.jsxs)(x.p, {
+                                                                                children: [
+                                                                                    (0, r.jsx)('div', {
+                                                                                        className: a()(v ? ed.mobileApp : ed.app),
+                                                                                        children: t
+                                                                                    }),
+                                                                                    (0, r.jsx)(P.Z, {}),
+                                                                                    (0, r.jsx)(g.Z, {}),
+                                                                                    (0, r.jsx)(p.nKe, {}),
+                                                                                    (0, r.jsx)(E.Z, {}),
+                                                                                    (0, r.jsx)(V.Ox, {}),
+                                                                                    (0, r.jsx)(F.Un, {}),
+                                                                                    (0, r.jsx)(Z.ot, {}),
+                                                                                    (0, r.jsx)(p.Ixi, {}),
+                                                                                    (0, r.jsx)(N.Z, {}),
+                                                                                    (0, r.jsx)(H.Z, {}),
+                                                                                    (0, r.jsx)(em, {}),
+                                                                                    (0, r.jsx)(eg, {})
+                                                                                ]
                                                                             })
                                                                         })
                                                                     })
+                                                                })
+                                                            }),
+                                                            (0, r.jsx)(w.Z, {}),
+                                                            (0, r.jsx)(m.Z, {}),
+                                                            eC &&
+                                                                !ew &&
+                                                                (0, r.jsx)(L.Z, {
+                                                                    markAsDismissed: eN
+                                                                        ? eS
+                                                                        : () => {
+                                                                              (0, G.EW)(d.z.CLIENT_THEMES_COACHMARK, {
+                                                                                  dismissAction: eu.L.INDIRECT_ACTION,
+                                                                                  forceTrack: !0
+                                                                              });
+                                                                          },
+                                                                    showClientThemesCoachmark: eN
                                                                 }),
-                                                                (0, r.jsx)(w.Z, {}),
-                                                                (0, r.jsx)(m.Z, {}),
-                                                                eC &&
-                                                                    !ew &&
-                                                                    (0, r.jsx)(L.Z, {
-                                                                        markAsDismissed: eN
-                                                                            ? eS
-                                                                            : () => {
-                                                                                  (0, G.EW)(d.z.CLIENT_THEMES_COACHMARK, {
-                                                                                      dismissAction: eu.L.INDIRECT_ACTION,
-                                                                                      forceTrack: !0
-                                                                                  });
-                                                                              },
-                                                                        showClientThemesCoachmark: eN
-                                                                    }),
-                                                                eR &&
-                                                                    !ew &&
-                                                                    (0, r.jsx)(R.Z, {
-                                                                        isCoachmark: eT,
-                                                                        markAsDismissed: eS
-                                                                    }),
-                                                                (eC || eR) &&
-                                                                    ew &&
-                                                                    (0, r.jsx)(z.Z, {
-                                                                        initialTab: eR ? z._.APP_ICONS : z._.CLIENT_THEMES,
-                                                                        markAsDismissed: eS,
-                                                                        isCoachmark: eN
-                                                                    }),
-                                                                (0, r.jsx)(en.Z, {}),
-                                                                (0, r.jsx)(U.Z, { mobile: v })
-                                                            ]
-                                                        }),
-                                                        !1
-                                                    ]
-                                                })
-                                            }),
-                                            (0, r.jsx)(s.OU, {})
-                                        ]
-                                    })
+                                                            eR &&
+                                                                !ew &&
+                                                                (0, r.jsx)(R.Z, {
+                                                                    isCoachmark: eT,
+                                                                    markAsDismissed: eS
+                                                                }),
+                                                            (eC || eR) &&
+                                                                ew &&
+                                                                (0, r.jsx)(z.Z, {
+                                                                    initialTab: eR ? z._.APP_ICONS : z._.CLIENT_THEMES,
+                                                                    markAsDismissed: eS,
+                                                                    isCoachmark: eN
+                                                                }),
+                                                            (0, r.jsx)(en.Z, {}),
+                                                            (0, r.jsx)(U.Z, { mobile: v })
+                                                        ]
+                                                    }),
+                                                    !1
+                                                ]
+                                            })
+                                        }),
+                                        (0, r.jsx)(s.OU, {})
+                                    ]
                                 })
                             })
-                        ]
-                    })
+                        })
+                    ]
                 })
             },
             eD

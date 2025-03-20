@@ -3,7 +3,6 @@ var r = {
     playIcon: 'playIcon_a8e786',
     playing: 'playing_a8e786',
     playButtonContainer: 'playButtonContainer_a8e786',
-    oldPlayIconSpacing: 'oldPlayIconSpacing_a8e786',
     audioElement: 'audioElement_a8e786',
     volumeButton: 'volumeButton_a8e786',
     volumeButtonIcon: 'volumeButtonIcon_a8e786',

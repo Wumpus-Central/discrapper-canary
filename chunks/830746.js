@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(399606),
@@ -10,47 +10,44 @@ var i = n(399606),
     d = n(552045),
     u = n(87792),
     m = n(302289),
-    p = n(946690),
-    g = n(456771),
-    h = n(292352),
-    f = n(635357),
-    b = n(388032),
-    N = n(28472);
-let x = () => {
-    let e = (0, c.mq)(h.ne.ACTIVE),
+    g = n(946690),
+    p = n(292352),
+    h = n(917566),
+    f = n(388032),
+    x = n(28472);
+let N = () => {
+    let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        x = (0, l.o)(b.NW.string(f.Z['5RZ8Tk']), b.NW.string(f.Z.bmhCnJ)),
-        _ = (0, l.o)(b.NW.string(f.Z.XKnFFh), b.NW.string(f.Z['68zfxM'])),
-        E = (0, l.o)(b.NW.string(f.Z['Rm/6a2']), b.NW.string(f.Z['1xPTwM'])),
-        j = (0, s.bWb)().enabled;
+        N = (0, l.o)(f.NW.string(h.Z['5RZ8Tk']), f.NW.string(h.Z.bmhCnJ)),
+        b = (0, l.o)(f.NW.string(h.Z.XKnFFh), f.NW.string(h.Z['68zfxM'])),
+        _ = (0, l.o)(f.NW.string(h.Z['Rm/6a2']), f.NW.string(h.Z['1xPTwM']));
     return void 0 === n
         ? null
         : (0, r.jsxs)('div', {
-              className: N.container,
+              className: x.container,
               children: [
                   (0, r.jsx)('div', {
-                      className: N.banner,
+                      className: x.banner,
                       children: (0, r.jsx)(d.Z, {})
                   }),
                   (0, r.jsxs)('div', {
-                      className: N.featureCards,
+                      className: x.featureCards,
                       children: [
-                          (0, r.jsx)(p.Z, {
-                              iconClassName: N.chatCheckIcon,
+                          (0, r.jsx)(g.Z, {
                               icon: s.eQA,
-                              header: b.NW.string(f.Z['001l3t']),
-                              description: x
+                              header: f.NW.string(h.Z['001l3t']),
+                              description: N
                           }),
-                          (0, r.jsx)(p.Z, {
+                          (0, r.jsx)(g.Z, {
                               icon: s.tEF,
-                              header: b.NW.string(f.Z.yipAeH),
-                              description: _
+                              header: f.NW.string(h.Z.yipAeH),
+                              description: b
                           }),
-                          (0, r.jsx)(p.Z, {
-                              icon: j ? s.IkH : (0, s.GSL)(g.Z),
-                              header: b.NW.string(f.Z.hhOuMT),
-                              description: E
+                          (0, r.jsx)(g.Z, {
+                              icon: s.IkH,
+                              header: f.NW.string(h.Z.hhOuMT),
+                              description: _
                           })
                       ]
                   }),

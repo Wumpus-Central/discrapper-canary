@@ -9,28 +9,21 @@ var r = n(442837),
     c = n(68178);
 let d = {
     [l.kg4.TOGGLE_MUTE]: {
-        legacy: {
-            slash: s.nRN,
-            default: s.S6n
-        },
-        new: {
-            slash: s.nRN,
-            default: s.S6n
-        }
+        slash: s.nRN,
+        default: s.S6n
     }
 };
 function u(e) {
     let { value: t, action: n, shouldShow: l } = e,
-        u = (0, r.e7)([o.ZP], () => o.ZP.getKeybindForAction(n, !1, !0)),
-        h = (0, s.bWb)().enabled;
+        u = (0, r.e7)([o.ZP], () => o.ZP.getKeybindForAction(n, !1, !0));
     if (null == u || !l) return null;
-    let p = a.BB(u.shortcut),
-        f = h ? d[n].new : d[n].legacy,
-        g = t ? f.slash : f.default;
+    let h = a.BB(u.shortcut),
+        p = d[n],
+        f = t ? p.slash : p.default;
     return (0, i.jsxs)('div', {
         className: c.keybindIndicator,
         children: [
-            (0, i.jsx)(g, {
+            (0, i.jsx)(f, {
                 className: c.keybindIcon,
                 size: 'xs',
                 color: 'currentColor'
@@ -38,7 +31,7 @@ function u(e) {
             (0, i.jsx)(s.Text, {
                 variant: 'text-xxs/semibold',
                 className: c.keybindIndicatorText,
-                children: p
+                children: h
             })
         ]
     });

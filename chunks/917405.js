@@ -1,14 +1,13 @@
-n.d(t, { Z: () => N }), n(47120);
-var i = n(200651),
-    o = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    l = n(481060),
-    c = n(100527),
-    s = n(522651),
-    u = n(72416),
-    d = n(476221),
-    _ = n(873596),
+n.d(t, { Z: () => b }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(100527),
+    c = n(522651),
+    u = n(476221),
+    d = n(873596),
     h = n(423516),
     f = n(981631),
     p = n(341259);
@@ -28,42 +27,42 @@ function g(e, t, n) {
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
+            r.forEach(function (t) {
                 g(e, t, n[t]);
             });
     }
     return e;
 }
-let b = {
-        [f.IE4.UNKNOWN]: l.ua7.Colors.BLACK,
-        [f.IE4.BAD]: l.ua7.Colors.RED,
-        [f.IE4.AVERAGE]: l.ua7.Colors.YELLOW,
-        [f.IE4.FINE]: l.ua7.Colors.GREEN
+let N = {
+        [f.IE4.UNKNOWN]: a.ua7.Colors.BLACK,
+        [f.IE4.BAD]: a.ua7.Colors.RED,
+        [f.IE4.AVERAGE]: a.ua7.Colors.YELLOW,
+        [f.IE4.FINE]: a.ua7.Colors.GREEN
     },
     y = {
         [f.QKv.CONNECTED]: p.rtcConnectionStatusConnected,
         [f.QKv.CONNECTING]: p.rtcConnectionStatusConnecting,
         [f.QKv.ERROR]: p.rtcConnectionStatusError
     },
-    m = {
+    O = {
         [f.IE4.FINE]: p.rtcConnectionQualityFine,
         [f.IE4.AVERAGE]: p.rtcConnectionQualityAverage,
         [f.IE4.BAD]: p.rtcConnectionQualityBad,
         [f.IE4.UNKNOWN]: null
     };
-class I extends o.PureComponent {
+class x extends l.PureComponent {
     renderPopoutTarget(e) {
         let t = this.props.channelId;
         return null == t
             ? e({})
-            : (0, i.jsx)(l.yRy, {
+            : (0, r.jsx)(a.yRy, {
                   renderPopout: this.renderPopout(t),
                   position: 'top',
                   children: e
@@ -71,20 +70,20 @@ class I extends o.PureComponent {
     }
     renderStatus() {
         let { hasVideo: e, state: t, channelId: n } = this.props,
-            { connectionStatus: o, connectionStatusText: r } = d.Z.getStatus(t, e);
+            { connectionStatus: l, connectionStatusText: i } = u.Z.getStatus(t, e);
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(l.zxk, {
-                look: l.zxk.Looks.BLANK,
-                size: l.zxk.Sizes.NONE,
+            return (0, r.jsx)(a.zxk, {
+                look: a.zxk.Looks.BLANK,
+                size: a.zxk.Sizes.NONE,
                 onClick: (e) => {
-                    (0, s.v)(c.Z.RTC_PANEL, s.d.CONNECTION_STATUS), null == t || t(e);
+                    (0, c.v)(s.Z.RTC_PANEL, c.d.CONNECTION_STATUS), null == t || t(e);
                 },
-                children: (0, i.jsx)(h.Z, {
-                    text: r,
+                children: (0, r.jsx)(h.Z, {
+                    text: i,
                     textVariant: this.props.connectionStatusTextVariant,
                     hasVideo: this.props.hasVideo,
-                    className: y[o],
+                    className: y[l],
                     hasConnectedChannel: null != n
                 })
             });
@@ -92,15 +91,15 @@ class I extends o.PureComponent {
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: o, state: r, className: c, children: s } = this.props;
+        let { quality: t, smallPing: n, lastPing: l, state: i, className: s, children: c } = this.props;
         return (
-            r === f.hes.RTC_CONNECTED &&
-                (e = (0, i.jsx)(l.ua7, {
-                    text: t !== f.IE4.UNKNOWN && null != o ? ''.concat(o.toFixed(0), ' ms') : null,
-                    color: b[t],
+            i === f.hes.RTC_CONNECTED &&
+                (e = (0, r.jsx)(a.ua7, {
+                    text: t !== f.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
+                    color: N[t],
                     children: (e) =>
-                        (0, i.jsx)(
-                            O,
+                        (0, r.jsx)(
+                            m,
                             v(
                                 {
                                     quality: t,
@@ -110,20 +109,20 @@ class I extends o.PureComponent {
                             )
                         )
                 })),
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: p.rtcConnectionStatusWrapper,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: a()(p.rtcConnectionStatus, m[t], c),
+                    (0, r.jsxs)('div', {
+                        className: o()(p.rtcConnectionStatus, O[t], s),
                         children: [
                             e,
-                            (0, i.jsx)('div', {
+                            (0, r.jsx)('div', {
                                 className: p.labelWrapper,
                                 children: this.renderStatus()
                             })
                         ]
                     }),
-                    s
+                    c
                 ]
             })
         );
@@ -131,62 +130,55 @@ class I extends o.PureComponent {
     constructor(...e) {
         super(...e),
             g(this, 'renderPopout', (e) => (t) => {
-                var n, o;
-                return (0, i.jsx)(
-                    _.Z,
+                var n, l;
+                return (0, r.jsx)(
+                    d.Z,
                     ((n = v({}, t)),
-                    (o = o = { channelId: e }),
+                    (l = l = { channelId: e }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     n)
                 );
             });
     }
 }
-function O(e) {
+function m(e) {
     var { quality: t, smallPing: n } = e,
-        o = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
-                i,
-                o = (function (e, t) {
+                r,
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        i,
-                        o = {},
-                        r = Object.keys(e);
-                    for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        r,
+                        l = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var r = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, ['quality', 'smallPing']);
-    if (!(0, l.bWb)().enabled)
-        return (0, i.jsx)(u.Z, {
-            className: a()(p.ping, { [p.smallPing]: n }),
-            foreground: p.pingForeground
-        });
-    {
-        let e = {
-            [f.IE4.FINE]: l.B_b,
-            [f.IE4.AVERAGE]: l.hLg,
-            [f.IE4.BAD]: l.mbS,
-            [f.IE4.UNKNOWN]: l._3e
-        }[t];
-        return (0, i.jsx)(e, v({ className: a()(p.ping, { [p.smallPing]: n }) }, o));
-    }
+    let i = {
+        [f.IE4.FINE]: a.B_b,
+        [f.IE4.AVERAGE]: a.hLg,
+        [f.IE4.BAD]: a.mbS,
+        [f.IE4.UNKNOWN]: a._3e
+    }[t];
+    return (0, r.jsx)(i, v({ className: o()(p.ping, { [p.smallPing]: n }) }, l));
 }
-let N = I;
+let b = x;

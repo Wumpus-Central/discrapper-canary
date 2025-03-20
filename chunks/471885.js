@@ -1,11 +1,9 @@
-n.d(t, { Z: () => f }), n(411104);
+n.d(t, { Z: () => u }), n(411104);
 var r = n(200651);
 n(192379);
-var i = n(758426),
-    o = n(973675),
-    a = n(949605),
-    s = n(981631);
-function l(e, t, n) {
+var i = n(481060),
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +16,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,23 +27,23 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function l(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = d(e, t);
+        i = c(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function d(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -54,17 +52,17 @@ function d(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function f(e) {
+function u(e) {
     var { tier: t } = e,
-        n = u(e, ['tier']);
+        n = l(e, ['tier']);
     switch (t) {
-        case s.Eu4.NONE:
-        case s.Eu4.TIER_1:
-            return (0, r.jsx)(i.Z, c({}, n));
-        case s.Eu4.TIER_2:
-            return (0, r.jsx)(o.Z, c({}, n));
-        case s.Eu4.TIER_3:
-            return (0, r.jsx)(a.Z, c({}, n));
+        case o.Eu4.NONE:
+        case o.Eu4.TIER_1:
+            return (0, r.jsx)(i.Mjp, s({}, n));
+        case o.Eu4.TIER_2:
+            return (0, r.jsx)(i.$zw, s({}, n));
+        case o.Eu4.TIER_3:
+            return (0, r.jsx)(i.HiA, s({}, n));
         default:
             throw Error('Not a valid tier type');
     }

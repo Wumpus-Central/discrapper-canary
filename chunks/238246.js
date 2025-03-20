@@ -143,53 +143,51 @@ class X extends (r = l.Component) {
                 {
                     windowKey: r,
                     children: (0, i.jsx)(y.Z, {
-                        children: (0, i.jsx)(p.vWI, {
-                            children: (0, i.jsx)(Q, {
-                                guestWindow: c,
-                                className: d,
-                                children: (0, i.jsx)(p.JcV, {
-                                    containerRef: this.rootRef,
-                                    children: (0, i.jsxs)(g, {
-                                        children: [
-                                            (0, i.jsx)(P.Co, {}),
-                                            (0, i.jsx)(b.Wu, {
-                                                appContext: Y.IlC.POPOUT,
-                                                renderWindow: c,
-                                                children: (0, i.jsx)(Z.m, {
-                                                    children: (0, i.jsxs)(A.yP, {
-                                                        children: [
-                                                            (0, i.jsxs)('div', {
-                                                                className: G.popout,
-                                                                children: [
-                                                                    o &&
-                                                                        v &&
-                                                                        (0, i.jsx)(N.T, {
-                                                                            windowKey: r,
-                                                                            short: !0
-                                                                        }),
-                                                                    !o && v && null != m
-                                                                        ? (0, i.jsx)(I.Z, {
-                                                                              focused: e,
-                                                                              type: m,
-                                                                              windowKey: r,
-                                                                              macOSFrame: !0
-                                                                          })
-                                                                        : null,
-                                                                    (0, i.jsx)('div', {
-                                                                        className: a()(G.content, f),
-                                                                        children: n
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, i.jsx)(p.nKe, {}),
-                                                            (0, i.jsx)(h.Z, {}),
-                                                            (0, i.jsx)(A.Un, {})
-                                                        ]
-                                                    })
+                        children: (0, i.jsx)(Q, {
+                            guestWindow: c,
+                            className: d,
+                            children: (0, i.jsx)(p.JcV, {
+                                containerRef: this.rootRef,
+                                children: (0, i.jsxs)(g, {
+                                    children: [
+                                        (0, i.jsx)(P.Co, {}),
+                                        (0, i.jsx)(b.Wu, {
+                                            appContext: Y.IlC.POPOUT,
+                                            renderWindow: c,
+                                            children: (0, i.jsx)(Z.m, {
+                                                children: (0, i.jsxs)(A.yP, {
+                                                    children: [
+                                                        (0, i.jsxs)('div', {
+                                                            className: G.popout,
+                                                            children: [
+                                                                o &&
+                                                                    v &&
+                                                                    (0, i.jsx)(N.T, {
+                                                                        windowKey: r,
+                                                                        short: !0
+                                                                    }),
+                                                                !o && v && null != m
+                                                                    ? (0, i.jsx)(I.Z, {
+                                                                          focused: e,
+                                                                          type: m,
+                                                                          windowKey: r,
+                                                                          macOSFrame: !0
+                                                                      })
+                                                                    : null,
+                                                                (0, i.jsx)('div', {
+                                                                    className: a()(G.content, f),
+                                                                    children: n
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, i.jsx)(p.nKe, {}),
+                                                        (0, i.jsx)(h.Z, {}),
+                                                        (0, i.jsx)(A.Un, {})
+                                                    ]
                                                 })
                                             })
-                                        ]
-                                    })
+                                        })
+                                    ]
                                 })
                             })
                         })

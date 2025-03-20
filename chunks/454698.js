@@ -38,7 +38,6 @@ e.exports = {
     selectedScreen: 'selectedScreen__2f4f7',
     toggleMute: 'toggleMute__2f4f7',
     selectedIcon: 'selectedIcon__2f4f7',
-    localMuteStrikethrough: 'localMuteStrikethrough__2f4f7',
     liveIndicator: 'liveIndicator__2f4f7',
     addStreamIcon: 'addStreamIcon__2f4f7',
     addCTA: 'addCTA__2f4f7',

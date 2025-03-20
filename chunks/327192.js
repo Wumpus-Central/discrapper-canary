@@ -13,9 +13,9 @@ var r = n(200651),
     p = n(497321),
     h = n(23551),
     f = n(468026),
-    b = n(410030),
+    x = n(410030),
     N = n(726542),
-    x = n(122021),
+    b = n(122021),
     _ = n(275759),
     E = n(231757),
     j = n(888496),
@@ -37,8 +37,8 @@ var r = n(200651),
     L = n(856651),
     B = n(921944),
     M = n(388032),
-    U = n(863716),
-    V = n(455812);
+    U = n(762730),
+    V = n(802138);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -140,7 +140,7 @@ function H(e) {
         s,
         a,
         { onDisconnect: l, account: o, theme: m, locale: p } = e,
-        [h, b] = i.useState(o.friendSync),
+        [h, x] = i.useState(o.friendSync),
         [C, O] = i.useState(o.visibility),
         [S, T] = i.useState(o.metadataVisibility),
         [I, y] = i.useState(o.showActivity),
@@ -148,10 +148,10 @@ function H(e) {
         [B, V] = i.useState(null),
         [H, z] = i.useState(!1),
         [Y, K] = i.useState([]),
-        q = (0, x.rR)(o.type),
+        q = (0, b.rR)(o.type),
         X = N.Z.get(q);
     i.useEffect(() => {
-        b(o.friendSync), O(o.visibility), T(o.metadataVisibility), y(o.showActivity);
+        x(o.friendSync), O(o.visibility), T(o.metadataVisibility), y(o.showActivity);
     }, [o]);
     let J = {
             inProgressVisibility: A,
@@ -410,7 +410,7 @@ function H(e) {
                     hideBorder: !0,
                     value: h,
                     onChange: function (e) {
-                        b(e), g.Z.setFriendSync(o.type, o.id, e);
+                        x(e), g.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -566,8 +566,7 @@ function K() {
             onComplete: Y
         });
     }
-    let t = (0, x.fq)(),
-        n = (0, u.bWb)().enabled ? 24 : 18;
+    let t = (0, b.fq)();
     return (0, r.jsxs)('div', {
         className: U.connectionsContainer,
         children: [
@@ -585,22 +584,20 @@ function K() {
             (0, r.jsx)(u.ua7, {
                 text: M.NW.string(M.t.QqTz8f),
                 children: (t) => {
-                    let { onMouseEnter: i, onMouseLeave: s } = t;
+                    let { onMouseEnter: n, onMouseLeave: i } = t;
                     return (0, r.jsx)('div', {
                         className: a()(U.accountAddWrapper, U.__invalid_accountButton),
                         children: (0, r.jsx)(u.tEY, {
                             children: (0, r.jsx)('button', {
-                                onMouseEnter: i,
-                                onMouseLeave: s,
+                                onMouseEnter: n,
+                                onMouseLeave: i,
                                 className: a()(U.accountAddInner, U.accountButtonInner),
                                 type: 'button',
                                 onClick: e,
                                 'aria-label': M.NW.string(M.t.Zhcj9f),
                                 children: (0, r.jsx)(u.Fbu, {
-                                    size: 'custom',
                                     color: 'currentColor',
-                                    height: n,
-                                    width: n,
+                                    size: 'md',
                                     'aria-label': M.NW.string(M.t.QqTz8f)
                                 })
                             })
@@ -665,7 +662,7 @@ let X = () => {
     let e = (0, l.e7)([y.Z], () => y.Z.hidePersonalInformation),
         t = (0, l.e7)([S.Z], () => S.Z.isFetching()),
         n = (0, l.e7)([S.Z], () => S.Z.getAccounts()),
-        s = (0, b.ZP)();
+        s = (0, x.ZP)();
     (0, l.e7)([I.ZP], () => I.ZP.getFlattenedGuildIds());
     let a = (0, l.e7)([R.default], () => R.default.locale);
     return (i.useEffect(() => {

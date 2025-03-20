@@ -20,8 +20,8 @@ var r = n(200651),
     m = n(522651),
     g = n(795318),
     y = n(194082),
-    b = n(282256),
-    O = n(925329),
+    O = n(282256),
+    b = n(925329),
     h = n(880395),
     v = n(221241),
     j = n(592125),
@@ -69,9 +69,9 @@ let _ = (e) => {
     });
 };
 function D(e) {
-    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: s, deaf: c, serverDeaf: f, collapsed: p, video: m, isStreaming: g, disabled: b, isWatching: O, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: I, guildId: C, channelId: _, user: D, disconnected: L } = e,
+    let { className: t, mute: n, localMute: l, localVideoDisabled: i, serverMute: s, deaf: c, serverDeaf: f, collapsed: p, video: m, isStreaming: g, disabled: O, isWatching: b, iconClassName: h, embeddedApplication: v, otherClientSessionType: j, voicePlatform: S, application: I, guildId: C, channelId: _, user: D, disconnected: L } = e,
         { enabled: M } = u.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
-    if (p || b) return null;
+    if (p || O) return null;
     let U = [],
         R = (0, r.jsx)(W, {
             iconClassName: h,
@@ -168,7 +168,7 @@ function D(e) {
                       'playstation'
                   )
               ),
-        O &&
+        b &&
             U.push(
                 (0, r.jsx)(
                     a.DY3,
@@ -245,7 +245,7 @@ let L = function (e) {
             }
             return l;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: O, onKeyDown: P, onDoubleClick: N, onContextMenu: E, onMouseLeave: Z, onMouseDown: _, priority: L, speaking: k, collapsed: W, mute: M, serverMute: U, guildId: R, nick: F, isGuest: G, flipped: Y, className: V, overlap: B, 'aria-label': z, ringing: H, user: J, channelId: Q } = y,
+    let { onClick: b, onKeyDown: P, onDoubleClick: N, onContextMenu: E, onMouseLeave: Z, onMouseDown: _, priority: L, speaking: k, collapsed: W, mute: M, serverMute: U, guildId: R, nick: F, isGuest: G, flipped: Y, className: V, overlap: B, 'aria-label': z, ringing: H, user: J, channelId: Q } = y,
         { parentAnalyticsLocation: X } = (0, p.ZP)(),
         K = (0, c.bp)(),
         q = null != Q ? j.Z.getChannel(Q) : null,
@@ -264,14 +264,14 @@ let L = function (e) {
                 [w.voiceUser]: !0,
                 [w.overlap]: B,
                 [w.selected]: u,
-                [w.clickable]: null != O,
+                [w.clickable]: null != b,
                 [w.userSmall]: s === x.ipw.SMALL,
                 [w.userLarge]: s === x.ipw.LARGE,
                 [w.disabled]: !u && d,
                 [w.ringing]: H
             }),
             onClick: (e) => {
-                null == O || O(e, J);
+                null == b || b(e, J);
             },
             onDoubleClick: (e) => {
                 null == N || N(e, J);
@@ -333,7 +333,7 @@ let L = function (e) {
                             };
                         return !W || f
                             ? (0, r.jsx)(
-                                  b.Z,
+                                  O.Z,
                                   ((e = C({}, l)),
                                   (t = t = { children: n }),
                                   Object.getOwnPropertyDescriptors
@@ -406,10 +406,10 @@ function k(e) {
             className: w.iconSpacing,
             children: (0, r.jsx)('div', {
                 ref: m,
-                children: (0, r.jsx)(O.Z, {
+                children: (0, r.jsx)(b.Z, {
                     className: o()(w.icon, n),
                     game: t,
-                    size: O.Z.Sizes.XSMALL,
+                    size: b.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
                         f.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
                             channel_id: c,
@@ -425,61 +425,43 @@ function k(e) {
 }
 function W(e) {
     let { iconClassName: t, mute: n, localMute: l, serverMute: i, deaf: s, serverDeaf: c } = e,
-        u = (0, a.bWb)().enabled,
-        d = [];
+        u = [];
     if (n) {
         let e;
-        if (u) {
-            let n;
-            (n = i ? a.v0G : l ? a.v0G : a.nRN),
-                (e = (0, r.jsx)(n, {
-                    className: o()(w.icon, t, { [w.iconServer]: i }),
-                    color: 'currentColor'
-                }));
-        } else
-            e = (0, r.jsx)(a.nRN, {
-                size: 'md',
-                color: 'currentColor',
-                className: o()(w.icon, t, { [w.iconServer]: i }),
-                colorClass: l ? w.strikethrough : void 0
-            });
-        d.push(
+        e = i ? a.v0G : l ? a.v0G : a.nRN;
+        let n = (0, r.jsx)(e, {
+            className: o()(w.icon, t, { [w.iconServer]: i }),
+            color: 'currentColor'
+        });
+        u.push(
             (0, r.jsx)(
                 a.DY3,
                 {
                     text: l ? T.NW.string(T.t.Q8Uzoa) : i ? T.NW.string(T.t.uLddbW) : T.NW.string(T.t.tjtv3N),
                     className: w.iconSpacing,
-                    children: e
+                    children: n
                 },
                 'mute'
             )
         );
     }
     if (c || s) {
-        let e;
-        if (u) {
-            let n = c ? a.Vm4 : a.wE8;
-            e = (0, r.jsx)(n, {
+        let e = c ? a.Vm4 : a.wE8,
+            n = (0, r.jsx)(e, {
                 className: o()(w.icon, t, { [w.iconServer]: c }),
                 color: 'currentColor'
             });
-        } else
-            e = (0, r.jsx)(a.wE8, {
-                size: 'md',
-                color: 'currentColor',
-                className: o()(w.icon, t, { [w.iconServer]: c })
-            });
-        d.push(
+        u.push(
             (0, r.jsx)(
                 a.DY3,
                 {
                     className: w.iconSpacing,
                     text: c ? T.NW.string(T.t.btxSdH) : T.NW.string(T.t.NjmiOD),
-                    children: e
+                    children: n
                 },
                 'deaf'
             )
         );
     }
-    return 0 === d.length ? null : d;
+    return 0 === u.length ? null : u;
 }

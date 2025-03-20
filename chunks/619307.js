@@ -1,5 +1,5 @@
 n.d(t, {
-    Ph: () => x,
+    Ph: () => L,
     UN: () => P,
     cY: () => A,
     gz: () => C,
@@ -17,14 +17,14 @@ var r = n(200651),
     u = n(597442),
     d = n(235874),
     f = n(147479),
-    p = n(481060),
-    _ = n(393238),
+    _ = n(481060),
+    p = n(393238),
     h = n(434650),
     m = n(98650),
     g = n(748585),
     E = n(388032),
-    v = n(72271);
-function b(e, t, n) {
+    b = n(673293);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function O(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function S(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -158,24 +158,24 @@ function w(e) {
 function D(e) {
     return e.map((e) => w(e)).join(', ');
 }
-function x(e) {
-    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: b = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: N = w, renderOptionValue: A = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: x, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': Z, 'aria-labelledby': F } = e,
-        [V, H] = i.useState(!1),
-        { ref: W, width: Y, height: K } = (0, _.Z)();
+function L(e) {
+    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: v = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: N = w, renderOptionValue: A = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': F, 'aria-labelledby': V } = e,
+        [Z, H] = i.useState(!1),
+        { ref: W, width: Y, height: K } = (0, p.Z)();
     i.useLayoutEffect(() => {
         s && H(!1);
     }, [s]);
     let z = i.useCallback(
             (e) => {
-                V === e || s || (H(e), e ? null == T || T() : null == O || O());
+                Z === e || s || (H(e), e ? null == T || T() : null == O || O());
             },
-            [s, O, T, V]
+            [s, O, T, Z]
         ),
         q = i.useCallback(
             (e) => {
-                V && !e && z(!1);
+                Z && !e && z(!1);
             },
-            [z, V]
+            [z, Z]
         ),
         Q = (0, h.O)(q),
         X = i.useCallback(
@@ -194,128 +194,126 @@ function x(e) {
             [G]
         ),
         $ = t.filter((e) => j(e.value));
-    i.useLayoutEffect(() => {
-        if (u) {
-            var e;
-            null === (e = W.current) || void 0 === e || e.focus();
-        }
-    }, [u, W]);
-    let ee = (0, p.bWb)().enabled;
-    return (0, r.jsx)(d.y, {
-        spacing: 0,
-        animation: d.y.Animation.NONE,
-        shouldShow: V,
-        onRequestOpen: () => {
-            z(!0);
-        },
-        onRequestClose: () => {
-            z(!1);
-        },
-        renderPopout: (e) => {
-            let { closePopout: n, position: i, updatePosition: o } = e;
-            return (0, r.jsx)(L, {
-                className: C,
-                closeOnSelect: M,
-                maxVisibleItems: l,
-                width: null != f ? f : Y,
-                isSelected: j,
-                closePopout: n,
-                buttonHeight: null != K ? K : 0,
-                onSelect: X,
-                options: t,
-                serialize: U,
-                renderOptionLabel: N,
-                optionClassName: x,
-                updatePosition: o,
-                popoutPosition: i
-            });
-        },
-        position: R,
-        layerContext: P,
-        children: (e, t) => {
-            var { onClick: i, onKeyDown: l } = e,
-                u = I(e, ['onClick', 'onKeyDown']),
-                { isShown: d, position: f } = t;
-            let _ = d ? p.u04 : p.CJ0,
-                h = ee ? 18 : 24;
-            return (0, r.jsxs)(
-                c.P,
-                S(
-                    y(
-                        {
-                            role: 'button',
-                            'aria-disabled': s,
-                            innerRef: (e) => {
-                                (W.current = e), (Q.current = e);
+    return (
+        i.useLayoutEffect(() => {
+            if (u) {
+                var e;
+                null === (e = W.current) || void 0 === e || e.focus();
+            }
+        }, [u, W]),
+        (0, r.jsx)(d.y, {
+            spacing: 0,
+            animation: d.y.Animation.NONE,
+            shouldShow: Z,
+            onRequestOpen: () => {
+                z(!0);
+            },
+            onRequestClose: () => {
+                z(!1);
+            },
+            renderPopout: (e) => {
+                let { closePopout: n, position: i, updatePosition: o } = e;
+                return (0, r.jsx)(x, {
+                    className: C,
+                    closeOnSelect: M,
+                    maxVisibleItems: l,
+                    width: 'auto' === f ? void 0 : null != f ? f : Y,
+                    isSelected: j,
+                    closePopout: n,
+                    buttonHeight: null != K ? K : 0,
+                    onSelect: X,
+                    options: t,
+                    serialize: U,
+                    renderOptionLabel: N,
+                    optionClassName: L,
+                    updatePosition: o,
+                    popoutPosition: i
+                });
+            },
+            position: R,
+            layerContext: P,
+            children: (e, t) => {
+                var { onClick: i, onKeyDown: l } = e,
+                    u = S(e, ['onClick', 'onKeyDown']),
+                    { isShown: d, position: f } = t;
+                let p = d ? _.u04 : _.CJ0;
+                return (0, r.jsxs)(
+                    c.P,
+                    I(
+                        y(
+                            {
+                                role: 'button',
+                                'aria-disabled': s,
+                                innerRef: (e) => {
+                                    (W.current = e), (Q.current = e);
+                                },
+                                onClick: s
+                                    ? void 0
+                                    : (e) => {
+                                          i(e), z(!Z);
+                                      },
+                                onKeyDown: (e) => {
+                                    'ArrowDown' === e.key ? z(!0) : 'Escape' === e.key && (e.stopPropagation(), z(!1)), l(e);
+                                }
                             },
-                            onClick: s
-                                ? void 0
-                                : (e) => {
-                                      i(e), z(!V);
-                                  },
-                            onKeyDown: (e) => {
-                                'ArrowDown' === e.key ? z(!0) : 'Escape' === e.key && (e.stopPropagation(), z(!1)), l(e);
-                            }
-                        },
-                        u
-                    ),
-                    {
-                        className: a()(v.select, o, {
-                            [v.open]: d,
-                            [v.disabled]: s,
-                            [v.selectPositionTop]: 'top' === f,
-                            [v.lookFilled]: b === g.q.FILLED
-                        }),
-                        'aria-haspopup': 'listbox',
-                        'aria-expanded': d,
-                        'aria-label': Z,
-                        'aria-labelledby': F,
-                        children: [
-                            $.length > 0
-                                ? (0, r.jsx)(p.Text, {
-                                      className: v.value,
-                                      variant: 'text-md/medium',
-                                      children: A($)
-                                  })
-                                : (0, r.jsx)('span', {
-                                      className: v.placeholder,
-                                      children: n
-                                  }),
-                            (0, r.jsxs)('div', {
-                                className: v.icons,
-                                children: [
-                                    m
-                                        ? (0, r.jsx)(c.P, {
-                                              role: 'button',
-                                              'aria-disabled': s,
-                                              onClick: J,
-                                              'aria-label': E.NW.string(E.t.VkKicX),
-                                              children: (0, r.jsx)(p.Dio, {
-                                                  size: 'xs',
-                                                  color: 'currentColor',
-                                                  className: v.clear
+                            u
+                        ),
+                        {
+                            className: a()(b.select, o, {
+                                [b.open]: d,
+                                [b.disabled]: s,
+                                [b.selectPositionTop]: 'top' === f,
+                                [b.lookFilled]: v === g.q.FILLED
+                            }),
+                            'aria-haspopup': 'listbox',
+                            'aria-expanded': d,
+                            'aria-label': F,
+                            'aria-labelledby': V,
+                            children: [
+                                $.length > 0
+                                    ? (0, r.jsx)(_.Text, {
+                                          className: b.value,
+                                          variant: 'text-md/medium',
+                                          children: A($)
+                                      })
+                                    : (0, r.jsx)('span', {
+                                          className: b.placeholder,
+                                          children: n
+                                      }),
+                                (0, r.jsxs)('div', {
+                                    className: b.icons,
+                                    children: [
+                                        m
+                                            ? (0, r.jsx)(c.P, {
+                                                  role: 'button',
+                                                  'aria-disabled': s,
+                                                  onClick: J,
+                                                  'aria-label': E.NW.string(E.t.VkKicX),
+                                                  children: (0, r.jsx)(_.Dio, {
+                                                      size: 'xs',
+                                                      color: 'currentColor',
+                                                      className: b.clear
+                                                  })
                                               })
-                                          })
-                                        : null,
-                                    B
-                                        ? null
-                                        : (0, r.jsx)(_, {
-                                              color: 'currentColor',
-                                              size: 'custom',
-                                              width: h,
-                                              height: h
-                                          })
-                                ]
-                            })
-                        ]
-                    }
-                )
-            );
-        }
-    });
+                                            : null,
+                                        B
+                                            ? null
+                                            : (0, r.jsx)(p, {
+                                                  color: 'currentColor',
+                                                  size: 'sm'
+                                              })
+                                    ]
+                                })
+                            ]
+                        }
+                    )
+                );
+            }
+        })
+    );
 }
-function L(e) {
-    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: p, width: _, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: b, buttonHeight: O, updatePosition: T, popoutPosition: N } = e,
+function x(e) {
+    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: v, buttonHeight: O, updatePosition: T, popoutPosition: N } = e,
         [A, C] = i.useState(0),
         R = i.useRef(null),
         P = i.useId(),
@@ -344,13 +342,13 @@ function L(e) {
         i.useEffect(() => {
             T();
         }, [T, A]);
-    let x = i.useCallback(
+    let L = i.useCallback(
             (e) => {
                 n(e), c && o();
             },
             [o, n, c]
         ),
-        L = p.map((e, t) => {
+        x = _.map((e, t) => {
             var n;
             return (0, r.jsx)(
                 M,
@@ -358,31 +356,31 @@ function L(e) {
                     isSelected: d(e.value),
                     value: e.value,
                     label: g(e),
-                    onSelect: x,
-                    className: b,
+                    onSelect: L,
+                    className: v,
                     isDisabled: e.disabled,
                     serialize: E
                 },
                 null !== (n = e.key) && void 0 !== n ? n : t
             );
         }),
-        k = p.length <= h ? f.xV : f.h2;
+        k = _.length <= h ? f.xV : f.h2;
     return (0, r.jsx)(l.bG, {
         navigator: w,
         children: (0, r.jsx)(l.SJ, {
             children: (e) => {
                 var { ref: n } = e,
-                    i = I(e, ['ref']);
+                    i = S(e, ['ref']);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(
                             k,
-                            S(
+                            I(
                                 y(
                                     {
-                                        className: a()(v.popout, t, { [v.popoutPositionTop]: 'top' === N }),
+                                        className: a()(b.popout, t, { [b.popoutPositionTop]: 'top' === N }),
                                         style: {
-                                            width: _,
+                                            width: p,
                                             maxHeight: A
                                         },
                                         ref: (e) => {
@@ -395,15 +393,15 @@ function L(e) {
                                 ),
                                 {
                                     role: 'listbox',
-                                    children: L
+                                    children: x
                                 }
                             )
                         ),
                         (0, r.jsx)('div', {
                             'aria-hidden': !0,
                             ref: R,
-                            className: v.measurement,
-                            children: L.slice(0, h)
+                            className: b.measurement,
+                            children: x.slice(0, h)
                         })
                     ]
                 });
@@ -416,11 +414,11 @@ function M(e) {
         f = (0, l.JA)(d(n));
     return (0, r.jsxs)(
         c.P,
-        S(
+        I(
             y(
                 {
                     focusProps: { enabled: !1 },
-                    className: a()(v.option, t),
+                    className: a()(b.option, t),
                     onClick: () => !u && o(n)
                 },
                 f
@@ -432,11 +430,11 @@ function M(e) {
                 children: [
                     i,
                     s &&
-                        (0, r.jsx)(p.owK, {
+                        (0, r.jsx)(_.owK, {
                             size: 'custom',
                             color: 'currentColor',
                             secondaryColor: 'white',
-                            className: v.selectedIcon,
+                            className: b.selectedIcon,
                             width: 20,
                             height: 20
                         })
@@ -447,10 +445,10 @@ function M(e) {
 }
 function k(e) {
     var { value: t, onChange: n } = e,
-        i = I(e, ['value', 'onChange']);
+        i = S(e, ['value', 'onChange']);
     let o = N({
         value: t,
         onChange: n
     });
-    return (0, r.jsx)(x, y({}, i, o));
+    return (0, r.jsx)(L, y({}, i, o));
 }

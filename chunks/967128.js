@@ -12,30 +12,19 @@ var i = n(120356),
     o = n(481060),
     a = n(534091),
     s = n(981631),
-    c = n(734209);
+    c = n(172519);
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
-        i = (0, o.bWb)().enabled,
-        a = n === s.d4z.GUILD_VOICE || n === s.d4z.GUILD_STAGE_VOICE;
-    if (!i)
-        return (0, r.jsx)('div', {
-            className: l()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
-                [c.locked]: t,
-                [c.voiceChat]: a
-            })
-        });
-    {
-        let e = a ? o.kBi : t ? o.W4G : o.VL1;
-        return (0, r.jsx)('div', {
-            className: l()(c.emptyChannelIcon, c.emptyChannelIconComponent),
-            children: (0, r.jsx)(e, {
-                color: o.TVs.colors.WHITE,
-                size: 'custom',
-                width: 42,
-                height: 42
-            })
-        });
-    }
+        i = n === s.d4z.GUILD_VOICE || n === s.d4z.GUILD_STAGE_VOICE ? o.kBi : t ? o.W4G : o.VL1;
+    return (0, r.jsx)('div', {
+        className: l()(c.emptyChannelIcon, c.emptyChannelIconComponent),
+        children: (0, r.jsx)(i, {
+            color: o.TVs.colors.WHITE,
+            size: 'custom',
+            width: 42,
+            height: 42
+        })
+    });
 }
 function d(e) {
     let { children: t, className: n } = e;

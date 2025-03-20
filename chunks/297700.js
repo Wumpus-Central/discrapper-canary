@@ -1,12 +1,11 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(481060),
-    l = n(189798),
-    c = n(692905);
-function u(e, t, n) {
+    s = n(189798),
+    l = n(973089);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +29,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +46,12 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -62,14 +61,14 @@ function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,23 +77,23 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
-    let { children: t, size: n = 16, className: o, flowerStarClassName: u } = e,
-        f = _(e, ['children', 'size', 'className', 'flowerStarClassName']),
-        h = i.Children.only(t),
-        m = {
+function h(e) {
+    let { children: t, size: n = 16, className: o, flowerStarClassName: c } = e,
+        d = _(e, ['children', 'size', 'className', 'flowerStarClassName']),
+        p = i.Children.only(t),
+        h = {
             width: n,
             height: n
         },
-        g = (0, s.bWb)().enabled && !e.allowFullSizedIcon;
+        m = !e.allowFullSizedIcon;
     return (0, r.jsxs)('div', {
-        className: a()(c.flowerStarContainer, o),
-        style: m,
+        className: a()(l.flowerStarContainer, o),
+        style: h,
         children: [
-            (0, r.jsx)(l.Z, p(d({}, f), { className: a()(u, c.flowerStar) })),
+            (0, r.jsx)(s.Z, f(u({}, d), { className: a()(c, l.flowerStar) })),
             (0, r.jsx)('div', {
-                className: a()(c.childContainer, { [c.redesignIconChildContainer]: g }),
-                children: h
+                className: a()(l.childContainer, { [l.redesignIconChildContainer]: m }),
+                children: p
             })
         ]
     });

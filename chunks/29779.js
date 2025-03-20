@@ -3,8 +3,6 @@ e.exports = {
     attachButton: 'attachButton__0923f',
     attachButtonPlus: 'attachButtonPlus__0923f',
     attachButtonInner: 'attachButtonInner__0923f',
-    attachButtonClip: 'attachButtonClip__0923f',
-    attachButtonPlay: 'attachButtonPlay__0923f',
     uploadInput: 'uploadInput__0923f',
     buttonAnimation: 'buttonAnimation__0923f',
     buttonAnimationGlow: 'buttonAnimationGlow__0923f',

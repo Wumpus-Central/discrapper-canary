@@ -7,7 +7,6 @@ e.exports = {
     rtcConnectionStatusConnecting: 'rtcConnectionStatusConnecting__06d62 rtcConnectionStatusLabel__06d62',
     rtcConnectionStatusError: 'rtcConnectionStatusError__06d62 rtcConnectionStatusLabel__06d62',
     rtcConnectionQualityFine: 'rtcConnectionQualityFine__06d62',
-    pingForeground: 'pingForeground__06d62',
     rtcConnectionQualityAverage: 'rtcConnectionQualityAverage__06d62',
     rtcConnectionQualityBad: 'rtcConnectionQualityBad__06d62',
     labelWrapper: 'labelWrapper__06d62',
