@@ -29,11 +29,15 @@ let y = (e) => {
         style: { color: N ? 'white' : 'black' },
         children: [
             null != A &&
-                (0, r.jsx)(f.Z, {
-                    nameplate: A,
-                    hovered: O,
-                    placement: d.i.SHOP_PREVIEW
-                }),
+                (0, r.jsx)(
+                    f.Z,
+                    {
+                        nameplate: A,
+                        hovered: O,
+                        placement: d.i.SHOP_PREVIEW
+                    },
+                    null == n ? void 0 : n.id
+                ),
             (0, r.jsxs)('div', {
                 className: E.overlayContainer,
                 children: [

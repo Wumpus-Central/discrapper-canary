@@ -34231,15 +34231,6 @@ html:not(.visual-refresh) .root_e5f3a9 {
     height: 38px
 }
 
-.nameplateItem_fdeafc {
-    width: 100%;
-    height: 50px
-}
-
-.nameplateItemInner_fdeafc {
-    width: 100%
-}
-
 .nameplatePreview_fdeafc {
     position: relative;
     border-radius: var(--radius-sm)
@@ -35293,7 +35284,15 @@ html:not(.visual-refresh) .inner_a99829 {
 }
 
 .nameplate_ba7f98 {
-    width: 224px
+    border-radius: var(--radius-sm);
+    background: var(--background-modifier-hover);
+    width: 100%;
+    padding: 2px 0 2px 2px
+}
+
+.visual-refresh .nameplate_ba7f98 {
+    background: var(--background-mod-normal);
+    padding: 0
 }
 
 .previewContainer__50f14 {
