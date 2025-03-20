@@ -1,139 +1,161 @@
-n.d(t, { default: () => h });
-var r = n(200651),
-    o = n(192379),
-    l = n(481060),
-    a = n(230711),
-    i = n(782568),
-    s = n(880257),
-    d = n(63063),
-    c = n(247206),
-    u = n(981631),
-    I = n(526761),
-    f = n(388032),
-    _ = n(934659),
-    m = n(444812);
-let h = (e) => {
-    let { channelId: t, messageId: h, transitionState: E, onClose: g } = e,
-        v = (0, s.Z)(),
-        C = o.useCallback(
+r.d(t, { default: () => C });
+var n = r(200651),
+    o = r(192379),
+    l = r(481060),
+    a = r(230711),
+    i = r(782568),
+    s = r(168107),
+    d = r(480916),
+    c = r(81643),
+    _ = r(880257),
+    I = r(63063),
+    E = r(247206),
+    u = r(981631),
+    f = r(526761),
+    h = r(388032),
+    m = r(377746),
+    A = r(444812);
+let C = (e) => {
+    let { channelId: t, messageId: C, transitionState: N, onClose: g } = e,
+        R = (0, _.Z)(),
+        v = (0, c.Jm)(),
+        L = (0, E.m8)(),
+        b = o.useMemo(() => v && L, [v, L]),
+        x = o.useCallback(
             (e) => {
-                (0, c.aP)({
+                (0, E.aP)({
                     action: e,
                     channelId: t,
-                    messageId: h
+                    messageId: C
                 });
             },
-            [t, h]
+            [t, C]
         );
     return (
         o.useEffect(() => {
-            (0, c.aP)({
-                action: c.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+            (0, E.aP)({
+                action: E.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
                 channelId: t,
-                messageId: h
+                messageId: C
             });
-        }, [t, h]),
-        (0, r.jsxs)(l.Y0X, {
-            transitionState: E,
-            'aria-label': f.NW.string(f.t.xdm3XF),
+        }, [t, C]),
+        (0, n.jsxs)(l.Y0X, {
+            transitionState: N,
+            'aria-label': h.NW.string(h.t.xdm3XF),
             children: [
-                (0, r.jsx)(l.xBx, {
+                (0, n.jsx)(l.xBx, {
                     separator: !1,
-                    className: _.modalHeader,
-                    children: (0, r.jsx)('img', {
-                        src: m,
-                        alt: f.NW.string(f.t.id3fND),
-                        className: _.headerImg
+                    className: m.modalHeader,
+                    children: (0, n.jsx)('img', {
+                        src: A,
+                        alt: h.NW.string(h.t.id3fND),
+                        className: m.headerImg
                     })
                 }),
-                (0, r.jsxs)(l.hzk, {
-                    className: _.modalBody,
+                (0, n.jsxs)(l.hzk, {
+                    className: m.modalBody,
                     children: [
-                        (0, r.jsx)(l.X6q, {
+                        (0, n.jsx)(l.X6q, {
                             variant: 'heading-lg/bold',
-                            className: _.modalInteriorHeader,
-                            children: f.NW.string(f.t.sGW77u)
+                            className: m.modalInteriorHeader,
+                            children: h.NW.string(h.t.sGW77u)
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: v ? f.NW.string(f.t.XW3vjo) : f.NW.string(f.t.i4daNj)
+                            children: b ? h.NW.string(h.t.H2kKw8) : R ? h.NW.string(h.t.XW3vjo) : h.NW.string(h.t.i4daNj)
                         }),
-                        (0, r.jsxs)('div', {
-                            className: _.buttonContainer,
+                        (0, n.jsxs)('div', {
+                            className: m.buttonContainer,
                             children: [
-                                v
-                                    ? (0, r.jsx)(l.zxk, {
+                                b
+                                    ? (0, n.jsx)(l.zxk, {
                                           color: l.zxk.Colors.BRAND,
                                           onClick: function () {
-                                              C(c.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), a.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: I.FY.EXPLICIT_MEDIA_REDACTION_V2 }), g();
+                                              g(), x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE);
                                           },
                                           fullWidth: !0,
-                                          children: f.NW.string(f.t['9D+zGR'])
+                                          children: h.NW.string(h.t['+2/AhI'])
                                       })
-                                    : (0, r.jsx)(l.zxk, {
-                                          color: l.zxk.Colors.BRAND,
-                                          onClick: () => {
-                                              (0, i.Z)(d.Z.getArticleURL(u.BhN.EXPLICIT_MEDIA_REDACTION));
-                                          },
-                                          fullWidth: !0,
-                                          children: f.NW.string(f.t.hvVgAQ)
-                                      }),
-                                (0, r.jsx)(l.zxk, {
+                                    : R
+                                      ? (0, n.jsx)(l.zxk, {
+                                            color: l.zxk.Colors.BRAND,
+                                            onClick: function () {
+                                                x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), a.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: f.FY.EXPLICIT_MEDIA_REDACTION_V2 }), g();
+                                            },
+                                            fullWidth: !0,
+                                            children: h.NW.string(h.t['9D+zGR'])
+                                        })
+                                      : (0, n.jsx)(l.zxk, {
+                                            color: l.zxk.Colors.BRAND,
+                                            onClick: () => {
+                                                (0, i.Z)(I.Z.getArticleURL(u.BhN.EXPLICIT_MEDIA_REDACTION));
+                                            },
+                                            fullWidth: !0,
+                                            children: h.NW.string(h.t.hvVgAQ)
+                                        }),
+                                (0, n.jsx)(l.zxk, {
                                     color: l.zxk.Colors.PRIMARY,
                                     onClick: function () {
-                                        g(), C(c.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
+                                        g(), x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS);
                                     },
                                     fullWidth: !0,
-                                    children: f.NW.string(f.t.bmbHPD)
+                                    children: h.NW.string(h.t.bmbHPD)
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, n.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: f.NW.format(f.t.Ge0HUl, {
-                                        handleFalsePositiveHook: () => {
-                                            g(),
-                                                C(c.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                                                (0, l.ZDy)(async () => {
-                                                    let { default: e } = await n(788679);
-                                                    return (n) =>
-                                                        (0, r.jsx)(
-                                                            e,
-                                                            (function (e) {
-                                                                for (var t = 1; t < arguments.length; t++) {
-                                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                                        r = Object.keys(n);
-                                                                    'function' == typeof Object.getOwnPropertySymbols &&
-                                                                        (r = r.concat(
-                                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                            })
-                                                                        )),
-                                                                        r.forEach(function (t) {
-                                                                            var r;
-                                                                            (r = n[t]),
-                                                                                t in e
-                                                                                    ? Object.defineProperty(e, t, {
-                                                                                          value: r,
-                                                                                          enumerable: !0,
-                                                                                          configurable: !0,
-                                                                                          writable: !0
-                                                                                      })
-                                                                                    : (e[t] = r);
-                                                                        });
-                                                                }
-                                                                return e;
-                                                            })(
-                                                                {
-                                                                    channelId: t,
-                                                                    messageId: h
-                                                                },
-                                                                n
-                                                            )
-                                                        );
-                                                });
-                                        }
-                                    })
+                                    children: b
+                                        ? h.NW.format(h.t['3HvI8P'], {
+                                              handleOnHelpUrlHook: () => {
+                                                  s.Z.openUrl(I.Z.getArticleURL(u.BhN.TIGGER_PAWTECT_UK_AND_AUS_ONLY_LEARN_MORE)), x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                                              }
+                                          })
+                                        : h.NW.format(h.t.Ge0HUl, {
+                                              handleFalsePositiveHook: () => {
+                                                  g(),
+                                                      x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+                                                      (0, l.ZDy)(async () => {
+                                                          let { default: e } = await r(788679);
+                                                          return (r) =>
+                                                              (0, n.jsx)(
+                                                                  e,
+                                                                  (function (e) {
+                                                                      for (var t = 1; t < arguments.length; t++) {
+                                                                          var r = null != arguments[t] ? arguments[t] : {},
+                                                                              n = Object.keys(r);
+                                                                          'function' == typeof Object.getOwnPropertySymbols &&
+                                                                              (n = n.concat(
+                                                                                  Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                                                                  })
+                                                                              )),
+                                                                              n.forEach(function (t) {
+                                                                                  var n;
+                                                                                  (n = r[t]),
+                                                                                      t in e
+                                                                                          ? Object.defineProperty(e, t, {
+                                                                                                value: n,
+                                                                                                enumerable: !0,
+                                                                                                configurable: !0,
+                                                                                                writable: !0
+                                                                                            })
+                                                                                          : (e[t] = n);
+                                                                              });
+                                                                      }
+                                                                      return e;
+                                                                  })(
+                                                                      {
+                                                                          channelId: t,
+                                                                          messageId: C
+                                                                      },
+                                                                      r
+                                                                  )
+                                                              );
+                                                      }),
+                                                      x(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+                                              }
+                                          })
                                 })
                             ]
                         })
