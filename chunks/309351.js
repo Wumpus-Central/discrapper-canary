@@ -1,4 +1,7 @@
-n.d(t, { H: () => i });
+n.d(t, {
+    H: () => i,
+    w: () => r
+});
 let r = (0, n(818083).B)({
         kind: 'user',
         id: '2025-02_nameplate_purchasing',
