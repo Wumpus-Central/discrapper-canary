@@ -2,21 +2,21 @@ n.d(t, {
     Ej: () => O,
     Nc: () => E,
     Nv: () => C,
-    Qj: () => p,
-    TX: () => S,
+    Qj: () => _,
+    TX: () => I,
     Uv: () => A,
     ZZ: () => d,
-    Zt: () => b,
+    Zt: () => v,
     cq: () => f,
     eN: () => N,
     f1: () => h,
-    gs: () => I,
+    gs: () => S,
     lq: () => m,
-    o2: () => v,
+    o2: () => b,
     oL: () => u,
     qz: () => y,
     r_: () => g,
-    rf: () => _,
+    rf: () => p,
     u1: () => T
 });
 var r = n(570140),
@@ -45,10 +45,10 @@ function f(e) {
         zoom: e
     });
 }
-function p() {
+function _() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
 }
-function _() {
+function p() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
 }
 function h() {
@@ -66,13 +66,13 @@ function E(e) {
         systemPrefersReducedMotion: e
     });
 }
-function v(e) {
+function b(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_SATURATION',
         saturation: e
     });
 }
-function b(e) {
+function v(e) {
     let t = a.Z.useReducedMotion;
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
@@ -102,20 +102,19 @@ function y(e) {
         syncForcedColors: e
     });
 }
-function O(e, t) {
+function O(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED',
-        systemPrefersColorScheme: e,
-        systemForcedColors: t
+        systemForcedColors: e
     });
 }
-function S(e) {
+function I(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED',
         systemPrefersContrast: e
     });
 }
-function I(e) {
+function S(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS',
         alwaysShowLinkDecorations: e

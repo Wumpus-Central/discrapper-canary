@@ -1,12 +1,8 @@
-n.d(t, {
-    VK: () => a,
-    qu: () => s
-}),
-    n(47120);
+n.d(t, { VK: () => o }), n(47120);
 var r = n(44315),
-    i = n(469115),
-    o = n(231338);
-function a(e) {
+    i = n(469115);
+n(231338);
+function o(e) {
     let { angle: t, colors: n } = e;
     return 'linear-gradient('.concat(t, 'deg, ').concat(
         n
@@ -17,8 +13,5 @@ function a(e) {
             .join(', '),
         ')'
     );
-}
-function s(e, t) {
-    return e === t || (e === o.BR.DARK && t === o.BR.DARKER) || (e === o.BR.DARKER && t === o.BR.DARK);
 }
 [...i.bV, ...i.Qf];
