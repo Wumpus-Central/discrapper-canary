@@ -7,15 +7,15 @@ var r = n(200651),
     l = n(40851),
     c = n(912811);
 function u(e) {
-    let { src: t, autoplay: n = !0, className: o, fit: l, alignment: u, style: f, eventTargetRef: _ } = e,
+    let { buffer: t, autoplay: n = !0, className: o, fit: l, alignment: u, style: f, eventTargetRef: _ } = e,
         p = i.useContext(s.Sfi),
         h = d(),
-        [g, m] = i.useState(void 0),
-        { rive: E, RiveComponent: v } = (0, a.useRive)({
+        [m, g] = i.useState(void 0),
+        { rive: E, RiveComponent: b } = (0, a.useRive)({
             eventTarget: null == _ ? void 0 : _.current,
-            src: t,
+            buffer: t,
             autoplay: n,
-            stateMachines: g,
+            stateMachines: m,
             layout: new a.Layout({
                 fit: null != l ? c.L[l] : a.Fit.Cover,
                 alignment: null != u ? c.E[u] : a.Alignment.Center
@@ -23,33 +23,40 @@ function u(e) {
         });
     i.useEffect(() => {
         null != E &&
-            null == g &&
-            (m(E.stateMachineNames),
+            null == m &&
+            (g(E.stateMachineNames),
             E.reset({
                 stateMachines: E.stateMachineNames,
                 autoplay: n
             }),
             E.setupRiveListeners());
-    }, [E, n, g]);
-    let b = i.useRef(0);
+    }, [E, n, m]);
+    let v = i.useRef(0);
+    i.useEffect(() => {
+        if (null == E) return;
+        E.play();
+        let e = (t) => {
+            null != t.data && 'number' == typeof t.data && ((v.current = t.data), t.data > 0 && (p.reducedMotion.enabled && E.isPlaying && E.pause(), E.off(a.EventType.Advance, e)));
+        };
+        return (
+            E.on(a.EventType.Advance, e),
+            () => {
+                E.off(a.EventType.Advance, e);
+            }
+        );
+    }, [E, p.reducedMotion.enabled]);
+    let y = i.useRef(!1);
     return (
         i.useEffect(() => {
-            if (null == E) return;
-            E.play();
-            let e = (t) => {
-                null != t.data && 'number' == typeof t.data && ((b.current = t.data), t.data > 0 && (p.reducedMotion.enabled && E.isPlaying && E.pause(), E.off(a.EventType.Advance, e)));
-            };
-            return (
-                E.on(a.EventType.Advance, e),
-                () => {
-                    E.off(a.EventType.Advance, e);
-                }
-            );
-        }, [E, p.reducedMotion.enabled]),
-        i.useEffect(() => {
-            null != E && (E.isPlaying && !h && b.current > 0 ? E.pause() : E.isPaused && h && E.play());
+            if (null != E)
+                return (
+                    !h && y.current && E.isPlaying && v.current > 0 ? E.pause() : h && !E.isPlaying && y.current && E.play(),
+                    () => {
+                        null != E && h && (y.current = null != E.frameRequestId);
+                    }
+                );
         }, [E, h]),
-        (0, r.jsx)(v, {
+        (0, r.jsx)(b, {
             className: o,
             style: f
         })

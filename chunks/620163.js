@@ -110,7 +110,7 @@ let eY = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     eX = eP.Z,
     eJ = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: T, numOfPendingFamilyRequests: y, isOverlaySupported: L, isClipsBetaTagShowing: B = !1, shouldMergeGameSettings: eJ, isKeywordFilteringEnabled: eQ, isStaff: e$, isInappropriateConversationWarningEnabled: e0, isInapproprateConversationsDefaultOn: e1, paymentsBlocked: e2, isEligibleForQuests: e6, showGiftNitro: e3, isStricterMessageRequestsEnabled: e8, hasLibraryApplication: e4, hasTOTPEnabled: e9, developerMode: e7, isAdultUser: e5, hasSecureFramesVerifiedUserIds: te, hypeSquadRemoved: tt, stealthRemediationEnabled: tn, hasIgnoredUsers: tr, hasBlockedUsers: ti, isAllowGameFriendDMsVisible: ts, useRefreshedVoiceAndVideo: ta } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: T, numOfPendingFamilyRequests: y, isOverlaySupported: L, isClipsBetaTagShowing: B = !1, shouldMergeGameSettings: eJ, isKeywordFilteringEnabled: eQ, isStaff: e$, isInappropriateConversationWarningEnabled: e0, isInapproprateConversationsDefaultOn: e1, paymentsBlocked: e2, isEligibleForQuests: e6, showGiftNitro: e3, isStricterMessageRequestsEnabled: e8, hasLibraryApplication: e4, hasTOTPEnabled: e7, developerMode: e9, isAdultUser: e5, hasSecureFramesVerifiedUserIds: te, hypeSquadRemoved: tt, stealthRemediationEnabled: tn, hasIgnoredUsers: tr, hasBlockedUsers: ti, isAllowGameFriendDMsVisible: ts, useRefreshedVoiceAndVideo: ta } = e;
         return Object.freeze({
             [eM.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -178,13 +178,13 @@ let eY = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eF.NW.string(eF.t.cDgKtb)],
                 section: eU.oAB.ACCOUNT,
                 parent: eM.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e9
+                predicate: () => !e7
             },
             [eM.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eF.NW.string(eF.t['D+aE7u'])],
                 section: eU.oAB.ACCOUNT,
                 parent: eM.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e9
+                predicate: () => e7
             },
             [eM.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eF.NW.string(eF.t.fZSi1N)],
@@ -1410,7 +1410,7 @@ let eY = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eU.oAB.ADVANCED,
                 searchableTitles: [eF.NW.string(eF.t.erOqlp)],
                 parent: eM.s6.SETTINGS_ADVANCED,
-                predicate: () => e7
+                predicate: () => e9
             },
             [eM.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eU.oAB.ADVANCED,
@@ -1739,6 +1739,13 @@ let eY = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eU.oAB.DESIGN_SYSTEMS,
                 searchableTitles: ['Colors'],
                 label: 'Colors',
+                element: ep.Z,
+                predicate: () => U.Z.isDeveloper
+            },
+            [eM.s6.ANIMATION_TESTING]: {
+                section: eU.oAB.DESIGN_SYSTEMS,
+                searchableTitles: ['Animation Testing'],
+                label: 'Animation Testing',
                 element: ep.Z,
                 predicate: () => U.Z.isDeveloper
             },

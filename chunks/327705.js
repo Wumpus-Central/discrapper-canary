@@ -1,9 +1,10 @@
-n.d(t, { z: () => l });
+n.d(t, { z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(723938),
-    o = n(931989);
-function a(e, t, n) {
+    o = n(931989),
+    a = n(648894);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +17,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,11 +28,13 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e) {
-    return (0, r.jsx)(o.Z, s({ src: i.Z }, e));
+function c(e) {
+    let { useRiveAsset: t } = (0, a._)(),
+        { status: n, buffer: s } = t(i.Z);
+    return 'loading' === n ? null : (0, r.jsx)(o.Z, l({ buffer: s }, e));
 }
