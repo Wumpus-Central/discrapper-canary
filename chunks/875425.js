@@ -122,5 +122,85 @@ let o = 128,
         {
             value: 'VIDEO_GAME_ITEM',
             label: () => i.NW.string(i.t.PiepBg)
+        },
+        {
+            value: 'READING',
+            label: () => i.NW.string(i.t.pYQRnJ)
+        },
+        {
+            value: 'SONG_STUCK',
+            label: () => i.NW.string(i.t.S7UJ0t)
+        },
+        {
+            value: 'MOST_USED_EMOJI',
+            label: () => i.NW.string(i.t['1TlHw8'])
+        },
+        {
+            value: 'BEST_FOOD',
+            label: () => i.NW.string(i.t.ZPjue3)
+        },
+        {
+            value: 'FICTIONAL_WORLD',
+            label: () => i.NW.string(i.t.lyOeXF)
+        },
+        {
+            value: 'USERNAME_ORIGIN',
+            label: () => i.NW.string(i.t.l6Yb3d)
+        },
+        {
+            value: 'THEME_SONG',
+            label: () => i.NW.string(i.t.Vok4QU)
+        },
+        {
+            value: 'FAVORITE_COLLECTIBLE',
+            label: () => i.NW.string(i.t.T24um5)
+        },
+        {
+            value: 'GAME_MECHANIC',
+            label: () => i.NW.string(i.t.kzToEh)
+        },
+        {
+            value: 'NPC_COMPANION',
+            label: () => i.NW.string(i.t['/Zm5VV'])
+        },
+        {
+            value: 'FOOD_CRAVING',
+            label: () => i.NW.string(i.t.ujnXur)
+        },
+        {
+            value: 'MYTHICAL_PET',
+            label: () => i.NW.string(i.t['45r7ub'])
+        },
+        {
+            value: 'LATEST_HOBBY',
+            label: () => i.NW.string(i.t.SluNa2)
+        },
+        {
+            value: 'FAVORITE_ANIME',
+            label: () => i.NW.string(i.t.R1f9RU)
+        },
+        {
+            value: 'RANKED_UP',
+            label: () => i.NW.string(i.t.nXJgjo)
+        },
+        {
+            value: 'CHARACTER_CLASS',
+            label: () => i.NW.string(i.t.SWVxPD)
+        },
+        {
+            value: 'HIGH_SCORE',
+            label: () => i.NW.string(i.t.gbUeX1)
+        },
+        {
+            value: 'FINISHED_PLAYING',
+            label: () => i.NW.string(i.t.bIrdLi)
+        },
+        {
+            value: 'FINISHED_READING',
+            label: () => i.NW.string(i.t['tcQn+P'])
+        },
+        {
+            value: 'CANT_WAIT',
+            label: () => i.NW.string(i.t['40gTj4'])
         }
     ];
