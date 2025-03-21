@@ -14,5 +14,6 @@ e.exports = {
     premiumAction: 'premiumAction__9671b',
     ellipsis: 'ellipsis__9671b',
     quarantineNotice: 'quarantineNotice__9671b',
-    quarantineLearnMoreLink: 'quarantineLearnMoreLink__9671b'
+    quarantineLearnMoreLink: 'quarantineLearnMoreLink__9671b',
+    errorCodeNoticeText: 'errorCodeNoticeText__9671b'
 };
