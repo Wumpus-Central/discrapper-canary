@@ -1,40 +1,43 @@
 n.d(t, {
-    KO: () => u,
-    X2: () => f,
-    o0: () => d
+    KO: () => f,
+    X2: () => p,
+    o0: () => _
 });
 var r = n(200651),
-    i = n(317257),
-    o = n(499997),
-    a = n(215023),
-    s = n(992379),
-    l = n(593639),
-    c = n(266850);
-let u = {
+    i = n(120356),
+    o = n.n(i),
+    a = n(317257),
+    s = n(499997),
+    l = n(215023),
+    c = n(992379),
+    u = n(593639),
+    d = n(266850);
+let f = {
         '1333912750274904064': {
             render: (e) => {
-                let { alt: t } = e;
+                let { alt: t, className: n } = e;
                 return (0, r.jsx)('img', {
-                    src: l,
+                    src: u,
+                    className: n,
                     alt: t,
                     height: 148
                 });
             }
         },
-        [a.xJ]: {
+        [l.xJ]: {
             render: (e) => {
-                let { animationState: t = 'on' } = e;
-                return (0, r.jsx)(o.Z, {
+                let { animationState: t = 'on', className: n } = e;
+                return (0, r.jsx)(s.Z, {
                     animationState: t,
-                    className: s.orbProfileBadgeAsset
+                    className: o()(c.orbProfileBadgeAsset, n)
                 });
             }
         }
     },
-    d = (e) => e in u,
-    f = () => ({
-        id: i.l.ORB_PROFILE_BADGE,
-        icon: c,
+    _ = (e) => e in f,
+    p = () => ({
+        id: a.l.ORB_PROFILE_BADGE,
+        icon: d,
         description: '',
         isPreviewMode: !0
     });
