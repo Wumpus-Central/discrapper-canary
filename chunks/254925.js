@@ -10,15 +10,15 @@ var r = n(200651),
     a = n(481060),
     l = n(314852),
     o = n(65361),
-    c = n(434404),
-    A = n(999382),
+    A = n(434404),
+    c = n(999382),
     d = n(835887),
     u = n(388661),
     g = n(500230),
     f = n(742409),
     m = n(981631),
     p = n(116175),
-    h = n(502936),
+    h = n(976260),
     C = n(388032),
     b = n(935921);
 let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKULL, p.ZD.MOON, p.ZD.LIGHTNING, p.ZD.COMPASS, p.ZD.TOADSTOOL],
@@ -79,8 +79,8 @@ let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKU
     N = function () {
         var e, t, n, p;
         (0, C.j1)(h.M);
-        let N = (0, s.e7)([A.Z], () => A.Z.getGuild()),
-            j = (0, s.e7)([A.Z], () => A.Z.getGuildProfile()),
+        let N = (0, s.e7)([c.Z], () => c.Z.getGuild()),
+            j = (0, s.e7)([c.Z], () => c.Z.getGuildProfile()),
             { fetchGuildProfile: E, fetchStatus: I } = (0, o.u)(null == N ? void 0 : N.id);
         if (
             (i.useEffect(() => {
@@ -158,13 +158,13 @@ let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKU
                                             onChange: () => {
                                                 if (O) {
                                                     var e;
-                                                    c.Z.updateGuildProfile(N.id, {
+                                                    A.Z.updateGuildProfile(N.id, {
                                                         tag: null !== (e = j.tag) && void 0 !== e ? e : '',
                                                         badge: y,
                                                         badgeColorPrimary: w,
                                                         badgeColorSecondary: P
                                                     });
-                                                } else c.Z.updateGuildProfile(N.id, { tag: null });
+                                                } else A.Z.updateGuildProfile(N.id, { tag: null });
                                             }
                                         })
                                     ]
@@ -174,7 +174,9 @@ let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKU
                                     color: 'text-muted',
                                     className: b.memberApplicationsInfo,
                                     children: C.NW.format(h.Z.WUACVF, {
-                                        onClick: () => {}
+                                        onClick: () => {
+                                            A.Z.setSection(m.pNK.ACCESS);
+                                        }
                                     })
                                 }),
                                 O
@@ -197,25 +199,7 @@ let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKU
                             })
                         })
                     ]
-                }),
-                (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-muted',
-                    className: b.memberApplicationsInfo,
-                    children: C.NW.format(h.Z.WUACVF, {
-                        onClick: () => {
-                            c.Z.setSection(m.pNK.ACCESS);
-                        }
-                    })
-                }),
-                O
-                    ? (0, r.jsx)(a.nuw, {
-                          children: (0, r.jsx)('div', {
-                              className: b.disabledForm,
-                              children: B
-                          })
-                      })
-                    : B
+                })
             ]
         });
     };

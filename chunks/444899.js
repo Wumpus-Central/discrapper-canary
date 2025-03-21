@@ -14,7 +14,7 @@ var i = n(200651),
     x = n(621600),
     N = n(981631),
     p = n(388032),
-    v = n(341012);
+    v = n(911805);
 function j(e, t, n) {
     return (
         t in e
@@ -151,6 +151,7 @@ class S extends s.PureComponent {
     render() {
         let { highlight: e } = this.state;
         return (0, i.jsxs)(l.Zbd, {
+            ref: this.contentDomRef,
             outline: !0,
             editable: !0,
             className: e ? v.overrideHighlight : v.override,
@@ -167,6 +168,7 @@ class S extends s.PureComponent {
     constructor(...e) {
         super(...e),
             j(this, '_timeout', void 0),
+            j(this, 'contentDomRef', s.createRef()),
             j(this, 'state', { highlight: !1 }),
             j(this, 'unhighlight', () => {
                 this.setState({ highlight: !1 });

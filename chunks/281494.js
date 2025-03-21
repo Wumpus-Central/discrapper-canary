@@ -2,10 +2,9 @@ n.d(t, {
     C$: () => m,
     Fe: () => d,
     Fz: () => f,
-    IB: () => v,
-    Ve: () => g,
+    IB: () => E,
     iF: () => h,
-    jy: () => E
+    jy: () => g
 }),
     n(47120),
     n(26686),
@@ -81,64 +80,37 @@ async function h(e, t, n) {
     return p.set(i, u), u;
 }
 let m = () => (
-        i.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
-        r.tn
-            .get({
-                url: s.ANM.GET_REFERRALS_REMAINING,
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-            .then(
-                (e) => {
-                    var t, n;
-                    let r = new Map();
-                    if (null != e.body && null != e.body.recipient_status)
-                        for (let t in e.body.recipient_status) {
-                            let n = e.body.recipient_status[t];
-                            r.set(t, n);
-                        }
-                    i.Z.dispatch({
-                        type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
-                        referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
-                        sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                        refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
-                        recipient_status: r,
-                        has_eligible_friends: e.body.has_eligible_friends
-                    });
-                },
-                () => {
-                    i.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_FAIL' });
-                }
-            )
-    ),
-    g = (e) => (
-        i.Z.dispatch({
-            type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
-            recipientId: e
-        }),
-        r.tn
-            .post({
-                url: s.ANM.CREATE_REFERRAL_PREVIEW(e),
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-            .then(
-                (t) => {
-                    i.Z.dispatch({
-                        type: 'BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS',
-                        recipientId: e,
-                        is_eligible: null != t.body && t.body.is_eligible
-                    });
-                },
-                () => {
-                    i.Z.dispatch({
-                        type: 'BILLING_CREATE_REFERRAL_PREVIEW_FAIL',
-                        recipientId: e
-                    });
-                }
-            )
-    );
-async function E(e) {
+    i.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
+    r.tn
+        .get({
+            url: s.ANM.GET_REFERRALS_REMAINING,
+            oldFormErrors: !0,
+            rejectWithError: !1
+        })
+        .then(
+            (e) => {
+                var t, n;
+                let r = new Map();
+                if (null != e.body && null != e.body.recipient_status)
+                    for (let t in e.body.recipient_status) {
+                        let n = e.body.recipient_status[t];
+                        r.set(t, n);
+                    }
+                i.Z.dispatch({
+                    type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
+                    referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
+                    sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
+                    refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
+                    recipient_status: r,
+                    has_eligible_friends: e.body.has_eligible_friends
+                });
+            },
+            () => {
+                i.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_FAIL' });
+            }
+        )
+);
+async function g(e) {
     let t = [],
         n = new Map();
     for (let i of e)
@@ -162,7 +134,7 @@ async function E(e) {
         n
     );
 }
-async function v(e) {
+async function E(e) {
     try {
         var t;
         let n = await r.tn.get({

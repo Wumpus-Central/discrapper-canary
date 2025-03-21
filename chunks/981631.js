@@ -715,7 +715,6 @@ let A = Object.freeze({
         DELETE_SAVED_MESSAGE: (t, e) => '/users/@me/saved-messages/'.concat(t, '/').concat(e),
         GET_REFERRALS_REMAINING: '/users/@me/referrals/eligibility',
         GET_REFERRAL_ELIGIBLE_USERS: '/users/@me/referrals/eligible-users',
-        CREATE_REFERRAL_PREVIEW: (t) => '/users/@me/referrals/'.concat(t, '/preview'),
         CREATE_REFERRAL: (t) => '/users/@me/referrals/'.concat(t),
         FAMILY_CENTER_TEEN_ACTIVITY: (t) => '/family-center/'.concat(t, '/activity'),
         FAMILY_CENTER_TEEN_ACTIVITY_ME: '/family-center/@me',
