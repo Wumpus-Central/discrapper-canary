@@ -1,146 +1,176 @@
 n.d(t, {
-    r: () => y,
-    z: () => v
+    zI: () => x,
+    zu: () => C
 });
 var r = n(200651),
     i = n(192379),
-    l = n(793030),
-    o = n(780384),
-    a = n(481060),
-    s = n(230711),
-    c = n(410030),
+    o = n(793030),
+    l = n(442837),
+    a = n(381499),
+    s = n(481060),
+    c = n(230711),
     u = n(100527),
     d = n(906732),
     p = n(695346),
-    h = n(981631),
-    f = n(388032),
-    g = n(721132),
-    m = n(204794);
-let b = {
-        topLeftDark: 'rgba(62, 22, 137, 0.8)',
-        topRightDark: 'rgba(160, 86, 242, 0.4)',
-        topLeftLight: 'rgba(159, 86, 242, 0.4)',
-        topRightLight: 'rgba(222, 194, 252, 0.5)'
-    },
-    y = (e) => {
-        let { closePopout: t, setToggleDefaultState: n } = e,
-            { analyticsLocations: y } = (0, d.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
-            v = (0, c.ZP)(),
-            O = p.G6.useSetting(),
-            j = (0, i.useRef)(null);
-        return (
-            (0, a.Tbt)(j),
+    h = n(675478),
+    f = n(885110);
+n(63063);
+var g = n(981631),
+    m = n(107704),
+    b = n(388032),
+    v = n(649022),
+    y = n(204794);
+async function _(e) {
+    await h.hW.updateAsync(
+        'status',
+        (t) => {
+            (t.status = a.Gm.create({ value: e })), (t.statusExpiresAtMs = '0');
+        },
+        h.fy.INFREQUENT_USER_ACTION
+    );
+}
+function O(e) {
+    let { showCurrentGame: t, setActivityToggleDefaultState: n, setStatusDefaultState: i } = e,
+        o = (0, l.e7)([f.Z], () => f.Z.getStatus());
+    return (0, r.jsxs)('div', {
+        className: v.toggleContainer,
+        children: [
             (0, r.jsxs)('div', {
-                className: g.wrapper,
-                ref: j,
+                className: v.toggleContainerText,
                 children: [
-                    (0, r.jsx)('div', {
-                        className: g.gradient,
-                        style: { background: 'radial-gradient(75% 75% at 0% 0%, '.concat((0, o.wj)(v) ? b.topLeftDark : b.topLeftLight, ' 0%, transparent 100%),\n    radial-gradient(70% 50% at 100% 0%, ').concat((0, o.wj)(v) ? b.topRightDark : b.topRightLight, ' 0%, transparent 100%)') }
+                    (0, r.jsx)(s.Text, {
+                        variant: 'text-sm/medium',
+                        color: 'header-primary',
+                        children: b.NW.string(b.t.KY0ilp)
                     }),
-                    (0, r.jsxs)('div', {
-                        className: g.content,
-                        children: [
-                            (0, r.jsx)(a.zxk, {
-                                className: g.closeButton,
-                                'aria-label': f.NW.string(f.t.cpT0Cg),
-                                look: a.zxk.Looks.BLANK,
-                                size: a.zxk.Sizes.NONE,
-                                onClick: t,
-                                children: (0, r.jsx)(a.Dio, {
-                                    size: 'xs',
-                                    color: 'currentColor'
-                                })
-                            }),
-                            (0, r.jsx)('img', {
-                                alt: '',
-                                src: m.Z,
-                                className: g.controllerImage
-                            }),
-                            (0, r.jsx)(l.X6, {
-                                variant: 'heading-md/bold',
-                                color: 'header-primary',
-                                className: g.nuxTitle,
-                                children: f.NW.string(f.t.PRjSRk)
-                            }),
-                            (0, r.jsx)(a.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'text-secondary',
-                                className: g.nuxContent,
-                                children: f.NW.format(f.t.nEgjjo, {
-                                    onClickSettings: () => {
-                                        t(), s.Z.open(h.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: y });
-                                    }
-                                })
-                            }),
-                            (0, r.jsxs)('div', {
-                                className: g.toggleContainer,
-                                children: [
-                                    (0, r.jsx)(a.Text, {
-                                        variant: 'text-sm/medium',
-                                        color: 'header-primary',
-                                        children: f.NW.string(f.t.KY0ilp)
-                                    }),
-                                    (0, r.jsx)(a.rsf, {
-                                        onChange: (e) => {
-                                            p.G6.updateSetting(e), e && n(e);
-                                        },
-                                        checked: O
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            })
-        );
-    },
-    v = (e) => {
-        let { closePopout: t, setToggleDefaultState: n } = e,
-            { analyticsLocations: o } = (0, d.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
-            c = p.G6.useSetting(),
-            m = (0, i.useRef)(null);
-        return (
-            (0, a.Tbt)(m),
-            (0, r.jsx)('div', {
-                className: g.wrapper,
-                ref: m,
-                children: (0, r.jsxs)('div', {
-                    className: g.content,
-                    children: [
-                        (0, r.jsx)(l.X6, {
-                            variant: 'heading-sm/semibold',
-                            color: 'header-primary',
-                            className: g.controlTitle,
-                            children: f.NW.string(f.t['6x5uWV'])
-                        }),
-                        (0, r.jsx)(a.Text, {
-                            variant: 'text-xs/normal',
-                            color: 'text-secondary',
-                            children: f.NW.format(f.t.nEgjjo, {
-                                onClickSettings: () => {
-                                    t(), s.Z.open(h.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: o });
-                                }
-                            })
-                        }),
+                    null != i &&
                         (0, r.jsxs)('div', {
-                            className: g.toggleContainer,
+                            className: v.toggleContainerOnlineRow,
                             children: [
-                                (0, r.jsx)(a.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'header-primary',
-                                    children: f.NW.string(f.t.KY0ilp)
+                                (0, r.jsx)(s.qbd, {
+                                    status: s.Skl.ONLINE,
+                                    size: 8
                                 }),
-                                (0, r.jsx)(a.rsf, {
-                                    onChange: (e) => {
-                                        p.G6.updateSetting(e), e && n(e);
-                                    },
-                                    checked: c
+                                (0, r.jsx)(s.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'text-secondary',
+                                    children: o === s.Skl.INVISIBLE ? b.NW.string(m.Z.a3AofX) : b.NW.string(b.t.WbGtnJ)
                                 })
                             ]
                         })
+                ]
+            }),
+            (0, r.jsx)(s.rsf, {
+                onChange: (e) => {
+                    p.G6.updateSetting(e), e && (n(e), null == i || i(e)), null != i && _(e ? s.Skl.ONLINE : s.Skl.INVISIBLE);
+                },
+                checked: t
+            })
+        ]
+    });
+}
+function j(e) {
+    let { children: t, closePopout: n } = e,
+        l = (0, i.useRef)(null);
+    return (
+        (0, s.Tbt)(l),
+        (0, r.jsxs)('div', {
+            className: v.wrapper,
+            ref: l,
+            children: [
+                null != n && (0, r.jsx)('div', { className: v.gradient }),
+                (0, r.jsxs)('div', {
+                    className: v.content,
+                    children: [
+                        null != n &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsx)(s.zxk, {
+                                        className: v.closeButton,
+                                        'aria-label': b.NW.string(b.t.cpT0Cg),
+                                        look: s.zxk.Looks.BLANK,
+                                        size: s.zxk.Sizes.NONE,
+                                        onClick: n,
+                                        children: (0, r.jsx)(s.Dio, {
+                                            size: 'xs',
+                                            color: 'currentColor'
+                                        })
+                                    }),
+                                    (0, r.jsx)('img', {
+                                        alt: '',
+                                        src: y.Z,
+                                        className: v.controllerImage
+                                    }),
+                                    (0, r.jsx)(o.X6, {
+                                        variant: 'heading-md/bold',
+                                        color: 'header-primary',
+                                        className: v.nuxTitle,
+                                        children: b.NW.string(b.t.PRjSRk)
+                                    })
+                                ]
+                            }),
+                        t
                     ]
                 })
+            ]
+        })
+    );
+}
+function C(e) {
+    let { closePopout: t, setActivityToggleDefaultState: n } = e,
+        { analyticsLocations: i } = (0, d.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
+        o = p.G6.useSetting();
+    return (0, r.jsxs)(j, {
+        closePopout: t,
+        children: [
+            (0, r.jsx)(s.Text, {
+                variant: 'text-xs/normal',
+                color: 'text-secondary',
+                className: v.nuxContent,
+                children: b.NW.format(b.t.nEgjjo, {
+                    onClickSettings: () => {
+                        t(), c.Z.open(g.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: i });
+                    }
+                })
+            }),
+            (0, r.jsx)('div', {
+                className: v.toggleContainerWrapper,
+                children: (0, r.jsx)(O, {
+                    showCurrentGame: o,
+                    setActivityToggleDefaultState: n
+                })
             })
-        );
-    };
+        ]
+    });
+}
+function x(e) {
+    let { closePopout: t, setActivityToggleDefaultState: n } = e,
+        { analyticsLocations: i } = (0, d.ZP)(u.Z.SHARING_CONTROLS_COACHMARK),
+        l = p.G6.useSetting();
+    return (0, r.jsxs)(j, {
+        children: [
+            (0, r.jsx)(o.X6, {
+                variant: 'heading-sm/semibold',
+                color: 'header-primary',
+                className: v.controlTitle,
+                children: b.NW.string(b.t['6x5uWV'])
+            }),
+            (0, r.jsx)(s.Text, {
+                variant: 'text-xs/normal',
+                color: 'text-secondary',
+                children: b.NW.format(b.t.nEgjjo, {
+                    onClickSettings: () => {
+                        t(), c.Z.open(g.oAB.ACTIVITY_PRIVACY, null, { analyticsLocations: i });
+                    }
+                })
+            }),
+            (0, r.jsx)('div', {
+                className: v.toggleContainerWrapper,
+                children: (0, r.jsx)(O, {
+                    showCurrentGame: l,
+                    setActivityToggleDefaultState: n
+                })
+            })
+        ]
+    });
+}

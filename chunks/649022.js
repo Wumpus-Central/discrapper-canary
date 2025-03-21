@@ -7,5 +7,8 @@ e.exports = {
     nuxTitle: 'nuxTitle_fa8995',
     nuxContent: 'nuxContent_fa8995',
     controlTitle: 'controlTitle_fa8995',
-    toggleContainer: 'toggleContainer_fa8995'
+    toggleContainerWrapper: 'toggleContainerWrapper_fa8995',
+    toggleContainer: 'toggleContainer_fa8995',
+    toggleContainerOnlineRow: 'toggleContainerOnlineRow_fa8995',
+    toggleContainerText: 'toggleContainerText_fa8995'
 };

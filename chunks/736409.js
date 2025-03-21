@@ -20,7 +20,7 @@ let _ = (e) => {
     let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: _ } = e,
         [O, j] = (0, i.useState)(!1),
         C = (function (e) {
-            let { toggleDefaultState: t, isForceShowSharingPopout: n } = e,
+            let { activityToggleDefaultState: t, isForceShowSharingPopout: n } = e,
                 { rtcPopoutEnabled: r } = (0, g.SN)('SharingPrivacyPopout'),
                 { rtcPopoutEnabled: i } = (0, g.m_)('SharingPrivacyPopout'),
                 l = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
@@ -30,7 +30,7 @@ let _ = (e) => {
                 f = !i || c !== b.Skl.INVISIBLE;
             return (r || i) && (l || (!l && n)) && !s && !(a && !t && f);
         })({
-            toggleDefaultState: O,
+            activityToggleDefaultState: O,
             isForceShowSharingPopout: n
         });
     return ((0, i.useEffect)(() => {
@@ -47,19 +47,20 @@ let _ = (e) => {
                       };
                       return (0, r.jsx)(a.yRy, {
                           shouldShow: !0,
-                          position: 'bottom',
+                          spacing: -2,
+                          position: 'top',
                           align: 'center',
                           onRequestClose: e,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
                               return n
-                                  ? (0, r.jsx)(m.z, {
+                                  ? (0, r.jsx)(m.zI, {
                                         closePopout: t,
-                                        setToggleDefaultState: j
+                                        setActivityToggleDefaultState: j
                                     })
-                                  : (0, r.jsx)(m.r, {
+                                  : (0, r.jsx)(m.zu, {
                                         closePopout: t,
-                                        setToggleDefaultState: j
+                                        setActivityToggleDefaultState: j
                                     });
                           },
                           children: () =>

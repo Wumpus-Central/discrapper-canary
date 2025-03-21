@@ -29,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,8 +45,8 @@ function p(e) {
     }
     return e;
 }
-let _ = N(d.Yn.DEFAULT, u._s_.TRANSPORT, 0),
-    h = _,
+let p = N(d.Yn.DEFAULT, u._s_.TRANSPORT, 0),
+    h = p,
     m = {},
     g = new Map(),
     E = {
@@ -73,8 +73,8 @@ let _ = N(d.Yn.DEFAULT, u._s_.TRANSPORT, 0),
         qpSum: !0,
         videoEntropy: !0
     },
-    v = 600;
-function b(e, t, n) {
+    b = 600;
+function v(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
 }
 function y(e, t) {
@@ -86,21 +86,21 @@ class O {
     }
     put(e, t, n, r) {
         if ('' === r) {
-            let r = p({}, this.state);
-            return delete r[b(e, t, n)], new O(r);
+            let r = _({}, this.state);
+            return delete r[v(e, t, n)], new O(r);
         }
-        return new O(p({ [b(e, t, n)]: r }, this.state));
+        return new O(_({ [v(e, t, n)]: r }, this.state));
     }
     get(e, t, n) {
-        let r = this.state[b(e, t, n)];
+        let r = this.state[v(e, t, n)];
         return null != r ? r : null;
     }
     constructor(e) {
         f(this, 'state', void 0), (this.state = e);
     }
 }
-let S = O.empty(),
-    I = !1,
+let I = O.empty(),
+    S = !1,
     T = null;
 function N(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
@@ -117,34 +117,17 @@ function C() {
         m[e] = {};
     });
 }
-function R(e) {
-    Object.values(d.Yn).forEach((t) => {
-        let n = t;
-        e.filter((e) => {
-            let { connection: t } = e;
-            return t.context === n;
-        }).forEach((e, t) => {
-            a.Z.dispatch({
-                type: 'RTC_DEBUG_MODAL_UPDATE',
-                stats: e.stats,
-                context: n,
-                index: t,
-                mediaEngineConnectionId: e.connection.mediaEngineConnectionId
-            });
-        });
-    });
-}
-function P() {
+function R() {
     null != T && (T.destroy(), (T = null));
 }
-function w(e) {
+function P(e) {
     var t;
-    h = null !== (t = e.section) && void 0 !== t ? t : _;
+    h = null !== (t = e.section) && void 0 !== t ? t : p;
 }
-function D() {
-    P();
+function w() {
+    R();
 }
-function x(e) {
+function D(e) {
     null != e.channelId && (C(), g.clear());
 }
 function L(e) {
@@ -153,10 +136,10 @@ function L(e) {
         g.set(t, d.Z.NO_OVERRIDE);
     }
 }
-function M(e) {
+function x(e) {
     h = e.section;
 }
-function k(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -169,22 +152,37 @@ function k(e) {
                 for (let e = 0; e < o.length; e++) {
                     let r = t[e],
                         i = 'object' == typeof r ? r : {};
-                    a.push(k(o[e], i, n));
+                    a.push(M(o[e], i, n));
                 }
             } else r[i] = o;
         } else if ('object' == typeof o && null !== o) {
             let t = 'object' == typeof e && null !== e ? e : {};
-            r[i] = k(o, t, n);
+            r[i] = M(o, t, n);
         } else if (i in E && 'number' == typeof o) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             t.push({
                 value: o,
                 time: n
             }),
-                t.length > v && t.shift();
+                t.length > b && t.shift();
         } else r[i] = o;
     }
     return r;
+}
+function k(e) {
+    let { connectionStats: t } = e;
+    Object.values(d.Yn).forEach((e) => {
+        t.filter((t) => {
+            let { connection: n } = t;
+            return n.context === e;
+        }).forEach((t, n) => {
+            j({
+                context: e,
+                stats: t.stats,
+                index: n
+            });
+        });
+    });
 }
 function j(e) {
     let { context: t, stats: n, index: r } = e,
@@ -195,9 +193,9 @@ function j(e) {
             let {
                 rtp: { inbound: e }
             } = n;
-            Object.keys(e).includes(o) || (h = _);
+            Object.keys(e).includes(o) || (h = p);
         }
-        i[r] = k(n, i[r]);
+        i[r] = M(n, i[r]);
     } else delete i[r];
 }
 function U(e) {
@@ -206,7 +204,7 @@ function U(e) {
 function G(e) {
     let { path: t } = e,
         n = l.Z.getMediaEngine();
-    if ((P(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
+    if ((R(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
     let r = n.createReplayConnection(d.Yn.DEFAULT, t);
     null != r &&
         ((T = r),
@@ -222,18 +220,18 @@ function G(e) {
         a.Z.wait(() => s.bA()));
 }
 function B(e) {
-    S = S.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
-}
-function Z(e) {
-    let { value: t } = e;
-    I = t;
+    I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
 function F(e) {
+    let { value: t } = e;
+    S = t;
+}
+function V(e) {
     let { userId: t, context: n, quality: r } = e;
     g.set(y(t, n), r);
 }
 C();
-class V extends (r = i.ZP.Store) {
+class Z extends (r = i.ZP.Store) {
     getSection() {
         return h;
     }
@@ -272,28 +270,27 @@ class V extends (r = i.ZP.Store) {
         return Object.values(m[e]);
     }
     getVideoStreams() {
-        return S;
+        return I;
     }
     shouldRecordNextConnection() {
-        return I;
+        return S;
     }
     getSimulcastDebugOverride(e, t) {
         let n = y(e, t);
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-f(V, 'displayName', 'RTCDebugStore');
-let H = new V(a.Z, {
-    RTC_DEBUG_MODAL_OPEN: w,
-    RTC_DEBUG_MODAL_CLOSE: D,
-    RTC_DEBUG_MODAL_SET_SECTION: M,
-    RTC_DEBUG_MODAL_UPDATE: j,
+f(Z, 'displayName', 'RTCDebugStore');
+let H = new Z(a.Z, {
+    RTC_DEBUG_MODAL_OPEN: P,
+    RTC_DEBUG_MODAL_CLOSE: w,
+    RTC_DEBUG_MODAL_SET_SECTION: x,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: B,
-    RTC_DEBUG_SET_RECORDING_FLAG: Z,
-    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
-    VOICE_CHANNEL_SELECT: x,
-    RTC_CONNECTION_VIDEO: L
+    RTC_DEBUG_SET_RECORDING_FLAG: F,
+    RTC_DEBUG_SET_SIMULCAST_OVERRIDE: V,
+    VOICE_CHANNEL_SELECT: D,
+    RTC_CONNECTION_VIDEO: L,
+    MEDIA_ENGINE_CONNECTION_STATS: k
 });
-l.Z.getMediaEngine().on(o.aB.ConnectionStats, R);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -11,102 +11,99 @@ var r = n(200651),
     p = n(540059),
     h = n(546247),
     f = n(430824),
-    g = n(594174),
-    m = n(768581),
-    b = n(302221),
-    _ = n(745752),
-    E = n(17181),
-    O = n(388032),
-    N = n(964709),
-    v = n(163213);
-function y(e) {
-    var t, n;
-    let { guildId: l, channelId: y } = e,
-        { ref: I, width: C, height: S } = (0, c.Z)(),
-        T = (0, p.Q3)('GuildOnboardingBlockedPage'),
-        P = null !== (n = null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && void 0 !== n && n,
-        j = i.useCallback(() => {
-            null != l &&
-                null != y &&
-                ((0, _.I1)(l),
-                (0, E.default)({
-                    guildId: l,
-                    returnChannelId: y
+    g = n(768581),
+    m = n(302221),
+    b = n(745752),
+    _ = n(17181),
+    E = n(388032),
+    O = n(964709),
+    N = n(163213);
+function v(e) {
+    let { guildId: t, channelId: n } = e,
+        { ref: l, width: v, height: y } = (0, c.Z)(),
+        I = (0, p.Q3)('GuildOnboardingBlockedPage'),
+        C = i.useCallback(() => {
+            null != t &&
+                null != n &&
+                ((0, b.I1)(t),
+                (0, _.default)({
+                    guildId: t,
+                    returnChannelId: n
                 }));
-        }, [l, y]),
-        A = (0, a.e7)([f.Z], () => f.Z.getGuild(l)),
-        Z = i.useMemo(
+        }, [t, n]),
+        S = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
+        T = i.useMemo(
             () =>
-                null == A
+                null == S
                     ? null
-                    : m.ZP.getGuildSplashURL({
-                          id: A.id,
-                          splash: A.splash
+                    : g.ZP.getGuildSplashURL({
+                          id: S.id,
+                          splash: S.splash
                       }),
-            [A]
+            [S]
         ),
-        x = (0, d.N)(Z);
-    return T && P
+        P = (0, d.N)(T);
+    return I
         ? (0, r.jsxs)('div', {
-              className: o()(N.outerWrapping, v.main, { [v.fullBorderWithGradient]: null == Z }),
-              ref: I,
+              className: o()(O.outerWrapping, N.main, { [N.fullBorderWithGradient]: null == T }),
+              ref: l,
               children: [
-                  null != Z
+                  null != T
                       ? (0, r.jsx)(u.Z, {
-                            className: v.artwork,
-                            src: Z,
-                            width: C,
-                            height: S,
-                            imageClassName: v.cover
+                            className: N.artwork,
+                            src: T,
+                            width: v,
+                            height: y,
+                            imageClassName: N.cover
                         })
                       : (0, r.jsx)(h.Z, {}),
-                  null != x &&
-                      null != Z &&
+                  null != P &&
+                      null != T &&
                       (0, r.jsx)('div', {
-                          className: v.gradient,
-                          style: { background: 'linear-gradient(180deg, '.concat((0, b.aD)(x, 0.16), ' 0%, ').concat((0, b.aD)(x, 1), ' 100%)') }
+                          className: N.gradient,
+                          style: { background: 'linear-gradient(180deg, '.concat((0, m.aD)(P, 0.16), ' 0%, ').concat((0, m.aD)(P, 1), ' 100%)') }
                       }),
-                  null != Z && (0, r.jsx)('div', { className: v.gradient }),
+                  null != T && (0, r.jsx)('div', { className: N.gradient }),
                   (0, r.jsxs)('div', {
-                      className: o()(N.explainerContainer, N.transparentBackground),
+                      className: o()(O.explainerContainer, O.transparentBackground),
                       children: [
                           (0, r.jsxs)('div', {
-                              className: N.header,
+                              className: O.header,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-xxl/normal',
-                                      children: O.NW.string(O.t.CCmhpK)
+                                      children: E.NW.string(E.t.CCmhpK)
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-lg/normal',
-                                      children: O.NW.string(O.t.gRAHcX)
+                                      children: E.NW.string(E.t.gRAHcX)
                                   })
                               ]
                           }),
                           (0, r.jsx)(s.zxk, {
                               color: s.zxk.Colors.WHITE,
                               size: s.zxk.Sizes.LARGE,
-                              onClick: j,
-                              children: O.NW.string(O.t.VVFjAA)
+                              onClick: C,
+                              children: E.NW.string(E.t.VVFjAA)
                           })
                       ]
                   })
               ]
           })
         : (0, r.jsx)('div', {
-              className: N.container,
+              className: O.container,
               children: (0, r.jsxs)('div', {
-                  className: N.explainerContainer,
+                  className: O.explainerContainer,
                   children: [
                       (0, r.jsx)(s.Text, {
                           variant: 'text-md/normal',
-                          children: O.NW.string(O.t.FWtdQk)
+                          children: E.NW.string(E.t.FWtdQk)
                       }),
                       (0, r.jsx)(s.zxk, {
-                          onClick: j,
+                          onClick: C,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-md/medium',
-                              children: O.NW.string(O.t.VVFjAA)
+                              children: E.NW.string(E.t.VVFjAA)
                           })
                       })
                   ]

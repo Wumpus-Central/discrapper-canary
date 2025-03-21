@@ -8,30 +8,31 @@ var i = n(481060),
     l = n(486324),
     c = n(228168),
     u = n(388032),
-    d = n(921700);
+    d = n(940040);
 function f(e) {
-    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: p, pendingBanner: _, isTryItOutFlow: h, disabledInputs: m, onUpsellClick: g } = e,
-        E = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        v = E ? i.vdY : i.SrA,
-        b = (0, o.M)(E),
-        y = () => {
-            if (!E && !b) {
-                null == g || g();
+    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: _, pendingBanner: p, pendingAccentColor: h, isTryItOutFlow: m, disabledInputs: g, onUpsellClick: E } = e,
+        b = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
+        v = b ? i.vdY : i.SrA,
+        y = (0, o.M)(b),
+        O = () => {
+            if (!b && !y) {
+                null == E || E();
                 return;
             }
-            (0, s.$r)(l.pC.BANNER, f, h);
+            (0, s.$r)(l.pC.BANNER, f, m);
         };
     return (0, r.jsx)(a.Z, {
         user: t,
         displayProfile: n,
         guildId: f,
         profileType: c.y0.BITE_SIZE,
-        pendingBanner: _,
-        canUsePremiumProfileCustomization: p,
+        pendingBanner: p,
+        pendingAccentColor: h,
+        canUsePremiumProfileCustomization: _,
         children:
-            !m &&
+            !g &&
             (0, r.jsxs)(i.P3F, {
-                onClick: y,
+                onClick: O,
                 className: d.clickable,
                 children: [
                     (0, r.jsx)(v, {
@@ -41,7 +42,7 @@ function f(e) {
                     (0, r.jsx)(i.X6q, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: E || b ? u.NW.string(u.t.N0bC3N) : u.NW.string(u.t.O1sT5u)
+                        children: b || y ? u.NW.string(u.t.N0bC3N) : u.NW.string(u.t.O1sT5u)
                     })
                 ]
             })

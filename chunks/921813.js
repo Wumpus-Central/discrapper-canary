@@ -25,36 +25,36 @@ var r = n(200651),
     N = n(388032),
     A = n(371831);
 function C(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: s, pendingBio: c, pendingPronouns: g, pendingAvatar: E, pendingAvatarDecoration: N, pendingNickname: C, pendingGlobalName: P, pendingThemeColors: w, pendingProfileEffectId: D, avatarClassName: L, containerClassName: x, isTryItOutFlow: M = !1, disabledInputs: k = !1, hideCustomStatus: j = !1, hideBioSection: U = !1, hideMessageInput: G = !0, hideExampleButton: B = !1, pendingBadges: F, shouldOpenBadgeTooltip: V, showNameplatePreview: Z = !1 } = e,
-        H = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
-        { avatarSrc: W, avatarDecorationSrc: Y } = (0, p.Z)({
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: N, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: F = !1, pendingBadges: V, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
+        W = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
+        { avatarSrc: Y, avatarDecorationSrc: K } = (0, p.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
-            avatarDecorationOverride: N,
-            avatarOverride: E,
+            avatarDecorationOverride: C,
+            avatarOverride: N,
             size: l.EFr.SIZE_80,
             showPending: !0
         }),
-        K = (0, b.ZT)({
-            pendingProfileEffectId: D,
-            displayProfile: H
+        z = (0, b.ZT)({
+            pendingProfileEffectId: L,
+            displayProfile: W
         }),
-        { theme: z, primaryColor: q } = (0, _.Z)({
+        { theme: q, primaryColor: Q } = (0, _.Z)({
             user: t,
-            displayProfile: H,
-            pendingThemeColors: w,
+            displayProfile: W,
+            pendingThemeColors: D,
             isPreview: i
         }),
-        Q = (0, u.H)('ProfileCustomizationPreview');
+        X = (0, u.H)('ProfileCustomizationPreview');
     return (0, r.jsxs)('div', {
         className: A.column,
         children: [
             (0, r.jsxs)(h.Z, {
                 user: t,
-                displayProfile: H,
+                displayProfile: W,
                 profileType: T.y0.BITE_SIZE,
-                pendingThemeColors: w,
-                className: a()(A.container, x),
+                pendingThemeColors: D,
+                className: a()(A.container, M),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -62,29 +62,30 @@ function C(e) {
                         children: [
                             (0, r.jsx)(y.Z, {
                                 user: t,
-                                displayProfile: H,
+                                displayProfile: W,
                                 guildId: null == n ? void 0 : n.id,
                                 canUsePremiumCustomization: i,
                                 pendingBanner: s,
-                                isTryItOutFlow: M,
-                                disabledInputs: k,
+                                pendingAccentColor: c,
+                                isTryItOutFlow: k,
+                                disabledInputs: j,
                                 onUpsellClick: () => (null == o ? void 0 : o({ object: S.qAy.EDIT_PROFILE_BANNER }))
                             }),
                             (0, r.jsx)(v.Z, {
                                 user: t,
                                 guild: n,
-                                displayProfile: H,
+                                displayProfile: W,
                                 canUsePremiumCustomization: i,
-                                previewAvatar: W,
-                                previewAvatarDecoration: Y,
-                                previewTheme: z,
-                                previewPrimaryColor: q,
-                                className: L,
-                                disabledInputs: k,
-                                isTryItOutFlow: M,
+                                previewAvatar: Y,
+                                previewAvatarDecoration: K,
+                                previewTheme: q,
+                                previewPrimaryColor: Q,
+                                className: x,
+                                disabledInputs: j,
+                                isTryItOutFlow: k,
                                 onUpsellClick: () => (null == o ? void 0 : o({ object: S.qAy.AVATAR }))
                             }),
-                            !j &&
+                            !U &&
                                 (0, r.jsx)(m.Z, {
                                     location: 'ProfileCustomizationPreview',
                                     user: t,
@@ -94,27 +95,27 @@ function C(e) {
                     }),
                     (0, r.jsx)(O.Z, {
                         user: t,
-                        displayProfile: H,
+                        displayProfile: W,
                         guild: n,
-                        pendingAvatar: E,
-                        pendingNickname: C,
-                        pendingGlobalName: P,
-                        pendingBio: c,
-                        pendingPronouns: g,
-                        isTryItOutFlow: M,
-                        hideBioSection: U,
-                        pendingBadges: F,
-                        shouldOpenBadgeTooltip: V
+                        pendingAvatar: N,
+                        pendingNickname: P,
+                        pendingGlobalName: w,
+                        pendingBio: g,
+                        pendingPronouns: E,
+                        isTryItOutFlow: k,
+                        hideBioSection: G,
+                        pendingBadges: V,
+                        shouldOpenBadgeTooltip: Z
                     }),
                     (0, r.jsx)(I.Z, {
                         user: t,
-                        hideMessageInput: G,
-                        hideExampleButton: B
+                        hideMessageInput: B,
+                        hideExampleButton: F
                     }),
-                    null != K && (0, r.jsx)(d.Z, { profileEffectId: K })
+                    null != z && (0, r.jsx)(d.Z, { profileEffectId: z })
                 ]
             }),
-            Q && Z && (0, r.jsx)(R, {})
+            X && H && (0, r.jsx)(R, {})
         ]
     });
 }

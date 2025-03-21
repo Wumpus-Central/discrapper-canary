@@ -1,19 +1,17 @@
 n.d(t, {
-    hp: () => d,
-    kr: () => u,
-    u: () => s
+    hp: () => c,
+    kr: () => l,
+    u: () => o
 }),
     n(47120),
     n(411104),
     n(26686);
-var r = n(570140),
-    i = n(710845),
-    o = n(38055);
-let a = new i.Z('AVError');
-var s = (function (e) {
+var r = n(570140);
+let i = new (n(710845).Z)('AVError');
+var o = (function (e) {
     return (e.STREAM_FAILED_TO_START = 'stream-failed-to-start'), (e.NO_INPUT_DEVICES = 'no-input-devices'), (e.NO_AUDIO_INPUT_DETECTED = 'no-audio-input-detected'), (e.DEBUG_LOG_UPLOAD_FAILED = 'debug-log-upload-failed'), (e.STREAM_VIEW_LOW_FPS = 'stream-view-low-fps'), (e.STREAM_VIEW_HIGH_PACKET_LOSS = 'stream-view-high-packet-loss'), (e.STREAM_SEND_LOW_FPS = 'stream-send-low-encode-fps'), (e.STREAM_SEND_HIGH_PACKET_LOSS = 'stream-send-high-packet-loss'), (e.STREAM_BAD_NETWORK_QUALITY = 'stream-send-network-quality'), (e.STREAM_SOUNDSHARE_FAILED = 'stream-soundshare-failed'), (e.NOISE_CANCELLER_ERROR = 'noise-canceller-error'), (e.SCREENSHARE_OS_NOT_SUPPORTED = 'screenshare-min-os-requirement'), (e.STREAM_RECONNECTING = 'stream-reconnecting'), (e.VIDEO_DECODE_ERROR = 'video-decode-error'), (e.VIDEO_ENCODE_ERROR = 'video-encode-error'), (e.STREAM_FULL = 'stream-full'), e;
 })({});
-let l = {
+let a = {
     'stream-soundshare-failed': {
         errorCode: 1001,
         severity: 'warning',
@@ -111,16 +109,16 @@ let l = {
         isErrorOutbound: !0
     }
 };
-var c = (function (e) {
+var s = (function (e) {
     return (e.Unknown = 'Unknown'), (e.UploadErrorGeneral = 'UploadErrorCodes.GENERAL'), (e.UploadErrorNoFile = 'UploadErrorCodes.NO_FILE'), (e.UploadErrorProgress = 'UploadErrorCodes.PROGRESS'), (e.UploadErrorUpload = 'UploadErrorCodes.UPLOAD'), (e.UploadErrorRead = 'UploadErrorCodes.READ'), (e.NoiseCancellerCpuOveruse = 'NoiseCancellerError.CPU_OVERUSE'), (e.NoiseCancellerFailed = 'NoiseCancellerError.FAILED'), (e.NoiseCancellerVadCpuOveruse = 'NoiseCancellerError.VAD_CPU_OVERUSE'), e;
 })({});
-function u(e, t) {
-    if (null != t.underlyingError && !Object.values(c).includes(t.underlyingError)) {
-        a.error("Invalid underlying error string '".concat(t.underlyingError, "', must be member of AVUnderlyingError"));
+function l(e, t) {
+    if (null != t.underlyingError && !Object.values(s).includes(t.underlyingError)) {
+        i.error("Invalid underlying error string '".concat(t.underlyingError, "', must be member of AVUnderlyingError"));
         return;
     }
-    a.error('AV error reported: '.concat(e, ' ').concat(JSON.stringify(t)));
-    let n = l[e];
+    i.error('AV error reported: '.concat(e, ' ').concat(JSON.stringify(t)));
+    let n = a[e];
     r.Z.dispatch({
         type: 'REPORT_AV_ERROR',
         error: e,
@@ -128,18 +126,17 @@ function u(e, t) {
         severity: n.severity,
         category: n.category,
         context: t
-    }),
-        (0, o.b)(e, t);
+    });
 }
-function d(e) {
-    return l[e];
+function c(e) {
+    return a[e];
 }
 !(function () {
-    let e = Object.values(l).map((e) => e.errorCode),
+    let e = Object.values(a).map((e) => e.errorCode),
         t = new Set(e);
     if (e.length !== t.size) {
         let t = e.filter((t, n) => e.indexOf(t) !== n),
-            n = Object.entries(l)
+            n = Object.entries(a)
                 .filter((e) => {
                     let [n, r] = e;
                     return t.includes(r.errorCode);
