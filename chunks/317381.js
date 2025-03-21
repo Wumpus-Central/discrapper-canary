@@ -84,7 +84,7 @@ let P = {
         everLaunchedActivities: new Set(),
         seenNewActivities: {},
         seenUpdatedActivities: {},
-        shouldShowNewActivityIndicator: !1
+        surfacesToShowNewActivityIndicator: new Set()
     },
     w = [],
     D = [],
@@ -328,11 +328,21 @@ function e_(e) {
         let o = P.seenNewActivities[t],
             a = Object.hasOwn(P.seenNewActivities, t),
             s = new Date(o).getTime() < i;
-        r.label_type === l.ww.NEW && (!a || s) && ((P.shouldShowNewActivityIndicator = !0), (P.seenNewActivities[t] = r.label_until));
+        r.label_type === l.ww.NEW &&
+            (!a || s) &&
+            (Object.values(l.eR).forEach((e) => {
+                r.omit_badge_from_surfaces.includes(e) || P.surfacesToShowNewActivityIndicator.add(e);
+            }),
+            (P.seenNewActivities[t] = r.label_until));
         let c = P.seenUpdatedActivities[t],
             u = Object.hasOwn(P.seenUpdatedActivities, t),
             d = new Date(c).getTime() < i;
-        r.label_type === l.ww.UPDATED && (!u || d) && ((P.shouldShowNewActivityIndicator = !0), (P.seenUpdatedActivities[t] = r.label_until));
+        r.label_type === l.ww.UPDATED &&
+            (!u || d) &&
+            (Object.values(l.eR).forEach((e) => {
+                r.omit_badge_from_surfaces.includes(e) || P.surfacesToShowNewActivityIndicator.add(e);
+            }),
+            (P.seenUpdatedActivities[t] = r.label_until));
     });
 }
 function ep(e) {
@@ -350,7 +360,7 @@ function ep(e) {
         });
 }
 let eh = () => {
-    P.shouldShowNewActivityIndicator = !1;
+    P.surfacesToShowNewActivityIndicator.clear();
 };
 function em(e) {
     let { applicationId: t, componentId: n, commandOrigin: r, launchParams: i, channelId: o, inviterUserId: a } = e;
@@ -408,9 +418,14 @@ function eN(e) {
 }
 class eA extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        var t;
-        let n = new Set(null !== (t = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== t ? t : []);
-        null != e && (P = R(A({}, e), { everLaunchedActivities: n }));
+        var t, n;
+        let r = new Set(null !== (t = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== t ? t : []),
+            i = new Set(null !== (n = null == e ? void 0 : e.surfacesToShowNewActivityIndicator) && void 0 !== n ? n : []);
+        null != e &&
+            (P = R(A({}, e), {
+                everLaunchedActivities: r,
+                surfacesToShowNewActivityIndicator: i
+            }));
     }
     getState() {
         return P;
@@ -548,7 +563,8 @@ N(eA, 'displayName', 'EmbeddedActivitiesStore'),
             let n = new Set(null !== (t = e.everLaunchedActivities) && void 0 !== t ? t : []);
             return R(A({}, e), { everLaunchedActivities: n });
         },
-        (e) => (delete e.usersHavePlayedByApp, A({}, e))
+        (e) => (delete e.usersHavePlayedByApp, A({}, e)),
+        (e) => ((e.surfacesToShowNewActivityIndicator = new Set()), e.shouldShowNewActivityIndicator && e.surfacesToShowNewActivityIndicator.add(l.eR.VOICE_LAUNCHER), delete e.shouldShowNewActivityIndicator, A({}, e))
     ]);
 let eC = new eA(s.Z, {
         ACTIVITY_LAYOUT_MODE_UPDATE: eI,

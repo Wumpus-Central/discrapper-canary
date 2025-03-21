@@ -66,7 +66,8 @@ var A = (function (e) {
 let C = {
         label_type: r.ww.NONE,
         release_phase: '',
-        label_until: null
+        label_until: null,
+        omit_badge_from_surfaces: []
     },
     R = {
         application_id: '',
