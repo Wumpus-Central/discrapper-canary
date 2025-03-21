@@ -1,29 +1,30 @@
-n.d(t, { Z: () => E }), n(653041), n(47120);
+n.d(t, { Z: () => x }), n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(442837),
-    l = n(481060),
-    a = n(237997),
+    l = n(442837),
+    o = n(481060),
+    a = n(486016),
     s = n(804570),
-    c = n(388627),
-    u = n(561064),
-    d = n(380736),
-    p = n(693091),
+    c = n(624864),
+    u = n(388627),
+    d = n(561064),
+    p = n(380736),
+    h = n(693091),
     f = n(371467),
-    h = n(981631),
+    m = n(981631),
     g = n(388032),
-    _ = n(734377);
-let m = [];
-function v(e) {
+    O = n(173293);
+let v = [];
+function y(e) {
     return e.notification.id;
 }
-function O(e, t, n, r) {
-    let { index: o, notification: l, locked: a } = t;
+function E(e, t, n, r) {
+    let { index: l, notification: o, locked: a } = t;
     return (0, i.jsx)(
-        d.ZP,
+        p.Z,
         {
-            index: o,
-            notification: l,
+            index: l,
+            notification: o,
             locked: a,
             transitionState: n,
             cleanUp: r
@@ -33,22 +34,22 @@ function O(e, t, n, r) {
 }
 function b(e) {
     return (0, i.jsx)('div', {
-        className: _.container,
+        className: O.container,
         children: e
     });
 }
-let y = (e) => r.useState(() => new p.AS(e))[0],
-    E = r.memo(function (e) {
+let j = (e) => r.useState(() => new h.AS(e))[0],
+    x = r.memo(function (e) {
         let { locked: t, showEmpty: n = !0 } = e,
-            d = (0, o.e7)(
-                [a.Z, f.Z],
+            p = (0, l.e7)(
+                [f.Z, c.Z],
                 () => {
-                    if (a.Z.getNotificationPositionMode() === h._vf.DISABLED) return m;
+                    if (c.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return v;
                     let e = [],
                         n = 0;
                     for (let i of f.Z.getNotifications()) {
                         if (n > 4) break;
-                        (!t || i.status !== h._1z.TIMED_OUT) &&
+                        (!t || i.status !== m._1z.TIMED_OUT) &&
                             (e.push({
                                 index: n,
                                 locked: t,
@@ -59,16 +60,16 @@ let y = (e) => r.useState(() => new p.AS(e))[0],
                     return e;
                 },
                 [t],
-                c.E6
+                u.E6
             ),
-            _ = y(t);
-        return (r.useLayoutEffect(() => _.updateState(d, t)), r.useLayoutEffect(() => (_.initialize((0, u.i)()), () => _.cleanUp()), [_]), 0 !== d.length || t)
-            ? (0, i.jsx)(p.S4.Provider, {
-                  value: _,
-                  children: (0, i.jsx)(l.W3x, {
-                      items: d,
-                      renderItem: O,
-                      getItemKey: v,
+            O = j(t);
+        return (r.useLayoutEffect(() => O.updateState(p, t)), r.useLayoutEffect(() => (O.initialize((0, d.i)()), () => O.cleanUp()), [O]), 0 !== p.length || t)
+            ? (0, i.jsx)(h.S4.Provider, {
+                  value: O,
+                  children: (0, i.jsx)(o.W3x, {
+                      items: p,
+                      renderItem: E,
+                      getItemKey: y,
                       wrapChildren: b
                   })
               })
@@ -77,7 +78,7 @@ let y = (e) => r.useState(() => new p.AS(e))[0],
                   ? null
                   : (0, i.jsx)(s.E, {
                         emptyText: g.NW.string(g.t.O1Nbjo),
-                        icon: l.Dkj,
+                        icon: o.Dkj,
                         absolute: !0
                     })
               : null;

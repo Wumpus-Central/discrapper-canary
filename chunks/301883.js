@@ -1,5 +1,8 @@
 e.exports = {
     collapseable: 'collapseable__9d98d',
+    notificationSettingsContainer: 'notificationSettingsContainer__9d98d',
+    notificationItem: 'notificationItem__9d98d',
+    notificationDescriptionContainer: 'notificationDescriptionContainer__9d98d',
     mainCollapseableContainer: 'mainCollapseableContainer__9d98d',
     groupContainer: 'groupContainer__9d98d',
     standaloneContainer: 'standaloneContainer__9d98d',

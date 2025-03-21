@@ -1,60 +1,62 @@
-n.d(t, { Z: () => W }), n(47120);
+n.d(t, { Z: () => V }), n(47120);
 var i = n(200651),
     r = n(192379),
     s = n(512722),
     o = n.n(s),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     c = n(493683),
     d = n(13245),
     u = n(99690),
     h = n(835473),
     p = n(194082),
-    g = n(442550),
-    f = n(297781),
+    f = n(442550),
+    g = n(297781),
     m = n(371991),
     y = n(656709),
-    O = n(561308),
+    _ = n(561308),
     v = n(593481),
-    S = n(371651),
-    b = n(703656),
-    x = n(199902),
-    Z = n(592125),
+    b = n(486016),
+    O = n(371651),
+    x = n(624864),
+    S = n(703656),
+    E = n(199902),
+    N = n(592125),
     j = n(158776),
-    E = n(594174),
-    N = n(237997),
-    C = n(5192),
-    I = n(145597),
-    P = n(312839),
-    w = n(981631),
-    _ = n(701488),
-    T = n(987650),
-    k = n(388032),
-    D = n(995816);
-function M(e) {
+    C = n(594174),
+    I = n(237997),
+    Z = n(5192),
+    P = n(145597),
+    w = n(312839),
+    T = n(981631),
+    k = n(701488),
+    D = n(987650),
+    M = n(388032),
+    A = n(538917);
+function R(e) {
     let { game: t, trackClick: n, onDismissClick: s } = e,
         o = (0, h.q)(t.id),
-        c = (0, l.e7)([N.Z], () => N.Z.showInviteNotification),
+        c = (0, a.e7)([x.Z], () => !x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.GAME_ACTIVITY)),
         u = r.useCallback(
             (e) => {
-                e.stopPropagation(), n(c ? 'muted' : 'unmuted'), d.Z.setShowGameInviteNotification(!c);
+                e.stopPropagation(), n(c ? 'muted' : 'unmuted'), d.Z.setNotificationDisabledSetting(b.OverlayNotificationDisabledSetting.GAME_ACTIVITY, !c);
             },
             [c, n]
         );
     if (null == o) return null;
-    let p = o.getIconURL(_.Si.LARGE);
+    let p = o.getIconURL(k.Si.LARGE);
     return (0, i.jsxs)('div', {
-        className: D.header,
+        className: A.header,
         children: [
             (0, i.jsxs)('div', {
-                className: D.headerLeft,
+                className: A.headerLeft,
                 children: [
-                    (0, i.jsx)(g.f, {
+                    (0, i.jsx)(f.f, {
                         src: p,
                         size: 16
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: D.gameInfo,
+                    (0, i.jsx)(l.Text, {
+                        className: A.gameInfo,
                         variant: 'text-sm/semibold',
                         color: 'header-primary',
                         children: o.name
@@ -62,34 +64,34 @@ function M(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: D.headerRight,
+                className: A.headerRight,
                 children: [
-                    (0, i.jsx)(a.zxk, {
-                        look: a.zxk.Looks.BLANK,
-                        size: a.zxk.Sizes.NONE,
-                        className: D.muteButton,
+                    (0, i.jsx)(l.zxk, {
+                        look: l.zxk.Looks.BLANK,
+                        size: l.zxk.Sizes.NONE,
+                        className: A.muteButton,
                         onClick: u,
                         children: c
-                            ? (0, i.jsx)(a.Dkj, {
+                            ? (0, i.jsx)(l.Dkj, {
                                   size: 'xs',
-                                  color: a.TVs.colors.WHITE,
-                                  className: D.muteIcon
+                                  color: l.TVs.colors.WHITE,
+                                  className: A.muteIcon
                               })
-                            : (0, i.jsx)(a.owu, {
+                            : (0, i.jsx)(l.owu, {
                                   size: 'xs',
-                                  color: a.TVs.colors.WHITE,
-                                  className: D.muteIcon
+                                  color: l.TVs.colors.WHITE,
+                                  className: A.muteIcon
                               })
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        look: a.zxk.Looks.BLANK,
-                        size: a.zxk.Sizes.NONE,
+                    (0, i.jsx)(l.zxk, {
+                        look: l.zxk.Looks.BLANK,
+                        size: l.zxk.Sizes.NONE,
                         onClick: s,
-                        className: D.dismissButton,
-                        children: (0, i.jsx)(a.CTb, {
+                        className: A.dismissButton,
+                        children: (0, i.jsx)(l.CTb, {
                             size: 'xs',
-                            color: a.TVs.colors.WHITE,
-                            className: D.dismissIcon
+                            color: l.TVs.colors.WHITE,
+                            className: A.dismissIcon
                         })
                     })
                 ]
@@ -97,16 +99,16 @@ function M(e) {
         ]
     });
 }
-function R(e) {
+function L(e) {
     let { entry: t, idx: n } = e,
-        s = (0, l.e7)([E.default], () => E.default.getUser(t.author_id)),
-        h = (0, O.kr)(t),
-        g = h ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [v, S] = r.useState('unsent'),
-        [I, P] = r.useState(!1),
-        _ = (0, l.e7)([N.Z], () => N.Z.customInviteMessage),
-        T = (0, l.e7)([x.Z], () => (null != s ? x.Z.getAnyStreamForUser(s.id) : null), [s]),
-        { isMobileOnline: M, status: R } = (0, l.cj)(
+        s = (0, a.e7)([C.default], () => C.default.getUser(t.author_id)),
+        h = (0, _.kr)(t),
+        f = h ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+        [v, b] = r.useState('unsent'),
+        [O, x] = r.useState(!1),
+        P = (0, a.e7)([I.default], () => I.default.customInviteMessage),
+        w = (0, a.e7)([E.Z], () => (null != s ? E.Z.getAnyStreamForUser(s.id) : null), [s]),
+        { isMobileOnline: k, status: D } = (0, a.cj)(
             [j.Z],
             () =>
                 null == s
@@ -122,35 +124,35 @@ function R(e) {
         );
     r.useEffect(() => {
         if ('sent' === v) {
-            let e = setTimeout(() => P(!0), 2000);
+            let e = setTimeout(() => x(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [v]);
-    let A = async (e) => {
+    let R = async (e) => {
             if (null != s && 'unsent' === v) {
                 e.stopPropagation();
                 try {
                     var i;
-                    S('sending');
+                    b('sending');
                     let e = await c.Z.getOrEnsurePrivateChannel(s.id),
-                        r = null !== (i = Z.Z.getChannel(e)) && void 0 !== i ? i : null;
+                        r = null !== (i = N.Z.getChannel(e)) && void 0 !== i ? i : null;
                     o()(null != r, 'Send channel must be defined'),
-                        (0, b.uL)(w.Z5c.CHANNEL(r.guild_id, r.id)),
+                        (0, S.uL)(T.Z5c.CHANNEL(r.guild_id, r.id)),
                         await (0, y.p)({
                             channel: r,
-                            content: null != _ ? _ : k.NW.string(k.t.DwAcMz),
+                            content: null != P ? P : M.NW.string(M.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
-                        d.Z.track(w.rMx.OVERLAY_GAME_INVITE_SENT, {
+                        d.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: s.id,
                             target_content_entry_id: t.id,
                             target_index: n,
-                            sent_custom_message: null != _
+                            sent_custom_message: null != P
                         }),
-                        S('sent');
+                        b('sent');
                 } catch (e) {
-                    S('unsent');
+                    b('unsent');
                 }
             }
         },
@@ -158,40 +160,40 @@ function R(e) {
             var e;
             if (null == s) return;
             let t = await c.Z.getOrEnsurePrivateChannel(s.id),
-                n = null !== (e = Z.Z.getChannel(t)) && void 0 !== e ? e : null;
-            o()(null != n, 'Send channel must be defined'), (0, b.uL)(w.Z5c.CHANNEL(n.guild_id, n.id));
+                n = null !== (e = N.Z.getChannel(t)) && void 0 !== e ? e : null;
+            o()(null != n, 'Send channel must be defined'), (0, S.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == s
         ? null
         : (0, i.jsxs)('div', {
-              className: D.userRow,
+              className: A.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: D.avatarContainer,
+                      className: A.avatarContainer,
                       user: s,
-                      isMobile: M,
-                      status: R
+                      isMobile: k,
+                      status: D
                   }),
                   (0, i.jsxs)('div', {
-                      className: D.userInfo,
+                      className: A.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: D.usernameWrapper,
+                              className: A.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(a.Text, {
-                                      className: D.username,
+                                  (0, i.jsx)(l.Text, {
+                                      className: A.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: C.ZP.getName(void 0, void 0, s)
+                                      children: Z.ZP.getName(void 0, void 0, s)
                                   }),
-                                  null != T && (0, i.jsx)(p.ZP, {})
+                                  null != w && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
-                          (0, i.jsxs)(f.m7, {
+                          (0, i.jsxs)(g.m7, {
                               children: [
-                                  (0, i.jsx)(a.iWm, {
+                                  (0, i.jsx)(l.iWm, {
                                       size: 'xxs',
-                                      color: g
+                                      color: f
                                   }),
                                   (0, i.jsx)(m.ZP, {
                                       entry: t,
@@ -203,41 +205,41 @@ function R(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: D.inviteButtonWrapper,
-                      children: (0, i.jsx)(a.zxk, {
+                      className: A.inviteButtonWrapper,
+                      children: (0, i.jsx)(l.zxk, {
                           submitting: 'sending' === v,
-                          onClick: I ? L : A,
-                          className: D.inviteButton,
-                          color: a.Ttl.PRIMARY,
-                          look: 'sent' === v ? a.iLD.OUTLINED : a.iLD.FILLED,
-                          size: a.PhG.MAX,
+                          onClick: O ? L : R,
+                          className: A.inviteButton,
+                          color: l.Ttl.PRIMARY,
+                          look: 'sent' === v ? l.iLD.OUTLINED : l.iLD.FILLED,
+                          size: l.PhG.MAX,
                           children:
                               'sent' === v
-                                  ? I
-                                      ? (0, i.jsx)(a.kBi, { size: 'sm' })
-                                      : (0, i.jsx)(a.kSu, {
+                                  ? O
+                                      ? (0, i.jsx)(l.kBi, { size: 'sm' })
+                                      : (0, i.jsx)(l.kSu, {
                                             size: 'sm',
-                                            color: a.TVs.colors.WHITE
+                                            color: l.TVs.colors.WHITE
                                         })
-                                  : (0, i.jsx)(a.Uuj, { size: 'sm' })
+                                  : (0, i.jsx)(l.Uuj, { size: 'sm' })
                       })
                   })
               ]
           });
 }
-function A(e) {
+function z(e) {
     let { onCancel: t, onSave: n } = e,
-        s = (0, l.e7)([N.Z], () => N.Z.customInviteMessage),
+        s = (0, a.e7)([I.default], () => I.default.customInviteMessage),
         o = r.createRef(),
-        [c, u] = r.useState(null != s ? s : k.NW.string(k.t.DwAcMz)),
+        [c, u] = r.useState(null != s ? s : M.NW.string(M.t.DwAcMz)),
         [h, p] = r.useState(c.length),
-        g = (e) => {
+        f = (e) => {
             e.stopPropagation(), d.Z.setInviteMessage(c), n(e);
         };
     return (0, i.jsxs)('div', {
-        className: D.editMessageContainer,
+        className: A.editMessageContainer,
         children: [
-            (0, i.jsx)(a.oil, {
+            (0, i.jsx)(l.oil, {
                 autoFocus: !0,
                 inputRef: o,
                 onClick: (e) => e.stopPropagation(),
@@ -248,10 +250,10 @@ function A(e) {
                         let t = o.current,
                             r = null !== (n = t.selectionStart) && void 0 !== n ? n : 0,
                             s = null !== (i = t.selectionEnd) && void 0 !== i ? i : 0,
-                            l = t.value;
-                        (t.value = l.substring(0, r) + ' ' + l.substring(s)), t.setSelectionRange(r + 1, r + 1), p(l.length);
+                            a = t.value;
+                        (t.value = a.substring(0, r) + ' ' + a.substring(s)), t.setSelectionRange(r + 1, r + 1), p(a.length);
                     }
-                    'Enter' === e.key && g(e), 'Escape' === e.key && (e.preventDefault(), t(e));
+                    'Enter' === e.key && f(e), 'Escape' === e.key && (e.preventDefault(), t(e));
                 },
                 onKeyUp: (e) => e.stopPropagation(),
                 maxLength: 99,
@@ -261,56 +263,56 @@ function A(e) {
                 value: c
             }),
             (0, i.jsxs)('div', {
-                className: D.editMessageButtons,
+                className: A.editMessageButtons,
                 children: [
-                    (0, i.jsxs)(a.Text, {
-                        className: D.charCount,
+                    (0, i.jsxs)(l.Text, {
+                        className: A.charCount,
                         variant: 'text-xs/normal',
                         color: 'header-muted',
                         children: [h, '/', 99]
                     }),
-                    (0, i.jsx)(a.zxk, {
+                    (0, i.jsx)(l.zxk, {
                         onClick: t,
-                        className: D.cancelButton,
-                        look: a.zxk.Looks.BLANK,
-                        size: a.zxk.Sizes.TINY,
-                        children: k.NW.string(k.t['ETE/oK'])
+                        className: A.cancelButton,
+                        look: l.zxk.Looks.BLANK,
+                        size: l.zxk.Sizes.TINY,
+                        children: M.NW.string(M.t['ETE/oK'])
                     }),
-                    (0, i.jsx)(a.zxk, {
-                        onClick: g,
-                        color: a.zxk.Colors.PRIMARY,
-                        look: a.zxk.Looks.FILLED,
-                        size: a.zxk.Sizes.TINY,
-                        children: k.NW.string(k.t.R3BPHx)
+                    (0, i.jsx)(l.zxk, {
+                        onClick: f,
+                        color: l.zxk.Colors.PRIMARY,
+                        look: l.zxk.Looks.FILLED,
+                        size: l.zxk.Sizes.TINY,
+                        children: M.NW.string(M.t.R3BPHx)
                     })
                 ]
             })
         ]
     });
 }
-function L(e) {
+function W(e) {
     let { entries: t } = e,
         n = t.slice(0, 5),
-        s = (0, l.e7)([N.Z], () => N.Z.customInviteMessage),
-        o = k.NW.formatToPlainString(k.t['5uzKGB'], { inviteMessage: null != s ? s : k.NW.string(k.t.DwAcMz) }),
+        s = (0, a.e7)([I.default], () => I.default.customInviteMessage),
+        o = M.NW.formatToPlainString(M.t['5uzKGB'], { inviteMessage: null != s ? s : M.NW.string(M.t.DwAcMz) }),
         [c, u] = r.useState(!1);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(v.iz, {}),
-            (0, i.jsxs)(a.Text, {
-                className: D.helpText,
+            (0, i.jsxs)(l.Text, {
+                className: A.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: [
                     o,
-                    (0, i.jsx)(a.zxk, {
+                    (0, i.jsx)(l.zxk, {
                         onClick: (e) => {
                             e.stopPropagation(), u(!c), d.Z.setInstanceLocked(c);
                         },
-                        className: D.editButton,
-                        look: a.zxk.Looks.BLANK,
-                        size: a.zxk.Sizes.NONE,
-                        children: (0, i.jsx)(a.vdY, {
+                        className: A.editButton,
+                        look: l.zxk.Looks.BLANK,
+                        size: l.zxk.Sizes.NONE,
+                        children: (0, i.jsx)(l.vdY, {
                             color: 'currentColor',
                             size: 'xxs'
                         })
@@ -318,7 +320,7 @@ function L(e) {
                 ]
             }),
             c &&
-                (0, i.jsx)(A, {
+                (0, i.jsx)(z, {
                     onSave: (e) => {
                         e.stopPropagation(), u(!1);
                     },
@@ -329,7 +331,7 @@ function L(e) {
             !c &&
                 n.map((e, t) =>
                     (0, i.jsx)(
-                        R,
+                        L,
                         {
                             idx: t,
                             entry: e
@@ -340,28 +342,28 @@ function L(e) {
         ]
     });
 }
-function W(e, t) {
-    let { trackView: n, trackClick: r } = (0, P.R)(T.n0.SendGameInvitesNotification, { notif_type: T.n0.SendGameInvitesNotification });
+function V(e, t) {
+    let { trackView: n, trackClick: r } = (0, w.R)(D.n0.SendGameInvitesNotification, { notif_type: D.n0.SendGameInvitesNotification });
     return (
         o()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
             title: (t) =>
-                (0, i.jsx)(M, {
+                (0, i.jsx)(R, {
                     game: e,
                     trackClick: r,
                     onDismissClick: t
                 }),
-            body: (0, i.jsx)(L, { entries: t }),
+            body: (0, i.jsx)(W, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    d.Z.track(w.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    d.Z.track(T.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });
             },
             onNotificationClick: (e, t) => {
-                e.stopPropagation(), r('unlock'), S.default.isOverlayOOPEnabledForPid((0, I.QF)()) ? d.Z.setInputLocked(!1, (0, I.QF)()) : d.Z.setInstanceLocked(!1);
+                e.stopPropagation(), r('unlock'), O.default.isOverlayOOPEnabledForPid((0, P.getPID)()) ? d.Z.setInputLocked(!1, (0, P.getPID)()) : d.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
                 r('dismiss');

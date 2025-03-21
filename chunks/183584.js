@@ -7,13 +7,13 @@ n.d(t, {
 var r = n(570140),
     l = n(610394);
 n(238246), n(788983), n(592125), n(19780);
-var o = n(237997);
+var i = n(237997);
 n(998502), n(487029);
-var i = n(710111);
+var o = n(710111);
 n(981631), n(388032);
 let a = {
-    width: i.FW.width,
-    height: i.FW.height,
+    width: o.FW.width,
+    height: o.FW.height,
     resizable: !1,
     movable: !1,
     alwaysOnTop: !0,
@@ -26,7 +26,10 @@ let a = {
     titleBarStyle: null
 };
 function s(e, t) {
-    l.ZP.isOverlayV3EnabledForPID(t) ||
+    let n = l.ZP.isOverlayV3EnabledForPID(t),
+        o = i.default.disableClickableRegions;
+    n ||
+        o ||
         r.Z.dispatch({
             type: 'OVERLAY_SET_INPUT_LOCKED',
             locked: !1,
@@ -45,13 +48,15 @@ function c(e) {
         pid: e,
         enabled: !1
     });
-    let t = l.ZP.isOverlayV3EnabledForPID(e);
-    o.default.isLocked(e) ||
+    let t = l.ZP.isOverlayV3EnabledForPID(e),
+        n = i.default.disableClickableRegions;
+    i.default.isLocked(e) ||
         t ||
+        n ||
         r.Z.dispatch({
             type: 'OVERLAY_SET_INPUT_LOCKED',
             locked: !0,
             pid: e
         });
 }
-i.FW.padding, a.width, a.height;
+o.FW.padding, a.width, a.height;
