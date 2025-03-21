@@ -41328,6 +41328,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     padding-bottom: 40px
 }
 
+.visual-refresh .layer_bc663c {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24)
+}
+
 .layer_bc663c:has([data-modal-align=top]) {
     bottom: auto;
     padding-top: 0
@@ -43579,7 +43584,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .visual-refresh .caret__9293f {
-    color: var(--background-mod-strong)
+    color: var(--icon-tertiary)
 }
 
 .scrollable__9293f {
@@ -45628,17 +45633,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 :where(.visual-refresh) .small__49fc1 {
-    min-height: 220px;
-    max-height: min(900px, 70vh)
-}
-
-:where(.visual-refresh) .medium__49fc1 {
-    max-height: min(900px, 70vh)
+    min-height: 220px
 }
 
 :where(.visual-refresh) .large__49fc1 {
-    max-width: 962px;
-    max-height: min(900px, 70vh)
+    max-width: 962px
 }
 
 @media (max-width: 485px) {
