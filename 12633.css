@@ -21395,6 +21395,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding-left: 0
 }
 
+.visual-refresh .emojiListRow_fc7141 li {
+    overflow: hidden
+}
+
 .topEmojiSectionContainer_fc7141 {
     display: flex;
     flex-direction: row;
