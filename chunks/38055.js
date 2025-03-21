@@ -87,8 +87,8 @@ function P(e, t) {
         Y = null != L ? (null == M ? void 0 : M.getVoiceParticipantType()) : Z ? 'sender' : 'receiver';
     (h = null != t.streamKey && null != L ? (Z ? (null == M ? void 0 : null === (o = M.getOutboundStats()) || void 0 === o ? void 0 : o.find((e) => e.quality === y.y7)) : null == M ? void 0 : M.getInboundStats(L.ownerId)) : Z ? (null !== (p = i().maxBy(null !== (l = null == M ? void 0 : M.getOutboundStats()) && void 0 !== l ? l : [], (e) => e.num_frames)) && void 0 !== p ? p : null) : null != t.userId ? (null == M ? void 0 : M.getInboundStats(t.userId)) : null),
         (0, m.q)().then((n) => {
-            var r, i, o, a, s, l, c, u, p, m, b, y, C, R, k, K, z, q, Q, X, J, $, ee, et, en, er, ei, eo, ea, es, el, ec, eu, ed, ef, e_, ep, eh, em, eg, eE, eb, ev, ey, eO, eI, eS, eT, eN;
-            let eA = {
+            var r, i, o, a, s, l, c, u, p, m, b, y, C, R, k, K, z, q, Q, X, J, $, ee, et, en, er, ei, eo, ea, es, el, ec, eu, ed, ef, e_, ep, eh, em, eg, eE, eb, ev, ey, eO, eI, eS, eT, eN, eA;
+            let eC = {
                 error_name: e.valueOf(),
                 error_code: P.errorCode,
                 error_severity: P.severity,
@@ -114,10 +114,11 @@ function P(e, t) {
                 video_codec: null !== (en = t.videoCodec) && void 0 !== en ? en : A(H, Z, W),
                 video_encoder: null !== (ei = null !== (er = t.videoEncoder) && void 0 !== er ? er : T(H)) && void 0 !== ei ? ei : null,
                 video_decoder: null !== (ea = null !== (eo = t.videoDecoder) && void 0 !== eo ? eo : N(H, W)) && void 0 !== ea ? ea : null,
-                sender_user_id: null !== (es = null == L ? void 0 : L.ownerId) && void 0 !== es ? es : null,
-                stream_region: null !== (el = null == x ? void 0 : x.getRegion()) && void 0 !== el ? el : null,
-                stream_source_type: Z && null !== (ec = null == x ? void 0 : null === (o = x.analyticsContext) || void 0 === o ? void 0 : o.streamSourceType) && void 0 !== ec ? ec : null,
-                num_stream_viewers: null !== (eu = null == x ? void 0 : null === (a = x.analyticsContext) || void 0 === a ? void 0 : a.numViewers) && void 0 !== eu ? eu : null,
+                audio_capture_sample_rate_mismatch_percent: null !== (es = t.audioCaptureSampleRateMismatchPercent) && void 0 !== es ? es : null,
+                sender_user_id: null !== (el = null == L ? void 0 : L.ownerId) && void 0 !== el ? el : null,
+                stream_region: null !== (ec = null == x ? void 0 : x.getRegion()) && void 0 !== ec ? ec : null,
+                stream_source_type: Z && null !== (eu = null == x ? void 0 : null === (o = x.analyticsContext) || void 0 === o ? void 0 : o.streamSourceType) && void 0 !== eu ? eu : null,
+                num_stream_viewers: null !== (ed = null == x ? void 0 : null === (a = x.analyticsContext) || void 0 === a ? void 0 : a.numViewers) && void 0 !== ed ? ed : null,
                 video_input_resolution_height: Z && null != j ? j : null,
                 video_input_frame_rate: Z && null != U ? U : null,
                 screenshare_capture_method: S(),
@@ -125,25 +126,25 @@ function P(e, t) {
                 share_application_id: null != B ? B : null,
                 share_application_executable: null != F ? F : null,
                 share_application_distributor: null != V ? V : null,
-                cpu_brand: null !== (ed = null == n ? void 0 : n.cpu_brand) && void 0 !== ed ? ed : null,
-                cpu_vendor: null !== (ef = null == n ? void 0 : n.cpu_vendor) && void 0 !== ef ? ef : null,
-                cpu_memory: null !== (e_ = null == n ? void 0 : n.cpu_memory) && void 0 !== e_ ? e_ : null,
-                gpu_brand: null !== (ep = null == n ? void 0 : n.gpu_brand) && void 0 !== ep ? ep : null,
-                gpu_count: null !== (eh = null == n ? void 0 : n.gpu_count) && void 0 !== eh ? eh : null,
-                gpu_memory: null !== (em = null == n ? void 0 : n.gpu_memory) && void 0 !== em ? em : null,
-                gpu_device_vendor_id: null !== (eg = null == n ? void 0 : n.gpu_device_vendor_id) && void 0 !== eg ? eg : null,
-                gpu_device_device_id: null !== (eE = null == n ? void 0 : n.gpu_device_device_id) && void 0 !== eE ? eE : null,
-                gpu_device_sub_sys_id: null !== (eb = null == n ? void 0 : n.gpu_device_sub_sys_id) && void 0 !== eb ? eb : null,
-                gpu_device_revision: null !== (ev = null == n ? void 0 : n.gpu_device_revision) && void 0 !== ev ? ev : null,
-                gpu_driver_version: null !== (ey = null == n ? void 0 : n.gpu_driver_version) && void 0 !== ey ? ey : null,
-                cpu_usage: null !== (eO = E.Z.getCurrentCPUUsagePercent()) && void 0 !== eO ? eO : null,
-                memory_usage: null !== (eI = E.Z.getCurrentMemoryUsageKB()) && void 0 !== eI ? eI : null,
+                cpu_brand: null !== (ef = null == n ? void 0 : n.cpu_brand) && void 0 !== ef ? ef : null,
+                cpu_vendor: null !== (e_ = null == n ? void 0 : n.cpu_vendor) && void 0 !== e_ ? e_ : null,
+                cpu_memory: null !== (ep = null == n ? void 0 : n.cpu_memory) && void 0 !== ep ? ep : null,
+                gpu_brand: null !== (eh = null == n ? void 0 : n.gpu_brand) && void 0 !== eh ? eh : null,
+                gpu_count: null !== (em = null == n ? void 0 : n.gpu_count) && void 0 !== em ? em : null,
+                gpu_memory: null !== (eg = null == n ? void 0 : n.gpu_memory) && void 0 !== eg ? eg : null,
+                gpu_device_vendor_id: null !== (eE = null == n ? void 0 : n.gpu_device_vendor_id) && void 0 !== eE ? eE : null,
+                gpu_device_device_id: null !== (eb = null == n ? void 0 : n.gpu_device_device_id) && void 0 !== eb ? eb : null,
+                gpu_device_sub_sys_id: null !== (ev = null == n ? void 0 : n.gpu_device_sub_sys_id) && void 0 !== ev ? ev : null,
+                gpu_device_revision: null !== (ey = null == n ? void 0 : n.gpu_device_revision) && void 0 !== ey ? ey : null,
+                gpu_driver_version: null !== (eO = null == n ? void 0 : n.gpu_driver_version) && void 0 !== eO ? eO : null,
+                cpu_usage: null !== (eI = E.Z.getCurrentCPUUsagePercent()) && void 0 !== eI ? eI : null,
+                memory_usage: null !== (eS = E.Z.getCurrentMemoryUsageKB()) && void 0 !== eS ? eS : null,
                 outbound_bitrate_estimate: O(H),
                 inbound_bitrate_estimate: I(H),
                 hardware_enabled: d.Z.getHardwareEncoding(),
-                audio_input_device_name: null !== (eS = t.audioInputDeviceName) && void 0 !== eS ? eS : null === (s = d.Z.getInputDevices()[d.Z.getInputDeviceId()]) || void 0 === s ? void 0 : s.name,
-                audio_output_device_name: null !== (eT = t.audioOutputDeviceName) && void 0 !== eT ? eT : null === (l = d.Z.getOutputDevices()[d.Z.getOutputDeviceId()]) || void 0 === l ? void 0 : l.name,
-                video_device_name: null !== (eN = t.videoDeviceName) && void 0 !== eN ? eN : null === (c = d.Z.getVideoDevices()[d.Z.getVideoDeviceId()]) || void 0 === c ? void 0 : c.name,
+                audio_input_device_name: null !== (eT = t.audioInputDeviceName) && void 0 !== eT ? eT : null === (s = d.Z.getInputDevices()[d.Z.getInputDeviceId()]) || void 0 === s ? void 0 : s.name,
+                audio_output_device_name: null !== (eN = t.audioOutputDeviceName) && void 0 !== eN ? eN : null === (l = d.Z.getOutputDevices()[d.Z.getOutputDeviceId()]) || void 0 === l ? void 0 : l.name,
+                video_device_name: null !== (eA = t.videoDeviceName) && void 0 !== eA ? eA : null === (c = d.Z.getVideoDevices()[d.Z.getVideoDeviceId()]) || void 0 === c ? void 0 : c.name,
                 audio_subsystem: d.Z.getMediaEngine().getAudioSubsystem(),
                 automatic_audio_subsystem: d.Z.getSettings().automaticAudioSubsystem,
                 audio_layer: d.Z.getMediaEngine().getAudioLayer(),
@@ -158,6 +159,6 @@ function P(e, t) {
                 input_volume: d.Z.getInputVolume(),
                 output_volume: d.Z.getOutputVolume()
             };
-            g.default.track(v.rMx.AV_ERROR_REPORTED, eA);
+            g.default.track(v.rMx.AV_ERROR_REPORTED, eC);
         });
 }
