@@ -48551,6 +48551,15 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     font-weight: 500
 }
 
+.loadingContainer_f86e69 {
+    display: flex;
+    min-height: 300px;
+    max-height: 442px;
+    height: 80vh;
+    padding-top: var(--spacing-16);
+    justify-content: center
+}
+
 [data-popout-root],
 html {
     --brand-05a: hsla(var(--brand-500-hsl)/0.05);

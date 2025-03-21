@@ -1,30 +1,32 @@
-n.d(t, { Z: () => F }), n(47120);
+n.d(t, {
+    ZP: () => B,
+    jQ: () => D
+}),
+    n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
     s = n(442837),
-    l = n(704215),
-    c = n(692547),
-    u = n(481060),
-    d = n(357352),
-    f = n(243778),
-    _ = n(612659),
-    p = n(409100),
-    h = n(703656),
-    m = n(727939),
-    g = n(411149),
-    E = n(988290),
-    b = n(721359),
-    v = n(640963),
-    y = n(611725),
-    O = n(680783),
-    I = n(981631),
-    S = n(921944),
-    T = n(474936),
-    N = n(388032),
-    A = n(154950);
-function C(e, t, n) {
+    l = n(692547),
+    c = n(481060),
+    u = n(357352),
+    d = n(612659),
+    f = n(409100),
+    _ = n(703656),
+    p = n(727939),
+    h = n(411149),
+    m = n(988290),
+    g = n(721359),
+    E = n(640963),
+    b = n(611725),
+    v = n(680783),
+    y = n(981631),
+    O = n(921944),
+    I = n(474936),
+    S = n(388032),
+    T = n(154950);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +39,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +50,12 @@ function R(e) {
                 })
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
-function P(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,256 +67,250 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let D = 88,
-    L = 'remove-wallpaper';
-function x(e) {
+let P = 88,
+    w = 'remove-wallpaper';
+var D = (function (e) {
+    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
+})({});
+function L(e) {
     let { handleClose: t } = e;
     return (0, r.jsxs)('div', {
-        className: A.coachmarkHeaderContainer,
+        className: T.coachmarkHeaderContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: A.badgeAndCloseRow,
+                className: T.badgeAndCloseRow,
                 children: [
-                    (0, r.jsx)(u.lBU, { text: N.NW.string(N.t.oW0eUV) }),
-                    (0, r.jsx)(u.olH, {
-                        className: A.coachmarkCloseIcon,
+                    (0, r.jsx)(c.lBU, { text: S.NW.string(S.t.oW0eUV) }),
+                    (0, r.jsx)(c.olH, {
+                        className: T.coachmarkCloseIcon,
                         onClick: t
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: A.coachmarkHeaderTextContainer,
+                className: T.coachmarkHeaderTextContainer,
                 children: [
-                    (0, r.jsx)(u.X6q, {
+                    (0, r.jsx)(c.X6q, {
                         variant: 'heading-lg/extrabold',
-                        children: N.NW.string(N.t.dFhhcX)
+                        children: S.NW.string(S.t.dFhhcX)
                     }),
-                    (0, r.jsx)(u.Text, {
-                        className: A.subtitle,
+                    (0, r.jsx)(c.Text, {
+                        className: T.subtitle,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: N.NW.string(N.t.u7Hzjo)
+                        children: S.NW.string(S.t.u7Hzjo)
                     })
                 ]
             })
         ]
     });
 }
-function M(e) {
+function x(e) {
     let { isPremiumTier2Subscriber: t, handleClose: n } = e;
     return (0, r.jsxs)('div', {
-        className: A.headerContainer,
+        className: T.headerContainer,
         children: [
             (0, r.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(u.X6q, {
+                    (0, r.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
-                        children: N.NW.string(N.t.EJ4k19)
+                        children: S.NW.string(S.t.EJ4k19)
                     }),
-                    (0, r.jsx)(u.Text, {
-                        className: A.subtitle,
+                    (0, r.jsx)(c.Text, {
+                        className: T.subtitle,
                         variant: 'text-xs/medium',
-                        children: t ? N.NW.string(N.t.MnUZLS) : N.NW.string(N.t.frNDKS)
+                        children: t ? S.NW.string(S.t.MnUZLS) : S.NW.string(S.t.frNDKS)
                     })
                 ]
             }),
-            (0, r.jsx)(u.olH, {
-                className: A.closeContainer,
+            (0, r.jsx)(c.olH, {
+                className: T.closeContainer,
                 onClick: n
             })
         ]
     });
 }
-function k(e) {
-    let { isSelected: t, onSelect: n, selectionId: i, tooltipText: o, label: s, className: l, children: c } = e,
-        d = (0, u.xUy)({
+function M(e) {
+    let { isSelected: t, onSelect: n, selectionId: i, tooltipText: o, label: s, className: l, children: u } = e,
+        d = (0, c.xUy)({
             label: s,
             isSelected: t
         });
-    return (0, r.jsx)(u.ua7, {
+    return (0, r.jsx)(c.ua7, {
         text: o,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: a()(l, t && A.wallpaperSelected),
+                className: a()(l, t && T.wallpaperSelected),
                 children: (0, r.jsx)(
-                    u.P3F,
-                    w(R({}, e, d), {
-                        className: A.wallpaperSelectionClickableContainer,
+                    c.P3F,
+                    R(A({}, e, d), {
+                        className: T.wallpaperSelectionClickableContainer,
                         tabIndex: d.tabIndex,
-                        onClick: t ? I.dG4 : () => n(i),
-                        children: c
+                        onClick: t ? y.dG4 : () => n(i),
+                        children: u
                     })
                 )
             })
     });
 }
-function j(e) {
+function k(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: i } = e,
         { id: o, label: a, default: s } = i;
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(M, {
         isSelected: t,
         onSelect: n,
         selectionId: o,
         tooltipText: a,
         label: a,
-        className: A.wallpaper,
+        className: T.wallpaper,
         children: (0, r.jsx)('img', {
-            src: (0, d.I)(s.icon),
+            src: (0, u.I)(s.icon),
             alt: a,
-            width: D,
-            height: D,
+            width: P,
+            height: P,
             draggable: !1,
-            className: A.wallpaperImage
+            className: T.wallpaperImage
+        })
+    });
+}
+function j(e) {
+    let { isSelected: t, onSelect: n } = e;
+    return (0, r.jsx)(M, {
+        isSelected: t,
+        onSelect: n,
+        selectionId: w,
+        tooltipText: 'Remove wallpaper',
+        label: 'Remove Wallpaper',
+        className: T.wallpaperRemoveSelection,
+        children: (0, r.jsx)(c.t6m, {
+            size: 'lg',
+            color: l.Z.colors.BLACK.css
         })
     });
 }
 function U(e) {
-    let { isSelected: t, onSelect: n } = e;
-    return (0, r.jsx)(k, {
-        isSelected: t,
-        onSelect: n,
-        selectionId: L,
-        tooltipText: 'Remove wallpaper',
-        label: 'Remove Wallpaper',
-        className: A.wallpaperRemoveSelection,
-        children: (0, r.jsx)(u.t6m, {
-            size: 'lg',
-            color: c.Z.colors.BLACK.css
-        })
-    });
-}
-function G(e) {
     let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
-    return (0, r.jsxs)(u.Kqy, {
+    return (0, r.jsxs)(c.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
-        className: A.footerContainerStack,
+        className: T.footerContainerStack,
         padding: 16,
         children: [
-            (0, r.jsx)(u.XZJ, {
-                type: u.XZJ.Types.INVERTED,
+            (0, r.jsx)(c.XZJ, {
+                type: c.XZJ.Types.INVERTED,
                 value: i,
                 onChange: (e, t) => o(t),
-                children: N.NW.string(N.t['3nPvdH'])
+                children: S.NW.string(S.t['3nPvdH'])
             }),
-            (0, r.jsxs)(u.Kqy, {
+            (0, r.jsxs)(c.Kqy, {
                 direction: 'horizontal',
                 justify: 'end',
                 gap: 0,
                 children: [
-                    (0, r.jsx)(u.zxk, {
-                        look: u.zxk.Looks.LINK,
-                        size: u.zxk.Sizes.MEDIUM,
-                        color: u.zxk.Colors.PRIMARY,
+                    (0, r.jsx)(c.zxk, {
+                        look: c.zxk.Looks.LINK,
+                        size: c.zxk.Sizes.MEDIUM,
+                        color: c.zxk.Colors.PRIMARY,
                         onClick: a,
                         disabled: n,
-                        children: N.NW.string(N.t['ETE/oK'])
+                        children: S.NW.string(S.t['ETE/oK'])
                     }),
-                    (0, r.jsx)(u.zxk, {
+                    (0, r.jsx)(c.zxk, {
                         onClick: s,
                         disabled: !t,
                         submitting: n,
-                        children: N.NW.string(N.t['1Qm829'])
+                        children: S.NW.string(S.t['1Qm829'])
                     })
                 ]
             })
         ]
     });
 }
-function B() {
-    return (0, r.jsxs)(u.Kqy, {
+function G() {
+    return (0, r.jsxs)(c.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
-        className: A.footerContainerStack,
+        className: T.footerContainerStack,
         padding: 16,
         children: [
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                className: A.nonTier2FooterText,
-                children: N.NW.format(N.t['0Tapv7'], {
+                className: T.nonTier2FooterText,
+                children: S.NW.format(S.t['0Tapv7'], {
                     onClickNitro: () => {
-                        (0, h.uL)(I.Z5c.NITRO_HOME);
+                        (0, _.uL)(y.Z5c.NITRO_HOME);
                     }
                 })
             }),
-            (0, r.jsx)(p.Z, {
-                className: A.getNitroButton,
-                buttonTextClassName: A.getNitroButtonText,
-                subscribeButtonText: N.NW.string(N.t.JST6jo),
-                subscriptionTier: T.Si.TIER_2,
+            (0, r.jsx)(f.Z, {
+                className: T.getNitroButton,
+                buttonTextClassName: T.getNitroButtonText,
+                subscribeButtonText: S.NW.string(S.t.JST6jo),
+                subscriptionTier: I.Si.TIER_2,
                 showGradient: !0,
-                size: u.zxk.Sizes.MEDIUM
+                size: c.zxk.Sizes.MEDIUM
             })
         ]
     });
 }
-let F = function (e) {
-    let { className: t, position: n = I.VD2.BOTTOM_RIGHT } = e,
-        { activePickerChannelId: o, closePicker: c, setPreviewWallpaperId: d } = (0, y.B)(),
-        p = (0, O.Z)(o),
-        h = (0, _.m)(T.p9.TIER_2),
-        [N, C] = i.useState(!1),
-        R = (0, E.e)(N ? E.x.BLURRED : E.x.DEFAULT);
-    (0, b.W)();
-    let P = (0, s.e7)([g.Z], () => g.Z.getWallpaperById(null == p ? void 0 : p.wallpaperId));
+let B = function (e) {
+    let { className: t, position: n = y.VD2.BOTTOM_RIGHT, config: o } = e,
+        { activePickerChannelId: l, closePicker: u, setPreviewWallpaperId: f } = (0, b.B)(),
+        _ = (0, v.Z)(l),
+        S = (0, d.m)(I.p9.TIER_2),
+        [N, A] = i.useState(!1),
+        C = (0, m.e)(N ? m.x.BLURRED : m.x.DEFAULT);
+    (0, g.W)();
+    let R = (0, s.e7)([h.Z], () => h.Z.isFetchingWallpapers),
+        P = (0, s.e7)([h.Z], () => h.Z.getWallpaperById(null == _ ? void 0 : _.wallpaperId));
     i.useEffect(() => {
-        null != P && C(P.isBlurred);
+        null != P && A(P.isBlurred);
     }, [P]);
     let w = i.useCallback(() => {
-            c();
-        }, [c]),
-        { isUpdating: D, updateChatWallpaper: L } = (0, v.x)(w),
-        [k, F] = (0, f.US)(R.length > 0 ? [l.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
-        V = k === l.z.CHAT_WALLPAPERS_PICKER_COACHMARK,
-        Z = () => {
-            c(), V && F(S.L.USER_DISMISS);
+            u();
+        }, [u]),
+        { isUpdating: D, updateChatWallpaper: M } = (0, E.x)(w),
+        B = () => {
+            u(), (null == o ? void 0 : o.markDismissed) != null && o.markDismissed(O.L.USER_DISMISS);
         },
-        H = i.useCallback(() => {
-            null != o && null != p && void 0 !== p.wallpaperId && L(o, p.wallpaperId);
-        }, [o, p, L]);
-    return 0 === R.length || null == o
-        ? null
-        : (0, r.jsx)(m.Z, {
-              className: a()(A.draggableContainer, t),
-              defaultPosition: n,
-              children: (0, r.jsxs)('div', {
-                  className: A.container,
+        F = i.useCallback(() => {
+            null != l && null != _ && void 0 !== _.wallpaperId && M(l, _.wallpaperId);
+        }, [l, _, M]);
+    if (0 === C.length || (null == l && (null == o ? void 0 : o.pickerType) !== 1)) return null;
+    let V = null;
+    return (
+        (V = R
+            ? (0, r.jsx)('div', {
+                  className: T.loadingContainer,
+                  children: (0, r.jsx)(c.$jN, {})
+              })
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      V
-                          ? (0, r.jsx)(x, {
-                                handleClose: Z,
-                                isPremiumTier2Subscriber: h
-                            })
-                          : (0, r.jsx)(M, {
-                                handleClose: Z,
-                                isPremiumTier2Subscriber: h
-                            }),
-                      (0, r.jsx)('div', { className: A.divider }),
-                      (0, r.jsxs)(u.Ttm, {
-                          className: A.wallpapersContainer,
+                      (0, r.jsxs)(c.Ttm, {
+                          className: T.wallpapersContainer,
                           children: [
-                              (0, r.jsx)(U, {
-                                  isSelected: null == p || null === p.wallpaperId,
-                                  onSelect: () => d(null)
+                              (0, r.jsx)(j, {
+                                  isSelected: null == _ || null === _.wallpaperId,
+                                  onSelect: () => f(null)
                               }),
-                              R.map((e) =>
+                              C.map((e) =>
                                   (0, r.jsx)(
-                                      j,
+                                      k,
                                       {
-                                          isSelected: (null == p ? void 0 : p.wallpaperId) === e.id,
-                                          onSelect: () => d(e.id),
+                                          isSelected: (null == _ ? void 0 : _.wallpaperId) === e.id,
+                                          onSelect: () => f(e.id),
                                           chatWallpaperMetadata: e
                                       },
                                       e.id
@@ -322,17 +318,37 @@ let F = function (e) {
                               )
                           ]
                       }),
-                      h
-                          ? (0, r.jsx)(G, {
-                                canApply: (null == p ? void 0 : p.wallpaperId) != null,
+                      S
+                          ? (0, r.jsx)(U, {
+                                canApply: (null == _ ? void 0 : _.wallpaperId) !== void 0,
                                 isUpdating: D,
                                 isBlurEnabled: N,
-                                onBlurEnabledChange: C,
-                                onClose: Z,
-                                onApply: H
+                                onBlurEnabledChange: A,
+                                onClose: B,
+                                onApply: F
                             })
-                          : (0, r.jsx)(B, {})
+                          : (0, r.jsx)(G, {})
                   ]
-              })
-          });
+              })),
+        (0, r.jsx)(p.Z, {
+            className: a()(T.draggableContainer, t),
+            defaultPosition: n,
+            children: (0, r.jsxs)('div', {
+                className: T.container,
+                children: [
+                    (null == o ? void 0 : o.pickerType) === 1
+                        ? (0, r.jsx)(L, {
+                              handleClose: B,
+                              isPremiumTier2Subscriber: S
+                          })
+                        : (0, r.jsx)(x, {
+                              handleClose: B,
+                              isPremiumTier2Subscriber: S
+                          }),
+                    (0, r.jsx)('div', { className: T.divider }),
+                    V
+                ]
+            })
+        })
+    );
 };
