@@ -208,7 +208,7 @@ function Q(e) {
         f = (0, y.r)({ location: 'ClaimedModalContent' }).enabled,
         { fractionalState: _ } = (0, m.Z)(),
         p = _ === U.a$.FP_ONLY,
-        g = (0, R.Qy)(t.config, p),
+        g = (0, R.Qy)(t.config),
         E = f && d && !p;
     return (0, r.jsxs)('div', {
         className: B.claimedRootContainer,
@@ -271,7 +271,11 @@ function Q(e) {
                         E &&
                             (0, r.jsx)(O.p, {
                                 className: B.upsell,
-                                upsellText: G.NW.format(G.t.VHXn7O, { onNitroClick: Y }),
+                                upsellText: G.NW.format(G.t.VHXn7O, {
+                                    onNitroClick: () => {
+                                        Y(), s();
+                                    }
+                                }),
                                 buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL }
                             })
                     ]
