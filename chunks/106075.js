@@ -1,128 +1,166 @@
-n.d(t, { Z: () => I }), n(566702);
+n.d(t, { Z: () => S }), n(566702);
 var r = n(200651),
     i = n(192379),
     l = n(481060),
     o = n(979233),
     a = n(88693),
     s = n(611928),
-    c = n(922122),
-    u = n(680180),
-    d = n(164991),
-    p = n(444324),
-    h = n(726115),
-    f = n(859921),
-    g = n(750910),
-    m = n(28494),
-    b = n(29086),
-    _ = n(590771),
-    E = n(273596),
-    O = n(128449),
-    N = n(49898),
-    v = n(388032),
-    y = n(881229);
-function I() {
-    let e = i.useRef((0, h.PM)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: I } = (0, o.M)(),
-        { tabs: C, selectedTab: S, setSelectedTab: T } = (0, b.Y)(),
-        P = (0, h.lg)(S),
-        j = !O.MU.has(S),
-        { searchQuery: A, onSearchTextChange: Z, onClearSearch: x, onSearchSubmit: L, isSearchVisible: w } = (0, m.H)({ loadId: e.current }),
-        R = f.Z.useField('searchBarState'),
+    c = n(763433),
+    u = n(922122),
+    d = n(680180),
+    p = n(822857),
+    h = n(164991),
+    f = n(444324),
+    g = n(726115),
+    m = n(859921),
+    b = n(750910),
+    _ = n(28494),
+    E = n(29086),
+    O = n(590771),
+    N = n(273596),
+    v = n(128449),
+    y = n(49898),
+    I = n(388032),
+    C = n(800925);
+function S() {
+    let e = i.useRef((0, g.PM)()),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, o.M)(),
+        { tabs: T, selectedTab: P, setSelectedTab: j } = (0, E.Y)(),
+        A = (0, g.lg)(P),
+        Z = !v.MU.has(P),
+        { searchQuery: x, onSearchTextChange: w, onClearSearch: L, onSearchSubmit: R, isSearchVisible: D } = (0, _.H)({ loadId: e.current }),
+        { enabled: k } = (0, p.W)({ location: 'global_discovery_header_bar' }),
+        M = m.Z.useField('searchBarState'),
         {
-            onTabsAvailableWidthChange: D,
-            onCollapsedSearchBarClick: k,
-            onSearchBarBlur: M,
-            tabsClassName: U
+            onTabsAvailableWidthChange: U,
+            onCollapsedSearchBarClick: G,
+            onSearchBarBlur: W,
+            tabsClassName: V
         } = (0, a.U)({
-            isSearchBarVisible: j,
-            isSearchBarEmpty: '' === A.trim(),
-            searchBarState: R,
-            setSearchBarState: (e) => f.Z.setState({ searchBarState: e })
+            isSearchBarVisible: Z,
+            isSearchBarEmpty: '' === x.trim(),
+            searchBarState: M,
+            setSearchBarState: (e) => m.Z.setState({ searchBarState: e })
         }),
-        G = d.Z.useField('fetchedQuery'),
-        W = i.useCallback(
+        B = h.Z.useField('fetchedQuery'),
+        H = i.useCallback(
             (e) => {
-                T(e), w && x();
+                j(e), D && L();
             },
-            [w, x, T]
+            [D, L, j]
         ),
-        V = i.useMemo(
+        F = i.useMemo(
             () =>
-                w
-                    ? C.filter((e) => {
+                D
+                    ? T.filter((e) => {
                           let { id: t } = e;
-                          return !O.MU.has(t);
+                          return !v.MU.has(t);
                       })
-                    : C,
-            [C, w]
+                    : T,
+            [T, D]
         ),
-        B = i.useRef(new p.Z(P)),
-        { onGuildCardSeen: H, onGuildCardClick: F } = (0, g.H)({
-            guildDiscoveryCardSeenManager: B.current,
+        z = i.useRef(new f.Z(A)),
+        { onGuildCardSeen: Y, onGuildCardClick: K } = (0, b.H)({
+            guildDiscoveryCardSeenManager: z.current,
             loadId: e.current
         });
     return (
         i.useEffect(() => {
-            B.current.flushSeenGuilds(e.current);
-        }, [P]),
+            z.current.flushSeenGuilds(e.current);
+        }, [A]),
         i.useEffect(() => {
-            I();
-        }, [S, I]),
+            S();
+        }, [P, S]),
         i.useEffect(() => {
-            w || d.Z.setState({ scrollPosition: null });
-        }, [w]),
+            D || h.Z.setState({ scrollPosition: null });
+        }, [D]),
         (0, r.jsxs)('div', {
-            className: y.container,
+            className: C.container,
             children: [
-                (0, r.jsxs)(s.ZP, {
-                    variant: w ? s._6.RELATIVE : s._6.OVERLAY,
-                    children: [
-                        !w && (0, r.jsx)(s.z6, { scrollPosition: n }),
-                        w
-                            ? (0, r.jsx)(s.Cm, {
-                                  icon: l.j9r,
-                                  onClick: x
-                              })
-                            : (0, r.jsx)(s.aV, { icon: l.QTo }),
-                        !w &&
-                            (0, r.jsx)(c.Z, {
-                                className: U,
-                                tabs: V,
-                                selectedTab: w ? null : S,
-                                onTabSelect: W,
-                                onAvailableWidthChange: D
-                            }),
-                        w &&
-                            (0, r.jsx)(l.X6q, {
-                                variant: 'heading-lg/semibold',
-                                color: 'header-primary',
-                                className: y.searchResultsHeader,
-                                children: v.NW.format(v.t.zHdzqa, { query: G })
-                            }),
-                        j &&
-                            (0, r.jsx)(u.Z, {
-                                query: A,
-                                placeholder: v.NW.string(v.t['5h0QOD']),
-                                onTextChange: Z,
-                                onClear: x,
-                                onSubmit: L,
-                                onCollapsedClick: k,
-                                state: w ? N.GlobalDiscoverySearchBarState.DEFAULT : R,
-                                onBlur: M
-                            })
-                    ]
-                }),
-                w
-                    ? (0, r.jsx)(E.Z, {
-                          loadId: e.current,
-                          onGuildCardClick: F,
-                          onGuildCardSeen: H
+                k
+                    ? (0, r.jsxs)(c.a, {
+                          selectedTabId: P,
+                          handleTransition: j,
+                          tabs: T,
+                          state: D ? c.r.SEARCH : c.r.DEFAULT,
+                          icon: l.QTo,
+                          onAvailableWidthChange: U,
+                          children: [
+                              !D && (0, r.jsx)(s.z6, { scrollPosition: n }),
+                              D &&
+                                  (0, r.jsx)(s.Cm, {
+                                      icon: l.j9r,
+                                      onClick: L
+                                  }),
+                              D &&
+                                  (0, r.jsx)(l.X6q, {
+                                      variant: 'heading-lg/semibold',
+                                      color: 'header-primary',
+                                      className: C.searchResultsHeader,
+                                      children: I.NW.format(I.t.zHdzqa, { query: B })
+                                  }),
+                              Z &&
+                                  (0, r.jsx)(d.Z, {
+                                      query: x,
+                                      placeholder: I.NW.string(I.t['5h0QOD']),
+                                      onTextChange: w,
+                                      onClear: L,
+                                      onSubmit: R,
+                                      onCollapsedClick: G,
+                                      state: D ? y.GlobalDiscoverySearchBarState.DEFAULT : M,
+                                      onBlur: W
+                                  })
+                          ]
                       })
-                    : (0, r.jsx)(_.Z, {
-                          selectedTab: S,
+                    : (0, r.jsxs)(s.ZP, {
+                          variant: D ? s._6.RELATIVE : s._6.OVERLAY,
+                          children: [
+                              !D && (0, r.jsx)(s.z6, { scrollPosition: n }),
+                              D
+                                  ? (0, r.jsx)(s.Cm, {
+                                        icon: l.j9r,
+                                        onClick: L
+                                    })
+                                  : (0, r.jsx)(s.aV, { icon: l.QTo }),
+                              !D &&
+                                  (0, r.jsx)(u.Z, {
+                                      className: V,
+                                      tabs: F,
+                                      selectedTab: D ? null : P,
+                                      onTabSelect: H,
+                                      onAvailableWidthChange: U
+                                  }),
+                              D &&
+                                  (0, r.jsx)(l.X6q, {
+                                      variant: 'heading-lg/semibold',
+                                      color: 'header-primary',
+                                      className: C.searchResultsHeader,
+                                      children: I.NW.format(I.t.zHdzqa, { query: B })
+                                  }),
+                              Z &&
+                                  (0, r.jsx)(d.Z, {
+                                      query: x,
+                                      placeholder: I.NW.string(I.t['5h0QOD']),
+                                      onTextChange: w,
+                                      onClear: L,
+                                      onSubmit: R,
+                                      onCollapsedClick: G,
+                                      state: D ? y.GlobalDiscoverySearchBarState.DEFAULT : M,
+                                      onBlur: W
+                                  })
+                          ]
+                      }),
+                D
+                    ? (0, r.jsx)(N.Z, {
+                          loadId: e.current,
+                          onGuildCardClick: K,
+                          onGuildCardSeen: Y
+                      })
+                    : (0, r.jsx)(O.Z, {
+                          selectedTab: P,
                           onScroll: t,
-                          onGuildCardClick: F,
-                          onGuildCardSeen: H
+                          onGuildCardClick: K,
+                          onGuildCardSeen: Y
                       })
             ]
         })

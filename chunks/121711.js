@@ -14,7 +14,7 @@ var r = n(200651),
     g = n(374939),
     m = n(233374),
     b = n(611928),
-    _ = n(922122),
+    _ = n(763433),
     E = n(283293),
     O = n(822857),
     N = n(775451),
@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(452081),
     Z = n(46140),
     x = n(642145),
-    L = n(981631),
-    w = n(215023),
+    w = n(981631),
+    L = n(215023),
     R = n(388032),
     D = n(642601);
 let k = function () {
@@ -62,80 +62,92 @@ let k = function () {
         F = null !== H && !(0, S.zi)(H),
         z = i.useCallback(() => {
             if (F) {
-                window.open(v.Z.getArticleURL(L.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+                window.open(v.Z.getArticleURL(w.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
                 return;
             }
-            window.open(v.Z.getArticleURL(L.BhN.QUESTS_LEARN_MORE));
+            window.open(v.Z.getArticleURL(w.BhN.QUESTS_LEARN_MORE));
         }, [F]);
     (0, d.Tt)({ location: R.NW.string(R.t.JALI2N) });
     let Y = F ? R.NW.format(R.t.BCBIlp, {}) : R.NW.format(R.t.lmMBf3, {}),
         K = F ? R.NW.format(R.t.U9FY0N, {}) : R.NW.string(R.t.oWCrBg);
-    return (0, r.jsxs)('div', {
+    return (0, r.jsx)('div', {
         className: D.container,
-        children: [
-            (0, r.jsxs)(b.ZP, {
-                variant: b._6.OVERLAY,
-                children: [
-                    (0, r.jsx)('div', { className: D.dragRegion }),
-                    (0, r.jsx)(b.z6, { scrollPosition: U }),
-                    (0, r.jsx)(b.aV, { icon: a.qDn }),
-                    B &&
-                        (0, r.jsxs)('div', {
-                            className: D.tabsExperimental,
-                            children: [
-                                (0, r.jsx)(_.Z, {
-                                    tabs: k,
-                                    selectedTab: t,
-                                    onTabSelect: n
-                                }),
-                                (0, r.jsx)(N.V9, {
-                                    cardAlignment: N.ek.END,
-                                    ctaText: R.NW.string(R.t['J+vlIS']),
-                                    ctaOnClick: () => {
-                                        (0, u.mK)({
-                                            openInLayer: !1,
-                                            tab: w.AW.ORBS,
-                                            analyticsLocations: [],
-                                            analyticsSource: s.Z.QUEST_HOME_PAGE
-                                        });
-                                    }
-                                })
-                            ]
-                        })
-                ]
-            }),
-            (0, r.jsxs)(E.Z, {
-                onScroll: M,
-                children: [
-                    (0, r.jsx)(f.Z, {
-                        title: Y,
-                        description: K,
-                        button: (0, r.jsx)(h.u, {
-                            text: R.NW.string(R.t.hvVgAQ),
-                            onClick: z
-                        }),
-                        className: D.bannerContainer,
-                        children: (0, r.jsx)('div', {
-                            className: D.bannerImage,
-                            children: (0, r.jsx)('div', { className: D.bannerGradient })
-                        })
-                    }),
-                    (0, r.jsxs)(g.Z, {
-                        children: [
-                            !B &&
-                                (0, r.jsx)('div', {
-                                    className: D.tabs,
-                                    children: (0, r.jsx)(m.Z, {
-                                        tabs: k,
-                                        selectedTab: t,
-                                        onTabSelect: n
-                                    })
-                                }),
-                            t === y.e5.CLAIMED ? (0, r.jsx)(W, { onSelectTab: n }) : (0, r.jsx)(P.Z, {})
-                        ]
-                    })
-                ]
-            })
-        ]
+        children: B
+            ? (0, r.jsxs)(E.Z, {
+                  onScroll: M,
+                  children: [
+                      (0, r.jsx)(_.a, {
+                          selectedTabId: t,
+                          handleTransition: n,
+                          tabs: k,
+                          icon: a.qDn,
+                          children: (0, r.jsx)(N.V9, {
+                              cardAlignment: N.ek.END,
+                              ctaText: R.NW.string(R.t['J+vlIS']),
+                              ctaOnClick: () => {
+                                  (0, u.mK)({
+                                      openInLayer: !1,
+                                      tab: L.AW.ORBS,
+                                      analyticsLocations: [],
+                                      analyticsSource: s.Z.QUEST_HOME_PAGE
+                                  });
+                              }
+                          })
+                      }),
+                      (0, r.jsx)(f.Z, {
+                          title: Y,
+                          description: K,
+                          button: (0, r.jsx)(h.u, {
+                              text: R.NW.string(R.t.hvVgAQ),
+                              onClick: z
+                          }),
+                          className: D.bannerContainer,
+                          children: (0, r.jsx)('div', {
+                              className: D.bannerImage,
+                              children: (0, r.jsx)('div', { className: D.bannerGradient })
+                          })
+                      }),
+                      (0, r.jsx)(g.Z, { children: t === y.e5.CLAIMED ? (0, r.jsx)(W, { onSelectTab: n }) : (0, r.jsx)(P.Z, {}) })
+                  ]
+              })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsxs)(b.ZP, {
+                          variant: b._6.OVERLAY,
+                          children: [(0, r.jsx)('div', { className: D.dragRegion }), (0, r.jsx)(b.z6, { scrollPosition: U }), (0, r.jsx)(b.aV, { icon: a.qDn })]
+                      }),
+                      (0, r.jsxs)(E.Z, {
+                          onScroll: M,
+                          children: [
+                              (0, r.jsx)(f.Z, {
+                                  title: Y,
+                                  description: K,
+                                  button: (0, r.jsx)(h.u, {
+                                      text: R.NW.string(R.t.hvVgAQ),
+                                      onClick: z
+                                  }),
+                                  className: D.bannerContainer,
+                                  children: (0, r.jsx)('div', {
+                                      className: D.bannerImage,
+                                      children: (0, r.jsx)('div', { className: D.bannerGradient })
+                                  })
+                              }),
+                              (0, r.jsxs)(g.Z, {
+                                  children: [
+                                      (0, r.jsx)('div', {
+                                          className: D.tabs,
+                                          children: (0, r.jsx)(m.Z, {
+                                              tabs: k,
+                                              selectedTab: t,
+                                              onTabSelect: n
+                                          })
+                                      }),
+                                      t === y.e5.CLAIMED ? (0, r.jsx)(W, { onSelectTab: n }) : (0, r.jsx)(P.Z, {})
+                                  ]
+                              })
+                          ]
+                      })
+                  ]
+              })
     });
 };
