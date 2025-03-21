@@ -19,24 +19,26 @@ var r = n(200651),
 let _ = (e) => {
     let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: _ } = e,
         [O, j] = (0, i.useState)(!1),
-        C = (function (e) {
-            let { activityToggleDefaultState: t, isForceShowSharingPopout: n } = e,
-                { rtcPopoutEnabled: r } = (0, g.SN)('SharingPrivacyPopout'),
-                { rtcPopoutEnabled: i } = (0, g.m_)('SharingPrivacyPopout'),
-                l = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
-                a = d.G6.useSetting(),
-                s = (0, o.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-                c = (0, o.e7)([h.Z], () => h.Z.getStatus()),
-                f = !i || c !== b.Skl.INVISIBLE;
-            return (r || i) && (l || (!l && n)) && !s && !(a && !t && f);
-        })({
-            activityToggleDefaultState: O,
-            isForceShowSharingPopout: n
-        });
+        x = (function (e) {
+            let { isForceShowSharingPopout: t } = e,
+                { rtcPopoutEnabled: n } = (0, g.SN)('SharingPrivacyPopout'),
+                { rtcPopoutEnabled: r } = (0, g.m_)('SharingPrivacyPopout'),
+                i = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
+                l = d.G6.useSetting(),
+                a = (0, o.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
+                s = (0, o.e7)([h.Z], () => h.Z.getStatus()),
+                c = (i || (!i && t)) && !a;
+            if (c && r) {
+                if (!l && s === b.Skl.INVISIBLE) return t ? m.N.ActivityAndStatus : m.N.ActivityAndStatusNux;
+                if (!l) return t ? m.N.NewActivity : m.N.NewActivityNux;
+                if (s === b.Skl.INVISIBLE) return t ? m.N.Status : null;
+            }
+            return c && n && !l ? (t ? m.N.Activity : m.N.ActivityNux) : null;
+        })({ isForceShowSharingPopout: n });
     return ((0, i.useEffect)(() => {
         n && f.default.track(b.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    C)
+    null != x || O)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [l.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
@@ -53,15 +55,11 @@ let _ = (e) => {
                           onRequestClose: e,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;
-                              return n
-                                  ? (0, r.jsx)(m.zI, {
-                                        closePopout: t,
-                                        setActivityToggleDefaultState: j
-                                    })
-                                  : (0, r.jsx)(m.zu, {
-                                        closePopout: t,
-                                        setActivityToggleDefaultState: j
-                                    });
+                              return (0, r.jsx)(m.I, {
+                                  closePopout: t,
+                                  onOpen: () => j(!0),
+                                  popoutState: x
+                              });
                           },
                           children: () =>
                               (0, r.jsx)(a.P3F, {
