@@ -1,4 +1,7 @@
-n.d(t, { SN: () => l });
+n.d(t, {
+    SN: () => o,
+    m_: () => a
+});
 var r = n(818083);
 let i = (0, r.B)({
     kind: 'user',
@@ -13,10 +16,10 @@ let i = (0, r.B)({
         }
     ]
 });
-function l(e) {
+function o(e) {
     return i.useExperiment({ location: e }, { autoTrackExposure: !0 });
 }
-(0, r.B)({
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-03_activity_sharing_popout_with_invisibility',
     label: 'Activity Sharing Popout with Invisibility',
@@ -29,3 +32,6 @@ function l(e) {
         }
     ]
 });
+function a(e) {
+    return l.useExperiment({ location: e }, { autoTrackExposure: !0 });
+}

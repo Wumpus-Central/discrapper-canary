@@ -1,30 +1,36 @@
-n.d(t, { V: () => c });
+n.d(t, { V: () => d });
 var r = n(200651),
-    i = n(481060),
+    i = n(442837),
+    o = n(481060),
     l = n(695346),
-    o = n(316496),
-    a = n(388032),
-    s = n(675277);
-let c = (e) => {
-    let { onClick: t } = e,
-        { rtcPopoutEnabled: n } = (0, o.S)('not sharing link'),
-        c = l.G6.useSetting();
-    return !n || c
+    a = n(885110),
+    s = n(316496),
+    c = n(388032),
+    u = n(930565);
+let d = (e) => {
+    let { onClick: t } = e;
+    return !(function () {
+        let { rtcPopoutEnabled: e } = (0, s.SN)('not sharing link'),
+            { rtcPopoutEnabled: t } = (0, s.m_)('not sharing link'),
+            n = l.G6.useSetting(),
+            r = (0, i.e7)([a.Z], () => a.Z.getStatus());
+        return t ? !n || r === o.Skl.INVISIBLE : !!e && !n;
+    })()
         ? null
-        : (0, r.jsx)(i.P3F, {
+        : (0, r.jsx)(o.P3F, {
               onClick: t,
-              className: s.container,
-              children: (0, r.jsxs)(i.Text, {
+              className: u.container,
+              children: (0, r.jsxs)(o.Text, {
                   variant: 'text-xs/medium',
-                  className: s.text,
+                  className: u.text,
                   color: 'header-secondary',
                   children: [
-                      (0, r.jsx)(i.kZF, {
+                      (0, r.jsx)(o.kZF, {
                           size: 'xxs',
                           color: 'currentColor',
-                          className: s.iconEye
+                          className: u.iconEye
                       }),
-                      a.NW.string(a.t.jfrLLS)
+                      c.NW.string(c.t.jfrLLS)
                   ]
               })
           });
