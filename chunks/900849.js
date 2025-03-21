@@ -1,14 +1,14 @@
 n.d(t, {
-    Az: () => v,
+    Az: () => b,
     Eg: () => A,
-    IZ: () => b,
+    IZ: () => v,
     PP: () => E,
     Ub: () => g,
     c6: () => T,
-    m9: () => S,
+    m9: () => I,
     mT: () => N,
     qn: () => O,
-    rC: () => I,
+    rC: () => S,
     tI: () => y
 }),
     n(301563),
@@ -24,7 +24,7 @@ var r = n(664751),
     u = n(430824),
     d = n(626135),
     f = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -78,25 +78,24 @@ function m(e, t) {
 }
 async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: r, onSuccess: i, joinSource: c, loadId: d, setsHistorySnapshot: f = !0, shouldNavigate: p = !0 } = n,
-        h = (0, s.s1)();
-    f && a.Z.setHistorySnapshot(_({}, h));
-    let g = u.Z.getGuild(e),
-        E = { state: { analyticsSource: t } };
-    null != g && null != g.joinedAt
-        ? p && (0, l.X)(e, E)
+        { channelId: r, onSuccess: i, joinSource: a, loadId: c, shouldNavigate: d = !0 } = n,
+        f = (0, s.s1)(),
+        _ = u.Z.getGuild(e),
+        h = { state: { analyticsSource: t } };
+    null != _ && null != _.joinedAt
+        ? d && (0, l.X)(e, h)
         : (await o.Z.joinGuild(e, {
               lurker: !0,
-              source: c,
-              loadId: d,
+              source: a,
+              loadId: c,
               lurkLocation: null == t ? void 0 : t.page
           }),
-          p &&
+          d &&
               (await o.Z.transitionToGuildSync(
                   e,
-                  m(_({}, E), {
+                  m(p({}, h), {
                       welcomeModalChannelId: r,
-                      search: h.location.search
+                      search: f.location.search
                   }),
                   r
               ))),
@@ -123,7 +122,7 @@ function E(e) {
         keywords: e.keywords
     };
 }
-function v(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     d.default.track(f.rMx.GUILD_DISCOVERY_EXITED, {
         load_id: e,
@@ -131,7 +130,7 @@ function v(e, t) {
         recommendations_source: n
     });
 }
-function b(e) {
+function v(e) {
     d.default.track(f.rMx.SEARCH_CLOSED, { load_id: e });
 }
 function y(e, t) {
@@ -150,7 +149,7 @@ function O(e) {
         offset: n
     });
 }
-function S(e) {
+function I(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
     d.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
@@ -160,7 +159,7 @@ function S(e) {
         is_request_retry: i
     });
 }
-function I(e) {
+function S(e) {
     let { categoryId: t } = e;
     d.default.track(f.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
