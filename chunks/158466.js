@@ -220,6 +220,8 @@ function _(e, t, n, i) {
                     packetsLost: Math.max(0, e.packetsLost),
                     fractionLost: 100 * e.fractionLost,
                     audioLevel: a(e.audioLevel),
+                    bitrate: e.mediaBitrate,
+                    bitrateTarget: e.targetMediaBitrate,
                     audioDetected: e.speaking,
                     framesCaptured: e.framesCaptured,
                     framesRendered: e.framesRendered,

@@ -218,15 +218,10 @@ class j extends (r = o.Component) {
     }
     setDomElement() {
         let e;
-        if (null != this.props.text) {
-            if (null != this.props.targetElementRef) {
-                if (null == (e = this.props.targetElementRef.current)) return;
-            } else {
-                var t;
-                if (((e = null === (t = this.siblingDomRef.current) || void 0 === t ? void 0 : t.previousElementSibling), !(0, d.k)(e))) throw Error('Tooltip cannot find DOM node');
-            }
-            (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
-        }
+        if (null != this.props.targetElementRef) {
+            if (null == (e = this.props.targetElementRef.current)) return;
+        } else if (((e = l.findDOMNode(this)), !(0, d.k)(e))) throw Error('Tooltip cannot find DOM node');
+        (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
     }
     componentWillUnmount() {
         this.showTimeout.stop(), (this.domElementRef.current = null);
@@ -247,14 +242,7 @@ class j extends (r = o.Component) {
         return (
             null != e && (a['aria-label'] = e),
             (0, i.jsxs)(o.Fragment, {
-                children: [
-                    t(a),
-                    (0, i.jsx)('span', {
-                        ref: this.siblingDomRef,
-                        style: { display: 'none' }
-                    }),
-                    this.renderTooltip()
-                ]
+                children: [t(a), this.renderTooltip()]
             })
         );
     }
@@ -292,7 +280,7 @@ class j extends (r = o.Component) {
     show() {
         let { delay: e, overflowOnly: t } = this.props;
         if (t) {
-            let e = this.domElementRef.current;
+            let e = l.findDOMNode(this);
             if (null == e || ((0, d.k)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth)) return;
         }
         null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0);
@@ -314,7 +302,6 @@ class j extends (r = o.Component) {
             b(this, 'showTimeout', new f.V7()),
             b(this, 'domElementRef', o.createRef()),
             b(this, 'hasDomElement', !1),
-            b(this, 'siblingDomRef', o.createRef()),
             b(this, 'state', { shouldShowTooltip: !1 }),
             b(this, 'handleMouseEnter', () => {
                 ((u.tq || u.Em) && !0 === this.props.clickableOnMobile) || this.show();
