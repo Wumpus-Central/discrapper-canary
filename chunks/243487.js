@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => F,
+    Z: () => U,
     k: () => G
 }),
     n(47120),
@@ -155,7 +155,8 @@ let G = i.memo(function (e) {
         N = w.slice(h),
         k = P.get(N[0]);
     return x
-        ? (0, r.jsxs)(r.Fragment, {
+        ? (0, r.jsxs)('div', {
+              className: W.voiceUserContainer,
               children: [
                   Z.map((e) => {
                       let i = P.get(e);
@@ -214,7 +215,7 @@ let G = i.memo(function (e) {
                 icon: s.gj8
             });
 });
-function F(e) {
+function U(e) {
     var t;
     let { isSettingsPreview: n } = e,
         o = (0, a.e7)([j.Z, h.Z], () => h.Z.getChannel(j.Z.getVoiceChannelId())),

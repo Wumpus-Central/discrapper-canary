@@ -2,6 +2,7 @@ e.exports = {
     effect: 'effect_adebba',
     username: 'username_adebba',
     streaming: 'streaming_adebba',
+    voiceUserContainer: 'voiceUserContainer_adebba',
     voiceUser: 'voiceUser_adebba',
     flipped: 'flipped_adebba',
     avatar: 'avatar_adebba',
