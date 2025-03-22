@@ -1,15 +1,16 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(692547),
     o = n(481060),
     a = n(201895),
     s = n(933557),
-    l = n(788858),
-    c = n(170187),
-    u = n(388032),
-    d = n(967616);
-function f(e, t, n) {
+    l = n(482798),
+    c = n(788858),
+    u = n(170187),
+    d = n(388032),
+    f = n(389034);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,12 +34,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,63 +51,70 @@ function _(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
-    let { channel: t, textVariant: n, textClassName: f, hideText: _ = !1, hideTooltip: m = !1 } = e,
-        g = (0, o.vjg)(o.Skl.ONLINE),
-        E = (0, s.ZP)(t),
+function g(e) {
+    let { channel: t, textVariant: n, textClassName: _, hideText: h = !1, hideTooltip: g = !1 } = e,
+        E = (0, o.vjg)(o.Skl.ONLINE),
+        b = (0, s.ZP)(t),
         v = t.isDM() || t.isGroupDM(),
-        b = () =>
-            m || v
-                ? (0, r.jsx)(l.Z, {
+        { enabled: y } = (0, l.C)({ location: 'VoiceActivityStatus' }),
+        O = () =>
+            g || v
+                ? (0, r.jsx)(c.Z, {
                       size: 'custom',
-                      color: g,
+                      color: E,
                       channel: t,
-                      className: d.icon
+                      className: f.icon
                   })
                 : (0, r.jsx)(o.ua7, {
-                      text: E,
+                      text: b,
                       'aria-label': (0, a.ZP)({ channel: t }),
                       children: (e) =>
                           (0, r.jsx)(
-                              l.Z,
-                              h(p({}, e), {
+                              c.Z,
+                              m(p({}, e), {
                                   size: 'custom',
                                   color: i.Z.colors.STATUS_POSITIVE,
                                   channel: t,
-                                  className: d.icon
+                                  className: f.icon
                               })
                           )
                   }),
-        y = () =>
-            v
-                ? (0, r.jsx)(c.Z, {
+        I = () =>
+            y
+                ? (0, r.jsx)(u.Z, {
                       variant: n,
-                      className: f,
-                      children: u.NW.string(u.t['9FaEzs'])
+                      className: _,
+                      children: b
                   })
-                : t.isGuildStageVoice()
-                  ? (0, r.jsx)(c.Z, {
+                : v
+                  ? (0, r.jsx)(u.Z, {
                         variant: n,
-                        className: f,
-                        children: u.NW.string(u.t.QygGCA)
+                        className: _,
+                        children: d.NW.string(d.t['9FaEzs'])
                     })
-                  : (0, r.jsx)(c.Z, {
-                        variant: n,
-                        className: f,
-                        children: u.NW.string(u.t.msxteH)
-                    });
+                  : t.isGuildStageVoice()
+                    ? (0, r.jsx)(u.Z, {
+                          variant: n,
+                          className: _,
+                          children: d.NW.string(d.t.QygGCA)
+                      })
+                    : (0, r.jsx)(u.Z, {
+                          variant: n,
+                          className: _,
+                          children: d.NW.string(d.t.msxteH)
+                      });
     return (0, r.jsxs)(r.Fragment, {
-        children: [b(), !_ && y()]
+        children: [O(), !h && I()]
     });
 }
