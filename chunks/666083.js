@@ -1,69 +1,71 @@
-n.d(t, { default: () => O }), n(47120), n(266796);
+n.d(t, { default: () => y }), n(47120), n(266796);
 var r = n(200651),
-    c = n(192379),
-    o = n(119617),
-    s = n(442837),
-    a = n(481060),
+    o = n(192379),
+    c = n(119617),
+    a = n(442837),
+    s = n(481060),
     i = n(607070),
     l = n(530618),
     u = n(372654),
-    f = n(535396),
-    p = n(730621),
-    b = n(388032),
-    d = n(841174),
-    m = n(942570);
-function j(e) {
-    let { powerup: t } = e;
+    f = n(156732),
+    p = n(535396),
+    b = n(367123),
+    d = n(388032),
+    m = n(841174),
+    j = n(942570);
+function O(e) {
+    let { powerup: t } = e,
+        n = (0, f.Z)(t);
     switch (t.type) {
-        case f.U.LEVEL:
+        case p.Us.LEVEL:
             return (0, r.jsx)('img', {
                 alt: '',
-                src: m
+                src: j
             });
-        case f.U.PERK:
+        case p.Us.PERK:
             return (0, r.jsx)('img', {
                 alt: '',
-                src: '',
-                className: d.exampleImage
+                src: n,
+                className: m.exampleImage
             });
     }
 }
-function O(e) {
+function y(e) {
     var t,
         n,
         { powerup: f } = e,
-        m = (function (e, t) {
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                c = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        c = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (c[n] = e[n]);
-                    return c;
+                        o = {},
+                        c = Object.keys(e);
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (c[n] = e[n]);
+                var c = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return c;
+            return o;
         })(e, ['powerup']);
-    let O = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
-        g = c.useRef(null),
-        y = c.useRef(new o.qA()),
-        [x, h] = c.useState(null);
+    let j = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
+        y = o.useRef(null),
+        g = o.useRef(new c.qA()),
+        [x, h] = o.useState(null);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.O_, {
+            (0, r.jsx)(c.O_, {
                 ref: h,
-                className: d.confettiCanvas,
-                environment: y.current
+                className: m.confettiCanvas,
+                environment: g.current
             }),
             (0, r.jsxs)(
-                a.Y0X,
+                s.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,51 +92,51 @@ function O(e) {
                     return e;
                 })(
                     {
-                        className: d.modal,
-                        size: a.CgR.DYNAMIC
+                        className: m.modal,
+                        size: s.CgR.DYNAMIC
                     },
-                    m
+                    p
                 )),
                 (n = n =
                     {
                         children: [
-                            (0, r.jsx)(a.hzk, {
-                                className: d.modalContentContainer,
+                            (0, r.jsx)(s.hzk, {
+                                className: m.modalContentContainer,
                                 scrollbarType: 'none',
                                 children: (0, r.jsxs)('div', {
-                                    className: d.container,
-                                    ref: g,
+                                    className: m.container,
+                                    ref: y,
                                     children: [
-                                        (0, r.jsx)(j, { powerup: f }),
+                                        (0, r.jsx)(O, { powerup: f }),
                                         (0, r.jsxs)('div', {
-                                            className: d.contentContainer,
+                                            className: m.contentContainer,
                                             children: [
-                                                (0, r.jsx)(a.X6q, {
+                                                (0, r.jsx)(s.X6q, {
                                                     variant: 'heading-xl/extrabold',
-                                                    children: b.NW.string(p.Z.lFuOFB)
+                                                    children: d.NW.formatToPlainString(b.Z.lFuOFB, { perkName: f.title })
                                                 }),
-                                                (0, r.jsx)(a.Text, {
-                                                    className: d.description,
+                                                (0, r.jsx)(s.Text, {
+                                                    className: m.description,
                                                     variant: 'text-sm/normal',
-                                                    children: b.NW.string(p.Z.y3wHoq)
+                                                    children: d.NW.formatToPlainString(b.Z.y3wHoq, { perkName: f.title })
                                                 }),
-                                                (0, r.jsx)(a.zxk, {
-                                                    className: d.button,
-                                                    onClick: m.onClose,
-                                                    children: b.NW.string(p.Z['g5Ds6+'])
+                                                (0, r.jsx)(s.zxk, {
+                                                    className: m.button,
+                                                    onClick: p.onClose,
+                                                    children: d.NW.string(b.Z['g5Ds6+'])
                                                 })
                                             ]
                                         })
                                     ]
                                 })
                             }),
-                            (0, r.jsx)(a.olH, {
-                                className: d.close,
-                                onClick: m.onClose
+                            (0, r.jsx)(s.olH, {
+                                className: m.close,
+                                onClick: p.onClose
                             }),
-                            !O &&
+                            !j &&
                                 (0, r.jsx)(l.Z, {
-                                    confettiTarget: g.current,
+                                    confettiTarget: y.current,
                                     confettiCanvas: x,
                                     sprites: (0, u.vK)()
                                 })

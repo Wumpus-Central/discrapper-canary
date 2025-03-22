@@ -17,7 +17,6 @@ function o(e) {
         streaming: !1,
         status: s.Sk.ONLINE,
         currentUser: n,
-        activityStatusCleanupEnabled: !1,
         activities: [],
         applicationStream: void 0,
         userTag: '',

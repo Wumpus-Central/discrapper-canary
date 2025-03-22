@@ -223,6 +223,7 @@ n.d(t, {
     V9: () => th.V9,
     VL1: () => th.VL1,
     VWR: () => th.VWR,
+    VXO: () => el.VX,
     VZI: () => th.VZI,
     V_R: () => th.V_R,
     Vbw: () => w.Vb,

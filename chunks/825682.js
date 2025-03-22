@@ -2,12 +2,12 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(468363),
-    l = n(297369),
+    l = n(326255),
     o = n(956221),
-    a = n(771173),
+    a = n(747017),
     s = n(51144),
     c = n(388032),
-    u = n(321036);
+    u = n(64064);
 let d = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: p, user: h, userIgnored: f } = e,
         { voiceActivityStatusEnabled: g } = (0, i.U)({ location: 'StatusText' }),
@@ -28,7 +28,6 @@ let d = function (e) {
                 voiceChannel: b
             })
           ? (0, r.jsx)(a.Z, {
-                location: 'StatusText',
                 textClassName: u.text,
                 emojiClassName: u.customStatusEmoji,
                 activities: n,

@@ -244,42 +244,45 @@ let L = (e) => {
         let { handleClose: t } = e,
             { selectedSkuId: r, purchaseState: l, setPurchaseState: a } = (0, j.JL)(),
             { product: c } = (0, d.T)(r),
-            u = (0, I.c)(),
-            m = (0, i.e7)([v.default], () => N.ZP.canUseCollectibles(v.default.getCurrentUser())),
-            { skuId: b, onRedeemVirtualCurrency: x, isRedeeming: y, orbRedemptionError: f } = (0, _.C)();
+            { skuId: u, onRedeemVirtualCurrency: m, isRedeeming: b, orbRedemptionError: x } = (0, _.C)(),
+            y = (0, I.c)(),
+            f = (0, s.useRef)(y),
+            g = (0, i.e7)([v.default], () => N.ZP.canUseCollectibles(v.default.getCurrentUser()));
         (0, s.useEffect)(() => {
             l === h.A.COMPLETED && t();
         }, [l, t]);
-        let g = (0, s.useCallback)(() => {
-            x(() => {
-                a(h.A.COMPLETED);
-            });
-        }, [x, a]);
+        let P = (0, s.useCallback)(() => {
+            (f.current = y),
+                m(() => {
+                    a(h.A.COMPLETED);
+                });
+        }, [m, a, y]);
         if (null == r || null == c) return (0, n.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES });
-        let P = (0, p.T4)({
+        let k = b ? f.current : y,
+            S = (0, p.T4)({
                 product: c,
-                isPremiumUser: m
+                isPremiumUser: g
             }),
-            k = null !== P ? P.amount : null;
+            E = null !== S ? S.amount : null;
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(C.Z, {}),
                 (0, n.jsxs)(O.C3, {
                     children: [
-                        (0, n.jsx)(M, { error: f }),
+                        (0, n.jsx)(M, { error: x }),
                         (0, n.jsx)(z, {
-                            skuId: b,
-                            orbPriceAmount: k,
-                            orbBalance: u
+                            skuId: u,
+                            orbPriceAmount: E,
+                            orbBalance: k
                         })
                     ]
                 }),
                 (0, n.jsx)(O.O3, {
                     children: (0, n.jsx)(G, {
-                        orbPriceAmount: k,
-                        orbBalance: u,
-                        isSubmitting: y,
-                        onClickCheckout: g
+                        orbPriceAmount: E,
+                        orbBalance: k,
+                        isSubmitting: b,
+                        onClickCheckout: P
                     })
                 })
             ]

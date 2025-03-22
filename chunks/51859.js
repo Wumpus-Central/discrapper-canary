@@ -1,62 +1,68 @@
-t.d(n, { Z: () => v }), t(47120), t(266796);
-var r = t(200651),
-    i = t(192379),
+t.d(n, { Z: () => _ }), t(47120), t(266796);
+var i = t(200651),
+    r = t(192379),
     o = t(120356),
     s = t.n(o),
     a = t(793030),
-    l = t(690786),
-    c = t(838968),
-    d = t(969867),
-    u = t(279604),
-    x = t(730621),
-    m = t(388032),
+    l = t(156732),
+    c = t(690786),
+    d = t(838968),
+    u = t(969867),
+    m = t(279604),
+    x = t(367123),
+    v = t(388032),
     p = t(709435);
-function v(e) {
+function _(e) {
     let { guildId: n, powerup: t } = e,
-        o = null != (0, l.Z)(n, t),
-        [v, b] = i.useState(void 0);
+        o = null != (0, c.Z)(n, t),
+        [_, b] = r.useState(void 0),
+        j = (0, l.Z)(t);
     return (
-        (0, u.KT)(v),
-        (0, r.jsxs)(c.Z, {
+        (0, m.KT)(_),
+        (0, i.jsxs)(d.Z, {
             guildId: n,
             powerup: t,
             children: [
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: p.imageContainer,
-                    children: (0, r.jsx)('img', { alt: '' })
+                    children: (0, i.jsx)('img', {
+                        className: p.image,
+                        alt: '',
+                        src: j
+                    })
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: p.contentContainer,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, i.jsxs)('div', {
                             className: p.headerContainer,
                             children: [
-                                (0, r.jsx)(a.X6, {
+                                (0, i.jsx)(a.X6, {
                                     variant: 'heading-md/bold',
                                     children: t.title
                                 }),
                                 t.bundle &&
-                                    (0, r.jsx)(a.xv, {
+                                    (0, i.jsx)(a.xv, {
                                         className: s()(p.bundle, { [p.active]: o }),
                                         variant: 'text-xs/semibold',
-                                        children: m.NW.string(x.Z.j2jUjY)
+                                        children: v.NW.string(x.Z.j2jUjY)
                                     })
                             ]
                         }),
-                        (0, r.jsx)(a.xv, {
+                        (0, i.jsx)(a.xv, {
                             className: p.description,
                             variant: 'text-sm/medium',
                             children: t.description
                         }),
-                        (0, r.jsx)(c.Y, {
+                        (0, i.jsx)(d.Y, {
                             guildId: n,
                             powerup: t
                         })
                     ]
                 }),
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     className: p.buttonContainer,
-                    children: (0, r.jsx)(d.Z, {
+                    children: (0, i.jsx)(u.Z, {
                         guildId: n,
                         powerup: t,
                         onError: b

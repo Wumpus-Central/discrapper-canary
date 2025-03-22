@@ -2,8 +2,8 @@ n.d(t, { O: () => X }), n(47120), n(653041), n(230036);
 var r = n(200651),
     i = n(192379),
     l = n(658722),
-    a = n.n(l),
-    o = n(512969),
+    o = n.n(l),
+    a = n(512969),
     s = n(91192),
     c = n(442837),
     u = n(481060),
@@ -13,9 +13,9 @@ var r = n(200651),
     f = n(194359),
     g = n(724757),
     m = n(420660),
-    b = n(297369),
+    b = n(326255),
     _ = n(956221),
-    E = n(771173),
+    E = n(747017),
     O = n(297781),
     N = n(82295),
     v = n(554300),
@@ -108,7 +108,7 @@ let V = u.EFr.SIZE_32,
     },
     H = [O.OV, O.wO, O.f, O.v1, O.pQ],
     F = i.memo((e) => {
-        let { user: t, activities: l = [], gameProfileEntry: a, index: o, closeParentPopout: h, isSuggestion: g, isIncomingRequest: N = !1 } = e,
+        let { user: t, activities: l = [], gameProfileEntry: o, index: a, closeParentPopout: h, isSuggestion: g, isIncomingRequest: N = !1 } = e,
             {
                 avatarDecorationSrc: I,
                 avatarSrc: T,
@@ -119,7 +119,7 @@ let V = u.EFr.SIZE_32,
                 animateOnHover: !0,
                 guildId: null
             }),
-            R = (0, s.JA)(''.concat(o)),
+            R = (0, s.JA)(''.concat(a)),
             [W, B] = i.useState(!1),
             { voiceChannel: F } = (0, _.Z)({
                 userId: t.id,
@@ -158,9 +158,9 @@ let V = u.EFr.SIZE_32,
                 B(!1);
             }, []),
             ee = i.useCallback(() => {
-                if (null != a) {
-                    let e = a.traits,
-                        t = G(U({}, a), { traits: e.slice(0, 3) });
+                if (null != o) {
+                    let e = o.traits,
+                        t = G(U({}, o), { traits: e.slice(0, 3) });
                     return (0, r.jsx)(O.Gk, {
                         location: O.Gt.FRIENDS_POPOUT,
                         className: M.badgesContainer,
@@ -187,7 +187,6 @@ let V = u.EFr.SIZE_32,
                     user: t
                 });
                 return (0, r.jsx)(E.Z, {
-                    location: 'MemberListItem',
                     user: t,
                     activities: l,
                     applicationStream: q,
@@ -197,7 +196,7 @@ let V = u.EFr.SIZE_32,
                     hasQuest: !1,
                     textClassName: M.activityText
                 });
-            }, [t, l, K, q, F, a]),
+            }, [t, l, K, q, F, o]),
             et = i.useCallback(
                 (e) => {
                     (0, p.jW)(e, async () => {
@@ -226,7 +225,7 @@ let V = u.EFr.SIZE_32,
                 [t.id]
             ),
             el = i.useCallback((e) => (0, r.jsx)(A.Z, G(U({}, e), { userId: t.id })), [t.id]),
-            ea = () =>
+            eo = () =>
                 N || z === D.OGo.PENDING_INCOMING
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -321,7 +320,7 @@ let V = u.EFr.SIZE_32,
                                         icon: u.kBi,
                                         onClick: er
                                     }),
-                                ea(),
+                                eo(),
                                 (0, r.jsx)(C.sF, {
                                     label: k.NW.string(k.t.UKOtz8),
                                     icon: u.xhG,
@@ -402,9 +401,9 @@ let z = () =>
                 w.Z.getFriendIDs())) {
                     let n = R.default.getUser(e);
                     if (null == n) continue;
-                    let a = x.Z.getStatus(e),
-                        o = x.Z.getActivities(e),
-                        s = o.filter((e) => e.type === D.IIU.PLAYING || e.type === D.IIU.LISTENING || e.type === D.IIU.WATCHING || e.type === D.IIU.STREAMING),
+                    let o = x.Z.getStatus(e),
+                        a = x.Z.getActivities(e),
+                        s = a.filter((e) => e.type === D.IIU.PLAYING || e.type === D.IIU.LISTENING || e.type === D.IIU.WATCHING || e.type === D.IIU.STREAMING),
                         c = s.filter((e) => e.application_id === t);
                     r && c.length > 0
                         ? (i.sameActivity.push({
@@ -417,27 +416,27 @@ let z = () =>
                                 user: n,
                                 activities: s
                             })
-                          : a === D.Skl.ONLINE || a === D.Skl.IDLE || a === D.Skl.DND
+                          : o === D.Skl.ONLINE || o === D.Skl.IDLE || o === D.Skl.DND
                             ? i.online.push({
                                   user: n,
-                                  activities: o
+                                  activities: a
                               })
                             : i.offline.push({
                                   user: n,
-                                  activities: o
+                                  activities: a
                               });
                 }
-                let a = (e, t) => {
+                let o = (e, t) => {
                     var n, r;
                     let i = (null !== (n = e.user.globalName) && void 0 !== n ? n : e.user.username).toLowerCase(),
                         l = (null !== (r = t.user.globalName) && void 0 !== r ? r : t.user.username).toLowerCase();
                     return i.localeCompare(l);
                 };
-                if ((i.sameActivity.sort(a), l.size > 0)) {
-                    let e = Array.from(l.values()).sort(a);
+                if ((i.sameActivity.sort(o), l.size > 0)) {
+                    let e = Array.from(l.values()).sort(o);
                     i.sameActivity.push(...e);
                 }
-                return i.activities.sort(a), i.online.sort(a), i.offline.sort(a), i;
+                return i.activities.sort(o), i.online.sort(o), i.offline.sort(o), i;
             },
             [n, e, t]
         );
@@ -468,7 +467,7 @@ let z = () =>
                     let n = t.toLowerCase();
                     return e.filter((e) => {
                         let { user: t, activities: r } = e;
-                        return !!(a()(n, t.username.toLowerCase()) || (null != t.globalName && a()(n, t.globalName.toLowerCase()))) || (null == r ? void 0 : r.some((e) => null != e.name && a()(n, e.name.toLowerCase())));
+                        return !!(o()(n, t.username.toLowerCase()) || (null != t.globalName && o()(n, t.globalName.toLowerCase()))) || (null == r ? void 0 : r.some((e) => null != e.name && o()(n, e.name.toLowerCase())));
                     });
                 },
                 [t]
@@ -484,19 +483,19 @@ let z = () =>
                 }),
                 [e, r]
             ),
-            o = i.useCallback(() => n(''), []);
+            a = i.useCallback(() => n(''), []);
         return G(U({}, l), {
             searchQuery: t,
             setSearchQuery: n,
-            handleSearchClear: o
+            handleSearchClear: a
         });
     };
 function X(e) {
-    let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: c } = e,
+    let { onOpen: t, onClose: n, children: l, popoutPosition: o, popoutAlign: c } = e,
         [d, p] = i.useState(!1),
         f = i.useRef(null),
         m = (0, g.Z)('friends-popout', f),
-        b = (0, o.k6)(),
+        b = (0, a.k6)(),
         _ = q(),
         E = Q(_),
         { searchQuery: O, setSearchQuery: v, handleSearchClear: y } = E,
@@ -657,7 +656,7 @@ function X(e) {
         );
     return (0, r.jsx)(u.yRy, {
         animation: u.yRy.Animation.NONE,
-        position: a,
+        position: o,
         align: c,
         autoInvert: !1,
         shouldShow: d,

@@ -16,16 +16,16 @@ var r = n(200651),
     g = n(713081),
     E = n(905128),
     b = n(50101),
-    v = n(690786),
-    y = n(639777),
-    O = n(441536),
-    I = n(535396),
-    S = n(981631),
-    T = n(367123),
-    N = n(388032),
-    A = n(840987),
-    C = n(782763),
-    R = n(952567);
+    v = n(156732),
+    y = n(690786),
+    O = n(639777),
+    I = n(441536),
+    S = n(535396),
+    T = n(981631),
+    N = n(367123),
+    A = n(388032),
+    C = n(840987),
+    R = n(782763);
 function P(e, t, n) {
     return (
         t in e
@@ -81,9 +81,9 @@ function L(e, t) {
 function x(e) {
     let { guildId: t, powerup: n, onClose: o } = e,
         { analyticsLocations: l } = (0, f.ZP)(),
-        g = null != (0, v.Z)(t, n),
-        E = (0, c.e7)([h.Z, m.Z], () => (0, y.D)(m.Z, h.Z.getGuild(t))),
-        [b, I] = i.useState(!1),
+        g = null != (0, y.Z)(t, n),
+        E = (0, c.e7)([h.Z, m.Z], () => (0, O.D)(m.Z, h.Z.getGuild(t))),
+        [b, S] = i.useState(!1),
         [P, D] = i.useState(!1),
         x = P,
         M = i.useCallback(() => {
@@ -91,8 +91,8 @@ function x(e) {
             null != e &&
                 (0, _.u)({
                     analyticsLocation: {
-                        page: S.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: S.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
+                        page: T.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: T.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: l,
@@ -100,7 +100,7 @@ function x(e) {
                 });
         }, [t, l]),
         k = i.useCallback(() => {
-            o(), (0, O.Z)(t, n.skuId);
+            o(), (0, I.Z)(t, n.skuId);
         }, [t, n.skuId, o]),
         j = {
             tension: 400,
@@ -127,72 +127,73 @@ function x(e) {
             config: j
         }),
         V = i.useCallback((e) => {
-            e && I(!0);
+            e && S(!0);
         }, []),
-        Z = (0, d.O)(V);
+        Z = (0, d.O)(V),
+        H = (0, v.Z)(n);
     return (0, r.jsxs)('div', {
-        className: a()(C.topPerksCard, C.animatedTopPerksCard, A.powerupCard, { [C.animate]: b }),
+        className: a()(R.topPerksCard, R.animatedTopPerksCard, C.powerupCard, { [R.animate]: b }),
         onMouseEnter: () => D(!0),
         onMouseLeave: () => D(!1),
         children: [
             (0, r.jsx)('div', {
-                className: C.intObserver,
+                className: R.intObserver,
                 ref: Z
             }),
             (0, r.jsxs)('div', {
-                className: C.topPerksCardImageWrapper,
+                className: R.topPerksCardImageWrapper,
                 children: [
                     (0, r.jsx)(s.animated.img, {
-                        className: a()(C.topPerksCardImage, A.image),
-                        src: R,
+                        className: a()(R.topPerksCardImage, C.image),
+                        src: H,
                         alt: '',
                         style: U
                     }),
                     (0, r.jsx)(s.animated.div, {
-                        className: C.imageGradientOverlay,
+                        className: R.imageGradientOverlay,
                         style: F
                     })
                 ]
             }),
-            x && (0, r.jsx)('div', { className: C.borderGlowOverlay }),
+            x && (0, r.jsx)('div', { className: R.borderGlowOverlay }),
             (0, r.jsxs)(s.animated.div, {
                 style: L(w({}, G), { transform: G.y.to((e) => 'translateY('.concat(e, 'px)')) }),
-                className: a()(C.contentContainer, A.contentContainer),
+                className: a()(R.contentContainer, C.contentContainer),
                 children: [
                     (0, r.jsx)(p.xm, {
                         heading: n.title,
                         description: n.description,
-                        label: N.NW.formatToPlainString(T.Z.QOacIS, { quantity: n.cost }),
+                        label: A.NW.formatToPlainString(N.Z.QOacIS, { quantity: n.cost }),
                         isEnabled: g
                     }),
                     (0, r.jsxs)(s.animated.div, {
                         style: B,
-                        className: C.buttonsContainer,
+                        className: R.buttonsContainer,
                         children: [
                             (0, r.jsx)(u.zxk, {
                                 grow: !0,
                                 onClick: M,
                                 color: u.zxk.Colors.BRAND,
-                                className: C.button,
-                                children: N.NW.string(N.t['oPAx7+'])
+                                className: R.button,
+                                children: A.NW.string(A.t['oPAx7+'])
                             }),
                             E &&
                                 (0, r.jsx)(u.zxk, {
                                     grow: !0,
                                     onClick: k,
                                     color: u.zxk.Colors.PRIMARY,
-                                    className: C.button,
-                                    children: N.NW.string(N.t.GoCQxc)
+                                    className: R.button,
+                                    children: A.NW.string(A.t.GoCQxc)
                                 })
                         ]
                     })
                 ]
             }),
             (0, r.jsx)(u.IGR, {
-                className: C.topPerksCardNew,
-                text: N.NW.string(N.t.y2b7CA)
+                className: R.topPerksCardNew,
+                text: A.NW.string(A.t.y2b7CA)
             }),
-            b && (0, r.jsx)('div', { className: C.shineLine })
+            b && (0, r.jsx)('div', { className: R.shineLine })
         ]
     });
 }
@@ -204,22 +205,22 @@ let M = i.forwardRef((e, t) => {
         s && ((0, g.Sn)(o.id), (0, g.Fm)(o.id));
     }, [s, o.id]);
     let u = (0, c.e7)([E.Z], () => E.Z.getStateForGuild(o.id)),
-        d = null !== (n = null == u ? void 0 : u.catalog.get(I.Us.PERK)) && void 0 !== n ? n : [];
+        d = null !== (n = null == u ? void 0 : u.catalog.get(S.Us.PERK)) && void 0 !== n ? n : [];
     return s && 0 !== d.length
         ? (0, r.jsxs)('div', {
               ref: t,
-              className: A.container,
+              className: C.container,
               children: [
                   (0, r.jsx)(l.X6, {
                       variant: 'heading-xxl/extrabold',
-                      children: N.NW.string(T.Z.p6HUDQ)
+                      children: A.NW.string(N.Z.p6HUDQ)
                   }),
                   (0, r.jsx)(l.xv, {
                       variant: 'text-lg/medium',
-                      children: N.NW.string(T.Z.MYYPa2)
+                      children: A.NW.string(N.Z.MYYPa2)
                   }),
                   (0, r.jsx)('div', {
-                      className: A.powerupsContainer,
+                      className: C.powerupsContainer,
                       children: d.map((e) =>
                           (0, r.jsx)(
                               x,

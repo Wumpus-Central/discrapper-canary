@@ -303,27 +303,27 @@ let ek = {
         }, [em]);
         let eA = (e, t) => {
                 let n = () => {
-                    g({ keepBalancePillOverlayOpen: !0 }),
-                        (0, Z.q)({
-                            skuId: A.skuId,
-                            onCheckoutSuccess: (e) => {
-                                var t;
-                                let { entitlements: n } = e;
-                                (0, z.qg)({
-                                    variantsReturnStyle: eg,
-                                    location: 'collectible_checkout_with_orb'
-                                }),
-                                    (0, ex.Z)({
-                                        product: A,
-                                        analyticsLocations: _,
-                                        onCloseCallback: () => {
-                                            (0, L.vp)();
-                                        },
-                                        itemConsumed: null === (t = n[0]) || void 0 === t ? void 0 : t.consumed
-                                    });
-                            },
-                            analyticsLocations: _
-                        });
+                    (0, Z.q)({
+                        skuId: A.skuId,
+                        onCheckoutSuccess: (e) => {
+                            var t;
+                            let { entitlements: n } = e;
+                            (0, z.qg)({
+                                variantsReturnStyle: eg,
+                                location: 'collectible_checkout_with_orb'
+                            }),
+                                g({ keepBalancePillOverlayOpen: !0 }),
+                                (0, ex.Z)({
+                                    product: A,
+                                    analyticsLocations: _,
+                                    onCloseCallback: () => {
+                                        (0, L.vp)();
+                                    },
+                                    itemConsumed: null === (t = n[0]) || void 0 === t ? void 0 : t.consumed
+                                });
+                        },
+                        analyticsLocations: _
+                    });
                 };
                 return (0, r.jsx)(f.ua7, {
                     position: 'top',
@@ -706,10 +706,11 @@ let ek = {
                 }),
                     O.items.map(z.oK);
             }, [c, N, null == I ? void 0 : I.type, O.skuId, O.items]);
-        let y = t === f.Dvm.EXITING;
+        let y = (0, Z.r)(),
+            T = t === f.Dvm.EXITING;
         if (null == h) return null;
-        let T = (0, eg.ZS)(l.skuId),
-            Z = function () {
+        let A = (0, eg.ZS)(l.skuId),
+            W = function () {
                 let { keepBalancePillOverlayOpen: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 n(), e || (0, L.vp)();
             };
@@ -728,7 +729,7 @@ let ek = {
                             user: h,
                             product: a,
                             category: l,
-                            onClose: Z,
+                            onClose: W,
                             previewingVariantIndexProps: b,
                             selectedVariantIndex: j,
                             shouldCheckoutWithOrbs: p,
@@ -741,11 +742,11 @@ let ek = {
                                     asset: k,
                                     size: (0, el.ML)(540),
                                     className: eN.categoryBanner,
-                                    categoryBannerOverride: T
+                                    categoryBannerOverride: A
                                 }),
                                 (0, ec.o0)(a.skuId)
                                     ? a.skuId === eg.xJ
-                                        ? y
+                                        ? y || T
                                             ? null
                                             : (0, r.jsx)(eo.M, { user: h })
                                         : (0, r.jsx)(es.b, {
@@ -763,7 +764,7 @@ let ek = {
                                             className: eN.titleImageContainer,
                                             children: (0, r.jsx)('img', {
                                                 className: eN.titleImage,
-                                                style: null == T ? void 0 : T.pdpLogoStyle,
+                                                style: null == A ? void 0 : A.pdpLogoStyle,
                                                 src: S,
                                                 alt: l.name
                                             })
@@ -777,7 +778,7 @@ let ek = {
                                                         tab: v
                                                     }),
                                                 (0, r.jsx)(f.olH, {
-                                                    onClick: () => Z(),
+                                                    onClick: () => W(),
                                                     className: eN.modalCloseButton,
                                                     withCircleBackground: !0
                                                 })
