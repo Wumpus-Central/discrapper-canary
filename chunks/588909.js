@@ -6,8 +6,8 @@ var r = n(704215),
     o = n(24124),
     a = n(13245),
     s = n(620662),
-    u = n(835473),
-    c = n(442550),
+    c = n(835473),
+    u = n(442550),
     d = n(605236),
     p = n(293273),
     h = n(145597),
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,18 +65,18 @@ function C(e, t) {
         e
     );
 }
-function N(e) {
+function C(e) {
     let { game: t } = e,
-        n = (0, u.q)(t.id);
+        n = (0, c.q)(t.id);
     return null == n
         ? null
-        : (0, i.jsx)(c.f, {
+        : (0, i.jsx)(u.f, {
               src: n.getIconURL(b.Si.LARGE),
               size: 40
           });
 }
 function Z(e, t) {
-    let { trackView: u, trackClick: c } = (0, O.R)(v.n0.WelcomeNudge, {
+    let { trackView: c, trackClick: u } = (0, O.R)(v.n0.WelcomeNudge, {
             notif_type: v.n0.WelcomeNudge,
             secondary_notif_types: t.map((e) => v.nc[e.type])
         }),
@@ -89,7 +89,7 @@ function Z(e, t) {
                     (0, s.Z)(t, y.xjy.JOIN) &&
                     ((b.cancelText = j.NW.string(j.t['6F9ivr'])),
                     (b.onCancelClick = (e, n) => {
-                        c('unlock'), a.Z.updateNotificationStatus(n), a.Z.setInputLocked(!1, (0, h.getPID)()), (0, o.h7)(t, !1, y.IlC.POPOUT);
+                        u('unlock'), a.Z.updateNotificationStatus(n), a.Z.setInputLocked(!1, (0, h.getPID)()), (0, o.h7)(t, !1, y.IlC.POPOUT);
                     }));
                 break;
             }
@@ -97,7 +97,7 @@ function Z(e, t) {
             case v.nc.GO_LIVE_NON_VOICE:
                 (b.confirmText = j.NW.string(j.t.U76Ft7)),
                     (b.onConfirmClick = (e, t) => {
-                        c('unlock'),
+                        u('unlock'),
                             a.Z.updateNotificationStatus(t),
                             a.Z.setInputLocked(!1, (0, h.getPID)()),
                             (0, l.ZD)(
@@ -106,7 +106,7 @@ function Z(e, t) {
                                     return (t) =>
                                         (0, i.jsx)(
                                             e,
-                                            C(S({}, t), {
+                                            N(S({}, t), {
                                                 selectSource: !1,
                                                 sourcePID: (0, h.getPID)(),
                                                 guildId: r.type === v.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
@@ -135,31 +135,28 @@ function Z(e, t) {
                     }));
         }
     let Z = (0, d.un)(r.z.OVERLAY_OOP_WELCOME_NUX),
-        w = null != e ? j.NW.format(j.t.bJ1QAQ, { gameName: e.name }) : j.NW.string(j.t.KWDIrq),
-        P = null != e ? void 0 : j.NW.string(j.t.y7BLbm),
-        _ = Z ? w : j.NW.string(j.t['prl+ra']),
-        T = null != e && Z ? e.name : _,
-        D = Z ? P : j.NW.string(j.t.R3CpPT),
-        k =
+        w = Z ? j.NW.string(j.t.KWDIrq) : j.NW.string(j.t['prl+ra']),
+        P = Z ? void 0 : j.NW.string(j.t.R3CpPT),
+        _ =
             null != e
-                ? (0, i.jsx)(N, { game: e })
+                ? (0, i.jsx)(C, { game: e })
                 : (0, i.jsx)('img', {
                       src: n(328756),
                       className: x.icon,
                       alt: ''
                   });
-    return C(
+    return N(
         S(
             {
-                icon: k,
-                title: T,
-                body: D,
-                hint: () => (0, g.Q)((0, O.P)(), j.t.e6giBQ, j.NW.string(j.t.jZkzVF)),
+                icon: _,
+                title: w,
+                body: P,
+                hint: () => (0, g.Q)((0, O.P)(), j.t['z8/sgI'], j.NW.string(j.t.jZkzVF)),
                 confirmText: Z ? void 0 : j.NW.string(j.t.TxyTbm),
                 onConfirmClick: Z
                     ? void 0
                     : () => {
-                          c('unlock'), a.Z.setInputLocked(!1, (0, h.getPID)()), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX);
+                          u('unlock'), a.Z.setInputLocked(!1, (0, h.getPID)()), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX);
                       }
             },
             b
@@ -167,15 +164,15 @@ function Z(e, t) {
         {
             onNotificationShow: (e) => {
                 var t;
-                u(), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (t = b.onNotificationShow) || void 0 === t || t.call(b, e);
+                c(), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (t = b.onNotificationShow) || void 0 === t || t.call(b, e);
             },
             onNotificationClick: (e, t) => {
                 var n;
-                c('unlock'), a.Z.setInputLocked(!1, (0, h.getPID)()), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (n = b.onNotificationClick) || void 0 === n || n.call(b, e, t);
+                u('unlock'), a.Z.setInputLocked(!1, (0, h.getPID)()), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (n = b.onNotificationClick) || void 0 === n || n.call(b, e, t);
             },
             onDismissClick: (e, t) => {
                 var n;
-                c('dismiss'), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (n = b.onDismissClick) || void 0 === n || n.call(b, e, t);
+                u('dismiss'), Z || (0, d.EW)(r.z.OVERLAY_OOP_WELCOME_NUX), null === (n = b.onDismissClick) || void 0 === n || n.call(b, e, t);
             }
         }
     );
