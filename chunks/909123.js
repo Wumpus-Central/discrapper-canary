@@ -38,8 +38,18 @@ class h extends r.Z {
     handleReset() {
         (_ = {}), (p = {});
     }
+    handleEntitlementUpdate(e) {
+        let { guildId: t } = e;
+        (0, s.Fm)(t);
+    }
     constructor(...e) {
-        super(...e), u(this, 'stores', new Map().set(a.Z, this.handleSelectedGuildChange)), u(this, 'actions', { LOGOUT: this.handleReset });
+        super(...e),
+            u(this, 'stores', new Map().set(a.Z, this.handleSelectedGuildChange)),
+            u(this, 'actions', {
+                LOGOUT: this.handleReset,
+                GUILD_POWERUP_ENTITLEMENTS_CREATE: this.handleEntitlementUpdate,
+                GUILD_POWERUP_ENTITLEMENTS_DELETE: this.handleEntitlementUpdate
+            });
     }
 }
 let m = new h();
