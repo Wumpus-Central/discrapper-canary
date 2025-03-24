@@ -38,8 +38,8 @@ var r = n(200651),
     W = n(594174),
     U = n(358221),
     B = n(887012),
-    H = n(444253),
-    F = n(355827),
+    F = n(444253),
+    H = n(355827),
     G = n(185935),
     V = n(795318),
     z = n(354459),
@@ -170,7 +170,8 @@ function $(e) {
                     applicationId: t,
                     stream: e,
                     exitFullScreen: I,
-                    analyticsLocation: n.type === Y.d4z.GUILD_VOICE ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL
+                    analyticsLocation: n.type === Y.d4z.GUILD_VOICE ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL,
+                    shouldPrioritizeGroupPlusIcon: !0
                 },
                 'invite-button'
             )
@@ -229,7 +230,7 @@ function $(e) {
                     u.yRy,
                     {
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(F.Z, { channel: n }) }),
+                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
@@ -292,7 +293,7 @@ function $(e) {
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, r.jsx)(Z.Z, {
-                                children: (0, r.jsx)(H.Z, {
+                                children: (0, r.jsx)(F.Z, {
                                     channelId: $,
                                     onClose: t,
                                     appContext: l,

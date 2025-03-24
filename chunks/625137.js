@@ -23,6 +23,15 @@ function s(e) {
         originalPosition: e.position,
         color: e.color,
         colorString: null != e.color && 0 !== e.color ? (0, i.Rf)(e.color) : null,
+        colors: e.colors,
+        colorStrings:
+            null != e.colors
+                ? {
+                      primaryColor: (0, i.Rf)(e.colors.primary_color),
+                      secondaryColor: null != e.colors.secondary_color ? (0, i.Rf)(e.colors.secondary_color) : void 0,
+                      tertiaryColor: null != e.colors.tertiary_color ? (0, i.Rf)(e.colors.tertiary_color) : void 0
+                  }
+                : null,
         hoist: e.hoist,
         managed: e.managed,
         tags: e.tags,

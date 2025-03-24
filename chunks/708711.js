@@ -6,19 +6,12 @@ let l = (0, r.B)({
     id: '2025-01_tiered_tenure_badges_mobile',
     label: 'Tiered Tenure Badging Mobile Experience',
     commonTriggerPoint: i.$P.CONNECTION_OPEN,
-    defaultConfig: {
-        enabled: !1,
-        isBadgeVersion2: !1
-    },
+    defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 2,
             label: 'Enable Tiered Tenure Badges v2 on mobile',
-            config: {
-                enabled: !0,
-                version: 2,
-                isBadgeVersion2: !0
-            }
+            config: { enabled: !0 }
         }
     ]
 });

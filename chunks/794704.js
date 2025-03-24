@@ -786,40 +786,40 @@ function eO() {
         [i, s] = (0, g.Wu)([T.ZP], () => [T.ZP.canShowAdminWarning, T.ZP.getVisibleGame()], []),
         a = null != s && s.elevated && i;
     return (0, r.jsx)(ep, {
-        children: (0, r.jsxs)('div', {
+        children: (0, r.jsx)('div', {
             className: el.keybindMainContainer,
-            children: [
-                (0, r.jsxs)('div', {
-                    className: el.keybindContainer,
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: el.keybindHeaderContainer,
-                            children: (0, r.jsx)(h.Text, {
+            children: (0, r.jsxs)('div', {
+                className: el.keybindContainer,
+                children: [
+                    (0, r.jsxs)('div', {
+                        className: el.keybindHeaderContainer,
+                        children: [
+                            (0, r.jsx)(h.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 children: ea.NW.string(ea.t.VsAZcH)
-                            })
-                        }),
-                        (0, r.jsx)('div', {
-                            className: el.keybindRecorderContainer,
-                            children: (0, r.jsx)(b.Z, {
-                                disabled: t && n,
-                                defaultValue: null != e ? e.shortcut : [],
-                                onChange: function (t) {
-                                    d()(null != e, 'Keybind should never be undefined'), x.Z.setKeybind(eu(ed({}, e), { shortcut: t }));
-                                }
-                            })
+                            }),
+                            a &&
+                                (0, r.jsx)(h.Text, {
+                                    variant: 'text-xs/normal',
+                                    color: 'text-warning',
+                                    className: el.keybindAdminWarning,
+                                    children: ea.NW.string(ea.t.NsowVV)
+                                })
+                        ]
+                    }),
+                    (0, r.jsx)('div', {
+                        className: el.keybindRecorderContainer,
+                        children: (0, r.jsx)(b.Z, {
+                            disabled: t && n,
+                            defaultValue: null != e ? e.shortcut : [],
+                            onChange: function (t) {
+                                d()(null != e, 'Keybind should never be undefined'), x.Z.setKeybind(eu(ed({}, e), { shortcut: t }));
+                            }
                         })
-                    ]
-                }),
-                a &&
-                    (0, r.jsx)(h.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-warning',
-                        className: el.keybindAdminWarning,
-                        children: ea.NW.string(ea.t.NsowVV)
                     })
-            ]
+                ]
+            })
         })
     });
 }
@@ -927,7 +927,12 @@ function eT(e) {
             hoistRoleId: null,
             premiumSince: null,
             joinedAt: new Date().toISOString(),
-            colorString: '#000000'
+            colorString: '#000000',
+            colorStrings: {
+                primaryColor: '#000000',
+                secondaryColor: void 0,
+                tertiaryColor: void 0
+            }
         },
         nick: e,
         comparator: e,

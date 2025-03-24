@@ -1,23 +1,38 @@
-n.d(t, { G: () => l });
+n.d(t, {
+    GG: () => u,
+    Gy: () => c
+});
 var r = n(772848),
     i = n(70956),
-    o = n(686325);
-let a = 12,
-    s = null;
-function l() {
+    o = n(960048),
+    a = n(686325);
+let s = 12,
+    l = null;
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now();
-    return null == s || c(s)
-        ? (s = {
+    return null == l || d(l)
+        ? (l = {
               uuid: (0, r.Z)(),
               initialized: t,
               lastUsed: t
           })
-        : (e && (s.lastUsed = t), s);
+        : (e && (l.lastUsed = t), l);
 }
-function c(e) {
-    let t = Date.now(),
-        n = t - e.lastUsed > o.iP * i.Z.Millis.MINUTE,
-        r = t - e.initialized > a * i.Z.Millis.HOUR;
+function u() {
+    l = null;
+}
+function d(e) {
+    let t = Date.now();
+    if (t < e.initialized)
+        return (
+            o.Z.addBreadcrumb({
+                category: 'ad',
+                message: 'future facing timestamp Date.now(): '.concat(t, ', initialized timestamp: ').concat(e.initialized)
+            }),
+            !0
+        );
+    let n = t - e.lastUsed > a.iP * i.Z.Millis.MINUTE,
+        r = t - e.initialized > s * i.Z.Millis.HOUR;
     return n || r;
 }

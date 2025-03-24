@@ -1,64 +1,62 @@
-n.d(t, { f: () => T });
-var r = n(374470),
-    i = n(475179),
-    s = n(904245),
-    a = n(45114),
-    l = n(40851),
-    o = n(358221),
-    c = n(623292),
-    d = n(807092),
-    u = n(6025),
-    m = n(897473),
-    g = n(913663),
-    p = n(268350),
-    h = n(433355),
-    f = n(592125),
-    b = n(703558),
-    N = n(323873),
-    x = n(375954),
-    _ = n(306680),
-    E = n(944486),
-    j = n(914010),
-    C = n(574254),
-    O = n(451478),
-    v = n(585483),
-    S = n(981631);
-let T = {
+n.d(t, { f: () => S });
+var r = n(475179),
+    i = n(904245),
+    s = n(45114),
+    a = n(40851),
+    l = n(358221),
+    o = n(623292),
+    c = n(807092),
+    d = n(6025),
+    u = n(897473),
+    m = n(913663),
+    g = n(268350),
+    p = n(433355),
+    h = n(592125),
+    f = n(703558),
+    x = n(323873),
+    N = n(375954),
+    b = n(306680),
+    _ = n(944486),
+    E = n(914010),
+    j = n(574254),
+    C = n(451478),
+    O = n(585483),
+    v = n(981631);
+let S = {
     binds: ['esc', 'shift+pagedown'],
     comboKeysBindGlobal: !0,
     action(e) {
-        if (O.Z.isElementFullScreen()) return !1;
-        if (v.S.hasSubscribers(S.CkL.CALL_DECLINE)) return v.S.dispatch(S.CkL.CALL_DECLINE), !1;
-        if (C.Z.close()) return !1;
-        if (v.S.hasSubscribers(S.CkL.MEDIA_MODAL_CLOSE)) return v.S.dispatch(S.CkL.MEDIA_MODAL_CLOSE), !1;
-        if ((0, r.k)(e.target)) {
-            let t = (0, l.J5)(e.target);
-            if (null == t ? void 0 : t.hasSubscribers(S.CkL.POPOUT_CLOSE)) return t.dispatch(S.CkL.POPOUT_CLOSE), !1;
-        }
-        if (v.S.hasSubscribers(S.CkL.CLOSE_GIF_PICKER)) return v.S.dispatch(S.CkL.CLOSE_GIF_PICKER), !1;
-        if (v.S.hasSubscribers(S.CkL.MODAL_CLOSE)) return v.S.dispatch(S.CkL.MODAL_CLOSE), !1;
-        if (v.S.hasSubscribers(S.CkL.SEARCH_RESULTS_CLOSE)) return v.S.dispatch(S.CkL.SEARCH_RESULTS_CLOSE), !1;
-        let t = j.Z.getGuildId(),
-            n = E.Z.getChannelId(t),
-            s = f.Z.getChannel(n),
-            a = h.ZP.getSection(n, null == s ? void 0 : s.isDM()) === S.ULH.SIDEBAR_CHAT ? h.ZP.getSidebarState(n) : null,
-            c = (null == a ? void 0 : a.type) === m.tI.VIEW_THREAD || (null == a ? void 0 : a.type) === m.tI.VIEW_CHANNEL ? a.channelId : null;
-        if (!1 === I(n) || !1 === I(c)) return !1;
-        if (null != n && (null == a ? void 0 : a.type) === m.tI.CREATE_THREAD) return u.Z.closeChannelSidebar(n), !1;
-        let d = y(n),
-            g = y(c);
-        return null == n || d || g || null == a ? (null != n && !d && o.Z.getChatOpen(n) ? i.Z.updateChatOpen(n, !1) : v.S.dispatch(S.CkL.SCROLLTO_PRESENT)) : u.Z.closeChannelSidebar(n), !1;
+        if (C.Z.isElementFullScreen()) return !1;
+        if (O.S.hasSubscribers(v.CkL.CALL_DECLINE)) return O.S.dispatch(v.CkL.CALL_DECLINE), !1;
+        if (j.Z.close()) return !1;
+        if (O.S.hasSubscribers(v.CkL.MEDIA_MODAL_CLOSE)) return O.S.dispatch(v.CkL.MEDIA_MODAL_CLOSE), !1;
+        let t = (0, a.AN)(e);
+        if (null == t ? void 0 : t.hasSubscribers(v.CkL.POPOUT_CLOSE)) return t.dispatch(v.CkL.POPOUT_CLOSE), !1;
+        if (O.S.hasSubscribers(v.CkL.CLOSE_GIF_PICKER)) return O.S.dispatch(v.CkL.CLOSE_GIF_PICKER), !1;
+        if (O.S.hasSubscribers(v.CkL.MODAL_CLOSE)) return O.S.dispatch(v.CkL.MODAL_CLOSE), !1;
+        if (O.S.hasSubscribers(v.CkL.SEARCH_RESULTS_CLOSE)) return O.S.dispatch(v.CkL.SEARCH_RESULTS_CLOSE), !1;
+        if (null == t ? void 0 : t.hasSubscribers(v.CkL.POPOUT_CLOSE_AFTER_MODALS)) return t.dispatch(v.CkL.POPOUT_CLOSE_AFTER_MODALS), !1;
+        let n = E.Z.getGuildId(),
+            i = _.Z.getChannelId(n),
+            s = h.Z.getChannel(i),
+            o = p.ZP.getSection(i, null == s ? void 0 : s.isDM()) === v.ULH.SIDEBAR_CHAT ? p.ZP.getSidebarState(i) : null,
+            c = (null == o ? void 0 : o.type) === u.tI.VIEW_THREAD || (null == o ? void 0 : o.type) === u.tI.VIEW_CHANNEL ? o.channelId : null;
+        if (!1 === T(i) || !1 === T(c)) return !1;
+        if (null != i && (null == o ? void 0 : o.type) === u.tI.CREATE_THREAD) return d.Z.closeChannelSidebar(i), !1;
+        let m = I(i),
+            g = I(c);
+        return null == i || m || g || null == o ? (null != i && !m && l.Z.getChatOpen(i) ? r.Z.updateChatOpen(i, !1) : O.S.dispatch(v.CkL.SCROLLTO_PRESENT)) : d.Z.closeChannelSidebar(i), !1;
     }
 };
-function I(e) {
+function T(e) {
     if (null != e) {
-        if (N.Z.isEditingAny(e)) return s.Z.endEditMessage(e), !1;
-        if (null != d.Z.getPendingReply(e)) return (0, c.A6)(e), !1;
-        if (null != g.Z.getStickerPreview(e, b.d.ChannelMessage)) return (0, p.qB)(e, b.d.ChannelMessage), !1;
+        if (x.Z.isEditingAny(e)) return i.Z.endEditMessage(e), !1;
+        if (null != c.Z.getPendingReply(e)) return (0, o.A6)(e), !1;
+        if (null != m.Z.getStickerPreview(e, f.d.ChannelMessage)) return (0, g.qB)(e, f.d.ChannelMessage), !1;
     }
 }
-function y(e) {
+function I(e) {
     if (null == e) return !1;
     let t = !1;
-    return x.Z.getMessages(e).hasMoreAfter && (s.Z.jumpToPresent(e, S.AQB), (t = !0)), _.ZP.hasUnread(e) && ((0, a.In)(e), (t = !0)), (0, a.iV)(e), t;
+    return N.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, v.AQB), (t = !0)), b.ZP.hasUnread(e) && ((0, s.In)(e), (t = !0)), (0, s.iV)(e), t;
 }

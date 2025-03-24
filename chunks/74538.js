@@ -772,6 +772,7 @@ function eE(e, t) {
             arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : {
+                      isFractionalPremiumActive: !1,
                       fetched: !0,
                       fractionalState: N.a$.NONE,
                       startsAt: a()(0),

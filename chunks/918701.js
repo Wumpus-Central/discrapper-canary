@@ -2,7 +2,6 @@ n.d(t, {
     $H: () => eP,
     $J: () => eJ,
     AV: () => eu,
-    Ah: () => eq,
     B3: () => to,
     BM: () => e1,
     Bg: () => em,
@@ -10,6 +9,7 @@ n.d(t, {
     C1: () => te,
     C9: () => e9,
     Dr: () => eC,
+    F9: () => tu,
     FE: () => ex,
     FI: () => tl,
     FX: () => ep,
@@ -799,3 +799,4 @@ function tc(e) {
         [T.jn.QUEST_BAR_MOBILE]: T.Ok.MOBILE_HOME_DOCK_AREA
     }[e];
 }
+let tu = (e) => (e.percentComplete > 0 ? D.NW.formatToPlainString(D.t['c59/Tk'], { remainTime: eq(e) }) : D.NW.formatToPlainString(D.t.GNsKiY, { remainTime: eq(e) }));
