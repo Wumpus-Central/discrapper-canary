@@ -8,6 +8,7 @@ e.exports = {
     clickable: 'clickable__675e5',
     disabledClickable: 'disabledClickable__675e5',
     plusIcon: 'plusIcon__675e5',
+    plusIconContainer: 'plusIconContainer__675e5',
     spinner: 'spinner__675e5',
     spinnerInnerRunning: 'spinnerInnerRunning__675e5'
 };

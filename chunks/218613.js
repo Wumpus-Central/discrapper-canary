@@ -35,15 +35,15 @@ var s = n(200651),
     T = n(688465),
     D = n(456269),
     L = n(312146),
-    _ = n(703656),
-    y = n(146085),
+    y = n(703656),
+    _ = n(146085),
     U = n(60222),
     W = n(388131),
     z = n(131704),
     G = n(592125),
     P = n(271383),
-    R = n(430824),
-    M = n(496675),
+    M = n(430824),
+    R = n(496675),
     w = n(699516),
     Z = n(594174),
     k = n(934415),
@@ -51,10 +51,10 @@ var s = n(200651),
     F = n(63063),
     V = n(981631),
     H = n(71080),
-    X = n(710352),
-    Y = n(231338),
+    Y = n(710352),
+    X = n(231338),
     q = n(388032),
-    K = n(69945);
+    K = n(592003);
 function J(e, t, n) {
     return (
         t in e
@@ -119,7 +119,7 @@ function ee(e) {
 function et(e) {
     let { onChange: t, guildId: n, channelType: i, description: l } = e,
         [a, o] = r.useState({}),
-        d = (0, p.e7)([R.Z], () => R.Z.getGuild(n)),
+        d = (0, p.e7)([M.Z], () => M.Z.getGuild(n)),
         c = i === V.d4z.GUILD_STAGE_VOICE;
     return (r.useEffect(() => {
         t(a);
@@ -131,7 +131,7 @@ function et(e) {
               children: (0, s.jsx)(v.U, {
                   guild: d,
                   channel: null,
-                  permission: c ? y.yP : (0, z.CG)(i),
+                  permission: c ? _.yP : (0, z.CG)(i),
                   pendingAdditions: a,
                   setPendingAdditions: o,
                   isStageChannel: c,
@@ -181,7 +181,7 @@ class en extends r.PureComponent {
             case V.d4z.GUILD_STAGE_VOICE:
                 return N.ewx;
             default:
-                return (0, z.zi)(t) ? N.VL1 : Y.Vq;
+                return (0, z.zi)(t) ? N.VL1 : X.Vq;
         }
     }
     renderHeader() {
@@ -345,7 +345,7 @@ class en extends r.PureComponent {
                                         (0, s.jsx)('br', {}),
                                         q.NW.format(q.t.fjSvsL, {
                                             onClick: () => {
-                                                open(X.V8);
+                                                open(Y.V8);
                                             }
                                         })
                                     ]
@@ -697,7 +697,8 @@ class en extends r.PureComponent {
                 (0, s.jsxs)(N.xBx, {
                     separator: !1,
                     children: [
-                        (0, s.jsxs)('div', {
+                        (0, s.jsxs)(N.Kqy, {
+                            gap: 4,
                             className: K.header,
                             children: [
                                 (0, s.jsx)(N.X6q, {
@@ -855,7 +856,7 @@ class en extends r.PureComponent {
                         });
                         if (null == e || 201 !== e.status) return;
                         let r = e.body;
-                        z.xL.has(N) && (0, _.XU)(r.guild_id, r.id), d();
+                        z.xL.has(N) && (0, y.XU)(r.guild_id, r.id), d();
                     } catch (e) {
                         null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: q.NW.string(q.t.fEptJC) } });
                     }
@@ -881,13 +882,13 @@ class en extends r.PureComponent {
 }
 let es = r.forwardRef(function (e, t) {
     let { channelType: n, guildId: r, cloneChannelId: i } = e,
-        l = (0, p.cj)([R.Z, Z.default, M.Z, G.Z, P.ZP], () => {
+        l = (0, p.cj)([M.Z, Z.default, R.Z, G.Z, P.ZP], () => {
             var e, t, s;
-            let l = R.Z.getGuild(r),
+            let l = M.Z.getGuild(r),
                 a = Z.default.getCurrentUser();
             o()(null != a, 'CreateChannel: user cannot be undefined');
             let d = null != l && null != l.ownerId ? Z.default.getUser(l.ownerId) : null,
-                c = M.Z.can(V.Plq.ADMINISTRATOR, l),
+                c = R.Z.can(V.Plq.ADMINISTRATOR, l),
                 h = G.Z.getChannel(i);
             return {
                 guild: l,
@@ -896,13 +897,13 @@ let es = r.forwardRef(function (e, t) {
                 user: a,
                 owner: d,
                 memberRoles: null !== (t = null === (e = P.ZP.getMember(r, a.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : [],
-                canViewChannels: M.Z.can(V.Plq.VIEW_CHANNEL, l),
-                canConnect: M.Z.can(V.Plq.CONNECT, l),
+                canViewChannels: R.Z.can(V.Plq.VIEW_CHANNEL, l),
+                canConnect: R.Z.can(V.Plq.CONNECT, l),
                 isAdmin: c,
                 cloneChannel: h,
                 channelType: null !== (s = null == h ? void 0 : h.type) && void 0 !== s ? s : n,
-                canManageRoles: M.Z.can(V.Plq.MANAGE_ROLES, l),
-                canManageChannels: M.Z.can(V.Plq.MANAGE_CHANNELS, l)
+                canManageRoles: R.Z.can(V.Plq.MANAGE_ROLES, l),
+                canManageChannels: R.Z.can(V.Plq.MANAGE_CHANNELS, l)
             };
         }),
         a = (0, p.Wu)([j.Z], () =>

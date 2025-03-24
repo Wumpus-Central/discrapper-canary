@@ -4,7 +4,7 @@ n(192379);
 var i = n(120356),
     l = n.n(i),
     o = n(134433),
-    a = n(125701);
+    a = n(692161);
 function s(e) {
     let t,
         { className: n, children: i, verified: s, roleColor: c, roleName: u } = e;
@@ -21,6 +21,7 @@ function s(e) {
               })),
         (0, r.jsxs)('div', {
             className: l()(n, a.role),
+            style: { '--custom-role-label-color': c },
             children: [t, u, i]
         })
     );

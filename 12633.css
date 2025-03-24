@@ -12026,32 +12026,40 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .soundButton__6d4ed {
+    box-sizing: border-box;
+    position: relative;
     background: var(--background-secondary);
     border-radius: var(--radius-sm);
     height: 40px;
     width: 148px;
-    flex-direction: row;
-    font-weight: 600;
-    border: 1px solid transparent
-}
-
-.soundButton__6d4ed,
-.soundButtonRefresh__6d4ed {
-    box-sizing: border-box;
-    position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
+    border: 1px solid transparent;
     overflow: hidden;
     text-align: center
 }
 
+.visual-refresh .soundButton__6d4ed {
+    background-color: var(--button-secondary-background);
+    border: 1px solid var(--border-subtle)
+}
+
 .soundButtonRefresh__6d4ed {
+    box-sizing: border-box;
+    position: relative;
     background: var(--card-primary-bg);
     border-radius: var(--radius-md);
     height: 72px;
     width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border: 1px solid var(--border-subtle);
+    overflow: hidden;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 1px 4px 0 rgba(0, 0, 0, .2)
 }
 
@@ -54838,7 +54846,7 @@ html.disable-forced-colors * {
     --background-mentioned-hover: hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098);
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --background-message-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
+    --background-message-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-modifier-accent: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-modifier-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
@@ -54973,7 +54981,7 @@ html.disable-forced-colors * {
     --notice-text-info: var(--blue-new-2);
     --notice-text-positive: var(--green-new-4);
     --notice-text-warning: var(--yellow-new-1);
-    --spoiler-hidden-background-hover: var(--neutral-31);
+    --spoiler-hidden-background-hover: var(--neutral-28);
     --text-code-addition: var(--green-new-13);
     --text-code-builtin: var(--orange-new-12);
     --text-code-bullet: var(--yellow-new-13);
@@ -55005,7 +55013,7 @@ html.disable-forced-colors * {
         --background-mentioned-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --background-message-highlight: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--theme-base-color-amount, 0%));
         --background-message-highlight-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
+        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --background-primary: color-mix(in oklab, var(--neutral-69) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-secondary: color-mix(in oklab, var(--neutral-72) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-tertiary: color-mix(in oklab, var(--neutral-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -55096,7 +55104,7 @@ html.disable-forced-colors * {
         --notice-text-info: color-mix(in oklab, var(--blue-new-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-positive: color-mix(in oklab, var(--green-new-4) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-warning: color-mix(in oklab, var(--yellow-new-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-31) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-28) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-builtin: color-mix(in oklab, var(--orange-new-12) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-bullet: color-mix(in oklab, var(--yellow-new-13) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55127,7 +55135,7 @@ html.disable-forced-colors * {
     --background-mentioned-hover: hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039);
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-20-hsl)/0.2);
-    --background-message-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-message-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-accent: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --background-modifier-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-modifier-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -55252,7 +55260,7 @@ html.disable-forced-colors * {
     --notice-text-info: var(--blue-new-76);
     --notice-text-positive: var(--green-new-75);
     --notice-text-warning: var(--yellow-new-76);
-    --spoiler-hidden-background-hover: var(--neutral-36);
+    --spoiler-hidden-background-hover: var(--neutral-39);
     --text-code-addition: var(--green-new-71);
     --text-code-builtin: var(--orange-new-67);
     --text-code-bullet: var(--yellow-new-67);
@@ -55284,7 +55292,7 @@ html.disable-forced-colors * {
         --background-mentioned-hover: color-mix(in oklab, hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-message-highlight: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--theme-base-color-amount, 0%));
         --background-message-highlight-hover: color-mix(in oklab, hsl(var(--opacity-blurple-20-hsl)/0.2) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2) var(--theme-base-color-amount, 0%));
-        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
+        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-secondary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-tertiary: color-mix(in oklab, var(--neutral-4) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -55365,7 +55373,7 @@ html.disable-forced-colors * {
         --notice-text-info: color-mix(in oklab, var(--blue-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-positive: color-mix(in oklab, var(--green-new-75) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-warning: color-mix(in oklab, var(--yellow-new-76) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-71) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-builtin: color-mix(in oklab, var(--orange-new-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-bullet: color-mix(in oklab, var(--yellow-new-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55431,7 +55439,7 @@ html.disable-forced-colors * {
     --background-mentioned-hover: hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098);
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --background-message-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-message-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-accent: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --background-modifier-active: hsl(var(--opacity-20-hsl)/0.2);
     --background-modifier-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
@@ -55519,7 +55527,7 @@ html.disable-forced-colors * {
     --notice-text-info: var(--blue-new-19);
     --notice-text-positive: var(--green-new-20);
     --notice-text-warning: var(--yellow-new-18);
-    --spoiler-hidden-background-hover: var(--neutral-39);
+    --spoiler-hidden-background-hover: var(--neutral-36);
     --text-code-addition: var(--green-new-27);
     --text-code-builtin: var(--orange-new-26);
     --text-code-bullet: var(--yellow-new-27);
@@ -55551,7 +55559,7 @@ html.disable-forced-colors * {
         --background-mentioned-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --background-message-highlight: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--theme-base-color-amount, 0%));
         --background-message-highlight-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
+        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-primary: color-mix(in oklab, var(--neutral-95) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-secondary: color-mix(in oklab, var(--neutral-97) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-tertiary: color-mix(in oklab, var(--neutral-100) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -55630,7 +55638,7 @@ html.disable-forced-colors * {
         --notice-text-info: color-mix(in oklab, var(--blue-new-19) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-positive: color-mix(in oklab, var(--green-new-20) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-warning: color-mix(in oklab, var(--yellow-new-18) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-39) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-builtin: color-mix(in oklab, var(--orange-new-26) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-bullet: color-mix(in oklab, var(--yellow-new-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55713,7 +55721,7 @@ html.disable-forced-colors * {
     --background-mentioned-hover: hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098);
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
-    --background-message-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
+    --background-message-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-modifier-accent: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-modifier-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-modifier-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
@@ -55811,7 +55819,7 @@ html.disable-forced-colors * {
     --notice-text-info: var(--blue-new-12);
     --notice-text-positive: var(--green-new-14);
     --notice-text-warning: var(--yellow-new-12);
-    --spoiler-hidden-background-hover: var(--neutral-36);
+    --spoiler-hidden-background-hover: var(--neutral-33);
     --text-code-addition: var(--green-new-21);
     --text-code-builtin: var(--orange-new-20);
     --text-code-bullet: var(--yellow-new-21);
@@ -55843,7 +55851,7 @@ html.disable-forced-colors * {
         --background-mentioned-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
         --background-message-highlight: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--theme-base-color-amount, 0%));
         --background-message-highlight-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
-        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--theme-base-color-amount, 0%));
+        --background-message-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --background-primary: color-mix(in oklab, var(--neutral-82) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-secondary: color-mix(in oklab, var(--neutral-86) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-tertiary: color-mix(in oklab, var(--neutral-92) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -55932,7 +55940,7 @@ html.disable-forced-colors * {
         --notice-text-info: color-mix(in oklab, var(--blue-new-12) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-positive: color-mix(in oklab, var(--green-new-14) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --notice-text-warning: color-mix(in oklab, var(--yellow-new-12) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-33) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-21) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-builtin: color-mix(in oklab, var(--orange-new-20) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --text-code-bullet: color-mix(in oklab, var(--yellow-new-21) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -56786,7 +56794,7 @@ code {
 }
 
 .visual-refresh {
-    --custom-message-margin-horizontal: var(--space-md)
+    --custom-message-margin-left-content-cozy: calc(var(--custom-message-avatar-size, 40px) + var(--custom-message-margin-horizontal) + var(--custom-message-margin-horizontal))
 }
 
 :root {
@@ -57330,7 +57338,8 @@ img[alt] {
     --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs));
     --custom-member-list-width: 264px;
     --custom-channel-textarea-text-area-height: calc(44px + var(--space-xs));
-    --custom-chat-aligned-icon-offset: ((var(--chat-avatar-size) - var(--chat-input-icon-size))/2)
+    --custom-chat-aligned-icon-offset: ((var(--chat-avatar-size) - var(--chat-input-icon-size))/2);
+    --custom-message-margin-horizontal: var(--space-md)
 }
 
 .visual-refresh.density-compact {
