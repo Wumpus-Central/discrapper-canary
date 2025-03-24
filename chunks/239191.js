@@ -9,8 +9,8 @@ var r = s(200651),
     d = s(153867),
     m = s(131388),
     h = s(514361),
-    p = s(47760),
-    g = s(210887),
+    g = s(47760),
+    p = s(210887),
     u = s(740492),
     y = s(695346),
     x = s(874893),
@@ -69,8 +69,8 @@ function N(e) {
                                         children: [
                                             i &&
                                                 (0, r.jsx)(c.Text, {
-                                                    variant: 'text-md/medium',
-                                                    color: 'header-primary',
+                                                    variant: 'text-sm/medium',
+                                                    color: 'text-primary',
                                                     children: e.label
                                                 }),
                                             e.new &&
@@ -112,7 +112,7 @@ let f = [
         },
         {
             id: b.BR.DARK,
-            label: j.NW.string(j.t.GEaO9P),
+            label: j.NW.string(j.t.SMPT1t),
             className: a()('theme-dark', O.themeOption)
         },
         {
@@ -123,7 +123,7 @@ let f = [
         },
         {
             id: b.BR.MIDNIGHT,
-            label: j.NW.string(j.t.pQwSpa),
+            label: j.NW.string(j.t.Do4ZJy),
             className: a()('theme-midnight', O.themeOption),
             new: !0
         }
@@ -145,8 +145,8 @@ let f = [
 function _(e) {
     let { transitionState: t, onClose: s } = e,
         [i] = n.useState(() => h.Z.gradientPreset),
-        b = (0, l.e7)([g.Z], () => g.Z.theme),
-        [_] = n.useState(() => u.ZP.useSystemTheme === x.K.ON),
+        b = (0, l.e7)([p.Z], () => p.Z.theme),
+        [_] = n.useState(() => u.ZP.useSystemTheme === x.KW.ON),
         [w, k] = n.useState(() => (_ ? 'system' : null != i ? 'gradient' : b)),
         { density: P } = (0, c.TCT)(),
         C = n.useMemo(() => {
@@ -154,7 +154,7 @@ function _(e) {
             let e = [...f];
             if (null != i) {
                 let { colors: t, angle: s, theme: r, getName: n } = i,
-                    l = (0, p.VK)({
+                    l = (0, g.VK)({
                         colors: t,
                         angle: s
                     }),
@@ -189,14 +189,19 @@ function _(e) {
                 children: (0, r.jsxs)(c.Kqy, {
                     gap: K ? 4 : 8,
                     children: [
-                        (0, r.jsx)('div', { className: O.headerImage }),
-                        (0, r.jsx)(c.X6q, {
-                            variant: K ? 'heading-lg/semibold' : 'heading-xl/semibold',
-                            color: 'header-primary',
-                            children: j.NW.string(j.t['7+iCGx'])
+                        (0, r.jsxs)(c.Kqy, {
+                            gap: K ? 8 : 16,
+                            children: [
+                                (0, r.jsx)('div', { className: O.headerImage }),
+                                (0, r.jsx)(c.X6q, {
+                                    variant: K ? 'heading-lg/semibold' : 'heading-xl/semibold',
+                                    color: 'header-primary',
+                                    children: j.NW.string(j.t['7+iCGx'])
+                                })
+                            ]
                         }),
-                        (0, r.jsx)(c.Text, {
-                            variant: K ? 'text-sm/medium' : 'text-md/medium',
+                        (0, r.jsx)(c.X6q, {
+                            variant: K ? 'heading-sm/medium' : 'heading-md/medium',
                             color: 'text-secondary',
                             children: j.NW.string(j.t.fZMMqK)
                         })
@@ -206,7 +211,7 @@ function _(e) {
             (0, r.jsx)(c.hzk, {
                 className: O.content,
                 children: (0, r.jsxs)(c.Kqy, {
-                    gap: K ? 16 : 24,
+                    gap: K ? 24 : 32,
                     children: [
                         (0, r.jsxs)(c.Kqy, {
                             gap: K ? 8 : 12,
@@ -277,7 +282,7 @@ function _(e) {
                                             ]
                                         }),
                                         (0, r.jsx)(c.Text, {
-                                            variant: K ? 'text-sm/medium' : 'text-md/medium',
+                                            variant: 'text-sm/medium',
                                             color: 'text-secondary',
                                             children: j.NW.string(j.t['2w1sEB'])
                                         })

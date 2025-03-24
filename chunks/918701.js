@@ -37,6 +37,7 @@ n.d(t, {
     _j: () => e8,
     _p: () => ti,
     b7: () => eY,
+    bA: () => td,
     f$: () => tr,
     f2: () => eM,
     fY: () => e3,
@@ -800,3 +801,6 @@ function tc(e) {
     }[e];
 }
 let tu = (e) => (e.percentComplete > 0 ? D.NW.formatToPlainString(D.t['c59/Tk'], { remainTime: eq(e) }) : D.NW.formatToPlainString(D.t.GNsKiY, { remainTime: eq(e) }));
+function td(e, t) {
+    return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
+}
