@@ -599,7 +599,7 @@ class X extends (i = a.PureComponent) {
             { current: u } = this.mediaRef,
             { current: d } = this.playPausePopRef;
         if (null == u) return;
-        o && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), this.checkVideoDecodability(), t.hasClickedPlay && (null == d || d.pop(o))) : !o && t.playing && (u.pause(), null == d || d.pop(o), null == n || n());
+        o && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(o))) : !o && t.playing && (u.pause(), null == d || d.pop(o), null == n || n()), o && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
         let f = (0, I.fn)(u.parentNode, u);
         a && !t.fullscreen && null != f ? ((0, I.Dj)(f), f.addEventListener(I.NO, this.handleFullScreenExit)) : !a && t.fullscreen && null != f && (f.removeEventListener(I.NO, this.handleFullScreenExit), (0, I.Pr)(f)), l === S.Z.Types.DURATION && t.dragging !== S.Z.Types.DURATION && o ? u.pause() : l !== S.Z.Types.DURATION && t.dragging === S.Z.Types.DURATION && o && u.play(), s !== t.muted && ((u.muted = s), null == i || i(s)), c !== t.volume && ((u.volume = c), null == r || r(c));
     }
@@ -961,7 +961,11 @@ class X extends (i = a.PureComponent) {
             ),
             L(this, 'handleEnded', (e) => {
                 let { onEnded: t } = this.props;
-                null != t && t(e);
+                null != t && t(e),
+                    this.setState({
+                        playing: !1,
+                        hideControls: !1
+                    });
             }),
             L(this, 'handleMouseMove', () => {
                 this._lastMove = Date.now();
