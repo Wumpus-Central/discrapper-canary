@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var r = n(570140),
     i = n(661111),
     o = n(147913),
@@ -26,35 +26,40 @@ function f(e, t) {
     for (var [i, { min_version: o }] of Object.entries(e)) o <= t && o > n && ((n = o), (r = i));
     return r;
 }
-class p extends o.Z {
+class _ extends o.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
             d(this, 'handleConnectionOpen', async (e) => {
-                let t = await i.Z.fetchChangelogConfig(),
-                    n = t.body,
-                    o = f(n, (0, c.b)());
-                if (
-                    (r.Z.dispatch({
-                        type: 'CHANGE_LOG_SET_CONFIG',
-                        config: t.body,
-                        latestChangelogId: o
-                    }),
-                    null == o || !0 !== n[o].show_on_startup)
-                )
-                    return;
-                let d = l.Z.lastSeenChangelogId(),
-                    p = l.Z.lastSeenChangelogDate();
-                if (null != d && 0 >= s.default.compare(o, d)) return;
-                let _ = await i.Z.fetchChangelog(o, a.default.locale);
-                if (null != _) {
-                    if (null == p || null == l.Z.lastSeenChangelogDate()) {
-                        i.Z.markChangelogAsSeen(o, _.date);
+                try {
+                    let e = await i.Z.fetchChangelogConfig(),
+                        t = e.body,
+                        n = (0, c.b)(),
+                        o = f(t, n);
+                    if (
+                        (r.Z.dispatch({
+                            type: 'CHANGE_LOG_SET_CONFIG',
+                            config: e.body,
+                            latestChangelogId: o
+                        }),
+                        null == o || !0 !== t[o].show_on_startup)
+                    )
+                        return;
+                    let d = l.Z.lastSeenChangelogId(),
+                        _ = l.Z.lastSeenChangelogDate();
+                    if (null != d && 0 >= s.default.compare(o, d)) return;
+                    let p = await i.Z.fetchChangelog(o, a.default.locale);
+                    if (null == p) return;
+                    if (null == _ || null == l.Z.lastSeenChangelogDate()) {
+                        i.Z.markChangelogAsSeen(o, p.date);
                         return;
                     }
-                    !l.Z.isLocked() && new Date(_.date) > new Date(p) && (0, u.Z)();
+                    if (l.Z.isLocked()) return;
+                    new Date(p.date) > new Date(_) && (0, u.Z)();
+                } finally {
+                    r.Z.dispatch({ type: 'CHANGE_LOG_RESOLVED' });
                 }
             });
     }
 }
-let _ = new p();
+let p = new _();
