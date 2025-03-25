@@ -1,7 +1,7 @@
-n.d(t, { Z: () => f }), n(47120);
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
-    o = n(393238);
+    o = n(259105);
 function a(e, t, n) {
     return (
         t in e
@@ -54,37 +54,28 @@ function c(e, t) {
         e
     );
 }
-let u = {
-        width: '100%',
-        height: '100%',
-        display: 'flex'
-    },
-    d = {
-        width: '100%',
-        height: '100%',
-        flex: 1
-    };
-function f(e) {
+function u(e) {
     return i.forwardRef(function (t, n) {
-        let [a, l] = i.useState(0),
-            { ref: f, width: _, height: p } = (0, o.Z)(a);
+        let a = i.useRef();
         return (
             i.useImperativeHandle(n, () => ({
                 triggerResize: () => {
-                    l((e) => e + 1);
+                    var e;
+                    null === (e = a.current) || void 0 === e || e.onResize();
                 }
             })),
-            (0, r.jsx)('div', {
-                ref: f,
-                style: u,
-                children: (0, r.jsx)(
-                    e,
-                    c(s({}, t), {
-                        width: _,
-                        height: p,
-                        style: d
-                    })
-                )
+            (0, r.jsx)(o.default, {
+                ref: a,
+                children: (n) => {
+                    let { width: i, height: o } = n;
+                    return (0, r.jsx)(
+                        e,
+                        c(s({}, t), {
+                            width: i,
+                            height: o
+                        })
+                    );
+                }
             })
         );
     });

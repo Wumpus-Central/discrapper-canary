@@ -1,183 +1,356 @@
-n.d(t, { Z: () => f }), n(47120), n(653041), n(301563);
-var r = n(392711),
-    i = n.n(r),
-    l = n(442837),
-    o = n(377108),
-    a = n(433517),
-    s = n(709054),
-    c = n(48481),
-    u = n(526761),
-    d = n(981631);
-let p = 'selectedChannelGuildFrecency';
-function h(e) {
-    let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('GIFFavoritesStore', [
-        (e) =>
-            null == e
-                ? {
-                      favorites: [],
-                      timesFavorited: 0
-                  }
-                : Array.isArray(e)
-                  ? {
-                        favorites: e,
-                        timesFavorited: 0
-                    }
-                  : e,
-        (e) =>
-            Array.isArray(e.favorites)
-                ? e
-                : {
-                      favorites: [],
-                      timesFavorited: 0
-                  }
-    ]);
-    return null == t || 0 === t.favorites.length
-        ? []
-        : t.favorites.map((n, r) => {
-              let i = o.JM.create();
-              return (
-                  (i.format = 'IMAGE' === n.format ? o.EO.IMAGE : 'VIDEO' === n.format ? o.EO.VIDEO : o.EO.NONE),
-                  (i.src = n.src),
-                  (i.width = n.width),
-                  (i.height = n.height),
-                  (i.order = t.favorites.length - r + e),
-                  {
-                      url: n.url,
-                      favorite: i
-                  }
-              );
-          });
-}
-let f = [
-    {
-        version: 2,
-        run(e) {
-            let t = h(1);
-            if (0 === t.length) return !1;
-            for (let { url: n, favorite: r } of (null == e.favoriteGifs && (e.favoriteGifs = o.wK.create()), (e.favoriteGifs.gifs = {}), t)) e.favoriteGifs.gifs[n] = r;
-            return (e.favoriteGifs.hideTooltip = t.length > 2), !0;
-        },
-        cleanup() {}
-    },
-    {
-        version: 3,
-        run(e) {
-            function t() {
-                return {
-                    usageHistory: {},
-                    favorites: []
-                };
-            }
-            let { state: n } = l.ZP.PersistedStore.migrateAndReadStoreState('StickersPersistedStore', [(e) => (null == e || 0 === Object.keys(e).length ? t() : e), (e) => (null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e))]);
-            if (null == n) return !1;
-            let r = !1;
-            return n.favorites.length > 0 && ((e.favoriteStickers = o.Lt.create()), (e.favoriteStickers.stickerIds = i().uniq(n.favorites).slice(0, u.oX)), (r = !0)), i().size(n.usageHistory) > 0 && ((e.stickerFrecency = o.ls.create()), (e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100)), (r = !0)), r;
-        },
-        cleanup() {
-            a.K.remove('StickersPersistedStore');
-        }
-    },
-    {
-        version: 4,
-        run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: a.K.get('EmojiUsageHistory') || {} })]);
-            if (null == t) return !1;
-            let n = !1;
-            return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = o.ND.create()), (e.favoriteEmojis.emojis = i().uniq(t.favorites).slice(0, u.oX)), (n = !0)), i().size(t.usageHistory) > 0 && ((e.emojiFrecency = o.PL.create()), (e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100)), (n = !0)), n;
-        },
-        cleanup() {
-            a.K.remove('EmojiStore'), a.K.remove('EmojiUsageHistory'), a.K.remove('EmojiDiversitySurrogate');
-        }
-    },
-    {
-        version: 6,
-        run(e) {
-            null == e.favoriteGifs && (e.favoriteGifs = o.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-            let t = h(1);
-            if (0 === t.length) return !1;
-            i()(e.favoriteGifs.gifs)
-                .values()
-                .sortBy('order')
-                .forEach((e, n) => (e.order = t.length + 1 + n));
-            let n = o.wK.toBinary(e.favoriteGifs).length,
-                r = 0;
-            for (let { url: i, favorite: l } of t) {
-                if (((l.order = t.length - r), r++, i in e.favoriteGifs.gifs)) {
-                    e.favoriteGifs.gifs[i].order = l.order;
-                    continue;
-                }
-                let a = o.JM.toBinary(l).length + i.length + 7;
-                n + a > u.vY || ((n += a), (e.favoriteGifs.gifs[i] = l));
-            }
-            for (n = o.wK.toBinary(e.favoriteGifs).length; n > u.vY; ) {
-                let t = 0;
-                for (let n in e.favoriteGifs.gifs) if ((delete e.favoriteGifs.gifs[n], ++t >= 10)) break;
-                n = o.wK.toBinary(e.favoriteGifs).length;
-            }
-            return !0;
-        },
-        cleanup() {}
-    },
-    {
-        version: 7,
-        run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('ApplicationCommandFrecency', []);
-            if (null == t) return !1;
-            let n = !1;
-            return i().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = o.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500)), (n = !0)), n;
-        },
-        cleanup() {
-            a.K.remove('ApplicationCommandFrecency');
-        }
-    },
-    {
-        version: 8,
-        run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('SoundboardFavoriteStore', []);
-            if (null == t) return !1;
-            let n = !1;
-            return (
-                i().size(t.favoriteSounds) > 0 &&
-                    ((e.favoriteSoundboardSounds = o.h_.create()),
-                    s.default.keys(t.favoriteSounds).forEach((n) => {
-                        new Set(t.favoriteSounds[n]).forEach((t) => {
-                            var n;
-                            null === (n = e.favoriteSoundboardSounds) || void 0 === n || n.soundIds.push(t);
-                        });
-                    }),
-                    (n = !0)),
-                n
-            );
-        },
-        cleanup() {
-            a.K.remove('SoundboardFavoriteStore');
-        }
-    },
-    {
-        version: 9,
-        run(e) {
-            let t = a.K.get(p);
-            if (null == t) return !1;
-            for (let e in t) d.Xyh.test(e) || delete t[e];
-            return (e.guildAndChannelFrecency = o.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, c.tU)(t, 100)), !0;
-        },
-        cleanup() {
-            a.K.remove(p);
-        }
-    },
-    {
-        version: 10,
-        run(e) {
-            var t;
-            if (null == e.emojiFrecency) return !1;
-            let n = null !== (t = e.emojiFrecency.emojis) && void 0 !== t ? t : {},
-                r = !1;
-            if (i().size(n) > 0) {
-                let t = o.PL.create();
-                o.PL.mergePartial(t, e.emojiFrecency), null != e.emojiReactionFrecency && o.PL.mergePartial(t, e.emojiReactionFrecency), (e.emojiReactionFrecency = t), (r = !0);
-            }
-            return r;
-        },
-        cleanup() {}
+var r = n(201694).forEach;
+e.exports = function (e) {
+    var t = (e = e || {}).reporter,
+        n = e.batchProcessor,
+        i = e.stateHandler.getState;
+    e.stateHandler.hasState;
+    var o = e.idHandler;
+    if (!n) throw Error('Missing required dependency: batchProcessor');
+    if (!t) throw Error('Missing required dependency: reporter.');
+    var a = d(),
+        s = 'erd_scroll_detection_scrollbar_style',
+        l = 'erd_scroll_detection_container';
+    function c(e) {
+        f(e, s, l);
     }
-];
+    function u(t) {
+        var n = e.important ? ' !important; ' : '; ';
+        return (t.join(n) + n).trim();
+    }
+    function d() {
+        var e = 500,
+            t = 500,
+            n = document.createElement('div');
+        n.style.cssText = u(['position: absolute', 'width: ' + 2 * e + 'px', 'height: ' + 2 * t + 'px', 'visibility: hidden', 'margin: 0', 'padding: 0']);
+        var r = document.createElement('div');
+        (r.style.cssText = u(['position: absolute', 'width: ' + e + 'px', 'height: ' + t + 'px', 'overflow: scroll', 'visibility: none', 'top: ' + -(3 * e) + 'px', 'left: ' + -(3 * t) + 'px', 'visibility: hidden', 'margin: 0', 'padding: 0'])), r.appendChild(n), document.body.insertBefore(r, document.body.firstChild);
+        var i = e - r.clientWidth,
+            o = t - r.clientHeight;
+        return (
+            document.body.removeChild(r),
+            {
+                width: i,
+                height: o
+            }
+        );
+    }
+    function f(e, t, n) {
+        function r(n, r) {
+            r =
+                r ||
+                function (t) {
+                    e.head.appendChild(t);
+                };
+            var i = e.createElement('style');
+            return (i.innerHTML = n), (i.id = t), r(i), i;
+        }
+        if (!e.getElementById(t)) {
+            var i = n + '_animation',
+                o = n + '_animation_active',
+                a = '/* Created by the element-resize-detector library. */\n';
+            r((a += '.' + n + ' > div::-webkit-scrollbar { ' + u(['display: none']) + ' }\n\n' + ('.' + o + ' { ' + u(['-webkit-animation-duration: 0.1s', 'animation-duration: 0.1s', '-webkit-animation-name: ' + i, 'animation-name: ' + i])) + ' }\n' + ('@-webkit-keyframes ' + i) + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n' + ('@keyframes ' + i) + ' { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }'));
+        }
+    }
+    function _(e) {
+        e.className += ' ' + l + '_animation_active';
+    }
+    function p(e, n, r) {
+        if (e.addEventListener) e.addEventListener(n, r);
+        else {
+            if (!e.attachEvent) return t.error("[scroll] Don't know how to add event listeners.");
+            e.attachEvent('on' + n, r);
+        }
+    }
+    function h(e, n, r) {
+        if (e.removeEventListener) e.removeEventListener(n, r);
+        else {
+            if (!e.detachEvent) return t.error("[scroll] Don't know how to remove event listeners.");
+            e.detachEvent('on' + n, r);
+        }
+    }
+    function m(e) {
+        return i(e).container.childNodes[0].childNodes[0].childNodes[0];
+    }
+    function g(e) {
+        return i(e).container.childNodes[0].childNodes[0].childNodes[1];
+    }
+    return (
+        c(window.document),
+        {
+            makeDetectable: function (e, s, c) {
+                function d() {
+                    if (e.debug) {
+                        var n = Array.prototype.slice.call(arguments);
+                        if ((n.unshift(o.get(s), 'Scroll: '), t.log.apply)) t.log.apply(null, n);
+                        else for (var r = 0; r < n.length; r++) t.log(n[r]);
+                    }
+                }
+                function f(e) {
+                    return (
+                        !(function (e) {
+                            var t = e.getRootNode && e.getRootNode().contains(e);
+                            return e === e.ownerDocument.body || e.ownerDocument.body.contains(e) || t;
+                        })(e) || null === window.getComputedStyle(e)
+                    );
+                }
+                function h(e) {
+                    var t = i(e).container.childNodes[0],
+                        n = window.getComputedStyle(t);
+                    return !n.width || -1 === n.width.indexOf('px');
+                }
+                function E() {
+                    var e = window.getComputedStyle(s),
+                        t = {};
+                    return (t.position = e.position), (t.width = s.offsetWidth), (t.height = s.offsetHeight), (t.top = e.top), (t.right = e.right), (t.bottom = e.bottom), (t.left = e.left), (t.widthCSS = e.width), (t.heightCSS = e.height), t;
+                }
+                function b() {
+                    var e = E();
+                    (i(s).startSize = {
+                        width: e.width,
+                        height: e.height
+                    }),
+                        d('Element start size', i(s).startSize);
+                }
+                function v() {
+                    i(s).listeners = [];
+                }
+                function y() {
+                    if ((d('storeStyle invoked.'), !i(s))) {
+                        d('Aborting because element has been uninstalled');
+                        return;
+                    }
+                    var e = E();
+                    i(s).style = e;
+                }
+                function O(e, t, n) {
+                    (i(e).lastWidth = t), (i(e).lastHeight = n);
+                }
+                function I(e) {
+                    return m(e).childNodes[0];
+                }
+                function S() {
+                    return 2 * a.width + 1;
+                }
+                function T() {
+                    return 2 * a.height + 1;
+                }
+                function A(e) {
+                    return e + 10 + S();
+                }
+                function N(e) {
+                    return e + 10 + T();
+                }
+                function C(e) {
+                    return 2 * e + S();
+                }
+                function R(e) {
+                    return 2 * e + T();
+                }
+                function P(e, t, n) {
+                    var r = m(e),
+                        i = g(e),
+                        o = A(t),
+                        a = N(n),
+                        s = C(t),
+                        l = R(n);
+                    (r.scrollLeft = o), (r.scrollTop = a), (i.scrollLeft = s), (i.scrollTop = l);
+                }
+                function w() {
+                    var e = i(s).container;
+                    if (!e) {
+                        ((e = document.createElement('div')).className = l), (e.style.cssText = u(['visibility: hidden', 'display: inline', 'width: 0px', 'height: 0px', 'z-index: -1', 'overflow: hidden', 'margin: 0', 'padding: 0'])), (i(s).container = e), _(e), s.appendChild(e);
+                        var t = function () {
+                            i(s).onRendered && i(s).onRendered();
+                        };
+                        p(e, 'animationstart', t), (i(s).onAnimationStart = t);
+                    }
+                    return e;
+                }
+                function D() {
+                    function n() {
+                        var n = i(s).style;
+                        if ('static' === n.position) {
+                            s.style.setProperty('position', 'relative', e.important ? 'important' : '');
+                            var r = function (e, t, n, r) {
+                                function i(e) {
+                                    return e.replace(/[^-\d\.]/g, '');
+                                }
+                                var o = n[r];
+                                'auto' !== o && '0' !== i(o) && (e.warn('An element that is positioned static has style.' + r + '=' + o + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + r + ' will be set to 0. Element: ', t), (t.style[r] = 0));
+                            };
+                            r(t, s, n, 'top'), r(t, s, n, 'right'), r(t, s, n, 'bottom'), r(t, s, n, 'left');
+                        }
+                    }
+                    function r(e, t, n, r) {
+                        return ['left: ' + (e = e ? e + 'px' : '0'), 'top: ' + (t = t ? t + 'px' : '0'), 'right: ' + (r = r ? r + 'px' : '0'), 'bottom: ' + (n = n ? n + 'px' : '0')];
+                    }
+                    if ((d('Injecting elements'), !i(s))) {
+                        d('Aborting because element has been uninstalled');
+                        return;
+                    }
+                    n();
+                    var o = i(s).container;
+                    o || (o = w());
+                    var c = a.width,
+                        f = a.height,
+                        _ = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%', 'left: 0px', 'top: 0px']),
+                        h = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(r(-(1 + c), -(1 + f), -f, -c))),
+                        m = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
+                        g = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
+                        E = u(['position: absolute', 'left: 0', 'top: 0']),
+                        b = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                        v = document.createElement('div'),
+                        y = document.createElement('div'),
+                        O = document.createElement('div'),
+                        I = document.createElement('div'),
+                        S = document.createElement('div'),
+                        T = document.createElement('div');
+                    function A() {
+                        var e = i(s);
+                        e && e.onExpand ? e.onExpand() : d('Aborting expand scroll handler: element has been uninstalled');
+                    }
+                    function N() {
+                        var e = i(s);
+                        e && e.onShrink ? e.onShrink() : d('Aborting shrink scroll handler: element has been uninstalled');
+                    }
+                    (v.dir = 'ltr'), (v.style.cssText = _), (v.className = l), (y.className = l), (y.style.cssText = h), (O.style.cssText = m), (I.style.cssText = E), (S.style.cssText = g), (T.style.cssText = b), O.appendChild(I), S.appendChild(T), y.appendChild(O), y.appendChild(S), v.appendChild(y), o.appendChild(v), p(O, 'scroll', A), p(S, 'scroll', N), (i(s).onExpandScroll = A), (i(s).onShrinkScroll = N);
+                }
+                function L() {
+                    function a(t, n, r) {
+                        var i = I(t),
+                            o = A(n),
+                            a = N(r);
+                        i.style.setProperty('width', o + 'px', e.important ? 'important' : ''), i.style.setProperty('height', a + 'px', e.important ? 'important' : '');
+                    }
+                    function l(r) {
+                        var l = s.offsetWidth,
+                            u = s.offsetHeight,
+                            f = l !== i(s).lastWidth || u !== i(s).lastHeight;
+                        d('Storing current size', l, u),
+                            O(s, l, u),
+                            n.add(0, function () {
+                                if (f) {
+                                    if (!i(s)) {
+                                        d('Aborting because element has been uninstalled');
+                                        return;
+                                    }
+                                    if (!c()) {
+                                        d('Aborting because element container has not been initialized');
+                                        return;
+                                    }
+                                    if (e.debug) {
+                                        var n = s.offsetWidth,
+                                            r = s.offsetHeight;
+                                        (n !== l || r !== u) && t.warn(o.get(s), 'Scroll: Size changed before updating detector elements.');
+                                    }
+                                    a(s, l, u);
+                                }
+                            }),
+                            n.add(1, function () {
+                                if (!i(s)) {
+                                    d('Aborting because element has been uninstalled');
+                                    return;
+                                }
+                                if (!c()) {
+                                    d('Aborting because element container has not been initialized');
+                                    return;
+                                }
+                                P(s, l, u);
+                            }),
+                            f &&
+                                r &&
+                                n.add(2, function () {
+                                    if (!i(s)) {
+                                        d('Aborting because element has been uninstalled');
+                                        return;
+                                    }
+                                    if (!c()) {
+                                        d('Aborting because element container has not been initialized');
+                                        return;
+                                    }
+                                    r();
+                                });
+                    }
+                    function c() {
+                        return !!i(s).container;
+                    }
+                    function u() {
+                        function e() {
+                            return void 0 === i(s).lastNotifiedWidth;
+                        }
+                        d('notifyListenersIfNeeded invoked');
+                        var t = i(s);
+                        return e() && t.lastWidth === t.startSize.width && t.lastHeight === t.startSize.height
+                            ? d('Not notifying: Size is the same as the start size, and there has been no notification yet.')
+                            : t.lastWidth === t.lastNotifiedWidth && t.lastHeight === t.lastNotifiedHeight
+                              ? d('Not notifying: Size already notified')
+                              : void (d('Current size not notified, notifying...'),
+                                (t.lastNotifiedWidth = t.lastWidth),
+                                (t.lastNotifiedHeight = t.lastHeight),
+                                r(i(s).listeners, function (e) {
+                                    e(s);
+                                }));
+                    }
+                    function f() {
+                        if ((d('startanimation triggered.'), h(s))) {
+                            d('Ignoring since element is still unrendered...');
+                            return;
+                        }
+                        d('Element rendered.');
+                        var e = m(s),
+                            t = g(s);
+                        (0 === e.scrollLeft || 0 === e.scrollTop || 0 === t.scrollLeft || 0 === t.scrollTop) && (d('Scrollbars out of sync. Updating detector elements...'), l(u));
+                    }
+                    function _() {
+                        if ((d('Scroll detected.'), h(s))) {
+                            d('Scroll event fired while unrendered. Ignoring...');
+                            return;
+                        }
+                        l(u);
+                    }
+                    if ((d('registerListenersAndPositionElements invoked.'), !i(s))) {
+                        d('Aborting because element has been uninstalled');
+                        return;
+                    }
+                    (i(s).onRendered = f), (i(s).onExpand = _), (i(s).onShrink = _);
+                    var p = i(s).style;
+                    a(s, p.width, p.height);
+                }
+                function x() {
+                    if ((d('finalizeDomMutation invoked.'), !i(s))) {
+                        d('Aborting because element has been uninstalled');
+                        return;
+                    }
+                    var e = i(s).style;
+                    O(s, e.width, e.height), P(s, e.width, e.height);
+                }
+                function M() {
+                    c(s);
+                }
+                function k() {
+                    d('Installing...'), v(), b(), n.add(0, y), n.add(1, D), n.add(2, L), n.add(3, x), n.add(4, M);
+                }
+                c || ((c = s), (s = e), (e = null)),
+                    (e = e || {}),
+                    d('Making detectable...'),
+                    f(s)
+                        ? (d('Element is detached'),
+                          w(),
+                          d('Waiting until element is attached...'),
+                          (i(s).onRendered = function () {
+                              d('Element is now attached'), k();
+                          }))
+                        : k();
+            },
+            addListener: function (e, t) {
+                if (!i(e).listeners.push) throw Error('Cannot add listener to an element that is not detectable.');
+                i(e).listeners.push(t);
+            },
+            uninstall: function (e) {
+                var t = i(e);
+                t && (t.onExpandScroll && h(m(e), 'scroll', t.onExpandScroll), t.onShrinkScroll && h(g(e), 'scroll', t.onShrinkScroll), t.onAnimationStart && h(t.container, 'animationstart', t.onAnimationStart), t.container && e.removeChild(t.container));
+            },
+            initDocument: c
+        }
+    );
+};
