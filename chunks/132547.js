@@ -23,11 +23,12 @@ var r = n(200651),
 let O = () => {
     (0, d.z)(c.X), (0, f.u)();
     let e = i.useRef(null),
-        [t, n] = i.useState(!1),
-        { analyticsLocations: O } = (0, o.ZP)(l.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [v, S] = i.useState(!1);
+        t = i.useRef(null),
+        [n, O] = i.useState(!1),
+        { analyticsLocations: v } = (0, o.ZP)(l.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [S, T] = i.useState(!1);
     (0, m.FM)();
-    let T = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
+    let I = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
     return (
         window.history.replaceState({}, '', window.location.pathname),
         (0, r.jsxs)(r.Fragment, {
@@ -38,7 +39,7 @@ let O = () => {
                     children: (0, r.jsx)('div', {
                         className: j.container,
                         children: (0, r.jsxs)(o.Gt, {
-                            value: O,
+                            value: v,
                             children: [
                                 (0, r.jsx)(h.Z, {
                                     className: j.heroHeading,
@@ -49,14 +50,14 @@ let O = () => {
                                     className: j.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
-                                    shouldAutoScroll: T
+                                    shouldAutoScroll: I
                                 }),
                                 (0, r.jsx)(g.Z, {
                                     className: j.perksDiscoverability,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, r.jsx)(b.Z, {
-                                        setIsAllPerksVisible: n,
+                                        setIsAllPerksVisible: O,
                                         previousComponent: x.MQ.HOME
                                     })
                                 }),
@@ -70,10 +71,14 @@ let O = () => {
                                 }),
                                 (0, r.jsx)('div', { className: j.footerSpacing }),
                                 (0, r.jsx)(s.$, {
+                                    innerRef: t,
                                     onChange: (e) => {
-                                        e && !v && (u.default.track(_.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), S(!0));
+                                        e && !S && (u.default.track(_.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), T(!0));
                                     },
-                                    children: (0, r.jsx)('div', { className: j.bottomOfPageVisibilitySensor })
+                                    children: (0, r.jsx)('div', {
+                                        ref: t,
+                                        className: j.bottomOfPageVisibilitySensor
+                                    })
                                 }),
                                 (0, r.jsx)('img', {
                                     src: C,
@@ -87,8 +92,8 @@ let O = () => {
                     })
                 }),
                 (0, r.jsx)(N.Z, {
-                    isAllPerksVisible: t,
-                    setIsAllPerksVisible: n,
+                    isAllPerksVisible: n,
+                    setIsAllPerksVisible: O,
                     previousComponent: x.MQ.HOME
                 })
             ]

@@ -8,12 +8,12 @@ var s,
     c = a(622535),
     d = a(213919),
     u = a(982905),
-    p = a(794010),
-    _ = a(66037),
+    _ = a(794010),
+    p = a(66037),
     h = a(231338),
     m = a(436620),
     N = a(330711),
-    I = a(975018);
+    I = a(151729);
 function g(e, t, a) {
     return (
         t in e
@@ -243,9 +243,9 @@ class f extends (s = l.PureComponent) {
                 children: N.Z.Messages.NAVIGATION_DOWNLOAD
             });
         let d = null != o ? h.$w.REGISTER_WITH_REDIRECT(o) : h.$w.REGISTER,
-            p = N.Z.Messages.COMMON_SIGN_UP_NOW;
+            _ = N.Z.Messages.COMMON_SIGN_UP_NOW;
         return (
-            e && ((d = h.$w.ME), (p = N.Z.Messages.COMMON_OPEN_DISCORD)),
+            e && ((d = h.$w.ME), (_ = N.Z.Messages.COMMON_OPEN_DISCORD)),
             (0, r.jsx)(n, {
                 eventName: k,
                 className: (0, u.l)(I, 'button', this.props.variant),
@@ -254,13 +254,13 @@ class f extends (s = l.PureComponent) {
                     googleAnalytics: !0
                 },
                 href: d,
-                children: p
+                children: _
             })
         );
     }
     render() {
         let { variant: e, style: t, className: s, avoidRouter: l, showWave: i } = this.props,
-            { animateBackground: d, token: p } = this.state,
+            { animateBackground: d, token: _ } = this.state,
             m = A().map((e) => {
                 let t = e.routes.map((e, t) =>
                     e.external
@@ -276,7 +276,7 @@ class f extends (s = l.PureComponent) {
                               e.link || t
                           )
                         : (0, r.jsx)(
-                              _.Z,
+                              p.Z,
                               {
                                   avoidRouter: l,
                                   to: e.link,
@@ -308,8 +308,10 @@ class f extends (s = l.PureComponent) {
                 );
             });
         return (0, r.jsx)(c.$, {
+            innerRef: this.ref,
             onChange: this.handleVisibility,
             children: (0, r.jsxs)('footer', {
+                ref: this.ref,
                 className: o()((0, u.l)(I, 'footer', e), s),
                 style: t,
                 children: [
@@ -358,7 +360,7 @@ class f extends (s = l.PureComponent) {
                                             })
                                         ]
                                     }),
-                                    this.renderAppButton(p)
+                                    this.renderAppButton(_)
                                 ]
                             })
                         ]
@@ -375,13 +377,14 @@ class f extends (s = l.PureComponent) {
                 token: null,
                 isAppCompatible: !0
             }),
+            g(this, 'ref', l.createRef()),
             g(this, 'handleVisibility', (e) => {
                 this.setState({ animateBackground: e });
             }),
             null != e.locale && N.Z.setLocale(e.locale),
             (n = (t) =>
                 (0, r.jsx)(
-                    p.Z,
+                    _.Z,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},

@@ -13,13 +13,13 @@ var r = n(200651),
     d = n(622535),
     u = n(780384),
     m = n(481060),
-    p = n(570140),
-    g = n(355467),
+    g = n(570140),
+    p = n(355467),
     h = n(37234),
     f = n(821849),
-    b = n(230711),
+    x = n(230711),
     N = n(497321),
-    x = n(634894),
+    b = n(634894),
     _ = n(410030),
     E = n(607070),
     j = n(100527),
@@ -61,10 +61,10 @@ function et(e) {
         l = t.planIdFromItems === Y.Xh.PREMIUM_YEAR_TIER_2,
         c = n || a,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        p = Y.GP[t.planIdFromItems],
-        g = w.ZP.formatPriceString(w.ZP.getDefaultPrice(p.id), p.interval);
+        g = Y.GP[t.planIdFromItems],
+        p = w.ZP.formatPriceString(w.ZP.getDefaultPrice(g.id), g.interval);
     if (c) {
-        var h, f, b;
+        var h, f, x;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (a || !l) &&
@@ -81,17 +81,17 @@ function et(e) {
                     children: a
                         ? q.NW.format(q.t['2CGBrq'], {
                               remainingTime: d,
-                              price: g
+                              price: p
                           })
                         : l
                           ? q.NW.format(q.t['+qqh6u'], {
                                 percent: null !== (h = null == i ? void 0 : i.percentage) && void 0 !== h ? h : Y.Bo,
-                                regularPrice: g
+                                regularPrice: p
                             })
                           : q.NW.formatToPlainString(q.t['3Ziutb'], {
                                 percent: null !== (f = null == i ? void 0 : i.percentage) && void 0 !== f ? f : Y.M_,
-                                regularPrice: g,
-                                numMonths: null !== (b = null == i ? void 0 : i.duration) && void 0 !== b ? b : Y.rt
+                                regularPrice: p,
+                                numMonths: null !== (x = null == i ? void 0 : i.duration) && void 0 !== x ? x : Y.rt
                             })
                 })
             ]
@@ -100,7 +100,7 @@ function et(e) {
     return (0, r.jsx)(F.Z, {
         variant: void 0,
         subscriptionTier: Y.Si.TIER_2,
-        interval: p.interval
+        interval: g.interval
     });
 }
 function en() {
@@ -113,9 +113,9 @@ function en() {
         o = null !== i && null !== i.planIdFromItems;
     if (!o && s === Y.a$.NONE) return null;
     let d = s !== Y.a$.NONE && !l,
-        p = null !== i && null != i.trialId;
+        g = null !== i && null != i.trialId;
     return (0, r.jsxs)('div', {
-        className: a()(X.tierCard, { [X.withTier2Rim]: e || p }),
+        className: a()(X.tierCard, { [X.withTier2Rim]: e || g }),
         children: [
             (0, r.jsxs)('div', {
                 className: X.tierInfo,
@@ -189,7 +189,7 @@ function en() {
                                     cta_type: 'to_subscriptions_button',
                                     target: 'subscriptions settings'
                                 }),
-                                    b.Z.open(K.oAB.SUBSCRIPTIONS);
+                                    x.Z.open(K.oAB.SUBSCRIPTIONS);
                             },
                             children: (0, r.jsx)(m.Text, {
                                 className: X.__invalid_managePlanButtonCTA,
@@ -317,36 +317,37 @@ let es = function () {
         [l, o] = i.useState(!0),
         { fractionalState: u } = (0, v.Z)({ forceFetch: !0 }),
         h = (0, B.n)(),
-        b = null == h ? void 0 : h.countryCode,
+        x = null == h ? void 0 : h.countryCode,
         _ = (0, c.e7)([A.Z], () => A.Z.enabled),
-        E = 'PremiumManagementSettings';
-    (0, x.j)({
-        location: E + ' auto on',
+        E = i.useRef(null),
+        y = 'PremiumManagementSettings';
+    (0, b.j)({
+        location: y + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, x.j)({
-            location: E + ' auto off',
+        (0, b.j)({
+            location: y + ' auto off',
             autoTrackExposure: !1
         }),
-        (0, U.B)(E);
-    let y = (0, M.b)(E);
+        (0, U.B)(y);
+    let R = (0, M.b)(y);
     i.useEffect(() => {
-        p.Z.wait(async () => {
-            _ || e || (await Promise.all([g.jg(), g.tZ(), (0, f.Y2)(b, null, K.JjL.DISCOVERY)])), o(!1);
+        g.Z.wait(async () => {
+            _ || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(x, null, K.JjL.DISCOVERY)])), o(!1);
         });
-    }, [b, _, e]);
-    let [R, Z] = i.useState(!1);
+    }, [x, _, e]);
+    let [Z, w] = i.useState(!1);
     if (_) return (0, r.jsx)(N.Z, {});
     if (e) return (0, r.jsx)(T.c8, {});
-    let w = s && null !== n && a,
-        k = u !== Y.a$.NONE;
-    if (!w && !k && !l)
+    let k = s && null !== n && a,
+        W = u !== Y.a$.NONE;
+    if (!k && !W && !l)
         return (0, r.jsx)(I.Z, {
             title: q.NW.string(q.t.dyq9TU),
             note: null
         });
-    if ((!w && !k) || l) return (0, r.jsx)(m.$jN, {});
-    let W = null !== n && null != n.trialId;
+    if ((!k && !W) || l) return (0, r.jsx)(m.$jN, {});
+    let L = null !== n && null != n.trialId;
     return (0, r.jsx)(C.Gt, {
         value: t,
         children: (0, r.jsxs)(r.Fragment, {
@@ -355,23 +356,27 @@ let es = function () {
                     className: X.__invalid_container,
                     children: [
                         (0, r.jsx)(en, {}),
-                        y && (0, r.jsx)(z.Z, { isInSettings: !0 }),
+                        R && (0, r.jsx)(z.Z, { isInSettings: !0 }),
                         (0, r.jsx)(ei, {}),
                         (0, r.jsx)(H.Z, {
                             className: X.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: q.NW.string(q.t.dnVvQU),
-                            hidePill: !W,
+                            hidePill: !L,
                             selectedPlanColumnClassName: X.tier2PlanComparisonTableBackground,
                             selectedPlanTier: Y.p9.TIER_2
                         })
                     ]
                 }),
                 (0, r.jsx)(d.$, {
+                    innerRef: E,
                     onChange: (e) => {
-                        e && !R && (D.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), Z(!0));
+                        e && !Z && (D.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
-                    children: (0, r.jsx)('div', { className: X.bottomOfPageVisibilitySensor })
+                    children: (0, r.jsx)('div', {
+                        ref: E,
+                        className: X.bottomOfPageVisibilitySensor
+                    })
                 })
             ]
         })

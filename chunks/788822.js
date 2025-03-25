@@ -1,48 +1,51 @@
-r.d(t, { q: () => d });
-var n = r(200651);
-r(192379);
-var l = r(622535),
-    i = r(481060),
-    o = r(597688),
-    a = r(297651),
-    s = r(794324),
-    c = r(388032),
-    u = r(39532);
-let d = (e) => {
-    var t, r, d;
-    let p,
-        { category: f, subblock: b, badgeText: h, handleTransition: m } = e;
-    null != b && (p = null === (t = o.Z.getCategoryByStoreListingId(null == b ? void 0 : b.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
-    let C = null !== (r = null != p ? p : null == f ? void 0 : f.skuId) && void 0 !== r ? r : '',
-        { handleCardVisibilityChange: g } = (0, a.E)(C, 'home', 'marketing featured block'),
-        { featuredBlockBanner: v } = (0, s.Y)(f, b);
-    return (0, n.jsx)(l.$, {
-        onChange: g,
+n.d(t, { q: () => g });
+var r = n(200651),
+    l = n(192379),
+    a = n(622535),
+    o = n(481060),
+    s = n(597688),
+    i = n(297651),
+    c = n(794324),
+    d = n(388032),
+    u = n(39532);
+let g = (e) => {
+    var t, n, g;
+    let f,
+        { category: h, subblock: m, badgeText: p, handleTransition: b } = e;
+    null != m && (f = null === (t = s.Z.getCategoryByStoreListingId(null == m ? void 0 : m.categoryStoreListingId)) || void 0 === t ? void 0 : t.skuId);
+    let C = null !== (n = null != f ? f : null == h ? void 0 : h.skuId) && void 0 !== n ? n : '',
+        { handleCardVisibilityChange: _ } = (0, i.E)(C, 'home', 'marketing featured block'),
+        { featuredBlockBanner: v } = (0, c.YG)(h, m),
+        k = l.useRef(null);
+    return (0, r.jsx)(a.$, {
+        innerRef: k,
+        onChange: _,
         threshold: 0,
-        children: (0, n.jsxs)(i.P3F, {
+        children: (0, r.jsxs)(o.P3F, {
             className: u.featuredBlock,
+            innerRef: k,
             style: { backgroundImage: 'url('.concat(v, ')') },
-            onClick: () => m('shop marketing tile', C),
+            onClick: () => b('shop marketing tile', C),
             children: [
-                null != h &&
-                    (0, n.jsx)(i.IGR, {
+                null != p &&
+                    (0, r.jsx)(o.IGR, {
                         disableColor: !0,
-                        text: h,
+                        text: p,
                         className: u.featuredBlockBadge
                     }),
-                (null == b ? void 0 : b.bodyText) != null &&
-                    (0, n.jsx)(i.X6q, {
+                (null == m ? void 0 : m.bodyText) != null &&
+                    (0, r.jsx)(o.X6q, {
                         lineClamp: 4,
                         className: u.featuredBlockBodyText,
-                        style: { color: null !== (d = b.bannerTextColor) && void 0 !== d ? d : 'white' },
+                        style: { color: null !== (g = m.bannerTextColor) && void 0 !== g ? g : 'white' },
                         variant: 'heading-lg/semibold',
-                        children: b.bodyText
+                        children: m.bodyText
                     }),
-                (0, n.jsx)(i.zxk, {
+                (0, r.jsx)(o.zxk, {
                     className: u.featuredBlockButton,
-                    color: i.Ttl.WHITE,
+                    color: o.Ttl.WHITE,
                     onClick: () => {},
-                    children: c.NW.string(c.t.jVcuVV)
+                    children: d.NW.string(d.t.jVcuVV)
                 })
             ]
         })

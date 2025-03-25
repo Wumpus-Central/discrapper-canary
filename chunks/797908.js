@@ -8,20 +8,21 @@ var r = n(200651),
     c = n(768581),
     d = n(956965),
     u = n(388032),
-    p = n(664454);
+    p = n(168867);
 let m = function (e) {
     var t, n, m;
-    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
-        f = null === (t = h.categories) || void 0 === t ? void 0 : t[0],
-        [v, b] = a.useState(!1),
-        x = a.useCallback((e) => {
-            e && b(!0);
+    let { application: h, onSelectApplication: g, showCategory: f = !1 } = e,
+        _ = a.useRef(null),
+        b = null === (t = h.categories) || void 0 === t ? void 0 : t[0],
+        [v, x] = a.useState(!1),
+        C = a.useCallback((e) => {
+            e && x(!0);
         }, []),
-        C = (0, o.lf)(h),
-        j = a.useCallback(() => {
+        j = (0, o.lf)(h),
+        y = a.useCallback(() => {
             g(h.id);
         }, [g, h.id]),
-        y = a.useMemo(
+        O = a.useMemo(
             () =>
                 v
                     ? c.ZP.getApplicationIconURL({
@@ -32,15 +33,17 @@ let m = function (e) {
                     : void 0,
             [v, h]
         ),
-        O = _ && null != f;
+        P = f && null != b;
     return (0, r.jsx)(i.$, {
-        onChange: x,
+        innerRef: _,
+        onChange: C,
         active: !v,
         children: (0, r.jsx)('div', {
+            ref: _,
             className: p.container,
             children: (0, r.jsxs)(s.Z, {
                 className: p.card,
-                onClick: j,
+                onClick: y,
                 onContextMenu: () => {},
                 children: [
                     (0, r.jsxs)('div', {
@@ -56,7 +59,7 @@ let m = function (e) {
                                     ? (0, r.jsx)(d.Z, {
                                           application: h,
                                           bannerType: 'card',
-                                          iconURL: y
+                                          iconURL: O
                                       })
                                     : null
                             }),
@@ -65,7 +68,7 @@ let m = function (e) {
                                 style: { height: 28 },
                                 children: v
                                     ? (0, r.jsx)('img', {
-                                          src: y,
+                                          src: O,
                                           alt: '',
                                           className: p.avatar,
                                           height: 48,
@@ -94,26 +97,26 @@ let m = function (e) {
                                     })
                                 })
                             }),
-                            O || C
+                            P || j
                                 ? (0, r.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
-                                          O
+                                          P
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: f.name
+                                                    children: b.name
                                                 })
                                               : null,
-                                          O && C
+                                          P && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
                                                     children: '\u2022'
                                                 })
                                               : null,
-                                          C
+                                          j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -127,7 +130,7 @@ let m = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: O || C ? 2 : 3,
+                                lineClamp: P || j ? 2 : 3,
                                 children: null !== (m = null === (n = h.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== m ? m : h.description
                             })
                         ]

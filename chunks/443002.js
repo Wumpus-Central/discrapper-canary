@@ -30,16 +30,17 @@ let N = function (e) {
         { analyticsLocations: w } = (0, c.ZP)(),
         D = i.useRef(null),
         L = i.useRef(null),
-        x = i.useCallback(() => {
-            null != L.current &&
-                null != D.current &&
-                D.current.scrollTo({
-                    to: L.current.offsetTop,
+        x = i.useRef(null),
+        M = i.useCallback(() => {
+            null != x.current &&
+                null != L.current &&
+                L.current.scrollTo({
+                    to: x.current.offsetTop,
                     animate: !0
                 });
         }, []),
-        M = (0, u.Ek)(n, 'GuildBoostingMarketing'),
-        k = i.useCallback(() => {
+        k = (0, u.Ek)(n, 'GuildBoostingMarketing'),
+        j = i.useCallback(() => {
             null == N || N(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -50,7 +51,7 @@ let N = function (e) {
                     duration_open_ms: Date.now() - P
                 });
         }, [N, t, w, P, n.id]),
-        j = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 e &&
                     !R.current &&
@@ -77,7 +78,7 @@ let N = function (e) {
         }, [n.id, t, w]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && k();
+                'Escape' === e.key && j();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -85,23 +86,23 @@ let N = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [k]),
+        }, [j]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != N &&
                     (0, r.jsx)(a.P3F, {
                         'aria-label': S.NW.string(S.t.cpT0Cg),
-                        onClick: k,
+                        onClick: j,
                         className: T.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: T.closeIcon,
-                            closeAction: k,
+                            closeAction: j,
                             keybind: 'ESC',
                             variant: s.Z.Variants.SOLID
                         })
                     }),
                 (0, r.jsxs)(a.yWw, {
-                    ref: D,
+                    ref: L,
                     className: T.scroller,
                     children: [
                         (0, r.jsxs)('div', {
@@ -110,11 +111,11 @@ let N = function (e) {
                                 (0, r.jsxs)('div', {
                                     className: T.headerContentWrapper,
                                     children: [
-                                        M &&
+                                        k &&
                                             (0, r.jsx)(d.Z, {
                                                 guild: e.guild,
                                                 themeResponsive: !1,
-                                                onButtonClick: x
+                                                onButtonClick: M
                                             }),
                                         (0, r.jsx)(a.X6q, {
                                             className: T.heading,
@@ -124,7 +125,7 @@ let N = function (e) {
                                         }),
                                         (0, r.jsx)(h.Z, {
                                             guild: n,
-                                            closeLayer: k,
+                                            closeLayer: j,
                                             onCtaVisibilityChange: C
                                         }),
                                         (0, r.jsx)(E.Z, { guild: n }),
@@ -138,11 +139,11 @@ let N = function (e) {
                             className: T.middleBodyContentWrapper,
                             children: [
                                 (0, r.jsx)(y.ZP, { guild: e.guild }),
-                                M &&
+                                k &&
                                     (0, r.jsx)(f.Z, {
-                                        ref: L,
+                                        ref: x,
                                         guild: e.guild,
-                                        onClose: k
+                                        onClose: j
                                     })
                             ]
                         }),
@@ -165,15 +166,19 @@ let N = function (e) {
                             ]
                         }),
                         (0, r.jsx)(o.$, {
-                            onChange: j,
-                            children: (0, r.jsx)('div', { className: T.persistentCtaSpacer })
+                            innerRef: D,
+                            onChange: U,
+                            children: (0, r.jsx)('div', {
+                                ref: D,
+                                className: T.persistentCtaSpacer
+                            })
                         })
                     ]
                 }),
                 (0, r.jsx)(g.Z, {
                     guild: n,
                     isVisible: !A,
-                    closeLayer: k
+                    closeLayer: j
                 })
             ]
         })

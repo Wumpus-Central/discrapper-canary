@@ -1,7 +1,7 @@
 n.d(t, {
-    Eo: () => L,
+    Eo: () => w,
     VD: () => Z,
-    ZP: () => w
+    ZP: () => L
 }),
     n(47120),
     n(266796);
@@ -29,7 +29,7 @@ var r = n(200651),
     I = n(890064),
     C = n(981631),
     S = n(388032),
-    T = n(240922),
+    T = n(734504),
     P = n(129512),
     j = n(330065),
     A = n(755386);
@@ -38,8 +38,9 @@ function Z(e) {
         b = (0, g.Q3)('BaseGlobalDiscoveryServersCard'),
         [_, y] = i.useState(!1),
         [Z, x] = i.useState(!1),
-        [L, w] = i.useState(!1),
-        R = i.useCallback(async () => {
+        [w, L] = i.useState(!1),
+        R = i.useRef(null),
+        D = i.useCallback(async () => {
             x(!0);
             try {
                 await l(t.id);
@@ -54,13 +55,13 @@ function Z(e) {
                 x(!1);
             }
         }, [t.id, l]),
-        D = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 e && !_ && (y(!0), null == a || a(t.id));
             },
             [t.id, _, a]
         ),
-        k = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 858523));
@@ -113,34 +114,34 @@ function Z(e) {
             },
             [t]
         ),
-        M = (0, h.ZP)(),
-        U = t.features.has(C.oNc.HUB),
-        G = i.useMemo(() => {
+        U = (0, h.ZP)(),
+        G = t.features.has(C.oNc.HUB),
+        W = i.useMemo(() => {
             let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, O.x_)()
             });
             if (null != e) return e;
-            if (U) return A;
-            switch (M) {
+            if (G) return A;
+            switch (U) {
                 case C.BRd.DARK:
                     return P;
                 case C.BRd.LIGHT:
                     return j;
             }
-        }, [t.discoverySplash, t.id, U, M]),
-        W = b ? 48 : 40,
-        V = i.useMemo(
+        }, [t.discoverySplash, t.id, G, U]),
+        V = b ? 48 : 40,
+        B = i.useMemo(
             () =>
                 v.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
-                    size: W
+                    size: V
                 }),
-            [t.icon, t.id, W]
+            [t.icon, t.id, V]
         ),
-        B = N.Sb.useSetting();
+        H = N.Sb.useSetting();
     return (0, r.jsxs)('div', {
         className: T.container,
         children: [
@@ -153,28 +154,30 @@ function Z(e) {
                     })
                 }),
             (0, r.jsx)(s.$, {
-                onChange: D,
+                innerRef: R,
+                onChange: k,
                 active: !_,
                 threshold: 0.55,
                 children: (0, r.jsxs)(m.Z, {
+                    ref: R,
                     className: T.card,
-                    onClick: R,
+                    onClick: D,
                     disabled: Z,
-                    onContextMenu: k,
+                    onContextMenu: M,
                     children: [
                         (0, r.jsxs)('div', {
                             className: T.header,
                             children: [
                                 (0, r.jsx)('div', {
-                                    className: o()(T.banner, { [T.loaded]: L }),
+                                    className: o()(T.banner, { [T.loaded]: w }),
                                     children: (0, r.jsx)('img', {
-                                        src: G,
+                                        src: W,
                                         alt: '',
                                         className: T.bannerImage,
-                                        onLoad: () => w(!0)
+                                        onLoad: () => L(!0)
                                     })
                                 }),
-                                B &&
+                                H &&
                                     (0, r.jsx)(I.Z, {
                                         guild: t,
                                         className: T.contextMenu
@@ -183,16 +186,16 @@ function Z(e) {
                                     className: T.icon,
                                     children: (0, r.jsx)(f.ZP, {
                                         mask: f.ZP.Masks.SQUIRCLE,
-                                        width: W + 8,
-                                        height: W + 8,
+                                        width: V + 8,
+                                        height: V + 8,
                                         children: (0, r.jsx)('div', {
                                             className: T.iconMask,
                                             children: (0, r.jsx)(f.ZP, {
                                                 mask: f.ZP.Masks.SQUIRCLE,
-                                                width: W,
-                                                height: W,
+                                                width: V,
+                                                height: V,
                                                 children: (0, r.jsx)('img', {
-                                                    src: V,
+                                                    src: B,
                                                     alt: '',
                                                     className: T.avatar
                                                 })
@@ -276,7 +279,7 @@ function x(e) {
               onView: i
           });
 }
-function L(e) {
+function w(e) {
     let { guildId: t, index: n, onClick: l, onView: o } = e,
         a = i.useRef(null == t),
         s = i.useCallback(
@@ -329,4 +332,4 @@ function L(e) {
         })
     });
 }
-let w = i.memo(x);
+let L = i.memo(x);

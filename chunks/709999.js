@@ -21,7 +21,7 @@ var r = n(200651),
     x = n(607070),
     N = n(100527),
     b = n(906732),
-    _ = n(497578),
+    _ = n(170046),
     E = n(333867),
     j = n(197115),
     C = n(876917),
@@ -413,13 +413,13 @@ let em = (e) => {
                                           }),
                                               (0, er.Z)({
                                                   product: t,
-                                                  analyticsLocations: es
+                                                  analyticsLocations: es,
+                                                  onCloseCallback: () => {
+                                                      (0, v.vp)();
+                                                  }
                                               });
                                       },
-                                      analyticsLocations: es,
-                                      onCloseCallback: () => {
-                                          (0, v.vp)();
-                                      }
+                                      analyticsLocations: es
                                   }),
                                       (0, v.S6)();
                               },
@@ -460,6 +460,7 @@ let em = (e) => {
                   return (0, D.x6)(t) && null != eS && eS.discountPercentage < 0
                       ? null
                       : (0, r.jsx)(p.$, {
+                            innerRef: eu,
                             onChange: eX,
                             threshold: 0,
                             children: (0, r.jsx)(h.tEY, {
@@ -648,7 +649,7 @@ let em = (e) => {
                                         eG || eV || !eZ
                                             ? e6
                                                 ? (0, r.jsx)(h.IGR, {
-                                                      text: el.NW.string(el.t.Q2K5pa),
+                                                      text: el.NW.string(el.t['KUYR+P']),
                                                       disableColor: !0,
                                                       className: eo.badge
                                                   })
