@@ -1,27 +1,29 @@
-n.d(t, { Z: () => w }), n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
-    l = n(596454),
-    s = n(493773),
-    u = n(100527),
-    c = n(318766),
-    d = n(907040),
-    m = n(594174),
-    p = n(626135),
-    h = n(368326),
-    f = n(720449),
-    b = n(684269),
-    j = n(429467),
-    S = n(676035),
-    x = n(926563),
-    v = n(875425),
-    g = n(981631),
+    a = n(120356),
+    o = n.n(a),
+    l = n(442837),
+    s = n(481060),
+    u = n(596454),
+    c = n(493773),
+    d = n(100527),
+    p = n(318766),
+    m = n(907040),
+    h = n(594174),
+    f = n(626135),
+    b = n(368326),
+    j = n(720449),
+    S = n(684269),
+    v = n(429467),
+    x = n(676035),
+    g = n(926563),
+    _ = n(875425),
+    y = n(981631),
     O = n(185923),
-    y = n(388032),
-    _ = n(32533);
-function C(e) {
+    C = n(388032),
+    N = n(32533);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +48,7 @@ function C(e) {
     }
     return e;
 }
-function N(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,34 +66,35 @@ function N(e, t) {
         e
     );
 }
-function w(e) {
+function k(e) {
     var t, n;
-    let { transitionState: w, onClose: P, sourceAnalyticsContext: k, sourceAnalyticsLocations: I, prompt: E = null } = e,
-        T = (0, h.p)({ location: 'CustomStatusModalWithPreview' }),
-        D = (0, a.e7)([m.default], () => {
+    let { transitionState: a, onClose: k, sourceAnalyticsContext: I, sourceAnalyticsLocations: E, prompt: T = null } = e,
+        D = (0, b.p)({ location: 'CustomStatusModalWithPreview' }),
+        B = (0, l.e7)([h.default], () => {
             var e;
-            return null !== (e = m.default.getCurrentUser()) && void 0 !== e ? e : null;
+            return null !== (e = h.default.getCurrentUser()) && void 0 !== e ? e : null;
         }),
-        B = (0, S.a)(),
-        [Z, A] = i.useState(null !== (t = null == B ? void 0 : B.state) && void 0 !== t ? t : ''),
-        [z, M] = i.useState(null !== (n = null == B ? void 0 : B.emoji) && void 0 !== n ? n : null),
-        [W, L] = i.useState((0, b.Z)()),
-        R = i.useRef(null),
-        [U, F] = i.useState(null != E ? E : null),
-        H = T && null != U ? U.label() : y.NW.string(y.t['xod36+']);
+        Z = (0, x.a)(),
+        [A, z] = i.useState(null !== (t = null == Z ? void 0 : Z.state) && void 0 !== t ? t : ''),
+        [M, W] = i.useState(null !== (n = null == Z ? void 0 : Z.emoji) && void 0 !== n ? n : null),
+        [L, R] = i.useState((0, S.Z)()),
+        U = i.useRef(null),
+        [F, H] = i.useState(null != T ? T : null),
+        Y = A.length > 0 || null != M,
+        K = D && null != F ? F.label() : C.NW.string(C.t['xod36+']);
     i.useEffect(() => {
-        p.default.track(g.rMx.OPEN_MODAL, {
-            type: u.Z.CUSTOM_STATUS_MODAL,
-            location_stack: I
+        f.default.track(y.rMx.OPEN_MODAL, {
+            type: d.Z.CUSTOM_STATUS_MODAL,
+            location_stack: E
         });
-    }, [I]),
-        (0, s.ZP)(() => {
+    }, [E]),
+        (0, c.ZP)(() => {
             var e, t;
-            null === (e = R.current) || void 0 === e || e.focus(), null === (t = R.current) || void 0 === t || t.setSelection(Z.length, Z.length);
+            null === (e = U.current) || void 0 === e || e.focus(), null === (t = U.current) || void 0 === t || t.setSelection(A.length, A.length);
         });
-    let Y = (e) => {
+    let q = (e) => {
             null != e &&
-                M(
+                W(
                     null != e.id
                         ? {
                               id: e.id,
@@ -105,195 +108,199 @@ function w(e) {
                           }
                 );
         },
-        K = () => {
-            (0, f.Z)({
-                text: Z,
-                emojiInfo: z,
-                clearAfter: W,
-                analyticsContext: k,
-                prompt: U
+        G = () => {
+            (0, j.Z)({
+                text: A,
+                emojiInfo: M,
+                clearAfter: L,
+                analyticsContext: I,
+                prompt: F
             }),
-                P();
+                k();
         },
-        q = () =>
-            null == z
+        X = () =>
+            null == M
                 ? null
                 : () =>
-                      (0, r.jsx)(l.Z, {
-                          className: _.emoji,
-                          emojiId: z.id,
-                          emojiName: z.name,
-                          animated: !!z.animated
+                      (0, r.jsx)(u.Z, {
+                          className: N.emoji,
+                          emojiId: M.id,
+                          emojiName: M.name,
+                          animated: !!M.animated
                       }),
-        G = T ? y.NW.string(y.t.rp0aho) : y.NW.string(y.t.UcdRn5);
-    return (0, r.jsxs)(o.Y0X, {
-        transitionState: w,
+        V = D ? C.NW.string(C.t.rp0aho) : C.NW.string(C.t.UcdRn5);
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: a,
         children: [
-            (0, r.jsxs)(o.xBx, {
+            (0, r.jsxs)(s.xBx, {
                 separator: !1,
-                className: _.header,
+                className: N.header,
                 children: [
                     (0, r.jsx)('div', {
-                        className: _.headerTitle,
-                        children: (0, r.jsx)(o.X6q, {
+                        className: N.headerTitle,
+                        children: (0, r.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
-                            children: y.NW.string(y.t.Zx4jzM)
+                            children: C.NW.string(C.t.Zx4jzM)
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: _.headerCloseButton,
-                        children: (0, r.jsx)(o.olH, { onClick: P })
+                        className: N.headerCloseButton,
+                        children: (0, r.jsx)(s.olH, { onClick: k })
                     })
                 ]
             }),
-            (0, r.jsxs)(o.hzk, {
+            (0, r.jsxs)(s.hzk, {
                 children: [
-                    null != D &&
+                    null != B &&
                         (0, r.jsx)('div', {
-                            className: _.profilePreview,
-                            children: (0, r.jsx)(x.Z, {
-                                user: D,
-                                previewText: Z,
-                                previewEmoji: z,
-                                placeHolderText: H,
-                                transitionState: w
+                            className: N.profilePreview,
+                            children: (0, r.jsx)(g.Z, {
+                                user: B,
+                                previewText: A,
+                                previewEmoji: M,
+                                placeHolderText: K,
+                                transitionState: a
                             })
                         }),
-                    (0, r.jsx)(o.hjN, {
-                        className: _.formGroup,
-                        titleClassName: _.customStatusInputTitle,
-                        title: (0, r.jsxs)('div', {
-                            className: _.customStatusInputTitleContainer,
-                            children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: 'text-xs/medium',
-                                    children: G
-                                }),
-                                T &&
-                                    (0, r.jsxs)(o.P3F, {
-                                        className: _.needInspiration,
-                                        onClick: () => {
-                                            var e;
-                                            A(''), F((e) => (0, j.Z)(null == e ? void 0 : e.value)), null === (e = R.current) || void 0 === e || e.focus();
-                                        },
-                                        children: [
-                                            (0, r.jsx)(o.$2U, { size: 'xs' }),
-                                            (0, r.jsx)(o.Text, {
-                                                variant: 'text-xs/medium',
-                                                children: y.NW.string(y.t.UH6ieX)
-                                            })
-                                        ]
-                                    })
-                            ]
-                        }),
-                        children: (0, r.jsxs)('div', {
-                            className: _.inputContainer,
-                            children: [
-                                (0, r.jsx)('div', {
-                                    className: _.emojiButtonContainer,
-                                    children: (0, r.jsx)(o.yRy, {
-                                        renderPopout: (e) => {
-                                            let { closePopout: t } = e;
-                                            return (0, r.jsx)(d.Z, {
-                                                closePopout: t,
-                                                onSelectEmoji: (e, n) => {
-                                                    Y(e), n && t();
-                                                },
-                                                pickerIntention: O.Hz.STATUS,
-                                                onNavigateAway: P
-                                            });
-                                        },
-                                        position: 'left',
-                                        animation: o.yRy.Animation.NONE,
-                                        align: 'top',
-                                        children: (e, t) => {
-                                            let { isShown: n } = t;
-                                            return (0, r.jsx)(
-                                                c.Z,
-                                                N(C({}, e), {
-                                                    active: n,
-                                                    className: _.emojiButton,
-                                                    tabIndex: 0,
-                                                    renderButtonContents: q()
-                                                })
-                                            );
-                                        }
-                                    })
-                                }),
-                                (0, r.jsx)(o.Kx8, {
-                                    autosize: !0,
-                                    value: Z,
-                                    maxLength: v.s0,
-                                    rows: 1,
-                                    showRemainingCharacterCount: !1,
-                                    placeholder: null != H ? H : void 0,
-                                    onChange: (e) => {
-                                        A(e);
-                                    },
-                                    onKeyDown: (e) => {
-                                        'Enter' === e.key && K();
-                                    },
-                                    className: _.input,
-                                    inputRef: R
-                                }),
-                                (Z.length > 0 || null != z) &&
+                    (0, r.jsxs)(s.hjN, {
+                        className: N.formGroup,
+                        titleClassName: N.customStatusInputTitle,
+                        title: V,
+                        children: [
+                            (0, r.jsxs)('div', {
+                                className: N.inputContainer,
+                                children: [
                                     (0, r.jsx)('div', {
-                                        className: _.clearButtonWrapper,
-                                        children: (0, r.jsx)(o.zxk, {
-                                            focusProps: {
-                                                offset: {
-                                                    top: 8,
-                                                    bottom: 8,
-                                                    left: -2,
-                                                    right: -2
-                                                }
+                                        className: N.emojiButtonContainer,
+                                        children: (0, r.jsx)(s.yRy, {
+                                            renderPopout: (e) => {
+                                                let { closePopout: t } = e;
+                                                return (0, r.jsx)(m.Z, {
+                                                    closePopout: t,
+                                                    onSelectEmoji: (e, n) => {
+                                                        q(e), n && t();
+                                                    },
+                                                    pickerIntention: O.Hz.STATUS,
+                                                    onNavigateAway: k
+                                                });
                                             },
-                                            className: _.clearButton,
-                                            onClick: () => {
-                                                A(''), M(null);
-                                            },
-                                            look: o.zxk.Looks.BLANK,
-                                            size: o.zxk.Sizes.NONE,
-                                            children: (0, r.jsx)(o.k$p, {
-                                                size: 'md',
-                                                color: 'currentColor',
-                                                className: _.clearIcon
+                                            position: 'left',
+                                            animation: s.yRy.Animation.NONE,
+                                            align: 'top',
+                                            children: (e, t) => {
+                                                let { isShown: n } = t;
+                                                return (0, r.jsx)(
+                                                    p.Z,
+                                                    P(w({}, e), {
+                                                        active: n,
+                                                        className: N.emojiButton,
+                                                        tabIndex: 0,
+                                                        renderButtonContents: X()
+                                                    })
+                                                );
+                                            }
+                                        })
+                                    }),
+                                    (0, r.jsx)(s.Kx8, {
+                                        autosize: !0,
+                                        value: A,
+                                        maxLength: _.s0,
+                                        rows: 1,
+                                        showRemainingCharacterCount: !1,
+                                        placeholder: null != K ? K : void 0,
+                                        onChange: (e) => {
+                                            z(e);
+                                        },
+                                        onKeyDown: (e) => {
+                                            'Enter' === e.key && G();
+                                        },
+                                        className: N.input,
+                                        inputRef: U
+                                    }),
+                                    (A.length > 0 || null != M) &&
+                                        (0, r.jsx)('div', {
+                                            className: N.clearButtonWrapper,
+                                            children: (0, r.jsx)(s.zxk, {
+                                                focusProps: {
+                                                    offset: {
+                                                        top: 8,
+                                                        bottom: 8,
+                                                        left: -2,
+                                                        right: -2
+                                                    }
+                                                },
+                                                className: N.clearButton,
+                                                onClick: () => {
+                                                    z(''), W(null);
+                                                },
+                                                look: s.zxk.Looks.BLANK,
+                                                size: s.zxk.Sizes.NONE,
+                                                children: (0, r.jsx)(s.k$p, {
+                                                    size: 'md',
+                                                    color: 'currentColor',
+                                                    className: N.clearIcon
+                                                })
                                             })
                                         })
-                                    })
-                            ]
-                        })
+                                ]
+                            }),
+                            D &&
+                                (0, r.jsxs)(s.P3F, {
+                                    ignoreKeyPress: Y,
+                                    'aria-disabled': Y,
+                                    className: o()(N.needInspiration, Y && N.needInspirationDisabled),
+                                    onClick: Y
+                                        ? void 0
+                                        : () => {
+                                              let e = (0, v.Z)(null == F ? void 0 : F.value);
+                                              f.default.track(y.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
+                                                  previous_prompt_type: null == F ? void 0 : F.value,
+                                                  new_prompt_type: null == e ? void 0 : e.value,
+                                                  location_stack: E
+                                              }),
+                                                  z(''),
+                                                  H(e);
+                                          },
+                                    children: [
+                                        (0, r.jsx)(s.$2U, { size: 'xs' }),
+                                        (0, r.jsx)(s.Text, {
+                                            variant: 'text-xs/medium',
+                                            children: C.NW.string(C.t.UH6ieX)
+                                        })
+                                    ]
+                                })
+                        ]
                     })
                 ]
             }),
-            (0, r.jsx)(o.mzw, {
+            (0, r.jsx)(s.mzw, {
                 children: (0, r.jsxs)('div', {
-                    className: _.footer,
+                    className: N.footer,
                     children: [
                         (0, r.jsx)('div', {
-                            className: _.clearAfterSelectContainer,
-                            children: (0, r.jsx)(o.q4e, {
-                                maxVisibleItems: v.Q9.length,
-                                value: W,
-                                options: v.Q9.map((e) =>
-                                    N(C({}, e), {
+                            className: N.clearAfterSelectContainer,
+                            children: (0, r.jsx)(s.q4e, {
+                                maxVisibleItems: _.Q9.length,
+                                value: L,
+                                options: _.Q9.map((e) =>
+                                    P(w({}, e), {
                                         key: e.value,
                                         value: e.value,
                                         label: e.label()
                                     })
                                 ),
-                                onChange: L,
-                                look: o.qQH.CUSTOM,
+                                onChange: R,
+                                look: s.qQH.CUSTOM,
                                 popoutWidth: 200,
                                 popoutPosition: 'right'
                             })
                         }),
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(s.zxk, {
                             type: 'submit',
-                            size: o.zxk.Sizes.MEDIUM,
-                            color: o.zxk.Colors.BRAND,
-                            onClick: K,
-                            children: y.NW.string(y.t.R3BPHx)
+                            size: s.zxk.Sizes.MEDIUM,
+                            color: s.zxk.Colors.BRAND,
+                            onClick: G,
+                            children: C.NW.string(C.t.R3BPHx)
                         })
                     ]
                 })
