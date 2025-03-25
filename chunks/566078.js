@@ -1,7 +1,8 @@
-n.d(t, { r: () => c }), n(411104), n(47120);
-var r = n(319245),
-    i = n(918701);
-function o(e, t, n) {
+n.d(t, { r: () => u }), n(411104), n(47120);
+var r = n(742635),
+    i = n(319245),
+    o = n(918701);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,12 +26,12 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -42,21 +43,21 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class c {
+class u {
     static build(e) {
         if (2 !== e.configVersion) throw Error('Cannot build SharedQuestFields when [configVersion !== 2]');
-        return new c(e);
+        return new u(e);
     }
     get features() {
         return new Set(this.quest.features);
@@ -74,15 +75,18 @@ class c {
         return this.quest.rewardsConfig.rewardsExpireAt;
     }
     get application() {
-        return l(a({}, this.quest.application), { ids: [this.quest.application.id] });
+        return c(s({}, this.quest.application), { ids: [this.quest.application.id] });
     }
     get rewardPlatforms() {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, i.q8)({ config: this.quest }) ? r.W.VIDEO : r.W.GAMEPLAY;
+        return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
+    }
+    get defaultInGameTask() {
+        return this.quest.taskConfig.type !== r.L.THIRD_PARTY || 0 === Object.keys(this.quest.taskConfig.tasks).length ? null : Object.values(this.quest.taskConfig.tasks)[0];
     }
     constructor(e) {
-        o(this, 'quest', void 0), (this.quest = e);
+        a(this, 'quest', void 0), (this.quest = e);
     }
 }

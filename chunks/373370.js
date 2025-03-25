@@ -163,7 +163,7 @@ function T(e, t, n, r) {
         r
     );
 }
-function N(e) {
+function A(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
         o = d.r.build(t.config).defaultReward.messages.nameWithArticle;
@@ -176,7 +176,7 @@ function N(e) {
         r
     );
 }
-function A(e) {
+function N(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: o, collectibleRewardDuration: a } = e,
         s = d.r.build(n.config).defaultReward.messages.nameWithArticle,
@@ -227,32 +227,35 @@ function C(e) {
                     },
                     i
                 );
+            case 3:
+                let f = d.r.build(t.config).defaultInGameTask;
+                if (null != f) return f.description;
         }
-    let d = (0, a.I5)(s, _.p9.TIER_2),
-        f = (0, l.Kr)(t.config);
+    let h = (0, a.I5)(s, _.p9.TIER_2),
+        m = (0, l.Kr)(t.config);
     if ((0, l.$J)(t) && (0, l.$H)(t))
         return y({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: d,
-            collectibleRewardDuration: f
+            hasNitro: h,
+            collectibleRewardDuration: m
         });
     if ((0, l.$J)(t))
         return O({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: d,
-            collectibleRewardDuration: f
+            hasNitro: h,
+            collectibleRewardDuration: m
         });
     if ((0, l.$H)(t))
         return I({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: d,
-            collectibleRewardDuration: f
+            hasNitro: h,
+            collectibleRewardDuration: m
         });
     if ((0, l.oo)({ quest: t }))
         return S({
@@ -260,21 +263,21 @@ function C(e) {
             taskDetails: n,
             withoutMarkdown: i
         });
-    if ((0, l.q8)(t)) return T(t, f, d, i);
+    if ((0, l.q8)(t)) return T(t, m, h, i);
     else if ((0, l.pO)(t))
-        return N({
+        return A({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i
         });
     return null != r
         ? r.description
-        : A({
+        : N({
               quest: t,
               taskDetails: n,
               withoutMarkdown: i,
-              hasNitro: d,
-              collectibleRewardDuration: f
+              hasNitro: h,
+              collectibleRewardDuration: m
           });
 }
 let R = (e) => {
@@ -301,18 +304,20 @@ function w(e) {
             quest: t,
             questContent: r
         }),
-        l = (0, i.e7)([o.default], () => o.default.getCurrentUser());
+        l = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        u = (0, s.Jf)(t);
     return P(
         E(m({}, e), {
             connectedConsoleLinkOnClick: a,
             withoutMarkdown: !1,
             withSimplifiedCopy: (0, c.j)({ location: n }),
-            currentUser: l
+            currentUser: l,
+            thirdPartyTaskDetails: null != u ? u : void 0
         })
     );
 }
 function D(e) {
-    return (0, l.$J)(e) || (0, l.pO)(e) ? 0 : (0, l.Dr)({ quest: e }) ? 1 : 2 * !!(0, l.q8)(e);
+    return (0, l.$J)(e) || (0, l.pO)(e) ? 0 : (0, l.Dr)({ quest: e }) ? 1 : (0, l.q8)(e) ? 2 : 3 * !!(0, l.Vl)(e);
 }
 function L(e) {
     return r.useMemo(() => D(e), [e]);
@@ -331,6 +336,8 @@ function x(e) {
             return o ? p.NW.string(p.t.hyrGU1) : p.NW.string(p.t.l7E81t);
         case 2:
             return p.NW.string(p.t.umdNio);
+        case 3:
+            return t.config.features.includes(f.S7.START_QUEST_CTA) ? p.NW.string(p.t.E80Bdn) : p.NW.string(p.t.l7E81t);
     }
 }
 function M(e) {
