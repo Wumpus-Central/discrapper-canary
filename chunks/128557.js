@@ -82,23 +82,16 @@ function D(e, t) {
     );
 }
 function W(e) {
-    let { className: t, iconUrl: n, icon: l, header: a, completed: c, onClick: d } = e,
-        [h, f] = i.useState(!1),
-        m = (0, p.Z)(c),
-        g = (0, s.e7)([y.default], () => {
-            var e, t;
-            return null !== (t = null === (e = y.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
-        });
+    let { className: t, iconUrl: n, icon: l, header: a, completed: s, onClick: c } = e,
+        [d, h] = i.useState(!1),
+        f = (0, p.Z)(s);
     return (
         i.useEffect(() => {
-            null != m && c !== m && (f(!0), setTimeout(() => f(!1), 1000));
-        }, [c, m]),
+            null != f && s !== f && (h(!0), setTimeout(() => h(!1), 1000));
+        }, [s, f]),
         (0, r.jsxs)(u.P3F, {
-            className: o()(t, T.card, {
-                [T.completed]: c,
-                [T.staff]: g
-            }),
-            onClick: d,
+            className: o()(t, T.card, { [T.completed]: s }),
+            onClick: c,
             children: [
                 null != l
                     ? l
@@ -109,21 +102,18 @@ function W(e) {
                       }),
                 (0, r.jsx)(u.Text, {
                     color: 'header-primary',
-                    className: o()(T.cardTextContainer, T.cardHeader, { [T.staff]: g }),
+                    className: o()(T.cardTextContainer, T.cardHeader),
                     variant: 'text-sm/normal',
                     children: a
                 }),
-                c
+                s
                     ? (0, r.jsx)(u.dz2, {
                           size: 'md',
                           color: 'currentColor',
-                          className: o()(T.checkmark, {
-                              [T.animate]: h,
-                              [T.staff]: g
-                          })
+                          className: o()(T.checkmark, { [T.animate]: d })
                       })
                     : (0, r.jsx)(x.Z, {
-                          className: o()(T.arrow, { [T.staff]: g }),
+                          className: T.arrow,
                           direction: x.Z.Directions.RIGHT
                       })
             ]
@@ -135,8 +125,8 @@ function U(e) {
         l = (0, s.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && N.default.extractTimestamp(l.id) < Date.now() - P._8R,
         x = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
-        { canInvite: U, canManageGuild: B, canMessage: H } = (0, m.TE)(t, l),
-        F = (0, s.e7)([y.default], () => {
+        { canInvite: U, canManageGuild: B, canMessage: F } = (0, m.TE)(t, l),
+        H = (0, s.e7)([y.default], () => {
             var e, t;
             return (null === (e = y.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
@@ -155,7 +145,7 @@ function U(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e('7654'), n.e('6680')]).then(n.bind(n, 560114));
+                                let { default: t } = await Promise.all([n.e('7654'), n.e('6377')]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, r.jsx)(
                                         t,
@@ -205,7 +195,7 @@ function U(e) {
                             action: S.j7.ADD_APP
                         }),
                         (0, u.ZDy)(async () => {
-                            let { default: t } = await n.e('77875').then(n.bind(n, 657300));
+                            let { default: t } = await n.e('77046').then(n.bind(n, 272509));
                             return (n) => {
                                 var i;
                                 return (0, r.jsx)(t, D(L({ guildId: null !== (i = e.id) && void 0 !== i ? i : '' }, n), { analyticsType: c.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL }));
@@ -214,7 +204,7 @@ function U(e) {
                 }, [e])
             };
         })(l),
-        J = !(F || G || V || z),
+        J = !(H || G || V || z),
         { titleAnimatedStyle: $, opacities: ee } = (function (e) {
             let t = (0, d.Z)(() => new a.Z.Value(0)),
                 n = (0, d.Z)(() => new a.Z.Value(0)),
@@ -272,11 +262,7 @@ function U(e) {
         })(J),
         [et, en] = i.useState([]),
         er = et.length > 0,
-        ei = (0, f.Q3)('WelcomeArea'),
-        el = (0, s.e7)([y.default], () => {
-            var e, t;
-            return null !== (t = null === (e = y.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
-        });
+        ei = (0, f.Q3)('WelcomeArea');
     if (
         (i.useEffect(() => {
             (async () => {
@@ -290,15 +276,15 @@ function U(e) {
         null == l)
     )
         return null;
-    let eo = [];
+    let el = [];
     p ||
         (U &&
-            eo.push(
+            el.push(
                 (0, r.jsx)(
                     a.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: J ? { opacity: ee[eo.length] } : {},
+                        style: J ? { opacity: ee[el.length] } : {},
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.YvY : R,
                             header: Z.NW.string(Z.t.q9n0TU),
@@ -310,12 +296,12 @@ function U(e) {
                 )
             ),
         B &&
-            eo.push(
+            el.push(
                 (0, r.jsx)(
                     a.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: J ? { opacity: ee[eo.length] } : {},
+                        style: J ? { opacity: ee[el.length] } : {},
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.$_T : M,
                             header: Z.NW.string(Z.t.c5kxPj),
@@ -326,13 +312,13 @@ function U(e) {
                     'customize'
                 )
             ),
-        H &&
-            eo.push(
+        F &&
+            el.push(
                 (0, r.jsx)(
                     a.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: J ? { opacity: ee[eo.length] } : {},
+                        style: J ? { opacity: ee[el.length] } : {},
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.qMX : k,
                             header: Z.NW.string(Z.t['SoP7+v']),
@@ -344,28 +330,28 @@ function U(e) {
                 )
             ),
         (0, E.isWeb)() &&
-            eo.push(
+            el.push(
                 (0, r.jsx)(
                     a.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: J ? { opacity: ee[eo.length] } : {},
+                        style: J ? { opacity: ee[el.length] } : {},
                         children: (0, r.jsx)(W, {
                             iconUrl: ei ? u.yIb : w,
                             header: Z.NW.string(Z.t.pGVNIy),
-                            completed: F,
+                            completed: H,
                             onClick: X
                         })
                     },
                     'download'
                 )
             ),
-        eo.push(
+        el.push(
             (0, r.jsx)(
                 a.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: J ? { opacity: ee[eo.length] } : {},
+                    style: J ? { opacity: ee[el.length] } : {},
                     children: (0, r.jsx)(W, {
                         iconUrl: ei ? u.vdZ : A,
                         header: Z.NW.string(Z.t.IhHDEB),
@@ -376,9 +362,9 @@ function U(e) {
                 'addapp'
             )
         ));
-    let ea = x ? Z.NW.string(Z.t['1ach9P']) : Z.NW.string(Z.t['ezm+/v']);
-    p && (ea = Z.NW.string(Z.t['gwyU/P']));
-    let es = ''.concat(O.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    let eo = x ? Z.NW.string(Z.t['1ach9P']) : Z.NW.string(Z.t['ezm+/v']);
+    p && (eo = Z.NW.string(Z.t['gwyU/P']));
+    let ea = ''.concat(O.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
     return (0, r.jsx)(I.ZP, {
         channelId: t.id,
         children: (0, r.jsx)('div', {
@@ -391,21 +377,21 @@ function U(e) {
                         children: [
                             (0, r.jsx)(u.X6q, {
                                 className: T.titleName,
-                                variant: ei && el ? 'heading-xxl/medium' : 'heading-xxl/bold',
+                                variant: ei ? 'heading-xxl/medium' : 'heading-xxl/bold',
                                 children: Z.NW.format(Z.t.rkHVKS, { guildName: l.name })
                             }),
                             (0, r.jsxs)(u.Text, {
                                 color: 'header-secondary',
                                 className: o()({
                                     [T.subtitle]: !0,
-                                    [T.noChildren]: 0 === eo.length
+                                    [T.noChildren]: 0 === el.length
                                 }),
                                 variant: 'text-sm/normal',
-                                children: [ea, ' ', eo.length > 0 ? Z.NW.format(Z.t.UOtD39, { guideURL: es }) : null]
+                                children: [eo, ' ', el.length > 0 ? Z.NW.format(Z.t.UOtD39, { guideURL: ea }) : null]
                             })
                         ]
                     }),
-                    eo
+                    el
                 ]
             })
         })
