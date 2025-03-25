@@ -1,8 +1,7 @@
 e.exports = {
     container: 'container_ca1a02',
-    whatsNew: 'whatsNew_ca1a02',
-    whatsNewWithOriginalHeroHeading: 'whatsNewWithOriginalHeroHeading_ca1a02',
     perksDiscoverability: 'perksDiscoverability_ca1a02',
+    whatsNew: 'whatsNew_ca1a02',
     giftNitro: 'giftNitro_ca1a02',
     seeAllPerksButton: 'seeAllPerksButton_ca1a02',
     seeAllPerksButtonContent: 'seeAllPerksButtonContent_ca1a02',
