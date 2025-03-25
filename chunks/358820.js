@@ -1,7 +1,7 @@
 n.d(t, {
     fz: () => I,
-    ge: () => N,
-    r5: () => A,
+    ge: () => A,
+    r5: () => N,
     rk: () => S,
     wV: () => T
 }),
@@ -101,7 +101,7 @@ function I(e) {
                 (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD)
                     ? y.info('User canceled the download for Voice Filter dependency', e)
                     : (y.error('Failed to fetch voice filter model', E({ reason: t }, e)),
-                      f.Z.captureMessage('Failed to fetch voice filter model', {
+                      f.Z.captureException(Error('Failed to fetch voice filter model', { cause: t }), {
                           tags: { modelId: r },
                           extra: { reason: t }
                       })),
@@ -161,10 +161,10 @@ async function T() {
         O = !1;
     }
 }
-function N() {
+function A() {
     s.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
-async function A() {
+async function N() {
     if (!(h.Z.isNativeModuleLoaded() || h.Z.isNativeModuleLoading() || __OVERLAY__)) {
         if (!(0, d.isWindows)() && !(0, d.isMac)()) {
             s.Z.dispatch({
@@ -192,8 +192,7 @@ async function A() {
                 (null === (e = h.Z.getVoiceFilter(n)) || void 0 === e ? void 0 : e.available) !== !0 ? (0, p.v6)(null) : (0, p.v6)(n);
             }
             c.Z.getMediaEngine().on(a.aB.VoiceFiltersFailed, (e) => {
-                let t = 'Voice Filters failed in process: '.concat(e);
-                y.warn(t), f.Z.captureMessage(t);
+                y.warn('Voice Filters failed in process: '.concat(e)), f.Z.captureException(Error('Voice Filters failed in process', { cause: e }));
             });
         } catch (e) {
             y.warn('Failed to load Voice Filters module: '.concat(e.message)),

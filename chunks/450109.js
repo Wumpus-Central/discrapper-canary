@@ -1,8 +1,9 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p }), n(653041), n(47120);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    o = n(570140),
+    a = n(65154);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,19 +16,33 @@ function a(e, t, n) {
         e
     );
 }
-let s = [],
-    l = [];
-function c(e) {
+let l = 30,
+    c = [],
+    u = [],
+    d = {
+        [a.Yn.DEFAULT]: [],
+        [a.Yn.STREAM]: []
+    };
+function f(e) {
     let { connectionStats: t } = e;
-    (l = s), (s = t);
+    for (let e of ((u = c), (c = t), t)) {
+        let t = e.connection.context;
+        d[t].push(e.stats), d[t].length > l && d[t].shift();
+    }
 }
-class u extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getConnectionStats() {
-        return s;
+        return c;
     }
     getLastConnectionStats() {
-        return l;
+        return u;
+    }
+    getStatsHistory(e) {
+        return d[e];
+    }
+    resetStatsHistory(e) {
+        d[e] = [];
     }
 }
-a(u, 'displayName', 'MediaEngineStatsStore');
-let d = new u(o.Z, { MEDIA_ENGINE_CONNECTION_STATS: c });
+s(_, 'displayName', 'MediaEngineStatsStore');
+let p = new _(o.Z, { MEDIA_ENGINE_CONNECTION_STATS: f });

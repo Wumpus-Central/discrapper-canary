@@ -2375,6 +2375,11 @@ var N =
     (r.APP_EMBED_CLICKED = 'app_embed_clicked'),
     (r.APP_EMBED_LINK_COPIED = 'app_embed_link_copied'),
     (r.APP_EMBED_LINK_SENT = 'app_embed_link_sent'),
+    (r.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED = 'chat_wallpaper_dm_context_menu_entry_point_clicked'),
+    (r.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED = 'chat_wallpaper_toolbar_entry_point_clicked'),
+    (r.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED = 'chat_wallpaper_picker_blur_toggled'),
+    (r.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED = 'chat_wallpaper_picker_cancel_clicked'),
+    (r.CHAT_WALLPAPER_PICKER_APPLY_CLICKED = 'chat_wallpaper_picker_apply_clicked'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),
