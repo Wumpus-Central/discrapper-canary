@@ -53,7 +53,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function v(e, t) {
         e
     );
 }
-function b(e) {
+function v(e) {
     return (null != e ? e : h.Qx) / h.Qx;
 }
 function y(e, t, n) {
@@ -209,10 +209,10 @@ class O extends a.Z {
         return Promise.resolve();
     }
     setInputVolume(e) {
-        (0, d.zS)().setInputVolume(b(e));
+        (0, d.zS)().setInputVolume(v(e));
     }
     setOutputVolume(e) {
-        (0, d.zS)().setOutputVolume(b(e));
+        (0, d.zS)().setOutputVolume(v(e));
     }
     getAudioInputDevices() {
         return (0, u.Hg)();
@@ -300,9 +300,9 @@ class O extends a.Z {
                     width: o,
                     height: a
                 });
-        let [E, v] = null != l ? l.split(':') : ['', ''];
+        let [E, b] = null != l ? l.split(':') : ['', ''];
         n.setClipsSource({
-            id: v,
+            id: b,
             soundshareId: null != c ? c : 0
         });
     }
@@ -322,7 +322,7 @@ class O extends a.Z {
         return new Promise((n) => {
             null != (0, d.zS)().getScreenPreviews
                 ? (0, d.zS)().getScreenPreviews(e, t, (e) => {
-                      n(e.map((e, t) => v(g({}, e), { name: 'Screen ' + (t + 1) })));
+                      n(e.map((e, t) => b(g({}, e), { name: 'Screen ' + (t + 1) })));
                   })
                 : n([]);
         });
@@ -435,6 +435,10 @@ class O extends a.Z {
                       automaticGainControl: t.automaticGainControl,
                       noiseCancellation: t.noiseCancellation
                   });
+    }
+    setMaybePreprocessMute(e) {
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setMaybePreprocessMute) || void 0 === t || t.call(n, e);
     }
     getLoopback() {
         return !1;
