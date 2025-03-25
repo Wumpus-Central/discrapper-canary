@@ -2865,4 +2865,13 @@ Object.freeze({
     d.pK.MYR,
     d.pK.VND,
     d.pK.KRW,
-    d.pK.IDR;
+    d.pK.IDR,
+    Object.freeze({
+        APPLICATIONS: (t) => (null == t ? null : ['applications', t]),
+        APP_PREMIUM_BUTTON: (t) => (null == t ? null : ['premium-button', t]),
+        CUSTOM_ACTIVITY_LINK: (t, e) => (null == t || null == e ? null : ['custom-activity-links', t, e]),
+        SKU: (t) => (null == t ? null : ['SKU', t]),
+        STORE_LISTING: (t) => (null == t ? null : ['store-listing', t]),
+        SUBSCRIPTION_PLANS: (t) => (null == t ? null : ['subscription-plans', t]),
+        __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (t) => (null == t ? null : ['useParentSkuData', t])
+    });

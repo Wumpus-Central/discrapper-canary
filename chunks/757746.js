@@ -1,10 +1,11 @@
-t.d(r, { Z: () => o });
-var n = t(442837),
-    l = t(558381),
-    s = t(551428);
-let o = (0, n.Kb)(s.Z, {
-    queryId: (e) => (null != e ? ['storeListing', e] : null),
-    get: (e) => (null != e ? s.Z.getForSKU(e) : null),
-    load: (e, r) => (null != r ? (0, l.km)(r) : Promise.resolve()),
-    useStateHook: n.e7
+l.d(n, { Z: () => a });
+var t = l(442837),
+    r = l(558381),
+    i = l(551428),
+    s = l(981631);
+let a = (0, t.Kb)(i.Z, {
+    queryId: (e) => s.McO.STORE_LISTING(e),
+    get: (e) => (null != e ? i.Z.getForSKU(e) : null),
+    load: (e, n) => (null != n ? (0, r.km)(n) : Promise.resolve()),
+    useStateHook: t.e7
 });

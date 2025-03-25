@@ -93,7 +93,7 @@ class _ {
 }
 let p = new _(),
     h = 5;
-class g extends Error {
+class m extends Error {
     setStatus(e) {
         this.status = e;
     }
@@ -101,14 +101,14 @@ class g extends Error {
         super(...e), u(this, 'name', 'HTTPResponseError'), u(this, 'status', 0);
     }
 }
-function m(e) {
+function g(e) {
     if (e instanceof Error) return e;
     if ('object' == typeof e) {
         if ('body' in e && null != e.body && 'message' in e.body) {
-            let t = new g(String(e.body.message));
+            let t = new m(String(e.body.message));
             return t.setStatus(e.status), t;
         }
-        let t = new g(
+        let t = new m(
             Object.entries(e)
                 .map((e, t) => ''.concat(e, ': [').concat(String(t), ']'))
                 .join(',')
@@ -125,11 +125,13 @@ function E(e, t) {
             _ = c(Array.isArray(e) ? e : [e], () => o(...u), u),
             h = p.getState(f),
             E = h.error,
-            v = !0 === h.isLoading,
-            b = (0, r.useRef)(u);
-        b.current = u;
+            b = !0 === h.isLoading,
+            v = (0, r.useRef)(u);
+        (0, r.useEffect)(() => {
+            v.current = u;
+        }, [u]);
         let y = (0, r.useCallback)(() => {
-            if (null == f || !0 === v) return;
+            if (null == f || !0 === b) return;
             let e = !1;
             c === i.Wu ? _.length > 0 && (e = !0) : null != _ && (e = !0);
             let t = p.doesDataNeedValidation(f),
@@ -138,18 +140,18 @@ function E(e, t) {
             p.loadingStart(f);
             let o = new AbortController();
             return (
-                a(o.signal, ...b.current)
+                a(o.signal, ...v.current)
                     .then((e) => (p.loadingDone(f, !0), e))
                     .catch((e) => {
                         if ((p.loadingDone(f), o.signal.aborted)) return;
-                        let t = m(e);
-                        (h.fetchFailCounter >= s || !(t instanceof g) || (!(t.status >= 500) && 429 !== t.status)) && p.setError(f, t);
+                        let t = g(e);
+                        (h.fetchFailCounter >= s || !(t instanceof m) || (!(t.status >= 500) && 429 !== t.status)) && p.setError(f, t);
                     }),
                 () => {
                     n && o.abort();
                 }
             );
-        }, [_, h.fetchFailCounter, E, f, v]);
+        }, [_, h.fetchFailCounter, E, f, b]);
         return (
             (0, r.useEffect)(
                 () => (
@@ -164,7 +166,7 @@ function E(e, t) {
             {
                 data: _,
                 error: E,
-                isLoading: v
+                isLoading: b
             }
         );
     };
