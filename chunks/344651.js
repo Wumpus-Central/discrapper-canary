@@ -16,8 +16,8 @@ var o = n(442837),
     m = n(218543),
     g = n(48481),
     E = n(131704),
-    v = n(209747),
-    b = n(598077),
+    b = n(209747),
+    v = n(598077),
     y = n(592125),
     O = n(271383),
     I = n(819640),
@@ -154,7 +154,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    V = new P.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -168,7 +168,7 @@ let U = new d.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    F = new P.Z(
+    V = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -209,24 +209,24 @@ function K(e) {
     );
 }
 function z(e, t, n) {
-    var r;
-    let { roles: o, nick: a, avatar: s, avatar_decoration_data: l, flags: c, premium_since: d, pending: f, joined_at: _, communication_disabled_until: p, unusual_dm_activity_until: h } = n,
-        m = O.ZP.getMember(e, t.id);
-    (!(null != m && m.nick === a && m.avatar === s && i().isEqual(m.roles, o) && (0, u.sr)(m.avatarDecoration, l)) || m.premiumSince !== d || m.isPending !== f || m.joinedAt !== _ || m.communicationDisabledUntil !== p || m.flags !== c || (null !== (r = m.unusualDMActivityUntil) && void 0 !== r ? r : null) !== (null != h ? h : null)) &&
+    var r, o;
+    let { roles: a, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
+        g = O.ZP.getMember(e, t.id);
+    (!(null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null !== (r = g.avatarDecoration) && void 0 !== r ? r : null, null != c ? c : null)) || g.premiumSince !== f || g.isPending !== _ || g.joinedAt !== p || g.communicationDisabledUntil !== h || g.flags !== d || (null !== (o = g.unusualDMActivityUntil) && void 0 !== o ? o : null) !== (null != m ? m : null)) &&
         K({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
             user: t,
-            roles: o,
-            nick: a,
-            avatar: s,
-            avatarDecoration: l,
-            premiumSince: d,
-            isPending: f,
-            joinedAt: _,
-            communicationDisabledUntil: p,
-            unusualDMActivityUntil: h,
-            flags: c
+            roles: a,
+            nick: s,
+            avatar: l,
+            avatarDecoration: c,
+            premiumSince: f,
+            isPending: _,
+            joinedAt: p,
+            communicationDisabledUntil: h,
+            unusualDMActivityUntil: m,
+            flags: d
         });
 }
 function q(e) {
@@ -256,7 +256,7 @@ function Q(e) {
 }
 function X(e) {
     let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a } = e;
-    F.add({
+    V.add({
         guildId: t,
         user: n,
         status: r,
@@ -428,7 +428,8 @@ W(
                             auth: e.auth,
                             notificationSettings: { flags: e.notification_settings.flags },
                             geoRestrictedGuilds: o,
-                            explicitContentScanVersion: e.explicit_content_scan_version
+                            explicitContentScanVersion: e.explicit_content_scan_version,
+                            failedStates: e.failed_states
                         });
                     }),
                         null != e.auth_token &&
@@ -443,6 +444,9 @@ W(
             });
         }
     ),
+    H(['STATE_UPDATE'], (e) => {
+        K({ type: 'STATE_UPDATE' });
+    }),
     H(['RESUMED'], () => {
         w.RR.forceUpdate(), w.GC.forceUpdate(), K({ type: 'CONNECTION_RESUMED' });
     }),
@@ -778,7 +782,7 @@ W(
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
         o.ZP.Emitter.batched(() => {
-            V.add({
+            F.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found
@@ -1217,13 +1221,13 @@ W(
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_CREATE',
-            guildBoostSlot: v.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
         K({
             type: 'GUILD_BOOST_SLOT_UPDATE',
-            guildBoostSlot: v.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: b.Z.createFromServer(e, A.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     H(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {
@@ -1620,7 +1624,7 @@ W(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new b.Z(e.user),
+                user: new v.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -1636,7 +1640,7 @@ W(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new b.Z(e.user),
+                user: new v.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
