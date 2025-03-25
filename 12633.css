@@ -12020,12 +12020,12 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     overflow: hidden
 }
 
-.soundButtonWrapper__9be63 {
+.soundButtonWrapper__6d4ed {
     list-style: none;
     position: relative
 }
 
-.soundButton__9be63 {
+.soundButton__6d4ed {
     box-sizing: border-box;
     position: relative;
     background: var(--background-secondary);
@@ -12042,17 +12042,17 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     text-align: center
 }
 
-.visual-refresh .soundButton__9be63 {
+.visual-refresh .soundButton__6d4ed {
     background: var(--background-mod-subtle)
 }
 
-.visual-refresh .soundButton__9be63.focused__9be63,
-.visual-refresh .soundButton__9be63:active:not(:focus-within),
-.visual-refresh .soundButton__9be63:hover {
+.visual-refresh .soundButton__6d4ed.focused__6d4ed,
+.visual-refresh .soundButton__6d4ed:active:not(:focus-within),
+.visual-refresh .soundButton__6d4ed:hover {
     border-color: var(--border-subtle)
 }
 
-.soundButtonRefresh__9be63 {
+.soundButtonRefresh__6d4ed {
     box-sizing: border-box;
     position: relative;
     background: var(--card-primary-bg);
@@ -12068,127 +12068,127 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, .2), 0 1px 4px 0 rgba(0, 0, 0, .2)
 }
 
-.full-motion .soundButtonRefresh__9be63 {
+.full-motion .soundButtonRefresh__6d4ed {
     transition: box-shadow .1s ease-in-out, transform .2s ease, outline .2s ease-in-out
 }
 
-.soundButtonRefresh__9be63.focused__9be63,
-.soundButtonRefresh__9be63:active:not(:focus-within),
-.soundButtonRefresh__9be63:hover {
+.soundButtonRefresh__6d4ed.focused__6d4ed,
+.soundButtonRefresh__6d4ed:active:not(:focus-within),
+.soundButtonRefresh__6d4ed:hover {
     border-color: var(--border-strong)
 }
 
-.soundButtonRefresh__9be63.focused__9be63 .soundInfoRefresh__9be63,
-.soundButtonRefresh__9be63:active:not(:focus-within) .soundInfoRefresh__9be63,
-.soundButtonRefresh__9be63:hover .soundInfoRefresh__9be63 {
+.soundButtonRefresh__6d4ed.focused__6d4ed .soundInfoRefresh__6d4ed,
+.soundButtonRefresh__6d4ed:active:not(:focus-within) .soundInfoRefresh__6d4ed,
+.soundButtonRefresh__6d4ed:hover .soundInfoRefresh__6d4ed {
     box-shadow: 0 6px 0 0 rgba(0, 0, 0, .12)
 }
 
-.soundButtonRefresh__9be63.focused__9be63 .buttonOverlayActionsRefresh__9be63,
-.soundButtonRefresh__9be63:active:not(:focus-within) .buttonOverlayActionsRefresh__9be63,
-.soundButtonRefresh__9be63:hover .buttonOverlayActionsRefresh__9be63 {
+.soundButtonRefresh__6d4ed.focused__6d4ed .buttonOverlayActionsRefresh__6d4ed,
+.soundButtonRefresh__6d4ed:active:not(:focus-within) .buttonOverlayActionsRefresh__6d4ed,
+.soundButtonRefresh__6d4ed:hover .buttonOverlayActionsRefresh__6d4ed {
     margin-top: 0
 }
 
-.soundButtonRefresh__9be63:active:not(:focus-within) {
+.soundButtonRefresh__6d4ed:active:not(:focus-within) {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2)
 }
 
-.soundButtonRefresh__9be63:active:not(:focus-within) .soundInfoRefresh__9be63 {
+.soundButtonRefresh__6d4ed:active:not(:focus-within) .soundInfoRefresh__6d4ed {
     box-shadow: none
 }
 
-.soundButtonRefresh__9be63:active:not(:focus-within) .soundNameRefresh__9be63 {
+.soundButtonRefresh__6d4ed:active:not(:focus-within) .soundNameRefresh__6d4ed {
     color: var(--header-muted)
 }
 
-.soundButtonRefresh__9be63:active:not(:focus-within) .secondaryButtonRefresh__9be63 {
+.soundButtonRefresh__6d4ed:active:not(:focus-within) .secondaryButtonRefresh__6d4ed {
     opacity: 0
 }
 
-.animated__9be63:active:not(:focus-within) {
+.animated__6d4ed:active:not(:focus-within) {
     box-shadow: none;
     outline-width: 1px
 }
 
-.full-motion .animated__9be63:active:not(:focus-within) {
+.full-motion .animated__6d4ed:active:not(:focus-within) {
     transform: translateY(2px)
 }
 
-.theme-light .soundButtonRefresh__9be63 {
+.theme-light .soundButtonRefresh__6d4ed {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .08)
 }
 
-.addButton__9be63 {
+.addButton__6d4ed {
     margin: 3px;
     display: flex;
     align-items: center
 }
 
-.plusSign__9be63 {
+.plusSign__6d4ed {
     color: var(--text-muted);
     height: 18px;
     width: 18px
 }
 
-.addButton__9be63>* {
+.addButton__6d4ed>* {
     margin-right: 4px
 }
 
-.hoverActiveBackground__9be63.focused__9be63,
-.hoverActiveBackground__9be63:focus-within {
+.hoverActiveBackground__6d4ed.focused__6d4ed,
+.hoverActiveBackground__6d4ed:focus-within {
     background: var(--background-tertiary)
 }
 
-.visual-refresh .hoverActiveBackground__9be63.focused__9be63,
-.visual-refresh .hoverActiveBackground__9be63:focus-within {
+.visual-refresh .hoverActiveBackground__6d4ed.focused__6d4ed,
+.visual-refresh .hoverActiveBackground__6d4ed:focus-within {
     background: var(--background-mod-normal)
 }
 
-.hoverActiveBackground__9be63:hover {
+.hoverActiveBackground__6d4ed:hover {
     background: var(--background-tertiary)
 }
 
-.visual-refresh .hoverActiveBackground__9be63:hover {
+.visual-refresh .hoverActiveBackground__6d4ed:hover {
     background: var(--background-mod-strong)
 }
 
-.soundButton__9be63.focused__9be63 .buttonOverlay__9be63,
-.soundButton__9be63:focus-within .buttonOverlay__9be63,
-.soundButton__9be63:hover .buttonOverlay__9be63,
-.soundButtonRefresh__9be63.focused__9be63 .buttonOverlay__9be63,
-.soundButtonRefresh__9be63:focus-within .buttonOverlay__9be63,
-.soundButtonRefresh__9be63:hover .buttonOverlay__9be63 {
+.soundButton__6d4ed.focused__6d4ed .buttonOverlay__6d4ed,
+.soundButton__6d4ed:focus-within .buttonOverlay__6d4ed,
+.soundButton__6d4ed:hover .buttonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed.focused__6d4ed .buttonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed:focus-within .buttonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed:hover .buttonOverlay__6d4ed {
     opacity: 1;
     visibility: visible
 }
 
-.soundButton__9be63.focused__9be63 .addButtonOverlay__9be63,
-.soundButton__9be63:focus-within .addButtonOverlay__9be63,
-.soundButton__9be63:hover .addButtonOverlay__9be63,
-.soundButtonRefresh__9be63.focused__9be63 .addButtonOverlay__9be63,
-.soundButtonRefresh__9be63:focus-within .addButtonOverlay__9be63,
-.soundButtonRefresh__9be63:hover .addButtonOverlay__9be63 {
+.soundButton__6d4ed.focused__6d4ed .addButtonOverlay__6d4ed,
+.soundButton__6d4ed:focus-within .addButtonOverlay__6d4ed,
+.soundButton__6d4ed:hover .addButtonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed.focused__6d4ed .addButtonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed:focus-within .addButtonOverlay__6d4ed,
+.soundButtonRefresh__6d4ed:hover .addButtonOverlay__6d4ed {
     opacity: 1;
     visibility: visible
 }
 
-.soundInfo__9be63 {
+.soundInfo__6d4ed {
     padding: 8px;
     flex-direction: row;
     gap: 8px;
     overflow: hidden
 }
 
-.soundInfo__9be63,
-.soundInfoRefresh__9be63 {
+.soundInfo__6d4ed,
+.soundInfoRefresh__6d4ed {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1
 }
 
-.soundInfoRefresh__9be63 {
+.soundInfoRefresh__6d4ed {
     padding: 0 8px;
     flex-direction: column;
     gap: 4px;
@@ -12197,11 +12197,11 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     height: 60px
 }
 
-.full-motion .soundInfoRefresh__9be63 {
+.full-motion .soundInfoRefresh__6d4ed {
     transition: gap .1s ease, padding-bottom .1s ease, box-shadow .1s ease-in-out
 }
 
-.soundName__9be63 {
+.soundName__6d4ed {
     color: var(--header-primary);
     flex-grow: 0;
     display: -webkit-box;
@@ -12211,11 +12211,11 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     word-break: break-word
 }
 
-.soundName__9be63.hasEmoji__9be63 {
+.soundName__6d4ed.hasEmoji__6d4ed {
     text-align: left
 }
 
-.soundNameRefresh__9be63 {
+.soundNameRefresh__6d4ed {
     color: var(--header-primary);
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -12224,18 +12224,18 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     word-break: break-word
 }
 
-.soundNameRefresh__9be63.hasEmoji__9be63 {
+.soundNameRefresh__6d4ed.hasEmoji__6d4ed {
     -webkit-line-clamp: 1;
     word-break: break-all
 }
 
-.emoji__9be63 {
+.emoji__6d4ed {
     flex-shrink: 0;
     width: 20px;
     height: 20px
 }
 
-.emojiCircle__9be63 {
+.emojiCircle__6d4ed {
     background: var(--bg-mod-subtle);
     border-radius: 50%;
     width: 32px;
@@ -12246,91 +12246,91 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     transition: width .1s ease, height .1s ease
 }
 
-.emojiCircle__9be63 .emoji__9be63 {
+.emojiCircle__6d4ed .emoji__6d4ed {
     width: 18px;
     height: 18px;
     transition: width .3s ease, height .3s ease
 }
 
-.soundButtonInteractive__9be63 {
+.soundButtonInteractive__6d4ed {
     cursor: pointer
 }
 
-.soundButtonInteractive__9be63.playing__9be63 {
+.soundButtonInteractive__6d4ed.playing__6d4ed {
     border-color: var(--status-positive-background)
 }
 
-.soundButtonInteractiveRefresh__9be63 {
+.soundButtonInteractiveRefresh__6d4ed {
     cursor: pointer
 }
 
-.soundButtonInteractiveRefresh__9be63.previewing__9be63 {
+.soundButtonInteractiveRefresh__6d4ed.previewing__6d4ed {
     outline: 2px solid var(--button-outline-brand-border)
 }
 
-.soundButtonInteractiveRefresh__9be63.playing__9be63 {
+.soundButtonInteractiveRefresh__6d4ed.playing__6d4ed {
     outline: 2px solid var(--button-outline-positive-border)
 }
 
-.soundButtonInteractiveRefresh__9be63.playing__9be63 .soundInfoRefresh__9be63.hasEmoji__9be63,
-.soundButtonInteractiveRefresh__9be63.previewing__9be63 .soundInfoRefresh__9be63.hasEmoji__9be63 {
+.soundButtonInteractiveRefresh__6d4ed.playing__6d4ed .soundInfoRefresh__6d4ed.hasEmoji__6d4ed,
+.soundButtonInteractiveRefresh__6d4ed.previewing__6d4ed .soundInfoRefresh__6d4ed.hasEmoji__6d4ed {
     padding-bottom: 4px;
     gap: 0
 }
 
-.soundButtonInteractiveRefresh__9be63.playing__9be63 .emojiCircle__9be63,
-.soundButtonInteractiveRefresh__9be63.previewing__9be63 .emojiCircle__9be63 {
+.soundButtonInteractiveRefresh__6d4ed.playing__6d4ed .emojiCircle__6d4ed,
+.soundButtonInteractiveRefresh__6d4ed.previewing__6d4ed .emojiCircle__6d4ed {
     width: 40px;
     height: 40px
 }
 
-.soundButtonInteractiveRefresh__9be63.playing__9be63 .emojiCircle__9be63 .emoji__9be63,
-.soundButtonInteractiveRefresh__9be63.previewing__9be63 .emojiCircle__9be63 .emoji__9be63 {
+.soundButtonInteractiveRefresh__6d4ed.playing__6d4ed .emojiCircle__6d4ed .emoji__6d4ed,
+.soundButtonInteractiveRefresh__6d4ed.previewing__6d4ed .emojiCircle__6d4ed .emoji__6d4ed {
     width: 24px;
     height: 24px
 }
 
-.buttonDisabledSecondaryActionsEnabled__9be63 {
+.buttonDisabledSecondaryActionsEnabled__6d4ed {
     cursor: default
 }
 
-.buttonDisabled__9be63 {
+.buttonDisabled__6d4ed {
     pointer-events: none
 }
 
-.premiumDisabled__9be63 {
+.premiumDisabled__6d4ed {
     opacity: .5
 }
 
-.premiumDisabledRefresh__9be63 {
+.premiumDisabledRefresh__6d4ed {
     --custom-gradient-border: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-purple-for-gradients-2) 50.24%, var(--premium-tier-2-pink-for-gradients)) border-box
 }
 
-.premiumDisabledRefresh__9be63.focused__9be63,
-.premiumDisabledRefresh__9be63:hover {
+.premiumDisabledRefresh__6d4ed.focused__6d4ed,
+.premiumDisabledRefresh__6d4ed:hover {
     background: linear-gradient(var(--card-primary-bg), var(--card-primary-bg)) padding-box, var(--custom-gradient-border)
 }
 
-.premiumDisabledRefresh__9be63.focused__9be63 .emojiCircle__9be63,
-.premiumDisabledRefresh__9be63:hover .emojiCircle__9be63 {
+.premiumDisabledRefresh__6d4ed.focused__6d4ed .emojiCircle__6d4ed,
+.premiumDisabledRefresh__6d4ed:hover .emojiCircle__6d4ed {
     background: linear-gradient(90deg, hsl(var(--premium-tier-2-purple-for-gradients-hsl)/.2), hsl(var(--premium-tier-2-purple-for-gradients-2-hsl)/.2) 50.24%, hsl(var(--premium-tier-2-pink-for-gradients-hsl)/.2))
 }
 
-.premiumDisabledRefresh__9be63.focused__9be63 .emoji__9be63,
-.premiumDisabledRefresh__9be63:hover .emoji__9be63 {
+.premiumDisabledRefresh__6d4ed.focused__6d4ed .emoji__6d4ed,
+.premiumDisabledRefresh__6d4ed:hover .emoji__6d4ed {
     opacity: .1
 }
 
-.premiumDisabledRefresh__9be63.focused__9be63 .soundNameRefresh__9be63:not(.hasEmoji__9be63),
-.premiumDisabledRefresh__9be63:hover .soundNameRefresh__9be63:not(.hasEmoji__9be63) {
+.premiumDisabledRefresh__6d4ed.focused__6d4ed .soundNameRefresh__6d4ed:not(.hasEmoji__6d4ed),
+.premiumDisabledRefresh__6d4ed:hover .soundNameRefresh__6d4ed:not(.hasEmoji__6d4ed) {
     opacity: .5
 }
 
-.premiumDisabledRefresh__9be63:active:not(:focus-within) {
+.premiumDisabledRefresh__6d4ed:active:not(:focus-within) {
     background: linear-gradient(var(--card-primary-pressed-bg), var(--card-primary-pressed-bg)) padding-box, var(--custom-gradient-border)
 }
 
-.absoluteFill__9be63 {
+.absoluteFill__6d4ed {
     position: absolute;
     top: 0;
     left: 0;
@@ -12338,124 +12338,124 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     bottom: 0
 }
 
-.addButtonOverlay__9be63,
-.buttonOverlay__9be63 {
+.addButtonOverlay__6d4ed,
+.buttonOverlay__6d4ed {
     opacity: 0;
     visibility: hidden;
     transition: opacity .2s ease
 }
 
-.buttonOverlayBackground__9be63 {
+.buttonOverlayBackground__6d4ed {
     background: var(--background-secondary);
     opacity: .8
 }
 
-.visual-refresh .buttonOverlayBackground__9be63 {
+.visual-refresh .buttonOverlayBackground__6d4ed {
     background: var(--background-surface-highest)
 }
 
-.buttonOverlayActions__9be63 {
+.buttonOverlayActions__6d4ed {
     padding: 0 8px;
     align-items: center
 }
 
-.buttonOverlayActions__9be63,
-.buttonOverlayActionsRefresh__9be63 {
+.buttonOverlayActions__6d4ed,
+.buttonOverlayActionsRefresh__6d4ed {
     display: flex;
     justify-content: space-between
 }
 
-.buttonOverlayActionsRefresh__9be63 {
+.buttonOverlayActionsRefresh__6d4ed {
     align-items: flex-start
 }
 
-.full-motion .buttonOverlayActionsRefresh__9be63 {
+.full-motion .buttonOverlayActionsRefresh__6d4ed {
     margin-top: -2px;
     transition: margin-top .2s ease
 }
 
-.buttonOverlayActionsRefresh__9be63:focus-within {
+.buttonOverlayActionsRefresh__6d4ed:focus-within {
     margin-top: 0
 }
 
-.secondaryButton__9be63 {
+.secondaryButton__6d4ed {
     color: var(--interactive-normal);
     display: flex
 }
 
-.secondaryButton__9be63:focus,
-.secondaryButton__9be63:hover {
+.secondaryButton__6d4ed:focus,
+.secondaryButton__6d4ed:hover {
     color: var(--interactive-hover);
     cursor: pointer
 }
 
-.secondaryButtonRefresh__9be63 {
+.secondaryButtonRefresh__6d4ed {
     color: var(--interactive-muted);
     display: flex;
     padding: 8px 4px 4px;
     transition: opacity .2s ease
 }
 
-.secondaryButtonRefresh__9be63:first-child {
+.secondaryButtonRefresh__6d4ed:first-child {
     padding-left: 8px
 }
 
-.secondaryButtonRefresh__9be63:last-child {
+.secondaryButtonRefresh__6d4ed:last-child {
     padding-right: 8px
 }
 
-.secondaryButtonRefresh__9be63:focus,
-.secondaryButtonRefresh__9be63:hover {
+.secondaryButtonRefresh__6d4ed:focus,
+.secondaryButtonRefresh__6d4ed:hover {
     color: var(--interactive-hover);
     cursor: pointer
 }
 
-.secondaryIcon__9be63 {
+.secondaryIcon__6d4ed {
     width: 16px;
     height: 16px
 }
 
-.favoriteIconFavorite__9be63 {
+.favoriteIconFavorite__6d4ed {
     color: var(--text-warning)
 }
 
-.primaryIcon__9be63 {
+.primaryIcon__6d4ed {
     flex: 1;
     pointer-events: none
 }
 
-.primaryIcon__9be63,
-.primaryIconRefresh__9be63 {
+.primaryIcon__6d4ed,
+.primaryIconRefresh__6d4ed {
     width: 20px;
     height: 20px;
     color: var(--interactive-active)
 }
 
-.primaryIconRefresh__9be63 {
+.primaryIconRefresh__6d4ed {
     align-self: center
 }
 
-.primaryIconRefresh__9be63.hasEmoji__9be63:not(.primaryIconTopLevel__9be63) {
+.primaryIconRefresh__6d4ed.hasEmoji__6d4ed:not(.primaryIconTopLevel__6d4ed) {
     padding-bottom: 21px
 }
 
-.lockIcon__9be63 {
+.lockIcon__6d4ed {
     pointer-events: none
 }
 
-.primaryIconTopLevel__9be63 {
+.primaryIconTopLevel__6d4ed {
     position: absolute;
     z-index: 9999
 }
 
-.unavailableTooltip__9be63 {
+.unavailableTooltip__6d4ed {
     position: absolute;
     top: 0;
     height: 40px;
     width: 150px
 }
 
-.unavailableTooltipRefresh__9be63 {
+.unavailableTooltipRefresh__6d4ed {
     position: absolute;
     top: 0;
     height: 72px;
@@ -23459,6 +23459,83 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     border-bottom: 1px solid CanvasText
 }
 
+.soundButtonWrapper__58c6c {
+    list-style: none
+}
+
+.soundAddButton__58c6c {
+    color: var(--header-primary);
+    cursor: pointer
+}
+
+.soundAddButton__58c6c.focused__58c6c,
+.soundAddButton__58c6c:hover {
+    background-color: var(--background-tertiary)
+}
+
+.visual-refresh .soundAddButton__58c6c {
+    background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+    background: initial;
+    border: 1px dashed var(--border-subtle);
+    color: var(--text-tertiary)
+}
+
+.visual-refresh .soundAddButton__58c6c:hover {
+    border-color: var(--border-normal);
+    color: var(--text-default)
+}
+
+.visual-refresh .soundAddButton__58c6c.focused__58c6c {
+    border-color: var(--border-strong);
+    color: var(--text-default)
+}
+
+.soundAddButtonRefresh__58c6c {
+    cursor: pointer;
+    border: 1px dashed var(--border-subtle);
+    background-color: var(--background-secondary);
+    box-shadow: none
+}
+
+.soundAddButtonRefresh__58c6c.focused__58c6c .soundAddInfoRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:active:not(:focus-within) .soundAddInfoRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:hover .soundAddInfoRefresh__58c6c {
+    box-shadow: none
+}
+
+.soundAddButtonRefresh__58c6c.focused__58c6c .soundAddIconRefresh__58c6c,
+.soundAddButtonRefresh__58c6c.focused__58c6c .soundAddTextRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:active:not(:focus-within) .soundAddIconRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:active:not(:focus-within) .soundAddTextRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:hover .soundAddIconRefresh__58c6c,
+.soundAddButtonRefresh__58c6c:hover .soundAddTextRefresh__58c6c {
+    color: var(--interactive-hover)
+}
+
+.soundAddInfoRefresh__58c6c {
+    box-shadow: none
+}
+
+.soundAddIcon__58c6c {
+    width: 16px;
+    height: 16px
+}
+
+.soundAddIconRefresh__58c6c {
+    width: 24px;
+    height: 24px;
+    padding: 4px
+}
+
+.soundAddIconRefresh__58c6c,
+.soundAddTextRefresh__58c6c {
+    color: var(--interactive-normal)
+}
+
+.disabled__58c6c {
+    pointer-events: none
+}
+
 .categoryList_a1e0e0 {
     top: 58px
 }
@@ -23537,103 +23614,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .closeButton__46002 {
     margin-top: -16px;
     cursor: pointer
-}
-
-.soundButtonWrapper__6eb78 {
-    list-style: none
-}
-
-.soundShowAllButton__6eb78 {
-    cursor: pointer;
-    gap: 4px
-}
-
-.visual-refresh .soundShowAllButton__6eb78 {
-    background: var(--background-mod-subtle)
-}
-
-.visual-refresh .soundShowAllButton__6eb78:hover {
-    background: var(--background-mod-normal)
-}
-
-.visual-refresh .soundShowAllButton__6eb78.focused__6eb78 {
-    background: var(--background-mod-strong)
-}
-
-.disabled__6eb78 {
-    pointer-events: none
-}
-
-.soundButtonWrapper_da9eb2 {
-    list-style: none
-}
-
-.soundAddButton_da9eb2 {
-    color: var(--header-primary);
-    cursor: pointer
-}
-
-.soundAddButton_da9eb2.focused_da9eb2,
-.soundAddButton_da9eb2:hover {
-    background-color: var(--background-tertiary)
-}
-
-.visual-refresh .soundAddButton_da9eb2 {
-    background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-    background: initial;
-    border: 1px dashed var(--border-subtle);
-    color: var(--text-tertiary)
-}
-
-.visual-refresh .soundAddButton_da9eb2:hover {
-    border-color: var(--border-normal);
-    color: var(--text-default)
-}
-
-.visual-refresh .soundAddButton_da9eb2.focused_da9eb2 {
-    border-color: var(--border-strong);
-    color: var(--text-default)
-}
-
-.soundAddButtonRefresh_da9eb2 {
-    cursor: pointer;
-    border: 1px dashed var(--border-subtle);
-    background-color: var(--background-secondary);
-    box-shadow: none
-}
-
-.soundAddButtonRefresh_da9eb2.focused_da9eb2 .soundAddInfoRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:active:not(:focus-within) .soundAddInfoRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:hover .soundAddInfoRefresh_da9eb2 {
-    box-shadow: none
-}
-
-.soundAddButtonRefresh_da9eb2.focused_da9eb2 .soundAddIconRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2.focused_da9eb2 .soundAddTextRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:active:not(:focus-within) .soundAddIconRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:active:not(:focus-within) .soundAddTextRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:hover .soundAddIconRefresh_da9eb2,
-.soundAddButtonRefresh_da9eb2:hover .soundAddTextRefresh_da9eb2 {
-    color: var(--interactive-hover)
-}
-
-.soundAddInfoRefresh_da9eb2 {
-    box-shadow: none
-}
-
-.soundAddIconRefresh_da9eb2 {
-    width: 24px;
-    height: 24px;
-    padding: 4px
-}
-
-.soundAddIconRefresh_da9eb2,
-.soundAddTextRefresh_da9eb2 {
-    color: var(--interactive-normal)
-}
-
-.disabled_da9eb2 {
-    pointer-events: none
 }
 
 .sectionContainer__61424 {

@@ -1,8 +1,9 @@
 n.d(t, {
-    $d: () => I,
+    $d: () => S,
     AA: () => T,
-    Db: () => x,
-    Dx: () => S,
+    Db: () => L,
+    Dx: () => I,
+    HZ: () => x,
     R: () => w,
     TB: () => N,
     XE: () => R,
@@ -24,8 +25,8 @@ var r = n(392711),
     u = n(900849),
     d = n(763296),
     f = n(697426),
-    p = n(174470),
-    _ = n(710111),
+    _ = n(174470),
+    p = n(710111),
     h = n(981631),
     m = n(526761),
     g = n(388032);
@@ -37,7 +38,7 @@ let E = async (e) => {
                     query: { guild_ids: e },
                     rejectWithError: !1
                 })
-            ).body.map((e) => (0, f.o3)(e, _.X8));
+            ).body.map((e) => (0, f.o3)(e, p.X8));
             a.Z.dispatch({
                 type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS',
                 soundboardSounds: t
@@ -46,23 +47,23 @@ let E = async (e) => {
             throw (a.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE' }), new l.Z(e));
         }
     },
-    v = (e) =>
+    b = (e) =>
         new Promise((t) => {
             let n = () => {
                 a.Z.unsubscribe(e, n), setTimeout(t, 0);
             };
             a.Z.subscribe(e, n);
         }),
-    b = (e) => {
+    v = (e) => {
         if (!d.Z.shouldFetchDefaultSounds()) return Promise.resolve();
         a.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS' });
-        let t = v('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
+        let t = b('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
         return E(e), t;
     },
     y = () => {
-        let e = (0, p.D)();
+        let e = (0, _.D)();
         if (0 === e.length) return Promise.resolve();
-        let t = v('SOUNDBOARD_SOUNDS_RECEIVED');
+        let t = b('SOUNDBOARD_SOUNDS_RECEIVED');
         return (
             a.Z.dispatch({ type: 'GUILD_SOUNDBOARD_FETCH' }),
             a.Z.dispatch({
@@ -72,8 +73,8 @@ let E = async (e) => {
             t
         );
     },
-    O = () => (__OVERLAY__ ? (a.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([b(), y()]));
-async function S(e) {
+    O = () => (__OVERLAY__ ? (a.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([v(), y()]));
+async function I(e) {
     let { guildId: t, name: n, sound: r, volume: i, emojiId: a, emojiName: s } = e,
         l = await o.tn.post({
             url: h.ANM.GUILD_SOUNDBOARD_SOUNDS(t),
@@ -88,7 +89,7 @@ async function S(e) {
         });
     return (0, f.o3)(l.body, t);
 }
-async function I(e) {
+async function S(e) {
     let { guildId: t, soundId: n, name: r, volume: i, emojiId: a, emojiName: s } = e,
         l = await o.tn.patch({
             url: h.ANM.GUILD_SOUNDBOARD_SOUND(t, n),
@@ -171,9 +172,15 @@ function D(e) {
         volume: e
     });
 }
-function x(e) {
+function L(e) {
     a.Z.dispatch({
         type: 'SOUNDBOARD_MUTE_JOIN_SOUND',
         channelId: e
+    });
+}
+function x(e) {
+    a.Z.dispatch({
+        type: 'GUILD_SOUNDBOARD_TOGGLE_SHOW_ALL',
+        guildId: e
     });
 }
