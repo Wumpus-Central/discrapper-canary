@@ -2,10 +2,10 @@ r.d(t, { OrbCheckoutModalInPaymentModal: () => V });
 var n = r(200651),
     s = r(192379),
     i = r(442837),
-    o = r(481060),
-    l = r(224550),
-    a = r(672971),
-    c = r(128069),
+    l = r(481060),
+    o = r(224550),
+    c = r(672971),
+    a = r(128069),
     u = r(228624),
     d = r(583434),
     p = r(956472),
@@ -21,11 +21,11 @@ var n = r(200651),
     O = r(614277),
     P = r(712297),
     k = r(982204),
-    S = r(653798),
-    v = r(594174),
+    v = r(653798),
+    S = r(594174),
     N = r(74538),
-    I = r(932563),
-    E = r(82856),
+    E = r(932563),
+    I = r(82856),
     A = r(960919),
     _ = r(257493),
     w = r(981631),
@@ -95,7 +95,7 @@ function R(e, t) {
 }
 let L = (e) => {
         let { orbAmount: t } = e;
-        return (0, n.jsxs)(o.Text, {
+        return (0, n.jsxs)(l.Text, {
             variant: 'text-md/semibold',
             className: D.orbAmountTag,
             children: [
@@ -109,30 +109,30 @@ let L = (e) => {
     },
     F = (e) => {
         var { orbBalance: t, orbPriceAmount: r, submitting: s, onClick: i } = e,
-            l = R(e, ['orbBalance', 'orbPriceAmount', 'submitting', 'onClick']);
-        let a = T.NW.string(T.t.wmcDys),
-            c = B(
+            o = R(e, ['orbBalance', 'orbPriceAmount', 'submitting', 'onClick']);
+        let c = T.NW.string(T.t.wmcDys),
+            a = B(
                 {
-                    color: o.zxk.Colors.GREEN,
+                    color: l.zxk.Colors.GREEN,
                     type: 'submit',
                     'data-testid': 'submitButton',
-                    children: a
+                    children: c
                 },
-                l
+                o
             );
         return null === r
-            ? (0, n.jsx)(o.ua7, {
+            ? (0, n.jsx)(l.ua7, {
                   text: T.NW.string(T.t['c/rcUl']),
-                  children: (e) => (0, n.jsx)(o.zxk, W(B({}, e, c), { disabled: !0 }))
+                  children: (e) => (0, n.jsx)(l.zxk, W(B({}, e, a), { disabled: !0 }))
               })
             : null === t || r > t
-              ? (0, n.jsx)(o.ua7, {
+              ? (0, n.jsx)(l.ua7, {
                     text: T.NW.string(T.t.keFvXF),
-                    children: (e) => (0, n.jsx)(o.zxk, W(B({}, e, c), { disabled: !0 }))
+                    children: (e) => (0, n.jsx)(l.zxk, W(B({}, e, a), { disabled: !0 }))
                 })
               : (0, n.jsx)(
-                    o.zxk,
-                    W(B({}, c), {
+                    l.zxk,
+                    W(B({}, a), {
                         submitting: s,
                         onClick: i
                     })
@@ -147,17 +147,17 @@ let L = (e) => {
                 currentPaymentSourceId: null
             }),
             i = s[r],
-            l = (0, u.ed)('OrbCheckoutPurchaseDetails');
+            o = (0, u.ed)('OrbCheckoutPurchaseDetails');
         return void 0 === i
-            ? (0, n.jsx)(S.PO, {
-                  children: (0, n.jsx)(o.$jN, {
-                      type: o.$jN.Type.PULSING_ELLIPSIS,
+            ? (0, n.jsx)(v.PO, {
+                  children: (0, n.jsx)(l.$jN, {
+                      type: l.$jN.Type.PULSING_ELLIPSIS,
                       className: D.purchaseDetailsSpinner
                   })
               })
             : (0, n.jsx)(k.E, {
                   sku: i,
-                  shouldShowProductPreview: void 0 !== i && l,
+                  shouldShowProductPreview: void 0 !== i && o,
                   value: (0, n.jsx)(L, { orbAmount: t })
               });
     },
@@ -166,19 +166,19 @@ let L = (e) => {
         return (0, n.jsxs)('div', {
             className: D.paymentSourceWrapper,
             children: [
-                (0, n.jsx)(o.vwX, {
-                    tag: o.RB0.H5,
+                (0, n.jsx)(l.vwX, {
+                    tag: l.RB0.H5,
                     children: T.NW.string(T.t.mmDvV1)
                 }),
                 (0, n.jsxs)('div', {
                     className: D.paymentSourceItem,
                     children: [
-                        (0, n.jsx)(o.Text, {
+                        (0, n.jsx)(l.Text, {
                             className: D.displayFlex,
                             variant: 'text-md/medium',
                             children: T.NW.string(T.t.y0WGqK)
                         }),
-                        (0, n.jsx)(o.Text, {
+                        (0, n.jsx)(l.Text, {
                             className: D.displayFlex,
                             variant: 'text-md/medium',
                             children: (0, n.jsx)(L, { orbAmount: t })
@@ -193,10 +193,10 @@ let L = (e) => {
         if (null == t) return;
         let r = '';
         return (
-            (r = t.code === c.SM.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE ? T.NW.string(T.t.keFvXF) : t.code === c.SM.ALREADY_PURCHASED ? T.NW.string(T.t.m371Mz) : T.NW.string(T.t.fqJZ19)),
+            (r = t.code === a.SM.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE ? T.NW.string(T.t.keFvXF) : t.code === a.SM.ALREADY_PURCHASED ? T.NW.string(T.t.m371Mz) : T.NW.string(T.t.fqJZ19)),
             (0, n.jsx)('div', {
                 className: D.formErrorContainer,
-                children: (0, n.jsx)(o.kzN, { children: r })
+                children: (0, n.jsx)(l.kzN, { children: r })
             })
         );
     },
@@ -205,8 +205,8 @@ let L = (e) => {
         return (0, n.jsxs)('div', {
             className: D.stepBody,
             children: [
-                (0, n.jsx)(o.vwX, {
-                    tag: o.RB0.H5,
+                (0, n.jsx)(l.vwX, {
+                    tag: l.RB0.H5,
                     children: T.NW.string(T.t.sail9P)
                 }),
                 (0, n.jsx)(U, {
@@ -214,10 +214,10 @@ let L = (e) => {
                     orbPriceAmount: r
                 }),
                 (0, n.jsx)(Z, { orbBalance: s }),
-                (0, n.jsx)(a.Z, {
+                (0, n.jsx)(c.Z, {
                     forceShow: !0,
                     onChange: w.dG4,
-                    finePrint: (0, n.jsx)(l.Z, {
+                    finePrint: (0, n.jsx)(o.Z, {
                         isOrbCheckout: !0,
                         purchaseType: w.GZQ.ONE_TIME
                     })
@@ -227,7 +227,7 @@ let L = (e) => {
     },
     G = (e) => {
         let { orbPriceAmount: t, orbBalance: r, isSubmitting: s, onClickCheckout: i } = e;
-        return (0, n.jsxs)(o.mzw, {
+        return (0, n.jsxs)(l.mzw, {
             align: m.Z.Align.CENTER,
             children: [
                 (0, n.jsx)(F, {
@@ -241,48 +241,52 @@ let L = (e) => {
         });
     },
     X = (e) => {
-        let { handleClose: t } = e,
-            { selectedSkuId: r, purchaseState: l, setPurchaseState: a } = (0, j.JL)(),
-            { product: c } = (0, d.T)(r),
-            { skuId: u, onRedeemVirtualCurrency: m, isRedeeming: b, orbRedemptionError: x } = (0, _.C)(),
-            y = (0, I.c)(),
-            f = (0, s.useRef)(y),
-            g = (0, i.e7)([v.default], () => N.ZP.canUseCollectibles(v.default.getCurrentUser()));
+        var t;
+        let { handleClose: r } = e,
+            { selectedSkuId: o, purchaseState: c, setPurchaseState: a } = (0, j.JL)(),
+            { product: u } = (0, d.T)(o),
+            { skuId: m, onRedeemVirtualCurrency: b, isRedeeming: x, orbRedemptionError: y } = (0, _.C)(),
+            f = (0, E.c)(),
+            g = (0, s.useRef)(f),
+            P = (0, i.e7)([S.default], () => N.ZP.canUseCollectibles(S.default.getCurrentUser()));
         (0, s.useEffect)(() => {
-            l === h.A.COMPLETED && t();
-        }, [l, t]);
-        let P = (0, s.useCallback)(() => {
-            (f.current = y),
-                m(() => {
+            c === h.A.COMPLETED && r();
+        }, [c, r]),
+            (0, s.useEffect)(() => {
+                null != y && null !== g.current && (g.current = null);
+            }, [y]);
+        let k = (0, s.useCallback)(() => {
+            (g.current = f),
+                b(() => {
                     a(h.A.COMPLETED);
                 });
-        }, [m, a, y]);
-        if (null == r || null == c) return (0, n.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES });
-        let k = b ? f.current : y,
-            S = (0, p.T4)({
-                product: c,
-                isPremiumUser: g
+        }, [b, a, f]);
+        if (null == o || null == u) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.WANDERING_CUBES });
+        let v = null !== (t = g.current) && void 0 !== t ? t : f,
+            I = (0, p.T4)({
+                product: u,
+                isPremiumUser: P
             }),
-            E = null !== S ? S.amount : null;
+            A = null !== I ? I.amount : null;
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(C.Z, {}),
                 (0, n.jsxs)(O.C3, {
                     children: [
-                        (0, n.jsx)(M, { error: x }),
+                        (0, n.jsx)(M, { error: y }),
                         (0, n.jsx)(z, {
-                            skuId: u,
-                            orbPriceAmount: E,
-                            orbBalance: k
+                            skuId: m,
+                            orbPriceAmount: A,
+                            orbBalance: v
                         })
                     ]
                 }),
                 (0, n.jsx)(O.O3, {
                     children: (0, n.jsx)(G, {
-                        orbPriceAmount: E,
-                        orbBalance: k,
-                        isSubmitting: b,
-                        onClickCheckout: P
+                        orbPriceAmount: A,
+                        orbBalance: v,
+                        isSubmitting: x,
+                        onClickCheckout: k
                     })
                 })
             ]
@@ -303,7 +307,7 @@ let L = (e) => {
         }),
     V = (e) => {
         var { skuId: t, loadId: r, onCheckoutSuccess: s, analyticsLocations: i = [] } = e,
-            o = R(e, ['skuId', 'loadId', 'onCheckoutSuccess', 'analyticsLocations']);
+            l = R(e, ['skuId', 'loadId', 'onCheckoutSuccess', 'analyticsLocations']);
         return (0, n.jsx)(j.PaymentContextProvider, {
             applicationId: w.XAJ,
             activeSubscription: null,
@@ -316,9 +320,9 @@ let L = (e) => {
                 children: (0, n.jsx)(b.KB, {
                     children: (0, n.jsx)(f.PaymentModal, {
                         applicationId: w.XAJ,
-                        transitionState: o.transitionState,
+                        transitionState: l.transitionState,
                         onClose: (e) => {
-                            e || (0, E.vp)(), o.onClose();
+                            e || (0, I.vp)(), l.onClose();
                         },
                         hideShadow: !0,
                         skuId: t,
