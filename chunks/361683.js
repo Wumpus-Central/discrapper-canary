@@ -1,8 +1,8 @@
 e.exports = {
     popout: 'popout_af3b89',
     hero: 'hero_af3b89',
-    interactionsContainerHeader: 'interactionsContainerHeader_af3b89',
     interactionsContainer: 'interactionsContainer_af3b89',
+    replyInput: 'replyInput_af3b89',
     emoji: 'emoji_af3b89',
     toastContainer: 'toastContainer_af3b89',
     emojiHotrailShareToChannel: 'emojiHotrailShareToChannel_af3b89',
@@ -30,7 +30,6 @@ e.exports = {
     voiceChannelName: 'voiceChannelName_af3b89',
     voiceChannelGuildIcon: 'voiceChannelGuildIcon_af3b89',
     voiceChannelAdditionalParticipants: 'voiceChannelAdditionalParticipants_af3b89',
-    primaryActionPopoutDivider: 'primaryActionPopoutDivider_af3b89',
     iconButton: 'iconButton_af3b89',
     primaryActionPopoutActionButtons: 'primaryActionPopoutActionButtons_af3b89',
     hiddenButRenderedInputField: 'hiddenButRenderedInputField_af3b89',
