@@ -1,29 +1,35 @@
 n.d(t, {
-    P: () => f,
-    Tb: () => a,
-    cm: () => l,
-    jC: () => u,
-    n_: () => d,
-    oh: () => o,
+    Ej: () => _,
+    Ig: () => s,
+    JX: () => a,
+    P: () => h,
+    Tb: () => c,
+    a6: () => o,
+    cm: () => d,
+    n_: () => p,
+    oh: () => l,
     vB: () => i,
-    y0: () => s,
-    yM: () => c
+    y0: () => u,
+    yM: () => f
 });
 var r = n(981631);
-let i = 300;
-var o = (function (e) {
+let i = 300,
+    o = 100,
+    a = 750,
+    s = 100;
+var l = (function (e) {
         return (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
     })({}),
-    a = (function (e) {
+    c = (function (e) {
         return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
     })({}),
-    s = (function (e) {
+    u = (function (e) {
         return (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL'), e;
     })({}),
-    l = (function (e) {
+    d = (function (e) {
         return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;
     })({}),
-    c = (function (e) {
+    f = (function (e) {
         return (
             (e.VIEW = 'VIEW'),
             (e.SEND_MESSAGE = 'SEND_MESSAGE'),
@@ -122,13 +128,13 @@ var o = (function (e) {
             e
         );
     })({});
-function u(e) {
+function _(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(r.ANM.BADGE_ICON(e));
 }
-var d = (function (e) {
+var p = (function (e) {
         return (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS'), e;
     })({}),
-    f = (function (e) {
+    h = (function (e) {
         return (e.REPLY = 'REPLY'), (e.REACT = 'REACT'), e;
     })({});
