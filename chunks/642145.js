@@ -1,9 +1,5 @@
-n.d(t, {
-    V: () => i,
-    Y: () => r
-});
+n.d(t, { Y: () => r });
 let r = {
-        tension: 250,
-        friction: 20
-    },
-    i = '1333839522189938740';
+    tension: 250,
+    friction: 20
+};

@@ -1833,6 +1833,7 @@ var N =
     (r.FORUM_CHANNEL_POST_CLICKED = 'forum_channel_post_clicked'),
     (r.FORUM_CHANNEL_SEEN_BATCH = 'forum_channel_seen_batch'),
     (r.FORUM_CHANNEL_GRID_UPSELL_VIEWED = 'forum_channel_grid_upsell_viewed'),
+    (r.MESSAGE_DISPATCH_SESSION_METADATA_FOUND = 'message_dispatch_session_metadata_found'),
     (r.MEDIA_CHANNEL_UPSELL_CLICKED = 'media_channel_upsell_clicked'),
     (r.MEDIA_POST_PREVIEW_EMBED_CLICKED = 'media_post_preview_embed_clicked'),
     (r.MEDIA_POST_SHARE_PROMPT_CLICKED = 'media_post_share_prompt_clicked'),

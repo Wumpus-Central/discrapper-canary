@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => D });
 var r = n(200651),
     i = n(192379),
     l = n(990547),
@@ -28,23 +28,22 @@ var r = n(200651),
     j = n(736683),
     A = n(452081),
     Z = n(46140),
-    x = n(642145),
-    w = n(981631),
-    L = n(215023),
-    R = n(388032),
-    D = n(642601);
-let k = function () {
+    x = n(981631),
+    w = n(215023),
+    L = n(388032),
+    R = n(642601);
+let D = function () {
     var e;
-    let { selectedTab: t, onSelectTab: n, tabs: k } = (0, A.z)(),
-        { onScroll: M, scrollPosition: U } = (0, p.M)(),
-        G = T.Z.getState().getUtmCurrentContext(),
-        W = (0, C._)({ location: Z.dr.QUEST_HOME_DESKTOP }) ? j.Z : j.j,
-        V = i.useRef(G);
+    let { selectedTab: t, onSelectTab: n, tabs: D } = (0, A.z)(),
+        { onScroll: k, scrollPosition: M } = (0, p.M)(),
+        U = T.Z.getState().getUtmCurrentContext(),
+        G = (0, C._)({ location: Z.dr.QUEST_HOME_DESKTOP }) ? j.Z : j.j,
+        W = i.useRef(U);
     i.useEffect(() => {
-        V.current = G;
+        W.current = U;
     }),
         i.useEffect(() => {
-            let { current: e } = V;
+            let { current: e } = W;
             (0, c.h)({
                 name: l.ImpressionNames.QUEST_HOME,
                 type: l.ImpressionTypes.VIEW,
@@ -57,37 +56,37 @@ let k = function () {
                 }
             });
         }, [t]);
-    let { enabled: B } = (0, O.W)({ location: Z.dr.QUEST_HOME_DESKTOP }),
-        H = null !== (e = (0, o.e7)([I.Z], () => I.Z.getQuest(x.V), [])) && void 0 !== e ? e : null,
-        F = null !== H && !(0, S.zi)(H),
-        z = i.useCallback(() => {
-            if (F) {
-                window.open(v.Z.getArticleURL(w.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+    let { enabled: V } = (0, O.W)({ location: Z.dr.QUEST_HOME_DESKTOP }),
+        B = null !== (e = (0, o.e7)([I.Z], () => I.Z.getQuest(Z.V6), [])) && void 0 !== e ? e : null,
+        H = null !== B && !(0, S.zi)(B),
+        F = i.useCallback(() => {
+            if (H) {
+                window.open(v.Z.getArticleURL(x.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
                 return;
             }
-            window.open(v.Z.getArticleURL(w.BhN.QUESTS_LEARN_MORE));
-        }, [F]);
-    (0, d.Tt)({ location: R.NW.string(R.t.JALI2N) });
-    let Y = F ? R.NW.format(R.t.BCBIlp, {}) : R.NW.format(R.t.lmMBf3, {}),
-        K = F ? R.NW.format(R.t.U9FY0N, {}) : R.NW.string(R.t.oWCrBg);
+            window.open(v.Z.getArticleURL(x.BhN.QUESTS_LEARN_MORE));
+        }, [H]);
+    (0, d.Tt)({ location: L.NW.string(L.t.JALI2N) });
+    let z = H ? L.NW.format(L.t.BCBIlp, {}) : L.NW.format(L.t.lmMBf3, {}),
+        Y = H ? L.NW.format(L.t.U9FY0N, {}) : L.NW.string(L.t.oWCrBg);
     return (0, r.jsx)('div', {
-        className: D.container,
-        children: B
+        className: R.container,
+        children: V
             ? (0, r.jsxs)(E.Z, {
-                  onScroll: M,
+                  onScroll: k,
                   children: [
                       (0, r.jsx)(_.a, {
                           selectedTabId: t,
                           handleTransition: n,
-                          tabs: k,
+                          tabs: D,
                           icon: a.qDn,
                           children: (0, r.jsx)(N.V9, {
                               cardAlignment: N.ek.END,
-                              ctaText: R.NW.string(R.t['J+vlIS']),
+                              ctaText: L.NW.string(L.t['J+vlIS']),
                               ctaOnClick: () => {
                                   (0, u.mK)({
                                       openInLayer: !1,
-                                      tab: L.AW.ORBS,
+                                      tab: w.AW.ORBS,
                                       analyticsLocations: [],
                                       analyticsSource: s.Z.QUEST_HOME_PAGE
                                   });
@@ -95,54 +94,54 @@ let k = function () {
                           })
                       }),
                       (0, r.jsx)(f.Z, {
-                          title: Y,
-                          description: K,
+                          title: z,
+                          description: Y,
                           button: (0, r.jsx)(h.u, {
-                              text: R.NW.string(R.t.hvVgAQ),
-                              onClick: z
+                              text: L.NW.string(L.t.hvVgAQ),
+                              onClick: F
                           }),
-                          className: D.bannerContainer,
+                          className: R.bannerContainer,
                           children: (0, r.jsx)('div', {
-                              className: D.bannerImage,
-                              children: (0, r.jsx)('div', { className: D.bannerGradient })
+                              className: R.bannerImage,
+                              children: (0, r.jsx)('div', { className: R.bannerGradient })
                           })
                       }),
-                      (0, r.jsx)(g.Z, { children: t === y.e5.CLAIMED ? (0, r.jsx)(W, { onSelectTab: n }) : (0, r.jsx)(P.Z, {}) })
+                      (0, r.jsx)(g.Z, { children: t === y.e5.CLAIMED ? (0, r.jsx)(G, { onSelectTab: n }) : (0, r.jsx)(P.Z, {}) })
                   ]
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)(b.ZP, {
                           variant: b._6.OVERLAY,
-                          children: [(0, r.jsx)('div', { className: D.dragRegion }), (0, r.jsx)(b.z6, { scrollPosition: U }), (0, r.jsx)(b.aV, { icon: a.qDn })]
+                          children: [(0, r.jsx)('div', { className: R.dragRegion }), (0, r.jsx)(b.z6, { scrollPosition: M }), (0, r.jsx)(b.aV, { icon: a.qDn })]
                       }),
                       (0, r.jsxs)(E.Z, {
-                          onScroll: M,
+                          onScroll: k,
                           children: [
                               (0, r.jsx)(f.Z, {
-                                  title: Y,
-                                  description: K,
+                                  title: z,
+                                  description: Y,
                                   button: (0, r.jsx)(h.u, {
-                                      text: R.NW.string(R.t.hvVgAQ),
-                                      onClick: z
+                                      text: L.NW.string(L.t.hvVgAQ),
+                                      onClick: F
                                   }),
-                                  className: D.bannerContainer,
+                                  className: R.bannerContainer,
                                   children: (0, r.jsx)('div', {
-                                      className: D.bannerImage,
-                                      children: (0, r.jsx)('div', { className: D.bannerGradient })
+                                      className: R.bannerImage,
+                                      children: (0, r.jsx)('div', { className: R.bannerGradient })
                                   })
                               }),
                               (0, r.jsxs)(g.Z, {
                                   children: [
                                       (0, r.jsx)('div', {
-                                          className: D.tabs,
+                                          className: R.tabs,
                                           children: (0, r.jsx)(m.Z, {
-                                              tabs: k,
+                                              tabs: D,
                                               selectedTab: t,
                                               onTabSelect: n
                                           })
                                       }),
-                                      t === y.e5.CLAIMED ? (0, r.jsx)(W, { onSelectTab: n }) : (0, r.jsx)(P.Z, {})
+                                      t === y.e5.CLAIMED ? (0, r.jsx)(G, { onSelectTab: n }) : (0, r.jsx)(P.Z, {})
                                   ]
                               })
                           ]
