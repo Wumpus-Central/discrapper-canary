@@ -1,81 +1,76 @@
 n.d(t, { z: () => v });
 var r = n(192379),
-    i = n(373793),
-    a = n(442837),
-    o = n(783097),
-    l = n(213459),
-    s = n(749681),
-    c = n(258971),
-    d = n(592125),
+    i = n(442837),
+    a = n(783097),
+    o = n(176412),
+    l = n(749681),
+    s = n(258971),
+    c = n(592125),
     u = n(496675),
-    p = n(944486),
-    m = n(914010),
-    f = n(135431),
+    d = n(944486),
+    p = n(914010),
+    m = n(135431),
+    f = n(433534),
     h = n(914498),
     g = n(981631),
     _ = n(49898),
     b = n(388032);
 function v(e, t) {
     let { isDiscoverable: n, customInstallUrl: v, installParams: y, integrationTypesConfig: x } = e,
-        O = (0, f.Eb)({
+        E = (0, f.E)({
             customInstallUrl: v,
             installParams: y,
             integrationTypesConfig: x
         }),
-        E = (0, a.e7)([m.Z], () => {
+        O = (0, i.e7)([p.Z], () => {
             var e;
-            return null !== (e = m.Z.getGuildId()) && void 0 !== e ? e : void 0;
+            return null !== (e = p.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        j = (0, l.PL)(!0, !1),
-        N = (0, l.LD)(E, !1),
-        C = (0, f.TK)(e.id, j),
-        I = (0, f.TK)(e.id, N),
-        S = O && null != x && i.Y.USER_INSTALL in x,
-        T = (0, a.e7)(
-            [d.Z, u.Z, p.Z],
+        N = (0, i.e7)(
+            [c.Z, u.Z, d.Z],
             () => {
-                let e = d.Z.getChannel(p.Z.getChannelId());
+                let e = c.Z.getChannel(d.Z.getChannelId());
                 return null != e && (e.isPrivate() || u.Z.can(g.Plq.SEND_MESSAGES, e));
             },
             []
         ),
-        P = (C || I || S) && T,
-        A = n || P;
+        j = (0, a.PZ)(e, O) && N,
+        C = n || j;
     return r.useMemo(
         () =>
-            A
+            C
                 ? {
                       label: b.NW.string(b.t['HO/oXl']),
                       trackingArea: h.j_.VIEW,
                       onClick() {
-                          if ((null == t || t(h.j_.VIEW), P)) {
+                          if ((null == t || t(h.j_.VIEW), j)) {
                               (0, o.X)(e.id);
                               return;
                           }
-                          (0, s.transitionToGlobalDiscovery)({
+                          (0, l.transitionToGlobalDiscovery)({
                               tab: _.GlobalDiscoveryTab.APPS,
                               applicationId: e.id,
-                              newSessionState: { entrypoint: { name: c.xF.APPLICATION_DIRECTORY_PROFILE_EMBED } }
+                              newSessionState: { entrypoint: { name: s.xF.APPLICATION_DIRECTORY_PROFILE_EMBED } }
                           });
                       }
                   }
-                : O
+                : E
                   ? {
                         label: b.NW.string(b.t.NgXl3N),
                         trackingArea: h.j_.ADD_APP,
                         onClick() {
                             null == t || t(h.j_.ADD_APP),
-                                (0, f.LO)({
+                                (0, m.LO)({
                                     applicationId: e.id,
                                     customInstallUrl: v,
                                     installParams: y,
                                     integrationTypesConfig: x,
-                                    guildId: E,
+                                    guildId: O,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, P, A, v, y, x, O, t, E]
+        [e.id, j, C, v, y, x, E, t, O]
     );
 }

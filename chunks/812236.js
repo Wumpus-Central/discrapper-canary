@@ -1,6 +1,6 @@
 n.d(t, {
-    Fs: () => _,
-    Xu: () => p,
+    Fs: () => p,
+    Xu: () => _,
     ZP: () => f,
     ms: () => m,
     sV: () => u
@@ -21,7 +21,7 @@ async function f(e, t) {
     if (
         (null != r &&
             null ==
-                (n = p(
+                (n = _(
                     {
                         channel: r,
                         type: 'channel'
@@ -32,7 +32,7 @@ async function f(e, t) {
                 type: 'application',
                 applicationId: t
             }),
-            (n = p(
+            (n = _(
                 {
                     channel: r,
                     type: 'channel'
@@ -44,7 +44,7 @@ async function f(e, t) {
         return n;
     throw Error(u);
 }
-function p(e, t) {
+function _(e, t) {
     return l.ZP.query(
         e,
         { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
@@ -57,7 +57,7 @@ function p(e, t) {
         }
     ).commands[0];
 }
-function _(e, t) {
+function p(e, t) {
     let { commands: n, loading: i } = h(e, t),
         o = n[0],
         a = null != o;
@@ -88,9 +88,12 @@ function h(e, t) {
 }
 function m(e) {
     let { context: t, applicationId: n, botUserId: r } = e,
-        a = _(t, n);
-    if (null == a) return !1;
-    let s = null != a.integration_types && a.integration_types.includes(i.Y.USER_INSTALL),
-        l = null != a.contexts && a.contexts.includes(o.D.BOT_DM);
-    return null != r && s && l;
+        i = p(t, n);
+    return null != i && null != r && g(i);
+}
+function g(e) {
+    if (null == e) return !1;
+    let t = null != e.integration_types && e.integration_types.includes(i.Y.USER_INSTALL),
+        n = null != e.contexts && e.contexts.includes(o.D.BOT_DM);
+    return t && n;
 }

@@ -2,9 +2,10 @@ n.d(t, {
     $z: () => R,
     BH: () => A,
     BO: () => w,
-    D7: () => L,
+    D7: () => x,
     Dd: () => C,
     Ft: () => D,
+    TK: () => B,
     X0: () => k,
     XA: () => j,
     Z8: () => O,
@@ -32,8 +33,8 @@ var r = n(654861),
     d = n(367907),
     f = n(399860);
 n(131704);
-var p = n(703558),
-    _ = n(895924),
+var _ = n(703558),
+    p = n(895924),
     h = n(689079),
     m = n(981631),
     g = n(231338);
@@ -50,7 +51,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +67,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +84,7 @@ function y(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -101,19 +102,19 @@ function O(e) {
               o.permissions.forEach((e) => {
                   i[e.id] = e;
               })));
-    let p = (null != l ? l : []).map((e) => e.name),
+    let _ = (null != l ? l : []).map((e) => e.name),
         m = (null != l ? l : []).map((e) => e.displayName);
     return {
         version: o.version,
         guildId: o.guild_id,
-        id: [o.id, ...p].join(h.oQ),
-        untranslatedName: [o.name, ...p].join(' '),
+        id: [o.id, ..._].join(h.oQ),
+        untranslatedName: [o.name, ..._].join(' '),
         serverLocalizedName: a.name_localized,
         applicationId: s,
         type: null !== (t = o.type) && void 0 !== t ? t : u.yU.CHAT,
-        inputType: _.iw.BOT,
+        inputType: p.iw.BOT,
         untranslatedDescription: a.description,
-        options: S(a.options),
+        options: I(a.options),
         rootCommand: o,
         subCommandPath: l,
         defaultMemberPermissions: null == o.default_member_permissions ? void 0 : c.vB(o.default_member_permissions),
@@ -128,39 +129,39 @@ function O(e) {
         handler: o.handler
     };
 }
-function S(e) {
+function I(e) {
     return null == e
         ? void 0
         : e.map((e) => {
               var t, n;
-              let r = y(v({}, e), {
-                  choices: I(e.choices),
-                  options: S(e.options),
+              let r = y(b({}, e), {
+                  choices: S(e.choices),
+                  options: I(e.options),
                   serverLocalizedName: e.name_localized,
                   displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name,
                   displayDescription: null !== (n = e.description_localized) && void 0 !== n ? n : e.description
               });
               return e.type === u.jw.CHANNEL && 'channel_types' in e
-                  ? y(v({}, r), { channelTypes: e.channel_types })
+                  ? y(b({}, r), { channelTypes: e.channel_types })
                   : (e.type === u.jw.NUMBER || e.type === u.jw.INTEGER) && ('min_value' in e || 'max_value' in e)
-                    ? y(v({}, r), {
+                    ? y(b({}, r), {
                           minValue: e.min_value,
                           maxValue: e.max_value
                       })
                     : e.type === u.jw.STRING && ('min_length' in e || 'max_length' in e)
-                      ? y(v({}, r), {
+                      ? y(b({}, r), {
                             minLength: e.min_length,
                             maxLength: e.max_length
                         })
                       : r;
           });
 }
-function I(e) {
+function S(e) {
     return null == e
         ? void 0
         : e.map((e) => {
               var t;
-              return y(v({}, e), { displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name });
+              return y(b({}, e), { displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name });
           });
 }
 function T(e) {
@@ -289,52 +290,53 @@ function D(e) {
     if (n.ownerId === r.userId || t.can(g.Pl.ADMINISTRATOR, n)) return !0;
     let s = n.id;
     if (null != o) {
-        let e = x(r, s, o);
+        let e = L(r, s, o);
         if ('boolean' == typeof e) return e;
     }
-    let l = x(r, s, i);
+    let l = L(r, s, i);
     return ('boolean' != typeof l || !!l) && (null == a || (!c.fS(a, w) && t.can(a, n)));
 }
-function x(e, t, n) {
-    let r = n[(0, f.rE)(e.userId, _.Kw.USER)];
+function L(e, t, n) {
+    let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
     for (let t of e.roles) {
-        let e = n[(0, f.rE)(t, _.Kw.ROLE)];
+        let e = n[(0, f.rE)(t, p.Kw.ROLE)];
         if (null != e && ((i = !0), e.permission)) return !0;
     }
     if (i) return !1;
-    let o = n[(0, f.rE)(t, _.Kw.ROLE)];
+    let o = n[(0, f.rE)(t, p.Kw.ROLE)];
     return null != o ? o.permission : null;
 }
-function L(e) {
+function x(e) {
     switch (e) {
-        case _.bB.CHAT:
-        case _.bB.APPLICATION_LAUNCHER:
-        case _.bB.APP_LAUNCHER_APPLICATION_VIEW:
-        case _.bB.CONTEXT_MENU:
-        case _.bB.VOICE_UI:
-        case _.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-        case _.bB.MINI_SHELF:
-        case _.bB.USER_PROFILE:
-        case _.bB.NOW_PLAYING:
-        case _.bB.ACTIVITY_DETAILS:
-        case _.bB.ACTIVITIES_HOME:
-        case _.bB.ACTIVITY_INSTANCE_EMBED:
-        case _.bB.ACTIVITY_BOOKMARK_EMBED:
-        case _.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-        case _.bB.IMAGE_RECS_MENU:
-        case _.bB.IMAGE_RECS_SUBMENU:
-            return p.d.SlashCommand;
+        case p.bB.CHAT:
+        case p.bB.APPLICATION_LAUNCHER:
+        case p.bB.APP_LAUNCHER_APPLICATION_VIEW:
+        case p.bB.CONTEXT_MENU:
+        case p.bB.VOICE_UI:
+        case p.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+        case p.bB.MINI_SHELF:
+        case p.bB.USER_PROFILE:
+        case p.bB.NOW_PLAYING:
+        case p.bB.ACTIVITY_DETAILS:
+        case p.bB.ACTIVITIES_HOME:
+        case p.bB.ACTIVITY_INSTANCE_EMBED:
+        case p.bB.ACTIVITY_BOOKMARK_EMBED:
+        case p.bB.APP_MESSAGE_EMBED:
+        case p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+        case p.bB.IMAGE_RECS_MENU:
+        case p.bB.IMAGE_RECS_SUBMENU:
+            return _.d.SlashCommand;
     }
 }
 function M(e) {
-    return null == e ? void 0 : e.id === h.bi.BUILT_IN ? _.ub.BUILT_IN : e.id === h.bi.FRECENCY ? _.ub.FRECENCY : _.ub.APP;
+    return null == e ? void 0 : e.id === h.bi.BUILT_IN ? p.ub.BUILT_IN : e.id === h.bi.FRECENCY ? p.ub.FRECENCY : p.ub.APP;
 }
 function k(e, t) {
     var n, r;
     return {
-        type: _.Qi.APPLICATION,
+        type: p.Qi.APPLICATION,
         id: e.id,
         name: null !== (r = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : e.name,
         icon: e.icon,
@@ -375,4 +377,9 @@ function U(e) {
 function G(e) {
     let t = e.interactionMetadata;
     return null == t ? null : 'triggering_interaction_metadata' in t ? t.triggering_interaction_metadata : t;
+}
+function B(e, t) {
+    var n;
+    let r = null === (n = t.result) || void 0 === n ? void 0 : n.sections;
+    return null != r && e in r;
 }
