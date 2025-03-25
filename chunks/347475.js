@@ -1,19 +1,17 @@
-n.d(t, { Z: () => S }), n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(512722),
     a = n.n(o),
     s = n(442837),
-    l = n(922611),
-    c = n(695346),
-    u = n(699516),
-    d = n(594174),
-    f = n(971393),
-    p = n(614417),
-    _ = n(601665),
-    h = n(103113),
-    m = n(738953);
-function g(e, t, n) {
+    l = n(695346),
+    c = n(699516),
+    u = n(594174),
+    d = n(614417),
+    f = n(601665),
+    _ = n(103113),
+    p = n(738953);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +24,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +35,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,29 +52,29 @@ function v(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,61 +83,50 @@ function O(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function S(e) {
+function y(e) {
     var { userId: t, user: n } = e,
-        o = y(e, ['userId', 'user']);
-    let g = (0, s.e7)([d.default], () => d.default.getUser(t), [t]),
-        v = null != n ? n : g;
-    a()(null != v, 'UserProfilePopoutWrapper: user cannot be undefined');
-    let O = (0, s.e7)([d.default], () => d.default.getCurrentUser());
-    a()(null != O, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let { isBlocked: S, isIgnored: I } = (0, s.cj)([u.Z], () => ({
-            isBlocked: u.Z.isBlocked(v.id),
-            isIgnored: u.Z.isIgnored(v.id)
+        o = b(e, ['userId', 'user']);
+    let h = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
+        g = null != n ? n : h;
+    a()(null != g, 'UserProfilePopoutWrapper: user cannot be undefined');
+    let v = (0, s.e7)([u.default], () => u.default.getCurrentUser());
+    a()(null != v, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
+    let { isBlocked: y, isIgnored: O } = (0, s.cj)([c.Z], () => ({
+            isBlocked: c.Z.isBlocked(g.id),
+            isIgnored: c.Z.isIgnored(g.id)
         })),
-        T = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
-        [N, A] = i.useState(S || (T && (I || S))),
-        C = (0, f.sS)({ location: 'UserProfilePopoutWrapper' }),
-        R = c.Rt.useSetting();
-    return N && C && !T
+        [I, S] = i.useState(y || O || y),
+        T = l.Rt.useSetting();
+    return I && !(O && T)
         ? (0, r.jsx)(
-              p.Z,
-              b(E({}, o), {
-                  user: v,
-                  currentUser: O,
-                  onViewBlockedProfileClick: () => A(!1)
+              d.Z,
+              E(m({}, o), {
+                  user: g,
+                  currentUser: v,
+                  onViewBlockedProfileClick: () => S(!1)
               })
           )
-        : N && T && !(I && R)
+        : g.isNonUserBot()
           ? (0, r.jsx)(
-                p.Y,
-                b(E({}, o), {
-                    user: v,
-                    currentUser: O,
-                    onViewBlockedProfileClick: () => A(!1)
+                _.Z,
+                E(m({}, o), {
+                    user: g,
+                    currentUser: v
                 })
             )
-          : v.isNonUserBot()
+          : g.bot
             ? (0, r.jsx)(
-                  h.Z,
-                  b(E({}, o), {
-                      user: v,
-                      currentUser: O
+                  f.Z,
+                  E(m({}, o), {
+                      user: g,
+                      currentUser: v
                   })
               )
-            : v.bot
-              ? (0, r.jsx)(
-                    _.Z,
-                    b(E({}, o), {
-                        user: v,
-                        currentUser: O
-                    })
-                )
-              : (0, r.jsx)(
-                    m.Z,
-                    b(E({}, o), {
-                        user: v,
-                        currentUser: O
-                    })
-                );
+            : (0, r.jsx)(
+                  p.Z,
+                  E(m({}, o), {
+                      user: g,
+                      currentUser: v
+                  })
+              );
 }

@@ -1,17 +1,15 @@
-t.d(n, { default: () => y }), t(47120);
+t.d(n, { default: () => v }), t(47120);
 var r = t(200651),
     o = t(192379),
     i = t(442837),
     l = t(100527),
-    s = t(922611),
-    c = t(695346),
-    a = t(699516),
-    d = t(971393),
-    u = t(787018),
-    f = t(752342),
-    p = t(886794),
-    b = t(910364);
-function m(e) {
+    s = t(695346),
+    c = t(699516),
+    a = t(787018),
+    d = t(752342),
+    u = t(886794),
+    f = t(910364);
+function p(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -36,7 +34,7 @@ function m(e) {
     }
     return e;
 }
-function v(e, n) {
+function b(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -54,8 +52,8 @@ function v(e, n) {
         e
     );
 }
-let g = [l.Z.BITE_SIZE_PROFILE_POPOUT, l.Z.PROFILE_PANEL];
-function y(e) {
+let y = [l.Z.BITE_SIZE_PROFILE_POPOUT, l.Z.PROFILE_PANEL];
+function v(e) {
     var { user: n } = e,
         t = (function (e, n) {
             if (null == e) return {};
@@ -76,46 +74,33 @@ function y(e) {
             }
             return o;
         })(e, ['user']);
-    let { isBlocked: l, isIgnored: y } = (0, i.cj)([a.Z], () => ({
-            isBlocked: a.Z.isBlocked(n.id),
-            isIgnored: a.Z.isIgnored(n.id)
+    let { isBlocked: l, isIgnored: v } = (0, i.cj)([c.Z], () => ({
+            isBlocked: c.Z.isBlocked(n.id),
+            isIgnored: c.Z.isIgnored(n.id)
         })),
-        I = (0, s.D)({ location: 'UserProfileModalWrapper' }),
-        [j, h] = o.useState(l || (I && (y || l))),
-        x = (0, d.sS)({ location: 'UserProfileModalWrapper' });
+        [g, m] = o.useState(l || v || l);
     o.useEffect(() => {
-        h(y || l);
-    }, [y, l]);
-    let _ = !g.some((e) => {
+        m(v || l);
+    }, [v, l]);
+    let I = !y.some((e) => {
             var n;
             return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
         }),
-        O = c.Rt.useSetting();
-    return j && x && _ && !I
+        j = s.Rt.useSetting();
+    return g && I && !(v && j)
         ? (0, r.jsx)(
-              u.Z,
-              m(
+              a.W,
+              p(
                   {
                       user: n,
-                      onViewBlockedProfileClick: () => h(!1)
+                      onViewBlockedProfileClick: () => m(!1)
                   },
                   t
               )
           )
-        : j && _ && I && !(y && O)
-          ? (0, r.jsx)(
-                u.W,
-                m(
-                    {
-                        user: n,
-                        onViewBlockedProfileClick: () => h(!1)
-                    },
-                    t
-                )
-            )
-          : n.isNonUserBot()
-            ? (0, r.jsx)(p.Z, v(m({}, t), { user: n }))
-            : n.bot
-              ? (0, r.jsx)(f.Z, v(m({}, t), { user: n }))
-              : (0, r.jsx)(b.Z, v(m({}, t), { user: n }));
+        : n.isNonUserBot()
+          ? (0, r.jsx)(u.Z, b(p({}, t), { user: n }))
+          : n.bot
+            ? (0, r.jsx)(d.Z, b(p({}, t), { user: n }))
+            : (0, r.jsx)(f.Z, b(p({}, t), { user: n }));
 }

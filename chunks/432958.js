@@ -1,7 +1,4 @@
-n.d(t, {
-    A: () => S,
-    Z: () => I
-});
+n.d(t, { A: () => I });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -20,13 +17,13 @@ var r = n(200651),
     _ = n(471879),
     C = n(502762),
     v = n(848780),
-    y = n(907179),
-    x = n(475413),
-    j = n(228168),
-    O = n(388032),
-    N = n(497345),
+    y = n(907179);
+n(475413);
+var x = n(228168),
+    j = n(388032),
+    O = n(670353),
     E = n(321975);
-function P(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,87 +50,8 @@ function P(e) {
 }
 function I(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: l } = e,
-        o = (0, b.ZP)(t.id),
-        s = (0, u.ZP)(),
-        { analyticsLocations: h } = (0, p.ZP)(d.Z.BLOCKED_PROFILE_PANEL),
-        f = (0, m.ZB)({
-            layout: 'BLOCKED_PROFILE_PANEL',
-            userId: t.id,
-            channelId: n.id
-        }),
-        v = i.useRef(null);
-    return (0, r.jsx)(p.Gt, {
-        value: h,
-        children: (0, r.jsx)(m.Mt, {
-            value: f,
-            children: (0, r.jsx)(C.Z, {
-                ref: v,
-                user: t,
-                displayProfile: o,
-                profileType: j.y0.PANEL,
-                themeOverride: s,
-                children: (0, r.jsx)(a.u2, {
-                    children: (0, r.jsxs)('div', {
-                        className: N.container,
-                        children: [
-                            (0, r.jsx)('img', {
-                                alt: '',
-                                src: E,
-                                className: N.previewForCollected,
-                                'aria-hidden': !0
-                            }),
-                            (0, r.jsxs)('div', {
-                                className: N.body,
-                                children: [
-                                    (0, r.jsx)(_.Z, {
-                                        user: t,
-                                        guildId: null
-                                    }),
-                                    (0, r.jsx)(c.X6q, {
-                                        variant: 'heading-lg/bold',
-                                        className: N.header,
-                                        children: O.NW.string(O.t.VNJ7UF)
-                                    }),
-                                    (0, r.jsx)(c.Text, {
-                                        variant: 'text-sm/medium',
-                                        children: O.NW.format(O.t.LXbngo, { username: t.username })
-                                    }),
-                                    (0, r.jsx)(c.Text, {
-                                        variant: 'text-sm/medium',
-                                        children: O.NW.string(O.t['20WzZ2'])
-                                    }),
-                                    (0, r.jsx)(x.tG, {
-                                        className: N.centeredButton,
-                                        action: 'VIEW_BLOCKED_PROFILE',
-                                        text: O.NW.string(O.t.iXAna2),
-                                        autoFocus: !0,
-                                        fullWidth: !1,
-                                        onClick: () => {
-                                            null == l || l(),
-                                                (0, g.pQ)(
-                                                    P(
-                                                        {
-                                                            action: 'VIEW_BLOCKED_PROFILE',
-                                                            analyticsLocations: h
-                                                        },
-                                                        f
-                                                    )
-                                                );
-                                        }
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                })
-            })
-        })
-    });
-}
-function S(e) {
-    let { user: t, channel: n, onViewBlockedProfileClick: l } = e,
-        x = (0, b.ZP)(t.id),
-        I = (0, u.ZP)(),
+        I = (0, b.ZP)(t.id),
+        P = (0, u.ZP)(),
         S = (0, s.e7)([h.Z], () => h.Z.isBlocked(t.id)),
         { analyticsLocations: Z } = (0, p.ZP)(S ? d.Z.BLOCKED_PROFILE_PANEL : d.Z.IGNORED_PROFILE_PANEL),
         T = (0, m.ZB)({
@@ -149,33 +67,33 @@ function S(e) {
             children: (0, r.jsx)(C.Z, {
                 ref: A,
                 user: t,
-                displayProfile: x,
-                profileType: j.y0.PANEL,
-                themeOverride: I,
+                displayProfile: I,
+                profileType: x.y0.PANEL,
+                themeOverride: P,
                 children: (0, r.jsx)(a.u2, {
                     children: (0, r.jsxs)('div', {
-                        className: N.container,
+                        className: O.container,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: E,
-                                className: N.previewForCollected,
+                                className: O.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, r.jsxs)('div', {
-                                className: o()(N.body, N.bodySpacing),
+                                className: o()(O.body, O.bodySpacing),
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: N.headerContainer,
+                                        className: O.headerContainer,
                                         children: [
                                             (0, r.jsx)(_.i, { user: t }),
                                             (0, r.jsx)(c.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: O.NW.string(O.t.b33pLC)
+                                                children: j.NW.string(j.t.b33pLC)
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: O.NW.format(S ? O.t['8F+WNz'] : O.t['/cZp5u'], { username: f.ZP.getName(n.guild_id, n.id, t) })
+                                                children: j.NW.format(S ? j.t['8F+WNz'] : j.t['/cZp5u'], { username: f.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
@@ -187,7 +105,7 @@ function S(e) {
                                                 onClick: () => {
                                                     null == l || l(),
                                                         (0, g.pQ)(
-                                                            P(
+                                                            N(
                                                                 {
                                                                     action: S ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                                     analyticsLocations: Z
@@ -202,7 +120,7 @@ function S(e) {
                                                 onClick: () => {
                                                     null == l || l(),
                                                         (0, g.pQ)(
-                                                            P(
+                                                            N(
                                                                 {
                                                                     action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                                     analyticsLocations: Z
