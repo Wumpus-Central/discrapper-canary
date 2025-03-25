@@ -1,40 +1,45 @@
 n.r(t),
     n.d(t, {
-        default: () => O,
-        useOverlayInitialFocus: () => y
+        default: () => S,
+        useOverlayInitialFocus: () => I
     }),
     n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(13245),
-    c = n(615287),
-    l = n(493773),
+    l = n(442837),
+    u = n(13245),
+    o = n(615287),
+    c = n(493773),
+    a = n(522474),
     s = n(238246),
-    u = n(355863),
-    d = n(944486),
-    _ = n(358085);
+    d = n(355863),
+    f = n(944486),
+    g = n(358085);
 n(606206);
-var f = n(998502),
-    p = n(145597);
+var O = n(998502),
+    y = n(145597);
 n(371467);
-var g = n(554370),
-    b = n(371651),
-    m = n(610394),
-    h = n(501787),
+var p = n(554370),
+    h = n(371651),
+    E = n(610394),
+    P = n(757744),
     v = n(981631);
-function y(e, t) {
-    let n = (0, o.e7)([m.ZP], () => {
-            let e = m.ZP.getFocusedPID();
-            return !_.isPlatformEmbedded || (null != e && e !== p.R2);
+function I(e, t) {
+    let n = (0, l.e7)([a.Z], () => {
+            var t;
+            return null !== (t = a.Z.getWindow(e)) && void 0 !== t ? t : window;
         }),
-        [r, s] = i.useState(n);
-    (0, l.Ng)(() => {
+        r = (0, l.e7)([E.ZP], () => {
+            let e = E.ZP.getFocusedPID();
+            return !g.isPlatformEmbedded || (null != e && e !== y.UNSET_PID);
+        }),
+        [s, p] = i.useState(r);
+    (0, c.Ng)(() => {
         let e = (e) => {
-            e.data === m.Il &&
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        window.parent.postMessage(m.A8, '*');
+            e.data === E.Il &&
+                n.requestAnimationFrame(() => {
+                    n.requestAnimationFrame(() => {
+                        window.parent.postMessage(E.A8, '*');
                     });
                 });
         };
@@ -45,45 +50,45 @@ function y(e, t) {
             }
         );
     });
-    let g = i.useCallback(() => {
-        requestAnimationFrame(() => {
+    let P = i.useCallback(() => {
+        n.requestAnimationFrame(() => {
             try {
-                a.Z.successfullyShown((0, p.QF)()), f.ZP.showInactive(e);
+                u.Z.successfullyShown((0, y.getPID)()), O.ZP.showInactive(e);
             } catch (t) {
                 t.message.includes('IPC') &&
                     setTimeout(() => {
-                        f.ZP.showInactive(e);
+                        O.ZP.showInactive(e);
                     }, 100);
             }
         });
-    }, [e]);
+    }, [e, n]);
     return (
         i.useEffect(() => {
-            (n || r) && n && !r && (s(!0), g());
-        }, [g, r, n, e]),
-        (0, l.Ng)(() => {
+            !s && r && r && (p(!0), P());
+        }, [P, s, r, e]),
+        (0, c.Ng)(() => {
             var e;
-            r && g();
-            let n = null !== (e = m.ZP.getFocusedPID()) && void 0 !== e ? e : (0, p.QF)(),
-                i = null != d.Z.getVoiceChannelId();
-            a.Z.track(v.rMx.OVERLAY_INITIALIZED, {
-                voice_widget_connected: i,
-                text_widget_connected: m.ZP.isPinned(v.Odu.TEXT),
-                overlay_render_method: c.gl[b.default.getOverlayMethod(n)],
-                unpinned_widget_types: u.Z.getAllUnpinnedPinnedWidgets(t)
+            s && P();
+            let n = null !== (e = E.ZP.getFocusedPID()) && void 0 !== e ? e : (0, y.getPID)(),
+                r = null != f.Z.getVoiceChannelId();
+            u.Z.track(v.rMx.OVERLAY_INITIALIZED, {
+                voice_widget_connected: r,
+                text_widget_connected: E.ZP.isPinned(v.Odu.TEXT),
+                overlay_render_method: o.gl[h.default.getOverlayMethod(n)],
+                unpinned_widget_types: d.Z.getAllUnpinnedPinnedWidgets(t)
             });
         }),
-        r
+        s
     );
 }
-function O(e) {
+function S(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return y(n, h.OVERLAY_V3_LAYOUT_ID)
+    return I(n, P.$)
         ? (0, r.jsx)(s.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
-              children: (0, r.jsx)(g.Z, {})
+              children: (0, r.jsx)(p.Z, {})
           })
         : null;
 }

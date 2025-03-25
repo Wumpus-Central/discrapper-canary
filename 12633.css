@@ -44242,13 +44242,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     fill: var(--custom-notice-text)
 }
 
-@supports not (grid-template-columns:subgrid) {
+@supports not ((grid-template-columns:subgrid) and (white-space-collapse:collapse)) {
     .visual-refresh .notice__6e2b9 {
         border-top-left-radius: 0
     }
 }
 
-@supports (grid-template-columns:subgrid) {
+@supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
     .visual-refresh .notice__6e2b9 {
         grid-area: notice
     }
@@ -48575,7 +48575,7 @@ html.disable-forced-colors * {
     margin-left: 8px
 }
 
-@supports (grid-template-columns:subgrid) {
+@supports (grid-template-columns:subgrid) and (white-space-collapse:collapse) {
     .bar_c38106 {
         grid-area: titleBar
     }
