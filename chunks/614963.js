@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(785141),
     i = n(251625),
     o = n(823379),
@@ -33,18 +33,19 @@ function c(e) {
     }
     return e;
 }
-let u = 15,
-    d = 10,
-    f = 3,
-    _ = 10,
-    p = 5,
-    h = 30,
+let u = 30,
+    d = 15,
+    f = 8,
+    _ = 3,
+    p = 10,
+    h = 5,
+    m = 30,
     g = 5;
-function m() {
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
-    return e <= 5 ? f : e <= 15 ? d : u;
+    return e <= 5 ? _ : e <= 15 ? f : e <= 30 ? d : u;
 }
-function E(e, t) {
+function b(e, t) {
     let n = {
             packetsSentOrReceived: 0,
             packetsLost: 0,
@@ -75,24 +76,24 @@ let v = (0, i.oH)((e, t, n) => ({
     errorType: t,
     avError: n
 }));
-function b(e, t) {
+function y(e, t) {
     if ('streamer' === e.type) {
-        if (100 * e.packetLossRate > _) return v(s.NW.string(s.t['1f1LHh']), 'Packet Loss', r.u.STREAM_SEND_HIGH_PACKET_LOSS);
-        if (e.frameRate <= m(t)) return v(s.NW.string(s.t['1f1LHh']), 'Frame Rate Encode', r.u.STREAM_SEND_LOW_FPS);
+        if (100 * e.packetLossRate > p) return v(s.NW.string(s.t['1f1LHh']), 'Packet Loss', r.u.STREAM_SEND_HIGH_PACKET_LOSS);
+        if (e.frameRate <= E(t)) return v(s.NW.string(s.t['1f1LHh']), 'Frame Rate Encode', r.u.STREAM_SEND_LOW_FPS);
     } else {
-        if (100 * e.packetLossRate > _) return v(s.NW.string(s.t.BcOif3), 'Packet Loss', r.u.STREAM_VIEW_HIGH_PACKET_LOSS);
-        if (e.frameRate <= m(t)) return v(s.NW.string(s.t.BcOif3), 'Frame Rate Decode', r.u.STREAM_VIEW_LOW_FPS);
+        if (100 * e.packetLossRate > p) return v(s.NW.string(s.t.BcOif3), 'Packet Loss', r.u.STREAM_VIEW_HIGH_PACKET_LOSS);
+        if (e.frameRate <= E(t)) return v(s.NW.string(s.t.BcOif3), 'Frame Rate Decode', r.u.STREAM_VIEW_LOW_FPS);
     }
     return null;
 }
-function y(e, t, n, i) {
+function O(e, t, n, i) {
     if (n) return v(s.NW.string(s.t['9lcycn']), 'Soundshare Failed', r.u.STREAM_SOUNDSHARE_FAILED);
     if (null != t) {
-        let e = E(t, p),
-            n = E(t, h);
+        let e = b(t, h),
+            n = b(t, m);
         if (n.numDatapoints >= g) {
             var o;
-            return null !== (o = b(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== o ? o : b(n, null == i ? void 0 : i.maxFrameRate);
+            return null !== (o = y(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== o ? o : y(n, null == i ? void 0 : i.maxFrameRate);
         }
     }
     return e === a.IE4.BAD ? v(s.NW.string(s.t.Ic588P), 'Bad Connection', r.u.STREAM_BAD_NETWORK_QUALITY) : null;
