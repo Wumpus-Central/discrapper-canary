@@ -1,12 +1,12 @@
 n.d(t, {
-    L: () => p,
+    L: () => h,
     Y: () => m
 }),
     n(47120);
 var r = n(200651),
     a = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     o = n(481060),
     s = n(310752),
     c = n(897842),
@@ -55,25 +55,22 @@ let m = () => {
             { modalKey: c.A }
         );
     },
-    h = (e) => {
+    x = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    p = (e) => {
+    h = (e) => {
         let { className: t, onDrop: n } = e,
-            [i, p] = a.useState(!1),
-            x = a.useRef(null),
-            f = a.useCallback((e) => {
-                h(e), (0, o.Mr3)(c.A), null != e.dataTransfer && (e.dataTransfer.dropEffect = 'copy');
-            }, []),
+            [l, h] = a.useState(!1),
+            p = a.useRef(null),
             b = a.useCallback((e) => {
-                h(e), p(!0);
+                x(e), h(!0), (0, o.Mr3)(c.A);
             }, []),
-            _ = a.useCallback((e) => {
-                h(e), p(!1);
+            f = a.useCallback((e) => {
+                x(e), h(!1);
             }, []),
-            g = a.useCallback(
+            _ = a.useCallback(
                 async (e) => {
-                    h(e), p(!1);
+                    x(e), h(!1);
                     let t = e.dataTransfer;
                     if (null == t) {
                         m();
@@ -90,14 +87,13 @@ let m = () => {
                 [n]
             );
         return (0, r.jsx)('div', {
-            ref: x,
-            className: l()(t, u.uploadArea),
+            ref: p,
+            className: i()(t, u.uploadArea),
             onDragEnter: b,
-            onDragOver: f,
-            onDragLeave: _,
-            onDrop: g,
+            onDragLeave: f,
+            onDrop: _,
             children: (0, r.jsx)('div', {
-                className: l()(u.uploadModal, { [u.droppable]: i }),
+                className: i()(u.uploadModal, { [u.droppable]: l }),
                 children: (0, r.jsxs)('div', {
                     className: u.inner,
                     children: [
