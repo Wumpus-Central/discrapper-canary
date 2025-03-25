@@ -54857,8 +54857,8 @@ html.disable-forced-colors * {
     --button-transparent-text: var(--neutral-6);
     --card-primary-bg: var(--neutral-66);
     --card-secondary-bg: hsl(var(--opacity-8-hsl)/0.0784313725490196);
-    --channel-icon: var(--neutral-15);
-    --channels-default: var(--neutral-22);
+    --channel-icon: var(--neutral-29);
+    --channels-default: var(--neutral-29);
     --header-muted: var(--neutral-22);
     --header-primary: var(--neutral-1);
     --header-secondary: var(--neutral-11);
@@ -54984,8 +54984,8 @@ html.disable-forced-colors * {
         --border-subtle: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --card-primary-bg: color-mix(in oklab, var(--neutral-66) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --channel-icon: color-mix(in oklab, var(--neutral-15) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --channels-default: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channel-icon: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channels-default: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-11) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55145,8 +55145,8 @@ html.disable-forced-colors * {
     --button-transparent-background-hover: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --button-transparent-text: var(--neutral-95);
     --card-primary-bg: var(--neutral-1);
-    --channel-icon: var(--neutral-44);
-    --channels-default: var(--neutral-38);
+    --channel-icon: var(--neutral-42);
+    --channels-default: var(--neutral-42);
     --header-muted: var(--neutral-38);
     --header-primary: var(--neutral-71);
     --header-secondary: var(--neutral-67);
@@ -55262,8 +55262,8 @@ html.disable-forced-colors * {
         --border-strong: color-mix(in oklab, hsl(var(--opacity-48-hsl)/0.47843137254901963) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.47843137254901963) var(--theme-base-color-amount, 0%));
         --border-subtle: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--theme-base-color-amount, 0%));
         --card-primary-bg: color-mix(in oklab, var(--neutral-1) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --channel-icon: color-mix(in oklab, var(--neutral-44) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --channels-default: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channel-icon: color-mix(in oklab, var(--neutral-42) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channels-default: color-mix(in oklab, var(--neutral-42) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-38) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-71) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-67) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55414,8 +55414,8 @@ html.disable-forced-colors * {
     --border-strong: hsl(var(--opacity-44-hsl)/0.4392156862745098);
     --border-subtle: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --card-primary-bg: var(--neutral-91);
-    --channel-icon: var(--neutral-27);
-    --channels-default: var(--neutral-33);
+    --channel-icon: var(--neutral-36);
+    --channels-default: var(--neutral-36);
     --header-muted: var(--neutral-33);
     --header-primary: var(--neutral-7);
     --header-secondary: var(--neutral-10);
@@ -55529,8 +55529,8 @@ html.disable-forced-colors * {
         --border-strong: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--theme-base-color-amount, 0%));
         --border-subtle: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--theme-base-color-amount, 0%));
         --card-primary-bg: color-mix(in oklab, var(--neutral-91) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
-        --channel-icon: color-mix(in oklab, var(--neutral-27) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --channels-default: color-mix(in oklab, var(--neutral-33) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channel-icon: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channels-default: color-mix(in oklab, var(--neutral-36) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-33) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-7) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-10) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -55697,8 +55697,8 @@ html.disable-forced-colors * {
     --border-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --card-primary-bg: var(--neutral-79);
     --card-secondary-bg: hsl(var(--opacity-8-hsl)/0.0784313725490196);
-    --channel-icon: var(--neutral-22);
-    --channels-default: var(--neutral-29);
+    --channel-icon: var(--neutral-34);
+    --channels-default: var(--neutral-34);
     --header-muted: var(--neutral-29);
     --header-primary: var(--neutral-2);
     --header-secondary: var(--neutral-5);
@@ -55822,8 +55822,8 @@ html.disable-forced-colors * {
         --border-subtle: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --card-primary-bg: color-mix(in oklab, var(--neutral-79) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --channel-icon: color-mix(in oklab, var(--neutral-22) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
-        --channels-default: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channel-icon: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --channels-default: color-mix(in oklab, var(--neutral-34) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-muted: color-mix(in oklab, var(--neutral-29) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
         --header-secondary: color-mix(in oklab, var(--neutral-5) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
