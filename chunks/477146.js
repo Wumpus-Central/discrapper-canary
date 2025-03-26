@@ -1,19 +1,17 @@
 n.d(t, {
-    HV: () => d,
-    Tp: () => c,
-    Xv: () => o
+    H: () => o,
+    X: () => l
 });
-var r = n(392711),
-    i = n(605387),
-    s = n.n(i);
-let a = (e) => s().decode(e),
-    l = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
-    o = async (e, t, n, r) => ({
+var r = n(605387),
+    i = n.n(r);
+let s = (e) => i().decode(e),
+    a = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
+    l = async (e, t, n, r) => ({
         src: e,
         base64: t,
         loop: !1,
         loopDelay: 0,
-        duration: l(a(await n.arrayBuffer())),
+        duration: a(s(await n.arrayBuffer())),
         start: 0,
         position: {
             x: 0,
@@ -24,17 +22,7 @@ let a = (e) => s().decode(e),
         width: 450,
         name: n.name
     }),
-    c = (e) => {
-        let t = (0, r.cloneDeep)(e),
-            n = Math.floor(101 * Math.random()) + 150;
-        return (
-            t.forEach((e) => {
-                e.duration -= n;
-            }),
-            t
-        );
-    },
-    d = function (e) {
+    o = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'json',
             n = '\n[';
         return (
