@@ -1,45 +1,41 @@
-n.d(t, { Z: () => _ }), n(627341);
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
-var i = n(278074),
-    o = n(657707),
-    a = n(456100),
-    s = n(841784),
-    l = n(482798),
-    c = n(11133),
-    u = n(473919),
-    d = n(170187),
-    f = n(981631);
+var i = n(657707),
+    o = n(456100),
+    a = n(841784),
+    s = n(482798),
+    l = n(11133),
+    c = n(473919),
+    u = n(170187),
+    d = n(981631);
+let f = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return (0, a.Z)(e) ? (t ? i.iWm : i.jje) : e.type === d.IIU.PLAYING ? i.iWm : e.type === d.IIU.LISTENING ? i.RZG : e.type === d.IIU.WATCHING || e.type === d.IIU.STREAMING ? i.ARS : e.type === d.IIU.COMPETING ? i.iWm : null;
+};
 function _(e) {
-    let { activity: t, textVariant: n, textClassName: _, hideIcon: p = !1, hideText: h = !1, hideTooltip: m = !1 } = e,
-        { enabled: g } = a.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
-        { enabled: E } = (0, l.C)({ location: 'PresenceActivityStatus' });
-    if (p && h) return null;
-    let { text: b, tooltip: v } = (0, c.Z)({
+    let { activity: t, textVariant: n, textClassName: i, hideIcon: a = !1, hideText: d = !1, hideTooltip: _ = !1 } = e,
+        { enabled: p } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
+        { enabled: h } = (0, s.C)({ location: 'PresenceActivityStatus' });
+    if (a && d) return null;
+    let { text: m, tooltip: g } = (0, l.Z)({
             activity: t,
-            useDescriptiveActivity: E
+            useDescriptiveActivity: h
         }),
-        y = (0, i.EQ)(t)
-            .when(s.Z, () => (g ? o.iWm : o.jje))
-            .with({ type: f.IIU.PLAYING }, () => o.iWm)
-            .with({ type: f.IIU.LISTENING }, () => o.RZG)
-            .with({ type: f.IIU.WATCHING }, () => o.ARS)
-            .with({ type: f.IIU.STREAMING }, () => o.ARS)
-            .with({ type: f.IIU.COMPETING }, () => o.iWm)
-            .otherwise(() => null);
+        E = f(t, p);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !p &&
-                null != y &&
-                (0, r.jsx)(u.Z, {
-                    icon: y,
-                    tooltip: h && !m ? v : void 0
+            !a &&
+                null != E &&
+                (0, r.jsx)(c.Z, {
+                    icon: E,
+                    tooltipText: d && !_ ? g : void 0
                 }),
-            !h &&
-                (0, r.jsx)(d.Z, {
+            !d &&
+                (0, r.jsx)(u.Z, {
                     variant: n,
-                    className: _,
-                    children: b
+                    className: i,
+                    children: m
                 })
         ]
     });
