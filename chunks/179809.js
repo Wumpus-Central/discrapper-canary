@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(47120);
 var r = n(200651),
     i = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     a = n(999153),
     s = n(642128),
     c = n(91192),
@@ -19,13 +19,13 @@ var r = n(200651),
     _ = n(252686),
     O = n(682662),
     j = n(662146),
-    C = n(388032),
-    x = n(457528),
+    x = n(388032),
+    C = n(457528),
     S = n(625704);
 let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, s.animated)(d.Kqy),
     N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: w, useCircleMask: E = !1, draggable: T = !1, sorting: A = !1, onDragStart: D, onDragEnd: R, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: G, folderIconContentClassName: B } = e,
+        let { folderNode: t, setNodeRef: n, selected: o, expanded: s, mediaState: u, mentionCount: g = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: w, useCircleMask: E = !1, draggable: T = !1, sorting: A = !1, onDragStart: D, onDragEnd: R, onExpandCollapse: k, onContextMenu: L, renderChildNode: M, folderIconContent: G, folderIconContentClassName: B } = e,
             { id: U, name: W, children: V } = t,
             F = (0, h.Q3)('FolderItem'),
             [H, z] = i.useState(!1),
@@ -53,16 +53,21 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             $ = i.useCallback(
                 (e) => {
-                    (('ArrowRight' === e.key && !s) || ('ArrowLeft' === e.key && s)) && L();
+                    (('ArrowRight' === e.key && !s) || ('ArrowLeft' === e.key && s)) && k();
                 },
-                [L, s]
+                [k, s]
             ),
-            ee = null != W && '' !== W ? W : null != w && '' !== w ? w : C.NW.string(C.t.xV9hVl),
+            ee = null != W && '' !== W ? W : null != w && '' !== w ? w : x.NW.string(x.t.xV9hVl),
             et = (0, c.Ie)(''.concat(U)),
             en = 'folder-items-'.concat(U),
             er = (function (e) {
-                let t = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE);
-                return e * (t + ((0, h.Q3)('FolderItem.useHeight') ? 4 : 8));
+                let t = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
+                    n = (0, h.Q3)('FolderItem.useHeight'),
+                    r = (0, d.dQu)(d.TVs.space.SPACE_XS),
+                    i = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
+                    o = (0, d.dQu)(d.TVs.modules.guildbar.FOLDER_SIZE),
+                    l = n ? r : 8;
+                return e * (t + l) + (n ? (o - i) / 2 - l : 0);
             })(V.length),
             ei = (0, d.Yzy)(!K && s, {
                 from: { height: 0 },
@@ -70,24 +75,24 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 leave: { height: 0 },
                 config: { duration: P }
             }),
-            el = i.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
-            eo = (0, r.jsxs)(O.H, {
+            eo = i.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
+            el = (0, r.jsxs)(O.H, {
                 children: [
                     (0, r.jsx)(b.Z, {
                         disabled: K || s,
                         hovered: H,
-                        selected: l,
+                        selected: o,
                         unread: Z,
                         className: S.pill
                     }),
                     (0, r.jsx)(j.Z, {
                         text: ee,
                         disabled: A,
-                        selected: l,
+                        selected: o,
                         disableWrapper: !0,
                         children: (0, r.jsx)('div', {
                             ref: T ? J : void 0,
-                            className: o()(x.folderIcon, { [S.wobble]: !K && Y && !s }),
+                            className: l()(C.folderIcon, { [S.wobble]: !K && Y && !s }),
                             'data-dnd-name': ee,
                             children: K
                                 ? (0, r.jsx)(_.Z, {})
@@ -101,8 +106,8 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       isMentionLowImportance: N,
                                       tooltipName: ee,
                                       folderGroupId: en,
-                                      onClick: L,
-                                      onContextMenu: k,
+                                      onClick: k,
+                                      onContextMenu: L,
                                       onHoverChange: z,
                                       onKeyDown: $,
                                       treeItemProps: et,
@@ -121,19 +126,19 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 ]
             });
         return (0, r.jsxs)('div', {
-            ref: el,
-            className: o()(x.wrapper, s && x.isExpanded),
+            ref: eo,
+            className: l()(C.wrapper, s && C.isExpanded),
             'data-drop-hovering': Y,
             children: [
                 !K &&
                     s &&
                     (0, r.jsx)('span', {
-                        className: o()(x.expandedFolderBackground, {
-                            [x.collapsed]: !s,
-                            [x.hover]: Q
+                        className: l()(C.expandedFolderBackground, {
+                            [C.collapsed]: !s,
+                            [C.hover]: Q
                         })
                     }),
-                eo,
+                el,
                 ei((e, t, n) => {
                     let { key: i } = n;
                     return (
@@ -142,7 +147,7 @@ let P = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             I,
                             {
                                 as: 'ul',
-                                gap: F ? 'xxs' : 0,
+                                gap: F ? 'xs' : 0,
                                 id: en,
                                 style: {
                                     height: e.height.to((e) => e * er),
