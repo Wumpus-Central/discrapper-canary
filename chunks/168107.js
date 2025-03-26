@@ -1,9 +1,11 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(469775);
-function a(e, t, n) {
+    o = n(704454),
+    a = n(81643),
+    s = n(469775);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +29,12 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,29 +46,29 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function u(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = d(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function d(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -75,25 +77,32 @@ function d(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = {
+let p = {
     showAgeVerification: (e) => {
         var { onClose: t } = e,
-            a = u(e, ['onClose']);
+            o = f(e, ['onClose']);
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('12014').then(n.bind(n, 879367));
-                return (t) => (0, r.jsx)(e, s({}, a, t));
+                return (t) => (0, r.jsx)(e, c({}, o, t));
             },
             {
-                modalKey: o.z,
+                modalKey: s.z,
                 onCloseCallback: t
             }
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
+        if ((0, a.kJ)() && (0, o.G7)('age_verification_utils')) {
+            (0, i.ZDy)(async () => {
+                let { default: t } = await n.e('22447').then(n.bind(n, 686768));
+                return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
+            });
+            return;
+        }
         (0, i.ZDy)(async () => {
             let { default: t } = await n.e('80144').then(n.bind(n, 634997));
-            return (n) => (0, r.jsx)(t, c(s({}, n), { entryPoint: e }));
+            return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
         });
     },
     openUrl: (e) => {

@@ -6,5 +6,7 @@ e.exports = {
     button: 'button__19fd1',
     number: 'number__19fd1',
     tableRowGroup: 'tableRowGroup__19fd1',
-    content: 'content__19fd1'
+    content: 'content__19fd1',
+    buttonContainer: 'buttonContainer__19fd1',
+    buttonIcon: 'buttonIcon__19fd1'
 };

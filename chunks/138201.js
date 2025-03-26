@@ -8,7 +8,7 @@ r(192379);
 var l = r(120356),
     s = r.n(l),
     i = r(481060),
-    a = r(456180);
+    a = r(770731);
 function o(e) {
     let { title: t } = e;
     return (0, n.jsx)(i.Text, {
@@ -39,29 +39,40 @@ function c(e) {
     });
 }
 function u(e) {
-    let { icon: t, title: r, titleVariant: l = 'text-md/semibold', description: o, descriptionVariant: c = 'text-xs/medium', iconClassName: u, color: d, buttonText: m, buttonColor: p = i.zxk.Colors.PRIMARY, buttonSize: j = i.zxk.Sizes.SMALL, buttonLook: f = i.zxk.Looks.FILLED, buttonDisabled: x, onButtonPress: b, listType: v = 'icon', index: y } = e,
-        h =
+    let { icon: t, title: r, titleVariant: l = 'text-md/semibold', description: o, descriptionVariant: c = 'text-xs/medium', iconClassName: u, color: d, buttonText: m, buttonColor: p = i.zxk.Colors.PRIMARY, buttonSize: f = i.zxk.Sizes.SMALL, buttonLook: j = i.zxk.Looks.FILLED, buttonDisabled: b, buttonIcon: x, buttonIconColor: v, buttonLoading: g, onButtonPress: h, listType: y = 'icon', index: O } = e,
+        N =
             null != m
                 ? (0, n.jsx)(i.zxk, {
                       className: a.button,
-                      size: j,
+                      size: f,
                       color: p,
-                      look: f,
-                      disabled: x,
+                      look: j,
+                      disabled: b,
                       'aria-label': m,
-                      onClick: b,
-                      children: m
+                      onClick: h,
+                      submitting: g,
+                      children: (0, n.jsxs)('div', {
+                          className: a.buttonContainer,
+                          children: [
+                              m,
+                              null != x &&
+                                  (0, n.jsx)(x, {
+                                      color: null != v ? v : 'currentColor',
+                                      className: a.buttonIcon
+                                  })
+                          ]
+                      })
                   })
                 : void 0;
     return (0, n.jsxs)('div', {
         className: a.row,
         children: [
-            'numbered' === v && null != y
+            'numbered' === y && null != O
                 ? (0, n.jsx)(i.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
                       className: a.number,
-                      children: y + 1
+                      children: O + 1
                   })
                 : null != t &&
                   (0, n.jsx)('div', {
@@ -87,7 +98,7 @@ function u(e) {
                         })
                 ]
             }),
-            null != h && h
+            null != N && N
         ]
     });
 }

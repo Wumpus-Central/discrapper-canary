@@ -408,6 +408,7 @@ var r = (function (e) {
         (e.ACTIVITY_PANEL = 'activity panel'),
         (e.AUDIENCE_TILE = 'audience tile'),
         (e.STAGE_TILE = 'stage tile'),
+        (e.CHAT_WALLPAPER_PICKER = 'chat wallpaper picker'),
         e
     );
 })(r || {});

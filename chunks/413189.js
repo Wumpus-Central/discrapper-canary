@@ -33,7 +33,10 @@ function E(e) {
         W = f.t(T),
         U = f.Y(S),
         F = (null === (n = T.wallpaper) || void 0 === n ? void 0 : n.wallpaperId) === U && S.author.id === (null === (E = T.wallpaper) || void 0 === E ? void 0 : E.setterId),
-        B = (0, o.e7)([m.Z], () => m.Z.getWallpaperById(U));
+        { chatWallpaper: B, isUpdatingChatWallpaperFlag: G } = (0, o.cj)([m.Z], () => ({
+            chatWallpaper: m.Z.getWallpaperById(U),
+            isUpdatingChatWallpaperFlag: m.Z.isUpdatingChatWallpaperFlagForChannel(T.id)
+        }));
     return null == U
         ? null
         : ((j = k
@@ -64,15 +67,17 @@ function E(e) {
                     (I = (0, r.jsx)(a.zxk, {
                         className: y.action,
                         onClick: () => {
-                            h.X(T, { shouldClear: !1 });
+                            h.X(T, U, { shouldClear: !1 });
                         },
+                        submitting: G,
                         children: x.NW.string(x.t.o6850d)
                     }))
                   : (I = (0, r.jsx)(a.zxk, {
                         className: y.action,
                         onClick: () => {
-                            h.X(T, { shouldClear: !0 });
+                            h.X(T, U, { shouldClear: !0 });
                         },
+                        submitting: G,
                         children: x.NW.string(x.t.VkKicX)
                     }))),
           (0, r.jsx)(_.Z, {

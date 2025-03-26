@@ -142,8 +142,7 @@ async function y(e) {
             signal: f,
             rejectWithError: !0
         });
-        return (
-            null == p || p(c.body, a),
+        null == p || p(c.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
@@ -155,9 +154,7 @@ async function y(e) {
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
                     guildId: a,
                     guildMember: c.body.guild_member
-                }),
-            c.body
-        );
+                });
     } catch (t) {
         throw (
             (null != t && (null == t ? void 0 : t.body) != null && m.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),

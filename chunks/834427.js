@@ -46,7 +46,9 @@ class c extends (r = o.Component) {
                 name: r,
                 'aria-label': o,
                 'aria-hidden': a || void 0,
-                ref: (e) => (this._input = e)
+                ref: (e) => {
+                    this._input = e;
+                }
             })
         );
     }

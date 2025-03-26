@@ -2380,6 +2380,9 @@ var N =
     (r.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED = 'chat_wallpaper_picker_blur_toggled'),
     (r.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED = 'chat_wallpaper_picker_cancel_clicked'),
     (r.CHAT_WALLPAPER_PICKER_APPLY_CLICKED = 'chat_wallpaper_picker_apply_clicked'),
+    (r.CHAT_WALLPAPER_USER_SIDE_CLEAR_TOGGLED = 'chat_wallpaper_user_side_clear_toggled'),
+    (r.CHAT_WALLPAPER_NITRO_LINK_CLICKED = 'chat_wallpaper_nitro_link_clicked'),
+    (r.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED = 'chat_wallpaper_wallpaper_option_selected'),
     r);
 Object.freeze({
     STORAGE_MANIFEST: (t, e) => ''.concat(t, '/storage/').concat(e, '/MANIFEST'),

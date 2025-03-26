@@ -1,11 +1,12 @@
 n.d(t, {
-    F5: () => I,
+    F5: () => S,
     Jm: () => g,
     L0: () => b,
     L5: () => m,
-    WD: () => O,
+    WD: () => I,
     g0: () => E,
-    l6: () => y,
+    kJ: () => y,
+    l6: () => O,
     pY: () => v,
     sf: () => h
 }),
@@ -48,10 +49,14 @@ function v(e, t) {
     return null == r ? void 0 : r.rawValue.split(',').includes('retry');
 }
 function y() {
-    let e = (0, i.e7)([u.default], () => u.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED;
+    let e = u.default.getCurrentUser();
+    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED && (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING;
 }
-function O(e) {
+function O() {
+    let e = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.UNVERIFIED && (null == e ? void 0 : e.ageVerificationStatus) !== a.F$.CLIENT_ONLY_PENDING;
+}
+function I(e) {
     let [t, n] = r.useState(!1),
         a = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         { current: s } = r.useRef(null == a ? void 0 : a.ageVerificationStatus),
@@ -81,7 +86,7 @@ function O(e) {
         }, [e, c])
     };
 }
-function I(e) {
+function S(e) {
     let t = (0, i.e7)([u.default], () => {
             var e;
             return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.ageVerificationStatus;

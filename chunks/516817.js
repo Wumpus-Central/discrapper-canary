@@ -4,7 +4,7 @@ var r = n(200651),
     o = n(120356),
     a = n.n(o),
     s = n(70097),
-    l = n(881474),
+    l = n(829030),
     c = n(168352),
     u = n(379839),
     d = n(359135),
@@ -15,33 +15,28 @@ function _(e) {
         h = (0, l.C)(n, o),
         [m, g] = (0, i.useState)(t),
         [E, b] = (0, i.useState)(!1),
-        [v, y] = (0, i.useState)(!1);
-    if (
-        ((0, i.useEffect)(() => {
-            if (null == m || null != t || E) null != t && (g(t), b(!1));
-            else {
-                b(!0);
-                let e = setTimeout(() => {
-                    b(!1), g(null);
-                }, 400);
-                return () => clearTimeout(e);
-            }
-        }, [t, m, E]),
-        null == t)
-    )
-        return null;
-    let O = null != t ? t : m;
-    return null == O
+        [v, y] = (0, i.useState)(!1),
+        { fadeIn: O, noFade: I } = (0, l.X)(s, v, c);
+    (0, i.useEffect)(() => {
+        null == m || null != t || E ? null != t && (g(t), b(!1)) : b(!0);
+    }, [t, m, E]);
+    let S = (0, i.useCallback)(() => {
+            E && (g(null), y(!1), b(!1));
+        }, [E]),
+        T = null != t ? t : m;
+    return null == T
         ? null
         : (0, r.jsx)('div', {
+              onAnimationEnd: S,
               className: a()(f.container, {
-                  [f.containerExit]: E,
                   [f.accountContainer]: c === d.i.ACCOUNT,
-                  [f.fadeIn]: v && !E
+                  [f.fadeOut]: E,
+                  [f.fadeIn]: O,
+                  [f.noFade]: I
               }),
               style: v ? { background: _.background } : void 0,
               children: (0, r.jsx)(p, {
-                  nameplate: O,
+                  nameplate: T,
                   className: a()(f.img, {
                       [f.hover]: n,
                       [f.selected]: o,
