@@ -2155,6 +2155,7 @@ var N =
     (r.REFERRAL_PROGRAM_SHARE_CTA_CLICKED = 'referral_program_share_cta_clicked'),
     (r.CACHE_STORE_CACHE_SKIPPED = 'cache_store_cache_skipped'),
     (r.GATEWAY_SOCKET_RESET = 'gateway_socket_reset'),
+    (r.SESSION_START_CLIENT = 'session_start_client'),
     (r.APPLE_PARTNER_IAP_REQUEST_SENT = 'apple_partner_iap_request_sent'),
     (r.POMELO_ERRORS = 'pomelo_errors'),
     (r.POMELO_EDIT_STEP_VIEWED = 'pomelo_edit_step_viewed'),
