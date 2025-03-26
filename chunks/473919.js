@@ -59,16 +59,17 @@ function f(e, t) {
     );
 }
 function _(e) {
-    let { icon: t, tooltip: n, className: i } = e,
-        c = (0, a.vjg)(a.Skl.ONLINE);
+    let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: c } = e,
+        d = (0, a.vjg)(a.Skl.ONLINE);
     return null == n
         ? (0, r.jsx)(t, {
               size: 'custom',
-              color: c,
-              className: o()(l.icon, i)
+              color: d,
+              className: o()(l.icon, c)
           })
         : (0, r.jsx)(a.ua7, {
               text: n,
+              'aria-label': i,
               tooltipContentClassName: l.container,
               delay: s.X,
               children: (e) =>
@@ -76,8 +77,8 @@ function _(e) {
                       t,
                       f(u({}, e), {
                           size: 'custom',
-                          color: c,
-                          className: o()(l.icon, i)
+                          color: d,
+                          className: o()(l.icon, c)
                       })
                   )
           });

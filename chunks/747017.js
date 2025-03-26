@@ -19,7 +19,7 @@ var r = n(200651),
     v = n(981631),
     y = n(389034);
 function O(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, emojiClassName: S, textSize: T = 'xs', animate: N = !0, hasQuest: A = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e,
+    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: I, emojiClassName: S, textSize: T = 'xs', animate: A = !0, hasQuest: N = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e,
         P = 'activity-status-web',
         { blockeeExperimentEnabled: w, blockerExperimentEnabled: D } = (0, u.NR)(P);
     (0, d.Z)(null == t ? void 0 : t.id, P);
@@ -44,6 +44,7 @@ function O(e) {
         U = () => {
             if (null != L)
                 return (0, r.jsx)(m.Z, {
+                    stream: L,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(T, '/medium'),
                     textClassName: I,
@@ -87,7 +88,7 @@ function O(e) {
                         !C &&
                         (0, r.jsx)(_.Z, {
                             emoji: e,
-                            animate: N,
+                            animate: A,
                             hideTooltip: R,
                             className: S
                         }),
@@ -113,7 +114,7 @@ function O(e) {
                 children: b.l
             }),
             G(),
-            A && (0, r.jsx)(p.Z, {})
+            N && (0, r.jsx)(p.Z, {})
         ]
     });
 }

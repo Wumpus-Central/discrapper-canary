@@ -1,28 +1,34 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
-var i = n(481060),
-    o = n(170187),
-    a = n(937008),
-    s = n(388032);
-function l(e) {
-    let { game: t, textVariant: n, textClassName: l, hideIcon: c = !1, hideText: u = !1, hideTooltip: d = !1 } = e;
-    if (c && u) return null;
-    let f = (null == t ? void 0 : t.name) === '' ? null : null == t ? void 0 : t.name,
-        p = null != f ? s.NW.format(s.t['0wJXSk'], { name: f }) : s.NW.string(s.t.eXan7O),
-        _ = null != f ? s.NW.formatToPlainString(s.t['0wJXSk'], { name: f }) : s.NW.string(s.t.eXan7O);
+var i = n(442837),
+    o = n(481060),
+    a = n(201895),
+    s = n(933557),
+    l = n(592125),
+    c = n(473919),
+    u = n(170187),
+    d = n(388032);
+function f(e) {
+    let { stream: t, game: n, textVariant: f, textClassName: _, hideIcon: p = !1, hideText: h = !1, hideTooltip: m = !1 } = e,
+        g = (0, i.e7)([l.Z], () => l.Z.getChannel(t.channelId)),
+        E = (0, s.ZP)(g);
+    if (p && h) return null;
+    let b = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
+        v = null != b ? d.NW.format(d.t['0wJXSk'], { name: b }) : d.NW.string(d.t.eXan7O);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !c &&
-                (0, r.jsx)(a.Z, {
-                    icon: i.ARS,
-                    tooltip: u && !d ? _ : void 0
+            !p &&
+                (0, r.jsx)(c.Z, {
+                    icon: o.ARS,
+                    tooltipText: m || null == E ? void 0 : E,
+                    tooltipAriaLabel: m || null == g ? void 0 : (0, a.ZP)({ channel: g })
                 }),
-            !u &&
-                (0, r.jsx)(o.Z, {
-                    variant: n,
-                    className: l,
-                    children: p
+            !h &&
+                (0, r.jsx)(u.Z, {
+                    variant: f,
+                    className: _,
+                    children: v
                 })
         ]
     });
