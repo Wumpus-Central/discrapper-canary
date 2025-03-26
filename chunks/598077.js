@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(411104), n(789020);
+n.d(t, { Z: () => b }), n(411104), n(789020);
 var r = n(149765),
     i = n(81825),
     o = n(864106),
@@ -63,7 +63,7 @@ function E(e, t) {
         e
     );
 }
-class v extends i.Z {
+class b extends i.Z {
     get createdAt() {
         return new Date(u.default.extractTimestamp(this.id));
     }
@@ -72,15 +72,17 @@ class v extends i.Z {
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = null != e ? this.guildMemberAvatars[e] : void 0;
-        return null != r && null != e
+            r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            i = null != e ? this.guildMemberAvatars[e] : void 0;
+        return null != i && null != e
             ? s.ZP.getGuildMemberAvatarURLSimple({
                   guildId: e,
-                  avatar: r,
+                  avatar: i,
                   userId: this.id,
-                  canAnimate: n
+                  canAnimate: n,
+                  canWebP: r
               })
-            : s.ZP.getUserAvatarURL(this, n, t);
+            : s.ZP.getUserAvatarURL(this, n, t, null, r);
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
@@ -202,7 +204,7 @@ class v extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, v, b, y, O, I, S, T, N, A, C, R, P, w, D, L, x, M, k;
+        var t, n, i, o, a, s, l, c, u, _, p, m, g, E, b, v, y, O, I, S, T, A, N, C, R, P, w, D, L, x, M, k;
         super(), h(this, 'id', void 0), h(this, 'username', void 0), h(this, 'discriminator', void 0), h(this, 'avatar', void 0), h(this, 'avatarDecorationData', void 0), h(this, 'banner', void 0), h(this, 'email', void 0), h(this, 'verified', void 0), h(this, 'bot', void 0), h(this, 'system', void 0), h(this, 'mfaEnabled', void 0), h(this, 'mobile', void 0), h(this, 'desktop', void 0), h(this, 'premiumType', void 0), h(this, 'flags', void 0), h(this, 'publicFlags', void 0), h(this, 'purchasedFlags', void 0), h(this, 'premiumUsageFlags', void 0), h(this, 'phone', void 0), h(this, 'nsfwAllowed', void 0), h(this, 'ageVerificationStatus', void 0), h(this, 'guildMemberAvatars', void 0), h(this, 'hasBouncedEmail', void 0), h(this, 'personalConnectionId', void 0), h(this, 'globalName', void 0), h(this, 'primaryGuild', void 0), h(this, 'collectibles', void 0), h(this, 'hasFlag', (e) => !1), h(this, 'isStaff', () => !1), h(this, 'isStaffPersonal', () => !1), h(this, 'hasAnyStaffLevel', () => !1);
         let j = null !== (n = e.premium_type) && void 0 !== n ? n : e.premiumType;
         (this.id = e.id),
@@ -218,12 +220,12 @@ class v extends i.Z {
             (this.mobile = null !== (g = e.mobile) && void 0 !== g && g),
             (this.desktop = null !== (E = e.desktop) && void 0 !== E && E),
             (this.premiumType = j === d.WND ? null : j),
-            (this.flags = null !== (v = e.flags) && void 0 !== v ? v : 0),
-            (this.publicFlags = null !== (y = null !== (b = e.public_flags) && void 0 !== b ? b : e.publicFlags) && void 0 !== y ? y : 0),
+            (this.flags = null !== (b = e.flags) && void 0 !== b ? b : 0),
+            (this.publicFlags = null !== (y = null !== (v = e.public_flags) && void 0 !== v ? v : e.publicFlags) && void 0 !== y ? y : 0),
             (this.purchasedFlags = null !== (I = null !== (O = e.purchased_flags) && void 0 !== O ? O : e.purchasedFlags) && void 0 !== I ? I : 0),
             (this.premiumUsageFlags = null !== (T = null !== (S = e.premium_usage_flags) && void 0 !== S ? S : e.premiumUsageFlags) && void 0 !== T ? T : 0),
-            (this.phone = null !== (N = e.phone) && void 0 !== N ? N : null),
-            (this.nsfwAllowed = null !== (A = e.nsfw_allowed) && void 0 !== A ? A : e.nsfwAllowed),
+            (this.phone = null !== (A = e.phone) && void 0 !== A ? A : null),
+            (this.nsfwAllowed = null !== (N = e.nsfw_allowed) && void 0 !== N ? N : e.nsfwAllowed),
             (this.ageVerificationStatus = null !== (C = e.age_verification_status) && void 0 !== C ? C : e.ageVerificationStatus),
             (this.guildMemberAvatars = null !== (R = e.guildMemberAvatars) && void 0 !== R ? R : {}),
             (this.hasBouncedEmail = null !== (w = null !== (P = e.has_bounced_email) && void 0 !== P ? P : e.hasBouncedEmail) && void 0 !== w && w),
@@ -263,4 +265,4 @@ class v extends i.Z {
             (null === (t = this.globalName) || void 0 === t ? void 0 : t.length) === 0 && (this.globalName = null);
     }
 }
-new v({ id: '0' });
+new b({ id: '0' });

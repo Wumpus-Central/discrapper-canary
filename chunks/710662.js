@@ -1,6 +1,9 @@
 e.exports = {
     panel: 'panel_fe7ab2',
     headerBar: 'headerBar_fe7ab2',
+    headerTitle: 'headerTitle_fe7ab2',
+    dispatcherHeader: 'dispatcherHeader_fe7ab2',
+    headerTitleText: 'headerTitleText_fe7ab2',
     inspectorWrapper: 'inspectorWrapper_fe7ab2',
     tabBarContainer: 'tabBarContainer_fe7ab2',
     tabBar: 'tabBar_fe7ab2',

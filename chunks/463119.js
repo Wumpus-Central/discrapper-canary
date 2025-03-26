@@ -29,7 +29,7 @@ var r = n(200651),
     A = n(921944),
     Z = n(388032),
     x = n(402204);
-function L(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function L(e) {
     }
     return e;
 }
-function w(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -130,8 +130,8 @@ let D = (e) => {
                 O && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    w(
-                        L(
+                    L(
+                        w(
                             {
                                 selected: t,
                                 route: j.Z5c.COLLECTIBLES_SHOP,
@@ -153,7 +153,7 @@ let D = (e) => {
             ]
         });
     },
-    U = (e) => (0, r.jsx)(M, w(L({}, e), { children: (0, r.jsx)(D, {}) })),
+    U = (e) => (0, r.jsx)(M, L(w({}, e), { children: (0, r.jsx)(D, {}) })),
     G = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -239,7 +239,7 @@ let D = (e) => {
             children: (e) =>
                 (0, r.jsxs)(
                     M,
-                    w(L(w(L({ className: null != y.entryPointClassName ? (0, _.l)(x, y.entryPointClassName) : void 0 }, I), { icon: y.entryPointIcon }), e), {
+                    L(w(L(w({ className: null != y.entryPointClassName ? (0, _.l)(x, y.entryPointClassName) : void 0 }, I), { icon: y.entryPointIcon }), e), {
                         onMouseEnter: () => U(e.onMouseEnter),
                         onMouseLeave: () => W(e.onMouseLeave),
                         children: [
@@ -280,22 +280,16 @@ let D = (e) => {
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(M, w(L({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(M, L(w({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
         });
     },
     B = (e) => {
         let { shouldShowCoachmark: t, dismissCoachmark: n } = (0, I.Z)(),
-            [l, o] = i.useState(!1);
-        i.useEffect(() => {
-            if (t) {
-                let e = setTimeout(() => {
-                    o(!0);
-                }, 250);
-                return () => clearTimeout(e);
-            }
-            o(!1);
-        }, [t]);
-        let a = i.useCallback(() => {
+            l = i.useRef(0);
+        i.useLayoutEffect(() => {
+            l.current += 1;
+        }, []);
+        let o = i.useCallback(() => {
             var t;
             n(A.L.PRIMARY), null === (t = e.onClick) || void 0 === t || t.call(e);
         }, [n, e]);
@@ -303,15 +297,17 @@ let D = (e) => {
             renderPopout: () => (0, r.jsx)(y.Z, {}),
             position: 'right',
             align: 'top',
-            shouldShow: l,
+            shouldShow: t,
             spacing: 12,
+            positionKey: String(l.current),
             animation: s.yRy.Animation.TRANSLATE,
+            closeOnScroll: !0,
             onRequestClose: () => n(A.L.USER_DISMISS),
             children: (t) =>
                 (0, r.jsx)(
                     M,
-                    w(L({}, e), {
-                        onClick: a,
+                    L(w({}, e), {
+                        onClick: o,
                         children: (0, r.jsx)(D, {})
                     })
                 )
@@ -329,17 +325,17 @@ let D = (e) => {
                 onClick: n,
                 listItemRef: l
             };
-        if (s) return (0, r.jsx)(B, L({}, c));
+        if (s) return (0, r.jsx)(B, w({}, c));
         if (null != o)
             switch (o.type) {
                 case T.k2.TOOLTIP:
-                    return (0, r.jsx)(V, w(L({}, c), { displayOptions: o }));
+                    return (0, r.jsx)(V, L(w({}, c), { displayOptions: o }));
                 case T.k2.COACHTIP:
-                    return (0, r.jsx)(W, w(L({}, c), { displayOptions: o }));
+                    return (0, r.jsx)(W, L(w({}, c), { displayOptions: o }));
                 case T.k2.BADGE:
-                    return (0, r.jsx)(U, L({}, c));
+                    return (0, r.jsx)(U, w({}, c));
             }
         return (0, r.jsxs)(r.Fragment, {
-            children: [a && (0, r.jsx)(H, {}), (0, r.jsx)(M, L({}, c))]
+            children: [a && (0, r.jsx)(H, {}), (0, r.jsx)(M, w({}, c))]
         });
     };
