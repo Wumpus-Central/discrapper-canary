@@ -17,8 +17,8 @@ var r = n(200651),
     C = n(884697),
     _ = n(937510),
     v = n(823941),
-    k = n(38900),
-    x = n(709999),
+    x = n(38900),
+    k = n(709999),
     j = n(794324),
     S = n(957058),
     y = n(215023),
@@ -134,6 +134,7 @@ let B = {
                                                             (0, r.jsx)(d.Text, {
                                                                 variant: C === y.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
                                                                 className: C === y.AW.ORBS ? I.orbsSubHeaderText : (null == A ? void 0 : A.showDarkBannerText) ? I.subHeaderTextDark : I.subHeaderText,
+                                                                style: null != P.bannerTextColor ? { color: P.bannerTextColor } : void 0,
                                                                 children: P.summary
                                                             })
                                                         ]
@@ -158,7 +159,7 @@ let B = {
                                   className: o()(I.row, I.feed, I.feedSingleRow),
                                   children: t
                                       ? (0, r.jsx)(r.Fragment, {
-                                            children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(k.K, {}, t))
+                                            children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(x.K, {}, t))
                                         })
                                       : (0, r.jsx)(r.Fragment, {
                                             children: D.map((e, t) => {
@@ -174,7 +175,7 @@ let B = {
                                                                   categoryPosition: 0
                                                               },
                                                               children: (0, r.jsx)(
-                                                                  x.Z,
+                                                                  k.Z,
                                                                   {
                                                                       product: e,
                                                                       category: n,
