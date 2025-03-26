@@ -27,21 +27,34 @@ let u = new a.b(),
     }),
     f = new Map();
 function _(e, t) {
-    let n = (0, s.ZY)(t),
-        r = f.get(n);
-    return (
-        null == r &&
-            ((r = {
+    let [n, r] = i.useState((0, s.ZY)(t)),
+        o = i.useMemo(() => new a.b(), []),
+        l = i.useMemo(
+            () => ({
                 appContext: e,
                 renderWindow: t,
-                windowDispatch: new a.b(),
+                windowDispatch: o,
                 windowId: n
             }),
-            f.set(n, r),
-            t.addEventListener('unload', () => {
+            [e, t, o, n]
+        );
+    return (
+        i.useEffect(() => {
+            if (null != n) return;
+            let e = setInterval(() => {
+                let n = (0, s.ZY)(t);
+                null != n && (r(n), clearInterval(e));
+            }, 10);
+            return () => clearInterval(e);
+        }, [t, n]),
+        i.useEffect(() => {
+            f.set(n, l);
+            let e = () => {
                 f.delete(n);
-            })),
-        r
+            };
+            return t.addEventListener('unload', e), () => t.removeEventListener('unload', e);
+        }, [l, t, n]),
+        l
     );
 }
 function p(e) {
