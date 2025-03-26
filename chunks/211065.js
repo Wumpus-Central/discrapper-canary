@@ -1,29 +1,28 @@
-n.d(t, { Z: () => T }), n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(512722),
-    o = n.n(a),
-    l = n(442837),
+    l = n(512722),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     u = n(596454),
     c = n(410575),
     d = n(318766),
-    m = n(907040),
-    p = n(246133),
-    h = n(233200),
-    f = n(695346),
-    b = n(293273),
-    j = n(594174),
-    S = n(626135),
-    x = n(720449),
-    v = n(684269),
-    g = n(678865),
-    O = n(875425),
+    p = n(907040),
+    m = n(246133),
+    h = n(695346),
+    f = n(293273),
+    b = n(594174),
+    j = n(626135),
+    v = n(720449),
+    x = n(684269),
+    S = n(678865),
+    g = n(875425),
     y = n(981631),
-    _ = n(185923),
-    C = n(388032),
+    O = n(185923),
+    _ = n(388032),
     N = n(888659);
-function w(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +35,7 @@ function w(e, t, n) {
         e
     );
 }
-function P(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +46,12 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +69,7 @@ function k(e, t) {
         e
     );
 }
-function I(e) {
+function k(e) {
     return (0, r.jsxs)('div', {
         className: N.statusOptionItem,
         children: [
@@ -83,10 +82,10 @@ function I(e) {
         ]
     });
 }
-class E extends i.PureComponent {
+class I extends i.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: e, sourceAnalyticsContext: t } = this.props;
-        S.default.track(y.rMx.OPEN_MODAL, {
+        j.default.track(y.rMx.OPEN_MODAL, {
             source: null == t ? void 0 : t.location,
             type: y.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == t ? void 0 : t.loadId,
@@ -95,9 +94,6 @@ class E extends i.PureComponent {
     }
     get analyticsLocation() {
         return { page: y.ZY5.CUSTOM_STATUS_MODAL };
-    }
-    get canShowStatusSelector() {
-        return !(0, h.A)({ location: 'CustomStatusModal' });
     }
     getEmojiButtonRenderer() {
         let { emojiInfo: e } = this.state;
@@ -116,7 +112,7 @@ class E extends i.PureComponent {
             { text: t, emojiInfo: n } = this.state;
         return (0, r.jsx)(s.hjN, {
             className: N.formGroup,
-            title: C.NW.formatToPlainString(C.t['/w9pHx'], { username: e.username }),
+            title: _.NW.formatToPlainString(_.t['/w9pHx'], { username: e.username }),
             children: (0, r.jsxs)('div', {
                 className: N.inputContainer,
                 children: [
@@ -131,7 +127,7 @@ class E extends i.PureComponent {
                                 let { isShown: n } = t;
                                 return (0, r.jsx)(
                                     d.Z,
-                                    k(P({}, e), {
+                                    P(w({}, e), {
                                         active: n,
                                         className: N.emojiButton,
                                         tabIndex: 0,
@@ -142,10 +138,10 @@ class E extends i.PureComponent {
                         })
                     }),
                     (0, r.jsx)(s.oil, {
-                        maxLength: O.s0,
+                        maxLength: g.s0,
                         value: t,
                         inputClassName: N.input,
-                        placeholder: C.NW.string(C.t['zYR38/']),
+                        placeholder: _.NW.string(_.t['zYR38/']),
                         onChange: this.handleStatusChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0
@@ -179,13 +175,13 @@ class E extends i.PureComponent {
         let { clearAfter: e } = this.state;
         return (0, r.jsx)(s.hjN, {
             className: N.formGroup,
-            title: C.NW.string(C.t.E45wvL),
+            title: _.NW.string(_.t.E45wvL),
             children: (0, r.jsx)(s.q4e, {
-                placeholder: C.NW.string(C.t.E45wvL),
+                placeholder: _.NW.string(_.t.E45wvL),
                 maxVisibleItems: 5,
                 value: e,
-                options: O.wS.map((e) =>
-                    k(P({}, e), {
+                options: g.wS.map((e) =>
+                    P(w({}, e), {
                         value: e.value,
                         key: e.value,
                         label: e.label()
@@ -199,19 +195,19 @@ class E extends i.PureComponent {
         let { status: e } = this.state;
         return (0, r.jsx)(s.hjN, {
             className: N.formGroup,
-            title: C.NW.string(C.t.zOdg0N),
+            title: _.NW.string(_.t.zOdg0N),
             children: (0, r.jsx)(s.q4e, {
                 maxVisibleItems: 4,
                 value: e,
-                options: O.Df.map((e) =>
-                    k(P({}, e), {
+                options: g.Df.map((e) =>
+                    P(w({}, e), {
                         value: e.value,
                         key: e.value,
                         label: e.label()
                     })
                 ),
                 onChange: this.handleChangeStatus,
-                renderOptionLabel: I
+                renderOptionLabel: k
             })
         });
     }
@@ -219,11 +215,11 @@ class E extends i.PureComponent {
         let { transitionState: e, onClose: t } = this.props;
         return (0, r.jsx)(
             c.Z,
-            k(P({}, this.analyticsLocation), {
+            P(w({}, this.analyticsLocation), {
                 children: (0, r.jsxs)(s.Y0X, {
                     transitionState: e,
                     className: N.modalRoot,
-                    'aria-label': C.NW.string(C.t['/UonHB']),
+                    'aria-label': _.NW.string(_.t['/UonHB']),
                     children: [
                         (0, r.jsxs)(s.xBx, {
                             separator: !1,
@@ -234,7 +230,7 @@ class E extends i.PureComponent {
                                     className: N.header,
                                     children: (0, r.jsx)(s.H, {
                                         className: N.headerText,
-                                        children: C.NW.string(C.t['/UonHB'])
+                                        children: _.NW.string(_.t['/UonHB'])
                                     })
                                 }),
                                 (0, r.jsx)(s.olH, {
@@ -244,26 +240,19 @@ class E extends i.PureComponent {
                             ]
                         }),
                         (0, r.jsxs)(s.hzk, {
-                            children: [
-                                this.renderCustomStatusInput(),
-                                this.renderClearAfter(),
-                                this.canShowStatusSelector &&
-                                    (0, r.jsxs)(r.Fragment, {
-                                        children: [(0, r.jsx)(s.$i$, { className: N.formDivider }), this.renderStatusInput()]
-                                    })
-                            ]
+                            children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, r.jsx)(s.$i$, { className: N.formDivider }), this.renderStatusInput()]
                         }),
                         (0, r.jsxs)(s.mzw, {
                             children: [
                                 (0, r.jsx)(s.zxk, {
                                     onClick: this.handleSubmit,
-                                    children: C.NW.string(C.t.R3BPHx)
+                                    children: _.NW.string(_.t.R3BPHx)
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     onClick: t,
                                     look: s.zxk.Looks.LINK,
                                     color: N.cancelButton,
-                                    children: C.NW.string(C.t['ETE/oK'])
+                                    children: _.NW.string(_.t['ETE/oK'])
                                 })
                             ]
                         })
@@ -274,25 +263,25 @@ class E extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'state', {
+            C(this, 'state', {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
-                clearAfter: (0, v.Z)(),
-                status: (0, g.Z)()
+                clearAfter: (0, x.Z)(),
+                status: (0, S.Z)()
             }),
-            w(this, 'handleClearStatus', () => {
+            C(this, 'handleClearStatus', () => {
                 this.setState({
                     emojiInfo: null,
                     text: ''
                 });
             }),
-            w(this, 'handleSubmit', (e) => {
+            C(this, 'handleSubmit', (e) => {
                 e.preventDefault(), this.handleSaveStatus();
             }),
-            w(this, 'handleStatusChange', (e) => {
+            C(this, 'handleStatusChange', (e) => {
                 this.setState({ text: e });
             }),
-            w(this, 'handleEmojiChange', (e) => {
+            C(this, 'handleEmojiChange', (e) => {
                 if (null == e) return;
                 let t =
                     null != e.id
@@ -308,18 +297,18 @@ class E extends i.PureComponent {
                           };
                 this.setState({ emojiInfo: t });
             }),
-            w(this, 'handleChangeClearAfter', (e) => {
+            C(this, 'handleChangeClearAfter', (e) => {
                 this.setState({ clearAfter: e });
             }),
-            w(this, 'handleChangeStatus', (e) => {
+            C(this, 'handleChangeStatus', (e) => {
                 this.setState({ status: e });
             }),
-            w(this, 'handleSaveStatus', () => {
+            C(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: e, onClose: t } = this.props,
-                    { emojiInfo: n, text: r, clearAfter: i, status: a } = this.state,
-                    o = f.co.getSetting();
-                o !== a && (0, p.Z)(a, o, e),
-                    (0, x.Z)({
+                    { emojiInfo: n, text: r, clearAfter: i, status: l } = this.state,
+                    o = h.co.getSetting();
+                o !== l && (0, m.Z)(l, o, e),
+                    (0, v.Z)({
                         text: r,
                         emojiInfo: n,
                         clearAfter: i,
@@ -327,34 +316,34 @@ class E extends i.PureComponent {
                     }),
                     t();
             }),
-            w(this, 'handleKeyPress', (e) => {
+            C(this, 'handleKeyPress', (e) => {
                 e.which === y.yXg.ENTER && this.handleSaveStatus();
             }),
-            w(this, 'renderEmojiPicker', (e) => {
+            C(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { onClose: n } = this.props;
-                return (0, r.jsx)(m.Z, {
+                return (0, r.jsx)(p.Z, {
                     closePopout: t,
                     onSelectEmoji: (e, n) => {
                         this.handleEmojiChange(e), n && t();
                     },
-                    pickerIntention: _.Hz.STATUS,
+                    pickerIntention: O.Hz.STATUS,
                     onNavigateAway: n
                 });
             });
     }
 }
-let T = l.ZP.connectStores(
-    [b.Z, j.default],
+let E = a.ZP.connectStores(
+    [f.Z, b.default],
     () => {
-        let e = j.default.getCurrentUser();
+        let e = b.default.getCurrentUser();
         return (
             o()(null != e, 'CustomStatusModal: user cannot be null'),
             {
-                customStatus: b.Z.getCustomStatusActivity(),
+                customStatus: f.Z.getCustomStatusActivity(),
                 user: e
             }
         );
     },
     { forwardRef: !0 }
-)(E);
+)(I);
