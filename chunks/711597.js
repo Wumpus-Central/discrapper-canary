@@ -16,5 +16,6 @@ e.exports = {
     artContainer: 'artContainer_a55fdc',
     refreshedArt: 'refreshedArt_a55fdc',
     container: 'container_a55fdc',
+    buttonContainer: 'buttonContainer_a55fdc',
     border: 'border_a55fdc'
 };

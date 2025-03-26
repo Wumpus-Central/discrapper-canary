@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(301563), n(653041), n(47120), n(308318), n(230036);
+n.d(t, { Z: () => w }), n(301563), n(653041), n(47120), n(308318), n(230036);
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -20,10 +20,10 @@ var r = n(200651),
     b = n(823379),
     S = n(102172),
     C = n(981631),
-    N = n(889150),
+    N = n(433177),
     y = n(388032),
     Z = n(358476);
-function w(e) {
+function I(e) {
     let { result: t, onSelectChannel: n } = e,
         l = (0, i.e7)([p.Z], () => p.Z.getGuild(t.record.guild_id)),
         o = (0, i.Wu)([j.ZP, v.default], () =>
@@ -74,7 +74,7 @@ function w(e) {
         ]
     });
 }
-function I(e) {
+function w(e) {
     let { onSelectChannel: t } = e,
         { search: n, query: c, results: v } = (0, u.Z)({ searchOptions: { frecencyBoosters: !0 } }),
         j = (0, i.Wu)([_.Z, x.ZP, m.Z, p.Z, g.Z], () => {
@@ -87,7 +87,7 @@ function I(e) {
             }
             return e;
         }),
-        I = (0, i.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
+        w = (0, i.Wu)([d.Z, m.Z, h.Z, p.Z, g.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of d.Z.getChannelHistory()) {
@@ -98,18 +98,19 @@ function I(e) {
             return e;
         }),
         T = l.useMemo(() => {
-            let e = new Set(I.map((e) => e.id)),
+            let e = new Set(w.map((e) => e.id)),
                 t = new Set(j.map((e) => e.id));
             return [
                 ...j
                     .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, a.Z)(e.id))
                     .filter(b.lm),
-                ...I.filter((e) => !t.has(e.id))
+                ...w
+                    .filter((e) => !t.has(e.id))
                     .map((e) => (0, a.Z)(e.id))
                     .filter(b.lm)
             ];
-        }, [I, j]),
+        }, [w, j]),
         E = '' !== c ? v : T;
     return (0, r.jsxs)('div', {
         className: Z.root,
@@ -147,7 +148,7 @@ function I(e) {
                           let { rowIndex: n } = e,
                               l = E[n];
                           return (0, r.jsx)(
-                              w,
+                              I,
                               {
                                   result: l,
                                   onSelectChannel: t
