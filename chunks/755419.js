@@ -12,7 +12,7 @@ var r = n(200651),
     c = n(215023),
     u = n(992379),
     d = n(593639),
-    f = n(266850);
+    f = n(26028);
 let _ = {
         [a.a.PREMIUM_TIER_2_3_DAY]: {
             render: (e) => {
@@ -38,7 +38,8 @@ let _ = {
     p = (e) => e in _,
     h = () => ({
         id: s.l.ORB_PROFILE_BADGE,
-        icon: f,
+        icon: s.l.ORB_PROFILE_BADGE,
+        iconSrc: f.Z,
         description: '',
         isPreviewMode: !0
     });
