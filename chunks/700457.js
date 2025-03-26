@@ -5,6 +5,7 @@ e.exports = {
     banner: 'banner__083ae',
     mainContent: 'mainContent__083ae',
     footer: 'footer__083ae',
+    floatingFooter: 'floatingFooter__083ae',
     gradient: 'gradient__083ae',
     footerContent: 'footerContent__083ae',
     separator: 'separator__083ae',
