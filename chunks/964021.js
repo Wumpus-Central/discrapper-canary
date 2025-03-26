@@ -13,13 +13,11 @@ e.exports = {
     nameplateItem: 'nameplateItem__2aeb5',
     selected: 'selected__2aeb5',
     lock: 'lock__2aeb5',
-    preview: 'preview__2aeb5',
+    previewContents: 'previewContents__2aeb5',
     previewBox: 'previewBox__2aeb5',
-    upsellPreviewContents: 'upsellPreviewContents__2aeb5',
-    label: 'label__2aeb5',
-    upsellPreviewBox: 'upsellPreviewBox__2aeb5',
-    upsellPreviewDescription: 'upsellPreviewDescription__2aeb5',
-    upsellPreview: 'upsellPreview__2aeb5',
+    previewDescription: 'previewDescription__2aeb5',
+    previewBorder: 'previewBorder__2aeb5',
+    upsell: 'upsell__2aeb5',
     footer: 'footer__2aeb5',
     goToShopButton: 'goToShopButton__2aeb5'
 };
