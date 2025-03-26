@@ -10,6 +10,7 @@ e.exports = {
     categoryBanner: 'categoryBanner_c50f62',
     collectiblePreviewsContainerNoChat: 'collectiblePreviewsContainerNoChat_c50f62 collectiblePreviewsContainer_c50f62',
     collectiblePreviewsContainerWithChat: 'collectiblePreviewsContainerWithChat_c50f62 collectiblePreviewsContainer_c50f62',
+    fractionalNitroPreviewContainer: 'fractionalNitroPreviewContainer_c50f62 collectiblePreviewsContainer_c50f62',
     avatarPreviewContainer: 'avatarPreviewContainer_c50f62',
     pfxPreviewContainer: 'pfxPreviewContainer_c50f62',
     bundlePreviewContainer: 'bundlePreviewContainer_c50f62',
