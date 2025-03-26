@@ -1,113 +1,125 @@
-n.d(t, { Z: () => C });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    s = n.n(i),
-    a = n(481060),
-    l = n(957537),
-    o = n(737770),
-    c = n(839008),
-    A = n(685184),
-    d = n(979264),
-    u = n(550271),
-    g = n(308083),
-    f = n(502936),
-    m = n(388032),
-    p = n(179493);
-function h(e) {
-    return (0, r.jsxs)('div', {
-        className: s()(p.messageContainer, e.className),
+B.d(g, {
+    Z: () => d,
+    v: () => t
+});
+var C = B(200651);
+B(192379);
+var Q = B(120356),
+    w = B.n(Q),
+    D = B(481060),
+    f = B(957537),
+    E = B(737770),
+    v = B(839008),
+    I = B(685184),
+    P = B(369509),
+    r = B(947051),
+    e = B(388032),
+    o = B(179493);
+function t(A) {
+    return (0, C.jsxs)('div', {
+        className: w()(o.messageContainer, A.className),
         children: [
-            (0, r.jsx)('div', {
-                className: p.avatarContainer,
-                children: (0, r.jsx)('img', {
-                    src: e.avatar,
-                    alt: ''.concat(e.username, ' avatar'),
+            (0, C.jsx)('div', {
+                className: o.avatarContainer,
+                children: (0, C.jsx)('img', {
+                    src: A.avatar,
+                    alt: ''.concat(A.username, ' avatar'),
                     width: 40,
                     height: 40
                 })
             }),
-            (0, r.jsxs)('div', {
-                className: p.contentContainer,
+            (0, C.jsxs)('div', {
+                className: o.contentContainer,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: p.usernameContainer,
+                    (0, C.jsxs)('div', {
+                        className: o.usernameContainer,
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, C.jsx)(D.Text, {
                                 variant: 'text-md/semibold',
-                                style: e.usernameStyle,
-                                children: e.username
+                                style: A.usernameStyle,
+                                children: A.username
                             }),
-                            void 0 !== e.decorations &&
-                                (0, r.jsx)('div', {
-                                    className: p.decorationsContainer,
-                                    children: e.decorations
+                            void 0 !== A.decorations &&
+                                (0, C.jsx)('div', {
+                                    className: o.decorationsContainer,
+                                    children: A.decorations
                                 })
                         ]
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, C.jsx)(D.Text, {
                         variant: 'text-md/medium',
-                        children: e.message
+                        children: A.message
                     })
                 ]
             })
         ]
     });
 }
-let C = function (e) {
-    let t = null === e.tag || 0 === e.tag.length ? 'WUMP' : e.tag;
-    return (0, r.jsxs)('div', {
-        className: p.container,
+let d = function (A) {
+    return (0, C.jsxs)('div', {
+        className: o.container,
         children: [
-            (0, r.jsx)(h, {
-                className: p.unfocusedMessage,
-                avatar: l.Z,
+            (0, C.jsx)(t, {
+                className: o.unfocusedMessage,
+                avatar: f.Z,
                 username: 'Roka',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: m.NW.string(f.Z.bpghV1)
+                message: e.NW.string(r.Z.bpghV1)
             }),
-            (0, r.jsx)(h, {
-                className: p.unfocusedMessage,
-                avatar: o.Z,
+            (0, C.jsx)(t, {
+                className: o.unfocusedMessage,
+                avatar: E.Z,
                 username: 'hongo',
                 usernameStyle: { color: 'var(--green-230)' },
-                message: m.NW.string(f.Z['rnpv7+'])
+                message: e.NW.string(r.Z['rnpv7+'])
             }),
-            (0, r.jsx)(h, {
-                avatar: c.Z,
+            (0, C.jsx)(t, {
+                avatar: v.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: m.NW.string(f.Z.u7tjsr),
-                decorations: (0, r.jsx)('div', {
-                    className: p.badgeContainer,
-                    children: (0, r.jsx)(d.aG, {
-                        guildId: e.guildId,
-                        textClassName: p.tagText,
-                        clanTag: t,
-                        clanBadge: (0, r.jsx)(u.A, {
-                            className: p.badgePreview,
-                            badge: e.badge,
-                            width: g.NC.SIZE_12,
-                            height: g.NC.SIZE_12,
-                            primaryTintColor: e.primaryColor,
-                            secondaryTintColor: e.secondaryColor
-                        })
-                    })
-                })
+                message: e.NW.string(r.Z.u7tjsr),
+                decorations: (0, C.jsx)(
+                    P.S,
+                    (function (A) {
+                        for (var g = 1; g < arguments.length; g++) {
+                            var B = null != arguments[g] ? arguments[g] : {},
+                                C = Object.keys(B);
+                            'function' == typeof Object.getOwnPropertySymbols &&
+                                (C = C.concat(
+                                    Object.getOwnPropertySymbols(B).filter(function (A) {
+                                        return Object.getOwnPropertyDescriptor(B, A).enumerable;
+                                    })
+                                )),
+                                C.forEach(function (g) {
+                                    var C;
+                                    (C = B[g]),
+                                        g in A
+                                            ? Object.defineProperty(A, g, {
+                                                  value: C,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0
+                                              })
+                                            : (A[g] = C);
+                                });
+                        }
+                        return A;
+                    })({}, A)
+                )
             }),
-            (0, r.jsx)(h, {
-                className: p.unfocusedMessage,
-                avatar: A.Z,
+            (0, C.jsx)(t, {
+                className: o.unfocusedMessage,
+                avatar: I.Z,
                 username: 'sharon',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: m.NW.string(f.Z.GlWVJC)
+                message: e.NW.string(r.Z.GlWVJC)
             }),
-            (0, r.jsx)(h, {
-                className: p.unfocusedMessage,
-                avatar: c.Z,
+            (0, C.jsx)(t, {
+                className: o.unfocusedMessage,
+                avatar: v.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: m.NW.string(f.Z.AIp9ho)
+                message: e.NW.string(r.Z.AIp9ho)
             })
         ]
     });
