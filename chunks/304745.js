@@ -58,7 +58,8 @@ function Z(e) {
         }, [K, t, q, X]),
         J = [];
     M || J.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, f.Z)(t.id) && !M && J.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE), M || J.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let $ = i.useRef(!1);
+    let $ = i.useRef(!1),
+        ee = i.useRef(null);
     return (0, r.jsx)(v.ZP, {
         contentTypes: J,
         children: (e) => {
@@ -68,6 +69,7 @@ function Z(e) {
                 !0 === $.current && !1 === s && l(I.L.AUTO_DISMISS),
                 $.current !== s && ($.current = s),
                 (0, r.jsx)(a.yRy, {
+                    targetElementRef: ee,
                     fixed: !0,
                     shouldShow: k && (Z === E.D.ACTIVITY || null == Z),
                     animation: U ? a.yRy.Animation.FADE : a.yRy.Animation.TRANSLATE,
@@ -128,7 +130,7 @@ function Z(e) {
                                                         });
                                                 }
                                                 return e;
-                                            })({}, e)),
+                                            })({ ref: ee }, e)),
                                             (n = n =
                                                 {
                                                     children: (0, r.jsx)(x.Z, {

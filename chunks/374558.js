@@ -1,16 +1,16 @@
 n.d(t, {
-    M0: () => g,
-    YX: () => h,
-    tT: () => m
+    M0: () => E,
+    YX: () => m,
+    tT: () => g
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    a = n(1561),
-    s = n(981729),
-    l = n(673707);
-function c(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(1561),
+    l = n(981729),
+    c = n(17896);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -66,14 +66,14 @@ function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,38 +82,39 @@ function _(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = {
-        TERTIARY: l.tertiary,
-        SECONDARY: l.secondary,
-        PRIMARY: l.primary
+let m = {
+        TERTIARY: c.tertiary,
+        SECONDARY: c.secondary,
+        PRIMARY: c.primary
     },
-    m = {
-        SIZE_24: l.size24,
-        SIZE_32: l.size32,
-        SIZE_36: l.size36
-    };
-function g(e) {
-    let { className: t, tooltip: n, color: i, size: c = m.SIZE_32, icon: d, onMouseDown: _, onClick: h, disabled: g, focusProps: E } = e;
-    return (0, r.jsx)(s.u, {
-        text: n,
-        shouldShow: !g,
-        children: (e) => {
-            var { onClick: s } = e,
-                m = p(e, ['onClick']);
-            return (0, r.jsx)(
-                a.P,
-                f(u({}, m), {
-                    'aria-label': n,
-                    'aria-disabled': g,
-                    className: o()(t, l.button, i, c, { [l.disabled]: g }),
-                    onMouseDown: _,
-                    onClick: (e) => {
-                        null == s || s(), h(e);
-                    },
-                    focusProps: E,
-                    children: d
-                })
-            );
-        }
+    g = {
+        SIZE_24: c.size24,
+        SIZE_32: c.size32,
+        SIZE_36: c.size36
+    },
+    E = i.forwardRef(function (e, t) {
+        let { className: n, tooltip: i, color: o, size: u = g.SIZE_32, icon: f, onMouseDown: h, onClick: m, disabled: E, focusProps: b } = e;
+        return (0, r.jsx)(l.u, {
+            text: i,
+            shouldShow: !E,
+            children: (e) => {
+                var { onClick: l } = e,
+                    g = p(e, ['onClick']);
+                return (0, r.jsx)(
+                    s.P,
+                    _(d({}, g), {
+                        innerRef: t,
+                        'aria-label': i,
+                        'aria-disabled': E,
+                        className: a()(n, c.button, o, u, { [c.disabled]: E }),
+                        onMouseDown: h,
+                        onClick: (e) => {
+                            null == l || l(), m(e);
+                        },
+                        focusProps: b,
+                        children: f
+                    })
+                );
+            }
+        });
     });
-}

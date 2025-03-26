@@ -7,7 +7,7 @@ var r = n(200651),
     s = n(951394),
     c = n(858523),
     u = n(388032),
-    d = n(584199);
+    d = n(795753);
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -30,14 +30,16 @@ function p(e, t) {
 let h = function (e) {
     let { guild: t, className: n } = e,
         [l, h] = i.useState(!1),
-        f = i.useCallback(() => h(!0), [h]),
-        g = i.useCallback(() => h(!0), [h]);
+        f = i.useRef(null),
+        g = i.useCallback(() => h(!0), [h]),
+        m = i.useCallback(() => h(!0), [h]);
     return (0, r.jsx)('div', {
         className: o()(d.actionButtonsContainer, n, { [d.forceButtonsShow]: l }),
         children: (0, r.jsx)(s.ZP, {
             children: (0, r.jsx)(c.R, {
-                onRequestOpen: f,
-                onRequestClose: g,
+                targetElementRef: f,
+                onRequestOpen: g,
+                onRequestClose: m,
                 guild: t,
                 children: (e) => {
                     var { onClick: t } = e,
@@ -79,6 +81,7 @@ let h = function (e) {
                                 })({}, n, c)),
                                 (l = l =
                                     {
+                                        ref: f,
                                         onClick: (e) => {
                                             e.stopPropagation(), null == o || o(), t(e);
                                         },

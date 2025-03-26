@@ -1,19 +1,19 @@
 n.d(t, {
     ef: () => v,
-    kF: () => g,
-    oY: () => b,
-    tG: () => E,
-    y: () => y
+    kF: () => E,
+    oY: () => y,
+    tG: () => b,
+    y: () => O
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    a = n(693789),
-    s = n(481060),
-    l = n(785717),
-    c = n(74767);
-function u(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(693789),
+    l = n(481060),
+    c = n(785717),
+    u = n(304690);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,24 +59,24 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,39 +85,40 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = {
-    primary: o()(c.themeColor, c.primary),
-    secondary: o()(c.themeColor, c.secondary),
-    none: ''
-};
-function g(e) {
-    var { action: t, color: n = a.zx.Colors.PRIMARY, themeColor: i = 'primary', className: s, innerClassName: u, onClick: f } = e,
-        p = _(e, ['action', 'color', 'themeColor', 'className', 'innerClassName', 'onClick']);
-    let { trackUserProfileAction: h } = (0, l.KZ)(),
-        g = (e) => {
-            null != t && h({ action: t }), null == f || f(e);
-        };
-    return (0, r.jsx)(
-        a.zx,
-        d(
-            {
-                className: o()(c.button, s),
-                innerClassName: o()(c.buttonInner, u),
-                color: o()(n, m[i]),
-                look: a.zx.Looks.FILLED,
-                size: a.zx.Sizes.SMALL,
-                onClick: g
-            },
-            p
-        )
-    );
-}
-function E(e) {
+let g = {
+        primary: a()(u.themeColor, u.primary),
+        secondary: a()(u.themeColor, u.secondary),
+        none: ''
+    },
+    E = i.forwardRef(function (e, t) {
+        var { action: n, color: i = s.zx.Colors.PRIMARY, themeColor: o = 'primary', className: l, innerClassName: d, onClick: _ } = e,
+            p = h(e, ['action', 'color', 'themeColor', 'className', 'innerClassName', 'onClick']);
+        let { trackUserProfileAction: m } = (0, c.KZ)(),
+            E = (e) => {
+                null != n && m({ action: n }), null == _ || _(e);
+            };
+        return (0, r.jsx)(
+            s.zx,
+            f(
+                {
+                    buttonRef: t,
+                    className: a()(u.button, l),
+                    innerClassName: a()(u.buttonInner, d),
+                    color: a()(i, g[o]),
+                    look: s.zx.Looks.FILLED,
+                    size: s.zx.Sizes.SMALL,
+                    onClick: E
+                },
+                p
+            )
+        );
+    });
+function b(e) {
     var { text: t, icon: n } = e,
-        i = _(e, ['text', 'icon']);
+        i = h(e, ['text', 'icon']);
     return (0, r.jsxs)(
-        g,
-        p(d({ 'aria-label': t }, i), {
+        E,
+        p(f({ 'aria-label': t }, i), {
             children: [
                 null != n &&
                     (0, r.jsx)(n, {
@@ -129,72 +130,74 @@ function E(e) {
         })
     );
 }
-function v(e) {
-    var { icon: t, tooltipText: n, tooltipPosition: i, tooltipAlign: l, tooltipDelay: u, tooltipClassName: f, tooltipContainerClassName: h, ariaLabel: m, className: E, innerClassName: v, shouldShowTooltip: b = !0 } = e,
-        y = _(e, ['icon', 'tooltipText', 'tooltipPosition', 'tooltipAlign', 'tooltipDelay', 'tooltipClassName', 'tooltipContainerClassName', 'ariaLabel', 'className', 'innerClassName', 'shouldShowTooltip']);
-    return (0, r.jsx)(s.DY3, {
-        text: n,
-        position: i,
-        align: l,
-        'aria-label': !1,
-        delay: u,
-        shouldShow: b,
-        className: h,
-        tooltipClassName: f,
-        children: (0, r.jsx)(
-            g,
-            p(
-                d(
+let v = i.forwardRef(function (e, t) {
+        var { icon: n, tooltipText: i, tooltipPosition: o, tooltipAlign: c, tooltipDelay: d, tooltipClassName: _, tooltipContainerClassName: m, ariaLabel: g, className: b, innerClassName: v, shouldShowTooltip: y = !0 } = e,
+            O = h(e, ['icon', 'tooltipText', 'tooltipPosition', 'tooltipAlign', 'tooltipDelay', 'tooltipClassName', 'tooltipContainerClassName', 'ariaLabel', 'className', 'innerClassName', 'shouldShowTooltip']);
+        return (0, r.jsx)(l.DY3, {
+            text: i,
+            position: o,
+            align: c,
+            'aria-label': !1,
+            delay: d,
+            shouldShow: y,
+            className: m,
+            tooltipClassName: _,
+            children: (0, r.jsx)(
+                E,
+                p(
+                    f(
+                        {
+                            buttonRef: t,
+                            className: a()(u.icon, b),
+                            innerClassName: a()(u.icon, v),
+                            look: s.zx.Looks.FILLED,
+                            size: s.zx.Sizes.NONE,
+                            grow: !1,
+                            'aria-label': 'string' == typeof i && null == g ? i : g
+                        },
+                        O
+                    ),
                     {
-                        className: o()(c.icon, E),
-                        innerClassName: o()(c.icon, v),
-                        look: a.zx.Looks.FILLED,
-                        size: a.zx.Sizes.NONE,
-                        grow: !1,
-                        'aria-label': 'string' == typeof n && null == m ? n : m
-                    },
-                    y
-                ),
-                {
-                    children: (0, r.jsx)(t, {
-                        size: 'xs',
-                        color: 'currentColor'
-                    })
-                }
+                        children: (0, r.jsx)(n, {
+                            size: 'xs',
+                            color: 'currentColor'
+                        })
+                    }
+                )
             )
-        )
+        });
+    }),
+    y = i.forwardRef(function (e, t) {
+        var { className: n, innerClassName: i } = e,
+            o = h(e, ['className', 'innerClassName']);
+        return (0, r.jsx)(
+            v,
+            f(
+                {
+                    ref: t,
+                    className: a()(u.banner, n),
+                    innerClassName: a()(u.banner, i),
+                    color: u.bannerColor,
+                    themeColor: 'none'
+                },
+                o
+            )
+        );
     });
-}
-function b(e) {
-    var { className: t, innerClassName: n } = e,
-        i = _(e, ['className', 'innerClassName']);
-    return (0, r.jsx)(
-        v,
-        d(
-            {
-                className: o()(c.banner, t),
-                innerClassName: o()(c.banner, n),
-                color: c.bannerColor,
-                themeColor: 'none'
-            },
-            i
-        )
-    );
-}
-function y(e) {
+function O(e) {
     var { isHovering: t, className: n, innerClassName: i } = e,
-        s = _(e, ['isHovering', 'className', 'innerClassName']);
+        o = h(e, ['isHovering', 'className', 'innerClassName']);
     return (0, r.jsx)(
         v,
-        d(
+        f(
             {
-                className: o()(c.hover, { [c.visible]: t }, n),
-                innerClassName: o()(c.hover, i),
-                color: c.hoverColor,
+                className: a()(u.hover, { [u.visible]: t }, n),
+                innerClassName: a()(u.hover, i),
+                color: u.hoverColor,
                 themeColor: 'none',
-                look: a.zx.Looks.BLANK
+                look: s.zx.Looks.BLANK
             },
-            s
+            o
         )
     );
 }

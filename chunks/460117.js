@@ -1,59 +1,61 @@
-n.d(t, { Z: () => d });
-var r = n(200651);
-n(192379);
-var i = n(481060),
-    o = n(596454),
-    l = n(318766),
-    s = n(907040),
-    a = n(273039),
-    c = n(185923);
-function d(e) {
-    let { className: t, emojiClassName: n, emoji: d, setEmoji: u, channel: m } = e,
-        h = (e) => (t, n) => {
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    l = n(596454),
+    s = n(318766),
+    a = n(907040),
+    c = n(273039),
+    d = n(185923);
+function u(e) {
+    let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: h } = e,
+        j = i.useRef(null),
+        v = (e) => (t, n) => {
             var r, i;
             null != t &&
                 (null == t.id
-                    ? u({ name: null !== (r = t.optionallyDiverseSequence) && void 0 !== r ? r : '' })
-                    : u({
+                    ? m({ name: null !== (r = t.optionallyDiverseSequence) && void 0 !== r ? r : '' })
+                    : m({
                           id: t.id,
                           name: null !== (i = t.originalName) && void 0 !== i ? i : t.name,
                           animated: t.animated
                       }),
                 n && e());
         },
-        v =
-            null == d || null == d.name
+        x =
+            null == u || null == u.name
                 ? null
                 : () => {
                       var e;
-                      return (0, r.jsx)(o.Z, {
+                      return (0, r.jsx)(l.Z, {
                           className: n,
-                          animated: null !== (e = d.animated) && void 0 !== e && e,
-                          emojiId: d.id,
-                          emojiName: d.name
+                          animated: null !== (e = u.animated) && void 0 !== e && e,
+                          emojiId: u.id,
+                          emojiName: u.name
                       });
                   };
-    return (0, r.jsx)(a.Z, {
-        hasSetEmoji: null != d && null != d.name,
+    return (0, r.jsx)(c.Z, {
+        hasSetEmoji: null != u && null != u.name,
         onClick: () => {
-            u(null);
+            m(null);
         },
-        children: (0, r.jsx)(i.yRy, {
+        children: (0, r.jsx)(o.yRy, {
+            targetElementRef: j,
             position: 'bottom',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(s.Z, {
+                return (0, r.jsx)(a.Z, {
                     closePopout: t,
-                    onSelectEmoji: h(t),
-                    pickerIntention: c.Hz.COMMUNITY_CONTENT,
-                    channel: m
+                    onSelectEmoji: v(t),
+                    pickerIntention: d.Hz.COMMUNITY_CONTENT,
+                    channel: h
                 });
             },
             children: (e, n) => {
                 var i, o;
-                let { isShown: s } = n;
+                let { isShown: l } = n;
                 return (0, r.jsx)(
-                    l.Z,
+                    s.Z,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -81,10 +83,11 @@ function d(e) {
                     })({}, e)),
                     (o = o =
                         {
+                            ref: j,
                             tabIndex: 0,
-                            active: s,
+                            active: l,
                             className: t,
-                            renderButtonContents: v
+                            renderButtonContents: x
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))

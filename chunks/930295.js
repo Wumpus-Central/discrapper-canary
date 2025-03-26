@@ -92,9 +92,10 @@ class T extends (r = o.Component) {
         }
     }
     getDomElement() {
-        let e = l.findDOMNode(this);
-        if (!(0, c.k)(e)) throw Error('Popout cannot find DOM node');
-        return e;
+        var e;
+        let t = void 0 !== this.props.targetElementRef ? this.props.targetElementRef.current : null === (e = this.siblingDomRef.current) || void 0 === e ? void 0 : e.previousElementSibling;
+        if (!(0, c.k)(t)) throw Error('Popout cannot find DOM node');
+        return t;
     }
     get closeAction() {
         return this.props.ignoreModalClicks ? E.CkL.POPOUT_CLOSE_AFTER_MODALS : E.CkL.POPOUT_CLOSE;
@@ -129,6 +130,11 @@ class T extends (r = o.Component) {
                         position: this.state.renderedPosition
                     }
                 ),
+                void 0 === this.props.targetElementRef &&
+                    (0, i.jsx)('span', {
+                        ref: this.siblingDomRef,
+                        style: { display: 'none' }
+                    }),
                 (0, i.jsx)(p.y5t, {
                     forceLevel: 2,
                     children: this.renderLayer()
@@ -171,6 +177,7 @@ class T extends (r = o.Component) {
     constructor(...e) {
         super(...e),
             b(this, 'domElementRef', o.createRef()),
+            b(this, 'siblingDomRef', o.createRef()),
             b(this, 'layerRef', o.createRef()),
             b(this, 'popoutRef', o.createRef()),
             b(this, 'resizeObserver', void 0),

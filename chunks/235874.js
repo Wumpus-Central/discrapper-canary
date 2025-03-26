@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => y,
-    y: () => b
+    y: () => v
 }),
     n(411104),
     n(47120),
@@ -12,7 +12,7 @@ var r,
     s = n(493773),
     l = n(930295),
     c = n(126306),
-    u = n(57271);
+    u = n(142807);
 function d(e, t, n) {
     return (
         t in e
@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,7 +93,7 @@ let E = Object.freeze({
     3: c.l.Types.SCALE,
     4: c.l.Types.FADE
 });
-function v(e) {
+function b(e) {
     switch (e) {
         case 'top':
         case 'bottom':
@@ -107,15 +107,16 @@ function v(e) {
     }
     throw Error('Unexpected position: '.concat(e));
 }
-class b extends (r = o.Component) {
+class v extends (r = o.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: o, align: a, autoInvert: s, fixed: c, nudgeAlignIntoViewport: u, useRawTargetDimensions: d, spacing: f, onShiftClick: p, positionKey: _, overridePositionRef: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: b, useMouseEnter: y, renderPopout: O, layerContext: S, clickTrap: I = !1 } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: o, align: a, autoInvert: s, fixed: c, nudgeAlignIntoViewport: u, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: p, overridePositionRef: h, preload: m, disablePointerEvents: g, ignoreModalClicks: E, closeOnScroll: v, useMouseEnter: y, renderPopout: O, layerContext: I, clickTrap: S = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
+            targetElementRef: this.props.targetElementRef,
             overridePositionRef: h,
             preload: m,
             position: n,
-            align: null != a ? a : v(n),
+            align: null != a ? a : b(n),
             autoInvert: s,
             fixed: c,
             nudgeAlignIntoViewport: u,
@@ -125,14 +126,14 @@ class b extends (r = o.Component) {
             shouldShow: null != O && t,
             onRequestOpen: r,
             onRequestClose: o,
-            onShiftClick: p,
-            positionKey: _,
+            onShiftClick: _,
+            positionKey: p,
             disablePointerEvents: g,
             ignoreModalClicks: E,
-            closeOnScroll: b,
+            closeOnScroll: v,
             useMouseEnter: y,
-            layerContext: S,
-            clickTrap: I,
+            layerContext: I,
+            clickTrap: S,
             children: e
         });
     }
@@ -175,15 +176,15 @@ function y(e) {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         });
-    let p = o.useRef(!1);
+    let _ = o.useRef(!1);
     async function m() {
-        if (!p.current) {
-            p.current = !0;
+        if (!_.current) {
+            _.current = !0;
             let e = setTimeout(() => {
-                    v(() => g), c((e) => e + 1);
+                    b(() => g), c((e) => e + 1);
                 }, 300),
                 n = await t();
-            v(() => n), c((e) => e + 1), clearTimeout(e);
+            b(() => n), c((e) => e + 1), clearTimeout(e);
         }
     }
     function g() {
@@ -196,24 +197,24 @@ function y(e) {
             children: (0, i.jsx)(a.$, {})
         });
     }
-    let [E, v] = o.useState(() => d),
+    let [E, b] = o.useState(() => d),
         y = o.useRef(d);
     return (
         o.useEffect(() => {
             y.current = d;
         }),
         o.useEffect(() => {
-            p.current
+            _.current
                 ? t().then((e) => {
-                      v(() => e), c((e) => e + 1);
+                      b(() => e), c((e) => e + 1);
                   })
-                : v(y.current);
+                : b(y.current);
         }, [t]),
-        (0, i.jsx)(b, _(f({ ref: r }, n), { renderPopout: E }))
+        (0, i.jsx)(v, p(f({ ref: r }, n), { renderPopout: E }))
     );
 }
-d(b, 'Animation', g),
-    d(b, 'defaultProps', {
+d(v, 'Animation', g),
+    d(v, 'defaultProps', {
         position: 'right',
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,

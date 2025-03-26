@@ -377,11 +377,13 @@ function $(e) {
             var t;
             return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : I.ZP.displayCompactAvatars;
         }),
-        ei =
+        ei = o.useRef(null),
+        es =
             (!a || ea) && null != x && null != et
                 ? (0, r.jsx)(
                       l.yRy,
                       {
+                          targetElementRef: ei,
                           animation: l.yRy.Animation.TRANSLATE,
                           align: 'center',
                           autoInvert: !0,
@@ -397,7 +399,7 @@ function $(e) {
                               let { onClick: t } = e;
                               return (0, r.jsx)(
                                   m.Z,
-                                  K(V({}, x), {
+                                  K(V({ ref: ei }, x), {
                                       className: H.roleIcon,
                                       onClick: t
                                   })
@@ -409,35 +411,35 @@ function $(e) {
                 : (!a || ea) && null != x
                   ? (0, r.jsx)(m.Z, K(V({}, x), { className: H.roleIcon }), 'role-icon-children')
                   : null,
-        es = (0, W.x)({
+        ec = (0, W.x)({
             message: t,
             channel: Q,
             user: null == t ? void 0 : t.author,
             compact: a,
             isRepliedMessage: !1
         }),
-        ec = [],
-        el = k.default.getCurrentUser(),
-        eu = Z.ZP.isPremium(t.author),
-        ed = Z.ZP.isPremium(el),
-        ep = null == Q ? void 0 : Q.isPrivate();
+        el = [],
+        eu = k.default.getCurrentUser(),
+        ed = Z.ZP.isPremium(t.author),
+        ep = Z.ZP.isPremium(eu),
+        eg = null == Q ? void 0 : Q.isPrivate();
     (0, A.R)(null != x, 'Message Username') &&
-        eu &&
+        ed &&
         !a &&
-        !ep &&
-        ec.push(
+        !eg &&
+        el.push(
             (0, r.jsx)(
                 J,
                 {
-                    currentUserIsPremium: ed,
+                    currentUserIsPremium: ep,
                     author: t.author
                 },
                 'nitro-author'
             )
         ),
-        null != ei && ec.push(ei),
+        null != es && el.push(es),
         null != et &&
-            (ec.push(
+            (el.push(
                 (0, r.jsx)(
                     _.Z,
                     {
@@ -447,7 +449,7 @@ function $(e) {
                     'new-member'
                 )
             ),
-            ec.push(
+            el.push(
                 (0, r.jsx)(
                     b.Z,
                     {
@@ -459,7 +461,7 @@ function $(e) {
             )),
         null != Q &&
             null != et &&
-            ec.push(
+            el.push(
                 (0, r.jsx)(
                     g.Z,
                     {
@@ -471,15 +473,15 @@ function $(e) {
                     'connections'
                 )
             );
-    let eg = [];
-    (0, E.yE)(t.flags, U.iLy.SUPPRESS_NOTIFICATIONS) && eg.push((0, r.jsx)(O.Z, {}, 'suppress-notifications')), t.hasPotions() && eg.push((0, r.jsx)(h.Z, { message: t }));
-    let em = {};
-    (em[D.a.SYSTEM_TAG] = es), (em[D.a.BADGES] = ec);
-    let ef = Y(e, $, em),
-        e_ = (0, B.XX)(t, T),
-        eb = (0, B.Dv)(t),
-        eh = L ? ''.concat(e_) : ''.concat(e_, ' ').concat(eb),
-        ey = (null == n ? void 0 : n.state) === v.Y.LOADED ? (0, B.Gq)(t) : void 0;
+    let em = [];
+    (0, E.yE)(t.flags, U.iLy.SUPPRESS_NOTIFICATIONS) && em.push((0, r.jsx)(O.Z, {}, 'suppress-notifications')), t.hasPotions() && em.push((0, r.jsx)(h.Z, { message: t }));
+    let ef = {};
+    (ef[D.a.SYSTEM_TAG] = ec), (ef[D.a.BADGES] = el);
+    let e_ = Y(e, $, ef),
+        eb = (0, B.XX)(t, T),
+        eh = (0, B.Dv)(t),
+        ey = L ? ''.concat(eb) : ''.concat(eb, ' ').concat(eh),
+        ev = (null == n ? void 0 : n.state) === v.Y.LOADED ? (0, B.Gq)(t) : void 0;
     return (0, r.jsx)(X, {
         message: t,
         avatar: eo,
@@ -508,20 +510,20 @@ function $(e) {
                                 ]
                             })
                     }),
-                ef
+                e_
             ]
         }),
         usernameSpanId: (0, B.XX)(t, T),
         usernameClassName: i()(H.headerText, {
-            [H.hasRoleIcon]: null != ei,
-            [H.hasBadges]: null != es || eg.length > 0
+            [H.hasRoleIcon]: null != es,
+            [H.hasBadges]: null != ec || em.length > 0
         }),
         compact: a,
         showTimestamp: !0 !== L,
         showTimestampOnHover: y,
-        ariaLabelledBy: eh,
-        ariaDescribedBy: ey,
+        ariaLabelledBy: ey,
+        ariaDescribedBy: ev,
         className: F,
-        badges: eg
+        badges: em
     });
 }

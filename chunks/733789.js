@@ -12,7 +12,7 @@ var r = n(200651),
     h = n(51144),
     f = n(981631),
     g = n(388032),
-    m = n(400845);
+    m = n(901734);
 function b(e, t, n) {
     return (
         t in e
@@ -116,6 +116,7 @@ class N extends i.PureComponent {
         return (0, r.jsx)(
             a.yRy,
             {
+                targetElementRef: this.ref,
                 preload: () => (0, u.Z)(e),
                 renderPopout: (t) =>
                     (0, r.jsx)(
@@ -126,7 +127,20 @@ class N extends i.PureComponent {
                         })
                     ),
                 position: 'right',
-                children: (t) => (0, r.jsx)('span', E(_({ className: m.username }, t), { children: e.username }))
+                children: (t) =>
+                    (0, r.jsx)(
+                        'span',
+                        E(
+                            _(
+                                {
+                                    ref: this.ref,
+                                    className: m.username
+                                },
+                                t
+                            ),
+                            { children: e.username }
+                        )
+                    )
             },
             e.id
         );
@@ -158,6 +172,7 @@ class N extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            b(this, 'ref', i.createRef()),
             b(this, 'renderUserTooltip', (e, t, n) =>
                 (0, r.jsxs)('div', {
                     className: m.tooltip,

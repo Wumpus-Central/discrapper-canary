@@ -1,6 +1,6 @@
 n.d(t, {
-    Y: () => I,
-    c: () => S
+    Y: () => S,
+    c: () => I
 }),
     n(47120);
 var r = n(200651),
@@ -13,13 +13,13 @@ var r = n(200651),
     u = n(367907),
     d = n(255963),
     f = n(626135),
-    p = n(183023),
-    _ = n(524444),
+    _ = n(183023),
+    p = n(524444),
     h = n(981631),
     m = n(185923),
     g = n(474936),
-    E = n(183835);
-function v(e, t, n) {
+    E = n(713523);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function b(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
@@ -71,39 +71,40 @@ function O(e, t) {
         e
     );
 }
-let S = (e) => {
+let I = (e) => {
         var t;
-        let { node: n, tooltipPosition: o = _.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
-            f = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0],
-            h = null != f ? f : n.name,
-            [m, g] = i.useState(!1),
-            v = (e) =>
+        let { node: n, tooltipPosition: o = p.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
+            f = i.useRef(null),
+            h = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0],
+            m = null != h ? h : n.name,
+            [g, b] = i.useState(!1),
+            y = (e) =>
                 (0, r.jsx)(
                     c.Z,
-                    O(b({}, e), {
+                    O(v({}, e), {
                         emojiName: n.name,
                         size: n.jumboable ? 'jumbo' : 'default',
                         src: n.src,
-                        alt: f,
+                        alt: h,
                         animated: !1,
                         channelId: u,
                         messageId: d
                     })
                 ),
-            y = (e) =>
+            I = (e) =>
                 (0, r.jsx)(
                     l.ua7,
                     O(
-                        b(
+                        v(
                             {
-                                text: (0, _.Y)(n.name, s),
-                                'aria-label': h
+                                text: (0, p.Y)(n.name, s),
+                                'aria-label': m
                             },
-                            _.b_
+                            p.b_
                         ),
                         {
                             position: o,
-                            shouldShow: !m,
+                            shouldShow: !g,
                             onTooltipShow: () => {
                                 s &&
                                     T({
@@ -114,24 +115,25 @@ let S = (e) => {
                             children: (t) =>
                                 (0, r.jsx)(
                                     l.P3F,
-                                    O(b({}, e), {
+                                    O(v({}, e), {
+                                        innerRef: f,
                                         tag: 'span',
                                         onClick: (t) => {
                                             var n;
-                                            g(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                            b(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
                                         },
                                         className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: s,
                                             [E.emojiJumbo]: n.jumboable
                                         }),
-                                        children: v(t)
+                                        children: y(t)
                                     })
                                 )
                         }
                     )
                 );
-        if (!s) return y();
-        let S = (e) => (0, r.jsx)(p.Az, O(b({}, e), { node: n }));
+        if (!s) return I();
+        let S = (e) => (0, r.jsx)(_.Az, O(v({}, e), { node: n }));
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.TRANSLATE,
             align: 'center',
@@ -139,61 +141,64 @@ let S = (e) => {
             nudgeAlignIntoViewport: !0,
             position: 'right',
             onRequestClose: () => {
-                g(!1);
+                b(!1);
             },
             renderPopout: S,
-            children: y
+            targetElementRef: f,
+            children: I
         });
     },
-    I = (e) => {
-        let { node: t, isInteracting: n, tooltipPosition: o = _.b_.position, enableClick: u = !0, channelId: g, messageId: v } = e,
-            [y, S] = i.useState(String(Date.now())),
-            [I, N] = i.useState(!1),
-            [A, C] = i.useState(!1),
-            R = function () {
+    S = (e) => {
+        let { node: t, isInteracting: n, tooltipPosition: o = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
+            [y, I] = i.useState(String(Date.now())),
+            [S, A] = i.useState(!1),
+            [N, C] = i.useState(!1),
+            R = i.useRef(null),
+            P = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, r.jsx)(
                     c.Z,
-                    O(b({}, e), {
+                    O(v({}, e), {
                         emojiName: t.name,
                         size: t.jumboable ? 'jumbo' : 'default',
                         emojiId: t.emojiId,
                         animated: t.animated,
                         isInteracting: n,
                         channelId: g,
-                        messageId: v
+                        messageId: b
                     })
                 );
             },
-            P = (0, s.Z)(),
-            w = (e) =>
+            w = (0, s.Z)(),
+            D = (e) =>
                 (0, r.jsx)(
                     l.ua7,
                     O(
-                        b(
+                        v(
                             {
-                                text: (0, _.Y)(t.name, u),
+                                text: (0, p.Y)(t.name, u),
                                 'aria-label': t.name
                             },
-                            _.b_
+                            p.b_
                         ),
                         {
                             position: o,
-                            shouldShow: !A,
+                            shouldShow: !N,
                             onTooltipShow: () => {
-                                N(!0),
+                                A(!0),
                                     u &&
                                         (T({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
-                                            nonce: P
+                                            nonce: w
                                         }),
                                         (0, d.x)(m.qR.CustomEmojiTooltipShown));
                             },
                             children: (n) =>
                                 (0, r.jsx)(
                                     l.P3F,
-                                    O(b({}, e), {
+                                    O(v({}, e), {
+                                        innerRef: R,
                                         onMouseEnter: () => {
                                             var t;
                                             null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
@@ -201,45 +206,46 @@ let S = (e) => {
                                         onClick: u
                                             ? (t) => {
                                                   var n;
-                                                  N(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
+                                                  A(!1), C(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            I && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: P }), N(!1));
+                                            S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
                                         tag: 'span',
                                         className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: u,
                                             [E.emojiJumbo]: t.jumboable
                                         }),
-                                        children: R(n)
+                                        children: P(n)
                                     })
                                 )
                         }
                     )
                 );
-        if (!u) return w();
-        let D = (e) =>
+        if (!u) return D();
+        let L = (e) =>
             (0, r.jsx)(
-                p.vk,
-                O(b({}, e), {
+                _.vk,
+                O(v({}, e), {
                     node: t,
-                    refreshPositionKey: () => S(String(Date.now())),
-                    nonce: P
+                    refreshPositionKey: () => I(String(Date.now())),
+                    nonce: w
                 })
             );
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.FADE,
             align: 'center',
             onRequestClose: () => {
-                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: P }), N(!1), C(!1);
+                f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1);
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: 'right',
-            renderPopout: D,
+            renderPopout: L,
             positionKey: y,
-            children: w
+            targetElementRef: R,
+            children: D
         });
     },
     T = (e) => {

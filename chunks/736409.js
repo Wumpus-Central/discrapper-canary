@@ -34,7 +34,8 @@ let _ = (e) => {
                 if (s === b.Skl.INVISIBLE) return t ? m.N.Status : null;
             }
             return c && n && !l ? (t ? m.N.Activity : m.N.ActivityNux) : null;
-        })({ isForceShowSharingPopout: n });
+        })({ isForceShowSharingPopout: n }),
+        C = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && f.default.track(b.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
@@ -48,6 +49,7 @@ let _ = (e) => {
                           (0, s.EW)(l.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: v.L.USER_DISMISS }), _(!1), j(!1);
                       };
                       return (0, r.jsx)(a.yRy, {
+                          targetElementRef: C,
                           shouldShow: !0,
                           spacing: -2,
                           position: 'top',
@@ -63,6 +65,7 @@ let _ = (e) => {
                           },
                           children: () =>
                               (0, r.jsx)(a.P3F, {
+                                  innerRef: C,
                                   onClick: e,
                                   children: t
                               })

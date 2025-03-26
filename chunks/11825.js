@@ -1,29 +1,31 @@
 n.d(t, { z: () => c });
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    o = n(833592),
+    o = n(481060),
+    a = n(833592),
     l = n(388032);
 let s = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, r.jsx)(a.v2r, {
+        return (0, r.jsx)(o.v2r, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
             'aria-label': l.NW.string(l.t.ljs3OT),
-            children: (0, r.jsx)(a.sNh, {
+            children: (0, r.jsx)(o.sNh, {
                 id: 'delete',
                 label: l.NW.string(l.t.oyYWHB),
-                icon: a.XHJ,
+                icon: o.XHJ,
                 action: async () => {
-                    await (0, o.g3)(t);
+                    await (0, a.g3)(t);
                 }
             })
         });
     },
     c = i.memo(function (e) {
-        let { item: t } = e;
-        return (0, r.jsx)(a.yRy, {
+        let { item: t } = e,
+            n = i.useRef(null);
+        return (0, r.jsx)(o.yRy, {
+            targetElementRef: n,
             renderPopout: (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -71,13 +73,14 @@ let s = (e) => {
             },
             position: 'bottom',
             align: 'right',
-            animation: a.yRy.Animation.NONE,
+            animation: o.yRy.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, r.jsx)(a.M0o, {
+                return (0, r.jsx)(o.M0o, {
+                    ref: n,
                     tooltip: l.NW.string(l.t.UKOtz8),
-                    color: a.YX$.TERTIARY,
-                    icon: (0, r.jsx)(a.xhG, {
+                    color: o.YX$.TERTIARY,
+                    icon: (0, r.jsx)(o.xhG, {
                         size: 'xs',
                         color: 'currentColor'
                     }),

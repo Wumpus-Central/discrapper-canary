@@ -1,12 +1,12 @@
-n.d(t, { Z: () => u });
-var r = n(200651);
-n(192379);
-var i = n(481060),
+n.d(t, { Z: () => p });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
     a = n(110255),
-    o = n(64247),
-    l = n(981631),
-    s = n(388032);
-function c(e) {
+    l = n(64247),
+    s = n(981631),
+    c = n(388032);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,38 +49,41 @@ function d(e, t) {
         e
     );
 }
-function u(e) {
-    let { channel: t } = e;
-    return (0, r.jsx)(i.yRy, {
+function p(e) {
+    let { channel: t } = e,
+        n = i.useRef(null);
+    return (0, r.jsx)(o.yRy, {
+        targetElementRef: n,
         align: 'right',
-        animation: i.yRy.Animation.NONE,
+        animation: o.yRy.Animation.NONE,
         position: 'bottom',
         renderPopout: (e) =>
             t.isThread()
                 ? (0, r.jsx)(
-                      o.Z,
-                      d(c({}, e), {
+                      l.Z,
+                      d(u({}, e), {
                           channel: t,
                           navId: 'recents-thread-notifications',
-                          label: s.NW.string(s.t.ljs3OT)
+                          label: c.NW.string(c.t.ljs3OT)
                       })
                   )
                 : (0, r.jsx)(
                       a.Z,
-                      d(c({}, e), {
+                      d(u({}, e), {
                           channel: t,
                           navId: 'recents-notifications',
-                          label: s.NW.string(s.t.ljs3OT),
-                          location: { section: l.jXE.INBOX },
+                          label: c.NW.string(c.t.ljs3OT),
+                          location: { section: s.jXE.INBOX },
                           includeGuildMute: !0
                       })
                   ),
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(i.M0o, {
-                tooltip: s.NW.string(s.t.h850Sk),
-                color: i.YX$.TERTIARY,
-                icon: (0, r.jsx)(i.Dkj, {
+            return (0, r.jsx)(o.M0o, {
+                ref: n,
+                tooltip: c.NW.string(c.t.h850Sk),
+                color: o.YX$.TERTIARY,
+                icon: (0, r.jsx)(o.Dkj, {
                     size: 'xs',
                     color: 'currentColor'
                 }),

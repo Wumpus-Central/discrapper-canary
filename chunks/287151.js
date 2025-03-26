@@ -29,9 +29,9 @@ var i,
     x = n(56314),
     _ = n(231053),
     S = n(944386),
-    N = n(305325),
-    C = n(33154),
-    E = n(692147),
+    E = n(305325),
+    N = n(33154),
+    C = n(692147),
     P = n(197115),
     R = n(659215),
     I = n(222677),
@@ -153,7 +153,7 @@ class ec extends (i = r.PureComponent) {
     render() {
         let e, t;
         let { count: n, burst_count: i, colors: r, isBurstReaction: a, hideCount: l, emoji: d, readOnly: h, isLurking: f, isGuest: g, isPendingMember: v, className: j, useChatFontScaling: y, message: T, hideEmoji: x, animationStartPosition: _, emojiSize: S } = this.props,
-            { shouldShowTooltip: N, tooltipTextAria: C, reactionRef: P, tooltipPositionKey: R } = this.state,
+            { shouldShowTooltip: E, tooltipTextAria: N, reactionRef: P, tooltipPositionKey: R } = this.state,
             I = y ? et : ee,
             Z = {
                 transform: [{ scale: this.scale }],
@@ -170,8 +170,9 @@ class ec extends (i = r.PureComponent) {
             k = null != _ && null != L,
             D = null == _;
         return (0, o.jsx)(p.yRy, {
-            shouldShow: N,
-            'aria-label': null != C && C,
+            targetElementRef: { current: P },
+            shouldShow: E,
+            'aria-label': null != N && N,
             renderPopout: this.renderTooltip,
             nudgeAlignIntoViewport: !0,
             position: 'top',
@@ -190,12 +191,14 @@ class ec extends (i = r.PureComponent) {
                         }),
                         style: Z,
                         children: (0, o.jsx)(p.yRy, {
+                            targetElementRef: this.upsellPopoutTargetRef,
                             renderPopout: this.renderLurkerModeUpsellPopout,
                             position: 'top',
                             children: (n) =>
                                 (0, o.jsxs)(
                                     p.P3F,
                                     er(eo({}, n), {
+                                        innerRef: this.upsellPopoutTargetRef,
                                         className: I.reactionInner,
                                         onClick: this.handleClick,
                                         'aria-disabled': h,
@@ -248,7 +251,7 @@ class ec extends (i = r.PureComponent) {
                                                       color: e,
                                                       digitWidth: ea
                                                   }),
-                                            (0, o.jsx)(E.Z, {
+                                            (0, o.jsx)(C.Z, {
                                                 count: A,
                                                 reactionRef: P
                                             })
@@ -284,6 +287,7 @@ class ec extends (i = r.PureComponent) {
             }),
             ei(this, 'hasShownTooltip', !1),
             ei(this, 'nonce', (0, l.Z)()),
+            ei(this, 'upsellPopoutTargetRef', r.createRef()),
             ei(this, 'userCanBurstReact', () => this.props.userHasPremium),
             ei(this, 'handleClick', (e) => {
                 e.stopPropagation();
@@ -372,9 +376,9 @@ class ec extends (i = r.PureComponent) {
                     r = A.Z.getChannel(n.getChannelId()),
                     a = M.Z.getGuild(null == r ? void 0 : r.getGuildId());
                 return i && null != a
-                    ? (0, o.jsx)(C.Z, {
+                    ? (0, o.jsx)(N.Z, {
                           ctaRef: this.ctaRef,
-                          type: C.s.REACTIONS,
+                          type: N.s.REACTIONS,
                           guild: a,
                           closePopout: t
                       })
@@ -534,7 +538,7 @@ class ec extends (i = r.PureComponent) {
                 if (!t) return null;
                 let n = A.Z.getChannel(e.getChannelId()),
                     i = M.Z.getGuild(null == n ? void 0 : n.getGuildId());
-                null != i && (0, N.hk)(i.id);
+                null != i && (0, E.hk)(i.id);
             }),
             ei(this, 'handleSetReactionRef', (e) => {
                 this.setState({ reactionRef: e });
@@ -650,9 +654,9 @@ let eu = r.memo((e) => {
             [g, b] = r.useState(null),
             [v, j] = r.useState(!1),
             [O, x] = r.useState(!1),
-            [S, N] = r.useState(!1),
-            C = null != c,
-            E = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t,
+            [S, E] = r.useState(!1),
+            N = null != c,
+            C = null !== (t = null == u ? void 0 : u.isDiscoverable()) && void 0 !== t && t,
             P = k.Z.getGuildId(),
             R = null != P && (P === (null == u ? void 0 : u.id) || P === (null == c ? void 0 : c.id)),
             I = D.default.getCurrentUser(),
@@ -660,8 +664,8 @@ let eu = r.memo((e) => {
                 sourceType: g,
                 expressionSourceApplication: null != m ? m : null,
                 isPremium: F.ZP.isPremium(I),
-                hasJoinedEmojiSourceGuild: C,
-                isDiscoverable: E,
+                hasJoinedEmojiSourceGuild: N,
+                isDiscoverable: C,
                 emojiComesFromCurrentGuild: R,
                 isUnusableRoleSubscriptionEmoji: !1,
                 userIsRoleSubscriber: !1,
@@ -684,10 +688,10 @@ let eu = r.memo((e) => {
                                     h(e.guild);
                             }
                         else h(null);
-                        x(!1), N(!0), i();
+                        x(!1), E(!0), i();
                     })();
             }, [n, v, S, i]),
-            C)
+            N)
         )
             return null;
         let Z = () => {
@@ -735,7 +739,7 @@ let eu = r.memo((e) => {
                       (0, o.jsx)(ed, {
                           emojiId: n,
                           expressionSourceGuild: u,
-                          hasJoinedExpressionSourceGuild: C,
+                          hasJoinedExpressionSourceGuild: N,
                           onClose: a,
                           popoutData: w,
                           currentGuildId: P,

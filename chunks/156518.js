@@ -12,13 +12,13 @@ var r = n(200651),
     u = n(699516),
     d = n(823379),
     f = n(785717),
-    p = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    p = n(388032);
 function h(e) {
     let { user: t, analyticsLocation: n } = e,
-        r = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === p.OGo.PENDING_OUTGOING),
+        r = (0, o.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === _.OGo.PENDING_OUTGOING),
         { trackUserProfileAction: a } = (0, f.KZ)(),
-        _ = (0, s.Z)({
+        p = (0, s.Z)({
             user: t,
             location: n,
             onFriendRemove: () => a({ action: 'REMOVE_FRIEND' }),
@@ -26,18 +26,19 @@ function h(e) {
         }),
         h = (0, l.Z)({ user: t }),
         m = (0, c.Z)({ user: t });
-    return i.useMemo(() => [r ? null : _, h, m].filter(d.lm), [h, _, r, m]);
+    return i.useMemo(() => [r ? null : p, h, m].filter(d.lm), [h, p, r, m]);
 }
 function m(e) {
-    let { menuItems: t, children: n } = e;
+    let { menuItems: t, children: n, targetElementRef: i } = e;
     return (0, r.jsx)(a.yRy, {
+        targetElementRef: i,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, r.jsx)(a.v2r, {
                 navId: 'user-profile-friend-request-buttons',
                 onSelect: void 0,
                 onClose: n,
-                'aria-label': _.NW.string(_.t.Jszi3N),
+                'aria-label': p.NW.string(p.t.Jszi3N),
                 children: t
             });
         },

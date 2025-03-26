@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -10,9 +10,9 @@ var i = n(442837),
     u = n(605436),
     d = n(496675),
     f = n(475413),
-    p = n(981631),
-    _ = n(388032),
-    h = n(915034);
+    _ = n(981631),
+    p = n(388032),
+    h = n(517121);
 function m(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,12 +65,13 @@ function v(e, t) {
         e
     );
 }
-function b(e) {
-    let { guild: t, guildMember: n, numRoles: m, highestRole: E, onAddRole: b, buttonRef: y } = e,
+function v(e) {
+    let { guild: t, guildMember: n, numRoles: m, highestRole: E, onAddRole: v, buttonRef: y } = e,
         O = (0, i.e7)([c.Z], () => c.Z.roleStyle);
-    if (!(0, i.e7)([d.Z], () => d.Z.can(p.Plq.MANAGE_ROLES, t))) return null;
-    let S = (e) => (0, u.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, E, e) && -1 === n.roles.indexOf(e.id);
+    if (!(0, i.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
+    let I = (e) => (0, u.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, E, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(a.y, {
+        targetElementRef: y,
         position: 'bottom',
         align: 'center',
         renderPopout: (e) => {
@@ -78,27 +79,28 @@ function b(e) {
             return (0, r.jsx)(l.Z, {
                 guild: t,
                 roleStyle: O,
-                roleFilter: S,
-                onSelect: b,
+                roleFilter: I,
+                onSelect: v,
                 onClose: n
             });
         },
         children: (e) =>
             (0, r.jsx)(s.DY3, {
-                text: _.NW.string(_.t.icyMgY),
+                text: p.NW.string(p.t.icyMgY),
                 'aria-label': !1,
                 shouldShow: m > 0,
                 children: (0, r.jsxs)(
                     f.kF,
-                    v(
+                    b(
                         g(
                             {
+                                ref: y,
                                 className: h.button,
                                 color: o.zx.Colors.CUSTOM,
                                 themeColor: 'none',
                                 size: o.zx.Sizes.NONE,
                                 grow: !1,
-                                'aria-label': _.NW.string(_.t.icyMgY),
+                                'aria-label': p.NW.string(p.t.icyMgY),
                                 buttonRef: y
                             },
                             e
@@ -113,7 +115,7 @@ function b(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'none',
-                                        children: _.NW.string(_.t.icyMgY)
+                                        children: p.NW.string(p.t.icyMgY)
                                     })
                             ]
                         }

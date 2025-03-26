@@ -1,4 +1,4 @@
-n.d(t, { E: () => p }), n(47120), n(653041);
+n.d(t, { E: () => _ }), n(47120), n(653041);
 var r = n(200651),
     i = n(192379),
     o = n(658722),
@@ -57,17 +57,17 @@ function f(e, t) {
         e
     );
 }
-class p extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
         let { label: e, value: t, popoutProps: n, renderValue: i, className: o } = this.props;
         return (0, r.jsx)(
             s.yRy,
-            f(u({}, n), {
+            f(u({ targetElementRef: this.ref }, n), {
                 renderPopout: this.renderPopout,
                 children: (n) =>
                     (0, r.jsx)(
                         s.P3F,
-                        f(u({}, n), {
+                        f(u({ innerRef: this.ref }, n), {
                             className: o,
                             children: (0, r.jsx)(l.F, {
                                 label: e,
@@ -81,6 +81,7 @@ class p extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            c(this, 'ref', i.createRef()),
             c(this, 'renderItems', (e) => {
                 let { items: t, renderItem: n } = this.props;
                 return t.reduce((t, r, i) => (a()(e.toLowerCase(), r.label.toLowerCase()) && t.push(n(r, i)), t), []);

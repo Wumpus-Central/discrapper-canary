@@ -279,6 +279,7 @@ class eN extends r.PureComponent {
                                               className: ei.buttonRow,
                                               children: [
                                                   (0, i.jsx)(h.yRy, {
+                                                      targetElementRef: this.defaultReactionButtonRef,
                                                       renderPopout: this.renderEmojiPicker,
                                                       position: 'right',
                                                       animation: h.yRy.Animation.NONE,
@@ -305,6 +306,7 @@ class eN extends r.PureComponent {
                                                               })({}, e)),
                                                               (n = n =
                                                                   {
+                                                                      buttonRef: this.defaultReactionButtonRef,
                                                                       disabled: !x,
                                                                       onClick: (t) => {
                                                                           var n;
@@ -863,6 +865,7 @@ class eN extends r.PureComponent {
     constructor(e) {
         var t, n;
         super(e),
+            el(this, 'defaultReactionButtonRef', r.createRef()),
             el(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
@@ -982,10 +985,10 @@ class eN extends r.PureComponent {
                 let n = (0, z.mB)(t.flags, Y.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
                 (0, g.pW)({ flags: n });
             });
-        let r = null !== (n = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== n ? n : '';
+        let l = null !== (n = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== n ? n : '';
         this.state = {
-            textTopicValue: r,
-            richTopicValue: (0, v.JM)(r),
+            textTopicValue: l,
+            richTopicValue: (0, v.JM)(l),
             topicFocused: !1
         };
     }

@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(47120);
 var r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    a = n(192379),
+    l = n(120356),
+    i = n.n(l),
     o = n(481060),
     s = n(410030),
     c = n(541716),
@@ -18,7 +18,7 @@ var r = n(200651),
     f = n(142550),
     g = n(981631),
     x = n(388032),
-    v = n(884504);
+    v = n(308892);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,16 +67,16 @@ let P = (0, h.kt)({
     type: g.d4z.DM
 });
 function O(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: a, showEmojiButton: o = !1, renderAttachButton: s, autoFocus: m = !0, onFocus: p, channel: h, className: g } = e,
-        [x, O] = l.useState(''),
-        [b, C] = l.useState((0, u.JM)('')),
+    let { placeholder: t, onEnter: n, setEditorRef: l, showEmojiButton: o = !1, renderAttachButton: s, autoFocus: m = !0, onFocus: p, channel: h, className: g } = e,
+        [x, O] = a.useState(''),
+        [b, C] = a.useState((0, u.JM)('')),
         N = () => {
             O(''), C((0, u.JM)(''));
         },
         I = c.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        w = l.useRef(null);
+        E = a.useRef(null);
     return (0, r.jsx)(d.Z, {
-        ref: w,
+        ref: E,
         placeholder: t,
         editorClassName: g,
         className: i()(v.replyInput, g),
@@ -104,15 +104,15 @@ function O(e) {
                       shouldRefocus: !1
                   }));
         },
-        setEditorRef: a,
+        setEditorRef: l,
         focused: m,
         onFocus: p,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
         autoCompletePosition: (() => {
-            if (null == w.current) return 'top';
-            let e = w.current.getBoundingClientRect(),
+            if (null == E.current) return 'top';
+            let e = E.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? 'bottom' : 'top';
         })(),
@@ -120,7 +120,7 @@ function O(e) {
     });
 }
 let b = (e, t) => {
-        l.useEffect(() => {
+        a.useEffect(() => {
             let n = (t) => {
                     'Escape' === t.key && e();
                 },
@@ -139,19 +139,21 @@ let b = (e, t) => {
     },
     C = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
-            a = (0, s.ZP)(),
-            [i, c] = l.useState(!1),
-            u = l.useRef(null);
+            l = (0, s.ZP)(),
+            [i, c] = a.useState(!1),
+            u = a.useRef(null),
+            d = a.useRef(null);
         return (
             b(() => c(!1), u),
             (0, r.jsx)(o.yRy, {
+                targetElementRef: d,
                 align: 'right',
                 position: 'top',
                 shouldShow: i,
                 disablePointerEvents: !1,
                 renderPopout: () =>
                     (0, r.jsx)(o.f6W, {
-                        theme: a,
+                        theme: l,
                         children: (e) =>
                             (0, r.jsx)('div', {
                                 className: e,
@@ -174,7 +176,7 @@ let b = (e, t) => {
                         children: (e) =>
                             (0, r.jsx)(
                                 'div',
-                                j(y({}, e), {
+                                j(y({ ref: d }, e), {
                                     className: v.reaction,
                                     children: (0, r.jsx)(m.Z, {
                                         active: !1,

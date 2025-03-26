@@ -9,9 +9,9 @@ var r,
     u = n(866442),
     d = n(692547),
     f = n(1561),
-    p = n(993365),
-    _ = n(981631),
-    h = n(19864);
+    _ = n(993365),
+    p = n(981631),
+    h = n(412487);
 function m(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function E(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function v(e, t) {
         e
     );
 }
-function b(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,28 +85,29 @@ function y(e, t) {
     return i;
 }
 let O = {
-    side: h.side,
-    top: h.top,
-    'top-pill': h.topPill
-};
-function S(e) {
-    let { className: t, onClick: n, children: r, 'aria-expanded': i, 'aria-controls': a } = e;
-    return (0, o.jsx)(f.P, {
-        tabIndex: null == n ? -1 : 0,
-        className: l()(h.header, t),
-        onClick: n,
-        'aria-expanded': i,
-        'aria-controls': a,
-        focusProps: { offset: { top: -6 } },
-        children: (0, o.jsx)(p.x, {
-            variant: 'eyebrow',
-            color: 'none',
-            className: h.headerText,
-            children: r
-        })
+        side: h.side,
+        top: h.top,
+        'top-pill': h.topPill
+    },
+    I = a.forwardRef(function (e, t) {
+        let { className: n, onClick: r, children: i, 'aria-expanded': a, 'aria-controls': s } = e;
+        return (0, o.jsx)(f.P, {
+            innerRef: t,
+            tabIndex: null == r ? -1 : 0,
+            className: l()(h.header, n),
+            onClick: r,
+            'aria-expanded': a,
+            'aria-controls': s,
+            focusProps: { offset: { top: -6 } },
+            children: (0, o.jsx)(_.x, {
+                variant: 'eyebrow',
+                color: 'none',
+                className: h.headerText,
+                children: i
+            })
+        });
     });
-}
-function I(e) {
+function S(e) {
     let { style: t } = e;
     return (0, o.jsx)('div', {
         className: h.separator,
@@ -115,22 +116,22 @@ function I(e) {
 }
 let T = a.forwardRef(function (e, t) {
     var { children: n, id: r } = e,
-        i = b(e, ['children', 'id']);
+        i = v(e, ['children', 'id']);
     return (0, o.jsx)(
         'div',
-        v(g({}, i), {
+        b(g({}, i), {
             ref: t,
             role: 'tabpanel',
-            id: N(r),
+            id: A(r),
             tabIndex: -1,
             children: n
         })
     );
 });
-function N(e) {
+function A(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function A(e, t) {
+function N(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = d.Z.unsafe_rawColors.WHITE_500.css)) : ('Hover' === t && (n.backgroundColor = (0, u.wK)(e, 0.1)), (n.color = e)), n;
@@ -140,7 +141,7 @@ class C extends (r = a.Component) {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: o } = this.state;
         if (null != e) {
-            if ('side' === r) return (null != t && n === t) || o ? A(e, 'Selected') : i ? A(e, 'Hover') : A(e);
+            if ('side' === r) return (null != t && n === t) || o ? N(e, 'Selected') : i ? N(e, 'Hover') : N(e);
             if ('top' === r)
                 return n === t
                     ? {
@@ -170,29 +171,29 @@ class C extends (r = a.Component) {
     }
     render() {
         let { children: e, className: t, id: n, selectedItem: r, color: i, disabled: a, onContextMenu: s, clickableRef: c, look: u, disableItemStyles: d } = this.props,
-            p = this.props['aria-label'],
-            _ = r === n;
+            _ = this.props['aria-label'],
+            p = r === n;
         return (0, o.jsx)(f.P, {
             className: l()(t, {
                 [h.item]: !d,
                 [h.brand]: 'brand' === u,
-                [h.selected]: null == i && _,
+                [h.selected]: null == i && p,
                 [h.themed]: 'grey' === u,
                 [h.disabled]: null == i && a
             }),
             style: this.getStyle(),
             role: 'tab',
-            'aria-selected': _,
-            'aria-controls': _ ? N(''.concat(n)) : void 0,
+            'aria-selected': p,
+            'aria-controls': p ? A(''.concat(n)) : void 0,
             'aria-disabled': a,
-            tabIndex: _ ? 0 : -1,
+            tabIndex: p ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
             onClick: this.handleClick,
             onMouseLeave: null != i ? this.handleMouseOut : void 0,
             onMouseUp: null != i ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
             onContextMenu: s,
-            'aria-label': p,
+            'aria-label': _,
             ref: c,
             children: e
         });
@@ -274,16 +275,16 @@ class R extends (i = a.Component) {
             }),
             m(this, 'getNodeForKeydownEvent', async (e) => {
                 let { orientation: t = 'horizontal' } = this.props,
-                    n = 'vertical' === t ? _.yXg.ARROW_UP : _.yXg.ARROW_LEFT,
-                    r = 'vertical' === t ? _.yXg.ARROW_DOWN : _.yXg.ARROW_RIGHT;
+                    n = 'vertical' === t ? p.yXg.ARROW_UP : p.yXg.ARROW_LEFT,
+                    r = 'vertical' === t ? p.yXg.ARROW_DOWN : p.yXg.ARROW_RIGHT;
                 switch (e.which) {
                     case n:
                         return this.focusManager.getPreviousFocusableElement();
                     case r:
                         return this.focusManager.getNextFocusableElement();
-                    case _.yXg.HOME:
+                    case p.yXg.HOME:
                         return this.focusManager.getFirstFocusableElement();
-                    case _.yXg.END:
+                    case p.yXg.END:
                         return this.focusManager.getLastFocusableElement();
                 }
                 return null;
@@ -294,4 +295,4 @@ class R extends (i = a.Component) {
             });
     }
 }
-m(R, 'Header', S), m(R, 'Item', C), m(R, 'Separator', I), m(R, 'Panel', T);
+m(R, 'Header', I), m(R, 'Item', C), m(R, 'Separator', S), m(R, 'Panel', T);

@@ -3,33 +3,35 @@ var n = r(200651),
     a = r(192379),
     o = r(120356),
     i = r.n(o),
-    s = r(442837),
-    l = r(481060),
+    l = r(442837),
+    s = r(481060),
     c = r(178762),
     u = r(91140),
     d = r(297781),
     p = r(592125),
-    m = r(944486),
-    f = r(594174),
+    f = r(944486),
+    m = r(594174),
     g = r(5192),
     b = r(810568),
     _ = r(388032),
-    h = r(996401),
-    O = r(384370);
+    h = r(455692),
+    O = r(869429);
 let y = (e) => {
     let { entry: t, viewId: r, officialGuildId: o, onClose: y } = e,
-        v = (0, s.e7)([m.Z, p.Z], () => p.Z.getChannel(m.Z.getChannelId())),
-        j = (0, s.e7)([f.default], () => f.default.getUser(t.author_id)),
-        { nick: x, avatar: P } = a.useMemo(() => {
-            let e = null == j ? void 0 : j.getAvatarURL(null == v ? void 0 : v.guild_id, 48, !1);
+        v = a.useRef(null),
+        j = (0, l.e7)([f.Z, p.Z], () => p.Z.getChannel(f.Z.getChannelId())),
+        x = (0, l.e7)([m.default], () => m.default.getUser(t.author_id)),
+        { nick: P, avatar: E } = a.useMemo(() => {
+            let e = null == x ? void 0 : x.getAvatarURL(null == j ? void 0 : j.guild_id, 48, !1);
             return {
-                nick: g.ZP.getName(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, j),
+                nick: g.ZP.getName(null == j ? void 0 : j.guild_id, null == j ? void 0 : j.id, x),
                 avatar: e
             };
-        }, [j, v]);
-    return null == j
+        }, [x, j]);
+    return null == x
         ? null
-        : (0, n.jsx)(l.yRy, {
+        : (0, n.jsx)(s.yRy, {
+              targetElementRef: v,
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: a, updatePosition: i } = e;
@@ -67,7 +69,7 @@ let y = (e) => {
               children: (e) => {
                   var r, a;
                   return (0, n.jsx)(
-                      l.P3F,
+                      s.P3F,
                       ((r = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -92,11 +94,11 @@ let y = (e) => {
                                   });
                           }
                           return e;
-                      })({}, e)),
+                      })({ innerRef: v }, e)),
                       (a = a =
                           {
                               className: h.profileEntryCard,
-                              children: (0, n.jsx)(l.tEY, {
+                              children: (0, n.jsx)(s.tEY, {
                                   offset: {
                                       top: 4,
                                       bottom: 4,
@@ -107,19 +109,19 @@ let y = (e) => {
                                       children: [
                                           (0, n.jsx)('img', {
                                               className: h.avatar,
-                                              src: P,
-                                              alt: _.NW.formatToPlainString(_.t.IzVXxc, { userName: x })
+                                              src: E,
+                                              alt: _.NW.formatToPlainString(_.t.IzVXxc, { userName: P })
                                           }),
                                           (0, n.jsx)('div', {
-                                              className: i()(h.playerInfo),
+                                              className: h.playerInfo,
                                               children: (0, n.jsxs)('div', {
                                                   className: i()(O.column, O.gapXs),
                                                   children: [
-                                                      (0, n.jsx)(l.Text, {
+                                                      (0, n.jsx)(s.Text, {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: x
+                                                          children: P
                                                       }),
                                                       (0, n.jsx)(d.Gk, {
                                                           location: d.Gt.GAME_PROFILE,
@@ -130,7 +132,7 @@ let y = (e) => {
                                           }),
                                           (0, n.jsx)('div', {
                                               className: h.reactions,
-                                              children: (0, n.jsx)(l.n$P, { size: 'sm' })
+                                              children: (0, n.jsx)(s.n$P, { size: 'sm' })
                                           })
                                       ]
                                   })

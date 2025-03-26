@@ -1,15 +1,15 @@
-n.d(t, { Z: () => _ });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
-    s = n(596454),
-    l = n(633302),
-    c = n(695346),
-    u = n(556638),
-    d = n(967616);
-function f(e, t, n) {
+n.d(t, { Z: () => h });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(596454),
+    c = n(633302),
+    u = n(695346),
+    d = n(556638),
+    f = n(389034);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,27 +33,32 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e) {
-    let { emoji: t, className: n, animate: i = !0, hideTooltip: f = !1, tooltipDelay: _ = u.X } = e,
-        h = c.Yk.useSetting(),
-        m = null != t.id ? ':'.concat(t.name, ':') : l.ZP.translateSurrogatesToInlineEmoji(t.name),
-        g = {
-            className: o()(d.emoji, n),
+function h(e) {
+    let { emoji: t, className: n, animate: o = !0, hideTooltip: _ = !1, tooltipDelay: h = d.X } = e,
+        m = u.Yk.useSetting(),
+        g = i.useRef(null),
+        E = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name),
+        b = {
+            className: a()(f.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
-            animated: !!(t.animated && h && i)
+            animated: !!(t.animated && m && o),
+            registerInnerRef: (e) => {
+                g.current = e;
+            }
         };
-    return f
-        ? (0, r.jsx)(s.Z, p({}, g))
-        : (0, r.jsx)(a.ua7, {
-              text: m,
-              delay: _,
-              children: (e) => (0, r.jsx)(s.Z, p({}, e, g))
+    return _
+        ? (0, r.jsx)(l.Z, p({}, b))
+        : (0, r.jsx)(s.ua7, {
+              targetElementRef: g,
+              text: E,
+              delay: h,
+              children: (e) => (0, r.jsx)(l.Z, p({}, e, b))
           });
 }

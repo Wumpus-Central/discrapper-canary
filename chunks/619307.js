@@ -1,7 +1,7 @@
 n.d(t, {
     Ph: () => L,
     UN: () => P,
-    cY: () => A,
+    cY: () => N,
     gz: () => C,
     q4: () => k,
     s6: () => R
@@ -96,7 +96,7 @@ function T(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function N(e) {
+function A(e) {
     let { value: t, onChange: n, serialize: r = (e) => String(e) } = e;
     return {
         select: (e) => n(e),
@@ -105,7 +105,7 @@ function N(e) {
         serialize: r
     };
 }
-function A(e) {
+function N(e) {
     let { value: t, onChange: n, onSelectInteraction: r, serialize: i = (e) => String(e) } = e;
     return {
         select: (e) => {
@@ -159,7 +159,7 @@ function D(e) {
     return e.map((e) => w(e)).join(', ');
 }
 function L(e) {
-    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: v = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: N = w, renderOptionValue: A = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': F, 'aria-labelledby': V } = e,
+    let { options: t, placeholder: n = E.NW.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: v = g.q.FILLED, onClose: O, onOpen: T, renderOptionLabel: A = w, renderOptionValue: N = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': F, 'aria-labelledby': V } = e,
         [Z, H] = i.useState(!1),
         { ref: W, width: Y, height: K } = (0, p.Z)();
     i.useLayoutEffect(() => {
@@ -202,6 +202,7 @@ function L(e) {
             }
         }, [u, W]),
         (0, r.jsx)(d.y, {
+            targetElementRef: W,
             spacing: 0,
             animation: d.y.Animation.NONE,
             shouldShow: Z,
@@ -224,7 +225,7 @@ function L(e) {
                     onSelect: X,
                     options: t,
                     serialize: U,
-                    renderOptionLabel: N,
+                    renderOptionLabel: A,
                     optionClassName: L,
                     updatePosition: o,
                     popoutPosition: i
@@ -274,7 +275,7 @@ function L(e) {
                                     ? (0, r.jsx)(_.Text, {
                                           className: b.value,
                                           variant: 'text-md/medium',
-                                          children: A($)
+                                          children: N($)
                                       })
                                     : (0, r.jsx)('span', {
                                           className: b.placeholder,
@@ -313,8 +314,8 @@ function L(e) {
     );
 }
 function x(e) {
-    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: v, buttonHeight: O, updatePosition: T, popoutPosition: N } = e,
-        [A, C] = i.useState(0),
+    let { className: t, onSelect: n, closePopout: o, closeOnSelect: c = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: v, buttonHeight: O, updatePosition: T, popoutPosition: A } = e,
+        [N, C] = i.useState(0),
         R = i.useRef(null),
         P = i.useId(),
         w = (0, s.ZP)({
@@ -341,7 +342,7 @@ function x(e) {
         }, [h]),
         i.useEffect(() => {
             T();
-        }, [T, A]);
+        }, [T, N]);
     let L = i.useCallback(
             (e) => {
                 n(e), c && o();
@@ -378,10 +379,10 @@ function x(e) {
                             I(
                                 y(
                                     {
-                                        className: a()(b.popout, t, { [b.popoutPositionTop]: 'top' === N }),
+                                        className: a()(b.popout, t, { [b.popoutPositionTop]: 'top' === A }),
                                         style: {
                                             width: p,
-                                            maxHeight: A
+                                            maxHeight: N
                                         },
                                         ref: (e) => {
                                             var t;
@@ -446,7 +447,7 @@ function M(e) {
 function k(e) {
     var { value: t, onChange: n } = e,
         i = S(e, ['value', 'onChange']);
-    let o = N({
+    let o = A({
         value: t,
         onChange: n
     });

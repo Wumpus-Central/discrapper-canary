@@ -1,5 +1,5 @@
 n.d(t, {
-    PE: () => b,
+    PE: () => v,
     l: () => y,
     pM: () => E
 });
@@ -64,18 +64,18 @@ function h(e, t) {
         e
     );
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,21 +101,23 @@ function E(e) {
         onClick: u
     });
 }
-function v(e) {
+function b(e) {
     var { user: t, analyticsLocation: n } = e,
-        i = g(e, ['user', 'analyticsLocation']);
-    let o = (0, l.Y)({
-        user: t,
-        analyticsLocation: n
-    });
-    return 0 === o.length
-        ? (0, r.jsx)(s.oY, h(_({}, i), { disabled: !0 }))
+        o = m(e, ['user', 'analyticsLocation']);
+    let a = (0, l.Y)({
+            user: t,
+            analyticsLocation: n
+        }),
+        c = i.useRef(null);
+    return 0 === a.length
+        ? (0, r.jsx)(s.oY, h(_({}, o), { disabled: !0 }))
         : (0, r.jsx)(l.Z, {
-              menuItems: o,
-              children: (e) => (0, r.jsx)('div', h(_({}, e), { children: (0, r.jsx)(s.oY, _({}, i)) }))
+              targetElementRef: c,
+              menuItems: a,
+              children: (e) => (0, r.jsx)('div', h(_({ ref: c }, e), { children: (0, r.jsx)(s.oY, _({}, o)) }))
           });
 }
-function b(e) {
+function v(e) {
     let { user: t, relationshipType: n, analyticsLocation: a, shouldShowTooltip: s } = e,
         l = i.useMemo(() => {
             switch (n) {
@@ -136,7 +138,7 @@ function b(e) {
                     return d.NW.string(d.t['6QQCQ0']);
             }
         }, [n]);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(b, {
         icon: l,
         tooltipText: c,
         shouldShowTooltip: s,
@@ -156,7 +158,7 @@ function y(e) {
             hasOutgoingPendingGameFriends: i,
             hasIncomingPendingGameFriends: o
         });
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(b, {
         tooltipText: l,
         tooltipPosition: 'left',
         tooltipAlign: 'top',

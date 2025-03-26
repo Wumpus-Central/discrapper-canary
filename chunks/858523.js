@@ -31,8 +31,9 @@ function c(e) {
     });
 }
 let u = (e) => {
-    let { guild: t, children: n, onRequestOpen: i, onRequestClose: o } = e;
+    let { guild: t, children: n, onRequestOpen: i, onRequestClose: o, targetElementRef: a } = e;
     return (0, r.jsx)(l.yRy, {
+        targetElementRef: a,
         onRequestOpen: i,
         onRequestClose: o,
         animation: l.yRy.Animation.NONE,

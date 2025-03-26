@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var r = n(200651),
     a = n(192379),
     l = n(481060),
@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(26033),
     m = n(178762),
     p = n(388032),
-    h = n(694247);
-function x(e) {
+    h = n(836261);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,27 +54,28 @@ function g(e, t) {
         e
     );
 }
-function v(e) {
+function x(e) {
     var t;
-    let { user: n, guildId: v, channel: f, entry: y, onSelect: j, disableGameProfileLinks: P } = e,
-        O = a.useContext(m.Ir),
-        b = (0, u.Z)({
+    let { user: n, guildId: x, channel: v, entry: y, onSelect: j, disableGameProfileLinks: P } = e,
+        O = a.useRef(null),
+        b = a.useContext(m.Ir),
+        C = (0, u.Z)({
             userId: n.id,
-            guildId: v,
-            channelId: null == f ? void 0 : f.id,
-            onAction: O
+            guildId: x,
+            channelId: null == v ? void 0 : v.id,
+            onAction: b
         }),
-        C = (0, o.Z)({
+        N = (0, o.Z)({
             id: n.id,
             label: p.NW.string(p.t['/AXYnJ'])
         }),
-        N = 'application_id' in y.extra ? y.extra.application_id : null,
-        I = (0, o.Z)({
-            id: N,
+        I = 'application_id' in y.extra ? y.extra.application_id : null,
+        E = (0, o.Z)({
+            id: I,
             label: p.NW.string(p.t['FfCL+/'])
         }),
         w = (0, d.dX)(y),
-        T = (0, c.Z)({
+        Z = (0, c.Z)({
             location: 'ContentPopoutContextMenu',
             applicationId: w && !0 !== P ? (null === (t = y.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: s.m1.ActivityCardContextMenu,
@@ -82,6 +83,7 @@ function v(e) {
             sourceUserId: y.author_id
         });
     return (0, r.jsx)(l.yRy, {
+        targetElementRef: O,
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
@@ -98,19 +100,19 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(l.kSQ, {
                             children: [
-                                b,
-                                null != T &&
+                                C,
+                                null != Z &&
                                     (0, r.jsx)(l.sNh, {
                                         id: 'game-profile',
                                         label: p.NW.string(p.t.f7aVGh),
                                         action: (e) => {
-                                            T(e), null == O || O();
+                                            Z(e), null == b || b();
                                         }
                                     })
                             ]
                         }),
                         (0, r.jsxs)(l.kSQ, {
-                            children: [C, I]
+                            children: [N, E]
                         })
                     ]
                 })
@@ -122,7 +124,7 @@ function v(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         l.P3F,
-                        g(x(g(x({}, t), { className: h.menuIcon }), e), {
+                        g(f(g(f({ innerRef: O }, t), { className: h.menuIcon }), e), {
                             children: (0, r.jsx)(l.xhG, {
                                 color: 'currentColor',
                                 size: 'custom',

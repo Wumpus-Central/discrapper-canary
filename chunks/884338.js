@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => N,
     u: () => O
 }),
     n(653041),
@@ -14,11 +14,11 @@ var r,
     u = n(481060),
     d = n(686546),
     f = n(184301),
-    p = n(347475),
-    _ = n(598077),
+    _ = n(347475),
+    p = n(598077),
     h = n(594174),
     m = n(426563),
-    g = n(198854);
+    g = n(99427);
 function E(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ function E(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function v(e) {
     }
     return e;
 }
-function b(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function y(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,11 +77,11 @@ let O = {
     SIZE_32: 32,
     SIZE_56: 56
 };
-function S(e, t) {
-    let n = e instanceof _.Z ? e : null != e ? e.user : null;
+function I(e, t) {
+    let n = e instanceof p.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : 'user-'.concat(t);
 }
-function I(e) {
+function S(e) {
     return (0, i.jsx)('div', {
         className: g.moreUsers,
         children: e
@@ -102,7 +102,7 @@ function T() {
             return g.size24;
     }
 }
-class N extends (r = o.PureComponent) {
+class A extends (r = o.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: o } = this.props,
             a = [],
@@ -121,7 +121,7 @@ class N extends (r = o.PureComponent) {
                               className: g.avatarContainer,
                               children: s
                           },
-                          S(null !== (u = e[c]) && void 0 !== u ? u : null, c)
+                          I(null !== (u = e[c]) && void 0 !== u ? u : null, c)
                       )
                     : (0, i.jsx)(
                           d.ZP,
@@ -132,7 +132,7 @@ class N extends (r = o.PureComponent) {
                               mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                               children: s
                           },
-                          S(e[c], c)
+                          I(e[c], c)
                       )
             ),
                 c++;
@@ -169,8 +169,9 @@ class N extends (r = o.PureComponent) {
         let { className: e, size: t, users: n, guildId: r, showUserPopout: o, useFallbackUserForPopout: a } = this.props,
             { popoutUserId: l } = this.state,
             d = n.find((e) => null != e && e.id === l),
-            _ = a && null == h.default.getUser(l);
+            p = a && null == h.default.getUser(l);
         return (0, i.jsx)(u.yRy, {
+            targetElementRef: this._ref,
             position: 'right',
             preload: null == d ? void 0 : () => (0, f.Z)(d.id, d.getAvatarURL(r, 80), { guildId: r }),
             shouldShow: !0 === o && null != l,
@@ -178,8 +179,8 @@ class N extends (r = o.PureComponent) {
             renderPopout: (e) => (
                 c()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'),
                 (0, i.jsx)(
-                    p.Z,
-                    y(v(y(v({}, this.props), { user: _ && null != d ? d : void 0 }), e), {
+                    _.Z,
+                    y(b(y(b({}, this.props), { user: p && null != d ? d : void 0 }), e), {
                         userId: l,
                         guildId: this.props.guildId
                     })
@@ -190,7 +191,7 @@ class N extends (r = o.PureComponent) {
                 (0, i.jsxs)(
                     'div',
                     y(
-                        v(
+                        b(
                             {
                                 className: s()(e, g.container, T(t)),
                                 ref: this._ref
@@ -248,11 +249,11 @@ class N extends (r = o.PureComponent) {
             });
     }
 }
-E(N, 'defaultProps', {
+E(A, 'defaultProps', {
     max: 10,
-    renderMoreUsers: I,
+    renderMoreUsers: S,
     renderIcon: !1,
     showDefaultAvatarsForNullUsers: !1,
     size: O.SIZE_24
 });
-let A = N;
+let N = A;

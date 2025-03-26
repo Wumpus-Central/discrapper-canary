@@ -28,7 +28,7 @@ var o = n(200651),
     w = n(844439),
     A = n(981631),
     I = n(388032),
-    T = n(152633);
+    T = n(122642);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,11 +58,13 @@ function D(e) {
     let { toggleShowMenu: t, showMenu: n, className: c, channelId: d, imageUrl: u, mimeType: s } = e,
         m = (0, r.e7)([P.Z], () => P.Z.getChannel(d)),
         { Component: p, events: f, play: O } = (0, l.w)(),
-        [b, E] = i.useState(!1);
+        [b, E] = i.useState(!1),
+        v = i.useRef(null);
     return null == m
         ? null
         : (b || O(),
           (0, o.jsx)(a.yRy, {
+              targetElementRef: v,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, o.jsx)(U, {
@@ -90,6 +92,7 @@ function D(e) {
                                   {
                                       className: c,
                                       focusProps: { offset: 2 },
+                                      innerRef: v,
                                       onClick: t,
                                       onMouseEnter: () => {
                                           E(!0), f.onMouseEnter();

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => y }), n(47120);
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
-    s = n(481060),
-    l = n(607070),
-    c = n(906732),
-    u = n(951394),
-    d = n(695346),
-    f = n(785717),
+n.d(t, { Z: () => O }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(481060),
+    c = n(607070),
+    u = n(906732),
+    d = n(951394),
+    f = n(695346),
+    _ = n(785717),
     p = n(388032),
-    _ = n(515054);
-function h(e, t, n) {
+    h = n(996312);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +36,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,74 +53,79 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let v = 300,
-    b = (e) =>
-        (0, s.ZDy)(async () => {
+    y = (e) =>
+        (0, l.ZDy)(async () => {
             let { default: t } = await n.e('31649').then(n.bind(n, 475613));
             return (n) =>
                 (0, r.jsx)(
                     t,
-                    E(m({}, n), {
+                    b(g({}, n), {
                         sourceAnalyticsLocations: e,
                         location: 'UserProfileCustomStatusBubbleEditBar'
                     })
                 );
         });
-function y(e) {
-    let { isVisible: t, isExpandable: n, onCloseProfile: i } = e,
-        { analyticsLocations: h } = (0, c.ZP)(),
-        { trackUserProfileAction: m } = (0, f.KZ)(),
-        [g, E] = (0, a.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-        y = !n || g || E ? 0 : v,
-        O = () => {
-            m({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), b(h), null == i || i();
+function O(e) {
+    let { isVisible: t, isExpandable: n, onCloseProfile: o } = e,
+        { analyticsLocations: m } = (0, u.ZP)(),
+        { trackUserProfileAction: g } = (0, _.KZ)(),
+        E = i.useRef(null),
+        b = i.useRef(null),
+        [O, I] = (0, s.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
+        S = !n || O || I ? 0 : v,
+        T = () => {
+            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), y(m), null == o || o();
         },
-        S = () => {
-            m({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
+        A = () => {
+            g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), f.Ok.updateSetting(void 0);
         };
-    return (0, r.jsxs)(u.ZP, {
-        className: o()(_.popover, {
-            [_.visible]: t,
-            [_.expandable]: n
+    return (0, r.jsxs)(d.ZP, {
+        className: a()(h.popover, {
+            [h.visible]: t,
+            [h.expandable]: n
         }),
         children: [
-            (0, r.jsx)(s.DY3, {
+            (0, r.jsx)(l.DY3, {
+                targetElementRef: E,
                 text: p.NW.string(p.t.bt75u7),
-                delay: y,
+                delay: S,
                 'aria-label': !1,
-                children: (0, r.jsx)(u.zx, {
-                    className: o()(_.button, _.left),
+                children: (0, r.jsx)(d.zx, {
+                    ref: E,
+                    className: a()(h.button, h.left),
                     'aria-label': p.NW.string(p.t.QdHxoq),
                     'aria-haspopup': 'dialog',
-                    onClick: O,
-                    children: (0, r.jsx)(s.vdY, {
+                    onClick: T,
+                    children: (0, r.jsx)(l.vdY, {
                         size: 'xs',
-                        colorClass: _.icon
+                        colorClass: h.icon
                     })
                 })
             }),
-            (0, r.jsx)(s.DY3, {
+            (0, r.jsx)(l.DY3, {
                 text: p.NW.string(p.t.VkKicX),
-                delay: y,
+                delay: S,
                 'aria-label': !1,
-                children: (0, r.jsx)(u.zx, {
-                    className: o()(_.button, _.right),
+                children: (0, r.jsx)(d.zx, {
+                    ref: b,
+                    className: a()(h.button, h.right),
                     'aria-label': p.NW.string(p.t.wfYTHR),
-                    onClick: S,
-                    children: (0, r.jsx)(s.XHJ, {
+                    onClick: A,
+                    children: (0, r.jsx)(l.XHJ, {
                         size: 'xs',
-                        colorClass: _.icon
+                        colorClass: h.icon
                     })
                 })
             })
