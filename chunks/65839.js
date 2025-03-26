@@ -5,7 +5,7 @@ var r = n(200651),
     o = n.n(l),
     a = n(399606),
     s = n(481060),
-    c = n(112724),
+    c = n(393238),
     u = n(430824),
     d = n(496675),
     p = n(768581),
@@ -13,25 +13,27 @@ var r = n(200651),
     f = n(75666),
     m = n(981631),
     g = n(388032),
-    b = n(282458),
-    _ = n(370961),
+    b = n(765414),
+    _ = n(301249),
     C = n(584354),
     v = n(725060);
-let y = (0, c.Z)((e) => {
-    let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l, width: a } = e,
-        c = null != a && a <= 800;
+let y = (e) => {
+    let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
+        { ref: a, width: u } = (0, c.Z)(),
+        d = null != u && u <= 800;
     return (0, r.jsxs)('div', {
+        ref: a,
         className: _.header,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 className: _.headerImage,
-                src: c ? v : C
+                src: d ? v : C
             }),
             (0, r.jsx)('div', {
                 className: _.headerContentWrapper,
                 children: (0, r.jsxs)('div', {
-                    className: o()(_.headerContent, { [_.headerContentSmall]: c }),
+                    className: o()(_.headerContent, { [_.headerContentSmall]: d }),
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
@@ -61,7 +63,7 @@ let y = (0, c.Z)((e) => {
             })
         ]
     });
-});
+};
 function x(e) {
     let { guild: t, directoryEntries: n, handleCreateOrAddGuild: i, isLoading: l } = e,
         c = (0, a.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, t)),
@@ -118,14 +120,14 @@ function x(e) {
     });
 }
 let j = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: C, handleSelectCategory: v, categoryCounts: j, allEntriesCount: O, isLoading: N } = e,
-        E = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
-    return null != E && E.hasFeature(m.oNc.SHARD)
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: C, handleSelectCategory: v, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
+        N = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
+    return null != N && N.hasFeature(m.oNc.SHARD)
         ? (0, r.jsx)(x, {
-              guild: E,
+              guild: N,
               directoryEntries: n,
               handleCreateOrAddGuild: l,
-              isLoading: N
+              isLoading: E
           })
         : (0, r.jsx)('div', {
               className: b.pageContainer,
@@ -173,7 +175,7 @@ let j = (e) => {
                               ]
                           })
                       }),
-                      N && null == n
+                      E && null == n
                           ? (0, r.jsx)(s.$jN, { className: b.spinner })
                           : null == n
                             ? void 0

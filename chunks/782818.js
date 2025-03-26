@@ -12,8 +12,8 @@ var r = n(200651),
     f = n(598989),
     m = n(898331),
     g = n(841183),
-    j = n(981631),
-    b = n(486324),
+    b = n(981631),
+    j = n(486324),
     x = n(388032),
     h = n(170286);
 function y(e) {
@@ -59,7 +59,7 @@ function O(e, t) {
         e
     );
 }
-function N() {
+function v() {
     (0, c.ZDy)(async () => {
         let { default: e } = await n.e('21907').then(n.bind(n, 53394));
         return (t) =>
@@ -67,10 +67,10 @@ function N() {
                 e,
                 y(
                     {
-                        analyticsSource: j.Sbl.PROFILE_PANEL,
+                        analyticsSource: b.Sbl.PROFILE_PANEL,
                         analyticsLocation: {
-                            section: j.jXE.USER_PROFILE,
-                            object: j.qAy.RECENT_AVATARS_UPSELL
+                            section: b.jXE.USER_PROFILE,
+                            object: b.qAy.RECENT_AVATARS_UPSELL
                         },
                         onSecondaryClick: c.pTH
                     },
@@ -79,7 +79,7 @@ function N() {
             );
     });
 }
-function v(e) {
+function N(e) {
     let { avatar: t, index: n, onSelectRecentAvatar: l, onDeleteRecentAvatar: a, avatarButtonRef: i } = e,
         { id: o, storageHash: s, description: u = x.NW.string(x.t.lqaIxM) } = t,
         { avatarSrc: d, eventHandlers: p } = (0, g.Z)({
@@ -87,19 +87,16 @@ function v(e) {
             storageHash: s
         }),
         { onMouseEnter: f, onMouseLeave: m } = p,
-        j = 'en-US' === x.NW.currentLocale || 'en-GB' === x.NW.currentLocale,
         b = null != u ? u : s.substring(0, 6).toUpperCase(),
-        N = x.NW.formatToPlainString(x.t['tmJ75+'], {
+        j = x.NW.formatToPlainString(x.t['tmJ75+'], {
             orderNumber: n + 1,
             description: b
         }),
-        v = j
-            ? x.NW.formatToPlainString(x.t.pBzwhY, {
-                  orderNumber: n + 1,
-                  description: b
-              })
-            : x.NW.string(x.t.N86XcH),
-        C = {
+        v = x.NW.formatToPlainString(x.t.pBzwhY, {
+            orderNumber: n + 1,
+            description: b
+        }),
+        N = {
             look: c.zxk.Looks.BLANK,
             size: c.zxk.Sizes.NONE,
             color: c.zxk.Colors.TRANSPARENT
@@ -116,10 +113,10 @@ function v(e) {
                             onMouseEnter: f,
                             onMouseLeave: m,
                             className: h.recentAvatarButton,
-                            'aria-label': N,
+                            'aria-label': j,
                             buttonRef: i
                         },
-                        C
+                        N
                     ),
                     {
                         children: (0, r.jsx)('img', {
@@ -144,7 +141,7 @@ function v(e) {
                                     className: h.deleteButton,
                                     innerClassName: h.deleteButtonInner
                                 }),
-                                C
+                                N
                             ),
                             {
                                 children: (0, r.jsx)(c.XHJ, {
@@ -163,7 +160,7 @@ function C(e) {
     let { numberOfLockedAvatarSlots: t } = e;
     return (0, r.jsxs)(c.P3F, {
         className: h.premiumUpsellButton,
-        onClick: N,
+        onClick: v,
         'aria-label': x.NW.formatToPlainString(x.t.D4829v, { numberOfLockedAvatarSlots: t }),
         children: [
             (0, r.jsxs)(c.Text, {
@@ -182,7 +179,7 @@ function C(e) {
 function A(e) {
     let { hasIncreasedRecentAvatarsLimit: t, onComplete: a } = e,
         s = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        { avatars: g, loading: O, error: N } = (0, f.S)(),
+        { avatars: g, loading: O, error: v } = (0, f.S)(),
         { recentAvatarsLimit: A, numberOfLockedAvatarSlots: E } = (0, d.pC)(t),
         P = l.useRef([]),
         S = l.useRef(null),
@@ -190,8 +187,8 @@ function A(e) {
         T = l.useRef(null),
         [R, _] = l.useState(!1),
         [k, F] = l.useState(!1),
-        [L, Z] = l.useState(null),
-        I = null != L ? L : null == N ? void 0 : N.message,
+        [Z, I] = l.useState(null),
+        L = null != Z ? Z : null == v ? void 0 : v.message,
         D = g.length > A ? g.slice(0, A) : g,
         W = D.length,
         M = Math.max(A - W, 0),
@@ -199,13 +196,13 @@ function A(e) {
         B = l.useCallback(
             async (e) => {
                 if (null == s || R) return;
-                _(!0), Z(null);
+                _(!0), I(null);
                 let { id: t, storageHash: l, description: i } = e,
                     o = (0, d.fD)({
                         userId: s.id,
                         avatarId: t,
                         storageHash: l,
-                        size: j.dGM,
+                        size: b.dGM,
                         canAnimate: !0,
                         allowWebp: !1
                     });
@@ -225,7 +222,7 @@ function A(e) {
                                             file: new File([s], u, { type: p }),
                                             originalAsset: e,
                                             onCrop: a,
-                                            uploadType: b.pC.AVATAR,
+                                            uploadType: j.pC.AVATAR,
                                             showUpsellHeader: !0
                                         },
                                         n
@@ -235,7 +232,7 @@ function A(e) {
                         { contextKey: U }
                     );
                 } catch (e) {
-                    Z(x.NW.string(x.t.fZRH9P));
+                    I(x.NW.string(x.t.fZRH9P));
                 } finally {
                     _(!1);
                 }
@@ -313,12 +310,12 @@ function A(e) {
         : (0, r.jsxs)('div', {
               className: h.recentAvatarContainer,
               children: [
-                  null != I &&
+                  null != L &&
                       !O &&
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: I
+                          children: L
                       }),
                   (0, r.jsxs)('div', {
                       className: i()(h.recentAvatarSlots, { [h.withPremiumUpsell]: !t }),
@@ -331,7 +328,7 @@ function A(e) {
                                       (0, r.jsx)(
                                           'li',
                                           {
-                                              children: (0, r.jsx)(v, {
+                                              children: (0, r.jsx)(N, {
                                                   avatar: e,
                                                   index: t,
                                                   onSelectRecentAvatar: B,
@@ -385,7 +382,7 @@ function E(e) {
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: [x.NW.format(x.t['+CyJu7'], { recentAvatarsLimit: a }), ' ', !l && x.NW.format(x.t.Xs2Otb, { onClick: N })]
+                        children: [x.NW.format(x.t['+CyJu7'], { recentAvatarsLimit: a }), ' ', !l && x.NW.format(x.t.Xs2Otb, { onClick: v })]
                     })
                 ]
             }),

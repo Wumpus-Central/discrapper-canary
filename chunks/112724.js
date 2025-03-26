@@ -1,7 +1,7 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => f }), n(47120);
 var r = n(200651),
     i = n(192379),
-    o = n(259105);
+    o = n(393903);
 function a(e, t, n) {
     return (
         t in e
@@ -54,28 +54,49 @@ function c(e, t) {
         e
     );
 }
-function u(e) {
+let u = {
+        width: '100%',
+        height: '100%',
+        display: 'flex'
+    },
+    d = {
+        width: '100%',
+        height: '100%',
+        flex: 1
+    };
+function f(e) {
     return i.forwardRef(function (t, n) {
-        let a = i.useRef();
+        let [a, l] = i.useState({
+                width: 0,
+                height: 0
+            }),
+            f = i.useCallback((e) => {
+                if (null != e) {
+                    let { width: t, height: n } = e.getBoundingClientRect();
+                    l({
+                        width: t,
+                        height: n
+                    });
+                }
+            }, []),
+            _ = (0, o.y)(f);
         return (
             i.useImperativeHandle(n, () => ({
                 triggerResize: () => {
-                    var e;
-                    null === (e = a.current) || void 0 === e || e.onResize();
+                    f(_.current);
                 }
             })),
-            (0, r.jsx)(o.default, {
-                ref: a,
-                children: (n) => {
-                    let { width: i, height: o } = n;
-                    return (0, r.jsx)(
-                        e,
-                        c(s({}, t), {
-                            width: i,
-                            height: o
-                        })
-                    );
-                }
+            (0, r.jsx)('div', {
+                ref: _,
+                style: u,
+                children: (0, r.jsx)(
+                    e,
+                    c(s({}, t), {
+                        width: a.width,
+                        height: a.height,
+                        style: d
+                    })
+                )
             })
         );
     });
