@@ -1,17 +1,16 @@
 n.d(t, {
     B: () => _,
-    y: () => p
+    y: () => f
 });
 var r = n(200651);
 n(192379);
-var i = n(278074),
-    o = n(442837),
-    a = n(481060),
-    s = n(26033),
-    l = n(594174),
-    c = n(324745),
-    u = n(388032);
-function d(e, t, n) {
+var i = n(442837),
+    o = n(481060),
+    a = n(26033),
+    s = n(594174),
+    l = n(324745),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,35 +34,30 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e) {
-    return (0, i.EQ)(e)
-        .when(s.dX, () => u.NW.string(u.t['4f8iur']))
-        .when(s.y0, () => u.NW.string(u.t.yX2hNz))
-        .when(s.kq, () => u.NW.string(u.t.oSs8en))
-        .when(s.m9, () => u.NW.string(u.t.bK9GT0))
-        .exhaustive();
+function f(e) {
+    return (0, a.dX)(e) ? c.NW.string(c.t['4f8iur']) : (0, a.y0)(e) ? c.NW.string(c.t.yX2hNz) : (0, a.kq)(e) ? c.NW.string(c.t.oSs8en) : c.NW.string(c.t.bK9GT0);
 }
 function _(e) {
-    let { user: t, entry: i, display: u, onAction: d, onClose: _ } = e,
-        h = (0, c.Z)({ onClose: _ }),
-        m = (0, o.e7)([l.default], () => l.default.getCurrentUser());
-    if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, s.Rh)(i)) return null;
+    let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,
+        h = (0, l.Z)({ onClose: p }),
+        m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, a.Rh)(c)) return null;
     let g = () => {
-        (0, a.ZDy)(async () => {
-            let { default: e } = await n.e('26545').then(n.bind(n, 81596));
+        (0, o.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e('62880'), n.e('86009')]).then(n.bind(n, 81596));
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    f(
+                    d(
                         {
-                            entry: i,
+                            entry: c,
                             user: t,
-                            onAction: d,
+                            onAction: _,
                             onOpenGameSettings: h
                         },
                         n
@@ -71,11 +65,11 @@ function _(e) {
                 );
         });
     };
-    return (0, r.jsx)(a.sNh, {
+    return (0, r.jsx)(o.sNh, {
         id: 'delete-entry-history',
-        label: p(i),
+        label: f(c),
         action: () => {
-            null == d || d({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
+            null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
         },
         color: 'danger'
     });

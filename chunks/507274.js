@@ -1,7 +1,8 @@
 n.d(t, {
     M: () => h,
     V: () => m
-});
+}),
+    n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(597442),
@@ -60,18 +61,18 @@ function f(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,40 +81,50 @@ function _(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = i.createContext(void 0),
+let h = i.createContext({ inDialog: void 0 }),
     m = i.forwardRef(function (e, t) {
-        let { children: n, impressionType: c, impression: d, disableTrack: _, returnRef: m } = e,
-            g = p(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
-            E = i.useRef(null);
-        return (
-            (0, o.T)(E, { returnRef: m }),
+        let { children: n, impressionType: c, impression: d, disableTrack: p, returnRef: m } = e,
+            g = _(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
+            E = i.useRef(null),
+            b = i.useRef(null),
+            [v, y] = i.useState(!1),
+            O = v ? b : E;
+        (0, o.T)(O, { returnRef: m }),
             i.useContext(l.Z)(
                 {
                     type: c,
                     name: null == d ? void 0 : d.impressionName,
                     properties: null == d ? void 0 : d.impressionProperties
                 },
-                { disableTrack: _ }
+                { disableTrack: p }
             ),
-            i.useImperativeHandle(t, () => E.current),
-            (0, r.jsx)(h.Provider, {
-                value: !0,
-                children: (0, r.jsx)(
-                    'div',
-                    f(u({}, g), {
-                        ref: E,
-                        role: 'dialog',
-                        tabIndex: -1,
-                        'aria-modal': !0,
-                        children: (0, r.jsx)(s.y5t, {
-                            forceLevel: 1,
-                            children: (0, r.jsx)(a.J, {
-                                containerRef: E,
-                                children: n
-                            })
+            i.useImperativeHandle(t, () => E.current);
+        let I = i.useCallback(
+            (e) => {
+                v !== e && y(e);
+            },
+            [v]
+        );
+        return (0, r.jsx)(h.Provider, {
+            value: {
+                inDialog: !0,
+                setFocusLockDisabled: I
+            },
+            children: (0, r.jsx)(
+                'div',
+                f(u({}, g), {
+                    ref: E,
+                    role: 'dialog',
+                    tabIndex: -1,
+                    'aria-modal': !0,
+                    children: (0, r.jsx)(s.y5t, {
+                        forceLevel: 1,
+                        children: (0, r.jsx)(a.J, {
+                            containerRef: E,
+                            children: n
                         })
                     })
-                )
-            })
-        );
+                })
+            )
+        });
     });

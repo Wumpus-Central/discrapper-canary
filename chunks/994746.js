@@ -1,52 +1,72 @@
-n.d(t, { Z: () => s }), n(627341);
-var r = n(278074),
-    i = n(90712),
-    o = n(981631),
-    a = n(388032);
-function s(e) {
-    let t = (0, i.Z)(e);
-    return {
-        text: (0, r.EQ)([e, null == t ? void 0 : t.type])
-            .with([{ type: o.IIU.PLAYING }, o.ABu.XBOX], () => a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t['Nfvo7+']) }))
-            .with([{ type: o.IIU.PLAYING }, o.ABu.PLAYSTATION], () => a.NW.formatToPlainString(a.t.Sq9xJy, { game: a.NW.string(a.t.fFl4jo) }))
-            .with([{ type: o.IIU.STREAMING }, o.ABu.TWITCH], () => a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.q4pBGx) }))
-            .with([{ type: o.IIU.STREAMING }, o.ABu.YOUTUBE], () => a.NW.formatToPlainString(a.t['4CQq9f'], { name: a.NW.string(a.t.aS6cKy) }))
-            .with([{ type: o.IIU.PLAYING }, r.P.any], () => a.NW.string(a.t.BMTj29))
-            .with([{ type: o.IIU.STREAMING }, r.P.any], () => a.NW.string(a.t['Jpkr/v']))
-            .with(
-                [
-                    {
-                        type: o.IIU.LISTENING,
-                        details: r.P.string
-                    },
-                    r.P.any
-                ],
-                () => a.NW.formatToPlainString(a.t['b+lA5+'], { name: e.name })
-            )
-            .with([{ type: o.IIU.LISTENING }, r.P.any], () => a.NW.string(a.t.dBISa2))
-            .with(
-                [
-                    {
-                        type: o.IIU.WATCHING,
-                        details: r.P.string
-                    },
-                    r.P.any
-                ],
-                () => a.NW.formatToPlainString(a.t.mqdfDQ, { name: e.name })
-            )
-            .with([{ type: o.IIU.WATCHING }, r.P.any], () => a.NW.string(a.t.GpNXjI))
-            .with(
-                [
-                    {
-                        type: o.IIU.COMPETING,
-                        details: r.P.string
-                    },
-                    r.P.any
-                ],
-                () => a.NW.formatToPlainString(a.t.oHF7Cg, { name: e.name })
-            )
-            .with([{ type: o.IIU.COMPETING }, r.P.any], () => a.NW.string(a.t.OzCsIC))
-            .otherwise(() => void 0),
-        platformIcon: null == t ? void 0 : t.icon
-    };
+n.d(t, { Z: () => a });
+var r = n(90712),
+    i = n(981631),
+    o = n(388032);
+function a(e) {
+    let t = (0, r.Z)(e),
+        n = null == t ? void 0 : t.icon;
+    return e.type === i.IIU.PLAYING && (null == t ? void 0 : t.type) === i.ABu.XBOX
+        ? {
+              text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t['Nfvo7+']) }),
+              platformIcon: n
+          }
+        : e.type === i.IIU.PLAYING && (null == t ? void 0 : t.type) === i.ABu.PLAYSTATION
+          ? {
+                text: o.NW.formatToPlainString(o.t.Sq9xJy, { game: o.NW.string(o.t.fFl4jo) }),
+                platformIcon: n
+            }
+          : e.type === i.IIU.STREAMING && (null == t ? void 0 : t.type) === i.ABu.TWITCH
+            ? {
+                  text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.q4pBGx) }),
+                  platformIcon: n
+              }
+            : e.type === i.IIU.STREAMING && (null == t ? void 0 : t.type) === i.ABu.YOUTUBE
+              ? {
+                    text: o.NW.formatToPlainString(o.t['4CQq9f'], { name: o.NW.string(o.t.aS6cKy) }),
+                    platformIcon: n
+                }
+              : e.type === i.IIU.PLAYING
+                ? {
+                      text: o.NW.string(o.t.BMTj29),
+                      platformIcon: n
+                  }
+                : e.type === i.IIU.STREAMING
+                  ? {
+                        text: o.NW.string(o.t['Jpkr/v']),
+                        platformIcon: n
+                    }
+                  : e.type === i.IIU.LISTENING && null != e.details
+                    ? {
+                          text: o.NW.formatToPlainString(o.t['b+lA5+'], { name: e.name }),
+                          platformIcon: n
+                      }
+                    : e.type === i.IIU.LISTENING
+                      ? {
+                            text: o.NW.string(o.t.dBISa2),
+                            platformIcon: n
+                        }
+                      : e.type === i.IIU.WATCHING && null != e.details
+                        ? {
+                              text: o.NW.formatToPlainString(o.t.mqdfDQ, { name: e.name }),
+                              platformIcon: n
+                          }
+                        : e.type === i.IIU.WATCHING
+                          ? {
+                                text: o.NW.string(o.t.GpNXjI),
+                                platformIcon: n
+                            }
+                          : e.type === i.IIU.COMPETING && null != e.details
+                            ? {
+                                  text: o.NW.formatToPlainString(o.t.oHF7Cg, { name: e.name }),
+                                  platformIcon: n
+                              }
+                            : e.type === i.IIU.COMPETING
+                              ? {
+                                    text: o.NW.string(o.t.OzCsIC),
+                                    platformIcon: n
+                                }
+                              : {
+                                    text: void 0,
+                                    platformIcon: n
+                                };
 }

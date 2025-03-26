@@ -175,13 +175,15 @@ class P extends i.Component {
                         messageId: o.id
                     });
                 return (0, r.jsx)(c.M.Consumer, {
-                    children: (e) =>
-                        e
+                    children: (e) => {
+                        let { inDialog: t } = e;
+                        return t
                             ? (0, r.jsx)(u.VqE, {
                                   'aria-label': j.NW.string(j.t['7Xqzdn']),
                                   children: l
                               })
-                            : l
+                            : l;
+                    }
                 });
             });
     }

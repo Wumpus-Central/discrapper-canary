@@ -1,10 +1,12 @@
-n.d(t, { Z: () => O });
-var r = n(785141),
-    i = n(251625),
-    o = n(823379),
-    a = n(981631),
-    s = n(388032);
-function l(e, t, n) {
+n.d(t, { Z: () => T });
+var r = n(798681),
+    i = n(785141),
+    o = n(70956),
+    a = n(251625),
+    s = n(823379),
+    l = n(981631),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,24 +30,25 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-let u = 30,
-    d = 15,
-    f = 8,
-    _ = 3,
-    p = 10,
-    h = 5,
-    m = 30,
-    g = 5;
-function E() {
+let f = 30,
+    _ = 15,
+    p = 8,
+    h = 3,
+    m = 10,
+    g = 5,
+    E = 30,
+    b = 5,
+    v = 10 * o.Z.Millis.SECOND;
+function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
-    return e <= 5 ? _ : e <= 15 ? f : e <= 30 ? d : u;
+    return e <= 5 ? h : e <= 15 ? p : e <= 30 ? _ : f;
 }
-function b(e, t) {
+function O(e, t) {
     let n = {
             packetsSentOrReceived: 0,
             packetsLost: 0,
@@ -54,47 +57,48 @@ function b(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        r = e.slice(-1 * t).filter(o.lm);
-    if (0 === r.length) return c({ type: 'streamer' }, n);
+        r = e.slice(-1 * t).filter(s.lm);
+    if (0 === r.length) return d({ type: 'streamer' }, n);
     r.forEach((e, t, r) => {
         (n.packetsSentOrReceived += t > 0 ? r[t].packetsSentOrReceived - r[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? r[t].packetsLost - r[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
     let i = r[0].type,
-        a = r.length;
+        o = r.length;
     return {
         type: i,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
-        frameRate: n.frameRate / a,
-        resolution: n.resolution / a,
-        numDatapoints: a
+        frameRate: n.frameRate / o,
+        resolution: n.resolution / o,
+        numDatapoints: o
     };
 }
-let v = (0, i.oH)((e, t, n) => ({
+let I = (0, a.oH)((e, t, n) => ({
     message: e,
     errorType: t,
     avError: n
 }));
-function y(e, t) {
+function S(e, t, n) {
     if ('streamer' === e.type) {
-        if (100 * e.packetLossRate > p) return v(s.NW.string(s.t['1f1LHh']), 'Packet Loss', r.u.STREAM_SEND_HIGH_PACKET_LOSS);
-        if (e.frameRate <= E(t)) return v(s.NW.string(s.t['1f1LHh']), 'Frame Rate Encode', r.u.STREAM_SEND_LOW_FPS);
-    } else {
-        if (100 * e.packetLossRate > p) return v(s.NW.string(s.t.BcOif3), 'Packet Loss', r.u.STREAM_VIEW_HIGH_PACKET_LOSS);
-        if (e.frameRate <= E(t)) return v(s.NW.string(s.t.BcOif3), 'Frame Rate Decode', r.u.STREAM_VIEW_LOW_FPS);
+        if (100 * e.packetLossRate > m) return I(c.NW.string(c.t['1f1LHh']), 'Packet Loss', i.u.STREAM_SEND_HIGH_PACKET_LOSS);
+        if (e.frameRate <= y(t)) return I(c.NW.string(c.t['1f1LHh']), 'Frame Rate Encode', i.u.STREAM_SEND_LOW_FPS);
+    } else if (n) {
+        if (100 * e.packetLossRate > m) return I(c.NW.string(c.t.BcOif3), 'Packet Loss', i.u.STREAM_VIEW_HIGH_PACKET_LOSS);
+        if (e.frameRate <= y(t)) return I(c.NW.string(c.t.BcOif3), 'Frame Rate Decode', i.u.STREAM_VIEW_LOW_FPS);
     }
     return null;
 }
-function O(e, t, n, i) {
-    if (n) return v(s.NW.string(s.t['9lcycn']), 'Soundshare Failed', r.u.STREAM_SOUNDSHARE_FAILED);
+function T(e, t, n, o) {
+    if (n) return I(c.NW.string(c.t['9lcycn']), 'Soundshare Failed', i.u.STREAM_SOUNDSHARE_FAILED);
     if (null != t) {
-        let e = b(t, h),
-            n = b(t, m);
-        if (n.numDatapoints >= g) {
-            var o;
-            return null !== (o = y(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== o ? o : y(n, null == i ? void 0 : i.maxFrameRate);
+        let e = O(t, g),
+            n = O(t, E),
+            i = r.w.isIncomingVideoEnabled() && Date.now() - r.w.lastIncomingVideoEnabledChangeTime() > v;
+        if (n.numDatapoints >= b) {
+            var a;
+            return null !== (a = S(e, null == o ? void 0 : o.maxFrameRate, i)) && void 0 !== a ? a : S(n, null == o ? void 0 : o.maxFrameRate, i);
         }
     }
-    return e === a.IE4.BAD ? v(s.NW.string(s.t.Ic588P), 'Bad Connection', r.u.STREAM_BAD_NETWORK_QUALITY) : null;
+    return e === l.IE4.BAD ? I(c.NW.string(c.t.Ic588P), 'Bad Connection', i.u.STREAM_BAD_NETWORK_QUALITY) : null;
 }
