@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(266796), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+n.d(t, { Z: () => E }), n(266796), n(47120);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -189,13 +189,13 @@ function A(e) {
         w = l.useRef(g.length),
         T = l.useRef(null),
         [R, _] = l.useState(!1),
-        [k, L] = l.useState(!1),
-        [F, Z] = l.useState(null),
-        I = null != F ? F : null == N ? void 0 : N.message,
+        [k, F] = l.useState(!1),
+        [L, Z] = l.useState(null),
+        I = null != L ? L : null == N ? void 0 : N.message,
         D = g.length > A ? g.slice(0, A) : g,
         W = D.length,
-        U = Math.max(A - W, 0),
-        M = (0, c.vRw)(),
+        M = Math.max(A - W, 0),
+        U = (0, c.vRw)(),
         B = l.useCallback(
             async (e) => {
                 if (null == s || R) return;
@@ -212,8 +212,7 @@ function A(e) {
                 try {
                     let t = await fetch(o),
                         s = await t.blob(),
-                        u = URL.createObjectURL(s),
-                        { filename: p, type: f } = (0, d.mh)(l, i);
+                        { filename: u, type: p } = (0, d.mh)(l, i);
                     (0, c.ZDy)(
                         async () => {
                             let { default: t } = await Promise.all([n.e('59732'), n.e('71741')]).then(n.bind(n, 712451));
@@ -222,8 +221,8 @@ function A(e) {
                                     t,
                                     y(
                                         {
-                                            imageUri: u,
-                                            file: new File([s], p, { type: f }),
+                                            imageUri: o,
+                                            file: new File([s], u, { type: p }),
                                             originalAsset: e,
                                             onCrop: a,
                                             uploadType: b.pC.AVATAR,
@@ -233,7 +232,7 @@ function A(e) {
                                     )
                                 );
                         },
-                        { contextKey: M }
+                        { contextKey: U }
                     );
                 } catch (e) {
                     Z(x.NW.string(x.t.fZRH9P));
@@ -241,7 +240,7 @@ function A(e) {
                     _(!1);
                 }
             },
-            [M, R, a, s]
+            [U, R, a, s]
         ),
         z = l.useCallback(
             (e, t, l, a, i) => {
@@ -249,7 +248,7 @@ function A(e) {
                 (T.current = o >= 0 ? P.current[o] : S.current),
                     e.shiftKey
                         ? (0, p.B)(l)
-                        : (L(!0),
+                        : (F(!0),
                           (0, c.ZDy)(async () => {
                               let { default: e } = await n.e('70871').then(n.bind(n, 225525));
                               return (t) => {
@@ -284,7 +283,7 @@ function A(e) {
                                               onClose: async () => {
                                                   await n(),
                                                       requestAnimationFrame(() => {
-                                                          L(!1);
+                                                          F(!1);
                                                       });
                                               }
                                           },
@@ -346,7 +345,7 @@ function A(e) {
                                       )
                                   )
                               }),
-                          U > 0 &&
+                          M > 0 &&
                               (0, r.jsxs)('div', {
                                   className: h.emptyAvatarSlots,
                                   tabIndex: -1,
@@ -358,10 +357,10 @@ function A(e) {
                                                   (0, r.jsxs)(r.Fragment, {
                                                       children: [x.NW.string(x.t.x0DsRU), ' ']
                                                   }),
-                                              x.NW.format(x.t['8W2HOz'], { numberOfEmptyAvatarSlots: U })
+                                              x.NW.format(x.t['8W2HOz'], { numberOfEmptyAvatarSlots: M })
                                           ]
                                       }),
-                                      [...Array(U)].map((e, t) => (0, r.jsx)(m.Z, { className: h.avatarPlaceholder }, t))
+                                      [...Array(M)].map((e, t) => (0, r.jsx)(m.Z, { className: h.avatarPlaceholder }, t))
                                   ]
                               }),
                           !t && (0, r.jsx)(C, { numberOfLockedAvatarSlots: E })
