@@ -53,38 +53,30 @@ function E(e) {
                     })
               : x.NW.format(x.t.dBxFsL, { learnMoreLink: d.Z.getArticleURL(b.BhN.DM_WALLPAPERS) })),
           P
-              ? W ||
-                (B && L && W
-                    ? (N = x.NW.string(x.t.q124kJ))
-                    : U ||
-                      (N = x.NW.format(x.t.JwUhHh, {
-                          onClickNitro: () => {
-                              (0, c.uL)(b.Z5c.NITRO_HOME);
-                          }
-                      })))
+              ? B && L
+                  ? (N = x.NW.formatToPlainString(x.t.PzTpVV, { wallpaperName: null == k ? void 0 : k.label }))
+                  : W ||
+                    U ||
+                    !L ||
+                    (N = x.NW.format(x.t.JwUhHh, {
+                        onClickNitro: () => {
+                            (0, c.uL)(b.Z5c.NITRO_HOME);
+                        }
+                    }))
               : (N = x.NW.string(x.t['6JSOu7'])),
           P &&
               A &&
               L &&
               Z &&
-              (B
-                  ? F &&
-                    (j = (0, r.jsx)(a.zxk, {
-                        className: y.action,
-                        onClick: () => {
-                            h.X(I, T, { shouldClear: !1 });
-                        },
-                        submitting: R,
-                        children: x.NW.string(x.t.o6850d)
-                    }))
-                  : (j = (0, r.jsx)(a.zxk, {
-                        className: y.action,
-                        onClick: () => {
-                            h.X(I, T, { shouldClear: !0 });
-                        },
-                        submitting: R,
-                        children: x.NW.string(x.t.VkKicX)
-                    }))),
+              F &&
+              (j = (0, r.jsx)(a.zxk, {
+                  className: y.action,
+                  onClick: () => {
+                      h.X(I, T, { shouldClear: !B });
+                  },
+                  submitting: R,
+                  children: x.NW.string(B ? x.t.o6850d : x.t['/ubFp6'])
+              })),
           (0, r.jsx)(_.Z, {
               channel: I,
               content: O,
