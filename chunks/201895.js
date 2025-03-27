@@ -1,8 +1,9 @@
 n.d(t, { ZP: () => u }), n(653041);
 var r = n(131704),
     i = n(699516),
-    o = n(594174),
-    a = n(933557),
+    o = n(594174);
+n(51144);
+var a = n(933557),
     s = n(981631),
     l = n(388032);
 function c(e) {
@@ -11,7 +12,7 @@ function c(e) {
 }
 function u(e) {
     let t,
-        { channel: n, unread: u = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: p, isSubscriptionGated: _, needSubscriptionToAccess: h } = e,
+        { channel: n, unread: u = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: _, isSubscriptionGated: p, needSubscriptionToAccess: h } = e,
         m = (0, a.F6)(n, o.default, i.Z);
     switch (n.type) {
         case s.d4z.DM:
@@ -42,9 +43,9 @@ function u(e) {
                       )
                     : g.push(l.NW.formatToPlainString(l.t.GNIiAA, { userCount: f }));
             }
-            null != p && p > 0 && g.push(l.NW.formatToPlainString(l.t.O6PLYW, { activitiesCount: p }));
+            null != _ && _ > 0 && g.push(l.NW.formatToPlainString(l.t.O6PLYW, { activitiesCount: _ }));
             let E = c({
-                isSubscriptionGated: _,
+                isSubscriptionGated: p,
                 needSubscriptionToAccess: h
             });
             return null != E && g.push(E), g.join(', ');
@@ -54,15 +55,15 @@ function u(e) {
         default:
             t = r.Ec.has(n.type) ? (d > 0 ? l.t['ZL7+Iy'] : u ? l.t.YlVvmZ : l.t['0nZpiI']) : d > 0 ? l.t.g8ONMz : u ? l.t.smf1CQ : l.t.s0JADg;
     }
-    let v = [
+    let b = [
             l.NW.formatToPlainString(t, {
                 channelName: m,
                 mentionCount: d
             })
         ],
-        b = c({
-            isSubscriptionGated: _,
+        v = c({
+            isSubscriptionGated: p,
             needSubscriptionToAccess: h
         });
-    return null != b && v.push(b), v.join(', ');
+    return null != v && b.push(v), b.join(', ');
 }

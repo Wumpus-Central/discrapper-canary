@@ -1,7 +1,7 @@
 n.d(t, {
     Mv: () => h,
     PB: () => f,
-    eq: () => b
+    eq: () => x
 }),
     n(47120);
 var r = n(200651),
@@ -12,7 +12,7 @@ var r = n(200651),
     o = n(481060),
     c = n(209613),
     d = n(475413),
-    u = n(307525);
+    u = n(652480);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,24 +76,24 @@ function p(e, t) {
     return i;
 }
 function h(e) {
-    var { id: t, label: n, icon: c, hint: h, renderSubmenu: f } = e,
-        b = p(e, ['id', 'label', 'icon', 'hint', 'renderSubmenu']);
-    let N = (0, a.JA)(t),
-        { onFocus: x } = N,
-        _ = p(N, ['onFocus']),
-        { id: E } = (0, a.f$)(),
-        [j, C] = i.useState(!1),
-        O = null != f;
+    var { id: t, label: n, sublabel: c, icon: h, hint: f, renderSubmenu: x } = e,
+        N = p(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
+    let b = (0, a.JA)(t),
+        { onFocus: _ } = b,
+        E = p(b, ['onFocus']),
+        { id: j } = (0, a.f$)(),
+        [C, O] = i.useState(!1),
+        S = null != x;
     i.useLayoutEffect(() => {
-        if (O)
-            return (0, s.N)(E, (e) => {
-                C(e === t);
+        if (S)
+            return (0, s.N)(j, (e) => {
+                O(e === t);
             });
-    }, [t, E, O]);
+    }, [t, j, S]);
     let v = (e) =>
         (0, r.jsxs)(
             d.kF,
-            g(m({}, e, _, b), {
+            g(m({}, e, E, N), {
                 role: 'button',
                 look: o.zxk.Looks.BLANK,
                 innerClassName: u.menuItemInner,
@@ -102,18 +102,26 @@ function h(e) {
                 fullWidth: !0,
                 onMouseEnter: () => {
                     var t;
-                    null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e), x();
+                    null == e || null === (t = e.onMouseEnter) || void 0 === t || t.call(e), _();
                 },
                 children: [
-                    (0, r.jsx)(c, {
-                        size: 'xs',
-                        color: 'currentColor'
+                    (0, r.jsx)('div', {
+                        className: u.menuItemIcon,
+                        children: (0, r.jsx)(h, {
+                            size: 'xs',
+                            color: 'currentColor'
+                        })
                     }),
                     (0, r.jsxs)('div', {
                         className: u.menuItemLabel,
-                        children: [n, h]
+                        children: [
+                            (0, r.jsxs)('div', {
+                                children: [n, c]
+                            }),
+                            f
+                        ]
                     }),
-                    O &&
+                    S &&
                         (0, r.jsx)(l.Fbu, {
                             size: 'xs',
                             color: 'currentColor'
@@ -121,12 +129,12 @@ function h(e) {
                 ]
             })
         );
-    return O
+    return S
         ? (0, r.jsx)(o.yRy, {
               spacing: 0,
-              renderPopout: f,
-              shouldShow: j,
-              onRequestClose: () => C(!1),
+              renderPopout: x,
+              shouldShow: C,
+              onRequestClose: () => O(!0),
               children: v
           })
         : v();
@@ -152,7 +160,7 @@ function f(e) {
         })
     });
 }
-function b(e) {
+function x(e) {
     return (0, r.jsx)('div', {
         className: u.submenuPaddingContainer,
         children: (0, r.jsx)(

@@ -1,100 +1,94 @@
-n.d(t, { Z: () => v }), n(627341);
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(278074),
-    s = n(442837),
-    c = n(481060),
-    u = n(749210),
-    d = n(168107),
-    p = n(480916),
-    h = n(622822),
-    f = n(986035),
-    m = n(594174),
-    g = n(63063),
-    b = n(981631),
-    _ = n(388032),
-    C = n(288280);
+    a = n(442837),
+    s = n(481060),
+    c = n(749210),
+    u = n(168107),
+    d = n(480916),
+    p = n(622822),
+    h = n(986035),
+    f = n(594174),
+    m = n(63063),
+    g = n(981631),
+    b = n(388032),
+    _ = n(288280);
+function C(e) {
+    let { guild: t, channelId: n } = e,
+        l = (0, a.e7)([f.default], () => {
+            var e;
+            return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
+        }),
+        o = (0, p.Kt)(),
+        { verifyAgreementButtonText: C, verifyGateDescription: v } = (0, p.a1)(),
+        y = i.useCallback(() => {
+            null != t && c.Z.nsfwReturnToSafety(t.id);
+        }, [t]),
+        x = i.useCallback(() => {
+            null != t && c.Z.nsfwAgree(t.id);
+        }, [t]),
+        j = i.useCallback(() => {
+            u.Z.showAgeVerificationGetStartedModal(d.cU.NSFW_GUILD);
+        }, []);
+    return o
+        ? (0, r.jsx)(h.Z, {
+              guildId: null == t ? void 0 : t.id,
+              channelId: n,
+              modalType: d.it.NSFW_CHANNEL_AGE_VERIFY,
+              onAgree: j,
+              onDisagree: y,
+              title: b.NW.string(b.t.ZmwvDQ),
+              description: v,
+              agreement: C,
+              agreementButtonColor: s.zxk.Colors.BRAND,
+              disagreement: b.NW.string(b.t['/g10LC']),
+              imageClassName: _.ageGatedImage
+          })
+        : l
+          ? (0, r.jsx)(h.Z, {
+                guildId: null == t ? void 0 : t.id,
+                channelId: n,
+                modalType: d.it.NSFW_CHANNEL_UNDERAGE,
+                onAgree: x,
+                onDisagree: y,
+                title: b.NW.string(b.t.NEabBQ),
+                description: b.NW.format(b.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
+                agreement: null,
+                disagreement: b.NW.string(b.t['/g10LC']),
+                imageClassName: _.ageGatedImage
+            })
+          : (0, r.jsx)(h.Z, {
+                guildId: null == t ? void 0 : t.id,
+                channelId: n,
+                modalType: d.it.NSFW_CHANNEL_VERIFIED,
+                onAgree: x,
+                onDisagree: y,
+                title: b.NW.string(b.t.ZmwvDQ),
+                description: b.NW.string(b.t.E4Cd5O),
+                agreement: b.NW.string(b.t.wVq7ur),
+                disagreement: b.NW.string(b.t['/g10LC'])
+            });
+}
 let v = function (e) {
     let { guild: t, channelId: n, className: l } = e,
-        v = (0, s.e7)([m.default], () => {
-            var e;
-            return (null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1;
-        }),
-        y = i.useRef(null),
-        x = (0, h.Kt)(),
-        { verifyAgreementButtonText: j, verifyGateDescription: O } = (0, h.a1)(),
-        E = i.useCallback(() => {
-            null != t && u.Z.nsfwReturnToSafety(t.id);
-        }, [t]),
-        N = i.useCallback(() => {
-            null != t && u.Z.nsfwAgree(t.id);
-        }, [t]),
-        I = i.useCallback(() => {
-            d.Z.showAgeVerificationGetStartedModal(p.cU.NSFW_GUILD);
-        }, []);
-    i.useEffect(() => {
-        let { current: e } = y;
-        null == e || e.scrollToBottom();
-    }, []);
-    let P = (0, a.EQ)({
-        nsfwDisallowed: v,
-        shouldPawtect: x
-    })
-        .with({ shouldPawtect: !0 }, () =>
-            (0, r.jsx)(f.Z, {
-                guildId: null == t ? void 0 : t.id,
-                channelId: n,
-                modalType: p.it.NSFW_CHANNEL_AGE_VERIFY,
-                onAgree: I,
-                onDisagree: E,
-                title: _.NW.string(_.t.ZmwvDQ),
-                description: O,
-                agreement: j,
-                agreementButtonColor: c.zxk.Colors.BRAND,
-                disagreement: _.NW.string(_.t['/g10LC']),
-                imageClassName: C.ageGatedImage
-            })
-        )
-        .with(
-            {
-                nsfwDisallowed: !0,
-                shouldPawtect: !1
-            },
-            () =>
-                (0, r.jsx)(f.Z, {
-                    guildId: null == t ? void 0 : t.id,
-                    channelId: n,
-                    modalType: p.it.NSFW_CHANNEL_UNDERAGE,
-                    onAgree: N,
-                    onDisagree: E,
-                    title: _.NW.string(_.t.NEabBQ),
-                    description: _.NW.format(_.t['2kHZen'], { helpURL: g.Z.getArticleURL(b.BhN.NSFW_AGE_GATING) }),
-                    agreement: null,
-                    disagreement: _.NW.string(_.t['/g10LC']),
-                    imageClassName: C.ageGatedImage
+        a = i.useRef(null);
+    return (
+        i.useEffect(() => {
+            let { current: e } = a;
+            null == e || e.scrollToBottom();
+        }, []),
+        (0, r.jsx)(s.Den, {
+            ref: a,
+            className: _.scroller,
+            children: (0, r.jsx)('div', {
+                className: o()(l, _.wrapper),
+                children: (0, r.jsx)(C, {
+                    guild: t,
+                    channelId: n
                 })
-        )
-        .otherwise(() =>
-            (0, r.jsx)(f.Z, {
-                guildId: null == t ? void 0 : t.id,
-                channelId: n,
-                modalType: p.it.NSFW_CHANNEL_VERIFIED,
-                onAgree: N,
-                onDisagree: E,
-                title: _.NW.string(_.t.ZmwvDQ),
-                description: _.NW.string(_.t.E4Cd5O),
-                agreement: _.NW.string(_.t.wVq7ur),
-                disagreement: _.NW.string(_.t['/g10LC'])
             })
-        );
-    return (0, r.jsx)(c.Den, {
-        ref: y,
-        className: C.scroller,
-        children: (0, r.jsx)('div', {
-            className: o()(l, C.wrapper),
-            children: P
         })
-    });
+    );
 };

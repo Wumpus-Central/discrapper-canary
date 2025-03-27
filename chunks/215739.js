@@ -21,8 +21,8 @@ function u(e, t, n) {
 }
 let d = new r.V7(),
     f = new r.V7(),
-    p = new r.V7();
-class _ extends i.Z {
+    _ = new r.V7();
+class p extends i.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
@@ -31,19 +31,19 @@ class _ extends i.Z {
             }),
             u(this, 'handleUpdateProto', () => {
                 let e = s.Ok.getSetting();
-                if (null == e) p.stop();
+                if (null == e) _.stop();
                 else if (null != e.expiresAtMs && '0' !== e.expiresAtMs) {
                     let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
                     t > 0
-                        ? p.start(
+                        ? _.start(
                               t,
                               () => {
                                   s.Ok.updateSetting(void 0);
                               },
                               !0
                           )
-                        : (s.Ok.updateSetting(void 0), p.stop());
-                } else null != p && p.stop();
+                        : (s.Ok.updateSetting(void 0), _.stop());
+                } else null != _ && _.stop();
                 let t = s.Cr.getSetting();
                 if (null != t && '0' !== t && l.Z.getStatus() !== c.Skl.ONLINE) {
                     let e = new Date(Number(t)).getTime() - new Date().getTime();
@@ -51,11 +51,20 @@ class _ extends i.Z {
                         ? d.start(
                               e,
                               () => {
-                                  (0, o.Z)(c.Skl.ONLINE, l.Z.getStatus(), { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } }, void 0);
+                                  (0, o.Z)({
+                                      nextStatus: c.Skl.ONLINE,
+                                      prevStatus: l.Z.getStatus(),
+                                      analyticsContext: { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } }
+                                  });
                               },
                               !0
                           )
-                        : ((0, o.Z)(c.Skl.ONLINE, l.Z.getStatus(), { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } }, void 0), d.stop());
+                        : ((0, o.Z)({
+                              nextStatus: c.Skl.ONLINE,
+                              prevStatus: l.Z.getStatus(),
+                              analyticsContext: { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } }
+                          }),
+                          d.stop());
                 } else null != d && d.stop();
                 let n = s.fv.getSetting();
                 if (null != n && '0' !== n) {
@@ -73,4 +82,4 @@ class _ extends i.Z {
             });
     }
 }
-let h = new _();
+let h = new p();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(381499),
     i = n(601992),
     o = n(675478),
@@ -57,21 +57,22 @@ function f(e, t) {
         e
     );
 }
-async function p(e, t, n, c) {
-    null == t && (t = a.Z.getStatus()),
+async function _(e) {
+    let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: d } = e;
+    null == n && (n = a.Z.getStatus()),
         await o.hW.updateAsync(
             'status',
-            (t) => {
-                (t.status = r.Gm.create({ value: e })), (t.statusExpiresAtMs = null != c ? ''.concat(Date.now() + c) : '0');
+            (e) => {
+                (e.status = r.Gm.create({ value: t })), (e.statusExpiresAtMs = null != d ? ''.concat(Date.now() + d) : '0');
             },
             o.fy.INFREQUENT_USER_ACTION
         );
-    let d = u(
+    let _ = u(
         {
-            next_status: e,
-            prev_status: t
+            next_status: t,
+            prev_status: n
         },
         i.Z.getGlobalStats()
     );
-    null != n && (d = f(u({}, d, n), { expire_duration_minutes: null != c ? c / 1000 : null })), s.default.track(l.rMx.USER_STATUS_UPDATED, d);
+    null != d && (_ = f(u({}, _), { expire_duration_minutes: null != d ? d / 60000 : null })), null != c && (_ = u({}, _, c)), s.default.track(l.rMx.USER_STATUS_UPDATED, _);
 }
