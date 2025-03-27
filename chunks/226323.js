@@ -92,23 +92,24 @@ let S = { offset: 2 },
         }
     };
 function P(e) {
-    var t, i;
-    let { parentAnalyticsLocation: l } = (0, p.ZP)(),
-        { channel: _, user: P, nick: j, mute: A, deaf: Z, serverMute: x, serverDeaf: w } = e,
-        L = (0, a.e7)([E.Z], () => E.Z.isLocalMute(P.id)),
-        R = (0, u.Z)({
-            userId: P.id,
+    var t, l;
+    let _ = i.useRef(null),
+        { parentAnalyticsLocation: P } = (0, p.ZP)(),
+        { channel: j, user: A, nick: Z, mute: x, deaf: w, serverMute: L, serverDeaf: R } = e,
+        D = (0, a.e7)([E.Z], () => E.Z.isLocalMute(A.id)),
+        k = (0, u.Z)({
+            userId: A.id,
             checkSoundSharing: !0
         }),
-        D = null !== (t = _.getGuildId()) && void 0 !== t ? t : void 0,
-        k = P.getAvatarURL(_.guild_id, 24),
-        M = null != j ? j : O.ZP.getName(P),
+        M = null !== (t = j.getGuildId()) && void 0 !== t ? t : void 0,
+        U = A.getAvatarURL(j.guild_id, 24),
+        G = null != Z ? Z : O.ZP.getName(A),
         {
-            icon: U,
-            colorize: G,
-            getStatus: W
+            icon: W,
+            colorize: V,
+            getStatus: B
         } = null !==
-            (i = (function (e) {
+            (l = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
                 if (t) return T.serverDeaf;
                 if (n) return T.deaf;
@@ -116,34 +117,34 @@ function P(e) {
                 if (l) return T.localMute;
                 if (i) return T.mute;
             })({
-                serverDeaf: w,
-                deaf: Z,
-                serverMute: x,
-                mute: A,
-                localMute: L
-            })) && void 0 !== i
-            ? i
+                serverDeaf: R,
+                deaf: w,
+                serverMute: L,
+                mute: x,
+                localMute: D
+            })) && void 0 !== l
+            ? l
             : {},
-        V =
-            null != W
+        H =
+            null != B
                 ? v.NW.formatToPlainString(v.t['1+MVBA'], {
-                      userName: M,
-                      status: W()
+                      userName: G,
+                      status: B()
                   })
-                : M;
-    function B(e) {
-        null != D
+                : G;
+    function F(e) {
+        null != M
             ? (0, c.jW)(e, async () => {
                   let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
                           e,
                           C(I({}, t), {
-                              user: P,
-                              guildId: D,
-                              channel: _,
+                              user: A,
+                              guildId: M,
+                              channel: j,
                               showMediaItems: !0,
-                              onInteraction: (0, f.u)('GuildChannelUserContextMenu', d.Z.RTC_PANEL, { targetUserId: P.id })
+                              onInteraction: (0, f.u)('GuildChannelUserContextMenu', d.Z.RTC_PANEL, { targetUserId: A.id })
                           })
                       );
               })
@@ -153,18 +154,19 @@ function P(e) {
                       (0, r.jsx)(
                           e,
                           C(I({}, t), {
-                              user: P,
+                              user: A,
                               showMediaItems: !0,
-                              onInteraction: (0, f.u)('UserGenericContextMenu', d.Z.RTC_PANEL, { targetUserId: P.id })
+                              onInteraction: (0, f.u)('UserGenericContextMenu', d.Z.RTC_PANEL, { targetUserId: A.id })
                           })
                       );
               });
     }
     return (0, r.jsx)(s.yRy, {
+        targetElementRef: _,
         preload: () =>
-            (0, m.Z)(P.id, P.getAvatarURL(D, 80), {
-                guildId: D,
-                channelId: _.id
+            (0, m.Z)(A.id, A.getAvatarURL(M, 80), {
+                guildId: M,
+                channelId: j.id
             }),
         position: 'top',
         renderPopout: (e) =>
@@ -172,9 +174,9 @@ function P(e) {
                 b.Z,
                 I(
                     {
-                        userId: P.id,
-                        guildId: D,
-                        channelId: _.id
+                        userId: A.id,
+                        guildId: M,
+                        channelId: j.id
                     },
                     e
                 )
@@ -182,27 +184,28 @@ function P(e) {
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.ua7, {
-                text: V,
+                text: H,
                 children: (t) =>
                     (0, r.jsx)(
                         s.P3F,
                         C(I({}, t, e), {
+                            innerRef: _,
                             onClick: (t) => {
-                                e.onClick(t), (0, h.v)(l, h.d.VOICE_USER);
+                                e.onClick(t), (0, h.v)(P, h.d.VOICE_USER);
                             },
                             className: y.avatarContainer,
-                            onContextMenu: B,
+                            onContextMenu: F,
                             focusProps: S,
                             children: (0, r.jsx)(g.Z, {
                                 shakeLocation: N.oZ.VOICE_USER,
-                                isShaking: R,
+                                isShaking: k,
                                 children: (0, r.jsx)('div', {
-                                    className: o()(y.avatar, { [y.speaking]: R }),
-                                    style: { backgroundImage: 'url('.concat(k, ')') },
+                                    className: o()(y.avatar, { [y.speaking]: k }),
+                                    style: { backgroundImage: 'url('.concat(U, ')') },
                                     children:
-                                        null != U
-                                            ? (0, r.jsx)(U, {
-                                                  className: o()(y.avatarIconOverlay, { [y.avatarIconRed]: G }),
+                                        null != W
+                                            ? (0, r.jsx)(W, {
+                                                  className: o()(y.avatarIconOverlay, { [y.avatarIconRed]: V }),
                                                   color: 'currentColor',
                                                   size: 'xs'
                                               })

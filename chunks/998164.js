@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(969632),
     u = n(430677),
     m = n(388032),
-    p = n(339945);
-function g(e) {
+    g = n(668813);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,12 +56,12 @@ function h(e, t) {
 let f = [];
 function b() {
     return (0, r.jsx)('div', {
-        className: p.actionItemContainer,
+        className: g.actionItemContainer,
         children: (0, r.jsxs)('div', {
-            className: p.actionItem,
+            className: g.actionItem,
             children: [
                 (0, r.jsx)('div', {
-                    className: p.actionItemEmojiWrapper,
+                    className: g.actionItemEmojiWrapper,
                     children: (0, r.jsx)(a.snC, {
                         size: 'custom',
                         color: 'currentColor',
@@ -70,7 +70,7 @@ function b() {
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: p.actionItemText,
+                    className: g.actionItemText,
                     children: (0, r.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
@@ -90,7 +90,7 @@ function x(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            h(g({}, n), {
+                            h(p({}, n), {
                                 guildId: t,
                                 onSave: s
                             })
@@ -98,7 +98,7 @@ function x(e) {
                 });
         }, [t, s]);
     return (0, r.jsxs)(a.P3F, {
-        className: p.addActionItem,
+        className: g.addActionItem,
         onClick: l,
         children: [
             (0, r.jsx)(a.oFk, {
@@ -147,13 +147,16 @@ let j = function (e) {
         ),
         j = i.useCallback(
             (e) => {
-                var t;
-                let r = null === (t = n[e]) || void 0 === t ? void 0 : t.channelId;
-                null != r && (0, c.Hr)(r);
+                var r;
+                let i = null === (r = n[e]) || void 0 === r ? void 0 : r.channelId;
+                if (null == i) return;
+                (0, c.Hr)(i);
+                let s = d.Z.getSettings();
+                (0, c.oo)(t, s, !0);
             },
-            [n]
+            [n, t]
         ),
-        N = n.map((e) => h(g({}, e), { id: e.channelId })),
+        N = n.map((e) => h(p({}, e), { id: e.channelId })),
         v = i.useCallback(
             (e) => {
                 (0, c.hS)(e);
@@ -162,9 +165,9 @@ let j = function (e) {
             },
             [t]
         ),
-        { handleDragStart: _, handleDragReset: O, handleDragComplete: y } = (0, l.Z)(N, v);
+        { handleDragStart: _, handleDragReset: C, handleDragComplete: O } = (0, l.Z)(N, v);
     return (0, r.jsxs)('div', {
-        className: p.section,
+        className: g.section,
         children: [
             n.map((e, n) =>
                 (0, r.jsx)(
@@ -176,8 +179,8 @@ let j = function (e) {
                         onChange: m,
                         onDelete: j,
                         onDragStart: _,
-                        onDragReset: O,
-                        onDragComplete: y
+                        onDragReset: C,
+                        onDragComplete: O
                     },
                     e.channelId
                 )

@@ -1,8 +1,10 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => O }), n(47120);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    o = n(570140),
+    a = n(709054),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,61 +17,78 @@ function a(e, t, n) {
         e
     );
 }
-let s = {},
-    l = 0,
-    c = new Set();
-function u() {
-    l = 1;
-}
-function d(e) {
-    let { wallpapers: t } = e;
-    (l = 2),
-        t.forEach((e) => {
-            s[e.id] = e;
-        });
-}
-function f() {
-    l = 3;
-}
+let c = {},
+    u = 0,
+    d = new Set(),
+    f = {};
 function _() {
-    (s = {}), (l = 0);
+    u = 1;
 }
 function p(e) {
-    let { channelId: t } = e,
-        n = new Set(c);
-    n.add(t), (c = n);
+    let { wallpapers: t } = e;
+    (u = 2),
+        t.forEach((e) => {
+            c[e.id] = e;
+        });
 }
-function h(e) {
-    let { channelId: t } = e,
-        n = new Set(c);
-    n.delete(t), (c = n);
+function h() {
+    u = 3;
 }
-class m extends (r = i.ZP.Store) {
+function m() {
+    (c = {}), (u = 0);
+}
+function g(e) {
+    let { channelId: t } = e,
+        n = new Set(d);
+    n.add(t), (d = n);
+}
+function E(e) {
+    let { channelId: t } = e,
+        n = new Set(d);
+    n.delete(t), (d = n);
+}
+function b(e) {
+    let { channelId: t, message: n } = e;
+    if (n.type !== s.uaV.CHAT_WALLPAPER_SET) return !1;
+    a.default.compare(n.id, f[t]) > 0 && (f[t] = n.id);
+}
+function v(e) {
+    let { channelId: t, messages: n } = e,
+        r = n.find((e) => e.type === s.uaV.CHAT_WALLPAPER_SET);
+    if (null == r) return !1;
+    f[t] = r.id;
+}
+class y extends (r = i.ZP.Store) {
     get isFetchingWallpapers() {
-        return 1 === l;
+        return 1 === u;
     }
     get shouldFetchWallpapers() {
-        return 0 === l;
+        return 0 === u;
     }
     get hasFetchedWallpapers() {
-        return 2 === l;
+        return 2 === u;
     }
     get wallpapers() {
-        return Object.values(s);
+        return Object.values(c);
     }
     getWallpaperById(e) {
-        if (null != e) return s[e];
+        if (null != e) return c[e];
     }
     isUpdatingChatWallpaperFlagForChannel(e) {
-        return c.has(e);
+        return d.has(e);
+    }
+    getLastSetWallpaperMessageIdForChannel(e) {
+        return f[e];
     }
 }
-a(m, 'displayName', 'ChatWallpaperStore');
-let g = new m(o.Z, {
-    FETCH_CHAT_WALLPAPERS_START: u,
-    FETCH_CHAT_WALLPAPERS_SUCCESS: d,
-    FETCH_CHAT_WALLPAPERS_FAILURE: f,
-    UPDATE_CHAT_WALLPAPER_FLAG_START: p,
-    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: h,
-    LOGOUT: _
+l(y, 'displayName', 'ChatWallpaperStore');
+let O = new y(o.Z, {
+    FETCH_CHAT_WALLPAPERS_START: _,
+    FETCH_CHAT_WALLPAPERS_SUCCESS: p,
+    FETCH_CHAT_WALLPAPERS_FAILURE: h,
+    LOAD_MESSAGES_SUCCESS: v,
+    MESSAGE_CREATE: b,
+    UPDATE_CHAT_WALLPAPER_FLAG_START: g,
+    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: E,
+    LOGOUT: m
 });
