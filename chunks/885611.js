@@ -36,6 +36,7 @@ e.exports = {
     primaryButton: 'primaryButton_c50f62',
     disclaimer: 'disclaimer_c50f62',
     disclaimerLight: 'disclaimerLight_c50f62',
+    learnMoreLink: 'learnMoreLink_c50f62',
     priceTag: 'priceTag_c50f62',
     priceTagContainer: 'priceTagContainer_c50f62',
     headingWithItemTypePill: 'headingWithItemTypePill_c50f62',

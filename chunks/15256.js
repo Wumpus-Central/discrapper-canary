@@ -28,5 +28,6 @@ e.exports = {
     headerGlass: 'headerGlass_f37cb1',
     invitesRefresh: 'invitesRefresh_f37cb1',
     guildDropdown: 'guildDropdown_f37cb1',
+    guildBadgeAndName: 'guildBadgeAndName_f37cb1',
     inviteButton: 'inviteButton_f37cb1'
 };
