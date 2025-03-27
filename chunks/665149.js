@@ -42,91 +42,93 @@ let h = 24,
                   children: h
               });
     },
-    g = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: o = !1, disabled: s = !1, showBadge: l = !1, badgePosition: u = 'bottom', color: _, foreground: m, background: g, icon: E, iconSize: b = h, onClick: v, onContextMenu: y, tooltip: O = null, tooltipColor: I, tooltipPosition: S = 'bottom', tooltipDisabled: T, tooltipSpacing: N, hideOnClick: A = !0, role: C, 'aria-label': R, 'aria-hidden': P, 'aria-checked': w, 'aria-expanded': D, 'aria-haspopup': L, 'data-jump-section': x } = e,
-            M = (0, f.Q3)('BaseHeaderBar'),
-            k = (0, r.jsx)(E, {
+    g = i.forwardRef(function (e, t) {
+        let { className: n, iconClassName: i, children: o, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: m, foreground: g, background: E, icon: b, iconSize: v = h, onClick: y, onContextMenu: O, tooltip: I = null, tooltipColor: S, tooltipPosition: T = 'bottom', tooltipDisabled: A, tooltipSpacing: N, hideOnClick: C = !0, role: R, 'aria-label': P, 'aria-hidden': w, 'aria-checked': D, 'aria-expanded': L, 'aria-haspopup': x, 'data-jump-section': M } = e,
+            k = (0, f.Q3)('BaseHeaderBar'),
+            j = (0, r.jsx)(b, {
                 x: 0,
                 y: 0,
-                width: b,
-                height: b,
+                width: v,
+                height: v,
                 size: 'custom',
-                className: a()(n, p.icon),
-                colorClass: null != m ? m : void 0,
-                secondaryColorClass: null != g ? g : void 0,
-                color: null != _ ? _ : 'currentColor'
+                className: a()(i, p.icon),
+                colorClass: null != g ? g : void 0,
+                secondaryColorClass: null != E ? E : void 0,
+                color: null != m ? m : 'currentColor'
             }),
-            j = R;
+            U = P;
         return (
-            null == j && 'string' == typeof O && (j = O),
+            null == U && 'string' == typeof I && (U = I),
             (0, r.jsx)(c.ua7, {
-                text: O,
-                color: I,
-                position: S,
-                hideOnClick: A,
-                shouldShow: !T,
+                text: I,
+                color: S,
+                position: T,
+                hideOnClick: C,
+                shouldShow: !A,
                 spacing: N,
                 children: (e) => {
-                    let { onMouseEnter: f, onMouseLeave: h, onFocus: O, onBlur: I } = e;
-                    return null == v
+                    let { onMouseEnter: f, onMouseLeave: h, onFocus: I, onBlur: S } = e;
+                    return null == y
                         ? (0, r.jsx)('div', {
-                              className: a()(t, p.iconWrapper, { [p.iconDisabled]: s }),
-                              children: (0, r.jsx)(E, {
+                              ref: t,
+                              className: a()(n, p.iconWrapper, { [p.iconDisabled]: l }),
+                              children: (0, r.jsx)(b, {
                                   x: 0,
                                   y: 0,
-                                  width: b,
-                                  height: b,
+                                  width: v,
+                                  height: v,
                                   size: 'custom',
-                                  className: a()(n, p.icon),
-                                  colorClass: null != m ? m : void 0,
-                                  secondaryColorClass: null != g ? g : void 0,
-                                  color: null != _ ? _ : 'currentColor',
-                                  'aria-hidden': P,
+                                  className: a()(i, p.icon),
+                                  colorClass: null != g ? g : void 0,
+                                  secondaryColorClass: null != E ? E : void 0,
+                                  color: null != m ? m : 'currentColor',
+                                  'aria-hidden': w,
                                   onMouseEnter: f,
                                   onMouseLeave: h,
-                                  onFocus: O,
-                                  onBlur: I
+                                  onFocus: I,
+                                  onBlur: S
                               })
                           })
                         : (0, r.jsxs)(c.P3F, {
+                              innerRef: t,
                               tag: 'div',
-                              onClick: s ? void 0 : v,
-                              onContextMenu: s ? void 0 : y,
+                              onClick: l ? void 0 : y,
+                              onContextMenu: l ? void 0 : O,
                               onMouseEnter: f,
                               onMouseLeave: h,
-                              onFocus: O,
-                              onBlur: I,
-                              className: a()(t, {
+                              onFocus: I,
+                              onBlur: S,
+                              className: a()(n, {
                                   [p.iconWrapper]: !0,
-                                  [p.clickable]: !s && null != v,
-                                  [p.selected]: o,
-                                  [p.iconDisabled]: s
+                                  [p.clickable]: !l && null != y,
+                                  [p.selected]: s,
+                                  [p.iconDisabled]: l
                               }),
-                              role: C,
-                              'aria-label': j,
-                              'aria-hidden': P,
-                              'aria-checked': w,
-                              'aria-haspopup': L,
-                              'aria-expanded': D,
-                              tabIndex: s || null == v ? -1 : 0,
-                              'data-jump-section': x,
+                              role: R,
+                              'aria-label': U,
+                              'aria-hidden': w,
+                              'aria-checked': D,
+                              'aria-haspopup': x,
+                              'aria-expanded': L,
+                              tabIndex: l || null == y ? -1 : 0,
+                              'data-jump-section': M,
                               children: [
-                                  l
+                                  u
                                       ? (0, r.jsx)(d.ZP, {
-                                            mask: 'top' === u ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            height: M ? b : void 0,
-                                            width: M ? b : void 0,
-                                            children: k
+                                            mask: 'top' === _ ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                            height: k ? v : void 0,
+                                            width: k ? v : void 0,
+                                            children: j
                                         })
-                                      : k,
-                                  l ? (0, r.jsx)('span', { className: a()(p.iconBadge, 'top' === u ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
-                                  i
+                                      : j,
+                                  u ? (0, r.jsx)('span', { className: a()(p.iconBadge, 'top' === _ ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
+                                  o
                               ]
                           });
                 }
             })
         );
-    },
+    }),
     E = (e) => {
         let { className: t } = e;
         return (0, f.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: a()(p.dot, t) }) : (0, r.jsx)('div', { className: a()(p.divider, t) });
