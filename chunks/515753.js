@@ -129,25 +129,33 @@ let et = Y.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
             n = (0, U.A)(t);
         return (0, l.jsx)(
             f.P3F,
-            $(J({ className: X.closeButton }, e), {
-                focusProps: {
-                    offset: {
-                        top: -2,
-                        bottom: -2,
-                        left: -2,
-                        right: 6
-                    }
-                },
-                children: (0, l.jsx)('div', {
-                    style: n,
-                    className: o()({ [X.closeButtonBackgroundPlated]: null != t }),
-                    children: (0, l.jsx)(f.Dio, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: o()(X.closeIcon, { [X.closeIconPlated]: null != t })
+            $(
+                J(
+                    {
+                        className: o()(X.closeButton, { [X.closeButtonPlated]: null != t }),
+                        style: n
+                    },
+                    e
+                ),
+                {
+                    focusProps: {
+                        offset: {
+                            top: -2,
+                            bottom: -2,
+                            left: -2,
+                            right: 6
+                        }
+                    },
+                    children: (0, l.jsx)('div', {
+                        className: o()({ [X.innerCloseButtonPlated]: null != t }),
+                        children: (0, l.jsx)(f.Dio, {
+                            size: 'md',
+                            color: 'currentColor',
+                            className: o()(X.closeIcon, { [X.closeIconPlated]: null != t })
+                        })
                     })
-                })
-            })
+                }
+            )
         );
     },
     er = () =>

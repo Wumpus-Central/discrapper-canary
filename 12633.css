@@ -15601,8 +15601,9 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     opacity: 1
 }
 
-.visual-refresh .accountContainer__4bbc6 {
-    border-radius: 4px
+.visual-refresh .rtcOpened__4bbc6 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
 }
 
 .account__4bbc6.hover__4bbc6 {

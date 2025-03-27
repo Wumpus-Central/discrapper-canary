@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(47120), n(866573), n(642549), n(787622);
+n.d(t, { Z: () => x }), n(47120), n(301563), n(866573), n(642549), n(787622);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -6,11 +6,12 @@ var r = n(200651),
     l = n(772848),
     o = n(481060),
     c = n(53281),
-    d = n(334460),
+    d = n(281598),
     u = n(451593),
     m = n(694539),
-    g = n(250105);
-let p = (e) => {
+    g = n(146181);
+let p = "Make sure you're only uploading text files!",
+    h = (e) => {
         var t, n, i;
         let { effect: s, onClick: l } = e,
             { deleteConfig: c } = (0, u.E)();
@@ -44,32 +45,34 @@ let p = (e) => {
             ]
         });
     },
-    h = () => ({
+    f = () => ({
         id: (0, l.Z)(),
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function f() {
+function x() {
     let { profileEffects: e, upsertConfig: t } = (0, u.E)(),
         [n, s] = i.useState(),
         l = i.useRef(null),
-        f = i.useCallback(
+        x = i.useCallback(
             (e, n) => {
-                if (!e.type.startsWith('text/')) return (0, d.Eo)("Make sure you're only uploading text files!");
-                t(JSON.parse(atob(n))), (0, d.XA)('Profile Effect (maybe??) imported!');
+                if (!e.type.startsWith('text/')) return (0, d.Eo)(p);
+                let [r, i] = n.split(',');
+                if (!r.includes('text/plain')) return (0, d.Eo)(p);
+                t(JSON.parse(atob(i))), (0, d.XA)('Profile Effect (maybe??) imported!');
             },
             [t]
         ),
-        b = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 var t;
                 if ((null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null) {
                     (0, d.Eo)('Error uploading file. Try again!');
                     return;
                 }
-                (0, d.ZK)(e.currentTarget.files, f, d.Eo);
+                (0, d.Kr)(e.currentTarget.files, x, d.Eo);
             },
-            [f]
+            [x]
         );
     return (0, r.jsxs)('div', {
         className: g.root,
@@ -91,7 +94,7 @@ function f() {
                                     className: g.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, r.jsx)(
-                                            p,
+                                            h,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -117,14 +120,14 @@ function f() {
                                         }),
                                         (0, r.jsx)(c.Z, {
                                             ref: l,
-                                            onChange: b,
+                                            onChange: N,
                                             multiple: !1
                                         })
                                     ]
                                 }),
                                 (0, r.jsx)(o.zxk, {
                                     onClick: () => {
-                                        t(h());
+                                        t(f());
                                     },
                                     children: 'Create New Effect'
                                 })

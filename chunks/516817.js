@@ -1,79 +1,82 @@
-n.d(t, { Z: () => _ }), n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
     a = n.n(o),
-    s = n(70097),
-    l = n(829030),
-    c = n(168352),
-    u = n(379839),
-    d = n(359135),
-    f = n(873841);
-function _(e) {
-    let { nameplate: t, hovered: n, selected: o, content: s, placement: c } = e,
-        _ = (0, u.p)(t, n, o, s, c),
-        h = (0, l.C)(n, o),
-        [m, g] = (0, i.useState)(t),
-        [E, b] = (0, i.useState)(!1),
-        [v, y] = (0, i.useState)(!1),
-        { fadeIn: O, noFade: I } = (0, l.X)(s, v, c);
+    s = n(442837),
+    l = n(70097),
+    c = n(19780),
+    u = n(829030),
+    d = n(168352),
+    f = n(379839),
+    _ = n(359135),
+    p = n(873841);
+function h(e) {
+    let { nameplate: t, hovered: n, selected: o, content: l, placement: d } = e,
+        h = (0, f.p)(t, n, o, l, d),
+        g = (0, u.C)(n, o),
+        E = (0, s.e7)([c.Z], () => c.Z.getChannelId()),
+        [b, v] = (0, i.useState)(t),
+        [y, O] = (0, i.useState)(!1),
+        [I, S] = (0, i.useState)(!1),
+        { fadeIn: T, noFade: A } = (0, u.X)(l, I, d);
     (0, i.useEffect)(() => {
-        null == m || null != t || E ? null != t && (g(t), b(!1)) : b(!0);
-    }, [t, m, E]);
-    let S = (0, i.useCallback)(() => {
-            E && (g(null), y(!1), b(!1));
-        }, [E]),
-        T = null != t ? t : m;
-    return null == T
+        null == b || null != t || y ? null != t && (v(t), O(!1)) : O(!0);
+    }, [t, b, y]);
+    let N = (0, i.useCallback)(() => {
+            y && (v(null), S(!1), O(!1));
+        }, [y]),
+        C = null != t ? t : b;
+    return null == C
         ? null
         : (0, r.jsx)('div', {
-              onAnimationEnd: S,
-              className: a()(f.container, {
-                  [f.accountContainer]: c === d.i.ACCOUNT,
-                  [f.fadeOut]: E,
-                  [f.fadeIn]: O,
-                  [f.noFade]: I
+              onAnimationEnd: N,
+              className: a()(p.container, {
+                  [p.rtcOpened]: d === _.i.ACCOUNT && null != E,
+                  [p.fadeOut]: y,
+                  [p.fadeIn]: T,
+                  [p.noFade]: A
               }),
-              style: v ? { background: _.background } : void 0,
-              children: (0, r.jsx)(p, {
-                  nameplate: T,
-                  className: a()(f.img, {
-                      [f.hover]: n,
-                      [f.selected]: o,
-                      [f.account]: c === d.i.ACCOUNT,
-                      [f.shopPreview]: c === d.i.SHOP_PREVIEW
+              style: I ? { background: h.background } : void 0,
+              children: (0, r.jsx)(m, {
+                  nameplate: C,
+                  className: a()(p.img, {
+                      [p.hover]: n,
+                      [p.selected]: o,
+                      [p.account]: d === _.i.ACCOUNT,
+                      [p.preview]: d === _.i.PREVIEW
                   }),
-                  style: { maskImage: _.maskImage },
-                  animate: h,
-                  loop: !0 === h && !0 === n,
-                  onLoad: () => y(!0)
+                  style: { maskImage: h.maskImage },
+                  animate: g,
+                  loop: !0 === g && !0 === n,
+                  onLoad: () => S(!0)
               })
           });
 }
-function p(e) {
-    let { nameplate: t, className: n, style: o, animate: a, loop: l, onLoad: u } = e,
-        d = (0, i.useRef)(null);
+function m(e) {
+    let { nameplate: t, className: n, style: o, animate: a, loop: s, onLoad: c } = e,
+        u = (0, i.useRef)(null);
     i.useEffect(() => {
-        null != d.current && (a || l ? d.current.play() : d.current.pause());
-    }, [a, l]);
-    let _ = (0, c._)(t, a);
-    return (null == _ ? void 0 : _.endsWith('.png')) || t.preview
+        null != u.current && (a || s ? u.current.play() : u.current.pause());
+    }, [a, s]);
+    let f = (0, d._)(t, a);
+    return (null == f ? void 0 : f.endsWith('.png')) || t.preview
         ? (0, r.jsx)('img', {
-              src: _,
+              src: f,
               className: n,
               style: o,
               alt: t.imgAlt,
-              onLoad: u
+              onLoad: c
           })
         : (0, r.jsx)('div', {
-              className: f.videoContainer,
+              className: p.videoContainer,
               style: o,
-              children: (0, r.jsx)(s.Z, {
-                  onLoadedData: u,
-                  src: _,
-                  ref: d,
+              children: (0, r.jsx)(l.Z, {
+                  onLoadedData: c,
+                  src: f,
+                  ref: u,
                   playsInline: !0,
-                  loop: l,
+                  loop: s,
                   controls: !1,
                   className: n
               })

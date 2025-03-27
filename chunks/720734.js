@@ -157,19 +157,19 @@ let e$ = eV.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     e1 = 3 * eL.Z.Millis.SECOND,
     e2 = 30 * eL.Z.Millis.DAY;
 function e6(e) {
-    let { speaking: t, streaming: n, currentUser: s, status: l, handleClick: o, handleMouseLeave: c, renderNameTag: d, nameplate: u, hovered: m, 'data-jump-section': g } = e,
-        p = (0, F.Q3)('RTC Avatar'),
-        { coloredIconsEnabled: h } = (0, eh.Z)({ location: 'RTC Avatar' }),
-        x = (0, R.Z)(null == s ? void 0 : s.avatarDecoration),
-        N = (0, ew.NZ)({
-            avatarDecoration: x,
+    let { speaking: t, streaming: n, currentUser: s, status: l, handleClick: o, handleMouseLeave: c, renderNameTag: d, nameplate: u, 'data-jump-section': m } = e,
+        g = (0, F.Q3)('RTC Avatar'),
+        { coloredIconsEnabled: p } = (0, eh.Z)({ location: 'RTC Avatar' }),
+        h = (0, R.Z)(null == s ? void 0 : s.avatarDecoration),
+        x = (0, ew.NZ)({
+            avatarDecoration: h,
             size: (0, D.y9)(f.EFr.SIZE_32)
         }),
-        b = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
+        N = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
         {
-            updateOpenPopoutRef: E,
-            highlightBadge: j,
-            setHighlightBadge: C
+            updateOpenPopoutRef: b,
+            highlightBadge: E,
+            setHighlightBadge: j
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -201,8 +201,8 @@ function e6(e) {
                 }
             );
         })(),
-        S = (0, $.A)(u),
-        { showTempStatusOptions: v } = en.Y.useExperiment({ location: 'AvatarWithPopout' }, { autoTrackExposure: !1 });
+        C = (0, $.A)(u),
+        { showTempStatusOptions: S } = en.Y.useExperiment({ location: 'AvatarWithPopout' }, { autoTrackExposure: !1 });
     return null == s
         ? null
         : (0, r.jsx)(_.Z, {
@@ -215,7 +215,7 @@ function e6(e) {
                           className: eq.accountProfilePopoutWrapper,
                           children: (0, r.jsx)(X.Z, {
                               currentUser: s,
-                              highlightBadge: j,
+                              highlightBadge: E,
                               onClose: () => {
                                   null == t || t();
                               },
@@ -229,7 +229,7 @@ function e6(e) {
                   spacing: 14,
                   fixed: !0,
                   onRequestClose: () => {
-                      c(), C(void 0);
+                      c(), j(void 0);
                   },
                   preload: () =>
                       (0, em.Z)(s, void 0, {
@@ -237,32 +237,27 @@ function e6(e) {
                           withMutualFriends: !1
                       }),
                   children: (e) => (
-                      E(e),
+                      b(e),
                       (0, r.jsxs)(
                           f.P3F,
-                          eQ(eJ({ style: S }, e), {
+                          eQ(eJ({ style: C }, e), {
                               onClick: (t) => {
                                   var n;
                                   null === (n = e.onClick) || void 0 === n || n.call(e, t), null == o || o(t);
                               },
                               'aria-label': eK.NW.string(eK.t['3Uj+2t']),
-                              'data-jump-section': p ? g : void 0,
-                              className: a()(eq.avatarWrapper, !p && h && eq.experiment, { [eq.plated]: null != u }),
+                              'data-jump-section': g ? m : void 0,
+                              className: a()(eq.avatarWrapper, !g && p && eq.experiment, { [eq.plated]: null != u }),
                               children: [
-                                  (0, r.jsx)(et.Z, {
-                                      nameplate: u,
-                                      hovered: m,
-                                      placement: ee.i.ACCOUNT
-                                  }),
                                   (0, r.jsx)(e$, {
-                                      size: p ? f.EFr['SIZE_'.concat(b)] : f.EFr.SIZE_32,
-                                      src: s.getAvatarURL(void 0, p ? b - 4 : 32, !1),
-                                      avatarDecoration: N,
+                                      size: g ? f.EFr['SIZE_'.concat(N)] : f.EFr.SIZE_32,
+                                      src: s.getAvatarURL(void 0, g ? N - 4 : 32, !1),
+                                      avatarDecoration: x,
                                       'aria-label': s.username,
                                       status: n ? ez.Skl.STREAMING : l,
                                       isSpeaking: t,
                                       className: eq.avatar,
-                                      pulseStatusIcon: v
+                                      pulseStatusIcon: S
                                   }),
                                   (0, r.jsx)('div', {
                                       className: a()(eq.nameTag, { [eq.canCopy]: ek.wS }),
@@ -348,14 +343,12 @@ class e3 extends i.PureComponent {
     }
     renderAvatarWithPopout(e) {
         let {
-                focusSectionProps: { 'data-jump-section': t },
-                onClick: n
-            } = e,
-            { hovered: i } = this.state;
+            focusSectionProps: { 'data-jump-section': t },
+            onClick: n
+        } = e;
         return (0, r.jsx)(
             e6,
             eQ(eJ({}, this.props), {
-                hovered: i,
                 handleClick: n,
                 handleMouseLeave: this.handleMouseLeave,
                 renderNameTag: this.renderNameTag,
@@ -395,7 +388,8 @@ class e3 extends i.PureComponent {
               });
     }
     render() {
-        let { currentUser: e } = this.props;
+        let { currentUser: e, nameplate: t } = this.props,
+            n = this.state.hovered;
         return null == e
             ? null
             : (0, r.jsx)(f.Wdt, {
@@ -407,6 +401,11 @@ class e3 extends i.PureComponent {
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   children: [
+                                      (0, r.jsx)(et.Z, {
+                                          nameplate: t,
+                                          hovered: n,
+                                          placement: ee.i.ACCOUNT
+                                      }),
                                       this.renderNameZone(e),
                                       (0, r.jsx)(
                                           e8,
