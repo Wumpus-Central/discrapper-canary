@@ -94,8 +94,8 @@ let S = { offset: 2 },
 function P(e) {
     var t, i;
     let { parentAnalyticsLocation: l } = (0, p.ZP)(),
-        { channel: _, user: P, nick: j, mute: A, deaf: Z, serverMute: x, serverDeaf: L } = e,
-        w = (0, a.e7)([E.Z], () => E.Z.isLocalMute(P.id)),
+        { channel: _, user: P, nick: j, mute: A, deaf: Z, serverMute: x, serverDeaf: w } = e,
+        L = (0, a.e7)([E.Z], () => E.Z.isLocalMute(P.id)),
         R = (0, u.Z)({
             userId: P.id,
             checkSoundSharing: !0
@@ -116,11 +116,11 @@ function P(e) {
                 if (l) return T.localMute;
                 if (i) return T.mute;
             })({
-                serverDeaf: L,
+                serverDeaf: w,
                 deaf: Z,
                 serverMute: x,
                 mute: A,
-                localMute: w
+                localMute: L
             })) && void 0 !== i
             ? i
             : {},
@@ -134,7 +134,7 @@ function P(e) {
     function B(e) {
         null != D
             ? (0, c.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('22685')]).then(n.bind(n, 757387));
+                  let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
                           e,
@@ -179,6 +179,7 @@ function P(e) {
                     e
                 )
             ),
+        clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.ua7, {
                 text: V,

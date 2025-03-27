@@ -2,14 +2,14 @@ n.d(t, { Z: () => g }), n(653041);
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     l = n(100527),
     s = n(184301),
     c = n(347475),
-    d = n(463618),
-    u = n(823379),
-    p = n(491590);
+    u = n(463618),
+    d = n(823379),
+    p = n(366810);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,11 +60,11 @@ let h = (e) => {
             : null == t
               ? (0, r.jsx)('div', {
                     className: p.partyMemberUnknown,
-                    children: (0, r.jsx)(d.Z, { className: p.partyMemberUnknownIcon })
+                    children: (0, r.jsx)(u.Z, { className: p.partyMemberUnknownIcon })
                 })
               : (0, r.jsx)('div', {
                     className: p.partyMemberKnown,
-                    children: (0, r.jsx)(o.yRy, {
+                    children: (0, r.jsx)(a.yRy, {
                         preload: () => (0, s.Z)(t.id, t.getAvatarURL(i, 80), { guildId: i }),
                         renderPopout: (e) =>
                             (0, r.jsx)(
@@ -76,13 +76,14 @@ let h = (e) => {
                                 })
                             ),
                         position: 'left',
+                        clickTrap: !0,
                         children: (e) =>
                             (0, r.jsx)(
-                                o.qEK,
+                                a.qEK,
                                 f(m({}, e), {
                                     src: t.getAvatarURL(i, 24),
                                     'aria-label': t.username,
-                                    size: o.EFr.SIZE_24,
+                                    size: a.EFr.SIZE_24,
                                     className: p.partyMember
                                 })
                             )
@@ -90,12 +91,12 @@ let h = (e) => {
                 });
     },
     g = (e) => {
-        let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: o = 2, guildId: l } = e,
-            { unknownSize: s, totalSize: c, knownSize: d } = t;
+        let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: a = 2, guildId: l } = e,
+            { unknownSize: s, totalSize: c, knownSize: u } = t;
         if (c < i) return null;
-        let m = a()(n)
-            .filter(u.lm)
-            .take(o)
+        let m = o()(n)
+            .filter(d.lm)
+            .take(a)
             .map((e) =>
                 (0, r.jsx)(
                     h,
@@ -107,9 +108,9 @@ let h = (e) => {
                 )
             )
             .value();
-        for (let e = 0; e < s && m.length < o; e++) m.push((0, r.jsx)(h, { guildId: l }, 'unknown-member-'.concat(e)));
-        let f = c - d - s;
-        for (let e = 0; e < f && m.length < o; e++)
+        for (let e = 0; e < s && m.length < a; e++) m.push((0, r.jsx)(h, { guildId: l }, 'unknown-member-'.concat(e)));
+        let f = c - u - s;
+        for (let e = 0; e < f && m.length < a; e++)
             m.push(
                 (0, r.jsx)(
                     h,
@@ -122,7 +123,7 @@ let h = (e) => {
             );
         let g = Math.max(Math.min(c - m.length, 99), 0);
         if (1 === g) {
-            let e = n[o];
+            let e = n[a];
             m.push(
                 (0, r.jsx)(
                     h,

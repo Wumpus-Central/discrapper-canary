@@ -170,7 +170,7 @@ let Z = i.memo(function (e) {
                         (0, h.jW)(
                             e,
                             async () => {
-                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('22685')]).then(n.bind(n, 757387));
+                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
@@ -214,6 +214,7 @@ let Z = i.memo(function (e) {
             renderPopout: R,
             position: 'right',
             spacing: 8,
+            clickTrap: !0,
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,

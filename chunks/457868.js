@@ -21,8 +21,8 @@ var r = n(200651),
     x = n(518738),
     j = n(850020),
     O = n(965376),
-    N = n(159299),
-    E = n(184301),
+    E = n(159299),
+    N = n(184301),
     I = n(347475),
     P = n(199902),
     S = n(271383),
@@ -40,8 +40,8 @@ var r = n(200651),
     B = n(276264),
     F = n(981631),
     H = n(388032),
-    G = n(624143),
-    V = n(920915);
+    G = n(268242),
+    V = n(582525);
 function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ function z(e) {
     }
     return e;
 }
-function q(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,7 +85,7 @@ function q(e, t) {
         e
     );
 }
-let Y = U.ZP.getEnableHardwareAcceleration(),
+let q = U.ZP.getEnableHardwareAcceleration(),
     K = 44 + B.x,
     X = i.memo(function (e) {
         let { channel: t, sectionId: l, userId: o, guildOwnerId: a } = e,
@@ -107,7 +107,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
             O = (0, p.e7)([T.Z, A.Z], () => (C ? A.Z.getActivities() : T.Z.getActivities(o, t.guild_id))),
             M = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(o)),
             k = (0, c.JA)(o),
-            D = (0, p.e7)([N.Z], () => N.Z.canUserViewChannel(t.id, l, o)),
+            D = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, o)),
             U = (null == b ? void 0 : b.id) != null && b.id === a,
             G = i.useCallback(
                 (e) => {
@@ -117,7 +117,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    q(z({}, n), {
+                                    Y(z({}, n), {
                                         user: b,
                                         guildId: t.guild_id,
                                         channel: t
@@ -158,14 +158,14 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
         let Q = null == u ? void 0 : u.premiumSince;
         return (0, r.jsx)(h.yRy, {
             preload: () =>
-                (0, E.Z)(b, {
+                (0, N.Z)(b, {
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
             renderPopout: (e) =>
                 (0, r.jsx)(
                     I.Z,
-                    q(z({}, e), {
+                    Y(z({}, e), {
                         userId: b.id,
                         guildId: t.guild_id,
                         channelId: t.id
@@ -174,6 +174,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: V,
+            clickTrap: !0,
             children: (e, n) => {
                 let { isShown: i } = n;
                 return (0, r.jsx)(
@@ -181,7 +182,7 @@ let Y = U.ZP.getEnableHardwareAcceleration(),
                     z(
                         {
                             onContextMenu: G,
-                            shouldAnimateStatus: Y,
+                            shouldAnimateStatus: q,
                             user: b,
                             currentUser: _,
                             nick: null == u ? void 0 : u.nick,

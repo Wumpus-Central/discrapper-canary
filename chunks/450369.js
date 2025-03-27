@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => U,
-    Z: () => F
+    Z: () => H
 });
 var r = n(200651),
     i = n(192379),
@@ -105,6 +105,7 @@ let U = 16 / 9,
                 ),
             position: 'right',
             spacing: 8,
+            clickTrap: !0,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
@@ -132,7 +133,7 @@ let U = 16 / 9,
                 )
         });
     },
-    H = (e) => {
+    F = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: l, width: o, isModerator: a, onContextMenu: d, inPopout: h } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
             { id: m, blocked: g, ignored: _ } = t,
@@ -173,7 +174,7 @@ let U = 16 / 9,
             m
         );
     },
-    F = i.memo(function (e) {
+    H = i.memo(function (e) {
         var t;
         let { participant: i, channel: l, width: c } = e,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
@@ -240,7 +241,7 @@ let U = 16 / 9,
                         (0, d.jW)(
                             t,
                             async () => {
-                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('22685')]).then(n.bind(n, 757387));
+                                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
@@ -263,7 +264,7 @@ let U = 16 / 9,
                 }
             };
         return O.type !== k.fO.USER || (null === (t = O.voiceState) || void 0 === t ? void 0 : t.selfVideo)
-            ? (0, r.jsx)(H, {
+            ? (0, r.jsx)(F, {
                   stageParticipant: i,
                   rtcParticipant: O,
                   channel: l,

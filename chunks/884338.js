@@ -187,6 +187,7 @@ class A extends (r = o.PureComponent) {
                 )
             ),
             onRequestClose: () => this.setState({ popoutUserId: null }),
+            clickTrap: !0,
             children: (n) =>
                 (0, i.jsxs)(
                     'div',

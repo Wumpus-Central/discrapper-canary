@@ -21,12 +21,12 @@ var r = n(200651),
     x = n(626135),
     j = n(585483),
     O = n(233870),
-    N = n(51144),
-    E = n(998502),
+    E = n(51144),
+    N = n(998502),
     I = n(276264),
     P = n(981631),
     S = n(388032),
-    Z = n(920915);
+    Z = n(582525);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,17 +71,17 @@ function A(e, t) {
     );
 }
 let w = [],
-    R = E.ZP.getEnableHardwareAcceleration();
+    R = N.ZP.getEnableHardwareAcceleration();
 function M(e) {
     let { user: t, channel: i, status: u, activities: d } = e,
         p = (0, o.e7)([v.Z], () => null != v.Z.getTypingUsers(i.id)[t.id]),
         f = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
         x = (0, o.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
         O = (0, o.e7)([C.Z], () => C.Z.getNickname(t.id)),
-        E = (0, h.Z)(t.id, 'private-channel-recipient'),
+        N = (0, h.Z)(t.id, 'private-channel-recipient'),
         Z = (e) => {
             (0, s.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('22905')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('31823')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -109,7 +109,7 @@ function M(e) {
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
-            let e = '@'.concat(N.ZP.getUserTag(t, { decoration: 'never' })),
+            let e = '@'.concat(E.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
             j.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
                 plainText: e,
@@ -117,6 +117,7 @@ function M(e) {
             }),
                 c.Z.startTyping(i.id);
         },
+        clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(
                 I.Z,
@@ -130,7 +131,7 @@ function M(e) {
                         isTyping: p,
                         status: u,
                         activities: d,
-                        applicationStream: E,
+                        applicationStream: N,
                         channel: i,
                         onContextMenu: Z,
                         isMobile: x,

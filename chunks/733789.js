@@ -127,6 +127,7 @@ class N extends i.PureComponent {
                         })
                     ),
                 position: 'right',
+                clickTrap: !0,
                 children: (t) =>
                     (0, r.jsx)(
                         'span',
@@ -205,6 +206,7 @@ class N extends i.PureComponent {
                                       })
                                   ),
                               position: 'right',
+                              clickTrap: !0,
                               children: (t) =>
                                   (0, r.jsx)(a.ua7, {
                                       text: this.renderUserTooltip(e, l.startTime, l.endTime),

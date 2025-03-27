@@ -1,12 +1,12 @@
-r.d(t, { default: () => v }), r(47120);
+r.d(t, { default: () => k }), r(47120);
 var n = r(200651),
     i = r(192379),
     s = r(392711),
     l = r.n(s),
     d = r(442837),
-    u = r(481060),
-    o = r(239091),
-    c = r(276264),
+    c = r(481060),
+    u = r(239091),
+    o = r(276264),
     a = r(600164),
     p = r(313201),
     b = r(184301),
@@ -18,7 +18,7 @@ var n = r(200651),
     y = r(432496),
     O = r(981631),
     w = r(388032),
-    x = r(606323);
+    x = r(672902);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -62,9 +62,9 @@ function P(e, t) {
         e
     );
 }
-function v(e) {
-    let { guild: t, transitionState: s, onClose: v } = e,
-        k = (0, p.Dt)(),
+function k(e) {
+    let { guild: t, transitionState: s, onClose: k } = e,
+        v = (0, p.Dt)(),
         S = i.useMemo(() => {
             let e = g.Z.getRelationships();
             return h.default.keys(e).filter((t) => e[t] === O.OGo.FRIEND);
@@ -85,7 +85,7 @@ function v(e) {
                     .map((e) => {
                         let i = j.default.getUser(e.userId);
                         return (0, n.jsx)(
-                            u.yRy,
+                            c.yRy,
                             {
                                 preload: () => (0, b.Z)(i.id, i.getAvatarURL(t.id, 80), { guildId: t.id }),
                                 renderPopout: (r) =>
@@ -97,10 +97,11 @@ function v(e) {
                                         })
                                     ),
                                 spacing: 14,
+                                clickTrap: !0,
                                 children: (s, l) => {
                                     let { isShown: d } = l;
                                     return (0, n.jsx)(
-                                        c.Z,
+                                        o.Z,
                                         I(
                                             {
                                                 className: x.member,
@@ -112,8 +113,8 @@ function v(e) {
                                                 premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
                                                 guildId: t.id,
                                                 onContextMenu: (e) => {
-                                                    (0, o.jW)(e, async () => {
-                                                        let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('80524')]).then(r.bind(r, 415118));
+                                                    (0, u.jW)(e, async () => {
+                                                        let { default: e } = await Promise.all([r.e('79695'), r.e('26976'), r.e('92472')]).then(r.bind(r, 415118));
                                                         return (r) =>
                                                             (0, n.jsx)(
                                                                 e,
@@ -139,20 +140,20 @@ function v(e) {
             [S, t.id, t.ownerId, N]
         ),
         E = y.Z.isFetchingFriendsForGuild(t.id);
-    return (0, n.jsxs)(u.Y0X, {
+    return (0, n.jsxs)(c.Y0X, {
         transitionState: s,
-        size: u.CgR.SMALL,
-        'aria-labelledby': k,
+        size: c.CgR.SMALL,
+        'aria-labelledby': v,
         children: [
-            (0, n.jsxs)(u.xBx, {
+            (0, n.jsxs)(c.xBx, {
                 separator: !1,
                 justify: a.Z.Justify.BETWEEN,
                 children: [
                     (0, n.jsxs)('div', {
                         className: x.heading,
                         children: [
-                            (0, n.jsx)('span', { children: (0, n.jsx)(u.iFz, {}) }),
-                            (0, n.jsx)(u.X6q, {
+                            (0, n.jsx)('span', { children: (0, n.jsx)(c.iFz, {}) }),
+                            (0, n.jsx)(c.X6q, {
                                 variant: 'heading-lg/semibold',
                                 children: w.NW.format(E ? w.t.EtQnZm : w.t.OgMdNT, {
                                     guildName: t.name,
@@ -161,12 +162,12 @@ function v(e) {
                             })
                         ]
                     }),
-                    (0, n.jsx)(u.olH, { onClick: v })
+                    (0, n.jsx)(c.olH, { onClick: k })
                 ]
             }),
-            (0, n.jsxs)(u.hzk, {
+            (0, n.jsxs)(c.hzk, {
                 className: x.content,
-                children: [E && (0, n.jsx)(u.$jN, {}), (0, n.jsx)(u.Ttm, { children: Z })]
+                children: [E && (0, n.jsx)(c.$jN, {}), (0, n.jsx)(c.Ttm, { children: Z })]
             })
         ]
     });

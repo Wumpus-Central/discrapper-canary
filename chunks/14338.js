@@ -68,7 +68,7 @@ function v(e) {
             (0, s.jW)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('22685')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -103,6 +103,7 @@ function v(e) {
             ),
         position: 'right',
         spacing: 8,
+        clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(a.ua7, {
                 text: l.userNick,

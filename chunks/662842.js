@@ -29,10 +29,10 @@ var r = n(200651),
     A = n(496675),
     Z = n(594174),
     x = n(662868),
-    L = n(981631),
-    w = n(765305),
+    w = n(981631),
+    L = n(765305),
     R = n(388032),
-    D = n(877662);
+    D = n(712774);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -92,7 +92,7 @@ function U(e) {
         B = null == l ? void 0 : l.id,
         H = (0, a.Wu)([I.Z], () => [...new Set(I.Z.getMutableParticipants(B, C.pV.SPEAKER).map((e) => e.user))], [B]),
         F = (0, a.e7)([I.Z], () => (null != B ? I.Z.getParticipantCount(B, C.pV.AUDIENCE) : 0), [B]),
-        z = (0, a.e7)([A.Z], () => A.Z.can(L.Plq.CONNECT, l)),
+        z = (0, a.e7)([A.Z], () => A.Z.can(w.Plq.CONNECT, l)),
         Y = (0, T.Z)(null == l ? void 0 : l.id),
         K = null == U ? void 0 : U.creator_id,
         q = (0, a.e7)([Z.default], () => Z.default.getUser(K), [K]);
@@ -100,8 +100,8 @@ function U(e) {
         null != K && (0, u.PR)(K);
     }, [K]);
     let {
-        noticeType: X,
-        title: Q,
+        noticeType: Q,
+        title: X,
         location: J,
         locationIcon: $,
         canListenIn: ee,
@@ -180,7 +180,7 @@ function U(e) {
                         );
                     }
                 } else {
-                    if (t.entity_type === w.WX.STAGE_INSTANCE && _) {
+                    if (t.entity_type === L.WX.STAGE_INSTANCE && _) {
                         let e = R.NW.string(R.t.ZYO5OD);
                         return (
                             (null == o ? void 0 : o.speaker) ? (e = R.NW.string(R.t['/cnSFR'])) : null != o && (e = R.NW.string(R.t.btSGOj)),
@@ -223,7 +223,7 @@ function U(e) {
                             }
                         );
                     }
-                    if (t.entity_type === w.WX.EXTERNAL) {
+                    if (t.entity_type === L.WX.EXTERNAL) {
                         let e = (0, O.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
@@ -265,7 +265,7 @@ function U(e) {
                                       })
                         };
                     }
-                    if (t.entity_type === w.WX.VOICE && null != i) {
+                    if (t.entity_type === L.WX.VOICE && null != i) {
                         let e = (0, p.KS)(i),
                             n = f.ZP.getUserCount(t.id, E);
                         return {
@@ -324,7 +324,7 @@ function U(e) {
             }),
         [U, G, l, z, Y, q, H, F, V, W, n]
     );
-    return null == X
+    return null == Q
         ? null
         : (0, r.jsxs)('div', {
               className: D.container,
@@ -375,6 +375,7 @@ function U(e) {
                                                   })
                                               ),
                                           position: 'right',
+                                          clickTrap: !0,
                                           children: (n) =>
                                               (0, r.jsx)(
                                                   c.qEK,
@@ -396,7 +397,7 @@ function U(e) {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       className: o()(D.title, D.live),
-                      children: Q
+                      children: X
                   }),
                   (0, r.jsxs)('div', {
                       className: D.locationContainer,
@@ -410,7 +411,7 @@ function U(e) {
                           })
                       ]
                   }),
-                  ee || 1 === X
+                  ee || 1 === Q
                       ? (0, r.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,

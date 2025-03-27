@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(129861),
     l = n(184301),
     c = n(347475),
-    u = n(404334);
+    u = n(607386);
 function d(e, t, n) {
     return (
         t in e
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,12 +49,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,7 +81,7 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { user: t, guildId: n, channelId: i, nick: d, className: p, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: v, onContextMenu: b, onPopoutRequestOpen: y, onPopoutRequestClose: O } = e;
+    let { user: t, guildId: n, channelId: i, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: v, onPopoutRequestOpen: y, onPopoutRequestClose: O } = e;
     return (0, r.jsx)(a.yRy, {
         preload: () =>
             (0, l.Z)(t.id, t.getAvatarURL(n, (0, a.pxk)(a.EFr.SIZE_80)), {
@@ -91,7 +91,7 @@ function g(e) {
         renderPopout: (e) =>
             (0, r.jsx)(
                 c.Z,
-                _(f({}, e), {
+                p(f({}, e), {
                     userId: t.id,
                     guildId: n,
                     channelId: i
@@ -102,16 +102,17 @@ function g(e) {
         onRequestOpen: y,
         onRequestClose: O,
         ignoreModalClicks: E,
+        clickTrap: !0,
         children: (e) => {
             var { onClick: i } = e,
                 l = h(e, ['onClick']);
             return (0, r.jsxs)(
                 a.P3F,
-                _(f({}, l), {
-                    className: o()(u.userListItem, p, { [u.popoutDisabled]: g }),
-                    onContextMenu: b,
+                p(f({}, l), {
+                    className: o()(u.userListItem, _, { [u.popoutDisabled]: g }),
+                    onContextMenu: v,
                     onClick: (e) => {
-                        i(e), null == v || v(e);
+                        i(e), null == b || b(e);
                     },
                     children: [
                         (0, r.jsx)(a.qEK, {
