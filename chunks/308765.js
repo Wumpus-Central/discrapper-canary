@@ -27,7 +27,6 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     ChannelCallManager: {
-        actions: ['GUILD_LOCAL_RING_START', 'GUILD_RING_STOP'],
         inlineRequire: () => n(258833).Z,
         hasStoreChangeListeners: !0
     },

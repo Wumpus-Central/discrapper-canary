@@ -1,30 +1,31 @@
-n.d(t, { E: () => y }), n(26686);
+n.d(t, { E: () => O }), n(26686);
 var r = n(544891),
-    i = n(881052),
-    o = n(552871),
-    a = n(785141),
-    s = n(283080),
-    l = n(592125),
-    c = n(569611),
-    u = n(710845),
-    d = n(104639),
-    f = n(202680),
+    i = n(668757),
+    o = n(881052),
+    a = n(552871),
+    s = n(785141),
+    l = n(283080),
+    c = n(592125),
+    u = n(569611),
+    d = n(710845),
+    f = n(104639),
+    _ = n(202680),
     p = n(691895),
-    _ = n(889911),
-    h = n(981631);
-let m = 9437184,
-    g = 14680064,
-    E = new u.Z('DebugUploadManager'),
+    h = n(889911),
+    m = n(981631);
+let g = 9437184,
+    E = 14680064,
+    b = new d.Z('DebugUploadManager'),
     v = null,
-    b = null;
-async function y(e, t) {
+    y = null;
+async function O(e, t) {
     try {
-        await O(e), await (0, o.u)(g, t);
+        await I(e), await (0, a.u)(E, t);
     } catch (t) {
         let e;
         throw (
-            (t instanceof i.n0 && (e = 'UploadErrorCodes.'.concat(i.cz[t.code])),
-            (0, a.kr)(a.u.DEBUG_LOG_UPLOAD_FAILED, {
+            (t instanceof o.n0 && (e = 'UploadErrorCodes.'.concat(o.cz[t.code])),
+            (0, s.kr)(s.u.DEBUG_LOG_UPLOAD_FAILED, {
                 underlyingError: e,
                 errorMessage: t.message
             }),
@@ -32,49 +33,56 @@ async function y(e, t) {
         );
     }
 }
-async function O(e) {
+async function I(e) {
     try {
-        let t, n, i;
+        let n, o, a, s;
         try {
-            t = c.Pz();
+            n = u.Pz();
         } catch (e) {
-            t = 'Logs failed: '.concat(e);
-        }
-        try {
-            n = (null == v ? void 0 : v.getSystemLog) != null ? await new Promise((e) => v.getSystemLog(e)) : '';
-        } catch (e) {
-            n = 'System Logs failed '.concat(e);
+            n = 'Logs failed: '.concat(e);
         }
         try {
-            i = await (0, f.Z)().then((e) => (0, _.Z)(e, !0));
+            o = (null == v ? void 0 : v.getSystemLog) != null ? await new Promise((e) => v.getSystemLog(e)) : '';
         } catch (e) {
-            i = 'Push logs failed: '.concat(e);
+            o = 'System Logs failed '.concat(e);
         }
-        let o = t.length + n.length + i.length;
-        if (o > m) {
-            let e = 1 - m / o;
-            (t = t.slice(t.length - Math.floor(t.length * e))), (n = n.slice(n.length - Math.floor(n.length * e))), (i = i.slice(i.length - Math.floor(i.length * e)));
+        try {
+            a = await (0, _.Z)().then((e) => (0, h.Z)(e, !0));
+        } catch (e) {
+            a = 'Push logs failed: '.concat(e);
         }
-        let a = (null == b ? void 0 : b.AppOpenedTimestamp) != null ? b.AppOpenedTimestamp : null,
-            u = '\n    '
-                .concat((0, p.Z)(a), '\n\n    ')
-                .concat((0, s.EA)(), '\n\n    Metadata:\n    ')
-                .concat(JSON.stringify((0, d.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ')
-                .concat(JSON.stringify(l.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ')
-                .concat(t, '\n\n    System logs:\n    ')
-                .concat(n, '\n\n    Push Notifications:\n    ')
-                .concat(i, '\n    ');
-        c.ZH();
-        let g = h.ANM.DEBUG_LOG(e, 'discord_app_logs');
+        try {
+            var t;
+            s = null !== (t = (0, i.AG)()) && void 0 !== t ? t : '';
+        } catch (e) {
+            s = 'LibDiscore logs failed: '.concat(e);
+        }
+        let d = n.length + o.length + a.length + s.length;
+        if (d > g) {
+            let e = 1 - g / d;
+            (n = n.slice(n.length - Math.floor(n.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (s = s.slice(s.length - Math.floor(s.length * e)));
+        }
+        let E = (null == y ? void 0 : y.AppOpenedTimestamp) != null ? y.AppOpenedTimestamp : null,
+            b = '\n    '
+                .concat((0, p.Z)(E), '\n\n    ')
+                .concat((0, l.EA)(), '\n\n    Metadata:\n    ')
+                .concat(JSON.stringify((0, f.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ')
+                .concat(JSON.stringify(c.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ')
+                .concat(n, '\n\n    System logs:\n    ')
+                .concat(o, '\n\n    LibDiscore logs:\n    ')
+                .concat(s, '\n\n    Push Notifications:\n    ')
+                .concat(a, '\n    ');
+        u.ZH();
+        let O = m.ANM.DEBUG_LOG(e, 'discord_app_logs');
         await r.tn.post({
-            url: g,
-            body: u,
+            url: O,
+            body: b,
             retries: 3,
             headers: { 'Content-Type': 'text/plain' },
             oldFormErrors: !0,
             rejectWithError: !1
         });
     } catch (e) {
-        E.error('uploadAppLogFiles: upload app log files error '.concat(e.message));
+        b.error('uploadAppLogFiles: upload app log files error '.concat(e.message));
     }
 }

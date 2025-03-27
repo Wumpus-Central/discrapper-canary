@@ -5,8 +5,8 @@ var r = n(200651),
     o = n.n(a),
     s = n(685816),
     i = n(442837),
-    c = n(481060),
-    d = n(594174),
+    d = n(481060),
+    c = n(594174),
     u = n(960048),
     g = n(744112),
     h = n(139668),
@@ -17,22 +17,22 @@ var r = n(200651),
     C = n(953655),
     _ = n(548685),
     v = n(580914),
-    k = n(963278),
-    x = n(384067),
+    x = n(963278),
+    k = n(384067),
     j = n(215023),
     S = n(388032),
     y = n(39532);
 let O = (e) => {
         let { handleTransition: t, numVisibleItems: n, isFetchingCategories: a, tab: i } = e,
-            { noCache: c, includeUnpublished: d } = (0, b.Z)(),
+            { noCache: d, includeUnpublished: c } = (0, b.Z)(),
             {
                 isFetchingShopHome: u,
                 fetchShopHomeError: g,
                 shopBlocks: h,
                 refreshShopHome: f
             } = (0, m.E)(i, {
-                noCache: c,
-                includeUnpublished: d,
+                noCache: d,
+                includeUnpublished: c,
                 includeBundles: !0
             }),
             j = l.useCallback(() => {
@@ -69,10 +69,10 @@ let O = (e) => {
             });
         let S = (e, l) => {
             if (null == e) return null;
-            let c = null;
+            let d = null;
             switch (e.type) {
                 case s.z.HERO:
-                    c = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         v.Z,
                         {
                             isLoading: u,
@@ -84,7 +84,7 @@ let O = (e) => {
                     );
                     break;
                 case s.z.FEATURED:
-                    c = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         C.Z,
                         {
                             isLoading: u,
@@ -95,7 +95,7 @@ let O = (e) => {
                     );
                     break;
                 case s.z.FEED:
-                    c = (0, r.jsx)(
+                    d = (0, r.jsx)(
                         _.Z,
                         {
                             isLoading: u || a,
@@ -108,8 +108,8 @@ let O = (e) => {
                     );
                     break;
                 case s.z.WIDE_BANNER:
-                    c = (0, r.jsx)(
-                        x.Z,
+                    d = (0, r.jsx)(
+                        k.Z,
                         {
                             handleTransition: t,
                             wideBannerBlock: e,
@@ -119,8 +119,8 @@ let O = (e) => {
                     );
                     break;
                 case s.z.SHELF:
-                    c = (0, r.jsx)(
-                        k.Z,
+                    d = (0, r.jsx)(
+                        x.Z,
                         {
                             handleTransition: t,
                             shelf: e,
@@ -135,11 +135,8 @@ let O = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: o()(y.blockContainer, {
-                        [y.backgroundSecondary]: l % 2 == 1,
-                        [y.topBlockContainer]: 0 === l
-                    }),
-                    children: c
+                    className: o()(y.blockContainer, { [y.topBlockContainer]: 0 === l }),
+                    children: d
                 },
                 l
             );
@@ -149,15 +146,15 @@ let O = (e) => {
     E = (e) => {
         var t;
         let { isFullScreen: n, handleTransition: a, numVisibleItems: s, tab: m } = e,
-            { isFetchingCategories: C, fetchCategoriesError: _, fetchPurchasesError: v, claimError: k, refreshCategories: x } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
-            E = null !== (t = null != _ ? _ : v) && void 0 !== t ? t : k,
-            I = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
+            { isFetchingCategories: C, fetchCategoriesError: _, fetchPurchasesError: v, claimError: x, refreshCategories: k } = (0, f.ZP)({ location: 'CollectiblesFeedShop' }),
+            E = null !== (t = null != _ ? _ : v) && void 0 !== t ? t : x,
+            I = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
             B = (0, g.b)('Collectibles Shop Button'),
             T = (0, h.R)('CollectiblesFeedShop'),
-            { noCache: L, includeUnpublished: w } = (0, b.Z)(),
+            { noCache: L, includeUnpublished: N } = (0, b.Z)(),
             P = l.useCallback(() => {
-                x();
-            }, [x]);
+                k();
+            }, [k]);
         if (null == I) return null;
         if (null != E) {
             let e = [];
@@ -167,7 +164,7 @@ let O = (e) => {
                         isStaff: I.isStaff().toString(),
                         preloadEnabled: B.toString(),
                         disableCache: L.toString(),
-                        includeUnpublished: w.toString()
+                        includeUnpublished: N.toString()
                     }
                 });
         }
@@ -193,16 +190,16 @@ let O = (e) => {
                               (0, r.jsxs)('div', {
                                   className: y.endOfFeed,
                                   children: [
-                                      (0, r.jsx)(c.X6q, {
+                                      (0, r.jsx)(d.X6q, {
                                           variant: 'heading-md/semibold',
                                           children: S.NW.string(S.t.Yr70c3)
                                       }),
-                                      (0, r.jsx)(c.zxk, {
+                                      (0, r.jsx)(d.zxk, {
                                           className: y.endOfFeedButton,
                                           onClick: () => {
                                               a('shop all bottom', void 0, !0);
                                           },
-                                          children: (0, r.jsx)(c.Text, {
+                                          children: (0, r.jsx)(d.Text, {
                                               variant: 'text-md/medium',
                                               color: 'always-white',
                                               children: S.NW.string(S.t.AfrvRE)

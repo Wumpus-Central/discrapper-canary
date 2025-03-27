@@ -9,8 +9,8 @@ var r = n(147913),
     u = n(246946),
     d = n(979651),
     f = n(938475),
-    p = n(358221);
-function _(e, t) {
+    _ = n(358221);
+function p(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
 function h(e, t) {
@@ -31,10 +31,10 @@ function E(e, t) {
     var n = g(e, t, 'get');
     return h(e, n);
 }
-function v(e, t, n) {
-    _(e, t), t.set(e, n);
-}
 function b(e, t, n) {
+    p(e, t), t.set(e, n);
+}
+function v(e, t, n) {
     var r = g(e, t, 'set');
     return m(e, r, n), n;
 }
@@ -52,20 +52,16 @@ function y(e, t, n) {
     );
 }
 let O = (0, i.uk)('call_calling', o.Z.getSoundpack());
-var S = new WeakMap();
-class I extends r.Z {
+var I = new WeakMap();
+class S extends r.Z {
     _initialize() {
-        this.stores = new Map().set(a.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(p.Z, this.handleChannelRTCStoreChange).set(o.Z, this.handleSoundpackUpdate);
+        this.stores = new Map().set(a.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(o.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
-            v(this, S, {
+            b(this, I, {
                 writable: !0,
                 value: new Set()
-            }),
-            y(this, 'actions', {
-                GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
-                GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
             }),
             y(this, '_handleRing', (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
@@ -81,39 +77,25 @@ class I extends r.Z {
                 let n = c.Z.getVoiceChannelId(),
                     r = null !== (t = null === (e = s.Z.getChannel(n)) || void 0 === e ? void 0 : e.guild_id) && void 0 !== t ? t : null,
                     i = a.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
-                this._handleRing(i || E(this, S).size > 0, r);
-            }),
-            y(this, 'handleGuildRingStart', (e) => {
-                let { ringing: t, guildId: n } = e;
-                t.forEach((e) => {
-                    E(this, S).add(e);
-                }),
-                    this._handleRing(E(this, S).size > 0, n);
-            }),
-            y(this, 'handleGuildRingStop', (e) => {
-                let { ringing: t, guildId: n } = e;
-                t.forEach((e) => {
-                    E(this, S).delete(e);
-                }),
-                    this._handleRing(E(this, S).size > 0, n);
+                this._handleRing(i || E(this, I).size > 0, r);
             }),
             y(this, 'handleChannelRTCStoreChange', () => {
                 let e = c.Z.getVoiceChannelId(),
-                    t = E(this, S).size > 0;
+                    t = E(this, I).size > 0;
                 if (!t) return;
                 if (null == e && t) {
-                    b(this, S, new Set()), this._handleRing(E(this, S).size > 0, null);
+                    v(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
                     return;
                 }
                 if (null == e) return;
-                let n = p.Z.getGuildRingingUsers(e),
-                    r = E(this, S).difference(n);
+                let n = _.Z.getGuildRingingUsers(e),
+                    r = new Set([...E(this, I)].filter((e) => !n.has(e)));
                 r.size > 0 &&
                     (r.forEach((e) => {
-                        E(this, S).delete(e);
+                        E(this, I).delete(e);
                     }),
-                    this._handleRing(E(this, S).size > 0, null));
+                    this._handleRing(E(this, I).size > 0, null));
             });
     }
 }
-let T = new I();
+let T = new S();

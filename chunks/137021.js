@@ -20,8 +20,8 @@ var r = n(200651),
 function O(e) {
     var t,
         n,
-        { applicationId: h, onClose: O, transitionState: S, message: _, launchParams: N, onShare: P } = e,
-        E = (function (e, t) {
+        { applicationId: h, customId: O, linkId: S, message: _, onClose: N, onCopyLink: E, onShare: P, transitionState: Z } = e,
+        L = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -39,89 +39,88 @@ function O(e) {
                 for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
-        })(e, ['applicationId', 'onClose', 'transitionState', 'message', 'launchParams', 'onShare']);
-    let [Z] = (0, u.Z)([h]),
-        L = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        [C, w] = l.useState(!1),
-        [k, T] = l.useState(''),
-        [D, R] = l.useState('');
+        })(e, ['applicationId', 'customId', 'linkId', 'message', 'onClose', 'onCopyLink', 'onShare', 'transitionState']);
+    let [C] = (0, u.Z)([h]),
+        w = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        [k, T] = l.useState(!1),
+        [D, R] = l.useState(''),
+        [M, I] = l.useState('');
     l.useEffect(() => {
-        let { referrerId: e, customId: t, linkId: n } = N;
-        R(
+        I(
             (0, o.H)({
                 applicationId: h,
-                referrerId: null != e ? e : null == L ? void 0 : L.id,
-                customId: t,
-                linkId: n
+                referrerId: null == w ? void 0 : w.id,
+                customId: O,
+                linkId: S
             })
         );
-    }, [h, L, N, R]);
-    let M = l.useRef(0),
-        [I, W] = l.useState([]),
-        A = I.length,
-        U = A >= 5;
+    }, [h, w, O, S, I]);
+    let W = l.useRef(0),
+        [A, U] = l.useState([]),
+        z = A.length,
+        H = z >= 5;
     l.useEffect(() => {
-        if ('' === k) {
+        if ('' === D) {
             var e;
-            null === (e = H.current) || void 0 === e || e.focus();
+            null === (e = F.current) || void 0 === e || e.focus();
         }
-    }, [k]);
-    let z = l.useCallback(() => {
-            T('');
-        }, [T]),
-        H = l.useRef(null),
-        { results: q, updateSearchText: F } = (0, f.s)({
-            selectedDestinations: I,
+    }, [D]);
+    let q = l.useCallback(() => {
+            R('');
+        }, [R]),
+        F = l.useRef(null),
+        { results: B, updateSearchText: G } = (0, f.s)({
+            selectedDestinations: A,
             includeMissingDMs: !0
         }),
-        B = l.useCallback(
+        X = l.useCallback(
             (e) => {
-                T(e), F(e);
+                R(e), G(e);
             },
-            [T, F]
+            [R, G]
         ),
-        G = l.useCallback(
+        V = l.useCallback(
             (e) => {
-                W((t) => {
+                U((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return U ? t : (T(''), (M.current += 1), [e, ...t]);
+                    if (-1 === n) return H ? t : (R(''), (W.current += 1), [e, ...t]);
                     let r = [...t];
-                    return r.splice(n, 1), (M.current += 1), r;
+                    return r.splice(n, 1), (W.current += 1), r;
                 });
             },
-            [U]
+            [H]
         ),
-        X = l.useCallback(
+        J = l.useCallback(
             async (e) => {
-                if (null == Z) return;
+                if (null == C) return;
                 let t = g.NW.formatToMarkdownString(g.t.dZJpdH, {
-                        applicationName: Z.name,
-                        link: D
+                        applicationName: C.name,
+                        link: M
                     }),
                     n = ''.concat(_, '\n\n').concat(t);
-                w(!0),
+                T(!0),
                     (await Promise.all(e.map(d.qx))).filter(m.lm).forEach(async (e) => {
                         let t = b.Z.getChannel(e);
-                        null != t && (await i.Z.sendMessage(e, c.ZP.parse(t, n)));
+                        null != t && (await i.Z.sendMessage(e, c.ZP.parse(t, n), !1));
                     }),
-                    (0, a.showToast)((0, a.createToast)(g.NW.formatToPlainString(g.t.jQULqK, { applicationName: Z.name }), a.ToastType.SUCCESS)),
+                    (0, a.showToast)((0, a.createToast)(g.NW.formatToPlainString(g.t.jQULqK, { applicationName: C.name }), a.ToastType.SUCCESS)),
                     P(!0),
-                    O();
+                    N();
             },
-            [_, D, O, P, Z]
+            [_, M, N, P, C]
         ),
-        V =
-            q.length > 0
+        K =
+            B.length > 0
                 ? (0, r.jsx)(y.Q, {
                       paddingBottom: 16,
                       paddingTop: 16,
-                      rowData: q,
-                      handleToggleDestination: G,
-                      selectedDestinations: I,
-                      disableSelection: U
+                      rowData: B,
+                      handleToggleDestination: V,
+                      selectedDestinations: A,
+                      disableSelection: H
                   })
                 : (0, r.jsxs)(a.hzk, {
                       className: j.noResults,
@@ -164,7 +163,7 @@ function O(e) {
                     });
             }
             return e;
-        })({ transitionState: S }, E)),
+        })({ transitionState: Z }, L)),
         (n = n =
             {
                 className: j.modalRoot,
@@ -193,37 +192,37 @@ function O(e) {
                                     }),
                                     (0, r.jsx)(a.olH, {
                                         className: j.closeButton,
-                                        onClick: O
+                                        onClick: N
                                     })
                                 ]
                             }),
                             (0, r.jsx)(a.E1j, {
-                                ref: H,
+                                ref: F,
                                 size: a.E1j.Sizes.MEDIUM,
-                                query: k,
-                                onChange: B,
-                                onClear: z,
+                                query: D,
+                                onChange: X,
+                                onClear: q,
                                 placeholder: g.NW.string(g.t['5h0QOD']),
                                 'aria-label': g.NW.string(g.t['5h0QOD']),
                                 autoFocus: !0
                             })
                         ]
                     }),
-                    V,
+                    K,
                     (0, r.jsx)(a.mzw, {
                         className: j.footer,
                         children: (0, r.jsxs)('div', {
                             className: j.copySendBar,
                             children: [
                                 (0, r.jsx)(v, {
-                                    link: D,
-                                    onShare: P
+                                    link: M,
+                                    onCopyLink: E
                                 }),
                                 (0, r.jsx)(a.zxk, {
                                     className: j.sendWithMessage,
-                                    onClick: () => X(I),
-                                    submitting: C,
-                                    disabled: !(A > 0),
+                                    onClick: () => J(A),
+                                    submitting: k,
+                                    disabled: !(z > 0),
                                     children: g.NW.string(g.t.TXNS7e)
                                 })
                             ]
@@ -247,7 +246,7 @@ function O(e) {
     );
 }
 function v(e) {
-    let { link: t, onShare: n } = e,
+    let { link: t, onCopyLink: n } = e,
         [s, i] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -266,7 +265,7 @@ function v(e) {
             look: a.zxk.Looks.LINK,
             color: a.zxk.Colors.LINK,
             onClick: function () {
-                (0, h.JG)(t), n(!0), i(!0);
+                (0, h.JG)(t), n(), i(!0);
             },
             innerClassName: j.copyButton,
             children: [

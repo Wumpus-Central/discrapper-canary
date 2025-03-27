@@ -9,58 +9,66 @@ var r = n(200651),
     u = n(63063),
     d = n(665149),
     p = n(388032);
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
+let m = () =>
+    (0, o.ZDy)(async () => {
+        let { default: e } = await n.e('83051').then(n.bind(n, 115072));
+        return (t) =>
+            (0, r.jsx)(
+                e,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, t)
+            );
+    });
 function f(e) {
     let { className: t } = e,
-        f = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
-        [h, g] = i.useState(!1),
-        [_, b] = i.useState(0),
-        v = (e) => {
-            clearTimeout(_),
-                b(
+        n = (0, a.e7)([c.Z], () => c.Z.isDeveloper),
+        [f, h] = i.useState(!1),
+        [g, _] = i.useState(0),
+        b = (e) => {
+            clearTimeout(g),
+                _(
                     setTimeout(() => {
-                        g(e);
+                        h(e);
                     }, 100)
                 );
         };
     return (0, r.jsx)('div', {
-        onMouseEnter: () => v(!0),
-        onMouseLeave: () => v(!1),
+        onMouseEnter: () => b(!0),
+        onMouseLeave: () => b(!1),
         children: (0, r.jsx)(o.yRy, {
-            shouldShow: h,
+            shouldShow: f,
             animation: o.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
-            onRequestOpen: () => g(!0),
-            onRequestClose: () => g(!1),
+            onRequestOpen: () => h(!0),
+            onRequestClose: () => h(!1),
             renderPopout: () =>
                 (function (e) {
-                    let { onClose: t, isDiscordDeveloper: i } = e;
+                    let { onClose: t, isDiscordDeveloper: n } = e;
                     return (0, r.jsx)(o.v2r, {
                         onSelect: () => {},
                         navId: 'staff-help-popout',
@@ -73,13 +81,9 @@ function f(e) {
                                     id: 'staff-help-bug-reporter',
                                     label: p.NW.string(p.t['5Lqopa']),
                                     icon: o.nnZ,
-                                    action: () =>
-                                        (0, o.ZDy)(async () => {
-                                            let { default: e } = await n.e('83051').then(n.bind(n, 115072));
-                                            return (t) => (0, r.jsx)(e, m({}, t));
-                                        })
+                                    action: m
                                 }),
-                                i &&
+                                n &&
                                     (0, r.jsx)(o.sNh, {
                                         id: 'staff-devtools',
                                         label: 'Toggle DevTools',
@@ -96,36 +100,18 @@ function f(e) {
                         })
                     });
                 })({
-                    onClose: () => g(!1),
-                    isDiscordDeveloper: f
+                    onClose: () => h(!1),
+                    isDiscordDeveloper: n
                 }),
             children: (e, n) => {
-                var i, a;
-                let { isShown: l } = n;
-                return (0, r.jsx)(
-                    d.JO,
-                    ((i = m({}, e)),
-                    (a = a =
-                        {
-                            icon: o.nnZ,
-                            'aria-label': p.NW.string(p.t.cqEoj4),
-                            selected: l,
-                            className: t
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
-                          }),
-                    i)
-                );
+                let { isShown: i } = n;
+                return (0, r.jsx)(d.JO, {
+                    onClick: m,
+                    icon: o.nnZ,
+                    'aria-label': p.NW.string(p.t.cqEoj4),
+                    selected: i,
+                    className: t
+                });
             }
         })
     });

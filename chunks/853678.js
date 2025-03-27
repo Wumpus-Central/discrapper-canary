@@ -1,5 +1,5 @@
 n.d(t, { Z: () => P }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(789020);
-var r = n(115911),
+var r = n(252258),
     i = n(45792),
     l = n(230711),
     o = n(782568),
@@ -63,7 +63,7 @@ let C = new Set([y.Fu, y.JT]),
                     let e = new URL(n),
                         t = e.toString();
                     if (m.isPlatformEmbedded) {
-                        let e = (0, a.R)({ isContextless: (null == i ? void 0 : i.location.kind) === r.X.CONTEXTLESS }) ? v.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, a.R)({ isContextless: (null == i ? void 0 : i.location.kind) === r.E.CONTEXTLESS }) ? v.KJ3.ACTIVITY_POPOUT : null;
                         h.Z.focus(e, !0);
                     }
                     let l = p.Z.getApplication(null == i ? void 0 : i.applicationId),
@@ -112,24 +112,21 @@ let C = new Set([y.Fu, y.JT]),
                 var t;
                 let {
                     socket: n,
-                    args: { referrer_id: r, custom_id: i, message: l, link_id: o }
+                    args: { custom_id: r, message: i, link_id: l }
                 } = e;
                 (0, _.bu)(n.transport);
-                let a = (0, _._f)(n.application);
-                if (null == a) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No application.');
-                let s = (0, O.Z)();
-                if (null == s) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No channel found');
+                let o = (0, _._f)(n.application);
+                if (null == o) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No application.');
+                let a = (0, O.Z)();
+                if (null == a) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'No channel found');
                 if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, v.udG.EMBEDDED)) throw new b.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, u._)({
-                        applicationId: a,
-                        channelId: s.id,
-                        launchParams: {
-                            referrerId: r,
-                            customId: i,
-                            linkId: o
-                        },
-                        message: l,
+                        applicationId: o,
+                        channelId: a.id,
+                        customId: r,
+                        linkId: l,
+                        message: i,
                         onShare: (t, n) => {
                             e({
                                 success: t,

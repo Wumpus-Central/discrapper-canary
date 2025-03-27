@@ -1,10 +1,12 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var r = n(956067),
-    i = n(147913),
-    o = n(70956),
-    a = n(640795),
-    s = n(139674);
-function l(e, t, n) {
+    i = n(668757),
+    o = n(147913),
+    a = n(185996),
+    s = n(70956),
+    l = n(640795),
+    c = n(139674);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,16 +19,20 @@ function l(e, t, n) {
         e
     );
 }
-let c = 4 * o.Z.Millis.HOUR;
-class u extends i.Z {
+let d = 4 * s.Z.Millis.HOUR;
+class f extends o.Z {
     _initialize() {
-        setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => s.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, a.q)(), 10 * o.Z.Millis.SECOND), (this.intervalID = setInterval(a.q, c));
+        if ((0, a.U)()) {
+            (0, i.pf)();
+            return;
+        }
+        setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => c.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * s.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
     }
     _terminate() {
         clearInterval(this.intervalID);
     }
     constructor(...e) {
-        super(...e), l(this, 'intervalID', void 0);
+        super(...e), u(this, 'intervalID', void 0);
     }
 }
-let d = new u();
+let _ = new f();
