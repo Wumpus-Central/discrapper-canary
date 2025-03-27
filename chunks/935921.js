@@ -13,6 +13,7 @@ e.exports = {
     tagInputContainer: 'tagInputContainer__69ef9',
     tagInputWrapper: 'tagInputWrapper__69ef9',
     tagInput: 'tagInput__69ef9',
+    tagChangeInfoBox: 'tagChangeInfoBox__69ef9',
     pickerGrid: 'pickerGrid__69ef9',
     pickerItem: 'pickerItem__69ef9',
     pickerItemSelected: 'pickerItemSelected__69ef9',
