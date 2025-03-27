@@ -38,8 +38,8 @@ var r = n(200651),
     W = n(347475),
     U = n(706454),
     B = n(662594),
-    H = n(430824),
-    F = n(111583),
+    F = n(430824),
+    H = n(111583),
     G = n(594174),
     V = n(585483),
     z = n(823379),
@@ -138,6 +138,7 @@ class el extends i.Component {
             v = et(e, ['colorString', 'colorRoleName', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
             y = null != b ? new Date(b) : null;
         return (0, r.jsx)(m.yRy, {
+            clickTrap: !0,
             preload: () =>
                 (0, D.Z)(o, {
                     channelId: p.id,
@@ -238,13 +239,13 @@ let eo = i.memo((e) => {
             n = et(e, ['colorRoleId']),
             { channel: i, user: l, index: o } = e,
             a = (0, c.JA)(''.concat(o)),
-            s = (0, h.e7)([F.Z], () => F.Z.isTyping(i.id, l.id)),
+            s = (0, h.e7)([H.Z], () => H.Z.isTyping(i.id, l.id)),
             u = (0, h.e7)([G.default], () => G.default.getCurrentUser()),
             d = (0, h.e7)(
-                [H.Z],
+                [F.Z],
                 () => {
                     var e;
-                    return null != t ? (null === (e = H.Z.getRole(i.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
+                    return null != t ? (null === (e = F.Z.getRole(i.guild_id, t)) || void 0 === e ? void 0 : e.name) : void 0;
                 },
                 [i, t]
             ),

@@ -130,6 +130,7 @@ class U extends (r = l.PureComponent) {
                 onMouseEnter: r ? void 0 : this.handleMouseEnter,
                 onMouseLeave: r ? void 0 : this.handleHidePreview,
                 children: (0, i.jsx)(c.yRy, {
+                    clickTrap: !0,
                     targetElementRef: this.domElementRef,
                     preload: () =>
                         (0, j.Z)(l.id, l.getAvatarURL(o.guild_id, 80), {
