@@ -170,7 +170,9 @@ function e6(e) {
         {
             updateOpenPopoutRef: E,
             highlightBadge: j,
-            setHighlightBadge: C
+            setHighlightBadge: C,
+            pendingBadges: S,
+            setPendingBadges: v
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -179,14 +181,15 @@ function e6(e) {
                     };
                 }, []),
                 [n, r] = i.useState(),
-                [s, a] = i.useState(!1);
+                [s, a] = i.useState(),
+                [l, o] = i.useState(!1);
             return (
-                (0, O.Z)(() => a(!0), 750),
+                (0, O.Z)(() => o(!0), 750),
                 i.useEffect(() => {
                     let t = (t) => {
                         var n;
-                        let { highlightBadge: i } = t;
-                        null != i && r(i), null === (n = e.current) || void 0 === n || n.call(e);
+                        let { pendingBadges: i, highlightBadge: s } = t;
+                        null != s && r(s), null != i && a(i), null === (n = e.current) || void 0 === n || n.call(e);
                     };
                     return (
                         eW.S.subscribe(ez.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
@@ -197,13 +200,15 @@ function e6(e) {
                 }),
                 {
                     updateOpenPopoutRef: t,
-                    highlightBadge: s ? n : void 0,
-                    setHighlightBadge: r
+                    highlightBadge: l ? n : void 0,
+                    setHighlightBadge: r,
+                    pendingBadges: s,
+                    setPendingBadges: a
                 }
             );
         })(),
-        S = (0, $.A)(u),
-        { showTempStatusOptions: v } = en.Y.useExperiment({ location: 'AvatarWithPopout' }, { autoTrackExposure: !1 });
+        T = (0, $.A)(u),
+        { showTempStatusOptions: I } = en.Y.useExperiment({ location: 'AvatarWithPopout' }, { autoTrackExposure: !1 });
     return null == s
         ? null
         : (0, r.jsx)(_.Z, {
@@ -217,6 +222,7 @@ function e6(e) {
                           className: eq.accountProfilePopoutWrapper,
                           children: (0, r.jsx)(X.Z, {
                               currentUser: s,
+                              pendingBadges: S,
                               highlightBadge: j,
                               onClose: () => {
                                   null == t || t();
@@ -231,7 +237,7 @@ function e6(e) {
                   spacing: 14,
                   fixed: !0,
                   onRequestClose: () => {
-                      c(), C(void 0);
+                      c(), C(void 0), v(void 0);
                   },
                   preload: () =>
                       (0, em.Z)(s, void 0, {
@@ -246,7 +252,7 @@ function e6(e) {
                               eJ(
                                   {
                                       innerRef: g,
-                                      style: S
+                                      style: T
                                   },
                                   e
                               ),
@@ -267,7 +273,7 @@ function e6(e) {
                                           status: n ? ez.Skl.STREAMING : l,
                                           isSpeaking: t,
                                           className: eq.avatar,
-                                          pulseStatusIcon: v
+                                          pulseStatusIcon: I
                                       }),
                                       (0, r.jsx)('div', {
                                           className: a()(eq.nameTag, { [eq.canCopy]: ek.wS }),
