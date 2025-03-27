@@ -1,27 +1,22 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    o = n(748545),
-    a = n(531301),
-    s = n(475413),
-    l = n(228168),
-    c = n(388032),
-    u = n(941313);
-function d(e, t, n) {
-    return e ? n : t ? c.NW.string(c.t['1ZZttr']) : c.NW.string(c.t.Dglxra);
-}
-function f(e) {
-    let { userId: t, isHovering: n, onOpenProfile: c } = e,
-        { note: f } = (0, a.Z)(t),
-        p = null != f && '' !== f,
-        _ = (0, o.kc)({ location: 'UserProfileNoteButton' });
-    return (0, r.jsx)(s.y, {
+    o = n(531301),
+    a = n(475413),
+    s = n(228168),
+    l = n(388032),
+    c = n(6552);
+function u(e) {
+    let { userId: t, isHovering: n, onOpenProfile: u } = e,
+        { note: d } = (0, o.Z)(t),
+        f = null != d && '' !== d;
+    return (0, r.jsx)(a.y, {
         action: 'PRESS_ADD_NOTE',
-        icon: p ? i.hH0 : i.Wos,
-        tooltipText: d(p, _, f),
-        tooltipClassName: p ? u.tooltip : void 0,
+        icon: f ? i.hH0 : i.Wos,
+        tooltipText: f ? d : l.NW.string(l.t['1ZZttr']),
+        tooltipClassName: f ? c.tooltip : void 0,
         isHovering: n,
-        onClick: () => (null == c ? void 0 : c({ subsection: l.Tb.NOTE }))
+        onClick: () => (null == u ? void 0 : u({ subsection: s.Tb.NOTE }))
     });
 }

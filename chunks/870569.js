@@ -1,104 +1,105 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
-n(192379);
-var l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    a = n(686546),
-    s = n(796171);
-function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: E, innerClassName: f, className: p, redGlow: h, tooltipClassName: C, onMouseEnter: _, onMouseLeave: O, 'aria-label': g, 'aria-checked': T, role: I, tooltipColor: S, tooltipForceOpen: N, tooltipContentClassName: b, plated: v } = e,
+n.d(t, { Z: () => u });
+var l = n(200651),
+    r = n(192379),
+    i = n(120356),
+    o = n.n(i),
+    a = n(481060),
+    s = n(686546),
+    c = n(796171);
+let u = r.forwardRef(function (e, t) {
+    let { tooltipText: n, children: r, onContextMenu: i, onClick: u, disabled: d, icon: E, iconForeground: f, innerClassName: p, className: h, redGlow: C, tooltipClassName: _, onMouseEnter: O, onMouseLeave: g, 'aria-label': S, 'aria-checked': T, role: I, tooltipColor: N, tooltipForceOpen: b, tooltipContentClassName: v, plated: m } = e,
         A =
-            'function' == typeof d
-                ? (0, r.jsx)(d, {
+            'function' == typeof E
+                ? (0, l.jsx)(E, {
                       width: 20,
                       height: 20,
                       size: 'custom',
-                      colorClass: null != E ? E : '',
+                      colorClass: null != f ? f : '',
                       color: 'currentColor'
                   })
-                : d;
-    return (0, r.jsx)(o.ua7, {
-        tooltipClassName: C,
-        text: t,
-        'aria-label': g,
-        color: S,
-        tooltipContentClassName: b,
-        forceOpen: N,
+                : E;
+    return (0, l.jsx)(a.ua7, {
+        tooltipClassName: _,
+        text: n,
+        'aria-label': S,
+        color: N,
+        tooltipContentClassName: v,
+        forceOpen: b,
         children: (e) => {
-            var t,
-                d,
-                { onClick: E, onMouseEnter: C, onMouseLeave: g } = e,
-                S = (function (e, t) {
+            var n,
+                E,
+                { onClick: f, onMouseEnter: _, onMouseLeave: S } = e,
+                N = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        l = (function (e, t) {
+                        l,
+                        r = (function (e, t) {
                             if (null == e) return {};
                             var n,
-                                r,
-                                l = {},
+                                l,
+                                r = {},
                                 i = Object.keys(e);
-                            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                            return l;
+                            for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
                         var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                        for (l = 0; l < i.length; l++) (n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                     }
-                    return l;
+                    return r;
                 })(e, ['onClick', 'onMouseEnter', 'onMouseLeave']);
-            return (0, r.jsxs)(
-                o.zxk,
-                ((t = (function (e) {
+            return (0, l.jsxs)(
+                a.zxk,
+                ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            l = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            l.forEach(function (t) {
+                                var l;
+                                (l = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = l);
                             });
                     }
                     return e;
-                })({}, S)),
-                (d = d =
+                })({}, N)),
+                (E = E =
                     {
-                        look: o.zxk.Looks.BLANK,
-                        size: o.zxk.Sizes.NONE,
-                        disabled: u,
-                        innerClassName: f,
-                        wrapperClassName: i()(s.button, p),
-                        className: i()(s.button, p, {
-                            [s.redGlow]: h,
-                            [s.disabled]: u,
-                            [s.enabled]: !u,
-                            [s.plated]: v,
-                            [s.plateMuted]: h && v
+                        buttonRef: t,
+                        look: a.zxk.Looks.BLANK,
+                        size: a.zxk.Sizes.NONE,
+                        disabled: d,
+                        innerClassName: p,
+                        wrapperClassName: o()(c.button, h),
+                        className: o()(c.button, h, {
+                            [c.redGlow]: C,
+                            [c.disabled]: d,
+                            [c.enabled]: !d,
+                            [c.plated]: m,
+                            [c.plateMuted]: C && m
                         }),
                         onClick: (e) => {
-                            null != E && E(), null != c && c(e);
+                            null != f && f(), null != u && u(e);
                         },
                         onMouseEnter: () => {
-                            null == C || C(), null == _ || _();
+                            null == _ || _(), null == O || O();
                         },
                         onMouseLeave: () => {
-                            null == g || g(), null == O || O();
+                            null == S || S(), null == g || g();
                         },
-                        onContextMenu: l,
+                        onContextMenu: i,
                         role: I,
                         'aria-checked': T,
                         focusProps: {
@@ -110,31 +111,31 @@ function c(e) {
                             }
                         },
                         children: [
-                            null != n
-                                ? (0, r.jsx)(a.ZP, {
+                            null != r
+                                ? (0, l.jsx)(s.ZP, {
                                       width: 20,
                                       height: 20,
-                                      mask: a.ZP.Masks.PANEL_BUTTON,
+                                      mask: s.ZP.Masks.PANEL_BUTTON,
                                       children: A
                                   })
                                 : A,
-                            n
+                            r
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(d))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(E))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var l = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, l);
                           }
                           return n;
-                      })(Object(d)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(d, e));
+                      })(Object(E)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(E, e));
                       }),
-                t)
+                n)
             );
         }
     });
-}
+});
