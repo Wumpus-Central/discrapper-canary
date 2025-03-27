@@ -1,1 +1,1 @@
-e.exports = { panel: 'panel__6dc2e' };
+e.exports = { previewPanel: 'previewPanel__6dc2e' };
