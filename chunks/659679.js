@@ -1,4 +1,4 @@
-t.d(n, { Z: () => m });
+t.d(n, { Z: () => x });
 var r = t(200651);
 t(192379);
 var i = t(793030),
@@ -8,13 +8,13 @@ var i = t(793030),
     l = t(271383),
     c = t(709586),
     d = t(709054),
-    u = t(730621),
-    p = t(388032),
-    v = t(652754);
-function m(e) {
+    u = t(296260),
+    m = t(388032),
+    p = t(652754);
+function x(e) {
     let { boost: n } = e,
         t = new Date(d.default.extractTimestamp(n.id)),
-        { username: m, roleColor: x } = (0, o.cj)(
+        { username: x, roleColor: v } = (0, o.cj)(
             [l.ZP],
             () => {
                 var e, t, r;
@@ -26,30 +26,34 @@ function m(e) {
             [n]
         );
     return (0, r.jsx)(a.Z, {
-        className: v.systemMessageContainer,
-        contentClassName: v.systemMessageContent,
+        className: p.systemMessageContainer,
+        contentClassName: p.systemMessageContent,
         iconNode: (0, r.jsx)(c.Z, {
-            className: v.icon,
+            className: p.icon,
             width: 16,
             height: 16
         }),
-        iconContainerClassName: v.iconContainer,
-        timestampClassName: v.timestamp,
+        iconContainerClassName: p.iconContainer,
+        timestampClassName: p.timestamp,
         timestamp: t,
         compact: !0,
         children: (0, r.jsxs)('span', {
-            className: v.boostMessage,
+            className: p.boostMessage,
             children: [
-                (0, r.jsx)(i.xv, {
-                    variant: 'text-md/semibold',
-                    children: (0, r.jsx)(s.PUh, {
-                        name: m,
-                        color: null != x ? x : void 0
-                    })
+                (0, r.jsx)(s.PUh, {
+                    className: p.boostMessageUser,
+                    name: (0, r.jsx)(i.xv, {
+                        color: 'currentColor',
+                        variant: 'text-md/semibold',
+                        lineClamp: 1,
+                        children: x
+                    }),
+                    color: null != v ? v : void 0
                 }),
                 (0, r.jsx)(i.xv, {
                     variant: 'text-md/medium',
-                    children: p.NW.string(u.Z.plwH8f)
+                    lineClamp: 1,
+                    children: m.NW.string(u.Z.plwH8f)
                 })
             ]
         })
