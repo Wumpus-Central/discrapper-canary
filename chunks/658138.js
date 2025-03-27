@@ -1,4 +1,4 @@
-n.d(t, { D: () => h });
+n.d(t, { D: () => N });
 var r = n(200651),
     i = n(192379),
     l = n(990547),
@@ -8,43 +8,47 @@ var r = n(200651),
     s = n(377171),
     u = n(626135),
     d = n(436952),
-    f = n(611725),
-    O = n(981631),
-    b = n(388032),
-    p = n(151889);
-function h(e) {
-    let t = (0, d.sX)({ location: 'channel_context_menu' }),
-        { openPickerForChannel: n } = (0, f.B)(),
-        h = (0, i.useCallback)(() => {
-            o.default.selectPrivateChannel(e.id), n(e.id), u.default.track(O.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
-        }, [e.id, n]),
-        N = t.enabled && t.entryPoint === d.FN.CONTEXT_MENU && e.isPrivate();
+    f = n(54480),
+    O = n(611725),
+    b = n(981631),
+    p = n(388032),
+    h = n(151889);
+function N(e) {
+    let { openPickerForChannel: t } = (0, O.B)(),
+        n = (0, i.useCallback)(() => {
+            o.default.selectPrivateChannel(e.id), t(e.id), u.default.track(b.rMx.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT_CLICKED, { channel_id: e.id });
+        }, [e.id, t]),
+        { canAccessPicker: N, entryPoint: y } = (0, f.m)({
+            location: 'useChannelWallpaperItem',
+            selectedChannelId: e.id
+        }),
+        _ = y === d.FN.CONTEXT_MENU && e.isPrivate() && N;
     return ((0, c.Z)(
         {
             type: l.ImpressionTypes.MENU,
             name: l.ImpressionNames.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT
         },
-        { disableTrack: !N }
+        { disableTrack: !_ }
     ),
-    N)
+    _)
         ? (0, r.jsx)(a.sNh, {
               id: 'set-wallpaper',
               label: (0, r.jsxs)('div', {
-                  className: p.label,
+                  className: h.label,
                   children: [
-                      b.NW.string(b.t.GixvUl),
+                      p.NW.string(p.t.GixvUl),
                       (0, r.jsx)(a.IGR, {
-                          text: b.NW.string(b.t.y2b7CA),
+                          text: p.NW.string(p.t.y2b7CA),
                           color: s.Z.BG_BRAND
                       })
                   ]
               }),
               icon: () =>
                   (0, r.jsx)('div', {
-                      className: p.iconWrapper,
+                      className: h.iconWrapper,
                       children: (0, r.jsx)(a.SrA, { size: 'xs' })
                   }),
-              action: h
+              action: n
           })
         : null;
 }
