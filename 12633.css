@@ -12021,8 +12021,13 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .soundButtonWrapper__9be63 {
+    border-radius: var(--radius-sm);
     list-style: none;
     position: relative
+}
+
+.visual-refresh .soundButtonWrapper__9be63 {
+    background: var(--background-base-lower)
 }
 
 .soundButton__9be63 {
@@ -23543,13 +23548,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     cursor: pointer
 }
 
-.soundButtonWrapper__6eb78 {
-    list-style: none
-}
-
 .soundShowAllButton__6eb78 {
-    cursor: pointer;
-    gap: 4px
+    cursor: pointer
 }
 
 .visual-refresh .soundShowAllButton__6eb78 {
@@ -23564,12 +23564,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background: var(--background-mod-strong)
 }
 
-.disabled__6eb78 {
-    pointer-events: none
+.soundShowAllButton__6eb78 svg {
+    margin: 0 -3px 0 3px
 }
 
-.soundButtonWrapper_da9eb2 {
-    list-style: none
+.disabled__6eb78 {
+    pointer-events: none
 }
 
 .soundAddButton_da9eb2 {
@@ -23597,6 +23597,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .visual-refresh .soundAddButton_da9eb2.focused_da9eb2 {
     border-color: var(--border-strong);
     color: var(--text-default)
+}
+
+.soundAddButton_da9eb2 svg {
+    margin-right: 3px
 }
 
 .soundAddButtonRefresh_da9eb2 {
