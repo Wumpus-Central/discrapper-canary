@@ -248,14 +248,16 @@ let E = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
         return e;
     },
-    Q = () => {
-        let { categories: e, purchases: t } = (0, l.ZP)({ location: 'NameplateModal' }),
-            n = w(e, i.Z.NAMEPLATE),
-            r = P(t, i.Z.NAMEPLATE),
-            o = new Set(r.map((e) => e.id));
+    Q = (e) => {
+        let { categories: t, purchases: n, isFetchingCategories: r, isFetchingPurchases: o } = (0, l.ZP)({ location: e }),
+            a = w(t, i.Z.NAMEPLATE),
+            s = P(n, i.Z.NAMEPLATE),
+            c = new Set(s.map((e) => e.id));
         return {
-            available: n.filter((e) => !o.has(e.id)),
-            purchased: r
+            available: a.filter((e) => !c.has(e.id)),
+            purchased: s,
+            isFetchingCategories: r,
+            isFetchingPurchases: o
         };
     },
     X = (e) => {

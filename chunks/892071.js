@@ -21,10 +21,10 @@ function d() {
     return e;
 }
 function f(e) {
-    let { isRefreshEnabled: t, isRefreshChatInputEnabled: n, rootClassName: o, lang: d, theme: f, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: v, useForcedColors: y, systemForcedColors: O, useReducedMotion: I, alwaysShowLinkDecorations: S, children: T } = e,
+    let { isRefreshEnabled: t, isRefreshChatInputEnabled: n, rootClassName: o, lang: d, theme: f, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: v, useForcedColors: y, systemForcedColors: O, useReducedMotion: I, alwaysShowLinkDecorations: S, hardwareAccelerationEnabled: T, children: A } = e,
         N = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        A = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
-        C = a()(
+        C = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
+        R = a()(
             (0, c.Z)(),
             (0, l.QeD)(f),
             'density-'.concat(_),
@@ -44,20 +44,21 @@ function f(e) {
                 'disable-forced-colors': !y && 'active' === O,
                 'enable-forced-colors': y,
                 'visual-refresh': t,
+                'hardware-acceleration': T,
                 'visual-refresh-chat-input': n
             },
             o
         ),
-        R = i.useMemo(
+        P = i.useMemo(
             () => ({
                 lang: d,
-                style: A,
-                className: C
+                style: C,
+                className: R
             }),
-            [d, A, C]
+            [d, C, R]
         );
     return (0, r.jsx)(u.Provider, {
-        value: R,
-        children: T
+        value: P,
+        children: A
     });
 }

@@ -1,4 +1,4 @@
-r.d(t, { Z: () => I }), r(627341);
+r.d(t, { Z: () => E }), r(627341);
 var n = r(200651),
     i = r(192379),
     o = r(120356),
@@ -7,18 +7,16 @@ var n = r(200651),
     c = r(831209),
     a = r(399606),
     u = r(481060),
-    d = r(37234),
-    f = r(597688),
-    p = r(884697),
-    m = r(222062),
-    g = r(74538),
-    h = r(731896),
-    b = r(528439),
-    j = r(981631),
-    x = r(388032),
-    P = r(299050),
-    v = r(223223);
-function y(e) {
+    d = r(597688),
+    f = r(884697),
+    p = r(222062),
+    m = r(74538),
+    g = r(731896),
+    h = r(528439),
+    b = r(388032),
+    j = r(142554),
+    x = r(223223);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -43,7 +41,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +59,7 @@ function O(e, t) {
         e
     );
 }
-function _(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -80,69 +78,69 @@ function _(e, t) {
     }
     return i;
 }
-let N = () => 80,
-    E = (e) => {
+let P = () => 80,
+    _ = (e) => {
         var { children: t, className: r, isSelected: i = !1 } = e,
-            o = _(e, ['children', 'className', 'isSelected']);
+            o = O(e, ['children', 'className', 'isSelected']);
         return (0, n.jsx)(
             u.P3F,
-            O(y({ className: l()(P.effectGridItem, r, { [P.selected]: i }) }, o), {
+            y(v({ className: l()(j.effectGridItem, r, { [j.selected]: i }) }, o), {
                 onClick: o.onSelect,
                 children: t
             })
         );
     },
-    C = (e) => {
+    N = (e) => {
         var t,
-            { user: r, profileEffect: o, innerRef: l, section: s, isSelected: d } = e,
-            j = _(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
-        let N = (0, h.V)(o.id),
-            C = (0, a.e7)([f.Z], () => {
-                let e = f.Z.getProduct(o.skuId);
-                return (0, p.G1)(e);
+            { user: r, profileEffect: o, innerRef: l, section: s, isSelected: P } = e,
+            N = O(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
+        let E = (0, g.V)(o.id),
+            C = (0, a.e7)([d.Z], () => {
+                let e = d.Z.getProduct(o.skuId);
+                return (0, f.G1)(e);
             }),
-            I = (0, p.Yq)(o.skuId),
+            I = (0, f.Yq)(o.skuId),
             S = i.useRef(null),
-            { accessibilityLabel: w, thumbnailPreviewSrc: Z, title: k } = null !== (t = null == N ? void 0 : N.config) && void 0 !== t ? t : {},
-            D = g.ZP.canUseCollectibles(r),
-            T = s === b.$0.PREMIUM_PURCHASE && !D,
-            A = (0, m.M)();
+            { accessibilityLabel: w, thumbnailPreviewSrc: Z, title: k } = null !== (t = null == E ? void 0 : E.config) && void 0 !== t ? t : {},
+            D = m.ZP.canUseCollectibles(r),
+            T = s === h.$0.PREMIUM_PURCHASE && !D,
+            A = (0, p.M)();
         return (0, n.jsxs)(
-            E,
-            O(
-                y(
+            _,
+            y(
+                v(
                     {
-                        className: !T || d || A ? void 0 : P.decorationGridItemChurned,
+                        className: !T || P || A ? void 0 : j.decorationGridItemChurned,
                         innerRef: null != l ? l : S,
-                        isSelected: d
+                        isSelected: P
                     },
-                    j
+                    N
                 ),
                 {
                     children: [
                         (0, n.jsx)('img', {
-                            src: v,
+                            src: x,
                             alt: w,
-                            className: P.presetEffectBackground
+                            className: j.presetEffectBackground
                         }),
                         (0, n.jsx)('img', {
-                            className: P.presetEffectImg,
+                            className: j.presetEffectImg,
                             src: Z,
                             alt: k
                         }),
-                        s === b.$0.PURCHASE || (s === b.$0.PREMIUM_PURCHASE && D)
+                        s === h.$0.PURCHASE || (s === h.$0.PREMIUM_PURCHASE && D)
                             ? null
                             : I
                               ? (0, n.jsx)(u.lBU, {
-                                    className: P.newBadge,
+                                    className: j.newBadge,
                                     text: (0, n.jsxs)('div', {
-                                        className: P.newBadgeText,
+                                        className: j.newBadgeText,
                                         children: [
                                             (0, n.jsx)(u.mBM, {
                                                 size: 'xxs',
                                                 color: 'currentColor'
                                             }),
-                                            x.NW.string(x.t.y2b7CA)
+                                            b.NW.string(b.t.y2b7CA)
                                         ]
                                     })
                                 })
@@ -161,78 +159,75 @@ let N = () => 80,
                                                   color: 'currentColor'
                                               }),
                                     color: c.Z.BACKGROUND_ACCENT,
-                                    className: P.lockBadge
+                                    className: j.lockBadge
                                 })
                     ]
                 }
             )
         );
     },
-    I = (e) => {
-        let { user: t, guild: r, pendingProfileEffect: i, selectedProfileEffectRef: o, onSelect: l, onClose: c } = e,
-            a = () => {
-                c(), (0, d.jN)(j.S9g.COLLECTIBLES_SHOP);
-            },
-            f = (0, b.ZP)(),
-            p = null != i;
+    E = (e) => {
+        let { user: t, guild: r, pendingProfileEffect: i, selectedProfileEffectRef: o, onSelect: l, onOpenShop: c } = e,
+            a = (0, h.ZP)(),
+            d = null != i;
         return (0, n.jsx)('section', {
-            className: P.section,
+            className: j.section,
             children: (0, n.jsx)(u.GMG, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
                 paddingVertical: 0,
                 paddingHorizontal: 12,
-                className: P.list,
+                className: j.list,
                 columns: 3,
-                sections: f.map((e) => {
+                sections: a.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, c, d, m) => {
-                    let { section: g, items: h } = f[e];
-                    return (0, s.EQ)(h[c])
-                        .with(b.Tm, () =>
+                renderItem: (e, f, p, m) => {
+                    let { section: g, items: x } = a[e];
+                    return (0, s.EQ)(x[f])
+                        .with(h.Tm, () =>
                             (0, n.jsxs)(
-                                E,
+                                _,
                                 {
-                                    style: y({}, d),
-                                    isSelected: !p,
+                                    style: v({}, p),
+                                    isSelected: !d,
                                     onSelect: () => l(null),
                                     children: [
                                         (0, n.jsx)(u.t6m, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: P.notAllowedIcon
+                                            className: j.notAllowedIcon
                                         }),
                                         (0, n.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-primary',
-                                            children: null != r ? x.NW.string(x.t.GJ3Fcn) : x.NW.string(x.t.PoWNfX)
+                                            children: null != r ? b.NW.string(b.t.GJ3Fcn) : b.NW.string(b.t.PoWNfX)
                                         })
                                     ]
                                 },
                                 m
                             )
                         )
-                        .with(b.oT, () =>
+                        .with(h.oT, () =>
                             (0, n.jsxs)(
-                                E,
+                                _,
                                 {
-                                    style: d,
-                                    onSelect: a,
+                                    style: p,
+                                    onSelect: c,
                                     children: [
                                         (0, n.jsx)(u.EOn, {
                                             size: 'custom',
                                             width: 23,
                                             height: 23,
                                             color: 'currentColor',
-                                            className: P.shopIcon
+                                            className: j.shopIcon
                                         }),
                                         (0, n.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-primary',
-                                            children: x.NW.string(x.t.pWG4zc)
+                                            children: b.NW.string(b.t.pWG4zc)
                                         })
                                     ]
                                 },
@@ -242,10 +237,10 @@ let N = () => 80,
                         .otherwise((e) => {
                             let r = i === e.id;
                             return (0, n.jsx)(
-                                C,
+                                N,
                                 {
                                     user: t,
-                                    style: y({}, d),
+                                    style: v({}, p),
                                     section: g,
                                     profileEffect: e,
                                     innerRef: r ? o : void 0,
@@ -257,9 +252,9 @@ let N = () => 80,
                         });
                 },
                 renderSection: (e, t) => {
-                    let { header: r } = f[e];
+                    let { header: r } = a[e];
                     return (0, n.jsx)('div', {
-                        style: O(y({}, t), {
+                        style: y(v({}, t), {
                             height: ''.concat(16, 'px'),
                             position: 'absolute'
                         }),
@@ -269,9 +264,9 @@ let N = () => 80,
                 getSectionHeight: () => 16,
                 getItemKey: (e, t) => {
                     var r, n;
-                    return null !== (n = null === (r = f[e].items[t]) || void 0 === r ? void 0 : r.id) && void 0 !== n ? n : null;
+                    return null !== (n = null === (r = a[e].items[t]) || void 0 === r ? void 0 : r.id) && void 0 !== n ? n : null;
                 },
-                getItemHeight: N,
+                getItemHeight: P,
                 removeEdgeItemGutters: !0
             })
         });

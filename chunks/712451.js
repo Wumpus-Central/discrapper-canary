@@ -19,8 +19,8 @@ var n = r(200651),
     A = r(511004),
     O = r(486324),
     w = r(981631),
-    D = r(678916),
-    y = r(388032),
+    y = r(678916),
+    D = r(388032),
     T = r(126847);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -89,7 +89,7 @@ function _(e) {
                 width: O.L0
             };
         case O.pC.VIDEO_BACKGROUND:
-            return D.HE;
+            return y.HE;
         case O.pC.AVATAR:
         case O.pC.AVATAR_DECORATION:
             return {
@@ -202,7 +202,7 @@ function M(e, t) {
     }
 }
 function j(e) {
-    let { file: t, imageUri: r, originalAsset: a, transitionState: f, onCrop: D, onClose: v, uploadType: j = O.pC.AVATAR, showUpsellHeader: G = !1, analyticsPage: S } = e,
+    let { file: t, imageUri: r, originalAsset: a, transitionState: f, onCrop: y, onClose: v, uploadType: j = O.pC.AVATAR, showUpsellHeader: G = !1, analyticsPage: S } = e,
         B = i.useRef(x),
         P = i.useRef(null),
         z = i.useRef(null),
@@ -400,7 +400,7 @@ function j(e) {
                     maxDimensions: n,
                     imageRotation: F
                 });
-            await D({
+            await y({
                 assetOrigin: (function (e) {
                     let { hasImageEdits: t, hasOriginalAsset: r } = e;
                     return r ? (t ? E.q.EDITED_ARCHIVED_ASSET : E.q.ARCHIVED_ASSET) : E.q.NEW_ASSET;
@@ -414,7 +414,7 @@ function j(e) {
             }),
                 Q(!1),
                 v();
-        }, [H, t, Z, F, ei, v, D, a, j]),
+        }, [H, t, Z, F, ei, v, y, a, j]),
         eC = i.useCallback(() => {
             if (null != z.current) {
                 z.current(), (z.current = null), Q(!1);
@@ -465,7 +465,7 @@ function j(e) {
                     children: [
                         (0, n.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: y.NW.string(y.t.DxAYCA)
+                            children: D.NW.string(D.t.DxAYCA)
                         }),
                         (0, n.jsx)(c.olH, {
                             onClick: v,
@@ -489,7 +489,7 @@ function j(e) {
                                           (0, n.jsx)(c.Text, {
                                               variant: 'text-md/normal',
                                               color: 'text-danger',
-                                              children: y.NW.string(y.t['+ITMYW'])
+                                              children: D.NW.string(D.t['+ITMYW'])
                                           })
                                       ]
                                   })
@@ -507,6 +507,7 @@ function j(e) {
                                               ),
                                               className: o()(J ? T.imageDisabled : T.imageEnabled, T.rotationSupported),
                                               src: r,
+                                              crossOrigin: 'anonymous',
                                               alt: 'avatar',
                                               ref: P,
                                               onMouseDown: es,
@@ -546,7 +547,7 @@ function j(e) {
                                                 disabled: J || q,
                                                 equidistant: !0,
                                                 hideBubble: !0,
-                                                'aria-label': y.NW.string(y.t.dnvZSk)
+                                                'aria-label': D.NW.string(D.t.dnvZSk)
                                             },
                                             ee
                                         ),
@@ -558,8 +559,8 @@ function j(e) {
                                     ]
                                 }),
                                 (0, n.jsx)(c.ua7, {
-                                    text: y.NW.string(y.t.E36Wd3),
-                                    'aria-label': y.NW.string(y.t.LzFiKC),
+                                    text: D.NW.string(D.t.E36Wd3),
+                                    'aria-label': D.NW.string(D.t.LzFiKC),
                                     children: (e) => {
                                         var { onClick: t } = e,
                                             r = (function (e, t) {
@@ -631,7 +632,7 @@ function j(e) {
                             color: c.zxk.Colors.PRIMARY,
                             onClick: eg,
                             disabled: !Z,
-                            children: y.NW.string(y.t.yBZMsb)
+                            children: D.NW.string(D.t.yBZMsb)
                         }),
                         (0, n.jsx)(c.zxk, {
                             className: T.linkButton,
@@ -639,13 +640,13 @@ function j(e) {
                             size: c.PhG.MIN,
                             color: c.zxk.Colors.PRIMARY,
                             onClick: eC,
-                            children: y.NW.string(y.t['9TG40t'])
+                            children: D.NW.string(D.t['9TG40t'])
                         }),
                         (0, n.jsx)(c.zxk, {
                             submitting: J,
                             onClick: eE,
                             disabled: J || q,
-                            children: y.NW.string(y.t.ZSHmKC)
+                            children: D.NW.string(D.t.ZSHmKC)
                         })
                     ]
                 })
