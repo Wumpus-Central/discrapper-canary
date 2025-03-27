@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -7,8 +7,9 @@ var i = n(120356),
     s = n(357156),
     l = n(343747),
     c = n(388032),
-    u = n(172944);
-function d(e, t, n) {
+    u = n(335886),
+    d = n(172944);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,29 +50,29 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = g(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,39 +81,39 @@ function m(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g(e) {
-    var { guild: t, focused: n, onSelectItem: i, refreshEnabled: d } = e,
-        _ = h(e, ['guild', 'focused', 'onSelectItem', 'refreshEnabled']);
-    let { canCreateExpressions: m } = (0, s.XJ)(t);
+function E(e) {
+    var { guild: t, focused: n, onSelectItem: i, refreshEnabled: f } = e,
+        p = m(e, ['guild', 'focused', 'onSelectItem', 'refreshEnabled']);
+    let { canCreateExpressions: g } = (0, s.XJ)(t);
     return (0, r.jsx)(a.ua7, {
         text: c.NW.string(c.t['fHo+z8']),
-        shouldShow: !m,
+        shouldShow: !g,
         children: (e) =>
             (0, r.jsx)(
                 'li',
-                p(f({ className: u.soundButtonWrapper }, e), {
+                h(_({ className: u.soundButtonWrapper }, e), {
                     children: (0, r.jsx)(
                         a.kL8,
-                        p(f({}, _), {
+                        h(_({}, p), {
                             'aria-label': c.NW.formatToPlainString(c.t.c1qVYm, { guildName: t.name }),
-                            className: o()(d ? u.soundAddButtonRefresh : u.soundAddButton, {
-                                [u.focused]: n,
-                                [u.disabled]: !m
+                            className: o()(f ? d.soundAddButtonRefresh : d.soundAddButton, {
+                                [d.focused]: n,
+                                [d.disabled]: !g
                             }),
                             onClick: () => (null != i ? i() : (0, l.Z)(t.id)),
-                            children: d
+                            children: f
                                 ? (0, r.jsxs)('div', {
-                                      className: u.soundAddInfoRefresh,
+                                      className: d.soundAddInfoRefresh,
                                       children: [
                                           (0, r.jsx)(a.oFk, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: u.soundAddIconRefresh
+                                              className: d.soundAddIconRefresh
                                           }),
                                           (0, r.jsx)(a.Text, {
                                               variant: 'text-xs/medium',
-                                              color: m ? void 0 : 'text-muted',
-                                              className: u.soundAddTextRefresh,
+                                              color: g ? void 0 : 'text-muted',
+                                              className: d.soundAddTextRefresh,
                                               children: c.NW.string(c.t['8Fu/S0'])
                                           })
                                       ]
@@ -125,7 +126,7 @@ function g(e) {
                                           }),
                                           (0, r.jsx)(a.Text, {
                                               variant: 'text-xs/semibold',
-                                              color: m ? 'currentColor' : 'text-muted',
+                                              color: g ? 'currentColor' : 'text-muted',
                                               children: c.NW.string(c.t['8Fu/S0'])
                                           })
                                       ]
