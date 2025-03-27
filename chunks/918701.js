@@ -2,6 +2,7 @@ n.d(t, {
     $H: () => eP,
     $J: () => e1,
     AV: () => eu,
+    B2: () => th,
     B3: () => tl,
     BM: () => e4,
     Bg: () => em,
@@ -811,4 +812,8 @@ function tf(e) {
 let t_ = (e) => (e.percentComplete > 0 ? D.NW.formatToPlainString(D.t['c59/Tk'], { remainTime: eX(e) }) : D.NW.formatToPlainString(D.t.GNsKiY, { remainTime: eX(e) }));
 function tp(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
+}
+function th(e) {
+    var t, n, r, i;
+    return null !== (i = null !== (r = null === (t = e.videoMetadata) || void 0 === t ? void 0 : t.messages.videoEndCtaButtonLabel) && void 0 !== r ? r : null === (n = e.videoMetadata) || void 0 === n ? void 0 : n.messages.videoEndCtaTitle) && void 0 !== i ? i : D.NW.string(D.t.iiTtpK);
 }

@@ -9,7 +9,7 @@ var i = n(704215),
     c = n(388032),
     d = n(726797);
 function u(e) {
-    let { children: t, canBeShown: u, onCTA: m } = e;
+    let { children: t, canBeShown: u, onCTA: m, targetElementRef: g } = e;
     return (0, r.jsx)(a.ZP, {
         bypassAutoDismiss: !0,
         contentTypes: u ? [i.z.VOICE_FILTER_LAUNCH_COACHMARK] : [],
@@ -17,6 +17,7 @@ function u(e) {
             let { visibleContent: a, markAsDismissed: u } = e;
             return a === i.z.VOICE_FILTER_LAUNCH_COACHMARK
                 ? (0, r.jsx)(s.yRy, {
+                      targetElementRef: g,
                       renderPopout: () =>
                           (0, r.jsxs)('div', {
                               className: d.popup,
