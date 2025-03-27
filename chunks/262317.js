@@ -35,7 +35,7 @@ var r,
     T = n(927923),
     A = n(70722),
     w = n(388032),
-    R = n(473563);
+    R = n(517777);
 function M(e, t, n) {
     return (
         t in e
@@ -130,6 +130,7 @@ class U extends (r = l.PureComponent) {
                 onMouseEnter: r ? void 0 : this.handleMouseEnter,
                 onMouseLeave: r ? void 0 : this.handleHidePreview,
                 children: (0, i.jsx)(c.yRy, {
+                    targetElementRef: this.domElementRef,
                     preload: () =>
                         (0, j.Z)(l.id, l.getAvatarURL(o.guild_id, 80), {
                             guildId: o.guild_id,
@@ -180,7 +181,7 @@ class U extends (r = l.PureComponent) {
             M(this, 'handleUserContextMenu', (e) => {
                 let { channel: t, user: r } = this.props;
                 (0, d.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('83944')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('29618')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, i.jsx)(
                             e,
@@ -190,7 +191,7 @@ class U extends (r = l.PureComponent) {
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: t.isGuildStageVoice(),
-                                onInteraction: (0, g.u)('GuildChannelUserContextMenu', 'VoiceUser', { targetUserId: r.id })
+                                onInteraction: (0, g.u)('GuildChannelUserContextMenu', m.Z.VOICE_USER, { targetUserId: r.id })
                             })
                         );
                 });
@@ -283,11 +284,12 @@ class U extends (r = l.PureComponent) {
                                     }
                                     return i;
                                 })(e, ['onClick', 'onContextMenu']);
-                            return (0, i.jsx)(E.ZP, k({}, D, r));
+                            return (0, i.jsx)(E.ZP, k({ ref: this.domElementRef }, D, r));
                         }
                     });
                 }
                 return (0, i.jsx)(c.yRy, {
+                    targetElementRef: this.domElementRef,
                     position: 'right',
                     renderPopout: this.renderStreamPopout,
                     shouldShow: l && !A,
@@ -297,6 +299,7 @@ class U extends (r = l.PureComponent) {
                         (0, i.jsx)(
                             E.ZP,
                             L(k({}, D), {
+                                ref: this.domElementRef,
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown
                             })
