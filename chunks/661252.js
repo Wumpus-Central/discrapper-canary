@@ -23,9 +23,10 @@ e.exports = {
     hoverUpsellContainer: 'hoverUpsellContainer_c3d04b',
     innerHover: 'innerHover_c3d04b',
     innerBlur: 'innerBlur_c3d04b',
-    checkmarkWrapper: 'checkmarkWrapper_c3d04b',
-    checkmark: 'checkmark_c3d04b',
+    cardStateIconWrapper: 'cardStateIconWrapper_c3d04b',
+    cardStateIcon: 'cardStateIcon_c3d04b',
     limitedTimeBadge: 'limitedTimeBadge_c3d04b',
+    checkmark: 'checkmark_c3d04b',
     variantsGroup: 'variantsGroup_c3d04b',
     profileEffectShopPreview: 'profileEffectShopPreview_c3d04b',
     productName: 'productName_c3d04b',
@@ -37,5 +38,6 @@ e.exports = {
     nameplatePreviewSampleItem: 'nameplatePreviewSampleItem_c3d04b',
     placeholderItem: 'placeholderItem_c3d04b',
     placeholderBar: 'placeholderBar_c3d04b',
-    fadeOut: 'fadeOut_c3d04b'
+    fadeOut: 'fadeOut_c3d04b',
+    externalProductDimmed: 'externalProductDimmed_c3d04b'
 };

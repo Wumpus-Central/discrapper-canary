@@ -9,7 +9,9 @@ var r = n(200651),
     u = n(598409);
 function d(e) {
     var t;
-    let { orbPrice: n } = e;
+    let { orbPrice: n, isProductDisabled: l, hasSufficientOrbs: s } = e,
+        d = l ? c.NW.string(c.t.wu4gyc) : c.NW.string(c.t.eFNRzc),
+        m = l || !s;
     return (0, r.jsxs)('div', {
         className: u.priceLine,
         children: [
@@ -18,21 +20,30 @@ function d(e) {
                 children: [
                     (0, r.jsx)(i.Text, {
                         variant: 'text-xs/normal',
-                        children: c.NW.string(c.t.eFNRzc)
+                        className: m ? u.disabled : void 0,
+                        children: d
                     }),
                     (0, r.jsx)(a.Z, {})
                 ]
             }),
-            (0, r.jsx)(o.Z, { orbAmount: null !== (t = null == n ? void 0 : n.amount) && void 0 !== t ? t : 1 / 0 })
+            (0, r.jsx)(o.Z, {
+                orbAmount: null !== (t = null == n ? void 0 : n.amount) && void 0 !== t ? t : 1 / 0,
+                className: m ? u.disabled : void 0
+            })
         ]
     });
 }
 function m(e) {
     var t;
-    let { prices: n, isPremiumUser: i, discount: a, product: c } = e;
+    let { prices: n, isPremiumUser: i, discount: a, product: c, hasSufficientOrbs: m, isProductDisabled: p } = e;
     if (0 === n.length) return null;
-    if (n[0].currency === s.pK.DISCORD_ORB) return (0, r.jsx)(d, { orbPrice: n[0] });
-    let m = !i;
+    if (n[0].currency === s.pK.DISCORD_ORB)
+        return (0, r.jsx)(d, {
+            orbPrice: n[0],
+            isProductDisabled: p,
+            hasSufficientOrbs: m
+        });
+    let f = !i;
     return (0, r.jsxs)('div', {
         className: u.priceLine,
         children: [
@@ -40,10 +51,15 @@ function m(e) {
                 product: c,
                 discount: a,
                 isPremiumUser: i,
-                nitroUpsell: m,
-                className: m ? u.nitroUpsell : void 0
+                nitroUpsell: f,
+                className: f ? u.nitroUpsell : void 0
             }),
-            n.length > 1 && n[1].currency === s.pK.DISCORD_ORB && (0, r.jsx)(o.Z, { orbAmount: null !== (t = n[1].amount) && void 0 !== t ? t : 1 / 0 })
+            n.length > 1 &&
+                n[1].currency === s.pK.DISCORD_ORB &&
+                (0, r.jsx)(o.Z, {
+                    orbAmount: null !== (t = n[1].amount) && void 0 !== t ? t : 1 / 0,
+                    className: p || !m ? u.disabled : void 0
+                })
         ]
     });
 }

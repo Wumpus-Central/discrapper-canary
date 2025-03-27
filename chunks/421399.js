@@ -10,8 +10,8 @@ var n,
     c = r(873546),
     s = r(442837),
     u = r(481060),
-    m = r(607070),
-    p = r(100527),
+    p = r(607070),
+    m = r(100527),
     d = r(906732),
     f = r(385499),
     b = r(979264),
@@ -79,13 +79,13 @@ function R(e) {
 function E(e) {
     var t;
     let r,
-        { author: n, message: l, channel: f, userOverride: N, compact: E = !1, withMentionPrefix: I = !1, showPopout: C = !1, className: k, onClick: Z, onContextMenu: A, onPopoutRequestClose: _, renderPopout: D, renderRemixTag: M = !1, decorations: L } = e,
+        { author: n, message: l, channel: f, userOverride: N, compact: E = !1, withMentionPrefix: I = !1, showPopout: k = !1, className: C, onClick: Z, onContextMenu: A, onPopoutRequestClose: _, renderPopout: D, renderRemixTag: M = !1, decorations: L } = e,
         F = o.useContext(y.Z),
         G = null !== (t = null == f ? void 0 : f.guild_id) && void 0 !== t ? t : F,
-        { analyticsLocations: B } = (0, d.ZP)(p.Z.USERNAME),
+        { analyticsLocations: B } = (0, d.ZP)(m.Z.USERNAME),
         { nick: z, colorString: U, colorRoleName: W } = n,
         H = null != l.messageReference && null != l.webhookId && l.hasFlag(P.iLy.IS_CROSSPOST),
-        J = (0, s.e7)([m.Z], () => m.Z.roleStyle),
+        J = (0, s.e7)([p.Z], () => p.Z.roleStyle),
         X = (0, g.X$)(),
         V = {
             className: S.username,
@@ -133,13 +133,14 @@ function E(e) {
             shouldShowPopoutOnHover: $,
             handlePreload: Y
         });
-    if (null != D && null != C) {
+    if (null != D && null != k) {
         let e = (0, i.jsx)(u.yRy, {
             preload: H ? void 0 : Y,
             renderPopout: D,
-            shouldShow: C || Q,
+            shouldShow: k || Q,
             position: c.tq ? 'window_center' : 'right',
             onRequestClose: _,
+            clickTrap: k,
             children: (e) => {
                 var { onClick: t } = e,
                     r = (function (e, t) {
@@ -162,7 +163,7 @@ function E(e) {
                         return i;
                     })(e, ['onClick']);
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(u.P3F, w(T({ tag: 'span' }, r, V), { className: a()(V.className, S.clickable, k) })), q]
+                    children: [(0, i.jsx)(u.P3F, w(T({ tag: 'span' }, r, V), { className: a()(V.className, S.clickable, C) })), q]
                 });
             }
         });
@@ -176,7 +177,7 @@ function E(e) {
             : e;
     } else
         r = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(u.P3F, w(T({}, V), { className: a()(V.className, k) })), q]
+            children: [(0, i.jsx)(u.P3F, w(T({}, V), { className: a()(V.className, C) })), q]
         });
     let et = null != L ? L[0] : null,
         er = null != L ? L[1] : null;
