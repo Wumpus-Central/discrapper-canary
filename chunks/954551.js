@@ -1,25 +1,27 @@
-n.d(t, { Z: () => c });
-var r = n(200651);
-n(192379);
-var i = n(481060),
+n.d(t, { Z: () => u });
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
     a = n(665149),
-    o = n(388035),
-    l = n(453473),
-    s = n(388032);
-function c(e) {
-    let { onOpen: t, onClose: n, className: c } = e;
-    return (0, r.jsx)(l.P, {
+    l = n(388035),
+    s = n(453473),
+    c = n(388032);
+function u(e) {
+    let { onOpen: t, onClose: n, className: u } = e,
+        d = i.useRef(null);
+    return (0, r.jsx)(s.P, {
         onOpen: t,
         onClose: n,
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, l) => {
-            var d, u;
-            return (0, r.jsx)(o.U, {
+        children: (e, t, n, i) => {
+            var s, p;
+            return (0, r.jsx)(l.U, {
                 location: 'bookmarks-button',
+                targetElementRef: d,
                 children: (0, r.jsx)(
                     a.JO,
-                    ((d = (function (e) {
+                    ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -44,18 +46,19 @@ function c(e) {
                         }
                         return e;
                     })({}, n)),
-                    (u = u =
+                    (p = p =
                         {
-                            className: c,
+                            ref: d,
+                            className: u,
                             onClick: e,
-                            icon: i.plf,
-                            'aria-label': s.NW.string(s.t['2pAkDA']),
-                            tooltip: t ? null : s.NW.string(s.t['2pAkDA']),
+                            icon: o.plf,
+                            'aria-label': c.NW.string(c.t['2pAkDA']),
+                            tooltip: t ? null : c.NW.string(c.t['2pAkDA']),
                             selected: t,
-                            showBadge: l
+                            showBadge: i
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(p))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -63,10 +66,10 @@ function c(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(u, e));
+                          })(Object(p)).forEach(function (e) {
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(p, e));
                           }),
-                    d)
+                    s)
                 )
             });
         }

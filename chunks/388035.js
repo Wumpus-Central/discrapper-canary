@@ -1,50 +1,51 @@
 n.d(t, { U: () => g }), n(47120);
 var r = n(200651),
     i = n(704215),
-    a = n(481060),
-    o = n(243778),
+    o = n(481060),
+    a = n(243778),
     l = n(970731),
     s = n(2818),
     c = n(921944),
-    d = n(388032),
-    u = n(361170),
+    u = n(388032),
+    d = n(731055),
     p = n(235810);
 let m = i.z.FOR_LATER_POPOUT_COACHMARK,
     f = () =>
         (0, r.jsx)('div', {
-            className: u.imageContainer,
+            className: d.imageContainer,
             children: (0, r.jsx)('img', {
-                className: u.image,
+                className: d.image,
                 src: p,
                 alt: ''
             })
         }),
     h = (e) =>
         (0, r.jsx)(l.ZP, {
-            className: u.container,
+            className: d.container,
             asset: (0, r.jsx)(f, {}),
-            header: d.NW.string(d.t.qPbFKy),
-            content: d.NW.string(d.t.URrJq6),
-            buttonCTA: d.NW.string(d.t['NX+WJC']),
+            header: u.NW.string(u.t.qPbFKy),
+            content: u.NW.string(u.t.URrJq6),
+            buttonCTA: u.NW.string(u.t['NX+WJC']),
             buttonProps: {
-                color: a.Ttl.WHITE,
-                innerClassName: u.primaryButton
+                color: o.Ttl.WHITE,
+                innerClassName: d.primaryButton
             },
             onClick: () => e(c.L.USER_DISMISS),
             markAsDismissed: e,
             caretPosition: l.DF.TOP_RIGHT
         });
 function g(e) {
-    let { location: t, children: n } = e,
-        { enabled: i, inInbox: l } = s.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [c, d] = (0, o.US)(i && t === (l ? 'inbox-button' : 'bookmarks-button') ? [m] : [], void 0);
-    return c !== m
-        ? (0, r.jsx)(r.Fragment, { children: n })
-        : (0, r.jsx)(a.yRy, {
+    let { location: t, children: n, targetElementRef: i } = e,
+        { enabled: l, inInbox: c } = s.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [u, d] = (0, a.US)(l && t === (c ? 'inbox-button' : 'bookmarks-button') ? [m] : [], void 0);
+    return u !== m
+        ? n
+        : (0, r.jsx)(o.yRy, {
+              targetElementRef: i,
               renderPopout: () => h(d),
               position: 'bottom',
               align: 'right',
-              animation: a.yRy.Animation.TRANSLATE,
+              animation: o.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n
           });
