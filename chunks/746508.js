@@ -240,96 +240,98 @@ function eY() {
 }
 function eK(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
-        { parentAnalyticsLocation: a } = (0, x.ZP)(),
-        s = (0, M.Q3)('ConnectedVideoButton'),
-        { coloredIconsEnabled: c, simplifiedSettingsEnabled: d } = (0, el.Z)({ location: 'ConnectedVideoButton' }),
-        p = (0, eo.Z)(),
-        f = (0, es.Z)(t),
-        b = (0, u.e7)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForLocation(I.ZP.getConnectedActivityLocation())),
-        _ = (0, q.Z)(t),
-        { reachedLimit: E, limit: O } = (0, ea.Z)(t),
-        N = i.useCallback(() => {
+        a = i.useRef(null),
+        { parentAnalyticsLocation: s } = (0, x.ZP)(),
+        c = (0, M.Q3)('ConnectedVideoButton'),
+        { coloredIconsEnabled: d, simplifiedSettingsEnabled: p } = (0, el.Z)({ location: 'ConnectedVideoButton' }),
+        f = (0, eo.Z)(),
+        b = (0, es.Z)(t),
+        _ = (0, u.e7)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForLocation(I.ZP.getConnectedActivityLocation())),
+        E = (0, q.Z)(t),
+        { reachedLimit: O, limit: N } = (0, ea.Z)(t),
+        y = i.useCallback(() => {
             (0, eu.Z)();
         }, []),
-        y = (0, v.bp)(),
-        C = i.useCallback(
+        C = (0, v.bp)(),
+        S = i.useCallback(
             (e) => {
                 if (eO.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
                     m.Z.setVideoEnabled(e), e && (0, Y.uL)(eL.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eL.ME, t.id));
                 };
-                (0, L.v)(a, L.d.CAMERA, e), e ? (0, eh.Z)(n, y) : n();
+                (0, L.v)(s, L.d.CAMERA, e), e ? (0, eh.Z)(n, C) : n();
             },
-            [t, y, a]
+            [t, C, s]
         ),
-        S = b || n || _,
-        { Component: T, play: P, events: j } = (0, h.o)(p.enabled ? 'disable' : 'enable');
+        T = _ || n || E,
+        { Component: P, play: j, events: A } = (0, h.o)(f.enabled ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => P(), [p.enabled, P]),
+        i.useEffect(() => () => j(), [f.enabled, j]),
         (0, r.jsx)(
             ef.Z,
             eV(
                 eW(
                     {
-                        onChange: C,
-                        onCameraUnavailable: N,
-                        hasPermission: f,
-                        channelLimit: O,
-                        channelLimitReached: E
+                        onChange: S,
+                        onCameraUnavailable: y,
+                        hasPermission: b,
+                        channelLimit: N,
+                        channelLimitReached: O
                     },
-                    p
+                    f
                 ),
                 {
-                    enabled: !l && p.enabled,
+                    enabled: !l && f.enabled,
                     children: (e) => {
                         var { unavailable: t, isActive: n, label: i, iconComponent: l } = e,
                             u = eB(e, ['unavailable', 'isActive', 'label', 'iconComponent']);
-                        let p = (0, r.jsx)(T, {
-                            size: s ? 'md' : 'sm',
-                            className: o()(eM.buttonIcon, { [eM.withText]: !S }),
+                        let h = (0, r.jsx)(P, {
+                            size: c ? 'md' : 'sm',
+                            className: o()(eM.buttonIcon, { [eM.withText]: !T }),
                             color: 'currentColor'
                         });
                         return (0, r.jsx)(g.yRy, {
+                            targetElementRef: a,
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (0, r.jsx)(w.Z, {
                                     onClose: t,
-                                    simplified: d,
-                                    onInteraction: (0, R.u)('VideoDeviceMenu', a)
+                                    simplified: p,
+                                    onInteraction: (0, R.u)('VideoDeviceMenu', s)
                                 });
                             },
                             position: 'top',
                             align: 'center',
                             animation: g.yRy.Animation.FADE,
                             children: (e, l) => {
-                                var { onClick: a } = e,
-                                    d = eB(e, ['onClick']),
-                                    { isShown: h } = l;
+                                var { onClick: s } = e,
+                                    p = eB(e, ['onClick']),
+                                    { isShown: f } = l;
                                 return (0, r.jsx)(g.ua7, {
                                     text: i,
                                     children: (e) =>
                                         (0, r.jsx)(
                                             g.zxk,
-                                            eV(eW({}, u, e, d), {
+                                            eV(eW({ buttonRef: a }, u, e, p), {
                                                 onClick: (t) => {
                                                     var n;
-                                                    u.onClick(t), null === (n = e.onClick) || void 0 === n || n.call(e), h && a(t);
+                                                    u.onClick(t), null === (n = e.onClick) || void 0 === n || n.call(e), f && s(t);
                                                 },
                                                 onMouseEnter: () => {
                                                     var t, n;
-                                                    null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), j.onMouseEnter();
+                                                    null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = p.onMouseEnter) || void 0 === n || n.call(p), A.onMouseEnter();
                                                 },
                                                 onMouseLeave: () => {
                                                     var t;
-                                                    null === (t = e.onMouseLeave) || void 0 === t || t.call(e), j.onMouseLeave();
+                                                    null === (t = e.onMouseLeave) || void 0 === t || t.call(e), A.onMouseLeave();
                                                 },
                                                 onContextMenu: (t) => {
                                                     var n;
-                                                    a(t), null === (n = e.onContextMenu) || void 0 === n || n.call(e);
+                                                    s(t), null === (n = e.onContextMenu) || void 0 === n || n.call(e);
                                                 },
-                                                size: s ? g.zxk.Sizes.MEDIUM : g.zxk.Sizes.SMALL,
-                                                className: o()(c ? eM.experimentButton : eM.button, eM.buttonColor, {
+                                                size: c ? g.zxk.Sizes.MEDIUM : g.zxk.Sizes.SMALL,
+                                                className: o()(d ? eM.experimentButton : eM.button, eM.buttonColor, {
                                                     [eM.buttonActive]: n,
                                                     [eM.fauxDisabled]: t,
                                                     [eM.disabled]: u.disabled
@@ -338,11 +340,11 @@ function eK(e) {
                                                 wrapperClassName: eM.button,
                                                 fullWidth: !0,
                                                 focusProps: eH,
-                                                children: S
-                                                    ? p
+                                                children: T
+                                                    ? h
                                                     : (0, r.jsxs)(k.Z, {
                                                           align: k.Z.Align.CENTER,
-                                                          children: [p, ek.NW.string(ek.t.FlNoSU)]
+                                                          children: [h, ek.NW.string(ek.t.FlNoSU)]
                                                       })
                                             })
                                         )
