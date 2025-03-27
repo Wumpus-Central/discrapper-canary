@@ -42,6 +42,7 @@ var r = (function (e) {
             (e.CHAT_WALLPAPER_DM_CONTEXT_MENU_ENTRY_POINT = 'impression_chat_wallpaper_dm_context_menu_entry_point'),
             (e.CHAT_WALLPAPER_DM_LIST_COACHMARK = 'impression_chat_wallpaper_dm_list_coachmark'),
             (e.CHAT_WALLPAPER_PICKER_COACHMARK = 'impression_chat_wallpaper_picker_coachmark'),
+            (e.CHAT_WALLPAPER_WALLPAPER_OPTION = 'impression_chat_wallpaper_wallpaper_option'),
             (e.CLIP_EDITOR_VIEWED = 'impression_clip_editor_viewed'),
             (e.CLIP_GALLERY_VIEWED = 'impression_clip_gallery_viewed'),
             (e.CLYDE_AI_PROFILE_EMBED_VIEWED = 'impression_clyde_ai_profile_embed_viewed'),

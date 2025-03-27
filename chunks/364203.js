@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => W,
-    jQ: () => j
+    ZP: () => Y,
+    jQ: () => U
 }),
     n(47120);
 var r = n(200651),
@@ -84,11 +84,12 @@ function x(e, t) {
     );
 }
 let M = 88,
-    k = 'remove-wallpaper';
-var j = (function (e) {
+    k = 'remove-wallpaper',
+    j = 0.5;
+var U = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
 })({});
-function U(e) {
+function G(e) {
     let { handleClose: t } = e;
     return (
         (0, f.Z)({
@@ -129,7 +130,7 @@ function U(e) {
         })
     );
 }
-function G(e) {
+function B(e) {
     let { isPremiumTier2Subscriber: t, handleClose: n } = e;
     return (0, r.jsxs)('div', {
         className: P.headerContainer,
@@ -156,33 +157,58 @@ function G(e) {
         ]
     });
 }
-function B(e) {
-    let { isSelected: t, onSelect: n, selectionId: i, tooltipText: o, label: s, className: l, children: u } = e,
-        d = (0, c.xUy)({
-            label: s,
+let F = i.forwardRef((e) => {
+    let { isSelected: t, onSelect: n, selectionId: o, tooltipText: l, label: u, className: d, children: _ } = e,
+        p = (0, c.xUy)({
+            label: u,
             isSelected: t
-        });
-    return (0, r.jsx)(c.ua7, {
-        text: o,
-        children: (e) =>
-            (0, r.jsx)('div', {
-                className: a()(l, t && P.wallpaperSelected),
-                children: (0, r.jsx)(
-                    c.P3F,
-                    x(D({}, e, d), {
-                        className: P.wallpaperSelectionClickableContainer,
-                        tabIndex: d.tabIndex,
-                        onClick: t ? A.dG4 : () => n(i),
-                        children: u
-                    })
-                )
-            })
-    });
-}
-function F(e) {
+        }),
+        h = i.useRef(null);
+    return (
+        i.useEffect(() => {
+            let e = new IntersectionObserver(
+                (e) => {
+                    e.forEach((e) => {
+                        e.isIntersecting &&
+                            (0, f.h)({
+                                type: s.ImpressionTypes.VIEW,
+                                name: s.ImpressionNames.CHAT_WALLPAPER_WALLPAPER_OPTION,
+                                properties: { design_group_id: o }
+                            });
+                    });
+                },
+                { threshold: j }
+            );
+            return (
+                null != h.current && e.observe(h.current),
+                () => {
+                    e.disconnect();
+                }
+            );
+        }, [o, h]),
+        (0, r.jsx)(c.ua7, {
+            text: l,
+            children: (e) =>
+                (0, r.jsx)('div', {
+                    ref: h,
+                    className: a()(d, t && P.wallpaperSelected),
+                    children: (0, r.jsx)(
+                        c.P3F,
+                        x(D({}, e, p), {
+                            className: P.wallpaperSelectionClickableContainer,
+                            tabIndex: p.tabIndex,
+                            onClick: t ? A.dG4 : () => n(o),
+                            children: _
+                        })
+                    )
+                })
+        })
+    );
+});
+function V(e) {
     let { isSelected: t, onSelect: n, chatWallpaperMetadata: i } = e,
         { label: o, default: a, designGroupId: s } = i;
-    return (0, r.jsx)(B, {
+    return (0, r.jsx)(F, {
         isSelected: t,
         onSelect: n,
         selectionId: s,
@@ -199,9 +225,9 @@ function F(e) {
         })
     });
 }
-function V(e) {
+function Z(e) {
     let { isSelected: t, onSelect: n } = e;
-    return (0, r.jsx)(B, {
+    return (0, r.jsx)(F, {
         isSelected: t,
         onSelect: n,
         selectionId: k,
@@ -214,7 +240,7 @@ function V(e) {
         })
     });
 }
-function Z(e) {
+function H(e) {
     let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
     return (0, r.jsxs)(c.Kqy, {
         direction: 'horizontal',
@@ -256,7 +282,7 @@ function Z(e) {
         ]
     });
 }
-function H() {
+function W() {
     return (0, r.jsxs)(c.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -284,7 +310,8 @@ function H() {
         ]
     });
 }
-let W = function (e) {
+F.displayName = 'BaseChatWallpaperSelection';
+let Y = function (e) {
     let { className: t, position: n = A.VD2.BOTTOM_RIGHT, config: o } = e,
         { analyticsLocations: s } = (0, d.ZP)(u.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: f, closePicker: _, setPreviewWallpaperId: h } = (0, I.B)(),
@@ -302,7 +329,7 @@ let W = function (e) {
     let j = i.useCallback(() => {
             _();
         }, [_]),
-        { isUpdating: B, updateChatWallpaper: W } = (0, O.x)(j),
+        { isUpdating: U, updateChatWallpaper: F } = (0, O.x)(j),
         Y = () => {
             _(), (null == o ? void 0 : o.markDismissed) != null && o.markDismissed(N.L.USER_DISMISS);
         },
@@ -315,8 +342,8 @@ let W = function (e) {
                     is_blur_enabled: w,
                     channel_id: f
                 }),
-                W(f, m.wallpaperId));
-        }, [f, m, W, w]),
+                F(f, m.wallpaperId));
+        }, [f, m, F, w]),
         z = i.useCallback(
             (e) => {
                 if ((null == k ? void 0 : k.designGroupId) != null) {
@@ -354,7 +381,7 @@ let W = function (e) {
                       (0, r.jsxs)(c.Ttm, {
                           className: P.wallpapersContainer,
                           children: [
-                              (0, r.jsx)(V, {
+                              (0, r.jsx)(Z, {
                                   isSelected: null == m || null === m.wallpaperId,
                                   onSelect: () => {
                                       E.default.track(A.rMx.CHAT_WALLPAPER_WALLPAPER_OPTION_SELECTED, {
@@ -366,7 +393,7 @@ let W = function (e) {
                               }),
                               L.map((e) =>
                                   (0, r.jsx)(
-                                      F,
+                                      V,
                                       {
                                           isSelected: (null == k ? void 0 : k.designGroupId) === e.designGroupId,
                                           onSelect: q,
@@ -378,15 +405,15 @@ let W = function (e) {
                           ]
                       }),
                       R
-                          ? (0, r.jsx)(Z, {
+                          ? (0, r.jsx)(H, {
                                 canApply: (null == m ? void 0 : m.wallpaperId) !== void 0,
-                                isUpdating: B,
+                                isUpdating: U,
                                 isBlurEnabled: w,
                                 onBlurEnabledChange: z,
                                 onClose: Y,
                                 onApply: K
                             })
-                          : (0, r.jsx)(H, {})
+                          : (0, r.jsx)(W, {})
                   ]
               })),
         (0, r.jsx)(d.Gt, {
@@ -398,11 +425,11 @@ let W = function (e) {
                     className: P.container,
                     children: [
                         (null == o ? void 0 : o.pickerType) === 1
-                            ? (0, r.jsx)(U, {
+                            ? (0, r.jsx)(G, {
                                   handleClose: Y,
                                   isPremiumTier2Subscriber: R
                               })
-                            : (0, r.jsx)(G, {
+                            : (0, r.jsx)(B, {
                                   handleClose: Y,
                                   isPremiumTier2Subscriber: R
                               }),
