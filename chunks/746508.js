@@ -441,42 +441,44 @@ function eq(e) {
 function eQ(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: a, disabled: s } = e,
-        { parentAnalyticsLocation: c } = (0, x.ZP)(),
-        d = (0, M.Q3)('ConnectedStreamButton'),
-        { coloredIconsEnabled: h } = (0, el.Z)({ location: 'ConnectedStreamButton' }),
-        f = (0, u.e7)([eI.default], () => eI.default.getCurrentUser()),
-        m = (0, u.Wu)([eg.Z], () => eg.Z.getAllActiveStreams()),
-        b = (0, es.Z)(n),
-        _ = n.getGuildId(),
-        E = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        O = (0, q.Z)(n),
-        N = i.useCallback(() => {
-            (0, ep.Z)(_, n.id, eL.jXE.ACTIVITY_PANEL);
-        }, [_, n.id]),
-        v = m.find((e) => e.ownerId === (null == f ? void 0 : f.id)),
-        y = (0, ec.E)(n, f, m);
-    t = null == v ? (l ? N : ed.Z) : () => (0, B.Z)(v);
-    let C = null != v || y.length > 0,
-        S = b ? ek.NW.string(ek.t.fjBNo6) : ek.NW.string(ek.t.uQn9Bw),
-        T = E || a || O,
-        P = null != v,
-        { Component: j, events: A, play: Z } = (0, p.P)(P ? 'disable' : 'enable');
-    i.useEffect(() => () => Z(), [Z, P]);
-    let w = (0, r.jsx)(j, {
-        size: d ? 'md' : 'sm',
+        c = i.useRef(null),
+        { parentAnalyticsLocation: d } = (0, x.ZP)(),
+        h = (0, M.Q3)('ConnectedStreamButton'),
+        { coloredIconsEnabled: f } = (0, el.Z)({ location: 'ConnectedStreamButton' }),
+        m = (0, u.e7)([eI.default], () => eI.default.getCurrentUser()),
+        b = (0, u.Wu)([eg.Z], () => eg.Z.getAllActiveStreams()),
+        _ = (0, es.Z)(n),
+        E = n.getGuildId(),
+        O = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
+        N = (0, q.Z)(n),
+        v = i.useCallback(() => {
+            (0, ep.Z)(E, n.id, eL.jXE.ACTIVITY_PANEL);
+        }, [E, n.id]),
+        y = b.find((e) => e.ownerId === (null == m ? void 0 : m.id)),
+        C = (0, ec.E)(n, m, b);
+    t = null == y ? (l ? v : ed.Z) : () => (0, B.Z)(y);
+    let S = null != y || C.length > 0,
+        T = _ ? ek.NW.string(ek.t.fjBNo6) : ek.NW.string(ek.t.uQn9Bw),
+        P = O || a || N,
+        j = null != y,
+        { Component: A, events: Z, play: w } = (0, p.P)(j ? 'disable' : 'enable');
+    i.useEffect(() => () => w(), [w, j]);
+    let D = (0, r.jsx)(A, {
+        size: h ? 'md' : 'sm',
         color: 'currentColor',
-        className: o()(eM.buttonIcon, { [eM.withText]: !T })
+        className: o()(eM.buttonIcon, { [eM.withText]: !P })
     });
     return (0, r.jsx)(g.yRy, {
+        targetElementRef: c,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(ec.Z, {
                 channel: n,
-                currentUser: f,
-                activeStreams: m,
+                currentUser: m,
+                activeStreams: b,
                 onClose: t,
-                handleGoLive: l ? N : ed.Z,
-                onInteraction: (0, R.u)('ManageStreamsMenu', c, { entrypoint: eR.A5.OTHER_BUTTON })
+                handleGoLive: l ? v : ed.Z,
+                onInteraction: (0, R.u)('ManageStreamsMenu', d, { entrypoint: eR.A5.OTHER_BUTTON })
             });
         },
         position: 'top',
@@ -486,43 +488,44 @@ function eQ(e) {
             var { onClick: n, onMouseEnter: i } = e,
                 l = eB(e, ['onClick', 'onMouseEnter']);
             return (0, r.jsx)(g.ua7, {
-                text: S,
+                text: T,
                 children: (e) =>
                     (0, r.jsx)(
                         g.zxk,
                         eV(
                             eW(
                                 eV(eW({}, e), {
-                                    size: d ? g.zxk.Sizes.MEDIUM : g.zxk.Sizes.SMALL,
+                                    buttonRef: c,
+                                    size: h ? g.zxk.Sizes.MEDIUM : g.zxk.Sizes.SMALL,
                                     onClick: (r) => {
                                         var i;
-                                        (0, L.v)(c, L.d.STREAM, null == v), C ? n(r) : t(), null === (i = e.onClick) || void 0 === i || i.call(e);
+                                        (0, L.v)(d, L.d.STREAM, null == y), S ? n(r) : t(), null === (i = e.onClick) || void 0 === i || i.call(e);
                                     },
-                                    disabled: !b || s,
-                                    className: o()(h ? eM.experimentButton : eM.button, eM.buttonColor, {
-                                        [eM.buttonActive]: null != v,
-                                        [eM.disabled]: !b || s
+                                    disabled: !_ || s,
+                                    className: o()(f ? eM.experimentButton : eM.button, eM.buttonColor, {
+                                        [eM.buttonActive]: null != y,
+                                        [eM.disabled]: !_ || s
                                     })
                                 }),
-                                C ? l : null
+                                S ? l : null
                             ),
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    null == i || i(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), A.onMouseEnter();
+                                    null == i || i(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), Z.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    null === (t = e.onMouseLeave) || void 0 === t || t.call(e), A.onMouseLeave();
+                                    null === (t = e.onMouseLeave) || void 0 === t || t.call(e), Z.onMouseLeave();
                                 },
                                 innerClassName: eM.buttonContents,
                                 wrapperClassName: eM.button,
                                 focusProps: eH,
-                                children: T
-                                    ? w
+                                children: P
+                                    ? D
                                     : (0, r.jsxs)(k.Z, {
                                           align: k.Z.Align.CENTER,
-                                          children: [w, ek.NW.string(ek.t['r0/+v7'])]
+                                          children: [D, ek.NW.string(ek.t['r0/+v7'])]
                                       })
                             }
                         )
@@ -664,6 +667,7 @@ class eX extends i.PureComponent {
         return null == e
             ? null
             : (0, r.jsx)(g.yRy, {
+                  targetElementRef: this.ref,
                   renderPopout: this.renderVoicePanelIntroduction,
                   position: 'top',
                   align: 'center',
@@ -671,6 +675,7 @@ class eX extends i.PureComponent {
                   shouldShow: n,
                   children: () =>
                       (0, r.jsxs)('div', {
+                          ref: this.ref,
                           className: eM.container,
                           children: [
                               (0, r.jsxs)(k.Z, {
@@ -697,6 +702,7 @@ class eX extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            eG(this, 'ref', i.createRef()),
             eG(this, 'handleChannelLinkClick', (e) => {
                 var t;
                 let { guild: n, channel: r } = this.props;
