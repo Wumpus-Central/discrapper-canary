@@ -1,33 +1,31 @@
 n.d(t, {
-    FD: () => g,
-    I5: () => I,
-    KP: () => N,
-    Mn: () => y,
-    P6: () => w,
-    S2: () => v,
-    UZ: () => S,
-    V3: () => O,
-    W3: () => P,
-    Zy: () => E,
-    b9: () => C,
-    cV: () => T,
-    si: () => R,
-    ss: () => b,
-    xn: () => A
+    FD: () => h,
+    I5: () => y,
+    KP: () => S,
+    Mn: () => b,
+    P6: () => R,
+    S2: () => E,
+    V3: () => v,
+    W0: () => O,
+    W3: () => C,
+    Zy: () => m,
+    b9: () => N,
+    cV: () => I,
+    si: () => A,
+    ss: () => g,
+    xn: () => T
 });
 var r = n(544891),
     i = n(433517),
     o = n(780384),
     a = n(570140),
     s = n(703656),
-    l = n(626135),
-    c = n(768581),
-    u = n(546796),
-    d = n(893776),
-    f = n(981631),
-    _ = n(792101),
-    p = n(388032);
-function h(e, t, n) {
+    l = n(546796),
+    c = n(893776),
+    u = n(981631),
+    d = n(792101),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +38,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,37 +49,37 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function g() {
+function h() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
-function E() {
+function m() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
-function b(e, t) {
-    let n = t ? p.NW.string(p.t['8lQ2ra']) : p.NW.string(p.t.jf5GGR),
-        i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT,
+function g(e, t) {
+    let n = t ? f.NW.string(f.t['8lQ2ra']) : f.NW.string(f.t.jf5GGR),
+        i = t ? u.ANM.DELETE_ACCOUNT : u.ANM.DISABLE_ACCOUNT,
         o = (t) =>
             r.tn.post({
                 url: i,
-                body: m({ password: e }, t),
+                body: p({ password: e }, t),
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
-    return (0, u.Z)(o, {
+    return (0, l.Z)(o, {
         modalProps: { title: n },
         checkEnabled: !1
     }).then(() => {
-        d.Z.logoutInternal(), (0, s.uL)(f.Z5c.DEFAULT_LOGGED_OUT);
+        c.Z.logoutInternal(), (0, s.uL)(u.Z5c.DEFAULT_LOGGED_OUT);
     });
 }
-async function v(e) {
+async function E(e) {
     let t = await r.tn.patch({
-            url: f.ANM.ME,
+            url: u.ANM.ME,
             oldFormErrors: !0,
             body: e,
             rejectWithError: !1
@@ -110,37 +108,37 @@ async function v(e) {
         t
     );
 }
-function y(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: d, avatarDescription: h, avatarId: g, avatarDecoration: E, newPassword: b, globalName: y, nameplate: O } = e;
+function b(e) {
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, nameplate: v } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
-        (0, u.Z)(
+        (0, l.Z)(
             (e) => {
-                let a = m(
+                let a = p(
                     {
                         username: t,
                         email: r,
                         email_token: o,
                         password: s,
-                        avatar: d,
-                        avatar_description: h,
-                        avatar_id: g,
+                        avatar: c,
+                        avatar_description: _,
+                        avatar_id: h,
                         discriminator: n,
-                        global_name: y,
-                        new_password: b
+                        global_name: b,
+                        new_password: g
                     },
                     e
                 );
-                null === E && (a.avatar_decoration_id = null), null != E && ((a.avatar_decoration_id = E.id), (a.avatar_decoration_sku_id = E.skuId)), null === O && (a.nameplate_id = null), null != O && ((a.nameplate_id = O.id), (a.nameplate_sku_id = O.skuId));
-                let l = i.K.get(f.JkL),
-                    c = (0, _.xJ)();
-                null != c && null != l && ((a.push_provider = c), (a.push_token = l));
-                let u = i.K.get(f.scU);
-                return null != _.mv && null != u && ((a.push_voip_provider = _.mv), (a.push_voip_token = u)), v(a);
+                null === m && (a.avatar_decoration_id = null), null != m && ((a.avatar_decoration_id = m.id), (a.avatar_decoration_sku_id = m.skuId)), null === v && (a.nameplate_id = null), null != v && ((a.nameplate_id = v.id), (a.nameplate_sku_id = v.skuId));
+                let l = i.K.get(u.JkL),
+                    f = (0, d.xJ)();
+                null != f && null != l && ((a.push_provider = f), (a.push_token = l));
+                let y = i.K.get(u.scU);
+                return null != d.mv && null != y && ((a.push_voip_provider = d.mv), (a.push_voip_token = y)), E(a);
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: p.NW.string(p.t.clQc1d) },
+                modalProps: { title: f.NW.string(f.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({
@@ -150,20 +148,7 @@ function y(e) {
                 }
             }
         ).then(
-            (e) => {
-                let t = e.body;
-                return (
-                    l.default.track(f.rMx.USER_AVATAR_UPDATED, {
-                        animated: (0, c.xR)(t.avatar),
-                        is_guild_profile: !1,
-                        recent_avatar_id: null != g ? Number(g) : void 0,
-                        is_edited_recent_avatar: null != d && null != g
-                    }),
-                    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }),
-                    (null != d || null != g) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }),
-                    e
-                );
-            },
+            (e) => (a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), (null != c || null != h) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }), e),
             (e) => (
                 a.Z.dispatch({
                     type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
@@ -174,54 +159,54 @@ function y(e) {
         )
     );
 }
-function O(e) {
+function v(e) {
     return r.tn.post({
-        url: f.ANM.USER_HARVEST,
+        url: u.ANM.USER_HARVEST,
         body: { backends: e },
         oldFormErrors: !0,
         rejectWithError: !1
     });
 }
-function I(e) {
+function y(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? o.uv.announce(p.NW.string(p.t['f1+oNj'])) : o.uv.announce(p.NW.string(p.t.NstziY));
+        null == e ? o.uv.announce(f.NW.string(f.t['f1+oNj'])) : o.uv.announce(f.NW.string(f.t.NstziY));
 }
-function S(e) {
+function O(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function T(e) {
+function I(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function N(e) {
+function S(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
         nameplate: e
     });
 }
-function A(e) {
+function T(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function C() {
+function N() {
     a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function R() {
+function A() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function P() {
+function C() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function w() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }
