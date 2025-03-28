@@ -1,38 +1,41 @@
-r.d(t, { Z: () => v }), r(47120);
-var n = r(200651),
-    l = r(192379),
-    i = r(120356),
-    a = r.n(i),
-    o = r(180650),
-    s = r(87290),
-    c = r(960048),
-    d = r(381585),
-    u = r(597688),
-    p = r(506800),
-    f = r(788822),
-    h = r(215023),
-    C = r(388032),
-    m = r(974492);
-let b = (e) => {
-        let { handleTransition: t, featuredBlockRecord: r } = e,
-            i = u.Z.getCategory(o.T.ROBERT),
-            c = (0, p.c)('CollectiblesFeedShop') && null != i,
-            d = u.Z.getCategory(o.T.ANIME_V2),
-            b = l.useMemo(() => C.NW.string(new Date() > h.gJ ? C.t.l0CjbW : C.t.uPewb2), []);
-        return (0, n.jsx)('div', {
-            className: a()(m.section, m.col2, m.featuredBlocksContainer),
+n.d(t, { Z: () => C }), n(47120);
+var r = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    i = n(180650),
+    s = n(87290),
+    c = n(442933),
+    u = n(960048),
+    d = n(381585),
+    b = n(597688),
+    p = n(506800),
+    f = n(788822),
+    g = n(215023),
+    h = n(388032),
+    m = n(39532);
+let v = (e) => {
+        let { handleTransition: t, featuredBlockRecord: n } = e,
+            o = b.Z.getCategory(i.T.ROBERT),
+            u = (0, p.c)('CollectiblesFeedShop') && null != o,
+            d = (0, c.H)('CollectiblesFeedShop'),
+            v = b.Z.getCategory(i.T.ANIME_V2),
+            _ = l.useMemo(() => h.NW.string(new Date() > g.gJ ? h.t.l0CjbW : h.t.uPewb2), []);
+        return (0, r.jsx)('div', {
+            className: a()(m.col2, m.centeredSection),
             children:
-                null == r
+                null == n
                     ? void 0
-                    : r.subblocks.map((e, r) => {
+                    : n.subblocks.map((e, n) => {
                           if (e.type === s.O.CATEGORY) {
-                              let l = null != e.unpublishedAt ? C.NW.string(C.t['h/uBCQ']) : e.categoryStoreListingId === (null == d ? void 0 : d.storeListingId) ? C.NW.string(C.t['o/oRJC']) : void 0,
-                                  a = c && e.categoryStoreListingId === (null == i ? void 0 : i.storeListingId) ? b : l;
-                              return (0, n.jsx)(
+                              let l = null != e.unpublishedAt ? h.NW.string(h.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? h.NW.string(h.t.PsL3bW) : e.categoryStoreListingId === (null == v ? void 0 : v.storeListingId) ? h.NW.string(h.t['o/oRJC']) : void 0,
+                                  a = u && e.categoryStoreListingId === (null == o ? void 0 : o.storeListingId) ? _ : l,
+                                  i = 0 === n ? (d ? h.NW.string(h.t['x41/V1']) : l) : a;
+                              return (0, r.jsx)(
                                   f.q,
                                   {
                                       subblock: e,
-                                      badgeText: 0 === r ? l : a,
+                                      badgeText: i,
                                       handleTransition: t
                                   },
                                   e.categoryStoreListingId
@@ -42,63 +45,63 @@ let b = (e) => {
                       })
         });
     },
-    g = (e) => {
-        let { handleTransition: t, categories: r } = e,
-            l = (0, p.c)('CollectiblesFeedShop') && null != u.Z.getCategory(o.T.ROBERT);
-        if (null == r || r.length < 2) return c.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
-        let [i, s] = r,
-            b = (null == i ? void 0 : i.unpublishedAt) != null ? C.NW.string(C.t['h/uBCQ']) : void 0,
-            g = C.NW.string(new Date() > h.gJ ? C.t.l0CjbW : C.t.uPewb2),
-            v = l ? g : C.NW.string(C.t['o/oRJC']);
-        return (0, n.jsx)('div', {
-            className: a()(m.section, m.col2, m.featuredBlocksContainer),
-            children: (0, n.jsxs)(d.k0, {
+    _ = (e) => {
+        let { handleTransition: t, categories: n } = e,
+            l = (0, p.c)('CollectiblesFeedShop') && null != b.Z.getCategory(i.T.ROBERT);
+        if (null == n || n.length < 2) return u.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
+        let [o, s] = n,
+            c = (null == o ? void 0 : o.unpublishedAt) != null ? h.NW.string(h.t['h/uBCQ']) : void 0,
+            v = h.NW.string(new Date() > g.gJ ? h.t.l0CjbW : h.t.uPewb2),
+            _ = l ? v : h.NW.string(h.t['o/oRJC']);
+        return (0, r.jsx)('div', {
+            className: a()(m.col2, m.centeredSection),
+            children: (0, r.jsxs)(d.k0, {
                 newValue: {
                     categoryPosition: 1,
                     pageSection: 'featured_block'
                 },
                 children: [
-                    null != i &&
-                        (0, n.jsx)(f.q, {
-                            category: i,
-                            badgeText: b,
+                    null != o &&
+                        (0, r.jsx)(f.q, {
+                            category: o,
+                            badgeText: c,
                             handleTransition: t
                         }),
                     null != s &&
-                        (0, n.jsx)(f.q, {
+                        (0, r.jsx)(f.q, {
                             category: s,
-                            badgeText: v,
+                            badgeText: _,
                             handleTransition: t
                         })
                 ]
             })
         });
     },
-    v = (e) => {
-        let { isLoading: t, handleTransition: r, categories: l, featuredBlockRecord: i } = e;
+    C = (e) => {
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: o } = e;
         return t
-            ? (0, n.jsxs)('div', {
-                  className: a()(m.section, m.col2, m.featuredBlocksContainer),
+            ? (0, r.jsxs)('div', {
+                  className: a()(m.col2, m.centeredSection),
                   children: [
-                      (0, n.jsx)('div', {
+                      (0, r.jsx)('div', {
                           className: a()(m.skeleton, m.featuredBlock),
-                          children: (0, n.jsx)('div', { className: m.skeletonBody })
+                          children: (0, r.jsx)('div', { className: m.skeletonBody })
                       }),
-                      (0, n.jsx)('div', {
+                      (0, r.jsx)('div', {
                           className: a()(m.skeleton, m.featuredBlock),
-                          children: (0, n.jsx)('div', { className: m.skeletonBody })
+                          children: (0, r.jsx)('div', { className: m.skeletonBody })
                       })
                   ]
               })
-            : null != i
-              ? (0, n.jsx)(b, {
-                    featuredBlockRecord: i,
-                    handleTransition: r,
+            : null != o
+              ? (0, r.jsx)(v, {
+                    featuredBlockRecord: o,
+                    handleTransition: n,
                     isLoading: !1
                 })
-              : (0, n.jsx)(g, {
+              : (0, r.jsx)(_, {
                     categories: l,
-                    handleTransition: r,
+                    handleTransition: n,
                     isLoading: !1
                 });
     };

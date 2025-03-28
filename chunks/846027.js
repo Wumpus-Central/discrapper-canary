@@ -87,6 +87,7 @@ let O = {
                         usedKeybind: n,
                         location: o
                     }),
+                    (i = i && !u.Z.hasActiveCallKitCall()),
                     u.Z.isEnabled())
                   ? r.Z.dispatch({
                         type: 'AUDIO_TOGGLE_SELF_MUTE',
@@ -99,12 +100,13 @@ let O = {
         setSelfMute(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             S() ||
+                ((n = n && !u.Z.hasActiveCallKitCall()),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_SELF_MUTE',
                     context: e,
                     mute: t,
                     playSoundEffect: n
-                });
+                }));
         },
         setTemporarySelfMute(e) {
             S() ||

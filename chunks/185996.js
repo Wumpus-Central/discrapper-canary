@@ -1,4 +1,4 @@
-n.d(t, { U: () => c });
+n.d(t, { U: () => d });
 var r = n(259443),
     i = n(668757),
     o = n(818083),
@@ -22,7 +22,11 @@ let s = new r.Yd('libdiscore'),
                 config: { enabled: !0 }
             }
         ]
-    });
-function c() {
+    }),
+    c = null;
+function u() {
     return !!l.getCurrentConfig({ location: 'blockedDomains' }).enabled && ((0, i.u2)() || s.warn('isLibdiscoreBlockedDomainsEnabled called but libdiscore is not loaded'), !0);
+}
+function d() {
+    return null === c && ((c = u()), s.verbose('isLibdiscoreBlockedDomainsEnabledThisSession: '.concat(c))), c;
 }

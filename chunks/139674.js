@@ -54,18 +54,21 @@ class v extends (o = a.ZP.Store) {
         }
         return r;
     }
-    isBlockedDomain(e) {
-        if ((0, u.U)()) return (0, s.PJ)(e);
+    _isBlockedDomain(e) {
         let t = n(647229);
         if (null == r) return this.getBlockedDomainList(), null;
         let i = (0, d.F)(e),
             o = new t.hash.sha256(),
             a = t.codec.hex.fromBits(o.update(i).finalize()),
-            l = '';
-        r[a] && (l = i);
-        let c = i.indexOf('.');
-        for (; -1 !== c && '' === l; ) (i = i.substring(c + 1)), o.reset(), r[(a = t.codec.hex.fromBits(o.update(i).finalize()))] && (l = i), (c = i.indexOf('.'));
-        return '' !== l ? (f.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: l }), l) : null;
+            s = '';
+        r[a] && (s = i);
+        let l = i.indexOf('.');
+        for (; -1 !== l && '' === s; ) (i = i.substring(l + 1)), o.reset(), r[(a = t.codec.hex.fromBits(o.update(i).finalize()))] && (s = i), (l = i.indexOf('.'));
+        return s;
+    }
+    isBlockedDomain(e) {
+        let t = (0, u.U)() ? (0, s.PJ)(e) : this._isBlockedDomain(e);
+        return '' !== t ? (f.default.track(h.rMx.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t) : null;
     }
 }
 m(v, 'displayName', 'BlockedDomainStore');
