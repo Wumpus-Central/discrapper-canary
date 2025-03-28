@@ -46589,6 +46589,11 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     text-align: center
 }
 
+.description_c6e099 a {
+    position: relative;
+    z-index: 1
+}
+
 .description_c6e099 p {
     margin: 0
 }
