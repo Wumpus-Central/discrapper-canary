@@ -1,16 +1,15 @@
 n.d(t, {
     B1: () => x,
-    DR: () => A,
+    DR: () => N,
     F$: () => P,
-    K$: () => M,
-    Ov: () => j,
-    R2: () => k,
+    Ov: () => k,
+    R2: () => M,
     Sm: () => S,
     fK: () => L,
-    fi: () => U,
+    fi: () => j,
     jr: () => D,
     mK: () => T,
-    oK: () => N,
+    oK: () => A,
     oc: () => R,
     qg: () => w
 });
@@ -81,7 +80,7 @@ function I(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(597688), n(574709), n(328347), n(874703), n(52030);
+n(597688), n(328347), n(874703), n(52030);
 let S = (e) => {
         s.Z.dispatch(y({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
     },
@@ -89,10 +88,10 @@ let S = (e) => {
         var { openInLayer: t = !0, tab: n } = e;
         S(O(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(b.S9g.COLLECTIBLES_SHOP) : (0, u.uL)(n ? b.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : b.Z5c.COLLECTIBLES_SHOP);
     },
-    A = () => {
+    N = () => {
         s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();
     },
-    N = (e) => {
+    A = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_DETAILS_OPEN',
             item: e
@@ -225,10 +224,7 @@ let S = (e) => {
             return (0, E.G)(new c.Hx(e)), !1;
         }
     },
-    M = (e) => {
-        s.Z.dispatch(y({ type: 'COLLECTIBLES_CATEGORY_ITEMS_VIEWED' }, e));
-    },
-    k = async (e) => {
+    M = async (e) => {
         let { release: t = i.P.PROD } = e;
         s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH' });
         let n = { platform: r.h.DESKTOP };
@@ -247,7 +243,7 @@ let S = (e) => {
             (0, E.G)(new c.Hx(e)), s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
         }
     },
-    j = async (e, t) => {
+    k = async (e, t) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_SHOP_HOME_FETCH',
             tab: e,
@@ -275,7 +271,7 @@ let S = (e) => {
                 });
         }
     },
-    U = (e) => {
+    j = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE',
             shopHomeConfigOverride: e
