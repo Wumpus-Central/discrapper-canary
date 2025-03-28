@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(47120);
+n.d(t, { Z: () => P }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -18,8 +18,8 @@ var r = n(200651),
     C = n(796638),
     v = n(981631),
     y = n(354459),
-    x = n(633563),
-    j = n(386228);
+    x = n(26128),
+    j = n(690874);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -45,7 +45,7 @@ function O(e) {
     }
     return e;
 }
-function N(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,36 +63,36 @@ function N(e, t) {
         e
     );
 }
-let E = 16 / 9,
-    P = 8 + C.cF;
-function I(e) {
+let N = 16 / 9,
+    I = 8 + C.cF;
+function P(e) {
     var t;
     let n,
-        { onSelectParticipant: l, onContextMenuParticipant: I, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: F } = e,
+        { onSelectParticipant: l, onContextMenuParticipant: P, onFullscreenParticipant: S, participants: Z, filteredParticipants: T, popoutWindow: A, inCall: w, channel: R, selectedParticipant: k, showParticipants: M = !0, className: L, paused: D, width: W, height: U, layout: B, idle: F } = e,
         H = null != A,
         G = h.Z.getVideoComponent(),
         V = p.default.getId(),
-        [z, q] = i.useState(null),
-        [Y, K] = i.useState(!0),
-        [X, J] = i.useState(!1),
-        Q = k.type === y.fO.ACTIVITY || k.type === y.fO.PRESENCE_EMBEDDED_ACTIVITY,
-        $ = (0, u.Z)(Q ? k.applicationId : void 0),
-        ee = !Q && null != k.streamId,
-        et = U <= 2 * P + 144,
+        [z, Y] = i.useState(null),
+        [q, K] = i.useState(!0),
+        [X, Q] = i.useState(!1),
+        J = k.type === y.fO.ACTIVITY || k.type === y.fO.PRESENCE_EMBEDDED_ACTIVITY,
+        $ = (0, u.Z)(J ? k.applicationId : void 0),
+        ee = !J && null != k.streamId,
+        et = U <= 2 * I + 144,
         en = M && !et,
         er = (0, c.Z)(en),
         ei = B === v.AEg.MINIMUM || B === v.AEg.NORMAL,
-        el = !et && (!ei || Q),
+        el = !et && (!ei || J),
         eo = (0, m.Z)(el, 100),
         ea = (null !== (t = (0, c.Z)(k.id)) && void 0 !== t ? t : k.id) !== k.id,
         es = 0;
-    (Q || en) && (es += 72), Q && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * P + 8);
-    let ec = i.useMemo(() => (Q && $ ? W / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : E), [ee, z, Q, W, U, es, $]),
+    (J || en) && (es += 72), J && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * I + 8);
+    let ec = i.useMemo(() => (J && $ ? W / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : N), [ee, z, J, W, U, es, $]),
         eu = U - 2 * es,
-        ed = Q && $ ? W : eu * ec,
+        ed = J && $ ? W : eu * ec,
         ep = Math.floor(Math.min(W, ed) / ec),
-        eh = U > W / ec + 72 + P + 8;
-    (n = en || Q ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
+        eh = U > W / ec + 72 + I + 8;
+    (n = en || J ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
                 K(!1);
@@ -105,11 +105,11 @@ function I(e) {
             {
                 value: +!!en,
                 delay: eh || !en ? 0 : 100,
-                config: N(O({}, a.config.stiff), { clamp: !0 }),
-                onStart: () => J(!0),
+                config: E(O({}, a.config.stiff), { clamp: !0 }),
+                onStart: () => Q(!0),
                 onChange: () => f.S.dispatch(v.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    J(!1), f.S.dispatch(v.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(v.CkL.REMEASURE_TARGET);
                 }
             },
             'animate-always'
@@ -117,21 +117,21 @@ function I(e) {
         em = (0, s.q_F)(
             {
                 value: +!!en,
-                config: N(O({}, a.config.stiff), { clamp: !0 })
+                config: E(O({}, a.config.stiff), { clamp: !0 })
             },
             'animate-always'
         ),
         eg = (0, s.q_F)(
             {
                 value: ed,
-                config: N(O({}, a.config.stiff), { clamp: !0 })
+                config: E(O({}, a.config.stiff), { clamp: !0 })
             },
             (er === en && em.value.idle && !eo) || ea ? 'animate-never' : 'animate-always'
         ),
         eb = (0, s.q_F)(
             {
                 value: n,
-                config: N(O({}, a.config.stiff), { clamp: !0 })
+                config: E(O({}, a.config.stiff), { clamp: !0 })
             },
             'animate-always'
         ),
@@ -139,7 +139,7 @@ function I(e) {
             k,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
-                config: N(O({}, a.config.stiff), { clamp: !0 }),
+                config: E(O({}, a.config.stiff), { clamp: !0 }),
                 initial: null,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
@@ -148,7 +148,7 @@ function I(e) {
             'animate-always'
         ),
         eC = i.useCallback((e) => {
-            q(e), K(!1);
+            Y(e), K(!1);
         }, []),
         ev = en || D ? [] : (0, _.n3)(Z, k, V),
         { visibleParticipants: ey, participantTileWidth: ex } = (0, C.ZB)(W, T);
@@ -157,17 +157,17 @@ function I(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: j.tileWrapper,
-                style: { opacity: ee && Y ? 0 : 1 },
+                style: { opacity: ee && q ? 0 : 1 },
                 children: [
                     (0, r.jsxs)(a.animated.div, {
                         className: j.videoFrame,
-                        style: { top: em.value.to((e) => (-e * P) / 2) },
+                        style: { top: em.value.to((e) => (-e * I) / 2) },
                         children: [
                             (0, r.jsx)(a.animated.div, {
                                 style: { width: eg.value },
                                 className: j.videoWrapper,
                                 children: (0, r.jsx)('div', {
-                                    className: o()(x.videoSizer),
+                                    className: x.videoSizer,
                                     style: { aspectRatio: ec },
                                     children: e_((e, t, n) => {
                                         let { key: i } = n;
@@ -188,7 +188,7 @@ function I(e) {
                                                           participant: t,
                                                           onClick: l,
                                                           onDoubleClick: S,
-                                                          onContextMenu: I,
+                                                          onContextMenu: P,
                                                           onVideoResize: eC,
                                                           inCall: w,
                                                           inPopout: H
@@ -216,14 +216,14 @@ function I(e) {
                     (0, r.jsx)(a.animated.div, {
                         className: j.participantsWrapperAnimated,
                         style: {
-                            translateY: ef.value.to((e) => (e * P) / 2),
+                            translateY: ef.value.to((e) => (e * I) / 2),
                             opacity: ef.value,
                             visibility: ef.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
                         children: (0, r.jsx)(C.ZP, {
                             channel: R,
                             onClick: l,
-                            onContextMenu: I,
+                            onContextMenu: P,
                             onDoubleClick: S,
                             participants: ey,
                             participantTileWidth: ex,
@@ -237,11 +237,12 @@ function I(e) {
             }),
             ev.length > 0
                 ? (0, r.jsx)(b.Z, {
-                      onContextMenuParticipant: I,
+                      onContextMenuParticipant: P,
                       width: W,
                       height: U,
                       channel: R,
-                      participants: ev
+                      participants: ev,
+                      onSelectParticipant: l
                   })
                 : null
         ]

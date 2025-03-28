@@ -13,7 +13,7 @@ let b = (e) => {
     let { user: t, selectedNameplate: r, purchased: i } = e,
         b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));
     return (0, n.jsxs)('div', {
-        className: o()(p.previewBorder, { [p.upsell]: !i }),
+        className: o()(p.previewBorder, { [p.upsell]: !i && null != r }),
         children: [
             (0, n.jsx)('div', {
                 className: p.previewBox,
@@ -44,21 +44,23 @@ let b = (e) => {
                     ]
                 })
             }),
-            (0, n.jsxs)('div', {
-                className: p.previewDescription,
-                children: [
-                    (0, n.jsx)(a.Text, {
-                        variant: 'text-sm/semibold',
-                        children: null == b ? void 0 : b.name
-                    }),
-                    i
-                        ? null
-                        : (0, n.jsx)(a.Text, {
-                              variant: 'text-sm/normal',
-                              children: d.NW.string(d.t.my5jxM)
-                          })
-                ]
-            })
+            null != r
+                ? (0, n.jsxs)('div', {
+                      className: p.previewDescription,
+                      children: [
+                          (0, n.jsx)(a.Text, {
+                              variant: 'text-sm/semibold',
+                              children: null == b ? void 0 : b.name
+                          }),
+                          i
+                              ? null
+                              : (0, n.jsx)(a.Text, {
+                                    variant: 'text-sm/normal',
+                                    children: d.NW.string(d.t.my5jxM)
+                                })
+                      ]
+                  })
+                : null
         ]
     });
 };

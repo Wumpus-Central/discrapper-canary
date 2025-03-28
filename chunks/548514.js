@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(301563);
+n.d(t, { Z: () => M }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(301563);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
@@ -11,26 +11,27 @@ var r = n(200651),
     p = n(197386),
     m = n(906732),
     h = n(279332),
-    g = n(783097),
-    f = n(606192),
-    _ = n(299206),
-    b = n(276022),
-    v = n(703656),
-    x = n(706454),
-    C = n(594174),
-    j = n(626135),
-    y = n(572004),
-    O = n(135431),
-    P = n(272048),
-    I = n(881294),
-    N = n(258971),
-    S = n(98449),
-    E = n(981631),
-    T = n(388032),
-    A = n(906996);
-let L = 'start_application_install',
-    R = 'launch_activity';
-function w(e) {
+    g = n(915346),
+    f = n(783097),
+    _ = n(433534),
+    b = n(299206),
+    v = n(276022),
+    x = n(703656),
+    C = n(706454),
+    j = n(594174),
+    y = n(626135),
+    O = n(572004),
+    P = n(135431),
+    I = n(272048),
+    N = n(881294),
+    S = n(258971),
+    E = n(98449),
+    T = n(981631),
+    A = n(388032),
+    L = n(906996);
+let R = 'start_application_install',
+    w = 'launch_activity';
+function k(e) {
     let { renderDropdown: t, size: n } = e;
     return (0, r.jsx)(c.yRy, {
         renderPopout: (e) => {
@@ -73,9 +74,9 @@ function w(e) {
                         look: c.zxk.Looks.FILLED,
                         size: c.zxk.Sizes.ICON,
                         color: c.zxk.Colors.PRIMARY,
-                        className: l()(A.iconButton, { [A.small]: 'sm' === n }),
-                        innerClassName: A.innerIconButton,
-                        'aria-label': T.NW.string(T.t.UKOtz8)
+                        className: l()(L.iconButton, { [L.small]: 'sm' === n }),
+                        innerClassName: L.innerIconButton,
+                        'aria-label': A.NW.string(A.t.UKOtz8)
                     },
                     e
                 )),
@@ -103,14 +104,14 @@ function w(e) {
         }
     });
 }
-function k(e) {
+function Z(e) {
     let { application: t, variant: n, size: i, color: s } = e,
         { onClickInstallApplication: d, canInstall: u } = (function (e) {
-            let t = (0, I.nu)(),
+            let t = (0, N.nu)(),
                 n = a.useCallback(() => {
                     var t;
-                    let n = null !== (t = N.z8.getField('guildId')) && void 0 !== t ? t : void 0;
-                    (0, O.LO)({
+                    let n = null !== (t = S.z8.getField('guildId')) && void 0 !== t ? t : void 0;
+                    (0, P.L)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -122,16 +123,16 @@ function k(e) {
             return (
                 a.useEffect(() => {
                     let e = new URL(location.href);
-                    if (t && 'true' === e.searchParams.get(L)) {
-                        e.searchParams.delete(L);
+                    if (t && 'true' === e.searchParams.get(R)) {
+                        e.searchParams.delete(R);
                         let t = e.pathname + e.search;
-                        (0, v.dL)(t), n();
+                        (0, x.dL)(t), n();
                     }
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
-                        if (((0, I.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
-                            let t = (0, O.Er)({
+                        if (((0, N.zZ)(T.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
+                            let t = (0, P.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
@@ -144,20 +145,20 @@ function k(e) {
                         }
                         if (t) n();
                         else {
-                            let t = N.z8.getField('guildId');
-                            j.default.track(E.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+                            let t = S.z8.getField('guildId');
+                            y.default.track(T.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                                 application_id: e.id,
                                 guild_id: t,
                                 auth_type: null != e.custom_install_url ? 'custom_url' : 'in_app',
                                 source: 'product_page',
                                 device_platform: o.tq ? 'mobile_web' : 'desktop_web'
                             }),
-                                (0, I.rf)({ [L]: 'true' });
+                                (0, N.rf)({ [R]: 'true' });
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
                         () =>
-                            (0, O.Eb)({
+                            (0, _.E)({
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
                                 integrationTypesConfig: e.integration_types_config
@@ -172,10 +173,10 @@ function k(e) {
               look: c.zxk.Looks.FILLED,
               size: c.zxk.Sizes.ICON,
               color: s,
-              className: l()(A.iconButton, { [A.small]: 'sm' === i }),
+              className: l()(L.iconButton, { [L.small]: 'sm' === i }),
               onClick: d,
-              'aria-label': T.NW.string(T.t.NgXl3N),
-              innerClassName: A.innerIconButton,
+              'aria-label': A.NW.string(A.t.NgXl3N),
+              innerClassName: L.innerIconButton,
               disabled: !u,
               children: (0, r.jsx)(c.svS, {
                   size: 'xs',
@@ -187,21 +188,21 @@ function k(e) {
               color: s,
               onClick: d,
               disabled: !u,
-              children: 'small' === n ? T.NW.string(T.t.qRZ35u) : T.NW.string(T.t.NgXl3N)
+              children: 'small' === n ? A.NW.string(A.t.qRZ35u) : A.NW.string(A.t.NgXl3N)
           });
 }
-function Z(e) {
+function D(e) {
     let { variant: t, size: n, onClick: a, isSubmitting: i } = e;
     return 'icon' === t
         ? (0, r.jsx)(c.zxk, {
               look: c.zxk.Looks.FILLED,
               size: c.zxk.Sizes.ICON,
               color: c.zxk.Colors.BRAND,
-              className: l()(A.iconButton, { [A.small]: 'sm' === n }),
-              innerClassName: A.innerIconButton,
+              className: l()(L.iconButton, { [L.small]: 'sm' === n }),
+              innerClassName: L.innerIconButton,
               onClick: a,
               submitting: i,
-              'aria-label': T.NW.string(T.t.QO7rOz),
+              'aria-label': A.NW.string(A.t.QO7rOz),
               children: (0, r.jsx)(c.o1U, {
                   size: 'xs',
                   color: 'currentColor'
@@ -212,43 +213,43 @@ function Z(e) {
               color: c.zxk.Colors.BRAND,
               onClick: a,
               submitting: i,
-              children: T.NW.string(T.t.QO7rOz)
+              children: A.NW.string(A.t.QO7rOz)
           });
 }
-let D = a.forwardRef(function (e, t) {
+let M = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
         o = h.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
-        j = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        { analyticsLocations: O } = (0, m.ZP)(),
-        N = a.useCallback(() => {
-            (0, I.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, y.JG)(j(n.id)), (0, c.showToast)((0, c.createToast)(T.NW.string(T.t['L/PwZW']), c.ToastType.SUCCESS));
+        _ = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(T.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
+        { analyticsLocations: y } = (0, m.ZP)(),
+        P = a.useCallback(() => {
+            (0, N.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, O.JG)(_(n.id)), (0, c.showToast)((0, c.createToast)(A.NW.string(A.t['L/PwZW']), c.ToastType.SUCCESS));
         }, [n.id]),
-        L = (0, s.e7)([x.default], () => x.default.locale),
-        D = a.useCallback(() => {
+        S = (0, s.e7)([C.default], () => C.default.locale),
+        R = a.useCallback(() => {
             (0, d.Z)(
-                (0, S.G)({
+                (0, E.G)({
                     id: n.id,
                     name: n.name,
-                    locale: L
+                    locale: S
                 })
             );
-        }, [L, n]),
-        M = (0, _.Z)({
+        }, [S, n]),
+        M = (0, b.Z)({
             id: n.id,
-            label: T.NW.string(T.t['FfCL+/']),
-            onSuccess: () => (0, c.showToast)((0, c.createToast)(T.NW.string(T.t.eNjAam), c.ToastType.SUCCESS))
+            label: A.NW.string(A.t['FfCL+/']),
+            onSuccess: () => (0, c.showToast)((0, c.createToast)(A.NW.string(A.t.eNjAam), c.ToastType.SUCCESS))
         }),
-        G = (0, b.Z)({
+        G = (0, v.Z)({
             application: n,
             onItemClick: () => {
-                (0, I.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
+                (0, N.zZ)(T.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
             }
         }),
         z = a.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: 'application-directory-profile',
-                    'aria-label': T.NW.string(T.t['/7I4/P']),
+                    'aria-label': A.NW.string(A.t['/7I4/P']),
                     onClose: t,
                     onSelect: void 0,
                     children: [
@@ -257,8 +258,8 @@ let D = a.forwardRef(function (e, t) {
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
                                       id: 'copy',
-                                      label: T.NW.string(T.t.z4sP5O),
-                                      action: N,
+                                      label: A.NW.string(A.t.z4sP5O),
+                                      action: P,
                                       icon: c.xPt
                                   })
                               })
@@ -266,24 +267,24 @@ let D = a.forwardRef(function (e, t) {
                         (0, r.jsx)(c.kSQ, {
                             children: (0, r.jsx)(c.sNh, {
                                 id: 'report',
-                                label: T.NW.string(T.t.NgA5vr),
+                                label: A.NW.string(A.t.NgA5vr),
                                 color: 'danger',
-                                action: D
+                                action: R
                             })
                         }),
                         null != M ? (0, r.jsx)(c.kSQ, { children: M }) : null
                     ]
                 }),
-            [M, D, N, o, G]
+            [M, R, P, o, G]
         ),
         { onClickLaunchActivity: B, isSubmitting: W } = (function (e, t) {
             var n;
             let r = e.id,
                 i = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.id,
-                l = null != i && (0, g.BQ)(e) && (0, g.ye)(e),
+                l = null != i && (0, f.BQ)(e) && (0, f.ye)(e),
                 [o, c] = a.useState(!1),
-                d = (0, I.nu)(),
-                m = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
+                d = (0, N.nu)(),
+                m = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
                 h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
                 _ = a.useCallback(
                     async (t, n, r) => {
@@ -294,7 +295,7 @@ let D = a.forwardRef(function (e, t) {
                         }
                         c(!0);
                         try {
-                            await (0, f.W)({
+                            await (0, g.W)({
                                 appId: n,
                                 botId: t,
                                 analyticsLocations: r
@@ -306,17 +307,17 @@ let D = a.forwardRef(function (e, t) {
                 );
             a.useEffect(() => {
                 let e = new URL(location.href),
-                    n = 'true' === e.searchParams.get(R);
+                    n = 'true' === e.searchParams.get(w);
                 if (d && l && n && null != i && null != m) {
-                    e.searchParams.delete(R);
+                    e.searchParams.delete(w);
                     let n = e.pathname + e.search;
-                    (0, v.dL)(n), _(i, r, t);
+                    (0, x.dL)(n), _(i, r, t);
                 }
             }, [d, l, i, r, t, m, _]);
             let b = a.useCallback(async () => {
                 if (null != i) {
-                    if (((0, I.zZ)(E.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) {
-                        (0, I.rf)({ [R]: 'true' });
+                    if (((0, N.zZ)(T.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) {
+                        (0, N.rf)({ [w]: 'true' });
                         return;
                     }
                     await _(i, r, t);
@@ -326,90 +327,90 @@ let D = a.forwardRef(function (e, t) {
                 onClickLaunchActivity: l ? b : void 0,
                 isSubmitting: o
             };
-        })(n, O),
-        { enabled: U } = (0, P.E)('GlobalDiscoveryAppsDetailActions'),
+        })(n, y),
+        { enabled: U } = (0, I.E)('GlobalDiscoveryAppsDetailActions'),
         F = U && null != B,
         V = F ? c.zxk.Colors.PRIMARY : c.zxk.Colors.BRAND;
     return (0, r.jsxs)('div', {
         ref: t,
         children: [
             (0, r.jsxs)('div', {
-                className: l()(A.actionContainer, A.wide),
+                className: l()(L.actionContainer, L.wide),
                 children: [
                     F &&
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(D, {
                             variant: 'normal',
                             size: i,
                             onClick: B,
                             isSubmitting: W
                         }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(Z, {
                         application: n,
                         variant: 'normal',
                         size: i,
                         color: V
                     }),
-                    y.wS
+                    O.wS
                         ? (0, r.jsx)(c.zxk, {
                               look: c.zxk.Looks.FILLED,
                               size: c.zxk.Sizes.ICON,
                               color: c.zxk.Colors.PRIMARY,
-                              className: l()(A.iconButton, { [A.small]: 'sm' === i }),
-                              innerClassName: A.innerIconButton,
-                              'aria-label': T.NW.string(T.t.z4sP5O),
-                              onClick: N,
+                              className: l()(L.iconButton, { [L.small]: 'sm' === i }),
+                              innerClassName: L.innerIconButton,
+                              'aria-label': A.NW.string(A.t.z4sP5O),
+                              onClick: P,
                               children: (0, r.jsx)(c.xPt, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })
                           })
                         : null,
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(k, {
                         renderDropdown: (e) => z(!1, e),
                         size: i
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: l()(A.actionContainer, A.small),
+                className: l()(L.actionContainer, L.small),
                 children: [
                     F &&
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(D, {
                             variant: 'normal',
                             size: i,
                             onClick: B,
                             isSubmitting: W
                         }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(Z, {
                         application: n,
                         variant: 'small',
                         size: i,
                         color: V
                     }),
-                    (0, r.jsx)(w, {
-                        renderDropdown: (e) => z(y.wS, e),
+                    (0, r.jsx)(k, {
+                        renderDropdown: (e) => z(O.wS, e),
                         size: i
                     })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: l()(A.actionContainer, A.tiny),
+                className: l()(L.actionContainer, L.tiny),
                 children: [
                     F &&
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(D, {
                             variant: 'icon',
                             size: i,
                             onClick: B,
                             isSubmitting: W
                         }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(Z, {
                         application: n,
                         variant: 'icon',
                         size: i,
                         color: V
                     }),
-                    (0, r.jsx)(w, {
-                        renderDropdown: (e) => z(y.wS, e),
+                    (0, r.jsx)(k, {
+                        renderDropdown: (e) => z(O.wS, e),
                         size: i
                     })
                 ]

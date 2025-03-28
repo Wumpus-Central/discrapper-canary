@@ -15,6 +15,7 @@ e.exports = {
     thumbnailContainer: 'thumbnailContainer_faa96b',
     thumbnailOverride: 'thumbnailOverride_faa96b',
     obscured: 'obscured_faa96b',
+    obscuredThumbnailPlaceholder: 'obscuredThumbnailPlaceholder_faa96b',
     header: 'header_faa96b',
     footer: 'footer_faa96b',
     bullet: 'bullet_faa96b',
