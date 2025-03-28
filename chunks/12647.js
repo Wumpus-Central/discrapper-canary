@@ -16,5 +16,6 @@ let i = {
     submitLiveCrashReport: (e) => r.ZP.submitLiveCrashReport(e),
     getPidFromDesktopSource: (e) => r.ZP.getPidFromDesktopSource(e),
     getAudioPid: (e) => r.ZP.getAudioPid(e),
-    generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e)
+    generateSessionFromPid: (e) => r.ZP.generateSessionFromPid(e),
+    getAppHardwareAccelerationEnabled: () => r.ZP.getEnableHardwareAcceleration()
 };

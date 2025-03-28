@@ -7,14 +7,15 @@ var a,
     d = n(866442),
     u = n(442837),
     m = n(570140),
-    p = n(561654),
-    g = n(430824),
-    h = n(990492),
-    f = n(823379),
-    b = n(700785),
-    x = n(999382),
-    j = n(981631);
-function N(e, t, n) {
+    g = n(561654),
+    p = n(393031),
+    h = n(430824),
+    f = n(990492),
+    b = n(823379),
+    x = n(700785),
+    j = n(999382),
+    N = n(981631);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,19 +28,19 @@ function N(e, t, n) {
         e
     );
 }
-let v = new Set(),
-    _ = j.QZA.CLOSED,
+let _ = new Set(),
+    C = N.QZA.CLOSED,
     O = !1,
     y = !1,
-    C = [],
     I = [],
-    E = !1,
-    S = new Set(),
-    T = new Map(),
-    P = new Map();
-function w() {
-    if (null == r || null == C) return [];
-    let e = o()(g.Z.getRoles(r.id))
+    E = [],
+    S = !1,
+    T = new Set(),
+    P = new Map(),
+    w = new Map();
+function R() {
+    if (null == r || null == I) return [];
+    let e = o()(h.Z.getRoles(r.id))
         .values()
         .sortBy((e) => {
             let { position: t } = e;
@@ -47,9 +48,9 @@ function w() {
         })
         .reverse()
         .value();
-    return h.ZP.calculatePositionDeltas({
+    return f.ZP.calculatePositionDeltas({
         oldOrdering: e,
-        newOrdering: C,
+        newOrdering: I,
         idGetter: (e) => {
             let { id: t } = e;
             return t;
@@ -61,23 +62,23 @@ function w() {
         ascending: !1
     });
 }
-function R(e) {
+function Z(e) {
     let { section: t } = e;
-    if (null != r || t !== j.pNK.ROLES) return !1;
+    if (null != r || t !== N.pNK.ROLES) return !1;
     D();
 }
 function D() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    (r = x.Z.getProps().guild),
+    (r = j.Z.getProps().guild),
         (O = !1),
         (y = !1),
         (s = void 0),
-        v.clear(),
-        (_ = j.QZA.OPEN),
-        (I = [
-            ...(C =
+        _.clear(),
+        (C = N.QZA.OPEN),
+        (E = [
+            ...(I =
                 null != r
-                    ? o()(g.Z.getRoles(r.id))
+                    ? o()(h.Z.getRoles(r.id))
                           .values()
                           .sortBy((e) => {
                               let { position: t } = e;
@@ -87,33 +88,33 @@ function D() {
                           .value()
                     : [])
         ]),
-        (E = !1),
+        (S = !1),
         e &&
-            (P.clear(),
-            T.forEach((e, t) => {
-                P.set(t, [...e]);
+            (w.clear(),
+            P.forEach((e, t) => {
+                w.set(t, [...e]);
             }));
 }
-let Z = o().debounce(() => {
+let A = o().debounce(() => {
     let e = !1;
-    !y || (y = w().length > 0) || (e = !0),
-        [...v].forEach((t) => {
+    !y || (y = R().length > 0) || (e = !0),
+        [..._].forEach((t) => {
             var n;
             o().isEqual(
-                k(t),
+                W(t),
                 ((n = t),
-                I.find((e) => {
+                E.find((e) => {
                     let { id: t } = e;
                     return t === n;
                 }))
-            ) && (v.delete(t), (e = !0));
+            ) && (_.delete(t), (e = !0));
         }),
-        0 === v.size && (O = !1),
-        E && o().isEqual(T, P) && ((e = !0), (E = !1)),
-        e && M.emitChange();
+        0 === _.size && (O = !1),
+        S && o().isEqual(P, w) && ((e = !0), (S = !1)),
+        e && G.emitChange();
 }, 500);
-function A(e, t) {
-    let n = C.indexOf(e);
+function k(e, t) {
+    let n = I.indexOf(e);
     if (n < 0) return !1;
     let r = (function (e) {
         for (var t = 1; t < arguments.length; t++) {
@@ -126,26 +127,26 @@ function A(e, t) {
                     })
                 )),
                 r.forEach(function (t) {
-                    N(e, t, n[t]);
+                    v(e, t, n[t]);
                 });
         }
         return e;
     })({}, e, t);
-    (C[n] = r), (C = [...C]), (O = !0), v.add(r.id), Z();
+    (I[n] = r), (I = [...I]), (O = !0), _.add(r.id), A();
 }
-function k(e) {
-    return C.find((t) => {
+function W(e) {
+    return I.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
-function W(e) {
+function L(e) {
     let { guildId: t } = e;
-    if (null == r || t !== r.id || _ === j.QZA.SUBMITTING) return !1;
-    r = x.Z.getProps().guild;
+    if (null == r || t !== r.id || C === N.QZA.SUBMITTING) return !1;
+    r = j.Z.getProps().guild;
     let n = [];
     null != r &&
-        (n = o()(g.Z.getRoles(r.id))
+        (n = o()(h.Z.getRoles(r.id))
             .values()
             .sortBy((e) => {
                 let { position: t } = e;
@@ -153,27 +154,27 @@ function W(e) {
             })
             .reverse()
             .value()),
-        v.forEach((e) => {
-            let t = k(e),
+        _.forEach((e) => {
+            let t = W(e),
                 r = -1;
             null ==
                 n.find((t, n) => {
                     let { id: i } = t;
                     if (i === e) return (r = n), !0;
                 }) || null == t
-                ? v.delete(e)
+                ? _.delete(e)
                 : (n[r] = t);
         }),
-        0 === v.size && (O = !1),
+        0 === _.size && (O = !1),
         (y = !1),
-        (C = [...n]);
+        (I = [...n]);
 }
-class L extends (a = u.ZP.Store) {
+class M extends (a = u.ZP.Store) {
     initialize() {
-        this.waitFor(x.Z, p.Z, g.Z);
+        this.waitFor(j.Z, g.Z, h.Z);
     }
     hasChanges() {
-        return O || y || E;
+        return O || y || S;
     }
     get errorMessage() {
         return s;
@@ -182,98 +183,110 @@ class L extends (a = u.ZP.Store) {
         return y;
     }
     get hasRoleConfigurationChanges() {
-        return E;
+        return S;
     }
     get guild() {
         return r;
     }
     get editedRoleIds() {
-        return Array.from(v);
+        return Array.from(_);
     }
     get editedRoleIdsForConfigurations() {
-        return S;
+        return T;
     }
     get roles() {
-        return C;
+        return I;
     }
     get formState() {
-        return _;
+        return C;
     }
     getSortDeltas() {
-        return w();
+        return R();
     }
     showNotice() {
         return this.hasChanges();
     }
     getRole(e) {
-        return k(e);
+        return W(e);
     }
     getPermissionSearchQuery() {
         return i;
     }
     getEditedRoleConnectionConfigurationsMap() {
-        return P;
+        return w;
     }
 }
-N(L, 'displayName', 'GuildSettingsRolesStore');
-let M = new L(
+v(M, 'displayName', 'GuildSettingsRolesStore');
+let G = new M(
         m.Z,
         __OVERLAY__
             ? {}
             : {
                   GUILD_SETTINGS_ROLES_INIT: () => D(),
-                  GUILD_SETTINGS_INIT: R,
-                  GUILD_SETTINGS_SET_SECTION: R,
+                  GUILD_SETTINGS_INIT: Z,
+                  GUILD_SETTINGS_SET_SECTION: Z,
                   GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                       let { roles: t } = e;
-                      if (null != C && t.length !== C.length) return !1;
-                      (C = t.map((e) => k(e)).filter(f.lm)), (y = !0), Z();
+                      if (null != I && t.length !== I.length) return !1;
+                      (I = t.map((e) => W(e)).filter(b.lm)), (y = !0), A();
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                       let { id: t, flag: n, allow: r } = e,
-                          i = k(t);
+                          i = W(t);
                       if (null == i) return !1;
                       let { permissions: s } = i;
-                      return A(i, { permissions: (s = r ? c.IH(s, n) : c.Od(s, n)) });
+                      return k(i, { permissions: (s = r ? c.IH(s, n) : c.Od(s, n)) });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
                       let { id: t, permissions: n } = e,
-                          r = k(t);
-                      return null != r && A(r, { permissions: n });
+                          r = W(t);
+                      return null != r && k(r, { permissions: n });
                   },
                   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                       let { id: t } = e,
-                          n = k(t);
-                      return null != n && A(n, { permissions: b.Hn });
+                          n = W(t);
+                      return null != n && k(n, { permissions: x.Hn });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                       let { id: t, name: n } = e,
-                          r = k(t);
-                      return null != r && A(r, { name: n });
+                          r = W(t);
+                      return null != r && k(r, { name: n });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function (e) {
                       let { id: t, description: n } = e,
-                          r = k(t);
-                      return null != r && A(r, { description: n });
+                          r = W(t);
+                      return null != r && k(r, { description: n });
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_COLOR: function (e) {
                       let { id: t, color: n } = e,
                           r = 0 === n ? null : (0, d.Rf)(n),
-                          i = k(t);
+                          i = W(t);
                       return (
                           null != i &&
-                          A(i, {
+                          k(i, {
                               color: n,
                               colorString: r
                           })
                       );
                   },
+                  GUILD_SETTINGS_ROLES_UPDATE_COLORS: function (e) {
+                      let { id: t, colors: n } = e,
+                          r = W(t);
+                      if (null == r) return !1;
+                      let i = (0, p.Z)(n);
+                      return k(r, {
+                          color: n.primary_color,
+                          colors: n,
+                          colorString: i.primaryColor,
+                          colorStrings: i
+                      });
+                  },
                   GUILD_SETTINGS_ROLES_UPDATE_SETTINGS: function (e) {
                       let { id: t, hoist: n, mentionable: r } = e,
-                          i = k(t);
+                          i = W(t);
                       return (
                           null != i &&
-                          A(i, {
+                          k(i, {
                               hoist: n,
                               mentionable: r
                           })
@@ -281,10 +294,10 @@ let M = new L(
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON: function (e) {
                       let { id: t, icon: n, unicodeEmoji: r } = e,
-                          i = k(t);
+                          i = W(t);
                       return (
                           null != i &&
-                          A(i, {
+                          k(i, {
                               icon: n,
                               unicodeEmoji: r
                           })
@@ -293,45 +306,45 @@ let M = new L(
                   GUILD_SETTINGS_ROLE_SELECT: function (e) {
                       let { role: t, searchQuery: n } = e;
                       if (((i = n), null != t)) {
-                          if (null != k(t.id)) {
-                              A(t, t);
+                          if (null != W(t.id)) {
+                              k(t, t);
                               return;
                           }
-                          (C = [...C, t]), Z();
+                          (I = [...I, t]), A();
                       }
                   },
                   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
                       let { roleId: t, roleConnectionConfigurations: n } = e,
-                          r = k(t);
+                          r = W(t);
                       if (null == r) return !1;
-                      let i = T.get(r.id);
+                      let i = P.get(r.id);
                       if (o().isEqual(i, n)) return !1;
-                      P.set(r.id, n), T.set(r.id, n), Z();
+                      w.set(r.id, n), P.set(r.id, n), A();
                   },
                   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                       let { roleId: t, roleConnectionConfigurations: n } = e,
-                          r = k(t);
+                          r = W(t);
                       if (null == r) return !1;
-                      (E = !0), S.add(r.id), P.set(r.id, n), Z();
+                      (S = !0), T.add(r.id), w.set(r.id, n), A();
                   },
                   GUILD_SETTINGS_CLOSE: function () {
-                      (r = null), (I = C = []), T.clear(), v.clear(), P.clear(), (S = new Set()), (O = !1), (y = !1), (E = !1), (_ = j.QZA.CLOSED);
+                      (r = null), (E = I = []), P.clear(), _.clear(), w.clear(), (T = new Set()), (O = !1), (y = !1), (S = !1), (C = N.QZA.CLOSED);
                   },
-                  GUILD_ROLE_CREATE: W,
-                  GUILD_ROLE_UPDATE: W,
+                  GUILD_ROLE_CREATE: L,
+                  GUILD_ROLE_UPDATE: L,
                   GUILD_ROLE_DELETE: function (e) {
-                      return S.has(e.roleId) && (S.delete(e.roleId), T.delete(e.roleId), P.delete(e.roleId), (E = !1)), W(e);
+                      return T.has(e.roleId) && (T.delete(e.roleId), P.delete(e.roleId), w.delete(e.roleId), (S = !1)), L(e);
                   },
                   GUILD_SETTINGS_ROLES_SUBMITTING: function () {
-                      _ = j.QZA.SUBMITTING;
+                      C = N.QZA.SUBMITTING;
                   },
                   GUILD_SETTINGS_ROLES_SAVE_FAIL: function (e) {
                       let { message: t } = e;
-                      (_ = j.QZA.OPEN), (s = t);
+                      (C = N.QZA.OPEN), (s = t);
                   },
                   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
                       D(!1);
                   }
               }
     ),
-    U = M;
+    U = G;

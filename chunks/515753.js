@@ -23,8 +23,8 @@ var l = n(200651),
     O = n(326255),
     g = n(956221),
     S = n(747017),
-    T = n(385499),
-    I = n(570908),
+    I = n(385499),
+    T = n(570908),
     N = n(702321),
     b = n(201895),
     v = n(43267),
@@ -44,8 +44,8 @@ var l = n(200651),
     G = n(518950),
     k = n(199902),
     H = n(158776),
-    F = n(306680),
-    V = n(699516),
+    V = n(306680),
+    F = n(699516),
     B = n(111583),
     W = n(9156),
     z = n(594174),
@@ -178,7 +178,7 @@ let et = Y.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
         }),
     ea = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: i, avatarWithTextClassName: a, interactiveClassName: s, text: u, children: E, locationState: p, onClick: h, className: C, role: _, 'aria-posinset': O, 'aria-setsize': g, listItemRef: S } = e,
-            T = ee(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
+            I = ee(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         let N = (0, L.Q3)('PrivateChannelLinkButton');
         return (0, l.jsx)(P.Z, {
             className: o()(X.channel, { [X.fullWidth]: d.tq }, C),
@@ -203,11 +203,11 @@ let et = Y.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
                                 },
                                 className: X.link
                             },
-                            T
+                            I
                         ),
                         {
                             children: [
-                                (0, l.jsx)(I.Z, {
+                                (0, l.jsx)(T.Z, {
                                     selected: n,
                                     muted: !1,
                                     avatar: (0, l.jsx)(r, {
@@ -242,11 +242,11 @@ function es(e) {
             animateOnHover: !(d || K)
         }),
         eE = (0, E.e7)([W.ZP], () => W.ZP.isChannelMuted(i.getGuildId(), i.id)),
-        { ignored: ef, blocked: ep } = (0, E.cj)([V.Z], () => ({
-            ignored: V.Z.isIgnored(i.getRecipientId()),
-            blocked: V.Z.isBlocked(i.getRecipientId())
+        { ignored: ef, blocked: ep } = (0, E.cj)([F.Z], () => ({
+            ignored: F.Z.isIgnored(i.getRecipientId()),
+            blocked: F.Z.isBlocked(i.getRecipientId())
         })),
-        eh = (0, E.e7)([F.ZP], () => F.ZP.getMentionCount(i.id) > 0),
+        eh = (0, E.e7)([V.ZP], () => V.ZP.getMentionCount(i.id) > 0),
         eC = (0, m.ZP)(i),
         e_ = (0, E.e7)([R.Z], () => R.Z.isFavorite(i.id)),
         eO = () => {
@@ -259,10 +259,10 @@ function es(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             null != e && (e.preventDefault(), e.stopPropagation()), p.Z.closePrivateChannel(i.id, d, t);
         },
-        eT = () => {
+        eI = () => {
             p.Z.preload(Q.ME, i.id);
         },
-        eI = (e) => {
+        eT = (e) => {
             e.stopPropagation();
         },
         eN = (e) => {
@@ -409,9 +409,8 @@ function es(e) {
                   ]
               })
             : eC,
-        [ex, ew] = r.useState(!1),
-        eM = null !== (t = eE || eZ || eD) && void 0 !== t && t,
-        eG = r.useRef(null);
+        ex = null !== (t = eE || eZ || eD) && void 0 !== t && t,
+        ew = r.useRef(null);
     return (0, l.jsx)(u.mh, {
         id: i.id,
         children: (e) => {
@@ -425,11 +424,9 @@ function es(e) {
                     ringTarget: es
                 }),
                 ref: es,
-                onFocus: () => ew(!0),
-                onBlur: () => ew(!1),
                 onMouseEnter: eO,
                 onMouseLeave: eg,
-                onMouseDown: eT,
+                onMouseDown: eI,
                 onContextMenu: eb,
                 'aria-setsize': z,
                 'aria-posinset': B,
@@ -441,14 +438,14 @@ function es(e) {
                     }),
                     as: 'div',
                     onClick: eN,
-                    muted: eM,
+                    muted: ex,
                     selected: d,
                     children: [
                         (0, l.jsx)(w.Z, {
                             nameplate: H,
                             selected: d,
                             hovered: K,
-                            content: eG.current,
+                            content: ew.current,
                             placement: x.i.CHANNEL
                         }),
                         (0, l.jsx)(
@@ -458,10 +455,7 @@ function es(e) {
                                     {
                                         innerRef: ea,
                                         to: Q.Z5c.CHANNEL(Q.ME, i.id),
-                                        className: o()(X.link, {
-                                            [X.plated]: null != H,
-                                            [X.platedHover]: null != H && (K || ex)
-                                        }),
+                                        className: o()(X.link, { [X.linkPlated]: null != H }),
                                         'aria-label': (0, b.ZP)({
                                             channel: i,
                                             unread: eh
@@ -470,21 +464,21 @@ function es(e) {
                                     n
                                 ),
                                 {
-                                    children: (0, l.jsx)(I.Z, {
-                                        ref: eG,
+                                    children: (0, l.jsx)(T.Z, {
+                                        ref: ew,
                                         avatar: eA(),
                                         selected: d,
                                         highlighted: eh,
-                                        muted: eM,
+                                        muted: ex,
                                         subText: em(),
                                         name: (0, l.jsx)(y.Z, {
                                             tooltipClassName: X.overflowTooltip,
                                             children: eU
                                         }),
                                         decorators: i.isSystemDM()
-                                            ? (0, l.jsx)(T.Z, {
+                                            ? (0, l.jsx)(I.Z, {
                                                   className: X.decorator,
-                                                  type: T.Z.Types.SYSTEM_DM,
+                                                  type: I.Z.Types.SYSTEM_DM,
                                                   verified: !0
                                               })
                                             : null
@@ -498,7 +492,7 @@ function es(e) {
                         (0, l.jsx)(el, {
                             'aria-label': eP ? q.NW.string(q.t['26C4oq']) : q.NW.string(q.t.jsvgc3),
                             onClick: eP ? ev : eS,
-                            onMouseDown: eI,
+                            onMouseDown: eT,
                             nameplate: H
                         })
                     ]

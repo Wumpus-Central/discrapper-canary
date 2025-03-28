@@ -1,28 +1,30 @@
-n.d(t, { Z: () => p }), n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(112724),
     a = n(241915),
     s = n(981631);
-let l = 48,
-    c = 32,
-    u = 32,
-    d = 32;
-function f(e) {
-    let { className: t, defaultPosition: n = s.VD2.BOTTOM_RIGHT, children: o, width: f, height: p } = e,
-        [_, h] = i.useState(n);
+let l = {
+    top: 48,
+    bottom: 32,
+    left: 32,
+    right: 32
+};
+function c(e) {
+    let { className: t, defaultPosition: n = s.VD2.BOTTOM_RIGHT, children: o, width: c, height: u, topOffset: d } = e,
+        [f, _] = i.useState(n);
     return (0, r.jsx)(a._, {
         className: t,
-        position: _,
+        position: f,
         id: 0,
-        onMove: (e, t) => h(t),
-        maxX: f,
-        maxY: p,
-        edgeOffsetTop: l,
-        edgeOffsetBottom: c,
-        edgeOffsetLeft: u,
-        edgeOffsetRight: d,
+        onMove: (e, t) => _(t),
+        maxX: c,
+        maxY: u,
+        edgeOffsetTop: null != d ? d : l.top,
+        edgeOffsetBottom: l.bottom,
+        edgeOffsetLeft: l.left,
+        edgeOffsetRight: l.right,
         children: o
     });
 }
-let p = (0, o.Z)(f);
+let u = (0, o.Z)(c);

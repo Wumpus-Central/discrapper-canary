@@ -1,18 +1,19 @@
 n.d(t, {
-    C5: () => c,
-    CL: () => s,
-    cf: () => a,
-    iw: () => l
+    C5: () => u,
+    CL: () => l,
+    cf: () => s,
+    iw: () => c
 }),
     n(789020),
     n(230036);
 var r = n(149765),
     i = n(866442),
-    o = n(709054);
-function a(e) {
+    o = n(393031),
+    a = n(709054);
+function s(e) {
     e.permissions = r.vB(e.permissions);
 }
-function s(e) {
+function l(e) {
     var t;
     return {
         id: e.id,
@@ -24,14 +25,7 @@ function s(e) {
         color: e.color,
         colorString: null != e.color && 0 !== e.color ? (0, i.Rf)(e.color) : null,
         colors: e.colors,
-        colorStrings:
-            null != e.colors
-                ? {
-                      primaryColor: (0, i.Rf)(e.colors.primary_color),
-                      secondaryColor: null != e.colors.secondary_color ? (0, i.Rf)(e.colors.secondary_color) : void 0,
-                      tertiaryColor: null != e.colors.tertiary_color ? (0, i.Rf)(e.colors.tertiary_color) : void 0
-                  }
-                : null,
+        colorStrings: null != e.colors ? (0, o.Z)(e.colors) : null,
         hoist: e.hoist,
         managed: e.managed,
         tags: e.tags,
@@ -40,7 +34,7 @@ function s(e) {
         flags: null !== (t = e.flags) && void 0 !== t ? t : 0
     };
 }
-function l(e, t) {
+function c(e, t) {
     if (null == t) return {};
     let n = t.length - 1,
         r = {};
@@ -48,9 +42,9 @@ function l(e, t) {
         t
             .sort((t, n) => {
                 var r, i;
-                let a = e === t.id ? 1 / 0 : -(null !== (r = t.originalPosition) && void 0 !== r ? r : t.position),
+                let o = e === t.id ? 1 / 0 : -(null !== (r = t.originalPosition) && void 0 !== r ? r : t.position),
                     s = e === n.id ? 1 / 0 : -(null !== (i = n.originalPosition) && void 0 !== i ? i : n.position);
-                return a === s ? o.default.compare(t.id, n.id) : a < s ? -1 : +(a !== s);
+                return o === s ? a.default.compare(t.id, n.id) : o < s ? -1 : +(o !== s);
             })
             .forEach((e, t) => {
                 (e.position = n - t), (r[e.id] = e);
@@ -58,6 +52,6 @@ function l(e, t) {
         r
     );
 }
-function c(e, t) {
-    return null == t ? {} : l(e, t.map(s));
+function u(e, t) {
+    return null == t ? {} : c(e, t.map(l));
 }

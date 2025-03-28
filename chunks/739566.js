@@ -135,6 +135,7 @@ function E(e) {
                   iconRoleId: u.iconRoleId,
                   guildMemberAvatar: u.avatar,
                   guildMemberAvatarDecoration: u.avatarDecoration,
-                  primaryGuild: null !== (o = a.primaryGuild) && void 0 !== o ? o : void 0
+                  primaryGuild: null !== (o = a.primaryGuild) && void 0 !== o ? o : void 0,
+                  guildId: l.id
               };
 }

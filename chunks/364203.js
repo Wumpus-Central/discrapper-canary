@@ -350,7 +350,7 @@ function z() {
 }
 H.displayName = 'BaseChatWallpaperSelection';
 let q = function (e) {
-    let { className: t, position: n = C.VD2.BOTTOM_RIGHT, config: o } = e,
+    let { className: t, position: n = C.VD2.TOP_RIGHT, config: o } = e,
         { analyticsLocations: s } = (0, _.ZP)(f.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: l, closePicker: c, setPreviewWallpaperId: p } = (0, T.B)(),
         h = (0, A.Z)(l),
@@ -457,6 +457,7 @@ let q = function (e) {
             children: (0, r.jsx)(b.Z, {
                 className: a()(D.draggableContainer, t),
                 defaultPosition: n,
+                topOffset: 88,
                 children: (0, r.jsxs)('div', {
                     className: D.container,
                     children: [
