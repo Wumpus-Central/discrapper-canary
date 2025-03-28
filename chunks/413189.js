@@ -1,87 +1,91 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(200651),
-    i = n(442837),
-    a = n(481060),
-    o = n(410030),
-    l = n(739566),
-    s = n(612659),
-    c = n(703656),
-    u = n(594174),
-    d = n(63063),
-    p = n(436952),
-    m = n(411149),
-    f = n(115215),
-    h = n(151480),
-    g = n(373076),
-    _ = n(66420),
-    b = n(981631),
-    v = n(474936),
-    x = n(388032),
-    y = n(84848);
-function E(e) {
-    var t, n, E;
-    let O, N, j;
-    let { message: C, channel: I, compact: S } = e,
-        T = f.Y(C),
-        P = (0, p.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
-        A = (0, p.sX)({ location: 'ChatWallpaperSetSystemMessage' }).enabled,
-        w = (0, l.ZP)(C),
-        Z = (0, a.wjy)((0, o.ZP)()),
+    i = n(192379),
+    a = n(442837),
+    o = n(481060),
+    l = n(410030),
+    s = n(739566),
+    c = n(612659),
+    u = n(703656),
+    d = n(594174),
+    p = n(63063),
+    m = n(436952),
+    f = n(411149),
+    h = n(115215),
+    g = n(151480),
+    _ = n(373076),
+    b = n(66420),
+    v = n(981631),
+    x = n(474936),
+    y = n(388032),
+    E = n(84848);
+function O(e) {
+    var t, n, O;
+    let N, j, C;
+    let { message: I, channel: S, compact: T } = e,
+        P = h.Y(I),
+        A = (0, m.sQ)({ location: 'ChatWallpaperSetSystemMessage' }),
+        w = (0, m.sX)({ location: 'ChatWallpaperSetSystemMessage' }).enabled,
+        Z = (0, s.ZP)(I),
+        k = (0, o.wjy)((0, l.ZP)()),
         {
-            chatWallpaper: k,
-            isUpdatingChatWallpaperFlag: R,
-            lastSetMessageId: D
-        } = (0, i.cj)([m.Z], () => ({
-            chatWallpaper: m.Z.getWallpaperById(T),
-            isUpdatingChatWallpaperFlag: m.Z.isUpdatingChatWallpaperFlagForChannel(I.id),
-            lastSetMessageId: m.Z.getLastSetWallpaperMessageIdForChannel(I.id)
+            chatWallpaper: R,
+            isUpdatingChatWallpaperFlag: D,
+            lastSetMessageId: L
+        } = (0, a.cj)([f.Z], () => ({
+            chatWallpaper: f.Z.getWallpaperById(P),
+            isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(S.id),
+            lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(S.id)
         })),
-        L = D === C.id,
-        M = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        W = (null == M ? void 0 : M.id) === C.author.id,
-        U = (0, s.m)(v.p9.TIER_2),
-        F = (0, g.P)(null === (t = I.wallpaper) || void 0 === t ? void 0 : t.setterId),
-        B = f.t(I);
-    return null == T
+        M = L === I.id,
+        W = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        U = (null == W ? void 0 : W.id) === I.author.id,
+        F = (0, c.m)(x.p9.TIER_2),
+        B = (0, _.P)(null === (t = S.wallpaper) || void 0 === t ? void 0 : t.setterId),
+        G = h.t(S);
+    return (i.useEffect(() => {
+        null == R && f.Z.shouldFetchWallpapers && g.k9();
+    }, [R]),
+    null == P)
         ? null
-        : ((O = Z
-              ? W
-                  ? x.NW.format(x.t.z847Tk, { wallpaper_name: null !== (n = null == k ? void 0 : k.label) && void 0 !== n ? n : x.t['UQMV/P'] })
-                  : x.NW.format(x.t['+lKndX'], {
-                        username: null == w ? void 0 : w.nick,
-                        wallpaper_name: null !== (E = null == k ? void 0 : k.label) && void 0 !== E ? E : x.t['UQMV/P']
+        : ((N = k
+              ? U
+                  ? y.NW.format(y.t.z847Tk, { wallpaper_name: null !== (n = null == R ? void 0 : R.label) && void 0 !== n ? n : y.t['UQMV/P'] })
+                  : y.NW.format(y.t['+lKndX'], {
+                        username: null == Z ? void 0 : Z.nick,
+                        wallpaper_name: null !== (O = null == R ? void 0 : R.label) && void 0 !== O ? O : y.t['UQMV/P']
                     })
-              : x.NW.format(x.t.dBxFsL, { learnMoreLink: d.Z.getArticleURL(b.BhN.DM_WALLPAPERS) })),
-          P
-              ? B && L
-                  ? (N = x.NW.formatToPlainString(x.t.PzTpVV, { wallpaperName: null == k ? void 0 : k.label }))
-                  : W ||
-                    U ||
-                    !L ||
-                    (N = x.NW.format(x.t.JwUhHh, {
+              : y.NW.format(y.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(v.BhN.DM_WALLPAPERS) })),
+          A
+              ? G && M
+                  ? (j = y.NW.formatToPlainString(y.t.PzTpVV, { wallpaperName: null == R ? void 0 : R.label }))
+                  : U ||
+                    F ||
+                    !M ||
+                    (j = y.NW.format(y.t.JwUhHh, {
                         onClickNitro: () => {
-                            (0, c.uL)(b.Z5c.NITRO_HOME);
+                            (0, u.uL)(v.Z5c.NITRO_HOME);
                         }
                     }))
-              : (N = x.NW.string(x.t['6JSOu7'])),
-          P &&
-              A &&
-              L &&
-              Z &&
-              F &&
-              (j = (0, r.jsx)(a.zxk, {
-                  className: y.action,
+              : (j = y.NW.string(y.t['6JSOu7'])),
+          A &&
+              w &&
+              M &&
+              k &&
+              B &&
+              (C = (0, r.jsx)(o.zxk, {
+                  className: E.action,
                   onClick: () => {
-                      h.X(I, T, { shouldClear: !B });
+                      g.X(S, P, { shouldClear: !G });
                   },
-                  submitting: R,
-                  children: x.NW.string(B ? x.t.o6850d : x.t['/ubFp6'])
+                  submitting: D,
+                  children: y.NW.string(G ? y.t.o6850d : y.t['/ubFp6'])
               })),
-          (0, r.jsx)(_.Z, {
-              channel: I,
-              content: O,
-              subtitle: N,
-              action: j,
-              compact: S
+          (0, r.jsx)(b.Z, {
+              channel: S,
+              content: N,
+              subtitle: j,
+              action: C,
+              compact: T
           }));
 }
