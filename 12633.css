@@ -26995,6 +26995,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     color: var(--status-positive)
 }
 
+.customConfetti__69c6c {
+    top: -120px;
+    right: -75px;
+    pointer-events: none
+}
+
 .container_b7b2cf {
     display: flex;
     flex-direction: column;
@@ -27350,7 +27356,7 @@ body .headerAnimation_b54a5b {
 }
 
 .visual-refresh .body_c6f1a4 {
-    padding: 0 var(--space-24);
+    padding: 0 var(--space-16);
     border-radius: var(--radius-md)
 }
 
@@ -34536,12 +34542,6 @@ html:not(.visual-refresh) .root_e5f3a9 {
 
 .darkText__78e61 {
     color: var(--black-500)
-}
-
-.customConfetti__78e61 {
-    top: -120px;
-    right: -75px;
-    pointer-events: none
 }
 
 .bundlePreview__78e61 {
@@ -48632,7 +48632,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .getNitroButton_f86e69 {
-    height: 40px;
+    min-height: 40px;
     flex-shrink: 0
 }
 
@@ -48648,6 +48648,10 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     height: 80vh;
     padding-top: var(--spacing-16);
     justify-content: center
+}
+
+.blurToggle_f86e69 {
+    padding: 12px 10px !important
 }
 
 [data-popout-root],

@@ -1,4 +1,4 @@
-i.d(e, { default: () => Q }), i(47120), i(411104);
+i.d(e, { default: () => $ }), i(47120), i(411104);
 var s = i(200651),
     n = i(192379),
     r = i(120356),
@@ -25,8 +25,8 @@ var s = i(200651),
     w = i(146779),
     I = i(763296),
     C = i(82142),
-    R = i(283595),
-    T = i(594174),
+    T = i(283595),
+    R = i(594174),
     N = i(509545),
     A = i(55563),
     E = i(626135),
@@ -35,15 +35,16 @@ var s = i(200651),
     _ = i(296848),
     G = i(51144),
     L = i(479446),
-    M = i(715627),
-    F = i(981632),
+    F = i(715627),
+    M = i(981632),
     U = i(474936),
     W = i(981631),
-    H = i(388032),
-    z = i(784062),
-    B = i(167969),
-    q = i(557256);
-function V(t, e, i) {
+    H = i(215023),
+    z = i(388032),
+    B = i(29973),
+    q = i(167969),
+    V = i(557256);
+function X(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -56,7 +57,7 @@ function V(t, e, i) {
         t
     );
 }
-let X = (t) => {
+let Y = (t) => {
         let { openedGift: e } = t,
             { createMultipleConfettiAt: i } = n.useContext(v.h);
         return (
@@ -66,7 +67,7 @@ let X = (t) => {
             null
         );
     },
-    Y = (t) => {
+    K = (t) => {
         let { step: e, soundId: i } = t;
         return (
             n.useEffect(() => {
@@ -78,7 +79,7 @@ let X = (t) => {
             null
         );
     };
-class K extends n.Component {
+class J extends n.Component {
     componentDidMount() {
         let { application: t, sku: e, customGiftMessage: i, giftCode: s, emojiName: n } = this.props;
         null == t && null != e && m.ZP.fetchApplication(e.applicationId);
@@ -104,19 +105,19 @@ class K extends n.Component {
     get firstHeaderText() {
         let { isCustomGift: t, opened: e, accepted: i } = this.state,
             { giftCode: s, subscriptionPlan: n, collectiblesItemType: r } = this.props;
-        if (t && this.step === W.wZ8.ERROR) return H.NW.formatToMarkdownString(H.t.JUvC0t, {});
+        if (t && this.step === W.wZ8.ERROR) return z.NW.formatToMarkdownString(z.t.JUvC0t, {});
         if (t && !i) {
-            if (!e) return H.NW.formatToPlainString(H.t.xHzRub, { recipientDisplayName: G.ZP.getName(T.default.getCurrentUser()) });
+            if (!e) return z.NW.formatToPlainString(z.t.xHzRub, { recipientDisplayName: G.ZP.getName(R.default.getCurrentUser()) });
             {
-                let t = T.default.getUser(s.userId),
+                let t = R.default.getUser(s.userId),
                     e = G.ZP.getName(t);
                 return r === a.Z.AVATAR_DECORATION
-                    ? H.NW.formatToPlainString(H.t.SKduys, { sender: e })
+                    ? z.NW.formatToPlainString(z.t.SKduys, { sender: e })
                     : r === a.Z.PROFILE_EFFECT
-                      ? H.NW.formatToPlainString(H.t['1w42T0'], { sender: e })
-                      : H.NW.formatToPlainString(H.t['0UR0u7'], {
+                      ? z.NW.formatToPlainString(z.t['1w42T0'], { sender: e })
+                      : z.NW.formatToPlainString(z.t['0UR0u7'], {
                             sender: e,
-                            timeInterval: (null == n ? void 0 : n.interval) === U.rV.MONTH ? H.NW.string(H.t.FPybU1) : H.NW.string(H.t.tfqrho)
+                            timeInterval: (null == n ? void 0 : n.interval) === U.rV.MONTH ? z.NW.string(z.t.FPybU1) : z.NW.string(z.t.tfqrho)
                         });
             }
         }
@@ -124,8 +125,8 @@ class K extends n.Component {
     }
     get secondHeaderText() {
         if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
-        let t = T.default.getUser(this.props.giftCode.userId);
-        return H.NW.formatToPlainString(H.t.DDO4W1, { sender: G.ZP.getName(t) });
+        let t = R.default.getUser(this.props.giftCode.userId);
+        return z.NW.formatToPlainString(z.t.DDO4W1, { sender: G.ZP.getName(t) });
     }
     get bodyText() {
         let { sku: t, accepting: e, libraryApplication: i, subscriptionPlan: s } = this.props;
@@ -170,7 +171,7 @@ class K extends n.Component {
         E.default.track(W.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             has_custom_message: n,
-            is_custom_message_edited: n && e !== H.NW.string(H.t.ZkOo1d),
+            is_custom_message_edited: n && e !== z.NW.string(z.t.ZkOo1d),
             gift_style: t.giftStyle,
             gift_code: t.code,
             emoji_name: i,
@@ -179,9 +180,9 @@ class K extends n.Component {
     }
     render() {
         let { application: t, accepting: e, onClose: i, giftCode: n, headerId: r, transitionState: a, useReducedMotion: o, onComplete: c, customGiftMessage: d, emojiName: p, soundId: h, isThemeDark: f } = this.props,
-            g = T.default.getUser(n.userId),
+            g = R.default.getUser(n.userId),
             { isCustomGift: m, isCollectiblesGift: b, accepted: O, opened: y, emojiURL: S } = this.state,
-            v = T.default.getCurrentUser(),
+            v = R.default.getCurrentUser(),
             P = this.step === W.wZ8.ERROR,
             x = (null == n ? void 0 : n.userId) != null && null != v && (null == v ? void 0 : v.id) != null && n.userId === v.id;
         switch (this.step) {
@@ -197,28 +198,28 @@ class K extends n.Component {
                 (0, s.jsxs)(u.Y0X, {
                     transitionState: a,
                     size: u.CgR.SMALL,
-                    className: z.modal,
+                    className: B.modal,
                     'aria-labelledby': r,
                     children: [
                         null != n.giftStyle &&
                             !m &&
                             !b &&
-                            (0, s.jsx)(F.Z, {
+                            (0, s.jsx)(M.Z, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: n.giftStyle,
-                                className: z.seasonalGiftIcon
+                                className: B.seasonalGiftIcon
                             }),
-                        !m && (0, s.jsx)('div', { className: z.backSplash }),
+                        !m && (0, s.jsx)('div', { className: B.backSplash }),
                         !b &&
                             (0, s.jsx)(u.olH, {
                                 onClick: i,
-                                className: z.closeButton
+                                className: B.closeButton
                             }),
                         (0, s.jsxs)(u.hzk, {
                             className: l()({
-                                [z.content]: !m,
-                                [z.contentCustomGift]: m
+                                [B.content]: !m,
+                                [B.contentCustomGift]: m
                             }),
                             children: [
                                 !b &&
@@ -231,18 +232,18 @@ class K extends n.Component {
                                 P &&
                                     (0, s.jsx)('img', {
                                         alt: '',
-                                        src: f ? B : q
+                                        src: f ? q : V
                                     }),
                                 (0, s.jsxs)(u.X6q, {
                                     id: r,
                                     className: l()({
-                                        [z.customGiftHeader]: m && !O,
-                                        [z.header]: !m || O
+                                        [B.customGiftHeader]: m && !O,
+                                        [B.header]: !m || O
                                     }),
                                     variant: 'heading-sm/semibold',
                                     children: [
                                         (0, s.jsx)('div', {
-                                            className: l()({ [z.customGiftHeaderText]: m }),
+                                            className: l()({ [B.customGiftHeaderText]: m }),
                                             children: this.firstHeaderText
                                         }),
                                         (0, s.jsx)('div', { children: this.secondHeaderText })
@@ -250,7 +251,7 @@ class K extends n.Component {
                                 }),
                                 !(m && !O) &&
                                     (0, s.jsx)(u.Text, {
-                                        className: z.body,
+                                        className: B.body,
                                         variant: 'text-sm/normal',
                                         children: this.bodyText
                                     }),
@@ -258,16 +259,16 @@ class K extends n.Component {
                                     !b &&
                                     null != n.giftStyle &&
                                     !O &&
-                                    (0, s.jsx)(F.Z, {
+                                    (0, s.jsx)(M.Z, {
                                         defaultAnimationState: this.getDefaultAnimationStatus(),
                                         idleAnimationState: this.getIdleAnimationStatus(),
-                                        className: z.giftAnimation,
+                                        className: B.giftAnimation,
                                         giftStyle: n.giftStyle
                                     }),
                                 this.state.opened && !P && (0, s.jsx)(j.Z, { giftCode: n }),
                                 P &&
                                     (0, s.jsx)(u.Text, {
-                                        className: z.body,
+                                        className: B.body,
                                         variant: 'text-md/normal',
                                         children: this.errorMessage
                                     }),
@@ -280,10 +281,10 @@ class K extends n.Component {
                                     !x &&
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
-                                            (0, s.jsx)(u.vwX, { children: H.NW.format(H.t.DDO4W1, { sender: G.ZP.getName(g) }) }),
+                                            (0, s.jsx)(u.vwX, { children: z.NW.format(z.t.DDO4W1, { sender: G.ZP.getName(g) }) }),
                                             (0, s.jsx)(u.X6q, {
                                                 id: r,
-                                                className: z.customMessage,
+                                                className: B.customMessage,
                                                 variant: 'heading-sm/bold',
                                                 children: d
                                             })
@@ -307,8 +308,8 @@ class K extends n.Component {
                     !e &&
                     y &&
                     (null == p || null == S
-                        ? (0, s.jsx)(X, { openedGift: y && !O && !e })
-                        : (0, s.jsx)(M.Z, {
+                        ? (0, s.jsx)(Y, { openedGift: y && !O && !e })
+                        : (0, s.jsx)(F.Z, {
                               confettiTarget: this.modalRef.current,
                               emojiURL: S
                           })),
@@ -316,7 +317,7 @@ class K extends n.Component {
                     !e &&
                     y &&
                     null != h &&
-                    (0, s.jsx)(Y, {
+                    (0, s.jsx)(K, {
                         soundId: h,
                         step: this.step
                     })
@@ -325,7 +326,7 @@ class K extends n.Component {
     }
     constructor(...t) {
         super(...t),
-            V(this, 'state', {
+            X(this, 'state', {
                 error: null,
                 accepted: !1,
                 opened: !1,
@@ -334,11 +335,11 @@ class K extends n.Component {
                 step: void 0,
                 emojiURL: void 0
             }),
-            V(this, 'modalRef', n.createRef()),
-            V(this, 'handleOpen', () => {
+            X(this, 'modalRef', n.createRef()),
+            X(this, 'handleOpen', () => {
                 this.setState({ opened: !0 });
             }),
-            V(this, 'handleAccept', async () => {
+            X(this, 'handleAccept', async () => {
                 let { giftCode: t, channelContext: e, onAccept: i } = this.props;
                 if (null == t) throw Error('GiftCode is null at acceptance.');
                 try {
@@ -352,31 +353,31 @@ class K extends n.Component {
                     this.setState({ error: t });
                 }
             }),
-            V(this, 'handleGoToLibrary', () => {
+            X(this, 'handleGoToLibrary', () => {
                 let { onClose: t, libraryApplication: e } = this.props;
                 (0, x.uL)(W.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
             }),
-            V(this, 'getDefaultAnimationStatus', () => (this.step === W.wZ8.OPEN ? L.SR.IDLE : L.SR.ACTION)),
-            V(this, 'getIdleAnimationStatus', () => {
+            X(this, 'getDefaultAnimationStatus', () => (this.step === W.wZ8.OPEN ? L.SR.IDLE : L.SR.ACTION)),
+            X(this, 'getIdleAnimationStatus', () => {
                 if (this.step !== W.wZ8.OPEN) return L.SR.LOOP;
             });
     }
 }
-let J = o.ZP.connectStores([R.Z, A.Z, b.Z, C.Z, N.Z, h.Z], (t) => {
+let Q = o.ZP.connectStores([T.Z, A.Z, b.Z, C.Z, N.Z, h.Z], (t) => {
         let { giftCode: e } = t,
             i = A.Z.get(e.skuId),
             s = null != i ? b.Z.getApplication(i.applicationId) : null,
             n = h.Z.useReducedMotion;
         return {
             sku: i,
-            libraryApplication: null != i && (null == e ? void 0 : e.entitlementBranches) != null ? (0, D.z2)(e.entitlementBranches, i, R.Z) : null,
+            libraryApplication: null != i && (null == e ? void 0 : e.entitlementBranches) != null ? (0, D.z2)(e.entitlementBranches, i, T.Z) : null,
             application: s,
             subscriptionPlan: null != e.subscriptionPlanId ? (0, _.oE)(e.subscriptionPlanId) : null,
             accepting: C.Z.getIsAccepting(e.code),
             useReducedMotion: n
         };
-    })(K),
-    Q = (t) => {
+    })(J),
+    $ = (t) => {
         var e,
             i,
             n,
@@ -408,7 +409,7 @@ let J = o.ZP.connectStores([R.Z, A.Z, b.Z, C.Z, N.Z, h.Z], (t) => {
         return null == O
             ? null
             : (0, s.jsx)(
-                  J,
+                  Q,
                   ((e = (function (t) {
                       for (var e = 1; e < arguments.length; e++) {
                           var i = null != arguments[e] ? arguments[e] : {},
@@ -420,7 +421,7 @@ let J = o.ZP.connectStores([R.Z, A.Z, b.Z, C.Z, N.Z, h.Z], (t) => {
                                   })
                               )),
                               s.forEach(function (e) {
-                                  V(t, e, i[e]);
+                                  X(t, e, i[e]);
                               });
                       }
                       return t;
@@ -443,7 +444,8 @@ let J = o.ZP.connectStores([R.Z, A.Z, b.Z, C.Z, N.Z, h.Z], (t) => {
                                         h(),
                                             (0, S.Z)({
                                                 product: Z,
-                                                analyticsLocations: v
+                                                analyticsLocations: v,
+                                                purchaseType: H.o8.GIFT
                                             });
                                     }
                                   : void 0

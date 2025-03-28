@@ -1,31 +1,32 @@
-n.d(t, { default: () => j }), n(653041), n(47120);
+n.d(t, { default: () => I }), n(653041), n(47120);
 var l = n(200651),
     s = n(192379),
-    i = n(442837),
-    r = n(481060),
+    r = n(442837),
+    i = n(481060),
     o = n(100527),
     a = n(906732),
     c = n(204418),
     d = n(583434),
     u = n(473608),
-    m = n(832149),
-    h = n(594174),
-    b = n(78839),
-    k = n(29920),
-    p = n(780525),
-    x = n(388032),
-    f = n(265914);
-function g(e) {
+    h = n(832149),
+    m = n(594174),
+    p = n(78839),
+    b = n(29920),
+    k = n(780525),
+    x = n(215023),
+    f = n(388032),
+    g = n(316380);
+function j(e) {
     let { skuId: t, onSelect: n, selected: s } = e,
-        { product: i } = (0, d.T)(t),
-        o = [f.selectionItem];
+        { product: r } = (0, d.T)(t),
+        o = [g.selectionItem];
     return (
-        s && o.push(f.selected),
-        (0, l.jsx)(r.P3F, {
+        s && o.push(g.selected),
+        (0, l.jsx)(i.P3F, {
             onClick: () => {
-                null != i && n(i);
+                null != r && n(r);
             },
-            children: (0, l.jsx)(r.Kqy, {
+            children: (0, l.jsx)(i.Kqy, {
                 direction: 'horizontal',
                 gap: 12,
                 align: 'center',
@@ -37,23 +38,23 @@ function g(e) {
                 },
                 className: o.join(' '),
                 children:
-                    null != i
+                    null != r
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)(u.O, {
-                                      product: i,
+                                      product: r,
                                       fallbackLabel: null
                                   }),
                                   (0, l.jsxs)('div', {
                                       children: [
-                                          (0, l.jsx)(r.Text, {
+                                          (0, l.jsx)(i.Text, {
                                               variant: 'text-md/semibold',
-                                              children: i.name
+                                              children: r.name
                                           }),
-                                          (0, l.jsx)(r.X6q, {
+                                          (0, l.jsx)(i.X6q, {
                                               variant: 'heading-sm/medium',
                                               color: 'header-secondary',
-                                              children: i.summary
+                                              children: r.summary
                                           })
                                       ]
                                   })
@@ -64,22 +65,22 @@ function g(e) {
         })
     );
 }
-function j(e) {
+function I(e) {
     let { transitionState: t, onClose: d } = e,
         u = {
-            [p.e.skuId]: p.e,
-            [p.xB.skuId]: p.xB,
-            [p.We.skuId]: p.We
+            [k.e.skuId]: k.e,
+            [k.xB.skuId]: k.xB,
+            [k.We.skuId]: k.We
         },
-        j = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
-        [I, y] = s.useState(null),
-        [v, N] = s.useState(null),
-        [O, P] = s.useState(!1),
-        z = (0, i.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
-        { analyticsLocations: C } = (0, a.ZP)([o.Z.PREMIUM_MARKETING_REWARD_SELECTION_MODAL]),
-        _ = s.useMemo(() => (null != I ? { asset: I.assetHash } : null), [I]),
-        S = () => {
-            (0, r.ZDy)(async () => {
+        I = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
+        [y, O] = s.useState(null),
+        [N, v] = s.useState(null),
+        [P, z] = s.useState(!1),
+        C = (0, r.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
+        { analyticsLocations: _ } = (0, a.ZP)([o.Z.PREMIUM_MARKETING_REWARD_SELECTION_MODAL]),
+        S = s.useMemo(() => (null != y ? { asset: y.assetHash } : null), [y]),
+        T = () => {
+            (0, i.ZDy)(async () => {
                 let { default: e } = await n.e('76025').then(n.bind(n, 393185));
                 return (t) =>
                     (0, l.jsx)(
@@ -112,40 +113,41 @@ function j(e) {
                     );
             });
         };
-    if (null == z) return S(), null;
+    if (null == C) return T(), null;
     let w = async () => {
-            null != v &&
-                (P(!0),
-                (await (0, k.Ei)({
-                    rewardSkuIds: [v.skuId],
-                    subscriptionId: z.id
+            null != N &&
+                (z(!0),
+                (await (0, b.Ei)({
+                    rewardSkuIds: [N.skuId],
+                    subscriptionId: C.id
                 }))
-                    ? ((0, r.pTH)(),
-                      (0, k.es)(!1),
-                      (0, m.Z)({
-                          product: v,
-                          analyticsLocations: C,
-                          overrideTitle: x.NW.formatToPlainString(x.t.dTWbOz, { itemName: v.name }),
-                          overrideDescription: x.NW.string(x.t.Gf9x7e)
+                    ? ((0, i.pTH)(),
+                      (0, b.es)(!1),
+                      (0, h.Z)({
+                          product: N,
+                          analyticsLocations: _,
+                          overrideTitle: f.NW.formatToPlainString(f.t.dTWbOz, { itemName: N.name }),
+                          overrideDescription: f.NW.string(f.t.Gf9x7e),
+                          purchaseType: x.o8.PROMOTIONAL
                       }))
-                    : (P(!1), S()));
+                    : (z(!1), T()));
         },
         E = (e) => {
-            !O && (y(u[e.skuId]), N(e));
+            !P && (O(u[e.skuId]), v(e));
         };
-    return (0, l.jsxs)(r.Y0X, {
+    return (0, l.jsxs)(i.Y0X, {
         transitionState: t,
-        size: r.CgR.LARGE,
+        size: i.CgR.LARGE,
         children: [
-            (0, l.jsx)(r.hzk, {
-                className: f.modalContent,
-                children: (0, l.jsxs)(r.Kqy, {
+            (0, l.jsx)(i.hzk, {
+                className: g.modalContent,
+                children: (0, l.jsxs)(i.Kqy, {
                     gap: 24,
                     direction: 'horizontal',
                     align: 'center',
-                    className: f.content,
+                    className: g.content,
                     children: [
-                        (0, l.jsxs)(r.Kqy, {
+                        (0, l.jsxs)(i.Kqy, {
                             gap: 12,
                             padding: {
                                 top: 32,
@@ -153,42 +155,42 @@ function j(e) {
                                 bottom: 48,
                                 left: 32
                             },
-                            className: f.selectionPane,
+                            className: g.selectionPane,
                             children: [
-                                (0, l.jsx)(r.X6q, {
+                                (0, l.jsx)(i.X6q, {
                                     variant: 'heading-lg/bold',
                                     color: 'header-primary',
-                                    className: f.title,
-                                    children: x.NW.string(x.t.OZGelZ)
+                                    className: g.title,
+                                    children: f.NW.string(f.t.OZGelZ)
                                 }),
                                 Object.keys(u).map((e) => {
                                     let t = u[e];
                                     return (0, l.jsx)(
-                                        g,
+                                        j,
                                         {
                                             skuId: t.skuId,
                                             onSelect: E,
-                                            selected: (null == v ? void 0 : v.skuId) === t.skuId
+                                            selected: (null == N ? void 0 : N.skuId) === t.skuId
                                         },
                                         t.skuId
                                     );
                                 })
                             ]
                         }),
-                        (0, l.jsxs)(r.Kqy, {
+                        (0, l.jsxs)(i.Kqy, {
                             gap: 0,
                             align: 'center',
                             children: [
                                 (0, l.jsx)('div', {
-                                    className: f.closeButton,
-                                    children: (0, l.jsx)(r.olH, { onClick: () => (0, r.pTH)() })
+                                    className: g.closeButton,
+                                    children: (0, l.jsx)(i.olH, { onClick: () => (0, i.pTH)() })
                                 }),
-                                null != j
+                                null != I
                                     ? (0, l.jsx)(c.Z, {
-                                          avatarDecorationOverride: _,
-                                          user: j,
+                                          avatarDecorationOverride: S,
+                                          user: I,
                                           guildId: null,
-                                          avatarSize: r.EFr.SIZE_152
+                                          avatarSize: i.EFr.SIZE_152
                                       })
                                     : null
                             ]
@@ -196,25 +198,25 @@ function j(e) {
                     ]
                 })
             }),
-            (0, l.jsx)(r.mzw, {
-                children: (0, l.jsxs)(r.Kqy, {
+            (0, l.jsx)(i.mzw, {
+                children: (0, l.jsxs)(i.Kqy, {
                     direction: 'horizontal',
                     justify: 'space-between',
                     children: [
-                        (0, l.jsx)(r.zxk, {
-                            look: r.zxk.Looks.LINK,
-                            color: r.zxk.Colors.PRIMARY,
+                        (0, l.jsx)(i.zxk, {
+                            look: i.zxk.Looks.LINK,
+                            color: i.zxk.Colors.PRIMARY,
                             onClick: () => d(),
-                            disabled: O,
-                            children: x.NW.string(x.t['13/7kZ'])
+                            disabled: P,
+                            children: f.NW.string(f.t['13/7kZ'])
                         }),
-                        (0, l.jsx)(r.zxk, {
-                            look: r.zxk.Looks.FILLED,
-                            color: r.zxk.Colors.BRAND,
+                        (0, l.jsx)(i.zxk, {
+                            look: i.zxk.Looks.FILLED,
+                            color: i.zxk.Colors.BRAND,
                             onClick: w,
-                            disabled: null == v,
-                            submitting: O,
-                            children: x.NW.string(x.t['cY+Ooa'])
+                            disabled: null == N,
+                            submitting: P,
+                            children: f.NW.string(f.t['cY+Ooa'])
                         })
                     ]
                 })

@@ -13,7 +13,6 @@ var r = {
     collectedTextContainer: 'collectedTextContainer__78e61',
     confettiCanvas: 'confettiCanvas__78e61',
     profileEffectShopPreview: 'profileEffectShopPreview__78e61',
-    customConfetti: 'customConfetti__78e61',
     bundlePreview: 'bundlePreview__78e61',
     bundleProfileEffectCard: 'bundleProfileEffectCard__78e61',
     buttons: 'buttons__78e61',

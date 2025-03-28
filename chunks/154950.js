@@ -19,6 +19,7 @@ var r = {
     nonTier2FooterText: 'nonTier2FooterText_f86e69',
     getNitroButton: 'getNitroButton_f86e69',
     getNitroButtonText: 'getNitroButtonText_f86e69',
-    loadingContainer: 'loadingContainer_f86e69'
+    loadingContainer: 'loadingContainer_f86e69',
+    blurToggle: 'blurToggle_f86e69'
 };
 e.exports = r;

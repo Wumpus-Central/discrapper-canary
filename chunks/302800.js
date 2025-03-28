@@ -1,48 +1,38 @@
 n.d(t, {
-    M7: () => p,
+    M7: () => _,
     R9: () => b,
-    UY: () => m,
-    k2: () => _,
-    v: () => g
+    UY: () => h,
+    k2: () => f,
+    v: () => m
 }),
-    n(627341),
     n(192379);
-var r = n(278074),
-    i = n(691324),
-    o = n(180650),
-    a = n(44315),
+var r = n(691324),
+    i = n(180650),
+    o = n(44315),
+    a = n(215023),
     s = n(388032),
     l = n(452823),
     c = n(744709),
     u = n(39934),
-    d = n(681532),
-    f = n(12981),
-    _ = (function (e) {
+    d = n(12981),
+    f = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.TOOLTIP = 1)] = 'TOOLTIP'), (e[(e.COACHTIP = 2)] = 'COACHTIP'), (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (e[(e.BADGE = 4)] = 'BADGE'), e;
     })({});
-let p = (e) =>
-        (0, r.EQ)(e)
-            .with(o.T.TIDE, () => ({
-                label: () => s.NW.string(s.t.kDb9hY),
-                iconSrc: f.Z,
-                style: {
-                    background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
-                    boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
-                    color: (0, a.Lq)(i.I.WHITE_100)
-                }
-            }))
-            .otherwise(() => null),
-    h = {
-        TIDE: {
-            imageSrc: d.Z,
-            style: {
-                position: 'absolute',
-                width: '600px',
-                zIndex: 10
-            }
-        },
+let _ = (e) =>
+        e === i.T.TIDE
+            ? {
+                  label: () => s.NW.string(s.t['h/uBCQ']),
+                  iconSrc: d.Z,
+                  style: {
+                      background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
+                      boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
+                      color: (0, o.Lq)(r.I.WHITE_100)
+                  }
+              }
+            : null,
+    p = {
         ROBERT: {
-            imageSrc: l.Z,
+            src: l.Z,
             style: {
                 position: 'absolute',
                 width: '400px',
@@ -51,51 +41,57 @@ let p = (e) =>
             }
         },
         SHY: {
-            imageSrc: c.Z,
+            src: c.Z,
             style: {
                 position: 'absolute',
-                width: '600px'
+                width: '600px',
+                left: 'calc(50vw - 300px)',
+                top: 'calc(50vh - 300px)'
             }
         },
         STORM: {
-            imageSrc: u.Z,
+            src: u.Z,
             style: {
                 position: 'absolute',
-                width: '850px'
+                width: '850px',
+                left: 'calc(50vw - 425px)',
+                top: 'calc(50vh - 425px)'
             }
         }
     },
-    m = (e) =>
-        (0, r.EQ)(e)
-            .with('1252405010608951358', () => h.TIDE)
-            .with('1252405017688936508', () => h.TIDE)
-            .with('1267521289330102344', () => h.STORM)
-            .with('1267521289355268154', () => h.STORM)
-            .with('1266160780928352268', () => h.STORM)
-            .with('1266160780978556969', () => h.STORM)
-            .with('1266161342801383434', () => h.STORM)
-            .with('1220513995308400680', () => h.STORM)
-            .with('1220513984273186816', () => h.STORM)
-            .with('1220513989729976411', () => h.STORM)
-            .with('1220514048068812901', () => h.STORM)
-            .with('1266493591207940133', () => h.STORM)
-            .with('1266493591275044903', () => h.STORM)
-            .with('1220432740638523543', () => h.STORM)
-            .with('1220513977683935373', () => h.SHY)
-            .with('1220432647453409384', () => h.SHY)
-            .with('1220432697718083614', () => h.SHY)
-            .otherwise(() => null),
-    g = (e) =>
-        (0, r.EQ)(e)
-            .with('1262491137386614805', () => h.ROBERT)
-            .otherwise(() => null),
-    E = {
+    h = (e) => {
+        let { purchaseType: t, skuId: n } = e;
+        if (t === a.o8.ORB) return null;
+        switch (n) {
+            case '1267521289330102344':
+            case '1267521289355268154':
+            case '1266160780928352268':
+            case '1266160780978556969':
+            case '1266161342801383434':
+            case '1220513995308400680':
+            case '1220513984273186816':
+            case '1220513989729976411':
+            case '1220514048068812901':
+            case '1266493591207940133':
+            case '1266493591275044903':
+            case '1220432740638523543':
+                return p.STORM;
+            case '1220513977683935373':
+            case '1220432647453409384':
+            case '1220432697718083614':
+                return p.SHY;
+            default:
+                return null;
+        }
+    },
+    m = (e) => ('1262491137386614805' === e ? p.ROBERT : null),
+    g = {
         '1333866045236314327': '1333866045261480007',
         '1333866045261480007': '1333866045236314327',
         '1333866045282451527': '1333866045303423026',
         '1333866045303423026': '1333866045282451527'
     },
-    v = {
+    E = {
         '1217624148080332820': '1217626219651006495',
         '1217626219651006495': '1217624148080332820',
         '1217625289681801316': '1217625572168044604',
@@ -104,6 +100,6 @@ let p = (e) =>
         '1217626024540508170': '1217625794382401577'
     },
     b = (e, t) => {
-        let n = E[e];
-        return null == n && t && (n = v[e]), null != n ? n : null;
+        let n = g[e];
+        return null == n && t && (n = E[e]), null != n ? n : null;
     };
