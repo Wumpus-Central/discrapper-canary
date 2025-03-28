@@ -15,29 +15,32 @@ function r(t) {
             }),
             [t]
         ),
-        r = ''.concat(e, '//').concat(n);
+        r = '//' === t.substr(e.length, 2) ? '//' : '',
+        o = ''.concat(e).concat(r).concat(n);
     return {
         protocol: e,
+        authorityPrefix: r,
         hostname: n,
-        theRestOfTheUrl: t.replace(r, '')
+        theRestOfTheUrl: t.replace(o, '')
     };
 }
 function o(t) {
-    let { url: e, trustUrl: n, onConfirm: l, onCancel: o, onClose: i } = t,
-        [s, c] = a.useState(!1),
-        { protocol: x, hostname: d, theRestOfTheUrl: h } = r(e),
-        m = a.useCallback(() => {
-            s && n(e), null == i || i(), l();
-        }, [e, s, n, l, i]);
+    let { url: e, trustUrl: n, onConfirm: l, onCancel: o, onClose: s } = t,
+        [i, c] = a.useState(!1),
+        { protocol: x, authorityPrefix: d, hostname: h, theRestOfTheUrl: m } = r(e),
+        u = a.useCallback(() => {
+            i && n(e), null == s || s(), l();
+        }, [e, i, n, l, s]);
     return {
         protocol: x,
-        hostname: d,
-        theRestOfTheUrl: h,
-        shouldTrustUrl: s,
+        authorityPrefix: d,
+        hostname: h,
+        theRestOfTheUrl: m,
+        shouldTrustUrl: i,
         setShouldTrustUrl: c,
-        handleConfirm: m,
+        handleConfirm: u,
         handleCancel: a.useCallback(() => {
-            null == i || i(), o();
-        }, [o, i])
+            null == s || s(), o();
+        }, [o, s])
     };
 }

@@ -56,10 +56,10 @@ function d(e) {
     return e >= 0 && e < 128 ? 1 === u[e] : !(8206 === e || 8207 === e || 8234 === e || 8235 === e || 8236 === e || 8237 === e || 8238 === e || 1564 === e || 8294 === e || 8295 === e || 8296 === e || 8297 === e || 128271 === e || 128272 === e || 128274 === e || 128275 === e || 133 === e || 160 === e || 5760 === e || 8192 === e || 8193 === e || 8194 === e || 8195 === e || 8196 === e || 8197 === e || 8198 === e || 8199 === e || 8200 === e || 8201 === e || 8202 === e || 8232 === e || 8233 === e || 8239 === e || 8287 === e || 12288 === e || 10240 === e || 173 === e || 847 === e || (e >= 1536 && e <= 1541) || 1757 === e || 1807 === e || 2274 === e || 4447 === e || 4448 === e || 6068 === e || 6069 === e || 6155 === e || 6156 === e || 6157 === e || 6158 === e || 8203 === e || 8204 === e || 8205 === e || 8288 === e || 8289 === e || 8290 === e || 8291 === e || 8292 === e || 8293 === e || (e >= 8298 && e <= 8303) || 12644 === e || (e >= 65520 && e <= 65528) || (e >= 65024 && e <= 65039) || 65279 === e || 65440 === e || 65529 === e || 65530 === e || 65531 === e || 69821 === e || 69837 === e || (e >= 78896 && e <= 78904) || (e >= 113824 && e <= 113827) || (e >= 119155 && e <= 119162) || (e >= 917504 && e <= 921599));
 }
 function f(e) {
-    let t = _(e);
-    return (t += p(e.pathname)), (t += p(e.search)), (t += p(e.hash));
+    let t = p(e);
+    return (t += _(e.pathname)), (t += _(e.search)), (t += _(e.hash));
 }
-function p(e) {
+function _(e) {
     let t;
     try {
         t = decodeURIComponent(e);
@@ -84,8 +84,10 @@ function p(e) {
     }
     return n;
 }
-function _(e) {
+function p(e) {
     if ('null' === e.origin && e.pathname.startsWith('//')) return e.protocol;
     let t = '';
-    return '' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@'), ''.concat(e.protocol, '//').concat(t).concat(e.host);
+    '' !== e.username && (t += e.username), '' !== e.password && (t += ':' + e.password), '' !== t && (t += '@');
+    let n = '//' === e.href.substr(e.protocol.length, 2) ? '//' : '';
+    return ''.concat(e.protocol).concat(n).concat(t).concat(e.host);
 }

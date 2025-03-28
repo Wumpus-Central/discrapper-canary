@@ -22,8 +22,8 @@ var r = n(392711),
     I = n(594199),
     S = n(97734),
     T = n(303694),
-    A = n(660199),
-    N = n(364458),
+    N = n(660199),
+    A = n(364458),
     C = n(981631),
     R = n(689079),
     P = n(377668),
@@ -149,6 +149,28 @@ let V = (e) => {
         }),
         link: b.ZP,
         autolink: M(L({}, a().defaultRules.autolink), { parse: F }),
+        mailto: M(L({}, a().defaultRules.mailto), { requiredFirstCharacters: ['<'] }),
+        tel: M(L({}, a().defaultRules.mailto), {
+            requiredFirstCharacters: ['<'],
+            match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:[0-9]+)(?:-[0-9]+)*)>/),
+            parse(e) {
+                let t = e[1],
+                    n = e[1];
+                return (
+                    n.startsWith('tel:') || n.startsWith('sms:') || (n = 'tel:' + n),
+                    {
+                        type: 'link',
+                        content: [
+                            {
+                                type: 'text',
+                                content: t
+                            }
+                        ],
+                        target: n
+                    }
+                );
+            }
+        }),
         url: M(L({}, a().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
@@ -369,10 +391,10 @@ let V = (e) => {
         timestamp: {
             order: I.ZP.order - 1,
             requiredFirstCharacters: ['<'],
-            match: (e) => A.Ay.exec(e),
+            match: (e) => N.Ay.exec(e),
             parse(e) {
                 let [t, n, r] = e,
-                    i = (0, A.ZB)(n, r);
+                    i = (0, N.ZB)(n, r);
                 return null == i
                     ? {
                           type: 'text',
@@ -430,12 +452,12 @@ let V = (e) => {
         list: v.Z,
         subtext: O.Z
     },
-    W = (0, N.Z)([H, S.Z]),
+    W = (0, A.Z)([H, S.Z]),
     Y = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
     K = i().omit(W, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
     z = i().omit(W, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
     q = i().omit(
-        (0, N.Z)([
+        (0, A.Z)([
             W,
             {
                 inlineCode: {
@@ -458,7 +480,7 @@ function ee(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
 let et = 10,
-    en = (0, N.Z)([
+    en = (0, A.Z)([
         {
             highlightWord: {
                 order: -1,

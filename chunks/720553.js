@@ -4,19 +4,20 @@ n(192379);
 var l = n(481060),
     r = n(313201),
     o = n(988158),
-    i = n(388032),
-    s = n(22717);
+    s = n(388032),
+    i = n(974145);
 function c(t) {
     let { url: e, trustUrl: n, isProtocol: c, onConfirm: x, onCancel: d, onClose: h, transitionState: m } = t,
         u = (0, r.Dt)(),
         {
             protocol: k,
-            hostname: C,
-            theRestOfTheUrl: p,
+            authorityPrefix: C,
+            hostname: p,
+            theRestOfTheUrl: g,
             shouldTrustUrl: N,
-            setShouldTrustUrl: g,
-            handleConfirm: b,
-            handleCancel: j
+            setShouldTrustUrl: b,
+            handleConfirm: j,
+            handleCancel: z
         } = (0, o.X)({
             url: e,
             trustUrl: n,
@@ -34,45 +35,45 @@ function c(t) {
                     (0, a.jsx)(l.X6q, {
                         id: u,
                         variant: 'heading-xl/bold',
-                        className: s.title,
-                        children: i.NW.string(i.t['3w1QGh'])
+                        className: i.title,
+                        children: s.NW.string(s.t['3w1QGh'])
                     }),
                     (0, a.jsx)(l.Text, {
-                        className: s.warningText,
+                        className: i.warningText,
                         variant: 'text-md/normal',
-                        children: c ? i.NW.format(i.t.aCYv19, {}) : i.NW.string(i.t.soRxRU)
+                        children: c ? s.NW.format(s.t.aCYv19, {}) : s.NW.string(s.t.soRxRU)
                     }),
                     (0, a.jsxs)(l.Ttm, {
-                        className: s.linkCalloutContainer,
+                        className: i.linkCalloutContainer,
                         children: [
                             (0, a.jsxs)(l.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/semibold' : 'text-md/normal',
                                 color: c ? 'text-normal' : 'text-muted',
-                                children: [k, '//']
+                                children: [k, C]
                             }),
                             (0, a.jsx)(l.Text, {
                                 tag: 'span',
                                 variant: c ? 'text-md/normal' : 'text-md/semibold',
                                 color: c ? 'text-muted' : 'text-normal',
-                                children: C
+                                children: p
                             }),
                             (0, a.jsx)(l.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
-                                children: p
+                                children: g
                             })
                         ]
                     }),
                     (0, a.jsx)(l.XZJ, {
-                        className: s.checkbox,
+                        className: i.checkbox,
                         type: l.XZJ.Types.INVERTED,
                         value: N,
-                        onChange: (t, e) => g(e),
+                        onChange: (t, e) => b(e),
                         children: (0, a.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: c ? i.NW.format(i.t['haA+X1'], { protocol: k.replace(':', '') }) : i.NW.format(i.t.ZgXDsL, { domain: C })
+                            children: c ? s.NW.format(s.t['haA+X1'], { protocol: k.replace(':', '') }) : s.NW.format(s.t.ZgXDsL, { domain: p })
                         })
                     })
                 ]
@@ -83,16 +84,16 @@ function c(t) {
                         type: 'button',
                         size: l.zxk.Sizes.MEDIUM,
                         color: l.zxk.Colors.BRAND,
-                        onClick: b,
-                        children: c ? i.NW.string(i.t.COq6kp) : i.NW.string(i.t.NcJfJC)
+                        onClick: j,
+                        children: c ? s.NW.string(s.t.COq6kp) : s.NW.string(s.t.NcJfJC)
                     }),
                     (0, a.jsx)(l.zxk, {
                         type: 'button',
                         size: l.zxk.Sizes.MEDIUM,
                         color: l.zxk.Colors.PRIMARY,
-                        onClick: j,
+                        onClick: z,
                         look: l.iLD.LINK,
-                        children: i.NW.string(i.t['/g10LC'])
+                        children: s.NW.string(s.t['/g10LC'])
                     })
                 ]
             })
