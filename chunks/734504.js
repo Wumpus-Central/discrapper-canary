@@ -3,6 +3,7 @@ e.exports = {
     card: 'card__4cb8a',
     iconMask: 'iconMask__4cb8a',
     contextMenu: 'contextMenu__4cb8a',
+    maximizeIcon: 'maximizeIcon__4cb8a',
     header: 'header__4cb8a',
     loaded: 'loaded__4cb8a',
     banner: 'banner__4cb8a',

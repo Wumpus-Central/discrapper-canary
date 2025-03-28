@@ -964,6 +964,7 @@ let A = Object.freeze({
         PARTNERS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/partners'),
         TERMS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/terms'),
         PAID_TERMS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/terms/paid-services-terms'),
+        PAID_TERMS_VIRTUAL_GOODS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/terms/paid-services-terms#:~:text=at%20our%20discretion.-,Virtual%20Goods,-You%20may%20be'),
         PRIVACY: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/privacy'),
         GUIDELINES: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/guidelines'),
         ACKNOWLEDGEMENTS: ''.concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, '/acknowledgements'),

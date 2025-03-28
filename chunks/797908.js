@@ -33,7 +33,7 @@ let m = function (e) {
                     : void 0,
             [v, h]
         ),
-        P = f && null != b;
+        N = f && null != b;
     return (0, r.jsx)(i.$, {
         innerRef: _,
         onChange: C,
@@ -45,6 +45,7 @@ let m = function (e) {
                 className: p.card,
                 onClick: y,
                 onContextMenu: () => {},
+                'aria-label': u.NW.string(u.t.np1Wrq),
                 children: [
                     (0, r.jsxs)('div', {
                         className: p.header,
@@ -97,11 +98,11 @@ let m = function (e) {
                                     })
                                 })
                             }),
-                            P || j
+                            N || j
                                 ? (0, r.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
-                                          P
+                                          N
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
@@ -109,7 +110,7 @@ let m = function (e) {
                                                     children: b.name
                                                 })
                                               : null,
-                                          P && j
+                                          N && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -130,7 +131,7 @@ let m = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: P || j ? 2 : 3,
+                                lineClamp: N || j ? 2 : 3,
                                 children: null !== (m = null === (n = h.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== m ? m : h.description
                             })
                         ]

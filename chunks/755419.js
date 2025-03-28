@@ -1,45 +1,44 @@
 n.d(t, {
-    KO: () => _,
-    X2: () => h,
-    o0: () => p
+    KO: () => f,
+    X2: () => p,
+    o0: () => _
 });
 var r = n(200651),
     i = n(120356),
     o = n.n(i),
-    a = n(314794),
-    s = n(317257),
-    l = n(499997),
-    c = n(215023),
-    u = n(992379),
-    d = n(593639),
-    f = n(26028);
-let _ = {
-        [a.a.PREMIUM_TIER_2_3_DAY]: {
+    a = n(317257),
+    s = n(499997),
+    l = n(215023),
+    c = n(992379),
+    u = n(593639),
+    d = n(26028);
+let f = {
+        [l.Vt.FRACTIONAL_PREMIUM]: {
             render: (e) => {
                 let { alt: t, className: n } = e;
                 return (0, r.jsx)('img', {
-                    src: d,
+                    src: u,
                     className: n,
                     alt: t,
-                    height: 148
+                    height: 120
                 });
             }
         },
-        [c.xJ]: {
+        [l.Vt.ORB_PROFILE_BADGE]: {
             render: (e) => {
                 let { animationState: t = 'on', className: n } = e;
-                return (0, r.jsx)(l.Z, {
+                return (0, r.jsx)(s.Z, {
                     animationState: t,
-                    className: o()(u.orbProfileBadgeAsset, n)
+                    className: o()(c.orbProfileBadgeAsset, n)
                 });
             }
         }
     },
-    p = (e) => e in _,
-    h = () => ({
-        id: s.l.ORB_PROFILE_BADGE,
-        icon: s.l.ORB_PROFILE_BADGE,
-        iconSrc: f.Z,
+    _ = (e) => e in f,
+    p = () => ({
+        id: a.l.ORB_PROFILE_BADGE,
+        icon: a.l.ORB_PROFILE_BADGE,
+        iconSrc: d.Z,
         description: '',
         isPreviewMode: !0
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => b }), n(47120);
 var r = n(200651),
     i = n(192379),
     o = n(481060),
@@ -64,74 +64,97 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { profile: t, submitting: n, onClick: h } = e,
-        { guildId: g, validInviteKey: b, ctaType: v } = (0, f.Z)(t),
-        y = i.useCallback(() => {
-            (0, c.X)(g), null == h || h();
-        }, [g, h]),
-        O = i.useCallback(() => {
-            (0, l.uL)(_.Z5c.GUILD_MEMBER_VERIFICATION(g)), null == h || h();
-        }, [g, h]),
-        I = i.useCallback(() => {
-            null != b &&
-                (a.ZP.acceptInvite({
-                    inviteKey: b,
-                    context: { location: 'guild_profile' }
-                }),
-                null == h || h());
-        }, [h, b]),
-        S = i.useCallback(() => {
-            t.visibility !== d.k.PUBLIC_WITH_RECRUITMENT && null != b ? I() : s.Z.openMemberVerificationModal(g, void 0, b), null == h || h();
-        }, [g, I, h, t.visibility, b]),
-        T = i.useCallback(() => {
-            (0, u.Ub)(g, { object: _.qAy.GUILD_PROFILE }), null == h || h();
-        }, [g, h]),
-        N = i.useMemo(
+    let { profile: t, onClick: n, submitting: h } = e,
+        { guildId: g, validInviteKey: b, ctaType: v } = (0, f.ZP)(t),
+        [y, O] = i.useState(!1),
+        I = i.useCallback(
+            (e) => {
+                e.stopPropagation(), (0, c.X)(g), null == n || n();
+            },
+            [g, n]
+        ),
+        S = i.useCallback(
+            (e) => {
+                e.stopPropagation(), (0, l.uL)(_.Z5c.GUILD_MEMBER_VERIFICATION(g)), null == n || n();
+            },
+            [g, n]
+        ),
+        T = i.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    null != b &&
+                        (a.ZP.acceptInvite({
+                            inviteKey: b,
+                            context: { location: 'guild_profile' }
+                        }),
+                        null == n || n());
+            },
+            [n, b]
+        ),
+        N = i.useCallback(
+            (e) => {
+                e.stopPropagation(), t.visibility !== d.k.PUBLIC_WITH_RECRUITMENT && null != b ? T(e) : s.Z.openMemberVerificationModal(g, void 0, b), null == n || n();
+            },
+            [g, T, n, t.visibility, b]
+        ),
+        A = i.useCallback(
+            async (e) => {
+                e.stopPropagation(), O(!0);
+                try {
+                    await (0, u.Ub)(g, { object: _.qAy.GUILD_PROFILE }), null == n || n();
+                } catch (e) {
+                } finally {
+                    O(!1);
+                }
+            },
+            [g, n]
+        ),
+        C = i.useMemo(
             () => ({
                 size: o.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                submitting: n
+                submitting: y || h
             }),
-            [n]
+            [y, h]
         );
     switch (v) {
-        case f.s.IS_MEMBER:
+        case f.sE.IS_MEMBER:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, N), {
-                    onClick: y,
+                E(m({}, C), {
+                    onClick: I,
                     children: p.NW.string(p.t.KLOhbG)
                 })
             );
-        case f.s.HAS_APPLICATION:
+        case f.sE.HAS_APPLICATION:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, N), {
-                    onClick: O,
+                E(m({}, C), {
+                    onClick: S,
                     children: p.NW.string(p.t['4yfIDg'])
                 })
             );
-        case f.s.APPLY_TO_JOIN:
+        case f.sE.APPLY_TO_JOIN:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, N), {
-                    onClick: S,
+                E(m({}, C), {
+                    onClick: N,
                     children: p.NW.string(p.t['7XdMW1'])
                 })
             );
-        case f.s.LURK_DISCOVERABLE:
+        case f.sE.LURK_DISCOVERABLE:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, N), {
-                    onClick: T,
+                E(m({}, C), {
+                    onClick: A,
                     children: p.NW.string(p.t.eb9gDA)
                 })
             );
-        case f.s.JOIN_VIA_INVITE:
+        case f.sE.JOIN_VIA_INVITE:
             return (0, r.jsx)(
                 o.zxk,
-                E(m({}, N), {
-                    onClick: I,
+                E(m({}, C), {
+                    onClick: T,
                     children: p.NW.string(p.t.eb9gDA)
                 })
             );

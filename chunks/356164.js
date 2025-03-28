@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(47120), n(653041);
+n.d(t, { Z: () => T }), n(47120), n(653041);
 var r,
     i = n(442837),
     o = n(570140),
@@ -17,12 +17,51 @@ function l(e, t, n) {
         e
     );
 }
-let c = new Map(),
-    u = new Map();
-function d(e) {
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let f = new Map(),
+    _ = new Map();
+function p(e) {
     return [s.BP, e.query, s.t0, e.categoryId, s.KL, e.languageCode].join('-');
 }
-class f {
+class h {
     handleSearchStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -39,37 +78,37 @@ class f {
         l(this, 'guildIds', []), l(this, 'error', null), l(this, 'offset', null), l(this, 'total', null), l(this, 'isFetching', !1), l(this, 'isInitialFetchComplete', !1), l(this, 'lastFetchTimestamp', null), l(this, 'query', void 0), (this.query = e);
     }
 }
-function p(e) {
+function m(e) {
     var t;
-    let n = d(e),
-        r = null !== (t = c.get(n)) && void 0 !== t ? t : new f({ query: e.query });
-    return c.set(n, r), r;
+    let n = p(e),
+        r = null !== (t = f.get(n)) && void 0 !== t ? t : new h({ query: e.query });
+    return f.set(n, r), r;
 }
-function _(e, t) {
-    let n = d(e),
-        r = c.get(n);
+function g(e, t) {
+    let n = p(e),
+        r = f.get(n);
     return null != r ? t(r) : null;
 }
-function h() {
-    c.clear(), u.clear();
+function E() {
+    f.clear(), _.clear();
 }
-function m(e) {
+function b(e) {
     let { query: t, categoryId: n, languageCode: r, reset: i } = e,
-        o = d({
+        o = p({
             query: t,
             categoryId: n,
             languageCode: r
         });
-    i && c.delete(o),
-        p({
+    i && f.delete(o),
+        m({
             query: t,
             categoryId: n,
             languageCode: r
         }).handleSearchStart();
 }
-function g(e) {
+function v(e) {
     let { query: t, categoryId: n, languageCode: r, total: i, guilds: o } = e;
-    p({
+    m({
         query: t,
         categoryId: n,
         languageCode: r
@@ -78,61 +117,75 @@ function g(e) {
         guilds: o
     }),
         o.forEach((e) => {
-            u.set(e.id, e);
+            _.set(e.id, e);
         });
 }
-function E(e) {
+function y(e) {
     let { query: t, categoryId: n, languageCode: r, error: i } = e;
-    p({
+    m({
         query: t,
         categoryId: n,
         languageCode: r
     }).handleSearchFailure(i);
 }
-function v(e) {
+function O(e) {
     let { ignoreQueries: t } = e,
         n = new Set(t);
-    c.forEach((e, t) => {
-        null != e.query && (n.has(e.query) || c.delete(t));
+    f.forEach((e, t) => {
+        null != e.query && (n.has(e.query) || f.delete(t));
     });
 }
-class b extends (r = i.ZP.Store) {
+function I(e) {
+    var t, n;
+    let { guildId: r, profile: i } = e,
+        o = _.get(r);
+    if (null == o) return !1;
+    _.set(
+        r,
+        d(c({}, o), {
+            memberCount: null !== (t = i.memberCount) && void 0 !== t ? t : o.memberCount,
+            presenceCount: null !== (n = i.onlineCount) && void 0 !== n ? n : o.presenceCount
+        })
+    );
+}
+class S extends (r = i.ZP.Store) {
     getGuild(e) {
-        return u.get(e);
+        return _.get(e);
     }
     getGuildIds(e) {
-        return _(e, (e) => e.guildIds);
+        return g(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return _(e, (e) => e.isFetching);
+        return g(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return _(e, (e) => e.isInitialFetchComplete);
+        return g(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return _(e, (e) => e.offset);
+        return g(e, (e) => e.offset);
     }
     getTotal(e) {
-        return _(e, (e) => e.total);
+        return g(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return _(e, (e) => e.lastFetchTimestamp);
+        return g(e, (e) => e.lastFetchTimestamp);
     }
     getError(e) {
-        return _(e, (e) => e.error);
+        return g(e, (e) => e.error);
     }
     getErrorMessage(e) {
-        return _(e, (e) => {
+        return g(e, (e) => {
             var t;
             return null === (t = e.error) || void 0 === t ? void 0 : t.getAnyErrorMessage();
         });
     }
 }
-l(b, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
-let y = new b(o.Z, {
-    CONNECTION_OPEN: h,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_START: m,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: g,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: E,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: v
+l(S, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
+let T = new S(o.Z, {
+    CONNECTION_OPEN: E,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_START: b,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: v,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: y,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: O,
+    GUILD_PROFILE_FETCH_SUCCESS: I
 });
