@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function p(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,20 +96,21 @@ function m(e, t) {
 }
 function g(e) {
     var { user: t, guildId: n, channelId: u, profileType: f, onClose: h, children: g } = e,
-        E = _(e, ['user', 'guildId', 'channelId', 'profileType', 'onClose', 'children']);
-    let { interactionType: v, interactionSource: b, resetInteraction: y, interactionSourceId: O } = (0, o.Xo)(),
+        E = p(e, ['user', 'guildId', 'channelId', 'profileType', 'onClose', 'children']);
+    let { interactionType: b, interactionSource: v, resetInteraction: y, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, o.Xo)(),
         S = f === c.y0.FULL_SIZE ? (0, l.z)(t.id, n) : void 0,
-        I = b === E.sourceType && v === c.P.REACT,
-        T = b === E.sourceType && v === c.P.REPLY,
-        N = (I || T) && O === E.sourceId;
+        T = v === E.sourceType && b === c.P.REACT,
+        N = v === E.sourceType && b === c.P.REPLY,
+        A = (T || N) && O === E.sourceId;
     return (0, r.jsx)(
         i.yRy,
-        p(
+        _(
             d(
                 {
+                    targetElementRef: null != I ? I : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            o = I ? a.Z : s.Z;
+                            o = T ? a.Z : s.Z;
                         return (0, r.jsx)(
                             o,
                             d(
@@ -129,9 +130,9 @@ function g(e) {
                     onRequestClose: () => {
                         y(), null == h || h();
                     },
-                    shouldShow: N
+                    shouldShow: A
                 },
-                m(v, f)
+                m(b, f)
             ),
             { children: g }
         )

@@ -22,8 +22,8 @@ var r = n(200651),
     I = n(810097),
     S = n(64621),
     T = n(913002),
-    A = n(228168),
-    N = n(388032),
+    N = n(228168),
+    A = n(388032),
     C = n(735405);
 function R(e, t, n) {
     return (
@@ -106,9 +106,9 @@ let M = 1.25,
 function F(e) {
     let { profileType: t, children: n } = e,
         i = {
-            [C.biteSize]: t === A.y0.BITE_SIZE,
-            [C.fullSize]: t === A.y0.FULL_SIZE,
-            [C.panel]: t === A.y0.PANEL
+            [C.biteSize]: t === N.y0.BITE_SIZE,
+            [C.fullSize]: t === N.y0.FULL_SIZE,
+            [C.panel]: t === N.y0.PANEL
         };
     return (0, r.jsx)('div', {
         className: a()(C.referenceContainer, i),
@@ -126,9 +126,9 @@ function V(e) {
         { analyticsLocations: s } = (0, p.ZP)(),
         { trackUserProfileAction: l } = (0, b.KZ)(),
         c = {
-            [C.biteSize]: t === A.y0.BITE_SIZE,
-            [C.fullSize]: t === A.y0.FULL_SIZE,
-            [C.panel]: t === A.y0.PANEL
+            [C.biteSize]: t === N.y0.BITE_SIZE,
+            [C.fullSize]: t === N.y0.FULL_SIZE,
+            [C.panel]: t === N.y0.PANEL
         },
         d = () => {
             l({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -146,7 +146,7 @@ function V(e) {
                         );
                 });
         },
-        f = null != o ? o.label() : N.NW.string(N.t.evw0o6),
+        f = null != o ? o.label() : A.NW.string(A.t.evw0o6),
         _ = (0, r.jsxs)('div', {
             className: a()(C.content, c),
             children: [
@@ -170,7 +170,7 @@ function V(e) {
             }),
             (0, r.jsx)(u.P3F, {
                 className: a()(C.container, C.editable, c),
-                'aria-label': N.NW.string(N.t['zrpF/f']),
+                'aria-label': A.NW.string(A.t['zrpF/f']),
                 onClick: d,
                 focusProps: { ringClassName: C.ring },
                 children: (0, r.jsx)('div', {
@@ -197,71 +197,75 @@ function V(e) {
 }
 function Z(e) {
     var t, n;
-    let { emoji: o, text: _, profileType: p, animate: m, className: g, renderToolbar: E, onShowToolbar: v, hasEntered: y = !0, placeholderText: O } = e,
-        { trackUserProfileAction: I } = (0, b.KZ)(),
-        S = {
-            [C.biteSize]: p === A.y0.BITE_SIZE,
-            [C.fullSize]: p === A.y0.FULL_SIZE,
-            [C.panel]: p === A.y0.PANEL
+    let { emoji: o, text: _, profileType: p, animate: m, className: g, renderToolbar: E, onShowToolbar: v, hasEntered: O = !0, placeholderText: I } = e,
+        S = (0, y.yi)(),
+        { trackUserProfileAction: T } = (0, b.KZ)(),
+        R = {
+            [C.biteSize]: p === N.y0.BITE_SIZE,
+            [C.fullSize]: p === N.y0.FULL_SIZE,
+            [C.panel]: p === N.y0.PANEL
         },
-        T = (0, h.p)({ location: 'CustomStatusBubble' }),
-        R = null != o ? M : 0,
-        P = k + R,
-        w = j + R,
-        D = i.useRef(null),
-        L = i.useRef(null),
+        P = (0, h.p)({ location: 'CustomStatusBubble' }),
+        w = null != o ? M : 0,
+        D = k + w,
+        L = j + w,
         x = i.useRef(null),
-        V = i.useRef(P),
-        Z = i.useRef(w),
-        H = null != o && null == _,
-        [W, Y] = i.useState(!1),
-        [K, z] = i.useState(!0),
-        [q, Q] = i.useState(!H && y),
-        X = !H && y && W;
+        V = i.useRef(null),
+        Z = i.useRef(null),
+        H = i.useRef(D),
+        W = i.useRef(L),
+        Y = null != o && null == _,
+        [K, z] = i.useState(!1),
+        [q, Q] = i.useState(!0),
+        [X, J] = i.useState(!Y && O),
+        $ = !Y && O && K;
     i.useLayoutEffect(() => {
-        if ((Y(!0), null == L.current || null == x.current || !X)) return;
-        let e = L.current.getBoundingClientRect().height,
-            t = x.current.getBoundingClientRect().height;
-        Q(t > e), (V.current = e), (Z.current = t);
-    }, [X, _, o]);
-    let J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        [$] = i.useState(() => new c.V7());
-    i.useEffect(() => () => $.stop(), [$]);
-    let [ee, et] = (0, u.q_F)(() => ({
-            maxHeight: ''.concat(V.current, 'px'),
+        if ((z(!0), null == V.current || null == Z.current || !$)) return;
+        let e = V.current.getBoundingClientRect().height,
+            t = Z.current.getBoundingClientRect().height;
+        J(t > e), (H.current = e), (W.current = t);
+    }, [$, _, o]);
+    let ee = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        [et] = i.useState(() => new c.V7());
+    i.useEffect(() => () => et.stop(), [et]),
+        i.useEffect(() => {
+            null == S || S.onInteractionPopoutTargetRefChange(x);
+        }, [S]);
+    let [en, er] = (0, u.q_F)(() => ({
+            maxHeight: ''.concat(H.current, 'px'),
             config: {
                 clamp: !0,
                 duration: U
             }
         })),
-        en = (e) => {
-            q &&
+        ei = (e) => {
+            X &&
                 (e
-                    ? et({
-                          maxHeight: ''.concat(Math.min(Z.current, w), 'px'),
-                          delay: J ? 0 : B,
+                    ? er({
+                          maxHeight: ''.concat(Math.min(W.current, L), 'px'),
+                          delay: ee ? 0 : B,
                           config: {
                               clamp: !0,
-                              duration: J ? 0 : U
+                              duration: ee ? 0 : U
                           }
                       })
-                    : et({
-                          maxHeight: ''.concat(Math.min(V.current, P), 'px'),
+                    : er({
+                          maxHeight: ''.concat(Math.min(H.current, D), 'px'),
                           delay: 0
                       }),
-                J ? z(!e) : $.start(e ? B : G, () => z(!e)));
+                ee ? Q(!e) : et.start(e ? B : G, () => Q(!e)));
         },
-        er =
+        eo =
             null != o
                 ? (0, r.jsx)(f.Z, {
                       emoji: o,
                       animate: m,
                       hideTooltip: !1,
-                      tooltipDelay: A.vB,
+                      tooltipDelay: N.vB,
                       className: C.statusEmoji
                   })
                 : null,
-        ei =
+        ea =
             null != _
                 ? (0, r.jsx)(u.Text, {
                       variant: 'text-sm/normal',
@@ -269,98 +273,98 @@ function Z(e) {
                       children: _
                   })
                 : null,
-        eo =
-            void 0 === O || (null != o && T)
+        es =
+            void 0 === I || (null != o && P)
                 ? null
                 : (0, r.jsx)(u.Text, {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
-                      'aria-label': ''.concat(N.NW.string(N.t.EVV6ub), ': ').concat(O),
-                      className: a()(C.statusText, T && C.italicPrompt),
-                      children: null != O ? O : ''
+                      'aria-label': ''.concat(A.NW.string(A.t.EVV6ub), ': ').concat(I),
+                      className: a()(C.statusText, P && C.italicPrompt),
+                      children: null != I ? I : ''
                   }),
-        ea = null == ei || '' === _ ? eo : ei,
-        es = (0, r.jsxs)('div', {
-            ref: L,
-            className: a()(C.content, S),
-            children: [er, ea]
+        el = null == ea || '' === _ ? es : ea,
+        ec = (0, r.jsxs)('div', {
+            ref: V,
+            className: a()(C.content, R),
+            children: [eo, el]
         }),
-        el = (0, r.jsxs)('div', {
-            ref: x,
-            className: a()(C.content, C.unclamped, S),
-            children: [er, ea]
+        eu = (0, r.jsxs)('div', {
+            ref: Z,
+            className: a()(C.content, C.unclamped, R),
+            children: [eo, el]
         }),
-        ec = (0, r.jsx)('div', {
-            className: a()(C.outer, S),
+        ed = (0, r.jsx)('div', {
+            className: a()(C.outer, R),
             children: (0, r.jsx)('span', {
                 className: C.inner,
                 children: (0, r.jsxs)(s.animated.div, {
-                    style: ee,
-                    className: a()(C.content, { [C.unclamped]: !K }),
-                    children: [er, ea]
+                    style: en,
+                    className: a()(C.content, { [C.unclamped]: !q }),
+                    children: [eo, el]
                 })
             })
         }),
-        eu = (0, r.jsxs)(F, {
+        ef = (0, r.jsxs)(F, {
             profileType: p,
-            children: [es, el]
+            children: [ec, eu]
         });
     return null == v
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  eu,
+                  ef,
                   (0, r.jsx)(u.tEY, {
                       ringClassName: C.ring,
                       children: (0, r.jsxs)('div', {
-                          ref: D,
+                          ref: x,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(C.container, S, g),
-                          'aria-label': N.NW.formatToPlainString(N.t.UpF5QU, {
+                          className: a()(C.container, R, g),
+                          'aria-label': A.NW.formatToPlainString(A.t.UpF5QU, {
                               emoji: null !== (t = null == o ? void 0 : o.name) && void 0 !== t ? t : '',
                               status: _
                           }),
                           onMouseEnter: () => {
-                              I({ action: 'HOVER_CUSTOM_STATUS' }), en(!0);
+                              T({ action: 'HOVER_CUSTOM_STATUS' }), ei(!0);
                           },
                           onMouseLeave: () => {
-                              en(!1);
+                              ei(!1);
                           },
-                          onFocus: () => en(!0),
-                          onBlur: () => en(!1),
-                          children: [ec, null == E ? void 0 : E(q)]
+                          onFocus: () => ei(!0),
+                          onBlur: () => ei(!1),
+                          children: [ed, null == E ? void 0 : E(X)]
                       })
                   })
               ]
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  eu,
+                  ef,
                   (0, r.jsx)(u.tEY, {
                       ringClassName: C.ring,
                       children: (0, r.jsxs)('div', {
-                          ref: D,
+                          ref: x,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(C.container, S, g),
-                          'aria-label': N.NW.formatToPlainString(N.t.UpF5QU, {
+                          className: a()(C.container, R, g),
+                          'aria-label': A.NW.formatToPlainString(A.t.UpF5QU, {
                               emoji: null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : '',
                               status: _
                           }),
                           onFocus: () => {
-                              v(!0), en(!0);
+                              v(!0), ei(!0);
                           },
                           onBlur: (e) => {
                               var t;
-                              (null === (t = D.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (v(!1), en(!1));
+                              (null === (t = x.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (v(!1), ei(!1));
                           },
                           onMouseEnter: () => {
-                              I({ action: 'HOVER_CUSTOM_STATUS' }), v(!0), en(!0);
+                              T({ action: 'HOVER_CUSTOM_STATUS' }), v(!0), ei(!0);
                           },
                           onMouseLeave: () => {
-                              v(!1), en(!1);
+                              v(!1), ei(!1);
                           },
-                          children: [ec, null == E ? void 0 : E(q)]
+                          children: [ed, null == E ? void 0 : E(X)]
                       })
                   })
               ]
@@ -391,18 +395,18 @@ function W(e) {
         c = L(e, ['emoji', 'text', 'user', 'guildId', 'channelId', 'profileType']);
     let { trackUserProfileAction: u } = (0, b.KZ)(),
         { interactionType: d, interactionSource: f, resetInteraction: _ } = (0, y.Xo)(),
-        p = f === A.n_.STATUS && d === A.P.REACT,
-        h = f === A.n_.STATUS && d === A.P.REPLY,
+        p = f === N.n_.STATUS && d === N.P.REACT,
+        h = f === N.n_.STATUS && d === N.P.REPLY,
         m = p || h,
         E = i.useRef(t),
         v = i.useRef(n);
     i.useEffect(() => {
-        f === A.n_.STATUS && ((E.current !== t || v.current !== n) && _(), (E.current = t), (v.current = n));
+        f === N.n_.STATUS && ((E.current !== t || v.current !== n) && _(), (E.current = t), (v.current = n));
     }, [f, _, t, n]);
-    let [T, N] = i.useState(!1),
+    let [T, A] = i.useState(!1),
         R = i.useCallback(
             (e) => {
-                (e || !m) && N(e);
+                (e || !m) && A(e);
             },
             [m]
         ),
@@ -417,12 +421,12 @@ function W(e) {
         channelId: s,
         profileType: l,
         sourceDetails: w(),
-        sourceType: A.n_.STATUS,
+        sourceType: N.n_.STATUS,
         onAction: u,
-        onClose: () => N(!1),
+        onClose: () => A(!1),
         children: () =>
             (0, r.jsx)(S.Z, {
-                sourceType: A.n_.STATUS,
+                sourceType: N.n_.STATUS,
                 user: o,
                 children: (0, r.jsx)(
                     Z,
@@ -435,7 +439,7 @@ function W(e) {
                         renderToolbar: (e) =>
                             (0, r.jsx)(I.ZP, {
                                 user: o,
-                                sourceType: A.n_.STATUS,
+                                sourceType: N.n_.STATUS,
                                 isVisible: T && !m,
                                 isExpandable: e,
                                 onAction: u

@@ -1,7 +1,8 @@
 n.d(t, {
     $m: () => d,
     NJ: () => u,
-    Xo: () => f
+    Xo: () => _,
+    yi: () => f
 }),
     n(47120);
 var r = n(200651),
@@ -22,45 +23,54 @@ function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
         [o, a] = i.useState(null),
-        c = i.useCallback((e) => {
+        [c, u] = i.useState(null),
+        d = i.useCallback((e) => {
             t(e.interactionType), r(e.interactionSource), a(e.interactionSourceId);
         }, []),
-        u = i.useCallback(() => {
-            c({
+        f = i.useCallback((e) => {
+            u(e);
+        }, []),
+        _ = i.useCallback(() => {
+            d({
                 interactionType: null,
                 interactionSource: null,
                 interactionSourceId: null
             });
-        }, [c]),
-        [d, f] = i.useState(!1),
-        [p, _] = i.useState(null),
-        [h] = i.useState(new s.V7()),
-        m = i.useCallback(
+        }, [d]),
+        [p, h] = i.useState(!1),
+        [m, g] = i.useState(null),
+        [E] = i.useState(new s.V7()),
+        b = i.useCallback(
             (e) => {
-                _(e), f(!0), null === e ? h.stop() : h.start(l._1, () => f(!1));
+                g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1));
             },
-            [h]
+            [E]
         );
     return (
         i.useEffect(() => {
-            h.stop();
-        }, [h]),
+            E.stop();
+        }, [E]),
         i.useMemo(
             () => ({
                 interactionType: e,
                 interactionSource: n,
                 interactionSourceId: o,
-                onInteraction: c,
-                setInteractionToast: m,
-                resetInteraction: u,
-                showInteractionToast: d,
-                interactionTypeSent: p
+                onInteraction: d,
+                setInteractionToast: b,
+                resetInteraction: _,
+                showInteractionToast: p,
+                interactionTypeSent: m,
+                interactionPopoutTargetRef: c,
+                onInteractionPopoutTargetRefChange: f
             }),
-            [c, m, n, o, d, e, p, u]
+            [d, b, n, o, p, e, m, _, c, f]
         )
     );
 }
 function f() {
-    let e = i.useContext(c);
+    return i.useContext(c);
+}
+function _() {
+    let e = f();
     return a()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }
