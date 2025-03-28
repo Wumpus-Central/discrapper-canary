@@ -1,8 +1,8 @@
 n.d(t, { H: () => q }), n(47120), n(998459);
 var l = n(200651),
     i = n(192379),
-    r = n(120356),
-    s = n.n(r),
+    s = n(120356),
+    r = n.n(s),
     a = n(91192),
     o = n(442837),
     d = n(692547),
@@ -78,12 +78,12 @@ function D(e, t) {
         e
     );
 }
-function z(e) {
-    let { icon: t, label: n, subLabel: i, onClick: r, isSelected: s, disabled: a } = e;
+function V(e) {
+    let { icon: t, label: n, subLabel: i, onClick: s, isSelected: r, disabled: a } = e;
     return (0, l.jsxs)(u.P3F, {
         'aria-disabled': a,
         className: L.recipientRow,
-        onClick: r,
+        onClick: s,
         children: [
             (0, l.jsx)('div', {
                 className: L.recipientAsset,
@@ -112,19 +112,19 @@ function z(e) {
                 type: u.XZJ.Types.INVERTED,
                 displayOnly: !0,
                 size: 24,
-                value: s,
+                value: r,
                 className: L.checkbox
             })
         ]
     });
 }
-function B(e) {
-    let { user: t, onToggle: n, isSelected: r, disabled: s } = e,
+function z(e) {
+    let { user: t, onToggle: n, isSelected: s, disabled: r } = e,
         a = O.ZP.useName(t),
         d = O.ZP.useUserTag(t, { decoration: 'never' }),
         [c, g] = (0, o.Wu)([y.Z, E.Z], () => [y.Z.getNickname(t.id), E.Z.getStatus(t.id)], [t]),
         m = i.useCallback(() => n(t.id), [n, t.id]);
-    return (0, l.jsx)(z, {
+    return (0, l.jsx)(V, {
         icon: (0, l.jsx)(h.Z, {
             'aria-hidden': !0,
             size: u.EFr.SIZE_32,
@@ -134,21 +134,21 @@ function B(e) {
         label: null != c ? c : a,
         subLabel: d,
         onClick: m,
-        isSelected: r,
-        disabled: s
+        isSelected: s,
+        disabled: r
     });
 }
-function V(e) {
+function B(e) {
     var t, n;
-    let { channel: r, onToggle: s, isSelected: a, disabled: o } = e,
-        d = i.useCallback(() => s(r.id), [s, r.id]),
-        c = null !== (t = (0, v.ZP)(r)) && void 0 !== t ? t : '',
-        h = null !== (n = (0, f._)(r)) && void 0 !== n ? n : '';
-    return (0, l.jsx)(z, {
+    let { channel: s, onToggle: r, isSelected: a, disabled: o } = e,
+        d = i.useCallback(() => r(s.id), [r, s.id]),
+        c = null !== (t = (0, v.ZP)(s)) && void 0 !== t ? t : '',
+        h = null !== (n = (0, f._)(s)) && void 0 !== n ? n : '';
+    return (0, l.jsx)(V, {
         icon: (0, l.jsx)(N.Z, {
             'aria-hidden': !0,
             size: u.EFr.SIZE_32,
-            channel: r,
+            channel: s,
             experimentLocation: 'instant_invite_modal'
         }),
         label: c,
@@ -159,12 +159,12 @@ function V(e) {
     });
 }
 function F(e) {
-    let { rows: t, onToggle: n, selection: r, scrollerRef: s, disabled: o } = e,
+    let { rows: t, onToggle: n, selection: s, scrollerRef: r, disabled: o } = e,
         d = i.useMemo(() => [t.length], [t.length]),
-        c = (0, m.Z)('instant_invite_modal', s),
+        c = (0, m.Z)('instant_invite_modal', r),
         h = i.useCallback(
             (e) => {
-                var i, s;
+                var i, r;
                 let a,
                     { section: d, row: u } = e;
                 if (d > 0) return;
@@ -174,9 +174,9 @@ function F(e) {
                     case w.bm.DM:
                         let h = c.item;
                         return (
-                            (a = null !== (i = r.includes(h.id)) && void 0 !== i && i),
+                            (a = null !== (i = s.includes(h.id)) && void 0 !== i && i),
                             (0, l.jsx)(
-                                B,
+                                z,
                                 {
                                     user: h,
                                     isSelected: a,
@@ -190,9 +190,9 @@ function F(e) {
                     case w.bm.CHANNEL:
                         let g = c.item;
                         return (
-                            (a = null !== (s = r.includes(g.id)) && void 0 !== s && s),
+                            (a = null !== (r = s.includes(g.id)) && void 0 !== r && r),
                             (0, l.jsx)(
-                                V,
+                                B,
                                 {
                                     channel: g,
                                     isSelected: a,
@@ -206,7 +206,7 @@ function F(e) {
                         return null;
                 }
             },
-            [t, r, n, o]
+            [t, s, n, o]
         ),
         g = i.useCallback(() => 56, []);
     return 0 === t.length
@@ -225,13 +225,13 @@ function F(e) {
                                       var n,
                                           l,
                                           i = {},
-                                          r = Object.keys(e);
-                                      for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                          s = Object.keys(e);
+                                      for (l = 0; l < s.length; l++) (n = s[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                                       return i;
                                   })(e, t);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  for (l = 0; l < r.length; l++) (n = r[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                                  var s = Object.getOwnPropertySymbols(e);
+                                  for (l = 0; l < s.length; l++) (n = s[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                               }
                               return i;
                           })(e, ['ref']);
@@ -243,7 +243,7 @@ function F(e) {
                                       className: L.recipientList,
                                       style: { '--custom-recipient-row-height': ''.concat(56, 'px') },
                                       scrollerRef: (e) => {
-                                          null !== e && ((s.current = e), (t.current = e.getScrollerNode()));
+                                          null !== e && ((r.current = e), (t.current = e.getScrollerNode()));
                                       }
                                   },
                                   n
@@ -261,8 +261,8 @@ function F(e) {
           });
 }
 function G(e) {
-    let { channel: t, guild: n, inviteTarget: r } = e,
-        { guildProfile: s, fetchGuildProfile: a } = (0, I.u)(n.id);
+    let { channel: t, guild: n, inviteTarget: s } = e,
+        { guildProfile: r, fetchGuildProfile: a } = (0, I.u)(n.id);
     i.useEffect(() => {
         a();
     }, [a]);
@@ -271,7 +271,7 @@ function G(e) {
         c = null;
     if (null !== t) {
         d = null == t ? void 0 : t.name;
-        let e = (0, Z.a5)({ type: r.type });
+        let e = (0, Z.a5)({ type: s.type });
         c = (0, l.jsxs)(u.Text, {
             className: L.inviteTargetContent,
             variant: 'text-xs/medium',
@@ -288,7 +288,7 @@ function G(e) {
     } else
         (d = n.name),
             (c =
-                null === s
+                null === r
                     ? null
                     : (0, l.jsxs)('div', {
                           className: L.guildPresence,
@@ -300,7 +300,7 @@ function G(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'header-muted',
-                                          children: W.NW.format(W.t['LC+S+v'], { membersOnline: s.onlineCount })
+                                          children: W.NW.format(W.t['LC+S+v'], { membersOnline: r.onlineCount })
                                       })
                                   ]
                               }),
@@ -311,7 +311,7 @@ function G(e) {
                                       (0, l.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'header-muted',
-                                          children: W.NW.format(W.t.zRl6XV, { count: s.memberCount })
+                                          children: W.NW.format(W.t.zRl6XV, { count: r.memberCount })
                                       })
                                   ]
                               })
@@ -341,7 +341,7 @@ function G(e) {
     });
 }
 function H(e) {
-    let { guild: t, channel: n, inviteTarget: r, handleSendInvite: s, inviteKey: a, sending: c } = e,
+    let { guild: t, channel: n, inviteTarget: s, handleSendInvite: r, inviteKey: a, sending: c } = e,
         [h] = (0, o.Wu)([_.Z], () => [_.Z.hideInstantInvites]),
         [g, m] = i.useState(!1),
         v = i.useRef(null),
@@ -378,7 +378,7 @@ function H(e) {
                     (0, l.jsx)(G, {
                         guild: t,
                         channel: n,
-                        inviteTarget: r,
+                        inviteTarget: s,
                         isStreamerMode: h
                     }),
                     (0, l.jsx)(u.ua7, {
@@ -464,7 +464,7 @@ function H(e) {
                     (0, l.jsxs)(u.zxk, {
                         className: L.button,
                         innerClassName: L.buttonInner,
-                        onClick: () => s(),
+                        onClick: () => r(),
                         disabled: c,
                         children: [
                             (0, l.jsx)('span', { children: 'Send Invite' }),
@@ -480,7 +480,7 @@ function H(e) {
     });
 }
 function q(e) {
-    let { transitionState: t, onClose: n, rows: r, invite: a, canCreateInvites: d, canShowVanityURL: h, guild: m, channel: v, generateInviteLink: x } = e,
+    let { transitionState: t, onClose: n, rows: s, invite: a, canCreateInvites: d, canShowVanityURL: h, guild: m, channel: v, generateInviteLink: x } = e,
         [p, N] = i.useState(''),
         I = i.useRef(null),
         f = i.useRef(null),
@@ -496,7 +496,10 @@ function q(e) {
             _('');
         }, [_]),
         [P, O] = i.useState([]),
-        A = i.useCallback((e) => {
+        A = i.useCallback(() => {
+            y(!1), Z(), O([]);
+        }, [Z]),
+        U = i.useCallback((e) => {
             O((t) => {
                 let n = t.findIndex((t) => t === e);
                 if (-1 === n) return N(''), [e, ...t];
@@ -504,7 +507,7 @@ function q(e) {
                 return l.splice(n, 1), l;
             });
         }, []),
-        U = (0, o.e7)(
+        D = (0, o.e7)(
             [T.Z, S.Z, C.ZP],
             () => {
                 var e;
@@ -515,22 +518,22 @@ function q(e) {
             },
             [m.id, v]
         ),
-        D = (0, o.e7)(
+        V = (0, o.e7)(
             [j.Z],
             () => {
                 var e;
-                return null !== (e = j.Z.getStageInstanceByChannel(null == U ? void 0 : U.id)) && void 0 !== e ? e : null;
+                return null !== (e = j.Z.getStageInstanceByChannel(null == D ? void 0 : D.id)) && void 0 !== e ? e : null;
             },
-            [U]
+            [D]
         ),
         z = i.useMemo(() => {
             let e;
-            return null === (e = h && void 0 !== m.vanityURLCode ? m.vanityURLCode : (null == D ? void 0 : D.invite_code) !== void 0 ? D.invite_code : null !== a ? a.code : null) ? null : (0, k.tV)({ baseCode: e });
-        }, [h, m, D, a]),
+            return null === (e = h && void 0 !== m.vanityURLCode ? m.vanityURLCode : (null == V ? void 0 : V.invite_code) !== void 0 ? V.invite_code : null !== a ? a.code : null) ? null : (0, k.tV)({ baseCode: e });
+        }, [h, m, V, a]),
         B = i.useCallback(async () => {
             if (E || null === z) return;
             y(!0);
-            let e = r
+            let e = s
                 .filter((e) => P.includes(e.item.id))
                 .map((e) => {
                     var t;
@@ -577,19 +580,21 @@ function q(e) {
                 });
             try {
                 await Promise.allSettled(e);
+                let t = P.length > 1 ? W.NW.string(W.t['4pl/xs']) : W.NW.string(W.t.sVwWdX);
+                (0, u.showToast)((0, u.createToast)(t, u.ToastType.INVITE));
             } catch (e) {
             } finally {
-                y(!1), n();
+                A(), n();
             }
-        }, [E, y, P, z, r, n]);
+        }, [E, y, P, z, s, A, n]);
     if (
         (i.useEffect(() => {
             !h && d && x();
-        }, [U, h, d, x]),
-        null !== z && null !== U)
+        }, [D, h, d, x]),
+        null !== z && null !== D)
     )
         return (0, l.jsxs)(u.Y0X, {
-            className: s()(L.modal, { [L.disabled]: E }),
+            className: r()(L.modal, { [L.disabled]: E }),
             transitionState: t,
             children: [
                 (0, l.jsxs)(u.xBx, {
@@ -624,10 +629,10 @@ function q(e) {
                     ]
                 }),
                 (0, l.jsx)(u.hzk, {
-                    className: s()(L.body, { [L.empty]: 0 === r.length }),
+                    className: r()(L.body, { [L.empty]: 0 === s.length }),
                     children: (0, l.jsx)(F, {
-                        rows: r,
-                        onToggle: A,
+                        rows: s,
+                        onToggle: U,
                         scrollerRef: f,
                         selection: P,
                         disabled: E
@@ -638,7 +643,7 @@ function q(e) {
                     channel: v,
                     handleSendInvite: B,
                     sending: E,
-                    inviteTarget: U,
+                    inviteTarget: D,
                     inviteKey: z
                 })
             ]

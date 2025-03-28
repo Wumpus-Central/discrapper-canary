@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => p,
+    F: () => _,
     Y: () => f
 });
 var r = n(200651),
@@ -9,7 +9,7 @@ var r = n(200651),
     s = n(481060),
     l = n(245216),
     c = n(561466),
-    u = n(179730);
+    u = n(506501);
 function d(e) {
     switch (e) {
         case c.pC.SUCCESS:
@@ -40,6 +40,11 @@ function d(e) {
                 className: u.icon,
                 color: s.TVs.colors.STATUS_POSITIVE.css
             });
+        case c.pC.INVITE:
+            return (0, r.jsx)(s._XJ, {
+                className: u.icon,
+                color: s.TVs.colors.TEXT_BRAND.css
+            });
         case c.pC.BOOKMARK:
             return (0, r.jsx)(s.plf, {
                 className: u.icon,
@@ -68,10 +73,10 @@ function f(e, t) {
         }
     };
 }
-let p = i.memo(function (e) {
+let _ = i.memo(function (e) {
     let { message: t, type: n, id: i, options: { component: o = c.si.component } = c.si } = e;
     return null != o
-        ? (0, r.jsx)(r.Fragment, { children: o })
+        ? o
         : (0, r.jsxs)('div', {
               id: i,
               className: u.toast,
