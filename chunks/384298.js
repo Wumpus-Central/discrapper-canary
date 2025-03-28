@@ -35,6 +35,7 @@ function E(e) {
                 }
             }),
             O &&
+                t.isGuildVocal() &&
                 (0, r.jsx)(p.ef, {
                     icon: i.kBi,
                     tooltipText: v ? g.NW.string(g.t.kkKapK) : g.NW.string(g.t.ZXxLQk),
