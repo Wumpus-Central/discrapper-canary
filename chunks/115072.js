@@ -1,40 +1,40 @@
-r.d(t, { default: () => _ }), r(266796), r(230036), r(47120);
-var i = r(200651),
-    n = r(192379),
-    l = r(772848),
-    o = r(442837),
-    a = r(544891),
-    s = r(481060),
-    c = r(53281),
-    u = r(476326),
-    d = r(304761),
-    m = r(273031),
-    h = r(859235),
-    v = r(898463),
-    x = r(951394),
-    f = r(594174),
-    p = r(768581),
-    g = r(55935),
-    j = r(358085),
-    y = r(223356),
-    b = r(225452),
-    N = r(388032),
-    W = r(269922);
+i.d(t, { default: () => _ }), i(266796), i(230036), i(47120), i(571269), i(298267);
+var r = i(200651),
+    n = i(192379),
+    l = i(772848),
+    a = i(442837),
+    o = i(544891),
+    s = i(481060),
+    c = i(53281),
+    u = i(476326),
+    d = i(304761),
+    m = i(273031),
+    v = i(859235),
+    h = i(898463),
+    f = i(951394),
+    p = i(594174),
+    x = i(768581),
+    g = i(55935),
+    j = i(358085),
+    y = i(223356),
+    b = i(225452),
+    W = i(388032),
+    N = i(561402);
 let O = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
     label: e,
     value: e
 }));
 function _(e) {
-    var t, _, S, w;
-    let { transitionState: C, onClose: P } = e,
+    var t, _, w, S;
+    let { transitionState: P, onClose: C } = e,
         E = n.useRef(null),
         k = n.useRef(null),
         [T, D] = n.useState(''),
         [A, I] = n.useState(''),
         [R, L] = n.useState(),
-        [J, M] = n.useState(''),
-        [V, Z] = n.useState([]),
-        [z, q] = n.useState(),
+        [Z, z] = n.useState(''),
+        [J, M] = n.useState([]),
+        [V, q] = n.useState(),
         [B, G] = n.useState(),
         [H, X] = n.useState(!1),
         [U, Y] = n.useState(''),
@@ -53,67 +53,67 @@ function _(e) {
         ),
         [Q, $] = n.useState(''),
         [ee, et] = n.useState(''),
-        [er, ei] = n.useState(''),
+        [ei, er] = n.useState(''),
         [en, el] = n.useState(''),
-        [eo, ea] = n.useState(!1),
+        [ea, eo] = n.useState(!1),
         [es, ec] = n.useState(!1),
         [eu, ed] = n.useState(!1),
-        [em, eh] = n.useState(!1);
+        [em, ev] = n.useState(!1);
     n.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
-        a.tn
+        o.tn
             .get({
                 url: ''.concat(location.protocol, '//').concat(location.host).concat('/assets/', 'version.').concat(window.GLOBAL_ENV.RELEASE_CHANNEL, '.json'),
                 query: { cache: e },
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '7a9377ff0d2d5723d1645b57caf0963b0b1a4f0e' !== e.body.hash) {
+                if (null != e.body && '645a7cf9d96332092587ab5d2ac159b719a54edf' !== e.body.hash) {
                     {
-                        let e = new Date('1740074731431'),
+                        let e = new Date('1743123831296'),
                             t = new Date();
-                        (0, g.TD)(t, e).hours > 6 && eh(!0);
+                        (0, g.TD)(t, e).hours > 6 && ev(!0);
                     }
-                    eh(!0);
+                    ev(!0);
                 }
             });
     }, []);
-    let ev = (0, o.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+    let eh = (0, a.e7)([p.default], () => {
+            let e = p.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ex = (0, o.e7)([d.C], () => {
+        ef = (0, a.e7)([d.C], () => {
             var e;
             return null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web;
         }),
-        ef = () => {
-            null == P || P();
+        ep = () => {
+            null == C || C();
         },
-        ep = (e) => {
-            Z(V.filter((t) => t.id !== e));
+        ex = (e) => {
+            M(J.filter((t) => t.id !== e));
         };
     async function eg() {
         var e, t;
         if ((ed(!1), '' === T || null == R)) {
-            ea(!0);
+            eo(!0);
             return;
         }
-        let n = null == z ? void 0 : null === (e = z.features) || void 0 === e ? void 0 : e.find((e) => (0, y.pD)(e) === B);
-        ec(!0), ea(!1);
+        let n = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find((e) => (0, y.pD)(e) === B);
+        ec(!0), eo(!1);
         let l = (0, b.D)(
-                V.map((e) => {
+                J.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
             ),
-            o = await (0, y.ZD)(
+            a = await (0, y.ZD)(
                 {
                     name: T,
                     description: A,
                     priority: R,
                     feature: n,
-                    url: J,
-                    buildOverride: null !== (t = null == ex ? void 0 : ex.id) && void 0 !== t ? t : null
+                    url: Z,
+                    buildOverride: null !== (t = null == ef ? void 0 : ef.id) && void 0 !== t ? t : null
                 },
                 !0 === H
                     ? {
@@ -122,75 +122,74 @@ function _(e) {
                           operatingSystem: K,
                           operatingSystemVersion: Q,
                           clientVersion: ee,
-                          clientBuildNumber: er,
+                          clientBuildNumber: ei,
                           locale: en
                       }
                     : { overridePlatformInformation: H },
                 l
             ).catch(() => ed(!0));
         ec(!1),
-            null != o && o.ok
-                ? (ev && window.open(o.body.permalink_url, '_blank'),
-                  ef(),
+            null != a && a.ok
+                ? (eh && window.open(a.body.permalink_url, '_blank'),
+                  ep(),
                   (0, s.ZDy)(async () => {
-                      let { default: e } = await r.e('64648').then(r.bind(r, 81155));
+                      let { default: e } = await i.e('64648').then(i.bind(i, 81155));
                       return (t) => {
-                          var r, n;
-                          return (0, i.jsx)(
+                          var i, n;
+                          return (0, r.jsx)(
                               e,
-                              ((r = (function (e) {
+                              ((i = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
-                                      var r = null != arguments[t] ? arguments[t] : {},
-                                          i = Object.keys(r);
+                                      var i = null != arguments[t] ? arguments[t] : {},
+                                          r = Object.keys(i);
                                       'function' == typeof Object.getOwnPropertySymbols &&
-                                          (i = i.concat(
-                                              Object.getOwnPropertySymbols(r).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                          (r = r.concat(
+                                              Object.getOwnPropertySymbols(i).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(i, e).enumerable;
                                               })
                                           )),
-                                          i.forEach(function (t) {
-                                              var i;
-                                              (i = r[t]),
+                                          r.forEach(function (t) {
+                                              var r;
+                                              (r = i[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: i,
+                                                            value: r,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = i);
+                                                      : (e[t] = r);
                                           });
                                   }
                                   return e;
                               })({}, t)),
-                              (n = n = { asanaTask: o.body }),
+                              (n = n = { asanaTask: a.body }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(n))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(n))
                                   : (function (e, t) {
-                                        var r = Object.keys(e);
+                                        var i = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var i = Object.getOwnPropertySymbols(e);
-                                            r.push.apply(r, i);
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            i.push.apply(i, r);
                                         }
-                                        return r;
+                                        return i;
                                     })(Object(n)).forEach(function (e) {
-                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(n, e));
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(n, e));
                                     }),
-                              r)
+                              i)
                           );
                       };
                   }))
                 : ed(!0);
     }
-    return (
+    n.useEffect(() => {
+        async function e() {
+            q(await (0, y.WG)());
+        }
+        eh && e();
+    }, [eh]),
         n.useEffect(() => {
-            async function e() {
-                q(await (0, y.WG)());
-            }
-            ev && e();
-        }, [ev]),
-        n.useEffect(() => {
-            if (V.length > 0) {
+            if (J.length > 0) {
                 var e;
                 null === (e = k.current) ||
                     void 0 === e ||
@@ -199,326 +198,347 @@ function _(e) {
                         block: 'end'
                     });
             }
-        }, [V]),
-        (0, i.jsxs)(s.Y0X, {
-            transitionState: C,
-            'aria-label': N.NW.string(N.t.mCCdws),
-            size: s.CgR.MEDIUM,
-            children: [
-                (0, i.jsx)(s.xBx, {
-                    children: (0, i.jsx)(s.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: (0, i.jsx)(s.H, { children: N.NW.string(N.t['5Lqopa']) })
+        }, [J]);
+    let ej = n.useCallback(
+        (e) => {
+            let t = Array.from(e.clipboardData.files)
+                .filter((e) => e.type.startsWith('image/'))
+                .at(0);
+            void 0 === t ||
+                J.some((e) => {
+                    var i;
+                    return e.filename === t.name && (null === (i = e.item.file) || void 0 === i ? void 0 : i.size) === t.size;
+                }) ||
+                M([
+                    ...J,
+                    new u.ZP({
+                        id: (0, l.Z)(),
+                        file: t,
+                        platform: u.ow.WEB
                     })
-                }),
-                (0, i.jsx)(s.hzk, {
-                    children: (0, i.jsxs)('form', {
-                        onSubmit: eg,
-                        children: [
-                            null != ex &&
-                                (0, i.jsx)(s.ToO, {
-                                    type: s.ToO.Types.WARNING,
-                                    body: N.NW.format(N.t['yY60+/'], { buildOverrideHook: () => (0, i.jsx)('b', { children: null == ex ? void 0 : ex.id }) }),
-                                    title: N.NW.string(N.t['ZP/hEx'])
+                ]);
+        },
+        [J]
+    );
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: P,
+        'aria-label': W.NW.string(W.t.mCCdws),
+        size: s.CgR.MEDIUM,
+        children: [
+            (0, r.jsx)(s.xBx, {
+                children: (0, r.jsx)(s.X6q, {
+                    variant: 'heading-lg/semibold',
+                    children: (0, r.jsx)(s.H, { children: W.NW.string(W.t['5Lqopa']) })
+                })
+            }),
+            (0, r.jsx)(s.hzk, {
+                onPaste: ej,
+                children: (0, r.jsxs)('form', {
+                    onSubmit: eg,
+                    children: [
+                        null != ef &&
+                            (0, r.jsx)(s.ToO, {
+                                type: s.ToO.Types.WARNING,
+                                body: W.NW.format(W.t['yY60+/'], { buildOverrideHook: () => (0, r.jsx)('b', { children: null == ef ? void 0 : ef.id }) }),
+                                title: W.NW.string(W.t['ZP/hEx'])
+                            }),
+                        null == ef &&
+                            em &&
+                            (0, r.jsx)(s.ToO, {
+                                type: s.ToO.Types.WARNING,
+                                body: W.NW.string(W.t.x18RUl),
+                                title: W.NW.string(W.t.cTVCIC)
+                            }),
+                        (0, r.jsxs)(s.Kqy, {
+                            gap: 24,
+                            padding: {
+                                top: 8,
+                                bottom: 8
+                            },
+                            children: [
+                                (0, r.jsx)(s.xJW, {
+                                    error: ea && '' === T ? W.NW.string(W.t.EkokLy) : null,
+                                    title: W.NW.string(W.t.OZRgj4),
+                                    children: (0, r.jsx)(s.oil, {
+                                        placeholder: 'Something is broken on this screen.',
+                                        type: 'text',
+                                        value: T,
+                                        maxLength: 100,
+                                        onChange: D
+                                    })
                                 }),
-                            null == ex &&
-                                em &&
-                                (0, i.jsx)(s.ToO, {
-                                    type: s.ToO.Types.WARNING,
-                                    body: N.NW.string(N.t.x18RUl),
-                                    title: N.NW.string(N.t.cTVCIC)
-                                }),
-                            (0, i.jsxs)(s.Kqy, {
-                                gap: 24,
-                                padding: {
-                                    top: 8,
-                                    bottom: 8
-                                },
-                                children: [
-                                    (0, i.jsx)(s.xJW, {
-                                        error: eo && '' === T ? N.NW.string(N.t.EkokLy) : null,
-                                        title: N.NW.string(N.t.OZRgj4),
-                                        children: (0, i.jsx)(s.oil, {
-                                            placeholder: 'Something is broken on this screen.',
-                                            type: 'text',
-                                            value: T,
-                                            maxLength: 100,
-                                            onChange: D
-                                        })
-                                    }),
-                                    (0, i.jsxs)(s.xJW, {
-                                        title: N.NW.string(N.t['1SplHx']),
-                                        children: [
-                                            (0, i.jsx)(s.Kx8, {
-                                                placeholder: 'What did you expect to see?',
-                                                value: A,
-                                                onChange: I
-                                            }),
-                                            (0, i.jsx)(s.R94, {
-                                                type: s.geA.DESCRIPTION,
-                                                children: 'You can add additional information/media on the ticket after submitting'
-                                            })
-                                        ]
-                                    }),
-                                    (0, i.jsx)(s.xJW, {
-                                        error: eo && void 0 === R ? N.NW.string(N.t.EkokLy) : null,
-                                        title: N.NW.string(N.t.xMXLdX),
-                                        children: (0, i.jsx)(s.q4e, {
-                                            renderOptionLabel: (e) =>
-                                                (function (e) {
-                                                    let t = e.priority;
-                                                    return (0, i.jsxs)('div', {
-                                                        className: W.formPriorityImageContainer,
-                                                        children: [
-                                                            (0, i.jsxs)('div', {
-                                                                className: W.formPriorityTitleContainer,
-                                                                children: [
-                                                                    (0, i.jsx)('img', {
-                                                                        alt: '',
-                                                                        className: W.formPriorityImage,
-                                                                        src: (0, p.gT)({
-                                                                            id: t.emoji,
-                                                                            animated: !0,
-                                                                            size: 48
-                                                                        })
-                                                                    }),
-                                                                    (0, i.jsx)(s.Text, {
-                                                                        color: 'header-primary',
-                                                                        variant: 'text-sm/semibold',
-                                                                        className: W.formPriorityTitle,
-                                                                        children: t.title
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, i.jsx)(s.Text, {
-                                                                color: 'header-secondary',
-                                                                variant: 'text-xs/normal',
-                                                                className: W.formPriorityDescription,
-                                                                children: t.description
-                                                            })
-                                                        ]
-                                                    });
-                                                })(e),
-                                            onChange: L,
-                                            options: (0, y.Tj)().map((e) => ({
-                                                priority: e,
-                                                value: e.value,
-                                                label: e.title
-                                            })),
-                                            value: R,
-                                            maxVisibleItems: 3,
-                                            closeOnSelect: !0
-                                        })
-                                    }),
-                                    ev &&
-                                        (0, i.jsx)(s.xJW, {
-                                            title: N.NW.string(N.t['77VVd3']),
-                                            children: (0, i.jsx)(s.VcW, {
-                                                value: B,
-                                                options:
-                                                    null !==
-                                                        (w =
-                                                            null == z
-                                                                ? void 0
-                                                                : null === (S = z.features) || void 0 === S
-                                                                  ? void 0
-                                                                  : null === (_ = S.filter((e) => '' !== (0, y.pD)(e))) || void 0 === _
-                                                                    ? void 0
-                                                                    : null ===
-                                                                            (t = _.map((e) => {
-                                                                                var t;
-                                                                                return {
-                                                                                    label: null !== (t = e.name) && void 0 !== t ? t : '',
-                                                                                    value: (0, y.pD)(e)
-                                                                                };
-                                                                            })) || void 0 === t
-                                                                      ? void 0
-                                                                      : t.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== w
-                                                        ? w
-                                                        : [],
-                                                isDisabled: null == z,
-                                                onChange: (e) => G(e)
-                                            })
+                                (0, r.jsxs)(s.xJW, {
+                                    title: W.NW.string(W.t['1SplHx']),
+                                    children: [
+                                        (0, r.jsx)(s.Kx8, {
+                                            placeholder: 'What did you expect to see?',
+                                            value: A,
+                                            onChange: I
                                         }),
-                                    (0, i.jsx)(s.xJW, {
-                                        title: N.NW.string(N.t['7p5pqq']),
-                                        children: (0, i.jsx)(s.oil, {
-                                            placeholder: N.NW.string(N.t.HewMzs),
-                                            type: 'text',
-                                            value: J,
-                                            maxLength: 5000,
-                                            onChange: M
+                                        (0, r.jsx)(s.R94, {
+                                            type: s.geA.DESCRIPTION,
+                                            children: 'You can add additional information/media on the ticket after submitting'
                                         })
-                                    }),
-                                    (0, i.jsx)(s.xJW, {
-                                        children: (0, i.jsx)(s.XZJ, {
-                                            value: H,
-                                            onChange: (e, t) => X(t),
-                                            children: N.NW.string(N.t.ayhqiI)
-                                        })
-                                    }),
-                                    H
-                                        ? (0, i.jsxs)(i.Fragment, {
-                                              children: [
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t.rrI4Tk),
-                                                      children: (0, i.jsx)(s.oil, {
-                                                          placeholder: 'Device',
-                                                          value: U,
-                                                          onChange: (e) => Y(e)
-                                                      })
-                                                  }),
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t.kcHxi4),
-                                                      children: (0, i.jsx)(s.q4e, {
-                                                          value: K,
-                                                          options: O,
-                                                          onChange: (e) => F(e)
-                                                      })
-                                                  }),
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t.rEtxdn),
-                                                      children: (0, i.jsx)(s.oil, {
-                                                          placeholder: 'Operating System Version',
-                                                          value: Q,
-                                                          onChange: (e) => $(e)
-                                                      })
-                                                  }),
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t['wy1M/v']),
-                                                      children: (0, i.jsx)(s.oil, {
-                                                          placeholder: 'Client Version',
-                                                          value: ee,
-                                                          onChange: (e) => et(e)
-                                                      })
-                                                  }),
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t.f7kbVl),
-                                                      children: (0, i.jsx)(s.oil, {
-                                                          placeholder: 'Client Build Number',
-                                                          value: er,
-                                                          onChange: (e) => ei(e)
-                                                      })
-                                                  }),
-                                                  (0, i.jsx)(s.xJW, {
-                                                      title: N.NW.string(N.t['4Z5+zs']),
-                                                      children: (0, i.jsx)(s.oil, {
-                                                          placeholder: 'Locale',
-                                                          value: en,
-                                                          onChange: (e) => el(e)
-                                                      })
-                                                  })
-                                              ]
-                                          })
-                                        : null,
-                                    (0, i.jsxs)(s.zxk, {
-                                        color: s.zxk.Colors.PRIMARY,
-                                        children: [
-                                            N.NW.string(N.t.HVxmOD),
-                                            (0, i.jsx)(c.Z, {
-                                                ref: E,
-                                                onChange: (e) => {
-                                                    var t, r;
-                                                    (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (t = r.files) || void 0 === t ? void 0 : t[0]) != null &&
-                                                        Z([
-                                                            ...V,
-                                                            ...Array.from(e.currentTarget.files).map(
-                                                                (e) =>
-                                                                    new u.ZP({
-                                                                        id: (0, l.Z)(),
-                                                                        file: e,
-                                                                        platform: u.ow.WEB
+                                    ]
+                                }),
+                                (0, r.jsx)(s.xJW, {
+                                    error: ea && void 0 === R ? W.NW.string(W.t.EkokLy) : null,
+                                    title: W.NW.string(W.t.xMXLdX),
+                                    children: (0, r.jsx)(s.q4e, {
+                                        renderOptionLabel: (e) =>
+                                            (function (e) {
+                                                let t = e.priority;
+                                                return (0, r.jsxs)('div', {
+                                                    className: N.formPriorityImageContainer,
+                                                    children: [
+                                                        (0, r.jsxs)('div', {
+                                                            className: N.formPriorityTitleContainer,
+                                                            children: [
+                                                                (0, r.jsx)('img', {
+                                                                    alt: '',
+                                                                    className: N.formPriorityImage,
+                                                                    src: (0, x.gT)({
+                                                                        id: t.emoji,
+                                                                        animated: !0,
+                                                                        size: 48
                                                                     })
-                                                            )
-                                                        ]);
-                                                },
-                                                multiple: !0
-                                            })
-                                        ]
+                                                                }),
+                                                                (0, r.jsx)(s.Text, {
+                                                                    color: 'header-primary',
+                                                                    variant: 'text-sm/semibold',
+                                                                    className: N.formPriorityTitle,
+                                                                    children: t.title
+                                                                })
+                                                            ]
+                                                        }),
+                                                        (0, r.jsx)(s.Text, {
+                                                            color: 'header-secondary',
+                                                            variant: 'text-xs/normal',
+                                                            className: N.formPriorityDescription,
+                                                            children: t.description
+                                                        })
+                                                    ]
+                                                });
+                                            })(e),
+                                        onChange: L,
+                                        options: (0, y.Tj)().map((e) => ({
+                                            priority: e,
+                                            value: e.value,
+                                            label: e.title
+                                        })),
+                                        value: R,
+                                        maxVisibleItems: 3,
+                                        closeOnSelect: !0
+                                    })
+                                }),
+                                eh &&
+                                    (0, r.jsx)(s.xJW, {
+                                        title: W.NW.string(W.t['77VVd3']),
+                                        children: (0, r.jsx)(s.VcW, {
+                                            value: B,
+                                            options:
+                                                null !==
+                                                    (S =
+                                                        null == V
+                                                            ? void 0
+                                                            : null === (w = V.features) || void 0 === w
+                                                              ? void 0
+                                                              : null === (_ = w.filter((e) => '' !== (0, y.pD)(e))) || void 0 === _
+                                                                ? void 0
+                                                                : null ===
+                                                                        (t = _.map((e) => {
+                                                                            var t;
+                                                                            return {
+                                                                                label: null !== (t = e.name) && void 0 !== t ? t : '',
+                                                                                value: (0, y.pD)(e)
+                                                                            };
+                                                                        })) || void 0 === t
+                                                                  ? void 0
+                                                                  : t.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S
+                                                    ? S
+                                                    : [],
+                                            isDisabled: null == V,
+                                            onChange: (e) => G(e)
+                                        })
                                     }),
-                                    V.length > 0
-                                        ? (0, i.jsxs)(s.hjN, {
-                                              children: [
-                                                  (0, i.jsx)(s.vwX, { children: 'Preview' }),
-                                                  (0, i.jsx)('div', {
-                                                      ref: k,
-                                                      className: W.attachments,
-                                                      children:
-                                                          V.length > 0 &&
-                                                          V.map((e) =>
-                                                              (0, i.jsxs)(
-                                                                  'div',
-                                                                  {
-                                                                      className: W.attachment,
-                                                                      children: [
-                                                                          (0, i.jsxs)('div', {
-                                                                              children: [
-                                                                                  (0, i.jsx)(v.r, {
-                                                                                      size: h.q.SMALL,
-                                                                                      upload: e
-                                                                                  }),
-                                                                                  (0, i.jsx)('div', {
-                                                                                      className: W.removeAttachment,
-                                                                                      children: (0, i.jsx)(x.ZP, {
-                                                                                          children: (0, i.jsx)(m.Z, {
-                                                                                              tooltip: N.NW.string(N.t.vN7REx),
-                                                                                              onClick: () => ep(e.id),
-                                                                                              dangerous: !0,
-                                                                                              children: (0, i.jsx)(s.XHJ, {
-                                                                                                  size: 'md',
-                                                                                                  color: 'currentColor'
-                                                                                              })
+                                (0, r.jsx)(s.xJW, {
+                                    title: W.NW.string(W.t['7p5pqq']),
+                                    children: (0, r.jsx)(s.oil, {
+                                        placeholder: W.NW.string(W.t.HewMzs),
+                                        type: 'text',
+                                        value: Z,
+                                        maxLength: 5000,
+                                        onChange: z
+                                    })
+                                }),
+                                (0, r.jsx)(s.xJW, {
+                                    children: (0, r.jsx)(s.XZJ, {
+                                        value: H,
+                                        onChange: (e, t) => X(t),
+                                        children: W.NW.string(W.t.ayhqiI)
+                                    })
+                                }),
+                                H
+                                    ? (0, r.jsxs)(r.Fragment, {
+                                          children: [
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t.rrI4Tk),
+                                                  children: (0, r.jsx)(s.oil, {
+                                                      placeholder: 'Device',
+                                                      value: U,
+                                                      onChange: (e) => Y(e)
+                                                  })
+                                              }),
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t.kcHxi4),
+                                                  children: (0, r.jsx)(s.q4e, {
+                                                      value: K,
+                                                      options: O,
+                                                      onChange: (e) => F(e)
+                                                  })
+                                              }),
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t.rEtxdn),
+                                                  children: (0, r.jsx)(s.oil, {
+                                                      placeholder: 'Operating System Version',
+                                                      value: Q,
+                                                      onChange: (e) => $(e)
+                                                  })
+                                              }),
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t['wy1M/v']),
+                                                  children: (0, r.jsx)(s.oil, {
+                                                      placeholder: 'Client Version',
+                                                      value: ee,
+                                                      onChange: (e) => et(e)
+                                                  })
+                                              }),
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t.f7kbVl),
+                                                  children: (0, r.jsx)(s.oil, {
+                                                      placeholder: 'Client Build Number',
+                                                      value: ei,
+                                                      onChange: (e) => er(e)
+                                                  })
+                                              }),
+                                              (0, r.jsx)(s.xJW, {
+                                                  title: W.NW.string(W.t['4Z5+zs']),
+                                                  children: (0, r.jsx)(s.oil, {
+                                                      placeholder: 'Locale',
+                                                      value: en,
+                                                      onChange: (e) => el(e)
+                                                  })
+                                              })
+                                          ]
+                                      })
+                                    : null,
+                                (0, r.jsxs)(s.zxk, {
+                                    color: s.zxk.Colors.PRIMARY,
+                                    children: [
+                                        W.NW.string(W.t.HVxmOD),
+                                        (0, r.jsx)(c.Z, {
+                                            ref: E,
+                                            onChange: (e) => {
+                                                var t, i;
+                                                (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (t = i.files) || void 0 === t ? void 0 : t[0]) != null &&
+                                                    M([
+                                                        ...J,
+                                                        ...Array.from(e.currentTarget.files).map(
+                                                            (e) =>
+                                                                new u.ZP({
+                                                                    id: (0, l.Z)(),
+                                                                    file: e,
+                                                                    platform: u.ow.WEB
+                                                                })
+                                                        )
+                                                    ]);
+                                            },
+                                            multiple: !0
+                                        })
+                                    ]
+                                }),
+                                J.length > 0
+                                    ? (0, r.jsxs)(s.hjN, {
+                                          children: [
+                                              (0, r.jsx)(s.vwX, { children: 'Preview' }),
+                                              (0, r.jsx)('div', {
+                                                  ref: k,
+                                                  className: N.attachments,
+                                                  children:
+                                                      J.length > 0 &&
+                                                      J.map((e) =>
+                                                          (0, r.jsxs)(
+                                                              'div',
+                                                              {
+                                                                  className: N.attachment,
+                                                                  children: [
+                                                                      (0, r.jsxs)('div', {
+                                                                          children: [
+                                                                              (0, r.jsx)(h.r, {
+                                                                                  size: v.q.SMALL,
+                                                                                  upload: e
+                                                                              }),
+                                                                              (0, r.jsx)('div', {
+                                                                                  className: N.removeAttachment,
+                                                                                  children: (0, r.jsx)(f.ZP, {
+                                                                                      children: (0, r.jsx)(m.Z, {
+                                                                                          tooltip: W.NW.string(W.t.vN7REx),
+                                                                                          onClick: () => ex(e.id),
+                                                                                          dangerous: !0,
+                                                                                          children: (0, r.jsx)(s.XHJ, {
+                                                                                              size: 'md',
+                                                                                              color: 'currentColor'
                                                                                           })
                                                                                       })
                                                                                   })
-                                                                              ]
-                                                                          }),
-                                                                          (0, i.jsx)(s.Text, {
-                                                                              variant: 'text-xxs/medium',
-                                                                              color: 'text-secondary',
-                                                                              children: e.filename
-                                                                          })
-                                                                      ]
-                                                                  },
-                                                                  e.id
-                                                              )
+                                                                              })
+                                                                          ]
+                                                                      }),
+                                                                      (0, r.jsx)(s.Text, {
+                                                                          variant: 'text-xxs/medium',
+                                                                          color: 'text-secondary',
+                                                                          children: e.filename
+                                                                      })
+                                                                  ]
+                                                              },
+                                                              e.id
                                                           )
-                                                  })
-                                              ]
-                                          })
-                                        : null,
-                                    eu
-                                        ? (0, i.jsx)(s.Text, {
-                                              color: 'text-danger',
-                                              variant: 'text-sm/normal',
-                                              children: 'Something went wrong, try again!'
-                                          })
-                                        : null
-                                ]
-                            })
-                        ]
-                    })
-                }),
-                (0, i.jsx)(s.mzw, {
-                    children: (0, i.jsxs)(s.Kqy, {
-                        direction: 'horizontal',
-                        gap: 8,
-                        justify: 'end',
-                        children: [
-                            (0, i.jsx)(s.zxk, {
-                                submitting: es,
-                                onClick: eg,
-                                children: 'Submit and Open Report'
-                            }),
-                            (0, i.jsx)(s.zxk, {
-                                color: s.zxk.Colors.PRIMARY,
-                                onClick: ef,
-                                children: N.NW.string(N.t['ETE/oK'])
-                            })
-                        ]
-                    })
+                                                      )
+                                              })
+                                          ]
+                                      })
+                                    : null,
+                                eu
+                                    ? (0, r.jsx)(s.Text, {
+                                          color: 'text-danger',
+                                          variant: 'text-sm/normal',
+                                          children: 'Something went wrong, try again!'
+                                      })
+                                    : null
+                            ]
+                        })
+                    ]
                 })
-            ]
-        })
-    );
+            }),
+            (0, r.jsx)(s.mzw, {
+                children: (0, r.jsxs)(s.Kqy, {
+                    direction: 'horizontal',
+                    gap: 8,
+                    justify: 'end',
+                    children: [
+                        (0, r.jsx)(s.zxk, {
+                            submitting: es,
+                            onClick: eg,
+                            children: 'Submit and Open Report'
+                        }),
+                        (0, r.jsx)(s.zxk, {
+                            color: s.zxk.Colors.PRIMARY,
+                            onClick: ep,
+                            children: W.NW.string(W.t['ETE/oK'])
+                        })
+                    ]
+                })
+            })
+        ]
+    });
 }
