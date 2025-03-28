@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(869765),
     O = n(243317),
     x = n(621853),
-    C = n(823415),
-    j = n(754047),
+    j = n(823415),
+    C = n(754047),
     P = n(518950),
     T = n(484459),
     N = n(184301),
@@ -284,14 +284,15 @@ function $(e) {
                         ? t
                         : L;
                 }, [z, null === (t = f.application) || void 0 === t ? void 0 : t.icon, null === (n = f.application) || void 0 === n ? void 0 : n.id, A.avatar, B, L]),
-                F = (0, C.nT)({ location: 'MessageHeader' }),
+                F = (0, j.nT)({ location: 'MessageHeader' }),
                 {
                     showPopoutFromHover: Y,
-                    handleMouseEnter: X,
-                    handleMouseLeave: Q
-                } = (0, j.Z)({
+                    onRequestClose: X,
+                    onMouseEnter: Q,
+                    onMouseLeave: J
+                } = (0, C.Z)({
                     shouldShowPopoutOnHover: F,
-                    handlePreload: J
+                    handlePreload: $
                 });
             if (
                 (o.useEffect(() => {
@@ -303,11 +304,13 @@ function $(e) {
                     let e = (0, r.jsx)(d.Gt, {
                         value: k,
                         children: (0, r.jsx)(l.yRy, {
-                            preload: Z ? void 0 : J,
+                            preload: Z ? void 0 : $,
                             renderPopout: p,
                             shouldShow: T || Y,
                             position: s.tq ? 'window_center' : 'right',
-                            onRequestClose: x,
+                            onRequestClose: () => {
+                                null == X || X(), null == x || x();
+                            },
                             clickTrap: T,
                             children: (e) =>
                                 q(
@@ -327,8 +330,8 @@ function $(e) {
                     });
                     return F
                         ? (0, r.jsx)('div', {
-                              onMouseEnter: X,
-                              onMouseLeave: Q,
+                              onMouseEnter: Q,
+                              onMouseLeave: J,
                               children: e
                           })
                         : e;
@@ -350,7 +353,7 @@ function $(e) {
                     )
                 });
             }
-            function J() {
+            function $() {
                 return (0, N.Z)(
                     f.author.id,
                     null != _.guildMemberAvatar && null != i
