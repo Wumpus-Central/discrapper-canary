@@ -10,8 +10,8 @@ var s = a(481060),
     l = a(907796),
     u = a(6210),
     b = a(313460),
-    p = a(447489),
-    f = a(484885);
+    p = a(686936),
+    f = a(326238);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ let m = a(450390),
     },
     j = (e) => {
         let { animatedAssetURL: t, staticAssetURL: a, className: s } = e;
-        return (0, c.e7)([n.Z], () => n.Z.useReducedMotion)
+        return (0, c.e7)([n.Z], () => n.Z.useReducedMotion) || null == t
             ? (0, r.jsx)('img', {
                   src: a,
                   className: s,
@@ -121,14 +121,12 @@ let m = a(450390),
                 {
                     header: i.NW.string(i.t['2Nvn8/']),
                     subHeader: i.NW.string(i.t.F1lGFx),
-                    staticAsset: p.Z,
-                    animatedAsset: f.Z
+                    staticAsset: p.Z
                 },
                 {
                     header: i.NW.string(i.t['1IEs7+']),
                     subHeader: i.NW.string(i.t.mej05u),
-                    staticAsset: p.Z,
-                    animatedAsset: f.Z
+                    staticAsset: f.Z
                 }
             ];
         return (0, r.jsxs)(s.Y0X, {

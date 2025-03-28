@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => m,
-    ZP: () => b
+    EQ: () => b,
+    ZP: () => _
 });
 var r = n(200651),
     i = n(192379),
@@ -10,8 +10,9 @@ var r = n(200651),
     s = n(930153),
     c = n(432792),
     u = n(981631),
-    d = n(388032);
-function p(e) {
+    d = n(388032),
+    p = n(326238);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -55,23 +56,24 @@ function h(e, t) {
     }
     return i;
 }
-let f = (e) => {
+let g = (e) => {
         var { tailLeftOffset: t = 22 } = e,
-            n = h(e, ['tailLeftOffset']);
+            n = f(e, ['tailLeftOffset']);
         return (0, r.jsx)(
             c.tE,
-            p(
+            h(
                 {
                     titleText: d.NW.string(d.t['duN28/']),
                     descriptionText: d.NW.string(d.t['Veu++f']),
                     ctaText: d.NW.string(d.t.F4SoLC),
-                    tailLeftOffset: t
+                    tailLeftOffset: t,
+                    customIconSrcs: { static: p.Z }
                 },
                 n
             )
         );
     },
-    g = () => {
+    m = () => {
         let e = (0, o.Q3)('VirtualCurrency: ShopOnboardingCoachmark');
         return {
             getRequiredSpacingFromTop: i.useCallback(() => {
@@ -83,7 +85,7 @@ let f = (e) => {
             isVisualRefreshEnabled: e
         };
     },
-    m = (e) => {
+    b = (e) => {
         let { isVirtualCurrencyEnabled: t, listScrollerRef: n } = e,
             r = i.useRef(null),
             o = i.useCallback(() => {
@@ -116,12 +118,12 @@ let f = (e) => {
                   onCtaClick: u.dG4
               };
     },
-    b = (e) => {
+    _ = (e) => {
         var t,
             n,
             { offsetControlRef: l, backgroundElementRef: a } = e,
-            u = h(e, ['offsetControlRef', 'backgroundElementRef']);
-        let { getRequiredSpacingFromTop: d, tailLeftOffset: m } = g(),
+            u = f(e, ['offsetControlRef', 'backgroundElementRef']);
+        let { getRequiredSpacingFromTop: d, tailLeftOffset: p } = m(),
             b = i.useRef(null),
             _ = i.useCallback(
                 (e) => {
@@ -154,11 +156,11 @@ let f = (e) => {
             calculateVisibility: _,
             calculateBaseOffsets: O,
             children: (0, r.jsx)(
-                f,
-                ((t = p(
+                g,
+                ((t = h(
                     {
                         coachmarkRef: b,
-                        tailLeftOffset: m
+                        tailLeftOffset: p
                     },
                     u
                 )),
