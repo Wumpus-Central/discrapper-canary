@@ -8,5 +8,7 @@ e.exports = {
     coachmarkDescription: 'coachmarkDescription__4d8b6',
     ctaButton: 'ctaButton__4d8b6',
     link: 'link__4d8b6',
+    coachmarkTailSpine: 'coachmarkTailSpine__4d8b6',
+    coachmarkTailTargetInner: 'coachmarkTailTargetInner__4d8b6',
     coachmarkModalContainer: 'coachmarkModalContainer__4d8b6'
 };

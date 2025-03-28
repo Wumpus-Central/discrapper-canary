@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => b,
-    ZP: () => _
+    EQ: () => m,
+    ZP: () => b
 });
 var r = n(200651),
     i = n(192379),
@@ -56,7 +56,7 @@ function h(e, t) {
     return i;
 }
 let f = (e) => {
-        var { tailLeftOffset: t = 41 } = e,
+        var { tailLeftOffset: t = 22 } = e,
             n = h(e, ['tailLeftOffset']);
         return (0, r.jsx)(
             c.tE,
@@ -79,61 +79,11 @@ let f = (e) => {
                     n = (0, s.Lk)(document.body.style.getPropertyValue('--custom-app-top-bar-height'), 36);
                 return e ? t + n : t;
             }, [e]),
-            tailLeftOffset: e ? 32 : 41,
+            tailLeftOffset: e ? 15 : 22,
             isVisualRefreshEnabled: e
         };
     },
     m = (e) => {
-        var t,
-            n,
-            { offsetControlRef: l, backgroundElementRef: o } = e,
-            a = h(e, ['offsetControlRef', 'backgroundElementRef']);
-        let { getRequiredSpacingFromTop: s, tailLeftOffset: u } = g(),
-            d = i.useRef(null),
-            b = i.useCallback(
-                (e) => {
-                    let t = (e.bottom + e.top) / 2;
-                    return !(t <= s() + m.COACHMARK_VERTICAL_OFFSET || t > window.innerHeight - ((0, c.t4)() + m.COACHMARK_VERTICAL_OFFSET));
-                },
-                [s]
-            );
-        return (0, r.jsx)(c.U_, {
-            offsetControlRef: l,
-            coachmarkRef: d,
-            backgroundElementRef: o,
-            calculateVisibility: b,
-            calculateBaseOffsets: () => ({
-                left: 0,
-                verticalOffset: m.COACHMARK_VERTICAL_OFFSET
-            }),
-            children: (0, r.jsx)(
-                f,
-                ((t = p(
-                    {
-                        coachmarkRef: d,
-                        tailLeftOffset: u
-                    },
-                    a
-                )),
-                (n = n = { renderTail: !0 }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t)
-            )
-        });
-    };
-m.COACHMARK_VERTICAL_OFFSET = 4;
-let b = (e) => {
         let { isVirtualCurrencyEnabled: t, listScrollerRef: n } = e,
             r = i.useRef(null),
             o = i.useCallback(() => {
@@ -166,4 +116,66 @@ let b = (e) => {
                   onCtaClick: u.dG4
               };
     },
-    _ = m;
+    b = (e) => {
+        var t,
+            n,
+            { offsetControlRef: l, backgroundElementRef: a } = e,
+            u = h(e, ['offsetControlRef', 'backgroundElementRef']);
+        let { getRequiredSpacingFromTop: d, tailLeftOffset: m } = g(),
+            b = i.useRef(null),
+            _ = i.useCallback(
+                (e) => {
+                    let t = (e.bottom + e.top) / 2;
+                    return !(t <= d() || t > window.innerHeight - (0, c.t4)());
+                },
+                [d]
+            ),
+            E = (0, o.Q3)('VirtualCurrency: ShopOnboardingCoachmark'),
+            O = i.useCallback(
+                (e, t) => {
+                    if (E) {
+                        let e = (0, s.Lk)(document.body.style.getPropertyValue('--custom-app-top-bar-height'), 36);
+                        return {
+                            left: -(0, s.Lk)(document.body.style.getPropertyValue('--custom-guild-list-width'), 72),
+                            verticalOffset: t ? -e - 4 : e - 9
+                        };
+                    }
+                    return {
+                        left: 0,
+                        verticalOffset: t ? -4 : -12
+                    };
+                },
+                [E]
+            );
+        return (0, r.jsx)(c.U_, {
+            offsetControlRef: l,
+            coachmarkRef: b,
+            backgroundElementRef: a,
+            calculateVisibility: _,
+            calculateBaseOffsets: O,
+            children: (0, r.jsx)(
+                f,
+                ((t = p(
+                    {
+                        coachmarkRef: b,
+                        tailLeftOffset: m
+                    },
+                    u
+                )),
+                (n = n = { renderTail: !0 }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      }),
+                t)
+            )
+        });
+    };

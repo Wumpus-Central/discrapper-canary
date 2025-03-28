@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    a = n(232713),
+    a = n(788347),
     s = n(990547),
     c = n(91192),
     u = n(873546),
@@ -29,8 +29,8 @@ var r = n(200651),
     A = n(849862),
     Z = n(522558),
     x = n(795448),
-    L = n(441623),
-    w = n(457396),
+    w = n(441623),
+    L = n(457396),
     R = n(108989),
     D = n(51596),
     k = n(905423),
@@ -52,7 +52,7 @@ var r = n(200651),
     $ = n(675654),
     ee = n(474936),
     et = n(388032),
-    en = n(635357),
+    en = n(378392),
     er = n(93453);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -121,7 +121,7 @@ let ea = (e) => {
             n = eo(e, ['selected']);
         let l = (0, c.JA)('friends'),
             o = (0, A.If)(),
-            a = (0, d.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
+            a = (0, d.e7)([w.Z], () => w.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([b.Z], () => b.Z.useReducedMotion),
             { enabled: p } = Z.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             h = a && p;
@@ -317,8 +317,8 @@ let eg = i.memo(function (e) {
             isVirtualCurrencyEnabled: b,
             listScrollerRef: v
         }),
-        { shouldShow: I, closeCoachmarkIfOpen: C, onHandleScroll: S, offsetControlRef: T } = y,
-        P = eo(y, ['shouldShow', 'closeCoachmarkIfOpen', 'onHandleScroll', 'offsetControlRef']);
+        { shouldShow: I, onHandleScroll: C, offsetControlRef: S } = y,
+        T = eo(y, ['shouldShow', 'onHandleScroll', 'offsetControlRef']);
     return (0, r.jsxs)('nav', {
         className: er.privateChannels,
         'aria-label': et.NW.string(et.t.ZH9aPz),
@@ -355,7 +355,7 @@ let eg = i.memo(function (e) {
                     selectedChannelId: g,
                     showDMHeader: !0,
                     listScrollerRef: v,
-                    onHandleScroll: I ? S : void 0,
+                    onHandleScroll: I ? C : void 0,
                     children: [
                         (0, r.jsx)(ea, { selected: null != m ? m === J.Z5c.FRIENDS : l === J.Z5c.FRIENDS }, 'friends'),
                         n && t
@@ -371,7 +371,7 @@ let eg = i.memo(function (e) {
                         d ? (0, r.jsx)(eu, { selected: null == m ? null != l && l.startsWith(J.Z5c.MESSAGE_REQUESTS) : m === J.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                         c
                             ? (0, r.jsx)(
-                                  w.g,
+                                  L.g,
                                   {
                                       selected: null == m ? a : m.startsWith(J.Z5c.APPLICATION_STORE),
                                       route: J.Z5c.APPLICATION_STORE,
@@ -391,7 +391,6 @@ let eg = i.memo(function (e) {
                             {
                                 selected: m === J.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(J.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: E,
-                                onClick: C,
                                 locationState: {
                                     analyticsSource: {
                                         page: ef(l),
@@ -408,9 +407,9 @@ let eg = i.memo(function (e) {
                                   ei(
                                       {
                                           backgroundElementRef: E,
-                                          offsetControlRef: T
+                                          offsetControlRef: S
                                       },
-                                      P
+                                      T
                                   )
                               )
                             : null,
@@ -450,7 +449,7 @@ function eb() {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, a.X),
-        p = (0, w.i)({ selected: null == u ? t : u.startsWith(J.Z5c.APPLICATION_STORE) }),
+        p = (0, L.i)({ selected: null == u ? t : u.startsWith(J.Z5c.APPLICATION_STORE) }),
         h = (0, T.a)(),
         f = (function () {
             let e = G.Ex.useSetting(),

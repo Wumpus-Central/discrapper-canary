@@ -28,7 +28,7 @@ var r = n(200651),
     w = n(130653),
     S = n(46140),
     P = n(981631),
-    N = n(808397);
+    N = n(760040);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -98,9 +98,9 @@ function B(e) {
         k = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         q = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         D = o.useRef(null),
-        W = o.useMemo(() => (0, x.q8)(s), [s]),
-        I = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        M = (0, d.Z)(I),
+        I = o.useMemo(() => (0, x.q8)(s), [s]),
+        W = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        M = (0, d.Z)(W),
         L = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         Z = (0, d.Z)(L),
         { hasError: V, isLoading: Q } = (0, v.d7)(),
@@ -154,7 +154,8 @@ function B(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: P.rMx.QUEST_HOVER,
-                properties: T(E({}, (0, m.mH)(g.jn.QUEST_BAR)), { impression_id: null === (e = D.current) || void 0 === e ? void 0 : e.getId() })
+                properties: T(E({}, (0, m.mH)(g.jn.QUEST_BAR)), { impression_id: null === (e = D.current) || void 0 === e ? void 0 : e.getId() }),
+                shouldExtendSession: !0
             }),
                 (X.current = !0),
                 ep({ withDelay: !0 });
@@ -173,15 +174,15 @@ function B(e) {
         L && z.shouldExpandOnQuestComplete && el();
     }, [el, L, z.shouldExpandOnQuestComplete]),
         o.useLayoutEffect(() => {
-            I && !M && X.current && el();
-        }, [el, I, M]),
+            W && !M && X.current && el();
+        }, [el, W, M]),
         o.useLayoutEffect(() => {
-            L || !I || M || X.current || ea(!1);
-        }, [I, L, M, ea]),
+            L || !W || M || X.current || ea(!1);
+        }, [W, L, M, ea]),
         o.useLayoutEffect(() => {
             U !== H.current && en(!1), (H.current = U);
         }, [U]);
-    let eh = I ? S.XZ : S.R4,
+    let eh = W ? S.XZ : S.R4,
         [{ expansionSpring: eb }, ej] = (0, c.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: eh,
@@ -214,8 +215,8 @@ function B(e) {
         }
     });
     return (o.useEffect(() => {
-        W && (0, _.loadVideoQuestModal)();
-    }, [W]),
+        I && (0, _.loadVideoQuestModal)();
+    }, [I]),
     o.useLayoutEffect(() => {
         L && !Z && z.canCollapseOnBlur && ei();
     }, [L, el, z.canCollapseOnBlur, ei, Z]),
@@ -277,11 +278,11 @@ function B(e) {
                                   children: (0, r.jsx)(i.animated.div, {
                                       className: a()(N.contentWrapper, {
                                           [N.contentWrapperExpanded]: G,
-                                          [N.contentWrapperAccepted]: I
+                                          [N.contentWrapperAccepted]: W
                                       }),
                                       style: {
                                           backgroundColor: z.preEnrollmentBackgroundColor,
-                                          backgroundImage: I ? z.postEnrollmentBackgroundImage : void 0
+                                          backgroundImage: W ? z.postEnrollmentBackgroundImage : void 0
                                       },
                                       children: (0, r.jsx)(C.t, {
                                           springConfig: eh,
