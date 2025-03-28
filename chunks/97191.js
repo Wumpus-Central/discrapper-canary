@@ -1,4 +1,4 @@
-e.exports = {
+var r = {
     form: 'form__08bd2',
     modalHeader: 'modalHeader__08bd2',
     closeButton: 'closeButton__08bd2',
@@ -14,3 +14,4 @@ e.exports = {
     cancelButton: 'cancelButton__08bd2',
     modalFooter: 'modalFooter__08bd2'
 };
+e.exports = r;
