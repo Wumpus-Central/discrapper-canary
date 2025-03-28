@@ -15,6 +15,20 @@ function c(e) {
                 }),
             [e.id, e.guild_id]
         ),
-        n = (0, r.e7)([o.Z], () => o.Z.hasConsented(l.pjP.PERSONALIZATION));
-    return (0, r.Wu)([a.default, i.Z], () => (n ? t.sort((e, t) => i.Z.compare(e, t)) : t).map((e) => a.default.getUser(e)).filter((e) => null != e), [n, t]);
+        n = (0, r.e7)([i.Z], () => i.Z.getUserAffinitiesMap()),
+        c = (0, r.e7)([o.Z], () => o.Z.hasConsented(l.pjP.PERSONALIZATION));
+    return (0, r.Wu)(
+        [a.default],
+        () =>
+            (c
+                ? t.sort((e, t) => {
+                      var r, i, o, a;
+                      return (null !== (o = null === (r = n.get(t)) || void 0 === r ? void 0 : r.vcProbability) && void 0 !== o ? o : 0) - (null !== (a = null === (i = n.get(e)) || void 0 === i ? void 0 : i.vcProbability) && void 0 !== a ? a : 0);
+                  })
+                : t
+            )
+                .map((e) => a.default.getUser(e))
+                .filter((e) => null != e),
+        [c, n, t]
+    );
 }
