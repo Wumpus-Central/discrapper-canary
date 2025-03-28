@@ -1,35 +1,39 @@
 r.d(t, { Z: () => l }), r(47120);
 var n = r(192379),
-    i = r(493773),
-    o = r(228168);
+    o = r(493773),
+    i = r(228168);
 function l(e) {
     let { shouldShowPopoutOnHover: t, handlePreload: r } = e,
         [l, a] = n.useState(!1),
-        c = n.useRef(void 0),
+        c = n.useRef(!1),
         s = n.useRef(void 0),
-        u = n.useRef(void 0);
-    (0, i.zq)(() => () => {
-        clearTimeout(c.current), clearTimeout(s.current), clearTimeout(u.current);
-    });
-    let m = n.useRef(!1);
-    return t
+        u = n.useRef(void 0),
+        m = n.useRef(void 0);
+    return ((0, o.zq)(() => {
+        clearTimeout(s.current), clearTimeout(u.current), clearTimeout(m.current);
+    }),
+    t)
         ? {
               showPopoutFromHover: l,
               handleMouseEnter: () => {
-                  (m.current = !0),
-                      (c.current = setTimeout(() => {
-                          m.current && r();
-                      }, o.a6)),
+                  (c.current = !0),
                       (s.current = setTimeout(() => {
-                          m.current && a(!0);
-                      }, o.JX));
+                          c.current && r();
+                      }, i.a6)),
+                      (u.current = setTimeout(() => {
+                          c.current && a(!0);
+                      }, i.JX));
               },
               handleMouseLeave: () => {
-                  (m.current = !1),
-                      (u.current = setTimeout(() => {
-                          m.current || a(!1);
-                      }, o.Ig));
+                  (c.current = !1),
+                      (m.current = setTimeout(() => {
+                          c.current || a(!1);
+                      }, i.Ig));
               }
           }
-        : {};
+        : {
+              showPopoutFromHover: !1,
+              handleMouseEnter: void 0,
+              handleMouseLeave: void 0
+          };
 }
