@@ -2190,6 +2190,7 @@ var N =
     (r.REDESIGN_NAV_BAR_CLICKED = 'redesign_nav_bar_clicked'),
     (r.REDESIGN_NAV_BAR_RENDERED = 'redesign_nav_bar_rendered'),
     (r.CHANNEL_BACK_NAVIGATED = 'channel_back_navigated'),
+    (r.MEDIA_VIDEO_CAPABILITIES_DETECTED = 'media_video_capabilities_detected'),
     (r.MEDIA_ATTACHMENT_PLAYBACK_STARTED = 'media_attachment_playback_started'),
     (r.MEDIA_ATTACHMENT_PLAYBACK_ENDED = 'media_attachment_playback_ended'),
     (r.MEDIA_PIP_ENDED = 'media_pip_ended'),
