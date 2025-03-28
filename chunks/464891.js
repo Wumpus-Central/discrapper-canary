@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(869765),
     O = n(243317),
     x = n(621853),
-    C = n(823415),
-    j = n(754047),
+    j = n(823415),
+    C = n(754047),
     P = n(518950),
     T = n(484459),
     N = n(184301),
@@ -50,7 +50,7 @@ var r = n(200651),
     H = n(388032),
     F = n(432957),
     V = n(121282);
-function q(e) {
+function K(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -75,7 +75,7 @@ function q(e) {
     }
     return e;
 }
-function K(e, t) {
+function q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -139,14 +139,14 @@ function X(e) {
             [t, n, i]
         ),
         x = o.useRef(null),
-        C = (0, c.e7)([S.Z], () => ee(i, h, s, S.Z.getGuild(a)), [i, h, s, a]),
-        j = (0, c.e7)(
+        j = (0, c.e7)([S.Z], () => ee(i, h, s, S.Z.getGuild(a)), [i, h, s, a]),
+        C = (0, c.e7)(
             [S.Z],
             () => {
                 let e = S.Z.getGuild(a);
                 return null == s
                     ? null
-                    : 1 === C && null != e
+                    : 1 === j && null != e
                       ? (0, r.jsx)(
                             l.yRy,
                             {
@@ -166,7 +166,7 @@ function X(e) {
                                     let { onClick: t } = e;
                                     return (0, r.jsx)(
                                         m.Z,
-                                        K(q({ ref: x }, s), {
+                                        q(K({ ref: x }, s), {
                                             className: F.roleIcon,
                                             onClick: t
                                         })
@@ -175,11 +175,11 @@ function X(e) {
                             },
                             'role-icon-children'
                         )
-                      : 2 === C
-                        ? (0, r.jsx)(m.Z, K(q({}, s), { className: F.roleIcon }), 'role-icon-children')
+                      : 2 === j
+                        ? (0, r.jsx)(m.Z, q(K({}, s), { className: F.roleIcon }), 'role-icon-children')
                         : null;
             },
-            [C, s, a]
+            [j, s, a]
         ),
         P = (0, c.Wu)(
             [k.default, S.Z],
@@ -205,7 +205,7 @@ function X(e) {
                                 'nitro-author'
                             )
                         ),
-                    null != j && e.push(j),
+                    null != C && e.push(C),
                     null != o &&
                         (e.push(
                             (0, r.jsx)(
@@ -244,7 +244,7 @@ function X(e) {
                     e
                 );
             },
-            [t, n, s, i, j, a]
+            [t, n, s, i, C, a]
         );
     return null == v
         ? null
@@ -383,7 +383,7 @@ let et = o.memo(function (e) {
                     'aria-label': H.NW.formatToPlainString(H.t['8zbGNT'], { date: o }),
                     children: (0, r.jsx)(
                         'img',
-                        q(
+                        K(
                             {
                                 alt: '',
                                 className: F.nitroBadgeSvg,
@@ -450,13 +450,13 @@ let et = o.memo(function (e) {
                             ? t
                             : L;
                     }, [U, null === (t = f.application) || void 0 === t ? void 0 : t.icon, null === (n = f.application) || void 0 === n ? void 0 : n.id, A.avatar, B, L]),
-                    F = (0, C.nT)({ location: 'MessageHeader' }),
+                    F = (0, j.nT)({ location: 'MessageHeader' }),
                     {
                         showPopoutFromHover: V,
                         onRequestClose: X,
                         onMouseEnter: Q,
                         onMouseLeave: J
-                    } = (0, j.Z)({
+                    } = (0, C.Z)({
                         shouldShowPopoutOnHover: F,
                         handlePreload: $
                     });
@@ -480,7 +480,7 @@ let et = o.memo(function (e) {
                                 clickTrap: T,
                                 children: (e) =>
                                     Y(
-                                        K(q({}, W), {
+                                        q(K({}, W), {
                                             avatarSrc: H,
                                             avatarDecorationSrc: G,
                                             compact: b,
@@ -505,7 +505,7 @@ let et = o.memo(function (e) {
                     return (0, r.jsx)(d.Gt, {
                         value: k,
                         children: Y(
-                            K(q({}, W), {
+                            q(K({}, W), {
                                 avatarSrc: H,
                                 avatarDecorationSrc: G,
                                 compact: b,
@@ -579,8 +579,8 @@ let et = o.memo(function (e) {
                                     children: [
                                         (0, r.jsx)(
                                             l.YlB,
-                                            K(
-                                                q(
+                                            q(
+                                                K(
                                                     {
                                                         size: 'xxs',
                                                         color: 'currentColor'
@@ -594,17 +594,16 @@ let et = o.memo(function (e) {
                                     ]
                                 })
                         }),
-                    (0, r.jsx)(X, {
-                        message: t,
-                        channel: x,
-                        compact: a,
-                        guildId: e.guildId,
-                        roleIconProps: m,
-                        renderPopout: T,
-                        showUsernamePopout: e.showUsernamePopout,
-                        onContextMenu: e.onContextMenu,
-                        onPopoutRequestClose: e.onPopoutRequestClose
-                    })
+                    (0, r.jsx)(
+                        X,
+                        q(K({}, e), {
+                            message: t,
+                            channel: x,
+                            compact: a,
+                            roleIconProps: m,
+                            renderPopout: T
+                        })
+                    )
                 ]
             }),
             usernameSpanId: (0, L.XX)(t, _),
