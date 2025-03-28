@@ -37802,14 +37802,14 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     opacity: .2
 }
 
-:where(.clickableText__39ec2) {
+.clickableText__39ec2 {
     cursor: pointer;
     width: -moz-max-content;
     width: max-content;
     max-width: 100%
 }
 
-:where(.clickableText__39ec2):hover {
+.clickableText__39ec2:hover {
     -webkit-text-decoration: underline;
     text-decoration: underline;
     text-decoration-color: var(--text-normal)
@@ -39016,28 +39016,46 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-bottom: 1px solid var(--border-subtle)
 }
 
-.container_b66158 {
+.clickable_b66158 {
+    cursor: pointer;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     gap: 4px;
-    align-items: center;
-    color: var(--text-secondary)
+    align-items: center
 }
 
-.statusText_b66158~.pencilIcon_b66158 {
-    opacity: 0
+.clickable_b66158:hover {
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: var(--text-normal)
 }
 
-.statusText_b66158:hover {
+.clickable_b66158:focus-within .text_b66158,
+.clickable_b66158:hover .text_b66158 {
     max-width: calc(100% - 16px)
 }
 
-.statusText_b66158:hover~.pencilIcon_b66158 {
-    opacity: 1
+.clickable_b66158:focus-within .pencilIcon_b66158,
+.clickable_b66158:hover .pencilIcon_b66158 {
+    visibility: visible
+}
+
+.text_b66158 {
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%
 }
 
 .pencilIcon_b66158 {
-    flex-shrink: 0
+    flex-shrink: 0;
+    color: var(--text-secondary)
+}
+
+.pencilIcon_b66158.hidden_b66158 {
+    visibility: hidden
 }
 
 .container__23ba6 {

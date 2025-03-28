@@ -1,83 +1,73 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
-    o = n(442837),
-    a = n(481060),
-    s = n(906732),
-    l = n(362721),
-    c = n(117358),
-    u = n(12498),
-    d = n(446226),
-    f = n(454585),
-    _ = n(19780),
-    p = n(626135),
-    h = n(652853),
-    m = n(373826),
-    g = n(228168),
-    E = n(981631),
-    b = n(388032),
-    v = n(355054);
-function y(e) {
-    let { voiceChannel: t, onAction: n, onClose: y } = e,
-        { profileType: O } = (0, h.z)(),
-        { analyticsLocations: I } = (0, s.ZP)(),
-        S = (0, l.ZP)(t, !0),
-        T = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        N = null != T && '' !== T,
-        A = (0, o.e7)([_.Z], () => _.Z.getChannelId()),
-        C = (0, d.Z)(),
-        R = A === t.id || (null == C ? void 0 : C.channelId) === t.id;
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(481060),
+    c = n(906732),
+    u = n(362721),
+    d = n(117358),
+    f = n(12498),
+    _ = n(454585),
+    p = n(869768),
+    h = n(626135),
+    m = n(652853),
+    g = n(373826),
+    E = n(228168),
+    b = n(981631),
+    v = n(388032),
+    y = n(355054);
+function O(e) {
+    let { voiceChannel: t, onAction: n, onClose: o } = e,
+        { profileType: O } = (0, m.z)(),
+        { analyticsLocations: I } = (0, c.ZP)(),
+        S = (0, p.W)(t),
+        T = (0, u.ZP)(t, !0),
+        N = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
+        A = i.useMemo(() => (null == N || '' === N ? null : _.Z.parseVoiceChannelStatus(N, !0, { channelId: t.id })), [N, t.id]);
     i.useEffect(() => {
-        N &&
-            p.default.track(E.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+        null != A &&
+            h.default.track(b.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: I
             });
-    }, [N, t.id, t.guild_id, I]);
-    let P = (e) => {
+    }, [A, t.id, t.guild_id, I]);
+    let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
-            O === g.y0.BITE_SIZE && (null == y || y()),
-            (0, c.Z)({
+            O === E.y0.BITE_SIZE && (null == o || o()),
+            (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I
             });
     };
-    return N
-        ? (0, r.jsxs)('div', {
-              className: v.container,
+    return T && S
+        ? (0, r.jsxs)(l.P3F, {
+              className: y.clickable,
+              onClick: C,
               children: [
-                  (0, r.jsx)(m.Z, {
-                      text: f.Z.parseVoiceChannelStatus(T, !0, { channelId: t.id }),
+                  (0, r.jsx)(g.Z, {
+                      text: null != A ? A : v.NW.string(v.t.Mgpxi4),
                       variant: 'text-xs/normal',
-                      color: 'currentColor',
-                      clickableClassName: v.statusText,
-                      onClick: S ? P : void 0
+                      color: 'text-secondary',
+                      className: y.text
                   }),
-                  (0, r.jsx)(a.vdY, {
+                  (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: v.pencilIcon
+                      className: a()(y.pencilIcon, null != A ? y.hidden : void 0),
+                      'aria-label': v.NW.string(v.t.bt75u7)
                   })
               ]
           })
-        : S && R
-          ? (0, r.jsxs)('div', {
-                className: v.container,
-                children: [
-                    (0, r.jsx)(m.Z, {
-                        text: b.NW.string(b.t.Mgpxi4),
-                        variant: 'text-xs/normal',
-                        color: 'currentColor',
-                        onClick: P
-                    }),
-                    (0, r.jsx)(a.vdY, {
-                        color: 'currentColor',
-                        size: 'xxs',
-                        className: v.pencilIcon
-                    })
-                ]
+        : null != A
+          ? (0, r.jsx)(g.Z, {
+                text: A,
+                variant: 'text-xs/normal',
+                color: 'text-secondary',
+                className: y.text
             })
           : null;
 }

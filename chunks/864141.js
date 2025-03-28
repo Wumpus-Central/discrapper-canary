@@ -90,6 +90,7 @@ function L(e) {
                         ]
                     }),
                     V &&
+                        n.isGuildVoice() &&
                         (0, r.jsx)(A.Z, {
                             voiceChannel: n,
                             onAction: j,
