@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(47120);
+n.d(t, { Z: () => _ }), n(47120), n(653041);
 var r,
     i = n(442837),
     o = n(570140),
@@ -16,23 +16,42 @@ function s(e, t, n) {
         e
     );
 }
-let l = new Map();
-class c extends (r = i.ZP.Store) {
+let l = new Map(),
+    c = new Map();
+function u(e, t) {
+    return e.type === t;
+}
+class d extends (r = i.ZP.Store) {
     hasActiveErrorOfType(e) {
-        for (let { error: t } of l.values()) if (t === e) return !0;
-        return !1;
+        var t;
+        return (null !== (t = c.get(e)) && void 0 !== t ? t : []).length > 0;
     }
     getActiveErrors() {
         return l instanceof Map || (l = new Map()), l;
     }
+    getActiveErrorsOfType(e) {
+        let t = [],
+            n = c.get(e);
+        if (null == n) return t;
+        for (let r of n) {
+            let n = l.get(r);
+            null != n && u(n, e) && t.push(n);
+        }
+        return t;
+    }
 }
-function u(e) {
+function f(e) {
     let { activeErrors: t } = e;
     if (__OVERLAY__ || !(t instanceof Map)) return;
     l instanceof Map || (l = new Map());
     let n = new Set(t.keys()),
         r = new Set(l.keys());
-    (0, a.OL)(n, r) || (l = t);
+    if (!(0, a.OL)(n, r))
+        for (let [e, n] of ((l = t), (c = new Map()), l.entries())) {
+            var i;
+            let t = null !== (i = c.get(n.type)) && void 0 !== i ? i : [];
+            t.push(e), c.set(n.type, t);
+        }
 }
-s(c, 'displayName', 'AVErrorStore');
-let d = new c(o.Z, { ACTIVE_AV_ERRORS_CHANGED: u });
+s(d, 'displayName', 'AVErrorStore');
+let _ = new d(o.Z, { ACTIVE_AV_ERRORS_CHANGED: f });

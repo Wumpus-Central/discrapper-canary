@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(672784),
     d = n(369711),
     f = n(649754);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -64,13 +64,13 @@ function g(e) {
     return 'canary' === o || 'development' === o ? (0, d.m)(e) : (0, u.y)(e);
 }
 function E(e) {
-    var { streamId: t, paused: n, onReady: o, onResize: s, className: u } = e,
+    var { streamId: t, paused: n = !1, onReady: o, onResize: s, className: u } = e,
         d = h(e, ['streamId', 'paused', 'onReady', 'onResize', 'className']);
-    let p = i.useRef(null),
+    let _ = i.useRef(null),
         { current: m } = i.useRef(l()('media-engine-video-'));
     return (
         i.useEffect(() => {
-            let e = p.current;
+            let e = _.current;
             if (!n && null != e) {
                 let n = !1,
                     r = (t, r) => {
@@ -96,11 +96,11 @@ function E(e) {
                     let n = g(e);
                     if (null == n) return;
                     return (
-                        f.Z.addSink(t, p, (e) => {
+                        f.Z.addSink(t, _, (e) => {
                             r(e.width, e.height), n.render(e);
                         }),
                         () => {
-                            f.Z.removeSink(t, p);
+                            f.Z.removeSink(t, _);
                         }
                     );
                 }
@@ -108,15 +108,14 @@ function E(e) {
         }, [t, n, s, o, m]),
         (0, r.jsx)(
             'canvas',
-            _(
+            p(
                 {
                     id: m,
                     className: a()('media-engine-video', u),
-                    ref: p
+                    ref: _
                 },
                 d
             )
         )
     );
 }
-E.defaultProps = { paused: !1 };

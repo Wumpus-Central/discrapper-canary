@@ -1,22 +1,14 @@
-n.d(t, { Z: () => s });
-var r = n(149765),
-    i = n(442837),
-    l = n(984933),
-    o = n(496675),
-    a = n(981631);
-function s(e) {
-    let t = (0, i.e7)(
-        [l.ZP],
-        () => {
-            var t;
-            return null !== (t = l.ZP.getChannels(e)[l.sH]) && void 0 !== t ? t : [];
-        },
-        [e]
-    );
-    return 0 === t.length
-        ? 0
-        : t.filter((e) => {
-              let { channel: t } = e;
-              return o.Z.can(r.$e(a.Plq.SEND_MESSAGES, a.Plq.VIEW_CHANNEL), t);
-          }).length;
+n.d(t, { Z: () => c }), n(47120);
+var r = n(442837),
+    i = n(414910),
+    o = n(314897),
+    a = n(785141),
+    s = n(674503),
+    l = n(354459);
+function c(e) {
+    return (0, r.e7)([s.Z, o.default], () => {
+        if ((null == e ? void 0 : e.type) !== l.fO.STREAM && (null == e ? void 0 : e.type) !== l.fO.USER) return;
+        let t = (0, i.Z)(e.type);
+        for (let n of o.default.getId() === e.user.id ? s.Z.getActiveErrorsOfType(a.u.VIDEO_STREAM_SENDER_READY_TIMEOUT) : s.Z.getActiveErrorsOfType(a.u.VIDEO_STREAM_RECEIVER_READY_TIMEOUT)) if (n.mediaContext === t && n.userId === e.user.id) return n.type;
+    });
 }

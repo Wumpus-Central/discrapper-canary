@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var r,
     i = n(442837),
     o = n(570140),
@@ -57,67 +57,94 @@ function d(e, t) {
     );
 }
 let f = null,
-    p = null,
-    _ = {};
-function h(e, t) {
+    _ = null,
+    p = {},
+    h = {};
+function m(e, t) {
+    return ''.concat(e, ':').concat(t);
+}
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        r = _[e];
+        r = p[e];
     if (null == r) return;
     let i = r[null != t ? t : a.kod];
     if (null != i) {
         for (let e of Object.values(s.Yn)) (n === e || null == n) && delete i[e];
-        _[e][null != t ? t : a.kod] = i;
+        p[e][null != t ? t : a.kod] = i;
     }
 }
-function m(e, t, n, r) {
+function E(e, t, n, r) {
     var i;
-    e in _ || (_[e] = {});
-    let o = null !== (i = _[e][null != t ? t : a.kod]) && void 0 !== i ? i : {};
-    _[e][null != t ? t : a.kod] = d(c({}, o), { [r]: { streamId: n } });
-}
-function g(e) {
-    let { user: t, sessionId: n } = e;
-    (f = t.id), (p = n);
-}
-function E(e) {
-    let { user: t, sessionId: n } = e;
-    (f = t.id), (p = n);
-}
-function v(e) {
-    let { userId: t, guildId: n, streamId: r, context: i } = e;
-    null != r ? m(t, n, r, i) : h(t, n, i);
+    e in p || (p[e] = {});
+    let o = null !== (i = p[e][null != t ? t : a.kod]) && void 0 !== i ? i : {};
+    p[e][null != t ? t : a.kod] = d(c({}, o), { [r]: { streamId: n } });
 }
 function b(e) {
+    let { user: t, sessionId: n } = e;
+    (f = t.id), (_ = n);
+}
+function v(e) {
+    let { user: t, sessionId: n } = e;
+    (f = t.id), (_ = n);
+}
+function y(e) {
+    let { userId: t, guildId: n, streamId: r, context: i } = e;
+    null != r ? E(t, n, r, i) : g(t, n, i);
+}
+function O(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n;
         let { userId: r, sessionId: i, channelId: o, guildId: s } = t;
         if (null == o && r === f) {
-            if (i !== p) return e;
-            _ = {};
+            if (i !== _) return e;
+            p = {};
         } else {
-            if (null != o || (null === (n = _[r]) || void 0 === n ? void 0 : n[null != s ? s : a.kod]) == null) return e;
-            h(r, s);
+            if (null != o || (null === (n = p[r]) || void 0 === n ? void 0 : n[null != s ? s : a.kod]) == null) return e;
+            g(r, s);
         }
         return !0;
     }, !1);
 }
-class y extends (r = i.ZP.Store) {
+function I(e) {
+    let { videoStreamId: t, userId: n, streamKey: r, mediaContext: i } = e;
+    h[m(i, n)] = {
+        videoStreamId: t,
+        userId: n,
+        streamKey: r,
+        mediaContext: i
+    };
+}
+function S(e) {
+    let { mediaContext: t, userId: n } = e,
+        r = m(t, n);
+    if (null == h[r]) return !1;
+    delete h[r];
+}
+class T extends (r = i.ZP.Store) {
     getStreamId(e, t) {
         var n, r, i;
         let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Yn.DEFAULT;
-        return null === (i = _[e]) || void 0 === i ? void 0 : null === (r = i[null != t ? t : a.kod]) || void 0 === r ? void 0 : null === (n = r[o]) || void 0 === n ? void 0 : n.streamId;
+        return null === (i = p[e]) || void 0 === i ? void 0 : null === (r = i[null != t ? t : a.kod]) || void 0 === r ? void 0 : null === (n = r[o]) || void 0 === n ? void 0 : n.streamId;
     }
     getUserStreamData(e, t) {
         var n, r;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Yn.DEFAULT;
-        return null === (r = _[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : a.kod]) || void 0 === n ? void 0 : n[i];
+        return null === (r = p[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : a.kod]) || void 0 === n ? void 0 : n[i];
+    }
+    getTimedoutVideos() {
+        return h;
+    }
+    getTimedoutVideo(e, t) {
+        return h[m(e, t)];
     }
 }
-l(y, 'displayName', 'VideoStreamStore');
-let O = new y(o.Z, {
-    CONNECTION_OPEN: g,
-    OVERLAY_INITIALIZE: E,
-    RTC_CONNECTION_VIDEO: v,
-    VOICE_STATE_UPDATES: b
+l(T, 'displayName', 'VideoStreamStore');
+let A = new T(o.Z, {
+    CONNECTION_OPEN: b,
+    OVERLAY_INITIALIZE: v,
+    RTC_CONNECTION_VIDEO: y,
+    VOICE_STATE_UPDATES: O,
+    VIDEO_STREAM_READY_TIMEOUT: I,
+    CLEAR_VIDEO_STREAM_READY_TIMEOUT: S
 });
