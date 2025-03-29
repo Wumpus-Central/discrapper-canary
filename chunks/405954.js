@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(704215),
@@ -6,33 +6,35 @@ var r = n(200651),
     a = n(436952),
     s = n(54480),
     c = n(611725),
-    u = n(243778),
-    d = n(626135),
-    p = n(665149),
-    h = n(981631),
-    f = n(921944),
-    m = n(388032);
-let g = function (e) {
+    u = n(605236),
+    d = n(243778),
+    p = n(626135),
+    h = n(665149),
+    f = n(981631),
+    m = n(921944),
+    g = n(388032);
+let b = function (e) {
     let { channel: t } = e,
-        { activePickerChannelId: n, openPickerForChannel: g, closePicker: b } = (0, c.B)(),
-        { canAccessPicker: _, entryPoint: C } = (0, s.m)({
+        { activePickerChannelId: n, openPickerForChannel: b, closePicker: _ } = (0, c.B)(),
+        { canAccessPicker: C, entryPoint: v } = (0, s.m)({
             location: 'channel_header_toolbar',
             selectedChannelId: t.id
         }),
-        v = _ && C === a.FN.TOOLBAR,
-        [y, x] = (0, u.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
-        j = y === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
-        O = i.useCallback(() => {
-            j && x(f.L.TAKE_ACTION), n === t.id ? (b(), d.default.track(h.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (g(t.id), d.default.track(h.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
-        }, [n, t.id, b, g, j, x]);
-    return v
-        ? (0, r.jsx)(p.JO, {
-              onClick: O,
-              tooltip: m.NW.string(m.t.GixvUl),
+        y = (0, u.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        x = C && v === a.FN.TOOLBAR && y,
+        [j, O] = (0, d.US)(x ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
+        E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
+        N = i.useCallback(() => {
+            E && O(m.L.TAKE_ACTION), n === t.id ? (_(), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'close' })) : (b(t.id), p.default.track(f.rMx.CHAT_WALLPAPER_TOOLBAR_ENTRY_POINT_CLICKED, { action: 'open' }));
+        }, [n, t.id, _, b, E, O]);
+    return x
+        ? (0, r.jsx)(h.JO, {
+              onClick: N,
+              tooltip: g.NW.string(g.t.GixvUl),
               icon: o.XBm,
               iconSize: 20,
-              'aria-label': m.NW.string(m.t.GixvUl),
-              showBadge: j,
+              'aria-label': g.NW.string(g.t.GixvUl),
+              showBadge: E,
               selected: n === t.id
           })
         : null;
