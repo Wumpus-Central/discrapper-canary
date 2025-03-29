@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(192379),
     i = n(410030),
     o = n(540059),
-    a = n(614185),
+    a = n(598062),
     s = n(359135),
     l = n(4242),
     c = n(231338);
@@ -32,37 +32,43 @@ function h(e) {
 }
 function m(e, t, n, s, l) {
     let c = (0, i.ZP)(),
-        [u, d] = (0, r.useState)({}),
-        f = (0, o.Q3)('useNameplateStyle'),
-        _ = (0, a.C7)('useNameplateStyle');
+        u = (0, o.Q3)('useNameplateStyle'),
+        d = (0, a.C7)('useNameplateStyle'),
+        f = (0, r.useMemo)(
+            () =>
+                null == t
+                    ? null
+                    : g({
+                          palette: t.palette,
+                          theme: c,
+                          hover: n,
+                          selected: s,
+                          placement: l,
+                          isVisualRefreshEnabled: u,
+                          defaultPaletteOpacity: d
+                      }),
+            [t, n, s, c, l, u, d]
+        ),
+        [_, p] = (0, r.useState)(null != f ? { background: f } : {});
     return (
         (0, r.useEffect)(() => {
-            if (null == e) return;
-            let r = g({
-                palette: e.palette,
-                theme: c,
-                hover: t,
-                selected: n,
-                placement: l,
-                isVisualRefreshEnabled: f,
-                defaultPaletteOpacity: _
-            });
-            if (null == s) {
-                d({ background: r });
+            if (null == f) return;
+            if (null == e || null == e.current) {
+                p({ background: f });
                 return;
             }
-            let i = new ResizeObserver((e) => {
+            let t = new ResizeObserver((e) => {
                 let t = e[0].contentRect.width,
                     n = 0.8 * t,
-                    i = 1.1 * t;
-                d({
-                    background: r,
-                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(i, 'px)')
+                    r = 1.1 * t;
+                p({
+                    background: f,
+                    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, .2) '.concat(n, 'px, rgba(0, 0, 0, 1) ').concat(r, 'px)')
                 });
             });
-            return i.observe(s), () => i.disconnect();
-        }, [e, t, n, c, s, l, f, _]),
-        u
+            return t.observe(e.current), () => t.disconnect();
+        }, [e, f]),
+        _
     );
 }
 function g(e) {
@@ -71,7 +77,7 @@ function g(e) {
     let h = n === c.BR.LIGHT ? t.lightBackground : t.darkBackground,
         m = r || i;
     if (o === s.i.ACCOUNT) return n === c.BR.LIGHT ? 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)') : 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(_, ' 100%)');
-    if (o === s.i.SHOP_PREVIEW) return 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)');
+    if (o === s.i.PREVIEW) return 'linear-gradient(90deg, '.concat(h).concat(u, ' 0%, ').concat(h).concat(f, ' 100%)');
     let g = a && o === s.i.CHANNEL ? 'var(--bg-overlay-selected, var(--background-mod-subtle))' : 'var(--background-modifier-selected)',
         E = r ? 'var(--background-modifier-hover)' : i ? g : ''.concat(h, '00'),
         b = ''.concat(h).concat(m ? (n !== c.BR.LIGHT ? p : f) : d);

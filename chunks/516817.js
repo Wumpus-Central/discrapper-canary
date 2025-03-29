@@ -6,40 +6,44 @@ var r = n(200651),
     s = n(442837),
     l = n(70097),
     c = n(19780),
-    u = n(829030),
+    u = n(881474),
     d = n(168352),
     f = n(379839),
     _ = n(359135),
     p = n(873841);
 function h(e) {
     let { nameplate: t, hovered: n, selected: o, content: l, placement: d } = e,
-        h = (0, f.p)(t, n, o, l, d),
+        h = (0, f.p)(l, t, n, o, d),
         g = (0, u.C)(n, o),
         E = (0, s.e7)([c.Z], () => c.Z.getChannelId()),
-        [b, v] = (0, i.useState)(t),
-        [y, O] = (0, i.useState)(!1),
-        [I, S] = (0, i.useState)(!1),
-        { fadeIn: T, noFade: A } = (0, u.X)(l, I, d);
-    (0, i.useEffect)(() => {
-        null == b || null != t || y ? null != t && (v(t), O(!1)) : O(!0);
-    }, [t, b, y]);
-    let N = (0, i.useCallback)(() => {
-            y && (v(null), S(!1), O(!1));
-        }, [y]),
-        C = null != t ? t : b;
-    return null == C
+        [b, v] = i.useState(t),
+        [y, O] = i.useState(!0),
+        I = null != t;
+    i.useLayoutEffect(
+        () => () => {
+            O(!1);
+        },
+        [I]
+    ),
+        i.useEffect(() => {
+            null != t && v(t);
+        }, [t]);
+    let S = null != t ? t : b;
+    return null == S
         ? null
         : (0, r.jsx)('div', {
-              onAnimationEnd: N,
+              onAnimationEnd: () => {
+                  I || v(null);
+              },
               className: a()(p.container, {
                   [p.rtcOpened]: d === _.i.ACCOUNT && null != E,
-                  [p.fadeOut]: y,
-                  [p.fadeIn]: T,
-                  [p.noFade]: A
+                  [p.fadeOut]: !y && !I,
+                  [p.noFade]: y,
+                  [p.fadeIn]: !y && I
               }),
-              style: I ? { background: h.background } : void 0,
+              style: { background: h.background },
               children: (0, r.jsx)(m, {
-                  nameplate: C,
+                  nameplate: S,
                   className: a()(p.img, {
                       [p.hover]: n,
                       [p.selected]: o,
@@ -48,33 +52,31 @@ function h(e) {
                   }),
                   style: { maskImage: h.maskImage },
                   animate: g,
-                  loop: !0 === g && !0 === n,
-                  onLoad: () => S(!0)
+                  loop: !0 === g && !0 === n
               })
           });
 }
 function m(e) {
-    let { nameplate: t, className: n, style: o, animate: a, loop: s, onLoad: c } = e,
-        u = (0, i.useRef)(null);
+    let { nameplate: t, className: n, style: o, animate: a, loop: s } = e,
+        c = i.useRef(null);
     i.useEffect(() => {
-        null != u.current && (a || s ? u.current.play() : u.current.pause());
+        null != c.current && (a || s ? c.current.play() : c.current.pause());
     }, [a, s]);
-    let f = (0, d._)(t, a);
-    return (null == f ? void 0 : f.endsWith('.png')) || t.preview
+    let { defaultAsset: u, webmAsset: f, staticAsset: _ } = (0, d._)(t, a);
+    return (null == u ? void 0 : u.endsWith('.png')) || t.preview
         ? (0, r.jsx)('img', {
-              src: f,
+              src: u,
               className: n,
               style: o,
-              alt: t.imgAlt,
-              onLoad: c
+              alt: t.imgAlt
           })
         : (0, r.jsx)('div', {
               className: p.videoContainer,
               style: o,
               children: (0, r.jsx)(l.Z, {
-                  onLoadedData: c,
                   src: f,
-                  ref: u,
+                  poster: _,
+                  ref: c,
                   playsInline: !0,
                   loop: s,
                   controls: !1,
