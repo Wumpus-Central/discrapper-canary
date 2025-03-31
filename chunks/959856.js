@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(773603), n(411104), n(47120), n(600040);
+n.d(t, { Z: () => N }), n(773603), n(411104), n(47120), n(600040);
 var r = n(512722),
     i = n.n(r),
     o = n(264344),
@@ -34,8 +34,8 @@ function T(e, t, n) {
         e
     );
 }
-let N = new s.Yd('MediaEngineWebRTC');
-class A extends l.Z {
+let A = new s.Yd('MediaEngineWebRTC');
+class N extends l.Z {
     destroy() {
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(f.aB.Destroy), this.removeAllListeners();
     }
@@ -43,7 +43,7 @@ class A extends l.Z {
         this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
     }
     static supported() {
-        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (N.info('WebRTC is not supported on', a().name, a().version), !1));
+        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(250678), !0) : (A.info('WebRTC is not supported on', a().name, a().version), !1));
     }
     supported() {
         return !0;
@@ -236,7 +236,6 @@ class A extends l.Z {
     createReplayConnection(e, t) {
         throw Error('Connection replay is not supported.');
     }
-    setUseDirectVideo(e) {}
     setOnVideoContainerResized(e) {}
     setMaxSyncDelayOverride(e) {}
     rankRtcRegions(e) {

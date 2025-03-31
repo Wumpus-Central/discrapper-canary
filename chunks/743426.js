@@ -131,8 +131,6 @@ class O extends a.Z {
                 return (0, d.eJ)(h.eR.SIMULCAST) && (0, d.eJ)(h.eR.SIMULCAST_BUGFIX);
             case h.AN.RTC_REGION_RANKING:
                 return (0, d.eJ)(h.eR.RTC_REGION_RANKING);
-            case h.AN.DIRECT_VIDEO:
-                return (0, d.eJ)(h.eR.DIRECT_VIDEO) && null != window.createDiscordStream;
             case h.AN.ELECTRON_VIDEO:
                 return (0, d.eJ)(h.eR.ELECTRON_VIDEO);
             case h.AN.MEDIAPIPE:
@@ -493,9 +491,6 @@ class O extends a.Z {
               (0, d.p8)(h.uJ.HIGH),
               this.emit(s.aB.Connection, n),
               n);
-    }
-    setUseDirectVideo(e) {
-        _.Z.useDirectVideo = e;
     }
     setOnVideoContainerResized(e) {
         _.Z.onContainerResized = e;

@@ -123,7 +123,6 @@ class c extends r.Z {
     createReplayConnection(e, t) {
         throw Error('Connection replay is not supported.');
     }
-    setUseDirectVideo(e) {}
     setOnVideoContainerResized(e) {}
     setMaxSyncDelayOverride(e) {}
     rankRtcRegions(e) {
