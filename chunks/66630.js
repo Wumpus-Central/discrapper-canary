@@ -16,11 +16,11 @@ var r = n(200651),
     j = n(720449),
     x = n(684269),
     v = n(429467),
-    g = n(676035),
-    S = n(926563),
+    S = n(676035),
+    g = n(926563),
     _ = n(875425),
-    y = n(981631),
-    O = n(185923),
+    O = n(981631),
+    y = n(185923),
     C = n(388032),
     N = n(32533);
 function I(e) {
@@ -66,36 +66,37 @@ function P(e, t) {
         e
     );
 }
+let w = [_.HO.ADD_STATUS, _.HO.WHATS_ON_YOUR_MIND];
 function E(e) {
     var t, n;
-    let { transitionState: l, onClose: E, sourceAnalyticsContext: k, sourceAnalyticsLocations: w, prompt: T = null } = e,
-        D = (0, b.p)({ location: 'CustomStatusModalWithPreview' }),
-        B = (0, a.e7)([f.default], () => {
+    let { transitionState: l, onClose: E, sourceAnalyticsContext: k, sourceAnalyticsLocations: T, prompt: D = null } = e,
+        B = (0, b.p)({ location: 'CustomStatusModalWithPreview' }),
+        Z = (0, a.e7)([f.default], () => {
             var e;
             return null !== (e = f.default.getCurrentUser()) && void 0 !== e ? e : null;
         }),
-        Z = (0, g.a)(),
-        [A, z] = i.useState(null !== (t = null == Z ? void 0 : Z.state) && void 0 !== t ? t : ''),
-        [M, W] = i.useState(null !== (n = null == Z ? void 0 : Z.emoji) && void 0 !== n ? n : null),
-        [L, R] = i.useState((0, x.Z)()),
-        U = i.useRef(null),
+        A = (0, S.a)(),
+        [z, M] = i.useState(null !== (t = null == A ? void 0 : A.state) && void 0 !== t ? t : ''),
+        [W, R] = i.useState(null !== (n = null == A ? void 0 : A.emoji) && void 0 !== n ? n : null),
+        [U, L] = i.useState((0, x.Z)()),
         H = i.useRef(null),
-        [F, Y] = i.useState(null != T ? T : null),
-        K = A.length > 0 || null != M,
-        q = D && null != F ? F.label() : C.NW.string(C.t['xod36+']);
+        F = i.useRef(null),
+        [Y, K] = i.useState(null != D ? D : null),
+        q = z.length > 0 || null != W,
+        G = B && null != Y ? Y.label() : C.NW.string(C.t['xod36+']);
     i.useEffect(() => {
-        h.default.track(y.rMx.OPEN_MODAL, {
+        h.default.track(O.rMx.OPEN_MODAL, {
             type: d.Z.CUSTOM_STATUS_MODAL,
-            location_stack: w
+            location_stack: T
         });
-    }, [w]),
+    }, [T]),
         (0, c.ZP)(() => {
             var e, t;
-            null === (e = U.current) || void 0 === e || e.focus(), null === (t = U.current) || void 0 === t || t.setSelection(A.length, A.length);
+            null === (e = H.current) || void 0 === e || e.focus(), null === (t = H.current) || void 0 === t || t.setSelection(z.length, z.length);
         });
-    let G = (e) => {
+    let V = (e) => {
             null != e &&
-                W(
+                R(
                     null != e.id
                         ? {
                               id: e.id,
@@ -109,28 +110,28 @@ function E(e) {
                           }
                 );
         },
-        V = () => {
+        X = () => {
             (0, j.Z)({
-                text: A,
-                emojiInfo: M,
-                clearAfter: L,
+                text: z,
+                emojiInfo: W,
+                clearAfter: U,
                 analyticsContext: k,
-                prompt: F
+                prompt: Y
             }),
                 E();
         },
-        X = () =>
-            null == M
+        $ = () =>
+            null == W
                 ? null
                 : () =>
                       (0, r.jsx)(u.Z, {
                           className: N.emoji,
-                          emojiId: M.id,
-                          emojiName: M.name,
-                          animated: !!M.animated
+                          emojiId: W.id,
+                          emojiName: W.name,
+                          animated: !!W.animated
                       }),
-        $ = D ? C.NW.string(C.t.rp0aho) : C.NW.string(C.t.UcdRn5),
-        Q = 'custom-status-placeholder-text';
+        Q = B ? C.NW.string(C.t.rp0aho) : C.NW.string(C.t.UcdRn5),
+        J = 'custom-status-placeholder-text';
     return (0, r.jsxs)(s.Y0X, {
         transitionState: l,
         children: [
@@ -153,21 +154,21 @@ function E(e) {
             }),
             (0, r.jsxs)(s.hzk, {
                 children: [
-                    null != B &&
+                    null != Z &&
                         (0, r.jsx)('div', {
                             className: N.profilePreview,
-                            children: (0, r.jsx)(S.Z, {
-                                user: B,
-                                previewText: A,
-                                previewEmoji: M,
-                                placeHolderText: q,
+                            children: (0, r.jsx)(g.Z, {
+                                user: Z,
+                                previewText: z,
+                                previewEmoji: W,
+                                placeHolderText: G,
                                 transitionState: l
                             })
                         }),
                     (0, r.jsxs)(s.hjN, {
                         className: N.formGroup,
                         titleClassName: N.customStatusInputTitle,
-                        title: $,
+                        title: Q,
                         children: [
                             (0, r.jsxs)('div', {
                                 className: N.inputContainer,
@@ -175,15 +176,15 @@ function E(e) {
                                     (0, r.jsx)('div', {
                                         className: N.emojiButtonContainer,
                                         children: (0, r.jsx)(s.yRy, {
-                                            targetElementRef: H,
+                                            targetElementRef: F,
                                             renderPopout: (e) => {
                                                 let { closePopout: t } = e;
                                                 return (0, r.jsx)(m.Z, {
                                                     closePopout: t,
                                                     onSelectEmoji: (e, n) => {
-                                                        G(e), n && t();
+                                                        V(e), n && t();
                                                     },
-                                                    pickerIntention: O.Hz.STATUS,
+                                                    pickerIntention: y.Hz.STATUS,
                                                     onNavigateAway: E
                                                 });
                                             },
@@ -195,11 +196,11 @@ function E(e) {
                                                 return (0, r.jsx)(
                                                     p.Z,
                                                     P(I({}, e), {
-                                                        ref: H,
+                                                        ref: F,
                                                         active: n,
                                                         className: N.emojiButton,
                                                         tabIndex: 0,
-                                                        renderButtonContents: X()
+                                                        renderButtonContents: $()
                                                     })
                                                 );
                                             }
@@ -207,26 +208,26 @@ function E(e) {
                                     }),
                                     (0, r.jsx)(s.Kx8, {
                                         autosize: !0,
-                                        'aria-describedby': Q,
-                                        value: A,
+                                        'aria-describedby': J,
+                                        value: z,
                                         maxLength: _.s0,
                                         rows: 1,
                                         showRemainingCharacterCount: !1,
-                                        placeholder: null != q ? q : void 0,
+                                        placeholder: null != G ? G : void 0,
                                         onChange: (e) => {
-                                            z(e);
+                                            M(e);
                                         },
                                         onKeyDown: (e) => {
-                                            'Enter' === e.key && V();
+                                            'Enter' === e.key && X();
                                         },
                                         className: N.input,
-                                        inputRef: U
+                                        inputRef: H
                                     }),
                                     (0, r.jsx)(s.nn4, {
-                                        id: Q,
-                                        children: ''.concat(C.NW.string(C.t.EVV6ub), ': ').concat(q)
+                                        id: J,
+                                        children: ''.concat(C.NW.string(C.t.EVV6ub), ': ').concat(G)
                                     }),
-                                    (A.length > 0 || null != M) &&
+                                    (z.length > 0 || null != W) &&
                                         (0, r.jsx)('div', {
                                             className: N.clearButtonWrapper,
                                             children: (0, r.jsx)(s.zxk, {
@@ -240,7 +241,7 @@ function E(e) {
                                                 },
                                                 className: N.clearButton,
                                                 onClick: () => {
-                                                    z(''), W(null);
+                                                    M(''), R(null);
                                                 },
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.NONE,
@@ -253,22 +254,22 @@ function E(e) {
                                         })
                                 ]
                             }),
-                            D &&
+                            B &&
                                 (0, r.jsxs)(s.P3F, {
-                                    ignoreKeyPress: K,
-                                    'aria-disabled': K,
-                                    className: o()(N.needInspiration, K && N.needInspirationDisabled),
-                                    onClick: K
+                                    ignoreKeyPress: q,
+                                    'aria-disabled': q,
+                                    className: o()(N.needInspiration, q && N.needInspirationDisabled),
+                                    onClick: q
                                         ? void 0
                                         : () => {
-                                              let e = (0, v.Z)(null == F ? void 0 : F.value);
-                                              h.default.track(y.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
-                                                  previous_prompt_type: null == F ? void 0 : F.value,
+                                              let e = (0, v.Z)((null == Y ? void 0 : Y.value) != null ? new Set([Y.value, ...w]) : void 0);
+                                              h.default.track(O.rMx.CUSTOM_STATUS_RANDOMIZER_CLICKED, {
+                                                  previous_prompt_type: null == Y ? void 0 : Y.value,
                                                   new_prompt_type: null == e ? void 0 : e.value,
-                                                  location_stack: w
+                                                  location_stack: T
                                               }),
-                                                  z(''),
-                                                  Y(e),
+                                                  M(''),
+                                                  K(e),
                                                   null != e && s.uvj.announce(e.label());
                                           },
                                     children: [
@@ -291,7 +292,7 @@ function E(e) {
                             className: N.clearAfterSelectContainer,
                             children: (0, r.jsx)(s.q4e, {
                                 maxVisibleItems: _.Q9.length,
-                                value: L,
+                                value: U,
                                 options: _.Q9.map((e) =>
                                     P(I({}, e), {
                                         key: e.value,
@@ -299,7 +300,7 @@ function E(e) {
                                         label: e.label()
                                     })
                                 ),
-                                onChange: R,
+                                onChange: L,
                                 look: s.qQH.CUSTOM,
                                 popoutWidth: 200,
                                 popoutPosition: 'right'
@@ -309,7 +310,7 @@ function E(e) {
                             type: 'submit',
                             size: s.zxk.Sizes.MEDIUM,
                             color: s.zxk.Colors.BRAND,
-                            onClick: V,
+                            onClick: X,
                             children: C.NW.string(C.t.R3BPHx)
                         })
                     ]
