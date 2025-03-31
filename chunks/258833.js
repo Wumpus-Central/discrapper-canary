@@ -63,11 +63,14 @@ class S extends r.Z {
                 writable: !0,
                 value: new Set()
             }),
+            y(this, 'actions', {
+                GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
+                GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
+            }),
             y(this, '_handleRing', (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
-                    r = s.Z.getChannel(n),
-                    i = null != n && (null == r ? void 0 : r.guild_id) == null && f.ZP.countVoiceStatesForChannel(n) >= 2;
-                null == n || i || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? O.stop() : O.loop();
+                    r = null != n && f.ZP.countVoiceStatesForChannel(n) >= 2;
+                null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? O.stop() : O.loop();
             }),
             y(this, 'handleSoundpackUpdate', () => {
                 O.stop(), (O = (0, i.uk)('call_calling', o.Z.getSoundpack()));
@@ -78,6 +81,20 @@ class S extends r.Z {
                     r = null !== (t = null === (e = s.Z.getChannel(n)) || void 0 === e ? void 0 : e.guild_id) && void 0 !== t ? t : null,
                     i = a.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
                 this._handleRing(i || E(this, I).size > 0, r);
+            }),
+            y(this, 'handleGuildRingStart', (e) => {
+                let { ringing: t, guildId: n } = e;
+                t.forEach((e) => {
+                    E(this, I).add(e);
+                }),
+                    this._handleRing(E(this, I).size > 0, n);
+            }),
+            y(this, 'handleGuildRingStop', (e) => {
+                let { ringing: t, guildId: n } = e;
+                t.forEach((e) => {
+                    E(this, I).delete(e);
+                }),
+                    this._handleRing(E(this, I).size > 0, n);
             }),
             y(this, 'handleChannelRTCStoreChange', () => {
                 let e = c.Z.getVoiceChannelId(),
