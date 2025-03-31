@@ -100,7 +100,10 @@ let j = {
                     (0, h.i0)(n, (t) => {
                         W((r) => E(_({}, r), { [e]: (0, h.I6)(t, n) }));
                     });
-            };
+            },
+            U = i.useCallback(() => {
+                D([]), W(j);
+            }, []);
         i.useEffect(() => {
             let e = t.config.effects;
             e.length > 0 && D([...e].map((e) => ((e.src = (0, h.$j)(e.base64)), e)));
@@ -113,16 +116,16 @@ let j = {
                         null != n && ((n.src = (0, h.$j)(n.base64)), W((e) => E(_({}, e), { [t]: n })));
                     });
             }, [t.config.staticFrames]);
-        let U = {
+        let V = {
                 effect: t,
                 upsertConfig: s
             },
-            V = i.useRef(U);
+            G = i.useRef(V);
         return (i.useEffect(() => {
-            V.current = U;
+            G.current = V;
         }),
         i.useEffect(() => {
-            let { effect: e, upsertConfig: t } = V.current;
+            let { effect: e, upsertConfig: t } = G.current;
             t({
                 id: e.id,
                 name: Z,
@@ -261,7 +264,7 @@ let j = {
                                               (0, r.jsxs)(c.zxk, {
                                                   color: c.Ttl.GREEN,
                                                   children: [
-                                                      'Upload static_frame.png',
+                                                      'Upload static.png',
                                                       (0, r.jsx)(d.Z, {
                                                           ref: T,
                                                           onChange: (e) => M(h.wT.STATIC, e),
@@ -282,53 +285,51 @@ let j = {
                                               })
                                           ]
                                       }),
-                                      (0, r.jsxs)('div', {
+                                      (0, r.jsx)('div', {
                                           className: N.bottomControls,
-                                          children: [
-                                              (0, r.jsx)(c.zxk, {
-                                                  color: c.Ttl.RED,
-                                                  look: c.iLD.LINK,
-                                                  onClick: () => {
-                                                      D([]);
-                                                  },
-                                                  children: 'Clear Assets'
-                                              }),
-                                              (0, r.jsx)(c.zxk, {
+                                          children: (0, r.jsx)('div', {
+                                              className: N.row,
+                                              children: (0, r.jsx)(c.zxk, {
                                                   color: c.Ttl.BRAND,
                                                   onClick: () => {
                                                       v(!1), setTimeout(() => v(!0), 100);
                                                   },
                                                   children: 'Replay Animation'
-                                              }),
-                                              (0, r.jsx)(c.zxk, {
-                                                  color: c.Ttl.BRAND,
-                                                  onClick: () => {
-                                                      (0, g.JG)((0, h.HV)(R, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
-                                                  },
-                                                  children: 'Export'
                                               })
-                                          ]
+                                          })
                                       }),
                                       (0, r.jsxs)('div', {
                                           className: a()(N.bottomControls, N.shareSection),
                                           children: [
-                                              (0, r.jsxs)(c.Text, {
+                                              (0, r.jsx)(c.Text, {
                                                   variant: 'text-sm/semibold',
+                                                  children: 'Export both configs for the drop package'
+                                              }),
+                                              (0, r.jsx)(c.Text, {
+                                                  variant: 'text-sm/bold',
+                                                  color: 'text-danger',
+                                                  children: 'WARNING: The full config is really big :0'
+                                              }),
+                                              (0, r.jsxs)('div', {
+                                                  className: N.row,
                                                   children: [
-                                                      'Export the config for sharing in this tool.',
-                                                      ' ',
-                                                      (0, r.jsx)('span', {
-                                                          className: N.warningText,
-                                                          children: "WARNING: it's really big"
+                                                      (0, r.jsx)(c.zxk, {
+                                                          size: c.PhG.SMALL,
+                                                          color: c.Ttl.BRAND,
+                                                          onClick: () => {
+                                                              (0, g.JG)((0, h.HV)(R, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                          },
+                                                          children: 'Export Timing Config'
+                                                      }),
+                                                      (0, r.jsx)(c.zxk, {
+                                                          size: c.PhG.SMALL,
+                                                          color: c.Ttl.BRAND,
+                                                          onClick: () => {
+                                                              (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                          },
+                                                          children: 'Export Full Config'
                                                       })
                                                   ]
-                                              }),
-                                              (0, r.jsx)(c.zxk, {
-                                                  color: c.Ttl.GREEN,
-                                                  onClick: () => {
-                                                      (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
-                                                  },
-                                                  children: 'Share'
                                               })
                                           ]
                                       }),
@@ -403,182 +404,206 @@ let j = {
                                       })
                                   ]
                               }),
-                              (0, r.jsx)('div', {
+                              (0, r.jsxs)('div', {
                                   className: a()(N.grid, N.layers),
-                                  children: R.map((e, t) => {
-                                      var n;
-                                      return (0, r.jsxs)(
-                                          'div',
-                                          {
-                                              className: N.layerForm,
-                                              children: [
-                                                  (0, r.jsx)(c.X6q, {
-                                                      variant: 'heading-md/bold',
-                                                      children: e.name
-                                                  }),
-                                                  (0, r.jsx)('img', {
-                                                      src: e.base64,
-                                                      className: N.layerPreview,
-                                                      alt: ''
-                                                  }),
-                                                  (null !== (n = e.randomizedSources) && void 0 !== n ? n : []).map((e, t) =>
-                                                      (0, r.jsx)(
-                                                          'img',
-                                                          {
-                                                              src: e.src,
-                                                              className: N.layerPreview,
-                                                              alt: ''
-                                                          },
-                                                          t
-                                                      )
-                                                  ),
-                                                  (0, r.jsxs)('div', {
-                                                      className: a()(N.grid, N.section),
-                                                      children: [
-                                                          (0, r.jsxs)('div', {
-                                                              className: N.col,
-                                                              children: [
-                                                                  (0, r.jsx)(c.Text, {
-                                                                      variant: 'text-md/bold',
-                                                                      children: 'Start'
-                                                                  }),
-                                                                  (0, r.jsx)('input', {
-                                                                      type: 'number',
-                                                                      value: e.start,
-                                                                      className: N.input,
-                                                                      onChange: (e) => {
-                                                                          D((n) => {
-                                                                              let r = [...n],
-                                                                                  i = n[t];
-                                                                              return (i.start = +e.target.value), (r[t] = i), r;
-                                                                          });
-                                                                      },
-                                                                      contentEditable: !0
-                                                                  })
-                                                              ]
-                                                          }),
-                                                          (0, r.jsxs)('div', {
-                                                              className: N.col,
-                                                              children: [
-                                                                  (0, r.jsx)(c.Text, {
-                                                                      variant: 'text-md/bold',
-                                                                      children: 'Duration'
-                                                                  }),
-                                                                  (0, r.jsx)('input', {
-                                                                      type: 'number',
-                                                                      value: e.duration,
-                                                                      className: N.input,
-                                                                      onChange: (e) => {
-                                                                          D((n) => {
-                                                                              let r = [...n],
-                                                                                  i = n[t];
-                                                                              return (i.duration = +e.target.value), (r[t] = i), r;
-                                                                          });
-                                                                      },
-                                                                      contentEditable: !0
-                                                                  })
-                                                              ]
-                                                          })
-                                                      ]
-                                                  }),
-                                                  (0, r.jsxs)('div', {
-                                                      className: a()(N.grid, N.section),
-                                                      children: [
-                                                          (0, r.jsxs)('div', {
-                                                              className: N.col,
-                                                              children: [
-                                                                  (0, r.jsx)(c.Text, {
-                                                                      variant: 'text-md/bold',
-                                                                      children: 'Loop'
-                                                                  }),
-                                                                  (0, r.jsx)('input', {
-                                                                      type: 'checkbox',
-                                                                      checked: e.loop,
-                                                                      className: N.checkBox,
-                                                                      onChange: (e) => {
-                                                                          D((n) => {
-                                                                              let r = [...n],
-                                                                                  i = n[t];
-                                                                              return (i.loop = e.target.checked), (r[t] = i), r;
-                                                                          });
-                                                                      }
-                                                                  })
-                                                              ]
-                                                          }),
-                                                          (0, r.jsx)('div', {
-                                                              className: N.col,
-                                                              children:
-                                                                  e.loop &&
+                                  children: [
+                                      (0, r.jsx)('div', {
+                                          className: N.dangerControls,
+                                          children: (0, r.jsx)(c.zxk, {
+                                              color: c.Ttl.RED,
+                                              look: c.iLD.OUTLINED,
+                                              onClick: U,
+                                              children: 'Clear Assets'
+                                          })
+                                      }),
+                                      R.map((e, t) =>
+                                          (0, r.jsxs)(
+                                              'div',
+                                              {
+                                                  className: N.layerForm,
+                                                  children: [
+                                                      (0, r.jsxs)('div', {
+                                                          className: N.layerPreviewContainer,
+                                                          children: [
+                                                              (0, r.jsx)(c.X6q, {
+                                                                  variant: 'heading-md/bold',
+                                                                  children: e.name
+                                                              }),
+                                                              (0, r.jsx)('img', {
+                                                                  src: e.src,
+                                                                  className: N.layerPreview,
+                                                                  alt: ''
+                                                              }),
+                                                              null != e.randomizedSources &&
                                                                   (0, r.jsxs)(r.Fragment, {
                                                                       children: [
-                                                                          (0, r.jsx)(c.Text, {
-                                                                              variant: 'text-md/bold',
-                                                                              children: 'Loop Delay'
+                                                                          (0, r.jsx)(c.X6q, {
+                                                                              variant: 'heading-sm/bold',
+                                                                              children: 'Alternatives'
                                                                           }),
-                                                                          (0, r.jsx)('input', {
-                                                                              type: 'number',
-                                                                              value: e.loopDelay,
-                                                                              className: N.input,
-                                                                              onChange: (e) => {
-                                                                                  D((n) => {
-                                                                                      let r = [...n],
-                                                                                          i = n[t];
-                                                                                      return (i.loopDelay = +e.target.value), (r[t] = i), r;
-                                                                                  });
-                                                                              },
-                                                                              contentEditable: !0
-                                                                          })
+                                                                          e.randomizedSources.map((e, t) =>
+                                                                              (0, r.jsx)(
+                                                                                  'img',
+                                                                                  {
+                                                                                      src: e.src,
+                                                                                      className: N.layerPreview,
+                                                                                      alt: ''
+                                                                                  },
+                                                                                  t
+                                                                              )
+                                                                          )
                                                                       ]
                                                                   })
-                                                          })
-                                                      ]
-                                                  }),
-                                                  (0, r.jsxs)('div', {
-                                                      className: a()(N.row, N.end),
-                                                      children: [
-                                                          (0, r.jsxs)('div', {
-                                                              className: N.uploadButton,
-                                                              children: [
-                                                                  (0, r.jsx)(c.Text, {
-                                                                      variant: 'text-sm/normal',
-                                                                      color: 'always-white',
-                                                                      children: 'Add Alternative'
-                                                                  }),
-                                                                  (0, r.jsx)(d.Z, {
-                                                                      ref: T,
-                                                                      onChange: (e) => {
-                                                                          let n = e.currentTarget.files;
-                                                                          if (null == n) return;
-                                                                          let r = n[0],
-                                                                              i = new FileReader();
-                                                                          (i.onload = (e) => {
+                                                          ]
+                                                      }),
+                                                      (0, r.jsxs)('div', {
+                                                          className: a()(N.grid, N.section),
+                                                          children: [
+                                                              (0, r.jsxs)('div', {
+                                                                  className: N.col,
+                                                                  children: [
+                                                                      (0, r.jsx)(c.Text, {
+                                                                          variant: 'text-md/bold',
+                                                                          children: 'Start'
+                                                                      }),
+                                                                      (0, r.jsx)('input', {
+                                                                          type: 'number',
+                                                                          value: e.start,
+                                                                          className: N.input,
+                                                                          onChange: (e) => {
                                                                               D((n) => {
-                                                                                  if (null == e.target || 'string' != typeof e.target.result) return n;
-                                                                                  let r = [...n];
-                                                                                  return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), r;
+                                                                                  let r = [...n],
+                                                                                      i = n[t];
+                                                                                  return (i.start = +e.target.value), (r[t] = i), r;
                                                                               });
-                                                                          }),
-                                                                              i.readAsDataURL(r);
-                                                                      },
-                                                                      multiple: !1
-                                                                  })
-                                                              ]
-                                                          }),
-                                                          (0, r.jsx)(c.zxk, {
-                                                              color: c.Ttl.RED,
-                                                              look: c.iLD.LINK,
-                                                              onClick: () => {
-                                                                  D((t) => t.filter((t) => t !== e));
-                                                              },
-                                                              children: 'Remove Layer'
-                                                          })
-                                                      ]
-                                                  })
-                                              ]
-                                          },
-                                          t
-                                      );
-                                  })
+                                                                          },
+                                                                          contentEditable: !0
+                                                                      })
+                                                                  ]
+                                                              }),
+                                                              (0, r.jsxs)('div', {
+                                                                  className: N.col,
+                                                                  children: [
+                                                                      (0, r.jsx)(c.Text, {
+                                                                          variant: 'text-md/bold',
+                                                                          children: 'Duration'
+                                                                      }),
+                                                                      (0, r.jsx)('input', {
+                                                                          type: 'number',
+                                                                          value: e.duration,
+                                                                          className: N.input,
+                                                                          onChange: (e) => {
+                                                                              D((n) => {
+                                                                                  let r = [...n],
+                                                                                      i = n[t];
+                                                                                  return (i.duration = +e.target.value), (r[t] = i), r;
+                                                                              });
+                                                                          },
+                                                                          contentEditable: !0
+                                                                      })
+                                                                  ]
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, r.jsxs)('div', {
+                                                          className: a()(N.grid, N.section),
+                                                          children: [
+                                                              (0, r.jsxs)('div', {
+                                                                  className: N.col,
+                                                                  children: [
+                                                                      (0, r.jsx)(c.Text, {
+                                                                          variant: 'text-md/bold',
+                                                                          children: 'Loop'
+                                                                      }),
+                                                                      (0, r.jsx)('input', {
+                                                                          type: 'checkbox',
+                                                                          checked: e.loop,
+                                                                          className: N.checkBox,
+                                                                          onChange: (e) => {
+                                                                              D((n) => {
+                                                                                  let r = [...n],
+                                                                                      i = n[t];
+                                                                                  return (i.loop = e.target.checked), (r[t] = i), r;
+                                                                              });
+                                                                          }
+                                                                      })
+                                                                  ]
+                                                              }),
+                                                              (0, r.jsx)('div', {
+                                                                  className: N.col,
+                                                                  children:
+                                                                      e.loop &&
+                                                                      (0, r.jsxs)(r.Fragment, {
+                                                                          children: [
+                                                                              (0, r.jsx)(c.Text, {
+                                                                                  variant: 'text-md/bold',
+                                                                                  children: 'Loop Delay'
+                                                                              }),
+                                                                              (0, r.jsx)('input', {
+                                                                                  type: 'number',
+                                                                                  value: e.loopDelay,
+                                                                                  className: N.input,
+                                                                                  onChange: (e) => {
+                                                                                      D((n) => {
+                                                                                          let r = [...n],
+                                                                                              i = n[t];
+                                                                                          return (i.loopDelay = +e.target.value), (r[t] = i), r;
+                                                                                      });
+                                                                                  },
+                                                                                  contentEditable: !0
+                                                                              })
+                                                                          ]
+                                                                      })
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, r.jsxs)('div', {
+                                                          className: a()(N.row, N.end),
+                                                          children: [
+                                                              (0, r.jsxs)('div', {
+                                                                  className: N.uploadButton,
+                                                                  children: [
+                                                                      (0, r.jsx)(c.Text, {
+                                                                          variant: 'text-sm/normal',
+                                                                          color: 'always-white',
+                                                                          children: 'Add Alternative'
+                                                                      }),
+                                                                      (0, r.jsx)(d.Z, {
+                                                                          ref: T,
+                                                                          onChange: (e) => {
+                                                                              let n = e.currentTarget.files;
+                                                                              if (null == n) return;
+                                                                              let r = n[0],
+                                                                                  i = new FileReader();
+                                                                              (i.onload = (e) => {
+                                                                                  D((n) => {
+                                                                                      if (null == e.target || 'string' != typeof e.target.result) return n;
+                                                                                      let r = [...n];
+                                                                                      return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), r;
+                                                                                  });
+                                                                              }),
+                                                                                  i.readAsDataURL(r);
+                                                                          },
+                                                                          multiple: !1
+                                                                      })
+                                                                  ]
+                                                              }),
+                                                              (0, r.jsx)(c.zxk, {
+                                                                  color: c.Ttl.RED,
+                                                                  look: c.iLD.LINK,
+                                                                  onClick: () => {
+                                                                      D((t) => t.filter((t) => t !== e));
+                                                                  },
+                                                                  children: 'Remove Layer'
+                                                              })
+                                                          ]
+                                                      })
+                                                  ]
+                                              },
+                                              t
+                                          )
+                                      )
+                                  ]
                               })
                           ]
                       })
