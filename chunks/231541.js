@@ -7,9 +7,10 @@ var r = n(594174),
     s = n(557017),
     c = n(474936);
 let u = (e) => {
-        var t;
-        let n = new Date();
-        return (n.setDate(n.getDate() - 10), (null === (t = e.metadata) || void 0 === t ? void 0 : t.ended_at) != null) ? new Date(e.metadata.ended_at) >= n : e.currentPeriodEnd >= n;
+        let t = new Date();
+        t.setDate(t.getDate() - 10);
+        let n = e.endedAt;
+        return null != n && n >= t;
     },
     d = (e) => {
         var t;

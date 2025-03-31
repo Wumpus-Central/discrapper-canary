@@ -9,9 +9,10 @@ var r = s(192379),
     u = s(557017),
     d = s(474936);
 let p = (e) => {
-        var t;
-        let s = new Date();
-        return (s.setDate(s.getDate() - 10), (null === (t = e.metadata) || void 0 === t ? void 0 : t.ended_at) != null) ? new Date(e.metadata.ended_at) >= s : e.currentPeriodEnd >= s;
+        let t = new Date();
+        t.setDate(t.getDate() - 10);
+        let s = e.endedAt;
+        return null != s && s >= t;
     },
     f = (e) => {
         var t;
