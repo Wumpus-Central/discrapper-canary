@@ -1,24 +1,26 @@
-e.d(a, { default: () => c });
-var r = e(200651);
-e(192379);
-var s = e(481060),
-    n = e(239091),
-    i = e(13245),
-    o = e(145597),
-    l = e(388032);
-function c(t) {
-    let { onSelect: a, layoutId: e = o.qU, version: c } = t;
-    return (0, r.jsx)(s.v2r, {
-        navId: 'overlay',
-        onClose: n.Zy,
-        'aria-label': l.NW.string(l.t.tPfVWl),
-        onSelect: a,
-        children: (0, r.jsx)(s.sNh, {
-            id: 'reset',
-            label: l.NW.string(l.t['hW+EMj']),
-            action: (t) => {
-                t.stopPropagation(), i.Z.resetDefaultLayout(e, c);
-            }
-        })
-    });
-}
+e.exports = {
+    container: 'container_f2d0d9',
+    table: 'table_f2d0d9',
+    rows: 'rows_f2d0d9',
+    headerRow: 'headerRow_f2d0d9',
+    headerPlayer: 'headerPlayer_f2d0d9',
+    headerRank: 'headerRank_f2d0d9',
+    headerValue: 'headerValue_f2d0d9',
+    userRow: 'userRow_f2d0d9',
+    copyLinkContainer: 'copyLinkContainer_f2d0d9',
+    copySpinner: 'copySpinner_f2d0d9',
+    copyLink: 'copyLink_f2d0d9',
+    liveIcon: 'liveIcon_f2d0d9',
+    rankChangeIndicator: 'rankChangeIndicator_f2d0d9',
+    userRank: 'userRank_f2d0d9',
+    userPlayer: 'userPlayer_f2d0d9',
+    userWinnerImage: 'userWinnerImage_f2d0d9',
+    joinLeaderboardCTAContainer: 'joinLeaderboardCTAContainer_f2d0d9',
+    joinLeaderboardCTAWinnerImage: 'joinLeaderboardCTAWinnerImage_f2d0d9',
+    rankChangeBadge: 'rankChangeBadge_f2d0d9',
+    emptyTitleContainer: 'emptyTitleContainer_f2d0d9',
+    emptyTitle: 'emptyTitle_f2d0d9',
+    emptyWinnerImage: 'emptyWinnerImage_f2d0d9',
+    badgesContainer: 'badgesContainer_f2d0d9',
+    tooltip: 'tooltip_f2d0d9'
+};

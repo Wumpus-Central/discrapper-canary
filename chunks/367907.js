@@ -1,11 +1,11 @@
 n.d(t, {
-    $H: () => Z,
+    $H: () => F,
     AB: () => U,
     JS: () => k,
     ZP: () => H,
-    hH: () => L,
-    kO: () => F,
-    oG: () => V,
+    hH: () => x,
+    kO: () => V,
+    oG: () => Z,
     v_: () => j,
     yw: () => B
 });
@@ -19,21 +19,21 @@ var r = n(392711),
     u = n(592125),
     d = n(984933),
     f = n(650774),
-    p = n(271383),
-    _ = n(430824),
+    _ = n(271383),
+    p = n(430824),
     h = n(131951),
     m = n(496675),
     g = n(158776),
     E = n(19780),
-    v = n(306680),
-    b = n(944486),
+    b = n(306680),
+    v = n(944486),
     y = n(914010),
     O = n(9156),
-    S = n(594174),
-    I = n(979651),
+    I = n(594174),
+    S = n(979651),
     T = n(626135),
-    N = n(70956),
-    A = n(700785),
+    A = n(70956),
+    N = n(700785),
     C = n(546416),
     R = n(981631),
     P = n(176505);
@@ -66,35 +66,35 @@ function D(e) {
     }
     return e;
 }
-function x(e) {
+function L(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
-function L(e) {
+function x(e) {
     var t;
     if (null == e) return null;
-    let n = _.Z.getGuild(e);
+    let n = p.Z.getGuild(e);
     if (null == n) return null;
-    let r = _.Z.getRoles(n.id),
+    let r = p.Z.getRoles(n.id),
         i = c.default.getId(),
-        o = p.ZP.getMember(e, i),
+        o = _.ZP.getMember(e, i),
         a = d.ZP.getChannels(e),
         s = a[d.sH].length,
         l = a[d.Zb].length,
-        u = I.Z.getVoiceStates(e);
+        u = S.Z.getVoiceStates(e);
     return {
         guild_id: n.id,
         guild_size_total: f.Z.getMemberCount(e),
         guild_num_channels: s + l,
         guild_num_text_channels: s,
         guild_num_voice_channels: l,
-        guild_num_roles: x(r),
+        guild_num_roles: L(r),
         guild_member_num_roles: null != o ? o.roles.length : 0,
-        guild_member_perms: String(null !== (t = m.Z.getGuildPermissions(n)) && void 0 !== t ? t : A.Hn),
+        guild_member_perms: String(null !== (t = m.Z.getGuildPermissions(n)) && void 0 !== t ? t : N.Hn),
         guild_is_vip: n.hasFeature(R.oNc.VIP_REGIONS),
         is_member: null != o,
-        num_voice_channels_active: x(u)
+        num_voice_channels_active: L(u)
     };
 }
 function M(e, t) {
@@ -125,7 +125,7 @@ function j(e) {
         channel_id: e.id,
         channel_type: e.type,
         channel_size_total: e.isPrivate() ? e.recipients.length : 0,
-        channel_member_perms: String(null != r && null !== (t = m.Z.getChannelPermissions(e)) && void 0 !== t ? t : A.Hn),
+        channel_member_perms: String(null != r && null !== (t = m.Z.getChannelPermissions(e)) && void 0 !== t ? t : N.Hn),
         channel_hidden: n
     };
 }
@@ -142,7 +142,7 @@ function U(e) {
             guild_id: t.getGuildId(),
             media_session_id: r
         },
-        F(t.getGuildId(), t.id, n),
+        V(t.getGuildId(), t.id, n),
         (0, C.V)()
     );
 }
@@ -156,19 +156,20 @@ function B(e) {
     if (T.default.isThrottled(e)) return;
     let r = !('location' in t) || t.location !== R.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         i = 'guild_id' in t ? t.guild_id : r ? y.Z.getGuildId() : null,
-        o = 'channel_id' in t ? t.channel_id : r ? b.Z.getChannelId(i) : null,
+        o = 'channel_id' in t ? t.channel_id : r ? v.Z.getChannelId(i) : null,
         a = u.Z.getChannel(o),
-        s = D({}, t, L(G(a, i)), null != i && null != o && (0, P.AB)(o) ? M(i, o) : j(a));
+        s = D({}, t, x(G(a, i)), null != i && null != o && (0, P.AB)(o) ? M(i, o) : j(a));
     T.default.track(e, s, { flush: n });
 }
-function Z(e) {
+function F(e) {
+    if ((0, P.AB)(e)) return { channel_static_route: e };
     let t = u.Z.getChannel(e);
     if (null == t) return { channel_id: e };
-    let n = _.Z.getGuild(t.guild_id);
+    let n = p.Z.getGuild(t.guild_id);
     if (null == n) {
         let n = !1;
         if (t.isDM()) {
-            let e = S.default.getUser(t.recipients[0]);
+            let e = I.default.getUser(t.recipients[0]);
             null != e && (n = e.bot);
         }
         return {
@@ -176,7 +177,7 @@ function Z(e) {
             is_app_dm: n
         };
     }
-    let r = v.ZP.getSnapshot(e, 10 * N.Z.Millis.SECOND);
+    let r = b.ZP.getSnapshot(e, 10 * A.Z.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: r.unread,
@@ -198,14 +199,14 @@ function Z(e) {
         is_app_dm: !1
     };
 }
-function F(e, t, n) {
+function V(e, t, n) {
     let r = {
         voice_state_count: 0,
         video_stream_count: 0,
         video_enabled: n
     };
     return (
-        i()(I.Z.getVoiceStates(e))
+        i()(S.Z.getVoiceStates(e))
             .filter((e) => e.channelId === t)
             .filter((e) => e.userId !== c.default.getId())
             .forEach((e) => {
@@ -214,10 +215,10 @@ function F(e, t, n) {
         r
     );
 }
-function V(e, t) {
+function Z(e, t) {
     let n = { custom_status_count: 0 };
     return (
-        i()(I.Z.getVoiceStates(e)).forEach((e) => {
+        i()(S.Z.getVoiceStates(e)).forEach((e) => {
             e.channelId === t && null != g.Z.findActivity(e.userId, (e) => e.type === R.IIU.CUSTOM_STATUS) && n.custom_status_count++;
         }),
         n
@@ -225,5 +226,5 @@ function V(e, t) {
 }
 let H = {
     trackWithMetadata: B,
-    getVoiceStateMetadata: F
+    getVoiceStateMetadata: V
 };

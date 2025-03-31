@@ -1,6 +1,5 @@
 var r = {
-    premiumButtonNitroWheel: 'premiumButtonNitroWheel_b72efa',
-    premiumButtonInner: 'premiumButtonInner_b72efa',
-    premiumButton: 'premiumButton_b72efa'
+    guildIconImage: 'guildIconImage__79e3e',
+    acronym: 'acronym__79e3e'
 };
 e.exports = r;

@@ -1,2 +1,6 @@
-n.d(t, { Z: () => r });
-let r = 'https://cdn.discordapp.com/assets/content/40910f226cf80d19a731aae6618c1893c3a383abcffb58a85561e0036f846af2.png';
+e.exports = {
+    activatePage: 'activatePage__8cc35',
+    content: 'content__8cc35',
+    artwork: 'artwork__8cc35',
+    logo: 'logo__8cc35'
+};

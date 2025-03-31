@@ -1,2 +1,1 @@
-var r = { wrapper: 'wrapper__4106a' };
-e.exports = r;
+e.exports = { lineClamp: 'lineClamp__0b48b' };
