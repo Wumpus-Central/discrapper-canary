@@ -1,16 +1,16 @@
 n.d(t, {
     C4: () => x,
-    Dd: () => I,
+    Dd: () => S,
     E5: () => h,
     Fm: () => eu,
-    JY: () => ew,
+    JY: () => eD,
     Me: () => en,
     Ns: () => p,
-    O_: () => m,
+    O_: () => g,
     Pi: () => E,
-    Q2: () => v,
+    Q2: () => b,
     Q4: () => f,
-    Us: () => b,
+    Us: () => v,
     X: () => u,
     Xr: () => _,
     aV: () => eP,
@@ -21,15 +21,15 @@ n.d(t, {
     f9: () => P,
     hg: () => y,
     l1: () => O,
-    n9: () => S,
+    n9: () => I,
     nI: () => d,
     o8: () => C,
-    os: () => w,
+    os: () => D,
     p5: () => U,
     sf: () => ei,
     tA: () => el,
     v_: () => Q,
-    yX: () => eN
+    yX: () => eA
 }),
     n(611060),
     n(47120),
@@ -72,19 +72,19 @@ var r = n(230367),
     h = (function (e) {
         return (e[(e.OFF = 0)] = 'OFF'), (e[(e.ON_FOR_LARGE_GUILDS = 1)] = 'ON_FOR_LARGE_GUILDS'), (e[(e.ON = 2)] = 'ON'), e;
     })({}),
-    g = (function (e) {
+    m = (function (e) {
         return (e[(e.OFF_FOR_NEW_GUILDS = 0)] = 'OFF_FOR_NEW_GUILDS'), (e[(e.ON_FOR_NEW_GUILDS = 1)] = 'ON_FOR_NEW_GUILDS'), e;
     })({}),
-    m = (function (e) {
+    g = (function (e) {
         return (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = 0)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = 1)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME = 2)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME'), (e[(e.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE = 3)] = 'SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE'), e;
     })({}),
     E = (function (e) {
-        return (e[(e.UNSET_UI_DENSITY = 0)] = 'UNSET_UI_DENSITY'), (e[(e.COMPACT = 1)] = 'COMPACT'), (e[(e.COZY = 2)] = 'COZY'), (e[(e.RESPONSIVE = 3)] = 'RESPONSIVE'), e;
-    })({}),
-    v = (function (e) {
-        return (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.DARK = 1)] = 'DARK'), (e[(e.LIGHT = 2)] = 'LIGHT'), (e[(e.DARKER = 3)] = 'DARKER'), (e[(e.MIDNIGHT = 4)] = 'MIDNIGHT'), e;
+        return (e[(e.UNSET_UI_DENSITY = 0)] = 'UNSET_UI_DENSITY'), (e[(e.COMPACT = 1)] = 'COMPACT'), (e[(e.COZY = 2)] = 'COZY'), (e[(e.RESPONSIVE = 3)] = 'RESPONSIVE'), (e[(e.DEFAULT = 4)] = 'DEFAULT'), e;
     })({}),
     b = (function (e) {
+        return (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.DARK = 1)] = 'DARK'), (e[(e.LIGHT = 2)] = 'LIGHT'), (e[(e.DARKER = 3)] = 'DARKER'), (e[(e.MIDNIGHT = 4)] = 'MIDNIGHT'), e;
+    })({}),
+    v = (function (e) {
         return (e[(e.MINT_APPLE = 0)] = 'MINT_APPLE'), (e[(e.CITRUS_SHERBERT = 1)] = 'CITRUS_SHERBERT'), (e[(e.RETRO_RAINCLOUD = 2)] = 'RETRO_RAINCLOUD'), (e[(e.HANAMI = 3)] = 'HANAMI'), (e[(e.SUNRISE = 4)] = 'SUNRISE'), (e[(e.COTTON_CANDY = 5)] = 'COTTON_CANDY'), (e[(e.LOFI_VIBES = 6)] = 'LOFI_VIBES'), (e[(e.DESERT_KHAKI = 7)] = 'DESERT_KHAKI'), (e[(e.SUNSET = 8)] = 'SUNSET'), (e[(e.CHROMA_GLOW = 9)] = 'CHROMA_GLOW'), (e[(e.FOREST = 10)] = 'FOREST'), (e[(e.CRIMSON_MOON = 11)] = 'CRIMSON_MOON'), (e[(e.MIDNIGHT_BLURPLE = 12)] = 'MIDNIGHT_BLURPLE'), (e[(e.MARS = 13)] = 'MARS'), (e[(e.DUSK = 14)] = 'DUSK'), (e[(e.UNDER_THE_SEA = 15)] = 'UNDER_THE_SEA'), (e[(e.EASTER_EGG = 16)] = 'EASTER_EGG'), (e[(e.RETRO_STORM = 17)] = 'RETRO_STORM'), (e[(e.NEON_NIGHTS = 18)] = 'NEON_NIGHTS'), (e[(e.SEPIA = 19)] = 'SEPIA'), (e[(e.STRAWBERRY_LEMONADE = 20)] = 'STRAWBERRY_LEMONADE'), (e[(e.AURORA = 21)] = 'AURORA'), (e[(e.BLURPLE_TWILIGHT = 22)] = 'BLURPLE_TWILIGHT'), e;
     })({}),
     y = (function (e) {
@@ -93,19 +93,19 @@ var r = n(230367),
     O = (function (e) {
         return (e[(e.LAUNCH_PAD_DISABLED = 0)] = 'LAUNCH_PAD_DISABLED'), (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = 'LAUNCH_PAD_GESTURE_FULL_SCREEN'), (e[(e.LAUNCH_PAD_GESTURE_RIGHT_EDGE = 2)] = 'LAUNCH_PAD_GESTURE_RIGHT_EDGE'), (e[(e.LAUNCH_PAD_PULL_TAB = 3)] = 'LAUNCH_PAD_PULL_TAB'), e;
     })({}),
-    S = (function (e) {
+    I = (function (e) {
         return (e[(e.SWIPE_RIGHT_TO_LEFT_UNSET = 0)] = 'SWIPE_RIGHT_TO_LEFT_UNSET'), (e[(e.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS = 1)] = 'SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS'), (e[(e.SWIPE_RIGHT_TO_LEFT_REPLY = 2)] = 'SWIPE_RIGHT_TO_LEFT_REPLY'), e;
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (e[(e.UNSET_FAVORITE_CHANNEL_TYPE = 0)] = 'UNSET_FAVORITE_CHANNEL_TYPE'), (e[(e.REFERENCE_ORIGINAL = 1)] = 'REFERENCE_ORIGINAL'), (e[(e.CATEGORY = 2)] = 'CATEGORY'), e;
     })({}),
     T = (function (e) {
         return (e[(e.UNSET_SAFETY_SETTINGS_PRESET = 0)] = 'UNSET_SAFETY_SETTINGS_PRESET'), (e[(e.BALANCED = 1)] = 'BALANCED'), (e[(e.STRICT = 2)] = 'STRICT'), (e[(e.RELAXED = 3)] = 'RELAXED'), (e[(e.CUSTOM = 4)] = 'CUSTOM'), e;
     })({}),
-    N = (function (e) {
+    A = (function (e) {
         return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ALL = 1)] = 'ALL'), (e[(e.BOOKMARKS = 2)] = 'BOOKMARKS'), (e[(e.REMINDERS = 3)] = 'REMINDERS'), e;
     })({});
-class A extends a.C {
+class N extends a.C {
     create(e) {
         let t = {};
         return (
@@ -130,7 +130,7 @@ class A extends a.C {
                     o.inbox = P.internalBinaryRead(e, e.uint32(), n, o.inbox);
                     break;
                 case 3:
-                    o.guilds = w.internalBinaryRead(e, e.uint32(), n, o.guilds);
+                    o.guilds = D.internalBinaryRead(e, e.uint32(), n, o.guilds);
                     break;
                 case 4:
                     o.userContent = H.internalBinaryRead(e, e.uint32(), n, o.userContent);
@@ -157,13 +157,13 @@ class A extends a.C {
                     o.status = ef.internalBinaryRead(e, e.uint32(), n, o.status);
                     break;
                 case 12:
-                    o.localization = eg.internalBinaryRead(e, e.uint32(), n, o.localization);
+                    o.localization = em.internalBinaryRead(e, e.uint32(), n, o.localization);
                     break;
                 case 13:
-                    o.appearance = eb.internalBinaryRead(e, e.uint32(), n, o.appearance);
+                    o.appearance = ev.internalBinaryRead(e, e.uint32(), n, o.appearance);
                     break;
                 case 14:
-                    o.guildFolders = eI.internalBinaryRead(e, e.uint32(), n, o.guildFolders);
+                    o.guildFolders = eS.internalBinaryRead(e, e.uint32(), n, o.guildFolders);
                     break;
                 case 15:
                     o.favorites = eC.internalBinaryRead(e, e.uint32(), n, o.favorites);
@@ -175,7 +175,7 @@ class A extends a.C {
                     o.communities = ek.internalBinaryRead(e, e.uint32(), n, o.communities);
                     break;
                 case 18:
-                    o.broadcast = eF.internalBinaryRead(e, e.uint32(), n, o.broadcast);
+                    o.broadcast = eV.internalBinaryRead(e, e.uint32(), n, o.broadcast);
                     break;
                 case 19:
                     o.clips = eH.internalBinaryRead(e, e.uint32(), n, o.clips);
@@ -192,6 +192,9 @@ class A extends a.C {
                 case 23:
                     o.applications = eJ.internalBinaryRead(e, e.uint32(), n, o.applications);
                     break;
+                case 24:
+                    o.ads = e4.internalBinaryRead(e, e.uint32(), n, o.ads);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -202,7 +205,7 @@ class A extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && w.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && H.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && Q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && en.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ea.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && el.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && ef.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && eg.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && eb.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eI.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && eC.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && ex.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && ek.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eF.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eH.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && ez.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && eY.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && eQ.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && eJ.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join();
+        e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && D.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && H.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && Q.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && en.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ei.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ea.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && el.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eu.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && ef.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && em.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && ev.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && eS.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && eC.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && ex.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && ek.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eV.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eH.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && ez.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && eY.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && eQ.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && eJ.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.ads && e4.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -224,7 +227,7 @@ class A extends a.C {
                 no: 3,
                 name: 'guilds',
                 kind: 'message',
-                T: () => w
+                T: () => D
             },
             {
                 no: 4,
@@ -278,19 +281,19 @@ class A extends a.C {
                 no: 12,
                 name: 'localization',
                 kind: 'message',
-                T: () => eg
+                T: () => em
             },
             {
                 no: 13,
                 name: 'appearance',
                 kind: 'message',
-                T: () => eb
+                T: () => ev
             },
             {
                 no: 14,
                 name: 'guild_folders',
                 kind: 'message',
-                T: () => eI
+                T: () => eS
             },
             {
                 no: 15,
@@ -314,7 +317,7 @@ class A extends a.C {
                 no: 18,
                 name: 'broadcast',
                 kind: 'message',
-                T: () => eF
+                T: () => eV
             },
             {
                 no: 19,
@@ -345,11 +348,17 @@ class A extends a.C {
                 name: 'applications',
                 kind: 'message',
                 T: () => eJ
+            },
+            {
+                no: 24,
+                name: 'ads',
+                kind: 'message',
+                T: () => e4
             }
         ]);
     }
 }
-let C = new A();
+let C = new N();
 class R extends a.C {
     create(e) {
         let t = {
@@ -409,7 +418,7 @@ class R extends a.C {
     }
 }
 let P = new R();
-class D extends a.C {
+class w extends a.C {
     create(e) {
         let t = { guilds: {} };
         return (
@@ -476,7 +485,7 @@ class D extends a.C {
         ]);
     }
 }
-let w = new D();
+let D = new w();
 class L extends a.C {
     create(e) {
         let t = {
@@ -821,7 +830,7 @@ class G extends a.C {
     }
 }
 let B = new G();
-class V extends a.C {
+class F extends a.C {
     create(e) {
         let t = {
             lastDismissedVersion: 0,
@@ -879,7 +888,7 @@ class V extends a.C {
         ]);
     }
 }
-let F = new V();
+let V = new F();
 class Z extends a.C {
     create(e) {
         let t = {
@@ -944,16 +953,16 @@ class Z extends a.C {
                     o = t.int32();
                     break;
                 case 2:
-                    a = F.internalBinaryRead(t, t.uint32(), n);
+                    a = V.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.UserContentSettings.recurring_dismissible_content_states');
             }
         }
-        e[null != o ? o : 0] = null != a ? a : F.create();
+        e[null != o ? o : 0] = null != a ? a : V.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of (e.dismissedContents.length && t.tag(1, r.TD.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && s.Gm.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && l.E.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && l.E.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && l.E.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.lastReceivedChangelogId && t.tag(6, r.TD.Bit64).fixed64(e.lastReceivedChangelogId), Object.keys(e.recurringDismissibleContentStates))) t.tag(7, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), F.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n), t.join().join();
+        for (let i of (e.dismissedContents.length && t.tag(1, r.TD.LengthDelimited).bytes(e.dismissedContents), e.lastDismissedOutboundPromotionStartDate && s.Gm.internalBinaryWrite(e.lastDismissedOutboundPromotionStartDate, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.premiumTier0ModalDismissedAt && l.E.internalBinaryWrite(e.premiumTier0ModalDismissedAt, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.guildOnboardingUpsellDismissedAt && l.E.internalBinaryWrite(e.guildOnboardingUpsellDismissedAt, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.safetyUserSentimentNoticeDismissedAt && l.E.internalBinaryWrite(e.safetyUserSentimentNoticeDismissedAt, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), '0' !== e.lastReceivedChangelogId && t.tag(6, r.TD.Bit64).fixed64(e.lastReceivedChangelogId), Object.keys(e.recurringDismissibleContentStates))) t.tag(7, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)), t.tag(2, r.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n), t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -1002,7 +1011,7 @@ class Z extends a.C {
                 K: 5,
                 V: {
                     kind: 'message',
-                    T: () => F
+                    T: () => V
                 }
             }
         ]);
@@ -2098,7 +2107,7 @@ class eo extends a.C {
                 no: 25,
                 name: 'guilds_leaderboard_opt_out_default',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.GuildsLeaderboardOptOutDefault', g]
+                T: () => ['discord_protos.discord_users.v1.GuildsLeaderboardOptOutDefault', m]
             },
             {
                 no: 26,
@@ -2116,7 +2125,7 @@ class eo extends a.C {
                 no: 28,
                 name: 'slayer_sdk_receive_dms_in_game',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.SlayerSDKReceiveInGameDMs', m]
+                T: () => ['discord_protos.discord_users.v1.SlayerSDKReceiveInGameDMs', g]
             }
         ]);
     }
@@ -2449,8 +2458,8 @@ class eh extends a.C {
         ]);
     }
 }
-let eg = new eh();
-class em extends a.C {
+let em = new eh();
+class eg extends a.C {
     create(e) {
         let t = {};
         return (
@@ -2505,8 +2514,8 @@ class em extends a.C {
         ]);
     }
 }
-let eE = new em();
-class ev extends a.C {
+let eE = new eg();
+class eb extends a.C {
     create(e) {
         let t = {
             theme: 0,
@@ -2588,7 +2597,7 @@ class ev extends a.C {
                 no: 1,
                 name: 'theme',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.Theme', v]
+                T: () => ['discord_protos.discord_users.v1.Theme', b]
             },
             {
                 no: 2,
@@ -2654,12 +2663,12 @@ class ev extends a.C {
                 no: 13,
                 name: 'swipe_right_to_left_mode',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.SwipeRightToLeftMode', S]
+                T: () => ['discord_protos.discord_users.v1.SwipeRightToLeftMode', I]
             }
         ]);
     }
 }
-let eb = new ev();
+let ev = new eb();
 class ey extends a.C {
     create(e) {
         let t = {};
@@ -2704,7 +2713,7 @@ class ey extends a.C {
     }
 }
 let eO = new ey();
-class eS extends a.C {
+class eI extends a.C {
     create(e) {
         let t = {
             folders: [],
@@ -2726,7 +2735,7 @@ class eS extends a.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    o.folders.push(eN.internalBinaryRead(e, e.uint32(), n));
+                    o.folders.push(eA.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     if (i === r.TD.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) o.guildPositions.push(e.fixed64().toString());
@@ -2742,7 +2751,7 @@ class eS extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        for (let i = 0; i < e.folders.length; i++) eN.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.folders.length; i++) eA.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         if (e.guildPositions.length) {
             t.tag(2, r.TD.LengthDelimited).fork();
             for (let n = 0; n < e.guildPositions.length; n++) t.fixed64(e.guildPositions[n]);
@@ -2758,7 +2767,7 @@ class eS extends a.C {
                 name: 'folders',
                 kind: 'message',
                 repeat: 1,
-                T: () => eN
+                T: () => eA
             },
             {
                 no: 2,
@@ -2770,7 +2779,7 @@ class eS extends a.C {
         ]);
     }
 }
-let eI = new eS();
+let eS = new eI();
 class eT extends a.C {
     create(e) {
         let t = { guildIds: [] };
@@ -2851,8 +2860,8 @@ class eT extends a.C {
         ]);
     }
 }
-let eN = new eT();
-class eA extends a.C {
+let eA = new eT();
+class eN extends a.C {
     create(e) {
         let t = {
             favoriteChannels: {},
@@ -2935,7 +2944,7 @@ class eA extends a.C {
         ]);
     }
 }
-let eC = new eA();
+let eC = new eN();
 class eR extends a.C {
     create(e) {
         let t = {
@@ -2997,7 +3006,7 @@ class eR extends a.C {
                 no: 2,
                 name: 'type',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.FavoriteChannelType', I]
+                T: () => ['discord_protos.discord_users.v1.FavoriteChannelType', S]
             },
             {
                 no: 3,
@@ -3015,7 +3024,7 @@ class eR extends a.C {
     }
 }
 let eP = new eR();
-class eD extends a.C {
+class ew extends a.C {
     create(e) {
         let t = {
             muted: !1,
@@ -3093,7 +3102,7 @@ class eD extends a.C {
         ]);
     }
 }
-let ew = new eD();
+let eD = new ew();
 class eL extends a.C {
     create(e) {
         let t = {
@@ -3142,13 +3151,13 @@ class eL extends a.C {
                     o = t.fixed64().toString();
                     break;
                 case 2:
-                    a = ew.internalBinaryRead(t, t.uint32(), n);
+                    a = eD.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.AudioSettings.user');
             }
         }
-        e[null != o ? o : '0'] = null != a ? a : ew.create();
+        e[null != o ? o : '0'] = null != a ? a : eD.create();
     }
     binaryReadMap2(e, t, n) {
         let r = t.uint32(),
@@ -3162,17 +3171,17 @@ class eL extends a.C {
                     o = t.fixed64().toString();
                     break;
                 case 2:
-                    a = ew.internalBinaryRead(t, t.uint32(), n);
+                    a = eD.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error('unknown map entry field for field discord_protos.discord_users.v1.AudioSettings.stream');
             }
         }
-        e[null != o ? o : '0'] = null != a ? a : ew.create();
+        e[null != o ? o : '0'] = null != a ? a : eD.create();
     }
     internalBinaryWrite(e, t, n) {
-        for (let i of Object.keys(e.user)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), ew.internalBinaryWrite(e.user[i], t, n), t.join().join();
-        for (let i of Object.keys(e.stream)) t.tag(2, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), ew.internalBinaryWrite(e.stream[i], t, n), t.join().join();
+        for (let i of Object.keys(e.user)) t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eD.internalBinaryWrite(e.user[i], t, n), t.join().join();
+        for (let i of Object.keys(e.stream)) t.tag(2, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i), t.tag(2, r.TD.LengthDelimited).fork(), eD.internalBinaryWrite(e.stream[i], t, n), t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3185,7 +3194,7 @@ class eL extends a.C {
                 K: 6,
                 V: {
                     kind: 'message',
-                    T: () => ew
+                    T: () => eD
                 }
             },
             {
@@ -3195,7 +3204,7 @@ class eL extends a.C {
                 K: 6,
                 V: {
                     kind: 'message',
-                    T: () => ew
+                    T: () => eD
                 }
             }
         ]);
@@ -3349,7 +3358,7 @@ class eG extends a.C {
     }
 }
 let eB = new eG();
-class eV extends a.C {
+class eF extends a.C {
     create(e) {
         let t = {
             allowedGuildIds: [],
@@ -3439,7 +3448,7 @@ class eV extends a.C {
         ]);
     }
 }
-let eF = new eV();
+let eV = new eF();
 class eZ extends a.C {
     create(e) {
         let t = {};
@@ -3581,7 +3590,7 @@ class eK extends a.C {
                 no: 1,
                 name: 'current_tab',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ForLaterTab', N, 'FOR_LATER_TAB_']
+                T: () => ['discord_protos.discord_users.v1.ForLaterTab', A, 'FOR_LATER_TAB_']
             }
         ]);
     }
@@ -3787,3 +3796,47 @@ class e1 extends a.C {
     }
 }
 let e2 = new e1();
+class e3 extends a.C {
+    create(e) {
+        let t = { alwaysDeliver: !1 };
+        return (
+            globalThis.Object.defineProperty(t, o.C, {
+                enumerable: !1,
+                value: this
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, i] = e.tag();
+            if (1 === t) o.alwaysDeliver = e.bool();
+            else {
+                let a = n.readUnknownField;
+                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
+            }
+        }
+        return o;
+    }
+    internalBinaryWrite(e, t, n) {
+        !1 !== e.alwaysDeliver && t.tag(1, r.TD.Varint).bool(e.alwaysDeliver);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super('discord_protos.discord_users.v1.AdsSettings', [
+            {
+                no: 1,
+                name: 'always_deliver',
+                kind: 'scalar',
+                T: 8
+            }
+        ]);
+    }
+}
+let e4 = new e3();
