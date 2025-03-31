@@ -766,7 +766,11 @@ let A = Object.freeze({
         QUESTS_PREVIEW_STATUS: (t) => '/quests/'.concat(t, '/preview/status'),
         QUESTS_PREVIEW_DISMISSIBILITY: (t) => '/quests/'.concat(t, '/preview/dismissibility'),
         QUESTS_PREVIEW_COMPLETE: (t) => '/quests/'.concat(t, '/preview/complete'),
-        QUEST_FETCH_QUEST_TO_DELIVER: (t, e) => '/quests/decision?placement='.concat(t).concat(null != e ? '&client_heartbeat_session_id='.concat(e) : ''),
+        QUEST_FETCH_QUEST_TO_DELIVER: (t, e, a) =>
+            '/quests/decision?placement='
+                .concat(t)
+                .concat(null != e ? '&client_heartbeat_session_id='.concat(e) : '')
+                .concat(null != a ? '&client_ad_session_id='.concat(a) : ''),
         ATTACHMENTS_REFRESH_URLS: '/attachments/refresh-urls',
         GAME_INVITE: (t) => '/game-invite/@me/'.concat(t),
         GAME_INVITES: '/game-invite/@me',
