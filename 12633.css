@@ -27454,6 +27454,12 @@ body .headerAnimation_b54a5b {
     background-color: var(--background-primary)
 }
 
+.visual-refresh .headerContainer__2dea3 {
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    margin-top: -2px
+}
+
 .closeContainer__2dea3 {
     width: 24px;
     height: 24px;

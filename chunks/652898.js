@@ -4,11 +4,12 @@ var r = n(990547),
     o = n(44609),
     a = n(131704),
     s = n(314897),
-    l = n(626135),
-    c = n(573261),
-    u = n(264229),
-    d = n(245335),
-    f = n(981631);
+    l = n(430824),
+    c = n(626135),
+    u = n(573261),
+    d = n(264229),
+    f = n(245335),
+    _ = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -22,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,60 +51,61 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function E(e) {
     let t = null;
     if (null != e && null != e.channel) {
         let n = e.channel;
-        t = e.target_type === d.Iq.STREAM ? f.dAT.STREAM : e.target_type === d.Iq.EMBEDDED_APPLICATION ? f.dAT.APPLICATION : (0, a.bc)(n.type) ? f.dAT.GDM_INVITE : null == n || (0, a.hv)(n.type) ? f.dAT.FRIEND_INVITE : f.dAT.SERVER_INVITE;
+        t = e.target_type === f.Iq.STREAM ? _.dAT.STREAM : e.target_type === f.Iq.EMBEDDED_APPLICATION ? _.dAT.APPLICATION : (0, a.bc)(n.type) ? _.dAT.GDM_INVITE : null == n || (0, a.hv)(n.type) ? _.dAT.FRIEND_INVITE : _.dAT.SERVER_INVITE;
     }
     return t;
 }
-let E = new Map();
+let b = new Map();
 function v(e, t, n) {
-    if ((l.default.track(f.rMx.INVITE_OPENED, { invite_code: e }), E.has(e))) return E.get(e);
-    let a = (0, u.fU)(e),
-        d = m(_({}, n), {
+    if ((c.default.track(_.rMx.INVITE_OPENED, { invite_code: e }), b.has(e))) return b.get(e);
+    let a = (0, d.fU)(e),
+        f = g(h({}, n), {
             with_counts: !0,
             with_expiration: !0,
             guild_scheduled_event_id: a.guildScheduledEventId,
             with_permissions: (0, o.gY)({ location: 'resolveInvite' })
         }),
-        p = c.Z.get({
-            url: f.ANM.INVITE(a.baseCode),
-            query: d,
+        p = u.Z.get({
+            url: _.ANM.INVITE(a.baseCode),
+            query: f,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.INVITE_RESOLVE,
                 properties: (e) => {
-                    var r, o, l, c, u, d;
-                    let p = e.body,
-                        _ = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === f.evJ.USER_BANNED;
+                    var r, o, c, u, d, f, p;
+                    let h = e.body,
+                        m = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === _.evJ.USER_BANNED;
                     return (0, i.iG)({
                         resolved: e.ok,
-                        guild_id: null == p ? void 0 : null === (o = p.guild) || void 0 === o ? void 0 : o.id,
-                        channel_id: null == p ? void 0 : null === (l = p.channel) || void 0 === l ? void 0 : l.id,
-                        channel_type: null == p ? void 0 : null === (c = p.channel) || void 0 === c ? void 0 : c.type,
-                        inviter_id: null == p ? void 0 : null === (u = p.inviter) || void 0 === u ? void 0 : u.id,
+                        guild_id: null == h ? void 0 : null === (o = h.guild) || void 0 === o ? void 0 : o.id,
+                        channel_id: null == h ? void 0 : null === (c = h.channel) || void 0 === c ? void 0 : c.id,
+                        channel_type: null == h ? void 0 : null === (u = h.channel) || void 0 === u ? void 0 : u.type,
+                        inviter_id: null == h ? void 0 : null === (d = h.inviter) || void 0 === d ? void 0 : d.id,
                         code: a.baseCode,
                         input_value: null == n ? void 0 : n.inputValue,
                         location: t,
                         authenticated: s.default.isAuthenticated(),
-                        size_total: null == p ? void 0 : p.approximate_member_count,
-                        size_online: null == p ? void 0 : p.approximate_presence_count,
-                        destination_user_id: null == p ? void 0 : null === (d = p.target_user) || void 0 === d ? void 0 : d.id,
-                        invite_type: g(p),
-                        user_banned: _
+                        size_total: null == h ? void 0 : h.approximate_member_count,
+                        size_online: null == h ? void 0 : h.approximate_presence_count,
+                        destination_user_id: null == h ? void 0 : null === (f = h.target_user) || void 0 === f ? void 0 : f.id,
+                        invite_type: E(h),
+                        user_banned: m,
+                        user_is_member: null != l.Z.getGuild(null == h ? void 0 : null === (p = h.guild) || void 0 === p ? void 0 : p.id)
                     });
                 }
             },
@@ -112,39 +114,40 @@ function v(e, t, n) {
             .then(
                 (r) => {
                     let i = r.body;
-                    return (
-                        null != t &&
-                            l.default.track(
-                                f.rMx.INVITE_RESOLVED,
-                                {
-                                    resolved: !0,
-                                    guild_id: null != i.guild ? i.guild.id : null,
-                                    channel_id: null != i.channel ? i.channel.id : null,
-                                    channel_type: null != i.channel ? i.channel.type : null,
-                                    inviter_id: i.inviter ? i.inviter.id : null,
-                                    code: a.baseCode,
-                                    input_value: null == n ? void 0 : n.inputValue,
-                                    location: t,
-                                    authenticated: s.default.isAuthenticated(),
-                                    size_total: i.approximate_member_count,
-                                    size_online: i.approximate_presence_count,
-                                    destination_user_id: null != i.target_user ? i.target_user.id : null,
-                                    invite_type: g(i)
-                                },
-                                { flush: !0 }
-                            ),
-                        {
-                            invite: i,
-                            code: e
-                        }
-                    );
+                    if (null != t) {
+                        var o;
+                        c.default.track(
+                            _.rMx.INVITE_RESOLVED,
+                            {
+                                resolved: !0,
+                                guild_id: null != i.guild ? i.guild.id : null,
+                                channel_id: null != i.channel ? i.channel.id : null,
+                                channel_type: null != i.channel ? i.channel.type : null,
+                                inviter_id: i.inviter ? i.inviter.id : null,
+                                code: a.baseCode,
+                                input_value: null == n ? void 0 : n.inputValue,
+                                location: t,
+                                authenticated: s.default.isAuthenticated(),
+                                size_total: i.approximate_member_count,
+                                size_online: i.approximate_presence_count,
+                                destination_user_id: null != i.target_user ? i.target_user.id : null,
+                                invite_type: E(i),
+                                user_is_member: null != l.Z.getGuild(null == i ? void 0 : null === (o = i.guild) || void 0 === o ? void 0 : o.id)
+                            },
+                            { flush: !0 }
+                        );
+                    }
+                    return {
+                        invite: i,
+                        code: e
+                    };
                 },
                 (r) => {
-                    let i = null != r.body && r.body.code === f.evJ.USER_BANNED;
+                    let i = null != r.body && r.body.code === _.evJ.USER_BANNED;
                     if (null != t) {
-                        var o, c;
-                        l.default.track(
-                            f.rMx.INVITE_RESOLVED,
+                        var o, l;
+                        c.default.track(
+                            _.rMx.INVITE_RESOLVED,
                             {
                                 resolved: !1,
                                 code: a.baseCode,
@@ -153,7 +156,7 @@ function v(e, t, n) {
                                 authenticated: s.default.isAuthenticated(),
                                 user_banned: i,
                                 error_code: null === (o = r.body) || void 0 === o ? void 0 : o.code,
-                                error_message: null === (c = r.body) || void 0 === c ? void 0 : c.message
+                                error_message: null === (l = r.body) || void 0 === l ? void 0 : l.message
                             },
                             { flush: !0 }
                         );
@@ -166,7 +169,7 @@ function v(e, t, n) {
                 }
             )
             .finally(() => {
-                E.delete(e);
+                b.delete(e);
             });
-    return E.set(e, p), p;
+    return b.set(e, p), p;
 }

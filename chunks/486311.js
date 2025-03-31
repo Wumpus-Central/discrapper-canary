@@ -11,9 +11,9 @@ var r = n(200651),
     p = n(933104),
     h = n(332538),
     f = n(535396),
-    g = n(367123),
+    g = n(296260),
     m = n(388032),
-    b = n(796004);
+    b = n(277778);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -100,12 +100,16 @@ let y = {
                                 }),
                             background:
                                 (null == _ ? void 0 : _.popout) != null &&
-                                (0, r.jsx)(a.kci, {
-                                    className: b.lottie,
-                                    nextScene: I,
-                                    sceneSegments: y,
-                                    importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
-                                    onScenePlay: N
+                                (0, r.jsx)('div', {
+                                    className: b.lottieContainer,
+                                    children: (0, r.jsx)(a.kci, {
+                                        nextScene: I,
+                                        className: b.lottie,
+                                        sceneSegments: y,
+                                        importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
+                                        onScenePlay: N,
+                                        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+                                    })
                                 }),
                             text: (0, r.jsx)('span', {
                                 className: l()({ [b.textImportant]: (null == _ ? void 0 : _.showUnread) === !0 }),

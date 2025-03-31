@@ -1,4 +1,4 @@
-n.d(t, { k: () => v }), n(47120);
+n.d(t, { k: () => b }), n(47120);
 var r,
     i = n(200651),
     o = n(192379),
@@ -7,7 +7,7 @@ var r,
     l = n(442837),
     c = n(607070),
     u = n(451478),
-    d = n(752180);
+    d = n(573680);
 function f(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function h(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,15 +82,16 @@ function g(e, t) {
 }
 class E extends (r = o.PureComponent) {
     async componentDidMount() {
-        let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: o, useReducedMotion: a } = this.props,
-            [s, { default: l }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
+        let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: o, useReducedMotion: a, rendererSettings: s } = this.props,
+            [l, { default: c }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this.animationRef &&
-            ((this.animation = l.loadAnimation({
+            ((this.animation = c.loadAnimation({
                 container: this.animationRef,
                 renderer: 'svg',
                 loop: !0,
                 autoplay: !0,
-                animationData: s
+                animationData: l,
+                rendererSettings: s
             })),
             this.animation.addEventListener('loopComplete', this.handleLoopComplete),
             this.animation.addEventListener('complete', this.handleComplete),
@@ -155,14 +156,14 @@ f(E, 'defaultProps', {
     pauseWhileUnfocused: !0,
     pause: !1
 });
-let v = (e) => {
+let b = (e) => {
     var { componentRef: t, ignoreReducedMotion: n = !1 } = e,
         r = m(e, ['componentRef', 'ignoreReducedMotion']);
     let o = (0, l.e7)([u.Z], () => u.Z.isFocused()),
         a = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, i.jsx)(
         E,
-        h(p({}, r), {
+        h(_({}, r), {
             isWindowFocused: o,
             useReducedMotion: a && !n,
             ref: t
