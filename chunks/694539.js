@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(26686), n(653041);
+n.d(t, { Z: () => _ }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(26686), n(653041);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -7,47 +7,46 @@ var r = n(200651),
     o = n(442837),
     c = n(481060),
     d = n(53281),
-    u = n(281598),
-    m = n(921813),
-    g = n(594174),
-    p = n(572004),
-    h = n(451593),
-    f = n(477146),
-    x = n(329156),
+    u = n(921813),
+    m = n(594174),
+    g = n(572004),
+    p = n(451593),
+    h = n(477146),
+    f = n(329156),
     N = n(146181),
     b = n(346537),
-    _ = n(830318);
-let E = (e) => {
+    x = n(830318);
+let _ = (e) => {
     let { effect: t, back: n } = e,
-        { upsertConfig: s } = (0, h.E)(),
-        E = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        [j, C] = i.useState(!0),
+        { upsertConfig: s } = (0, p.E)(),
+        _ = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        [E, j] = i.useState(!0),
         O = i.useRef(null),
-        [v, S] = i.useState(!1),
-        [T, I] = i.useState(!1),
-        [y, A] = i.useState([]),
-        [P, R] = i.useState(t.name);
+        [C, S] = i.useState(!1),
+        [v, T] = i.useState(!1),
+        [I, y] = i.useState([]),
+        [A, P] = i.useState(t.name);
     i.useEffect(() => {
         let e = t.config.effects;
-        e.length > 0 && A([...e].map((e) => ((e.src = (0, u.$j)(e.base64)), e)));
+        e.length > 0 && y([...e].map((e) => ((e.src = (0, h.$j)(e.base64)), e)));
     }, [t]);
-    let D = {
+    let R = {
             effect: t,
             upsertConfig: s
         },
-        Z = i.useRef(D);
+        D = i.useRef(R);
     return (i.useEffect(() => {
-        Z.current = D;
+        D.current = R;
     }),
     i.useEffect(() => {
-        let { effect: e, upsertConfig: t } = Z.current;
+        let { effect: e, upsertConfig: t } = D.current;
         t({
             id: e.id,
-            name: P,
-            config: { effects: y }
+            name: A,
+            config: { effects: I }
         });
-    }, [y, P]),
-    null == E)
+    }, [I, A]),
+    null == _)
         ? (0, r.jsx)('div', {})
         : (0, r.jsxs)('div', {
               className: N.root,
@@ -66,19 +65,19 @@ let E = (e) => {
                               className: a()(N.col, N.preview),
                               children: [
                                   (0, r.jsx)('img', {
-                                      src: v ? b : _,
+                                      src: C ? b : x,
                                       alt: '',
                                       width: 450
                                   }),
-                                  j &&
-                                      (0, r.jsx)(x.Z, {
+                                  E &&
+                                      (0, r.jsx)(f.Z, {
                                           config: {
                                               type: l.Z.PROFILE_EFFECT,
                                               title: 'debug',
                                               description: 'debug',
                                               accessibilityLabel: 'debug',
                                               reducedMotionSrc: '',
-                                              effects: y,
+                                              effects: I,
                                               animationType: 0
                                           },
                                           profileEffectId: 'debug'
@@ -97,10 +96,10 @@ let E = (e) => {
                                           }),
                                           (0, r.jsx)('input', {
                                               type: 'text',
-                                              value: P,
+                                              value: A,
                                               className: N.input,
                                               onChange: (e) => {
-                                                  R(e.target.value);
+                                                  P(e.target.value);
                                               }
                                           })
                                       ]
@@ -117,10 +116,10 @@ let E = (e) => {
                                                   }),
                                                   (0, r.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: v,
+                                                      checked: C,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          S(!v);
+                                                          S(!C);
                                                       }
                                                   })
                                               ]
@@ -134,10 +133,10 @@ let E = (e) => {
                                                   }),
                                                   (0, r.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: T,
+                                                      checked: v,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          I(!T);
+                                                          T(!v);
                                                       }
                                                   })
                                               ]
@@ -163,8 +162,8 @@ let E = (e) => {
                                                               r = new FileReader();
                                                           (r.onload = async (e) => {
                                                               if (null == e.target || 'string' != typeof e.target.result) return;
-                                                              let t = await (0, f.X)(URL.createObjectURL(n), e.target.result, n, y.length);
-                                                              A((e) => [...e, t]);
+                                                              let t = await (0, h.Xv)(URL.createObjectURL(n), e.target.result, n, I.length);
+                                                              y((e) => [...e, t]);
                                                           }),
                                                               r.readAsDataURL(n);
                                                       },
@@ -185,21 +184,21 @@ let E = (e) => {
                                               color: c.Ttl.RED,
                                               look: c.iLD.LINK,
                                               onClick: () => {
-                                                  A([]);
+                                                  y([]);
                                               },
                                               children: 'Clear Assets'
                                           }),
                                           (0, r.jsx)(c.zxk, {
                                               color: c.Ttl.BRAND,
                                               onClick: () => {
-                                                  C(!1), setTimeout(() => C(!0), 100);
+                                                  j(!1), setTimeout(() => j(!0), 100);
                                               },
                                               children: 'Replay Animation'
                                           }),
                                           (0, r.jsx)(c.zxk, {
                                               color: c.Ttl.BRAND,
                                               onClick: () => {
-                                                  (0, p.JG)((0, f.H)(y, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)((0, h.HV)(I, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Export'
                                           })
@@ -222,13 +221,13 @@ let E = (e) => {
                                           (0, r.jsx)(c.zxk, {
                                               color: c.Ttl.GREEN,
                                               onClick: () => {
-                                                  (0, p.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Share'
                                           })
                                       ]
                                   }),
-                                  y.some((e) => {
+                                  I.some((e) => {
                                       var t;
                                       return (null !== (t = e.randomizedSources) && void 0 !== t ? t : []).length > 0;
                                   }) &&
@@ -246,25 +245,25 @@ let E = (e) => {
                                       }),
                                   (0, r.jsx)('div', {
                                       children:
-                                          T &&
+                                          v &&
                                           (0, r.jsxs)('div', {
                                               className: a()(N.userProfilePreview, N.preview),
                                               children: [
-                                                  (0, r.jsx)(m.Z, {
-                                                      user: E,
+                                                  (0, r.jsx)(u.Z, {
+                                                      user: _,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
                                                       canUsePremiumCustomization: !0,
                                                       isTryItOutFlow: !0
                                                   }),
-                                                  (0, r.jsx)(x.Z, {
+                                                  (0, r.jsx)(f.Z, {
                                                       config: {
                                                           type: l.Z.PROFILE_EFFECT,
                                                           title: 'debug',
                                                           description: 'debug',
                                                           accessibilityLabel: 'debug',
                                                           reducedMotionSrc: '',
-                                                          effects: y,
+                                                          effects: I,
                                                           animationType: 0
                                                       },
                                                       profileEffectId: 'debug'
@@ -276,7 +275,7 @@ let E = (e) => {
                           }),
                           (0, r.jsx)('div', {
                               className: a()(N.grid, N.layers),
-                              children: y.map((e, t) => {
+                              children: I.map((e, t) => {
                                   var n;
                                   return (0, r.jsxs)(
                                       'div',
@@ -318,7 +317,7 @@ let E = (e) => {
                                                                   value: e.start,
                                                                   className: N.input,
                                                                   onChange: (e) => {
-                                                                      A((n) => {
+                                                                      y((n) => {
                                                                           let r = [...n],
                                                                               i = n[t];
                                                                           return (i.start = +e.target.value), (r[t] = i), r;
@@ -340,7 +339,7 @@ let E = (e) => {
                                                                   value: e.duration,
                                                                   className: N.input,
                                                                   onChange: (e) => {
-                                                                      A((n) => {
+                                                                      y((n) => {
                                                                           let r = [...n],
                                                                               i = n[t];
                                                                           return (i.duration = +e.target.value), (r[t] = i), r;
@@ -367,7 +366,7 @@ let E = (e) => {
                                                                   checked: e.loop,
                                                                   className: N.checkBox,
                                                                   onChange: (e) => {
-                                                                      A((n) => {
+                                                                      y((n) => {
                                                                           let r = [...n],
                                                                               i = n[t];
                                                                           return (i.loop = e.target.checked), (r[t] = i), r;
@@ -391,7 +390,7 @@ let E = (e) => {
                                                                           value: e.loopDelay,
                                                                           className: N.input,
                                                                           onChange: (e) => {
-                                                                              A((n) => {
+                                                                              y((n) => {
                                                                                   let r = [...n],
                                                                                       i = n[t];
                                                                                   return (i.loopDelay = +e.target.value), (r[t] = i), r;
@@ -423,7 +422,7 @@ let E = (e) => {
                                                                       let r = n[0],
                                                                           i = new FileReader();
                                                                       (i.onload = (e) => {
-                                                                          A((n) => {
+                                                                          y((n) => {
                                                                               if (null == e.target || 'string' != typeof e.target.result) return n;
                                                                               let r = [...n];
                                                                               return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), r;
@@ -439,7 +438,7 @@ let E = (e) => {
                                                           color: c.Ttl.RED,
                                                           look: c.iLD.LINK,
                                                           onClick: () => {
-                                                              A((t) => t.filter((t) => t !== e));
+                                                              y((t) => t.filter((t) => t !== e));
                                                           },
                                                           children: 'Remove Layer'
                                                       })

@@ -5,5 +5,6 @@ e.exports = {
     uploadInstructionsContainer: 'uploadInstructionsContainer__77347',
     uploadedFileListItem: 'uploadedFileListItem__77347',
     ignoredFileListItem: 'ignoredFileListItem__77347',
-    removeFileButtonInnerContents: 'removeFileButtonInnerContents__77347'
+    removeFileButtonInnerContents: 'removeFileButtonInnerContents__77347',
+    profileEffectPreviewSelector: 'profileEffectPreviewSelector__77347'
 };
