@@ -218,44 +218,36 @@ function C(e) {
                     i
                 );
             case 2:
-                var c, u;
-                return v(
-                    p.t.zus71N,
-                    {
-                        targetMinutes: n.targetMinutes,
-                        videoTitle: null !== (u = null === (c = t.config.videoMetadata) || void 0 === c ? void 0 : c.messages.videoTitle) && void 0 !== u ? u : 'video'
-                    },
-                    i
-                );
+                return p.NW.string(p.t['f/J8v7']);
             case 3:
-                let f = d.r.build(t.config).defaultInGameTask;
-                if (null != f) return f.description;
+                let c = d.r.build(t.config).defaultInGameTask;
+                if (null != c) return c.description;
         }
-    let h = (0, a.I5)(s, _.p9.TIER_2),
-        m = (0, l.Kr)(t.config);
+    let u = (0, a.I5)(s, _.p9.TIER_2),
+        f = (0, l.Kr)(t.config);
     if ((0, l.$J)(t) && (0, l.$H)(t))
         return y({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: h,
-            collectibleRewardDuration: m
+            hasNitro: u,
+            collectibleRewardDuration: f
         });
     if ((0, l.$J)(t))
         return O({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: h,
-            collectibleRewardDuration: m
+            hasNitro: u,
+            collectibleRewardDuration: f
         });
     if ((0, l.$H)(t))
         return I({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: h,
-            collectibleRewardDuration: m
+            hasNitro: u,
+            collectibleRewardDuration: f
         });
     if ((0, l.oo)({ quest: t }))
         return S({
@@ -263,7 +255,7 @@ function C(e) {
             taskDetails: n,
             withoutMarkdown: i
         });
-    if ((0, l.q8)(t)) return T(t, m, h, i);
+    if ((0, l.q8)(t)) return T(t, f, u, i);
     else if ((0, l.pO)(t))
         return A({
             quest: t,
@@ -276,8 +268,8 @@ function C(e) {
               quest: t,
               taskDetails: n,
               withoutMarkdown: i,
-              hasNitro: h,
-              collectibleRewardDuration: m
+              hasNitro: u,
+              collectibleRewardDuration: f
           });
 }
 let R = (e) => {
