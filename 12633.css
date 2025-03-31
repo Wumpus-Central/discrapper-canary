@@ -19620,12 +19620,17 @@ span.clanTag__5d473 {
     padding: 4px
 }
 
+.full-motion .button__2d0ab .icon__2d0ab {
+    transition: transform .4s cubic-bezier(.16, 1, .3, 1)
+}
+
 .button__2d0ab:hover {
     background: var(--background-modifier-hover)
 }
 
 .button__2d0ab:hover .icon__2d0ab {
-    fill: var(--interactive-hover)
+    fill: var(--interactive-hover);
+    transform: scale(1.1)
 }
 
 .button__2d0ab:active {
@@ -19633,7 +19638,8 @@ span.clanTag__5d473 {
 }
 
 .button__2d0ab:active .icon__2d0ab {
-    fill: var(--interactive-active)
+    fill: var(--interactive-active);
+    transform: scale(1)
 }
 
 .tooltipContainer__2d0ab:first-child>.button__2d0ab {
