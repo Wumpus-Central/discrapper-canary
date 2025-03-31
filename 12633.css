@@ -19537,6 +19537,22 @@ span.clanTag__5d473 {
     pointer-events: all
 }
 
+.popover__2d0ab>.tooltipContainer__2d0ab:first-of-type>.button__2d0ab {
+    padding-left: 6px;
+    border-radius: 100px 6px 6px 100px;
+    margin-left: 0
+}
+
+.popover__2d0ab>.tooltipContainer__2d0ab:last-of-type>.button__2d0ab {
+    padding-right: 6px;
+    border-radius: 6px 100px 100px 6px;
+    margin-right: 0
+}
+
+.tooltipContainer__2d0ab:empty {
+    display: none
+}
+
 .activityPopover__2d0ab {
     right: 8px
 }
@@ -19640,22 +19656,6 @@ span.clanTag__5d473 {
 .button__2d0ab:active .icon__2d0ab {
     fill: var(--interactive-active);
     transform: scale(1)
-}
-
-.tooltipContainer__2d0ab:first-child>.button__2d0ab {
-    padding-left: 6px;
-    border-radius: 100px 6px 6px 100px;
-    margin-left: 0
-}
-
-.tooltipContainer__2d0ab:last-child>.button__2d0ab {
-    padding-right: 6px;
-    border-radius: 6px 100px 100px 6px;
-    margin-right: 0
-}
-
-.tooltipContainer__2d0ab:empty {
-    display: none
 }
 
 .container__52c9d {

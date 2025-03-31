@@ -22,8 +22,8 @@ var r,
     I = n(148959),
     S = n(815644),
     T = n(926951),
-    N = n(166884),
-    A = n(868616),
+    A = n(166884),
+    N = n(868616),
     C = n(450109),
     R = n(307320),
     P = n(615830),
@@ -329,7 +329,7 @@ class ev extends f.Z {
     _chooseExperiments(e) {
         let t = [];
         if ((this._recordingEnabled && t.push('connection_log'), null != this.guildId)) {
-            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = A.Z.getCurrentConfig(
+            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = N.Z.getCurrentConfig(
                 {
                     guildId: this.guildId,
                     location: 'handleReady'
@@ -339,7 +339,7 @@ class ev extends f.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((L.Z.supports(eo.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let e = N.Z.workerExperimentString();
+            let e = A.Z.workerExperimentString();
             null != e && t.push(e);
         }
         (0, S.f)('RtcConnection').enabled && t.push('audio_transport_cc'), (this._selectedExperiments = t);
@@ -369,7 +369,7 @@ class ev extends f.Z {
             this.setState(ei.hes.AUTHENTICATING);
     }
     async _handleDisconnect(e, t, n, r) {
-        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, v, y, I, S, T, N;
+        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, v, y, I, S, T, A;
         this.logger.info('Disconnected from RTC server, clean: '.concat(t, ', code: ').concat(n, ', reason: ').concat(r, ', state: ').concat(this.state)),
             t ||
                 !this._connecting ||
@@ -385,8 +385,8 @@ class ev extends f.Z {
                 ),
                 (this._encountered_socket_failure = !0)),
             x.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
-        let A = 'Force Close' !== r;
-        if (A) {
+        let N = 'Force Close' !== r;
+        if (N) {
             let e = this._backoff.fail(this.reconnect);
             this.logger.warn('Disconnect was not clean! reason='.concat(r, '. Reconnecting in ').concat((e / 1000).toFixed(2), ' seconds.'));
         }
@@ -404,6 +404,7 @@ class ev extends f.Z {
                                 ec(
                                     es(
                                         ec(es({}, this._getAnalyticsProperties()), {
+                                            app_hardware_acceleration_enabled: G.Z.getAppHardwareAccelerationEnabled(),
                                             media_session_id: this.getMediaSessionId(),
                                             sender_user_id: this.userId,
                                             reason: r,
@@ -429,6 +430,7 @@ class ev extends f.Z {
                             ei.rMx.VIDEO_STREAM_ENDED,
                             es(
                                 ec(es({}, this._getAnalyticsProperties()), {
+                                    app_hardware_acceleration_enabled: G.Z.getAppHardwareAccelerationEnabled(),
                                     media_session_id: this.getMediaSessionId(),
                                     sender_user_id: t,
                                     reason: r,
@@ -456,7 +458,7 @@ class ev extends f.Z {
                             hostname: this.hostname,
                             port: this.port,
                             protocol: this.protocol,
-                            reconnect: A,
+                            reconnect: N,
                             reason: r,
                             duration: this.getDuration()
                         }),
@@ -498,7 +500,7 @@ class ev extends f.Z {
                         encryption_mode: this._encryptionMode,
                         channel_count: this.channelIds.size,
                         device_performance_class: (0, O.Z)(),
-                        num_fast_udp_reconnects: null != this._connection ? (null === (N = this._connection) || void 0 === N ? void 0 : N.getNumFastUdpReconnects()) : null,
+                        num_fast_udp_reconnects: null != this._connection ? (null === (A = this._connection) || void 0 === A ? void 0 : A.getNumFastUdpReconnects()) : null,
                         parent_media_session_id: this.parentMediaSessionId,
                         audio_subsystem: L.Z.getMediaEngine().getAudioSubsystem(),
                         audio_layer: L.Z.getMediaEngine().getAudioLayer(),
@@ -532,7 +534,7 @@ class ev extends f.Z {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
-        this.setState(ei.hes.DISCONNECTED, { willReconnect: A });
+        this.setState(ei.hes.DISCONNECTED, { willReconnect: N });
     }
     _handleResuming(e) {
         var t, n;
@@ -873,8 +875,7 @@ class ev extends f.Z {
             rtc_connection_id: this.getRTCConnectionId(),
             context: this.context,
             voice_backend_version: this.voiceVersion,
-            rtc_worker_backend_version: this.rtcWorkerVersion,
-            app_hardware_acceleration_enabled: G.Z.getAppHardwareAccelerationEnabled()
+            rtc_worker_backend_version: this.rtcWorkerVersion
         };
     }
     _handleClientConnect(e) {
@@ -899,6 +900,7 @@ class ev extends f.Z {
                     ei.rMx.VIDEO_STREAM_ENDED,
                     es(
                         ec(es({}, this._getAnalyticsProperties()), {
+                            app_hardware_acceleration_enabled: G.Z.getAppHardwareAccelerationEnabled(),
                             media_session_id: this.getMediaSessionId(),
                             sender_user_id: e,
                             reason: 'User disconnected',
