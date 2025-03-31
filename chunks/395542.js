@@ -8,6 +8,5 @@ e.exports = {
     description: 'description_e9ef78',
     gradient: 'gradient_e9ef78',
     clientThemes: 'clientThemes_e9ef78',
-    gradientOverlay: 'gradientOverlay_e9ef78',
     gradientBackground: 'gradientBackground_e9ef78'
 };
