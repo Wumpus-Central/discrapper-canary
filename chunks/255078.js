@@ -155,6 +155,9 @@ class m extends o.Z {
         var e;
         return null !== (e = this.streakStartedAt) && void 0 !== e ? e : this.createdAt;
     }
+    get hasAnyPremiumNitro() {
+        return this.items.some((e) => f.dJ.has(e.planId));
+    }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&

@@ -78,41 +78,55 @@ function T(e) {
         D = t.getGuildId(),
         { mute: W, suppress: U } = (0, _.Z)(t),
         B = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        H = W || U || B,
-        F = (0, p.sR)({ isSoundboardButtonDisabled: H }),
-        [G, V] = (0, d.cv)(F),
-        { mode: z } = (0, m.ZP)({ location: 'ActionBarSoundboardButton' }),
-        Y = (0, b.Z)({ location: 'ActionBarSoundboardButton' }),
-        { coloredIconsEnabled: q, squareButtonsEnabled: K } = (0, g.Z)({ location: 'ActionBarSoundboardButton' });
-    function X() {
+        F = W || U || B,
+        H = (0, p.sR)({ isSoundboardButtonDisabled: F }),
+        [G, V] = (0, d.cv)(H),
+        { analyticsLocations: z } = (0, u.ZP)(),
+        { mode: Y } = (0, m.ZP)({ location: 'ActionBarSoundboardButton' }),
+        q = (0, b.Z)({ location: 'ActionBarSoundboardButton' }),
+        { coloredIconsEnabled: K, squareButtonsEnabled: X } = (0, g.Z)({ location: 'ActionBarSoundboardButton' });
+    function J() {
         return W ? P.NW.string(P.t['Ox4/zc']) : U ? P.NW.string(P.t['+YBKYG']) : B ? P.NW.string(P.t.X1lQlp) : void 0;
     }
     function Q(e) {
         null != D &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
-                return (t) => (0, r.jsx)(e, Z(S({ guildId: D }, t), { onInteraction: (0, O.u)('SoundboardContextMenu', 'ActionBarSoundboardButton') }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        Z(
+                            S(
+                                {
+                                    guildId: D,
+                                    sourceAnalyticsLocations: z
+                                },
+                                t
+                            ),
+                            { onInteraction: (0, O.u)('SoundboardContextMenu', R) }
+                        )
+                    );
             });
     }
-    let J = i.useRef(null),
-        $ = i.useCallback(() => {
+    let $ = i.useRef(null),
+        ee = i.useCallback(() => {
             var e;
-            null === (e = J.current) || void 0 === e || e.hidePopout();
+            null === (e = $.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
         (0, x.yp)({
             event: N.CkL.TOGGLE_SOUNDBOARD,
-            handler: $
+            handler: ee
         }),
         (0, r.jsx)(E.Z, {
-            ref: J,
+            ref: $,
             isPopoutBlocked: null != A && A !== I.D.SOUNDBOARD,
             onPopoutClose: () => (null == w ? void 0 : w(void 0)),
             onPopoutOpen: () => (null == w ? void 0 : w(I.D.SOUNDBOARD)),
-            align: Y ? 'center' : 'left',
+            align: q ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return H
+                return F
                     ? null
                     : (0, r.jsx)(C.Z, {
                           children: (0, r.jsx)(f.Z, {
@@ -130,16 +144,16 @@ function T(e) {
                       });
             },
             children: (e) =>
-                Y
+                q
                     ? (0, r.jsx)(
                           v.d,
                           Z(
                               S(
                                   {
                                       themeable: T,
-                                      label: X(),
+                                      label: J(),
                                       iconComponent: M,
-                                      disabled: H,
+                                      disabled: F,
                                       onContextMenu: Q
                                   },
                                   e
@@ -154,7 +168,7 @@ function T(e) {
                                   onMouseLeave: () => {
                                       e.onMouseLeave(), L();
                                   },
-                                  color: e.isActive ? (q ? 'primaryDark' : z === m.BK.GroupedButtonsRedMic || K ? 'green' : void 0) : void 0,
+                                  color: e.isActive ? (K ? 'primaryDark' : Y === m.BK.GroupedButtonsRedMic || X ? 'green' : void 0) : void 0,
                                   className: ''
                               }
                           )
@@ -165,9 +179,9 @@ function T(e) {
                               S(
                                   {
                                       themeable: T,
-                                      label: X(),
+                                      label: J(),
                                       iconComponent: s.KY1,
-                                      disabled: H,
+                                      disabled: F,
                                       onContextMenu: Q
                                   },
                                   e

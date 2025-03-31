@@ -7,6 +7,7 @@ e.exports = {
     hidden: 'hidden__3ce43',
     buttonContainer: 'buttonContainer__3ce43',
     button: 'button__3ce43',
+    subscribeButton: 'subscribeButton__3ce43',
     headerArt: 'headerArt__3ce43',
     headerArtV2: 'headerArtV2__3ce43',
     reverseContainer: 'reverseContainer__3ce43',

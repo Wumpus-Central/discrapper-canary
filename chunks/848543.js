@@ -24,7 +24,7 @@ var r = n(200651),
     C = n(981631),
     S = n(921944),
     T = n(388032),
-    P = n(963085);
+    P = n(772762);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,7 +70,7 @@ function A(e, t) {
 }
 function Z(e) {
     var { channel: t, iconClassName: l, className: Z, innerClassName: x } = e,
-        w = (function (e, t) {
+        L = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -89,7 +89,7 @@ function Z(e) {
             }
             return i;
         })(e, ['channel', 'iconClassName', 'className', 'innerClassName']);
-    let L = i.useRef(null),
+    let w = i.useRef(null),
         R = (0, m.Q3)('SoundBoardRTCPanelButton'),
         { coloredIconsEnabled: D } = (0, _.Z)({ location: 'ConnectedRTCConnection' }),
         { mute: k, suppress: M } = (0, E.Z)(t),
@@ -104,7 +104,20 @@ function Z(e) {
         null != B &&
             (0, d.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
-                return (t) => (0, r.jsx)(e, A(j({ guildId: B }, t), { onInteraction: (0, g.u)('SoundboardContextMenu', p.Z.RTC_PANEL) }));
+                return (t) =>
+                    (0, r.jsx)(
+                        e,
+                        A(
+                            j(
+                                {
+                                    guildId: B,
+                                    sourceAnalyticsLocations: Y
+                                },
+                                t
+                            ),
+                            { onInteraction: (0, g.u)('SoundboardContextMenu', p.Z.RTC_PANEL) }
+                        )
+                    );
             });
     }
     let {
@@ -114,7 +127,7 @@ function Z(e) {
         } = (0, c.j)(),
         ee = (e) =>
             (0, r.jsx)(u.yRy, {
-                targetElementRef: L,
+                targetElementRef: w,
                 animation: u.yRy.Animation.FADE,
                 shouldShow: W,
                 position: 'top',
@@ -136,7 +149,7 @@ function Z(e) {
                 },
                 children: (t) =>
                     (0, r.jsx)('div', {
-                        ref: L,
+                        ref: w,
                         children: (0, r.jsx)(
                             u.zxk,
                             A(
@@ -156,17 +169,17 @@ function Z(e) {
                                         },
                                         onMouseEnter: (t) => {
                                             var n, r;
-                                            null === (n = w.onMouseEnter) || void 0 === n || n.call(w, t), null == e || null === (r = e.onMouseEnter) || void 0 === r || r.call(e), J();
+                                            null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (r = e.onMouseEnter) || void 0 === r || r.call(e), J();
                                         },
                                         onMouseLeave: (t) => {
                                             var n, r;
-                                            null === (n = w.onMouseLeave) || void 0 === n || n.call(w, t), null == e || null === (r = e.onMouseLeave) || void 0 === r || r.call(e), $();
+                                            null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (r = e.onMouseLeave) || void 0 === r || r.call(e), $();
                                         },
                                         onContextMenu: q,
                                         fullWidth: !0,
                                         size: R ? u.zxk.Sizes.MEDIUM : u.zxk.Sizes.SMALL
                                     }),
-                                    w
+                                    L
                                 ),
                                 {
                                     children: (0, r.jsx)(Q, {
@@ -190,7 +203,7 @@ function Z(e) {
         (0, r.jsx)(h.Gt, {
             value: Y,
             children: (0, r.jsx)(u.ua7, {
-                targetElementRef: L,
+                targetElementRef: w,
                 text: k ? T.NW.string(T.t['Ox4/zc']) : M ? T.NW.string(T.t['+YBKYG']) : U ? T.NW.string(T.t.X1lQlp) : T.NW.string(T.t['6EJvHh']),
                 children: (e) => ee(e)
             })

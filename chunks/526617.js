@@ -26,8 +26,8 @@ var r = n(200651),
     I = n(75145),
     S = n(609218),
     T = n(386965),
-    N = n(695346),
-    A = n(19780),
+    A = n(695346),
+    N = n(19780),
     C = n(594174),
     R = n(979651),
     P = n(259580),
@@ -47,7 +47,7 @@ var r = n(200651),
     H = n(981631),
     W = n(474936),
     Y = n(388032),
-    K = n(893961);
+    K = n(285493);
 function z(e, t, n) {
     return (
         t in e
@@ -217,11 +217,11 @@ function ef(e) {
         { location: eO } = (0, f.O)(),
         eI = i.useMemo(() => X(q({}, eO), { section: H.jXE.SOUNDBOARD_SOUND_PICKER }), [eO]),
         [eS, eT] = i.useState(null),
-        eN = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
-        eA = (0, D.I5)(eN, W.p9.TIER_2),
+        eA = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
+        eN = (0, D.I5)(eA, W.p9.TIER_2),
         eC = (0, l.e7)([R.Z], () => {
             var e;
-            return R.Z.getVoiceState(t, null !== (e = null == eN ? void 0 : eN.id) && void 0 !== e ? e : H.lds);
+            return R.Z.getVoiceState(t, null !== (e = null == eA ? void 0 : eA.id) && void 0 !== e ? e : H.lds);
         }),
         eR = (null == eC ? void 0 : eC.selfDeaf) || (null == eC ? void 0 : eC.mute) || (null == eC ? void 0 : eC.suppress),
         eP = (0, b.Iu)((e) => e.searchQuery),
@@ -233,21 +233,21 @@ function ef(e) {
         [eU, eG] = i.useState(!1),
         eB = (0, G.FS)(ex, ek, eP).filter((e) => e.items.length > 0),
         eF = eB.some((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
-        eV = !eA && Q && eF,
-        eZ = N.T4.useSetting(),
+        eV = !eN && Q && eF,
+        eZ = A.T4.useSetting(),
         eH = i.useMemo(() => new Set(eZ), [eZ]),
         eW = null == o,
-        eY = D.ZP.canUseCustomCallSounds(eN),
+        eY = D.ZP.canUseCustomCallSounds(eA),
         eK = i.useCallback(
             (e) => {
-                eH.has(e) ? eH.delete(e) : eH.add(e), N.T4.updateSetting(Array.from(eH));
+                eH.has(e) ? eH.delete(e) : eH.add(e), A.T4.updateSetting(Array.from(eH));
             },
             [eH]
         ),
         ez = i.useCallback(
             (e, t, n) => {
                 if (null != I && !P) return I(e, n);
-                let r = (0, M.Nq)(eN, e, o, !1);
+                let r = (0, M.Nq)(eA, e, o, !1);
                 if (null != I && P && r) I(e, n);
                 else if (!z && r && (0, M.C0)(o)) {
                     var i;
@@ -260,11 +260,11 @@ function ef(e) {
                                 location_stack: t
                             });
                 } else {
-                    if ((0, M.Nq)(eN, e, o)) return;
+                    if ((0, M.Nq)(eA, e, o)) return;
                     Q && eT(e);
                 }
             },
-            [z, eN, o, Q, ew, eP, I, P]
+            [z, eA, o, Q, ew, eP, I, P]
         ),
         eq = i.useCallback(
             (e, t) => {
@@ -280,7 +280,7 @@ function ef(e) {
         eQ = i.useCallback(
             (e, n, i, s, l) => {
                 let c = eB[i.sectionIndex],
-                    u = Q && ec(c.categoryInfo, eA, t) && eV,
+                    u = Q && ec(c.categoryInfo, eN, t) && eV,
                     d = i.sectionIndex === eB.length - 1 && i.rowIndex === i.totalRowCount - 1;
                 return (0, r.jsx)(
                     'ul',
@@ -320,18 +320,18 @@ function ef(e) {
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eB, Q, eA, t, z, eq, o, eW, eY, eR, ev, ef, eV, eg, em]
+            [eB, Q, eN, t, z, eq, o, eW, eY, eR, ev, ef, eV, eg, em]
         ),
         eX = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !Q) return !1;
                 let n = eB[e],
                     r = eB[e - 1],
-                    i = ec(n.categoryInfo, eA, t),
-                    o = ec(r.categoryInfo, eA, t);
+                    i = ec(n.categoryInfo, eN, t),
+                    o = ec(r.categoryInfo, eN, t);
                 return i && !o;
             },
-            [eB, Q, eA]
+            [eB, Q, eN]
         ),
         eJ = i.useCallback((e) => (0 === e ? ei : eX(e, t) ? er : en), [t, eX]),
         e$ = i.useCallback(
@@ -344,7 +344,7 @@ function ef(e) {
         e0 = i.useCallback(
             (e, n) => {
                 let i = ''.concat(e.key),
-                    o = Q && ec(e.categoryInfo, eA, t),
+                    o = Q && ec(e.categoryInfo, eN, t),
                     a = eX(n, t);
                 return (0, r.jsx)(
                     eu,
@@ -359,7 +359,7 @@ function ef(e) {
                     'header-'.concat(i)
                 );
             },
-            [eH, eK, t, eX, Q, eA, eV]
+            [eH, eK, t, eX, Q, eN, eV]
         ),
         e1 = i.useCallback(
             (e, t) => {
@@ -368,13 +368,16 @@ function ef(e) {
             },
             [eB, eV]
         ),
-        e2 = i.useCallback((e) => ej((0, U.YM)(e, ex, eN, o, ev)), [o, eN, ex, ev]),
-        e3 = i.useCallback((e) => {
-            (0, u.jW)(e, async () => {
-                let { default: e } = await n.e('56049').then(n.bind(n, 338991));
-                return (t) => (0, r.jsx)(e, q({}, t));
-            });
-        }, []),
+        e2 = i.useCallback((e) => ej((0, U.YM)(e, ex, eA, o, ev)), [o, eA, ex, ev]),
+        e3 = i.useCallback(
+            (e) => {
+                (0, u.jW)(e, async () => {
+                    let { default: e } = await n.e('56049').then(n.bind(n, 338991));
+                    return (t) => (0, r.jsx)(e, q({ sourceAnalyticsLocations: ev }, t));
+                });
+            },
+            [ev]
+        ),
         e4 = i.useCallback(
             () =>
                 em
@@ -457,7 +460,7 @@ function ef(e) {
                 n = new Audio((0, k.Z)(el));
             null != eb.current && eb.current.pause(), (eb.current = n), (n.currentTime = 0), (n.volume = (0, j.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [eb]),
-        tn = (0, l.e7)([A.Z], () => A.Z.getMediaSessionId());
+        tn = (0, l.e7)([N.Z], () => N.Z.getMediaSessionId());
     return (
         (0, h.Z)({
             type: s.ImpressionTypes.POPOUT,

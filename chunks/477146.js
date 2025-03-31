@@ -69,17 +69,25 @@ let c = (e, t) => ({
             n.readAsDataURL(e);
     },
     d = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'json',
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'python',
             n = '\n[';
         return (
-            'json' === t &&
-                e.forEach((e, t) => {
-                    n += '\n              {\n                  "src": "file-'.concat(t, '.png",\n                  "start": ').concat(e.start, ',\n                  "duration": ').concat(e.duration, ',\n                  "height": ').concat(e.height, ',\n                  "width": ').concat(e.width, ',\n                  "zIndex": ').concat(e.zIndex, ',\n                  "loop": ').concat(e.loop, ',\n                  "loop_delay": ').concat(e.loopDelay, '\n              },\n          ');
-                }),
-            'proto' === t &&
-                e.forEach((e, t) => {
-                    n += "\n              ProfileEffectKeyFrame(\n                  src='file-".concat(t, ".png',\n                  loop=").concat(e.loop, ',\n                  width=').concat(e.width, ',\n                  height=').concat(e.height, ',\n                  duration=').concat(e.duration, ',\n                  start=').concat(e.start, ',\n                  loop_delay=').concat(e.loopDelay, ',\n                  position=Point(x=0, y=0),\n                  z_index=').concat(e.zIndex, ',\n              ),\n          ');
-                }),
+            'python' === t
+                ? e.forEach((e) => {
+                      n += "\n              ProfileEffectKeyFrame(\n                  src='"
+                          .concat(e.name, "',\n                  loop=")
+                          .concat(e.loop ? 'True' : 'False', ',\n                  width=')
+                          .concat(e.width, ',\n                  height=')
+                          .concat(e.height, ',\n                  start=')
+                          .concat(e.start, ',\n                  duration=')
+                          .concat(e.duration, ',\n                  loop_delay=')
+                          .concat(e.loopDelay, ',\n                  position=Point(x=0, y=0),\n                  z_index=')
+                          .concat(e.zIndex, ',\n              ),\n          ');
+                  })
+                : 'json' === t &&
+                  e.forEach((e) => {
+                      n += '\n              {\n                  "src": "'.concat(e.name, '",\n                  "loop": ').concat(e.loop, ',\n                  "width": ').concat(e.width, ',\n                  "height": ').concat(e.height, ',\n                  "start": ').concat(e.start, ',\n                  "duration": ').concat(e.duration, ',\n                  "loop_delay": ').concat(e.loopDelay, ',\n                  "position": {\n                    "x": 0,\n                    "y": 0\n                  },\n                  "zIndex": ').concat(e.zIndex, ',\n              },\n          ');
+                  }),
             (n += '\n]')
         );
     },

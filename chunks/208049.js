@@ -5,9 +5,9 @@ n.d(t, {
     Dx: () => I,
     HZ: () => x,
     R: () => w,
-    TB: () => N,
+    TB: () => A,
     XE: () => R,
-    hs: () => A,
+    hs: () => N,
     w: () => O,
     xR: () => P,
     xU: () => C,
@@ -110,7 +110,7 @@ async function T(e, t) {
         rejectWithError: !1
     });
 }
-function N(e) {
+function A(e) {
     c.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) =>
@@ -124,7 +124,7 @@ function N(e) {
         m.fy.INFREQUENT_USER_ACTION
     );
 }
-function A(e) {
+function N(e) {
     c.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) => {
@@ -166,10 +166,11 @@ function w(e, t) {
         userId: t
     });
 }
-function D(e) {
+function D(e, t) {
     a.Z.dispatch({
         type: 'USER_SOUNDBOARD_SET_VOLUME',
-        volume: e
+        volume: e,
+        location: t
     });
 }
 function L(e) {

@@ -34,8 +34,8 @@ let E = new Map(),
     I = new Set(),
     S = new Map(),
     T = !1,
-    N = [];
-function A() {
+    A = [];
+function N() {
     E.clear(), b.clear(), S.clear(), (T = !1), (O = 0), (y = 0);
 }
 function C() {
@@ -68,7 +68,7 @@ function L(e) {
 }
 function x(e) {
     let { guildId: t } = e;
-    N = N.includes(t) ? o().without(N, t) : [...N, t];
+    A = A.includes(t) ? o().without(A, t) : [...A, t];
 }
 function M(e) {
     let { soundId: t, guildId: n } = e,
@@ -97,12 +97,16 @@ function G(e) {
         a = (null !== (n = S.get(i)) && void 0 !== n ? n : 0) - 1;
     o <= 0 ? b.delete(r) : b.set(r, o), a <= 0 ? S.delete(i) : S.set(i, a);
 }
-let B = o().debounce((e) => {
-    d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, { volume: Math.round((0, f.P)(e)) }), l.kU.updateSetting({ volume: e });
+let B = o().debounce((e, t) => {
+    d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
+        volume: Math.round((0, f.P)(e)),
+        location_stack: t
+    }),
+        l.kU.updateSetting({ volume: e });
 }, 1000);
 function F(e) {
-    let { volume: t } = e;
-    B(t);
+    let { volume: t, location: n } = e;
+    B(t, n);
 }
 function V(e) {
     var t, n;
@@ -190,12 +194,12 @@ class Y extends (r = a.ZP.Store) {
         return 2 === O && 2 === y;
     }
     getShownAllGuildIds() {
-        return N;
+        return A;
     }
 }
 g(Y, 'displayName', 'SoundboardStore');
 let K = new Y(s.Z, {
-    LOGOUT: A,
+    LOGOUT: N,
     GUILD_SOUNDBOARD_FETCH: R,
     GUILD_SOUNDBOARD_SOUND_CREATE: D,
     GUILD_SOUNDBOARD_SOUND_UPDATE: D,

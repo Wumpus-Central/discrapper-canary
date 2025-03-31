@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r = n(570140),
     i = n(460181),
     o = n(340332),
@@ -76,8 +76,8 @@ let O = {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: I, isNotSupported: S, trackToggleSelfMute: T, trackToggleSelfDeaf: N } = (O = n(929782)),
-    A = {
+    { enable: I, isNotSupported: S, trackToggleSelfMute: T, trackToggleSelfDeaf: A } = (O = n(929782)),
+    N = {
         enable: I,
         toggleSelfMute() {
             let { context: e = m.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0, location: o } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -118,7 +118,7 @@ let O = {
         toggleSelfDeaf() {
             let { context: e = m.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             S() ||
-                (N({
+                (A({
                     usedKeybind: n,
                     location: i
                 }),
@@ -306,16 +306,18 @@ let O = {
                 });
         },
         setSidechainCompression(e) {
+            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             S() ||
-                ((0, a.Z)('stream_attenuation_enabled', e, u.Z.getSidechainCompression()),
+                ((0, a.Z)('stream_attenuation_enabled', e, u.Z.getSidechainCompression(), t),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_SIDECHAIN_COMPRESSION',
                     enabled: e
                 }));
         },
         setSidechainCompressionStrength(e) {
+            let { analyticsLocations: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             S() ||
-                ((0, a.Z)('stream_attenuation_strength', e, u.Z.getSidechainCompressionStrength()),
+                ((0, a.Z)('stream_attenuation_strength', e, u.Z.getSidechainCompressionStrength(), t),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH',
                     strength: e
