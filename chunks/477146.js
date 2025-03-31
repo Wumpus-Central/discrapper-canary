@@ -1,8 +1,17 @@
 n.d(t, {
-    $j: () => u,
-    HV: () => l,
-    Xv: () => s
+    $j: () => _,
+    HV: () => d,
+    I6: () => c,
+    Xv: () => s,
+    i0: () => u,
+    wT: () => l
 }),
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
     n(47120),
     n(301563),
     n(866573),
@@ -19,34 +28,47 @@ n.d(t, {
     n(492257),
     n(873817),
     n(610885),
-    n(126298),
-    n(315314),
-    n(309749),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648);
+    n(126298);
 var r = n(605387),
     i = n.n(r);
 let o = (e) => i().decode(e),
     a = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
-    s = async (e, t, n, r) => ({
-        src: e,
-        base64: t,
-        loop: !1,
-        loopDelay: 0,
-        duration: a(o(await n.arrayBuffer())),
-        start: 0,
-        position: {
-            x: 0,
-            y: 0
-        },
-        zIndex: 100 + r,
-        height: 880,
-        width: 450,
-        name: n.name
+    s = async (e, t, n) => {
+        let r = o(await t.arrayBuffer());
+        return {
+            src: URL.createObjectURL(t),
+            base64: e,
+            loop: !1,
+            loopDelay: 0,
+            duration: a(r),
+            start: 0,
+            position: {
+                x: 0,
+                y: 0
+            },
+            zIndex: 100 + n,
+            height: 880,
+            width: 450,
+            name: t.name
+        };
+    };
+var l = (function (e) {
+    return (e.THUMBNAIL = 'Thumbnail'), (e.STATIC = 'Static'), (e.REDUCED_MOTION = 'Reduced Motion'), e;
+})({});
+let c = (e, t) => ({
+        name: t.name,
+        src: URL.createObjectURL(t),
+        base64: e
     }),
-    l = function (e) {
+    u = (e, t) => {
+        if (null == e) return;
+        let n = new FileReader();
+        (n.onload = (e) => {
+            null != e.target && 'string' == typeof e.target.result && (null == t || t(e.target.result));
+        }),
+            n.readAsDataURL(e);
+    },
+    d = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'json',
             n = '\n[';
         return (
@@ -61,7 +83,7 @@ let o = (e) => i().decode(e),
             (n += '\n]')
         );
     },
-    c = (e) => {
+    f = (e) => {
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
@@ -69,7 +91,7 @@ let o = (e) => i().decode(e),
         for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
         return new Blob([o], { type: i });
     },
-    u = (e) => {
-        let t = c(e);
+    _ = (e) => {
+        let t = f(e);
         return URL.createObjectURL(t);
     };

@@ -10,7 +10,6 @@ e.exports = {
     previewCardFooter: 'previewCardFooter__93529',
     preview: 'preview__93529',
     userProfilePreview: 'userProfilePreview__93529',
-    controls: 'controls__93529',
     checkBox: 'checkBox__93529',
     uploadButton: 'uploadButton__93529',
     input: 'input__93529',
@@ -20,5 +19,8 @@ e.exports = {
     warningText: 'warningText__93529',
     layers: 'layers__93529',
     layerForm: 'layerForm__93529',
-    layerPreview: 'layerPreview__93529'
+    layerPreview: 'layerPreview__93529',
+    staticFramesContainer: 'staticFramesContainer__93529',
+    staticFramePreviewContainer: 'staticFramePreviewContainer__93529',
+    staticFramePreview: 'staticFramePreview__93529'
 };
