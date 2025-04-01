@@ -42671,7 +42671,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     background: transparent
 }
 
-:where(.visual-refresh) .visual-refresh .radioIndicatorGroup__001a7 {
+:where(.visual-refresh) .radioIndicatorGroup__001a7 {
     display: flex;
     flex-direction: row;
     gap: var(--space-8)

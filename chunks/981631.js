@@ -404,7 +404,6 @@ let A = Object.freeze({
         BILLING_PAYMENTS: '/users/@me/billing/payments',
         BILLING_PAYMENT: (t) => '/users/@me/billing/payments/'.concat(t),
         BILLING_PAYMENTS_VOID: (t) => '/users/@me/billing/payments/'.concat(t, '/void'),
-        BILLING_PAYMENTS_REFUND: (t) => '/users/@me/billing/payments/'.concat(t, '/refund'),
         BILLING_INVOICE_PDF: '/users/@me/billing/invoice',
         BILLING_INVOICE_BREAKDOWN: '/users/@me/billing/invoice/breakdown',
         BILLING_STRIPE_PAYMENT_INTENTS: (t) => '/users/@me/billing/stripe/payment-intents/payments/'.concat(t),
