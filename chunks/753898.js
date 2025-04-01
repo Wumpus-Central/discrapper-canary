@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -6,25 +6,50 @@ var i = n(442837),
     o = n(607070),
     a = n(43267),
     s = n(933557),
-    c = n(266076),
-    u = n(518950),
-    d = n(967128);
-function p(e) {
-    var t, n, p;
-    let { channel: h, children: f, user: m } = e,
+    c = n(641360),
+    u = n(266076),
+    d = n(769409),
+    p = n(518311),
+    h = n(518950),
+    f = n(967128),
+    m = n(388032),
+    g = n(588207);
+function b(e) {
+    let { channel: t } = e;
+    return (0, c.I3)('EmptyMessages')
+        ? (0, r.jsxs)('div', {
+              className: g.buttonContainer,
+              children: [
+                  (0, r.jsx)(l.zxk, {
+                      size: l.PhG.MEDIUM,
+                      onClick: () => (0, d.B)(t.id),
+                      className: g.button,
+                      children: m.NW.string(m.t['5Q9+/P'])
+                  }),
+                  (0, r.jsx)(p.l, {
+                      className: g.button,
+                      channel: t
+                  })
+              ]
+          })
+        : null;
+}
+function _(e) {
+    var t, n, c;
+    let { channel: d, children: p, user: m } = e,
         g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        b = null !== (t = (0, s.ZP)(h)) && void 0 !== t ? t : '',
+        _ = null !== (t = (0, s.ZP)(d)) && void 0 !== t ? t : '',
         {
-            avatarDecorationSrc: _,
-            eventHandlers: C,
-            isAnimating: v
-        } = (0, u.Z)({
+            avatarDecorationSrc: C,
+            eventHandlers: v,
+            isAnimating: y
+        } = (0, h.Z)({
             user: m,
             size: l.EFr.SIZE_80,
             animateOnHover: !0
         });
     return (0, r.jsxs)(
-        d.ZP,
+        f.ZP,
         ((n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -49,33 +74,34 @@ function p(e) {
                     });
             }
             return e;
-        })({ channelId: h.id }, C)),
-        (p = p =
+        })({ channelId: d.id }, v)),
+        (c = c =
             {
                 children: [
                     (() => {
-                        let e = !g && v;
-                        return h.isMultiUserDM()
-                            ? (0, r.jsx)(c.Z, {
-                                  channel: h,
+                        let e = !g && y;
+                        return d.isMultiUserDM()
+                            ? (0, r.jsx)(u.Z, {
+                                  channel: d,
                                   size: l.EFr.SIZE_80,
                                   experimentLocation: 'empty_messages',
                                   animated: e,
-                                  'aria-label': b
+                                  'aria-label': _
                               })
                             : (0, r.jsx)(l.qEK, {
-                                  'aria-label': b,
+                                  'aria-label': _,
                                   size: l.EFr.SIZE_80,
-                                  src: (0, a.x)(h, 80, e),
-                                  avatarDecoration: _
+                                  src: (0, a.x)(d, 80, e),
+                                  avatarDecoration: C
                               });
                     })(),
-                    (0, r.jsx)(d.Ot, { children: b }),
-                    (0, r.jsx)(d.jz, { children: f })
+                    (0, r.jsx)(f.Ot, { children: _ }),
+                    (0, r.jsx)(f.jz, { children: p }),
+                    d.isMultiUserDM() && (0, r.jsx)(b, { channel: d })
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(p))
+            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(c))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -83,8 +109,8 @@ function p(e) {
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(p)).forEach(function (e) {
-                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(p, e));
+              })(Object(c)).forEach(function (e) {
+                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(c, e));
               }),
         n)
     );

@@ -1,4 +1,13 @@
-n.d(t, { Z: () => eh }), n(230036), n(411104), n(653041), n(47120), n(301563), n(26686);
+n.d(t, {
+    Z: () => eh,
+    l: () => ef
+}),
+    n(230036),
+    n(411104),
+    n(653041),
+    n(47120),
+    n(301563),
+    n(26686);
 var r,
     i = n(200651),
     l = n(192379),
@@ -31,8 +40,8 @@ var r,
     A = n(93127),
     w = n(752048),
     R = n(131704),
-    M = n(592125),
-    k = n(341165),
+    k = n(592125),
+    M = n(341165),
     L = n(544610),
     D = n(19780),
     W = n(306680),
@@ -50,8 +59,8 @@ var r,
     Q = n(575464),
     J = n(981631),
     $ = n(388032),
-    ee = n(889634),
-    et = n(802138);
+    ee = n(170086),
+    et = n(685786);
 function en(e, t, n) {
     return (
         t in e
@@ -165,7 +174,7 @@ let ec = (e) => {
     eu = (e) => {
         var { onConfirm: t, channelIds: n } = e,
             r = el(e, ['onConfirm', 'channelIds']);
-        let l = (0, h.Wu)([M.Z], () => Array.from(n).map(M.Z.getChannel), [n]);
+        let l = (0, h.Wu)([k.Z], () => Array.from(n).map(k.Z.getChannel), [n]);
         return (0, i.jsxs)(
             f.ConfirmModal,
             ei(
@@ -684,7 +693,7 @@ class ed extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = ef(Array.from(new Set([...e.recipients, ...r])));
+                    let t = em(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, f.h7j)(
                               (n) =>
@@ -700,7 +709,7 @@ class ed extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = ef(r);
+                    let e = em(r);
                     r.length > 1 && e.size > 0
                         ? (0, f.h7j)(
                               (t) =>
@@ -739,10 +748,10 @@ class ed extends (r = l.PureComponent) {
 function ep(e) {
     var { channel: t } = e,
         n = el(e, ['channel']);
-    let r = (0, h.cj)([L.Z, k.Z, B.Z], () => {
+    let r = (0, h.cj)([L.Z, M.Z, B.Z], () => {
         let e;
         return (
-            null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            null != t && null != (e = M.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             ei(er({}, L.Z.getState()), {
                 invite: e,
                 hideDiscriminator: B.Z.hidePersonalInformation,
@@ -805,17 +814,57 @@ function eh(e) {
           });
 }
 function ef(e) {
-    let t = em(e);
+    let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: o = 'right' } = e,
+        a = l.useRef(null),
+        [s, c] = l.useState(!1),
+        u = l.useCallback(() => c((e) => !e), []);
+    return (
+        l.useEffect(() => {
+            (0, A._)();
+        }, []),
+        (0, i.jsx)(f.yRy, {
+            targetElementRef: a,
+            renderPopout: (e) =>
+                (0, i.jsx)(
+                    ep,
+                    ei(er({}, e), {
+                        onClose: e.closePopout,
+                        channel: t
+                    })
+                ),
+            position: r,
+            shouldShow: s,
+            align: o,
+            onRequestClose: () => c(!1),
+            animation: f.yRy.Animation.NONE,
+            clickTrap: !0,
+            children: (e) =>
+                (0, i.jsx)(
+                    f.zxk,
+                    ei(er({}, e), {
+                        look: f.zxk.Looks.OUTLINED,
+                        buttonRef: a,
+                        size: f.PhG.MEDIUM,
+                        onClick: u,
+                        className: n,
+                        children: $.NW.string($.t['6Qgren'])
+                    })
+                )
+        })
+    );
+}
+function em(e) {
+    let t = eg(e);
     return new Set(
-        c()(M.Z.getMutablePrivateChannels())
+        c()(k.Z.getMutablePrivateChannels())
             .values()
             .filter((e) => (0, R.bc)(e.type))
-            .filter((e) => em(e.recipients) === t)
+            .filter((e) => eg(e.recipients) === t)
             .map((e) => e.id)
             .value()
     );
 }
-function em(e) {
+function eg(e) {
     return JSON.stringify(e.sort());
 }
 en(ed, 'contextType', O.ZP);

@@ -1,8 +1,9 @@
 n.d(t, {
-    F6: () => d,
-    ZP: () => p,
-    le: () => f,
-    mA: () => _
+    F6: () => _,
+    ZP: () => m,
+    cO: () => f,
+    le: () => p,
+    mA: () => h
 }),
     n(47120),
     n(757143),
@@ -16,6 +17,19 @@ var r = n(442837),
     c = n(981631),
     u = n(388032);
 function d(e, t, n) {
+    let r = e.recipients
+        .map(t.getUser)
+        .filter(s.lm)
+        .map((e) => {
+            var t;
+            return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : l.ZP.getName(e);
+        });
+    return r.length > 0 ? r.join(', ') : u.NW.formatToPlainString(u.t['9Uk8PD'], { name: l.ZP.getName(t.getCurrentUser()) });
+}
+function f(e) {
+    return (0, r.e7)([a.default, o.Z], () => (null != e && e.isMultiUserDM() ? d(e, a.default, o.Z) : null));
+}
+function _(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     switch (e.type) {
@@ -24,20 +38,12 @@ function d(e, t, n) {
             let [a] = e.recipients.map(t.getUser).filter(s.lm);
             if (null == a) return '???';
             if (a.isProvisional && null != a.globalName) return a.globalName;
-            let d = n.getNickname(a.id),
-                _ = null !== (o = null != d ? d : l.ZP.getName(a)) && void 0 !== o ? o : '???';
-            return r ? '@'.concat(_) : _;
+            let u = n.getNickname(a.id),
+                f = null !== (o = null != u ? u : l.ZP.getName(a)) && void 0 !== o ? o : '???';
+            return r ? '@'.concat(f) : f;
         case c.d4z.GROUP_DM:
             if ('' !== e.name) return e.name;
-            let p = e.recipients
-                .map(t.getUser)
-                .filter(s.lm)
-                .map((e) => {
-                    var t;
-                    return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : l.ZP.getName(e);
-                });
-            if (p.length > 0) return p.join(', ');
-            return u.NW.formatToPlainString(u.t['9Uk8PD'], { name: l.ZP.getName(t.getCurrentUser()) });
+            return d(e, t, n);
         case c.d4z.GUILD_ANNOUNCEMENT:
         case c.d4z.GUILD_TEXT:
         case c.d4z.GUILD_FORUM:
@@ -50,20 +56,20 @@ function d(e, t, n) {
         case c.d4z.GUILD_VOICE:
         case c.d4z.GUILD_STAGE_VOICE:
         case c.d4z.GUILD_CATEGORY:
-            if (i) return '#"'.concat(f(e.name), '"');
+            if (i) return '#"'.concat(p(e.name), '"');
             if (r && e.isThread()) return '"'.concat(e.name, '"');
             return e.name;
         default:
             return e.name;
     }
 }
-function f(e) {
+function p(e) {
     return e.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
 }
-function _(e) {
+function h(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
 }
-function p(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, r.e7)([a.default, i.Z, o.Z], () => (null == e ? null : d(e, a.default, o.Z, t)));
+    return (0, r.e7)([a.default, i.Z, o.Z], () => (null == e ? null : _(e, a.default, o.Z, t)));
 }

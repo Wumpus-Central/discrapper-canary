@@ -1,26 +1,28 @@
-n.d(t, { default: () => P });
+n.d(t, { default: () => I });
 var r = n(200651);
 n(192379);
 var a = n(481060),
-    l = n(493683),
+    i = n(493683),
     o = n(239091),
-    i = n(883385),
+    l = n(883385),
     c = n(108843),
-    s = n(947440),
-    d = n(100527),
-    u = n(658138),
-    b = n(299206),
-    f = n(895563),
-    p = n(212205),
-    h = n(62420),
-    j = n(122074),
-    y = n(314897),
-    g = n(858687),
-    O = n(461535),
-    v = n(776568),
-    m = n(981631),
-    w = n(388032);
-function x(e) {
+    d = n(947440),
+    u = n(100527),
+    f = n(658138),
+    s = n(299206),
+    p = n(895563),
+    b = n(212205),
+    v = n(62420),
+    h = n(641360),
+    y = n(769409),
+    O = n(122074),
+    g = n(314897),
+    j = n(858687),
+    C = n(461535),
+    _ = n(776568),
+    E = n(981631),
+    N = n(388032);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,108 +47,118 @@ function x(e) {
     }
     return e;
 }
-let P = (0, c.Z)(
-    (0, i.Z)(
+let I = (0, c.Z)(
+    (0, l.Z)(
         function (e) {
-            let { channel: t, selected: i, onSelect: c } = e,
-                d = t.isOwner(y.default.getId()),
-                P = (0, O.Z)(t),
-                N = (0, v.ZP)(t),
-                S = (0, j.Uf)(m.aIL, t.id, 'top'),
-                Z = (0, g.Z)(t, i),
-                _ = (0, b.Z)({
+            let { channel: t, selected: l, onSelect: c } = e,
+                u = t.isOwner(g.default.getId()),
+                I = (0, C.Z)(t),
+                Z = (0, _.ZP)(t),
+                x = (0, O.Uf)(E.aIL, t.id, 'top'),
+                A = (0, j.Z)(t, l),
+                P = (0, s.Z)({
                     id: t.id,
-                    label: w.NW.string(w.t.gFHI3t)
+                    label: N.NW.string(N.t.gFHI3t)
                 }),
-                k = (0, s.Z)(t),
-                C = (0, f.l)(t),
-                W = (0, f.P)(t),
-                I = (0, p.Z)(t),
-                D = (0, h.Z)(t),
-                E = (0, u.D)(t);
+                S = (0, d.Z)(t),
+                T = (0, p.l)(t),
+                w = (0, p.P)(t),
+                R = (0, b.Z)(t),
+                F = (0, v.Z)(t),
+                k = (0, f.D)(t),
+                W = (0, h.p1)('GroupDMContextMenu'),
+                U = (0, h.I3)('GroupDMContextMenu');
             return null == t || t.isManaged()
                 ? null
                 : (0, r.jsxs)(a.v2r, {
                       navId: 'gdm-context',
-                      'aria-label': w.NW.string(w.t.Xm41aW),
+                      'aria-label': N.NW.string(N.t.Xm41aW),
                       onClose: o.Zy,
                       onSelect: c,
                       children: [
-                          (0, r.jsx)(a.kSQ, { children: P }),
+                          (0, r.jsx)(a.kSQ, { children: I }),
                           (0, r.jsxs)(a.kSQ, {
-                              children: [C, I, D]
+                              children: [T, R, F]
                           }),
                           (0, r.jsxs)(a.kSQ, {
                               children: [
-                                  d
+                                  u
                                       ? (0, r.jsx)(a.sNh, {
                                             id: 'instant-invites',
-                                            label: w.NW.string(w.t.ngRFjY),
+                                            label: N.NW.string(N.t.ngRFjY),
                                             action: () =>
                                                 (0, a.ZDy)(async () => {
                                                     let { default: e } = await n.e('97573').then(n.bind(n, 892382));
-                                                    return (n) => (0, r.jsx)(e, x({ channelId: t.id }, n));
+                                                    return (n) => (0, r.jsx)(e, m({ channelId: t.id }, n));
                                                 })
                                         })
                                       : null,
-                                  (0, r.jsx)(a.II_, {
-                                      id: 'change-icon',
-                                      showDefaultFocus: !0,
-                                      control: (e, n) => {
-                                          var o, i;
-                                          return (0, r.jsx)(
-                                              a.TEe,
-                                              ((o = x(
-                                                  {
-                                                      onChange: (n) => {
-                                                          var r;
-                                                          let { imageUri: a } = n;
-                                                          l.Z.setIcon(t.id, a), null === (r = e.onClose) || void 0 === r || r.call(e);
+                                  W &&
+                                      (0, r.jsx)(a.II_, {
+                                          id: 'change-icon',
+                                          showDefaultFocus: !0,
+                                          control: (e, n) => {
+                                              var o, l;
+                                              return (0, r.jsx)(
+                                                  a.TEe,
+                                                  ((o = m(
+                                                      {
+                                                          onChange: (n) => {
+                                                              var r;
+                                                              let { imageUri: a } = n;
+                                                              i.Z.setIcon(t.id, a), null === (r = e.onClose) || void 0 === r || r.call(e);
+                                                          },
+                                                          multiple: !1,
+                                                          'aria-label': N.NW.string(N.t['6yrpFR'])
                                                       },
-                                                      multiple: !1,
-                                                      'aria-label': w.NW.string(w.t['6yrpFR'])
-                                                  },
-                                                  e
-                                              )),
-                                              (i = i = { ref: n }),
-                                              Object.getOwnPropertyDescriptors
-                                                  ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
-                                                  : (function (e, t) {
-                                                        var n = Object.keys(e);
-                                                        if (Object.getOwnPropertySymbols) {
-                                                            var r = Object.getOwnPropertySymbols(e);
-                                                            n.push.apply(n, r);
-                                                        }
-                                                        return n;
-                                                    })(Object(i)).forEach(function (e) {
-                                                        Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
-                                                    }),
-                                              o)
-                                          );
-                                      },
-                                      label: w.NW.string(w.t['6yrpFR'])
-                                  }),
-                                  null != t.icon
+                                                      e
+                                                  )),
+                                                  (l = l = { ref: n }),
+                                                  Object.getOwnPropertyDescriptors
+                                                      ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(l))
+                                                      : (function (e, t) {
+                                                            var n = Object.keys(e);
+                                                            if (Object.getOwnPropertySymbols) {
+                                                                var r = Object.getOwnPropertySymbols(e);
+                                                                n.push.apply(n, r);
+                                                            }
+                                                            return n;
+                                                        })(Object(l)).forEach(function (e) {
+                                                            Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(l, e));
+                                                        }),
+                                                  o)
+                                              );
+                                          },
+                                          label: N.NW.string(N.t['6yrpFR'])
+                                      }),
+                                  W && null != t.icon
                                       ? (0, r.jsx)(a.sNh, {
                                             id: 'remove-icon',
-                                            label: w.NW.string(w.t['uY+Nk5']),
-                                            action: () => l.Z.setIcon(t.id, null)
+                                            label: N.NW.string(N.t['uY+Nk5']),
+                                            action: () => i.Z.setIcon(t.id, null)
                                         })
                                       : null,
-                                  E
+                                  U &&
+                                      (0, r.jsx)(a.sNh, {
+                                          id: 'edit-gdm',
+                                          icon: a.vdY,
+                                          label: N.NW.string(N.t['5Q9+/P']),
+                                          action: () => (0, y.B)(t.id)
+                                      }),
+                                  k
                               ]
                           }),
-                          (0, r.jsx)(a.kSQ, { children: k }),
+                          (0, r.jsx)(a.kSQ, { children: S }),
                           (0, r.jsxs)(a.kSQ, {
-                              children: [N, S]
+                              children: [Z, x]
                           }),
-                          (0, r.jsx)(a.kSQ, { children: Z }),
-                          (0, r.jsx)(a.kSQ, { children: W }),
-                          (0, r.jsx)(a.kSQ, { children: _ })
+                          (0, r.jsx)(a.kSQ, { children: A }),
+                          (0, r.jsx)(a.kSQ, { children: w }),
+                          (0, r.jsx)(a.kSQ, { children: P })
                       ]
                   });
         },
-        { object: m.qAy.CONTEXT_MENU }
+        { object: E.qAy.CONTEXT_MENU }
     ),
-    [d.Z.CONTEXT_MENU, d.Z.GROUP_DM_MENU]
+    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU]
 );
