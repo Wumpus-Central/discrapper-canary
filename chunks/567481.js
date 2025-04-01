@@ -83,7 +83,7 @@ let E = new u.Z('RPCCommandsOverlay'),
                     socket: r
                 } = e;
                 if (null == r.application.id) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-                return a.Z.resolveInvite(t, 'Game SDK').then((e) => {
+                return a.ZP.resolveInvite(t, 'Game SDK').then((e) => {
                     let { invite: t, code: r } = e;
                     if (null == t) throw new h.Z({ errorCode: _.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(r));
                     let { context: i, lock: o } = (0, m.jU)(n);
@@ -112,63 +112,71 @@ let E = new u.Z('RPCCommandsOverlay'),
                     } = e,
                     o = l.application.id;
                 if (null == o) throw new h.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-                let { lock: a } = (0, m.jU)(t);
+                let { lock: a, context: s } = (0, m.jU)(t);
                 return new Promise((e) => {
-                    (0, i.ZDy)(async () => {
-                        let { default: t } = await n.e('45406').then(n.bind(n, 344516));
-                        return (n) => {
-                            var i, s;
-                            return (0, r.jsx)(
-                                t,
-                                ((i = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        'function' == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, n)),
-                                (s = s =
-                                    {
-                                        mediaEngineContext: o,
-                                        title: l.application.name,
-                                        onClose: () => {
-                                            n.onClose(), a(), e();
+                    (0, i.ZDy)(
+                        async () => {
+                            let { default: e } = await n.e('45406').then(n.bind(n, 344516));
+                            return (t) => {
+                                var n, i;
+                                return (0, r.jsx)(
+                                    e,
+                                    ((n = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            'function' == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    })
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0
+                                                              })
+                                                            : (e[t] = r);
+                                                });
                                         }
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(s)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
-                                      }),
-                                i)
-                            );
-                        };
-                    });
+                                        return e;
+                                    })({}, t)),
+                                    (i = i =
+                                        {
+                                            mediaEngineContext: o,
+                                            title: l.application.name,
+                                            onClose: () => {
+                                                t.onClose();
+                                            }
+                                        }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(i)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                          }),
+                                    n)
+                                );
+                            };
+                        },
+                        {
+                            contextKey: s === _.IlC.POPOUT ? i.u1M : i.z1l,
+                            onCloseCallback: () => {
+                                a(), e();
+                            }
+                        }
+                    );
                 });
             }
         }
