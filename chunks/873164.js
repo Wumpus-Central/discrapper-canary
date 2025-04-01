@@ -43,20 +43,29 @@ class p extends i.Z {
                 '_onStoreChange',
                 s().debounce(
                     () => {
-                        var e;
                         if (!this.loaded) return;
-                        let t = {
+                        let e = {
                             application_id: c.bO,
                             type: l.IIU.PLAYING,
                             name: d.NW.string(u.Z['7qZdOz']),
                             details: d.NW.formatToPlainString(u.Z['A3tW/f'], { total: Math.round(a.Z.lifetimePoints) }),
-                            state: null == (e = a.Z.getLastAction()) ? d.NW.string(u.Z.HXxY0N) : 'purchase-item' === e.type ? d.NW.formatToPlainString(u.Z.QfiQys, { name: (0, c.w2)()[e.id].name }) : 'purchase-item-upgrade' === e.type ? d.NW.formatToPlainString(u.Z.GJwbPj, { name: (0, c.r7)()[e.id].name }) : 'unlock-achievement' === e.type ? d.NW.formatToPlainString(u.Z.hUterq, { name: (0, c.EC)()[e.id].name }) : d.NW.string(u.Z.HXxY0N),
+                            state: (function (e) {
+                                if (null == e) return d.NW.string(u.Z.HXxY0N);
+                                if ('purchase-item' === e.type) return d.NW.formatToPlainString(u.Z.QfiQys, { name: (0, c.w2)()[e.id].name });
+                                if ('purchase-item-upgrade' === e.type) {
+                                    let t = (0, c.r7)()[e.id],
+                                        n = a.Z.getNumPurchasesForItemUpgrade(t.itemId, e.id),
+                                        r = 'string' == typeof t.name ? t.name : d.NW.formatToPlainString(t.name, { numPurchasing: n });
+                                    return d.NW.formatToPlainString(u.Z.GJwbPj, { name: r });
+                                }
+                                return 'unlock-achievement' === e.type ? d.NW.formatToPlainString(u.Z.hUterq, { name: (0, c.EC)()[e.id].name }) : d.NW.string(u.Z.HXxY0N);
+                            })(a.Z.getLastAction()),
                             timestamps: { start: this.startingTime }
                         };
                         o.Z.dispatch({
                             type: 'LOCAL_ACTIVITY_UPDATE',
                             socketId: 'clicker-game',
-                            activity: t
+                            activity: e
                         });
                     },
                     5000,
