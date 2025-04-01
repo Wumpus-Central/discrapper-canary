@@ -11,17 +11,18 @@ function d() {
     let e = (0, s.e7)([i.Z], () => i.Z.purchasedItems),
         t = (0, s.e7)([i.Z], () => i.Z.getContributionsForItem(c.yN.CLICKER_BUTTON));
     (0, r.useEffect)(() => {
-        !i.Z.hasUnlockedAchievement(c.FK.PURCHASE_5) &&
-            Object.keys((0, c.w2)()).every(
-                (t) =>
-                    t === c.yN.COMPLETE_GAME ||
-                    (null != e[t] &&
-                        Object.keys((0, c.r7)()).every((n) => {
-                            var r, s;
-                            return (null !== (s = null === (r = e[t]) || void 0 === r ? void 0 : r.upgrades[n]) && void 0 !== s ? s : 0) > 0;
-                        }))
-            ) &&
-            (0, o.TD)(c.FK.PURCHASE_5);
+        if (!i.Z.hasUnlockedAchievement(c.FK.PURCHASE_5)) {
+            let t = Object.keys((0, c.w2)()).every((t) => {
+                    let n = Number(t);
+                    return n === c.yN.COMPLETE_GAME || null != e[n];
+                }),
+                n = (0, c.r7)(),
+                r = Object.keys(n).every((t) => {
+                    var r, s;
+                    return (null !== (s = null === (r = e[n[t].itemId]) || void 0 === r ? void 0 : r.upgrades[t]) && void 0 !== s ? s : 0) > 0;
+                });
+            t && r && (0, o.TD)(c.FK.PURCHASE_5);
+        }
     }, [e]),
         (0, a.Z)(u, Object.keys(e).length),
         (0, a.Z)(l, t);
