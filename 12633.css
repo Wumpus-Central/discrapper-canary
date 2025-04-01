@@ -19828,7 +19828,8 @@ span.clanTag__5d473 {
 
 .authedAppV2__50a54 {
     border-radius: var(--radius-sm);
-    overflow: hidden
+    overflow: hidden;
+    margin-bottom: 16px
 }
 
 .header__50a54,
@@ -19894,18 +19895,18 @@ span.clanTag__5d473 {
 
 .appAvatar__50a54 {
     width: 32px;
-    height: 32px
-}
-
-.appAvatar__50a54,
-.appAvatarV2__50a54 {
+    height: 32px;
     border-radius: 50%;
     -webkit-user-drag: none
 }
 
 .appAvatarV2__50a54 {
     width: 40px;
-    height: 40px
+    height: 40px;
+    border-radius: var(--radius-sm);
+    -webkit-user-drag: none;
+    box-sizing: border-box;
+    border: 1px solid var(--border-subtle)
 }
 
 .reportButton__50a54 {
@@ -20024,6 +20025,10 @@ span.clanTag__5d473 {
     align-items: center;
     justify-content: flex-end;
     margin: 16px 0
+}
+
+.deauthorizeButton__50a54 {
+    flex-shrink: 0
 }
 
 .marginReset_fd297e {
@@ -49237,13 +49242,15 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 .draggableContainer_f86e69 {
-    box-shadow: 0 0 40px 0 rgba(0, 0, 0, .5)
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .25);
+    border-radius: 12px
 }
 
 .container_f86e69 {
     width: 314px;
     background-color: var(--background-primary);
-    border-radius: 12px
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle)
 }
 
 .closeContainer_f86e69 {
