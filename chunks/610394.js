@@ -553,6 +553,10 @@ class eV extends (r = i.ZP.Store) {
     isGPUBoosted() {
         return U.isGPUBoosted;
     }
+    getOverlayState(e) {
+        var t;
+        return null !== (t = W[e]) && void 0 !== t ? t : null;
+    }
 }
 C(eV, 'displayName', 'OverlayStore-v3');
 let eZ = new eV(o.Z, {
