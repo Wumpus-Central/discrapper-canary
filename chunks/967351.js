@@ -43,7 +43,13 @@ function _(e) {
             });
         let r = () => {
                 try {
-                    e.end(), e.destroy();
+                    e.end(
+                        E(g.CLOSE, {
+                            code: p.$VG.CLOSE_NORMAL,
+                            message: 'test client going away'
+                        })
+                    ),
+                        e.destroy();
                 } catch (e) {}
             },
             i = Promise.race([
@@ -96,7 +102,13 @@ function O(e) {
             e.emit('request', o);
             break;
         case g.CLOSE:
-            e.end(), e.destroy();
+            e.end(
+                E(g.CLOSE, {
+                    code: p.$VG.CLOSE_NORMAL,
+                    message: 'client disconnect'
+                })
+            ),
+                e.destroy();
     }
     O(e);
 }
