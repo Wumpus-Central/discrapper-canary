@@ -4,10 +4,10 @@ var r = n(200651),
     o = n(481060),
     l = n(605236),
     a = n(243778),
-    s = n(765585),
-    c = n(612659),
-    u = n(436952),
-    d = n(680783),
+    s = n(612659),
+    c = n(436952),
+    u = n(680783),
+    d = n(13186),
     p = n(921944),
     h = n(474936),
     f = n(388032),
@@ -31,46 +31,36 @@ let b = (e, t) => {
     _ = (e) => {
         let { children: t, channelId: n, selectedChannelId: _ } = e,
             O = (0, l.wE)(i.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            j = (0, u.sX)({ location: 'channel_context_menu' }).entryPoint === u.FN.CONTEXT_MENU,
+            j = (0, c.sX)({ location: 'channel_context_menu' }).entryPoint === c.FN.CONTEXT_MENU,
             x = _ === n,
             [C, S] = (0, a.US)(O && j && x ? [i.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            P = (0, c.m)(h.p9.TIER_2),
-            I = (0, d.Z)(n),
+            P = (0, s.m)(h.p9.TIER_2),
+            I = (0, u.Z)(n),
             N = C === i.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK;
         if (!N) return t;
         let Z = () => {
-                S(p.L.TAKE_ACTION);
-            },
-            w = () => {
                 S(p.L.USER_DISMISS);
             },
-            E = b(P, null != I ? I : null),
-            T = v(E),
-            A = y(E);
+            w = b(P, null != I ? I : null),
+            E = v(w),
+            T = y(w);
         return (0, r.jsx)(o.yRy, {
             shouldShow: N,
-            onRequestClose: w,
+            onRequestClose: Z,
             renderPopout: () =>
-                (0, r.jsx)(s.Z, {
-                    onClose: w,
-                    onDismissIconClick: w,
+                (0, r.jsx)(d.Z, {
+                    className: g.chatWallpaperDMListCoachmark,
+                    onClose: Z,
                     contentClassName: g.chatWallpaperDMListCoachmarkContent,
                     pointerClassName: g.chatWallpaperDMListCoachmarkPointer,
-                    onTryFeature: Z,
-                    position: 'right',
-                    align: 'top',
-                    tryItText: f.NW.string(f.t['+IrDzM']),
-                    header: T,
-                    hideDismissButton: !0,
+                    buttonText: f.NW.string(f.t['+IrDzM']),
+                    header: E,
                     art: (0, r.jsx)('img', {
                         src: m.Z,
                         alt: '',
                         className: g.chatWallpaperDMListCoachmarkArt
                     }),
-                    inlineArt: !0,
-                    body: A,
-                    dismissibleContent: i.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-                    tryItButtonColor: o.zxk.Colors.BRAND
+                    body: T
                 }),
             children: () => t
         });
