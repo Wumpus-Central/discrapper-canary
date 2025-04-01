@@ -38,18 +38,17 @@ function I(e) {
         S = (0, l.e7)([E.Z], () => E.Z.isVisible(e)),
         T = (0, l.e7)([m.Z], () => m.Z.can(v.Plq.ADMINISTRATOR, e)),
         P = null != y && Date.now() - y <= v.Dge,
-        j = null != e ? e.premiumSubscriberCount : 0,
-        A = (0, N.rF)(j, n) !== v.Eu4.NONE,
-        Z = !(null != r && Date.now() - r <= 43200000) && !P && T && A,
-        x = (0, s.m)(n),
-        L = (0, l.e7)([_.Z], () => _.Z.isVisible(e)),
-        w = d.Z.useShouldShowChannelNotice(n),
-        R = (0, p.h6)(e),
-        { enableStudyGroup: D } = (0, u.s)(e),
-        k = R.length > 0,
-        M = D && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
-        U = (0, c.Vm)(n),
-        G = (0, l.e7)([f.Z], () => null != f.Z.getActiveGuildSignUp(n));
+        j = (0, N.Jh)(n) !== v.Eu4.NONE,
+        A = !(null != r && Date.now() - r <= 43200000) && !P && T && j,
+        Z = (0, s.m)(n),
+        x = (0, l.e7)([_.Z], () => _.Z.isVisible(e)),
+        L = d.Z.useShouldShowChannelNotice(n),
+        w = (0, p.h6)(e),
+        { enableStudyGroup: R } = (0, u.s)(e),
+        D = w.length > 0,
+        k = R && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
+        M = (0, c.Vm)(n),
+        U = (0, l.e7)([f.Z], () => null != f.Z.getActiveGuildSignUp(n));
     if (
         (i.useEffect(() => {
             a.Z.getGuildEventsForCurrentUser(n);
@@ -57,7 +56,7 @@ function I(e) {
         i.useEffect(() => {
             let e = -1;
             return (
-                Z &&
+                A &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, o.C0)(n);
@@ -68,17 +67,17 @@ function I(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, Z]),
+        }, [n, A]),
         C)
     )
         return 0;
     if (I) return 1;
     if (S) return 2;
-    if (x || null != U) return 3;
-    if (L) return 4;
-    else if (w) return 5;
-    else if (k) return 6;
-    else if (M) return 7;
-    else if (G) return 8;
+    if (Z || null != M) return 3;
+    if (x) return 4;
+    else if (L) return 5;
+    else if (D) return 6;
+    else if (k) return 7;
+    else if (U) return 8;
     return null;
 }

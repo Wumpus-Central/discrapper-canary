@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(789020), n(47120);
+n.d(t, { Z: () => E }), n(789020), n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(533800),
@@ -6,37 +6,36 @@ var r = n(200651),
     l = n(447543),
     s = n(100527),
     c = n(906732),
-    d = n(576306),
-    u = n(857395),
+    u = n(576306),
+    d = n(857395),
     p = n(358555),
     m = n(955415),
     f = n(131704),
     h = n(630388),
-    g = n(267642),
-    _ = n(411198),
-    b = n(277707),
-    v = n(358595),
-    y = n(981631),
+    g = n(411198),
+    _ = n(277707),
+    b = n(358595),
+    v = n(981631),
     x = n(388032),
-    E = n(217480);
-function O(e) {
-    var t, O;
-    let j,
-        N,
+    y = n(949862);
+function E(e) {
+    var t, E, O;
+    let N,
+        j,
         C,
-        { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: P, invite: T, author: A, currentUserId: w } = e,
+        { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: P, author: A, currentUserId: w } = e,
         Z = w === A.id,
-        { channel: k, approximate_member_count: R, approximate_presence_count: L } = T,
-        D = T.state === y.r2o.ACCEPTING,
+        { channel: k, approximate_member_count: R, approximate_presence_count: D } = P,
+        L = P.state === v.r2o.ACCEPTING,
         M = null != k ? (0, f.jD)(k) : null,
-        W = null != P,
-        F = null != M,
-        U = null != M && M.isGuildVocal(),
+        W = null != T,
+        U = null != M,
+        F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
-        G = (0, h.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
-        H = null !== (O = null == P ? void 0 : P.hasFeature(y.oNc.HUB)) && void 0 !== O && O,
-        V = (0, d.h)(),
-        z = null == P ? void 0 : P.id,
+        G = (0, h.yE)(null !== (t = P.flags) && void 0 !== t ? t : 0, a.$.IS_GUEST_INVITE),
+        H = null !== (E = null == T ? void 0 : T.hasFeature(v.oNc.HUB)) && void 0 !== E && E,
+        V = (0, u.h)(),
+        z = null == T ? void 0 : T.id,
         { analyticsLocations: K } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [Y, X] = i.useState(!1),
         q = i.useCallback(() => X(!1), []),
@@ -46,16 +45,14 @@ function O(e) {
         }, [z, K, V, W, I]),
         J = i.useCallback(() => {
             let e = 'noop';
-            W ? (I(), (e = 'transition')) : (S(), (e = 'accept')), (0, l.r$)(T, e, K);
-        }, [T, K, W, I, S]);
-    if (null == P) {
-        if (null == T.guild) return (0, r.jsx)(v.Z, {});
-        P = _.Qs(T.guild);
-        let e = (0, g.rF)(T.guild.premium_subscription_count, T.guild.id);
-        P.premiumTier = e;
+            W ? (I(), (e = 'transition')) : (S(), (e = 'accept')), (0, l.r$)(P, e, K);
+        }, [P, K, W, I, S]);
+    if (null == T) {
+        if (null == P.guild) return (0, r.jsx)(b.Z, {});
+        (T = g.Qs(P.guild)).premiumTier = null !== (O = P.guild.premium_tier) && void 0 !== O ? O : v.Eu4.NONE;
     }
-    let $ = (0, b.e)({
-        isVoiceChannel: U,
+    let $ = (0, _.e)({
+        isVoiceChannel: F,
         isOwnInvite: Z,
         isGuest: G,
         isHubGuild: H,
@@ -63,20 +60,20 @@ function O(e) {
         isStream: !1
     });
     return (
-        (N = (0, r.jsxs)('span', {
-            className: E.infoTitle,
+        (j = (0, r.jsxs)('span', {
+            className: y.infoTitle,
             children: [
-                (0, r.jsx)(u.Z, {
-                    guildId: P.id,
-                    name: P.name,
+                (0, r.jsx)(d.Z, {
+                    guildId: T.id,
+                    name: T.name,
                     shouldShow: Y,
                     onRequestClose: q,
-                    children: () => (0, r.jsx)(m.Z.GuildName, { guild: P })
+                    children: () => (0, r.jsx)(m.Z.GuildName, { guild: T })
                 }),
                 (0, r.jsx)('span', {
-                    className: E.infoBadge,
+                    className: y.infoBadge,
                     children: (0, r.jsx)(p.Z, {
-                        guild: P,
+                        guild: T,
                         isBannerVisible: !1,
                         disableBoostClick: !0
                     })
@@ -85,42 +82,42 @@ function O(e) {
         })),
         G &&
             (C = (0, r.jsx)(o.DY3, {
-                className: E.tooltipContainer,
+                className: y.tooltipContainer,
                 text: x.NW.string(x.t['/FeTKy']),
                 children: (0, r.jsx)(o.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.infoIcon
+                    className: y.infoIcon
                 })
             })),
-        U
-            ? ((N = (0, r.jsx)(m.Z.Channel, { channel: M })),
-              (j = (0, r.jsxs)('span', {
-                  className: E.infoTitle,
+        F
+            ? ((j = (0, r.jsx)(m.Z.Channel, { channel: M })),
+              (N = (0, r.jsxs)('span', {
+                  className: y.infoTitle,
                   children: [
-                      x.NW.format(x.t['2wimj4'], { guildName: P.name }),
+                      x.NW.format(x.t['2wimj4'], { guildName: T.name }),
                       (0, r.jsx)('span', {
-                          className: E.infoBadge,
+                          className: y.infoBadge,
                           children: (0, r.jsx)(p.Z, {
-                              guild: P,
+                              guild: T,
                               isBannerVisible: !1
                           })
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != L && L > 0)
-              ? (j = (0, r.jsx)(m.Z.Data, {
+            : (null != R && R >= 5) || (null != D && D > 0)
+              ? (N = (0, r.jsx)(m.Z.Data, {
                     members: R,
-                    membersOnline: L
+                    membersOnline: D
                 }))
-              : F &&
-                (j = (0, r.jsx)(m.Z.Channel, {
+              : U &&
+                (N = (0, r.jsx)(m.Z.Channel, {
                     channel: M,
-                    guild: P
+                    guild: T
                 })),
         (0, r.jsxs)(m.Z, {
             children: [
-                (0, r.jsx)(m.Z.GuildSplash, { guild: P }),
+                (0, r.jsx)(m.Z.GuildSplash, { guild: T }),
                 (0, r.jsx)(m.Z.Header, {
                     text: $,
                     extra: C
@@ -128,35 +125,35 @@ function O(e) {
                 (0, r.jsxs)(m.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: E.headerLine,
+                            className: y.headerLine,
                             children: [
-                                (0, r.jsx)(m.Z.Icon, { guild: P }),
+                                (0, r.jsx)(m.Z.Icon, { guild: T }),
                                 (0, r.jsx)(m.Z.Info, {
-                                    title: N,
+                                    title: j,
                                     onClick: Q,
-                                    children: j
+                                    children: N
                                 })
                             ]
                         }),
                         (0, r.jsx)(m.Z.Button, {
                             onClick: J,
-                            submitting: D,
+                            submitting: L,
                             color: m.Z.Button.Colors.GREEN,
-                            children: U ? (B ? x.NW.string(x.t['7vb2cX']) : x.NW.string(x.t.gpqgam)) : W ? x.NW.string(x.t.cEnaW1) : x.NW.string(x.t.XpeFYm)
+                            children: F ? (B ? x.NW.string(x.t['7vb2cX']) : x.NW.string(x.t.gpqgam)) : W ? x.NW.string(x.t.cEnaW1) : x.NW.string(x.t.XpeFYm)
                         })
                     ]
                 }),
-                P.hasFeature(y.oNc.HUB) &&
+                T.hasFeature(v.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: E.separator }),
+                            (0, r.jsx)('div', { className: y.separator }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: x.NW.format(x.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, o.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('95468'), n.e('26812')]).then(n.bind(n, 650233));
+                                            let { default: e } = await Promise.all([n.e('95468'), n.e('59127')]).then(n.bind(n, 650233));
                                             return (t) =>
                                                 (0, r.jsx)(
                                                     e,

@@ -69,6 +69,7 @@ function O(e) {
               : (N = y.NW.string(y.t['6JSOu7'])),
           (null == D ? void 0 : D.isViewable) &&
               L &&
+              !W &&
               (j = (0, r.jsx)(o.zxk, {
                   className: E.action,
                   onClick: () => {
