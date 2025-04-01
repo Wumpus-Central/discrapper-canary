@@ -1,7 +1,7 @@
 i.d(e, { Z: () => M }), i(47120), i(653041);
 var n = i(200651);
 i(192379);
-var l = i(115911),
+var l = i(252258),
     o = i(442837),
     a = i(481060),
     d = i(278323),
@@ -139,7 +139,7 @@ function M(t, e) {
                   : null != t && t.type === F.d4z.GUILD_VOICE
                     ? (0, a.ZDy)(
                           async () => {
-                              let { default: e } = await Promise.all([i.e('7654'), i.e('49049'), i.e('61960')]).then(i.bind(i, 560114));
+                              let { default: e } = await Promise.all([i.e('7654'), i.e('49049'), i.e('23134')]).then(i.bind(i, 560114));
                               return (i) => {
                                   var l, a;
                                   return (0, n.jsx)(
@@ -242,7 +242,7 @@ function M(t, e) {
                 locationObject: tn.location,
                 analyticsLocations: M,
                 instanceId: e.compositeInstanceId,
-                isContextlessActivity: e.location.kind === l.X.CONTEXTLESS
+                isContextlessActivity: e.location.kind === l.E.CONTEXTLESS
             });
         },
         tc = [];
@@ -271,34 +271,35 @@ function M(t, e) {
                         )
                     );
             }),
-        $.forEach((t, e) => {
-            t.type === F.IIU.PLAYING && (0, Y.Z)(t, F.xjy.JOIN)
-                ? tc.push(
-                      (0, n.jsx)(
-                          a.sNh,
-                          {
-                              id: 'invite-to-join',
-                              label: J.NW.string(J.t['3fRyS0']),
-                              subtext: t.name,
-                              action: () => tl(F.mFx.JOIN, t)
-                          },
-                          'self'.concat(e)
+        $.forEach((t, i) => {
+            (null == e ? void 0 : e.id) !== Z.default.getId() &&
+                (t.type === F.IIU.PLAYING && (0, Y.Z)(t, F.xjy.JOIN)
+                    ? tc.push(
+                          (0, n.jsx)(
+                              a.sNh,
+                              {
+                                  id: 'invite-to-join',
+                                  label: J.NW.string(J.t['3fRyS0']),
+                                  subtext: t.name,
+                                  action: () => tl(F.mFx.JOIN, t)
+                              },
+                              'self'.concat(i)
+                          )
                       )
-                  )
-                : t.type === F.IIU.LISTENING &&
-                  (0, Y.Z)(t, F.xjy.SYNC) &&
-                  tc.push(
-                      (0, n.jsx)(
-                          a.sNh,
-                          {
-                              id: 'invite-to-listen',
-                              label: J.NW.string(J.t['5vvGpa']),
-                              subtext: t.name,
-                              action: () => tl(F.mFx.LISTEN, t)
-                          },
-                          'self'.concat(e)
-                      )
-                  );
+                    : t.type === F.IIU.LISTENING &&
+                      (0, Y.Z)(t, F.xjy.SYNC) &&
+                      tc.push(
+                          (0, n.jsx)(
+                              a.sNh,
+                              {
+                                  id: 'invite-to-listen',
+                                  label: J.NW.string(J.t['5vvGpa']),
+                                  subtext: t.name,
+                                  action: () => tl(F.mFx.LISTEN, t)
+                              },
+                              'self'.concat(i)
+                          )
+                      ));
         }),
         tc.length > 0 && tc.push((0, n.jsx)(a.Clw, {})),
         z.forEach((i, l) => {
