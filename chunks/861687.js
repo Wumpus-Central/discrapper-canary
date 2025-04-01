@@ -22,8 +22,8 @@ var r,
     I = n(148959),
     S = n(815644),
     T = n(926951),
-    A = n(166884),
-    N = n(868616),
+    N = n(166884),
+    A = n(868616),
     C = n(450109),
     R = n(307320),
     P = n(615830),
@@ -329,7 +329,7 @@ class ev extends f.Z {
     _chooseExperiments(e) {
         let t = [];
         if ((this._recordingEnabled && t.push('connection_log'), null != this.guildId)) {
-            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = N.Z.getCurrentConfig(
+            let { shouldOverrideKrisp: e, overrideKrispSetting: n } = A.Z.getCurrentConfig(
                 {
                     guildId: this.guildId,
                     location: 'handleReady'
@@ -339,7 +339,7 @@ class ev extends f.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((L.Z.supports(eo.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let e = A.Z.workerExperimentString();
+            let e = N.Z.workerExperimentString();
             null != e && t.push(e);
         }
         (0, S.f)('RtcConnection').enabled && t.push('audio_transport_cc'), (this._selectedExperiments = t);
@@ -369,7 +369,7 @@ class ev extends f.Z {
             this.setState(ei.hes.AUTHENTICATING);
     }
     async _handleDisconnect(e, t, n, r) {
-        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, v, y, I, S, T, A;
+        var i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b, v, y, I, S, T, N;
         this.logger.info('Disconnected from RTC server, clean: '.concat(t, ', code: ').concat(n, ', reason: ').concat(r, ', state: ').concat(this.state)),
             t ||
                 !this._connecting ||
@@ -385,8 +385,8 @@ class ev extends f.Z {
                 ),
                 (this._encountered_socket_failure = !0)),
             x.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
-        let N = 'Force Close' !== r;
-        if (N) {
+        let A = 'Force Close' !== r;
+        if (A) {
             let e = this._backoff.fail(this.reconnect);
             this.logger.warn('Disconnect was not clean! reason='.concat(r, '. Reconnecting in ').concat((e / 1000).toFixed(2), ' seconds.'));
         }
@@ -445,42 +445,57 @@ class ev extends f.Z {
                             )
                         );
                 }));
-            let t = k.Z.shouldIncludePreferredRegion() ? k.Z.getPreferredRegion() : null,
-                n = await (null === (c = this._systemResources) || void 0 === c ? void 0 : c.getBatteryLevelStats()),
+            let t = this.getMediaSessionId();
+            L.Z.getMediaEngine()
+                .getCodecSurvey()
+                .then((e) => {
+                    let n = JSON.parse(e);
+                    if (null == n || null == n.available_video_encoders || null == n.available_video_decoders) throw Error('codec survey is not available');
+                    U.default.track(
+                        ei.rMx.VOICE_CODEC_DETECTED,
+                        ec(es({}, n), {
+                            rtc_connection_id: this.getRTCConnectionId(),
+                            media_session_id: t
+                        })
+                    );
+                })
+                .catch((e) => {
+                    this.logger.warn(e);
+                }),
+                this._trackMLSFailures();
+            let n = k.Z.shouldIncludePreferredRegion() ? k.Z.getPreferredRegion() : null,
                 i = L.Z.getSettings(),
                 o = D.Z.getChannel(this.channelId),
-                a = null === (d = C.Z.getConnectionStats().find((e) => e.connection.context === eo.Yn.DEFAULT)) || void 0 === d ? void 0 : null === (u = d.stats.rtp.outbound.find((e) => 'audio' === e.type)) || void 0 === u ? void 0 : u.sampleRateMismatchPercent;
-            U.default.track(
-                ei.rMx.VOICE_DISCONNECT,
-                ec(
+                a = null === (u = C.Z.getFirstConnectionStatsByContext(eo.Yn.DEFAULT)) || void 0 === u ? void 0 : null === (c = u.stats.rtp.outbound.find((e) => 'audio' === e.type)) || void 0 === c ? void 0 : c.sampleRateMismatchPercent,
+                s = ec(
                     es(
                         ec(es({}, this._getAnalyticsProperties()), {
                             hostname: this.hostname,
                             port: this.port,
                             protocol: this.protocol,
-                            reconnect: N,
+                            reconnect: A,
                             reason: r,
                             duration: this.getDuration()
                         }),
-                        null === (f = this._voiceQuality) || void 0 === f ? void 0 : f.getMosStats(),
-                        null === (_ = this._voiceQuality) || void 0 === _ ? void 0 : _.getPacketStats(),
-                        null === (p = this._voiceQuality) || void 0 === p ? void 0 : p.getBytesStats(),
-                        null === (h = this._voiceQuality) || void 0 === h ? void 0 : h.getBufferStats(),
-                        null === (m = this._voiceQuality) || void 0 === m ? void 0 : m.getNetworkStats(),
-                        null === (g = this._voiceQuality) || void 0 === g ? void 0 : g.getSystemResourceStats(),
-                        null === (E = this._voiceQuality) || void 0 === E ? void 0 : E.getFrameOpStats(),
-                        null === (b = this._voiceQuality) || void 0 === b ? void 0 : b.getDurationStats(),
-                        null === (v = this._voiceQuality) || void 0 === v ? void 0 : v.getTransportStats(),
-                        null === (y = this._voiceQuality) || void 0 === y ? void 0 : y.getE2EEStats(),
-                        null === (I = this._voiceQuality) || void 0 === I ? void 0 : I.getAudioDeviceStats(),
-                        null === (S = this._voiceDuration) || void 0 === S ? void 0 : S.getDurationStats(),
+                        null === (d = this._voiceQuality) || void 0 === d ? void 0 : d.getMosStats(),
+                        null === (f = this._voiceQuality) || void 0 === f ? void 0 : f.getPacketStats(),
+                        null === (_ = this._voiceQuality) || void 0 === _ ? void 0 : _.getBytesStats(),
+                        null === (p = this._voiceQuality) || void 0 === p ? void 0 : p.getBufferStats(),
+                        null === (h = this._voiceQuality) || void 0 === h ? void 0 : h.getNetworkStats(),
+                        null === (m = this._voiceQuality) || void 0 === m ? void 0 : m.getSystemResourceStats(),
+                        null === (g = this._voiceQuality) || void 0 === g ? void 0 : g.getFrameOpStats(),
+                        null === (E = this._voiceQuality) || void 0 === E ? void 0 : E.getDurationStats(),
+                        null === (b = this._voiceQuality) || void 0 === b ? void 0 : b.getTransportStats(),
+                        null === (v = this._voiceQuality) || void 0 === v ? void 0 : v.getE2EEStats(),
+                        null === (y = this._voiceQuality) || void 0 === y ? void 0 : y.getAudioDeviceStats(),
+                        null === (I = this._voiceDuration) || void 0 === I ? void 0 : I.getDurationStats(),
                         this.getAudioDeviceStates(),
-                        null === (T = this._systemResponsiveness) || void 0 === T ? void 0 : T.getPttQueueLatencyStats()
+                        null === (S = this._systemResponsiveness) || void 0 === S ? void 0 : S.getPttQueueLatencyStats()
                     ),
                     {
                         media_session_id: this.getMediaSessionId(),
                         channel_bitrate: null != o ? o.bitrate : null,
-                        cloudflare_best_region: t,
+                        cloudflare_best_region: n,
                         connect_count: this._connectCount,
                         ping_average: Math.round(this.getAveragePing()),
                         ping_bad_count: this._pingBadCount,
@@ -500,41 +515,23 @@ class ev extends f.Z {
                         encryption_mode: this._encryptionMode,
                         channel_count: this.channelIds.size,
                         device_performance_class: (0, O.Z)(),
-                        num_fast_udp_reconnects: null != this._connection ? (null === (A = this._connection) || void 0 === A ? void 0 : A.getNumFastUdpReconnects()) : null,
+                        num_fast_udp_reconnects: null != this._connection ? (null === (T = this._connection) || void 0 === T ? void 0 : T.getNumFastUdpReconnects()) : null,
                         parent_media_session_id: this.parentMediaSessionId,
                         audio_subsystem: L.Z.getMediaEngine().getAudioSubsystem(),
                         audio_layer: L.Z.getMediaEngine().getAudioLayer(),
                         automatic_audio_subsystem: i.automaticAudioSubsystem,
                         participant_type: this.getVoiceParticipantType(),
-                        audio_capture_sample_rate_mismatch_percent: a,
-                        battery_usage: null == n ? void 0 : n.batteryUsageRounded
+                        audio_capture_sample_rate_mismatch_percent: a
                     }
-                )
-            );
-            let s = this.getMediaSessionId();
-            L.Z.getMediaEngine()
-                .getCodecSurvey()
-                .then((e) => {
-                    let t = JSON.parse(e);
-                    if (null == t || null == t.available_video_encoders || null == t.available_video_decoders) throw Error('codec survey is not available');
-                    U.default.track(
-                        ei.rMx.VOICE_CODEC_DETECTED,
-                        ec(es({}, t), {
-                            rtc_connection_id: this.getRTCConnectionId(),
-                            media_session_id: s
-                        })
-                    );
-                })
-                .catch((e) => {
-                    this.logger.warn(e);
-                }),
-                this._trackMLSFailures();
+                ),
+                l = await (null === (N = this._systemResources) || void 0 === N ? void 0 : N.getBatteryLevelStats());
+            U.default.track(ei.rMx.VOICE_DISCONNECT, ec(es({}, s), { battery_usage: null == l ? void 0 : l.batteryUsageRounded }));
         }
         if (((this._pingTimeouts = []), (this._pings = []), (this._connectCompletedTime = 0), (this._pingBadCount = 0), (this._inputDetected = !1), (this._mediaSessionId = null), null === (i = this._voiceQuality) || void 0 === i || i.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), null === (o = this._voiceDuration) || void 0 === o || o.stop(), (this._voiceDuration = null), null === (a = this._videoQuality) || void 0 === a || a.stop(), (this._videoQuality = null), (this._videoHealthManager = null), null === (s = this._localMediaSinkWantsManager) || void 0 === s || s.reset(), (this._secureFramesState = null), (this._userIds = new Set([this.userId])), this._secureFramesRosterMap.clear(), null != this._connection)) {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
-        this.setState(ei.hes.DISCONNECTED, { willReconnect: N });
+        this.setState(ei.hes.DISCONNECTED, { willReconnect: A });
     }
     _handleResuming(e) {
         var t, n;
