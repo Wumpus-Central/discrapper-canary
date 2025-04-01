@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => U }), n(47120);
+n.d(t, { ZP: () => G }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(605436),
-    p = n(663993),
-    g = n(540059),
+    g = n(663993),
+    p = n(540059),
     h = n(518738),
     f = n(786761),
     b = n(3148),
@@ -19,20 +19,20 @@ var r = n(200651),
     N = n(496675),
     v = n(764260),
     _ = n(95242),
-    O = n(541575),
-    y = n(420966),
-    C = n(337344),
+    C = n(541575),
+    O = n(420966),
+    y = n(337344),
     I = n(275296),
     E = n(203377),
     S = n(981631),
     T = n(388032),
-    P = n(866476),
-    w = n(29931),
+    P = n(843001),
+    w = n(640453),
     R = n(179517),
-    D = n(79829);
-let Z = (0, p.Un)({
-        createPromise: () => n.e('4848').then(n.bind(n, 336231)),
-        webpackId: 336231
+    Z = n(79829);
+let D = (0, g.Un)({
+        createPromise: () => n.e('4848').then(n.bind(n, 797967)),
+        webpackId: 797967
     }),
     A = o().debounce((e, t) => (0, v.Uv)(e, t), 200);
 function k(e) {
@@ -69,7 +69,7 @@ function W(e) {
                 children: T.NW.string(T.t['9UCxlZ'])
             }),
             (0, r.jsx)(
-                Z,
+                D,
                 {
                     defaultColor: S.p6O,
                     colors: S.pmI,
@@ -87,10 +87,10 @@ function W(e) {
     });
 }
 function L(e) {
-    var t, s;
-    let { role: a, guildId: l } = e,
-        o =
-            ((s = T.NW.string(T.t.Mi9KbW)),
+    var t, s, a, l, o;
+    let { role: c, guildId: m } = e,
+        g =
+            ((o = T.NW.string(T.t.Mi9KbW)),
             i.useMemo(() => {
                 var e, t;
                 let r = (0, f.e5)(
@@ -122,7 +122,7 @@ function L(e) {
                         {},
                         (0, b.ZP)({
                             channelId: '1337',
-                            content: s
+                            content: o
                         })
                     )),
                     (t = t =
@@ -154,27 +154,32 @@ function L(e) {
                     (r.author.getAvatarURL = () => n(52008)),
                     r
                 );
-            }, [s])),
-        c = {
-            nick: o.author.username,
-            colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
+            }, [o])),
+        N = {
+            nick: g.author.username,
+            colorStrings: {
+                primaryColor: null === (t = c.colorStrings) || void 0 === t ? void 0 : t.primaryColor,
+                secondaryColor: null === (s = c.colorStrings) || void 0 === s ? void 0 : s.secondaryColor,
+                tertiaryColor: null === (a = c.colorStrings) || void 0 === a ? void 0 : a.tertiaryColor
+            },
+            colorString: null !== (l = c.colorString) && void 0 !== l ? l : void 0
         },
-        m = {
+        v = {
             src: R,
-            name: a.name
+            name: c.name
         },
-        p = {
-            src: D,
-            name: a.name
+        _ = {
+            src: Z,
+            name: c.name
         },
-        N = (0, h.oC)(l, a),
-        v = (0, g.Q3)('RolePreview') ? [S.BRd.LIGHT, S.BRd.DARK, S.BRd.DARKER, S.BRd.MIDNIGHT] : [S.BRd.LIGHT, S.BRd.DARK];
+        C = (0, h.oC)(m, c),
+        O = (0, p.Q3)('RolePreview') ? [S.BRd.LIGHT, S.BRd.DARK, S.BRd.DARKER, S.BRd.MIDNIGHT] : [S.BRd.LIGHT, S.BRd.DARK];
     return (0, r.jsx)(u.Rny, {
         children: (0, r.jsx)('div', {
             className: P.previewContainer,
             'aria-hidden': !0,
             'data-disable-adaptive-theme': !0,
-            children: v.map((e) =>
+            children: O.map((e) =>
                 (0, r.jsx)(
                     u.f6W,
                     {
@@ -185,9 +190,9 @@ function L(e) {
                                 children: (0, r.jsx)('div', {
                                     className: P.messageContainer,
                                     children: (0, r.jsx)(x.Z, {
-                                        author: c,
-                                        message: o,
-                                        roleIcon: null != N ? N : (0, d.ap)(e) ? p : m,
+                                        author: N,
+                                        message: g,
+                                        roleIcon: null != C ? C : (0, d.ap)(e) ? _ : v,
                                         isGroupStart: !0
                                     })
                                 })
@@ -222,24 +227,24 @@ function M(e) {
         ]
     });
 }
-function U(e) {
+function G(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: s } = e,
         l = (0, m.pM)(null == t ? void 0 : t.id, n.id),
         o = i || l,
         d = (0, c.e7)([N.Z], () => N.Z.canImpersonateRole(t, n)),
-        { headerHeight: p, headerRef: g } = (0, _.Z)(0),
-        { scrolledToTop: h, handleScroll: f } = (0, y.V)();
+        { headerHeight: g, headerRef: p } = (0, _.Z)(0),
+        { scrolledToTop: h, handleScroll: f } = (0, O.V)();
     return (0, r.jsx)(u.yWw, {
         className: P.scroller,
-        style: { scrollPaddingTop: p },
+        style: { scrollPaddingTop: g },
         onScroll: f,
         children: (0, r.jsxs)('div', {
             className: w.contentWidth,
             children: [
                 (0, r.jsx)('div', {
                     className: a()(w.header, w.stickyHeader, { [w.stickyHeaderElevated]: !h }),
-                    ref: g,
-                    children: (0, r.jsx)(y.Z, {
+                    ref: p,
+                    children: (0, r.jsx)(O.Z, {
                         guild: t,
                         role: n,
                         selectedSection: E.ZI.DISPLAY,
@@ -259,7 +264,7 @@ function U(e) {
                     role: n,
                     disabled: o
                 }),
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(C.Z, {
                     guild: t,
                     disabled: o,
                     role: n
@@ -277,7 +282,7 @@ function U(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.$i$, { className: P.divider }),
-                              (0, r.jsx)(C.L, {
+                              (0, r.jsx)(y.L, {
                                   guildId: t.id,
                                   role: n
                               })

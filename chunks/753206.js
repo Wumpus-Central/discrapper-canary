@@ -1,78 +1,85 @@
-n.d(t, { Z: () => f });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    s = n(628238),
-    a = n(492593),
-    u = n(25015),
-    d = n(963550),
-    c = n(845080),
-    h = n(656017);
-let f = r.memo(function (e) {
-    var t, n, r;
-    let { message: l, channel: f, compact: p, className: g, isGroupStart: v, hideSimpleEmbedContent: C = !0, disableInteraction: E } = e,
-        O = (0, s.A)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()),
-        { content: m } = (0, u.Z)(l, {
-            hideSimpleEmbedContent: C,
-            allowList: O,
-            allowHeading: O,
+n.d(t, { Z: () => g });
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    a = n(628238),
+    s = n(367814),
+    u = n(739566),
+    c = n(492593),
+    d = n(25015),
+    p = n(963550),
+    f = n(845080),
+    v = n(649547);
+let g = i.memo(function (e) {
+    var t, n, i, o;
+    let { message: g, channel: m, compact: b, className: y, isGroupStart: h, hideSimpleEmbedContent: O = !0, disableInteraction: _ } = e,
+        j = (0, u.ZP)(g),
+        S = null !== (t = g.getGuildId()) && void 0 !== t ? t : void 0,
+        E = (0, s.Z)(j),
+        w = (0, a.A)((null !== (n = g.editedTimestamp) && void 0 !== n ? n : g.timestamp).valueOf()),
+        { content: N } = (0, d.Z)(g, {
+            hideSimpleEmbedContent: O,
+            allowList: w,
+            allowHeading: w,
             allowLinks: !0,
             previewLinkTarget: !0
         });
-    return (0, i.jsx)(a.Z, {
-        compact: p,
-        className: o()(g, {
-            [h.message]: !0,
-            [h.cozyMessage]: !p,
-            [h.groupStart]: v
+    return (0, r.jsx)(c.Z, {
+        compact: b,
+        className: l()(y, {
+            [v.message]: !0,
+            [v.cozyMessage]: !b,
+            [v.groupStart]: h
         }),
-        childrenHeader: (0, c.Z)(
-            ((n = (function (e) {
+        childrenHeader: (0, f.Z)(
+            ((i = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
+                        r = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: i,
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = i);
+                                    : (e[t] = r);
                         });
                 }
                 return e;
             })({}, e)),
-            (r = r =
+            (o = o =
                 {
-                    channel: f,
+                    channel: m,
                     guildId: void 0
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, i);
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(r)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                  })(Object(o)).forEach(function (e) {
+                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                   }),
-            n)
+            i)
         ),
-        childrenMessageContent: (0, d.Z)(e, m),
-        disableInteraction: E
+        childrenMessageContent: (0, p.Z)(e, N),
+        disableInteraction: _,
+        authorHasGradientRole: E,
+        guildId: S
     });
 });

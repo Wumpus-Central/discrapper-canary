@@ -47,6 +47,7 @@ var a = {
     contents: 'contents_c19a55',
     zalgo: 'zalgo_c19a55',
     messageContent: 'messageContent_c19a55',
+    gradient: 'gradient_c19a55',
     header: 'header_c19a55',
     buttonContainer: 'buttonContainer_c19a55',
     avatar: 'avatar_c19a55',
