@@ -12,6 +12,7 @@ function c(e) {
         p = (null == u ? void 0 : u.id) === t.author.id ? s.NW.string(s.t.huMLgY) : s.NW.format(s.t.PVAL4O, { username: null == d ? void 0 : d.nick });
     return (0, r.jsx)(l.Z, {
         channel: n,
+        message: t,
         compact: c,
         content: p
     });

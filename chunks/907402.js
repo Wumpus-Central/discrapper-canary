@@ -13,6 +13,10 @@ var r = {
     actions: 'actions__2dbe1',
     actionButton: 'actionButton__2dbe1',
     experimentActions: 'experimentActions__2dbe1',
-    previewButton: 'previewButton__2dbe1'
+    previewButton: 'previewButton__2dbe1',
+    guildIcon: 'guildIcon__2dbe1',
+    mask: 'mask__2dbe1',
+    guildAcronym: 'guildAcronym__2dbe1',
+    guildIconWithoutImage: 'guildIconWithoutImage__2dbe1'
 };
 e.exports = r;

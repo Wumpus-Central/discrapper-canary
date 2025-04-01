@@ -1,175 +1,178 @@
-t.d(n, {
-    KE: () => v,
-    KT: () => b,
-    ZP: () => f
+n.d(t, {
+    KE: () => b,
+    KT: () => m,
+    ZP: () => v
 }),
-    t(47120),
-    t(773603);
-var r = t(200651),
-    i = t(192379),
-    o = t(442837),
-    s = t(481060),
-    a = t(906732),
-    l = t(879892),
-    c = t(343649),
-    d = t(430824),
-    u = t(713081),
-    p = t(905128),
-    _ = t(535396),
-    x = t(981631);
-function m(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+    n(47120),
+    n(773603);
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    l = n(481060),
+    a = n(906732),
+    s = n(879892),
+    c = n(343649),
+    u = n(430824),
+    d = n(713081),
+    p = n(905128),
+    h = n(535396),
+    f = n(981631);
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (n) {
+            r.forEach(function (t) {
                 var r;
-                (r = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = r);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function b(e) {
+function m(e) {
     i.useEffect(() => {
-        null != e && (0, s.showToast)((0, s.createToast)(e, s.ToastType.FAILURE));
+        null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
     }, [e]);
 }
-function v(e, n) {
-    (0, s.ZDy)(async () => {
-        switch (n.type) {
-            case _.Us.LEVEL:
-                let { default: i } = await t.e('99014').then(t.bind(t, 271224));
-                return (t) =>
-                    (0, r.jsx)(
-                        i,
-                        m(
-                            {
-                                guildId: e,
-                                powerup: n
-                            },
-                            t
-                        )
-                    );
-            case _.Us.PERK: {
-                let { default: i } = await t.e('78718').then(t.bind(t, 640139));
-                return (t) =>
-                    (0, r.jsx)(
-                        i,
-                        m(
-                            {
-                                guildId: e,
-                                powerup: n
-                            },
-                            t
-                        )
-                    );
+function b(e, t) {
+    (0, l.ZDy)(
+        async () => {
+            switch (t.type) {
+                case h.Us.LEVEL:
+                    let { default: i } = await n.e('99014').then(n.bind(n, 271224));
+                    return (n) =>
+                        (0, r.jsx)(
+                            i,
+                            g(
+                                {
+                                    guildId: e,
+                                    powerup: t
+                                },
+                                n
+                            )
+                        );
+                case h.Us.PERK: {
+                    let { default: i } = await Promise.all([n.e('55666'), n.e('30642')]).then(n.bind(n, 326055));
+                    return (n) =>
+                        (0, r.jsx)(
+                            i,
+                            g(
+                                {
+                                    guildId: e,
+                                    powerup: t
+                                },
+                                n
+                            )
+                        );
+                }
             }
-        }
-    });
+        },
+        { modalKey: h.H2 }
+    );
 }
-function f(e, n) {
-    var b;
-    let { analyticsLocations: f } = (0, a.ZP)(),
-        [g, h] = i.useState(!1),
-        [j, Z] = i.useState(void 0),
-        C = (0, o.e7)([p.Z], () => {
-            var n, t;
-            return null !== (t = null === (n = p.Z.getStateForGuild(e)) || void 0 === n ? void 0 : n.appliedBoosts) && void 0 !== t ? t : 0;
+function v(e, t) {
+    var m;
+    let { analyticsLocations: v } = (0, a.ZP)(),
+        [y, _] = i.useState(!1),
+        [O, j] = i.useState(void 0),
+        x = (0, o.e7)([p.Z], () => {
+            var t, n;
+            return null !== (n = null === (t = p.Z.getStateForGuild(e)) || void 0 === t ? void 0 : t.appliedBoosts) && void 0 !== n ? n : 0;
         }),
-        N = (0, o.e7)([d.Z], () => d.Z.getGuild(e)),
-        w = Math.max((null !== (b = null == N ? void 0 : N.premiumSubscriberCount) && void 0 !== b ? b : 0) - C, 0),
-        I = i.useCallback(
-            (t) => {
-                let r = t ? u.H6 : u.Th;
+        C = (0, o.e7)([u.Z], () => u.Z.getGuild(e)),
+        S = Math.max((null !== (m = null == C ? void 0 : C.premiumSubscriberCount) && void 0 !== m ? m : 0) - x, 0),
+        P = i.useCallback(
+            (n) => {
+                let r = n ? d.H6 : d.Th;
                 return (
-                    h(!0),
-                    Z(void 0),
-                    r(e, n.skuId)
+                    _(!0),
+                    j(void 0),
+                    r(e, t.skuId)
                         .catch((e) => {
-                            var n;
-                            throw (Z(null !== (n = e.body.message) && void 0 !== n ? n : void 0), e);
+                            var t;
+                            throw (j(null !== (t = e.body.message) && void 0 !== t ? t : void 0), e);
                         })
                         .finally(() => {
-                            h(!1);
+                            _(!1);
                         })
                 );
             },
-            [e, n.skuId]
+            [e, t.skuId]
         ),
-        E = i.useCallback(
+        I = i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != N)) {
-                    if (w < n.cost) {
-                        (0, l.u)({
+                if ((e.stopPropagation(), null != C)) {
+                    if (S < t.cost) {
+                        (0, s.u)({
                             analyticsLocation: {
-                                page: x.ZY5.GUILD_POWERUPS_OVERVIEW,
-                                section: x.jXE.GUILD_POWERUPS_OVERVIEW_CARD
+                                page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
+                                section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                             },
-                            numberOfBoostsToAdd: n.cost - w,
-                            analyticsLocations: f,
-                            guild: N,
-                            intent: n.type === _.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
+                            numberOfBoostsToAdd: t.cost - S,
+                            analyticsLocations: v,
+                            guild: C,
+                            intent: t.type === h.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                             onSubscribeComplete: () =>
-                                I(!0).then(() => {
-                                    (0, s.ZDy)(async () => {
-                                        let { default: e } = await t.e('13965').then(t.bind(t, 666083));
-                                        return (t) => (0, r.jsx)(e, m({ powerup: n }, t));
+                                P(!0).then(() => {
+                                    (0, l.ZDy)(async () => {
+                                        let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                                        return (n) => (0, r.jsx)(e, g({ powerup: t }, n));
                                     });
                                 })
                         });
                         return;
                     }
-                    return I(!0).then(() => {
-                        (0, s.ZDy)(async () => {
-                            let { default: e } = await t.e('13965').then(t.bind(t, 666083));
-                            return (t) => (0, r.jsx)(e, m({ powerup: n }, t));
+                    return P(!0).then(() => {
+                        (0, l.ZDy)(async () => {
+                            let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                            return (n) => (0, r.jsx)(e, g({ powerup: t }, n));
                         });
                     });
                 }
             },
-            [I, n, w, f, N]
+            [P, t, S, v, C]
         ),
-        y = i.useCallback((e) => (e.stopPropagation(), I(!1)), [I]);
+        N = i.useCallback((e) => (e.stopPropagation(), P(!1)), [P]);
     return {
-        isLoading: g,
-        error: j,
-        onActivate: E,
-        onDeactivate: y,
+        isLoading: y,
+        error: O,
+        onActivate: I,
+        onDeactivate: N,
         onShowDeactivate: i.useCallback(
             (i) => {
                 i.stopPropagation(),
-                    (0, s.ZDy)(async () => {
-                        let { default: i } = await t.e('71415').then(t.bind(t, 625651));
-                        return (t) =>
+                    (0, l.ZDy)(async () => {
+                        let { default: i } = await n.e('31924').then(n.bind(n, 625651));
+                        return (n) =>
                             (0, r.jsx)(
                                 i,
-                                m(
+                                g(
                                     {
                                         guildId: e,
-                                        powerup: n
+                                        powerup: t
                                     },
-                                    t
+                                    n
                                 )
                             );
                     });
             },
-            [e, n]
+            [e, t]
         ),
         onShowMore: i.useCallback(() => {
-            v(e, n);
-        }, [e, n])
+            b(e, t);
+        }, [e, t])
     };
 }

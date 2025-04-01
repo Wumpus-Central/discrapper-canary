@@ -1,9 +1,13 @@
 n.d(t, {
+    H2: () => d,
+    IN: () => c,
+    If: () => u,
     NO: () => l,
-    UM: () => c,
     Us: () => s,
-    d5: () => u
-});
+    d5: () => _,
+    uc: () => f
+}),
+    n(47120);
 var r = n(267642),
     i = n(474936),
     o = n(981631),
@@ -14,7 +18,10 @@ var r = n(267642),
 let l = '1340102344645283891';
 o.Eu4.TIER_1, o.Eu4.TIER_2, o.Eu4.TIER_3;
 let c = '1351706802684952639',
-    u = () => ({
+    u = '1354906318279807056',
+    d = 'guild_powerup_modal',
+    f = new Set([c, u]),
+    _ = () => ({
         [o.oNc.VIDEO_BITRATE_ENHANCED]: {
             perkIcon: r.Ro.STREAM,
             description: a.NW.string(a.t.y4ft4O)

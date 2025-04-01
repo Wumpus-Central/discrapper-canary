@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(47120), n(301563), n(866573), n(642549), n(787622);
+n.d(t, { Z: () => N }), n(47120), n(301563), n(866573), n(642549), n(787622);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
@@ -9,7 +9,7 @@ var r = n(200651),
     d = n(281598),
     u = n(451593),
     m = n(694539),
-    g = n(146181);
+    g = n(256739);
 let p = "Make sure you're only uploading text files!",
     h = (e) => {
         var t, n, i;
@@ -50,29 +50,30 @@ let p = "Make sure you're only uploading text files!",
         name: 'New Profile Effect',
         config: { effects: [] }
     });
-function x() {
+function N() {
     let { profileEffects: e, upsertConfig: t } = (0, u.E)(),
         [n, s] = i.useState(),
-        l = i.useRef(null),
-        x = i.useCallback(
+        N = i.useRef(null),
+        b = i.useCallback(
             (e, n) => {
-                if (!e.type.startsWith('text/')) return (0, d.Eo)(p);
+                if (null == n || !e.type.startsWith('text/')) return (0, d.Eo)(p);
                 let [r, i] = n.split(',');
                 if (!r.includes('text/plain')) return (0, d.Eo)(p);
-                t(JSON.parse(atob(i))), (0, d.XA)('Profile Effect (maybe??) imported!');
+                let s = JSON.parse(atob(i));
+                (s.id = (0, l.Z)()), t(s), (0, d.XA)('Profile Effect (maybe??) imported!');
             },
             [t]
         ),
-        N = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 var t;
                 if ((null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null) {
                     (0, d.Eo)('Error uploading file. Try again!');
                     return;
                 }
-                (0, d.Kr)(e.currentTarget.files, x, d.Eo);
+                (0, d.Kr)(e.currentTarget.files, b, d.Eo);
             },
-            [x]
+            [b]
         );
     return (0, r.jsxs)('div', {
         className: g.root,
@@ -119,8 +120,8 @@ function x() {
                                             children: 'Import Shared Config'
                                         }),
                                         (0, r.jsx)(c.Z, {
-                                            ref: l,
-                                            onChange: N,
+                                            ref: N,
+                                            onChange: x,
                                             multiple: !1
                                         })
                                     ]

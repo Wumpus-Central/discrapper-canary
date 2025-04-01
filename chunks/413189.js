@@ -82,6 +82,7 @@ function O(e) {
               content: O,
               subtitle: N,
               action: j,
-              compact: S
+              compact: S,
+              message: C
           }));
 }
