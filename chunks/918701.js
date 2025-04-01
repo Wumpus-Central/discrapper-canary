@@ -2,7 +2,7 @@ n.d(t, {
     $H: () => eP,
     $J: () => e1,
     AV: () => eu,
-    B2: () => th,
+    B2: () => tm,
     B3: () => tl,
     BM: () => e4,
     Bg: () => em,
@@ -10,7 +10,7 @@ n.d(t, {
     C1: () => tr,
     C9: () => tn,
     Dr: () => eC,
-    F9: () => t_,
+    F9: () => tp,
     FE: () => ex,
     FI: () => td,
     FX: () => ep,
@@ -27,9 +27,10 @@ n.d(t, {
     PM: () => el,
     Qe: () => G,
     Rs: () => es,
-    Sf: () => tm,
+    Sf: () => tg,
     U3: () => X,
     V$: () => e8,
+    VB: () => t_,
     Vl: () => ez,
     WP: () => J,
     Xh: () => eo,
@@ -40,7 +41,7 @@ n.d(t, {
     _j: () => tt,
     _p: () => ts,
     b7: () => eY,
-    bA: () => tp,
+    bA: () => th,
     f$: () => ta,
     f2: () => eM,
     fY: () => e5,
@@ -810,15 +811,19 @@ function tf(e) {
         [T.jn.QUEST_BAR_MOBILE]: T.Ok.MOBILE_HOME_DOCK_AREA
     }[e];
 }
-let t_ = (e) => (e.percentComplete > 0 ? D.NW.formatToPlainString(D.t['c59/Tk'], { remainTime: eX(e) }) : D.NW.formatToPlainString(D.t.GNsKiY, { remainTime: eX(e) }));
-function tp(e, t) {
+function t_(e) {
+    let t = tf(e);
+    return null != t && R.v6.has(t);
+}
+let tp = (e) => (e.percentComplete > 0 ? D.NW.formatToPlainString(D.t['c59/Tk'], { remainTime: eX(e) }) : D.NW.formatToPlainString(D.t.GNsKiY, { remainTime: eX(e) }));
+function th(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function th(e) {
+function tm(e) {
     var t, n, r, i;
     return null !== (i = null !== (r = null === (t = e.videoMetadata) || void 0 === t ? void 0 : t.messages.videoEndCtaButtonLabel) && void 0 !== r ? r : null === (n = e.videoMetadata) || void 0 === n ? void 0 : n.messages.videoEndCtaTitle) && void 0 !== i ? i : D.NW.string(D.t.iiTtpK);
 }
-function tm(e) {
+function tg(e) {
     return null != e
         ? {
               campaignId: e.campaign_id,
