@@ -1,8 +1,8 @@
 n.d(t, {
-    Qf: () => f,
-    XV: () => d,
+    Qf: () => _,
+    XV: () => f,
     bV: () => p,
-    qt: () => _
+    qt: () => h
 }),
     n(47120);
 var r = n(392711),
@@ -179,10 +179,11 @@ let s = [
             midpointPercentage: 50
         }
     ],
-    l = [
+    l = o.BR.DARK,
+    c = [
         {
             id: i.Us.SUNSET,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_SUNSET_1,
@@ -199,7 +200,7 @@ let s = [
         },
         {
             id: i.Us.CHROMA_GLOW,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_CHROMA_GLOW_1,
@@ -228,7 +229,7 @@ let s = [
         },
         {
             id: i.Us.FOREST,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_FOREST_1,
@@ -257,7 +258,7 @@ let s = [
         },
         {
             id: i.Us.CRIMSON_MOON,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_CRIMSON_MOON_1,
@@ -274,7 +275,7 @@ let s = [
         },
         {
             id: i.Us.MIDNIGHT_BLURPLE,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_MIDNIGHT_BLURPLE_1,
@@ -291,7 +292,7 @@ let s = [
         },
         {
             id: i.Us.MARS,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_MARS_1,
@@ -308,7 +309,7 @@ let s = [
         },
         {
             id: i.Us.DUSK,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_DUSK_1,
@@ -325,7 +326,7 @@ let s = [
         },
         {
             id: i.Us.UNDER_THE_SEA,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_UNDER_THE_SEA_1,
@@ -346,7 +347,7 @@ let s = [
         },
         {
             id: i.Us.RETRO_STORM,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_RETRO_STORM_1,
@@ -371,7 +372,7 @@ let s = [
         },
         {
             id: i.Us.NEON_NIGHTS,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_NEON_NIGHTS_1,
@@ -392,7 +393,7 @@ let s = [
         },
         {
             id: i.Us.STRAWBERRY_LEMONADE,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_STRAWBERRY_LEMONADE_1,
@@ -413,7 +414,7 @@ let s = [
         },
         {
             id: i.Us.AURORA,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_AURORA_1,
@@ -442,7 +443,7 @@ let s = [
         },
         {
             id: i.Us.SEPIA,
-            theme: o.BR.DARK,
+            theme: l,
             colors: [
                 {
                     token: o.Il.BG_GRADIENT_SEPIA_1,
@@ -458,9 +459,9 @@ let s = [
             midpointPercentage: 50
         }
     ],
-    c = {
+    u = {
         id: i.Us.BLURPLE_TWILIGHT,
-        theme: o.BR.DARK,
+        theme: l,
         colors: [
             {
                 token: o.Il.BG_GRADIENT_BLURPLE_TWILIGHT_1,
@@ -475,7 +476,7 @@ let s = [
         getName: () => a.NW.string(a.t.Mfoe3t),
         midpointPercentage: 50
     },
-    u = {
+    d = {
         id: i.Us.EASTER_EGG,
         theme: o.BR.LIGHT,
         colors: [
@@ -492,11 +493,11 @@ let s = [
         getName: () => a.NW.string(a.t.mFinbW),
         midpointPercentage: 50
     },
-    d = [...s, ...l, c, u],
-    f = [c, ...l, ...s, u],
+    f = [...s, ...c, u, d],
+    _ = [u, ...c, ...s, d],
     p = [
         {
-            theme: o.BR.DARKER,
+            theme: l,
             getName: () => a.NW.string(a.t.b8Cei4)
         },
         {
@@ -512,4 +513,4 @@ let s = [
             getName: () => a.NW.string(a.t.zlvNOj)
         }
     ],
-    _ = (0, r.keyBy)(d, 'id');
+    h = (0, r.keyBy)(f, 'id');
