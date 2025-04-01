@@ -103,10 +103,8 @@ function Y(e) {
     g = t;
 }
 function K(e) {
-    let {
-        preset: { themeColors: t, bannerImage: n, avatarDecoration: r }
-    } = e;
-    (_ = t), (g = n), (h = r);
+    let { banner: t, themeColors: n, avatarDecoration: r } = e;
+    (g = t), (_ = n), (h = r);
 }
 function z() {
     r = void 0;

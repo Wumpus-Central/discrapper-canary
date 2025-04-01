@@ -1,64 +1,46 @@
 n.d(t, {
-    J2: () => p,
-    _h: () => h
+    Ib: () => s,
+    hq: () => i
 });
-var r = n(388032),
-    i = n(201016),
-    s = n(673497),
-    a = n(421450),
-    l = n(977787),
-    o = n(892814),
-    c = n(947557),
-    d = n(808236),
-    u = n(265665),
-    m = n(181793),
-    g = n(338430);
-let p = [
-    {
-        presetName: 'above_the_clouds',
-        presetBackgroundUrl: c.Z,
-        themeColors: [752280, 9215590],
-        bannerImageUrl: i.Z,
-        avatarDecorationSkuId: '1144059132517826601'
+var r = n(388032);
+let i = {
+        above_the_clouds: {
+            preset: 'above_the_clouds',
+            themeColors: [752280, 9215590],
+            avatarDecorationSkuId: '1144059132517826601',
+            getName: () => r.NW.string(r.t['TFc+iI']),
+            getHeaderSrc: () => n(947557).Z,
+            getBannerSrc: (e) => (e ? n(288097).Z : n(201016).Z)
+        },
+        cyberpunk: {
+            preset: 'cyberpunk',
+            themeColors: [1967991, 742532],
+            getName: () => r.NW.string(r.t['4g+5bm']),
+            getHeaderSrc: () => n(808236).Z,
+            getBannerSrc: (e) => (e ? n(957901).Z : n(673497).Z)
+        },
+        shadow_realm: {
+            preset: 'shadow_realm',
+            themeColors: [0, 4458504],
+            avatarDecorationSkuId: '1144058522808614923',
+            getName: () => r.NW.string(r.t.ycg1xs),
+            getHeaderSrc: () => n(265665).Z,
+            getBannerSrc: (e) => (e ? n(614357).Z : n(421450).Z)
+        },
+        starlit_dream: {
+            preset: 'starlit_dream',
+            themeColors: [5123751, 590625],
+            avatarDecorationSkuId: '1144058844004233369',
+            getName: () => r.NW.string(r.t['9WLHvr']),
+            getHeaderSrc: () => n(181793).Z,
+            getBannerSrc: (e) => (e ? n(848158).Z : n(977787).Z)
+        },
+        neon_space: {
+            preset: 'neon_space',
+            themeColors: [6094952, 1007678],
+            getName: () => r.NW.string(r.t.UdNuqq),
+            getHeaderSrc: () => n(338430).Z,
+            getBannerSrc: (e) => (e ? n(217258).Z : n(892814).Z)
+        }
     },
-    {
-        presetName: 'cyberpunk',
-        presetBackgroundUrl: d.Z,
-        themeColors: [1967991, 742532],
-        bannerImageUrl: s.Z
-    },
-    {
-        presetName: 'shadow_realm',
-        presetBackgroundUrl: u.Z,
-        themeColors: [0, 4458504],
-        bannerImageUrl: a.Z,
-        avatarDecorationSkuId: '1144058522808614923'
-    },
-    {
-        presetName: 'starlit_dream',
-        presetBackgroundUrl: m.Z,
-        themeColors: [5123751, 590625],
-        bannerImageUrl: l.Z,
-        avatarDecorationSkuId: '1144058844004233369'
-    },
-    {
-        presetName: 'neon_space',
-        presetBackgroundUrl: g.Z,
-        themeColors: [6094952, 1007678],
-        bannerImageUrl: o.Z
-    }
-];
-function h(e) {
-    switch (e) {
-        case 'above_the_clouds':
-            return r.NW.string(r.t['TFc+iI']);
-        case 'cyberpunk':
-            return r.NW.string(r.t['4g+5bm']);
-        case 'starlit_dream':
-            return r.NW.string(r.t['9WLHvr']);
-        case 'shadow_realm':
-            return r.NW.string(r.t.ycg1xs);
-        case 'neon_space':
-            return r.NW.string(r.t.UdNuqq);
-    }
-}
+    s = (e) => i[e];

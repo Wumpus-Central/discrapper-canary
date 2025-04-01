@@ -179,9 +179,5 @@ function A(e) {
         h(f.QP.PROFILE_THEME_COLOR);
 }
 function C(e) {
-    i.Z.dispatch({
-        type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
-        preset: e
-    }),
-        h(f.QP.PRESET);
+    i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET);
 }
