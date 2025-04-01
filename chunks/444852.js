@@ -155,7 +155,14 @@ class k extends s.Z {
         let h = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null,
             m = void 0 !== this._goliveCurrentMaxResolution && (this._goliveCurrentMaxResolution.height > 720 || 0 === this._goliveCurrentMaxResolution.height),
             g = 'unknown',
-            E = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
+            E =
+                null ===
+                    (n = e.find((e) => {
+                        var t;
+                        return e.mediaEngineConnectionId === (null === (t = this._connection) || void 0 === t ? void 0 : t.mediaEngineConnectionId);
+                    })) || void 0 === n
+                    ? void 0
+                    : n.stats;
         if (null != E && h) {
             let e = E.transport.inboundBitrateEstimate;
             null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > D && this._bandwidthSamples.shift(), this._bandwidthSamples.length === D && ((p = i().mean(this._bandwidthSamples)) > x ? (g = 'HQ') : p < L && (g = 'LQ')));
