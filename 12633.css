@@ -34210,7 +34210,8 @@ html:not(.visual-refresh) .root_e5f3a9 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 280px
+    min-height: 280px;
+    min-width: 402px
 }
 
 .trialHeader_e4d803 {
