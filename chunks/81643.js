@@ -76,7 +76,8 @@ function I(e) {
                 d.Z.showAgeVerification({
                     webviewUrl: t.verification_webview_url,
                     onComplete: e,
-                    onClose: c
+                    onClose: c,
+                    onCancel: c
                 });
             } catch (e) {
                 l.Z.showFailedToast(p.w.TIGGER_PAWTECT_ERROR), c();

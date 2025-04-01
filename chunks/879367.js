@@ -1,86 +1,90 @@
-a.d(t, { default: () => u });
-var o = a(200651),
-    s = a(192379),
-    n = a(120356),
-    c = a.n(n),
-    l = a(481060),
-    r = a(81643),
-    i = a(469775),
-    d = a(388032),
-    k = a(826180);
-let u = function (e) {
-    let { onClose: t, onComplete: a, transitionState: n, webviewUrl: u, useV1: f = !1 } = e,
-        x = s.useCallback(() => {
-            a(), t();
-        }, [a, t]),
-        N = s.useCallback(() => {
-            (0, l.nfh)(i.z) && x();
-        }, [x]);
-    (0, r.F5)(N);
-    let h = s.useCallback(
+t.d(o, { default: () => f });
+var s = t(200651),
+    a = t(192379),
+    n = t(120356),
+    l = t.n(n),
+    c = t(481060),
+    r = t(81643),
+    i = t(469775),
+    k = t(388032),
+    d = t(717049);
+let f = function (e) {
+    let { onClose: o, onComplete: t, onCancel: n, transitionState: f, webviewUrl: u, useV1: x = !1 } = e,
+        N = a.useCallback(() => {
+            t(), o();
+        }, [t, o]),
+        h = a.useCallback(() => {
+            (0, c.nfh)(i.z) && N();
+        }, [N]);
+    (0, r.F5)(h);
+    let m = a.useCallback(
         (e) => {
             if ('' !== u && 'string' == typeof e.data)
                 try {
-                    var t = JSON.parse(e.data);
-                    'AGE_CHECK_COMPLETE' === t.status && x();
+                    var o = JSON.parse(e.data);
+                    'AGE_CHECK_COMPLETE' === o.status && N();
                 } catch (e) {}
         },
-        [u, x]
+        [u, N]
     );
     return (
-        s.useEffect(
+        a.useEffect(
             () => (
-                window.addEventListener('message', h),
+                window.addEventListener('message', m),
                 () => {
-                    window.removeEventListener('message', h);
+                    window.removeEventListener('message', m);
                 }
             ),
-            [h]
+            [m]
         ),
-        (0, o.jsxs)(l.Y0X, {
-            transitionState: n,
-            className: k.root,
+        (0, s.jsxs)(c.Y0X, {
+            transitionState: f,
+            className: d.root,
             children: [
-                (0, o.jsxs)(l.hzk, {
-                    className: c()(k.content, { [k.fullbleed]: !f }),
+                (0, s.jsxs)(c.hzk, {
+                    className: l()(d.content, { [d.fullbleed]: !x }),
                     scrollbarType: 'none',
                     children: [
-                        f &&
-                            (0, o.jsx)(l.X6q, {
+                        x &&
+                            (0, s.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: d.NW.string(d.t.tYNaXF)
+                                children: k.NW.string(k.t.tYNaXF)
                             }),
-                        (0, o.jsx)('iframe', {
+                        (0, s.jsx)('iframe', {
                             id: 'frame',
                             src: u,
-                            className: k.iframe,
+                            className: d.iframe,
                             allow: 'camera; microphone'
                         })
                     ]
                 }),
-                (0, o.jsx)(l.mzw, {
-                    children: f
-                        ? (0, o.jsx)(l.zxk, {
-                              color: l.zxk.Colors.TRANSPARENT,
-                              look: l.zxk.Looks.BLANK,
-                              onClick: t,
-                              className: k.cancelButton,
-                              children: d.NW.string(d.t['4gTnU1'])
+                (0, s.jsx)(c.mzw, {
+                    children: x
+                        ? (0, s.jsx)(c.zxk, {
+                              color: c.zxk.Colors.TRANSPARENT,
+                              look: c.zxk.Looks.BLANK,
+                              onClick: o,
+                              className: d.cancelButton,
+                              children: k.NW.string(k.t['4gTnU1'])
                           })
-                        : (0, o.jsxs)('div', {
-                              className: k.footer,
+                        : (0, s.jsxs)('div', {
+                              className: d.footer,
                               children: [
-                                  (0, o.jsx)(l.zxk, {
-                                      color: l.zxk.Colors.TRANSPARENT,
-                                      look: l.zxk.Looks.BLANK,
-                                      onClick: t,
-                                      className: k.cancelButton,
-                                      children: d.NW.string(d.t['4gTnU1'])
+                                  (0, s.jsx)(c.zxk, {
+                                      color: c.zxk.Colors.TRANSPARENT,
+                                      look: c.zxk.Looks.BLANK,
+                                      onClick: o,
+                                      size: c.zxk.Sizes.SMALL,
+                                      className: d.footerButton,
+                                      children: k.NW.string(k.t.fjKFaW)
                                   }),
-                                  (0, o.jsx)(l.zxk, {
-                                      color: l.zxk.Colors.BRAND,
-                                      onClick: x,
-                                      children: d.NW.string(d.t.XYt3Ag)
+                                  (0, s.jsx)(c.zxk, {
+                                      color: c.zxk.Colors.TRANSPARENT,
+                                      look: c.zxk.Looks.BLANK,
+                                      size: c.zxk.Sizes.SMALL,
+                                      onClick: n,
+                                      className: d.footerButton,
+                                      children: k.NW.string(k.t['4gTnU1'])
                                   })
                               ]
                           })
