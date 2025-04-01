@@ -516,7 +516,7 @@ let et = o.memo(function (e) {
                         )
                     });
                 }
-                function ee() {
+                function ee(e) {
                     return (0, N.Z)(
                         f.author.id,
                         null != _.guildMemberAvatar && null != i
@@ -529,7 +529,8 @@ let et = o.memo(function (e) {
                             : f.author.getAvatarURL(void 0, 80, !1),
                         {
                             guildId: i,
-                            channelId: f.channel_id
+                            channelId: f.channel_id,
+                            abortSignal: e
                         }
                     );
                 }

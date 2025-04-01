@@ -22,11 +22,12 @@ n.d(t, {
     KM: () => ew,
     Kr: () => eh,
     LM: () => ey,
-    Nj: () => eN,
+    Nj: () => eA,
     OG: () => e9,
     PM: () => el,
     Qe: () => G,
     Rs: () => es,
+    Sf: () => tm,
     U3: () => X,
     V$: () => e8,
     Vl: () => ez,
@@ -99,8 +100,8 @@ var p = n(231757),
     S = n(569984),
     T = n(497505);
 n(306560);
-var A = n(75137),
-    N = n(566078),
+var N = n(75137),
+    A = n(566078),
     C = n(312046),
     R = n(46140),
     P = n(981631),
@@ -175,14 +176,14 @@ let B = (e) => e.application_id === w.Ev || e.platform === P.M7m.XBOX,
 function V(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
-        r = N.r.build(t.config).application.name.toLowerCase();
+        r = A.r.build(t.config).application.name.toLowerCase();
     return B(e) || F(e) ? n === r : null != e.application_id && H(e.application_id, t);
 }
 function Z(e, t) {
     for (let [n, r] of e) if (V(t, r) && !Y(r)) return r;
 }
 function H(e, t) {
-    return null != N.r.build(t.config).application.ids.find((t) => t === e);
+    return null != A.r.build(t.config).application.ids.find((t) => t === e);
 }
 function W(e, t) {
     let n;
@@ -465,12 +466,12 @@ function eT(e) {
         n = t.rewardsConfig;
     return n.assignmentMethod === s.j.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === c.w.REWARD_CODE);
 }
-function eA(e) {
+function eN(e) {
     return e.taskConfig.type === u.L.FIRST_PARTY && null != e.taskConfig.tasks[a.X.PLAY_ON_DESKTOP];
 }
-function eN(e) {
+function eA(e) {
     let { quest: t } = e;
-    return eA(t.config);
+    return eN(t.config);
 }
 function eC(e) {
     let { quest: t } = e;
@@ -480,14 +481,14 @@ function eR(e) {
     return e.config.taskConfig.type === u.L.FIRST_PARTY && null != e.config.taskConfig.tasks[a.X.PLAY_ACTIVITY];
 }
 function eP(e) {
-    return null != e && eN({ quest: e });
+    return null != e && eA({ quest: e });
 }
 function ew(e) {
-    let t = N.r.build(e.config).application.id;
+    let t = A.r.build(e.config).application.id;
     return eR(e) && t === R.Ts;
 }
 function eD(e, t) {
-    return N.r.build(e.config).features.has(t);
+    return A.r.build(e.config).features.has(t);
 }
 function eL(e) {
     let { quest: t, idx: n } = e;
@@ -496,7 +497,7 @@ function eL(e) {
     return r.type === c.w.REWARD_CODE ? r : null;
 }
 function ex(e, t) {
-    let n = N.r.build(e.config).application.link;
+    let n = A.r.build(e.config).application.link;
     (0, v.q)({
         href: n,
         onConfirm: () => {
@@ -626,7 +627,7 @@ let eM = (e, t) => {
                       });
 function eY(e) {
     var t, n, r, i;
-    let o = N.r.build(e.config).defaultInGameTask;
+    let o = A.r.build(e.config).defaultInGameTask;
     if (null == o) return null;
     let a = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : null === (t = n[o.eventName]) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0,
         s = ek(o.target, a);
@@ -763,7 +764,7 @@ function ti(e) {
           });
 }
 function to(e) {
-    let t = eN({ quest: e }) || eC({ quest: e }),
+    let t = eA({ quest: e }) || eC({ quest: e }),
         n = e$(e),
         r = [];
     return t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r;
@@ -771,7 +772,7 @@ function to(e) {
 function ta(e) {
     var t;
     let n = null === (t = e_(e)) || void 0 === t ? void 0 : t.expirationMode;
-    return !!(0, A.U)() && !!n && U.has(n);
+    return !!(0, N.U)() && !!n && U.has(n);
 }
 function ts(e) {
     var t;
@@ -816,4 +817,16 @@ function tp(e, t) {
 function th(e) {
     var t, n, r, i;
     return null !== (i = null !== (r = null === (t = e.videoMetadata) || void 0 === t ? void 0 : t.messages.videoEndCtaButtonLabel) && void 0 !== r ? r : null === (n = e.videoMetadata) || void 0 === n ? void 0 : n.messages.videoEndCtaTitle) && void 0 !== i ? i : D.NW.string(D.t.iiTtpK);
+}
+function tm(e) {
+    return null != e
+        ? {
+              campaignId: e.campaign_id,
+              adsetId: e.adset_id,
+              adId: e.ad_id,
+              creativeId: e.creative_id,
+              creativeType: e.creative_type,
+              questId: e.quest_id
+          }
+        : void 0;
 }

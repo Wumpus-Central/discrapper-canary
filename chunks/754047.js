@@ -1,38 +1,40 @@
-n.d(t, { Z: () => l }), n(47120);
+n.d(t, { Z: () => a }), n(47120);
 var r = n(192379),
     o = n(493773),
-    i = n(228168);
-function l(e) {
+    i = n(81897),
+    l = n(228168);
+function a(e) {
     let { shouldShowPopoutOnHover: t, handlePreload: n } = e,
-        [l, a] = r.useState(!1),
-        c = r.useRef(!1),
-        s = r.useRef(void 0),
-        u = r.useRef(void 0),
-        m = r.useRef(void 0);
+        [a, c] = r.useState(!1),
+        s = r.useRef(!1),
+        u = (0, i.Z)(),
+        m = r.useRef(void 0),
+        p = r.useRef(void 0),
+        d = r.useRef(void 0);
     return ((0, o.zq)(() => {
-        clearTimeout(s.current), clearTimeout(u.current), clearTimeout(m.current);
+        clearTimeout(m.current), clearTimeout(p.current), clearTimeout(d.current);
     }),
     t)
         ? {
-              showPopoutFromHover: l,
+              showPopoutFromHover: a,
               onRequestClose: () => {
-                  a(!1);
+                  c(!1);
               },
               onMouseEnter: () => {
                   let e;
-                  (c.current = !0),
-                      (s.current = setTimeout(() => {
-                          c.current && (e = n());
-                      }, i.a6)),
-                      (u.current = setTimeout(async () => {
-                          c.current && (null != e && (await e), a(!0));
-                      }, i.JX));
+                  (s.current = !0),
+                      (m.current = setTimeout(() => {
+                          s.current && (e = n(u));
+                      }, l.a6)),
+                      (p.current = setTimeout(async () => {
+                          s.current && (null != e && (await e), c(!0));
+                      }, l.JX));
               },
               onMouseLeave: () => {
-                  (c.current = !1),
-                      (m.current = setTimeout(() => {
-                          c.current || a(!1);
-                      }, i.Ig));
+                  (s.current = !1),
+                      (d.current = setTimeout(() => {
+                          s.current || c(!1);
+                      }, l.Ig));
               }
           }
         : {

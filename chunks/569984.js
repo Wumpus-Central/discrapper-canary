@@ -6,8 +6,8 @@ var v,
     I = n(887003),
     S = n(442837),
     T = n(570140),
-    A = n(497505),
-    N = n(918701),
+    N = n(497505),
+    A = n(918701),
     C = n(184299),
     R = n(5881),
     P = n(46140);
@@ -122,7 +122,7 @@ function W() {
 }
 function Y(e) {
     let { quests: t, excludedQuests: n } = e;
-    for (let e of ((r = !1), (o = new Map()), t)) o.set(e.id, e), e.targetedContent.includes(A.jn.QUEST_BAR) && (0, R.T)({ location: P.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+    for (let e of ((r = !1), (o = new Map()), t)) o.set(e.id, e), e.targetedContent.includes(N.jn.QUEST_BAR) && (0, R.T)({ location: P.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
     for (let e of ((a = new Map()), n)) a.set(e.id, e);
 }
 function K() {
@@ -228,7 +228,7 @@ function eh(e) {
     let { user_status: t } = e,
         n = (0, R.T)({ location: P.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
-    let r = (0, N.U3)(t);
+    let r = (0, A.U3)(t);
     U(t.quest_id, { userStatus: r }), 0 === Object.keys(r.progress).length && M.has(r.questId) && (n.log('Removing optimistic progress for '.concat(r.questId)), M.delete(r.questId));
 }
 function em(e) {
@@ -250,12 +250,13 @@ function eb(e) {
     o.set(r, i), M.set(n, o);
 }
 function ev(e) {
-    let { decisionId: t, quest: n, placement: r } = e;
+    let { decisionId: t, quest: n, placement: r, adIdentifiers: i } = e;
     null == n
         ? b.delete(r)
         : b.set(r, {
               decisionId: t,
-              quest: n
+              quest: n,
+              adIdentifiers: i
           });
 }
 function ey(e) {
