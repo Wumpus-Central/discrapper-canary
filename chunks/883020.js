@@ -26,6 +26,7 @@ var r = {
     errorContent: 'errorContent__5ce63',
     errorModalFooter: 'errorModalFooter__5ce63',
     iconBackgroundFractional: 'iconBackgroundFractional__5ce63',
-    iconFractional: 'iconFractional__5ce63'
+    iconFractional: 'iconFractional__5ce63',
+    spinnerContainer: 'spinnerContainer__5ce63'
 };
 e.exports = r;
