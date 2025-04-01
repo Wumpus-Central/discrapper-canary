@@ -23,7 +23,7 @@ function p(e, t, n) {
 }
 class h extends l.Z {
     _initialize() {
-        (this.focusedOrForegrounded = (0, u.H)()), i.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), i.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), i.Z.subscribe('QUESTS_ENROLL_SUCCESS', this.handleEnrollmentSuccess), i.Z.subscribe('LOGIN_SUCCESS', this.handleLogin), i.Z.subscribe('LOGOUT', this.handleLogout), this.scheduleHeartbeatTracking();
+        (this.focusedOrForegrounded = (0, u.H)()), i.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), i.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), i.Z.subscribe('QUESTS_ENROLL_SUCCESS', this.handleEnrollmentSuccess), i.Z.subscribe('LOGIN_SUCCESS', this.handleLogin), i.Z.subscribe('LOGOUT', this.handleLogout), this.trackHeartbeat(!0), this.scheduleHeartbeatTracking();
     }
     _terminate() {
         this.stopAnalyticHeartbeat(), i.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), i.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), i.Z.unsubscribe('QUESTS_ENROLL_SUCCESS', this.handleEnrollmentSuccess), i.Z.unsubscribe('LOGIN_SUCCESS', this.handleLogin), i.Z.unsubscribe('LOGOUT', this.handleLogout);
@@ -64,40 +64,49 @@ class h extends l.Z {
                     client_heartbeat_version: 1
                 });
             }),
-            p(this, 'stopAnalyticHeartbeat', () => {
-                this.schedulerStarted &&
-                    ((this.schedulerStarted = !1),
+            p(this, 'stopAnalyticHeartbeat', function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'DEFAULT';
+                if (!t.schedulerStarted) return;
+                t.schedulerStarted = !1;
+                let n = (0, c.S9)();
+                o.default.track(d.rMx.CLIENT_AD_HEARTBEAT_TERMINATION, {
+                    client_ad_session_id: null == n ? void 0 : n.uuid,
+                    client_heartbeat_initialization_timestamp: null == n ? void 0 : n.initialized,
+                    client_heartbeat_version: 1,
+                    reason: e
+                }),
                     s.Z.addBreadcrumb({
                         category: 'ad',
-                        message: 'Stopping ad session heartbeat'
+                        message: 'Stopping ad session heartbeat: '.concat(e)
                     }),
-                    this.heartbeatInterval.stop());
+                    t.heartbeatInterval.stop();
             }),
-            p(this, 'scheduleHeartbeatTracking', () => {
-                if (this.focusedOrForegrounded)
+            p(this, 'scheduleHeartbeatTracking', function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'DEFAULT';
+                if (t.focusedOrForegrounded)
                     try {
-                        this.startAnalyticHeartbeat();
+                        t.startAnalyticHeartbeat();
                     } catch (e) {
                         s.Z.captureException(e);
                     }
-                else this.stopAnalyticHeartbeat();
+                else t.stopAnalyticHeartbeat(e);
             }),
             p(this, 'handleLogin', () => {
                 this.scheduleHeartbeatTracking(), this.trackHeartbeat(!0);
             }),
             p(this, 'handleLogout', () => {
-                this.stopAnalyticHeartbeat(), (0, c.GG)();
+                this.stopAnalyticHeartbeat('USER_LOGOUT'), (0, c.GG)();
             }),
             p(this, 'handleEnrollmentSuccess', () => {
                 (0, c.Gy)(!0);
             }),
             p(this, 'handleWindowFocus', (e) => {
                 let { focused: t } = e;
-                (this.focusedOrForegrounded = t), this.scheduleHeartbeatTracking();
+                (this.focusedOrForegrounded = t), this.scheduleHeartbeatTracking('WINDOW_FOCUS');
             }),
             p(this, 'handleAppStateUpdate', (e) => {
                 let { state: t } = e;
-                (this.focusedOrForegrounded = t === d.$7l.ACTIVE), this.scheduleHeartbeatTracking();
+                (this.focusedOrForegrounded = t === d.$7l.ACTIVE), this.scheduleHeartbeatTracking('APP_STATE_UPDATE');
             });
     }
 }
