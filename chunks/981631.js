@@ -797,7 +797,8 @@ let A = Object.freeze({
         VIRTUAL_CURRENCY_USER_BALANCE: '/users/@me/virtual-currency/balance',
         IGNORE_USER: (t) => '/users/@me/relationships/'.concat(t, '/ignore'),
         SCHEDULED_MESSAGES: '/users/@me/scheduled-messages',
-        SCHEDULED_MESSAGE: (t) => '/users/@me/scheduled-messages/'.concat(t)
+        SCHEDULED_MESSAGE: (t) => '/users/@me/scheduled-messages/'.concat(t),
+        HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize'
     }),
     f = Object.freeze({
         INDEX: '/',
@@ -925,6 +926,7 @@ let A = Object.freeze({
         APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (t, e) => '/application-directory/'.concat(t, '/').concat(I.c.STORE, '/').concat(e),
         APPLICATION_DIRECTORY_SEARCH: '/application-directory/search',
         FAMILY_CENTER: '/family-center',
+        CLICKER_GAME: '/clicker',
         SERVER_SHOP: (t) => '/channels/'.concat(t, '/shop'),
         GUILD_PRODUCT: (t, e) => '/channels/'.concat(t, '/shop/').concat(e),
         REPORT: '/report',
@@ -1092,6 +1094,7 @@ let A = Object.freeze({
         PAYMENT_FLOW_MODAL_TEST_PAGE: 'Payment Flow Modals',
         REVENUE_STORYBOOK_PAGE: 'Revenue Storybook',
         VIRTUAL_CURRENCY_CONFIGURATION_PAGE: 'Virtual Currency Configuration',
+        CLICKER_GAME: 'Clicker Game Settings',
         POGGERMODE: 'Powermode Settings',
         SESSIONS: 'Sessions',
         FAMILY_CENTER: 'Family Center',
@@ -1772,6 +1775,8 @@ var N =
     (r.APP_LAUNCHER_SEARCH_FOCUSED = 'app_launcher_search_focused'),
     (r.APP_LAUNCHER_EXPANDED = 'app_launcher_expanded'),
     (r.APP_LAUNCHER_APPLICATION_LINK_COPIED = 'app_launcher_application_link_copied'),
+    (r.CLICKER_GAME_LAUNCHED = 'clicker_game_launched'),
+    (r.CLICKER_GAME_COMPLETED = 'clicker_game_completed'),
     (r.APP_OAUTH2_LINK_EMBED_URL_SENT = 'app_oauth2_link_embed_url_sent'),
     (r.APP_OAUTH2_LINK_EMBED_CTA_CLICKED = 'app_oauth2_link_embed_cta_clicked'),
     (r.APP_OAUTH2_LINK_EMBED_URL_CLICKED = 'app_oauth2_link_embed_url_clicked'),

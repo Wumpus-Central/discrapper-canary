@@ -1,56 +1,82 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => I });
 var r = n(200651);
 n(192379);
-var i = n(620662),
-    o = n(841784),
-    a = n(834353),
-    s = n(802856),
-    l = n(420660),
-    c = n(374129),
-    u = n(639351),
-    d = n(103479),
-    f = n(238607),
-    p = n(414402),
-    _ = n(934393),
-    h = n(715547),
-    m = n(981631);
-function g(e) {
-    let { user: t, activity: n, onAction: g, onClose: E } = e;
-    return (0, s.Z)(n)
-        ? (0, r.jsx)(_.Z, {
-              platformType: m.ABu.XBOX,
-              icon: () => (0, r.jsx)(u.Z, {}),
-              onAction: g
-          })
-        : (0, a.Z)(n)
-          ? (0, r.jsx)(_.Z, {
-                platformType: m.ABu.PLAYSTATION,
-                icon: () => (0, r.jsx)(c.Z, {}),
-                onAction: g
+var i = n(40851),
+    o = n(620662),
+    a = n(841784),
+    s = n(834353),
+    l = n(802856),
+    c = n(420660),
+    u = n(374129),
+    d = n(639351),
+    f = n(171368),
+    _ = n(103479),
+    p = n(238607),
+    h = n(414402),
+    m = n(934393),
+    g = n(715547),
+    E = n(981631),
+    b = n(477839),
+    v = n(388032),
+    y = n(884479);
+let O = (e) => {
+    let { user: t, activity: n, onAction: o } = e,
+        a = (0, i.Aq)(),
+        s = (e) => {
+            let { action: t } = e;
+            a.dispatch(E.CkL.POPOUT_CLOSE), (0, f.closeUserProfileModal)(), null == o || o({ action: t });
+        };
+    return (0, r.jsx)(_.Z, {
+        user: t,
+        activity: n,
+        onAction: s
+    });
+};
+function I(e) {
+    let { user: t, activity: n, onAction: i, onClose: f } = e;
+    return null != n && n.application_id === b.bO
+        ? ((n.buttons = [v.NW.string(y.Z['Fv/2Oz'])]),
+          (n.metadata = { button_urls: [b.U8] }),
+          (0, r.jsx)(O, {
+              user: t,
+              activity: n,
+              onAction: i
+          }))
+        : (0, l.Z)(n)
+          ? (0, r.jsx)(m.Z, {
+                platformType: E.ABu.XBOX,
+                icon: () => (0, r.jsx)(d.Z, {}),
+                onAction: i
             })
-          : (0, l.Z)(n)
-            ? (0, r.jsx)(h.Z, {
-                  activity: n,
-                  onAction: g
+          : (0, s.Z)(n)
+            ? (0, r.jsx)(m.Z, {
+                  platformType: E.ABu.PLAYSTATION,
+                  icon: () => (0, r.jsx)(u.Z, {}),
+                  onAction: i
               })
-            : (0, i.Z)(n, m.xjy.JOIN) || (0, o.Z)(n)
-              ? (0, r.jsx)(f.Z, {
-                    user: t,
+            : (0, c.Z)(n)
+              ? (0, r.jsx)(g.Z, {
                     activity: n,
-                    onAction: g,
-                    onClose: E
+                    onAction: i
                 })
-              : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
-                ? (0, r.jsx)(d.Z, {
+              : (0, o.Z)(n, E.xjy.JOIN) || (0, a.Z)(n)
+                ? (0, r.jsx)(p.Z, {
                       user: t,
                       activity: n,
-                      onAction: g
+                      onAction: i,
+                      onClose: f
                   })
-                : (0, i.Z)(n, m.xjy.INSTANCE)
-                  ? (0, r.jsx)(p.Z, {
+                : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
+                  ? (0, r.jsx)(_.Z, {
                         user: t,
                         activity: n,
-                        onAction: g
+                        onAction: i
                     })
-                  : null;
+                  : (0, o.Z)(n, E.xjy.INSTANCE)
+                    ? (0, r.jsx)(h.Z, {
+                          user: t,
+                          activity: n,
+                          onAction: i
+                      })
+                    : null;
 }

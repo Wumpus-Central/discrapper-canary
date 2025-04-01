@@ -406,6 +406,7 @@ var r = (function (e) {
         (e.NOT_SHARING_LINK = 'not sharing link'),
         (e.YOU_ACCOUNT_ACTION_SHEET = 'you account action sheet'),
         (e.USER_PROFILE_CUSTOM_STATUS_BUBBLE = 'user profile custom status bubble'),
+        (e.CLICKER_GAME = 'clicker game'),
         (e.ACTIVITY_PIP = 'activity PIP'),
         (e.VIDEO_PIP = 'video PIP'),
         (e.INCOMING_CALL_MODAL = 'incoming call modal'),
