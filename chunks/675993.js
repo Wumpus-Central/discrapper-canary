@@ -1,113 +1,160 @@
-n.d(t, { Z: () => _ }), n(47120), n(266796);
+n.d(t, {
+    Z: () => L,
+    u: () => M
+}),
+    n(47120),
+    n(266796);
 var i = n(200651),
-    l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
+    c = n(882485),
     s = n(481060),
-    c = n(115130),
+    d = n(115130),
     u = n(147865),
-    d = n(427996),
+    p = n(427996),
     m = n(906732),
-    p = n(706302),
+    f = n(706302),
     h = n(812236),
-    f = n(835473),
+    b = n(835473),
     v = n(70097),
-    N = n(240991),
-    x = n(973616),
-    y = n(626135),
-    b = n(783097),
-    E = n(695676),
-    C = n(520315),
-    j = n(29380),
-    g = n(783685),
-    P = n(981631),
-    A = n(388032),
-    O = n(539382),
-    I = n(368365);
-function _(e) {
-    let { context: t, application: n, videoUrl: r, imageCoverUrl: s, sectionName: u, hasCommands: m } = e,
-        p = l.useMemo(() => {
+    C = n(240991),
+    _ = n(973616),
+    x = n(626135),
+    y = n(424602),
+    N = n(783097),
+    g = n(695676),
+    j = n(520315),
+    P = n(29380),
+    E = n(783685),
+    A = n(981631),
+    O = n(388032),
+    I = n(749262),
+    S = n(50398);
+function T(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
+}
+function L(e) {
+    let { context: t, application: n, videoUrl: l, imageCoverUrl: c, sectionName: s, hasCommands: u } = e,
+        m = r.useMemo(() => {
             var e;
-            return null !== (e = (0, b.jD)(n)) && void 0 !== e ? e : '';
+            return null !== (e = (0, N.jD)(n)) && void 0 !== e ? e : '';
         }, [n]),
-        h = (0, a.e7)([c.Z], () => c.Z.inDevModeForApplication(n.id)),
-        f = null != r,
-        { isSlideReady: N } = (0, E.hH)(),
-        [x, y] = l.useState(!1);
+        f = (0, a.e7)([d.Z], () => d.Z.inDevModeForApplication(n.id)),
+        h = null != l,
+        b = y.PM.useExperiment({ location: 'AppLauncherProfile' }),
+        { isSlideReady: C } = (0, g.hH)(),
+        [_, x] = r.useState(!1);
     return (
-        l.useEffect(() => {
-            N && y(!0);
-        }, [N]),
+        r.useEffect(() => {
+            C && x(!0);
+        }, [C]),
         (0, i.jsxs)('div', {
-            className: O.container,
+            className: o()(
+                {
+                    [I.experimentLayout]: b.enabled,
+                    [I.altLayout]: b.altLayout
+                },
+                I.container
+            ),
             children: [
+                b.enabled
+                    ? (0, i.jsxs)('div', {
+                          className: I.experimentTitleContainer,
+                          children: [(0, i.jsx)(w, { application: n }), (0, i.jsx)(R, { application: n })]
+                      })
+                    : null,
                 (0, i.jsxs)('div', {
                     children: [
-                        f
+                        h
                             ? (0, i.jsxs)('div', {
-                                  className: O.videoContainer,
+                                  className: I.videoContainer,
                                   children: [
-                                      x
+                                      _
                                           ? (0, i.jsx)(v.Z, {
-                                                className: o()(O.videoCover, O.video),
+                                                className: o()(I.videoCover, I.video),
                                                 loop: !0,
                                                 muted: !0,
                                                 autoPlay: !0,
-                                                src: r,
-                                                poster: s
+                                                src: l,
+                                                poster: c
                                             })
                                           : null,
                                       (0, i.jsx)('img', {
-                                          className: O.videoCover,
-                                          src: s,
-                                          'aria-label': A.NW.string(A.t.X4IxWF)
+                                          className: I.videoCover,
+                                          src: c,
+                                          'aria-label': O.NW.string(O.t.X4IxWF)
                                       })
                                   ]
                               })
                             : null,
                         (0, i.jsxs)('div', {
-                            className: f ? O.overviewContainerWithVideo : O.overviewContainerNoVideo,
+                            className: h ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
                             children: [
-                                (0, i.jsx)(T, { application: n }),
-                                (0, i.jsx)(L, { application: n }),
-                                p.length > 0 ? (0, i.jsx)(Z, { description: p }) : null,
-                                h
+                                b.enabled ? null : (0, i.jsx)(w, { application: n }),
+                                (0, i.jsx)(k, { application: n }),
+                                m.length > 0 ? (0, i.jsx)(D, { description: m }) : null,
+                                f
                                     ? (0, i.jsx)('div', {
-                                          className: O.developerShelfControlsContainer,
-                                          children: (0, i.jsx)(d.W, {
+                                          className: I.developerShelfControlsContainer,
+                                          children: (0, i.jsx)(p.W, {
                                               hideSearch: !0,
-                                              className: O.developerShelfControls
+                                              className: I.developerShelfControls
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(M, {
-                                    context: t,
-                                    application: n,
-                                    sectionName: u,
-                                    isDeveloperOfThisApp: h,
-                                    hasCommands: m
-                                })
+                                b.enabled
+                                    ? null
+                                    : (0, i.jsx)(M, {
+                                          context: t,
+                                          application: n,
+                                          sectionName: s,
+                                          isDeveloperOfThisApp: f,
+                                          hasCommands: u
+                                      })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(S, { application: n })
+                b.enabled ? null : (0, i.jsx)(R, { application: n })
             ]
         })
     );
 }
-function S(e) {
+function R(e) {
     let { application: t } = e,
-        n = (0, b.Cb)(t),
-        l = (0, b.Hu)(t);
-    return n || l
+        n = (0, N.Cb)(t),
+        r = (0, N.Hu)(t);
+    return n || r
         ? (0, i.jsxs)('div', {
-              className: O.monetizationDisclosureContainerStyle,
+              className: I.monetizationDisclosureContainerStyle,
               children: [
                   n
                       ? (0, i.jsxs)('div', {
-                            className: O.monetizationDisclosureStyle,
+                            className: I.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.EOn, {
                                     size: 'sm',
@@ -116,14 +163,14 @@ function S(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: A.NW.string(A.t['8z5B2d'])
+                                    children: O.NW.string(O.t['8z5B2d'])
                                 })
                             ]
                         })
                       : null,
-                  l
+                  r
                       ? (0, i.jsxs)('div', {
-                            className: O.monetizationDisclosureStyle,
+                            className: I.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.uMN, {
                                     size: 'sm',
@@ -132,7 +179,7 @@ function S(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: A.NW.string(A.t['5khEk5'])
+                                    children: O.NW.string(O.t['5khEk5'])
                                 })
                             ]
                         })
@@ -141,48 +188,48 @@ function S(e) {
           })
         : null;
 }
-function T(e) {
+function w(e) {
     var t;
     let { application: n } = e,
-        l = (0, b.BQ)(n) ? n.name : null !== (t = (0, b.$d)(n)) && void 0 !== t ? t : '',
-        r = (0, b.vJ)(n);
+        r = (0, N.BQ)(n) ? n.name : null !== (t = (0, N.$d)(n)) && void 0 !== t ? t : '',
+        l = (0, N.vJ)(n);
     return (0, i.jsxs)('div', {
-        className: O.titleContainer,
+        className: I.titleContainer,
         children: [
             (0, i.jsx)(s.X6q, {
                 variant: 'heading-xl/extrabold',
                 lineClamp: 1,
-                children: l
+                children: r
             }),
-            r
+            l
                 ? (0, i.jsx)('div', {
-                      className: O.partnerLabelContainer,
+                      className: I.partnerLabelContainer,
                       children: (0, i.jsx)(s.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: A.NW.string(A.t.LO4f0N)
+                          children: O.NW.string(O.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-function L(e) {
+function k(e) {
     let { application: t } = e,
-        n = l.useMemo(() => {
+        n = r.useMemo(() => {
             var e;
-            return (0, b.BQ)(t) && null !== (e = null == t ? void 0 : t.tags) && void 0 !== e ? e : [];
+            return (0, N.BQ)(t) && null !== (e = null == t ? void 0 : t.tags) && void 0 !== e ? e : [];
         }, [t]);
-    return (0, b.ye)(t)
+    return (0, N.ye)(t)
         ? (0, i.jsxs)('div', {
-              className: O.tagsContainer,
+              className: I.tagsContainer,
               children: [
-                  (0, i.jsx)(R, { application: t }),
+                  (0, i.jsx)(Z, { application: t }),
                   n.map((e, t) =>
                       (0, i.jsx)(
                           'div',
                           {
-                              className: O.tagContainer,
+                              className: I.tagContainer,
                               children: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
@@ -196,13 +243,13 @@ function L(e) {
           })
         : null;
 }
-function R(e) {
+function Z(e) {
     var t;
     let { application: n } = e;
-    if (!(0, b.ye)(n)) return null;
-    let l = null !== (t = (0, b.BQ)(n) ? (n instanceof x.ZP ? n.maxParticipants : n.max_participants) : 0) && void 0 !== t ? t : 0;
+    if (!(0, N.ye)(n)) return null;
+    let r = null !== (t = (0, N.BQ)(n) ? (n instanceof _.ZP ? n.maxParticipants : n.max_participants) : 0) && void 0 !== t ? t : 0;
     return (0, i.jsxs)('div', {
-        className: O.tagContainer,
+        className: I.tagContainer,
         children: [
             (0, i.jsx)(s.BFJ, {
                 size: 'xs',
@@ -211,95 +258,148 @@ function R(e) {
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
                 color: 'interactive-normal',
-                children: (0, u.lY)(l)
+                children: (0, u.lY)(r)
             })
         ]
     });
 }
 function M(e) {
     var t;
-    let { context: n, application: r, sectionName: o, hasCommands: a, isDeveloperOfThisApp: c } = e,
-        u = (0, h.Fs)(n, r.id),
-        d = (0, f.q)(r.id),
-        v = null == d ? void 0 : null === (t = d.bot) || void 0 === t ? void 0 : t.id,
-        N = (0, p.Z)({
+    let { context: n, application: l, sectionName: a, hasCommands: d, isDeveloperOfThisApp: u } = e,
+        p = (0, h.Fs)(n, l.id),
+        v = (0, b.q)(l.id),
+        C = null == v ? void 0 : null === (t = v.bot) || void 0 === t ? void 0 : t.id,
+        _ = (0, f.Z)({
             context: n,
-            applicationId: r.id,
-            botUserId: v
+            applicationId: l.id,
+            botUserId: C
         }),
-        { analyticsLocations: x } = (0, m.ZP)();
+        { analyticsLocations: g } = (0, m.ZP)(),
+        [j, S] = r.useState(!1),
+        L = y.PM.useExperiment({ location: 'AppLauncherAppProfile.PrimaryEntryPointArea()' });
     if (
-        (l.useEffect(() => {
-            if (!(0, b.BQ)(r) || !(0, b.ye)(r)) return;
+        (r.useEffect(() => {
+            if (!(0, N.BQ)(l) || !(0, N.ye)(l)) return;
             let e = setTimeout(() => {
-                (null == u || null == v) &&
-                    y.default.track(P.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
-                        application_id: r.id,
-                        is_primary_entry_point_command_non_null: null != u,
-                        is_bot_user_id_non_null: null != v,
-                        show_try_it_out_button: N
+                (null == p || null == C) &&
+                    x.default.track(A.rMx.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED, {
+                        application_id: l.id,
+                        is_primary_entry_point_command_non_null: null != p,
+                        is_bot_user_id_non_null: null != C,
+                        show_try_it_out_button: _
                     });
             }, 2000);
             return () => clearTimeout(e);
-        }, [r, u, v, N]),
-        !(0, b.BQ)(r) || !(0, b.ye)(r))
+        }, [l, p, C, _]),
+        !(0, N.BQ)(l) || !(0, N.ye)(l))
     )
         return null;
-    let E = s.PhG.MAX;
-    return null != u && null != v
+    let R = s.PhG.MAX;
+    return null != p && null != C
         ? (0, i.jsxs)('div', {
-              className: O.entrypointContainer,
+              className: o()(
+                  {
+                      [I.experimentLayout]: L.enabled,
+                      [I.altLayout]: L.altLayout
+                  },
+                  I.entrypointContainer
+              ),
               children: [
                   (0, i.jsx)('div', {
-                      className: O.entryPointContainerFlexChild,
-                      children: (0, i.jsx)(j.Z, {
+                      className: I.entryPointContainerFlexChild,
+                      children: (0, i.jsx)(P.Z, {
                           context: n,
-                          application: r,
-                          sectionName: o,
-                          primaryEntryPointCommand: u,
-                          buttonSize: E
+                          application: l,
+                          sectionName: a,
+                          primaryEntryPointCommand: p,
+                          buttonSize: R,
+                          playSolo: j
                       })
                   }),
-                  N && null != v
-                      ? (0, i.jsx)('div', {
-                            className: O.entryPointContainerFlexChild,
-                            children: (0, i.jsx)(g.Z, {
-                                botUserId: v,
-                                applicationId: r.id,
-                                buttonSize: E,
-                                analyticsLocations: x
+                  _ && null != C
+                      ? L.altLayout
+                          ? (0, i.jsx)('div', {
+                                className: I.altLayout,
+                                children: (0, i.jsx)('div', {
+                                    className: I.entryPointContainerFlexChild,
+                                    children: (0, i.jsx)(s.XZJ, {
+                                        className: I.entryPointCheckbox,
+                                        value: j,
+                                        onChange: () => S(!j),
+                                        children: (0, i.jsxs)(s.Text, {
+                                            variant: 'text-sm/medium',
+                                            className: I.entryPointCheckboxLabel,
+                                            children: [
+                                                O.NW.string(O.t['e+CzPj']),
+                                                (0, i.jsx)(s.ua7, {
+                                                    text: O.NW.string(O.t.QOZI8f),
+                                                    children: (e) => {
+                                                        var t, n;
+                                                        return (0, i.jsx)(
+                                                            c.d,
+                                                            ((t = T({}, e)),
+                                                            (n = n = { size: 'xs' }),
+                                                            Object.getOwnPropertyDescriptors
+                                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                                : (function (e, t) {
+                                                                      var n = Object.keys(e);
+                                                                      if (Object.getOwnPropertySymbols) {
+                                                                          var i = Object.getOwnPropertySymbols(e);
+                                                                          n.push.apply(n, i);
+                                                                      }
+                                                                      return n;
+                                                                  })(Object(n)).forEach(function (e) {
+                                                                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                                                  }),
+                                                            t)
+                                                        );
+                                                    }
+                                                })
+                                            ]
+                                        })
+                                    })
+                                })
                             })
-                        })
+                          : (0, i.jsx)('div', {
+                                className: I.entryPointContainerFlexChild,
+                                children: (0, i.jsx)(E.Z, {
+                                    botUserId: C,
+                                    applicationId: l.id,
+                                    buttonSize: R,
+                                    analyticsLocations: g
+                                })
+                            })
                       : null
               ]
           })
-        : c && !a && (0, b.ye)(r)
+        : u && !d && (0, N.ye)(l)
           ? (0, i.jsx)(s.Wn, {
-                className: O.primaryEntryPointWarningMessage,
+                className: I.primaryEntryPointWarningMessage,
                 messageType: s.QYI.WARNING,
-                children: A.NW.format(A.t['s/3hjI'], {})
+                children: O.NW.format(O.t['s/3hjI'], {})
             })
           : null;
 }
-function Z(e) {
+function D(e) {
     let { description: t } = e,
-        [n, r] = l.useState(!0);
-    l.useLayoutEffect(() => r(!1), []);
-    let o = l.useMemo(() => (0, N.parseBioReact)(t), [t]),
+        n = y.PM.useExperiment({ location: 'AppLauncherProfile.Description()' }),
+        [l, o] = r.useState(!0);
+    r.useLayoutEffect(() => o(n.enabled), [n]);
+    let a = r.useMemo(() => (0, C.parseBioReact)(t), [t]),
         {
-            ref: a,
-            lineHeight: c,
+            ref: c,
+            lineHeight: d,
             lineCount: u
         } = (function () {
-            let e = l.useRef(null),
-                [t, n] = l.useState(null),
-                [i, r] = l.useState(null);
+            let e = r.useRef(null),
+                [t, n] = r.useState(null),
+                [i, l] = r.useState(null);
             return (
-                l.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     let t = e.current;
                     if (null === t || 0 === t.clientHeight) return;
                     let i = parseInt(getComputedStyle(t).lineHeight);
-                    !isNaN(i) && (n(i), r(Math.floor(t.clientHeight / i)));
+                    !isNaN(i) && (n(i), l(Math.floor(t.clientHeight / i)));
                 }, []),
                 {
                     ref: e,
@@ -308,74 +408,44 @@ function Z(e) {
                 }
             );
         })(),
-        d = l.useMemo(() => {
-            if (null == c || null == u) return { key: 0 };
-            let e = c * u;
+        p = r.useMemo(() => {
+            if (null == d || null == u) return { key: 0 };
+            let e = d * u;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, +c),
+                minHeightOverride: Math.min(e, +d),
                 maxHeightOverride: e
             };
-        }, [u, c]),
-        {
-            ref: m,
-            isTransitioning: p,
-            onTransitionEnd: h
-        } = (0, C.Z)(
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    'function' == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            (i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = i);
-                        });
-                }
-                return e;
-            })({ isExpanded: n }, d)
-        ),
-        f = n || p;
+        }, [u, d]),
+        { ref: m, isTransitioning: f, onTransitionEnd: h } = (0, j.Z)(T({ isExpanded: l }, p)),
+        b = l || f;
     return (0, i.jsxs)('div', {
-        className: O.descriptionContainer,
+        className: I.descriptionContainer,
         children: [
             (0, i.jsx)('div', {
                 ref: m,
-                className: O.overflowHidden,
+                className: I.overflowHidden,
                 onTransitionEnd: h,
                 children: (0, i.jsx)(s.Text, {
-                    ref: a,
-                    className: I.markup,
+                    ref: c,
+                    className: S.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: f ? void 0 : 1,
-                    style: { maxHeight: f ? void 0 : d.minHeightOverride },
-                    children: o
+                    lineClamp: b ? void 0 : 1,
+                    style: { maxHeight: b ? void 0 : p.minHeightOverride },
+                    children: a
                 })
             }),
-            null != u && u > 1
+            null != u && u > 1 && !n.enabled
                 ? (0, i.jsxs)(s.P3F, {
-                      className: O.expandableDescriptionClickable,
-                      onClick: () => r((e) => !e),
+                      className: I.expandableDescriptionClickable,
+                      onClick: () => o((e) => !e),
                       children: [
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: f ? A.NW.string(A.t.u4YJ8v) : A.NW.string(A.t['N/tajI'])
+                              children: b ? O.NW.string(O.t.u4YJ8v) : O.NW.string(O.t['N/tajI'])
                           }),
-                          f
+                          b
                               ? (0, i.jsx)(s.u04, {
                                     size: 'sm',
                                     color: s.TVs.colors.TEXT_BRAND

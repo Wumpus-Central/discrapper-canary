@@ -1,90 +1,94 @@
-n.d(t, { Z: () => N }), n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
-    l = n(192379),
-    r = n(481060),
+    r = n(192379),
+    l = n(481060),
     o = n(542094),
     a = n(895924),
-    s = n(626135),
-    c = n(499254),
+    c = n(626135),
+    s = n(499254),
+    d = n(424602),
     u = n(541099),
-    d = n(827498),
-    p = n(160973),
-    m = n(783097),
-    f = n(890280),
-    h = n(176412),
+    p = n(827498),
+    m = n(160973),
+    f = n(783097),
+    h = n(890280),
+    b = n(176412),
     v = n(981631),
-    y = n(388032),
-    b = n(486320);
-function N(e) {
-    let { context: t, application: n, sectionName: N, primaryEntryPointCommand: g, buttonSize: x = r.PhG.MEDIUM } = e,
-        j = l.useId(),
-        E = l.useCallback(() => {
-            c.yT(d.ti.ACTIVITY);
+    C = n(388032),
+    _ = n(711508);
+function x(e) {
+    let { context: t, application: n, sectionName: x, primaryEntryPointCommand: y, buttonSize: N = l.PhG.MEDIUM, playSolo: g = !1 } = e,
+        j = r.useId(),
+        P = r.useCallback(() => {
+            s.yT(p.ti.ACTIVITY);
         }, []),
-        P = l.useCallback(() => {
-            u.Z.shouldShowModal() && E();
-        }, [E]),
-        { submitting: C, wasSubmitting: O } = (0, f.Z)({
+        E = r.useCallback(() => {
+            u.Z.shouldShowModal() && P();
+        }, [P]),
+        { submitting: A, wasSubmitting: O } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: j,
-            onSubmissionComplete: E
+            onSubmissionComplete: P
         }),
-        [A, I] = l.useState(!1),
-        _ = (0, o.Qv)({
+        [I, S] = r.useState(!1),
+        T = (0, o.Qv)({
             applicationId: n.id,
             context: t
         }),
-        S = l.useMemo(() => (0, m.XZ)(g.displayName), [g.displayName]),
+        L = d.PM.useExperiment({ location: 'AppPrimaryEntryPointButton()' }),
+        R = r.useMemo(() => (0, f.XZ)(y.displayName), [y.displayName]),
         {
-            onActivityItemSelected: T,
-            buttonColor: L,
+            onActivityItemSelected: w,
+            buttonColor: k,
             buttonText: Z
-        } = (0, h.P7)({
+        } = (0, b.P7)({
             context: t,
             application: n,
             location: a.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: N,
-            commandName: S,
-            autoDismissOnClick: _ === o.JS.LEAVE,
+            sectionName: x,
+            commandName: R,
+            autoDismissOnClick: T === o.JS.LEAVE,
             launchingComponentId: j,
-            submitting: null != O ? O : C,
-            onConfirmActivityLaunchChecksAlertOpen: P
+            submitting: null != O ? O : A,
+            onConfirmActivityLaunchChecksAlertOpen: E,
+            playSolo: !!L.altLayout && g
         }),
-        { disabled: R, reason: w } = (0, p.Z)({
+        { disabled: M, reason: D } = (0, m.Z)({
             context: t,
             application: n,
-            activityAction: _
-        });
-    return (0, i.jsx)(r.ua7, {
-        shouldShow: null != w,
-        tooltipContentClassName: b.tooltipContent,
-        text: w,
+            activityAction: T
+        }),
+        W = L.enabled ? C.NW.string(C.t['1KxmJi']) : Z;
+    return (0, i.jsx)(l.ua7, {
+        shouldShow: null != D,
+        tooltipContentClassName: _.tooltipContent,
+        text: D,
         children: (e) => {
             var t,
-                l,
+                r,
                 { onClick: o } = e,
                 a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
-                        l = (function (e, t) {
+                        r = (function (e, t) {
                             if (null == e) return {};
                             var n,
                                 i,
-                                l = {},
-                                r = Object.keys(e);
-                            for (i = 0; i < r.length; i++) (n = r[i]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                            return l;
+                                r = {},
+                                l = Object.keys(e);
+                            for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                            return r;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var r = Object.getOwnPropertySymbols(e);
-                        for (i = 0; i < r.length; i++) (n = r[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                        var l = Object.getOwnPropertySymbols(e);
+                        for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                     }
-                    return l;
+                    return r;
                 })(e, ['onClick']);
             return (0, i.jsx)(
-                r.zxk,
+                l.zxk,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -110,30 +114,30 @@ function N(e) {
                     }
                     return e;
                 })({}, a)),
-                (l = l =
+                (r = r =
                     {
                         type: 'submit',
-                        size: x,
-                        color: L,
-                        disabled: R,
-                        submitting: A,
+                        size: N,
+                        color: k,
+                        disabled: M,
+                        submitting: I,
                         onClick: () => {
-                            I(!0),
-                                T(),
+                            S(!0),
+                                w(),
                                 null == o || o(),
-                                s.default.track(v.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                                c.default.track(v.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
-                                    button_action: d._y.USE_APP_COMMAND
+                                    button_action: p._y.USE_APP_COMMAND
                                 });
                         },
-                        'aria-label': y.NW.formatToPlainString(y.t['XjP/R0'], {
-                            buttonText: Z,
+                        'aria-label': C.NW.formatToPlainString(C.t['XjP/R0'], {
+                            buttonText: W,
                             applicationName: n.name
                         }),
-                        children: Z
+                        children: W
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -141,8 +145,8 @@ function N(e) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
                 t)
             );
