@@ -1655,6 +1655,7 @@ var N =
     (r.OAUTH2_AUTHORIZE_STEP_VIEWED = 'oauth2_authorize_step_viewed'),
     (r.GUILD_OUTAGE_VIEWED = 'guild_outage_viewed'),
     (r.CONTACT_SYNC_FLOW_KEY = 'relationship_sync_flow'),
+    (r.LOGIN_ATTEMPTED = 'login_attempted'),
     (r.LOGIN_SUCCESSFUL = 'login_successful'),
     (r.REPLY_STARTED = 'reply_started'),
     (r.GUILD_TEMPLATE_APP_OPENED = 'guild_template_app_opened'),
