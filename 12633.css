@@ -49376,7 +49376,8 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     border-radius: 12px
 }
 
-.wallpaper_f86e69:hover:after {
+.wallpaper_f86e69:hover:after,
+.wallpaperRemoveSelection_f86e69:hover:after {
     border-width: 2px
 }
 
