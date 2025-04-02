@@ -132,13 +132,14 @@ function u(e, t, n, u, d) {
                             {
                                 video_timestamp_seconds: t.current.currentTime,
                                 pause_reason: e,
-                                video_session_id: u
+                                video_session_id: u,
+                                video_asset_id: d
                             },
                             c(n)
                         )
                     });
             },
-            [b, t, u, n, p]
+            [b, t, u, n, p, d]
         ),
         j = r.useCallback(
             (e) => {
@@ -151,13 +152,14 @@ function u(e, t, n, u, d) {
                             {
                                 video_timestamp_seconds: t.current.currentTime,
                                 reason: e,
-                                video_session_id: u
+                                video_session_id: u,
+                                video_asset_id: d
                             },
                             c(n)
                         )
                     });
             },
-            [b, t, u, n, p]
+            [b, t, u, n, p, d]
         ),
         y = r.useCallback(
             (e, n) => {
@@ -168,11 +170,12 @@ function u(e, t, n, u, d) {
                         properties: {
                             video_timestamp_seconds: t.current.currentTime,
                             video_state: n,
-                            video_session_id: u
+                            video_session_id: u,
+                            video_asset_id: d
                         }
                     });
             },
-            [b, t, u, p]
+            [b, t, u, p, d]
         ),
         _ = r.useCallback(
             (e) => {
@@ -307,11 +310,35 @@ function u(e, t, n, u, d) {
                     p({
                         questId: b,
                         event: e ? a.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED : a.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
-                        properties: { video_session_id: u }
+                        properties: s(
+                            {
+                                video_session_id: u,
+                                video_asset_id: d
+                            },
+                            c(n)
+                        )
                     });
             },
-            [b, t, u, p]
+            [b, t, u, n, p, d]
         ),
-        trackQuestVideoError: P
+        trackQuestVideoError: P,
+        trackQuestVideoVolumeChanged: r.useCallback(
+            (e) => {
+                null != t.current &&
+                    p({
+                        questId: b,
+                        event: a.rMx.QUEST_VIDEO_VOLUME_CHANGED,
+                        properties: s(
+                            {
+                                volume_threshold: e > 0 && e < 1 ? 0.5 : e,
+                                video_session_id: u,
+                                video_asset_id: d
+                            },
+                            c(n)
+                        )
+                    });
+            },
+            [b, t, d, u, n, p]
+        )
     };
 }
