@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => I
+    R: () => I,
+    Z: () => C
 });
 var r,
     i = n(192379),
@@ -11,44 +11,46 @@ var r,
     c = n(554747),
     u = n(499137),
     d = n(929507),
-    p = n(270144),
-    h = n(400271),
-    f = n(678513),
-    g = n(899667),
-    m = n(496675),
-    b = n(541566),
-    _ = n(192513),
-    E = n(255791),
-    O = n(70956),
-    N = n(267642),
-    v = n(981631),
-    y = (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = 'ENABLE_PUBLIC_GUILD'), (r[(r.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1)] = 'APPLIED_GUILD_BOOST_GRACE_PERIOD'), (r[(r.MAX_MEMBER_COUNT = 2)] = 'MAX_MEMBER_COUNT'), (r[(r.GUILD_LIVE_CHANNEL = 3)] = 'GUILD_LIVE_CHANNEL'), (r[(r.GUILD_MFA_WARNING = 4)] = 'GUILD_MFA_WARNING'), (r[(r.COMMANDS_MIGRATION = 5)] = 'COMMANDS_MIGRATION'), (r[(r.APPLICATION_SUBSCRIPTION_EXPIRATION = 6)] = 'APPLICATION_SUBSCRIPTION_EXPIRATION'), (r[(r.HUB_STUDY_ROOM = 7)] = 'HUB_STUDY_ROOM'), (r[(r.SIGNUP = 8)] = 'SIGNUP'), (r[(r.CLAN_UPSELL = 9)] = 'CLAN_UPSELL'), r);
-function I(e) {
+    p = n(50101),
+    h = n(270144),
+    f = n(400271),
+    g = n(678513),
+    m = n(899667),
+    b = n(496675),
+    _ = n(541566),
+    E = n(192513),
+    O = n(255791),
+    N = n(70956),
+    v = n(267642),
+    y = n(981631),
+    I = (((r = {})[(r.ENABLE_PUBLIC_GUILD = 0)] = 'ENABLE_PUBLIC_GUILD'), (r[(r.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1)] = 'APPLIED_GUILD_BOOST_GRACE_PERIOD'), (r[(r.MAX_MEMBER_COUNT = 2)] = 'MAX_MEMBER_COUNT'), (r[(r.GUILD_LIVE_CHANNEL = 3)] = 'GUILD_LIVE_CHANNEL'), (r[(r.GUILD_MFA_WARNING = 4)] = 'GUILD_MFA_WARNING'), (r[(r.COMMANDS_MIGRATION = 5)] = 'COMMANDS_MIGRATION'), (r[(r.APPLICATION_SUBSCRIPTION_EXPIRATION = 6)] = 'APPLICATION_SUBSCRIPTION_EXPIRATION'), (r[(r.HUB_STUDY_ROOM = 7)] = 'HUB_STUDY_ROOM'), (r[(r.SIGNUP = 8)] = 'SIGNUP'), (r[(r.CLAN_UPSELL = 9)] = 'CLAN_UPSELL'), r);
+function C(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : v.lds,
-        { lastFetchedAt: r } = (0, l.cj)([g.Z], () => ({
-            appliedGuildBoosts: g.Z.getAppliedGuildBoostsForGuild(n),
-            lastFetchedAt: g.Z.getLastFetchedAtForGuild(n)
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : y.lds,
+        { lastFetchedAt: r } = (0, l.cj)([m.Z], () => ({
+            appliedGuildBoosts: m.Z.getAppliedGuildBoostsForGuild(n),
+            lastFetchedAt: m.Z.getLastFetchedAtForGuild(n)
         })),
-        { lastDismissedGracePeriod: y, isGracePeriodVisible: I } = (0, l.cj)([b.Z], () => ({
-            lastDismissedGracePeriod: b.Z.getLastDismissedGracePeriodForGuild(n),
-            isGracePeriodVisible: b.Z.isVisible(n)
+        { lastDismissedGracePeriod: I, isGracePeriodVisible: C } = (0, l.cj)([_.Z], () => ({
+            lastDismissedGracePeriod: _.Z.getLastDismissedGracePeriodForGuild(n),
+            isGracePeriodVisible: _.Z.isVisible(n)
         })),
-        C = (0, l.e7)([h.Z], () => h.Z.isVisible(e)),
-        S = (0, l.e7)([E.Z], () => E.Z.isVisible(e)),
-        T = (0, l.e7)([m.Z], () => m.Z.can(v.Plq.ADMINISTRATOR, e)),
-        P = null != y && Date.now() - y <= v.Dge,
-        j = (0, N.Jh)(n) !== v.Eu4.NONE,
-        A = !(null != r && Date.now() - r <= 43200000) && !P && T && j,
-        Z = (0, s.m)(n),
-        x = (0, l.e7)([_.Z], () => _.Z.isVisible(e)),
-        L = d.Z.useShouldShowChannelNotice(n),
-        w = (0, p.h6)(e),
-        { enableStudyGroup: R } = (0, u.s)(e),
-        D = w.length > 0,
-        k = R && !(null == e ? void 0 : e.hasFeature(v.oNc.HUB)),
-        M = (0, c.Vm)(n),
-        U = (0, l.e7)([f.Z], () => null != f.Z.getActiveGuildSignUp(n));
+        S = (0, p.Ek)(n, 'GuildBoostingNoticeStore'),
+        T = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
+        P = (0, l.e7)([O.Z], () => O.Z.isVisible(e)),
+        j = (0, l.e7)([b.Z], () => b.Z.can(y.Plq.ADMINISTRATOR, e)),
+        A = null != I && Date.now() - I <= y.Dge,
+        Z = (0, v.Jh)(n) !== y.Eu4.NONE,
+        x = !(null != r && Date.now() - r <= 43200000) && !A && j && Z,
+        L = (0, s.m)(n),
+        w = (0, l.e7)([E.Z], () => E.Z.isVisible(e)),
+        R = d.Z.useShouldShowChannelNotice(n),
+        D = (0, h.h6)(e),
+        { enableStudyGroup: k } = (0, u.s)(e),
+        M = D.length > 0,
+        U = k && !(null == e ? void 0 : e.hasFeature(y.oNc.HUB)),
+        G = (0, c.Vm)(n),
+        W = (0, l.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
     if (
         (i.useEffect(() => {
             a.Z.getGuildEventsForCurrentUser(n);
@@ -56,28 +58,28 @@ function I(e) {
         i.useEffect(() => {
             let e = -1;
             return (
-                A &&
+                x &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, o.C0)(n);
                         },
-                        30 * Math.random() * O.Z.Millis.SECOND
+                        30 * Math.random() * N.Z.Millis.SECOND
                     )),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, A]),
-        C)
+        }, [n, x]),
+        T)
     )
         return 0;
-    if (I) return 1;
-    if (S) return 2;
-    if (Z || null != M) return 3;
-    if (x) return 4;
-    else if (L) return 5;
-    else if (D) return 6;
-    else if (k) return 7;
-    else if (U) return 8;
+    if (C && !S) return 1;
+    if (P) return 2;
+    if (L || null != G) return 3;
+    if (w) return 4;
+    else if (R) return 5;
+    else if (M) return 6;
+    else if (U) return 7;
+    else if (W) return 8;
     return null;
 }
