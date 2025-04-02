@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => U });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -13,132 +13,196 @@ var i = n(120356),
     _ = n(359110),
     p = n(769654),
     h = n(922482),
-    m = n(430824),
-    g = n(957575),
-    E = n(323038),
-    b = n(960870),
-    v = n(139793),
-    y = n(652853),
-    O = n(336383),
-    I = n(194811),
-    S = n(373826),
-    T = n(340266),
-    N = n(788858),
-    A = n(849755),
-    C = n(384298),
-    R = n(670451),
-    P = n(228168),
-    w = n(388032),
-    D = n(203396);
-function L(e) {
-    let { user: t, voiceChannel: n, className: i, onClose: L } = e,
-        { profileType: x } = (0, y.z)(),
-        M = { [D.fullSize]: x === P.y0.FULL_SIZE },
-        { analyticsLocations: k } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
-        j = (0, b.Z)({
+    m = n(706454),
+    g = n(430824),
+    E = n(957575),
+    b = n(323038),
+    v = n(960870),
+    y = n(139793),
+    O = n(652853),
+    I = n(336383),
+    S = n(194811),
+    T = n(373826),
+    N = n(340266),
+    A = n(788858),
+    C = n(849755),
+    R = n(384298),
+    P = n(670451),
+    w = n(228168),
+    D = n(388032),
+    L = n(24981);
+function x(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function M(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                x(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function k(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function j(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : k(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function U(e) {
+    let { user: t, currentUser: n, voiceChannel: i, className: x, onClose: k } = e,
+        { profileType: U } = (0, O.z)(),
+        G = { [L.fullSize]: U === w.y0.FULL_SIZE },
+        { analyticsLocations: B } = (0, d.ZP)(u.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        F = (0, v.Z)({
             display: 'voice',
             activity: { type: 'VOICE' },
-            voiceChannelId: n.id,
+            voiceChannelId: i.id,
             user: t,
-            analyticsLocations: k
+            analyticsLocations: B
         }),
-        U = (0, v.Z)({
+        V = (0, y.Z)({
             userId: t.id,
-            onAction: j
+            onAction: F
         }),
-        G = (0, s.e7)([m.Z], () => m.Z.getGuild(n.guild_id)),
-        B = (0, E.Z)(n),
-        F = (0, f.ZP)(n),
-        { channelStatusEnabled: V } = (0, g.D)({ location: 'UserProfileVoiceActivityCard' }),
-        Z = () => (n.isDM() || n.isGroupDM() ? w.NW.string(w.t['9FaEzs']) : n.isGuildStageVoice() ? w.NW.string(w.t.QygGCA) : w.NW.string(w.t.msxteH)),
-        H = () => {
+        Z = (0, s.e7)([g.Z], () => g.Z.getGuild(i.guild_id)),
+        H = (0, b.Z)(i),
+        W = (0, f.ZP)(i),
+        { channelStatusEnabled: Y } = (0, E.D)({ location: 'UserProfileVoiceActivityCard' }),
+        K = (0, s.e7)([m.default], () => m.default.locale),
+        z = 'en-US' === K || 'en-GB' === K,
+        q = () => (i.isDM() || i.isGroupDM() ? D.NW.string(D.t['9FaEzs']) : i.isGuildStageVoice() ? D.NW.string(D.t.QygGCA) : D.NW.string(D.t.msxteH)),
+        Q = () => {
+            if (t.id !== n.id || !z) return null;
+            let e = i.isDM() || i.isGroupDM() ? D.NW.string(D.t['+DsWbW']) : D.NW.string(D.t.xOVEjY);
+            return (0, r.jsx)(l.ua7, {
+                text: e,
+                children: (e) => (0, r.jsx)(l.d3s, j(M({}, e), { size: 'xxs' }))
+            });
+        },
+        X = () => {
             let e = (e) => {
-                    e.stopPropagation(), null == j || j({ action: 'OPEN_VOICE_CHANNEL' }), n.isGuildStageVoice() ? (0, h.Cq)(n) : (c.default.selectVoiceChannel(n.id), (0, _.Kh)(n.id)), null == L || L();
+                    e.stopPropagation(), null == F || F({ action: 'OPEN_VOICE_CHANNEL' }), i.isGuildStageVoice() ? (0, h.Cq)(i) : (c.default.selectVoiceChannel(i.id), (0, _.Kh)(i.id)), null == k || k();
                 },
                 t = (e) => {
-                    e.stopPropagation(), j({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(n.guild_id), null == L || L();
+                    e.stopPropagation(), F({ action: 'OPEN_VOICE_GUILD' }), (0, p.X)(i.guild_id), null == k || k();
                 };
             return (0, r.jsxs)('div', {
-                className: D.details,
+                className: L.details,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsxs)(a.X6, {
                                 variant: 'heading-sm/semibold',
                                 color: 'text-normal',
-                                className: D.voiceChannelHeading,
+                                className: L.voiceChannelHeading,
                                 children: [
-                                    (0, r.jsx)(N.Z, {
-                                        channel: n,
+                                    (0, r.jsx)(A.Z, {
+                                        channel: i,
                                         size: 'xxs',
                                         color: l.TVs.colors.TEXT_NORMAL,
-                                        className: D.voiceIcon
+                                        className: L.voiceIcon
                                     }),
                                     (0, r.jsx)(l.P3F, {
-                                        className: o()(D.clickableText, D.inline),
+                                        className: o()(L.clickableText, L.inline),
                                         onClick: e,
-                                        children: F
+                                        children: W
                                     })
                                 ]
                             }),
-                            null != G &&
-                                (0, r.jsx)(S.Z, {
+                            null != Z &&
+                                (0, r.jsx)(T.Z, {
                                     variant: 'text-xs/normal',
-                                    text: w.NW.formatToPlainString(w.t['hq/Qzc'], { guildName: G.name }),
+                                    text: D.NW.formatToPlainString(D.t['hq/Qzc'], { guildName: Z.name }),
                                     onClick: t
                                 })
                         ]
                     }),
-                    V &&
-                        n.isGuildVoice() &&
-                        (0, r.jsx)(A.Z, {
-                            voiceChannel: n,
-                            onAction: j,
-                            onClose: L
+                    Y &&
+                        i.isGuildVoice() &&
+                        (0, r.jsx)(C.Z, {
+                            voiceChannel: i,
+                            onAction: F,
+                            onClose: k
                         })
                 ]
             });
         },
-        W = () =>
+        J = () =>
             (0, r.jsx)('div', {
-                className: o()(D.actions, M),
-                children: (0, r.jsx)(C.Z, {
-                    channel: n,
-                    onAction: j,
-                    onClose: L
+                className: o()(L.actions, G),
+                children: (0, r.jsx)(R.Z, {
+                    channel: i,
+                    onAction: F,
+                    onClose: k
                 })
             });
     return (0, r.jsx)(d.Gt, {
-        value: k,
-        children: (0, r.jsxs)(O.Z, {
-            ref: U,
-            className: o()(D.card, i),
-            onAction: j,
-            onClose: L,
+        value: B,
+        children: (0, r.jsxs)(I.Z, {
+            ref: V,
+            className: o()(L.card, x),
+            onAction: F,
+            onClose: k,
             children: [
-                (0, r.jsx)(I.Z, {
-                    text: Z(),
-                    contextMenu: (0, r.jsx)(R.Z, {
+                (0, r.jsx)(S.Z, {
+                    text: q(),
+                    tags: Q(),
+                    contextMenu: (0, r.jsx)(P.Z, {
                         display: 'voice',
                         user: t,
-                        onClose: L
+                        onClose: k
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: D.body,
+                    className: L.body,
                     children: (0, r.jsxs)('div', {
-                        className: o()(D.content, M),
+                        className: o()(L.content, G),
                         children: [
-                            (0, r.jsx)(T.Z, {
-                                users: B,
-                                channel: n
+                            (0, r.jsx)(N.Z, {
+                                users: H,
+                                channel: i
                             }),
-                            H(),
-                            x === P.y0.FULL_SIZE && W()
+                            X(),
+                            U === w.y0.FULL_SIZE && J()
                         ]
                     })
                 }),
-                x !== P.y0.FULL_SIZE && W()
+                U !== w.y0.FULL_SIZE && J()
             ]
         })
     });

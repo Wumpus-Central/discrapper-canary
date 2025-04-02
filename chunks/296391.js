@@ -13,13 +13,13 @@ var o = t(442837),
     p = t(678738),
     b = t(151545),
     y = t(744802),
-    g = t(493043),
-    v = t(864141),
-    m = t(228168),
+    v = t(493043),
+    m = t(864141),
+    g = t(228168),
     I = t(981631),
     j = t(388032),
-    h = t(559215),
-    _ = t(658266);
+    h = t(992211),
+    _ = t(662553);
 function x(e) {
     let { user: n, currentUser: t, displayProfile: x, guildId: O, subsection: Z, onClose: P } = e,
         { voiceActivityStatusEnabled: N } = (0, l.U)({ location: 'UserProfileModalActivity' }),
@@ -47,13 +47,14 @@ function x(e) {
                       ? (0, r.jsxs)(p.Z, {
                             children: [
                                 B &&
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         user: n,
+                                        currentUser: t,
                                         voiceChannel: C,
                                         onClose: P
                                     }),
                                 null != T &&
-                                    (0, r.jsx)(g.Z, {
+                                    (0, r.jsx)(v.Z, {
                                         location: 'UserProfileModalActivity',
                                         user: n,
                                         currentUser: t,
@@ -93,7 +94,7 @@ function x(e) {
                                           )
                                   })
                                 : void 0,
-                            scrollIntoView: Z === m.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: Z === g.Tb.RECENT_ACTIVITY,
                             children: S.map((e) =>
                                 (0, r.jsx)(
                                     y.Z,
