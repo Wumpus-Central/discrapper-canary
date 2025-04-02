@@ -1,4 +1,4 @@
-n.d(e, { default: () => g }), n(47120);
+n.d(e, { default: () => h }), n(47120);
 var r = n(200651),
     l = n(192379),
     s = n(481060),
@@ -7,8 +7,8 @@ var r = n(200651),
     o = n(698066),
     c = n(648159),
     u = n(388032),
-    d = n(232199),
-    b = n(578187);
+    d = n(896490),
+    b = n(558991);
 function m(t, e, n) {
     return (
         e in t
@@ -59,7 +59,11 @@ class f extends l.PureComponent {
                             title: u.NW.string(u.t['6Y1t5O']),
                             children: (0, r.jsx)(s.q4e, {
                                 placeholder: u.NW.string(u.t.U0kGk5),
-                                options: (0, i.Z)(t, !1),
+                                options: (0, i.Z)({
+                                    isStreamer: t,
+                                    isEndStream: !1,
+                                    showVibesHoneypot: !1
+                                }),
                                 onChange: this.handleChanged,
                                 value: l,
                                 maxVisibleItems: 4
@@ -135,4 +139,4 @@ class f extends l.PureComponent {
             });
     }
 }
-let g = f;
+let h = f;

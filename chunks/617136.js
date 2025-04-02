@@ -145,13 +145,13 @@ function P(e) {
 function w() {
     let e = (0, c.WD)();
     function t(t) {
-        let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: o = !1 } = t;
+        let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: o = !1, shouldExtendSession: a = !1 } = t;
         A({
             questId: n,
             event: r,
             properties: v(E({}, i), { impression_id: null == e ? void 0 : e.getId() }),
             trackGuildAndChannelMetadata: o,
-            shouldExtendSession: !0
+            shouldExtendSession: a
         });
     }
     return r.useCallback(t, [e]);
@@ -165,7 +165,8 @@ function D() {
                 questId: n,
                 event: m.rMx.QUEST_CONTENT_CLICKED,
                 properties: v(E({}, N(r, o, a)), { cta_name: i }),
-                trackGuildAndChannelMetadata: s
+                trackGuildAndChannelMetadata: s,
+                shouldExtendSession: (0, f.VB)(r)
             });
         },
         [e]

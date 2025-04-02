@@ -24,7 +24,7 @@ var r = n(200651),
     T = n(913002),
     N = n(228168),
     A = n(388032),
-    C = n(735405);
+    C = n(132398);
 function R(e, t, n) {
     return (
         t in e
@@ -452,13 +452,14 @@ function W(e) {
 function Y(e) {
     var t,
         n,
-        { location: i, user: o, onCloseProfile: a, previewText: s, previewEmoji: c, placeholderText: u, prompt: d } = e,
-        f = L(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'placeholderText', 'prompt']);
-    let h = (0, l.e7)([E.default], () => E.default.getId() === o.id),
-        g = (0, m.Z)(o.id),
+        { location: i, user: o, onCloseProfile: a, previewText: s, previewEmoji: c, placeholderText: u, prompt: d, disableEdit: f = !1 } = e,
+        h = L(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'placeholderText', 'prompt', 'disableEdit']);
+    let g = (0, m.Z)(o.id),
         { analyticsLocations: b } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
-        y = (0, v.T)({ location: i }),
-        O = !h && !o.bot && y;
+        y = (0, l.e7)([E.default], () => E.default.getId() === o.id),
+        O = y && !f,
+        I = (0, v.T)({ location: i }),
+        S = !y && !o.bot && I;
     if (null != s || null != c) {
         let e = null != c ? c : null,
             t = null != s && '' !== s ? s : null;
@@ -472,16 +473,16 @@ function Y(e) {
                         text: t,
                         placeholderText: u
                     },
-                    f
+                    h
                 )
             )
         });
     }
-    let I = null !== (t = null == g ? void 0 : g.emoji) && void 0 !== t ? t : null,
-        S = null !== (n = null == g ? void 0 : g.state) && void 0 !== n ? n : null,
-        T = null != S && '' !== S ? S : null;
-    return null != I || null != T || h
-        ? null == I && null == T
+    let T = null !== (t = null == g ? void 0 : g.emoji) && void 0 !== t ? t : null,
+        N = null !== (n = null == g ? void 0 : g.state) && void 0 !== n ? n : null,
+        A = null != N && '' !== N ? N : null;
+    return null != T || null != A || O
+        ? null == T && null == A
             ? (0, r.jsx)(p.Gt, {
                   value: b,
                   children: (0, r.jsx)(
@@ -491,11 +492,11 @@ function Y(e) {
                               onCloseProfile: a,
                               prompt: d
                           },
-                          f
+                          h
                       )
                   )
               })
-            : O
+            : S
               ? (0, r.jsx)(p.Gt, {
                     value: b,
                     children: (0, r.jsx)(
@@ -503,25 +504,25 @@ function Y(e) {
                         P(
                             {
                                 user: o,
-                                emoji: I,
-                                text: T
+                                emoji: T,
+                                text: A
                             },
-                            f
+                            h
                         )
                     )
                 })
-              : h
+              : O
                 ? (0, r.jsx)(p.Gt, {
                       value: b,
                       children: (0, r.jsx)(
                           H,
                           P(
                               {
-                                  emoji: I,
-                                  text: T,
+                                  emoji: T,
+                                  text: A,
                                   onCloseProfile: a
                               },
-                              f
+                              h
                           )
                       )
                   })
@@ -531,10 +532,10 @@ function Y(e) {
                           Z,
                           P(
                               {
-                                  emoji: I,
-                                  text: T
+                                  emoji: T,
+                                  text: A
                               },
-                              f
+                              h
                           )
                       )
                   })

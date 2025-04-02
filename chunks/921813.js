@@ -6,7 +6,7 @@ var r = n(200651),
     s = n(442837),
     l = n(481060),
     c = n(22267),
-    u = n(309351),
+    u = n(442933),
     d = n(680295),
     f = n(687158),
     _ = n(576635),
@@ -23,7 +23,7 @@ var r = n(200651),
     S = n(981631),
     T = n(228168),
     N = n(388032),
-    A = n(371831);
+    A = n(785677);
 function C(e) {
     let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: N, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: F = !1, pendingBadges: V, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
         W = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
@@ -89,7 +89,8 @@ function C(e) {
                                 (0, r.jsx)(m.Z, {
                                     location: 'ProfileCustomizationPreview',
                                     user: t,
-                                    profileType: T.y0.BITE_SIZE
+                                    profileType: T.y0.BITE_SIZE,
+                                    disableEdit: j
                                 })
                         ]
                     }),

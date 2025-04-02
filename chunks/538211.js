@@ -1,39 +1,53 @@
-n.d(t, { Z: () => r });
-var l = n(70722),
-    a = n(388032);
-function r(e, t) {
-    return [
-        {
-            value: l.kr.BLACK_SCREEN,
-            label: t ? a.NW.string(a.t['0X5Zbm']) : a.NW.string(a.t.fxiRNj)
-        },
-        {
-            value: l.kr.BLURRY,
-            label: t ? a.NW.string(a.t.VVPQy8) : a.NW.string(a.t.E8jTMD)
-        },
-        {
-            value: l.kr.LAGGING,
-            label: t ? a.NW.string(a.t.ObEHd3) : a.NW.string(a.t.VoSJER)
-        },
-        {
-            value: l.kr.OUT_OF_SYNC,
-            label: t ? a.NW.string(a.t.mYmwDw) : a.NW.string(a.t['+NluQk'])
-        },
-        {
-            value: l.kr.AUDIO_MISSING,
-            label: t ? a.NW.string(a.t.Xwv419) : a.NW.string(a.t.G2egzc)
-        },
-        {
-            value: l.kr.AUDIO_POOR,
-            label: t ? a.NW.string(a.t['fHey+f']) : a.NW.string(a.t.aHOfIi)
-        },
-        {
-            value: l.kr.STREAM_STOPPED,
-            label: a.NW.string(a.t.uEoqQk)
-        },
-        {
-            value: l.kr.OTHER,
-            label: a.NW.string(a.t['emlT9/'])
-        }
-    ];
+n.d(t, { Z: () => l }), n(47120);
+var r = n(70722),
+    i = n(388032);
+function l(e) {
+    let t = new Set();
+    return (
+        e.showVibesHoneypot || t.add(r.kr.VIBES_OFF),
+        (function (e) {
+            let { isEndStream: t } = e;
+            return [
+                {
+                    value: r.kr.BLACK_SCREEN,
+                    label: t ? i.NW.string(i.t['0X5Zbm']) : i.NW.string(i.t.fxiRNj)
+                },
+                {
+                    value: r.kr.BLURRY,
+                    label: t ? i.NW.string(i.t.VVPQy8) : i.NW.string(i.t.E8jTMD)
+                },
+                {
+                    value: r.kr.LAGGING,
+                    label: t ? i.NW.string(i.t.ObEHd3) : i.NW.string(i.t.VoSJER)
+                },
+                {
+                    value: r.kr.OUT_OF_SYNC,
+                    label: t ? i.NW.string(i.t.mYmwDw) : i.NW.string(i.t['+NluQk'])
+                },
+                {
+                    value: r.kr.AUDIO_MISSING,
+                    label: t ? i.NW.string(i.t.Xwv419) : i.NW.string(i.t.G2egzc)
+                },
+                {
+                    value: r.kr.AUDIO_POOR,
+                    label: t ? i.NW.string(i.t['fHey+f']) : i.NW.string(i.t.aHOfIi)
+                },
+                {
+                    value: r.kr.STREAM_STOPPED,
+                    label: i.NW.string(i.t.uEoqQk)
+                },
+                {
+                    value: r.kr.VIBES_OFF,
+                    label: i.NW.string(i.t['++JLLy'])
+                },
+                {
+                    value: r.kr.OTHER,
+                    label: i.NW.string(i.t['emlT9/'])
+                }
+            ];
+        })(e).filter((e) => {
+            let { value: n } = e;
+            return !t.has(n);
+        })
+    );
 }
