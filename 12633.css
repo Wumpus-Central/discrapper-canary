@@ -7969,9 +7969,16 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color--hover)
 }
 
-.opaque__54ab5 {
+.spoilerContent__54ab5.hidden__54ab5.opaque__54ab5 {
     --__obscured-background-brightness: 0;
     --__obscured-background-blur-radius: 500px
+}
+
+.spoilerContent__54ab5.hidden__54ab5.opaque__54ab5:hover {
+    --__current--spoiler-background-color: var(--__spoiler-background-color--hidden);
+    --__current--spoiler-border-color: var(--__spoiler-border-color--hidden);
+    --__current--spoiler-warning-text-color: var(--__spoiler-warning-text-color);
+    --__current--spoiler-warning-background-color: var(--__spoiler-warning-background-color)
 }
 
 .spoilerContainer__54ab5 {
