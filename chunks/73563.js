@@ -1,16 +1,17 @@
 n.d(t, {
-    Z: () => h,
-    e: () => d
+    Z: () => m,
+    e: () => h
 });
 var r,
-    i = n(200651);
-n(192379);
-var l = n(120356),
-    o = n.n(l),
-    a = n(600164),
-    s = n(507675),
-    c = n(598518);
-function u(e) {
+    i = n(200651),
+    l = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    c = n(600164),
+    u = n(507675),
+    d = n(366375);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,49 +36,54 @@ function u(e) {
     }
     return e;
 }
-var d = (((r = {})[(r.TOP = 0)] = 'TOP'), (r[(r.BOTTOM = 1)] = 'BOTTOM'), r);
-function p(e) {
-    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: r, renderBottomCenter: l, renderBottomRight: o, renderCenter: s } = e;
-    return (0, i.jsxs)('div', {
-        className: c.videoControls,
-        children: [
-            0 !== t && !0 !== t && (0, i.jsx)('div', { className: c.gradientTop }),
-            1 !== t && !0 !== t && (0, i.jsx)('div', { className: c.gradientBottom }),
-            (0, i.jsx)('div', {
-                className: c.topControls,
-                children: null == n ? void 0 : n()
-            }),
-            null == s ? void 0 : s(),
-            (0, i.jsxs)('div', {
-                className: c.bottomControls,
-                children: [
-                    (0, i.jsx)(a.Z, {
-                        grow: 1,
-                        align: a.Z.Align.CENTER,
-                        className: c.edgeControls,
-                        children: null == r ? void 0 : r()
-                    }),
-                    (0, i.jsx)(a.Z, {
-                        grow: 1,
-                        justify: a.Z.Justify.CENTER,
-                        align: a.Z.Align.CENTER,
-                        children: null == l ? void 0 : l()
-                    }),
-                    ' ',
-                    (0, i.jsx)(a.Z, {
-                        grow: 1,
-                        justify: a.Z.Justify.END,
-                        align: a.Z.Align.CENTER,
-                        className: c.edgeControls,
-                        children: null == o ? void 0 : o()
-                    })
-                ]
-            })
-        ]
+var h = (((r = {})[(r.TOP = 0)] = 'TOP'), (r[(r.BOTTOM = 1)] = 'BOTTOM'), r);
+function f(e) {
+    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: r, renderBottomCenter: o, renderBottomRight: a, renderCenter: u } = e,
+        p = l.useRef(null);
+    return (0, i.jsx)(s.JcV, {
+        containerRef: p,
+        children: (0, i.jsxs)('div', {
+            className: d.videoControls,
+            ref: p,
+            children: [
+                0 !== t && !0 !== t && (0, i.jsx)('div', { className: d.gradientTop }),
+                1 !== t && !0 !== t && (0, i.jsx)('div', { className: d.gradientBottom }),
+                (0, i.jsx)('div', {
+                    className: d.topControls,
+                    children: null == n ? void 0 : n()
+                }),
+                null == u ? void 0 : u(),
+                (0, i.jsxs)('div', {
+                    className: d.bottomControls,
+                    children: [
+                        (0, i.jsx)(c.Z, {
+                            grow: 1,
+                            align: c.Z.Align.CENTER,
+                            className: d.edgeControls,
+                            children: null == r ? void 0 : r()
+                        }),
+                        (0, i.jsx)(c.Z, {
+                            grow: 1,
+                            justify: c.Z.Justify.CENTER,
+                            align: c.Z.Align.CENTER,
+                            children: null == o ? void 0 : o()
+                        }),
+                        ' ',
+                        (0, i.jsx)(c.Z, {
+                            grow: 1,
+                            justify: c.Z.Justify.END,
+                            align: c.Z.Align.CENTER,
+                            className: d.edgeControls,
+                            children: null == a ? void 0 : a()
+                        })
+                    ]
+                })
+            ]
+        })
     });
 }
-function h(e) {
-    var { screenMessage: t, onDoubleClick: n, onActive: r, onForceIdle: l, idle: a, children: d, renderChatToasts: h, renderVoiceChannelEffects: f, style: m } = e,
+function m(e) {
+    var { screenMessage: t, onDoubleClick: n, onActive: r, onForceIdle: l, idle: o, children: s, renderChatToasts: c, renderVoiceChannelEffects: h, style: m } = e,
         g = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -98,12 +104,12 @@ function h(e) {
             return i;
         })(e, ['screenMessage', 'onDoubleClick', 'onActive', 'onForceIdle', 'idle', 'children', 'renderChatToasts', 'renderVoiceChannelEffects', 'style']);
     return (0, i.jsxs)('div', {
-        className: o()(c.root, { [c.idle]: a }),
+        className: a()(d.root, { [d.idle]: o }),
         style: m,
         onMouseMove: r,
         onMouseDown: r,
         onMouseLeave: l,
         onDoubleClick: n,
-        children: [d, null != t ? (0, i.jsx)(s.Z, u({ size: 'large' }, t)) : null, (0, i.jsx)(p, u({}, g)), null == h ? void 0 : h(), null == f ? void 0 : f()]
+        children: [s, null != t ? (0, i.jsx)(u.Z, p({ size: 'large' }, t)) : null, (0, i.jsx)(f, p({}, g)), null == c ? void 0 : c(), null == h ? void 0 : h()]
     });
 }
