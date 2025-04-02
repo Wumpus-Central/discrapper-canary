@@ -28,6 +28,8 @@ function d(e, t) {
             return a.NW.string(a.t.EouHws);
         case o.evJ.TOO_MANY_BLOCKED_USERS:
             return a.NW.string(a.t.sIGo1t);
+        case o.evJ.TOO_MANY_PENDING_OUTGOING:
+            return a.NW.string(a.t.k1K15u);
         case o.evJ.RELATIONSHIP_INCOMING_BLOCKED:
         case o.evJ.RELATIONSHIP_INVALID_SELF:
         case o.evJ.RELATIONSHIP_INVALUD_USER_BOT:
