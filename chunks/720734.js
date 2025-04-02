@@ -415,6 +415,7 @@ class e4 extends i.PureComponent {
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsxs)('div', {
+                                  ref: this.containerRef,
                                   className: eX.container,
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
@@ -428,6 +429,7 @@ class e4 extends i.PureComponent {
                                       (0, r.jsx)(
                                           e8,
                                           e$(eQ({}, this.props, this.state), {
+                                              accountContainerRef: this.containerRef,
                                               handleMouseEnterMute: this.handleMouseEnterMute,
                                               handleMouseLeaveMute: this.handleMouseLeaveMute,
                                               handleToggleSelfMute: this.handleToggleSelfMute,
@@ -460,6 +462,7 @@ class e4 extends i.PureComponent {
                 shouldShowSpeakingWhileMutedTooltip: !1,
                 hoveringOnMute: !1
             }),
+            eJ(this, 'containerRef', i.createRef()),
             eJ(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t, selfMute: n } = this.props;
                 (0, B.Z)(e, t, eY.jXE.ACCOUNT_PANEL), (0, M.v)(A.Z.ACCOUNT, M.d.MIC, n);
@@ -622,13 +625,14 @@ class e4 extends i.PureComponent {
     }
 }
 function e8(e) {
-    let { selfDeaf: t, selfMute: n, awaitingRemote: i, serverMute: s, serverDeaf: a, suppress: o, shouldShowSpeakingWhileMutedTooltip: l, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: g, handleToggleSelfMute: p, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: N, handleOpenSettingsContextMenu: x, dismissibleContents: _, nameplate: E } = e,
-        j = (0, ee.A)(E);
+    let { selfDeaf: t, selfMute: n, awaitingRemote: i, serverMute: s, serverDeaf: a, suppress: o, shouldShowSpeakingWhileMutedTooltip: l, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: g, handleToggleSelfMute: p, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: N, handleOpenSettingsContextMenu: x, dismissibleContents: _, nameplate: E, accountContainerRef: j } = e,
+        O = (0, ee.A)(E);
     return (0, r.jsxs)('div', {
         className: eX.buttons,
-        style: j,
+        style: O,
         children: [
             (0, r.jsx)(e5, {
+                accountContainerRef: j,
                 selfMute: n,
                 serverMute: s,
                 suppress: o,
@@ -825,98 +829,100 @@ function e9(e) {
     });
 }
 function e5(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: p, iconForeground: b, onMouseEnter: N, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j } = e,
-        O = t || s || n,
-        C = i.useRef(null),
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: p, iconForeground: b, onMouseEnter: N, onMouseLeave: x, onClick: _, onContextMenu: E, nameplate: j, accountContainerRef: O } = e,
+        C = t || s || n,
         v = i.useRef(null),
-        S = (0, m.O)(O ? 'unmute' : 'mute'),
-        T = (0, g.P)(O ? 'unmute' : 'mute'),
-        { activeVoice: I } = (0, eE.o)(),
-        y = null != I,
-        R = (0, e_.z)(I),
-        D = (0, l.e7)([eA.Z], () => eA.Z.isConnected()),
-        { Component: Z, events: w, play: k } = y ? T : S,
-        L = n || s ? f.v0G : Z,
-        { mode: B } = (0, eh.ZP)({ location: 'RTC Microphone Button' }),
-        { coloredIconsEnabled: M } = (0, ef.Z)({ location: 'RTC Microphone Button' }),
-        U = null != d ? d : (0, W.Z)(t, n, s, c, B === eh.BK.GroupedButtonsRedMic),
-        { analyticsLocations: V } = (0, P.ZP)(A.Z.AUDIO_INPUT_BUTTON),
-        G = (0, ex.Hu)({
+        S = i.useRef(null),
+        T = (0, m.O)(C ? 'unmute' : 'mute'),
+        I = (0, g.P)(C ? 'unmute' : 'mute'),
+        { activeVoice: y } = (0, eE.o)(),
+        R = null != y,
+        D = (0, e_.z)(y),
+        Z = (0, l.e7)([eA.Z], () => eA.Z.isConnected()),
+        { Component: w, events: k, play: L } = R ? I : T,
+        B = n || s ? f.v0G : w,
+        { mode: M } = (0, eh.ZP)({ location: 'RTC Microphone Button' }),
+        { coloredIconsEnabled: U } = (0, ef.Z)({ location: 'RTC Microphone Button' }),
+        V = null != d ? d : (0, W.Z)(t, n, s, c, M === eh.BK.GroupedButtonsRedMic),
+        { analyticsLocations: G } = (0, P.ZP)(A.Z.AUDIO_INPUT_BUTTON),
+        F = (0, ex.Hu)({
             location: A.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         });
-    i.useEffect(() => () => k(), [O, k]);
-    let F = i.useCallback(
+    i.useEffect(() => () => L(), [C, L]);
+    let H = i.useCallback(
             (e) => {
-                E(e, V);
+                E(e, G);
             },
-            [E, V]
+            [E, G]
         ),
-        [H, z] = i.useState(!1),
-        Y = i.useCallback((e) => {
+        [z, Y] = i.useState(!1),
+        K = i.useCallback((e) => {
             var t;
-            if ((0, o.k)(null == e ? void 0 : e.target, Node) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) return h.F;
-            z(!1);
+            if ((0, o.k)(null == e ? void 0 : e.target, Node) && (null === (t = v.current) || void 0 === t ? void 0 : t.contains(e.target))) return h.F;
+            Y(!1);
         }, []),
-        [K, q] = i.useState(!1);
+        [q, X] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e;
             return (
-                D &&
-                    y &&
+                Z &&
+                    R &&
                     (e = setTimeout(() => {
-                        q(!0), (e = setTimeout(() => q(!1), e2));
+                        X(!0), (e = setTimeout(() => X(!1), e2));
                     }, 300)),
                 () => {
-                    q(!1), clearTimeout(e);
+                    X(!1), clearTimeout(e);
                 }
             );
-        }, [D]),
+        }, [Z]),
         (0, r.jsx)(P.Gt, {
-            value: V,
+            value: G,
             children: (0, r.jsxs)('div', {
-                ref: C,
+                ref: v,
                 className: eX.micButtonParent,
                 children: [
                     (0, r.jsx)(eF.Z, {
-                        tooltipText: U,
+                        tooltipText: V,
                         tooltipColor: u,
                         tooltipForceOpen: p,
                         plated: null != j,
                         onMouseEnter: () => {
-                            N(), w.onMouseEnter();
+                            N(), k.onMouseEnter();
                         },
                         onMouseLeave: () => {
-                            x(), w.onMouseLeave();
+                            x(), k.onMouseLeave();
                         },
-                        icon: (0, r.jsx)(L, {
+                        icon: (0, r.jsx)(B, {
                             size: 'custom',
                             width: 20,
                             height: 20,
-                            color: O ? f.TVs.colors.STATUS_DANGER : 'currentColor',
+                            color: C ? f.TVs.colors.STATUS_DANGER : 'currentColor',
                             className: b
                         }),
                         onClick: _,
-                        onContextMenu: F,
+                        onContextMenu: H,
                         role: 'switch',
-                        className: a()({ [eX.micButtonWithMenu]: G }),
-                        redGlow: O && M,
+                        className: a()({ [eX.micButtonWithMenu]: F }),
+                        redGlow: C && U,
                         'aria-label': eq.NW.string(eq.t['w4m94+']),
-                        'aria-checked': O,
+                        'aria-checked': C,
                         disabled: c
                     }),
-                    G &&
+                    F &&
                         (0, r.jsx)(f.yRy, {
-                            targetElementRef: v,
+                            targetElementRef: S,
                             position: 'top',
-                            align: 'center',
+                            align: 'left',
+                            nudgeAlignIntoViewport: !1,
+                            overridePositionRef: O,
                             animation: f.yRy.Animation.FADE,
                             useMouseEnter: !0,
                             ignoreModalClicks: !0,
                             onRequestOpen: ej.r5,
-                            onRequestClose: Y,
-                            shouldShow: H,
+                            onRequestClose: K,
+                            shouldShow: z,
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (0, r.jsx)(eC.l, { onSettingsButtonClick: t });
@@ -946,25 +952,25 @@ function e5(e) {
                                 let o = s ? f.u04 : f.CJ0;
                                 return (0, r.jsx)('div', {
                                     children: (0, r.jsx)(eO.B, {
-                                        targetElementRef: v,
-                                        onCTA: () => z(!0),
+                                        targetElementRef: S,
+                                        onCTA: () => Y(!0),
                                         canBeShown: !s,
                                         children: (e, t) =>
                                             (0, r.jsx)(
                                                 eF.Z,
                                                 eQ(
                                                     {
-                                                        ref: v,
+                                                        ref: S,
                                                         plated: null != j,
-                                                        tooltipForceOpen: K,
-                                                        tooltipColor: K ? f.FGA.GREEN : void 0,
-                                                        tooltipContentClassName: K ? eX.voiceFilterWarning : void 0,
-                                                        tooltipText: K
+                                                        tooltipForceOpen: q,
+                                                        tooltipColor: q ? f.FGA.GREEN : void 0,
+                                                        tooltipContentClassName: q ? eX.voiceFilterWarning : void 0,
+                                                        tooltipText: q
                                                             ? (0, r.jsxs)(r.Fragment, {
                                                                   children: [
                                                                       (0, r.jsx)('img', {
-                                                                          alt: null != R ? eq.NW.string(R.name) : '',
-                                                                          src: null == R ? void 0 : R.iconURL,
+                                                                          alt: null != D ? eq.NW.string(D.name) : '',
+                                                                          src: null == D ? void 0 : D.iconURL,
                                                                           draggable: !1
                                                                       }),
                                                                       (0, r.jsx)(f.Text, {
@@ -980,15 +986,15 @@ function e5(e) {
                                                             size: 'custom',
                                                             width: 12,
                                                             height: 12,
-                                                            color: M && O ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
+                                                            color: U && C ? f.TVs.colors.STATUS_DANGER : f.TVs.colors.TEXT_NORMAL
                                                         }),
                                                         role: 'button',
-                                                        className: a()([eX.buttonChevron], { [eX.redGlow]: O && M }),
-                                                        redGlow: O && M,
+                                                        className: a()([eX.buttonChevron], { [eX.redGlow]: C && U }),
+                                                        redGlow: C && U,
                                                         'aria-label': eq.NW.string(eq.t.Hapb4O),
                                                         disabled: c,
                                                         onClick: (e) => {
-                                                            null == t || t(), n(e), z(!H);
+                                                            null == t || t(), n(e), Y(!z);
                                                         }
                                                     },
                                                     i
