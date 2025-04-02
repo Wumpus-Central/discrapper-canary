@@ -1,27 +1,27 @@
-l.d(t, { Z: () => u }), l(757143), l(301563);
-var r = l(200651);
-l(192379);
-var n = l(120356),
-    i = l.n(n),
-    s = l(729594),
-    o = l(785992),
-    a = l(616922),
-    d = l(552249);
+t.d(l, { Z: () => u }), t(757143), t(301563);
+var n = t(200651);
+t(192379);
+var r = t(120356),
+    i = t.n(r),
+    s = t(729594),
+    a = t(785992),
+    o = t(616922),
+    d = t(817857);
 function u(e) {
     let {
-        className: t,
-        embed: { url: l }
+        className: l,
+        embed: { url: t }
     } = e;
-    if (null == l) return null;
-    let n = null,
+    if (null == t) return null;
+    let r = null,
         u = null;
     try {
-        let e = s.parse(l.replace(/intl-[^/]+\//, ''), !0);
-        (n = e.host), (u = e.pathname);
+        let e = s.parse(t.replace(/intl-[^/]+\//, ''), !0);
+        (r = e.host), (u = e.pathname);
     } catch (e) {
         return null;
     }
-    if (!(0, o.E)(n) || null == u) return null;
+    if (!(0, a.E)(r) || null == u) return null;
     let c = u.split('/'),
         h = null != c[1] ? c[1].toLowerCase() : null,
         m = null != c[3] ? c[3].toLowerCase() : null,
@@ -31,9 +31,9 @@ function u(e) {
     let g = 352;
     return (
         'track' === h ? (g = 80) : ('episode' === h || 'show' === h) && (g = 232),
-        (0, r.jsx)('iframe', {
-            className: i()(d.embedSpotify, t),
-            src: a.C7.EMBED(u),
+        (0, n.jsx)('iframe', {
+            className: i()(d.embedSpotify, l),
+            src: o.C7.EMBED(u),
             style: {
                 maxWidth: 400,
                 minWidth: 300,
@@ -41,7 +41,8 @@ function u(e) {
                 height: g
             },
             frameBorder: 0,
-            sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'
+            sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts',
+            allow: 'clipboard-write'
         })
     );
 }

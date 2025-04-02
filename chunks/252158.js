@@ -22,8 +22,8 @@ var r = n(570140),
     I = n(303284),
     S = n(272395),
     T = n(674503),
-    A = n(981631),
-    N = n(65154);
+    N = n(981631),
+    A = n(65154);
 function C(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ let M = {
                 r = f.Z.getChannel(t),
                 i = (null == r ? void 0 : r.isGuildStageVoice()) && (null == n ? void 0 : n.suppress),
                 o = h.Z.getMediaSessionId();
-            if (null != r && null != o && !1 === p.Z.getInputDetected() && !i) return [R({ type: y.u.NO_AUDIO_INPUT_DETECTED }, (0, I.Y9)())];
+            if (null != r && null != o && !1 === p.Z.getInputDetected() && !i && !p.Z.isSelfMute()) return [R({ type: y.u.NO_AUDIO_INPUT_DETECTED }, (0, I.Y9)())];
         },
         makeErrorContextKey: (e) => ''.concat(e.mediaSessionId, ':').concat(e.audioInputDeviceName)
     },
@@ -189,21 +189,21 @@ let M = {
     [y.u.STREAM_FAILED_TO_START]: {
         getActiveErrors: (e) => {
             let { activeStreams: t } = e;
-            return t.filter((e) => e.state === A.jm8.FAILED).map((e) => R({ type: y.u.STREAM_FAILED_TO_START }, (0, I.rT)((0, s.V9)(e))));
+            return t.filter((e) => e.state === N.jm8.FAILED).map((e) => R({ type: y.u.STREAM_FAILED_TO_START }, (0, I.rT)((0, s.V9)(e))));
         },
         makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
     },
     [y.u.STREAM_RECONNECTING]: {
         getActiveErrors: (e) => {
             let { activeStreams: t } = e;
-            return t.filter((e) => e.state === A.jm8.RECONNECTING).map((e) => R({ type: y.u.STREAM_RECONNECTING }, (0, I.rT)((0, s.V9)(e))));
+            return t.filter((e) => e.state === N.jm8.RECONNECTING).map((e) => R({ type: y.u.STREAM_RECONNECTING }, (0, I.rT)((0, s.V9)(e))));
         },
         makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
     },
     [y.u.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH]: {
         getActiveErrors: () => {
             var e, t, n;
-            let r = null !== (n = null === (t = c.Z.getConnectionStats().find((e) => e.connection.context === N.Yn.DEFAULT)) || void 0 === t ? void 0 : null === (e = t.stats.rtp.outbound.find((e) => 'audio' === e.type)) || void 0 === e ? void 0 : e.sampleRateMismatchPercent) && void 0 !== n ? n : 0;
+            let r = null !== (n = null === (t = c.Z.getFirstConnectionStatsByContext(A.Yn.DEFAULT)) || void 0 === t ? void 0 : null === (e = t.stats.rtp.outbound.find((e) => 'audio' === e.type)) || void 0 === e ? void 0 : e.sampleRateMismatchPercent) && void 0 !== n ? n : 0;
             if (Math.abs(r) > D)
                 return [
                     R(
@@ -254,7 +254,7 @@ function U(e) {
             i = n.stream.ownerId,
             o = i === d.default.getId();
         if (!o && null == u.Z.getActiveStreamForUser(i, r)) continue;
-        let a = o && null != _.Z.getHookError(A.K3D.SOUND),
+        let a = o && null != _.Z.getHookError(N.K3D.SOUND),
             s = (0, l.Z)(g.Z.getQuality(), g.Z.getStatsHistory(r, i, o), a, e),
             c = n.id,
             f = g.Z.getMediaSessionId(c);
@@ -337,6 +337,7 @@ class G extends i.Z {
                 MEDIA_SESSION_JOINED: this.updateActiveErrors,
                 RTC_CONNECTION_UPDATE_ID: this.updateActiveErrors,
                 RTC_CONNECTION_USER_CREATE: this.updateActiveErrors,
+                RTC_CONNECTION_VIDEO: this.updateActiveErrors,
                 VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
                 CLEAR_VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
                 REPORT_AV_ERROR: this.handleReportAVError
