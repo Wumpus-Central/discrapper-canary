@@ -1,7 +1,7 @@
 n.d(t, {
     eR: () => m,
-    hW: () => f,
-    is: () => g
+    hW: () => b,
+    is: () => p
 }),
     n(47120);
 var r = n(192379),
@@ -29,14 +29,18 @@ function m(e) {
         (r.gain.value = n ? 0 : t), u(e, r);
     }, [n, e, t]);
 }
-function g(e, t) {
+function g(e) {
+    null != e.current && (e.current.stop(), (e.current = null));
+}
+function p(e, t) {
     let n = (0, r.useRef)(null),
         s = (0, r.useRef)(c.createGain()),
         o = (0, i.e7)([a.Z], () => a.Z.volume),
-        l = (0, i.e7)([a.Z], () => a.Z.isMuted);
+        l = (0, i.e7)([a.Z], () => a.Z.isMuted),
+        d = (0, r.useRef)(!0);
     (0, r.useEffect)(() => {
         (async () => {
-            null != n.current && (n.current.stop(), (n.current = null)), t || ((n.current = await u(e, s.current)), (n.current.loop = !0));
+            null != n.current && g(n), t || ((n.current = await u(e, s.current)), (n.current.loop = !0), d.current || g(n));
         })();
     }, [t, e]),
         (0, r.useEffect)(() => {
@@ -44,23 +48,22 @@ function g(e, t) {
         }, [l, o]),
         (0, r.useEffect)(
             () => () => {
-                var e;
-                return null === (e = n.current) || void 0 === e ? void 0 : e.stop();
+                (d.current = !1), g(n);
             },
             []
         );
 }
-let p = n(956294),
-    h = {
+let h = n(956294),
+    f = {
         [l.Vx.DEFAULT]: n(635154),
         [l.Vx.CAT]: n(382399),
         [l.Vx.SWORD]: n(730602),
         [l.Vx.PIZZA]: n(84171)
     };
-function f() {
+function b() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [n] = (0, o.Z)(l.yN.CURSORS),
         r = null !== (e = n.selectedCursor) && void 0 !== e ? e : l.Vx.DEFAULT;
-    return m(t ? p : h[r]);
+    return m(t ? h : f[r]);
 }

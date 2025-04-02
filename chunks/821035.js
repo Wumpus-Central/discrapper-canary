@@ -4,8 +4,8 @@ n(192379);
 var i = n(524437),
     s = n(481060),
     a = n(168107),
-    l = n(480916),
-    o = n(247206),
+    o = n(480916),
+    l = n(247206),
     c = n(294602),
     d = n(880257),
     u = n(63063),
@@ -14,17 +14,18 @@ var i = n(524437),
     p = n(726985),
     h = n(981631),
     f = n(388032),
-    b = n(535721);
+    b = n(612094);
 function N() {
     var e;
     let t = null === (e = (0, d.Z)()) || void 0 === e || e,
         { explicitContentGuilds: n, explicitContentFriendDm: N, explicitContentNonFriendDm: x } = (0, c.B)(),
         _ = (e) => {
-            if ((0, o.Ks)()) {
-                a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
+            let t = Object.values(e);
+            if ((0, l.Ks)() && t.includes(i.Q4.SHOW)) {
+                a.Z.showAgeVerificationGetStartedModal(o.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
                 return;
             }
-            (0, o.zj)(e);
+            (0, l.zj)(e);
         },
         E = [
             {
@@ -42,12 +43,12 @@ function N() {
                 label: f.NW.string(f.t.S49UaW)
             }
         ],
-        C = {
+        O = {
             value: i.Q4.SHOW,
             label: f.NW.string(f.t['5k5OFh'])
         };
     return (
-        t && (E.unshift(C), j.unshift(C)),
+        t && (E.unshift(O), j.unshift(O)),
         (0, r.jsxs)(m.U, {
             setting: p.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: g.FY.EXPLICIT_MEDIA_REDACTION_V2,

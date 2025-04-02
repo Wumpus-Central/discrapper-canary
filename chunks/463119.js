@@ -28,8 +28,8 @@ var r = n(200651),
     j = n(981631),
     A = n(921944),
     Z = n(388032),
-    x = n(402204);
-function w(e) {
+    x = n(673738);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function w(e) {
     }
     return e;
 }
-function L(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -130,8 +130,8 @@ let D = (e) => {
                 O && (0, r.jsx)(k, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    L(
-                        w(
+                    w(
+                        L(
                             {
                                 selected: t,
                                 route: j.Z5c.COLLECTIBLES_SHOP,
@@ -153,7 +153,7 @@ let D = (e) => {
             ]
         });
     },
-    U = (e) => (0, r.jsx)(M, L(w({}, e), { children: (0, r.jsx)(D, {}) })),
+    U = (e) => (0, r.jsx)(M, w(L({}, e), { children: (0, r.jsx)(D, {}) })),
     G = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -239,7 +239,7 @@ let D = (e) => {
             children: (e) =>
                 (0, r.jsxs)(
                     M,
-                    L(w(L(w({ className: null != y.entryPointClassName ? (0, _.l)(x, y.entryPointClassName) : void 0 }, I), { icon: y.entryPointIcon }), e), {
+                    w(L(w(L({ className: null != y.entryPointClassName ? (0, _.l)(x, y.entryPointClassName) : void 0 }, I), { icon: y.entryPointIcon }), e), {
                         onMouseEnter: () => U(e.onMouseEnter),
                         onMouseLeave: () => W(e.onMouseLeave),
                         children: [
@@ -280,7 +280,7 @@ let D = (e) => {
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(M, L(w({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(M, w(L({}, n, e), { children: (0, r.jsx)(D, { color: t.badgeColor }) }))
         });
     },
     B = (e) => {
@@ -306,7 +306,7 @@ let D = (e) => {
             children: (t) =>
                 (0, r.jsx)(
                     M,
-                    L(w({}, e), {
+                    w(L({}, e), {
                         onClick: o,
                         children: (0, r.jsx)(D, {})
                     })
@@ -316,26 +316,28 @@ let D = (e) => {
     H = () => ((0, N.Z)(), null),
     F = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l } = e,
-            { shopButtonDisplayOptions: o } = (0, C.Z)(),
-            a = (0, O.b)('Collectibles Shop Button'),
-            { shouldShowCoachmark: s } = (0, I.Z)(),
-            c = {
+            { shopButtonDisplayOptions: o, dismissShopButtonDC: a } = (0, C.Z)(),
+            s = (0, O.b)('Collectibles Shop Button'),
+            { shouldShowCoachmark: c } = (0, I.Z)(),
+            u = {
                 selected: t,
                 locationState: i,
-                onClick: n,
+                onClick: () => {
+                    c || a(), null == n || n();
+                },
                 listItemRef: l
             };
-        if (s) return (0, r.jsx)(B, w({}, c));
+        if (c) return (0, r.jsx)(B, L({}, u));
         if (null != o)
             switch (o.type) {
                 case T.k2.TOOLTIP:
-                    return (0, r.jsx)(V, L(w({}, c), { displayOptions: o }));
+                    return (0, r.jsx)(V, w(L({}, u), { displayOptions: o }));
                 case T.k2.COACHTIP:
-                    return (0, r.jsx)(W, L(w({}, c), { displayOptions: o }));
+                    return (0, r.jsx)(W, w(L({}, u), { displayOptions: o }));
                 case T.k2.BADGE:
-                    return (0, r.jsx)(U, w({}, c));
+                    return (0, r.jsx)(U, L({}, u));
             }
         return (0, r.jsxs)(r.Fragment, {
-            children: [a && (0, r.jsx)(H, {}), (0, r.jsx)(M, w({}, c))]
+            children: [s && (0, r.jsx)(H, {}), (0, r.jsx)(M, L({}, u))]
         });
     };
