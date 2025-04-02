@@ -2148,6 +2148,7 @@ var N =
     (r.AGE_VERIFICATION_MODAL_VIEWED = 'age_verification_modal_viewed'),
     (r.AGE_VERIFICATION_MODAL_CLICKED = 'age_verification_modal_clicked'),
     (r.AGE_VERIFICATION_DM_CLICKED = 'age_verification_dm_clicked'),
+    (r.AGE_VERIFICATION_TOAST_VIEWED = 'age_verification_toast_viewed'),
     (r.NSFW_SPACE_WARNING_MODAL_VIEWED = 'nsfw_space_warning_modal_viewed'),
     (r.NSFW_SPACE_WARNING_MODAL_CLICKED = 'nsfw_space_warning_modal_clicked'),
     (r.BOOSTING_UPSELL_VIEWED = 'boosting_upsell_viewed'),
