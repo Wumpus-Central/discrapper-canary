@@ -8,6 +8,8 @@ var r = {
     progressBarMarkerLabel: 'progressBarMarkerLabel__1f1cb',
     progressBarMarkerUnlockedIcon: 'progressBarMarkerUnlockedIcon__1f1cb',
     boostedTierIconBackground: 'boostedTierIconBackground__1f1cb',
-    boostedTierIcon: 'boostedTierIcon__1f1cb'
+    boostedTierIcon: 'boostedTierIcon__1f1cb',
+    tooltip: 'tooltip__1f1cb',
+    disabledIndicator: 'disabledIndicator__1f1cb'
 };
 e.exports = r;
