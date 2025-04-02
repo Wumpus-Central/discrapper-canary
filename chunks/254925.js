@@ -1,28 +1,31 @@
-n.d(t, {
-    QV: () => v,
-    ZP: () => N,
-    go: () => x
+B.d(g, {
+    QV: () => H,
+    ZP: () => b,
+    go: () => G
 }),
-    n(266796);
-var r = n(200651),
-    i = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(314852),
-    o = n(65361),
-    A = n(434404),
-    c = n(999382),
-    d = n(835887),
-    u = n(388661),
-    g = n(500230),
-    f = n(742409),
-    m = n(981631),
-    p = n(116175),
-    h = n(976260),
-    C = n(388032),
-    b = n(935921);
-let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKULL, p.ZD.MOON, p.ZD.LIGHTNING, p.ZD.COMPASS, p.ZD.TOADSTOOL],
-    x = [
+    B(266796);
+var C = B(200651),
+    Q = B(192379),
+    w = B(442837),
+    D = B(481060),
+    f = B(314852),
+    E = B(997431),
+    v = B(65361),
+    I = B(441536),
+    P = B(434404),
+    r = B(999382),
+    e = B(70086),
+    o = B(835887),
+    t = B(388661),
+    d = B(500230),
+    n = B(742409),
+    M = B(981631),
+    L = B(116175),
+    s = B(155174),
+    X = B(388032),
+    c = B(86986);
+let H = [L.ZD.LEAF, L.ZD.SWORD, L.ZD.HEART, L.ZD.FIRE, L.ZD.WATER_DROP, L.ZD.SKULL, L.ZD.MOON, L.ZD.LIGHTNING, L.ZD.COMPASS, L.ZD.TOADSTOOL],
+    G = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -76,126 +79,140 @@ let v = [p.ZD.LEAF, p.ZD.SWORD, p.ZD.HEART, p.ZD.FIRE, p.ZD.WATER_DROP, p.ZD.SKU
             secondary: '#cccccc'
         }
     ],
-    N = function () {
-        var e, t, n, p;
-        (0, C.j1)(h.M);
-        let N = (0, s.e7)([c.Z], () => c.Z.getGuild()),
-            j = (0, s.e7)([c.Z], () => c.Z.getGuildProfile()),
-            { fetchGuildProfile: E, fetchStatus: I } = (0, o.u)(null == N ? void 0 : N.id);
+    b = function () {
+        var A, g, B, L;
+        (0, X.j1)(s.M);
+        let b = (0, w.e7)([r.Z], () => r.Z.getGuild()),
+            Y = (0, w.e7)([r.Z], () => r.Z.getGuildProfile()),
+            { fetchGuildProfile: F, fetchStatus: a } = (0, v.u)(null == b ? void 0 : b.id);
         if (
-            (i.useEffect(() => {
-                I === l.a.NOT_FETCHED && E();
-            }, [E, I]),
-            I !== l.a.FETCHED)
+            (Q.useEffect(() => {
+                a === f.a.NOT_FETCHED && F();
+            }, [F, a]),
+            a !== f.a.FETCHED)
         )
-            return (0, r.jsx)('div', {
-                className: b.spinnerContainer,
-                children: (0, r.jsx)(a.$jN, {})
+            return (0, C.jsx)('div', {
+                className: c.spinnerContainer,
+                children: (0, C.jsx)(D.$jN, {})
             });
-        if (null == N || null == j) return null;
-        let O = (null == j ? void 0 : j.tag) == null,
-            y = null !== (e = j.badge) && void 0 !== e ? e : v[0],
-            w = null !== (t = j.badgeColorPrimary) && void 0 !== t ? t : x[0].primary,
-            P = null !== (n = j.badgeColorSecondary) && void 0 !== n ? n : x[0].secondary,
-            B = (0, r.jsxs)(r.Fragment, {
+        if (null == b || null == Y) return null;
+        let N = (0, E.u)(b),
+            i = !N || (null == Y ? void 0 : Y.tag) == null,
+            K = null !== (A = Y.badge) && void 0 !== A ? A : H[0],
+            y = null !== (g = Y.badgeColorPrimary) && void 0 !== g ? g : G[0].primary,
+            T = null !== (B = Y.badgeColorSecondary) && void 0 !== B ? B : G[0].secondary,
+            O = (0, C.jsxs)(C.Fragment, {
                 children: [
-                    (0, r.jsx)(u.Z, {
-                        className: b.section,
-                        guildId: N.id,
-                        isDisabled: O,
-                        tag: null !== (p = j.tag) && void 0 !== p ? p : '',
-                        badge: y,
-                        primaryColor: w,
-                        secondaryColor: P
+                    (0, C.jsx)(t.Z, {
+                        className: c.section,
+                        guildId: b.id,
+                        isDisabled: i,
+                        tag: null !== (L = Y.tag) && void 0 !== L ? L : '',
+                        badge: K,
+                        primaryColor: y,
+                        secondaryColor: T
                     }),
-                    (0, r.jsx)(d.Z, {
-                        className: b.section,
-                        guildId: N.id,
-                        badge: y
+                    (0, C.jsx)(o.Z, {
+                        className: c.section,
+                        selectedBadge: K,
+                        guildId: b.id
                     }),
-                    (0, r.jsx)(g.Z, {
-                        className: b.section,
-                        guildId: N.id,
-                        badge: y,
-                        primaryColor: w,
-                        secondaryColor: P
+                    (0, C.jsx)(d.Z, {
+                        className: c.section,
+                        guildId: b.id,
+                        badge: K,
+                        primaryColor: y,
+                        secondaryColor: T
                     })
                 ]
             });
-        return (0, r.jsxs)('div', {
+        return (0, C.jsxs)('div', {
             children: [
-                (0, r.jsx)(a.X6q, {
-                    className: b.title,
+                (0, C.jsx)(D.X6q, {
+                    className: c.title,
                     variant: 'heading-lg/semibold',
-                    children: C.NW.string(h.Z.mf2OwM)
+                    children: X.NW.string(s.Z.mf2OwM)
                 }),
-                (0, r.jsxs)('div', {
-                    className: b.container,
+                (0, C.jsxs)('div', {
+                    className: c.container,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: b.leftContent,
+                        (0, C.jsxs)('div', {
+                            className: c.leftContent,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, C.jsx)(D.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
-                                    className: b.description,
-                                    children: C.NW.string(h.Z['655Un5'])
+                                    className: c.description,
+                                    children: X.NW.string(s.Z['655Un5'])
                                 }),
-                                (0, r.jsxs)('div', {
-                                    className: b.enableSwitchContainer,
-                                    children: [
-                                        (0, r.jsx)('label', {
-                                            htmlFor: 'enable-server-tag',
-                                            children: (0, r.jsx)(a.Text, {
-                                                variant: 'text-md/semibold',
-                                                color: 'header-primary',
-                                                children: C.NW.string(h.Z['1zams7'])
-                                            })
-                                        }),
-                                        (0, r.jsx)(a.rsf, {
-                                            id: 'enable-server-tag',
-                                            checked: !O,
-                                            onChange: () => {
-                                                if (O) {
-                                                    var e;
-                                                    A.Z.updateGuildProfile(N.id, {
-                                                        tag: null !== (e = j.tag) && void 0 !== e ? e : '',
-                                                        badge: y,
-                                                        badgeColorPrimary: w,
-                                                        badgeColorSecondary: P
-                                                    });
-                                                } else A.Z.updateGuildProfile(N.id, { tag: null });
-                                            }
-                                        })
-                                    ]
-                                }),
-                                (0, r.jsx)(a.Text, {
-                                    variant: 'text-xs/medium',
-                                    color: 'text-muted',
-                                    className: b.memberApplicationsInfo,
-                                    children: C.NW.format(h.Z.WUACVF, {
-                                        onClick: () => {
-                                            A.Z.setSection(m.pNK.ACCESS);
-                                        }
-                                    })
-                                }),
-                                O
-                                    ? (0, r.jsx)(a.nuw, {
-                                          children: (0, r.jsx)('div', {
-                                              className: b.disabledForm,
-                                              children: B
+                                N
+                                    ? (0, C.jsxs)(C.Fragment, {
+                                          children: [
+                                              (0, C.jsxs)('div', {
+                                                  className: c.enableSwitchContainer,
+                                                  children: [
+                                                      (0, C.jsx)('label', {
+                                                          htmlFor: 'enable-server-tag',
+                                                          children: (0, C.jsx)(D.Text, {
+                                                              variant: 'text-md/semibold',
+                                                              color: 'header-primary',
+                                                              children: X.NW.string(s.Z['1zams7'])
+                                                          })
+                                                      }),
+                                                      (0, C.jsx)(D.rsf, {
+                                                          id: 'enable-server-tag',
+                                                          checked: !i,
+                                                          onChange: () => {
+                                                              if (i) {
+                                                                  var A;
+                                                                  P.Z.updateGuildProfile(b.id, {
+                                                                      tag: null !== (A = Y.tag) && void 0 !== A ? A : '',
+                                                                      badge: K,
+                                                                      badgeColorPrimary: y,
+                                                                      badgeColorSecondary: T
+                                                                  });
+                                                              } else P.Z.updateGuildProfile(b.id, { tag: null });
+                                                          }
+                                                      })
+                                                  ]
+                                              }),
+                                              (0, C.jsx)(D.Text, {
+                                                  variant: 'text-xs/medium',
+                                                  color: 'text-muted',
+                                                  className: c.memberApplicationsInfo,
+                                                  children: X.NW.format(s.Z.WUACVF, {
+                                                      onClick: () => {
+                                                          P.Z.setSection(M.pNK.ACCESS);
+                                                      }
+                                                  })
+                                              })
+                                          ]
+                                      })
+                                    : (0, C.jsx)('div', {
+                                          className: c.boostingLinkContainer,
+                                          children: (0, C.jsx)(e.P, {
+                                              onClick: () => {
+                                                  (0, I.Z)(b.id), P.Z.close();
+                                              }
+                                          })
+                                      }),
+                                i
+                                    ? (0, C.jsx)(D.nuw, {
+                                          children: (0, C.jsx)('div', {
+                                              className: c.disabledForm,
+                                              children: O
                                           })
                                       })
-                                    : B
+                                    : O
                             ]
                         }),
-                        (0, r.jsx)('div', {
-                            children: (0, r.jsx)(f.Z, {
-                                guildId: N.id,
-                                tag: j.tag,
-                                badge: y,
-                                primaryColor: w,
-                                secondaryColor: P
+                        (0, C.jsx)('div', {
+                            children: (0, C.jsx)(n.Z, {
+                                guildId: b.id,
+                                tag: Y.tag,
+                                badge: K,
+                                primaryColor: y,
+                                secondaryColor: T
                             })
                         })
                     ]

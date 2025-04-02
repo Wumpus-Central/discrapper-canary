@@ -5,6 +5,7 @@ e.exports = {
     description: 'description__69ef9',
     title: 'title__69ef9',
     enableSwitchContainer: 'enableSwitchContainer__69ef9',
+    boostingLinkContainer: 'boostingLinkContainer__69ef9',
     memberApplicationsInfo: 'memberApplicationsInfo__69ef9',
     sectionTitle: 'sectionTitle__69ef9',
     section: 'section__69ef9',
