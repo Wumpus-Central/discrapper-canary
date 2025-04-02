@@ -29,7 +29,7 @@ n.d(t, {
     sf: () => ei,
     tA: () => el,
     v_: () => Q,
-    yX: () => eA
+    yX: () => eN
 }),
     n(611060),
     n(47120),
@@ -102,10 +102,10 @@ var r = n(230367),
     T = (function (e) {
         return (e[(e.UNSET_SAFETY_SETTINGS_PRESET = 0)] = 'UNSET_SAFETY_SETTINGS_PRESET'), (e[(e.BALANCED = 1)] = 'BALANCED'), (e[(e.STRICT = 2)] = 'STRICT'), (e[(e.RELAXED = 3)] = 'RELAXED'), (e[(e.CUSTOM = 4)] = 'CUSTOM'), e;
     })({}),
-    A = (function (e) {
+    N = (function (e) {
         return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ALL = 1)] = 'ALL'), (e[(e.BOOKMARKS = 2)] = 'BOOKMARKS'), (e[(e.REMINDERS = 3)] = 'REMINDERS'), e;
     })({});
-class N extends a.C {
+class A extends a.C {
     create(e) {
         let t = {};
         return (
@@ -358,7 +358,7 @@ class N extends a.C {
         ]);
     }
 }
-let C = new N();
+let C = new A();
 class R extends a.C {
     create(e) {
         let t = {
@@ -2353,17 +2353,20 @@ class e_ extends a.C {
                 case 5:
                     o.createdAtMs = e.fixed64().toString();
                     break;
+                case 6:
+                    o.label = s.Gm.internalBinaryRead(e, e.uint32(), n, o.label);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
-                    let s = e.skip(i);
-                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
+                    let l = e.skip(i);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, l);
             }
         }
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        '' !== e.text && t.tag(1, r.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, r.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, r.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.expiresAtMs), '0' !== e.createdAtMs && t.tag(5, r.TD.Bit64).fixed64(e.createdAtMs);
+        '' !== e.text && t.tag(1, r.TD.LengthDelimited).string(e.text), '0' !== e.emojiId && t.tag(2, r.TD.Bit64).fixed64(e.emojiId), '' !== e.emojiName && t.tag(3, r.TD.LengthDelimited).string(e.emojiName), '0' !== e.expiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.expiresAtMs), '0' !== e.createdAtMs && t.tag(5, r.TD.Bit64).fixed64(e.createdAtMs), e.label && s.Gm.internalBinaryWrite(e.label, t.tag(6, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2398,6 +2401,12 @@ class e_ extends a.C {
                 name: 'created_at_ms',
                 kind: 'scalar',
                 T: 6
+            },
+            {
+                no: 6,
+                name: 'label',
+                kind: 'message',
+                T: () => s.Gm
             }
         ]);
     }
@@ -2735,7 +2744,7 @@ class eI extends a.C {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    o.folders.push(eA.internalBinaryRead(e, e.uint32(), n));
+                    o.folders.push(eN.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     if (i === r.TD.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) o.guildPositions.push(e.fixed64().toString());
@@ -2751,7 +2760,7 @@ class eI extends a.C {
         return o;
     }
     internalBinaryWrite(e, t, n) {
-        for (let i = 0; i < e.folders.length; i++) eA.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
+        for (let i = 0; i < e.folders.length; i++) eN.internalBinaryWrite(e.folders[i], t.tag(1, r.TD.LengthDelimited).fork(), n).join();
         if (e.guildPositions.length) {
             t.tag(2, r.TD.LengthDelimited).fork();
             for (let n = 0; n < e.guildPositions.length; n++) t.fixed64(e.guildPositions[n]);
@@ -2767,7 +2776,7 @@ class eI extends a.C {
                 name: 'folders',
                 kind: 'message',
                 repeat: 1,
-                T: () => eA
+                T: () => eN
             },
             {
                 no: 2,
@@ -2860,8 +2869,8 @@ class eT extends a.C {
         ]);
     }
 }
-let eA = new eT();
-class eN extends a.C {
+let eN = new eT();
+class eA extends a.C {
     create(e) {
         let t = {
             favoriteChannels: {},
@@ -2944,7 +2953,7 @@ class eN extends a.C {
         ]);
     }
 }
-let eC = new eN();
+let eC = new eA();
 class eR extends a.C {
     create(e) {
         let t = {
@@ -3590,7 +3599,7 @@ class eK extends a.C {
                 no: 1,
                 name: 'current_tab',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ForLaterTab', A, 'FOR_LATER_TAB_']
+                T: () => ['discord_protos.discord_users.v1.ForLaterTab', N, 'FOR_LATER_TAB_']
             }
         ]);
     }
