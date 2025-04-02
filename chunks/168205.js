@@ -6,5 +6,6 @@ e.exports = {
     popoutCaretLeft: 'popoutCaretLeft__93fc9',
     popoutContent: 'popoutContent__93fc9',
     coachmarkTextContainer: 'coachmarkTextContainer__93fc9',
-    folderIconContent: 'folderIconContent__93fc9'
+    folderIconContent: 'folderIconContent__93fc9',
+    folderWrapperCollapsed: 'folderWrapperCollapsed__93fc9'
 };
