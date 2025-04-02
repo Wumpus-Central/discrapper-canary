@@ -19,7 +19,7 @@ let i = 'RPC_PRIVATE_SCOPE',
     s = 'RPC_AUTHENTICATED_SCOPE',
     l = 'RPC_EMBEDDED_APP_SCOPE';
 var c = (function (e) {
-    return (e.USER_SETTINGS = 'USER_SETTINGS'), (e.CHANGELOG = 'CHANGELOG'), (e.LIBRARY = 'LIBRARY'), (e.STORE_HOME = 'STORE_HOME'), (e.STORE_LISTING = 'STORE_LISTING'), (e.CHANNEL = 'CHANNEL'), (e.PICK_GUILD_SETTINGS = 'PICK_GUILD_SETTINGS'), (e.QUEST_HOME = 'QUEST_HOME'), (e.DISCOVERY_GAME_RESULTS = 'DISCOVERY_GAME_RESULTS'), (e.OAUTH2 = 'OAUTH2'), (e.FEATURES = 'FEATURES'), (e.SHOP = 'SHOP'), e;
+    return (e.USER_SETTINGS = 'USER_SETTINGS'), (e.CHANGELOG = 'CHANGELOG'), (e.LIBRARY = 'LIBRARY'), (e.STORE_HOME = 'STORE_HOME'), (e.STORE_LISTING = 'STORE_LISTING'), (e.CHANNEL = 'CHANNEL'), (e.PICK_GUILD_SETTINGS = 'PICK_GUILD_SETTINGS'), (e.QUEST_HOME = 'QUEST_HOME'), (e.DISCOVERY_GAME_RESULTS = 'DISCOVERY_GAME_RESULTS'), (e.OAUTH2 = 'OAUTH2'), (e.FEATURES = 'FEATURES'), (e.SHOP = 'SHOP'), (e.ACTIVITIES = 'ACTIVITIES'), e;
 })({});
 function u(e) {
     switch (e) {
@@ -40,6 +40,8 @@ function u(e) {
             return 'quest_home';
         case 'DISCOVERY_GAME_RESULTS':
             return 'discovery_game';
+        case 'SHOP':
+            return 'shop';
         default:
             return e;
     }

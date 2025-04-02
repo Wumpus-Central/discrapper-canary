@@ -219,6 +219,14 @@ let w = {
                     let i = (0, O.getOAuth2AuthorizeProps)(r.toString());
                     if (null != i) return (0, O.openOAuth2ModalWithCreateGuildModal)(i), !0;
                     return !1;
+                case A.jE.SHOP:
+                    null != n &&
+                        ((0, N.dL)({
+                            pathname: Z.Z5c.COLLECTIBLES_SHOP,
+                            search: n.search
+                        }),
+                        L(n.fingerprint, (0, A.O)(t)));
+                    break;
                 case A.jE.FEATURES:
                 case A.jE.SHOP:
                     (null == n ? void 0 : n.path) != null && ((0, N.dL)({ pathname: n.path }), L(n.fingerprint, (0, A.O)(t)));

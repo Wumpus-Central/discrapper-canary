@@ -17,7 +17,7 @@ var r = n(200651),
     _ = n(347469),
     E = n(169382),
     O = n(290297),
-    N = n(289341),
+    N = n(244317),
     v = n(765717),
     y = n(358221),
     I = n(823748),
@@ -303,6 +303,7 @@ let eI = (0, u.Un)({
                 ? (0, r.jsx)(g.Z, {
                       deepLinkType: eO.jE.SHOP,
                       path: t.location.pathname,
+                      search: t.location.search,
                       children: (0, r.jsx)(
                           S.Z,
                           ev(
