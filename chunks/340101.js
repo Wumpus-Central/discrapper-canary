@@ -1,5 +1,6 @@
 n.d(t, {
-    C5: () => l,
+    Aw: () => l,
+    C5: () => c,
     Tu: () => o,
     ZL: () => a,
     js: () => s,
@@ -18,6 +19,9 @@ function a(e) {
 function s(e) {
     return e.type === r.Odu.VIDEO;
 }
-var l = (function (e) {
+function l(e) {
+    return e.type === r.Odu.VOICE_V3;
+}
+var c = (function (e) {
     return (e.HORIZONTAL = 'horizontal'), (e.VERTICAL = 'vertical'), e;
 })({});

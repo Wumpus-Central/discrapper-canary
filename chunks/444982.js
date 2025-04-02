@@ -128,16 +128,20 @@ let I = {
     },
     [b.Odu.VOICE_V3]: {
         renderWidget(e) {
-            let { widget: t, anchorLeft: n, locked: r, showEmpty: o } = e;
-            return (0, i.jsx)(g.Z, {
-                anchorLeft: n,
-                id: t.id,
-                locked: r,
-                pinned: t.pinned,
-                widget: b.Odu.VOICE,
-                isPreviewingInGame: !1,
-                showEmpty: o
-            });
+            var t;
+            let { widget: n, anchorLeft: r, locked: o, showEmpty: l } = e;
+            return (0, p.Aw)(n)
+                ? (0, i.jsx)(g.ZP, {
+                      anchorLeft: r,
+                      id: n.id,
+                      locked: o,
+                      pinned: n.pinned,
+                      widget: b.Odu.VOICE_V3,
+                      maxDisplayedVoiceStates: null !== (t = n.meta.voiceStatesMaxShown) && void 0 !== t ? t : O.At,
+                      isPreviewingInGame: !1,
+                      showEmpty: l
+                  })
+                : null;
         },
         renderTitle: () => (0, i.jsx)(v.PI, { children: _.NW.string(_.t.nFv3GR) }),
         renderButtons: (e, t) =>
