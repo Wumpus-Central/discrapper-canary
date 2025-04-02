@@ -708,12 +708,5 @@ function eT(e) {
           });
 }
 function eN(e) {
-    let t = (0, A.Zp)(e);
-    return (0, d.cj)([T.Z], () => {
-        let e = null != t ? T.Z.questToDeliverForPlacement.get(t) : void 0;
-        return {
-            decisionId: null == e ? void 0 : e.decisionId,
-            adIdentifiers: null == e ? void 0 : e.adIdentifiers
-        };
-    });
+    return (0, d.cj)([T.Z], () => (0, A.qe)(e, T.Z));
 }

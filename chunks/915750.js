@@ -162,22 +162,7 @@ class S {
                 }),
                     (T.lastBeatTime = Date.now());
             }),
-            h(this, 'commonProperties', (e) => {
-                var t, n;
-                return m(
-                    E(
-                        m(
-                            {
-                                impression_id: this.id,
-                                decision_id: null === (t = this.adDecisionData) || void 0 === t ? void 0 : t.decisionId
-                            },
-                            null === (n = this.adDecisionData) || void 0 === n ? void 0 : n.adIdentifiers
-                        ),
-                        { quest_status: (0, c.uk)(e) }
-                    ),
-                    (0, c.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex)
-                );
-            }),
+            h(this, 'commonProperties', (e) => m(E(m({ impression_id: this.id }, this.adDecisionData), { quest_status: (0, c.uk)(e) }), (0, c.mH)(this.questContent, this.questContentPosition, this.questContentRowIndex))),
             h(this, 'clone', (e) => {
                 let { triggeredByStatusChange: t } = e;
                 return (

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(192379),
     i = n(442837),
     o = n(230711),
@@ -37,6 +37,7 @@ function d(e) {
 }
 let f = Object.freeze({
         [l.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT]: c.oAB.PROFILE_CUSTOMIZATION,
+        [l.KQ.ProfileCustomizationScrollPositions.GUILD_TAG]: c.oAB.PROFILE_CUSTOMIZATION,
         [l.KQ.AccessibilityScrollPositions.REDUCED_MOTION]: c.oAB.ACCESSIBILITY,
         [l.KQ.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME]: c.oAB.ACCESSIBILITY,
         [l.KQ.AccessibilityScrollPositions.LEGACY_CHAT_INPUT]: c.oAB.ACCESSIBILITY,
@@ -47,7 +48,7 @@ let f = Object.freeze({
         [l.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
         [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL
     }),
-    p = function (e, t, n) {
+    _ = function (e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
             c = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
             u = (0, i.e7)([s.Z], () => s.Z.getScrollPosition());

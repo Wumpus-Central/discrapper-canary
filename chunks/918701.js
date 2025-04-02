@@ -55,6 +55,7 @@ n.d(t, {
     pO: () => eR,
     q6: () => z,
     q8: () => e0,
+    qe: () => tE,
     t2: () => ec,
     u7: () => tc,
     vQ: () => eb,
@@ -830,8 +831,13 @@ function tg(e) {
               adsetId: e.adset_id,
               adId: e.ad_id,
               creativeId: e.creative_id,
-              creativeType: e.creative_type,
-              questId: e.quest_id
+              creativeType: e.creative_type
           }
         : void 0;
+}
+function tE(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.Z,
+        n = tf(e),
+        r = null != n ? t.questToDeliverForPlacement.get(n) : void 0;
+    return x({ decisionId: null == r ? void 0 : r.decisionId }, null == r ? void 0 : r.adIdentifiers);
 }
