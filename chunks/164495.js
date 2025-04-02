@@ -1,196 +1,209 @@
-n.d(t, {
-    i0: () => _,
+t.d(n, {
+    i0: () => h,
     yD: () => O
 });
-var r = n(200651),
-    o = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    i = n(481060),
-    l = n(617136),
-    c = n(915750),
-    d = n(497505),
-    u = n(918701),
-    p = n(796111),
-    m = n(667105),
-    f = n(341907),
-    g = n(46140),
-    x = n(388032),
-    h = n(216556);
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+var r = t(200651),
+    o = t(192379),
+    a = t(120356),
+    i = t.n(a),
+    d = t(481060),
+    s = t(100527),
+    c = t(335131),
+    l = t(617136),
+    f = t(915750),
+    u = t(497505),
+    p = t(918701),
+    _ = t(796111),
+    C = t(667105),
+    v = t(341907),
+    g = t(46140),
+    b = t(215023),
+    m = t(388032),
+    x = t(883695);
+function S(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var t = null != arguments[n] ? arguments[n] : {},
+            r = Object.keys(t);
         'function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            r.forEach(function (n) {
                 var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (r = t[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[n] = r);
             });
     }
     return e;
 }
-function j(e) {
-    let { quest: t, taskDetails: n } = e;
-    return (0, r.jsx)(i.zxk, {
-        className: h.cta,
-        color: i.zxk.Colors.BRAND,
+function y(e) {
+    let { quest: n, taskDetails: t } = e;
+    return (0, r.jsx)(d.zxk, {
+        className: x.cta,
+        color: d.zxk.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
-            (0, f.openVideoQuestModal)(t);
+            (0, v.openVideoQuestModal)(n);
         },
-        size: i.zxk.Sizes.SMALL,
-        children: (0, u.F9)(n)
+        size: d.zxk.Sizes.SMALL,
+        children: (0, p.F9)(t)
     });
 }
-let v = (e) => {
-        let { quest: t } = e,
-            n = (0, c.aM)();
-        return (0, r.jsx)(i.zxk, {
-            className: h.cta,
-            size: i.zxk.Sizes.SMALL,
+let B = (e) => {
+        let { quest: n } = e,
+            t = (0, f.aM)();
+        return (0, r.jsx)(d.zxk, {
+            className: x.cta,
+            size: d.zxk.Sizes.SMALL,
             onClick: () =>
-                (0, u.FE)(t, {
-                    content: d.jn.QUEST_BAR_V2,
+                (0, p.FE)(n, {
+                    content: u.jn.QUEST_BAR_V2,
                     ctaContent: l.jZ.OPEN_GAME_LINK,
-                    impressionId: n
+                    impressionId: t
                 }),
-            children: (0, u.pO)(t) ? x.NW.string(x.t.hvVgAQ) : x.NW.string(x.t.lwQdjI)
+            children: (0, p.pO)(n) ? m.NW.string(m.t.hvVgAQ) : m.NW.string(m.t.lwQdjI)
         });
     },
-    y = (e) => {
-        var t;
-        let { quest: n } = e,
-            o = null === (t = (0, c.WD)()) || void 0 === t ? void 0 : t.getId();
-        return (0, r.jsx)(i.zxk, {
+    k = (e) => {
+        var n;
+        let { quest: t } = e,
+            o = null === (n = (0, f.WD)()) || void 0 === n ? void 0 : n.getId();
+        return (0, r.jsx)(d.zxk, {
             fullWidth: !0,
-            className: h.cta,
+            className: x.cta,
             onClick: () =>
-                (0, u.gI)(
-                    { quest: n },
+                (0, p.gI)(
+                    { quest: t },
                     {
-                        content: d.jn.QUEST_BAR_V2,
+                        content: u.jn.QUEST_BAR_V2,
                         ctaContent: l.jZ.CONNECT_CONSOLE,
                         impressionId: o
                     }
                 ),
-            size: i.zxk.Sizes.SMALL,
-            children: x.NW.string(x.t.csptqa)
+            size: d.zxk.Sizes.SMALL,
+            children: m.NW.string(m.t.csptqa)
         });
     },
-    _ = (e) => {
-        var t,
-            n,
-            { quest: s, useReducedMotion: l, isExpanded: c, className: u, ctaLabel: p, onClick: f } = e,
-            g = (function (e, t) {
+    h = (e) => {
+        var n,
+            t,
+            a,
+            { quest: l, useReducedMotion: f, isExpanded: _, className: v, ctaLabel: g, onClick: y } = e,
+            B = (function (e, n) {
                 if (null == e) return {};
-                var n,
+                var t,
                     r,
-                    o = (function (e, t) {
+                    o = (function (e, n) {
                         if (null == e) return {};
-                        var n,
+                        var t,
                             r,
                             o = {},
-                            s = Object.keys(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                            a = Object.keys(e);
+                        for (r = 0; r < a.length; r++) (t = a[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
                         return o;
-                    })(e, t);
+                    })(e, n);
                 if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < a.length; r++) (t = a[r]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
                 }
                 return o;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick']);
-        let j = (0, m.hf)({
-                quest: s,
-                location: d.jn.QUEST_BAR_V2
+        let k = (0, C.hf)({
+                quest: l,
+                location: u.jn.QUEST_BAR_V2
             }),
-            v = o.useCallback(
+            h = o.useCallback(
                 (e) => {
-                    null == f || f(e), j();
+                    var n;
+                    null == y || y(e),
+                        (0, p.xN)(l.config) && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null
+                            ? (0, c.mK)({
+                                  openInLayer: !1,
+                                  tab: b.AW.ORBS,
+                                  analyticsLocations: [],
+                                  analyticsSource: s.Z.QUEST_HOME_PAGE
+                              })
+                            : k();
                 },
-                [f, j]
+                [y, l.config, null === (a = l.userStatus) || void 0 === a ? void 0 : a.claimedAt, k]
             );
         return (0, r.jsx)(
-            i.gtL,
-            ((t = b(
+            d.gtL,
+            ((n = S(
                 {
                     fullWidth: !0,
-                    size: i.zxk.Sizes.SMALL,
-                    onClick: v,
-                    pauseAnimation: l || !c,
-                    className: a()(h.cta, u),
-                    buttonShineClassName: h.shine
+                    size: d.zxk.Sizes.SMALL,
+                    onClick: h,
+                    pauseAnimation: f || !_,
+                    className: i()(x.cta, v),
+                    buttonShineClassName: x.shine
                 },
-                g
+                B
             )),
-            (n = n = { children: null != p ? p : x.NW.string(x.t.cfY4PD) }),
+            (t = t = { children: null != g ? g : m.NW.string(m.t.cfY4PD) }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                : (function (e, n) {
+                      var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
                           var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          t.push.apply(t, r);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return t;
+                  })(Object(t)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
                   }),
-            t)
+            n)
         );
     },
-    C = (e) => {
-        var t;
-        let { quest: n, useReducedMotion: o, isExpanded: s, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: m } = e,
-            f = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-            x = (0, p.P)({ location: g.dr.QUESTS_BAR }),
-            h = (0, u.q8)(n);
-        return f
-            ? (0, r.jsx)(_, {
-                  quest: n,
-                  useReducedMotion: o,
-                  isExpanded: s
-              })
-            : h
-              ? (0, r.jsx)(j, {
-                    quest: n,
-                    taskDetails: m
-                })
-              : c === d.LI.CONSOLE && a && !x
-                ? (0, r.jsx)(y, { quest: n })
-                : c === d.LI.SELECT || i || l
-                  ? null
-                  : (0, r.jsx)(v, { quest: n });
+    j = (e) => {
+        var n;
+        let { quest: t, useReducedMotion: o, isExpanded: a, awaitingConsoleConnections: i, hasMadeProgress: d, isProgressing: s, activeScreen: c, taskDetails: l } = e,
+            f = (null === (n = t.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+            C = (0, _.P)({ location: g.dr.QUESTS_BAR }),
+            v = (0, p.q8)(t),
+            b = (0, p.Vl)(t);
+        if (f)
+            return (0, r.jsx)(h, {
+                quest: t,
+                useReducedMotion: o,
+                isExpanded: a
+            });
+        if (v)
+            return (0, r.jsx)(y, {
+                quest: t,
+                taskDetails: l
+            });
+        if (b);
+        else if (c === u.LI.CONSOLE && i && !C) return (0, r.jsx)(k, { quest: t });
+        else if (c !== u.LI.SELECT && !d && !s) return (0, r.jsx)(B, { quest: t });
+        return null;
     };
 function O(e) {
     return (0, r.jsxs)('div', {
-        className: h.ctaButtons,
+        className: x.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, r.jsx)(i.zxk, {
-                    className: h.backButton,
-                    innerClassName: h.backButtonInner,
+                (0, r.jsx)(d.zxk, {
+                    className: x.backButton,
+                    innerClassName: x.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(i.V7D, { className: h.backIcon })
+                    children: (0, r.jsx)(d.V7D, { className: x.backIcon })
                 }),
-            (0, r.jsx)(C, b({}, e))
+            (0, r.jsx)(j, S({}, e))
         ]
     });
 }
