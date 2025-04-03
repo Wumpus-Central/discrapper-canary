@@ -1,0 +1,21 @@
+e.exports = {
+    footer: 'footer__6be55',
+    guildRow: 'guildRow__6be55',
+    guildAsset: 'guildAsset__6be55',
+    inviteTarget: 'inviteTarget__6be55',
+    inviteTargetIcon: 'inviteTargetIcon__6be55',
+    inviteTargetHeading: 'inviteTargetHeading__6be55',
+    inviteTargetContent: 'inviteTargetContent__6be55',
+    guildPresence: 'guildPresence__6be55',
+    memberCount: 'memberCount__6be55',
+    onlineCount: 'onlineCount__6be55',
+    dot: 'dot__6be55',
+    settingsButton: 'settingsButton__6be55',
+    advancedOptions: 'advancedOptions__6be55',
+    advancedOption: 'advancedOption__6be55',
+    advancedOptionInner: 'advancedOptionInner__6be55',
+    advancedOptionContent: 'advancedOptionContent__6be55',
+    buttonRow: 'buttonRow__6be55',
+    button: 'button__6be55',
+    buttonInner: 'buttonInner__6be55'
+};

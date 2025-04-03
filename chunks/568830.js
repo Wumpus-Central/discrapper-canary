@@ -15,18 +15,5 @@ e.exports = {
     checkbox: 'checkbox__28554',
     disabled: 'disabled__28554',
     footer: 'footer__28554',
-    guildRow: 'guildRow__28554',
-    guildAsset: 'guildAsset__28554',
-    inviteTarget: 'inviteTarget__28554',
-    inviteTargetIcon: 'inviteTargetIcon__28554',
-    inviteTargetHeading: 'inviteTargetHeading__28554',
-    inviteTargetContent: 'inviteTargetContent__28554',
-    guildPresence: 'guildPresence__28554',
-    memberCount: 'memberCount__28554',
-    onlineCount: 'onlineCount__28554',
-    dot: 'dot__28554',
-    settingsButton: 'settingsButton__28554',
-    buttonRow: 'buttonRow__28554',
-    button: 'button__28554',
-    buttonInner: 'buttonInner__28554'
+    footerContent: 'footerContent__28554'
 };
