@@ -240,34 +240,35 @@ function N(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(c.ua7, {
-                text: y.NW.string(y.t.Sd8Ix8),
-                position: 'bottom',
-                children: (e) =>
-                    (0, r.jsx)(
-                        c.zxk,
-                        O(
-                            v(
+            o.id !== b._ &&
+                (0, r.jsx)(c.ua7, {
+                    text: y.NW.string(y.t.Sd8Ix8),
+                    position: 'bottom',
+                    children: (e) =>
+                        (0, r.jsx)(
+                            c.zxk,
+                            O(
+                                v(
+                                    {
+                                        className: _.inviteButton,
+                                        size: c.zxk.Sizes.ICON,
+                                        look: c.zxk.Looks.BLANK
+                                    },
+                                    e
+                                ),
                                 {
-                                    className: _.inviteButton,
-                                    size: c.zxk.Sizes.ICON,
-                                    look: c.zxk.Looks.BLANK
-                                },
-                                e
-                            ),
-                            {
-                                onClick: () => {
-                                    var t;
-                                    null == (t = e.onClick) || t.call(e), h();
-                                },
-                                children: (0, r.jsx)(c.ejJ, {
-                                    size: 'refresh_sm',
-                                    color: 'currentColor'
-                                })
-                            }
+                                    onClick: () => {
+                                        var t;
+                                        null == (t = e.onClick) || t.call(e), h();
+                                    },
+                                    children: (0, r.jsx)(c.ejJ, {
+                                        size: 'refresh_sm',
+                                        color: 'currentColor'
+                                    })
+                                }
+                            )
                         )
-                    )
-            })
+                })
         ]
     });
 }
