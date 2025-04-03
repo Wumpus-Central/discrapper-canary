@@ -206,13 +206,14 @@ class e_ extends i.PureComponent {
             a = (0, I.F6)(e, Z.default, V.Z),
             s = (null == n ? void 0 : n.id) === B.default.getId() && i,
             l = this.renderStreamState(),
-            c = null;
+            c = this.activeStreamForSelectedParticipant,
+            u = null;
         return (
             (null == n ? void 0 : n.type) !== ea.fO.ACTIVITY &&
                 (null != l
-                    ? (c = l)
+                    ? (u = l)
                     : ((null == n ? void 0 : n.type) === ea.fO.USER || (null == n ? void 0 : n.type) === ea.fO.STREAM) &&
-                      (c = (0, r.jsx)(Q.Z, {
+                      (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: F.Z.getVideoComponent(),
@@ -241,11 +242,12 @@ class e_ extends i.PureComponent {
                                     renderBottomRightControls: this.renderBottomRightControls,
                                     preventIdleComponent: L.Z,
                                     width: o,
-                                    className: el.elevationHigh
+                                    className: el.elevationHigh,
+                                    videoControlsClassName: (null == c ? void 0 : c.state) === eo.jm8.ENDED ? es.videoControls : void 0
                                 },
                                 e
                             ),
-                            { children: c }
+                            { children: u }
                         )
                     );
                 }
