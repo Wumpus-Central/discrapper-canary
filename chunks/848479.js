@@ -75,6 +75,13 @@ class c extends o.h {
         var e, t;
         return null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getUsedHeapSize) ? void 0 : e.call(t);
     }
+    getMemoryUsageElectronProcessTypeDetails() {
+        try {
+            return a.ZP.getDiscordMemoryUsageElectronProcessTypeDetails();
+        } catch (e) {
+            return null;
+        }
+    }
     constructor() {
         var e, t;
         super(), s(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === i.Z || void 0 === i.Z || null == (t = i.Z.processUtils) || null == (e = t.getCPUCoreCount) ? void 0 : e.call(t)), this.setupReportingTimer();

@@ -485,6 +485,10 @@ let j = {
         let { getDiscordMemoryUsageElectronRenderer: e } = this.getDiscordUtils();
         return null == e ? void 0 : e();
     },
+    getDiscordMemoryUsageElectronProcessTypeDetails() {
+        let { getDiscordMemoryUsageElectronProcessTypeDetails: e } = this.getDiscordUtils();
+        return null == e ? void 0 : e();
+    },
     showOpenDialog: (e) => I.fileManager.showOpenDialog({ properties: e }),
     flushStorageData: () =>
         h.isPlatformEmbedded

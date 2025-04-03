@@ -59,16 +59,21 @@ async function C() {
         data: { initialized: n.initialized }
     });
     let u = {
-            client_heartbeat_initialization_timestamp: n.initialized,
-            client_heartbeat_version: 17
-        },
-        p = h.Z.getMemoryUsageElectronRenderer();
-    null != p && (u.client_heartbeat_renderer_memory = p);
-    let m = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-    null != m && (u.client_heartbeat_renderer_memory_used_heap = m);
+        client_heartbeat_initialization_timestamp: n.initialized,
+        client_heartbeat_version: 17
+    };
     {
-        let e = s.ZP.getCurrentGameForAnalytics();
-        null != e && ((u.client_heartbeat_current_game_id = e.id), (u.client_heartbeat_current_game_name = e.name), (u.client_heartbeat_current_game_executable = (0, o.N6)(e.exePath)), (u.client_heartbeat_current_game_distributor = e.distributor), (u.uses_client_mods = (0, r.e)())), c.Z.isNativeModuleLoaded() && (u.voice_filters_native_module_loaded = !0);
+        let e = h.Z.getMemoryUsageElectronRenderer();
+        null != e && (u.client_heartbeat_renderer_memory = e);
+        let t = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
+        null != t && (u.client_heartbeat_renderer_memory_used_heap = t);
+        let n = h.Z.getMemoryUsageElectronProcessTypeDetails();
+        if (null != n) {
+            var p, m, O, N, I, C, S, T, P, j, A, Z, x, L, w, R, D, k, M, U, G, W, V, B;
+            (u.electron_process_memory_private = [null != (x = null == (p = n.unknown) ? void 0 : p.wss_priv_kb) ? x : -1, null != (L = null == (m = n.main) ? void 0 : m.wss_priv_kb) ? L : -1, null != (w = null == (O = n.renderer) ? void 0 : O.wss_priv_kb) ? w : -1, null != (R = null == (N = n.gpu) ? void 0 : N.wss_priv_kb) ? R : -1, null != (D = null == (I = n.crashpad) ? void 0 : I.wss_priv_kb) ? D : -1, null != (k = null == (C = n.utility) ? void 0 : C.wss_priv_kb) ? k : -1]), (u.electron_process_memory_private_and_shared = [null != (M = null == (S = n.unknown) ? void 0 : S.wss_kb) ? M : -1, null != (U = null == (T = n.main) ? void 0 : T.wss_kb) ? U : -1, null != (G = null == (P = n.renderer) ? void 0 : P.wss_kb) ? G : -1, null != (W = null == (j = n.gpu) ? void 0 : j.wss_kb) ? W : -1, null != (V = null == (A = n.crashpad) ? void 0 : A.wss_kb) ? V : -1, null != (B = null == (Z = n.utility) ? void 0 : Z.wss_kb) ? B : -1]);
+        }
+        let i = s.ZP.getCurrentGameForAnalytics();
+        null != i && ((u.client_heartbeat_current_game_id = i.id), (u.client_heartbeat_current_game_name = i.name), (u.client_heartbeat_current_game_executable = (0, o.N6)(i.exePath)), (u.client_heartbeat_current_game_distributor = i.distributor), (u.uses_client_mods = (0, r.e)())), c.Z.isNativeModuleLoaded() && (u.voice_filters_native_module_loaded = !0);
     }
     d.default.track(b.rMx.CLIENT_HEARTBEAT, u), i.K.set(_, Date.now().toString()), (0, a.Z)();
 }
