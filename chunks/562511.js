@@ -17,20 +17,16 @@ function d(e) {
             (0, r.e7)(
                 [s.Z, a.default, l.ZP],
                 () => {
-                    if (t || null === e) return !1;
+                    var t;
+                    if (null === e) return !1;
                     let n = s.Z.getGuild(e);
-                    if (void 0 === n) return !1;
+                    if (void 0 === n || !(0, c.u)(n) || null == n.profile) return !1;
                     let r = a.default.getCurrentUser();
-                    if (void 0 === r) return !1;
+                    if (void 0 === r || (null == (t = r.primaryGuild) ? void 0 : t.identityGuildId) === n.id) return !1;
                     let i = l.ZP.getMember(e, r.id);
-                    if (null == i) return !1;
-                    if (!(0, c.u)(n) || null == n.profile || i.isPending) return !1;
-                    if (null == r.primaryGuild) return !0;
-                    let o = null != i.joinedAt ? new Date(i.joinedAt) : null,
-                        u = null != o && Date.now() - o.getTime() <= 259200000;
-                    return null == r.primaryGuild.identityGuildId && !u;
+                    return null != i && !i.isPending;
                 },
-                [t, e]
+                [e]
             ) && !t
         );
     })(e)
