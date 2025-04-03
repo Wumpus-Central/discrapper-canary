@@ -1,5 +1,6 @@
 var r = {
     container: 'container__459fb',
+    gradient: 'gradient__459fb',
     customContainer: 'customContainer__459fb',
     defaultContainer: 'defaultContainer__459fb',
     custom: 'custom__459fb',
@@ -10,6 +11,7 @@ var r = {
     colorPickerRow: 'colorPickerRow__459fb',
     colorPickerSwatch: 'colorPickerSwatch__459fb',
     default: 'default__459fb',
+    gradientPreset: 'gradientPreset__459fb',
     disabled: 'disabled__459fb',
     colorPickerDropper: 'colorPickerDropper__459fb',
     colorPickerDropperFg: 'colorPickerDropperFg__459fb',
