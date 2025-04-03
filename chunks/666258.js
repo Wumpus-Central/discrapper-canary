@@ -164,28 +164,28 @@ function _(e) {
 }
 function y(e) {
     var t;
-    let { className: s, guild: h, channel: x, inviteTarget: p, sendInvite: y, inviteKey: O, sending: P, options: Z, setOptions: A, isApplicationBypassAllowed: w, isGuestInviteAllowed: k, isTemporaryInviteAllowed: R } = e,
+    let { className: s, guild: h, channel: x, inviteTarget: p, sendInvite: y, inviteKey: O, sending: P, options: Z, setOptions: A, isApplicationBypassAllowed: w, isGuestInviteAllowed: R, isTemporaryInviteAllowed: k } = e,
         [M] = (0, o.Wu)([v.Z], () => [v.Z.hideInstantInvites]),
-        [W, L] = i.useState(!1),
-        [D, U] = i.useState(!1),
+        [W, D] = i.useState(!1),
+        [L, U] = i.useState(!1),
         V = i.useRef(null),
         B = (0, m.Dt)(),
-        z = (0, m.Dt)(),
         F = (0, m.Dt)(),
-        G = (0, I.Z)(O),
-        H = M ? j.NW.string(j.t['6HzNgY']) : G,
+        G = (0, m.Dt)(),
+        z = (0, I.Z)(O),
+        H = M ? j.NW.string(j.t['6HzNgY']) : z,
         q = i.useCallback(
             () => (
-                L(!0),
-                (0, N.JG)(G),
+                D(!0),
+                (0, N.JG)(z),
                 (V.current = setTimeout(() => {
-                    L(!1);
+                    D(!1);
                 }, 1000)),
                 () => {
                     null !== V.current && clearTimeout(V.current);
                 }
             ),
-            [L, G]
+            [D, z]
         ),
         Y = i.useCallback(
             (e) => {
@@ -262,32 +262,22 @@ function y(e) {
                         text: j.NW.string(j.t['4QuV7O']),
                         children: (e) =>
                             (0, l.jsx)(
-                                u.zxk,
-                                T(
-                                    E(
-                                        {
-                                            size: u.zxk.Sizes.ICON,
-                                            look: u.zxk.Looks.BLANK,
-                                            className: S.settingsButton
-                                        },
-                                        e
-                                    ),
-                                    {
-                                        onClick: () => {
-                                            var t;
-                                            null == e || null == (t = e.onClick) || t.call(e), U(!D);
-                                        },
-                                        children: (0, l.jsx)(u.ewm, {
-                                            size: 'md',
-                                            color: d.Z.colors.ICON_PRIMARY.css
-                                        })
-                                    }
-                                )
+                                u.P3F,
+                                T(E({ className: S.settingsButton }, e), {
+                                    onClick: () => {
+                                        var t;
+                                        null == e || null == (t = e.onClick) || t.call(e), U((e) => !e);
+                                    },
+                                    children: (0, l.jsx)(u.ewm, {
+                                        size: 'refresh_sm',
+                                        color: d.Z.colors.ICON_PRIMARY
+                                    })
+                                })
                             )
                     })
                 ]
             }),
-            D &&
+            L &&
                 (0, l.jsxs)(b, {
                     children: [
                         (0, l.jsxs)(_, {
@@ -362,9 +352,9 @@ function y(e) {
                                     })
                                 ]
                             }),
-                        k &&
+                        R &&
                             (0, l.jsxs)(_, {
-                                htmlFor: z,
+                                htmlFor: F,
                                 children: [
                                     (0, l.jsxs)('div', {
                                         className: S.advancedOptionContent,
@@ -388,15 +378,15 @@ function y(e) {
                                         ]
                                     }),
                                     (0, l.jsx)(u.rsf, {
-                                        id: z,
+                                        id: F,
                                         checked: Z.flags === a.$.IS_GUEST_INVITE,
                                         onChange: () => X(a.$.IS_GUEST_INVITE)
                                     })
                                 ]
                             }),
-                        R &&
+                        k &&
                             (0, l.jsxs)(_, {
-                                htmlFor: F,
+                                htmlFor: G,
                                 children: [
                                     (0, l.jsxs)('div', {
                                         className: S.advancedOptionContent,
@@ -420,7 +410,7 @@ function y(e) {
                                         ]
                                     }),
                                     (0, l.jsx)(u.rsf, {
-                                        id: F,
+                                        id: G,
                                         checked: !!Z.temporary,
                                         onChange: (e) => J(e)
                                     })
