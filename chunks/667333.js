@@ -2,6 +2,7 @@ e.exports = {
     formGroup: 'formGroup_dbc4b7',
     customStatusInputTitle: 'customStatusInputTitle_dbc4b7',
     inputContainer: 'inputContainer_dbc4b7',
+    hiddenPlaceholder: 'hiddenPlaceholder_dbc4b7',
     emojiButton: 'emojiButton_dbc4b7',
     emojiButtonContainer: 'emojiButtonContainer_dbc4b7',
     emoji: 'emoji_dbc4b7',
