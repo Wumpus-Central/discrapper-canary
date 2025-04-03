@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => b,
-    ZP: () => _
+    EQ: () => E,
+    Rg: () => _
 });
 var r = n(200651),
     i = n(192379),
@@ -8,11 +8,12 @@ var r = n(200651),
     a = n(540059),
     o = n(605236),
     s = n(930153),
-    c = n(432792),
-    u = n(981631),
-    d = n(388032),
-    p = n(326238);
-function h(e) {
+    c = n(822857),
+    u = n(432792),
+    d = n(981631),
+    p = n(388032),
+    h = n(326238);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -56,113 +57,64 @@ function f(e, t) {
     }
     return i;
 }
-let g = (e) => {
+let m = (e) => {
         var { tailLeftOffset: t = 22 } = e,
-            n = f(e, ['tailLeftOffset']);
+            n = g(e, ['tailLeftOffset']);
         return (0, r.jsx)(
-            c.tE,
-            h(
+            u.tE,
+            f(
                 {
-                    titleText: d.NW.string(d.t['duN28/']),
-                    descriptionText: d.NW.string(d.t['Veu++f']),
-                    ctaText: d.NW.string(d.t.F4SoLC),
+                    titleText: p.NW.string(p.t['duN28/']),
+                    descriptionText: p.NW.string(p.t['Veu++f']),
+                    ctaText: p.NW.string(p.t.F4SoLC),
                     tailLeftOffset: t,
-                    customIconSrcs: { static: p.Z }
+                    customIconSrcs: { static: h.Z }
                 },
                 n
             )
         );
     },
-    m = () => {
-        let e = (0, a.Q3)('VirtualCurrency: ShopOnboardingCoachmark');
-        return {
-            getRequiredSpacingFromTop: i.useCallback(() => {
+    b = () => {
+        let e = (0, a.Q3)('VirtualCurrency: ShopOnboardingCoachmark'),
+            t = i.useCallback(() => {
                 let t = (0, s.Lk)(document.body.style.getPropertyValue('--custom-channel-header-height'), 48),
                     n = (0, s.Lk)(document.body.style.getPropertyValue('--custom-app-top-bar-height'), 36);
                 return e ? t + n : t;
-            }, [e]),
-            tailLeftOffset: e ? 15 : 22,
+            }, [e]);
+        return {
+            requiredSpacingFromTop: i.useMemo(() => t(), [t]),
+            tailLeftOffset: e ? 16 : 22,
             isVisualRefreshEnabled: e
         };
-    },
-    b = (e) => {
-        let { isVirtualCurrencyEnabled: t, listScrollerRef: n } = e,
-            r = i.useRef(null),
-            a = i.useCallback(() => {
-                null !== r.current && r.current.updateElementOffsets();
-            }, []),
-            s = i.useCallback(() => {
-                null !== n.current && n.current.scrollToTop({ animate: !0 });
-            }, [n]),
-            d = (0, o.wE)(l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
-            { shouldShow: p, closeCoachmarkIfOpen: h } = (0, c.M)({
-                onboardingCoachmarkType: 'shop',
-                prevCoachmarksDismissed: d,
-                onShowCoachmarkHandler: s
-            });
-        return t
-            ? {
-                  shouldShow: p,
-                  closeCoachmarkIfOpen: h,
-                  onHandleScroll: a,
-                  offsetControlRef: r,
-                  onClose: h,
-                  onCtaClick: h
-              }
-            : {
-                  shouldShow: !1,
-                  closeCoachmarkIfOpen: u.dG4,
-                  onHandleScroll: u.dG4,
-                  offsetControlRef: r,
-                  onClose: u.dG4,
-                  onCtaClick: u.dG4
-              };
     },
     _ = (e) => {
         var t,
             n,
-            { offsetControlRef: l, backgroundElementRef: o } = e,
-            u = f(e, ['offsetControlRef', 'backgroundElementRef']);
-        let { getRequiredSpacingFromTop: d, tailLeftOffset: p } = m(),
-            b = i.useRef(null),
-            _ = i.useCallback(
+            { positionControlRef: l, targetElementRef: a, children: o } = e,
+            s = g(e, ['positionControlRef', 'targetElementRef', 'children']);
+        let { requiredSpacingFromTop: c, tailLeftOffset: d } = b(),
+            p = i.useRef(null),
+            h = i.useCallback(
                 (e) => {
-                    let t = (e.bottom + e.top) / 2;
-                    return !(t <= d() || t > window.innerHeight - (0, c.t4)());
+                    if ((e.bottom + e.top) / 2 <= c) return !1;
+                    let t = window.innerHeight - (0, u.t4)();
+                    return !(e.bottom > t);
                 },
-                [d]
-            ),
-            E = (0, a.Q3)('VirtualCurrency: ShopOnboardingCoachmark'),
-            O = i.useCallback(
-                (e, t) => {
-                    if (E) {
-                        let e = (0, s.Lk)(document.body.style.getPropertyValue('--custom-app-top-bar-height'), 36);
-                        return {
-                            left: -(0, s.Lk)(document.body.style.getPropertyValue('--custom-guild-list-width'), 72),
-                            verticalOffset: t ? -e - 4 : e - 9
-                        };
-                    }
-                    return {
-                        left: 0,
-                        verticalOffset: t ? -4 : -12
-                    };
-                },
-                [E]
+                [c]
             );
-        return (0, r.jsx)(c.U_, {
-            offsetControlRef: l,
-            coachmarkRef: b,
-            backgroundElementRef: o,
-            calculateVisibility: _,
-            calculateBaseOffsets: O,
-            children: (0, r.jsx)(
-                g,
-                ((t = h(
+        return (0, r.jsx)(u.WS, {
+            defaultCoachmarkPosition: 'bottom',
+            disableAutoInvert: !0,
+            targetElementRef: a,
+            positionControlRef: l,
+            popoutElement: (0, r.jsx)(
+                m,
+                ((t = f(
                     {
-                        coachmarkRef: b,
-                        tailLeftOffset: p
+                        coachmarkRef: p,
+                        tailLeftOffset: d
                     },
-                    u
+                    s
                 )),
                 (n = n = { renderTail: !0 }),
                 Object.getOwnPropertyDescriptors
@@ -178,6 +130,43 @@ let g = (e) => {
                           Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t)
-            )
+            ),
+            calculateVisibility: h,
+            spacing: 0,
+            children: o
         });
+    },
+    E = (e) => {
+        let { listScrollerRef: t } = e,
+            { enabled: n } = (0, c.W)({ location: 'useShopOnboardingCoachmark' }),
+            r = i.useRef(null),
+            a = i.useCallback(() => {
+                null !== r.current && r.current.updateElementPosition();
+            }, []),
+            s = i.useCallback(() => {
+                null != t && null != t.current && t.current.scrollToTop({ animate: !0 });
+            }, [t]),
+            p = (0, o.wE)(l.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
+            { shouldShow: h, closeCoachmarkIfOpen: f } = (0, u.M)({
+                onboardingCoachmarkType: 'shop',
+                prevCoachmarksDismissed: p,
+                onShowCoachmarkHandler: s
+            });
+        return n
+            ? {
+                  shouldShow: h,
+                  closeCoachmarkIfOpen: f,
+                  onHandleScroll: a,
+                  positionControlRef: r,
+                  onClose: f,
+                  onCtaClick: f
+              }
+            : {
+                  shouldShow: !1,
+                  closeCoachmarkIfOpen: d.dG4,
+                  onHandleScroll: d.dG4,
+                  positionControlRef: r,
+                  onClose: d.dG4,
+                  onCtaClick: d.dG4
+              };
     };

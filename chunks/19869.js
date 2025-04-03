@@ -1,4 +1,4 @@
-n.d(t, { O: () => I }), n(47120);
+n.d(t, { O: () => T }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(693789),
@@ -22,15 +22,14 @@ var r = n(200651),
     O = n(450272),
     C = n(981631),
     S = n(388032),
-    v = n(751318),
-    T = n(517791);
-function I() {
+    v = n(751318);
+function T() {
     let { enabled: e } = (0, h.W)({ location: 'revenue_storybook' });
     return (0, r.jsxs)('div', {
-        children: [e && (0, r.jsx)(A, {}), (0, r.jsx)(y, {}), (0, r.jsx)(P, {})]
+        children: [e && (0, r.jsx)(y, {}), (0, r.jsx)(I, {}), (0, r.jsx)(A, {})]
     });
 }
-function y() {
+function I() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, g.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = i.useState(150),
         [p, h] = i.useState(150),
@@ -220,7 +219,7 @@ function y() {
         ]
     });
 }
-function A() {
+function y() {
     let [e, t] = i.useState('1144308439720394944');
     return (0, r.jsxs)(O.$0, {
         children: [
@@ -266,7 +265,7 @@ function A() {
         ]
     });
 }
-function P() {
+function A() {
     let { resetOnboardingAnnouncementModal: e } = (0, p.Z)();
     return (0, r.jsxs)(O.$0, {
         children: [
@@ -373,25 +372,12 @@ function P() {
             }),
             (0, r.jsxs)(O.E_, {
                 label: 'Onboarding Coachmark',
-                direction: 'vertical',
+                direction: 'horizontal',
                 children: [
+                    (0, r.jsx)(j.ED, { onClose: C.dG4 }),
                     (0, r.jsx)(j.ED, {
                         onClose: C.dG4,
-                        renderTail: !1
-                    }),
-                    (0, r.jsxs)('div', {
-                        className: T.horizontalContainer,
-                        children: [
-                            (0, r.jsx)(j.ED, {
-                                onClose: C.dG4,
-                                renderTail: !0
-                            }),
-                            (0, r.jsx)(j.ED, {
-                                onClose: C.dG4,
-                                renderTail: !0,
-                                invertCoachmark: !0
-                            })
-                        ]
+                        invertCoachmark: !0
                     })
                 ]
             }),
