@@ -15,19 +15,19 @@ var r = n(200651),
     m = n(228168),
     g = n(981631),
     E = n(388032),
-    b = n(937349),
-    v = n(425637),
-    y = n(685741);
+    b = n(185467),
+    y = n(425637),
+    v = n(685741);
 let O = 200,
     I = 32,
     S = 30;
 function T(e) {
     let { sourceType: t, children: n, user: T } = e,
-        { profileType: A } = (0, h.z)(),
-        N = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { profileType: N } = (0, h.z)(),
+        A = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         C = (0, o.e7)([_.default], () => {
             var e;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T.id;
+            return (null == (e = _.default.getCurrentUser()) ? void 0 : e.id) === T.id;
         }),
         R = (0, o.e7)([f.Z], () =>
             f.Z.findActivity(T.id, (e) => {
@@ -35,7 +35,7 @@ function T(e) {
                 return t === g.IIU.CUSTOM_STATUS;
             })
         ),
-        P = () => !C && A === m.y0.BITE_SIZE && (t === m.n_.AVATAR ? N && null == R : t === m.n_.STATUS ? N : t === m.n_.ACTIVITY && !N),
+        P = () => !C && N === m.y0.BITE_SIZE && (t === m.n_.AVATAR ? A && null == R : t === m.n_.STATUS ? A : t === m.n_.ACTIVITY && !A),
         [w, D] = i.useState(!1);
     (0, l.Z)(() => D(!0), P() ? O : null);
     let {
@@ -46,9 +46,9 @@ function T(e) {
             header: j,
             spacing: U,
             dismissibleContentType: G
-        } = N
+        } = A
             ? {
-                  asset: y,
+                  asset: v,
                   assetClassName: b.profileImage,
                   className: b.profileCoachmark,
                   content: E.NW.string(E.t.HEGlIC),
@@ -57,7 +57,7 @@ function T(e) {
                   dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
             : {
-                  asset: v,
+                  asset: y,
                   assetClassName: void 0,
                   className: b.activityCoachmark,
                   content: E.NW.string(E.t.LQ32TU),
@@ -76,7 +76,9 @@ function T(e) {
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(s.VqE, {
-                ref: i,
+                ref: (e) => {
+                    null == i || i(e);
+                },
                 children: (0, r.jsx)(d.ZP, {
                     className: M,
                     asset: (0, r.jsx)('img', {

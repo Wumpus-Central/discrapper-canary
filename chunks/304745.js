@@ -84,7 +84,9 @@ function Z(e) {
                         let { closePopout: n, setPopoutRef: i } = e;
                         return z
                             ? (0, r.jsx)(m.m, {
-                                  ref: i,
+                                  ref: (e) => {
+                                      null == i || i(e);
+                                  },
                                   channel: t,
                                   closePopout: n,
                                   onMouseEnter: D,

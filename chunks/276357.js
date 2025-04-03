@@ -61,7 +61,9 @@ function b(e) {
             });
         }, []),
         (0, r.jsxs)(o.VqE, {
-            ref: b,
+            ref: (e) => {
+                null == b || b(e);
+            },
             'aria-label': f.NW.string(f.t.TdqRTk),
             className: p.container,
             children: [
