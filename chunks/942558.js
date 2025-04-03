@@ -14,6 +14,7 @@ e.exports = {
     advancedOptions: 'advancedOptions__6be55',
     advancedOption: 'advancedOption__6be55',
     advancedOptionInner: 'advancedOptionInner__6be55',
+    clickableAdvancedOption: 'clickableAdvancedOption__6be55',
     advancedOptionContent: 'advancedOptionContent__6be55',
     buttonRow: 'buttonRow__6be55',
     button: 'button__6be55',

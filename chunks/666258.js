@@ -62,7 +62,7 @@ function T(e, t) {
         e
     );
 }
-function C(e) {
+function b(e) {
     let { channel: t, guild: n, inviteTarget: s } = e,
         { guildProfile: r, fetchGuildProfile: a } = (0, x.u)(n.id);
     i.useEffect(() => {
@@ -142,7 +142,7 @@ function C(e) {
         ]
     });
 }
-function b(e) {
+function C(e) {
     let { className: t, children: n } = e;
     return (0, l.jsx)('div', {
         className: r()(t, S.advancedOptions),
@@ -150,17 +150,21 @@ function b(e) {
     });
 }
 function _(e) {
-    let { className: t, children: n, htmlFor: i, onClick: s } = e,
-        a = null === s ? 'label' : u.P3F;
-    return (0, l.jsx)(a, {
-        className: S.advancedOption,
-        htmlFor: i,
-        onClick: s,
-        children: (0, l.jsx)('div', {
-            className: r()(t, S.advancedOptionInner),
-            children: n
-        })
-    });
+    let t,
+        n,
+        { className: i, children: s, htmlFor: a, onClick: o } = e;
+    return (
+        null != a ? ((t = 'label'), (n = { htmlFor: a })) : null != o ? ((t = u.P3F), (n = { onClick: o })) : ((t = 'div'), (n = {})),
+        (0, l.jsx)(
+            t,
+            T(E({ className: r()(S.advancedOption, { [S.clickableAdvancedOption]: !!o }) }, n), {
+                children: (0, l.jsx)('div', {
+                    className: r()(i, S.advancedOptionInner),
+                    children: s
+                })
+            })
+        )
+    );
 }
 function y(e) {
     var t;
@@ -251,7 +255,7 @@ function y(e) {
                             iconSize: 32
                         })
                     }),
-                    (0, l.jsx)(C, {
+                    (0, l.jsx)(b, {
                         guild: h,
                         channel: x,
                         inviteTarget: p,
@@ -278,7 +282,7 @@ function y(e) {
                 ]
             }),
             L &&
-                (0, l.jsxs)(b, {
+                (0, l.jsxs)(C, {
                     children: [
                         (0, l.jsxs)(_, {
                             onClick: Q,
