@@ -136,15 +136,15 @@ class ea extends i.Component {
     }
     render() {
         let e = this.props,
-            { colorString: t, colorRoleName: n, isOwner: i, nick: l, user: o, currentUser: a, activities: s, applicationStream: c, status: u, channel: p, guildId: h, isTyping: f, isMobileOnline: g, premiumSince: b, nameplate: _ } = e,
-            y = er(e, ['colorString', 'colorRoleName', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
-            x = null != b ? new Date(b) : null;
+            { colorString: t, colorStrings: n, colorRoleName: i, isOwner: l, nick: o, user: a, currentUser: s, activities: c, applicationStream: u, status: p, channel: h, guildId: f, isTyping: g, isMobileOnline: b, premiumSince: _, nameplate: y } = e,
+            x = er(e, ['colorString', 'colorStrings', 'colorRoleName', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate']),
+            v = null != _ ? new Date(_) : null;
         return (0, r.jsx)(m.yRy, {
             clickTrap: !0,
             preload: () =>
-                (0, D.Z)(o, {
-                    channelId: p.id,
-                    guildId: h
+                (0, D.Z)(a, {
+                    channelId: h.id,
+                    guildId: f
                 }),
             renderPopout: this.renderUserPopout,
             position: d.tq ? 'window_center' : 'left',
@@ -159,24 +159,25 @@ class ea extends i.Component {
                             className: $.member,
                             onContextMenu: this.renderUserContextMenu,
                             shouldAnimateStatus: ei,
-                            user: o,
-                            currentUser: a,
-                            nick: l,
-                            status: u,
-                            activities: s,
-                            applicationStream: c,
-                            isOwner: i,
-                            premiumSince: x,
+                            user: a,
+                            currentUser: s,
+                            nick: o,
+                            status: p,
+                            activities: c,
+                            applicationStream: u,
+                            isOwner: l,
+                            premiumSince: v,
                             colorString: t,
-                            colorRoleName: n,
-                            isTyping: f,
-                            channel: p,
-                            guildId: h,
-                            isMobile: g,
+                            colorStrings: n,
+                            colorRoleName: i,
+                            isTyping: g,
+                            channel: h,
+                            guildId: f,
+                            isMobile: b,
                             onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
                             selected: m,
-                            itemProps: y,
-                            nameplate: _
+                            itemProps: x,
+                            nameplate: y
                         },
                         e
                     )
@@ -439,22 +440,23 @@ class ed extends i.Component {
                     o = this.getRowProps(e);
                 if (null != o) {
                     if (o.type === B.so.MEMBER && 'user' in o) {
-                        let { colorString: e, colorRoleId: t, user: n, status: a, isOwner: s, isMobileOnline: c, nick: u, activities: d, applicationStream: p, premiumSince: h } = o;
+                        let { colorString: e, colorStrings: t, colorRoleId: n, user: a, status: s, isOwner: c, isMobileOnline: u, nick: d, activities: p, applicationStream: h, premiumSince: f } = o;
                         return (0, r.jsx)(
                             es,
                             {
                                 colorString: e,
-                                colorRoleId: t,
-                                user: n,
-                                status: a,
-                                isOwner: s,
-                                nick: u,
-                                activities: this._areActivitiesExperimentallyHidden ? [] : d,
-                                applicationStream: p,
+                                colorStrings: t,
+                                colorRoleId: n,
+                                user: a,
+                                status: s,
+                                isOwner: c,
+                                nick: d,
+                                activities: this._areActivitiesExperimentallyHidden ? [] : p,
+                                applicationStream: h,
                                 channel: l,
                                 guildId: l.guild_id,
-                                premiumSince: h,
-                                isMobileOnline: c,
+                                premiumSince: f,
+                                isMobileOnline: u,
                                 index: i
                             },
                             'member-'.concat(o.user.id)

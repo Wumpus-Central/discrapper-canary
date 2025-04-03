@@ -1,4 +1,4 @@
-t.d(n, { Z: () => x });
+t.d(n, { Z: () => _ });
 var r = t(200651);
 t(192379);
 var o = t(793030),
@@ -8,52 +8,61 @@ var o = t(793030),
     l = t(271383),
     c = t(709586),
     d = t(709054),
-    u = t(680278),
-    p = t(388032),
-    m = t(326319);
-function x(e) {
+    u = t(884902),
+    p = t(680278),
+    m = t(388032),
+    x = t(326319);
+function _(e) {
     let { boost: n } = e,
         t = new Date(d.default.extractTimestamp(n.id)),
-        { username: x, roleColor: _ } = (0, i.cj)(
+        {
+            username: _,
+            roleColor: v,
+            roleColorStrings: f
+        } = (0, i.cj)(
             [l.ZP],
             () => {
-                var e, t, r;
+                var e, t;
+                let r = l.ZP.getMember(n.guildId, n.userId);
                 return {
-                    username: null != (r = l.ZP.getNick(n.guildId, n.userId)) ? r : null == (e = n.user) ? void 0 : e.username,
-                    roleColor: null == (t = l.ZP.getMember(n.guildId, n.userId)) ? void 0 : t.colorString
+                    username: null != (t = l.ZP.getNick(n.guildId, n.userId)) ? t : null == (e = n.user) ? void 0 : e.username,
+                    roleColor: null == r ? void 0 : r.colorString,
+                    roleColorStrings: null == r ? void 0 : r.colorStrings
                 };
             },
             [n]
-        );
+        ),
+        g = (0, u.E)(n.guildId, f);
     return (0, r.jsx)(a.Z, {
-        className: m.systemMessageContainer,
-        contentClassName: m.systemMessageContent,
+        className: x.systemMessageContainer,
+        contentClassName: x.systemMessageContent,
         iconNode: (0, r.jsx)(c.Z, {
-            className: m.icon,
+            className: x.icon,
             width: 16,
             height: 16
         }),
-        iconContainerClassName: m.iconContainer,
-        timestampClassName: m.timestamp,
+        iconContainerClassName: x.iconContainer,
+        timestampClassName: x.timestamp,
         timestamp: t,
         compact: !0,
         children: (0, r.jsxs)('span', {
-            className: m.boostMessage,
+            className: x.boostMessage,
             children: [
                 (0, r.jsx)(s.PUh, {
-                    className: m.boostMessageUser,
+                    className: x.boostMessageUser,
                     name: (0, r.jsx)(o.xv, {
                         color: 'currentColor',
                         variant: 'text-md/semibold',
                         lineClamp: 1,
-                        children: x
+                        children: _
                     }),
-                    color: null != _ ? _ : void 0
+                    color: null != v ? v : void 0,
+                    roleGradient: g
                 }),
                 (0, r.jsx)(o.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: p.NW.string(u.Z.plwH8f)
+                    children: m.NW.string(p.Z.plwH8f)
                 })
             ]
         })

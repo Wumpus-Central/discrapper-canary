@@ -1,65 +1,68 @@
-l.d(n, { Z: () => g });
-var t = l(200651),
-    r = l(192379),
+l.d(n, { Z: () => v });
+var r = l(200651),
+    t = l(192379),
     a = l(442837),
     i = l(481060),
+    o = l(884902),
     s = l(271383),
-    o = l(430824),
-    c = l(594174),
-    u = l(5192),
-    d = l(645896),
-    m = l(979264),
-    f = l(308083),
-    h = l(388032),
+    c = l(430824),
+    u = l(594174),
+    d = l(5192),
+    m = l(645896),
+    f = l(979264),
+    h = l(308083),
+    g = l(388032),
     x = l(443924);
-let g = r.memo(function (e) {
-    var n, l, r, g, v, j;
-    let { guildId: p, isTagAdopted: b, onChangeUseTag: N } = e,
-        P = (0, d.Cc)(p),
-        y = (0, a.e7)([o.Z], () => o.Z.getGuild(p)),
-        C = null != (g = null == P || null == (n = P.badge) ? void 0 : n.imageHash) ? g : null == y || null == (l = y.profile) ? void 0 : l.badge,
-        w = null != (v = null == P ? void 0 : P.tag) ? v : null == y || null == (r = y.profile) ? void 0 : r.tag,
-        _ = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        k = (0, a.e7)([s.ZP], () => (null != _ ? s.ZP.getMember(p, _.id) : null));
-    return null == y || null == _ || null == k || null == C
+let v = t.memo(function (e) {
+    var n, l, t, v, j, p;
+    let { guildId: b, isTagAdopted: N, onChangeUseTag: P } = e,
+        y = (0, m.Cc)(b),
+        C = (0, a.e7)([c.Z], () => c.Z.getGuild(b)),
+        w = null != (v = null == y || null == (n = y.badge) ? void 0 : n.imageHash) ? v : null == C || null == (l = C.profile) ? void 0 : l.badge,
+        _ = null != (j = null == y ? void 0 : y.tag) ? j : null == C || null == (t = C.profile) ? void 0 : t.tag,
+        S = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        k = (0, a.e7)([s.ZP], () => (null != S ? s.ZP.getMember(b, S.id) : null)),
+        O = (0, o.E)(b, null == k ? void 0 : k.colorStrings);
+    return null == C || null == S || null == k || null == w
         ? null
-        : (0, t.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               className: x.previewSection,
               children: [
-                  (0, t.jsxs)('div', {
+                  (0, r.jsxs)('div', {
                       className: x.chatPreview,
                       children: [
-                          (0, t.jsx)(i.qEK, {
-                              src: _.getAvatarURL(p, 40),
+                          (0, r.jsx)(i.qEK, {
+                              src: S.getAvatarURL(b, 40),
                               size: i.EFr.SIZE_40,
                               'aria-hidden': !0
                           }),
-                          (0, t.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               className: x.previewText,
                               children: [
-                                  (0, t.jsxs)('div', {
+                                  (0, r.jsxs)('div', {
                                       className: x.userName,
                                       children: [
-                                          (0, t.jsx)(i.PUh, {
+                                          (0, r.jsx)(i.PUh, {
                                               className: x.userName,
-                                              name: u.ZP.getName(p, null, _),
-                                              color: null != (j = k.colorString) ? j : void 0
+                                              name: d.ZP.getName(b, null, S),
+                                              color: null != (p = k.colorString) ? p : void 0,
+                                              roleGradient: O
                                           }),
-                                          b &&
-                                              (0, t.jsx)(m.aG, {
-                                                  guildId: p,
-                                                  clanBadge: C,
-                                                  clanTag: w,
-                                                  badgeSize: f.NC.SIZE_12,
+                                          N &&
+                                              (0, r.jsx)(f.aG, {
+                                                  guildId: b,
+                                                  clanBadge: w,
+                                                  clanTag: _,
+                                                  badgeSize: h.NC.SIZE_12,
                                                   textVariant: 'text-xs/semibold'
                                               })
                                       ]
                                   }),
-                                  (0, t.jsx)('div', {
+                                  (0, r.jsx)('div', {
                                       className: x.fakeMessage,
                                       style: { width: '80%' }
                                   }),
-                                  (0, t.jsx)('div', {
+                                  (0, r.jsx)('div', {
                                       className: x.fakeMessage,
                                       style: { width: '50%' }
                                   })
@@ -67,27 +70,27 @@ let g = r.memo(function (e) {
                           })
                       ]
                   }),
-                  (0, t.jsx)('div', { className: x.divider }),
-                  (0, t.jsxs)('div', {
+                  (0, r.jsx)('div', { className: x.divider }),
+                  (0, r.jsxs)('div', {
                       className: x.settingSection,
                       children: [
-                          (0, t.jsxs)('div', {
+                          (0, r.jsxs)('div', {
                               children: [
-                                  (0, t.jsx)(i.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-primary',
-                                      children: h.NW.string(h.t.nwNzVV)
+                                      children: g.NW.string(g.t.nwNzVV)
                                   }),
-                                  (0, t.jsx)(i.Text, {
+                                  (0, r.jsx)(i.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: h.NW.string(h.t.Dpl68P)
+                                      children: g.NW.string(g.t.Dpl68P)
                                   })
                               ]
                           }),
-                          (0, t.jsx)(i.rsf, {
-                              onChange: N,
-                              checked: b
+                          (0, r.jsx)(i.rsf, {
+                              onChange: P,
+                              checked: N
                           })
                       ]
                   })

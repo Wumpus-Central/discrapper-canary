@@ -1,5 +1,5 @@
 n.d(t, {
-    P: () => v,
+    P: () => b,
     r: () => E
 });
 var r = n(200651);
@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(756715),
     l = n(607070),
     c = n(109161),
-    u = n(290828);
+    u = n(827171);
 function d(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,12 +52,12 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,45 +84,62 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { roleStyle: t, name: n, color: i, roleName: a, dotAlignment: s = 'left', className: l } = e,
-        d = 'username' === t,
-        f =
+    let { roleStyle: t, name: n, color: i, roleName: a, roleGradient: s, dotAlignment: l = 'left', className: d } = e,
+        _ = 'username' === t,
+        p = _ && null != s,
+        { text: h, gradient: m } =
+            null != s
+                ? s
+                : {
+                      text: {
+                          gradientClassName: '',
+                          gradientStyle: {}
+                      },
+                      gradient: { gradientClassName: '' }
+                  },
+        g =
             'dot' === t
                 ? (0, r.jsx)(c.F, {
                       color: i,
                       name: a,
-                      className: 'left' === s ? u.roleDotLeft : u.roleDotRight
+                      className: 'left' === l ? u.roleDotLeft : u.roleDotRight
                   })
                 : null;
     return (0, r.jsxs)('span', {
-        style: { color: d && null != i ? i : void 0 },
-        className: o()(l, { [u.username]: d }),
-        children: ['left' === s && f, n, 'right' === s && f]
+        style: f({ color: _ && !p && null != i ? i : void 0 }, h.gradientStyle),
+        'data-text': p ? n : '',
+        className: o()(d, {
+            [u.username]: _,
+            [h.gradientClassName]: p,
+            [m.gradientClassName]: p
+        }),
+        children: ['left' === l && g, n, 'right' === l && g]
     });
 }
 function E(e) {
-    let { name: t, color: n, roleName: i, dotAlignment: o, className: c } = e,
-        u = h(e, ['name', 'color', 'roleName', 'dotAlignment', 'className']),
-        d = (0, a.e7)([l.Z], () => l.Z.roleStyle),
-        p = 'username' === d,
-        m = (0, r.jsx)(g, {
-            roleStyle: d,
+    let { name: t, color: n, roleName: i, dotAlignment: o, className: c, roleGradient: u } = e,
+        d = h(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleGradient']),
+        _ = (0, a.e7)([l.Z], () => l.Z.roleStyle),
+        m = 'username' === _,
+        E = (0, r.jsx)(g, {
+            roleStyle: _,
             name: t,
             color: n,
             roleName: i,
             dotAlignment: o,
-            className: c
+            className: c,
+            roleGradient: u
         }),
-        E = p ? { color: n } : void 0;
+        b = m ? { color: n } : void 0;
     return (0, r.jsx)(
         s.Anchor,
-        _(f({}, u), {
-            children: m,
-            style: E
+        p(f({}, d), {
+            children: E,
+            style: b
         })
     );
 }
-function v(e) {
+function b(e) {
     let t = (0, a.e7)([l.Z], () => l.Z.roleStyle);
-    return (0, r.jsx)(g, _(f({}, e), { roleStyle: t }));
+    return (0, r.jsx)(g, p(f({}, e), { roleStyle: t }));
 }

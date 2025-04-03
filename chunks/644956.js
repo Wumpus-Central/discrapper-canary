@@ -16,17 +16,17 @@ var r = n(200651),
     g = n(818083),
     E = n(14263),
     b = n(480608),
-    v = n(124072),
-    y = n(184301),
+    y = n(124072),
+    v = n(184301),
     O = n(347475),
     I = n(592125),
     S = n(271383),
     T = n(430824),
-    A = n(594174),
-    N = n(51144),
+    N = n(594174),
+    A = n(51144),
     C = n(388032),
-    R = n(509045),
-    P = n(340462);
+    R = n(73433),
+    P = n(83902);
 function w(e, t, n) {
     return (
         t in e
@@ -98,11 +98,11 @@ function k(e) {
             [T.Z],
             () => {
                 var e;
-                return null === (e = T.Z.getGuild(i)) || void 0 === e ? void 0 : e.ownerId;
+                return null == (e = T.Z.getGuild(i)) ? void 0 : e.ownerId;
             },
             [i]
         ),
-        f = (0, l.e7)([A.default], () => A.default.getUser(t.userId), [t.userId]),
+        f = (0, l.e7)([N.default], () => N.default.getUser(t.userId), [t.userId]),
         _ = (0, l.e7)([I.Z], () => I.Z.getChannel(o), [o]);
     return null == f || null == _
         ? null
@@ -110,7 +110,7 @@ function k(e) {
               c.yRy,
               {
                   preload: () =>
-                      (0, y.Z)(t.userId, f.getAvatarURL(i, 80), {
+                      (0, v.Z)(t.userId, f.getAvatarURL(i, 80), {
                           guildId: i,
                           channelId: o
                       }),
@@ -134,6 +134,7 @@ function k(e) {
                               {
                                   selected: l,
                                   colorString: t.colorString,
+                                  colorStrings: t.colorStrings,
                                   colorRoleName: a.name,
                                   user: f,
                                   isOwner: t.userId === s,
@@ -143,7 +144,7 @@ function k(e) {
                                   guildId: i,
                                   onContextMenu: (e) => {
                                       (0, u.jW)(e, async () => {
-                                          let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('25250')]).then(n.bind(n, 757387));
+                                          let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('13351'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('20204')]).then(n.bind(n, 757387));
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
@@ -172,10 +173,10 @@ function j(e) {
     (0, f.ZP)(() => {
         var e;
         return (
-            null === (e = t.setPopoutRef) || void 0 === e || e.call(t, u.current),
+            null == (e = t.setPopoutRef) || e.call(t, u.current),
             () => {
                 var e;
-                return null === (e = t.setPopoutRef) || void 0 === e ? void 0 : e.call(t, null);
+                return null == (e = t.setPopoutRef) ? void 0 : e.call(t, null);
             }
         );
     });
@@ -184,20 +185,20 @@ function j(e) {
             [T.Z],
             () => {
                 var e;
-                return null === (e = T.Z.getGuild(o)) || void 0 === e ? void 0 : e.getEveryoneRoleId();
+                return null == (e = T.Z.getGuild(o)) ? void 0 : e.getEveryoneRoleId();
             },
             [o]
         ),
         p = (0, l.Wu)(
-            [S.ZP, A.default],
+            [S.ZP, N.default],
             () => {
                 let e = S.ZP.getMembers(o),
                     t = null == n || n === _ ? e : e.filter((e) => e.roles.includes(n));
                 return a()(t)
-                    .filter((e) => null != A.default.getUser(e.userId))
+                    .filter((e) => null != N.default.getUser(e.userId))
                     .sortBy((e) => {
                         var t;
-                        return null !== (t = e.nick) && void 0 !== t ? t : N.ZP.getName(A.default.getUser(e.userId));
+                        return null != (t = e.nick) ? t : A.ZP.getName(N.default.getUser(e.userId));
                     })
                     .value();
             },
@@ -231,7 +232,7 @@ function j(e) {
             [s, o, h, p]
         );
     if (null == h) return null;
-    let v =
+    let y =
         null == g
             ? h.name
             : C.NW.formatToPlainString(C.t.CuAQkJ, {
@@ -260,7 +261,7 @@ function j(e) {
                             }),
                             children: (0, r.jsx)('span', {
                                 'aria-hidden': !0,
-                                children: v
+                                children: y
                             })
                         }),
                         b,
@@ -282,9 +283,9 @@ function U(e) {
         m = (0, l.e7)([_.Z], () => _.Z.roleStyle),
         g = null != t && 0 !== t && !d,
         E = g && 'dot' === m,
-        y = (e) =>
+        v = (e) =>
             (0, r.jsxs)(
-                v.Z,
+                y.Z,
                 x(
                     D(
                         {
@@ -311,7 +312,7 @@ function U(e) {
     return !O || d || null == i || null == a || (null == n && '@everyone' !== o)
         ? (0, r.jsx)(h.Gt, {
               value: f,
-              children: y()
+              children: v()
           })
         : (0, r.jsx)(h.Gt, {
               value: f,
@@ -327,7 +328,7 @@ function U(e) {
                           popoutProps: e
                       }),
                   position: 'right',
-                  children: y
+                  children: v
               })
           });
 }
