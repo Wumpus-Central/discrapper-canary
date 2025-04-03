@@ -1,9 +1,9 @@
 l.d(t, { Z: () => b });
 var n = l(200651),
     i = l(192379),
-    r = l(120356),
-    s = l.n(r),
-    a = l(442837),
+    s = l(120356),
+    a = l.n(s),
+    r = l(442837),
     o = l(481060),
     u = l(596454),
     c = l(225433),
@@ -59,29 +59,41 @@ function h(e, t) {
     );
 }
 function b(e) {
-    let { className: t, guildId: l, error: r, emojiId: b, emojiName: y, isRequiredField: I = !0, shouldUpdateBothEmojiFields: O = !1, setEmojiId: k, setEmojiName: w } = e,
-        E = (0, p.Z)({
+    let { className: t, guildId: l, error: s, emojiId: b, emojiName: y, isRequiredField: I = !0, shouldUpdateBothEmojiFields: E = !1, setEmojiId: O, setEmojiName: k } = e,
+        w = (0, p.Z)({
             emojiId: b,
             emojiName: y
         }),
-        S = (0, a.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l) : null)),
+        S = (0, r.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l) : null)),
         C = i.createRef(),
-        P = (0, d.Z)(C),
-        Z = () => {
-            w(void 0), k(void 0);
+        D = (0, d.Z)(C),
+        P = () => {
+            k(void 0), O(void 0);
         },
-        D = (e) => (t, l) => {
+        Z = (e) => (t, l) => {
             let n = (null == t ? void 0 : t.id) == null;
-            Z(), n ? w(null == t ? void 0 : t.optionallyDiverseSequence) : (O && w(null == t ? void 0 : t.name), k(null == t ? void 0 : t.id)), l && e();
+            P(), n ? k(null == t ? void 0 : t.optionallyDiverseSequence) : (E && k(null == t ? void 0 : t.name), O(null == t ? void 0 : t.id)), l && e();
         },
         z = (e) => {
-            e.stopPropagation(), Z();
-        };
+            e.stopPropagation(), P();
+        },
+        R = i.useMemo(() => {
+            let e = null != b && '' !== b,
+                t = null != y && '' !== y,
+                l = null != w && '' !== w,
+                n = t && !Number.isNaN(parseInt(y)) && !l && !e;
+            return {
+                hasEmojiId: e,
+                hasEmojiName: t,
+                hasEmojiDisplayName: l,
+                isDeletedCustomEmoji: n
+            };
+        }, [b, y, w]);
     return (0, n.jsx)(o.xJW, {
         required: I,
         title: x.NW.string(x.t['3BQmiI']),
-        className: s()(t, v.section),
-        error: r,
+        className: a()(t, v.section),
+        error: s,
         children: (0, n.jsx)(o.yRy, {
             animation: o.yRy.Animation.NONE,
             position: 'top',
@@ -91,7 +103,7 @@ function b(e) {
                     closePopout: t,
                     pickerIntention: j.Hz.SOUNDBOARD,
                     onNavigateAway: t,
-                    onSelectEmoji: D(t),
+                    onSelectEmoji: Z(t),
                     guildId: l,
                     channel: S
                 });
@@ -109,7 +121,7 @@ function b(e) {
                                 active: l,
                                 tabIndex: 0,
                                 renderButtonContents:
-                                    null != b || null != y
+                                    !R.isDeletedCustomEmoji && (R.hasEmojiId || R.hasEmojiName)
                                         ? () =>
                                               (0, n.jsx)(u.Z, {
                                                   emojiName: y,
@@ -120,11 +132,12 @@ function b(e) {
                             (0, n.jsx)(o.oil, {
                                 inputClassName: v.emojiText,
                                 placeholder: x.NW.string(x.t.QTK0TE),
-                                value: null != E ? ':'.concat(E, ':') : '',
+                                value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ':'.concat(w, ':') : '',
                                 readOnly: !0
                             }),
-                            P &&
-                                null != E &&
+                            !R.isDeletedCustomEmoji &&
+                                R.hasEmojiDisplayName &&
+                                D &&
                                 (0, n.jsx)(
                                     c.Z,
                                     h(N({}, e), {
