@@ -44,6 +44,7 @@ function _(e) {
         iconContainerClassName: x.iconContainer,
         timestampClassName: x.timestamp,
         timestamp: t,
+        timestampFormat: 'L',
         compact: !0,
         children: (0, r.jsxs)('span', {
             className: x.boostMessage,
